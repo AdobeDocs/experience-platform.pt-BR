@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1586'
 ht-degree: 1%
 
 ---
@@ -20,9 +20,9 @@ Este documento fornece informações sobre limites de uso e taxa para dados do [
 
 ## Introdução
 
-Os seguintes serviços Experience Platform estão envolvidos na modelagem de dados de identidade:
+Os seguintes serviços da Experience Platform estão envolvidos na modelagem de dados de identidade:
 
-* [Identidades](home.md): identidades da Bridge de fontes de dados diferentes conforme são assimiladas na Platform.
+* [Identidades](home.md): identidades Bridge de fontes de dados diferentes conforme são assimiladas na Experience Platform.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Criar perfis de consumidor unificados usando dados de várias fontes.
 
 ## Limites do modelo de dados
@@ -56,11 +56,11 @@ A tabela a seguir descreve as regras existentes que devem ser seguidas para gara
 
 ### Assimilação do namespace de identidade
 
-A partir de 31 de março de 2023, o Serviço de identidade bloqueará a assimilação da Adobe Analytics ID (AAID) para novos clientes. Normalmente, esta identidade é assimilada por meio da [origem do Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e da [origem do Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) e é redundante porque a ECID representa o mesmo navegador da Web. Se quiser alterar essa configuração padrão, entre em contato com a equipe de conta do Adobe.
+A partir de 31 de março de 2023, o Serviço de identidade bloqueará a assimilação da Adobe Analytics ID (AAID) para novos clientes. Normalmente, esta identidade é assimilada por meio da [origem do Adobe Analytics](../sources/connectors/adobe-applications/analytics.md) e da [origem do Adobe Audience Manager](../sources//connectors/adobe-applications/audience-manager.md) e é redundante porque a ECID representa o mesmo navegador da Web. Se quiser alterar essa configuração padrão, entre em contato com a equipe de conta da Adobe.
 
 ## Medidas de proteção de desempenho {#performance-guardrails}
 
-O Serviço de identidade monitora continuamente os dados recebidos para garantir alto desempenho e confiabilidade em escala. No entanto, um fluxo de dados de eventos de experiência em um curto período pode levar à degradação do desempenho e à latência. O Adobe não é responsável por essa degradação de desempenho.
+O Serviço de identidade monitora continuamente os dados recebidos para garantir alto desempenho e confiabilidade em escala. No entanto, um fluxo de dados de eventos de experiência em um curto período pode levar à degradação do desempenho e à latência. A Adobe não é responsável por essa degradação de desempenho.
 
 ## Noções básicas sobre a lógica de exclusão quando um gráfico de identidade na capacidade é atualizado {#deletion-logic}
 
@@ -90,12 +90,12 @@ As seções a seguir descrevem as implicações que a lógica de exclusão tem p
 
 #### Serviço de identidade: alterações no tipo de identidade do namespace personalizado
 
-Entre em contato com a equipe de conta do Adobe para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver:
+Entre em contato com a equipe de conta da Adobe para solicitar uma alteração no tipo de identidade se a sandbox de produção contiver:
 
 * Um namespace personalizado em que os identificadores de pessoa (como CRMIDs) são configurados como tipo de identidade de cookie/dispositivo.
 * Um namespace personalizado em que os identificadores de cookie/dispositivo são configurados como tipo de identidade entre dispositivos.
 
-Quando esse recurso estiver disponível, os gráficos que excederem o limite de 50 identidades serão reduzidos para até 50 identidades. Para o Real-Time CDP B2C Edition, isso pode resultar em um aumento mínimo no número de perfis qualificados para um público-alvo, pois esses perfis foram ignorados anteriormente da Segmentação e Ativação.
+Quando esse recurso estiver disponível, os gráficos que excederem o limite de 50 identidades serão reduzidos para até 50 identidades. Para o Real-Time CDP B2C Edition, isso pode resultar em um aumento mínimo no número de perfis qualificados para um público-alvo, pois esses perfis foram ignorados da Segmentação e Ativação anteriormente.
 
 #### Perfil do cliente em tempo real: impacto nos públicos endereçáveis
 
@@ -109,7 +109,7 @@ A exclusão acontece somente com os dados no Serviço de identidade, não com o 
 Se você quiser preservar os eventos autenticados no CRMID, é recomendável alterar as IDs primárias de ECID para CRMID. Leia os seguintes documentos para obter as etapas sobre como implementar essa alteração:
 
 * [Configurar mapa de identidade para marcas Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Dados de identidade no SDK da Web do Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
+* [Dados de identidade no Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Exemplos de cenários
 
@@ -196,10 +196,10 @@ Consulte a documentação a seguir para obter mais informações sobre [!DNL Ide
 * [Visão geral do [!DNL Identity Service]](home.md)
 * [Visualizador de gráficos de identidade](features/identity-graph-viewer.md)
 
-Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços de Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto Real-Time CDP:
+Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços de Experience Platform.
-* [Real-time Customer Data Platform (B2C Edition - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2P - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-time Customer Data Platform (B2B - Pacotes Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -5,9 +5,9 @@ title: Criar os esquemas e conjuntos de dados da Web do Luma
 type: Tutorial
 description: Este tutorial fornece os pré-requisitos e os ativos necessários para o modelo de propensão de demonstração do Luma.
 exl-id: a791e532-1116-4407-b745-fd6c2ac0d8f7
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -16,51 +16,51 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->O Área de trabalho de ciência de dados não está mais disponível para compra.
+>O Data Science Workspace não está mais disponível para compra.
 >
->Esta documentação destina-se a clientes existentes com direitos anteriores à Data Science Área de trabalho.
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
-Esta tutorial fornece os pré-requisitos e ativos necessários para todos os outros [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutoriais. Após a conclusão, os seguintes esquemas e conjuntos de dados estarão disponíveis para você e para sua organização.
+Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais do [!DNL Adobe Experience Platform] [!DNL Data Science Workspace]. Uma vez concluídos, os seguintes esquemas e conjuntos de dados estarão disponíveis para você e sua organização.
 
 **Esquemas:**
 
-- schema de dados luma da Web
-- Resultados da pontuação do modelo de propensão schema
+- Esquema de dados da Web do Luma
+- Esquema de resultados de pontuação do modelo de propensão
 
 **Conjuntos de dados:**
 
 - Conjunto de dados da Web Luma
 - Conjunto de dados de treinamento do modelo de propensão
-- Pontuação do modelo de propensão conjunto de dados
-- Resultados da pontuação do modelo de propensão conjunto de dados
+- Conjunto de dados de pontuação do modelo de propensão
+- Conjunto de dados de resultados da pontuação do modelo de propensão
 
-## Baixe o ativos {#assets}
+## Baixar os ativos {#assets}
 
-A tutorial a seguir usa um modelo personalizado de propensão de compra Luma. Antes de continuar, [baixar a pasta ativos](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) zip necessária. Esta pasta contém:
+O tutorial a seguir usa um modelo personalizado de propensão de compra da Luma. Antes de continuar, [baixe os ativos necessários](https://experienceleague.adobe.com/docs/platform-learn/assets/DSW-course-sample-assets.zip) e a pasta zip. Esta pasta contém:
 
-- O notebook de modelo de propensão de compra
-- Um notebook usado para assimilar dados a uma treinamento e pontuação conjunto de dados (um subconjunto dos dados da Web Luma)
-- Um arquivo JSON de demonstração contendo os dados da Web de 730.000 usuários Luma
+- O bloco de anotações do modelo de propensão de compra
+- Um notebook usado para assimilar dados em um conjunto de dados de treinamento e pontuação (um subconjunto dos dados da Web do Luma)
+- Um arquivo JSON de demonstração contendo os dados da Web de 730.000 usuários do Luma
 - Um notebook Python 3 EDA (análise exploratória de dados) opcional que pode ser usado para ajudar a entender os dados e o modelo da Web.
 
 >[!NOTE]
 >
 > Você pode usar seu próprio esquema e dados para qualquer um dos tutoriais do. No entanto, o modelo de demonstração fornecido nos ativos não funciona a menos que ele forneça os arquivos de configuração e o arquivo de requisitos adequados. Esse modelo de propensão de demonstração foi projetado para funcionar com dados da Web do Luma.
 
-### Criar os dados da Web Luma schema e assimilar os dados
+### Crie o esquema de dados da Web Luma e assimile os dados
 
-Em solicitar para criar um modelo, você deve ter uma conjunto de dados em Platform que é usada para treinar e marcar seu modelo. O vídeo a seguir tutorial do [curso](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=pt-BR) de Ciência de Dados Área de trabalho o conduz pela criação do schema Luma e pela ingestão dos dados usados pelo modelo de propensão de compra.
+Para criar um modelo, você deve ter um conjunto de dados no Experience Platform que é usado para treinar e pontuar seu modelo. O tutorial em vídeo a seguir do [curso do Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=pt-BR) orienta você na criação do esquema Luma e na assimilação dos dados usados pelo modelo de propensão de compra.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333312)
 
-### Criar os conjuntos de dados treinamento, pontuação e pontuação de resultados
+### Criar os conjuntos de dados de resultados de treinamento, pontuação e pontuação
 
-Em solicitar para executar o notebook fórmula construtor ou usar a API para treinar e marcar um modelo, você precisa especificar as conjunto de dados(s) e schema(s) usadas para treinamento/pontuação. O vídeo a seguir tutorial o orienta pela configuração de conjuntos de dados de treinamento, pontuação e pontuação de resultados, bem como os resultados de pontuação schema usados no modelo de propensão de compra do Luma.
+Para executar o bloco de anotações do construtor de fórmula ou usar a API para treinar e pontuar um modelo, é necessário especificar os conjuntos de dados e esquemas usados para treinamento/pontuação. O tutorial de vídeo a seguir orienta você na configuração dos conjuntos de dados de resultados de treinamento, pontuação e pontuação, bem como do esquema de resultados de pontuação usado no modelo de propensão de compra da Luma.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333426)
 
 ## Próximas etapas
 
-Ao seguir esse tutorial, você criou com sucesso os schemas e conjuntos de dados necessários para o modelo de propensão luma. Agora você está pronto para continuar para o próximo tutorial e criar o modelo usando o [notebook](../jupyterlab/create-a-model.md) fórmula construtor tutorial.
+Ao seguir este tutorial, você criou os esquemas e conjuntos de dados necessários para o modelo de propensão Luma com sucesso. Agora você está pronto para prosseguir para o próximo tutorial e criar o modelo usando o [tutorial de bloco de anotações do construtor de fórmula](../jupyterlab/create-a-model.md).
 
 Além disso, você pode explorar os dados usando o bloco de anotações de Análise de Dados Exploratórios (EDA) fornecido. Esse bloco de notas pode ser usado para ajudar a entender os padrões nos dados do Luma, verificar a integridade dos dados e resumir os dados relevantes para o modelo de propensão preditiva. Para saber mais sobre a Análise de Dados Exploratórios, visite a [documentação da EDA](../jupyterlab/eda-notebook.md).

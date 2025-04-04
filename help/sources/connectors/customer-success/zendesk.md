@@ -3,20 +3,20 @@ title: Visão geral do Zendesk Source Connector
 description: Saiba como conectar o Zendesk ao Adobe Experience Platform usando APIs ou a interface do usuário.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
 
 # [!DNL Zendesk]
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-O Experience Platform fornece suporte para assimilação de dados de um aplicativo de sucesso de clientes de terceiros. O suporte para provedores de sucesso do cliente inclui [!DNL Zendesk].
+A Experience Platform oferece suporte para assimilação de dados de um aplicativo de sucesso de clientes de terceiros. O suporte para provedores de sucesso do cliente inclui [!DNL Zendesk].
 
-Esta [fonte](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=pt-BR) do Adobe Experience Platform aproveita a [API do Zendesk Search > Exportar Resultados da Pesquisa](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) que retorna informações dos usuários para o Experience Platform do Zendesk para processamento adicional.
+Estas [fontes](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=pt-BR) do Adobe Experience Platform usam a [API do Zendesk Search > Exportar Resultados da Pesquisa](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) que retorna informações dos usuários para o Experience Platform do Zendesk para processamento adicional.
 
 ## LISTA DE PERMISSÕES de endereço IP
 
@@ -37,13 +37,13 @@ Esta seção descreve as etapas de pré-requisito a serem concluídas para auten
 
 Consulte o [[!DNL Zendesk documentation on subdomains]](<https://support.zendesk.com/hc/en-us/articles/4409381383578-Where-can-I-find-my-Zendesk-subdomain->) para obter informações sobre como recuperar o subdomínio. Para obter informações sobre como gerar o token da API, consulte o [[!DNL Zendesk] manual sobre como gerar um novo token de API](<https://support.zendesk.com/hc/en-us/articles/4408889192858-Generating-a-new-API-token>).
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Zendesk] à Plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Zendesk] ao Experience Platform usando APIs ou a interface do usuário:
 
-## Conectar [!DNL Zendesk] à plataforma usando APIs
+## Conectar o [!DNL Zendesk] ao Experience Platform usando APIs
 
 * [Criar uma conexão de origem e um fluxo de dados para  [!DNL Zendesk] usando a API de Serviço de Fluxo](../../tutorials/api/create/customer-success/zendesk.md)
 
-## Conectar [!DNL Zendesk] à Plataforma usando a interface
+## Conectar o [!DNL Zendesk] ao Experience Platform usando a interface
 
 * [Criar uma conexão de origem  [!DNL Zendesk ] na interface](../../tutorials/ui/create/customer-success/zendesk.md)
 * [Criar um fluxo de dados para uma conexão de origem de sucesso do cliente na interface](../../tutorials/ui/dataflow/customer-success.md)

@@ -2,9 +2,9 @@
 title: Notas de versão de abril de 2024 da Adobe Experience Platform
 description: As notas de versão de abril de 2024 da Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1897'
+source-wordcount: '1899'
 ht-degree: 21%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 21%
 
 >[!TIP]
 >
->Use o [glossário do Adobe Experience Platform](/help/landing/glossary.md) para se familiarizar com a terminologia usada no Real-time Customer Data Platform e no Adobe Experience Platform. Se você não conseguir encontrar um termo específico que esteja procurando, use as opções de feedback na página para solicitar que novos termos sejam adicionados ao glossário.
+>Use o [glossário do Adobe Experience Platform](/help/landing/glossary.md) para se familiarizar com a terminologia usada no Real-Time Customer Data Platform e no Adobe Experience Platform. Se você não conseguir encontrar um termo específico que esteja procurando, use as opções de feedback na página para solicitar que novos termos sejam adicionados ao glossário.
 
 Atualizações dos recursos existentes no Experience Platform:
 
@@ -37,7 +37,7 @@ A Adobe Experience Platform fornece vários painéis para você visualizar insig
 
 | Recurso | Descrição |
 | --- | --- |
-| Insights B2B do Real-time Customer Data Platform | Explore insights de dados B2B pré-configurados do [Real-Time CDP sobre contas e oportunidades](../../dashboards/insights/account-profiles.md) para ajudá-lo a entender seus dados e informar suas decisões comerciais. Você também pode [criar seus próprios insights usando o Modelo de Dados B2B do Real-Time CDP](../../dashboards/data-models/cdp-insights-data-model-b2c.md) para visualizar e explorar seus dados e salvar suas visualizações personalizadas em seu painel. |
+| Insights B2B do Real-Time Customer Data Platform | Explore insights de dados B2B pré-configurados do [Real-Time CDP sobre contas e oportunidades](../../dashboards/insights/account-profiles.md) para ajudá-lo a entender seus dados e informar suas decisões comerciais. Você também pode [criar seus próprios insights usando o Modelo de Dados B2B do Real-Time CDP](../../dashboards/data-models/cdp-insights-data-model-b2c.md) para visualizar e explorar seus dados e salvar suas visualizações personalizadas em seu painel. |
 
 {style="table-layout:auto"}
 
@@ -45,19 +45,19 @@ Para obter mais informações sobre painéis, incluindo como conceder permissõe
 
 ## Coleção de dados {#data-collection}
 
-A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los para o Edge Network de Experience Platform, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe.
+O Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los para o Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou que não sejam da Adobe.
 
 **Recursos novos ou atualizados**
 
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
 | Extensões | Extensão de [!DNL Acxiom Anonymous Visitor Insights] Tags | Descubra de onde vêm os visitantes do seu site com o [!DNL Acxiom's Visitor Insights]. Utilizando a tecnologia de pesquisa geográfica de IP, a Acxiom pode identificar a localização de navegadores anônimos. Uma vez identificada, uma pesquisa em seu banco de dados organizado produz insights adicionais que são enviados de volta para o navegador. Assim, os criadores de conteúdo podem adaptar seu conteúdo para corresponder a esses pontos de dados, fornecendo uma experiência mais personalizada e envolvente para os visitantes, mesmo que eles tenham começado como estranhos. |
-| Sequências de dados | [detecção de bot Edge Network](../../datastreams/bot-detection.md) | O tráfego proveniente de entidades não humanas, como programas automatizados, web scrapers, spiders e scanners com script, pode dificultar a identificação de eventos que ocorrem de visitantes humanos. Esse tipo de tráfego pode afetar negativamente métricas comerciais importantes, resultando em relatórios de tráfego incorretos. <br>A detecção de bot permite identificar eventos gerados pelo [SDK da Web](../../web-sdk/home.md), [SDK móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../../server-api/overview.md) como sendo gerados por spiders e bots conhecidos. Ao configurar a detecção de bot para seus fluxos de dados, você pode identificar endereços IP, intervalos de IP e cabeçalhos de solicitação específicos que gostaria de classificar como eventos de bot. <br> A identificação do tráfego de bot pode fornecer uma medida mais precisa da atividade do usuário no seu site ou aplicativo móvel. |
-| SDK móvel | Versão principal | Novas versões principais do SDK móvel foram lançadas para as seguintes plataformas: iOS Mobile Core 5.x e extensões compatíveis do iOS, Android Mobile Core 3.x e extensões compatíveis do Android, React Native Core 6.x e extensões compatíveis do React Native, Flutter Core 4.x e extensões compatíveis do Flutter. Essas versões fornecem vários novos recursos e melhorias, incluindo suporte no SDK do Android para Jetpack Compose, suporte para experiências baseadas em código Adobe Journey Optimizer e disponibilidade geral da extensão Adobe Journey Optimizer Messaging para Flutter. Para obter notas de versão mais detalhadas, consulte as [Notas de versão do SDK móvel](https://developer.adobe.com/client-sdks/home/release-notes/). |
-| SDK móvel | Privacidade | Devido à atualização da política do Apple, a partir de 1 de maio de 2024, os desenvolvedores deverão implementar novos recursos de privacidade para enviar para o App Store. Todos os clientes do Adobe que usam o SDK móvel precisarão atualizar para a versão 5.x do SDK se quiserem receber a aprovação da App Store após 1º de maio. |
-| SDK do Roku | SDK do Roku | A primeira versão principal do SDK do Roku foi lançada com suporte para mídia de transmissão para o Edge Network da plataforma. |
-| Tags e encaminhamento de eventos | Orientação no produto | As [Tags](../../tags/home.md) e [Encaminhamento de Eventos](../../tags/ui/event-forwarding/overview.md) do Experience Platform oferecem um novo intervalo de experiências que pode ajudá-lo a começar rapidamente e obter um tempo de retorno rápido. Essas experiências incluem novas telas de integração, tutoriais no produto e dicas de ferramentas. <br>![Encaminhamento de eventos com a orientação no produto destacada.](../2024/assets/april/event-forwarding.png "O Editor de esquemas com os campos de tipo de valor Tipo e Mapa realçados."){width="100" zoomable="yes"}<br> |
-| Web SDK | Adoção simplificada do SDK da Web para clientes do Audience Manager | Agora, várias atualizações de SDK da Web simplificam a adoção do SDK da Web sem usar o Experience Data Model (XDM) para soluções de Experience Cloud, como o Audience Manager, o Analytics e o Target. Saiba mais sobre a adoção do SDK da Web do Audience Manager nos seguintes guias: <ul><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Atualize a biblioteca de coleção de dados para o Audience Manager da extensão de tag Audience Manager para a extensão de tag do SDK da Web</li><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Atualize a biblioteca de coleção de dados para o Audience Manager da biblioteca JavaScript do AppMeasurement para a biblioteca JavaScript do SDK da Web</li></ul> |
+| Sequência de dados | [Detecção de bot do Edge Network](../../datastreams/bot-detection.md) | O tráfego proveniente de entidades não humanas, como programas automatizados, web scrapers, spiders e scanners com script, pode dificultar a identificação de eventos que ocorrem de visitantes humanos. Esse tipo de tráfego pode afetar negativamente métricas comerciais importantes, resultando em relatórios de tráfego incorretos. <br>A detecção de bot permite identificar eventos gerados pelo [Web SDK](../../web-sdk/home.md), [SDK Móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../../server-api/overview.md) como sendo gerados pelos spiders e bots conhecidos. Ao configurar a detecção de bot para seus fluxos de dados, você pode identificar endereços IP, intervalos de IP e cabeçalhos de solicitação específicos que gostaria de classificar como eventos de bot. <br> A identificação do tráfego de bot pode fornecer uma medida mais precisa da atividade do usuário no seu site ou aplicativo móvel. |
+| SDK móvel | Versão principal | Novas versões principais do Mobile SDK foram lançadas para as seguintes plataformas: iOS Mobile Core 5.x e extensões compatíveis do iOS, Android Mobile Core 3.x e extensões compatíveis do Android, React Native Core 6.x e extensões compatíveis do React Native, Flutter Core 4.x e extensões compatíveis do Flutter. Essa versão oferece vários novos recursos e aprimoramentos, incluindo suporte no Android SDK para Jetpack Compose, suporte para experiências baseadas em código do Adobe Journey Optimizer e disponibilidade geral da extensão de Mensagens do Adobe Journey Optimizer para Flutter. Para obter notas de versão mais detalhadas, consulte as [Notas de versão do Mobile SDK](https://developer.adobe.com/client-sdks/home/release-notes/). |
+| SDK móvel | Privacidade | Devido à atualização da política do Apple, a partir de 1 de maio de 2024, os desenvolvedores deverão implementar novos recursos de privacidade para enviar para o App Store. Todos os clientes do Adobe que usam o Mobile SDK precisarão atualizar para a versão 5.x do SDK se quiserem receber a aprovação do App Store após 1º de maio. |
+| Roku SDK | Roku SDK | A primeira versão principal do Roku SDK foi lançada com suporte para mídia de transmissão para o Experience Platform Edge Network. |
+| Tags e encaminhamento de eventos | Orientação no produto | As [Marcas](../../tags/home.md) e o [Encaminhamento de Eventos](../../tags/ui/event-forwarding/overview.md) da Experience Platform oferecem um novo intervalo de experiências que pode ajudá-lo a começar rapidamente e obter um tempo de retorno rápido. Essas experiências incluem novas telas de integração, tutoriais no produto e dicas de ferramentas. <br>![Encaminhamento de eventos com a orientação no produto destacada.](../2024/assets/april/event-forwarding.png "O Editor de esquemas com os campos de tipo de valor Tipo e Mapa realçados."){width="100" zoomable="yes"}<br> |
+| Web SDK | Adoção simplificada do Web SDK para clientes do Audience Manager | Agora, várias atualizações do Web SDK simplificam a adoção do Web SDK sem usar o Experience Data Model (XDM) para soluções da Experience Cloud, como o Audience Manager, o Analytics e o Target. Saiba mais sobre a adoção do Audience Manager Web SDK nos seguintes guias: <ul><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Atualize a biblioteca de coleção de dados para o Audience Manager a partir da extensão de marca Audience Manager para a extensão de marca Web SDK</li><li><a href="https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Atualize a biblioteca de coleção de dados do Audience Manager da biblioteca JavaScript do AppMeasurement para a biblioteca JavaScript do Web SDK</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Para saber mais sobre coleções de dados, leia a [visão geral da coleção de 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
 | Parâmetro `isRequired` agora disponível para campos de dados aninhados do cliente no Destination SDK | Ao configurar um destino no Destination SDK, agora você pode [definir campos de dados aninhados do cliente conforme necessário](/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md#nested-fields). Dessa forma, os usuários que configuram seu destino não podem continuar com o fluxo de ativação até que selecionem um valor para esse campo. |
-| A segmentação do Edge não é mais um requisito obrigatório ao configurar um destino do Adobe Target com o SDK da Web | Anteriormente, ao configurar um [destino do Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) com o SDK da Web, a sequência de dados tinha que ser habilitada para personalização e segmentação de borda. O requisito de que a sequência de dados seja habilitada para a segmentação de borda [ agora foi removido](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Observe que esse padrão de integração permite que você se beneficie de um subconjunto de casos de uso de personalização ao usar o Adobe Target com o Real-Time CDP. Leia mais sobre os [casos de uso habilitados pelo tipo de integração](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases). |
+| A segmentação do Edge não é mais um requisito obrigatório ao configurar um destino do Adobe Target com o Web SDK | Anteriormente, ao configurar um [destino do Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) com o Web SDK, a sequência de dados tinha que ser habilitada para personalização e segmentação de borda. O requisito de que a sequência de dados seja habilitada para a segmentação de borda [ agora foi removido](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream). Observe que esse padrão de integração permite que você se beneficie de um subconjunto de casos de uso de personalização ao usar o Adobe Target com o Real-Time CDP. Leia mais sobre os [casos de uso habilitados pelo tipo de integração](/help/destinations/catalog/personalization/adobe-target-connection.md#supported-use-cases). |
 | [!BADGE Beta]{type=Informative} Remova vários públicos-alvo e conjuntos de dados dos fluxos de ativação | Agora é possível selecionar e remover vários públicos-alvo e conjuntos de dados dos fluxos de ativação de destino. Consulte a documentação dos [detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-remove) e da [exportação de conjunto de dados](../../destinations/ui/export-datasets.md) para obter mais detalhes. |
 
 {style="table-layout:auto"}
@@ -130,7 +130,7 @@ Para obter mais informações sobre o Query Service, acesse a [Visão geral do Q
 
 ## Sandboxes {#sandboxes}
 
-O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, o Experience Platform fornece sandboxes que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, a Experience Platform fornece sandboxes que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 **Recursos novos ou atualizados**
 
@@ -144,7 +144,7 @@ Para obter mais informações sobre sandboxes, leia a [visão geral das sandboxe
 
 ## Serviço de segmentação {#segmentation}
 
-O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
+O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Experience Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
 
 **Recurso atualizado**
 
@@ -166,8 +166,8 @@ Use fontes na Experience Platform para assimilar dados de um aplicativo da Adobe
 
 | Novas fontes | Descrição |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL PathFactory] | Use a [[!DNL PathFactory] fonte](../../sources/tutorials/ui/create/marketing-automation/pathfactory.md) para integrar os dados de visitante, sessão e exibição de página de [!DNL PathFactory] ao Experience Platform. Leia a [[!DNL PathFactory] visão geral](../../sources/connectors/marketing-automation/pathfactory.md) para obter informações sobre como começar. |
-| [!DNL Teradata Vantage] | Use a [[!DNL Teradata Vantage] fonte](../../sources/tutorials/ui/create/databases/teradata-vantage.md) para assimilar dados de ambientes híbridos de várias nuvens para o Experience Platform. Leia a [[!DNL Teradata Vantage] visão geral](../../sources/connectors/databases/teradata-vantage.md) para obter informações sobre como começar. |
+| [!BADGE Beta]{type=Informative} [!DNL PathFactory] | Use a [[!DNL PathFactory] origem](../../sources/tutorials/ui/create/marketing-automation/pathfactory.md) para integrar os dados de visitante, sessão e exibição de página de [!DNL PathFactory] à Experience Platform. Leia a [[!DNL PathFactory] visão geral](../../sources/connectors/marketing-automation/pathfactory.md) para obter informações sobre como começar. |
+| [!DNL Teradata Vantage] | Use a [[!DNL Teradata Vantage] origem](../../sources/tutorials/ui/create/databases/teradata-vantage.md) para assimilar dados de ambientes híbridos de várias nuvens para a Experience Platform. Leia a [[!DNL Teradata Vantage] visão geral](../../sources/connectors/databases/teradata-vantage.md) para obter informações sobre como começar. |
 
 {style="table-layout:auto"}
 

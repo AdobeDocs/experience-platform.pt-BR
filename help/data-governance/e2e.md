@@ -2,9 +2,9 @@
 title: Guia completo de governança de dados
 description: Siga o processo completo para impor restrições de uso de dados para campos e conjuntos de dados na Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1885'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Para controlar quais ações de marketing podem ser executadas em determinados c
 
 Após concluir a configuração de rótulos, políticas de governança e ações de marketing, você pode [testar a aplicação da política](#test) para garantir que ela funcione conforme o esperado.
 
-Este guia aborda todo o processo de configuração e aplicação de uma política de governança de dados na interface do usuário da plataforma. Para obter informações mais detalhadas sobre os recursos usados neste guia, consulte a documentação de visão geral sobre os seguintes tópicos:
+Este guia aborda todo o processo de configuração e aplicação de uma política de governança de dados na interface do usuário do Experience Platform. Para obter informações mais detalhadas sobre os recursos usados neste guia, consulte a documentação de visão geral sobre os seguintes tópicos:
 
 * [Governança de dados do Adobe Experience Platform](./home.md)
 * [Rótulos de uso de dados](./labels/overview.md)
@@ -28,13 +28,13 @@ Este guia aborda todo o processo de configuração e aplicação de uma polític
 
 >[!NOTE]
 >
->Este guia foca em como configurar e aplicar políticas para como os dados são usados ou ativados no Experience Platform. Se você estiver tentando restringir o **acesso** aos dados propriamente ditos de determinados usuários da Platform em sua organização, consulte o manual completo sobre o [controle de acesso baseado em atributos](../access-control/abac/end-to-end-guide.md). O controle de acesso baseado em atributos também usa rótulos e políticas, mas para um caso de uso diferente da governança de dados.
+>Este guia foca em como configurar e aplicar políticas para como os dados são usados ou ativados no Experience Platform. Se você estiver tentando restringir o **acesso** aos dados propriamente ditos de determinados usuários do Experience Platform em sua organização, consulte o manual completo sobre o [controle de acesso baseado em atributos](../access-control/abac/end-to-end-guide.md). O controle de acesso baseado em atributos também usa rótulos e políticas, mas para um caso de uso diferente da governança de dados.
 
 ## Aplicar rótulos {#labels}
 
 >[!IMPORTANT]
 >
->Os rótulos não podem mais ser aplicados a campos individuais no nível do conjunto de dados. Esse workflow foi substituído em favor da aplicação de rótulos no nível do schema. No entanto, ainda é possível rotular um conjunto de dados inteiro. Quaisquer rótulos aplicados anteriormente a campos de conjuntos de dados individuais ainda serão compatíveis por meio da interface do usuário da plataforma até 31 de maio de 2024. Para garantir que seus rótulos sejam consistentes em todos os esquemas, todos os rótulos anteriormente anexados a campos no nível do conjunto de dados devem ser migrados para o nível do esquema por você no ano seguinte. Consulte a seção sobre [migrando rótulos aplicados anteriormente](#migrate-labels) para obter instruções sobre como fazer isso.
+>Os rótulos não podem mais ser aplicados a campos individuais no nível do conjunto de dados. Esse workflow foi substituído em favor da aplicação de rótulos no nível do schema. No entanto, ainda é possível rotular um conjunto de dados inteiro. Quaisquer rótulos aplicados anteriormente a campos de conjuntos de dados individuais ainda serão compatíveis por meio da interface do usuário do Experience Platform até 31 de maio de 2024. Para garantir que seus rótulos sejam consistentes em todos os esquemas, todos os rótulos anteriormente anexados a campos no nível do conjunto de dados devem ser migrados para o nível do esquema por você no ano seguinte. Consulte a seção sobre [migrando rótulos aplicados anteriormente](#migrate-labels) para obter instruções sobre como fazer isso.
 
 Você pode [aplicar rótulos a um esquema](#schema-labels) para que todos os conjuntos de dados baseados nesse esquema herdem os mesmos rótulos. Isso permite gerenciar os rótulos para governança de dados, consentimento e controle de acesso em um único local. Ao impor restrições de uso de dados no nível do esquema, o efeito se propaga downstream para todos os conjuntos de dados baseados nesse esquema. Os rótulos aplicados no nível de campo de esquema são compatíveis com casos de uso de Governança de dados e podem ser descobertos na guia [!UICONTROL Governança de dados] do espaço de trabalho de Conjuntos de dados na coluna [!UICONTROL Nome do campo] como rótulos somente leitura.
 
@@ -109,7 +109,7 @@ Depois de migrar os rótulos necessários, verifique se você habilitou as [pol�
 
 Depois de aplicar rótulos aos seus esquemas e/ou conjuntos de dados, você pode criar políticas de governança de dados que restringem as ações de marketing para as quais determinados rótulos podem ser usados.
 
-Selecione **[!UICONTROL Políticas]** na navegação à esquerda para exibir uma lista de políticas principais definidas pelo Adobe, bem como quaisquer políticas personalizadas criadas anteriormente pela sua organização.
+Selecione **[!UICONTROL Políticas]** na navegação à esquerda para exibir uma lista de políticas principais definidas pela Adobe, bem como quaisquer políticas personalizadas criadas anteriormente pela sua organização.
 
 Cada rótulo principal tem uma política principal associada que, quando ativada, impõe as restrições de ativação apropriadas a quaisquer dados que contenham esse rótulo. Para habilitar uma política principal, selecione-a na lista e, em seguida, selecione o **[!UICONTROL Status da política]** para **[!UICONTROL Habilitado]**.
 

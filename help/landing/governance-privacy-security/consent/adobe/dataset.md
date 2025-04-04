@@ -6,9 +6,9 @@ description: Saiba como configurar um esquema e um conjunto de dados do Experien
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1581'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Para que o Adobe Experience Platform processe os dados de consentimento/preferência do cliente, esses dados devem ser enviados para um conjunto de dados cujo esquema contém campos relacionados a consentimentos e outras permissões. Especificamente, esse conjunto de dados deve ser baseado na classe [!DNL XDM Individual Profile] e habilitado para uso em [!DNL Real-Time Customer Profile].
 
-Este documento fornece etapas para configurar um conjunto de dados para processar dados de consentimento no Experience Platform. Para obter uma visão geral do fluxo de trabalho completo para processar dados de consentimento/preferência na Platform, consulte a [visão geral do processamento de consentimento](./overview.md).
+Este documento fornece etapas para configurar um conjunto de dados para processar dados de consentimento no Experience Platform. Para obter uma visão geral do fluxo de trabalho completo para processar dados de consentimento/preferência no Experience Platform, consulte a [visão geral do processamento de consentimento](./overview.md).
 
 >[!IMPORTANT]
 >
@@ -39,7 +39,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 >[!IMPORTANT]
 >
->Este tutorial presume que você conhece o esquema [!DNL Profile] na Platform que deseja usar para capturar informações de atributos do cliente. Independentemente do método usado para coletar dados de consentimento, esse esquema deve ser [habilitado para o Perfil de Cliente em Tempo Real](../../../../xdm/ui/resources/schemas.md#profile). Além disso, a identidade primária do schema não pode ser um campo diretamente identificável que esteja proibido de usar em anúncios baseados em interesses, como um endereço de email. Consulte seu advogado se não tiver certeza de quais campos são restritos.
+>Este tutorial pressupõe que você conheça o esquema [!DNL Profile] no Experience Platform que deseja usar para capturar informações de atributos do cliente. Independentemente do método usado para coletar dados de consentimento, esse esquema deve ser [habilitado para o Perfil de Cliente em Tempo Real](../../../../xdm/ui/resources/schemas.md#profile). Além disso, a identidade primária do schema não pode ser um campo diretamente identificável que esteja proibido de usar em anúncios baseados em interesses, como um endereço de email. Consulte seu advogado se não tiver certeza de quais campos são restritos.
 
 ## Estrutura do grupo de campos [!UICONTROL Detalhes sobre consentimento e preferência] {#structure}
 
@@ -99,9 +99,9 @@ O grupo de campos fornece um único campo de tipo de objeto, `consents`, cujas s
 Para coletar dados de consentimento usando o padrão Adobe, é necessário ter um esquema habilitado para Perfil que contenha os dois grupos de campos a seguir:
 
 * [[!UICONTROL Detalhes sobre consentimento e preferência]](../../../../xdm/field-groups/profile/consents.md)
-* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (necessário se estiver usando o SDK móvel ou da Web da plataforma para enviar sinais de consentimento)
+* [[!UICONTROL IdentityMap]](../../../../xdm/field-groups/profile/identitymap.md) (necessário se estiver usando o Experience Platform Web ou o Mobile SDK para enviar sinais de consentimento)
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Esquemas]** na navegação à esquerda e selecione a guia **[!UICONTROL Procurar]** para exibir uma lista de esquemas existentes. Aqui, selecione o nome do esquema habilitado para [!DNL Profile] ao qual você deseja adicionar campos de consentimento. As capturas de tela nesta seção usam o esquema &quot;Membros de Fidelidade&quot; criado no [tutorial de criação de esquema](../../../../xdm/tutorials/create-schema-ui.md), como exemplo.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Esquemas]** na navegação à esquerda e selecione a guia **[!UICONTROL Procurar]** para exibir uma lista de esquemas existentes. Aqui, selecione o nome do esquema habilitado para [!DNL Profile] ao qual você deseja adicionar campos de consentimento. As capturas de tela nesta seção usam o esquema &quot;Membros de Fidelidade&quot; criado no [tutorial de criação de esquema](../../../../xdm/tutorials/create-schema-ui.md), como exemplo.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
@@ -129,7 +129,7 @@ A tela será exibida novamente, mostrando que os campos `consents` e `identityMa
 >
 >Se você estiver criando um novo esquema ou editando um esquema existente que não foi habilitado para o Perfil, deverá [habilitar o esquema para o Perfil](../../../../xdm/ui/resources/schemas.md#profile) antes de salvar.
 
-Se o esquema editado for usado pelo [!UICONTROL Conjunto de dados do perfil] especificado na sequência de dados do SDK da Web da plataforma, esse conjunto de dados incluirá os novos campos de consentimento. Agora você pode retornar ao [guia de processamento de consentimento](./overview.md#merge-policies) para continuar o processo de configuração do Experience Platform para processar dados de consentimento. Se você não tiver criado um conjunto de dados para esse esquema, siga as etapas na próxima seção.
+Se o esquema editado for usado pelo [!UICONTROL Conjunto de dados do perfil] especificado na sequência de dados do Experience Platform Web SDK, esse conjunto de dados incluirá os novos campos de consentimento. Agora você pode retornar ao [guia de processamento de consentimento](./overview.md#merge-policies) para continuar o processo de configuração do Experience Platform para processar dados de consentimento. Se você não tiver criado um conjunto de dados para esse esquema, siga as etapas na próxima seção.
 
 ## Criar um conjunto de dados com base no seu esquema de consentimento {#dataset}
 
@@ -161,11 +161,11 @@ Finalmente, selecione **[!UICONTROL Habilitar]** no popover de confirmação par
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-O conjunto de dados foi salvo e habilitado para uso em [!DNL Profile]. Se você estiver planejando usar o SDK da Web da Platform para enviar dados de consentimento para o Perfil, selecione esse conjunto de dados como o [!UICONTROL Conjunto de dados do perfil] ao configurar sua [sequência de dados](../../../../datastreams/overview.md).
+O conjunto de dados foi salvo e habilitado para uso em [!DNL Profile]. Se você estiver planejando usar o Experience Platform Web SDK para enviar dados de consentimento para o Perfil, selecione esse conjunto de dados como o [!UICONTROL Conjunto de dados do perfil] ao configurar sua [sequência de dados](../../../../datastreams/overview.md).
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você adicionou campos de consentimento a um esquema habilitado para [!DNL Profile], cujo conjunto de dados será usado para assimilar dados de consentimento usando o SDK da Web da plataforma ou assimilação XDM direta.
+Ao seguir este tutorial, você adicionou campos de consentimento a um esquema habilitado para [!DNL Profile], cujo conjunto de dados será usado para assimilar dados de consentimento usando o Experience Platform Web SDK ou assimilação XDM direta.
 
 Agora você pode retornar à [visão geral do processamento de consentimento](./overview.md#merge-policies) para continuar configurando o Experience Platform para processar dados de consentimento.
 
@@ -179,7 +179,7 @@ Se você precisar capturar sinais de consentimento adicionais além daqueles rep
 
 >[!IMPORTANT]
 >
->Os SDKs da Web e móvel da Platform não são compatíveis com campos personalizados em seus comandos de alteração de consentimento. Atualmente, a única maneira de assimilar campos de consentimento personalizados no Perfil é por meio de [assimilação em lote](../../../../ingestion/batch-ingestion/overview.md) ou uma [conexão de origem](../../../../sources/home.md).
+>Os SDKs da Web e móvel da Experience Platform não são compatíveis com campos personalizados em seus comandos de alteração de consentimento. Atualmente, a única maneira de assimilar campos de consentimento personalizados no Perfil é por meio de [assimilação em lote](../../../../ingestion/batch-ingestion/overview.md) ou uma [conexão de origem](../../../../sources/home.md).
 
 É altamente recomendável usar o grupo de campos [!UICONTROL Detalhes sobre consentimento e preferência] como uma linha de base para a estrutura dos dados de consentimento e adicionar outros campos conforme necessário, em vez de tentar criar toda a estrutura do zero.
 

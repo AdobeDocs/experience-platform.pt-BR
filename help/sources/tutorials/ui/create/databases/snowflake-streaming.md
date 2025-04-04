@@ -2,9 +2,9 @@
 title: Transmitir dados do banco de dados do Snowflake para o Experience Platform usando a interface do
 description: Saiba como transmitir dados do banco de dados do Snwoflake para o Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1647'
+source-wordcount: '1648'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ Saiba como usar a interface de usuário para transmitir dados do banco de dados 
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -24,11 +24,11 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 
 ### Autenticação
 
-Leia o guia na [configuração de pré-requisito para [!DNL Snowflake] dados de streaming](../../../../connectors/databases/snowflake-streaming.md) para obter informações sobre as etapas que devem ser concluídas antes de assimilar dados de streaming de [!DNL Snowflake] para o Experience Platform.
+Leia o guia na [configuração de pré-requisito para [!DNL Snowflake] dados de streaming](../../../../connectors/databases/snowflake-streaming.md) para obter informações sobre as etapas que devem ser concluídas antes de assimilar dados de streaming do [!DNL Snowflake] para a Experience Platform.
 
-## Usar a origem [!DNL Snowflake Streaming] para transmitir dados [!DNL Snowflake] para Experience Platform
+## Usar a origem [!DNL Snowflake Streaming] para transmitir dados [!DNL Snowflake] para o Experience Platform
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Na categoria *Bancos de dados*, selecione **[!DNL Snowflake Streaming]** e **[!UICONTROL Adicionar dados]**.
 
@@ -36,9 +36,9 @@ Na categoria *Bancos de dados*, selecione **[!DNL Snowflake Streaming]** e **[!U
 >
 >Fontes que não têm uma conta autenticada no catálogo de fontes exibem a opção **[!UICONTROL Configurar]**. Quando uma conta autenticada existir, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
 
-![O catálogo de fontes na interface do usuário do Experience Platform, com o cartão de origem de Streaming de Snowflake selecionado.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
+![O catálogo de origens na interface do usuário do Experience Platform, com o cartão de origem de Streaming do Snowflake selecionado.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
-A página **[!UICONTROL Connect Snowflake Streaming account]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar conta de Streaming do Snowflake]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 >[!BEGINTABS]
 
@@ -53,7 +53,7 @@ Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum t
 | Credencial | Descrição |
 | --- | --- |
 | Conta | O nome da sua conta [!DNL Snowflake]. Para convenções sobre nomes de conta, leia o [[!DNL Snowflake Streaming] guia de autenticação](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
-| Warehouse | O nome do warehouse [!DNL Snowflake]. Os depósitos gerenciam a execução de consultas em [!DNL Snowflake]. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente para trazer dados para o Experience Platform. |
+| Warehouse | O nome do warehouse [!DNL Snowflake]. Os depósitos gerenciam a execução de consultas em [!DNL Snowflake]. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente para trazer dados para a Experience Platform. |
 | Banco de dados | O nome do banco de dados [!DNL Snowflake]. O banco de dados contém os dados que você deseja trazer para o Experience Platform. |
 | Esquema | (Opcional) O esquema de banco de dados associado à sua conta do [!DNL Snowflake]. |
 | Nome de usuário | O nome de usuário da sua conta [!DNL Snowflake]. |
@@ -80,7 +80,7 @@ Selecione **[!UICONTROL Avançar]** para continuar.
 >
 >* Verifique se o uso de letras maiúsculas e minúsculas nos campos de dados do arquivo de dados de origem de amostra está de acordo com as orientações de [!DNL Snowflake] sobre resolução de casos para identificadores. Leia o [[!DNL Snowflake] documento sobre a capitalização do identificador](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) para obter mais informações.
 
-A etapa [!UICONTROL Selecionar dados] é exibida. Nesta etapa, você deve selecionar os dados que deseja importar para o Experience Platform, configurar carimbos de data e hora e fusos horários e fornecer um arquivo de dados de origem de amostra para a assimilação de dados brutos.
+A etapa [!UICONTROL Selecionar dados] é exibida. Nesta etapa, você deve selecionar os dados que deseja importar para o Experience Platform, configurar carimbos de data e hora e fusos horários, e fornecer um arquivo de dados de origem de amostra para a assimilação de dados brutos.
 
 Use o diretório do banco de dados à esquerda da tela e selecione a tabela que deseja importar para o Experience Platform.
 
@@ -106,7 +106,7 @@ Em seguida, você deve fornecer informações sobre seu conjunto de dados e seu 
 
 ### Detalhes do conjunto de dados {#dataset-details}
 
-Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os dados assimilados com sucesso no Experience Platform são mantidos no data lake como conjuntos de dados. Durante essa etapa, você pode criar um novo conjunto de dados ou usar um conjunto de dados existente.
+Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os dados assimilados com sucesso na Experience Platform são mantidos no data lake como conjuntos de dados. Durante essa etapa, você pode criar um novo conjunto de dados ou usar um conjunto de dados existente.
 
 >[!BEGINTABS]
 
@@ -135,7 +135,7 @@ Se você já tiver um conjunto de dados existente, selecione **[!UICONTROL Conju
 Se o seu conjunto de dados estiver habilitado para o Perfil de cliente em tempo real, durante essa etapa você poderá alternar para **[!UICONTROL o conjunto de dados do perfil]** para habilitar seus dados para assimilação de perfil. Você também pode usar esta etapa para habilitar o **[!UICONTROL Diagnóstico de erro]** e a **[!UICONTROL Assimilação parcial]**.
 
 * **[!UICONTROL Diagnóstico de erro]**: selecione **[!UICONTROL Diagnóstico de erro]** para instruir a origem a produzir o diagnóstico de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
-* **[!UICONTROL Assimilação parcial]**: a assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos no Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
+* **[!UICONTROL Assimilação parcial]**: a assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos na Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
 
 +++
 
@@ -155,7 +155,7 @@ Quando terminar, selecione **[!UICONTROL Avançar]** para continuar.
 
 ## Mapear campos para um esquema XDM {#mapping}
 
-A etapa [!UICONTROL Mapping] é exibida. Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar esses dados no Experience Platform e selecione **[!UICONTROL Avançar]**. Para obter um guia abrangente sobre como usar a interface de mapeamento, leia o [guia da interface do usuário do Preparo de Dados](../../../../../data-prep/ui/mapping.md) para obter mais informações.
+A etapa [!UICONTROL Mapping] é exibida. Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar esses dados na Experience Platform e selecione **[!UICONTROL Avançar]**. Para obter um guia abrangente sobre como usar a interface de mapeamento, leia o [guia da interface do usuário do Preparo de Dados](../../../../../data-prep/ui/mapping.md) para obter mais informações.
 
 ![A interface de mapeamento do fluxo de trabalho de origens.](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
 

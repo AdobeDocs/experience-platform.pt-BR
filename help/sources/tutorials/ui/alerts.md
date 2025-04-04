@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares; alertas;;home;popular topics; alerts
+keywords: Experience Platform;página inicial;tópicos populares; alertas
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 title: Assinar alertas de contexto na interface do usuário
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '825'
 ht-degree: 7%
 
 ---
@@ -22,9 +22,9 @@ Este documento fornece etapas sobre como assinar mensagens de alertas de recebim
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-* [Observabilidade](../../../observability/home.md): [!DNL Observability Insights] permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos.
-   * [Alertas](../../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações da Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), a Platform pode enviar mensagens de alerta para qualquer usuário em sua organização que tenha feito a assinatura.
+* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+* [Observabilidade](../../../observability/home.md): [!DNL Observability Insights] permite monitorar as atividades do Experience Platform usando métricas estatísticas e notificações de eventos.
+   * [Alertas](../../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações do Experience Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), o Experience Platform pode enviar mensagens de alerta para qualquer usuário em sua organização que tenha assinado para eles.
 
 ## Assinar os alertas da interface {#subscribe-sources-alerts}
 
@@ -36,7 +36,7 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ad
 
 >[!IMPORTANT]
 >
->Você deve ativar notificações instantâneas de emails para sua conta da Platform a fim de receber notificações de alerta baseadas em email para seus fluxos de dados.
+>Você deve ativar notificações instantâneas de emails para sua conta do Experience Platform a fim de receber notificações de alerta baseadas em email para seus fluxos de dados.
 
 Você pode habilitar alertas para seus fluxos de dados durante a etapa [!UICONTROL detalhes do fluxo de dados] do fluxo de trabalho de fontes no espaço de trabalho de fontes.
 
@@ -51,7 +51,7 @@ Os alertas disponíveis para fluxos de dados de origens são:
 | Alertas | Descrição |
 | --- | --- |
 | Início da execução do fluxo de fontes | Esse alerta envia uma mensagem quando o fluxo de dados de origem é iniciado. |
-| Êxito na execução do fluxo de fontes | Esse alerta envia uma mensagem quando os dados da fonte são assimilados com êxito na Platform. |
+| Êxito na execução do fluxo de fontes | Esse alerta envia uma mensagem quando os dados da sua fonte são assimilados com êxito na Experience Platform. |
 | Falha na execução do fluxo de fontes | Esse alerta envia uma mensagem se ocorrer um erro no fluxo de dados. |
 
 Selecione os alertas que você deseja assinar e selecione **[!UICONTROL Avançar]** para revisar e concluir seu fluxo de dados.
@@ -76,7 +76,7 @@ Depois que o fluxo de dados for executado, você poderá receber alertas por mei
 
 ### Na interface
 
-Os alertas são representados na interface do usuário por um ícone de notificação no cabeçalho superior da interface do usuário da plataforma. Selecione o ícone de notificação para ver mensagens de alerta específicas relacionadas aos fluxos de dados.
+Os alertas são representados na interface por um ícone de notificação no cabeçalho superior da interface do usuário do Experience Platform. Selecione o ícone de notificação para ver mensagens de alerta específicas relacionadas aos fluxos de dados.
 
 ![notificação](../../images/tutorials/alerts/notification.png)
 

@@ -5,9 +5,9 @@ title: Transmitir dados de registro usando APIs de assimilação de fluxo
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar as APIs de assimilação de fluxo, parte das APIs de serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1036'
 ht-degree: 3%
 
 ---
@@ -21,13 +21,13 @@ Este tutorial ajudará você a começar a usar as APIs de assimilação de strea
 
 Este tutorial requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência.
    - [Guia do desenvolvedor do Registro de Esquema](../../xdm/api/getting-started.md): um guia abrangente que cobre cada um dos pontos de extremidade disponíveis da API [!DNL Schema Registry] e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas neste tutorial, bem como saber como criar esquemas, que é usado na criação de um conjunto de dados para assimilação.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de múltiplas fontes.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../landing/api-guide.md).
 
 ## Compor um esquema com base na classe [!DNL XDM Individual Profile]
 
@@ -247,7 +247,7 @@ Para obter mais informações sobre como criar uma conexão de streaming, leia o
 
 ## Assimilar dados de registro na conexão de transmissão {#ingest-data}
 
-Com o conjunto de dados e a conexão de transmissão em vigor, você pode assimilar registros JSON formatados em XDM para assimilar dados de registro em [!DNL Platform].
+Com o conjunto de dados e a conexão de transmissão em vigor, você pode assimilar registros JSON formatados em XDM para assimilar dados de registro em [!DNL Experience Platform].
 
 **Formato da API**
 
@@ -264,7 +264,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 A assimilação de dados de registro em uma conexão de streaming pode ser feita com ou sem o nome de origem.
 
-A solicitação de exemplo abaixo assimila um registro com um nome de origem ausente na Platform. Se um registro não tiver o nome de origem, ele adicionará a ID de origem da definição da conexão de streaming.
+A solicitação de exemplo abaixo assimila um registro com um nome de origem ausente na Experience Platform. Se um registro não tiver o nome de origem, ele adicionará a ID de origem da definição da conexão de streaming.
 
 >[!NOTE]
 >
@@ -346,7 +346,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do [!DNL Profil
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | A ID da conexão de streaming criada anteriormente. |
-| `xactionId` | Um identificador exclusivo gerado no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda o Adobe a rastrear o ciclo de vida desse registro por vários sistemas e com depuração. |
+| `xactionId` | Um identificador exclusivo gerado no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda a Adobe a rastrear o ciclo de vida desse registro por vários sistemas e com depuração. |
 | `receivedTimeMs` | Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
 | `syncValidation.status` | Como o parâmetro de consulta `syncValidation=true` foi adicionado, este valor aparecerá. Se a validação tiver êxito, o status será `pass`. |
 
@@ -374,7 +374,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 **Solicitação**
 
-Você pode revisar os dados de registro assimilados anteriormente com a solicitação GET a seguir.
+Você pode revisar os dados de registro assimilados anteriormente com a seguinte solicitação do GET.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
@@ -435,6 +435,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das entidades s
 
 ## Próximas etapas
 
-Após a leitura deste documento, você entende como assimilar dados de registro no [!DNL Platform] usando conexões de streaming. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode começar a monitorar os dados assimilados por meio da interface do usuário do [!DNL Platform]. Para obter mais informações, leia o [guia de assimilação de dados de monitoramento](../quality/monitor-data-ingestion.md).
+Após a leitura deste documento, você entende como assimilar dados de registro no [!DNL Experience Platform] usando conexões de streaming. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode começar a monitorar os dados assimilados por meio da interface do usuário do [!DNL Experience Platform]. Para obter mais informações, leia o [guia de assimilação de dados de monitoramento](../quality/monitor-data-ingestion.md).
 
 Para obter mais informações sobre a assimilação por transmissão em geral, leia a [visão geral da assimilação por transmissão](../streaming-ingestion/overview.md).

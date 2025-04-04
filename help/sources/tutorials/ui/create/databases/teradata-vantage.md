@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Vantagem de Teradata
-title: Criar uma Conexão do Teradata Vantage Source na interface
-description: Saiba como criar uma conexão de origem do Teradata Vantage usando a interface do usuário do Adobe Experience Platform.
+keywords: Experience Platform;página inicial;tópicos populares;Teradata Vantage
+title: Criar uma conexão do Teradata Vantage Source na interface
+description: Saiba como criar uma conexão de origem do Teradata Vantage usando a interface do Adobe Experience Platform.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '413'
+source-wordcount: '418'
 ht-degree: 2%
 
 ---
@@ -16,14 +16,14 @@ Este tutorial fornece etapas para a criação de um conector de origem [!DNL Ter
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes da Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, além de fornecer a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços Experience Platform.
-* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Coletar credenciais necessárias
 
-Para acessar sua conta do [!DNL Teradata Vantage] na Platform, você deve fornecer o seguinte valor de autenticação:
+Para acessar sua conta do [!DNL Teradata Vantage] no Experience Platform, você deve fornecer o seguinte valor de autenticação:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
@@ -33,9 +33,9 @@ Para obter mais informações sobre a introdução, consulte este [[!DNL Teradat
 
 ## Conectar sua conta do [!DNL Teradata Vantage]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria [!UICONTROL Bancos de Dados], selecione **[!UICONTROL Vantagem de Teradata]** e **[!UICONTROL Configurar]**.
+Na categoria [!UICONTROL Bancos de dados], selecione **[!UICONTROL Teradata Vantage]** e **[!UICONTROL Configurar]**.
 
 >[!TIP]
 >
@@ -59,4 +59,4 @@ Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta do Teradata Vantage. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Platform](../../dataflow/databases.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta do Teradata Vantage. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](../../dataflow/databases.md).

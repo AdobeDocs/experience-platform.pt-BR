@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;guia do usuário;ia do cliente;tópicos populares;configurar instância;criar instância;
+keywords: Experience Platform;guia do usuário;ia do cliente;tópicos populares;configurar instância;criar instância;;user guide;customer ai;popular topics;configure instance;create instance;
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Configurar uma instância da IA do cliente
 description: Os Serviços de IA/ML fornecem IA do cliente como um serviço da Adobe Sensei simples de usar que pode ser configurado para casos de uso diferentes. As seções a seguir fornecem etapas para configurar uma instância da IA do cliente.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2827'
+source-wordcount: '2829'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Os Serviços de IA/ML fornecem IA do cliente como um serviço da Adobe Sensei si
 
 ## Criar uma instância {#set-up-your-instance}
 
-Na interface da Platform, selecione **[!UICONTROL Serviços]** na navegação à esquerda. O navegador **[!UICONTROL Serviços]** é exibido e exibe todos os serviços disponíveis à sua disposição. No contêiner da IA do cliente, selecione **[!UICONTROL Abrir]**.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Serviços]** na navegação à esquerda. O navegador **[!UICONTROL Serviços]** é exibido e exibe todos os serviços disponíveis à sua disposição. No contêiner da IA do cliente, selecione **[!UICONTROL Abrir]**.
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -35,7 +35,7 @@ As instâncias de serviço podem ser editadas, clonadas e excluídas usando os c
 
 - **[!UICONTROL Editar]**: selecionar **[!UICONTROL Editar]** permite modificar uma instância de serviço existente. É possível editar o nome, a descrição e a frequência de pontuação da instância.
 - **[!UICONTROL Clonar]**: selecionar **[!UICONTROL Clonar]** copia a configuração da instância de serviço selecionada no momento. Em seguida, você pode modificar o fluxo de trabalho para fazer pequenos ajustes e renomeá-lo como uma nova instância.
-- **[!UICONTROL Excluir]**: é possível excluir uma instância de serviço, incluindo todas as execuções históricas. O conjunto de dados de saída correspondente será excluído da Platform. No entanto, as pontuações que foram sincronizadas com o Perfil do cliente em tempo real não são excluídas.
+- **[!UICONTROL Excluir]**: é possível excluir uma instância de serviço, incluindo todas as execuções históricas. O conjunto de dados de saída correspondente será excluído do Experience Platform. No entanto, as pontuações que foram sincronizadas com o Perfil do cliente em tempo real não são excluídas.
 - **[!UICONTROL Fonte de dados]**: um link para o conjunto de dados usado por esta instância. Se vários conjuntos de dados estiverem sendo usados, selecionar o texto do hiperlink abrirá o popover de visualização do conjunto de dados.
 - **[!UICONTROL Detalhes da última execução]**: exibido somente quando uma execução falha. As informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
 - **[!UICONTROL Definição de pontuação]**: uma visão geral rápida da meta que você configurou para esta instância.

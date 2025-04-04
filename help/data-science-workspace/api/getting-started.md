@@ -5,10 +5,10 @@ title: Guia da API do Sensei Machine Learning
 description: A API do Sensei Machine Learning permite que os desenvolvedores executem operações CRUD em vários recursos do Data Science Workspace. Siga este manual para saber como executar operações importantes usando a API.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '255'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -32,11 +32,11 @@ Você precisa concluir o tutorial de [autenticação](https://www.adobe.com/go/p
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+Para obter mais informações sobre sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 

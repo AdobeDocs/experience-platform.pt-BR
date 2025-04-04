@@ -2,9 +2,9 @@
 title: Explorar, solucionar problemas e verificar a assimilação em lote com o SQL
 description: Saiba como entender e gerenciar o processo de assimilação de dados no Adobe Experience Platform. Este documento inclui como verificar lotes e consultar dados assimilados.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1170'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ Este documento explica como verificar e validar registros em lotes assimilados c
 
 Para ajudar na compreensão dos conceitos discutidos neste documento, você deve ter conhecimento dos seguintes tópicos:
 
-- **Assimilação de dados**: consulte a [visão geral da assimilação de dados](../../ingestion/home.md) para saber as noções básicas de como os dados são assimilados na plataforma, incluindo os diferentes métodos e processos envolvidos.
-- **Assimilação em lote**: consulte a [visão geral da API de assimilação em lote](../../ingestion/batch-ingestion/overview.md) para saber mais sobre os conceitos básicos de assimilação em lote. Especificamente, o que é um &quot;lote&quot; e como ele funciona no processo de assimilação de dados da plataforma.
+- **Assimilação de dados**: consulte a [visão geral da assimilação de dados](../../ingestion/home.md) para saber as noções básicas de como os dados são assimilados na Experience Platform, incluindo os diferentes métodos e processos envolvidos.
+- **Assimilação em lote**: consulte a [visão geral da API de assimilação em lote](../../ingestion/batch-ingestion/overview.md) para saber mais sobre os conceitos básicos de assimilação em lote. Especificamente, o que é um &quot;lote&quot; e como ele funciona no processo de assimilação de dados da Experience Platform.
 - **Metadados do sistema em conjuntos de dados**: consulte a [visão geral do Serviço de Catálogo](../../catalog/home.md) para saber como os campos de metadados do sistema são usados para rastrear e consultar dados assimilados.
-- **Experience Data Model (XDM)**: consulte a [visão geral da interface do usuário de esquemas](../../xdm/ui/overview.md) e as [&#39;noções básicas da composição de esquema&#39;](../../xdm/schema/composition.md) para saber mais sobre esquemas XDM e como eles representam e validam a estrutura e o formato dos dados assimilados na Platform.
+- **Experience Data Model (XDM)**: consulte a [visão geral da interface do usuário de esquemas](../../xdm/ui/overview.md) e as [&#39;noções básicas da composição de esquema&#39;](../../xdm/schema/composition.md) para saber mais sobre esquemas XDM e como eles representam e validam a estrutura e o formato dos dados assimilados na Experience Platform.
 
 ## Acessar metadados em lote do conjunto de dados {#access-dataset-batch-metadata}
 
@@ -37,7 +37,7 @@ Em seguida, para exibir os campos de sistema do conjunto de dados, execute uma i
 
 ![A interface do usuário do DBVisualizer com a tabela movie_data e suas colunas de metadados exibidas e realçadas.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-Quando os dados são assimilados na Platform, uma partição lógica é atribuída com base nos dados recebidos. Esta partição lógica é representada por `_acp_system_metadata.sourceBatchId`. Essa ID ajuda a agrupar e identificar os lotes de dados logicamente antes de serem processados e armazenados.
+Quando os dados são assimilados na Experience Platform, ela recebe uma partição lógica com base nos dados recebidos. Esta partição lógica é representada por `_acp_system_metadata.sourceBatchId`. Essa ID ajuda a agrupar e identificar os lotes de dados logicamente antes de serem processados e armazenados.
 
 Depois que os dados forem processados e assimilados no data lake, ele receberá uma partição física representada por `_ACP_BATCHID`. Essa ID reflete a partição de armazenamento real no data lake onde os dados assimilados residem.
 
@@ -56,7 +56,7 @@ Os resultados desse query são mostrados na imagem abaixo.
 
 Esses resultados demonstram que o número de lotes de entrada não corresponde necessariamente ao número de lotes de saída, pois o sistema determina a maneira mais eficiente de colocar em lote e armazenar os dados no data lake.
 
-Para o propósito deste exemplo, presume-se que você tenha assimilado um arquivo CSV na Platform e criado um conjunto de dados chamado `drug_checkout_data`.
+Para o propósito deste exemplo, presume-se que você tenha assimilado um arquivo CSV na Experience Platform e criado um conjunto de dados chamado `drug_checkout_data`.
 
 O arquivo `drug_checkout_data` é um conjunto profundamente aninhado de 35.000 registros. Use a instrução SQL `SELECT * FROM drug_orders;` para visualizar o primeiro conjunto de registros no conjunto de dados `drug_orders` baseado em JSON.
 
@@ -92,13 +92,13 @@ Em seguida, valide e verifique os registros que foram assimilados no conjunto de
 
 >[!TIP]
 >
->Para recuperar a ID do lote e os registros de consulta associados a essa ID do lote, primeiro você deve criar um lote na Platform. Se quiser testar o processo sozinho, você pode assimilar dados CSV na Platform. Leia o guia sobre como [mapear um arquivo CSV para um esquema XDM existente usando recomendações geradas por IA](../../ingestion/tutorials/map-csv/recommendations.md).
+>Para recuperar a ID do lote e os registros de consulta associados a essa ID do lote, primeiro você deve criar um lote no Experience Platform. Se quiser testar o processo sozinho, você pode assimilar dados CSV na Experience Platform. Leia o guia sobre como [mapear um arquivo CSV para um esquema XDM existente usando recomendações geradas por IA](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Depois de assimilar um lote, você deve navegar até a [!UICONTROL guia de atividade de conjuntos de dados] para o conjunto de dados no qual assimilou dados.
 
 Na interface do usuário do Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** no menu de navegação esquerdo para abrir o painel [!UICONTROL Conjuntos de dados]. Em seguida, selecione o nome do conjunto de dados na guia [!UICONTROL Procurar] para acessar a tela [!UICONTROL Atividade do conjunto de dados].
 
-![O painel de Conjuntos de Dados da Interface do Usuário da Plataforma com Conjuntos de Dados realçado na navegação à esquerda.](../images/use-cases/datasets-workspace.png)
+![O painel de Conjuntos de Dados da Interface do Usuário do Experience Platform com Conjuntos de Dados é realçado na navegação à esquerda.](../images/use-cases/datasets-workspace.png)
 
 A exibição [!UICONTROL Atividade do conjunto de dados] aparece. Essa exibição contém detalhes do conjunto de dados selecionado. Inclui todos os lotes assimilados exibidos em formato de tabela.
 
@@ -124,8 +124,8 @@ Ao executar essa consulta no Editor de consultas, os resultados são truncados p
 
 ## Próximas etapas {#next-steps}
 
-Ao ler este documento, você aprendeu os conceitos básicos de verificação e validação de registros em lotes assimilados como parte do processo de assimilação de dados. Você também obteve insights sobre como acessar metadados em lote do conjunto de dados, entender partições lógicas e físicas e consultar lotes específicos usando comandos SQL. Esse conhecimento pode ajudá-lo a garantir a integridade dos dados e otimizar seu armazenamento de dados na Platform.
+Ao ler este documento, você aprendeu os conceitos básicos de verificação e validação de registros em lotes assimilados como parte do processo de assimilação de dados. Você também obteve insights sobre como acessar metadados em lote do conjunto de dados, entender partições lógicas e físicas e consultar lotes específicos usando comandos SQL. Esse conhecimento pode ajudá-lo a garantir a integridade dos dados e otimizar seu armazenamento de dados no Experience Platform.
 
-Em seguida, pratique a assimilação de dados para aplicar os conceitos aprendidos. Assimile um conjunto de dados de amostra na Platform com os arquivos de amostra fornecidos ou com seus próprios dados. Se ainda não tiver feito isso, leia o tutorial sobre como [assimilar dados no Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
+Em seguida, pratique a assimilação de dados para aplicar os conceitos aprendidos. Assimile um conjunto de dados de amostra na Experience Platform com os arquivos de amostra fornecidos ou seus próprios dados. Se ainda não tiver feito isso, leia o tutorial sobre como [assimilar dados no Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
 
 Como alternativa, você pode aprender a [conectar e verificar o Serviço de Consulta com vários aplicativos de cliente de desktop](../clients/overview.md) para aprimorar seus recursos de análise de dados.

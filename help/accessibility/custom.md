@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;perfil unificado;Perfil unificado;perfil;gráficos XDM
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;perfil unificado;Perfil unificado;unificado;Perfil;rtcp;gráficos XDM
 title: Soluções personalizadas de acessibilidade para o Experience Platform
 type: Documentation
 description: Saiba mais sobre as soluções de acessibilidade personalizadas na interface do usuário do Adobe Experience Platform.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1664'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ O Adobe Experience Platform é aprimorado continuamente para atender às necessi
 
 ## Visão geral da página inicial e da interface do usuário
 
-A interface de usuário do Experience Platform atende às taxas de contraste necessárias para texto normal, gráficos e componentes de interface do usuário. As cores da interface do usuário também foram escolhidas para oferecer suporte à acessibilidade para todos os usuários, incluindo aqueles com deficiências visuais.
+A interface do usuário do Experience Platform atende às taxas de contraste necessárias para texto normal, gráficos e componentes de interface do usuário. As cores da interface do usuário também foram escolhidas para oferecer suporte à acessibilidade para todos os usuários, incluindo aqueles com deficiências visuais.
 
-Na Platform, os elementos da interface do usuário clicáveis ou acionáveis com um ponteiro também podem ser engajados usando um teclado. Isso inclui a navegação à esquerda, players de vídeo, tabelas e muito mais.
+No, os elementos da interface do usuário clicáveis ou acionáveis com um ponteiro também podem ser envolvidos usando um teclado. Isso inclui a navegação à esquerda, players de vídeo, tabelas e muito mais.
 
 O Experience Platform se esforça para atender aos padrões internacionais de acessibilidade, incluindo as Web Content Accessibility Guidelines 2.1 Nível A e Nível AA e os padrões Web Web Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA).
 
@@ -41,13 +41,13 @@ Com a navegação à esquerda em foco, as teclas de seta para cima e para baixo 
 
 ![A navegação à esquerda do Experience Platform com Fontes selecionadas.](images/left-navigation-sources.png)
 
-Alguns recursos na Platform não estão habilitados para todos os usuários. Esses itens aparecem na navegação, mas não podem ser selecionados. Ao navegar com um teclado, esses itens são ignorados durante a navegação de seta e não podem ser selecionados usando **Enter (Return)**.
+Alguns recursos no Experience Platform não estão habilitados para todos os usuários. Esses itens aparecem na navegação, mas não podem ser selecionados. Ao navegar com um teclado, esses itens são ignorados durante a navegação de seta e não podem ser selecionados usando **Enter (Return)**.
 
-![As seções de navegação à esquerda do Experience Platform que não estão habilitadas para o usuário não podem ser selecionadas.](images/left-navigation-sections-disabled.png)
+![As seções da navegação à esquerda do Experience Platform que não estão habilitadas para o usuário não podem ser selecionadas.](images/left-navigation-sections-disabled.png)
 
 ## Caixa de diálogo Vídeo incorporado
 
-Os vídeos podem ser exibidos no Experience Platform usando a navegação pelo teclado para realçar e selecionar um link de vídeo disponível. Isso abre uma caixa de diálogo de vídeo incorporada na interface do usuário da Platform.
+Os vídeos podem ser exibidos no Experience Platform usando a navegação pelo teclado para realçar e selecionar um link de vídeo disponível. Isso abre uma caixa de diálogo de vídeo incorporada na interface do usuário do Experience Platform.
 
 ![Uma borda azul que aparece ao redor de um elemento selecionado para indicar que o foco está aplicado.](images/profile-overview-tab.png)
 
@@ -88,7 +88,7 @@ Usar um mouse para selecionar a zona de arrastar e soltar também chama a interf
 
 ## Procurar tabela
 
-Todas as tabelas na interface do usuário do Experience Platform podem ser acessadas pelo teclado. Procurar e interagir com linhas e colunas da tabela é possível por meio de uma série de atalhos de teclado:
+Todas as tabelas na interface do usuário do Experience Platform são acessíveis pelo teclado. Procurar e interagir com linhas e colunas da tabela é possível por meio de uma série de atalhos de teclado:
 
 * No cabeçalho da tabela, use a **seta para baixo** para navegar na tabela. Os cabeçalhos da tabela podem ser selecionados ao navegar pela **Guia**, e você pode alterar a ordem de classificação usando a **barra de espaço**.
 * **Teclas de seta para cima e para baixo** movem-se para cima e para baixo nas linhas da tabela.

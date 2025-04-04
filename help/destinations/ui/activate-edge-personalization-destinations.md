@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de personalização de borda
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de personalização de borda para casos de uso de personalização de mesma página e próxima página.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1957'
+source-wordcount: '1961'
 ht-degree: 2%
 
 ---
@@ -85,7 +85,7 @@ Ao configurar a sequência de dados, em **[!UICONTROL Adobe Experience Platform]
 
 ![Configuração de sequência de dados com Segmentação do Edge e Destinos do Personalization realçados!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Para obter mais detalhes sobre como configurar uma sequência de dados, siga as instruções descritas na [documentação do Platform Web SDK](../../datastreams/configure.md#aep).
+Para obter mais detalhes sobre como configurar uma sequência de dados, siga as instruções descritas na [documentação do Experience Platform Web SDK](../../datastreams/configure.md#aep).
 
 ### Criar uma política de mesclagem [!DNL Active-On-Edge] {#create-merge-policy}
 
@@ -97,9 +97,9 @@ Depois de criar a conexão de destino, você deve criar uma política de mesclag
 
 Siga as instruções em [criando uma política de mesclagem](../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e habilite a **[!UICONTROL Política de mesclagem Ative-On-Edge]**.
 
-### Criar um novo público na Platform {#create-audience}
+### Criar um novo público no Experience Platform {#create-audience}
 
-Depois de criar a política de mesclagem [!DNL Active-On-Edge], você deve criar um novo público na Platform.
+Depois de criar a política de mesclagem [!DNL Active-On-Edge], você deve criar um novo público no Experience Platform.
 
 Siga o guia do [construtor de público-alvo](../../segmentation/ui/segment-builder.md) para criar seu novo público-alvo e certifique-se de [atribuí-lo](../../segmentation/ui/segment-builder.md#merge-policies) à política de mesclagem do [!DNL Active-On-Edge] criada na etapa anterior.
 
@@ -141,7 +141,7 @@ Para selecionar os públicos que você deseja ativar para o destino, use as caix
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
 * **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
-* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados no Experience Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
 * Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
 
 ![Selecione a etapa de públicos do fluxo de trabalho de ativação com vários públicos realçados.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

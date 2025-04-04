@@ -2,9 +2,9 @@
 title: Gerenciamento de permissões para coleção de dados na Experience Platform
 description: Uma visão geral de alto nível sobre como gerenciar permissões e controlar o acesso aos recursos de coleção de dados no Adobe Experience Platform.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: '1358'
 ht-degree: 28%
 
 ---
@@ -28,7 +28,7 @@ Este manual supõe que você já esteja familiarizado com conceitos básicos do 
 
 ## Permissões disponíveis
 
-As permissões relevantes para Coleta de dados são fornecidas por meio de duas designações de produto no Admin Console: **Adobe Experience Platform** e **Coleta de dados Adobe Experience Platform**. As seções abaixo descrevem as permissões fornecidas em cada produto, juntamente com descrições dos recursos específicos aos quais eles concedem acesso.
+As permissões relevantes para a Coleção de dados são fornecidas por meio de duas designações de produto no Admin Console: **Adobe Experience Platform** e **Coleção de dados do Adobe Experience Platform**. As seções abaixo descrevem as permissões fornecidas em cada produto, juntamente com descrições dos recursos específicos aos quais eles concedem acesso.
 
 ### Permissões do Adobe Experience Platform
 
@@ -55,13 +55,13 @@ As permissões em Coleta de dados da Adobe Experience Platform controlam o acess
 | Plataformas | Web | Concede acesso a [propriedades da Web](../tags/ui/administration/companies-and-properties.md) quando combinado com outros direitos de propriedade. |
 | Plataformas | Dispositivo móvel | Concede acesso a [propriedades móveis](../tags/ui/administration/companies-and-properties.md) quando combinado com outros direitos de propriedade. |
 | Plataformas | Edge | Concede acesso às [propriedades do Edge para encaminhamento de eventos](../tags/ui/event-forwarding/getting-started.md) quando combinadas com outros direitos de propriedade. |
-| Propriedades | (N/D) | Dependendo das propriedades que foram criadas em sua organização, você pode controlar o acesso a cada uma delas por meio desta categoria de permissão no Admin Console.<br><br>Os direitos de propriedade atribuídos a um usuário se aplicam apenas às propriedades às quais ele recebeu acesso por meio desta categoria de permissão. |
+| Propriedades | (N/D) | Dependendo das propriedades criadas em sua organização, você pode controlar o acesso a cada uma delas por meio desta categoria de permissão no Admin Console.<br><br>Os direitos de propriedade atribuídos a um usuário se aplicam apenas às propriedades às quais ele recebeu acesso por meio desta categoria de permissão. |
 | Direitos de propriedade | Aprovar | Concede a capacidade de aprovar uma build de biblioteca como parte do [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
 | Direitos de propriedade | Desenvolver | Concede a capacidade de desenvolver uma build de biblioteca como parte do [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
 | Direitos de propriedade | Editar propriedade | Concede a capacidade de editar a configuração básica das propriedades às quais um usuário tem acesso. |
 | Direitos de propriedade | Gerenciar ambientes | Concede a capacidade de gerenciar os [ambientes](../tags/ui/publishing/environments.md) das propriedades às quais um usuário tem acesso. |
 | Direitos de propriedade | Gerenciar extensões | Concede a capacidade de gerenciar as [extensões](../tags/ui/managing-resources/extensions/overview.md) das propriedades às quais um usuário tem acesso. |
-| Direitos de propriedade | Publicar | Concede a capacidade de publicar uma build de biblioteca como parte do [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
+| Direitos de propriedade | Publicação | Concede a capacidade de publicar uma build de biblioteca como parte do [fluxo de publicação](../tags/ui/publishing/publishing-flow.md). |
 | Direitos da empresa | Desenvolver extensões | Concede a capacidade de criar e modificar pacotes de extensão de propriedade de sua organização, incluindo versões privadas e solicitações de lançamento de versão pública. |
 | Direitos da empresa | Gerenciar configurações do aplicativo | Essa permissão só é aplicável se você tiver uma licença do Adobe Journey Optimizer ou outra solução que conceda acesso a mensagens móveis no aplicativo e por push. Isso permite gerenciar os aplicativos que o Adobe Experience Cloud conhece, juntamente com as credenciais de push necessárias para se comunicar com o serviço Firebase Cloud Messaging e o serviço Apple Push Notification. |
 | Direitos da empresa | Gerenciar propriedades | Concede a capacidade de criar e gerenciar tags (propriedade da Web), encaminhamento de eventos (propriedade de borda) e propriedades móveis. |
@@ -76,7 +76,7 @@ As permissões em Coleta de dados da Adobe Experience Platform controlam o acess
 
 As permissões para coleta de dados são gerenciadas por meio de duas designações de produto: **Adobe Experience Platform** e **Coleção de dados da Adobe Experience Platform**.
 
-Consulte as subseções abaixo para ver as etapas sobre como gerenciar as permissões relevantes em cada produto do Admin Console:
+Consulte as subseções abaixo para obter as etapas sobre como gerenciar as permissões relevantes em cada produto no Admin Console:
 
 * [Permissões do Adobe Experience Platform](#manage-platform)
 * [Permissões de coleção de dados do Adobe Experience Platform](#manage-collection)
@@ -87,7 +87,7 @@ Consulte as subseções abaixo para ver as etapas sobre como gerenciar as permis
 >
 >Para gerenciar permissões para uma função, serão necessários direitos de administrador. Se você não tiver privilégios de administrador, entre em contato com o administrador do sistema.
 
-A seção **[!UICONTROL Permissões]** do Experience Cloud permite definir funções e políticas de usuário para gerenciar o acesso a recursos e objetos em um aplicativo de produto.
+A seção **[!UICONTROL Permissões]** do Experience Cloud permite definir funções de usuário e políticas para gerenciar o acesso a recursos e objetos em um aplicativo de produto.
 
 Através das [!UICONTROL Permissões], é possível criar e gerenciar funções e atribuir as permissões de recurso desejadas para essas funções.
 
@@ -95,25 +95,25 @@ Através das [!UICONTROL Permissões], é possível criar e gerenciar funções 
 
 Para acessar os recursos de coleção de dados, você deve habilitar todas as permissões nas categorias **[!UICONTROL Sandboxes]**, **[!UICONTROL Modelagem de Dados]**, **[!UICONTROL Identity Management]** e **[!UICONTROL Coleção de Dados]**.
 
-![Imagem mostrando o cartão de produto Coleta de Dados no Admin Console](./images/permissions/platform-permission-card.png)
+![Imagem mostrando o cartão de produto Coleção de dados no Admin Console](./images/permissions/platform-permission-card.png)
 
-Consulte o [guia da interface do usuário de controle de acesso](../access-control/ui/overview.md) para obter instruções detalhadas sobre como gerenciar permissões da Platform.
+Consulte o [guia da interface do usuário de controle de acesso](../access-control/ui/overview.md) para obter instruções detalhadas sobre como gerenciar permissões do Experience Platform.
 
 >[!NOTE]
 >
->Dependendo das SKUs do produto às quais sua organização tem acesso, talvez você não tenha todas as permissões da Platform disponíveis.
+>Dependendo das SKUs do produto às quais sua organização tem acesso, talvez você não tenha todas as permissões do Experience Platform disponíveis.
 
 ### Gerenciar permissões na Coleção de dados da Adobe Experience Platform {#manage-collection}
 
-Para gerenciar essas permissões, faça logon no Admin Console e selecione **[!UICONTROL Produtos]** na navegação superior, em seguida, selecione **[!UICONTROL Coleção de dados da Adobe Experience Platform]**.
+Para gerenciar essas permissões, faça logon no Admin Console, selecione **[!UICONTROL Produtos]** na navegação superior e selecione **[!UICONTROL Coleção de dados da Adobe Experience Platform]**.
 
-![Imagem mostrando o cartão de produto Coleta de Dados no Admin Console](./images/permissions/data-collection-card.png)
+![Imagem mostrando o cartão de produto Coleção de dados no Admin Console](./images/permissions/data-collection-card.png)
 
 #### Selecionar ou criar um perfil de produto
 
 A próxima tela mostra uma lista de perfis de produto disponíveis para a Coleção de dados em sua organização. O perfil padrão é **[!DNL Default Data Collection All Access]**. Você pode optar por editar o perfil de produto padrão, se desejar, ou pode selecionar **[!UICONTROL Novo perfil]** para criar um. Se possuir várias funções ou grupos de usuários em sua organização que precisam de diferentes níveis de acesso, crie um perfil de produto separado para cada um deles.
 
-![Imagem mostrando os perfis de produto para a Coleção de dados no Admin Console](./images/permissions/new-profile.png)
+![Imagem mostrando os perfis de produto para a Coleção de dados na Admin Console](./images/permissions/new-profile.png)
 
 Após selecionar ou criar um perfil de produto, você pode usar os ícones **[!UICONTROL Editar]** para iniciar as [permissões de edição](#edit-permissions) para o perfil ou selecionar a guia **[!UICONTROL Usuários]** para começar a [atribuir usuários](#assign-users) ao perfil.
 
@@ -147,4 +147,4 @@ Para obter mais informações sobre como gerenciar usuários em um perfil de pro
 
 ## Próximas etapas
 
-Este guia abordou as permissões disponíveis para Coleta de dados e como gerenciá-las por meio do Admin Console. Para obter mais informações sobre como gerenciar as permissões para outros recursos da Adobe Experience Platform, consulte a [documentação de controle de acesso](../access-control/home.md).
+Este guia abordou as permissões disponíveis para a Coleção de dados e como gerenciá-las por meio do Admin Console. Para obter mais informações sobre como gerenciar as permissões para outros recursos da Adobe Experience Platform, consulte a [documentação de controle de acesso](../access-control/home.md).

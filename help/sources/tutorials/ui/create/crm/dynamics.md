@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics
 solution: Experience Platform
-title: Criar uma conexão do Microsoft Dynamics Source na interface do usuário
+title: Criar uma conexão do Microsoft Dynamics Source na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Microsoft Dynamics usando a interface do usuário do Adobe Experience Platform.
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
@@ -54,15 +54,15 @@ Para obter mais informações sobre a introdução, consulte [este [!DNL Dynamic
 
 ## Conectar sua conta do [!DNL Dynamics]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Na categoria [!UICONTROL CRM], selecione **[!UICONTROL Microsoft Dynamics]** e **[!UICONTROL Adicionar dados]**.
 
-![O catálogo de origens com o Microsoft Dynamics selecionado.](../../../../images/tutorials/create/ms-dynamics/catalog.png)
+![O catálogo de fontes com o Microsoft Dynamics selecionado.](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
-A página **[!UICONTROL Conectar a conta do Microsoft Dynamics]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar conta do Microsoft Dynamics]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente
 
@@ -86,7 +86,7 @@ Você pode usar a autenticação básica ou a autenticação de entidade de serv
 
 >[!TAB Autenticação básica]
 
-Para criar uma conta do [!DNL Dynamics] com autenticação básica, selecione [!UICONTROL Autenticação básica] e forneça valores para o seu [!UICONTROL URI de Serviço], [!UICONTROL Nome de Usuário] e [!UICONTROL Senha]. **Observação**: a autenticação básica em [!DNL Dynamics] pode ser bloqueada pela autenticação de dois fatores, que atualmente não tem suporte da Platform. Nesse caso, é recomendável usar a autenticação baseada em chave para criar um conector de origem usando [!DNL Dynamics].
+Para criar uma conta do [!DNL Dynamics] com autenticação básica, selecione [!UICONTROL Autenticação básica] e forneça valores para o seu [!UICONTROL URI de Serviço], [!UICONTROL Nome de Usuário] e [!UICONTROL Senha]. **Observação**: a autenticação básica em [!DNL Dynamics] pode ser bloqueada pela autenticação de dois fatores, que atualmente não tem suporte no Experience Platform. Nesse caso, é recomendável usar a autenticação baseada em chave para criar um conector de origem usando [!DNL Dynamics].
 
 Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conta seja estabelecida.
 
@@ -104,4 +104,4 @@ Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum t
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Dynamics]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Platform](../../dataflow/crm.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Dynamics]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](../../dataflow/crm.md).

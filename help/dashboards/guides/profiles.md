@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente em tempo real;interface do usuário;UI;personalização;painel de perfis;painel;profile;profile dashboard
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;interface do usuário;interface;personalização;painel;painel;;profile;real-time customer profile profile profile;user interface;UI;customization;profile dashboard;dashboard
 title: Painel de perfis
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os dados do Perfil do cliente em tempo real da sua organização.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4997'
+source-wordcount: '5005'
 ht-degree: 9%
 
 ---
@@ -19,7 +19,7 @@ Consulte o [Guia da Interface do Usuário do Perfil do Cliente em Tempo Real](..
 
 ## Dados do painel de perfil
 
-O painel Perfis exibe um instantâneo dos dados do atributo (registro) que sua organização tem na área de armazenamento Perfil do Experience Platform. O instantâneo não inclui dados de evento (série temporal).
+O painel Perfis exibe um instantâneo dos dados do atributo (registro) que sua organização tem na área de armazenamento Perfil da Experience Platform. O instantâneo não inclui dados de evento (série temporal).
 
 Os dados do atributo no instantâneo mostram os dados exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados, e o painel Perfil não é atualizado em tempo real.
 
@@ -29,13 +29,13 @@ Os dados do atributo no instantâneo mostram os dados exatamente como aparecem n
 
 ## Explore o painel Perfis {#explore-dashboard}
 
-Para navegar até o painel Perfis na interface do usuário da Platform, selecione **[!UICONTROL Perfis]** no painel à esquerda e clique na guia **[!UICONTROL Visão geral]** para exibir o painel.
+Para navegar até o painel Perfis na interface do usuário do Experience Platform, selecione **[!UICONTROL Perfis]** no painel à esquerda e clique na guia **[!UICONTROL Visão geral]** para exibir o painel.
 
 >[!NOTE]
 >
->Se sua organização for nova na Platform e ainda não tiver conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel Perfis não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudar você a começar a usar o Perfil do cliente em tempo real.
+>Se sua organização for nova no Experience Platform e ainda não tiver conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel Perfis não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudar você a começar a usar o Perfil do cliente em tempo real.
 
-![O painel Perfis Experience Platform com Perfis e Visão Geral realçados.](../images/profiles/dashboard-overview.png)
+![O painel Perfis do Experience Platform com Perfis e Visão Geral realçados.](../images/profiles/dashboard-overview.png)
 
 ### Modificar o painel Perfis {#modify-dashboard}
 
@@ -53,7 +53,7 @@ Na biblioteca de widgets, você pode navegar pela seleção de widgets de públi
 
 ### Exibir SQL {#view-sql}
 
-Você pode exibir o SQL que gera os insights visualizados no painel com um alternador no espaço de trabalho [!UICONTROL Visão geral]. Você pode se inspirar no SQL de seus insights existentes para criar novas consultas que obtenham insights exclusivos dos dados da plataforma com base nas necessidades comerciais. Para saber mais sobre este recurso, consulte o [Exibir Guia da Interface do Usuário do SQL](../view-sql.md).
+Você pode exibir o SQL que gera os insights visualizados no painel com um alternador no espaço de trabalho [!UICONTROL Visão geral]. Você pode se inspirar no SQL de seus insights existentes para criar novas consultas que obtenham insights exclusivos de dados do Experience Platform com base nas necessidades comerciais. Para saber mais sobre este recurso, consulte o [Exibir Guia da Interface do Usuário do SQL](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -119,8 +119,8 @@ O consentimento do cliente e as preferências de contato são tópicos complexos
 
 * Para saber mais sobre os grupos de campos de esquema necessários para [coletar dados de consentimento de acordo com o padrão Adobe](../../landing/governance-privacy-security/consent/adobe/overview.md), consulte a documentação desses grupos de campos de esquema habilitados para perfil.
    * [[!UICONTROL Detalhes sobre consentimento e preferência]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (necessário se estiver usando o SDK móvel ou da Web da plataforma para enviar sinais de consentimento)
-* Para saber como processar os dados de consentimento e preferência do cliente usando o padrão Adobe, consulte a visão geral em [processamento de consentimento no Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (necessário se estiver usando o Experience Platform Web ou o Mobile SDK para enviar sinais de consentimento)
+* Para saber como processar os dados de consentimento e preferência do cliente usando o padrão Adobe, consulte a visão geral sobre [processamento de consentimento no Experience Platform](../../landing/governance-privacy-security/consent/adobe/overview.md).
 * Uma política combinada de governança e consentimento de dados pode ser usada para filtrar perfis para segmentação com base nas preferências de consentimento e nas regras organizacionais estabelecidas. Para saber como criar e usar essas políticas combinadas, consulte o guia do usuário em [gerenciando políticas de uso de dados](../../data-governance/policies/user-guide.md#combine-policies).
 
 ### Adicionar widgets {#add-widgets}
@@ -149,7 +149,7 @@ Uma visualização do widget concluído é exibida na tela. Quando estiver satis
 
 ![A tela do criador do widget com a opção Salvar realçada e exibindo a visualização do widget.](../images/profiles/widget-preview.png)
 
-## Políticas de mesclagem {#merge-policies}
+## Mesclar políticas {#merge-policies}
 
 As métricas exibidas no painel Perfis são baseadas nas políticas de mesclagem que estão sendo aplicadas aos dados do Perfil do cliente em tempo real. Quando os dados são trazidos de várias fontes para criar o perfil do cliente, os dados podem conter valores conflitantes. Por exemplo, um conjunto de dados pode listar um cliente como &quot;único&quot;, enquanto outro conjunto de dados pode listar o cliente como &quot;casado&quot;. É o trabalho da política de mesclagem determinar quais dados priorizar e exibir como parte do perfil.
 
@@ -169,7 +169,7 @@ O painel [!UICONTROL Esquema de união] exibe o esquema de união para uma class
 
 Os esquemas de união são compostos de vários esquemas que compartilham a mesma classe e foram habilitados para o Perfil. Eles permitem que você veja em uma única visualização, uma combinação de cada campo contido em cada esquema que compartilha a mesma classe.
 
-Para saber mais sobre [exibição de esquemas de união na interface do usuário da Platform](../../profile/ui/union-schema.md#view-union-schemas), consulte o guia da interface do usuário do esquema de união.
+Para saber mais sobre [exibição de esquemas de união na interface do usuário do Experience Platform](../../profile/ui/union-schema.md#view-union-schemas), consulte o guia da interface do usuário do esquema de união.
 
 ## Widgets e métricas
 
@@ -221,7 +221,7 @@ O modelo de IA que determina as pontuações de propensão é escolhido no selet
 
 Para navegar até a página de insights detalhados do modelo de IA do cliente selecionado, selecione **[!UICONTROL Exibir detalhes do modelo]**.
 
-![O painel Públicos-alvo do Experience Platform com o [!UICONTROL widget de distribuição de pontuações pela IA do cliente] e [!UICONTROL Exibir detalhes do modelo] destacados.](../images/segments/customer-ai-distribution-of-scores.png)
+![O painel Públicos-alvo da Experience Platform com o [!UICONTROL widget de distribuição de pontuações pela IA do cliente] e [!UICONTROL Exibir detalhes do modelo] destacados.](../images/segments/customer-ai-distribution-of-scores.png)
 
 A página de insights detalhados do modelo é exibida.
 
@@ -248,7 +248,7 @@ O menu suspenso abaixo do título do widget fornece uma lista de todos os modelo
 >
 >O número total de perfis calculados depende da política de mesclagem escolhida. Para alterar a política de mesclagem usada, selecione a lista suspensa imediatamente abaixo da guia de visão geral. Consulte a seção sobre [políticas de mesclagem](#merge-policies) para obter uma breve descrição ou a [visão geral da política de mesclagem](../../profile/merge-policies/overview.md) para obter mais detalhes.
 
-![O painel Públicos-alvo do Experience Platform com o widget de resumo de pontuação da IA do cliente realçado.](../images/segments/customer-ai-scoring-summary.png)
+![O painel Públicos-alvo da Experience Platform com o widget de resumo de pontuação da IA do cliente realçado.](../images/segments/customer-ai-scoring-summary.png)
 
 Para navegar até a página de insights detalhados do modelo de IA do cliente selecionado, selecione **[!UICONTROL Exibir detalhes do modelo]**. Mais informações sobre a IA do cliente podem ser encontradas no [guia da interface do usuário do discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
@@ -293,7 +293,7 @@ Consulte a [seção sobre políticas de mesclagem anteriormente neste documento]
 >
 >Outro motivo comum é devido às diferenças entre o momento em que o instantâneo do painel é tirado e o momento em que o trabalho de amostra é executado para a guia [!UICONTROL Procurar]. Você pode ver quando o widget [!UICONTROL Contagem de perfis] foi atualizado pela última vez observando o carimbo de data e hora no widget. Para saber mais sobre como o trabalho de amostra é acionado na guia [!UICONTROL Procurar], consulte a [seção de contagem de perfis no guia da interface do usuário do Perfil do Cliente em Tempo Real](../../profile/ui/user-guide.md#profile-count).
 
-![O painel Perfis Experience Platform com o widget Contagem de perfis realçado.](../images/profiles/profile-count.png)
+![O painel Perfis do Experience Platform com o widget Contagem de perfis realçado.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Tendência de contagem de perfis] {#profile-count-trend}
 
@@ -314,7 +314,7 @@ O widget **[!UICONTROL Alteração na contagem de perfis]** exibe o número de p
 >
 >O widget [!UICONTROL Alteração na contagem de perfis] reflete o número de perfis adicionados **após** a assimilação inicial de perfis e a configuração do armazenamento de perfis. Em outras palavras, se sua organização configurasse o repositório de perfis e assimilasse 4.000.000 no Dia 1, o painel estaria disponível em 24 horas. No entanto, o widget [!UICONTROL Alteração na contagem de perfis] seria definido como 0. Esse método de contagem é feito para evitar um pico associado à assimilação inicial de perfis no sistema. Nos próximos 30 dias, sua organização assimilará mais 1.000.000 perfis na loja de perfis. Depois que o próximo instantâneo for tirado, o widget [!UICONTROL Alteração na contagem de perfis] mostrará um total de 1.000.000 perfis adicionados, enquanto o widget [!UICONTROL Contagem de perfis] exibirá um total de 5.000.000 perfis.
 
-![O painel Perfis da Interface do Usuário da Plataforma com o widget de alteração Contagem de perfis destacado.](../images/profiles/profile-count-change.png)
+![O painel Perfis da Interface do Usuário do Experience Platform com o widget de alteração Contagem de perfis destacado.](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL Tendência da alteração da contagem de perfis] {#profiles-count-change-trend}
 
@@ -323,7 +323,7 @@ O widget **[!UICONTROL Alteração na contagem de perfis]** exibe o número de p
 >title="Tendência da alteração da contagem de perfis"
 >abstract="Esse dispositivo exibe o número de perfis mesclados adicionados diariamente ao Armazenamento de perfis nos últimos 30 dias, 90 dias ou 12 meses. O número também depende da política de mesclagem selecionada que está sendo aplicada aos dados de perfil."
 
-O widget **[!UICONTROL Tendência de alteração na contagem de perfis]** exibe o número total de perfis mesclados que foram adicionados ao repositório de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado. A contagem de perfis adicionados é o resultado da política de mesclagem selecionada que está sendo aplicada aos dados do seu Perfil para mesclar fragmentos de perfil para formar um único perfil para cada indivíduo.
+O widget **[!UICONTROL Tendência de alteração na contagem de perfis]** exibe o número total de perfis mesclados que foram adicionados ao repositório de perfis diariamente nos últimos 30 dias, 90 dias ou 12 meses. Esse número é atualizado todos os dias quando o instantâneo é tirado. Portanto, se você assimilasse perfis na Experience Platform, o número de perfis não seria refletido até que o próximo instantâneo fosse tirado. A contagem de perfis adicionados é o resultado da política de mesclagem selecionada que está sendo aplicada aos dados do seu Perfil para mesclar fragmentos de perfil para formar um único perfil para cada indivíduo.
 
 Para saber mais, consulte a [seção sobre políticas de mesclagem anteriormente neste documento](#merge-policies).
 
@@ -514,7 +514,7 @@ Este widget usa um diagrama Venn para exibir a sobreposição de dois públicos-
 
 À medida que o widget exibe o cruzamento visual das definições de segmento, você pode otimizar sua estratégia de segmentação estudando as semelhanças entre suas definições de segmento.
 
-![O painel Perfis de Interface do Usuário da Plataforma com a lista suspensa de política de mesclagem e as listas suspensas de público-alvo do widget destacadas.](../images/profiles/audience-overlap-by-merge-policy.png)
+![O painel Perfis de Interface do Usuário do Experience Platform com a lista suspensa política de mesclagem e os menus suspensos de público-alvo do widget destacados.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}

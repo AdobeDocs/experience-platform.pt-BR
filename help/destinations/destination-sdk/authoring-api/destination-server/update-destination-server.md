@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada de API usada para atualizar uma configuração existente do servidor de destino por meio do Adobe Experience Platform Destination SDK.
 title: Atualizar uma configuração do servidor de destino
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1103'
 ht-degree: 7%
 
 ---
@@ -26,7 +26,7 @@ Para obter uma descrição detalhada dos recursos que você pode configurar por 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API do servidor de destino {#get-started}
 
@@ -92,13 +92,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parâmetro | Tipo | Descrição |
 | -------- | ----------- | ----------- |
-| `name` | String | *Obrigatório.* Representa um nome amigável do servidor, visível somente para Adobe. Este nome não está visível para parceiros ou clientes. Exemplo `Moviestar destination server`. |
+| `name` | String | *Obrigatório.* Representa um nome amigável do servidor, visível somente para o Adobe. Este nome não está visível para parceiros ou clientes. Exemplo `Moviestar destination server`. |
 | `destinationServerType` | String | *Obrigatório.* Definido como `URL_BASED` para destinos em tempo real (streaming). |
-| `urlBasedDestination.url.templatingStrategy` | String | *Obrigatório.* <ul><li>Use `PEBBLE_V1` se o Adobe precisar transformar a URL no campo `value` abaixo. Use esta opção se você tiver um ponto de extremidade como: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` se nenhuma transformação for necessária no lado do Adobe, por exemplo, se você tiver um ponto de extremidade como: `https://api.moviestar.com/data/items`.</li></ul> |
+| `urlBasedDestination.url.templatingStrategy` | String | *Obrigatório.* <ul><li>Use `PEBBLE_V1` se o Adobe precisar transformar a URL no campo `value` abaixo. Use esta opção se você tiver um ponto de extremidade como: `https://api.moviestar.com/data/{{customerData.region}}/items`. </li><li> Use `NONE` se nenhuma transformação for necessária no lado do Adobe, por exemplo, se você tiver um terminal como: `https://api.moviestar.com/data/items`.</li></ul> |
 | `urlBasedDestination.url.value` | String | *Obrigatório.* Preencha o endereço do ponto de extremidade de API ao qual o Experience Platform deve se conectar. |
 | `httpTemplate.httpMethod` | String | *Obrigatório.* O método que o Adobe usará nas chamadas para o servidor. As opções são `GET`, `PUT`, `PUT`, `DELETE`, `PATCH`. |
 | `httpTemplate.requestBody.templatingStrategy` | String | *Obrigatório.* Use `PEBBLE_V1`. |
-| `httpTemplate.requestBody.value` | String | *Obrigatório.* Esta cadeia de caracteres é a versão com caractere de escape que transforma os dados de clientes da Platform no formato que seu serviço espera. <br> <ul><li> Para obter informações sobre como gravar o modelo, leia a [seção Uso de modelos](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obter mais informações sobre o escape de caracteres, consulte o [padrão RFC JSON, seção sete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para obter um exemplo de uma transformação simples, consulte a transformação [Atributos do perfil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | String | *Obrigatório.* Esta cadeia de caracteres é a versão com caractere de escape que transforma os dados de clientes do Experience Platform no formato que seu serviço espera. <br> <ul><li> Para obter informações sobre como gravar o modelo, leia a [seção Uso de modelos](../../functionality/destination-server/message-format.md#using-templating). </li><li> Para obter mais informações sobre o escape de caracteres, consulte o [padrão RFC JSON, seção sete](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Para obter um exemplo de uma transformação simples, consulte a transformação [Atributos do perfil](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | String | *Obrigatório.* O tipo de conteúdo que seu servidor aceita. Este valor provavelmente é `application/json`. |
 
 {style="table-layout:auto"}
@@ -752,11 +752,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com os detalhes da configura
 
 ## Manipulação de erros de API {#error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este documento, agora você sabe como atualizar uma configuração do servidor de destino por meio do ponto de extremidade da API do Destination SDK `/authoring/destination-servers`.
+Depois de ler este documento, agora você sabe como atualizar uma configuração do servidor de destino por meio do ponto de extremidade da API `/authoring/destination-servers` do Destination SDK.
 
 Para saber mais sobre o que você pode fazer com esse endpoint, consulte os seguintes artigos:
 

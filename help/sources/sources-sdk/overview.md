@@ -1,23 +1,23 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;fontes;conectores;conectores de origem;fontes sdk;sdk;SDK
 solution: Experience Platform
-title: Visão geral de Origens de Autoatendimento (SDK em Lote)
-description: Fontes de autoatendimento do Adobe Experience Platform (SDK em lote) é um conjunto de APIs de configuração que permitem integrar uma fonte baseada em API REST usando a API do serviço de fluxo para trazer seus dados para o Experience Platform.
+title: Visão Geral de Origens de Autoatendimento (SDK em Lote)
+description: Fontes de autoatendimento do Adobe Experience Platform (Batch SDK) é um conjunto de APIs de configuração que permitem integrar uma fonte baseada em API REST usando a API do serviço de fluxo para trazer seus dados para a Experience Platform.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 3%
 
 ---
 
-# Visão geral de Fontes de autoatendimento (SDK em lote)
+# Visão geral de Origens de Autoatendimento (SDK em Lote)
 
-Fontes de Autoatendimento do Adobe Experience Platform (SDK em Lote) é uma estrutura que permite integrar uma fonte baseada em API REST ao catálogo de fontes de Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Fontes de autoatendimento (SDK em lote) fornecem um conjunto de APIs de configuração para criar sua própria fonte e trazer seus dados em lote para o Experience Platform.
+Fontes de Autoatendimento do Adobe Experience Platform (SDK em Lote) é uma estrutura que permite integrar uma fonte baseada em API REST ao catálogo de fontes do Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). Fontes de autoatendimento (SDK em lote) fornecem um conjunto de APIs de configuração para criar sua própria fonte e trazer seus dados em lote para a Experience Platform.
 
-Com Fontes de autoatendimento (SDK em lote), você pode:
+Com Origens de Autoatendimento (SDK em Lote), você pode:
 
-* Configure e integre uma nova origem ao catálogo de Experience Platform usando a API [!DNL Flow Service].
+* Configure e integre uma nova origem ao catálogo do Experience Platform usando a API [!DNL Flow Service].
 * Defina especificações para sua origem, incluindo informações relacionadas aos tipos de autenticação compatíveis e como os dados do recurso são obtidos.
 * Crie documentação voltada para o usuário para sua nova fonte.
 
@@ -27,13 +27,13 @@ A documentação de Fontes de autoatendimento fornece instruções para configur
 
 ## Noções básicas sobre fontes
 
-O Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços de Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
+O Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 Para obter mais informações sobre origens e para ver uma lista de origens diferentes atualmente com suporte no Experience Platform, consulte a [visão geral das origens](../home.md).
 
 ## Criar uma origem
 
-Através das Fontes de Autoatendimento, você pode integrar sua própria fonte baseada em API REST e trazer seus dados para o Experience Platform com [!DNL Flow Service]. É possível integrar uma origem ao catálogo de origens de Experience Platform criando, configurando e enviando uma nova especificação de conexão por meio da API [!DNL Flow Service].
+Através das Fontes de Autoatendimento, você pode integrar sua própria fonte baseada em API REST e trazer seus dados para a Experience Platform com o [!DNL Flow Service]. É possível integrar uma origem ao catálogo de origens do Experience Platform criando, configurando e enviando novas especificações de conexão por meio da API [!DNL Flow Service].
 
 Consulte o manual sobre [criação de uma nova especificação de conexão](./api/api-overview.md) para obter informações sobre como integrar uma nova origem ao Experience Platform.
 
@@ -43,7 +43,7 @@ Depois que a origem for criada, consulte o [guia de documentação](./documentat
 
 ## Processo de alto nível
 
-O processo passo a passo para configurar sua origem no Experience Platform é descrito abaixo:
+O processo passo a passo para configurar seu código-fonte no Experience Platform está descrito abaixo:
 
 * Leia o [Guia da API de Fontes de Autoatendimento (SDK em Lote)](./api/api-overview.md).
    * Leia o [guia de introdução](./api/getting-started.md).

@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Serviço de identidade da Adobe Experience Platform
-breadcrumb-title: Guia do Serviço de identidade do Platform
+breadcrumb-title: Guia do serviço de identidade da Experience Platform
 user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para entregar experiências digitais personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '143'
+source-wordcount: '145'
 ht-degree: 30%
 
 ---
@@ -47,4 +47,4 @@ ht-degree: 30%
 - [Definir campos de identidade na interface](label-identities.md)
 - [Processamento de solicitação de privacidade](privacy.md)
 - [Manual de solução de problemas](troubleshooting-guide.md)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

@@ -2,10 +2,10 @@
 title: Criar e configurar sequências de dados
 description: Saiba como conectar a integração do SDK da Web do lado do cliente a outros produtos da Adobe e destinos de terceiros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2817'
-ht-degree: 51%
+source-wordcount: '2822'
+ht-degree: 48%
 
 ---
 
@@ -103,7 +103,7 @@ Para revelar as opções avançadas de configuração, selecione **[!UICONTROL O
 | [!UICONTROL Tipo de acesso] | Define o tipo de autenticação que a rede de borda aceita para a sequência de dados. <ul><li>**[!UICONTROL Autenticação mista]**: quando essa opção é selecionada, a rede de borda aceita solicitações autenticadas e não autenticadas. Selecione esta opção quando desejar usar o SDK da Web ou [SDK móvel](https://developer.adobe.com/client-sdks/home/) juntamente com a [API do servidor](../server-api/overview.md). </li><li>**[!UICONTROL Somente autenticado]**: quando essa opção é selecionada, a rede de borda aceita somente solicitações autenticadas. Selecione essa opção quando desejar usar somente a API do servidor e quiser impedir que qualquer solicitação não autenticada seja processada pela rede de borda.</li></ul> |
 | [!UICONTROL Media Analytics] | Habilita o processamento de dados de rastreamento de streaming para a integração do Edge Network via SDKs do Experience Platform ou [API do Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/). Saiba mais sobre o Media Analytics na [documentação](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=pt-BR). |
 
-Agora, se você estiver configurando a sequência de dados para a Experience Platform, siga o tutorial em [Preparo de dados para a coleção de dados](./data-prep.md) para mapear seus dados em um esquema de evento da Platform antes de retornar a este guia. Caso contrário, selecione **[!UICONTROL Salvar]** e continue para a próxima seção.
+Daqui, se você estiver configurando sua sequência de dados para o Experience Platform, siga o tutorial em [Preparação de dados para coleção de dados](./data-prep.md) para mapear seus dados para um esquema de evento do Experience Platform antes de retornar a este guia. Caso contrário, selecione **[!UICONTROL Salvar]** e continue para a próxima seção.
 
 ## Exibir detalhes da sequência de dados {#view-details}
 
@@ -160,7 +160,7 @@ Esse serviço controla se e como os dados são enviados para o Adobe Audience Ma
 
 >[!IMPORTANT]
 >
->Ao habilitar uma sequência de dados para a Platform, observe a sandbox da Platform que você está usando no momento, conforme exibida na faixa superior da interface.
+>Ao ativar um fluxo de dados para o Experience Platform, anote a sandbox da Experience Platform que você está usando no momento, como exibida na faixa superior da interface do usuário.
 >
 >![Sandbox selecionada](assets/configure/platform-sandbox.png)
 >
@@ -172,8 +172,8 @@ Esse serviço controla se e como os dados são enviados para a Adobe Experience 
 
 | Configuração | Descrição |
 |---| --- |
-| [!UICONTROL Conjunto de dados do evento] | **(Obrigatório)** Selecione o conjunto de dados da Platform para o qual os dados do evento de cliente serão transmitidos. Este esquema deve usar a [classe XDM ExperienceEvent](../xdm/classes/experienceevent.md). Para adicionar outros conjuntos de dados, selecione **[!UICONTROL Adicionar conjunto de dados do evento]**. |
-| [!UICONTROL Conjunto de dados do perfil] | Selecione o conjunto de dados da Platform para o qual os dados do atributo de cliente serão enviados. Este esquema deve usar a [classe de perfil individual XDM](../xdm/classes/individual-profile.md). |
+| [!UICONTROL Conjunto de dados do evento] | **(Obrigatório)** Selecione o conjunto de dados do Experience Platform para o qual os dados do evento do cliente serão transmitidos. Este esquema deve usar a [classe XDM ExperienceEvent](../xdm/classes/experienceevent.md). Para adicionar outros conjuntos de dados, selecione **[!UICONTROL Adicionar conjunto de dados do evento]**. |
+| [!UICONTROL Conjunto de dados do perfil] | Selecione o conjunto de dados do Experience Platform para o qual os dados do atributo do cliente serão enviados. Este esquema deve usar a [classe de perfil individual XDM](../xdm/classes/individual-profile.md). |
 | [!UICONTROL Offer Decisioning] | Habilita implementações do Offer Decisioning para Web SDK. Consulte o guia sobre [uso do Offer Decisioning com Web SDK](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) para obter mais detalhes sobre a implementação.<br><br>Para obter mais informações sobre os recursos do Offer Decisioning, consulte a [documentação do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=pt-BR). |
 | [!UICONTROL Segmentação de borda] | Habilita a [segmentação de borda](../segmentation/methods/edge-segmentation.md) para esta sequência de dados. Quando a [Web SDK](../web-sdk/home.md) ou a [API do Edge Network Server](../server-api/overview.md) envia dados por meio de uma sequência de dados com segmentação de borda habilitada, todas as associações de público-alvo atualizadas para o perfil em questão são enviadas de volta na resposta.<br><br>Você pode usar esta opção em combinação com **[!UICONTROL Destinos do Personalization]** para casos de uso de personalização de mesma página e próxima página por meio de [destinos de borda](../destinations/ui/activate-edge-personalization-destinations.md) ou [!DNL Offer Decisioning]. |
 | [!UICONTROL Destinos de personalização] | Ao habilitar essa opção após marcar a caixa de seleção [!UICONTROL Segmentação de borda], ela permite que a sequência de dados se conecte a destinos de personalização, como a [personalização individual](../destinations/catalog/personalization/custom-personalization.md).<br><br>Consulte a documentação de destinos para obter etapas específicas sobre [configuração de destinos de personalização](../destinations/ui/activate-edge-personalization-destinations.md). |

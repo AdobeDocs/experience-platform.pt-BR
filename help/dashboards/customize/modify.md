@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;interface do usuário;painéis;painel;perfis;segmentos;destinos;uso de licença;user interface;dashboards;dashboard;profiles;segments;destinations;license usage
-title: Modificar painéis da plataforma na interface
+keywords: Experience Platform;interface do usuário;UI;painéis;painel;perfis;segmentos;destinos;uso de licença;;user interface;UI;dashboards;dashboard;profiles;segments;destinations;license usage
+title: Modificar painéis do Experience Platform na interface
 description: Este guia fornece instruções passo a passo para personalizar como os dados do Adobe Experience Platform de sua organização são exibidos nos painéis.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '498'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Na interface do usuário (UI) da Adobe Experience Platform, você pode visualiza
 >
 >Todas as atualizações feitas nos painéis são por organização e por sandbox.
 
-Este guia fornece instruções passo a passo para personalizar como os dados do painel são exibidos nos painéis [!UICONTROL Perfis], [!UICONTROL Segmentos] e [!UICONTROL Destinos] da interface do usuário da plataforma.
+Este guia fornece instruções passo a passo para personalizar como os dados do painel são exibidos nos painéis [!UICONTROL Perfis], [!UICONTROL Segmentos] e [!UICONTROL Destinos] da interface do usuário do Experience Platform.
 
 ## Introdução
 

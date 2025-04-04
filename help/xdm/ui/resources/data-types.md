@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;início;tópicos populares;ui;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;esquema;Esquema;esquemas;criar;tipo de dados;tipos de dados;
+keywords: Experience Platform;home;tópicos populares;ui;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;esquema;Esquema;esquemas;criar;tipo de dados;tipos de dados;
 solution: Experience Platform
 title: Criar e editar tipos de dados usando a interface
 type: Tutorial
-description: Saiba como criar e editar tipos de dados na interface do usuário do Experience Platform.
+description: Saiba como criar e editar tipos de dados na interface do Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1384'
+source-wordcount: '1387'
 ht-degree: 6%
 
 ---
@@ -27,17 +27,17 @@ O Adobe Experience Platform fornece vários tipos de dados padrão que podem ser
 >
 >Se um campo for definido como um tipo de dados específico, você não poderá criar o mesmo campo com um tipo de dados diferente em outro esquema. Essa restrição se aplica ao locatário da organização.
 
-Este tutorial aborda as etapas para a criação e edição de tipos de dados personalizados na interface do usuário da Platform.
+Este tutorial aborda as etapas para a criação e edição de tipos de dados personalizados na interface do usuário do Experience Platform.
 
 ## Pré-requisitos {#prerequisites}
 
-Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução à função do XDM no ecossistema de Experience Platform, e as [noções básicas da composição de esquema](../../schema/composition.md) para saber como os tipos de dados contribuem para esquemas XDM.
+Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução à função do XDM no ecossistema do Experience Platform e as [noções básicas da composição de esquemas](../../schema/composition.md) sobre como os tipos de dados contribuem para esquemas XDM.
 
 Embora não seja necessário para este guia, é recomendável que você também siga o tutorial sobre [composição de um esquema na interface](../../tutorials/create-schema-ui.md) para se familiarizar com os vários recursos do [!DNL Schema Editor].
 
 ## Abrir o [!DNL Schema Editor] para um tipo de dados {#data-type}
 
-Na interface do usuário da Platform, selecione **[!UICONTROL Esquemas]** na navegação à esquerda para abrir o espaço de trabalho [!UICONTROL Esquemas] e selecione a guia **[!UICONTROL Tipos de dados]**. Uma lista de tipos de dados disponíveis é exibida. A lista de tipos de dados é automaticamente filtrada com base em como foram criados. A configuração padrão exibe os tipos de dados definidos pelo Adobe. Também é possível filtrar a lista para mostrar os criados por sua organização.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Esquemas]** na navegação à esquerda para abrir o espaço de trabalho [!UICONTROL Esquemas] e selecione a guia **[!UICONTROL Tipos de dados]**. Uma lista de tipos de dados disponíveis é exibida. A lista de tipos de dados é automaticamente filtrada com base em como foram criados. A configuração padrão exibe os tipos de dados definidos pelo Adobe. Também é possível filtrar a lista para mostrar os criados por sua organização.
 
 ![O espaço de trabalho [!UICONTROL Esquemas] com [!UICONTROL Esquemas] na navegação à esquerda e [!UICONTROL Tipos de dados] destacados.](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -63,7 +63,7 @@ Daqui, você pode pular para a [próxima seção](#add-fields) para começar a a
 
 ### Filtrar tipos de dados {#filter}
 
-A lista de tipos de dados disponíveis é pré-filtrada com base em como foram criados. Selecione o botão de opção para escolher entre as opções [!UICONTROL Padrão] e [!UICONTROL Personalizado]. A opção [!UICONTROL Padrão] mostra entidades criadas pelo Adobe e a opção [!UICONTROL Personalizado] exibe entidades criadas na sua organização.
+A lista de tipos de dados disponíveis é pré-filtrada com base em como foram criados. Selecione o botão de opção para escolher entre as opções [!UICONTROL Padrão] e [!UICONTROL Personalizado]. A opção [!UICONTROL Padrão] mostra entidades criadas pelo Adobe e a opção [!UICONTROL Personalizado] exibe entidades criadas em sua organização.
 
 ![A guia [!UICONTROL Tipos de dados] do espaço de trabalho [!UICONTROL Esquemas] com [!UICONTROL Padrão] e [!UICONTROL Personalizado] destacados.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 
@@ -125,6 +125,6 @@ A tela atualiza o tipo de dados do campo de &quot;[!UICONTROL Objeto]&quot; para
 
 ## Próximas etapas {#next-steps}
 
-Este guia abordou como criar e editar tipos de dados usando a interface do usuário da plataforma. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
+Este guia abordou como criar e editar tipos de dados usando a interface do usuário do Experience Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
 
 Para saber como gerenciar tipos de dados usando a API [!DNL Schema Registry], consulte o [manual de ponto de extremidade de tipos de dados](../../api/data-types.md).

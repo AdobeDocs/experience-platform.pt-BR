@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;importar receita empacotada;Data Science Workspace;tópicos populares;receitas;api;aprendizado de máquina do sensei;criar mecanismo;import packaged revenue;Data Science;popular topics;recipes;api;sensei machine learning;create engine
+keywords: Experience Platform;importar receita empacotada;Data Science Workspace;tópicos populares;receitas;api;aprendizado de máquina do sensei;criar mecanismo;;import packaged revenue;Data Science;popular topics;recipes;api;sensei machine learning;create engine
 solution: Experience Platform
 title: Importar uma fórmula empacotada usando a API de aprendizado de máquina do Sensei
 type: Tutorial
 description: Este tutorial usa a API de aprendizado de máquina do Sensei para criar um mecanismo, também conhecido como fórmula na interface do usuário.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 3%
@@ -41,7 +41,7 @@ Este tutorial requer um arquivo de fórmula empacotado na forma de um URL Docker
 
 - `{DOCKER_URL}`: Um endereço de URL para uma imagem Docker de um serviço inteligente.
 
-Este tutorial requer que você tenha concluído o [tutorial de Autenticação para Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para APIs [!DNL Platform]. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Este tutorial requer que você tenha concluído o [tutorial de Autenticação para Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para fazer chamadas com êxito para APIs [!DNL Experience Platform]. Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - `{ACCESS_TOKEN}`: Seu valor de token de portador específico fornecido após a autenticação.
 - `{ORG_ID}`: as credenciais da sua organização foram encontradas em sua integração exclusiva com o Adobe Experience Platform.

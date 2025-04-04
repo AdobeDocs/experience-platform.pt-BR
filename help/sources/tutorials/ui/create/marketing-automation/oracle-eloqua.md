@@ -1,15 +1,15 @@
 ---
-title: Criar uma conexão de origem do Oracle Eloqua usando a interface do usuário da plataforma
-description: Saiba como conectar o Adobe Experience Platform ao Oracle Eloqua usando a interface do usuário da plataforma.
+title: Criar uma conexão de origem do Oracle Eloqua usando a interface do usuário do Experience Platform
+description: Saiba como conectar o Adobe Experience Platform ao Oracle Eloqua usando a interface do usuário do Experience Platform.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '538'
 ht-degree: 2%
 
 ---
 
-# Criar uma conexão de origem [!DNL Oracle Eloqua] usando a interface do usuário da plataforma
+# Criar uma conexão de origem [!DNL Oracle Eloqua] usando a interface do Experience Platform
 
 >[!WARNING]
 >
@@ -19,16 +19,16 @@ Este tutorial fornece etapas para criar uma conexão de origem [!DNL Oracle Eloq
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes da Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): a Platform permite que dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Platform.
-* [Sandboxes](../../../../../sandboxes/home.md): a Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-Se você já tiver uma conta autenticada do [!DNL Oracle Eloqua] na Platform, ignore o restante deste documento e prossiga para o tutorial em [criando um fluxo de dados para trazer dados de automação de marketing para a Platform](../../dataflow/marketing-automation.md).
+Se você já tiver uma conta autenticada do [!DNL Oracle Eloqua] no Experience Platform, ignore o restante deste documento e prossiga para o tutorial em [criação de um fluxo de dados para trazer dados de automação de marketing para o Experience Platform](../../dataflow/marketing-automation.md).
 
 ### Coletar credenciais necessárias
 
-Para conectar [!DNL Oracle Eloqua] à Platform, você deve fornecer valores para as seguintes propriedades de autenticação:
+Para conectar [!DNL Oracle Eloqua] ao Experience Platform, você deve fornecer valores para as seguintes propriedades de autenticação:
 
 | Credencial | Descrição |
 | --- | --- |
@@ -38,11 +38,11 @@ Para conectar [!DNL Oracle Eloqua] à Platform, você deve fornecer valores para
 
 Para obter mais informações sobre credenciais de autenticação para [!DNL Oracle Eloqua], consulte o [[!DNL Oracle Eloqua] guia sobre autenticação](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
-Depois de obter as credenciais necessárias, você poderá seguir as etapas abaixo para vincular sua conta do [!DNL Oracle Eloqua] à Platform.
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Oracle Eloqua] à Experience Platform.
 
 ## Conectar sua conta do [!DNL Oracle Eloqua]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -50,7 +50,7 @@ Na categoria [!UICONTROL Automação de marketing], selecione **[!UICONTROL Orac
 
 ![catálogo](../../../../images/tutorials/create/oracle-eloqua/catalog.png)
 
-A página **[!UICONTROL Conectar conta Eloqua do Oracle]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar conta do Oracle Eloqua]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente
 
@@ -66,4 +66,4 @@ Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e
 
 ## Próximas etapas
 
-Seguindo este tutorial, você autenticou e criou uma conexão de origem entre sua conta do [!DNL Oracle Eloqua] e a Platform. Agora você pode continuar com o próximo tutorial e [criar um fluxo de dados para trazer os dados de automação de marketing para a Platform](../../dataflow/marketing-automation.md).
+Seguindo este tutorial, você autenticou e criou uma conexão de origem entre sua conta do [!DNL Oracle Eloqua] e a Experience Platform. Agora você pode seguir para o próximo tutorial e [criar um fluxo de dados para trazer os dados de automação de marketing para o Experience Platform](../../dataflow/marketing-automation.md).

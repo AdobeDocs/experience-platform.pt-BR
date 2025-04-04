@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Suporte de navegador e idioma para a interface do Experience Platform
+title: Suporte a navegador e idioma para a interface do usuário do Experience Platform
 description: A Adobe Experience Platform é o sistema mais poderoso, flexível e aberto do mercado para criar e gerenciar soluções completas que impulsionam a experiência do cliente. O Experience Platform permite que as organizações centralizem e padronizem dados e conteúdo de clientes de qualquer sistema e apliquem a ciência de dados e o aprendizado de máquina para melhorar o design e o delivery de experiências personalizadas.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '251'
+source-wordcount: '253'
 ht-degree: 10%
 
 ---
 
-# Suporte a navegador e idioma para a interface de usuário do Experience Platform
+# Suporte a navegador e idioma para a interface do usuário do Experience Platform
 
 A interface do usuário (UI) do Adobe Experience Platform foi projetada para ser compatível com vários navegadores e idiomas.
 
 ## Suporte ao navegador
 
-A interface do usuário da Platform foi projetada para funcionar de maneira ideal nas **versões mais recentes** do Google Chrome, Safari, Firefox e Microsoft Edge. Você pode ter problemas ao usar determinados recursos em versões mais antigas dos navegadores.
+A interface do usuário do Experience Platform foi projetada para funcionar de maneira ideal nas **versões mais recentes** do Google Chrome, Safari, Firefox e Microsoft Edge. Você pode ter problemas ao usar determinados recursos em versões mais antigas dos navegadores.
 
 | Sistema operacional | Navegadores compatíveis |
 |---|---|
@@ -32,7 +32,7 @@ Os seguintes sistemas operacionais e navegadores não são compatíveis:
 
 ## Idiomas disponíveis
 
-A interface do usuário da Platform está disponível atualmente nos seguintes idiomas:
+A interface do usuário do Experience Platform está disponível atualmente nos seguintes idiomas:
 
 * Inglês
 * Francês
@@ -51,7 +51,7 @@ Seu idioma padrão da interface do usuário é determinado pela região especifi
 
 Para alterar o idioma:
 
-1. Faça logon na sua conta Experience Platform.
+1. Faça logon em sua conta da Experience Platform.
 1. Pressione `Ctrl + i` para abrir o menu de informações da conta.
 1. Vá para **[!UICONTROL Idiomas Preferenciais]**.
 1. Selecione o primeiro e o segundo idiomas de preferência.

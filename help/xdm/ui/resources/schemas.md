@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e editar esquemas na interface
 description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4072'
+source-wordcount: '4075'
 ht-degree: 1%
 
 ---
@@ -29,7 +29,7 @@ Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão g
 
 >[!NOTE]
 >
->Esta seção aborda como criar manualmente um novo esquema na interface do usuário do. Se você estiver assimilando dados CSV na Platform, poderá usar algoritmos de Aprendizado de Máquina (ML) para **gerar um esquema a partir de dados CSV de amostra**. Esse workflow corresponde ao formato de dados e cria automaticamente um novo schema com base na estrutura e no conteúdo do arquivo CSV. Consulte o [Guia de criação de esquema com assistência de ML](../ml-assisted-schema-creation.md) para obter mais informações sobre este fluxo de trabalho.
+>Esta seção aborda como criar manualmente um novo esquema na interface do usuário do. Se você estiver assimilando dados CSV na Experience Platform, poderá usar algoritmos de aprendizado de máquina (ML) para **gerar um esquema a partir de dados CSV de amostra**. Esse workflow corresponde ao formato de dados e cria automaticamente um novo schema com base na estrutura e no conteúdo do arquivo CSV. Consulte o [Guia de criação de esquema com assistência de ML](../ml-assisted-schema-creation.md) para obter mais informações sobre este fluxo de trabalho.
 
 No espaço de trabalho [!UICONTROL Esquemas], selecione **[!UICONTROL Criar esquema]** no canto superior direito.
 
@@ -342,7 +342,7 @@ Para concluir o processo, selecione **[!UICONTROL Salvar]** para salvar o esquem
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-O esquema agora está ativado para uso no Perfil do cliente em tempo real. Quando a Platform assimila dados em conjuntos de dados com base nesse esquema, esses dados são incorporados aos dados do perfil amalgamados.
+O esquema agora está ativado para uso no Perfil do cliente em tempo real. Quando o Experience Platform assimila dados em conjuntos de dados com base nesse esquema, esses dados são incorporados aos dados do perfil combinado.
 
 ## Editar nomes de exibição para campos de esquema {#display-names}
 
@@ -388,7 +388,7 @@ Depois de confirmar a alteração de classe, a tela será redefinida e todo o pr
 
 ## Próximas etapas {#next-steps}
 
-Este documento abordou as noções básicas de criação e edição de esquemas na interface do usuário da Platform. É altamente recomendável que você consulte o [tutorial de criação de esquema](../../tutorials/create-schema-ui.md) para obter um fluxo de trabalho abrangente e criar um esquema completo na interface do usuário, incluindo a criação de grupos de campos personalizados e tipos de dados for casos de uso únicos.
+Este documento abordou as noções básicas para a criação e edição de esquemas na interface do usuário do Experience Platform. É altamente recomendável que você consulte o [tutorial de criação de esquema](../../tutorials/create-schema-ui.md) para obter um fluxo de trabalho abrangente e criar um esquema completo na interface do usuário, incluindo a criação de grupos de campos personalizados e tipos de dados for casos de uso únicos.
 
 Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
 

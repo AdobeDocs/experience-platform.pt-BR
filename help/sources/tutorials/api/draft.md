@@ -2,9 +2,9 @@
 title: Criar rascunhos da API de entidades do serviço de fluxo
 description: Saiba como criar rascunhos de sua conexão base, conexão de origem, conexão de destino e fluxo de dados usando a API do Serviço de fluxo
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1193'
 ht-degree: 5%
 
 ---
@@ -21,12 +21,12 @@ Este tutorial fornece etapas sobre como definir entidades do [!DNL Flow Service]
 
 Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../landing/api-guide.md).
 
 ### Verificar suporte para modo de rascunho
 
@@ -624,7 +624,7 @@ Uma resposta bem-sucedida retorna a ID de conexão básica e a tag correspondent
 }
 ```
 
-## Publish sua conexão de base de rascunho {#publish-your-draft-base-connection}
+## Publicar sua conexão de base de rascunho {#publish-your-draft-base-connection}
 
 Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao ponto de extremidade `/connections` e forneça a ID da conexão base de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
 
@@ -716,13 +716,13 @@ Uma resposta bem-sucedida retorna a ID da conexão de origem e a tag corresponde
 }
 ```
 
-## Publish sua conexão de origem de rascunho {#publish-your-draft-source-connection}
+## Publicar sua conexão de origem de rascunho {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
 >Não é possível publicar uma conexão de origem se a conexão base associada ainda estiver em estado de rascunho. Certifique-se de que a conexão base seja publicada primeiro, antes de publicar sua conexão de origem.
 
-Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao ponto de extremidade `/sourceConnections` e forneça a ID da conexão de origem de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
+Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao ponto de extremidade `/sourceConnections` e forneça a ID da conexão de origem de rascunho que deseja publicar, bem como uma operação de ação para publicação.
 
 **Formato da API**
 
@@ -813,13 +813,13 @@ Uma resposta bem-sucedida retorna a ID de conexão do público-alvo e a tag corr
 }
 ```
 
-## Publish sua conexão de destino de rascunho {#publish-your-draft-target-connection}
+## Publicar sua conexão de rascunho de destino {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
 >Não é possível publicar uma conexão de destino se a conexão base associada ainda estiver em estado de rascunho. Certifique-se de que sua conexão base seja publicada primeiro, antes de publicar sua conexão de destino.
 
-Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao ponto de extremidade `/targetConnections` e forneça a ID da conexão de destino de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
+Quando o rascunho estiver pronto para ser publicado, faça uma solicitação POST ao ponto de extremidade `/targetConnections` e forneça a ID da conexão de destino de rascunho que deseja publicar, bem como uma operação de ação para publicação.
 
 **Formato da API**
 
@@ -908,7 +908,7 @@ Uma resposta bem-sucedida retorna a ID do fluxo e a tag correspondente para o fl
 }
 ```
 
-## Publish seu fluxo de dados de rascunho {#publish-your-draft-dataflow}
+## Publicar seu fluxo de dados de rascunho {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >

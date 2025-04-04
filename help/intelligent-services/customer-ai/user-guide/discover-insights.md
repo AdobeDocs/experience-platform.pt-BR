@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;insights;ia do cliente;tópicos populares;insights de ia do cliente
+keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Descubra insights com a IA do cliente
 description: Este documento serve como um guia para interagir com insights da instância do serviço na interface do usuário da IA do cliente dos Serviços inteligentes.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2098'
+source-wordcount: '2099'
 ht-degree: 1%
 
 ---
@@ -164,7 +164,7 @@ O construtor de segmentos é usado para definir um segmento. Ao selecionar **[!U
 
 ![Preenchimento de segmento](../images/insights/segment-saving.png)
 
-Para exibir seu novo segmento na interface do Platform, selecione **[!UICONTROL Segmentos]** na navegação à esquerda. A página **[!UICONTROL Procurar]** é exibida e mostra todos os segmentos disponíveis.
+Para exibir seu novo segmento na interface do usuário do Experience Platform, selecione **[!UICONTROL Segmentos]** na navegação à esquerda. A página **[!UICONTROL Procurar]** é exibida e mostra todos os segmentos disponíveis.
 
 ![Todos os seus segmentos](../images/insights/Segments-dashboard.png)
 

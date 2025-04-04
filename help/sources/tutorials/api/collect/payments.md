@@ -3,23 +3,23 @@ keywords: Experience Platform;página inicial;tópicos populares;Coletar dados d
 solution: Experience Platform
 title: Criar um Fluxo de Dados para Origens de Pagamentos Usando a API de Serviço de Fluxo
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de pagamentos e assimilá-los na Plataforma usando conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de pagamentos e assimilá-los no Experience Platform usando conectores de origem e APIs.
 exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1375'
 ht-degree: 3%
 
 ---
 
 # Criar um fluxo de dados para fontes de pagamentos usando a API [!DNL Flow Service]
 
-Este tutorial aborda as etapas para recuperar dados de uma fonte de pagamentos e trazê-los para a Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial aborda as etapas para recuperar dados de uma fonte de pagamentos e trazê-los para a Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
 >* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma fonte de pagamentos. Se você não tiver essa ID, consulte a [visão geral das fontes](../../../home.md#payments) para obter uma lista de fontes de pagamentos com as quais você pode criar uma conexão base.
->* Para Experience Platform assimilar dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
+>* Para que o Experience Platform assimile dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC.
 
 ## Introdução
 
@@ -29,12 +29,12 @@ Este tutorial requer que você tenha uma compreensão funcional dos seguintes co
    * [Noções básicas sobre a composição de esquema](../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Guia do desenvolvedor do Registro de Esquema](../../../../xdm/api/getting-started.md): inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro de Esquema. Isso inclui o `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Aceitar e seus valores possíveis).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados no Experience Platform.
-* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): a API de assimilação em lote permite assimilar dados no Experience Platform como arquivos em lote.
-* [Sandboxes](../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): a API de assimilação em lote permite assimilar dados na Experience Platform como arquivos em lote.
+* [Sandboxes](../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../../landing/api-guide.md).
 
 ## Criar uma conexão de origem {#source}
 
@@ -137,7 +137,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ## Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
+Para que os dados de origem sejam usados no Experience Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados do Experience Platform no qual os dados de origem estão contidos.
 
 Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -145,7 +145,7 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ## Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../catalog/api/create-dataset.md).
 
@@ -293,7 +293,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ## Pesquisar especificações de fluxo de dados {#specs}
 
-Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para a Platform. Para criar um fluxo de dados, você deve primeiro obter as especificações do fluxo de dados executando uma solicitação GET para a API [!DNL Flow Service]. As especificações de fluxo de dados são responsáveis pela coleta de dados de um banco de dados externo ou sistema NoSQL.
+Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para o Experience Platform. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados executando uma solicitação GET para a API [!DNL Flow Service]. As especificações de fluxo de dados são responsáveis pela coleta de dados de um banco de dados externo ou sistema NoSQL.
 
 **Formato da API**
 
@@ -313,7 +313,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dados responsáveis por trazer os dados de sua origem para a Platform. A resposta inclui a especificação de fluxo exclusiva `id` necessária para criar um novo fluxo de dados.
+Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dados responsáveis por trazer os dados de sua origem para a Experience Platform. A resposta inclui a especificação de fluxo exclusiva `id` necessária para criar um novo fluxo de dados.
 
 >[!NOTE]
 >
@@ -633,8 +633,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow between payments Platform",
-        "description": "Inbound data to Platform",
+        "name": "Dataflow between payments Experience Platform",
+        "description": "Inbound data to Experience Platform",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
@@ -701,7 +701,7 @@ Depois que o fluxo de dados for criado, você poderá monitorar os dados que est
 
 ## Próximas etapas
 
-Seguindo este tutorial, você criou um conector de origem para coletar dados de uma aplicação de pagamentos de forma programada. Os dados de entrada agora podem ser usados por serviços downstream da Platform, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Seguindo este tutorial, você criou um conector de origem para coletar dados de uma aplicação de pagamentos de forma programada. Os dados de entrada agora podem ser usados por serviços downstream do Experience Platform, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
 * [Visão geral do Espaço de trabalho de ciência de dados](../../../../data-science-workspace/home.md)

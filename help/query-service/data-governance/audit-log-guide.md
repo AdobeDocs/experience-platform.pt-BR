@@ -2,22 +2,22 @@
 title: Integração do log de auditoria do serviço de consulta
 description: Os logs de auditoria do serviço de consulta mantêm registros de várias ações do usuário para formar uma trilha de auditoria para solucionar problemas ou seguir as políticas corporativas de gerenciamento de dados e os requisitos normativos. Este tutorial fornece uma visão geral dos recursos de log de auditoria específicos do Serviço de consulta.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '935'
 ht-degree: 1%
 
 ---
 
 # Integração do log de auditoria do [!DNL Query Service]
 
-A integração do log de auditoria [!DNL Query Service] do Adobe Experience Platform fornece registros de ações de usuário relacionadas à consulta. Os logs de auditoria são uma ferramenta essencial para solucionar problemas e seguir as políticas corporativas de gerenciamento de dados e os requisitos normativos. O recurso permite retornar um log de ação para vários tipos de evento e filtrar e exportar os registros. Os logs podem ser acessados por meio da interface do usuário da Platform ou da [API de Consulta de Auditoria](https://www.adobe.io/experience-platform-apis/references/audit-query/) e baixados nos formatos de arquivo CSV ou JSON.
+A integração do log de auditoria [!DNL Query Service] do Adobe Experience Platform fornece registros de ações de usuário relacionadas à consulta. Os logs de auditoria são uma ferramenta essencial para solucionar problemas e seguir as políticas corporativas de gerenciamento de dados e os requisitos normativos. O recurso permite retornar um log de ação para vários tipos de evento e filtrar e exportar os registros. Os logs podem ser acessados por meio da interface do usuário do Experience Platform ou da [API de Consulta de Auditoria](https://www.adobe.io/experience-platform-apis/references/audit-query/) e baixados nos formatos de arquivo CSV ou JSON.
 
-Para saber mais sobre a interface do usuário de logs de auditoria, consulte o [documento de visão geral dos logs de auditoria](../../landing/governance-privacy-security/audit-logs/overview.md). Para saber mais sobre como fazer chamadas para APIs da Platform, consulte o [guia da API de logs de auditoria](../../landing/api-guide.md).
+Para saber mais sobre a interface do usuário de logs de auditoria, consulte o [documento de visão geral dos logs de auditoria](../../landing/governance-privacy-security/audit-logs/overview.md). Para saber mais sobre como fazer chamadas para APIs do Experience Platform, consulte o [guia da API de logs de auditoria](../../landing/api-guide.md).
 
 ## Pré-requisitos
 
-Você deve ter a permissão [!DNL Data Governance] [!UICONTROL Exibir Log de Atividades do Usuário] habilitada para exibir o painel de log de auditoria na interface do usuário da plataforma. A permissão é habilitada por meio do Adobe [Admin Console](https://adminconsole.adobe.com/). Entre em contato com o administrador da organização se você não tiver privilégios de administrador para habilitar essa permissão. Consulte a documentação de controle de acesso para obter [instruções completas sobre como adicionar permissões por meio do Admin Console](../../access-control/home.md).
+Você deve ter a permissão [!DNL Data Governance] [!UICONTROL Exibir Log de Atividades do Usuário] habilitada para exibir o painel de log de auditoria na interface do usuário do Experience Platform. A permissão é habilitada por meio da Adobe [Admin Console](https://adminconsole.adobe.com/). Entre em contato com o administrador da organização se você não tiver privilégios de administrador para habilitar essa permissão. Consulte a documentação de controle de acesso para obter [instruções completas sobre como adicionar permissões por meio do Admin Console](../../access-control/home.md).
 
 ## [!DNL Query Service] categorias de log de auditoria {#audit-log-categories}
 
@@ -33,9 +33,9 @@ As categorias de log de auditoria fornecidas por [!DNL Query Service] são as se
 
 Para fazer uma auditoria para atividades de [!DNL Query Service], selecione **[!UICONTROL Auditorias]** na navegação à esquerda, seguido pelo ícone de funil (![Um ícone de filtro.](/help/images/icons/filter.png)) para exibir uma lista de controles de filtro para ajudar a limitar os resultados.
 
-![O painel de log de auditoria da interface do usuário da plataforma com &quot;Auditorias&quot; na navegação à esquerda e nos controles de filtro realçados.](../images/audit-log/filter-controls.png)
+![O painel de log de auditoria da interface do Experience Platform com &quot;Auditorias&quot; na navegação à esquerda e nos controles de filtro realçados.](../images/audit-log/filter-controls.png)
 
-Na guia [!UICONTROL Auditorias] do painel [!UICONTROL Log de atividades], você pode filtrar todas as ações gravadas da Platform por qualquer uma das [!DNL Query Service] categorias. Os resultados do log podem ser filtrados ainda mais com base no período em que foram executados, na ação/função executada ou no usuário que emitiu a consulta. Consulte a documentação do log de auditoria para [instruções completas sobre como filtrar os logs com base na categoria, ação, usuário e status](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
+Na guia [!UICONTROL Log de atividades] do painel [!UICONTROL Auditorias], você pode filtrar todas as ações registradas do Experience Platform por qualquer uma das [!DNL Query Service] categorias. Os resultados do log podem ser filtrados ainda mais com base no período em que foram executados, na ação/função executada ou no usuário que emitiu a consulta. Consulte a documentação do log de auditoria para [instruções completas sobre como filtrar os logs com base na categoria, ação, usuário e status](../../landing/governance-privacy-security/audit-logs/overview.md#managing-audit-logs-in-the-ui).
 
 Os dados do log de auditoria retornados contêm as seguintes informações em todas as consultas que atendem aos critérios de filtro escolhidos.
 

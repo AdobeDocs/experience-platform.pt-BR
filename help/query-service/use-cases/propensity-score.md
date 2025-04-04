@@ -1,17 +1,17 @@
 ---
 title: Determine Uma Pontuação De Propensão Usando Um Modelo Preditivo Gerado Pelo Machine Learning
-description: Saiba como usar o Serviço de consulta para aplicar seu modelo preditivo aos dados da plataforma. Este documento demonstra como usar os dados da plataforma para prever a propensão de um cliente para comprar em cada visita.
+description: Saiba como usar o Serviço de consulta para aplicar seu modelo preditivo aos dados do Experience Platform. Este documento demonstra como usar os dados do Experience Platform para prever a propensão de um cliente para comprar em cada visita.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
-source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
 
 # Determine uma pontuação de propensão usando um modelo preditivo gerado por aprendizado de máquina
 
-Usando o Serviço de consulta, você pode aproveitar modelos preditivos, como pontuações de propensão, criados em sua plataforma de aprendizado de máquina para analisar dados de Experience Platform.
+Usando o Serviço de consulta, você pode aproveitar modelos preditivos, como pontuações de propensão, criados em sua plataforma de aprendizado de máquina para analisar dados do Experience Platform.
 
 Este guia explica como usar o Serviço de consulta para enviar dados para sua plataforma de aprendizado de máquina para treinar um modelo em um bloco de anotações computacional. O modelo treinado pode ser aplicado aos dados usando SQL para prever a propensão de um cliente a comprar para cada visita.
 
@@ -35,9 +35,9 @@ numpy
 tqdm
 ```
 
-## Importar tabelas de análise da Platform para [!DNL Jupyter Notebook] {#import-analytics-tables}
+## Importar tabelas de análise do Experience Platform para [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-Para gerar um modelo de pontuação de propensão, uma projeção dos dados de análise armazenados na Plataforma deve ser importada para [!DNL Jupyter Notebook]. De um [!DNL Python] 3 [!DNL Jupyter Notebook] conectado ao Serviço de consulta, os comandos a seguir importam um conjunto de dados de comportamento do cliente da Luma, uma loja fictícia de roupas. Como os dados da Platform são armazenados usando o formato Experience Data Model (XDM), um objeto JSON de amostra deve ser gerado que esteja em conformidade com a estrutura do esquema. Consulte a documentação para obter instruções sobre como [gerar o objeto JSON de amostra](../../xdm/ui/sample.md).
+Para gerar um modelo de pontuação de propensão, uma projeção dos dados de análise armazenados no Experience Platform deve ser importada para [!DNL Jupyter Notebook]. De um [!DNL Python] 3 [!DNL Jupyter Notebook] conectado ao Serviço de consulta, os comandos a seguir importam um conjunto de dados de comportamento do cliente da Luma, uma loja fictícia de roupas. Como os dados do Experience Platform são armazenados usando o formato Experience Data Model (XDM), um objeto JSON de amostra deve ser gerado que esteja em conformidade com a estrutura do esquema. Consulte a documentação para obter instruções sobre como [gerar o objeto JSON de amostra](../../xdm/ui/sample.md).
 
 ![O painel [!DNL Jupyter Notebook] com vários comandos realçados.](../images/use-cases/jupyter-commands.png)
 

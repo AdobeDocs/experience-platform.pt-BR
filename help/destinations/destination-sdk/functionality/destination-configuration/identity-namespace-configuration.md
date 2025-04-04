@@ -2,9 +2,9 @@
 description: Saiba como configurar as identidades de destino compatíveis para destinos criados com o Destination SDK.
 title: Configuração do namespace de identidade
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '925'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ O Experience Platform usa namespaces de identidade para descrever o tipo de iden
 
 Dependendo do tipo de destino que você criar (streaming ou baseado em arquivo), lembre-se dos seguintes requisitos de namespace de identidade:
 
-* Ao criar destinos em tempo real (transmissão) por meio do Destination SDK, além de [configurar um esquema de parceiro](schema-configuration.md) para o qual os usuários podem mapear atributos de perfil e identidades, você também deve definir *pelo menos um* namespace de identidade com suporte na plataforma de destino. Por exemplo, se sua plataforma de destino aceitar emails com hash e [!DNL IDFA], você deverá definir essas duas identidades como [descritas mais adiante neste documento](#supported-parameters).
+* Ao criar destinos em tempo real (transmissão) por meio do Destination SDK, além de [configurar um esquema de parceiro](schema-configuration.md) para o qual os usuários podem mapear atributos de perfil e identidades, você também deve definir *pelo menos um* namespace de identidade com suporte na sua plataforma de destino. Por exemplo, se sua plataforma de destino aceitar emails com hash e [!DNL IDFA], você deverá definir essas duas identidades como [descritas mais adiante neste documento](#supported-parameters).
 
   >[!IMPORTANT]
   >
@@ -23,7 +23,7 @@ Dependendo do tipo de destino que você criar (streaming ou baseado em arquivo),
 
 * Ao criar destinos baseados em arquivo por meio do Destination SDK, a configuração dos namespaces de identidade é _opcional_.
 
-Para saber mais sobre namespaces de identidade no Experience Platform, consulte a [documentação de namespaces de identidade](../../../../identity-service/features/namespaces.md).
+Para saber mais sobre namespaces de identidade na Experience Platform, consulte a [documentação de namespaces de identidade](../../../../identity-service/features/namespaces.md).
 
 Ao configurar namespaces de identidade para seu destino, você pode ajustar o mapeamento de identidade de destino compatível com seu destino, como:
 
@@ -38,11 +38,11 @@ Você pode configurar seus namespaces de identidade compatíveis por meio do pon
 * [Criar uma configuração de destino](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Atualizar uma configuração de destino](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Este artigo descreve todas as opções de configuração de namespaces de identidade compatíveis que você pode usar para o seu destino e mostra o que os clientes verão na interface do usuário da Platform.
+Este artigo descreve todas as opções de configuração de namespaces de identidade compatíveis que você pode usar para o seu destino e mostra o que os clientes verão na interface do Experience Platform.
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -62,7 +62,7 @@ Ao definir as identidades de público-alvo compatíveis com seu destino, você p
 | `acceptsAttributes` | Booleano | Opcional | Indica se os clientes podem mapear atributos de perfil padrão para a identidade que você está configurando. |
 | `acceptsCustomNamespaces` | Booleano | Opcional | Indica se os clientes podem mapear namespaces de identidade personalizados para o namespace de identidade que você está configurando. |
 | `acceptedGlobalNamespaces` | - | Opcional | Indica quais [namespaces de identidade padrão](../../../../identity-service/features/namespaces.md#standard) (por exemplo, [!UICONTROL IDFA]) clientes podem mapear para a identidade que você está configurando. |
-| `transformation` | String | Opcional | Exibe a caixa de seleção [[!UICONTROL Aplicar transformação]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) na interface do usuário da Platform, quando o campo de origem é um atributo XDM ou um namespace de identidade personalizado. Use essa opção para conceder aos usuários a capacidade de aplicar hash aos atributos de origem na exportação. Para habilitar esta opção, defina o valor como `sha256(lower($))`. |
+| `transformation` | String | Opcional | Exibe a caixa de seleção [[!UICONTROL Aplicar transformação]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) na interface do usuário do Experience Platform, quando o campo de origem é um atributo XDM ou um namespace de identidade personalizado. Use essa opção para conceder aos usuários a capacidade de aplicar hash aos atributos de origem na exportação. Para habilitar esta opção, defina o valor como `sha256(lower($))`. |
 | `requiredTransformation` | String | Opcional | Quando os clientes selecionam este namespace de identidade de origem, a caixa de seleção [[!UICONTROL Aplicar transformação]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) é aplicada automaticamente ao mapeamento e os clientes não podem desabilitá-lo. Para habilitar esta opção, defina o valor como `sha256(lower($))`. |
 
 {style="table-layout:auto"}
@@ -85,22 +85,22 @@ Ao definir as identidades de público-alvo compatíveis com seu destino, você p
    }
 ```
 
-Você deve indicar quais [!DNL Platform] identidades os clientes podem exportar para o seu destino. Alguns exemplos são [!DNL Experience Cloud ID], email com hash, ID de dispositivo ([!DNL IDFA], [!DNL GAID]). Esses valores são [!DNL Platform] namespaces de identidade que os clientes podem mapear para namespaces de identidade do seu destino.
+Você deve indicar quais [!DNL Experience Platform] identidades os clientes podem exportar para o seu destino. Alguns exemplos são [!DNL Experience Cloud ID], email com hash, ID de dispositivo ([!DNL IDFA], [!DNL GAID]). Esses valores são [!DNL Experience Platform] namespaces de identidade que os clientes podem mapear para namespaces de identidade do seu destino.
 
-Os namespaces de identidade não exigem uma correspondência de 1 para 1 entre [!DNL Platform] e seu destino.
-Por exemplo, os clientes podem mapear um namespace [!DNL Platform] [!DNL IDFA] para um namespace [!DNL IDFA] de seu destino, ou podem mapear o mesmo namespace [!DNL Platform] [!DNL IDFA] para um namespace [!DNL Customer ID] de seu destino.
+Os namespaces de identidade não exigem uma correspondência de 1 para 1 entre [!DNL Experience Platform] e seu destino.
+Por exemplo, os clientes podem mapear um namespace [!DNL Experience Platform] [!DNL IDFA] para um namespace [!DNL IDFA] de seu destino, ou podem mapear o mesmo namespace [!DNL Experience Platform] [!DNL IDFA] para um namespace [!DNL Customer ID] de seu destino.
 
 Leia mais sobre identidades na [visão geral do namespace de identidade](../../../../identity-service/features/namespaces.md).
 
 ## Considerações de mapeamento
 
-Se os clientes selecionarem um namespace de identidade de origem e não selecionarem um target mapping, o Platform preencherá automaticamente o target mapping com um atributo com o mesmo nome.
+Se os clientes selecionarem um namespace de identidade de origem e não selecionarem um target mapping, o Experience Platform preencherá automaticamente o target mapping com um atributo com o mesmo nome.
 
 ## Configurar hash de campo de origem opcional
 
-Os clientes do Experience Platform podem optar por assimilar dados na Platform em formato com hash ou em texto simples. Se sua plataforma de destino aceitar dados com hash e sem hash, você poderá dar aos clientes a opção de escolher se a Platform deverá fazer o hash dos valores do campo de origem quando eles forem exportados para seu destino.
+Os clientes do Experience Platform podem optar por assimilar dados na Experience Platform em formato com hash ou em texto sem formatação. Se sua plataforma de destino aceitar dados com hash e sem hash, você poderá dar aos clientes a opção de escolher se o Experience Platform deve aplicar hash aos valores dos campos de origem quando eles forem exportados para seu destino.
 
-A configuração abaixo habilita a opção [Aplicar transformação](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) opcional na interface do usuário da plataforma, na etapa Mapeamento.
+A configuração abaixo habilita a opção [Aplicar transformação](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) opcional na interface do usuário do Experience Platform, na etapa Mapeamento.
 
 ```json {line-numbers="true" highlight="5"}
 "identityNamespaces":{
@@ -124,7 +124,7 @@ Ao mapear atributos de origem com hash não atribuídos para atributos de destin
 
 ## Configurar hash de campo de origem obrigatório
 
-Se o destino aceitar apenas dados com hash, você poderá configurar os atributos exportados para serem automaticamente transformados em hash pela Platform. A configuração abaixo verifica automaticamente a opção **Aplicar transformação** quando as identidades `Email` e `Phone` são mapeadas.
+Se o destino aceitar apenas dados com hash, você poderá configurar os atributos exportados para serem automaticamente transformados em hash pelo Experience Platform. A configuração abaixo verifica automaticamente a opção **Aplicar transformação** quando as identidades `Email` e `Phone` são mapeadas.
 
 ```json {line-numbers="true" highlight="8,11"}
 "identityNamespaces":{

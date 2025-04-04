@@ -4,9 +4,9 @@ title: Regras de alerta padrão
 description: Este documento aborda as regras de alerta predefinidas fornecidas pela Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 3a800560376973a85f9f77a481ffead3c28a05aa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4279'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 A Adobe Experience Platform fornece várias regras de alerta predefinidas que você pode ativar para sua organização. Este documento aborda os detalhes dessas regras de alerta fornecidas pela Adobe. Para obter mais informações sobre alertas no Experience Platform, consulte a [visão geral dos alertas](./overview.md).
 
-Ao [exibir regras de alerta na interface do usuário da Platform](./ui.md), você pode assinar cada regra individualmente. Ao assinar alertas por meio de [notificações de Eventos de E/S](./subscribe.md), no entanto, as regras de alerta são organizadas em diferentes pacotes de assinatura. Nas tabelas abaixo, cada regra é mostrada com seu nome de inscrição de Evento de E/S correspondente.
+Ao [exibir regras de alerta na interface do usuário do Experience Platform](./ui.md), você pode assinar cada regra individualmente. Ao assinar alertas por meio de [notificações de Eventos de E/S](./subscribe.md), no entanto, as regras de alerta são organizadas em diferentes pacotes de assinatura. Nas tabelas abaixo, cada regra é mostrada com seu nome de inscrição de Evento de E/S correspondente.
 
 ## Origens {#sources}
 
@@ -36,7 +36,7 @@ Se você se inscreveu anteriormente no seguinte tipo de alerta, não receberá m
 
 | Inscrição no evento de E/S | Regra de alerta | Descrição |
 | --- | --- | --- |
-| Atrasos, falhas e erros na execução do fluxo do Source | Falta de assimilação | Esse alerta envia uma mensagem se a assimilação for atrasada em mais de sete horas e nenhum dado for assimilado na Platform. |
+| Atrasos, falhas e erros na execução do fluxo do Source | Falta de assimilação | Esse alerta envia uma mensagem se a assimilação for atrasada em mais de sete horas e nenhum dado for assimilado no Experience Platform. |
 
 {style="table-layout:auto"}
 

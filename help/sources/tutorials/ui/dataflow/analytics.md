@@ -2,18 +2,18 @@
 keywords: Experience Platform;página inicial;tópicos populares;analytics;mixpanel
 solution: Experience Platform
 title: Criar um fluxo de dados usando uma Source do Analytics na interface
-description: Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de análise usando a interface do usuário da plataforma.
+description: Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de análise usando a interface do usuário do Experience Platform.
 exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1459'
 ht-degree: 1%
 
 ---
 
 # Criar um fluxo de dados usando uma fonte de análise na interface
 
-Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados na Adobe Experience Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de análise usando a interface do usuário da Platform.
+Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados na Adobe Experience Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de análise usando a interface do usuário do Experience Platform.
 
 >[!NOTE]
 >
@@ -21,9 +21,9 @@ Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma or
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes da Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../home.md): a Platform permite que dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
+* [Fontes](../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
@@ -83,11 +83,11 @@ Quando terminar de fornecer detalhes ao seu fluxo de dados, selecione **[!UICONT
 
 >[!IMPORTANT]
 >
->Você não pode mapear nenhum valor de par de chaves dinâmico como um objeto de [!DNL OneTrust] para a Platform e deve especificar essas chaves no esquema de destino para mapear seus dados durante a assimilação.
+>Você não pode mapear valores de par de chaves dinâmico como um objeto de [!DNL OneTrust] para Experience Platform e deve especificar essas chaves no esquema de destino para mapear seus dados durante a assimilação.
 
 A etapa [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../data-prep/ui/mapping.md).
+O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../data-prep/ui/mapping.md).
 
 Depois que os dados de origem forem mapeados com êxito, selecione **[!UICONTROL Próximo]**.
 
@@ -141,7 +141,7 @@ Você pode excluir fluxos de dados que não são mais necessários ou que foram 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer dados da sua fonte de análise para a Platform. Os dados de entrada agora podem ser usados por serviços [!DNL Platform] downstream, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer dados da sua fonte de análise para a Experience Platform. Os dados de entrada agora podem ser usados por serviços [!DNL Experience Platform] downstream, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Visão geral do [!DNL Real-Time Customer Profile]](../../../../profile/home.md)
 * [Visão geral do [!DNL Data Science Workspace]](../../../../data-science-workspace/home.md)
@@ -149,6 +149,6 @@ Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer d
 
 >[!WARNING]
 >
-> A interface do usuário da Platform mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
+> A interface do usuário do Experience Platform mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

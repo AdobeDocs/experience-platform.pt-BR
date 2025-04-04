@@ -1,16 +1,16 @@
 ---
-title: Assimilar dados de pagamentos de sua conta Stripe para o Experience Platform usando a interface do usuário.
+title: Assimilar dados de pagamentos de sua conta do Stripe para o Experience Platform usando a interface do usuário.
 description: Saiba como assimilar dados de pagamentos de sua conta do Stripe para o Experience Platform usando a interface do usuário.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: dd9afe650f4c83b3877f980acac66e703e9ae5d8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1658'
 ht-degree: 3%
 
 ---
 
-# Assimilar dados de pagamentos de sua conta [!DNL Stripe] para o Experience Platform usando a interface do usuário
+# Assimilar dados de pagamentos de sua conta [!DNL Stripe] para a Experience Platform usando a interface do usuário
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ Leia o tutorial a seguir para saber como assimilar dados de pagamentos de sua co
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -33,7 +33,7 @@ Leia a [[!DNL Stripe] visão geral](../../../../connectors/payments/stripe.md) p
 
 ## Conectar sua conta do [!DNL Stripe] {#connect}
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Na categoria *Pagamentos*, selecione **[!DNL Stripe]** e **[!UICONTROL Configurar]**.
 
@@ -41,9 +41,9 @@ Na categoria *Pagamentos*, selecione **[!DNL Stripe]** e **[!UICONTROL Configura
 >
 >As origens no catálogo de origens exibem a opção **[!UICONTROL Configurar]** quando uma determinada origem ainda não tem uma conta autenticada. Quando uma conta autenticada existir, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
 
-![O catálogo de origens na interface do usuário do Experience Platform, com o cartão de origem Stripe selecionado.](../../../../images/tutorials/create/stripe/catalog.png)
+![O catálogo de origens na interface do usuário do Experience Platform, com o cartão de origem do Stripe selecionado.](../../../../images/tutorials/create/stripe/catalog.png)
 
-A página **[!UICONTROL Conectar conta Stripe]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar conta do Stripe]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 >[!BEGINTABS]
 
@@ -84,7 +84,7 @@ Agora que você tem acesso à sua conta, deve identificar o caminho apropriado p
 
 Depois que o ponto de extremidade é selecionado, a interface é atualizada em uma tela de visualização, exibindo a estrutura de dados do ponto de extremidade [!DNL Stripe] selecionado. Selecione **[!UICONTROL Avançar]** para continuar.
 
-![A janela de visualização dos seus dados de Stripe.](../../../../images/tutorials/create/stripe/preview.png)
+![A janela de visualização dos dados do Stripe.](../../../../images/tutorials/create/stripe/preview.png)
 
 ## Fornecer detalhes do conjunto de dados e do fluxo de dados {#provide-dataset-and-dataflow-details}
 
@@ -92,7 +92,7 @@ Em seguida, você deve fornecer informações sobre seu conjunto de dados e seu 
 
 ### Detalhes do conjunto de dados {#dataset-details}
 
-Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os dados assimilados com sucesso no Experience Platform são armazenados no data lake como conjuntos de dados. Durante essa etapa, você pode criar um novo conjunto de dados ou usar um conjunto de dados existente.
+Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os dados assimilados com sucesso na Experience Platform são armazenados no data lake como conjuntos de dados. Durante essa etapa, você pode criar um novo conjunto de dados ou usar um conjunto de dados existente.
 
 >[!BEGINTABS]
 
@@ -121,7 +121,7 @@ Se você já tiver um conjunto de dados existente, selecione **[!UICONTROL Conju
 Se o seu conjunto de dados estiver habilitado para o Perfil de cliente em tempo real, durante essa etapa você poderá alternar para **[!UICONTROL o conjunto de dados do perfil]** para habilitar seus dados para assimilação de perfil. Você também pode usar esta etapa para habilitar o **[!UICONTROL Diagnóstico de erro]** e a **[!UICONTROL Assimilação parcial]**.
 
 * **[!UICONTROL Diagnóstico de erro]**: selecione **[!UICONTROL Diagnóstico de erro]** para instruir a origem a produzir o diagnóstico de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
-* **[!UICONTROL Assimilação parcial]**: a assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos no Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
+* **[!UICONTROL Assimilação parcial]**: a assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos na Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
 
 +++
 
@@ -141,7 +141,7 @@ Quando terminar, selecione **[!UICONTROL Avançar]** para continuar.
 
 ## Mapear campos para um esquema XDM {#mapping}
 
-A etapa **[!UICONTROL Mapping]** é exibida. Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar esses dados no Experience Platform. Para obter um guia abrangente sobre como usar a interface de mapeamento, leia o [guia da interface do usuário do Preparo de Dados](../../../../../data-prep/ui/mapping.md) para obter mais informações.
+A etapa **[!UICONTROL Mapping]** é exibida. Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar esses dados na Experience Platform. Para obter um guia abrangente sobre como usar a interface de mapeamento, leia o [guia da interface do usuário do Preparo de Dados](../../../../../data-prep/ui/mapping.md) para obter mais informações.
 
 ![A interface de mapeamento do fluxo de trabalho de origens.](../../../../images/tutorials/create/stripe/mapping.png)
 
@@ -182,7 +182,7 @@ Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e aguard
 
 ## Próximas etapas
 
-Seguindo este tutorial, você criou com êxito um fluxo de dados para trazer dados de pagamentos da sua origem [!DNL Stripe] para o Experience Platform. Para obter recursos adicionais, consulte a documentação descrita abaixo.
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de pagamentos da sua origem [!DNL Stripe] para a Experience Platform. Para obter recursos adicionais, consulte a documentação descrita abaixo.
 
 ### Monitorar seu fluxo de dados
 

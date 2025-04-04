@@ -1,11 +1,11 @@
 ---
 title: Criar uma conexão Google PubSub Source na interface
-description: Saiba como criar um conector de origem Google PubSub usando a interface do usuário da Platform.
+description: Saiba como criar um conector de origem Google PubSub usando a interface do usuário do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1106'
 ht-degree: 1%
 
 ---
@@ -14,22 +14,22 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->A origem [!DNL Google PubSub] está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
+>A origem [!DNL Google PubSub] está disponível no catálogo de origens para usuários que compraram o Real-Time Customer Data Platform Ultimate.
 
-Este tutorial fornece etapas para a criação de um [!DNL Google PubSub] (a seguir denominado &quot;[!DNL PubSub]&quot;) usando a interface do usuário da Platform.
+Este tutorial fornece etapas para a criação de um [!DNL Google PubSub] (a seguir denominado &quot;[!DNL PubSub]&quot;) usando a interface do usuário do Experience Platform.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 Se você já tiver uma conexão [!DNL PubSub] válida, ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/batch/cloud-storage.md).
 
 ### Coletar credenciais necessárias
 
-Você deve fornecer valores para as propriedades de conexão descritas abaixo para conectar sua conta do [!DNL PubSub] ao Experience Platform. Para obter mais informações sobre autenticação e configuração de pré-requisito, leia a [[!DNL PubSub source] visão geral](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+Você deve fornecer valores para as propriedades de conexão descritas abaixo para conectar sua conta do [!DNL PubSub] à Experience Platform. Para obter mais informações sobre autenticação e configuração de pré-requisito, leia a [[!DNL PubSub source] visão geral](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 
 >[!BEGINTABS]
@@ -57,17 +57,17 @@ Para obter mais informações sobre esses valores, consulte o seguinte documento
 >
 >Se estiver usando autenticação baseada em conta de serviço, verifique se você concedeu acesso de usuário suficiente à conta de serviço e se não há espaços em branco adicionais no JSON ao copiar e colar suas credenciais.
 
-Depois de obter as credenciais necessárias, você poderá seguir as etapas abaixo para vincular sua conta do [!DNL PubSub] à Platform.
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL PubSub] à Experience Platform.
 
 ## Conectar sua conta do [!DNL PubSub]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Na categoria [!UICONTROL Armazenamento na nuvem], selecione **[!UICONTROL Google PubSub]** e **[!UICONTROL Adicionar dados]**.
 
-![O catálogo de fontes na interface do Experience Platform.](../../../../images/tutorials/create/google-pubsub/catalog.png)
+![O catálogo de fontes na interface do usuário do Experience Platform.](../../../../images/tutorials/create/google-pubsub/catalog.png)
 
 A página **[!UICONTROL Conectar ao Google PubSub]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
@@ -112,7 +112,7 @@ Para criar uma conta com acesso restrito apenas a um tópico e assinatura espec�
 
 ## Selecionar dados
 
-Uma autenticação bem-sucedida leva você à etapa [!UICONTROL Selecionar dados], na qual é possível navegar pela hierarquia de dados [!DNL PubSub] e selecionar os dados que deseja trazer para o Experience Platform.
+Uma autenticação bem-sucedida leva você à etapa [!UICONTROL Selecionar dados], na qual é possível navegar pela hierarquia de dados [!DNL PubSub] e selecionar os dados que deseja trazer para a Experience Platform.
 
 >[!BEGINTABS]
 
@@ -136,4 +136,4 @@ Se você autenticou com um tópico e acesso baseado em assinatura, a exibição 
 
 ## Próximas etapas
 
-Seguindo este tutorial, você criou uma conexão entre sua conta do [!DNL PubSub] e a Plataforma. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados de transmissão do seu armazenamento na nuvem para a Platform](../../dataflow/streaming/cloud-storage-streaming.md).
+Seguindo este tutorial, você criou uma conexão entre sua conta do [!DNL PubSub] e a Experience Platform. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados de streaming do seu armazenamento na nuvem para a Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md).

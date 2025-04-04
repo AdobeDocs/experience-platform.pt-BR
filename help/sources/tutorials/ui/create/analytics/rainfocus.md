@@ -1,16 +1,16 @@
 ---
-title: Conectar sua conta RainFocus ao Experience Platform usando a interface
+title: Conectar sua conta RainFocus à Experience Platform usando a interface
 description: Saiba como conectar sua conta RainFocus ao Experience Platform usando a interface do usuário.
 badge: Beta
 exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '989'
 ht-degree: 1%
 
 ---
 
-# Conecte sua conta do [!DNL RainFocus] ao Experience Platform usando a interface
+# Conectar sua conta do [!DNL RainFocus] à Experience Platform usando a interface
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Este tutorial fornece etapas sobre como conectar o gerenciamento de eventos e da
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -33,7 +33,7 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 
 ### Pré-requisitos
 
-Antes de conectar sua conta do [!DNL RainFocus] ao Experience Platform, primeiro complete as seguintes tarefas de pré-requisitos:
+Antes de conectar a conta do [!DNL RainFocus] à Experience Platform, primeiro você deve concluir as seguintes tarefas de pré-requisito:
 
 * [Coletar credenciais necessárias](../../../../connectors/analytics/rainfocus.md#gather-required-credentials)
 * [Criar um esquema XDM e definir o campo de identidade](../../../../connectors/analytics/rainfocus.md#create-an-xdm-schema-and-define-the-identity-field)
@@ -41,19 +41,19 @@ Antes de conectar sua conta do [!DNL RainFocus] ao Experience Platform, primeiro
 
 Após concluir a configuração de pré-requisito, você pode prosseguir para as etapas descritas abaixo.
 
-## Conectar sua conta RainFocus ao Experience Platform
+## Conectar sua conta RainFocus à Experience Platform
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho de fontes. A tela *[!UICONTROL Catálogo]* exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho de fontes. A tela *[!UICONTROL Catálogo]* exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Na categoria *[!UICONTROL Analytics]*, selecione **[!UICONTROL RainFocus Experience]** e **[!UICONTROL Adicionar dados]**.
 
-![O catálogo de fontes na interface do usuário do Experience Platform com a fonte RainFocus selecionada.](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
+![O catálogo de fontes na interface do Experience Platform com a fonte RainFocus selecionada.](/help/sources/images/tutorials/create/rainfocus/rainfocus_sources-rf.png)
 
 ## Selecionar dados
 
-A etapa Selecionar dados é exibida, fornecendo uma interface para que você selecione os dados que traz para o Experience Platform.
+A etapa Selecionar dados é exibida, fornecendo uma interface para que você selecione os dados que trará para o Experience Platform.
 
 * A parte esquerda da interface é um navegador que permite visualizar os fluxos de dados disponíveis em sua conta;
 * A parte direita da interface permite visualizar até 100 linhas de dados de um arquivo JSON.
@@ -117,7 +117,7 @@ Quando o fluxo de dados estiver concluído e você tiver recuperado a URL do pon
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão para a origem [!DNL RainFocus], permitindo que transmita os dados de análise e gerenciamento de eventos para o Experience Platform.
+Seguindo este tutorial, você estabeleceu uma conexão para a origem [!DNL RainFocus], permitindo que transmita os dados de análise e gerenciamento de eventos para a Experience Platform.
 
 ## Recursos adicionais
 

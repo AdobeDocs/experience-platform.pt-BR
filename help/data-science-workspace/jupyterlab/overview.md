@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da interface do usuário do JupyterLab
 description: O JupyterLab é uma interface de usuário baseada na Web para o Projeto Jupyter e está totalmente integrado ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para cientistas de dados trabalharem com notebooks, códigos e dados Jupyter. Este documento fornece uma visão geral do JupyterLab e seus recursos, bem como instruções para executar ações comuns.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1838'
 ht-degree: 2%
 
 ---
@@ -21,39 +21,39 @@ ht-degree: 2%
 
 [!DNL JupyterLab] é uma interface de usuário baseada na Web para o [Projeto Jupyter](https://jupyter.org/) e está totalmente integrada ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para cientistas de dados trabalharem com notebooks, códigos e dados Jupyter.
 
-Esta documento fornece uma visão geral e [!DNL JupyterLab] seus recursos, bem como instruções para executar ações comuns.
+Este documento fornece uma visão geral do [!DNL JupyterLab] e seus recursos, bem como instruções para executar ações comuns.
 
 ## [!DNL JupyterLab] em [!DNL Experience Platform]
 
-A integração do JupyterLab da Experience Platform é acompanhada de mudanças de arquitetura, considerações de projeto, extensões personalizadas de notebook, bibliotecas pré-instalados e interface com tema Adobe Systems.
+A integração do JupyterLab da Experience Platform é acompanhada de alterações de arquitetura, considerações de design, extensões personalizadas de notebooks, bibliotecas pré-instaladas e uma interface com tema Adobe.
 
-A lista a seguir descreve alguns dos recursos exclusivos do JupyterLab na plataforma:
+A lista a seguir descreve alguns dos recursos exclusivos do JupyterLab no Experience Platform:
 
 | Recurso | Descrição |
 | --- | --- |
 | **Kernels** | Os kernels fornecem ao notebook e a outros front-ends do [!DNL JupyterLab] a capacidade de executar e introduzir código em diferentes linguagens de programação. O [!DNL Experience Platform] fornece kernels adicionais para dar suporte ao desenvolvimento no [!DNL Python], R, PySpark e [!DNL Spark]. Consulte a seção [kernels](#kernels) para obter mais detalhes. |
 | **Acesso aos dados** | Acesse os conjuntos de dados existentes diretamente do [!DNL JupyterLab] com suporte total para recursos de leitura e gravação. |
-| **[!DNL Platform]integração de serviço** | As integrações internas permitem que você utilize outros serviços do [!DNL Platform] diretamente de dentro do [!DNL JupyterLab]. Uma lista completa de integrações com suporte é fornecida na seção sobre [Integração com outros serviços da plataforma](#service-integration). |
-| **Autenticação** | Além do <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">modelo de segurança interno do JupyterLab</a>, todas as interações entre seu aplicativo e Experience Platform, incluindo a comunicação serviço a serviço da plataforma, são criptografadas e autenticadas por meio do <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
+| **[!DNL Experience Platform]integração de serviço** | As integrações internas permitem que você utilize outros serviços do [!DNL Experience Platform] diretamente de dentro do [!DNL JupyterLab]. Uma lista completa de integrações com suporte é fornecida na seção sobre [Integração com outros serviços da Experience Platform](#service-integration). |
+| **Autenticação** | Além do <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank">modelo de segurança interno do JupyterLab</a>, todas as interações entre seu aplicativo e a Experience Platform, incluindo a comunicação serviço a serviço da Experience Platform, são criptografadas e autenticadas por meio do <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Bibliotecas de desenvolvimento** | No [!DNL Experience Platform], o [!DNL JupyterLab] fornece bibliotecas pré-instaladas para o [!DNL Python], R e PySpark. Consulte o [apêndice](#supported-libraries) para obter uma lista completa de bibliotecas com suporte. |
-| **Controlador de biblioteca** | Quando as bibliotecas pré-instaladas estiverem ausentes para suas necessidades, bibliotecas adicionais poderão ser instaladas para Python e R e são armazenadas temporariamente em contêineres isolados para manter a integridade do [!DNL Platform] e manter seus dados seguros. Consulte a seção [kernels](#kernels) para obter mais detalhes. |
+| **Controlador de biblioteca** | Quando as bibliotecas pré-instaladas estiverem ausentes para suas necessidades, bibliotecas adicionais poderão ser instaladas para Python e R e são armazenadas temporariamente em contêineres isolados para manter a integridade do [!DNL Experience Platform] e manter seus dados seguros. Consulte a seção [kernels](#kernels) para obter mais detalhes. |
 
 >[!NOTE]
 >
 >Bibliotecas adicionais só estão disponíveis para a sessão em que foram instaladas. Você deve reinstalar todas as bibliotecas adicionais necessárias ao iniciar novas sessões.
 
-## Integração com outros serviços do [!DNL Platform] {#service-integration}
+## Integração com outros serviços do [!DNL Experience Platform] {#service-integration}
 
-A padronização e a interoperabilidade são os principais conceitos por trás do [!DNL Experience Platform]. A integração do [!DNL JupyterLab] no [!DNL Platform] como um IDE incorporado permite que ele interaja com outros serviços do [!DNL Platform], permitindo que você utilize o [!DNL Platform] em todo o seu potencial. Os seguintes serviços [!DNL Platform] estão disponíveis em [!DNL JupyterLab]:
+A padronização e a interoperabilidade são os principais conceitos por trás do [!DNL Experience Platform]. A integração do [!DNL JupyterLab] no [!DNL Experience Platform] como um IDE incorporado permite que ele interaja com outros serviços do [!DNL Experience Platform], permitindo que você utilize o [!DNL Experience Platform] em todo o seu potencial. Os seguintes serviços [!DNL Experience Platform] estão disponíveis em [!DNL JupyterLab]:
 
 * **[!DNL Catalog Service]:** Acesse e explore conjuntos de dados com funcionalidades de leitura e gravação.
 * **[!DNL Query Service]:** Acesse e explore conjuntos de dados usando SQL, fornecendo menores despesas gerais de acesso aos dados ao lidar com grandes quantidades de dados.
 * **[!DNL Sensei ML Framework]:** Desenvolvimento de modelos com a capacidade de treinar e pontuar dados, bem como criação de receitas com um único clique.
-* **[!DNL Experience Data Model (XDM)]:** A padronização e a interoperabilidade são os principais conceitos por trás do Adobe Experience Platform. O [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), orientado por Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
+* **[!DNL Experience Data Model (XDM)]:** A padronização e a interoperabilidade são os principais conceitos por trás do Adobe Experience Platform. O [Experience Data Model (XDM)](https://www.adobe.com/go/xdm-home-en), orientado pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 
 >[!NOTE]
 >
->Algumas [!DNL Platform] integrações de serviço em [!DNL JupyterLab] estão limitadas a kernels específicos. Consulte a seção sobre [kernels](#kernels) para obter mais detalhes.
+>Algumas [!DNL Experience Platform] integrações de serviço em [!DNL JupyterLab] estão limitadas a kernels específicos. Consulte a seção sobre [kernels](#kernels) para obter mais detalhes.
 
 ## Principais recursos e operações comuns
 
@@ -96,9 +96,9 @@ A barra lateral esquerda contém guias clicáveis que fornecem acesso aos seguin
 * **Navegador de arquivos:** Uma lista de diretórios e documentos de bloco de anotações salvos
 * **Data Explorer:** Navegue, acesse e explore conjuntos de dados e esquemas
 * **Executando kernels e terminais:** Uma lista de sessões ativas de kernel e terminal com a capacidade de terminar
-* **Comandos:** uma lista de comandos úteis
-* **Inspetor de células:** Um editor de célula que fornece acesso às ferramentas e metadados útil para a configuração de um notebook para fins de apresentação
-* **guias:** uma lista de guias abertas
+* **Comandos:** Uma lista de comandos úteis
+* **Inspetor de células:** um editor de células que fornece acesso a ferramentas e metadados úteis para a configuração de um bloco de anotações para fins de apresentação
+* **guias:** Uma lista de guias abertas
 
 Selecione uma guia para expor seus recursos ou selecione em uma guia expandida para recolher a barra lateral esquerda, conforme demonstrado abaixo:
 
@@ -146,11 +146,11 @@ As ações comuns das células são descritas abaixo:
 
 ### Kernels {#kernels}
 
-Os kernels notebooks são os mecanismos de computação específicos da linguagem para o processamento de células de notebook. Além do [!DNL Python], o [!DNL JupyterLab] fornece suporte adicional a idiomas no R, PySpark e [!DNL Spark] (Scala). Quando você abre um documento de notebook, o kernel associado é iniciado. Quando uma célula de notebook é executada, o kernel executa o cálculo e produz resultados que podem consumir recursos significativos da CPU e da memória. Observe que a memória alocada não é liberada até que o kernel seja desligado.
+Os kernels notebooks são os mecanismos de computação específicos da linguagem para o processamento de células de notebook. Além do [!DNL Python], o [!DNL JupyterLab] fornece suporte adicional a idiomas no R, PySpark e [!DNL Spark] (Scala). Quando você abre um documento de notebook, o kernel associado é iniciado. Quando uma célula de notebook é executada, o kernel executa o cálculo e produz resultados que podem consumir significantes recursos de CPU e memória. Observe que a memória alocada não é liberada até que o kernel seja desligado.
 
 Certos recursos e funcionalidades são limitados a kernels específicos, conforme descrito na tabela abaixo:
 
-| Kernel | Suporte à instalação da biblioteca | [!DNL Platform] integrações |
+| Kernel | Suporte à instalação da biblioteca | [!DNL Experience Platform] integrações |
 | :----: | :--------------------------: | :-------------------- |
 | **[!DNL Python]** | Sim | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
 | **R** | Sim | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
@@ -178,9 +178,9 @@ O *Iniciador* personalizado fornece modelos de bloco de anotações úteis para 
 | Início | Um notebook pré-preenchido demonstrando a exploração de dados usando amostras de dados. |
 | Vendas de varejo | Um bloco de anotações pré-preenchido com a [fórmula de vendas de varejo](../pre-built-recipes/retail-sales.md) usando dados de exemplo. |
 | Construtor de fórmula | Um modelo de bloco de anotações para criar uma fórmula em [!DNL JupyterLab]. Ele é pré-preenchido com código e comentários que demonstram e descrevem o processo de criação da fórmula. Consulte o [tutorial do bloco de anotações para a fórmula](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) para obter uma apresentação detalhada. |
-| [!DNL Query Service] | Um notebook pré-preenchido demonstrando o uso diretamente com [!DNL Query Service] o fornecido workflows de amostra que analisa dados em [!DNL JupyterLab] escala. |
-| Eventos XDM | Um notebook pré-preenchido demonstrando a exploração de dados em dados de evento de experiência pós-valor, com foco em recursos comuns em toda a estrutura de dados. |
-| Consultas XDM | Um notebook pré-preenchido demonstrando amostras de consultas comerciais nos dados do Experience Event. |
+| [!DNL Query Service] | Um bloco de anotações pré-preenchido demonstrando o uso de [!DNL Query Service] diretamente em [!DNL JupyterLab] com fluxos de trabalho de exemplo fornecidos que analisam dados em escala. |
+| Eventos XDM | Um bloco de anotações pré-preenchido que demonstra a exploração de dados em dados de Evento de experiência pós-valor, com foco nos recursos comuns na estrutura de dados. |
+| Consultas XDM | Um notebook preenchido previamente demonstrando exemplos de consultas comerciais sobre dados de evento de experiência. |
 | Agregação | Um notebook pré-preenchido demonstrando fluxos de trabalho de amostra para agregar grandes quantidades de dados em blocos menores e gerenciáveis. |
 | Geração de cluster | Um notebook pré-preenchido demonstrando o processo completo de modelagem de aprendizado de máquina usando algoritmos de cluster. |
 
@@ -197,7 +197,7 @@ Alguns modelos de notebook estão limitados a determinados kernels. A disponibil
         <th><strong>Eventos XDM</strong></th>
         <th><strong>Consultas XDM</strong></th>
         <th><strong>Agregação</strong></th>
-        <th><strong>Clustering</strong></th>
+        <th><strong>Geração de cluster</strong></th>
     </tr>
     <tr>
         <th><strong>[!DNL Python]</strong></th>
@@ -255,11 +255,11 @@ Para abrir um novo *Iniciador*, clique em **Arquivo > Novo Iniciador**. Como alt
 
 ## Próximas etapas
 
-Para saber mais sobre cada um dos notebooks compatíveis e como usá-los, visite o [guia do desenvolvedor do acesso aos dados dos notebooks Jupyterlab](./access-notebook-data.md). Este guia foca em como usar notebooks JupyterLab para acessar seus dados, incluindo leitura, escrita e consulta de dados. O guia de acesso a dados também contém informações sobre a quantidade máxima de dados que podem ser lidos por cada notebook suportado.
+Para saber mais sobre cada um dos notebooks compatíveis e como usá-los, visite o [guia do desenvolvedor do acesso aos dados dos notebooks Jupyterlab](./access-notebook-data.md). Este guia tem como foco o uso de notebooks JupyterLab para acessar seus dados, incluindo leitura, gravação e consulta de dados. O guia de acesso a dados também contém informações sobre a quantidade máxima de dados que podem ser lidos por cada notebook suportado.
 
-## Bibliotecas suportado {#supported-libraries}
+## Bibliotecas compatíveis {#supported-libraries}
 
-Para uma lista de pacotes suportados em Python, R e PySpark, copie e cole `!conda list` em uma nova célula, em seguida, execute a célula. Uma lista de pacotes suportados é preenchida em solicitar alfabéticos.
+Para obter uma lista de pacotes compatíveis com o Python, R e PySpark, copie e cole `!conda list` em uma nova célula e execute a célula. Uma lista de pacotes suportados é preenchida em ordem alfabética.
 
 ![exemplo](../images/jupyterlab/user-guide/libraries.PNG)
 

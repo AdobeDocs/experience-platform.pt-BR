@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;assimilação;assimilar dados em lote;tutorial;assimilação em lote;tutorial;guia da interface do usuário;
 solution: Experience Platform
-title: Assimilar Dados No Experience Platform
+title: Assimilar Dados Na Experience Platform
 type: Tutorial
 description: O Adobe Experience Platform permite importar dados facilmente como arquivos em lote na forma de arquivos do Parquet ou dados que estejam em conformidade com um esquema conhecido do Experience Data Model (XDM).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1322'
 ht-degree: 0%
 
 ---
 
 # Assimilar dados na Adobe Experience Platform
 
-O Adobe Experience Platform permite importar dados facilmente para o [!DNL Platform] como arquivos em lote. Exemplos de dados a serem assimilados podem incluir dados de perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um esquema [!DNL Experience Data Model] (XDM) conhecido no Registro de Esquemas.
+O Adobe Experience Platform permite importar dados facilmente para o [!DNL Experience Platform] como arquivos em lote. Exemplos de dados a serem assimilados podem incluir dados de perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um esquema [!DNL Experience Data Model] (XDM) conhecido no Registro de Esquemas.
 
 ## Introdução
 
@@ -80,7 +80,7 @@ Na guia Informações também há um botão de alternância **[!UICONTROL Perfil
 
 ## Habilitar conjunto de dados para [!DNL Real-Time Customer Profile]
 
-Conjuntos de dados são usados para assimilar dados no [!DNL Experience Platform], e esses dados são usados para identificar indivíduos e unir informações provenientes de várias fontes. Essas informações agrupadas são chamadas de [!DNL Real-Time Customer Profile]. Para que [!DNL Platform] saiba quais informações devem ser incluídas em [!DNL Real-Time Profile], os conjuntos de dados podem ser marcados para inclusão usando a opção **[!UICONTROL Perfil]**.
+Conjuntos de dados são usados para assimilar dados no [!DNL Experience Platform], e esses dados são usados para identificar indivíduos e unir informações provenientes de várias fontes. Essas informações agrupadas são chamadas de [!DNL Real-Time Customer Profile]. Para que [!DNL Experience Platform] saiba quais informações devem ser incluídas em [!DNL Real-Time Profile], os conjuntos de dados podem ser marcados para inclusão usando a opção **[!UICONTROL Perfil]**.
 
 Por padrão, esse botão de alternância está desativado. Se você optar por ativar ou desativar o [!DNL Profile], todos os dados assimilados no conjunto de dados serão usados para ajudar a identificar um indivíduo e compilar seus [!DNL Real-Time Profile].
 
@@ -106,13 +106,13 @@ Para começar a adicionar dados ao conjunto de dados, clique na guia **[!UICONTR
 
 >[!NOTE]
 >
->A Platform oferece suporte a dois tipos de arquivos para assimilação de dados: Parquet ou JSON. Você pode adicionar até cinco arquivos de cada vez, com o tamanho máximo de cada arquivo de 1 GB.
+>O Experience Platform oferece suporte a dois tipos de arquivos para assimilação de dados: Parquet ou JSON. Você pode adicionar até cinco arquivos de cada vez, com o tamanho máximo de cada arquivo de 1 GB.
 
 ![Guia Adicionar Dados](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## Carregar um arquivo {#upload-file}
 
-Depois de arrastar e soltar (ou navegar e selecionar) um arquivo Parquet ou JSON que você deseja carregar, o [!DNL Platform] começará imediatamente a processar o arquivo e uma caixa de diálogo **[!UICONTROL Carregamento]** será exibida na guia **[!UICONTROL Adicionar Dados]** mostrando o progresso do carregamento do arquivo.
+Depois de arrastar e soltar (ou navegar e selecionar) um arquivo Parquet ou JSON que você deseja carregar, o [!DNL Experience Platform] começará imediatamente a processar o arquivo e uma caixa de diálogo **[!UICONTROL Carregamento]** será exibida na guia **[!UICONTROL Adicionar Dados]** mostrando o progresso do carregamento do arquivo.
 
 ![Carregando caixa de diálogo](../images/tutorials/ingest-batch-data/uploading-file.png)
 
@@ -150,6 +150,6 @@ Para saber mais sobre a assimilação em lote, leia a [Visão geral de assimila�
 
 >[!WARNING]
 >
->A interface do usuário [!DNL Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
+>A interface do usuário [!DNL Experience Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

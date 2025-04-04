@@ -2,9 +2,9 @@
 title: Classificação e filtragem de respostas na API do serviço de fluxo
 description: Este tutorial aborda a sintaxe para classificação e filtragem usando parâmetros de consulta na API de serviço de fluxo, incluindo alguns casos de uso avançados.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '830'
 ht-degree: 2%
 
 ---
@@ -197,7 +197,7 @@ Dependendo da entidade do Serviço de Fluxo que você está recuperando, proprie
 
 ## Casos de uso {#use-cases}
 
-Leia esta seção para obter alguns exemplos específicos de como você pode usar a filtragem e a classificação para retornar informações sobre determinados conectores ou para ajudá-lo a resolver problemas de depuração. Se houver algum caso de uso adicional que você queira que o Adobe adicione, use as **[!UICONTROL Opções de feedback detalhadas]** na página para enviar uma solicitação.
+Leia esta seção para obter alguns exemplos específicos de como você pode usar a filtragem e a classificação para retornar informações sobre determinados conectores ou para ajudá-lo a resolver problemas de depuração. Se houver algum caso de uso adicional que você queira que o Adobe adicione, use as **[!UICONTROL Opções detalhadas de feedback]** na página para enviar uma solicitação.
 
 **Filtrar para retornar conexões somente a um determinado destino**
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Próximas etapas
 
-Este guia abordou como usar os parâmetros de consulta `orderby` e `property` para classificar e filtrar respostas na API do Serviço de Fluxo. Para obter guias passo a passo sobre como usar a API para fluxos de trabalho comuns na Platform, consulte os tutoriais da API contidos na documentação de [fontes](../../sources/home.md) e [destinos](../../destinations/home.md).
+Este guia abordou como usar os parâmetros de consulta `orderby` e `property` para classificar e filtrar respostas na API do Serviço de Fluxo. Para obter guias passo a passo sobre como usar a API para fluxos de trabalho comuns no Experience Platform, consulte os tutoriais da API contidos na documentação de [fontes](../../sources/home.md) e [destinos](../../destinations/home.md).

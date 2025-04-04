@@ -2,9 +2,9 @@
 title: Painel de perfis de conta
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre os perfis de conta B2B da sua organização.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: '2401'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Este documento fornece uma visão geral dos recursos no painel [!UICONTROL Perfi
 
 ## Introdução
 
-Você deve ter direito ao [Adobe Real-time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) para acessar o painel B2B [!UICONTROL Perfis de Conta].
+Você deve ter direito ao [Adobe Real-Time Customer Data Platform B2B edition](../../rtcdp/b2b-overview.md) para acessar o painel B2B [!UICONTROL Perfis de Conta].
 
 ## Dados de perfis de conta {#data}
 
@@ -31,9 +31,9 @@ Os dados do perfil no instantâneo mostram os dados exatamente como aparecem no 
 
 ## Explore o painel [!UICONTROL Perfis de conta] {#explore}
 
-Para navegar até o painel [!UICONTROL Perfis de conta] na interface do usuário da plataforma, selecione **[!UICONTROL Perfis]** em [!UICONTROL Contas] no painel de navegação esquerdo.
+Para navegar até o painel [!UICONTROL Perfis de conta] na interface do usuário do Experience Platform, selecione **[!UICONTROL Perfis]** em [!UICONTROL Contas] no painel de navegação esquerdo.
 
-![A interface do usuário da Platform com Perfis de Conta na navegação à esquerda foi realçada e a guia de visão geral foi exibida.](../images/account-profiles/account-profiles-dashboard.png)
+![A interface do usuário do Experience Platform com Perfis de Conta na navegação à esquerda foi realçada e a guia de visão geral foi exibida.](../images/account-profiles/account-profiles-dashboard.png)
 
 No painel [!UICONTROL Perfis de Conta], você pode [procurar os perfis de conta assimilados em sua organização](#browse-account-profiles) ou [visualizar todos os dados de perfil de conta rapidamente usando widgets](#standard-widgets).
 
@@ -61,7 +61,7 @@ Selecione a [!UICONTROL ID do Perfil] a partir dos resultados exibidos na guia [
 
 ![A guia Procurar Perfis de Conta com os resultados exibidos e a ID de Perfil destacada.](../images/account-profiles/account-profiles-browse-tab.png)
 
-As informações do perfil da conta exibidas na guia [!UICONTROL Detalhes] foram mescladas de vários fragmentos de perfil para formar uma única visualização da conta individual. Consulte a documentação sobre [navegação de perfis de conta no Adobe Real-time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para saber mais sobre os recursos de visualização de perfis de conta na interface do usuário da plataforma.
+As informações do perfil da conta exibidas na guia [!UICONTROL Detalhes] foram mescladas de vários fragmentos de perfil para formar uma única visualização da conta individual. Consulte a documentação sobre [navegação de perfis de conta no Adobe Real-Time Customer Data Platform](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) para saber mais sobre os recursos de visualização de perfis de conta na interface do usuário do Experience Platform.
 
 ## Widgets padrão {#standard-widgets}
 
@@ -103,7 +103,7 @@ O widget [!UICONTROL Perfis de conta adicionados] usa um gráfico de linhas para
 
 >[!NOTE]
 >
->O insight [!UICONTROL Visão geral dos clientes por conta] e seus gráficos detalhados ([!UICONTROL Detalhes dos clientes por conta], [!UICONTROL Visão geral das oportunidades por conta], [!UICONTROL Detalhes das oportunidades por conta]) não são afetados por nenhum filtro de data global que você tenha definido.
+>A [!UICONTROL Visão geral de clientes por conta] do insight e seus gráficos detalhados ([!UICONTROL Detalhes de clientes por conta], [!UICONTROL Visão geral de oportunidades por conta], [!UICONTROL Detalhes de oportunidades por conta]) não são afetados por nenhum filtro de data global que você tenha definido.
 
 O gráfico [!UICONTROL Visão geral de Clientes por conta] fornece um resumo das contas com base em seus tipos de clientes. Ela exibe uma tabela de quatro linhas que categoriza as contas como tendo clientes diretos ou indiretos ou aqueles sem clientes. Ele fornece o número total de contas para cada categoria. O gráfico ajuda a identificar a distribuição de contas que têm clientes diretos ou indiretos.
 
@@ -129,7 +129,7 @@ Para alternar entre o drill-through e o painel Perfis de Conta, selecione o íco
 
 ![A exibição de detalhamento no painel Perfis de Contas com o menu suspenso de navegação realçado.](../images/account-profiles/navigation-dropdown.png)
 
-Para saber mais sobre detalhes na interface do usuário da Platform, consulte o [guia de detalhes](../sql-insights-query-pro-mode/drill-through.md).
+Para saber mais sobre detalhes na interface do usuário do Experience Platform, consulte o [Guia de Drill-Through](../sql-insights-query-pro-mode/drill-through.md).
 
 #### [!UICONTROL Detalhes de clientes por conta] {#customers-per-account-detail}
 
@@ -167,7 +167,7 @@ O widget [!UICONTROL Novas oportunidades por função de pessoa] exibe o número
 
 >[!NOTE]
 >
->O erro [!UICONTROL Nenhum dado encontrado] ou [!UICONTROL Não é possível carregar] é causado quando a tabela de ponte &#39;Opportunity-Person&#39; não é usada no esquema. Se o seu insight exibir um desses erros, verifique o esquema de união e verifique se o grupo de campos &quot;Oportunidade-Pessoa&quot; está assimilando dados.
+>O erro [!UICONTROL Nenhum dado encontrado] ou [!UICONTROL Não é possível carregar] é causado quando a tabela de ponte &#39;Opportunity-Person&#39; não é usada no esquema. Se o insight exibir um desses erros, verifique o esquema de união e verifique se o grupo de campos &quot;Oportunidade-Pessoa&quot; está assimilando dados.
 
 ![Widget de Novas oportunidades por função de pessoa.](../images/account-profiles/new-opportunities-by-person-role.png)
 

@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;
+keywords: Experience Platform;home;popular topics;
 title: Guia de solução de problemas de preparação de dados
 description: Este documento fornece respostas a perguntas frequentes sobre o Preparo de dados da Adobe Experience Platform.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: ff8f660c2b3a04d8b4b9d4f19891816a44069088
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 0%
 
 ---
 
 # Guia de solução de problemas do [!DNL Data Prep]
 
-Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform [!DNL Data Prep], bem como um guia de solução de problemas para erros comuns. Para obter perguntas e informações sobre a solução de problemas das APIs da Platform em geral, consulte o [guia de solução de problemas da API do Adobe Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform [!DNL Data Prep], bem como um guia de solução de problemas para erros comuns. Para obter perguntas e informações sobre a solução de problemas das APIs do Experience Platform em geral, consulte o [guia de solução de problemas da API do Adobe Experience Platform](../landing/troubleshooting.md).
 
 ## Perguntas frequentes
 
@@ -20,7 +20,7 @@ Veja a seguir uma lista de perguntas frequentes sobre [!DNL Data Prep] e suas re
 
 ### Como os erros de transformação são resolvidos?
 
-[!DNL Data Prep] localiza todos os erros de transformação na coluna em que ocorreram. Como resultado, essa coluna é anulada e o restante da linha continuará a ser processado. Esses problemas de transformação são registrados como **Avisos**. É recomendável que você revise os avisos periodicamente e ajuste a lógica de transformação para levar em conta os problemas de transformação. Isso aumentará a qualidade dos dados assimilados no Experience Platform.
+[!DNL Data Prep] localiza todos os erros de transformação na coluna em que ocorreram. Como resultado, essa coluna é anulada e o restante da linha continuará a ser processado. Esses problemas de transformação são registrados como **Avisos**. É recomendável que você revise os avisos periodicamente e ajuste a lógica de transformação para levar em conta os problemas de transformação. Isso aumentará a qualidade dos dados assimilados na Experience Platform.
 
 Se as colunas marcadas como **Obrigatório** forem anuladas devido a problemas de transformação, a linha não será assimilada. Quando a assimilação parcial de dados está ativada, é possível definir o limite dessas rejeições antes que todo o fluxo falhe. Se o atributo nulo não tiver afetado nenhuma validação de nível de esquema, a linha continuará sendo assimilada.
 
@@ -58,7 +58,7 @@ Após a assimilação, você pode usar o destilador de dados para limpar, moldar
 >
 >* Serviço de identidade: não é possível remover registros diretamente no Serviço de identidade. Será necessário excluir o perfil inteiro e fazer upload novamente do perfil com os registros corretos usando a API de exclusão de perfil.
 
-### Quais são as práticas recomendadas para usar campos calculados em dados de GIF?
+### Quais são as práticas recomendadas para usar campos calculados em dados do GIF?
 
 Você pode usar as funções de mapeamento Preparação de dados durante a etapa de mapeamento dos dados de origem para o esquema XDM para criar um novo campo calculado.
 
@@ -98,7 +98,7 @@ A seguir são descritos exemplos de como é possível aninhar funções de Prepa
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 | --- | --- | --- | --- | --- | --- |
 | iif | Avalia uma determinada expressão booleana e retorna o valor especificado com base no resultado. | <ul><li>EXPRESSION: **Required** A expressão booleana que está sendo avaliada.</li><li>TRUE_VALUE: **Obrigatório** O valor retornado se a expressão for avaliada como verdadeira.</li><li>FALSE_VALUE: **Obrigatório** O valor retornado se a expressão for avaliada como falsa.</li></ul> | iif(EXPRESSÃO, VALOR_VERDADEIRO, VALOR_FALSO) | iif(&quot;s&quot;.equalsIgnoreCase(&quot;S&quot;), &quot;True&quot;, &quot;False&quot;) | &quot;True&quot; |
-| igual a | Compara duas strings para confirmar se são iguais. Esta função diferencia maiúsculas de minúsculas. | <ul><li>STRING1: **Obrigatório** A primeira cadeia de caracteres que você deseja comparar.</li><li>CADEIA DE CARACTERES2: **Obrigatório** A segunda cadeia de caracteres que você deseja comparar. | STRING1.&#x200B;equals(&#x200B;STRING2) | &quot;string1&quot;.&#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
+| igual a | Compara duas strings para confirmar se são iguais. Esta função diferencia maiúsculas de minúsculas. | <ul><li>STRING1: **Obrigatório** A primeira cadeia de caracteres que você deseja comparar.</li><li>CADEIA DE CARACTERES2: **Obrigatório** A segunda cadeia de caracteres que você deseja comparar. | STRING1.&#x200B;equals(&#x200B;STRING2) | &quot;string1&quot;.&#x200B;equals&#x200B;(&quot;STRING1&quot;) | falso |
 | nullify | Define o valor do atributo como nulo. Isso deve ser usado quando você não deseja copiar o campo para o schema de destino. | | nullify() | nullify() | nulo |
 
 {style="table-layout:auto"}

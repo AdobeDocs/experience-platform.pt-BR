@@ -4,7 +4,7 @@ title: Conexão Braze
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1125'
 ht-degree: 3%
@@ -51,7 +51,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -63,7 +63,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome) e/ou identidades, de acordo com o mapeamento de campos.[!DNL Adobe Experience Platform] públicos-alvo são exportados para [!DNL Braze] sob o atributo `AdobeExperiencePlatformSegments`. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Consulte [Ativar dados de público-alvo para streaming de destinos de exportaç�
 
 Para enviar corretamente os dados de público-alvo de [!DNL Adobe Experience Platform] para o destino [!DNL Braze], é necessário passar pela etapa de mapeamento de campos.
 
-O mapeamento consiste na criação de um vínculo entre os campos do esquema [!DNL Experience Data Model] (XDM) na conta [!DNL Platform] e seus equivalentes correspondentes no destino.
+O mapeamento consiste na criação de um vínculo entre os campos do esquema [!DNL Experience Data Model] (XDM) na conta [!DNL Experience Platform] e seus equivalentes correspondentes no destino.
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL Braze], siga estas etapas:
 
@@ -125,7 +125,7 @@ Na janela [!UICONTROL Selecionar campo de origem], você pode escolher entre dua
 
 ![Mapeamento de Destino do Atributo Source](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Selecionar namespace de identidade]: use esta opção para mapear um namespace de identidade [!DNL Platform] para um namespace [!DNL Braze].
+* [!UICONTROL Selecionar namespace de identidade]: use esta opção para mapear um namespace de identidade [!DNL Experience Platform] para um namespace [!DNL Braze].
 
 ![Namespace Source de Mapeamento de Destino](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
@@ -136,7 +136,7 @@ Na seção [!UICONTROL Campo de Destino], clique no ícone de mapeamento à dire
 ![Mapeamento de Destino Brasileiro](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
 Na janela [!UICONTROL Selecionar campo de destino], você pode escolher entre duas categorias de campos de destino:
-* [!UICONTROL Selecionar namespace de identidade]: use esta opção para mapear [!DNL Platform] namespaces de identidade para [!DNL Braze] namespaces de identidade.
+* [!UICONTROL Selecionar namespace de identidade]: use esta opção para mapear [!DNL Experience Platform] namespaces de identidade para [!DNL Braze] namespaces de identidade.
 * [!UICONTROL Selecionar atributos personalizados]: use esta opção para mapear atributos XDM para atributos personalizados [!DNL Braze] definidos na sua conta [!DNL Braze]. <br> Também é possível usar essa opção para renomear atributos XDM existentes em [!DNL Braze]. Por exemplo, mapear um atributo XDM `lastName` para um atributo personalizado `Last_Name` em [!DNL Braze] criará o atributo `Last_Name` em [!DNL Braze], se ele ainda não existir, e mapeará o atributo XDM `lastName` para ele.
 
 ![Descobrir Campos De Mapeamento De Destino](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)

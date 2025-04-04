@@ -3,9 +3,9 @@ keywords: extensão do Analytics, extensão do Analytics, análise de destino
 title: Extensão do Adobe Analytics
 description: A extensão do Adobe Analytics é um destino de análise no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '466'
 ht-degree: 4%
 
 ---
@@ -18,21 +18,21 @@ O Adobe Analytics é uma solução líder do setor que faz você ser capaz de en
 
 O Adobe Analytics é uma extensão do Analytics no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a [visão geral da extensão do Adobe Analytics](/help/tags/extensions/client/analytics/overview.md) na documentação de Tags.
 
-Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
+Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
 ![Extensão do Adobe Analytics](../../assets/catalog/analytics/adobe-analytics/catalog.png)
 
 ## Pré-requisitos {#prerequisites}
 
-Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram o Platform.
+Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar tags na Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso à interface da Coleção de dados e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar as tags na Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso à interface da Coleção de dados e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 
 Para instalar a extensão Adobe Analytics:
 
-Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [interface do Experience Platform](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão no catálogo ou use a barra de pesquisa.
 

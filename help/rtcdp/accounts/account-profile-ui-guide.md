@@ -1,13 +1,13 @@
 ---
 keywords: perfil rtcdp;perfis rtcdp;identidade rtcdp;políticas de mesclagem rtcdp;perfil do cliente em tempo real
 title: Guia da interface do usuário do perfil da conta
-description: Com o uso de perfis de conta, o Adobe Real-time Customer Data Platform B2B Edition permite unificar informações de conta de várias fontes. Este guia fornece detalhes para interagir com perfis de conta na interface do usuário do Adobe Experience Platform.
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+description: Com o uso de perfis de conta, o Adobe Real-Time Customer Data Platform B2B edition permite unificar informações de conta de várias fontes. Este guia fornece detalhes para interagir com perfis de conta na interface do usuário do Adobe Experience Platform.
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1681'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Os perfis de conta só estão disponíveis para clientes do Real-time Customer Data Platform B2B Edition. Para saber mais sobre o Real-Time CDP, incluindo os recursos e a funcionalidade disponíveis para cada tipo de licença, comece lendo a [visão geral do Real-Time CDP](../overview.md).
+>Os perfis de conta estão disponíveis somente para clientes do Real-Time Customer Data Platform B2B edition. Para saber mais sobre o Real-Time CDP, incluindo os recursos e a funcionalidade disponíveis para cada tipo de licença, comece lendo a [visão geral do Real-Time CDP](../overview.md).
 
-Os perfis de conta permitem unificar informações de conta de várias fontes. Essa visualização unificada de uma conta reúne dados de vários canais de marketing e os diversos sistemas que sua organização está usando atualmente para armazenar informações de contas de clientes. Este documento fornece um guia para interagir com perfis de conta usando os recursos do Real-Time CDP, B2B Edition disponíveis na interface do usuário (UI) do Adobe Experience Platform.
+Os perfis de conta permitem unificar informações de conta de várias fontes. Essa visualização unificada de uma conta reúne dados de vários canais de marketing e os diversos sistemas que sua organização está usando atualmente para armazenar informações de contas de clientes. Este documento fornece um guia para interagir com perfis de conta usando os recursos do Real-Time CDP e do B2B edition disponíveis na interface do usuário do Adobe Experience Platform.
 
 Para saber mais sobre como os perfis de conta são criados como parte do fluxo de trabalho B2B, consulte o [tutorial completo](../b2b-tutorial.md).
 
@@ -28,7 +28,7 @@ Selecione **[!UICONTROL Perfis]** em [!UICONTROL Contas] no menu de navegação 
 
 ![A guia Visão Geral de Perfis de Conta com Perfis na navegação à esquerda e Visão Geral realçada.](images/b2b-account-profile-overview.png)
 
-Consulte a documentação no painel [[!UICONTROL Perfis de conta]](../../dashboards/guides/account-profiles.md) para saber mais. Consulte a documentação no [Real-time Customer Data Platform Insights data model B2B Edition](../../dashboards/data-models/cdp-insights-data-model-b2b.md) para obter mais informações sobre como seus modelos de dados de insights podem ser usados para criar gráficos personalizados para seus painéis.
+Consulte a documentação no painel [[!UICONTROL Perfis de conta]](../../dashboards/guides/account-profiles.md) para saber mais. Consulte a documentação no [B2B edition do modelo de dados do Real-time Customer Data Platform Insights](../../dashboards/data-models/cdp-insights-data-model-b2b.md) para obter mais informações sobre como os modelos de dados do seu insights podem ser usados para criar gráficos personalizados para seus painéis.
 
 ## Configurar lead para correspondência de conta {#configure-lead-to-account-matching}
 
@@ -76,7 +76,7 @@ Você pode escolher uma origem selecionando o botão de opção ao lado do nome 
 
 ![Selecionar fluxo de trabalho de origem](images/b2b-account-select-source.png)
 
-Com uma origem selecionada, agora você deve inserir uma **[!UICONTROL ID da conta]** relacionada à origem. Por exemplo, selecionar uma origem do Salesforce exigiria que você inserisse uma ID de conta na instância do Salesforce para exibir o perfil da conta vinculado a essa ID.
+Com uma origem selecionada, agora você deve inserir uma **[!UICONTROL ID da conta]** relacionada à origem. Por exemplo, selecionar uma origem no Salesforce exigiria que você inserisse uma ID de conta na instância do Salesforce para exibir o perfil da conta vinculado a essa ID.
 
 >[!NOTE]
 >
@@ -88,11 +88,11 @@ Com uma origem selecionada, agora você deve inserir uma **[!UICONTROL ID da con
 
 ### Procurar por [!UICONTROL Outros] {#browse-by-others}
 
-O Real-Time CDP, B2B Edition dá suporte à capacidade de realizar uma pesquisa direta permitindo que você insira um **[!UICONTROL nome do Source]**, **[!UICONTROL instância do Source]** e **[!UICONTROL ID da Conta]** para uma conta que você queira exibir. Ao inserir o nome de origem e a instância diretamente, você fornece o contexto necessário para que o Experience Platform pesquise e exiba os dados corretos do perfil da conta.
+Real-Time CDP, B2B edition dá suporte à capacidade de realizar uma pesquisa direta permitindo que você insira um **[!UICONTROL nome do Source]**, uma **[!UICONTROL instância do Source]** e uma **[!UICONTROL ID da Conta]** para uma conta que você deseje visualizar. Ao inserir o nome de origem e a instância diretamente, você fornece o contexto necessário para que o Experience Platform pesquise e exiba os dados corretos do perfil da conta.
 
 A capacidade de executar uma pesquisa direta é útil em circunstâncias em que não é possível fazer uma conexão de origem diretamente com os dados. Por exemplo, se sua organização tiver políticas de governança de dados em vigor que impeçam a conexão direta com um CRM, você poderá exportar esses dados para um sistema de armazenamento na nuvem e assimilá-los no Experience Platform.
 
-Outro exemplo pode ser que você esteja executando uma transformação nos dados entre o momento em que ele sai de um sistema e entra na Platform. Você pode usar a funcionalidade de pesquisa direta para fornecer contexto para os dados (como especificar que são dados do Marketo, apesar de virem de um bucket do Amazon S3, por exemplo) para que o sistema saiba onde procurar os dados e como renderizá-los corretamente.
+Outro exemplo pode ser que você esteja executando uma transformação nos dados entre o momento em que ele sai de um sistema e entra no Experience Platform. Você pode usar a funcionalidade de pesquisa direta para fornecer contexto para os dados (como especificar que são dados do Marketo, apesar de virem de um bucket do Amazon S3, por exemplo) para que o sistema saiba onde procurar os dados e como renderizá-los corretamente.
 
 Para iniciar uma pesquisa direta, selecione **[!UICONTROL Outros]** na lista suspensa **[!UICONTROL Procurar por]** e digite um **[!UICONTROL nome de Source]**, **[!UICONTROL instância de Source]** e **[!UICONTROL ID de Conta]** para a conta que deseja exibir.
 
@@ -122,19 +122,19 @@ Além de poder exibir os dados em uma lista, você pode usar a barra de pesquisa
 
 ## Guia Pessoas {#people-tab}
 
-A guia **[!UICONTROL Pessoas]** fornece uma lista de pessoas individuais associadas à conta. Essas pessoas podem ser contatos e clientes potenciais de diferentes sistemas corporativos gerenciados por equipes diferentes em sua organização, mas no Real-Time CDP, B2B Edition, elas são apresentadas juntas como uma única lista, permitindo que você veja uma visão mais holística dos contatos de sua conta.
+A guia **[!UICONTROL Pessoas]** fornece uma lista de pessoas individuais associadas à conta. Essas pessoas podem ser contatos e clientes potenciais de diferentes sistemas corporativos gerenciados por equipes diferentes na organização. No Real-Time CDP, a B2B edition apresenta essas pessoas juntas como uma única lista, permitindo que você veja uma visão mais holística dos contatos da conta.
 
 >[!NOTE]
 >
 >A guia [!UICONTROL Pessoas] exibe uma lista de até 25 pessoas associadas à conta. Para contas com mais de 25 pessoas associadas, o sistema mostra uma amostragem aleatória de 25 registros.
 
-Além de mostrar um instantâneo das informações do contato, cada pessoa listada também inclui uma **[!UICONTROL ID do Perfil]**, que é um link clicável que permite explorar o Perfil de Cliente em Tempo Real desse indivíduo. Para saber mais sobre como visualizar perfis de clientes individuais relacionados às suas contas, visite o guia para [procurar perfis no Real-Time CDP, B2B Edition](../profile/profile-browse.md).
+Além de mostrar um instantâneo das informações do contato, cada pessoa listada também inclui uma **[!UICONTROL ID do Perfil]**, que é um link clicável que permite explorar o Perfil de Cliente em Tempo Real desse indivíduo. Para saber mais sobre como visualizar perfis de clientes individuais relacionados às suas contas, visite o guia para [navegar pelos perfis na Real-Time CDP, B2B edition](../profile/profile-browse.md).
 
 ![Guia Pessoas](images/b2b-account-people.png)
 
 ## Guia Oportunidades {#opportunities-tab}
 
-A guia **[!UICONTROL Oportunidades]** fornece informações sobre oportunidades abertas e fechadas relacionadas à conta. Essas oportunidades podem ser assimiladas no Experience Platform de várias fontes. No entanto, o Real-Time CDP, B2B Edition facilita que os profissionais de marketing vejam todas essas oportunidades em um único local.
+A guia **[!UICONTROL Oportunidades]** fornece informações sobre oportunidades abertas e fechadas relacionadas à conta. Essas oportunidades podem ser assimiladas na Experience Platform a partir de várias fontes. No entanto, a Real-Time CDP e a B2B edition facilitam que os profissionais de marketing vejam todas essas oportunidades juntas em um único local.
 
 >[!NOTE]
 >

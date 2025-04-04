@@ -2,16 +2,16 @@
 title: Mensagens de Erro do Serviço de Fluxo
 description: Saiba mais sobre as mensagens de erro que você pode encontrar ao usar o Serviço de fluxo para fontes.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1668'
 ht-degree: 35%
 
 ---
 
 # Mensagens de erro do Serviço de fluxo
 
-O Serviço de fluxo é usado para coletar e centralizar dados do cliente de várias fontes diferentes na plataforma. O serviço fornece uma interface de usuário e API RESTful que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar seus sistemas de terceiros, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+O Serviço de fluxo é usado para coletar e centralizar dados de clientes de várias fontes diferentes no Experience Platform. O serviço fornece uma interface de usuário e API RESTful que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar seus sistemas de terceiros, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 Este documento fornece um catálogo de mensagens de erro, descrições e resoluções sugeridas relacionadas ao Serviço de Fluxo.
 

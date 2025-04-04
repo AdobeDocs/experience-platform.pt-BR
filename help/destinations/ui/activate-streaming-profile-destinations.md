@@ -4,9 +4,9 @@ type: Tutorial
 description: Saiba como ativar os dados de público-alvo no Adobe Experience Platform enviando públicos-alvo para destinos com base em perfil de transmissão.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '765'
 ht-degree: 1%
 
 ---
@@ -57,9 +57,9 @@ Para selecionar os públicos que você deseja ativar para o destino, use as caix
 
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
-* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados em Experience Platform pelo serviço de segmentação. Consulte a [documentação do Portal de público-alvo](../../segmentation/ui/audience-portal.md) para obter mais detalhes.
-* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
-* Outros tipos de públicos-alvo, originados de outras soluções de Adobe, como o [!DNL Audience Manager].
+* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação do Portal de público-alvo](../../segmentation/ui/audience-portal.md) para obter mais detalhes.
+* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados no Experience Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
+* Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
 
 ![Imagem destacando a seleção das caixas de seleção na etapa Selecionar públicos do fluxo de trabalho de ativação.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
 
@@ -89,7 +89,7 @@ Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção.
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
 
-[A avaliação de política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) não tem suporte atualmente em exportações para os três destinos da empresa - Amazon Kinesis, Hubs de Eventos do Azure e API HTTP.
+[No momento, não há suporte para a avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) em exportações para os três destinos da empresa - Amazon Kinesis, Hubs de Eventos do Azure e API HTTP.
 
 Isso significa que os perfis que não consentiram em ser direcionados *são incluídos* nas exportações para esses três destinos.
 
@@ -101,7 +101,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### Verificações de política de uso de dados {#data-usage-policy-checks}
 
-Na etapa **[!UICONTROL Revisar]**, o Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
+Na etapa **[!UICONTROL Revisão]**, a Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
 
 ![violação da política de dados](../assets/common/data-policy-violation.png)
 

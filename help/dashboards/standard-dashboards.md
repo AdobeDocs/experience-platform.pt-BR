@@ -2,9 +2,9 @@
 title: Painéis de controle padrão
 description: Saiba como criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets personalizados para visualizar as métricas principais.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1625'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## Criar um painel personalizado
 
-Para criar um painel personalizado, primeiro, navegue até o inventário do painel. Selecione **[!UICONTROL Painéis]** na navegação à esquerda da interface do usuário da plataforma, seguido de **[!UICONTROL Criar painel]**.
+Para criar um painel personalizado, primeiro, navegue até o inventário do painel. Selecione **[!UICONTROL Painéis]** na navegação à esquerda da interface do Experience Platform, seguido de **[!UICONTROL Criar painel]**.
 
 ![O inventário de painel com Painéis na navegação à esquerda e &quot;Criar painel&quot; realçado.](./images/standard-dashboards/create-dashboard.png)
 
@@ -64,7 +64,7 @@ A área de trabalho do compositor de widgets é exibida. Em seguida, selecione *
 
 #### Selecionar modelo de dados {#select-data-model}
 
-A caixa de diálogo [!UICONTROL Selecionar modelo de dados] é exibida. Selecione um modelo de dados na coluna à esquerda para exibir uma lista de visualização de todas as tabelas disponíveis. O modelo de dados pré-configurado para o Real-time Customer Data Platform é denominado [!UICONTROL CDPInsights].
+A caixa de diálogo [!UICONTROL Selecionar modelo de dados] é exibida. Selecione um modelo de dados na coluna à esquerda para exibir uma lista de visualização de todas as tabelas disponíveis. O modelo de dados pré-configurado para o Real-Time Customer Data Platform é denominado [!UICONTROL CDPInsights].
 
 >[!TIP]
 >
@@ -152,7 +152,7 @@ Os widgets podem ser reorganizados e redimensionados enquanto estiverem neste es
 
 ![Painel definido pelo usuário com um widget personalizado e o botão Salvar realçado.](./images/standard-dashboards/user-defined-dashboard.png)
 
-Para garantir que cada consulta de um painel de insights do Adobe Real-time Customer Data Platform tenha recursos suficientes para ser executada com eficiência, a API rastreia o uso de recursos atribuindo slots de simultaneidade a cada consulta. O sistema pode processar até quatro queries simultâneas e, portanto, quatro slots de query simultâneos estarão disponíveis a qualquer momento. As consultas são colocadas em uma fila com base em slots de simultaneidade e, em seguida, aguardam na fila até que slots de simultaneidade suficientes estejam disponíveis.
+Para garantir que cada consulta de um painel de insights do Adobe Real-Time Customer Data Platform tenha recursos suficientes para ser executada com eficiência, a API rastreia o uso de recursos atribuindo slots de simultaneidade a cada consulta. O sistema pode processar até quatro queries simultâneas e, portanto, quatro slots de query simultâneos estarão disponíveis a qualquer momento. As consultas são colocadas em uma fila com base em slots de simultaneidade e, em seguida, aguardam na fila até que slots de simultaneidade suficientes estejam disponíveis.
 
 ### Editar, duplicar ou excluir um widget {#duplicate}
 

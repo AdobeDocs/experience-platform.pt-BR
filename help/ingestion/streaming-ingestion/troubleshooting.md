@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia de solução de problemas de assimilação de streaming
 description: Este documento fornece respostas a perguntas frequentes sobre a assimilação de streaming no Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1026'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Guia de solução de problemas de assimilação de streaming
 
-Este documento fornece respostas a perguntas frequentes sobre a assimilação de streaming no Adobe Experience Platform. Para perguntas e soluções de problemas relacionadas a outros serviços do [!DNL Platform], incluindo aquelas encontradas em todas as APIs do [!DNL Platform], consulte o [guia de solução de problemas do Experience Platform](../../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre a assimilação de streaming no Adobe Experience Platform. Para perguntas e soluções de problemas relacionadas a outros serviços do [!DNL Experience Platform], incluindo aquelas encontradas em todas as APIs do [!DNL Experience Platform], consulte o [guia de solução de problemas do Experience Platform](../../landing/troubleshooting.md).
 
 O Adobe Experience Platform [!DNL Data Ingestion] fornece APIs RESTful que você pode usar para assimilar dados em [!DNL Experience Platform]. Os dados assimilados são usados para atualizar perfis de clientes individuais em tempo quase real, permitindo que você forneça experiências personalizadas e relevantes em vários canais. Leia a [Visão geral da assimilação de dados](../home.md) para obter mais informações sobre o serviço e os diferentes métodos de assimilação. Para obter etapas sobre como usar as APIs de assimilação de streaming, leia a [visão geral da assimilação de streaming](../streaming-ingestion/overview.md).
 
@@ -33,9 +33,9 @@ A assimilação de streaming suporta dois modos de validação: síncrono e ass�
 
 Para obter mais informações sobre validação síncrona e assíncrona, consulte a [visão geral da validação de transmissão](../quality/streaming-validation.md). Para obter etapas sobre como visualizar lotes que falharam na validação, consulte o guia em [recuperando lotes com falha](../quality/retrieve-failed-batches.md).
 
-### Posso validar uma carga de solicitação antes de enviá-la para [!DNL Platform]?
+### Posso validar uma carga de solicitação antes de enviá-la para [!DNL Experience Platform]?
 
-Cargas de solicitação só podem ser avaliadas após serem enviadas para [!DNL Platform]. Ao executar a validação síncrona, cargas válidas retornam objetos JSON preenchidos, enquanto cargas inválidas retornam mensagens de erro. Durante a validação assíncrona, o serviço detecta e envia dados malformados para o [!DNL Data Lake], onde podem ser recuperados posteriormente para análise. Consulte a [visão geral da validação de transmissão](../quality/streaming-validation.md) para obter mais informações.
+Cargas de solicitação só podem ser avaliadas após serem enviadas para [!DNL Experience Platform]. Ao executar a validação síncrona, cargas válidas retornam objetos JSON preenchidos, enquanto cargas inválidas retornam mensagens de erro. Durante a validação assíncrona, o serviço detecta e envia dados malformados para o [!DNL Data Lake], onde podem ser recuperados posteriormente para análise. Consulte a [visão geral da validação de transmissão](../quality/streaming-validation.md) para obter mais informações.
 
 ### O que acontece quando a validação síncrona é solicitada em uma borda que não oferece suporte a ela?
 
@@ -43,7 +43,7 @@ Quando a validação síncrona não é suportada para o local solicitado, uma re
 
 ### Como posso garantir que os dados sejam coletados somente de fontes confiáveis?
 
-[!DNL Experience Platform] dá suporte à coleta de dados segura. Quando a coleta de dados autenticada estiver ativada, os clientes deverão enviar um JSON Web Token (JWT) e sua ID da organização como cabeçalhos de solicitação. Para obter mais informações sobre como enviar dados autenticados para o [!DNL Platform], consulte o manual sobre [coleta de dados autenticada](../tutorials/create-authenticated-streaming-connection.md).
+[!DNL Experience Platform] dá suporte à coleta de dados segura. Quando a coleta de dados autenticada estiver ativada, os clientes deverão enviar um JSON Web Token (JWT) e sua ID da organização como cabeçalhos de solicitação. Para obter mais informações sobre como enviar dados autenticados para o [!DNL Experience Platform], consulte o manual sobre [coleta de dados autenticada](../tutorials/create-authenticated-streaming-connection.md).
 
 ### Qual é a latência para streaming de dados em [!DNL Real-Time Customer Profile]?
 
@@ -51,15 +51,15 @@ Eventos transmitidos geralmente são refletidos em [!DNL Real-Time Customer Prof
 
 ### É possível incluir várias mensagens na mesma solicitação de API?
 
-Você pode agrupar várias mensagens em uma única carga de solicitação e transmiti-las para [!DNL Platform]. Quando usado corretamente, agrupar várias mensagens em uma única solicitação é uma excelente maneira de otimizar as operações de dados. Leia o tutorial sobre [envio de várias mensagens em uma solicitação](../tutorials/streaming-multiple-messages.md) para obter mais informações.
+Você pode agrupar várias mensagens em uma única carga de solicitação e transmiti-las para [!DNL Experience Platform]. Quando usado corretamente, agrupar várias mensagens em uma única solicitação é uma excelente maneira de otimizar as operações de dados. Leia o tutorial sobre [envio de várias mensagens em uma solicitação](../tutorials/streaming-multiple-messages.md) para obter mais informações.
 
 ### Como faço para saber se os dados que estou enviando estão sendo recebidos?
 
-Todos os dados enviados para [!DNL Platform] (com sucesso ou não) são armazenados como arquivos em lotes antes de serem mantidos em conjuntos de dados. O status de processamento dos lotes é exibido dentro do conjunto de dados para o qual foram enviados.
+Todos os dados enviados para [!DNL Experience Platform] (com sucesso ou não) são armazenados como arquivos em lotes antes de serem mantidos em conjuntos de dados. O status de processamento dos lotes é exibido dentro do conjunto de dados para o qual foram enviados.
 
-Você pode verificar se os dados foram assimilados com êxito verificando a atividade do conjunto de dados usando a [interface de usuário Experience Platform](https://platform.adobe.com). Clique em **[!UICONTROL Conjuntos de dados]** no menu de navegação esquerdo para exibir uma lista de conjuntos de dados. Selecione o conjunto de dados para o qual você está fazendo streaming na lista exibida para abrir sua página **[!UICONTROL Atividade do conjunto de dados]**, mostrando todos os lotes enviados durante um período selecionado. Para obter mais informações sobre como usar o [!DNL Experience Platform] para monitorar fluxos de dados, consulte o manual em [monitorando fluxos de dados de transmissão](../quality/monitor-data-ingestion.md).
+Você pode verificar se os dados foram assimilados com êxito verificando a atividade do conjunto de dados usando a [interface de usuário do Experience Platform](https://platform.adobe.com). Clique em **[!UICONTROL Conjuntos de dados]** no menu de navegação esquerdo para exibir uma lista de conjuntos de dados. Selecione o conjunto de dados para o qual você está fazendo streaming na lista exibida para abrir sua página **[!UICONTROL Atividade do conjunto de dados]**, mostrando todos os lotes enviados durante um período selecionado. Para obter mais informações sobre como usar o [!DNL Experience Platform] para monitorar fluxos de dados, consulte o manual em [monitorando fluxos de dados de transmissão](../quality/monitor-data-ingestion.md).
 
-Se os dados não forem assimilados e você quiser recuperá-los do [!DNL Platform], é possível recuperar os lotes com falha enviando suas IDs para o [!DNL Data Access API]. Consulte o manual sobre [recuperação de lotes com falha](../quality/retrieve-failed-batches.md) para obter mais informações.
+Se os dados não forem assimilados e você quiser recuperá-los do [!DNL Experience Platform], é possível recuperar os lotes com falha enviando suas IDs para o [!DNL Data Access API]. Consulte o manual sobre [recuperação de lotes com falha](../quality/retrieve-failed-batches.md) para obter mais informações.
 
 ### Por que meus dados de transmissão não estão disponíveis no Data Lake?
 

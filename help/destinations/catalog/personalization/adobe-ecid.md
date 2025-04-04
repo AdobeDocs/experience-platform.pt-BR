@@ -3,9 +3,9 @@ Keywords: ECID;ecid
 title: Extensão do Experience Cloud ID Service
 description: A extensão do Experience Cloud ID Service é um destino de personalização na Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '461'
 ht-degree: 4%
 
 ---
@@ -16,23 +16,23 @@ ht-degree: 4%
 
 Essa extensão implementa o Serviço de ID [!DNL Experience Cloud], que identifica visitantes em todas as soluções [!DNL Experience Cloud].
 
-O Serviço de ID [!DNL Experience Cloud] é uma extensão de personalização na Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a [página de extensão do Serviço de ID do Experience Cloud](../../../tags/extensions/client/id-service/overview.md) na documentação de tags.
+O Serviço de ID [!DNL Experience Cloud] é uma extensão de personalização na Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a [página de extensão do Experience Cloud ID Service](../../../tags/extensions/client/id-service/overview.md) na documentação de tags.
 
-Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
+Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
-![extensão ECID do Adobe](../../assets/catalog/personalization/adobe-ecid/catalog.png)
+![Extensão da Adobe ECID](../../assets/catalog/personalization/adobe-ecid/catalog.png)
 
 ## Pré-requisitos {#prerequisites}
 
-Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram o Platform.
+Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar tags na Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso à interface da Coleção de dados e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar as tags na Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso à interface da Coleção de dados e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 
 Para instalar a extensão do Serviço de ID do [!DNL Experience Cloud]:
 
-Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [interface do Experience Platform](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão no catálogo ou use a barra de pesquisa.
 
@@ -42,7 +42,7 @@ Selecione a propriedade da tag na qual você deseja instalar a extensão. Você 
 
 O fluxo de trabalho direciona você à interface da Coleção de dados para concluir a instalação.
 
-Para obter informações sobre as opções de configuração de extensão e suporte à instalação, consulte a [página de extensão do Serviço de ID de Experience Cloud](../../../tags/extensions/client/id-service/overview.md) na documentação de tags.
+Para obter informações sobre as opções de configuração de extensão e suporte à instalação, consulte a [página de extensão do Experience Cloud ID Service](../../../tags/extensions/client/id-service/overview.md) na documentação de tags.
 
 Você também pode instalar a extensão diretamente na [Interface da Coleção de Dados](https://experience.adobe.com/#/data-collection/). Consulte o guia em [adicionando uma nova extensão](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obter mais informações.
 

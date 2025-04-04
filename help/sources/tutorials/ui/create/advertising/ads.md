@@ -2,9 +2,9 @@
 title: Conectar o Google Ads ao Experience Platform usando a interface
 description: Saiba como conectar sua conta do Google Ads ao Adobe Experience Platform na interface do usuário do.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '855'
 ht-degree: 0%
 
 ---
@@ -94,4 +94,4 @@ Selecione **[!UICONTROL Visualizar]** para visualizar os dados e selecione **[!U
 
 ## Criar um fluxo de dados para assimilar dados de publicidade
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta do Google Ads. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados de publicidade para a Platform](../../dataflow/advertising.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta do Google Ads. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados de publicidade para a Experience Platform](../../dataflow/advertising.md).

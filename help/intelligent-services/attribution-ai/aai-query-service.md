@@ -2,11 +2,11 @@
 keywords: insights;ia de atribuição;insights de ia de atribuição;serviço de consulta de AAI;consultas de atribuição;pontuações de atribuição
 feature: Attribution AI
 title: Análise de pontuações de atribuição usando o serviço de consulta
-description: Saiba como usar o Serviço de consulta do Adobe Experience Platform para analisar pontuações do Attribution AI.
+description: Saiba como usar o Serviço de consulta da Adobe Experience Platform para analisar pontuações da IA de atribuição.
 exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
-source-git-commit: 66d20dc1141ff33211635ba74d320350f8b27fb7
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Cada linha nos dados representa uma conversão, na qual as informações de pont
 | ---------------------- | ------ |
 | Nome do ponto de contato | `touchpointsDetail. touchpointName` |
 | Canal de ponto de contato | `touchpointsDetail.touchPoint.mediaChannel` |
-| Pontuações Attribution AI do ponto de contato | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Pontuações algorítmicas da IA de atribuição do ponto de contato | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Encontrar seus caminhos de dados
 
-Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda. A página **[!UICONTROL Conjuntos de dados]** é exibida. Em seguida, selecione a guia **[!UICONTROL Procurar]** e localize o conjunto de dados de saída para suas pontuações de Attribution AI.
+Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda. A página **[!UICONTROL Conjuntos de dados]** é exibida. Em seguida, selecione a guia **[!UICONTROL Procurar]** e localize o conjunto de dados de saída para suas pontuações da IA de atribuição.
 
 ![Acessando seu modelo](./images/aai-query/datasets_browse.png)
 
@@ -45,7 +45,7 @@ Usando o esquema de pontuação, você pode selecionar ou pesquisar um valor. De
 
 ## Serviço de consulta do Access
 
-Para acessar o Serviço de consulta na interface do Platform, comece selecionando **[!UICONTROL Consultas]** na navegação à esquerda e selecione a guia **[!UICONTROL Procurar]**. Uma lista de consultas salvas anteriormente é carregada.
+Para acessar o Serviço de consulta na interface do Experience Platform, comece selecionando **[!UICONTROL Consultas]** na navegação à esquerda e selecione a guia **[!UICONTROL Procurar]**. Uma lista de consultas salvas anteriormente é carregada.
 
 ![procurar serviço de consulta](./images/aai-query/query_tab.png)
 
@@ -153,7 +153,7 @@ As consultas abaixo podem ser usadas como modelo para diferentes cenários de an
         conversionName, tp_count DESC
 ```
 
-### Exemplos de geração de insights
+### Exemplos de geração do insight
 
 **Detalhamento de unidades incrementais por ponto de contato e data de conversão (em uma janela de conversão)**
 
@@ -305,7 +305,7 @@ Essa consulta nivela a coluna struct em várias colunas singulares e explode mat
 
 >[!TIP]
 >
-> Neste exemplo, você precisa substituir `{COLUMN_NAME}` além de `_tenantId` e `your_score_output_dataset`. A variável `COLUMN_NAME` pode receber os valores de nomes opcionais de colunas de passagem (colunas de relatórios) que foram adicionados durante a configuração do seu modelo de Attribution AI. Revise seu esquema de saída de pontuação para encontrar os `{COLUMN_NAME}` valores necessários para concluir esta consulta.
+> Neste exemplo, você precisa substituir `{COLUMN_NAME}` além de `_tenantId` e `your_score_output_dataset`. A variável `COLUMN_NAME` pode receber os valores de nomes de colunas de passagem opcionais (colunas de relatórios) que foram adicionados durante a configuração do seu modelo de IA de atribuição. Revise seu esquema de saída de pontuação para encontrar os `{COLUMN_NAME}` valores necessários para concluir esta consulta.
 
 ```sql
 SELECT 

@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;início;tópicos populares;preparação de dados;Preparação de dados;streaming;upsert;upsert de streaming
+keywords: Experience Platform;página inicial;tópicos populares;preparação de dados;Preparação de dados;streaming;substituição;substituição de streaming
 title: Enviar Atualizações Parciais De Linha Ao Perfil Do Cliente Em Tempo Real Usando O Preparo De Dados
 description: Saiba como enviar atualizações de linhas parciais para o Perfil do cliente em tempo real usando o Preparo de dados.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* A assimilação de mensagens de atualização de entidade do Experience Data Model (XDM) (com operações PATCH JSON) para atualizações de perfil por meio da entrada do DCS foi descontinuada. Siga as etapas descritas neste guia como uma alternativa.
+>* A assimilação de mensagens de atualização de entidade do Experience Data Model (XDM) (com operações JSON PATCH) para atualizações de perfil por meio da entrada do DCS foi descontinuada. Siga as etapas descritas neste guia como uma alternativa.
 >
 >* Você também pode usar a fonte da API HTTP para [assimilar dados brutos na entrada do DCS](../sources/tutorials/api/create/streaming/http.md#sending-messages-to-an-authenticated-streaming-connection) e especificar os mapeamentos de dados necessários para transformar seus dados em mensagens compatíveis com XDM para atualizações de Perfil.
 >
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Use upserts de streaming em [!DNL Data Prep] para enviar atualizações parciais de linha aos dados de [!DNL Real-Time Customer Profile], ao mesmo tempo em que cria e estabelece novos links de identidade com uma única solicitação de API.
 
-Ao fazer a transmissão de upserts, você pode reter o formato dos dados enquanto traduz esses dados para [!DNL Real-Time Customer Profile] solicitações de PATCH durante a assimilação. Com base nas entradas que você fornece, o [!DNL Data Prep] permite enviar uma única carga de API e traduzir os dados para [!DNL Real-Time Customer Profile] PATCH e [!DNL Identity Service] solicitações CREATE.
+Ao fazer a transmissão de upserts, você pode reter o formato dos dados enquanto traduz esses dados para [!DNL Real-Time Customer Profile] solicitações do PATCH durante a assimilação. Com base nas entradas que você fornece, o [!DNL Data Prep] permite enviar uma única carga de API e traduzir os dados para as solicitações de [!DNL Real-Time Customer Profile] PATCH e [!DNL Identity Service] CREATE.
 
 [!DNL Data Prep] usa parâmetros de cabeçalho para distinguir entre inserções e substituições. Todas as linhas que usam sobreposições devem ter um cabeçalho. É possível usar sobreposições com ou sem descritores de identidade. Se você estiver usando sobreposições com identidades, siga as etapas de configuração descritas na seção em [configurando o conjunto de dados de identidade](#configure-the-identity-dataset). Se estiver usando upserts sem identidades, não será necessário fornecer configurações de identidade na solicitação. Leia a seção sobre [upserts de streaming sem identidades](#payload-without-identity-configuration) para obter mais informações.
 
@@ -39,7 +39,7 @@ Esta visão geral requer uma compreensão funcional dos seguintes componentes do
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
 * [[!DNL Identity Service]](../identity-service/home.md): obtenha uma melhor visão de clientes individuais e de seu comportamento ao unir as identidades de vários dispositivos e sistemas.
 * [Perfil do cliente em tempo real](../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
-* [Fontes](../sources/home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../sources/home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
 
 ## Usar upserts de streaming em [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 

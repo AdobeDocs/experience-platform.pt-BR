@@ -3,16 +3,16 @@ title: Visão geral da API de tags unificadas
 description: Saiba como usar a API de tags unificadas para gerenciar tags e pastas unificadas na Adobe Experience Platform.
 role: Developer
 exl-id: f4da5850-d5b0-4746-9f28-88ce836db800
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '236'
 ht-degree: 1%
 
 ---
 
 # Visão geral da API de tags unificadas
 
-A API de tags unificadas permite categorizar e gerenciar os objetos comerciais na Adobe Experience Platform. Você pode criar pastas e tags, que podem ser usadas para organizar melhor objetos da Platform, como públicos ou conjuntos de dados, usando endpoints nessa API.
+A API de tags unificadas permite categorizar e gerenciar os objetos comerciais na Adobe Experience Platform. Você pode criar pastas e tags, que podem ser usadas para organizar melhor objetos do Experience Platform, como públicos ou conjuntos de dados, usando endpoints nessa API.
 
 Antes de ler os manuais de endpoint individuais, consulte o [guia de introdução](./getting-started.md) para obter informações importantes sobre os cabeçalhos necessários, como ler chamadas de API de exemplo e muito mais.
 

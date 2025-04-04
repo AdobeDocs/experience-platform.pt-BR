@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;início;tópicos populares;serviço de consulta;serviço de consulta;Aqua Data Studio;Aqua data studio;conectar ao serviço de consulta;
+keywords: Experience Platform;home;tópicos populares;serviço de consulta;serviço de consulta;Aqua Data Studio;Aqua data studio;conectar ao serviço de consulta;
 solution: Experience Platform
 title: Conectar o Aqua Data Studio ao Serviço de consulta
 description: Este documento aborda as etapas para conectar o Aqua Data Studio ao Serviço de consulta do Adobe Experience Platform.
 exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Este guia requer que você já tenha acesso ao [!DNL Aqua Data Studio] e esteja 
 >
 >Há [!DNL Windows] e [!DNL macOS] versões de [!DNL Aqua Data Studio]. As capturas de tela neste guia foram feitas usando o aplicativo de desktop [!DNL macOS]. Pode haver pequenas discrepâncias na interface do usuário entre as versões.
 
-Para adquirir as credenciais necessárias para conectar [!DNL Aqua Data Studio] ao Experience Platform, você deve ter acesso ao espaço de trabalho [!UICONTROL Consultas] na interface de usuário da Platform. Entre em contato com o administrador da organização se você não tiver acesso ao espaço de trabalho [!UICONTROL Consultas].
+Para adquirir as credenciais necessárias para conectar [!DNL Aqua Data Studio] ao Experience Platform, você deve ter acesso ao espaço de trabalho [!UICONTROL Consultas] na interface do usuário do Experience Platform. Entre em contato com o administrador da organização se você não tiver acesso ao espaço de trabalho [!UICONTROL Consultas].
 
 ## Registrar o servidor {#register-server}
 
@@ -32,14 +32,14 @@ Depois de instalar o [!DNL Aqua Data Studio], primeiro você deve registrar o se
 Quando a caixa de diálogo **[!DNL Register Server]** for exibida para um servidor PostgresSQL, forneça os detalhes a seguir para as configurações do servidor.
 
 - **[!DNL Name]**: O nome da sua conexão. É recomendável fornecer um nome amigável para reconhecer a conexão.
-- **[!DNL Login Name]**: o nome de logon é sua ID da organização da plataforma. Ele assume a forma de `ORG_ID@AdobeOrg`.
+- **[!DNL Login Name]**: O nome de logon é sua ID da organização da Experience Platform. Ele assume a forma de `ORG_ID@AdobeOrg`.
 - **[!DNL Password]**: esta é uma cadeia de caracteres alfanumérica encontrada no painel de credenciais [!DNL Query Service].
 - **[!DNL Host and Port]**: O ponto de extremidade do host e sua porta para [!DNL Query Service]. Você deve usar a porta 80 para se conectar com [!DNL Query Service].
-- **[!DNL Database]:** O banco de dados que será usado. Use o valor para a credencial de interface do usuário da Platform `dbname`: `prod:all`.
+- **[!DNL Database]:** O banco de dados que será usado. Use o valor para a credencial de interface do usuário do Experience Platform `dbname`: `prod:all`.
 
 ### [!DNL Query Service] credenciais
 
-Para encontrar suas credenciais, faça logon na interface do usuário do [!DNL Platform] e selecione **[!UICONTROL Consultas]** na navegação à esquerda, seguido de **[!UICONTROL Credenciais]**. Para obter instruções completas para localizar suas credenciais de logon, host, porta e nome do banco de dados, leia o [guia de credenciais](../ui/credentials.md).
+Para encontrar suas credenciais, faça logon na interface do usuário do [!DNL Experience Platform] e selecione **[!UICONTROL Consultas]** na navegação à esquerda, seguido de **[!UICONTROL Credenciais]**. Para obter instruções completas para localizar suas credenciais de logon, host, porta e nome do banco de dados, leia o [guia de credenciais](../ui/credentials.md).
 
 [!DNL Query Service] também oferece credenciais sem expiração para permitir uma configuração única com clientes de terceiros. Consulte a documentação de [instruções completas sobre como gerar e usar credenciais sem expiração](../ui/credentials.md#non-expiring-credentials).
 

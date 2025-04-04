@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares; notificações;;home;popular topics; notifications
-description: Ao se inscrever em Eventos Adobe I/O, é possível usar webhooks para receber notificações sobre os status de execução de fluxo das conexões de origem. Essas notificações contêm informações sobre o sucesso da execução do fluxo ou erros que contribuíram para a falha de uma execução.
+keywords: Experience Platform;página inicial;tópicos populares; notificações
+description: Ao se inscrever no Adobe I/O Events, é possível usar webhooks para receber notificações sobre os status de execução de fluxo das conexões de origem. Essas notificações contêm informações sobre o sucesso da execução do fluxo ou erros que contribuíram para a falha de uma execução.
 solution: Experience Platform
 title: Notificações de Execução de Fluxo
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 1%
@@ -13,9 +13,9 @@ ht-degree: 1%
 
 # Notificações de execução de fluxo
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform]. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-A [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) é usada para coletar e centralizar dados do cliente de várias fontes diferentes em [!DNL Platform]. O serviço fornece uma interface de usuário e a API RESTful a partir da qual todas as fontes compatíveis são conectáveis.
+A [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) é usada para coletar e centralizar dados do cliente de várias fontes diferentes em [!DNL Experience Platform]. O serviço fornece uma interface de usuário e a API RESTful a partir da qual todas as fontes compatíveis são conectáveis.
 
 Com o Adobe I/O Events, você pode assinar eventos e usar webhooks para receber notificações sobre o status das execuções de fluxo. Essas notificações contêm informações sobre o sucesso da execução do fluxo ou erros que contribuíram para a falha de uma execução.
 
@@ -37,7 +37,7 @@ Siga o tutorial em [assinatura de notificações do [!DNL I/O Event]](../observa
 >
 >Durante o processo de assinatura, selecione **[!UICONTROL Notificações de plataforma]** como provedor de eventos e selecione as seguintes assinaturas de evento:
 >
->* **[!UICONTROL Execução bem-sucedida do Fluxo do Experience Platform Source]**
+>* **[!UICONTROL Execução bem-sucedida do fluxo do Experience Platform Source]**
 >* **[!UICONTROL Falha na execução do fluxo do Experience Platform Source]**
 
 ## Receber notificações de execução de fluxo
@@ -323,9 +323,9 @@ As seções a seguir fornecem informações adicionais para trabalhar com notifi
 
 ### Noções básicas sobre mensagens de erro {#errors}
 
-Podem ocorrer erros de assimilação quando os dados estão sendo copiados da origem ou quando os dados copiados estão sendo processados para [!DNL Platform]. Consulte a tabela abaixo para obter mais informações sobre erros específicos.
+Podem ocorrer erros de assimilação quando os dados estão sendo copiados da origem ou quando os dados copiados estão sendo processados para [!DNL Experience Platform]. Consulte a tabela abaixo para obter mais informações sobre erros específicos.
 
 | Erro | Descrição |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Ocorreu um erro enquanto os dados estavam sendo copiados de uma origem. |
-| `CONNECTOR-2001-500` | Erro enquanto os dados copiados estavam sendo processados para [!DNL Platform]. Esse erro pode estar relacionado à análise, validação ou transformação. |
+| `CONNECTOR-2001-500` | Erro enquanto os dados copiados estavam sendo processados para [!DNL Experience Platform]. Esse erro pode estar relacionado à análise, validação ou transformação. |

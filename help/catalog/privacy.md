@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;privacidade data lake;namespaces de identidade;privacidade;data lake
+keywords: Experience Platform;home;popular tópicos;privacidade data lake;identidade namespaces;privacidade;data lake;;home;popular topics;data lake privacy;identity namespaces;privacy;data lake
 solution: Experience Platform
 title: Processamento de solicitação de privacidade no Data Lake
 description: A Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações legais e organizacionais de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade para dados do cliente armazenados no data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1429'
+source-wordcount: '1430'
 ht-degree: 0%
 
 ---
@@ -147,7 +147,7 @@ A seção a seguir descreve como fazer solicitações de privacidade para o data
 
 ### Uso da interface
 
-Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL Data Lake da AEP]** em **[!UICONTROL Produtos]** para processar trabalhos para dados armazenados no data lake.
+Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** em **[!UICONTROL Produtos]** para processar trabalhos para dados armazenados no data lake.
 
 ![Imagem mostrando o produto data lake selecionado na caixa de diálogo de criação de solicitação de privacidade](./images/privacy/product-value.png)
 
@@ -200,11 +200,11 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->A Platform processa solicitações de privacidade em todas as [sandboxes](../sandboxes/home.md) pertencentes à sua organização. Como resultado, qualquer cabeçalho `x-sandbox-name` incluído na solicitação é ignorado pelo sistema.
+>A Experience Platform processa solicitações de privacidade em todas as [sandboxes](../sandboxes/home.md) pertencentes à sua organização. Como resultado, qualquer cabeçalho `x-sandbox-name` incluído na solicitação é ignorado pelo sistema.
 
 ## Processamento de solicitação de exclusão
 
-Quando [!DNL Experience Platform] recebe uma solicitação de exclusão de [!DNL Privacy Service], [!DNL Platform] envia uma confirmação para [!DNL Privacy Service] de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. Os registros são removidos do data lake em sete dias. Durante esse período de sete dias, os dados são excluídos por software e, portanto, não estão acessíveis por nenhum serviço do [!DNL Platform].
+Quando [!DNL Experience Platform] recebe uma solicitação de exclusão de [!DNL Privacy Service], [!DNL Experience Platform] envia uma confirmação para [!DNL Privacy Service] de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. Os registros são removidos do data lake em sete dias. Durante esse período de sete dias, os dados são excluídos por software e, portanto, não estão acessíveis por nenhum serviço do [!DNL Experience Platform].
 
 Se você também incluiu `ProfileService` ou `identity` na solicitação de privacidade, os dados associados a eles serão tratados separadamente. Consulte a seção sobre [processamento de solicitação de exclusão do Perfil](../profile/privacy.md#delete) para obter mais informações.
 

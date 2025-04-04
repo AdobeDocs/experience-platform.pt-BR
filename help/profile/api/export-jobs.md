@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução de problemas;API
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API
 title: Ponto de extremidade da API de trabalhos de exportação de perfil
 type: Documentation
 description: O Perfil do cliente em tempo real permite criar uma única visualização de clientes individuais no Adobe Experience Platform, reunindo dados de várias fontes, incluindo dados de atributos e dados comportamentais. Os dados do perfil podem ser exportados para um conjunto de dados para processamento adicional.
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 2%
@@ -30,7 +30,7 @@ Os pontos de extremidade de API usados neste guia fazem parte da API [!DNL Real-
 
 ## Criar um trabalho de exportação
 
-A exportação de dados [!DNL Profile] requer primeiro a criação de um conjunto de dados para o qual os dados serão exportados e, em seguida, o início de um novo trabalho de exportação. Ambas as etapas podem ser realizadas usando APIs de Experience Platform, sendo que a primeira usa a API de Serviço de catálogo e a última usa a API de perfil do cliente em tempo real. As instruções detalhadas para concluir cada etapa estão descritas nas seções a seguir.
+A exportação de dados [!DNL Profile] requer primeiro a criação de um conjunto de dados para o qual os dados serão exportados e, em seguida, o início de um novo trabalho de exportação. Ambas as etapas podem ser realizadas usando as APIs do Experience Platform, com a primeira usando a API do Serviço de catálogo e a última usando a API do Perfil do cliente em tempo real. As instruções detalhadas para concluir cada etapa estão descritas nas seções a seguir.
 
 ### Criar um conjunto de dados de destino
 
@@ -38,7 +38,7 @@ Ao exportar dados do [!DNL Profile], um conjunto de dados de destino deve ser cr
 
 Uma das principais considerações é o esquema no qual o conjunto de dados se baseia (`schemaRef.id` na solicitação de amostra de API abaixo). Para exportar dados do perfil, o conjunto de dados deve ser baseado no [!DNL XDM Individual Profile] Esquema de união (`https://ns.adobe.com/xdm/context/profile__union`). Um esquema de união é um esquema somente leitura gerado pelo sistema que agrega os campos de esquemas que compartilham a mesma classe. Nesse caso, essa é a classe [!DNL XDM Individual Profile]. Para obter mais informações sobre esquemas de exibição de união, consulte a [seção de união no guia de composição de esquemas](../../xdm/schema/composition.md#union).
 
-As etapas deste tutorial descrevem como criar um conjunto de dados que faz referência ao Esquema de união [!DNL XDM Individual Profile] usando a API [!DNL Catalog]. Você também pode usar a interface de usuário [!DNL Platform] para criar um conjunto de dados que faça referência ao esquema de união. As etapas para usar a interface do usuário estão descritas em [este tutorial de interface do usuário para exportar públicos](../../segmentation/tutorials/create-dataset-export-segment.md), mas também se aplicam aqui. Depois de concluído, você pode retornar a este tutorial para prosseguir com as etapas para [iniciar um novo trabalho de exportação](#initiate).
+As etapas deste tutorial descrevem como criar um conjunto de dados que faz referência ao Esquema de união [!DNL XDM Individual Profile] usando a API [!DNL Catalog]. Você também pode usar a interface de usuário [!DNL Experience Platform] para criar um conjunto de dados que faça referência ao esquema de união. As etapas para usar a interface do usuário estão descritas em [este tutorial de interface do usuário para exportar públicos](../../segmentation/tutorials/create-dataset-export-segment.md), mas também se aplicam aqui. Depois de concluído, você pode retornar a este tutorial para prosseguir com as etapas para [iniciar um novo trabalho de exportação](#initiate).
 
 Se você já tiver um conjunto de dados compatível e souber sua ID, poderá prosseguir diretamente para a etapa para [iniciar um novo trabalho de exportação](#initiate).
 
@@ -400,7 +400,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/24115 \
 
 ## Cancelar um trabalho de exportação
 
-o Experience Platform permite cancelar um trabalho de exportação existente, que pode ser útil por vários motivos, incluindo se o trabalho de exportação não foi concluído ou ficou preso no estágio de processamento. Para cancelar um trabalho de exportação, você pode executar uma solicitação DELETE para o ponto de extremidade `/export/jobs` e incluir o `id` do trabalho de exportação que deseja cancelar no caminho da solicitação.
+O Experience Platform permite cancelar um trabalho de exportação existente, que pode ser útil por vários motivos, incluindo se o trabalho de exportação não foi concluído ou ficou preso no estágio de processamento. Para cancelar um trabalho de exportação, você pode executar uma solicitação DELETE para o ponto de extremidade `/export/jobs` e incluir o `id` do trabalho de exportação que deseja cancelar no caminho da solicitação.
 
 **Formato da API**
 
@@ -428,7 +428,7 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 204 (Sem conte
 
 ## Próximas etapas
 
-Depois que a exportação for concluída com sucesso, seus dados estarão disponíveis no Data Lake no Experience Platform. Você pode usar a [API de acesso a dados](https://www.adobe.io/experience-platform-apis/references/data-access/) para acessar os dados usando a `batchId` associada à exportação. Dependendo do tamanho da exportação, os dados podem estar em partes e o lote pode consistir em vários arquivos.
+Depois que a exportação é concluída com sucesso, seus dados ficam disponíveis no Data Lake no Experience Platform. Você pode usar a [API de acesso a dados](https://www.adobe.io/experience-platform-apis/references/data-access/) para acessar os dados usando a `batchId` associada à exportação. Dependendo do tamanho da exportação, os dados podem estar em partes e o lote pode consistir em vários arquivos.
 
 Para obter instruções passo a passo sobre como usar a API de acesso a dados para acessar e baixar arquivos em lotes, siga o [tutorial sobre acesso a dados](../../data-access/tutorials/dataset-data.md).
 

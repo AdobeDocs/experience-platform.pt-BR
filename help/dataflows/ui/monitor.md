@@ -2,9 +2,9 @@
 title: Visão geral do painel de monitoramento
 description: Saiba como usar o painel de monitoramento na interface do usuário do Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1031'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---
@@ -19,30 +19,30 @@ Use o painel de monitoramento na interface do usuário do Adobe Experience Platf
 
 O painel de monitoramento é compatível com a exibição de vários tipos de dados diferentes:
 
-* **Cliente e Conta**: os dados do cliente referem-se aos dados usados no [Real-time Customer Data Platform](../../rtcdp/home.md), enquanto os dados da conta referem-se aos [dados de perfis de conta](../../rtcdp/accounts/account-profile-overview.md) que podem ser acessados quando se inscreveu no [Real-Time CDP, B2B Edition](../../rtcdp/b2b-overview.md). Se sua licença do Real-Time CDP não incluir o Real-Time CDP, B2B Edition, você só poderá usar o painel de monitoramento para monitorar os dados do cliente.
-* **Prospecto**: [Os perfis de prospecto](../../profile/ui/prospect-profile.md) são usados para representar pessoas que ainda não se envolveram com a sua empresa, mas que você deseja contatar. Com perfis de prospecto, você pode complementar seus perfis de clientes com atributos de parceiros de terceiros confiáveis. Você deve estar licenciado com o Real-Time CDP (App Service), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate para ver o tipo de dados do cliente potencial.
-* **Enriquecimento do perfil de conta**: os perfis de conta permitem unificar as informações de conta de várias fontes. Você deve ter uma licença do Real-Time CDP, B2B Edition para monitorar os dados de enriquecimento do perfil da conta.
+* **Cliente e Conta**: os dados do cliente referem-se aos dados usados no [Real-Time Customer Data Platform](../../rtcdp/home.md), enquanto os dados da conta referem-se aos [dados de perfis de conta](../../rtcdp/accounts/account-profile-overview.md) que podem ser acessados quando se inscreveu no [Real-Time CDP, B2B edition](../../rtcdp/b2b-overview.md). Se sua licença do Real-Time CDP não incluir o Real-Time CDP, o B2B edition, você só poderá usar o painel de monitoramento para monitorar os dados do cliente.
+* **Prospecto**: [Os perfis de prospecto](../../profile/ui/prospect-profile.md) são usados para representar pessoas que ainda não se envolveram com a sua empresa, mas que você deseja contatar. Com perfis de prospecto, você pode complementar seus perfis de clientes com atributos de parceiros de terceiros confiáveis. Você deve estar licenciado com o Real-Time CDP (Serviço de Aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate para visualizar o tipo de dados do cliente potencial.
+* **Enriquecimento do perfil de conta**: os perfis de conta permitem unificar as informações de conta de várias fontes. Você deve ter uma licença do Real-Time CDP, B2B edition, para monitorar os dados de enriquecimento do perfil da conta.
 
-Leia este documento para saber como usar o painel de monitoramento para monitorar a jornada de seus dados em diferentes serviços de Experience Platform.
+Leia este documento para saber como usar o painel de monitoramento para monitorar a jornada de seus dados em diferentes serviços da Experience Platform.
 
 ## Introdução
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fluxos de dados](../home.md): Fluxos de dados são representações de trabalhos de dados que movem dados pelo Experience Platform. Você pode usar o espaço de trabalho de origens para criar fluxos de dados que assimilam dados de uma determinada origem para o Experience Platform.
-* [Fontes](../../sources/home.md): use fontes no Experience Platform para assimilar dados de um aplicativo Adobe ou de uma fonte de dados de terceiros.
+* [Fluxos de dados](../home.md): fluxos de dados são representações de trabalhos de dados que movem dados pela Experience Platform. Você pode usar o espaço de trabalho de origens para criar fluxos de dados que assimilam dados de uma determinada origem para a Experience Platform.
+* [Fontes](../../sources/home.md): use fontes no Experience Platform para assimilar dados de um aplicativo do Adobe ou de uma fonte de dados de terceiros.
 * [Serviço de identidade](../../identity-service/home.md): obtenha uma melhor visão dos clientes individuais e de seu comportamento unindo as identidades de vários dispositivos e sistemas.
 * [Perfil de cliente em tempo real](../../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
 * [Segmentação](../../segmentation/home.md): use o Serviço de segmentação para criar segmentos e públicos a partir dos dados do Perfil do cliente em tempo real.
-* [Destinos](../../destinations/home.md): os destinos são integrações pré-criadas com aplicativos usados com frequência que permitem a ativação contínua de dados da Platform para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+* [Destinos](../../destinations/home.md): os destinos são integrações pré-criadas com aplicativos usados com frequência que permitem a ativação contínua de dados do Experience Platform para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 ## Guia do painel de monitoramento
 
 Na interface do usuário do Experience Platform, selecione **[!UICONTROL Monitoramento]** em [!UICONTROL Gerenciamento de dados] na navegação à esquerda.
 
-![O painel de monitoramento na interface do Experience Platform.](../assets/ui/monitor-overview/monitoring.png)
+![O painel de monitoramento na interface do usuário do Experience Platform.](../assets/ui/monitor-overview/monitoring.png)
 
-Selecione **[!UICONTROL Tipo de Dados]** e use o menu suspenso para selecionar o tipo de dados que deseja exibir. Os tipos de dados são definidos pelas classes de esquema do Experience Data Model (XDM) para garantir que seus dados sigam um formato padrão quando assimilados no Experience Platform. Para obter mais informações, consulte a seguinte documentação:
+Selecione **[!UICONTROL Tipo de Dados]** e use o menu suspenso para selecionar o tipo de dados que deseja exibir. Os tipos de dados são definidos pelas classes de esquema do Experience Data Model (XDM) para garantir que os dados sigam um formato padrão quando assimilados na Experience Platform. Para obter mais informações, consulte a seguinte documentação:
 
 * [Tipo de dados da conta B2B](../../rtcdp/b2b-tutorial.md)
 * [Tipo de dados de cliente potencial](../../rtcdp/partner-data/prospecting.md)
@@ -53,19 +53,19 @@ Você pode filtrar sua visualização com base nos seguintes tipos de dados:
 
 >[!TAB Tudo]
 
-Selecione **[!UICONTROL Todos]** para atualizar seu painel e exibir métricas em todos os dados assimilados no Experience Platform durante um determinado período.
+Selecione **[!UICONTROL Todos]** para atualizar seu painel e exibir métricas em todos os dados que foram assimilados na Experience Platform durante um determinado período.
 
 ![O tipo de dados de monitoramento foi definido como &quot;Todos&quot;.](../assets/ui/monitor-overview/all.png)
 
 >[!TAB Cliente e conta]
 
-Selecione **[!UICONTROL Cliente e conta]** para atualizar seu painel e exibir as métricas nos dados do Cliente e conta que foram assimilados no Experience Platform durante um determinado período.
+Selecione **[!UICONTROL Cliente e conta]** para atualizar seu painel e exibir métricas sobre dados do Cliente e conta que foram assimilados para a Experience Platform durante um determinado período.
 
 ![O tipo de dados de monitoramento definido como &quot;Cliente e Conta&quot;.](../assets/ui/monitor-overview/customer-account.png)
 
 >[!TAB Prospecto]
 
-Selecione **[!UICONTROL Prospecto]** para atualizar seu painel e exibir métricas em dados de prospecção que foram assimilados no Experience Platform durante um determinado período. **Observação**: você só poderá exibir atividades de tipos de dados de prospecto se estiver [qualificado para dados de prospecto](../../rtcdp/partner-data/prospecting.md).
+Selecione **[!UICONTROL Prospecto]** para atualizar seu painel e exibir métricas em dados de prospecção que foram assimilados na Experience Platform durante um determinado período. **Observação**: você só poderá exibir atividades de tipos de dados de prospecto se estiver [qualificado para dados de prospecto](../../rtcdp/partner-data/prospecting.md).
 
 ![O tipo de dados de monitoramento definido como &quot;Prospecto&quot;.](../assets/ui/monitor-overview/prospect.png)
 
@@ -131,7 +131,7 @@ Quando terminar, selecione **[!UICONTROL Aplicar]**.
 
 ## Próximas etapas
 
-Agora, ao ler este documento, você pode navegar pelo painel de monitoramento na interface do usuário do. Para obter informações sobre como monitorar dados para um serviço Experience Platform específico, leia a documentação abaixo:
+Agora, ao ler este documento, você pode navegar pelo painel de monitoramento na interface do usuário do. Para obter informações sobre como monitorar dados de um serviço Experience Platform específico, leia a documentação abaixo:
 
 * [Monitorar dados de fontes](monitor-sources.md).
 * [Monitorar dados de identidade](monitor-identities.md).

@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Guia de solução de problemas do serviço de identidade
 description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2165'
+source-wordcount: '2168'
 ht-degree: 0%
 
 ---
 
 # Guia de solução de problemas do Serviço de identidade
 
-Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform [!DNL Identity Service], bem como um guia de solução de problemas para erros comuns. Para perguntas e soluções de problemas relacionadas às APIs do [!DNL Platform] em geral, consulte o [guia de solução de problemas da API do Adobe Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform [!DNL Identity Service], bem como um guia de solução de problemas para erros comuns. Para perguntas e soluções de problemas relacionadas às APIs do [!DNL Experience Platform] em geral, consulte o [guia de solução de problemas da API do Adobe Experience Platform](../landing/troubleshooting.md).
 
 Os dados que identificam um único cliente geralmente são fragmentados em vários dispositivos e sistemas que eles usam para interagir com sua marca. O [!DNL Identity Service] reúne essas identidades fragmentadas, facilitando uma compreensão completa do comportamento do cliente para que você possa oferecer experiências digitais impactantes em tempo real. Para obter mais informações, consulte a [visão geral do Serviço de Identidade](./home.md).
 
@@ -89,7 +89,7 @@ As identidades são referenciadas em chamadas de API pela identidade composta ou
 
 ## Como o Serviço de identidade lida com informações de identificação pessoal (PII)?
 
-O Serviço de identidade tem namespaces padrão para oferecer suporte à assimilação de valores de identidade com hash para números de telefone e emails. No entanto, você é responsável pelo hash de valores. Para saber mais sobre dados de hash assimilados na Platform, consulte o [[!DNL Data Prep] guia de funções de mapeamento](../data-prep/functions.md#hashing).
+O Serviço de identidade tem namespaces padrão para oferecer suporte à assimilação de valores de identidade com hash para números de telefone e emails. No entanto, você é responsável pelo hash de valores. Para saber mais sobre os dados de hash assimilados na Experience Platform, consulte o [[!DNL Data Prep] guia de funções de mapeamento](../data-prep/functions.md#hashing).
 
 ## Há alguma consideração sobre o hash de identidades baseadas em PII?
 
@@ -115,7 +115,7 @@ Internal solutions|Preferred|Common
 
 ## Por que não consigo acessar a página ou as APIs do gráfico de identidade?
 
-O administrador do Platform deve provisionar a você a permissão `view-identity-graph` para que você visualize os dados do gráfico de identidade. Sem essa permissão, você receberá uma mensagem de permissão negada na página do visualizador de gráficos de identidade e ao chamar as APIs da plataforma. Consulte a [visão geral do controle de acesso](../access-control/home.md) para obter mais informações sobre permissões.
+O administrador do Experience Platform deve provisionar com a permissão `view-identity-graph` para que você visualize os dados do gráfico de identidade. Sem essa permissão, você receberá uma mensagem de permissão negada na página do visualizador de gráficos de identidade e ao chamar as APIs do Experience Platform. Consulte a [visão geral do controle de acesso](../access-control/home.md) para obter mais informações sobre permissões.
 
 ## Solução de problemas
 
@@ -216,7 +216,7 @@ Esta mensagem de erro é exibida quando sua organização não é provisionada c
 }
 ```
 
-No caso desse erro, o token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser gerados novamente para continuar usando as APIs do [!DNL Platform]. Consulte o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para obter instruções sobre como gerar novos tokens de acesso.
+No caso desse erro, o token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser gerados novamente para continuar usando as APIs do [!DNL Experience Platform]. Consulte o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para obter instruções sobre como gerar novos tokens de acesso.
 
 ### O token do serviço de autorização não é válido
 
@@ -228,7 +228,7 @@ No caso desse erro, o token de acesso é inválido. Os tokens de acesso expiram 
 }
 ```
 
-No caso desse erro, o token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser gerados novamente para continuar usando as APIs do [!DNL Platform]. Consulte o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para obter instruções sobre como gerar novos tokens de acesso.
+No caso desse erro, o token de acesso é inválido. Os tokens de acesso expiram a cada 24 horas e devem ser gerados novamente para continuar usando as APIs do [!DNL Experience Platform]. Consulte o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para obter instruções sobre como gerar novos tokens de acesso.
 
 ### O token do usuário não tem um contexto de produto válido
 
@@ -276,11 +276,11 @@ Esta mensagem de erro é exibida quando sua organização não é provisionada c
 }
 ```
 
-Este erro é exibido quando ocorre uma exceção inesperada na execução de uma chamada de serviço [!DNL Platform]. A prática recomendada é programar suas chamadas automatizadas para repetir as solicitações algumas vezes em um intervalo de tempo ao receber esse erro. Se o problema persistir, entre em contato com o administrador do sistema.
+Este erro é exibido quando ocorre uma exceção inesperada na execução de uma chamada de serviço [!DNL Experience Platform]. A prática recomendada é programar suas chamadas automatizadas para repetir as solicitações algumas vezes em um intervalo de tempo ao receber esse erro. Se o problema persistir, entre em contato com o administrador do sistema.
 
 ## Códigos de erro de assimilação em lote
 
-[!DNL Identity Service] assimila dados de identidade de dados de registro e série temporal que são carregados em [!DNL Platform] usando a Assimilação em lote. Como a assimilação em lote é um processo assíncrono, você deve visualizar os detalhes de um lote para visualizar os erros. Os erros serão acumulados à medida que o lote avança até ser concluído.
+[!DNL Identity Service] assimila dados de identidade de dados de registro e série temporal que são carregados em [!DNL Experience Platform] usando a Assimilação em lote. Como a assimilação em lote é um processo assíncrono, você deve visualizar os detalhes de um lote para visualizar os erros. Os erros serão acumulados à medida que o lote avança até ser concluído.
 
 Esta é uma lista de mensagens de erro relacionadas a [!DNL Identity Service] que você pode encontrar ao usar a [API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 

@@ -6,10 +6,10 @@ user-guide-description: Use o aprendizado de máquina para desenvolver, treinar 
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 32%
+source-wordcount: '227'
+ht-degree: 33%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 32%
 * Criação de Modelo {#authoring}
    * [SDK de criação de modelo](authoring/sdk.md)
    * [Criar um pipeline de recurso](authoring/feature-pipeline.md)
-   * [Criação de modelo usando o Platform SDK (Python)](authoring/platform-sdk.md)
+   * [Criação de modelos usando o Experience Platform SDK (Python)](authoring/platform-sdk.md)
    * [Acesso a dados Python](authoring/python.md)
    * [Spark data access](authoring/spark.md)
 * Tutoriais de modelos e receitas {#models-recipes}
@@ -60,9 +60,9 @@ ht-degree: 32%
    * [Pontuar um modelo (API)](models-recipes/score-model-api.md)
    * [Otimizar um modelo](models-recipes/optimize-model.md)
    * [Enriqueça o Perfil do cliente em tempo real com insights de aprendizado de máquina](models-recipes/enrich-profile.md)
-   * [Publish um modelo como um serviço (UI)](models-recipes/publish-model-service-ui.md)
-   * [Publish um modelo como um serviço (API)](models-recipes/publish-model-service-api.md)
+   * [Publicar um modelo como um serviço (UI)](models-recipes/publish-model-service-ui.md)
+   * [Publicar um modelo como um serviço (API)](models-recipes/publish-model-service-api.md)
    * [Programar treinamento automatizado e pontuação em um serviço (UI)](models-recipes/schedule-models-ui.md)
 * [Manual de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

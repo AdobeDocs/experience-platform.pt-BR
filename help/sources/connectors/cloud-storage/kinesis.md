@@ -3,9 +3,9 @@ title: Visão geral do Amazon Kinesis Source Connector
 description: Saiba como conectar o Amazon Kinesis ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -16,16 +16,16 @@ ht-degree: 0%
 >
 >- A origem [!DNL Amazon Kinesis] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
 >
->- Agora você pode usar a origem [!DNL Amazon Kinesis] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Para saber mais sobre a infraestrutura de Experience Platform compatível, consulte a [visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md).
+>- Agora você pode usar a origem [!DNL Amazon Kinesis] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../landing/multi-cloud.md).
 
 
-O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem, como AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. Você pode trazer seus dados desses sistemas para o [!DNL Platform].
+O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem, como AWS, [!DNL Google Cloud Platform] e [!DNL Azure]. Você pode trazer seus dados desses sistemas para o [!DNL Experience Platform].
 
-As fontes de armazenamento na nuvem podem trazer seus próprios dados para o [!DNL Platform] sem precisar baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Origens. [!DNL Platform] permite trazer dados de [!DNL Amazon Kinesis] em tempo real.
+As fontes de armazenamento na nuvem podem trazer seus próprios dados para o [!DNL Experience Platform] sem precisar baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Origens. [!DNL Experience Platform] permite trazer dados de [!DNL Amazon Kinesis] em tempo real.
 
 >[!NOTE]
 >
->O fator de escala para [!DNL Kinesis] deve ser aumentado se você precisar assimilar dados de alto volume. Atualmente, o volume máximo de dados que você pode trazer da sua conta do [!DNL Kinesis] para a Platform é de 4.000 registros por segundo. Para aumentar e assimilar dados de volume maior, entre em contato com o representante da Adobe.
+>O fator de escala para [!DNL Kinesis] deve ser aumentado se você precisar assimilar dados de alto volume. Atualmente, o volume máximo de dados que você pode trazer da sua conta do [!DNL Kinesis] para a Experience Platform é de 4.000 registros por segundo. Para aumentar e assimilar dados de volume maior, entre em contato com o representante da Adobe.
 
 ## Pré-requisitos
 
@@ -40,7 +40,7 @@ Um fluxo [!DNL Kinesis] requer as seguintes permissões para criar uma conexão 
 - `DescribeStream`
 - `ListStreams`
 
-Essas permissões são organizadas por meio do console [!DNL Kinesis] e são verificadas pela Platform depois que você insere suas credenciais e seleciona seu fluxo de dados.
+Essas permissões são organizadas por meio do console [!DNL Kinesis] e são verificadas pela Experience Platform depois que você insere suas credenciais e seleciona seu fluxo de dados.
 
 O exemplo abaixo exibe os direitos de acesso mínimos necessários para criar uma conexão de origem [!DNL Kinesis].
 
@@ -85,20 +85,20 @@ Para obter mais informações sobre como controlar o acesso a [!DNL Kinesis] flu
 | `TRIM_HORIZON` | Os dados são lidos a partir do registro de dados mais antigo. |
 | `LATEST` | Os dados são lidos a partir do registro de dados mais recente. |
 
-Atualmente, uma origem de interface do usuário [!DNL Kinesis] dá suporte apenas a `TRIM_HORIZON`, enquanto a API dá suporte a `TRIM_HORIZON` e `LATEST` como modos de obtenção de dados. O valor de iterador padrão que a Platform usa para a origem [!DNL Kinesis] é `TRIM_HORIZON`.
+Atualmente, uma origem de interface do usuário [!DNL Kinesis] dá suporte apenas a `TRIM_HORIZON`, enquanto a API dá suporte a `TRIM_HORIZON` e `LATEST` como modos de obtenção de dados. O valor de iterador padrão que o Experience Platform usa para a origem [!DNL Kinesis] é `TRIM_HORIZON`.
 
 Para obter mais informações sobre tipos de iterador, consulte o seguinte [[!DNL Kinesis] documento](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
-## Conectar [!DNL Amazon Kinesis] a [!DNL Platform]
+## Conectar [!DNL Amazon Kinesis] a [!DNL Experience Platform]
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Amazon Kinesis] ao [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Amazon Kinesis] ao [!DNL Experience Platform] usando APIs ou a interface do usuário:
 
 ### Uso de APIs
 
-- [Criar uma conexão de origem do Amazon Kinesis usando a API do Serviço de fluxo](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Crie uma conexão de origem Amazon Kinesis usando a API do Serviço de fluxo](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Coletar dados de transmissão usando a API de Serviço de Fluxo](../../tutorials/api/collect/streaming.md)
 
 ### Uso da interface
 
-- [Criar uma conexão de origem do Amazon Kinesis na interface](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Criar uma conexão de origem Amazon Kinesis na interface](../../tutorials/ui/create/cloud-storage/kinesis.md)
 - [Configurar um fluxo de dados para uma conexão de armazenamento em nuvem na interface](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

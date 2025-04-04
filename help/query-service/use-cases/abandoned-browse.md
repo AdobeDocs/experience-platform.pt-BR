@@ -3,9 +3,9 @@ keywords: Experience Platform;serviço de consulta;serviço de consulta;consulta
 title: Exemplo de caso de uso para o serviço de consulta do Adobe Experience Platform
 description: Um exemplo completo para demonstrar a versatilidade e os benefícios do Adobe Experience Platform Query Service.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,7 @@ order by price desc)D;
 
 ## Exemplo de abandono de navegação [!DNL Query Service] usando o adobe analytics {#video-example}
 
-A apresentação em vídeo vista abaixo fornece um caso de uso holístico, real, para seus dados de Experience Platform com foco nas integrações do [!DNL Query Service] e da análise de Adobe.
+A apresentação em vídeo vista abaixo fornece um caso de uso holístico e real para seus dados do Experience Platform com foco nas integrações do [!DNL Query Service] e do Adobe Analytics.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
@@ -69,7 +69,7 @@ O [!DNL Query Service] permite que você inclua restrições em suas consultas p
 
 Além disso, ao incluir na consulta uma lógica que satisfaça quaisquer condições recorrentes ou estáticas, o [!DNL Query Service] extrai a carga de uma segmentação elaborada.
 
-O Adobe Experience Platform fornece um repositório de dados e as ferramentas necessárias para ativar seus dados de forma eficiente e confiável. Ao manter os dados dentro da Platform, você pode derivar atributos enquanto executa outros processos e elimina a necessidade de exportar dados para ferramentas de terceiros para manipulação e processamento. Essas despesas gerais de processamento podem afetar bastante a linha do tempo de um projeto ao lidar com centenas de atributos ou campanhas. Isso fornece aos profissionais de marketing um único local para acessar seus dados e criar campanhas, bem como um meio muito dinâmico de segmentar e personalizar suas mensagens.
+O Adobe Experience Platform fornece um repositório de dados e as ferramentas necessárias para ativar seus dados de forma eficiente e confiável. Ao manter os dados dentro do Experience Platform, é possível derivar atributos enquanto você executa outros processos e elimina a necessidade de exportar dados para ferramentas de terceiros para manipulação e processamento. Essas despesas gerais de processamento podem afetar bastante a linha do tempo de um projeto ao lidar com centenas de atributos ou campanhas. Isso fornece aos profissionais de marketing um único local para acessar seus dados e criar campanhas, bem como um meio muito dinâmico de segmentar e personalizar suas mensagens.
 
 ## Próximas etapas
 

@@ -1,11 +1,11 @@
 ---
 title: Notas de versão da Adobe Experience Platform de novembro de 2021
-description: As notas de versão de novembro de 2021 para o Adobe Experience Platform.
+description: As notas de versão de novembro de 2021 da Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '776'
-ht-degree: 20%
+source-wordcount: '781'
+ht-degree: 21%
 
 ---
 
@@ -33,7 +33,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 
 Criada com base na Real-time Customer Data Platform (Real-Time CDP), a Real-Time CDP B2B Edition foi desenvolvida especificamente para profissionais de marketing que operam em um modelo de serviço B2B. A plataforma reúne dados de várias origens e os combina numa única exibição de perfis de pessoas e contas. Esses dados unificados permitem que profissionais de marketing direcionem públicos-alvo específicos com precisão e gerem engajamento em todos os canais disponíveis.
 
-Há melhorias em uma variedade de recursos do Adobe Experience Platform que distinguem o Real-Time CDP B2B Edition de seu equivalente B2C. Eles incluem melhorias no Experience Data Model (XDM) para casos de uso de B2B, atualizações na resolução de identidade e segmentação de perfil, bem como um conector e destino personalizados para Marketo Engage. O conector do Marketo permite que as marcas B2B conectem seus dados de engajamento B2B líderes do setor com informações comportamentais, a fim de nutrir clientes potenciais e aprimorar as operações de marketing baseadas em conta.
+Há melhorias em uma variedade de recursos do Adobe Experience Platform que distinguem o Real-Time CDP B2B edition de seu equivalente B2C. Eles incluem melhorias no Experience Data Model (XDM) para casos de uso de B2B, atualizações na resolução de identidade e segmentação de perfil, bem como um conector e destino personalizados para o Marketo Engage. O conector do Marketo permite que as marcas B2B conectem seus dados de engajamento B2B líderes do setor com informações comportamentais, a fim de nutrir clientes potenciais e aprimorar as operações de marketing baseadas em conta.
 
 -[Novas edições B2B e B2P](#editions)
 -[Novos conectores de origem e destino de dados do Marketo](#marketo)
@@ -41,28 +41,28 @@ Há melhorias em uma variedade de recursos do Adobe Experience Platform que dist
 
 ### Novas edições B2B e B2P {#editions}
 
-Novas edições B2B e B2P que trazem dados e funcionalidades B2B para os produtos Real-Time CDP e Platform Ativation estão disponíveis para compra.
+Novas edições B2B e B2P que trazem dados e funcionalidades B2B para os produtos Real-Time CDP e Experience Platform Ativation estão disponíveis para compra.
 
-Para saber mais sobre o Real-Time CDP B2B Edition, consulte a [visão geral](../../rtcdp/overview.md).
+Para saber mais sobre o Real-Time CDP B2B edition, consulte a [visão geral](../../rtcdp/overview.md).
 
 ### Novos conectores de origem e destino de dados do Marketo {#marketo}
 
-Novos conectores de origem e destino de dados do Marketo transmitem dados do Marketo para os públicos da Platform e do de volta para a Marketo. Disponível para todos os usuários da Platform.
+Novos conectores de origem e destino de dados do Marketo transmitem dados do Marketo para os públicos da Experience Platform e da Experience Platform de volta para a Marketo. Disponível para todos os usuários do Experience Platform.
 
 | Recurso | Descrição |
 |----------|-------------|
-| conector de origem do Marketo Engage | O [conector de origem do Marketo Engage](../../sources/connectors/adobe-applications/marketo/marketo.md) permite que os profissionais de marketing assimilem dados de uma ou mais instâncias do Marketo na instância do Adobe Experience Platform e fornece uma solução completa para o gerenciamento de clientes potenciais e para os profissionais de marketing B2B. |
+| Conector de origem do Marketo Engage | O [conector de origem do Marketo Engage](../../sources/connectors/adobe-applications/marketo/marketo.md) permite que os profissionais de marketing assimilem dados de uma ou mais instâncias do Marketo na instância do Adobe Experience Platform e fornece uma solução completa para o gerenciamento de clientes potenciais e para os profissionais de marketing B2B. |
 | Destino do Marketo Engage | O [destino do Marketo](../../destinations/catalog/adobe/marketo-engage.md) permite que os profissionais de marketing enviem segmentos criados no Adobe Experience Platform para o Marketo, onde eles aparecerão como listas estáticas. |
 
 ### XDM B2B padrão {#XDM}
 
-Classes B2B XDM padrão, grupos de campos e tipos de dados estão disponíveis para todos os usuários da Platform.
+Classes B2B XDM padrão, grupos de campos e tipos de dados estão disponíveis para todos os usuários do Experience Platform.
 
 | Recurso | Descrição |
 |-----------|--------------|
-| Classes B2B XDM padrão | O Real-time Customer Data Platform B2B Edition fornece vários XDM padrão que capturam detalhes sobre entidades de dados B2B essenciais, como contas, oportunidades, campanhas e muito mais. |
+| Classes B2B XDM padrão | O Real-Time Customer Data Platform B2B edition fornece vários XDM padrão que capturam detalhes sobre entidades de dados B2B essenciais, como contas, oportunidades, campanhas e muito mais. |
 
-Consulte a documentação [Esquemas no Real-time Customer Data Platform B2B Edition](../../rtcdp/schemas/b2b.md) para saber mais sobre como capturar entidades de dados B2B.
+Consulte a documentação [Esquemas no Real-Time Customer Data Platform B2B edition](../../rtcdp/schemas/b2b.md) para saber mais sobre como capturar entidades de dados B2B.
 
 ### (Beta) Ative segmentos de público-alvo para destinos em lote por meio da API de ativação ad-hoc {#ad-hoc-activation}
 
@@ -74,14 +74,14 @@ O Attribution AI é usado para atribuir créditos a pontos de contato que levam 
 
 | Recurso | Descrição |
 |-----------|---------------|
-| Suporte para vários conjuntos de dados | O Attribution AI agora pode assimilar facilmente vários conjuntos de dados diretamente na interface do usuário, sem a necessidade de mapear e compilar cada conjunto de dados. Esse novo recurso que economiza tempo fornece pontuações mais poderosas e precisas com dados mais avançados de vários conjuntos de dados. |
-| Canal de mídia e mapeamento de campo de campanha | O Attribution AI agora oferece suporte ao mapeamento de canais de mídia e campos de campanha. O mapeamento de canal de mídia entre conjuntos de dados melhora os insights derivados do Attribution AI e ajuda a fornecer resultados mais claros e fáceis de interpretar. |
+| Suporte para vários conjuntos de dados | A IA de atribuição agora pode assimilar facilmente vários conjuntos de dados diretamente na interface do usuário, sem a necessidade de mapear e compilar cada conjunto de dados. Esse novo recurso que economiza tempo fornece pontuações mais poderosas e precisas com dados mais avançados de vários conjuntos de dados. |
+| Canal de mídia e mapeamento de campo de campanha | A IA de atribuição agora é compatível com o mapeamento de canais de mídia e campos de campanha. O mapeamento de canal de mídia entre conjuntos de dados melhora os insights derivados da IA de atribuição e ajuda a fornecer resultados mais claros e fáceis de interpretar. |
 
-Para obter mais informações sobre o Attribution AI, consulte a [documentação do Attribution AI](../../intelligent-services/attribution-ai/overview.md).
+Para obter mais informações sobre a IA de atribuição, consulte a [documentação da IA de atribuição](../../intelligent-services/attribution-ai/overview.md).
 
 ### IA do cliente {#customer-ai}
 
-A IA do cliente, disponível no Real-time Customer Data Platform, é usada para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+A IA do cliente, disponível no Real-Time Customer Data Platform, é usada para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 
 **Recursos atualizados**
 

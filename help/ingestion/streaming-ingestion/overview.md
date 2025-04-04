@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da assimilação de fluxo
 description: A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 2%
@@ -25,7 +25,7 @@ O vídeo a seguir foi projetado para ajudar a entender a assimilação de stream
 
 ### Registros de perfil de fluxo e [!DNL ExperienceEvents]
 
-Com a assimilação por transmissão, os usuários podem transmitir registros de perfil e [!DNL ExperienceEvents] para [!DNL Platform] em segundos para ajudar a impulsionar a personalização em tempo real. Todos os dados enviados para as APIs de assimilação de streaming são automaticamente mantidos no [!DNL Data Lake].
+Com a assimilação por transmissão, os usuários podem transmitir registros de perfil e [!DNL ExperienceEvents] para [!DNL Experience Platform] em segundos para ajudar a impulsionar a personalização em tempo real. Todos os dados enviados para as APIs de assimilação de streaming são automaticamente mantidos no [!DNL Data Lake].
 
 Leia o [guia de criação de conexão de streaming](../tutorials/create-streaming-connection.md) para obter mais informações.
 

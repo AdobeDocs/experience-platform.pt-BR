@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Expirações do evento de experiência
 description: Este documento fornece orientação geral sobre como configurar tempos de expiração para eventos de experiência individuais em um conjunto de dados do Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 No Adobe Experience Platform, você pode configurar as horas de expiração para todos os Eventos de experiência que são assimilados em um conjunto de dados habilitado para o [Perfil de cliente em tempo real](./home.md). Isso permite remover automaticamente dados do armazenamento de Perfil que não são mais válidos ou úteis para seus casos de uso.
 
-As expirações de evento de experiência não podem ser configuradas por meio da interface do usuário da plataforma ou das APIs. Em vez disso, você deve entrar em contato com o suporte para ativar as expirações do evento de experiência nos conjuntos de dados necessários.
+As expirações do evento de experiência não podem ser configuradas por meio da interface do usuário ou das APIs do Experience Platform. Em vez disso, você deve entrar em contato com o suporte para ativar as expirações do evento de experiência nos conjuntos de dados necessários.
 
 >[!IMPORTANT]
 >
@@ -23,7 +23,7 @@ As expirações de evento de experiência não podem ser configuradas por meio d
 
 ## Processo de expiração automatizado
 
-Depois que as expirações de evento de experiência são ativadas em um conjunto de dados habilitado para perfil, o Platform aplica automaticamente os valores de expiração para cada evento capturado em um processo de duas etapas:
+Depois que as expirações de evento de experiência são ativadas em um conjunto de dados habilitado para perfil, o Experience Platform aplica automaticamente os valores de expiração para cada evento capturado em um processo de duas etapas:
 
 1. Todos os novos dados assimilados no conjunto de dados têm o valor de expiração aplicado no momento da assimilação com base no carimbo de data e hora do evento.
 1. Todos os dados existentes no conjunto de dados têm o valor de expiração aplicado retroativamente como um trabalho único do sistema de preenchimento retroativo. Depois que o valor de expiração for colocado no conjunto de dados, os eventos mais antigos que o valor de expiração serão descartados imediatamente assim que o trabalho do sistema for executado. Todos os outros eventos serão ignorados assim que atingirem seus valores de expiração no carimbo de data e hora do evento. Quando todos os eventos de experiência forem removidos, se o perfil não tiver mais atributos de perfil, o perfil não existirá mais.
@@ -76,4 +76,4 @@ A expiração de dados do perfil de pseudônimo e a expiração de dados do even
 
 Você deve **sempre** configurar a expiração dos dados do Evento de experiência em seus conjuntos de dados, com base nas suas necessidades de retenção de dados sobre clientes conhecidos. Depois que a expiração de dados do evento de experiência for configurada, você poderá usar a expiração de dados do perfil de pseudônimo para remover automaticamente os perfis de pseudônimo. Normalmente, o período de expiração dos dados para perfis pseudônimos é menor que o período de expiração dos dados para eventos de experiência.
 
-Para um caso de uso típico, você pode definir a expiração de dados do evento de experiência com base nos valores dos dados do usuário conhecidos e definir a expiração de dados do perfil pseudônimo para uma duração muito mais curta para limitar o impacto dos perfis pseudônimos na conformidade de licença da plataforma.
+Para um caso de uso típico, você pode definir a expiração de dados do evento de experiência com base nos valores dos dados do usuário conhecidos e pode definir a expiração de dados do perfil pseudônimo para uma duração muito mais curta, a fim de limitar o impacto dos perfis pseudônimos na conformidade com a licença do Experience Platform.

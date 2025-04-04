@@ -1,11 +1,11 @@
 ---
 title: Autentique e acesse a API do Privacy Service
-description: Saiba como autenticar para a API de Privacy Service e como interpretar chamadas de API de exemplo na documentação.
+description: Saiba como autenticar na API do Privacy Service e como interpretar chamadas de API de exemplo na documentação.
 role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '852'
 ht-degree: 15%
 
 ---
@@ -16,13 +16,13 @@ Este guia fornece uma introdução aos conceitos principais que você deve conhe
 
 ## Pré-requisitos {#prerequisites}
 
-Este guia requer entendimento prático do [Privacy Service](../home.md) e como ele permite gerenciar o acesso e excluir solicitações de titulares de dados (clientes) nos aplicativos da Adobe Experience Cloud.
+Este guia requer uma compreensão funcional do [Privacy Service](../home.md) e como ele permite gerenciar o acesso e excluir solicitações de seus titulares de dados (clientes) em todos os aplicativos da Adobe Experience Cloud.
 
-Para criar credenciais de acesso para a API, um administrador em sua organização deve ter configurado previamente perfis de produto para o Privacy Service no Adobe Admin Console. O perfil de produto atribuído a uma integração de API determina as permissões dessa integração ao acessar recursos de Privacy Service. Consulte o manual sobre [gerenciamento de permissões de Privacy Service](../permissions.md) para obter mais informações.
+Para criar credenciais de acesso para a API, um administrador em sua organização deve ter configurado previamente perfis de produto para o Privacy Service no Adobe Admin Console. O perfil de produto atribuído a uma integração de API determina as permissões dessa integração ao acessar os recursos do Privacy Service. Consulte o manual sobre [gerenciamento de permissões do Privacy Service](../permissions.md) para obter mais informações.
 
 ## Coletar valores para cabeçalhos necessários {#gather-values-required-headers}
 
-Para fazer chamadas para a API Privacy Service, primeiro colete suas credenciais de acesso para serem usadas nos cabeçalhos necessários:
+Para fazer chamadas para a API do Privacy Service, primeiro colete suas credenciais de acesso para serem usadas nos cabeçalhos necessários:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -40,17 +40,17 @@ Depois de criar um novo projeto, selecione **[!UICONTROL Adicionar ao projeto]**
 
 ![A opção de API sendo selecionada na lista suspensa [!UICONTROL Adicionar ao Projeto] da página de detalhes do projeto no Developer Console](../images/api/getting-started/add-api-button.png)
 
-#### Selecione a API de Privacy Service {#select-privacy-service-api}
+#### Selecionar a API do Privacy Service {#select-privacy-service-api}
 
-A tela **[!UICONTROL Adicionar uma API]** é exibida. Selecione **[!UICONTROL Experience Cloud]** para restringir a lista de APIs disponíveis e, em seguida, selecione o cartão para **[!UICONTROL APIs de Privacy Service]** antes de selecionar **[!UICONTROL Avançar]**.
+A tela **[!UICONTROL Adicionar uma API]** é exibida. Selecione **[!UICONTROL Experience Cloud]** para restringir a lista de APIs disponíveis e, em seguida, selecione o cartão para **[!UICONTROL API do Privacy Service]** antes de selecionar **[!UICONTROL Avançar]**.
 
-![O cartão de API Privacy Service sendo selecionado da lista de APIs disponíveis](../images/api/getting-started/add-privacy-service-api.png)
+![O cartão de API do Privacy Service sendo selecionado da lista de APIs disponíveis](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
->Selecione a opção **[!UICONTROL Exibir documentos]** para navegar em uma janela de navegador separada para a [documentação de referência da API de Privacy Service](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) completa.
+>Selecione a opção **[!UICONTROL Exibir documentos]** para navegar em uma janela de navegador separada até a [documentação de referência da API do Privacy Service](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) completa.
 
-Em seguida, selecione o tipo de autenticação para gerar tokens de acesso e acessar a API Privacy Service.
+Em seguida, selecione o tipo de autenticação para gerar tokens de acesso e acessar a API do Privacy Service.
 
 >[!IMPORTANT]
 >
@@ -64,13 +64,13 @@ A etapa final de configuração é selecionar os perfis de produto dos quais ess
 
 >[!NOTE]
 >
-Os perfis de produto e as permissões granulares que fornecem são criados e gerenciados por administradores por meio do Adobe Admin Console. Consulte o manual sobre [permissões de Privacy Service](../permissions.md) para obter mais informações.
+Os perfis de produto e as permissões granulares que fornecem são criados e gerenciados por administradores por meio do Adobe Admin Console. Consulte o guia em [Permissões do Privacy Service](../permissions.md) para obter mais informações.
 
 Quando terminar, selecione **[!UICONTROL Salvar API configurada]**.
 
 ![Um único perfil de produto sendo selecionado na lista antes de salvar a configuração](../images/api/getting-started/select-product-profiles.png)
 
-Depois que a API for adicionada ao projeto, a página **[!UICONTROL APIs de Privacy Service]** do projeto exibirá as seguintes credenciais, necessárias em todas as chamadas para APIs de Privacy Service:
+Depois que a API for adicionada ao projeto, a página **[!UICONTROL API Privacy Service]** do projeto exibirá as seguintes credenciais, necessárias em todas as chamadas para as APIs Privacy Service:
 
 * `{API_KEY}` ([!UICONTROL ID do Cliente])
 * `{ORG_ID}` ([!UICONTROL ID da Organização])
@@ -96,15 +96,15 @@ Para gerar manualmente um novo `{ACCESS_TOKEN}`, navegue até **[!UICONTROL Cred
 
 #### Geração de token automatizada {#auto-token}
 
-Você também pode usar um ambiente e uma coleção do Postman para gerar tokens de acesso. Para obter mais informações, leia a seção sobre [como usar o Postman para autenticar e testar chamadas de API](/help/landing/api-authentication.md#use-postman) no guia de autenticação de API Experience Platform.
+Você também pode usar um ambiente e uma coleção do Postman para gerar tokens de acesso. Para obter mais informações, leia a seção sobre [como usar o Postman para autenticar e testar chamadas de API](/help/landing/api-authentication.md#use-postman) no guia de autenticação da API do Experience Platform.
 
 ## Leitura de chamadas de API de amostra {#read-sample-api-calls}
 
-Cada manual de endpoint fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução para APIs da plataforma.
+Cada manual de endpoint fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução para APIs do Experience Platform.
 
 ## Próximas etapas {#next-steps}
 
-Agora que você entende quais cabeçalhos usar, você está pronto para começar a fazer chamadas para a API Privacy Service. Selecione um dos manuais de endpoint para começar:
+Agora que você entende quais cabeçalhos usar, você está pronto para começar a fazer chamadas para a API do Privacy Service. Selecione um dos manuais de endpoint para começar:
 
 * [Processos de privacidade](./privacy-jobs.md)
 * [Consentimento](./consent.md)

@@ -2,9 +2,9 @@
 title: Criar uma conexão do Adobe Analytics Source na interface
 description: Saiba como criar uma conexão de origem do Adobe Analytics na interface do usuário para trazer dados do consumidor para o Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2672'
+source-wordcount: '2676'
 ht-degree: 3%
 
 ---
@@ -15,17 +15,17 @@ Este tutorial fornece etapas para a criação de uma conexão de origem do Adobe
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Sistema do Experience Data Model (XDM)](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+* [Sistema do Experience Data Model (XDM)](../../../../../xdm/home.md): a estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente.
 * [Perfil de cliente em tempo real](../../../../../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
-* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Terminologia principal
 
 É importante entender os seguintes termos principais usados neste documento:
 
-* **Atributo padrão**: atributos padrão são todos os atributos predefinidos pelo Adobe. Eles contêm o mesmo significado para todos os clientes e estão disponíveis nos grupos de campos de dados de origem [!DNL Analytics] e esquema [!DNL Analytics].
+* **Atributo padrão**: atributos padrão são atributos predefinidos pela Adobe. Eles contêm o mesmo significado para todos os clientes e estão disponíveis nos grupos de campos de dados de origem [!DNL Analytics] e esquema [!DNL Analytics].
 * **Atributo personalizado**: atributos personalizados são qualquer atributo na hierarquia de variáveis personalizadas em [!DNL Analytics]. Os atributos personalizados são usados em uma implementação do Adobe Analytics para capturar informações específicas em um conjunto de relatórios e podem diferir no uso de cada conjunto de relatórios. Os atributos personalizados incluem eVars, propriedades e listas. Consulte a [[!DNL Analytics] documentação sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) a seguir para obter mais informações sobre eVars.
 * **Qualquer atributo em grupos de campos personalizados**: atributos originários de grupos de campos criados por clientes são todos definidos pelo usuário e não são considerados atributos padrão nem personalizados.
 * **Nomes amigáveis**: nomes amigáveis são rótulos fornecidos por humanos para variáveis personalizadas em uma implementação [!DNL Analytics]. Consulte a seguinte [[!DNL Analytics] documentação sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obter mais informações sobre nomes amigáveis.
@@ -39,11 +39,11 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 >* Um fluxo de dados que faz um preenchimento retroativo de 13 meses de dados históricos do conjunto de relatórios no data lake. Esse fluxo de dados termina quando o preenchimento retroativo é concluído.
 >* Um fluxo de dados que envia dados em tempo real para o data lake e para [!DNL Real-Time Customer Profile]. Esse fluxo de dados é executado continuamente.
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Você também pode usar a barra de pesquisa para restringir as fontes exibidas.
 
-Na categoria **[!UICONTROL aplicativos de Adobe]**, selecione **[!UICONTROL Adobe Analytics]** e **[!UICONTROL Adicionar dados]**.
+Na categoria **[!UICONTROL aplicativos do Adobe]**, selecione **[!UICONTROL Adobe Analytics]** e **[!UICONTROL Adicionar dados]**.
 
 ![catálogo](../../../../images/tutorials/create/analytics/catalog.png)
 
@@ -57,7 +57,7 @@ A etapa **[!UICONTROL Adicionar dados]** da origem do Analytics fornece uma list
 
 Um conjunto de relatórios é um contêiner de dados que forma a base do relatório [!DNL Analytics]. Uma organização pode ter muitos conjuntos de relatórios, cada um contendo diferentes conjuntos de dados.
 
-Você pode assimilar conjuntos de relatórios de qualquer região (Estados Unidos, Reino Unido ou Cingapura) desde que eles estejam mapeados para a mesma organização da instância de sandbox de Experience Platform em que a conexão de origem está sendo criada. Um conjunto de relatórios pode ser assimilado usando apenas um único fluxo de dados ativo. Um conjunto de relatórios que não pode ser selecionado já foi assimilado, na sandbox que você está usando ou em uma sandbox diferente.
+Você pode assimilar conjuntos de relatórios de qualquer região (Estados Unidos, Reino Unido ou Cingapura) desde que eles estejam mapeados para a mesma organização da instância de sandbox da Experience Platform em que a conexão de origem está sendo criada. Um conjunto de relatórios pode ser assimilado usando apenas um único fluxo de dados ativo. Um conjunto de relatórios que não pode ser selecionado já foi assimilado, na sandbox que você está usando ou em uma sandbox diferente.
 
 Várias conexões de entrada podem ser feitas para trazer vários conjuntos de relatórios para a mesma sandbox. Se os conjuntos de relatórios tiverem esquemas diferentes para variáveis (como eVars ou eventos), eles deverão ser mapeados para campos específicos nos grupos de campos personalizados e evitar conflitos de dados usando o [Preparo de dados](../../../../../data-prep/ui/mapping.md). Os conjuntos de relatórios podem ser adicionados somente a uma única sandbox.
 
@@ -115,7 +115,7 @@ A página [!UICONTROL Grupo de campos do esquema do modelo de ExperienceEvent do
 
 ![visualização de grupo de campos](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-O Platform detecta automaticamente seus conjuntos de mapeamento para qualquer conflito de nome amigável. Se não houver conflitos com seus conjuntos de mapeamento, selecione **[!UICONTROL Avançar]** para continuar.
+O Experience Platform detecta automaticamente seus conjuntos de mapeamento para qualquer conflito de nome amigável. Se não houver conflitos com seus conjuntos de mapeamento, selecione **[!UICONTROL Avançar]** para continuar.
 
 ![mapeamento](../../../../images/tutorials/create/analytics/mapping.png)
 
@@ -311,7 +311,7 @@ Para obter mais informações sobre preenchimento retroativo, dados em tempo rea
 
 >[!NOTE]
 >
->A página de atividade do conjunto de dados não exibe informações sobre lotes, pois o conector de origem do Analytics é totalmente gerenciado pelo Adobe. É possível monitorar se os dados estão fluindo observando as métricas sobre registros assimilados.
+>A página de atividade do conjunto de dados não exibe informações sobre lotes, pois o conector de origem do Analytics é totalmente gerenciado pela Adobe. É possível monitorar se os dados estão fluindo observando as métricas sobre registros assimilados.
 
 ## Excluir seu fluxo de dados {#delete-dataflow}
 
@@ -322,7 +322,7 @@ Para excluir o fluxo de dados do Analytics, selecione **[!UICONTROL Fluxos de da
 
 ## Próximas etapas e recursos adicionais
 
-Depois que a conexão é criada, o fluxo de dados é criado automaticamente para conter os dados recebidos e preencher um conjunto de dados com o esquema selecionado. Além disso, ocorre o preenchimento retroativo de dados e a assimilação de até 13 meses de dados históricos. Quando a assimilação inicial for concluída, [!DNL Analytics] dados e serão usados por serviços downstream da plataforma, como o [!DNL Real-Time Customer Profile] e o Serviço de segmentação. Consulte os seguintes documentos para obter mais detalhes:
+Depois que a conexão é criada, o fluxo de dados é criado automaticamente para conter os dados recebidos e preencher um conjunto de dados com o esquema selecionado. Além disso, ocorre o preenchimento retroativo de dados e a assimilação de até 13 meses de dados históricos. Quando a assimilação inicial for concluída, [!DNL Analytics] dados e serão usados por serviços downstream do Experience Platform, como o [!DNL Real-Time Customer Profile] e o Serviço de segmentação. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Visão geral do [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Visão geral do [!DNL Segmentation Service]](../../../../../segmentation/home.md)
@@ -333,6 +333,6 @@ O vídeo a seguir é destinado a ajudá-lo a entender a assimilação de dados u
 
 >[!WARNING]
 >
-> A interface do usuário [!DNL Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
+> A interface do usuário [!DNL Experience Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)

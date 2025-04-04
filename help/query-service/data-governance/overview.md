@@ -1,10 +1,10 @@
 ---
 title: Governança de dados no serviço de consulta
-description: Esta visão geral abrange os principais elementos da governança de dados no Serviço de query do Experience Platform.
+description: Esta visão geral abrange os principais elementos da governança de dados no Serviço de query da Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3129'
+source-wordcount: '3142'
 ht-degree: 0%
 
 ---
@@ -29,12 +29,12 @@ Este documento examina cada uma das diferentes áreas de governança e demonstra
 
 ## Segurança {#security}
 
-A segurança de dados é o processo de proteger dados contra acesso não autorizado e garantir acesso seguro em todo o ciclo de vida. O acesso seguro é mantido no Experience Platform por meio da aplicação de funções e permissões por recursos como controle de acesso baseado em funções e controle de acesso baseado em atributos. Credenciais, SSL e criptografia de dados também são usados para garantir a proteção de dados na plataforma.
+A segurança de dados é o processo de proteger dados contra acesso não autorizado e garantir acesso seguro em todo o ciclo de vida. O acesso seguro é mantido no Experience Platform por meio da aplicação de funções e permissões por recursos como controle de acesso baseado em funções e controle de acesso baseado em atributos. Credenciais, SSL e criptografia de dados também são usados para garantir a proteção de dados na Experience Platform.
 
 A segurança no que diz respeito ao Serviço de consulta está dividida nas seguintes categorias:
 
 * [Controle de acesso](#access-control): o acesso é controlado por meio de funções e permissões, incluindo permissões de nível de conjunto de dados e coluna.
-* Protegendo dados por meio de [conectividade](#connectivity): os dados são protegidos por meio da Plataforma e de clientes externos por meio de uma conexão limitada com credenciais que estão expirando ou credenciais que não estão expirando.
+* Protegendo dados por meio de [conectividade](#connectivity): os dados são protegidos por meio da Experience Platform e de clientes externos por meio de uma conexão limitada com credenciais que estão expirando ou credenciais que não estão expirando.
 * Proteção de dados por meio de [criptografia e CMKs (chaves gerenciadas pelo cliente)](#encryption-and-customer-managed-keys): acesso controlado por meio de criptografia quando os dados estão em repouso.
 
 ### Controle de acesso {#access-control}
@@ -103,7 +103,7 @@ O acesso do usuário a colunas individuais pode ser controlado pelos rótulos de
 
 ### Conectividade {#connectivity}
 
-O Serviço de consulta pode ser acessado por meio da interface do usuário da Platform ou formando uma conexão com clientes compatíveis externos. O acesso a todas as frentes disponíveis é controlado por um conjunto de credenciais.
+O Serviço de consulta pode ser acessado por meio da interface do usuário do Experience Platform ou formando uma conexão com clientes compatíveis externos. O acesso a todas as frentes disponíveis é controlado por um conjunto de credenciais.
 
 #### Conectividade por meio de clientes externos
 
@@ -127,7 +127,7 @@ Após a conclusão do fluxo de trabalho de pré-requisito, os usuários autoriza
 
 #### Criptografia de dados SSL
 
-Para maior segurança, o Serviço de consulta fornece suporte nativo a conexões SSL para criptografar comunicações cliente/servidor. A Platform oferece suporte a várias opções SSL para atender às suas necessidades de segurança de dados e equilibrar a sobrecarga de processamento da criptografia e do intercâmbio de chaves.
+Para maior segurança, o Serviço de consulta fornece suporte nativo a conexões SSL para criptografar comunicações cliente/servidor. O Experience Platform oferece suporte a várias opções de SSL para atender às suas necessidades de segurança de dados e equilibrar a sobrecarga de processamento da criptografia e da troca de chaves.
 
 Consulte o manual sobre as [opções de SSL disponíveis para conexões de clientes de terceiros ao Serviço de Consulta](../clients/ssl-modes.md) para obter mais informações, incluindo como se conectar usando o valor do parâmetro SSL `verify-full`.
 
@@ -144,13 +144,13 @@ Os dados em trânsito são sempre compatíveis com HTTPS e, da mesma forma, quan
 
 O Serviço de consulta registra a atividade do usuário e categoriza essa atividade em diferentes tipos de log. Os logs fornecem informações sobre **quem** executou a ação **o quê** e **quando**. Cada ação registrada em um log contém metadados que indicam o tipo de ação, a data e a hora, a ID do email do usuário que executou a ação e atributos adicionais relevantes ao tipo de ação.
 
-Qualquer uma das categorias de log pode ser solicitada, conforme desejado por um usuário da Platform. Esta seção fornece detalhes sobre o tipo de informações capturadas para o Serviço de consulta e onde essas informações podem ser acessadas.
+Qualquer categoria de log pode ser solicitada, conforme desejado por um usuário do Experience Platform. Esta seção fornece detalhes sobre o tipo de informações capturadas para o Serviço de consulta e onde essas informações podem ser acessadas.
 
 ### Logs de consulta {#query-logs}
 
 A interface dos logs de consulta permite monitorar e revisar os detalhes de execução de todas as consultas que foram executadas pelo Editor de consultas ou pela API do Serviço de consulta. Isso traz transparência para as atividades do Serviço de consulta, permitindo que você verifique os metadados de **todas** as consultas que foram executadas no Serviço de consulta. Inclui todos os tipos de queries, seja uma query exploratória, batch ou agendada.
 
-Os logs de consulta podem ser acessados por meio da interface do usuário da Platform na guia [!UICONTROL Logs] do espaço de trabalho [!UICONTROL Consultas].
+Os logs de consulta podem ser acessados por meio da interface do usuário do Experience Platform na guia [!UICONTROL Logs] do espaço de trabalho [!UICONTROL Consultas].
 
 ![A guia Log de consultas com o painel de detalhes realçado.](../images/data-governance/overview/queries-log.png)
 
@@ -158,7 +158,7 @@ Os logs de consulta podem ser acessados por meio da interface do usuário da Pla
 
 Os logs de auditoria contêm informações mais detalhadas do que os logs de consulta e permitem filtrar logs com base em atributos como usuário, data, tipo de consulta e assim por diante. Além dos detalhes disponíveis na interface do log de consulta, os Logs de auditoria armazenam detalhes de usuários individuais, juntamente com seus dados de sessão ou conectividade com um cliente de terceiros.
 
-Ao fornecer um registro exato das ações do usuário, uma trilha de auditoria pode ajudar na solução de problemas e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos. Os logs de auditoria fornecem um registro de todas as atividades da Platform. Usando logs de auditoria, você pode auditar ações do usuário relacionadas à execução da consulta, modelos e consultas programadas para aumentar a transparência e a visibilidade das ações executadas pelos usuários no Serviço de consulta.
+Ao fornecer um registro exato das ações do usuário, uma trilha de auditoria pode ajudar na solução de problemas e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos. Os logs de auditoria fornecem um registro de todas as atividades do Experience Platform. Usando logs de auditoria, você pode auditar ações do usuário relacionadas à execução da consulta, modelos e consultas programadas para aumentar a transparência e a visibilidade das ações executadas pelos usuários no Serviço de consulta.
 
 A tabela a seguir indica as categorias de consulta capturadas pelos logs de auditoria e os tipos de ação registrados:
 
@@ -178,7 +178,7 @@ Consulte a [visão geral dos logs de auditoria](../../landing/governance-privacy
 
 ## Uso de dados {#data-usage}
 
-A estrutura de governança de dados da Platform fornece uma maneira uniforme de usar dados com responsabilidade em todas as soluções, serviços e plataformas Adobe. Ele coordena a abordagem sistêmica para capturar, comunicar e usar metadados em toda a Adobe Experience Cloud. Isso, por sua vez, ajuda os controladores de dados a rotular os dados de acordo com as ações de marketing necessárias e as restrições impostas a esses dados a partir dessas ações de marketing desejadas. Consulte a visão geral em [rótulos de uso de dados](../../data-governance/labels/overview.md) para obter mais informações sobre como a Governança de dados permite aplicar rótulos de uso de dados a conjuntos de dados e campos.
+A estrutura de governança de dados da Experience Platform fornece uma maneira uniforme de usar dados com responsabilidade em todas as soluções, serviços e plataformas da Adobe. Ele coordena a abordagem sistêmica para capturar, comunicar e usar metadados em toda a Adobe Experience Cloud. Isso, por sua vez, ajuda os controladores de dados a rotular os dados de acordo com as ações de marketing necessárias e as restrições impostas a esses dados a partir dessas ações de marketing desejadas. Consulte a visão geral em [rótulos de uso de dados](../../data-governance/labels/overview.md) para obter mais informações sobre como a Governança de dados permite aplicar rótulos de uso de dados a conjuntos de dados e campos.
 
 É uma prática recomendada trabalhar para garantir a conformidade dos dados em cada estágio da jornada dos dados. Para o efeito, os conjuntos de dados derivados que utilizam esquemas ad hoc devem ser rotulados adequadamente como parte da estrutura de governação de dados. Há dois tipos de conjuntos de dados derivados formados pelo Serviço de consulta: conjuntos de dados que usam um esquema padrão e conjuntos de dados que usam um esquema ad hoc.
 
@@ -186,27 +186,27 @@ A estrutura de governança de dados da Platform fornece uma maneira uniforme de 
 >
 >Os conjuntos de dados criados usando o Serviço de consulta são chamados de &quot;conjuntos de dados derivados&quot;.
 
-Como os esquemas ad hoc são criados por um usuário individual para uma finalidade específica, os campos do esquema XDM têm namespace para esse conjunto de dados específico e não se destinam ao uso em diferentes conjuntos de dados. Como resultado, os esquemas ad hoc não estão visíveis por padrão na interface do usuário do Experience Platform. Embora não haja diferença na aplicação de rótulos de uso de dados entre os esquemas padrão e ad hoc, os esquemas ad hoc criados pelo Serviço de consulta para fins de rotulagem devem primeiro ser tornados visíveis na interface do usuário da plataforma. Consulte o manual sobre [descoberta de esquemas ad hoc na interface do usuário da plataforma](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) para obter mais detalhes.
+Como os esquemas ad hoc são criados por um usuário individual para uma finalidade específica, os campos do esquema XDM têm namespace para esse conjunto de dados específico e não se destinam ao uso em diferentes conjuntos de dados. Como resultado, os esquemas ad hoc não estão visíveis por padrão na interface do usuário do Experience Platform. Embora não haja diferença na aplicação de rótulos de uso de dados entre os esquemas padrão e ad hoc, os esquemas ad hoc criados pelo Serviço de consulta para fins de rotulagem devem primeiro ser tornados visíveis na interface do usuário do Experience Platform. Consulte o manual sobre [descoberta de esquemas ad hoc na interface do usuário do Experience Platform](./ad-hoc-schema-labels.md#discover-ad-hoc-schemas) para obter mais detalhes.
 
 Depois de acessar o esquema, você pode [aplicar rótulos a campos individuais](../../xdm/tutorials/labels.md). Depois que um esquema é rotulado, todos os conjuntos de dados derivados desse esquema herdam esses rótulos. Aqui, você pode configurar políticas de uso de dados que podem impedir que dados com determinados rótulos sejam ativados para determinados destinos. Para obter mais informações, consulte a visão geral em [políticas de uso de dados](../../data-governance/policies/overview.md).
 
 ## Privacidade {#privacy}
 
-[Privacy Service](../../privacy-service/home.md) ajuda você a gerenciar solicitações de clientes para acessar e excluir seus dados de acordo com as normas legais de privacidade. Ele faz isso pesquisando os dados de identificadores pré-existentes e acessa ou exclui esses dados, dependendo da tarefa de privacidade solicitada. Os dados devem ser rotulados corretamente para que o serviço determine quais campos acessar ou excluir durante trabalhos de privacidade. Os dados sujeitos a solicitações de privacidade devem conter informações de identidade do cliente para vincular os dados diferentes à pessoa individual à qual a solicitação de privacidade se aplica. O Serviço de consulta pode enriquecer os dados usados com um identificador exclusivo para atender a tarefas de privacidade.
+O [Privacy Service](../../privacy-service/home.md) ajuda você a gerenciar solicitações de clientes para acessar e excluir seus dados de acordo com as regulamentações legais de privacidade. Ele faz isso pesquisando os dados de identificadores pré-existentes e acessa ou exclui esses dados, dependendo da tarefa de privacidade solicitada. Os dados devem ser rotulados corretamente para que o serviço determine quais campos acessar ou excluir durante trabalhos de privacidade. Os dados sujeitos a solicitações de privacidade devem conter informações de identidade do cliente para vincular os dados diferentes à pessoa individual à qual a solicitação de privacidade se aplica. O Serviço de consulta pode enriquecer os dados usados com um identificador exclusivo para atender a tarefas de privacidade.
 
 As solicitações de privacidade podem ser enviadas para o data lake ou para o armazenamento de dados Perfil. Os registros excluídos do data lake não resultam na exclusão de perfis que foram feitos desses registros. Além disso, um trabalho de privacidade para excluir informações pessoais do data lake não exclui o perfil, portanto, qualquer informação (que contenha essa ID de perfil) assimilada após a conclusão do trabalho de privacidade atualiza esse perfil normalmente. Tal reafirma a necessidade de identificar adequadamente os dados utilizados em esquemas específicos.
 
-Consulte a documentação do Privacy Service para obter mais informações sobre [dados de identidade para solicitações de privacidade](../../privacy-service/identity-data.md) e como configurar suas operações de dados e aproveitar as tecnologias Adobe para recuperar efetivamente as informações de identidade apropriadas para solicitações de privacidade do cliente.
+Consulte a documentação do Privacy Service para obter mais informações sobre [dados de identidade para solicitações de privacidade](../../privacy-service/identity-data.md) e como configurar suas operações de dados e aproveitar as tecnologias da Adobe para recuperar efetivamente as informações de identidade apropriadas para solicitações de privacidade do cliente.
 
 Os recursos do Serviço de consulta para governança de dados simplificam e simplificam o processo de categorização de dados e a adesão aos regulamentos de uso de dados. Depois que os dados são identificados, o Serviço de consulta permite alocar a identidade principal em todos os conjuntos de dados de saída. Você **deve** adicionar identidades ao conjunto de dados para facilitar as solicitações de privacidade de dados e trabalhar para a conformidade de dados.
 
-Campos de dados de esquema podem ser definidos como um campo de identidade por meio da Interface do Usuário da Plataforma e o Serviço de Consulta também permite [marcar as identidades primárias usando o comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Definir uma identidade usando o comando `ALTER TABLE` é especialmente útil quando conjuntos de dados são criados usando SQL em vez de diretamente de um esquema por meio da interface do usuário da plataforma. Consulte a documentação para obter instruções sobre como [definir campos de identidade na interface](../../xdm/ui/fields/identity.md) ao usar esquemas padrão.
+Campos de dados de esquema podem ser definidos como um campo de identidade por meio da interface do usuário do Experience Platform. O Serviço de Consulta também permite [marcar as identidades primárias usando o comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Definir uma identidade usando o comando `ALTER TABLE` é especialmente útil quando conjuntos de dados são criados usando SQL em vez de diretamente de um esquema por meio da interface do usuário do Experience Platform. Consulte a documentação para obter instruções sobre como [definir campos de identidade na interface](../../xdm/ui/fields/identity.md) ao usar esquemas padrão.
 
 ## Higiene de dados {#data-hygiene}
 
-&quot;Higiene de dados&quot; refere-se ao processo de reparação ou remoção de dados que podem estar desatualizados, imprecisos, formatados incorretamente, duplicados ou incompletos. Esses processos garantem que os conjuntos de dados sejam precisos e consistentes em todos os sistemas. É importante garantir a higiene de dados adequada ao longo de cada etapa da jornada dos dados e até mesmo a partir do local de armazenamento de dados inicial. No Serviço de query do Experience Platform, esse é o data lake ou o armazenamento acelerado.
+&quot;Higiene de dados&quot; refere-se ao processo de reparação ou remoção de dados que podem estar desatualizados, imprecisos, formatados incorretamente, duplicados ou incompletos. Esses processos garantem que os conjuntos de dados sejam precisos e consistentes em todos os sistemas. É importante garantir a higiene de dados adequada ao longo de cada etapa da jornada dos dados e até mesmo a partir do local de armazenamento de dados inicial. No Serviço de query da Experience Platform, esse é o data lake ou o armazenamento acelerado.
 
-Você pode atribuir uma identidade a um conjunto de dados derivado para permitir o gerenciamento de dados de acordo com os serviços centralizados de higiene de dados da plataforma.
+Você pode atribuir uma identidade a um conjunto de dados derivado para permitir o gerenciamento de dados de acordo com os serviços centralizados de higiene de dados da Experience Platform.
 
 Por outro lado, ao criar um conjunto de dados agregado no armazenamento acelerado, os dados agregados não podem ser usados para derivar os dados originais. Como resultado dessa agregação de dados, a necessidade de aumentar as solicitações de higiene de dados é eliminada.
 

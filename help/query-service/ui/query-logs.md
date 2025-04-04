@@ -2,9 +2,9 @@
 title: Logs de consulta
 description: Os logs de consulta são gerados automaticamente cada vez que uma consulta é executada e ficam disponíveis por meio da interface do usuário para ajudar na solução de problemas. Este documento descreve como usar e navegar na seção Logs do serviço de consulta da interface do usuário.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '949'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Para verificar os logs de consulta, selecione [!UICONTROL Consultas] para navega
 >
 >As consultas do sistema e do painel são excluídas por padrão. Consulte a seção [filtros](#filter-logs) para obter informações sobre como refinar os logs exibidos com base em suas configurações.
 
-![A interface do usuário da plataforma com Consultas e Log está realçada.](../images/ui/query-log/logs.png)
+![A interface do usuário do Experience Platform com Consultas e Log está realçada.](../images/ui/query-log/logs.png)
 
 ## Personalizar e pesquisar {#customize-and-search}
 

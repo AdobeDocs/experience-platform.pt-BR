@@ -3,7 +3,7 @@ title: Destino de identidade da Merkury Enterprise
 description: Saiba como criar uma conexão de destino de identidade corporativa do Merkury usando a interface do usuário do Adobe Experience Platform.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: a5452183-289c-49c3-9574-e09b0153dc00
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 3%
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 Use o destino [!DNL Merkury Enterprise Identity] para criar perfis de consumidor mais precisos, abrangentes e perspicazes. Com dados de perfil aprimorados, os profissionais de marketing podem utilizar melhores insights, segmentos e modelos, resultando em direcionamento e modelagem preditiva mais precisos.
 
-![Um diagrama mostrando a interconexão entre Merkury e Experience Platform, incluindo assimilação e ativação](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
+![Um diagrama mostrando a interconexão entre o Merkury e o Experience Platform, incluindo a assimilação e a ativação](../../assets/catalog/data-partners/merkury-identity/media/image1.png)
 
 Siga as etapas desta página de documentação para criar uma conexão de destino [!DNL Merkury Identity] e ativar públicos-alvo para identificação e enriquecimento usando a interface do usuário do Adobe Experience Platform.
 
@@ -28,7 +28,7 @@ Siga as etapas desta página de documentação para criar uma conexão de destin
 >
 >Se você deseja ativar públicos para destinos de mídia com a conta do [!DNL Merkury Connect], use o destino [!DNL Merkury Connections].
 
-![O cartão de destino da Identidade Empresarial do Merkury foi destacado no catálogo de destinos do Experience Platform.](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
+![O cartão de destino da Identidade Empresarial do Merkury foi destacado no catálogo de destinos da Experience Platform.](../../assets/catalog/data-partners/merkury-identity/media/image2.png)
 
 ## Casos de uso
 
@@ -56,8 +56,8 @@ O destino [!DNL Merkury Enterprise Identity] fornece a capacidade de transferir 
 | GAID | GOOGLE ADVERTISING ID | Selecione a identidade de destino GAID quando a identidade de origem for um namespace GAID. |
 | IDFA | Apple ID para anunciantes | Selecione a identidade de destino do IDFA quando a identidade de origem for um namespace do IDFA. |
 | ECID | Experience Cloud ID | Um namespace que representa a ECID. Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento no [ECID](/help/identity-service/features/ecid.md) para obter mais informações. |
-| phone_sha256 | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação. |
-| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação. |
+| phone_sha256 | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
+| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
 | extern_id | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
 
 {style="table-layout:auto"}
@@ -69,7 +69,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 | **Público-alvo** | **Com suporte** | **Descrição** | **origem** |
 |---|---|---|---|
 | Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home). |
-| Uploads personalizados | x | Públicos-alvo [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para Experience Platform de arquivos CSV. |
+| Uploads personalizados | x | Públicos [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | **Público-alvo** | **Com suporte** | **Origem da descrição** |
 |---|---|---|      
 | Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home). |
-| Uploads personalizados | X | Públicos-alvo [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para Experience Platform de arquivos CSV. |
+| Uploads personalizados | X | Públicos [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -158,13 +158,13 @@ São fornecidas sugestões de mapeamento na tabela abaixo, listando os atributos
 | Campo de público alvo | Descrição do Source |
 |---|---|
 | ID | Campo de identidade a ser usado para mapear dados do [!DNL Merkury] para o Experience Platform por meio do conector do Source [!DNL Merkury Enterprise Identity] |
-| Input_First_Name | O valor `person.name.firstName` em Experience Platform. |
-| Input_Last_Name | O valor `person.name.lastName` em Experience Platform. |
-| Input_Address_Line_1 | O valor `mailingAddress.street` em Experience Platform. |
-| Cidade_Entrada | O valor `mailingAddress.city` em Experience Platform. |
-| Input_State_Province_Code | O valor `mailingAddress.state` em Experience Platform. Use se o estado estiver no formato de código de dois caracteres. |
-| Input_State_Province_Name | O valor `mailingAddress.state` em Experience Platform. Usar se o estado for o nome completo do estado |
-| Input_Postal_Code | O valor `mailingAddress.postalCode` em Experience Platform. |
+| Input_First_Name | O valor `person.name.firstName` no Experience Platform. |
+| Input_Last_Name | O valor `person.name.lastName` no Experience Platform. |
+| Input_Address_Line_1 | O valor `mailingAddress.street` no Experience Platform. |
+| Cidade_Entrada | O valor `mailingAddress.city` no Experience Platform. |
+| Input_State_Province_Code | O valor `mailingAddress.state` no Experience Platform. Use se o estado estiver no formato de código de dois caracteres. |
+| Input_State_Province_Name | O valor `mailingAddress.state` no Experience Platform. Usar se o estado for o nome completo do estado |
+| Input_Postal_Code | O valor `mailingAddress.postalCode` no Experience Platform. |
 | Input_Email_Address | O valor que você deseja mapear como o endereço de email dos perfis. |
 | Input_Phone | O valor que você deseja mapear como o número de telefone dos perfis. |
 
@@ -180,4 +180,4 @@ Todos os destinos do Adobe Experience Platform estão em conformidade com as pol
 
 ## Próximas etapas
 
-Seguindo este tutorial, você criou com êxito um fluxo de dados para exportar dados do perfil do Experience Platform para sua localização do S3 gerenciado pelo [!DNL Merkury]. Em seguida, contate o representante do [!DNL Merkury] com o nome da conta, os nomes de arquivo e o caminho do bucket para que o processamento possa ser configurado.
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para exportar dados de perfil do Experience Platform para o seu local do S3 gerenciado pelo [!DNL Merkury]. Em seguida, contate o representante do [!DNL Merkury] com o nome da conta, os nomes de arquivo e o caminho do bucket para que o processamento possa ser configurado.

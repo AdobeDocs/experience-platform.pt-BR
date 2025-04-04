@@ -1,11 +1,11 @@
 ---
 keywords: etiquetas do dirigível;destino do dirigível
 title: Conexão com as Tags do Aeróstato
-description: Transmita dados de público-alvo do Adobe para o dirigível sem interrupções como tags de público-alvo para direcionamento no dirigível.
+description: Transmita continuamente os dados do público-alvo da Adobe para o Airship como tags de público-alvo para direcionamento no Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '972'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -54,19 +54,19 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público-alvo com os identificadores usados no destino Tags de dirigível. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## Grupos de tags
 
-O conceito de públicos na Adobe Experience Platform é semelhante a [Tags](https://docs.airship.com/guides/audience/tags/) em Aeróstato, com pequenas diferenças na implementação. Esta integração mapeia o status da [associação de um usuário em um segmento Experience Platform](../../../xdm/field-groups/profile/segmentation.md) para a presença ou não de uma marca [!DNL Airship]. Por exemplo, em um público da Platform em que o `xdm:status` muda para `realized`, a marca é adicionada ao canal [!DNL Airship] ou usuário nomeado para o qual esse perfil está mapeado. Se o `xdm:status` for alterado para `exited`, a marca será removida.
+O conceito de públicos-alvo na Adobe Experience Platform é semelhante a [Tags](https://docs.airship.com/guides/audience/tags/) em Aeróstato, com pequenas diferenças na implementação. Esta integração mapeia o status da [associação de um usuário em um segmento do Experience Platform](../../../xdm/field-groups/profile/segmentation.md) para a presença ou não de uma marca [!DNL Airship]. Por exemplo, em um público-alvo da Experience Platform em que `xdm:status` muda para `realized`, a marca é adicionada ao canal [!DNL Airship] ou usuário nomeado para o qual esse perfil está mapeado. Se o `xdm:status` for alterado para `exited`, a marca será removida.
 
 Para habilitar esta integração, crie um *grupo de marcas* em [!DNL Airship] chamado `adobe-segments`.
 
 >[!IMPORTANT]
 >
->Ao criar seu novo grupo de marcas **Não marque** o botão de opção que diz &quot;[!DNL Allow these tags to be set only from your server]&quot;. Isso fará com que a integração das tags Adobe falhe.
+>Ao criar seu novo grupo de marcas **Não marque** o botão de opção que diz &quot;[!DNL Allow these tags to be set only from your server]&quot;. Isso fará com que a integração de tags do Adobe falhe.
 
 Consulte [Gerenciar grupos de marcas](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) para obter instruções sobre como criar o grupo de marcas.
 
@@ -76,7 +76,7 @@ Vá para **[!UICONTROL Configurações]**&quot; **[!UICONTROL APIs e integraçõ
 
 Clique em **[!UICONTROL Criar token]**.
 
-Forneça um nome amigável para o token, por exemplo, &quot;Destino de tags Adobe&quot; e selecione &quot;Acesso integral&quot; para a função.
+Forneça um nome amigável para o token, por exemplo, &quot;Destino de tags da Adobe&quot; e selecione &quot;Acesso integral&quot; para a função.
 
 Clique em **[!UICONTROL Criar token]** e salve os detalhes como confidenciais.
 
@@ -92,7 +92,7 @@ Varejistas ou plataformas de entretenimento podem criar perfis de usuário em se
 
 Acione mensagens individuais em tempo real quando os usuários entrarem ou saírem de públicos específicos no Adobe Experience Platform.
 
-Por exemplo, um varejista configura um público-alvo específico da marca jeans na Platform. Esse varejista agora pode acionar uma mensagem móvel assim que alguém definir sua preferência de jeans para uma marca específica.
+Por exemplo, uma retailer configura um público-alvo específico de uma marca jeans na Experience Platform. Esse retailer agora pode acionar uma mensagem móvel assim que alguém definir sua preferência de jeans para uma marca específica.
 
 ## Conectar ao destino {#connect}
 

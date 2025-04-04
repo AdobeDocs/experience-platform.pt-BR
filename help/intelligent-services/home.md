@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos serviços inteligentes
 description: Os Serviços inteligentes capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing definam previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de conhecimento especializado em ciência de dados. Além disso, os profissionais de marketing podem ativar previsões no Adobe Experience Cloud, Adobe Experience Platform e aplicativos de terceiros.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '506'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 Os Serviços inteligentes capacitam analistas e profissionais de marketing a aproveitar o potencial da inteligência artificial e do aprendizado de máquina em casos de uso de experiência do cliente. Isso permite que os analistas de marketing definam previsões específicas para as necessidades de uma empresa usando configurações de nível empresarial sem a necessidade de conhecimento especializado em ciência de dados. Além disso, os profissionais de marketing podem ativar previsões em [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform] e aplicativos de terceiros.
 
-O vídeo a seguir foi criado para corroborar sua compreensão dos Serviços inteligentes. Usando exemplos de casos de uso de negócios, este vídeo explica um fluxo de trabalho de alto nível e descreve os recursos da IA do cliente e do Attribution AI.
+O vídeo a seguir foi criado para corroborar sua compreensão dos Serviços inteligentes. Usando casos de uso de negócios de exemplo, este vídeo explica um fluxo de trabalho de alto nível e descreve os recursos da IA de atribuição e da IA do cliente.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
@@ -30,7 +30,7 @@ Os Serviços inteligentes, criados no [!DNL Adobe Experience Platform], fornecem
 
 ### Velocidade de comercialização com baixo custo
 
-O Adobe possui experiência em IA/ML combinada com uma profunda experiência em CXM, e os Serviços inteligentes foram projetados especificamente para que os profissionais de marketing possam retirar a IA/ML do mercado imediatamente para casos de uso de marketing comum, sem a necessidade de contratar cientistas de dados escassos e caros, acelerando a velocidade de comercialização e a capacidade de ação.
+A Adobe tem experiência em IA/ML combinada com uma profunda experiência em CXM, e os Serviços inteligentes foram projetados especificamente para que os profissionais de marketing possam ativar imediatamente a IA/ML em casos de uso de marketing comum, sem a necessidade de contratar cientistas de dados escassos e caros, acelerando a velocidade de comercialização e a capacidade de ação.
 
 ### Maior precisão em insights preditivos
 
@@ -52,7 +52,7 @@ O analista de marketing configura as previsões desejadas especificando regras d
 
 ### Predicar
 
-Depois que os modelos terminarem o treinamento e a pontuação, as pontuações serão gravadas de volta na Platform.
+Depois que os modelos terminarem o treinamento e a pontuação, as pontuações serão gravadas de volta no Experience Platform.
 
 ### Realizar ação
 
@@ -60,4 +60,4 @@ Por fim, você pode decidir quais ações executar com as previsões, como consu
 
 ## Próximas etapas
 
-Atualmente, os Serviços inteligentes oferecem o Attribution AI e a IA do cliente. O Attribution AI permite que os profissionais de marketing impulsionem a eficácia do marketing de forma inteligente em canais e campanhas. Para saber mais sobre o Attribution AI, visite a [visão geral do Attribution AI](./attribution-ai/overview.md). A IA do cliente permite que os profissionais de marketing personalizem hiper as experiências do cliente. Para saber mais sobre a IA do cliente, visite a [Visão geral da IA do cliente](./customer-ai/overview.md).
+Atualmente, os Serviços inteligentes oferecem IA de atribuição e IA do cliente. A IA de atribuição permite que os profissionais de marketing impulsionem de forma inteligente a eficácia do marketing em canais e campanhas. Para saber mais sobre a IA de atribuição, visite a [Visão geral da IA de atribuição](./attribution-ai/overview.md). A IA do cliente permite que os profissionais de marketing personalizem hiper as experiências do cliente. Para saber mais sobre a IA do cliente, visite a [Visão geral da IA do cliente](./customer-ai/overview.md).

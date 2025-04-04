@@ -1,10 +1,10 @@
 ---
 title: Modelos de consulta
-description: Os modelos de consulta são consultas SQL salvas reutilizáveis que podem ser reutilizadas por outros usuários para economizar tempo e esforço. Eles podem ser criados usando o Editor de consultas ou a API de serviço de consultas e estão disponíveis para uso em todos os conjuntos de dados de Experience Platform.
+description: Os modelos de consulta são consultas SQL salvas reutilizáveis que podem ser reutilizadas por outros usuários para economizar tempo e esforço. Eles podem ser criados usando o Editor de consultas ou a API de serviço de consultas e estão disponíveis para uso em todos os conjuntos de dados do Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: 1a44be939a4678078b414658199472e07dee153b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Este documento fornece as informações necessárias para criar modelos de consu
 
 ## Pré-requisitos
 
-Você deve ter a permissão [!UICONTROL Gerenciar consultas] habilitada para acessar o Editor de consultas e exibir o painel de consultas na interface do usuário da Platform. A permissão é habilitada por meio do Adobe [Admin Console](https://adminconsole.adobe.com/). Entre em contato com o administrador da organização se você não tiver privilégios de administrador para habilitar essa permissão. Consulte a documentação de controle de acesso para obter [instruções completas sobre como adicionar permissões por meio do Admin Console](../../access-control/home.md).
+Você deve ter a permissão [!UICONTROL Gerenciar consultas] habilitada para acessar o Editor de consultas e exibir o painel de consultas na interface do Experience Platform. A permissão é habilitada por meio da Adobe [Admin Console](https://adminconsole.adobe.com/). Entre em contato com o administrador da organização se você não tiver privilégios de administrador para habilitar essa permissão. Consulte a documentação de controle de acesso para obter [instruções completas sobre como adicionar permissões por meio do Admin Console](../../access-control/home.md).
 
 ## Criar um modelo de consulta
 
@@ -33,7 +33,7 @@ Consulte a documentação para obter instruções sobre como usar o Editor de co
 
 ## Procurar modelos de consulta {#browse}
 
-No espaço de trabalho Consultas da interface da Platform, selecione **[!UICONTROL Modelos]** para exibir a lista de consultas salvas disponíveis.
+No espaço de trabalho Consultas da interface do Experience Platform, selecione **[!UICONTROL Modelos]** para exibir a lista de consultas salvas disponíveis.
 
 ![O espaço de trabalho de consultas com a guia Modelos realçada.](../images/ui/query-templates/query-templates.png)
 
@@ -55,7 +55,7 @@ Consulte a documentação para obter instruções sobre [como criar um modelo de
 
 >[!NOTE]
 >
->Os modelos criados usando a API também estão visíveis na guia Modelos do serviço de consulta da interface do usuário da plataforma.
+>Os modelos criados usando a API também estão visíveis na guia Modelos do serviço de consulta da interface do Experience Platform.
 
 ## Próximas etapas
 

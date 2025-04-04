@@ -2,9 +2,9 @@
 title: Ver painéis configurados
 description: Visualize uma lista dos painéis configurados de sua organização na interface do usuário do Experience Platform.
 exl-id: b1fdb1aa-2d09-4c21-9c84-be379f34a9b7
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '204'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Se sua organização tiver vários painéis disponíveis no Adobe Experience Pla
 
 Para exibir os painéis configurados por sua organização, selecione **[!UICONTROL Painéis]** na navegação à esquerda e selecione a guia **[!UICONTROL Procurar]**.
 
-Uma lista de todos os painéis disponíveis na sua instância da Platform é exibida na guia [!UICONTROL Procurar]. Isso inclui painéis integrados criados por sua organização que foram configurados por meio de aplicativos de terceiros.
+Uma lista de todos os painéis disponíveis na sua instância do Experience Platform é exibida na guia [!UICONTROL Procurar]. Isso inclui painéis integrados criados por sua organização que foram configurados por meio de aplicativos de terceiros.
 
 ![A guia Procurar na seção de painéis da interface do usuário.](./images/inventory/browse-tab.png)
 
@@ -23,7 +23,7 @@ Você pode exibir um painel individual selecionando o nome do painel na lista.
 
 ![Guia Procurar com o nome de um painel realçado.](./images/inventory/dashboard-name.png)
 
-Quando selecionado, o painel é aberto na interface do usuário da Platform ou em um espaço de trabalho de aplicativo totalmente integrado que requer que você faça logon usando as credenciais necessárias.
+Quando selecionado, o painel é aberto na interface do usuário do Experience Platform ou em um espaço de trabalho de aplicativo totalmente integrado que requer que você faça logon usando as credenciais necessárias.
 
 ## Criar painéis personalizados
 

@@ -3,9 +3,9 @@ keywords: email;Email;e-mail;destinos de e-mail;destino do oracle responsys
 title: Conexão do Oracle Responsys
 description: O Responsys é uma ferramenta corporativa de marketing por email para campanhas de marketing em vários canais oferecida pelo Oracle para personalizar interações por email, dispositivos móveis, exibição e redes sociais.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '709'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -44,7 +44,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Ao configurar destinos de marketing por email com armazenamento SFTP, a Adobe recomenda adicionar determinados intervalos IP à lista de permissões.
 
-Consulte [lista de permissões de endereço IP para destinos SFTP](../cloud-storage/ip-address-allow-list.md) se precisar adicionar IPs Adobe à lista de permissões.
+Consulte a [lista de permissões de endereço IP para destinos SFTP](../cloud-storage/ip-address-allow-list.md) se precisar adicionar IPs da Adobe à sua lista de permissões.
 
 ## Conectar ao destino {#connect}
 
@@ -76,14 +76,14 @@ Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornec
 * Como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia com PGP/GPG aos arquivos exportados na seção **[!UICONTROL Chave]**. Sua chave pública deve ser gravada como uma cadeia de caracteres codificada [!DNL Base64].
 * **[!UICONTROL Nome]**: escolha um nome relevante para o seu destino.
 * **[!UICONTROL Descrição]**: insira uma descrição para o seu destino.
-* **[!UICONTROL Caminho da pasta]**: forneça o caminho no local de armazenamento onde a Platform depositará seus dados de exportação como arquivos CSV.
+* **[!UICONTROL Caminho da pasta]**: forneça o caminho no local de armazenamento onde a Experience Platform depositará seus dados de exportação como arquivos CSV.
 * **[!UICONTROL Formato de arquivo]**: selecione **CSV** para exportar arquivos CSV para o local de armazenamento.
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -104,12 +104,12 @@ Consulte [Ativar dados do público-alvo para destinos de exportação de perfil 
 
 ### Atributos de destino {#destination-attributes}
 
-Ao ativar públicos para esse destino, o Adobe recomenda que você selecione um identificador exclusivo do seu [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte as [práticas recomendadas ao ativar públicos para destinos de marketing por email](overview.md#best-practices).
+Ao ativar públicos para esse destino, a Adobe recomenda que você selecione um identificador exclusivo do seu [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino. Para obter mais informações, consulte as [práticas recomendadas ao ativar públicos para destinos de marketing por email](overview.md#best-practices).
 
 ## Dados exportados {#exported-data}
 
-Para destinos [!DNL Oracle Responsys], a Platform cria um arquivo `.csv` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [verificar ativação de público-alvo](../../ui/activate-batch-profile-destinations.md#verify) no tutorial de ativação de público-alvo.
+Para destinos [!DNL Oracle Responsys], o Experience Platform cria um arquivo `.csv` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte [verificar ativação de público-alvo](../../ui/activate-batch-profile-destinations.md#verify) no tutorial de ativação de público-alvo.
 
 ## Configurar importação de dados para [!DNL Oracle Responsys] {#import-data-into-responsys}
 
-Depois de conectar [!DNL Platform] ao armazenamento do [!DNL SFTP], você deve configurar a importação de dados do local de armazenamento para o [!DNL Oracle Responsys]. Para saber como fazer isso, consulte [Importando contatos ou contas](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) em [!DNL Oracle Responsys Help Center].
+Depois de conectar [!DNL Experience Platform] ao armazenamento do [!DNL SFTP], você deve configurar a importação de dados do local de armazenamento para o [!DNL Oracle Responsys]. Para saber como fazer isso, consulte [Importando contatos ou contas](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) em [!DNL Oracle Responsys Help Center].

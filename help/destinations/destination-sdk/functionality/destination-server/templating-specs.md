@@ -2,9 +2,9 @@
 description: Saiba como formatar as solicitações HTTP enviadas para seu endpoint. Use o endpoint /authoring/destination-servers para configurar as especificações dos modelos de servidor de destino no Adobe Experience Platform Destination SDK.
 title: Especificações de modelos para destinos criados com o Destination SDK
 exl-id: 066781c8-0af0-4958-b62f-194c6ba13f3a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '511'
+source-wordcount: '512'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Você pode configurar as especificações do modelo para o seu destino por meio 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -71,7 +71,7 @@ Veja abaixo um exemplo de um modelo de solicitação HTTP, juntamente com descri
 |---|---|---|
 | `httpMethod` | String | *Obrigatório.* O método que o Adobe usará nas chamadas para o servidor. Métodos com suporte: `GET`, `PUT`, `POST`, `DELETE`, `PATCH`. |
 | `templatingStrategy` | String | *Obrigatório.* Use `PEBBLE_V1`. |
-| `value` | String | *Obrigatório.* Esta cadeia de caracteres é a versão sem caracteres do modelo que formata as solicitações HTTP enviadas pela Platform no formato esperado pelo seu destino. <br> Para obter informações sobre como gravar o modelo, leia a seção sobre [usando o modelo](message-format.md#using-templating). <br> Para obter mais informações sobre o escape de caracteres, consulte o [padrão RFC JSON, seção sete](https://tools.ietf.org/html/rfc8259#section-7). <br> Para obter um exemplo de uma transformação simples, consulte a transformação [atributos de perfil](message-format.md#attributes). |
+| `value` | String | *Obrigatório.* Esta cadeia de caracteres é a versão sem caracteres do modelo que formata as solicitações HTTP enviadas pelo Experience Platform no formato esperado pelo seu destino. <br> Para obter informações sobre como gravar o modelo, leia a seção sobre [usando o modelo](message-format.md#using-templating). <br> Para obter mais informações sobre o escape de caracteres, consulte o [padrão RFC JSON, seção sete](https://tools.ietf.org/html/rfc8259#section-7). <br> Para obter um exemplo de uma transformação simples, consulte a transformação [atributos de perfil](message-format.md#attributes). |
 | `contentType` | String | *Obrigatório.* O tipo de conteúdo que seu servidor aceita. Dependendo do tipo de saída produzido pelo seu modelo de transformação, pode ser qualquer um dos [tipos de conteúdo de aplicativo HTTP](https://www.iana.org/assignments/media-types/media-types.xhtml#application) com suporte. Na maioria dos casos, esse valor deve ser definido como `application/json`. |
 
 {style="table-layout:auto"}

@@ -2,16 +2,16 @@
 description: Saiba como definir as configurações de entrega de destino para destinos criados com o Destination SDK, para indicar para onde os dados exportados vão e qual regra de autenticação é usada no local onde os dados serão direcionados.
 title: Entrega de destino
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '564'
 ht-degree: 2%
 
 ---
 
 # Entrega de destino
 
-Para oferecer mais controle sobre onde os dados exportados chegam ao seu destino, o Destination SDK permite especificar as configurações de delivery de destino.
+Para oferecer mais controle sobre onde os dados exportados chegam ao seu destino, o Destination SDK permite especificar as configurações de entrega de destino.
 
 A seção delivery de destino indica para onde os dados exportados vão e qual regra de autenticação é usada no local onde os dados serão direcionados.
 
@@ -31,7 +31,7 @@ Este artigo descreve todas as opções de entrega de destino compatíveis que vo
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -48,7 +48,7 @@ Ao definir as configurações do delivery de destino, você pode usar os parâme
 
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
-| `authenticationRule` | String | Indica como [!DNL Platform] deve se conectar ao seu destino. Valores compatíveis:<ul><li>`CUSTOMER_AUTHENTICATION`: use esta opção se os clientes da Platform fizerem logon no sistema por meio de qualquer um dos métodos de autenticação descritos [aqui](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: use esta opção se houver um sistema de autenticação global entre o Adobe e o seu destino e o cliente do [!DNL Platform] não precisar fornecer nenhuma credencial de autenticação para se conectar ao seu destino. Nesse caso, você deve criar um objeto de credenciais usando a configuração da [API de credenciais](../../credentials-api/create-credential-configuration.md). </li><li>`NONE`: use essa opção se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
+| `authenticationRule` | String | Indica como [!DNL Experience Platform] deve se conectar ao seu destino. Valores compatíveis:<ul><li>`CUSTOMER_AUTHENTICATION`: use esta opção se os clientes da Experience Platform fizerem logon no sistema por meio de qualquer um dos métodos de autenticação descritos [aqui](customer-authentication.md).</li><li>`PLATFORM_AUTHENTICATION`: use esta opção se houver um sistema de autenticação global entre o Adobe e seu destino e o cliente do [!DNL Experience Platform] não precisar fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve criar um objeto de credenciais usando a configuração da [API de credenciais](../../credentials-api/create-credential-configuration.md). </li><li>`NONE`: use essa opção se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
 | `destinationServerId` | String | O `instanceId` do [servidor de destino](../../authoring-api/destination-server/create-destination-server.md) para o qual você deseja exportar dados. |
 | `deliveryMatchers.type` | String | <ul><li>Ao configurar a entrega de destino para destinos baseados em arquivo, sempre defina como `SOURCE`.</li><li>Ao configurar a entrega de destino para um destino de streaming, a seção `deliveryMatchers` não é necessária.</li></ul> |
 | `deliveryMatchers.value` | String | <ul><li>Ao configurar a entrega de destino para destinos baseados em arquivo, sempre defina como `batch`.</li><li>Ao configurar a entrega de destino para um destino de streaming, a seção `deliveryMatchers` não é necessária.</li></ul> |

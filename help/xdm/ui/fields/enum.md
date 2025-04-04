@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir campos de enumeração e valores sugeridos na interface
 description: Saiba como definir enumerações e valores sugeridos para campos de sequência na interface do usuário do Experience Platform.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1257'
 ht-degree: 8%
 
 ---
@@ -86,7 +86,7 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## Regras de evolução para enumerações e valores sugeridos {#evolution}
 
-Depois que um esquema com um campo de enumeração é usado para assimilar dados na Platform, qualquer alteração adicional feita na definição do esquema deve estar em conformidade com os dados já existentes no sistema. Em geral, as alterações feitas em um campo existente só podem tornar esse campo **menos** restritivo. Um campo não pode se tornar mais restritivo do que já é.
+Depois que um esquema com um campo de enumeração é usado para assimilar dados na Experience Platform, qualquer alteração adicional feita na definição do esquema deve estar em conformidade com os dados já existentes no sistema. Em geral, as alterações feitas em um campo existente só podem tornar esse campo **menos** restritivo. Um campo não pode se tornar mais restritivo do que já é.
 
 Quando se trata de enumerações e valores sugeridos, as seguintes regras se aplicam após a assimilação:
 

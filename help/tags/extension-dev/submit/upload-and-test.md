@@ -2,10 +2,10 @@
 title: Fazer upload e implementar testes completos para uma extensão
 description: Saiba como validar, carregar e testar a extensão na Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 8e843ce14d726f18b77189b5523b823bfa4473be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2345'
-ht-degree: 86%
+source-wordcount: '2347'
+ht-degree: 84%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 86%
 >
 >O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Para testar extensões de tags na Adobe Experience Platform, use a API de tags e/ou as ferramentas de linha de comando para fazer upload dos pacotes de extensão. Em seguida, use a interface da Platform ou a interface da Coleção de dados para instalar o pacote de extensão em uma propriedade e usar seus recursos em uma build e uma biblioteca de tags.
+Para testar extensões de tags na Adobe Experience Platform, use a API de tags e/ou as ferramentas de linha de comando para fazer upload dos pacotes de extensão. Em seguida, use a interface do usuário do Experience Platform ou da Coleção de dados para instalar o pacote de extensão em uma propriedade e usar seus recursos em uma build e uma biblioteca de tags.
 
 Este documento aborda como implementar testes completos para sua extensão.
 
@@ -43,7 +43,7 @@ Para obter informações sobre como criar uma conta técnica para usar com tags 
 
 >[!IMPORTANT]
 >
->Para criar uma integração no Adobe I/O, você deve ser um Administrador de organização de Experience Cloud ou um Desenvolvedor de organização de Experience Cloud.
+>Para criar uma integração no Adobe I/O, você deve ser um Administrador de organização da Experience Cloud ou um Desenvolvedor de organização da Experience Cloud.
 
 Se não for possível criar uma integração, provavelmente você não terá as permissões corretas. Isso exigirá que um Administrador da organização conclua as etapas ou atribua a você a função de desenvolvedor.
 
@@ -62,11 +62,11 @@ npx @adobe/reactor-uploader
 `npx` permite baixar e executar um pacote npm sem instalá-lo na sua máquina. Essa é a maneira mais simples de executar o Uploader.
 
 >[!NOTE]
-> Por padrão, o carregador espera credenciais de Adobe I/O para um fluxo Oauth de servidor para servidor. As credenciais `jwt-auth` herdadas
+> Por padrão, o carregador espera credenciais do Adobe I/O para um fluxo Oauth de servidor para servidor. As credenciais `jwt-auth` herdadas
 > O pode ser usado executando o `npx @adobe/reactor-uploader@v5.2.0` até a desativação em 1º de janeiro de 2025. Os parâmetros necessários
 > para executar a versão `jwt-auth` pode ser encontrado [aqui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
-O carregador requer que você insira apenas algumas informações. Os `clientId` e `clientSecret` podem ser recuperados do console Adobe I/O. Navegue até a [página Integrações](https://console.adobe.io/integrations) no console do I/O. Selecione a organização correta na lista suspensa, localize a integração apropriada e escolha **[!UICONTROL Exibir]**.
+O carregador requer que você insira apenas algumas informações. Os `clientId` e `clientSecret` podem ser recuperados do console do Adobe I/O. Navegue até a [página Integrações](https://console.adobe.io/integrations) no console do I/O. Selecione a organização correta na lista suspensa, localize a integração apropriada e escolha **[!UICONTROL Exibir]**.
 
 - Qual é o seu `clientId`? Copie e cole isso do Console do I/O.
 - Qual é o seu `clientSecret`? Copie e cole isso do Console do I/O.
@@ -114,7 +114,7 @@ Para adicionar a extensão, selecione a guia **Catálogo**.
 
 ![](../images/getting-started/catalog.png)
 
-O catálogo exibe ícones de cartão para cada extensão disponível. Se a extensão não for exibida no catálogo, verifique se você concluiu as etapas acima nas seções Configuração do console de administração da Adobe e Criação do pacote de extensão. O pacote de extensão também poderá ser mostrado como Pendente se a Platform não tiver concluído o processamento inicial.
+O catálogo exibe ícones de cartão para cada extensão disponível. Se a extensão não for exibida no catálogo, verifique se você concluiu as etapas acima nas seções Configuração do console de administração da Adobe e Criação do pacote de extensão. O pacote de extensão também poderá aparecer como Pendente se o Experience Platform não tiver concluído o processamento inicial.
 
 Se tiver seguido as etapas anteriores e ainda não vir um pacote de extensão Pendente ou com Falha no catálogo, você deverá verificar o status do pacote de extensão diretamente usando a API. Para obter informações sobre como fazer a chamada de API apropriada, leia [Buscar um ExtensionPackage](../../api/endpoints/extension-packages.md#lookup) na documentação da API.
 
@@ -146,7 +146,7 @@ As extensões podem definir tipos de elementos de dados, se necessário, para qu
 
 Quando um usuário seleciona sua extensão na lista suspensa **Extensão**, a lista suspensa **Tipo de elemento de dados** é preenchida com quaisquer tipos de elementos fornecidos pela extensão. O usuário pode mapear cada elemento de dados para seu valor de origem. Os elementos de dados podem ser usados ao criar regras no Evento de alteração de elemento de dados ou no Evento de código personalizado para acionar a execução de uma regra. Um elemento de dados também pode ser usado na Condição do elemento de dados ou em outras Condições, Exceções ou Ações em uma regra.
 
-Depois que o elemento de dados é criado (o mapeamento é configurado), os usuários podem fazer referência aos dados de origem simplesmente referenciando o elemento de dados. Se a origem do valor mudar (novos projetos de site etc.) os usuários só precisam atualizar o mapeamento uma vez na interface do usuário e todos os elementos de dados receberão automaticamente o novo valor de origem.
+Depois que o elemento de dados é criado (o mapeamento é configurado), os usuários podem fazer referência aos dados de origem simplesmente referenciando o elemento de dados. Se a origem do valor mudar (novos projetos de site etc.), os usuários só precisarão atualizar o mapeamento uma vez na interface, e todos os elementos de dados receberão automaticamente o novo valor de origem.
 
 ### Regras
 

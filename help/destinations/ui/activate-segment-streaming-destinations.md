@@ -3,9 +3,9 @@ title: Ativar dados do público-alvo para destinos de transmissão
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform mapeando-os para destinos de transmissão.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1189'
 ht-degree: 6%
 
 ---
@@ -51,9 +51,9 @@ Para selecionar os públicos que você deseja ativar para o destino, use as caix
 
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
-* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados em Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
-* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
-* Outros tipos de públicos-alvo, originados de outras soluções de Adobe, como o [!DNL Audience Manager].
+* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
+* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados no Experience Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
+* Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
 
 ![Vários públicos-alvo destacados na etapa Selecionar públicos-alvo.](../assets/ui/activate-segment-streaming-destinations/select-audiences.png)
 
@@ -125,7 +125,7 @@ Para ver todos os públicos-alvo sendo ativados para o seu destino, use a opçã
 
      ![Lista suspensa de ID de mapeamento realçada.](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-   * Alguns destinos exigem que você mapeie manualmente [!DNL Platform] públicos-alvo para seus homólogos no destino-alvo. Para fazer isso, selecione cada público e insira a ID de público correspondente na plataforma de destino no campo **[!UICONTROL ID de mapeamento]**. Se o destino não incluir esse campo, ignore esta etapa.
+   * Alguns destinos exigem que você mapeie manualmente [!DNL Experience Platform] públicos-alvo para seus homólogos no destino-alvo. Para fazer isso, selecione cada público e insira a ID de público correspondente na plataforma de destino no campo **[!UICONTROL ID de mapeamento]**. Se o destino não incluir esse campo, ignore esta etapa.
 
      ![Origem da lista suspensa de público-alvo destacada.](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
@@ -147,7 +147,7 @@ Se sua organização adquiriu o **Adobe Healthcare Shield** ou o **Adobe Privacy
 
 ### Verificações de política de uso de dados {#data-usage-policy-checks}
 
-Na etapa **[!UICONTROL Revisar]**, o Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
+Na etapa **[!UICONTROL Revisão]**, a Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
 
 ![Um exemplo de violação de política de dados mostrada no fluxo de trabalho de ativação.](../assets/common/data-policy-violation.png)
 

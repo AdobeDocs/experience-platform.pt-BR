@@ -1,15 +1,15 @@
 ---
-title: Configurar o suporte a mensagens no aplicativo da Web no SDK da Web
-description: Saiba como configurar a extensão de tag do SDK da Web para oferecer suporte a mensagens no aplicativo da Web.
+title: Configurar o suporte a mensagens no aplicativo da Web no Web SDK
+description: Saiba como configurar a extensão de tag do Web SDK para oferecer suporte a mensagens no aplicativo da Web.
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '969'
 ht-degree: 0%
 
 ---
 
-# Configurar o suporte a mensagens no aplicativo da Web no SDK da Web
+# Configurar o suporte a mensagens no aplicativo da Web no Web SDK
 
 As mensagens no aplicativo são notificações que podem ser enviadas aos usuários no aplicativo web, guiando-os a pontos de interesse específicos.
 
@@ -19,16 +19,16 @@ Ao usar mensagens no aplicativo, você pode se envolver efetivamente com seu pú
 
 >[!IMPORTANT]
 >
->As Mensagens no Aplicativo Web são um recurso do [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=pt-BR), que usa o SDK da Web para fornecer conteúdo personalizado.
+>As Mensagens no Aplicativo Web são um recurso do [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=pt-BR), que usa o Web SDK para fornecer o conteúdo personalizado.
 >
 >Para obter instruções detalhadas sobre como configurar a campanha de Mensagens no Aplicativo da Web, consulte a [documentação do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
 
 
 ## Pré-requisitos {#prerequisites}
 
-### Versão da extensão de tag do SDK da Web {#extension-version}
+### Versão da extensão de tag do Web SDK {#extension-version}
 
-A funcionalidade de mensagens no aplicativo da Web exige a versão mais recente da extensão de tag do SDK da Web.
+A funcionalidade de mensagens no aplicativo da Web exige a versão mais recente da extensão de tag do Web SDK.
 
 ### Configurar uma CSP para mensagens no aplicativo da Web {#csp}
 
@@ -40,27 +40,27 @@ default-src  blob:;
 
 Para obter mais informações sobre como configurar uma CSP, consulte a [documentação dedicada](../use-cases/configuring-a-csp.md).
 
-## Configurar mensagens no aplicativo da Web usando a extensão de tag SDK da Web {#tag-extension}
+## Configurar mensagens no aplicativo da Web usando a extensão de tag da Web SDK {#tag-extension}
 
-Consulte a [página de configuração da extensão de tag do SDK da Web](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) para entender onde você pode encontrar as configurações descritas abaixo.
+Consulte a [página de configuração da extensão de tag do Web SDK](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) para entender onde você pode encontrar as configurações descritas abaixo.
 
-Depois de [instalar](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) a extensão de tag do SDK da Web, siga as etapas abaixo para configurar a extensão para Mensagens no aplicativo da Web.
+Depois de [instalar](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) a extensão de tag do Web SDK, siga as etapas abaixo para configurar a extensão para Mensagens no Aplicativo Web.
 
-Na seção **[!UICONTROL Personalization]**, marque a opção **[!UICONTROL Habilitar armazenamento de personalização]**. Essa opção permite que o SDK da Web acompanhe quais experiências foram vistas pelo usuário em carregamentos de página.
+Na seção **[!UICONTROL Personalization]**, marque a opção **[!UICONTROL Habilitar armazenamento de personalização]**. Essa opção permite que o Web SDK acompanhe quais experiências foram vistas pelo usuário em carregamentos de página.
 
 ![Imagem mostrando a opção de armazenamento de personalização na página de configuração de extensão de marca.](assets/web-in-app-messaging/enable-personalization-storage.png)
 
 
 As mensagens no aplicativo da Web são compatíveis com dois tipos de acionadores:
 
-* [Envio de dados para a Platform](#send-data-platform)
+* [Envio de dados para o Experience Platform](#send-data-platform)
 * [Acionamento manual das mensagens](#manual-trigger)
 
-Consulte as seguintes seções para configurar a extensão de tag do SDK da Web de acordo com os acionadores que deseja usar.
+Consulte as seções a seguir para configurar a extensão de tag do Web SDK de acordo com os acionadores que deseja usar.
 
-### Etapas de configuração para o gatilho **[!UICONTROL Enviar dados para a Plataforma]** {#send-data-platform}
+### Etapas de configuração para o gatilho **[!UICONTROL Enviar dados para a Experience Platform]** {#send-data-platform}
 
-Selecione a propriedade da marca que contém sua extensão SDK da Web e [crie uma nova regra](../../tags/ui/managing-resources/rules.md##create-a-rule) com as seguintes configurações:
+Selecione a propriedade da marca que contém sua extensão do Web SDK e [crie uma nova regra](../../tags/ui/managing-resources/rules.md##create-a-rule) com as seguintes configurações:
 
 1. **[!UICONTROL Extensão]**: [!UICONTROL Núcleo]
 2. **[!UICONTROL Tipo de Evento]**: [!UICONTROL Biblioteca Carregada (Início da Página)]
@@ -101,7 +101,7 @@ O processo de configuração agora está concluído e sua mensagem está pronta 
 
 ### Etapas de configuração para usar acionadores manuais {#manual-trigger}
 
-Selecione a propriedade da marca que contém sua extensão SDK da Web e [crie uma nova regra](../../tags/ui/managing-resources/rules.md##create-a-rule) com as seguintes configurações:
+Selecione a propriedade da marca que contém sua extensão do Web SDK e [crie uma nova regra](../../tags/ui/managing-resources/rules.md##create-a-rule) com as seguintes configurações:
 
 1. **[!UICONTROL Extensão]**: [!UICONTROL Núcleo]
 2. **[!UICONTROL Tipo de Evento]**: [!UICONTROL Clique]
@@ -140,9 +140,9 @@ Depois de adicionar a regra à biblioteca, selecione **[!UICONTROL Salvar e cria
 
 O processo de configuração agora está concluído e sua mensagem está pronta para ser exibida aos usuários.
 
-## Configurar mensagens no aplicativo da Web usando a biblioteca JavaScript do SDK da Web {#js-library}
+## Configurar mensagens no aplicativo da Web usando a biblioteca JavaScript do Web SDK {#js-library}
 
-Como alternativa ao uso da extensão de tag SDK da Web, você também pode configurar mensagens no aplicativo da Web diretamente da biblioteca JavaScript do SDK da Web.
+Como alternativa ao uso da extensão de tag do Web SDK, você também pode configurar Mensagens no aplicativo Web diretamente da biblioteca JavaScript do Web SDK.
 
 
 
@@ -150,7 +150,7 @@ Você pode exibir mensagens no aplicativo da Web do Adobe Journey Optimizer de d
 
 ### Método 1: buscar automaticamente o conteúdo de personalização {#automatic}
 
-Para que o SDK da Web busque automaticamente o conteúdo de personalização no carregamento da página, use o comando `sendEvent`, como mostrado no exemplo abaixo.
+Para que o Web SDK busque automaticamente o conteúdo de personalização no carregamento da página, use o comando `sendEvent`, conforme mostrado no exemplo abaixo.
 
 ```js
   alloy("sendEvent", {
@@ -182,7 +182,7 @@ Neste exemplo, o conteúdo de personalização é exibido quando um usuário cli
 
 Você pode optar por mostrar mensagens no aplicativo aos usuários por um número definido de vezes, ou sempre que eles visitarem uma página, por meio da opção de configuração `personalizationStorageEnabled`.
 
-Na [configuração do SDK da Web](../commands/configure/overview.md), defina a opção `personalizationStorageEnabled` de acordo com suas necessidades:
+Na [configuração do Web SDK](../commands/configure/overview.md), defina a opção `personalizationStorageEnabled` de acordo com suas necessidades:
 
 * `personalizationStorageEnabled: true` aciona a mensagem no aplicativo com a frequência que você definiu na [campanha do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
 * `personalizationStorageEnabled: false` aciona a mensagem no aplicativo em cada carregamento de página.

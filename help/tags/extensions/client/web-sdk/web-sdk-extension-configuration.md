@@ -2,9 +2,9 @@
 title: Configurar a extensão de tag do Web SDK
 description: Saiba como configurar a extensão de tag do Experience Platform Web SDK na interface do usuário de tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2875'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 A extensão de tag [!DNL Web SDK] envia dados para a Adobe Experience Cloud das propriedades da Web por meio da Experience Platform Edge Network.
 
-A extensão permite transmitir dados para a Platform, sincronizar identidades, processar sinais de consentimento do cliente e coletar automaticamente dados de contexto.
+A extensão permite transmitir dados para o Experience Platform, sincronizar identidades, processar sinais de consentimento do cliente e coletar automaticamente dados de contexto.
 
 Este documento explica como configurar a extensão de tag na interface do usuário de tags.
 

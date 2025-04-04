@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Solução de problemas de origens
 description: Este documento fornece respostas a perguntas frequentes sobre fontes no Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 # Guia de solução de problemas de origens
 
-Este documento fornece respostas a perguntas frequentes sobre fontes no Adobe Experience Platform. Para perguntas e soluções de problemas relacionadas a outros serviços do [!DNL Platform], incluindo aquelas encontradas em todas as APIs do [!DNL Platform], consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre fontes no Adobe Experience Platform. Para perguntas e soluções de problemas relacionadas a outros serviços do [!DNL Experience Platform], incluindo aquelas encontradas em todas as APIs do [!DNL Experience Platform], consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
 ## Perguntas frequentes
 
@@ -67,7 +67,7 @@ Todas as fontes de assimilação em lote oferecem suporte à assimilação parci
 
 ### Quando devo usar a assimilação parcial?
 
-A assimilação parcial deve ser usada se você **não** tiver restrições, como ter o arquivo inteiro sendo assimilado na Platform. Como alternativa, a assimilação parcial deve ser usada se você não se importar em assimilar dados que possam conter erros dentro dela.
+A assimilação parcial deve ser usada se você **não** tiver restrições, como ter o arquivo inteiro sendo assimilado na Experience Platform. Como alternativa, a assimilação parcial deve ser usada se você não se importar em assimilar dados que possam conter erros dentro dela.
 
 ### Qual é o limite típico de erro de assimilação parcial?
 

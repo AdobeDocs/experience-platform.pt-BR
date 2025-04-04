@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Guia da API de fontes de autoatendimento (SDK em lote)
 description: Este documento fornece uma visão geral do processo de criação de uma nova origem, incluindo etapas sobre como recuperar, gravar e enviar uma nova especificação de conexão usando a API de Serviço de Fluxo.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Este documento fornece uma visão geral do processo de criação de uma nova fonte, incluindo etapas sobre como gravar e enviar uma nova especificação de conexão usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-O [!DNL Flow Service] é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Plataforma. O serviço fornece uma interface de usuário e API RESTful que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar seus sistemas de terceiros, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+O [!DNL Flow Service] é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Experience Platform. O serviço fornece uma interface de usuário e API RESTful que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar seus sistemas de terceiros, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 A API [!DNL Flow Service] fornece vários endpoints que permitem gerenciar programaticamente as especificações de conexão e fluxo para uma nova fonte que você está integrando por meio de Fontes de Autoatendimento (SDK em Lote).
 
@@ -40,7 +40,7 @@ Você pode fazer atualizações na especificação da conexão fazendo uma solic
 
 ## Enviar sua fonte
 
-Para enviar sua origem para integração com o Experience Platform, primeiro conclua todo o fluxo de trabalho da API [!DNL Flow Service] para que as origens garantam que sua origem funcione com êxito. Se a origem for executada com êxito, você poderá continuar e entrar em contato com o representante da Adobe para verificação e promoção. Consulte o guia em [testando e enviando sua origem](./submit.md) para obter mais informações
+Para enviar sua origem para integração com o Experience Platform, primeiro conclua todo o fluxo de trabalho da API do [!DNL Flow Service] para que as origens garantam que sua origem funcione com êxito. Se a origem for executada com êxito, você poderá continuar e entrar em contato com o representante da Adobe para verificação e promoção. Consulte o guia em [testando e enviando sua origem](./submit.md) para obter mais informações
 
 ## Próximas etapas
 

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados;iu;espaço de trabalho;campo;
+keywords: Experience Platform;página inicial;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados;ui;espaço de trabalho;campo;
 solution: Experience Platform
 title: Definir campos XDM na interface do
 description: Saiba como definir campos XDM na interface do usuário do Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1606'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ O [!DNL Schema Editor] na interface do usuário do Adobe Experience Platform per
 
 ## Pré-requisitos
 
-Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução à função do XDM no ecossistema de Experience Platform e as [noções básicas da composição de esquema](../../schema/composition.md) para saber como classes e grupos de campos contribuem com campos para esquemas XDM.
+Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução à função do XDM no ecossistema do Experience Platform e as [noções básicas da composição de esquemas](../../schema/composition.md) para saber como classes e grupos de campos contribuem com campos para esquemas XDM.
 
 Embora não seja necessário para este guia, é recomendável que você também siga o tutorial sobre [composição de um esquema na interface](../../tutorials/create-schema-ui.md) para se familiarizar com os vários recursos do [!DNL Schema Editor].
 
@@ -72,7 +72,7 @@ Após concluir a configuração do campo, selecione **[!UICONTROL Aplicar]**.
 
 ![A seção [!UICONTROL Propriedades do campo] do Editor de Esquemas está realçada.](../../images/ui/fields/overview/field-details.png)
 
-A tela é atualizada para mostrar o campo recém-adicionado, localizado em um objeto com namespace para sua ID de locatário exclusiva (mostrado como `_tenantId` no exemplo abaixo). Todos os campos personalizados adicionados a um esquema são automaticamente colocados dentro desse namespace para evitar conflitos com outros campos de classes e grupos de campos fornecidos pelo Adobe. O painel direito agora lista o caminho do campo, além de suas outras propriedades.
+A tela é atualizada para mostrar o campo recém-adicionado, localizado em um objeto com namespace para sua ID de locatário exclusiva (mostrado como `_tenantId` no exemplo abaixo). Todos os campos personalizados adicionados a um esquema são automaticamente colocados dentro desse namespace para evitar conflitos com outros campos de classes e grupos de campos fornecidos pela Adobe. O painel direito agora lista o caminho do campo, além de suas outras propriedades.
 
 ![Um novo campo no diagrama de esquema e seu caminho correspondente na seção [!UICONTROL Propriedades do campo] estão realçados.](../../images/ui/fields/overview/field-added.png)
 
@@ -102,7 +102,7 @@ Ao definir um novo campo, opções de configuração adicionais podem aparecer n
 
 ## Tipos de campo especial {#special}
 
-O painel direito fornece várias caixas de seleção para designar funções especiais para o campo selecionado. Os casos de uso de algumas dessas opções envolvem considerações importantes sobre sua estratégia de modelagem de dados e como você pretende usar os serviços downstream da plataforma.
+O painel direito fornece várias caixas de seleção para designar funções especiais para o campo selecionado. Os casos de uso de algumas dessas opções envolvem considerações importantes sobre sua estratégia de modelagem de dados e como você pretende usar os serviços downstream do Experience Platform.
 
 Para saber mais sobre esses tipos especiais, consulte a seguinte documentação:
 

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;início;tópicos populares;assimilação de streaming;assimilação;dados de série temporal;transmitir dados de série temporal;
+keywords: Experience Platform;página inicial;tópicos populares;assimilação por transmissão;assimilação;dados de série temporal;transmitir dados de série temporal;
 solution: Experience Platform
 title: Transmitir dados de série temporal usando APIs de assimilação de fluxo
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar as APIs de assimilação de fluxo, parte das APIs de serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: 35ccc39fdfef31ca1f59e2e11f0d3d762e423635
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1210'
+source-wordcount: '1214'
 ht-degree: 2%
 
 ---
@@ -20,15 +20,15 @@ Este tutorial ajudará você a começar a usar as APIs de assimilação de strea
 
 Este tutorial requer um conhecimento prático de vários serviços da Adobe Experience Platform. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): A estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de múltiplas fontes.
 - [Guia do desenvolvedor do Registro de Esquema](../../xdm/api/getting-started.md): um guia abrangente que cobre cada um dos pontos de extremidade disponíveis da API [!DNL Schema Registry] e como fazer chamadas para eles. Isso inclui conhecer seu `{TENANT_ID}`, que aparece em chamadas neste tutorial, bem como saber como criar esquemas, que é usado na criação de um conjunto de dados para assimilação.
 
 Além disso, este tutorial requer que você já tenha criado uma conexão de transmissão. Para obter mais informações sobre como criar uma conexão de streaming, leia o [tutorial Criar uma conexão de streaming](./create-streaming-connection.md).
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../landing/api-guide.md).
 
 ## Compor um esquema com base na classe XDM ExperienceEvent
 
@@ -275,7 +275,7 @@ Para obter mais informações sobre como criar uma conexão de streaming, leia o
 
 ## Assimilar dados de série temporal à conexão de transmissão
 
-Com o conjunto de dados, a conexão de transmissão e o fluxo de dados criados, você pode assimilar registros JSON formatados em XDM para assimilar dados de série temporal em [!DNL Platform].
+Com o conjunto de dados, a conexão de transmissão e o fluxo de dados criados, você pode assimilar registros JSON formatados em XDM para assimilar dados de série temporal em [!DNL Experience Platform].
 
 **Formato da API**
 
@@ -292,7 +292,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 A assimilação de dados de série temporal em uma conexão de streaming pode ser feita com ou sem o nome de origem.
 
-A solicitação de exemplo abaixo assimila dados de série temporal com um nome de origem ausente na Platform. Se o nome de origem dos dados estiver ausente, ele adicionará a ID de origem da definição da conexão de streaming.
+A solicitação de exemplo abaixo assimila dados de série temporal com um nome de origem ausente na Experience Platform. Se o nome de origem dos dados estiver ausente, ele adicionará a ID de origem da definição da conexão de streaming.
 
 `xdmEntity._id` e `xdmEntity.timestamp` são campos obrigatórios para dados de série temporal. O atributo `xdmEntity._id` representa um identificador exclusivo do próprio registro, **não**, uma ID exclusiva da pessoa ou dispositivo cujo registro é.
 
@@ -401,7 +401,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do [!DNL Profil
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | O `inletId` da conexão de streaming criada anteriormente. |
-| `xactionId` | Um identificador exclusivo gerado no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda o Adobe a rastrear o ciclo de vida desse registro por vários sistemas e com depuração. |
+| `xactionId` | Um identificador exclusivo gerado no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda a Adobe a rastrear o ciclo de vida desse registro por vários sistemas e com depuração. |
 | `receivedTimeMs`: Um carimbo de data/hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
 | `syncValidation.status` | Como o parâmetro de consulta `syncValidation=true` foi adicionado, este valor aparecerá. Se a validação tiver êxito, o status será `pass`. |
 
@@ -509,6 +509,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das entidades s
 
 ## Próximas etapas
 
-Após a leitura deste documento, você entende como assimilar dados de registro no [!DNL Platform] usando conexões de streaming. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode começar a monitorar os dados assimilados por meio da interface do usuário do [!DNL Platform]. Para obter mais informações, leia o [guia de assimilação de dados de monitoramento](../quality/monitor-data-ingestion.md).
+Após a leitura deste documento, você entende como assimilar dados de registro no [!DNL Experience Platform] usando conexões de streaming. Você pode tentar fazer mais chamadas com valores diferentes e recuperar os valores atualizados. Além disso, você pode começar a monitorar os dados assimilados por meio da interface do usuário do [!DNL Experience Platform]. Para obter mais informações, leia o [guia de assimilação de dados de monitoramento](../quality/monitor-data-ingestion.md).
 
 Para obter mais informações sobre a assimilação por transmissão em geral, leia a [visão geral da assimilação por transmissão](../streaming-ingestion/overview.md).

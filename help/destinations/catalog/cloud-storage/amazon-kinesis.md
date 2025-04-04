@@ -1,12 +1,12 @@
 ---
 keywords: Amazon Kinesis;destino kinesis;kinesis
-title: Conexão com o Amazon Kinesis
-description: Crie uma conexão de saída em tempo real com o armazenamento do Amazon Kinesis para transmitir dados do Adobe Experience Platform.
+title: Conexão Amazon Kinesis
+description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Kinesis para transmitir dados do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1984'
+source-wordcount: '1989'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 O serviço [!DNL Kinesis Data Streams] de [!DNL Amazon Web Services] permite coletar e processar grandes fluxos de registros de dados em tempo real.
 
@@ -25,9 +25,9 @@ Você pode criar uma conexão de saída em tempo real com o armazenamento do [!D
 
 * Para obter mais informações sobre [!DNL Amazon Kinesis], consulte a [documentação do Amazon](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Para se conectar a [!DNL Amazon Kinesis] de forma programática, consulte o [Tutorial da API de destinos de streaming](../../api/streaming-destinations.md).
-* Para se conectar a [!DNL Amazon Kinesis] usando a interface do usuário da Platform, consulte as seções abaixo.
+* Para se conectar a [!DNL Amazon Kinesis] usando a interface do usuário do Experience Platform, consulte as seções abaixo.
 
-![Amazon Kinesis na interface](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+![Amazon Kinesis na interface do usuário](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 ## Casos de uso {#use-cases}
 
@@ -41,7 +41,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -53,13 +53,13 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
 ## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allowlist}
 
-Para atender aos requisitos de segurança e conformidade dos clientes, o Experience Platform incluir na lista de permissões fornece uma lista de IPs estáticos que você pode pesquisar pelo destino [!DNL Amazon Kinesis]. Consulte a [lista de permissões de endereço IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
+Para atender aos requisitos de segurança e conformidade dos clientes, a Experience Platform incluir na lista de permissões fornece uma lista de IPs estáticos que você pode pesquisar pelo destino [!DNL Amazon Kinesis]. Consulte a [lista de permissões de endereço IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
 
 ## [!DNL Amazon Kinesis] permissões necessárias {#required-kinesis-permission}
 
@@ -69,7 +69,7 @@ Para conectar e exportar dados com êxito para seus fluxos do [!DNL Amazon Kines
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-Essas permissões são organizadas por meio do console [!DNL Kinesis] e são verificadas pela Platform depois que você configura seu destino do Kinesis na interface do usuário da Platform.
+Essas permissões são organizadas por meio do console [!DNL Kinesis] e são verificadas pela Experience Platform depois de configurar seu destino Kinesis na interface do usuário do Experience Platform.
 
 O exemplo abaixo exibe os direitos de acesso mínimos necessários para exportar dados com êxito para um destino [!DNL Kinesis].
 
@@ -95,8 +95,8 @@ O exemplo abaixo exibe os direitos de acesso mínimos necessários para exportar
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `kinesis:ListStreams` | Uma ação que lista seus fluxos de dados do Amazon Kinesis. |
-| `kinesis:PutRecord` | Uma ação que grava um único registro de dados em um fluxo de dados do Kinesis. |
-| `kinesis:PutRecords` | Uma ação que grava vários registros de dados em um fluxo de dados do Kinesis em uma única chamada. |
+| `kinesis:PutRecord` | Uma ação que grava um único registro de dados em um fluxo de dados Kinesis. |
+| `kinesis:PutRecords` | Uma ação que grava vários registros de dados em um fluxo de dados Kinesis em uma única chamada. |
 
 {style="table-layout:auto"}
 
@@ -116,7 +116,7 @@ Insira os campos abaixo e selecione **[!UICONTROL Conectar ao destino]**:
 
 ![Imagem da tela da interface do usuário mostrando campos concluídos para os detalhes de autenticação do Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
-* **[!DNL Amazon Web Services]chave de acesso e chave secreta**: em [!DNL Amazon Web Services], gere um par `access key - secret access key` para conceder à Platform acesso à sua conta [!DNL Amazon Kinesis]. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]chave de acesso e chave secreta**: em [!DNL Amazon Web Services], gere um par `access key - secret access key` para conceder ao Experience Platform acesso à sua conta [!DNL Amazon Kinesis]. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Região]**: indicar para qual região [!DNL Amazon Web Services] transmitir dados.
 
 ### Preencher detalhes do destino {#destination-details}
@@ -137,7 +137,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 * **[!UICONTROL Nome]**: forneça um nome para sua conexão com [!DNL Amazon Kinesis]
 * **[!UICONTROL Descrição]**: forneça uma descrição para sua conexão com [!DNL Amazon Kinesis].
-* **[!UICONTROL Fluxo]**: forneça o nome de um fluxo de dados existente em sua conta [!DNL Amazon Kinesis]. O Platform exportará dados para esse fluxo.
+* **[!UICONTROL Fluxo]**: forneça o nome de um fluxo de dados existente em sua conta [!DNL Amazon Kinesis]. O Experience Platform exportará dados para esse fluxo.
 * **[!UICONTROL Incluir nomes de segmentos]**: alterne se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
 * **[!UICONTROL Incluir carimbos de data/hora do segmento]**: ative se desejar que a exportação de dados inclua o carimbo de data/hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data/hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
 
@@ -145,7 +145,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 
@@ -160,13 +160,13 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >[!IMPORTANT]
 > 
 >* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* [A avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) não tem suporte atualmente em exportações para o destino do Amazon Kinesis. [Leia mais](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
+>* [A avaliação de política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) não tem suporte atualmente em exportações para o destino do Amazon Kinesis. [Leia mais](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Ativar dados de público-alvo para destinos de exportação de perfil de streaming](../../ui/activate-streaming-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ## Comportamento de exportação de perfil {#profile-export-behavior}
 
-O Experience Platform otimiza o comportamento de exportação de perfil para seu destino [!DNL Amazon Kinesis], para exportar dados somente para seu destino quando atualizações relevantes para um perfil tiverem ocorrido após a qualificação de público-alvo ou outros eventos significativos. Os perfis são exportados para seu destino nas seguintes situações:
+O Experience Platform otimiza o comportamento de exportação de perfis para o seu destino [!DNL Amazon Kinesis], a fim de exportar dados somente para o seu destino quando atualizações relevantes para um perfil tiverem ocorrido após a qualificação de público-alvo ou outros eventos significativos. Os perfis são exportados para seu destino nas seguintes situações:
 
 * A atualização do perfil foi determinada por uma alteração na associação de público-alvo para pelo menos um dos públicos-alvo mapeados para o destino. Por exemplo, o perfil se qualificou para um dos públicos mapeados para o destino ou saiu de um dos públicos mapeados para o destino.
 * A atualização do perfil foi determinada por uma alteração no [mapa de identidade](/help/xdm/field-groups/profile/identitymap.md). Por exemplo, um perfil que já se qualificou para um dos públicos-alvo mapeados para o destino recebeu uma nova identidade no atributo de mapa de identidade.
@@ -298,9 +298,9 @@ Abaixo estão mais exemplos de dados exportados, dependendo das configurações 
 
 ## Política de limites e novas tentativas {#limits-retry-policy}
 
-Em 95% das vezes, o Experience Platform tenta oferecer uma latência de taxa de transferência de menos de 10 minutos para mensagens enviadas com êxito, com uma taxa de menos de 10 mil solicitações por segundo para cada fluxo de dados para um destino HTTP.
+Em 95% das vezes, o Experience Platform tenta oferecer uma latência de taxa de transferência de menos de 10 minutos para mensagens enviadas com êxito, com uma taxa de menos de 10 mil solicitações por segundo para cada fluxo de dados a um destino HTTP.
 
-No caso de solicitações com falha para o destino da API HTTP, o Experience Platform armazena as solicitações com falha e tenta enviar as solicitações duas vezes para o endpoint.
+No caso de solicitações com falha para o destino da API HTTP, o Experience Platform armazena as solicitações com falha e tenta enviar as solicitações duas vezes para o seu endpoint.
 
 >[!MORELIKETHIS]
 >

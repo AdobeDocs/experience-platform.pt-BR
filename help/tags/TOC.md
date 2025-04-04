@@ -6,9 +6,9 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 5e3f1517b321cab756305cd61ad5f1def93d3de7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '777'
 ht-degree: 44%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 44%
       * Camada de Dados de Clientes Adobe {#client-data-layer}
          * [Visão geral](./extensions/client/client-data-layer/overview.md)
          * [Notas de versão](./extensions/client/client-data-layer/release-notes.md)
-      * Análise de conteúdo do Adobe {#content-analytics}
+      * Adobe Content Analytics {#content-analytics}
          * [Visão geral](./extensions/client/content-analytics/overview.md)
       * Adobe ContextHub {#contexthub}
          * [Visão geral](./extensions/client/contexthub/overview.md)
@@ -329,5 +329,5 @@ ht-degree: 44%
 * [Perguntas frequentes](./faq.md)
 * [Atualizações de terminologia](./term-updates.md)
 * [Substituição do suporte para o Internet Explorer 10 e 11](./ie-deprecation.md)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
 

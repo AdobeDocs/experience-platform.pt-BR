@@ -1,18 +1,18 @@
 ---
 title: LiveRamp - Conexão de integração
-description: Saiba como usar o conector do LiveRamp para integrar públicos do Adobe Real-time Customer Data Platform ao LiveRamp Connect.
+description: Saiba como usar o conector do LiveRamp para integrar públicos do Adobe Real-Time Customer Data Platform ao LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1948'
 ht-degree: 4%
 
 ---
 
 # [!DNL LiveRamp - Onboarding] conexão {#liveramp-onboarding}
 
-Use a conexão [!DNL LiveRamp - Onboarding] para integrar públicos do Adobe Real-time Customer Data Platform ao [!DNL LiveRamp Connect].
+Use a conexão [!DNL LiveRamp - Onboarding] para integrar públicos do Adobe Real-Time Customer Data Platform ao [!DNL LiveRamp Connect].
 
 ## Casos de uso {#use-cases}
 
@@ -38,7 +38,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -50,7 +50,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL LiveRamp - Onboarding]. |
-| Frequência de exportação | **[!UICONTROL Lote diário]** | Como os perfis são atualizados em Experience Platform com base na avaliação do público-alvo, os perfis (identidades) são atualizados uma vez por dia downstream para a plataforma de destino. Leia mais sobre [destinos com base em arquivo de lote](/help/destinations/destination-types.md#file-based). |
+| Frequência de exportação | **[!UICONTROL Lote diário]** | Como os perfis são atualizados no Experience Platform com base na avaliação do público-alvo, os perfis (identidades) são atualizados uma vez por dia downstream para a plataforma de destino. Leia mais sobre [destinos com base em arquivo de lote](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-![Captura de tela da interface do usuário da plataforma mostrando como preencher detalhes para o seu destino](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
+![Captura de tela da interface do Experience Platform mostrando como preencher detalhes para o seu destino](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
@@ -135,13 +135,13 @@ Na etapa [!UICONTROL Agendamento], crie um agendamento de exportação para cada
 * **[!UICONTROL Frequência]**: [!UICONTROL Diariamente]
 * **[!UICONTROL Data]**: selecione as horas de início e término da exportação conforme desejar.
 
-![Captura de tela da interface do usuário da plataforma mostrando a etapa de agendamento de público-alvo.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
+![Captura de tela da interface do usuário do Experience Platform mostrando a etapa de agendamento de público-alvo.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 O nome do arquivo exportado não pode ser configurado pelo usuário no momento. Todos os arquivos exportados para o destino [!DNL LiveRamp - Onboarding] são automaticamente nomeados com base no seguinte modelo:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-![Captura de tela da Interface do Usuário da Plataforma mostrando o modelo de nome de arquivo exportado.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
+![Captura de tela da interface do usuário do Experience Platform mostrando o modelo de nome de arquivo exportado.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 Por exemplo, o nome de um arquivo exportado para uma organização chamada [!DNL Luma] pode ser semelhante a:
 
@@ -187,7 +187,7 @@ Seus dados são exportados para o local de armazenamento [!DNL LiveRamp - Onboar
 
 Os arquivos exportados têm um tamanho máximo de 10 milhões de linhas. O Experience Platform gera vários arquivos por delivery se os públicos-alvo selecionados excederem 10 milhões de linhas. Se você espera exceder o limite de arquivo único, contate o representante do [!DNL LiveRamp] e peça a ele para configurar a assimilação em lote para você.
 
-Ao exportar arquivos para o destino [!DNL LiveRamp - Onboarding], a Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../../profile/merge-policies/overview.md).
+Ao exportar arquivos para o destino [!DNL LiveRamp - Onboarding], o Experience Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../../profile/merge-policies/overview.md).
 
 Por exemplo, vamos considerar os seguintes públicos-alvo:
 
@@ -196,7 +196,7 @@ Por exemplo, vamos considerar os seguintes públicos-alvo:
 * Público-alvo C (política de mesclagem 1)
 * Audience D (política de mesclagem 1)
 
-A Platform exportará dois arquivos CSV para [!DNL LiveRamp - Onboarding]:
+O Experience Platform exportará dois arquivos CSV para [!DNL LiveRamp - Onboarding]:
 
 * Um arquivo CSV contendo os públicos-alvo A, C e D;
 * Um arquivo CSV contendo o público-alvo B.
@@ -211,7 +211,7 @@ Os perfis incluídos nos arquivos exportados podem corresponder a um dos seguint
 * `Expired`: o perfil não está mais qualificado para a audiência, mas foi qualificado no passado.
 * `""`(cadeia de caracteres vazia): o perfil nunca se qualificou para a audiência.
 
-Por exemplo, um arquivo CSV exportado com um atributo `email`, dois públicos-alvo originados do Experience Platform [Serviço de segmentação](../../../segmentation/home.md) e um público-alvo externo [importado](../../../segmentation/ui/audience-portal.md#import-audience) podem ser assim:
+Por exemplo, um arquivo CSV exportado com um atributo `email`, dois públicos-alvo originados do [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform e um público-alvo externo [importado](../../../segmentation/ui/audience-portal.md#import-audience) podem ser assim:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,9 +223,9 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-No exemplo acima, as seções `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrevem públicos-alvo originados do Serviço de Segmentação, enquanto `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descreve um público importado para a Platform como um [carregamento personalizado](../../../segmentation/ui/audience-portal.md#import-audience).
+No exemplo acima, as seções `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` e `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` descrevem públicos-alvo originados do Serviço de Segmentação, enquanto `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` descreve um público-alvo importado para o Experience Platform como um [carregamento personalizado](../../../segmentation/ui/audience-portal.md#import-audience).
 
-Como a Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../../profile/merge-policies/overview.md), ela também gera uma execução de fluxo de dados separada para cada ID da política de mesclagem.
+Como o Experience Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../../profile/merge-policies/overview.md), ele também gera uma execução de fluxo de dados separada para cada ID da política de mesclagem.
 
 Isso significa que as métricas **[!UICONTROL Identidades ativadas]** e **[!UICONTROL Perfis recebidos]** na página [execuções do fluxo de dados](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) são agregadas para cada grupo de públicos que usam a mesma política de mesclagem, em vez de serem exibidas para cada público.
 

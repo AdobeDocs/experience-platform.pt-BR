@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3620'
+source-wordcount: '3626'
 ht-degree: 9%
 
 ---
 
 # Monitorar fluxos de dados para destinos na interface do
 
-Use os vários destinos no catálogo do Experience Platform para ativar seus dados da Platform para inúmeros parceiros externos. O Platform facilita o processo de rastreamento do fluxo de dados para seus destinos ao fornecer transparência aos fluxos de dados.
+Use os vários destinos no catálogo do Experience Platform para ativar seus dados do Experience Platform para inúmeros parceiros externos. O Experience Platform facilita o processo de rastreamento do fluxo de dados para seus destinos ao fornecer transparência aos fluxos de dados.
 
 O painel de monitoramento fornece uma representação visual da jornada de um fluxo de dados, incluindo o destino em que os dados estão sendo ativados, o tipo de dados que você está visualizando, dados exportados por execução de fluxo de dados e muito mais.
 
@@ -23,14 +23,14 @@ Este tutorial fornece instruções sobre como monitorar fluxos de dados diretame
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-- [Fluxos de dados](../home.md): os fluxos de dados são uma representação de trabalhos de dados que movem dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para conjuntos de dados de destino, para [!DNL Identity] e [!DNL Profile] e para [!DNL Destinations].
+- [Fluxos de dados](../home.md): os fluxos de dados são uma representação de trabalhos de dados que movem dados pela Experience Platform. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para conjuntos de dados de destino, para [!DNL Identity] e [!DNL Profile] e para [!DNL Destinations].
    - [Execuções de fluxo de dados](../../sources/notifications.md): as execuções de fluxo de dados são os trabalhos agendados recorrentes com base na configuração de frequência dos fluxos de dados selecionados.
-- [Destinos](../../destinations/home.md): os destinos são integrações pré-criadas com aplicativos usados com frequência que permitem a ativação contínua de dados da Platform para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Destinos](../../destinations/home.md): os destinos são integrações pré-criadas com aplicativos usados com frequência que permitem a ativação contínua de dados do Experience Platform para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ## Monitorar fluxos de dados no espaço de trabalho de Destinos {#monitor-dataflows-in-the-destinations-workspace}
 
-No espaço de trabalho **[!UICONTROL Destinos]** da interface da Platform, navegue até a guia **[!UICONTROL Procurar]** e selecione o nome de um destino que deseja exibir.
+No espaço de trabalho **[!UICONTROL Destinos]** da interface do usuário do Experience Platform, navegue até a guia **[!UICONTROL Procurar]** e selecione o nome de um destino que deseja exibir.
 
 ![Selecione a exibição de destino com uma conexão de destino realçada](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -349,4 +349,4 @@ Quando **[!UICONTROL Públicos-alvo]** é selecionado, você verá uma lista dos
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este guia, agora você sabe como monitorar fluxos de dados para destinos em lote e de streaming, incluindo todas as informações relevantes, como tempo de processamento, taxa de ativação e status. Para saber mais sobre fluxos de dados na Platform, leia a [visão geral dos fluxos de dados](../home.md). Para saber mais sobre destinos, leia a [visão geral sobre destinos](../../destinations/home.md).
+Ao seguir este guia, agora você sabe como monitorar fluxos de dados para destinos em lote e de streaming, incluindo todas as informações relevantes, como tempo de processamento, taxa de ativação e status. Para saber mais sobre fluxos de dados no Experience Platform, leia a [visão geral sobre fluxos de dados](../home.md). Para saber mais sobre destinos, leia a [visão geral sobre destinos](../../destinations/home.md).

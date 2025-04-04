@@ -2,9 +2,9 @@
 title: Crie uma conexão de origem e um fluxo de dados para Contas e Contatos do SugarCRM usando a API do Serviço de Fluxo
 description: Saiba como conectar o Adobe Experience Platform a contas e contatos do SugarCRM usando a API de serviço de fluxo.
 exl-id: 2b422b39-5b86-4313-a214-725044d9812c
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2117'
 ht-degree: 2%
 
 ---
@@ -15,16 +15,16 @@ O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem
 
 ## Introdução
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL SugarCRM] usando a API [!DNL Flow Service].
 
 ### Coletar credenciais necessárias
 
-Para conectar [!DNL SugarCRM Accounts & Contacts] à Platform, você deve fornecer valores para as seguintes propriedades de conexão:
+Para conectar [!DNL SugarCRM Accounts & Contacts] ao Experience Platform, você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
@@ -32,15 +32,15 @@ Para conectar [!DNL SugarCRM Accounts & Contacts] à Platform, você deve fornec
 | `username` | Seu nome de usuário da conta de desenvolvedor do SugarCRM. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `password` | A senha da sua conta de desenvolvedor do SugarCRM. | `123456789` |
 
-## Conectar [!DNL SugarCRM Accounts & Contacts] à Plataforma usando a API [!DNL Flow Service]
+## Conectar o [!DNL SugarCRM Accounts & Contacts] ao Experience Platform usando a API [!DNL Flow Service]
 
-A seguir estão descritas as etapas que você precisa realizar para autenticar sua origem do [!DNL SugarCRM], criar uma conexão de origem e criar um fluxo de dados para trazer seus dados de contas e contatos para o Experience Platform.
+A seguir estão descritas as etapas que você precisa realizar para autenticar sua origem do [!DNL SugarCRM], criar uma conexão de origem e criar um fluxo de dados para trazer seus dados de contas e contatos para a Experience Platform.
 
 ### Criar uma conexão básica {#base-connection}
 
-Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
+Uma conexão base retém informações entre sua origem e a Experience Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL SugarCRM Accounts & Contacts] como parte do corpo da solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer suas credenciais de autenticação do [!DNL SugarCRM Accounts & Contacts] como parte do corpo da solicitação.
 
 **Formato da API**
 
@@ -83,7 +83,7 @@ curl -X POST \
 | `name` | O nome da sua conexão básica. Certifique-se de que o nome da sua conexão básica seja descritivo, pois você pode usá-lo para pesquisar informações sobre a sua conexão básica. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre sua conexão básica. |
 | `connectionSpec.id` | A ID de especificação de conexão da sua origem. Essa ID pode ser recuperada depois que a origem é registrada e aprovada por meio da API [!DNL Flow Service]. |
-| `auth.specName` | O tipo de autenticação que você está usando para autenticar sua origem na Platform. |
+| `auth.specName` | O tipo de autenticação que você está usando para autenticar sua origem na Experience Platform. |
 | `auth.params.host` | O host da API do SugarCRM: *developer.salesfusion.com* |
 | `auth.params.username` | Seu nome de usuário da conta de desenvolvedor do SugarCRM. |
 | `auth.params.password` | A senha da sua conta de desenvolvedor do SugarCRM. |
@@ -102,7 +102,7 @@ Uma resposta bem-sucedida retorna a conexão base recém-criada, incluindo seu i
 ### Explorar sua fonte {#explore}
 
 Usando a ID de conexão básica gerada na etapa anterior, você pode explorar arquivos e diretórios executando solicitações do GET.
-Use as seguintes chamadas para encontrar o caminho do arquivo que deseja trazer para a Platform:
+Use as chamadas a seguir para localizar o caminho do arquivo que deseja trazer para o Experience Platform:
 
 **Formato da API**
 
@@ -118,9 +118,9 @@ Ao executar solicitações do GET para explorar a estrutura e o conteúdo do arq
 | `{BASE_CONNECTION_ID}` | A ID de conexão básica gerada na etapa anterior. |
 | `objectType=rest` | O tipo de objeto que você deseja explorar. Atualmente, este valor está sempre configurado para `rest`. |
 | `{OBJECT}` | Esse parâmetro é necessário somente ao visualizar um diretório específico. Seu valor representa o caminho do diretório que você deseja explorar. Para esta fonte, o valor seria `json`. |
-| `fileType=json` | O tipo do arquivo que você deseja trazer para a Platform. Atualmente, `json` é o único tipo de arquivo com suporte. |
+| `fileType=json` | O tipo do arquivo que você deseja trazer para a Experience Platform. Atualmente, `json` é o único tipo de arquivo com suporte. |
 | `{PREVIEW}` | Um valor booliano que define se o conteúdo da conexão oferece suporte à visualização. |
-| `{SOURCE_PARAMS}` | Define parâmetros para o arquivo de origem que você deseja trazer para a Platform. Para recuperar o tipo de formato aceito para `{SOURCE_PARAMS}`, você deve codificar a cadeia inteira em base64. <br> [!DNL SugarCRM Accounts & Contacts] dá suporte a várias APIs. Dependendo do tipo de objeto que você estiver utilizando, passe uma das opções abaixo: <ul><li>`accounts` : empresas com as quais sua organização tem um relacionamento.</li><li>`contacts` : pessoas com as quais sua organização tem uma relação estabelecida.</li></ul> |
+| `{SOURCE_PARAMS}` | Define parâmetros para o arquivo de origem que você deseja trazer para a Experience Platform. Para recuperar o tipo de formato aceito para `{SOURCE_PARAMS}`, você deve codificar a cadeia inteira em base64. <br> [!DNL SugarCRM Accounts & Contacts] dá suporte a várias APIs. Dependendo do tipo de objeto que você estiver utilizando, passe uma das opções abaixo: <ul><li>`accounts` : empresas com as quais sua organização tem um relacionamento.</li><li>`contacts` : pessoas com as quais sua organização tem uma relação estabelecida.</li></ul> |
 
 O [!DNL SugarCRM Accounts & Contacts] dá suporte a várias APIs. Dependendo do tipo de objeto que você está usando, a solicitação a ser enviada é como a seguir:
 
@@ -669,7 +669,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ### Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
+Para que os dados de origem sejam usados no Experience Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados do Experience Platform no qual os dados de origem estão contidos.
 
 Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
@@ -677,7 +677,7 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
@@ -885,7 +885,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ### Criar um fluxo {#flow}
 
-A última etapa para trazer dados de [!DNL SugarCRM Accounts & Contacts] para a Platform é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
+A última etapa para trazer dados de [!DNL SugarCRM Accounts & Contacts] para a Experience Platform é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 
 * [ID de conexão do Source](#source-connection)
 * [ID da conexão de destino](#target-connection)
@@ -948,7 +948,7 @@ curl -X POST \
 | `flowSpec.version` | A versão correspondente da ID de especificação de fluxo. O padrão deste valor é `1.0`. |
 | `sourceConnectionIds` | A [ID da conexão de origem](#source-connection) gerada em uma etapa anterior. |
 | `targetConnectionIds` | A [ID da conexão de destino](#target-connection) gerada em uma etapa anterior. |
-| `transformations` | Essa propriedade contém as várias transformações necessárias para serem aplicadas aos seus dados. Essa propriedade é necessária ao trazer dados não compatíveis com XDM para a Platform. |
+| `transformations` | Essa propriedade contém as várias transformações necessárias para serem aplicadas aos seus dados. Essa propriedade é necessária ao trazer dados não compatíveis com XDM para a Experience Platform. |
 | `transformations.name` | O nome atribuído à transformação. |
 | `transformations.params.mappingId` | A [ID de mapeamento](#mapping) gerou em uma etapa anterior. |
 | `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. O padrão deste valor é `0`. |
@@ -981,7 +981,7 @@ Atualize os detalhes do seu fluxo de dados, como seu nome e descrição, bem com
 
 ### Atualizar sua conta
 
-Atualize o nome, a descrição e as credenciais da conta de origem executando uma solicitação PATCH para a API [!DNL Flow Service] e fornecendo a ID da conexão base como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer o `etag` exclusivo da sua conta de origem no cabeçalho `If-Match`. Para obter exemplos completos de API, leia o guia em [atualizando a conta de origem usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Atualize o nome, a descrição e as credenciais da conta de origem executando uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID da conexão base como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer o `etag` exclusivo da sua conta de origem no cabeçalho `If-Match`. Para obter exemplos completos de API, leia o guia em [atualizando a conta de origem usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Excluir seu fluxo de dados
 

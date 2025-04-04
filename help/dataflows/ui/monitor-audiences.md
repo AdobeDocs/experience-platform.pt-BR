@@ -3,30 +3,30 @@ description: Saiba como monitorar os fluxos de dados durante a segmentação usa
 title: Monitorar fluxos de dados para públicos na interface
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1864'
 ht-degree: 4%
 
 ---
 
 # Monitorar fluxos de dados para públicos na interface
 
-O Serviço de Segmentação permite criar públicos-alvo por meio de definições de segmento ou outras fontes de seus dados do [!DNL Real-Time Customer Profile]. A Platform fornece fluxos de dados para rastrear de forma transparente esse fluxo de dados de origens para destinos.
+O Serviço de Segmentação permite criar públicos-alvo por meio de definições de segmento ou outras fontes de seus dados do [!DNL Real-Time Customer Profile]. O Experience Platform fornece fluxos de dados para rastrear de forma transparente esse fluxo de dados de origens para destinos.
 
-Use o painel de monitoramento para ver uma representação visual da atividade dos dados em um público-alvo, incluindo o status da segmentação dos seus dados. Leia o tutorial para obter instruções sobre como usar o painel de monitoramento para monitorar a segmentação de dados usando a interface do usuário do Experience Platform, permitindo rastrear o status dos trabalhos de ativação, avaliação e exportação de público-alvo.
+Use o painel de monitoramento para ver uma representação visual da atividade dos dados em um público-alvo, incluindo o status da segmentação dos seus dados. Leia o tutorial para obter instruções sobre como usar o painel de monitoramento para monitorar a segmentação de dados usando a interface do usuário do Experience Platform, permitindo acompanhar o status dos trabalhos de ativação, avaliação e exportação de público-alvo.
 
 ## Introdução {#getting-started}
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-- [Fluxos de dados](../home.md): os fluxos de dados são uma representação de trabalhos de dados que movem dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para conjuntos de dados de destino, para [!DNL Identity] e [!DNL Profile] e para [!DNL Destinations].
+- [Fluxos de dados](../home.md): os fluxos de dados são uma representação de trabalhos de dados que movem dados pela Experience Platform. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para conjuntos de dados de destino, para [!DNL Identity] e [!DNL Profile] e para [!DNL Destinations].
    - [Execuções de fluxo de dados](../../sources/notifications.md): as execuções de fluxo de dados são os trabalhos agendados recorrentes com base na configuração de frequência dos fluxos de dados selecionados.
 - [Segmentação](../../segmentation/home.md): a segmentação permite criar públicos a partir dos dados do Perfil do cliente em tempo real.
    - [Trabalhos de ativação](../../destinations/ui/activation-overview.md): um trabalho de ativação é usado para ativar seu público para um destino especificado.
    - [Trabalhos de avaliação](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): um trabalho de avaliação é um processo assíncrono que avalia o público-alvo.
    - [Trabalhos de exportação](../../segmentation/api/export-jobs.md): um trabalho de exportação é um processo assíncrono usado para manter membros do público-alvo em conjuntos de dados.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ## Monitorar o painel de públicos-alvo {#monitoring-audiences-dashboard}
 

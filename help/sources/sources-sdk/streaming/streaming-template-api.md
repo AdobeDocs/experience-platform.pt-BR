@@ -3,9 +3,9 @@ title: Modelo de autoatendimento de documentação para API de streaming do SDK
 description: Saiba como trazer dados de transmissão de uma origem para a Adobe Experience Platform usando a API do serviço de fluxo.
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: Beta
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1645'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ ht-degree: 2%
 
 ### Coletar credenciais necessárias
 
-Para conectar *YOURSOURCE* ao Experience Platform, você deve fornecer valores para as seguintes propriedades de conexão:
+Para conectar *YOURSOURCE* à Experience Platform, você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
@@ -49,13 +49,13 @@ Para obter mais informações sobre essas credenciais, consulte a documentação
 
 *O Streaming SDK requer que sua fonte seja capaz de oferecer suporte a webhooks para se comunicar com o Experience Platform. Nesta seção, você deve fornecer as etapas que seus usuários terão que seguir para integrar YOURSOURCE a um webhook.*
 
-## Conectar *YOURSOURCE* à Plataforma usando a API [!DNL Flow Service]
+## Conecte *YOURSOURCE* ao Experience Platform usando a API [!DNL Flow Service]
 
-O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem *YOURSOURCE* e criar um fluxo de dados para trazer dados *YOURSOURCE* para a Plataforma usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem *YOURSOURCE* e criar um fluxo de dados para trazer dados *YOURSOURCE* para a Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Criar uma conexão de origem {#source-connection}
 
-Crie uma conexão de origem fazendo uma solicitação POST para a API [!DNL Flow Service], ao mesmo tempo em que fornece a ID de especificação da conexão de sua origem, detalhes como nome e descrição e o formato dos seus dados.
+Crie uma conexão de origem fazendo uma solicitação POST para a API [!DNL Flow Service], ao mesmo tempo em que fornece a ID de especificação da conexão da sua origem, detalhes como nome e descrição e o formato dos seus dados.
 
 **Formato da API**
 
@@ -109,7 +109,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ### Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
+Para que os dados de origem sejam usados no Experience Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados do Experience Platform no qual os dados de origem estão contidos.
 
 Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/).
 
@@ -117,7 +117,7 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
@@ -172,7 +172,7 @@ curl -X POST \
 | `name` | O nome da sua conexão de destino. Certifique-se de que o nome da conexão de destino seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de destino. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre a conexão de destino. |
 | `connectionSpec.id` | A ID da especificação da conexão que corresponde ao data lake. Esta ID fixa é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | O formato dos dados de *YOURSOURCE* que você deseja trazer para a Platform. |
+| `data.format` | O formato dos dados de *YOURSOURCE* que você deseja trazer para a Experience Platform. |
 | `params.dataSetId` | A ID do conjunto de dados de destino recuperada em uma etapa anterior. |
 
 
@@ -252,7 +252,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ### Criar um fluxo {#flow}
 
-A última etapa para trazer dados de *YOURSOURCE* para a Plataforma é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
+A última etapa para trazer dados de *YOURSOURCE* para a Experience Platform é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 
 * [ID de conexão do Source](#source-connection)
 * [ID da conexão de destino](#target-connection)
@@ -308,7 +308,7 @@ curl -X POST \
 | `flowSpec.version` | A versão correspondente da ID de especificação de fluxo. O padrão deste valor é `1.0`. |
 | `sourceConnectionIds` | A [ID da conexão de origem](#source-connection) gerada em uma etapa anterior. |
 | `targetConnectionIds` | A [ID da conexão de destino](#target-connection) gerada em uma etapa anterior. |
-| `transformations` | Essa propriedade contém as várias transformações necessárias para serem aplicadas aos seus dados. Essa propriedade é necessária ao trazer dados não compatíveis com XDM para a Platform. |
+| `transformations` | Essa propriedade contém as várias transformações necessárias para serem aplicadas aos seus dados. Essa propriedade é necessária ao trazer dados não compatíveis com XDM para a Experience Platform. |
 | `transformations.name` | O nome atribuído à transformação. |
 | `transformations.params.mappingId` | A [ID de mapeamento](#mapping) gerou em uma etapa anterior. |
 | `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. O padrão deste valor é `0`. |
@@ -326,9 +326,9 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado. V
 
 ### Obter o URL do ponto de extremidade de streaming
 
-Com o fluxo de dados criado, agora é possível recuperar o URL do ponto de extremidade de transmissão. Você usará esse URL de ponto de extremidade para inscrever sua origem em um webhook, permitindo que a origem se comunique com o Experience Platform.
+Com o fluxo de dados criado, agora é possível recuperar o URL do ponto de extremidade de transmissão. Você usará essa URL de ponto de extremidade para inscrever sua origem em um webhook, permitindo que a origem se comunique com o Experience Platform.
 
-Para recuperar a URL do ponto de extremidade de streaming, faça uma solicitação GET para o ponto de extremidade `/flows` e forneça a ID do seu fluxo de dados.
+Para recuperar a URL do ponto de extremidade de streaming, faça uma solicitação GET para o ponto de extremidade `/flows` e forneça a ID do fluxo de dados.
 
 **Formato da API**
 
@@ -442,7 +442,7 @@ Atualize os detalhes do seu fluxo de dados, como seu nome e descrição, bem com
 
 ### Atualizar sua conta
 
-Atualize o nome, a descrição e as credenciais da conta de origem executando uma solicitação PATCH para a API [!DNL Flow Service] e fornecendo a ID da conexão base como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer o `etag` exclusivo da sua conta de origem no cabeçalho `If-Match`. Para obter exemplos completos de API, leia o guia em [atualizando a conta de origem usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Atualize o nome, a descrição e as credenciais da conta de origem executando uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID da conexão base como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer o `etag` exclusivo da sua conta de origem no cabeçalho `If-Match`. Para obter exemplos completos de API, leia o guia em [atualizando a conta de origem usando a API](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Excluir seu fluxo de dados
 

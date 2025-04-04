@@ -2,16 +2,16 @@
 title: Visão geral do Data Distiller
 description: Um resumo dos limites de uso do Data Distiller para dados do Serviço de consulta em relação ao seu direito de licenciamento.
 exl-id: eb4a184b-f241-4f6f-a250-bbe4605d6b1b
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '104'
+source-wordcount: '105'
 ht-degree: 0%
 
 ---
 
 # Visão geral do Data Distiller
 
-O Data Distiller é uma oferta de pacote que inclui um subconjunto das funcionalidades do Adobe Experience Platform. Com o Data Distiller, você pode executar a preparação de dados após a assimilação (como limpeza, modelagem e manipulação) para o perfil do cliente em tempo real ou casos de uso analíticos, executando consultas em lote no Serviço de consulta. Seu uso do Data Distiller depende de seus direitos para aplicativos baseados em plataforma.
+O Data Distiller é uma oferta de pacote que inclui um subconjunto das funcionalidades do Adobe Experience Platform. Com o Data Distiller, você pode executar a preparação de dados após a assimilação (como limpeza, modelagem e manipulação) para o perfil do cliente em tempo real ou casos de uso analíticos, executando consultas em lote no Serviço de consulta. Seu uso do Data Distiller depende de seu direito para aplicativos baseados em Experience Platform.
 
 <!-- Commented out references to licence usage dashboard. It is temporarily hidden:
 ## License usage {#license-usage}

@@ -5,7 +5,7 @@ title: Criar uma conexão do MySQL Source na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem MySQL usando a interface do Adobe Experience Platform.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 2%
@@ -29,7 +29,7 @@ Se você já tiver uma conexão [!DNL MySQL], ignore o restante deste documento 
 
 ### Coletar credenciais necessárias
 
-Para acessar sua conta do [!DNL MySQL] em [!DNL Platform], você deve fornecer o seguinte valor:
+Para acessar sua conta do [!DNL MySQL] em [!DNL Experience Platform], você deve fornecer o seguinte valor:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
@@ -37,7 +37,7 @@ Para acessar sua conta do [!DNL MySQL] em [!DNL Platform], você deve fornecer o
 
 ## Conectar sua conta do [!DNL MySQL]
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL MySQL] ao [!DNL Platform].
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL MySQL] ao [!DNL Experience Platform].
 
 Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
@@ -61,4 +61,4 @@ Para conectar uma conta existente, selecione a conta [!DNL MySQL] com a qual des
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta MySQL. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Platform]](../../dataflow/databases.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta MySQL. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Experience Platform]](../../dataflow/databases.md).

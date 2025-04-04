@@ -3,9 +3,9 @@ title: Conectar o AWS Redshift ao Experience Platform usando a interface do usu�
 description: Saiba como conectar uma conta do AWS Redshift ao Experience Platform usando a interface do usuário de origens.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '719'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Se você já tiver uma conexão [!DNL AWS Redshift] válida, ignore o restante d
 
 ## Navegar pelo catálogo de origens
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Selecione **[!DNL AWS Redshift]** na categoria *[!UICONTROL Bancos de dados]* e selecione **[!UICONTROL Configurar]**.
 

@@ -3,9 +3,9 @@ title: Conexão do Zendesk
 description: O destino do Zendesk permite exportar seus dados de conta e ativá-los no Zendesk para suas necessidades comerciais.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1479'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) apro
 
 ## Casos de uso {#use-cases}
 
-O departamento de atendimento ao cliente de uma plataforma B2C multicanal deseja garantir uma experiência personalizada contínua para seus clientes. O departamento pode criar públicos-alvo a partir de seus próprios dados offline para criar novos perfis de usuário ou atualizar informações de perfil existentes de diferentes interações (por exemplo, compras, devoluções etc.) e envie esses públicos do Adobe Experience Platform para [!DNL Zendesk]. Ter as informações atualizadas no [!DNL Zendesk] garante que o agente de atendimento ao cliente tenha as informações recentes do cliente imediatamente disponíveis, permitindo respostas e soluções mais rápidas.
+O departamento de atendimento ao cliente de uma plataforma B2C multicanal deseja garantir uma experiência personalizada contínua para seus clientes. O departamento pode criar públicos a partir de seus próprios dados offline para criar novos perfis de usuário ou atualizar informações de perfil existentes de diferentes interações (por exemplo, compras, retornos, etc.) e enviar esses públicos do Adobe Experience Platform para [!DNL Zendesk]. Ter as informações atualizadas no [!DNL Zendesk] garante que o agente de atendimento ao cliente tenha as informações recentes do cliente imediatamente disponíveis, permitindo respostas e soluções mais rápidas.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -32,7 +32,7 @@ Consulte a documentação do Experience Platform para [Grupo de campos do esquem
 
 ### [!DNL Zendesk] pré-requisitos {#prerequisites-destination}
 
-Para exportar dados da Platform para sua conta [!DNL Zendesk], é necessário ter uma conta [!DNL Zendesk].
+Para exportar dados do Experience Platform para sua conta [!DNL Zendesk], você precisa ter uma conta [!DNL Zendesk].
 
 #### Obter credenciais de [!DNL Zendesk] {#gather-credentials}
 
@@ -60,8 +60,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campos.</li><li> Cada status de segmento em [!DNL Zendesk] é atualizado com o status de público correspondente da Platform, com base no valor **[!UICONTROL ID de Mapeamento]** fornecido durante a etapa [agendamento de público-alvo](#schedule-segment-export-example).</li></ul> |
-| Frequência de exportação | **[!UICONTROL Streaming]** | <ul><li>Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campos.</li><li> Cada status de segmento em [!DNL Zendesk] é atualizado com o status de público correspondente do Experience Platform, com base no valor **[!UICONTROL ID de Mapeamento]** fornecido durante a etapa [agendamento de público-alvo](#schedule-segment-export-example).</li></ul> |
+| Frequência de exportação | **[!UICONTROL Streaming]** | <ul><li>Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -81,14 +81,14 @@ Preencha os campos obrigatórios abaixo. Consulte a seção [Coletar [!DNL Zende
 * **[!UICONTROL Token do portador]**: o token de acesso gerado na sua conta do [!DNL Zendesk].
 
 Para autenticar no destino, selecione **[!UICONTROL Conectar ao destino]**.
-![Captura de tela da interface do usuário da plataforma mostrando como autenticar.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
+![Captura de tela da interface do Experience Platform mostrando como autenticar.](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
 Se os detalhes fornecidos forem válidos, a interface exibirá um status **[!UICONTROL Conectado]** com uma marca de seleção verde. Você pode prosseguir para a próxima etapa.
 
 ### Preencher detalhes do destino {#destination-details}
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
-![Captura de tela da Interface do Usuário da Plataforma mostrando os detalhes de destino.](../../assets/catalog/crm/zendesk/destination-details.png)
+![Captura de tela da interface do Experience Platform mostrando os detalhes do destino.](../../assets/catalog/crm/zendesk/destination-details.png)
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
@@ -110,7 +110,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Zendesk], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste em criar um link entre os campos do esquema do Experience Data Model (XDM) na sua conta da Platform e seus equivalentes correspondentes no destino.
+Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Zendesk], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
 
 Os atributos especificados no **[!UICONTROL campo de Destino]** devem ser nomeados exatamente como descrito na tabela de mapeamentos de atributos, pois esses atributos formarão o corpo da solicitação.
 
@@ -131,7 +131,7 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL Zendesk],
      | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
-     ![Exemplo de captura de tela da interface do usuário da plataforma com mapeamentos de atributos.](../../assets/catalog/crm/zendesk/mappings.png)
+     ![Exemplo de captura de tela da interface do Experience Platform com mapeamentos de atributos.](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -141,12 +141,12 @@ Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecio
 
 ### Agendar exportação de público e exemplo {#schedule-segment-export-example}
 
-Na etapa [[!UICONTROL Agendar exportação de público-alvo]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) do fluxo de trabalho de ativação, você deve mapear manualmente os públicos-alvo da Platform para o atributo de campo personalizado em [!DNL Zendesk].
+Na etapa [[!UICONTROL Agendar exportação de público-alvo]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) do fluxo de trabalho de ativação, você deve mapear manualmente os públicos-alvo da Experience Platform para o atributo de campo personalizado em [!DNL Zendesk].
 
 Para fazer isso, selecione cada segmento e insira o atributo de campo personalizado correspondente de [!DNL Zendesk] no campo **[!UICONTROL ID de Mapeamento]**.
 
 Um exemplo é mostrado abaixo:
-![Exemplo de captura de tela da Interface do Usuário da Plataforma mostrando a opção Agendar exportação de público.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
+![Exemplo de captura de tela da interface do Experience Platform mostrando a opção Agendar exportação de público-alvo.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
 
 ## Validar exportação de dados {#exported-data}
 
@@ -154,10 +154,10 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
 1. Selecione **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** e navegue até a lista de destinos.
 1. Em seguida, selecione o destino e alterne para a guia **[!UICONTROL Dados de ativação]** e selecione um nome de público-alvo.
-   ![Exemplo de captura de tela da interface do usuário da plataforma mostrando Dados de Ativação de Destinos.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
+   ![Exemplo de captura de tela da interface do usuário do Experience Platform mostrando Dados de Ativação de Destinos.](../../assets/catalog/crm/zendesk/destinations-activation-data.png)
 
 1. Monitore o resumo do público-alvo e verifique se a contagem de perfis corresponde à contagem no segmento.
-   ![Exemplo de captura de tela da Interface do Usuário da Plataforma mostrando o Segmento.](../../assets/catalog/crm/zendesk/segment.png)
+   ![Exemplo de captura de tela da interface do Experience Platform mostrando o Segmento.](../../assets/catalog/crm/zendesk/segment.png)
 
 1. Faça logon no site [!DNL Zendesk] e navegue até a página **[!UICONTROL Contatos]** para verificar se os perfis do público-alvo foram adicionados. Esta lista pode ser configurada para exibir colunas para os campos adicionais criados com o público-alvo**[!UICONTROL ID de Mapeamento]** e status de público-alvo.
    ![Captura de tela da interface do Zendesk mostrando a página Contatos com os campos adicionais criados com o nome do público-alvo.](../../assets/catalog/crm/zendesk/contacts.png)

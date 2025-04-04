@@ -1,11 +1,11 @@
 ---
 title: (API) Conexão Oracle Eloqua
-description: O destino (API) Oracle Eloqua permite exportar os dados da conta e ativá-los no Oracle Eloqua para as necessidades comerciais.
+description: O destino (API) do Oracle Eloqua permite exportar os dados da conta e ativá-los no Oracle Eloqua para atender às suas necessidades comerciais.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2033'
+source-wordcount: '2044'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # [!DNL (API) Oracle Eloqua] conexão
 
-[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) permite que os profissionais de marketing planejem e executem campanhas enquanto fornecem uma experiência personalizada para seus clientes potenciais. Com o gerenciamento integrado de leads e a fácil criação de campanhas, o modelo ajuda os profissionais de marketing a engajarem o público-alvo certo na hora certa da jornada do comprador e é dimensionado elegantemente para alcançar os públicos-alvo em todos os canais, incluindo email, pesquisa de exibição, vídeo e dispositivos móveis. As equipes de vendas podem fechar mais negócios a uma taxa mais rápida, aumentando o ROI do marketing por meio de insights em tempo real.
+[[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) permite que os profissionais de marketing planejem e executem campanhas enquanto fornecem uma experiência personalizada para seus clientes potenciais. Com o gerenciamento integrado de leads e a fácil criação de campanhas, o modelo ajuda os profissionais de marketing a engajarem o público-alvo certo na hora certa da jornada do comprador e é dimensionado elegantemente para alcançar os públicos-alvo em todos os canais, incluindo email, pesquisa de exibição, vídeo e dispositivos móveis. As equipes de vendas podem fechar mais negócios em uma taxa mais rápida, aumentando o ROI do marketing por meio do insight em tempo real.
 
 Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aproveita a operação [Atualizar um contato](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) da API REST [!DNL Oracle Eloqua], que permite **atualizar identidades** de um público para [!DNL Oracle Eloqua].
 
@@ -33,7 +33,7 @@ Consulte a documentação do Experience Platform para [Grupo de campos do esquem
 
 ### [!DNL Oracle Eloqua] pré-requisitos {#prerequisites-destination}
 
-Para exportar dados da Platform para sua conta [!DNL Oracle Eloqua], é necessário ter uma conta [!DNL Oracle Eloqua].
+Para exportar dados do Experience Platform para sua conta [!DNL Oracle Eloqua], você precisa ter uma conta [!DNL Oracle Eloqua].
 
 Além disso, você precisa, no mínimo, dos *&quot;Usuários avançados - Permissões de marketing&quot;* para sua instância do [!DNL Oracle Eloqua]. Consulte a seção *&quot;Grupos de Segurança&quot;* na página [Acesso de usuário protegido](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/SecurityOverview/SecuredUserAccess.htm) para obter orientação. O acesso é exigido pelo destino para [determinar programaticamente a URL base](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/DeterminingBaseURL.html) ao invocar a API [!DNL Oracle Eloqua].
 
@@ -57,7 +57,7 @@ Consulte [Entrando em [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saa
 >* [!DNL Oracle Eloqua] campos de contato personalizados são criados automaticamente usando os nomes dos públicos selecionados durante a etapa **[!UICONTROL Selecionar segmentos]**.
 
 * [!DNL Oracle Eloqua] tem um limite máximo de 250 campos de contatos personalizados.
-* Antes de exportar novos públicos, verifique se o número de públicos da Platform e o número de públicos existentes em [!DNL Oracle Eloqua] não excedem esse limite.
+* Antes de exportar novos públicos, verifique se o número de públicos-alvo da Experience Platform e o número de públicos-alvo existentes em [!DNL Oracle Eloqua] não excedem esse limite.
 * Se esse limite for excedido, você encontrará um erro no Experience Platform. Isso ocorre porque a API [!DNL Oracle Eloqua] falha ao validar a solicitação e responde com - *400: Erro de validação* - mensagem de erro descrevendo o problema.
 * Se você atingiu o limite especificado acima, é necessário remover os mapeamentos existentes do destino e excluir os campos de contato personalizados correspondentes na conta do [!DNL Oracle Eloqua] antes de exportar mais segmentos.
 
@@ -77,8 +77,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campos.</li><li> Para cada público selecionado na Platform, o status de segmento [!DNL Oracle Eloqua] correspondente é atualizado com seu status de público da Platform.</li></ul> |
-| Frequência de exportação | **[!UICONTROL Streaming]** | <ul><li>Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campos.</li><li> Para cada público selecionado no Experience Platform, o status do segmento [!DNL Oracle Eloqua] correspondente é atualizado com seu status de público do Experience Platform.</li></ul> |
+| Frequência de exportação | **[!UICONTROL Streaming]** | <ul><li>Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Preencha os campos obrigatórios abaixo. Consulte a seção [Coletar [!DNL Oracl
 * **[!UICONTROL Nome de Usuário]**: uma cadeia de caracteres concatenada composta pelo Nome da Empresa [!DNL Oracle Eloqua] e pelo Nome de Usuário [!DNL Oracle Eloqua].<br>O valor concatenado assume a forma de `{COMPANY_NAME}\{USERNAME}`.<br> Observe que não use chaves ou espaços e preserve a `\`. <br>Por exemplo, se o Nome da Empresa [!DNL Oracle Eloqua] for `MyCompany` e o Nome de Usuário [!DNL Oracle Eloqua] for `Username`, o valor concatenado que você usará no campo **[!UICONTROL Nome de Usuário]** será `MyCompany\Username`.
 
 Para autenticar no destino, selecione **[!UICONTROL Conectar ao destino]**.
-![Captura de tela da interface do usuário da plataforma mostrando como autenticar.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
+![Captura de tela da interface do Experience Platform mostrando como autenticar.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
 
 Se os detalhes fornecidos forem válidos, a interface exibirá um status **[!UICONTROL Conectado]** com uma marca de seleção verde. Você pode prosseguir para a próxima etapa.
 
@@ -118,7 +118,7 @@ Se os detalhes fornecidos forem válidos, a interface exibirá um status **[!UIC
 <!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
-![Captura de tela da Interface do Usuário da Plataforma mostrando os detalhes de destino.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
+![Captura de tela da interface do Experience Platform mostrando os detalhes do destino.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
@@ -141,7 +141,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Oracle Eloqua], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste em criar um link entre os campos do esquema do Experience Data Model (XDM) na sua conta da Platform e seus equivalentes correspondentes no destino.
+Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Oracle Eloqua], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
 
 Para mapear seus campos XDM para os campos de destino [!DNL Oracle Eloqua], siga estas etapas:
 
@@ -165,7 +165,7 @@ Para mapear seus campos XDM para os campos de destino [!DNL Oracle Eloqua], siga
      | `xdm: workAddress.city` | `Attribute: city` | |
 
    * Um exemplo com os mapeamentos acima é mostrado abaixo:
-     ![Exemplo de captura de tela da interface do usuário da plataforma com mapeamentos de atributos.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
+     ![Exemplo de captura de tela da interface do Experience Platform com mapeamentos de atributos.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
 >
@@ -201,14 +201,14 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
 1. Selecione **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** e navegue até a lista de destinos.
 1. Em seguida, selecione o destino e alterne para a guia **[!UICONTROL Dados de ativação]** e selecione um nome de público-alvo.
-   ![Exemplo de captura de tela da interface do usuário da plataforma mostrando Dados de Ativação de Destinos.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
+   ![Exemplo de captura de tela da interface do usuário do Experience Platform mostrando Dados de Ativação de Destinos.](../../assets/catalog/email-marketing/oracle-eloqua-api/destinations-activation-data.png)
 
 1. Monitore o resumo do público-alvo e verifique se a contagem de perfis corresponde à contagem no segmento.
-   ![Exemplo de captura de tela da Interface do Usuário da Plataforma mostrando o Segmento.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
+   ![Exemplo de captura de tela da interface do Experience Platform mostrando o Segmento.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
 1. Faça logon no site [!DNL Oracle Eloqua] e navegue até a página **[!UICONTROL Visão geral dos contatos]** para verificar se os perfis do público-alvo foram adicionados. Para ver o status do público-alvo, vá para uma página de **[!UICONTROL Detalhes do contato]** e verifique se o campo de contato com o nome do público-alvo selecionado como seu prefixo foi criado.
 
-![Captura de tela da interface do usuário do Oracle Eloqua mostrando a página Detalhes do Contato com o campo de contato personalizado criado com o nome do público-alvo.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
+![Captura de tela da interface do Oracle Eloqua mostrando a página Detalhes do Contato com o campo de contato personalizado criado com o nome do público-alvo.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## Uso e governança de dados {#data-usage-governance}
 
@@ -217,7 +217,7 @@ Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as p
 ## Erros e solução de problemas {#errors-and-troubleshooting}
 
 Ao criar o destino, você pode receber uma das seguintes mensagens de erro: `400: There was a validation error` ou `400 BAD_REQUEST`. Isso acontece quando você excede o limite de 250 campos de contato personalizados, conforme descrito na seção [medidas de proteção](#guardrails). Para corrigir esse erro, verifique se você não está excedendo o limite do campo de contato personalizado em [!DNL Oracle Eloqua].
-![Captura de tela da Interface do Usuário da Plataforma mostrando erro.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
+![Captura de tela da interface do Experience Platform mostrando erro.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
 
 Consulte as páginas [[!DNL Oracle Eloqua] Códigos de status HTTP](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) e [[!DNL Oracle Eloqua] Erros de validação](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) para obter uma lista abrangente de códigos de status e de erro com explicações.
 
@@ -226,7 +226,7 @@ Consulte as páginas [[!DNL Oracle Eloqua] Códigos de status HTTP](https://docs
 Para obter detalhes adicionais, consulte a documentação do [!DNL Oracle Eloqua]:
 
 * [Automação de Marketing do Oracle Eloqua](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
-* [API REST para o Serviço de Marketing Cloud Eloqua do Oracle](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+* [API REST para o Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
 ### Changelog
 

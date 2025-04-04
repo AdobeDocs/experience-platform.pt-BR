@@ -1,11 +1,11 @@
 ---
 title: Notas de versão da Adobe Experience Platform de novembro de 2024
-description: As notas de versão de novembro de 2024 para Adobe Experience Platform.
+description: As notas de versão de novembro de 2024 da Adobe Experience Platform.
 exl-id: e3969f8b-70b2-40f8-bb9b-5be6e3d8f722
-source-git-commit: f71fc1d4ad51af52046caeee289546e05967d5bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '852'
-ht-degree: 11%
+source-wordcount: '853'
+ht-degree: 12%
 
 ---
 
@@ -24,13 +24,13 @@ Atualizações dos recursos e da documentação existentes no Adobe Experience P
 - [Query Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Atualizações na documentação](#documentation-updates)
-   - [Documentação da API Experience Platform interativa](#interactive-experience-platform-api-documentation)
+   - [Documentação da API interativa do Experience Platform](#interactive-experience-platform-api-documentation)
    - [Novo sumário no Experience League](#new-table-of-contents-on-experience-league)
    - [Nova página de aterrissagem do assistente de IA](#new-ai-assistant-landing-page)
 
 ## Assistente de IA {#ai-assistant}
 
-O Assistente de IA no Adobe Experience Platform é uma experiência de conversação que você pode usar para acelerar seus fluxos de trabalho em aplicativos Adobe. Você pode usar o AI Assistant para entender melhor o conhecimento do produto, solucionar problemas ou pesquisar informações e encontrar insights operacionais. O Assistente de IA é compatível com Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
+O Assistente de IA no Adobe Experience Platform é uma experiência de conversação que você pode usar para acelerar seus fluxos de trabalho em aplicativos do Adobe. Você pode usar o AI Assistant para entender melhor o conhecimento do produto, solucionar problemas ou pesquisar informações e encontrar insights operacionais. O Assistente de IA é compatível com Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
 **Novos recursos**
 
@@ -58,7 +58,7 @@ O Assistente de IA no Adobe Experience Platform é uma experiência de conversa�
 
 | Recurso | Descrição |
 | --- | --- |
-| [Pesquisar atributos de perfil em tempo real na borda](/help/destinations/ui/activate-edge-profile-lookup.md) | Saiba como pesquisar atributos de perfil de borda em tempo real para fornecer experiências de personalização ou informar regras de decisão por meio de aplicativos downstream, usando o destino Personalization personalizado e a API Edge Network. |
+| [Pesquisar atributos de perfil em tempo real na borda](/help/destinations/ui/activate-edge-profile-lookup.md) | Saiba como pesquisar atributos de perfil de borda em tempo real para fornecer experiências de personalização ou informar regras de decisão por meio de aplicativos downstream, usando o destino do Personalization personalizado e a API do Edge Network. |
 
 {style="table-layout:auto"}
 
@@ -78,7 +78,7 @@ Para obter mais informações sobre [!DNL Query Service], consulte a [[!DNL Quer
 
 ## Sandboxes {#sandboxes}
 
-O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, o Experience Platform fornece sandboxes que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, a Experience Platform fornece sandboxes que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 **Recursos novos ou atualizados**
 
@@ -90,13 +90,13 @@ Para obter mais informações sobre sandboxes, leia a [visão geral das sandboxe
 
 ## Atualizações na documentação {#documentation-updates}
 
-### Documentação da API Experience Platform interativa {#interactive-api-documentation}
+### Documentação da API interativa do Experience Platform {#interactive-api-documentation}
 
-A [documentação da API de Experience Platform](https://developer.adobe.com/experience-platform-apis/) agora é totalmente interativa, permitindo que você autentique e explore APIs diretamente na página de documentação de referência da API. Agora você pode ir para a página de documentação de referência da API desejada, criar ou obter suas credenciais de autenticação da API, colá-las no bloco **[!UICONTROL Experimente]** e executar a chamada. Tudo em uma página. [Leia mais](/help/landing/api-authentication.md#get-credentials-functionality) sobre a funcionalidade.
+A [documentação da API do Experience Platform](https://developer.adobe.com/experience-platform-apis/) agora é totalmente interativa, permitindo autenticar e explorar APIs diretamente na página de documentação de referência da API. Agora você pode ir para a página de documentação de referência da API desejada, criar ou obter suas credenciais de autenticação da API, colá-las no bloco **[!UICONTROL Experimente]** e executar a chamada. Tudo em uma página. [Leia mais](/help/landing/api-authentication.md#get-credentials-functionality) sobre a funcionalidade.
 
 ### Novo sumário no Experience League {#new-table-of-contents-on-experience-league}
 
-O índice das páginas de documentação do Experience League foi aprimorado para fornecer uma experiência aprimorada aos leitores, incluindo um filtro de palavra-chave para descobrir a página exata necessária, a capacidade de expandir todas as páginas e muito mais. <br> ![Nova experiência de índice, incluindo o filtro de palavra-chave e a capacidade de expandir todas as páginas.](../2024/assets/november/new-toc-experience.gif "Nova experiência de sumário, incluindo o filtro de palavra-chave e a capacidade de expandir todas as páginas."){width="250" align="center" zoomable="yes"}
+O índice nas páginas de documentação do Experience League foi aprimorado para fornecer uma experiência aprimorada para os leitores, incluindo um filtro de palavra-chave para descobrir a página exata necessária, a capacidade de expandir todas as páginas e muito mais. <br> ![Nova experiência de índice, incluindo o filtro de palavra-chave e a capacidade de expandir todas as páginas.](../2024/assets/november/new-toc-experience.gif "Nova experiência de sumário, incluindo o filtro de palavra-chave e a capacidade de expandir todas as páginas."){width="250" align="center" zoomable="yes"}
 
 ### Nova página de aterrissagem do assistente de IA {#new-ai-assistant-landing-page}
 

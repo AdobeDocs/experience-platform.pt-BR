@@ -2,10 +2,10 @@
 title: Possibilite um centro de excelência usando ferramentas de sandbox
 description: Possibilite um centro de excelência usando ferramentas de sandbox criando um pacote de "sandbox dourada" para padronizar as práticas recomendadas em várias sandboxes.
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 7%
+source-wordcount: '882'
+ht-degree: 6%
 
 ---
 
@@ -37,7 +37,7 @@ Ao planejar criar seu próprio centro de excelência na organização, considere
 - Crie uma sandbox com todas as configurações relevantes e validadas para serem definidas como a sandbox dourada.
 - Se necessário, obtenha informações das partes interessadas e concorde com seus padrões básicos.
 
-### Funcionalidade da interface, componentes da Platform e produtos da Experience Cloud que serão usados {#ui-functionality-and-elements}
+### Funcionalidade da interface do usuário, componentes do Experience Platform e produtos da Experience Cloud que você usará {#ui-functionality-and-elements}
 
 Para implementar com êxito esse caso de uso, você deve usar várias áreas do Adobe Experience Platform. Verifique se você tem as [permissões de controle de acesso baseadas em atributos](../../access-control/abac/overview.md) necessárias para todas essas áreas ou peça ao administrador do sistema para conceder as permissões necessárias.
 
@@ -81,7 +81,7 @@ As ferramentas de sandbox permitem compartilhar pacotes criados em diferentes or
 
 ### Monitorar importações e exportações por meio de logs de auditoria
 
-Ao importar ou exportar o pacote, é possível monitorar o status dos trabalhos usando o painel **[!UICONTROL Trabalhos]** no Experience Platform. Para saber mais sobre o monitoramento de trabalhos, leia o guia em [monitorando detalhes da importação](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
+Enquanto você importa ou exporta seu pacote, é possível monitorar o status dos trabalhos usando o painel **[!UICONTROL Trabalhos]** no Experience Platform. Para saber mais sobre o monitoramento de trabalhos, leia o guia em [monitorando detalhes da importação](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
 
 ### Atualizar regularmente a sandbox dourada
 

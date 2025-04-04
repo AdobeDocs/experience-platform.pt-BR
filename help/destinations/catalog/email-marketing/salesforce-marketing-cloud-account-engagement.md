@@ -1,11 +1,11 @@
 ---
-title: Envolvimento da conta de Marketing Cloud do Salesforce
+title: Engajamento com a conta do Salesforce Marketing Cloud
 description: Saiba como usar o destino Salesforce Marketing Cloud Account Engagement (antigo Pardot) para exportar os dados da sua conta e ativá-los no Salesforce Marketing Cloud Account Engagement para atender às suas necessidades comerciais.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1532'
+source-wordcount: '1540'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Use o destino [[!DNL Salesforce Marketing Cloud Account Engagement]](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(anteriormente conhecido como [!DNL Pardot])* para capturar, rastrear, pontuar e pontuar clientes em potencial. Você também pode projetar faixas de clientes potenciais para todos os estágios do pipeline para públicos-alvo de mercado e grupos de clientes por meio de campanhas de queda de email e gerenciamento de clientes potenciais com promoção, pontuação e segmentação de campanha.
 
-Em comparação ao [!DNL Salesforce Marketing Cloud Engagement], que é mais orientado para o marketing **B2C**, o [!DNL Marketing Cloud Account Engagement] é ideal para casos de uso de **B2B** que envolvem vários departamentos e tomadores de decisão que exigem ciclos de vendas e decisões mais longos. Além disso, você também mantém maior proximidade e integração com seu CRM para tomar as decisões apropriadas de vendas e marketing. *Observação: o Experience Platform também tem conexões para [!DNL Salesforce Marketing Cloud Engagement]. Você pode verificá-las nas páginas [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) e [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md).*
+Em comparação ao [!DNL Salesforce Marketing Cloud Engagement], que é mais orientado para o marketing **B2C**, o [!DNL Marketing Cloud Account Engagement] é ideal para casos de uso de **B2B** que envolvem vários departamentos e tomadores de decisão que exigem ciclos de vendas e decisões mais longos. Além disso, você também mantém maior proximidade e integração com seu CRM para tomar as decisões apropriadas de vendas e marketing. *Observação: a Experience Platform também tem conexões para [!DNL Salesforce Marketing Cloud Engagement]. Você pode verificá-las nas páginas [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) e [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md).*
 
 Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aproveita o ponto de extremidade [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email]](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email) para **adicionar ou atualizar seus clientes potenciais** depois de ativá-los em um novo segmento [!DNL Marketing Cloud Account Engagement].
 
@@ -30,7 +30,7 @@ O departamento de marketing de uma plataforma online deseja transmitir uma campa
 
 ## Pré-requisitos {#prerequisites}
 
-Consulte as seções abaixo para quaisquer pré-requisitos que você precise configurar no Experience Platform e [!DNL Salesforce] e para obter informações que você precise coletar antes de trabalhar com o destino [!DNL Marketing Cloud Account Engagement].
+Consulte as seções abaixo para quaisquer pré-requisitos que você precise configurar no Experience Platform e [!DNL Salesforce] e para obter as informações que você precisa coletar antes de trabalhar com o destino [!DNL Marketing Cloud Account Engagement].
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
@@ -38,11 +38,11 @@ Antes de ativar dados para o destino [!DNL Marketing Cloud Account Engagement], 
 
 ### Pré-requisitos em [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 
-Observe os seguintes pré-requisitos para exportar dados da Platform para sua conta do [!DNL Marketing Cloud Account Engagement]:
+Observe os seguintes pré-requisitos para exportar dados do Experience Platform para sua conta do [!DNL Marketing Cloud Account Engagement]:
 
 #### Você precisa ter uma conta [!DNL Marketing Cloud Account Engagement] {#prerequisites-account}
 
-Uma conta do [!DNL Marketing Cloud Account Engagement] com uma assinatura do produto [Envolvimento com a Conta do Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) é obrigatória para continuar.
+Uma conta do [!DNL Marketing Cloud Account Engagement] com uma assinatura do produto [Envolvimento da conta da Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) é obrigatória para continuar.
 
 A conta [!DNL Salesforce] deve ter [!DNL Salesforce] `Account Engagement Administrator role`. Isso é necessário para [criar campos de cliente potencial personalizados](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&amp;type=5).
 
@@ -64,11 +64,11 @@ Anote os itens abaixo antes de autenticar no destino [!DNL Marketing Cloud Accou
 
 ### Medidas de proteção {#guardrails}
 
-Consulte os [!DNL Marketing Cloud Account Engagement] [limites de taxa](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html#rate-limits), que detalham os limites impostos pelo seu plano e também se aplicam às execuções de Experience Platform.
+Consulte os [!DNL Marketing Cloud Account Engagement] [limites de taxa](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html#rate-limits), que detalham os limites impostos pelo seu plano e também se aplicam às execuções do Experience Platform.
 
 >[!IMPORTANT]
 >
->Se o administrador da sua conta do [!DNL Salesforce] tiver restringido o acesso a intervalos IP confiáveis, você precisará contatá-los para obter [Experience Platform incluir na lista de permissões IPs](/help/destinations/catalog/streaming/ip-address-allow-list.md). Consulte a documentação [!DNL Salesforce] [Restringir Acesso a Intervalos IP Confiáveis para um Aplicativo Conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) se precisar de orientação adicional.
+>Se o administrador da sua conta do [!DNL Salesforce] tiver restringido o acesso a intervalos IP confiáveis, você precisará contatá-los para obter [IPs do Experience Platform incluir na lista de permissões](/help/destinations/catalog/streaming/ip-address-allow-list.md). Consulte a documentação [!DNL Salesforce] [Restringir Acesso a Intervalos IP Confiáveis para um Aplicativo Conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) se precisar de orientação adicional.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -86,8 +86,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campos.</li><li> Para cada público selecionado na Platform, o status de segmento [!DNL Salesforce Marketing Cloud Account Engagement] correspondente é atualizado com seu status de público da Platform.</li></ul> |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campos.</li><li> Para cada público selecionado no Experience Platform, o status do segmento [!DNL Salesforce Marketing Cloud Account Engagement] correspondente é atualizado com seu status de público do Experience Platform.</li></ul> |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -105,19 +105,19 @@ Em **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, procure por [!DNL Sal
 
 Para autenticar no destino, selecione **[!UICONTROL Conectar ao destino]**. Você será direcionado à página de logon [!DNL Salesforce]. Insira suas credenciais de conta do [!DNL Marketing Cloud Account Engagement] e selecione [!DNL Log In].
 
-![Captura de tela da interface do usuário da plataforma mostrando como autenticar para o Envolvimento da Conta do Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
+![Captura de tela da interface do usuário do Experience Platform mostrando como autenticar para o Envolvimento da Conta da Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
 
 Em seguida, selecione [!UICONTROL Permitir] na janela subsequente para conceder permissões ao aplicativo **Adobe Experience Platform** para acessar sua conta [!DNL Salesforce Marketing Cloud Account Engagement]. *Será necessário fazer isso apenas uma vez*.
 
-![Pop-up de confirmação da captura de tela do aplicativo Salesforce para conceder permissões ao aplicativo Experience Platform acesso ao Envolvimento da Conta do Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/allow-app.png)
+![Pop-up de confirmação da captura de tela do aplicativo Salesforce para conceder permissões ao aplicativo Experience Platform para o Envolvimento da Conta do Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/allow-app.png)
 
-Se os detalhes fornecidos forem válidos, a interface exibirá uma mensagem: *Você se conectou com êxito à mensagem de conta* do Salesforce Marketing Cloud Account Engagement e um status **[!UICONTROL Conectado]** com uma marca de seleção verde, você poderá prosseguir para a próxima etapa.
+Se os detalhes fornecidos forem válidos, a interface exibirá uma mensagem: *Você se conectou com êxito à mensagem da conta* do Salesforce Marketing Cloud Account Engagement e um status **[!UICONTROL Conectado]** com uma marca de seleção verde, você poderá prosseguir para a próxima etapa.
 
 ### Preencher detalhes do destino {#destination-details}
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório. Consulte a seção [Coletar [!DNL Marketing Cloud Account Engagement] credenciais](#gather-credentials) para obter qualquer orientação.
 
-![Captura de tela da Interface do Usuário da Plataforma mostrando os detalhes de destino.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)
+![Captura de tela da interface do Experience Platform mostrando os detalhes do destino.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)
 
 | Campo | Descrição |
 | --- | --- |
@@ -144,7 +144,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Marketing Cloud Account Engagement], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste em criar um link entre os campos do esquema do Experience Data Model (XDM) na sua conta da Platform e seus equivalentes correspondentes no destino.
+Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Marketing Cloud Account Engagement], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL Marketing Cloud Account Engagement], siga as etapas abaixo.
 
@@ -161,7 +161,7 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL Marketing
      | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * Um exemplo com os mapeamentos acima é mostrado abaixo:
-     ![Exemplo de captura de tela da interface do usuário da plataforma mostrando os mapeamentos do Target.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
+     ![Exemplo de captura de tela da interface do Experience Platform mostrando os mapeamentos do Target.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecione **[!UICONTROL Avançar]**.
 
@@ -170,13 +170,13 @@ Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecio
 Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
 1. Navegue até um dos públicos-alvo selecionados. Selecione a guia **[!DNL Activation data]**. A coluna **[!UICONTROL ID de Mapeamento]** exibe o nome do campo personalizado gerado na página [!DNL Marketing Cloud Account Engagement Prospects].
-   ![Exemplo de captura de tela da interface do usuário da plataforma mostrando a ID de Mapeamento para um segmento selecionado.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
+   ![Exemplo de captura de tela da interface do Experience Platform mostrando a ID de Mapeamento para um segmento selecionado.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
 1. Faça logon no site [[!DNL Salesforce]](https://login.salesforce.com/). Em seguida, navegue até a página **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** e verifique se os prospetos do público-alvo foram adicionados/atualizados. Como alternativa, você também pode acessar [[!DNL Salesforce Pardot]](https://pi.pardot.com/) e acessar a página **[!DNL Prospects]**.
-   ![Captura de tela da interface do usuário do Salesforce mostrando a página de clientes potenciais.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
+   ![Captura de tela da interface do Salesforce mostrando a página de clientes potenciais.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
-1. Para verificar se os clientes potenciais foram atualizados, selecione um cliente potencial e verifique se o campo personalizado de cliente potencial foi atualizado com o status do público-alvo Experience Platform.
-   ![Captura de tela da interface do usuário do Salesforce mostrando a página de cliente potencial selecionada, o campo de cliente potencial personalizado é atualizado com o status do público-alvo.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
+1. Para verificar se os clientes potenciais foram atualizados, selecione um cliente potencial e verifique se o campo personalizado de cliente potencial foi atualizado com o status do público-alvo do Experience Platform.
+   ![Captura de tela da interface do Salesforce mostrando a página de cliente potencial selecionada, o campo de cliente potencial personalizado é atualizado com o status do público-alvo.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
 
 ## Uso e governança de dados {#data-usage-governance}
 

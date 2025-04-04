@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Data Governance
 user-guide-description: Imponha restrições de uso de dados por meio de rótulos, ações de marketing e políticas de governança.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 43%
+source-wordcount: '100'
+ht-degree: 47%
 
 ---
 
@@ -42,4 +42,4 @@ ht-degree: 43%
    * [Ações de marketing](api/marketing-actions.md)
    * [Avaliação](api/evaluation.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

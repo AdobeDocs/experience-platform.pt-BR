@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;assimilação de dados;lote;Lote;habilitar conjunto de dados;Visão geral de assimilação em lote;visão geral;assimilação em lote;
+keywords: Experience Platform;página inicial;tópicos populares;assimilação de dados;lote;Lote;habilitar conjunto de dados;Visão geral da assimilação em lote;visão geral da assimilação em lote;
 solution: Experience Platform
 title: Visão geral da API de assimilação em lote
-description: A API de assimilação em lote do Adobe Experience Platform permite assimilar dados na Platform como arquivos em lote. Os dados assimilados podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um esquema conhecido no registro do Experience Data Model (XDM).
+description: A API de assimilação em lote do Adobe Experience Platform permite assimilar dados na Experience Platform como arquivos em lote. Os dados assimilados podem ser os dados do perfil de um arquivo simples em um sistema CRM (como um arquivo Parquet) ou dados que estejam em conformidade com um esquema conhecido no registro do Experience Data Model (XDM).
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1390'
 ht-degree: 7%
 
 ---
 
 # Visão geral da API de assimilação em lote
 
-A API de assimilação em lote do Adobe Experience Platform permite assimilar dados na Platform como arquivos em lote. Os dados assimilados podem ser dados de perfil de um arquivo simples (como um arquivo Parquet) ou dados que estejam em conformidade com um esquema conhecido no registro [!DNL Experience Data Model] (XDM).
+A API de assimilação em lote do Adobe Experience Platform permite assimilar dados na Experience Platform como arquivos em lote. Os dados assimilados podem ser dados de perfil de um arquivo simples (como um arquivo Parquet) ou dados que estejam em conformidade com um esquema conhecido no registro [!DNL Experience Data Model] (XDM).
 
 A [Referência da API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) fornece informações adicionais sobre essas chamadas de API.
 
@@ -23,7 +23,7 @@ O diagrama a seguir descreve o processo de assimilação em lote:
 
 ## Introdução
 
-Os pontos de extremidade de API usados neste guia fazem parte da [API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
+Os pontos de extremidade de API usados neste guia fazem parte da [API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ### [!DNL Data Ingestion] pré-requisitos
 
@@ -220,7 +220,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 
 ### Upload de arquivo grande - carregar partes subsequentes
 
-Após a criação do arquivo, é possível fazer upload de todos os blocos subsequentes fazendo solicitações PATCH repetidas, uma para cada seção do arquivo.
+Após a criação do arquivo, é possível fazer upload de todas as partes subsequentes fazendo solicitações repetidas do PATCH, uma para cada seção do arquivo.
 
 ```http
 PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}

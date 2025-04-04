@@ -2,9 +2,9 @@
 description: Saiba como atualizar um fluxo de dados de fontes existente na interface do usuário do Experience Platform.
 title: Atualizar um fluxo de dados de conexão do Source na interface
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: c3082a8769f317407197b3fd05b36cfe00b36470
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '768'
 ht-degree: 8%
 
 ---
@@ -15,10 +15,10 @@ Leia este tutorial para obter etapas sobre como atualizar um fluxo de dados exis
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ## Atualizar fluxos de dados {#update-dataflows}
 
@@ -27,7 +27,7 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 >title="Expiração do conjunto de dados"
 >abstract="Esta coluna indica o número de dias que o conjunto de dados de destino tem antes de expirar automaticamente.<br>Haverá falha em um fluxo de dados se o conjunto de dados de destino expirar. Para evitar falhas em um fluxo de dados, certifique-se de que um conjunto de dados de destino esteja definido para expirar na data correta. Consulte a documentação para saber como atualizar datas de expiração."
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda e selecione **[!UICONTROL Fluxos de dados]** no cabeçalho superior.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda e selecione **[!UICONTROL Fluxos de Dados]** no cabeçalho superior.
 
 ![O catálogo de fontes com a guia de cabeçalho de fluxos de dados selecionada.](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -79,7 +79,7 @@ Em seguida, selecione [!UICONTROL Desativar] na janela pop-up exibida.
 
 ![A janela pop-up na qual você deve confirmar que deseja desabilitar seu fluxo de dados.](../../images/tutorials/update-dataflows/disable_dataflow.png)
 
-Se e quando você reativar esse fluxo de dados posteriormente, o Experience Platform agendará automaticamente as execuções de preenchimento retroativo para cobrir o período durante o qual o fluxo de dados foi desativado. Por exemplo, se o fluxo de dados foi configurado para ser executado por hora e foi desativado por 48 horas, ao reativar esse fluxo de dados, o Experience Platform criará 48 execuções de preenchimento retroativo para processar os intervalos perdidos.
+Se e quando você reativar esse fluxo de dados posteriormente, o Experience Platform agendará automaticamente as execuções de preenchimento retroativo para cobrir o período durante o qual o fluxo de dados foi desativado. Por exemplo, se o fluxo de dados foi configurado para ser executado por hora e foi desativado por 48 horas, após reativar esse fluxo de dados, o Experience Platform criará 48 execuções de preenchimento retroativo para processar os intervalos perdidos.
 
 ## Próximas etapas
 

@@ -2,9 +2,9 @@
 title: Criar públicos-alvo usando SQL
 description: Saiba como usar a extensão de público-alvo SQL no Data Distiller do Adobe Experience Platform para criar, gerenciar e publicar públicos-alvo usando comandos SQL. Este guia aborda todos os aspectos do ciclo de vida do público-alvo, incluindo a criação, atualização e exclusão de perfis e o uso de definições de público-alvo orientadas por dados para direcionar destinos baseados em arquivos.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1481'
+source-wordcount: '1485'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Use a extensão de público-alvo SQL para criar públicos-alvo com dados do data
 
 Usar essa extensão SQL melhora sua capacidade de criar públicos, pois você não precisa de dados brutos em seus perfis ao definir segmentos de público. Os públicos-alvo criados usando esse método são registrados automaticamente no espaço de trabalho Público-alvo, onde você pode direcioná-los ainda mais para destinos baseados em arquivo.
 
-![Infográfico que mostra o fluxo de trabalho da extensão de público-alvo do SQL. As etapas incluem: criar públicos-alvo com o Serviço de Consulta usando comandos SQL, gerenciando-os na interface da Platform, para ativá-los em destinos baseados em arquivo.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![Infográfico que mostra o fluxo de trabalho da extensão de público-alvo do SQL. As etapas incluem: criar públicos-alvo com o Serviço de Consulta usando comandos SQL, gerenciando-os na interface do usuário do Experience Platform, para ativá-los em destinos baseados em arquivo.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 Este documento aborda como usar a extensão de público-alvo SQL no Data Distiller da Adobe Experience Platform para criar, gerenciar e publicar públicos-alvo usando comandos SQL.
 
@@ -203,7 +203,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Registro e disponibilidade automáticos de público {#registration-and-availability}
 
-Os públicos-alvo criados com a extensão SQL são registrados automaticamente na [!UICONTROL Origin] do Data Distiller no espaço de trabalho Público-alvo. Depois de registrados, esses públicos-alvo estão disponíveis para direcionamento em destinos baseados em arquivo, aprimorando a segmentação e as estratégias de direcionamento. Esse processo não requer configuração adicional, o que simplifica o gerenciamento de público-alvo. Para obter mais detalhes sobre como exibir, gerenciar e criar públicos-alvo na interface do Platform, consulte a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md).
+Os públicos-alvo criados com a extensão SQL são registrados automaticamente na [!UICONTROL Origin] do Data Distiller no espaço de trabalho Público-alvo. Depois de registrados, esses públicos-alvo estão disponíveis para direcionamento em destinos baseados em arquivo, aprimorando a segmentação e as estratégias de direcionamento. Esse processo não requer configuração adicional, o que simplifica o gerenciamento de público-alvo. Para obter mais detalhes sobre como exibir, gerenciar e criar públicos-alvo na interface do Experience Platform, consulte a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -289,9 +289,9 @@ Sim, os públicos-alvo da Data Distiller são excluídos a cada 30 dias, pois s�
 
 Depois de ler este documento, você aprendeu a usar a extensão de público-alvo SQL no Data Distiller para criar, gerenciar e publicar públicos-alvo com eficiência usando comandos SQL. Agora é possível personalizar as definições de público-alvo com base nos requisitos exclusivos de sua empresa e ativá-las em vários destinos, otimizando suas estratégias de marketing e decisões orientadas por dados.
 
-Em seguida, você pode ler a documentação a seguir para desenvolver e otimizar ainda mais suas estratégias de gerenciamento de público-alvo da Platform:
+Em seguida, você pode ler a documentação a seguir para desenvolver e otimizar ainda mais suas estratégias de gerenciamento de público-alvo do Experience Platform:
 
 - **Explorar avaliação de público-alvo**: saiba mais sobre os [métodos de avaliação de público-alvo no Adobe Experience Platform](../../segmentation/home.md#evaluate-segments): segmentação por transmissão para atualizações em tempo real, segmentação em lote para processamento agendado ou sob demanda e segmentação de borda para avaliação instantânea no Edge Network.
-- **Integração com Destinos**: leia o guia sobre como [exportar arquivos sob demanda para destinos em lote](../../destinations/ui/export-file-now.md) usando a interface do usuário de Destinos da Platform.
+- **Integração com Destinos**: leia o guia sobre como [exportar arquivos sob demanda para destinos em lote](../../destinations/ui/export-file-now.md) usando a interface do usuário de Destinos do Experience Platform.
 - **Revisar desempenho do público-alvo**: analise o desempenho de seus públicos definidos pelo SQL em diferentes canais. Use insights de dados para ajustar e melhorar as definições de público-alvo e as estratégias de direcionamento. Leia o documento em [Insights do público-alvo](../../dashboards/insights/audiences.md) para saber como acessar e adaptar as consultas SQL para insights do público-alvo no Adobe Real-Time CDP. Em seguida, você pode criar seus próprios insights e transformar dados brutos em informações acionáveis personalizando o painel Públicos-alvo para visualizar e usar esses insights com eficiência para melhorar a tomada de decisões.
 

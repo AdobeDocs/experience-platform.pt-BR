@@ -5,7 +5,7 @@ title: Criar uma política de governança de dados na API
 type: Tutorial
 description: Saiba como criar uma política de governança de dados usando a API de serviço de política.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 3%
@@ -26,10 +26,10 @@ Este documento fornece um tutorial passo a passo para a criação de uma políti
 
 Este tutorial requer um entendimento prático dos seguintes conceitos-chave envolvidos na criação e avaliação de políticas:
 
-* [Governança de dados do Adobe Experience Platform](../home.md): a estrutura pela qual o [!DNL Platform] impõe conformidade com o uso de dados.
+* [Governança de dados do Adobe Experience Platform](../home.md): a estrutura pela qual o [!DNL Experience Platform] impõe conformidade com o uso de dados.
    * [Rótulos de uso de dados](../labels/overview.md): os rótulos de uso de dados são aplicados aos campos de dados XDM, especificando restrições sobre como esses dados podem ser acessados.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 Antes de iniciar este tutorial, reveja o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API [!DNL Policy Service], incluindo os cabeçalhos necessários e como ler chamadas de exemplo de API.
 
@@ -129,7 +129,7 @@ Quando você encontrar a ação de marketing que deseja usar, registre o valor d
 
 ### Criar uma nova ação de marketing {#create-new}
 
-Você pode criar uma nova ação de marketing fazendo uma solicitação PUT para o endpoint `/marketingActions/custom/` e fornecendo um nome para a ação de marketing no final do caminho da solicitação.
+Você pode criar uma nova ação de marketing fazendo uma solicitação PUT para o ponto de extremidade `/marketingActions/custom/` e fornecendo um nome para a ação de marketing no final do caminho da solicitação.
 
 **Formato da API**
 
@@ -367,7 +367,7 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `op` | O tipo de operação PATCH a ser executada. Esta solicitação executa uma operação de &quot;substituição&quot;. |
+| `op` | O tipo de operação do PATCH a ser executada. Esta solicitação executa uma operação de &quot;substituição&quot;. |
 | `path` | O caminho para o campo a ser atualizado. Ao ativar uma política, o valor deve ser definido como &quot;/status&quot;. |
 | `value` | O novo valor a ser atribuído à propriedade especificada em `path`. Esta solicitação define a propriedade `status` da política como &quot;ENABLED&quot;. |
 

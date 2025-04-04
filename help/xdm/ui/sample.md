@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Gerar dados de amostra para um esquema XDM na interface do
 description: Saiba como gerar dados JSON de amostra com base em um esquema existente na interface do usuário do Adobe Experience Platform.
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: 19a9341a9f53559fe3f619b2f157015e53b25b64
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '399'
+source-wordcount: '402'
 ht-degree: 14%
 
 ---
@@ -21,7 +21,7 @@ Para assimilar dados na Adobe Experience Platform, o formato e a estrutura dos d
 
 Para qualquer esquema definido na interface do usuário do Experience Platform, você pode gerar um objeto JSON de amostra que esteja em conformidade com a estrutura do esquema. Esse objeto pode servir como modelo para quaisquer dados assimilados em conjuntos de dados que utilizam o esquema em questão.
 
-Na interface da Platform, selecione **[!UICONTROL Esquemas]** na navegação à esquerda. Na guia **[!UICONTROL Procurar]**, localize o esquema para o qual deseja gerar dados de amostra. Selecione-a na lista e o painel direito é atualizado para mostrar detalhes sobre o esquema. Aqui, selecione **[!UICONTROL Baixar arquivo de amostra]**.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Esquemas]** na navegação à esquerda. Na guia **[!UICONTROL Procurar]**, localize o esquema para o qual deseja gerar dados de amostra. Selecione-a na lista e o painel direito é atualizado para mostrar detalhes sobre o esquema. Aqui, selecione **[!UICONTROL Baixar arquivo de amostra]**.
 
 ![A guia Procurar do espaço de trabalho Esquemas com um esquema selecionado e o arquivo de exemplo de download realçado.](../images/ui/sample/sample-data.png)
 
@@ -29,8 +29,8 @@ Um exemplo de arquivo JSON é baixado pelo navegador. Agora você pode usar esse
 
 ## Próximas etapas
 
-Este guia abordou como gerar um arquivo JSON de amostra de um esquema XDM na interface do usuário da plataforma. Para saber como gerar dados de amostra usando a API do Registro de Esquema, consulte o [manual de endpoint de dados de amostra](../api/sample-data.md).
+Este guia abordou como gerar um arquivo JSON de amostra de um esquema XDM na interface do usuário do Experience Platform. Para saber como gerar dados de amostra usando a API do Registro de Esquema, consulte o [manual de endpoint de dados de amostra](../api/sample-data.md).
 
-Quando estiver pronto para começar a assimilar dados, consulte o tutorial sobre [mapeamento de um arquivo CSV para XDM](../../ingestion/tutorials/map-csv/overview.md) para saber como mapear um arquivo de dados simples (como um CSV) para um esquema XDM e assimilá-lo na Platform. Como alternativa, você pode estabelecer uma [conexão de origem](../../sources/home.md) para trazer seus dados de uma origem externa e mapeá-los para o XDM.
+Quando estiver pronto para começar a assimilar dados, consulte o tutorial sobre [mapeamento de um arquivo CSV para XDM](../../ingestion/tutorials/map-csv/overview.md) para saber como mapear um arquivo de dados simples (como um CSV) para um esquema XDM e assimilá-lo no Experience Platform. Como alternativa, você pode estabelecer uma [conexão de origem](../../sources/home.md) para trazer seus dados de uma origem externa e mapeá-los para o XDM.
 
 Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas] na interface, consulte a [[!UICONTROL visão geral sobre esquemas] do espaço de trabalho](./overview.md).

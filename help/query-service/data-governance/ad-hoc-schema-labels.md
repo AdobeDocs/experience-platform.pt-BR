@@ -2,9 +2,9 @@
 title: Suporte de controle de acesso baseado em atributos para esquemas ad hoc
 description: Um guia para restringir o acesso a campos de dados em esquemas ad hoc gerados pelo Serviço de consulta da Adobe Experience Platform.
 exl-id: d675e3de-ab62-4beb-9360-1f6090397a17
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1020'
 ht-degree: 2%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 Quaisquer dados trazidos para o Adobe Experience Platform são encapsulados por esquemas do Experience Data Model (XDM) e podem estar sujeitos a restrições de uso definidas por sua organização ou por regulamentos legais.
 
-Executando uma consulta CTAS por meio do Serviço de consulta quando nenhum esquema é especificado, um esquema ad hoc é gerado automaticamente. Muitas vezes, é necessário restringir o uso de determinados campos, ou conjuntos de dados, de esquemas ad hoc para controlar o acesso a dados pessoais confidenciais e a informações de identificação pessoal. O Adobe Experience Platform facilita esse controle de acesso permitindo rotular campos de esquema por meio da interface do usuário da plataforma usando o recurso de controle de acesso baseado em atributos.
+Executando uma consulta CTAS por meio do Serviço de consulta quando nenhum esquema é especificado, um esquema ad hoc é gerado automaticamente. Muitas vezes, é necessário restringir o uso de determinados campos, ou conjuntos de dados, de esquemas ad hoc para controlar o acesso a dados pessoais confidenciais e a informações de identificação pessoal. O Adobe Experience Platform facilita esse controle de acesso permitindo rotular campos de esquema por meio da interface do usuário do Experience Platform usando o recurso de controle de acesso baseado em atributos.
 
-Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. Embora, seja uma prática recomendada rotular os dados assim que eles forem assimilados na Platform ou assim que os dados se tornarem disponíveis para uso na Platform.
+Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. Embora, seja uma prática recomendada rotular os dados assim que eles forem assimilados na Experience Platform ou assim que estiverem disponíveis para uso no Experience Platform.
 
 A rotulagem baseada em esquema é um componente importante do controle de acesso baseado em atributos para gerenciar melhor o acesso fornecido a usuários ou grupos de usuários. O Adobe Experience Platform permite restringir o acesso a qualquer campo de um esquema ad hoc criando e aplicando rótulos.
 
@@ -25,8 +25,8 @@ Este documento fornece um tutorial para gerenciar o acesso a dados confidenciais
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Sistema do Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
-   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Saiba como criar e gerenciar esquemas e outros recursos na interface do usuário da plataforma.
+* [Sistema do Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente.
+   * [[!DNL Schema Editor]](../../xdm/ui/overview.md): Saiba como criar e gerenciar esquemas e outros recursos na interface do Experience Platform.
 * [[!DNL Data Governance]](../../data-governance/home.md): saiba como o [!DNL Data Governance] permite gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados.
 * [Controle de acesso baseado em atributos](../../access-control/abac/overview.md): o controle de acesso baseado em atributos é um recurso da Adobe Experience Platform que permite aos administradores controlar o acesso a objetos e/ou recursos específicos com base em atributos. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo de esquema ad hoc ou regular. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário.
 
@@ -34,15 +34,15 @@ Este manual necessita de uma compreensão funcional dos seguintes componentes da
 
 Depois que a consulta for executada e os resultados forem gerados, um esquema ad hoc será gerado automaticamente e adicionado ao inventário do esquema.
 
-Para adicionar um rótulo de dados, navegue até a guia [!UICONTROL Esquemas] do painel de navegação selecionando [!UICONTROL Esquemas] no painel esquerdo da interface do usuário da plataforma. O inventário do esquema é exibido.
+Para adicionar um rótulo de dados, navegue até a guia [!UICONTROL Esquemas] do painel de navegação selecionando [!UICONTROL Esquemas] no painel esquerdo da interface do Experience Platform. O inventário do esquema é exibido.
 
 >[!NOTE]
 >
 >Esquemas ad hoc não são exibidos por padrão no inventário de esquemas.
 
-## Descubra esquemas ad hoc no inventário de esquemas da interface do usuário da plataforma {#discover-ad-hoc-schemas}
+## Descobrir esquemas ad hoc no inventário de esquemas da interface do usuário do Experience Platform {#discover-ad-hoc-schemas}
 
-Para habilitar a exibição de esquemas ad hoc na interface do usuário da Platform, selecione o ícone de filtro (![Um ícone de filtro.](/help/images/icons/filter.png)) à esquerda do campo de pesquisa e selecione **[!UICONTROL Mostrar esquemas adhoc] no painel esquerdo exibido.
+Para habilitar a exibição de esquemas ad hoc na interface do usuário do Experience Platform, selecione o ícone de filtro (![Um ícone de filtro.](/help/images/icons/filter.png)) à esquerda do campo de pesquisa e selecione **[!UICONTROL Mostrar esquemas adhoc] no painel esquerdo exibido.
 
 ![As opções de filtro do painel Esquema ficaram com a opção &#39;Mostrar esquema adhoc&#39; habilitada.](../images/data-governance/adhoc-schema-toggle.png)
 

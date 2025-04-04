@@ -2,16 +2,16 @@
 title: Criptografia de dados no Adobe Experience Platform
 description: Saiba como os dados são criptografados em trânsito e em repouso no Adobe Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
-source-git-commit: f0b9d414d7b08015478c132de6910629d86c9cf9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 # Criptografia de dados no Adobe Experience Platform
 
-O Adobe Experience Platform é um sistema eficiente e extensível que centraliza e padroniza os dados de experiência do cliente em todas as soluções corporativas. Todos os dados usados pela Platform são criptografados em trânsito e em repouso para manter seus dados seguros. Este documento descreve os processos de criptografia da Platform em alto nível.
+O Adobe Experience Platform é um sistema eficiente e extensível que centraliza e padroniza os dados de experiência do cliente em todas as soluções corporativas. Todos os dados usados pelo Experience Platform são criptografados em trânsito e em repouso para manter seus dados protegidos. Este documento descreve os processos de criptografia da Experience Platform em alto nível.
 
 O diagrama de fluxo de processo a seguir ilustra como o Experience Platform assimila, criptografa e mantém dados:
 
@@ -19,18 +19,18 @@ O diagrama de fluxo de processo a seguir ilustra como o Experience Platform assi
 
 ## Dados em trânsito {#in-transit}
 
-Todos os dados em trânsito entre a Plataforma e qualquer componente externo são conduzidos por conexões seguras e criptografadas usando HTTPS [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
+Todos os dados em trânsito entre o Experience Platform e qualquer componente externo são conduzidos por conexões seguras e criptografadas usando HTTPS [TLS v1.2](https://datatracker.ietf.org/doc/html/rfc5246).
 
-Em geral, os dados são trazidos para a Platform de três maneiras:
+Em geral, os dados são trazidos para a Experience Platform de três maneiras:
 
-- Os recursos de [Coleção de dados](../../collection/home.md) permitem que sites e aplicativos móveis enviem dados para o Edge Network da plataforma para preparo e preparação para assimilação.
-- [Conectores Source](../../sources/home.md) transmitem dados diretamente para a Platform a partir de aplicativos Adobe Experience Cloud e outras fontes de dados corporativas.
-- Ferramentas ETL (extract, transform, load) que não são de Adobe enviam dados para a [API de assimilação de lote](../../ingestion/batch-ingestion/overview.md) para consumo.
+- Os recursos de [Coleção de dados](../../collection/home.md) permitem que sites e aplicativos móveis enviem dados para o Experience Platform Edge Network para preparo e preparação para assimilação.
+- [Conectores Source](../../sources/home.md) transmitem dados diretamente para a Experience Platform a partir de aplicativos Adobe Experience Cloud e outras fontes de dados corporativas.
+- Ferramentas ETL (extract, transform, load) não-Adobe enviam dados para a [API de assimilação em lote](../../ingestion/batch-ingestion/overview.md) para consumo.
 
-Depois que os dados forem trazidos para o sistema e [criptografados em repouso](#at-rest), os serviços da plataforma enriquecerão e exportarão os dados das seguintes maneiras:
+Depois que os dados forem trazidos para o sistema e [criptografados em repouso](#at-rest), os serviços da Experience Platform enriquecem e exportam os dados das seguintes maneiras:
 
-- [Destinos](../../destinations/home.md) permitem ativar dados para aplicativos Adobe e aplicativos parceiros.
-- Aplicativos de plataforma nativa, como o [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=pt-BR) e o [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home?lang=pt-BR), também podem usar os dados.
+- [Destinos](../../destinations/home.md) permitem ativar dados para aplicativos da Adobe e aplicativos de parceiros.
+- Aplicativos nativos do Experience Platform, como o [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=pt-BR) e o [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/ajo-home), também podem usar os dados.
 
 ### Suporte ao protocolo mTLS {#mtls-protocol-support}
 
@@ -59,10 +59,10 @@ Você também pode recuperar certificados públicos com segurança fazendo uma s
 
 ## Dados em repouso {#at-rest}
 
-Os dados assimilados e usados pela Platform são armazenados no data lake, um armazenamento de dados altamente granular que contém todos os dados gerenciados pelo sistema, independentemente da origem ou do formato de arquivo. Todos os dados persistentes no data lake são criptografados, armazenados e gerenciados em uma instância isolada do [[!DNL Microsoft Azure Data Lake] Armazenamento](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) que é exclusiva de sua organização.
+Os dados assimilados e usados pelo Experience Platform são armazenados no data lake, um armazenamento de dados altamente granular que contém todos os dados gerenciados pelo sistema, independentemente da origem ou do formato de arquivo. Todos os dados persistentes no data lake são criptografados, armazenados e gerenciados em uma instância isolada do [[!DNL Microsoft Azure Data Lake] Armazenamento](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction) que é exclusiva de sua organização.
 
 Para obter detalhes sobre como os dados em repouso são criptografados no Armazenamento Azure Data Lake, consulte a [documentação oficial do Azure](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption).
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral de alto nível de como os dados são criptografados na Platform. Para obter mais informações sobre procedimentos de segurança na Platform, consulte a visão geral sobre [governança, privacidade e segurança](./overview.md) no Experience League ou consulte o [whitepaper segurança da Platform](https://www.adobe.com/content/dam/cc/en/security/pdfs/AEP_SecurityOverview.pdf).
+Este documento forneceu uma visão geral de alto nível sobre como os dados são criptografados no Experience Platform. Para obter mais informações sobre procedimentos de segurança no Experience Platform, consulte a visão geral sobre [governança, privacidade e segurança](./overview.md) no Experience League ou consulte o [whitepaper de segurança do Experience Platform](https://www.adobe.com/content/dam/cc/en/security/pdfs/AEP_SecurityOverview.pdf).

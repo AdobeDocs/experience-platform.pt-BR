@@ -2,10 +2,10 @@
 title: Manual de início rápido
 description: Saiba como começar a usar as tags na Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1521'
-ht-degree: 90%
+source-wordcount: '1522'
+ht-degree: 88%
 
 ---
 
@@ -37,7 +37,7 @@ Para obter instruções detalhadas sobre como criar grupos e adicionar usuários
 
 ## 2. Fazer logon
 
-Após adicionar os direitos de tag à Adobe ID, é necessário fazer logon na interface do usuário do Experience Platform ou na interface da Coleção de dados. Você pode fazer isso navegando diretamente para a [tela de logon de Experience Cloud](https://experience.adobe.com/) e selecionando **[!UICONTROL Coleção de dados]** ou **[!UICONTROL Experience Platform]**.
+Após adicionar os direitos de tag à Adobe ID, é necessário fazer logon na interface do usuário da Experience Platform ou na interface da Coleção de dados. Você pode fazer isso navegando diretamente para a [tela de logon do Experience Cloud](https://experience.adobe.com/) e selecionando a **[!UICONTROL Coleção de dados]** ou a **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -55,7 +55,7 @@ Uma extensão é uma integração criada pela Adobe ou por um parceiro da Adobe 
 
 Todas as novas propriedades são fornecidas com a [Extensão principal](../extensions/client/core/overview.md) instalada. As propriedades móveis são fornecidas com extensões adicionais. A extensão principal é criada pela equipe da Adobe a fim de fornecer um conjunto padrão robusto de tipos de elemento de dados para sua camada de dados e tipos de evento para suas regras. A maioria das ações que você desejará executar (obter uma ECID, enviar beacons do [!DNL Adobe Analytics], carregar a mbox global do [!DNL Target], etc.) será proveniente de extensões instaladas no catálogo.
 
-O que torna as tags na Platform realmente únicas é que essas extensões podem ser criadas por qualquer pessoa. Você precisa soltar um pixel de remarketing do Facebook em seu site? Confira a extensão que o Facebook criou. Deseja o mesmo para Twitter ou Linked In? Use essas extensões. Você precisa executar uma pesquisa? Veja o Question Pro ou Foresee. Você precisa gerenciar a privacidade e o consentimento dos usuários finais para ajudar no [!DNL GDPR]? Dê uma boa olhada no Evidon e no Trust Arc. Deseja obter uma visão detalhada do comportamento de usuários individuais no site? Talvez você deva dar uma olhada no Clicktale. Para obter mais informações, consulte a seção sobre [adição de uma nova extensão](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+O que torna as tags na Experience Platform realmente únicas é que essas extensões podem ser criadas por qualquer pessoa. Você precisa soltar um pixel de remarketing do Facebook em seu site? Confira a extensão que o Facebook criou. Deseja o mesmo para Twitter ou Linked In? Use essas extensões. Você precisa executar uma pesquisa? Veja o Question Pro ou Foresee. Você precisa gerenciar a privacidade e o consentimento dos usuários finais para ajudar no [!DNL GDPR]? Dê uma boa olhada no Evidon e no Trust Arc. Deseja obter uma visão detalhada do comportamento de usuários individuais no site? Talvez você deva dar uma olhada no Clicktale. Para obter mais informações, consulte a seção sobre [adição de uma nova extensão](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Criar elementos de dados e regras
 

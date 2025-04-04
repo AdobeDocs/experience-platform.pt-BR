@@ -1,32 +1,32 @@
 ---
 title: Criar uma conexão do Azure Blob Source na interface
-description: Saiba como criar um conector de origem do Azure Blob usando a interface do usuário da Platform.
+description: Saiba como criar um conector de origem do Azure Blob usando a interface do usuário do Experience Platform.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '819'
 ht-degree: 2%
 
 ---
 
 # Criar uma conexão de origem [!DNL Azure Blob] na interface
 
-Este tutorial fornece etapas para a criação de uma conexão de origem [!DNL Azure Blob] (a seguir denominada &quot;[!DNL Blob]&quot;) usando a interface do usuário da Platform.
+Este tutorial fornece etapas para a criação de uma conexão de origem [!DNL Azure Blob] (a seguir denominada &quot;[!DNL Blob]&quot;) usando a interface do usuário do Experience Platform.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada para organizar os dados de experiência do cliente no Experience Platform.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada para organização de dados de experiência do cliente no Experience Platform.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
 Se você já tiver uma conexão [!DNL Blob] válida, ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/batch/cloud-storage.md).
 
-### Formatos de arquivo não suportados
+### Formatos de arquivo compatíveis
 
-O Experience Platform suporta os seguintes formatos de arquivo a serem assimilados de armazenamentos externos:
+O Experience Platform oferece suporte aos seguintes formatos de arquivo para serem assimilados de armazenamentos externos:
 
 * Valores separados por delimitadores (DSV): você pode usar qualquer delimitador de coluna única, como tabulação, vírgula, barra vertical, ponto e vírgula ou hash, para coletar arquivos simples em qualquer formato.
 * Notação de objeto do JavaScript (JSON): os arquivos de dados formatados em JSON devem ser compatíveis com XDM.
@@ -34,7 +34,7 @@ O Experience Platform suporta os seguintes formatos de arquivo a serem assimilad
 
 ### Coletar credenciais necessárias
 
-Para acessar o armazenamento do [!DNL Blob] no Experience Platform, você deve fornecer valores válidos para as seguintes credenciais:
+Para acessar seu armazenamento do [!DNL Blob] no Experience Platform, você deve fornecer valores válidos para as seguintes credenciais:
 
 >[!BEGINTABS]
 
@@ -42,7 +42,7 @@ Para acessar o armazenamento do [!DNL Blob] no Experience Platform, você deve f
 
 | Credencial | Descrição |
 | --- | --- |
-| String de conexão | Uma cadeia de caracteres que contém as informações de autorização necessárias para autenticar [!DNL Blob] em Experience Platform. O padrão da cadeia de conexão [!DNL Blob] é: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Para obter mais informações sobre cadeias de conexão, consulte este documento [!DNL Blob] em [configurando cadeias de conexão](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| String de conexão | Uma cadeia de caracteres que contém as informações de autorização necessárias para autenticar [!DNL Blob] no Experience Platform. O padrão da cadeia de conexão [!DNL Blob] é: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Para obter mais informações sobre cadeias de conexão, consulte este documento [!DNL Blob] em [configurando cadeias de conexão](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 
 >[!TAB Autenticação do URI SAS]
 
@@ -54,17 +54,17 @@ Para acessar o armazenamento do [!DNL Blob] no Experience Platform, você deve f
 
 >[!ENDTABS]
 
-Depois de obter as credenciais necessárias, você poderá seguir as etapas abaixo para conectar o armazenamento do [!DNL Blob] ao Experience Platform
+Depois de obter as credenciais necessárias, você poderá seguir as etapas abaixo para conectar seu armazenamento do [!DNL Blob] à Experience Platform
 
 ## Conectar sua conta do [!DNL Blob]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a barra de pesquisa.
 
 Na categoria [!UICONTROL Armazenamento na nuvem], selecione **[!UICONTROL Armazenamento do Azure Blob]** e **[!UICONTROL Adicionar dados]**.
 
-![O catálogo de origens de Experience Platform com a origem de Armazenamento de Blob do Azure selecionada.](../../../../images/tutorials/create/blob/catalog.png)
+![O catálogo de origens da Experience Platform com a origem do Armazenamento de Blob do Azure selecionada.](../../../../images/tutorials/create/blob/catalog.png)
 
 A página **[!UICONTROL Conectar-se ao Armazenamento Azure Blob]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
@@ -108,4 +108,4 @@ Para autenticar com uma assinatura de acesso compartilhado, selecione **[!UICONT
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Blob]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para a Platform](../../dataflow/batch/cloud-storage.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Blob]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para o Experience Platform](../../dataflow/batch/cloud-storage.md).

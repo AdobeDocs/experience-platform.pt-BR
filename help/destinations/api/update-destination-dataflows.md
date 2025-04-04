@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;início;tópicos populares;serviço de fluxo;atualizar fluxos de dados de destino
+keywords: Experience Platform;página inicial;tópicos populares;serviço de fluxo;atualizar fluxos de dados de destino
 solution: Experience Platform
 title: Atualizar fluxos de dados de destino usando a API de serviço de fluxo
 type: Tutorial
 description: Este tutorial aborda as etapas para atualizar um fluxo de dados de destino. Saiba como habilitar ou desabilitar o fluxo de dados, atualizar suas informações básicas ou adicionar e remover públicos-alvo e atributos usando a API do Serviço de fluxo.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: c1d4a0586111d9cd8a66f4239f67f2f7e6ac8633
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2404'
+source-wordcount: '2410'
 ht-degree: 4%
 
 ---
@@ -27,23 +27,23 @@ Este tutorial requer que você tenha uma ID de fluxo válida. Se você não tive
 Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [Destinos](../home.md): [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
-* [Sandboxes](../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Sandboxes](../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para atualizar seu fluxo de dados com êxito usando a API [!DNL Flow Service].
 
 ### Leitura de chamadas de API de amostra {#reading-sample-api-calls}
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas de Experience Platform.
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
 
 ### Coletar valores para cabeçalhos necessários {#gather-values-for-required-headers}
 
-Para fazer chamadas para APIs da Platform, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, conforme mostrado abaixo:
+Para fazer chamadas para APIs do Experience Platform, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores de cada um dos cabeçalhos necessários em todas as chamadas de API do Experience Platform, conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos os recursos no Experience Platform, incluindo aqueles pertencentes a [!DNL Flow Service], são isolados em sandboxes virtuais específicas. Todas as solicitações para APIs da Platform exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos no Experience Platform, incluindo aqueles pertencentes a [!DNL Flow Service], são isolados para sandboxes virtuais específicas. Todas as solicitações para APIs do Experience Platform exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -449,7 +449,7 @@ Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode
 
 ## Adicionar um público a um fluxo de dados {#add-segment}
 
-Para adicionar um público-alvo ao fluxo de dados de destino, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID de fluxo, a versão e o público-alvo que deseja adicionar.
+Para adicionar um público-alvo ao fluxo de dados de destino, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID do fluxo, a versão e o público-alvo que deseja adicionar.
 
 **Formato da API**
 
@@ -503,7 +503,7 @@ curl -X PATCH \
 | `exportMode` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. Selecione `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Para obter mais informações sobre as duas opções, consulte [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) no tutorial de ativação de destinos em lote. |
 | `startDate` | Selecione a data em que o público-alvo deve começar a exportar perfis para o seu destino. |
 | `frequency` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. <br> <ul><li>Para o modo de exportação `"DAILY_FULL_EXPORT"`, você pode selecionar `ONCE` ou `DAILY`.</li><li>Para o modo de exportação `"FIRST_FULL_THEN_INCREMENTAL"`, você pode selecionar `"DAILY"`, `"EVERY_3_HOURS"`, `"EVERY_6_HOURS"`, `"EVERY_8_HOURS"`, `"EVERY_12_HOURS"`.</li></ul> |
-| `triggerType` | Somente para *destinos em lote*. Este campo é necessário somente ao selecionar o modo `"DAILY_FULL_EXPORT"` no seletor `frequency`. <br> Obrigatório. <br> <ul><li>Selecione `"AFTER_SEGMENT_EVAL"` para que o trabalho de ativação seja executado imediatamente após a conclusão diária do trabalho de segmentação em lote da Platform. Isso garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino.</li><li>Selecione `"SCHEDULED"` para que o trabalho de ativação seja executado em um horário fixado. Isso garante que os dados do perfil de Experience Platform sejam exportados todos os dias à mesma hora, mas os perfis exportados podem não ser os mais atualizados, dependendo se o trabalho de segmentação em lote foi concluído antes do início do trabalho de ativação. Ao selecionar essa opção, você também deve adicionar um `startTime` para indicar em que horário em UTC as exportações diárias devem ocorrer.</li></ul> |
+| `triggerType` | Somente para *destinos em lote*. Este campo é necessário somente ao selecionar o modo `"DAILY_FULL_EXPORT"` no seletor `frequency`. <br> Obrigatório. <br> <ul><li>Selecione `"AFTER_SEGMENT_EVAL"` para que o trabalho de ativação seja executado imediatamente após a conclusão diária do trabalho de segmentação em lote do Experience Platform. Isso garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino.</li><li>Selecione `"SCHEDULED"` para que o trabalho de ativação seja executado em um horário fixado. Isso garante que os dados de perfil do Experience Platform sejam exportados ao mesmo tempo todos os dias, mas os perfis exportados podem não ser os mais atualizados, dependendo se o trabalho de segmentação em lote foi concluído antes do início do trabalho de ativação. Ao selecionar essa opção, você também deve adicionar um `startTime` para indicar em que horário em UTC as exportações diárias devem ocorrer.</li></ul> |
 | `endDate` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Não aplicável ao selecionar `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Define a data em que os membros do público-alvo param de ser exportados para o destino. |
 | `startTime` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. Selecione a hora em que os arquivos que contêm membros do público-alvo devem ser gerados e exportados para o seu destino. |
 
@@ -591,7 +591,7 @@ PATCH /flows/{FLOW_ID}
 
 **Solicitação**
 
-Ao atualizar um público-alvo em um fluxo de dados de destino existente, primeiro execute uma operação GET para recuperar os detalhes do público-alvo que deseja atualizar. Em seguida, forneça todas as informações do público-alvo na carga, não apenas os campos que você deseja atualizar. No exemplo abaixo, o texto personalizado é adicionado ao final do modelo de nome de arquivo e a frequência de programação de exportação é atualizada de 6 horas para 12 horas.
+Ao atualizar um público-alvo em um fluxo de dados de destino existente, primeiro execute uma operação do GET para recuperar os detalhes do público-alvo que deseja atualizar. Em seguida, forneça todas as informações do público-alvo na carga, não apenas os campos que você deseja atualizar. No exemplo abaixo, o texto personalizado é adicionado ao final do modelo de nome de arquivo e a frequência de programação de exportação é atualizada de 6 horas para 12 horas.
 
 ```shell
 curl -X PATCH \
@@ -644,7 +644,7 @@ Consulte os exemplos abaixo para obter mais exemplos de componentes de público-
 
 ## Atualizar o modo de exportação de um público do agendado para o depois da avaliação do público {#update-export-mode}
 
-+++ Clique para ver um exemplo em que uma exportação de público-alvo é atualizada de ser ativada todos os dias em um horário especificado para ser ativada todos os dias após a conclusão do trabalho de segmentação em lote da Platform.
++++ Clique para ver um exemplo em que uma exportação de público-alvo é atualizada de ser ativada todos os dias em um horário especificado para ser ativada todos os dias após a conclusão do trabalho de segmentação em lote do Experience Platform.
 
 O público-alvo é exportado todos os dias às 16:00 UTC.
 
@@ -697,7 +697,7 @@ O público-alvo é exportado todos os dias após a conclusão diária do trabalh
 
 +++ Clique para ver um exemplo em que o modelo de nome de arquivo é atualizado para incluir campos adicionais no nome do arquivo
 
-Os arquivos exportados contêm o nome do destino e a ID do público-alvo do Experience Platform
+Os arquivos exportados contêm o nome de destino e a ID de público-alvo do Experience Platform
 
 ```json
 {
@@ -720,7 +720,7 @@ Os arquivos exportados contêm o nome do destino e a ID do público-alvo do Expe
 }
 ```
 
-Os arquivos exportados contêm o nome do destino, a ID do público-alvo do Experience Platform, a data e a hora em que o arquivo foi gerado pelo Experience Platform e o texto personalizado anexado ao final dos arquivos.
+Os arquivos exportados contêm o nome de destino, a ID de público-alvo do Experience Platform, a data e a hora em que o arquivo foi gerado pelo Experience Platform e o texto personalizado anexado ao final dos arquivos.
 
 
 ```json
@@ -748,7 +748,7 @@ Os arquivos exportados contêm o nome do destino, a ID do público-alvo do Exper
 
 ## Adicionar um atributo de perfil a um fluxo de dados {#add-profile-attribute}
 
-Para adicionar um atributo de perfil ao fluxo de dados de destino, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID de fluxo, a versão e o atributo de perfil que deseja adicionar.
+Para adicionar um atributo de perfil ao fluxo de dados de destino, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID do fluxo, a versão e o atributo de perfil que você deseja adicionar.
 
 **Formato da API**
 
@@ -855,7 +855,7 @@ Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform para obter mais informações sobre como interpretar respostas de erro.
+Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform para obter mais informações sobre como interpretar respostas de erro.
 
 ## Próximas etapas {#next-steps}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;serviço de consulta;serviço de consulta;consulta
 title: Introdução ao Serviço de consulta do Adobe Experience Platform
 description: Um detalhamento das etapas necessárias para utilizar totalmente o Serviço de consulta do Adobe Experience Platform
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: 705d58fad98c6c021220a4b1c5fc85541d6572bb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '243'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Depois que sua organização for provisionada para a Adobe Experience Platform, 
 
 Este [vídeo tutorial sobre a assimilação de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) fornece uma visão geral sobre como criar um conjunto de dados, mapear um conjunto de dados para um esquema, adicionar dados ao conjunto de dados e confirmar a assimilação. A [documentação de visão geral da assimilação](../../ingestion/home.md) complementa isso e fornece informações mais detalhadas e links para outros recursos de aprendizagem.
 
-Após assimilar seus dados na Adobe Experience Platform, você pode começar a trabalhar com o [!DNL Query Service] usando a [[!DNL Query Editor] na Interface do usuário da plataforma](../ui/user-guide.md) ou a [[!DNL Query Service] API](../api/getting-started.md). A documentação completa sobre como usar cada uma dessas ferramentas pode ser encontrada nas respectivas seções.
+Após assimilar seus dados na Adobe Experience Platform, você pode começar a trabalhar com o [!DNL Query Service] usando a [[!DNL Query Editor] na interface do usuário do Experience Platform](../ui/user-guide.md) ou a [[!DNL Query Service] API](../api/getting-started.md). A documentação completa sobre como usar cada uma dessas ferramentas pode ser encontrada nas respectivas seções.
 
 ## Próximas etapas
 
@@ -26,7 +26,7 @@ Este documento abordou os pré-requisitos necessários para usar os recursos do 
 - [Sintaxe SQL no Serviço de consulta](../sql/syntax.md)
 - [Criar conjuntos de dados derivados com SQL](../data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-Como alternativa, para saber mais sobre como o Serviço de consulta beneficia o processamento de dados na Platform, assista à [apresentação do caso de uso de navegação abandonada](../use-cases/abandoned-browse.md#video-example).
+Como alternativa, para saber mais sobre como o Serviço de consulta beneficia o processamento de dados no Experience Platform, assista à [apresentação do caso de uso de navegação abandonada](../use-cases/abandoned-browse.md#video-example).
 
 Os recursos a seguir são úteis para melhorar sua compreensão do [!DNL Query Service]:
 

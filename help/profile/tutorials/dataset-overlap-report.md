@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;relatórios;relatório de sobreposição de conjunto de dados;dados de perfil
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;relatórios;relatório de sobreposição de conjunto de dados;dados de perfil;;profile;real-time customer profile;troubleshooting;API;reporting;dataset overlap report;profile data
 title: Gerar o relatório de sobreposição do conjunto de dados
 type: Tutorial
 description: Este tutorial descreve as etapas necessárias para gerar o relatório de sobreposição de conjunto de dados usando a API de perfil do cliente em tempo real.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Este tutorial descreve as etapas necessárias para gerar o relatório de sobrepo
 
 ## Introdução
 
-Para usar as APIs do Adobe Experience Platform, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para coletar os valores necessários para os cabeçalhos necessários. Para saber mais sobre as APIs Experience Platform, consulte a [documentação de introdução às APIs da plataforma](../../landing/api-guide.md).
+Para usar as APIs do Adobe Experience Platform, primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en) para coletar os valores necessários para os cabeçalhos necessários. Para saber mais sobre as APIs do Experience Platform, consulte a [documentação de introdução às APIs do Experience Platform](../../landing/api-guide.md).
 
 Os cabeçalhos necessários para todas as chamadas de API neste tutorial são:
 
@@ -33,7 +33,7 @@ Depois de concluir o tutorial de autenticação e coletar os valores dos cabeça
 
 ## Gerar relatório de sobreposição do conjunto de dados usando a linha de comando
 
-Se você estiver familiarizado com o uso da linha de comando, poderá usar a seguinte solicitação de cURL para gerar o relatório de sobreposição do conjunto de dados executando uma solicitação GET para `/previewsamplestatus/report/dataset/overlap`.
+Se você estiver familiarizado com o uso da linha de comando, poderá usar a seguinte solicitação de cURL para gerar o relatório de sobreposição do conjunto de dados executando uma solicitação do GET para `/previewsamplestatus/report/dataset/overlap`.
 
 **Solicitação**
 
@@ -132,4 +132,4 @@ Esse relatório fornece as seguintes informações:
 
 ## Próximas etapas
 
-Após concluir este tutorial, agora é possível gerar o relatório de sobreposição de conjunto de dados usando a API de perfil do cliente em tempo real. Para saber mais sobre como trabalhar com dados de perfil na API e na interface do usuário do Experience Platform, comece lendo a [documentação de visão geral do perfil](../home.md).
+Após concluir este tutorial, agora é possível gerar o relatório de sobreposição de conjunto de dados usando a API de perfil do cliente em tempo real. Para saber mais sobre como trabalhar com dados de Perfil na API e na interface do usuário do Experience Platform, comece lendo a [documentação de visão geral do perfil](../home.md).

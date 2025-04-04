@@ -2,10 +2,10 @@
 title: Manifesto de extensão
 description: Saiba como configurar um arquivo de manifesto JSON que informa ao Adobe Experience Platform como consumir corretamente sua extensão.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2591'
-ht-degree: 98%
+source-wordcount: '2606'
+ht-degree: 86%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 No diretório base da sua extensão, você deve criar um arquivo chamado `extension.json`. Ele contém detalhes críticos da sua extensão que permitem que o Adobe Experience Platform o consuma corretamente. Alguns conteúdos são formados à maneira de [npms `package.json`](https://docs.npmjs.com/files/package.json).
 
@@ -26,12 +26,12 @@ Um manifesto de extensão deve consistir no seguinte:
 | `name` | O nome da sua extensão. Ele deve ser exclusivo dentre todas as outras extensões e deve estar em conformidade com as [regras de nomenclatura](#naming-rules). **É usado pelas tags como um identificador e não deve ser alterado após a publicação de sua extensão.** |
 | `platform` | A plataforma para sua extensão. O único valor aceito neste momento é `web`. |
 | `version` | A versão da sua extensão. Deve seguir o formato de controle de versão [semver](https://semver.org/). É consistente com o campo de versão [npm](https://docs.npmjs.com/files/package.json#version). |
-| `displayName` | O nome legível da sua extensão. Isso será exibido para os usuários da Platform. Não é necessário mencionar &quot;tags&quot; ou &quot;extensão&quot;. Os usuários já saberão que estão observando uma extensão de tag. |
-| `description` | A descrição da sua extensão. Isso será exibido para os usuários da Platform. Se sua extensão permitir que os usuários implementem seu produto no site deles, descreva o que o produto faz. Não é necessário mencionar &quot;tags&quot; ou &quot;extensão&quot;. Os usuários já saberão que estão observando uma extensão de tag. |
-| `iconPath` *(Opcional)* | O caminho relativo do ícone que será exibido para a extensão. Ele não deve começar com uma barra. Ele deve fazer referência a um arquivo SVG com uma extensão `.svg`. O SVG deve ser quadrado e pode ser dimensionado pelo Platform. |
+| `displayName` | O nome legível da sua extensão. Ele será exibido para os usuários do Experience Platform. Não é necessário mencionar &quot;tags&quot; ou &quot;extensão&quot;. Os usuários já saberão que estão observando uma extensão de tag. |
+| `description` | A descrição da sua extensão. Ele será exibido para os usuários do Experience Platform. Se sua extensão permitir que os usuários implementem seu produto no site deles, descreva o que o produto faz. Não é necessário mencionar &quot;tags&quot; ou &quot;extensão&quot;. Os usuários já saberão que estão observando uma extensão de tag. |
+| `iconPath` *(Opcional)* | O caminho relativo do ícone que será exibido para a extensão. Ele não deve começar com uma barra. Ele deve fazer referência a um arquivo SVG com uma extensão `.svg`. O SVG deve ser quadrado e pode ser dimensionado pelo Experience Platform. |
 | `author` | O &quot;autor&quot; é um objeto que deve ser estruturado da seguinte forma: <ul><li>`name`: O nome do autor da extensão. Como alternativa, o nome da empresa pode ser usado aqui.</li><li>`url` *(Opcional)*: Um URL em que você pode saber mais sobre o autor da extensão.</li><li>`email` *(Opcional)*: O endereço de email do autor da extensão.</li></ul>Ele é consistente com as regras [npm do campo do autor](https://docs.npmjs.com/files/package.json#people-fields-author-contributors). |
 | `exchangeUrl` *(Obrigatório para extensões públicas)* | O URL para a lista da sua extensão no Adobe Exchange. Deve corresponder ao padrão `https://www.adobeexchange.com/experiencecloud.details.######.html`. |
-| `viewBasePath` | O caminho relativo para o subdiretório que contém todas as visualizações e recursos relacionados à visualização (HTML, JavaScript, CSS, imagens). O Platform hospedará esse diretório em um servidor da Web e carregará o conteúdo iframe dele. Este campo é obrigatório e não deve começar com uma barra. Por exemplo, se todas as visualizações estiverem contidas em `src/view/`, o valor de `viewBasePath` será `src/view/`. |
+| `viewBasePath` | O caminho relativo para o subdiretório que contém todas as visualizações e recursos relacionados à visualização (HTML, JavaScript, CSS, imagens). O Experience Platform hospedará esse diretório em um servidor da Web e carregará o conteúdo iframe dele. Este campo é obrigatório e não deve começar com uma barra. Por exemplo, se todas as visualizações estiverem contidas em `src/view/`, o valor de `viewBasePath` será `src/view/`. |
 | `hostedLibFiles` *(Opcional)* | Muitos de nossos usuários preferem hospedar todos os arquivos relacionados a tags em seu próprio servidor. Isso proporciona aos usuários um nível maior de certeza em relação à disponibilidade de arquivos no tempo de execução, e eles podem verificar facilmente se há vulnerabilidades de segurança no código. Se a parte da biblioteca da sua extensão precisa carregar arquivos JavaScript no tempo de execução, é recomendável usar essa propriedade para listar esses arquivos. Os arquivos listados serão hospedados junto com a biblioteca de tempo de execução da tag. Sua extensão pode carregar os arquivos por meio de um URL recuperado usando o método [getHostedLibFileUrl](./turbine.md#get-hosted-lib-file).<br><br>Esta opção contém uma matriz com caminhos relativos de arquivos de biblioteca de terceiros que precisam ser hospedados. |
 | `main` *(Opcional)* | O caminho relativo de um módulo de biblioteca que deve ser executado no tempo de execução.<br><br>Este módulo sempre será incluído na biblioteca de tempo de execução e executado. Como o módulo é sempre incluído na biblioteca de tempo de execução, recomendamos usar apenas um módulo &quot;principal&quot; quando absolutamente necessário e manter o tamanho mínimo do código.<br><br>Não é garantido que este módulo seja executado primeiro; outros módulos podem ser executados antes dele. |
 | `configuration` *(Opcional)* | Isso descreve a parte da [configuração de extensão](./configuration.md) da extensão. Será necessário se você precisar que os usuários forneçam configurações globais para a extensão. Consulte o [apêndice](#config-object) para obter detalhes sobre como este campo deve ser estruturado. |
@@ -72,7 +72,7 @@ O objeto de configuração deve ser estruturado da seguinte maneira:
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Um objeto de <a href="https://json-schema.org/">Esquema JSON</a> que descreve o formato de um objeto válido sendo salvo da visualização de configuração de extensão. Como você é o desenvolvedor da visualização de configuração, é sua responsabilidade garantir que qualquer objeto de configuração salvo corresponda a esse esquema. Esse esquema também será usado para validação quando os usuários tentarem salvar dados usando os serviços do Platform <br><br>Este é um exemplo de objeto de esquema:
+      <td>Um objeto de <a href="https://json-schema.org/">Esquema JSON</a> que descreve o formato de um objeto válido sendo salvo da visualização de configuração de extensão. Como você é o desenvolvedor da visualização de configuração, é sua responsabilidade garantir que qualquer objeto de configuração salvo corresponda a esse esquema. Esse esquema também será usado para validação quando os usuários tentarem salvar dados usando os serviços da Experience Platform.<br><br>Este é um exemplo de objeto de esquema:
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -128,11 +128,11 @@ Uma definição de tipo é um objeto usado para descrever um evento, uma condiç
     </tr>
     <tr>
       <td><code>viewPath</code> <em>(Opcional)</em></td>
-      <td>O URL relativo da visualização do tipo. Deve ser relativo a <code>viewBasePath</code> e não deve começar com uma barra. Ele deve fazer referência a um arquivo HTML com uma extensão <code>.html</code>. Strings de consulta e identificadores de fragmento (hashes) são aceitáveis. Se o módulo de biblioteca do seu tipo não usar nenhuma configuração de um usuário, você poderá excluir essa propriedade, e o Platform exibirá um espaço reservado informando que nenhuma configuração é necessária.</td>
+      <td>O URL relativo da visualização do tipo. Deve ser relativo a <code>viewBasePath</code> e não deve começar com uma barra. Ele deve fazer referência a um arquivo HTML com uma extensão <code>.html</code>. Strings de consulta e identificadores de fragmento (hashes) são aceitáveis. Se o módulo de biblioteca do seu tipo não usar nenhuma configuração de um usuário, você poderá excluir essa propriedade, e o Experience Platform exibirá um espaço reservado informando que nenhuma configuração é necessária.</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Um objeto de <a href="https://json-schema.org/">Esquema JSON</a> descrevendo o formato de um objeto de configurações válido que pode ser salvo pelo usuário. Normalmente, as configurações são definidas e salvas por um usuário por meio da interface da Coleção de dados. Nesses casos, a visualização da extensão pode tomar as etapas necessárias para validar as configurações fornecidas pelo usuário. Por outro lado, alguns usuários optam por usar APIs de tags diretamente, sem a ajuda de qualquer interface do usuário. A finalidade desse esquema é permitir que o Platform valide adequadamente se os objetos de configurações salvos pelos usuários, independentemente de uma interface do usuário ser usada, estão em um formato compatível com o módulo da biblioteca que atuará sobre o objeto de configurações no tempo de execução.<br><br>Este é um exemplo de objeto de esquema:<br>
+      <td>Um objeto de <a href="https://json-schema.org/">Esquema JSON</a> descrevendo o formato de um objeto de configurações válido que pode ser salvo pelo usuário. Normalmente, as configurações são definidas e salvas por um usuário por meio da interface da Coleção de dados. Nesses casos, a visualização da extensão pode tomar as etapas necessárias para validar as configurações fornecidas pelo usuário. Por outro lado, alguns usuários optam por usar APIs de tags diretamente, sem a ajuda de qualquer interface do usuário. A finalidade desse esquema é permitir que o Experience Platform valide adequadamente se os objetos de configurações salvos pelos usuários, independentemente de uma interface do usuário ser usada, estão em um formato compatível com o módulo da biblioteca que atuará sobre o objeto de configurações no tempo de execução.<br><br>Este é um exemplo de objeto de esquema:<br>
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -160,9 +160,9 @@ Uma definição de tipo é um objeto usado para descrever um evento, uma condiç
 
 ### Transformações {#transforms}
 
-Para certos casos de uso, as extensões exigem que os objetos de configurações salvos de uma exibição sejam transformados pela Platform antes de serem emitidos para a biblioteca de tempo de execução da tag. Você pode solicitar que uma ou mais dessas transformações ocorram definindo a propriedade `transforms` ao definir uma definição de tipo dentro de `extension.json`. A propriedade `transforms` é uma matriz de objetos na qual cada objeto representa uma transformação que deve ocorrer.
+Para certos casos de uso específicos, as extensões precisam que os objetos de configuração salvos de uma visualização sejam transformados pela Experience Platform antes de serem emitidos para a biblioteca de tempo de execução da tag. Você pode solicitar que uma ou mais dessas transformações ocorram definindo a propriedade `transforms` ao definir uma definição de tipo dentro de `extension.json`. A propriedade `transforms` é uma matriz de objetos na qual cada objeto representa uma transformação que deve ocorrer.
 
-Todas as transformações exigem um `type` e um `propertyPath`. O `type` deve ser um dos seguintes `function`, `remove` e `file` e descreve qual transformação do Platform deve ser aplicada ao objeto de configurações. O `propertyPath` é uma string delimitada por ponto que indica às tags onde localizar a propriedade que precisa ser modificada no objeto de configurações. Este é um exemplo de objeto de configurações e alguns `propertyPath`s:
+Todas as transformações exigem um `type` e um `propertyPath`. O `type` deve ser um dos `function`, `remove` e `file` e descreve qual transformação do Experience Platform deve ser aplicada ao objeto de configurações. O `propertyPath` é uma string delimitada por ponto que indica às tags onde localizar a propriedade que precisa ser modificada no objeto de configurações. Este é um exemplo de objeto de configurações e alguns `propertyPath`s:
 
 ```js
 {
@@ -191,7 +191,7 @@ As seções abaixo descrevem as transformações disponíveis e como usá-las.
 
 #### Transformação de função
 
-A transformação de função permite que o código escrito pelos usuários da Platform seja executado por um módulo da biblioteca de tempo de execução da tag emitida.
+A transformação de função permite que o código escrito pelos usuários do Experience Platform seja executado por um módulo de biblioteca dentro da biblioteca de tempo de execução de tag emitida.
 
 Suponhamos que gostaríamos de fornecer um tipo de ação de &quot;script personalizado&quot;. A visualização de ação &quot;script personalizado&quot; pode fornecer uma área de texto na qual o usuário pode digitar algum código. Suponhamos que um usuário tenha inserido o seguinte código na área de texto:
 
@@ -211,7 +211,7 @@ Quando uma regra que usa nossa ação é acionada na biblioteca de tempo de exec
 
 No ponto em que o objeto de configurações é salvo da visualização do tipo de ação, o código do usuário é simplesmente uma string. Isso é bom porque pode ser serializado corretamente de e para JSON. No entanto, também é ruim porque, normalmente, seria emitido na biblioteca de tempo de execução de tags como uma string, em vez de uma função executável. Embora você possa tentar executar o código no módulo de biblioteca do tipo de ação usando [`eval`](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval) ou um [construtor de função](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function), isso é altamente desencorajado devido a [políticas de segurança de conteúdo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CSP) que potencialmente bloqueiam a execução.
 
-Como solução alternativa para essa situação, o uso da transformação de função instrui a Platform a envolver o código do usuário em uma função executável quando ele é emitido na biblioteca de tempo de execução de tags. Para resolver nosso problema de exemplo, definimos a transformação na definição de tipo em `extension.json` da seguinte forma:
+Como solução alternativa para essa situação, o uso da transformação de função instrui o Experience Platform a envolver o código do usuário em uma função executável quando ele for emitido na biblioteca de tempo de execução de tags. Para resolver nosso problema de exemplo, definimos a transformação na definição de tipo em `extension.json` da seguinte forma:
 
 ```json
 {
@@ -226,7 +226,7 @@ Como solução alternativa para essa situação, o uso da transformação de fun
 ```
 
 * `type` define o tipo de transformação que deve ser aplicado ao objeto de configurações.
-* `propertyPath` é uma string delimitada por período que informa ao Platform onde localizar a propriedade que precisa ser modificada dentro do objeto de configurações.
+* `propertyPath` é uma cadeia de caracteres delimitada por ponto que informa ao Experience Platform onde localizar a propriedade que precisa ser modificada dentro do objeto de configurações.
 * `parameters` é uma matriz de nomes de parâmetros que devem ser incluídos na assinatura da função de encapsulamento.
 
 Quando o objeto de configurações for emitido na biblioteca de tempo de execução de tags, ele será transformado no seguinte:
@@ -245,7 +245,7 @@ Seu módulo de biblioteca pode então chamar a função que contém o código do
 
 #### Transformação de arquivo
 
-A transformação de arquivo permite que o código escrito pelos usuários da Platform seja emitido em um arquivo separado da biblioteca de tempo de execução de tags. O arquivo será hospedado com a biblioteca de tempo de execução de tags e poderá ser carregado conforme necessário por sua extensão no tempo de execução.
+A transformação de arquivo permite que o código escrito pelos usuários do Experience Platform seja emitido em um arquivo separado da biblioteca de tempo de execução de tags. O arquivo será hospedado com a biblioteca de tempo de execução de tags e poderá ser carregado conforme necessário por sua extensão no tempo de execução.
 
 Suponhamos que gostaríamos de fornecer um tipo de ação de &quot;script personalizado&quot;. A visualização do tipo de ação pode fornecer uma área de texto na qual o usuário pode digitar algum código. Suponhamos que um usuário tenha inserido o seguinte código na área de texto:
 
@@ -275,7 +275,7 @@ Queremos que o código do usuário seja colocado em um arquivo separado em vez d
 ```
 
 * `type` define o tipo de transformação que deve ser aplicado ao objeto de configurações.
-* `propertyPath` é uma string delimitada por período que informa ao Platform onde localizar a propriedade que precisa ser modificada dentro do objeto de configurações.
+* `propertyPath` é uma cadeia de caracteres delimitada por ponto que informa ao Experience Platform onde localizar a propriedade que precisa ser modificada dentro do objeto de configurações.
 
 Quando o objeto de configurações for emitido na biblioteca de tempo de execução de tags, ele será transformado no seguinte:
 
@@ -321,7 +321,7 @@ Não queremos incluir a propriedade `bar` na biblioteca de tempo de execução d
 ```
 
 * `type` define o tipo de transformação que deve ser aplicado ao objeto de configurações.
-* `propertyPath` é uma string delimitada por período que informa ao Platform onde localizar a propriedade que precisa ser modificada dentro do objeto de configurações.
+* `propertyPath` é uma cadeia de caracteres delimitada por ponto que informa ao Experience Platform onde localizar a propriedade que precisa ser modificada dentro do objeto de configurações.
 
 Quando o objeto de configurações for emitido na biblioteca de tempo de execução de tags, ele será transformado no seguinte:
 

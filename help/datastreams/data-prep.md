@@ -2,16 +2,16 @@
 title: Preparo de dados para a coleção de dados
 description: Saiba como mapear seus dados para um esquema de evento do Experience Data Model (XDM) ao configurar uma sequência de dados para os SDKs da web e móvel da Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1199'
-ht-degree: 59%
+source-wordcount: '1203'
+ht-degree: 53%
 
 ---
 
 # Preparo de dados para a coleção de dados
 
-O Preparo de dados é um serviço da Adobe Experience Platform que permite mapear, transformar e validar dados de e para o [Experience Data Model (XDM)](../xdm/home.md). Ao configurar uma [sequência de dados](./overview.md) habilitada pela Platform, você pode usar os recursos do Preparo de dados para mapear os dados de origem no XDM durante o envio desses dados para a rede de borda da Platform.
+O Preparo de dados é um serviço da Adobe Experience Platform que permite mapear, transformar e validar dados de e para o [Experience Data Model (XDM)](../xdm/home.md). Ao configurar uma [sequência de dados](./overview.md) habilitada para Experience Platform, você pode usar os recursos de Preparo de Dados para mapear os dados de origem no XDM ao enviá-los para o Experience Platform Edge Network.
 
 Todos os dados enviados de uma página da Web devem chegar ao Experience Platform como XDM. Há três maneiras de traduzir dados de uma camada de dados na página para o XDM aceito pelo Experience Platform:
 
@@ -52,7 +52,7 @@ Para obter uma demonstração rápida do processo de preparo de dados para a col
 
 ## [!UICONTROL Selecionar dados] {#select-data}
 
-Selecione **[!UICONTROL Salvar e adicionar mapeamento]** após concluir a configuração básica de uma sequência de dados e a etapa **[!UICONTROL Selecionar dados]** será exibida. Aqui, você deve fornecer um objeto JSON de amostra que represente a estrutura dos dados que planeja enviar para a Platform.
+Selecione **[!UICONTROL Salvar e adicionar mapeamento]** após concluir a configuração básica de uma sequência de dados e a etapa **[!UICONTROL Selecionar dados]** será exibida. Aqui, você deve fornecer um objeto JSON de amostra que represente a estrutura dos dados que planeja enviar para o Experience Platform.
 
 Para capturar propriedades diretamente da camada de dados, o objeto JSON deve ter uma única propriedade raiz `data`. As subpropriedades do objeto `data` devem ser construídas de uma forma que mapeie para as propriedades da camada de dados que você deseja capturar. Selecione a seção abaixo para ver um exemplo de objeto JSON formatado corretamente com um objeto `data` raiz.
 
@@ -162,7 +162,7 @@ Você pode selecionar a opção para fazer upload do objeto como um arquivo ou c
 
 ## [!UICONTROL Mapeamento]
 
-A etapa **[!UICONTROL Mapeamento]** é exibida, permitindo mapear os campos nos dados de origem para o esquema de evento de público alvo na Platform. Aqui, é possível configurar o mapeamento de duas maneiras:
+A etapa **[!UICONTROL Mapeamento]** é exibida, permitindo mapear os campos nos dados de origem para aquele do esquema de evento de destino no Experience Platform. Aqui, é possível configurar o mapeamento de duas maneiras:
 
 * [Crie regras de mapeamento](#create-mapping) para esta sequência de dados por meio de um processo manual.
 * [Importar regras de mapeamento](#import-mapping) de uma sequência de dados existente.

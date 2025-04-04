@@ -1,27 +1,27 @@
 ---
-title: Gerenciar dados da plataforma usando Python e SQLAlchemy
-description: Saiba como usar o SQLAlchemy para gerenciar dados da Platform usando o Python em vez do SQL.
+title: Gerenciar dados do Experience Platform usando Python e SQLAlchemy
+description: Saiba como usar o SQLAlchemy para gerenciar dados do Experience Platform usando o Python em vez do SQL.
 exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
-source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
-# Gerenciar dados da Plataforma usando [!DNL Python] e [!DNL SQLAlchemy]
+# Gerenciar dados do Experience Platform usando [!DNL Python] e [!DNL SQLAlchemy]
 
 Saiba como usar o SQLAlchemy para maior flexibilidade no gerenciamento de dados do Adobe Experience Platform. Para aqueles que não estão tão familiarizados com o SQL, o SQLAlchemy pode melhorar muito o tempo de desenvolvimento ao trabalhar com bancos de dados relacionais. Este documento fornece instruções e exemplos para conectar o [!DNL SQLAlchemy] ao Serviço de Consulta e começar a usar o Python para interagir com seus bancos de dados.
 
-[!DNL SQLAlchemy] é um ORM (Object Relational Mapper) e uma biblioteca de códigos [!DNL Python] que pode transferir dados armazenados em um banco de dados SQL para objetos [!DNL Python]. Você pode executar operações CRUD em dados mantidos no data lake da Platform usando o código [!DNL Python]. Isso elimina a necessidade de gerenciar dados usando apenas o PSQL.
+[!DNL SQLAlchemy] é um ORM (Object Relational Mapper) e uma biblioteca de códigos [!DNL Python] que pode transferir dados armazenados em um banco de dados SQL para objetos [!DNL Python]. Você pode executar operações CRUD em dados mantidos no data lake da Experience Platform usando o código [!DNL Python]. Isso elimina a necessidade de gerenciar dados usando apenas o PSQL.
 
 ## Introdução
 
-Para adquirir as credenciais necessárias para conectar [!DNL SQLAlchemy] ao Experience Platform, você deve ter acesso ao espaço de trabalho de Consultas na interface do usuário da Platform. Entre em contato com o administrador da organização se não tiver acesso ao espaço de trabalho de Consultas.
+Para adquirir as credenciais necessárias para conectar [!DNL SQLAlchemy] ao Experience Platform, você deve ter acesso ao espaço de trabalho Consultas na interface do usuário do Experience Platform. Entre em contato com o administrador da organização se não tiver acesso ao espaço de trabalho de Consultas.
 
 ## [!DNL Query Service] credenciais {#credentials}
 
-Para encontrar suas credenciais, faça logon na interface do usuário da Platform e selecione **[!UICONTROL Consultas]** na navegação à esquerda, seguido de **[!UICONTROL Credenciais]**. Para obter instruções completas sobre como encontrar suas credenciais de logon, leia o [guia de credenciais](../ui/credentials.md).
+Para encontrar suas credenciais, faça logon na interface do usuário do Experience Platform e selecione **[!UICONTROL Consultas]** na navegação à esquerda, seguido de **[!UICONTROL Credenciais]**. Para obter instruções completas sobre como encontrar suas credenciais de logon, leia o [guia de credenciais](../ui/credentials.md).
 
 ![A guia Credencial com credenciais expirando para o Serviço de Consulta foi realçada.](../images/use-cases/credentials.png)
 
@@ -59,7 +59,7 @@ password = quote('''
 
 >[!NOTE]
 >
->A senha fornecida para conectar [!DNL SQLAlchemy] ao Experience Platform irá expirar se você usar credenciais que estão expirando. Consulte a [seção de credenciais](#credentials) para obter mais informações.
+>A senha fornecida para conectar o [!DNL SQLAlchemy] ao Experience Platform irá expirar se você usar credenciais que estão expirando. Consulte a [seção de credenciais](#credentials) para obter mais informações.
 
 ### Criar uma instância de mecanismo [#create-engine]
 
@@ -69,7 +69,7 @@ Depois que as variáveis forem criadas, importe a função `create_engine` e cri
 >
 >`create_engine`retorna uma instância de um mecanismo. No entanto, ela não abre a conexão com o Serviço de consulta até que uma consulta seja chamada e exija uma conexão.
 
-O SSL deve ser ativado ao acessar a Platform usando clientes de terceiros. Como parte do mecanismo, use o `connect_args` para inserir argumentos de palavra-chave adicionais. É recomendável definir o modo SSL como `require`. Consulte a [documentação sobre modos SSL](../clients/ssl-modes.md) para obter mais informações sobre valores aceitos.
+O SSL deve ser ativado ao acessar o Experience Platform usando clientes de terceiros. Como parte do mecanismo, use o `connect_args` para inserir argumentos de palavra-chave adicionais. É recomendável definir o modo SSL como `require`. Consulte a [documentação sobre modos SSL](../clients/ssl-modes.md) para obter mais informações sobre valores aceitos.
 
 O exemplo abaixo exibe o código [!DNL Python] necessário para inicializar um mecanismo e uma cadeia de conexão.
 
@@ -89,9 +89,9 @@ engine = create_engine(db_string, connect_args={'sslmode':'require'})
 
 >[!NOTE]
 >
->A senha fornecida para conectar [!DNL SQLAlchemy] ao Experience Platform irá expirar se você usar credenciais que estão expirando. Consulte a [seção de credenciais](#credentials) para obter mais informações.
+>A senha fornecida para conectar o [!DNL SQLAlchemy] ao Experience Platform irá expirar se você usar credenciais que estão expirando. Consulte a [seção de credenciais](#credentials) para obter mais informações.
 
-Agora você está pronto para consultar dados da Platform usando [!DNL Python]. O exemplo mostrado abaixo retorna uma matriz de nomes de tabela do Serviço de consulta.
+Agora você está pronto para consultar dados do Experience Platform usando o [!DNL Python]. O exemplo mostrado abaixo retorna uma matriz de nomes de tabela do Serviço de consulta.
 
 ```python
 from sqlalchemy import inspect

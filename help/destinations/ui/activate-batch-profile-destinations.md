@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4452'
+source-wordcount: '4454'
 ht-degree: 10%
 
 ---
@@ -64,7 +64,7 @@ Para selecionar os públicos que você deseja ativar para o destino, use as caix
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
 * **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
-* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience). A seleção de públicos originados de **[!UICONTROL Uploads personalizados]** habilita automaticamente a etapa [Selecionar atributos de enriquecimento](#select-enrichment-attributes).
+* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados no Experience Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience). A seleção de públicos originados de **[!UICONTROL Uploads personalizados]** habilita automaticamente a etapa [Selecionar atributos de enriquecimento](#select-enrichment-attributes).
 * Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
 
 >[!IMPORTANT]
@@ -133,7 +133,7 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç�
 
 2. Use o **[!UICONTROL Time]** para selecionar se a exportação deve ocorrer imediatamente após a avaliação do público-alvo ou de acordo com um agendamento, em um horário especificado. Ao selecionar a opção **[!UICONTROL Agendado]**, você pode usar o seletor para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 
-   Use a opção **[!UICONTROL Após avaliação de segmento]** para que o trabalho de ativação seja executado imediatamente após a conclusão diária do trabalho de segmentação em lote da Platform. Essa opção garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino. Isso pode resultar na exportação de um público-alvo várias vezes por dia, com base em suas ações.
+   Use a opção **[!UICONTROL Após avaliação de segmento]** para que o trabalho de ativação seja executado imediatamente após a conclusão diária do trabalho de segmentação em lote do Experience Platform. Essa opção garante que, quando o trabalho de ativação for executado, os perfis mais atualizados sejam exportados para o seu destino. Isso pode resultar na exportação de um público-alvo várias vezes por dia, com base em suas ações.
 
    >[!IMPORTANT]
    >
@@ -293,7 +293,7 @@ Nesta etapa, você deve selecionar os atributos de perfil que deseja adicionar a
 
 Um atributo obrigatório é uma caixa de seleção ativada pelo usuário que garante que todos os registros de perfil contenham o atributo selecionado. Por exemplo: todos os perfis exportados contêm um endereço de email.&#x200B;
 
-Você pode marcar atributos como obrigatórios para garantir que o [!DNL Platform] exporte apenas os perfis que incluem o atributo específico. Como resultado, pode ser usado como uma forma adicional de filtragem. É necessário marcar um atributo como obrigatório **não**.
+Você pode marcar atributos como obrigatórios para garantir que o [!DNL Experience Platform] exporte apenas os perfis que incluem o atributo específico. Como resultado, pode ser usado como uma forma adicional de filtragem. É necessário marcar um atributo como obrigatório **não**.
 
 Não selecionar um atributo obrigatório exporta todos os perfis qualificados, independentemente dos atributos.
 
@@ -310,7 +310,7 @@ Uma chave de desduplicação é uma chave primária definida pelo usuário que d
 
 As chaves de desduplicação eliminam a possibilidade de ter vários registros do mesmo perfil em um arquivo de exportação.
 
-Há três maneiras de usar chaves de desduplicação em [!DNL Platform]:
+Há três maneiras de usar chaves de desduplicação em [!DNL Experience Platform]:
 
 * Usando um único namespace de identidade como uma [!UICONTROL chave de desduplicação]
 * Usando um único atributo de perfil de um perfil [!DNL XDM] como uma [!UICONTROL chave de desduplicação]

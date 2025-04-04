@@ -2,9 +2,9 @@
 title: Assimilação sob demanda para fluxos de dados de origens na interface
 description: Saiba como criar fluxos de dados sob demanda para suas conexões de origem usando a interface do usuário do Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: 7a287c8de3c3fd0670cbdf29cd58558b30982122
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '549'
+source-wordcount: '552'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ As execuções de fluxo representam uma instância da execução do fluxo de dad
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Fluxos de dados](../../../dataflows/home.md): um fluxo de dados é uma representação de trabalhos de dados que movem dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para conjuntos de dados de destino, para o Serviço de identidade, o Perfil do cliente em tempo real e para Destinos.
-* [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Fluxos de dados](../../../dataflows/home.md): um fluxo de dados é uma representação de trabalhos de dados que movem dados pela Experience Platform. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para conjuntos de dados de destino, para o Serviço de identidade, o Perfil do cliente em tempo real e para Destinos.
+* [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ## Criar um fluxo de dados sob demanda {#create-a-dataflow-on-demand}
 

@@ -5,7 +5,7 @@ title: Mapear um arquivo CSV para um esquema XDM existente
 type: Tutorial
 description: Este tutorial aborda como mapear um arquivo CSV para um esquema XDM existente usando a interface do usuário do Adobe Experience Platform.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 1%
@@ -18,14 +18,14 @@ ht-degree: 1%
 >
 >Este documento aborda como mapear um arquivo CSV para um esquema XDM existente. Para obter informações sobre como usar a ferramenta de recomendação de esquema gerada por IA (atualmente na versão beta), consulte o documento sobre [mapeamento de um arquivo CSV usando recomendações de aprendizado de máquina](./recommendations.md).
 
-Para assimilar dados CSV em [!DNL Adobe Experience Platform], os dados devem ser mapeados para um esquema [!DNL Experience Data Model] (XDM). Este tutorial aborda como mapear um arquivo CSV para um esquema XDM usando a interface do usuário [!DNL Platform].
+Para assimilar dados CSV em [!DNL Adobe Experience Platform], os dados devem ser mapeados para um esquema [!DNL Experience Data Model] (XDM). Este tutorial aborda como mapear um arquivo CSV para um esquema XDM usando a interface do usuário [!DNL Experience Platform].
 
 ## Introdução
 
-Este tutorial requer entendimento prático dos seguintes componentes do [!DNL Platform]:
+Este tutorial requer entendimento prático dos seguintes componentes do [!DNL Experience Platform]:
 
-- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente.
-- [Assimilação em lote](../../batch-ingestion/overview.md): o método pelo qual [!DNL Platform] assimila dados de arquivos de dados fornecidos pelo usuário.
+- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [Assimilação em lote](../../batch-ingestion/overview.md): o método pelo qual [!DNL Experience Platform] assimila dados de arquivos de dados fornecidos pelo usuário.
 - [Preparo de dados do Adobe Experience Platform](../../batch-ingestion/overview.md): um conjunto de recursos que permitem mapear e transformar dados assimilados para estarem em conformidade com esquemas XDM. A documentação sobre [Funções de preparação de dados](../../../data-prep/functions.md) é particularmente relevante para o mapeamento de esquema.
 
 Este tutorial também requer que você já tenha criado um conjunto de dados para assimilar seus dados CSV no. Para obter etapas sobre como criar um conjunto de dados na interface, consulte o [tutorial de assimilação de dados](../ingest-batch-data.md).
@@ -64,7 +64,7 @@ A seção **[!UICONTROL Dados de amostra]** é exibida quando o arquivo é carre
 
 A etapa **[!UICONTROL Mapping]** é exibida. As colunas do arquivo CSV estão listadas em **[!UICONTROL Campo Source]**, com seus campos de esquema XDM correspondentes listados em **[!UICONTROL Campo Target]**.
 
-O [!DNL Platform] fornece automaticamente recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso.
+O [!DNL Experience Platform] fornece automaticamente recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso.
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
@@ -120,7 +120,7 @@ Depois que o arquivo CSV for mapeado e criado, você poderá monitorar os dados 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você mapeou com êxito um arquivo CSV simples para um esquema XDM e o assimilou em [!DNL Platform]. Esses dados agora podem ser usados por serviços [!DNL Platform] downstream, como [!DNL Real-Time Customer Profile]. Consulte a visão geral de [[!DNL Real-Time Customer Profile]](../../../profile/home.md) para obter mais informações.
+Ao seguir este tutorial, você mapeou com êxito um arquivo CSV simples para um esquema XDM e o assimilou em [!DNL Experience Platform]. Esses dados agora podem ser usados por serviços [!DNL Experience Platform] downstream, como [!DNL Real-Time Customer Profile]. Consulte a visão geral de [[!DNL Real-Time Customer Profile]](../../../profile/home.md) para obter mais informações.
 
 >[!TIP]
 >

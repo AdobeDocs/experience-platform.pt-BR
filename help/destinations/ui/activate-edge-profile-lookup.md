@@ -3,9 +3,9 @@ title: Pesquisar atributos de perfil de borda em tempo real
 description: Saiba como pesquisar atributos de perfil de borda em tempo real, usando o destino do Personalization personalizado e a API do Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1904'
+source-wordcount: '1907'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ Esta página descreve as etapas que você deve seguir para pesquisar dados do pe
 
 ## Terminologia e pré-requisitos {#prerequisites}
 
-Ao configurar o caso de uso descrito nesta página, você usará os seguintes componentes da plataforma:
+Ao configurar o caso de uso descrito nesta página, você usará os seguintes componentes do Experience Platform:
 
 * [Datastreams](../../datastreams/overview.md): uma sequência de dados recebe dados de evento do Web SDK e responde com dados de perfil de borda.
 * [Políticas de Mesclagem](../../segmentation/ui/segment-builder.md#merge-policies): você criará uma política de mesclagem do [!UICONTROL Ative-On-Edge] para garantir que os perfis de borda usem os dados de perfil corretos.
@@ -54,7 +54,7 @@ Siga as etapas na documentação da [configuração da sequência de dados](../.
     >
     >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-  ![Imagem da interface do usuário da plataforma mostrando a tela de configuração da sequência de dados.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+  ![Imagem da interface do Experience Platform mostrando a tela de configuração da sequência de dados.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Etapa 2: configurar os públicos-alvo para avaliação de borda {#audience-edge-evaluation}
@@ -110,7 +110,7 @@ Depois de criar uma conexão **[!UICONTROL Personalization Personalizada com Atr
    Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
    * **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
-   * **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados na Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/overview.md#import-audience).
+   * **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados no Experience Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/overview.md#import-audience).
    * Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
 
      ![Selecione a etapa de públicos do fluxo de trabalho de ativação com vários públicos realçados.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

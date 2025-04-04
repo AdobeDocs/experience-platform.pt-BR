@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução de problemas;API
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API
 title: Ponto de Extremidade da API de Políticas de Mesclagem
 type: Documentation
-description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
+description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que a Experience Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma visualização unificada.
 role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2465'
+source-wordcount: '2468'
 ht-degree: 2%
 
 ---
 
 # Ponto de acesso de políticas de mesclagem
 
-O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma exibição unificada.
+O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Experience Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma exibição unificada.
 
-Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparecem em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são mesclados para criar um único perfil para esse cliente. Quando os dados de várias origens entram em conflito (por exemplo, um fragmento lista o cliente como &quot;único&quot; enquanto o outro lista o cliente como &quot;casado&quot;), a política de mesclagem determina quais informações incluir no perfil do indivíduo.
+Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparecem em vários conjuntos de dados. Quando esses fragmentos são assimilados na Experience Platform, eles são mesclados para criar um único perfil para esse cliente. Quando os dados de várias origens entram em conflito (por exemplo, um fragmento lista o cliente como &quot;único&quot; enquanto o outro lista o cliente como &quot;casado&quot;), a política de mesclagem determina quais informações incluir no perfil do indivíduo.
 
 Usando APIs RESTful ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este guia fornece etapas para trabalhar com políticas de mesclagem usando a API.
 
-Para trabalhar com políticas de mesclagem usando a interface, consulte o [guia da interface de políticas de mesclagem](../merge-policies/ui-guide.md). Para saber mais sobre as políticas de mesclagem em geral e sua função no Experience Platform, comece lendo a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
+Para trabalhar com políticas de mesclagem usando a interface, consulte o [guia da interface de políticas de mesclagem](../merge-policies/ui-guide.md). Para saber mais sobre as políticas de mesclagem em geral e sua função na Experience Platform, comece lendo a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
 ## Introdução
 
@@ -28,7 +28,7 @@ O ponto de extremidade de API usado neste guia faz parte de [[!DNL Real-Time Cus
 
 ## Componentes das políticas de mesclagem {#components-of-merge-policies}
 
-As políticas de mesclagem são privadas para sua organização, permitindo criar políticas diferentes para mesclar esquemas das maneiras específicas necessárias. Qualquer API que acesse os dados [!DNL Profile] requer uma política de mesclagem, embora um padrão seja usado se um não for fornecido explicitamente. [!DNL Platform] fornece às organizações uma política de mesclagem padrão, ou você pode criar uma política de mesclagem para uma classe de esquema específica do Experience Data Model (XDM) e marcá-la como o padrão para sua organização.
+As políticas de mesclagem são privadas para sua organização, permitindo criar políticas diferentes para mesclar esquemas das maneiras específicas necessárias. Qualquer API que acesse os dados [!DNL Profile] requer uma política de mesclagem, embora um padrão seja usado se um não for fornecido explicitamente. [!DNL Experience Platform] fornece às organizações uma política de mesclagem padrão, ou você pode criar uma política de mesclagem para uma classe de esquema específica do Experience Data Model (XDM) e marcá-la como o padrão para sua organização.
 
 Embora cada organização possa ter várias políticas de mesclagem por classe de esquema, cada classe pode ter apenas uma política de mesclagem padrão. Qualquer política de mesclagem definida como padrão será usada nos casos em que o nome da classe de esquema for fornecido e uma política de mesclagem for necessária, mas não fornecida.
 
@@ -73,7 +73,7 @@ O objeto de política de mesclagem completo representa um conjunto de preferênc
 | `name` | Nome amigável pelo qual a política de mesclagem pode ser identificada nas exibições de lista. |
 | `imsOrgId` | ID da organização à qual essa política de mesclagem pertence |
 | `schema.name` | Parte do objeto [`schema`](#schema), o campo `name` contém a classe de esquema XDM à qual a política de mesclagem está relacionada. Para obter mais informações sobre esquemas e classes, leia a [documentação sobre XDM](../../xdm/home.md). |
-| `version` | [!DNL Platform] versão mantida da política de mesclagem. Esse valor somente leitura é incrementado sempre que uma política de mesclagem é atualizada. |
+| `version` | [!DNL Experience Platform] versão mantida da política de mesclagem. Esse valor somente leitura é incrementado sempre que uma política de mesclagem é atualizada. |
 | `identityGraph` | Objeto [Gráfico de identidade](#identity-graph) indicando o gráfico de identidade a partir do qual as identidades relacionadas serão obtidas. Os fragmentos de perfil encontrados para todas as identidades relacionadas serão mesclados. |
 | `attributeMerge` | Objeto [Mesclagem de atributos](#attribute-merge) indicando a maneira pela qual a política de mesclagem priorizará os atributos de perfil em caso de conflitos de dados. |
 | `isActiveOnEdge` | Valor booliano que indica se essa política de mesclagem pode ser usada na borda. Por padrão, este valor é `false`. |
@@ -190,7 +190,7 @@ Onde o valor de `name` é o nome da classe XDM na qual se baseia o esquema assoc
     }
 ```
 
-Para saber mais sobre o XDM e trabalhar com esquemas no Experience Platform, comece lendo a [Visão geral do sistema XDM](../../xdm/home.md).
+Para saber mais sobre o XDM e trabalhar com esquemas no Experience Platform, comece lendo a [visão geral do Sistema XDM](../../xdm/home.md).
 
 ## Acessar políticas de mesclagem {#access-merge-policies}
 
@@ -283,7 +283,7 @@ curl -X POST \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o Status HTTP 207 (Vários status) e os detalhes das políticas de mesclagem cujas IDs foram fornecidas na solicitação POST.
+Uma resposta bem-sucedida retorna o Status HTTP 207 (Vários Status) e os detalhes das políticas de mesclagem cujas IDs foram fornecidas na solicitação POST.
 
 ```json
 { 
@@ -588,7 +588,7 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 |---|---|
-| `op` | Especifica a operação a ser executada. Exemplos de outras operações PATCH podem ser encontrados na [documentação de patch de JSON](https://datatracker.ietf.org/doc/html/rfc6902) |
+| `op` | Especifica a operação a ser executada. Exemplos de outras operações do PATCH podem ser encontrados na [documentação de patch de JSON](https://datatracker.ietf.org/doc/html/rfc6902) |
 | `path` | O caminho do campo a ser atualizado. Os valores aceitos são: &quot;/name&quot;, &quot;/identityGraph.type&quot;, &quot;/attributeMerge.type&quot;, &quot;/schema.name&quot;, &quot;/version&quot;, &quot;/default&quot;, &quot;/isActiveOnEdge&quot; |
 | `value` | O valor para o qual definir o campo especificado. |
 
@@ -762,6 +762,6 @@ Uma solicitação de exclusão bem-sucedida retorna o Status HTTP 200 (OK) e um 
 
 ## Próximas etapas
 
-Agora que você sabe como criar e configurar políticas de mesclagem para sua organização, é possível usá-las para ajustar a exibição de perfis de clientes na Platform e criar públicos a partir dos dados do [!DNL Real-Time Customer Profile].
+Agora que você sabe como criar e configurar políticas de mesclagem para sua organização, é possível usá-las para ajustar a exibição de perfis de clientes no Experience Platform e criar públicos a partir dos dados do [!DNL Real-Time Customer Profile].
 
 Consulte a [documentação do Serviço de segmentação do Adobe Experience Platform](../../segmentation/home.md) para começar a definir e trabalhar com públicos.

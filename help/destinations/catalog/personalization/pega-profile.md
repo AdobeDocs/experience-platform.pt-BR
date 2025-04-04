@@ -3,9 +3,9 @@ title: Conector do perfil Pega
 description: Use o Conector de perfil Pega para Amazon S3 no Adobe Experience Platform para exportar dados de perfil completos ou incrementais, ou ambos, para o armazenamento em nuvem do Amazon S3. No Pega Customer Decision Hub, os trabalhos de dados podem ser agendados na Designer de perfil do cliente para importar dados de perfil periodicamente do armazenamento do Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1116'
 ht-degree: 4%
 
 ---
@@ -39,8 +39,8 @@ Um profissional de marketing deseja dados de perfil atualizados do Adobe Experie
 Antes de usar este destino para exportar dados do Adobe Experience Platform e importar perfis para o [!DNL Pega Customer Decision Hub], verifique se você concluiu os seguintes pré-requisitos:
 
 * Configure o bucket [!DNL Amazon S3] e o caminho de pasta a ser usado para a exportação e importação de arquivos de dados.
-* Configure a chave de acesso [!DNL Amazon S3] e a chave secreta [!DNL Amazon S3]: em [!DNL Amazon S3], gere um par `access key - secret access key` para conceder à Platform acesso à sua conta [!DNL Amazon S3].
-* Para conectar e exportar dados com êxito para o local de armazenamento do [!DNL Amazon S3], crie um usuário do Identity and Access Management (IAM) para [!DNL Platform] no [!DNL Amazon S3] e atribua permissões como `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
+* Configure a chave de acesso [!DNL Amazon S3] e a chave secreta [!DNL Amazon S3]: em [!DNL Amazon S3], gere um par `access key - secret access key` para conceder ao Experience Platform acesso à sua conta [!DNL Amazon S3].
+* Para conectar e exportar dados com êxito para o local de armazenamento do [!DNL Amazon S3], crie um usuário do Identity and Access Management (IAM) para [!DNL Experience Platform] no [!DNL Amazon S3] e atribua permissões como `s3:DeleteObject`, `s3:GetBucketLocation`, `s3:GetObject`, `s3:ListBucket`, `s3:PutObject`, `s3:ListMultipartUploadParts`
 * Verifique se a instância do [!DNL Pega Customer Decision Hub] foi atualizada para a versão 8.8 ou superior.
 
 ## Identidades suportadas {#supported-identities}
@@ -117,10 +117,10 @@ Na etapa **[!UICONTROL Mapeamento]**, você pode selecionar quais campos de atri
 
 ## Validar exportação de dados {#exported-data}
 
-Para destinos [!DNL Pega Profile Connector], o [!DNL Platform] cria um arquivo `.csv` no local de armazenamento Amazon S3 fornecido por você. Para obter mais informações sobre os arquivos, consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) no tutorial de ativação de público-alvo.
+Para destinos [!DNL Pega Profile Connector], o [!DNL Experience Platform] cria um arquivo `.csv` no local de armazenamento Amazon S3 fornecido por você. Para obter mais informações sobre os arquivos, consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) no tutorial de ativação de público-alvo.
 
 Uma importação bem-sucedida de dados de perfil do S3 insere dados no armazenamento de dados de perfil [!DNL Pega Customer]. Os dados importados do perfil do cliente podem ser validados em [!DNL Pega Customer Profile Designer], conforme mostrado na figura a seguir.
-![Imagem da tela da interface do usuário na qual você pode validar dados de perfil do Adobe no Designer de Perfil do Cliente](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
+![Imagem da tela da interface do usuário na qual você pode validar os dados de perfil do Adobe no Designer de Perfil do Cliente](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
 No [!DNL Pega Customer Decision Hub], os administradores de dados podem configurar trabalhos de dados no [!DNL Customer Profile Designer] para importar dados de perfil periodicamente do S3, conforme mostrado na figura a seguir. Consulte os [recursos adicionais](#additional-resources) para obter mais informações sobre como configurar trabalhos de dados para importar dados de perfil de [!DNL Amazon S3].
 ![Imagem da tela da interface do usuário para configurar trabalhos de dados no Designer de Perfil do Cliente](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)

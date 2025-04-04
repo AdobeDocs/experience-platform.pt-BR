@@ -1,13 +1,13 @@
 ---
 title: Notas de versão da Adobe Experience Platform de novembro de 2020
-description: As notas de versão de novembro de 2020 para Adobe Experience Platform.
+description: As notas de versão de novembro de 2020 da Adobe Experience Platform.
 doc-type: release notes
 last-update: November 10, 2020
 author: crhoades, ens25212
 exl-id: 29179b56-e49a-44e8-8c64-a7c383c2eaaf
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2176'
+source-wordcount: '2178'
 ht-degree: 8%
 
 ---
@@ -34,46 +34,46 @@ Atualizações dos recursos existentes:
 
 ## Migração para o Adobe Experience Platform Data Lake {#migration}
 
-Enquanto o Adobe está migrando o Data Lake de Gen1 para Gen2, os usuários poderão ler a partir do Data Lake, mas todos os recursos que gravam no Data Lake serão afetados. O Adobe entrará em contato com os administradores do sistema para discutir o impacto da migração em detalhes e confirmar as datas e horas da migração para organizações específicas.
+Enquanto a Adobe está migrando o Data Lake de Gen1 para Gen2, os usuários poderão ler a partir do Data Lake, mas todos os recursos que gravam no Data Lake serão afetados. A Adobe entrará em contato com os administradores do sistema para discutir o impacto da migração em detalhes e confirmar as datas e horas da migração para organizações específicas.
 
 Para obter mais informações, leia o [guia de migração do Data Lake](../../landing/adls2-gen2-migration.md).
 
 ## [!DNL Access control] {#access-control}
 
-[!DNL Experience Platform] aproveita perfis de produto do [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e sandboxes. As permissões controlam o acesso a uma variedade de recursos da Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
+[!DNL Experience Platform] aproveita perfis de produto do [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e sandboxes. As permissões controlam o acesso a vários recursos do Experience Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Permissões | No [!DNL Admin Console], a guia em um perfil de produto do [!DNL Platform] permite personalizar quais recursos do [!DNL Platform] estão disponíveis para os usuários anexados a esse perfil. As categorias de permissão disponíveis são: **[!UICONTROL Modelagem de Dados]**, **[!UICONTROL Gerenciamento de Dados]**, **[!UICONTROL Gerenciamento de Perfis]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Monitoramento de Dados]**, **[!UICONTROL Administração de Sandbox]**, **[!UICONTROL Destinos]**, **[!UICONTROL Assimilação de Dados]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Serviço de Consulta]** e **[!UICONTROL Governança de Dados]**. |
-| Acesso a sandboxes | A guia **[!UICONTROL Permissões]** em um perfil de produto [!DNL Platform] pode conceder aos usuários acesso a sandboxes específicas. Consulte a seção sobre [sandboxes](#sandboxes) abaixo para obter mais informações. |
+| Permissões | No [!DNL Admin Console], a guia em um perfil de produto [!DNL Experience Platform] permite personalizar quais recursos do [!DNL Experience Platform] estão disponíveis para os usuários anexados a esse perfil. As categorias de permissão disponíveis são: **[!UICONTROL Modelagem de Dados]**, **[!UICONTROL Gerenciamento de Dados]**, **[!UICONTROL Gerenciamento de Perfis]**, **[!UICONTROL Identity Management]**, **[!UICONTROL Monitoramento de Dados]**, **[!UICONTROL Administração de Sandbox]**, **[!UICONTROL Destinos]**, **[!UICONTROL Assimilação de Dados]**, **[!UICONTROL Data Science Workspace]**, **[!UICONTROL Serviço de Consulta]** e **[!UICONTROL Governança de Dados]**. |
+| Acesso a sandboxes | A guia **[!UICONTROL Permissões]** em um perfil de produto [!DNL Experience Platform] pode conceder aos usuários acesso a sandboxes específicas. Consulte a seção sobre [sandboxes](#sandboxes) abaixo para obter mais informações. |
 
 Para obter mais informações, consulte a [visão geral do controle de acesso](../../access-control/home.md).
 
 ## [!DNL Offer Decisioning] {#offer-decisioning}
 
-[!DNL Offer Decisioning] é um Serviço de Aplicativo integrado a [!DNL Experience Platform]. Ele permite que você use o [!DNL Platform] para fornecer a melhor oferta e experiência aos seus clientes em todos os pontos de contato na hora certa.
+[!DNL Offer Decisioning] é um Serviço de Aplicativo integrado a [!DNL Experience Platform]. Ele permite que você use o [!DNL Experience Platform] para fornecer a melhor oferta e experiência aos seus clientes em todos os pontos de contato na hora certa.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Biblioteca de ofertas centralizada | A interface em que você cria e gerencia os diferentes elementos que compõem suas ofertas e define suas regras e restrições. |
-| Mecanismo do Offer Decisioning | O mecanismo do Offer Decision aproveita os dados do [!DNL Platform] e o [!DNL Real-Time Customer Profiles], juntamente com a Biblioteca de ofertas, para selecionar o momento, os clientes e os canais certos aos quais as ofertas serão entregues. |
+| Mecanismo do Offer Decisioning | O mecanismo do Offer Decision aproveita os dados do [!DNL Experience Platform] e o [!DNL Real-Time Customer Profiles], juntamente com a Biblioteca de ofertas, para selecionar o momento, os clientes e os canais certos aos quais as ofertas serão entregues. |
 
 Para obter mais informações, consulte a documentação de [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=pt-BR).
 
 ## [!DNL Sandboxes] {#sandboxes}
 
-O [!DNL Experience Platform] foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, o [!DNL Experience Platform] fornece sandboxes que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+O [!DNL Experience Platform] foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, o [!DNL Experience Platform] fornece sandboxes que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Sandbox de produção | [!DNL Experience Platform] fornece uma única sandbox de produção, que não pode ser excluída ou redefinida. O número total de sandboxes disponíveis, produção e não produção, é determinado pela licença adquirida. |
-| Sandboxes de não produção | Várias sandboxes de não produção podem ser criadas para uma única instância do [!DNL Platform], permitindo que você teste recursos, execute experimentos e faça configurações personalizadas sem afetar a sandbox de produção. |
+| Sandboxes de não produção | Várias sandboxes de não produção podem ser criadas para uma única instância do [!DNL Experience Platform], permitindo que você teste recursos, execute experimentos e faça configurações personalizadas sem afetar a sandbox de produção. |
 | Seletor de sandbox | Na interface do usuário do [!DNL Experience Platform], o alternador de sandbox no canto superior esquerdo da tela permite alternar entre sandboxes disponíveis em um menu suspenso. O alternador de sandbox também fornece uma função de pesquisa que permite filtrar pelas sandboxes disponíveis. |
 | Cabeçalho `x-sandbox-name` | Todas as chamadas a APIs [!DNL Experience Platform] agora devem incluir o novo cabeçalho `x-sandbox-name`, cujo valor faz referência ao atributo `name` da sandbox em que a operação ocorrerá. |
 
@@ -106,7 +106,7 @@ Para obter mais informações, leia o documento sobre [Criação de uma fórmula
 
 ## Serviço [!DNL Destinations] {#destinations}
 
-No [Real-time Customer Data Platform](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam dados para esses parceiros de forma contínua.
+No [Real-Time Customer Data Platform](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam dados para esses parceiros de forma contínua.
 
 **Novos destinos**
 
@@ -135,31 +135,31 @@ Os Serviços inteligentes capacitam analistas e profissionais de marketing a apr
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Conjunto de dados de Eventos de experiência do consumidor (CEE) | A criação de um conjunto de dados CEE agora permite adicionar campos de identidade ao conjunto de dados com o Editor de esquemas. O Attribution AI e a IA do cliente usam a identidade principal para combinar eventos. |
+| Conjunto de dados de Eventos de experiência do consumidor (CEE) | A criação de um conjunto de dados CEE agora permite adicionar campos de identidade ao conjunto de dados com o Editor de esquemas. A IA de atribuição e a IA do cliente usam a identidade principal para combinar eventos. |
 
 Para obter mais informações, leia a seção sobre [adição de campos de identidade a um conjunto de dados](../../intelligent-services/data-preparation.md#add-identity-fields-to-the-dataset) no guia de preparação de dados dos Serviços inteligentes.
 
 ### IA de atribuição
 
-O Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribuição de vários canais e algoritmos que calcula a influência e o impacto incremental das interações com o cliente em relação aos resultados especificados.
+A IA de atribuição, como parte dos Serviços inteligentes, é um serviço de atribuição de vários canais e algoritmos que calcula a influência e o impacto incremental das interações com o cliente em relação aos resultados especificados.
 
 **Principais recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Link da fonte de dados | O link para a origem do conjunto de dados original pode ser visualizado e navegado para o a partir do painel direito de uma instância de serviço selecionada. |
-| Editar nome da instância | Agora você pode modificar o nome de uma instância do Attribution AI existente. |
+| Editar nome da instância | Agora você pode modificar o nome de uma instância existente da IA de atribuição. |
 | Clonar instância | Copia a configuração da instância de serviço selecionada no momento e permite modificações. |
-| Modificar parâmetros de configuração da instância | Agora é possível modificar a configuração de uma instância do Attribution AI existente se ela ainda não tiver começado a pontuar. |
-| Pontuação única | Agora você pode acionar a pontuação do modelo ad-hoc em suas instâncias do Attribution AI. |
+| Modificar parâmetros de configuração da instância | Agora é possível modificar a configuração de uma instância existente da IA de atribuição se ela ainda não tiver começado a pontuar. |
+| Pontuação única | Agora você pode acionar a pontuação do modelo ad-hoc nas instâncias da IA de atribuição. |
 | Passar pelas colunas | Agora é possível configurar colunas adicionais que serão adicionadas aos arquivos de pontuação de saída bruta para adicionar dimensões extras às visualizações da ferramenta BI. |
-| Ativação e desativação de instâncias | Agora você pode ativar e desativar o treinamento e a pontuação programados do modelo de suas instâncias do Attribution AI. |
+| Ativação e desativação de instâncias | Agora você pode ativar e desativar o treinamento e a pontuação programados do modelo das instâncias da IA de atribuição. |
 | Rastreamento de direitos | Você pode encontrar o valor total dos insights de atribuição consumidos pela sua conta no container criar instância. |
 | Detalhamento do ponto de contato por posição | Um novo gráfico de insights que fornece uma análise de pontos de contato por posições de caminho de conversão. |
 | Principais caminhos de conversão | Um novo gráfico de insights localizado na guia Análise de caminho. O gráfico contém uma lista dos cinco principais caminhos de conversão mostrando a sequência de pontos de contato do canal de marketing que levou ao maior número de conversões. |
 | Eficácia do ponto de contato | Fornece insights detalhados das três variáveis mais importantes pelas quais seu modelo avalia a eficácia do ponto de contato. As variáveis são a proporção de caminhos positivos e negativos tocados, a eficiência do ponto de contato e o volume do ponto de contato. |
 
-Para obter mais informações, leia a [visão geral do Attribution AI](../../intelligent-services/attribution-ai/overview.md).
+Para obter mais informações, leia a [visão geral da IA de atribuição](../../intelligent-services/attribution-ai/overview.md).
 
 ### IA do cliente
 
@@ -187,14 +187,14 @@ A Adobe Experience Platform permite gerar experiências coordenadas, consistente
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Fluxo de trabalho de políticas de mesclagem atualizado | A Platform atualizou a configuração da política de mesclagem para um novo fluxo de trabalho em etapas. Esse fluxo de trabalho permite que os usuários reúnam fragmentos de dados de vários conjuntos de dados do Perfil e definam a prioridade de como os dados são mesclados nesses conjuntos de dados para criar uma visualização abrangente de cada indivíduo. Os usuários podem mesclar conjuntos de dados selecionados do Perfil individual XDM selecionando o método de mesclagem apropriado (carimbo de data e hora ordenado ou precedência do conjunto de dados) e anexando conjuntos de dados ExperienceEvent aos conjuntos de dados do Perfil. |
-| Visualização do esquema de união | Na interface do usuário do Experience Platform, os usuários podem encontrar mais facilmente informações sobre todos os esquemas e conjuntos de dados que contribuem para o esquema de união, bem como destacar atributos-chave, como campos de identidade e relacionamento. Essas atualizações melhoram a capacidade de solucionar problemas e validar se os perfis estão configurados corretamente, se as identidades estão compiladas corretamente e se os dados foram assimilados com êxito. |
+| Fluxo de trabalho de políticas de mesclagem atualizado | A Experience Platform atualizou a configuração da política de mesclagem para um novo fluxo de trabalho em etapas. Esse fluxo de trabalho permite que os usuários reúnam fragmentos de dados de vários conjuntos de dados do Perfil e definam a prioridade de como os dados são mesclados nesses conjuntos de dados para criar uma visualização abrangente de cada indivíduo. Os usuários podem mesclar conjuntos de dados selecionados do Perfil individual XDM selecionando o método de mesclagem apropriado (carimbo de data e hora ordenado ou precedência do conjunto de dados) e anexando conjuntos de dados ExperienceEvent aos conjuntos de dados do Perfil. |
+| Visualização do esquema de união | Na interface do usuário do Experience Platform, os usuários podem encontrar mais facilmente informações sobre todos os esquemas e conjuntos de dados que contribuem para o esquema de união, bem como atributos de chave de superfície, como campos de identidade e relacionamento. Essas atualizações melhoram a capacidade de solucionar problemas e validar se os perfis estão configurados corretamente, se as identidades estão compiladas corretamente e se os dados foram assimilados com êxito. |
 
 Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados do [!DNL Profile], leia a [Visão geral do Perfil do cliente em tempo real](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Experience Platform]. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
 O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
@@ -213,7 +213,7 @@ O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário
 | Mapeamento hierárquico | Você pode visualizar um arquivo de origem hierárquico, como JSON ou Parquet, durante o processo de assimilação de dados. Consulte o tutorial sobre [configuração de fluxo de dados para conectores de armazenamento em nuvem na interface](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obter mais informações. |
 | Suporte de API para mapeamento em fontes de transmissão | Agora você pode usar APIs para executar funções de mapeamento com fontes de transmissão. |
 | Suporte à API para delimitadores personalizados para fontes de armazenamento em nuvem | Agora é possível coletar arquivos não delimitados por CSV usando fontes de armazenamento na nuvem. É possível usar qualquer delimitador de coluna única, como tabulação, vírgula, barra vertical, ponto e vírgula ou hash, para coletar arquivos simples em qualquer formato. |
-| Suporte à sandbox para o conector do Adobe Audience Manager | O conector Audience Manager agora é sensível à sandbox. Os usuários podem permitir que o conector roteie conjuntos de dados de Audience Manager para a sandbox de sua escolha (incluindo sandboxes de não produção). A configuração é limitada a uma sandbox por organização. |
+| Suporte à sandbox para o conector do Adobe Audience Manager | O conector do Audience Manager agora é sensível à sandbox. Os usuários podem permitir que o conector roteie conjuntos de dados do Audience Manager para a sandbox de sua escolha (incluindo sandboxes de não produção). A configuração é limitada a uma sandbox por organização. |
 | Melhorias de UX | A assimilação baseada em arquivo agora pode ser acessada por meio do catálogo de fontes. |
 
 Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).

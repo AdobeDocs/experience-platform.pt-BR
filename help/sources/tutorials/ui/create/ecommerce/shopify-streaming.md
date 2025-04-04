@@ -1,22 +1,22 @@
 ---
 title: Criar Uma Conexão De Transmissão E Um Fluxo De Dados Do Shopify Na Interface Do Usuário
-description: Saiba como criar uma conexão de origem e fluxo de dados de transmissão do Shopify usando a interface do usuário da Platform
+description: Saiba como criar uma conexão de origem e um fluxo de dados de transmissão do Shopify usando a interface do usuário do Experience Platform
 badge: Beta
 exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
 
 # Criar uma conexão de origem e um fluxo de dados para dados do [!DNL Shopify Streaming] usando a interface
 
-Este tutorial fornece etapas para criar uma conexão de origem e um fluxo de dados do [!DNL Shopify Streaming] usando a interface do usuário da Platform.
+Este tutorial fornece etapas para criar uma conexão de origem e um fluxo de dados do [!DNL Shopify Streaming] usando a interface do usuário do Experience Platform.
 
 ## Introdução {#getting-started}
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -29,17 +29,17 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 
 ## Conectar sua conta do [!DNL Shopify Streaming]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Na categoria **comércio eletrônico**, selecione [!DNL Shopify Streaming] e **[!UICONTROL Adicionar dados]**.
 
-![O catálogo de fontes de Experience Platform](../../../../images/tutorials/create/shopify-streaming/catalog.png)
+![O catálogo de fontes do Experience Platform](../../../../images/tutorials/create/shopify-streaming/catalog.png)
 
 ## Selecionar dados
 
-A etapa **[!UICONTROL Selecionar dados]** é exibida, fornecendo uma interface para que você selecione os dados que trará para a Platform.
+A etapa **[!UICONTROL Selecionar dados]** é exibida, fornecendo uma interface para que você selecione os dados que trará para a Experience Platform.
 
 * A parte esquerda da interface é um navegador que permite visualizar os fluxos de dados disponíveis em sua conta;
 * A parte direita da interface permite visualizar até 100 linhas de dados de um arquivo JSON.
@@ -66,7 +66,7 @@ Quando terminar, selecione **[!UICONTROL Próximo]**.
 
 A etapa [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Depois que os dados de origem forem mapeados com êxito, selecione **[!UICONTROL Próximo]**.
 

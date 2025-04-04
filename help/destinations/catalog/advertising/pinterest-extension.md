@@ -1,10 +1,10 @@
 ---
-title: Extensão de rastreamento de conversão do pinterest
+title: Extensão de rastreamento de conversão do Pinterest
 description: A extensão de rastreamento de conversão do Pinterest é um destino de anúncio no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: c2a78f79-99c8-4aca-892e-fb40f9281f2d
-source-git-commit: 0d0f1afcc1cc259d3f3feae2584329ef030f1902
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '457'
 ht-degree: 3%
 
 ---
@@ -15,15 +15,15 @@ ht-degree: 3%
 
 Acompanhe as ações do visitante em seu site após as visualizações do Pin promovido. Meça o retorno do investimento em anúncios e crie públicos-alvo direcionados. Saiba mais [aqui](https://ads.pinterest.com/).
 
-[!DNL Pinterest Conversion Tracking] é uma extensão de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
+[!DNL Pinterest Conversion Tracking] é uma extensão de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
 
-Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
+Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
 ![Extensão de Rastreamento de Conversão do Pinterest](../../assets/catalog/advertising/pinterest/catalog.png)
 
 ## Pré-requisitos {#prerequisites}
 
-Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Platform.
+Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
 Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
@@ -31,7 +31,7 @@ Para usar essa extensão, você precisa acessar as tags na Adobe Experience Plat
 
 Para instalar a extensão [!DNL Pinterest Conversion Tracking]:
 
-Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [interface do Experience Platform](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão no catálogo ou use a barra de pesquisa.
 
@@ -41,7 +41,7 @@ Selecione a propriedade na qual deseja instalar a extensão. Você também tem a
 
 O fluxo de trabalho o orienta pelas etapas necessárias para concluir a instalação.
 
-Para obter informações sobre as opções de configuração de extensão e suporte à instalação, consulte a [página Rastreamento de conversão de Pinterest no Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
+Para obter informações sobre as opções de configuração de extensão e suporte à instalação, consulte a [página Rastreamento de Conversão do Pinterest no Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
 
 Você também pode instalar a extensão diretamente na [Interface da Coleção de Dados](https://experience.adobe.com/#/data-collection/). Para obter mais informações, consulte a seção sobre [adição de uma nova extensão](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) na documentação das tags.
 
@@ -57,6 +57,6 @@ Você pode configurar regras para as extensões instaladas para enviar dados do 
 
 >[!TIP]
 >
->Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário da Platform ainda exibirá **[!UICONTROL Instalar]** para a extensão. Inicie o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para configurar ou excluir sua extensão.
+>Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário do Experience Platform ainda exibirá **[!UICONTROL Instalar]** para a extensão. Inicie o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para configurar ou excluir sua extensão.
 
 Para atualizar sua extensão, consulte o manual no [processo de atualização da extensão](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) na documentação das tags.

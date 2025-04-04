@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;início;tópicos populares;Serviço de consulta;serviço de consulta;Pesquisador;observador;conectar ao serviço de consulta;
+keywords: Experience Platform;página inicial;tópicos populares;Serviço de consulta;serviço de consulta;Pesquisador;observador;conectar ao serviço de consulta;
 solution: Experience Platform
 title: Conectar Pesquisador ao Serviço de Consulta
 description: Este documento aborda as etapas para conectar o Looker ao Serviço de consulta da Adobe Experience Platform.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: b059a0191fbf2c3e5d2dfceb9802e2aaa429f7ed
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '406'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ Aqui, insira os detalhes das configurações de conexão listadas abaixo. Consul
 - **[!DNL Username and Password]:** As credenciais de logon que serão usadas. O nome de usuário terá o formato de `ORG_ID@AdobeOrg`.
 - **SSL**: habilite o SSL para garantir uma conexão segura na rede.
 
-Para encontrar as credenciais necessárias para conectar o Looker ao Serviço de consulta, faça logon na interface do usuário da plataforma e selecione **[!UICONTROL Consultas]** na navegação à esquerda, seguido de **[!UICONTROL Credenciais]**. Para obter mais informações sobre como localizar suas credenciais de **host**, **porta**, **banco de dados**, **nome de usuário** e **senha**, leia o [guia de credenciais](../ui/credentials.md).
+Para localizar as credenciais necessárias para conectar o Looker ao Serviço de Consulta, faça logon na interface do usuário do Experience Platform e selecione **[!UICONTROL Consultas]** na navegação à esquerda, seguido de **[!UICONTROL Credenciais]**. Para obter mais informações sobre como localizar suas credenciais de **host**, **porta**, **banco de dados**, **nome de usuário** e **senha**, leia o [guia de credenciais](../ui/credentials.md).
 
-![A página Credenciais do espaço de trabalho Consultas do Experience Platform com as Credenciais e as Credenciais que Estão Expirando realçadas.](../images/clients/looker/query-service-credentials-page.png)
+![A página Credenciais do espaço de trabalho Consultas do Experience Platform com as Credenciais e as Credenciais que Estão Expirando foi realçada.](../images/clients/looker/query-service-credentials-page.png)
 
 >[!IMPORTANT]
 >

@@ -6,10 +6,10 @@ last-update: April 13, 2020
 author: ens71067
 keywords: Notas de versão;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '985'
-ht-degree: 15%
+ht-degree: 20%
 
 ---
 
@@ -46,7 +46,7 @@ Para obter mais informações sobre o [!DNL Intelligent Services] e o que ele te
 
 ## Sistema de [!DNL Experience Data Model] (XDM) {#xdm}
 
-A padronização e a interoperabilidade são os principais conceitos por trás do [!DNL Experience Platform]. O [!DNL Experience Data Model] (XDM), orientado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
+A padronização e a interoperabilidade são os principais conceitos por trás do [!DNL Experience Platform]. O [!DNL Experience Data Model] (XDM), orientado pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 
 O XDM é uma especificação documentada publicamente projetada para melhorar o potencial das experiências digitais. Ele fornece estruturas e definições comuns para que qualquer aplicativo se comunique com os serviços na Adobe Experience Platform. Seguindo os padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum, fornecendo insights de maneira mais rápida e integrada. Você pode obter insights valiosos sobre ações de clientes, definir públicos-alvo por meio de segmentos e usar atributos de clientes para fins de personalização.
 
@@ -89,7 +89,7 @@ Para obter mais informações, consulte a [visão geral sobre governança de dad
 
 ## Destinos {#destinations}
 
-No [Real-time Customer Data Platform](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam dados para esses parceiros de forma contínua.
+No [Real-Time Customer Data Platform](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam dados para esses parceiros de forma contínua.
 
 **Novos destinos**
 
@@ -98,7 +98,7 @@ O Real-Time CDP agora oferece suporte à ativação de dados para mais de cinque
 | Documentação | Descrição |
 |--- | ---|
 | [Tipos e categorias de destino](../../destinations/destination-types.md) | Este artigo explica a diferença entre conexões e extensões na interface do Real-Time CDP e recomenda quando usar cada um desses destinos. |
-| [extensões Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Esta página explica quais são as extensões do [!DNL Launch], lista os casos de uso para utilizá-las e fornece links para a documentação de cada extensão do [!DNL Launch] no Real-Time CDP. |
+| [Extensões do Experience Platform Launch](../../destinations/catalog/launch-extensions/overview.md) | Esta página explica quais são as extensões do [!DNL Launch], lista os casos de uso para utilizá-las e fornece links para a documentação de cada extensão do [!DNL Launch] no Real-Time CDP. |
 
 Para obter mais informações, consulte a [Visão geral dos Destinos](../../destinations/home.md).
 
@@ -110,19 +110,19 @@ As novas regulamentações legais e organizacionais dão aos usuários o direito
 
 | Recurso | Descrição |
 | --- | --- |
-| Suporte a PDPA | As solicitações de privacidade agora podem ser criadas e rastreadas de acordo com a Lei de Proteção de Dados Pessoais (PDPA) na Tailândia. Ao fazer solicitações de privacidade na API do, a matriz `regulation` aceita o valor &quot;pdpa_tha&quot;. |
-| Tipos de namespace na interface do | Agora você pode especificar diferentes tipos de namespace no Construtor de solicitações na interface do usuário do [!DNL Privacy Service]. Consulte o [guia do usuário](../../privacy-service/ui/user-guide.md) para obter mais informações. |
-| Descontinuação de ponto de extremidade antigo | O ponto de extremidade da API antiga (`data/privacy/gdpr`) foi descontinuado. |
+| Suporte a PDPA | As solicitações de privacidade agora podem ser criadas e rastreadas de acordo com a Lei de Proteção de Dados Pessoais (PDPA) na Tailândia. Ao criar solicitações de privacidade na API, a matriz `regulation` aceita o valor “pdpa_tha”. |
+| Tipos de namespace na interface | Agora é possível especificar diferentes tipos de namespace no criador de solicitações da interface do [!DNL Privacy Service]. Consulte o [Guia do usuário](../../privacy-service/ui/user-guide.md) para obter mais informações. |
+| Descontinuação do ponto de acesso antigo | O antigo ponto de acesso da API (`data/privacy/gdpr`) foi descontinuado. |
 
 Problemas conhecidos
 
 * None
 
-Para obter mais informações sobre [!DNL Privacy Service], comece lendo a [visão geral de Privacy Service](../../privacy-service/home.md).
+Para obter mais informações sobre [!DNL Privacy Service], comece lendo a [visão geral do Privacy Service](../../privacy-service/home.md).
 
 ## Origens {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Experience Platform]. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
 O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 

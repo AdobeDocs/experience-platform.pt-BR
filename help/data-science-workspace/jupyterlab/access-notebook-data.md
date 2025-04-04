@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;tópicos populares;%dataset;modo interativo;modo de lote;Spark sdk;python sdk;acessar dados;acesso a dados do bloco de anotações
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;tópicos populares;%dataset;modo interativo;modo em lote;Spark sdk;python sdk;acessar dados;acesso a dados do bloco de anotações
 solution: Experience Platform
 title: Acesso aos dados nos notebooks Jupyterlab
 description: Este guia tem como foco o uso do Jupyter Notebooks, integrado ao Data Science Workspace para acessar seus dados.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3343'
+source-wordcount: '3346'
 ht-degree: 3%
 
 ---
@@ -19,58 +19,58 @@ ht-degree: 3%
 >
 >Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
-Cada kernel suportado fornece funcionalidades integradas que permitem ler os dados da plataforma de um conjunto de dados em um notebook. Atualmente, o JupyterLab na Adobe Experience Platform Data Science Workspace oferece suporte a notebooks para [!DNL Python], R, PySpark e Scala. No entanto, o suporte para paginação de dados é limitado a [!DNL Python] notebooks R. Este guia foca em como usar notebooks JupyterLab para acessar seus dados.
+Cada kernel suportado fornece funcionalidades integradas que permitem ler os dados do Experience Platform de um conjunto de dados em um notebook. Atualmente, o JupyterLab na Adobe Experience Platform Data Science Workspace oferece suporte a notebooks para [!DNL Python], R, PySpark e Scala. No entanto, o suporte para dados de paginação é limitado a blocos de anotações do [!DNL Python] e R. Este guia tem como foco o uso de notebooks JupyterLab para acessar seus dados.
 
 ## Introdução
 
-Antes de ler este guia, revise o guia](./overview.md) de [[!DNL JupyterLab] usuário para obter uma introdução [!DNL JupyterLab] de alto nível e suas função no Data Science Área de trabalho.
+Antes de ler este guia, consulte o [[!DNL JupyterLab] guia do usuário](./overview.md) para obter uma introdução geral sobre o [!DNL JupyterLab] e sua função no Data Science Workspace.
 
-## Limites de dados de notebooks {#notebook-data-limits}
+## Limites de dados de notebook {#notebook-data-limits}
 
 >[!IMPORTANT]
 >
->Para notebooks PySpark e Scala se você estiver recebendo um erro com o motivo de &quot;Cliente de RPC remoto desassociado&quot;. Normalmente, isso significa que o driver ou um executor está ficando sem memória. Tente alternar para o modo [&quot;batch&quot;](#mode) para resolver esse erro.
+>Para notebooks PySpark e Scala, se você estiver recebendo um erro com o motivo &quot;Cliente RPC remoto desassociado&quot;. Normalmente, isso significa que o driver ou um executor está ficando sem memória. Tente alternar para o modo [&quot;batch&quot;](#mode) para resolver esse erro.
 
 As informações a seguir definem a quantidade máxima de dados que podem ser lidos, que tipo de dados foi usado e o período estimado para ler os dados.
 
 Para [!DNL Python] e R, um servidor notebook configurado com 40 GB de RAM foi usado para os benchmarks. Para o PySpark e Scala, um cluster de databricks configurado em 64 GB de RAM, 8 núcleos, 2 DBUs com um máximo de 4 trabalhadores foi usado para os benchmarks descritos abaixo.
 
-Os dados da ExperienceEvent schema usados variavam em tamanho, a partir de mil linhas (1K), variando de até um bilhão de linhas (1B). Observe que para as métricas PySpark e [!DNL Spark], um intervalo de data de 10 dias foi usado para os dados XDM.
+Os dados do esquema ExperienceEvent usados variaram em tamanho, começando em mil (1K) linhas, variando até um bilhão (1B) de linhas. Observe que para as métricas PySpark e [!DNL Spark], um intervalo de data de 10 dias foi usado para os dados XDM.
 
-Os dados do publicidade-hoc schema foram processados previamente usando [!DNL Query Service] Criar Tabela como Selecionada (CTAS). Esses dados também variavam em tamanho, começando de mil (1K) linhas que variam de até um bilhão de linhas (1B).
+Os dados do esquema ad-hoc foram pré-processados usando o [!DNL Query Service] Criar Tabela como Seleção (CTAS). Esses dados também variaram em tamanho, começando com mil (1K) linhas variando até um bilhão (1B) de linhas.
 
-### Quando usar o modo em lote vs modo interativo {#mode}
+### Quando usar o modo de lote vs. modo interativo {#mode}
 
-Ao ler conjuntos de dados com notebooks PySpark e Scala, você tem a opção de usar o modo interativo ou modo em lote para ler o conjunto de dados. A interativa é feita para resultados rápidos, enquanto o modo em lote é para conjuntos de dados grandes.
+Ao ler conjuntos de dados com notebooks PySpark e Scala, você tem a opção de usar o modo interativo ou o modo em lote para ler o conjunto de dados. Interativo é feito para resultados rápidos, enquanto o modo de lote é para conjuntos de dados grandes.
 
-- Para notebooks PySpark e Scala, o modo em lote deve ser usado quando 5 milhões de linhas de dados ou mais estiverem sendo lidas. Para obter mais informações sobre a eficiência de cada modo, consulte as tabelas de limite de dados do [PySpark](#pyspark-data-limits) ou [Scala](#scala-data-limits) abaixo.
+- Para notebooks PySpark e Scala, o modo de lote deve ser usado quando 5 milhões de linhas de dados ou mais estiverem sendo lidas. Para obter mais informações sobre a eficiência de cada modo, consulte as tabelas de limites de dados [PySpark](#pyspark-data-limits) ou [Scala](#scala-data-limits) abaixo.
 
-### [!DNL Python] limites de dados de notebooks
+### [!DNL Python] limites de dados do bloco de anotações
 
-**XDM ExperienceEvent schema:** você deve poder ler no máximo 2 milhões de linhas (~6,1 GB de dados em disco) de dados XDM em menos de 22 minutos. A adição de linhas adicionais pode resultar em erros.
+**Esquema XDM ExperienceEvent:** Você deve ser capaz de ler um máximo de 2 milhões de linhas (aproximadamente 6,1 GB de dados no disco) de dados XDM em menos de 22 minutos. A adição de linhas adicionais pode resultar em erros.
 
 | Número de linhas | 1K | 10 K | 100 mil | 1M | 2M |
 | ----------------------- | ------ | ------ | ----- | ----- | ----- |
 | Tamanho no disco (MB) | 18,73 | 187,5 | 308 | 3000 | 6050 |
 | SDK (em segundos) | 20,3 | 86,8 | 63 | 659 | 1315 |
 
-**publicidade-hoc schema:** é possível ler no máximo 5 milhões de linhas (~5,6 GB de dados em disco) de dados não XDM (publicidade-hoc) em menos de 14 minutos. A adição de linhas adicionais pode resultar em erros.
+**esquema ad-hoc:** Você deverá conseguir ler um máximo de 5 milhões de linhas (aproximadamente 5,6 GB de dados no disco) de dados não XDM (ad-hoc) em menos de 14 minutos. A adição de linhas adicionais pode resultar em erros.
 
 | Número de linhas | 1K | 10 K | 100 mil | 1M | 2M | 3M | 5M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
 | Tamanho no disco (em MB) | 1,21 | 11,72 | 115 | 1120 | 2250 | 3380 | 5630 |
 | SDK (em segundos) | 7,27 | 9,04 | 27,3 | 180 | 346 | 487 | 819 |
 
-### Limites de dados de notebook R
+### Limites de dados do bloco de anotações R
 
-**XDM ExperienceEvent schema:** você deve poder ler no máximo 1 milhão de linhas de dados XDM (dados de 3GB em disco) em menos de 13 minutos.
+**Esquema XDM ExperienceEvent:** Você deve ser capaz de ler no máximo 1 milhão de linhas de dados XDM (dados de 3 GB no disco) em menos de 13 minutos.
 
 | Número de linhas | 1K | 10 K | 100 mil | 1M |
 | ----------------------- | ------ | ------ | ----- | ----- |
 | Tamanho no disco (MB) | 18,73 | 187,5 | 308 | 3000 |
-| Espaçol R (em segundos) | 14,03 | 69,6 | 86,8 | 775 |
+| R Kernel (em segundos) | 14,03 | 69,6 | 86,8 | 775 |
 
-**publicidade-hoc schema:** você deve ser capaz de ler um máximo de 3 milhões de linhas de dados publicidade-hoc (dados de 293 MB em disco) em cerca de 10 minutos.
+**esquema ad-hoc:** Você deverá ler no máximo 3 milhões de linhas de dados ad-hoc (293 MB de dados no disco) em cerca de 10 minutos.
 
 | Número de linhas | 1K | 10 K | 100 mil | 1M | 2M | 3M |
 | ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
@@ -79,13 +79,13 @@ Ao ler conjuntos de dados com notebooks PySpark e Scala, você tem a opção de 
 
 ### Limites de dados de bloco de anotações do PySpark ([!DNL Python] kernel): {#pyspark-data-limits}
 
-**Esquema XDM ExperienceEvent:** No modo interativo, você deve ler um máximo de 5 milhões de linhas (aproximadamente 13,42 GB de dados no disco) de dados XDM em cerca de 20 minutos. O modo interativo suporta apenas até 5 milhões de linhas. Se você deseja ler conjuntos de dados maiores, sugere-se que você alterne para o modo em lote. No modo em lote, você deve poder ler no máximo 500 milhões de linhas (~1,31TB de dados em disco) de dados XDM em cerca de 14 horas.
+**Esquema XDM ExperienceEvent:** No modo interativo, você deve ler um máximo de 5 milhões de linhas (aproximadamente 13,42 GB de dados no disco) de dados XDM em cerca de 20 minutos. O modo interativo suporta apenas até 5 milhões de linhas. Se você quiser ler conjuntos de dados maiores, sugerimos mudar para o modo de lote. No modo de lote, você deve ser capaz de ler um máximo de 500 milhões de linhas (aproximadamente 1,31 TB de dados no disco) de dados XDM em cerca de 14 horas.
 
 | Número de linhas | 1K | 10 K | 100 mil | 1M | 2M | 3M | 5M | 10M | 50 M | 100M | 500 M |
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Tamanho no disco | 2,93 MB | 4,38 MB | 29,02 | 2,69GB | 5,39GB | 8,09GB | 13,42GB | 26,82GB | 134,24GB | 268,39GB | 1,31 TB |
-| SDK (Modo interativo) | 33s | 32,4s | 55,1s | 253,5s | 489,2s | 729,6s | 1206.8s | - | - | - | - |
-| SDK (Modo de lote) | 815,8s | 492,8s | 379.1s | 637,4s | 624,5s | 869,2s | 1104.1s | 1786 | 5387,2s | 10624.6s | 50547s |
+| SDK (modo interativo) | 33s | 32,4s | 55,1s | 253,5s | 489,2s | 729,6s | 1206.8s | - | - | - | - |
+| SDK (modo Lote) | 815,8s | 492,8s | 379.1s | 637,4s | 624,5s | 869,2s | 1104.1s | 1786 | 5387,2s | 10624.6s | 50547s |
 
 **esquema ad-hoc:** No modo Interativo, você poderá ler um máximo de 5 milhões de linhas (aproximadamente 5,36 GB de dados no disco) de dados não XDM em menos de 3 minutos. No modo de Lote, você deve ser capaz de ler no máximo 1 bilhão de linhas (aproximadamente 1,05 TB de dados no disco) de dados não XDM em cerca de 18 minutos.
 
@@ -93,11 +93,11 @@ Ao ler conjuntos de dados com notebooks PySpark e Scala, você tem a opção de 
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
 | Tamanho no disco | 1,12 MB | 11,24 MB | 109,48 MB | 2,69GB | 2,14GB | 3,21GB | 5,36GB | 10,71GB | 53,58GB | 107,52GB | 535,88GB | 1,05 TB |
 | Modo interativo do SDK (em segundos) | 28,2s | 18,6s | 20.8s | 20.9s | 23,8s | 21,7s | 24,7s | - | - | - | - | - |
-| Modo de Em lote do SDK (em segundos) | 428,8s | 578,8s | 641,4s | 538,5s | 630.9s | 467,3s | 411s | 675s | 702s | 719,2s | 1022.1s | 1122.3s |
+| Modo de lote do SDK (em segundos) | 428,8s | 578,8s | 641,4s | 538,5s | 630.9s | 467,3s | 411s | 675s | 702s | 719,2s | 1022.1s | 1122.3s |
 
-### [!DNL Spark] Limites de dados de notebook (Scala Kernel): {#scala-data-limits}
+### Limites de dados de bloco de anotações [!DNL Spark] (kernel Scala): {#scala-data-limits}
 
-**XDM ExperienceEvent schema:** No modo interativo, você deve poder ler no máximo 5 milhões de linhas (~13,42GB de dados em disco) de dados XDM em cerca de 18 minutos. O modo interativo suporta apenas até 5 milhões de linhas. Se você quiser ler conjuntos de dados maiores, sugerimos mudar para o modo de lote. No modo de lote, você deve ser capaz de ler um máximo de 500 milhões de linhas (aproximadamente 1,31 TB de dados no disco) de dados XDM em cerca de 14 horas.
+**Esquema XDM ExperienceEvent:** No modo interativo, você deve ler um máximo de 5 milhões de linhas (aproximadamente 13,42 GB de dados no disco) de dados XDM em cerca de 18 minutos. O modo interativo suporta apenas até 5 milhões de linhas. Se você quiser ler conjuntos de dados maiores, sugerimos mudar para o modo de lote. No modo de lote, você deve ser capaz de ler um máximo de 500 milhões de linhas (aproximadamente 1,31 TB de dados no disco) de dados XDM em cerca de 14 horas.
 
 | Número de linhas | 1K | 10 K | 100 mil | 1M | 2M | 3M | 5M | 10M | 50 M | 100M | 500 M |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
@@ -105,24 +105,24 @@ Ao ler conjuntos de dados com notebooks PySpark e Scala, você tem a opção de 
 | Modo interativo do SDK (em segundos) | 37,9s | 22,7s | 45,6s | 231,7s | 444,7s | 660,6s | 1100s | - | - | - | - |
 | Modo de lote do SDK (em segundos) | 374,4s | 398,5s | 527s | 487,9s | 588,9s | 829s | 939.1s | 1441s | 5473,2s | 10118,8 | 49207,6 |
 
-**publicidade-hoc schema:** no modo interativo, você deve poder ler no máximo 5 milhões de linhas (~5,36GB de dados em disco) de dados não XDM em menos de 3 minutos. No modo de lote, você deve ser capaz de ler no máximo 1 bilhão de linhas (aproximadamente 1,05 TB de dados no disco) de dados não XDM em cerca de 16 minutos.
+**esquema ad-hoc:** No modo interativo, você poderá ler um máximo de 5 milhões de linhas (aproximadamente 5,36 GB de dados no disco) de dados não XDM em menos de 3 minutos. No modo de lote, você deve ser capaz de ler no máximo 1 bilhão de linhas (aproximadamente 1,05 TB de dados no disco) de dados não XDM em cerca de 16 minutos.
 
 | Número de linhas | 1K | 10 K | 100 mil | 1M | 2M | 3M | 5M | 10M | 50 M | 100M | 500 M | 1B |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
 | Tamanho no disco | 1,12 MB | 11,24 MB | 109,48 MB | 2,69GB | 2,14GB | 3,21GB | 5,36GB | 10,71GB | 53,58GB | 107,52GB | 535,88GB | 1,05 TB |
-| Modo interativo SDK (em segundos) | 35,7s | 31s | 19,5s | 25,3s | 23s | 33,2s | 25,5s | - | - | - | - | - |
+| Modo interativo do SDK (em segundos) | 35,7s | 31s | 19,5s | 25,3s | 23s | 33,2s | 25,5s | - | - | - | - | - |
 | Modo de lote do SDK (em segundos) | 448,8s | 459,7s | 519s | 475,8s | 599,9s | 347,6s | 407,8s | 397s | 518,8s | 487,9s | 760.2s | 975,4s |
 
 ## Blocos de anotações Python {#python-notebook}
 
-Os blocos de anotações do [!DNL Python] permitem que você pagine dados ao acessar conjuntos de dados. A amostra de código para ler dados com e sem paginação é demonstrada abaixo. Para obter mais informações sobre os notebooks Python de entrada disponíveis, visita a [[!DNL JupyterLab] seção Inicializador](./overview.md#launcher) no guia de usuário JupyterLab.
+Os blocos de anotações do [!DNL Python] permitem que você pagine dados ao acessar conjuntos de dados. A amostra de código para ler dados com e sem paginação é demonstrada abaixo. Para obter mais informações sobre os notebooks Python iniciais disponíveis, visite a seção [[!DNL JupyterLab] Iniciador](./overview.md#launcher) no guia do usuário do JupyterLab.
 
-A documentação Python abaixo descreve os seguintes conceitos:
+A documentação do Python abaixo descreve os seguintes conceitos:
 
-- [Leitura de um conjunto de dados](#python-read-dataset)
-- [Gravar em uma conjunto de dados](#write-python)
+- [Ler de um conjunto de dados](#python-read-dataset)
+- [Gravar em um conjunto de dados](#write-python)
 - [Dados de consulta](#query-data-python)
-- [Filtrar dados do ExperienceEvent](#python-filter)
+- [Filtrar dados ExperienceEvent](#python-filter)
 
 ### Ler de um conjunto de dados no Python {#python-read-dataset}
 
@@ -141,7 +141,7 @@ df.head()
 
 **Com paginação:**
 
-A execução do código a seguir lerá os dados do conjunto de dados especificado. A paginação é alcançada limitando e compensando dados por meio das funções `limit()` e `offset()` respectivamente. A limitação de dados refere-se ao número máximo de pontos de dados a serem lidos, enquanto o deslocamento refere-se ao número de pontos de dados a serem ignorados antes da leitura dos dados. Se a operação de leitura for executada com sucesso, os dados serão salvos como um período de dados pandas referenciado pelo variável `df`.
+A execução do código a seguir lerá os dados do conjunto de dados especificado. A paginação é alcançada limitando e deslocando dados através das funções `limit()` e `offset()` respectivamente. A limitação de dados refere-se ao número máximo de pontos de dados a serem lidos, enquanto a compensação se refere ao número de pontos de dados a serem ignorados antes da leitura dos dados. Se a operação de leitura for executada com êxito, os dados serão salvos como um quadro de dados Pandas referenciado pela variável `df`.
 
 ```python
 # Python
@@ -152,9 +152,9 @@ dataset_reader = DatasetReader(get_platform_sdk_client_context(), dataset_id="{D
 df = dataset_reader.limit(100).offset(10).read()
 ```
 
-### Gravar em um conjunto de dados em Python {#write-python}
+### Gravar em um conjunto de dados no Python {#write-python}
 
-Em solicitar escrever em um conjunto de dados em seu notebook JupyterLab, selecione o ícone de dados guia (destacado abaixo) no navegação esquerdo do JupyterLab. Os **[!UICONTROL diretórios Conjuntos]** de dados e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Conjuntos]** de dados e clique com o botão direito do mouse e selecione a opção **[!UICONTROL Gravar dados no notebook]** no menu suspenso na conjunto de dados que deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
+Para gravar em um conjunto de dados no notebook JupyterLab, selecione a guia Data icon (destacada abaixo) na navegação à esquerda do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Conjuntos de Dados]**, clique com o botão direito do mouse e selecione a opção **[!UICONTROL Gravar Dados no Bloco de Anotações]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
@@ -175,7 +175,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 ### Consultar dados usando [!DNL Query Service] em [!DNL Python] {#query-data-python}
 
-[!DNL JupyterLab] em [!DNL Platform] permite que você use o SQL em um bloco de anotações [!DNL Python] para acessar dados por meio do [Serviço de Consulta Adobe Experience Platform](https://www.adobe.com/go/query-service-home-en). O acesso aos dados por meio do [!DNL Query Service] pode ser útil para lidar com grandes conjuntos de dados devido aos seus tempos de execução superiores. Observe que a consulta de dados usando o [!DNL Query Service] tem um limite de tempo de processamento de dez minutos.
+[!DNL JupyterLab] em [!DNL Experience Platform] permite que você use o SQL em um bloco de anotações [!DNL Python] para acessar dados por meio do [Serviço de Consulta Adobe Experience Platform](https://www.adobe.com/go/query-service-home-en). O acesso aos dados por meio do [!DNL Query Service] pode ser útil para lidar com grandes conjuntos de dados devido aos seus tempos de execução superiores. Observe que a consulta de dados usando o [!DNL Query Service] tem um limite de tempo de processamento de dez minutos.
 
 Antes de usar [!DNL Query Service] em [!DNL JupyterLab], verifique se você tem uma compreensão funcional da [[!DNL Query Service] sintaxe SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
@@ -290,12 +290,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Gravar em um conjunto de dados no R {#write-r}
 
-Para gravar em um conjunto de dados no notebook JupyterLab, selecione a guia Data icon (destacada abaixo) na navegação à esquerda do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Conjuntos de Dados]**, clique com o botão direito do mouse e selecione a opção **[!UICONTROL Gravar Dados no Bloco de Anotações]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável aparece na parte inferior do seu notebook.
+Para gravar em um conjunto de dados no notebook JupyterLab, selecione a guia Data icon (destacada abaixo) na navegação à esquerda do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Conjuntos de Dados]**, clique com o botão direito do mouse e selecione a opção **[!UICONTROL Gravar Dados no Bloco de Anotações]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- Use **[!UICONTROL dados de gravação em notebook]** para gerar uma célula de gravação com as conjunto de dados selecionadas.
-- Use **[!UICONTROL Explorar dados em notebook]** para gerar uma célula de leitura com as conjunto de dados selecionadas.
+- Use **[!UICONTROL Gravar Dados no Bloco de Anotações]** para gerar uma célula de gravação com o conjunto de dados selecionado.
+- Use o **[!UICONTROL Explorar Dados no Bloco de Anotações]** para gerar uma célula de leitura com o conjunto de dados selecionado.
 
 Como alternativa, você pode copiar e colar a seguinte célula de código:
 
@@ -306,21 +306,21 @@ dataset_writer <- psdk$dataset_writer$DatasetWriter(py$get_platform_sdk_client_c
 write_tracker <- dataset_writer$write(df, file_format='json')
 ```
 
-### [!DNL ExperienceEvent] dados do Filtrar {#r-filter}
+### Filtrar dados de [!DNL ExperienceEvent] {#r-filter}
 
-No solicitar para acessar e filtrar uma [!DNL ExperienceEvent] conjunto de dados em um notebook R, é necessário fornecer a ID do conjunto de dados (`{DATASET_ID}`) junto com as regras de filtragem que definem um intervalo de tempo específico usando operadores lógicos. Quando um intervalo de tempo é definido, qualquer paginação especificada é ignorada e todo o conjunto de dados é considerado.
+Para acessar e filtrar um conjunto de dados [!DNL ExperienceEvent] em um bloco de anotações R, você deve fornecer a ID do conjunto de dados (`{DATASET_ID}`) juntamente com as regras de filtro que definem um intervalo de tempo específico usando operadores lógicos. Quando um intervalo de tempo é definido, qualquer paginação especificada é ignorada e todo o conjunto de dados é considerado.
 
 Uma lista de operadores de filtragem é descrita abaixo:
 
 - `eq()`: Igual a
 - `gt()`: maior que
 - `ge()`: Maior que ou igual a
-- `lt()`: menor que
-- `le()`: menor que ou igual a
-- `And()`: operador AND lógico
-- `Or()`: operador OR lógico
+- `lt()`: Menor que
+- `le()`: Menor que ou igual a
+- `And()`: Operador AND lógico
+- `Or()`: Operador OR lógico
 
-A célula a seguir filtros um [!DNL ExperienceEvent] conjunto de dados aos dados existentes exclusivamente entre 1º de janeiro de 2019 e o final de 31 de dezembro de 2019.
+A célula a seguir filtra um conjunto de dados [!DNL ExperienceEvent] para dados existentes exclusivamente entre 1º de janeiro de 2019 e o final de 31 de dezembro de 2019.
 
 ```R
 # R
@@ -438,13 +438,13 @@ sample_df = df.sample(fraction)
 
 >[!TIP]
 >
->Também é possível especificar uma amostra de sementes opcional, como um booleano comReplacement, duplo fração ou uma semente longa.
+>Você também pode especificar uma amostra de seed opcional, como um booleano com Substituição, fração dupla ou uma seed longa.
 
-### [!DNL ExperienceEvent] dados do Filtrar {#pyspark-filter-experienceevent}
+### Filtrar dados de [!DNL ExperienceEvent] {#pyspark-filter-experienceevent}
 
-O acesso e a filtragem de uma [!DNL ExperienceEvent] conjunto de dados em um notebook PySpark exigem que você forneça a identidade conjunto de dados (`{DATASET_ID}`), a identidade IMS de sua organização e as regras de filtro que definem um intervalo de tempo específico. Um intervalo de tempo de filtragem é definido usando a função `spark.sql()`, onde o parâmetro da função é um sequência de consulta SQL.
+Para acessar e filtrar um conjunto de dados [!DNL ExperienceEvent] em um bloco de anotações do PySpark, é necessário fornecer a identidade do conjunto de dados (`{DATASET_ID}`), a identidade IMS da organização e as regras de filtro que definem um intervalo de tempo específico. Um intervalo de tempo de filtragem é definido com a função `spark.sql()`, na qual o parâmetro da função é uma cadeia de caracteres de consulta SQL.
 
-As células a seguir filtram uma [!DNL ExperienceEvent] conjunto de dados aos dados existentes exclusivamente entre 1º de janeiro de 2019 e o final de 31 de dezembro de 2019.
+As células a seguir filtram um conjunto de dados [!DNL ExperienceEvent] para dados existentes exclusivamente entre 1º de janeiro de 2019 e o final de 31 de dezembro de 2019.
 
 ```python
 # PySpark 3 (Spark 2.4)
@@ -466,17 +466,17 @@ timepd.show()
 
 ## Notebooks Scala {#scala-notebook}
 
-A documentação abaixo contém exemplos para os seguintes conceitos:
+A documentação abaixo contém exemplos dos seguintes conceitos:
 
 - [Inicializar sparkSession](#scala-initialize)
 - [Ler um conjunto de dados](#read-scala-dataset)
-- [Gravar em uma conjunto de dados](#scala-write-dataset)
-- [Criar um período de dados local](#scala-create-dataframe)
-- [Filtrar dados do ExperienceEvent](#scala-experienceevent)
+- [Gravar em um conjunto de dados](#scala-write-dataset)
+- [Criar um quadro de dados local](#scala-create-dataframe)
+- [Filtrar dados ExperienceEvent](#scala-experienceevent)
 
-### Inicialização do SparkSession {#scala-initialize}
+### Inicializando SparkSession {#scala-initialize}
 
-Todos os notebooks Scala exigem que você inicialize a sessão com o seguinte código estereoplicado:
+Todos os blocos de anotações Scala exigem que você inicialize a sessão com o seguinte código padrão:
 
 ```scala
 import org.apache.spark.sql.{ SparkSession }
@@ -488,7 +488,7 @@ val spark = SparkSession
 
 ### Ler um conjunto de dados {#read-scala-dataset}
 
-No Scala, você pode importar `clientContext` para obter e retornar valores da Platform, o que elimina a necessidade de definir variáveis como `var userToken`. No exemplo da Escala abaixo, `clientContext` é usado para obter e retornar todos os valores necessários para ler um conjunto de dados.
+No Scala, você pode importar `clientContext` para obter e retornar valores de Experience Platform. Isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo da Escala abaixo, `clientContext` é usado para obter e retornar todos os valores necessários para ler um conjunto de dados.
 
 >[!IMPORTANT]
 >
@@ -543,7 +543,7 @@ E
 
 ### Gravar em um conjunto de dados {#scala-write-dataset}
 
-No Scala, você pode importar `clientContext` para obter e retornar valores da Platform, o que elimina a necessidade de definir variáveis como `var userToken`. No exemplo de Escala abaixo, `clientContext` é usado para definir e retornar todos os valores necessários para gravar em um conjunto de dados.
+No Scala, você pode importar `clientContext` para obter e retornar valores de Experience Platform. Isso elimina a necessidade de definir variáveis como `var userToken`. No exemplo de Escala abaixo, `clientContext` é usado para definir e retornar todos os valores necessários para gravar em um conjunto de dados.
 
 >[!IMPORTANT]
 >
@@ -578,15 +578,15 @@ df1.write.format("com.adobe.platform.query")
 | user-token | O token do usuário que é buscado automaticamente usando o `clientContext.getUserToken()`. |
 | service-token | O token de serviço que é buscado automaticamente usando o `clientContext.getServiceToken()`. |
 | ims-org | A ID da organização que é buscada automaticamente usando o `clientContext.getOrgId()`. |
-| api-key | A chave de API que é buscada automaticamente usando `clientContext.getApiKey()`. |
+| api-key | A chave de API que é buscada automaticamente usando o `clientContext.getApiKey()`. |
 
 >[!TIP]
 >
->Revise as tabelas Scala na seção de limites](#notebook-data-limits) de dados do [notebook para determinar se `mode` deve ser definida `interactive` como ou`batch`.
+>Revise as tabelas Escala na seção [limites de dados de blocos de anotações](#notebook-data-limits) para determinar se `mode` deve ser definido como `interactive` ou `batch`.
 
-### criar um período de dados local {#scala-create-dataframe}
+### criar um quadro de dados local {#scala-create-dataframe}
 
-Para criar um período de dados local usando o Scala, são necessárias consultas SQL. Por exemplo:
+Para criar um quadro de dados local usando o Scala, são necessárias consultas SQL. Por exemplo:
 
 ```scala
 sparkdf.createOrReplaceTempView("sparkdf")
@@ -594,11 +594,11 @@ sparkdf.createOrReplaceTempView("sparkdf")
 val localdf = spark.sql("SELECT * FROM sparkdf LIMIT 1)
 ```
 
-### [!DNL ExperienceEvent] dados do Filtrar {#scala-experienceevent}
+### Filtrar dados de [!DNL ExperienceEvent] {#scala-experienceevent}
 
-O acesso e a filtragem de uma [!DNL ExperienceEvent] conjunto de dados em um notebook Scala exigem que você forneça a identidade conjunto de dados (`{DATASET_ID}`), a identidade IMS de sua organização e as regras de filtro que definem um intervalo de tempo específico. Um intervalo de tempo de Filtragem é definido usando a função `spark.sql()`, onde o parâmetro da função é um sequência de consulta SQL.
+Para acessar e filtrar um conjunto de dados [!DNL ExperienceEvent] em um bloco de anotações Scala, é necessário fornecer a identidade do conjunto de dados (`{DATASET_ID}`), a identidade IMS da sua organização e as regras de filtro que definem um intervalo de tempo específico. Um intervalo de tempo de Filtragem é definido com o uso da função `spark.sql()`, na qual o parâmetro da função é uma cadeia de caracteres de consulta SQL.
 
-As células a seguir filtram uma [!DNL ExperienceEvent] conjunto de dados aos dados existentes exclusivamente entre 1º de janeiro de 2019 e o final de 31 de dezembro de 2019.
+As células a seguir filtram um conjunto de dados [!DNL ExperienceEvent] para dados existentes exclusivamente entre 1º de janeiro de 2019 e o final de 31 de dezembro de 2019.
 
 ```scala
 // Spark (Spark 2.4)
@@ -641,15 +641,15 @@ timedf.show()
 
 ## Próximas etapas
 
-Esse documento as diretrizes gerais de acesso a conjuntos de dados utilizando notebooks JupyterLab. Para obter exemplos mais detalhados sobre query de conjuntos de dados, visita a documentação do [notebooks](./query-service.md) Query no JupyterLab. Para obter mais informações sobre como explorar e visualizar seus conjuntos de dados, visita o documento ao [analisar seus dados usando notebooks](./analyze-your-data.md).
+Esse documento abordou as diretrizes gerais para acessar conjuntos de dados usando notebooks JupyterLab. Para obter exemplos mais detalhados sobre consulta de conjuntos de dados, visite a documentação do [Serviço de consulta em notebooks JupyterLab](./query-service.md). Para obter mais informações sobre como explorar e visualizar seus conjuntos de dados, visite o documento em [analisando seus dados usando blocos de anotações](./analyze-your-data.md).
 
 ## Sinalizadores SQL opcionais para [!DNL Query Service] {#optional-sql-flags-for-query-service}
 
-Esta tabela descreve os sinalizadores SQL opcionais que podem ser usados [!DNL Query Service].
+Esta tabela descreve os sinalizadores SQL opcionais que podem ser usados para [!DNL Query Service].
 
-| **Bandeira** | **Descrição** |
+| **Sinalizador** | **Descrição** |
 | --- | --- |
 | `-h`, `--help` | Mostrar a mensagem de ajuda e sair. |
-| `-n`, `--notify` | Alternar opção para notificar query resultados. |
-| `-a`, `--async` | Usar essa sinalizador executa a query assíncrona e pode grátis o kernel enquanto o query está em execução. Tenha cuidado ao atribuir query resultados a variáveis, pois pode ser indefinido se a query não estiver concluída. |
-| `-d`, `--display` | Usar essa sinalizador impede que os resultados sejam exibidos. |
+| `-n`, `--notify` | Alternar opção para notificar resultados da consulta. |
+| `-a`, `--async` | O uso desse sinalizador executa a consulta de forma assíncrona e pode liberar o kernel enquanto a consulta é executada. Tenha cuidado ao atribuir resultados de consulta a variáveis, pois eles podem estar indefinidos se a consulta não estiver concluída. |
+| `-d`, `--display` | O uso desse sinalizador impede que os resultados sejam exibidos. |

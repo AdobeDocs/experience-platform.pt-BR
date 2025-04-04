@@ -3,9 +3,9 @@ keywords: Extensão de Tag de Conversão do Anunciante Awin;tag de conversão;Aw
 title: Extensão de tag de conversão do anunciante Awin
 description: A extensão de tag de conversão do anunciante Awin é um destino de anúncio no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 99feb169-acf3-4e68-8785-3f4cf565e5a9
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '499'
 ht-degree: 3%
 
 ---
@@ -16,23 +16,23 @@ ht-degree: 3%
 
 A tag de conversão é a declaração do objeto AWIN.Tracking.Sale do JavaScript, que é feita na página de confirmação para instruir a Mastertag de que uma conversão ocorreu. Em seguida, ele executará as solicitações de rastreamento necessárias.
 
-Awin Advertiser Conversion Tag é uma extensão de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
+Awin Advertiser Conversion Tag é uma extensão de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
-Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
+Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
 ![Extensão Conversiontag de Anunciante Awin na interface do usuário](../../assets/catalog/advertising/awin-conversion-tag/catalog.png)
 
 ## Pré-requisitos {#prerequisites}
 
-Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram o Platform.
+Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar tags na Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso aos recursos da Coleção de Dados na interface do usuário e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar as tags na Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso aos recursos da Coleção de Dados na interface do usuário e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 
 Para instalar a extensão [!DNL Awin Advertiser Conversion Tag]:
 
-Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [interface do Experience Platform](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão no catálogo ou use a barra de pesquisa.
 

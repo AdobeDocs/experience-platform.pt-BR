@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;local de dados;Local de dados;Gerenciamento de dados;gerenciamento de dados;Linhagem;linhagem;tipo de dados;tipos de dados;tipos de dados;tipo de dados
+keywords: Experience Platform;página inicial;tópicos populares;local de dados;Local de dados;Gerenciamento de dados;gerenciamento de dados;Linhagem;linhagem;tipo de dados;tipos de dados;tipos de dados;Tipo de dados
 solution: Experience Platform
 title: Visão geral dos conjuntos de dados
 description: Este documento fornece uma visão geral de alto nível dos conjuntos de dados na Experience Platform.
 user-guide-description: Obtenha uma visão geral de alto nível dos conjuntos de dados no Experience Platform com este guia. Saiba como criá-los, aplicar restrições aos dados e assimilar dados nos conjuntos de dados aqui.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '872'
 ht-degree: 6%
 
 ---
@@ -26,7 +26,7 @@ Consulte a [Visão geral do Serviço de Catálogo](../home.md) para obter mais i
 
 ## Imposição de restrições em dados do conjunto de dados
 
-O [!DNL Experience Data Model] (XDM) é a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente. Todos os dados assimilados em [!DNL Platform] devem estar em conformidade com um esquema XDM predefinido antes de serem mantidos em [!DNL Data Lake] como um conjunto de dados.
+O [!DNL Experience Data Model] (XDM) é a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente. Todos os dados assimilados em [!DNL Experience Platform] devem estar em conformidade com um esquema XDM predefinido antes de serem mantidos em [!DNL Data Lake] como um conjunto de dados.
 
 Todos os conjuntos de dados contêm uma referência ao esquema XDM que restringe o formato e a estrutura dos dados que eles podem armazenar. Tentar carregar dados para um conjunto de dados que não esteja em conformidade com o esquema XDM do conjunto de dados causará falha na assimilação.
 
@@ -34,7 +34,7 @@ Para obter mais informações sobre o XDM, consulte a [Visão geral do sistema X
 
 ## Assimilar dados em conjuntos de dados
 
-A Assimilação de dados do Adobe Experience Platform representa os vários métodos pelos quais o [!DNL Platform] assimila dados de várias fontes. Independentemente do método de assimilação, todos os dados assimilados com êxito são convertidos em arquivos em lote. Lotes são unidades de dados que consistem em um ou mais arquivos que serão assimilados como uma única unidade. Esses arquivos em lote são adicionados a conjuntos de dados dedicados e mantidos no [!DNL Data Lake].
+A Assimilação de dados do Adobe Experience Platform representa os vários métodos pelos quais o [!DNL Experience Platform] assimila dados de várias fontes. Independentemente do método de assimilação, todos os dados assimilados com êxito são convertidos em arquivos em lote. Lotes são unidades de dados que consistem em um ou mais arquivos que serão assimilados como uma única unidade. Esses arquivos em lote são adicionados a conjuntos de dados dedicados e mantidos no [!DNL Data Lake].
 
 Consulte a [Visão geral da assimilação de dados](../../ingestion/home.md) para obter mais informações.
 
@@ -44,16 +44,16 @@ O Adobe Experience Platform Data Governance permite gerenciar dados de clientes 
 
 >[!IMPORTANT]
 >
->Os rótulos não podem mais ser aplicados a campos no nível do conjunto de dados. Esse workflow foi substituído em favor da aplicação de rótulos no nível do schema. Quaisquer rótulos aplicados anteriormente no nível do objeto do conjunto de dados ainda serão compatíveis por meio da interface do usuário da plataforma até 31 de maio de 2024. Para garantir que seus rótulos sejam consistentes em todos os esquemas, todos os rótulos anteriormente anexados a campos no nível do conjunto de dados devem ser migrados para o nível do esquema por você no ano seguinte. Consulte a seção sobre [migrando rótulos aplicados anteriormente](../../data-governance/e2e.md#migrate-labels) para obter instruções sobre como fazer isso.
+>Os rótulos não podem mais ser aplicados a campos no nível do conjunto de dados. Esse workflow foi substituído em favor da aplicação de rótulos no nível do schema. Quaisquer rótulos aplicados anteriormente no nível do objeto do conjunto de dados ainda serão compatíveis por meio da interface do usuário do Experience Platform até 31 de maio de 2024. Para garantir que seus rótulos sejam consistentes em todos os esquemas, todos os rótulos anteriormente anexados a campos no nível do conjunto de dados devem ser migrados para o nível do esquema por você no ano seguinte. Consulte a seção sobre [migrando rótulos aplicados anteriormente](../../data-governance/e2e.md#migrate-labels) para obter instruções sobre como fazer isso.
 
-Consulte a [Visão geral da Governança de dados](../../data-governance/home.md) para obter mais informações sobre o serviço. Para as etapas sobre como trabalhar com rótulos de uso no [!DNL Platform], consulte os guias a seguir:
+Consulte a [Visão geral da Governança de dados](../../data-governance/home.md) para obter mais informações sobre o serviço. Para as etapas sobre como trabalhar com rótulos de uso no [!DNL Experience Platform], consulte os guias a seguir:
 
 * [Gerenciar rótulos na interface](../../data-governance/labels/user-guide.md)
 * [Gerenciar rótulos de conjunto de dados na API](../../data-governance/labels/dataset-api.md)
 
-## Conjuntos de dados nos serviços downstream [!DNL Platform]
+## Conjuntos de dados nos serviços downstream [!DNL Experience Platform]
 
-Depois que os conjuntos de dados forem usados para armazenar dados assimilados, eles serão usados pelos serviços downstream do [!DNL Platform] para atualizar perfis de clientes, obter insights por meio do aprendizado de máquina e muito mais.
+Depois que os conjuntos de dados forem usados para armazenar dados assimilados, eles serão usados pelos serviços downstream do [!DNL Experience Platform] para atualizar perfis de clientes, obter insights por meio do aprendizado de máquina e muito mais.
 
 Veja a seguir uma lista de serviços downstream que usam conjuntos de dados para várias operações. Consulte a documentação de cada serviço para obter mais informações.
 
@@ -67,6 +67,6 @@ Veja a seguir uma lista de serviços downstream que usam conjuntos de dados para
 
 ## Próximas etapas
 
-Ao ler este documento, você foi apresentado aos usos principais dos conjuntos de dados no [!DNL Experience Platform], bem como aos vários serviços do [!DNL Platform] que utilizam conjuntos de dados. Para obter mais detalhes sobre as várias formas de uso dos conjuntos de dados no [!DNL Platform], consulte a documentação do serviço vinculada a esta visão geral.
+Ao ler este documento, você foi apresentado aos usos principais dos conjuntos de dados no [!DNL Experience Platform], bem como aos vários serviços do [!DNL Experience Platform] que utilizam conjuntos de dados. Para obter mais detalhes sobre as várias formas de uso dos conjuntos de dados no [!DNL Experience Platform], consulte a documentação do serviço vinculada a esta visão geral.
 
 Para obter etapas sobre como interagir com conjuntos de dados na interface do [!DNL Experience Platform], consulte o [guia do usuário de conjuntos de dados](user-guide.md).

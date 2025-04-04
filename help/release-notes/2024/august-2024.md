@@ -2,10 +2,10 @@
 title: Notas de versão de agosto de 2024 da Adobe Experience Platform
 description: As notas de versão de agosto de 2024 da Adobe Experience Platform.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
-source-git-commit: 4fecb47084a522b4eb9808dc317e0d70e7ef42c6
-workflow-type: ht
-source-wordcount: '1562'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1565'
+ht-degree: 95%
 
 ---
 
@@ -29,9 +29,9 @@ Atualizações dos recursos existentes e da documentação na Experience Platfor
 
 ## Controle de acesso baseado em atributos {#abac}
 
-O controle de acesso baseado em atributos é um recurso da Adobe Experience Platform que oferece maior flexibilidade para gerenciar o acesso de usuários para marcas que valorizam a privacidade. É possível atribuir objetos individuais, como campos de esquema e segmentos, a funções de usuário. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Platform em sua organização.
+O controle de acesso baseado em atributos é um recurso da Adobe Experience Platform que oferece maior flexibilidade para gerenciar o acesso de usuários para marcas que valorizam a privacidade. É possível atribuir objetos individuais, como campos de esquema e segmentos, a funções de usuário. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Experience Platform em sua organização.
 
-Por meio do controle de acesso baseado em atributos, admins da organização podem controlar o acesso de usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e outros tipos personalizados de dados em todos os fluxos de trabalho e recursos da Platform. Admins podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
+Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e outros tipos personalizados de dados em todos os fluxos de trabalho e recursos da Experience Platform. Admins podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
 
 **Novo recurso**
 
@@ -96,7 +96,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema de XDM](../../xdm/home.md).
+Para obter mais informações sobre o XDM no Experience Platform, consulte a [visão geral do sistema XDM](../../xdm/home.md).
 
 ## Serviço de identidade {#identity-service}
 
@@ -114,7 +114,7 @@ Para obter mais informações sobre o Serviço de identidade, leia a [Visão ger
 
 ## Serviço de segmentação {#segmentation}
 
-O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
+O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Experience Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
 
 **Recursos atualizados**
 

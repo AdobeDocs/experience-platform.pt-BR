@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform; Serviço de consulta; Controle de acesso IP; autorização; API; introdução
+keywords: Experience Platform, Serviço de consulta, Controle de acesso IP, autorização, API, introdução
 title: Guia da API de autorização do Data Distiller
 description: Saiba como começar a usar restrições de autorização e intervalo de IP para obter acesso seguro a dados no Serviço de consulta da Adobe Experience Platform.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '510'
 ht-degree: 5%
 
 ---
@@ -27,7 +27,7 @@ As seções a seguir fornecem informações sobre como preparar os valores de au
 
 ### Permissões necessárias {#required-permissions}
 
-Para habilitar restrições de acesso seguro a dados no Serviço de Consulta, você precisa da permissão **[!UICONTROL Gerenciar Lista de permissões]**. Essa permissão permite que as organizações definam intervalos IP específicos (no formato IPv4 ou IPv6) autorizados a acessar dados na Platform por meio da interface SQL. O acesso é gerenciado no nível da sandbox, onde os usuários podem configurar uma lista de endereços IP aprovados ou blocos CIDR que restringem o acesso somente a redes permitidas.
+Para habilitar restrições de acesso seguro a dados no Serviço de Consulta, você precisa da permissão **[!UICONTROL Gerenciar Lista de permissões]**. Essa permissão permite que as organizações definam intervalos IP específicos (nos formatos IPv4 ou IPv6) autorizados a acessar dados no Experience Platform por meio da interface SQL. O acesso é gerenciado no nível da sandbox, onde os usuários podem configurar uma lista de endereços IP aprovados ou blocos CIDR que restringem o acesso somente a redes permitidas.
 
 >[!NOTE]
 >
@@ -35,13 +35,13 @@ Para habilitar restrições de acesso seguro a dados no Serviço de Consulta, vo
 
 As seguintes funcionalidades estão disponíveis com a permissão **[!UICONTROL Gerenciar Lista de permissões]**:
 
-- **Definir intervalos IP permitidos**: somente endereços IP ou blocos CIDR desses intervalos definidos podem acessar dados na Plataforma usando SQL pelo Serviço de Consulta.
+- **Definir intervalos IP permitidos**: somente endereços IP ou blocos CIDR desses intervalos definidos podem acessar dados no Experience Platform usando o SQL pelo Serviço de Consulta.
 - **Impor verificações de intervalo de IP**: as conexões de IPs fora dos intervalos permitidos são negadas.
 - **Recursos de auditoria e alerta**: todas as tentativas de acesso, incluindo conexões negadas, são registradas como eventos de auditoria. Esses eventos estão disponíveis nos [Logs de auditoria do Adobe Experience Platform](../../landing/governance-privacy-security/audit-logs/overview.md), permitindo o monitoramento de possíveis violações de segurança.
 
 ### Coletar valores para cabeçalhos necessários {#gather-values-for-required-headers}
 
-Para fazer chamadas para a API de autorização do Data Distiller, você deve concluir o [tutorial de autenticação da API da plataforma](../../landing/api-authentication.md), que fornece valores para os cabeçalhos necessários nas chamadas de API. Inclua os seguintes cabeçalhos em cada solicitação:
+Para fazer chamadas para a API de Autorização do Data Distiller, você deve concluir o [tutorial de autenticação da API do Experience Platform](../../landing/api-authentication.md), que fornece valores para os cabeçalhos necessários nas chamadas de API. Inclua os seguintes cabeçalhos em cada solicitação:
 
 - **Autorização**: `Bearer {ACCESS_TOKEN}`
 - **x-api-key**: `{API_KEY}`

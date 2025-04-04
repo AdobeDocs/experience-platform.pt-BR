@@ -2,9 +2,9 @@
 title: Práticas recomendadas para gerenciamento avançado do ciclo de vida dos dados
 description: Saiba como gerenciar com eficiência as solicitações de higiene de dados no Adobe Experience Platform usando a interface do usuário do gerenciamento avançado do ciclo de vida dos dados e a API de higiene de dados. Este guia aborda as práticas recomendadas, como maximizar identidades por solicitação, especificar conjuntos de dados individuais e estar atento à limitação da API para evitar lentidão. O documento inclui diretrizes para a configuração da limpeza automática do conjunto de dados, como monitorar os status das ordens de serviço e métodos detalhados de recuperação de resposta. Siga estas práticas para simplificar o processamento de solicitações e otimizar os tempos de resposta.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: 5174529d606ac0186ff3193790ada70a46c7e274
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ Configure a limpeza automática do conjunto de dados para dados de vida curta. U
 
 ## Monitorar status de expiração da ordem de trabalho e do conjunto de dados {#monitor}
 
-Você pode monitorar com eficiência o progresso do gerenciamento do ciclo de vida dos dados por meio do uso dos **Eventos de E/S**. Um Evento de E/S é um mecanismo para receber notificações em tempo real sobre alterações ou atualizações em vários serviços na Plataforma.
+Você pode monitorar com eficiência o progresso do gerenciamento do ciclo de vida dos dados por meio do uso dos **Eventos de E/S**. Um Evento de E/S é um mecanismo para receber notificações em tempo real sobre alterações ou atualizações em vários serviços na Experience Platform.
 
-Os alertas de Evento de E/S podem ser enviados para um webhook configurado para habilitar a automação do monitoramento de atividades. Para receber alertas via webhook, você deve registrar o webhook para alertas da Platform na Adobe Developer Console. Consulte o manual sobre [assinatura de notificações de Adobe I/O](../observability/alerts/subscribe.md) para obter instruções detalhadas.
+Os alertas de Evento de E/S podem ser enviados para um webhook configurado para habilitar a automação do monitoramento de atividades. Para receber alertas via webhook, você deve registrar o webhook para alertas do Experience Platform na Adobe Developer Console. Consulte o manual sobre [assinatura de notificações de eventos do Adobe I/O](../observability/alerts/subscribe.md) para obter instruções detalhadas.
 
 Use os seguintes métodos e diretrizes do ciclo de vida dos dados para recuperar e monitorar efetivamente os status dos trabalhos:
 

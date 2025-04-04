@@ -2,9 +2,9 @@
 title: Source da zona de aterrissagem de dados
 description: Saiba como conectar a Data Landing Zone ao Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1362'
+source-wordcount: '1366'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Esta página é específica para o conector de [!DNL Data Landing Zone] *origem* na Experience Platform. Para obter informações sobre como se conectar ao conector de [!DNL Data Landing Zone] *destino*, consulte a [[!DNL Data Landing Zone] página de documentação de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
-O [!DNL Data Landing Zone] é uma interface de armazenamento do [!DNL Azure Blob] provisionada pela Adobe Experience Platform, que concede a você acesso a um recurso de armazenamento de arquivos seguro e baseado em nuvem para trazer arquivos para a Platform. Você tem acesso a um contêiner [!DNL Data Landing Zone] por sandbox, e o volume total de dados em todos os contêineres é limitado ao total de dados fornecidos com sua licença de Produtos e Serviços da Plataforma. Todos os clientes do Experience Platform são provisionados com um contêiner de [!DNL Data Landing Zone] por sandbox. Você pode ler e gravar arquivos no seu contêiner por meio do [!DNL Azure Storage Explorer] ou da interface de linha de comando.
+O [!DNL Data Landing Zone] é uma interface de armazenamento do [!DNL Azure Blob] provisionada pela Adobe Experience Platform, que concede a você acesso a um recurso de armazenamento de arquivos seguro e baseado em nuvem para trazer arquivos para a Experience Platform. Você tem acesso a um [!DNL Data Landing Zone] contêiner por sandbox, e o volume total de dados em todos os contêineres é limitado ao total de dados fornecidos com sua licença de Produtos e Serviços da Experience Platform. Todos os clientes do Experience Platform são provisionados com um contêiner de [!DNL Data Landing Zone] por sandbox. Você pode ler e gravar arquivos no seu contêiner por meio do [!DNL Azure Storage Explorer] ou da interface de linha de comando.
 
 O [!DNL Data Landing Zone] oferece suporte à autenticação baseada em SAS e seus dados estão protegidos com mecanismos de segurança de armazenamento [!DNL Azure Blob] padrão em repouso e em trânsito. A autenticação baseada em SAS permite que você acesse com segurança o contêiner do [!DNL Data Landing Zone] por meio de uma conexão pública com a Internet. Não há alterações de rede necessárias para você acessar o contêiner [!DNL Data Landing Zone], o que significa que você não precisa definir nenhuma configuração de lista de permissões ou entre regiões para sua rede. O Experience Platform impõe um tempo de expiração rigoroso de sete dias em todos os arquivos e pastas carregados em um contêiner [!DNL Data Landing Zone]. Todos os arquivos e pastas são excluídos após sete dias.
 
@@ -54,7 +54,7 @@ Depois de selecionar seu método de conexão, você deve fornecer um **nome para
 
 >[!TIP]
 >
->Você pode recuperar suas credenciais do [!DNL Data Landing Zone] do catálogo de fontes na interface do usuário da plataforma.
+>Você pode recuperar suas credenciais do [!DNL Data Landing Zone] no catálogo de origens na interface do usuário do Experience Platform.
 
 Forneça a URL SAS do [!DNL Data Landing Zone] e selecione **Avançar**
 
@@ -318,6 +318,6 @@ A documentação abaixo fornece informações sobre como trazer dados do seu con
 
 ### Uso da interface
 
-- [Conectar [!DNL Data Landing Zone] à Plataforma usando a interface](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
+- [Conectar [!DNL Data Landing Zone] ao Experience Platform usando a interface](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Criar um fluxo de dados para uma conexão de armazenamento na nuvem na interface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
 

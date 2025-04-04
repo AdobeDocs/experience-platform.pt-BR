@@ -2,11 +2,11 @@
 keywords: email;Email;e-mail;destinos de e-mail;email;Email;e-mail;email destinations
 title: Visão geral dos destinos de marketing por email
 type: Tutorial
-description: Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. Saiba quais ESPs são compatíveis como destinos de Experience Platform.
+description: Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. Saiba quais ESPs são compatíveis como destinos do Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: 4566d5241f287801569e0cfa5b86ea6210fd1638
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 5%
 
 ---
@@ -35,13 +35,13 @@ O Adobe Experience Platform é compatível com os seguintes destinos de marketin
 
 ## Conectar-se a um novo destino de marketing por email {#connect-destination}
 
-Para enviar públicos-alvo para destinos de marketing por email de suas campanhas, a Platform deve primeiro se conectar ao destino. Consulte o [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre a configuração de um novo destino.
+Para enviar públicos-alvo para destinos de marketing por email de suas campanhas, o Experience Platform deve primeiro se conectar ao destino. Consulte o [tutorial de criação de destino](../../ui/connect-destination.md) para obter informações detalhadas sobre a configuração de um novo destino.
 
 ## Práticas recomendadas ao ativar públicos para destinos de marketing por email {#best-practices}
 
 ### Seleção de identidade {#identity}
 
-A Adobe recomenda que você selecione um identificador exclusivo do seu [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Este é o campo do qual suas identidades de usuário são destacadas. Normalmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seu campo XDM no esquema.
+A Adobe recomenda selecionar um identificador exclusivo do seu [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Este é o campo do qual suas identidades de usuário são destacadas. Normalmente, esse campo é o endereço de email, mas também pode ser uma ID de programa de fidelidade ou um número de telefone. Consulte a tabela abaixo para obter os identificadores exclusivos mais comuns e seu campo XDM no esquema.
 
 | Identificador exclusivo | Campo XDM no esquema unificado |
 |----------------- | ---------------------------|

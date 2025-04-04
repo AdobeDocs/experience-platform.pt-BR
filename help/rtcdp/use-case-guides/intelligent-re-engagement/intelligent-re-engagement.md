@@ -3,9 +3,9 @@ title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para engajar novamente clientes pouco frequentes de forma inteligente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3894'
+source-wordcount: '3896'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,7 @@ Reenvolva os clientes que abandonaram uma conversão de forma inteligente e resp
 
 Empregue considerações em tempo real, considere todas as qualidades e comportamentos do consumidor e ofereça requalificação rápida com base em eventos online e offline.
 
-Abaixo está uma visualização de arquitetura de alto nível dos vários componentes do Real-Time CDP e do Journey Optimizer. Este diagrama mostra como os dados fluem pelos dois aplicativos Experience Platform da coleta de dados até o ponto em que são ativados por meio de jornadas ou campanhas para destinos, a fim de alcançar o caso de uso descrito nesta página.
+Abaixo está uma visualização de arquitetura de alto nível dos vários componentes do Real-Time CDP e do Journey Optimizer. Este diagrama mostra como os dados fluem pelos dois aplicativos Experience Platform, da coleta de dados ao ponto em que são ativados por meio de jornadas ou campanhas para destinos, para obter o caso de uso descrito nesta página.
 
 ![Visão geral visual de alto nível de reengajamento inteligente.](../intelligent-re-engagement/images/step-by-step.png)
 
@@ -60,7 +60,7 @@ Abaixo está uma visão geral de alto nível dos três exemplos de cenários de 
 O cenário de navegação de produto abandonado segmenta a navegação de produto abandonada no site e no aplicativo móvel. Esse cenário é acionado quando um produto foi visualizado, mas não foi comprado ou adicionado ao carrinho. Neste exemplo, o engajamento da marca é acionado após três dias se não houver adições à lista nas últimas 24 horas.<p>![Visão geral visual de alto nível do cenário de navegação inteligente de produto abandonada do cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Visão geral visual de alto nível do cenário de navegação inteligente de produto abandonada do cliente."){width="1920" zoomable="yes"}</p>
 
 1. Crie esquemas e conjuntos de dados e habilite para [!UICONTROL Perfil].
-2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Analytics Source Connector também pode ser usado, mas pode resultar em latência de jornada.
+2. Você assimila dados na Experience Platform por meio da Web SDK, Mobile SDK ou API. O Analytics Source Connector também pode ser usado, mas pode resultar em latência de jornada.
 3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você compila públicos-alvo focalizados a partir da lista de perfis para verificar se um **cliente** fez um compromisso nos últimos três dias.
 5. Você cria uma jornada de pesquisa de produto abandonada em [!DNL Adobe Journey Optimizer].
@@ -72,7 +72,7 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
 O cenário de carrinho abandonado se aplica quando os produtos foram colocados no carrinho, mas ainda não foram comprados no site e no aplicativo móvel. Além disso, as campanhas de Mídia paga são iniciadas e interrompidas usando esse método.<p>![Visão geral visual de alto nível do cenário de carrinho abandonado pelo cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Visão geral visual de alto nível do cenário de carrinho abandonado pelo cliente."){width="1920" zoomable="yes"}</p>
 
 1. Você cria esquemas e conjuntos de dados, o habilitado para [!UICONTROL Perfil].
-2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Analytics Source Connector também pode ser usado, mas pode resultar em latência de jornada.
+2. Você assimila dados na Experience Platform por meio da Web SDK, Mobile SDK ou API. O Analytics Source Connector também pode ser usado, mas pode resultar em latência de jornada.
 3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você compila públicos-alvo focalizados a partir da lista de perfis para verificar se um **cliente** colocou um item no carrinho, mas não concluiu a compra. O evento **[!UICONTROL Adicionar ao carrinho]** aciona um temporizador que aguarda 30 minutos e verifica a compra. Se nenhuma compra for feita, o **cliente** será adicionado aos públicos-alvo do **[!UICONTROL Abandonar carrinho]**.
 5. Você cria uma jornada de carrinho abandonada em [!DNL Adobe Journey Optimizer].
@@ -84,7 +84,7 @@ O cenário de carrinho abandonado se aplica quando os produtos foram colocados n
 O cenário de confirmação de pedido se concentra nas compras de produtos feitas pelo site e pelo aplicativo móvel.<p>![Visão geral visual de alto nível do cenário de confirmação de pedido do cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Visão geral visual de alto nível do cenário de confirmação de pedido do cliente."){width="1920" zoomable="yes"}</p>
 
 1. Crie esquemas e conjuntos de dados e habilite para [!UICONTROL Perfil].
-2. Você assimila dados no Experience Platform via SDK da Web, SDK móvel ou API. O Analytics Source Connector também pode ser usado, mas pode resultar em latência de jornada.
+2. Você assimila dados na Experience Platform por meio da Web SDK, Mobile SDK ou API. O Analytics Source Connector também pode ser usado, mas pode resultar em latência de jornada.
 3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você cria uma jornada de confirmação em [!DNL Adobe Journey Optimizer].
 5. [!DNL Adobe Journey Optimizer] envia uma mensagem de confirmação de pedido usando o canal preferido.
@@ -147,7 +147,7 @@ Este grupo de campos permite testar sua jornada antes de ela ser publicada, usan
 
 #### Esquema de transações digitais do cliente
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no site ou nas plataformas digitais associadas. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] por meio do [SDK da Web](/help/web-sdk/home.md) e são necessários para fazer referência aos vários eventos de navegação e conversão usados para acionar jornadas, análises detalhadas online de clientes, recursos aprimorados de público-alvo e mensagens personalizadas.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no site ou nas plataformas digitais associadas. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] por meio do [Web SDK](/help/web-sdk/home.md) e são necessários para fazer referência aos vários eventos de navegação e conversão usados para acionar jornadas, análises detalhadas online de clientes, recursos aprimorados de público-alvo e mensagens personalizadas.
 
 O esquema de transações digitais do cliente é representado por uma classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md).
 
@@ -165,16 +165,16 @@ A classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md
 
 +++Detalhes da ID do usuário final (Grupo de campos)
 
-O grupo de campos [Detalhes da ID do Usuário Final](/help/xdm/field-groups/event/enduserids.md) é usado para descrever as informações de identidade de um indivíduo em vários aplicativos Adobe.
+O grupo de campos [Detalhes da ID do Usuário Final](/help/xdm/field-groups/event/enduserids.md) é usado para descrever as informações de identidade de um indivíduo em vários aplicativos da Adobe.
 
 | Campos | Descrição |
 | --- | --- |
 | `endUserIDs._experience.emailid.authenticatedState` | Estado autenticado da ID do endereço de email do usuário final. |
 | `endUserIDs._experience.emailid.id` | ID do endereço de email do usuário final. |
 | `endUserIDs._experience.emailid.namespace.code` | Código de namespace da ID do endereço de email do usuário final. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] estado autenticado da ID do Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] ID DO Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] código de namespace da ID de Marketing Cloud (MCID). |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Estado autenticado da Marketing Cloud ID (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] código de namespace da Marketing Cloud ID (MCID). |
 
 +++
 
@@ -205,7 +205,7 @@ Atributos de auditoria de sistema do Source externo é um tipo de dados padrão 
 
 #### Esquema de transações offline do cliente
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre em plataformas fora do site. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] a partir de um PDV (ou sistema semelhante) e, na maioria das vezes, são transmitidos para a Platform por meio de uma conexão de API. Seu objetivo é fazer referência aos vários eventos de conversão offline usados para acionar jornadas, análises profundas online e offline do cliente, recursos aprimorados de público-alvo e mensagens personalizadas.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre em plataformas fora do site. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] a partir de um PDV (ou sistema semelhante) e, na maioria das vezes, são transmitidos para o Experience Platform por meio de uma conexão de API. Seu objetivo é fazer referência aos vários eventos de conversão offline usados para acionar jornadas, análises profundas online e offline do cliente, recursos aprimorados de público-alvo e mensagens personalizadas.
 
 O esquema de transações offline do cliente é representado por uma classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md).
 
@@ -257,13 +257,13 @@ Atributos de auditoria de sistema do Source externo é um tipo de dados padrão 
 
 +++
 
-#### Esquema do conector web do Adobe
+#### Esquema do Adobe web connector
 
 >[!NOTE]
 >
 >Esta é uma implementação opcional se você estiver usando o [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md).
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no site ou nas plataformas digitais associadas. Este esquema é semelhante ao esquema de Transações digitais do cliente, mas difere na medida em que deve ser usado quando o [SDK da Web](/help/web-sdk/home.md) não é uma opção para coleta de dados; portanto, este esquema é necessário quando você está utilizando o [!DNL Adobe Analytics Source Connector] para enviar seus dados online para o [!DNL Adobe Experience Platform] como uma sequência de dados primária ou secundária.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no site ou nas plataformas digitais associadas. Este esquema é semelhante ao esquema de Transações digitais do cliente, mas difere na medida em que se destina a ser usado quando o [Web SDK](/help/web-sdk/home.md) não é uma opção para coleta de dados; portanto, este esquema é necessário quando você está utilizando o [!DNL Adobe Analytics Source Connector] para enviar seus dados online para o [!DNL Adobe Experience Platform] como uma sequência de dados primária ou secundária.
 
 O esquema do conector da Web [!DNL Adobe] é representado por uma classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md).
 
@@ -288,9 +288,9 @@ O grupo de campos [Adobe Analytics ExperienceEvent](/help/xdm/field-groups/event
 | `endUserIDs._experience.emailid.authenticatedState` | Estado autenticado da ID do endereço de email do usuário final. |
 | `endUserIDs._experience.emailid.id` | ID do endereço de email do usuário final. |
 | `endUserIDs._experience.emailid.namespace.code` | Código de namespace da ID do endereço de email do usuário final. |
-| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] estado autenticado da ID do Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] ID DO Marketing Cloud (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
-| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] código de namespace da ID de Marketing Cloud (MCID). |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Estado autenticado da Marketing Cloud ID (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud ID (MCID). O MCID agora é conhecido como Experience Cloud ID (ECID). |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] código de namespace da Marketing Cloud ID (MCID). |
 
 +++
 
@@ -350,7 +350,7 @@ Para obter mais informações sobre como criar um público, leia o [guia da inte
 
 Para obter mais informações sobre como compor diretamente [Públicos-alvo](/help/segmentation/home.md), leia o [Guia da Interface do Usuário de Composição de Público](/help/segmentation/ui/audience-composition.md).
 
-Para obter mais informações sobre como criar públicos-alvo por meio de definições de público-alvo derivadas da Platform, leia o [Guia da interface do usuário do Audience Builder](/help/segmentation/ui/segment-builder.md).
+Para obter mais informações sobre como criar públicos-alvo por meio de definições de público-alvo derivadas da Experience Platform, leia o [Guia da Interface do usuário do Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -775,7 +775,7 @@ Você pode ativar a navegação abandonada de produtos e abandonar os públicos 
    * [Advertising](/help/destinations/catalog/advertising/overview.md)/[Mídia paga e Redes Sociais](/help/destinations/catalog/social/overview.md)
    * [Dispositivo móvel](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Destino do streaming](/help/destinations/catalog/streaming/http-destination.md)
-   * [Destino personalizado criado usando o Destination SDK.](/help/destinations/destination-sdk/overview.md). Se você for um cliente do Real-Time CDP Ultimate, também poderá criar um [destino personalizado privado usando o Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+   * [Destino personalizado criado usando o Destination SDK.](/help/destinations/destination-sdk/overview.md). Se você for um cliente do Real-Time CDP Ultimate, também poderá criar um [destino personalizado particular usando o Destination SDK](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
 
 ## Próximas etapas {#next-steps}
 

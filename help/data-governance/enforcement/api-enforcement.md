@@ -5,9 +5,9 @@ title: Impor políticas de uso de dados usando a API de serviço de política
 type: Tutorial
 description: Depois de criar rótulos de uso de dados para seus dados e políticas de uso para ações de marketing contra esses rótulos, você pode usar a API de serviço de política para avaliar se uma ação de marketing executada em um conjunto de dados ou um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '999'
 ht-degree: 2%
 
 ---
@@ -26,10 +26,10 @@ Este documento fornece etapas sobre como usar a API [!DNL Policy Service] para v
 
 Este tutorial requer um entendimento prático dos seguintes conceitos principais envolvidos na aplicação das políticas de uso de dados:
 
-* [Governança de dados](../home.md): a estrutura pela qual o [!DNL Platform] impõe conformidade com o uso de dados.
+* [Governança de dados](../home.md): a estrutura pela qual o [!DNL Experience Platform] impõe conformidade com o uso de dados.
    * [Rótulos de uso de dados](../labels/overview.md): os rótulos de uso de dados são aplicados aos conjuntos de dados (e/ou campos individuais dentro desses conjuntos de dados), especificando restrições sobre como esses dados podem ser usados.
    * [Políticas de uso de dados](../policies/overview.md): as políticas de uso de dados são regras que descrevem os tipos de ações de marketing permitidas ou restritas para determinados conjuntos de rótulos de uso de dados.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 Antes de iniciar este tutorial, reveja o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API [!DNL Policy Service], incluindo os cabeçalhos necessários e como ler chamadas de exemplo de API.
 
@@ -376,4 +376,4 @@ Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos de u
 
 Ao ler este documento, você verificou com êxito as violações de política ao executar uma ação de marketing em um conjunto de dados ou em um conjunto de rótulos de uso de dados. Usando os dados retornados nas respostas da API, você pode configurar protocolos no aplicativo de experiência para aplicar adequadamente as violações de política quando elas ocorrerem.
 
-Para obter informações sobre como a Platform fornece automaticamente a imposição de política para segmentos ativados, consulte o manual sobre [imposição automática](./auto-enforcement.md).
+Para obter informações sobre como o Experience Platform fornece automaticamente a imposição de política para segmentos ativados, consulte o manual sobre [imposição automática](./auto-enforcement.md).

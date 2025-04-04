@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;serviço de consulta;gravação de consultas;gravação de consulta;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;Serviço de consulta;gravação de consultas;gravação de consulta;
 solution: Experience Platform
 title: Diretrizes gerais para execução de consulta no serviço de consulta
 type: Tutorial
 description: Este documento descreve detalhes importantes a serem conhecidos ao gravar consultas no Serviço de consulta da Adobe Experience Platform.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -50,7 +50,7 @@ Para acessar um campo dentro de um objeto em sua consulta, você pode usar a not
 
 >[!NOTE]
 >
->A ID de Experience Cloud (ECID) também é conhecida como MCID e continua a ser usada em namespaces.
+>A Experience Cloud ID (ECID) também é conhecida como MCID e continua a ser usada em namespaces.
 
 ```sql
 SELECT endUserIds._experience.mcid
@@ -201,7 +201,7 @@ As aspas traseiras **não** são necessárias se você estiver usando a notaçã
 
 ## Exibição de informações de tabela
 
-Após se conectar ao Serviço de consulta, você pode ver todas as tabelas disponíveis na plataforma usando os comandos `\d` ou `SHOW TABLES`.
+Depois de se conectar ao Serviço de Consulta, você poderá ver todas as tabelas disponíveis no Experience Platform usando os comandos `\d` ou `SHOW TABLES`.
 
 ### Exibição de tabela padrão
 

@@ -2,28 +2,28 @@
 description: Saiba como configurar seu destino para as configurações de mapeamento de identidade e atributo compatíveis.
 title: Configurações de mapeamento compatíveis
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '670'
 ht-degree: 3%
 
 ---
 
 # Configurações de mapeamento compatíveis
 
-Os destinos criados com Destination SDK suportam configurações específicas de mapeamento de atributo e namespace de identidade, com base no tipo de destino.
+Os destinos criados com o Destination SDK oferecem suporte a configurações específicas de namespace de identidade e mapeamento de atributos, com base no tipo de destino.
 
 Este artigo descreve todas as configurações de mapeamento compatíveis que você pode usar ao configurar seu destino.
 
 >[!WARNING]
 >
->Qualquer configuração de mapeamento não descrita neste artigo não é suportada pelo Destination SDK.
+>Nenhuma configuração de mapeamento descrita neste artigo é suportada pela Destination SDK.
 
 Ao criar seu destino, configure seu esquema e namespace de identidade de acordo com uma das configurações de mapeamento descritas nesta página.
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Mapeamentos compatíveis para destinos de streaming {#streaming-mappings}
 
@@ -64,19 +64,19 @@ Os usuários podem mapear atributos de seu perfil XDM de origem para atributos p
 
 Os usuários devem inserir manualmente o nome do atributo personalizado de destino ao selecionar o mapeamento do campo de destino.
 
-![Captura de tela da interface do usuário da plataforma mostrando a seleção de atributo personalizado.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
+![Captura de tela da interface do Experience Platform mostrando a seleção de atributo personalizado.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 A experiência de interface do usuário resultante é mostrada na imagem abaixo.
 
-![Captura de tela da interface do usuário da plataforma mostrando o mapeamento de atributos XDM para atributos personalizados para destinos de streaming.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
+![Captura de tela da interface do Experience Platform mostrando o mapeamento de atributos XDM para atributos personalizados para destinos de streaming.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### Mapear namespaces de identidade para namespaces de identidade de parceiro {#streaming-identity-to-identity}
 
-Os usuários podem mapear namespaces de identidade personalizados ou globais da Platform para namespaces de identidade definidos por você.
+Os usuários podem mapear namespaces de identidade personalizados ou globais do Experience Platform para namespaces de identidade definidos por você.
 
 A experiência de interface do usuário resultante é mostrada na imagem abaixo.
 
-![Captura de tela da interface do usuário da plataforma mostrando o mapeamento de identidade para identidade de destinos de streaming.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
+![Captura de tela da interface do Experience Platform mostrando o mapeamento de identidade para identidade de destinos de streaming.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## Mapeamentos compatíveis com destinos baseados em arquivo {#batch-mappings}
 
@@ -118,33 +118,33 @@ Para destinos baseados em arquivo, o campo de destino é preenchido automaticame
 
 A experiência de interface do usuário resultante é mostrada na imagem abaixo.
 
-![Captura de tela da interface do usuário da Platform mostrando o mapeamento XDM para atributos personalizados para destinos baseados em arquivo.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
+![Captura de tela da interface do Experience Platform mostrando o mapeamento XDM para atributos personalizados para destinos baseados em arquivo.](../../assets/functionality/destination-configuration/mapping-batch-xdm-custom.png)
 
 Os usuários podem deixar o nome padrão definido ou inserir um nome de atributo personalizado na tela de seleção de campo de destino.
 
-![Captura de tela da Interface do Usuário da Plataforma mostrando a seleção de atributo de destino personalizado para destinos baseados em arquivo.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Captura de tela da interface do Experience Platform mostrando a seleção de atributo de destino personalizado para destinos baseados em arquivo.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### Mapear namespaces de identidade para atributos personalizados {#batch-identity-to-custom}
 
-Os usuários podem mapear namespaces de identidade personalizados ou globais da Platform para atributos personalizados no lado do destino.
+Os usuários podem mapear namespaces de identidade personalizados ou globais do Experience Platform para atributos personalizados no lado do seu destino.
 
 Ao selecionar um namespace de identidade como um campo de origem, o campo de destino é preenchido automaticamente com um namespace de identidade equivalente. Para substituir o campo de destino por um atributo personalizado, os usuários devem inserir um nome de atributo personalizado na tela de seleção de campo de destino.
 
-![Captura de tela da Interface do Usuário da Plataforma mostrando a seleção de atributo de destino personalizado para destinos baseados em arquivo.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
+![Captura de tela da interface do Experience Platform mostrando a seleção de atributo de destino personalizado para destinos baseados em arquivo.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 A experiência de interface do usuário resultante é mostrada na imagem abaixo.
 
-![Captura de tela da Interface do Usuário da Plataforma mostrando o mapeamento de identidade para atributos personalizados para destinos baseados em arquivo.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
+![Captura de tela da interface do Experience Platform mostrando o mapeamento de identidade para atributos personalizados para destinos baseados em arquivo.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### Mapear namespaces de identidade para namespaces de identidade de parceiro {#batch-identity-to-identity}
 
-Os usuários podem mapear namespaces de identidade personalizados ou globais da Platform para namespaces de identidade equivalentes.
+Os usuários podem mapear namespaces de identidade personalizados ou globais do Experience Platform para namespaces de identidade equivalentes.
 
 Ao selecionar um namespace de identidade como um campo de origem, o campo de destino é preenchido automaticamente com um namespace de identidade equivalente.
 
 A experiência de interface do usuário resultante é mostrada na imagem abaixo.
 
-![Captura de tela da Interface do Usuário da Plataforma mostrando o mapeamento de identidade para identidade para destinos baseados em arquivo.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
+![Captura de tela da interface do Experience Platform mostrando o mapeamento de identidade para identidade para destinos baseados em arquivo.](../../assets/functionality/destination-configuration/mapping-batch-identity-identity.png)
 
 
 ## Próximas etapas {#next-steps}

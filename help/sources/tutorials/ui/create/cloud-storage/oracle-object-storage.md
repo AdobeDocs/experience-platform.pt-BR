@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Armazenamento de objetos do Oracle;armazenamento de objetos do oracle
+keywords: Experience Platform;home;tópicos populares;Oracle Object Storage;oracle object storage
 solution: Experience Platform
-title: Criar uma Conexão Source de Armazenamento de Objetos do Oracle na interface
+title: Criar uma conexão Oracle Object Storage Source na interface do usuário
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Oracle Object Storage usando a interface do usuário do Adobe Experience Platform.
 exl-id: 32284163-5dde-4171-8977-f76ceeebcef2
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '459'
 ht-degree: 1%
 
 ---
@@ -20,8 +20,8 @@ Este tutorial fornece etapas para criar uma conexão de origem [!DNL Oracle Obje
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Coletar credenciais necessárias
 
@@ -37,11 +37,11 @@ Em para se conectar a [!DNL Oracle Object Storage], você deve fornecer valores 
 
 Para obter mais informações sobre como obter esses valores, consulte o [guia de autenticação do Oracle Object Storage](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-Depois de obter as credenciais necessárias, você pode seguir as etapas abaixo para criar uma nova conta do Armazenamento de objetos do Oracle para se conectar à Platform.
+Depois de obter as credenciais necessárias, siga as etapas abaixo para criar uma nova conta do Oracle Object Storage para se conectar ao Experience Platform.
 
-## Conectar-se ao Armazenamento de Objetos do Oracle
+## Conectar-se ao Oracle Object Storage
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a barra de pesquisa.
 
@@ -63,4 +63,4 @@ Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Oracle Object Storage]. Agora você pode prosseguir para o próximo tutorial em [configuração de um fluxo de dados para trazer dados do seu armazenamento em nuvem para a Platform](../../dataflow/batch/cloud-storage.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Oracle Object Storage]. Agora você pode prosseguir para o próximo tutorial em [configurar um fluxo de dados para trazer dados do seu armazenamento na nuvem para o Experience Platform](../../dataflow/batch/cloud-storage.md).

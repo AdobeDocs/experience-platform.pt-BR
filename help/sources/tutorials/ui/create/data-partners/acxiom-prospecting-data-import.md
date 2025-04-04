@@ -4,9 +4,9 @@ description: Saiba como conectar dados de prospecção da Acxiom à Adobe Experi
 last-substantial-update: 2024-02-21T00:00:00Z
 badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1861'
+source-wordcount: '1862'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 >
 >A origem [!DNL Acxiom Prospecting Data Import] está na versão beta. Leia a [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
-A importação de dados de prospecção do [!DNL Acxiom] para o Adobe Real-time Customer Data Platform é um processo para fornecer os públicos-alvo de prospecção mais produtivos possíveis. O [!DNL Acxiom] coleta dados primários da Real-Time CDP por meio de uma exportação segura e executa esses dados por meio de um sistema premiado de higiene e resolução de identidades. Isso produz um arquivo de dados a ser usado como uma lista de supressão. Esse arquivo de dados é comparado ao banco de dados global da Acxiom, o que permite que as listas de clientes potenciais sejam personalizadas para importação.
+A importação de dados de prospecção do [!DNL Acxiom] para o Adobe Real-Time Customer Data Platform é um processo para fornecer os públicos-alvo de prospecção mais produtivos possíveis. O [!DNL Acxiom] coleta dados primários da Real-Time CDP por meio de uma exportação segura e executa esses dados por meio de um sistema premiado de higiene e resolução de identidades. Isso produz um arquivo de dados a ser usado como uma lista de supressão. Esse arquivo de dados é comparado ao banco de dados global da Acxiom, o que permite que as listas de clientes potenciais sejam personalizadas para importação.
 
 Você pode usar a origem [!DNL Acxiom] para recuperar e mapear respostas do serviço de prospecto Acxiom usando o Amazon S3 como ponto de partida.
 
@@ -25,7 +25,7 @@ Leia este tutorial para saber como criar uma conexão de origem e um fluxo de da
 
 ## Pré-requisitos {#prerequisites}
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -35,7 +35,7 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 
 ### Coletar credenciais necessárias
 
-Para acessar seu bucket no Experience Platform, é necessário fornecer valores válidos para as seguintes credenciais:
+Para acessar seu bucket no Experience Platform, você precisa fornecer valores válidos para as seguintes credenciais:
 
 | Credencial | Descrição |
 | --- | --- |
@@ -46,11 +46,11 @@ Para acessar seu bucket no Experience Platform, é necessário fornecer valores 
 
 >[!IMPORTANT]
 >
->Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Acxiom] ao Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../../../access-control/ui/overview.md).
+>Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Acxiom] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../../../access-control/ui/overview.md).
 
 ## Conectar sua conta do [!DNL Acxiom]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -108,7 +108,7 @@ Em seguida, você deve fornecer informações sobre o conjunto de dados e o flux
 
 >[!TAB Usar um novo conjunto de dados]
 
-Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os dados assimilados com sucesso no Experience Platform são mantidos no data lake como conjuntos de dados. Para usar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]**.
+Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os dados assimilados com sucesso na Experience Platform são mantidos no data lake como conjuntos de dados. Para usar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]**.
 
 ![A nova interface do conjunto de dados.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-new-dataset.png)
 
@@ -141,11 +141,11 @@ Durante esta etapa, se o conjunto de dados estiver habilitado para o Perfil, voc
 | --- | --- |
 | Nome do fluxo de dados | O nome do fluxo de dados.  Por padrão, esse campo usará o nome do arquivo que está sendo importado. |
 | Descrição | (Opcional) Uma breve descrição do fluxo de dados. |
-| Alertas | O Experience Platform pode produzir alertas baseados em eventos, nos quais os usuários podem assinar. Todas essas opções fazem parte de um fluxo de dados em execução para acioná-los.  Para obter mais informações, leia a [visão geral dos alertas](../../alerts.md) <ul><li>**Início da Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação quando a execução do fluxo de dados começar.</li><li>**Êxito na Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação se o fluxo de dados terminar sem erros.</li><li>**Falha na execução do fluxo de dados de fontes**: selecione este alerta para receber uma notificação se a execução do fluxo de dados terminar com erros.</li></ul> |
+| Alertas | O Experience Platform pode produzir alertas baseados em eventos, nos quais os usuários podem assinar. Todas essas opções dependem de um fluxo de dados em execução para acioná-los.  Para obter mais informações, leia a [visão geral dos alertas](../../alerts.md) <ul><li>**Início da Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação quando a execução do fluxo de dados começar.</li><li>**Êxito na Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação se o fluxo de dados terminar sem erros.</li><li>**Falha na execução do fluxo de dados de fontes**: selecione este alerta para receber uma notificação se a execução do fluxo de dados terminar com erros.</li></ul> |
 
 ## Mapeamento
 
-Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar dados no Experience Platform.  Para obter mais informações, leia o [guia de mapeamento na interface](../../../../../data-prep/ui/mapping.md)
+Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar dados na Experience Platform.  Para obter mais informações, leia o [guia de mapeamento na interface](../../../../../data-prep/ui/mapping.md)
 
 ![A interface de mapeamento.](../../../../images/tutorials/create/acxiom-prospect-suppression-data-sourcing/image-source-mapping.png)
 
@@ -175,7 +175,7 @@ Depois de revisar seu fluxo de dados, clique em Concluir e aguarde algum tempo p
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados em lote da origem [!DNL Acxiom] para o Experience Platform. Para obter recursos adicionais, consulte a documentação descrita abaixo.
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados em lote da sua origem [!DNL Acxiom] para a Experience Platform. Para obter recursos adicionais, consulte a documentação descrita abaixo.
 
 ### Monitorar seu fluxo de dados
 

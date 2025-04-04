@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares; alertas;destin
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 title: Assinar alertas de destino em contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '953'
 ht-degree: 8%
 
 ---
@@ -23,8 +23,8 @@ Este documento fornece etapas sobre como assinar mensagens de alertas de recebim
 Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
 * [Destinos](../home.md): integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
-* [Observabilidade](../../observability/home.md): [!DNL Observability Insights] permite monitorar as atividades da Platform por meio do uso de métricas estatísticas e notificações de eventos.
-   * [Alertas](../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações da Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), a Platform pode enviar mensagens de alerta para qualquer usuário em sua organização que tenha feito a assinatura.
+* [Observabilidade](../../observability/home.md): [!DNL Observability Insights] permite monitorar as atividades do Experience Platform usando métricas estatísticas e notificações de eventos.
+   * [Alertas](../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações do Experience Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), o Experience Platform pode enviar mensagens de alerta para qualquer usuário em sua organização que tenha assinado para eles.
 
 ## Assinar os alertas da interface {#subscribe-destination-alerts}
 
@@ -36,7 +36,7 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ad
 
 >[!IMPORTANT]
 >
->Você deve ativar notificações instantâneas de emails para sua conta da Platform a fim de receber notificações de alerta baseadas em email para seus fluxos de dados.
+>Você deve ativar notificações instantâneas de emails para sua conta do Experience Platform a fim de receber notificações de alerta baseadas em email para seus fluxos de dados.
 
 Você pode habilitar alertas para seus fluxos de dados durante a etapa [!UICONTROL Configurar novo destino] do fluxo de trabalho [conexão de destino](connect-destination.md).
 
@@ -63,9 +63,9 @@ Depois que o fluxo de dados de destino for executado, você poderá receber aler
 
 ### Recebimento de alertas na interface do {#receiving-alerts-in-ui}
 
-Os alertas são representados na interface do usuário por um ícone de notificação no cabeçalho superior da interface do usuário da plataforma. Selecione o ícone de notificação para ver mensagens de alerta específicas relacionadas aos fluxos de dados.
+Os alertas são representados na interface por um ícone de notificação no cabeçalho superior da interface do usuário do Experience Platform. Selecione o ícone de notificação para ver mensagens de alerta específicas relacionadas aos fluxos de dados.
 
-![Imagem da interface mostrando o ícone de notificação no Experience Platform](../assets/ui/alerts/notification.png)
+![Imagem da interface do usuário mostrando o ícone de notificação no Experience Platform](../assets/ui/alerts/notification.png)
 
 O painel de notificações é exibido, exibindo uma lista de atualizações de status no fluxo de dados criado.
 

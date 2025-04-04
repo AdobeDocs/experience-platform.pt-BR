@@ -1,10 +1,10 @@
 ---
-description: Saiba como configurar os atributos da interface do usuário, como o link de documentação, a categoria de cartão de destino, o tipo e a frequência de conexão de destino, para destinos criados com o Destination SDK.
+description: Saiba como configurar os atributos da interface do usuário, como o link de documentação, a categoria do cartão de destino, o tipo de conexão e a frequência de destino, para destinos criados com o Destination SDK.
 title: Atributos da interface
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '802'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Para entender onde esse componente se encaixa em uma integração criada com o D
 Ao [criar um destino](../../authoring-api/destination-configuration/create-destination-configuration.md) por meio do Destination SDK, a seção `uiAttributes` define as seguintes propriedades visuais do cartão de destino:
 
 * A URL da página da documentação de destino no [catálogo de destino](../../../catalog/overview.md).
-* A categoria em que o destino estará visível na interface do usuário da Platform.
+* A categoria em que o destino estará visível na interface do usuário do Experience Platform.
 * A frequência de exportação de dados para seu destino.
 * O tipo de conexão de destino, como Amazon S3, Azure Blob etc.
 * O URL no qual você hospedou o ícone a ser exibido no cartão do catálogo de destinos.
@@ -37,7 +37,7 @@ Este artigo descreve todos os atributos de interface do usuário compatíveis qu
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -72,7 +72,7 @@ Os usuários podem ver e visitar o link da documentação na página do catálog
 
 >[!NOTE]
 >
->Esse link funciona somente depois que o Adobe definir seu destino como ativo e a documentação for publicada.
+>Esse link funciona somente depois que o Adobe define seu destino como ativo e a documentação é publicada.
 
 ### `category` {#category}
 
@@ -116,7 +116,7 @@ Para adicionar um logotipo ao cartão de destino, é necessário compartilhar a 
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este artigo, você deve entender melhor quais atributos de interface do usuário você pode configurar para seu destino e onde os usuários os verão na interface do usuário da Platform.
+Depois de ler este artigo, você deve entender melhor quais atributos de interface do usuário você pode configurar para seu destino e onde os usuários os verão na interface do usuário do Experience Platform.
 
 Para saber mais sobre os outros componentes de destino, consulte os seguintes artigos:
 

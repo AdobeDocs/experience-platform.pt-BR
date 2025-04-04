@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;início;tópicos populares;conexão de transmissão;criar conexão de transmissão;guia de api;tutorial;criar uma conexão de transmissão;assimilação de transmissão;assimilação;
+keywords: Experience Platform;página inicial;tópicos populares;conexão de transmissão;criar conexão de transmissão;guia de api;tutorial;criar uma conexão de transmissão;assimilação de transmissão;assimilação;
 title: Criar uma conexão de transmissão da API HTTP usando a API do serviço de fluxo
 description: Este tutorial fornece etapas sobre como criar uma conexão de transmissão usando a fonte de API HTTP para dados brutos e XDM usando a API do serviço de fluxo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1656'
 ht-degree: 4%
 
 ---
@@ -21,14 +21,14 @@ Este tutorial usa a [[!DNL Flow Service] API](https://www.adobe.io/experience-pl
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): A estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência.
+* [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): A estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de múltiplas fontes.
 
 Além disso, a criação de uma conexão de transmissão exige que você tenha um esquema XDM de destino e um conjunto de dados. Para aprender a criar essas séries, leia o tutorial em [streaming de dados de registro](../../../../../ingestion/tutorials/streaming-record-data.md) ou o tutorial em [streaming de dados de série temporal](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../../../landing/api-guide.md).
 
 ## Criar uma conexão básica
 
@@ -36,9 +36,9 @@ Uma conexão base especifica a origem e contém as informações necessárias pa
 
 ### Conexão não autenticada
 
-Conexões não autenticadas são a conexão de transmissão padrão que você pode criar quando quiser transmitir dados para a Platform.
+As conexões não autenticadas são a conexão de transmissão padrão que você pode criar quando quiser transmitir dados para o Experience Platform.
 
-Para criar uma conexão base não autenticada, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece um nome para a conexão, o tipo de dados e a ID de especificação da conexão da API HTTP. Esta ID é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
+Para criar uma conexão base não autenticada, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer um nome para a conexão, o tipo de dados e a ID de especificação da conexão da API HTTP. Esta ID é `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 **Formato da API**
 
@@ -130,7 +130,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da conexão rec
 
 ### Conexão autenticada
 
-As conexões autenticadas devem ser usadas quando for necessário diferenciar entre registros provenientes de fontes confiáveis e não confiáveis. Os usuários que desejam enviar informações com Informações de identificação pessoal (PII) devem criar uma conexão autenticada ao transmitir informações para a Platform.
+As conexões autenticadas devem ser usadas quando for necessário diferenciar entre registros provenientes de fontes confiáveis e não confiáveis. Os usuários que desejam enviar informações com Informações de identificação pessoal (PII) devem criar uma conexão autenticada ao transmitir informações para o Experience Platform.
 
 Para criar uma conexão de base autenticada, você deve incluir o parâmetro `authenticationRequired` em sua solicitação e especificar seu valor como `true`. Durante essa etapa, também é possível fornecer uma ID de origem para a conexão de base autenticada. Este parâmetro é opcional e usará o mesmo valor que o atributo `name`, se ele não for fornecido.
 
@@ -332,7 +332,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da conexão de 
 
 ## Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
+Para que os dados de origem sejam usados no Experience Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados do Experience Platform no qual os dados de origem estão contidos.
 
 Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -340,13 +340,13 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
 
 ## Criar uma conexão de destino {#target}
 
-Uma conexão de destino representa a conexão com o destino onde os dados assimilados chegam. Para criar uma conexão de destino, faça uma solicitação POST para `/targetConnections` enquanto fornece IDs para o conjunto de dados de destino e o esquema XDM de destino. Durante essa etapa, você também deve fornecer a ID de especificação da conexão do data lake. Esta ID é `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Uma conexão de destino representa a conexão com o destino onde os dados assimilados chegam. Para criar uma conexão de destino, faça uma solicitação POST para `/targetConnections` enquanto fornece IDs para seu conjunto de dados de destino e esquema XDM de destino. Durante essa etapa, você também deve fornecer a ID de especificação da conexão do data lake. Esta ID é `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **Formato da API**
 
@@ -559,7 +559,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes do fluxo de dad
 }
 ```
 
-## Dados da publicação a serem assimilados na plataforma {#ingest-data}
+## Publicar dados que serão assimilados no Experience Platform {#ingest-data}
 
 >[!NOTE]
 >
@@ -575,7 +575,7 @@ POST /collection/{INLET_URL}
 
 | Parâmetro | Descrição |
 | --------- | ----------- |
-| `{INLET_URL}` | O URL do ponto de extremidade de streaming. Você pode recuperar esta URL fazendo uma solicitação GET para o ponto de extremidade `/connections` enquanto fornece sua ID de conexão base. |
+| `{INLET_URL}` | O URL do ponto de extremidade de streaming. Você pode recuperar essa URL fazendo uma solicitação GET para o ponto de extremidade `/connections` enquanto fornece sua ID de conexão base. |
 | `{FLOW_ID}` | A ID do fluxo de dados de transmissão da API HTTP. Essa ID é necessária para dados XDM e RAW. |
 
 **Solicitação**
@@ -686,15 +686,15 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das informaçõ
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `{BASE_CONNECTION_ID}` | A ID da conexão de streaming criada anteriormente. |
-| `xactionId` | Um identificador exclusivo gerado no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda o Adobe a rastrear o ciclo de vida desse registro por vários sistemas e com depuração. |
+| `xactionId` | Um identificador exclusivo gerado no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda a Adobe a rastrear o ciclo de vida desse registro por vários sistemas e com depuração. |
 | `receivedTimeMs` | Um carimbo de data e hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou uma conexão HTTP de transmissão, permitindo usar o endpoint de transmissão para assimilar dados na Platform. Para obter instruções sobre como criar uma conexão de streaming na interface, leia o [tutorial sobre criação de uma conexão de streaming](../../../ui/create/streaming/http.md).
+Ao seguir este tutorial, você criou uma conexão HTTP de transmissão, permitindo usar o terminal de transmissão para assimilar dados na Experience Platform. Para obter instruções sobre como criar uma conexão de streaming na interface, leia o [tutorial sobre criação de uma conexão de streaming](../../../ui/create/streaming/http.md).
 
-Para saber como transmitir dados para a Platform, leia o tutorial sobre [dados de série temporal de transmissão](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou o tutorial sobre [dados de registro de transmissão](../../../../../ingestion/tutorials/streaming-record-data.md).
+Para saber como transmitir dados para o Experience Platform, leia o tutorial sobre [transmissão de dados de série temporal](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou o tutorial sobre [transmissão de dados de registro](../../../../../ingestion/tutorials/streaming-record-data.md).
 
 ## Apêndice
 

@@ -3,9 +3,9 @@ title: Criar uma nova conexão de destino
 type: Tutorial
 description: Saiba como se conectar a um destino no Adobe Experience Platform, ativar alertas e configurar ações de marketing para o destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Antes de enviar dados do público-alvo para um destino, é necessário configura
 
 1. Vá para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a guia **[!UICONTROL Catálogo]**.
 
-   ![Captura de tela da interface do Experience Platform, mostrando a página do catálogo de destinos.](../assets/ui/connect-destinations/catalog.png)
+   ![Captura de tela da interface do usuário do Experience Platform mostrando a página do catálogo de destinos.](../assets/ui/connect-destinations/catalog.png)
 
 2. Os cartões de destino no catálogo podem ter controles de ação diferentes, dependendo se você tem uma conexão existente com o destino e se os destinos oferecem suporte à ativação de públicos, exportação de conjuntos de dados ou ambos. Você pode ver qualquer um dos seguintes controles para cartões de destino:
 
@@ -53,7 +53,7 @@ Antes de enviar dados do público-alvo para um destino, é necessário configura
 
 A primeira etapa na conexão com um destino é autenticar na plataforma de destino.
 
-Dependendo do destino ao qual você está se conectando, você pode ser levado à página do parceiro de destino para autenticar ou pode ser solicitado a inserir credenciais de autenticação diretamente no fluxo de trabalho da Platform. Veja abaixo um exemplo da entrada necessária para autenticar em um destino [!DNL Amazon S3]. Instruções detalhadas sobre a entrada necessária são fornecidas em cada página de documentação de destino (consulte, por exemplo, a seção de autenticação para [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) e para [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
+Dependendo do destino ao qual você está se conectando, você pode ser levado à página do parceiro de destino para autenticar ou pode ser solicitado a inserir credenciais de autenticação diretamente no fluxo de trabalho do Experience Platform. Veja abaixo um exemplo da entrada necessária para autenticar em um destino [!DNL Amazon S3]. Instruções detalhadas sobre a entrada necessária são fornecidas em cada página de documentação de destino (consulte, por exemplo, a seção de autenticação para [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) e para [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate)).
 
 **[!DNL Amazon S3]parâmetros de autenticação obrigatórios e opcionais**
 
@@ -105,7 +105,7 @@ Alguns destinos baseados em arquivo oferecem suporte à ativação de públicos-
 
 ## Selecionar ações de marketing {#select-marketing-actions}
 
-1. Selecione as ações de marketing aplicáveis aos dados que você deseja exportar para o destino. As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar entre ações de marketing definidas pelo Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [visão geral das políticas de uso de dados](../../data-governance/policies/overview.md).
+1. Selecione as ações de marketing aplicáveis aos dados que você deseja exportar para o destino. As ações de marketing indicam a intenção para a qual os dados serão exportados para o destino. Você pode selecionar entre ações de marketing definidas pela Adobe ou criar sua própria ação de marketing. Para obter mais informações sobre ações de marketing, consulte a página [visão geral das políticas de uso de dados](../../data-governance/policies/overview.md).
 
    ![A caixa de diálogo Configurar novo destino com as ações de marketing disponíveis foi realçada. Os controles disponíveis para concluir o fluxo de trabalho Conectar ao destino também são destacados.](../assets/ui/connect-destinations/governance.png)
 

@@ -3,9 +3,9 @@ title: Criar uma conexão do Source com os Hubs de Eventos do Azure usando a API
 description: Saiba como conectar o Adobe Experience Platform a uma conta do Azure Event Hubs usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1496'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->A origem [!DNL Azure Event Hubs] está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
+>A origem [!DNL Azure Event Hubs] está disponível no catálogo de origens para usuários que compraram o Real-Time Customer Data Platform Ultimate.
 
 Leia este tutorial para saber como conectar [!DNL Azure Event Hubs] (a seguir denominado &quot;[!DNL Event Hubs]&quot;) ao Experience Platform, usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -22,10 +22,10 @@ Leia este tutorial para saber como conectar [!DNL Azure Event Hubs] (a seguir de
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-- [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-- [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+- [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Event Hubs] à Platform usando a API [!DNL Flow Service].
+As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Event Hubs] ao Experience Platform usando a API [!DNL Flow Service].
 
 ### Coletar credenciais necessárias
 
@@ -79,9 +79,9 @@ Para obter mais informações sobre [!DNL Azure Active Directory], leia o [Guia 
 
 Para obter mais informações sobre esses valores, consulte [este documento dos Hubs de Eventos](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../../../landing/api-guide.md).
 
 ## Criar uma conexão básica
 
@@ -91,7 +91,7 @@ Para obter informações sobre como fazer chamadas para APIs da Platform com êx
 
 A primeira etapa na criação de uma conexão de origem é autenticar sua origem [!DNL Event Hubs] e gerar uma ID de conexão base. Uma ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar itens específicos que você deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL Event Hubs] como parte dos parâmetros de solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer suas credenciais de autenticação [!DNL Event Hubs] como parte dos parâmetros de solicitação.
 
 **Formato da API**
 
@@ -103,7 +103,7 @@ POST /connections
 
 >[!TAB Autenticação padrão]
 
-Para criar uma conta usando a autenticação padrão, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece valores para os seus `sasKeyName`, `sasKey` e `namespace`.
+Para criar uma conta usando a autenticação padrão, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer valores para os seus `sasKeyName`, `sasKey` e `namespace`.
 
 +++Solicitação
 
@@ -157,7 +157,7 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 >[!TAB Autenticação SAS]
 
-Para criar uma conta usando a autenticação SAS, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer valores para os seus `sasKeyName`, `sasKey`,`namespace` e `eventHubName`.
+Para criar uma conta usando a autenticação SAS, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer valores para seus `sasKeyName`, `sasKey`,`namespace` e `eventHubName`.
 
 +++Solicitação
 
@@ -213,7 +213,7 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 >[!TAB Autenticação do Ative Diretory do Azure Hub de Eventos]
 
-Para criar uma conta usando a Autenticação do Azure Ative Diretory, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer valores para os seus `tenantId`, `clientId`,`clientSecretValue` e `namespace`.
+Para criar uma conta usando a Autenticação do Azure Ative Diretory, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer valores para seus `tenantId`, `clientId`,`clientSecretValue` e `namespace`.
 
 +++Solicitação
 
@@ -269,7 +269,7 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 >[!TAB Autenticação do Azure Ative Diretory com Escopo do Hub de Eventos]
 
-Para criar uma conta usando a Autenticação do Azure Ative Diretory, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer valores para os seus `tenantId`, `clientId`,`clientSecretValue`, `namespace` e `eventHubName`.
+Para criar uma conta usando a Autenticação do Azure Ative Diretory, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer valores para seus `tenantId`, `clientId`,`clientSecretValue`, `namespace` e `eventHubName`.
 
 +++Solicitação
 

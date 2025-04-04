@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;preparação de dados;api preparação de dados;solução de problemas;API
+keywords: Experience Platform;preparação de dados;api de preparação de dados;solução de problemas;API
 title: Introdução à API de preparação de dados
 description: Saiba mais sobre os principais conceitos e a funcionalidade básica que você precisa saber para usar os endpoints da API de preparação de dados para executar operações CRUD básicas para usar com o Mapeador.
 exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '187'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ O uso do guia do desenvolvedor requer uma compreensão funcional dos vários ser
 - [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md): Os métodos pelos quais os dados podem ser enviados para [!DNL Experience Platform].
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
 
-Para fazer chamadas com êxito para pontos de extremidade de API [!DNL Data Prep], leia o manual sobre a [introdução às APIs da plataforma](../../landing/api-guide.md) para saber mais sobre os cabeçalhos necessários e como ler chamadas de API de exemplo.
+Para fazer chamadas com êxito para pontos de extremidade de API [!DNL Data Prep], leia o manual sobre a [introdução às APIs do Experience Platform](../../landing/api-guide.md) para saber mais sobre os cabeçalhos necessários e como ler chamadas de API de exemplo.
 
 ## Próximas etapas
 

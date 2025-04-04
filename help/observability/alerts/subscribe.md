@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;intervalo de datas
-title: Assinar notificações de eventos Adobe I/O
-description: Este documento fornece etapas sobre como assinar notificações de eventos Adobe I/O para serviços da Adobe Experience Platform. Também são fornecidas informações de referência sobre os tipos de evento disponíveis, juntamente com links para documentação adicional sobre como interpretar dados de evento retornados para cada serviço  [!DNL Platform]  aplicável.
+title: Assinar notificações de eventos do Adobe I/O
+description: Este documento fornece etapas sobre como assinar notificações de eventos do Adobe I/O para serviços da Adobe Experience Platform. Também são fornecidas informações de referência sobre os tipos de evento disponíveis, juntamente com links para documentação adicional sobre como interpretar dados de evento retornados para cada serviço  [!DNL Experience Platform]  aplicável.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '781'
 ht-degree: 2%
 
 ---
 
-# Assinar notificações de eventos Adobe I/O
+# Assinar notificações de eventos do Adobe I/O
 
-O [!DNL Observability Insights] permite que você assine notificações de eventos Adobe I/O relacionadas às atividades do Adobe Experience Platform. Esses eventos são enviados para um webhook configurado para facilitar a automação eficiente do monitoramento de atividades.
+[!DNL Observability Insights] permite que você assine as notificações de eventos do Adobe I/O relacionadas às atividades do Adobe Experience Platform. Esses eventos são enviados para um webhook configurado para facilitar a automação eficiente do monitoramento de atividades.
 
-Este documento fornece etapas sobre como assinar notificações de eventos Adobe I/O para serviços da Adobe Experience Platform. Informações de referência sobre tipos de eventos disponíveis também são fornecidas, juntamente com links para documentação adicional sobre como você pode interpretar dados de eventos retornados para cada serviço [!DNL Platform] aplicável.
+Este documento fornece etapas sobre como assinar notificações de eventos do Adobe I/O para serviços da Adobe Experience Platform. Informações de referência sobre tipos de eventos disponíveis também são fornecidas, juntamente com links para documentação adicional sobre como você pode interpretar dados de eventos retornados para cada serviço [!DNL Experience Platform] aplicável.
 
 ## Introdução
 
@@ -49,8 +49,8 @@ Depois de criar um novo projeto, acesse a tela de visão geral do projeto. Aqui,
 
 Uma caixa de diálogo é exibida, permitindo adicionar um provedor de eventos ao projeto:
 
-* Se você estiver assinando alertas Experience Platform, selecione **[!UICONTROL Notificações da plataforma]**
-* Se você estiver assinando as notificações [!DNL Privacy Service] do Adobe Experience Platform, selecione **[!UICONTROL Privacy Service Eventos]**
+* Se você estiver assinando alertas do Experience Platform, selecione **[!UICONTROL Notificações da plataforma]**
+* Se você estiver assinando as notificações do Adobe Experience Platform [!DNL Privacy Service], selecione **[!UICONTROL Eventos da Privacy Service]**
 
 Depois de escolher um provedor de eventos, selecione **[!UICONTROL Avançar]**.
 
@@ -63,7 +63,7 @@ A próxima tela exibe uma lista de tipos de evento para se inscrever. Selecione 
 >Se não tiver certeza de quais eventos você deve assinar para o serviço com o qual está trabalhando, consulte a seguinte documentação:
 >
 >* [Notificações da plataforma](./rules.md)
->* [Notificações Privacy Service](../../privacy-service/privacy-events.md)
+>* [Notificações do Privacy Service](../../privacy-service/privacy-events.md)
 
 >[!IMPORTANT]
 >

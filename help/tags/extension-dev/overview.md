@@ -2,9 +2,9 @@
 title: Visão geral do desenvolvimento de extensões
 description: Saiba mais sobre os componentes principais de diferentes tipos de extensão de tag e o processo de desenvolvimento de extensão no Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '938'
 ht-degree: 23%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 23%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-Um dos principais objetivos das tags na Adobe Experience Platform é criar um ecossistema aberto em que os engenheiros fora do Adobe possam expor funcionalidades adicionais em seus sites e aplicativos móveis. Isso é feito por meio de extensões de tag. Depois que uma extensão é instalada em uma propriedade de tag, a funcionalidade dessa extensão fica disponível para uso por todos os usuários da propriedade.
+Um dos principais objetivos das tags na Adobe Experience Platform é criar um ecossistema aberto em que os engenheiros fora da Adobe possam expor funcionalidades adicionais em seus sites e aplicativos móveis. Isso é feito por meio de extensões de tag. Depois que uma extensão é instalada em uma propriedade de tag, a funcionalidade dessa extensão fica disponível para uso por todos os usuários da propriedade.
 
 Este documento descreve os componentes principais de uma extensão e fornece links para documentação adicional para ajudar a orientá-lo sobre o processo de desenvolvimento da extensão.
 
@@ -37,13 +37,13 @@ Você pode colocar os arquivos de módulo de biblioteca em qualquer lugar que de
 
 ### Exibições
 
-Uma exibição é um arquivo HTML capaz de ser carregado em um [`iframe` elemento](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe) dentro do aplicativo de marcas, especificamente por meio da interface da Platform e da interface da Coleção de Dados. A visualização deve incluir um script fornecido pela extensão e estar em conformidade com uma pequena API para se comunicar com o aplicativo.
+Uma exibição é um arquivo HTML que pode ser carregado em um [`iframe` elemento](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe) no aplicativo de marcas, especificamente por meio da interface do usuário da Experience Platform e da interface da Coleção de Dados. A visualização deve incluir um script fornecido pela extensão e estar em conformidade com uma pequena API para se comunicar com o aplicativo.
 
 O arquivo de visualização mais importante para qualquer extensão é sua configuração. Consulte a seção sobre [configurações de extensão](#configuration) para obter mais informações.
 
 Não há restrições quanto às bibliotecas usadas nas visualizações. Em outras palavras, você pode usar jQuery, Underscore, React, Angular, Bootstrap ou outros. No entanto, ainda é recomendável fazer com que sua extensão tenha uma aparência semelhante à interface do usuário.
 
-É recomendado colocar todos os arquivos relacionados à visualização (HTML, CSS, JavaScript) em um único subdiretório que esteja isolado dos arquivos do módulo da biblioteca. Em `extension.json`, você pode descrever onde está localizado esse subdiretório de exibição. O Platform fornecerá esse subdiretório (e somente ele) por meio de seus servidores da Web.
+É recomendado colocar todos os arquivos relacionados à visualização (HTML, CSS, JavaScript) em um único subdiretório que esteja isolado dos arquivos do módulo da biblioteca. Em `extension.json`, você pode descrever onde está localizado esse subdiretório de exibição. O Experience Platform fornecerá esse subdiretório (e somente ele) por meio de seus servidores da Web.
 
 ## Componentes da biblioteca {#components}
 
@@ -55,7 +55,7 @@ Dependendo de você estar desenvolvendo uma extensão da Web ou uma extensão de
 
 Em extensões da Web, as regras são acionadas por meio de eventos, que poderão executar ações específicas se um determinado conjunto de condições for atendido. Consulte a visão geral do [fluxo do módulo em extensões da Web](./web/flow.md) para obter mais informações.
 
-Além dos [módulos principais](./web/core.md) fornecidos pelo Adobe, você pode definir os seguintes componentes de biblioteca em suas extensões da Web:
+Além dos [módulos principais](./web/core.md) fornecidos pela Adobe, você pode definir os seguintes componentes de biblioteca nas extensões da Web:
 
 * [Eventos](./web/event-types.md)
 * [Condições](./web/condition-types.md)
@@ -93,4 +93,4 @@ Para saber mais, consulte o guia em [configurações de extensão](./configurati
 
 ## Envio de extensões
 
-Depois de concluir a criação da extensão, você pode enviá-la para ser listada no catálogo de extensões na Platform. Consulte a [visão geral do processo de envio de extensão](./submit/overview.md) para obter mais informações.
+Depois de concluir a criação da extensão, você pode enviá-la para ser listada no catálogo de extensões no Experience Platform. Consulte a [visão geral do processo de envio de extensão](./submit/overview.md) para obter mais informações.

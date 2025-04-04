@@ -5,10 +5,10 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda os conceitos essenciais relacionados ao processamento de solicitações de privacidade para o Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1743'
-ht-degree: 0%
+source-wordcount: '1751'
+ht-degree: 1%
 
 ---
 
@@ -20,7 +20,7 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 >[!NOTE]
 >
->Este guia aborda apenas como fazer solicitações de privacidade para o Armazenamento de dados do perfil no Experience Platform. Se você também planeja fazer solicitações de privacidade para o data lake da Platform, consulte o manual sobre [processamento de solicitações de privacidade no data lake](../catalog/privacy.md), além deste tutorial.
+>Este guia aborda apenas como fazer solicitações de privacidade para o Armazenamento de dados do perfil no Experience Platform. Se você também planeja fazer solicitações de privacidade para o data lake da Experience Platform, consulte o manual sobre [processamento de solicitações de privacidade no data lake](../catalog/privacy.md), além deste tutorial.
 >
 >Para obter etapas sobre como fazer solicitações de privacidade para outros aplicativos da Adobe Experience Cloud, consulte a [documentação do Privacy Service](../privacy-service/experience-cloud-apps.md).
 
@@ -30,7 +30,7 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 ## Introdução
 
-Este guia requer uma compreensão funcional dos seguintes componentes do [!DNL Platform]:
+Este guia requer uma compreensão funcional dos seguintes componentes do [!DNL Experience Platform]:
 
 * [[!DNL Privacy Service]](../privacy-service/home.md): gerencia solicitações de clientes para acesso, cancelamento de venda ou exclusão de dados pessoais nos aplicativos da Adobe Experience Cloud.
 * [[!DNL Identity Service]](../identity-service/home.md): resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente, unindo as identidades em dispositivos e sistemas.
@@ -46,14 +46,14 @@ Para obter mais informações sobre namespaces de identidade em [!DNL Experience
 
 ## Envio de solicitações {#submit}
 
-As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL Real-Time Customer Profile] usando a API ou a interface do usuário [!DNL Privacy Service]. Antes de ler estas seções, revise ou esteja ciente da documentação da [API de Privacy Service](../privacy-service/api/getting-started.md) ou da [IU de Privacy Service](../privacy-service/ui/overview.md). Esses documentos fornecem etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados em cargas de solicitação.
+As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL Real-Time Customer Profile] usando a API ou a interface do usuário [!DNL Privacy Service]. Antes de ler estas seções, revise ou esteja ciente da documentação da [API do Privacy Service](../privacy-service/api/getting-started.md) ou da [Interface do usuário do Privacy Service](../privacy-service/ui/overview.md). Esses documentos fornecem etapas completas sobre como enviar um trabalho de privacidade, incluindo como formatar corretamente os dados de identidade do usuário enviados em cargas de solicitação.
 
 >[!IMPORTANT]
 >
->O Privacy Service só pode processar dados [!DNL Profile] usando uma política de mesclagem que não execute a identificação. Consulte a seção sobre [limitações da política de mesclagem](#merge-policy-limitations) para obter mais informações.
+>O Privacy Service só pode processar dados do [!DNL Profile] usando uma política de mesclagem que não execute a identificação. Consulte a seção sobre [limitações da política de mesclagem](#merge-policy-limitations) para obter mais informações.
 >
 >Observe que as solicitações de privacidade são processadas de forma assíncrona dentro dos requisitos normativos, e o tempo necessário para a conclusão pode variar. Se ocorrerem alterações nos dados do [!DNL Profile] enquanto uma solicitação ainda estiver sendo processada, não há garantia de que esses registros de entrada também serão processados nessa solicitação. Somente os perfis mantidos no data lake ou no Armazenamento de perfis no momento em que o trabalho de privacidade é solicitado têm garantia de exclusão. Se você assimilar dados de perfil relacionados ao assunto de uma solicitação de exclusão durante o trabalho de exclusão, não há garantia de que todos os fragmentos de perfil serão excluídos.
->É sua responsabilidade estar ciente de qualquer dado recebido na plataforma ou no serviço de perfil no momento de uma solicitação de exclusão, pois esses dados serão inseridos em seus armazenamentos de registro. Você deve ser criterioso na assimilação de dados que foram ou estão sendo excluídos.
+>É sua responsabilidade estar ciente de quaisquer dados recebidos no Experience Platform ou no Serviço de perfil no momento de uma solicitação de exclusão, pois esses dados serão inseridos em seus armazenamentos de registro. Você deve ser criterioso na assimilação de dados que foram ou estão sendo excluídos.
 
 ### Uso da API
 
@@ -61,7 +61,7 @@ Ao criar solicitações de trabalho na API, qualquer ID fornecida em `userIDs` d
 
 >[!NOTE]
 >
->Talvez seja necessário fornecer mais de uma ID para cada cliente, dependendo do gráfico de identidade e de como os fragmentos de perfil são distribuídos nos conjuntos de dados da Platform. Consulte a próxima seção [fragmentos de perfil](#fragments) para obter mais informações.
+>Talvez seja necessário fornecer mais de uma ID para cada cliente, dependendo do gráfico de identidade e de como os fragmentos de perfil são distribuídos nos conjuntos de dados do Experience Platform. Consulte a próxima seção [fragmentos de perfil](#fragments) para obter mais informações.
 
 Além disso, a matriz `include` da carga da solicitação deve incluir os valores de produto para os diferentes armazenamentos de dados para os quais a solicitação está sendo feita. Para excluir os dados de perfil associados a uma identidade, a matriz deve incluir o valor `ProfileService`. Para excluir as associações de gráficos de identidade do cliente, a matriz deve incluir o valor `identity`.
 
@@ -114,7 +114,7 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->A Platform processa solicitações de privacidade em todas as [sandboxes](../sandboxes/home.md) pertencentes à sua organização. Como resultado, qualquer cabeçalho `x-sandbox-name` incluído na solicitação é ignorado pelo sistema.
+>A Experience Platform processa solicitações de privacidade em todas as [sandboxes](../sandboxes/home.md) pertencentes à sua organização. Como resultado, qualquer cabeçalho `x-sandbox-name` incluído na solicitação é ignorado pelo sistema.
 
 **Resposta do produto**
 
@@ -168,7 +168,7 @@ Para o Serviço de perfil, após a conclusão do trabalho de privacidade, uma re
 
 ### Uso da interface
 
-Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL Data Lake da AEP]** e/ou **[!UICONTROL Perfil]** em **[!UICONTROL Produtos]** para processar trabalhos para dados armazenados no data lake ou [!DNL Real-Time Customer Profile], respectivamente.
+Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Perfil]** em **[!UICONTROL Produtos]** para processar trabalhos para dados armazenados no data lake ou [!DNL Real-Time Customer Profile], respectivamente.
 
 ![Uma solicitação de trabalho de acesso está sendo criada na interface do usuário, com a opção de Perfil selecionada em Produtos](./images/privacy/product-value.png)
 
@@ -190,7 +190,7 @@ Para garantir que suas solicitações de privacidade processem todos os atributo
 
 ## Processamento de solicitação de exclusão {#delete}
 
-Quando [!DNL Experience Platform] recebe uma solicitação de exclusão de [!DNL Privacy Service], [!DNL Platform] envia uma confirmação para [!DNL Privacy Service] de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. Os registros são removidos depois que o trabalho de privacidade é concluído.
+Quando [!DNL Experience Platform] recebe uma solicitação de exclusão de [!DNL Privacy Service], [!DNL Experience Platform] envia uma confirmação para [!DNL Privacy Service] de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. Os registros são removidos depois que o trabalho de privacidade é concluído.
 
 >[!IMPORTANT]
 >
@@ -200,10 +200,10 @@ Se você também incluiu o Serviço de Identidade (`identity`) e o data lake (`a
 
 | Produtos incluídos | Efeitos |
 | --- | --- |
-| Somente `ProfileService` | O perfil é excluído imediatamente assim que a Platform envia a confirmação de que a solicitação de exclusão foi recebida. No entanto, o gráfico de identidade do perfil ainda permanece e o perfil pode ser reconstruído à medida que novos dados com as mesmas identidades são assimilados. Os dados associados ao perfil também permanecem no data lake. |
-| `ProfileService` e `identity` | O perfil e seu gráfico de identidade associado são excluídos imediatamente assim que o Platform envia a confirmação de que a solicitação de exclusão foi recebida. Os dados associados ao perfil permanecem no data lake. |
-| `ProfileService` e `aepDataLake` | O perfil é excluído imediatamente assim que a Platform envia a confirmação de que a solicitação de exclusão foi recebida. No entanto, o gráfico de identidade do perfil ainda permanece e o perfil pode ser reconstruído à medida que novos dados com as mesmas identidades são assimilados.<br><br>Quando o produto do data lake responder que a solicitação foi recebida e está processando no momento, os dados associados ao perfil são excluídos por software e, portanto, não podem ser acessados por nenhum serviço [!DNL Platform]. Quando o trabalho for concluído, os dados serão removidos completamente do data lake. |
-| `ProfileService`, `identity` e `aepDataLake` | O perfil e seu gráfico de identidade associado são excluídos imediatamente assim que o Platform envia a confirmação de que a solicitação de exclusão foi recebida.<br><br>Quando o produto do data lake responder que a solicitação foi recebida e está processando no momento, os dados associados ao perfil são excluídos por software e, portanto, não podem ser acessados por nenhum serviço [!DNL Platform]. Quando o trabalho for concluído, os dados serão removidos completamente do data lake. |
+| Somente `ProfileService` | O perfil é excluído imediatamente assim que o Experience Platform envia a confirmação de que a solicitação de exclusão foi recebida. No entanto, o gráfico de identidade do perfil ainda permanece e o perfil pode ser reconstruído à medida que novos dados com as mesmas identidades são assimilados. Os dados associados ao perfil também permanecem no data lake. |
+| `ProfileService` e `identity` | O perfil e seu gráfico de identidade associado são excluídos imediatamente assim que o Experience Platform envia a confirmação de que a solicitação de exclusão foi recebida. Os dados associados ao perfil permanecem no data lake. |
+| `ProfileService` e `aepDataLake` | O perfil é excluído imediatamente assim que o Experience Platform envia a confirmação de que a solicitação de exclusão foi recebida. No entanto, o gráfico de identidade do perfil ainda permanece e o perfil pode ser reconstruído à medida que novos dados com as mesmas identidades são assimilados.<br><br>Quando o produto do data lake responder que a solicitação foi recebida e está processando no momento, os dados associados ao perfil são excluídos por software e, portanto, não podem ser acessados por nenhum serviço [!DNL Experience Platform]. Quando o trabalho for concluído, os dados serão removidos completamente do data lake. |
+| `ProfileService`, `identity` e `aepDataLake` | O perfil e seu gráfico de identidade associado são excluídos imediatamente assim que o Experience Platform envia a confirmação de que a solicitação de exclusão foi recebida.<br><br>Quando o produto do data lake responder que a solicitação foi recebida e está processando no momento, os dados associados ao perfil são excluídos por software e, portanto, não podem ser acessados por nenhum serviço [!DNL Experience Platform]. Quando o trabalho for concluído, os dados serão removidos completamente do data lake. |
 
 Consulte a [[!DNL Privacy Service] documentação](../privacy-service/home.md#monitor) para obter mais informações sobre o rastreamento de status de trabalho.
 
@@ -217,7 +217,7 @@ Para remover o perfil e todas as associações de identidade de um determinado c
 
 ### Limitações da política de mesclagem {#merge-policy-limitations}
 
-O Privacy Service só pode processar dados [!DNL Profile] usando uma política de mesclagem que não execute a identificação. Se você estiver usando a interface para confirmar se as solicitações de privacidade estão sendo processadas, verifique se está usando uma política com **[!DNL None]** como seu tipo [!UICONTROL identificação]. Em outras palavras, você não pode usar uma política de mesclagem em que a [!UICONTROL Compilação de ID] esteja definida como [!UICONTROL Gráfico privado].
+O Privacy Service só pode processar dados do [!DNL Profile] usando uma política de mesclagem que não execute a identificação. Se você estiver usando a interface para confirmar se as solicitações de privacidade estão sendo processadas, verifique se está usando uma política com **[!DNL None]** como seu tipo [!UICONTROL identificação]. Em outras palavras, você não pode usar uma política de mesclagem em que a [!UICONTROL Compilação de ID] esteja definida como [!UICONTROL Gráfico privado].
 
 >![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
 
@@ -225,4 +225,4 @@ O Privacy Service só pode processar dados [!DNL Profile] usando uma política d
 
 Ao ler este documento, você foi apresentado aos conceitos importantes envolvidos no processamento de solicitações de privacidade no [!DNL Experience Platform]. Para aprofundar sua compreensão de como gerenciar dados de identidade e criar processos de privacidade, continue lendo a documentação fornecida neste guia.
 
-Para obter informações sobre o processamento de solicitações de privacidade para [!DNL Platform] recursos não usados pelo [!DNL Profile], consulte o documento sobre [processamento de solicitação de privacidade no data lake](../catalog/privacy.md).
+Para obter informações sobre o processamento de solicitações de privacidade para [!DNL Experience Platform] recursos não usados pelo [!DNL Profile], consulte o documento sobre [processamento de solicitação de privacidade no data lake](../catalog/privacy.md).

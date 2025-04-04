@@ -1,24 +1,25 @@
 ---
-title: Definir e configurar chaves gerenciadas pelo cliente com o AWS usando a interface do usuário da plataforma
+title: Definir e configurar chaves gerenciadas pelo cliente com o AWS usando a interface do usuário do Experience Platform
 description: Saiba como configurar seu aplicativo CMK com seu Amazon Resource Name (ARN) e enviar sua ID de chave de criptografia para o Adobe Experience Platform.
-source-git-commit: e67aed9e8072bcd531d5aa6ce5b631c910a1812a
+exl-id: f0e38a60-d448-4975-977e-1367fca10515
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1263'
 ht-degree: 0%
 
 ---
 
-# Definir e configurar chaves gerenciadas pelo cliente com o AWS usando a interface do usuário da plataforma
+# Definir e configurar chaves gerenciadas pelo cliente com o AWS usando a interface do usuário do Experience Platform
 
-Use este guia para habilitar o CMK (Customer Managed Keys) para instâncias da Platform hospedadas no AWS por meio da interface do usuário da Platform.
+Use este guia para habilitar o CMK (Customer Managed Keys, Chaves gerenciadas pelo cliente) para instâncias do Experience Platform hospedadas no AWS por meio da interface do usuário do Experience Platform.
 
 >[!IMPORTANT]
 >
 >Antes de continuar com este guia, verifique se você concluiu a configuração detalhada no documento [&#39;Configurar o AWS KMS para CMK&#39;](./configure-kms.md).
 
-## Atualize a política da chave AWS para integrar a chave ao Experience Platform
+## Atualize a política principal do AWS para integrar a chave ao Experience Platform
 
-Para integrar sua chave AWS ao Experience Platform, edite o JSON na seção **[!DNL Key Policy]** do espaço de trabalho do KMS. Uma política de chave padrão é semelhante ao JSON abaixo.
+Para integrar sua chave do AWS ao Experience Platform, edite o JSON na seção **[!DNL Key Policy]** do espaço de trabalho do KMS. Uma política de chave padrão é semelhante ao JSON abaixo.
 
 <!-- The AWS ID below is fake. Q) Can I refer to it simply as AWS_ACCOUNT_ID ? Is that suitable? -->
 
@@ -40,11 +41,11 @@ Para integrar sua chave AWS ao Experience Platform, edite o JSON na seção **[!
 }
 ```
 
-No exemplo acima, todos os recursos (`"Resource": "*"`) na mesma conta (`Principal.AWS`) podem acessar a chave. Essa política permite que os serviços na conta executem operações de criptografia e descriptografia, restritas à conta especificada. Para conceder acesso a essa chave à sua conta de locatário único do Platform, adicione novas instruções à política padrão do AWS. Você pode obter a política JSON necessária na interface do usuário da plataforma e aplicá-la à chave do AWS KMS para estabelecer uma conexão segura com o Adobe Experience Platform.
+No exemplo acima, todos os recursos (`"Resource": "*"`) na mesma conta (`Principal.AWS`) podem acessar a chave. Essa política permite que os serviços na conta executem operações de criptografia e descriptografia, restritas à conta especificada. Para conceder acesso a essa chave à sua conta de locatário único do Experience Platform, adicione novas instruções à política padrão do AWS. Você pode obter a política JSON necessária na interface do usuário do Experience Platform e aplicá-la à chave KMS do AWS para estabelecer uma conexão segura com o Adobe Experience Platform.
 
-Na interface da Platform, vá para a seção **[!UICONTROL Administração]** no painel de navegação esquerdo e selecione **[!UICONTROL Criptografia]**. No espaço de trabalho [!UICONTROL Configuração de criptografia], selecione **[!UICONTROL Configurar]** no cartão [!UICONTROL Chaves gerenciadas pelo cliente].
+Na interface do Experience Platform, vá para a seção **[!UICONTROL Administração]** no painel de navegação esquerdo e selecione **[!UICONTROL Criptografia]**. No espaço de trabalho [!UICONTROL Configuração de criptografia], selecione **[!UICONTROL Configurar]** no cartão [!UICONTROL Chaves gerenciadas pelo cliente].
 
-![O espaço de trabalho Configuração de Criptografia de Plataforma com Configurar está realçado no cartão Chaves Gerenciadas pelo Cliente.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![O espaço de trabalho Configuração de Criptografia do Experience Platform com Configurar foi realçado no cartão Chaves Gerenciadas pelo Cliente.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 A [!UICONTROL configuração de Chaves gerenciadas pelo cliente] é exibida. Copie o objeto `statement` da política KMS CMK exibida na [!UICONTROL Configuração de Criptografia] das ] [!UICONTROL Chaves Gerenciadas pelo Cliente.
 
@@ -159,9 +160,9 @@ Selecione **[!DNL Finish]** para confirmar a política atualizada e criar a chav
 
 O espaço de trabalho [!DNL Customer Managed Keys] atualizado do AWS [!DNL Key Management Service] é exibido.
 
-### Adicionar detalhes da chave de criptografia do AWS à Platform
+### Adicionar detalhes da chave de criptografia do AWS ao Experience Platform
 
-Em seguida, para habilitar a criptografia, adicione o ARN (Nome de Recurso de Amazon) da chave à sua [!UICONTROL configuração de Chaves gerenciadas pelo cliente] da Plataforma. Na seção [!DNL Customer Managed Keys] do AWS, selecione o alias da nova chave na lista do [!DNL Key Management Service].
+Em seguida, para habilitar a criptografia, adicione o ARN (Nome de Recurso da Amazon) da chave à sua [!UICONTROL configuração de Chaves gerenciadas pelo cliente] do Experience Platform. Na seção [!DNL Customer Managed Keys] do AWS, selecione o alias da nova chave na lista do [!DNL Key Management Service].
 
 ![O espaço de trabalho de Chaves Gerenciadas do Cliente do AWS KMS com o novo alias de chave destacado.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -172,17 +173,17 @@ Selecione o ícone de cópia para copiar seu ARN. Uma caixa de diálogo de confi
 
 ![Os principais detalhes da sua Chave gerenciada pelo cliente do AWS KMS com o ARN realçado.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-Agora, volte para a interface do usuário da Plataforma [!UICONTROL Configuração de chaves gerenciadas pelo cliente]. Na seção **[!UICONTROL Adicionar detalhes da chave de criptografia do AWS]**, adicione um **[!UICONTROL Nome da configuração]** e a **[!UICONTROL chave ARN]** do KMS copiada da interface do usuário do AWS.
+Agora, volte para a [!UICONTROL configuração de Chaves gerenciadas pelo cliente] da Experience Platform. Na seção **[!UICONTROL Adicionar detalhes da chave de criptografia do AWS]**, adicione um **[!UICONTROL Nome da configuração]** e a **[!UICONTROL chave ARN]** do KMS copiada da interface do usuário do AWS.
 
-![O espaço de trabalho Configuração de Criptografia de Plataforma com o nome da Configuração e a chave KMS ARN está realçado na seção Adicionar detalhes da chave de criptografia do AWS.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![O espaço de trabalho Configuração de Criptografia do Experience Platform com o nome da Configuração e a chave KMS ARN está realçado na seção Adicionar detalhes da chave de criptografia do AWS.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 Em seguida, selecione **[!UICONTROL SALVAR]** para enviar o nome da configuração, a chave KMS ARN e iniciar a validação da chave.
 
-![O espaço de trabalho de Configuração de Criptografia de Plataforma com Salvar realçado.](../../../images/governance-privacy-security/key-management-service/save.png)
+![O espaço de trabalho de Configuração de Criptografia do Experience Platform com Salvar realçado.](../../../images/governance-privacy-security/key-management-service/save.png)
 
 Você retornou ao espaço de trabalho [!UICONTROL Configurações de Criptografia]. O status da configuração de criptografia é exibido na parte inferior do cartão **[!UICONTROL Chaves gerenciadas pelo cliente]**.
 
-![O espaço de trabalho de Configurações de Criptografia na Interface do Usuário da Plataforma com Processamento realçado no cartão Chaves Gerenciadas pelo Cliente.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![O espaço de trabalho de Configurações de Criptografia na interface do usuário do Experience Platform com Processamento realçado no cartão Chaves Gerenciadas pelo Cliente.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
 Depois que a chave é validada, os identificadores do cofre de chaves são adicionados aos armazenamentos de dados do data lake e do perfil para todas as sandboxes.
 
@@ -198,7 +199,7 @@ Depois que a chave é validada, os identificadores do cofre de chaves são adici
 
 Estas são as principais considerações para a revogação de chaves:
 
-- Revogar ou desativar a chave tornará os dados da Platform inacessíveis. Essa ação é irreversível e deve ser executada com cuidado.
+- Revogar ou desabilitar a chave tornará os dados do Experience Platform inacessíveis. Essa ação é irreversível e deve ser executada com cuidado.
 - Considere os cronogramas de propagação quando o acesso às chaves de criptografia for revogado. Os armazenamentos de dados principais ficam inacessíveis em alguns minutos a 24 horas. Os armazenamentos de dados em cache ou transitórios ficam inacessíveis em sete dias.
 
 Para revogar uma chave, navegue até o espaço de trabalho do AWS KMS. A seção **[!DNL Customer managed keys]** exibe todas as chaves disponíveis para sua conta do AWS. Selecione o alias da chave na lista.
@@ -209,7 +210,7 @@ Os detalhes da sua chave são exibidos. Para desabilitar a tecla, selecione **[!
 
 ![Os detalhes da sua chave do AWS na interface do AWS KMS com ações de Tecla e Desabilitar realçados.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
-Uma caixa de diálogo de confirmação é exibida. Selecione **[!DNL Disable key]** para confirmar sua escolha. O impacto da desativação da chave deve ser refletido nos aplicativos da Platform e na interface do usuário dentro de aproximadamente cinco minutos.
+Uma caixa de diálogo de confirmação é exibida. Selecione **[!DNL Disable key]** para confirmar sua escolha. O impacto de desabilitar a chave deve ser refletido nos aplicativos da Experience Platform e na interface do usuário dentro de aproximadamente cinco minutos.
 
 >[!NOTE]
 >
@@ -221,7 +222,7 @@ Como alternativa, se a chave for usada em outros serviços, é possível remover
 
 ![A seção de detalhes da chave do AWS com Edit (Editar) realçada na seção de política Key.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
-A página **[!DNL Edit key policy]** é exibida. Realce e exclua a declaração de política, copiada da interface do usuário da plataforma, para remover as permissões do aplicativo Chaves gerenciadas pelo cliente. Em seguida, selecione **[!DNL Save changes]** para concluir o processo.
+A página **[!DNL Edit key policy]** é exibida. Realce e exclua a declaração de política, copiada da interface do usuário do Experience Platform, para remover as permissões do aplicativo Chaves gerenciadas pelo cliente. Em seguida, selecione **[!DNL Save changes]** para concluir o processo.
 
 ![O espaço de trabalho Editar política principal no AWS com o objeto JSON de instrução e Salvar alterações foi realçado.](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 

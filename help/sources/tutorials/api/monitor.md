@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;início;tópicos populares;monitorar fluxos de dados;api de serviço de fluxo;Serviço de fluxo
+keywords: Experience Platform;página inicial;tópicos populares;monitorar fluxos de dados;api do serviço de fluxo;Serviço de fluxo
 solution: Experience Platform
 title: Monitorar fluxos de dados de origens usando a API de serviço de fluxo
 type: Tutorial
 description: Este tutorial aborda as etapas para monitorar a integridade, os erros e as métricas da execução do fluxo usando a API do serviço de fluxo.
 exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '411'
 ht-degree: 2%
 
 ---
@@ -24,16 +24,16 @@ Este tutorial aborda as etapas para monitorar dados de execução do fluxo para 
 
 Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../landing/api-guide.md).
 
 ## Monitorar fluxos de dados
 
-Para ver o status do fluxo de dados, faça uma solicitação GET para a API [!DNL Flow Service] enquanto fornece a ID de fluxo correspondente do fluxo de dados.
+Para ver o status do fluxo de dados, faça uma solicitação do GET para a API [!DNL Flow Service] enquanto fornece a ID de fluxo correspondente do fluxo de dados.
 
 **Formato da API**
 

@@ -1,8 +1,8 @@
 ---
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 98%
+source-wordcount: '470'
+ht-degree: 95%
 
 ---
 # Contribuição de conteúdo
@@ -43,7 +43,7 @@ Se você for um redator técnico, gerente de programa ou desenvolvedor da equipe
 
 ## Contato com a equipe de documentação da Experience Platform
 
-Como dito acima, os membros da comunidade Adobe podem enviar um problema que será atribuído ao redator apropriado. Se você for um funcionário da Adobe, poderá enviar um problema ou entrar em contato diretamente com a equipe de documentação da Experience Platform. Para encontrar o redator principal de uma área específica da Platform, consulte o [Wiki de documentação da Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
+Como dito acima, os membros da comunidade Adobe podem enviar um problema que será atribuído ao redator apropriado. Se você for um funcionário da Adobe, poderá enviar um problema ou entrar em contato diretamente com a equipe de documentação da Experience Platform. Para encontrar o autor principal de uma área específica do Experience Platform, consulte o [wiki de Documentação do Adobe Experience Platform](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Ferramentas e configuração
 

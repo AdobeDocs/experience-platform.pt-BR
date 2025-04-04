@@ -1,10 +1,10 @@
 ---
 title: Correspondência Difusa no Serviço de Consulta
-description: Saiba como executar uma correspondência nos dados da Platform que combina resultados de vários conjuntos de dados correspondendo aproximadamente a uma cadeia de caracteres de sua escolha.
+description: Saiba como fazer uma correspondência nos dados do Experience Platform que combina resultados de vários conjuntos de dados correspondendo aproximadamente a uma cadeia de caracteres de sua escolha.
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ cur = conn.cursor()
 
 Sua instância [!DNL Jupyter Notebook] agora está conectada ao Serviço de consulta. Se a conexão for bem-sucedida, nenhuma mensagem será exibida. Se a conexão falhar, um erro será exibido.
 
-### Dados do Draw do conjunto de dados Luma {#luma-dataset}
+### Desenhar dados do conjunto de dados Luma {#luma-dataset}
 
 Os dados para análise são retirados do primeiro conjunto de dados com os seguintes comandos. Por motivos de brevidade, os exemplos foram limitados aos primeiros 10 resultados da coluna.
 
@@ -96,7 +96,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Dados do Draw do conjunto de dados Acme {#acme-dataset}
+### Desenhar dados do conjunto de dados Acme {#acme-dataset}
 
 Os dados para análise agora são retirados do segundo conjunto de dados com os seguintes comandos. Novamente, por questões de brevidade, os exemplos foram limitados aos primeiros 10 resultados da coluna.
 
@@ -350,7 +350,7 @@ Selecione **Saída** para ver os resultados desta junção.
 
 +++
 
-### Salvar resultados de correspondência difusa na Platform {#save-to-platform}
+### Salvar resultados de correspondência difusa no Experience Platform {#save-to-platform}
 
 Por fim, os resultados da correspondência difusa podem ser salvos como um conjunto de dados para uso no Adobe Experience Platform usando SQL.
 

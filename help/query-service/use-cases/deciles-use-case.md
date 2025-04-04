@@ -2,16 +2,16 @@
 title: Caso de uso de conjuntos de dados derivados com base em decis
 description: Este guia demonstra as etapas necessárias para usar o Serviço de consulta para criar conjuntos de dados derivados baseados em decis para usar com os dados do seu Perfil.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---
 
 # Caso de uso de conjuntos de dados derivados com base em decis
 
-Os conjuntos de dados derivados facilitam casos de uso complicados para analisar dados do data lake que podem ser usados com outros serviços downstream da Platform ou publicados nos dados do Perfil do cliente em tempo real.
+Os conjuntos de dados derivados facilitam casos de uso complicados para analisar dados do data lake que podem ser usados com outros serviços downstream da Experience Platform ou publicados nos dados do Perfil do cliente em tempo real.
 
 Este exemplo de caso de uso demonstra como criar conjuntos de dados derivados baseados em decis para uso com seus dados de Perfil do cliente em tempo real. Usando um cenário de fidelidade da companhia aérea como exemplo, este guia informa como criar um conjunto de dados que usa decis categóricos para segmentar e criar públicos com base em atributos classificados.
 
@@ -82,7 +82,7 @@ Crie um &quot;Esquema de decil de fidelidade de linha aérea&quot; para criar um
 
 ### Ativar o esquema para o Perfil de cliente em tempo real
 
-Os dados assimilados no Experience Platform para uso pelo Perfil do cliente em tempo real devem estar em conformidade com [um esquema do Experience Data Model (XDM) habilitado para o Perfil](../../xdm/ui/resources/schemas.md). Para que um esquema seja ativado para Perfil, ele deve implementar o Perfil individual XDM ou a classe XDM ExperienceEvent.
+Os dados assimilados na Experience Platform para uso pelo Perfil do cliente em tempo real devem estar em conformidade com [um esquema do Experience Data Model (XDM) habilitado para o Perfil](../../xdm/ui/resources/schemas.md). Para que um esquema seja ativado para Perfil, ele deve implementar o Perfil individual XDM ou a classe XDM ExperienceEvent.
 
 [Habilite seu esquema para uso no Perfil do Cliente em Tempo Real usando a API do Registro de Esquema](../../xdm/tutorials/create-schema-api.md) ou a [interface do usuário do Editor de Esquemas](../../xdm/tutorials/create-schema-ui.md).  Instruções detalhadas sobre como ativar um esquema para o Perfil estão disponíveis na respectiva documentação.
 

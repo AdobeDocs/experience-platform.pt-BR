@@ -1,33 +1,33 @@
 ---
-title: Conectar sua conta PathFactory ao Experience Platform por meio da interface
-description: Saiba como conectar sua conta PathFactory ao Experience Platform por meio da interface do usuário do.
+title: Conectar sua conta do PathFactory à Experience Platform por meio da interface
+description: Saiba como conectar sua conta do PathFactory ao Experience Platform por meio da interface do usuário do.
 badge: Beta
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '572'
 ht-degree: 2%
 
 ---
 
-# Conecte sua conta do [!DNL PathFactory] ao Experience Platform por meio da interface
+# Conectar sua conta do [!DNL PathFactory] à Experience Platform por meio da interface
 
 Este tutorial fornece etapas sobre como conectar os dados de Visitantes, Sessões e Exibições de Página do [!DNL PathFactory] à Adobe Experience Platform por meio da interface do usuário.
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver uma conta [!DNL PathFactory], ignore o restante deste documento e prossiga para o tutorial em [trazendo dados de automação de marketing para o Experience Platform usando a interface](../../dataflow/marketing-automation.md).
+Se você já tiver uma conta [!DNL PathFactory], ignore o restante deste documento e prossiga para o tutorial em [trazendo dados de automação de marketing para a Experience Platform usando a interface](../../dataflow/marketing-automation.md).
 
 ### Colete as credenciais necessárias {#gather-credentials}
 
-Para acessar a conta PathFactory na Platform, você deve fornecer os seguintes valores:
+Para acessar a conta PathFactory na Experience Platform, você deve fornecer os seguintes valores:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
@@ -42,7 +42,7 @@ Para obter orientação detalhada sobre como proteger e usar suas credenciais, e
 
 ## Conectar sua conta do [!DNL PathFactory]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. O [!UICONTROL Catálogo] exibe uma variedade de fontes suportadas pelo Experience Platform.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. O [!UICONTROL Catálogo] exibe uma variedade de fontes suportadas pela Experience Platform.
 
 Você pode selecionar a categoria apropriada na lista de categorias. Você também pode usar a barra de pesquisa para filtrar por uma fonte específica.
 
@@ -68,4 +68,4 @@ Se você já tiver uma conta existente, selecione **[!UICONTROL Conta existente]
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão entre sua conta do [!DNL PathFactory] e o Experience Platform. Agora você pode seguir para o próximo tutorial e [criar um fluxo de dados para trazer seus dados de automação de marketing para o Experience Platform](../../dataflow/marketing-automation.md).
+Seguindo este tutorial, você estabeleceu uma conexão entre sua conta do [!DNL PathFactory] e a Experience Platform. Agora você pode seguir para o próximo tutorial e [criar um fluxo de dados para trazer seus dados de automação de marketing para o Experience Platform](../../dataflow/marketing-automation.md).

@@ -2,9 +2,9 @@
 title: Visualizador de gráfico de identidade
 description: Um gráfico de identidade é um mapa dos relacionamentos entre identidades diferentes para um cliente específico, fornecendo uma representação visual de como o cliente interage com a sua marca em diferentes canais.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1402'
+source-wordcount: '1407'
 ht-degree: 6%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 6%
 
 Um gráfico de identidade é um mapa dos relacionamentos entre identidades diferentes para um cliente específico, fornecendo uma representação visual de como o cliente interage com a sua marca em diferentes canais. Todos os gráficos de identidade do cliente são gerenciados e atualizados coletivamente pelo Serviço de identidade da Adobe Experience Platform em tempo quase real, em resposta à atividade do cliente.
 
-O visualizador de gráficos de identidade na interface do usuário da Platform permite visualizar e entender melhor quais identidades do cliente são unidas e de que maneiras. O visualizador permite que você arraste e interaja com diferentes partes do gráfico, possibilitando examinar relacionamentos de identidade complexos, depurar com mais eficiência e aproveitar o aumento da transparência com a forma como as informações estão sendo utilizadas.
+O visualizador de gráficos de identidade na interface do usuário do Experience Platform permite visualizar e entender melhor quais identidades do cliente são unidas e de que maneiras. O visualizador permite que você arraste e interaja com diferentes partes do gráfico, possibilitando examinar relacionamentos de identidade complexos, depurar com mais eficiência e aproveitar o aumento da transparência com a forma como as informações estão sendo utilizadas.
 
-O documento a seguir fornece etapas sobre como acessar e usar o visualizador de gráficos de identidade na interface do usuário da Platform.
+O documento a seguir fornece etapas sobre como acessar e usar o visualizador de gráficos de identidade na interface do usuário do Experience Platform.
 
 ## Tutorial em vídeo
 
@@ -38,7 +38,7 @@ Trabalhar com o visualizador de gráficos de identidade requer uma compreensão 
 
 ## Acessar o visualizador de gráficos de identidade {#access-identity-graph-viewer}
 
-Na interface da Platform, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione **[!UICONTROL Gráfico de identidade]** na lista de guias do cabeçalho.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione **[!UICONTROL Gráfico de identidade]** na lista de guias do cabeçalho.
 
 ![O espaço de trabalho Identidades na interface do Experience Platform, com a guia Gráfico de Identidade selecionada.](../images/graph-viewer/identity-graph.png)
 
@@ -135,7 +135,7 @@ Na janela de visualização, selecione um ícone de impressão digital para ver 
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a explorar os gráficos de identidade de seus clientes na interface do usuário da Platform. Para obter mais informações sobre identidades na Platform, consulte a [visão geral do Serviço de identidade](../home.md)
+Ao ler este documento, você aprendeu a explorar os gráficos de identidade de seus clientes na interface do usuário do Experience Platform. Para obter mais informações sobre identidades no Experience Platform, consulte a [visão geral do Serviço de Identidade](../home.md)
 
 ## Changelog
 

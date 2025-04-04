@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;início;tópicos populares;serviço de consulta;Serviço de consulta;alerta;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;Serviço de consulta;alerta;
 title: Ponto de Extremidade de Assinaturas de Alerta
 description: Este guia fornece exemplos de solicitações HTTP e respostas para as várias chamadas de API que você pode fazer para o endpoint de assinaturas de alerta com a API de serviço de consulta.
 role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3204'
+source-wordcount: '3217'
 ht-degree: 2%
 
 ---
 
 # Endpoint de assinaturas de alerta
 
-O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário da Platform, ou em ambos. O conteúdo da notificação é o mesmo para alertas na plataforma e alertas de email.
+O Adobe Experience Platform Query Service permite assinar alertas para consultas ad hoc e programadas. Os alertas podem ser recebidos por email, na interface do usuário do Experience Platform ou em ambas. O conteúdo da notificação é o mesmo para alertas no Experience Platform e alertas de email.
 
 ## Introdução
 
@@ -79,7 +79,7 @@ Veja a seguir uma lista de parâmetros de consulta disponíveis para consultas d
 | `orderby` | O campo que especifica a ordem dos resultados. Os campos com suporte são `created` e `updated`. Preceda o nome da propriedade com `+` para ordem crescente e `-` para ordem decrescente. O padrão é `-created`. Observe que o sinal de mais (`+`) deve ter escape com `%2B`. Por exemplo, `%2Bcreated` é o valor de uma ordem crescente criada. |
 | `pagesize` | Use esse parâmetro para controlar o número de registros que você deseja obter da chamada de API por página. O limite padrão é definido com a quantidade máxima de 50 registros por página. |
 | `page` | Indique o número da página dos resultados retornados para os quais você deseja ver os registros. |
-| `property` | Filtre os resultados com base nos campos escolhidos. Os filtros **devem** ter HTML de escape. As vírgulas são usadas para combinar vários conjuntos de filtros. As seguintes propriedades permitem a filtragem: <ul><li>ID</li><li>assetId</li><li>status</li><li>alertType</li></ul> Os operadores com suporte são `==` (igual a). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará o alerta com uma ID correspondente. |
+| `property` | Filtre os resultados com base nos campos escolhidos. Os filtros **devem** ter HTML com escape. As vírgulas são usadas para combinar vários conjuntos de filtros. As seguintes propriedades permitem a filtragem: <ul><li>ID</li><li>assetId</li><li>status</li><li>alertType</li></ul> Os operadores com suporte são `==` (igual a). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará o alerta com uma ID correspondente. |
 
 **Solicitação**
 
@@ -165,9 +165,9 @@ Uma resposta bem-sucedida retorna um status HTTP 200 e a matriz `alerts` com inf
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `alerts.assetId` | A ID da consulta que associou o alerta a uma consulta específica. |
-| `alerts.id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, o `alertType` e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas na [documentação do painel Alertas da plataforma](../../observability/alerts/ui.md). |
+| `alerts.id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, o `alertType` e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas na [documentação do painel de Alertas do Experience Platform](../../observability/alerts/ui.md). |
 | `alerts.status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled` e `disabling`. Um alerta está ouvindo ativamente os eventos, pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou em transição entre esses estados. |
-| `alerts.alertType` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário da plataforma. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul> |
+| `alerts.alertType` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário do Experience Platform. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul> |
 | `alerts._links` | Fornece informações sobre os métodos e endpoints disponíveis que podem ser usados para recuperar, atualizar, editar ou excluir informações relacionadas a esta ID de alerta. |
 | `_page` | O objeto contém propriedades para descrever a ordem, o tamanho, o número total de páginas e a página atual. |
 | `_links` | O objeto contém referências de URI que podem ser usadas para obter a página de recursos seguinte ou anterior. |
@@ -294,11 +294,11 @@ Uma resposta bem-sucedida retorna um status HTTP 200 e a matriz `alerts` que con
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `assetId` | O alerta está associado a essa ID. A ID pode ser uma ID de consulta ou uma ID de agendamento. |
-| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, o `alertType` e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas na [documentação do painel Alertas da plataforma](../../observability/alerts/ui.md). |
+| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, o `alertType` e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas na [documentação do painel de Alertas do Experience Platform](../../observability/alerts/ui.md). |
 | `status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled` e `disabling`. Um alerta está ouvindo ativamente os eventos, pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou em transição entre esses estados. |
 | `alertType` | Cada alerta pode ter três tipos diferentes. São eles: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul> |
-| `subscriptions.emailNotifications` | Uma matriz de endereços de email registrados em Adobe para usuários que se inscreveram para receber emails do alerta. |
-| `subscriptions.inContextNotifications` | Uma matriz de endereços de email registrados em Adobe para usuários que assinaram notificações da interface do usuário para o alerta. |
+| `subscriptions.emailNotifications` | Uma matriz de endereços de email registrados do Adobe para usuários que se inscreveram para receber emails do alerta. |
+| `subscriptions.inContextNotifications` | Uma matriz de endereços de email registrados do Adobe para usuários que assinaram notificações da interface do usuário para o alerta. |
 
 ## Recuperar informações de assinatura de alerta para uma determinada consulta ou ID de agendamento e tipo de alerta {#get-alert-info-by-id-and-alert-type}
 
@@ -382,10 +382,10 @@ Uma resposta bem-sucedida retorna um status HTTP 200 e todos os alertas nos quai
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `assetId` | A ID da consulta que associou o alerta a uma consulta específica. |
-| `alertType` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário da plataforma. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul> |
-| `subscriptions` | Um objeto usado para transmitir as IDs de email registradas do Adobe associadas aos alertas e os canais nos quais os usuários receberão os alertas. |
-| `subscriptions.inContextNotifications` | Uma matriz de endereços de email registrados em Adobe para usuários que assinaram notificações da interface do usuário para o alerta. |
-| `subscriptions.emailNotifications` | Uma matriz de endereços de email registrados em Adobe para usuários que se inscreveram para receber emails do alerta. |
+| `alertType` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário do Experience Platform. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul> |
+| `subscriptions` | Um objeto usado para transmitir as IDs de email registradas do Adobe associadas aos alertas e aos canais nos quais os usuários receberão os alertas. |
+| `subscriptions.inContextNotifications` | Uma matriz de endereços de email registrados do Adobe para usuários que assinaram notificações da interface do usuário para o alerta. |
+| `subscriptions.emailNotifications` | Uma matriz de endereços de email registrados do Adobe para usuários que se inscreveram para receber emails do alerta. |
 
 ## Recuperar uma lista de todos os alertas que um usuário assina {#get-alert-subscription-list}
 
@@ -399,11 +399,11 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 
 | Parâmetros | Descrição |
 | -------- | ----------- |
-| `{EMAIL_ID}` | Um endereço de email que está registrado em uma conta Adobe, é usado para identificar os usuários inscritos nos alertas. |
+| `{EMAIL_ID}` | Um endereço de email registrado em uma conta do Adobe é usado para identificar os usuários inscritos nos alertas. |
 | `orderby` | O campo que especifica a ordem dos resultados. Os campos com suporte são `created` e `updated`. Preceda o nome da propriedade com `+` para ordem crescente e `-` para ordem decrescente. O padrão é `-created`. Observe que o sinal de mais (`+`) deve ter escape com `%2B`. Por exemplo, `%2Bcreated` é o valor de uma ordem crescente criada. |
 | `pagesize` | Use esse parâmetro para controlar o número de registros que você deseja obter da chamada de API por página. O limite padrão é definido com a quantidade máxima de 50 registros por página. |
 | `page` | Indique o número da página dos resultados retornados para os quais você deseja ver os registros. |
-| `property` | Filtre os resultados com base nos campos escolhidos. Os filtros **devem** ter HTML de escape. As vírgulas são usadas para combinar vários conjuntos de filtros. As seguintes propriedades permitem a filtragem: <ul><li>ID</li><li>assetId</li><li>status</li><li>alertType</li></ul> Os operadores com suporte são `==` (igual a). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará o alerta com uma ID correspondente. |
+| `property` | Filtre os resultados com base nos campos escolhidos. Os filtros **devem** ter HTML com escape. As vírgulas são usadas para combinar vários conjuntos de filtros. As seguintes propriedades permitem a filtragem: <ul><li>ID</li><li>assetId</li><li>status</li><li>alertType</li></ul> Os operadores com suporte são `==` (igual a). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará o alerta com uma ID correspondente. |
 
 **Solicitação**
 
@@ -512,11 +512,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 e a matriz `items` com detal
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `name` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, o `alertType` e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas na [documentação do painel Alertas da plataforma](../../observability/alerts/ui.md). |
+| `name` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, o `alertType` e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas na [documentação do painel de Alertas do Experience Platform](../../observability/alerts/ui.md). |
 | `assetId` | A ID da consulta que associou o alerta a uma consulta específica. |
 | `status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled` e `disabling`. Um alerta está ouvindo ativamente os eventos, pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou em transição entre esses estados. |
-| `alertType` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário da plataforma. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul> |
-| `subscriptions` | Um objeto usado para transmitir as IDs de email registradas do Adobe associadas aos alertas e os canais nos quais os usuários receberão os alertas. |
+| `alertType` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário do Experience Platform. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul> |
+| `subscriptions` | Um objeto usado para transmitir as IDs de email registradas do Adobe associadas aos alertas e aos canais nos quais os usuários receberão os alertas. |
 | `subscriptions.inContextNotifications` | Um valor booleano que determina como os usuários recebem notificações de alerta. Um valor `true` confirma que os alertas devem ser fornecidos por meio da interface. Um valor `false` garante que os usuários não sejam notificados por meio desse canal. |
 | `subscriptions.emailNotifications` | Um valor booleano que determina como os usuários recebem notificações de alerta. Um valor `true` confirma que os alertas devem ser fornecidos por email. Um valor `false` garante que os usuários não sejam notificados por meio desse canal. |
 
@@ -526,7 +526,7 @@ Para criar um alerta e assinar um usuário para recebê-lo, faça uma solicitaç
 
 >[!IMPORTANT]
 >
->Você pode enviar até cinco IDs de email registradas Adobe em uma única solicitação. Para inscrever mais de cinco usuários em um alerta, é necessário fazer solicitações subsequentes.
+>Você pode passar até cinco IDs de email registradas da Adobe em uma única solicitação. Para inscrever mais de cinco usuários em um alerta, é necessário fazer solicitações subsequentes.
 
 **Formato da API**
 
@@ -560,9 +560,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `assetId` | O alerta está associado a essa ID. A ID pode ser uma ID de consulta ou uma ID de agendamento. |
-| `alertType` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário da plataforma. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul> |
-| `subscriptions` | Um objeto usado para transmitir as IDs de email registradas do Adobe associadas aos alertas e os canais nos quais os usuários receberão os alertas. |
-| `subscriptions.emailIds` | Uma matriz de endereços de email para identificar os usuários que devem receber os alertas. Os endereços de email **devem** estar registrados em uma conta Adobe. |
+| `alertType` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário do Experience Platform. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul> |
+| `subscriptions` | Um objeto usado para transmitir as IDs de email registradas do Adobe associadas aos alertas e aos canais nos quais os usuários receberão os alertas. |
+| `subscriptions.emailIds` | Uma matriz de endereços de email para identificar os usuários que devem receber os alertas. Os endereços de email **devem** estar registrados em uma conta da Adobe. |
 | `subscriptions.inContextNotifications` | Um valor booleano que determina como os usuários recebem notificações de alerta. Um valor `true` confirma que os alertas devem ser fornecidos por meio da interface. Um valor `false` garante que os usuários não sejam notificados por meio desse canal. |
 | `subscriptions.emailNotifications` | Um valor booleano que determina como os usuários recebem notificações de alerta. Um valor `true` confirma que os alertas devem ser fornecidos por email. Um valor `false` garante que os usuários não sejam notificados por meio desse canal. |
 
@@ -613,7 +613,7 @@ Uma resposta bem-sucedida retorna o status HTTP 202 (Aceito) com detalhes do ale
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, o `alertType` e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas na [documentação do painel Alertas da plataforma](../../observability/alerts/ui.md). |
+| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, o `alertType` e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas na [documentação do painel de Alertas do Experience Platform](../../observability/alerts/ui.md). |
 | `_links` | Fornece informações sobre os métodos e endpoints disponíveis que podem ser usados para recuperar, atualizar, editar ou excluir informações relacionadas a esta ID de alerta. |
 
 ## Ativar ou desativar um alerta {#enable-or-disable-alert}
@@ -629,7 +629,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parâmetros | Descrição |
 | -------- | ----------- |
-| `ALERT_TYPE` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário da plataforma. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul>Você deve especificar o tipo de alerta atual no namespace do ponto de extremidade para alterá-lo. |
+| `ALERT_TYPE` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário do Experience Platform. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul>Você deve especificar o tipo de alerta atual no namespace do ponto de extremidade para alterá-lo. |
 | `QUERY_ID` | O identificador exclusivo da consulta a ser atualizada. |
 | `SCHEDULE_ID` | O identificador exclusivo da consulta agendada a ser atualizada. |
 
@@ -654,7 +654,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 | -------- | ----------- |
 | `op` | A operação a ser executada. Atualmente, o único valor aceito é `replace`. |
 | `path` | Esse valor está relacionado ao namespace no endpoint. Atualmente, o único valor aceito é `/status`. |
-| `value` | Em uma solicitação PATCH bem-sucedida, esse valor altera o valor `status` do alerta. Atualmente, os valores aceitos são `enable` ou `disable`. |
+| `value` | Em uma solicitação PATCH bem-sucedida, o valor `status` do alerta é alterado. Atualmente, os valores aceitos são `enable` ou `disable`. |
 
 {style="table-layout:auto"}
 
@@ -673,14 +673,14 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes sobre o status,
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, o `alertType` e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas na [documentação do painel Alertas da plataforma](../../observability/alerts/ui.md). |
+| `id` | O nome do alerta. Esse nome é gerado pelo serviço Alertas e é usado no painel Alertas. O nome do alerta é composto da pasta que armazena o alerta, o `alertType` e a ID do fluxo. Informações sobre os alertas disponíveis podem ser encontradas na [documentação do painel de Alertas do Experience Platform](../../observability/alerts/ui.md). |
 | `assetId` | O alerta está associado a essa ID. A ID pode ser uma ID de consulta ou uma ID de agendamento. |
 | `alertType` | Cada alerta pode ter três tipos diferentes. São eles: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li></ul> |
 | `status` | O alerta tem quatro valores de status: `enabled`, `enabling`, `disabled` e `disabling`. Um alerta está ouvindo ativamente os eventos, pausado para uso futuro enquanto mantém todos os assinantes e configurações relevantes ou em transição entre esses estados. |
 
 ## Excluir o alerta para uma consulta e um tipo de alerta específicos {#delete-alert-info-by-id-and-alert-type}
 
-Exclua um alerta para uma consulta específica ou ID de agendamento e tipo de alerta fazendo uma solicitação DELETE para o ponto de extremidade `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` ou `/alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}`.
+Exclua um alerta para uma determinada consulta ou ID de agendamento e tipo de alerta fazendo uma solicitação DELETE para o ponto de extremidade `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` ou `/alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}`.
 
 ```http
 DELETE /alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}
@@ -689,7 +689,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parâmetros | Descrição |
 | -------- | ----------- |
-| `ALERT_TYPE` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário da plataforma. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul> A solicitação DELETE se aplica somente ao tipo de alerta específico fornecido. |
+| `ALERT_TYPE` | O tipo de alerta. Há cinco estados de alerta disponíveis para consultas programadas, embora existam apenas quatro estados de alerta disponíveis para consultas ad hoc. O alerta `quarantine` só está disponível para consultas agendadas. Além disso, você só pode definir o alerta `delay` na interface do usuário do Experience Platform. Por esse motivo, `delay` não está descrito aqui. Os alertas disponíveis são: <ul><li>`start`: notifica um usuário quando a execução da consulta começou.</li><li>`success`: Notifica o usuário quando a consulta é concluída.</li><li>`failure`: notifica o usuário se a consulta falhar.</li><li>`quarantine`: é ativado quando uma execução de consulta agendada é colocada em quarentena.</li></ul> A solicitação DELETE se aplica somente ao tipo de alerta específico fornecido. |
 | `QUERY_ID` | O identificador exclusivo da consulta a ser atualizada. |
 | `SCHEDULE_ID` | O identificador exclusivo da consulta agendada a ser atualizada. |
 

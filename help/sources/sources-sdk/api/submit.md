@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Enviar seu Source
 description: O documento a seguir fornece etapas sobre como testar e verificar uma nova fonte usando a API do Serviço de fluxo e integrar uma nova fonte por meio de Fontes de autoatendimento (SDK em lote).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ O documento a seguir fornece etapas sobre como testar e depurar sua origem usand
 
 ## Introdução
 
-* Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
-* Para obter informações sobre como gerar suas credenciais para APIs da plataforma, consulte o tutorial sobre [autenticação e acesso a APIs do Experience Platform](../../../landing/api-authentication.md).
-* Para obter informações sobre como configurar o [!DNL Postman] para APIs da Platform, consulte o tutorial em [configuração do console do desenvolvedor e [!DNL Postman]](../../../landing/postman.md).
+* Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../landing/api-guide.md).
+* Para obter informações sobre como gerar suas credenciais para as APIs do Experience Platform, consulte o tutorial sobre [autenticação e acesso às APIs do Experience Platform](../../../landing/api-authentication.md).
+* Para obter informações sobre como configurar o [!DNL Postman] para APIs do Experience Platform, consulte o tutorial em [configuração do console do desenvolvedor e [!DNL Postman]](../../../landing/postman.md).
 * Para ajudar no processo de teste e depuração, baixe a [coleção e o ambiente de verificação de Fontes de Autoatendimento aqui](../assets/sdk-verification.zip) e siga as etapas descritas abaixo.
 
 ## Testar sua origem
@@ -59,10 +59,10 @@ Depois que os parâmetros de autenticação e especificação de origem forem fo
 
 | Parâmetro | Descrição | Exemplo |
 | --- | --- | --- |
-| `x-api-key` | Um identificador exclusivo usado para autenticar chamadas para APIs Experience Platform. Consulte o tutorial sobre [autenticação e acesso às APIs do Experience Platform](../../../landing/api-authentication.md) para obter informações sobre como recuperar o `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-api-key` | Um identificador exclusivo usado para autenticar chamadas para APIs do Experience Platform. Consulte o tutorial sobre [autenticação e acesso a APIs do Experience Platform](../../../landing/api-authentication.md) para obter informações sobre como recuperar o `x-api-key`. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | Uma entidade corporativa que pode ser proprietária ou licenciar produtos e serviços e permitir acesso a seus membros. Consulte o tutorial em [configuração do console do desenvolvedor e [!DNL Postman]](../../../landing/postman.md) para obter instruções sobre como recuperar as informações de `x-gw-ims-org-id`. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | O token de autorização necessário para completar chamadas para APIs de Experience Platform. Consulte o tutorial sobre [autenticação e acesso às APIs do Experience Platform](../../../landing/api-authentication.md) para obter informações sobre como recuperar o `authorizationToken`. | `Bearer authorizationToken` |
-| `schemaId` | Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um esquema usando a API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `authorizationToken` | O token de autorização necessário para concluir chamadas para APIs do Experience Platform. Consulte o tutorial sobre [autenticação e acesso a APIs do Experience Platform](../../../landing/api-authentication.md) para obter informações sobre como recuperar o `authorizationToken`. | `Bearer authorizationToken` |
+| `schemaId` | Para que os dados de origem sejam usados no Experience Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consulte o tutorial sobre [criação de um esquema usando a API](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | A versão exclusiva que corresponde ao esquema. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | O `meta:altId` que é retornado com o `schemaId` ao criar um novo esquema. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
@@ -82,7 +82,7 @@ A interface [!DNL Runner] é exibida, permitindo configurar a ordem de execuçã
 
 >[!NOTE]
 >
->Você pode desabilitar **Excluir Fluxo** da lista de verificação de ordem de execução se preferir usar o painel de monitoramento de fontes na interface do usuário da Platform. No entanto, após concluir o teste, é necessário garantir que os fluxos de teste sejam excluídos.
+>Você pode desabilitar **Excluir Fluxo** da lista de verificação de ordem de execução se preferir usar o painel de monitoramento de fontes na interface do Experience Platform. No entanto, após concluir o teste, é necessário garantir que os fluxos de teste sejam excluídos.
 
 ![executar-coleção](../assets/run-collection.png)
 

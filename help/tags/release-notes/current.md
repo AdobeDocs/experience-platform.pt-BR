@@ -2,10 +2,10 @@
 title: Notas de versão para tags e encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: e300e57df998836a8c388511b446e90499185705
-workflow-type: ht
-source-wordcount: '771'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '773'
+ht-degree: 93%
 
 ---
 
@@ -54,13 +54,13 @@ Lançamento de novas extensões:
 
 ## 26 de outubro de 2022
 
-* **Manipulação de dados confidenciais para sequências de dados**: as sequências de dados agora usam várias tecnologias da Platform para manipular adequadamente dados confidenciais conforme determinado por regulamentos como a Lei de Portabilidade e Responsabilidade de Provedores de Saúde (HIPAA). Consulte a seção sobre [manipulação de dados sensíveis em sequências de dados](../../datastreams/overview.md#sensitive) para obter mais informações.
+* **Manipulação de dados confidenciais para sequências de dados**: as sequências de dados agora usam várias tecnologias da Experience Platform para manipular adequadamente dados confidenciais conforme aplicado por regulamentações, como a HIPAA (Lei de Portabilidade e Responsabilidade do Seguro de Saúde). Consulte a seção sobre [manipulação de dados sensíveis em sequências de dados](../../datastreams/overview.md#sensitive) para obter mais informações.
 * Extensão do **[!DNL Splunk]para encaminhamento de eventos**: agora é possível enviar dados para o [!DNL Splunk] usando uma extensão de [encaminhamento de eventos](../ui/event-forwarding/overview.md). Consulte a [[!DNL Splunk] Visão geral de extensões](../extensions/server/splunk/overview.md) para obter mais informações.
 * Extensão do **[!DNL Zendesk]para encaminhamento de eventos**: agora é possível enviar dados para o [!DNL Zendesk] usando uma extensão de [encaminhamento de eventos](../ui/event-forwarding/overview.md). Consulte a [[!DNL Zendesk] Visão geral de extensões](../extensions/server/zendesk/overview.md) para obter mais informações.
 
 ## 28 de setembro de 2022
 
-* **Integração com o menu de navegação esquerdo da Adobe Experience Platform**: todos os recursos anteriormente exclusivos da interface da Coleção de dados (incluindo tags e encaminhamento de eventos) agora também estão disponíveis por meio do menu de navegação esquerdo na interface da Experience Platform, na categoria **[!UICONTROL Coleção de dados]**. Isso elimina a necessidade de alternar entre as interfaces ao trabalhar com recursos de coleta de dados na Platform.
+* **Integração com o menu de navegação esquerdo da Adobe Experience Platform**: todos os recursos anteriormente exclusivos da interface da Coleção de dados (incluindo tags e encaminhamento de eventos) agora também estão disponíveis por meio do menu de navegação esquerdo na interface da Experience Platform, na categoria **[!UICONTROL Coleção de dados]**. Isso elimina a necessidade de alternar entre interfaces do usuário ao trabalhar com recursos de coleta de dados no Experience Platform.
 * **Atribuição de usuário em tags e encaminhamento de eventos**: ao listar propriedades disponíveis em tags e no encaminhamento de eventos, cada propriedade listada agora mostra quando foi atualizada pela última vez e por quem.
 * Extensão da **[[!DNL Snap Conversions API] ](https://exchange.adobe.com/apps/ec/108550) para encaminhamento de eventos**: agora é possível enviar dados para a [!DNL Snapchat Conversions API] usando uma extensão de [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md). Para obter mais informações sobre como autenticar e usar a API, consulte a [[!DNL Snapchat Marketing API] documentação](https://marketingapi.snapchat.com/docs/conversion.html).
 

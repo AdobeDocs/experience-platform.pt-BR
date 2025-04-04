@@ -3,9 +3,9 @@ title: Guia da API de autorização do Data Distiller
 description: Saiba como usar a API de autorização do Data Distiller para aplicar restrições de IP baseadas em rede para conexões seguras por meio do SQL. Use essa API para aprimorar o controle de acesso aos dados do Adobe Experience Platform.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '425'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Os seguintes recursos permitem definir restrições de acesso baseadas em IP, mo
 
 ## Recursos de auditoria e monitoramento
 
-Para oferecer suporte a práticas seguras de acesso a dados, o Serviço de consulta registra todos os IPs de cliente que acessam ou tentam acessar o Experience Platform. Os eventos de auditoria, incluindo conexões negadas, são enviados aos Logs de auditoria da plataforma. Isso permite:
+Para oferecer suporte a práticas seguras de acesso a dados, o Serviço de consulta registra todos os IPs de cliente que acessam ou tentam acessar o Experience Platform. Os eventos de auditoria, incluindo conexões negadas, são enviados aos Logs de auditoria do Experience Platform. Isso permite:
 
 - **Monitoramento em tempo real**: controle os padrões de acesso baseados em IP para garantir a conformidade.
 - **Alerta sobre Acesso Não Autorizado**: identifique e responda a tentativas de acesso de IPs não autorizados.

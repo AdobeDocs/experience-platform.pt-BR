@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint da API de métricas
 description: Saiba como recuperar métricas de observabilidade no Experience Platform usando a API de insights de observação.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: bd5018a2d867d0483f3f2f0c45e356ea69a01801
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Endpoint de métricas
 
-As métricas de observação fornecem insights sobre estatísticas de uso, tendências históricas e indicadores de desempenho para vários recursos no Adobe Experience Platform. O ponto de extremidade `/metrics` no [!DNL Observability Insights API] permite recuperar programaticamente dados de métrica para a atividade da sua organização no [!DNL Platform].
+As métricas de observação fornecem insights sobre estatísticas de uso, tendências históricas e indicadores de desempenho para vários recursos no Adobe Experience Platform. O ponto de extremidade `/metrics` no [!DNL Observability Insights API] permite recuperar programaticamente dados de métrica para a atividade da sua organização no [!DNL Experience Platform].
 
 >[!NOTE]
 >
@@ -175,7 +175,7 @@ Uma resposta bem-sucedida retorna os pontos de dados resultantes para as métric
 | `metric` | O nome de uma das métricas fornecidas na solicitação. |
 | `filters` | A configuração de filtro para a métrica especificada. |
 | `datapoints` | Uma matriz cujos objetos representam os resultados da métrica e dos filtros especificados. O número de objetos na matriz depende das opções de filtro fornecidas na solicitação. Se nenhum filtro for fornecido, a matriz conterá apenas um único objeto que representa todos os conjuntos de dados. |
-| `groupBy` | Se vários conjuntos de dados tiverem sido especificados na propriedade `filter` para uma métrica e a opção `groupBy` tiver sido definida como verdadeira na solicitação, esse objeto conterá a ID do conjunto de dados ao qual a propriedade `dps` correspondente se aplica.<br><br>Se este objeto parecer vazio na resposta, a propriedade `dps` correspondente será aplicada a todos os conjuntos de dados fornecidos na matriz `filters` (ou a todos os conjuntos de dados em [!DNL Platform] se nenhum filtro tiver sido fornecido). |
+| `groupBy` | Se vários conjuntos de dados tiverem sido especificados na propriedade `filter` para uma métrica e a opção `groupBy` tiver sido definida como verdadeira na solicitação, esse objeto conterá a ID do conjunto de dados ao qual a propriedade `dps` correspondente se aplica.<br><br>Se este objeto parecer vazio na resposta, a propriedade `dps` correspondente será aplicada a todos os conjuntos de dados fornecidos na matriz `filters` (ou a todos os conjuntos de dados em [!DNL Experience Platform] se nenhum filtro tiver sido fornecido). |
 | `dps` | Os dados retornados para a métrica, o filtro e o intervalo de tempo fornecidos. Cada chave nesse objeto representa um carimbo de data e hora com um valor correspondente para a métrica especificada. O período entre cada ponto de dados depende do valor `granularity` especificado na solicitação. |
 
 {style="table-layout:auto"}
@@ -186,7 +186,7 @@ A seção a seguir contém informações adicionais sobre como trabalhar com o p
 
 ### Métricas disponíveis {#available-metrics}
 
-As tabelas a seguir listam todas as métricas expostas por [!DNL Observability Insights], detalhadas pelo serviço [!DNL Platform]. Cada métrica inclui uma descrição e um parâmetro de consulta de ID aceito.
+As tabelas a seguir listam todas as métricas expostas por [!DNL Observability Insights], detalhadas pelo serviço [!DNL Experience Platform]. Cada métrica inclui uma descrição e um parâmetro de consulta de ID aceito.
 
 >[!NOTE]
 >
@@ -279,8 +279,8 @@ A tabela a seguir lista os diferentes códigos de erro que podem ser retornados 
 | --- | --- | --- |
 | `INSGHT-1000-400` | Conteúdo de solicitação inválido | Algo deu errado com a carga da solicitação. Verifique se você corresponde exatamente à formatação da carga conforme mostrado [acima](#v2). Qualquer um dos possíveis motivos pode acionar esse erro:<ul><li>Campos obrigatórios ausentes, como `aggregator`</li><li>Métricas inválidas</li><li>A solicitação contém um agregador inválido</li><li>Uma data inicial ocorre após uma data final</li></ul> |
 | `INSGHT-1001-400` | Falha na consulta de métricas | Ocorreu um erro ao tentar consultar o banco de dados de métricas devido a uma solicitação inválida ou a própria consulta não pode ser analisada. Verifique se a solicitação está formatada corretamente antes de tentar novamente. |
-| `INSGHT-1001-500` | Falha na consulta de métricas | Ocorreu um erro ao tentar consultar o banco de dados de métricas devido a um erro no servidor. Tente a solicitação novamente e, se o problema persistir, entre em contato com o suporte ao Adobe. |
-| `INSGHT-1002-500` | Erro de serviço | A solicitação não pôde ser processada devido a um erro interno. Tente a solicitação novamente e, se o problema persistir, entre em contato com o suporte ao Adobe. |
+| `INSGHT-1001-500` | Falha na consulta de métricas | Ocorreu um erro ao tentar consultar o banco de dados de métricas devido a um erro no servidor. Tente a solicitação novamente e, se o problema persistir, entre em contato com o suporte da Adobe. |
+| `INSGHT-1002-500` | Erro de serviço | A solicitação não pôde ser processada devido a um erro interno. Tente a solicitação novamente e, se o problema persistir, entre em contato com o suporte da Adobe. |
 | `INSGHT-1003-401` | Erro de validação de sandbox | A solicitação não pôde ser processada devido a um erro de validação de sandbox. Verifique se o nome da sandbox fornecido no cabeçalho `x-sandbox-name` representa uma sandbox válida e habilitada para sua organização antes de tentar a solicitação novamente. |
 
 {style="table-layout:auto"}

@@ -4,9 +4,9 @@ title: Exportar esquemas XDM na interface do
 description: Saiba como exportar um esquema existente para uma sandbox ou organização diferente na interface do usuário do Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '657'
 ht-degree: 11%
 
 ---
@@ -28,11 +28,11 @@ Para atender a essa necessidade, o espaço de trabalho [!UICONTROL Esquemas] da 
 
 ## Pré-requisitos
 
-Embora a interface da Platform permita exportar recursos XDM, você deve usar a API do Registro de esquema para importar esses recursos para outras sandboxes ou organizações para concluir o fluxo de trabalho. Consulte o manual sobre [introdução à API do Registro de Esquema](../api/getting-started.md) para obter informações importantes sobre cabeçalhos de autenticação necessários antes de seguir este guia.
+Embora a interface do Experience Platform permita exportar recursos XDM, você deve usar a API do registro de esquema para importar esses recursos para outras sandboxes ou organizações para concluir o fluxo de trabalho. Consulte o manual sobre [introdução à API do Registro de Esquema](../api/getting-started.md) para obter informações importantes sobre cabeçalhos de autenticação necessários antes de seguir este guia.
 
 ## Gerar uma carga de exportação {#generate-export-payload}
 
-As cargas de exportação podem ser geradas na interface do usuário da Platform a partir do painel de detalhes na guia [!UICONTROL Procurar] ou diretamente da tela do esquema no Editor de esquemas.
+As cargas de exportação podem ser geradas na interface do usuário do Experience Platform a partir do painel de detalhes na guia [!UICONTROL Procurar] ou diretamente da tela do esquema no Editor de esquemas.
 
 Para gerar uma carga de exportação, selecione **[!UICONTROL Esquemas]** na navegação à esquerda. No espaço de trabalho [!UICONTROL Esquemas], selecione a linha do esquema que deseja exportar para exibir os detalhes do esquema na barra lateral direita.
 

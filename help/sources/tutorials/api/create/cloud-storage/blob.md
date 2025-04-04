@@ -2,9 +2,9 @@
 title: Criar uma conexão básica do Azure Blob usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform ao Azure Blob usando a API do Serviço de fluxo.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '772'
 ht-degree: 3%
 
 ---
@@ -19,8 +19,8 @@ Este tutorial fornece etapas para criar uma conexão base para [!DNL Azure Blob]
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para criar com êxito uma conexão de origem do [!DNL Blob] usando a API [!DNL Flow Service].
 
@@ -34,7 +34,7 @@ Para que [!DNL Flow Service] se conecte ao armazenamento [!DNL Blob], você deve
 
 | Credencial | Descrição |
 | --- | --- |
-| `connectionString` | Uma cadeia de caracteres que contém as informações de autorização necessárias para autenticar [!DNL Blob] em Experience Platform. O padrão da cadeia de conexão [!DNL Blob] é: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Para obter mais informações sobre cadeias de conexão, consulte este documento [!DNL Blob] em [configurando cadeias de conexão](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| `connectionString` | Uma cadeia de caracteres que contém as informações de autorização necessárias para autenticar [!DNL Blob] no Experience Platform. O padrão da cadeia de conexão [!DNL Blob] é: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Para obter mais informações sobre cadeias de conexão, consulte este documento [!DNL Blob] em [configurando cadeias de conexão](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Blob] é: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 >[!TAB Autenticação do URI SAS]
@@ -48,9 +48,9 @@ Para que [!DNL Flow Service] se conecte ao armazenamento [!DNL Blob], você deve
 
 >[!ENDTABS]
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../../../landing/api-guide.md).
 
 ## Criar uma conexão básica
 
@@ -58,13 +58,13 @@ Para obter informações sobre como fazer chamadas para APIs da Platform com êx
 >
 >Depois de criada, você não pode alterar o tipo de autenticação de uma conexão de base [!DNL Blob]. Para alterar o tipo de autenticação, você deve criar uma nova conexão base.
 
-Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
+Uma conexão base retém informações entre sua origem e a Experience Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
 A origem [!DNL Blob] dá suporte à autenticação de cadeia de conexão e de assinatura de acesso compartilhado (SAS). Um URI de assinatura de acesso compartilhado (SAS) permite uma autorização delegada segura para sua conta [!DNL Blob]. Você pode usar SAS para criar credenciais de autenticação com vários graus de acesso, já que uma autenticação baseada em SAS permite definir permissões, datas de início e expiração, bem como provisões para recursos específicos.
 
 Durante essa etapa, também é possível designar as subpastas às quais sua conta terá acesso definindo o nome do container e o caminho para a subpasta.
 
-Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL Blob] como parte dos parâmetros de solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer suas credenciais de autenticação [!DNL Blob] como parte dos parâmetros de solicitação.
 
 **Formato da API**
 
@@ -130,7 +130,7 @@ Uma resposta bem-sucedida retorna detalhes da conexão base recém-criada, inclu
 
 >[!TAB Autenticação de URI SAS]
 
-Para criar uma conexão [!DNL Blob] usando URI de assinatura de acesso compartilhado, faça uma solicitação POST para a API [!DNL Flow Service] enquanto fornece valores para o [!DNL Blob] `sasUri`.
+Para criar uma conexão [!DNL Blob] usando o URI de assinatura de acesso compartilhado, faça uma solicitação POST para a API [!DNL Flow Service] enquanto fornece valores para o [!DNL Blob] `sasUri`.
 
 +++Solicitação
 

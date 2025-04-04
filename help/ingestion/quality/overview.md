@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Qualidade dos dados;qualidade;Qualidade;Validação suportada;Validação suportada;
+keywords: Experience Platform;página inicial;tópicos populares;Qualidade de dados;qualidade;Qualidade;Validação suportada;Validação;validação suportada;
 solution: Experience Platform
 title: Qualidade dos dados
 description: O documento a seguir fornece um resumo das verificações compatíveis e dos comportamentos de validação para assimilação em lote e por transmissão no Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 5%
@@ -54,7 +54,7 @@ As seguintes validações são feitas para a assimilação por transmissão:
 | Conjunto de dados | Garante que o conjunto de dados seja especificado, ativado e não tenha sido removido. |
 | Header | Garante que o cabeçalho seja especificado e seja válido. |
 
-Mais informações sobre como o [!DNL Platform] monitora e valida dados podem ser encontradas na [documentação de monitoramento de fluxos de dados](./monitor-data-ingestion.md).
+Mais informações sobre como o [!DNL Experience Platform] monitora e valida dados podem ser encontradas na [documentação de monitoramento de fluxos de dados](./monitor-data-ingestion.md).
 
 ## Validação do valor de identidade
 

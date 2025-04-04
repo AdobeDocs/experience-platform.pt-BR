@@ -4,9 +4,9 @@ title: Exportar conjuntos de dados usando a API do Serviço de fluxo
 description: Saiba como usar a API do Serviço de fluxo para exportar conjuntos de dados para destinos selecionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5146'
+source-wordcount: '5149'
 ht-degree: 3%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Entre em contato com o representante da Adobe para obter mais informações.
+>* Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Entre em contato com seu representante da Adobe para obter mais informações.
 
 >[!IMPORTANT]
 >
->**Item de ação**: a versão [de setembro de 2024 do Experience Platform](/help/release-notes/latest/latest.md#destinations) introduz a opção para definir uma data `endTime` para fluxos de dados do conjunto de dados de exportação. O Adobe também está introduzindo uma data de término padrão de 1º de maio de 2025 para todos os fluxos de dados de exportação do conjunto de dados criados *antes da versão de setembro*. Para qualquer um desses fluxos de dados, é necessário atualizar a data final no fluxo de dados manualmente antes da data final, caso contrário, suas exportações para interrupção nessa data. Use a interface do usuário do Experience Platform para ver quais fluxos de dados serão definidos para serem interrompidos em 1º de maio.
+>**Item de ação**: a versão [de setembro de 2024 do Experience Platform](/help/release-notes/latest/latest.md#destinations) apresenta a opção de definir uma data `endTime` para fluxos de dados de conjunto de dados de exportação. A Adobe também está introduzindo uma data de término padrão de 1º de maio de 2025 para todos os fluxos de dados de exportação do conjunto de dados criados *antes da versão de setembro*. Para qualquer um desses fluxos de dados, é necessário atualizar a data final no fluxo de dados manualmente antes da data final, caso contrário, suas exportações para interrupção nessa data. Use a interface do usuário do Experience Platform para ver quais fluxos de dados serão definidos para serem interrompidos em 1º de maio.
 >
 >Da mesma forma, para qualquer fluxo de dados criado sem especificar uma data `endTime`, o padrão será uma hora de término de seis meses a partir da hora em que for criado.
 
@@ -34,11 +34,11 @@ Este artigo explica o fluxo de trabalho necessário para usar o [!DNL Flow Servi
 
 >[!TIP]
 >
->Você também pode usar a interface de usuário do Experience Platform para exportar conjuntos de dados. Leia o [tutorial da interface do usuário de conjuntos de dados de exportação](/help/destinations/ui/export-datasets.md) para obter mais informações.
+>Também é possível usar a interface do usuário do Experience Platform para exportar conjuntos de dados. Leia o [tutorial da interface do usuário de conjuntos de dados de exportação](/help/destinations/ui/export-datasets.md) para obter mais informações.
 
 ## Conjuntos de dados disponíveis para exportação {#datasets-to-export}
 
-Os conjuntos de dados que você pode exportar dependem do aplicativo Experience Platform (Real-Time CDP, Adobe Journey Optimizer), da camada (Prime ou Ultimate) e de qualquer complemento que você adquiriu (por exemplo: Data Distiller).
+Os conjuntos de dados que você pode exportar dependem do aplicativo do Experience Platform (Real-Time CDP, Adobe Journey Optimizer), da camada (Prime ou Ultimate) e de qualquer complemento que você tenha adquirido (por exemplo: Data Distiller).
 
 Consulte a [tabela na página de tutorial da interface](/help/destinations/ui/export-datasets.md#datasets-to-export) para entender quais conjuntos de dados você pode exportar.
 
@@ -62,9 +62,9 @@ Atualmente, você pode exportar conjuntos de dados para os destinos de armazenam
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): todos os dados assimilados com êxito na Adobe Experience Platform são mantidos no [!DNL Data Lake] como conjuntos de dados. Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os conjuntos de dados também contêm metadados que descrevem vários aspectos dos dados armazenados.
-   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você deve saber para exportar conjuntos de dados para destinos de armazenamento na nuvem na Platform.
+As seções a seguir fornecem informações adicionais que você deve saber para exportar conjuntos de dados para destinos de armazenamento na nuvem no Experience Platform.
 
 ### Permissões necessárias {#permissions}
 
@@ -78,13 +78,13 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Colete valores para cabeçalhos obrigatórios e opcionais {#gather-values-headers}
 
-Para fazer chamadas para APIs [!DNL Platform], primeiro complete o [tutorial de autenticação de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação do Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id `{ORG_ID}`
 
-Os recursos em [!DNL Experience Platform] podem ser isolados em sandboxes virtuais específicas. Em solicitações para [!DNL Platform] APIs, é possível especificar o nome e a ID da sandbox em que a operação ocorrerá. Esses parâmetros são opcionais.
+Os recursos em [!DNL Experience Platform] podem ser isolados em sandboxes virtuais específicas. Em solicitações para [!DNL Experience Platform] APIs, é possível especificar o nome e a ID da sandbox em que a operação ocorrerá. Esses parâmetros são opcionais.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -2444,9 +2444,9 @@ Você pode encontrar informações sobre os [vários parâmetros retornados pela
 
 ## Verificar se o conjunto de dados foi exportado com êxito {#verify}
 
-Ao exportar conjuntos de dados, o Experience Platform cria um arquivo `.json` ou `.parquet` no local de armazenamento fornecido. Espere que um novo arquivo seja depositado no local de armazenamento de acordo com o agendamento de exportação fornecido ao [criar um fluxo de dados](#create-dataflow).
+Ao exportar conjuntos de dados, o Experience Platform cria um arquivo do `.json` ou do `.parquet` no local de armazenamento fornecido. Espere que um novo arquivo seja depositado no local de armazenamento de acordo com o agendamento de exportação fornecido ao [criar um fluxo de dados](#create-dataflow).
 
-O Experience Platform cria uma estrutura de pastas no local de armazenamento especificado, onde deposita os arquivos exportados do conjunto de dados. Uma nova pasta é criada para cada exportação, seguindo o padrão abaixo:
+O Experience Platform cria uma estrutura de pastas no local de armazenamento especificado, onde ele deposita os arquivos exportados do conjunto de dados. Uma nova pasta é criada para cada exportação, seguindo o padrão abaixo:
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -2468,7 +2468,7 @@ Observe a diferença no formato de arquivo entre os dois tipos de arquivo, quand
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform para obter mais informações sobre como interpretar respostas de erro.
+Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform para obter mais informações sobre como interpretar respostas de erro.
 
 ## Limitações conhecidas {#known-limitations}
 
@@ -2480,7 +2480,7 @@ Exiba uma [lista de perguntas frequentes](/help/destinations/ui/export-datasets.
 
 ## Próximas etapas {#next-steps}
 
-Seguindo este tutorial, você conectou com sucesso o Platform a um de seus destinos de armazenamento na nuvem em lote preferidos e configurou um fluxo de dados para o respectivo destino para exportar conjuntos de dados. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
+Seguindo este tutorial, você conectou com êxito o Experience Platform a um dos destinos de armazenamento preferidos da nuvem do lote e configurou um fluxo de dados para o respectivo destino para exportar conjuntos de dados. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
 
 * [Visão geral dos destinos](../home.md)
 * [Visão geral do catálogo de destinos](../catalog/overview.md)

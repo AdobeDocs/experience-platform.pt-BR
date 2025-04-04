@@ -1,11 +1,11 @@
 ---
 title: Visão geral do encaminhamento de eventos
-description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Platform Edge Network para executar tarefas sem alterar a sua implementação de tag.
+description: Saiba mais sobre o encaminhamento de eventos na Adobe Experience Platform, que permite usar o Experience Platform Edge Network para executar tarefas sem alterar a implementação de tags.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 16f9ee9d14326f857b444c2361b894aca06b04d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1190'
 ht-degree: 7%
 
 ---
@@ -14,23 +14,23 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->O encaminhamento de eventos é um recurso pago incluído como parte das ofertas do Adobe Real-time Customer Data Platform Connections, Prime ou Ultimate.
+>O encaminhamento de eventos é um recurso pago incluído como parte das ofertas de Conexões da Adobe Real-Time Customer Data Platform, Prime ou Ultimate.
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-O encaminhamento de eventos no Adobe Experience Platform permite enviar dados de eventos coletados para um destino para processamento no lado do servidor. O encaminhamento de eventos diminui o peso da página da Web e do aplicativo usando o Adobe Experience Platform Edge Network para executar tarefas normalmente realizadas no cliente. Implementadas de maneira semelhante às tags, as regras de encaminhamento de eventos podem transformar e enviar dados para novos destinos, mas em vez de enviar esses dados de um aplicativo cliente como um navegador da Web, eles são enviados de servidores Adobe.
+O encaminhamento de eventos no Adobe Experience Platform permite enviar dados de eventos coletados para um destino para processamento no lado do servidor. O encaminhamento de eventos diminui o peso da página da Web e do aplicativo usando o Adobe Experience Platform Edge Network para executar tarefas normalmente realizadas no cliente. Implementadas de maneira semelhante às tags, as regras de encaminhamento de eventos podem transformar e enviar dados para novos destinos, mas em vez de enviar esses dados de um aplicativo cliente como um navegador da Web, eles são enviados dos servidores da Adobe.
 
-Este documento fornece uma visão geral de alto nível do encaminhamento de eventos na Platform.
+Este documento fornece uma visão geral de alto nível do encaminhamento de eventos no Experience Platform.
 
 ![Encaminhamento de eventos no ecossistema da coleção de dados.](../../../collection/images/home/event-forwarding.png)
 
 >[!NOTE]
 >
->Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados da Platform, consulte a [visão geral da coleta de dados](../../../collection/home.md).
+>Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados da Experience Platform, consulte a [visão geral da coleta de dados](../../../collection/home.md).
 
-O encaminhamento de eventos, combinado com o [SDK da Web](/help/web-sdk/home.md) e o [SDK móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) da Adobe Experience Platform, oferece os seguintes benefícios:
+O encaminhamento de eventos, combinado com a [Web SDK](/help/web-sdk/home.md) e a [SDK Móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) da Adobe Experience Platform, oferece os seguintes benefícios:
 
 **Desempenho**:
 
@@ -46,10 +46,10 @@ O encaminhamento de eventos, combinado com o [SDK da Web](/help/web-sdk/home.md)
 
 Em termos de configuração, o encaminhamento de eventos usa muitos dos mesmos conceitos que as marcas, como [regras](../managing-resources/rules.md), [elementos de dados](../managing-resources/data-elements.md) e [extensões](../managing-resources/extensions/overview.md). A principal diferença entre os dois pode ser resumida da seguinte forma:
 
-* As marcas **coletam** dados do evento de um site ou aplicativo móvel nativo e os enviam para o Platform Edge Network.
-* O encaminhamento de eventos **envia** dados de eventos de entrada do Edge Network da Platform para um ponto de extremidade que representa um destino final ou um ponto de extremidade que fornece dados com os quais você deseja enriquecer a carga original.
+* As marcas **coletam** dados do evento de um site ou aplicativo móvel nativo e os enviam para o Experience Platform Edge Network.
+* O encaminhamento de eventos **envia** dados de eventos de entrada do Experience Platform Edge Network para um ponto de extremidade que representa um destino final ou um ponto de extremidade que fornece dados com os quais você deseja enriquecer a carga original.
 
-Embora as tags coletem dados do evento diretamente do seu site ou aplicativo móvel nativo usando a plataforma Web e SDKs móveis, o encaminhamento de eventos exige que os dados do evento já sejam enviados pelo Platform Edge Network para encaminhá-los aos destinos. Em outras palavras, você deve implementar o SDK da Web ou móvel da Platform na sua propriedade digital (por meio de tags ou usando código bruto) para usar o encaminhamento de eventos.
+Embora as tags coletem dados do evento diretamente do seu site ou aplicativo móvel nativo usando os SDKs da Web e móvel da Experience Platform, o encaminhamento de eventos exige que os dados do evento já sejam enviados pelo Experience Platform Edge Network para encaminhá-los aos destinos. Em outras palavras, você deve implementar o Experience Platform Web ou o Mobile SDK na sua propriedade digital (por meio de tags ou usando código bruto) para usar o encaminhamento de eventos.
 
 ### Propriedades {#properties}
 
@@ -61,7 +61,7 @@ O encaminhamento de eventos mantém seu próprio armazenamento de propriedades s
 
 ![Propriedades de encaminhamento de eventos na Interface da Coleção de Dados.](../../images/ui/event-forwarding/overview/properties.png)
 
-Todas as propriedades do encaminhamento de eventos listam **[!UICONTROL Edge]** como sua plataforma. Eles não fazem distinção entre Web ou dispositivos móveis porque processam apenas dados recebidos do Edge Network da plataforma, que pode receber dados de evento de plataformas da Web e móveis.
+Todas as propriedades do encaminhamento de eventos listam **[!UICONTROL Edge]** como sua plataforma. Eles não fazem distinção entre Web ou dispositivos móveis porque processam apenas dados recebidos do Experience Platform Edge Network, que pode receber dados de evento de plataformas da Web e móveis.
 
 ### Extensões {#extensions}
 
@@ -75,11 +75,11 @@ Você pode ver recursos adicionais disponíveis para saber mais sobre este recur
 
 Os tipos de elementos de dados disponíveis no encaminhamento de eventos estão limitados ao catálogo de [extensões](#extensions) compatíveis que os fornecem.
 
-Embora os elementos de dados em si sejam criados e configurados da mesma forma no encaminhamento de eventos que para tags, há algumas diferenças de sintaxe importantes quando se trata de como eles fazem referência aos dados do Edge Network da plataforma.
+Embora os elementos de dados em si sejam criados e configurados da mesma forma no encaminhamento de eventos que para tags, há algumas diferenças de sintaxe importantes quando se trata de como eles fazem referência a dados do Experience Platform Edge Network.
 
-#### Fazendo referência a dados do Platform Edge Network {#data-element-path}
+#### Referência a dados do Experience Platform Edge Network {#data-element-path}
 
-Para referenciar dados do Platform Edge Network, você deve criar um elemento de dados que forneça um caminho válido para esses dados. Ao criar o elemento de dados na interface do usuário, selecione **[!UICONTROL Core]** para a extensão e **[!UICONTROL Path]** para o tipo.
+Para referenciar dados do Experience Platform Edge Network, você deve criar um elemento de dados que forneça um caminho válido para esses dados. Ao criar o elemento de dados na interface do usuário, selecione **[!UICONTROL Core]** para a extensão e **[!UICONTROL Path]** para o tipo.
 
 O valor **[!UICONTROL Path]** do elemento de dados deve seguir o padrão `arc.event.{ELEMENT}` (por exemplo: `arc.event.xdm.web.webPageDetails.URL`). Esse caminho deve ser especificado corretamente para que os dados sejam enviados.
 

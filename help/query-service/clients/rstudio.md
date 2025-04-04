@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;início;tópicos populares;Serviço de consulta;serviço de consulta;RStudio;rstudio;conectar ao serviço de consulta;
+keywords: Experience Platform;home;tópicos populares;Serviço de consulta;serviço de consulta;RStudio;rstudio;conectar ao serviço de consulta;
 solution: Experience Platform
 title: Conectar o RStudio ao Serviço de consulta
 description: Este documento aborda as etapas para conectar o R Studio ao Adobe Experience Platform Query Service.
 exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
-source-git-commit: 668b2624b7a23b570a3869f87245009379e8257c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '439'
 ht-degree: 0%
@@ -49,7 +49,7 @@ qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_
 >
 >Consulte a [[!DNL Query Service] documentação SSL](./ssl-modes.md) para saber mais sobre o suporte SSL para conexões de terceiros ao Serviço de Consulta da Adobe Experience Platform e como se conectar usando o modo SSL `verify-full`.
 
-Para obter mais informações sobre como localizar o nome do banco de dados, o host, a porta e as credenciais de logon, leia o [guia de credenciais](../ui/credentials.md). Para encontrar suas credenciais, faça logon em [!DNL Platform] e selecione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciais]**.
+Para obter mais informações sobre como localizar o nome do banco de dados, o host, a porta e as credenciais de logon, leia o [guia de credenciais](../ui/credentials.md). Para encontrar suas credenciais, faça logon em [!DNL Experience Platform] e selecione **[!UICONTROL Consultas]**, seguido de **[!UICONTROL Credenciais]**.
 
 Uma mensagem na saída do console confirma a conexão com o Serviço de consulta.
 

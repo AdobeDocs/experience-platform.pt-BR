@@ -6,9 +6,9 @@ last-update: March 10, 2020
 author: ens71067
 keywords: Notas de versão;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '859'
 ht-degree: 17%
 
 ---
@@ -27,7 +27,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 
 ## Governança de dados {#governance}
 
-O [!DNL Experience Platform] permite que as empresas reúnam dados de vários sistemas corporativos para melhor permitir que os profissionais de marketing identifiquem, compreendam e envolvam os clientes. O [!DNL Experience Platform] inclui uma infraestrutura completa de governança de dados para garantir o uso adequado dos dados no [!DNL Platform] e quando compartilhados entre sistemas.
+O [!DNL Experience Platform] permite que as empresas reúnam dados de vários sistemas corporativos para melhor permitir que os profissionais de marketing identifiquem, compreendam e envolvam os clientes. O [!DNL Experience Platform] inclui uma infraestrutura completa de governança de dados para garantir o uso adequado dos dados no [!DNL Experience Platform] e quando compartilhados entre sistemas.
 
 A Governança de dados da Adobe Experience Platform é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha uma função importante no [!DNL Experience Platform] em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso a dados para ações de marketing.
 
@@ -51,7 +51,7 @@ Para obter mais informações sobre Governança de dados, consulte a [visão ger
 
 ## Assimilação de dados {#ingestion}
 
-O Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. O Adobe Experience Platform [!DNL Data Ingestion] fornece várias alternativas para assimilação de dados, incluindo APIs de Lote, APIs de Streaming, conectores de Adobe nativos, parceiros de integração de dados ou a interface do usuário do Adobe Experience Platform.
+O Adobe Experience Platform fornece um conjunto avançado de recursos para assimilar qualquer tipo e latência de dados. O Adobe Experience Platform [!DNL Data Ingestion] fornece várias alternativas para assimilação de dados, incluindo APIs em lote, APIs de streaming, conectores nativos do Adobe, parceiros de integração de dados ou a interface do usuário do Adobe Experience Platform.
 
 **Novos recursos**
 
@@ -63,12 +63,12 @@ O Adobe Experience Platform fornece um conjunto avançado de recursos para assim
 
 * None
 
-Para saber mais sobre assimilação de dados na Platform, visite a [documentação de Assimilação de dados](../../ingestion/home.md).
+Para saber mais sobre assimilação de dados na Experience Platform, visite a [documentação de Assimilação de dados](../../ingestion/home.md).
 
 
 ## Destinos {#destinations}
 
-No [Real-time Customer Data Platform](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam dados para esses parceiros de forma contínua.
+No [Real-Time Customer Data Platform](../../rtcdp/overview.md), os destinos são integrações pré-criadas com plataformas de destino que ativam dados para esses parceiros de forma contínua.
 
 **Novos destinos**
 
@@ -101,7 +101,7 @@ Para obter mais informações sobre [!DNL Identity Service], consulte a [visão 
 
 ## Origens {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Platform]. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Experience Platform]. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 

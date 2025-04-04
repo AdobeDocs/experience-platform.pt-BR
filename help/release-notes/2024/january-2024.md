@@ -2,10 +2,10 @@
 title: Notas da versão de janeiro de 2024 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2024 da Adobe Experience Platform.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1659'
-ht-degree: 31%
+source-wordcount: '1662'
+ht-degree: 34%
 
 ---
 
@@ -31,7 +31,7 @@ Atualizações dos recursos existentes no Experience Platform:
 
 ## Manuais de casos de uso  {#use-case-playbooks}
 
-A funcionalidade [!UICONTROL Guias de reprodução de casos de uso] agora está disponível para todos os clientes do Real-Time CDP e do Adobe Journey Optimizer. Os [!UICONTROL manuais de casos de uso] foram projetados para ajudar os usuários a superar desafios ao começar com o Real-time Customer Data Platform ou o Adobe Journey Optimizer. Quando não tiver certeza de onde começar ou como criar os ativos certos para os casos de uso desejados, os manuais de casos de uso fornecem inspiração e criam ativos diferentes para que você teste e importe para ambientes de produção quando estiver pronto.
+A funcionalidade [!UICONTROL Guias de reprodução de casos de uso] agora está disponível para todos os clientes do Real-Time CDP e do Adobe Journey Optimizer. Os [!UICONTROL manuais de casos de uso] foram projetados para ajudar os usuários a superar desafios ao começar com o Real-Time Customer Data Platform ou o Adobe Journey Optimizer. Quando não tiver certeza de onde começar ou como criar os ativos certos para os casos de uso desejados, os manuais de casos de uso fornecem inspiração e criam ativos diferentes para que você teste e importe para ambientes de produção quando estiver pronto.
 
 Para começar a usar os [!UICONTROL manuais de casos de uso], leia as seguintes páginas de documentação:
 
@@ -43,9 +43,9 @@ Para começar a usar os [!UICONTROL manuais de casos de uso], leia as seguintes 
 
 ## Controle de acesso baseado em atributos {#abac}
 
-O controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que oferece às marcas preocupadas com a privacidade maior flexibilidade para gerenciar o acesso do usuário. Objetos individuais, como campos de esquema e segmentos, podem ser atribuídos a funções de usuário. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Platform em sua organização.
+O controle de acesso baseado em atributos é um recurso do Adobe Experience Platform que oferece às marcas preocupadas com a privacidade maior flexibilidade para gerenciar o acesso do usuário. É possível atribuir objetos individuais, como campos de esquema e segmentos, a funções de usuário. Esse recurso permite conceder ou revogar o acesso a objetos individuais para usuários específicos da Experience Platform em sua organização.
 
-Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e outros tipos personalizados de dados em todos os fluxos de trabalho e recursos da plataforma. Os administradores podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
+Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários, dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e outros tipos personalizados de dados em todos os fluxos de trabalho e recursos da Experience Platform. Admins podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
 
 **Documentação nova ou atualizada**
 
@@ -79,7 +79,7 @@ A Adobe Experience Platform fornece vários painéis para você visualizar insig
 
 | Recurso | Descrição |
 | --- | --- |
-| Exibir SQL | Agora você pode visualizar o SQL por trás de seus Perfis, Públicos, Destinos e insights personalizados com a opção Exibir SQL e, em seguida, executar a consulta sob demanda por meio do Editor de consultas. Acessar o SQL que capacita seus insights do Real-time Customer Data Platform ajuda a entender a lógica por trás da análise de seu modelo de dados. Essa transparência torna seus dados da Adobe da Real-time CDP mais acessíveis, compreensíveis e impactantes para a tomada de decisões.<br>Inspire-se no SQL de mais de 40 insights existentes para criar novas consultas que obtenham insights exclusivos dos dados da plataforma com base nas necessidades da empresa. O SQL também está disponível para seus [Perfis](../../dashboards/insights/profiles.md), [Públicos-alvo](../../dashboards/insights/audiences.md) e [Destinos](../../dashboards/insights/destinations.md) insights na documentação do Experience League. Esses documentos destacam os casos de uso de negócios que podem ser respondidos com os insights padrão. Para obter mais informações, leia o manual sobre [exibição de SQL insight](../../dashboards/view-sql.md). |
+| Exibir SQL | Agora você pode visualizar o SQL por trás de seus Perfis, Públicos, Destinos e insights personalizados com a opção Exibir SQL e, em seguida, executar a consulta sob demanda por meio do Editor de consultas. Acessar o SQL que capacita seus insights da Real-time Customer Data Platform ajuda a entender a lógica por trás da análise de seu modelo de dados. Essa transparência torna os dados da CDP em tempo real da Adobe mais acessíveis, compreensíveis e impactantes para a tomada de decisões.<br>Inspire-se no SQL de mais de 40 insights existentes para criar novas consultas que obtenham insights exclusivos de dados do Experience Platform com base nas necessidades da empresa. O SQL também está disponível para seus [Perfis](../../dashboards/insights/profiles.md), [Públicos-alvo](../../dashboards/insights/audiences.md) e [Destinos](../../dashboards/insights/destinations.md) insights na documentação do Experience League. Esses documentos destacam os casos de uso de negócios que podem ser respondidos com os insights padrão. Para obter mais informações, leia o guia em [exibindo insight SQL](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -115,7 +115,7 @@ O Serviço de identidade da Adobe Experience Platform fornece uma visão abrange
 
 | Atualização da documentação | Descrição |
 | --- | --- |
-| Reestruturação da documentação | A documentação do Serviço de identidade foi reestruturada para melhorar a apresentação e a clareza dos conceitos no Serviço de identidade:<ul><li>Visite a [página de visão geral do Serviço de identidade](../../identity-service/home.md) para obter um guia de terminologia expandido, um exemplo de caso de uso detalhando uma jornada típica de cliente, um detalhamento de como o Serviço de identidade vincula as identidades e um resumo da função que o Serviço de identidade desempenha no ecossistema Experience Platform.</li><li>Leia o guia em [noções básicas sobre a relação entre o Serviço de Identidade e o Perfil de Cliente em Tempo Real](../../identity-service/identity-and-profile.md) para obter um resumo detalhado de como os dois serviços funcionam juntos e as diferenças entre suas finalidades, processos, entradas e saídas.</li><li>Consulte o [Guia de lógica de vinculação do Identity Service](../../identity-service/features/identity-linking-logic.md) para obter explicações e visualizações sobre como o gráfico de identidade se comporta em determinados cenários e carimbos de data e hora.</li></ul> |
+| Reestruturação da documentação | A documentação do Serviço de identidade foi reestruturada para melhorar a apresentação e a clareza dos conceitos no Serviço de identidade:<ul><li>Visite a [página de visão geral do Serviço de identidade](../../identity-service/home.md) para obter um guia de terminologia expandido, um exemplo de caso de uso detalhando uma jornada típica de cliente, um detalhamento de como o Serviço de identidade vincula as identidades e um resumo da função que o Serviço de identidade desempenha no ecossistema da Experience Platform.</li><li>Leia o guia em [noções básicas sobre a relação entre o Serviço de Identidade e o Perfil de Cliente em Tempo Real](../../identity-service/identity-and-profile.md) para obter um resumo detalhado de como os dois serviços funcionam juntos e as diferenças entre suas finalidades, processos, entradas e saídas.</li><li>Consulte o [Guia de lógica de vinculação do Identity Service](../../identity-service/features/identity-linking-logic.md) para obter explicações e visualizações sobre como o gráfico de identidade se comporta em determinados cenários e carimbos de data e hora.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -181,8 +181,8 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] fontes | Use as integrações [!DNL Oracle NetSuite] no catálogo de fontes para trazer dados de suas contas [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) e [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) para o Experience Platform. |
-| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] origem | Use a integração [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) no catálogo de fontes para trazer dados da sua conta [!DNL Braze] para o Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] fontes | Use as integrações do [!DNL Oracle NetSuite] no catálogo de fontes para trazer dados de suas contas do [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md) e do [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md) para a Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Braze Currents] origem | Use a integração do [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md) no catálogo de fontes para trazer dados da sua conta do [!DNL Braze] para a Experience Platform. |
 | Suporte para autenticação de par de chaves para a origem em lote [!DNL Snowflake] | Agora você pode usar a autenticação de par de chaves ao criar uma nova conta do [!DNL Snowflake] para dados em lote. Para obter mais informações, leia o manual sobre [criação de uma [!DNL Snowflake] conta usando a API](../../sources/tutorials/api/create/databases/snowflake.md) ou o manual sobre [criação de uma [!DNL Snowflake] conta usando a interface](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}

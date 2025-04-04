@@ -4,7 +4,7 @@ title: Excluir destinos
 type: Tutorial
 description: Este tutorial lista as etapas para excluir um destino existente na interface do usuário do Adobe Experience Platform
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '411'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Na interface do usuário do Adobe Experience Platform, é possível excluir cone
 
 A exclusão de um destino remove todos os fluxos de dados existentes para esse destino. Todos os públicos ativados para os destinos excluídos são desmapeados antes da exclusão do fluxo de dados.
 
-Há duas maneiras de excluir destinos de [!DNL Platform] [!DNL UI]. É possível:
+Há duas maneiras de excluir destinos de [!DNL Experience Platform] [!DNL UI]. É possível:
 
 * [Excluir destinos da guia [!UICONTROL Procurar]](#delete-browse-tab)
 * [Excluir destinos da página de detalhes do destino](#delete-destination-details-page)
@@ -28,7 +28,7 @@ Há duas maneiras de excluir destinos de [!DNL Platform] [!DNL UI]. É possível
 
 Siga as etapas abaixo para excluir um destino da guia [!UICONTROL Procurar].
 
-1. Faça logon na [interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Para exibir seus destinos existentes, selecione **[!UICONTROL Procurar]** no cabeçalho superior.
+1. Faça logon na [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Para exibir seus destinos existentes, selecione **[!UICONTROL Procurar]** no cabeçalho superior.
 
    ![Procurar destinos](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -47,7 +47,7 @@ Siga as etapas abaixo para excluir um destino da guia [!UICONTROL Procurar].
 
 Siga as etapas abaixo para excluir um destino da página de detalhes do destino.
 
-1. Faça logon na [interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Para exibir seus destinos existentes, selecione **[!UICONTROL Procurar]** no cabeçalho superior.
+1. Faça logon na [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Para exibir seus destinos existentes, selecione **[!UICONTROL Procurar]** no cabeçalho superior.
 
    ![Procurar destinos](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -77,4 +77,4 @@ Siga as etapas abaixo para excluir um destino da página de detalhes do destino.
 
    >[!NOTE]
    >
-   >Dependendo da carga do servidor, pode levar alguns minutos para [!DNL Platform] excluir o destino.
+   >Dependendo da carga do servidor, pode levar alguns minutos para [!DNL Experience Platform] excluir o destino.

@@ -2,9 +2,9 @@
 title: Implantação assíncrona
 description: Saiba como implantar bibliotecas de tag da Adobe Experience Platform de forma assíncrona em seu site.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1046'
 ht-degree: 98%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A implantação de desempenho e não de bloqueio das bibliotecas JavaScript necessárias a nossos produtos é cada vez mais importante para os usuários da Adobe Experience Cloud. Ferramentas como o [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recomendam que os usuários alterem a forma como implantam as bibliotecas da Adobe em seus sites. Este artigo explica como usar as bibliotecas JavaScript da Adobe de forma assíncrona.
 
@@ -106,4 +106,4 @@ As tags oferecem um botão para ativar o carregamento assíncrono ao ser criado 
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   Esse código informa à Platform que o analisador do navegador chegou à parte inferior da página. É possível que as tags não tenham sido carregadas e executadas antes disso. Assim, a chamada `_satellite.pageBottom()` resultará em um erro, e o tipo de evento Final da página talvez não se comporte conforme esperado.
+   Esse código informa ao Experience Platform que o analisador do navegador chegou à parte inferior da página. É possível que as tags não tenham sido carregadas e executadas antes disso. Assim, a chamada `_satellite.pageBottom()` resultará em um erro, e o tipo de evento Final da página talvez não se comporte conforme esperado.

@@ -2,10 +2,10 @@
 title: Fluxo de extensão da Web
 description: Saiba como os componentes de extensão da Web interagem entre si durante o tempo de execução na Adobe Experience Platform.
 exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 93%
+source-wordcount: '272'
+ht-degree: 89%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Em extensões da Web, cada evento, condição, ação e tipo de elemento de dados tem uma visualização que permite aos usuários modificar as configurações e um módulo de biblioteca para agir de acordo com essas configurações definidas pelo usuário.
 
-Como mostra o diagrama de alto nível a seguir, a visualização do tipo de evento da extensão será mostrada em um iframe no aplicativo integrado ao Adobe Experience Platform. O usuário usa a exibição para modificar as configurações, que são salvas na Platform. Quando a biblioteca de tempo de execução de tag for criada, tanto o módulo da biblioteca de tipos de evento da extensão quanto as configurações definidas pelo usuário serão incluídos na biblioteca de tempo de execução. No tempo de execução, o Platform injetará as configurações definidas pelo usuário no módulo da biblioteca.
+Como mostra o diagrama de alto nível a seguir, a visualização do tipo de evento da extensão será mostrada em um iframe no aplicativo integrado ao Adobe Experience Platform. O usuário usa a visualização para modificar as configurações, que são salvas no Experience Platform. Quando a biblioteca de tempo de execução de tag for criada, tanto o módulo da biblioteca de tipos de evento da extensão quanto as configurações definidas pelo usuário serão incluídos na biblioteca de tempo de execução. No tempo de execução, o Experience Platform injetará as configurações definidas pelo usuário no módulo da biblioteca.
 
 ![diagrama do fluxo de extensão](../images/flow/web/extension-flow.png)
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;fluxo de dados;
 title: Configurar um fluxo de dados para assimilar dados em lote de um Source de armazenamento na nuvem na interface
 description: Este tutorial fornece etapas sobre como configurar um novo fluxo de dados para assimilar dados em lote de uma fonte de armazenamento na nuvem na interface do
 exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
-source-git-commit: 48aef63cffbdc52a6a96ef69e5db4f54274144b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1926'
+source-wordcount: '1929'
 ht-degree: 1%
 
 ---
@@ -20,14 +20,14 @@ Este tutorial fornece etapas sobre como configurar um fluxo de dados para trazer
 >
 >Para criar um fluxo de dados para trazer dados em lote de um armazenamento na nuvem, você já deve ter acesso a uma fonte de armazenamento na nuvem autenticada. Se você não tiver acesso, vá para a [visão geral das fontes](../../../../home.md#cloud-storage) para obter uma lista das fontes de armazenamento na nuvem com as quais você pode criar uma conta.
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-### Formatos de arquivo não suportados
+### Formatos de arquivo compatíveis
 
 As fontes de armazenamento na nuvem para dados em lote oferecem suporte aos seguintes formatos de arquivo para assimilação:
 
@@ -38,7 +38,7 @@ As fontes de armazenamento na nuvem para dados em lote oferecem suporte aos segu
 
 ## Adicionar dados
 
-Depois de criar sua conta de armazenamento em nuvem, a etapa **[!UICONTROL Adicionar dados]** é exibida, fornecendo uma interface para você explorar a hierarquia de arquivos de armazenamento em nuvem e selecionar a pasta ou o arquivo específico que deseja trazer para a Platform.
+Depois de criar sua conta de armazenamento em nuvem, a etapa **[!UICONTROL Adicionar dados]** é exibida, fornecendo uma interface para você explorar a hierarquia de arquivos de armazenamento em nuvem e selecionar a pasta ou o arquivo específico que deseja trazer para a Experience Platform.
 
 * A parte esquerda da interface é um navegador de diretório que exibe a hierarquia do arquivo de armazenamento na nuvem.
 * A parte direita da interface permite visualizar até 100 linhas de dados de uma pasta ou arquivo compatível.
@@ -83,7 +83,7 @@ Na etapa [!UICONTROL Selecionar dados], selecione um arquivo compactado para ass
 
 ![](../../../../images/tutorials/dataflow/cloud-batch/custom.png)
 
-Para trazer um arquivo específico para a Platform, selecione uma pasta e, em seguida, selecione o arquivo que deseja assimilar. Durante essa etapa, também é possível visualizar o conteúdo de outros arquivos em uma determinada pasta usando o ícone de visualização ao lado de um nome de arquivo.
+Para trazer um arquivo específico para o Experience Platform, selecione uma pasta e, em seguida, selecione o arquivo que deseja assimilar. Durante essa etapa, também é possível visualizar o conteúdo de outros arquivos em uma determinada pasta usando o ícone de visualização ao lado de um nome de arquivo.
 
 Quando terminar, selecione **[!UICONTROL Próximo]**.
 
@@ -127,7 +127,7 @@ Quando terminar de fornecer detalhes ao seu fluxo de dados, selecione **[!UICONT
 
 A etapa [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
+O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
 
 Depois que os dados de origem forem mapeados com êxito, selecione **[!UICONTROL Próximo]**.
 
@@ -183,14 +183,14 @@ Depois de revisar o fluxo de dados, clique em **[!UICONTROL Concluir]** e aguard
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um armazenamento em nuvem externo e obteve insights sobre o monitoramento de conjuntos de dados. Para saber mais sobre como criar fluxos de dados, você pode complementar seu aprendizado assistindo ao vídeo abaixo. Além disso, os dados de entrada agora podem ser usados por serviços [!DNL Platform] downstream, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados de um armazenamento em nuvem externo e obteve o insight no monitoramento de conjuntos de dados. Para saber mais sobre como criar fluxos de dados, você pode complementar seu aprendizado assistindo ao vídeo abaixo. Além disso, os dados de entrada agora podem ser usados por serviços [!DNL Experience Platform] downstream, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Visão geral do [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Visão geral do [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)
 
 >[!WARNING]
 >
-> A interface do usuário [!DNL Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
+> A interface do usuário [!DNL Experience Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29695?quality=12&learn=on)
 

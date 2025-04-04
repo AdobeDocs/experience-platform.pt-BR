@@ -4,23 +4,23 @@ solution: Experience Platform
 title: Endpoint da API de comportamentos
 description: O ponto de extremidade /behavior na API do Registro de esquema permite recuperar todos os comportamentos disponíveis no contêiner global.
 exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: '419'
 ht-degree: 3%
 
 ---
 
 # Endpoint de comportamentos
 
-No Experience Data Model (XDM), os comportamentos definem a natureza dos dados que um esquema descreve. Cada classe XDM deve fazer referência a um comportamento específico, que todos os esquemas que empregam essa classe herdarão. Para quase todos os casos de uso na Platform, há dois comportamentos disponíveis:
+No Experience Data Model (XDM), os comportamentos definem a natureza dos dados que um esquema descreve. Cada classe XDM deve fazer referência a um comportamento específico, que todos os esquemas que empregam essa classe herdarão. Para quase todos os casos de uso no Experience Platform, há dois comportamentos disponíveis:
 
 * **[!UICONTROL Registro]**: fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
 * **[!UICONTROL Série temporal]**: fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um assunto do registro.
 
 >[!NOTE]
 >
->Há alguns casos de uso na Platform que exigem o uso de um esquema que não emprega nenhum dos comportamentos acima. Para esses casos, um terceiro comportamento &quot;ad-hoc&quot; está disponível. Consulte o tutorial sobre [criação de um esquema ad-hoc](../tutorials/ad-hoc.md) para obter mais informações.
+>Há alguns casos de uso no Experience Platform que exigem o uso de um esquema que não emprega nenhum dos comportamentos acima. Para esses casos, um terceiro comportamento &quot;ad-hoc&quot; está disponível. Consulte o tutorial sobre [criação de um esquema ad-hoc](../tutorials/ad-hoc.md) para obter mais informações.
 >
 >Para obter informações mais gerais sobre comportamentos de dados em termos de como eles afetam a composição do esquema, consulte o manual sobre as [noções básicas da composição do esquema](../schema/composition.md).
 
@@ -28,7 +28,7 @@ O ponto de extremidade `/behaviors` na API [!DNL Schema Registry] permite exibir
 
 ## Introdução
 
-O ponto de extremidade usado neste guia faz parte da [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
+O ponto de extremidade usado neste guia faz parte da [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Recuperar uma lista de comportamentos {#list}
 

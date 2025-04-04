@@ -5,9 +5,9 @@ title: Endpoint da API de produtos
 description: O endpoint /products na API de controle de acesso baseado em atributos permite gerenciar programaticamente os produtos no Adobe Experience Platform.
 role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ O ponto de extremidade `/products` na API de controle de acesso baseado em atrib
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
+O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Recuperar uma lista de produtos autorizados {#list}
 
@@ -240,6 +240,6 @@ Uma resposta bem-sucedida retorna os conjuntos de permissões associados à ID d
 | `id` | A ID correspondente do conjunto de permissões consultado. |
 | `name` | O nome correspondente do conjunto de permissões consultado. |
 | `category` | A categoria de permissão disponível. |
-| `permissions` | As permissões incluem a capacidade de visualizar e/ou usar recursos da Platform, como criar sandboxes, definir esquemas e gerenciar conjuntos de dados. |
+| `permissions` | As permissões incluem a capacidade de visualizar e/ou usar recursos do Experience Platform, como criar sandboxes, definir esquemas e gerenciar conjuntos de dados. |
 | `permissions.resource` | O ativo ou objeto que um assunto pode ou não acessar. Os recursos podem ser arquivos, aplicativos, servidores ou até mesmo APIs. |
 | `permissions.actions` | A ação que um assunto tem permissão para realizar em um recurso consultado. Os valores possíveis incluem: `view`, `read`, `create`, `edit` e `delete` |

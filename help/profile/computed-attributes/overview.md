@@ -2,9 +2,9 @@
 title: Visão geral dos atributos computados
 description: Os atributos computados são funções para agregar dados de nível de evento em atributos de nível de perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1154'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ O Personalization baseado no comportamento do usuário é um requisito essencial
 
 Os atributos computados ajudam a converter rapidamente os dados comportamentais do perfil em valores agregados no nível do perfil, sem depender dos recursos de engenharia para:
 
-- Habilitação de personalização direcionada de um para um ou em lote com ativação de agregações comportamentais para destinos e uso do Real-time Customer Data Platform no Adobe Journey Optimizer
+- Habilitação de personalização direcionada de um para um ou em lote com ativação de agregações comportamentais para destinos e uso do Real-Time Customer Data Platform no Adobe Journey Optimizer
 - Segmentação simplificada do público-alvo com armazenamento de agregações comportamentais como atributos de perfil
 - Padronização de dados comportamentais agregados de perfis para uso em plataformas e aplicativos
 - Melhor gerenciamento de dados com a consolidação de dados antigos de eventos de perfil em insights comportamentais significativos
@@ -32,13 +32,13 @@ Exemplos de casos de uso incluem:
 - Recolher vários públicos com base em eventos em um grupo mais condensado de atributos computados
 - Redirecionamento de usuários não autenticados para fora do site usando IDs de parceiros recentes de eventos
 
-Este guia ajudará você a entender melhor a função dos atributos computados na Platform, além de explicar as noções básicas sobre atributos computados.
+Este guia ajudará você a entender melhor a função dos atributos calculados no Experience Platform, além de explicar as noções básicas sobre atributos calculados.
 
 ## Noções básicas sobre atributos computados
 
 O Adobe Experience Platform permite importar e mesclar dados facilmente de várias fontes para gerar [!DNL Real-Time Customer Profiles]. Cada perfil contém informações importantes relacionadas a um indivíduo, como suas informações de contato, preferências e histórico de compras, fornecendo uma visualização de 360 graus do cliente.
 
-Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a confiança em outros campos e valores para gerar as informações (por exemplo, &quot;total de compras vitalícias&quot;). Para facilitar a compreensão rápida desses dados, o [!DNL Platform] permite criar atributos computados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
+Algumas das informações coletadas no perfil são facilmente compreendidas ao ler os campos de dados diretamente (por exemplo, &quot;nome&quot;), enquanto outros dados exigem a execução de vários cálculos ou a confiança em outros campos e valores para gerar as informações (por exemplo, &quot;total de compras vitalícias&quot;). Para facilitar a compreensão rápida desses dados, o [!DNL Experience Platform] permite criar atributos computados que executam automaticamente essas referências e cálculos, retornando o valor no campo apropriado.
 
 Os atributos computados incluem a criação de uma expressão, ou &quot;regra&quot;, que opera nos dados recebidos e armazena o valor resultante em um atributo de perfil. As expressões podem ser definidas de várias maneiras diferentes, permitindo especificar em quais eventos agregar, funções agregadas ou as durações de pesquisa.
 
@@ -46,12 +46,12 @@ Os atributos computados incluem a criação de uma expressão, ou &quot;regra&qu
 
 Os atributos computados permitem definir agregações de eventos de maneira automatizada aproveitando funções predefinidas. Os detalhes sobre essas funções podem ser encontrados abaixo:
 
-| Função | Descrição | Tipos de dados compatíveis | Exemplo de uso |
+| Função | Descrição | Tipos de dados compatíveis | Uso de exemplos |
 | -------- | ----------- | -------------------- | ------------- |
-| SOMA | Uma função que **soma** o valor especificado para eventos qualificados. | Inteiros, Números, Longos | Soma de todas as compras nos últimos 7 dias |
+| SUM | Uma função que **soma** o valor especificado para eventos qualificados. | Inteiros, Números, Longos | Soma de todas as compras nos últimos 7 dias |
 | CONTAGEM | Uma função que **conta** o número de eventos que ocorreram para a regra especificada. | N/D | Contagem de compras nos últimos 3 meses |
-| MÍN. | Uma função que encontra o valor **mínimo** para os eventos qualificados. | Números inteiros, números, duração, carimbos de data e hora | Dados da primeira compra nos últimos 7 dias<br/>Valor mínimo do pedido nas últimas 4 semanas |
-| MÁX. | Uma função que encontra o valor **maximum** para os eventos qualificados. | Números inteiros, números, duração, carimbos de data e hora | Dados da última compra nos últimos 7 dias<br/>Valor máximo do pedido nas últimas 4 semanas |
+| MIN | Uma função que encontra o valor **mínimo** para os eventos qualificados. | Números inteiros, números, duração, carimbos de data e hora | Dados da primeira compra nos últimos 7 dias<br/>Valor mínimo do pedido nas últimas 4 semanas |
+| MAX | Uma função que encontra o valor **maximum** para os eventos qualificados. | Números inteiros, números, duração, carimbos de data e hora | Dados da última compra nos últimos 7 dias<br/>Valor máximo do pedido nas últimas 4 semanas |
 | MAIS_RECENTE | Uma função que encontra o valor do atributo especificado do evento qualificado mais recente. Esta função fornece a **ambos** o valor e o carimbo de data/hora do atributo. | Todos os valores primitivos, Matrizes de valores primitivos | Produto mais recente exibido nos últimos 7 dias |
 
 ### Períodos de pesquisa

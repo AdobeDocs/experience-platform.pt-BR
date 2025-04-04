@@ -4,28 +4,28 @@ description: Saiba como configurar suas próprias chaves de criptografia para da
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c1a28a4b1ce066a87bb7b34b2524800f9d8f1ca0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1111'
 ht-degree: 0%
 
 ---
 
 # Chaves gerenciadas pelo cliente no Adobe Experience Platform
 
-Os dados armazenados no Adobe Experience Platform são criptografados em repouso usando chaves de nível de sistema. Se você estiver usando um aplicativo criado sobre a Platform, poderá optar por usar suas próprias chaves de criptografia, fornecendo maior controle sobre a segurança dos dados.
+Os dados armazenados no Adobe Experience Platform são criptografados em repouso usando chaves de nível de sistema. Se você estiver usando um aplicativo criado com base no Experience Platform, poderá optar por usar suas próprias chaves de criptografia, fornecendo maior controle sobre a segurança dos dados.
 
 >[!AVAILABILITY]
 >
->A Adobe Experience Platform oferece suporte a Chaves gerenciadas pelo cliente (CMK) para Microsoft Azure e Amazon Web Services (AWS). O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Se sua implementação for executada no AWS, você terá a opção de usar o Serviço de Gerenciamento de Chaves (KMS) para criptografia de dados da plataforma. Para obter mais informações sobre a infraestrutura com suporte, consulte a [visão geral de várias nuvens do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>A Adobe Experience Platform oferece suporte a Chaves gerenciadas pelo cliente (CMK) para Microsoft Azure e Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Se sua implementação for executada no AWS, você terá a opção de usar o Serviço de Gerenciamento de Chaves (KMS) para criptografia de dados do Experience Platform. Para obter mais informações sobre a infraestrutura com suporte, consulte a [visão geral de várias nuvens do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 >
 >Para saber mais sobre a criação e o gerenciamento de chaves de criptografia no AWS KMS, consulte o [Guia de criptografia de dados do AWS KMS](./aws/configure-kms.md). Para implementações do Azure, consulte o [guia de configuração do Cofre de Chaves do Azure](./azure/azure-key-vault-config.md).
 
 >[!NOTE]
 >
->Para instâncias da Plataforma hospedada [!DNL Azure], os dados de perfil do cliente armazenados no [!DNL Azure Data Lake] da Plataforma e no armazenamento de perfil do [!DNL Azure Cosmos DB] são criptografados exclusivamente usando CMK depois de habilitados. A revogação de chaves em armazenamentos de dados primários pode levar de **alguns minutos a 24 horas** e **até 7 dias** para armazenamentos de dados transitórios ou secundários. Para obter detalhes adicionais, consulte a [seção implicações da revogação do acesso à chave](#revoke-access).
+>Para instâncias do Experience Platform hospedadas [!DNL Azure], os dados de perfil do cliente armazenados no [!DNL Azure Data Lake] da Experience Platform e no armazenamento de perfil do [!DNL Azure Cosmos DB] são criptografados exclusivamente usando CMK depois de habilitados. A revogação de chaves em armazenamentos de dados primários pode levar de **alguns minutos a 24 horas** e **até 7 dias** para armazenamentos de dados transitórios ou secundários. Para obter detalhes adicionais, consulte a [seção implicações da revogação do acesso à chave](#revoke-access).
 
-Este documento fornece uma visão geral de alto nível do processo de habilitação do recurso de Chaves gerenciadas pelo cliente (CMK) na Platform no [!DNL Azure] e na AWS, juntamente com as informações de pré-requisitos necessárias para concluir essas etapas.
+Este documento fornece uma visão geral de alto nível do processo de habilitação do recurso de Chaves Gerenciadas pelo Cliente (CMK) no Experience Platform no [!DNL Azure] e no AWS, juntamente com as informações de pré-requisitos necessárias para concluir essas etapas.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Para implementações hospedadas pela AWS, configure o ambiente do AWS da seguin
 
 ## Resumo do processo {#process-summary}
 
-O Customer Managed Keys (CMK) está disponível por meio das ofertas Adobe Healthcare Shield e Privacy and Security Shield. No Azure, o CMK é compatível com o Healthcare Shield e o Privacy and Security Shield. No AWS, o CMK é compatível apenas com o Privacy and Security Shield e não está disponível para o Healthcare Shield. Assim que sua organização comprar uma licença para uma dessas ofertas, você poderá iniciar o processo de configuração único para ativar o CMK.
+O Customer Managed Keys (CMK) está disponível através das ofertas Healthcare Shield e Privacy and Security Shield da Adobe. No Azure, o CMK é compatível com o Healthcare Shield e o Privacy and Security Shield. No AWS, o CMK é compatível apenas com o Privacy and Security Shield e não está disponível para o Healthcare Shield. Assim que sua organização comprar uma licença para uma dessas ofertas, você poderá iniciar o processo de configuração único para ativar o CMK.
 
 >[!WARNING]
 >
@@ -68,28 +68,28 @@ O processo é o seguinte:
 
 ### Para o Azure {#azure-process-summary}
 
-1. [Configure um [!DNL Azure] Cofre de Chaves](./azure/azure-key-vault-config.md) com base nas políticas da sua organização e [gere uma chave de criptografia](./azure/azure-key-vault-config.md#generate-a-key) para compartilhar com o Adobe.
+1. [Configure um [!DNL Azure] Cofre de Chaves](./azure/azure-key-vault-config.md) com base nas políticas da sua organização e [gere uma chave de criptografia](./azure/azure-key-vault-config.md#generate-a-key) para compartilhar com a Adobe.
 1. Configure o aplicativo CMK com seu locatário [!DNL Azure] por meio de [chamadas de API](./azure/api-set-up.md#register-app) ou da [interface](./azure/ui-set-up.md#register-app).
-1. Envie sua ID de chave de criptografia para o Adobe e inicie o processo de habilitação do recurso, [na interface](./azure/ui-set-up.md#send-to-adobe) ou com uma [chamada de API](./azure/api-set-up.md#send-to-adobe).
+1. Envie sua ID de chave de criptografia para a Adobe e inicie o processo de habilitação do recurso, seja [na interface](./azure/ui-set-up.md#send-to-adobe) ou com uma [chamada de API](./azure/api-set-up.md#send-to-adobe).
 1. Verifique o status da configuração para verificar se o CMK foi habilitado, [na interface](./azure/ui-set-up.md#check-status) ou com uma [chamada de API](./azure/api-set-up.md#check-status).
 
-Quando o processo de configuração for concluído para instâncias da Plataforma hospedada pelo Azure, todos os dados integrados na Plataforma em todas as sandboxes serão criptografados usando a configuração de chave [!DNL Azure]. Para usar o CMK, você aproveitará a funcionalidade [!DNL Microsoft Azure] que pode fazer parte do [programa de visualização pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
+Quando o processo de configuração for concluído para instâncias do Experience Platform hospedadas no Azure, todos os dados integrados no Experience Platform em todas as sandboxes serão criptografados usando a configuração de chave [!DNL Azure]. Para usar o CMK, você aproveitará a funcionalidade [!DNL Microsoft Azure] que pode fazer parte do [programa de visualização pública](https://azure.microsoft.com/en-ca/support/legal/preview-supplemental-terms/).
 
 ### Para AWS {#aws-process-summary}
 
-1. [Configure o AWS KMS](./aws/configure-kms.md) configurando uma chave de criptografia para ser compartilhada com o Adobe.
+1. [Configure o AWS KMS](./aws/configure-kms.md) configurando uma chave de criptografia a ser compartilhada com o Adobe.
 2. Siga as instruções específicas do AWS no [guia de configuração da interface](./aws/ui-set-up.md).
-3. Valide a configuração para confirmar se os dados da Platform estão criptografados usando a chave hospedada pela AWS.
+3. Valide a configuração para confirmar se os dados do Experience Platform estão criptografados usando a chave hospedada pela AWS.
 
 <!--  Pending: or [API setup guide]() -->
 
-Quando o processo de configuração das instâncias da plataforma hospedada pela AWS for concluído, todos os dados integrados na plataforma em todas as sandboxes serão criptografados usando a configuração do serviço de gerenciamento de chaves (KMS) da AWS. Para usar o CMK no AWS, você usará o Serviço de gerenciamento de chaves da AWS para criar e gerenciar as chaves de criptografia de acordo com os requisitos de segurança da sua organização.
+Quando o processo de configuração for concluído para instâncias do Experience Platform hospedadas pela AWS, todos os dados integrados no Experience Platform em todas as sandboxes serão criptografados usando a configuração do Serviço de Gerenciamento de Chaves (KMS) da AWS. Para usar o CMK no AWS, você usará o Serviço de gerenciamento de chaves da AWS para criar e gerenciar as chaves de criptografia de acordo com os requisitos de segurança da sua organização.
 
 ## Implicações da revogação do acesso à chave {#revoke-access}
 
-Revogar ou desabilitar o acesso ao Cofre de Chaves, chave ou aplicativo CMK no Azure ou à chave de criptografia no AWS pode resultar em interrupções significativas, que incluem alterações irrelevantes nas operações da sua plataforma. Depois que as chaves forem desativadas, os dados na Platform poderão ficar inacessíveis e qualquer operação downstream que depende desses dados deixará de funcionar. É fundamental entender totalmente os impactos downstream antes de fazer qualquer alteração nas principais configurações.
+Revogar ou desabilitar o acesso ao Cofre de Chaves, chave ou aplicativo CMK no Azure ou à chave de criptografia no AWS pode resultar em interrupções significativas, que incluem alterações irrelevantes nas operações da Experience Platform. Depois que as chaves forem desativadas, os dados no Experience Platform poderão ficar inacessíveis e qualquer operação de downstream que depende desses dados deixará de funcionar. É fundamental entender totalmente os impactos downstream antes de fazer qualquer alteração nas principais configurações.
 
-Para revogar o acesso da Platform aos seus dados no [!DNL Azure], remova a função de usuário associada ao aplicativo do Cofre de Chaves. Para o AWS, você pode desativar a chave ou atualizar a declaração de política. Para obter instruções detalhadas sobre o processo AWS, consulte a [seção de revogação de chaves](./aws/ui-set-up.md#key-revocation).
+Para revogar o acesso do Experience Platform aos seus dados no [!DNL Azure], remova a função de usuário associada ao aplicativo do Cofre da Chave. Para o AWS, você pode desativar a chave ou atualizar a declaração de política. Para obter instruções detalhadas sobre o processo AWS, consulte a [seção de revogação de chaves](./aws/ui-set-up.md#key-revocation).
 
 
 ### Linhas do tempo de propagação {#propagation-timelines}
@@ -115,5 +115,5 @@ Por exemplo, o painel Perfil continuará exibindo dados de seu cache por até se
 
 Para iniciar o processo:
 
-- Para o Azure: comece [configurando um [!DNL Azure] Cofre de Chaves](./azure/azure-key-vault-config.md) e [gerando uma chave de criptografia](./azure/azure-key-vault-config.md#generate-a-key) para compartilhar com o Adobe.
+- Para o Azure: comece [configurando um [!DNL Azure] Cofre de Chaves](./azure/azure-key-vault-config.md) e [gerando uma chave de criptografia](./azure/azure-key-vault-config.md#generate-a-key) para compartilhar com a Adobe.
 - Para o AWS: [Configure o AWS KMS](./aws/configure-kms.md) e garanta as configurações apropriadas do IAM e do KMS antes de prosseguir para os guias de configuração da interface ou da API.

@@ -4,9 +4,9 @@ description: A Zeta Marketing Platform (ZMP) é um sistema baseado em nuvem que 
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1356'
 ht-degree: 1%
 
 ---
@@ -31,14 +31,14 @@ Um profissional de marketing deseja criar perfis únicos de público-alvo, ident
 
 ### Direcione usuários com anúncios {#use-case-target-users}
 
-Um anunciante tem como objetivo direcionar os usuários dentro de públicos-alvo específicos por meio do Demand Side Platform Zeta (DSP), já que esses usuários interagem com suas marcas. Para obter mais informações sobre o DSP Zeta, clique [aqui](https://knowledgebase.zetaglobal.com/pug/).
+Um anunciante tem como objetivo direcionar os usuários dentro de públicos-alvo específicos por meio do Zeta Demand Side Platform (DSP), já que esses usuários interagem com suas marcas. Para obter mais informações sobre o Zeta DSP, clique [aqui](https://knowledgebase.zetaglobal.com/pug/).
 
 ## Pré-requisitos {#prerequisites}
 
 ### Pré-requisitos da Zeta Marketing Platform
 
 * Antes de configurar uma nova conexão com o destino Zeta Marketing Platform, você deve criar uma lista de clientes vazia em sua conta Zeta Marketing Platform. Você deve escolher uma dessas listas de clientes como público-alvo designado para receber o público-alvo da Adobe Experience Platform que planeja enviar. Você pode criar uma lista de clientes vazia no ZMP seguindo as instruções [aqui](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
-* Embora o Adobe Experience Platform permita a ativação de vários públicos-alvo para uma instância de destino ZMP específica, é obrigatório que cada instância de destino ZMP receba apenas um público-alvo Experience Platform. Para lidar com vários públicos-alvo do Experience Platform, crie instâncias de destino ZMP adicionais para cada público-alvo e selecione uma lista de clientes diferente na lista suspensa. Essa abordagem garante que os públicos-alvo do ZMP não sejam substituídos. Consulte [Preencher detalhes do destino](#destination-details) para obter mais detalhes.
+* Embora o Adobe Experience Platform permita a ativação de vários públicos-alvo para uma instância de destino ZMP específica, é obrigatório que cada instância de destino ZMP receba apenas um público-alvo do Experience Platform. Para lidar com vários públicos-alvo da Experience Platform, crie instâncias de destino ZMP adicionais para cada público-alvo e selecione uma lista de clientes diferente na lista suspensa. Essa abordagem garante que os públicos-alvo do ZMP não sejam substituídos. Consulte [Preencher detalhes do destino](#destination-details) para obter mais detalhes.
 * Use as credenciais a seguir para configurar o destino:
    * Nome de usuário: **api**
    * Senha: sua chave de API REST ZMP. Você pode encontrar sua Chave de API REST fazendo logon em sua conta ZMP e navegando até a seção **Configurações** > **Integrações** > **Chaves e Aplicativos**. Consulte a [documentação do ZMP](https://knowledgebase.zetaglobal.com/kb/integrations) para obter mais detalhes.
@@ -53,7 +53,7 @@ O [!DNL Zeta Marketing Platform] dá suporte à ativação das IDs de usuário p
 | Identidade de destino | Descrição | Considerações | Notas |
 ---------|----------|----------|----------|
 | uid | Identificador exclusivo que o ZMP usa para diferenciar perfis de clientes | Obrigatório | Escolha o namespace de identidade padrão `Email` se desejar identificar perfis únicos usando seus endereços de email. Como alternativa, você pode optar por mapear seu namespace personalizado para `uid` se os perfis do cliente não tiverem um email. |
-| email_md5_id | Email MD5 que representa cada perfil de cliente | Opcional | Escolha essa identidade de público-alvo quando quiser identificar exclusivamente os perfis de clientes usando valores MD5 de email. É essencial que os endereços de email já estejam no formato MD5 no Experience Platform, pois a Plataforma não converte texto sem formatação em MD5. Nesse cenário, defina `uid` (obrigatório) como os mesmos valores MD5 de email ou outro namespace de identidade apropriado. |
+| email_md5_id | Email MD5 que representa cada perfil de cliente | Opcional | Escolha essa identidade de público-alvo quando quiser identificar exclusivamente os perfis de clientes usando valores MD5 de email. É essencial que os endereços de email já estejam no formato MD5 no Experience Platform, pois o Experience Platform não converte texto sem formatação em MD5. Nesse cenário, defina `uid` (obrigatório) como os mesmos valores MD5 de email ou outro namespace de identidade apropriado. |
 
 {style="table-layout:auto"}
 
@@ -63,13 +63,13 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | X | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
-> À medida que membros individuais são adicionados ou removidos do público-alvo da Platform, as atualizações serão enviadas ao ZMP para garantir que a lista de clientes de destino seja sincronizada adequadamente.
+> À medida que membros individuais são adicionados ou removidos do público-alvo do Experience Platform, as atualizações serão enviadas ao ZMP para garantir que a lista de clientes de destino seja sincronizada adequadamente.
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -77,7 +77,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do segmento, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
 * **[!UICONTROL Id do Site da Conta do ZMP]**: Seu **Id do Site** do ZMP para o qual você deseja enviar seus públicos-alvo. Você pode exibir sua Id do Site navegando até a seção **Configurações** > **Integrações** > **Chaves e Aplicativos**. Mais informações podem ser encontradas [aqui](https://knowledgebase.zetaglobal.com/kb/integrations).
-* **[!UICONTROL Segmento ZMP]**: o segmento da lista de clientes na sua conta de ID do site ZMP que você deseja atualizar com o público-alvo da Platform.
+* **[!UICONTROL Segmento ZMP]**: o segmento da lista de clientes na sua conta de ID do site ZMP que você deseja atualizar com o público-alvo da Experience Platform.
 
 ### Ativar alertas {#enable-alerts}
 
@@ -131,18 +131,18 @@ Selecionar campos de origem:
 
 Selecionar campos de destino:
 * (Obrigatório) Selecione `uid` como a identidade de destino para a qual você mapeia um namespace de identidade de origem.
-* (Opcional) Selecione `email_md5_id` como a identidade de destino para a qual você mapeou o namespace de identidade de origem que representa valores md5 de email. É essencial que os endereços de email já estejam no formato MD5 no Experience Platform, pois a Plataforma não converte texto simples em MD5
+* (Opcional) Selecione `email_md5_id` como a identidade de destino para a qual você mapeou o namespace de identidade de origem que representa valores md5 de email. É essencial que os endereços de email já estejam no formato MD5 no Experience Platform, pois o Experience Platform não converte texto simples em MD5
 * Selecione target mappings adicionais, se necessário.
 
 ![Mapeamento de identidade](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)
 
 ## Dados exportados / Validar exportação de dados {#exported-data}
 
-Uma ativação de público-alvo bem-sucedida do Experience Platform para a Plataforma de marketing Zeta atualiza a lista de clientes-alvo no ZMP. A contagem e os perfis de amostra na lista de clientes de destino serão iguais ao número de identidades que foram ativadas com êxito.
+Uma ativação bem-sucedida do público-alvo do Experience Platform para a Zeta Marketing Platform atualiza a lista de clientes-alvo no ZMP. A contagem e os perfis de amostra na lista de clientes de destino serão iguais ao número de identidades que foram ativadas com êxito.
 
 ![Lista de Clientes no ZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png)
 
-Cada membro do público que foi ativado pelo Experience Platform também estará visível em **Públicos-alvo** > **Pessoas** no ZMP. Você também poderá exibir o segmento **Lista de Clientes** ao qual um perfil pertence na exibição Cliente Único, conforme mostrado abaixo.
+Cada membro do público ativado no Experience Platform também estará visível em **Públicos-alvo** > **Pessoas** no ZMP. Você também poderá exibir o segmento **Lista de Clientes** ao qual um perfil pertence na exibição Cliente Único, conforme mostrado abaixo.
 
 ![SingleCustomerViewInZMP](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-single-customer-view-in-zmp.png)
 

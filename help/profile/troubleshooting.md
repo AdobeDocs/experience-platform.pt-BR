@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução de problemas;API
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API
 title: Guia de solução de problemas do Perfil do cliente em tempo real
 type: Documentation
 description: Este documento fornece respostas a perguntas frequentes sobre o Perfil do cliente em tempo real, bem como um guia de solução de problemas para erros comuns ao trabalhar com dados de perfil usando o Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
 
 # Guia de solução de problemas do Perfil do cliente em tempo real
 
-Este documento fornece respostas a perguntas frequentes sobre o Perfil do cliente em tempo real, bem como um guia de solução de problemas para erros comuns. Para perguntas e soluções de problemas relacionados a outros serviços na Adobe Experience Platform, consulte o [guia de solução de problemas de Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o Perfil do cliente em tempo real, bem como um guia de solução de problemas para erros comuns. Para perguntas e soluções de problemas relacionadas a outros serviços no Adobe Experience Platform, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
 Com o [!DNL Real-Time Customer Profile], você pode ter uma visão holística de cada cliente individual ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. Isso permite que os profissionais de marketing promovam experiências coordenadas, consistentes e relevantes para clientes em vários canais.
 
@@ -25,15 +25,15 @@ Veja a seguir uma lista de respostas para perguntas frequentes sobre o Perfil do
 
 O perfil aceita dados de **registro** e **série temporal**, desde que os dados em questão contenham pelo menos um valor de identidade que associe os dados a uma pessoa individual exclusiva.
 
-Como todos os serviços da plataforma, o Perfil exige que seus dados sejam semanticamente estruturados em um esquema do Experience Data Model (XDM). Por sua vez, este esquema deve ter uma **identidade principal** definida e estar habilitada para uso no Perfil.
+Como todos os serviços da Experience Platform, o Perfil exige que seus dados sejam semanticamente estruturados em um esquema do Experience Data Model (XDM). Por sua vez, este esquema deve ter uma **identidade principal** definida e estar habilitada para uso no Perfil.
 
 Se você não estiver familiarizado com o XDM, comece com a [visão geral do XDM](../xdm/home.md) para saber mais. Em seguida, consulte o guia do usuário XDM para obter etapas sobre como [definir campos de identidade](../xdm/tutorials/create-schema-ui.md#identity-field) e [habilitar um esquema para o Perfil](../xdm/tutorials/create-schema-ui.md#profile).
 
 ### Onde os dados do perfil são armazenados?
 
-O Perfil do cliente em tempo real mantém seu próprio armazenamento de dados (conhecido como &quot;Armazenamento de perfis&quot;), separado do Data Lake que contém outros dados assimilados da Platform.
+O Perfil do cliente em tempo real mantém seu próprio armazenamento de dados (conhecido como &quot;Armazenamento de perfis&quot;), separado do Data Lake que contém outros dados assimilados do Experience Platform.
 
-### Se já assimilei dados na Platform, posso disponibilizá-los na loja de perfis?
+### Se já assimilei dados na Experience Platform, posso disponibilizá-los na loja de perfis?
 
 Se os dados tiverem sido assimilados em um conjunto de dados que não seja de Perfil, você deverá assimilá-los novamente em um conjunto de dados habilitado para torná-lo disponível no armazenamento de Perfil. É possível habilitar um conjunto de dados existente para o Perfil, no entanto, os dados assimilados antes dessa configuração ainda não aparecerão no armazenamento do Perfil.
 
@@ -51,13 +51,13 @@ Você também pode usar a API do Serviço de segmentação do Adobe Experience P
 
 #### Uso da interface
 
-Na interface do usuário do Experience Platform, a guia **[!UICONTROL Procurar]** no espaço de trabalho **[!UICONTROL Perfis]** permite que você visualize a contagem total de perfis e pesquise por perfis individuais por seu valor de identidade. Consulte o [Guia do usuário do perfil](./ui/user-guide.md) para obter mais informações.
+Na interface do usuário do Experience Platform, a guia **[!UICONTROL Procurar]** no espaço de trabalho **[!UICONTROL Perfis]** permite que você exiba a contagem total de perfis e pesquise por perfis individuais por seu valor de identidade. Consulte o [Guia do usuário do perfil](./ui/user-guide.md) para obter mais informações.
 
 Você também pode exibir uma lista de seus públicos na guia **[!UICONTROL Procurar]** do espaço de trabalho **[!UICONTROL Públicos-alvo]**. Após selecionar um público-alvo, uma amostra de perfis qualificados para esse público-alvo é exibida. Em seguida, você pode selecionar qualquer um desses perfis listados para exibir seus detalhes. Consulte a [Visão geral da interface do usuário de segmentação](../segmentation/ui/overview.md) para obter mais informações.
 
 ## Códigos de erro
 
-Veja a seguir uma lista de mensagens de erro que você pode encontrar ao trabalhar com a API de perfil do cliente em tempo real. Se o erro encontrado não estiver listado aqui, você pode encontrá-lo no [Guia de solução de problemas da Platform](../landing/troubleshooting.md).
+Veja a seguir uma lista de mensagens de erro que você pode encontrar ao trabalhar com a API de perfil do cliente em tempo real. Se o erro encontrado não estiver listado aqui, você poderá encontrá-lo no [guia geral de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
 ### Não foi possível pesquisar o esquema do atributo computado para o caminho fornecido
 

@@ -1,11 +1,11 @@
 ---
 title: Implementação de aplicativos de página única para o Adobe Experience Platform Web SDK
-description: Saiba como criar uma implementação de aplicativo de página única (SPA) do SDK da Web da Adobe Experience Platform usando o Adobe Target.
+description: Saiba como criar uma implementação de aplicativo de página única (SPA) do Adobe Experience Platform Web SDK usando o Adobe Target.
 keywords: destino;adobe destino;exibições xdm; exibições;aplicativos de página única;SPA;ciclo de vida SPA;lado do cliente;teste AB;Direcionamento de experiência;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -13,25 +13,25 @@ ht-degree: 0%
 
 # Implementação de aplicativos de página única
 
-O SDK da Web da Adobe Experience Platform fornece recursos avançados que fazem com que sua empresa execute personalização em tecnologias de próxima geração no lado do cliente, como aplicativos de página única (SPA).
+O Adobe Experience Platform Web SDK fornece recursos avançados para sua empresa personalizar tecnologias de próxima geração no lado do cliente, como aplicativos de página única (SPAs).
 
 Os sites tradicionais funcionavam em modelos de navegação &quot;página para página&quot;, conhecidos como Aplicativos de várias páginas, em que os designs de site eram totalmente combinados com URLs e as transições de uma página da Web para outra exigiam um carregamento de página.
 
 Aplicativos da Web modernos, como aplicativos de página única, adotaram um modelo que impulsiona o uso rápido da renderização da interface do usuário do navegador, que geralmente é independente dos recarregamentos de página. Essas experiências podem ser acionadas por interações do cliente, como rolagens, cliques e movimentos de cursor. À medida que os paradigmas da Web moderna evoluíram, a relevância dos eventos genéricos tradicionais, como um carregamento de página, para implantar a personalização e a experimentação não funciona mais.
 
-![Diagrama que mostra o ciclo de vida do SPA em comparação ao ciclo de vida da página tradicional.](assets/spa-vs-traditional-lifecycle.png)
+![Diagrama que mostra o ciclo de vida de SPA comparado ao ciclo de vida de página tradicional.](assets/spa-vs-traditional-lifecycle.png)
 
-## Benefícios do SDK da Web da plataforma para SPA
+## Benefícios do Experience Platform Web SDK para SPAs
 
-Estes são alguns benefícios de usar o SDK da Web da Adobe Experience Platform para seus aplicativos de página única:
+Estes são alguns benefícios de usar o Adobe Experience Platform Web SDK para seus aplicativos de página única:
 
 * Capacidade de armazenar em cache todas as ofertas no carregamento da página para reduzir várias chamadas do servidor a uma única chamada de servidor.
 * Melhore bastante a experiência do usuário no site, pois as ofertas são exibidas imediatamente pelo cache, sem o tempo de atraso introduzido pelas chamadas do servidor tradicional.
-* Uma única linha de código e uma configuração de desenvolvedor única permitem que os profissionais de marketing criem e executem atividades A/B e Direcionamento de experiência (XT) por meio do Visual Experience Composer (VEC) no seu SPA.
+* Uma única linha de código e uma configuração de desenvolvedor única permitem que os profissionais de marketing criem e executem atividades A/B e Direcionamento de experiência (XT) por meio do Visual Experience Composer (VEC) em seu SPA.
 
 ## Exibições XDM e aplicativos de página única
 
-O VEC do Adobe Target para SPA aproveita um conceito chamado Exibições: um grupo lógico de elementos visuais que juntos constituem uma experiência com o SPA. Um aplicativo de página única pode, portanto, ser considerado como uma transição entre Exibições, em vez de URLs, com base nas interações do usuário. Uma Exibição geralmente pode representar um site inteiro ou elementos visuais agrupados em um site.
+O Adobe Target VEC para SPAs aproveita um conceito chamado Exibições: um grupo lógico de elementos visuais que, juntos, constituem uma experiência de SPA. Um aplicativo de página única pode, portanto, ser considerado como uma transição entre Exibições, em vez de URLs, com base nas interações do usuário. Uma Exibição geralmente pode representar um site inteiro ou elementos visuais agrupados em um site.
 
 Para explicar melhor o que são Exibições, o exemplo a seguir usa um site de comércio eletrônico online hipotético implementado no React para explorar Exibições de exemplo.
 
@@ -59,7 +59,7 @@ O conceito de Exibições pode ser estendido muito além disso. Estes são apena
 
 ## Implementação de exibições XDM
 
-As Exibições XDM podem ser aproveitadas no Adobe Target para capacitar os profissionais de marketing a executar testes A/B e XT no SPA por meio do Visual Experience Composer. Isso requer a execução das seguintes etapas para concluir uma configuração de desenvolvedor única:
+As exibições XDM podem ser aproveitadas no Adobe Target para permitir que os profissionais de marketing executem testes A/B e XT em SPAs por meio do Visual Experience Composer. Isso requer a execução das seguintes etapas para concluir uma configuração de desenvolvedor única:
 
 1. Instalar o [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md)
 2. Determine todas as Exibições XDM no aplicativo de página única que deseja personalizar.
@@ -215,13 +215,13 @@ class Checkout extends Component {
 } 
 ```
 
-## Uso do Visual Experience Composer para SPA
+## Uso do Visual Experience Composer para um SPA
 
 Quando você terminar de definir suas Exibições XDM e implementar o `sendEvent()` com essas Exibições XDM transmitidas, o VEC poderá detectar essas Exibições e permitir que os usuários criem ações e modificações para atividades A/B ou XT.
 
 >[!NOTE]
 >
->Para usar o VEC para SPA, você deve instalar e ativar o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou a Extensão auxiliar do VEC do [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak).
+>Para usar o VEC para o seu SPA, você deve instalar e ativar o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou a Extensão auxiliar do VEC do [Chrome](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak).
 
 ### Painel de modificações
 
@@ -243,7 +243,7 @@ Clicar em uma ação destaca o elemento no site onde esta ação será aplicada.
 | Mover | Move a ação para um Evento de carregamento de página ou qualquer outra Exibição que já existe no painel de modificações.<br/><br/>**Evento de carregamento de página:** qualquer ação correspondente ao evento de carregamento de página é aplicada no carregamento inicial da página no aplicativo da Web. <br/><br/>**Observação:** após a realização de uma operação de mover, você deve navegar para o Modo de Exibição no VEC via Procurar para ver se a movimentação foi uma operação válida. Se a ação não puder ser aplicada à Exibição, você verá um erro. |
 | Excluir | Exclui a ação. |
 
-## Uso do VEC para exemplos de SPA
+## Exemplos de uso do VEC para SPAs
 
 Esta seção descreve três exemplos para usar o Visual Experience Composer para criar ações e modificações para atividades A/B ou XT.
 

@@ -2,16 +2,16 @@
 title: Adicionar campos específicos a um esquema usando a API do registro de esquema
 description: Saiba como adicionar campos individuais de grupos de campos pré-existentes a um esquema do Experience Data Model (XDM) usando a API do registro de esquema.
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '626'
 ht-degree: 2%
 
 ---
 
 # Adicionar campos específicos a um esquema usando a API do Registro de esquema
 
-Os esquemas do Experience Data Model (XDM) são compostos de uma classe base, com campos adicionais incluídos por meio do uso de grupos de campos padrão definidos por Adobe e grupos de campos personalizados definidos pela sua organização.
+Os esquemas do Experience Data Model (XDM) são compostos de uma classe base, com campos adicionais incluídos por meio do uso de grupos de campos padrão definidos pelo Adobe e grupos de campos personalizados definidos pela sua organização.
 
 Ao criar um esquema, você pode querer usar alguns campos de um determinado grupo de campos enquanto exclui outros do mesmo grupo de que você não precisa. Este tutorial mostra como adicionar campos individuais de um grupo de campos a um esquema usando a API do Registro de esquema.
 
@@ -97,9 +97,9 @@ Como alternativa, `meta:refProperty` pode ser fornecido como uma matriz, permiti
 }
 ```
 
-## Adicionar campos usando uma operação PUT
+## Adicionar campos usando uma operação do PUT
 
-Você pode usar uma solicitação PUT para regravar um esquema inteiro e configurar os campos que deseja incluir em `allOf`.
+Você pode usar uma solicitação PUT para reescrever um esquema inteiro e configurar os campos que deseja incluir em `allOf`.
 
 **Formato da API**
 
@@ -192,7 +192,7 @@ Uma resposta bem-sucedida retorna os detalhes do esquema atualizado.
 >
 >Para obter informações mais detalhadas sobre solicitações PUT para esquemas, consulte o [manual de endpoint de esquemas](../api/schemas.md#put).
 
-## Adicionar campos usando uma operação PATCH
+## Adicionar campos usando uma operação do PATCH
 
 Você pode usar uma solicitação PATCH para adicionar campos individuais a um esquema sem substituir outros. O Registro de Esquema dá suporte a todas as operações de Patch JSON padrão, incluindo `add`, `remove` e `replace`. Para obter mais informações sobre o Patch JSON, consulte o [guia de fundamentos de API](../../landing/api-fundamentals.md#json-patch).
 
@@ -285,6 +285,6 @@ Uma resposta bem-sucedida retorna os detalhes do esquema atualizado.
 
 ## Próximas etapas
 
-Este guia abordou como usar chamadas de API para adicionar campos individuais de um grupo de campos existente a um esquema. Para obter detalhes sobre como executar tarefas em campo semelhantes na interface do usuário da Platform, consulte o manual sobre [fluxos de trabalho em campo](../ui/field-based-workflows.md).
+Este guia abordou como usar chamadas de API para adicionar campos individuais de um grupo de campos existente a um esquema. Para obter detalhes sobre como executar tarefas em campo semelhantes na interface do usuário do Experience Platform, consulte o manual sobre [fluxos de trabalho em campo](../ui/field-based-workflows.md).
 
 Para obter mais informações sobre os recursos da API do Registro de Esquema, consulte a [visão geral da API](../api/overview.md) para obter uma lista completa de pontos de extremidade e processos.

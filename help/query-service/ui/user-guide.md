@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2683'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 O Editor de Consultas é uma ferramenta interativa fornecida pelo Serviço de Consulta da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do [!DNL Experience Platform]. O Editor de Consultas oferece suporte ao desenvolvimento de consultas para análise e exploração de dados, e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para popular conjuntos de dados no [!DNL Experience Platform].
 
-Para obter mais informações sobre os conceitos e recursos do Serviço de consulta, consulte a [visão geral do Serviço de consulta](../home.md). Para saber mais sobre como navegar na interface do usuário do Serviço de Consulta em [!DNL Platform], consulte a [visão geral da interface do usuário do Serviço de Consulta](./overview.md).
+Para obter mais informações sobre os conceitos e recursos do Serviço de consulta, consulte a [visão geral do Serviço de consulta](../home.md). Para saber mais sobre como navegar na interface do usuário do Serviço de Consulta em [!DNL Experience Platform], consulte a [visão geral da interface do usuário do Serviço de Consulta](./overview.md).
 
 ## Introdução {#getting-started}
 
@@ -97,7 +97,7 @@ O Editor de consultas tem uma saída máxima de 50.000 linhas. Você pode escolh
 
 >[!NOTE]
 >
->Como a interface da Platform pode suportar até 1000 linhas, transmitir um valor de LIMITE acima de 1000 é ignorado.
+>Como a interface do usuário do Experience Platform pode suportar até 1000 linhas, transmitir um valor de LIMITE acima de 1000 é ignorado.
 
 ![O Editor de Consultas com a lista suspensa de Contagem de resultados realçada.](../images/ui/query-editor/result-count.png)
 
@@ -258,4 +258,4 @@ O vídeo a seguir mostra como executar queries na interface do Adobe Experience 
 
 ## Próximas etapas
 
-Agora que você sabe quais recursos estão disponíveis no Editor de Consultas e como navegar pelo aplicativo, pode começar a criar suas próprias consultas diretamente no [!DNL Platform]. Para obter mais informações sobre como executar consultas SQL em conjuntos de dados no [!DNL Data Lake], consulte o manual em [executando consultas](../best-practices/writing-queries.md).
+Agora que você sabe quais recursos estão disponíveis no Editor de Consultas e como navegar pelo aplicativo, pode começar a criar suas próprias consultas diretamente no [!DNL Experience Platform]. Para obter mais informações sobre como executar consultas SQL em conjuntos de dados no [!DNL Data Lake], consulte o manual em [executando consultas](../best-practices/writing-queries.md).

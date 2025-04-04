@@ -3,18 +3,18 @@ keywords: Experience Platform;página inicial;tópicos populares;dados de armaze
 solution: Experience Platform
 title: Criar um fluxo de dados para fontes de armazenamento na nuvem usando a API do serviço de fluxo
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Platform usando conectores de origem e APIs.
+description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Experience Platform usando conectores de origem e APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1742'
+source-wordcount: '1756'
 ht-degree: 3%
 
 ---
 
 # Criar um fluxo de dados para fontes de armazenamento na nuvem usando a API [!DNL Flow Service]
 
-Este tutorial aborda as etapas para recuperar dados de uma fonte de armazenamento na nuvem e trazê-los para a Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Este tutorial aborda as etapas para recuperar dados de uma fonte de armazenamento na nuvem e trazê-los para a Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
@@ -28,12 +28,12 @@ Este tutorial requer que você tenha uma compreensão funcional dos seguintes co
    - [Noções básicas sobre a composição de esquema](../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    - [Guia do desenvolvedor do Registro de Esquema](../../../../xdm/api/getting-started.md): inclui informações importantes que você precisa saber para executar com êxito chamadas para a API do Registro de Esquema. Isso inclui o `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho Aceitar e seus valores possíveis).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catálogo é o sistema de registro para localização e linhagem de dados no Experience Platform.
-- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): a API de assimilação em lote permite assimilar dados no Experience Platform como arquivos em lote.
-- [Sandboxes](../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): a API de assimilação em lote permite assimilar dados na Experience Platform como arquivos em lote.
+- [Sandboxes](../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../../landing/api-guide.md).
 
 ## Criar uma conexão de origem {#source}
 
@@ -93,10 +93,10 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `baseConnectionId` | A ID de conexão básica da sua fonte de armazenamento na nuvem. |
-| `data.format` | O formato dos dados que você deseja trazer para a Platform. Os valores com suporte são: `delimited`, `JSON` e `parquet`. |
+| `data.format` | O formato dos dados que você deseja trazer para o Experience Platform. Os valores com suporte são: `delimited`, `JSON` e `parquet`. |
 | `data.properties` | (Opcional) Um conjunto de propriedades que você pode aplicar aos seus dados ao criar uma conexão de origem. |
 | `data.properties.columnDelimiter` | (Opcional) Um delimitador de coluna de caractere único que você pode especificar ao coletar arquivos simples. Qualquer valor de caractere único é um delimitador de coluna permitido. Se não for fornecido, uma vírgula (`,`) será usada como valor padrão. **Observação**: a propriedade `columnDelimiter` só pode ser usada ao assimilar arquivos delimitados. |
-| `data.properties.encoding` | (Opcional) Uma propriedade que define o tipo de codificação a ser usado ao assimilar seus dados na Platform. Os tipos de codificação com suporte são: `UTF-8` e `ISO-8859-1`. **Observação**: o parâmetro `encoding` só está disponível ao assimilar arquivos CSV delimitados. Outros tipos de arquivos serão assimilados com a codificação padrão, `UTF-8`. |
+| `data.properties.encoding` | (Opcional) Uma propriedade que define o tipo de codificação a ser usado ao assimilar seus dados na Experience Platform. Os tipos de codificação com suporte são: `UTF-8` e `ISO-8859-1`. **Observação**: o parâmetro `encoding` só está disponível ao assimilar arquivos CSV delimitados. Outros tipos de arquivos serão assimilados com a codificação padrão, `UTF-8`. |
 | `data.properties.compressionType` | (Opcional) Uma propriedade que define o tipo de arquivo compactado para assimilação. Os tipos de arquivos compactados com suporte são: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` e `tar`. **Observação**: a propriedade `compressionType` só pode ser usada ao assimilar arquivos delimitados ou JSON. |
 | `params.path` | O caminho do arquivo de origem que você está acessando. Esse parâmetro aponta para um arquivo individual ou uma pasta inteira.  **Observação**: você pode usar um asterisco no lugar do nome do arquivo para especificar a assimilação de uma pasta inteira. Por exemplo: `/acme/summerCampaign/*.csv` assimilará toda a pasta `/acme/summerCampaign/`. |
 | `params.type` | O tipo do arquivo de dados de origem que você está assimilando. Use o tipo `file` para assimilar um arquivo individual e use o tipo `folder` para assimilar uma pasta inteira. |
@@ -115,7 +115,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ### Usar expressões regulares para selecionar um conjunto específico de arquivos para assimilação {#regex}
 
-Você pode usar expressões regulares para assimilar um conjunto específico de arquivos da origem para a Platform ao criar uma conexão de origem.
+Você pode usar expressões regulares para assimilar um conjunto específico de arquivos da origem para o Experience Platform ao criar uma conexão de origem.
 
 **Formato da API**
 
@@ -196,7 +196,7 @@ curl -X POST \
 
 ## Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
+Para que os dados de origem sejam usados no Experience Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados do Experience Platform no qual os dados de origem estão contidos.
 
 Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -204,7 +204,7 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ## Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../catalog/api/create-dataset.md).
 
@@ -348,7 +348,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ## Recuperar especificações de fluxo de dados {#specs}
 
-Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para a Platform. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados responsáveis pela coleta dos dados de armazenamento na nuvem.
+Um fluxo de dados é responsável por coletar dados de fontes e trazê-los para o Experience Platform. Para criar um fluxo de dados, primeiro obtenha as especificações do fluxo de dados responsáveis pela coleta dos dados de armazenamento na nuvem.
 
 **Formato da API**
 
@@ -374,7 +374,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dados responsáveis por trazer os dados de sua origem para a Platform. A resposta inclui a especificação de fluxo exclusiva `id` necessária para criar um novo fluxo de dados.
+Uma resposta bem-sucedida retorna os detalhes da especificação do fluxo de dados responsáveis por trazer os dados de sua origem para a Experience Platform. A resposta inclui a especificação de fluxo exclusiva `id` necessária para criar um novo fluxo de dados.
 
 ```json
 {
@@ -624,8 +624,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to Platform",
-        "description": "Cloud Storage flow to Platform",
+        "name": "Cloud Storage flow to Experience Platform",
+        "description": "Cloud Storage flow to Experience Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
@@ -680,7 +680,7 @@ Depois que o fluxo de dados for criado, você poderá monitorar os dados que est
 
 ## Próximas etapas
 
-Seguindo este tutorial, você criou um conector de origem para coletar dados do armazenamento na nuvem de forma programada. Os dados de entrada agora podem ser usados por serviços downstream da Platform, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Seguindo este tutorial, você criou um conector de origem para coletar dados do armazenamento na nuvem de forma programada. Os dados de entrada agora podem ser usados por serviços downstream do Experience Platform, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do Perfil do cliente em tempo real](../../../../profile/home.md)
 - [Visão geral do Espaço de trabalho de ciência de dados](../../../../data-science-workspace/home.md)

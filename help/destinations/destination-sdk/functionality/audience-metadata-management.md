@@ -1,17 +1,17 @@
 ---
-description: Use modelos de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo no destino de forma programática. O Adobe fornece um modelo extensível de metadados de público-alvo, que pode ser configurado com base nas especificações da API de marketing. Depois de definir, testar e enviar o modelo, ele será usado pelo Adobe para estruturar as chamadas de API para o seu destino.
+description: Use modelos de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo no destino de forma programática. O Adobe fornece um modelo de metadados de público-alvo extensível, que pode ser configurado com base nas especificações da API de marketing. Depois de definir, testar e enviar o modelo, ele será usado pelo Adobe para estruturar as chamadas de API para o seu destino.
 title: Gerenciamento de metadados de público
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 6c4a2f9f6b338ec03b99ee1d7e91f7d9c0347b08
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1308'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
 
 # Gerenciamento de metadados de público
 
-Use modelos de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo no destino de forma programática. O Adobe fornece um modelo extensível de metadados de público-alvo, que pode ser configurado com base nas especificações da API de marketing. Depois de definir, testar e enviar a configuração, ela será usada pelo Adobe para estruturar as chamadas de API para o seu destino.
+Use modelos de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo no destino de forma programática. O Adobe fornece um modelo de metadados de público-alvo extensível, que pode ser configurado com base nas especificações da API de marketing. Depois de definir, testar e enviar a configuração, ela será usada pelo Adobe para estruturar as chamadas de API para o seu destino.
 
 Você pode configurar a funcionalidade descrita neste documento usando o ponto de extremidade de API `/authoring/audience-templates`. Leia [criar um modelo de metadados](../metadata-api/create-audience-template.md) para obter uma lista completa de operações que você pode executar no ponto de extremidade.
 
@@ -23,27 +23,27 @@ Dependendo da configuração da API, pode ser ou não necessário usar o endpoin
 
 ## Casos de uso compatíveis com o gerenciamento de metadados de público-alvo {#use-cases}
 
-Com o suporte aos metadados de público no Destination SDK, ao configurar o destino do Experience Platform, você pode fornecer aos usuários da Platform uma das várias opções quando eles mapeiam e ativam públicos para o seu destino. Você pode controlar as opções disponíveis para o usuário por meio dos parâmetros na seção [Configuração de metadados de público-alvo](../functionality/destination-configuration/audience-metadata-configuration.md) da configuração de destino.
+Com o suporte aos metadados de público no Destination SDK, ao configurar o destino do Experience Platform, você pode fornecer aos usuários do Experience Platform uma das várias opções ao mapearem e ativarem públicos para o seu destino. Você pode controlar as opções disponíveis para o usuário por meio dos parâmetros na seção [Configuração de metadados de público-alvo](../functionality/destination-configuration/audience-metadata-configuration.md) da configuração de destino.
 
 ### Caso de uso 1 - Você tem uma API de terceiros e os usuários não precisam inserir IDs de mapeamento
 
-Se você tiver um terminal de API para criar/atualizar/excluir públicos ou públicos, poderá usar modelos de metadados de público para configurar o Destination SDK para corresponder às especificações do terminal de criação/atualização/exclusão de público. O Experience Platform pode criar/atualizar/excluir públicos de maneira programática e sincronizar metadados de volta ao Experience Platform.
+Se você tiver um endpoint de API para criar/atualizar/excluir públicos ou públicos, poderá usar modelos de metadados de público para configurar o Destination SDK de forma que corresponda às especificações do endpoint de criação/atualização/exclusão de público. O Experience Platform pode criar/atualizar/excluir públicos de maneira programática e sincronizar metadados com o Experience Platform.
 
 Ao ativar públicos-alvo para o seu destino na interface do usuário (UI) do Experience Platform, os usuários não precisam preencher manualmente um campo de ID de mapeamento de público-alvo no fluxo de trabalho de ativação.
 
 ### Caso de uso 2 - Os usuários precisam criar um público-alvo em seu destino primeiro e são solicitados a inserir manualmente a ID do mapeamento
 
-Se os públicos-alvo e outros metadados precisarem ser criados manualmente por parceiros ou usuários no destino, os usuários deverão preencher manualmente o campo de ID de mapeamento de público-alvo no fluxo de trabalho de ativação para sincronizar os metadados do público-alvo entre o destino e o Experience Platform.
+Se os públicos-alvo e outros metadados precisarem ser criados manualmente por parceiros ou usuários no destino, os usuários deverão preencher manualmente o campo de ID de mapeamento de público no fluxo de trabalho de ativação para sincronizar os metadados do público-alvo entre o destino e a Experience Platform.
 
 ![ID do mapeamento de entrada](../assets/functionality/input-mapping-id.png)
 
-### Caso de uso 3: seu destino aceita a ID de público-alvo do Experience Platform, os usuários não precisam inserir a ID de mapeamento manualmente
+### Caso de uso 3: seu destino aceita a ID de público-alvo da Experience Platform, os usuários não precisam inserir a ID de mapeamento manualmente
 
-Se o sistema de destino aceitar a ID de público-alvo do Experience Platform, você poderá configurá-la no modelo de metadados de público-alvo. Os usuários não precisam preencher uma ID de mapeamento de público-alvo ao ativar um segmento.
+Se o sistema de destino aceitar a ID de público-alvo da Experience Platform, você poderá configurá-la no modelo de metadados de público-alvo. Os usuários não precisam preencher uma ID de mapeamento de público-alvo ao ativar um segmento.
 
 ## Modelo de público-alvo genérico e extensível {#generic-and-extensible}
 
-Para dar suporte aos casos de uso listados acima, o Adobe fornece um modelo genérico que pode ser personalizado para ajustar-se às especificações da API.
+Para dar suporte aos casos de uso listados acima, a Adobe fornece um modelo genérico que pode ser personalizado para se ajustar às especificações da API.
 
 Você pode usar o modelo genérico para [criar um novo modelo de público-alvo](../metadata-api/create-audience-template.md) se sua API permitir:
 
@@ -546,17 +546,17 @@ Para transmitir informações como IDs de público-alvo, tokens de acesso, mensa
 
 | Macro | Descrição |
 |--- |--- |
-| `{{segment.alias}}` | Permite acessar o alias de público-alvo no Experience Platform. |
-| `{{segment.name}}` | Permite acessar o nome do público-alvo no Experience Platform. |
+| `{{segment.alias}}` | Permite acessar o alias do público-alvo no Experience Platform. |
+| `{{segment.name}}` | Permite acessar o nome do público no Experience Platform. |
 | `{{segment.id}}` | Permite acessar a ID de público-alvo no Experience Platform. |
 | `{{customerData.accountId}}` | Permite acessar o campo de ID da conta que você configurou na configuração de destino. |
 | `{{oauth2ServiceAccessToken}}` | Permite gerar dinamicamente um token de acesso com base na configuração do OAuth 2. |
-| `{{authData.accessToken}}` | Permite passar o token de acesso para o endpoint da API. Use `{{authData.accessToken}}` se o Experience Platform precisar usar tokens sem expiração para se conectar ao seu destino, caso contrário, use `{{oauth2ServiceAccessToken}}` para gerar um token de acesso. |
+| `{{authData.accessToken}}` | Permite passar o token de acesso para o endpoint da API. Use `{{authData.accessToken}}` se a Experience Platform precisar usar tokens sem expiração para se conectar ao seu destino, caso contrário, use `{{oauth2ServiceAccessToken}}` para gerar um token de acesso. |
 | `{{body.segments[0].segment.id}}` | Retorna o identificador exclusivo do público criado, como o valor da chave `externalAudienceId`. |
 | `{{error.message}}` | Retorna uma mensagem de erro que será exibida aos usuários na interface do usuário do Experience Platform. |
 | `{{{segmentEnrichmentAttributes}}}` | Permite acessar todos os atributos de enriquecimento para um público-alvo específico.  Esta macro tem suporte nos eventos `create`, `update` e `delete`. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |
 | `{{destination.name}}` | Retorna o nome do seu destino. |
-| `{{destination.sandboxName}}` | Retorna o nome da sandbox de Experience Platform em que o destino está configurado. |
+| `{{destination.sandboxName}}` | Retorna o nome da sandbox da Experience Platform em que o destino está configurado. |
 | `{{destination.id}}` | Retorna a ID da configuração de destino. |
 | `{{destination.imsOrgId}}` | Retorna a ID de organização IMS em que o destino está configurado. |
 | `{{destination.enrichmentAttributes}}` | Permite acessar todos os atributos de enriquecimento para todos os públicos mapeados para um destino. Esta macro tem suporte nos eventos `createDestination`, `updateDestination` e `deleteDestination`. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |

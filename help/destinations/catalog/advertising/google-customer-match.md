@@ -3,7 +3,7 @@ keywords: correspondência do cliente do google;correspondência do cliente do G
 title: Conexão de Correspondência de cliente do Google
 description: O Google Customer Match permite usar seus dados online e offline para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping e Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 38c1020a7e7ff556ed16963239a30bf906ff79e7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '2046'
 ht-degree: 1%
@@ -60,8 +60,8 @@ Alguns destinos no Experience Platform têm determinadas regras e obrigações p
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Selecione essa identidade de destino quando a identidade de origem for um namespace GAID. |
 | IDFA | Apple ID para anunciantes | Selecione essa identidade de destino quando sua identidade de origem for um namespace IDFA. |
-| phone_sha256_e.164 | Números de telefone no formato E164, com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação. |
-| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação. |
+| phone_sha256_e.164 | Números de telefone no formato E164, com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
+| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
 | user_id | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
 
 {style="table-layout:auto"}
@@ -110,8 +110,8 @@ Dependendo do tipo de IDs que você assimila no Adobe Experience Platform, é ne
 
 Há dois métodos para ativar números de telefone em [!DNL Google Customer Match]:
 
-* **Ingestão de números de telefone brutos**: você pode assimilar números de telefone brutos no formato [!DNL E.164] no [!DNL Platform], que são automaticamente transformados em hash após a ativação. Se você escolher essa opção, sempre assimile seus números de telefone brutos no namespace `Phone_E.164`.
-* **Números de telefone com hash de assimilação**: você pode colocar seus números de telefone em hash antes de assimilar em [!DNL Platform]. Se você escolher essa opção, sempre assimile seus números de telefone com hash no namespace `PHONE_SHA256_E.164`.
+* **Ingestão de números de telefone brutos**: você pode assimilar números de telefone brutos no formato [!DNL E.164] no [!DNL Experience Platform], que são automaticamente transformados em hash após a ativação. Se você escolher essa opção, sempre assimile seus números de telefone brutos no namespace `Phone_E.164`.
+* **Números de telefone com hash de assimilação**: você pode colocar seus números de telefone em hash antes de assimilar em [!DNL Experience Platform]. Se você escolher essa opção, sempre assimile seus números de telefone com hash no namespace `PHONE_SHA256_E.164`.
 
 >[!NOTE]
 >
@@ -119,7 +119,7 @@ Há dois métodos para ativar números de telefone em [!DNL Google Customer Matc
 
 ### Requisitos de hash de email {#hashing-requirements}
 
-Você pode aplicar hash a endereços de email antes de assimilá-los no Adobe Experience Platform, ou usar endereços de email em limpar no Experience Platform, e aplicar hash a [!DNL Platform] neles na ativação.
+Você pode aplicar hash a endereços de email antes de assimilá-los no Adobe Experience Platform, ou usar endereços de email em limpar no Experience Platform, e aplicar hash a [!DNL Experience Platform] neles na ativação.
 
 Para obter mais informações sobre os requisitos de hash do Google e outras restrições na ativação, consulte as seguintes seções na documentação do Google:
 
@@ -137,9 +137,9 @@ Se você optar por criar o hash dos endereços de email, certifique-se de cumpri
 
 Antes de poder usar o namespace `User_ID` para enviar dados para o Google, sincronize seus próprios identificadores usando o [!DNL gTag]. Consulte a [documentação oficial da Google](https://support.google.com/google-ads/answer/9199250) para obter informações detalhadas.
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
-Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
 <!-- ## Configure destination - video walkthrough {#video}
@@ -202,9 +202,9 @@ Este é um exemplo de mapeamento de identidade correto ao ativar dados de públi
 Selecionar campos de origem:
 
 * Selecione o namespace `Email` como identidade de origem se os endereços de email que você está usando não tiverem hash.
-* Selecione o namespace `Email_LC_SHA256` como identidade de origem se você tiver hash dos endereços de email do cliente na assimilação de dados no [!DNL Platform], de acordo com os [!DNL Google Customer Match] [requisitos de hash de email](#hashing-requirements).
-* Selecione o namespace `PHONE_E.164` como identidade de origem se seus dados consistirem em números de telefone sem hash. [!DNL Platform] aplicará hash aos números de telefone para atender aos requisitos de [!DNL Google Customer Match].
-* Selecione o namespace `Phone_SHA256_E.164` como identidade de origem se você tiver hash de números de telefone na assimilação de dados em [!DNL Platform], de acordo com [!DNL Facebook] [requisitos de hash de número de telefone](#phone-number-hashing-requirements).
+* Selecione o namespace `Email_LC_SHA256` como identidade de origem se você tiver hash dos endereços de email do cliente na assimilação de dados no [!DNL Experience Platform], de acordo com os [!DNL Google Customer Match] [requisitos de hash de email](#hashing-requirements).
+* Selecione o namespace `PHONE_E.164` como identidade de origem se seus dados consistirem em números de telefone sem hash. [!DNL Experience Platform] aplicará hash aos números de telefone para atender aos requisitos de [!DNL Google Customer Match].
+* Selecione o namespace `Phone_SHA256_E.164` como identidade de origem se você tiver hash de números de telefone na assimilação de dados em [!DNL Experience Platform], de acordo com [!DNL Facebook] [requisitos de hash de número de telefone](#phone-number-hashing-requirements).
 * Selecione o namespace `IDFA` como identidade de origem se seus dados consistirem de [!DNL Apple] IDs de dispositivo.
 * Selecione o namespace `GAID` como identidade de origem se seus dados consistirem de [!DNL Android] IDs de dispositivo.
 * Selecione o namespace `Custom` como identidade de origem se os dados consistirem de outro tipo de identificadores.
@@ -218,9 +218,9 @@ Selecionar campos de destino:
 
 ![Mapeamento de identidade entre campos de origem e destino mostrado na etapa Mapeamento do fluxo de trabalho de ativação.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
 
-O hash automático de dados de namespaces sem hash é criado por [!DNL Platform] após a ativação.
+O hash automático de dados de namespaces sem hash é criado por [!DNL Experience Platform] após a ativação.
 
-Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação.
+Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
 
 ![Aplicar controle de transformação realçado na etapa Mapeamento do fluxo de trabalho de ativação.](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 

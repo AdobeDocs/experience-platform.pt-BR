@@ -2,9 +2,9 @@
 title: Autenticar e acessar a API do Reator
 description: Saiba como começar a usar a API do Reactor, incluindo etapas para gerar as credenciais de acesso necessárias.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '912'
 ht-degree: 47%
 
 ---
@@ -43,15 +43,15 @@ Depois de criar um projeto, selecione **Adicionar API** na tela **Visão geral d
 
 ![](../images/api/getting-started/add-api-button.png)
 
-A tela **Adicionar uma API** é exibida. Selecione **APIs de Experience Platform Launch** na lista de APIs disponíveis antes de selecionar **Avançar**.
+A tela **Adicionar uma API** é exibida. Selecione **API do Experience Platform Launch** na lista de APIs disponíveis antes de selecionar **Avançar**.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-Em seguida, selecione o tipo de autenticação para gerar tokens de acesso e acessar a API Experience Platform.
+Em seguida, selecione o tipo de autenticação para gerar tokens de acesso e acessar a API do Experience Platform.
 
 >[!IMPORTANT]
 >
->Selecione o método **[!UICONTROL OAuth Server-to-Server]**, pois esse será o único método com suporte no futuro. O método **[!UICONTROL Conta de Serviço (JWT)]** está obsoleto. Embora as integrações que usam o método de autenticação JWT continuem a funcionar até 1º de janeiro de 2025, a Adobe recomenda que você migre as integrações existentes para o novo método servidor para servidor OAuth antes dessa data. Obtenha mais informações na seção [!BADGE Obsoleto]{type=negative}[Gere um JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) no tutorial de autenticação de API da plataforma.
+>Selecione o método **[!UICONTROL OAuth Server-to-Server]**, pois esse será o único método com suporte no futuro. O método **[!UICONTROL Conta de Serviço (JWT)]** está obsoleto. Embora as integrações que usam o método de autenticação JWT continuem a funcionar até 1º de janeiro de 2025, a Adobe recomenda que você migre as integrações existentes para o novo método servidor para servidor OAuth antes dessa data. Obtenha mais informações na seção [!BADGE Obsoleto]{type=negative}[Gere um JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) no tutorial de autenticação da API do Experience Platform.
 
 Clique em **Avançar** para continuar.
 
@@ -69,7 +69,7 @@ Selecione os perfis de produto desejados na lista e selecione **Salvar API confi
 
 ### Coletar credenciais {#gather-credentials}
 
-Depois que a API for adicionada ao projeto, a página **[!UICONTROL APIs de Experience Platform]** do projeto exibirá as seguintes credenciais, necessárias em todas as chamadas para APIs de Experience Platform:
+Depois que a API for adicionada ao projeto, a página **[!UICONTROL API Experience Platform]** do projeto exibirá as seguintes credenciais, necessárias em todas as chamadas para as APIs Experience Platform:
 
 * `{API_KEY}` ([!UICONTROL ID do Cliente])
 * `{ORG_ID}` ([!UICONTROL ID da Organização])
@@ -78,7 +78,7 @@ Depois que a API for adicionada ao projeto, a página **[!UICONTROL APIs de Expe
 
 ### Gerar um token de acesso {#generate-access-token}
 
-A próxima etapa é gerar uma credencial `{ACCESS_TOKEN}` para uso em chamadas de API da plataforma. Diferentemente dos valores de `{API_KEY}` e `{ORG_ID}`, um novo token deve ser gerado a cada 24 horas para continuar usando as APIs da plataforma.
+A próxima etapa é gerar uma credencial `{ACCESS_TOKEN}` para uso em chamadas de API do Experience Platform. Diferentemente dos valores de `{API_KEY}` e `{ORG_ID}`, um novo token deve ser gerado a cada 24 horas para continuar usando as APIs do Experience Platform.
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ Para gerar manualmente um novo `{ACCESS_TOKEN}`, navegue até **[!UICONTROL Cred
 
 #### Geração de token automatizada {#auto-token}
 
-Você também pode usar um ambiente e uma coleção do Postman para gerar tokens de acesso. Para obter mais informações, leia a seção sobre [como usar o Postman para autenticar e testar chamadas de API](/help/landing/api-authentication.md#use-postman) no guia de autenticação de API Experience Platform.
+Você também pode usar um ambiente e uma coleção do Postman para gerar tokens de acesso. Para obter mais informações, leia a seção sobre [como usar o Postman para autenticar e testar chamadas de API](/help/landing/api-authentication.md#use-postman) no guia de autenticação da API do Experience Platform.
 
 ## Credenciais da API de teste {#test-api-credentials}
 
@@ -115,7 +115,7 @@ Depois de confirmar que suas credenciais de acesso estão funcionando, continue 
 
 ## Leitura de chamadas de API de amostra {#read-sample-api-calls}
 
-Cada manual de endpoint fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução para APIs da plataforma.
+Cada manual de endpoint fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução para APIs do Experience Platform.
 
 ## Próximas etapas {#next-steps}
 

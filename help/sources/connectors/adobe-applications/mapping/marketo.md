@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Mapeamento de campos para o Marketo Engage Source
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e os campos XDM correspondentes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '891'
 ht-degree: 2%
 
 ---
@@ -21,13 +21,13 @@ As tabelas abaixo contêm os mapeamentos entre os campos nos nove conjuntos de d
 
 ## Atividades {#activities}
 
-A origem [!DNL Marketo] agora dá suporte a atividades padrão adicionais. Para usar atividades padrão, você deve atualizar seu esquema usando o [utilitário de geração automática de esquema](../marketo/marketo-namespaces.md), pois se você criar um novo fluxo de dados `activities` sem atualizar seu esquema, os modelos de mapeamento falharão, pois os novos campos de destino não estarão presentes em seu esquema. Se você optar por não atualizar o esquema, ainda será possível criar um novo fluxo de dados e descartar os erros. No entanto, campos novos ou atualizados não serão assimilados na Platform.
+A origem [!DNL Marketo] agora dá suporte a atividades padrão adicionais. Para usar atividades padrão, você deve atualizar seu esquema usando o [utilitário de geração automática de esquema](../marketo/marketo-namespaces.md), pois se você criar um novo fluxo de dados `activities` sem atualizar seu esquema, os modelos de mapeamento falharão, pois os novos campos de destino não estarão presentes em seu esquema. Se você optar por não atualizar o esquema, ainda será possível criar um novo fluxo de dados e descartar os erros. No entanto, campos novos ou atualizados não serão assimilados na Experience Platform.
 
 Leia a documentação da [classe do Evento de experiência XDM](../../../../xdm/classes/experienceevent.md) para obter mais informações sobre a Classe XDM e o(s) Grupo(s) de Campos XDM.
 
 >[!NOTE]
 >
->O campo de origem `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` é um campo calculado que deve ser adicionado usando a opção **[!UICONTROL Adicionar campo calculado]** na interface de usuário do Experience Platform. Leia o tutorial em [adição de campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obter mais informações.
+>O campo de origem `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` é um campo calculado que deve ser adicionado usando a opção **[!UICONTROL Adicionar campo calculado]** na interface do Experience Platform. Leia o tutorial em [adição de campos calculados](../../../../data-prep/ui/mapping.md#calculated-fields) para obter mais informações.
 
 | Conjunto de dados do Source | Campo de destino XDM | Notas |
 | -------------- | ---------------- | ----- |
@@ -415,4 +415,4 @@ Leia a [Visão geral do Perfil Individual XDM](../../../../xdm/classes/individua
 
 ## Próximas etapas
 
-Ao ler este documento, você obtém informações sobre a relação de mapeamento entre seus conjuntos de dados do [!DNL Marketo] e seus campos XDM correspondentes. Consulte o tutorial sobre [criação de uma [!DNL Marketo] conexão de origem](../../../tutorials/ui/create/adobe-applications/marketo.md) para concluir seu fluxo de dados [!DNL Marketo].
+Ao ler este documento, você obtém informações do insight sobre a relação de mapeamento entre seus conjuntos de dados do [!DNL Marketo] e seus campos XDM correspondentes. Consulte o tutorial sobre [criação de uma [!DNL Marketo] conexão de origem](../../../tutorials/ui/create/adobe-applications/marketo.md) para concluir seu fluxo de dados [!DNL Marketo].

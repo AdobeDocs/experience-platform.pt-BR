@@ -2,10 +2,10 @@
 title: Notas da versão de fevereiro de 2023 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2023 da Adobe Experience Platform.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1255'
-ht-degree: 97%
+source-wordcount: '1259'
+ht-degree: 91%
 
 ---
 
@@ -92,7 +92,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o XDM na Platform, leia a [Visão geral do sistema XDM](../../xdm/home.md).
+Para obter mais informações sobre o XDM no Experience Platform, leia a [Visão geral do sistema XDM](../../xdm/home.md).&#x200B;
 
 ## Query Service {#query-service}
 
@@ -128,7 +128,7 @@ Para saber mais sobre a Real-Time CDP B2B Edition, leia a [Visão geral da Real-
 
 ## Origens {#sources}
 
-A Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
@@ -136,8 +136,8 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| Designar acesso em nível de assinatura com [!DNL Google PubSub] | Agora é possível definir o acesso a uma assinatura de tópico específica ao usar a fonte [!DNL Google PubSub], fornecendo a ID da assinatura ao autenticar. Para obter mais informações, leia o tutorial de autenticação do [!DNL Google PubSub] [usando a API do Serviço de fluxo](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) ou [Interface da Platform](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Assimilar dados de atividade personalizados do [!DNL Marketo] | Agora você pode trazer os dados de atividades personalizadas da sua instância do [!DNL Marketo] para a Experience Platform. Para assimilar dados de atividades personalizadas, será necessário configurar grupos de campos de atividades personalizadas no esquema Atividades B2B e criar um fluxo de dados usando o conjunto de dados de atividades. Quando o fluxo de dados for concluído, o conjunto de dados assimilado conterá tanto as atividades padrão quanto as personalizadas da instância do [!DNL Marketo]. Você poderá então usar o [Query Service](../../query-service/home.md) para acessar seus registros de atividades personalizadas na Platform. Para obter mais informações, leia o manual sobre a [criação de um fluxo de dados para dados de atividades personalizadas](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Designar acesso em nível de assinatura com [!DNL Google PubSub] | Agora é possível definir o acesso a uma assinatura de tópico específica ao usar a fonte [!DNL Google PubSub], fornecendo a ID da assinatura ao autenticar. Para obter mais informações, leia o [!DNL Google PubSub] tutorial de autenticação [usando a API de Serviço de Fluxo](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) ou a [Interface do usuário do Experience Platform](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Assimilar dados de atividade personalizados do [!DNL Marketo] | Agora você pode trazer os dados de atividades personalizadas da sua instância do [!DNL Marketo] para a Experience Platform. Para assimilar dados de atividades personalizadas, será necessário configurar grupos de campos de atividades personalizadas no esquema Atividades B2B e criar um fluxo de dados usando o conjunto de dados de atividades. Quando o fluxo de dados for concluído, o conjunto de dados assimilado conterá tanto as atividades padrão quanto as personalizadas da instância do [!DNL Marketo]. Você pode usar o [Serviço de consulta](../../query-service/home.md) para acessar seus registros de atividades personalizados no Experience Platform. Para obter mais informações, leia o manual sobre a [criação de um fluxo de dados para dados de atividades personalizadas](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | Excluir contas não reivindicadas do [!DNL Marketo] | Agora é possível configurar se deseja excluir ou incluir contas não reivindicadas na assimilação ao criar um fluxo de dados para dados de empresas. Para obter mais informações, leia o manual sobre a [criação de uma conexão de origem e fluxo de dados para  [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style="table-layout:auto"}

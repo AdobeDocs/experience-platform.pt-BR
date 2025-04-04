@@ -4,9 +4,9 @@ description: Use a assimilação de dados da Acxiom para assimilar dados da Acxi
 last-substantial-update: 2024-03-19T00:00:00Z
 badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1839'
 ht-degree: 3%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 3%
 >
 >A origem [!DNL Acxiom Data Ingestion] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
 
-Use a fonte [!DNL Acxiom Data Ingestion] para assimilar dados [!DNL Acxiom] na Real-time Customer Data Platform e enriquecer perfis próprios. Em seguida, você pode usar seus perfis primários enriquecidos com [!DNL Acxiom] para melhorar os públicos e ativar em canais de marketing.
+Use a fonte [!DNL Acxiom Data Ingestion] para assimilar dados [!DNL Acxiom] na Real-Time Customer Data Platform e enriquecer perfis próprios. Em seguida, você pode usar seus perfis primários enriquecidos com [!DNL Acxiom] para melhorar os públicos e ativar em canais de marketing.
 
 Leia este tutorial para saber como criar uma conexão de origem e um fluxo de dados do [!DNL Acxiom Data Ingestion] usando a interface do usuário do Adobe Experience Platform. A origem [!DNL Acxiom Data Ingestion] é usada para recuperar e mapear a resposta do serviço de aprimoramento [!DNL Acxiom] usando o Amazon S3 como ponto de lançamento.
 
 ## Pré-requisitos {#prerequisites}
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -32,7 +32,7 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 
 ### Coletar credenciais necessárias
 
-Para acessar seu bucket no Experience Platform, é necessário fornecer valores válidos para as seguintes credenciais:
+Para acessar seu bucket no Experience Platform, você precisa fornecer valores válidos para as seguintes credenciais:
 
 | Credencial | Descrição |
 | --- | --- |
@@ -43,11 +43,11 @@ Para acessar seu bucket no Experience Platform, é necessário fornecer valores 
 
 >[!IMPORTANT]
 >
->Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Acxiom] ao Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../../../access-control/ui/overview.md).
+>Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Acxiom] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../../../access-control/ui/overview.md).
 
 ## Conectar sua conta do [!DNL Acxiom]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -105,7 +105,7 @@ Em seguida, você deve fornecer informações sobre o conjunto de dados e o flux
 
 >[!TAB Usar um novo conjunto de dados]
 
-Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os dados assimilados com sucesso no Experience Platform são mantidos no data lake como conjuntos de dados. Para usar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]**.
+Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os dados assimilados com sucesso na Experience Platform são mantidos no data lake como conjuntos de dados. Para usar um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]**.
 
 ![A nova interface do conjunto de dados.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-new-dataset.png)
 
@@ -130,7 +130,7 @@ Você pode selecionar **[!UICONTROL Pesquisa avançada]** para exibir uma janela
 Se o seu conjunto de dados estiver habilitado para o Perfil de cliente em tempo real, durante essa etapa você poderá alternar para **[!UICONTROL o conjunto de dados do perfil]** para habilitar seus dados para assimilação de perfil. Você também pode usar esta etapa para habilitar o **[!UICONTROL Diagnóstico de erro]** e a **[!UICONTROL Assimilação parcial]**.
 
 * **[!UICONTROL Diagnóstico de erro]**: selecione **[!UICONTROL Diagnóstico de erro]** para instruir a origem a produzir o diagnóstico de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
-* **[!UICONTROL Assimilação parcial]**: a assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos no Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
+* **[!UICONTROL Assimilação parcial]**: a assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos na Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
 
 +++
 
@@ -144,11 +144,11 @@ Depois que o conjunto de dados é configurado, você deve fornecer detalhes sobr
 | --- | --- |
 | Nome do fluxo de dados | O nome do fluxo de dados.  Por padrão, esse campo usará o nome do arquivo que está sendo importado. |
 | Descrição | (Opcional) Uma breve descrição do fluxo de dados. |
-| Alertas | O Experience Platform pode produzir alertas baseados em eventos, nos quais os usuários podem assinar. Todas essas opções fazem parte de um fluxo de dados em execução para acioná-los.  Para obter mais informações, leia a [visão geral dos alertas](../../alerts.md) <ul><li>**Início da Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação quando a execução do fluxo de dados começar.</li><li>**Êxito na Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação se o fluxo de dados terminar sem erros.</li><li>**Falha na execução do fluxo de dados de fontes**: selecione este alerta para receber uma notificação se a execução do fluxo de dados terminar com erros.</li></ul> |
+| Alertas | O Experience Platform pode produzir alertas baseados em eventos, nos quais os usuários podem assinar. Todas essas opções dependem de um fluxo de dados em execução para acioná-los.  Para obter mais informações, leia a [visão geral dos alertas](../../alerts.md) <ul><li>**Início da Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação quando a execução do fluxo de dados começar.</li><li>**Êxito na Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação se o fluxo de dados terminar sem erros.</li><li>**Falha na execução do fluxo de dados de fontes**: selecione este alerta para receber uma notificação se a execução do fluxo de dados terminar com erros.</li></ul> |
 
 ## Mapeamento
 
-Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar dados no Experience Platform.  Para obter mais informações, leia o [guia de mapeamento na interface](../../../../../data-prep/ui/mapping.md)
+Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar dados na Experience Platform.  Para obter mais informações, leia o [guia de mapeamento na interface](../../../../../data-prep/ui/mapping.md)
 
 ![A interface de mapeamento.](../../../../images/tutorials/create/acxiom-data-enhancement-import/image-source-mapping.png)
 
@@ -178,7 +178,7 @@ Depois de revisar seu fluxo de dados, clique em Concluir e aguarde algum tempo p
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados em lote da origem [!DNL Acxiom] para o Experience Platform. Para obter recursos adicionais, consulte a documentação descrita abaixo.
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados em lote da sua origem [!DNL Acxiom] para a Experience Platform. Para obter recursos adicionais, consulte a documentação descrita abaixo.
 
 ### Monitorar seu fluxo de dados
 

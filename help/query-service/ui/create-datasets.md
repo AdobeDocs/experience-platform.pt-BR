@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;início;tópicos populares;serviço de consulta;serviço de consulta;gerar conjuntos de dados;gerar conjunto de dados;criar conjunto de dados;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;serviço de consulta;gerar conjuntos de dados;gerar conjunto de dados;criar conjunto de dados;
 solution: Experience Platform
 title: Gerar conjuntos de dados de saída a partir dos resultados da consulta
 type: Tutorial
 description: O Serviço de consulta da Adobe Experience Platform permite a criação de conjuntos de dados pela interface do usuário. Depois que um conjunto de dados é criado, ele pode ser acessado como qualquer outro conjunto de dados no Data Lake e usado para uma variedade de casos de uso.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Para criar conjuntos de dados na interface do usuário (UI) do Adobe Experience 
 
 1. Crie uma consulta usando um cliente conectado e valide a saída. Para saber como gravar consultas usando o [!DNL Query Editor], leia o [guia da interface do usuário do [!DNL Query Editor] sobre como gravar consultas](./user-guide.md#writing-queries).
 
-2. Na interface da Platform, navegue até **[!UICONTROL Consultas]**, seguido da guia **[!UICONTROL Modelos]** e selecione a consulta criada. Para obter mais detalhes sobre como visualizar consultas que foram criadas e salvas para sua organização na interface do usuário da Platform, leia a [[!DNL Query Service] visão geral](./overview.md#browse).
+2. Na interface do usuário do Experience Platform, navegue até **[!UICONTROL Consultas]**, seguido da guia **[!UICONTROL Modelos]** e selecione a consulta criada. Para obter mais detalhes sobre como exibir consultas criadas e salvas para sua organização na interface do usuário do Experience Platform, leia a [[!DNL Query Service] visão geral](./overview.md#browse).
 
 3. No painel Detalhes da consulta, selecione **[!UICONTROL Executar como CTAS]**.
 
@@ -34,7 +34,7 @@ Para criar conjuntos de dados na interface do usuário (UI) do Adobe Experience 
 
    ![A caixa de diálogo Conjunto de dados de saída com os detalhes do conjunto de dados e [!UICONTROL Executar como CTAS] destacados](../images/ui/create-datasets/run-query.png)
 
-6. Depois que a execução da consulta for concluída, navegue até **[!UICONTROL Conjuntos de dados]** para exibir o conjunto de dados criado. Para saber mais sobre como executar ações comuns ao trabalhar com conjuntos de dados na interface da Platform, consulte o [guia da interface do usuário de conjuntos de dados](../../catalog/datasets/user-guide.md).
+6. Depois que a execução da consulta for concluída, navegue até **[!UICONTROL Conjuntos de dados]** para exibir o conjunto de dados criado. Para saber mais sobre como executar ações comuns ao trabalhar com conjuntos de dados na interface do Experience Platform, consulte o [guia da interface do usuário de conjuntos de dados](../../catalog/datasets/user-guide.md).
 
 Depois que um conjunto de dados é criado, ele pode ser acessado como qualquer outro conjunto de dados no [!DNL Data Lake] e usado para uma variedade de casos de uso.
 
@@ -52,4 +52,4 @@ Os conjuntos de dados criados por meio dessa funcionalidade são gerados com um 
 
 ## Próximas etapas
 
-Depois de ler este documento, você deverá entender como usar o [!DNL Query Service] para gerar conjuntos de dados da interface do usuário da Platform. Para obter mais informações sobre como acessar, gravar e executar consultas na interface do Platform, consulte a [[!DNL Query Service] visão geral da interface do usuário](./overview.md).
+Depois de ler este documento, você deverá entender como usar o [!DNL Query Service] para gerar conjuntos de dados pela interface do usuário do Experience Platform. Para obter mais informações sobre como acessar, gravar e executar consultas na interface do usuário do Experience Platform, consulte a [[!DNL Query Service] visão geral da interface](./overview.md).

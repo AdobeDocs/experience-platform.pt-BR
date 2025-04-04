@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;perfil unificado;Perfil unificado;perfil;gráficos XDM
-title: Recursos gerais de acessibilidade na Platform
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;perfil unificado;Perfil unificado;unificado;Perfil;rtcp;gráficos XDM
+title: Recursos gerais de acessibilidade no Experience Platform
 type: Documentation
 description: Saiba mais sobre os recursos gerais de acessibilidade compatíveis com o Adobe Experience Platform, incluindo navegação pelo teclado, paletas e contraste de cores e suporte à tecnologia assistiva.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
 
 # Recursos de acessibilidade no Experience Platform
 
-A Adobe Experience Platform tem o compromisso de fornecer recursos acessíveis e inclusivos para todos os indivíduos, incluindo usuários que trabalham com dispositivos de assistência, como software de reconhecimento de voz e leitores de tela. Este documento descreve os recursos gerais de acessibilidade compatíveis com a Platform, incluindo navegação pelo teclado, estrutura semântica, contraste suficiente entre elementos de primeiro plano e elementos de plano de fundo e suporte para tecnologias assistivas.
+A Adobe Experience Platform tem o compromisso de fornecer recursos acessíveis e inclusivos para todos os indivíduos, incluindo usuários que trabalham com dispositivos de assistência, como software de reconhecimento de voz e leitores de tela. Este documento descreve os recursos gerais de acessibilidade compatíveis com o Experience Platform, incluindo navegação pelo teclado, estrutura semântica, contraste suficiente entre elementos de primeiro plano e elementos de plano de fundo, e suporte para tecnologias assistivas.
 
 ## Tecnologias assistivas
 
@@ -29,7 +29,7 @@ Os seguintes elementos de navegação facilitam a acessibilidade:
 * Shift + Tab move-se para trás pela ordem de tabulação.
 * As teclas Return (Enter) e Barra de espaço ativam os itens selecionados.
 * A tecla Escape (ESC) atua como um botão Cancelar para fechar uma caixa de diálogo quando presente.
-* Experience Platform exibe uma borda azul ao redor de um elemento selecionado para exibir uma indicação clara de qual elemento da interface do usuário tem foco no momento.
+* O Experience Platform exibe uma borda azul ao redor de um elemento selecionado para exibir uma indicação clara de qual elemento da interface do usuário tem foco no momento.
 
 ![Uma borda azul que aparece ao redor de um elemento selecionado para indicar que o foco está aplicado.](images/profile-overview-tab.png)
 

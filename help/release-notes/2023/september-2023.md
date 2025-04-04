@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2023
 description: As notas de versão de setembro de 2023 da Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2265'
+source-wordcount: '2269'
 ht-degree: 24%
 
 ---
@@ -37,7 +37,7 @@ Os atributos computados permitem resumir facilmente os dados do evento em atribu
 
 ## Alertas {#alerts}
 
-O Experience Platform permite assinar alertas baseados em eventos para várias atividades da Platform. Você pode assinar diferentes regras de alerta por meio da guia [!UICONTROL Alertas] na interface do usuário da Platform e pode optar por receber mensagens de alerta na própria interface ou por meio de notificações por email.
+O Experience Platform permite assinar alertas baseados em eventos para várias atividades do Experience Platform. Você pode assinar diferentes regras de alerta por meio da guia [!UICONTROL Alertas] na interface do usuário do Experience Platform e pode optar por receber mensagens de alerta na própria interface ou por meio de notificações por email.
 
 **Recursos novos ou atualizados**
 
@@ -103,7 +103,7 @@ O Experience Platform fornece um conjunto de recursos de higiene de dados que pe
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre os recursos de higiene de dados da Platform, consulte a [visão geral da higiene de dados](../../hygiene/home.md).
+Para obter mais informações sobre os recursos de higiene de dados da Experience Platform, consulte a [visão geral sobre higiene de dados](../../hygiene/home.md).
 
 ## Destinos {#destinations}
 
@@ -180,7 +180,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema de XDM](../../xdm/home.md)
+Para obter mais informações sobre o XDM no Experience Platform, consulte a [Visão geral do sistema XDM](../../xdm/home.md)
 
 ## Serviço de identidade {#identity-service}
 
@@ -214,7 +214,7 @@ Para obter mais informações sobre o Query Service, acesse a [Visão geral do Q
 
 ## Serviço de segmentação {#segmentation}
 
-O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
+O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Experience Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
 
 **Recursos novos ou atualizados**
 

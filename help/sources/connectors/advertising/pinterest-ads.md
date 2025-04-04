@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;Pinterest Ads;
-title: Visão geral do pinterest Ads Source
+keywords: Experience Platform;home;popular tópicos;Pinterest Ads;
+title: Visão geral do Pinterest Ads Source
 description: Saiba como conectar o Pinterest Ads ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '946'
 ht-degree: 1%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 1%
 >
 >A origem [!DNL Pinterest Ads] está na versão beta. Leia a [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
 O Experience Platform fornece suporte para assimilação de dados de um sistema de publicidade de terceiros. O suporte para provedores de publicidade inclui [!DNL Pinterest Ads].
 
-[[!DNL Pinterest]](https://www.pinterest.com) é um mecanismo de descoberta visual para encontrar receitas, decoração doméstica, inspiração de estilo e outras ideias na web. Eles são apresentados em pequena escala usando imagens, GIF animados e vídeos no formato pinboard. [[!DNL Pinterest Ads]](https://ads.pinterest.com/) permite que você expanda sua empresa e alcance 400 milhões de pessoas usando o [!DNL Pinterest].
+[[!DNL Pinterest]](https://www.pinterest.com) é um mecanismo de descoberta visual para encontrar receitas, decoração doméstica, inspiração de estilo e outras ideias na web. Eles são apresentados em pequena escala usando imagens, GIFs animados e vídeos no formato pinboard. [[!DNL Pinterest Ads]](https://ads.pinterest.com/) permite que você expanda sua empresa e alcance 400 milhões de pessoas usando o [!DNL Pinterest].
 
 Com o [!DNL Pinterest Ads], você pode alcançar os usuários através de anúncios direcionados para descobrir e comprar seus produtos. Pins de [!DNL Pinterest Ads] são patrocinados para receber exposição extra em resultados de pesquisa relevantes. Os usuários que assinaram o [!DNL Pinterest Business] podem optar por promover marcadores existentes com melhor desempenho, criar uma nova imagem ou vídeo ou até mesmo promover uma imagem que tenha sido fixada em um site. O [!DNL Pinterest Ads] oferece vários formatos de anúncio para ajudar você a alcançar suas metas específicas de campanha.
 
@@ -35,7 +35,7 @@ A origem [!DNL Pinterest Ads] aproveita as APIs [!DNL Pinterest] para recuperar 
 * [Análise de Grupo de Anúncios](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
 * [Anúncios de análise](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
 
-Use a fonte [!DNL Pinterest Ads] para trazer seus dados do [!DNL Pinterest] para o Experience Platform, onde você pode executar a análise de dados. Os dados são retornados a partir da data de assimilação para um intervalo retroativo de 90 dias. [!DNL Pinterest Ads] usa tokens de portador como um mecanismo de autenticação para se comunicar com as APIs [!DNL Pinterest].
+Use a fonte [!DNL Pinterest Ads] para trazer seus dados do [!DNL Pinterest] para a Experience Platform, onde você pode executar a análise de dados. Os dados são retornados a partir da data de assimilação para um intervalo retroativo de 90 dias. [!DNL Pinterest Ads] usa tokens de portador como um mecanismo de autenticação para se comunicar com as APIs [!DNL Pinterest].
 
 ## Pré-requisitos {#prerequisites}
 
@@ -51,7 +51,7 @@ Para gerar seu token de acesso, leia os guias do [!DNL Pinterest] sobre [configu
 
 ### Coletar credenciais necessárias {#gather-required-credentials}
 
-Para conectar [!DNL Pinterest Ads] à Platform, você deve fornecer valores para as seguintes propriedades de conexão:
+Para conectar [!DNL Pinterest Ads] ao Experience Platform, você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | --- | --- |
@@ -95,23 +95,23 @@ A API [!DNL Pinterest] oferece suporte a diferentes tipos de granularidade de te
 | **SEMANAL** | As métricas de dados são detalhadas semanalmente. |
 | **MENSALMENTE** | As métricas de dados são detalhadas mensalmente. |
 
-Para a Platform, a origem [!DNL Pinterest Ads] é configurada internamente para `Day`, o que significa que os dados serão agregados diariamente. Por exemplo, usando `impressions recorded` como métrica, já que a granularidade está configurada como `DAY`, você obteria `xx` impressões sobre `day 1`, `yy` impressões sobre `day 2` e assim por diante.
+Para o Experience Platform, a origem [!DNL Pinterest Ads] é configurada internamente para `Day`, o que significa que os dados serão agregados diariamente. Por exemplo, usando `impressions recorded` como métrica, já que a granularidade está configurada como `DAY`, você obteria `xx` impressões sobre `day 1`, `yy` impressões sobre `day 2` e assim por diante.
 
 >[!IMPORTANT]
 >
->O pinterest impõe um limite de taxa de 1.000 chamadas de API diariamente em sua API para ler informações de anúncios, grupos de anúncios ou campanhas de anúncios. Para obter informações sobre limites de taxa aplicáveis a chamadas de API subjacentes, consulte a [[!DNL Pinterest] documentação sobre limites de taxa](https://developers.pinterest.com/docs/reference/ratelimits/).
+>O Pinterest impõe um limite de taxa de 1.000 chamadas de API diariamente em sua API para ler informações de anúncios, grupos de anúncios ou campanhas de anúncios. Para obter informações sobre limites de taxa aplicáveis a chamadas de API subjacentes, consulte a [[!DNL Pinterest] documentação sobre limites de taxa](https://developers.pinterest.com/docs/reference/ratelimits/).
 
-## Conectar [!DNL Pinterest Ads] à plataforma {#connect-to-platform}
+## Conectar [!DNL Pinterest Ads] ao Experience Platform {#connect-to-platform}
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Pinterest Ads] à Plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Pinterest Ads] ao Experience Platform usando APIs ou a interface do usuário:
 
-### Conectar [!DNL Pinterest Ads] à plataforma usando APIs {#connect-to-platform-using-api}
+### Conectar o [!DNL Pinterest Ads] ao Experience Platform usando APIs {#connect-to-platform-using-api}
 
 * [Criar uma conexão básica do Pinterest usando a API do serviço de fluxo](../../tutorials/api/create/advertising/pinterest-ads.md)
 * [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
 * [Criar um fluxo de dados para uma fonte de publicidade usando a API do serviço de fluxo](../../tutorials/api/collect/advertising.md)
 
-### Conectar [!DNL Pinterest Ads] à Plataforma usando a interface {#connect-to-platform-using-ui}
+### Conectar o [!DNL Pinterest Ads] ao Experience Platform usando a interface {#connect-to-platform-using-ui}
 
 * [Criar uma conexão de origem do Pinterest na interface](../../tutorials/ui/create/advertising/pinterest-ads.md)
 * [Criar um fluxo de dados para uma conexão de origem de anúncio na interface](../../tutorials/ui/dataflow/advertising.md)

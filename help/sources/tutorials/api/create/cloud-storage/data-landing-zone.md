@@ -2,9 +2,9 @@
 title: Conectar a zona de aterrissagem de dados à Adobe Experience Platform usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform à Data Landing Zone usando a API do serviço de fluxo.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1419'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->Esta página é específica para o conector de [!DNL Data Landing Zone] *origem* no Experience Platform. Para obter informações sobre como se conectar ao conector de [!DNL Data Landing Zone] *destino*, consulte a [[!DNL Data Landing Zone] página de documentação de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
+>Esta página é específica para o conector de [!DNL Data Landing Zone] *origem* na Experience Platform. Para obter informações sobre como se conectar ao conector de [!DNL Data Landing Zone] *destino*, consulte a [[!DNL Data Landing Zone] página de documentação de destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md).
 
 O [!DNL Data Landing Zone] é um recurso de armazenamento de arquivos seguro e baseado em nuvem para trazer arquivos para a Adobe Experience Platform. Os dados são excluídos automaticamente do [!DNL Data Landing Zone] após sete dias.
 
@@ -21,12 +21,12 @@ Este tutorial o guiará pelas etapas sobre como criar uma conexão de origem [!D
 
 ## Introdução
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-Este tutorial também requer que você leia o guia sobre [introdução às APIs da plataforma](../../../../../landing/api-guide.md) para saber como autenticar nas APIs da plataforma e interpretar as chamadas de exemplo fornecidas na documentação.
+Este tutorial também requer que você leia o guia sobre [introdução às APIs do Experience Platform](../../../../../landing/api-guide.md) para saber como autenticar em APIs do Experience Platform e interpretar as chamadas de exemplo fornecidas na documentação.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para criar com êxito uma conexão de origem do [!DNL Data Landing Zone] usando a API [!DNL Flow Service].
 
@@ -479,7 +479,7 @@ Uma resposta bem-sucedida retorna a estrutura do arquivo consultado, incluindo n
 
 ### Use `determineProperties` para detectar automaticamente informações de propriedade de arquivo de um [!DNL Data Landing Zone]
 
-Você pode usar o parâmetro `determineProperties` para detectar automaticamente informações de propriedade do conteúdo do arquivo de seu [!DNL Data Landing Zone] ao fazer uma chamada GET para explorar o conteúdo e a estrutura de sua origem.
+Você pode usar o parâmetro `determineProperties` para detectar automaticamente informações de propriedade do conteúdo do arquivo de seu [!DNL Data Landing Zone] ao fazer uma chamada do GET para explorar o conteúdo e a estrutura de sua origem.
 
 #### `determineProperties` casos de uso
 
@@ -656,8 +656,8 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O nome da sua conexão de origem [!DNL Data Landing Zone]. |
-| `data.format` | O formato dos dados que você deseja trazer para a Platform. |
-| `params.path` | O caminho para o arquivo que você deseja trazer para a Platform. |
+| `data.format` | O formato dos dados que você deseja trazer para o Experience Platform. |
+| `params.path` | O caminho para o arquivo que você deseja trazer para o Experience Platform. |
 | `connectionSpec.id` | A ID da especificação de conexão que corresponde a [!DNL Data Landing Zone]. Esta ID fixa é: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Resposta**
@@ -673,4 +673,4 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ## Próximas etapas
 
-Seguindo este tutorial, você recuperou as credenciais do [!DNL Data Landing Zone], explorou a estrutura do arquivo para encontrar o arquivo que deseja trazer para a Platform e criou uma conexão de origem para começar a trazer seus dados para a Platform. Agora você pode prosseguir para o próximo tutorial, onde aprenderá a [criar um fluxo de dados para trazer dados de armazenamento na nuvem para a Platform usando a [!DNL Flow Service] API](../../collect/cloud-storage.md).
+Seguindo este tutorial, você recuperou as credenciais do [!DNL Data Landing Zone], explorou a estrutura do arquivo para encontrar o arquivo que deseja trazer para a Experience Platform e criou uma conexão de origem para começar a trazer seus dados para a Experience Platform. Agora você pode prosseguir para o próximo tutorial, onde aprenderá a [criar um fluxo de dados para trazer dados de armazenamento na nuvem para a Experience Platform usando a [!DNL Flow Service] API](../../collect/cloud-storage.md).

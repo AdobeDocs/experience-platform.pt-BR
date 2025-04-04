@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para criar um modelo de público-alvo por meio do Adobe Experience Platform Destination SDK.
 title: Criar um modelo de público-alvo
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 3447a1c6959419c36fd55359496284daf90e26cf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '623'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Para obter uma descrição detalhada dos recursos que você pode configurar por 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API do modelo de público-alvo {#get-started}
 
@@ -265,7 +265,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `responseFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para ver um exemplo, consulte os [exemplos de modelo](../functionality/audience-metadata-management.md#examples) no documento de funcionalidade de metadados de público-alvo. |
 | `responseFields.value` | String | Especifique o valor de quaisquer campos de resposta que sua API retorna quando chamada. |
 | `responseErrorFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para ver um exemplo, consulte os [exemplos de modelo](../functionality/audience-metadata-management.md#examples) no documento de funcionalidade de metadados de público-alvo. |
-| `responseErrorFields.value` | String | Analisa todas as mensagens de erro retornadas nas respostas de chamada da API do seu destino. Essas mensagens de erro serão exibidas para os usuários na interface do usuário do Experience Platform. |
+| `responseErrorFields.value` | String | Analisa todas as mensagens de erro retornadas nas respostas de chamada da API do seu destino. Essas mensagens de erro serão exibidas para os usuários na interface do Experience Platform. |
 | `validations.field` | String | Indica se as validações devem ser executadas para qualquer campo antes que as chamadas de API sejam feitas ao destino. Por exemplo, você pode usar `{{validations.accountId}}` para validar a ID da conta do usuário. |
 | `validations.regex` | String | Indica como o campo deve ser estruturado para que a validação seja aprovada. |
 
@@ -281,8 +281,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de p�
 
 ## Manipulação de erros de API
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
 ## Próximas etapas
 
-Depois de ler este documento, agora você sabe quando usar modelos de público-alvo e como configurar um modelo de público-alvo usando o ponto de extremidade da API `/authoring/audience-templates`. Leia [como usar o Destination SDK para configurar seu destino](../guides/configure-destination-instructions.md) para entender onde esta etapa se encaixa no processo de configuração do seu destino.
+Depois de ler este documento, agora você sabe quando usar modelos de público-alvo e como configurar um modelo de público-alvo usando o ponto de extremidade da API `/authoring/audience-templates`. Leia [como usar o Destination SDK para configurar seu destino](../guides/configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.

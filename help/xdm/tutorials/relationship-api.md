@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;início;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;registro de esquemas;esquema;Esquemas;relacionamento;Relacionamento;descritor de relacionamento;descritor de relacionamento;identidade de referência;identidade de referência;
+keywords: Experience Platform;home;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;registro de esquemas;esquema;Esquemas;relacionamento;Relacionamento;descritor de relacionamento;descritor de relacionamento;identidade de referência;identidade de referência;
 title: Definir uma relação entre dois esquemas usando a API do registro de esquema
 description: Este documento fornece um tutorial para definir uma relação individualizada entre dois esquemas definidos pela organização usando a API do Registro de esquemas.
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 2%
@@ -30,7 +30,7 @@ Este tutorial requer uma compreensão funcional do [!DNL Experience Data Model] 
 * [Sistema XDM no Experience Platform](../home.md): uma visão geral do XDM e sua implementação em [!DNL Experience Platform].
    * [Noções básicas sobre a composição de esquema](../schema/composition.md): uma introdução aos blocos de construção de esquemas XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 Antes de iniciar este tutorial, consulte o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API [!DNL Schema Registry] com êxito. Isso inclui o `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho [!DNL Accept] e seus valores possíveis).
 
@@ -277,7 +277,7 @@ curl -X PATCH \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `op` | A operação PATCH a ser executada. Esta solicitação usa a operação `add`. |
+| `op` | A operação do PATCH a ser executada. Esta solicitação usa a operação `add`. |
 | `path` | O caminho para o campo de esquema onde o novo recurso será adicionado. Ao adicionar grupos de campos a esquemas, o valor deve ser &quot;/allOf/-&quot;. |
 | `value.$ref` | O `$id` do grupo de campos a ser adicionado. |
 

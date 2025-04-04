@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
 exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1017'
 ht-degree: 15%
@@ -42,13 +42,13 @@ A Adobe Experience Platform permite gerar experiências coordenadas, consistente
 | Recurso | Descrição |
 | ------- | ----------- |
 | Adições da API de visualização de perfil | A API de visualização de perfil (`/previewsamplestatus`) agora inclui a capacidade de exibir uma análise do total de fragmentos de perfil na organização, bem como visualizar a distribuição de fragmentos de perfil nos namespaces de identidade. |
-| Atualizações de exibição de esquema de união | Na interface do usuário do Experience Platform, os usuários podem encontrar mais facilmente informações sobre todos os esquemas e conjuntos de dados que contribuem para o esquema de união, bem como destacar atributos-chave, como campos de identidade e relacionamento. Essas atualizações melhoram a capacidade de solucionar problemas e validar se os perfis estão configurados corretamente, se as identidades estão compiladas corretamente e se os dados foram assimilados com êxito. |
+| Atualizações de exibição de esquema de união | Na interface do usuário do Experience Platform, os usuários podem encontrar mais facilmente informações sobre todos os esquemas e conjuntos de dados que contribuem para o esquema de união, bem como atributos de chave de superfície, como campos de identidade e relacionamento. Essas atualizações melhoram a capacidade de solucionar problemas e validar se os perfis estão configurados corretamente, se as identidades estão compiladas corretamente e se os dados foram assimilados com êxito. |
 
 Para obter mais informações sobre o [!DNL Real-Time Customer Profile], incluindo tutoriais e práticas recomendadas para trabalhar com dados do [!DNL Profile], leia a [Visão geral do Perfil do cliente em tempo real](../../profile/home.md).
 
 ## Serviço de segmentação {#segmentation}
 
-O Serviço de Segmentação da Adobe Experience Platform fornece uma interface de usuário e uma API RESTful que permite criar segmentos e gerar públicos a partir dos dados do [!DNL Real-Time Customer Profile]. Esses segmentos são configurados e mantidos centralmente no [!DNL Platform], tornando-os prontamente acessíveis por qualquer aplicativo Adobe.
+O Serviço de Segmentação da Adobe Experience Platform fornece uma interface de usuário e uma API RESTful que permite criar segmentos e gerar públicos a partir dos dados do [!DNL Real-Time Customer Profile]. Esses segmentos são configurados e mantidos centralmente no [!DNL Experience Platform], tornando-os prontamente acessíveis por qualquer aplicativo do Adobe.
 
 O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de séries temporais que representam interações de clientes com sua marca.
 
@@ -62,7 +62,7 @@ Para obter mais informações sobre [!DNL Segmentation Service], consulte a [Vis
 
 ## Origens {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Experience Platform]. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
 O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
@@ -70,7 +70,7 @@ O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte à autenticação SSH para SFTP | Você pode conectar sua conta SFTP ao [!DNL Platform] usando chaves RSA/DSA Open SSH. Consulte a [visão geral do SFTP](../../sources/connectors/cloud-storage/sftp.md) para obter mais informações. |
+| Suporte à autenticação SSH para SFTP | Você pode conectar sua conta SFTP ao [!DNL Experience Platform] usando chaves RSA/DSA Open SSH. Consulte a [visão geral do SFTP](../../sources/connectors/cloud-storage/sftp.md) para obter mais informações. |
 | Melhorias de UX | Você pode habilitar seu conjunto de dados para [!DNL Profile] durante o processo de assimilação de dados. Consulte o tutorial [fluxo de dados do armazenamento na nuvem](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obter mais informações. |
 
 Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).
@@ -85,7 +85,7 @@ A Adobe Experience Platform permite que as equipes de operações de marketing c
 
 #### Esquema
 
-Atualiza a usabilidade e o fluxo de trabalho, além de fornecer insights, padronização e transparência imediatos dos principais campos nas composições do esquema. Expõe a linhagem de dados para a combinação de modelos de dados individuais representados como o &quot;esquema de união&quot;, fornecendo insights sobre a estrutura e os ingredientes para o Perfil do cliente em tempo real.
+Atualiza a usabilidade e o fluxo de trabalho, além de fornecer insights, padronização e transparência imediatos dos principais campos nas composições do esquema. Expõe a linhagem de dados para a combinação de modelos de dados individuais representados como o &quot;esquema de união&quot;, fornecendo o insight na estrutura e nos ingredientes do Perfil do cliente em tempo real.
 
 - Atualização do fluxo de trabalho de esquema
    - Use atalhos para o tipo mais comum de esquemas XDM, com configurações automatizadas no editor de esquemas e recomendações do grupo de campos de esquema com base em seus objetivos
@@ -113,6 +113,6 @@ Um visualizador de perfil compatível com o profissional de marketing com person
 
 #### Monitoramento
 
-Garante a transparência do fluxo de dados e fornece informações sobre a integridade do tráfego de dados no sistema a partir de conectores de origem, fornecendo mais autoatendimento e capacidade de ação mais rápida para solucionar problemas em situações.
+Garante a transparência do fluxo de dados e fornece à insight informações sobre a integridade do tráfego de dados no sistema a partir de conectores de origem, fornecendo mais autoatendimento e capacidade de ação mais rápida para solucionar problemas em situações.
 
 - Monitore todas as execuções de fluxo e veja uma exibição detalhada de cada execução, incluindo status de conclusão, duração da execução, lista de arquivos processados, erros e diagnósticos acionáveis

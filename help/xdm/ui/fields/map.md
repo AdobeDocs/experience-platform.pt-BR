@@ -2,9 +2,9 @@
 title: Definir campos de mapa na interface
 description: Saiba como definir um campo de mapa na interface do usuário do Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '455'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ O Adobe Experience Platform permite personalizar totalmente a estrutura de suas 
 
 Você também pode definir campos de mapa no Editor de esquemas para modelar estruturas de dados flexíveis e dinâmicas ou armazenar uma coleção de pares de valores chave.
 
-Ao definir um novo campo na interface (UI) da Platform, use a lista suspensa **[!UICONTROL Tipo]** e selecione &quot;**[!UICONTROL Mapa]**&quot; na lista.
+Ao definir um novo campo na interface (UI) do Experience Platform, use a lista suspensa **[!UICONTROL Tipo]** e selecione &quot;**[!UICONTROL Mapa]**&quot; na lista.
 
 ![O Editor de Esquemas com a lista suspensa Tipo e o valor Mapa realçados.](../../images/ui/fields/special/map.png)
 
@@ -44,10 +44,10 @@ Certifique-se de que você só esteja usando campos do tipo mapa quando for abso
 
 >[!NOTE]
 >
->A interface do usuário da Platform tem limitações na forma como pode extrair as chaves de campos do tipo mapa. Enquanto os campos do tipo objeto podem ser expandidos, os mapas são exibidos como um único campo. Os campos de mapa criados por meio da API do Registro de Esquema que não são do tipo de dados string ou integer são exibidos como tipos de dados &quot;[!UICONTROL Complexo]&quot;.
+>A interface do usuário do Experience Platform tem limitações na forma como pode extrair as chaves de campos do tipo mapa. Enquanto os campos do tipo objeto podem ser expandidos, os mapas são exibidos como um único campo. Os campos de mapa criados por meio da API do Registro de Esquema que não são do tipo de dados string ou integer são exibidos como tipos de dados &quot;[!UICONTROL Complexo]&quot;.
 
 ## Próximas etapas
 
-Depois de ler este documento, agora é possível definir campos de mapa na interface do usuário da Platform. Lembre-se de que você só pode usar classes e grupos de campos para adicionar campos a esquemas. Para saber mais sobre como gerenciar esses recursos na interface, consulte os guias sobre criação e edição de [classes](../resources/classes.md) e [grupos de campos](../resources/field-groups.md).
+Depois de ler este documento, agora é possível definir campos de mapa na interface do usuário do Experience Platform. Lembre-se de que você só pode usar classes e grupos de campos para adicionar campos a esquemas. Para saber mais sobre como gerenciar esses recursos na interface, consulte os guias sobre criação e edição de [classes](../resources/classes.md) e [grupos de campos](../resources/field-groups.md).
 
 Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).

@@ -2,9 +2,9 @@
 title: Rascunhos de fluxos de dados na interface do
 description: Saiba como salvar seus fluxos de dados como rascunho e publicá-los posteriormente, ao usar o espaço de trabalho de fontes.
 exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Este documento fornece etapas sobre como salvar seus fluxos de dados ao usar o e
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
+* [Fontes](../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
 
 ## Salvar um fluxo de dados como rascunho
 
-Você pode pausar o progresso da criação do fluxo de dados a qualquer momento depois de selecionar os dados que trará para a Plataforma.
+Você pode pausar o progresso da criação do fluxo de dados a qualquer momento depois de selecionar os dados que trará para a Experience Platform.
 
 Por exemplo, se você quiser salvar seu progresso durante a etapa de detalhes do fluxo de dados, selecione **[!UICONTROL Salvar como rascunho]**.
 
@@ -51,7 +51,7 @@ Você também pode acessar seus fluxos de dados de rascunho pelo catálogo de fl
 
 ![Uma lista de fluxos de dados para uma determinada organização.](../../images/tutorials/draft/catalog-access.png)
 
-## Publish seu fluxo de dados de rascunho
+## Publicar seu fluxo de dados de rascunho
 
 Você retornará à etapa [!UICONTROL Adicionar dados] do fluxo de trabalho de fontes, onde é possível reconfirmar o formato dos dados e continuar o progresso no fluxo de dados.
 

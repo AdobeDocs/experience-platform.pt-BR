@@ -3,7 +3,7 @@ keywords: email;Email;e-mail;destinos de e-mail;sendgrid;destino sendgrid
 title: Conexão SendGrid
 description: O destino do SendGrid permite exportar seus dados primários e ativá-los no SendGrid para atender às suas necessidades comerciais.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 3%
@@ -48,7 +48,7 @@ O SendGrid é compatível com a ativação das identidades descritas na tabela a
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| email | Endereço de email | Observe que [!DNL Adobe Experience Platform] oferece suporte para endereços de email com hash SHA256 e texto sem formatação. Se o campo de origem da Experience Platform contiver atributos com hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação.<br/><br/> Observe que **SendGrid** não oferece suporte a endereços de email com hash; portanto, somente dados de texto sem formatação são enviados para o destino. |
+| email | Endereço de email | Observe que [!DNL Adobe Experience Platform] oferece suporte para endereços de email com hash SHA256 e texto sem formatação. Se o campo de origem da Experience Platform contiver atributos com hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.<br/><br/> Observe que **SendGrid** não oferece suporte a endereços de email com hash; portanto, somente dados de texto sem formatação são enviados para o destino. |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -125,7 +125,7 @@ Consulte as imagens abaixo para obter detalhes específicos desse destino.
 1. Selecione um ou mais públicos-alvo para exportar para SendGrid.
    ![](../../assets/catalog/email-marketing/sendgrid/11.jpg)
 
-1. Na etapa **[!UICONTROL Mapeamento]**, depois de selecionar **[!UICONTROL Adicionar novo mapeamento]**, você verá a página de mapeamento para mapear os campos XDM de origem para os campos de destino da API SendGrid. As imagens abaixo demonstram como mapear namespaces de identidade entre Experience Platform e SendGrid. Certifique-se de que o **[!UICONTROL campo do Source]** *email* deve ser mapeado para o **[!UICONTROL campo do Target]** *id_externa* conforme mostrado abaixo.
+1. Na etapa **[!UICONTROL Mapeamento]**, depois de selecionar **[!UICONTROL Adicionar novo mapeamento]**, você verá a página de mapeamento para mapear os campos XDM de origem para os campos de destino da API SendGrid. As imagens abaixo demonstram como mapear namespaces de identidade entre o Experience Platform e o SendGrid. Certifique-se de que o **[!UICONTROL campo do Source]** *email* deve ser mapeado para o **[!UICONTROL campo do Target]** *id_externa* conforme mostrado abaixo.
    ![](../../assets/catalog/email-marketing/sendgrid/13.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/14.jpg)
    ![](../../assets/catalog/email-marketing/sendgrid/15.jpg)

@@ -2,24 +2,24 @@
 title: Workflows baseados em campo no Editor de esquemas
 description: Saiba como adicionar campos individualmente de grupos de campos existentes aos esquemas do modelo de dados de experiência (XDM).
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1301'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
 
 # Workflows baseados em campo no Editor de esquemas
 
-O Adobe Experience Platform fornece um conjunto robusto de [grupos de campos](../schema/composition.md#field-group) padronizados para uso em esquemas do Experience Data Model (XDM). A estrutura e a semântica por trás desses grupos de campos são cuidadosamente adaptadas para atender a uma grande variedade de casos de uso de segmentação e outros aplicativos downstream na Platform. Você também pode definir seus próprios grupos de campos personalizados para atender a necessidades comerciais exclusivas.
+O Adobe Experience Platform fornece um conjunto robusto de [grupos de campos](../schema/composition.md#field-group) padronizados para uso em esquemas do Experience Data Model (XDM). A estrutura e a semântica por trás desses grupos de campos são cuidadosamente adaptadas para atender a uma grande variedade de casos de uso de segmentação e outros aplicativos downstream no Experience Platform. Você também pode definir seus próprios grupos de campos personalizados para atender a necessidades comerciais exclusivas.
 
 Quando você adiciona um grupo de campos a um esquema, esse esquema herda todos os campos contidos nesse grupo. No entanto, agora é possível adicionar campos individuais ao esquema sem precisar incluir outros campos do grupo de campos associado que você não necessariamente pode usar.
 
-Este guia aborda os diferentes métodos para adicionar campos individuais a um esquema na interface do usuário da plataforma.
+Este guia aborda os diferentes métodos para adicionar campos individuais a um esquema na interface do Experience Platform.
 
 ## Pré-requisitos
 
-Este tutorial pressupõe que você esteja familiarizado com a [composição de esquemas XDM](../schema/composition.md) e como usar o Editor de esquemas na interface do Platform. Para dar continuidade, você deve iniciar o processo de [criação de um novo esquema](./resources/schemas.md) e atribuí-lo a uma classe padrão antes de continuar com este guia.
+Este tutorial presume que você esteja familiarizado com a [composição de esquemas XDM](../schema/composition.md) e como usar o Editor de esquemas na interface do Experience Platform. Para dar continuidade, você deve iniciar o processo de [criação de um novo esquema](./resources/schemas.md) e atribuí-lo a uma classe padrão antes de continuar com este guia.
 
 ## Remover campos adicionados de grupos de campos padrão {#remove-field-group}
 
@@ -111,4 +111,4 @@ Consulte o [Criar e editar esquemas no guia da interface](./resources/schemas.md
 
 ## Próximas etapas
 
-Este guia abordou os novos fluxos de trabalho baseados em campo para o Editor de esquemas na interface do usuário da plataforma. Para obter mais informações sobre o gerenciamento de esquemas na interface, consulte a [visão geral da interface](./overview.md).
+Este guia abordou os novos fluxos de trabalho baseados em campo para o Editor de esquemas na interface do Experience Platform. Para obter mais informações sobre o gerenciamento de esquemas na interface, consulte a [visão geral da interface](./overview.md).

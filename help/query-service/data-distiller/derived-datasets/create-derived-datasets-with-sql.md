@@ -2,9 +2,9 @@
 title: Criar conjuntos de dados derivados com SQL
 description: Saiba como usar o SQL para criar um conjunto de dados derivado que esteja ativado para o perfil e como usar o conjunto de dados para o Perfil do cliente em tempo real e o Serviço de segmentação.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1238'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Saiba como usar consultas SQL para manipular e transformar dados de conjuntos de dados existentes para criar um conjunto de dados derivado que esteja habilitado para o Perfil. Esse fluxo de trabalho fornece um método alternativo eficiente para criar conjuntos de dados derivados para seus casos de uso de negócios do Perfil do cliente em tempo real.
 
-Este documento descreve várias extensões SQL convenientes que geram um conjunto de dados derivado para uso com o Perfil do cliente em tempo real. O fluxo de trabalho simplifica o processo que você teria que concluir por meio de várias chamadas de API ou interações da interface do usuário da plataforma.
+Este documento descreve várias extensões SQL convenientes que geram um conjunto de dados derivado para uso com o Perfil do cliente em tempo real. O fluxo de trabalho simplifica o processo que você teria que concluir por meio de várias chamadas de API ou interações da interface do Experience Platform.
 
 Normalmente, gerar e publicar um conjunto de dados derivado para o Perfil do cliente em tempo real envolveria as seguintes etapas:
 
@@ -35,7 +35,7 @@ O Serviço de consulta permite executar todas as ações listadas acima usando c
 >
 >A consulta SQL fornecida abaixo presume o uso de um namespace pré-existente.
 
-Use uma consulta Criar tabela como seleção (CTAS) para criar um conjunto de dados, atribuir tipos de dados, definir uma identidade principal, criar um esquema e marcá-lo como habilitado para perfil. A instrução SQL de exemplo abaixo cria um conjunto de dados e o disponibiliza para o Real-time Customer Data Platform (Real-Time CDP). Sua consulta SQL seguirá o formato mostrado no exemplo abaixo:
+Use uma consulta Criar tabela como seleção (CTAS) para criar um conjunto de dados, atribuir tipos de dados, definir uma identidade principal, criar um esquema e marcá-lo como habilitado para perfil. A instrução SQL de exemplo abaixo cria um conjunto de dados e o disponibiliza para o Real-Time Customer Data Platform (Real-Time CDP). Sua consulta SQL seguirá o formato mostrado no exemplo abaixo:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
@@ -51,7 +51,7 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-Como alternativa, os conjuntos de dados também podem ser habilitados para o perfil por meio da interface do usuário da plataforma. Para obter mais informações sobre como marcar um conjunto de dados como habilitado para o perfil, consulte a [documentação Habilitar um conjunto de dados para o Perfil do Cliente em Tempo Real](../../../catalog/datasets/user-guide.md#enable-profile).
+Como alternativa, os conjuntos de dados também podem ser habilitados para o perfil por meio da interface do usuário do Experience Platform. Para obter mais informações sobre como marcar um conjunto de dados como habilitado para o perfil, consulte a [documentação Habilitar um conjunto de dados para o Perfil do Cliente em Tempo Real](../../../catalog/datasets/user-guide.md#enable-profile).
 
 Na consulta de exemplo abaixo, o conjunto de dados `decile_table` é criado com `id` como a coluna de identidade primária e tem o namespace `IDFA`. Ele também tem um campo chamado `decile1Month` do tipo de dados do mapa. A tabela criada (`decile_table`) está habilitada para o perfil.
 
@@ -178,7 +178,7 @@ Você pode ver no exemplo que `table_with_a_decile` foi habilitado para perfil e
 
 ### Criar um grupo de campos com SQL
 
-Os grupos de campos agora podem ser criados por meio do SQL. Isso fornece uma alternativa ao uso do Editor de esquemas na interface do usuário da plataforma ou à realização de uma chamada de API para o registro do esquema.
+Os grupos de campos agora podem ser criados por meio do SQL. Isso fornece uma alternativa ao uso do Editor de esquemas na interface do Experience Platform ou à realização de uma chamada de API para o registro do esquema.
 
 Um exemplo de instrução para criar um grupo de campos pode ser visto abaixo.
 

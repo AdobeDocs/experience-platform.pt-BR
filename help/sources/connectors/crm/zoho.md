@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do Conector Zoho CRM Source
 description: Saiba como conectar o Zoho CRM ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 4a010453-3d09-4a47-b04e-5789ae4af48c
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 >
 >A origem [!DNL Zoho CRM] será substituída no final de junho de 2025.
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform]. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-O Experience Platform fornece suporte para assimilação de dados de um sistema CRM de terceiros. O suporte para provedores de CRM inclui [!DNL Zoho CRM].
+A Experience Platform oferece suporte para assimilação de dados de um sistema CRM de terceiros. O suporte para provedores de CRM inclui [!DNL Zoho CRM].
 
 ## LISTA DE PERMISSÕES de endereço IP
 
@@ -27,7 +27,7 @@ Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes 
 
 ## Recuperar suas credenciais de autenticação para [!DNL Zoho CRM]
 
-Antes de trazer dados de sua conta do [!DNL Zoho CRM] para a Platform, você deve primeiro recuperar suas credenciais para autenticar sua fonte do [!DNL Zoho CRM]. Siga as etapas abaixo para recuperar a ID do cliente, o segredo do cliente, o token de acesso e o token de atualização.
+Antes de trazer dados de sua conta do [!DNL Zoho CRM] para a Experience Platform, você deve primeiro recuperar suas credenciais para autenticar sua fonte do [!DNL Zoho CRM]. Siga as etapas abaixo para recuperar a ID do cliente, o segredo do cliente, o token de acesso e o token de atualização.
 
 ### Registre seu aplicativo
 
@@ -49,15 +49,15 @@ Uma solicitação bem-sucedida retorna os tokens de acesso e atualização, que 
 
 Para obter etapas detalhadas sobre como adquirir suas credenciais, consulte o [[!DNL Zoho CRM] guia de autenticação](https://www.zoho.com/crm/developer/docs/api/v2/oauth-overview.html).
 
-## Conectar [!DNL Zoho CRM] a [!DNL Platform] usando APIs
+## Conectar [!DNL Zoho CRM] a [!DNL Experience Platform] usando APIs
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Zoho CRM] à Plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Zoho CRM] ao Experience Platform usando APIs ou a interface do usuário:
 
 - [Criar uma conexão base  [!DNL Zoho CRM]  usando a API de Serviço de Fluxo](../../tutorials/api/create/crm/zoho.md)
 - [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
 - [Criar um fluxo de dados para uma origem de CRM usando a API do Serviço de Fluxo](../../tutorials/api/collect/crm.md)
 
-## Conectar [!DNL Zoho CRM] a [!DNL Platform] usando a interface
+## Conectar [!DNL Zoho CRM] a [!DNL Experience Platform] usando a interface
 
 - [Criar uma conexão de origem  [!DNL Zoho CRM]  na interface](../../tutorials/ui/create/crm/zoho.md)
 - [Criar um fluxo de dados para uma conexão de origem do CRM na interface](../../tutorials/ui/dataflow/crm.md)

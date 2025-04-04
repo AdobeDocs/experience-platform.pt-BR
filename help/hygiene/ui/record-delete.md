@@ -3,9 +3,9 @@ title: Excluir Registros
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1574'
 ht-degree: 8%
 
 ---
@@ -25,17 +25,17 @@ Use o [[!UICONTROL espaço de trabalho do Ciclo de Vida de Dados]](./overview.md
 
 A exclusão de registros requer um entendimento prático de como os campos de identidade funcionam no Experience Platform. Especificamente, você deve conhecer os valores de namespace de identidade das entidades cujos registros deseja excluir, dependendo do conjunto de dados (ou conjuntos de dados) do qual você está excluindo.
 
-Consulte a seguinte documentação para obter mais informações sobre identidades na Platform:
+Consulte a seguinte documentação para obter mais informações sobre identidades no Experience Platform:
 
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): une identidades em dispositivos e sistemas, vinculando conjuntos de dados com base nos campos de identidade definidos pelos esquemas XDM aos quais estão em conformidade.
 * [Namespaces de identidade](../../identity-service/features/namespaces.md): os namespaces de identidade definem os diferentes tipos de informações de identidade que podem se relacionar a uma única pessoa e são um componente necessário para cada campo de identidade.
 * [Perfil do cliente em tempo real](../../profile/home.md): usa gráficos de identidade para fornecer perfis de consumidor unificados com base em dados agregados de várias fontes, atualizados em tempo quase real.
-* [Experience Data Model (XDM)](../../xdm/home.md): fornece definições e estruturas padrão para dados da plataforma por meio do uso de esquemas. Todos os conjuntos de dados da Platform estão em conformidade com um esquema XDM específico, e o esquema define quais campos são identidades.
+* [Experience Data Model (XDM)](../../xdm/home.md): fornece definições e estruturas padrão para dados do Experience Platform por meio do uso de esquemas. Todos os conjuntos de dados do Experience Platform estão em conformidade com um esquema XDM específico, e o esquema define quais campos são identidades.
 * [Campos de identidade](../../xdm/ui/fields/identity.md): saiba como um campo de identidade é definido em um esquema XDM.
 
 ## Criar uma solicitação {#create-request}
 
-Para iniciar o processo, selecione **[!UICONTROL Ciclo de Vida dos Dados]** na navegação à esquerda da interface de usuário da Platform. O espaço de trabalho [!UICONTROL Solicitações do ciclo de vida dos dados] é exibido. Em seguida, selecione **[!UICONTROL Criar solicitação]** na página principal do espaço de trabalho.
+Para iniciar o processo, selecione **[!UICONTROL Ciclo de Vida dos Dados]** na navegação à esquerda da interface do Experience Platform. O espaço de trabalho [!UICONTROL Solicitações do ciclo de vida dos dados] é exibido. Em seguida, selecione **[!UICONTROL Criar solicitação]** na página principal do espaço de trabalho.
 
 ![O espaço de trabalho [!UICONTROL Solicitações do ciclo de vida dos dados] com [!UICONTROL Solicitação de criação] selecionada.](../images/ui/record-delete/create-request-button.png)
 
@@ -75,13 +75,13 @@ Para excluir registros de todos os conjuntos de dados, selecione **[!UICONTROL T
 >title="Valor de identidade principal"
 >abstract="Nessa coluna, é necessário fornecer o valor do namespace de identidade do registro, que deve corresponder ao tipo de identidade fornecido na coluna esquerda. Se o tipo de namespace de identidade for `email`, o valor deverá ser o endereço de email do registro. Para saber mais, consulte o guia da interface do ciclo de vida dos dados."
 
-Ao excluir registros, você deve fornecer informações de identidade para que o sistema possa determinar quais registros devem ser excluídos. Para qualquer conjunto de dados na Platform, os registros são excluídos com base no campo **namespace de identidade** definido pelo esquema do conjunto de dados.
+Ao excluir registros, você deve fornecer informações de identidade para que o sistema possa determinar quais registros devem ser excluídos. Para qualquer conjunto de dados no Experience Platform, os registros são excluídos com base no campo **namespace de identidade** definido pelo esquema do conjunto de dados.
 
-Como todos os campos de identidade na Platform, um namespace de identidade é composto de dois itens: um **tipo** (às vezes chamado de namespace de identidade) e um **valor**. O tipo de identidade fornece contexto sobre como o campo identifica um registro (como um endereço de email). O valor representa a identidade específica de um registro para esse tipo (por exemplo, `jdoe@example.com` para o tipo de identidade `email`). Campos comuns usados como identidades incluem informações da conta, IDs do dispositivo e IDs de cookie.
+Como todos os campos de identidade no Experience Platform, um namespace de identidade é composto de dois itens: um **tipo** (às vezes chamado de namespace de identidade) e um **valor**. O tipo de identidade fornece contexto sobre como o campo identifica um registro (como um endereço de email). O valor representa a identidade específica de um registro para esse tipo (por exemplo, `jdoe@example.com` para o tipo de identidade `email`). Campos comuns usados como identidades incluem informações da conta, IDs do dispositivo e IDs de cookie.
 
 >[!TIP]
 >
->Se você não souber o namespace de identidade de um conjunto de dados específico, poderá encontrá-lo na interface do usuário da plataforma. No espaço de trabalho **[!UICONTROL Conjuntos de Dados]**, selecione o conjunto de dados em questão na lista. Na página de detalhes do conjunto de dados, passe o mouse sobre o nome do esquema do conjunto de dados no painel direito. O namespace de identidade é exibido junto com o nome e a descrição do esquema.
+>Se você não souber o namespace de identidade de um conjunto de dados específico, poderá encontrá-lo na interface do usuário do Experience Platform. No espaço de trabalho **[!UICONTROL Conjuntos de Dados]**, selecione o conjunto de dados em questão na lista. Na página de detalhes do conjunto de dados, passe o mouse sobre o nome do esquema do conjunto de dados no painel direito. O namespace de identidade é exibido junto com o nome e a descrição do esquema.
 >
 >![O painel Conjuntos de Dados com um conjunto de dados selecionado e uma caixa de diálogo de esquema aberta no painel de detalhes do conjunto de dados. A ID primária do conjunto de dados está realçada.](../images/ui/record-delete/dataset-primary-identity.png)
 
@@ -140,7 +140,7 @@ Quando terminar de adicionar identidades à solicitação, em **[!UICONTROL Conf
 
 >[!IMPORTANT]
 > 
->Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-time Customer Data Platform ou do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. As organizações que compraram o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield** podem enviar até 600.000 exclusões de registros de identidade a cada mês.<br>Uma única solicitação de exclusão de registro por meio da interface do usuário permite enviar 10.000 IDs de uma vez. O [método de API para excluir registros](../api/workorder.md#create) permite o envio de 100.000 IDs de uma vez.<br>É prática recomendada enviar o máximo possível de IDs por solicitação, até o limite de ID. Quando você pretende excluir um grande volume de IDs, deve evitar o envio de um pequeno volume ou de uma única ID por solicitação de exclusão de registro.
+>Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-Time Customer Data Platform ou do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. As organizações que compraram o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield** podem enviar até 600.000 exclusões de registros de identidade a cada mês.<br>Uma única solicitação de exclusão de registro por meio da interface do usuário permite enviar 10.000 IDs de uma vez. O [método de API para excluir registros](../api/workorder.md#create) permite o envio de 100.000 IDs de uma vez.<br>É prática recomendada enviar o máximo possível de IDs por solicitação, até o limite de ID. Quando você pretende excluir um grande volume de IDs, deve evitar o envio de um pequeno volume ou de uma única ID por solicitação de exclusão de registro.
 
 ![Campos de [!UICONTROL Nome] e [!UICONTROL Descrição] da configuração de solicitação com [!UICONTROL Envio] realçados.](../images/ui/record-delete/submit.png)
 

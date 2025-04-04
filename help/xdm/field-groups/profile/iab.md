@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Grupo de campos de consentimento da TCF 2.0 do IAB para esquemas de perfil
 description: Saiba mais sobre o grupo de campos de esquema de consentimento da TCF 2.0 do IAB para a classe Perfil individual XDM.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '321'
+source-wordcount: '322'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ O JSON a seguir demonstra a estrutura do mapa `identityPrivacyInfo`.
 }
 ```
 
-Como mostra o exemplo, cada chave de nível raiz de `xdm:identityPrivacyInfo` corresponde a um namespace de identidade reconhecido pelo Serviço de Identidade. Por sua vez, cada propriedade de namespace deve ter pelo menos uma subpropriedade cuja chave corresponda ao valor de identidade correspondente do cliente para esse namespace. Neste exemplo, o cliente é identificado com um valor de ID de Experience Cloud (`ECID`) de `13782522493631189`.
+Como mostra o exemplo, cada chave de nível raiz de `xdm:identityPrivacyInfo` corresponde a um namespace de identidade reconhecido pelo Serviço de Identidade. Por sua vez, cada propriedade de namespace deve ter pelo menos uma subpropriedade cuja chave corresponda ao valor de identidade correspondente do cliente para esse namespace. Neste exemplo, o cliente é identificado com um valor de Experience Cloud ID (`ECID`) de `13782522493631189`.
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Como mostra o exemplo, cada chave de nível raiz de `xdm:identityPrivacyInfo` co
 
 Para cada valor de identidade, uma propriedade `identityIABConsent` deve ser fornecida, que fornece o valor de consentimento TCF para a identidade. O valor desta propriedade deve estar em conformidade com o tipo de dados [[!UICONTROL Cadeia de caracteres de consentimento]](../../data-types/consent-string.md).
 
-Consulte o manual sobre o [Suporte ao IAB TCF 2.0 na Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) para obter mais informações sobre o caso de uso deste grupo de campos. Para obter mais detalhes sobre o próprio grupo de campos, consulte o repositório XDM público:
+Consulte o manual sobre o [Suporte ao IAB TCF 2.0 no Experience Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) para obter mais informações sobre o caso de uso deste grupo de campos. Para obter mais detalhes sobre o próprio grupo de campos, consulte o repositório XDM público:
 
 * [Exemplo preenchido](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [Esquema completo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

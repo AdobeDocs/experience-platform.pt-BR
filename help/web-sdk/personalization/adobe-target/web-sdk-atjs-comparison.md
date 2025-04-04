@@ -1,20 +1,20 @@
 ---
-title: Comparação da at.js com o SDK da Web do Experience Platform
-description: Saiba como os recursos da at.js se comparam ao SDK da Web do Experience Platform
+title: Comparação da at.js com o Experience Platform Web SDK
+description: Saiba como os recursos da at.js se comparam ao Experience Platform Web SDK
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;ocultando previamente o trecho;vec;Criador de experiências baseado em formulário;xdm;públicos-alvo;decisões;escopo;esquema;diagrama do sistema;diagrama
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2183'
 ht-degree: 3%
 
 ---
 
-# Comparação da biblioteca at.js com o SDK da Web
+# Comparação da biblioteca at.js com a Web SDK
 
 ## Visão geral
 
-Este artigo fornece uma visão geral das diferenças entre a biblioteca `at.js` e o SDK da Web da Experience Platform.
+Este artigo fornece uma visão geral das diferenças entre a biblioteca `at.js` e o Experience Platform Web SDK.
 
 ## Instalação de bibliotecas
 
@@ -22,11 +22,11 @@ Este artigo fornece uma visão geral das diferenças entre a biblioteca `at.js` 
 
 Permitimos que nossos clientes baixem a biblioteca diretamente da Adobe Experience Cloud, guia Implementação. A biblioteca at.js é personalizada com configurações que o cliente tem como: clientCode, imsOrgId etc.
 
-### Instalação do SDK da Web
+### Instalação do Web SDK
 
 A versão pré-criada está disponível em um CDN. Você pode fazer referência à biblioteca na CDN diretamente na sua página ou baixá-la e hospedá-la em sua própria infraestrutura. Ele está disponível em formatos minificados e não minificados. A versão não reduzida é útil para fins de depuração.
 
-Consulte [Instalar o SDK da Web usando a biblioteca JavaScript](/help/web-sdk/install/library.md) para obter mais informações.
+Consulte [Instalar o Web SDK usando a biblioteca JavaScript](/help/web-sdk/install/library.md) para obter mais informações.
 
 ## Configuração das bibliotecas
 
@@ -71,9 +71,9 @@ window.adobe.target.init(window, document, {
 [Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 
-### Configuração do SDK da Web
+### Configuração do Web SDK
 
-A configuração do SDK é feita com o comando [`configure`](/help/web-sdk/commands/configure/overview.md). O comando `configure` é *sempre* chamado primeiro.
+A configuração da SDK é feita com o comando [`configure`](/help/web-sdk/commands/configure/overview.md). O comando `configure` é *sempre* chamado primeiro.
 
 ## Como solicitar e renderizar automaticamente ofertas do Target de carregamento de página
 
@@ -81,9 +81,9 @@ A configuração do SDK é feita com o comando [`configure`](/help/web-sdk/comma
 
 Usando a at.js 2.x, se você habilitar a configuração `pageLoadEnabled`, a biblioteca disparará uma chamada para o Target Edge com `execute -> pageLoad`. Se todas as configurações forem definidas com os valores padrão, nenhuma codificação personalizada será necessária. Depois que a at.js for adicionada à página e carregada pelo navegador, uma chamada de Edge do Target será executada.
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
-O conteúdo criado no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) do Adobe Target pode ser recuperado e renderizado automaticamente pelo SDK.
+O conteúdo criado no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) do Adobe Target pode ser recuperado e renderizado automaticamente pela SDK.
 
 Para solicitar e renderizar automaticamente ofertas do Target, use o comando `sendEvent` e defina a opção `renderDecisions` como `true`. Isso força o SDK a renderizar automaticamente qualquer conteúdo personalizado que esteja qualificado para renderização automática.
 
@@ -105,7 +105,7 @@ alloy("sendEvent", {
 });
 ```
 
-O SDK da Web do Experience Platform envia automaticamente uma notificação com as ofertas que foram executadas pelo SDK da WEB. Este é um exemplo de como uma carga de solicitação de notificação é:
+O Experience Platform Web SDK envia automaticamente uma notificação com as ofertas que foram executadas pelo WEB SDK. Este é um exemplo de como uma carga de solicitação de notificação se parece com:
 
 ```json
 {
@@ -217,9 +217,9 @@ adobe.target.getOffers({
 
 [Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
-Execute um comando `sendEvent` com um escopo especial em `decisionScopes`: `__view__`. Usamos esse escopo como um sinal para buscar todas as atividades de carregamento de página do Target e realizar uma busca prévia por todas as exibições. O SDK da Web também tentará avaliar todas as atividades baseadas em visualização do VEC. No momento, a desabilitação da pré-busca de exibições não é compatível com o SDK da Web.
+Execute um comando `sendEvent` com um escopo especial em `decisionScopes`: `__view__`. Usamos esse escopo como um sinal para buscar todas as atividades de carregamento de página do Target e realizar uma busca prévia por todas as exibições. O Web SDK também tentará avaliar todas as atividades baseadas em visualização do VEC. No momento, a desabilitação da busca prévia de visualização não é suportada no Web SDK.
 
 Para acessar qualquer conteúdo de personalização, você pode fornecer uma função de retorno de chamada, que será chamada depois que o SDK receber uma resposta bem-sucedida do servidor. Sua chamada de retorno recebe um objeto de resultado, que pode conter propriedades de apresentações contendo qualquer conteúdo de personalização retornado.
 
@@ -303,7 +303,7 @@ adobe.target.getOffers({
 [Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
 
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
 Você pode buscar atividades baseadas no Form Based Composer usando o comando `sendEvent` e passando os nomes da mbox sob a opção `decisionScopes`. O comando `sendEvent` retornará uma promessa que é resolvida com um objeto contendo as atividades/propostas solicitadas:
 Esta é a aparência da matriz `propositions`:
@@ -441,7 +441,7 @@ adobe.target.getOffers({...})
 Saiba mais sobre o comando `applyOffers` na [documentação dedicada](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html).
 
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
 Você pode aplicar as atividades do Target usando o comando `applyPropositions`.
 
@@ -492,7 +492,7 @@ adobe.target.sendNotifications({
 
 [Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
 Você pode rastrear eventos e ações do usuário chamando o comando `sendEvent`, preenchendo o grupo de campos XDM `_experience.decisioning.propositions` e definindo o `eventType` como um dos dois valores:
 
@@ -657,7 +657,7 @@ alloy("sendEvent", {
 
 ### Uso da at.js
 
-Use a função `adobe.target.triggerView`. Essa função pode ser chamada sempre que uma nova página é carregada ou quando um componente em uma página é renderizado novamente. adobe.target.triggerView() deve ser implementado para aplicativos de página única (SPA) para usar o Visual Experience Composer (VEC) para criar atividades de teste A/B e direcionamento de experiência (XT). Se adobe.target.triggerView() não estiver implementado no site, o VEC não poderá ser usado para SPA.
+Use a função `adobe.target.triggerView`. Essa função pode ser chamada sempre que uma nova página é carregada ou quando um componente em uma página é renderizado novamente. adobe.target.triggerView() deve ser implementado para aplicativos de página única (SPAs) para usar o Visual Experience Composer (VEC) para criar atividades de teste A/B e direcionamento de experiência (XT). Se adobe.target.triggerView() não estiver implementado no site, o VEC não poderá ser usado para SPA.
 
 **Exemplo**
 
@@ -668,9 +668,9 @@ adobe.target.triggerView("homeView")
 [Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
 
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
-Para acionar ou sinalizar uma Alteração de Exibição de aplicativo de página única, defina a propriedade `web.webPageDetails.viewName` na opção `xdm` do comando `sendEvent`. O SDK da Web verificará o cache de exibição. Se houver ofertas para o `viewName` especificado em `sendEvent`, ele as executará e enviará um evento de notificação de exibição.
+Para acionar ou sinalizar uma Alteração de Exibição de aplicativo de página única, defina a propriedade `web.webPageDetails.viewName` na opção `xdm` do comando `sendEvent`. O Web SDK verificará o cache de exibição. Se houver ofertas para o `viewName` especificado em `sendEvent`, ele as executará e enviará um evento de notificação de exibição.
 
 **Exemplo**
 
@@ -708,11 +708,11 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 [Saiba mais](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
 >[!IMPORTANT]
 >
->Verifique se você está usando o SDK da Web da plataforma versão 2.6.0 ou posterior.
+>Verifique se você está usando o Experience Platform Web SDK versão 2.6.0 ou posterior.
 
 Os Tokens de Resposta são retornados como parte de `propositions`, que são expostos no resultado do comando `sendEvent`. Cada proposta contém uma matriz de `items` e cada item terá um objeto `meta` preenchido com Tokens de resposta se eles estiverem habilitados na interface do administrador do Target. [Saiba mais](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
@@ -763,9 +763,9 @@ As seções de página que contêm conteúdo personalizado podem ser pré-oculta
 Por padrão, `bodyHiddenStyle` oculta todo o HTML `body`.
 Ambas as configurações podem ser substituídas usando `window.targetGlobalSettings`. `window.targetGlobalSettings` deve ser colocado antes de carregar at.js.
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
-Usando o SDK da Web, o cliente pode definir seu estilo de pré-ocultação no comando de configuração, como no exemplo abaixo:
+Usando o Web SDK, o cliente pode definir seu estilo de pré-ocultação no comando de configuração, como no exemplo abaixo:
 
 ```javascript
 alloy("configure", {
@@ -776,7 +776,7 @@ alloy("configure", {
 });
 ```
 
-Ao carregar o SDK da Web assíncrono, recomendamos que o seguinte trecho seja inserido na página antes que o SDK da Web seja inserido:
+Ao carregar o Web SDK async, recomendamos que o seguinte trecho seja inserido na página antes que o Web SDK seja inserido:
 
 ```html
 <script>
@@ -882,9 +882,9 @@ Em seguida, os dados fluem da seguinte maneira:
 
 [Saiba mais](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
-O SDK da Web também é compatível com:
+O Web SDK também é compatível com:
 
 * Registro do Analytics no lado do cliente
 * Registro do Analytics Server Side
@@ -940,7 +940,7 @@ O registro no lado do servidor do Analytics é ativado quando o Analytics é ati
 ![Interface do usuário de sequências de dados mostrando as configurações do Analytics.](assets/analytics-enabled-datastream-config.png)
 
 Quando o Registro de análise do lado do servidor estiver ativado, a carga do A4T que precisa ser compartilhada com o Analytics para que os relatórios do Analytics sejam exibidos
-as impressões e conversões corretas são compartilhadas no nível da Edge Network, para que o cliente não precise fazer nenhum processamento adicional.
+as impressões e conversões corretas são compartilhadas no nível do Edge Network, para que o cliente não precise fazer nenhum processamento adicional.
 
 Veja como os dados fluem para nossos sistemas quando o registro do Server Side Analytics está ativado:
 
@@ -966,9 +966,9 @@ window.targetGlobalSettings = {
 
 [Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
-Este recurso não é compatível com o SDK da Web.
+Este recurso não tem suporte no Web SDK.
 
 ## Como atualizar atributos do perfil do Target
 
@@ -1007,7 +1007,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
 Para atualizar um perfil de Destino, use o comando `sendEvent` e defina a propriedade `data.__adobe.target`, prefixando os nomes de chave com `profile`.
 
@@ -1027,7 +1027,7 @@ alloy("sendEvent", {
 });
 ```
 
-## Como usar o Target Recommendations
+## Como usar as Recomendações do Target
 
 ### Uso da at.js
 
@@ -1067,7 +1067,7 @@ adobe.target.getOffers({
 [Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
 Para enviar dados de Recomendação, use o comando `sendEvent` e defina a propriedade `data.__adobe.target`, prefixando os nomes de chave usando `entity`.
 
@@ -1146,9 +1146,9 @@ window.targetPageParams = function() {
 
 [Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
-O SDK da Web é compatível com a ID de terceiros do Target. No entanto, requer mais algumas etapas. Antes de mergulhar na solução, devemos falar um pouco sobre `identityMap`.
+O Web SDK oferece suporte à ID de terceiros do Target. No entanto, requer mais algumas etapas. Antes de mergulhar na solução, devemos falar um pouco sobre `identityMap`.
 O Mapa de identidade permite que os clientes enviem várias identidades. Todas as identidades têm namespace. Cada namespace pode ter uma ou mais identidades. Uma identidade específica pode ser marcada como primária.
 Com esse conhecimento em mente, podemos ver quais são as etapas necessárias para configurar o sdk da Web para usar a ID de terceiros do Target.
 
@@ -1200,9 +1200,9 @@ window.targetPageParams = function() {
     };
 ```
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
-Usando o SDK da Web, os clientes podem definir a propriedade em um nível superior, ao definir a configuração da sequência de dados, no namespace do Adobe Target:
+Usando o Web SDK, os clientes podem definir a propriedade em um nível superior, ao definir a configuração do fluxo de dados, no namespace do Adobe Target:
 ![Interface do usuário de fluxos de dados mostrando as configurações do Adobe Target.](assets/at-property-setup.png)
 Isso significa que cada chamada do Target para essa configuração específica do Fluxo de dados conterá o token de propriedade.
 
@@ -1235,9 +1235,9 @@ adobe.target.getOffers({
 
 OBSERVAÇÃO: é altamente recomendável garantir que cada `mbox` na matriz `mboxes` tenha seu próprio índice. Normalmente, a primeira mbox tem `index=0`, a próxima `index=1`, etc.
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
-No momento, não há suporte para essa funcionalidade no SDK da Web.
+No momento, não há suporte para essa funcionalidade no Web SDK.
 
 ## Como depurar minha implementação do Target
 
@@ -1249,14 +1249,14 @@ A at.js expõe estes recursos de depuração:
 * Depuração da mbox - a at.js registra cada ação
 * Rastreamento de Destino - com um token de rastreamento de mbox gerado no Marcador, um objeto de rastreamento com detalhes que participaram do processo de decisão está disponível no objeto `window.___target_trace`
 
-Observação: todos esses recursos de depuração estão disponíveis com recursos aprimorados em [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+Observação: todos esses recursos de depuração estão disponíveis com recursos aprimorados no [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-### Utilização do SDK da Web
+### Utilização do Web SDK
 
-Você tem vários recursos de depuração ao usar o SDK da Web:
+Você tem vários recursos de depuração ao usar o Web SDK:
 
-* Usando a [Garantia](/help/assurance/home.md)
-* [Depuração do SDK da Web habilitada](/help/web-sdk/use-cases/debugging.md)
-* Usar [ganchos de monitoramento do SDK da Web](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* Usando o [Assurance](/help/assurance/home.md)
+* [Depuração do Web SDK ativada](/help/web-sdk/use-cases/debugging.md)
+* Usar [ganchos de monitoramento do Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
 * Usar [Adobe Experience Platform Debugger](/help/debugger/home.md)
 * Rastreamento de destino

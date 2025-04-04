@@ -1,11 +1,11 @@
 ---
 title: Visualizações em extensões da Web
-description: Saiba como definir visualizações para módulos de biblioteca em extensões da Web do Adobe Experience Platform
+description: 'Saiba como definir visualizações para módulos de biblioteca em extensões da Web do Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2061'
-ht-degree: 98%
+source-wordcount: '2063'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Cada tipo de evento, condição, ação ou elemento de dados pode fornecer uma visualização, o que permite ao usuário fornecer configurações. A extensão também pode ter uma [visualização de configuração de extensão](../configuration.md) de nível superior, o que permite aos usuários fornecer configurações globais para a extensão inteira. O processo de construção de uma visualização é idêntico em todos os tipos de visualizações.
 
@@ -148,9 +148,9 @@ O objeto `options` deve conter uma única propriedade booliana, `tokenize`. Essa
 
 Provavelmente, suas visualizações têm campos de formulário nos quais os usuários gostariam de aproveitar elementos de dados. Por exemplo, caso a visualização tenha um campo de texto no qual o usuário deva digitar um nome de produto, talvez não faça sentido que o usuário digite um valor embutido em código no campo. Em vez disso, eles podem desejar que o valor do campo seja dinâmico (determinado no tempo de execução) e podem fazer isso usando um elemento de dados.
 
-Como exemplo, suponha que estejamos construindo uma extensão que envia um sinal para rastrear uma conversão. Vamos supor também que um dos dados que nosso beacon envia é um nome de produto. Nossa visualização de extensão que permite ao usuário configurar o beacon provavelmente terá um campo de texto para o nome do produto. Normalmente, não faria muito sentido para o usuário do Platform digitar um nome de produto estático, como &quot;Calzone Oven XL&quot;, porque o nome do produto provavelmente depende da página da qual o beacon será enviado. Este é um caso ideal para um elemento de dados.
+Como exemplo, suponha que estejamos construindo uma extensão que envia um sinal para rastrear uma conversão. Vamos supor também que um dos dados que nosso beacon envia é um nome de produto. Nossa visualização de extensão que permite ao usuário configurar o beacon provavelmente terá um campo de texto para o nome do produto. Normalmente, não faria muito sentido para o usuário do Experience Platform digitar um nome de produto estático, como &quot;Calzone Oven XL&quot;, porque o nome do produto provavelmente depende da página da qual o beacon será enviado. Este é um caso ideal para um elemento de dados.
 
-Se um usuário quiser usar o elemento de dados chamado `productname` como o valor do nome do produto, ele poderá digitar o nome do elemento de dados com sinais de porcentagem em ambos os lados (`%productname%`). Nós nos referimos ao nome do elemento de dados com sinal de porcentagem como um &quot;token de elemento de dados&quot;. Os usuários da Platform geralmente estão familiarizados com essa construção. Por sua vez, a extensão salvaria o token do elemento de dados dentro do objeto `settings` exportado. Seu objeto de configurações pode ter a seguinte aparência:
+Se um usuário quiser usar o elemento de dados chamado `productname` como o valor do nome do produto, ele poderá digitar o nome do elemento de dados com sinais de porcentagem em ambos os lados (`%productname%`). Nós nos referimos ao nome do elemento de dados com sinal de porcentagem como um &quot;token de elemento de dados&quot;. Os usuários do Experience Platform geralmente estão familiarizados com essa construção. Por sua vez, a extensão salvaria o token do elemento de dados dentro do objeto `settings` exportado. Seu objeto de configurações pode ter a seguinte aparência:
 
 ```js
 {

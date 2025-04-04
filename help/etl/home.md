@@ -2,25 +2,25 @@
 keywords: Experience Platform;página inicial;tópicos populares;integrações de ETL;etl;etl;integrações de ETL
 solution: Experience Platform
 title: Desenvolvimento de integrações ETL para o Adobe Experience Platform
-description: O guia de integração de ETL descreve as etapas gerais para criar conectores seguros de alto desempenho para o Experience Platform e assimilar dados na plataforma.
+description: O guia de integração de ETL descreve as etapas gerais para criar conectores seguros e de alto desempenho para o Experience Platform e assimilar dados na Experience Platform.
 exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3977'
+source-wordcount: '3978'
 ht-degree: 3%
 
 ---
 
 # Desenvolvimento de integrações ETL para o Adobe Experience Platform
 
-O guia de integração ETL descreve as etapas gerais para criar conectores seguros e de alto desempenho para [!DNL Experience Platform] e assimilar dados no [!DNL Platform].
+O guia de integração ETL descreve as etapas gerais para criar conectores seguros e de alto desempenho para [!DNL Experience Platform] e assimilar dados no [!DNL Experience Platform].
 
 
 - [[!DNL Catalog]](https://www.adobe.io/experience-platform-apis/references/catalog/)
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Batch Ingestion]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [[!DNL Streaming Ingestion]](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Autenticação e autorização para APIs Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
+- [Autenticação e autorização para APIs do Experience Platform](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 Este guia também inclui exemplos de chamadas de API a serem usadas ao criar um conector ETL, com links para a documentação que descreve cada serviço do [!DNL Experience Platform], e o uso de sua API, com mais detalhes.
@@ -35,12 +35,12 @@ O diagrama de fluxo de trabalho a seguir fornece uma visão geral de alto nível
 
 ## Componentes do Adobe Experience Platform
 
-Há vários componentes de Experience Platform envolvidos nas integrações do conector ETL. A lista a seguir descreve vários componentes e funcionalidades principais:
+Há vários componentes do Experience Platform envolvidos nas integrações do conector ETL. A lista a seguir descreve vários componentes e funcionalidades principais:
 
-- **Adobe Identity Management System (IMS)** - Fornece a estrutura para autenticação aos serviços da Adobe.
+- **Adobe Identity Management System (IMS)** - Fornece a estrutura de autenticação para os serviços da Adobe.
 - **Organização IMS** - Uma entidade corporativa que pode ser proprietária ou licenciar produtos e serviços e permitir acesso aos membros.
 - **Usuário do IMS** - Membros de uma Organização do IMS. A relação entre organização e usuário é do tipo muitos para muitos.
-- **[!DNL Sandbox]** - Uma partição virtual em uma única instância do [!DNL Platform], para ajudar a desenvolver aplicativos de experiência digital.
+- **[!DNL Sandbox]** - Uma partição virtual em uma única instância do [!DNL Experience Platform], para ajudar a desenvolver aplicativos de experiência digital.
 - **Descoberta de Dados** - Registra os metadados de dados assimilados e transformados em [!DNL Experience Platform].
 - **[!DNL Data Access]** - Fornece aos usuários uma interface para acessar seus dados em [!DNL Experience Platform].
 - **[!DNL Data Ingestion]** - Envia dados para [!DNL Experience Platform] com [!DNL Data Ingestion] APIs.
@@ -56,19 +56,19 @@ Este manual fornece exemplos de chamadas de API para demonstrar como formatar su
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral da sandbox](../sandboxes/home.md).
 
 Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -78,7 +78,7 @@ Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um ca
 
 Para começar, um usuário do ETL faz logon na interface do usuário (UI) [!DNL Experience Platform] e cria conjuntos de dados para assimilação usando um conector padrão ou conector de serviço por push.
 
-Na interface, o usuário cria o conjunto de dados de saída selecionando um esquema de conjunto de dados. A escolha do esquema depende do tipo de dados (registro ou série de tempo) que está sendo assimilado em [!DNL Platform]. Ao clicar na guia Esquemas na interface do usuário, o usuário poderá exibir todos os esquemas disponíveis, incluindo o tipo de comportamento compatível com o esquema.
+Na interface, o usuário cria o conjunto de dados de saída selecionando um esquema de conjunto de dados. A escolha do esquema depende do tipo de dados (registro ou série de tempo) que está sendo assimilado em [!DNL Experience Platform]. Ao clicar na guia Esquemas na interface do usuário, o usuário poderá exibir todos os esquemas disponíveis, incluindo o tipo de comportamento compatível com o esquema.
 
 Na ferramenta ETL, o usuário começará a projetar suas transformações de mapeamento após configurar a conexão apropriada (usando suas credenciais). Pressupõe-se que a ferramenta ETL já tenha [!DNL Experience Platform] conectores instalados (processo não definido neste Guia de Integração).
 
@@ -211,7 +211,7 @@ O formato da resposta depende do tipo de cabeçalho Aceitar enviado na solicita�
 
 **Resposta**
 
-O esquema JSON retornado descreve a estrutura e as informações de nível de campo (&quot;tipo&quot;, &quot;formato&quot;, &quot;mínimo&quot;, &quot;máximo&quot; etc.) dos dados, serializados como JSON. Se estiver usando um formato de serialização diferente de JSON para assimilação (como Parquet ou Scala), o [Guia do Registro de Esquemas](../xdm/tutorials/create-schema-api.md) contém uma tabela que mostra o tipo JSON desejado (&quot;meta:xdmType&quot;) e sua representação correspondente em outros formatos.
+O esquema JSON retornado descreve a estrutura e as informações no nível de campo (&quot;tipo&quot;, &quot;formato&quot;, &quot;mínimo&quot;, &quot;máximo&quot; etc.) dos dados, serializados como JSON. Se estiver usando um formato de serialização diferente de JSON para assimilação (como Parquet ou Scala), o [Guia do Registro de Esquemas](../xdm/tutorials/create-schema-api.md) contém uma tabela que mostra o tipo JSON desejado (&quot;meta:xdmType&quot;) e sua representação correspondente em outros formatos.
 
 Junto com esta tabela, o Guia do Desenvolvedor do [!DNL Schema Registry] contém exemplos detalhados de todas as chamadas possíveis que podem ser feitas usando a API [!DNL Schema Registry].
 
@@ -326,7 +326,7 @@ A resposta incluirá um conjunto de dados (`limit=1`) mostrando a propriedade &q
 
 ### Listar arquivos de conjunto de dados usando o atributo &quot;arquivos&quot;
 
-Também é possível usar uma solicitação GET para buscar detalhes do arquivo usando o atributo &quot;files&quot;.
+Você também pode usar uma solicitação GET para buscar detalhes do arquivo usando o atributo &quot;arquivos&quot;.
 
 **Formato da API**
 
@@ -759,7 +759,7 @@ Quando perfis de instantâneo forem usados, a ferramenta ETL terá que escolher 
 
 A repetição em lote e o reprocessamento de dados podem ser necessários nos casos em que um cliente descobrir que, nos últimos &quot;n&quot; dias, os dados que estão sendo processados pelo ETL não ocorreram conforme esperado ou os dados de origem podem não estar corretos.
 
-Para fazer isso, os administradores de dados do cliente usarão a interface do usuário do [!DNL Platform] para remover os lotes que contêm dados corrompidos. Em seguida, o ETL provavelmente precisará ser executado novamente, preenchendo novamente com dados corretos. Se a própria fonte tiver dados corrompidos, o engenheiro/administrador de dados precisará corrigir os lotes de origem e assimilar novamente os dados (no Adobe Experience Platform ou por meio de conectores ETL).
+Para fazer isso, os administradores de dados do cliente usarão a interface do usuário do [!DNL Experience Platform] para remover os lotes que contêm dados corrompidos. Em seguida, o ETL provavelmente precisará ser executado novamente, preenchendo novamente com dados corretos. Se a própria fonte tiver dados corrompidos, o engenheiro/administrador de dados precisará corrigir os lotes de origem e assimilar novamente os dados (no Adobe Experience Platform ou por meio de conectores ETL).
 
 Com base no tipo de dados gerado, será a escolha do engenheiro de dados remover um único lote ou todos os lotes de determinados conjuntos de dados. Os dados serão removidos/arquivados de acordo com as diretrizes de [!DNL Experience Platform].
 
@@ -781,7 +781,7 @@ Para lotes de origem, ele dependerá novamente da preferência do cliente e da r
 
 Adiamento é um processo no qual os dados de entrada ainda não estão completos o suficiente para serem enviados aos processos de downstream, mas podem ser utilizáveis no futuro. Os clientes determinarão sua tolerância individual à janela de dados para correspondência futura em relação ao custo do processamento para informar sua decisão de deixar os dados de lado e reprocessá-los na próxima execução de transformação, esperando que eles possam ser enriquecidos e reconciliados/compilados em algum momento futuro dentro da janela de retenção. Esse ciclo está em andamento até que a linha seja processada o suficiente ou considerada muito obsoleta para continuar investindo no. Cada iteração gerará dados adiados, que são um superconjunto de todos os dados adiados em iterações anteriores.
 
-A Adobe Experience Platform não identifica dados adiados no momento, portanto, as implementações de clientes devem confiar nas configurações manuais de ETL e Conjunto de Dados para criar outro conjunto de dados em [!DNL Platform], espelhando o conjunto de dados de origem, que pode ser usado para manter os dados adiados. Nesse caso, os dados adiados serão semelhantes aos dados do instantâneo. Em cada execução da transformação ETL, os dados de origem serão unidos aos dados adiados e enviados para processamento.
+A Adobe Experience Platform não identifica dados adiados no momento, portanto, as implementações de clientes devem confiar nas configurações manuais de ETL e Conjunto de Dados para criar outro conjunto de dados em [!DNL Experience Platform], espelhando o conjunto de dados de origem, que pode ser usado para manter os dados adiados. Nesse caso, os dados adiados serão semelhantes aos dados do instantâneo. Em cada execução da transformação ETL, os dados de origem serão unidos aos dados adiados e enviados para processamento.
 
 ## Changelog
 

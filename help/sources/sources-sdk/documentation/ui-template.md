@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Modelo de documentação de autoatendimento para a interface do
 description: Saiba como criar uma conexão de origem YOURSOURCE usando a interface do usuário do Adobe Experience Platform.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 
 *Comece atualizando os metadados (título e descrição) na parte superior da página. Ignore todas as instâncias de UICONTROL nesta página. Essa é uma tag que ajuda nossos processos de tradução automática a traduzir corretamente a página para os vários idiomas compatíveis. Adicionaremos marcas à sua documentação após você enviá-la.*
 
-Este tutorial fornece etapas para a criação de um conector de origem *YOURSOURCE* usando a interface do usuário da Platform.
+Este tutorial fornece etapas para a criação de um conector de origem *YOURSOURCE* usando a interface do usuário do Experience Platform.
 
 ## Visão geral
 
@@ -37,7 +37,7 @@ Este tutorial fornece etapas para a criação de um conector de origem *YOURSOUR
 
 ### Coletar credenciais necessárias
 
-Para conectar *YOURSOURCE* à Platform, você deve fornecer valores para as seguintes propriedades de conexão:
+Para conectar *YOURSOURCE* à Experience Platform, você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
@@ -49,7 +49,7 @@ Para obter mais informações sobre essas credenciais, consulte a documentação
 
 ## Conecte sua conta *YOURSOURCE*
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -57,7 +57,7 @@ Na categoria *CATEGORIA* de YOURSOURCE, selecione *YOURSOURCE* e **[!UICONTROL A
 
 >[!TIP]
 >
->As capturas de tela usadas abaixo são exemplos. Ao criar sua documentação, substitua as imagens por capturas de tela da origem real. É possível usar o mesmo padrão de marcação e cor, bem como os mesmos nomes de arquivo. Certifique-se de que sua captura de tela capture toda a tela da interface do usuário da Platform. Para obter informações sobre como carregar capturas de tela, consulte o manual em [enviando sua documentação para revisão](./github.md).
+>As capturas de tela usadas abaixo são exemplos. Ao criar sua documentação, substitua as imagens por capturas de tela da origem real. É possível usar o mesmo padrão de marcação e cor, bem como os mesmos nomes de arquivo. Certifique-se de que sua captura de tela capture toda a tela da interface do usuário do Experience Platform. Para obter informações sobre como carregar capturas de tela, consulte o manual em [enviando sua documentação para revisão](./github.md).
 
 ![catálogo](../assets/ui/catalog.png)
 
@@ -79,7 +79,7 @@ Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e
 
 *Os fluxos de trabalho para as etapas restantes da criação de um fluxo de dados são modularizados. Se houver chamadas específicas que você queira fazer em relação à sua origem, consulte a seção de recursos adicionais abaixo.*
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta *YOURSOURCE*. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta *YOURSOURCE*. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Recursos adicionais
 

@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;fontes;conectores;conectores de origem;campanha;serviços gerenciados de campanha;;home;popular topics;sources;connectors;source connectors;campaign;campaign managed services
-title: Criar uma conexão de origem do Adobe Campaign Managed Cloud Services usando a interface do usuário da plataforma
-description: Saiba como conectar o Adobe Experience Platform ao Adobe Campaign Managed Cloud Services usando a interface do usuário da plataforma.
+title: Criar uma conexão de origem do Adobe Campaign Managed Cloud Services usando a interface do usuário do Experience Platform
+description: Saiba como conectar o Adobe Experience Platform ao Adobe Campaign Managed Cloud Services usando a interface do usuário do Experience Platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1233'
+source-wordcount: '1246'
 ht-degree: 6%
 
 ---
 
-# Criar uma conexão de origem do Adobe Campaign Managed Cloud Services usando a interface do usuário da plataforma
+# Criar uma conexão de origem do Adobe Campaign Managed Cloud Services usando a interface do usuário do Experience Platform
 
 Este tutorial fornece etapas para criar uma conexão de origem a fim de trazer seus dados do Adobe Campaign Managed Cloud Services para a Adobe Experience Platform.
 
@@ -18,15 +18,15 @@ Este tutorial fornece etapas para criar uma conexão de origem a fim de trazer s
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): a Platform permite que dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Platform.
+* [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
-* [Sandboxes](../../../../../sandboxes/home.md): a Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Conectar o Adobe Campaign Managed Cloud Services à plataforma
+## Conectar o Adobe Campaign Managed Cloud Services ao Experience Platform
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Você também pode usar a barra de pesquisa para restringir as fontes exibidas.
 
@@ -60,7 +60,7 @@ A etapa [!UICONTROL Selecionar dados] é exibida, fornecendo uma interface para 
 | --- | --- |
 | Instância do Adobe Campaign | O nome da instância do ambiente Adobe Campaign que você está usando. |
 | Target mapping | Os objetos técnicos usados pelo Campaign para entregar mensagens e conter todas as configurações técnicas necessárias para enviar deliveries. |
-| Nome do esquema | O nome da entidade do esquema que você está trazendo para a Platform. As opções incluem Log de entrega e Log de rastreamento. |
+| Nome do esquema | O nome da entidade do esquema que você está trazendo para a Experience Platform. As opções incluem Log de entrega e Log de rastreamento. |
 
 ![Uma interface em que você pode configurar a instância do Adobe Campaign, o target mapping e o nome do esquema.](../../../../images/tutorials/create/campaign/select-data.png)
 
@@ -96,7 +96,7 @@ Quando terminar de fornecer detalhes ao seu fluxo de dados, selecione **[!UICONT
 
 A etapa [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
+O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >
@@ -145,7 +145,7 @@ Essa página também fornece uma interface para atualizar a descrição dos meta
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer seus logs de entrega e dados de logs de rastreamento do Campaign v8 para a Platform. Os dados de entrada agora podem ser usados por serviços downstream da Platform, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer seus logs do delivery e os dados dos logs de rastreamento do Campaign v8 para a Experience Platform. Os dados de entrada agora podem ser usados por serviços downstream do Experience Platform, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Visão geral do [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Visão geral do [!DNL Data Science Workspace]](../../../../../data-science-workspace/home.md)

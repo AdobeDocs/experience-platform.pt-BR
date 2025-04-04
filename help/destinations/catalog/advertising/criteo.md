@@ -3,9 +3,9 @@ keywords: publicidade, critério,
 title: Conexão de critério
 description: O Criteo capacita a publicidade confiável e impactante para trazer experiências mais ricas para cada consumidor através da internet aberta. Com o maior conjunto de dados de comércio do mundo e a melhor IA do setor, o Criteo garante que cada ponto de contato na jornada de compras seja personalizado para alcançar os clientes com o anúncio certo, na hora certa.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1016'
+source-wordcount: '1017'
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ O critério é compatível com a ativação das identidades descritas na tabela 
 
 | Identidade de destino | Descrição | Considerações |
 | --- | --- | --- |
-| `email_sha256` | Endereços de email com hash com o algoritmo SHA-256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA-256. Quando o campo de origem contiver atributos sem hash, marque a opção [!UICONTROL Aplicar transformação] para que o Platform coloque os dados em hash automaticamente durante a ativação. |
+| `email_sha256` | Endereços de email com hash com o algoritmo SHA-256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA-256. Quando o campo de origem contiver atributos sem hash, marque a opção [!UICONTROL Aplicar transformação] para que o Experience Platform coloque os dados em hash automaticamente durante a ativação. |
 | `gum_id` | Identificador de cookie do critério [!DNL GUM] | [!DNL GUM IDs] permite que os clientes mantenham uma correspondência entre seu sistema de identificação de usuário e a identificação de usuário do Critério ([!DNL UID]). Se o tipo de identificador for `gum_id`, um parâmetro adicional, o [!DNL GUM Caller ID], também deverá ser incluído. Entre em contato com a equipe de conta da Criteo para o [!DNL GUM Caller ID] apropriado ou para obter mais informações sobre esta sincronização [!DNL GUM ID], se necessário. |
 
 ## Tipo e frequência de exportação {#export-type-frequency}

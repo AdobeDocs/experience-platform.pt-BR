@@ -5,7 +5,7 @@ title: Criar uma conexão Couchbase Source na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem Couchbase usando a interface do Adobe Experience Platform.
 exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '457'
 ht-degree: 1%
@@ -18,11 +18,11 @@ ht-degree: 1%
 >
 >A origem [!DNL Couchbase] será substituída no final de junho de 2025.
 
-Os conectores do Source em [!DNL Adobe Experience Platform] fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL Couchbase] usando a interface do usuário [!DNL Platform].
+Os conectores do Source em [!DNL Adobe Experience Platform] fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL Couchbase] usando a interface do usuário [!DNL Experience Platform].
 
 ## Introdução
 
-Este tutorial requer entendimento prático dos seguintes componentes do [!DNL Platform]:
+Este tutorial requer entendimento prático dos seguintes componentes do [!DNL Experience Platform]:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -41,7 +41,7 @@ Para autenticar seu conector de origem [!DNL Couchbase], você deve fornecer val
 
 ## Conectar sua conta do [!DNL Couchbase]
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Couchbase] ao [!DNL Platform].
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Couchbase] ao [!DNL Experience Platform].
 
 Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
@@ -67,4 +67,4 @@ Para conectar uma conta existente, selecione a conta [!DNL Couchbase] com a qual
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Couchbase]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Platform]](../../dataflow/databases.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Couchbase]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Experience Platform]](../../dataflow/databases.md).

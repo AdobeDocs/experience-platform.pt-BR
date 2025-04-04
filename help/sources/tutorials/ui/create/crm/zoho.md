@@ -5,9 +5,9 @@ title: Criar uma conexão Zoho CRM Source na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem do Zoho CRM usando a interface do usuário do Adobe Experience Platform.
 exl-id: c648fc3e-beea-4030-8d36-dd8a7e2c281e
-source-git-commit: 474b81aa8caf58013f8ea7cff9ad59d92466aac8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '550'
+source-wordcount: '553'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 2%
 >
 >A origem [!DNL Zoho CRM] será substituída no final de junho de 2025.
 
-Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados de CRM originados externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL Zoho CRM] usando a interface do usuário [!DNL Platform].
+Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados de CRM originados externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL Zoho CRM] usando a interface do usuário [!DNL Experience Platform].
 
 ## Introdução
 
@@ -33,7 +33,7 @@ Se você já tiver uma conta válida do [!DNL Zoho CRM], ignore o restante deste
 
 ### Coletar credenciais necessárias
 
-Para conectar [!DNL Zoho CRM] à Platform, você deve fornecer valores para as seguintes propriedades de conexão:
+Para conectar [!DNL Zoho CRM] ao Experience Platform, você deve fornecer valores para as seguintes propriedades de conexão:
 
 | Credencial | Descrição |
 | --- | --- |
@@ -48,9 +48,9 @@ Para obter mais informações sobre essas credenciais, consulte a documentação
 
 ## Conectar sua conta do [!DNL Zoho CRM]
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Zoho CRM] ao [!DNL Platform].
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Zoho CRM] ao [!DNL Experience Platform].
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -78,4 +78,4 @@ Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Zoho CRM]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Platform](../../dataflow/crm.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Zoho CRM]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](../../dataflow/crm.md).

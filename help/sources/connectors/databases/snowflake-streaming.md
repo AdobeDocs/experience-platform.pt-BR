@@ -1,12 +1,12 @@
 ---
-title: Visão geral do conector Source de transmissão Snowflake
-description: Saiba como criar uma conexão de origem e um fluxo de dados para assimilar dados de transmissão da instância do Snowflake para a Adobe Experience Platform
+title: Visão geral do Snowflake Streaming Source Connector
+description: Saiba como criar uma conexão de origem e um fluxo de dados para assimilar dados de transmissão da sua instância do Snowflake para a Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '820'
 ht-degree: 1%
 
 ---
@@ -17,12 +17,12 @@ ht-degree: 1%
 >
 >* A fonte de transmissão [!DNL Snowflake] está disponível na API para usuários que compraram o Real-Time CDP Ultimate.
 >
->* Agora você pode usar a fonte de streaming [!DNL Snowflake] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Para saber mais sobre a infraestrutura de Experience Platform compatível, consulte a [visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md).
+>* Agora você pode usar a fonte de streaming [!DNL Snowflake] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../landing/multi-cloud.md).
 
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-O Experience Platform fornece suporte para streaming de dados de um banco de dados [!DNL Snowflake].
+O Experience Platform fornece suporte para a transmissão de dados de um banco de dados [!DNL Snowflake].
 
 ## Compreendendo a fonte de streaming [!DNL Snowflake]
 
@@ -38,7 +38,7 @@ A seção a seguir descreve as etapas de pré-requisito a serem concluídas ante
 
 Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Amazon Redshift] à Plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Amazon Redshift] ao Experience Platform usando APIs ou a interface do usuário:
 
 ### Coletar credenciais necessárias
 
@@ -47,8 +47,8 @@ Para que [!DNL Flow Service] se conecte a [!DNL Snowflake], você deve fornecer 
 | Credencial | Descrição |
 | --- | --- |
 | `account` | O identificador de conta completo (nome da conta ou localizador de conta) da sua conta do [!DNL Snowflake] foi acrescentado com o sufixo `snowflakecomputing.com`. O identificador da conta pode ter diferentes formatos: <ul><li>{ORG_NAME}-{ACCOUNT_NAME}.snowflakecomputing.com (por exemplo, `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.snowflakecomputing.com (por exemplo, `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD}.snowflakecomputing.com (por exemplo, `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Para obter mais informações, leia o [[!DNL Snowflake document on account identifiers]](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
-| `warehouse` | O warehouse [!DNL Snowflake] gerencia o processo de execução da consulta para o aplicativo. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente ao trazer dados para a plataforma. |
-| `database` | O banco de dados [!DNL Snowflake] contém os dados que você deseja trazer para a Plataforma. |
+| `warehouse` | O warehouse [!DNL Snowflake] gerencia o processo de execução da consulta para o aplicativo. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente ao trazer dados para a Experience Platform. |
+| `database` | O banco de dados [!DNL Snowflake] contém os dados que você deseja trazer para a Experience Platform. |
 | `username` | O nome de usuário da conta [!DNL Snowflake]. |
 | `password` | A senha da conta de usuário [!DNL Snowflake]. |
 | `role` | (Opcional) Uma função definida personalizada que pode ser fornecida para um usuário, para uma determinada conexão. Se não for fornecido, o padrão será `public`. |
@@ -87,7 +87,7 @@ Para obter mais informações sobre o gerenciamento de funções e privilégios,
 
 ## Próximas etapas
 
-O tutorial a seguir fornece etapas sobre como conectar sua fonte de transmissão do [!DNL Snowflake] ao Experience Platform usando a API:
+O tutorial a seguir fornece etapas sobre como conectar sua fonte de streaming do [!DNL Snowflake] ao Experience Platform usando a API:
 
 * [Transmitir dados de um banco de dados  [!DNL Snowflake]  para o Experience Platform usando a API do Serviço de Fluxo](../../tutorials/api/create/databases/snowflake-streaming.md)
-* [Transmitir dados de um banco de dados  [!DNL Snowflake]  para o Experience Platform usando o espaço de trabalho de origens na interface de usuário do Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)
+* [Transmitir dados de um banco de dados  [!DNL Snowflake]  para o Experience Platform usando o espaço de trabalho de origens na interface do usuário do Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)

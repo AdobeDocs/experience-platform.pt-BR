@@ -1,12 +1,12 @@
 ---
 keywords: extensão de encaminhamento de eventos;mixpanel;extensão de encaminhamento de eventos do mixpanel
 title: Extensão de encaminhamento de eventos da API de rastreamento do Mixpanel
-description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos Edge Network para o Mixpanel.
+description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform envia eventos do Edge Network para o Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '892'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ O [!DNL Mixpanel] emprega um modelo centrado no usuário e baseado em eventos qu
 
 ## Casos de uso
 
-Essa extensão deve ser usada se você quiser usar dados do Edge Network em [!DNL Mixpanel] para aproveitar seus recursos de análise de produtos.
+Essa extensão deve ser usada se você quiser usar dados da Edge Network no [!DNL Mixpanel] para aproveitar seus recursos de análise de produtos.
 
 Por exemplo, considere uma organização de varejo com presença multicanal (site e dispositivos móveis). A organização captura entradas transacionais ou conversacionais como dados do evento de suas plataformas e as carrega em [!DNL Mixpanel] usando a extensão de encaminhamento de eventos.
 
@@ -47,7 +47,7 @@ Em [!DNL Mixpanel], um cluster de identidade contém uma coleção de `distinct_
 
 [!DNL Mixpanel] resolve clusters de identidade através de dois métodos:
 
-* **Identificar** : [!DNL Mixpanel] conecta o identificador escolhido a um `distinct_id` anônimo. Se o SDK do [!DNL Mixpanel] estiver habilitado no site, a Platform usará o `distinct_id` atribuído ao usuário que está conectado no momento.
+* **Identificar** : [!DNL Mixpanel] conecta o identificador escolhido a um `distinct_id` anônimo. Se o seu site tiver o SDK [!DNL Mixpanel] habilitado, a Experience Platform usará o `distinct_id` atribuído ao usuário que está conectado no momento.
 * **Alias**: [!DNL Mixpanel] combina dois `distinct id`s não anônimos se os critérios de mesclagem adicionais forem atendidos.
 
 >[!NOTE]
@@ -95,7 +95,7 @@ Depois que a ação [!UICONTROL Rastrear evento] for adicionada à regra, você 
 
 >[!IMPORTANT]
 >
->Se o site estiver usando o SDK do [!DNL Mixpanel], você poderá continuar com a próxima etapa do [validação dos dados [!DNL Mixpanel]](#validate). Se você não estiver usando o SDK [!DNL Mixpanel], [crie uma regra de rastreamento de identidade separada](#create-an-identity-tracking-rule) para garantir que os eventos apropriados e os valores `distinct_id` sejam enviados para [!DNL Mixpanel] quando ocorrer um evento de identificação de usuário.
+>Se o seu site estiver usando o SDK [!DNL Mixpanel], você poderá continuar até a próxima etapa do [validação de dados [!DNL Mixpanel]](#validate). Se você não estiver usando o SDK [!DNL Mixpanel], deve [criar uma regra de rastreamento de identidade separada](#create-an-identity-tracking-rule) para garantir que os eventos apropriados e os valores de `distinct_id` sejam enviados para [!DNL Mixpanel] quando ocorrer um evento de identificação de usuário.
 
 ## Validar dados em [!DNL Mixpanel] {#validate}
 
@@ -105,7 +105,7 @@ Verifique se [!DNL Mixpanel] mesclou os eventos de pós-logon preenchidos com va
 
 ## Próximas etapas
 
-Este guia abordou como enviar eventos de conversão para [!DNL Mixpanel] usando o encaminhamento de eventos. Essa extensão de encaminhamento de eventos aproveita o SDK do [!DNL Mixpanel] e a API do JavaScript. Para obter mais informações sobre essas tecnologias subjacentes, consulte a documentação oficial:
+Este guia abordou como enviar eventos de conversão para [!DNL Mixpanel] usando o encaminhamento de eventos. Esta extensão de encaminhamento de eventos aproveita a API do SDK e do JavaScript [!DNL Mixpanel]. Para obter mais informações sobre essas tecnologias subjacentes, consulte a documentação oficial:
 
 * [[!DNL Mixpanel] SDK](https://developer.mixpanel.com/docs/nodejs)
 * [[!DNL Mixpanel] API JavaScript](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)

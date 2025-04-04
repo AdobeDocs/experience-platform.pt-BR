@@ -1,21 +1,21 @@
 ---
-title: Processar dados de consentimento do cliente usando o SDK da Web da Adobe Experience Platform
+title: Processar dados de consentimento do cliente usando o Adobe Experience Platform Web SDK
 description: Saiba como integrar o Adobe Experience Platform Web SDK para processar dados de consentimento do cliente no Adobe Experience Platform.
 role: Developer
 feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1311'
+source-wordcount: '1322'
 ht-degree: 1%
 
 ---
 
-# Integrar o SDK da Web da Platform para processar dados de consentimento do cliente
+# Integrar o Experience Platform Web SDK para processar dados de consentimento do cliente
 
-O SDK da Web da Adobe Experience Platform permite recuperar os sinais de consentimento do cliente gerados pelas Plataformas de gerenciamento de consentimento (CMPs) e enviá-los à Adobe Experience Platform sempre que ocorrer um evento de alteração de consentimento.
+O Adobe Experience Platform Web SDK permite recuperar os sinais de consentimento do cliente gerados pelas Plataformas de gerenciamento de consentimento (CMPs) e enviá-los à Adobe Experience Platform sempre que ocorrer um evento de alteração de consentimento.
 
-**O SDK não faz interface com nenhum CMP pronto para uso**. Cabe a você determinar como integrar o SDK ao seu site, acompanhar as alterações de consentimento no CMP e chamar o comando apropriado. Este documento fornece orientação geral sobre como integrar sua CMP ao SDK da Web da plataforma.
+**A SDK não faz interface com nenhum CMP pronto para uso**. Cabe a você determinar como integrar o SDK ao seu site, acompanhar as alterações de consentimento no CMP e chamar o comando apropriado. Este documento fornece orientação geral sobre como integrar a CMP ao Experience Platform Web SDK.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -24,7 +24,7 @@ Este tutorial presume que você já determinou como gerar dados de consentimento
 * [Criar um conjunto de dados usando o padrão Adobe](./adobe/dataset.md)
 * [Criar um conjunto de dados usando o padrão TCF 2.0](./iab/dataset.md)
 
-Este guia segue o fluxo de trabalho para configurar o SDK usando a extensão de tag na interface do usuário. Se você não quiser usar a extensão e preferir incorporar diretamente a versão independente do SDK ao seu site, consulte os seguintes documentos em vez deste guia:
+Este guia segue o fluxo de trabalho para configurar o SDK usando a extensão de tag na interface do usuário. Se você não quiser usar a extensão e preferir incorporar diretamente a versão independente do SDK no site, consulte os seguintes documentos em vez deste guia:
 
 * [Configurar uma sequência de dados](/help/datastreams/overview.md)
 * [Instalar o SDK](/help/web-sdk/install/overview.md)
@@ -38,7 +38,7 @@ As etapas de instalação neste guia exigem um entendimento prático das extens�
 
 ## Configurar um fluxo de dados
 
-Para que o SDK envie dados para o Experience Platform, primeiro você deve configurar um fluxo de dados. Na interface da Coleção de dados ou na interface do Experience Platform, selecione **[!UICONTROL Datastreams]** na navegação à esquerda.
+Para que o SDK envie dados para o Experience Platform, primeiro você deve configurar um fluxo de dados. Na interface da Coleção de dados ou na interface do Experience Platform, selecione **[!UICONTROL Fluxos de dados]** na navegação à esquerda.
 
 Depois de criar uma nova sequência de dados ou selecionar uma existente para editar, selecione o botão de alternância ao lado de **[!UICONTROL Adobe Experience Platform]**. Em seguida, use os valores listados abaixo para preencher o formulário.
 
@@ -46,15 +46,15 @@ Depois de criar uma nova sequência de dados ou selecionar uma existente para ed
 
 | Campo de sequência de dados | Valor |
 | --- | --- |
-| [!UICONTROL Sandbox] | O nome da Platform [sandbox](../../../sandboxes/home.md) que contém a conexão de transmissão e os conjuntos de dados necessários para configurar a sequência de dados. |
-| [!UICONTROL Conjunto de dados do evento] | Um conjunto de dados [!DNL XDM ExperienceEvent] que você planeja enviar dados do evento para usando o SDK. Embora você seja solicitado a fornecer um conjunto de dados de evento para criar um fluxo de dados da plataforma, observe que os dados de consentimento enviados por meio de eventos não são honrados nos fluxos de trabalho de imposição downstream. |
+| [!UICONTROL Sandbox] | O nome da [sandbox](../../../sandboxes/home.md) da Experience Platform que contém a conexão de transmissão e os conjuntos de dados necessários para configurar a sequência de dados. |
+| [!UICONTROL Conjunto de dados do evento] | Um conjunto de dados [!DNL XDM ExperienceEvent] que você planeja enviar dados do evento para usando a SDK. Embora você precise fornecer um conjunto de dados de evento para criar um fluxo de dados do Experience Platform, observe que os dados de consentimento enviados por meio de eventos não são honrados nos fluxos de trabalho de imposição downstream. |
 | [!UICONTROL Conjunto de dados do perfil] | O conjunto de dados habilitado para [!DNL Profile] com campos de consentimento do cliente que você criou [anteriormente](#prerequisites). |
 
 Quando terminar, selecione **[!UICONTROL Salvar]** na parte inferior da tela e continue seguindo os avisos adicionais para concluir a configuração.
 
-## Instalar e configurar o SDK da Web da plataforma
+## Instalar e configurar o Experience Platform Web SDK
 
-Depois de criar um fluxo de dados conforme descrito na seção anterior, você deve configurar a extensão SDK da Web da plataforma que será implantada no site. Se você não tiver a extensão SDK instalada na propriedade da marca, selecione **[!UICONTROL Extensões]** na navegação à esquerda, seguido da guia **[!UICONTROL Catálogo]**. Em seguida, selecione **[!UICONTROL Instalar]** na extensão SDK da plataforma, na lista de extensões disponíveis.
+Depois de criar um fluxo de dados conforme descrito na seção anterior, você deve configurar a extensão do Experience Platform Web SDK que será implantada no site. Se você não tiver a extensão do SDK instalada na propriedade da marca, selecione **[!UICONTROL Extensões]** na navegação à esquerda, seguido da guia **[!UICONTROL Catálogo]**. Em seguida, selecione **[!UICONTROL Instalar]** na extensão do Experience Platform SDK, na lista de extensões disponíveis.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
@@ -66,7 +66,7 @@ Selecione **[!UICONTROL Salvar]** para instalar a extensão.
 
 ### Criar um elemento de dados para definir o consentimento padrão
 
-Com a extensão SDK instalada, você tem a opção de criar um elemento de dados para representar o valor de consentimento da coleta de dados padrão (`collect.val`) para seus usuários. Isso pode ser útil se você quiser ter valores padrão diferentes dependendo do usuário, como `pending` para usuários da União Europeia e `in` para usuários da América do Norte.
+Com a extensão do SDK instalada, você tem a opção de criar um elemento de dados para representar o valor de consentimento da coleta de dados padrão (`collect.val`) para seus usuários. Isso pode ser útil se você quiser ter valores padrão diferentes dependendo do usuário, como `pending` para usuários da União Europeia e `in` para usuários da América do Norte.
 
 Nesse caso de uso, você pode implementar o seguinte para definir o consentimento padrão com base na região do usuário:
 
@@ -86,7 +86,7 @@ Aqui, você deve criar um elemento de dados [!UICONTROL Variável JavaScript] co
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Depois que o elemento de dados é criado, navegue de volta para a página de configuração da extensão SDK da Web. Na seção [!UICONTROL Privacidade], selecione **[!UICONTROL Fornecido pelo elemento de dados]** e use a caixa de diálogo fornecida para selecionar o elemento de dados de consentimento padrão criado anteriormente.
+Depois que o elemento de dados é criado, navegue de volta para a página de configuração da extensão do Web SDK. Na seção [!UICONTROL Privacidade], selecione **[!UICONTROL Fornecido pelo elemento de dados]** e use a caixa de diálogo fornecida para selecionar o elemento de dados de consentimento padrão criado anteriormente.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
@@ -96,7 +96,7 @@ Após concluir a configuração da extensão, ela poderá ser integrada ao seu s
 
 ## Execução de comandos de alteração de consentimento {#commands}
 
-Depois de integrar a extensão SDK ao seu site, você pode começar a usar o comando `setConsent` do SDK da Web da plataforma para enviar dados de consentimento à plataforma.
+Depois de integrar a extensão do SDK ao seu site, você pode começar a usar o comando `setConsent` do Experience Platform Web SDK para enviar dados de consentimento para a Experience Platform.
 
 O comando `setConsent` executa duas ações:
 
@@ -114,7 +114,7 @@ Há dois cenários em que `setConsent` deve ser chamado no site:
 
 O comando [`setConsent`](/help/web-sdk/commands/setconsent.md) espera um objeto de carga que contenha uma única propriedade de tipo de matriz: `consent`. A matriz `consent` deve conter pelo menos um objeto que forneça os campos de consentimento necessários para o padrão Adobe.
 
-Os campos de consentimento obrigatórios para o padrão Adobe são mostrados na seguinte chamada de exemplo `setConsent`:
+Os campos de consentimento necessários para o padrão Adobe são mostrados no seguinte exemplo de chamada `setConsent`:
 
 ```js
 alloy("setConsent", {
@@ -144,7 +144,7 @@ alloy("setConsent", {
 | Propriedade de carga útil | Descrição |
 | --- | --- |
 | `standard` | O padrão de consentimento que está sendo usado. Para o padrão Adobe, esse valor deve ser definido como `Adobe`. |
-| `version` | O número da versão do padrão de consentimento indicado em `standard`. Este valor deve ser definido como `2.0` para o processamento de consentimento padrão Adobe. |
+| `version` | O número da versão do padrão de consentimento indicado em `standard`. Esse valor deve ser definido como `2.0` para o processamento de consentimento padrão da Adobe. |
 | `value` | As informações de consentimento atualizadas do cliente, fornecidas como um objeto XDM que está em conformidade com a estrutura dos campos de consentimento do conjunto de dados habilitado para perfil. |
 
 >[!NOTE]
@@ -182,7 +182,7 @@ var setConsent = function () {
     }
   };
 
-  // Pass the XDM object to the Platform Web SDK
+  // Pass the XDM object to the Experience Platform Web SDK
   alloy("setConsent", {
     consent: [{
       standard: "Adobe",
@@ -195,13 +195,13 @@ var setConsent = function () {
 
 ## Tratamento de respostas do SDK
 
-Todos os comandos [!DNL Platform SDK] retornam promessas que indicam se a chamada teve êxito ou falhou. Em seguida, você pode usar essas respostas para obter lógica adicional, como exibir mensagens de confirmação ao cliente. Consulte [Respostas de comando](/help/web-sdk/commands/command-responses.md) para obter mais informações.
+Todos os comandos [!DNL Experience Platform SDK] retornam promessas que indicam se a chamada teve êxito ou falhou. Em seguida, você pode usar essas respostas para obter lógica adicional, como exibir mensagens de confirmação ao cliente. Consulte [Respostas de comando](/help/web-sdk/commands/command-responses.md) para obter mais informações.
 
-Depois de fazer `setConsent` chamadas com o SDK com êxito, você pode usar o visualizador de perfil na interface do usuário da plataforma para verificar se os dados estão chegando ao repositório de perfis. Consulte a seção sobre [procura de perfis por identidade](../../../profile/ui/user-guide.md#browse-identity) para obter mais informações.
+Depois de fazer `setConsent` chamadas com a SDK com êxito, você poderá usar o visualizador de perfil na interface do usuário do Experience Platform para verificar se os dados estão chegando ao repositório de perfis. Consulte a seção sobre [procura de perfis por identidade](../../../profile/ui/user-guide.md#browse-identity) para obter mais informações.
 
 ## Próximas etapas
 
-Ao seguir este guia, você configurou a extensão SDK da Web da plataforma para enviar dados de consentimento para o Experience Platform. Para obter orientação sobre como testar a implementação, consulte a documentação do padrão de consentimento que você está implementando:
+Ao seguir este guia, você configurou a extensão do Experience Platform Web SDK para enviar dados de consentimento para a Experience Platform. Para obter orientação sobre como testar a implementação, consulte a documentação do padrão de consentimento que você está implementando:
 
 * [Adobe standard](./adobe/overview.md#test)
 * [TCF 2.0 padrão](./iab/overview.md#test)

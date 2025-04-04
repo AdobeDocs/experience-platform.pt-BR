@@ -3,9 +3,9 @@ keywords: Experience Platform;serviço de consulta;serviço de consulta;estrutur
 title: Trabalho com estruturas de dados aninhadas no Serviço de consulta
 description: Este documento fornece um exemplo prático para processar e transformar campos de dados aninhados usando instruções CTAS e INSERT INTO.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 O Serviço de consulta da Adobe Experience Platform oferece suporte ao uso de campos de dados aninhados. A complexidade das estruturas de dados corporativos pode complicar a transformação ou o processamento desses dados. Este documento fornece exemplos de como criar, processar ou transformar conjuntos de dados com tipos de dados complexos, incluindo estruturas de dados aninhadas.
 
-O Serviço de Consulta fornece uma interface [!DNL PostgreSQL] para executar consultas SQL em todos os conjuntos de dados gerenciados por Experience Platform. A Platform aceita o uso de tipos de dados primitivos ou complexos em colunas de tabela, como struct, matrizes, mapas e struct, matrizes e mapas profundamente aninhados. Os conjuntos de dados também podem conter estruturas aninhadas, em que o tipo de dados da coluna pode ser tão complexo quanto uma matriz de estruturas aninhadas, ou um mapa de mapas em que o valor de um par de valores-chave pode ser uma estrutura com vários níveis de aninhamento.
+O Serviço de Consulta fornece uma interface [!DNL PostgreSQL] para executar consultas SQL em todos os conjuntos de dados gerenciados pela Experience Platform. O Experience Platform oferece suporte ao uso de tipos de dados primitivos ou complexos em colunas de tabela, como struct, matrizes, mapas e struct, matrizes e mapas aninhados. Os conjuntos de dados também podem conter estruturas aninhadas, em que o tipo de dados da coluna pode ser tão complexo quanto uma matriz de estruturas aninhadas, ou um mapa de mapas em que o valor de um par de valores-chave pode ser uma estrutura com vários níveis de aninhamento.
 
 ## Introdução
 
-Este tutorial requer o uso de um cliente PSQL de terceiros ou a ferramenta Editor de consultas para gravar, validar e executar consultas na interface do usuário (UI) do Experience Platform. Detalhes completos sobre como executar consultas por meio da interface podem ser encontrados no [guia da interface do Editor de Consultas](../ui/user-guide.md). Para obter uma lista detalhada sobre quais clientes de desktop de terceiros podem se conectar ao Serviço de Consulta, consulte a [visão geral das conexões de cliente](../clients/overview.md).
+Este tutorial requer o uso de um cliente PSQL de terceiros ou da ferramenta Editor de consultas para gravar, validar e executar consultas na interface do usuário (UI) do Experience Platform. Detalhes completos sobre como executar consultas por meio da interface podem ser encontrados no [guia da interface do Editor de Consultas](../ui/user-guide.md). Para obter uma lista detalhada sobre quais clientes de desktop de terceiros podem se conectar ao Serviço de Consulta, consulte a [visão geral das conexões de cliente](../clients/overview.md).
 
 Você também deve conhecer bem a sintaxe `INSERT INTO` e `CTAS`. Informações específicas sobre seu uso podem ser encontradas nas seções [`INSERT INTO`](../sql/syntax.md#insert-into) e [`CTAS`](../sql/syntax.md#create-table-as-select) da [documentação de referência da sintaxe SQL](../sql/syntax.md).
 

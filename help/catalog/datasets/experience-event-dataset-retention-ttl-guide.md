@@ -2,9 +2,9 @@
 title: Gerenciar a retenção do conjunto de dados do evento de experiência no Data Lake usando TTL
 description: Saiba como avaliar, definir e gerenciar a Retenção de conjunto de dados de evento de experiência no data lake usando configurações de Tempo de vida (TTL) com APIs do Adobe Experience Platform. Este guia explica como a expiração em nível de linha de TTL suporta políticas de retenção de dados, otimiza a eficiência do armazenamento e garante um gerenciamento eficaz do ciclo de vida dos dados. Ela também fornece casos de uso e práticas recomendadas para ajudar você a aplicar o TTL de maneira eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2336'
+source-wordcount: '2341'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ O TTL é útil ao gerenciar dados sensíveis ao tempo que perdem relevância ao 
 
 ### Exemplo do setor {#industry-example}
 
-Como exemplo, considere um serviço de streaming de vídeo que rastreia as interações do usuário, como exibições, pesquisas e recomendações de vídeo. Embora os dados recentes de engajamento sejam cruciais para a personalização, os logs de atividades mais antigos (por exemplo, interações de mais de um ano atrás) perdem relevância. Ao usar a expiração em nível de linha, o Platform remove automaticamente os logs desatualizados, garantindo que somente os dados atuais e significativos sejam usados para análises e recomendações.
+Como exemplo, considere um serviço de streaming de vídeo que rastreia as interações do usuário, como exibições, pesquisas e recomendações de vídeo. Embora os dados recentes de engajamento sejam cruciais para a personalização, os logs de atividades mais antigos (por exemplo, interações de mais de um ano atrás) perdem relevância. Ao usar a expiração em nível de linha, o Experience Platform remove automaticamente os logs desatualizados, garantindo que somente os dados atuais e significativos sejam usados para análises e recomendações.
 
 ## Avaliar adequação do TTL
 
@@ -76,7 +76,7 @@ Para iniciar o gerenciamento de TTL, verifique primeiro as configurações atuai
 
 >[!TIP]
 >
->A URL do Gateway da Plataforma e o caminho base para a API do Serviço de Catálogo são: `https://platform.adobe.io/data/foundation/catalog`.
+>A URL do Gateway Experience Platform e o caminho base para a API do Serviço de Catálogo são: `https://platform.adobe.io/data/foundation/catalog`.
 
 **Formato da API**
 
@@ -375,13 +375,13 @@ Você pode aplicar políticas de retenção a conjuntos de dados criados usando 
 ### Quando o trabalho de Retenção de conjunto de dados excluirá os dados dos serviços do data lake?
 
 +++Resposta
-Os TTLs do conjunto de dados são avaliados e processados semanalmente, excluindo todos os registros expirados. Um evento é considerado expirado se tiver sido assimilado na Platform há mais de 30 dias (data de assimilação > 30 dias) e sua data de evento exceder o período de retenção definido (TTL).
+Os TTLs do conjunto de dados são avaliados e processados semanalmente, excluindo todos os registros expirados. Um evento será considerado expirado se tiver sido assimilado na Experience Platform há mais de 30 dias (data de assimilação > 30 dias) e sua data de evento exceder o período de retenção definido (TTL).
 +++
 
 ### Quando o trabalho de Retenção de conjunto de dados excluirá os dados dos serviços de perfil?
 
 +++Resposta
-Depois que uma política de retenção é definida, os eventos existentes na Platform são imediatamente excluídos se o carimbo de data e hora do evento exceder o período de retenção (TTL). Novos eventos são excluídos assim que o carimbo de data e hora ultrapassar o período de retenção.
+Depois que uma política de retenção é definida, os eventos existentes no Experience Platform são imediatamente excluídos se o carimbo de data e hora do evento exceder o período de retenção (TTL). Novos eventos são excluídos assim que o carimbo de data e hora ultrapassar o período de retenção.
 
 Por exemplo, se você aplicar uma política de expiração de 30 dias em 15 de maio, ocorre o seguinte:
 
@@ -436,6 +436,6 @@ Para obter mais detalhes, consulte o [Criar conjuntos de dados derivados com o g
 
 Agora que você aprendeu a gerenciar configurações de TTL para expiração em nível de linha, revise a seguinte documentação para aprimorar sua compreensão do gerenciamento de TTL:
 
-- Trabalhos de retenção: saiba como agendar e automatizar as expirações de conjuntos de dados na interface da plataforma com o [guia da interface do usuário do ciclo de vida dos dados](../../hygiene/ui/dataset-expiration.md), ou verifique as configurações de Retenção do conjunto de dados e se os registros expirados foram excluídos.
+- Trabalhos de retenção: saiba como agendar e automatizar as expirações de conjuntos de dados na interface do usuário do Experience Platform com o [guia da interface do usuário do ciclo de vida dos dados](../../hygiene/ui/dataset-expiration.md), ou verifique as configurações de Retenção do conjunto de dados e se os registros expirados foram excluídos.
 - [Guia de ponto de extremidade da API de expiração do conjunto de dados](../../hygiene/api/dataset-expiration.md): descubra como excluir conjuntos de dados inteiros em vez de apenas linhas. Saiba como agendar, gerenciar e automatizar a expiração do conjunto de dados usando a API para garantir uma retenção de dados eficiente.
 - [Visão geral das políticas de uso de dados](../../data-governance/policies/overview.md): saiba como alinhar sua estratégia de retenção de dados a requisitos de conformidade mais amplos e restrições de uso de marketing.

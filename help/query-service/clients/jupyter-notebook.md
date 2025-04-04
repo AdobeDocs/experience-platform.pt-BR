@@ -2,9 +2,9 @@
 title: Conectar o Jupyter Notebook ao Serviço de consulta
 description: Saiba como conectar o Jupyter Notebook ao Serviço de consulta da Adobe Experience Platform.
 exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
-source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Este documento aborda as etapas necessárias para conectar o [!DNL Jupyter Noteb
 
 Este guia requer que você já tenha acesso a [!DNL Jupyter Notebook] e esteja familiarizado com sua interface. Para baixar [!DNL Jupyter Notebook] ou obter mais informações, consulte a [documentação [!DNL Jupyter Notebook] oficial](https://jupyter.org/).
 
-Para adquirir as credenciais necessárias para conectar [!DNL Jupyter Notebook] ao Experience Platform, você deve ter acesso ao espaço de trabalho [!UICONTROL Consultas] na interface de usuário da Platform. Entre em contato com o administrador da organização se você não tiver acesso ao espaço de trabalho [!UICONTROL Consultas].
+Para adquirir as credenciais necessárias para conectar [!DNL Jupyter Notebook] ao Experience Platform, você deve ter acesso ao espaço de trabalho [!UICONTROL Consultas] na interface do usuário do Experience Platform. Entre em contato com o administrador da organização se você não tiver acesso ao espaço de trabalho [!UICONTROL Consultas].
 
 >[!TIP]
 >
@@ -40,13 +40,13 @@ Na primeira linha do editor [!DNL Notebook], digite o seguinte valor: `pip insta
 
 Em seguida, importe um adaptador de banco de dados [!DNL PostgreSQL] para [!DNL Python]. Insira o valor: `import psycopg2` e selecione **[!DNL Run]**. Não há mensagem de sucesso para este processo. Se não houver nenhuma mensagem de erro, continue para a próxima etapa.
 
-Agora você deve fornecer suas credenciais do Adobe Experience Platform inserindo o valor: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. Suas credenciais de conexão podem ser encontradas na seção [!UICONTROL Consultas], na guia [!UICONTROL Credenciais] da interface do usuário da plataforma. Consulte a documentação sobre como [encontrar as credenciais da organização](../ui/credentials.md) para obter instruções detalhadas.
+Agora você deve fornecer suas credenciais do Adobe Experience Platform inserindo o valor: `conn = psycopg2.connect("{YOUR_CREDENTIALS}")`. As credenciais de conexão podem ser encontradas na seção [!UICONTROL Consultas], na guia [!UICONTROL Credenciais] da interface do usuário do Experience Platform. Consulte a documentação sobre como [encontrar as credenciais da organização](../ui/credentials.md) para obter instruções detalhadas.
 
 O uso de credenciais sem expiração é recomendado ao usar clientes de terceiros para economizar o esforço de inserir seus detalhes repetidamente. Consulte a documentação para obter instruções sobre [como gerar e usar credenciais sem expiração](../ui/credentials.md#non-expiring-credentials).
 
 >[!IMPORTANT]
 >
->Ao copiar credenciais da interface do Platform, não há necessidade de formatação adicional das credenciais. Eles podem ser fornecidos em uma linha, com um único espaço entre as propriedades e os valores. As credenciais estão entre aspas e **não** separadas por vírgulas.
+>Ao copiar credenciais da interface do usuário do Experience Platform, não há necessidade de formatação adicional das credenciais. Eles podem ser fornecidos em uma linha, com um único espaço entre as propriedades e os valores. As credenciais estão entre aspas e **não** separadas por vírgulas.
 
 ```python
 conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"

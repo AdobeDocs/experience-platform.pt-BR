@@ -2,9 +2,9 @@
 title: Autenticação
 description: Saiba como configurar a autenticação para a API do Adobe Experience Platform Edge Network Server.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '633'
+source-wordcount: '636'
 ht-degree: 7%
 
 ---
@@ -33,24 +33,24 @@ As chamadas de API provenientes de um servidor privado em `server.adobedc.net` d
 Antes de fazer chamadas para o [!DNL Server API], verifique se você atende aos seguintes pré-requisitos:
 
 * Você tem uma conta de organização com acesso ao Adobe Experience Platform.
-* Sua conta Experience Platform tem as funções `developer` e `user` habilitadas para o perfil de produto API do Adobe Experience Platform. Contate o administrador do [Admin Console](../access-control/home.md) para habilitar essas funções para sua conta.
+* Sua conta do Experience Platform tem as funções `developer` e `user` habilitadas para o perfil de produto API do Adobe Experience Platform. Contate o administrador do [Admin Console](../access-control/home.md) para habilitar essas funções para sua conta.
 * Você tem uma Adobe ID. Se você não tiver uma Adobe ID, vá para a [Adobe Developer Console](https://developer.adobe.com/console) e crie uma nova conta.
 
 ## Coletar credenciais {#credentials}
 
-Para fazer chamadas para APIs da Platform, primeiro conclua o [tutorial de autenticação](../landing/api-authentication.md). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API de Experience Platform, conforme mostrado abaixo:
+Para fazer chamadas para APIs do Experience Platform, primeiro conclua o [tutorial de autenticação](../landing/api-authentication.md). Concluir o tutorial de autenticação fornece os valores de cada um dos cabeçalhos necessários em todas as chamadas de API do Experience Platform, conforme mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id `{ORG_ID}`
 
-Os recursos no Experience Platform podem ser isolados em sandboxes virtuais específicas. Em solicitações para APIs da Platform, é possível especificar o nome e a ID da sandbox em que a operação ocorrerá. Esses parâmetros são opcionais.
+Os recursos no Experience Platform podem ser isolados em sandboxes virtuais específicas. Em solicitações para APIs do Experience Platform, é possível especificar o nome e a ID da sandbox em que a operação ocorrerá. Esses parâmetros são opcionais.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes no Experience Platform, consulte a [documentação de visão geral da sandbox](../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes na Experience Platform, consulte a [documentação de visão geral da sandbox](../sandboxes/home.md).
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
@@ -71,6 +71,6 @@ Para configurar permissões de gravação do conjunto de dados, vá para o [Admi
 | `EXEG-0501-401` | Token de autorização de usuário inválido | Essa mensagem de erro é exibida em qualquer uma das seguintes situações: <ul><li>A chamada de API não tem o cabeçalho `x-user-token` necessário.</li><li>O token de usuário fornecido tem um formato inválido.</li></ul> |
 | `EXEG-0502-401` | Token de autorização inválido | Esta mensagem de erro é exibida quando o token de autorização fornecido tem um formato válido (JWT), mas sua assinatura é inválida. Verifique o [tutorial de autenticação](../landing/api-authentication.md) para saber como obter um token JWT válido. |
 | `EXEG-0503-401` | Token de autorização inválido | Esta mensagem de erro é exibida quando o token de autorização fornecido expira. Percorra o [tutorial de autenticação](../landing/api-authentication.md) para gerar um novo token. |
-| `EXEG-0504-401` | O contexto do produto obrigatório está ausente | Essa mensagem de erro é exibida em qualquer uma das seguintes situações:  <ul><li>A conta de desenvolvedor não tem acesso ao contexto de produto do Adobe Experience Platform.</li><li>A conta da empresa ainda não está qualificada para a Adobe Experience Platform.</li></ul> |
+| `EXEG-0504-401` | O contexto do produto obrigatório está ausente | Essa mensagem de erro é exibida em qualquer uma das seguintes situações:  <ul><li>A conta de desenvolvedor não tem acesso ao contexto de produto do Adobe Experience Platform.</li><li>A conta da empresa ainda não tem direito ao Adobe Experience Experience Platform.</li></ul> |
 | `EXEG-0505-401` | O escopo do token de autorização necessário está ausente | Esse erro se aplica somente à autenticação da conta de serviço do. A mensagem de erro é exibida quando o token de autorização de serviço incluído na chamada pertence a uma conta de serviço que não tem acesso ao escopo IMS `acp.foundation`. |
-| `EXEG-0506-401` | Sandbox não acessível para gravação | Esta mensagem de erro é exibida quando a conta do desenvolvedor não tem acesso `WRITE` à sandbox do Experience Platform em que o fluxo de dados é definido. |
+| `EXEG-0506-401` | Sandbox não acessível para gravação | Esta mensagem de erro é exibida quando a conta do desenvolvedor não tem acesso `WRITE` à sandbox da Experience Platform em que a sequência de dados é definida. |

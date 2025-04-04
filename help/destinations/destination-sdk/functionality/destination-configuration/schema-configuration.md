@@ -2,18 +2,18 @@
 description: Saiba como configurar o esquema de parceiro para destinos criados com o Destination SDK.
 title: Configuração de esquema de parceiro
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f502631a3e97f3c90c13f188f3a4bb081f6db112
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1939'
+source-wordcount: '1949'
 ht-degree: 3%
 
 ---
 
 # Configuração de esquema de parceiro
 
-O Experience Platform usa esquemas para descrever a estrutura dos dados de forma consistente e reutilizável. Quando os dados são assimilados na Platform, eles são estruturados de acordo com um esquema XDM. Para obter mais informações sobre o modelo de composição de esquema, incluindo princípios de design e práticas recomendadas, consulte as [noções básicas da composição de esquema](../../../../xdm/schema/composition.md).
+A Experience Platform usa esquemas para descrever a estrutura dos dados de forma consistente e reutilizável. Quando os dados são assimilados na Experience Platform, eles são estruturados de acordo com um esquema XDM. Para obter mais informações sobre o modelo de composição de esquema, incluindo princípios de design e práticas recomendadas, consulte as [noções básicas da composição de esquema](../../../../xdm/schema/composition.md).
 
-Ao criar um destino com o Destination SDK, você pode definir seu próprio esquema de parceiro a ser usado pela plataforma de destino. Isso oferece aos usuários a capacidade de mapear atributos de perfil da Platform para campos específicos reconhecidos pela plataforma de destino, tudo na interface do usuário da Platform.
+Ao criar um destino com o Destination SDK, você pode definir seu próprio esquema de parceiro a ser usado pela plataforma de destino. Isso oferece aos usuários a capacidade de mapear atributos de perfil do Experience Platform para campos específicos reconhecidos pela plataforma de destino, tudo na interface do usuário do Experience Platform.
 
 Ao configurar o esquema de parceiro para o seu destino, você pode ajustar o mapeamento de campos compatível com sua plataforma de destino, como:
 
@@ -28,11 +28,11 @@ Você pode definir suas configurações de esquema por meio do ponto de extremid
 * [Criar uma configuração de destino](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Atualizar uma configuração de destino](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Este artigo descreve todas as opções de configuração de esquema compatíveis que você pode usar para o seu destino e mostra o que os clientes verão na interface do usuário da Platform.
+Este artigo descreve todas as opções de configuração de esquema compatíveis que você pode usar para o seu destino e mostra o que os clientes verão na interface do Experience Platform.
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -45,11 +45,11 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 ## Configuração de esquema compatível {#supported-schema-types}
 
-O Destination SDK suporta várias configurações de esquema:
+O Destination SDK é compatível com várias configurações de esquema:
 
 * Os esquemas estáticos são definidos por meio da matriz `profileFields` na seção `schemaConfig`. Em um esquema estático, você define cada atributo de destino que deve ser mostrado na interface do usuário do Experience Platform na matriz `profileFields`. Se precisar atualizar seu esquema, você deve [atualizar a configuração de destino](../../authoring-api/destination-configuration/update-destination-configuration.md).
 * Os esquemas dinâmicos usam um tipo de servidor de destino adicional, chamado de [servidor de esquema dinâmico](../../authoring-api/destination-server/create-destination-server.md#dynamic-schema-servers), para recuperar dinamicamente os atributos de destino compatíveis e gerar esquemas com base em sua própria API. Esquemas dinâmicos não usam a matriz `profileFields`. Se você precisar atualizar seu esquema, não há necessidade de [atualizar a configuração de destino](../../authoring-api/destination-configuration/update-destination-configuration.md). Em vez disso, o servidor de esquema dinâmico recupera o esquema atualizado da API.
-* Na configuração do esquema, você tem a opção de adicionar mapeamentos necessários (ou predefinidos). Esses são mapeamentos que os usuários podem visualizar na interface do usuário da Platform, mas não podem modificá-los ao configurar uma conexão com o seu destino. Por exemplo, é possível impor que o campo de endereço de email sempre seja enviado ao destino.
+* Na configuração do esquema, você tem a opção de adicionar mapeamentos necessários (ou predefinidos). Esses são mapeamentos que os usuários podem visualizar na interface do usuário do Experience Platform, mas não podem modificá-los ao configurar uma conexão com o seu destino. Por exemplo, é possível impor que o campo de endereço de email sempre seja enviado ao destino.
 
 A seção `schemaConfig` usa vários parâmetros de configuração, dependendo do tipo de esquema necessário, conforme mostrado nas seções abaixo.
 
@@ -102,10 +102,10 @@ Para criar um esquema estático com atributos de perfil, defina os atributos de 
 |---------|----------|------|---|
 | `profileFields` | Matriz | Opcional | Define a matriz de atributos de destino aceitos pela plataforma de destino para a qual os clientes podem mapear seus atributos de perfil. Ao usar uma matriz `profileFields`, você pode omitir totalmente o parâmetro `useCustomerSchemaForAttributeMapping`. |
 | `useCustomerSchemaForAttributeMapping` | Booleano | Opcional | Habilita ou desabilita o mapeamento de atributos do esquema do cliente para os atributos definidos na matriz `profileFields`. <ul><li>Se definido como `true`, os usuários verão somente a coluna de origem no campo de mapeamento. `profileFields` não são aplicáveis neste caso.</li><li>Se definido como `false`, os usuários podem mapear atributos de origem de seus esquemas para os atributos definidos na matriz `profileFields`.</li></ul> O valor padrão é `false`. |
-| `profileRequired` | Booleano | Opcional | Use o `true` se os usuários precisarem mapear atributos de perfil do Experience Platform para atributos personalizados na plataforma de destino. |
-| `segmentRequired` | Booleano | Obrigatório | Este parâmetro é requerido pelo Destination SDK e sempre deve ser definido como `true`. |
+| `profileRequired` | Booleano | Opcional | Use `true` se os usuários puderem mapear atributos de perfil do Experience Platform para atributos personalizados na sua plataforma de destino. |
+| `segmentRequired` | Booleano | Obrigatório | Este parâmetro é requerido pela Destination SDK e deve sempre ser definido como `true`. |
 | `identityRequired` | Booleano | Obrigatório | Defina como `true` se os usuários puderem mapear [tipos de identidade](identity-namespace-configuration.md) do Experience Platform para os atributos definidos na matriz `profileFields`. |
-| `segmentNamespaceAllowList` | Matriz | Opcional | Define namespaces de público-alvo específicos a partir dos quais os usuários podem mapear públicos-alvo para o destino. Use esse parâmetro para restringir os usuários do Platform a exportar públicos-alvo somente dos namespaces de público-alvo definidos na matriz. Este parâmetro não pode ser usado com `segmentNamespaceDenyList`.<br> <br> Exemplo: `"segmentNamespaceAllowList": ["AudienceManager"]` permitirá que os usuários mapeiem apenas públicos-alvo do namespace `AudienceManager` para esse destino. <br> <br> Para permitir que os usuários exportem qualquer público para o seu destino, você pode ignorar este parâmetro. <br> <br> Se `segmentNamespaceAllowList` e `segmentNamespaceDenyList` estiverem ausentes em sua configuração, os usuários só poderão exportar públicos-alvo originados do [Serviço de Segmentação](../../../../segmentation/home.md). |
+| `segmentNamespaceAllowList` | Matriz | Opcional | Define namespaces de público-alvo específicos a partir dos quais os usuários podem mapear públicos-alvo para o destino. Use esse parâmetro para impedir que os usuários do Experience Platform exportem públicos-alvo somente dos namespaces de público-alvo definidos na matriz. Este parâmetro não pode ser usado com `segmentNamespaceDenyList`.<br> <br> Exemplo: `"segmentNamespaceAllowList": ["AudienceManager"]` permitirá que os usuários mapeiem apenas públicos-alvo do namespace `AudienceManager` para esse destino. <br> <br> Para permitir que os usuários exportem qualquer público para o seu destino, você pode ignorar este parâmetro. <br> <br> Se `segmentNamespaceAllowList` e `segmentNamespaceDenyList` estiverem ausentes em sua configuração, os usuários só poderão exportar públicos-alvo originados do [Serviço de Segmentação](../../../../segmentation/home.md). |
 | `segmentNamespaceDenyList` | Matriz | Opcional | Restringe os usuários no mapeamento de públicos-alvo para o destino, a partir dos namespaces de público-alvo definidos na matriz. Não é possível usar com `segmentNamespaceAllowed`. <br> <br> Exemplo: `"segmentNamespaceDenyList": ["AudienceManager"]` impedirá que os usuários mapeiem públicos do namespace `AudienceManager` para esse destino. <br> <br> Para permitir que os usuários exportem qualquer público para o seu destino, você pode ignorar este parâmetro. <br> <br> Se `segmentNamespaceAllowed` e `segmentNamespaceDenyList` estiverem ausentes na sua configuração, os usuários só poderão exportar públicos originados do [Serviço de Segmentação](../../../../segmentation/home.md). <br> <br> Para permitir a exportação de todos os públicos, independentemente da origem, defina `"segmentNamespaceDenyList":[]`. |
 
 {style="table-layout:auto"}
@@ -148,19 +148,19 @@ Em uma configuração de esquema dinâmico, a matriz `profileFields` é substitu
 
 | Parâmetro | Tipo | Obrigatório/Opcional | Descrição |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | String | Obrigatório | Indica como [!DNL Platform] clientes se conectam ao seu destino. Os valores aceitos são `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` se os clientes da Platform fizerem logon no sistema por meio de qualquer um dos métodos de autenticação descritos [aqui](customer-authentication.md). </li><li> Use o `PLATFORM_AUTHENTICATION` se houver um sistema de autenticação global entre o Adobe e o seu destino e o cliente do [!DNL Platform] não precisar fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve [criar um objeto de credenciais](../../credentials-api/create-credential-configuration.md) usando a API de Credenciais. </li><li>Use `NONE` se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
-| `dynamicEnum.destinationServerId` | String | Obrigatório | O `instanceId` do seu servidor de esquema dinâmico. Esse servidor de destino inclui o endpoint da API que o Experience Platform chamará para recuperar o esquema dinâmico. |
+| `dynamicEnum.authenticationRule` | String | Obrigatório | Indica como [!DNL Experience Platform] clientes se conectam ao seu destino. Os valores aceitos são `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use o `CUSTOMER_AUTHENTICATION` se os clientes da Experience Platform fizerem logon no sistema por meio de qualquer um dos métodos de autenticação descritos [aqui](customer-authentication.md). </li><li> Use o `PLATFORM_AUTHENTICATION` se houver um sistema de autenticação global entre o Adobe e o seu destino e o cliente do [!DNL Experience Platform] não precisar fornecer credenciais de autenticação para se conectar ao seu destino. Nesse caso, você deve [criar um objeto de credenciais](../../credentials-api/create-credential-configuration.md) usando a API de Credenciais. </li><li>Use `NONE` se nenhuma autenticação for necessária para enviar dados para a plataforma de destino. </li></ul> |
+| `dynamicEnum.destinationServerId` | String | Obrigatório | O `instanceId` do seu servidor de esquema dinâmico. Esse servidor de destino inclui o endpoint da API chamado pelo Experience Platform para recuperar o esquema dinâmico. |
 | `dynamicEnum.value` | String | Obrigatório | O nome do esquema dinâmico, conforme definido na configuração do servidor do esquema dinâmico. |
 | `dynamicEnum.responseFormat` | String | Obrigatório | Sempre defina como `SCHEMA` ao definir um esquema dinâmico. |
-| `profileRequired` | Booleano | Opcional | Use o `true` se os usuários precisarem mapear atributos de perfil do Experience Platform para atributos personalizados na plataforma de destino. |
-| `segmentRequired` | Booleano | Obrigatório | Este parâmetro é requerido pelo Destination SDK e sempre deve ser definido como `true`. |
+| `profileRequired` | Booleano | Opcional | Use `true` se os usuários puderem mapear atributos de perfil do Experience Platform para atributos personalizados na sua plataforma de destino. |
+| `segmentRequired` | Booleano | Obrigatório | Este parâmetro é requerido pela Destination SDK e deve sempre ser definido como `true`. |
 | `identityRequired` | Booleano | Obrigatório | Defina como `true` se os usuários puderem mapear [tipos de identidade](identity-namespace-configuration.md) do Experience Platform para os atributos definidos na matriz `profileFields`. |
 
 {style="table-layout:auto"}
 
 ## Mapeamentos necessários {#required-mappings}
 
-Na configuração do esquema, além do esquema estático ou dinâmico, você tem a opção de adicionar mapeamentos necessários (ou predefinidos). Esses são mapeamentos que os usuários podem visualizar na interface do usuário da Platform, mas não podem modificá-los ao configurar uma conexão com o seu destino.
+Na configuração do esquema, além do esquema estático ou dinâmico, você tem a opção de adicionar mapeamentos necessários (ou predefinidos). Esses são mapeamentos que os usuários podem visualizar na interface do usuário do Experience Platform, mas não podem modificá-los ao configurar uma conexão com o seu destino.
 
 Por exemplo, é possível impor que o campo de endereço de email sempre seja enviado ao destino.
 
@@ -203,7 +203,7 @@ O exemplo abaixo mostra os mapeamentos de origem e de destino necessários. Quan
 
 {style="table-layout:auto"}
 
-Como resultado, as seções do **[!UICONTROL campo do Source]** e do **[!UICONTROL campo do Target]** na interface do usuário da Platform estão esmaecidas.
+Como resultado, as seções do **[!UICONTROL campo do Source]** e do **[!UICONTROL campo do Target]** na interface do usuário do Experience Platform estão esmaecidas.
 
 ![Imagem dos mapeamentos necessários no fluxo de ativação da interface do usuário.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +233,7 @@ O exemplo abaixo mostra um mapeamento de destino necessário. Se apenas o campo 
 
 {style="table-layout:auto"}
 
-Como resultado, a seção **[!UICONTROL Campo de destino]** da interface do usuário da plataforma está esmaecida, enquanto a seção **[!UICONTROL Campo do Source]** está ativa e os usuários podem interagir com ela. As opções **[!UICONTROL Chave obrigatória]** e **[!UICONTROL Chave de desduplicação]** estão ativas e os usuários não podem alterá-las.
+Como resultado, a seção **[!UICONTROL Campo de destino]** da interface do usuário do Experience Platform fica esmaecida, enquanto a seção **[!UICONTROL Campo do Source]** está ativa e os usuários podem interagir com ela. As opções **[!UICONTROL Chave obrigatória]** e **[!UICONTROL Chave de desduplicação]** estão ativas e os usuários não podem alterá-las.
 
 ![Imagem dos mapeamentos necessários no fluxo de ativação da interface do usuário.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 
@@ -254,7 +254,7 @@ Consulte as descrições de propriedade na [tabela](#attributes-schema) mais aci
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este artigo, você deve entender melhor quais tipos de esquema são compatíveis com o Destination SDK e como você pode configurar seu esquema.
+Depois de ler este artigo, você deve entender melhor quais tipos de esquema são compatíveis com o Destination SDK e como configurar seu esquema.
 
 Para saber mais sobre os outros componentes de destino, consulte os seguintes artigos:
 

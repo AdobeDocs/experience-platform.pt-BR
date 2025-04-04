@@ -2,20 +2,20 @@
 keywords: Experience Platform;início;tópicos populares;conectores de origem;conector de origem;fontes;fontes de dados;fonte de dados;conexão da fonte de dados
 solution: Experience Platform
 title: Visão geral dos Source Connectors
-description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1557'
 ht-degree: 2%
 
 ---
 
 # Visão geral dos conectores do Source
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados na nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamentos baseados na nuvem, bancos de dados e muitas outras.
 
-O [!DNL Flow Service] é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Plataforma. O serviço fornece uma interface de usuário e API RESTful que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar seus sistemas de terceiros, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+O [!DNL Flow Service] é usado para coletar e centralizar dados do cliente de várias fontes diferentes na Experience Platform. O serviço fornece uma interface de usuário e API RESTful que permite configurar conexões de origem com vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar seus sistemas de terceiros, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 Com o Experience Platform, você pode centralizar os dados coletados de fontes diferentes e usar os insights obtidos com eles para fazer mais.
 
@@ -84,7 +84,7 @@ O Experience Platform oferece suporte para assimilação de dados de uma platafo
 
 ### Armazenamento na nuvem {#cloud-storage}
 
-As fontes de armazenamento na nuvem podem trazer seus próprios dados para a Platform sem a necessidade de baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Origens usando a interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
+As fontes de armazenamento na nuvem podem trazer seus próprios dados para a Experience Platform sem a necessidade de baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Origens usando a interface do usuário. Consulte os seguintes documentos relacionados para obter mais informações:
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE Lote]{type=Informative}
@@ -228,7 +228,7 @@ Com o controle de acesso baseado em atributos, é possível aplicar configuraç�
 
 >[!TIP]
 >
->O controle de acesso baseado em atributos funciona da seguinte maneira: **funções** são criadas para categorizar os tipos de usuários que interagem com sua instância da Platform. **Rótulos** são aplicados a **funções** para designar o acesso a essa função específica. **Rótulos** também são aplicados a recursos como campos de esquema e segmentos. Para que um usuário tenha acesso a determinados campos e segmentos de esquema, ele deve ser adicionado a *uma função com o mesmo rótulo atribuído ao recurso consultado*. Para obter mais informações, leia o [manual completo sobre controle de acesso baseado em atributos](../access-control/abac/end-to-end-guide.md).
+>O controle de acesso baseado em atributos funciona da seguinte maneira: **funções** são criadas para categorizar os tipos de usuários que interagem com sua instância do Experience Platform. **Rótulos** são aplicados a **funções** para designar o acesso a essa função específica. **Rótulos** também são aplicados a recursos como campos de esquema e segmentos. Para que um usuário tenha acesso a determinados campos e segmentos de esquema, ele deve ser adicionado a *uma função com o mesmo rótulo atribuído ao recurso consultado*. Para obter mais informações, leia o [manual completo sobre controle de acesso baseado em atributos](../access-control/abac/end-to-end-guide.md).
 
 - Aplique rótulos a campos de esquema para definir o acesso a campos de esquema específicos na organização. Uma vez estabelecido o acesso a campos de esquema específicos, os usuários só poderão criar mapeamentos para os campos aos quais têm acesso.
 - Os usuários sem as funções apropriadas não poderão criar ou atualizar fluxos de dados com mapeamentos que envolvam campos de esquema inacessíveis. Além disso, os usuários não autorizados não podem atualizar, excluir, ativar ou desativar fluxos de dados existentes com campos de esquema inacessíveis.

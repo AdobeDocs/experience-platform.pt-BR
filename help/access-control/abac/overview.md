@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular tópicos;controle de acesso;controle 
 title: Visão Geral do Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: 37131ce16b70bfaa737ee1cd896d0042e06bab15
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1860'
-ht-degree: 14%
+source-wordcount: '1874'
+ht-degree: 13%
 
 ---
 
@@ -18,9 +18,9 @@ Use essa funcionalidade para rotular campos de esquema do Experience Data Model 
 
 >[!IMPORTANT]
 >
->O controle de acesso baseado em atributos não deve ser confundido com os recursos de governança de dados da Experience Platform, que permitem usar rótulos e políticas para controlar como os dados são usados na Platform, em vez de quais usuários na organização têm acesso a eles. Consulte a [visão geral da governança de dados](../../data-governance/home.md) para obter mais informações.
+>O controle de acesso baseado em atributos não deve ser confundido com os recursos de governança de dados da Experience Platform, que permitem usar rótulos e políticas para controlar como os dados são usados no Experience Platform, em vez de quais usuários na organização têm acesso a eles. Consulte a [visão geral da governança de dados](../../data-governance/home.md) para obter mais informações.
 
-Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e tipo personalizado de dados em todos os fluxos de trabalho e recursos da plataforma. Admins podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
+Por meio do controle de acesso baseado em atributos, os administradores da sua organização podem controlar o acesso dos usuários a dados pessoais confidenciais (SPD), informações de identificação pessoal (PII) e tipos personalizados de dados em todos os fluxos de trabalho e recursos da Experience Platform. Admins podem definir funções de usuário que tenham acesso somente a campos e dados específicos que correspondam a esses campos.
 
 O vídeo a seguir é destinado a ajudá-lo a entender o controle de acesso baseado em atributos e descreve como configurar funções, recursos e políticas.
 
@@ -32,13 +32,13 @@ O controle de acesso baseado em atributos envolve os seguintes componentes:
 
 | Terminologia | Definição |
 | --- | --- |
-| Atributos | Atributos são os identificadores que indicam a correlação entre um usuário e os recursos da Platform aos quais ele tem acesso. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo ou segmento de esquema. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário. |
-| Rótulos | Os rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulação de dados assim que eles forem assimilados na Platform ou assim que os dados estiverem disponíveis para uso na Platform. |
-| Permissões | As permissões incluem a capacidade de visualizar e/ou usar recursos da Platform, como criar sandboxes, definir esquemas e gerenciar conjuntos de dados. |
+| Atributos | Os atributos são os identificadores que indicam a correlação entre um usuário e os recursos do Experience Platform aos quais ele tem acesso. Os atributos podem ser metadados adicionados a um objeto, como um rótulo adicionado a um campo ou segmento de esquema. Um administrador define políticas de acesso que incluem atributos para gerenciar permissões de acesso do usuário. |
+| Rótulos | Os rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulação de dados assim que eles forem assimilados na Experience Platform ou assim que os dados estiverem disponíveis para uso no Experience Platform. |
+| Permissões | As permissões incluem a capacidade de visualizar e/ou usar recursos do Experience Platform, como criar sandboxes, definir esquemas e gerenciar conjuntos de dados. |
 | Conjuntos de permissões | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
 | Políticas | Políticas são declarações que reúnem atributos para estabelecer ações permitidas e não permitidas. As políticas podem ser locais ou globais e podem substituir outras políticas. |
 | Recurso | Um recurso é o ativo ou objeto que um assunto pode ou não acessar. Os recursos podem ser segmentos ou campos de esquema. |
-| Funções | Funções são maneiras de categorizar os tipos de usuários que estão interagindo com sua instância da Platform. São os pilares das políticas de controle de acesso. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário. |
+| Funções | Funções são maneiras de categorizar os tipos de usuários que estão interagindo com sua instância do Experience Platform e são blocos fundamentais das políticas de controle de acesso. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário. |
 | Assunto | Um assunto é o usuário que solicita acesso a um recurso para executar uma ação. |
 | Grupos de usuários | Os grupos de usuários são vários usuários que foram agrupados e têm acesso para executar as mesmas funções. |
 
@@ -54,15 +54,15 @@ Através das Permissões, é possível criar e gerenciar funções, bem como atr
 
 ## API de controle de acesso baseado em atributo
 
-A API de controle de acesso baseada em atributos permite gerenciar programaticamente funções, políticas e produtos na Platform usando APIs. Para obter mais informações, consulte o manual sobre [como usar a API para gerenciar configurações de controle de acesso baseadas em atributos](api/overview.md).
+A API de controle de acesso baseada em atributos permite gerenciar de forma programática funções, políticas e produtos no Experience Platform usando APIs. Para obter mais informações, consulte o manual sobre [como usar a API para gerenciar configurações de controle de acesso baseadas em atributos](api/overview.md).
 
 ## Controle de acesso baseado em atributos no Adobe Experience Platform
 
-As seções a seguir fornecem informações sobre como o controle de acesso baseado em atributos é integrado a outros componentes da Platform:
+As seções a seguir fornecem informações sobre como o controle de acesso baseado em atributos é integrado a outros componentes do Experience Platform:
 
 ### Controle de acesso
 
-A Platform aproveita as funções do [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e sandboxes. As permissões controlam o acesso a uma variedade de recursos da Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox. Quando sua organização estiver habilitada para o controle de acesso baseado em atributos, você poderá começar a usar Permissões no Adobe Experience Cloud, em vez de Funções no Adobe Admin Console, para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização.
+O Experience Platform aproveita as funções do [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e sandboxes. As permissões controlam o acesso a vários recursos do Experience Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox. Quando sua organização estiver habilitada para o controle de acesso baseado em atributos, você poderá começar a usar Permissões no Adobe Experience Cloud, em vez de Funções no Adobe Admin Console, para gerenciar permissões para usuários, funcionalidades, rótulos e outros recursos em sua organização.
 
 Há disponibilidade limitada de controle de acesso baseado em atributos para clientes que compram os Healthcare and/ou Privacy Shields. Os recursos dessa funcionalidade incluem:
 
@@ -80,7 +80,7 @@ Para obter mais informações sobre controle de acesso, consulte a [visão geral
 
 ### Destinos {#destinations}
 
-[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados da Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 Como administrador, você pode usar as funcionalidades de controle de acesso baseado em atributos para:
 
@@ -109,7 +109,7 @@ Para obter mais informações sobre [!DNL Identity Service], consulte a [[!DNL I
 
 ### Perfil do cliente em tempo real
 
-O Platform permite gerar experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde e quando eles interagem com sua marca. Com o Perfil do cliente em tempo real, é possível ter uma visão integral de cada cliente ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. O Perfil permite consolidar dados diferentes do cliente em uma visualização unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
+O Experience Platform permite gerar experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde e quando eles interagem com sua marca. Com o Perfil do cliente em tempo real, é possível ter uma visão integral de cada cliente ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. O Perfil permite consolidar dados diferentes do cliente em uma visualização unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
 
 Como administrador, você pode usar as funcionalidades de controle de acesso baseado em atributos para:
 
@@ -133,7 +133,7 @@ Para obter mais informações sobre [!DNL Segmentation Service], consulte a [[!D
 
 ### XDM
 
-O Experience Data Model (XDM) é uma especificação de código aberto projetada para melhorar o poder das experiências digitais. Ele fornece estruturas e definições comuns para qualquer aplicativo se comunicar com os serviços na plataforma. Ao aderir aos padrões do XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de maneira mais rápida e integrada. Você pode obter insights valiosos sobre ações de clientes, definir públicos-alvo por meio de segmentos e usar atributos de clientes para fins de personalização.
+O Experience Data Model (XDM) é uma especificação de código aberto projetada para melhorar o poder das experiências digitais. Ele fornece estruturas e definições comuns para que qualquer aplicativo se comunique com os serviços na Experience Platform. Ao aderir aos padrões do XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de maneira mais rápida e integrada. Você pode obter insights valiosos sobre ações de clientes, definir públicos-alvo por meio de segmentos e usar atributos de clientes para fins de personalização.
 
 Com o controle de acesso baseado em atributos, você pode:
 

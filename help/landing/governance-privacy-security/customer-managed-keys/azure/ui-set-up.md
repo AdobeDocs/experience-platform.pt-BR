@@ -1,21 +1,21 @@
 ---
-title: Definir e configurar chaves gerenciadas pelo cliente para o Azure usando a interface do usuário da plataforma
+title: Definir e configurar chaves gerenciadas pelo cliente para o Azure usando a interface do usuário do Experience Platform
 description: Saiba como configurar seu aplicativo CMK com seu locatário do Azure e enviar sua ID de chave de criptografia para a Adobe Experience Platform.
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 58bc7a650ff58f877550fa8838c6f8e2908f0090
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1146'
 ht-degree: 0%
 
 ---
 
-# Definir e configurar chaves gerenciadas pelo cliente para o Azure usando a interface do usuário da plataforma
+# Definir e configurar chaves gerenciadas pelo cliente para o Azure usando a interface do usuário do Experience Platform
 
-Este documento aborda as instruções específicas do Azure para habilitar o recurso Chaves gerenciadas pelo cliente (CMK) na Platform usando a interface do usuário. Para obter instruções específicas do AWS, consulte o [guia de instalação do AWS](../aws/ui-set-up.md).
+Este documento aborda as instruções específicas do Azure para habilitar o recurso Chaves gerenciadas pelo cliente (CMK) no Experience Platform usando a interface do. Para obter instruções específicas do AWS, consulte o [guia de instalação do AWS](../aws/ui-set-up.md).
 
-Para obter instruções sobre como concluir esse processo para instâncias da Plataforma hospedada pelo Azure usando a API, consulte o [documento de configuração do CMK da API](./api-set-up.md).
+Para obter instruções sobre como concluir esse processo para instâncias do Experience Platform hospedadas no Azure usando a API, consulte o [documento de configuração do CMK da API](./api-set-up.md).
 
 ## Pré-requisitos
 
@@ -50,13 +50,13 @@ Selecione o ícone de cópia (![O ícone de cópia.](../../../../images/icons/co
 
 ![A exibição da [!UICONTROL Configuração de Chaves Gerenciadas pelo Cliente] com a seção de URL de autenticação de Aplicativo realçada.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-Copie e cole a [!UICONTROL URL de autenticação do aplicativo] em um navegador para abrir uma caixa de diálogo de autenticação. Selecione **[!DNL Accept]** para adicionar a entidade de serviço do aplicativo CMK ao locatário [!DNL Azure]. A confirmação da autenticação o redireciona para a página de aterrissagem do Experience Cloud.
+Copie e cole a [!UICONTROL URL de autenticação do aplicativo] em um navegador para abrir uma caixa de diálogo de autenticação. Selecione **[!DNL Accept]** para adicionar a entidade de serviço do aplicativo CMK ao locatário [!DNL Azure]. A confirmação da autenticação redireciona você para a página inicial do Experience Cloud.
 
 ![Uma caixa de diálogo de solicitação de permissão do Microsoft com [!UICONTROL Aceitar] realçada.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 >[!IMPORTANT]
 >
->Se você tiver várias assinaturas [!DNL Microsoft Azure], poderá conectar sua instância do Platform ao cofre de chaves incorreto. Nessa situação, você deve trocar a seção `common` do nome da URL de autenticação do aplicativo pela ID do diretório CMK.<br>Copie a ID do diretório CMK da página Configurações do Portal, Diretórios e Assinaturas do aplicativo [!DNL Microsoft Azure]<br>![A página [!DNL Microsoft Azure] configurações do Portal do aplicativo, Diretórios e Assinaturas com a ID do Diretório realçada.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Em seguida, cole-o na barra de endereços do navegador.<br>![Uma página do navegador Google com a seção &#39;comum&#39; da URL de autenticação de Aplicativo realçada.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>Se você tiver várias assinaturas [!DNL Microsoft Azure], poderá conectar sua instância do Experience Platform ao cofre de chaves incorreto. Nessa situação, você deve trocar a seção `common` do nome da URL de autenticação do aplicativo pela ID do diretório CMK.<br>Copie a ID do diretório CMK da página Configurações do Portal, Diretórios e Assinaturas do aplicativo [!DNL Microsoft Azure]<br>![A página [!DNL Microsoft Azure] configurações do Portal do aplicativo, Diretórios e Assinaturas com a ID do Diretório realçada.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br>Em seguida, cole-o na barra de endereços do navegador.<br>![Uma página do navegador Google com a seção &#39;comum&#39; da URL de autenticação de Aplicativo realçada.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### Atribuir o aplicativo CMK a uma função {#assign-to-role}
 
@@ -82,11 +82,11 @@ Você pode verificar o aplicativo comparando a exibição [!UICONTROL ID do Apli
 
 ![A exibição da [!UICONTROL Configuração de Chaves Gerenciadas pelo Cliente] com a [!UICONTROL ID do Aplicativo] realçada.](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)
 
-Todos os detalhes necessários para verificar as ferramentas do Azure estão incluídos na interface do usuário da plataforma. Esse nível de granularidade é fornecido quando muitos usuários desejam usar outras ferramentas do Azure para aprimorar sua capacidade de monitorar e registrar esses aplicativos no acesso ao cofre de chaves. Entender esses identificadores é essencial para essa finalidade e para ajudar os serviços da Adobe a acessar a chave.
+Todos os detalhes necessários para verificar as ferramentas do Azure estão incluídos na interface do Experience Platform. Esse nível de granularidade é fornecido quando muitos usuários desejam usar outras ferramentas do Azure para aprimorar sua capacidade de monitorar e registrar esses aplicativos no acesso ao cofre de chaves. Entender esses identificadores é essencial para essa finalidade e para ajudar os serviços da Adobe a acessar a chave.
 
-## Habilitar a configuração da chave de criptografia no Experience Platform {#send-to-adobe}
+## Ativar a configuração da chave de criptografia no Experience Platform {#send-to-adobe}
 
-Depois de instalar o aplicativo CMK em [!DNL Azure], você pode enviar o identificador de chave de criptografia para o Adobe. Selecione **[!DNL Keys]** na navegação à esquerda, seguido pelo nome da chave que você deseja enviar.
+Depois de instalar o aplicativo CMK em [!DNL Azure], você pode enviar seu identificador de chave de criptografia para a Adobe. Selecione **[!DNL Keys]** na navegação à esquerda, seguido pelo nome da chave que você deseja enviar.
 
 ![O painel do Microsoft Azure com o objeto [!DNL Keys] e o nome da chave realçados.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
@@ -110,11 +110,11 @@ Você retornou ao [!UICONTROL painel de configurações de criptografia]. O stat
 
 ## Verificar o status da configuração {#check-status}
 
-Permita um tempo significativo para o processamento. Para verificar o status da configuração, retorne à exibição [!UICONTROL Chaves gerenciadas pelo cliente] e role para baixo até o [!UICONTROL Status da configuração]. A barra de progresso avançou para a etapa um de três e explica que o sistema está validando se a Platform tem acesso à chave e ao cofre de chaves.
+Permita um tempo significativo para o processamento. Para verificar o status da configuração, retorne à exibição [!UICONTROL Chaves gerenciadas pelo cliente] e role para baixo até o [!UICONTROL Status da configuração]. A barra de progresso avançou para a etapa um de três e explica que o sistema está validando se o Experience Platform tem acesso à chave e ao cofre de chaves.
 
 Há quatro status possíveis da configuração do CMK. Elas são as seguintes:
 
-* Etapa 1: valida se a Platform tem a capacidade de acessar o cofre de chaves e chaves.
+* Etapa 1: valida se o Experience Platform pode acessar o cofre de chaves e chaves.
 * Etapa 2: o cofre de chaves e o nome da chave estão sendo adicionados a todos os armazenamentos de dados em sua organização.
 * Etapa 3: O cofre de chaves e o nome da chave foram adicionados com êxito aos armazenamentos de dados.
 * `FAILED`: ocorreu um problema, relacionado principalmente à chave, cofre de chaves ou configuração de aplicativo multilocatário.

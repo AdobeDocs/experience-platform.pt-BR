@@ -2,10 +2,10 @@
 title: Copiar recursos
 description: Saiba como criar um novo recurso de tags usando as configurações de um recurso de tags existente na Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 94%
+source-wordcount: '781'
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Às vezes, é conveniente criar um novo recurso usando as configurações de um recurso existente. Nesses casos, você pode fazer uma cópia.
 
@@ -60,7 +60,7 @@ Ao copiar uma extensão para outra propriedade, há algumas coisas que você pre
 
 ## Como copiar regras e elementos de dados
 
-Todas as regras e elementos de dados são fornecidos por uma extensão. Portanto, quando você copiar entre propriedades, a Platform deverá levar em conta essas extensões subjacentes.
+Todas as regras e elementos de dados são fornecidos por uma extensão, portanto, ao copiar para as propriedades, a Experience Platform deverá contabilizar essas extensões subjacentes.
 
 ![Como copiar uma regra para minha propriedade de demonstração](../../images/copy-rules-dialog1.png)
 

@@ -2,9 +2,9 @@
 title: Tipo de dados do Source B2B
 description: Saiba mais sobre o tipo de dados B2B Source Experience Data Model (XDM).
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '236'
+source-wordcount: '237'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 Ao depender apenas de identificadores baseados em sequência, pode haver sobreposições entre IDs em vários sistemas (por exemplo, uma oportunidade pode receber uma ID de sequência em um sistema de CRM, mas essa mesma ID pode se referir a uma oportunidade completamente diferente). Isso pode resultar em conflitos de dados ao mesclar dados no [Perfil de Cliente em Tempo Real](../../profile/home.md).
 
-O tipo de dados [!UICONTROL B2B Source] permite usar a ID de cadeia de caracteres original de uma entidade e combiná-la com informações contextuais específicas da origem para garantir que ela permaneça totalmente exclusiva no sistema da Platform, independentemente da origem da qual foi originada.
+O tipo de dados [!UICONTROL B2B Source] permite usar a ID de cadeia de caracteres original de uma entidade e combiná-la com informações contextuais específicas da origem para garantir que ela permaneça totalmente exclusiva no sistema Experience Platform, independentemente da origem de onde ela foi originada.
 
 ![Estrutura B2B do Source](../images/data-types/b2b-source.png)
 

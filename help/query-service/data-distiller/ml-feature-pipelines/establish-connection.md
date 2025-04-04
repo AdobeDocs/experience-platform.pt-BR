@@ -2,9 +2,9 @@
 title: Conecte-se ao Data Distiller a partir de um Jupyter Notebook
 description: Saiba como se conectar ao Data Distiller a partir de um Jupyter Notebook.
 exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '685'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Este guia pressupõe que você esteja familiarizado com os blocos de anotações
 
 ### Obter credenciais de conexão {#obtain-credentials}
 
-Para se conectar ao Data Distiller e outros serviços da Adobe Experience Platform, você precisa de uma credencial de API de Experience Platform. As credenciais de API podem ser criadas no [Adobe Developer Console](https://developer.adobe.com/console/home) por alguém com acesso de desenvolvedor ao Experience Platform. É recomendável criar uma credencial de API Oauth2 especificamente para workflows de ciência de dados e fazer com que um administrador de sistema de Adobe da sua organização atribua a credencial a uma função com permissões apropriadas.
+Para se conectar ao Data Distiller e outros serviços da Adobe Experience Platform, você precisa de uma credencial de API do Experience Platform. As credenciais da API podem ser criadas no [Adobe Developer Console](https://developer.adobe.com/console/home) por alguém com acesso de desenvolvedor ao Experience Platform. É recomendável criar uma credencial de API Oauth2 especificamente para fluxos de trabalho de ciência de dados e fazer com que um administrador de sistema da Adobe de sua organização atribua a credencial a uma função com permissões apropriadas.
 
-Consulte [Autenticar e acessar APIs de Experience Platform](../../../landing/api-authentication.md) para obter instruções detalhadas sobre como criar uma credencial de API e obter as permissões necessárias.
+Consulte [Autenticar e acessar APIs do Experience Platform](../../../landing/api-authentication.md) para obter instruções detalhadas sobre como criar uma credencial de API e obter as permissões necessárias.
 
 As permissões recomendadas para ciência de dados incluem:
 
@@ -32,11 +32,11 @@ As permissões recomendadas para ciência de dados incluem:
 - Destinos: [!UICONTROL Gerenciar e ativar destinos do conjunto de dados]
 - Serviço de consulta: [!UICONTROL Gerenciar consultas]
 
-Por padrão, uma função (e as credenciais da API atribuídas a essa função) são bloqueadas para acessar quaisquer dados rotulados. Sujeito às políticas de governança de dados da organização, um Administrador do sistema pode conceder à função acesso a determinados dados rotulados que sejam considerados apropriados para o uso da ciência de dados. Os clientes da Platform são responsáveis por gerenciar o acesso a rótulos e políticas adequadamente para cumprir com as normas e políticas organizacionais relevantes.
+Por padrão, uma função (e as credenciais da API atribuídas a essa função) são bloqueadas para acessar quaisquer dados rotulados. Sujeito às políticas de governança de dados da organização, um Administrador do sistema pode conceder à função acesso a determinados dados rotulados que sejam considerados apropriados para o uso da ciência de dados. Os clientes da Experience Platform são responsáveis por gerenciar o acesso aos rótulos e as políticas adequadamente para cumprir com as normas e políticas organizacionais relevantes.
 
 ### Armazenar credenciais em um arquivo de configuração separado {#store-credentials}
 
-Para manter sua credencial segura, é recomendável evitar gravar informações de credencial diretamente em seu código. Em vez disso, mantenha as informações de credencial em um arquivo de configuração separado e leia os valores necessários para se conectar ao Experience Platform e ao Data Distiller.
+Para manter sua credencial segura, é recomendável evitar gravar informações de credencial diretamente em seu código. Em vez disso, mantenha as informações de credencial em um arquivo de configuração separado e leia os valores necessários para se conectar à Experience Platform e ao Data Distiller.
 
 Como exemplo, você pode criar um arquivo chamado `config.ini` e incluir as seguintes informações (juntamente com quaisquer outras informações, como IDs de conjunto de dados, que seriam úteis para salvar entre sessões):
 
@@ -69,7 +69,7 @@ org_id = config.get('Credential', 'ims_org_id')
 
 ## Instalar biblioteca Python da AEP {#install-python-library}
 
-[aepp](https://github.com/adobe/aepp/tree/main) é uma biblioteca de código aberto [!DNL Python] gerenciada por Adobe que fornece funções para conexão com o Data Distiller e envio de consultas, como fazer solicitações a outros serviços Experience Platform. A biblioteca `aepp`, por sua vez, depende do pacote `psycopg2` do adaptador de banco de dados PostgreSQL para consultas interativas do Data Distiller. É possível conectar-se ao Data Distiller e consultar conjuntos de dados de Experience Platform somente com `psycopg2`, mas o `aepp` fornece maior conveniência e funcionalidade adicional para fazer solicitações a todos os serviços de API de Experience Platform.
+[aepp](https://github.com/adobe/aepp/tree/main) é uma biblioteca de código aberto [!DNL Python] gerenciada pela Adobe que fornece funções para conexão com o Data Distiller e envio de consultas, como fazer solicitações a outros serviços da Experience Platform. A biblioteca `aepp`, por sua vez, depende do pacote `psycopg2` do adaptador de banco de dados PostgreSQL para consultas interativas do Data Distiller. É possível conectar-se ao Data Distiller e consultar conjuntos de dados da Experience Platform apenas com `psycopg2`, mas o `aepp` oferece maior conveniência e funcionalidade adicional para fazer solicitações a todos os serviços de API da Experience Platform.
 
 Para instalar ou atualizar o `aepp` e o `psycopg2` em seu ambiente, você pode usar o comando mágico `%pip` em seu bloco de anotações:
 
@@ -112,7 +112,7 @@ dd_conn = queryservice.QueryService().connection()
 dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 ```
 
-Em seguida, você pode consultar os conjuntos de dados na sandbox do Experience Platform. Dada a ID de um conjunto de dados que você deseja consultar, você pode recuperar o nome da tabela correspondente do serviço de catálogo e executar consultas na tabela:
+Em seguida, você pode consultar os conjuntos de dados na sandbox da Experience Platform. Dada a ID de um conjunto de dados que você deseja consultar, você pode recuperar o nome da tabela correspondente do serviço de catálogo e executar consultas na tabela:
 
 ```python
 table_name = 'ecommerce_events'
@@ -137,4 +137,4 @@ dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 
 ## Próximas etapas
 
-Ao ler este documento, você aprendeu a se conectar ao Data Distiller a partir de um bloco de anotações [!DNL Python] em seu ambiente de aprendizado de máquina. A próxima etapa na criação de pipelines de recursos, desde o Experience Platform até os modelos personalizados de feed, em seu ambiente de aprendizado de máquina, é [explorar e analisar seus conjuntos de dados](./exploratory-analysis.md).
+Ao ler este documento, você aprendeu a se conectar ao Data Distiller a partir de um bloco de anotações [!DNL Python] em seu ambiente de aprendizado de máquina. A próxima etapa na criação de pipelines de recursos do Experience Platform para alimentar modelos personalizados em seu ambiente de aprendizado de máquina é [explorar e analisar seus conjuntos de dados](./exploratory-analysis.md).

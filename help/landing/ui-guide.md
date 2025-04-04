@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;Adobe Experience Platform;guia do usuário;guia da interface do usuário;guia da interface do usuário da plataforma;introdução à plataforma;painel;
 solution: Experience Platform
-title: Visão geral da interface do Experience Platform
+title: Visão geral da interface do usuário do Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1938'
 ht-degree: 1%
 
 ---
@@ -59,9 +59,9 @@ A seção **[!UICONTROL Aprendizado recomendado]** fornece links para documenta�
 
 ## Barra de navegação superior
 
-A barra de navegação superior na interface do usuário da Platform exibe a organização na qual você está conectado no momento e fornece vários controles importantes.
+A barra de navegação superior na interface do usuário do Experience Platform exibe a organização na qual você está conectado no momento e fornece vários controles importantes.
 
-No lado esquerdo da barra de navegação, há o logotipo do Adobe Experience Platform. A seleção desse logotipo a qualquer momento o traz de volta à tela inicial da interface do usuário da plataforma.
+No lado esquerdo da barra de navegação, há o logotipo do Adobe Experience Platform. Selecionar esse logotipo a qualquer momento o traz de volta à tela inicial da interface do usuário do Experience Platform.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
@@ -75,11 +75,11 @@ Selecionar o alternador abre um menu suspenso de organizações às quais você 
 
 ### Alternar aplicativos
 
-O próximo item no lado direito da navegação superior é o **alternador de aplicativos**, representado pelo ícone ![alternador de aplicativos](/help/images/icons/apps.png). Ao selecionar esse ícone, você pode alternar entre aplicativos Adobe aos quais sua organização tem acesso, como Experience Platform, Analytics, Assets e outros.
+O próximo item no lado direito da navegação superior é o **alternador de aplicativos**, representado pelo ícone ![alternador de aplicativos](/help/images/icons/apps.png). Ao selecionar esse ícone, você pode alternar entre os aplicativos do Adobe aos quais sua organização tem acesso, como Experience Platform, Analytics, Assets e outros.
 
 ### Ajuda
 
-À direita do alternador de aplicativos está o **menu Ajuda e Suporte**, representado pelo ícone ![ponto de interrogação/ajuda](/help/images/icons/help.png). Ao selecionar esse ícone, um menu pop-over é exibido contendo vários recursos de ajuda e suporte. A guia **[!UICONTROL Ajuda]** mostra uma lista de documentações relevantes para a página em que você está no momento. A guia **[!UICONTROL Suporte]** permite criar um tíquete de suporte com a equipe de suporte do Adobe. A guia **[!UICONTROL Feedback]** permite enviar comentários sobre a Platform para o Adobe.
+À direita do alternador de aplicativos está o **menu Ajuda e Suporte**, representado pelo ícone ![ponto de interrogação/ajuda](/help/images/icons/help.png). Ao selecionar esse ícone, um menu pop-over é exibido contendo vários recursos de ajuda e suporte. A guia **[!UICONTROL Ajuda]** mostra uma lista de documentações relevantes para a página em que você está no momento. A guia **[!UICONTROL Suporte]** permite criar um tíquete de suporte com a equipe de suporte da Adobe. A guia **[!UICONTROL Feedback]** permite enviar comentários sobre o Experience Platform para a Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
@@ -91,17 +91,17 @@ Na **seção de notificações**, que é representada pelo ícone ![sino/Notific
 
 O item final na barra de navegação superior são as **configurações do usuário**, representadas pelo ícone ![configurações do usuário/Perfil do usuário](images/user-guide/profile-icon.png). Selecione este ícone para editar suas preferências ou sair.
 
-Você pode alternar entre o tema claro e escuro da interface da Platform com o switch localizado logo abaixo do seu nome e email. Selecione o tema de sua preferência.
+Você pode alternar entre o tema claro e escuro para a interface do Experience Platform com o switch localizado logo abaixo do seu nome e email. Selecione o tema de sua preferência.
 
 ![](images/theme.png)
 
 ### Sandboxes
 
-Imediatamente abaixo da barra de navegação superior está a barra de sandbox. Esta barra mostra qual sandbox você está usando atualmente para a Platform. Você pode encontrar mais informações sobre sandboxes na [visão geral das sandboxes](../sandboxes/home.md).
+Imediatamente abaixo da barra de navegação superior está a barra de sandbox. Esta barra mostra qual sandbox você está usando atualmente para o Experience Platform. Você pode encontrar mais informações sobre sandboxes na [visão geral das sandboxes](../sandboxes/home.md).
 
 ## Navegação à esquerda {#left-nav}
 
-A navegação no lado esquerdo da tela lista todos os diferentes serviços compatíveis com a interface do usuário da Platform.
+A navegação no lado esquerdo da tela lista todos os diferentes serviços compatíveis com a interface do usuário do Experience Platform.
 
 Clique no ícone do menu para mostrar ou ocultar o painel de navegação esquerdo.
 
@@ -115,15 +115,15 @@ Você pode bloquear a navegação na posição aberta clicando novamente depois 
 
 ![](images/user-guide/homepage-left.png)
 
-A seção **[!UICONTROL Página inicial]** permite retornar à página inicial da interface do usuário da plataforma.
+A seção **[!UICONTROL Página inicial]** permite retornar à página inicial da interface do usuário do Experience Platform.
 
-A seção **[!UICONTROL Fluxos de trabalho]** mostra uma lista de fluxos de trabalho de várias etapas para executar operações na Plataforma. Você pode encontrar mais informações sobre fluxos de trabalho na [visão geral sobre fluxos de trabalho](./workflows.md).
+A seção **[!UICONTROL Fluxos de trabalho]** mostra uma lista de fluxos de trabalho de várias etapas para executar operações no Experience Platform. Você pode encontrar mais informações sobre fluxos de trabalho na [visão geral sobre fluxos de trabalho](./workflows.md).
 
 ### [!UICONTROL Conexões]
 
-A seção **[!UICONTROL Fontes]** permite criar, atualizar e excluir conexões de origem, permitindo assimilar dados de fontes externas na Platform. Você pode encontrar mais informações sobre fontes na [visão geral das fontes](../sources/home.md).
+A seção **[!UICONTROL Fontes]** permite criar, atualizar e excluir conexões de origem, permitindo assimilar dados de fontes externas na Experience Platform. Você pode encontrar mais informações sobre fontes na [visão geral das fontes](../sources/home.md).
 
-A seção **[!UICONTROL Destinos]** permite criar, atualizar e excluir destinos, permitindo exportar dados da Platform para vários destinos externos. Você pode encontrar mais informações sobre destinos na [visão geral sobre destinos](../destinations/home.md).
+A seção **[!UICONTROL Destinos]** permite criar, atualizar e excluir destinos, permitindo exportar dados do Experience Platform para vários destinos externos. Você pode encontrar mais informações sobre destinos na [visão geral sobre destinos](../destinations/home.md).
 
 ### [!UICONTROL Cliente]
 
@@ -131,7 +131,7 @@ A seção **[!UICONTROL Perfis]** permite procurar perfis de clientes, exibir m�
 
 A seção **[!UICONTROL Audiences]** permite criar e gerenciar definições de segmento. Para saber mais sobre como usar a seção [!UICONTROL Públicos-alvo], leia o [guia do usuário de segmentação](../segmentation/ui/overview.md). Você pode encontrar mais informações sobre o Serviço de segmentação na [visão geral do Serviço de segmentação](../segmentation/home.md).
 
-A seção **[!UICONTROL Identidades]** permite criar e gerenciar namespaces de identidade. Para obter mais informações sobre a seção [!UICONTROL Identidades], incluindo informações sobre namespaces de identidade e como usar identidades na interface da Platform, consulte a [visão geral sobre namespaces de identidade](../identity-service/features/namespaces.md).
+A seção **[!UICONTROL Identidades]** permite criar e gerenciar namespaces de identidade. Para obter mais informações sobre a seção [!UICONTROL Identidades], incluindo informações sobre namespaces de identidade e como usar identidades na interface do Experience Platform, consulte a [visão geral sobre namespaces de identidade](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL Privacidade]
 
@@ -145,7 +145,7 @@ A seção **[!UICONTROL Notebooks]** fornece acesso ao JupyterLab, um ambiente d
 
 A seção **[!UICONTROL Modelos]** permite usar o aprendizado de máquina e a inteligência artificial para criar, desenvolver, treinar e ajustar modelos e fazer previsões. Você pode encontrar mais informações sobre a seção Modelos no tutorial sobre [treinamento e avaliar um modelo](../data-science-workspace/models-recipes/train-evaluate-model-ui.md).
 
-A seção **[!UICONTROL Serviços]** permite gerenciar os modelos publicados para treinamento e pontuação agendados ou usar os Serviços inteligentes do Adobe, um conjunto de serviços de IA que fornecem experiências do cliente personalizadas e em tempo real. Você pode encontrar mais informações sobre a seção Serviços no [tutorial Publicação de um modelo como um serviço](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+A seção **[!UICONTROL Serviços]** permite gerenciar os modelos publicados para treinamento e pontuação agendados ou usar os Serviços inteligentes da Adobe, um conjunto de serviços de IA que fornecem experiências do cliente personalizadas e em tempo real. Você pode encontrar mais informações sobre a seção Serviços no [tutorial Publicação de um modelo como um serviço](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### [!UICONTROL Gerenciamento de dados]
 
@@ -168,11 +168,11 @@ A seção **[!UICONTROL Federated databases]** permite conectar o Adobe Experien
 
 ### [!UICONTROL Decisão]
 
-O Adobe Journey Optimizer é um serviço de aplicativos criado sobre o Experience Platform. Ele permite usar tecnologias de decisão avançadas para fornecer a melhor oferta e experiência aos seus clientes em todos os pontos de contato na hora certa. Para saber mais sobre o Journey Optimizer, incluindo como trabalhar com [!UICONTROL Ofertas] e [!UICONTROL Atividades], visite a [documentação do Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=pt-BR).
+O Adobe Journey Optimizer é um serviço de aplicativos criado com base na Experience Platform. Ele permite usar tecnologias de decisão avançadas para fornecer a melhor oferta e experiência aos seus clientes em todos os pontos de contato na hora certa. Para saber mais sobre o Journey Optimizer, incluindo como trabalhar com [!UICONTROL Ofertas] e [!UICONTROL Atividades], visite a [documentação do Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=pt-BR).
 
 ### [!UICONTROL Administração]
 
-A interface do usuário (UI) da Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da organização, conforme capturadas durante um instantâneo diário. Acesse este painel selecionando **[!UICONTROL Uso da licença]** na navegação. Para saber mais sobre o painel de uso de licença, visite o [guia do painel de uso de licença](./license-usage-and-guardrails/license-usage-dashboard.md).
+A interface do usuário (UI) do Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da organização, conforme capturadas durante um instantâneo diário. Acesse este painel selecionando **[!UICONTROL Uso da licença]** na navegação. Para saber mais sobre o painel de uso de licença, visite o [guia do painel de uso de licença](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
@@ -180,4 +180,4 @@ A interface do usuário (UI) da Platform fornece um painel por meio do qual voc�
 
 ## Próximas etapas
 
-Após a leitura deste guia, você foi apresentado à página inicial e aos principais elementos de navegação da interface do usuário da Platform. Para obter informações mais detalhadas sobre como trabalhar na interface do usuário, consulte a documentação de cada serviço individual do Platform. Links para esta documentação são fornecidos na seção [navegação à esquerda](#left-nav), localizada anteriormente neste documento.
+Após a leitura deste guia, você foi apresentado à página inicial e aos principais elementos de navegação da interface do usuário do Experience Platform. Para obter informações mais detalhadas sobre como trabalhar na interface do usuário, consulte a documentação de cada serviço individual do Experience Platform. Links para esta documentação são fornecidos na seção [navegação à esquerda](#left-nav), localizada anteriormente neste documento.

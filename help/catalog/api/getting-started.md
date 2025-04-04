@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da API do Serviço de catálogo
 description: A API do Serviço de catálogo permite que os desenvolvedores gerenciem metadados do conjunto de dados na Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
-source-git-commit: 07451b8ab4bcb7ca43ad0c8a821478b2c9682894
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '588'
 ht-degree: 25%
@@ -21,7 +21,7 @@ Este manual do desenvolvedor fornece etapas para ajudar a começar a usar a API 
 
 [!DNL Catalog] rastreia metadados para vários tipos de recursos e operações em [!DNL Experience Platform]. Este guia do desenvolvedor requer uma compreensão funcional dos vários serviços do [!DNL Experience Platform] envolvidos na criação e no gerenciamento desses recursos:
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [Assimilação em lote](../../ingestion/batch-ingestion/overview.md): como o [!DNL Experience Platform] assimila e armazena dados de arquivos de dados, como CSV e Parquet.
 * [Assimilação de streaming](../../ingestion/streaming-ingestion/overview.md): como [!DNL Experience Platform] assimila e armazena dados de dispositivos no lado do cliente e do servidor em tempo real.
 
@@ -33,19 +33,19 @@ Este manual fornece exemplos de chamadas de API para demonstrar como formatar su
 
 ## Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 
@@ -53,7 +53,7 @@ Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um ca
 
 ## Práticas recomendadas para chamadas de API [!DNL Catalog]
 
-Ao executar solicitações GET para a API [!DNL Catalog], a prática recomendada é incluir parâmetros de consulta em suas solicitações para retornar apenas os objetos e as propriedades necessárias. Solicitações não filtradas podem fazer com que as cargas de resposta atinjam tamanhos acima de 3 GB, o que pode retardar o desempenho geral.
+Ao executar solicitações do GET para a API [!DNL Catalog], a prática recomendada é incluir parâmetros de consulta em suas solicitações para retornar apenas os objetos e as propriedades necessárias. Solicitações não filtradas podem fazer com que as cargas de resposta atinjam tamanhos acima de 3 GB, o que pode retardar o desempenho geral.
 
 Você pode exibir objetos específicos incluindo sua ID no caminho da solicitação ou usar parâmetros de consulta como `properties` e `limit` para filtrar respostas. Os filtros podem ser transmitidos como cabeçalhos e como parâmetros de consulta, com os transmitidos como parâmetros de consulta tendo prioridade. Consulte o documento sobre [filtragem de dados do catálogo](filter-data.md) para obter mais informações.
 

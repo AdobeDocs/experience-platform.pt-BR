@@ -3,9 +3,9 @@ title: Criar uma conexão com o Chatlio Source na interface do usuário
 description: Saiba como criar uma conexão de origem do Chatlio usando a interface do Adobe Experience Platform.
 badge: Beta
 exl-id: 55c10bcb-0332-45ff-970b-272d375b591d
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1167'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Este tutorial fornece etapas para criar uma conexão de origem [!DNL Chatlio] us
 
 ## Introdução {#getting-started}
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -48,25 +48,25 @@ Antes de criar uma conexão de origem [!DNL Chatlio], você precisará de um esq
 }
 ```
 
-### Criar um esquema da plataforma para [!DNL Chatlio] {#create-platform-schema}
+### Criar um esquema do Experience Platform para [!DNL Chatlio] {#create-platform-schema}
 
-Você também deve garantir a criação de um schema da Platform para usar na origem. Leia o tutorial sobre [criação de um esquema da plataforma](../../../../../xdm/schema/composition.md) para obter etapas abrangentes sobre como criar um esquema.
+Você também deve garantir a criação de um esquema do Experience Platform para usar na origem. Leia o tutorial sobre [criação de um esquema do Experience Platform](../../../../../xdm/schema/composition.md) para obter etapas abrangentes sobre como criar um esquema.
 
-![A interface do usuário da plataforma mostrando um esquema de exemplo para o Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
+![A interface do usuário do Experience Platform mostrando um esquema de exemplo para o Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/schema.png)
 
 ## Conectar sua conta do [!DNL Chatlio] {#connect-account}
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes] e ver um catálogo de fontes disponíveis no Experience Platform.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes] e ver um catálogo de fontes disponíveis no Experience Platform.
 
 Use o menu *[!UICONTROL Categorias]* para filtrar fontes por categoria. Como alternativa, insira um nome de origem na barra de pesquisa para localizar uma origem específica do catálogo.
 
 Vá para a categoria [!UICONTROL Automação de marketing] para ver o cartão de origem [!DNL Chatlio]. Para começar, selecione **[!UICONTROL Adicionar dados]**.
 
-![O catálogo da interface do usuário da Platform com o cartão Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
+![O catálogo da interface do usuário do Experience Platform com o cartão Chatlio](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/catalog.png)
 
 ## Selecionar dados {#select-data}
 
-A etapa **[!UICONTROL Selecionar dados]** é exibida, fornecendo uma interface para que você selecione os dados que deseja trazer para a Platform.
+A etapa **[!UICONTROL Selecionar dados]** é exibida, fornecendo uma interface para que você selecione os dados que deseja trazer para a Experience Platform.
 
 * A parte esquerda da interface é um navegador que permite visualizar os fluxos de dados disponíveis em sua conta;
 * A parte direita da interface permite visualizar até 100 linhas de dados de um arquivo JSON.
@@ -93,7 +93,7 @@ Quando terminar, selecione **[!UICONTROL Próximo]**.
 
 A etapa [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
+O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
 
 Os mapeamentos listados abaixo são obrigatórios e devem ser configurados antes de prosseguir para o estágio [!UICONTROL Revisão].
 
@@ -151,7 +151,7 @@ Em seguida, selecione a guia **[!DNL Behavior]** e adicione a URL do webhook ao 
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você configurou com êxito um fluxo de dados de transmissão para trazer seus dados do [!DNL Chatlio] para o Experience Platform. Para monitorar os dados que estão sendo assimilados, consulte o manual sobre [monitoramento de fluxos de dados de transmissão usando a interface do usuário da plataforma](../../monitor-streaming.md).
+Ao seguir este tutorial, você configurou com êxito um fluxo de dados de transmissão para trazer seus dados do [!DNL Chatlio] para a Experience Platform. Para monitorar os dados que estão sendo assimilados, consulte o manual sobre [monitoramento de fluxos de dados de transmissão usando a interface do Experience Platform](../../monitor-streaming.md).
 
 ## Recursos adicionais {#additional-resources}
 
@@ -165,8 +165,8 @@ Para validar se você configurou corretamente a origem e se [!DNL Chatlio] mensa
 
 ![Captura de tela da interface do Chatlio mostrando o histórico do chat](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png)
 
-* Na interface da Platform, selecione **[!UICONTROL Exibir Fluxos de Dados]** ao lado do menu de cartão [!DNL Chatlio] no catálogo de fontes. Em seguida, selecione **[!UICONTROL Visualizar conjunto de dados]** para verificar os dados assimilados pelos webhooks configurados no [!DNL Chatlio].
+* Na interface do usuário do Experience Platform, selecione **[!UICONTROL Exibir Fluxos de Dados]** ao lado do menu de cartão [!DNL Chatlio] no catálogo de fontes. Em seguida, selecione **[!UICONTROL Visualizar conjunto de dados]** para verificar os dados assimilados pelos webhooks configurados no [!DNL Chatlio].
 
-![Captura de tela da interface do usuário da plataforma mostrando eventos assimilados](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
+![Captura de tela da interface do Experience Platform mostrando eventos assimilados](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png)
 
 Para obter informações adicionais sobre [!DNL Chatlio], visite a [[!DNL Chatlio] documentação](https://chatlio.com/docs/) e as [Perguntas frequentes](https://chatlio.com/pricing/#FAQ).

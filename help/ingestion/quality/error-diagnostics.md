@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;assimilação em lote;Assimilação em lote;Assimilação parcial;Assimilação parcial;Recuperar erro;recuperar erro;Assimilação parcial em lote;Assimilação parcial em lote;assimilação parcial;Assimilação;diagnóstico de erro;recuperar diagnóstico de erro;obter diagnóstico de erro;obter erro;obter erros;recuperar erros;
+keywords: Experience Platform;página inicial;tópicos populares;assimilação em lote;Assimilação em lote;assimilação parcial;Assimilação parcial;Recuperar erro;recuperar erro;Assimilação parcial em lote;Assimilação parcial em lote;assimilação parcial;Assimilação;diagnóstico de erro;recuperar diagnóstico de erro;obter diagnóstico de erro;obter erro;obter erros;recuperar erros;
 solution: Experience Platform
 title: Recuperação de diagnóstico de erro de assimilação de dados
 description: Este documento fornece informações sobre monitoramento da assimilação em lote, gerenciamento de erros parciais de assimilação em lote, bem como uma referência para tipos parciais de assimilação em lote.
 exl-id: b885fb00-b66d-453b-80b7-8821117c2041
-source-git-commit: edd285c3d0638b606876c015dffb18309887dfb5
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 9%
@@ -13,7 +13,7 @@ ht-degree: 9%
 
 # Recuperando diagnóstico de erro de assimilação de dados
 
-O Adobe Experience Platform fornece dois métodos para fazer upload e assimilar dados. Você pode usar a assimilação em lote, que permite inserir dados usando vários tipos de arquivos (como CSVs), ou a assimilação por streaming, que permite inserir os dados no [!DNL Platform] usando pontos de extremidade de streaming em tempo real.
+O Adobe Experience Platform fornece dois métodos para fazer upload e assimilar dados. Você pode usar a assimilação em lote, que permite inserir dados usando vários tipos de arquivos (como CSVs), ou a assimilação por streaming, que permite inserir os dados no [!DNL Experience Platform] usando pontos de extremidade de streaming em tempo real.
 
 Este documento fornece informações sobre monitoramento da assimilação em lote, gerenciamento de erros parciais de assimilação em lote, bem como uma referência para tipos parciais de assimilação em lote.
 
@@ -30,23 +30,23 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Schema Registry], estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Schema Registry], estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 ## Baixando diagnóstico de erro {#download-diagnostics}
 
-O Adobe Experience Platform permite que os usuários baixem os diagnósticos de erro dos arquivos de entrada. O diagnóstico será retido em [!DNL Platform] por até 30 dias.
+O Adobe Experience Platform permite que os usuários baixem os diagnósticos de erro dos arquivos de entrada. O diagnóstico será retido em [!DNL Experience Platform] por até 30 dias.
 
 ### Listar arquivos de entrada {#list-files}
 

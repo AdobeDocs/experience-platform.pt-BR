@@ -2,10 +2,10 @@
 title: Fazer backup de configurações de objeto usando ferramentas de sandbox
 description: Para redefinir sandboxes com segurança e adicionar suporte ao controle de versão, faça backup das configurações de objeto (ou metadados) usando pacotes de ferramentas de sandbox. Os pacotes de backup evitam a perda de configurações críticas, como esquemas, conjuntos de dados e públicos-alvo, especialmente durante iterações de desenvolvimento.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 3%
+source-wordcount: '1167'
+ht-degree: 2%
 
 ---
 
@@ -30,7 +30,7 @@ Ao planejar criar seu próprio pacote de backup na empresa, considere os seguint
 - Dependendo dos metadados do escopo do qual deseja fazer backup, verifique se você entende como [adicionar objetos manualmente a um pacote](../ui/sandbox-tooling.md#add-object-to-a-new-package) ou como [exportar uma sandbox inteira](../ui/sandbox-tooling.md#export-an-entire-sandbox).
 - Verifique se você tem acesso às ferramentas de sandbox em sua organização com as permissões corretas.
 
-### Funcionalidade da interface, componentes da Platform e produtos da Experience Cloud que serão usados {#ui-functionality-and-elements}
+### Funcionalidade da interface do usuário, componentes do Experience Platform e produtos da Experience Cloud que você usará {#ui-functionality-and-elements}
 
 Para implementar com êxito esse caso de uso, você deve usar várias áreas do Adobe Experience Platform. Verifique se você tem as [permissões de controle de acesso baseadas em atributos](../../access-control/abac/overview.md) necessárias para todas essas áreas ou peça ao administrador do sistema para conceder as permissões necessárias.
 
@@ -85,7 +85,7 @@ Você pode fazer backup de objetos individuais em um pacote de qualquer uma das 
 
 ##### Criação de um pacote de vários objetos
 
-No Experience Platform, selecione **[!UICONTROL Sandboxes]** na navegação à esquerda e, em seguida, selecione **[!UICONTROL Pacotes]**. Para começar a criar um novo pacote, selecione **[!UICONTROL Criar pacote]** no canto superior direito.
+No Experience Platform, selecione **[!UICONTROL Sandboxes]** na navegação à esquerda e selecione **[!UICONTROL Pacotes]**. Para começar a criar um novo pacote, selecione **[!UICONTROL Criar pacote]** no canto superior direito.
 
 ![A guia Pacotes no painel sandboxes com Criar pacote realçado.](../images/use-cases/create-package.png)
 

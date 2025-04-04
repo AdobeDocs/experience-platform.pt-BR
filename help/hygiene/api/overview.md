@@ -3,9 +3,9 @@ title: Guia da API de higiene de dados
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados dos clientes no Adobe Experience Platform.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '446'
 ht-degree: 6%
 
 ---
@@ -34,7 +34,7 @@ Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um ca
 
 ### Leitura de chamadas de API de amostra
 
-Este documento fornece um exemplo de chamada de API para demonstrar como formatar suas solicitações. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução para APIs Experience Platform.
+Este documento fornece um exemplo de chamada de API para demonstrar como formatar suas solicitações. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/api-guide.md#sample-api) no guia de introdução para APIs do Experience Platform.
 
 ## Expirações de conjuntos de dados
 
@@ -57,4 +57,4 @@ Sua organização está limitada a uma cota de trabalho mensal predeterminada pa
 
 ## Próximas etapas
 
-Este guia abordou como gerenciar solicitações de ciclo de vida de dados usando chamadas de API. Para obter informações sobre como executar essas ações na interface da Platform, consulte o [guia da interface do ciclo de vida dos dados](../ui/overview.md).
+Este guia abordou como gerenciar solicitações de ciclo de vida de dados usando chamadas de API. Para obter informações sobre como executar essas ações na interface do usuário do Experience Platform, consulte o [guia da interface do usuário do ciclo de vida dos dados](../ui/overview.md).

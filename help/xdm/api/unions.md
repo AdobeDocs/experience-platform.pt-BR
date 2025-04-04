@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de uniões
 description: O ponto de extremidade /unions na API do registro de esquema permite gerenciar programaticamente os esquemas de união XDM no aplicativo de experiência.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '900'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ A matriz `timeSeriesEvents` é uma lista de eventos de série temporal relaciona
 
 ### Mapa da associação de segmento
 
-O mapa `segmentMembership` armazena os resultados da avaliação de uma definição de segmento. Quando trabalhos de segmento são executados com êxito usando a [API de segmentação](https://www.adobe.io/experience-platform-apis/references/segmentation/), o mapa é atualizado. O `segmentMembership` também armazena todos os públicos-alvo pré-avaliados que são assimilados na Platform, permitindo a integração com outras soluções, como o Adobe Audience Manager. Consulte o tutorial sobre [criação de públicos-alvo usando APIs](../../segmentation/tutorials/create-a-segment.md) para obter mais informações.
+O mapa `segmentMembership` armazena os resultados da avaliação de uma definição de segmento. Quando trabalhos de segmento são executados com êxito usando a [API de segmentação](https://www.adobe.io/experience-platform-apis/references/segmentation/), o mapa é atualizado. O `segmentMembership` também armazena todos os públicos-alvo pré-avaliados que são assimilados na Experience Platform, permitindo a integração com outras soluções, como o Adobe Audience Manager. Consulte o tutorial sobre [criação de públicos-alvo usando APIs](../../segmentation/tutorials/create-a-segment.md) para obter mais informações.
 
 ## Recuperar uma lista de uniões {#list}
 

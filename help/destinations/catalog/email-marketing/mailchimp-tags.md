@@ -3,9 +3,9 @@ title: Tags do Mailchimp
 description: O destino de Tags do Mailchimp permite exportar os dados da sua conta e ativá-los no Mailchimp para interagir com os contatos.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1657'
 ht-degree: 2%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 [!DNL Mailchimp Tags] usa [públicos-alvo](https://mailchimp.com/help/getting-started-audience/) e [marcas](https://mailchimp.com/help/getting-started-tags/) para gerenciar suas informações de contato. As marcas são etiquetas com as quais você pode organizar seus contatos e rotular para sua categorização interna em [!DNL Mailchimp].
 
-Comparado ao [!DNL Mailchimp Interest Categories], que você usaria para classificar seus contatos com base em seus interesses e preferências, o [!DNL Mailchimp Tags] deve gerenciar assinaturas de tópicos de interesse nos quais seus contatos possam estar interessados. *Observação: o Experience Platform também tem uma conexão para [!DNL Mailchimp Interest Categories], você pode conferir na página [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md).*
+Comparado ao [!DNL Mailchimp Interest Categories], que você usaria para classificar seus contatos com base em seus interesses e preferências, o [!DNL Mailchimp Tags] deve gerenciar assinaturas de tópicos de interesse nos quais seus contatos possam estar interessados. *Observação: a Experience Platform também tem uma conexão para [!DNL Mailchimp Interest Categories]. Você pode fazer o check-out na página [[!DNL Mailchimp Interest Categories]](/help/destinations/catalog/email-marketing/mailchimp-interest-categories.md).*
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aproveita o ponto de extremidade [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/). Você pode **adicionar novos contatos** ou **atualizar marcas de [!DNL Mailchimp] contatos** existentes em um público-alvo [!DNL Mailchimp] existente depois de ativá-los em um novo público-alvo. [!DNL Mailchimp Tags] usa os nomes de público selecionados da Platform como os nomes de marca em [!DNL Mailchimp].
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aproveita o ponto de extremidade [[!DNL Mailchimp batch subscribe or unsubscribe API]](https://mailchimp.com/developer/marketing/api/lists/batch-subscribe-or-unsubscribe/). Você pode **adicionar novos contatos** ou **atualizar marcas de [!DNL Mailchimp] contatos** existentes em um público-alvo [!DNL Mailchimp] existente depois de ativá-los em um novo público-alvo. [!DNL Mailchimp Tags] usa os nomes de público selecionados do Experience Platform como os nomes de marca em [!DNL Mailchimp].
 
 ## Casos de uso {#use-cases}
 
@@ -26,11 +26,11 @@ Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL M
 
 ### Enviar emails para contatos de campanhas de marketing {#use-case-send-emails}
 
-O departamento de vendas de uma organização deseja transmitir uma campanha de marketing por email para uma lista de contatos com curadoria. As listas de contato são recebidas em lotes de diferentes fontes offline e, portanto, precisam ser rastreadas. A equipe identifica um público-alvo [!DNL Mailchimp] existente e começa a criar os públicos-alvo do Experience Platform aos quais os contatos de cada lista são adicionados. Depois de enviar esses públicos-alvo para [!DNL Mailchimp Tags], se algum contato não existir no público-alvo [!DNL Mailchimp] selecionado, ele será adicionado com uma marca associada que inclui o nome do público ao qual o contato pertence. Se já existirem contatos no público-alvo [!DNL Mailchimp], uma nova tag com o nome do público-alvo será adicionada. Como os rótulos estão visíveis no [!DNL Mailchimp], as fontes offline são facilmente identificáveis. Depois que os dados são enviados para [!DNL Mailchimp], eles enviam o email da campanha de marketing para o público.
+O departamento de vendas de uma organização deseja transmitir uma campanha de marketing por email para uma lista de contatos com curadoria. As listas de contato são recebidas em lotes de diferentes fontes offline e, portanto, precisam ser rastreadas. A equipe identifica um público-alvo [!DNL Mailchimp] existente e começa a criar os públicos-alvo da Experience Platform aos quais os contatos de cada lista são adicionados. Depois de enviar esses públicos-alvo para [!DNL Mailchimp Tags], se algum contato não existir no público-alvo [!DNL Mailchimp] selecionado, ele será adicionado com uma marca associada que inclui o nome do público ao qual o contato pertence. Se já existirem contatos no público-alvo [!DNL Mailchimp], uma nova tag com o nome do público-alvo será adicionada. Como os rótulos estão visíveis no [!DNL Mailchimp], as fontes offline são facilmente identificáveis. Depois que os dados são enviados para [!DNL Mailchimp], eles enviam o email da campanha de marketing para o público.
 
 ## Pré-requisitos {#prerequisites}
 
-Consulte as seções abaixo para quaisquer pré-requisitos que você precise configurar no Experience Platform e [!DNL Mailchimp] e para obter informações que você precise coletar antes de trabalhar com o destino [!DNL Mailchimp Tags].
+Consulte as seções abaixo para quaisquer pré-requisitos que você precise configurar no Experience Platform e [!DNL Mailchimp] e para obter as informações que você precisa coletar antes de trabalhar com o destino [!DNL Mailchimp Tags].
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
@@ -38,7 +38,7 @@ Antes de ativar dados para o destino [!DNL Mailchimp Tags], você deve ter um [e
 
 ### Pré-requisitos para o destino [!DNL Mailchimp Tags] {#prerequisites-destination}
 
-Observe os seguintes pré-requisitos para exportar dados da Platform para sua conta do [!DNL Mailchimp Tags]:
+Observe os seguintes pré-requisitos para exportar dados do Experience Platform para sua conta do [!DNL Mailchimp Tags]:
 
 #### Você precisa ter uma conta [!DNL Mailchimp] {#prerequisites-account}
 
@@ -88,7 +88,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -99,8 +99,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um público-alvo, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campos.</li><li> Para cada público selecionado na Platform, o status de segmento [!DNL Mailchimp Tags] correspondente é atualizado com o status de público da Platform.</li></ul> |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um público-alvo, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campos.</li><li> Para cada público selecionado no Experience Platform, o status do segmento [!DNL Mailchimp Tags] correspondente é atualizado com o status do público do Experience Platform.</li></ul> |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -125,7 +125,7 @@ Para autenticar no destino, preencha os campos obrigatórios abaixo e selecione 
 
 {style="table-layout:auto"}
 
-![Captura de tela da interface do usuário da plataforma mostrando como autenticar.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
+![Captura de tela da interface do Experience Platform mostrando como autenticar.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
 
 Se os detalhes fornecidos forem válidos, a interface exibirá um status **[!UICONTROL Conectado]** com uma marca de seleção verde. Você pode prosseguir para a próxima etapa.
 
@@ -133,14 +133,14 @@ Se os detalhes fornecidos forem válidos, a interface exibirá um status **[!UIC
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-![Captura de tela da Interface do Usuário da Plataforma mostrando os detalhes de destino.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
+![Captura de tela da interface do Experience Platform mostrando os detalhes do destino.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
 
 | Campo | Descrição |
 | --- | --- |
 | **[!UICONTROL Nome]** | Um nome pelo qual você reconhecerá este destino no futuro. |
 | **[!UICONTROL Descrição]** | Uma descrição que ajudará você a identificar esse destino no futuro. |
 | **[!UICONTROL Data center]** | Sua conta `data center` do [!DNL Mailchimp]. Consulte a seção [Identificar [!DNL Mailchimp] data center](#identify-data-center) para obter qualquer orientação. |
-| **[!UICONTROL Nome do público-alvo (Insira o data center primeiro)]** | Depois de inserir seu **[!UICONTROL Data center]**, esta lista suspensa é preenchida automaticamente com os nomes de público-alvo da sua conta do [!DNL Mailchimp]. Selecione o público que deseja atualizar com os dados da Platform. |
+| **[!UICONTROL Nome do público-alvo (Insira o data center primeiro)]** | Depois de inserir seu **[!UICONTROL Data center]**, esta lista suspensa é preenchida automaticamente com os nomes de público-alvo da sua conta do [!DNL Mailchimp]. Selecione o público que deseja atualizar com os dados do Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -161,18 +161,18 @@ Leia [Ativar públicos-alvo para destinos de streaming](/help/destinations/ui/ac
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Mailchimp Tags], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste em criar um link entre os campos do esquema do Experience Data Model (XDM) na sua conta da Platform e seus equivalentes correspondentes no destino.
+Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Mailchimp Tags], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL Mailchimp Tags], siga as etapas abaixo:
 
 1. Na etapa **[!UICONTROL Mapeamento]**, selecione **[!UICONTROL Adicionar novo mapeamento]**. Você verá uma nova linha de mapeamento na tela.
 1. Na janela **[!UICONTROL Selecionar campo de origem]**, escolha **[!UICONTROL Selecionar namespace de identidade]** e selecione o namespace de identidade `Email`.
 
-   ![Captura de tela da interface do usuário da plataforma com o campo Source como email do namespace de identidade.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
+   ![Captura de tela da interface do usuário do Experience Platform com o campo do Source como Email do namespace de identidade.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. Na janela **[!UICONTROL Selecionar campo de destino]**, escolha **[!UICONTROL Selecionar namespace de identidade]** e selecione o namespace de identidade `Email`.
 
-   ![Captura de tela da interface do usuário da plataforma com o campo Direcionamento como Email do namespace de identidade.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
+   ![Captura de tela da interface do usuário do Experience Platform com o campo Direcionamento como Email do namespace de identidade.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    Os mapeamentos entre seu esquema de perfil XDM e [!DNL Mailchimp Tags] serão como abaixo:
 
@@ -181,7 +181,7 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL Mailchimp
    | `IdentityMap: Email` | `Identity: Email` | Sim |
 
    Um exemplo com os mapeamentos concluídos é mostrado abaixo:
-   ![Exemplo de captura de tela da interface do usuário da plataforma mostrando mapeamentos de campo.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
+   ![Exemplo de captura de tela da interface do Experience Platform mostrando mapeamentos de campo.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
 
 Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecione **[!UICONTROL Avançar]**.
 

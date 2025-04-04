@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;esquema;Esquema;esquemas;esquemas;criar
+keywords: Experience Platform;home;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;esquema;Esquema;esquemas;esquemas;criar
 solution: Experience Platform
 title: Criar um esquema usando a API do registro de esquema
 type: Tutorial
 description: Este tutorial usa a API do registro de esquema para orientá-lo pelas etapas de composição de um esquema usando uma classe padrão.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2584'
 ht-degree: 3%
 
 ---
 
 # Criar um esquema usando a API [!DNL Schema Registry]
 
-O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe Experience Platform. O [!DNL Schema Library] contém recursos disponibilizados a você pelo Adobe, parceiros [!DNL Experience Platform] e fornecedores cujos aplicativos você usa. O registro fornece uma interface de usuário e a API RESTful a partir da qual todos os recursos de biblioteca disponíveis podem ser acessados.
+O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe Experience Platform. O [!DNL Schema Library] contém recursos disponibilizados a você pela Adobe, parceiros [!DNL Experience Platform] e fornecedores cujos aplicativos você usa. O registro fornece uma interface de usuário e a API RESTful a partir da qual todos os recursos de biblioteca disponíveis podem ser acessados.
 
 Este tutorial usa a API [!DNL Schema Registry] para orientá-lo pelas etapas de composição de um esquema usando uma classe padrão. Se você preferir usar a interface de usuário no [!DNL Experience Platform], o [Tutorial do Editor de Esquemas](create-schema-ui.md) fornece instruções passo a passo para executar ações semelhantes no editor de esquemas.
 
 >[!NOTE]
 >
->Se você estiver assimilando dados CSV na Platform, poderá [mapear esses dados para um esquema XDM criado por recomendações geradas por IA](../../ingestion/tutorials/map-csv/recommendations.md) (atualmente na versão beta) sem precisar criar manualmente o esquema.
+>Se você estiver assimilando dados CSV na Experience Platform, poderá [mapear esses dados para um esquema XDM criado por recomendações geradas por IA](../../ingestion/tutorials/map-csv/recommendations.md) (atualmente na versão beta) sem precisar criar manualmente o esquema.
 
 ## Introdução
 
@@ -29,7 +29,7 @@ Este manual necessita de uma compreensão funcional dos seguintes componentes da
 * [[!DNL Experience Data Model (XDM) System]](../home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 Antes de iniciar este tutorial, consulte o [guia do desenvolvedor](../api/getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas para a API [!DNL Schema Registry] com êxito. Isso inclui o `{TENANT_ID}`, o conceito de &quot;contêineres&quot; e os cabeçalhos necessários para fazer solicitações (com atenção especial ao cabeçalho `Accept` e seus valores possíveis).
 
@@ -602,7 +602,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Solicitação**
 
-Essa solicitação atualiza (PATCH) o esquema Membros de fidelidade para incluir os campos no novo grupo de campos &quot;Camada de fidelidade&quot;.
+Essa solicitação atualiza (PATCH) o esquema Membros de Fidelidade para incluir os campos no novo grupo de campos &quot;Camada de Fidelidade&quot;.
 
 ```SHELL
 curl -X PATCH \
@@ -700,7 +700,7 @@ Você pode ver que o grupo de campos foi adicionado com êxito porque a resposta
 
 ### Visualizar o esquema atual
 
-Agora é possível executar uma solicitação GET para visualizar o esquema atual e ver como os grupos de campos adicionados contribuíram para a estrutura geral do esquema.
+Agora é possível executar uma solicitação do GET para visualizar o esquema atual e ver como os grupos de campos adicionados contribuíram para a estrutura geral do esquema.
 
 **Formato da API**
 
@@ -1298,7 +1298,7 @@ A resposta mostra que a operação foi executada com êxito e o esquema agora co
 
 ### Listar esquemas em uma união
 
-Você adicionou com êxito seu esquema à união [!DNL XDM Individual Profile]. Para ver uma lista de todos os esquemas que fazem parte da mesma união, você pode executar uma solicitação GET usando parâmetros de consulta para filtrar a resposta.
+Você adicionou com êxito seu esquema à união [!DNL XDM Individual Profile]. Para ver uma lista de todos os esquemas que fazem parte da mesma união, você pode executar uma solicitação do GET usando parâmetros de consulta para filtrar a resposta.
 
 Usando o parâmetro de consulta `property`, você pode especificar que apenas esquemas contendo um campo `meta:immutableTags` que tenha um `meta:class` igual ao `$id` da classe [!DNL XDM Individual Profile] sejam retornados.
 

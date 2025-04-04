@@ -2,10 +2,10 @@
 title: Suporte à Política de segurança de conteúdo (CSP)
 description: Saiba como lidar com restrições da Política de segurança de conteúdo (CSP) ao integrar seu site com tags à Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 98%
+source-wordcount: '1076'
+ht-degree: 97%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Uma Política de Segurança de Conteúdo (CSP) é um recurso de segurança que ajuda a impedir ataques de script entre sites (XSS). Isso acontece quando o navegador é induzido a executar conteúdo mal-intencionado que parece vir de uma fonte confiável, mas vem de outro lugar. As CSPs permitem que o navegador verifique (em nome do usuário) se o script realmente vem de uma fonte confiável.
 
@@ -82,7 +82,7 @@ A CSP não permite scripts integrados por padrão e, portanto, deve ser configur
 
 >[!NOTE]
 >
->A especificação da CSP tem detalhes para uma terceira opção com o uso de hashes, mas essa abordagem não é viável para ser usada com sistemas de gerenciamento de tags como tags. Para obter mais informações sobre as limitações do uso de hashes com tags na Platform, consulte o [manual de Integridade de sub-recursos (SRI)](./sri.md).
+>A especificação da CSP tem detalhes para uma terceira opção com o uso de hashes, mas essa abordagem não é viável para ser usada com sistemas de gerenciamento de tags como tags. Para obter mais informações sobre as limitações do uso de hashes com tags na Experience Platform, consulte o [guia de Integridade de Sub-recursos (SRI)](./sri.md).
 
 ### Permitir por nonce {#nonce}
 
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 Após a leitura desse documento, você deve entender como configurar o cabeçalho da CSP para aceitar o arquivo da biblioteca de tags e scripts integrados.
 
-Como medida de segurança adicional, você também pode optar por usar a SRI (Integridade de sub-recursos) para validar builds de bibliotecas pesquisadas. No entanto, esse recurso tem algumas limitações importantes quando usado com sistemas de gerenciamento de tags como tags. Consulte o manual sobre [compatibilidade da SRI na Platform](./sri.md) para obter mais informações.
+Como medida de segurança adicional, você também pode optar por usar a SRI (Integridade de sub-recursos) para validar builds de bibliotecas pesquisadas. No entanto, esse recurso tem algumas limitações importantes quando usado com sistemas de gerenciamento de tags como tags. Consulte o guia sobre [Compatibilidade com SRI no Experience Platform](./sri.md) para obter mais informações.

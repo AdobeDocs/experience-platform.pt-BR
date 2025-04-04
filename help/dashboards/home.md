@@ -4,9 +4,9 @@ title: Visão geral dos painéis
 type: Documentation
 description: Explore vários painéis no Adobe Experience Platform para exibir informações importantes sobre os dados de sua organização, conforme capturados durante instantâneos diários.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
-source-git-commit: 25953a5a1f5b32de7d150dbef700ad06ce6014df
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ O Adobe Experience Platform fornece vários painéis por meio dos quais você po
 
 ## Introdução aos painéis
 
-Os painéis fornecem relatórios prontos para uso sobre os dados da sua organização e são criados diretamente no fluxo de trabalho do profissional de marketing na Platform. Esses painéis estão disponíveis sem a necessidade de suporte de TI adicional ou o tempo e esforço que seriam necessários para exportar e processar dados com projeto e implementação adicionais de data warehouse.
+Os painéis fornecem relatórios prontos para uso sobre os dados da sua organização e são integrados diretamente no fluxo de trabalho do profissional de marketing no Experience Platform. Esses painéis estão disponíveis sem a necessidade de suporte de TI adicional ou o tempo e esforço que seriam necessários para exportar e processar dados com projeto e implementação adicionais de data warehouse.
 
 ## Introdução aos painéis
 

@@ -2,29 +2,29 @@
 title: Criar um fluxo de dados para o Zendesk usando a API do Serviço de Fluxo
 description: Saiba como conectar o Adobe Experience Platform ao Zendesk usando a API do Serviço de Fluxo.
 exl-id: 3e00e375-c6f8-407c-bded-7357ccf3482e
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '1956'
 ht-degree: 2%
 
 ---
 
 # Criar um fluxo de dados para [!DNL Zendesk] usando a API [!DNL Flow Service]
 
-O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem e um fluxo de dados para trazer dados do [!DNL Zendesk] para a Platform usando a [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem e um fluxo de dados para trazer dados do [!DNL Zendesk] para a Experience Platform usando a [[!DNL Flow Service] API](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Introdução
 
-Este guia requer entendimento prático dos seguintes componentes do Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Zendesk] usando a API [!DNL Flow Service].
 
 ### Coletar credenciais necessárias
 
-Para acessar sua conta do [!DNL Zendesk] na Platform, você deve fornecer valores para as seguintes credenciais:
+Para acessar sua conta do [!DNL Zendesk] no Experience Platform, você deve fornecer valores para as seguintes credenciais:
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
@@ -33,15 +33,15 @@ Para acessar sua conta do [!DNL Zendesk] na Platform, você deve fornecer valore
 
 Para obter mais informações sobre como autenticar sua origem [!DNL Zendesk], consulte a [[!DNL Zendesk] visão geral da origem](../../../../connectors/customer-success/zendesk.md).
 
-## Conectar [!DNL Zendesk] à Plataforma usando a API [!DNL Flow Service]
+## Conectar o [!DNL Zendesk] ao Experience Platform usando a API [!DNL Flow Service]
 
-O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem [!DNL Zendesk] e criar um fluxo de dados para trazer dados [!DNL Zendesk] para a Plataforma usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem [!DNL Zendesk] e criar um fluxo de dados para trazer dados [!DNL Zendesk] para a Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Criar uma conexão básica {#base-connection}
 
-Uma conexão base retém informações entre sua origem e a Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e sua ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
+Uma conexão base retém informações entre sua origem e a Experience Platform, incluindo as credenciais de autenticação da origem, o estado atual da conexão e a ID de conexão base exclusiva. A ID de conexão básica permite explorar e navegar pelos arquivos de dentro da origem e identificar os itens específicos que deseja assimilar, incluindo informações sobre os tipos de dados e formatos.
 
-Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` enquanto fornece suas credenciais de autenticação [!DNL Zendesk] como parte do corpo da solicitação.
+Para criar uma ID de conexão base, faça uma solicitação POST para o ponto de extremidade `/connections` ao fornecer suas credenciais de autenticação do [!DNL Zendesk] como parte do corpo da solicitação.
 
 **Formato da API**
 
@@ -63,7 +63,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Zendesk base connection",
-        "description": "Zendesk base connection to authenticate to Platform",
+        "description": "Zendesk base connection to authenticate to Experience Platform",
         "connectionSpec": {
             "id": "0a27232b-2c6e-4396-b8c6-c9fc24e37ba4",
             "version": "1.0"
@@ -83,7 +83,7 @@ curl -X POST \
 | `name` | O nome da sua conexão básica. Certifique-se de que o nome da sua conexão básica seja descritivo, pois você pode usá-lo para pesquisar informações sobre a sua conexão básica. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre sua conexão básica. |
 | `connectionSpec.id` | A ID de especificação de conexão da sua origem. Essa ID pode ser recuperada depois que a origem é registrada e aprovada por meio da API [!DNL Flow Service]. |
-| `auth.specName` | O tipo de autenticação que você está usando para autenticar sua origem na Platform. |
+| `auth.specName` | O tipo de autenticação que você está usando para autenticar sua origem na Experience Platform. |
 | `auth.params.` | Contém as credenciais necessárias para autenticar sua origem. |
 | `auth.params.subdomain` | O domínio exclusivo associado à sua conta. O formato do subdomínio é `https://yoursubdomain.zendesk.com`. |
 | `auth.params.accessToken` | O token de acesso correspondente usado para autenticar sua origem. Isso é necessário para a autenticação baseada em OAuth. |
@@ -102,7 +102,7 @@ Uma resposta bem-sucedida retorna a conexão base recém-criada, incluindo seu i
 ### Explorar sua fonte {#explore}
 
 Usando a ID de conexão básica gerada na etapa anterior, você pode explorar arquivos e diretórios executando solicitações do GET.
-Use as chamadas a seguir para localizar o caminho do arquivo que você deseja trazer para [!DNL Platform]:
+Use as chamadas a seguir para localizar o caminho do arquivo que você deseja trazer para [!DNL Experience Platform]:
 
 **Formato da API**
 
@@ -118,9 +118,9 @@ Ao executar solicitações do GET para explorar a estrutura e o conteúdo do arq
 | `{BASE_CONNECTION_ID}` | A ID de conexão básica gerada na etapa anterior. |
 | `objectType=rest` | O tipo de objeto que você deseja explorar. Atualmente, este valor está sempre configurado para `rest`. |
 | `{OBJECT}` | Esse parâmetro é necessário somente ao visualizar um diretório específico. Seu valor representa o caminho do diretório que você deseja explorar. |
-| `fileType=json` | O tipo do arquivo que você deseja trazer para a Platform. Atualmente, `json` é o único tipo de arquivo com suporte. |
+| `fileType=json` | O tipo do arquivo que você deseja trazer para a Experience Platform. Atualmente, `json` é o único tipo de arquivo com suporte. |
 | `{PREVIEW}` | Um valor booliano que define se o conteúdo da conexão oferece suporte à visualização. |
-| `{SOURCE_PARAMS}` | Define parâmetros para o arquivo de origem que você deseja trazer para a Platform. Para recuperar o tipo de formato aceito para `{SOURCE_PARAMS}`, você deve codificar toda a cadeia de caracteres `parameter` em base64. No exemplo abaixo, `"{}"` codificado em base64 equivale a `e30`. |
+| `{SOURCE_PARAMS}` | Define parâmetros para o arquivo de origem que você deseja trazer para a Experience Platform. Para recuperar o tipo de formato aceito para `{SOURCE_PARAMS}`, você deve codificar toda a cadeia de caracteres `parameter` em base64. No exemplo abaixo, `"{}"` codificado em base64 equivale a `e30`. |
 
 
 **Solicitação**
@@ -369,7 +369,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ## Criar um esquema XDM de destino {#target-schema}
 
-Para que os dados de origem sejam usados na Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados da Platform no qual os dados de origem estão contidos.
+Para que os dados de origem sejam usados no Experience Platform, um esquema de destino deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é usado para criar um conjunto de dados do Experience Platform no qual os dados de origem estão contidos.
 
 Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
@@ -377,7 +377,7 @@ Para obter etapas detalhadas sobre como criar um esquema XDM de destino, consult
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, consulte o tutorial sobre [criação de um conjunto de dados usando a API](../../../../../catalog/api/create-dataset.md).
 
@@ -426,7 +426,7 @@ curl -X POST \
 | `name` | O nome da sua conexão de destino. Certifique-se de que o nome da conexão de destino seja descritivo, pois você pode usá-lo para pesquisar informações sobre a conexão de destino. |
 | `description` | Um valor opcional que pode ser incluído para fornecer mais informações sobre a conexão de destino. |
 | `connectionSpec.id` | A ID da especificação da conexão que corresponde ao data lake. Esta ID fixa é: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
-| `data.format` | O formato dos dados [!DNL Zendesk] que você deseja trazer para a Platform. |
+| `data.format` | O formato dos dados do [!DNL Zendesk] que você deseja trazer para o Experience Platform. |
 | `params.dataSetId` | A ID do conjunto de dados de destino recuperada em uma etapa anterior. |
 
 
@@ -669,7 +669,7 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 
 ### Criar um fluxo {#flow}
 
-O último passo para trazer dados do Zendesk para a Platform é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
+O último passo para trazer dados do Zendesk para o Experience Platform é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 
 * [ID de conexão do Source](#source-connection)
 * [ID da conexão de destino](#target-connection)
@@ -733,7 +733,7 @@ curl -X POST \
 | `flowSpec.version` | A versão correspondente da ID de especificação de fluxo. O padrão deste valor é `1.0`. |
 | `sourceConnectionIds` | A [ID da conexão de origem](#source-connection) gerada em uma etapa anterior. |
 | `targetConnectionIds` | A [ID da conexão de destino](#target-connection) gerada em uma etapa anterior. |
-| `transformations` | Essa propriedade contém as várias transformações necessárias para serem aplicadas aos seus dados. Essa propriedade é necessária ao trazer dados não compatíveis com XDM para a Platform. |
+| `transformations` | Essa propriedade contém as várias transformações necessárias para serem aplicadas aos seus dados. Essa propriedade é necessária ao trazer dados não compatíveis com XDM para a Experience Platform. |
 | `transformations.name` | O nome atribuído à transformação. |
 | `transformations.params.mappingId` | A [ID de mapeamento](#mapping) gerou em uma etapa anterior. |
 | `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. O padrão deste valor é `0`. |
@@ -766,7 +766,7 @@ Atualize os detalhes do seu fluxo de dados, como seu nome e descrição, bem com
 
 ### Atualizar sua conta
 
-Atualize o nome, a descrição e as credenciais da conta de origem executando uma solicitação PATCH para a API [!DNL Flow Service] e fornecendo a ID da conexão base como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer o `etag` exclusivo da sua conta de origem no cabeçalho `If-Match`. Para obter exemplos completos de API, leia o guia em [atualizando a conta de origem usando a API](../../update.md).
+Atualize o nome, a descrição e as credenciais da conta de origem executando uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID da conexão base como um parâmetro de consulta. Ao fazer uma solicitação PATCH, você deve fornecer o `etag` exclusivo da sua conta de origem no cabeçalho `If-Match`. Para obter exemplos completos de API, leia o guia em [atualizando a conta de origem usando a API](../../update.md).
 
 ### Excluir seu fluxo de dados
 

@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Guia do ETL para a Adobe Experience Platform
 breadcrumb-title: Guia do ETL
-user-guide-description: Saiba mais sobre as etapas gerais para criar conectores seguros e de alto desempenho para assimilar dados no Platform.
+user-guide-description: Saiba mais sobre as etapas gerais para criar conectores seguros e de alto desempenho para assimilar dados no Experience Platform.
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '40'
-ht-degree: 55%
+source-wordcount: '42'
+ht-degree: 28%
 
 ---
 
@@ -17,4 +17,4 @@ ht-degree: 55%
 - [Desenvolvimento de integrações ETL](home.md)
 - [Transformação ETL](transformations.md)
 - [Fluxo de trabalho ETL](workflow.md)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

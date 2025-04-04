@@ -2,9 +2,9 @@
 title: Notas da versão de fevereiro de 2024 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2024 da Adobe Experience Platform.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1244'
+source-wordcount: '1248'
 ht-degree: 22%
 
 ---
@@ -24,7 +24,7 @@ Atualizações dos recursos existentes no Experience Platform:
 
 ## Alertas {#alerts}
 
-O Experience Platform permite assinar alertas baseados em eventos para várias atividades da Platform. Você pode assinar diferentes regras de alerta por meio da guia [!UICONTROL Alertas] na interface do usuário da Platform e pode optar por receber mensagens de alerta na própria interface ou por meio de notificações por email.
+O Experience Platform permite assinar alertas baseados em eventos para várias atividades do Experience Platform. Você pode assinar diferentes regras de alerta por meio da guia [!UICONTROL Alertas] na interface do usuário do Experience Platform e pode optar por receber mensagens de alerta na própria interface ou por meio de notificações por email.
 
 **Recursos novos ou atualizados**
 
@@ -95,7 +95,7 @@ Para obter informações mais gerais sobre destinos, consulte a [visão geral de
 
 ## Sandboxes {#sandboxes}
 
-O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, a Experience Platform fornece sandboxes que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional. Para atender a essa necessidade, a Experience Platform fornece sandboxes que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 **Recursos novos ou atualizados**
 
@@ -109,13 +109,13 @@ Para obter mais informações sobre sandboxes, leia a [visão geral das sandboxe
 
 ## Serviço de segmentação {#segmentation}
 
-O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
+O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Experience Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
 
 **Novo recurso**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Públicos-alvo da conta | Os públicos-alvo da conta agora estão disponíveis! Agora você pode usar a segmentação de conta para trazer a total facilidade e sofisticação da experiência de segmentação de marketing de públicos com base em pessoas para públicos com base em conta nas edições B2B e B2P da Real-Time Customer Platform. Essa versão permite usar públicos-alvo com base em pessoas como um predicado para públicos-alvo com base em conta, adiciona recursos de pesquisa, suporta o uso de entidades personalizadas e é compatível com a Governança de dados. Para obter mais informações sobre este recurso, leia a [visão geral dos públicos-alvo da conta](../../segmentation/types/account-audiences.md). |
+| Públicos-alvo da conta | Os públicos-alvo da conta agora estão disponíveis! Agora você pode usar a segmentação de conta para trazer a total facilidade e sofisticação da experiência de segmentação de marketing de públicos com base em pessoas para públicos com base em conta nas edições B2B e B2P do Real-Time Customer Experience Platform. Essa versão permite usar públicos-alvo com base em pessoas como um predicado para públicos-alvo com base em conta, adiciona recursos de pesquisa, suporta o uso de entidades personalizadas e é compatível com a Governança de dados. Para obter mais informações sobre este recurso, leia a [visão geral dos públicos-alvo da conta](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

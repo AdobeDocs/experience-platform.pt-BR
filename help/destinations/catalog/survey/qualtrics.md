@@ -3,9 +3,9 @@ keywords: Qualtrics;qualtrics;Feedback do site Qualtrics;feedback do site qualtr
 title: Extensão de feedback do site do Qualtrics
 description: A extensão de feedback do site do Qualtrics é um destino de pesquisas no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 70cf315c-2c96-4c3a-bf80-511024964986
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '520'
 ht-degree: 3%
 
 ---
@@ -18,15 +18,15 @@ O [!DNL Qualtrics Website Feedback] permite que você envolva os visitantes do s
 
 Crie e implante mensagens da Web altamente direcionadas e de marca em minutos usando uma interface intuitiva do tipo apontar-e-clicar. Os dados e insights coletados no seu site são exibidos junto com os dados de feedback do cliente em todos os canais, oferecendo uma visão completa da experiência do cliente, tudo em uma plataforma.
 
-[!DNL Qualtrics Website Feedback] é uma extensão de pesquisa no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão em [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
+[!DNL Qualtrics Website Feedback] é uma extensão de pesquisa no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
 
-Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
+Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
 ![Extensão de Feedback do Site do Qualtrics](../../assets/catalog/survey/qualtrics/catalog.png)
 
 ## Pré-requisitos {#prerequisites}
 
-Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Platform.
+Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
 Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
@@ -34,7 +34,7 @@ Para usar essa extensão, você precisa acessar as tags na Adobe Experience Plat
 
 Para instalar a extensão [!DNL Qualtrics Website Feedback]:
 
-Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [interface do Experience Platform](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão no catálogo ou use a barra de pesquisa.
 
@@ -60,6 +60,6 @@ Você pode configurar regras para as extensões instaladas para enviar dados do 
 
 >[!TIP]
 >
->Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário da Platform ainda exibirá **[!UICONTROL Instalar]** para a extensão. Inicie o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para configurar ou excluir sua extensão.
+>Se a extensão já estiver instalada em uma de suas propriedades, a interface do usuário do Experience Platform ainda exibirá **[!UICONTROL Instalar]** para a extensão. Inicie o fluxo de trabalho de instalação conforme descrito em [Instalar extensão](#install-extension) para configurar ou excluir sua extensão.
 
 Para atualizar sua extensão, consulte o manual no [processo de atualização da extensão](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) na documentação das tags.

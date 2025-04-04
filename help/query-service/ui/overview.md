@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2275'
+source-wordcount: '2276'
 ht-degree: 1%
 
 ---
@@ -31,12 +31,12 @@ A página [!UICONTROL Visão geral] contém várias seções principais para aju
 
 ![O espaço de trabalho do Serviço de Consulta com Criar consulta, Saiba mais e Introdução foi realçado.](../images/ui/overview/main-panels.png)
 
-### Capacidades do destilador de dados {#data-distiller-capabilities}
+### Recursos do destilador de dados {#data-distiller-capabilities}
 
 A seção [!UICONTROL Recursos do Data Distiller] fornece links de documentação para recursos mais avançados do Data Distiller:
 
 - **[[!UICONTROL Exploração de dados]](../use-cases/data-exploration.md)**: saiba como explorar, solucionar problemas e verificar dados assimilados em lote usando SQL.
-- **[[!UICONTROL Conjuntos de dados derivados para aplicativos Experience Platform]](../data-distiller/derived-datasets/overview.md)**: saiba como criar conjuntos de dados derivados para dar suporte a casos de uso complexos e diversos que maximizam seu utilitário de dados.
+- **[[!UICONTROL Conjuntos de dados derivados para aplicativos do Experience Platform]](../data-distiller/derived-datasets/overview.md)**: saiba como criar conjuntos de dados derivados para dar suporte a casos de uso complexos e diversos que maximizam seu utilitário de dados.
 - **[[!UICONTROL Pipelines de IA/ML]](../data-distiller/ml-feature-pipelines/overview.md)**: saiba mais sobre os conceitos importantes por trás de suas ferramentas preferidas de aprendizado de máquina e como criar modelos personalizados que oferecem suporte aos seus casos de uso de marketing. Esta série de guias descreve as etapas necessárias para criar pipelines de recursos que preparam dados do Experience Platform para alimentar modelos personalizados em seu ambiente de aprendizado de máquina.
 - **[[!UICONTROL Insights de SQL]](../data-distiller/sql-insights/overview.md)**: conheça os principais recursos e as etapas necessárias para desenvolver um painel de insights do SQL com o Data Distiller.
 
@@ -142,7 +142,7 @@ A guia **[!UICONTROL Modelos]** mostra consultas salvas por usuários em sua org
 | **[!UICONTROL Modificado por]** | O último usuário que modificou a consulta. Qualquer usuário na organização com acesso ao Serviço de consulta pode modificar consultas. |
 | **[!UICONTROL Última modificação]** | A data e a hora da última modificação no query, no fuso horário do navegador. |
 
-Consulte a documentação dos [modelos de consulta](./query-templates.md) para obter mais informações sobre modelos na interface do usuário da Platform.
+Consulte a documentação dos [modelos de consulta](./query-templates.md) para obter mais informações sobre modelos na interface do usuário do Experience Platform.
 
 ## Log {#log}
 
@@ -174,4 +174,4 @@ A guia **[!UICONTROL Credenciais]** exibe suas credenciais com e sem expiração
 
 ## Próximas etapas
 
-Agora que você está familiarizado com a interface de usuário do Serviço de Consulta em [!DNL Platform], pode acessar o Editor de Consultas para começar a criar seus próprios projetos de consulta para compartilhar com outros usuários em sua organização. Para obter mais informações sobre a criação e execução de consultas no Editor de Consultas, consulte o [guia do usuário do Editor de Consultas](./user-guide.md).
+Agora que você está familiarizado com a interface de usuário do Serviço de Consulta em [!DNL Experience Platform], pode acessar o Editor de Consultas para começar a criar seus próprios projetos de consulta para compartilhar com outros usuários em sua organização. Para obter mais informações sobre a criação e execução de consultas no Editor de Consultas, consulte o [guia do usuário do Editor de Consultas](./user-guide.md).

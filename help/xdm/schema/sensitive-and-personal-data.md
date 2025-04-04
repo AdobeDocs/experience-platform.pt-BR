@@ -2,9 +2,9 @@
 title: Informações confidenciais e pessoais no XDM
 description: Saiba mais sobre as principais considerações sobre informações pessoais confidenciais (SPI) e informações de identificação pessoal (PII) no Experience Data Model (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Consulte sua equipe jurídica para determinar como dados confidenciais e pessoai
 
 O XDM fornece uma variedade de grupos de campos padrão e tipos de dados para descrever estruturas de dados relevantes e usadas com frequência para potencializar as experiências do cliente. No entanto, se um recurso padrão recomendado contiver campos restritos que você não deseja incluir em seus esquemas, não será necessário usar esse recurso.
 
-A Platform permite definir seus próprios grupos de campos personalizados e tipos de dados, fornecendo controle total sobre como seus dados são estruturados se algum recurso padrão disponível não atender às suas necessidades. Consulte a documentação a seguir para obter mais informações sobre como definir esses recursos personalizados:
+O Experience Platform permite definir seus próprios grupos de campos personalizados e tipos de dados, fornecendo controle total sobre como seus dados são estruturados se qualquer recurso padrão disponível não atender às suas necessidades. Consulte a documentação a seguir para obter mais informações sobre como definir esses recursos personalizados:
 
 * [Criar um grupo de campos personalizado](../ui/resources/field-groups.md#create)
 * [Criar um tipo de dados personalizado](../ui/resources/data-types.md#create)

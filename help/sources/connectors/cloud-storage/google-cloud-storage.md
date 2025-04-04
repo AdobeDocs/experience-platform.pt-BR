@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do Google Cloud Storage Source Connector
 description: Saiba como conectar o Google Cloud Storage ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Agora você pode usar a origem [!DNL Google Cloud Storage] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Para saber mais sobre a infraestrutura de Experience Platform compatível, consulte a [visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md).
+>Agora você pode usar a origem [!DNL Google Cloud Storage] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../landing/multi-cloud.md).
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem, como o AWS, o [!DNL Google Cloud Platform] e o [!DNL Azure], permitindo que você traga seus dados desses sistemas.
 
-As fontes de armazenamento na nuvem podem trazer seus próprios dados para a Platform sem a necessidade de baixar, formatar ou carregar. Os dados assimilados podem ser formatados como JSON ou Parquet compatível com o Experience Data Model (XDM) ou em um formato delimitado. Cada etapa do processo é integrada ao fluxo de trabalho de origens. A plataforma permite trazer dados de [!DNL Google Cloud Storage] por meio de lotes.
+As fontes de armazenamento na nuvem podem trazer seus próprios dados para a Experience Platform sem a necessidade de baixar, formatar ou carregar. Os dados assimilados podem ser formatados como JSON ou Parquet compatível com o Experience Data Model (XDM) ou em um formato delimitado. Cada etapa do processo é integrada ao fluxo de trabalho de origens. O Experience Platform permite trazer dados de [!DNL Google Cloud Storage] por meio de lotes.
 
 ## LISTA DE PERMISSÕES de endereço IP
 
@@ -27,7 +27,7 @@ Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes 
 
 ## Pré-requisito de configuração para conectar sua conta do [!DNL Google Cloud Storage]
 
-Para se conectar à Platform, primeiro você deve habilitar a interoperabilidade para sua conta [!DNL Google Cloud Storage]. Para acessar a configuração de interoperabilidade, abra o [!DNL Google Cloud Platform] e selecione **[!UICONTROL Configurações]** na opção **[!UICONTROL Armazenamento na nuvem]** no painel de navegação.
+Para se conectar ao Experience Platform, primeiro você deve habilitar a interoperabilidade para sua conta [!DNL Google Cloud Storage]. Para acessar a configuração de interoperabilidade, abra o [!DNL Google Cloud Platform] e selecione **[!UICONTROL Configurações]** na opção **[!UICONTROL Armazenamento na nuvem]** no painel de navegação.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
@@ -39,7 +39,7 @@ A página **[!UICONTROL Interoperabilidade]** contém informações sobre autent
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
-Você pode usar a ID da chave de acesso recém-gerada e a chave de acesso secreta para conectar sua conta do [!DNL Google Cloud Storage] à Platform.
+Você pode usar a ID da chave de acesso recém-gerada e a chave de acesso secreta para conectar sua conta do [!DNL Google Cloud Storage] à Experience Platform.
 
 Para obter mais informações, leia o manual sobre [criação e gerenciamento de chaves de conta de serviço](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) na documentação [!DNL Google Cloud].
 
@@ -54,9 +54,9 @@ Veja a seguir uma lista de restrições que você deve considerar ao nomear seu 
 - Caracteres de caminho de URL inválidos não permitidos. Pontos de código como `\uE000`, embora válidos em nomes de arquivo NTFS, não são caracteres Unicode válidos. Além disso, alguns caracteres ASCII ou Unicode, como caracteres de controle (0x00 a 0x1F, \u0081 etc.), também não são permitidos. Para regras que regem cadeias de caracteres Unicode em HTTP/1.1, consulte [RFC 2616, Seção 2.2: Regras Básicas](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Os seguintes nomes de arquivo não são permitidos: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractere de ponto (.) e dois caracteres de ponto (..).
 
-## Conectar [!DNL Google Cloud Storage] à plataforma
+## Conectar [!DNL Google Cloud Storage] ao Experience Platform
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Google Cloud Storage] à Plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Google Cloud Storage] ao Experience Platform usando APIs ou a interface do usuário:
 
 ### Uso de APIs
 

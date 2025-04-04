@@ -2,9 +2,9 @@
 description: Saiba como formatar uma chamada de API para enviar uma solicitação de publicação de destino por meio do Adobe Experience Platform Destination SDK.
 title: Criar uma solicitação de publicação de destino
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: '449'
 ht-degree: 2%
 
 ---
@@ -19,16 +19,16 @@ ht-degree: 2%
 >
 >**Ponto de extremidade de API**: `platform.adobe.io/data/core/activation/authoring/destinations/publish`
 
-Depois de configurar e testar seu destino, você pode enviá-lo ao Adobe para revisão e publicação. Leia [Enviar para revisão um destino criado em Destination SDK](../guides/submit-destination.md) para todas as outras etapas que você deve realizar como parte do processo de envio do destino.
+Depois de configurar e testar seu destino, você pode enviá-lo ao Adobe para revisão e publicação. Leia [Enviar para revisão um destino criado no Destination SDK](../guides/submit-destination.md) para todas as outras etapas que você deve realizar como parte do processo de envio do destino.
 
 Use o endpoint da API de destinos de publicação para enviar uma solicitação de publicação quando:
 
-* Como parceiro de Destination SDK, você deseja disponibilizar seu destino produzido em todas as organizações de Experience Platform para que todos os clientes de Experience Platform usem;
-* Você faz *quaisquer atualizações* para suas configurações. As atualizações de configuração são refletidas no destino somente após o envio de uma nova solicitação de publicação, que é aprovada pela equipe do Experience Platform.
+* Como parceiro da Destination SDK, você deseja disponibilizar seu destino produzido em todas as organizações da Experience Platform para todos os clientes da Experience Platform usarem;
+* Você faz *quaisquer atualizações* para suas configurações. As atualizações de configuração são refletidas no destino somente após você enviar uma nova solicitação de publicação, que é aprovada pela equipe do Experience Platform.
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de publicação de destino {#get-started}
 
@@ -65,7 +65,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | Parâmetro | Tipo | Descrição |
 |---------|----------|------|
 | `destinationId` | String | A ID de destino da configuração de destino que você está enviando para publicação. Obtenha a ID de destino de uma configuração de destino usando a chamada de API [recuperar uma configuração de destino](../authoring-api/destination-configuration/retrieve-destination-configuration.md). |
-| `destinationAccess` | String | Use o `ALL` para que seu destino apareça no catálogo para todos os clientes do Experience Platform. |
+| `destinationAccess` | String | Use o `ALL` para que seu destino apareça no catálogo para todos os clientes da Experience Platform. |
 
 {style="table-layout:auto"}
 
@@ -79,7 +79,7 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da solicitaçã
 
 ## Manipulação de erros de API
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
 ## Próximas etapas
 

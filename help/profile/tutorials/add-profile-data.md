@@ -4,7 +4,7 @@ title: Adicionar dados ao Perfil do cliente em tempo real
 type: Tutorial
 description: Este tutorial descreve as etapas necessárias para adicionar dados ao Perfil do cliente em tempo real.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Você pode habilitar um esquema para uso em [!DNL Real-Time Customer Profile] us
 
 ## Adicionar dados usando assimilação em lote
 
-Todos os dados carregados para [!DNL Platform] usando a assimilação em lote são carregados para conjuntos de dados individuais. Antes que esses dados possam ser usados por [!DNL Real-Time Customer Profile], o conjunto de dados em questão deve ser configurado especificamente. Para obter instruções completas, consulte o tutorial sobre [configuração de um conjunto de dados para o Perfil e o Serviço de Identidade](dataset-configuration.md).
+Todos os dados carregados para [!DNL Experience Platform] usando a assimilação em lote são carregados para conjuntos de dados individuais. Antes que esses dados possam ser usados por [!DNL Real-Time Customer Profile], o conjunto de dados em questão deve ser configurado especificamente. Para obter instruções completas, consulte o tutorial sobre [configuração de um conjunto de dados para o Perfil e o Serviço de Identidade](dataset-configuration.md).
 
 Após configurar o conjunto de dados, você pode começar a assimilar dados nele. Consulte o [guia do desenvolvedor de assimilação em lote](../../ingestion/batch-ingestion/api-overview.md) para obter etapas detalhadas sobre como carregar arquivos em diferentes formatos.
 

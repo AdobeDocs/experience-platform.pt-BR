@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da governança de dados
 description: O Adobe Experience Platform Data Governance permite gerenciar dados de clientes e garantir conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ela desempenha uma função essencial na Experience Platform em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle do uso de dados para ações de marketing.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1623'
+source-wordcount: '1624'
 ht-degree: 9%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 9%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=pt-BR" text="Visão geral da governança de dados"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR" text="Visão geral dos rótulos de governança de dados"
 
-Um dos principais recursos do Adobe Experience Platform é reunir dados de vários sistemas corporativos para permitir que os profissionais de marketing identifiquem, compreendam e envolvam os clientes de maneira mais eficiente. Esses dados podem estar sujeitos a restrições de uso definidas por sua organização ou por regulamentos legais. Portanto, é importante garantir que suas operações de dados no [!DNL Platform] estejam em conformidade com as políticas de uso de dados.
+Um dos principais recursos do Adobe Experience Platform é reunir dados de vários sistemas corporativos para permitir que os profissionais de marketing identifiquem, compreendam e envolvam os clientes de maneira mais eficiente. Esses dados podem estar sujeitos a restrições de uso definidas por sua organização ou por regulamentos legais. Portanto, é importante garantir que suas operações de dados no [!DNL Experience Platform] estejam em conformidade com as políticas de uso de dados.
 
 Gerencie os dados do cliente e garanta a conformidade com as regulamentações, as restrições e as políticas aplicáveis ao uso de dados com o Adobe Experience Platform Data Governance. A governança de dados desempenha um papel fundamental no Experience Platform em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle do uso de dados para ações de marketing.
 
 >[!NOTE]
 >
->No Experience Platform, a governança de dados só se preocupa com a forma como os dados são usados ou ativados, independentemente do usuário que está executando a ação. Para obter informações sobre como controlar o acesso a campos de dados específicos para determinados usuários da Platform em sua organização, consulte a documentação em [controle de acesso baseado em atributo](../access-control/abac/overview.md).
+>No Experience Platform, a governança de dados só se preocupa com a forma como os dados são usados ou ativados, independentemente do usuário que está executando a ação. Para obter informações sobre como controlar o acesso a campos de dados específicos para determinados usuários do Experience Platform em sua organização, consulte a documentação em [controle de acesso baseado em atributo](../access-control/abac/overview.md).
 
 ## Funções de governança de dados {#data-governance-roles}
 
@@ -77,13 +77,13 @@ A estrutura de Governança de dados inclui rótulos de uso de dados predefinidos
 >
 >Consulte o guia em [rótulos de uso de dados com suporte](labels/reference.md) para obter uma lista completa de rótulos disponíveis e definições para cada tipo de rótulo.
 
-Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. A prática recomendada incentiva a rotulação de dados quando eles são assimilados no Experience Platform ou assim que os dados são disponibilizados no [!DNL Platform].
+Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. A prática recomendada incentiva a rotulagem de dados quando eles são assimilados na Experience Platform ou assim que os dados são disponibilizados em [!DNL Experience Platform].
 
 Consulte a visão geral em [rótulos de uso de dados](./labels/overview.md) para obter mais informações sobre como os rótulos de uso de dados são usados para ajudar a impor a conformidade com a governança de dados.
 
 ## Políticas de uso de dados {#data-usage-policies}
 
-Para que os rótulos de uso de dados estejam de acordo com a conformidade de dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados no Experience Platform.
+Para que os rótulos de uso de dados estejam de acordo com a conformidade de dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro do Experience Platform.
 
 Um exemplo de ação de marketing pode ser o desejo de exportar um conjunto de dados para um serviço de terceiros. Se houver uma política em vigor declarando que as Informações de identificação pessoal (PII) não podem ser exportadas e um rótulo &quot;I&quot; (dados de identidade) foi aplicado ao nível do campo de seu esquema. O Serviço de política impede qualquer ação que exporte esse conjunto de dados para um destino de terceiros. Se uma dessas tentativas ocorrer, o Serviço de política envia uma mensagem informando que uma política de uso de dados foi violada.
 
@@ -93,7 +93,7 @@ Há dois tipos de políticas disponíveis:
 * **[!UICONTROL Política de governança de dados]**: Restrinja a ativação de dados com base na ação de marketing que está sendo executada e nos rótulos de uso de dados transportados pelos dados em questão.
 * **[!UICONTROL Política de consentimento]**: filtre os perfis que podem ser ativados para [destinos](../destinations/home.md) com base no consentimento ou nas preferências dos clientes.
 
-Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão criar políticas usando a API de serviço de política ou a interface do usuário Experience Platform. Para obter mais informações sobre políticas de uso de dados e ações de marketing, consulte a [visão geral das políticas](./policies/overview.md).
+Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão criar políticas usando a API de serviço de política ou a interface do usuário do Experience Platform. Para obter mais informações sobre políticas de uso de dados e ações de marketing, consulte a [visão geral das políticas](./policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -120,10 +120,10 @@ A tabela a seguir descreve os termos principais relacionados à Governança de d
 | **Rótulos de uso de dados** | Os rótulos de uso de dados oferecem aos usuários a capacidade de categorizar dados que refletem considerações relacionadas à privacidade e às condições contratuais para estar em conformidade com os regulamentos e as políticas corporativas. |
 | **Rótulos do conjunto de dados** | Rótulos podem ser adicionados a um esquema. Todos os campos em um conjunto de dados herdam os rótulos do esquema. |
 | **Rótulos de campos** | Os rótulos de campo são rótulos de governança de dados herdados de um esquema ou aplicados diretamente a um campo. Os rótulos de governança de dados aplicados a um campo não são herdados até o nível do esquema. |
-| **Geofence** | Uma geofence é um limite geográfico virtual, definido pela tecnologia GPS ou RFID, que permite ao software acionar uma resposta quando um dispositivo móvel entra ou sai de uma área específica. |
+| **Geofence** | Uma geofence é um limite geográfico virtual, definido pela tecnologia GPS ou RFID, que permite que o software acione uma resposta quando um dispositivo móvel entra ou sai de uma área específica. |
 | **Rótulos de identidade** | Os rótulos “I” de identidade são usados para categorizar dados que podem identificar ou entrar em contato com uma pessoa específica. |
 | **Direcionamento baseado em interesses** | O direcionamento baseado em interesses, também conhecido como personalização, ocorrerá se as três condições a seguir forem atendidas:<br>Os dados coletados no site são,<br><ul><li>Usado para deduzir sobre o interesse de um usuário,</li><li>Usado em outro contexto, como em outro site ou aplicativo (fora do site)</li><li>Usado para selecionar qual conteúdo ou quais anúncios são veiculados com base nessas inferências.</li></ul> |
-| **Ação de marketing** | Uma ação de marketing, no contexto da estrutura de governança de dados, é uma ação que um consumidor de dados de Experience Platform toma, para a qual é necessário verificar violações das políticas de uso de dados |
+| **Ação de marketing** | Uma ação de marketing, no contexto da estrutura de governança de dados, é uma ação que um consumidor de dados do Experience Platform toma, para a qual é necessário verificar violações das políticas de uso de dados |
 | **Política** | Na estrutura de governança de dados, uma política é uma regra que descreve quais tipos de ações de marketing são permitidas ou não em dados específicos. |
 | **Rótulos de esquema** | Gerencie os rótulos para governança de dados, consentimento e controle de acesso no nível do esquema. Isso propaga os rótulos para cada conjunto de dados que usa esse esquema. |
 | **Rótulos sensíveis** | Os rótulos de sensibilidade (S) são usados para categorizar dados que você e sua organização consideram sensíveis. |
@@ -134,6 +134,6 @@ O vídeo a seguir é destinado a apoiar a sua compreensão da estrutura de gover
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-O vídeo a seguir fornece orientação sobre como aplicar rótulos de uso de dados aos seus esquemas ou à totalidade de um conjunto de dados no Experience Platform.
+O vídeo a seguir fornece orientação sobre como aplicar rótulos de uso de dados aos seus esquemas ou à totalidade de um conjunto de dados na Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

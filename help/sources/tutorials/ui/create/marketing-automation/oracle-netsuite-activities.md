@@ -1,13 +1,13 @@
 ---
 title: Criar uma conexão de origem  [!DNL Oracle NetSuite Activities]  na interface
-description: Saiba como criar uma conexão de origem de atividades do Oracle NetSuite usando a interface do usuário do Adobe Experience Platform.
+description: Saiba como criar uma conexão de origem de Atividades do Oracle NetSuite usando a interface do usuário do Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '624'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Leia o tutorial a seguir para saber como trazer dados de eventos da sua conta do
 
 ## Introdução {#getting-started}
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -37,13 +37,13 @@ Se você já tiver uma conta válida do [!DNL Oracle NetSuite], ignore o restant
 
 ## Conectar sua conta do [!DNL Oracle NetSuite] {#connect-account}
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Na categoria *Automação de Marketing*, selecione **[!DNL Oracle NetSuite Activities]** e **[!UICONTROL Adicionar dados]**.
 
-![Captura de tela da interface do usuário da plataforma para catálogo com o cartão de Atividades do Oracle NetSuite](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
+![Captura de tela da interface do Experience Platform para catálogo com o cartão de Atividades do Oracle NetSuite](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/catalog-card.png)
 
-A página **[!UICONTROL Conectar conta de Atividades NetSuite do Oracle]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Conectar conta de Atividades do Oracle NetSuite]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 >[!IMPORTANT]
 >
@@ -53,17 +53,17 @@ A página **[!UICONTROL Conectar conta de Atividades NetSuite do Oracle]** é ex
 
 Para usar uma conta existente, selecione a conta [!DNL Oracle NetSuite Activities] com a qual deseja criar um novo fluxo de dados e clique em **[!UICONTROL Avançar]** para continuar.
 
-![Captura de tela da interface do usuário da plataforma para conectar a conta de Atividades do Oracle NetSuite a uma conta existente](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
+![Captura de tela da interface do Experience Platform para conectar a conta de Atividades do Oracle NetSuite a uma conta existente](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/existing.png)
 
 ### Nova conta {#new-account}
 
 Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
 
-![Captura de tela da interface do usuário da plataforma para conectar a conta de Atividades do Oracle NetSuite a uma nova conta](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
+![Captura de tela da interface do Experience Platform para conectar a conta de Atividades do Oracle NetSuite a uma nova conta](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-activities/new.png)
 
 ## Próximas etapas {#next-steps}
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Oracle NetSuite Activities]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Platform](../../dataflow/marketing-automation.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Oracle NetSuite Activities]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](../../dataflow/marketing-automation.md).
 
 ## Recursos adicionais {#additional-resources}
 
@@ -71,7 +71,7 @@ As seções abaixo fornecem recursos adicionais que você pode consultar ao usar
 
 ### Mapeamento {#mapping}
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
+O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Usar um editor de texto em seu ambiente local para criar uma página de documentação de códigos-fonte
 description: Este documento fornece etapas sobre como usar seu ambiente local para criar documentação para sua fonte e enviar uma solicitação de pull (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Este documento fornece etapas sobre como usar seu ambiente local para criar docu
 
 >[!TIP]
 >
->Os seguintes documentos do guia de contribuição do Adobe podem ser usados para apoiar ainda mais o processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Os seguintes documentos do guia de contribuição da Adobe podem ser usados para apoiar ainda mais seu processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Pré-requisitos
 
@@ -29,7 +29,7 @@ A primeira etapa na configuração do seu ambiente de criação local é navegar
 
 ![repositório-plataforma](../assets/platform-repo.png)
 
-Na página principal do repositório GitHub da Platform, selecione **Fork**.
+Na página principal do repositório GitHub do Experience Platform, selecione **Fork**.
 
 ![bifurcação](../assets/fork.png)
 
@@ -53,7 +53,7 @@ No painel pop-over exibido, digite um nome descritivo para a ramificação e sel
 
 ![criar-ramificação-vs](../assets/create-branch-vs.png)
 
-Em seguida, selecione **Publish branch**.
+Em seguida, selecione **Publicar ramificação**.
 
 ![publicar-ramificação](../assets/publish-branch.png)
 
@@ -61,7 +61,7 @@ Em seguida, selecione **Publish branch**.
 
 Com o repositório clonado em sua máquina local e uma nova ramificação criada, agora é possível começar a criar a página de documentação para sua nova fonte por meio do [editor de texto de sua escolha](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
 
-A Adobe recomenda o uso do [Visual Studio Code](https://code.visualstudio.com/) e a instalação da extensão Adobe Markdown Authoring. Para instalar a extensão, inicie o Visual Studio Code e selecione a guia **Extensões** no menu de navegação esquerdo.
+A Adobe recomenda que você use o [Visual Studio Code](https://code.visualstudio.com/) e instale a extensão de Criação do Adobe Markdown. Para instalar a extensão, inicie o Visual Studio Code e selecione a guia **Extensões** no menu de navegação esquerdo.
 
 ![ extensão](../assets/extension.png)
 
@@ -89,7 +89,7 @@ Para criar uma solicitação de pull, selecione **Criar solicitação de pull**.
 
 ![create-pr-vs](../assets/create-pr-vs.png)
 
-Certifique-se de que as ramificações base e de comparação estejam corretas. Adicione uma observação à PR, descrevendo sua atualização e selecione **Criar solicitação de pull**. Isso abre uma PR para mesclar a ramificação de trabalho do seu trabalho na ramificação mestre do repositório Adobe.
+Certifique-se de que as ramificações base e de comparação estejam corretas. Adicione uma observação à PR, descrevendo sua atualização e selecione **Criar solicitação de pull**. Isso abre uma PR para mesclar a ramificação de trabalho do seu trabalho na ramificação mestre do repositório do Adobe.
 
 >[!TIP]
 >

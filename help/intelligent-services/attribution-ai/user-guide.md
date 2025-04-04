@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;guia do usuário;atribuição ai;tópicos populares;região
 feature: Attribution AI
-title: Guia da interface do Attribution AI
-description: Este documento serve como um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
+title: Guia da interface do usuário do Attribution AI
+description: Este documento serve como um guia para interagir com a IA de atribuição na interface do usuário dos Serviços inteligentes.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2450'
+source-wordcount: '2451'
 ht-degree: 0%
 
 ---
 
-# Guia da interface do Attribution AI
+# Guia da interface do usuário do Attribution AI
 
-O Attribution AI, como parte dos Serviços inteligentes, é um serviço de atribuição de vários canais e algoritmos que calcula a influência e o impacto incremental das interações com o cliente em relação aos resultados especificados. Com o Attribution AI, os profissionais de marketing podem medir e otimizar os gastos com marketing e publicidade, entendendo o impacto de cada interação individual com o cliente em cada fase das jornadas do cliente.
+A IA de atribuição, como parte dos Serviços inteligentes, é um serviço de atribuição de vários canais e algoritmos que calcula a influência e o impacto incremental das interações com o cliente em relação aos resultados especificados. Com o Attribution AI, os profissionais de marketing podem medir e otimizar os gastos com marketing e publicidade, entendendo o impacto de cada interação individual com o cliente em cada fase das jornadas do cliente.
 
-Este documento serve como um guia para interagir com o Attribution AI na interface do usuário dos Serviços inteligentes.
+Este documento serve como um guia para interagir com a IA de atribuição na interface do usuário dos Serviços inteligentes.
 
 ## Criar um modelo
 
-Na interface do usuário do [!DNL Adobe Experience Platform], selecione **[!UICONTROL Serviços]** na navegação à esquerda. O navegador **[!UICONTROL Serviços]** é exibido e exibe os serviços inteligentes Adobe disponíveis. No contêiner do Attribution AI, selecione **[!UICONTROL Abrir]**.
+Na interface do usuário do [!DNL Adobe Experience Platform], selecione **[!UICONTROL Serviços]** na navegação à esquerda. O navegador **[!UICONTROL Serviços]** é exibido e exibe os serviços inteligentes Adobe disponíveis. No contêiner da IA de atribuição, selecione **[!UICONTROL Abrir]**.
 
 ![Acessando seu modelo](./images/user-guide/open_Attribution_ai.png)
 
-A página Attribution AI service é exibida. Esta página lista modelos de serviço do Attribution AI e exibe informações sobre eles, incluindo o nome do modelo, eventos de conversão, a frequência com que o modelo é executado e o status da última atualização.
+A página do serviço IA de atribuição é exibida. Esta página lista os modelos de serviço da IA de atribuição e exibe informações sobre eles, incluindo o nome do modelo, os eventos de conversão, a frequência com que o modelo é executado e o status da última atualização.
 
-Você pode encontrar a métrica **[!UICONTROL Total de eventos de conversão pontuados]** localizada no lado inferior direito do contêiner **[!UICONTROL Criar modelo]**. Essa métrica rastreia o número total de eventos de conversão pontuados pelo Attribution AI no ano civil atual, incluindo todos os ambientes de sandbox e modelos de serviço excluídos.
+Você pode encontrar a métrica **[!UICONTROL Total de eventos de conversão pontuados]** localizada no lado inferior direito do contêiner **[!UICONTROL Criar modelo]**. Essa métrica rastreia o número total de eventos de conversão pontuados pela IA de atribuição no ano civil atual, incluindo todos os ambientes de sandbox e modelos de serviço excluídos.
 
 ![total de conversões](./images/user-guide/total_conversions.png)
 
@@ -33,8 +33,8 @@ Os modelos de serviço podem ser editados, clonados e excluídos usando os contr
 
 - **[!UICONTROL Editar]**: selecionar **[!UICONTROL Editar]** permite modificar um modelo de serviço existente. Você pode editar o nome, a descrição, o status, a frequência de pontuação do modelo e as colunas adicionais do conjunto de dados de pontuação.
 - **[!UICONTROL Clonar]**: selecionar **[!UICONTROL Clonar]** copia o modelo de serviço selecionado. Em seguida, você pode modificar o fluxo de trabalho para fazer pequenos ajustes e renomeá-lo como um novo modelo.
-- **[!UICONTROL Excluir]**: é possível excluir um modelo de serviço, incluindo qualquer execução histórica. O conjunto de dados de saída correspondente será excluído da Platform. No entanto, as pontuações que foram sincronizadas com o Perfil do cliente em tempo real não são excluídas.
-- **[!UICONTROL Fonte de dados]**: um link para o conjunto de dados que está sendo usado. Se mais de um conjunto de dados estiver sendo usado pelo Attribution AI, &quot;Vários&quot; seguido do número de conjuntos de dados será exibido. Ao selecionar o hiperlink, o popover de visualização dos conjuntos de dados é exibido.
+- **[!UICONTROL Excluir]**: é possível excluir um modelo de serviço, incluindo qualquer execução histórica. O conjunto de dados de saída correspondente será excluído do Experience Platform. No entanto, as pontuações que foram sincronizadas com o Perfil do cliente em tempo real não são excluídas.
+- **[!UICONTROL Fonte de dados]**: um link para o conjunto de dados que está sendo usado. Se mais de um conjunto de dados estiver sendo usado pela IA de atribuição, &quot;Vários&quot; seguido do número de conjuntos de dados será exibido. Ao selecionar o hiperlink, o popover de visualização dos conjuntos de dados é exibido.
 - **[!UICONTROL Detalhes da última execução]**: exibido somente quando uma execução falha. As informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
 
 ![Painel lateral](./images/user-guide/multiple-datasets-pane.png)
@@ -49,7 +49,7 @@ Selecione **[!UICONTROL Criar modelo]** para começar.
 
 ![Criar modelo](./images/user-guide/landing_page.png)
 
-Em seguida, a página de configuração do Attribution AI é exibida, onde você pode fornecer um nome e uma descrição opcional para seu modelo de serviço.
+Em seguida, a página de configuração da IA de atribuição é exibida, onde você pode fornecer um nome e uma descrição opcional para seu modelo de serviço.
 
 ![nomeando um modelo](./images/user-guide/naming_instance.png)
 
@@ -57,7 +57,7 @@ Em seguida, a página de configuração do Attribution AI é exibida, onde você
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
-Por design, o Attribution AI pode usar os dados do Adobe Analytics, do evento de experiência e do evento de experiência do consumidor para calcular pontuações de atribuição. Ao selecionar um conjunto de dados, somente os compatíveis com o Attribution AI são listados. Para selecionar um conjunto de dados, selecione o símbolo (**+**) ao lado do nome do conjunto de dados ou marque a caixa de seleção para adicionar vários conjuntos de dados de uma vez. Você também pode usar a opção de pesquisa para encontrar rapidamente os conjuntos de dados em que está interessado.
+Por design, a IA de atribuição pode usar os dados do Adobe Analytics, do evento de experiência e do evento de experiência do consumidor para calcular pontuações de atribuição. Ao selecionar um conjunto de dados, somente os compatíveis com a IA de atribuição são listados. Para selecionar um conjunto de dados, selecione o símbolo (**+**) ao lado do nome do conjunto de dados ou marque a caixa de seleção para adicionar vários conjuntos de dados de uma vez. Você também pode usar a opção de pesquisa para encontrar rapidamente os conjuntos de dados em que está interessado.
 
 Depois de selecionar os conjuntos de dados que deseja usar, clique no botão **[!UICONTROL Adicionar]** para adicionar os conjuntos de dados ao painel de visualização do conjunto de dados.
 
@@ -71,7 +71,7 @@ A visualização do conjunto de dados contém dados como o tempo da última atua
 
 Selecione **[!UICONTROL Salvar]** para salvar os rascunhos à medida que você avança no fluxo de trabalho. Você também pode salvar configurações de modelo de rascunho e ir para a próxima etapa do fluxo de trabalho. Use **[!UICONTROL Salvar e continuar]** para criar e salvar rascunhos durante as configurações do modelo. O recurso permite criar e salvar rascunhos da configuração do modelo e é particularmente útil quando é necessário definir muitos campos no fluxo de trabalho de configuração.
 
-![O fluxo de trabalho Create da guia Data Science Services Attribution AI com Save and Save e continue realçado.](./images/user-guide/aai-save-save-&-exit.png)
+![A guia Criar fluxo de trabalho da IA de atribuição do Data Science Services com Salvar e Salvar e continue realçada.](./images/user-guide/aai-save-save-&-exit.png)
 
 ### Integridade do conjunto de dados {#dataset-completeness}
 
@@ -81,7 +81,7 @@ Na visualização do conjunto de dados, há um valor percentual de integridade d
 
 >[!NOTE]
 >
->A integridade do conjunto de dados é calculada usando a janela máxima de treinamento para Attribution AI (um ano). Isso significa que dados com mais de um ano não são considerados ao exibir o valor de integridade do conjunto de dados.
+>A integridade do conjunto de dados é calculada usando a janela máxima de treinamento para a IA de atribuição (um ano). Isso significa que dados com mais de um ano não são considerados ao exibir o valor de integridade do conjunto de dados.
 
 ![Integridade do conjunto de dados](./images/user-guide/dataset-completeness.png)
 
@@ -109,7 +109,7 @@ Caso haja mais de uma identidade disponível em um namespace, selecione o campo 
 
 <!-- https://www.adobe.com/go/aai-mapping -->
 
-Após concluir a seleção e a adição dos conjuntos de dados, a etapa de configuração **Mapa** é exibida. O Attribution AI exige que você mapeie o campo Canal de mídia para cada conjunto de dados selecionado na etapa anterior. Isso ocorre porque, sem o mapeamento do canal de mídia entre conjuntos de dados, os insights derivados do Attribution AI podem não ser exibidos corretamente, dificultando a interpretação da página de insights. Embora somente o Canal de mídia seja obrigatório, é altamente recomendável mapear alguns dos campos opcionais, como Ação de mídia, Nome da campanha, Grupo de campanha e Tag de campanha. Isso permite que o Attribution AI forneça insights mais claros e resultados ideais.
+Após concluir a seleção e a adição dos conjuntos de dados, a etapa de configuração **Mapa** é exibida. A IA de atribuição exige o mapeamento do campo Canal de mídia para cada conjunto de dados selecionado na etapa anterior. Isso ocorre porque, sem o mapeamento do canal de mídia entre conjuntos de dados, os insights derivados da IA de atribuição podem não ser exibidos corretamente, dificultando a interpretação da página de insights. Embora somente o Canal de mídia seja obrigatório, é altamente recomendável mapear alguns dos campos opcionais, como Ação de mídia, Nome da campanha, Grupo de campanha e Tag de campanha. Isso permite que a IA de atribuição forneça insights mais claros e resultados ideais.
 
 ![mapeamento](./images/user-guide/mapping-save-&-exit.png)
 
@@ -205,7 +205,7 @@ Depois de definir todos os pontos de contato necessários, role para cima e sele
 
 ## Configuração avançada de treinamento e pontuação
 
-A página final no Attribution AI é a página **[!UICONTROL Avançado]** usada para configurar treinamento e pontuação.
+A página final da IA de atribuição é a página **[!UICONTROL Avançado]** usada para configurar treinamento e pontuação.
 
 ![opções do novo conjunto de páginas](./images/user-guide/advanced_settings_set_options.png)
 
@@ -267,10 +267,10 @@ Depois de selecionar sua janela de treinamento, selecione **[!UICONTROL Concluir
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito uma instância de serviço no Attribution AI. Quando a instância terminar de pontuar (aguarde até 24 horas), você estará pronto para [descobrir Attribution AI](./discover-insights.md). Além disso, se você quiser baixar os resultados de pontuação, visite a documentação [pontuações de download](./download-scores.md).
+Ao seguir este tutorial, você criou com êxito uma instância de serviço na IA de atribuição. Quando a instância terminar de pontuar (aguarde até 24 horas), você estará pronto para [descobrir os insights da IA de atribuição](./discover-insights.md). Além disso, se você quiser baixar os resultados de pontuação, visite a documentação [pontuações de download](./download-scores.md).
 
 ## Recursos adicionais
 
-O vídeo a seguir descreve um fluxo de trabalho completo para criar uma nova instância no Attribution AI.
+O vídeo a seguir descreve um fluxo de trabalho completo para criar uma nova instância na IA de atribuição.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)

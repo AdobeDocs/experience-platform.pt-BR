@@ -2,9 +2,9 @@
 title: Perguntas frequentes sobre o Adobe Experience Platform Web SDK
 description: Obtenha respostas para perguntas frequentes sobre o Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: c26abeed890e06dce4e77133502b7031443bb4fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2082'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Atualmente, é necessário implantar diferentes bibliotecas JavaScript com base 
 * Nenhuma dessas bibliotecas foi criada para funcionar entre si.
 * Casos de uso entre soluções e Adobe Experience Platform exigem que essas bibliotecas diferentes sejam interdependentes, causando atrito na implantação.
 
-Embora as tags na Platform facilitem o máximo possível a implantação e o gerenciamento dessas bibliotecas, ainda há problemas com:
+Embora as tags na Experience Platform facilitem o máximo possível a implantação e o gerenciamento dessas bibliotecas, ainda há problemas com:
 
 * Tamanho da biblioteca (excesso de código Adobe em uma página)
 * Desempenho (os sites demoram muito para carregar)
@@ -124,7 +124,7 @@ Em outras palavras, se você decidir usar o Adobe Experience Platform Web SDK pa
 
 ## Posso migrar as ECIDs quando começar a usar o Web SDK para que os visitantes do meu site não comecem a aparecer como novos visitantes?
 
-Sim, o Adobe Experience Platform Web SDK fornece um recurso de Migração de identidade. Siga as instruções para migração de ID na [documentação de identidade do Platform Web SDK](/help/web-sdk/identity/overview.md#id-migration) para obter mais detalhes.
+Sim, o Adobe Experience Platform Web SDK fornece um recurso de Migração de identidade. Siga as instruções para migração de ID na [documentação de identidade do Experience Platform Web SDK](/help/web-sdk/identity/overview.md#id-migration) para obter mais detalhes.
 
 ## Qual é a diferença entre o Web SDK e as tags?
 

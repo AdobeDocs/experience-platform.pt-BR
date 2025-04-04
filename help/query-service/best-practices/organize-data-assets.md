@@ -2,9 +2,9 @@
 title: Práticas recomendadas para a organização de ativos de dados no serviço de consulta
 description: Este documento descreve um meio lógico de organizar os dados para facilitar o uso com o Serviço de consulta.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Este documento fornece orientação sobre as práticas recomendadas para organizar ativos de dados, incluindo conjuntos de dados, exibições e tabelas temporárias para uso com o Serviço de consulta da Adobe Experience Platform. Ela aborda como estruturar seus dados, bem como informações sobre como acessar, atualizar e excluir essas informações.
 
-É importante organizar logicamente seus ativos de dados na Plataforma [!DNL Data Lake] à medida que eles crescem. O Serviço de consulta estende as construções SQL que permitem agrupar logicamente os ativos de dados em uma sandbox. Esse método de organização permite o compartilhamento de ativos de dados entre esquemas sem a necessidade de movê-los fisicamente.
+É importante organizar logicamente seus ativos de dados na Experience Platform [!DNL Data Lake] à medida que eles crescem. O Serviço de consulta estende as construções SQL que permitem agrupar logicamente os ativos de dados em uma sandbox. Esse método de organização permite o compartilhamento de ativos de dados entre esquemas sem a necessidade de movê-los fisicamente.
 
 ## Introdução
 

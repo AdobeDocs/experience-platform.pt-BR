@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Explore um sistema de sucesso do cliente usando a API do serviço de fluxo
 description: Este tutorial usa a API de serviço de fluxo para explorar os sistemas de Sucesso do cliente (CS).
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '594'
 ht-degree: 13%
 
 ---
@@ -21,14 +21,14 @@ Este tutorial usa a API [!DNL Flow Service] para explorar os sistemas de Sucesso
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a um sistema CS usando a API [!DNL Flow Service].
 
 ### Obter uma conexão básica
 
-Para explorar seu sistema CS usando APIs do [!DNL Platform], você deve possuir uma ID de conexão base válida. Se você ainda não tiver uma conexão básica para o sistema CS com o qual deseja trabalhar, crie uma por meio dos seguintes tutoriais:
+Para explorar seu sistema CS usando APIs do [!DNL Experience Platform], você deve possuir uma ID de conexão base válida. Se você ainda não tiver uma conexão básica para o sistema CS com o qual deseja trabalhar, crie uma por meio dos seguintes tutoriais:
 
 * [ Service Cloud](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
@@ -39,13 +39,13 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -55,7 +55,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Explore suas tabelas de dados
 
-Usando a conexão básica para seu sistema CS, você pode explorar suas tabelas de dados executando solicitações do GET. Use a chamada a seguir para localizar o caminho da tabela que você deseja inspecionar ou assimilar em [!DNL Platform].
+Usando a conexão básica para seu sistema CS, você pode explorar suas tabelas de dados executando solicitações do GET. Use a chamada a seguir para localizar o caminho da tabela que você deseja inspecionar ou assimilar em [!DNL Experience Platform].
 
 **Formato da API**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de tabelas do sistema CS. Encontre a tabela que você deseja trazer para [!DNL Platform] e anote sua propriedade `path`, pois você deverá fornecê-la na próxima etapa para inspecionar sua estrutura.
+Uma resposta bem-sucedida retorna uma matriz de tabelas do sistema CS. Encontre a tabela que você deseja trazer para [!DNL Experience Platform] e anote sua propriedade `path`, pois você deverá fornecê-la na próxima etapa para inspecionar sua estrutura.
 
 ```json
 [
@@ -115,9 +115,9 @@ Uma resposta bem-sucedida retorna uma matriz de tabelas do sistema CS. Encontre 
 ]
 ```
 
-## Inspect a estrutura de uma tabela
+## Inspecionar a estrutura de uma tabela
 
-Para inspecionar a estrutura de uma tabela no sistema CS, execute uma solicitação GET enquanto especifica o caminho de uma tabela como um parâmetro de consulta.
+Para inspecionar a estrutura de uma tabela no sistema CS, execute uma solicitação GET enquanto especifica o caminho de uma tabela como parâmetro de consulta.
 
 **Formato da API**
 
@@ -176,4 +176,4 @@ Uma resposta bem-sucedida retorna a estrutura da tabela especificada. Detalhes s
 
 ## Próximas etapas
 
-Seguindo este tutorial, você explorou seu sistema CS, encontrou o caminho da tabela que deseja assimilar em [!DNL Platform] e obteve informações sobre sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do seu sistema CS e trazê-los para a Platform](../collect/customer-success.md).
+Seguindo este tutorial, você explorou seu sistema CS, encontrou o caminho da tabela que deseja assimilar em [!DNL Experience Platform] e obteve informações sobre sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do seu sistema CS e trazê-los para a Experience Platform](../collect/customer-success.md).

@@ -3,9 +3,9 @@ title: Evoluir valor único do cliente para valor vitalício
 description: Saiba como criar campanhas personalizadas para oferecer os melhores produtos ou serviços complementares com base nos atributos, comportamento e compras anteriores de um cliente específico.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3179'
+source-wordcount: '3181'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 >* Esta página apresenta um exemplo de implementação do Real-Time CDP e do Adobe Journey Optimizer para obter o caso de uso descrito. Use as figuras, os critérios de qualificação e outros campos fornecidos na página como um guia, não como figuras prescritivas.
 >* Para concluir esse caso de uso, você precisa ter uma licença do Real-Time CDP e do Adobe Journey Optimizer. Leia mais na [seção de pré-requisitos e planejamento](#prerequisites-and-planning) mais abaixo.
 
-Implemente o caso de uso Valor único do cliente para valor vitalício para impulsionar o engajamento e a fidelidade à marca. Crie uma experiência de cliente conectada em vários canais ou jornadas usando o poder do Experience Platform, aumentado por [Real-Time CDP](/help/rtcdp/home.md) e [Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home?lang=pt-BR).
+Implemente o caso de uso Valor único do cliente para valor vitalício para impulsionar o engajamento e a fidelidade à marca. Crie uma experiência de cliente conectada em vários canais ou jornadas usando o poder do Experience Platform, aumentado por [Real-Time CDP](/help/rtcdp/home.md) e [Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/ajo-home).
 
 As personalidades que você está direcionando são os visitantes pouco frequentes de suas propriedades que fizeram algumas compras nos últimos três meses.
 
@@ -52,7 +52,7 @@ Para isso, a tecnologia necessária consiste nos dois aplicativos Experience Pla
 
 ## Arquitetura do Real-Time CDP e do Journey Optimizer
 
-Abaixo está uma visualização de arquitetura de alto nível dos vários componentes do Real-Time CDP e do Journey Optimizer. Este diagrama mostra como os dados fluem pelos dois aplicativos Experience Platform, desde a coleta de dados até o ponto em que são ativados por meio de jornadas ou campanhas para destinos, para obter o caso de uso descrito nesta página.
+Abaixo está uma visualização de arquitetura de alto nível dos vários componentes do Real-Time CDP e do Journey Optimizer. Este diagrama mostra como os dados fluem pelos dois aplicativos Experience Platform, da coleta de dados ao ponto em que são ativados por meio de jornadas ou campanhas para destinos, para obter o caso de uso descrito nesta página.
 
 ![Visão geral visual de alto nível da arquitetura.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
@@ -73,7 +73,7 @@ Você começa enviando uma mensagem para o seu público-alvo de clientes altamen
 ![Evolua passo a passo do valor único para o valor vitalício da visão geral de alto nível.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
 1. Crie esquemas e conjuntos de dados e marque-os como [!UICONTROL Perfil].
-2. Os dados são coletados e integrados ao Experience Platform por meio do SDK da Web, SDK Edge móvel ou API. O Conector de dados do Analytics também pode ser usado, mas pode resultar em latência de jornada.
+2. Os dados são coletados e integrados ao Experience Platform via Web SDK, Mobile Edge SDK ou API. O Conector de dados do Analytics também pode ser usado, mas pode resultar em latência de jornada.
 3. Você carrega perfis no Real-Time CDP e cria políticas de governança para garantir um uso responsável.
 4. Você constrói públicos-alvo focados a partir da lista de perfis para verificar clientes de alto valor e baixa frequência.
 5. Você cria duas jornadas no [!DNL Adobe Journey Optimizer], uma para enviar mensagens aos usuários sobre um novo programa de assinatura e outra para enviá-los mensagens para que eles confirmem a compra mais tarde.
@@ -97,7 +97,7 @@ Para obter mais informações sobre como criar [esquemas](https://experienceleag
 
 Há vários designs de esquema que você pode usar nesta implementação de amostra para o caso de uso para evoluir o valor único para o valor vitalício. Cada esquema inclui campos obrigatórios específicos a serem configurados e alguns campos sugeridos.
 
-Com base em implementações de amostra, o Adobe sugere que você crie os três esquemas a seguir para realizar esse caso de uso:
+Com base em implementações de amostra, a Adobe sugere que você crie os três esquemas a seguir para realizar esse caso de uso:
 
 * [Esquema de atributos do cliente](#customer-attributes-schema) (um esquema de perfil)
 * [Esquema de transações digitais do cliente](#customer-digital-transactions-schema) (um esquema de evento de experiência)
@@ -137,13 +137,13 @@ O esquema de atributos do cliente é representado por uma classe [!UICONTROL Per
 
 #### Esquema de transações digitais do cliente {#customer-digital-transactions-schema}
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no seu site ou em outras plataformas digitais associadas. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] por meio do [SDK da Web](/help/web-sdk/home.md) e são necessários para fazer referência aos vários eventos de navegação e conversão usados para acionar jornadas, análises detalhadas online de clientes e recursos aprimorados de segmentação.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no seu site ou em outras plataformas digitais associadas. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] por meio do [Web SDK](/help/web-sdk/home.md) e são necessários para fazer referência aos vários eventos de navegação e conversão usados para acionar jornadas, análise online detalhada do cliente e recursos de segmentação aprimorados.
 
 ![Esquema de transações digitais do cliente com grupos de campos destacados](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
 O esquema de transações digitais do cliente é representado por uma classe [!UICONTROL XDM ExperienceEvent], que inclui os seguintes grupos de campos:
 
-+++ExperienceEvent do SDK da Web do Adobe Experience Platform (Grupo de campos)
++++Adobe Experience Platform Web SDK ExperienceEvent (Grupo de campos)
 
 | Campos | Requisito |
 | --- | --- |
@@ -210,7 +210,7 @@ Atributos de auditoria de sistema do Source externo é um tipo de dados padrão 
 
 #### Esquema de transações offline do cliente {#customer-offline-transactions-schema}
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre em plataformas fora do site. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] a partir de um PDV (ou sistema semelhante) e, na maioria das vezes, são transmitidos para a Platform por meio de uma conexão de API. Leia sobre [assimilação em lote](/help/ingestion/batch-ingestion/getting-started.md). Seu objetivo é fazer referência aos vários eventos de conversão offline usados para acionar jornadas, análises profundas de clientes online e offline e recursos aprimorados de segmentação.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre em plataformas fora do site. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] a partir de um PDV (ou sistema semelhante) e, na maioria das vezes, são transmitidos para o Experience Platform por meio de uma conexão de API. Leia sobre [assimilação em lote](/help/ingestion/batch-ingestion/getting-started.md). Seu objetivo é fazer referência aos vários eventos de conversão offline usados para acionar jornadas, análises profundas de clientes online e offline e recursos aprimorados de segmentação.
 
 ![Esquema de transações offline do cliente com grupos de campos realçados](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
@@ -234,15 +234,15 @@ Atributos de auditoria de sistema do Source externo é um tipo de dados padrão 
 
 +++
 
-#### Esquema do conector web do Adobe {#adobe-web-connector-schema}
+#### Esquema do Adobe web connector {#adobe-web-connector-schema}
 
 >[!NOTE]
 >
 >Esta é uma implementação opcional se você estiver usando o [!DNL Adobe Analytics Data Connector].
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no seu site ou em outras plataformas digitais associadas. Esse esquema é semelhante ao esquema Transações digitais do cliente, mas difere na medida em que é possível quando o SDK da Web não é uma opção para a coleta de dados. Dessa forma, você pode usar esse esquema quando estiver utilizando o [!DNL Adobe Analytics Data Connector] para enviar seus dados online para o [!DNL Adobe Experience Platform] como uma sequência de dados primária ou secundária.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no seu site ou em outras plataformas digitais associadas. Esse esquema é semelhante ao esquema Transações digitais do cliente, mas difere na medida em que é possível quando o Web SDK não é uma opção para a coleta de dados. Dessa forma, você pode usar esse esquema quando estiver utilizando o [!DNL Adobe Analytics Data Connector] para enviar seus dados online para o [!DNL Adobe Experience Platform] como uma sequência de dados primária ou secundária.
 
-![esquema do conector da web Adobe com grupos de campos realçados](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
+![Esquema do Adobe web connector com grupos de campos realçados](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
 O esquema do conector da Web [!DNL Adobe] é representado por uma classe [!UICONTROL XDM ExperienceEvent], que inclui os seguintes grupos de campos:
 
@@ -300,7 +300,7 @@ Esse caso de uso exige a criação de dois públicos-alvo para definir atributos
 
 * Para obter informações sobre como criar um público-alvo, leia o [Guia da interface do usuário do serviço de público-alvo](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * Para obter informações sobre como compor [públicos-alvo](/help/segmentation/home.md), leia o [Guia da interface do usuário de composição de público-alvo](/help/segmentation/ui/audience-composition.md).
-* Para obter informações sobre como criar públicos-alvo por meio de definições de segmento derivadas da Platform, leia o [Guia da Interface do usuário do Audience Builder](/help/segmentation/ui/segment-builder.md).
+* Para obter informações sobre como criar públicos-alvo por meio de definições de segmento derivadas da Experience Platform, leia o [Guia da Interface do usuário do Audience Builder](/help/segmentation/ui/segment-builder.md).
 
 Você deve criar e usar dois públicos-alvo em etapas diferentes do caso de uso, conforme mostrado na imagem abaixo.
 

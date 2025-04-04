@@ -6,9 +6,9 @@ description: Saiba como processar sinais de consentimento do cliente no Adobe Ex
 role: Developer
 feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1557'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -17,20 +17,20 @@ ht-degree: 0%
 
 O Adobe Experience Platform permite processar os dados de consentimento coletados dos clientes e integrá-los aos perfis de clientes armazenados. Esses dados podem ser usados por processos de downstream para determinar se a coleta de dados ocorre para um cliente específico ou se seus perfis são usados para fins específicos. Por exemplo, os dados de consentimento de um perfil específico podem determinar se ele pode ser incluído em um segmento de público-alvo exportado ou se pode participar de canais de marketing específicos, como email, mensagens de texto ou notificações por push.
 
-Este documento fornece uma visão geral de como configurar as operações de dados da plataforma para assimilar dados de consentimento do cliente gerados por uma plataforma de gerenciamento de consentimento (CMP) e integrar esses dados aos perfis do cliente para casos de uso downstream.
+Este documento fornece uma visão geral de como configurar as operações de dados do Experience Platform para assimilar dados de consentimento do cliente gerados por uma plataforma de gerenciamento de consentimento (CMP) e integrar esses dados aos perfis do cliente para casos de uso downstream.
 
 >[!NOTE]
 >
->Este documento se concentra no processamento de dados de consentimento usando o padrão Adobe. Se você estiver processando dados de consentimento em conformidade com a Estrutura de Transparência e Consentimento (TCF) do IAB 2.0, consulte o manual sobre o suporte do [TCF 2.0 no Adobe Real-time Customer Data Platform](../iab/overview.md).
+>Este documento se concentra no processamento de dados de consentimento usando o padrão Adobe. Se você estiver processando dados de consentimento em conformidade com a Estrutura de Transparência e Consentimento (TCF) do IAB 2.0, consulte o manual sobre o suporte do [TCF 2.0 no Adobe Real-Time Customer Data Platform](../iab/overview.md).
 
 ## Pré-requisitos
 
-Este guia requer uma compreensão funcional dos vários serviços de Experience Platform envolvidos no processamento de dados de consentimento:
+Este guia requer uma compreensão funcional dos vários serviços da Experience Platform envolvidos no processamento de dados de consentimento:
 
-* [Experience Data Model (XDM)](/help/xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
+* [Experience Data Model (XDM)](/help/xdm/home.md): a estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente.
 * [Adobe Experience Platform Identity Service](/help/identity-service/home.md): resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir as identidades de vários dispositivos e sistemas.
 * [Perfil de cliente em tempo real](/help/profile/home.md): usa os recursos do [!DNL Identity Service] para criar perfis de cliente detalhados a partir dos seus conjuntos de dados em tempo real. O Perfil do cliente em tempo real extrai dados do Data Lake e mantém os perfis do cliente em seu próprio armazenamento de dados separado.
-* [SDK da Web da Adobe Experience Platform](/help/web-sdk/home.md): uma biblioteca JavaScript do lado do cliente que permite integrar vários serviços da plataforma ao seu site voltado para o cliente.
+* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): uma biblioteca JavaScript do lado do cliente que permite integrar vários serviços Experience Platform ao seu site voltado para o cliente.
    * [Comandos de consentimento do SDK](../../../../web-sdk/commands/setconsent.md): uma visão geral dos casos de uso dos comandos do SDK relacionados ao consentimento mostrados neste guia.
 * [Serviço de segmentação da Adobe Experience Platform](/help/segmentation/home.md): permite dividir os dados do Perfil do cliente em tempo real em grupos de indivíduos que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 
@@ -39,21 +39,21 @@ Este guia requer uma compreensão funcional dos vários serviços de Experience 
 A seguir está uma descrição de como os dados de consentimento são processados após o sistema ter sido configurado corretamente:
 
 1. Um cliente fornece suas preferências de consentimento para a coleta de dados por meio de uma caixa de diálogo no site.
-1. Em cada carregamento de página (ou quando o CMP detecta uma alteração nas preferências de consentimento), um script personalizado no site mapeia as preferências atuais para um objeto XDM padrão. Esse objeto é então passado para o comando `setConsent` do SDK da Web da Platform.
-1. Quando `setConsent` é chamado, o SDK da Web da Platform verifica se os valores de consentimento são diferentes daqueles que recebeu pela última vez. Se os valores forem diferentes (ou se não houver um valor anterior), os dados estruturados de consentimento/preferência serão enviados para a Adobe Experience Platform.
+1. Em cada carregamento de página (ou quando o CMP detecta uma alteração nas preferências de consentimento), um script personalizado no site mapeia as preferências atuais para um objeto XDM padrão. Esse objeto é então passado para o comando `setConsent` do Experience Platform Web SDK.
+1. Quando `setConsent` é chamado, o Experience Platform Web SDK verifica se os valores de consentimento são diferentes daqueles que recebeu pela última vez. Se os valores forem diferentes (ou se não houver um valor anterior), os dados estruturados de consentimento/preferência serão enviados para a Adobe Experience Platform.
 1. Os dados de consentimento/preferência são assimilados em um conjunto de dados habilitado para [!DNL Profile] cujo esquema contém campos de consentimento/preferência.
 
 Além dos comandos do SDK acionados pelos ganchos de alteração de consentimento do CMP, os dados de consentimento também podem fluir para o Experience Platform por meio de quaisquer dados XDM gerados pelo cliente que são carregados diretamente para um conjunto de dados habilitado para [!DNL Profile].
 
 ### Execução de consentimento
 
-Na versão atual do suporte ao processamento de consentimento na Platform, somente a permissão de coleta de dados (`collect.val`) é imposta automaticamente pelo SDK da Web da Platform. Embora seja possível coletar e manter consentimentos e preferências mais granulares nos perfis do cliente, esses sinais adicionais devem ser aplicados manualmente em seus próprios processos de downstream.
+Na versão atual do suporte ao processamento de consentimento no Experience Platform, somente a permissão de coleta de dados (`collect.val`) é imposta automaticamente pelo Experience Platform Web SDK. Embora seja possível coletar e manter consentimentos e preferências mais granulares nos perfis do cliente, esses sinais adicionais devem ser aplicados manualmente em seus próprios processos de downstream.
 
 >[!NOTE]
 >
 >Para obter mais informações sobre a estrutura dos campos de consentimento XDM mencionados acima, consulte o manual no [[!UICONTROL tipo de dados Consentimentos e Preferências]](/help/xdm/data-types/consents.md).
 
-Depois que o sistema é configurado, o SDK da Web da Platform interpreta o valor de consentimento da coleta de dados para o usuário atual a fim de determinar se os dados devem ser enviados para o Edge Network Adobe Experience Platform, descartados do cliente ou mantidos até que a permissão de coleta de dados seja definida como sim ou não.
+Depois que o sistema é configurado, o Experience Platform Web SDK interpreta o valor de consentimento da coleta de dados para o usuário atual a fim de determinar se os dados devem ser enviados para o Adobe Experience Platform Edge Network, descartados do cliente ou mantidos até que a permissão de coleta de dados seja definida como sim ou não.
 
 ## Determine como gerar dados de consentimento do cliente na CMP {#consent-data}
 
@@ -79,29 +79,29 @@ Depois de criar um conjunto de dados habilitado para [!DNL Profile] para process
 
 Para obter mais informações sobre como trabalhar com políticas de mesclagem, comece lendo a [visão geral das políticas de mesclagem](../../../../profile/merge-policies/overview.md). Ao configurar suas políticas de mesclagem, você deve garantir que seus perfis incluam todos os atributos de consentimento necessários fornecidos pelo grupo de campos de esquema [!UICONTROL Consentimentos e Preferências], conforme descrito no guia em [preparação do conjunto de dados](./dataset.md).
 
-## Enviar dados de consentimento para a Platform
+## Enviar dados de consentimento para o Experience Platform
 
-Depois de ter seus conjuntos de dados e políticas de mesclagem para representar os campos de consentimento necessários nos perfis do cliente, a próxima etapa é trazer os dados de consentimento em si para a Plataforma.
+Depois de ter seus conjuntos de dados e políticas de mesclagem para representar os campos de consentimento necessários nos perfis do cliente, a próxima etapa é trazer os dados de consentimento em si para a Experience Platform.
 
-Principalmente, você deve usar o SDK da Web da Adobe Experience Platform para enviar dados de consentimento para a Platform sempre que eventos de alteração de consentimento forem detectados pelo CMP. Se estiver coletando dados de consentimento em uma plataforma móvel, você deve usar o SDK do Adobe Experience Platform Mobile. Você também pode optar por assimilar seus dados de consentimento coletados diretamente mapeando-os para o esquema XDM do conjunto de dados de consentimento e enviando-os para a Platform por meio da assimilação em lote.
+Basicamente, você deve usar o Adobe Experience Platform Web SDK para enviar dados de consentimento à Experience Platform sempre que eventos de alteração de consentimento forem detectados pelo CMP. Se estiver coletando dados de consentimento em uma plataforma móvel, você deve usar o Adobe Experience Platform Mobile SDK. Você também pode optar por assimilar seus dados de consentimento coletados diretamente mapeando-os para o esquema XDM do conjunto de dados de consentimento e enviando-os para a Experience Platform por meio da assimilação em lote.
 
 Os detalhes de cada um desses métodos são fornecidos nas subseções abaixo.
 
-### Configurar o SDK da Web do Experience Platform para processar dados de consentimento {#web-sdk}
+### Configurar o Experience Platform Web SDK para processar dados de consentimento {#web-sdk}
 
-Depois de configurar o CMP para acompanhar eventos de alteração de consentimento em seu site, você pode integrar o SDK da Web do Experience Platform para receber as configurações de consentimento atualizadas e enviá-las para a Platform em cada carregamento de página e sempre que eventos de alteração de consentimento ocorrerem. Consulte o manual sobre [configuração do SDK da Web para processar dados de consentimento do cliente](../sdk.md) para obter mais informações.
+Depois de configurar o CMP para acompanhar eventos de alteração de consentimento em seu site, você pode integrar o Experience Platform Web SDK para receber as configurações de consentimento atualizadas e enviá-las para a Experience Platform em cada carregamento de página e sempre que eventos de alteração de consentimento ocorrerem. Consulte o manual sobre [configuração do Web SDK para processar dados de consentimento do cliente](../sdk.md) para obter mais informações.
 
-### Configurar o SDK móvel do Experience Platform para processar dados de consentimento {#mobile-sdk}
+### Configurar o Experience Platform Mobile SDK para processar dados de consentimento {#mobile-sdk}
 
-Se as preferências de consentimento do cliente forem necessárias no aplicativo móvel, você poderá integrar o SDK móvel do Experience Platform para recuperar e atualizar as configurações de consentimento, enviando-as para a Platform sempre que a API de consentimento for chamada.
+Se as preferências de consentimento do cliente forem necessárias no aplicativo móvel, você poderá integrar o Experience Platform Mobile SDK para recuperar e atualizar as configurações de consentimento, enviando-as para a Experience Platform sempre que a API de consentimento for chamada.
 
-Consulte a documentação do SDK móvel para [configuração da extensão para dispositivos móveis de consentimento](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) e [uso da API de consentimento](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Para obter mais detalhes sobre como lidar com questões de privacidade usando o SDK móvel, consulte a seção [Privacidade e GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
+Consulte a documentação do Mobile SDK para [configurar a extensão para dispositivos móveis de consentimento](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) e [usar a API de consentimento](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/api-reference/). Para obter mais detalhes sobre como lidar com questões de privacidade usando o Mobile SDK, consulte a seção [Privacidade e GDPR](https://developer.adobe.com/client-sdks/resources/privacy-and-gdpr/).
 
 ### Assimilar dados de consentimento compatíveis com XDM diretamente {#batch}
 
 Você pode assimilar dados de consentimento compatíveis com XDM de um arquivo CSV usando a assimilação em lote. Isso pode ser útil se você tiver um backlog de dados de consentimento coletados anteriormente que ainda não foram integrados aos perfis do cliente.
 
-Siga o tutorial em [mapeamento de um arquivo CSV para XDM](../../../../ingestion/tutorials/map-csv/overview.md) para saber como converter seus campos de dados para XDM e assimilá-los na Platform. Ao selecionar o [!UICONTROL Destino] para o mapeamento, certifique-se de selecionar a opção **[!UICONTROL Usar conjunto de dados existente]** e escolher o conjunto de dados de consentimento habilitado para [!DNL Profile] que você criou anteriormente.
+Siga o tutorial em [mapeamento de um arquivo CSV para XDM](../../../../ingestion/tutorials/map-csv/overview.md) para saber como converter seus campos de dados para XDM e assimilá-los no Experience Platform. Ao selecionar o [!UICONTROL Destino] para o mapeamento, certifique-se de selecionar a opção **[!UICONTROL Usar conjunto de dados existente]** e escolher o conjunto de dados de consentimento habilitado para [!DNL Profile] que você criou anteriormente.
 
 ## Testar sua implementação {#test-implementation}
 
@@ -120,13 +120,13 @@ Por padrão, os novos atributos de consentimento não aparecerão no painel de u
 <!-- (To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
 
-If you are using Customer Journey Management, after confirming that your profiles and segments contain consent data, you can start honoring customer [marketing preferences](../../../../xdm/data-types/consents.md#marketing) when pulling segments from Platform. Specifically, profiles who have opted out of the email marketing preference should not be included in segments that are targeted for email campaigns.
+If you are using Customer Journey Management, after confirming that your profiles and segments contain consent data, you can start honoring customer [marketing preferences](../../../../xdm/data-types/consents.md#marketing) when pulling segments from Experience Platform. Specifically, profiles who have opted out of the email marketing preference should not be included in segments that are targeted for email campaigns.
 
-Customer Journey Management can also send consent-change signals back to Platform. When a customer selects an "unsubscribe" link in an email message, the updated consent preference is sent to Platform and the appropriate profile attributes are updated accordingly.
+Customer Journey Management can also send consent-change signals back to Experience Platform. When a customer selects an "unsubscribe" link in an email message, the updated consent preference is sent to Experience Platform and the appropriate profile attributes are updated accordingly.
 -->
 
 ## Próximas etapas
 
-Este guia aborda como configurar as operações do Platform para processar dados de consentimento do cliente usando o padrão Adobe e ter esses atributos representados em perfis do cliente. Agora é possível integrar as preferências de consentimento do cliente como um fator determinante na qualificação do segmento e em outros casos de uso de downstream.
+Este guia aborda como configurar as operações do Experience Platform para processar dados de consentimento do cliente usando o padrão Adobe e ter esses atributos representados em perfis do cliente. Agora é possível integrar as preferências de consentimento do cliente como um fator determinante na qualificação do segmento e em outros casos de uso de downstream.
 
-Para obter mais informações sobre os recursos relacionados à privacidade do Experience Platform, consulte a visão geral sobre [governança, privacidade e segurança na Platform](../../overview.md).
+Para obter mais informações sobre os recursos relacionados à privacidade do Experience Platform, consulte a visão geral sobre [governança, privacidade e segurança no Experience Platform](../../overview.md).

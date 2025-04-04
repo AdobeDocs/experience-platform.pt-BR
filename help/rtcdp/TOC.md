@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de diversas fontes empresariais para criar perfis de clientes, criar públicos-alvo a partir desses perfis e ativar esses públicos-alvo para destinos de terceiros.
 role: Admin
-source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 66%
+source-wordcount: '302'
+ht-degree: 64%
 
 ---
 
@@ -40,7 +40,7 @@ ht-degree: 66%
    * [IA do cliente](segmentation/customer-ai.md)
 * Conjuntos de dados {#datasets}
    * [Conjuntos de dados](datasets/dataset.md)
-   * [Qualidade dos dados na Platform](datasets/data-quality.md)
+   * [Qualidade dos dados no Experience Platform](datasets/data-quality.md)
 * Destinos {#destinations}
    * [Visão geral dos destinos](destinations/overview.md)
    * [Destinos na Real-Time CDP B2B Edition](destinations/b2b.md)

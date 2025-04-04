@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '890'
-ht-degree: 14%
+ht-degree: 20%
 
 ---
 
@@ -25,7 +25,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 
 ## Sistema de [!DNL Experience Data Model] (XDM) {#xdm}
 
-A padronização e a interoperabilidade são os principais conceitos por trás do [!DNL Experience Platform]. O [!DNL Experience Data Model] (XDM), orientado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
+A padronização e a interoperabilidade são os principais conceitos por trás do [!DNL Experience Platform]. O [!DNL Experience Data Model] (XDM), orientado pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 
 O XDM é uma especificação documentada publicamente projetada para melhorar o potencial das experiências digitais. Ele fornece estruturas e definições comuns para que qualquer aplicativo se comunique com os serviços na Adobe Experience Platform. Seguindo os padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum, fornecendo insights de maneira mais rápida e integrada. Você pode obter insights valiosos sobre ações de clientes, definir públicos-alvo por meio de segmentos e usar atributos de clientes para fins de personalização.
 
@@ -50,9 +50,9 @@ As novas regulamentações legais e organizacionais dão aos usuários o direito
 
 | Recurso | Descrição |
 |--- | ---|
-| Reformulação da marca de [!DNL Privacy Service] | O anteriormente chamado &quot;Serviço do GDPR&quot; foi reformulado para [!DNL Privacy Service], à medida que o serviço se expandiu para oferecer suporte a outras regulamentações, além do GDPR. |
+| Mudança de identidade visual do [!DNL Privacy Service] | O antigo “Serviço do RGPD” foi reformulado para [!DNL Privacy Service] devido à expansão do serviço para oferecer suporte a outras regulamentações, além do RGPD. |
 | Novos pontos de acesso de API | O caminho base da API [!DNL Privacy Service] foi atualizado de `/data/privacy/gdpr` para `/data/core/privacy/jobs`. |
-| Nova propriedade `regulation` necessária | Ao criar novos trabalhos na API [!DNL Privacy Service], uma propriedade `regulation` deve ser fornecida na carga da solicitação para indicar em qual regulamento rastrear o trabalho. Os valores aceitos são `gdpr` e `ccpa`. |
+| Nova propriedade `regulation` necessária | Ao criar novos processos na API do [!DNL Privacy Service], é necessário fornecer uma propriedade `regulation` no conteúdo da solicitação para indicar sob qual regulamento monitorar o processo. Os valores aceitos são `gdpr` e `ccpa`. |
 | Compatibilidade com o [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] agora aceita solicitações de acesso/exclusão do Adobe [!DNL Primetime Authentication], usando `primetimeAuthentication` como valor de produto. |
 | Aprimoramentos na interface do usuário do Privacy Service | Páginas de rastreamento de trabalho separadas para os regulamentos do GDPR e da CCPA. Novo menu suspenso **Tipo de regulamento **para alternar entre dados de rastreamento para o GDPR e a CCPA. |
 
@@ -60,11 +60,11 @@ As novas regulamentações legais e organizacionais dão aos usuários o direito
 
 * None
 
-Para obter mais informações sobre [!DNL Privacy Service], comece lendo a [visão geral de Privacy Service](../../privacy-service/home.md).
+Para obter mais informações sobre [!DNL Privacy Service], comece lendo a [visão geral do Privacy Service](../../privacy-service/home.md).
 
 ## Origens {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Platform]. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Experience Platform]. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
 O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 

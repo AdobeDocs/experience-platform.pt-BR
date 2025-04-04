@@ -4,9 +4,9 @@ title: Visão geral do Salesforce Marketing Cloud Source
 description: Saiba como conectar o Salesforce Marketing Cloud ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2023-05-25T00:00:00Z
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '333'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
@@ -17,13 +17,13 @@ ht-degree: 0%
 >
 >A origem [!DNL Salesforce Marketing Cloud] será substituída no final de junho de 2025.
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-O Experience Platform fornece suporte para assimilação de dados de sistemas de automação de marketing de terceiros. O suporte para provedores de automação de marketing inclui [!DNL Salesforce Marketing Cloud].
+O Experience Platform oferece suporte para assimilação de dados de sistemas de automação de marketing de terceiros. O suporte para provedores de automação de marketing inclui [!DNL Salesforce Marketing Cloud].
 
 ## Pré-requisitos
 
-Antes de poder conectar sua origem [!DNL Salesforce Marketing Cloud] à Platform, você deve garantir que os **escopos de permissão** a seguir sejam provisionados para sua combinação de ID de cliente e segredo de cliente [!DNL Salesforce Marketing Cloud]:
+Antes de poder conectar sua origem [!DNL Salesforce Marketing Cloud] à Experience Platform, você deve garantir que os **escopos de permissão** a seguir sejam provisionados para sua combinação de ID de cliente e segredo de cliente [!DNL Salesforce Marketing Cloud]:
 
 * `campaign_read`
 * `list_and_subscribers_read`
@@ -40,17 +40,17 @@ Para obter mais informações sobre escopos, incluindo uma lista de suas permiss
 
 Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-## Conectar [!DNL Salesforce Marketing Cloud] à plataforma usando APIs
+## Conectar o [!DNL Salesforce Marketing Cloud] ao Experience Platform usando APIs
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Salesforce Marketing Cloud] à Platform usando APIs:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Salesforce Marketing Cloud] ao Experience Platform usando APIs:
 
-* [Criar uma conexão básica de Marketing Cloud do Salesforce usando a API de serviço de fluxo](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+* [Criar uma conexão básica do Salesforce Marketing Cloud usando a API do Serviço de fluxo](../../tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
 * [Criar um fluxo de dados para uma fonte de automação de marketing usando a API do Serviço de fluxo](../../tutorials/api/collect/marketing-automation.md)
 
-## Conectar [!DNL Salesforce Marketing Cloud] à Plataforma usando a interface
+## Conectar o [!DNL Salesforce Marketing Cloud] ao Experience Platform usando a interface
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Salesforce Marketing Cloud] à Platform usando a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Salesforce Marketing Cloud] ao Experience Platform usando a interface do usuário:
 
 * [Criar uma conexão de origem do Salesforce Marketing Cloud na interface](../../tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
 * [Criar um fluxo de dados para uma conexão de origem de automação de marketing na interface](../../tutorials/ui/dataflow/marketing-automation.md)

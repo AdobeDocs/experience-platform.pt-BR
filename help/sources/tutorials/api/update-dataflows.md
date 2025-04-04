@@ -2,9 +2,9 @@
 title: Atualizar fluxos de dados usando a API de serviço de fluxo
 description: Saiba como criar um fluxo de dados, incluindo nome, descrição e programação usando a API de serviço de fluxo.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '661'
 ht-degree: 3%
 
 ---
@@ -23,12 +23,12 @@ Este tutorial requer que você tenha uma ID de fluxo válida. Se você não tive
 
 Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../landing/api-guide.md).
 
 ## Pesquisar detalhes do fluxo de dados
 
@@ -173,7 +173,7 @@ Uma resposta bem-sucedida retorna os detalhes atuais do fluxo de dados, incluind
 
 ## Atualizar fluxo de dados
 
-Para atualizar o agendamento de execução, o nome e a descrição do fluxo de dados, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID de fluxo, a versão e o novo agendamento que deseja usar.
+Para atualizar o agendamento de execução, o nome e a descrição do fluxo de dados, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID do fluxo, a versão e o novo agendamento que deseja usar.
 
 >[!IMPORTANT]
 >

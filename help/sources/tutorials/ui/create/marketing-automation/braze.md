@@ -4,9 +4,9 @@ description: Saiba como criar um fluxo de dados para sua conta do Brasil usando 
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1003'
 ht-degree: 1%
 
 ---
@@ -47,7 +47,7 @@ Se você já tiver uma conexão [!DNL Braze], ignore o restante deste documento 
 >
 >Você deve criar um esquema do Experience Data Model (XDM) se esta for a primeira vez que você cria uma conexão [!DNL Braze Currents]. Se você já criou um esquema para [!DNL Braze Currents], ignore esta etapa e prossiga para [conectando sua conta ao Experience Platform](#connect).
 
-Na interface do usuário da Platform, use a navegação à esquerda e selecione **[!UICONTROL Esquemas]** para acessar o espaço de trabalho [!UICONTROL Esquemas]. Em seguida, selecione **[!UICONTROL Criar esquema]** e **[!UICONTROL Evento de experiência]**. Para continuar, selecione **[!UICONTROL Avançar]**.
+Na interface do usuário do Experience Platform, use a navegação à esquerda e selecione **[!UICONTROL Esquemas]** para acessar o espaço de trabalho [!UICONTROL Esquemas]. Em seguida, selecione **[!UICONTROL Criar esquema]** e **[!UICONTROL Evento de experiência]**. Para continuar, selecione **[!UICONTROL Avançar]**.
 
 ![Um esquema concluído.](../../../../images/tutorials/create/braze/schema.png)
 
@@ -55,13 +55,13 @@ Forneça um nome e uma descrição para o esquema. Em seguida, use o painel [!UI
 
 Para obter mais informações sobre esquemas, leia o guia para [criar esquemas na interface](../../../../../xdm/tutorials/create-schema-ui.md).
 
-## Conecte sua conta do [!DNL Braze] ao Experience Platform {#connect}
+## Conectar sua conta do [!DNL Braze] à Experience Platform {#connect}
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Na categoria *Automação de Marketing*, selecione **[!UICONTROL Correntes brasileiras]** e **[!UICONTROL Adicionar dados]**.
 
-![O catálogo de origens na interface do usuário do Experience Platform com a origem Braze Currents selecionada.](../../../../images/tutorials/create/braze/catalog.png)
+![O catálogo de origens na interface do usuário do Experience Platform com a origem de Correntes do Brasil selecionada.](../../../../images/tutorials/create/braze/catalog.png)
 
 Em seguida, carregue o [arquivo de amostra Braze Currents](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json) fornecido. Esse arquivo contém todos os campos possíveis que o Braze pode enviar como parte de um evento.
 
@@ -84,7 +84,7 @@ Depois que o novo campo calculado for adicionado, selecione **[!UICONTROL Mapear
 
 >[!IMPORTANT]
 >
->Os carimbos de data e hora brasileiros não são expressos em milissegundos, mas em segundos. Para que os carimbos de data e hora no Experience Platform sejam refletidos com precisão, é necessário criar campos calculados em milissegundos. Um cálculo de &quot;time * 1000&quot; converterá corretamente em milissegundos, adequado para mapear para um campo de carimbo de data e hora dentro do Experience Platform.
+>Os carimbos de data e hora brasileiros não são expressos em milissegundos, mas em segundos. Para que os carimbos de data e hora no Experience Platform sejam refletidos com precisão, é necessário criar campos calculados em milissegundos. Um cálculo de &quot;tempo * 1000&quot; será convertido corretamente em milissegundos, adequado para mapear para um campo de carimbo de data e hora no Experience Platform.
 >
 >![Criando um campo calculado para o carimbo de data/hora ](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
@@ -94,16 +94,16 @@ Quando terminar, selecione **[!UICONTROL Próximo]**. Use a página de revisão 
 
 ### Coletar credenciais necessárias
 
-Depois que a conexão for criada, é necessário coletar os seguintes valores de credencial, que você fornecerá no Painel do Brasil para enviar dados para o Experience Platform. Para obter mais informações, leia o [!DNL Braze] [guia sobre como navegar até Atualizações](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Depois que a conexão for criada, é necessário coletar os seguintes valores de credencial, que você fornecerá no Painel brasileiro para enviar dados para o Experience Platform. Para obter mais informações, leia o [!DNL Braze] [guia sobre como navegar até Atualizações](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Campo | Descrição |
 | --- | --- |
 | ID de cliente | A ID do cliente associada à origem do Experience Platform. |
-| Segredo do cliente | O segredo do cliente associado à sua origem de Experience Platform. |
-| ID do inquilino | A ID do locatário associada à origem do Experience Platform. |
+| Segredo do cliente | O segredo do cliente associado à origem do Experience Platform. |
+| ID do locatário | A ID do locatário associada à origem do Experience Platform. |
 | Nome da sandbox | A sandbox associada à origem do Experience Platform. |
 | ID do fluxo de dados | A ID de fluxo de dados associada à origem do Experience Platform. |
-| Endpoint de transmissão | O ponto final de transmissão associado à fonte do Experience Platform. **Observação**: [!DNL Braze] converte automaticamente isso no ponto de extremidade de streaming em lote. |
+| Endpoint de transmissão | O terminal de transmissão associado à origem do Experience Platform. **Observação**: [!DNL Braze] converte automaticamente isso no ponto de extremidade de streaming em lote. |
 
 ### Configurar o [!DNL Braze Currents] para transmitir dados para sua fonte de dados
 
@@ -111,4 +111,4 @@ No [!DNL Braze Dashboard], navegue até Exportação de dados das Integrações 
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Braze]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer os dados do sistema de automação de marketing para  [!DNL Platform]](../../dataflow/marketing-automation.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Braze]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer os dados do sistema de automação de marketing para  [!DNL Experience Platform]](../../dataflow/marketing-automation.md).

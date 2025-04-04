@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;início;tópicos populares;acesso a dados;api de acesso a dados;acesso a dados de consulta;;home;popular topics;data access;data access api;query data access
+keywords: Experience Platform;página inicial;tópicos populares;acesso a dados;api acesso a dados;acesso a dados de consulta;;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
 title: Exibir dados do conjunto de dados usando a API de acesso a dados
 type: Tutorial
 description: Saiba como localizar, acessar e baixar dados armazenados em um conjunto de dados usando a API de acesso a dados no Adobe Experience Platform. Este documento apresenta alguns dos recursos exclusivos da API de acesso a dados, como downloads parciais e de paginação.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 9144a5f4cce88fc89973a7fea6d69384cc5f4ba1
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 8%
 
 ---
@@ -20,7 +20,7 @@ Use este tutorial passo a passo para saber como localizar, acessar e baixar dado
 
 Este tutorial requer entendimento prático sobre como criar e preencher um conjunto de dados. Consulte o [tutorial de criação de conjunto de dados](../../catalog/datasets/create.md) para obter mais informações.
 
-As seções a seguir fornecem informações adicionais que você precisa saber para fazer chamadas com êxito para as APIs da plataforma.
+As seções a seguir fornecem informações adicionais que você precisa saber para fazer chamadas com êxito para as APIs do Experience Platform.
 
 ### Leitura de chamadas de API de amostra {#reading-sample-api-calls}
 
@@ -28,19 +28,19 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](../../landing/api-authentication.md). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](../../landing/api-authentication.md). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorre:
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorre:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 Todas as solicitações que contêm um conteúdo (POST, PUT, PATCH) exigem um cabeçalho adicional:
 

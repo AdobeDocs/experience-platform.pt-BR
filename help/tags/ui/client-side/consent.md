@@ -2,10 +2,10 @@
 title: Implantar tags do JavaScript para gerenciar o consentimento do cliente
 description: Saiba como gerenciar sinais de aceitação e recusa do cliente para várias soluções de Adobe no Adobe Experience Platform.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: 3bb0fc7b2807889d0a759e81c8ff728de3c0cbde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 93%
+source-wordcount: '610'
+ht-degree: 94%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As regulamentações legais de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR), exigem que as empresas consigam gerenciar o consentimento de seus usuários. Os clientes da Adobe podem exigir a aceitação dos visitantes antes que as soluções da Adobe sejam executadas para qualquer visitante. Os visitantes devem ter a capacidade de gerenciar seu status de participação e não participação.
 
@@ -36,7 +36,7 @@ Na seção Rastreamento de link das definições das configurações da extensã
 * Rastrear os links de download
 * Rastrear links externos
 
-Quando essas configurações não estão selecionadas, a Platform não dispara o [!DNL Adobe Analytics] automaticamente. O [!DNL Analytics] somente será acionado se você indicar especificamente em uma ação de regra que ele deve ser acionado. Use as condições da regra para determinar quando e o que acionar. Por exemplo, para usar cookies para determinar o status de aceitação, defina um elemento de dados para ler esse cookie e use-o como uma condição na regra para determinar quando acionar a ação Enviar Beacon.
+Quando essas configurações não estão selecionadas, o Experience Platform não dispara o [!DNL Adobe Analytics] automaticamente. O [!DNL Analytics] somente será acionado se você indicar especificamente em uma ação de regra que ele deve ser acionado. Use as condições da regra para determinar quando e o que acionar. Por exemplo, para usar cookies para determinar o status de aceitação, defina um elemento de dados para ler esse cookie e use-o como uma condição na regra para determinar quando acionar a ação Enviar Beacon.
 
 Separadamente, você pode considerar o uso do [objeto de aceitação da Adobe](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html?lang=pt-BR) para controlar o acionamento dessa tag em conjunto com sua plataforma de gerenciamento de consentimento.
 

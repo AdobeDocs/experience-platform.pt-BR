@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 21%
+source-wordcount: '401'
+ht-degree: 22%
 
 ---
 
@@ -143,4 +143,4 @@ ht-degree: 21%
 - [Perguntas frequentes](troubleshooting-guide.md)
 - [INCLUIR NA LISTA DE PERMISSÕES endereço IP](ip-address-allowlist.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

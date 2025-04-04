@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral do Conector do Source de Armazenamento de Arquivos do Azure
 description: Saiba como conectar o Armazenamento de arquivos do Azure ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem, como o AWS, o [!DNL Google Cloud Platform] e o [!DNL Azure], permitindo que você traga seus dados desses sistemas.
 
-As fontes de armazenamento na nuvem podem trazer seus próprios dados para o [!DNL Platform] sem precisar baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Origens. O [!DNL Platform] permite trazer dados de [!DNL Azure File Storage] por meio de lotes.
+As fontes de armazenamento na nuvem podem trazer seus próprios dados para o [!DNL Experience Platform] sem precisar baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Origens. O [!DNL Experience Platform] permite trazer dados de [!DNL Azure File Storage] por meio de lotes.
 
 ## LISTA DE PERMISSÕES de endereço IP
 
@@ -32,9 +32,9 @@ Veja a seguir uma lista de restrições que você deve considerar ao nomear seu 
 - Caracteres de caminho de URL inválidos não permitidos. Pontos de código como `\uE000`, embora válidos em nomes de arquivo NTFS, não são caracteres Unicode válidos. Além disso, alguns caracteres ASCII ou Unicode, como caracteres de controle (0x00 a 0x1F, \u0081 etc.), também não são permitidos. Para regras que regem cadeias de caracteres Unicode em HTTP/1.1, consulte [RFC 2616, Seção 2.2: Regras Básicas](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Os seguintes nomes de arquivo não são permitidos: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractere de ponto (.) e dois caracteres de ponto (..).
 
-## Conectar [!DNL Azure File Storage] a [!DNL Platform]
+## Conectar [!DNL Azure File Storage] a [!DNL Experience Platform]
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Azure File Storage] ao [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Azure File Storage] ao [!DNL Experience Platform] usando APIs ou a interface do usuário:
 
 ### Uso de APIs
 

@@ -2,9 +2,9 @@
 title: Criar uma Conexão do Microsoft SQL Server Source na interface
 description: Saiba como criar uma conexão de origem do Microsoft SQL Server usando a interface do usuário do Adobe Experience Platform.
 exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
-source-git-commit: 1828dd76e9ff317f97e9651331df3e49e44efff5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '466'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Se você já tiver uma conexão [!DNL SQL Server] válida, ignore o restante des
 
 ### Coletar credenciais necessárias
 
-Para se conectar a [!DNL SQL Server] em [!DNL Platform], você deve fornecer a seguinte propriedade de conexão:
+Para se conectar a [!DNL SQL Server] em [!DNL Experience Platform], você deve fornecer a seguinte propriedade de conexão:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
@@ -36,7 +36,7 @@ Para obter mais informações sobre a introdução, consulte [este [!DNL SQL Ser
 
 ## Conectar sua conta do [!DNL SQL Server]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Na categoria *Bancos de dados*, selecione **[!DNL Microsoft SQL Server]** e **[!UICONTROL Configurar]**.
 
@@ -70,4 +70,4 @@ Selecione **[!UICONTROL Avançar]** para continuar.
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL SQL Server]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Platform]](../../dataflow/databases.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL SQL Server]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Experience Platform]](../../dataflow/databases.md).

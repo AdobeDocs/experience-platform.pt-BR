@@ -3,9 +3,9 @@ title: Conexão do Google Cloud Storage
 description: Saiba como se conectar ao Google Cloud Storage e ativar públicos ou exportar conjuntos de dados.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: ab274270-ae8c-4264-ba64-700b118e6435
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1236'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Crie uma conexão de saída ativa com o [!DNL Google Cloud Storage] para exporta
 
 ## Conectar-se ao armazenamento do [!DNL Google Cloud Storage] por meio da API ou da interface {#connect-api-or-ui}
 
-* Para se conectar ao local de armazenamento do [!DNL Google Cloud Storage] usando a interface do usuário da Platform, leia as seções [Conectar-se ao destino](#connect) e [Ativar públicos-alvo para este destino](#activate) abaixo.
+* Para se conectar ao local de armazenamento do [!DNL Google Cloud Storage] usando a interface do usuário do Experience Platform, leia as seções [Conectar-se ao destino](#connect) e [Ativar públicos-alvo para este destino](#activate) abaixo.
 * Para se conectar ao local de armazenamento do [!DNL Google Cloud Storage] de forma programática, leia o [Tutorial da API do Serviço de Fluxo](../../api/activate-segments-file-based-destinations.md) para ativar públicos-alvo para destinos baseados em arquivo.
 
 ## Públicos-alvo compatíveis {#supported-audiences}
@@ -27,7 +27,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -47,18 +47,18 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Esse destino suporta exportações de conjunto de dados. Para obter informações completas sobre como configurar exportações de conjunto de dados, leia os tutoriais:
 
-* Como [exportar conjuntos de dados usando a interface de usuário da Platform](/help/destinations/ui/export-datasets.md).
+* Como [exportar conjuntos de dados usando a interface do usuário do Experience Platform](/help/destinations/ui/export-datasets.md).
 * Como [exportar conjuntos de dados de forma programática usando a API de Serviço de Fluxo](/help/destinations/api/export-datasets.md).
 
 ## Formato de arquivo dos dados exportados {#file-format}
 
-Ao exportar *dados de público-alvo*, a Platform cria um arquivo `.csv`, `parquet` ou `.json` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte a seção [formatos de arquivo compatíveis com a exportação](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) no tutorial de ativação de público-alvo.
+Ao exportar *dados de público-alvo*, o Experience Platform cria um arquivo `.csv`, `parquet` ou `.json` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte a seção [formatos de arquivo compatíveis com a exportação](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) no tutorial de ativação de público-alvo.
 
-Ao exportar *conjuntos de dados*, a Platform cria um arquivo `.parquet` ou `.json` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte a seção [verificar exportação bem-sucedida do conjunto de dados](../../ui/export-datasets.md#verify) no tutorial exportar conjuntos de dados.
+Ao exportar *conjuntos de dados*, o Experience Platform cria um arquivo `.parquet` ou `.json` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte a seção [verificar exportação bem-sucedida do conjunto de dados](../../ui/export-datasets.md#verify) no tutorial exportar conjuntos de dados.
 
 ## Pré-requisito de configuração para conectar sua conta do [!DNL Google Cloud Storage] {#prerequisites}
 
-Para conectar a Platform ao [!DNL Google Cloud Storage], primeiro você deve habilitar a interoperabilidade para sua conta [!DNL Google Cloud Storage]. Para acessar a configuração de interoperabilidade, abra o [!DNL Google Cloud Platform] e selecione **[!UICONTROL Configurações]** na opção **[!UICONTROL Armazenamento na nuvem]** no painel de navegação.
+Para conectar o Experience Platform ao [!DNL Google Cloud Storage], primeiro você deve habilitar a interoperabilidade para sua conta [!DNL Google Cloud Storage]. Para acessar a configuração de interoperabilidade, abra o [!DNL Google Cloud Platform] e selecione **[!UICONTROL Configurações]** na opção **[!UICONTROL Armazenamento na nuvem]** no painel de navegação.
 
 ![Painel da Google Cloud Platform com Armazenamento na Nuvem e Configurações realçados.](../../../sources/images/tutorials/create/google-cloud-storage/nav.png)
 
@@ -70,7 +70,7 @@ A página **[!UICONTROL Interoperabilidade]** contém informações sobre autent
 
 ![A opção Criar uma chave para um controle de conta de serviço realçado no painel da Google Cloud Platform.](../../../sources/images/tutorials/create/google-cloud-storage/interoperability.png)
 
-Você pode usar a ID da chave de acesso recém-gerada e a chave de acesso secreta para conectar sua conta do [!DNL Google Cloud Storage] à Platform.
+Você pode usar a ID da chave de acesso recém-gerada e a chave de acesso secreta para conectar sua conta do [!DNL Google Cloud Storage] à Experience Platform.
 
 ## Conectar ao destino {#connect}
 
@@ -84,8 +84,8 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
 
-* **[!UICONTROL ID da chave de acesso]**: uma sequência de 61 caracteres alfanuméricos usada para autenticar sua conta do [!DNL Google Cloud Storage] na Platform. Para obter informações sobre como obter este valor, leia a seção [pré-requisitos](#prerequisites) acima.
-* **[!UICONTROL Chave de acesso secreta]**: uma cadeia de 40 caracteres codificada em base64 usada para autenticar sua conta do [!DNL Google Cloud Storage] na Platform. Para obter informações sobre como obter este valor, leia a seção [pré-requisitos](#prerequisites) acima.
+* **[!UICONTROL ID da chave de acesso]**: uma sequência de 61 caracteres alfanuméricos usada para autenticar sua conta do [!DNL Google Cloud Storage] no Experience Platform. Para obter informações sobre como obter este valor, leia a seção [pré-requisitos](#prerequisites) acima.
+* **[!UICONTROL Chave de acesso secreta]**: uma cadeia de 40 caracteres codificada em base64 usada para autenticar sua conta do [!DNL Google Cloud Storage] no Experience Platform. Para obter informações sobre como obter este valor, leia a seção [pré-requisitos](#prerequisites) acima.
 * **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
 
   ![Imagem mostrando um exemplo de uma chave PGP formatada corretamente na interface](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -100,7 +100,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
 * **[!UICONTROL Nome do bucket]**: insira o nome do bucket [!DNL Google Cloud Storage] a ser usado por este destino.
 * **[!UICONTROL Caminho da pasta]**: insira o caminho para a pasta de destino que hospedará os arquivos exportados.
-* **[!UICONTROL Tipo de arquivo]**: selecione o Experience Platform de formato que deve ser usado para os arquivos exportados. Ao selecionar a opção [!UICONTROL CSV], você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
+* **[!UICONTROL Tipo de arquivo]**: selecione o formato que o Experience Platform deve usar para os arquivos exportados. Ao selecionar a opção [!UICONTROL CSV], você também pode [configurar as opções de formatação de arquivo](../../ui/batch-destinations-file-formatting-options.md).
 * **[!UICONTROL Formato de compactação]**: selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados.
 * **[!UICONTROL Incluir arquivo de manifesto]**: ative essa opção se desejar que as exportações incluam um arquivo JSON de manifesto que contenha informações sobre o local de exportação, tamanho da exportação e muito mais. O manifesto é nomeado usando o formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Exibir um [arquivo de manifesto de exemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). O arquivo de manifesto inclui os seguintes campos:
    * `flowRunId`: A [execução do fluxo de dados](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que gerou o arquivo exportado.
@@ -154,4 +154,4 @@ Para verificar se os dados foram exportados com êxito, verifique o bucket [!DNL
 
 ## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allow-list}
 
-Consulte o artigo [Adobe inclui na lista de permissões de endereço IP](ip-address-allow-list.md) se precisar adicionar IPs de lista de permissões a um arquivo de.
+Consulte o artigo [inclui na lista de permissões de endereço IPs](ip-address-allow-list.md) se precisar adicionar IPs do Adobe a um arquivo de inclui na lista de permissões.

@@ -2,10 +2,10 @@
 title: Bibliotecas de auto-hospedagem
 description: Saiba como implementar a auto-hospedagem para seus builds de biblioteca de tags na Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: 91b28fc284344b42020b0e49b64ac023e492d572
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 96%
+source-wordcount: '491'
+ht-degree: 90%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As tags na Adobe Experience Platform permitem a produção de um conjunto de arquivos chamado [build](../builds.md). Esse conjunto de arquivos controla o comportamento do aplicativo no tempo de execução.
 
 As criações precisam ser hospedadas em algum lugar para que os dispositivos cliente possam recuperá-las no tempo de execução, conforme necessário.
 
-O Platform pode gerenciar a hospedagem desses arquivos para você ou você mesmo pode fazer isso.
+A Experience Platform pode gerenciar a hospedagem desses arquivos para você ou você mesmo pode fazer isso.
 
 ## Administrado pela Adobe {#managed-by-adobe}
 
@@ -33,7 +33,7 @@ O motivo principal para usar a hospedagem gerenciada é conveniência. É mais f
 
 ## Auto-hospedagem
 
-Se não quiser que a Adobe gerencie seus arquivos hospedados, você mesmo deve hospedá-los. Para hospedar os arquivos, você precisa obter os builds concluídos da Platform e ser responsável por incluir os arquivos por meio do ciclo de lançamento da empresa nos servidores gerenciados por ela.
+Se não quiser que a Adobe gerencie seus arquivos hospedados, você mesmo deve hospedá-los. Para hospedar seus arquivos, você precisa obter os builds concluídos da Experience Platform e ser responsável por obter os arquivos por meio do ciclo de lançamento da empresa nos servidores gerenciados por ela.
 
 ### Por que usar a auto-hospedagem?
 

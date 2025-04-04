@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gerenciar rótulos de uso de dados para conjuntos de dados usando APIs
 description: A API de serviço do conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API de serviço de catálogo que gerencia metadados do conjunto de dados.
 exl-id: 24a8d870-eb81-4255-8e47-09ae7ad7a721
-source-git-commit: 9eda7068eb2a3fd5e59fbeff69c85abfad5ccf39
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1340'
 ht-degree: 2%
@@ -23,7 +23,7 @@ Este documento aborda como gerenciar rótulos para conjuntos de dados e campos u
 
 ## Introdução
 
-Antes de ler este guia, siga as etapas descritas na [seção de introdução](../../catalog/api/getting-started.md) do guia de desenvolvedor do Catálogo para coletar as credenciais necessárias para fazer chamadas para APIs do [!DNL Platform].
+Antes de ler este guia, siga as etapas descritas na [seção de introdução](../../catalog/api/getting-started.md) do guia de desenvolvedor do Catálogo para coletar as credenciais necessárias para fazer chamadas para APIs do [!DNL Experience Platform].
 
 Para fazer chamadas para os pontos de extremidade descritos neste documento, você deve ter o valor `id` exclusivo para um conjunto de dados específico. Se você não tiver esse valor, consulte o manual em [listando objetos de Catálogo](../../catalog/api/list-objects.md) para encontrar as IDs dos seus conjuntos de dados existentes.
 
@@ -97,15 +97,15 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Solicitação**
 
-O exemplo de solicitação POST abaixo atualiza todo o conjunto de dados com um rótulo `C1`. Os campos fornecidos na carga são os mesmos que seriam necessários para uma solicitação PUT.
+A solicitação POST de exemplo abaixo atualiza todo o conjunto de dados com um rótulo `C1`. Os campos fornecidos na carga são os mesmos que seriam necessários para uma solicitação PUT.
 
-Ao fazer chamadas de API que atualizam os rótulos existentes de um conjunto de dados (PUT), um cabeçalho `If-Match` que indica a versão atual da entidade do rótulo do conjunto de dados no Serviço de conjunto de dados deve ser incluído. Para evitar colisões de dados, o serviço só atualizará a entidade do conjunto de dados se a cadeia de caracteres `If-Match` incluída corresponder à marca da versão mais recente gerada pelo sistema para esse conjunto de dados.
+Ao fazer chamadas de API que atualizam os rótulos existentes de um conjunto de dados (PUT), um cabeçalho `If-Match` que indica a versão atual da entidade do rótulo do conjunto de dados no Serviço de Conjunto de Dados deve ser incluído. Para evitar colisões de dados, o serviço só atualizará a entidade do conjunto de dados se a cadeia de caracteres `If-Match` incluída corresponder à marca da versão mais recente gerada pelo sistema para esse conjunto de dados.
 
 >[!NOTE]
 >
->Se houver rótulos para o conjunto de dados em questão, novos rótulos só poderão ser adicionados por meio de uma solicitação PUT, o que requer um cabeçalho `If-Match`. Depois que os rótulos forem adicionados a um conjunto de dados, o valor `etag` mais recente será necessário para atualizar ou remover os rótulos posteriormente<br>Antes de executar o método PUT, execute uma solicitação GET nos rótulos do conjunto de dados. Atualize somente os campos específicos destinados à modificação na solicitação, deixando o restante inalterado. Além disso, verifique se a chamada de PUT mantém as mesmas entidades principais que a chamada de GET. Qualquer discrepância resultaria em um erro para o cliente.
+>Se houver rótulos para o conjunto de dados em questão, novos rótulos só poderão ser adicionados por meio de uma solicitação PUT, que requer um cabeçalho `If-Match`. Depois que os rótulos forem adicionados a um conjunto de dados, o valor `etag` mais recente será necessário para atualizar ou remover os rótulos posteriormente<br>Antes de executar o método PUT, execute uma solicitação GET nos rótulos do conjunto de dados. Atualize somente os campos específicos destinados à modificação na solicitação, deixando o restante inalterado. Além disso, verifique se a chamada do PUT mantém as mesmas entidades principais que a chamada do GET. Qualquer discrepância resultaria em um erro para o cliente.
 
-GET Para recuperar a versão mais recente da entidade de rótulo do conjunto de dados, faça uma [solicitação](#look-up) ao ponto de extremidade `/datasets/{DATASET_ID}/labels`. O valor atual é retornado na resposta sob um cabeçalho `etag`. Ao atualizar rótulos de conjuntos de dados existentes, a prática recomendada é executar primeiro uma solicitação de pesquisa para o conjunto de dados para buscar seu valor `etag` mais recente antes de usar esse valor no cabeçalho `If-Match` de sua solicitação PUT subsequente.
+Para recuperar a versão mais recente da entidade de rótulo do conjunto de dados, faça uma [solicitação do GET](#look-up) para o ponto de extremidade `/datasets/{DATASET_ID}/labels`. O valor atual é retornado na resposta sob um cabeçalho `etag`. Ao atualizar rótulos de conjuntos de dados existentes, a prática recomendada é executar primeiro uma solicitação de pesquisa para o conjunto de dados para buscar seu valor `etag` mais recente antes de usar esse valor no cabeçalho `If-Match` de sua solicitação PUT subsequente.
 
 ```shell
 curl -X POST \
@@ -143,7 +143,7 @@ Uma resposta bem-sucedida retorna o conjunto atualizado de rótulos para o conju
 
 >[!IMPORTANT]
 >
->A propriedade `optionalLabels` foi descontinuada para uso com solicitações POST. Não é mais possível adicionar rótulos de dados a campos de conjunto de dados. Uma operação POST gerará um erro se um valor `optionalLabel` estiver presente. Entretanto, é possível excluir rótulos de campos individuais usando uma solicitação PUT e a propriedade `optionalLabels`. Para obter mais informações, consulte a seção sobre [remoção de rótulos de um conjunto de dados](#remove).
+>A propriedade `optionalLabels` foi descontinuada para uso com solicitações POST. Não é mais possível adicionar rótulos de dados a campos de conjunto de dados. Uma operação POST gerará um erro se um valor `optionalLabel` estiver presente. No entanto, é possível excluir rótulos de campos individuais usando uma solicitação PUT e a propriedade `optionalLabels`. Para obter mais informações, consulte a seção sobre [remoção de rótulos de um conjunto de dados](#remove).
 
 ```json
 {
@@ -183,9 +183,9 @@ PUT /datasets/{DATASET_ID}/labels
 
 **Solicitação**
 
-O conjunto de dados abaixo no qual a operação PUT é aplicada tinha C1 optionalLabel no campo properties/person/properties/address e C1, C2 optionalLabels no campo /properties/person/properties/name/properties/fullName. Após a operação put, o primeiro campo não terá rótulo (o rótulo C1 foi removido) e o segundo campo terá apenas o rótulo C1 (o rótulo C2 foi removido)
+O conjunto de dados abaixo no qual a operação do PUT é aplicada tinha C1 optionalLabel no campo properties/person/properties/address e C1, C2 optionalLabels no campo /properties/person/properties/name/properties/fullName. Após a operação put, o primeiro campo não terá rótulo (o rótulo C1 foi removido) e o segundo campo terá apenas o rótulo C1 (o rótulo C2 foi removido)
 
-No exemplo de cenário abaixo, uma solicitação PUT é usada para remover rótulos adicionados a campos individuais. Antes da solicitação ser feita, o campo `fullName` tinha os rótulos `C1` e `C2` aplicados, e o campo `address` já tinha um rótulo `C1` aplicado. A solicitação PUT substitui rótulos `C1, C2` existentes do campo `fullName` por um rótulo `C1` usando o parâmetro `optionalLabels.labels`. A solicitação também substitui o rótulo `C1` do campo `address` por um conjunto vazio de rótulos de campo.
+No cenário do exemplo abaixo, uma solicitação PUT é usada para remover rótulos adicionados a campos individuais. Antes da solicitação ser feita, o campo `fullName` tinha os rótulos `C1` e `C2` aplicados, e o campo `address` já tinha um rótulo `C1` aplicado. A solicitação PUT substitui rótulos `C1, C2` existentes do campo `fullName` por um rótulo `C1` usando o parâmetro `optionalLabels.labels`. A solicitação também substitui o rótulo `C1` do campo `address` por um conjunto vazio de rótulos de campo.
 
 ```shell
 curl -X PUT \

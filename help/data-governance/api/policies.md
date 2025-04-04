@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;Imposição de política;Imposição baseada em API;governança de dados
 solution: Experience Platform
 title: Ponto de extremidade da API de políticas de governança de dados
-description: As políticas de governança de dados são regras adotadas pela sua organização que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados no Experience Platform. O ponto de extremidade /policies é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão de políticas de governança de dados.
+description: As políticas de governança de dados são regras adotadas pela sua organização que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro do Experience Platform. O ponto de extremidade /policies é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão de políticas de governança de dados.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1864'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ As políticas de governança de dados são regras que descrevem os tipos de aç�
 
 >[!IMPORTANT]
 >
->As políticas de governança não devem ser confundidas com as políticas de controle de acesso, que determinam os atributos de dados específicos que podem ser acessados por determinados usuários da Platform em sua organização. Consulte o manual de ponto de extremidade `/policies` da [API de Controle de Acesso](../../access-control/abac/api/policies.md) para obter detalhes sobre como gerenciar programaticamente as políticas de controle de acesso.
+>As políticas de governança não devem ser confundidas com as políticas de controle de acesso, que determinam os atributos de dados específicos que podem ser acessados por determinados usuários do Experience Platform em sua organização. Consulte o manual de ponto de extremidade `/policies` da [API de Controle de Acesso](../../access-control/abac/api/policies.md) para obter detalhes sobre como gerenciar programaticamente as políticas de controle de acesso.
 
 ## Introdução
 
@@ -378,7 +378,7 @@ Uma resposta bem-sucedida retorna os detalhes da política recém-criada, inclui
 >
 >Você só pode atualizar políticas personalizadas. Se quiser habilitar ou desabilitar as políticas principais, consulte a seção sobre [atualização da lista de políticas principais habilitadas](#update-enabled-core).
 
-Você pode atualizar uma política personalizada existente fornecendo a respectiva ID no caminho de uma solicitação PUT com uma carga que inclui a forma atualizada da política em sua totalidade. Em outras palavras, o pedido PUT reescreve essencialmente a política.
+Você pode atualizar uma política personalizada existente fornecendo a respectiva ID no caminho de uma solicitação PUT com uma carga que inclui a forma atualizada da política em sua totalidade. Em outras palavras, a solicitação do PUT essencialmente reescreve a política.
 
 >[!NOTE]
 >
@@ -478,11 +478,11 @@ Uma resposta bem-sucedida retorna os detalhes da política atualizada.
 >
 >Você só pode atualizar políticas personalizadas. Se quiser habilitar ou desabilitar as políticas principais, consulte a seção sobre [atualização da lista de políticas principais habilitadas](#update-enabled-core).
 
-Uma parte específica de uma política pode ser atualizada usando uma solicitação PATCH. Diferentemente das solicitações PUT que reescrevem a política, as solicitações PATCH atualizam somente as propriedades especificadas no corpo da solicitação. Isso é especialmente útil quando você deseja habilitar ou desabilitar uma política, pois você só precisa fornecer o caminho para a propriedade apropriada (`/status`) e seu valor (`ENABLED` ou `DISABLED`).
+Uma parte específica de uma política pode ser atualizada usando uma solicitação PATCH. Diferentemente das solicitações do PUT que reescrevem a política, as solicitações do PATCH atualizam somente as propriedades especificadas no corpo da solicitação. Isso é especialmente útil quando você deseja habilitar ou desabilitar uma política, pois você só precisa fornecer o caminho para a propriedade apropriada (`/status`) e seu valor (`ENABLED` ou `DISABLED`).
 
 >[!NOTE]
 >
->As cargas das solicitações PATCH seguem a formatação de patch JSON. Consulte o [guia de fundamentos de API](../../landing/api-fundamentals.md) para obter mais informações sobre a sintaxe aceita.
+>As cargas das solicitações do PATCH seguem a formatação do patch JSON. Consulte o [guia de fundamentos de API](../../landing/api-fundamentals.md) para obter mais informações sobre a sintaxe aceita.
 
 A API [!DNL Policy Service] é compatível com as operações de patch de JSON `add`, `remove` e `replace` e permite combinar várias atualizações em uma única chamada, como mostrado no exemplo abaixo.
 
@@ -502,7 +502,7 @@ A solicitação a seguir usa duas operações `replace` para alterar o status da
 
 >[!IMPORTANT]
 >
->Ao enviar várias operações de PATCH em uma única solicitação, elas serão processadas na ordem em que aparecem na matriz. Verifique se você está enviando as solicitações na ordem correta, quando necessário.
+>Ao enviar várias operações do PATCH em uma única solicitação, elas serão processadas na ordem em que aparecem no array. Verifique se você está enviando as solicitações na ordem correta, quando necessário.
 
 ```SHELL
 curl -X PATCH \

@@ -5,10 +5,10 @@ title: Endpoint da API de Funções
 description: O ponto de extremidade /roles na API de controle de acesso baseado em atributos permite gerenciar programaticamente funções no Adobe Experience Platform.
 role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1665'
-ht-degree: 6%
+source-wordcount: '1670'
+ht-degree: 7%
 
 ---
 
@@ -18,13 +18,13 @@ ht-degree: 6%
 >
 >Se um token de usuário for transmitido, o usuário do token deverá ter uma função de &quot;org admin&quot; para a organização solicitada.
 
-As funções definem o acesso que um administrador, um especialista ou um usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário.
+As funções definem o acesso que um(a) admin, especialista ou usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário.
 
 O ponto de extremidade `/roles` na API de controle de acesso baseada em atributos permite gerenciar programaticamente funções em sua organização.
 
 ## Introdução
 
-O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
+O endpoint da API usado neste guia faz parte da API de controle de acesso baseada em atributos. Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Recuperar uma lista de funções {#list}
 
@@ -108,7 +108,7 @@ Uma resposta bem-sucedida retorna uma lista de funções na organização, inclu
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
 | `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
 | `sandboxes` | Essa propriedade exibe as sandboxes na organização que são provisionadas para uma função específica. |
-| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da plataforma aos quais eles têm acesso. |
+| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos do Experience Platform aos quais eles têm acesso. |
 | `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à atribuição consultada. |
 
 ## Pesquisar uma função {#lookup}
@@ -175,7 +175,7 @@ Uma resposta bem-sucedida retorna detalhes da ID de função consultada, incluin
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
 | `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
 | `sandboxes` | Essa propriedade exibe as sandboxes na organização que são provisionadas para uma função específica. |
-| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da plataforma aos quais eles têm acesso. |
+| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos do Experience Platform aos quais eles têm acesso. |
 | `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à atribuição consultada. |
 
 ## Pesquisar assuntos por ID de função
@@ -323,7 +323,7 @@ Uma resposta bem-sucedida retorna a função recém-criada, com a ID de função
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
 | `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
 | `sandboxes` | Essa propriedade exibe as sandboxes na organização que são provisionadas para uma função específica. |
-| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da plataforma aos quais eles têm acesso. |
+| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos do Experience Platform aos quais eles têm acesso. |
 | `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à atribuição consultada. |
 
 ## Atualizar uma função {#patch}
@@ -403,7 +403,7 @@ Uma resposta bem-sucedida retorna a função atualizada, incluindo novos valores
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
 | `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
 | `sandboxes` | Essa propriedade exibe as sandboxes na organização que são provisionadas para uma função específica. |
-| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da plataforma aos quais eles têm acesso. |
+| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos do Experience Platform aos quais eles têm acesso. |
 | `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à atribuição consultada. |
 
 ## Atualizar uma função por ID de função {#put}
@@ -477,7 +477,7 @@ Uma resposta bem-sucedida retorna a função atualizada, incluindo novos valores
 | `roleType` | O tipo designado da função. Os valores possíveis para o tipo de função são: `user-defined` e `system-defined`. |
 | `permissionSets` | Os conjuntos de permissões representam um grupo de permissões que um administrador pode aplicar a uma função. Um administrador pode atribuir conjuntos de permissões a uma função, em vez de atribuir permissões individuais. Isso permite criar funções personalizadas com base em uma função predefinida que contém um grupo de permissões. |
 | `sandboxes` | Essa propriedade exibe as sandboxes na organização que são provisionadas para uma função específica. |
-| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos da plataforma aos quais eles têm acesso. |
+| `subjectAttributes` | Os atributos que indicam a correlação entre um assunto e os recursos do Experience Platform aos quais eles têm acesso. |
 | `subjectAttributes.labels` | Exibe os rótulos de uso de dados aplicados à atribuição consultada. |
 
 ## Atualizar assunto por ID de função

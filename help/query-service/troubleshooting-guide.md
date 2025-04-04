@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Perguntas frequentes sobre o Serviço de consulta e o Data Distiller
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta e ao Data Distiller. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5024'
+source-wordcount: '5029'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ As etapas a seguir descrevem como exibir uma visualização tabular de um conjun
 - Depois de fazer logon no Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda da interface para navegar até o painel [!UICONTROL Conjuntos de dados].
 - A guia [!UICONTROL Procurar] dos conjuntos de dados é aberta. Você pode usar a barra de pesquisa para refinar as opções disponíveis. Selecione um conjunto de dados na lista exibida.
 
-![O painel de Conjuntos de Dados na Interface do Usuário da Plataforma com a barra de pesquisa e um conjunto de dados realçado.](./images/troubleshooting/dataset-selection.png)
+![O painel de Conjuntos de Dados na interface do usuário do Experience Platform com a barra de pesquisa e um conjunto de dados realçado.](./images/troubleshooting/dataset-selection.png)
 
 - A tela [!UICONTROL Atividade de conjuntos de dados] é exibida. Selecione **[!UICONTROL Visualizar conjunto de dados]** para abrir uma caixa de diálogo do esquema XDM e a exibição em tabela dos dados nivelados do conjunto de dados selecionado. Mais detalhes podem ser encontrados na [pré-visualização da documentação de um conjunto de dados](../catalog/datasets/user-guide.md#preview-a-dataset)
 
@@ -287,7 +287,7 @@ SELECT count(1) FROM myTableName
 ### Posso obter amostras dos meus dados?
 
 +++Resposta
-No momento, esse recurso está em andamento. Os detalhes serão disponibilizados nas [notas de versão](../release-notes/latest/latest.md) e nas caixas de diálogo da interface do usuário da Platform quando o recurso estiver pronto para lançamento.
+No momento, esse recurso está em andamento. Os detalhes serão disponibilizados nas [notas de versão](../release-notes/latest/latest.md) e nas caixas de diálogo da interface do usuário do Experience Platform quando o recurso estiver pronto para lançamento.
 +++
 
 ### Quais funções auxiliares são compatíveis com o Serviço de consulta?
@@ -522,7 +522,7 @@ Não há limite de simultaneidade de consulta, pois as consultas em lote são ex
 Há recursos de monitoramento e alerta para verificar as atividades e os status de consultas. Consulte os documentos [Integração de log de auditoria do Serviço de consulta](./data-governance/audit-log-guide.md) e [logs de consulta](./ui/overview.md#log) para obter mais informações.
 +++
 
-### Há alguma maneira de reverter as atualizações? Por exemplo, se houver um erro ou alguns cálculos precisarem ser reconfigurados ao gravar dados na Platform, como esse cenário deve ser tratado?
+### Há alguma maneira de reverter as atualizações? Por exemplo, se houver um erro ou alguns cálculos precisarem ser reconfigurados ao gravar dados no Experience Platform, como esse cenário deve ser tratado?
 
 +++Resposta
 Atualmente, não oferecemos suporte a reversões ou atualizações dessa maneira.
@@ -563,7 +563,7 @@ Há três abordagens para restringir o acesso. Elas são as seguintes:
 
 +++
 
-### Depois que os dados forem retornados pelo Serviço de consulta, há verificações que podem ser executadas pela Plataforma para garantir que ela não tenha retornado dados protegidos?
+### Depois que os dados forem retornados pelo Serviço de consulta, há verificações que podem ser executadas pelo Experience Platform para garantir que ele não tenha retornado dados protegidos?
 
 - O Serviço de consulta oferece suporte ao controle de acesso baseado em atributos. Você pode restringir o acesso aos dados no nível da coluna/folha e/ou no nível da estrutura. Consulte a documentação para saber mais sobre o controle de acesso baseado em atributos.
 
@@ -652,7 +652,7 @@ A infraestrutura de back-end é aprimorada constantemente para otimizar a utiliz
 ### O &quot;Criar consulta&quot; está travado &quot;Inicializando conexão...&quot; ao tentar se conectar ao Serviço de consulta. Como corrijo o problema?
 
 +++Resposta
-Se &quot;Criar consulta&quot; estiver preso em &quot;Inicializando conexão...&quot;, provavelmente será um problema de conexão ou sessão. Atualize o navegador se estiver usando a interface do usuário da plataforma e tente novamente.
+Se &quot;Criar consulta&quot; estiver preso em &quot;Inicializando conexão...&quot;, provavelmente será um problema de conexão ou sessão. Atualize o navegador se estiver usando a interface do usuário do Experience Platform e tente novamente.
 +++
 
 ## Amostras de conjunto de dados

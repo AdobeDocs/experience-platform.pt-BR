@@ -3,9 +3,9 @@ title: Visão geral do Pendo Source
 description: Saiba como conectar o Pendo ao Adobe Experience Platform usando APIs ou a interface do usuário utilizando webhooks
 badge: Beta
 exl-id: 376f18ef-1eea-4c42-8041-6fadb5906e9b
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '354'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 >
 >A origem [!DNL Pendo] está na versão beta. Leia a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
-O Experience Platform fornece suporte para assimilação de dados de aplicativos de análise de terceiros. O suporte para provedores de análise inclui [!DNL Pendo].
+O Experience Platform oferece suporte para assimilação de dados de aplicativos de análise de terceiros. O suporte para provedores de análise inclui [!DNL Pendo].
 
 [[!DNL Pendo]](https://pendo.io/) é um aplicativo de análise de produtos criado para ajudar empresas de software a desenvolver produtos que repercutem com os clientes. O aplicativo permite que os fabricantes de software incorporem seus produtos a uma grande variedade de ferramentas, o que pode resultar em uma melhor experiência do produto para os usuários e em novos insights para a equipe de produtos.
 
@@ -38,16 +38,16 @@ Uma conta [!DNL Pendo]. Caso ainda não tenha uma, consulte a página [[!DNL Pen
 
 ### Configurar Webhook [!DNL Pendo] {#set-up-webhook}
 
-Depois de criar o fluxo de dados com êxito, você deve configurar um webhook para informar à Plataforma sobre eventos [!DNL Pendo]. Os Webhooks do [!DNL Pendo] podem enviar notificações em tempo real para outros serviços quando determinados eventos ocorrem e enviar essas informações para a origem do [!DNL Pendo]. Para obter mais informações, leia os tutoriais em [obtendo a URL do ponto de extremidade de streaming](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) e [configurando um [!DNL Pendo] Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
+Depois de criar o fluxo de dados com êxito, você deve configurar um webhook para informar a Experience Platform sobre [!DNL Pendo] eventos. Os Webhooks do [!DNL Pendo] podem enviar notificações em tempo real para outros serviços quando determinados eventos ocorrem e enviar essas informações para a origem do [!DNL Pendo]. Para obter mais informações, leia os tutoriais em [obtendo a URL do ponto de extremidade de streaming](../../tutorials/ui/create/analytics/pendo-webhook.md#get-streaming-endpoint) e [configurando um [!DNL Pendo] Webhook](../../tutorials/ui/create/analytics/pendo-webhook.md#set-up-webhook).
 
-## Conectando [!DNL Pendo] à plataforma {#connect-to-platform}
+## Conectando [!DNL Pendo] ao Experience Platform {#connect-to-platform}
 
-A documentação abaixo fornece informações sobre como criar um conector de streaming [!DNL Pendo] para se conectar ao [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como criar um conector de streaming [!DNL Pendo] para se conectar ao [!DNL Experience Platform] usando APIs ou a interface do usuário:
 
-### Conectar [!DNL Pendo] à plataforma usando APIs {#connect-to-platform-using-api}
+### Conectar o [!DNL Pendo] ao Experience Platform usando APIs {#connect-to-platform-using-api}
 
-* [Crie uma conexão de origem para trazer dados do  [!DNL Pendo]  para a Platform usando APIs.](../../tutorials/api/create/analytics/pendo-webhook.md)
+* [Crie uma conexão de origem para trazer dados do  [!DNL Pendo]  para a Experience Platform usando APIs.](../../tutorials/api/create/analytics/pendo-webhook.md)
 
-### Conectar [!DNL Pendo] à Plataforma usando a interface {#connect-to-platform-using-ui}
+### Conectar o [!DNL Pendo] ao Experience Platform usando a interface {#connect-to-platform-using-ui}
 
-* [Criar uma conexão de origem para trazer dados do  [!DNL Pendo]  para a Platform usando a interface do usuário](../../tutorials/ui/create/analytics/pendo-webhook.md)
+* [Criar uma conexão de origem para trazer dados do  [!DNL Pendo]  para o Experience Platform usando a interface do usuário](../../tutorials/ui/create/analytics/pendo-webhook.md)

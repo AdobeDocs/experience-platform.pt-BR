@@ -2,9 +2,9 @@
 title: Visão geral do gerenciamento avançado do ciclo de vida dos dados
 description: O Gerenciamento avançado do ciclo de vida dos dados permite gerenciar o ciclo de vida dos dados atualizando ou removendo registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '832'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 O Adobe Experience Platform fornece um conjunto robusto de ferramentas para gerenciar operações de dados grandes e complicadas para orquestrar as experiências do consumidor. À medida que os dados são assimilados no sistema ao longo do tempo, torna-se cada vez mais importante gerenciar seus armazenamentos de dados para que eles sejam usados conforme o esperado, sejam atualizados quando dados incorretos precisarem de correção e sejam excluídos quando as políticas organizacionais considerarem necessário.
 
-<!-- Platform's data lifecycle capabilities allow you to manage your stored data through the following:
+<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
 
 * Scheduling automated dataset expirations
 * Deleting individual records from one or all datasets
@@ -26,11 +26,11 @@ Estas atividades podem ser executadas usando o [[!UICONTROL espaço de trabalho 
 
 >[!NOTE]
 >
->O Gerenciamento Avançado do Ciclo de Vida dos Dados suporta exclusões de conjuntos de dados por meio do [ponto de extremidade de expiração do conjunto de dados](./api/dataset-expiration.md) e exclusões de ID (dados em nível de linha) usando identidades primárias por meio do [ponto de extremidade da ordem de trabalho](./api/workorder.md). Também é possível gerenciar [expirações do conjunto de dados](./ui/dataset-expiration.md) e [exclusões de registros](./ui/record-delete.md) por meio da interface do usuário da Platform. Consulte a documentação vinculada para obter mais informações. Observe que o ciclo de vida dos dados não oferece suporte à exclusão de lotes.
+>O Gerenciamento Avançado do Ciclo de Vida dos Dados suporta exclusões de conjuntos de dados por meio do [ponto de extremidade de expiração do conjunto de dados](./api/dataset-expiration.md) e exclusões de ID (dados em nível de linha) usando identidades primárias por meio do [ponto de extremidade da ordem de trabalho](./api/workorder.md). Também é possível gerenciar [expirações do conjunto de dados](./ui/dataset-expiration.md) e [exclusões de registros](./ui/record-delete.md) por meio da interface do usuário do Experience Platform. Consulte a documentação vinculada para obter mais informações. Observe que o ciclo de vida dos dados não oferece suporte à exclusão de lotes.
 
 ## Espaço de trabalho da interface do usuário do [!UICONTROL Ciclo de Vida de Dados] {#ui}
 
-O espaço de trabalho [!UICONTROL Ciclo de vida dos dados] na interface do usuário da plataforma permite configurar e agendar operações de ciclo de vida de dados, ajudando a garantir que seus registros sejam mantidos conforme esperado.
+O espaço de trabalho [!UICONTROL Ciclo de Vida de Dados] na interface do usuário do Experience Platform permite configurar e agendar operações de ciclo de vida de dados, ajudando a garantir que seus registros sejam mantidos conforme esperado.
 
 Para obter etapas detalhadas sobre como gerenciar tarefas do ciclo de vida de dados na interface, consulte o [guia da interface do ciclo de vida de dados](./ui/overview.md).
 
@@ -58,7 +58,7 @@ O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados]
 
 >[!IMPORTANT]
 >
->As exclusões de conjuntos de dados na Amazon Web Services (AWS) estão sujeitas a uma latência de cerca de três horas antes de as alterações serem totalmente aplicadas. Isso inclui até duas horas para que o conjunto de dados seja sinalizado para exclusão, seguidas por uma hora adicional antes de ser totalmente descartado do sistema. Por outro lado, as solicitações de exclusão de instâncias da Platform que usam o Azure Data Lake resultam em alterações imediatas em todas as funções comerciais.
+>As exclusões de conjuntos de dados na Amazon Web Services (AWS) estão sujeitas a uma latência de cerca de três horas antes de as alterações serem totalmente aplicadas. Isso inclui até duas horas para que o conjunto de dados seja sinalizado para exclusão, seguidas por uma hora adicional antes de ser totalmente descartado do sistema. Por outro lado, as solicitações de exclusão para instâncias do Experience Platform que usam o Azure Data Lake resultam em alterações imediatas em funções comerciais.
 >
 >Para usuários do AWS, esse atraso pode afetar a segmentação em lote, a segmentação por transmissão, as visualizações, as estimativas, as exportações e o acesso aos dados. Essa latência afeta apenas os clientes que usam o AWS, já que os usuários do Azure Data Lake experimentam atualizações imediatas. Para usuários do AWS, pode levar até três horas para que as solicitações de exclusão se propaguem totalmente em todos os sistemas afetados. Ajuste suas expectativas de acordo.
 
@@ -80,4 +80,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral dos recursos de ciclo de vida dos dados da plataforma. Para começar a fazer solicitações de higiene de dados na interface do usuário, consulte o [manual da interface](./ui/overview.md). Para saber como criar trabalhos do Ciclo de Vida de Dados de forma programática, consulte o [guia da API de Higiene de Dados](./api/overview.md)
+Este documento forneceu uma visão geral dos recursos de ciclo de vida dos dados da Experience Platform. Para começar a fazer solicitações de higiene de dados na interface do usuário, consulte o [manual da interface](./ui/overview.md). Para saber como criar trabalhos do Ciclo de Vida de Dados de forma programática, consulte o [guia da API de Higiene de Dados](./api/overview.md)

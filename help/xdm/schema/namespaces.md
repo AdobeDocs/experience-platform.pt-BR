@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Namespace no Experience Data Model (XDM)
 description: Saiba como o namespace no Experience Data Model (XDM) permite estender seus esquemas e evitar colisões de campo enquanto diferentes componentes do esquema são trazidos juntos.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ As seções a seguir demonstram como os namespaces são atribuídos na sintaxe X
 
 ### XDM padrão {#standard}
 
-A sintaxe XDM padrão fornece informações sobre como os namespaces são representados nos esquemas (incluindo [como são traduzidos na Adobe Experience Platform](#compatibility)).
+A sintaxe XDM padrão fornece à insight como os namespaces são representados nos esquemas (incluindo [como são traduzidos no Adobe Experience Platform](#compatibility)).
 
 O XDM padrão usa a sintaxe [JSON-LD](https://www.w3.org/TR/json-ld11/#basic-concepts) para atribuir namespaces a campos. Este namespace vem na forma de um URI (como `https://ns.adobe.com/xdm` para o namespace `xdm`) ou como um prefixo abreviado que é configurado no atributo `@context` de um esquema.
 
@@ -89,7 +89,7 @@ Veja a seguir um exemplo de esquema para um produto na sintaxe XDM padrão. Com 
 
 ### Modo de compatibilidade {#compatibility}
 
-No Adobe Experience Platform, os esquemas XDM são representados na sintaxe [Modo de Compatibilidade](../api/appendix.md#compatibility), que não usa a sintaxe JSON-LD para representar namespaces. Em vez disso, o Platform converte o namespace em um campo principal (começando com um sublinhado) e aninha os campos sob ele.
+No Adobe Experience Platform, os esquemas XDM são representados na sintaxe [Modo de Compatibilidade](../api/appendix.md#compatibility), que não usa a sintaxe JSON-LD para representar namespaces. Em vez disso, o Experience Platform converte o namespace em um campo pai (começando com um sublinhado) e aninha os campos sob ele.
 
 Por exemplo, o XDM padrão `repo:createdDate` é convertido em `_repo.createdDate` e aparece na seguinte estrutura no Modo de Compatibilidade:
 

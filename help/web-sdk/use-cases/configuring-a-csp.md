@@ -1,11 +1,11 @@
 ---
 title: Configurar uma CSP
 seo-title: Configuring a CSP for Adobe Experience Platform Web SDK
-description: Saiba como configurar uma CSP para o SDK da Web do Experience Platform
+description: Saiba como configurar uma CSP para o Experience Platform Web SDK
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
-keywords: configurando;configuração;SDK;borda;SDK da Web;configurar;contexto;web;dispositivo;ambiente;configurações do sdk da web;política de segurança de conteúdo;
+keywords: configurando;configuração;SDK;borda;Web SDK;configurar;contexto;web;dispositivo;ambiente;configurações do sdk da web;política de segurança de conteúdo;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 16e49628df73d5ce97ef890dbc0a6f2c8e7de346
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Uma [Política de Segurança de Conteúdo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) é usada para restringir os recursos que um navegador pode usar. A CSP também pode limitar a funcionalidade de recursos de script e estilo. O Adobe Experience Platform Web SDK não requer um CSP, mas adicionar um pode reduzir a superfície de ataque para impedir ataques mal-intencionados.
 
-A CSP precisa refletir como [!DNL Platform Web SDK] é implantado e configurado. A CSP a seguir mostra quais alterações podem ser necessárias para que o SDK funcione corretamente. Configurações adicionais da CSP provavelmente serão necessárias, dependendo do seu ambiente específico.
+A CSP precisa refletir como [!DNL Experience Platform Web SDK] é implantado e configurado. A CSP a seguir mostra quais alterações podem ser necessárias para que o SDK funcione corretamente. Configurações adicionais da CSP provavelmente serão necessárias, dependendo do seu ambiente específico.
 
 ## Exemplo de política de segurança de conteúdo
 
@@ -33,13 +33,13 @@ No exemplo acima, `EDGE-DOMAIN` deve ser substituído pelo domínio próprio. O 
 
 ### Usar NONCE para permitir script incorporado e elementos de estilo
 
-[!DNL Platform Web SDK] pode modificar o conteúdo da página e deve ser aprovado para criar marcas de script e estilo embutidas. Para fazer isso, a Adobe recomenda o uso de um nonce para a diretiva CSP [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src). Um nonce é um token aleatório criptograficamente forte gerado pelo servidor gerado uma vez para cada exibição de página exclusiva.
+[!DNL Experience Platform Web SDK] pode modificar o conteúdo da página e deve ser aprovado para criar marcas de script e estilo embutidas. Para fazer isso, a Adobe recomenda o uso de um nonce para a diretiva CSP [default-src](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src). Um nonce é um token aleatório criptograficamente forte gerado pelo servidor gerado uma vez para cada exibição de página exclusiva.
 
 ```
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-Além disso, o nonce CSP precisa ser adicionado como um atributo à marca de script [!DNL Platform Web SDK] [código base](../install/library.md). [!DNL Platform Web SDK] usará esse nonce ao adicionar marcas de estilo ou script embutido à página:
+Além disso, o nonce CSP precisa ser adicionado como um atributo à marca de script [!DNL Experience Platform Web SDK] [código base](../install/library.md). [!DNL Experience Platform Web SDK] usará esse nonce ao adicionar marcas de estilo ou script embutido à página:
 
 ```
 <script nonce="SERVER-GENERATED-NONCE">
@@ -59,7 +59,7 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->O Adobe **não** recomenda especificar `unsafe-inline` porque ele permite que qualquer script seja executado na página, o que limita os benefícios da CSP.
+>A Adobe **não** recomenda especificar `unsafe-inline` porque ele permite que qualquer script seja executado na página, o que limita os benefícios da CSP.
 
 ## Configurar uma CSP para mensagens no aplicativo {#in-app-messaging}
 

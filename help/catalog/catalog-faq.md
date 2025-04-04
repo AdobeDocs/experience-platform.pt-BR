@@ -2,16 +2,17 @@
 keywords: serviço de catálogo, perguntas, perguntas frequentes, perguntas frequentes, perguntas frequentes sobre conjuntos de dados
 title: Perguntas frequentes
 description: Respostas às perguntas mais frequentes sobre o Adobe Experience Platform Catalog Service e conjuntos de dados.
-source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
+exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '473'
 ht-degree: 1%
 
 ---
 
 # Perguntas frequentes {#faq}
 
-Este documento fornece respostas a perguntas frequentes sobre o Serviço de catálogo e conjuntos de dados da Adobe Experience Platform. Para perguntas e soluções de problemas relacionados a outros serviços da Platform, incluindo problemas encontrados em todas as APIs da Platform, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o Serviço de catálogo e conjuntos de dados da Adobe Experience Platform. Para perguntas e soluções de problemas relacionados a outros serviços da Experience Platform, incluindo problemas encontrados em todas as APIs do Experience Platform, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
 ## Políticas e regras de retenção {#retention-policies-and-rules}
 
@@ -37,7 +38,7 @@ Sim, você pode aplicar políticas de retenção diferentes para o data lake e o
 
 +++Resposta
 
-As expirações do conjunto de dados são avaliadas e processadas semanalmente, excluindo todos os registros que expiraram. Um evento é considerado expirado se tiver sido assimilado na Platform por mais de 30 dias (data de assimilação > 30 dias) e sua data de evento exceder o período de retenção definido.
+As expirações do conjunto de dados são avaliadas e processadas semanalmente, excluindo todos os registros que expiraram. Um evento será considerado expirado se tiver sido assimilado no Experience Platform por mais de 30 dias (data de assimilação > 30 dias) e sua data de evento exceder o período de retenção definido.
 
 +++
 
@@ -45,7 +46,7 @@ As expirações do conjunto de dados são avaliadas e processadas semanalmente, 
 
 +++Resposta
 
-Depois que uma política de retenção é definida, os eventos existentes são imediatamente excluídos da Platform se o carimbo de data e hora do evento exceder o período de retenção. Novos eventos são excluídos assim que o carimbo de data e hora ultrapassar o período de retenção.
+Depois que uma política de retenção é definida, os eventos existentes são imediatamente excluídos do Experience Platform se o carimbo de data e hora do evento exceder o período de retenção. Novos eventos são excluídos assim que o carimbo de data e hora ultrapassar o período de retenção.
 
 Por exemplo, se você aplicar uma política de expiração de 30 dias em 15 de maio, ocorre o seguinte:
 
@@ -82,4 +83,3 @@ Você pode verificar o carimbo de data/hora do último trabalho de retenção de
 Não, uma vez aplicada a política de retenção, todos os dados anteriores ao período de retenção serão permanentemente excluídos e não poderão ser recuperados.
 
 +++
-

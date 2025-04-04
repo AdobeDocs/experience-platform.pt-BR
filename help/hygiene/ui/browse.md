@@ -2,9 +2,9 @@
 title: Procurar Ordens de Serviço do Ciclo de Vida dos Dados
 description: Saiba como visualizar e gerenciar ordens de trabalho do ciclo de vida dos dados existentes na interface do usuário do Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '841'
+source-wordcount: '843'
 ht-degree: 27%
 
 ---
@@ -25,7 +25,7 @@ Este guia aborda como exibir e gerenciar ordens de serviço existentes na interf
 
 Ao acessar pela primeira vez o espaço de trabalho **[!UICONTROL Ciclo de Vida de Dados]** na interface do usuário, uma lista de ordens de trabalho existentes é mostrada com seus detalhes básicos.
 
-![Imagem mostrando o espaço de trabalho [!UICONTROL Ciclo de Vida de Dados] na interface do usuário da plataforma](../images/ui/browse/work-order-list.png)
+![Imagem mostrando o espaço de trabalho [!UICONTROL Ciclo de Vida de Dados] na interface do usuário do Experience Platform](../images/ui/browse/work-order-list.png)
 
 A lista mostra somente ordens de serviço para uma categoria de cada vez. Selecione **[!UICONTROL Consumidor]** para exibir uma lista de tarefas de exclusão de registros, e **[!UICONTROL Conjunto de Dados]** para exibir uma lista de expirações de conjuntos de dados agendados.
 
@@ -97,7 +97,7 @@ A página de detalhes de uma expiração de conjunto de dados fornece informaç�
 
 ## Próximas etapas
 
-Este guia abordou como visualizar e gerenciar ordens de trabalho do ciclo de vida dos dados existentes na interface do usuário da plataforma. Para obter informações sobre como criar suas próprias ordens de serviço, consulte a seguinte documentação:
+Este guia abordou como visualizar e gerenciar ordens de trabalho do ciclo de vida dos dados existentes na interface do usuário do Experience Platform. Para obter informações sobre como criar suas próprias ordens de serviço, consulte a seguinte documentação:
 
 * [Gerenciar expirações do conjunto de dados](./dataset-expiration.md)
 * [Gerenciar exclusões de registro](./record-delete.md)

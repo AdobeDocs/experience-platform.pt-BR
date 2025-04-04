@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução de problemas;API;habilitar conjunto de dados
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;habilitar conjunto de dados
 title: Ativar um conjunto de dados para atualizações de perfil usando APIs
 type: Tutorial
 description: Este tutorial mostra como usar APIs do Adobe Experience Platform para ativar um conjunto de dados com recursos de "substituição" a fim de fazer atualizações nos dados do Perfil do cliente em tempo real.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1069'
 ht-degree: 7%
 
 ---
@@ -21,14 +21,14 @@ Este tutorial aborda o processo de habilitação de um conjunto de dados com rec
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional de vários serviços da Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados habilitados para perfis. Antes de iniciar este tutorial, reveja a documentação desses serviços [!DNL Platform] relacionados:
+Este tutorial requer uma compreensão funcional de vários serviços da Adobe Experience Platform envolvidos no gerenciamento de conjuntos de dados habilitados para perfis. Antes de iniciar este tutorial, reveja a documentação desses serviços [!DNL Experience Platform] relacionados:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 - [[!DNL Catalog Service]](../../catalog/home.md): uma API RESTful que permite criar conjuntos de dados e configurá-los para [!DNL Real-Time Customer Profile] e [!DNL Identity Service].
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente.
-- [Assimilação em lote](../../ingestion/batch-ingestion/overview.md): a API de assimilação em lote permite assimilar dados no Experience Platform como arquivos em lote.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+- [Assimilação em lote](../../ingestion/batch-ingestion/overview.md): a API de assimilação em lote permite assimilar dados na Experience Platform como arquivos em lote.
 
-As seções a seguir fornecem as informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs da plataforma.
+As seções a seguir fornecem as informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs do Experience Platform.
 
 ### Leitura de chamadas de API de amostra
 
@@ -36,7 +36,7 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -44,7 +44,7 @@ Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial 
 
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho `Content-Type` adicional. O valor correto desse cabeçalho é mostrado nas solicitações de exemplo, quando necessário.
 
-Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para APIs [!DNL Platform] exigem um cabeçalho `x-sandbox-name` que especifique o nome da sandbox em que a operação ocorrerá. Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para APIs [!DNL Experience Platform] exigem um cabeçalho `x-sandbox-name` que especifique o nome da sandbox em que a operação ocorrerá. Para obter mais informações sobre sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 ## Criar um conjunto de dados habilitado para atualizações de perfil
 
@@ -179,7 +179,7 @@ Na propriedade `tags`, você pode ver que `unifiedProfile` está presente com o 
 
 ### Desativar o conjunto de dados para o Perfil
 
-Para configurar um conjunto de dados habilitado para atualizações, primeiro você deve desabilitar as marcas `unifiedProfile` e `unifiedIdentity` e depois reabilitá-las junto com a marca `isUpsert`. Isso é feito usando duas solicitações PATCH, uma para desativar e outra para reativar.
+Para configurar um conjunto de dados habilitado para atualizações, primeiro você deve desabilitar as marcas `unifiedProfile` e `unifiedIdentity` e depois reabilitá-las junto com a marca `isUpsert`. Isso é feito usando duas solicitações do PATCH, uma para desativar e outra para reativar.
 
 >[!WARNING]
 >
@@ -197,7 +197,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **Solicitação**
 
-O corpo da primeira solicitação PATCH inclui um `path` para `unifiedProfile` e um `path` para `unifiedIdentity`, definindo o `value` para `enabled:false` para ambos os caminhos para desabilitar as marcas.
+O primeiro corpo de solicitação PATCH inclui um `path` para `unifiedProfile` e um `path` para `unifiedIdentity`, definindo o `value` para `enabled:false` para ambos os caminhos para desabilitar as marcas.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
@@ -222,7 +222,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Resposta**
 
-Uma solicitação PATCH bem-sucedida retorna o Status HTTP 200 (OK) e uma matriz contendo a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. As marcas `unifiedProfile` e `unifiedIdentity` foram desabilitadas.
+Uma solicitação bem-sucedida do PATCH retorna o Status HTTP 200 (OK) e uma matriz contendo a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. As marcas `unifiedProfile` e `unifiedIdentity` foram desabilitadas.
 
 ```json
 [
@@ -232,11 +232,11 @@ Uma solicitação PATCH bem-sucedida retorna o Status HTTP 200 (OK) e uma matriz
 
 ### Ativar o conjunto de dados para Perfil e substituição {#enable-the-dataset}
 
-Um conjunto de dados existente pode ser ativado para Atualizações de perfil e atributo usando uma única solicitação de PATCH.
+Um conjunto de dados existente pode ser ativado para Atualizações de perfil e atributo usando uma única solicitação do PATCH.
 
 >[!IMPORTANT]
 >
->Ao habilitar seu conjunto de dados para o Perfil, verifique se o esquema ao qual o conjunto de dados está associado tem **também** perfil habilitado. Se o esquema não for habilitado para perfil, o conjunto de dados **não** será exibido como habilitado para perfil na interface da Platform.
+>Ao habilitar seu conjunto de dados para o Perfil, verifique se o esquema ao qual o conjunto de dados está associado tem **também** perfil habilitado. Se o esquema não for habilitado para perfil, o conjunto de dados **não** será exibido como habilitado para perfil na interface do Experience Platform.
 
 **Formato da API**
 
@@ -280,7 +280,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Resposta**
 
-Uma solicitação PATCH bem-sucedida retorna o Status HTTP 200 (OK) e uma matriz contendo a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. As marcas `unifiedProfile` e `unifiedIdentity` foram habilitadas e configuradas para atualizações de atributo.
+Uma solicitação bem-sucedida do PATCH retorna o Status HTTP 200 (OK) e uma matriz contendo a ID do conjunto de dados atualizado. Essa ID deve corresponder à enviada na solicitação PATCH. As marcas `unifiedProfile` e `unifiedIdentity` foram habilitadas e configuradas para atualizações de atributo.
 
 ```json
 [

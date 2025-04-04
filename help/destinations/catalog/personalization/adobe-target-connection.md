@@ -3,9 +3,9 @@ keywords: personalização do target, destino, destino do experience platform ta
 title: Conexão com o Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação em tempo real e alimentados por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1768'
+source-wordcount: '1769'
 ht-degree: 10%
 
 ---
@@ -161,7 +161,7 @@ Leia [Ativar públicos-alvo para destinos de personalização de borda](../../ui
 
 São necessárias etapas adicionais para remover um público-alvo de uma conexão existente do Adobe Target quando esse público-alvo já estiver sendo usado em uma [atividade](https://experienceleague.adobe.com/en/docs/target/using/activities/activities) do Adobe Target. Tentar remover um público-alvo de uma conexão do Adobe Target resultará em erro se o público-alvo for usado por uma atividade do Adobe Target.
 
-![Imagem da interface da plataforma mostrando um erro causado pela tentativa de remover um público-alvo usado por uma atividade do Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
+![Imagem da interface do Experience Platform mostrando um erro causado pela tentativa de remover um público usado por uma atividade do Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
 Para remover um público-alvo de um destino do Target quando o público-alvo está sendo usado em uma atividade, primeiro você deve remover o público-alvo da atividade do Target que o está usando ou excluir a atividade completamente. Em seguida, você pode remover o público-alvo da conexão do Target.
 

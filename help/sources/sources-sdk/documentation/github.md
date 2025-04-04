@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Use a interface da Web do GitHub para criar uma página de documentação de origens
 description: Este documento fornece etapas sobre como usar a interface da Web do GitHub para criar a documentação e enviar uma solicitação de pull (PR).
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Este documento fornece etapas sobre como usar a interface da Web do GitHub para 
 
 >[!TIP]
 >
->Os seguintes documentos do guia de contribuição do Adobe podem ser usados para apoiar ainda mais o processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Os seguintes documentos do guia de contribuição da Adobe podem ser usados para apoiar ainda mais seu processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Configurar o ambiente do GitHub
 
@@ -45,7 +45,7 @@ Uma pasta de fontes CRM existentes é exibida. Para adicionar a documentação d
 
 ![criar-novo-arquivo](../assets/create-new-file.png)
 
-Nomeie o arquivo de origem `YOURSOURCE.md`, onde YOURSOURCE é o nome da origem na Plataforma. Por exemplo, se sua empresa é o ACME CRM, seu nome de arquivo deve ser `acme-crm.md`.
+Nomeie seu arquivo de origem `YOURSOURCE.md`, onde YOURSOURCE é o nome de sua origem no Experience Platform. Por exemplo, se sua empresa é o ACME CRM, seu nome de arquivo deve ser `acme-crm.md`.
 
 ![interface-git](../assets/git-interface.png)
 
@@ -63,11 +63,11 @@ Quando terminar, confirme o arquivo na ramificação.
 
 ## Envie sua documentação para revisão
 
-Depois que o arquivo for confirmado, você poderá abrir uma solicitação de pull (PR) para mesclar a ramificação de trabalho com a ramificação mestre do repositório da documentação do Adobe. Verifique se a ramificação em que você está trabalhando está selecionada e selecione **Solicitação de comparação e extração**.
+Depois que o arquivo for confirmado, você poderá abrir uma solicitação de pull (PR) para mesclar a ramificação de trabalho com a ramificação mestre do repositório de documentação do Adobe. Verifique se a ramificação em que você está trabalhando está selecionada e selecione **Solicitação de comparação e extração**.
 
 ![compare-pr](../assets/compare-pr.png)
 
-Certifique-se de que as ramificações base e de comparação estejam corretas. Adicione uma observação à PR, descrevendo sua atualização e selecione **Criar solicitação de pull**. Isso abre uma PR para mesclar a ramificação de trabalho do seu trabalho na ramificação mestre do repositório Adobe.
+Certifique-se de que as ramificações base e de comparação estejam corretas. Adicione uma observação à PR, descrevendo sua atualização e selecione **Criar solicitação de pull**. Isso abre uma PR para mesclar a ramificação de trabalho do seu trabalho na ramificação mestre do repositório do Adobe.
 
 >[!TIP]
 >
@@ -75,7 +75,7 @@ Certifique-se de que as ramificações base e de comparação estejam corretas. 
 
 ![create-pr](../assets/create-pr.png)
 
-Nesse momento, é exibida uma notificação solicitando que você assine o Contrato de licença de colaborador (CLA) do Adobe. Essa é uma etapa obrigatória. Depois de assinar o CLA, atualize a página da PR e envie a solicitação de pull.
+Nesse momento, é exibida uma notificação solicitando que você assine o Contrato de licença de colaborador (CLA) da Adobe. Essa é uma etapa obrigatória. Depois de assinar o CLA, atualize a página da PR e envie a solicitação de pull.
 
 É possível confirmar se a solicitação de pull foi enviada ao inspecionar a guia pull requests em https://github.com/AdobeDocs/experience-platform.en.
 

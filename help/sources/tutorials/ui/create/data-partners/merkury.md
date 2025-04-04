@@ -4,9 +4,9 @@ description: Saiba como criar uma conexão de origem de resolução de identidad
 last-substantial-update: 2023-12=12
 badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2143'
+source-wordcount: '2146'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Este tutorial fornece etapas para criar uma conexão de origem e um fluxo de dad
 
 ## Introdução
 
-Este tutorial requer um entendimento prático dos seguintes componentes do Experience Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -30,7 +30,7 @@ Este tutorial requer um entendimento prático dos seguintes componentes do Exper
 
 ### Coletar credenciais necessárias
 
-Para acessar seu bucket no Experience Platform, é necessário fornecer valores válidos para as seguintes credenciais:
+Para acessar seu bucket no Experience Platform, você precisa fornecer valores válidos para as seguintes credenciais:
 
 | Credencial | Descrição |
 | --- | --- |
@@ -42,7 +42,7 @@ Para obter mais informações sobre como configurar o para [!DNL Merkury] e outr
 
 ## Conectar sua conta do Merkury
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -79,7 +79,7 @@ Você pode assimilar os seguintes formatos de arquivo com a origem [!DNL Merkury
 
 ## Adicionar dados
 
-Depois de criar sua conta [!DNL Merkury], a etapa **[!UICONTROL Adicionar dados]** é exibida, fornecendo uma interface para você explorar sua hierarquia de arquivos [!DNL Merkury] e selecionar a pasta ou o arquivo específico que deseja trazer para o Experience Platform.
+Depois de criar sua conta do [!DNL Merkury], a etapa **[!UICONTROL Adicionar dados]** é exibida, fornecendo uma interface para que você explore sua hierarquia de arquivos do [!DNL Merkury] e selecione a pasta ou o arquivo específico que deseja trazer para a Experience Platform.
 
 * A parte esquerda da interface é um navegador de diretório, que exibe sua hierarquia de arquivos [!DNL Merkury].
 * A parte direita da interface permite visualizar até 100 linhas de dados de uma pasta ou arquivo compatível.
@@ -121,7 +121,7 @@ Você também pode assimilar arquivos JSON ou delimitados compactados especifica
 
 Na etapa [!UICONTROL Selecionar dados], selecione um arquivo compactado para assimilação, selecione o tipo de arquivo apropriado e se ele é compatível com XDM ou não. Em seguida, selecione **[!UICONTROL Tipo de compactação]** e selecione o tipo de arquivo compactado apropriado para seus dados de origem.
 
-Para trazer um arquivo específico para a Platform, selecione uma pasta e, em seguida, selecione o arquivo que deseja assimilar. Durante essa etapa, também é possível visualizar o conteúdo de outros arquivos em uma determinada pasta usando o ícone de visualização ao lado de um nome de arquivo.
+Para trazer um arquivo específico para o Experience Platform, selecione uma pasta e, em seguida, selecione o arquivo que deseja assimilar. Durante essa etapa, também é possível visualizar o conteúdo de outros arquivos em uma determinada pasta usando o ícone de visualização ao lado de um nome de arquivo.
 
 Quando terminar, selecione **[!UICONTROL Próximo]**.
 
@@ -167,7 +167,7 @@ Quando terminar de fornecer detalhes ao seu fluxo de dados, selecione **[!UICONT
 
 A etapa [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-A Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
+O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../../data-prep/ui/mapping.md).
 
 Depois que os dados de origem forem mapeados com êxito, selecione **[!UICONTROL Próximo]**.
 
@@ -216,7 +216,7 @@ Depois de revisar o fluxo de dados, clique em **[!UICONTROL Concluir]** e aguard
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados em lote da origem [!DNL Merkury] para o Experience Platform. Para obter recursos adicionais, consulte a documentação descrita abaixo.
+Ao seguir este tutorial, você criou com êxito um fluxo de dados para trazer dados em lote da sua origem [!DNL Merkury] para a Experience Platform. Para obter recursos adicionais, consulte a documentação descrita abaixo.
 
 ### Monitorar seu fluxo de dados
 

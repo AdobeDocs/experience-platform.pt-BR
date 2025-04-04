@@ -5,20 +5,20 @@ title: Endpoint da API de gerenciamento de sandbox
 description: O ponto de extremidade /sandboxes na API de sandbox permite gerenciar de forma programática as sandboxes no Adobe Experience Platform.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: c15b24990835746a51a50a3e7e7b6a85701c0eb9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1477'
 ht-degree: 4%
 
 ---
 
 # Endpoint de gerenciamento de sandbox
 
-As sandboxes na Adobe Experience Platform fornecem ambientes de desenvolvimento isolados que permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar o ambiente de produção. O ponto de extremidade `/sandboxes` na API [!DNL Sandbox] permite gerenciar sandboxes de forma programática na Platform.
+As sandboxes na Adobe Experience Platform fornecem ambientes de desenvolvimento isolados que permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar o ambiente de produção. O ponto de extremidade `/sandboxes` na API [!DNL Sandbox] permite gerenciar sandboxes programaticamente no Experience Platform.
 
 ## Introdução
 
-O ponto de extremidade de API usado neste guia faz parte da [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
+O ponto de extremidade de API usado neste guia faz parte da [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Recuperar uma lista de sandboxes {#list}
 
@@ -228,7 +228,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O identificador que será usado para acessar a sandbox em solicitações futuras. Esse valor deve ser exclusivo e a prática recomendada é torná-lo o mais descritivo possível. Este valor não pode conter espaços ou caracteres especiais. |
-| `title` | Um nome legível usado para fins de exibição na interface do usuário da Platform. |
+| `title` | Um nome legível usado para fins de exibição na interface do usuário do Experience Platform. |
 | `type` | O tipo de sandbox a ser criada. Para uma sandbox de não produção, esse valor deve ser `development`. |
 
 **Resposta**
@@ -281,7 +281,7 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `name` | O identificador que será usado para acessar a sandbox em solicitações futuras. Esse valor deve ser exclusivo e a prática recomendada é torná-lo o mais descritivo possível. Este valor não pode conter espaços ou caracteres especiais. |
-| `title` | Um nome legível usado para fins de exibição na interface do usuário da Platform. |
+| `title` | Um nome legível usado para fins de exibição na interface do usuário do Experience Platform. |
 | `type` | O tipo de sandbox a ser criada. Para uma sandbox de produção, esse valor deve ser `production`. |
 
 **Resposta**
@@ -304,7 +304,7 @@ Uma resposta bem-sucedida retorna os detalhes da sandbox recém-criada, mostrand
 
 ## Atualizar uma sandbox {#put}
 
-Você pode atualizar um ou mais campos em uma sandbox fazendo uma solicitação PATCH que inclui o `name` da sandbox no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
+Você pode atualizar um ou mais campos em uma sandbox fazendo uma solicitação PATCH que inclui a `name` da sandbox no caminho da solicitação e a propriedade a ser atualizada na carga da solicitação.
 
 >[!NOTE]
 >

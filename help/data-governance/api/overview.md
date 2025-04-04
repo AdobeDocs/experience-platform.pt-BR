@@ -5,10 +5,10 @@ title: Guia da API do Serviço de política
 description: A API de serviço de política permite que os desenvolvedores gerenciem rótulos e políticas de uso de dados no Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 4%
+source-wordcount: '545'
+ht-degree: 5%
 
 ---
 
@@ -22,7 +22,7 @@ Para exibir todos os pontos de extremidade e operações CRUD disponíveis, visi
 
 ## Rótulos
 
-Aplicar rótulos de uso de dados a esquemas para categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulagem de dados assim que eles forem assimilados no [!DNL Experience Platform] ou assim que os dados estiverem disponíveis para uso no [!DNL Platform]. Você pode criar, exibir, editar e excluir rótulos usando o ponto de extremidade `/labels`. Para saber como usar este ponto de extremidade, visite o [manual de ponto de extremidade de rótulos](./labels.md).
+Aplicar rótulos de uso de dados a esquemas para categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulagem de dados assim que eles forem assimilados no [!DNL Experience Platform] ou assim que os dados estiverem disponíveis para uso no [!DNL Experience Platform]. Você pode criar, exibir, editar e excluir rótulos usando o ponto de extremidade `/labels`. Para saber como usar este ponto de extremidade, visite o [manual de ponto de extremidade de rótulos](./labels.md).
 
 ## Ações de marketing
 
@@ -34,7 +34,7 @@ As políticas de governança de dados são regras que descrevem os tipos de aç�
 
 >[!NOTE]
 >
->As políticas de governança de dados não devem ser confundidas com as políticas de controle de acesso, que determinam os atributos de dados específicos que podem ser acessados por determinados usuários da Platform em sua organização. Consulte o manual sobre [controle de acesso baseado em atributos](../../access-control/abac/overview.md) para obter mais informações.
+>As políticas de governança de dados não devem ser confundidas com as políticas de controle de acesso, que determinam os atributos de dados específicos que podem ser acessados por determinados usuários do Experience Platform em sua organização. Consulte o manual sobre [controle de acesso baseado em atributos](../../access-control/abac/overview.md) para obter mais informações.
 
 Uma política de governança de dados é definida pelo seguinte:
 
@@ -45,7 +45,7 @@ Para saber como gerenciar políticas na API, consulte o [manual de ponto de extr
 
 ## Avaliação
 
-Depois que os rótulos de uso de dados tiverem sido aplicados aos esquemas da plataforma e as políticas de uso de dados tiverem sido definidas para ações de marketing com relação a esses rótulos, os recursos de Governança de dados permitirão aplicar essas políticas e impedir operações de dados que constituem violações de política.
+Depois que os rótulos de uso de dados tiverem sido aplicados aos esquemas do Experience Platform e as políticas de uso de dados tiverem sido definidas para ações de marketing com relação a esses rótulos, os recursos de Governança de dados permitirão aplicar essas políticas e impedir operações de dados que constituem violações de política.
 
 A API [!DNL Policy Service] fornece endpoints que permitem testar ações de marketing em relação a conjuntos de dados ou combinações arbitrárias de rótulos de uso de dados para verificar se ocorrem violações de política. Com base na resposta da API, é possível configurar protocolos no aplicativo de experiência para aplicar adequadamente a conformidade com a política de uso de dados. Consulte o [manual de endpoints de avaliação](./evaluation.md) para obter mais informações.
 

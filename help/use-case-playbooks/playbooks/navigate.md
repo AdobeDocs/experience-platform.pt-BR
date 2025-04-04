@@ -4,9 +4,9 @@ title: Navegar até os manuais de casos de uso
 description: Saiba como navegar em uma galeria de manuais e começar a usar uma sandbox inspiradora.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '718'
 ht-degree: 2%
 
 ---
@@ -67,8 +67,8 @@ Também configure canais para manuais que contenham mensagens transacionais, com
 
 ### Superfície de canal de push
 
-Confirme se as configurações de canal estão definidas na interface Experience Platform ou na interface de Coleções de dados. É assim que as configurações de canal se parecem no ambiente de Coleções de dados.
+Confirme se as configurações de canal são definidas na interface do Experience Platform ou das Coleções de dados. É assim que as configurações de canal se parecem no ambiente de Coleções de dados.
 
 ## Próximas etapas {#next-steps}
 
-Agora que você leu este documento, deve saber como configurar uma sandbox inspiradora e conhecer diferentes maneiras de acessar manuais de casos de uso na Platform. Como próxima etapa, leia sobre como [escolher](/help/use-case-playbooks/playbooks/choose.md) o manual correto.
+Agora que você leu este documento, deveria saber como configurar uma sandbox inspiradora e conhecer diferentes maneiras de acessar manuais de casos de uso no Experience Platform. Como próxima etapa, leia sobre como [escolher](/help/use-case-playbooks/playbooks/choose.md) o manual correto.

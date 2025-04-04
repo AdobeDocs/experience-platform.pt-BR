@@ -4,10 +4,10 @@ user-guide-title: Guia do Perfil do cliente em tempo real
 user-guide-description: Mescle dados do cliente para criar uma exibição unificada de interações do cliente entre canais.
 feature: Profiles
 role: User
-source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 27%
+source-wordcount: '133'
+ht-degree: 33%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 27%
    * [Visualizar status da amostra ([!DNL Profile] visualização)](api/preview-sample-status.md)
    * [[!DNL Profile] trabalhos do sistema (Excluir solicitações)](api/profile-system-jobs.md)
 * Interface do usuário de perfil {#ui}
-   * [Guia da interface do usuário do [!DNL Profile]](ui/user-guide.md)
+   * [[!DNL Profile] Guia da interface](ui/user-guide.md)
    * [Personalização de detalhes de [!DNL Profile]](ui/profile-customization.md)
    * [Perfis em potencial](ui/prospect-profile.md)
 * Atributos computados {#computed-attributes}
@@ -54,4 +54,4 @@ ht-degree: 27%
 * [Processamento de solicitação de privacidade](privacy.md)
 * [Guia de solução de problemas do [!DNL Profile]](troubleshooting.md)
 * [Referência da API de perfil](https://www.adobe.com/go/profile-apis-en)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

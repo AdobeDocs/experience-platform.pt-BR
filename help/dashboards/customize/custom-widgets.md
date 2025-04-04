@@ -3,18 +3,18 @@ keywords: Experience Platform;interface do usuário;UI;painéis;painel;perfis;se
 title: Criação de widgets personalizados para painéis
 description: Este guia fornece instruções passo a passo para criar widgets personalizados para uso em painéis do Adobe Experience Platform.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
 
 # Criação de widgets personalizados para painéis
 
-No Adobe Experience Platform, você pode visualizar e interagir com os dados de sua organização usando vários painéis. Você também pode atualizar determinados painéis adicionando novos widgets à visualização de painel. Além dos widgets padrão fornecidos pelo Adobe, você também pode criar widgets personalizados e compartilhá-los em toda a sua organização.
+No Adobe Experience Platform, você pode visualizar e interagir com os dados de sua organização usando vários painéis. Você também pode atualizar determinados painéis adicionando novos widgets à visualização de painel. Além dos widgets padrão fornecidos pelo Adobe, você também pode criar widgets personalizados e compartilhá-los em toda a organização.
 
-Este guia fornece instruções passo a passo para criar e adicionar widgets personalizados aos painéis [!UICONTROL Perfis], [!UICONTROL Segmentos] e [!UICONTROL Destinos] na interface do usuário da plataforma.
+Este guia fornece instruções passo a passo para criar e adicionar widgets personalizados aos painéis [!UICONTROL Perfis], [!UICONTROL Segmentos] e [!UICONTROL Destinos] na interface do usuário do Experience Platform.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Para saber mais sobre widgets padrão, consulte o manual para [adicionar widgets
 
 ## Biblioteca de dispositivos {#widget-library}
 
-Este guia requer acesso à [!UICONTROL Biblioteca de widgets] no Experience Platform. Para saber mais sobre a biblioteca de widgets e como acessá-la na interface do usuário, comece lendo a [visão geral da biblioteca de widgets](widget-library.md).
+Este guia requer acesso à [!UICONTROL Biblioteca de widgets] do Experience Platform. Para saber mais sobre a biblioteca de widgets e como acessá-la na interface do usuário, comece lendo a [visão geral da biblioteca de widgets](widget-library.md).
 
 ## Introdução a widgets personalizados
 
@@ -94,7 +94,7 @@ Para exibir widgets que foram ocultados, selecione **[!UICONTROL Mostrar widgets
 
 >[!WARNING]
 >
->Ocultar um widget na biblioteca não o remove dos painéis de usuários individuais. Se um widget não deve mais ser usado em sua organização, certifique-se de comunicá-lo diretamente a todos os usuários da Platform, pois eles precisarão remover o widget de seus painéis.
+>Ocultar um widget na biblioteca não o remove dos painéis de usuários individuais. Se um widget não deve mais ser usado em sua organização, certifique-se de comunicá-lo diretamente a todos os usuários do Experience Platform, pois eles precisarão remover o widget de seus painéis.
 
 ![A guia Personalizado do espaço de trabalho da biblioteca de widgets com as opções de menu suspenso de widget e Mostrar widgets ocultos realçados.](../images/customization/hide-widget.png)
 
@@ -108,7 +108,7 @@ Na caixa de diálogo **[!UICONTROL Editar widget]**, você pode editar o título
 
 >[!WARNING]
 >
->Editar um widget na biblioteca não atualiza o widget para usuários individuais. Se um widget tiver sido atualizado, certifique-se de comunicar isso diretamente a todos os usuários da Platform, pois eles precisarão remover o widget desatualizado de seus painéis e, em seguida, selecionar e adicionar o widget atualizado da biblioteca de widgets.
+>Editar um widget na biblioteca não atualiza o widget para usuários individuais. Se um widget foi atualizado, certifique-se de comunicar isso diretamente a todos os usuários do Experience Platform, pois eles precisarão remover o widget desatualizado de seus painéis e, em seguida, selecionar e adicionar o widget atualizado da biblioteca de widgets.
 
 ![A caixa de diálogo Editar widget.](../images/customization/edit-widget.png)
 

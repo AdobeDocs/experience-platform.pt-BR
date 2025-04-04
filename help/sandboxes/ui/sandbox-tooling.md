@@ -2,9 +2,9 @@
 title: Ferramentas de sandbox
 description: Exporte e importe configurações de sandbox facilmente entre sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
+source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
 workflow-type: tm+mt
-source-wordcount: '2485'
+source-wordcount: '2486'
 ht-degree: 7%
 
 ---
@@ -252,7 +252,7 @@ A caixa de diálogo **[!UICONTROL Resumo de importação]** mostra um detalhamen
 
 ![A caixa de diálogo [!UICONTROL Detalhes da importação] mostrando um detalhamento das importações.](../images/ui/sandbox-tooling/import-details.png)
 
-Quando a importação for concluída, uma notificação será recebida na interface do usuário da plataforma. Você pode acessar essas notificações pelo ícone de alertas. Você pode acessar a solução de problemas aqui se uma tarefa não for bem-sucedida.
+Quando a importação for concluída, uma notificação será recebida na interface do usuário do Experience Platform. Você pode acessar essas notificações pelo ícone de alertas. Você pode acessar a solução de problemas aqui se uma tarefa não for bem-sucedida.
 
 ## Tutorial em vídeo
 

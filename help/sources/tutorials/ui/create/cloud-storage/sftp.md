@@ -2,9 +2,9 @@
 title: Criar uma conexão SFTP com o Source na interface
 description: Saiba como criar uma conexão de origem SFTP usando a interface do usuário do Adobe Experience Platform.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '665'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ Este tutorial fornece etapas para criar uma conexão de origem do [!DNL SFTP] us
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes da Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
@@ -34,13 +34,13 @@ Leia o [[!DNL SFTP] guia de autenticação](../../../../connectors/cloud-storage
 
 ## Conectar ao servidor [!DNL SFTP]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
 Na categoria [!UICONTROL Armazenamento na nuvem], selecione **[!UICONTROL SFTP]** e **[!UICONTROL Adicionar dados]**.
 
-![O catálogo de origens de Experience Platform com a origem SFTP selecionada.](../../../../images/tutorials/create/sftp/catalog.png)
+![O catálogo de origens da Experience Platform com a origem SFTP selecionada.](../../../../images/tutorials/create/sftp/catalog.png)
 
 A página **[!UICONTROL Conectar-se ao SFTP]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
@@ -101,4 +101,4 @@ Para obter mais informações sobre autenticação, leia o manual sobre [coleta 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta SFTP. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para a Platform](../../dataflow/batch/cloud-storage.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta SFTP. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para o Experience Platform](../../dataflow/batch/cloud-storage.md).

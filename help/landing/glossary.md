@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossário do Adobe Experience Platform
 description: Um glossário de termos importantes na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '7996'
+source-wordcount: '8009'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 **Administrador**: um ou mais indivíduos em sua organização que podem configurar e personalizar permissões para o Experience Platform no Adobe Admin Console.
 
-**Adobe Admin Console**: a Adobe Admin Console fornece um local central para o gerenciamento de direitos e acesso a produtos Adobe para sua organização. Por meio do console, os administradores podem conceder a grupos de usuários permissões de acesso para vários recursos da plataforma, como &quot;Gerenciar conjuntos de dados&quot;, &quot;Exibir conjuntos de dados&quot; ou &quot;Gerenciar perfis&quot;.
+**Adobe Admin Console**: a Adobe Admin Console fornece um local central para gerenciar os direitos e o acesso aos produtos da Adobe para sua organização. Por meio do console, os administradores podem conceder a grupos de usuários permissões de acesso para vários recursos do Experience Platform, como &quot;Gerenciar conjuntos de dados&quot;, &quot;Exibir conjuntos de dados&quot; ou &quot;Gerenciar perfis&quot;.
 
 **Adobe Experience Platform**: a Adobe Experience Platform padroniza dados e conteúdo em toda a empresa, acionando perfis de consumidor em tempo real, permitindo a ciência de dados e acelerando a velocidade do conteúdo para impulsionar a personalização da experiência na jornada do cliente.
 
@@ -35,19 +35,19 @@ ht-degree: 0%
 
 **Serviço de segmentação do Adobe Experience Platform**: permite criar segmentos e gerar públicos a partir dos dados do Perfil do cliente em tempo real. Esses públicos-alvo podem ser exportados para seus próprios conjuntos de dados no Data Lake.
 
-**Serviços inteligentes de Adobe**: serviços inteligentes como o Attribution AI e a IA do cliente são modelos de aprendizado de máquina e de inteligência artificial criados com propósitos específicos e que exigem Experience Platform para serem executados e operados.
+**Serviços inteligentes da Adobe**: serviços inteligentes como IA de atribuição e IA do cliente são modelos de aprendizado de máquina e inteligência artificial criados com propósitos específicos e que exigem a execução e operação da Experience Platform.
 
-**Adobe I/O**: o Adobe I/O faz parte do Experience Platform e fornece acesso a tudo o que os desenvolvedores precisam para integrar, estender e personalizar a Platform, incluindo APIs, eventos, console do desenvolvedor e ferramentas úteis.
+**Adobe I/O**: o Adobe I/O faz parte do Experience Platform e fornece acesso a tudo o que os desenvolvedores precisam para integrar, estender e personalizar o Experience Platform, incluindo APIs, eventos, console do desenvolvedor e ferramentas úteis.
 
 **Adobe Sensei**: o Adobe Sensei é a estrutura de inteligência que habilita o Experience Platform. Ele também fornece um conjunto de serviços de IA que capacita as marcas a melhorar sua capacidade de fornecer experiências do cliente personalizadas e em tempo real.
 
 **Compartimento do Amazon S3**: [!DNL Amazon S3] os compartimentos são os contêineres fundamentais para dados armazenados no ecossistema [!DNL Amazon]. Os buckets contêm objetos. Cada objeto é armazenado e recuperado usando uma chave exclusiva atribuída pelo desenvolvedor.
 
-**Conector S3 do Amazon**: o conector S3 do [!DNL Amazon] permite que os clientes do Experience Platform se conectem e acessem com segurança seus dados S3 do [!DNL Amazon].
+**Conector S3 do Amazon**: o conector S3 do [!DNL Amazon] permite que os clientes da Experience Platform se conectem e acessem com segurança seus dados S3 do [!DNL Amazon].
 
 **APA**: o [[!DNL Australia Privacy Act (Privacy Act)]](https://www.oaic.gov.au/privacy/the-privacy-act) promove e protege a privacidade dos indivíduos e regula como as agências e organizações governamentais australianas lidam com informações pessoais. O [!DNL Privacy Act] inclui princípios que se aplicam a organizações do setor privado. Por exemplo, as pessoas têm o direito de entender por que as informações pessoais estão sendo coletadas e como serão usadas, a capacidade de acessar, apagar seus dados e corrigir informações pessoais.
 
-**Anexar estratégia de salvamento**: a estratégia de salvamento &quot;anexar&quot; é uma opção usada ao especificar dados de terceiros para assimilar por meio de uma conexão e anexar novos dados ou linhas ao final do conjunto de dados. As linhas assimiladas anteriormente permanecem inalteradas e somente as linhas criadas desde a última execução agendada são assimiladas no Experience Platform. As linhas que foram alteradas no sistema de origem permanecem inalteradas no Experience Platform.
+**Anexar estratégia de salvamento**: a estratégia de salvamento &quot;anexar&quot; é uma opção usada ao especificar dados de terceiros para assimilar por meio de uma conexão e anexar novos dados ou linhas ao final do conjunto de dados. As linhas assimiladas anteriormente permanecem inalteradas e somente as linhas criadas desde a última execução agendada são assimiladas no Experience Platform. As linhas alteradas no sistema de origem permanecem inalteradas no Experience Platform.
 
 **Matriz**: as matrizes são usadas para elementos ordenados com o mesmo tipo de dados.
 
@@ -55,9 +55,9 @@ ht-degree: 0%
 
 **Atributos**: atributos são características especificadas que representam um perfil.
 
-**Mesclagem de atributos**: ao definir uma política de mesclagem usando a API de perfil de cliente em tempo real, o objeto `attributeMerge` indica a maneira pela qual a política de mesclagem priorizará os atributos de perfil em caso de conflitos de dados. É equivalente a selecionar um [!UICONTROL método de mesclagem] ao definir uma política de mesclagem na interface do usuário da Platform.
+**Mesclagem de atributos**: ao definir uma política de mesclagem usando a API de perfil de cliente em tempo real, o objeto `attributeMerge` indica a maneira pela qual a política de mesclagem priorizará os atributos de perfil em caso de conflitos de dados. É equivalente a selecionar um [!UICONTROL método de mesclagem] ao definir uma política de mesclagem na interface do usuário do Experience Platform.
 
-**Attribution AI**: [!DNL Attribution AI] é um Serviço Inteligente oferecido pela Adobe Sensei que fornece recursos de atribuição de vários canais algorítmicos por todo o ciclo de vida do cliente.
+**IA de atribuição**: [!DNL Attribution AI] é um Serviço inteligente fornecido pela Adobe Sensei que fornece recursos de atribuição de vários canais algorítmicos por todo o ciclo de vida do cliente.
 
 **Público-alvo**: um público-alvo é o conjunto de perfis resultante que atende aos critérios de uma definição de segmento.
 
@@ -69,13 +69,13 @@ ht-degree: 0%
 
 **Preenchimento retroativo**: para fontes agendadas, a opção de preenchimento retroativo habilita a assimilação de dados históricos.
 
-**Período de preenchimento retroativo**: o período de preenchimento retroativo é uma opção para definir a duração da assimilação de dados históricos de terceiros por meio de uma conexão de origem. Selecionar um período de preenchimento retroativo de &quot;para sempre&quot; assimilará todo o histórico dos dados de origem no Experience Platform.
+**Período de preenchimento retroativo**: o período de preenchimento retroativo é uma opção para definir a duração da assimilação de dados históricos de terceiros por meio de uma conexão de origem. Selecionar um período de preenchimento retroativo de &quot;para sempre&quot; assimilará todo o histórico dos dados de origem para o Experience Platform.
 
 **Lote**: um lote é um conjunto de dados coletados durante um período e processados juntos como uma única unidade. Os conjuntos de dados são compostos de vários lotes.
 
-**ID do Lote**: uma ID do lote é um identificador gerado por Adobe para um lote de dados.
+**ID do Lote**: uma ID do lote é um identificador gerado pela Adobe para um lote de dados.
 
-**Assimilação em lote**: a assimilação em lote permite assimilar dados no Experience Platform como arquivos em lote. Lotes são unidades de dados que consistem em um ou mais arquivos que serão assimilados como uma única unidade.
+**Assimilação em lote**: a assimilação em lote permite assimilar dados na Experience Platform como arquivos em lote. Lotes são unidades de dados que consistem em um ou mais arquivos que serão assimilados como uma única unidade.
 
 **Segmentação em lote**: a segmentação em lote é uma alternativa a um processo de seleção de dados em andamento e move todos os dados de perfil de uma só vez pelas definições de segmento para produzir públicos correspondentes. Depois de criado, esse segmento é salvo e armazenado para que possa ser exportado para uso.
 
@@ -87,9 +87,9 @@ ht-degree: 0%
 
 **Limite**: em [!DNL Offer Decisioning], o limite (também conhecido como limite de frequência) é usado nas regras de decisão para definir quantas vezes uma oferta é apresentada. Há dois tipos de limites: quantas vezes uma oferta pode ser proposta através do público-alvo combinado (chamado de &quot;Limite global&quot;) e quantas vezes uma oferta pode ser proposta ao mesmo usuário final (chamado de &quot;Limite de perfil&quot;).
 
-**Catálogo**: no contexto de fontes e destinos, um catálogo é uma galeria com conexões disponíveis para aplicativos Adobe e tecnologias de terceiros. Não confundir com [!DNL Catalog Service].
+**Catálogo**: no contexto de fontes e destinos, um catálogo é uma galeria com conexões disponíveis para aplicativos da Adobe e tecnologias de terceiros. Não confundir com [!DNL Catalog Service].
 
-**[!DNL Catalog Service]**: [!DNL Catalog Service] (às vezes chamado de [!DNL Catalog]) é o sistema de registro para localização e linhagem de dados no Adobe Experience Platform. Embora todos os dados assimilados no Experience Platform sejam armazenados no data lake como arquivos e diretórios, o [!DNL Catalog] retém os metadados e a descrição desses arquivos e diretórios para fins de pesquisa, monitoramento e governança de dados.
+**[!DNL Catalog Service]**: [!DNL Catalog Service] (às vezes chamado de [!DNL Catalog]) é o sistema de registro para localização e linhagem de dados no Adobe Experience Platform. Embora todos os dados assimilados na Experience Platform sejam armazenados no data lake como arquivos e diretórios, o [!DNL Catalog] retém os metadados e a descrição desses arquivos e diretórios para fins de pesquisa, monitoramento e governança de dados.
 
 **CCPA**: o [[!DNL California Consumer Privacy Act (CCPA)]](https://oag.ca.gov/privacy/ccpa) aprimora os direitos de privacidade e a proteção do consumidor para os moradores da Califórnia, Estados Unidos. A CCPA oferece novos direitos de privacidade de dados aos moradores da Califórnia, incluindo o direito de acessar e excluir seus dados pessoais, de saber se seus dados pessoais são vendidos ou divulgados (e para quem) e o direito de recusar a venda de seus dados a terceiros.
 
@@ -155,17 +155,17 @@ Rótulo de contrato **C2**: um rótulo de uso de dados de contrato `C2` especifi
 
 **Elemento de dados**: no contexto de marcas, um elemento de dados é um ponteiro usado em regras e extensões para apontar para dados específicos existentes no dispositivo cliente.
 
-**Assimilação de dados**: a assimilação de dados é o processo de adicionar dados de uma origem ao Experience Platform. Os dados podem ser assimilados na Platform de várias maneiras, incluindo transmissão, lotes ou adicionados por meio de conectores de origem.
+**Assimilação de dados**: a assimilação de dados é o processo de adicionar dados de uma origem à Experience Platform. Os dados podem ser assimilados na Experience Platform de várias maneiras, incluindo transmissão, lotes ou adicionados por meio de conectores de origem.
 
 **Camada de dados**: no contexto de marcas, uma camada de dados é uma estrutura de dados que existe no dispositivo cliente e que contém metadados sobre o contexto em que uma página ou tela é exibida.
 
 **Governança de dados**: a governança de dados abrange as estratégias e tecnologias usadas para garantir que os dados estejam em conformidade com as regulamentações e as políticas organizacionais com relação ao uso de dados.
 
-**Parceiros de integração de dados**: os parceiros de integração de dados simplificam e automatizam o carregamento e a transformação de grandes volumes de dados de mais de 200 fontes para o Experience Platform sem gravar código.
+**Parceiros de integração de dados**: os parceiros de integração de dados simplificam e automatizam o carregamento e a transformação de grandes volumes de dados de mais de 200 fontes para a Experience Platform sem gravar o código.
 
 **Rótulos do conjunto de dados**: os rótulos de uso de dados podem ser adicionados aos conjuntos de dados. Todos os campos nesse conjunto de dados herdarão os rótulos dele.
 
-**Data Science Workspace**: [!DNL Data Science Workspace] no Experience Platform permite que os clientes criem modelos de aprendizado de máquina utilizando dados em aplicativos da Platform e do Adobe para criar segmentos inteligentes, gerar insights e fornecer previsões, permitindo que você aprimore bastante as experiências digitais do usuário final.
+**Data Science Workspace**: [!DNL Data Science Workspace] no Experience Platform permite que os clientes criem modelos de aprendizado de máquina utilizando dados em aplicativos da Experience Platform e Adobe para criar segmentos inteligentes, gerar insights e fornecer previsões, permitindo que você aprimore significativamente as experiências digitais do usuário final.
 
 **Fonte de dados**: uma fonte de dados é uma origem de dados designada pelo usuário. Exemplos de uma fonte de dados são um aplicativo móvel, eventos de perfil e/ou experiência, eventos de perfil de site ou um CRM.
 
@@ -177,13 +177,13 @@ Rótulo de contrato **C2**: um rótulo de uso de dados de contrato `C2` especifi
 
 **Rótulos de uso de dados**: os rótulos de uso de dados permitem que você categorize dados que refletem considerações relacionadas à privacidade e às condições contratuais para estar em conformidade com os regulamentos e as políticas corporativas. Os rótulos de uso de dados adicionados a um conjunto de dados são herdados ou aplicados a todos os campos nesse conjunto de dados. Os rótulos de uso de dados também podem ser aplicados diretamente aos campos.
 
-**Fluxo de dados**: um fluxo de dados é um pipeline virtual de dados que flui para a Platform a partir de uma origem e para destinos.
+**Fluxo de dados**: um fluxo de dados é um pipeline virtual de dados que flui para o Experience Platform a partir de uma origem e para destinos.
 
 **Execução de fluxo de dados**: uma execução de fluxo de dados é um fluxo de dados que chega ao Experience Platform com base em um agendamento especificado pelo usuário.
 
 **Conjunto de dados**: um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas).
 
-**ID do conjunto de dados**: um identificador gerado por Adobe para um conjunto de dados assimilado.
+**ID do conjunto de dados**: um identificador gerado pela Adobe para um conjunto de dados assimilado.
 
 **Saída do conjunto de dados**: a saída do conjunto de dados fornece um mecanismo para determinar o que a opção &quot;Criar Tabela como Seleção&quot; será usada para uma execução [!DNL Query Service] específica.
 
@@ -191,11 +191,11 @@ Rótulo de contrato **C2**: um rótulo de uso de dados de contrato `C2` especifi
 
 **Coluna delta**: uma coluna delta permite selecionar um campo de dados de origem para representar um carimbo de data/hora para assimilação incremental.
 
-**Estratégia de salvamento delta**: a estratégia de salvamento delta é uma opção para assimilar dados de terceiros por meio de uma conexão de origem. A opção permite que o usuário especifique se linhas novas ou alteradas de dados de origem são assimiladas no Experience Platform. Novas linhas são adicionadas ao final do conjunto de dados e as linhas alteradas são atualizadas no conjunto de dados no Experience Platform.
+**Estratégia de salvamento delta**: a estratégia de salvamento delta é uma opção para assimilar dados de terceiros por meio de uma conexão de origem. A opção permite que o usuário especifique se linhas novas ou alteradas de dados de origem são assimiladas na Experience Platform. Novas linhas são adicionadas ao final do conjunto de dados e as linhas alteradas são atualizadas no conjunto de dados no Experience Platform.
 
 **Descritor**: no Experience Data Model (XDM), um descritor é um conjunto adicional de metadados relacionados ao esquema que descreve um comportamento específico para um campo. Os descritores podem ser usados pelo Experience Platform para entender o comportamento do esquema desejado, como a relação entre dois esquemas.
 
-**Destino**: um destino é um termo geral para qualquer ponto de extremidade, como um aplicativo Adobe, uma plataforma de publicidade, um serviço de armazenamento na nuvem ou um serviço de marketing, em que um público-alvo é ativado e entregue.
+**Destino**: um destino é um termo geral para qualquer ponto de extremidade, como um aplicativo do Adobe, uma plataforma de publicidade, um serviço de armazenamento na nuvem ou um serviço de marketing, em que um público-alvo é ativado e entregue.
 
 **Categoria de destino**: uma categoria de destino é um agrupamento de destinos que têm características semelhantes.
 
@@ -213,7 +213,7 @@ Rótulo de contrato **C2**: um rótulo de uso de dados de contrato `C2` especifi
 
 **Ação de marketing para direcionamento por email**: uma ação de marketing que usa dados em campanhas de direcionamento por email.
 
-**Código de inserção**: no contexto de marcas, o código de inserção é uma marca de script colocada dentro do HTML em um site ou ambiente. O código incorporado instrui o navegador onde a build deve ser recuperada.
+**Código de inserção**: no contexto de marcas, o código de inserção é uma marca de script colocada na HTML em um site ou ambiente. O código incorporado instrui o navegador onde a build deve ser recuperada.
 
 **Enumeração**: uma enumeração (enum) é um campo XDM restrito a um conjunto de valores predefinidos.
 
@@ -227,7 +227,7 @@ Rótulo de contrato **C2**: um rótulo de uso de dados de contrato `C2` especifi
 
 **Eventos**: eventos são os dados de comportamento associados a um perfil.
 
-O **Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) é uma estrutura de código aberto que usa esquemas padrão para unificar dados para uso com aplicativos Experience Platform e Adobe Experience Cloud. O XDM padroniza como os dados são estruturados e acelera e simplifica o processo de obtenção de insights de grandes quantidades de dados.
+O **Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) é uma estrutura de código aberto que usa esquemas padrão para unificar dados a serem usados com aplicativos do Experience Platform e do Adobe Experience Cloud. O XDM padroniza como os dados são estruturados e acelera e simplifica o processo de obtenção de insights de grandes quantidades de dados.
 
 **Experimento**: um experimento é o processo de criação de um modelo treinado ao treinar a instância com uma parte de amostra dos dados de produção em tempo real. Isso é diferente de um modelo treinado que é testado em relação a um conjunto de dados de teste de validação. Isso também é diferente do conceito de um experimento em algumas estruturas de aprendizado de máquina onde ele realmente significa um projeto de modelagem de amostra.
 
@@ -239,7 +239,7 @@ O **Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) é uma estr
 
 **Extensão**: no contexto de marcas, uma extensão é um pacote de funcionalidades adicionado a uma propriedade de marca. Uma extensão geralmente foca em uma solução de marketing ou análise específica e fornece as ferramentas necessárias para implantar essa tecnologia em um ambiente cliente.
 
-**Pacote de extensão**: no contexto de marcas, um pacote de extensão é um arquivo ZIP criado e carregado por um desenvolvedor de extensão que fornece tudo o que é necessário para que os usuários de marcas instalem a extensão dentro de suas propriedades. Um pacote de extensão contém um manifesto que especifica informações sobre a extensão, o HTML/JavaScript necessário para os usuários finais configurarem o comportamento da extensão de tag e o JavaScript executável entregue ao ambiente do cliente (se necessário).
+**Pacote de extensão**: no contexto de marcas, um pacote de extensão é um arquivo ZIP criado e carregado por um desenvolvedor de extensão que fornece tudo o que é necessário para que os usuários de marcas instalem a extensão dentro de suas propriedades. Um pacote de extensão contém um manifesto que especifica informações sobre a extensão, a HTML/JavaScript necessária para os usuários finais configurarem o comportamento da extensão de tag e o JavaScript executável entregue ao ambiente do cliente (se necessário).
 
 ## F
 
@@ -297,15 +297,15 @@ Rótulo de uso de dados **I1**: o rótulo de uso de dados `I1` é usado para cla
 
 Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para classificar dados que podem ser usados em combinação com outros dados para identificar ou contatar indiretamente uma pessoa específica.
 
-**Organização IMS**: uma Organização IMS (às vezes chamada de Organização IMS) é o nome usado para identificar uma empresa ou um grupo específico em uma empresa nos produtos Adobe. Os administradores podem configurar e gerenciar o acesso e as permissões de recursos para usuários de uma organização.
+**Organização IMS**: uma Organização IMS (às vezes chamada de Organização IMS) é o nome usado para identificar uma empresa ou um grupo específico em uma empresa nos produtos da Adobe. Os administradores podem configurar e gerenciar o acesso e as permissões de recursos para usuários de uma organização.
 
 **Assimilação**: consulte a assimilação de dados.
 
-**Agendamento de assimilação**: um agendamento de assimilação fornece opções baseadas em tempo ao assimilar de uma origem para o Experience Platform.
+**Agendamento de assimilação**: um agendamento de assimilação fornece opções baseadas em tempo ao assimilar de uma origem para a Experience Platform.
 
 **Recurso de entrada**: um recurso de entrada é especificado no mapeamento de recursos e é usado por um modelo de aprendizado de máquina para fazer previsões.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] como [!DNL Attribution AI] e [!DNL Customer AI] são modelos de aprendizado de máquina e inteligência artificial que requerem o Experience Platform (ou aplicativos criados na plataforma como o Adobe Real-time Customer Data Platform) para serem executados e operados.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] como [!DNL Attribution AI] e [!DNL Customer AI] são modelos de aprendizado de máquina e inteligência artificial que exigem o Experience Platform (ou aplicativos criados com base no Experience Platform, como o Adobe Real-Time Customer Data Platform) para serem executados e operados.
 
 **Direcionamento ou personalização baseado em interesses**: o direcionamento baseado em interesses, também conhecido como personalização, ocorrerá se as três condições a seguir forem atendidas:
 
@@ -315,9 +315,9 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 ## J
 
-**[!DNL JupyterLab]**: uma interface de código aberto baseada na Web para o Projeto [!DNL Jupyter] que está integrada à interface do usuário da Platform.
+**[!DNL JupyterLab]**: uma interface de código aberto baseada na Web para o Projeto [!DNL Jupyter] que está integrada à interface do usuário do Experience Platform.
 
-**[!DNL Jupyter Notebook]**: Integrado ao JupyterLab, o Jupyter Notebooks permite realizar limpeza e transformação de dados, simulação numérica, modelagem estatística, visualização de dados, aprendizado de máquina e muito mais em seus dados de Experience Platform em uma variedade de linguagens como Python, Scala e PySpark.
+**[!DNL Jupyter Notebook]**: Integrado ao JupyterLab, o Jupyter Notebooks permite realizar limpeza e transformação de dados, simulação numérica, modelagem estatística, visualização de dados, aprendizado de máquina e muito mais em seus dados do Experience Platform em uma variedade de linguagens como Python, Scala e PySpark.
 
 ## K
 
@@ -339,11 +339,11 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 **Mapeamento**: o mapeamento de dados é o processo de mapear campos de dados de origem para campos de destino relacionados em um destino.
 
-**Ação de marketing**: na estrutura de governança de dados, uma ação de marketing (também conhecida como caso de uso de marketing) é uma ação que um consumidor de dados de Experience Platform toma, para a qual é necessário verificar se há violações das políticas de uso de dados.
+**Ação de marketing**: na estrutura de governança de dados, uma ação de marketing (também conhecida como caso de uso de marketing) é uma ação que um consumidor de dados do Experience Platform toma, para a qual é necessário verificar se há violações das políticas de uso de dados.
 
-**Método de mesclagem**: ao definir uma política de mesclagem usando a interface do usuário da Platform, o método de mesclagem especifica como os fragmentos de dados devem ser priorizados quando ocorre um conflito. Ao usar a API de perfil do cliente em tempo real para definir uma política de mesclagem, o método de mesclagem é determinado usando o objeto `attributeMerge`.
+**Método de mesclagem**: ao definir uma política de mesclagem usando a interface do usuário do Experience Platform, o método de mesclagem especifica como os fragmentos de dados devem ser priorizados quando ocorre um conflito. Ao usar a API de perfil do cliente em tempo real para definir uma política de mesclagem, o método de mesclagem é determinado usando o objeto `attributeMerge`.
 
-**Política de mesclagem**: as políticas de mesclagem são regras que o Experience Platform usa para determinar como os fragmentos de dados do cliente de várias fontes serão combinados para criar um perfil individual. Quando ocorre um conflito de dados, a política de mesclagem determina quais dados devem ser priorizados para inclusão no perfil.
+**Política de mesclagem**: as políticas de mesclagem são regras que a Experience Platform usa para determinar como os fragmentos de dados do cliente de várias fontes serão combinados para criar um perfil individual. Quando ocorre um conflito de dados, a política de mesclagem determina quais dados devem ser priorizados para inclusão no perfil.
 
 **MHMDAa**: o [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) aprimora os direitos de privacidade dos consumidores em relação aos seus dados de saúde. Ela exige a divulgação, o consentimento do consumidor e os direitos de exclusão dos dados de saúde, e proíbe a venda de dados de saúde sem autorização. Além disso, a lei torna ilegal o uso de geofencing em instalações de saúde.
 
@@ -391,9 +391,9 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 **Posicionamentos**: um posicionamento é o local e/ou contexto em que uma oferta é exibida para o usuário final.
 
-**Espaço de trabalho de políticas**: um espaço de trabalho na interface da plataforma que permite aos administradores de dados exibir e gerenciar rótulos e políticas de uso de dados para sua organização.
+**Espaço de trabalho de políticas**: um espaço de trabalho na interface do usuário do Experience Platform que permite aos administradores de dados exibir e gerenciar rótulos e políticas de uso de dados para sua organização.
 
-**Política**: uma política de uso de dados é uma regra que especifica ações de marketing restritas com base na aplicação de rótulos de uso aplicados aos dados da plataforma.
+**Política**: uma política de uso de dados é uma regra que especifica ações de marketing restritas com base na aplicação de rótulos de uso aplicados aos dados do Experience Platform.
 
 **Imposição de política**: permite que você imponha políticas de uso de dados com ações de marketing aplicadas para impedir operações de dados que constituam violações de política em uma organização.
 
@@ -433,11 +433,11 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 ## R
 
-**Real-time Customer Data Platform**: o Adobe Real-time Customer Data Platform (Real-Time CDP) reúne dados conhecidos e desconhecidos do cliente para criar perfis confiáveis do cliente com integração simplificada, segmentação inteligente e ativação em tempo real na jornada digital do cliente.
+**Real-Time Customer Data Platform**: o Adobe Real-Time Customer Data Platform (Real-Time CDP) reúne dados conhecidos e desconhecidos do cliente para criar perfis confiáveis do cliente com integração simplificada, segmentação inteligente e ativação em tempo real na jornada digital do cliente.
 
 **Perfil do cliente em tempo real**: o Perfil do cliente em tempo real (às vezes chamado de Perfil) fornece uma visão holística de cada cliente individual ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. O Perfil permite consolidar os dados do cliente em perfis individuais, oferecendo contas acionáveis com carimbo de data e hora para cada interação com o cliente.
 
-**Receita**: uma fórmula é um termo de Adobe para uma especificação de modelo e é um contêiner de nível superior que representa processos de aprendizado de máquina específicos, algoritmos de IA, lógica de processamento e parâmetros de configuração necessários para compilar e executar um modelo treinado e, portanto, ajudar a resolver problemas comerciais específicos.
+**Receita**: uma fórmula é o termo da Adobe para uma especificação de modelo e é um contêiner de nível superior que representa processos de aprendizado de máquina específicos, algoritmos de IA, lógica de processamento e parâmetros de configuração necessários para criar e executar um modelo treinado e, portanto, ajudar a resolver problemas comerciais específicos.
 
 **Registro**: um registro são dados que persistem como linhas em um conjunto de dados.
 
@@ -461,7 +461,7 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 **Dados de amostra**: os dados de amostra são uma visualização de um arquivo de dados, normalmente as primeiras 100 linhas, que fornece a um cientista de dados ou engenheiro uma ideia de qual esquema ou dados estão no arquivo de dados.
 
-**Sandbox**: uma sandbox é uma construção virtual que particiona uma única instância da Platform em um ambiente virtual separado, a fim de ajudar a desenvolver aplicativos de experiência digital.
+**Sandbox**: uma sandbox é uma construção virtual que particiona uma única instância do Experience Platform em um ambiente virtual separado, a fim de ajudar a desenvolver aplicativos de experiência digital.
 
 **Redefinição da sandbox**: uma redefinição da sandbox exclui todos os dados, incluindo dados, perfis e segmentos em uma sandbox. As redefinições de sandbox podem afetar dados conectados a destinos internos ou externos.
 
@@ -475,7 +475,7 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 **Grupo de campos de esquema**: no Experience Data Model (XDM), um grupo de campos de esquema permite que os usuários estendam campos reutilizáveis para definir um ou mais atributos destinados a serem incluídos em um esquema.
 
-**Biblioteca de Esquemas**: a Biblioteca de Esquemas contém recursos XDM padrão do setor disponibilizados pelo Adobe, bem como recursos personalizados definidos pela sua organização.
+**Biblioteca de Esquemas**: a Biblioteca de Esquemas contém recursos XDM padrão do setor disponibilizados pela Adobe, bem como recursos personalizados definidos pela sua organização.
 
 **Registro de Esquema**: o Registro de Esquema fornece uma interface de usuário e uma API RESTful usadas para exibir e gerenciar todos os recursos relacionados ao esquema na Biblioteca de Esquemas.
 
@@ -483,13 +483,13 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 **Segmento**: um segmento é um conjunto de regras que incluem atributos e dados de evento que qualificam vários perfis para se tornarem uma audiência.
 
-**Construtor de segmentos**: [!DNL Segment Builder] é um ambiente de desenvolvimento visual usado para criar definições de segmentos. Ele serve como um componente comum de todos os aplicativos que usam o Serviço de segmentação de Experience Platform.
+**Construtor de segmentos**: [!DNL Segment Builder] é um ambiente de desenvolvimento visual usado para criar definições de segmentos. Ele serve como um componente comum de todos os aplicativos que usam o Serviço de segmentação da Experience Platform.
 
 **Definição de segmento**: uma definição de segmento é o conjunto de regras usado para descrever as principais características ou comportamento de um público-alvo. Depois de conceitualizadas, as regras descritas em uma definição de segmento são usadas para determinar os membros do público-alvo qualificados para um segmento.
 
 **Método de avaliação de segmento**: há dois métodos de avaliação de segmento: programado e sob demanda. A avaliação agendada permite um agendamento recorrente para executar um trabalho de exportação em um momento específico, enquanto a avaliação sob demanda envolve a criação de um trabalho de segmento para criar o público-alvo imediatamente.
 
-**Exportação de segmento**: a exportação de segmento é um dos dois tipos de destinos no Experience Platform. Com a exportação de segmentos, é possível enviar os perfis qualificados e mapeados para o destino. Usa IDs de segmento e usuário e dados com pseudônimos e geralmente se integra a redes sociais e outras plataformas de mídia digital de destino.
+**Exportação de segmentos**: a exportação de segmentos é um dos dois tipos de destinos no Experience Platform. Com a exportação de segmentos, é possível enviar os perfis qualificados e mapeados para o destino. Usa IDs de segmento e usuário e dados com pseudônimos e geralmente se integra a redes sociais e outras plataformas de mídia digital de destino.
 
 **ID de segmento**: uma ID de segmento é um identificador gerado automaticamente associado a um segmento.
 
@@ -499,11 +499,11 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 **Segmentação**: a segmentação é o processo de dividir um grande grupo de clientes, clientes potenciais ou consumidores em grupos menores que compartilham atributos semelhantes e responderão de forma semelhante a estratégias de marketing específicas.
 
-**Sensei ML Framework**: o Sensei ML Framework é uma estrutura de aprendizado de máquina unificada (ML) que aproveita dados de Experience Platform para capacitar cientistas de dados a desenvolver serviços de inteligência orientados por ML de maneira mais rápida, escalável e reutilizável.
+**Sensei ML Framework**: o Sensei ML Framework é uma estrutura de aprendizado de máquina unificada (ML) que aproveita os dados do Experience Platform para capacitar cientistas de dados a desenvolver serviços de inteligência orientados por aprendizado de máquina de maneira mais rápida, escalável e reutilizável.
 
 **Rótulos sensíveis (&quot;S&quot;)**: os rótulos sensíveis (&quot;S&quot;) são usados para categorizar dados considerados confidenciais, como diferentes tipos de dados comportamentais ou geográficos que você deseja marcar como confidenciais.
 
-**Serviços**: uma estrutura eficiente para operacionalizar serviços de IA e ML utilizando os Serviços Inteligentes do Adobe. Os serviços proporcionam experiências personalizadas e em tempo real aos clientes ou operacionalizam serviços inteligentes personalizados.
+**Serviços**: uma estrutura eficiente para operacionalizar serviços de IA e ML aproveitando os Serviços Inteligentes da Adobe. Os serviços proporcionam experiências personalizadas e em tempo real aos clientes ou operacionalizam serviços inteligentes personalizados.
 
 **Ação de marketing de personalização de identidade única**: uma ação de marketing que usa dados para personalização de conteúdo no site. A personalização no local são quaisquer dados usados para deduzir os interesses dos usuários e são usados para selecionar qual conteúdo ou quais anúncios são veiculados com base nessas deduções.
 
@@ -511,21 +511,21 @@ Rótulo de uso de dados **S1**: um rótulo de uso de dados `S1` é usado para cl
 
 Rótulo de uso de dados **S2**: um rótulo de uso de dados `S2` é usado para classificar dados que podem ser usados para determinar uma área de cerca geográfica amplamente definida.
 
-**Source**: uma origem é um termo geral para qualquer conector de entrada na Platform. Consulte também: Conector do Source
+**Source**: uma origem é um termo geral para qualquer conector de entrada no Experience Platform. Consulte também: Conector do Source
 
 **Atributo Source**: um atributo de origem é um campo no conjunto de dados de origem. Os atributos do Source são mapeados para campos de esquema de destino.
 
-**Catálogo de Source**: o catálogo de origem é a lista de conectores de origem disponíveis no Experience Platform.
+**Catálogo do Source**: o catálogo de origem é a lista de conectores de origem disponíveis no Experience Platform.
 
 **Categoria do Source**: uma categoria de origem é um agrupamento de origens que têm características semelhantes.
 
-**Conector do Source**: os conectores do Source (também conhecidos como fontes) ajudam os usuários a assimilar dados facilmente de várias fontes, permitindo a estruturação, rotulagem e aprimoramento de dados usando serviços Experience Platform. Os dados podem ser assimilados de várias fontes, como armazenamento baseado em nuvem, software de terceiros e sistemas de CRM.
+**Conector do Source**: os conectores do Source (também conhecidos como fontes) ajudam os usuários a assimilar dados facilmente de várias fontes, permitindo a estruturação, a rotulagem e o aprimoramento de dados usando os serviços da Experience Platform. Os dados podem ser assimilados de várias fontes, como armazenamento baseado em nuvem, software de terceiros e sistemas de CRM.
 
-**Conexão de transmissão**: uma conexão de transmissão é um ponto de extremidade exclusivo fornecido pelo Adobe e vinculado à sua organização para transmitir dados para o Experience Platform.
+**Conexão de streaming**: uma conexão de streaming é um ponto de extremidade exclusivo fornecido pela Adobe e vinculado à sua organização para transmitir dados para a Experience Platform.
 
-**Namespace de identidade padrão**: os namespaces de identidade padrão são namespaces de identidade predefinidos fornecidos pelo Adobe, que representam soluções padrão do setor normalmente usadas para identificar clientes.
+**Namespace de identidade padrão**: os namespaces de identidade padrão são namespaces de identidade predefinidos fornecidos pela Adobe, que representam soluções padrão do setor normalmente usadas para identificar clientes.
 
-**Assimilação por streaming**: a assimilação por streaming permite enviar dados de dispositivos no lado do cliente e do servidor para o Experience Platform em tempo real.
+**Assimilação por streaming**: a assimilação por streaming permite enviar dados de dispositivos no lado do cliente e do servidor para a Experience Platform em tempo real.
 
 **Segmentação de transmissão**: a segmentação de transmissão é um processo de seleção de dados em andamento que atualiza os segmentos em resposta à atividade do usuário. Depois que um segmento é criado e salvo, a definição do segmento é aplicada em relação aos dados recebidos para [!DNL Real-Time Customer Profile]. As adições e remoções de segmentos são processadas regularmente, garantindo que o público-alvo permaneça relevante.
 
@@ -565,7 +565,7 @@ Rótulo de uso de dados **S2**: um rótulo de uso de dados `S2` é usado para cl
 
 **Perfil Individual XDM**: XDM [!DNL Individual Profile] é uma classe baseada em registros que forma uma representação singular dos atributos de assuntos identificados e parcialmente identificados. Os perfis altamente identificados podem ser usados para comunicações pessoais ou compromissos direcionados e podem conter informações pessoais detalhadas, como nome, sexo, data de nascimento, local e informações de contato, incluindo números de telefone e endereços de email.
 
-**Sistema XDM**: o Sistema XDM representa a estrutura que operacionaliza esquemas XDM para uso em serviços de Experience Platform downstream.
+**Sistema XDM**: o Sistema XDM representa a estrutura que operacionaliza esquemas XDM para uso em serviços downstream do Experience Platform.
 
 ## Y
 

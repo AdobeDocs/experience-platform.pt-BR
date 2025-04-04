@@ -4,13 +4,13 @@ description: Exporte dados para sua conta da Snowflake usando listas privadas.
 hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2893356e36fde4759ffe76e01296fcb8811ab8e7
+exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '675'
+source-wordcount: '676'
 ht-degree: 4%
 
 ---
-
 
 # Conexão com o Snowflake {#snowflake-destination}
 
@@ -99,7 +99,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 O destino do Snowflake oferece suporte ao mapeamento de atributos de perfil para atributos personalizados.
 
-![Imagem da interface do usuário da plataforma mostrando a tela de mapeamento para o destino do Snowflake.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Imagem da interface do usuário do Experience Platform mostrando a tela de mapeamento para o destino do Snowflake.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
 
 Os atributos de destino são criados automaticamente no Snowflake usando o nome do atributo fornecido no campo **[!UICONTROL Nome do atributo]**.
 

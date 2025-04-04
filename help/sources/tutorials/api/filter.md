@@ -2,9 +2,9 @@
 title: Filtrar dados em nível de linha para uma Source usando a API do serviço de fluxo
 description: Este tutorial aborda as etapas sobre como filtrar dados no nível da origem usando a API do Serviço de fluxo
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '1823'
 ht-degree: 5%
 
 ---
@@ -27,12 +27,12 @@ Leia este guia para obter as etapas sobre como filtrar dados de nível de linha 
 
 Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../landing/api-guide.md).
 
 ## Filtrar dados de origem {#filter-source-data}
 
@@ -747,7 +747,7 @@ Uma resposta bem-sucedida retorna a ID de conexão de origem e a tag (versão).
 
 +++
 
-### Publish sua conexão de origem
+### Publicar sua conexão de origem
 
 Com sua conexão de origem atualizada com suas condições de filtragem, agora é possível seguir do estado de rascunho e publicar sua conexão de origem. Para fazer isso, faça uma solicitação POST para o ponto de extremidade `/sourceConnections` e forneça a ID da sua conexão de origem de rascunho, bem como uma operação de ação para publicação.
 
@@ -791,7 +791,7 @@ Uma resposta bem-sucedida retorna a ID de conexão de origem e a tag (versão).
 
 +++
 
-### Publish sua conexão de destino
+### Publicar sua conexão de destino
 
 Semelhante à etapa anterior, você também deve publicar sua conexão de destino para continuar e publicar seu fluxo de dados de rascunho. Faça uma solicitação POST para o ponto de extremidade `/targetConnections` e forneça a ID da conexão de destino de rascunho que você deseja publicar, bem como uma operação de ação para publicação.
 
@@ -836,7 +836,7 @@ Uma resposta bem-sucedida retorna a ID e a tag correspondente da conexão de des
 +++
 
 
-### Publish seu fluxo de dados
+### Publicar seu fluxo de dados
 
 Com suas conexões de origem e de destino publicadas, agora é possível prosseguir para a etapa final e publicar seu fluxo de dados. Para publicar seu fluxo de dados, faça uma solicitação POST para o ponto de extremidade `/flows` e forneça sua ID de fluxo de dados e uma operação de ação para publicação.
 

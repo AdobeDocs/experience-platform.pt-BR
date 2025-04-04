@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;API;expl
 title: Explorar um Source tabular usando a API de serviço de fluxo
 description: Este tutorial usa a API de serviço de fluxo para explorar o conteúdo e a estrutura de uma fonte baseada em tabela.
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
-source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '471'
 ht-degree: 6%
 
 ---
@@ -22,12 +22,12 @@ Este tutorial fornece etapas sobre como explorar e visualizar a estrutura e o co
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../../landing/api-guide.md).
 
 ## Explore suas tabelas de dados
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de tabelas da origem. Encontre a tabela que deseja trazer para a Platform e anote sua propriedade `path`, pois é necessário fornecê-la na próxima etapa para inspecionar sua estrutura.
+Uma resposta bem-sucedida retorna uma matriz de tabelas da origem. Encontre a tabela que deseja trazer para o Experience Platform e anote sua propriedade `path`, pois é necessário fornecê-la na próxima etapa para inspecionar sua estrutura.
 
 ```json
 [
@@ -77,7 +77,7 @@ Uma resposta bem-sucedida retorna uma matriz de tabelas da origem. Encontre a ta
 ]
 ```
 
-## Inspect a estrutura de uma tabela
+## Inspecionar a estrutura de uma tabela
 
 Para inspecionar o conteúdo das tabelas de dados, execute uma solicitação GET para a API [!DNL Flow Service] ao especificar o caminho de uma tabela como um parâmetro de consulta.
 
@@ -188,7 +188,7 @@ Uma resposta bem-sucedida retorna informações sobre o conteúdo e a estrutura 
 
 ## Próximas etapas
 
-Seguindo este tutorial, você coletou informações sobre a estrutura e o conteúdo das tabelas de dados. Além disso, você recuperou o caminho para a tabela que deseja assimilar na Platform. Você pode usar essas informações para criar uma conexão de origem e um fluxo de dados para trazer seus dados para a Platform. Consulte os seguintes tutoriais para obter etapas específicas sobre como criar uma conexão de origem e um fluxo de dados usando a API [!DNL Flow Service]:
+Seguindo este tutorial, você coletou informações sobre a estrutura e o conteúdo das tabelas de dados. Além disso, você recuperou o caminho para a tabela que deseja assimilar na Experience Platform. Você pode usar essas informações para criar uma conexão de origem e um fluxo de dados para trazer seus dados para a Experience Platform. Consulte os seguintes tutoriais para obter etapas específicas sobre como criar uma conexão de origem e um fluxo de dados usando a API [!DNL Flow Service]:
 
 * [Fontes do Advertising](../collect/advertising.md)
 * [Origens de CRM](../collect/crm.md)

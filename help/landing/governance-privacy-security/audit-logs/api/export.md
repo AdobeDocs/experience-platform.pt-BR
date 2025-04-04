@@ -4,9 +4,9 @@ description: Saiba como exportar eventos de auditoria no Experience Platform usa
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '159'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ GET /audit/export
 | `status` | O status da ação. Um status pode ser qualquer um dos seguintes: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul><br/>Exemplo: `?property=status==Deny`. |
 | `action` | O tipo de ação que foi gravado para o evento. Uma ação pode ser qualquer um dos seguintes: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`Remove` </li><li>`Reset` </li><li>`Segment Activate` </li><li>`Segment remove` </li><li>`Update` </li></ul> Exemplo: `?property=action==Create`. |
 | `user` | O usuário que executou o evento. |
-| `assetType` | O tipo de recurso da Platform no qual a ação foi executada. <br/>Exemplo: `?property=assetType==<an asset type>`. |
+| `assetType` | O tipo de recurso do Experience Platform no qual a ação foi executada. <br/>Exemplo: `?property=assetType==<an asset type>`. |
 
 **Solicitação**
 

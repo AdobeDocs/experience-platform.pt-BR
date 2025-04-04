@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;tópicos populares;XDM;sistema XDM;perfil individual XDM;XDM ExperienceEvent;Evento de experiência XDM;evento experienceEvent;evento experienceExperience;Evento de experiência XDM;XDM ExperienceEvent;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;esquema;solução de problemas;perguntas frequentes;esquema de união;PERFIL DE UNIÃO;perfil de união;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
+keywords: Experience Platform;tópicos populares;XDM;sistema XDM;perfil individual XDM;XDM ExperienceEvent;Evento de experiência XDM;evento experienceEvent;evento experienceExperience;Evento de experiência XDM;XDM ExperienceEvent;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;esquema;solução de problemas;perguntas frequentes;esquema de união;PERFIL DA UNIÃO;perfil da união;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;XDM-1010-404;XDM-1011-404;XDM-1012-404;XDM-1013-404;XDM-1014-404;XDM-1015-404;XDM-1016-404;XDM-1017-404;XDM-1521-400;XDM-1020-400;XDM-1021-400;XDM-1022-400;XDM-1023-400;XDM-1024-400;XDM-1006-400;XDM-1007-400;XDM-1008-400;XDM-1009-400;XDM-1413-400;XDM-1526-400;XDM-1527-400;XDM-1528-400;
 solution: Experience Platform
 title: Guia de solução de problemas do sistema XDM
 description: Encontre respostas para perguntas frequentes sobre o Experience Data Model (XDM), incluindo etapas para resolver erros comuns de API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2347'
+source-wordcount: '2348'
 ht-degree: 0%
 
 ---
 
 # Guia de solução de problemas do sistema XDM
 
-Este documento fornece respostas a perguntas frequentes sobre o [!DNL Experience Data Model] (XDM) e o Sistema XDM no Adobe Experience Platform, incluindo um guia de solução de problemas para erros comuns. Para perguntas e soluções de problemas relacionadas a outros serviços da Platform, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
+Este documento fornece respostas a perguntas frequentes sobre o [!DNL Experience Data Model] (XDM) e o Sistema XDM no Adobe Experience Platform, incluindo um guia de solução de problemas para erros comuns. Para perguntas e soluções de problemas relacionadas a outros serviços da Experience Platform, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model](XDM)** é uma especificação de código aberto que define esquemas padronizados para o gerenciamento da experiência do cliente. A metodologia na qual [!DNL Experience Platform] é criado, **Sistema XDM**, operacionaliza [!DNL Experience Data Model] esquemas para uso pelos serviços [!DNL Platform]. O **[!DNL Schema Registry]** fornece uma interface de usuário e uma API RESTful para acessar o **[!DNL Schema Library]** em [!DNL Experience Platform]. Consulte a [documentação do XDM](home.md) para obter mais informações.
+**[!DNL Experience Data Model](XDM)** é uma especificação de código aberto que define esquemas padronizados para o gerenciamento da experiência do cliente. A metodologia na qual [!DNL Experience Platform] é criado, **Sistema XDM**, operacionaliza [!DNL Experience Data Model] esquemas para uso pelos serviços [!DNL Experience Platform]. O **[!DNL Schema Registry]** fornece uma interface de usuário e uma API RESTful para acessar o **[!DNL Schema Library]** em [!DNL Experience Platform]. Consulte a [documentação do XDM](home.md) para obter mais informações.
 
 ## Perguntas frequentes
 
@@ -277,7 +277,7 @@ Exemplos detalhados de estruturas de dados adequadas para recursos XDM podem ser
 }
 ```
 
-As solicitações GET na API [!DNL Schema Registry] exigem um cabeçalho `Accept` para que o sistema determine como formatar a resposta. Este erro ocorre quando um cabeçalho `Accept` necessário é inválido ou está ausente.
+As solicitações do GET na API [!DNL Schema Registry] exigem um cabeçalho `Accept` para que o sistema determine como formatar a resposta. Este erro ocorre quando um cabeçalho `Accept` necessário é inválido ou está ausente.
 
 Dependendo do ponto de extremidade que você está usando, a propriedade `detailed-message` indica como um cabeçalho `Accept` válido deve ser exibido para uma resposta bem-sucedida. Verifique se você inseriu corretamente um cabeçalho `Accept` que seja compatível com a solicitação de API que você está tentando fazer antes de tentar novamente.
 

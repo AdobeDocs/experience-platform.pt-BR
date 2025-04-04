@@ -3,7 +3,7 @@ keywords: destinos;destino;página detalhes de destinos;página detalhes de dest
 title: Exibir detalhes do destino
 description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os públicos mapeados para o destino e os controles para editar a ativação e habilitar e desabilitar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1286'
 ht-degree: 0%
@@ -18,13 +18,13 @@ Na interface do usuário do Adobe Experience Platform, é possível visualizar e
 
 >[!NOTE]
 >
->A página de detalhes dos destinos faz parte do espaço de trabalho [!UICONTROL Destinos] no [!DNL Platform] [!DNL UI]. Consulte a [[!UICONTROL visão geral do espaço de trabalho de Destinos]](./destinations-workspace.md) para obter mais informações.
+>A página de detalhes dos destinos faz parte do espaço de trabalho [!UICONTROL Destinos] no [!DNL Experience Platform] [!DNL UI]. Consulte a [[!UICONTROL visão geral do espaço de trabalho de Destinos]](./destinations-workspace.md) para obter mais informações.
 
 ## Exibir detalhes do destino {#view-details}
 
 Siga as etapas abaixo para exibir mais detalhes sobre um destino existente. Você pode descobrir a ID de destino de um destino, o usuário que criou o destino, quando ele foi criado e outras informações.
 
-1. Faça logon na [interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecione **[!UICONTROL Procurar]** no cabeçalho superior para exibir seus destinos existentes.
+1. Faça logon na [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecione **[!UICONTROL Procurar]** no cabeçalho superior para exibir seus destinos existentes.
 
    ![Procurar destinos](../assets/ui/details-page/browse-destinations.png)
 
@@ -82,8 +82,8 @@ A guia [!UICONTROL Execuções de fluxo de dados] fornece dados de métrica sobr
 
 >[!NOTE]
 >
->* Atualmente, a funcionalidade de monitoramento de destinos tem suporte para todos os destinos nos destinos do Experience Platform *except* do [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) e [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md).
->* Para os [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) e [destinos da API HTTP](/help/destinations/catalog/streaming/http-destination.md), as métricas relacionadas às identidades excluídas, com falha e ativadas são estimadas. Volumes maiores de dados de ativação levam a uma maior precisão das métricas.
+>* Atualmente, a funcionalidade de monitoramento de destinos tem suporte para todos os destinos no Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), [Personalização personalizada](/help/destinations/catalog/personalization/custom-personalization.md) e [Experience Cloud Audiences](/help/destinations/catalog/adobe/experience-cloud-audiences.md) destinos.
+>* Para os destinos [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) e [API HTTP](/help/destinations/catalog/streaming/http-destination.md), as métricas relacionadas às identidades excluídas, com falha e ativadas são estimadas. Volumes maiores de dados de ativação levam a uma maior precisão das métricas.
 
 ![Exibição de execuções de fluxo de dados](../assets/ui/details-page/dataflow-runs.png)
 

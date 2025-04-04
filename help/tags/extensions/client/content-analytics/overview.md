@@ -2,9 +2,9 @@
 title: Visão geral da extensão do Adobe Content Analytics
 description: Saiba mais sobre a extensão de tag do Adobe Content Analytics no Adobe Experience Platform.
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '658'
+source-wordcount: '659'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 A extensão de tag [!DNL Adobe Content Analytics] permite o rastreamento de eventos relacionados a conteúdo em um site. A extensão envia dados de conteúdo (experiências e ativos) para uma sequência de dados no Adobe Experience Cloud a partir das propriedades da Web por meio do Experience Platform Edge Network.
 
-A extensão permite transmitir dados de evento relacionados a conteúdo específico para a Platform, para que você possa usar esses dados em seus relatórios de análise de conteúdo no Customer Journey Analytics.
+A extensão permite transmitir dados de evento relacionados a conteúdo específicos para o Experience Platform, para que você possa usá-los nos relatórios de análise de conteúdo no Customer Journey Analytics.
 
 Este documento explica como configurar a extensão de tag na interface do usuário de tags.
 

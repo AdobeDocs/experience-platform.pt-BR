@@ -2,9 +2,9 @@
 title: Assimilação de dados criptografados
 description: Saiba como assimilar arquivos criptografados por meio de fontes de lote de armazenamento na nuvem usando a API.
 exl-id: 83a7a154-4f55-4bf0-bfef-594d5d50f460
-source-git-commit: 9a5599473f874d86e2b3c8449d1f4d0cf54b672c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1816'
 ht-degree: 3%
 
 ---
@@ -15,29 +15,29 @@ Você pode assimilar arquivos de dados criptografados na Adobe Experience Platfo
 
 O processo de assimilação de dados criptografados é o seguinte:
 
-1. [Criar um par de chaves de criptografia usando APIs Experience Platform](#create-encryption-key-pair). O par de chaves de criptografia consiste em uma chave privada e uma chave pública. Depois de criada, você pode copiar ou baixar a chave pública, juntamente com a ID da chave pública e o Tempo de expiração correspondentes. Durante esse processo, a chave privada será armazenada pelo Experience Platform em um cofre seguro. **OBSERVAÇÃO:** a chave pública na resposta é codificada na Base64 e deve ser decodificada antes do uso.
+1. [Crie um par de chaves de criptografia usando as APIs do Experience Platform](#create-encryption-key-pair). O par de chaves de criptografia consiste em uma chave privada e uma chave pública. Depois de criada, você pode copiar ou baixar a chave pública, juntamente com a ID da chave pública e o Tempo de expiração correspondentes. Durante esse processo, a chave privada será armazenada pela Experience Platform em um cofre seguro. **OBSERVAÇÃO:** a chave pública na resposta é codificada na Base64 e deve ser decodificada antes do uso.
 2. Use a chave pública para criptografar o arquivo de dados que você deseja assimilar.
 3. Coloque o arquivo criptografado no armazenamento na nuvem.
 4. Quando o arquivo criptografado estiver pronto, [crie uma conexão de origem e um fluxo de dados para sua fonte de armazenamento na nuvem](#create-a-dataflow-for-encrypted-data). Durante a etapa de criação do fluxo, você deve fornecer um parâmetro `encryption` e incluir sua ID de chave pública.
-5. Experience Platform recupera a chave privada do cofre seguro para descriptografar os dados no momento da assimilação.
+5. O Experience Platform recupera a chave privada do cofre seguro para descriptografar os dados no momento da assimilação.
 
 >[!IMPORTANT]
 >
 >O tamanho máximo de um único arquivo criptografado é de 1 GB. Por exemplo, você pode assimilar dados de 2 GBs em uma única execução de fluxo de dados. No entanto, qualquer arquivo individual nesses dados não pode exceder 1 GB.
 
-Este documento fornece etapas sobre como gerar um par de chaves de criptografia para criptografar seus dados e assimilar esses dados criptografados no Experience Platform usando fontes de armazenamento na nuvem.
+Este documento fornece etapas sobre como gerar um par de chaves de criptografia para criptografar seus dados e assimilar esses dados criptografados na Experience Platform usando fontes de armazenamento na nuvem.
 
 ## Introdução {#get-started}
 
 Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-   * [Fontes de armazenamento na nuvem](../api/collect/cloud-storage.md): crie um fluxo de dados para trazer dados em lote da sua fonte de armazenamento na nuvem para o Experience Platform.
-* [Sandboxes](../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+   * [Fontes de armazenamento na nuvem](../api/collect/cloud-storage.md): crie um fluxo de dados para trazer dados em lote da sua fonte de armazenamento na nuvem para a Experience Platform.
+* [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../landing/api-guide.md).
 
 ### Extensões de arquivo compatíveis com arquivos criptografados {#supported-file-extensions-for-encrypted-files}
 
@@ -68,7 +68,7 @@ A lista de extensões de arquivo compatíveis com arquivos criptografados é:
 >
 >As chaves de criptografia são específicas a uma determinada sandbox. Portanto, você deve criar novas chaves de criptografia se quiser assimilar dados criptografados em uma sandbox diferente na organização.
 
-A primeira etapa na assimilação de dados criptografados no Experience Platform é criar seu par de chaves de criptografia fazendo uma solicitação POST para o ponto de extremidade `/encryption/keys` da API [!DNL Connectors].
+A primeira etapa na assimilação de dados criptografados na Experience Platform é criar seu par de chaves de criptografia fazendo uma solicitação POST para o ponto de extremidade `/encryption/keys` da API [!DNL Connectors].
 
 **Formato da API**
 
@@ -123,15 +123,15 @@ Uma resposta bem-sucedida retorna a chave pública codificada na Base64, a ID da
 
 | Propriedade | Descrição |
 | --- | --- |
-| `publicKey` | A chave pública é usada para criptografar os dados no armazenamento na nuvem. Essa chave corresponde à chave privada que também foi criada durante essa etapa. No entanto, a chave privada vai imediatamente para Experience Platform. |
-| `publicKeyId` | A ID da chave pública é usada para criar um fluxo de dados e assimilar os dados criptografados do armazenamento na nuvem no Experience Platform. |
+| `publicKey` | A chave pública é usada para criptografar os dados no armazenamento na nuvem. Essa chave corresponde à chave privada que também foi criada durante essa etapa. No entanto, a chave privada vai imediatamente para o Experience Platform. |
+| `publicKeyId` | A ID da chave pública é usada para criar um fluxo de dados e assimilar seus dados de armazenamento em nuvem criptografados na Experience Platform. |
 | `expiryTime` | O tempo de expiração define a data de expiração do par de chaves de criptografia. Essa data é definida automaticamente para 180 dias após a data de geração da chave e é exibida no formato de carimbo de data e hora unix. |
 
 +++
 
 ### Recuperar chaves de criptografia {#retrieve-encryption-keys}
 
-Para recuperar todas as chaves de criptografia em sua organização, faça uma Solicitação GET para o endpoint `/encryption/keys`=nt.
+Para recuperar todas as chaves de criptografia em sua organização, faça uma solicitação GET para o endpoint `/encryption/keys`=nt.
 
 **Formato da API**
 
@@ -221,7 +221,7 @@ Uma resposta bem-sucedida retorna o algoritmo de criptografia, o nome, a chave p
 
 Opcionalmente, é possível criar um par de chaves de verificação de assinatura para assinar e assimilar os dados criptografados.
 
-Durante esse estágio, você deve gerar sua própria combinação de chave privada e chave pública e usar sua chave privada para assinar seus dados criptografados. Em seguida, você deve codificar sua chave pública em Base64 e, em seguida, compartilhá-la no Experience Platform para que a Platform verifique sua assinatura.
+Durante esse estágio, você deve gerar sua própria combinação de chave privada e chave pública e usar sua chave privada para assinar seus dados criptografados. Em seguida, você deve codificar sua chave pública em Base64 e, em seguida, compartilhá-la na Experience Platform para que o Experience Platform verifique sua assinatura.
 
 ### Compartilhar sua chave pública no Experience Platform
 
@@ -274,7 +274,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `publicKeyId` | Essa ID de chave pública é retornada em resposta ao compartilhamento da chave gerenciada pelo cliente com o Experience Platform. Você pode fornecer essa ID de chave pública como a ID de chave de verificação de assinatura ao criar um fluxo de dados para dados assinados e criptografados. |
+| `publicKeyId` | Essa ID de chave pública é retornada em resposta ao compartilhamento da chave gerenciada pelo cliente com a Experience Platform. Você pode fornecer essa ID de chave pública como a ID de chave de verificação de assinatura ao criar um fluxo de dados para dados assinados e criptografados. |
 
 +++
 
@@ -322,9 +322,9 @@ curl -X GET \
 
 ## Conecte sua fonte de armazenamento na nuvem ao Experience Platform usando a API [!DNL Flow Service]
 
-Depois de recuperar o par de chaves de criptografia, você pode continuar e criar uma conexão de origem para sua fonte de armazenamento na nuvem e trazer seus dados criptografados para a Platform.
+Depois de recuperar o par de chaves de criptografia, você pode continuar e criar uma conexão de origem para sua fonte de armazenamento na nuvem e trazer seus dados criptografados para a Experience Platform.
 
-Primeiro, você deve criar uma conexão base para autenticar sua origem na Platform. Para criar uma conexão base e autenticar sua origem, selecione a origem que deseja usar na lista abaixo:
+Primeiro, você deve criar uma conexão básica para autenticar sua origem no Experience Platform. Para criar uma conexão base e autenticar sua origem, selecione a origem que deseja usar na lista abaixo:
 
 * [Amazon S3](../api/create/cloud-storage/s3.md)
 * [[!DNL Apache HDFS]](../api/create/cloud-storage/hdfs.md)
@@ -413,8 +413,8 @@ curl -X POST \
 | Propriedade | Descrição |
 | --- | --- |
 | `flowSpec.id` | A ID de especificação do fluxo que corresponde às fontes de armazenamento na nuvem. |
-| `sourceConnectionIds` | A ID da conexão de origem. Essa ID representa a transferência de dados da origem para a Platform. |
-| `targetConnectionIds` | A ID da conexão de destino. Essa ID representa onde os dados são colocados depois de trazidos para a Platform. |
+| `sourceConnectionIds` | A ID da conexão de origem. Essa ID representa a transferência de dados da origem para o Experience Platform. |
+| `targetConnectionIds` | A ID da conexão de destino. Essa ID representa onde os dados são colocados depois de trazidos para o Experience Platform. |
 | `transformations[x].params.mappingId` | A ID do mapeamento. |
 | `transformations.name` | Ao assimilar arquivos criptografados, você deve fornecer `Encryption` como um parâmetro de transformações adicional para o fluxo de dados. |
 | `transformations[x].params.publicKeyId` | A ID da chave pública que você criou. Essa ID é metade do par de chaves de criptografia usado para criptografar os dados de armazenamento na nuvem. |
@@ -490,7 +490,7 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `params.signVerificationKeyId` | A ID da chave de verificação de sinal é a mesma que a ID da chave pública que foi recuperada após compartilhar sua chave pública codificada em Base64 com o Experience Platform. |
+| `params.signVerificationKeyId` | A ID da chave de verificação de sinal é a mesma que a ID da chave pública que foi recuperada após compartilhar sua chave pública codificada na Base64 com o Experience Platform. |
 
 +++
 
@@ -513,7 +513,7 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado pa
 
 ### Excluir chaves de criptografia {#delete-encryption-keys}
 
-Para excluir suas chaves de criptografia, faça uma solicitação DELETE para o ponto de extremidade `/encryption/keys` e forneça sua ID de chave pública como um parâmetro de cabeçalho.
+Para excluir suas chaves de criptografia, faça uma solicitação DELETE ao ponto de extremidade `/encryption/keys` e forneça sua ID de chave pública como um parâmetro de cabeçalho.
 
 **Formato da API**
 
@@ -541,7 +541,7 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo e
 
 ### Validar chaves de criptografia {#validate-encryption-keys}
 
-Para validar suas chaves de criptografia, faça uma solicitação GET ao ponto de extremidade `/encryption/keys/validate/` e forneça a ID da chave pública que você deseja validar como um parâmetro de cabeçalho.
+Para validar suas chaves de criptografia, faça uma solicitação GET para o ponto de extremidade `/encryption/keys/validate/` e forneça a ID da chave pública que você deseja validar como um parâmetro de cabeçalho.
 
 ```http
 GET /data/foundation/connectors/encryption/keys/validate/{PUBLIC_KEY_ID}

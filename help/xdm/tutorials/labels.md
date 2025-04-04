@@ -2,16 +2,16 @@
 title: Gerenciar rótulos de uso de dados para um esquema
 description: Saiba como adicionar rótulos de uso de dados aos campos de esquema do Experience Data Model (XDM) na interface do Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: ac6af3e90c417d1c97860394ce8afb07a0a7917d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '770'
 ht-degree: 8%
 
 ---
 
 # Gerenciar rótulos de uso de dados para um esquema
 
-Todos os dados trazidos para a Adobe Experience Platform são restritos pelos esquemas do Experience Data Model (XDM). Esses dados podem estar sujeitos a restrições de uso definidas por sua organização ou por regulamentos legais. Para levar em conta isso, a Plataforma permite restringir o uso de determinados conjuntos de dados e campos por meio do uso de [rótulos de uso de dados](../../data-governance/labels/overview.md).
+Todos os dados trazidos para a Adobe Experience Platform são restritos pelos esquemas do Experience Data Model (XDM). Esses dados podem estar sujeitos a restrições de uso definidas por sua organização ou por regulamentos legais. Para levar em conta isso, o Experience Platform permite restringir o uso de determinados conjuntos de dados e campos por meio do uso de [rótulos de uso de dados](../../data-governance/labels/overview.md).
 
 Um rótulo aplicado a um campo de esquema indica as políticas de uso que se aplicam aos dados contidos nesse campo específico.
 
@@ -19,15 +19,15 @@ Rótulos podem ser aplicados a esquemas individuais e campos dentro desses esque
 
 Além disso, qualquer rótulo de campo adicionado em um esquema se propaga para todos os outros esquemas que empregam o mesmo campo de uma classe compartilhada ou grupo de campos. Isso ajuda a garantir que as regras de uso para campos semelhantes sejam consistentes em todo o modelo de dados.
 
-Este tutorial aborda as etapas para adicionar rótulos a um esquema usando o Editor de esquemas na interface do usuário da plataforma.
+Este tutorial aborda as etapas para adicionar rótulos a um esquema usando o Editor de esquemas na interface do Experience Platform.
 
 ## Introdução
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
-   * [Editor de esquemas](../ui/overview.md): saiba como criar e gerenciar esquemas e outros recursos na interface do usuário da plataforma.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): fornece a infraestrutura para aplicar restrições de uso de dados em operações da Platform, usando políticas que definem quais ações de marketing podem (ou não) ser executadas em dados rotulados.
+   * [Editor de esquemas](../ui/overview.md): saiba como criar e gerenciar esquemas e outros recursos na interface do Experience Platform.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): fornece a infraestrutura para impor restrições de uso de dados em operações do Experience Platform, usando políticas que definem quais ações de marketing podem (ou não) ser executadas em dados rotulados.
 
 ## Selecione um esquema ou campo para adicionar rótulos {#select-schema-field}
 

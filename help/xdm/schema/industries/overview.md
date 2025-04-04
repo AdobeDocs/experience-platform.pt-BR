@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Visão geral dos modelos de dados do setor
 description: Saiba mais sobre os modelos de dados padronizados para vários setores verticais que podem ser construídos usando componentes padrão do Experience Data Model (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '350'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Para ajudar a orientar sua estratégia de modelagem de dados com base em seu set
 
 ## Pré-requisitos
 
-Para ler os ERDs referenciados neste guia, você deve ter uma compreensão funcional de como os componentes XDM interagem para formar esquemas e como os esquemas XDM operam no Experience Platform como um todo. Certifique-se de ter lido a seguinte documentação de visão geral antes de continuar:
+Para ler os ERDs referenciados neste guia, você deve ter uma compreensão funcional de como os componentes XDM interagem para formar esquemas e como os esquemas XDM operam na Experience Platform como um todo. Certifique-se de ter lido a seguinte documentação de visão geral antes de continuar:
 
-* [Visão geral do sistema XDM](../../home.md): saiba como o XDM opera no ecossistema da plataforma.
+* [Visão geral do sistema XDM](../../home.md): saiba como o XDM opera no ecossistema do Experience Platform.
 * [Noções básicas sobre a composição do esquema](../../schema/composition.md): saiba como os componentes XDM (como grupos de campos de esquema, classes e tipos de dados) contribuem para a estrutura de um esquema, bem como para a função dos campos de identidade.
 
 Também é recomendável que você consulte o [guia de práticas recomendadas de modelagem de dados](../../schema/best-practices.md) para obter diretrizes gerais sobre como mapear seus dados para o XDM.

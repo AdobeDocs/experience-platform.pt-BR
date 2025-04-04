@@ -1,11 +1,11 @@
 ---
 title: Exclusões no serviço de identidade
-description: Este documento fornece uma visão geral dos vários mecanismos que você pode usar para excluir os dados de identidade no Experience Platform e para esclarecer como os gráficos de identidade podem ser afetados.
+description: Este documento fornece uma visão geral dos vários mecanismos que você pode usar para excluir seus dados de identidade no Experience Platform e para esclarecer como os gráficos de identidade podem ser afetados.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1198'
-ht-degree: 0%
+source-wordcount: '1201'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ O Serviço de identidade da Adobe Experience Platform gera gráficos de identida
 
 Os gráficos de identidade são aproveitados pelo Perfil do cliente em tempo real para criar uma visualização abrangente e singular dos atributos e comportamentos do cliente, permitindo que você forneça experiências digitais impactantes e pessoais em tempo real, para pessoas, e não para dispositivos.
 
-Este documento fornece uma visão geral dos vários mecanismos que você pode usar para excluir os dados de identidade no Experience Platform e para esclarecer como os gráficos de identidade podem ser afetados.
+Este documento fornece uma visão geral dos vários mecanismos que você pode usar para excluir seus dados de identidade no Experience Platform e para esclarecer como os gráficos de identidade podem ser afetados.
 
 ## Introdução
 
@@ -31,13 +31,13 @@ O documento abaixo faz referência aos seguintes recursos do Experience Platform
 
 ## Exclusões de identidade única
 
-As solicitações de exclusão de identidade únicas permitem excluir uma identidade em um gráfico, resultando na remoção de links vinculados a uma única identidade de usuário associada a um namespace de identidade. Você pode usar os mecanismos fornecidos por [Privacy Service](../../privacy-service/home.md) para casos de uso, como solicitações de clientes para exclusão de dados e conformidade com as regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR).
+As solicitações de exclusão de identidade únicas permitem excluir uma identidade em um gráfico, resultando na remoção de links vinculados a uma única identidade de usuário associada a um namespace de identidade. Você pode usar os mecanismos fornecidos pelo [Privacy Service](../../privacy-service/home.md) para casos de uso, como solicitações de clientes para exclusão de dados e conformidade com as regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR).
 
-As seções abaixo descrevem os mecanismos que podem ser usados para solicitações de exclusão de identidade única no Experience Platform.
+As seções abaixo descrevem os mecanismos que você pode usar para solicitações de exclusão de identidade únicas no Experience Platform.
 
 ### Exclusão de identidade única no Privacy Service
 
-O Privacy Service processa solicitações de clientes para acessar, recusar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR) e a Lei de Privacidade do Consumidor da Califórnia (CCPA). Com o Privacy Service, você pode enviar solicitações de trabalho usando a API ou a interface do usuário. Quando o Experience Platform recebe uma solicitação de exclusão do Privacy Service, a Platform envia uma confirmação para o Privacy Service de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. A exclusão da identidade individual baseia-se no namespace e/ou valor de ID fornecido. Além disso, a exclusão ocorre para todas as sandboxes associadas a uma determinada organização. Para obter mais informações, leia o manual sobre [processamento de solicitação de privacidade no Serviço de Identidade](../privacy.md).
+O Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR) e a Lei de Privacidade do Consumidor da Califórnia (CCPA). Com o Privacy Service, você pode enviar solicitações de trabalho usando a API ou a interface do usuário. Quando o Experience Platform recebe uma solicitação de exclusão do Privacy Service Experience Platform, ele envia uma confirmação para a Privacy Service de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. A exclusão da identidade individual baseia-se no namespace e/ou valor de ID fornecido. Além disso, a exclusão ocorre para todas as sandboxes associadas a uma determinada organização. Para obter mais informações, leia o manual sobre [processamento de solicitação de privacidade no Serviço de Identidade](../privacy.md).
 
 A tabela abaixo fornece um detalhamento da exclusão de identidade única no Privacy Service:
 
@@ -52,11 +52,11 @@ A tabela abaixo fornece um detalhamento da exclusão de identidade única no Pri
 
 ## Exclusão do conjunto de dados
 
-As seções a seguir descrevem os mecanismos que podem ser usados para excluir conjuntos de dados e links de identidade associados no Experience Platform.
+As seções a seguir descrevem os mecanismos que podem ser usados para excluir conjuntos de dados e links de identidade associados na Experience Platform.
 
 ### Exclusão de conjunto de dados no serviço de catálogo
 
-Você pode usar o Serviço de catálogo para enviar solicitações de exclusão do conjunto de dados. Para obter mais informações sobre como excluir conjuntos de dados com o Serviço de Catálogo, leia o manual sobre [exclusão de objetos usando a API do Serviço de Catálogo](../../catalog/api/delete-object.md). Como alternativa, você pode usar a interface do usuário da Platform para enviar solicitações de exclusão do conjunto de dados. Para obter mais informações, leia o [guia do usuário dos conjuntos de dados](../../catalog/datasets/user-guide.md#delete-a-dataset).
+Você pode usar o Serviço de catálogo para enviar solicitações de exclusão do conjunto de dados. Para obter mais informações sobre como excluir conjuntos de dados com o Serviço de Catálogo, leia o manual sobre [exclusão de objetos usando a API do Serviço de Catálogo](../../catalog/api/delete-object.md). Como alternativa, você pode usar a interface do usuário do Experience Platform para enviar solicitações de exclusão do conjunto de dados. Para obter mais informações, leia o [guia do usuário dos conjuntos de dados](../../catalog/datasets/user-guide.md#delete-a-dataset).
 
 ### Expirações do conjunto de dados na higiene de dados
 
@@ -66,7 +66,7 @@ A tabela abaixo fornece um detalhamento das diferenças entre a exclusão do con
 
 | Exclusão do conjunto de dados | Serviço de catálogo | Higiene de dados |
 | --- | --- | --- |
-| Casos de uso aceitos | Excluir conjuntos de dados completos e suas informações de identidade associadas na Platform. | Gestão de dados armazenados no Experience Platform. |
+| Casos de uso aceitos | Excluir conjuntos de dados completos e suas informações de identidade associadas na Experience Platform. | Gerenciamento de dados armazenados no Experience Platform. |
 | Latência estimada | Days | Days |
 | Serviços afetados | A exclusão de conjunto de dados por meio do Serviço de catálogo exclui os dados do Serviço de identidade, do Perfil do cliente em tempo real e do data lake. | A exclusão de conjuntos de dados por meio da higiene de dados exclui os dados do Serviço de identidade, do Perfil do cliente em tempo real e do data lake. |
 | Padrão de exclusão | Excluir identidades vinculadas do Serviço de identidade estabelecido por um conjunto de dados específico. | Excluir identidades vinculadas do Serviço de identidade estabelecido por um conjunto de dados específico, com base no agendamento de expiração. |
@@ -89,7 +89,7 @@ Abaixo está um esboço dos possíveis impactos que as exclusões podem ter no e
 
 ## Próximas etapas
 
-Esse documento abordou os vários mecanismos que você pode usar para excluir identidades e conjuntos de dados no Experience Platform. Este documento também descreve como as exclusões de identidade e conjunto de dados podem afetar os gráficos de identidade. Para obter mais informações sobre o Serviço de identidade, leia a [Visão geral do Serviço de identidade](../home.md).
+Esse documento abordou os vários mecanismos que você pode usar para excluir identidades e conjuntos de dados no Experience Platform. Este documento também descreve como as exclusões de identidade e conjunto de dados podem afetar os gráficos de identidade. Para obter mais informações sobre o Serviço de identidade, leia a [Visão geral do serviço de identidade](../home.md).
 
 <!--
 
@@ -97,7 +97,7 @@ You can use [Data hygiene](../hygiene/home.md) for data cleansing, removing anon
 
 ### Single identity deletion in the [!UICONTROL Data Hygiene] workspace
 
-The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
+The [[!UICONTROL Data Hygiene] workspace](../hygiene/ui/overview.md) in the Experience Platform UI allows you to delete consumer records that are participating in Identity Service and Real-Time Customer Profile. For a comprehensive guide on using the [!UICONTROL Data Hygiene] workspace, see the tutorial on [deleting consumer records](../hygiene/ui/record-delete.md).
 
 The table below provides a breakdown of differences between single identity deletion in Privacy Service and Data hygiene:
 

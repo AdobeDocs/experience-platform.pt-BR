@@ -5,9 +5,9 @@ title: Criar uma Conexão do PayPal Source na interface do usuário
 type: Tutorial
 description: Saiba como criar uma conexão de origem do PayPal usando a interface do Adobe Experience Platform.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '462'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 >A origem [!DNL PayPal] será substituída no final de junho de 2025.
 
-Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL PayPal] usando a interface do usuário da Platform.
+Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL PayPal] usando a interface do usuário do Experience Platform.
 
 ## Introdução
 
@@ -33,7 +33,7 @@ Se você já tiver uma conexão [!DNL PayPal] válida, ignore o restante deste d
 
 ### Coletar credenciais necessárias
 
-Para acessar a Plataforma de conta do [!DNL PayPal], você deve fornecer os seguintes valores:
+Para acessar sua Experience Platform de conta [!DNL PayPal], você deve fornecer os seguintes valores:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Para obter mais informações sobre a introdução, consulte este [[!DNL PayPal]
 
 ## Conectar sua conta do [!DNL PayPal]
 
-Depois de obter as credenciais necessárias, você poderá seguir as etapas abaixo para vincular sua conta do [!DNL PayPal] à Platform.
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL PayPal] à Experience Platform.
 
 Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
@@ -71,4 +71,4 @@ Para conectar uma conta existente, selecione a conta [!DNL PayPal] com a qual de
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL PayPal]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados de Pagamento para a Plataforma](../../dataflow/payments.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL PayPal]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados de Pagamento para a Experience Platform](../../dataflow/payments.md).

@@ -5,9 +5,9 @@ feature: Customer AI
 title: Criar segmentos do cliente com pontuações previstas
 description: Quando uma execução de previsão é concluída, as pontuações de propensão previstas são consumidas automaticamente pelos Perfis. O enriquecimento dos perfis com pontuações da IA do cliente permite a criação de segmentos de clientes para encontrar públicos com base em suas pontuações de propensão. Esta seção fornece etapas para criar segmentos usando o Construtor de segmentos.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '319'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Quando uma execução de previsão é concluída, as pontuações de propensão 
 >
 >Para utilizar esse método, o Perfil do cliente em tempo real precisa ser ativado para o conjunto de dados.
 
-Na interface da Platform, clique em **[!UICONTROL Segmentos]** na navegação à esquerda e em **[!UICONTROL Criar segmento]**.
+Na interface do Experience Platform, clique em **[!UICONTROL Segmentos]** na navegação à esquerda e em **[!UICONTROL Criar segmento]**.
 
 ![](../images/user-guide/segments_new.png)
 

@@ -3,9 +3,9 @@ title: Ponto de extremidade da API de expiração do conjunto de dados
 description: O ponto de extremidade /ttl na API da higiene de dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '1966'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ A expiração de um conjunto de dados é apenas uma operação de exclusão com 
 
 >[!NOTE]
 >
->Embora a expiração seja especificada como um instante de tempo específico, pode haver até 24 horas de atraso após a expiração antes do início da exclusão real. Depois que a exclusão é iniciada, pode levar até sete dias até que todos os rastreamentos do conjunto de dados tenham sido removidos dos sistemas da plataforma.
+>Embora a expiração seja especificada como um instante de tempo específico, pode haver até 24 horas de atraso após a expiração antes do início da exclusão real. Depois que a exclusão é iniciada, pode levar até sete dias para que todos os rastreamentos do conjunto de dados sejam removidos dos sistemas do Experience Platform.
 
 A qualquer momento antes da exclusão do conjunto de dados ser iniciada, você pode cancelar a expiração ou modificar a hora do acionador. Depois de cancelar uma expiração de conjunto de dados, você pode reabri-la definindo uma nova expiração.
 
@@ -28,7 +28,7 @@ Depois que a exclusão do conjunto de dados for iniciada, seu trabalho de expira
 >
 >Se um conjunto de dados estiver definido para expirar, você deverá alterar manualmente todos os fluxos de dados que possam estar assimilando dados nesse conjunto de dados para que seus fluxos de trabalho downstream não sejam afetados negativamente.
 
-O Gerenciamento avançado do ciclo de vida dos dados suporta exclusões de conjuntos de dados por meio do ponto de extremidade de expiração do conjunto de dados e exclusões de ID (dados em nível de linha) usando identidades primárias por meio do [ponto de extremidade da ordem de trabalho](./workorder.md). Também é possível gerenciar [expirações do conjunto de dados](../ui/dataset-expiration.md) e [exclusões de registros](../ui/record-delete.md) por meio da interface do usuário da Platform. Consulte a documentação vinculada para obter mais informações.
+O Gerenciamento avançado do ciclo de vida dos dados suporta exclusões de conjuntos de dados por meio do ponto de extremidade de expiração do conjunto de dados e exclusões de ID (dados em nível de linha) usando identidades primárias por meio do [ponto de extremidade da ordem de trabalho](./workorder.md). Também é possível gerenciar [expirações do conjunto de dados](../ui/dataset-expiration.md) e [exclusões de registros](../ui/record-delete.md) por meio da interface do usuário do Experience Platform. Consulte a documentação vinculada para obter mais informações.
 
 >[!NOTE]
 >

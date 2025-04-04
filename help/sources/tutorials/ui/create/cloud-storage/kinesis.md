@@ -3,7 +3,7 @@ title: Criar uma conexão Amazon Kinesis Source na interface
 description: Saiba como criar uma conexão de origem do Amazon Kinesis usando a interface do usuário do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 2%
@@ -14,9 +14,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->A origem [!DNL Amazon Kinesis] está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
+>A origem [!DNL Amazon Kinesis] está disponível no catálogo de origens para usuários que compraram o Real-Time Customer Data Platform Ultimate.
 
-Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para autenticar um conector de origem [!DNL Amazon Kinesis] (a seguir denominado [!DNL "Kinesis"]) usando a interface do usuário [!DNL Platform].
+Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para autenticar um conector de origem [!DNL Amazon Kinesis] (a seguir denominado [!DNL "Kinesis"]) usando a interface do usuário [!DNL Experience Platform].
 
 ## Introdução
 
@@ -43,13 +43,13 @@ Para obter mais informações sobre esses valores, consulte [este [!DNL Kinesis]
 
 ## Conectar sua conta do [!DNL Kinesis]
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Kinesis] ao [!DNL Platform].
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Kinesis] ao [!DNL Experience Platform].
 
 Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria **[!UICONTROL Armazenamento na Nuvem]**, selecione **[!UICONTROL Amazon Kinesis]**. Se esta for a primeira vez que você usa este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo conector [!DNL Kinesis].
+Na categoria **[!UICONTROL Armazenamento na nuvem]**, selecione **[!UICONTROL Amazon Kinesis]**. Se esta for a primeira vez que você usa este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo conector [!DNL Kinesis].
 
 ![](../../../../images/tutorials/create/kinesis/catalog.png)
 
@@ -69,4 +69,4 @@ Para conectar uma conta existente, selecione a conta [!DNL Kinesis] com a qual d
 
 ## Próximas etapas
 
-Seguindo este tutorial, você se conectou à conta do [!DNL Kinesis] para [!DNL Platform]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento na nuvem para o  [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).
+Seguindo este tutorial, você se conectou à conta do [!DNL Kinesis] para [!DNL Experience Platform]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento na nuvem para o  [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md).

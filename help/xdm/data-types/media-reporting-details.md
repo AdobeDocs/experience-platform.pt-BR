@@ -2,9 +2,9 @@
 title: Tipo de dados de detalhes de relatórios de mídia
 description: Saiba mais sobre o tipo de dados Modelo de dados de experiência (XDM) dos Detalhes de relatórios de mídia.
 exl-id: e8bf20a9-9ac0-4339-8200-5d6d9328ce3b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Os campos mencionados abaixo não são usados diretamente para criar solicitações. Em vez disso, a coleção de campos enviados para o Adobe Experience Platform ou o Adobe Analytics é montada a partir dos dados de solicitação, e as métricas são incorporadas ou processadas pela infraestrutura do servidor. Embora a Platform colete vários tipos de eventos de usuário, os relatórios retornados para você focalizam eventos específicos, como `media.sessionStart`, `media.adStart` e `media.sessionComplete`. Isso significa que, embora você transmita 12 tipos de eventos durante a coleta, seus relatórios só apresentarão detalhamentos baseados nos cinco eventos listados abaixo.
+>Os campos mencionados abaixo não são usados diretamente para criar solicitações. Em vez disso, a coleção de campos enviados para o Adobe Experience Platform ou o Adobe Analytics é montada a partir dos dados de solicitação, e as métricas são incorporadas ou processadas pela infraestrutura do servidor. Embora a Experience Platform colete vários tipos de eventos de usuário, os relatórios retornados a você focalizam eventos específicos, como `media.sessionStart`, `media.adStart` e `media.sessionComplete`. Isso significa que, embora você transmita 12 tipos de eventos durante a coleta, seus relatórios só apresentarão detalhamentos baseados nos cinco eventos listados abaixo.
 
 +++Selecione para exibir um diagrama do tipo de dados [!UICONTROL Detalhes de Relatórios de Mídia].
 ![Um diagrama do tipo de dados [!UICONTROL Detalhes de Relatórios de Mídia].](../images/data-types/media-reporting-details.png)

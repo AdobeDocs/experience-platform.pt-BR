@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;HDFS;hdfs;Apache HDFS;apache hdfs
+keywords: Experience Platform;home;popular tópicos;HDFS;hdfs;Apache HDFS;apache hdfs;;home;popular topics;HDFS;hdfs;Apache HDFS;apache hdfs
 solution: Experience Platform
 title: Visão geral do Apache HDFS Source Connector
 description: Saiba como conectar o Apache HDFS ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -34,9 +34,9 @@ Veja a seguir uma lista de restrições que você deve considerar ao nomear seu 
 - Caracteres de caminho de URL inválidos não permitidos. Pontos de código como `\uE000`, embora válidos em nomes de arquivo NTFS, não são caracteres Unicode válidos. Além disso, alguns caracteres ASCII ou Unicode, como caracteres de controle (0x00 a 0x1F, \u0081 etc.), também não são permitidos. Para regras que regem cadeias de caracteres Unicode em HTTP/1.1, consulte [RFC 2616, Seção 2.2: Regras Básicas](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - Os seguintes nomes de arquivo não são permitidos: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractere de ponto (.) e dois caracteres de ponto (..).
 
-## Conectar [!DNL Apache] HDFS a [!DNL Platform]
+## Conectar [!DNL Apache] HDFS a [!DNL Experience Platform]
 
-A documentação abaixo fornece informações sobre como conectar o HDFS [!DNL Apache] ao [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o HDFS [!DNL Apache] ao [!DNL Experience Platform] usando APIs ou a interface do usuário:
 
 ### Uso de APIs
 

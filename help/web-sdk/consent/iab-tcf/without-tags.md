@@ -1,18 +1,18 @@
 ---
-title: Integrar o suporte ao IAB TCF 2.0 usando o SDK da Web da Adobe Experience Platform
+title: Integrar o suporte ao IAB TCF 2.0 usando o Adobe Experience Platform Web SDK
 description: Saiba como configurar o suporte IAB TCF 2.0 para seu site sem usar tags.
 seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '617'
 ht-degree: 0%
 
 ---
 
-# Integrar o suporte ao IAB TCF 2.0 com o SDK da Web da plataforma
+# Integrar o suporte ao IAB TCF 2.0 com o Experience Platform Web SDK
 
-Este guia mostra como integrar a Estrutura de transparência e consentimento interativa do Advertising Bureau, versão 2.0 (IAB TCF 2.0) com o SDK da Web da Adobe Experience Platform sem usar tags. Para obter uma visão geral da integração com a TCF do IAB 2.0, leia a [visão geral](./overview.md). Para obter um guia sobre como integrar com tags, leia o [guia da TCF do IAB 2.0 para tags](./with-tags.md).
+Este guia mostra como integrar a Estrutura de transparência e consentimento do Interative Advertising Bureau, versão 2.0 (IAB TCF 2.0) com o Adobe Experience Platform Web SDK sem usar tags. Para obter uma visão geral da integração com a TCF do IAB 2.0, leia a [visão geral](./overview.md). Para obter um guia sobre como integrar com tags, leia o [guia da TCF do IAB 2.0 para tags](./with-tags.md).
 
 ## Introdução
 
@@ -22,9 +22,9 @@ Este guia usa a interface `__tcfapi` para acessar as informações de consentime
 >
 >Esses exemplos presumem que, no momento em que o código for executado, `window.__tcfapi` estará definido na página. Os CMPs podem fornecer um gancho no qual você pode executar essas funções quando o objeto `__tcfapi` estiver pronto.
 
-Para usar o IAB TCF 2.0 com tags e a extensão SDK da Web da Adobe Experience Platform, é necessário ter um esquema XDM disponível. Se você não tiver configurado nenhum deles, comece visualizando esta página antes de continuar.
+Para usar o IAB TCF 2.0 com tags e a extensão Adobe Experience Platform Web SDK, é necessário ter um esquema XDM disponível. Se você não tiver configurado nenhum deles, comece visualizando esta página antes de continuar.
 
-Além disso, este guia requer que você tenha uma compreensão funcional do SDK da Web da Adobe Experience Platform. Para obter uma atualização rápida, leia a [visão geral do SDK da Web da Adobe Experience Platform](../../home.md) e a documentação de [Perguntas frequentes](../../faq.md).
+Além disso, este guia requer que você tenha uma compreensão funcional do Adobe Experience Platform Web SDK. Para obter uma atualização rápida, leia a [visão geral do Adobe Experience Platform Web SDK](../../home.md) e a documentação de [Perguntas frequentes](../../faq.md).
 
 ## Ativação do consentimento padrão
 
@@ -106,4 +106,4 @@ A outra maneira de adicionar as informações de consentimento a cada solicitaç
 
 ## Próximas etapas
 
-Agora que você aprendeu a usar o IAB TCF 2.0 com a extensão SDK da Web da plataforma, também é possível optar por integrar com outras soluções de Adobe, como Adobe Analytics ou Adobe Real-time Customer Data Platform. Consulte a [Visão geral da Estrutura de transparência e consentimento 2.0 do IAB](./overview.md) para obter mais informações.
+Agora que você aprendeu a usar a TCF do IAB 2.0 com a extensão do Experience Platform Web SDK, também é possível optar por integrar a outras soluções da Adobe, como o Adobe Analytics ou o Adobe Real-Time Customer Data Platform. Consulte a [Visão geral da Estrutura de transparência e consentimento 2.0 do IAB](./overview.md) para obter mais informações.

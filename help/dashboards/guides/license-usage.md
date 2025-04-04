@@ -4,9 +4,9 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3408'
+source-wordcount: '3413'
 ht-degree: 14%
 
 ---
@@ -132,13 +132,13 @@ ht-degree: 14%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
 
-Você pode exibir informações importantes sobre o uso de licenças da sua organização no painel [!UICONTROL Uso de licenças] do Adobe Experience Platform. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância da Platform.
+Você pode exibir informações importantes sobre o uso de licenças da sua organização no painel [!UICONTROL Uso de licenças] do Adobe Experience Platform. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância do Experience Platform.
 
 Os relatórios de uso de licença fornecem um alto grau de granularidade. A maioria das métricas é compartilhada entre vários produtos e reflete o uso agregado em todos os produtos que as usam, não nos totais por produto. O painel fornece o uso consolidado dessas métricas em todas as sandboxes de produção ou desenvolvimento, e a métrica de uso de uma sandbox específica. Os seguintes aplicativos da Experience Platform podem ser rastreados com métricas de uso: Real-Time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
 
 Este guia descreve como acessar e trabalhar com o painel de uso de licença na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
-Para obter uma visão geral da interface do usuário da Platform, consulte o [guia da interface do usuário do Experience Platform](../../landing/ui-guide.md).
+Para obter uma visão geral da interface do usuário do Experience Platform, consulte o [guia da interface do usuário do Experience Platform](../../landing/ui-guide.md).
 
 ## Dados do painel de [!UICONTROL uso da licença]
 
@@ -148,11 +148,11 @@ Os dados nesse painel são exibidos exatamente como eram exibidos no momento esp
 
 >[!NOTE]
 >
->A maioria das métricas no painel é atualizada diariamente, com base em um instantâneo da instância da Platform. [!UICONTROL Linhas do CJA Disponíveis] é uma exceção e é atualizada mensalmente. As métricas rotuladas com &quot;pacotes&quot;, como [!UICONTROL Pacotes de Usuários do Serviço de Consulta Adhoc], [!UICONTROL Número de Pacotes de Riqueza de Perfil] e [!UICONTROL Número de Pacotes de Segmentação de Streaming], refletem os direitos de licença para ofertas complementares e não acompanham o uso contínuo. As alterações feitas após o instantâneo não estarão visíveis até que o próximo instantâneo seja tirado.
+>A maioria das métricas no painel é atualizada diariamente, com base em um instantâneo da sua instância do Experience Platform. [!UICONTROL Linhas do CJA Disponíveis] é uma exceção e é atualizada mensalmente. As métricas rotuladas com &quot;pacotes&quot;, como [!UICONTROL Pacotes de Usuários do Serviço de Consulta Adhoc], [!UICONTROL Número de Pacotes de Riqueza de Perfil] e [!UICONTROL Número de Pacotes de Segmentação de Streaming], refletem os direitos de licença para ofertas complementares e não acompanham o uso contínuo. As alterações feitas após o instantâneo não estarão visíveis até que o próximo instantâneo seja tirado.
 
 ## Explorar o painel de uso de licença {#explore}
 
-Para navegar até o painel de uso de licença na interface do usuário da Platform, selecione **[!UICONTROL Uso da licença]** no painel esquerdo. O painel contém duas guias: **[!UICONTROL Métricas]** e **[!UICONTROL Produtos]**.
+Para navegar até o painel de uso da licença na interface do Experience Platform, selecione **[!UICONTROL Uso da licença]** no painel esquerdo. O painel contém duas guias: **[!UICONTROL Métricas]** e **[!UICONTROL Produtos]**.
 
 >[!NOTE]
 >
@@ -338,4 +338,4 @@ A disponibilidade dessas métricas e a definição específica de cada uma delas
 
 Depois de ler este documento, você pode localizar o painel de uso da licença e exibir as métricas de uso para cada produto comprado, para todas as sandboxes de produção ou desenvolvimento e para uma sandbox específica. Você pode encontrar mais informações sobre métricas disponíveis para sua organização, com base no licenciamento que sua organização adquiriu.
 
-Para saber mais sobre outros recursos disponíveis na interface do usuário do Experience Platform, consulte o [guia da interface do usuário da plataforma](../../landing/ui-guide.md).
+Para saber mais sobre outros recursos disponíveis na interface do usuário do Experience Platform, consulte o [guia da interface do usuário do Experience Platform](../../landing/ui-guide.md).

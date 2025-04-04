@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;monitorar identidades;monitorar fluxos de dados;fluxos de dados;identidades;
-description: O serviço de identidade da Adobe Experience Platform fornece uma visão abrangente dos clientes e do comportamento deles ao unir as identidades de vários dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real. Este tutorial fornece instruções sobre como monitorar fluxos de dados com identidades usando a interface do usuário Experience Platform.
+description: O serviço de identidade da Adobe Experience Platform fornece uma visão abrangente dos clientes e do comportamento deles ao unir as identidades de vários dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e de impacto em tempo real. Este tutorial fornece instruções sobre como monitorar fluxos de dados com identidades usando a interface do usuário do Experience Platform.
 title: Monitorar fluxos de dados para identidades na interface
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1155'
 ht-degree: 9%
 
 ---
@@ -19,10 +19,10 @@ O painel de monitoramento fornece uma representação visual da atividade dos da
 
 ## Introdução {#getting-started}
 
-- [Fluxos de dados](../home.md): os fluxos de dados são uma representação de trabalhos de dados que movem dados pela Plataforma. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para conjuntos de dados de destino, para [!DNL Identity] e [!DNL Profile] e para [!DNL Destinations].
+- [Fluxos de dados](../home.md): os fluxos de dados são uma representação de trabalhos de dados que movem dados pela Experience Platform. Os fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para conjuntos de dados de destino, para [!DNL Identity] e [!DNL Profile] e para [!DNL Destinations].
    - [Execuções de fluxo de dados](../../sources/notifications.md): as execuções de fluxo de dados são os trabalhos agendados recorrentes com base na configuração de frequência dos fluxos de dados selecionados.
 - [Serviço de identidade](../../identity-service/home.md): obtenha uma melhor visão dos clientes individuais e de seu comportamento unindo as identidades de vários dispositivos e sistemas.
-- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ## Painel de monitoramento de identidades {#identity-metrics}
 
@@ -54,7 +54,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 | Métricas de identidade | Descrição |
 | ---------------- | ----------- |
 | **[!UICONTROL Registros recebidos]** | O número de registros recebidos do data lake. |
-| **[!UICONTROL Registros com falha]** | O número de registros que não foram assimilados na Platform devido a erros nos dados. |
+| **[!UICONTROL Registros com falha]** | O número de registros que não foram assimilados na Experience Platform devido a erros nos dados. |
 | **[!UICONTROL Registros ignorados]** | O número de registros que foram assimilados, mas não em [!DNL Identity Service] porque havia apenas um identificador na linha de registro. |
 | **[!UICONTROL Registros assimilados]** | O número de registros assimilados em [!DNL Identity Service]. |
 | **[!UICONTROL Identidades adicionadas]** | O número de novos identificadores de rede adicionados a [!DNL Identity Service]. |
@@ -78,7 +78,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 | **[!UICONTROL Conjunto de dados]** | O nome do conjunto de dados no qual o fluxo de dados está inserindo. |
 | **[!UICONTROL Nome do Source]** | O nome da origem à qual o fluxo de dados pertence. |
 | **[!UICONTROL Registros recebidos]** | O número de registros recebidos do data lake. |
-| **[!UICONTROL Registros com falha]** | O número de registros que não foram assimilados na Platform devido a erros nos dados. |
+| **[!UICONTROL Registros com falha]** | O número de registros que não foram assimilados na Experience Platform devido a erros nos dados. |
 | **[!UICONTROL Registros ignorados]** | O número de registros que foram assimilados, mas não em [!DNL Identity Service] porque havia apenas um identificador na linha de registro. |
 | **[!UICONTROL Registros assimilados]** | O número de registros assimilados em [!DNL Identity Service]. |
 | **[!UICONTROL Total de registros]** | A contagem total de todos os registros, incluindo registros com falha, registros ignorados, identidades adicionadas e registros duplicados. |
@@ -100,7 +100,7 @@ As seguintes métricas estão disponíveis para essa visualização de painel:
 | Métrica | Descrição |
 | -------| ----------- |
 | **[!UICONTROL Registros recebidos]** | O número de registros recebidos do data lake. |
-| **[!UICONTROL Registros com falha]** | O número de registros que não foram assimilados na Platform devido a erros nos dados. |
+| **[!UICONTROL Registros com falha]** | O número de registros que não foram assimilados na Experience Platform devido a erros nos dados. |
 | **[!UICONTROL Registros ignorados]** | O número de registros que foram assimilados, mas não em [!DNL Identity Service] porque havia apenas um identificador na linha de registro. |
 | **[!UICONTROL Registros assimilados]** | O número de registros assimilados em [!DNL Identity Service]. |
 | **[!UICONTROL Identidades adicionadas]** | O número de novos identificadores de rede adicionados a [!DNL Identity Service]. |

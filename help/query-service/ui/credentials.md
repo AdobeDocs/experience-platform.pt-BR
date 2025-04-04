@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de credenciais do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1830'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ O Adobe Experience Platform Query Service permite conectar-se com clientes exter
 
 >[!NOTE]
 >
->O painel de credenciais não está disponível automaticamente para todos os(as) usuários(as). Entre em contato com a equipe de conta do Adobe para solicitar que a guia [!UICONTROL Credenciais] seja incluída no espaço de trabalho do Serviço de consulta, se necessário. Se solicitado, essa alteração abrange toda a organização e é realizada pela equipe de engenharia do Adobe. Não é uma configuração controlada por usuários.
+>O painel de credenciais não está disponível automaticamente para todos os(as) usuários(as). Entre em contato com a equipe de conta da Adobe para solicitar que a guia [!UICONTROL Credenciais] seja incluída no espaço de trabalho do Serviço de consulta, se necessário. Se solicitado, essa alteração abrange toda a organização e é realizada pela equipe de engenharia da Adobe. Não é uma configuração controlada por usuários.
 
 ## Credenciais expiradas {#expiring-credentials}
 
@@ -32,7 +32,7 @@ Você pode usar credenciais com expiração para configurar rapidamente uma cone
 
 A seção **[!UICONTROL Credenciais que estão expirando]** fornece as seguintes informações:
 
-- **[!UICONTROL Host]**: o nome do host ao qual conectar seu cliente. Ele incorpora o nome da sua organização, como visto na faixa superior da interface do usuário da Platform.
+- **[!UICONTROL Host]**: o nome do host ao qual conectar seu cliente. Ele incorpora o nome da sua organização, como visto na faixa superior da interface do usuário do Experience Platform.
 - **[!UICONTROL Porta]**: o número da porta do host ao qual se conectar.
 - **[!UICONTROL Banco de dados]**: o nome do banco de dados ao qual conectar um cliente.
 - **[!UICONTROL Nome de usuário]**: o nome de usuário usado para se conectar ao Serviço de Consulta.
@@ -42,15 +42,15 @@ A seção **[!UICONTROL Credenciais que estão expirando]** fornece as seguintes
 
 >[!TIP]
 >
->Para alterar a vida útil da sessão da conexão de credenciais com o Serviço de Consulta que está expirando, navegue até [Admin Console](https://adminconsole.adobe.com/) e selecione as seguintes opções na tela: **Configurações** > **Privacidade e Segurança** > **Configurações de Autenticação** > **Configurações avançadas** > **Vida útil máxima da sessão**.
+>Para alterar a vida útil da sessão da sua conexão de credenciais com o Serviço de Consulta expirando, navegue até a [Admin Console](https://adminconsole.adobe.com/) e selecione as seguintes opções na tela: **Configurações** > **Privacidade e Segurança** > **Configurações de Autenticação** > **Configurações avançadas** > **Vida útil máxima da sessão**.
 >
->![A guia Configurações de Admin Console com Privacidade e Segurança, Configurações de autenticação e Vida máxima da sessão foi realçada.](../images/ui/credentials/max-session-life.png)
+>![A guia Configurações do Admin Console com Privacidade e Segurança, Configurações de autenticação e Vida máxima da sessão foi realçada.](../images/ui/credentials/max-session-life.png)
 >
 >Consulte a documentação de Ajuda do Adobe para obter mais informações sobre as [Configurações avançadas](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) oferecidas pelo Admin Console.
 
 ### Conectar-se aos dados do Customer Journey Analytics nas sessões de consulta {#connect-to-customer-journey-analytics}
 
-Use a extensão Customer Journey Analytics BI com Power BI Tableau para acessar suas [visualizações de dados](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) do Customer Journey Analytics com SQL. Ao integrar o Serviço de consulta à extensão BI, você pode acessar suas visualizações de dados diretamente nas sessões do Serviço de consulta. Essa integração simplifica a funcionalidade das ferramentas de BI que usam o Serviço de consulta como interface PostgreSQL. Essa funcionalidade elimina a necessidade de duplicar visualizações de dados em ferramentas de BI, garante a geração de relatórios consistentes entre plataformas e simplifica a integração de dados de Customer Journey Analytics com outras origens em plataformas de BI.
+Use a extensão Customer Journey Analytics BI com Power BI ou Tableau para acessar suas [visualizações de dados](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) do Customer Journey Analytics com SQL. Ao integrar o Serviço de consulta à extensão BI, você pode acessar suas visualizações de dados diretamente nas sessões do Serviço de consulta. Essa integração simplifica a funcionalidade das ferramentas de BI que usam o Serviço de consulta como interface PostgreSQL. Essa funcionalidade elimina a necessidade de duplicar visualizações de dados em ferramentas de BI, garante a geração de relatórios consistentes entre plataformas e simplifica a integração dos dados do Customer Journey Analytics com outras fontes em plataformas de BI.
 
 Consulte a documentação para saber como [conectar o Serviço de consulta a uma variedade de aplicativos de cliente de desktop](../clients/overview.md), como [Power BI](../clients/power-bi.md) ou [Tableau](../clients/tableau.md)
 
@@ -58,17 +58,17 @@ Consulte a documentação para saber como [conectar o Serviço de consulta a uma
 >
 >Um projeto do espaço de trabalho do Customer Journey Analytics e uma visualização de dados são necessários para usar essa funcionalidade.
 
-Para acessar seus dados de Customer Journey Analytics no Power BI ou Tableau, selecione o menu suspenso [!UICONTROL Banco de Dados] e, em seguida, `prod:cja` nas opções disponíveis. Em seguida, copie os parâmetros de credenciais do [!DNL Postgres] (Host, Porta, Banco de Dados, Nome de Usuário e outros) para uso na sua configuração do Power BI ou Tableau.
+Para acessar os dados do Customer Journey Analytics no Power BI ou Tableau, selecione o menu suspenso [!UICONTROL Banco de Dados] e `prod:cja` nas opções disponíveis. Em seguida, copie os parâmetros de credenciais do [!DNL Postgres] (Host, Porta, Banco de Dados, Nome de Usuário e outros) para uso na sua configuração do Power BI ou Tableau.
 
 ![A guia de credenciais do Serviço de Consulta com a lista suspensa de banco de dados foi realçada.](../images/ui/credentials/database-dropdown.png)
 
 >[!NOTE]
 >
->Quando você conecta o Power BI Tableau ao Customer Journey Analytics, o direito de &quot;sessões simultâneas&quot; do Serviço de consulta é consumido. Se sessões e consultas adicionais forem necessárias, um complemento de pacote de usuários de consulta ad hoc adicional poderá ser adquirido para obter cinco sessões simultâneas adicionais e uma consulta simultânea adicional.
+>Quando você conecta o Power BI ou o Tableau ao Customer Journey Analytics, o direito de &quot;sessões simultâneas&quot; do Serviço de consulta é consumido. Se sessões e consultas adicionais forem necessárias, um complemento de pacote de usuários de consulta ad hoc adicional poderá ser adquirido para obter cinco sessões simultâneas adicionais e uma consulta simultânea adicional.
 
-Você também pode acessar seus dados de Customer Journey Analytics diretamente do Editor de consultas ou da CLI do Postgres. Para fazer isso, faça referência ao banco de dados `cja` ao gravar sua consulta. Consulte o [guia de criação de consultas](./user-guide.md#query-authoring) do Editor de consultas para obter mais informações sobre como gravar, executar e salvar consultas.
+Você também pode acessar os dados do Customer Journey Analytics diretamente do Editor de consultas ou da CLI do Postgres. Para fazer isso, faça referência ao banco de dados `cja` ao gravar sua consulta. Consulte o [guia de criação de consultas](./user-guide.md#query-authoring) do Editor de consultas para obter mais informações sobre como gravar, executar e salvar consultas.
 
-Consulte o [guia de extensão de BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) para obter instruções completas sobre como acessar suas visualizações de dados de Customer Journey Analytics com o SQL.
+Consulte o [guia de extensão de BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) para obter instruções completas sobre como acessar suas visualizações de dados do Customer Journey Analytics com SQL.
 
 ## Credenciais sem expiração {#non-expiring-credentials}
 
@@ -99,7 +99,7 @@ Todas as permissões necessárias agora estão configuradas no Adobe Developer C
 
 ### Gerar credenciais {#generate-credentials}
 
-Para criar um conjunto de credenciais sem expiração, volte para a interface do usuário da Platform e selecione **[!UICONTROL Consultas]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Consultas]. Em seguida, selecione a guia **[!UICONTROL Credenciais]** seguida por **[!UICONTROL Gerar credenciais]**.
+Para criar um conjunto de credenciais sem expiração, retorne à interface do usuário do Experience Platform e selecione **[!UICONTROL Consultas]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Consultas]. Em seguida, selecione a guia **[!UICONTROL Credenciais]** seguida por **[!UICONTROL Gerar credenciais]**.
 
 ![O painel Consultas com a guia Credenciais e as credenciais Gerar realçadas.](../images/ui/credentials/generate-credentials.png)
 

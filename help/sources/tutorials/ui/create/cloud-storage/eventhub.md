@@ -3,10 +3,10 @@ title: Criar uma conexão do Source com os Hubs de Eventos do Azure na interface
 description: Saiba como criar uma conexão de origem do Azure Event Hubs usando a interface do usuário do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7e67e213-8ccb-4fa5-b09f-ae77aba8614c
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1097'
-ht-degree: 2%
+source-wordcount: '1098'
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->A origem [!DNL Azure Event Hubs] está disponível no catálogo de origens para usuários que compraram o Real-time Customer Data Platform Ultimate.
+>A origem [!DNL Azure Event Hubs] está disponível no catálogo de origens para usuários que compraram o Real-Time Customer Data Platform Ultimate.
 
 Leia este tutorial para saber como criar uma conta do [!DNL Azure Event Hubs] usando a interface do usuário do Adobe Experience Platform.
 
@@ -56,7 +56,7 @@ Para autenticar o conector de origem do [!DNL Event Hubs], você deve fornecer v
 
 | Credencial | Descrição |
 | --- | --- |
-| ID do inquilino | A ID do locatário da qual você deseja solicitar permissão. Sua ID de locatário pode ser formatada como um GUID ou como um nome amigável. **Observação**: a ID do locatário é chamada de &quot;ID do Diretório&quot; na interface [!DNL Microsoft Azure]. |
+| ID do locatário | A ID do locatário da qual você deseja solicitar permissão. Sua ID de locatário pode ser formatada como um GUID ou como um nome amigável. **Observação**: a ID do locatário é chamada de &quot;ID do Diretório&quot; na interface [!DNL Microsoft Azure]. |
 | ID de cliente | A ID do aplicativo atribuída ao seu aplicativo. Você pode recuperar essa ID do portal do [!DNL Microsoft Entra ID] no qual você registrou o [!DNL Azure Active Directory]. |
 | Valor do segredo do cliente | O segredo do cliente usado com a ID do cliente para autenticar seu aplicativo. Você pode recuperar o segredo do cliente no portal [!DNL Microsoft Entra ID] em que registrou o [!DNL Azure Active Directory]. |
 | Namespace | O namespace do [!DNL Event Hub] que você está acessando. Um namespace [!DNL Event Hub] fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
@@ -67,7 +67,7 @@ Para obter mais informações sobre [!DNL Azure Active Directory], leia o [Guia 
 
 | Credencial | Descrição |
 | --- | --- |
-| ID do inquilino | A ID do locatário da qual você deseja solicitar permissão. Sua ID de locatário pode ser formatada como um GUID ou como um nome amigável. **Observação**: a ID do locatário é chamada de &quot;ID do Diretório&quot; na interface [!DNL Microsoft Azure]. |
+| ID do locatário | A ID do locatário da qual você deseja solicitar permissão. Sua ID de locatário pode ser formatada como um GUID ou como um nome amigável. **Observação**: a ID do locatário é chamada de &quot;ID do Diretório&quot; na interface [!DNL Microsoft Azure]. |
 | ID de cliente | A ID do aplicativo atribuída ao seu aplicativo. Você pode recuperar essa ID do portal do [!DNL Microsoft Entra ID] no qual você registrou o [!DNL Azure Active Directory]. |
 | Valor do segredo do cliente | O segredo do cliente usado com a ID do cliente para autenticar seu aplicativo. Você pode recuperar o segredo do cliente no portal [!DNL Microsoft Entra ID] em que registrou o [!DNL Azure Active Directory]. |
 | Namespace | O namespace do [!DNL Event Hub] que você está acessando. Um namespace [!DNL Event Hub] fornece um contêiner de escopo exclusivo, no qual você pode criar um ou mais [!DNL Event Hubs]. |
@@ -77,11 +77,11 @@ Para obter mais informações sobre [!DNL Azure Active Directory], leia o [Guia 
 
 >[!ENDTABS]
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Event Hubs] ao Experience Platform.
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Event Hubs] à Experience Platform.
 
 ## Conectar sua conta do [!DNL Event Hubs]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -142,4 +142,4 @@ Para criar uma conta [!DNL Event Hubs] com autenticação do Ative Diretory do A
 
 ## Próximas etapas
 
-Seguindo este tutorial, você conectou sua conta do [!DNL Event Hubs] ao Experience Platform. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento na nuvem para o Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md).
+Seguindo este tutorial, você conectou sua conta do [!DNL Event Hubs] à Experience Platform. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para o Experience Platform](../../dataflow/streaming/cloud-storage-streaming.md).

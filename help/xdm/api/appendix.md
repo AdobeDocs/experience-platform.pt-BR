@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;compatibilidade;Compatibilidade;modo de compatibilidade;modo de compatibilidade;tipo de campo;tipos de campo;
+keywords: Experience Platform;home;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;compatibilidade;Compatibilidade;modo de compatibilidade;modo de compatibilidade;tipo de campo;tipos de campo;
 solution: Experience Platform
 title: Apêndice do guia da API do registro de esquema
 description: Este documento fornece informações adicionais relacionadas ao trabalho com a API do Registro de esquema.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 0%
@@ -57,9 +57,9 @@ Você pode filtrar os resultados usando o parâmetro `property`, que é usado pa
 
 ## Modo de compatibilidade {#compatibility}
 
-O [!DNL Experience Data Model] (XDM) é uma especificação documentada publicamente, orientada pela Adobe para melhorar a interoperabilidade, a expressividade e o poder das experiências digitais. O Adobe mantém o código-fonte e as definições formais do XDM em um [projeto de código aberto no GitHub](https://github.com/adobe/xdm/). Essas definições são escritas em Notação padrão XDM, usando JSON-LD (Notação de objeto JavaScript para dados vinculados) e Esquema JSON como a gramática para definir esquemas XDM.
+O [!DNL Experience Data Model] (XDM) é uma especificação documentada publicamente, orientada pela Adobe para melhorar a interoperabilidade, a expressividade e o potencial das experiências digitais. O Adobe mantém o código-fonte e as definições formais do XDM em um [projeto de código aberto no GitHub](https://github.com/adobe/xdm/). Essas definições são escritas em Notação padrão XDM, usando JSON-LD (Notação de objeto JavaScript para dados vinculados) e Esquema JSON como a gramática para definir esquemas XDM.
 
-Ao observar as definições formais de XDM no repositório público, é possível observar que o XDM padrão é diferente do que você vê no Adobe Experience Platform. O que você está vendo no [!DNL Experience Platform] é chamado de Modo de Compatibilidade e fornece um mapeamento simples entre o XDM padrão e a maneira como é usado no [!DNL Platform].
+Ao observar as definições formais de XDM no repositório público, é possível observar que o XDM padrão é diferente do que você vê no Adobe Experience Platform. O que você está vendo no [!DNL Experience Platform] é chamado de Modo de Compatibilidade e fornece um mapeamento simples entre o XDM padrão e a maneira como é usado no [!DNL Experience Platform].
 
 ### Como o modo de compatibilidade funciona
 
@@ -132,6 +132,6 @@ A Adobe Experience Platform foi projetada para trabalhar com várias soluções 
 
 A maioria dos serviços do [!DNL Experience Platform], incluindo [!DNL Catalog], [!DNL Data Lake] e [!DNL Real-Time Customer Profile], usa [!DNL Compatibility Mode] no lugar do XDM padrão. A API [!DNL Schema Registry] também usa [!DNL Compatibility Mode], e os exemplos neste documento são todos mostrados usando [!DNL Compatibility Mode].
 
-Vale a pena saber que um mapeamento ocorre entre o XDM padrão e a forma como ele é operacionalizado no [!DNL Experience Platform], mas não deve afetar o uso dos serviços do [!DNL Platform].
+Vale a pena saber que um mapeamento ocorre entre o XDM padrão e a forma como ele é operacionalizado no [!DNL Experience Platform], mas não deve afetar o uso dos serviços do [!DNL Experience Platform].
 
 O projeto de código aberto está disponível para você, mas quando se trata de interagir com recursos por meio do [!DNL Schema Registry], os exemplos de API neste documento fornecem as práticas recomendadas que você deve conhecer e seguir.

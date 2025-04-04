@@ -4,10 +4,10 @@ title: Visão geral de alertas
 description: Saiba mais sobre os alertas na Adobe Experience Platform, incluindo a estrutura de como as regras de alerta são definidas.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '804'
+ht-degree: 3%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar a [[!DNL Observability Insights] API](../api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreram erros.
 
-Quando um determinado conjunto de condições em suas operações do Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), o Platform pode enviar mensagens de alerta a qualquer usuário em sua organização que se inscreveu neles. Essas mensagens podem se repetir em um intervalo predefinido até que o alerta seja resolvido.
+Quando um determinado conjunto de condições em suas operações do Experience Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), o Experience Platform pode enviar mensagens de alerta para qualquer usuário em sua organização que se inscreveu neles. Essas mensagens podem se repetir em um intervalo predefinido até que o alerta seja resolvido.
 
 Este documento fornece uma visão geral dos alertas no Adobe Experience Platform, incluindo a estrutura de como as regras de alerta são definidas.
 
 ## Alertas únicos vs. alertas repetitivos
 
-Os alertas da plataforma podem ser enviados uma vez ou repetidos em um intervalo predefinido até serem resolvidos. Os casos de uso de cada uma dessas opções devem diferir das seguintes maneiras:
+Os alertas do Experience Platform podem ser enviados uma vez ou repetidos em um intervalo predefinido até serem resolvidos. Os casos de uso de cada uma dessas opções devem diferir das seguintes maneiras:
 
 | Alerta único | Alerta repetitivo |
 | --- | --- |
@@ -53,20 +53,20 @@ Um alerta pode ser dividido nos seguintes componentes:
 
 Os alertas podem ser recebidos e gerenciados por meio de dois canais:
 
-* [Eventos Adobe I/O](#events)
-* [Interface do Platform](#ui)
+* [Adobe I/O Events](#events)
+* [Interface do usuário do Experience Platform](#ui)
 
 ### Eventos de E/S {#events}
 
-Os alertas podem ser enviados para um webhook configurado para facilitar a automação eficiente do monitoramento de atividades. Para receber alertas via webhook, você deve registrar seu webhook para alertas da Platform no Adobe Developer Console. Consulte o manual sobre [assinatura de notificações de Adobe I/O](./subscribe.md) para obter etapas específicas.
+Os alertas podem ser enviados para um webhook configurado para facilitar a automação eficiente do monitoramento de atividades. Para receber alertas via webhook, você deve registrar o webhook para alertas do Experience Platform no Adobe Developer Console. Consulte o manual sobre [assinatura de notificações de eventos do Adobe I/O](./subscribe.md) para obter as etapas específicas.
 
-### Interface do Platform {#ui}
+### Interface do usuário do Experience Platform {#ui}
 
-A interface do usuário da Platform permite visualizar alertas recebidos e gerenciar regras de alerta. O vídeo a seguir fornece uma introdução a esses recursos.
+A interface do usuário do Experience Platform permite visualizar alertas recebidos e gerenciar regras de alerta. O vídeo a seguir fornece uma introdução a esses recursos.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
-Para trabalhar com alertas na interface do Platform, você deve ter as seguintes permissões de controle de acesso ativadas pelo Adobe Admin Console:
+Para trabalhar com alertas na interface do usuário do Experience Platform, você deve ter as seguintes permissões de controle de acesso ativadas por meio do Adobe Admin Console:
 
 | Permissão | Descrição |
 | --- | --- |
@@ -81,7 +81,7 @@ Para trabalhar com alertas na interface do Platform, você deve ter as seguintes
 
 >[!NOTE]
 >
->Para obter mais informações sobre como gerenciar permissões na Platform, consulte a [documentação de controle de acesso](../../access-control/ui/overview.md).
+>Para obter mais informações sobre como gerenciar permissões no Experience Platform, consulte a [documentação de controle de acesso](../../access-control/ui/overview.md).
 
 Com a permissão Exibir Alertas, você pode exibir alertas recebidos selecionando o ícone de sino (![Ícone de sino](/help/images/icons/bell.png)) no canto superior direito.
 
@@ -95,4 +95,4 @@ Além disso, a guia [!UICONTROL Alertas] na interface do usuário permite que us
 
 ## Próximas etapas
 
-Ao ler este documento, você foi apresentado aos alertas da Plataforma e sua função no ecossistema da Plataforma. Consulte a documentação do processo vinculada a esta visão geral para saber como receber e gerenciar alertas.
+Ao ler este documento, você foi apresentado aos alertas do Experience Platform e sua função no ecossistema da Experience Platform. Consulte a documentação do processo vinculada a esta visão geral para saber como receber e gerenciar alertas.

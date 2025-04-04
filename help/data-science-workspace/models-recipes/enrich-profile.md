@@ -5,9 +5,9 @@ title: Enriqueça o Perfil do cliente em tempo real com os Insights de aprendiza
 type: Tutorial
 description: Este documento fornece um guia sobre como enriquecer o Perfil do cliente em tempo real com insights de aprendizado de máquina.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Este documento fornece links para tutoriais que permitem enriquecer o [!DNL Real
 Para concluir os tutoriais abaixo, você precisa ter uma compreensão funcional da assimilação de dados do [!DNL Profile] e da criação de públicos-alvo. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): fornece uma representação completa e unificada de cada cliente individual com base em dados agregados de várias fontes.
-- [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-Time Customer Profile] unindo identidades de diferentes fontes de dados que estão sendo assimiladas na Platform.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+- [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-Time Customer Profile] unindo identidades de diferentes fontes de dados que estão sendo assimiladas na Experience Platform.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
 
 Além dos documentos mencionados acima, é altamente recomendável que você também revise os seguintes guias sobre esquemas e o Editor de esquemas:
 

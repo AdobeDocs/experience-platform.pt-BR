@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da interface do usuário de esquemas
 description: Esta visão geral aborda os principais recursos do espaço de trabalho Esquemas no Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '310'
 ht-degree: 9%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 9%
 
 O espaço de trabalho [!UICONTROL Esquemas] da interface do usuário do Adobe Experience Platform permite gerenciar recursos do Experience Data Model (XDM), incluindo esquemas, classes, grupos de campos de esquema e tipos de dados. Você pode visualizar e explorar os recursos principais fornecidos pela Adobe e criar recursos e esquemas personalizados para sua organização.
 
-Para acessar o espaço de trabalho na interface do usuário da Platform, selecione **[!UICONTROL Esquemas]** no painel esquerdo.
+Para acessar o espaço de trabalho na interface do usuário do Experience Platform, selecione **[!UICONTROL Esquemas]** no painel esquerdo.
 
-![O espaço de trabalho Esquemas com Esquemas realçados na navegação à esquerda da interface de usuário da plataforma.](../images/ui/overview/schemas-tab.png)
+![O espaço de trabalho Esquemas com Esquemas realçados na navegação à esquerda da interface de usuário do Experience Platform.](../images/ui/overview/schemas-tab.png)
 
 ## Introdução
 
@@ -40,4 +40,4 @@ Classes, grupos de campos e tipos de dados contribuem com campos para um esquema
 
 ## Próximas etapas
 
-Este documento forneceu uma introdução ao espaço de trabalho [!UICONTROL Esquemas] na interface do usuário da plataforma. Consulte a documentação vinculada a esta visão geral para saber mais sobre como gerenciar seus esquemas e outros recursos XDM.
+Este documento forneceu uma introdução ao espaço de trabalho [!UICONTROL Esquemas] na interface do usuário do Experience Platform. Consulte a documentação vinculada a esta visão geral para saber mais sobre como gerenciar seus esquemas e outros recursos XDM.

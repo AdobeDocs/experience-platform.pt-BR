@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução de problemas;API
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API
 title: Ponto de extremidade da API de trabalhos do sistema de perfil
 type: Documentation
 description: O Adobe Experience Platform permite excluir um conjunto de dados ou lote do Armazenamento de perfis para remover os dados do Perfil do cliente em tempo real que não são mais necessários ou que foram adicionados por engano. Isso requer o uso da API de perfil para criar um trabalho de sistema de perfil ou excluir solicitação.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2022'
 ht-degree: 2%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Os endpoints a seguir podem diferir entre as implementações do Adobe Experience Platform em execução no Microsoft Azure e no Amazon Web Services (AWS). O Experience Platform em execução no AWS está atualmente disponível para um número limitado de clientes. Para saber mais sobre a infraestrutura de Experience Platform compatível, consulte a [visão geral de várias nuvens do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Os endpoints a seguir podem diferir entre as implementações do Adobe Experience Platform em execução no Microsoft Azure e no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-O Adobe Experience Platform permite assimilar dados de várias fontes e criar perfis robustos para clientes individuais. Os dados assimilados em [!DNL Platform] são armazenados em [!DNL Data Lake] e, se os conjuntos de dados tiverem sido habilitados para Perfil, esses dados também serão armazenados no armazenamento de dados [!DNL Real-Time Customer Profile]. Ocasionalmente, pode ser necessário excluir dados de perfil associados a um conjunto de dados do armazenamento de Perfil para remover dados que não são mais necessários ou foram adicionados por engano. Isso requer o uso da API [!DNL Real-Time Customer Profile] para criar um trabalho do sistema [!DNL Profile], ou &quot;excluir solicitação&quot;.
+O Adobe Experience Platform permite assimilar dados de várias fontes e criar perfis robustos para clientes individuais. Os dados assimilados em [!DNL Experience Platform] são armazenados em [!DNL Data Lake] e, se os conjuntos de dados tiverem sido habilitados para Perfil, esses dados também serão armazenados no armazenamento de dados [!DNL Real-Time Customer Profile]. Ocasionalmente, pode ser necessário excluir dados de perfil associados a um conjunto de dados do armazenamento de Perfil para remover dados que não são mais necessários ou foram adicionados por engano. Isso requer o uso da API [!DNL Real-Time Customer Profile] para criar um trabalho do sistema [!DNL Profile], ou &quot;excluir solicitação&quot;.
 
 >[!NOTE]
 >
@@ -26,7 +26,7 @@ O Adobe Experience Platform permite assimilar dados de várias fontes e criar pe
 
 ## Introdução
 
-O ponto de extremidade de API usado neste guia faz parte de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
+O ponto de extremidade de API usado neste guia faz parte de [[!DNL Real-Time Customer Profile API]](https://www.adobe.com/go/profile-apis-en). Antes de continuar, consulte o [guia de introdução](getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Exibir solicitações de exclusão {#view}
 
@@ -38,7 +38,7 @@ Você também pode usar parâmetros de consulta opcionais para filtrar a lista d
 
 >[!AVAILABILITY]
 >
->Os seguintes parâmetros de consulta estão **somente** disponíveis ao usar a Platform no Microsoft Azure.
+>Os seguintes parâmetros de consulta estão **somente** disponíveis ao usar o Experience Platform no Microsoft Azure.
 >
 >Ao usar esse endpoint no AWS, as primeiras 100 tarefas do sistema são retornadas em ordem decrescente, com base na data de criação.
 
@@ -208,7 +208,7 @@ Uma resposta bem-sucedida retorna uma matriz que contém um objeto para cada sol
 
 ## Criar uma solicitação de exclusão {#create-a-delete-request}
 
-A inicialização de uma nova solicitação de exclusão é feita por meio de uma solicitação POST para o ponto de extremidade `/systems/jobs`, em que a ID do conjunto de dados ou lote a ser excluído é fornecida no corpo da solicitação.
+O início de uma nova solicitação de exclusão é feito por meio de uma solicitação POST para o ponto de extremidade `/systems/jobs`, em que a ID do conjunto de dados ou lote a ser excluído é fornecida no corpo da solicitação.
 
 ### Excluir um conjunto de dados e dados de perfil associados
 
@@ -502,7 +502,7 @@ Uma resposta bem-sucedida retorna os detalhes da solicitação do sistema recém
 
 >[!AVAILABILITY]
 >
->O seguinte recurso está disponível **somente** ao usar a Platform no Microsoft Azure.
+>O seguinte recurso está disponível **somente** ao usar o Experience Platform no Microsoft Azure.
 
 Se você tentar iniciar uma solicitação de exclusão para um lote de conjunto de dados de Registro, encontrará um erro de nível 400, semelhante ao seguinte:
 

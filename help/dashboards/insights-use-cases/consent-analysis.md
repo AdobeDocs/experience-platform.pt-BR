@@ -2,9 +2,9 @@
 title: Rastreamento e análise de consentimento
 description: Saiba como criar um painel de análise de consentimento para rastrear a tendência do consentimento do usuário ao longo do tempo.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1909'
+source-wordcount: '1910'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Os casos de uso abordados neste guia são tendência de consentimento e sobrepos
 
 ## Criar públicos-alvo com consentimento {#create-consent-audiences}
 
-Para criar um painel de consentimento, primeiro crie um público-alvo de todos os perfis que consentiram em entrar em contato com o. Para navegar até o Construtor de segmentos do Real-Time Customer Data Platform, selecione **[!UICONTROL Públicos-alvo]** na navegação à esquerda da interface do usuário da plataforma. Na guia [!UICONTROL Cliente] do painel [!UICONTROL Públicos-alvo], selecione **[!UICONTROL Criar público-alvo]** na parte superior direita da exibição e **[!UICONTROL Regras de compilação]**.
+Para criar um painel de consentimento, primeiro crie um público-alvo de todos os perfis que consentiram em entrar em contato com o. Para navegar até o Construtor de segmentos do Real-Time Customer Data Platform, selecione **[!UICONTROL Públicos-alvo]** na navegação à esquerda da interface do usuário do Experience Platform. Na guia [!UICONTROL Cliente] do painel [!UICONTROL Públicos-alvo], selecione **[!UICONTROL Criar público-alvo]** na parte superior direita da exibição e **[!UICONTROL Regras de compilação]**.
 
 ![O painel [!UICONTROL Públicos-alvo] com [!UICONTROL Cliente], [!UICONTROL Públicos-alvo] e [!UICONTROL Criar segmento] foi realçado.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -72,7 +72,7 @@ O Adobe criou vários insights que estão automaticamente disponíveis para voc�
 
 ## Sobreposição de público {#audience-overlap}
 
-Para revisar a sobreposição entre dois públicos-alvo de consentimento, adicione a [!UICONTROL Política de sobreposição de público-alvo por mesclagem] ao painel Perfis e selecione os públicos-alvo desejados nos menus suspensos. Consulte a documentação para obter instruções sobre como adicionar um widget ao seu painel na [*Política de sobreposição de público-alvo por mesclagem*](../guides/profiles.md#audience-overlap-by-merge-policy) para obter mais informações sobre o insight.
+Para revisar a sobreposição entre dois públicos-alvo de consentimento, adicione a [!UICONTROL Política de sobreposição de público-alvo por mesclagem] ao painel Perfis e selecione os públicos-alvo desejados nos menus suspensos. Consulte a documentação para obter instruções sobre como adicionar um widget ao seu painel na [*Política de sobreposição de público-alvo por mesclagem*](../guides/profiles.md#audience-overlap-by-merge-policy) para obter mais informações sobre a insight.
 
 <!-- Image needs updating to night mode -->
 

@@ -3,7 +3,7 @@ keywords: plataforma;destinos;destinos espaço de trabalho;espaço de trabalho;u
 title: Espaço de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em cinco seções: Visão geral, Catálogo, Procurar, Contas e Exibição de sistema. Eles são descritos nas seções abaixo.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1233'
 ht-degree: 0%
@@ -24,19 +24,19 @@ A guia **[!UICONTROL Visão geral]** exibe o painel [!UICONTROL Destinos], forne
 
 >[!NOTE]
 >
->Se sua organização é nova no Experience Platform e ainda não tem destinos ativos, o painel [!UICONTROL Destinos] e a guia [!UICONTROL Visão geral] não estarão visíveis. Em vez disso, selecionar [!UICONTROL Destinos] na navegação à esquerda exibe a guia [[!UICONTROL Catálogo]](#catalog).
+>Se sua organização for nova no Experience Platform e ainda não tiver destinos ativos, o painel [!UICONTROL Destinos] e a guia [!UICONTROL Visão geral] não estarão visíveis. Em vez disso, selecionar [!UICONTROL Destinos] na navegação à esquerda exibe a guia [[!UICONTROL Catálogo]](#catalog).
 
 ![A guia Visão geral do painel Destinos.](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catálogo] {#catalog}
 
-A guia **[!UICONTROL Catálogo]** exibe uma lista de todos os destinos disponíveis em [!DNL Platform] para os quais você pode enviar dados.
+A guia **[!UICONTROL Catálogo]** exibe uma lista de todos os destinos disponíveis em [!DNL Experience Platform] para os quais você pode enviar dados.
 
-A interface de usuário do [!DNL Platform] fornece várias opções de pesquisa e filtro na página de catálogo de destinos:
+A interface de usuário do [!DNL Experience Platform] fornece várias opções de pesquisa e filtro na página de catálogo de destinos:
 
 * Use a funcionalidade de pesquisa na página para localizar um destino específico.
 * Filtrar destinos usando o controle [!UICONTROL Categorias].
-* Alternar entre [!UICONTROL Todos os destinos] e [!UICONTROL Meus destinos]. Quando você seleciona **[!UICONTROL Todos os destinos]**, todos os destinos [!DNL Platform] disponíveis são exibidos. Ao selecionar **[!UICONTROL Meus destinos]**, você só poderá ver os destinos com os quais tiver estabelecido uma conexão.
+* Alternar entre [!UICONTROL Todos os destinos] e [!UICONTROL Meus destinos]. Quando você seleciona **[!UICONTROL Todos os destinos]**, todos os destinos [!DNL Experience Platform] disponíveis são exibidos. Ao selecionar **[!UICONTROL Meus destinos]**, você só poderá ver os destinos com os quais tiver estabelecido uma conexão.
 * Selecione para exibir os tipos de **[!UICONTROL Conexões]** e/ou **[!UICONTROL Extensões]**. Para entender a diferença entre as duas categorias, leia [Tipos de Destino e Categorias](../destination-types.md).
 
 ![Catálogo de destinos que mostra alguns destinos de anúncios e de armazenamento na nuvem.](../assets/ui/workspace/catalog.png)

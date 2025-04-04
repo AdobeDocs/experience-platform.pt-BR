@@ -2,9 +2,9 @@
 title: Consultas com parâmetros
 description: Saiba como usar consultas com parâmetros na interface do usuário do Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '691'
 ht-degree: 11%
 
 ---
@@ -79,4 +79,4 @@ Os valores de parâmetro são salvos quando você agenda uma consulta com parâm
 
 Ao ler este documento, você aprendeu a parametrizar consultas na interface do usuário do Adobe Experience Platform e usá-las em execuções de consultas programadas. O documento também destacou como verificar os logs para os valores de parâmetro usados nas execuções de consulta.
 
-Em seguida, é recomendável ler o guia em [monitorando consultas agendadas](./monitor-queries.md) para entender melhor o status de todos os trabalhos de consulta por meio da interface do usuário da Platform.
+Em seguida, é recomendável ler o guia em [monitorando consultas agendadas](./monitor-queries.md) para entender melhor o status de todos os trabalhos de consulta por meio da interface do Experience Platform.

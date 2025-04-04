@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface de usuário da sandbox
 description: Este documento fornece etapas sobre como executar várias operações relacionadas a sandboxes na interface do usuário do Adobe Experience Platform.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1116'
 ht-degree: 4%
 
 ---
@@ -23,7 +23,7 @@ Na interface do usuário do Experience Platform, selecione **[!UICONTROL Sandbox
 
 ## Alternar entre sandboxes
 
-O indicador da sandbox está localizado no cabeçalho superior da interface do usuário da Platform e exibe o título da sandbox em que você está no momento, sua região e seu tipo.
+O indicador da sandbox está localizado no cabeçalho superior da interface do usuário do Experience Platform e exibe o título da sandbox em que você está no momento, sua região e seu tipo.
 
 ![O painel de sandboxes com o indicador de sandbox realçado.](../images/ui/sandbox-indicator.png)
 
@@ -51,7 +51,7 @@ Depois que uma sandbox é selecionada, a tela é atualizada e atualizada para a 
 >
 >A criação de uma nova sandbox exige que você a adicione a uma função em [[!UICONTROL Permissões]](../../access-control/abac/ui/permissions.md) antes de começar a usá-la. Para saber como provisionar uma sandbox para uma função, consulte a documentação [gerenciamento de sandboxes para uma função](../../access-control/abac/ui/permissions.md#managing-sandboxes-for-role).
 
-Assista ao vídeo a seguir para obter uma visão geral rápida sobre como usar sandboxes no Experience Platform.
+Assista ao vídeo a seguir para obter uma visão geral rápida sobre como usar sandboxes na Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 

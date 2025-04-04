@@ -1,11 +1,11 @@
 ---
-title: Visão geral da extensão do Adobe Medium Analytics (SDK 3.x) para áudio e vídeo
+title: Visão geral da extensão do Adobe Media Analytics (3.x SDK) para áudio e vídeo
 description: Saiba mais sobre o Adobe Media Analytics (3.x SDK) para a extensão de áudio e tag de vídeo na Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 94%
+source-wordcount: '708'
+ht-degree: 93%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 94%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use esta documentação para obter informações sobre como instalar, configurar e implementar a extensão Adobe Media Analytics (3.x SDK) for Audio and Video (extensão do Media Analytics). Estão incluídas as opções disponíveis ao usar esta extensão para criar uma regra, juntamente com exemplos e links para amostras.
 
@@ -110,4 +110,4 @@ A extensão MA expõe `media` como módulo compartilhado para outras extensões.
 
 >[!NOTE]
 >
->**Testes:** nessa versão, para testar sua extensão, você deve carregá-la no [Platform](../../../extension-dev/submit/upload-and-test.md), onde você tem acesso a todas as extensões dependentes.
+>**Testes:** nesta versão, para testar sua extensão, você deve carregá-la no [Experience Platform](../../../extension-dev/submit/upload-and-test.md), onde você tem acesso a todas as extensões dependentes.

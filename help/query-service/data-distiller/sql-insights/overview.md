@@ -2,9 +2,9 @@
 title: Insights SQL
 description: Saiba mais sobre os casos de uso, os recursos essenciais e as etapas necessárias para desenvolver um painel de insights SQL com o Data Distiller. Descubra como o recurso SQL Insights no Data Distiller pode melhorar a transparência e obter insights operacionais em diferentes dimensões, como perfis, públicos, campanhas, jornadas, direitos e consentimento.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Este documento aborda os casos de uso, os recursos essenciais e as etapas necess
 
 ## Pré-requisitos
 
-Este tutorial usa painéis definidos pelo usuário para visualizar dados de seu modelo de dados personalizado na interface do usuário da Platform. Consulte a [documentação de painéis definidos pelo usuário](../../../dashboards/standard-dashboards.md) para saber mais sobre este recurso.
+Este tutorial usa painéis definidos pelo usuário para visualizar dados de seu modelo de dados personalizado na interface do Experience Platform. Consulte a [documentação de painéis definidos pelo usuário](../../../dashboards/standard-dashboards.md) para saber mais sobre este recurso.
 
 ## Introdução
 
-O SKU do Data Distiller é necessário para criar um modelo de dados personalizado para seus insights de relatório e estender os modelos de dados do Real-Time CDP que contêm dados enriquecidos da Platform. Consulte a documentação de [empacotamento](../../packaging.md), [medidas de proteção](../../guardrails.md#query-accelerated-store) e [licenciamento](../../data-distiller/license-usage.md) relacionada à SKU do Data Distiller. Se você não tiver o Data Distiller SKU, entre em contato com o representante do serviço de atendimento ao cliente da Adobe para obter mais informações.
+O SKU do Data Distiller é necessário para criar um modelo de dados personalizado para seus insights de relatório e estender os modelos de dados do Real-Time CDP que contêm dados enriquecidos do Experience Platform. Consulte a documentação de [empacotamento](../../packaging.md), [medidas de proteção](../../guardrails.md#query-accelerated-store) e [licenciamento](../../data-distiller/license-usage.md) relacionada à SKU do Data Distiller. Se você não tiver o Data Distiller SKU, entre em contato com o representante do serviço de atendimento ao cliente da Adobe para obter mais informações.
 
 ## Casos de uso do SQL Insights {#use-cases}
 
@@ -61,7 +61,7 @@ A ilustração abaixo destaca vários recursos essenciais para gerar Insights SQ
 1. **Criação de painéis:** habilitando a criação de painéis personalizados adaptados a casos de uso específicos, proporcionando uma experiência de análise mais personalizada e direcionada.
 1. **Modelagem flexível de dados SQL:** use uma abordagem versátil de modelagem de dados SQL que permite aos usuários combinar e manipular facilmente diferentes conjuntos de dados, melhorando a adaptabilidade e a profundidade analítica.
 1. **Armazenamento acelerado:** implementação de um mecanismo de armazenamento acelerado para fornecer insights agregados de maneira eficiente por meio do SQL, garantindo acesso rápido e simplificado a informações valiosas.
-1. **Conectividade de BI:** facilita a integração perfeita com ferramentas populares de Business Intelligence (BI), incluindo Power BI, Tableau, Looker e Apache Superset. Essa conectividade garante a compatibilidade com diversos ambientes de BI, oferecendo aos usuários a flexibilidade de usar sua ferramenta de escolha para análises e relatórios detalhados.
+1. **Conectividade de BI:** facilita a integração perfeita com ferramentas populares do Business Intelligence (BI), incluindo Power BI, Tableau, Looker e Apache Superset. Essa conectividade garante a compatibilidade com diversos ambientes de BI, oferecendo aos usuários a flexibilidade de usar sua ferramenta de escolha para análises e relatórios detalhados.
 
 ![Representações visuais dos principais recursos dos Insights SQL da Data Distiller.](../../images/data-distiller/sql-insights/key-capabilities-of-customizable-insights.png)
 
@@ -72,7 +72,7 @@ Para desenvolver um painel de Insights SQL no Data Distiller, siga as instruçõ
 1. **Exploração de consulta ad hoc:** Comece executando consultas ad hoc `SELECT` para explorar dados brutos no data lake. Isso permite a análise de dados exploratórios e instantâneos para testar e valida dados em que os resultados das consultas não são armazenados no data lake.
 1. **Utilização de consulta em lote:** use consultas em lote para [criar trabalhos agendados](../../api/scheduled-queries.md#create-a-new-scheduled-query) para gerar tabelas agregadas de insights, garantindo uma abordagem sistemática e automatizada para o processamento de dados. As consultas em lote executam consultas `INSERT TABLE AS SELECT` e `CREATE TABLE AS SELECT` para limpar, moldar, manipular e enriquecer dados. Os resultados dessas consultas são armazenados no data lake.
 1. **Carregamento de insights agregados:** carregue os insights agregados gerados no repositório acelerado e use o SQL para testar consultas e garantir a precisão e a eficiência da recuperação de dados. Para saber como [fazer consultas sem estado ao repositório acelerado](../../api/accelerated-queries.md), consulte a documentação.
-1. **Acesso e integração:** acesse os insights armazenados no repositório acelerado facilmente ao integrar com o Adobe Experience Platform [Painéis definidos pelo usuário](../../../dashboards/standard-dashboards.md) ou outras ferramentas de Business Intelligence (BI) preferenciais. Essas integrações com clientes de terceiros facilitam uma experiência coesa e intuitiva para os usuários.
+1. **Acesso e integração:** acesse os insights armazenados no repositório acelerado facilmente ao integrar com o Adobe Experience Platform [Painéis definidos pelo usuário](../../../dashboards/standard-dashboards.md) ou outras ferramentas preferenciais do Business Intelligence (BI). Essas integrações com clientes de terceiros facilitam uma experiência coesa e intuitiva para os usuários.
 
 ![Um infográfico que ilustra as quatro etapas do SQL Insights no Data Distiller.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

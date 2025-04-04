@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;hubspot;Hubspot
+keywords: Experience Platform;home;popular tópicos;hubspot;Hubspot;;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
 title: Criar uma conexão HubSpot Source na interface do usuário
 type: Tutorial
 description: Saiba como criar uma conexão de origem HubSpot usando a interface do Adobe Experience Platform.
 exl-id: 452b7290-b9e8-4728-8b58-0e0c76bd9449
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '461'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Criar uma conexão de origem [!DNL HubSpot] na interface
 
-Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL HubSpot] usando a interface do usuário [!DNL Platform].
+Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL HubSpot] usando a interface do usuário [!DNL Experience Platform].
 
 ## Introdução
 
@@ -29,7 +29,7 @@ Se você já tiver uma conexão [!DNL HubSpot], ignore o restante deste document
 
 ### Coletar credenciais necessárias
 
-Para acessar sua conta do [!DNL HubSpot] em [!DNL Platform], você deve fornecer os seguintes valores:
+Para acessar sua conta do [!DNL HubSpot] em [!DNL Experience Platform], você deve fornecer os seguintes valores:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
@@ -42,7 +42,7 @@ Para obter mais informações sobre a introdução, consulte este [[!DNL HubSpot
 
 ## Conectar sua conta do [!DNL HubSpot]
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL HubSpot] ao [!DNL Platform].
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL HubSpot] ao [!DNL Experience Platform].
 
 Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
@@ -68,4 +68,4 @@ Para conectar uma conta existente, selecione a conta [!DNL HubSpot] com a qual d
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL HubSpot]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer os dados do sistema de automação de marketing para  [!DNL Platform]](../../dataflow/marketing-automation.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL HubSpot]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer os dados do sistema de automação de marketing para  [!DNL Experience Platform]](../../dataflow/marketing-automation.md).

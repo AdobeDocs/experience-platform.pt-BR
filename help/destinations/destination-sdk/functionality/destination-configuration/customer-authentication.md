@@ -1,10 +1,10 @@
 ---
-description: Saiba como configurar um mecanismo de autenticação para seu destino e obter informações sobre o que os usuários verão na interface do usuário, dependendo do método de autenticação selecionado.
+description: Saiba como configurar um mecanismo de autenticação para seu destino e fazer com que o insight veja o que os usuários verão na interface do usuário, dependendo do método de autenticação selecionado.
 title: Configuração de autenticação do cliente
 exl-id: 3912012e-0870-47d2-9a6f-7f1fc469a781
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 O Experience Platform oferece grande flexibilidade nos protocolos de autenticação disponíveis para parceiros e clientes. Você pode configurar seu destino para oferecer suporte a qualquer um dos métodos de autenticação padrão do setor, como o [!DNL OAuth2], autenticação de token do portador, autenticação de senha e muito mais.
 
-Esta página explica como configurar seu destino usando seu método de autenticação preferido. Com base na configuração de autenticação usada ao criar o destino, os clientes verão diferentes tipos de páginas de autenticação ao se conectarem ao destino na interface do Experience Platform.
+Esta página explica como configurar seu destino usando seu método de autenticação preferido. Com base na configuração de autenticação usada ao criar o destino, os clientes verão diferentes tipos de páginas de autenticação ao se conectarem ao destino na interface do usuário do Experience Platform.
 
 Para entender onde esse componente se encaixa em uma integração criada com o Destination SDK, consulte o diagrama na documentação das [opções de configuração](../configuration-options.md) ou consulte as seguintes páginas de visão geral da configuração de destino:
 
 * [Usar o Destination SDK para configurar um destino de transmissão](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Usar o Destination SDK para configurar um destino baseado em arquivo](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Antes de exportar dados da Platform para o seu destino, os clientes devem criar uma nova conexão entre o Experience Platform e o seu destino, seguindo as etapas descritas no tutorial [conexão de destino](../../../ui/connect-destination.md).
+Antes de exportar dados do Experience Platform para o seu destino, os clientes devem criar uma nova conexão entre o Experience Platform e o seu destino seguindo as etapas descritas no tutorial [conexão de destino](../../../ui/connect-destination.md).
 
 Ao [criar um destino](../../authoring-api/destination-configuration/create-destination-configuration.md) por meio do Destination SDK, a seção `customerAuthenticationConfigurations` define o que os clientes veem na [tela de autenticação](../../../ui/connect-destination.md#authenticate). Dependendo do tipo de autenticação de destino, os clientes devem fornecer vários detalhes de autenticação, como:
 
-* Para destinos que usam a [autenticação básica](#basic), os usuários devem fornecer um nome de usuário e uma senha diretamente na página de autenticação da interface de usuário do Experience Platform.
+* Para destinos que usam a [autenticação básica](#basic), os usuários devem fornecer um nome de usuário e uma senha diretamente na página de autenticação da interface do usuário do Experience Platform.
 * Para destinos que usam [autenticação de portador](#bearer), os usuários devem fornecer um token de portador.
 * Para destinos que usam a [autorização OAuth2](#oauth2), os usuários são redirecionados para a página de logon do seu destino, onde podem fazer logon com as credenciais.
 * Para destinos do [Amazon S3](#s3), os usuários devem fornecer sua chave de acesso e chave secreta [!DNL Amazon S3].
@@ -39,11 +39,11 @@ Este artigo descreve todas as configurações de autenticação de cliente compa
 
 >[!IMPORTANT]
 >
->A configuração de autenticação do cliente não exige a configuração de nenhum parâmetro. Você pode copiar e colar os trechos mostrados nesta página em suas chamadas de API ao [criar](../../authoring-api/destination-configuration/create-destination-configuration.md) ou [atualizar](../../authoring-api/destination-configuration/update-destination-configuration.md) uma configuração de destino, e seus usuários verão a tela de autenticação correspondente na interface do usuário da plataforma.
+>A configuração de autenticação do cliente não exige a configuração de nenhum parâmetro. Você pode copiar e colar os trechos mostrados nesta página em suas chamadas de API ao [criar](../../authoring-api/destination-configuration/create-destination-configuration.md) ou [atualizar](../../authoring-api/destination-configuration/update-destination-configuration.md) uma configuração de destino, e seus usuários verão a tela de autenticação correspondente na interface do usuário do Experience Platform.
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -105,7 +105,7 @@ Para configurar a autenticação de tipo de portador para o seu destino, configu
 
 ## Autenticação OAuth 2 {#oauth2}
 
-Os usuários selecionam **[!UICONTROL Conectar-se ao destino]** para acionar o fluxo de autenticação do OAuth 2 para o seu destino, conforme mostrado no exemplo abaixo para o destino de Públicos-alvo personalizados do Twitter. Destination SDK Para obter informações detalhadas sobre como configurar a autenticação OAuth 2 para o seu ponto de extremidade de destino, leia a [página dedicada da autenticação OAuth 2](oauth2-authorization.md).
+Os usuários selecionam **[!UICONTROL Conectar-se ao destino]** para acionar o fluxo de autenticação do OAuth 2 para o seu destino, conforme mostrado no exemplo abaixo para o destino de Públicos-alvo personalizados do Twitter. Para obter informações detalhadas sobre como configurar a autenticação OAuth 2 para o seu ponto de extremidade de destino, leia a [página de autenticação do Destination SDK OAuth 2](oauth2-authorization.md).
 
 ![Renderização da interface do usuário com autenticação OAuth 2](../../assets/functionality/destination-configuration/oauth2-authentication-ui.png)
 
@@ -175,7 +175,7 @@ Para configurar a autenticação do [!DNL Azure Data Lake Storage] (ADLS) para o
 
 ## SFTP com autenticação de senha
 
-Há suporte para autenticação [!DNL SFTP] com senha para destinos baseados em arquivo no Experience Platform.
+A autenticação [!DNL SFTP] com senha tem suporte para destinos baseados em arquivo no Experience Platform.
 
 Ao configurar o SFTP com tipo de autenticação de senha, os usuários devem inserir o nome de usuário e a senha do SFTP, bem como o domínio e a porta SFTP (a porta padrão é 22).
 
@@ -193,7 +193,7 @@ Para configurar a autenticação SFTP com senha para o seu destino, configure o 
 
 ## SFTP com autenticação de chave SSH
 
-Há suporte para a autenticação [!DNL SFTP] com a chave [!DNL SSH] para destinos baseados em arquivo no Experience Platform.
+A autenticação [!DNL SFTP] com a chave [!DNL SSH] tem suporte para destinos baseados em arquivo no Experience Platform.
 
 Ao configurar o SFTP com tipo de autenticação de chave SSH, os usuários precisam inserir o nome de usuário SFTP e a chave SSH, bem como o domínio e a porta SFTP (a porta padrão é 22).
 

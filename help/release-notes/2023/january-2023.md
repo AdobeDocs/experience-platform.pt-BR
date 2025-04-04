@@ -2,10 +2,10 @@
 title: Notas da versão de janeiro de 2023 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2023 da Adobe Experience Platform.
 exl-id: 461898ce-5683-4ab1-9167-ac25843a1ff8
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2224'
-ht-degree: 99%
+source-wordcount: '2227'
+ht-degree: 97%
 
 ---
 
@@ -163,7 +163,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 {style="table-layout:auto"}
 
-Para obter mais informações sobre o XDM na Platform, consulte a [Visão geral do sistema de XDM](../../xdm/home.md).
+Para obter mais informações sobre o XDM no Experience Platform, consulte a [visão geral do sistema XDM](../../xdm/home.md).
 
 ## Perfil do cliente em tempo real {#profile}
 
@@ -189,7 +189,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Importação de valor em massa no Construtor de segmentos | O Construtor de segmentos agora é compatível com à importação de vários valores, seja fazendo upload de um arquivo CSV ou TSV, ou inserindo manualmente valores separados por vírgula. Mais informações podem ser encontradas no [Guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md#rule-builder-canvas). |
 | Expiração de associação de público-alvo externo | Por padrão, as associações de público-alvo externo são mantidas por 30 dias. Para mantê-las por mais tempo, use o campo `validUntil` durante a assimilação de dados do público-alvo. |
-| Expiração da associação de segmento gerada pela Platform | Qualquer associação de segmento que esteja no estado `Exited` por mais de 30 dias, com base no campo `lastQualificationTime`, estará sujeita a exclusão. |
+| Expiração de associação de segmento gerada pela Experience Platform | Qualquer associação de segmento que esteja no estado `Exited` por mais de 30 dias, com base no campo `lastQualificationTime`, estará sujeita a exclusão. |
 
 {style="table-layout:auto"}
 
@@ -197,7 +197,7 @@ Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [V
 
 ## Origens {#sources}
 
-A Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 

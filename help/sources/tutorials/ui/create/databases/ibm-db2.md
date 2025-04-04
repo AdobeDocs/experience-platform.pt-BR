@@ -5,7 +5,7 @@ title: Criar uma conexão do IBM DB2 Source na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem do IBM DB2 usando a interface do usuário do Adobe Experience Platform.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '527'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 > O conector IBM DB2 está na versão beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
 
-Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem do IBM DB2 (doravante denominado &quot;DB2&quot;) usando a interface do usuário [!DNL Platform].
+Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem do IBM DB2 (doravante denominado &quot;DB2&quot;) usando a interface do usuário [!DNL Experience Platform].
 
 ## Introdução
 
@@ -46,7 +46,7 @@ Para obter mais informações sobre a introdução, consulte [este documento do 
 
 ## Conectar sua conta do IBM DB2
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta DB2 ao [!DNL Platform].
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta DB2 ao [!DNL Experience Platform].
 
 Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
@@ -72,4 +72,4 @@ Para conectar uma conta existente, selecione a conta do DB2 com a qual deseja se
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta DB2. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Platform]](../../dataflow/databases.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta DB2. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Experience Platform]](../../dataflow/databases.md).

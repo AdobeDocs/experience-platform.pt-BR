@@ -2,10 +2,10 @@
 title: Manual da API do Reactor
 description: A API do Reactor permite que os desenvolvedores gerenciem de forma programática todos os recursos de tags na Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 94%
+source-wordcount: '1080'
+ht-degree: 92%
 
 ---
 
@@ -99,7 +99,7 @@ Consulte o [manual de endpoint de eventos de auditoria](./endpoints/audit-events
 
 ## Retornos de chamada
 
-Um retorno de chamada é uma mensagem que a Platform envia a um host de URL sempre que um novo evento de auditoria é gerado. Consulte o [manual de endpoint de retornos de chamada](./endpoints/callbacks.md) para saber como gerenciar retornos de chamada na API.
+Um retorno de chamada é uma mensagem que o Experience Platform envia a um host de URL sempre que um novo evento de auditoria é gerado. Consulte o [manual de endpoint de retornos de chamada](./endpoints/callbacks.md) para saber como gerenciar retornos de chamada na API.
 
 ## Notas
 

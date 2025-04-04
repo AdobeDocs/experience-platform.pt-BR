@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;controle de acesso permissões;controle de acesso tipos de recurso;api de controle de acesso
+keywords: Experience Platform;página inicial;tópicos populares;controle de acesso permissões;controle de acesso tipos de recursos;api de controle de acesso
 solution: Experience Platform
 title: Endpoint de API de referência
 description: O endpoint de referência na API de Controle de acesso permite exibir os nomes das permissões e dos tipos de recursos disponíveis, que podem ser usados para exibir políticas de controle de acesso eficazes para o usuário atual.
 role: Developer
 exl-id: 18d84d54-9258-4451-9aa8-7c647b45a8da
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '188'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 
 Você pode listar os nomes de todas as permissões e tipos de recursos fazendo uma solicitação GET para o ponto de extremidade `/acl/reference`. Esses nomes podem ser usados em chamadas de API para [exibir as políticas de controle de acesso efetivo](./effective-policies.md) para o usuário atual.
 
-Uma permissão é uma política gerenciada por meio da Adobe Admin Console e mapeada para zero ou mais políticas do tipo recurso. Um tipo de recurso é uma política que habilita recursos de leitura, gravação e/ou exclusão para um tipo específico de recurso [!DNL Platform] (como conjuntos de dados ou esquemas).
+Uma permissão é uma política gerenciada por meio da Adobe Admin Console e mapeada para zero ou mais políticas do tipo recurso. Um tipo de recurso é uma política que habilita recursos de leitura, gravação e/ou exclusão para um tipo específico de recurso [!DNL Experience Platform] (como conjuntos de dados ou esquemas).
 
 **Formato da API**
 

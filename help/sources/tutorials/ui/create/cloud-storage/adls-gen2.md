@@ -5,7 +5,7 @@ title: Criar uma Conexão Source Gen2 do Armazenamento Azure Data Lake na interf
 type: Tutorial
 description: Saiba como criar uma conexão de origem Gen2 do Armazenamento Azure Data Lake usando a interface do usuário do Adobe Experience Platform.
 exl-id: d81b7593-08a3-43f8-a8bc-f5547a6cd55a
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '478'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Criar uma conexão de origem [!DNL Azure Data Lake Storage Gen2] na interface
 
-Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para autenticar um conector de origem [!DNL Azure Data Lake Storage Gen2] (a seguir denominado &quot;[!DNL ADLS Gen2]&quot;) usando a interface do usuário [!DNL Platform].
+Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para autenticar um conector de origem [!DNL Azure Data Lake Storage Gen2] (a seguir denominado &quot;[!DNL ADLS Gen2]&quot;) usando a interface do usuário [!DNL Experience Platform].
 
 ## Introdução
 
@@ -42,7 +42,7 @@ Para obter mais informações sobre esses valores, consulte [este [!DNL ADLS Gen
 
 ## Conectar sua conta do [!DNL ADLS Gen2]
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL ADLS Gen2] e conectar-se ao [!DNL Platform].
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL ADLS Gen2] e conectar-se ao [!DNL Experience Platform].
 
 Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
@@ -68,4 +68,4 @@ Para conectar uma conta existente, selecione a conta [!DNL ADLS Gen2] com a qual
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL ADLS Gen2]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento na nuvem para o  [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL ADLS Gen2]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento na nuvem para o  [!DNL Experience Platform]](../../dataflow/batch/cloud-storage.md).

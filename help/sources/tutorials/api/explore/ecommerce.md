@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Explore uma conexão de comércio eletrônico usando a API do serviço de fluxo
 description: Este tutorial usa a API de serviço de fluxo para explorar conexões de comércio eletrônico.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '571'
 ht-degree: 13%
 
 ---
@@ -21,14 +21,14 @@ Este tutorial usa a API [!DNL Flow Service] para explorar uma conexão **[!UICON
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [[!DNL Sources]](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a você a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito a uma conexão de **[!UICONTROL comércio eletrônico]** usando a API [!DNL Flow Service].
 
 ### Obter uma ID de conexão
 
-Para explorar sua conexão **[!UICONTROL de comércio eletrônico]** usando as APIs [!DNL Platform], você deve possuir uma ID de conexão válida. Se você ainda não tiver uma conexão para a conexão **[!UICONTROL eCommerce]** com a qual deseja trabalhar, poderá criar uma através do tutorial a seguir:
+Para explorar sua conexão **[!UICONTROL de comércio eletrônico]** usando as APIs [!DNL Experience Platform], você deve possuir uma ID de conexão válida. Se você ainda não tiver uma conexão para a conexão **[!UICONTROL eCommerce]** com a qual deseja trabalhar, poderá criar uma através do tutorial a seguir:
 
 * [Shopify](../create/ecommerce/shopify.md)
 
@@ -38,13 +38,13 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -54,7 +54,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Explore suas tabelas de dados
 
-Usando sua ID de conexão do **[!UICONTROL eCommerce]**, você pode explorar suas tabelas de dados executando solicitações do GET. Use a chamada a seguir para localizar o caminho da tabela que você deseja inspecionar ou assimilar em [!DNL Platform].
+Usando sua ID de conexão do **[!UICONTROL eCommerce]**, você pode explorar suas tabelas de dados executando solicitações do GET. Use a chamada a seguir para localizar o caminho da tabela que você deseja inspecionar ou assimilar em [!DNL Experience Platform].
 
 **Formato da API**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna uma matriz de tabelas da sua conexão **[!UICONTROL de comércio eletrônico]**. Encontre a tabela que você deseja trazer para [!DNL Platform] e anote sua propriedade `path`, pois você deverá fornecê-la na próxima etapa para inspecionar sua estrutura.
+Uma resposta bem-sucedida retorna uma matriz de tabelas da sua conexão **[!UICONTROL de comércio eletrônico]**. Encontre a tabela que você deseja trazer para [!DNL Experience Platform] e anote sua propriedade `path`, pois você deverá fornecê-la na próxima etapa para inspecionar sua estrutura.
 
 ```json
 [
@@ -114,9 +114,9 @@ Uma resposta bem-sucedida retorna uma matriz de tabelas da sua conexão **[!UICO
 ]
 ```
 
-## Inspect a estrutura de uma tabela
+## Inspecionar a estrutura de uma tabela
 
-Para inspecionar a estrutura de uma tabela da conexão do **[!UICONTROL eCommerce]**, execute uma solicitação de GET ao especificar o caminho de uma tabela em um parâmetro de consulta `object`.
+Para inspecionar a estrutura de uma tabela da conexão do **[!UICONTROL eCommerce]**, execute uma solicitação GET ao especificar o caminho de uma tabela em um parâmetro de consulta `object`.
 
 **Formato da API**
 
@@ -196,4 +196,4 @@ Uma resposta bem-sucedida retorna a estrutura da tabela especificada. Detalhes s
 
 ## Próximas etapas
 
-Seguindo este tutorial, você explorou sua conexão com o **[!UICONTROL eCommerce]**, encontrou o caminho da tabela que deseja assimilar no [!DNL Platform] e obteve informações sobre sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados de comércio eletrônico e trazê-los para a Platform](../collect/ecommerce.md).
+Seguindo este tutorial, você explorou sua conexão com o **[!UICONTROL eCommerce]**, encontrou o caminho da tabela que deseja assimilar no [!DNL Experience Platform] e obteve informações sobre sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados de comércio eletrônico e trazê-los para a Experience Platform](../collect/ecommerce.md).

@@ -2,18 +2,18 @@
 keywords: Experience Platform;perfil;perfil do cliente em tempo real;políticas de mesclagem;interface do usuário;carimbo de data/hora ordenado;precedência do conjunto de dados
 title: Visão geral das políticas de mesclagem
 type: Documentation
-description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a visualização unificada.
+description: O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de seus clientes individuais. Ao reunir esses dados, as políticas de mesclagem são as regras que a Experience Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar a exibição unificada.
 exl-id: a8ef527a-cfee-4129-9973-e8a212a3ad1e
-source-git-commit: 5e8bbdf5b7b07c31a36730c86b177fce6041e319
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1289'
 ht-degree: 1%
 
 ---
 
 # Visão geral das políticas de mesclagem
 
-O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma exibição unificada.
+O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Experience Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar uma exibição unificada.
 
 Usando APIs RESTful ou a interface do usuário, você pode criar novas políticas de mesclagem, gerenciar políticas existentes e definir uma política de mesclagem padrão para sua organização. Este documento fornece uma visão geral das políticas de mesclagem e a função que elas desempenham no Experience Platform.
 
@@ -22,14 +22,14 @@ Usando APIs RESTful ou a interface do usuário, você pode criar novas política
 Este guia requer uma compreensão funcional de vários recursos importantes do [!DNL Experience Platform]. Antes de seguir este guia e trabalhar com políticas de mesclagem, revise a documentação dos seguintes serviços:
 
 * [Perfil de cliente em tempo real](../home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
-* [Adobe Experience Platform Identity Service](../../identity-service/home.md): habilita o Perfil de Cliente em Tempo Real unindo identidades de diferentes fontes de dados que estão sendo assimiladas em [!DNL Platform].
-* [Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente.
+* [Adobe Experience Platform Identity Service](../../identity-service/home.md): habilita o Perfil de Cliente em Tempo Real unindo identidades de diferentes fontes de dados que estão sendo assimiladas em [!DNL Experience Platform].
+* [Experience Data Model (XDM)](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
 
 ## Noções básicas sobre políticas de mesclagem
 
-O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa e unificada de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada.
+O Adobe Experience Platform permite reunir fragmentos de dados de várias fontes e combiná-los para obter uma visualização completa e unificada de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que a Experience Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada.
 
-Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparecem em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são mesclados para criar um único perfil para esse cliente.
+Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparecem em vários conjuntos de dados. Quando esses fragmentos são assimilados na Experience Platform, eles são mesclados para criar um único perfil para esse cliente.
 
 Quando os dados de várias origens entram em conflito (por exemplo, um fragmento lista o cliente como &quot;único&quot; enquanto o outro lista o cliente como &quot;casado&quot;), a política de mesclagem determina quais informações incluir no perfil do indivíduo.
 
@@ -54,7 +54,7 @@ Para criar uma política de mesclagem usando a **[!UICONTROL precedência do con
 
 ### Classificação por carimbo de data e hora {#timestamp-ordered}
 
-À medida que os registros de perfil são assimilados no Experience Platform, um carimbo de data e hora do sistema é obtido no momento da assimilação e adicionado ao registro. Quando **[!UICONTROL Carimbo de data/hora ordenado]** é selecionado como o método de mesclagem para uma política de mesclagem, os perfis são mesclados com base no carimbo de data/hora do sistema. Em outras palavras, a mesclagem é feita com base no carimbo de data e hora de quando o registro foi assimilado na Platform.
+À medida que os registros de perfil são assimilados na Experience Platform, um carimbo de data e hora do sistema é obtido no momento da assimilação e adicionado ao registro. Quando **[!UICONTROL Carimbo de data/hora ordenado]** é selecionado como o método de mesclagem para uma política de mesclagem, os perfis são mesclados com base no carimbo de data/hora do sistema. Em outras palavras, a mesclagem é feita com base no carimbo de data e hora de quando o registro foi assimilado na Experience Platform.
 
 ## Identificação de identidade {#id-stitching}
 
@@ -79,4 +79,4 @@ Se você criar uma nova política de mesclagem e defini-la como padrão, a polí
 
 ## Próximas etapas
 
-Depois de ler este guia, você sabe o que são políticas de mesclagem e o papel que desempenham no Experience Platform. Para começar a trabalhar com políticas de mesclagem na interface do Experience Platform, consulte o [guia da interface do usuário de políticas de mesclagem](ui-guide.md). Para trabalhar com políticas de mesclagem usando a API, visite o [manual de ponto de extremidade da API de políticas de mesclagem](../api/merge-policies.md).
+Depois de ler este guia, você sabe o que são políticas de mesclagem e a função que desempenham no Experience Platform. Para começar a trabalhar com políticas de mesclagem na interface do Experience Platform, consulte o [guia da interface do usuário de políticas de mesclagem](ui-guide.md). Para trabalhar com políticas de mesclagem usando a API, visite o [manual de ponto de extremidade da API de políticas de mesclagem](../api/merge-policies.md).

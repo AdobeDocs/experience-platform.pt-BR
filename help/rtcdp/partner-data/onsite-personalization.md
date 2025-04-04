@@ -3,10 +3,10 @@ title: Personalizar experiências no site para visitantes desconhecidos usando o
 description: Saiba como usar o reconhecimento de visitante com auxílio de parceiros para fornecer experiências de site personalizadas para visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2673'
-ht-degree: 89%
+source-wordcount: '2676'
+ht-degree: 88%
 
 ---
 
@@ -42,7 +42,7 @@ Ao planejar usar atributos fornecidos pelo parceiro para oferecer experiências 
 * Até que ponto você se sente confortável em fornecer personalização em diferentes canais e para casos de uso diferentes com base em conjuntos de dados derivados probabilisticamente, em comparação com atributos confirmados deterministicamente?
 * Como a experiência de visitantes pré-autenticados, mas reconhecidos, deve ser alterada durante a autenticação?
 
-### Funcionalidade da interface, componentes da Platform e produtos da Experience Cloud que serão usados {#ui-functionality-and-elements}
+### Funcionalidade da interface do usuário, componentes do Experience Platform e produtos da Experience Cloud que você usará {#ui-functionality-and-elements}
 
 Para implementar com sucesso esse caso de uso, você deve usar várias áreas da Real-time Customer Data Platform e outras soluções da Experience Cloud. Verifique se tem as [permissões de controle de acesso baseado em atributo](/help/access-control/abac/overview.md) necessárias para todas essas áreas, ou solicite ao(à) administrador(a) que as conceda a você.
 
@@ -131,7 +131,7 @@ Primeiro, use o alternador de aplicativos no canto superior direito da tela para
 
 A seção **[!UICONTROL Coleção de dados]** da interface é semelhante à imagem abaixo.
 
-![Seção de Coleção de dados da interface da Platform.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![Seção de coleta de dados da interface do Experience Platform.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### Criar sequência de dados
 
@@ -259,7 +259,7 @@ Agora você está pronto para criar e ativar públicos-alvo para personalizaçã
 
 #### Criar público-alvo e configurar a segmentação de borda
 
-Na interface da Platform, navegue até **[!UICONTROL Cliente]** > **[!UICONTROL Públicos-alvo]** e crie um público-alvo para capturar os visitantes do site.
+Na interface do usuário do Experience Platform, navegue até **[!UICONTROL Cliente]** > **[!UICONTROL Públicos-alvo]** e crie um público-alvo para capturar os visitantes do site.
 
 ![Exibir como navegar até públicos-alvo.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 

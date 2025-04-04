@@ -2,11 +2,11 @@
 keywords: Experience Platform;página inicial;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados;ui;espaço de trabalho;grupo de campos;grupos de campos;
 solution: Experience Platform
 title: Criar e editar grupos de campos de esquema na interface
-description: Saiba como criar e editar grupos de campos de esquema na interface do usuário do Experience Platform.
+description: Saiba como criar e editar grupos de campos de esquema na interface do Experience Platform.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1001'
 ht-degree: 8%
 
 ---
@@ -22,11 +22,11 @@ No Experience Data Model (XDM), os grupos de campos de esquema são componentes 
 
 Um grupo de campos define com quais classes é compatível, com base no comportamento dos dados que o grupo de campos representa (registro ou série temporal). Isso significa que nem todos os grupos de campos estão disponíveis para uso com todas as classes.
 
-O Adobe Experience Platform fornece muitos grupos de campo padrão que abrangem uma grande variedade de casos de uso de marketing. No entanto, você também pode criar e editar seus próprios grupos de campos personalizados para definir conceitos adicionais relacionados à sua empresa nos esquemas XDM. Este guia fornece uma visão geral de como criar, editar e gerenciar grupos de campos personalizados para sua organização na interface do usuário da Platform.
+O Adobe Experience Platform fornece muitos grupos de campo padrão que abrangem uma grande variedade de casos de uso de marketing. No entanto, você também pode criar e editar seus próprios grupos de campos personalizados para definir conceitos adicionais relacionados à sua empresa nos esquemas XDM. Este guia fornece uma visão geral de como criar, editar e gerenciar grupos de campos personalizados para sua organização na interface do usuário do Experience Platform.
 
 ## Pré-requisitos {#prerequisites}
 
-Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução à função do XDM no ecossistema de Experience Platform, e as [noções básicas da composição de esquema](../../schema/composition.md) para saber como os grupos de campos contribuem para esquemas XDM.
+Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão geral do XDM](../../home.md) para obter uma introdução à função do XDM no ecossistema do Experience Platform e as [noções básicas da composição de esquemas](../../schema/composition.md) para saber como os grupos de campos contribuem para esquemas XDM.
 
 Embora não seja necessário para este guia, é recomendável que você também siga o tutorial sobre [composição de um esquema na interface](../../tutorials/create-schema-ui.md) para se familiarizar com os vários recursos do [!DNL Schema Editor].
 
@@ -48,7 +48,7 @@ O [!DNL Schema Editor] reaparece, com o novo grupo de campos listado no painel e
 
 ## Filtrar grupos de campos {#filter}
 
-A lista de grupos de campos disponíveis é pré-filtrada com base em como foram criados. A configuração padrão exibe os grupos de campos definidos por Adobe. No entanto, também é possível filtrar a lista para mostrar os criados por sua organização. Selecione o botão de opção para escolher entre as opções [!UICONTROL Padrão] e [!UICONTROL Personalizado]. A opção [!UICONTROL Padrão] mostra entidades criadas pelo Adobe e a opção [!UICONTROL Personalizado] exibe entidades criadas na sua organização.
+A lista de grupos de campos disponíveis é pré-filtrada com base em como foram criados. A configuração padrão exibe os grupos de campos definidos pelo Adobe. No entanto, também é possível filtrar a lista para mostrar os criados por sua organização. Selecione o botão de opção para escolher entre as opções [!UICONTROL Padrão] e [!UICONTROL Personalizado]. A opção [!UICONTROL Padrão] mostra entidades criadas pelo Adobe e a opção [!UICONTROL Personalizado] exibe entidades criadas em sua organização.
 
 ![A guia [!UICONTROL Grupos de campos] do espaço de trabalho [!UICONTROL Esquemas] com [!UICONTROL Padrão] e [!UICONTROL Personalizado] destacados.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
@@ -56,7 +56,7 @@ A lista de grupos de campos disponíveis é pré-filtrada com base em como foram
 
 >[!NOTE]
 >
->Somente grupos de campos personalizados definidos por sua organização podem ser totalmente editados e personalizados. Para grupos de campos principais definidos por Adobe, somente os nomes de exibição de seus campos podem ser editados no contexto de esquemas individuais. Elas são indicadas no Editor de Esquemas por um ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png)). Consulte a seção sobre [edição de nomes para exibição para campos de esquema](./schemas.md#display-names) para obter detalhes.
+>Somente grupos de campos personalizados definidos por sua organização podem ser totalmente editados e personalizados. Para grupos de campos principais definidos pelo Adobe, somente os nomes de exibição de seus campos podem ser editados no contexto de esquemas individuais. Elas são indicadas no Editor de Esquemas por um ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png)). Consulte a seção sobre [edição de nomes para exibição para campos de esquema](./schemas.md#display-names) para obter detalhes.
 >
 >Depois que um grupo de campos personalizado é salvo e usado em um esquema para assimilação de dados, somente alterações aditivas podem ser feitas no grupo de campos depois disso. Consulte as [regras de evolução do esquema](../../schema/composition.md#evolution) para obter mais informações.
 
@@ -92,6 +92,6 @@ Se o mesmo grupo de campos já estiver empregado em outros esquemas, os campos r
 
 ## Próximas etapas {#next-steps}
 
-Este guia abordou como criar e editar grupos de campos usando a interface do usuário da Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
+Este guia abordou como criar e editar grupos de campos usando a interface do usuário do Experience Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
 
 Para saber como gerenciar grupos de campos usando a API [!DNL Schema Registry], consulte o [manual de ponto de extremidade de grupos de campos](../../api/field-groups.md).

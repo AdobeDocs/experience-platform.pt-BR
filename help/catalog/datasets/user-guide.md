@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 5184f714d6bd8fb6e202a5ca6eea2d52a7169ae6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4105'
+source-wordcount: '4108'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 * [Conjuntos de dados](overview.md): a construção de armazenamento e gerenciamento para a persistência de dados em [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
-   * [Editor de esquemas](../../xdm/tutorials/create-schema-ui.md): saiba como criar seus próprios esquemas XDM personalizados usando o [!DNL Schema Editor] na interface do usuário do [!DNL Platform].
+   * [Editor de esquemas](../../xdm/tutorials/create-schema-ui.md): saiba como criar seus próprios esquemas XDM personalizados usando o [!DNL Schema Editor] na interface do usuário do [!DNL Experience Platform].
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): garanta a conformidade com regulamentos, restrições e políticas relativos ao uso de dados do cliente.
 
@@ -57,7 +57,7 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 
 Na interface do usuário do [!DNL Experience Platform], selecione **[!UICONTROL Conjuntos de dados]** no menu de navegação esquerdo para abrir o painel **[!UICONTROL Conjuntos de dados]**. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo o nome, o esquema ao qual o conjunto de dados pertence e o status da execução de assimilação mais recente.
 
-![A interface do usuário da Platform com o item de Conjuntos de Dados realçado na barra de navegação esquerda.](../images/datasets/user-guide/browse-datasets.png)
+![A interface do usuário do Experience Platform com o item Conjuntos de Dados realçado na barra de navegação à esquerda.](../images/datasets/user-guide/browse-datasets.png)
 
 Selecione o nome de um conjunto de dados na guia [!UICONTROL Procurar] para acessar a tela **[!UICONTROL Atividade do conjunto de dados]** e ver detalhes do conjunto de dados selecionado. A guia Atividade inclui um gráfico que visualiza a taxa de mensagens que estão sendo consumidas, bem como uma lista de lotes bem-sucedidos e com falha.
 
@@ -168,7 +168,7 @@ A caixa de diálogo [!UICONTROL Gerenciar marcas] também pode remover marcas ex
 
 Depois que uma tag é adicionada a um conjunto de dados, os conjuntos de dados podem ser filtrados com base na tag correspondente. Consulte a seção sobre como [filtrar conjuntos de dados por marcas](#enable-profile) para obter mais informações.
 
-Para obter mais informações sobre como classificar objetos comerciais para facilitar a descoberta e a categorização, consulte o manual em [gerenciando taxonomias de metadados](../../administrative-tags/ui/managing-tags.md). Este guia explica como os usuários com as permissões certas podem criar tags predefinidas, atribuí-las a categorias e gerenciar todas as operações CRUD relacionadas na interface do usuário da Platform.
+Para obter mais informações sobre como classificar objetos comerciais para facilitar a descoberta e a categorização, consulte o manual em [gerenciando taxonomias de metadados](../../administrative-tags/ui/managing-tags.md). Este guia explica como os usuários com as permissões certas podem criar tags predefinidas, atribuí-las a categorias e gerenciar todas as operações CRUD relacionadas na interface do usuário do Experience Platform.
 
 ### (Beta) Definir a política de retenção de dados {#data-retention-policy}
 
@@ -176,7 +176,7 @@ Para obter mais informações sobre como classificar objetos comerciais para fac
 > 
 >As configurações de retenção de dados estão atualmente na versão beta e só estão disponíveis em uma **versão limitada** para organizações selecionadas. Sua interface do usuário pode não refletir o recurso descrito abaixo.
 
-Gerencie as configurações de expiração e retenção do conjunto de dados usando o menu de ação em linha da guia [!UICONTROL Procurar] do espaço de trabalho [!UICONTROL Conjuntos de Dados]. Você pode usar esse recurso para configurar por quanto tempo os dados são retidos no data lake e no armazenamento de perfis. A data de expiração se baseia em quando os dados foram assimilados na Platform e no período de retenção configurado.
+Gerencie as configurações de expiração e retenção do conjunto de dados usando o menu de ação em linha da guia [!UICONTROL Procurar] do espaço de trabalho [!UICONTROL Conjuntos de Dados]. Você pode usar esse recurso para configurar por quanto tempo os dados são retidos no data lake e no armazenamento de perfis. A data de expiração se baseia em quando os dados foram assimilados na Experience Platform e no período de retenção configurado.
 
 >[!TIP]
 >
@@ -419,7 +419,7 @@ Se desejar excluir o lote, selecione **[!UICONTROL Excluir lote]** próximo à p
 
 ## Próximas etapas
 
-Este guia do usuário forneceu instruções para executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do [!DNL Experience Platform]. Para obter as etapas sobre como executar fluxos de trabalho [!DNL Platform] comuns envolvendo conjuntos de dados, consulte os seguintes tutoriais:
+Este guia do usuário forneceu instruções para executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do [!DNL Experience Platform]. Para obter as etapas sobre como executar fluxos de trabalho [!DNL Experience Platform] comuns envolvendo conjuntos de dados, consulte os seguintes tutoriais:
 
 * [Criar um conjunto de dados usando APIs](create.md)
 * [Consultar dados do conjunto de dados usando a API de acesso a dados](../../data-access/home.md)

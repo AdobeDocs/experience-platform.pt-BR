@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente em tempo real;interface do usuário;UI;personalização;painel de perfis;painel;profile;profile dashboard
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;interface do usuário;interface;personalização;painel;painel;;profile;real-time customer profile profile profile;user interface;UI;customization;profile dashboard;dashboard
 title: Painel de destinos
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3243'
+source-wordcount: '3246'
 ht-degree: 19%
 
 ---
@@ -27,15 +27,15 @@ O painel Destinos exibe um instantâneo dos destinos que sua organização ativo
 
 ## Explore o painel [!UICONTROL Destinos] {#explore}
 
-Para navegar até o painel de destinos na interface do usuário da Platform, selecione **[!UICONTROL Destinos]** no painel à esquerda e clique na guia **[!UICONTROL Visão geral]** para exibir o painel.
+Para navegar até o painel de destinos na interface do usuário do Experience Platform, selecione **[!UICONTROL Destinos]** no painel à esquerda e selecione a guia **[!UICONTROL Visão geral]** para exibir o painel.
 
 A data e a hora do instantâneo mais recente são exibidas na parte superior da [!UICONTROL Visão geral], ao lado da lista suspensa de destino. Todos os dados do widget são precisos a partir dessa data e hora. O carimbo de data e hora do instantâneo é fornecido em UTC; ele não está no fuso horário do usuário ou organização individual.
 
 >[!NOTE]
 >
->Se sua organização for nova no Experience Platform e ainda não tiver destinos ativos, o Painel de destinos e a guia [!UICONTROL Visão geral] não estarão visíveis. Em vez disso, selecionar [!UICONTROL Destinos] na navegação à esquerda exibe a guia [!UICONTROL Catálogo]. Para saber mais sobre a guia [!UICONTROL Catálogo], consulte o [[!UICONTROL guia do espaço de trabalho] de Destinos](../../destinations/ui/destinations-workspace.md).
+>Se sua organização for nova no Experience Platform e ainda não tiver destinos ativos, o painel Destinos e a guia [!UICONTROL Visão geral] não estarão visíveis. Em vez disso, selecionar [!UICONTROL Destinos] na navegação à esquerda exibe a guia [!UICONTROL Catálogo]. Para saber mais sobre a guia [!UICONTROL Catálogo], consulte o [[!UICONTROL guia do espaço de trabalho] de Destinos](../../destinations/ui/destinations-workspace.md).
 
-![A Visão Geral dos Destinos da Interface do Usuário da Plataforma com o instantâneo mais recente realçado.](../images/destinations/snapshot-timestamp.png)
+![A Visão Geral dos Destinos da Interface do Usuário do Experience Platform com o instantâneo mais recente realçado.](../images/destinations/snapshot-timestamp.png)
 
 ### Modificar o painel [!UICONTROL Destinos] {#modify}
 
@@ -53,7 +53,7 @@ Na biblioteca de widgets, você pode navegar pela seleção de widgets de públi
 
 ### Exibir SQL {#view-sql}
 
-Você pode exibir o SQL que gera os insights visualizados no painel com um alternador no espaço de trabalho [!UICONTROL Visão geral]. Você pode se inspirar no SQL de seus insights existentes para criar novas consultas que obtenham insights exclusivos dos dados da plataforma com base nas necessidades comerciais. Para saber mais sobre este recurso, consulte o [Exibir Guia da Interface do Usuário do SQL](../view-sql.md).
+Você pode exibir o SQL que gera os insights visualizados no painel com um alternador no espaço de trabalho [!UICONTROL Visão geral]. Você pode se inspirar no SQL de seus insights existentes para criar novas consultas que obtenham insights exclusivos de dados do Experience Platform com base nas necessidades comerciais. Para saber mais sobre este recurso, consulte o [Exibir Guia da Interface do Usuário do SQL](../view-sql.md).
 
 ## Widgets padrão {#default-widgets}
 
@@ -70,7 +70,7 @@ Uma transferência de widget padrão é fornecida para todas as novas instância
 
 ## Widgets padrão {#standard-widgets}
 
-O Adobe fornece vários widgets padrão que você pode usar para visualizar métricas diferentes relacionadas aos seus destinos e avaliar a integridade dos públicos-alvo disponíveis para sua análise de dados. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando a [!UICONTROL Biblioteca de widgets]. Para saber mais sobre como criar widgets personalizados, comece lendo a [Visão geral da biblioteca de widgets](../customize/widget-library.md).
+O Adobe fornece vários widgets padrão que você pode usar para visualizar métricas diferentes relacionadas aos seus destinos e avaliar a integridade dos públicos disponíveis para sua análise de dados. Você também pode criar widgets personalizados para serem compartilhados com sua organização usando a [!UICONTROL Biblioteca de widgets]. Para saber mais sobre como criar widgets personalizados, comece lendo a [Visão geral da biblioteca de widgets](../customize/widget-library.md).
 
 ### Pré-requisitos {#prerequisites}
 
@@ -80,7 +80,7 @@ Antes de continuar com as descrições dos widgets padrão, verifique se você e
 * **Público-alvo**: um conjunto de pessoas, contas, famílias ou outras entidades que compartilham características e comportamentos comuns.
 * **Mapeamento/Mapeamento**: o mapeamento de dados é o processo de mapear campos de dados de origem para campos de destino relacionados em um destino.
 * **Identidade**: uma identidade é um identificador que representa exclusivamente um cliente individual, como uma ID de cookie, ID de dispositivo ou ID de email.
-* **Ativar**: Ativar é a ação realizada por um usuário para mapear um público ou perfis para um destino, como o Oracle Eloqua, Google ou Marketing Cloud Salesforce.
+* **Ativar**: Ativar é a ação realizada por um usuário para mapear um público ou perfis para um destino como o Oracle Eloqua, o Google ou o Salesforce Marketing Cloud.
 
 Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome de um widget na lista a seguir:
 
@@ -107,7 +107,7 @@ Para saber mais sobre cada um dos widgets padrão disponíveis, selecione o nome
 >title="Destinos mais usados"
 >abstract="Esse dispositivo exibe os destinos mais ativos da sua organização de acordo com o número de públicos-alvo mapeados. Esses números são precisos no momento do último instantâneo. Essa classificação fornece informações sobre quais destinos são mais usados atualmente, destacando os que podem ser subutilizados."
 
-O widget **[!UICONTROL Destinos mais usados]** exibe os principais destinos de sua organização pelo número de públicos mapeados, a partir do último instantâneo. Essa classificação fornece insight sobre quais destinos estão sendo utilizados, além de mostrar os que podem estar subutilizados.
+O widget **[!UICONTROL Destinos mais usados]** exibe os principais destinos de sua organização pelo número de públicos mapeados, a partir do último instantâneo. Essa classificação fornece ao insight em quais destinos estão sendo utilizados, além de mostrar potencialmente aqueles que podem estar subutilizados.
 
 Por exemplo, se você configurou um destino ontem, mas não mapeou nenhum público para ele, é possível ver que o destino está subutilizado no momento.
 
@@ -253,7 +253,7 @@ Todos os tamanhos de público no sistema são classificados de alto a baixo, con
 
 Se a contagem de perfis de público-alvo mapeada estiver fora de um desvio padrão do tamanho médio do perfil mapeado nos últimos 30 dias, isso indica uma anomalia no sistema e deve ser investigado.
 
-Se um público do widget [!UICONTROL Integridade do público-alvo mapeado] estiver se desviando por uma grande margem, consulte o gráfico de tendência de tamanho do público-alvo e localize o público anômalo. A tendência pode fornecer mais informações sobre a saúde do seu público-alvo.
+Se um público do widget [!UICONTROL Integridade do público-alvo mapeado] estiver se desviando por uma grande margem, consulte o gráfico de tendência de tamanho do público-alvo e localize o público anômalo. A tendência pode fornecer mais insight para a saúde do seu público-alvo.
 
 >[!NOTE]
 >

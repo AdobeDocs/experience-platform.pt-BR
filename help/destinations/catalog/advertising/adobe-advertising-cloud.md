@@ -1,38 +1,38 @@
 ---
-keywords: Advertising Cloud;extensão da advertising cloud; destino da advertising cloud
-title: Extensão do Adobe Advertising Cloud
-description: A extensão do Adobe Advertising Cloud é um destino de anúncio no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+keywords: Advertising Cloud;extensão da advertising cloud;destino da advertising cloud
+title: Extensão da Adobe Advertising Cloud
+description: A extensão da Adobe Advertising Cloud é um destino de anúncio no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '441'
 ht-degree: 3%
 
 ---
 
-# Extensão do Adobe Advertising Cloud {#adobe-advertising-cloud-extension}
+# Extensão da Adobe Advertising Cloud {#adobe-advertising-cloud-extension}
 
 ## Visão geral {#overview}
 
-Esta é a extensão [!DNL Advertising Cloud] para implementar a conversão de [!DNL Advertising Cloud] e as tags de público-alvo para DSP e Pesquisa (não há suporte para DCO no momento).
+Esta é a extensão [!DNL Advertising Cloud] para implementar a conversão de [!DNL Advertising Cloud] e as marcas de público-alvo para a DSP e para a Pesquisa (DCO não tem suporte no momento).
 
-O Adobe Advertising Cloud é uma extensão de publicidade do Adobe Experience Platform.
+A Adobe Advertising Cloud é uma extensão de publicidade do Adobe Experience Platform.
 
-Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
+Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
-![Extensão do Adobe Advertising Cloud](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
+![Extensão da Adobe Advertising Cloud](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## Pré-requisitos {#prerequisites}
 
-Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram o Platform.
+Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar tags na Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso aos recursos da Coleção de Dados na interface do usuário e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar as tags na Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso aos recursos da Coleção de Dados na interface do usuário e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 
 Para instalar a extensão Adobe Advertising Cloud:
 
-Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [interface do Experience Platform](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão no catálogo ou use a barra de pesquisa.
 

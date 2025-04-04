@@ -2,9 +2,9 @@
 title: Amostras de conjunto de dados
 description: Os conjuntos de dados de amostra do Serviço de consulta permitem realizar consultas exploratórias em grandes volumes de dados com tempo de processamento bastante reduzido, à custa da precisão da consulta. Este guia fornece informações sobre como gerenciar suas amostras para o processamento aproximado de consultas
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '633'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Para usar os recursos aproximados de processamento de consultas detalhados neste
 
 >[!NOTE]
 >
->Você deve ativar o sinalizador de sessão sempre que fizer logon na Platform.
+>Você deve ativar o sinalizador de sessão sempre que fizer logon no Experience Platform.
 
 ![O Editor de Consultas com o comando &#39;SET aqp=true;&#39; foi realçado.](../images/key-concepts/set-session-flag.png)
 

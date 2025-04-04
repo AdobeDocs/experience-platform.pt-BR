@@ -2,9 +2,9 @@
 title: Notas da versão de fevereiro de 2022 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2022 da Adobe Experience Platform.
 exl-id: ae453f7d-ac75-4cc3-8435-57d25f086cc3
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1014'
+source-wordcount: '1018'
 ht-degree: 17%
 
 ---
@@ -39,17 +39,17 @@ Para obter mais informações sobre [!DNL Dashboards], consulte a [[!DNL Dashboa
 
 ## Coleção de dados {#data-collection}
 
-A Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los para o Edge Network da Adobe Experience Platform, onde podem ser enriquecidos, transformados e distribuídos para destinos Adobe ou não Adobe.
+O Experience Platform fornece um conjunto de tecnologias que permitem coletar dados de experiência do cliente do lado do cliente e enviá-los para o Adobe Experience Platform Edge Network, onde podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou que não sejam da Adobe.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | --- | --- |
 | Fluxo de trabalho de interface do usuário aprimorado para configuração de sequência de dados | O fluxo de trabalho para criar um novo fluxo de dados na interface da Coleção de dados foi atualizado. Ao adicionar serviços a um fluxo de dados, somente os serviços aos quais você tem acesso serão incluídos na lista de opções. Consulte o manual sobre [configuração de uma sequência de dados](../../datastreams/overview.md) para obter mais informações. |
-| Preparo de dados para a coleção de dados | Se você estiver usando o SDK da Web da Adobe Experience Platform, agora é possível aproveitar os recursos de Preparo de dados para mapear seus dados para o Experience Data Model (XDM) no lado do servidor. Consulte a seção sobre [Preparação de dados para coleção de dados](../../datastreams/data-prep.md) no guia de sequências de dados para obter mais informações. |
-| IDs de dispositivo próprio | Agora é possível enviar suas próprias IDs de dispositivo para o Edge Network da Adobe Experience Platform ao coletar dados do cliente usando o SDK da Web da plataforma, fornecendo uma solução alternativa para as restrições recentes do navegador sobre a duração dos cookies de terceiros. Consulte o manual sobre [IDs de dispositivo próprio](../../web-sdk/identity/first-party-device-ids.md) para obter mais informações. |
+| Preparo de dados para a coleção de dados | Se você estiver usando o Adobe Experience Platform Web SDK, agora é possível aproveitar os recursos de Preparo de dados para mapear seus dados para o Experience Data Model (XDM) no lado do servidor. Consulte a seção sobre [Preparação de dados para coleção de dados](../../datastreams/data-prep.md) no guia de sequências de dados para obter mais informações. |
+| IDs de dispositivo próprio | Agora é possível enviar suas próprias IDs de dispositivo para o Adobe Experience Platform Edge Network ao coletar dados do cliente usando o Experience Platform Web SDK, fornecendo uma solução alternativa para as restrições recentes do navegador sobre a duração dos cookies de terceiros. Consulte o manual sobre [IDs de dispositivo próprio](../../web-sdk/identity/first-party-device-ids.md) para obter mais informações. |
 
-Para obter mais informações sobre a coleta de dados na Platform, consulte a [visão geral da coleta de dados](../../collection/home.md).
+Para obter mais informações sobre a coleta de dados no Experience Platform, consulte a [visão geral da coleta de dados](../../collection/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
@@ -59,7 +59,7 @@ Para obter mais informações sobre a coleta de dados na Platform, consulte a [v
 
 | Recurso | Descrição |
 | ----------- | ----------- |
-| (Beta) Suporte a Destination SDK para destinos baseados em arquivo | O [suporte para Destination SDK para destinos baseados em arquivo](../../destinations/destination-sdk/functionality/destination-server/server-specs.md) está atualmente em beta privado e só está disponível para um número selecionado de parceiros e clientes. A funcionalidade e a documentação associada estão sujeitas a alterações antes do lançamento de disponibilidade geral.<br><br>Entre em contato com o representante de conta do Adobe para saber como acessar o recurso. Os representantes de conta interna do Adobe devem entrar em contato com as equipes de produtos e engenharia de destinos do Experience Platform para discutir os casos de uso compatíveis. <br><br> Na fase beta do suporte para Destination SDK para destinos baseados em arquivo, os parceiros beta e clientes podem usar o [Experience Platform Destination SDK](../../destinations/destination-sdk/overview.md) para criar destinos privados que se beneficiem das seguintes funcionalidades: <ul><li>Crie um destino baseado em arquivo (em lote) por meio do Amazon S3, servidores SFTP, Azure Blob, Armazenamento do Azure Data Lake, Armazenamento da Data Landing Zone.</li><li>Configure e defina o agendamento de exportação de arquivos padrão e as opções de frequência.</li><li>Configure e defina opções para formatar seus arquivos CSV exportados (delimitadores, caracteres de escape e outras opções).</li><li>Capacidade de definir e editar cabeçalhos de arquivos personalizados.</li><li>Capacidade de receber notificações de eventos sobre a exportação de arquivos e segmentos.</li><li>Capacidade de exportar tipos de arquivos adicionais, como CSV, TSV, JSON, Parquet.</li></ul>  <br>Para começar a usar a nova funcionalidade, leia [(Beta) Usar Destination SDK para configurar um destino baseado em arquivo](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md). <br><br> A funcionalidade de criar destinos de *transmissão* privados ou de produção usando o Destination SDK já está disponível para todos os clientes e parceiros do Experience Platform. Leia o guia sobre como [usar o Destination SDK para configurar um destino de streaming](../../destinations/destination-sdk/guides/configure-destination-instructions.md) para obter detalhes. |
+| (Beta) Suporte do Destination SDK para destinos baseados em arquivo | [O suporte da Destination SDK para destinos baseados em arquivo](../../destinations/destination-sdk/functionality/destination-server/server-specs.md) está atualmente em beta privado e só está disponível para um número selecionado de parceiros e clientes. A funcionalidade e a documentação associada estão sujeitas a alterações antes do lançamento de disponibilidade geral.<br><br>Entre em contato com o representante de conta da Adobe para saber como acessar o recurso. Os representantes de contas internas da Adobe devem entrar em contato com as equipes de produtos e engenharia de destinos da Experience Platform para discutir os casos de uso compatíveis. <br><br> Na fase beta do suporte do Destination SDK para destinos baseados em arquivo, os parceiros beta e clientes podem usar o [Experience Platform Destination SDK](../../destinations/destination-sdk/overview.md) para criar destinos privados que se beneficiem das seguintes funcionalidades: <ul><li>Crie um destino baseado em arquivo (em lote) por meio do Amazon S3, servidores SFTP, Azure Blob, Armazenamento do Azure Data Lake, Armazenamento da Data Landing Zone.</li><li>Configure e defina o agendamento de exportação de arquivos padrão e as opções de frequência.</li><li>Configure e defina opções para formatar seus arquivos CSV exportados (delimitadores, caracteres de escape e outras opções).</li><li>Capacidade de definir e editar cabeçalhos de arquivos personalizados.</li><li>Capacidade de receber notificações de eventos sobre a exportação de arquivos e segmentos.</li><li>Capacidade de exportar tipos de arquivos adicionais, como CSV, TSV, JSON, Parquet.</li></ul>  <br>Para começar a usar a nova funcionalidade, leia [(Beta) Usar o Destination SDK para configurar um destino baseado em arquivo](../../destinations/destination-sdk/guides/configure-file-based-destination-instructions.md). <br><br> A funcionalidade de criar destinos de *transmissão* privados ou de produção usando o Destination SDK já está disponível para todos os clientes e parceiros da Experience Platform. Leia o guia sobre como [usar o Destination SDK para configurar um destino de streaming](../../destinations/destination-sdk/guides/configure-destination-instructions.md) para obter detalhes. |
 
 ## [!DNL Identity Service] {#identity}
 
@@ -77,7 +77,7 @@ Para obter informações mais gerais sobre [!DNL Identity Service], consulte a [
 
 ## Origens {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 

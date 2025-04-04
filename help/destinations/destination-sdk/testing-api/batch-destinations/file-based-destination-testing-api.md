@@ -2,9 +2,9 @@
 description: Esta página explica como usar o endpoint da API /testing/destinationInstance para testar se o destino baseado em arquivo está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
 title: Teste seu destino baseado em arquivo com perfis de amostra
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '831'
 ht-degree: 2%
 
 ---
@@ -27,9 +27,9 @@ Antes de continuar, consulte o [guia de introdução](../../getting-started.md) 
 
 Antes de usar o ponto de extremidade `/testing/destinationInstance`, verifique se você atende às seguintes condições:
 
-* Você tem um destino baseado em arquivo existente criado por meio do Destination SDK e pode visualizá-lo em seu [catálogo de destinos](../../../ui/destinations-workspace.md).
-* Você criou pelo menos um fluxo de ativação para o destino na interface do usuário do Experience Platform.
-* Para fazer a solicitação de API com êxito, é necessário ter a ID da instância de destino correspondente à instância de destino que você testará. Obtenha a ID da instância de destino que você deve usar na chamada da API, no URL, ao navegar por uma conexão com seu destino na interface do Platform.
+* Você tem um destino baseado em arquivo existente criado por meio da Destination SDK e pode visualizá-lo em seu [catálogo de destinos](../../../ui/destinations-workspace.md).
+* Você criou pelo menos um fluxo de ativação para o seu destino na interface do usuário do Experience Platform.
+* Para fazer a solicitação de API com êxito, é necessário ter a ID da instância de destino correspondente à instância de destino que você testará. Obtenha a ID da instância de destino que você deve usar na chamada da API, no URL, ao navegar por uma conexão com seu destino na interface do usuário do Experience Platform.
 
   ![Imagem da interface do usuário mostrando como obter a ID da instância de destino da URL.](../../assets/testing-api/get-destination-instance-id.png)
 * *Opcional*: se você deseja testar sua configuração de destino com um perfil de exemplo adicionado à chamada de API, use o ponto de extremidade [/sample-profiles](file-based-sample-profile-generation-api.md) para gerar um perfil de exemplo com base no esquema de origem existente. Se você não fornecer um perfil de amostra, a API gerará um e o retornará na resposta.
@@ -238,7 +238,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a carga de respost
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
 ## Próximas etapas
 
@@ -246,4 +246,4 @@ Depois de ler este documento, agora você sabe como testar a configuração de d
 
 Se você tiver recebido uma resposta de API válida, seu destino está funcionando corretamente. Se quiser ver informações mais detalhadas sobre o fluxo de ativação, você poderá usar a propriedade `results` da resposta a [exibir resultados detalhados da ativação](file-based-destination-results-api.md).
 
-Se você estiver criando um destino público, agora pode [enviar a configuração de destino](../../guides/submit-destination.md) para o Adobe para revisão.
+Se você estiver criando um destino público, agora pode [enviar a configuração de destino](../../guides/submit-destination.md) para a Adobe para revisão.

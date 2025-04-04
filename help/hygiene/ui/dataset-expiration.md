@@ -2,9 +2,9 @@
 title: Expirações do conjunto de dados automatizado
 description: Saiba como programar a expiração de um conjunto de dados na interface do usuário do Adobe Experience Platform.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '873'
 ht-degree: 18%
 
 ---
@@ -22,13 +22,13 @@ O espaço de trabalho [[!UICONTROL Ciclo de vida dos dados]](./overview.md) na i
 >
 >Se um conjunto de dados estiver definido para expirar, você deverá alterar manualmente todos os fluxos de dados que possam estar assimilando dados nesse conjunto de dados para que seus fluxos de trabalho downstream não sejam afetados negativamente.
 
-Este documento aborda como agendar e automatizar as expirações do conjunto de dados na interface do usuário da plataforma.
+Este documento aborda como agendar e automatizar as expirações de conjuntos de dados na interface do usuário do Experience Platform.
 
 >[!NOTE]
 >
->No momento, a expiração do conjunto de dados não exclui dados do Edge Network Adobe Experience Platform. No entanto, não há possibilidade de os dados permanecerem no Edge Network após o conjunto de dados estar definido para expirar. Isso ocorre porque o contrato de licença de serviço de 15 dias para a expiração do conjunto de dados se sobrepõe ao período de 14 dias em que os dados existem dentro do Edge Network antes de serem descartados.
+>No momento, a expiração do conjunto de dados não exclui dados do Adobe Experience Platform Edge Network. No entanto, não há possibilidade de os dados permanecerem na Edge Network após o conjunto de dados estar definido para expirar. Isso ocorre porque o contrato de licença de serviço de 15 dias para a expiração do conjunto de dados se sobrepõe ao período de 14 dias em que os dados existem na Edge Network antes de serem descartados.
 
-O Gerenciamento Avançado do Ciclo de Vida dos Dados suporta exclusões de conjuntos de dados por meio do [ponto de extremidade de expiração do conjunto de dados](../api/dataset-expiration.md) e exclusões de ID (dados em nível de linha) usando identidades primárias por meio do [ponto de extremidade da ordem de trabalho](../api/workorder.md). Também é possível gerenciar as expirações do conjunto de dados e as [exclusões de registros](./record-delete.md) por meio da interface do usuário da plataforma. Consulte a documentação vinculada para obter mais informações.
+O Gerenciamento Avançado do Ciclo de Vida dos Dados suporta exclusões de conjuntos de dados por meio do [ponto de extremidade de expiração do conjunto de dados](../api/dataset-expiration.md) e exclusões de ID (dados em nível de linha) usando identidades primárias por meio do [ponto de extremidade da ordem de trabalho](../api/workorder.md). Também é possível gerenciar expirações de conjuntos de dados e [exclusões de registros](./record-delete.md) por meio da interface do usuário do Experience Platform. Consulte a documentação vinculada para obter mais informações.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Para criar uma solicitação, selecione **[!UICONTROL Criar solicitação]** na 
 
 >[!IMPORTANT]
 >
->Os usuários do Real-Time CDP, Adobe Journey Optimizer e Customer Journey Analytics têm 20 ordens de serviço de expiração do conjunto de dados programadas e pendentes. Os usuários do Healthcare Shield e do Privacy and Security Shield têm 50 ordens de trabalho de expiração programadas do conjunto de dados. Isso significa que você pode ter 20 ou 50 conjuntos de dados programados para serem excluídos a qualquer momento.<br>Por exemplo, se você tiver 20 expirações de conjunto de dados agendadas e um conjunto de dados precisar ser excluído amanhã, você não poderá definir mais expirações até que esse conjunto de dados tenha sido excluído.
+>Os usuários do Real-Time CDP, Adobe Journey Optimizer e Customer Journey Analytics têm 20 ordens de serviço de expiração do conjunto de dados programadas pendentes. Os usuários do Healthcare Shield e do Privacy and Security Shield têm 50 ordens de trabalho de expiração programadas do conjunto de dados. Isso significa que você pode ter 20 ou 50 conjuntos de dados programados para serem excluídos a qualquer momento.<br>Por exemplo, se você tiver 20 expirações de conjunto de dados agendadas e um conjunto de dados precisar ser excluído amanhã, você não poderá definir mais expirações até que esse conjunto de dados tenha sido excluído.
 
 ![O espaço de trabalho [!UICONTROL Ciclo de Vida de Dados] com [!UICONTROL Criar solicitação] foi realçado.](../images/ui/ttl/create-request-button.png)
 
@@ -89,6 +89,6 @@ Na página de detalhes da expiração do conjunto de dados, o painel direito mos
 
 ## Próximas etapas
 
-Esse documento abordou como programar as expirações do conjunto de dados na interface do usuário do Experience Platform. Para obter informações sobre como executar outras tarefas de minimização de dados na interface, consulte a [visão geral sobre a interface do ciclo de vida dos dados](./overview.md).
+Esse documento abordou como agendar expirações de conjunto de dados na interface do usuário do Experience Platform. Para obter informações sobre como executar outras tarefas de minimização de dados na interface, consulte a [visão geral sobre a interface do ciclo de vida dos dados](./overview.md).
 
 Para saber como agendar expirações de conjunto de dados usando a API de higiene de dados, consulte o [manual de ponto de extremidade de expiração do conjunto de dados](../api/dataset-expiration.md).

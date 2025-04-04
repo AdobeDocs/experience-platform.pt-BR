@@ -2,16 +2,16 @@
 title: Implementação da extensão Adobe Experience Platform Assurance
 description: Este guia explica como implementar e instalar a extensão Adobe Experience Platform Assurance.
 exl-id: b7bd1bb1-1606-4d00-97e0-c329c86d8ca4
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 100%
+source-wordcount: '387'
+ht-degree: 95%
 
 ---
 
 # Implementação da extensão Adobe Experience Platform Assurance
 
-Este tutorial explica como instalar e implementar a extensão do Platform Assurance no SDK móvel. Para obter instruções sobre como adicionar a extensão do Assurance ao seu aplicativo, leia a [Visão geral da extensão do Adobe Experience Platform Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
+Este tutorial explica como instalar e implementar a extensão do Experience Platform Assurance no Mobile SDK. Para obter instruções sobre como adicionar a extensão do Assurance ao seu aplicativo, leia a [Visão geral da extensão do Adobe Experience Platform Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/#add-the-aep-assurance-extension-to-your-app).
 
 ## Introdução
 

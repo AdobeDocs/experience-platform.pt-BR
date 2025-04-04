@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos rótulos de uso de dados
 description: Saiba como os rótulos de uso de dados são usados para ajudar a impor a conformidade da governança de dados no Adobe Experience Platform.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: 5d34781e06c0fa8bfd2e52f73e336d92d16192f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '789'
 ht-degree: 16%
 
 ---
@@ -24,11 +24,11 @@ Este documento fornece uma visão geral dos rótulos de uso de dados em [!DNL Ex
 
 ## Noções básicas sobre rótulos de uso de dados
 
-Os rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as políticas de governança que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulagem de dados assim que eles forem assimilados no [!DNL Experience Platform] ou assim que os dados estiverem disponíveis para uso no [!DNL Platform].
+Os rótulos de uso de dados permitem categorizar conjuntos de dados e campos de acordo com as políticas de governança que se aplicam a esses dados. Os rótulos podem ser aplicados a qualquer momento, proporcionando flexibilidade na maneira como você escolhe controlar os dados. As práticas recomendadas incentivam a rotulagem de dados assim que eles forem assimilados no [!DNL Experience Platform] ou assim que os dados estiverem disponíveis para uso no [!DNL Experience Platform].
 
 Os rótulos de uso de dados aplicados no nível do conjunto de dados são propagados para todos os campos no conjunto de dados. Os rótulos também podem ser aplicados diretamente a campos individuais (cabeçalhos de coluna) em um conjunto de dados, sem propagação.
 
-O [!DNL Platform] fornece vários rótulos de uso de dados &quot;principais&quot; prontos para uso, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Para obter mais informações sobre esses rótulos e as políticas de governança que eles representam, consulte o manual em [rótulos de uso de dados principais](reference.md).
+O [!DNL Experience Platform] fornece vários rótulos de uso de dados &quot;principais&quot; prontos para uso, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Para obter mais informações sobre esses rótulos e as políticas de governança que eles representam, consulte o manual em [rótulos de uso de dados principais](reference.md).
 
 Além dos rótulos fornecidos pelo Adobe, você também pode definir seus próprios rótulos personalizados para sua organização. Consulte a seção sobre [gerenciamento de rótulos](#manage-labels) para obter mais informações.
 
@@ -38,13 +38,13 @@ Todos os segmentos de público-alvo criados pelo [Serviço de segmentação do A
 
 Além de herdar rótulos de nível de conjunto de dados, os segmentos herdam todos os rótulos de nível de campo de seus conjuntos de dados associados por padrão. Portanto, você pode identificar mais facilmente quais atributos devem ser excluídos de seus segmentos e impedir que eles herdem rótulos de campos excluídos.
 
-Para obter mais informações sobre como a imposição automática funciona na Platform, consulte a visão geral em [imposição de política automática](../enforcement/auto-enforcement.md).
+Para obter mais informações sobre como a imposição automática funciona no Experience Platform, consulte a visão geral em [imposição de política automática](../enforcement/auto-enforcement.md).
 
 ### Herança dos controles de exportação de dados do Adobe Audience Manager
 
-[!DNL Experience Platform] pode compartilhar segmentos com a Adobe Audience Manager. Quaisquer Controles de Exportação de Dados que tenham sido aplicados aos segmentos do Audience Manager são traduzidos em rótulos equivalentes e ações de marketing reconhecidas pela Governança de Dados do [!DNL Experience Platform].
+[!DNL Experience Platform] pode compartilhar segmentos com a Adobe Audience Manager. Quaisquer Controles de Exportação de Dados que tenham sido aplicados a segmentos do Audience Manager são traduzidos em rótulos equivalentes e ações de marketing reconhecidas pela Governança de Dados do [!DNL Experience Platform].
 
-Para obter uma referência sobre como os Controles de Exportação de Dados específicos são mapeados para rótulos de uso de dados no [!DNL Platform], consulte a [documentação do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Para obter uma referência sobre como os Controles de Exportação de Dados específicos são mapeados para rótulos de uso de dados no [!DNL Experience Platform], consulte a [documentação do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Gerenciamento dos rótulos de uso de dados na [!DNL Experience Platform] {#manage-labels}
 
@@ -61,7 +61,7 @@ O espaço de trabalho **[!UICONTROL Políticas]** da interface do usuário do [!
 
 >[!IMPORTANT]
 >
->Os rótulos não podem mais ser aplicados a campos no nível do conjunto de dados. Esse workflow foi substituído em favor da aplicação de rótulos no nível do schema. Quaisquer rótulos aplicados anteriormente no nível do objeto do conjunto de dados ainda serão compatíveis por meio da interface do usuário da plataforma até 31 de maio de 2024. Para garantir que seus rótulos sejam consistentes em todos os esquemas, todos os rótulos anteriormente anexados a campos no nível do conjunto de dados devem ser migrados para o nível do esquema por você no ano seguinte. Consulte a seção sobre [migrando rótulos aplicados anteriormente](../e2e.md#migrate-labels) para obter instruções sobre como fazer isso.
+>Os rótulos não podem mais ser aplicados a campos no nível do conjunto de dados. Esse workflow foi substituído em favor da aplicação de rótulos no nível do schema. Quaisquer rótulos aplicados anteriormente no nível do objeto do conjunto de dados ainda serão compatíveis por meio da interface do usuário do Experience Platform até 31 de maio de 2024. Para garantir que seus rótulos sejam consistentes em todos os esquemas, todos os rótulos anteriormente anexados a campos no nível do conjunto de dados devem ser migrados para o nível do esquema por você no ano seguinte. Consulte a seção sobre [migrando rótulos aplicados anteriormente](../e2e.md#migrate-labels) para obter instruções sobre como fazer isso.
 
 ### Uso de APIs
 

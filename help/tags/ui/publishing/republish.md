@@ -2,10 +2,10 @@
 title: Republicar uma biblioteca
 description: Saiba como republicar uma biblioteca de tag anterior na Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '648'
-ht-degree: 93%
+source-wordcount: '651'
+ht-degree: 81%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 93%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
-As cinco bibliotecas mais recentes que foram publicadas no seu ambiente de produção em uma propriedade da Web estão disponíveis para posterior recuperação. Esse recurso é útil quando você encontra um bug na biblioteca de produção e precisa revertê-la para um estado em boas condições imediatamente.
+As cinco bibliotecas mais recentes que foram publicadas no seu ambiente de produção em uma propriedade da Web estão disponíveis para posterior recuperação. Esse recurso é útil quando você encontra um erro na biblioteca de produção e precisa revertê-la para um estado em boas condições imediatamente.
 
 O processo de recuperação depende das configurações do ambiente no momento em que a biblioteca foi originalmente publicada. Isso é importante porque a recuperação de uma biblioteca arquivada não altera nada no site que está ativo, enquanto uma recuperação de uma biblioteca comum alteraria.
 
@@ -37,7 +37,7 @@ Quando é gerada uma build de um ambiente de desenvolvimento ou de preparo, a an
 
 Essas cinco builds mais recentes em seu ambiente de produção são aquelas que estão disponíveis para recuperação.
 
-Quando você republica uma biblioteca mais antiga, a Platform atualiza o link do ambiente para apontar para um dos builds mais antigos que ainda não foram removidos.  Além disso, a Platform emite uma solicitação de limpeza para os nós de borda da CDN a fim de indicar que a biblioteca foi atualizada e que uma cópia nova deve ser recuperada da origem.
+Quando você republica uma biblioteca mais antiga, o Experience Platform atualiza o link do ambiente para apontar para uma dessas builds mais antigas que ainda não foram removidas.  O Experience Platform também emite uma solicitação de limpeza o cache dos nós de borda CDN para indicar que a biblioteca foi atualizada e uma cópia nova deve ser recuperada da origem.
 
 Isso significa que, ao publicar novamente uma biblioteca mais antiga:
 
@@ -47,7 +47,7 @@ Isso significa que, ao publicar novamente uma biblioteca mais antiga:
 
 Leve em consideração a situação ao reverter a versão por causa de um problema com uma regra específica. A revisão de regra que está em produção pode, por exemplo, ter sido implementada há três versões atrás. Quando você exibe essa regra na interface para corrigi-la, ela ainda reflete as alterações salvas mais recentemente, em vez das que estão em produção no momento.
 
-Por essa razão, a Platform notifica você de que uma propriedade consta como republicada, para lembrá-lo de que o que está vendo na interface da Coleção de dados está um pouco mais distante da produção do que o normal. Essa notificação é dispensável e aparece uma vez por sessão do navegador na primeira vez que você exibe a propriedade.
+Por essa razão, a Experience Platform notifica você que uma propriedade foi republicada como um lembrete de que o que você está vendo na interface da Coleção de dados está um pouco mais distante do ambiante de produção do que o normal. Essa notificação é dispensável e aparece uma vez por sessão do navegador na primeira vez que você exibe a propriedade.
 
 ### Como republicar uma biblioteca mais antiga
 

@@ -1,8 +1,8 @@
 ---
-title: Conexão com o Twitter Custom Audiences
+title: Conexão de públicos-alvo personalizados do Twitter
 description: Direcione seus seguidores e clientes existentes no Twitter e crie campanhas de re-marketing relevantes ativando seus públicos-alvo criados no Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: ba9b59a24079b61a0f5d6076f3acfd83fc8f4092
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '857'
 ht-degree: 5%
@@ -17,7 +17,7 @@ Direcione seus seguidores e clientes existentes no Twitter e crie campanhas de r
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de configurar o destino do [!DNL Twitter Custom Audiences], verifique os seguintes pré-requisitos de Twitter que você precisa atender.
+Antes de configurar o destino do [!DNL Twitter Custom Audiences], verifique os seguintes pré-requisitos do Twitter que você precisa atender.
 
 1. Sua conta [!DNL Twitter Ads] deve ser qualificada para publicidade. As novas contas do [!DNL Twitter Ads] não estão qualificadas para publicidade nas primeiras 2 semanas após sua criação.
 2. Sua conta de usuário do Twitter para a qual você autorizou o acesso no [!DNL Twitter Audience Manager] deve ter a permissão *[!DNL Partner Audience Manager]* habilitada.
@@ -29,7 +29,7 @@ Antes de configurar o destino do [!DNL Twitter Custom Audiences], verifique os s
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
 | device_id | ID IDFA/AdID/Android | A Google Advertising ID (GAID) e a Apple ID para anunciantes (IDFA) são compatíveis com o Adobe Experience Platform. Mapeie esses namespaces e/ou atributos do esquema de origem de acordo na [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do fluxo de trabalho de ativação de destino. |
-| email | Endereço(s) de email do usuário | Mapeie seus endereços de email de texto sem formatação e seus endereços de email com hash SHA256 para este campo. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Platform] coloque os dados em hash automaticamente durante a ativação. Se você colocar seus endereços de email de clientes em hash antes de fazer upload para o Adobe Experience Platform, observe que essas identidades devem ser colocadas em hash usando SHA256, sem um salt. |
+| email | Endereço(s) de email do usuário | Mapeie seus endereços de email de texto sem formatação e seus endereços de email com hash SHA256 para este campo. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. Se você colocar seus endereços de email de clientes em hash antes de fazer upload para o Adobe Experience Platform, observe que essas identidades devem ser colocadas em hash usando SHA256, sem um salt. |
 
 {style="table-layout:auto"}
 
@@ -39,7 +39,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
+| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
@@ -50,8 +50,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público-alvo com os identificadores usados no destino do Twitter Custom Audiences. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público-alvo com os identificadores usados no destino de Públicos-alvo personalizados do Twitter. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -75,8 +75,8 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 1. Localize o destino [!DNL Twitter Custom Audiences] no catálogo de destino e selecione **[!UICONTROL Configurar]**.
 2. Selecione **[!UICONTROL Conectar ao destino]**.
-   ![Autenticar no LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
-3. Insira suas credenciais de Twitter e selecione **Fazer logon**.
+   ![Autenticar para o LinkedIn](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
+3. Insira suas credenciais do Twitter e selecione **Fazer Logon**.
 
 ### Preencher detalhes do destino {#destination-details}
 
@@ -93,7 +93,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 >[!IMPORTANT]
 >
->Não usar caracteres especiais (+ &amp; , % : ; @ / = ? $ \n) nos nomes de público, descrição e mapeamento de público. Se o nome do público-alvo do Experience Platform contiver esses caracteres, remova-os antes de mapear o público-alvo para um destino de Twitter.
+>Não usar caracteres especiais (+ &amp; , % : ; @ / = ? $ \n) nos nomes de público, descrição e mapeamento de público. Se o nome do público-alvo do Experience Platform contiver esses caracteres, remova-os antes de mapear o público-alvo para um destino do Twitter.
 
 ### Ativar alertas {#enable-alerts}
 
@@ -112,7 +112,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Considerações de mapeamento {#mapping-considerations}
 
-Ao mapear públicos-alvo para o Twitter, forneça nomes de mapeamento de públicos-alvo legíveis. Recomendamos usar o mesmo nome usado para os segmentos Experience Platform.
+Ao mapear públicos para o Twitter, forneça nomes de mapeamento de públicos legíveis. Recomendamos usar o mesmo nome usado para os segmentos do Experience Platform.
 
 ## Uso e governança de dados {#data-usage-governance}
 

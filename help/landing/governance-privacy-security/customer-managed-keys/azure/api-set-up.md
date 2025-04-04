@@ -4,16 +4,16 @@ description: Saiba como configurar seu aplicativo CMK com seu locatário do Azur
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: 53598f86e1876bc6d1807e95a26584da4d7db3f2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1029'
+source-wordcount: '1035'
 ht-degree: 1%
 
 ---
 
 # Configure e configure Chaves gerenciadas pelo cliente para o Azure usando a API
 
-Este documento aborda as instruções específicas do Azure para habilitar as Chaves gerenciadas pelo cliente (CMK) no Adobe Experience Platform usando a API. Para obter instruções sobre como concluir esse processo usando a interface do usuário para instâncias da Plataforma hospedadas pelo Azure, consulte o [documento de configuração do CMK da interface do usuário](./ui-set-up.md).
+Este documento aborda as instruções específicas do Azure para habilitar as Chaves gerenciadas pelo cliente (CMK) no Adobe Experience Platform usando a API. Para obter instruções sobre como concluir esse processo usando a interface do usuário para instâncias do Experience Platform hospedadas no Azure, consulte o [documento de configuração do CMK da interface do usuário](./ui-set-up.md).
 
 Para obter instruções específicas do AWS, consulte o [guia de instalação do AWS](../aws/ui-set-up.md).
 
@@ -23,7 +23,7 @@ Para exibir e visitar a seção [!UICONTROL Criptografia] no Adobe Experience Pl
 
 Para obter mais informações sobre atribuição de funções e permissões no Experience Platform, consulte a [documentação sobre configuração de permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-Para habilitar o CMK para instâncias da Plataforma hospedada pelo Azure, o [[!DNL Azure] Cofre de Chaves deve ser configurado](./azure-key-vault-config.md) com as seguintes configurações:
+Para habilitar o CMK para instâncias do Experience Platform hospedadas no Azure, o [[!DNL Azure] Cofre da Chave deve ser configurado](./azure-key-vault-config.md) com as seguintes configurações:
 
 * [Habilitar proteção para limpeza](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection)
 * [Habilitar exclusão reversível](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview)
@@ -36,7 +36,7 @@ Após configurar o cofre de chaves, a próxima etapa é se registrar para o apli
 
 ### Introdução
 
-Para registrar o aplicativo CMK, é necessário fazer chamadas para APIs da plataforma. Para obter detalhes sobre como coletar os cabeçalhos de autenticação necessários para fazer essas chamadas, consulte o [guia de autenticação da API da plataforma](../../../api-authentication.md).
+Para registrar o aplicativo CMK, é necessário fazer chamadas para as APIs do Experience Platform. Para obter detalhes sobre como coletar os cabeçalhos de autenticação necessários para fazer essas chamadas, consulte o [guia de autenticação da API do Experience Platform](../../../api-authentication.md).
 
 Embora o guia de autenticação forneça instruções sobre como gerar seu próprio valor exclusivo para o cabeçalho de solicitação `x-api-key` necessário, todas as operações de API neste guia usam o valor estático `acp_provisioning`. No entanto, você ainda deve fornecer seus próprios valores para `{ACCESS_TOKEN}` e `{ORG_ID}`.
 
@@ -44,7 +44,7 @@ Em todas as chamadas de API mostradas neste guia, `platform.adobe.io` é usado c
 
 ### Buscar um URL de autenticação {#fetch-authentication-url}
 
-Para iniciar o processo de registro, faça uma solicitação GET ao endpoint de registro do aplicativo para buscar o URL de autenticação necessário para sua organização.
+Para iniciar o processo de registro, faça uma solicitação do GET ao endpoint de registro do aplicativo para buscar o URL de autenticação necessário para sua organização.
 
 **Solicitação**
 
@@ -94,9 +94,9 @@ Na próxima tela, escolha **[!DNL Select members]** para abrir uma caixa de diá
 >
 >Se você não conseguir encontrar seu aplicativo na lista, seu principal de serviço não foi aceito no locatário. Para garantir que você tenha os privilégios corretos, fale com o administrador ou representante do [!DNL Azure].
 
-## Habilitar a configuração da chave de criptografia no Experience Platform {#send-to-adobe}
+## Ativar a configuração da chave de criptografia no Experience Platform {#send-to-adobe}
 
-Depois de instalar o aplicativo CMK em [!DNL Azure], você pode enviar o identificador de chave de criptografia para o Adobe. Selecione **[!DNL Keys]** na navegação à esquerda, seguido pelo nome da chave que você deseja enviar.
+Depois de instalar o aplicativo CMK em [!DNL Azure], você pode enviar seu identificador de chave de criptografia para a Adobe. Selecione **[!DNL Keys]** na navegação à esquerda, seguido pelo nome da chave que você deseja enviar.
 
 ![O painel do Microsoft Azure com o objeto [!DNL Keys] e o nome da chave realçados.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
@@ -110,7 +110,7 @@ O campo **[!UICONTROL Identificador de Chave]** exibe o identificador de URI par
 
 ![Os detalhes da Chave do painel do Microsoft Azure com as seções [!DNL Permitted operations] e copiar URL da chave destacadas.](../../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
-Depois de obter o URI do cofre de chaves, você pode enviá-lo usando uma solicitação POST para o endpoint de configuração do CMK.
+Depois de obter o URI do cofre de chaves, você poderá enviá-lo usando uma solicitação POST para o endpoint de configuração do CMK.
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ O processo deve ser concluído em alguns minutos.
 
 ## Verificar o status da configuração {#check-status}
 
-Para verificar o status da solicitação de configuração, faça uma solicitação GET.
+Para verificar o status da solicitação de configuração, você pode fazer uma solicitação GET.
 
 **Solicitação**
 
@@ -221,13 +221,13 @@ curl -X GET \
 
 O atributo `status` pode ter um de quatro valores com os seguintes significados:
 
-1. `RUNNING`: valida se a Platform pode acessar o cofre de chaves e chaves.
+1. `RUNNING`: Valida que o Experience Platform pode acessar o cofre de chaves e chaves.
 1. `UPDATE_EXISTING_RESOURCES`: o sistema está adicionando o cofre de chaves e o nome da chave aos armazenamentos de dados em todas as sandboxes da sua organização.
 1. `COMPLETED`: o cofre de chaves e o nome da chave foram adicionados com êxito aos armazenamentos de dados.
 1. `FAILED`: ocorreu um problema, relacionado principalmente à chave, cofre de chaves ou configuração de aplicativo multilocatário.
 
 ## Próximas etapas
 
-Ao concluir as etapas acima, você ativou o CMK com êxito para sua organização. Para instâncias da Plataforma hospedada pelo Azure, os dados assimilados nos armazenamentos de dados principais agora serão criptografados e descriptografados usando a(s) chave(s) no Cofre de Chaves do [!DNL Azure].
+Ao concluir as etapas acima, você ativou o CMK com êxito para sua organização. Para instâncias do Experience Platform hospedadas no Azure, os dados assimilados nos armazenamentos de dados principais agora serão criptografados e descriptografados usando a(s) chave(s) no Cofre de Chaves do [!DNL Azure].
 
 Para saber mais sobre a criptografia de dados no Adobe Experience Platform, consulte a [documentação sobre criptografia](../../encryption.md).

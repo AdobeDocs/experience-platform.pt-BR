@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2021
 description: As notas de versão de outubro de 2021 da Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: ce967ae176fce81aa26d92b3f0ee8be006808657
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '463'
 ht-degree: 24%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 24%
 
 **Data de lançamento: 27 de outubro de 2021**
 
-## Atualizações no Experience Platform
+## Atualizações do Experience Platform
 
 Atualizações no Experience Platform.
 
@@ -23,11 +23,11 @@ A interface do usuário do foi atualizada com as seguintes alterações:
 
 | Recurso | Descrição |
 | --- | --- |
-| Tema escuro | Use o switch de tema escuro para alternar entre temas claros e escuros na interface da Platform. O comutador está localizado no perfil de usuário abaixo do nome de usuário e e-mail. |
-| Alternar navegação à esquerda | Use o botão de navegação aprimorado na parte superior do cabeçalho do aplicativo para mostrar ou ocultar o menu que exibe seus recursos de Experience Platform. O sistema lembra da última seleção e mostra apenas os recursos aos quais você tem acesso. |
+| Tema escuro | Use a opção Tema escuro para alternar entre temas claros e escuros na interface do Experience Platform. O comutador está localizado no perfil de usuário abaixo do nome de usuário e e-mail. |
+| Alternar navegação à esquerda | Use o botão de navegação aprimorado na parte superior do cabeçalho do aplicativo para mostrar ou ocultar o menu que exibe seus recursos do Experience Platform. O sistema lembra da última seleção e mostra apenas os recursos aos quais você tem acesso. |
 | Visibilidade de acesso | A barra de navegação esquerda mostra apenas os recursos que você pode acessar. Em versões anteriores do Adobe Experience Platform, os itens indisponíveis estavam visíveis, mesmo se você não conseguisse acessá-los. |
 
-Consulte o [Guia da Interface do Usuário da Plataforma](../../landing/ui-guide.md) para saber mais.
+Consulte o [Guia da Interface do Usuário do Experience Platform](../../landing/ui-guide.md) para saber mais.
 
 ## Atualizações dos recursos existentes
 
@@ -51,14 +51,14 @@ Consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md) para saber m
 
 ### Origens {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 | Recurso | Descrição |
 | --- | --- |
-| [!DNL Amazon S3] aprimoramentos na origem | Agora você pode usar o parâmetro `s3SessionToken` para conectar sua conta do [!DNL Amazon S3] à Platform usando credenciais de segurança temporárias. Este token permite fornecer acesso temporário a curto prazo aos recursos do [!DNL Amazon S3] para usuários em ambientes não confiáveis. Consulte a [[!DNL Amazon S3] documentação](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obter mais informações. |
-| [!DNL Generic REST API] (Beta) | Agora você pode criar uma conexão de origem [!DNL Generic REST API] usando a [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para trazer dados de um aplicativo REST genérico para a Platform. Consulte a [[!DNL Generic REST API] visão geral](../../sources/connectors/protocols/generic-rest.md) para obter mais informações. |
-| [!DNL Zoho CRM] (Beta) | Agora você pode criar uma conexão de origem [!DNL Zoho CRM] usando a [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou a [interface de usuário](../../sources/tutorials/ui/create/crm/zoho.md) para trazer dados da sua conta [!DNL Zoho CRM] para a Platform. Consulte a [[!DNL Zoho CRM] visão geral](../../sources/connectors/crm/zoho.md) para obter mais informações. |
+| [!DNL Amazon S3] aprimoramentos na origem | Agora você pode usar o parâmetro `s3SessionToken` para conectar sua conta do [!DNL Amazon S3] ao Experience Platform usando credenciais de segurança temporárias. Este token permite fornecer acesso temporário a curto prazo aos recursos do [!DNL Amazon S3] para usuários em ambientes não confiáveis. Consulte a [[!DNL Amazon S3] documentação](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obter mais informações. |
+| [!DNL Generic REST API] (Beta) | Agora você pode criar uma conexão de origem [!DNL Generic REST API] usando a [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para trazer dados de um aplicativo REST genérico para a Experience Platform. Consulte a [[!DNL Generic REST API] visão geral](../../sources/connectors/protocols/generic-rest.md) para obter mais informações. |
+| [!DNL Zoho CRM] (Beta) | Agora você pode criar uma conexão de origem [!DNL Zoho CRM] usando a [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou a [interface de usuário](../../sources/tutorials/ui/create/crm/zoho.md) para trazer dados da sua conta [!DNL Zoho CRM] para a Experience Platform. Consulte a [[!DNL Zoho CRM] visão geral](../../sources/connectors/crm/zoho.md) para obter mais informações. |
 
 Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).

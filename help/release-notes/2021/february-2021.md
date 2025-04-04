@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
 exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
-source-git-commit: f9917d6a6de81f98b472cff9b41f1526ea51cdae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1141'
 ht-degree: 22%
 
 ---
@@ -38,7 +38,7 @@ O Adobe Experience Platform fornece vários painéis por meio dos quais você po
 
 | Recurso | Descrição |
 | --- | --- |
-| Perfis, segmentos, destinos e painéis de uso de licença (Beta) | **Observação: a funcionalidade do painel está atualmente na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.**<br/><br/> Os painéis fornecem relatórios prontos para uso sobre os dados da sua organização e são criados diretamente no fluxo de trabalho do profissional de marketing na Platform. Esses painéis estão disponíveis sem a necessidade de suporte de TI adicional ou o tempo e esforço que seriam necessários para exportar e processar dados com projeto e implementação adicionais de data warehouse. |
+| Perfis, segmentos, destinos e painéis de uso de licença (Beta) | **Observação: a funcionalidade do painel está atualmente na versão beta e não está disponível para todos os usuários. A documentação e a funcionalidade estão sujeitas a alterações.**<br/><br/> Os painéis fornecem relatórios prontos para uso sobre os dados da sua organização e são criados diretamente no fluxo de trabalho do profissional de marketing no Experience Platform. Esses painéis estão disponíveis sem a necessidade de suporte de TI adicional ou o tempo e esforço que seriam necessários para exportar e processar dados com projeto e implementação adicionais de data warehouse. |
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -54,9 +54,9 @@ Para obter mais informações sobre o Data Science Workspace, consulte a [visão
 
 ## [!DNL Dataflows] {#dataflows}
 
-No Adobe Experience Platform, os dados são assimilados de uma grande variedade de fontes, analisados no Experience Platform e ativados para uma grande variedade de destinos. O Platform facilita o processo de rastreamento desse fluxo de dados potencialmente não linear, fornecendo transparência aos fluxos de dados.
+No Adobe Experience Platform, os dados são assimilados de uma grande variedade de fontes, analisados no Experience Platform e ativados para uma grande variedade de destinos. O Experience Platform facilita o processo de rastreamento desse fluxo de dados potencialmente não linear, fornecendo transparência aos fluxos de dados.
 
-Os fluxos de dados são uma representação de trabalhos de dados que movem os dados pela Plataforma. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para os conjuntos de dados de destino, nos quais eles são utilizados por [!DNL Identity Service] e [!DNL Real-Time Customer Profile] antes de serem ativados para [!DNL Destinations].
+Os fluxos de dados são uma representação de trabalhos de dados que movem dados pelo Experience Platform. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para os conjuntos de dados de destino, nos quais eles são utilizados por [!DNL Identity Service] e [!DNL Real-Time Customer Profile] antes de serem ativados para [!DNL Destinations].
 
 **Novos recursos**
 
@@ -80,7 +80,7 @@ Para obter informações mais gerais sobre destinos, consulte a [visão geral de
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
-A padronização e a interoperabilidade são os principais conceitos por trás do [!DNL Experience Platform]. O [!DNL Experience Data Model] (XDM), orientado pelo Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
+A padronização e a interoperabilidade são os principais conceitos por trás do [!DNL Experience Platform]. O [!DNL Experience Data Model] (XDM), orientado pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 
 O XDM é uma especificação documentada publicamente projetada para melhorar o potencial das experiências digitais. Ele fornece estruturas e definições comuns para que qualquer aplicativo se comunique com os serviços na Adobe Experience Platform. Seguindo os padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum, fornecendo insights de maneira mais rápida e integrada. Você pode obter insights valiosos sobre ações de clientes, definir públicos-alvo por meio de segmentos e usar atributos de clientes para fins de personalização.
 
@@ -120,7 +120,7 @@ Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo
 
 ## [!DNL Sources] {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 

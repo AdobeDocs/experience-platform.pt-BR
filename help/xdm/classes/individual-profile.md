@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;identityMap;mapa de identidade;mapa de identidade;Design de esquema;mapa;Mapa;esquema de união;união
+keywords: Experience Platform;página inicial;tópicos populares;esquema;Esquema;XDM;perfil individual;campos;esquemas;Esquemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
 title: Classe de perfil individual XDM
 description: Saiba mais sobre a classe Perfil individual XDM.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL XDM Individual Profile] é uma classe padrão do Experience Data Model (XDM) que forma uma representação singular (ou &quot;perfil&quot;) de uma pessoa individual. Especificamente, a classe (e seus grupos de campo compatíveis) captura os atributos e interesses de indivíduos identificados e parcialmente identificados que interagem com sua marca.
 
-Os perfis podem variar de sinais comportamentais anônimos (como cookies de navegador) a perfis altamente identificados que contêm informações detalhadas, como nome, data de nascimento, local e endereço de email. À medida que um perfil cresce, ele se torna um repositório robusto de informações pessoais, identidades, detalhes de contato e preferências de comunicação de um indivíduo. Para obter mais informações de alto nível sobre o uso dessa classe no ecossistema da Platform, consulte a [visão geral do XDM](../home.md#data-behaviors).
+Os perfis podem variar de sinais comportamentais anônimos (como cookies de navegador) a perfis altamente identificados que contêm informações detalhadas, como nome, data de nascimento, local e endereço de email. À medida que um perfil cresce, ele se torna um repositório robusto de informações pessoais, identidades, detalhes de contato e preferências de comunicação de um indivíduo. Para obter mais informações de alto nível sobre o uso dessa classe no ecossistema do Experience Platform, consulte a [visão geral do XDM](../home.md#data-behaviors).
 
 ![Um diagrama de esquema da classe Perfil Individual XDM.](../images/classes/individual-profile.png)
 
@@ -37,7 +37,7 @@ Os perfis podem variar de sinais comportamentais anônimos (como cookies de nave
 >
 >Os nomes de vários grupos de campos foram alterados. Consulte o documento em [atualizações de nome de grupo de campos](../field-groups/name-updates.md) para obter mais informações.
 
-O Adobe fornece vários grupos de campos padrão para uso com a classe [!DNL XDM Individual Profile]. Veja a seguir uma lista de alguns grupos de campos comumente usados para a classe:
+A Adobe fornece vários grupos de campos padrão para uso com a classe [!DNL XDM Individual Profile]. Veja a seguir uma lista de alguns grupos de campos comumente usados para a classe:
 
 * [[!UICONTROL Consentimentos e Preferências]](../field-groups/profile/consents.md)
 * [[!UICONTROL Detalhes demográficos]](../field-groups/profile/demographic-details.md)
@@ -50,6 +50,6 @@ O Adobe fornece vários grupos de campos padrão para uso com a classe [!DNL XDM
 * [[!UICONTROL Componentes de pessoa de negócios XDM]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL Detalhes de pessoa de negócios XDM]](../field-groups/profile/business-person-details.md)\*
 
-*\*Este grupo de campos só está disponível para organizações com acesso à edição B2B do Adobe Real-time Customer Data Platform.*
+*\*Este grupo de campos só está disponível para organizações com acesso à B2B edition do Adobe Real-Time Customer Data Platform.*
 
 Para obter uma lista completa de todos os grupos de campos compatíveis com [!DNL XDM Individual Profile], consulte o [repositório GitHub XDM](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

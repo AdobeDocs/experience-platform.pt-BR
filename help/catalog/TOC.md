@@ -4,10 +4,10 @@ user-guide-title: Guia de catálogo e conjuntos de dados
 user-guide-description: Explore a linhagem de dados, os metadados, as descrições de arquivos, os diretórios e os conjuntos de dados no Data Lake e saiba mais sobre o sistema do Serviço de catálogo.
 feature: Catalog
 role: Developer
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 33%
+source-wordcount: '124'
+ht-degree: 36%
 
 ---
 
@@ -38,4 +38,4 @@ ht-degree: 33%
 * [Processamento de solicitação de privacidade no Data Lake](privacy.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Perguntas frequentes](catalog-faq.md)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

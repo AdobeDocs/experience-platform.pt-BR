@@ -2,10 +2,10 @@
 title: Visão geral dos hosts gerenciados pela Adobe
 description: Saiba mais sobre a opção de hospedagem padrão para implantar builds de biblioteca de tags na Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: 85b428b3997d53cbf48e4f112e5c09c0f40f7ee1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1177'
-ht-degree: 88%
+source-wordcount: '1181'
+ht-degree: 82%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 88%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Hosts gerenciados pela Adobe são a configuração padrão do host para implantar builds de biblioteca de tags na Adobe Experience Platform. Quando você cria uma nova propriedade por meio da interface da coleção de dados, um host padrão gerenciado pela Adobe é criado para você.
 
-Com hosts gerenciados pela Adobe, as builds de bibliotecas são entregues a uma rede de delivery de conteúdo de terceiros (CDN) pela qual a Adobe foi contratada. Essas CDNs operam independentemente da Adobe, de modo que, mesmo quando o Platform estiver em manutenção ou estiver inativo, o código implantado continuará funcionando normalmente em seus sites e aplicativos. O código incorporado de um host gerenciado pela Adobe faz referência ao arquivo da biblioteca principal na CDN, para que um dispositivo cliente possa recuperar os arquivos no tempo de execução.
+Com hosts gerenciados pela Adobe, as builds de bibliotecas são entregues a uma rede de entrega de conteúdo (CDN) de terceiros pela qual a Adobe foi contratada. Essas CDNs operam independentemente da Adobe, de modo que, mesmo quando o Experience Platform estiver em manutenção ou estiver inativo, o código implantado continuará funcionando normalmente em seus sites e aplicativos. O código incorporado de um host gerenciado pela Adobe faz referência ao arquivo da biblioteca principal na CDN, para que um dispositivo cliente possa recuperar os arquivos no tempo de execução.
 
-Este documento fornece uma visão geral dos hosts gerenciados pela Adobe na Platform e fornece etapas sobre como criar um novo host gerenciado pela Adobe na interface.
+Este documento fornece uma visão geral dos hosts gerenciados pela Adobe no Experience Platform e fornece etapas sobre como criar um novo host gerenciado pela Adobe na interface do usuário.
 
 ## Akamai
 
@@ -33,7 +33,7 @@ Os arquivos hospedados na Akamai têm como domínio `assets.adobedtm.com`. Ele p
 
 >[!WARNING]
 >
->Se sua biblioteca não estiver disponível na rede Akamai, o Platform não poderá impedir possíveis erros que possam surgir.
+>Se sua biblioteca não estiver disponível na rede Akamai, o Experience Platform não poderá impedir possíveis erros que possam surgir.
 
 ## Armazenamento em cache de build de biblioteca
 
@@ -88,9 +88,9 @@ Como a tabela acima indica, o armazenamento em cache do navegador não é compat
 
 Os cabeçalhos de controle de cache são aplicados apenas ao build da biblioteca principal. Todos os sub-recursos abaixo da biblioteca principal são sempre considerados novos e, portanto, não há necessidade de armazená-los em cache no navegador.
 
-## Uso da hospedagem gerenciada por Adobe na interface
+## Usar a hospedagem gerenciada pela Adobe na interface
 
-Quando você cria pela primeira vez uma propriedade na interface da Platform ou na interface da Coleção de dados, um host gerenciado por Adobe é automaticamente criado para você. Todos os ambientes disponíveis que têm propriedades imediatamente utilizáveis também são atribuídos ao host gerenciado pela Adobe por padrão.
+Ao criar uma propriedade na interface do usuário do Experience Platform ou na interface da Coleção de dados pela primeira vez, um host gerenciado pela Adobe é automaticamente criado para você. Todos os ambientes disponíveis que têm propriedades imediatamente utilizáveis também são atribuídos ao host gerenciado pela Adobe por padrão.
 
 >[!NOTE]
 >

@@ -4,10 +4,10 @@ title: Guia da interface de alertas
 description: Saiba como gerenciar alertas na interface do usuário do Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
-ht-degree: 3%
+source-wordcount: '798'
+ht-degree: 4%
 
 ---
 
@@ -41,7 +41,7 @@ Selecione as reticências (**...**) ao lado do nome de uma regra e uma lista sus
 
 >[!NOTE]
 >
-> Para atribuir um alerta a uma ID de usuário Adobe, um endereço de email externo ou uma lista de grupo de email, você deve ser um administrador.
+> Para atribuir um alerta a uma ID de usuário do Adobe, um endereço de email externo ou uma lista de grupo de email, você deve ser um administrador.
 
 A guia **[!UICONTROL Procurar]** lista as regras disponíveis que podem disparar um alerta.
 
@@ -51,7 +51,7 @@ Selecione as reticências (**...**) ao lado do nome de uma regra, uma lista susp
 
 ![Selecione as reticências para exibir o menu suspenso. A opção [!UICONTROL Gerenciar assinantes de alerta] está realçada.](../images/alerts/ui/manage-alert-subscribers.png)
 
-A página [!UICONTROL Gerenciar assinantes de alerta] é exibida. Para atribuir notificações a usuários específicos, insira a ID de usuário Adobe, o endereço de email externo ou uma lista de grupo de email e pressione enter.
+A página [!UICONTROL Gerenciar assinantes de alerta] é exibida. Para atribuir notificações a usuários específicos, digite a ID de usuário da Adobe, o endereço de email externo ou uma lista de grupo de email e pressione Enter.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Você adicionou usuários com sucesso à sua lista de notificações de alerta. 
 
 As notificações de alerta podem ser enviadas diretamente ao seu email.
 
-Selecione o ícone de sino (![ícone de sino](/help/images/icons/bell.png)) localizado na faixa superior à direita para exibir notificações e anúncios. Na lista suspensa exibida, selecione o ícone de engrenagem (![ícone de engrenagem](/help/images/icons/settings.png)) para acessar a página de preferências de Experience Cloud.
+Selecione o ícone de sino (![ícone de sino](/help/images/icons/bell.png)) localizado na faixa superior à direita para exibir notificações e anúncios. Na lista suspensa exibida, selecione o ícone de engrenagem (![ícone de engrenagem](/help/images/icons/settings.png)) para acessar a página de preferências do Experience Cloud.
 
 ![Uma lista de alertas mostrados destacando o ícone de sino e o ícone de engrenagem.](../images/alerts/ui/edit-preferences.png)
 
@@ -91,7 +91,7 @@ Os limites de alerta podem ser personalizados para os seguintes tipos de alerta:
 
 | Tipo de alerta | Parâmetro personalizado |
 |---|---|
-| Atraso no trabalho do segmento | Limite de atraso |
+| Atraso na tarefa do segmento | Limite de atraso |
 | Atraso na exportação do segmento | Limite de atraso |
 | Atraso na execução do fluxo de destino | Limite de atraso |
 | Atraso na execução do fluxo do serviço de identidade | Limite de atraso |
@@ -125,4 +125,4 @@ Selecione um alerta listado e mais detalhes serão exibidos no painel direito, i
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral sobre como visualizar e gerenciar alertas na interface do usuário da Platform. Consulte a visão geral em [Insights de capacidade de observação](../home.md) para obter mais informações sobre os recursos do serviço.
+Este documento forneceu uma visão geral sobre como visualizar e gerenciar alertas na interface do usuário do Experience Platform. Consulte a visão geral em [Insights de capacidade de observação](../home.md) para obter mais informações sobre os recursos do serviço.

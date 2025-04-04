@@ -2,10 +2,10 @@
 keywords: Experience Platform;página inicial;tópicos populares;preparação de dados;guia de api;esquemas;
 solution: Experience Platform
 title: Endpoint da API de esquemas
-description: Você pode usar o endpoint "/schemas" na API do Adobe Experience Platform para recuperar, criar e atualizar esquemas de forma programática para uso com o Mapeador na plataforma.
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+description: Você pode usar o endpoint "/schemas" na API do Adobe Experience Platform para recuperar, criar e atualizar esquemas de forma programática para uso com o Mapeador no Experience Platform.
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '619'
 ht-degree: 4%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 4%
 
 # Endpoint de esquemas
 
-Os esquemas podem ser usados com o Mapeador para garantir que os dados assimilados na Adobe Experience Platform correspondam ao que você deseja assimilar. Você pode usar o ponto de extremidade `/schemas` para criar, listar e obter esquemas personalizados de forma programática para usar com o Mapeador na Plataforma.
+Os esquemas podem ser usados com o Mapeador para garantir que os dados assimilados na Adobe Experience Platform correspondam ao que você deseja assimilar. Você pode usar o ponto de extremidade `/schemas` para criar, listar e obter esquemas personalizados de forma programática para uso com o Mapeador no Experience Platform.
 
 >[!NOTE]
 >
->Os esquemas criados usando esse endpoint são usados exclusivamente com Mapeadores e conjuntos de mapeamento. Para criar esquemas acessíveis por outros serviços da Platform, leia o [guia do desenvolvedor do Registro de Esquemas](../../xdm/api/schemas.md).
+>Os esquemas criados usando esse endpoint são usados exclusivamente com Mapeadores e conjuntos de mapeamento. Para criar esquemas acessíveis por outros serviços da Experience Platform, leia o [guia do desenvolvedor do Registro de Esquemas](../../xdm/api/schemas.md).
 
 ## Obter todos os esquemas
 

@@ -2,9 +2,9 @@
 title: Insights do perfil
 description: Descubra o SQL que possibilita os insights do perfil e use essas consultas para gerar insights personalizados que explorem ainda mais seus clientes e as experiências do consumidor.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1660'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ Os insights derivados da análise do modelo de dados tornam os dados do Adobe Re
 
 Entenda seus insights de perfil acessando o SQL que os capacita e gere seus próprios insights para explorar ainda mais seus clientes e as experiências do consumidor que compõem seus perfis. Transforme seus dados brutos em novos insights acionáveis usando o SQL modelo de dados do Real-Time CDP existente como inspiração para criar consultas para suas necessidades comerciais exclusivas.
 
-Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do usuário da Platform.
+Consulte a [Exibir documentação do SQL](../view-sql.md) para obter mais informações sobre como adaptar o SQL dos seus insights diretamente pela interface do Experience Platform.
 
 Os seguintes insights estão todos disponíveis para você usar como parte do [Painel de perfis](../guides/profiles.md) ou de um [painel definido pelo usuário](../standard-dashboards.md) personalizado. Consulte a [visão geral da personalização](../customize/overview.md) para obter instruções sobre como personalizar seu painel ou [criar e editar novos widgets](../customize/custom-widgets.md) na biblioteca de widgets e no [painel definido pelo usuário](../standard-dashboards.md#create-widget).
 
@@ -27,7 +27,7 @@ Perguntas respondidas por este insight:
 - Como a sobreposição afeta as taxas de engajamento ou conversão?
 - Como as estratégias de marketing podem ser personalizadas para o segmento sobreposto?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -64,7 +64,7 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Consulte a [documentação do widget Sobreposição de público por política de mesclagem](../guides/profiles.md#audience-overlap-by-merge-policy) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget Sobreposição de público por política de mesclagem](../guides/profiles.md#audience-overlap-by-merge-policy) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Relatório de sobreposição de público-alvo {#audience-overlap-report}
 
@@ -74,7 +74,7 @@ Perguntas respondidas por este insight:
 - Quais são os 50 públicos-alvo menos sobrepostos?
 - Como o padrão de sobreposição é alterado pela política de mesclagem?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT source_segment_name,
@@ -141,7 +141,7 @@ Perguntas respondidas por este insight:
 - Qual é a distribuição de públicos-alvo nas políticas de mesclagem?
 - Há alterações significativas nos números de público-alvo para políticas de mesclagem específicas ao longo do tempo?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT count(DISTINCT a.segment_id) count_of_segments
@@ -159,7 +159,7 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Consulte a [documentação do widget Públicos-alvo](../guides/profiles.md#audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Públicos-alvo](../guides/profiles.md#audiences) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Públicos mapeados para o status de destino {#audiences-mapped-to-destination-status}
 
@@ -170,7 +170,7 @@ Perguntas respondidas por este insight:
 - Qual proporção do total de públicos-alvo que permanecem não mapeados?
 - Desses públicos-alvo não mapeados, há padrões ou tendências associadas?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
@@ -191,7 +191,7 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Consulte a [Documentação do widget de status de públicos-alvo mapeados para o destino](../guides/profiles.md#audiences-mapped-to-destination-status) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de status de públicos-alvo mapeados para o destino](../guides/profiles.md#audiences-mapped-to-destination-status) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Tamanho dos públicos {#audiences-size}
 
@@ -201,7 +201,7 @@ Perguntas respondidas por este insight:
 - Quais são os cinco maiores públicos-alvo?
 - Como a distribuição do tamanho do público muda ao longo do tempo para o público-alvo principal?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
@@ -234,7 +234,7 @@ Perguntas respondidas por este insight:
 - Qual é a distribuição das pontuações por pontuação alta, média e baixa?
 - Qual é o detalhamento da distribuição de pontuação por política de mesclagem?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT b.model_name,
@@ -361,7 +361,7 @@ SELECT b.model_name,
 
 +++
 
-Consulte a [documentação do widget de distribuição de pontuações da IA do cliente](../guides/profiles.md#customer-ai-distribution-of-scores) para obter informações sobre a aparência e a funcionalidade deste insight.
+Consulte a [documentação do widget de distribuição de pontuações da IA do cliente](../guides/profiles.md#customer-ai-distribution-of-scores) para obter informações sobre a aparência e a funcionalidade desta insight.
 
 ## Resumo de pontuação da IA do cliente {#customer-ai-scoring-summary}
 
@@ -371,7 +371,7 @@ Perguntas respondidas por este insight:
 - Como minhas pontuações de propensão da IA do cliente mudam para públicos diferentes?
 - Como meu resumo de pontuação muda em comparação a outros KPIs na visão geral de perfis?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT model_name,
@@ -402,7 +402,7 @@ SELECT model_name,
 
 +++
 
-Consulte a [documentação do widget Resumo de pontuação da IA do cliente](../guides/profiles.md#customer-ai-scoring-summary) para obter informações sobre a aparência e a funcionalidade deste insight.
+Consulte a [documentação do widget Resumo de pontuação da IA do cliente](../guides/profiles.md#customer-ai-scoring-summary) para obter informações sobre a aparência e a funcionalidade desta insight.
 
 ## Sobreposição de identidade {#identity-overlap}
 
@@ -411,9 +411,9 @@ Perguntas respondidas por este insight:
 - Qual é a interseção comum entre [!UICONTROL Tipo de identidade A] e [!UICONTROL Tipo de identidade B]?
 - Como posso refinar públicos-alvo de clientes com base na sobreposição de tipos de identidade específicos para melhorar as estratégias de marketing direcionadas?
 - Quais insights podem ser obtidos a partir da avaliação do desempenho da campanha nas áreas de interseção?
-- Usando esse insight de desempenho da campanha, como os futuros esforços de marketing podem ser otimizados?
+- Usando esta insight de desempenho de campanha, como os futuros esforços de marketing podem ser otimizados?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -465,7 +465,7 @@ Consulte a [documentação do widget Sobreposição de identidade](../guides/pro
 
 Perguntas respondidas por este insight:
 
-- Qual é a contagem geral de perfis no Adobe Real-time Customer Data Platform?
+- Qual é a contagem geral de perfis no Adobe Real-Time Customer Data Platform?
 - Como os perfis são distribuídos com base nas políticas de mesclagem?
 - Qual política de mesclagem tem a contagem de perfis mais alta?
 
@@ -481,7 +481,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-Informações completas sobre a aparência e a funcionalidade deste insight podem ser encontradas no [guia do widget Contagem de perfis](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
+Informações completas sobre a aparência e a funcionalidade desta insight podem ser encontradas no [guia do widget Contagem de perfis](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count).
 
 Consulte a [documentação do widget Contagem de perfis](../guides/profiles.md#profile-count) para obter informações sobre a aparência e a funcionalidade deste insight.
 
@@ -493,7 +493,7 @@ Perguntas respondidas por este insight:
 - O que causou picos ou quedas significativos na contagem de perfis?
 - Existem políticas de mesclagem específicas que impulsionam a alteração da contagem de perfis?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
@@ -538,7 +538,7 @@ Perguntas respondidas por este insight:
 - Há padrões ou flutuações específicos na alteração da contagem de perfis nos últimos 30 dias que precisam de atenção?
 - Como a contagem de perfis mudou nos últimos 90 dias em comparação com a tendência geral?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT date_key,
@@ -562,7 +562,7 @@ SELECT date_key,
 
 +++
 
-Consulte a [documentação do widget de tendência de alteração de contagem de perfis](../guides/profiles.md#profile-count-change-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de tendência de alteração da contagem de perfis](../guides/profiles.md#profile-count-change-trend) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Tendência de contagem de perfis {#profile-count-trend}
 
@@ -573,7 +573,7 @@ Perguntas respondidas por este insight:
 - Qual política de mesclagem está contribuindo mais para o aumento ou a diminuição da contagem de perfis nos períodos especificados (30 dias, 90 dias e 12 meses)?
 - Há picos ou declínios específicos na contagem de perfis que se correlacionam com determinados eventos ou períodos no período de 30 dias?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT date_key,
@@ -593,7 +593,7 @@ SELECT date_key,
 
 +++
 
-Consulte a [documentação do widget de tendência de contagem de perfis](../guides/profiles.md#profile-count-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de tendência de contagem de perfis](../guides/profiles.md#profile-count-trend) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Perfis por identidade {#profiles-by-identity}
 
@@ -604,7 +604,7 @@ Perguntas respondidas por este insight:
 - Qual é a distribuição geral dos tipos de identidade?
 - Existem disparidades ou anomalias significativas na contagem de identidades?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -622,7 +622,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulte a [documentação do widget Perfis por identidade](../guides/profiles.md#profiles-by-identity) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Perfis por identidade](../guides/profiles.md#profiles-by-identity) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Tendência da alteração da contagem de perfis {#profiles-count-change-trend}
 
@@ -632,7 +632,7 @@ Perguntas respondidas por este insight:
 - Há padrões ou flutuações específicos na alteração da contagem de perfis nos últimos 30 dias que precisam de atenção?
 - Como a alteração na contagem de perfis nos últimos 90 dias se compara à tendência geral?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT date_key,
@@ -656,7 +656,7 @@ SELECT date_key,
 
 +++
 
-Consulte a [Documentação do widget de tendência de alteração da contagem de perfis](../guides/profiles.md#profiles-count-change-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget de tendência de alteração da contagem de perfis](../guides/profiles.md#profiles-count-change-trend) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Tendência de alteração na contagem de perfis por identidade {#profiles-count-change-trend-by-identity}
 
@@ -666,7 +666,7 @@ Perguntas respondidas por este insight:
 - Existem tendências de identidade específicas que mostram alterações significativas nos últimos 30 dias?
 - Qual é a diferença entre as alterações na contagem de perfis ao comparar as tendências de 30 dias, 90 dias e 12 meses para uma identidade específica?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT date_key,
@@ -697,7 +697,7 @@ SELECT date_key,
 
 +++
 
-Consulte a [Documentação do widget identidade da tendência de alteração da contagem de perfis](../guides/profiles.md#profiles-count-change-trend-by-identity) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget identidade da tendência de alteração da contagem de perfis](../guides/profiles.md#profiles-count-change-trend-by-identity) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Perfis de identidade única {#single-identity-profiles}
 
@@ -708,7 +708,7 @@ Perguntas respondidas por este insight:
 - Dos perfis com apenas um tipo de identidade, como isso afeta a integridade do perfil?
 - Há uma correlação entre o tipo de identidade mais comum e a contagem de perfis de identidade única?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -732,7 +732,7 @@ Perguntas respondidas por este insight:
 - Qual é a distribuição de perfis de identidade únicos entre diferentes tipos de identidade, como email ou números de telefone?
 - Existem padrões de identidade emergentes ou mudanças nos perfis de identidade única?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -749,7 +749,7 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Consulte a [Documentação de widget de identidade de perfis de identidade únicos por identidade](../guides/profiles.md#single-identity-profiles-by-identity) para obter informações sobre a aparência e a funcionalidade deste insight.
+Consulte a [Documentação de widget de identidade de perfis de identidade únicos por identidade](../guides/profiles.md#single-identity-profiles-by-identity) para obter informações sobre a aparência e a funcionalidade desta insight.
 
 ## Perfis não segmentados {#unsegmented-profiles}
 
@@ -759,7 +759,7 @@ Perguntas respondidas por este insight:
 - Qual porcentagem do público-alvo total é representada por perfis não segmentados?
 - Alguma política de mesclagem contribui para um grande número de perfis não segmentados?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera este insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -773,7 +773,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Consulte a [documentação do widget de perfis não segmentados](../guides/profiles.md#unsegmented-profiles) para obter informações sobre a aparência e a funcionalidade deste insight.
+Consulte a [documentação do widget Perfis não segmentados](../guides/profiles.md#unsegmented-profiles) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Próximas etapas
 

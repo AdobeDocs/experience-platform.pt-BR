@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;armazenamento n
 title: Explorar pastas de armazenamento na nuvem usando a API do serviço de fluxo
 description: Este tutorial usa a API de serviço de fluxo para explorar um sistema de armazenamento em nuvem de terceiros.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '695'
 ht-degree: 4%
 
 ---
@@ -22,12 +22,12 @@ Este tutorial fornece etapas sobre como explorar e visualizar a estrutura e o co
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+* [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../../landing/api-guide.md).
 
 ## Explore suas pastas de armazenamento na nuvem
 
@@ -94,11 +94,11 @@ Uma resposta bem-sucedida retorna uma matriz de arquivos e pastas encontrados no
 ]
 ```
 
-## Inspect a estrutura de um arquivo
+## Inspecionar a estrutura de um arquivo
 
 Para inspecionar a estrutura do arquivo de dados do armazenamento na nuvem, execute uma solicitação GET enquanto fornece o caminho e o tipo do arquivo como um parâmetro de consulta.
 
-É possível inspecionar a estrutura de um arquivo de dados da fonte de armazenamento na nuvem executando uma solicitação GET enquanto fornece o caminho e o tipo do arquivo. Você também pode inspecionar diferentes tipos de arquivos, como CSV, TSV ou JSON compactado e arquivos delimitados, especificando seus tipos de arquivos como parte dos parâmetros de consulta.
+É possível inspecionar a estrutura de um arquivo de dados da fonte de armazenamento na nuvem executando uma solicitação GET e fornecendo o caminho e o tipo do arquivo. Você também pode inspecionar diferentes tipos de arquivos, como CSV, TSV ou JSON compactado e arquivos delimitados, especificando seus tipos de arquivos como parte dos parâmetros de consulta.
 
 **Formato da API**
 
@@ -168,4 +168,4 @@ A [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/refere
 
 ## Próximas etapas
 
-Seguindo este tutorial, você explorou seu sistema de armazenamento em nuvem, encontrou o caminho do arquivo que deseja trazer para [!DNL Platform] e visualizou sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do armazenamento na nuvem e trazê-los para a Platform](../collect/cloud-storage.md).
+Seguindo este tutorial, você explorou seu sistema de armazenamento em nuvem, encontrou o caminho do arquivo que deseja trazer para [!DNL Experience Platform] e visualizou sua estrutura. Você pode usar essas informações no próximo tutorial para [coletar dados do armazenamento na nuvem e trazê-los para a Experience Platform](../collect/cloud-storage.md).

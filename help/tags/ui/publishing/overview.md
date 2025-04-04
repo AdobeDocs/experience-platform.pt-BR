@@ -2,10 +2,10 @@
 title: Visão geral da publicação
 description: Saiba mais sobre o processo de publicação de alterações nas bibliotecas de código do gerenciamento de tags no Adobe Experience Platform.
 exl-id: 32eaad87-d7dc-4812-b546-a136511512fe
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 97%
+source-wordcount: '610'
+ht-degree: 95%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O Adobe Experience Platform permite encapsular alterações no código de gerenciamento de tags em bibliotecas individuais. Como agora várias bibliotecas podem ser desenvolvidas em paralelo por diferentes equipes, as bibliotecas devem seguir um processo deliberado e permitido para mesclar as alterações antes de serem enviadas ao ambiente de produção.
 
@@ -33,7 +33,7 @@ Além do fluxo de publicação, é preciso compreender vários componentes e rel
 | --- | --- |
 | Bibliotecas | Uma biblioteca é um conjunto de instruções sobre como as extensões, os elementos de dados e as regras interagem entre si e com o site. Quando uma biblioteca é compilada para ser implantada em um ambiente, essa biblioteca se torna uma build.<br><br>Consulte a visão geral sobre [bibliotecas](./libraries.md) para obter mais informações sobre como criar, gerenciar e ativar bibliotecas na interface do usuário. |
 | Builds | Uma build é uma biblioteca compilada. Quando implantada em um ambiente, uma build fornece o conjunto de arquivos que de fato contém o código entregue ao navegador de cada usuário quando ele visualiza o site.<br><br>Consulte a visão geral das [builds](./builds.md) para obter mais informações sobre o conteúdo e o formato das builds. |
-| Ambientes | Um ambiente de tags é um conjunto de instruções de implantação que informa à Platform o formato desejado para o build e onde ele deve ser entregue.<br><br>Consulte a visão geral sobre [ambientes](./environments.md) para obter mais informações sobre os diferentes tipos de ambientes, como instalar e configurar ambientes existentes e como criar novos ambientes. |
+| Ambientes | Um ambiente de tags é um conjunto de instruções de implantação que informa o Experience Platform em qual formato você quer a sua build e onde você gostaria que ela fosse entregue.<br><br>Consulte a visão geral sobre [ambientes](./environments.md) para obter mais informações sobre os diferentes tipos de ambientes, como instalar e configurar ambientes existentes e como criar novos ambientes. |
 | Hosts | Um host representa os detalhes da conexão de um ambiente para que ele forneça uma build ao seu site. Você pode optar por permitir que a Adobe gerencie a hospedagem da build ou, em vez disso, você pode fornecer as informações dos seus próprios servidores hosts.<br><br>Consulte a visão geral sobre [hosts](./hosts/hosts-overview.md) para obter mais informações sobre cada opção de hospedagem. |
 | Código do lado do cliente | O código do lado do cliente é o conjunto de scripts que você insere no código-fonte do site ou aplicativo que informa a cada dispositivo cliente onde buscar a build. O código é anexado a um ambiente e pode ser alterado quando você fizer alterações na configuração do ambiente.<br><br>Consulte a seção sobre [códigos incorporados](./environments.md#embed-code) na visão geral de ambientes para saber mais. |
 

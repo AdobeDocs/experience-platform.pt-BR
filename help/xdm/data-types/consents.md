@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução de problemas;API;consentimento;Consentimento;preferências;Preferências;privacyOptOuts;marketingPreferences;optOutType;basedOfProcessing;consentimento;Consentimento
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;consentimento;Consentimento;preferências;privacidadeOptOuts;marketingPreferences;optOutType;baseOfProcessing;consentimento;Consentimento
 title: Tipo de dados de consentimentos e preferências
 description: O tipo de dados Consentimento para privacidade, Personalization e Preferências de marketing tem como objetivo oferecer suporte à coleção de permissões e preferências do cliente geradas pelas Plataformas de gerenciamento de consentimento (CMPs) e outras fontes das operações de dados.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 7a2b6c1033ad9e78b049857b9b4e6fc3708ed36c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2332'
+source-wordcount: '2334'
 ht-degree: 0%
 
 ---
@@ -38,13 +38,13 @@ Uma preferência é uma opção que permite ao cliente especificar como diferent
 * **Preferências do Personalization**: preferências relacionadas a como a marca deve personalizar experiências entregues a um cliente.
 * **Preferências de marketing**: preferências que especificam se uma marca pode contatar um cliente por meio de vários canais.
 
-A captura de tela a seguir mostra como a estrutura do tipo de dados é representada na interface do usuário da plataforma:
+A captura de tela a seguir mostra como a estrutura do tipo de dados é representada na interface do usuário do Experience Platform:
 
 ![](../images/data-types/consents.png)
 
 >[!TIP]
 >
->Consulte o guia em [explorando recursos XDM](../ui/explore.md) para obter etapas sobre como pesquisar qualquer recurso XDM e inspecionar sua estrutura na interface do usuário da plataforma.
+>Consulte o guia em [explorando recursos XDM](../ui/explore.md) para obter etapas sobre como pesquisar qualquer recurso XDM e inspecionar sua estrutura na interface do usuário do Experience Platform.
 
 O JSON a seguir mostra um exemplo do tipo de dados que o tipo de dados [!UICONTROL Consentimentos e Preferências] pode processar. As informações sobre o uso específico de cada um desses campos são fornecidas nas seções a seguir.
 

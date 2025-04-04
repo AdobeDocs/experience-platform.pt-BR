@@ -2,9 +2,9 @@
 title: Agendamentos de consulta
 description: Saiba como automatizar execuções de consultas programadas, excluir ou desativar um agendamento de consultas e utilizar as opções de agendamento disponíveis por meio da interface do usuário do Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2028'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ A tabela abaixo explica os tipos de alerta de consulta aceitos:
 
 >[!NOTE]
 >
->Se você optar por definir um alerta de [!UICONTROL Atraso na execução da consulta], defina o tempo de atraso desejado em minutos na interface da plataforma. Insira a duração em minutos. O atraso máximo é de 24 horas (1440 minutos).
+>Se você optar por definir um alerta de [!UICONTROL Atraso na execução da consulta], defina o tempo de atraso desejado em minutos na interface do Experience Platform. Insira a duração em minutos. O atraso máximo é de 24 horas (1440 minutos).
 
 Para obter uma visão geral dos alertas no Adobe Experience Platform, incluindo a estrutura de como as regras de alerta são definidas, consulte a [visão geral dos alertas](../../observability/alerts/overview.md). Para obter orientação sobre como gerenciar alertas e regras de alerta na interface do usuário do Adobe Experience Platform, consulte o [Guia da interface de alertas](../../observability/alerts/ui.md).
 
@@ -153,7 +153,7 @@ A tabela a seguir fornece descrições de cada coluna disponível na seção de 
 |---------------------|----------------------------------|
 | [!UICONTROL ID de Execução da Consulta] | Exibe um identificador exclusivo para cada execução de consulta, permitindo rastrear e fazer referência a execuções individuais de suas consultas programadas. |
 | [!UICONTROL Início da Execução da Consulta] | Indica a data e a hora de início da execução da consulta, para ajudá-lo a monitorar o início de cada execução. |
-| [!UICONTROL Execução de Consulta Concluída] | Mostra a data e a hora de conclusão da execução da consulta para fornecer informações sobre a duração e o status da execução. |
+| [!UICONTROL Execução de Consulta Concluída] | Mostra a data e a hora de conclusão da execução da consulta, para fornecer o insight sobre a duração e o status da execução. |
 | [!UICONTROL Status] | Exibe o status atual da execução da consulta, como `Completed,` `Running,` ou `Failed,` para avaliar o resultado rapidamente. |
 | [!UICONTROL Conjuntos de dados] | Lista os conjuntos de dados usados na execução da consulta para mostrar quais fontes de dados estavam envolvidas na execução. |
 | [!UICONTROL Horas de Computação] | Mostra o tempo de cálculo usado para cada execução de consulta, medido em horas. Isso ajuda a rastrear o uso de recursos e otimizar o desempenho da consulta. |

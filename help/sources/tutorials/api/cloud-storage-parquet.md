@@ -5,7 +5,7 @@ title: Assimilar dados do Parquet de um sistema de armazenamento na nuvem de ter
 type: Tutorial
 description: Este tutorial usa a API de serviço de fluxo para orientá-lo pelas etapas necessárias para assimilar dados do Apache Parquet de um sistema de armazenamento na nuvem de terceiros.
 exl-id: fb1b19d6-16bb-4a5f-9e81-f537bac95041
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 10%
@@ -22,8 +22,8 @@ Este tutorial usa a API [!DNL Flow Service] para orientá-lo pelas etapas de ass
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
-- [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-- [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+- [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+- [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para assimilar com êxito dados do Parquet de um armazenamento na nuvem de terceiros usando a API [!DNL Flow Service].
 
@@ -33,13 +33,13 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform], incluindo aqueles pertencentes a [!DNL Flow Service], estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -49,7 +49,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ## Criar uma conexão
 
-Para assimilar dados do Parquet usando APIs do [!DNL Platform], você deve ter uma conexão válida para a fonte de armazenamento na nuvem de terceiros que você está acessando. Se você ainda não tiver uma conexão para o armazenamento com o qual deseja trabalhar, crie uma por meio dos seguintes tutoriais:
+Para assimilar dados do Parquet usando APIs do [!DNL Experience Platform], você deve ter uma conexão válida para a fonte de armazenamento na nuvem de terceiros que você está acessando. Se você ainda não tiver uma conexão para o armazenamento com o qual deseja trabalhar, crie uma por meio dos seguintes tutoriais:
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -61,7 +61,7 @@ Obtenha e armazene o identificador exclusivo (`$id`) da conexão e prossiga para
 
 ## Criar um esquema de destino
 
-Para que os dados de origem sejam usados em [!DNL Platform], um esquema de destino também deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é então usado para criar um conjunto de dados [!DNL Platform] no qual os dados de origem estão contidos.
+Para que os dados de origem sejam usados em [!DNL Experience Platform], um esquema de destino também deve ser criado para estruturar os dados de origem de acordo com suas necessidades. O esquema de destino é então usado para criar um conjunto de dados [!DNL Experience Platform] no qual os dados de origem estão contidos.
 
 Se você preferir usar a interface de usuário em [!DNL Experience Platform], o [tutorial do Editor de Esquemas](../../../xdm/tutorials/create-schema-ui.md) fornece instruções passo a passo para executar ações semelhantes no Editor de Esquemas.
 
@@ -257,7 +257,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 
 ## Criar uma conexão de base do conjunto de dados
 
-Para assimilar dados externos em [!DNL Platform], uma conexão de base de conjunto de dados [!DNL Experience Platform] deve ser adquirida primeiro.
+Para assimilar dados externos em [!DNL Experience Platform], uma conexão de base de conjunto de dados [!DNL Experience Platform] deve ser adquirida primeiro.
 
 Para criar uma conexão de base de conjunto de dados, siga as etapas descritas no [tutorial de conexão de base de conjunto de dados](./create-dataset-base-connection.md).
 
@@ -265,7 +265,7 @@ Continue seguindo as etapas descritas no guia do desenvolvedor até criar uma co
 
 ## Criar um conjunto de dados de destino
 
-Um conjunto de dados de destino pode ser criado por meio de uma solicitação POST para a [API de Serviço de Catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
+Um conjunto de dados de destino pode ser criado executando uma solicitação POST para a [API de Serviço de Catálogo](https://www.adobe.io/experience-platform-apis/references/catalog/), fornecendo a ID do esquema de destino na carga.
 
 **Formato da API**
 
@@ -427,7 +427,7 @@ Uma resposta bem-sucedida retorna a ID (`id`) do fluxo de dados recém-criado.
 
 ## Próximas etapas
 
-Seguindo este tutorial, você criou um conector de origem para coletar dados do Parquet a partir do seu sistema de armazenamento na nuvem de terceiros de forma programada. Os dados de entrada agora podem ser usados por serviços [!DNL Platform] downstream, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
+Seguindo este tutorial, você criou um conector de origem para coletar dados do Parquet a partir do seu sistema de armazenamento na nuvem de terceiros de forma programada. Os dados de entrada agora podem ser usados por serviços [!DNL Experience Platform] downstream, como [!DNL Real-Time Customer Profile] e [!DNL Data Science Workspace]. Consulte os seguintes documentos para obter mais detalhes:
 
 - [Visão geral do Perfil do cliente em tempo real](../../../profile/home.md)
 - [Visão geral do Espaço de trabalho de ciência de dados](../../../data-science-workspace/home.md)

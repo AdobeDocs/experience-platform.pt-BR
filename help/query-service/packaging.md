@@ -2,9 +2,9 @@
 title: Empacotamento do serviço de consulta
 description: O documento a seguir descreve o pacote de recursos e produtos disponíveis para o Serviço de consulta e destaca as diferenças entre consultas ad hoc e em lote.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '987'
 ht-degree: 2%
 
 ---
@@ -15,19 +15,19 @@ Este documento descreve os diferentes tipos de recursos de empacotamento e execu
 
 O Serviço de consulta do Adobe Experience Platform pode ser dividido em dois recursos com base nos padrões de consulta que podem ser executados:
 
-- **Consultas ad hoc** são consultas SQL usadas para explorar conjuntos de dados assimilados para verificação, validação, experimentação, etc. Essas consultas não gravam dados de volta no data lake da Platform.
-- **Consultas em lote** são consultas SQL usadas para executar o processamento de pós-assimilação de conjuntos de dados assimilados. Essas consultas limpam, moldam, manipulam e enriquecem dados, cujos resultados são gravados no data lake da Platform. Essas consultas podem ser agendadas, gerenciadas e monitoradas como trabalhos em lote.
+- **Consultas ad hoc** são consultas SQL usadas para explorar conjuntos de dados assimilados para verificação, validação, experimentação, etc. Essas consultas não gravam dados de volta no data lake da Experience Platform.
+- **Consultas em lote** são consultas SQL usadas para executar o processamento de pós-assimilação de conjuntos de dados assimilados. Essas consultas limpam, moldam, manipulam e enriquecem dados, cujos resultados são gravados no data lake da Experience Platform. Essas consultas podem ser agendadas, gerenciadas e monitoradas como trabalhos em lote.
 
 Os recursos do Serviço de consulta são fornecidos com os seguintes produtos e complementos:
 
-- **Aplicativos baseados em plataforma** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics e Adobe Journey Optimizer): o acesso ao Serviço de consulta para executar consultas ad hoc é fornecido desde o início com cada variação e camada de aplicativos baseados em plataforma.
+- **Aplicativos baseados em Experience Platform** (Adobe Real-Time Customer Data Platform, Adobe Customer Journey Analytics e Adobe Journey Optimizer): o acesso ao Serviço de Consulta para executar consultas ad hoc é fornecido desde o início com todas as variações e camadas de aplicativos baseados em Experience Platform.
 - **[!DNL Data Distiller]** (pacote complementar que pode ser comprado com o Adobe Real-Time CDP, Customer Journey Analytics e Adobe Journey Optimizer): o acesso ao Serviço de Consulta para executar consultas em lote é fornecido com [!DNL Data Distiller].
 
 ## Direitos {#entitlements}
 
 A tabela a seguir descreve os principais direitos do Serviço de consulta com base em como eles são empacotados:
 
-| Qualificação do Serviço de Consulta | Fornecido com aplicativos baseados em plataforma | Empacotado com [!DNL Data Distiller] |
+| Qualificação do Serviço de Consulta | Fornecido com aplicativos baseados em Experience Platform | Empacotado com [!DNL Data Distiller] |
 |---|---|---|
 | Padrão de consulta compatível | Somente consultas ad hoc | Consulta em lote |
 | Caso de uso suportado | <ul><li>Exploração&#x200B;</li><li>Descoberta de dados&#x200B;</li><li>Validação de dados</li><li>Experimentação</li></ul> | <ul><li>Limpando</li><li>Modelagem</li><li>Manipular</li><li>Enriquecimento</li></ul> |
@@ -50,7 +50,7 @@ A tabela a seguir descreve os principais direitos do Serviço de consulta com ba
 
 ## Controle de acesso {#access-control}
 
-O controle de acesso para o Experience Platform é administrado por meio da [Adobe Admin Console](https://adminconsole.adobe.com/), onde os perfis de produtos vinculam usuários com permissões e sandboxes. Consulte a [visão geral do controle de acesso](../access-control/home.md) para obter mais informações.
+O controle de acesso do Experience Platform é administrado por meio da [Adobe Admin Console](https://adminconsole.adobe.com/), onde os perfis de produtos vinculam usuários com permissões e sandboxes. Consulte a [visão geral do controle de acesso](../access-control/home.md) para obter mais informações.
 
 Consulte os documentos [Gerenciar permissões de um perfil de produto](../access-control/ui/permissions.md) e [Gerenciar usuários de um perfil de produto](../access-control/ui/users.md) para obter instruções detalhadas sobre como solicitar acesso às permissões do perfil de produto
 
@@ -80,7 +80,7 @@ Para criar o Data Distiller [SQL Insights](./data-distiller/sql-insights/overvie
 
 ## Suporte à sandbox {#sandbox-support}
 
-As sandboxes são partições virtuais dentro de uma única instância do Experience Platform. Cada instância da Platform é compatível com várias sandboxes de produção e não produção, cada uma mantendo sua própria biblioteca de recursos da Platform. As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar suas sandboxes de produção. Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../sandboxes/home.md). Todos os direitos do Serviço de consulta são compartilhados em todas as sandboxes.
+As sandboxes são partições virtuais em uma única instância do Experience Platform. Cada instância do Experience Platform é compatível com várias sandboxes de produção e não produção, cada uma mantendo sua própria biblioteca de recursos do Experience Platform. As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar suas sandboxes de produção. Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../sandboxes/home.md). Todos os direitos do Serviço de consulta são compartilhados em todas as sandboxes.
 
 ## Próximas etapas
 

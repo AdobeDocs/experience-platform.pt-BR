@@ -5,9 +5,9 @@ title: Criar uma conexão do Source de atributos do cliente na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem na interface do usuário para trazer dados de perfil de atributos do cliente para a Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '620'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,11 @@ Este tutorial fornece etapas para criar uma conexão de origem na interface do u
 >
 >Se você já tiver estabelecido uma conexão de origem para os dados de perfil dos Atributos do cliente, a opção para se conectar com a origem será desativada.
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conexão.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conexão.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a barra de pesquisa.
 
-Na categoria [!UICONTROL aplicativos Adobe], selecione **[!UICONTROL Atributos do cliente]** e, em seguida, **[!UICONTROL Adicionar dados]**.
+Na categoria [!UICONTROL aplicativos do Adobe], selecione **[!UICONTROL Atributos do cliente]** e **[!UICONTROL Adicionar dados]**.
 
 ![catálogo](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
@@ -42,7 +42,7 @@ A tela [!UICONTROL Adicionar dados] lista todas as fontes de dados disponíveis 
 >
 >Grupos de campos, esquemas e conjuntos de dados são criados prontos para uso como parte do provisionamento de fluxo. Eles permanecerão como estão e você terá que excluí-los manualmente, se necessário.
 
-A evolução do esquema não é aceita pela fonte de atributos do cliente. Se a entrada do esquema de uma fonte de dados de atributos do cliente for alterada, ela se tornará incompatível com a Platform. Como solução alternativa, você pode excluir um fluxo de dados de atributos do cliente existente, juntamente com seu conjunto de dados associado, esquema e grupo de campos e, em seguida, criar um novo com o esquema e a fonte de dados atualizados.
+A evolução do esquema não é aceita pela fonte de atributos do cliente. Se a entrada do esquema de uma fonte de dados de atributos do cliente for alterada, ela se tornará incompatível com o Experience Platform. Como solução alternativa, você pode excluir um fluxo de dados de atributos do cliente existente, juntamente com seu conjunto de dados associado, esquema e grupo de campos e, em seguida, criar um novo com o esquema e a fonte de dados atualizados.
 
 >[!IMPORTANT]
 >
@@ -75,7 +75,7 @@ A etapa [!UICONTROL Revisão] é exibida, permitindo que você revise seu novo f
 
 ## Próximas etapas
 
-Depois que a conexão é criada, um esquema de público-alvo e um conjunto de dados são criados automaticamente para conter os dados recebidos. Quando a assimilação inicial for concluída, os dados do perfil de atributos do cliente poderão ser usados por serviços downstream da plataforma, como [!DNL Real-Time Customer Profile] e [!DNL Segmentation Service]. Consulte os seguintes documentos para obter mais detalhes:
+Depois que a conexão é criada, um esquema de público-alvo e um conjunto de dados são criados automaticamente para conter os dados recebidos. Quando a assimilação inicial for concluída, os dados do perfil de atributos do cliente poderão ser usados pelos serviços downstream da Experience Platform, como o [!DNL Real-Time Customer Profile] e o [!DNL Segmentation Service]. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Visão geral do [!DNL Real-Time Customer Profile]](../../../../../profile/home.md)
 * [Visão geral do [!DNL Segmentation Service]](../../../../../segmentation/home.md)

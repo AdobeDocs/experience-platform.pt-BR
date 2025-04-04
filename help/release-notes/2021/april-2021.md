@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: April 21, 2021
 author: ens72741
 exl-id: cc78e48a-3578-4c55-ae86-1946d62bddb9
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 33%
 
 ---
@@ -51,12 +51,12 @@ Os Serviços inteligentes capacitam analistas e profissionais de marketing a apr
 
 ### IA do cliente
 
-A IA do cliente, disponível no Real-time Customer Data Platform, é usada para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+A IA do cliente, disponível no Real-Time Customer Data Platform, é usada para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 
 | Recurso | Descrição |
 | ------- | ----------- |
 | Suporte para dados do Adobe Analytics | Atualização da funcionalidade para oferecer suporte a conjuntos de dados do Adobe Analytics por meio do conector de origem do Analytics sem a necessidade de ETL para seus dados em conformidade com o esquema Consumer Experience Event (CEE). |
-| Suporte para dados do Adobe Audience Manager | Atualização da funcionalidade para oferecer suporte a conjuntos de dados do Adobe Audience Manager por meio do conector de origem do Audience Manager, sem a necessidade de ETL para que seus dados estejam em conformidade com o esquema Consumer Experience Event (CEE). |
+| Suporte para dados do Adobe Audience Manager | Atualização da funcionalidade para oferecer suporte a conjuntos de dados do Adobe Audience Manager por meio do conector de origem do Audience Manager sem a necessidade de ETL para que seus dados estejam em conformidade com o esquema Consumer Experience Event (CEE). |
 | Resumo de desempenho do modelo | A IA do cliente agora tem uma [guia de resumo de desempenho do modelo](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) na página de insights da instância do serviço. A guia de desempenho do modelo mostra todas as taxas de conversão e churn reais. Isso permite que você decifre e entenda o que está acontecendo em cada um de seus compartimentos de propensão. |
 
 Para obter mais informações sobre conjuntos de dados compatíveis, consulte a [[!DNL Intelligent Services] documentação de preparação de dados](../../intelligent-services/data-preparation.md).
@@ -73,7 +73,7 @@ Para obter mais informações sobre conjuntos de dados compatíveis, consulte a 
 
 ## Serviço de segmentação {#segmentation}
 
-O Serviço de Segmentação da Adobe Experience Platform fornece uma interface de usuário e uma API RESTful que permite criar segmentos e gerar públicos a partir dos dados do [!DNL Real-Time Customer Profile]. Esses segmentos são configurados e mantidos centralmente na Platform, tornando-os prontamente acessíveis por qualquer aplicativo Adobe.
+O Serviço de Segmentação da Adobe Experience Platform fornece uma interface de usuário e uma API RESTful que permite criar segmentos e gerar públicos a partir dos dados do [!DNL Real-Time Customer Profile]. Esses segmentos são configurados e mantidos centralmente no Experience Platform, tornando-os prontamente acessíveis por qualquer aplicativo do Adobe.
 
 O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de séries temporais que representam interações de clientes com sua marca.
 
@@ -87,13 +87,13 @@ Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [V
 
 ## [!DNL Sources] {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (Beta) | Agora você pode criar uma conexão de origem [!DNL Marketo Engage] usando a interface do usuário para trazer dados B2B para a Platform e manter esses dados atualizados usando aplicativos conectados à Platform. Para obter mais informações, consulte a [[!DNL Marketo Engage] documentação do conector de origem](../../sources/connectors/adobe-applications/marketo/marketo.md). |
+| [!DNL Marketo Engage] (Beta) | Agora você pode criar uma conexão de origem [!DNL Marketo Engage] usando a interface do usuário para trazer dados B2B para a Experience Platform e manter esses dados atualizados usando aplicativos conectados à Experience Platform. Para obter mais informações, consulte a [[!DNL Marketo Engage] documentação do conector de origem](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 | Origens do Beta migrando para o GA | As seguintes fontes foram promovidas de beta para GA: <ul><li>[[!DNL Amazon Kinesis]](../../sources/connectors/cloud-storage/kinesis.md)</li><li>[[!DNL Azure EventHubs]](../../sources/connectors/cloud-storage/eventhub.md)</li><li>[[!DNL HTTP API]](../../sources/connectors/streaming/http.md)</li><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL Microsoft SQL Server]](../../sources/connectors/databases/sql-server.md)</li><li>[[!DNL Oracle]](../../sources/connectors/databases/oracle.md)</li></ul> |
 
 Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).

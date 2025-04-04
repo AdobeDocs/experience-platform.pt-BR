@@ -3,9 +3,9 @@ title: Assimilar dados criptografados na interface do usuário de origens do Wor
 description: Saiba como assimilar dados criptografados no espaço de trabalho da interface do usuário de origens.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1457'
 ht-degree: 6%
 
 ---
@@ -22,15 +22,15 @@ Leia este guia para saber como assimilar dados criptografados com fontes em lote
 
 ## Introdução
 
-Antes de continuar com este tutorial, leia os seguintes documentos para entender melhor os seguintes recursos e conceitos de Experience Platform.
+Antes de continuar com este tutorial, leia os seguintes documentos para entender melhor os seguintes recursos e conceitos do Experience Platform.
 
-* [Fontes](../../home.md): use fontes no Experience Platform para assimilar dados de um Aplicativo Adobe ou de uma fonte de dados de terceiros.
-* [Fluxos de dados](../../../dataflows/home.md): Fluxos de dados são representações de trabalhos de dados que movem dados pelo Experience Platform. Você pode usar o espaço de trabalho de origens para criar fluxos de dados que assimilam dados de uma determinada origem para o Experience Platform.
+* [Fontes](../../home.md): use fontes no Experience Platform para assimilar dados de um aplicativo do Adobe ou de uma fonte de dados de terceiros.
+* [Fluxos de dados](../../../dataflows/home.md): fluxos de dados são representações de trabalhos de dados que movem dados pela Experience Platform. Você pode usar o espaço de trabalho de origens para criar fluxos de dados que assimilam dados de uma determinada origem para a Experience Platform.
 * [Sandboxes](../../../sandboxes/home.md): use sandboxes no Experience Platform para criar partições virtuais entre as instâncias do Experience Platform e criar ambientes dedicados ao desenvolvimento ou produção.
 
 ### Estrutura de tópicos de alto nível
 
-* Crie um par de chaves de criptografia usando o espaço de trabalho de origens na interface de usuário do Experience Platform.
+* Crie um par de chaves de criptografia usando o espaço de trabalho de origens na interface do usuário do Experience Platform.
    * Como opção, você também pode criar seu próprio par de chaves de verificação de assinatura para fornecer uma camada adicional de segurança para seus dados criptografados.
 * Use a chave pública do seu par de chaves de criptografia para criptografar os dados.
 * Coloque os dados criptografados no armazenamento na nuvem. Durante essa etapa, você também deve garantir que tenha um arquivo de amostra de seus dados no armazenamento na nuvem que possa ser usado como referência para mapear seus dados de origem para um esquema do Experience Data Model (XDM).
@@ -56,7 +56,7 @@ Você pode criar seu par de chaves de criptografia por meio da interface do usu�
 
 >[!ENDSHADEBOX]
 
-Na interface da Platform, navegue até o espaço de trabalho de origens e selecione [!UICONTROL Pares de Chaves] no cabeçalho superior.
+Na interface do usuário do Experience Platform, navegue até o espaço de trabalho de origens e selecione [!UICONTROL Pares de chaves] no cabeçalho superior.
 
 ![O catálogo de fontes com o cabeçalho &quot;Pares de Chaves&quot; selecionado.](../../images/tutorials/edi/catalog.png)
 
@@ -136,7 +136,7 @@ Autentique com a fonte de armazenamento em nuvem de sua escolha. Durante a etapa
 
 ![A etapa &quot;selecionar dados&quot; do fluxo de trabalho de fontes, onde um arquivo de dados criptografado é selecionado para assimilação.](../../images/tutorials/edi/select_data.png)
 
-Em seguida, selecione um arquivo de amostra dos dados de origem. Como os dados estão criptografados, o Experience Platform exigirá um arquivo de amostra para criar um esquema XDM que possa ser mapeado para os dados de origem.
+Em seguida, selecione um arquivo de amostra dos dados de origem. Como os dados são criptografados, o Experience Platform exigirá um arquivo de amostra para criar um esquema XDM que possa ser mapeado para os dados de origem.
 
 ![A mensagem &quot;Este arquivo está criptografado?&quot; alternar entre ativado e o botão &quot;Selecionar arquivo de amostra&quot; selecionado. ](../../images/tutorials/edi/select_sample_file.png)
 
@@ -165,4 +165,4 @@ Você pode continuar a [atualizar seu fluxo de dados](../ui/update-dataflows.md)
 
 ## Próximas etapas
 
-Ao ler este documento, agora é possível assimilar dados criptografados da origem do lote de armazenamento na nuvem para o Experience Platform. Para obter informações sobre como assimilar dados criptografados usando as APIs, leia o manual sobre [assimilação de dados criptografados usando a [!DNL Flow Service] API](../api/encrypt-data.md). Para obter informações gerais sobre fontes no Experience Platform, leia a [visão geral das fontes](../../home.md).
+Ao ler este documento, agora é possível assimilar dados criptografados da origem do lote de armazenamento na nuvem para a Experience Platform. Para obter informações sobre como assimilar dados criptografados usando as APIs, leia o manual sobre [assimilação de dados criptografados usando a [!DNL Flow Service] API](../api/encrypt-data.md). Para obter informações gerais sobre fontes no Experience Platform, leia a [visão geral das fontes](../../home.md).

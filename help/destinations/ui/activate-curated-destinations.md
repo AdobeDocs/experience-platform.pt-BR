@@ -3,9 +3,9 @@ title: Ativar públicos para destinos com curadoria com base em identificadores 
 type: Tutorial
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de TV e áudio conectados e outras integrações usando o LiveRamp Ramp ID.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Use a integração do Adobe Real-Time CDP com o [!DNL LiveRamp] para ativar púb
 
 >[!IMPORTANT]
 >
->Você não precisa assimilar ou trabalhar de alguma forma com LiveRamp RampIDs na interface do Experience Platform.
+>Não é necessário assimilar ou trabalhar de alguma forma com LiveRamp RampIDs na interface do Experience Platform.
 >
 > Você pode exportar identidades do Real-Time CDP, como identificadores baseados em PII, identificadores conhecidos e IDs personalizadas, conforme descrito na [documentação oficial do LiveRamp](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers). Essas identidades são correspondidas com [!DNL LiveRamp RampIDs] downstream adicional no processo de ativação.
 
@@ -76,7 +76,7 @@ Para saber como configurar o destino [!DNL LiveRamp - Onboarding] e exportar seu
 
 >[!IMPORTANT]
 >
->Ao exportar arquivos para o destino [!DNL LiveRamp - Onboarding], a Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../profile/merge-policies/overview.md). Consulte a documentação de destino do [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) para obter informações detalhadas sobre como validar a exportação de dados para o LiveRamp.
+>Ao exportar arquivos para o destino [!DNL LiveRamp - Onboarding], o Experience Platform gera um arquivo CSV para cada [ID da política de mesclagem](../../profile/merge-policies/overview.md). Consulte a documentação de destino do [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) para obter informações detalhadas sobre como validar a exportação de dados para o LiveRamp.
 
 
 Depois de exportar os públicos para o LiveRamp com êxito, continue para a [etapa 2](#distribution).
@@ -103,11 +103,11 @@ Ao configurar o destino **[!DNL LiveRamp - Distribution]**, você deve criar uma
 
 >[!TIP]
 >
->Ao nomear seu destino, o Adobe recomenda este formato: `LiveRamp - Downstream Destination Name`. Este padrão de nomenclatura ajuda a identificar rapidamente seus destinos na guia [Procurar](../ui/destinations-workspace.md#browse) do espaço de trabalho de destinos.
+>Ao nomear seu destino, a Adobe recomenda este formato: `LiveRamp - Downstream Destination Name`. Este padrão de nomenclatura ajuda a identificar rapidamente seus destinos na guia [Procurar](../ui/destinations-workspace.md#browse) do espaço de trabalho de destinos.
 ><br>
 >Exemplo: `LiveRamp - Roku`.
 
-![Captura de tela da interface do usuário da plataforma mostrando vários destinos do LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
+![Captura de tela da interface do usuário do Experience Platform mostrando vários destinos do LiveRamp.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## Dados exportados / Validar exportação de dados {#exported-data}
 

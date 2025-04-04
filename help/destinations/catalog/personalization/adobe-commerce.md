@@ -2,9 +2,9 @@
 title: Conector de destino do Adobe Commerce
 description: Saiba como os comerciantes do Adobe Commerce e do Real-Time CDP podem personalizar a experiência de compra fornecendo promoções e conteúdo de site altamente relevantes, personalizados para públicos-alvo de clientes criados e gerenciados no Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '697'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ O conector de destino [!DNL Adobe Commerce] permite que você selecione um ou ma
 
 ## Pré-requisitos {#prerequisites}
 
-Esse conector está disponível no catálogo de destinos para clientes que compraram o Real-Time CDP Prime ou Ultimate e o Adobe Commerce.
+Esse conector está disponível no catálogo de destinos para clientes que compraram o Real-Time CDP Prime ou o Ultimate e o Adobe Commerce.
 
 Para usar essa conexão de destino, verifique se você tem acesso a:
 
@@ -41,7 +41,7 @@ Após concluir os pré-requisitos, conecte-se ao destino [!DNL Commerce].
 
 Para se conectar ao destino [!DNL Adobe Commerce]:
 
-1. Na [Interface da plataforma](https://experience.adobe.com/platform/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+1. Na [interface do Experience Platform](https://experience.adobe.com/platform/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 1. Selecione **[!UICONTROL Personalization]**.
 1. Selecione o destino do Adobe Commerce para realçá-lo e selecione **[!UICONTROL Configurar]**.
 1. Siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
@@ -52,7 +52,7 @@ Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornec
 
 - **[!UICONTROL Nome]**: preencha o nome preferencial para este destino.
 - **[!UICONTROL Descrição]**: insira uma descrição para o seu destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
-- **[!UICONTROL Alias de integração]**: esse valor é enviado ao SDK da Web do Experience Platform como um nome de objeto JSON.
+- **[!UICONTROL Alias de integração]**: esse valor é enviado para o Experience Platform Web SDK como um nome de objeto JSON.
 - **[!UICONTROL ID da Sequência de Dados]**: determina qual sequência de dados da Coleção de Dados contém os públicos-alvo incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Consulte [Configurando uma sequência de dados](../../../datastreams/overview.md) para obter mais detalhes.
 
 ### Ativar alertas {#enable-alerts}
@@ -71,7 +71,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de solicitação de perfil](.
 
 ## Próximas etapas em [!DNL Adobe Commerce]
 
-Agora que você configurou o destino [!DNL Commerce] no Experience Platform, é necessário instalar a extensão [!DNL Audience Activation] no [!DNL Commerce] e configurar o [!DNL Commerce Admin] para importar os públicos Real-Time CDP que você criou. Consulte a [[!DNL Commerce] documentação](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) para saber mais.
+Agora que você configurou o destino [!DNL Commerce] no Experience Platform, é necessário instalar a extensão [!DNL Audience Activation] no [!DNL Commerce] e configurar o [!DNL Commerce Admin] para importar os públicos-alvo do Real-Time CDP que você criou. Consulte a [[!DNL Commerce] documentação](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) para saber mais.
 
 ## Validar a ativação do público-alvo no Commerce {#exported-data}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;serviço de flu
 title: Criar uma execução de fluxo para assimilação sob demanda usando a API do serviço de fluxo
 description: Saiba como criar uma execução de fluxo para assimilação sob demanda usando a API do serviço de fluxo
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '801'
 ht-degree: 2%
 
 ---
@@ -26,16 +26,16 @@ Este tutorial aborda as etapas sobre como usar a assimilação sob demanda e cri
 
 Este tutorial requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): [!DNL Experience Platform] permite que os dados sejam assimilados de várias fontes e fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Experience Platform].
+* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-### Uso de APIs da plataforma
+### Uso de APIs do Experience Platform
 
-Para obter informações sobre como fazer chamadas para APIs da Platform com êxito, consulte o manual sobre [introdução às APIs da Platform](../../../landing/api-guide.md).
+Para obter informações sobre como fazer chamadas para APIs do Experience Platform com êxito, consulte o manual sobre [introdução às APIs do Experience Platform](../../../landing/api-guide.md).
 
 ## Criar uma execução de fluxo para uma origem baseada em tabela
 
-Para criar um fluxo para uma origem baseada em tabela, faça uma solicitação POST para a API [!DNL Flow Service] enquanto fornece a ID do fluxo para o qual deseja criar a execução, bem como valores para a coluna de hora de início, hora de término e delta.
+Para criar um fluxo para uma origem baseada em tabela, faça uma solicitação POST para a API [!DNL Flow Service] enquanto fornece a ID do fluxo para o qual você deseja criar a execução, bem como valores para a coluna de hora de início, hora de término e delta.
 
 >[!TIP]
 >
@@ -189,4 +189,4 @@ Uma resposta bem-sucedida retorna os detalhes da execução de fluxo recém-cria
 
 ## Monitore as execuções de fluxo
 
-Após a criação da execução do fluxo, é possível monitorar os dados que estão sendo assimilados por meio dela para ver informações sobre execuções de fluxo, status de conclusão e erros. Para monitorar suas execuções de fluxo usando a API, consulte o tutorial sobre [monitoramento de fluxos de dados na API](./monitor.md). Para monitorar suas execuções de fluxo usando a interface do usuário da Platform, consulte o manual sobre [fluxos de dados de fontes de monitoramento usando o painel de monitoramento](../../../dataflows/ui/monitor-sources.md).
+Após a criação da execução do fluxo, é possível monitorar os dados que estão sendo assimilados por meio dela para ver informações sobre execuções de fluxo, status de conclusão e erros. Para monitorar suas execuções de fluxo usando a API, consulte o tutorial sobre [monitoramento de fluxos de dados na API](./monitor.md). Para monitorar suas execuções de fluxo usando a interface do Experience Platform, consulte o manual sobre [fluxos de dados de fontes de monitoramento usando o painel de monitoramento](../../../dataflows/ui/monitor-sources.md).

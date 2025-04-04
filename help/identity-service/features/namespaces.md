@@ -2,9 +2,9 @@
 title: Visão geral do namespace de identidade
 description: Saiba mais sobre namespaces de identidade no Serviço de identidade.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1858'
+source-wordcount: '1860'
 ht-degree: 16%
 
 ---
@@ -85,16 +85,16 @@ Os seguintes tipos de identidade estão disponíveis no Experience Platform:
 | ID do dispositivo | As IDs de dispositivo identificam dispositivos de hardware, como IDFA (iPhone e iPad), GAID (Android) e RIDA (Roku), e podem ser compartilhadas por várias pessoas do domicílio. |
 | Endereço de email | Os endereços de email são frequentemente associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. Identidades desse tipo incluem informações de identificação pessoal (PII). Esta é uma indicação para [!DNL Identity Service] manipular o valor de forma sensível. |
 | Identificador não pessoal | IDs que não sejam de pessoas são usadas para armazenar identificadores que exigem namespaces, mas não estão conectados a um conjunto de pessoas. Por exemplo, um SKU de produto, dados relacionados a produtos, organizações ou lojas. |
-| ID de parceiro | <ul><li>IDs de parceiro são identificadores usados por parceiros de dados para representar pessoas. As IDs de parceiros geralmente são pseudônimas para não revelar a verdadeira identidade de uma pessoa e podem ser probabilísticas. No Real-time Customer Data Platform, as IDs de parceiros são usadas principalmente para ativação expandida do público-alvo e enriquecimento de dados, e não para criar vinculações de gráficos de identidade.</li><li>Os gráficos de identidade não são gerados ao assimilar uma identidade que inclui um namespace de identidade especificado como tipo de ID do parceiro.</li><li>A falha na assimilação de dados do parceiro usando o tipo de identidade da ID do parceiro pode resultar no alcance das limitações de gráfico do sistema no Serviço de identidade, bem como na mesclagem indesejada de perfis.</li><ul> |
+| ID de parceiro | <ul><li>IDs de parceiro são identificadores usados por parceiros de dados para representar pessoas. As IDs de parceiros geralmente são pseudônimas para não revelar a verdadeira identidade de uma pessoa e podem ser probabilísticas. No Real-Time Customer Data Platform, as IDs de parceiros são usadas principalmente para ativação expandida do público-alvo e enriquecimento de dados, e não para criar vinculações de gráficos de identidade.</li><li>Os gráficos de identidade não são gerados ao assimilar uma identidade que inclui um namespace de identidade especificado como tipo de ID do parceiro.</li><li>A falha na assimilação de dados do parceiro usando o tipo de identidade da ID do parceiro pode resultar no alcance das limitações de gráfico do sistema no Serviço de identidade, bem como na mesclagem indesejada de perfis.</li><ul> |
 | Número de telefone | Os números de telefone são frequentemente associados a uma única pessoa e, portanto, podem ser usados para identificá-la em diferentes canais. As identidades desse tipo incluem PII. Esta é uma indicação para [!DNL Identity Service] manipular o valor de forma sensível. |
 
 {style="table-layout:auto"}
 
 ### Namespaces padrão {#standard}
 
-O Experience Platform fornece vários namespaces de identidade que estão disponíveis para todas as organizações. Eles são conhecidos como namespaces padrão e são visíveis usando a API [!DNL Identity Service] ou por meio da interface do usuário da Platform.
+A Experience Platform fornece vários namespaces de identidade que estão disponíveis para todas as organizações. Eles são conhecidos como namespaces padrão e são visíveis usando a API [!DNL Identity Service] ou por meio da interface do usuário do Experience Platform.
 
-Os seguintes namespaces padrão são fornecidos para uso por todas as organizações na Platform:
+Os seguintes namespaces padrão são fornecidos para uso por todas as organizações no Experience Platform:
 
 | Nome de exibição | Descrição |
 | ------------ | ----------- |

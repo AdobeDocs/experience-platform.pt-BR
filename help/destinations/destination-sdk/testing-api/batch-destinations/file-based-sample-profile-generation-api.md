@@ -2,9 +2,9 @@
 description: Esta página explica como usar o endpoint da API /sample-profiles no Destination SDK para gerar perfis de amostra com base em um esquema de origem. Você pode usar esses perfis de amostra para testar a configuração de destino baseada em arquivo.
 title: Gerar perfis de amostra com base em um esquema de origem
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: c1ba465a8a866bd8bdc9a2b294ec5d894db81e11
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '654'
 ht-degree: 2%
 
 ---
@@ -24,9 +24,9 @@ Antes de continuar, consulte o [guia de introdução](../../getting-started.md) 
 
 Antes de usar o ponto de extremidade `/sample-profiles`, verifique se você atende às seguintes condições:
 
-* Você tem um destino baseado em arquivo existente criado por meio do Destination SDK e pode visualizá-lo em seu [catálogo de destinos](../../../ui/destinations-workspace.md).
-* Você criou pelo menos um fluxo de ativação para o destino na interface do usuário do Experience Platform. O ponto de extremidade `/sample-profiles` cria os perfis com base no esquema de origem definido no fluxo de ativação. Consulte o [tutorial de ativação](../../../ui/activate-batch-profile-destinations.md) para saber como criar um fluxo de ativação.
-* Para fazer a solicitação de API com êxito, é necessário ter a ID da instância de destino correspondente à instância de destino que você testará. Obtenha a ID da instância de destino que você deve usar na chamada da API, no URL, ao navegar por uma conexão com seu destino na interface do Platform.
+* Você tem um destino baseado em arquivo existente criado por meio da Destination SDK e pode visualizá-lo em seu [catálogo de destinos](../../../ui/destinations-workspace.md).
+* Você criou pelo menos um fluxo de ativação para o seu destino na interface do usuário do Experience Platform. O ponto de extremidade `/sample-profiles` cria os perfis com base no esquema de origem definido no fluxo de ativação. Consulte o [tutorial de ativação](../../../ui/activate-batch-profile-destinations.md) para saber como criar um fluxo de ativação.
+* Para fazer a solicitação de API com êxito, é necessário ter a ID da instância de destino correspondente à instância de destino que você testará. Obtenha a ID da instância de destino que você deve usar na chamada da API, no URL, ao navegar por uma conexão com seu destino na interface do usuário do Experience Platform.
 
   ![Imagem da interface do usuário mostrando como obter a ID da instância de destino da URL.](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -114,7 +114,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o número especificado d
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
 ## Próximas etapas
 

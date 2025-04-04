@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2611'
+source-wordcount: '2617'
 ht-degree: 2%
 
 ---
@@ -31,9 +31,9 @@ Este documento fornece limites de uso e taxa padrão para ajudar você a modelar
 Os seguintes serviços da Experience Platform estão envolvidos na modelagem de dados do Perfil do cliente em tempo real:
 
 * [[!DNL Real-Time Customer Profile]](home.md): Criar perfis de consumidor unificados usando dados de várias fontes.
-* [Identidades](../identity-service/home.md): identidades da Bridge de fontes de dados diferentes conforme são assimiladas na Platform.
-* [Esquemas](../xdm/home.md): os esquemas do Experience Data Model (XDM) são a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
-* [Públicos-alvo](../segmentation/home.md): o mecanismo de segmentação na Platform é usado para criar públicos-alvo a partir dos perfis do cliente com base nos comportamentos e atributos do cliente.
+* [Identidades](../identity-service/home.md): identidades Bridge de fontes de dados diferentes conforme são assimiladas na Experience Platform.
+* [Esquemas](../xdm/home.md): os esquemas do Experience Data Model (XDM) são a estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente.
+* [Públicos-alvo](../segmentation/home.md): o mecanismo de segmentação no Experience Platform é usado para criar públicos-alvo a partir de perfis de clientes com base em comportamentos e atributos do cliente.
 
 ## Tipos de limite
 
@@ -177,9 +177,9 @@ Neste documento, há várias medidas de proteção que se referem aos &quot;frag
 
 ### Mesclar políticas {#merge-policies}
 
-Ao reunir dados de várias fontes, as políticas de mesclagem são as regras que a Platform usa para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparecem em vários conjuntos de dados. Quando esses fragmentos são assimilados na Platform, eles são mesclados para criar um único perfil para esse cliente. Quando os dados de várias origens entram em conflito, a política de mesclagem determina quais informações incluir no perfil para o indivíduo. Um máximo de cinco (5) políticas de mesclagem que usam o esquema `_xdm.context.profile` são permitidas por sandbox. Para saber mais sobre políticas de mesclagem, leia a [visão geral das políticas de mesclagem](merge-policies/overview.md).
+Ao reunir dados de várias fontes, as políticas de mesclagem são as regras usadas pela Experience Platform para determinar como os dados serão priorizados e quais dados serão combinados para criar essa visualização unificada. Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização terá vários fragmentos de perfil relacionados a esse único cliente que aparecem em vários conjuntos de dados. Quando esses fragmentos são assimilados na Experience Platform, eles são mesclados para criar um único perfil para esse cliente. Quando os dados de várias origens entram em conflito, a política de mesclagem determina quais informações incluir no perfil para o indivíduo. Um máximo de cinco (5) políticas de mesclagem que usam o esquema `_xdm.context.profile` são permitidas por sandbox. Para saber mais sobre políticas de mesclagem, leia a [visão geral das políticas de mesclagem](merge-policies/overview.md).
 
-### Conjuntos de dados do conjunto de relatórios do Adobe Analytics na plataforma {#aa-datasets}
+### Conjuntos de dados do conjunto de relatórios do Adobe Analytics no Experience Platform {#aa-datasets}
 
 Vários conjuntos de relatórios podem ser ativados para o Perfil desde que todos os conflitos de dados sejam resolvidos. Você pode usar a funcionalidade Preparo de dados para resolver conflitos de dados entre eVars, Listas e Props. Para saber mais sobre como usar a funcionalidade Preparo de dados, leia o [guia da interface do usuário do conector do Adobe Analytics](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 

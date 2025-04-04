@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1267'
-ht-degree: 3%
+ht-degree: 5%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >  
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) para obter uma referência consolidada das alterações de terminologia.
 
 A extensão [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) do Mailchimp envia eventos para a API de marketing do Mailchimp que podem acionar emails para campanhas de marketing, jornadas ou transações do Mailchimp.
 
@@ -103,17 +103,17 @@ A extensão agora está instalada e configurada para uso na propriedade.
 
 ## Coleção de dados
 
-Ao usar esta extensão em uma [regra](../../../ui/managing-resources/rules.md), há vários valores de dados que a extensão envia para o Mailchimp com cada evento. Para uma implementação típica, você pode configurar a [extensão de SDK da Web do Adobe Experience Platform](../../client/web-sdk/overview.md) para enviar esses dados para [!DNL Platform Edge Network] para serem usados pela extensão na propriedade de encaminhamento de eventos.
+Ao usar esta extensão em uma [regra](../../../ui/managing-resources/rules.md), há vários valores de dados que a extensão envia para o Mailchimp com cada evento. Para uma implementação típica, você pode configurar a [extensão do Adobe Experience Platform Web SDK](../../client/web-sdk/overview.md) para enviar esses dados a [!DNL Experience Platform Edge Network] para serem usados pela extensão na propriedade de encaminhamento de eventos.
 
-Os dados exigidos por essa extensão podem ser enviados do SDK da Web como dados XDM (usando o objeto [`xdm`](/help/web-sdk/commands/sendevent/xdm.md)) ou dados não XDM (usando o objeto [`data`](/help/web-sdk/commands/sendevent/data.md)).
+Os dados exigidos por essa extensão podem ser enviados do Web SDK como dados XDM (usando o objeto [`xdm`](/help/web-sdk/commands/sendevent/xdm.md)) ou dados não XDM (usando o objeto [`data`](/help/web-sdk/commands/sendevent/data.md)).
 
-Por exemplo, se um cliente fizer uma compra ou se registrar para um evento em seu site, você poderá enviar um email de confirmação por meio do Mailchimp com essa extensão. Depois de enviar as informações necessárias do SDK da Web para o Edge Network, a extensão acionará o email com o Mailchimp.
+Por exemplo, se um cliente fizer uma compra ou se registrar para um evento em seu site, você poderá enviar um email de confirmação por meio do Mailchimp com essa extensão. Depois de enviar as informações necessárias do Web SDK para a Edge Network, a extensão acionará o email com o Mailchimp.
 
 ![Adicionar configuração de ação de evento](../../../images/extensions/server/mailchimp/action-configurations.png)
 
 ### Elementos de dados
 
-A captura de tela na seção anterior mostra os dados que você pode enviar com cada evento desta extensão para o Mailchimp. Depois de configurar o SDK da Web para enviar esses dados para o Edge Network, você pode criar elementos de dados na propriedade de encaminhamento de eventos para que a extensão possa acessar esses valores.
+A captura de tela na seção anterior mostra os dados que você pode enviar com cada evento desta extensão para o Mailchimp. Depois de configurar o Web SDK para enviar esses dados para a Edge Network, você pode criar elementos de dados na propriedade de encaminhamento de eventos para que a extensão possa acessar esses valores.
 
 A tabela abaixo fornece mais detalhes para cada valor possível.
 
@@ -130,7 +130,7 @@ A tabela abaixo fornece mais detalhes para cada valor possível.
 
 >[!IMPORTANT]
 >  
->Os valores **Caminho de exemplo** acima são apenas exemplos. Os nomes de campos e os [caminhos](../../../ui/event-forwarding/overview.md#data-element-path) referenciados nesses elementos de dados podem ser diferentes na propriedade, dependendo de como você nomeou e configurou o SDK da Web nas etapas acima.
+>Os valores **Caminho de exemplo** acima são apenas exemplos. Os nomes de campos e os [caminhos](../../../ui/event-forwarding/overview.md#data-element-path) referenciados nesses elementos de dados podem ser diferentes na propriedade, dependendo de como você nomeou e configurou o Web SDK nas etapas acima.
 
 Na propriedade de encaminhamento de eventos, você pode criar um elemento de dados para cada um dos campos descritos acima. Depois de criado, você pode fazer referência aos elementos de dados na ação [!UICONTROL Adicionar evento] dessa extensão.
 

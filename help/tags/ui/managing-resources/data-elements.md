@@ -2,9 +2,9 @@
 title: Elementos de dados
 description: Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: 0956a28a8ff6eacb3a55f7c333293ed5b6c81cce
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1614'
+source-wordcount: '1615'
 ht-degree: 89%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 89%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
 
@@ -238,7 +238,7 @@ O armazenamento de sessão é semelhante ao armazenamento local, a diferença é
 
 ### Visitor behavior
 
-De forma semelhante às Informações da página, esse elemento de dados usa tipos de comportamento comuns para aprimorar a lógica nas regras ou nas soluções da Platform.
+Semelhante às Informações da página, esse elemento de dados usa tipos de comportamento comuns para aprimorar a lógica nas regras ou em outras soluções da Experience Platform.
 
 Selecione um dos seguintes atributos de comportamento do visitante:
 
@@ -257,7 +257,7 @@ Alguns casos de uso comuns incluem:
 * Mostrar uma nova oferta ao visitante depois do número X de Contagens de sessão
 * Exibir um cadastro de informativo se for a primeira visita
 
-## Elementos de dados incorporados
+## Elementos de dados integrados
 
 Você deverá criar elementos de dados personalizados adicionais se tiver usado anteriormente qualquer um dos seguintes elementos de dados:
 

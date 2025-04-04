@@ -1,21 +1,21 @@
 ---
 title: Conecte sua conta Phoenix usando a interface do usuário do Experience Platform
-description: Saiba como conectar sua conta Phoenix e trazer dados do banco de dados Phoenix para o Experience Platform usando a interface do usuário do.
+description: Saiba como conectar sua conta do Phoenix e trazer dados do banco de dados do Phoenix para a Experience Platform usando a interface do usuário do.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
 
-# Conecte sua conta do [!DNL Phoenix] ao Experience Platform usando a interface
+# Conectar sua conta do [!DNL Phoenix] à Experience Platform usando a interface
 
 >[!WARNING]
 >
 >A origem [!DNL Phoenix] será substituída no final de junho de 2025.
 
-Este tutorial fornece etapas sobre como conectar sua conta do [!DNL Phoenix] e trazer dados do banco de dados do [!DNL Phoenix] para o Experience Platform.
+Este tutorial fornece etapas sobre como conectar sua conta do [!DNL Phoenix] e trazer dados do banco de dados do [!DNL Phoenix] para a Experience Platform.
 
 ## Introdução
 
@@ -43,11 +43,11 @@ Para acessar sua conta do [!DNL Phoenix] no Experience Platform, você deve forn
 
 Para obter mais informações sobre a introdução, consulte [este [!DNL Phoenix] documento](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
-Depois de obter as credenciais necessárias, você poderá seguir as etapas abaixo para conectar sua conta do [!DNL Phoenix] ao Experience Platform.
+Depois de obter as credenciais necessárias, você poderá seguir as etapas abaixo para conectar sua conta do [!DNL Phoenix] à Experience Platform.
 
 ## Conectar sua conta do [!DNL Phoenix]
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho de fontes. A tela *[!UICONTROL Catálogo]* exibe uma variedade de fontes disponíveis no catálogo de fontes do Experience Platform.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho de fontes. A tela *[!UICONTROL Catálogo]* exibe uma variedade de fontes disponíveis no catálogo de fontes do Experience Platform.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar uma fonte específica usando a opção de pesquisa.
 
@@ -83,4 +83,4 @@ Para usar uma nova conta, selecione [!UICONTROL Nova conta] e forneça um nome, 
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Phoenix]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o Experience Platform](../../dataflow/databases.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Phoenix]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](../../dataflow/databases.md).

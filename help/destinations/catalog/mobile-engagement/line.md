@@ -1,12 +1,12 @@
 ---
 keywords: móvel;destino do engajamento móvel;LINE;destino do engajamento móvel LINE
 title: Conexão LINE
-description: O destino LINE permite adicionar perfis ao público-alvo da Platform e fornecer experiências personalizadas aos usuários conectados.
+description: O destino LINE permite adicionar perfis ao público-alvo do Experience Platform e fornecer experiências personalizadas aos usuários conectados.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1198'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 [[!DNL LINE]](https://line.me/en/) é uma plataforma de comunicação popular que conecta pessoas, serviços e informações e se transformou de um aplicativo de bate-papo em um centro de atividades diárias, sociais e de entretenimento.
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aproveita a [[!DNL LINE] API de Mensagens](https://developers.line.biz/en/reference/messaging-api/). Você pode ativar perfis dos públicos-alvo do Experience Platform como conexões no [!DNL LINE] para as necessidades da sua empresa.
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aproveita a [[!DNL LINE] API de Mensagens](https://developers.line.biz/en/reference/messaging-api/). Você pode ativar perfis dos públicos-alvo da Experience Platform como conexões no [!DNL LINE] para atender às suas necessidades comerciais.
 
 [!DNL LINE] usa Tokens de Portador como mecanismo de autenticação para se comunicar com a API de Mensagens [!DNL LINE]. As instruções para autenticar na sua instância do [!DNL LINE] estão mais abaixo, na seção [Autenticar no destino](#authenticate).
 
@@ -29,7 +29,7 @@ Como profissional de marketing, você pode direcionar usuários em um destino de
 
 ### [!DNL LINE] pré-requisitos {#prerequisites-destination}
 
-Observe os seguintes pré-requisitos em [!DNL LINE], para exportar dados da Plataforma para sua conta do [!DNL LINE]:
+Observe os seguintes pré-requisitos em [!DNL LINE] para exportar dados do Experience Platform para sua conta do [!DNL LINE]:
 
 #### Você precisa ter uma conta [!DNL LINE] {#prerequisites-account}
 
@@ -40,7 +40,7 @@ Você precisa registrar-se e criar uma conta do [!DNL LINE], se ainda não tiver
 
 #### Obtenha o [!DNL LINE channel access token (long-lived)] do console do desenvolvedor [!DNL LINE] {#gather-credentials}
 
-Para permitir que a Platform acesse os recursos do [!DNL LINE], você precisará do *[!DNL Channel access token (long-lived)]* do canal [!DNL LINE] *API de Mensagens* desejado.
+Para permitir que o Experience Platform acesse [!DNL LINE] recursos, você precisará do *[!DNL Channel access token (long-lived)]* do canal [!DNL LINE] *API de Mensagens* desejado.
 
 1. Faça logon com sua conta do [!DNL LINE] no [[!DNL LINE] Console do desenvolvedor](https://developers.line.biz/console).
 1. Em seguida, acesse a lista *[!DNL Providers]*, selecione a *[!DNL Provider]* de interesse e finalmente selecione o canal *API de Mensagens* para acessar suas configurações. Se você estiver acessando o console do desenvolvedor pela primeira vez, siga a [[!DNL LINE] documentação](https://developers.line.biz/en/docs/messaging-api/getting-started/) para concluir as etapas necessárias para criar um provedor.
@@ -68,7 +68,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL LINE]. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ Em **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, pesquise por [!DNL LI
 ### Autenticar para o destino {#authenticate}
 
 Para autenticar no destino, selecione **[!UICONTROL Conectar ao destino]**.
-![Captura de tela da interface do usuário da plataforma mostrando como autenticar.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
+![Captura de tela da interface do Experience Platform mostrando como autenticar.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Preencha os campos obrigatórios abaixo.
 * **[!UICONTROL Token de portador]**: seu [!DNL LINE Channel access token (long-lived)] do console do desenvolvedor [!DNL LINE]. Consulte a seção [coletar credenciais](#gather-credentials).
@@ -95,7 +95,7 @@ Se os detalhes fornecidos forem válidos, a interface exibirá um status **[!UIC
 ### Preencher detalhes do destino {#destination-details}
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
-![Captura de tela da Interface do Usuário da Plataforma mostrando os detalhes de destino.](../../assets/catalog/mobile-engagement/line/destination-details.png)
+![Captura de tela da interface do Experience Platform mostrando os detalhes do destino.](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
@@ -118,7 +118,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Mapear atributos e identidades {#map}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL LINE], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste em criar um link entre os campos do esquema do Experience Data Model (XDM) na sua conta da Platform e seus equivalentes correspondentes no destino. Para mapear corretamente os campos XDM para os campos de destino [!DNL LINE], siga estas etapas:
+Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL LINE], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino. Para mapear corretamente os campos XDM para os campos de destino [!DNL LINE], siga estas etapas:
 
 Dependendo da sua identidade de origem, os seguintes namespaces de identidade de destino devem ser mapeados:
 
@@ -128,14 +128,14 @@ Dependendo da sua identidade de origem, os seguintes namespaces de identidade de
 | IDs de usuário LINE | `UserID` | `LineId` |
 
 Se suas identidades de destino forem *IDs de usuário do LINE*, você precisará das seguintes informações:
-![Exemplo de captura de tela da interface do usuário da plataforma mostrando o mapeamento do Target ao usar IDs de usuário LINE para identidades de destino.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+![Exemplo de captura de tela da interface do usuário do Experience Platform mostrando o mapeamento do Target ao usar IDs de usuário LINE para identidades de destino.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
 Se sua identidade de destino for *ID para anunciantes(IFAs)*, você precisará do seguinte:
-![Exemplo de captura de tela da interface do usuário da plataforma mostrando o Target mapping ao usar ID para anunciantes (IFAs) para identidades de destino.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+![Exemplo de captura de tela da interface do Experience Platform mostrando o Target mapping ao usar ID para anunciantes (IFAs) para identidades de destino.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## Validar exportação de dados {#exported-data}
 
-Após uma exportação de dados do Experience Platform bem-sucedida, o destino [!DNL LINE] cria um novo público-alvo no [!DNL LINE] usando o nome de público-alvo selecionado.
+Após uma exportação de dados bem-sucedida fora do Experience Platform, o destino [!DNL LINE] cria um novo público-alvo dentro de [!DNL LINE] usando o nome de público-alvo selecionado.
 
 Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 

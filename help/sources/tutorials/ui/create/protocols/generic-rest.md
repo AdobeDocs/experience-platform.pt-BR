@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;API REST genér
 title: Criar uma conexão REST API Source genérica na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem da API REST genérica usando a interface do usuário do Adobe Experience Platform.
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '647'
 ht-degree: 3%
 
 ---
@@ -20,14 +20,14 @@ Este tutorial fornece etapas para a criação de um conector de origem [!DNL Gen
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes da Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../../../home.md): o Experience Platform permite que os dados sejam assimilados de várias fontes e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da plataforma.
-* [Sandboxes](../../../../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Coletar credenciais necessárias
 
-Para acessar sua conta do [!DNL Generic REST API] na Platform, você deve fornecer credenciais válidas para o tipo de autenticação de sua escolha. A API REST genérica oferece suporte ao código de atualização OAuth 2 e à autenticação básica. Consulte as tabelas a seguir para obter informações sobre as credenciais dos dois tipos de autenticação compatíveis.
+Para acessar sua conta do [!DNL Generic REST API] no Experience Platform, você deve fornecer credenciais válidas para o tipo de autenticação de sua escolha. A API REST genérica oferece suporte ao código de atualização OAuth 2 e à autenticação básica. Consulte as tabelas a seguir para obter informações sobre as credenciais dos dois tipos de autenticação compatíveis.
 
 #### Código de atualização do OAuth 2
 
@@ -53,7 +53,7 @@ Para acessar sua conta do [!DNL Generic REST API] na Platform, você deve fornec
 
 ## Conectar sua conta de API REST genérica
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a barra de pesquisa.
 
@@ -89,4 +89,4 @@ Para usar a autenticação básica, selecione **[!UICONTROL Autenticação bási
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta da API REST genérica. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Platform](../../dataflow/protocols.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta da API REST genérica. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](../../dataflow/protocols.md).

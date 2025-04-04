@@ -2,9 +2,9 @@
 title: Visão geral da extensão do Adobe Media Analytics para áudio e vídeo
 description: Saiba mais sobre o Adobe Media Analytics para extensão de tag de áudio e vídeo na Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '949'
+source-wordcount: '950'
 ht-degree: 96%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 96%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use esta documentação para obter informações sobre como instalar, configurar e implementar a extensão Adobe Media Analytics for Audio and Video (extensão do Media Analytics). Estão incluídas as opções disponíveis ao usar esta extensão para criar uma regra, juntamente com exemplos e links para amostras.
 
@@ -178,7 +178,7 @@ A extensão do MA expõe os módulos `get-instance` e os módulos compartilhados
 
 >[!NOTE]
 >
->**Testes:** nessa versão, para testar sua extensão, você deve carregá-la no [Platform](../../../extension-dev/submit/upload-and-test.md), onde você tem acesso a todas as extensões dependentes.
+>**Testes:** nesta versão, para testar sua extensão, você deve carregá-la no [Experience Platform](../../../extension-dev/submit/upload-and-test.md), onde você tem acesso a todas as extensões dependentes.
 
 
 <!--

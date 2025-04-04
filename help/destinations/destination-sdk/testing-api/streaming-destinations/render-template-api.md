@@ -2,9 +2,9 @@
 description: Saiba como usar a API de teste de destino para validar a saída para o destino de streaming, com base no modelo de transformação de mensagem.
 title: Validar estrutura de perfil exportada
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -1066,8 +1066,8 @@ Uma resposta sem sucesso retorna o status HTTP 400 juntamente com descrições d
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este documento, agora você sabe como usar o template de transformação de mensagem para gerar perfis exportados que correspondam ao formato de dados esperado do destino. Leia [como usar o Destination SDK para configurar seu destino](../../guides/configure-destination-instructions.md) para entender onde esta etapa se encaixa no processo de configuração do seu destino.
+Depois de ler este documento, agora você sabe como usar o template de transformação de mensagem para gerar perfis exportados que correspondam ao formato de dados esperado do destino. Leia [como usar o Destination SDK para configurar seu destino](../../guides/configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.

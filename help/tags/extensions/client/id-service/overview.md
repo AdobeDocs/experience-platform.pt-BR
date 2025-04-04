@@ -2,10 +2,10 @@
 title: Visão geral da extensão do Serviço de identidade da Adobe Experience Cloud
 description: Saiba mais sobre a extensão de tag do serviço de identidade da Adobe Experience Cloud na Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '792'
-ht-degree: 97%
+source-wordcount: '793'
+ht-degree: 95%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use essa referência para obter informações sobre como configurar a extensão da Adobe Experience Cloud ID e as opções disponíveis ao usar essa extensão para criar uma regra.
 
@@ -49,7 +49,7 @@ Selecione **[!UICONTROL Adicionar]** para excluir outro caminho.
 
 Use as opções de Aceitar para determinar se os visitantes devem aceitar em participar dos serviços da Adobe em seu site, incluindo se eles desejam criar cookies que rastreiam as atividades do visitante.
 
-A aceitação é o ponto de referência centralizado para todas as bibliotecas do lado do cliente da solução da plataforma para determinar se os cookies podem ser criados no dispositivo ou no navegador de um usuário quando ele visita o seu site. A opção Aceitar não oferece suporte para coletar ou armazenar preferências de consentimento do usuário.
+A aceitação é o ponto de referência centralizado para todas as bibliotecas do lado do cliente da solução da Experience Platform para determinar se os cookies podem ser criados no dispositivo ou no navegador de um usuário quando ele visita o seu site. A opção Aceitar não oferece suporte para coletar ou armazenar preferências de consentimento do usuário.
 
 **Habilitar Aceitar?**
 

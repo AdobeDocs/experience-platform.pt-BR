@@ -5,10 +5,10 @@ breadcrumb-title: Manual de painéis
 user-guide-description: Saiba como visualizar dados na Experience Platform por meio de painéis personalizáveis.
 feature: Dashboards
 role: Developer,User
-source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 41%
+source-wordcount: '143'
+ht-degree: 44%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 41%
 * [Permissões de acesso ao painel](permissions.md)
 * [Inventário de painéis](inventory.md)
 * [Painéis de controle padrão](standard-dashboards.md)
-* [Baixar painéis no PDF](download.md)
+* [Baixar painéis para o PDF](download.md)
 * Insights SQL: query pro mode {#sql-insights-query-pro-mode}
    * [Visão geral](sql-insights-query-pro-mode/overview.md)
    * Modelos de Distiller de Dados {#templates}
@@ -57,10 +57,10 @@ ht-degree: 41%
 * Casos de uso de insights {#insights-use-cases}
    * [Análise de consentimento](insights-use-cases/consent-analysis.md)
 * Modelos de dados disponíveis {#data-models}
-   * [B2B edition do modelo de dados do Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
-   * [Edição B2C do modelo de dados do Real-time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
+   * [B2B edition do modelo de dados do Real-Time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2b.md)
+   * [Edição B2C do modelo de dados do Real-Time Customer Data Platform Insights](data-models/cdp-insights-data-model-b2c.md)
 * Integrações de aplicativos {#integrations}
    * [Power BI](integrations/power-bi.md)
 * [Consultar conjuntos de dados do painel](query.md)
 * [Exibir insight SQL](view-sql.md)
-* [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

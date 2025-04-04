@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;serviço de con
 title: Criar um relatório de tendências de eventos
 description: Saiba como gravar consultas que usam Eventos de experiência para criar um relatório de tendências de eventos em um intervalo de datas especificado, agrupados por data.
 exl-id: 8f7ed5b5-c265-4a1e-a360-4293d1e86e97
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '381'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Este documento fornece um exemplo do SQL necessário para criar um relatório de tendências de eventos por dia em um intervalo de datas específico. Com o Serviço de Consulta da Adobe Experience Platform, você pode gravar consultas que usam o [!DNL Experience Events] para capturar uma variedade de casos de uso. Eventos de experiência são representados pela classe Experience Data Model (XDM) ExperienceEvent, que captura um instantâneo imutável e não agregado do sistema quando um usuário interage com um site ou serviço. Eventos de experiência podem até ser usados para análise de domínio de tempo. Consulte a [seção das próximas etapas](#next-steps) para obter mais casos de uso que envolvem [!DNL Experience Events] para gerar relatórios de visitantes.
 
-Os relatórios fornecem acesso aos dados da plataforma para beneficiar os insights estratégicos de negócios de sua organização. Com esses relatórios, você pode examinar os dados da Platform de várias maneiras, exibir as métricas principais em formatos fáceis de entender e compartilhar os insights resultantes.
+Os relatórios fornecem acesso aos dados do Experience Platform para beneficiar os insights estratégicos de negócios de sua organização. Com esses relatórios, você pode examinar os dados do Experience Platform de várias maneiras, exibir as métricas principais em formatos fáceis de entender e compartilhar os insights resultantes.
 
 Mais informações sobre o XDM e o [!DNL Experience Events] podem ser encontradas na [[!DNL XDM System] visão geral](../../xdm/home.md). Ao combinar o Serviço de consulta com o [!DNL Experience Events], é possível rastrear com eficiência as tendências comportamentais entre os usuários. Este documento fornece exemplos de consultas envolvendo [!DNL Experience Events].
 

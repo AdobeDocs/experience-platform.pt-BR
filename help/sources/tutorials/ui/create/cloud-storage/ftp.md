@@ -5,9 +5,9 @@ title: Criar uma conexão FTP Source na interface do usuário
 type: Tutorial
 description: Saiba como criar uma conexão de origem FTP usando a interface do usuário do Adobe Experience Platform.
 exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '464'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ Para se conectar ao FTP, você deve fornecer valores para as seguintes proprieda
 
 ## Conectar-se ao servidor FTP
 
-Depois de obter as credenciais necessárias, você pode seguir as etapas abaixo para criar uma nova conta FTP para se conectar à Platform.
+Depois de obter as credenciais necessárias, siga as etapas abaixo para criar uma nova conta FTP para se conectar ao Experience Platform.
 
 Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta de entrada.
 
@@ -69,4 +69,4 @@ Para conectar uma conta existente, selecione a conta FTP com a qual deseja se co
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta FTP. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para a Platform](../../dataflow/batch/cloud-storage.md).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta FTP. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para o Experience Platform](../../dataflow/batch/cloud-storage.md).

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;perfil;público;públicos;segmentação;interface do usuário;UI;personalização;painel;painel;;profile;audience;audiences;segmentation;user interface;UI;customization;audience dashboard;dashboard
+keywords: Experience Platform;perfil;público;públicos;segmentação;interface do usuário;interface;personalização;painel;painel;;profile;audience;audiences;segmentation;user interface;UI;customization;audience dashboard;dashboard
 title: Painel de públicos
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os públicos-alvo criados por sua organização.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3132'
+source-wordcount: '3136'
 ht-degree: 9%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 9%
 
 A interface do usuário (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre seus públicos-alvo, conforme capturadas durante um instantâneo diário. Este guia descreve como acessar e trabalhar com o painel de [!UICONTROL Públicos-alvo] na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
-Para obter uma visão geral de todos os recursos do Serviço de segmentação da Adobe Experience Platform na interface do usuário da Platform, consulte o [guia da interface do usuário do Serviço de segmentação](../../segmentation/ui/overview.md).
+Para obter uma visão geral de todos os recursos do Serviço de segmentação da Adobe Experience Platform na interface do usuário do Experience Platform, consulte o [Guia da interface do serviço de segmentação](../../segmentation/ui/overview.md).
 
 ## Dados do painel de [!UICONTROL Públicos-alvo]
 
-O painel [!UICONTROL Públicos-alvo] exibe um instantâneo dos dados do atributo (registro) que sua organização tem no repositório de perfis no Experience Platform. O instantâneo não inclui dados de evento (série temporal).
+O painel [!UICONTROL Públicos-alvo] exibe um instantâneo dos dados do atributo (registro) que sua organização tem no repositório de perfis na Experience Platform. O instantâneo não inclui dados de evento (série temporal).
 
 Os dados do atributo no instantâneo mostram os dados exatamente como aparecem no momento específico em que o instantâneo foi tirado. Em outras palavras, o instantâneo não é uma aproximação ou amostra dos dados, e o painel [!UICONTROL Públicos-alvo] não é atualizado em tempo real.
 
@@ -29,11 +29,11 @@ Os dados do atributo no instantâneo mostram os dados exatamente como aparecem n
 
 ## Explore o painel [!UICONTROL Públicos-alvo] {#explore}
 
-Para navegar até o painel [!UICONTROL Públicos-alvo] na interface do usuário da Platform, selecione **[!UICONTROL Públicos-alvo]** no painel à esquerda e selecione a guia **[!UICONTROL Visão geral]** para exibir o painel.
+Para navegar até o painel [!UICONTROL Públicos-alvo] na interface do usuário do Experience Platform, selecione **[!UICONTROL Públicos-alvo]** no painel à esquerda e selecione a guia **[!UICONTROL Visão geral]** para exibir o painel.
 
 >[!NOTE]
 >
->Se sua organização é nova na Platform e ainda não tem conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel [!UICONTROL Públicos-alvo] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudar você a começar a segmentação.
+>Se sua organização for nova no Experience Platform e ainda não tiver conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel [!UICONTROL Públicos-alvo] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudar você a começar a segmentação.
 
 ![A guia [!UICONTROL Públicos-alvo] do painel [!UICONTROL Visão geral] com [!UICONTROL Públicos-alvo] e [!UICONTROL Visão geral] realçada.](../images/audiences/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ Na biblioteca de widgets, você pode navegar pela seleção de widgets de públi
 
 ### Exibir SQL {#view-sql}
 
-Você pode exibir o SQL que gera os insights visualizados no painel com um alternador no espaço de trabalho [!UICONTROL Visão geral]. Você pode se inspirar no SQL de seus insights existentes para criar novas consultas que obtenham insights exclusivos dos dados da plataforma com base nas necessidades comerciais. Para saber mais sobre este recurso, consulte o [Exibir Guia da Interface do Usuário do SQL](../view-sql.md).
+Você pode exibir o SQL que gera os insights visualizados no painel com um alternador no espaço de trabalho [!UICONTROL Visão geral]. Você pode se inspirar no SQL de seus insights existentes para criar novas consultas que obtenham insights exclusivos de dados do Experience Platform com base nas necessidades comerciais. Para saber mais sobre este recurso, consulte o [Exibir Guia da Interface do Usuário do SQL](../view-sql.md).
 
 ## Selecionar um público {#select-audience}
 
@@ -119,7 +119,7 @@ O modelo de IA que determina as pontuações de propensão é escolhido no selet
 
 Para navegar até a página de insights detalhados do modelo de IA do cliente selecionado, selecione **[!UICONTROL Exibir detalhes do modelo]**.
 
-![O painel Públicos-alvo do Experience Platform com o [!UICONTROL widget de distribuição de pontuações pela IA do cliente] e [!UICONTROL Exibir detalhes do modelo] destacados.](../images/segments/customer-ai-distribution-of-scores.png)
+![O painel Públicos-alvo da Experience Platform com o [!UICONTROL widget de distribuição de pontuações pela IA do cliente] e [!UICONTROL Exibir detalhes do modelo] destacados.](../images/segments/customer-ai-distribution-of-scores.png)
 
 A página de insights detalhados do modelo é exibida.
 
@@ -146,7 +146,7 @@ O menu suspenso abaixo do título do widget fornece uma lista de todos os modelo
 >
 >O número total de perfis calculados depende da política de mesclagem escolhida. Para alterar a política de mesclagem usada, selecione a lista suspensa imediatamente abaixo da guia de visão geral. Consulte a seção sobre [políticas de mesclagem](#merge-policies) para obter uma breve descrição ou a [visão geral da política de mesclagem](../../profile/merge-policies/overview.md) para obter mais detalhes.
 
-![O painel Públicos-alvo do Experience Platform com o widget de resumo de pontuação da IA do cliente realçado.](../images/segments/customer-ai-scoring-summary.png)
+![O painel Públicos-alvo da Experience Platform com o widget de resumo de pontuação da IA do cliente realçado.](../images/segments/customer-ai-scoring-summary.png)
 
 Selecione **[!UICONTROL Exibir detalhes do modelo]** para navegar até a página de insights detalhados do modelo de IA do cliente selecionado. Mais informações sobre a IA do cliente podem ser encontradas no [guia da interface do usuário do discover insights](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
@@ -297,4 +297,4 @@ O widget permite descobrir onde e quando o público-alvo está sendo ativado e t
 
 ## Próximas etapas
 
-Ao seguir este documento, você poderá localizar o painel de [!UICONTROL Públicos-alvo] e selecionar um público-alvo para exibição. Você também deve entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com públicos na interface do Experience Platform, consulte o [guia da interface do usuário do Serviço de segmentação](../../segmentation/ui/overview.md).
+Ao seguir este documento, você poderá localizar o painel de [!UICONTROL Públicos-alvo] e selecionar um público-alvo para exibição. Você também deve entender as métricas exibidas nos widgets disponíveis. Para saber mais sobre como trabalhar com públicos na interface do Experience Platform, consulte o [guia da interface do usuário do Serviço de Segmentação](../../segmentation/ui/overview.md).

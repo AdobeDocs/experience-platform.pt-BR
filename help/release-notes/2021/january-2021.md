@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '720'
 ht-degree: 27%
 
 ---
@@ -61,14 +61,14 @@ A Adobe Experience Platform permite gerar experiências coordenadas, consistente
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Excluir conjunto de dados do Armazenamento de perfil | Ao excluir um conjunto de dados do Data Lake do Experience Platform, ele também será automaticamente excluído do Armazenamento de perfis. Não é mais necessário usar o endpoint da API de trabalhos do Sistema de perfil para fazer uma solicitação de exclusão para excluir explicitamente o conjunto de dados do armazenamento de perfil. Para obter mais informações, consulte o [manual de ponto de extremidade da API de trabalhos do sistema de perfil](../../profile/api/profile-system-jobs.md). |
+| Excluir conjunto de dados do Armazenamento de perfil | Ao excluir um conjunto de dados do Experience Platform Data Lake, ele também será automaticamente excluído do Armazenamento de perfis. Não é mais necessário usar o endpoint da API de trabalhos do Sistema de perfil para fazer uma solicitação de exclusão para excluir explicitamente o conjunto de dados do armazenamento de perfil. Para obter mais informações, consulte o [manual de ponto de extremidade da API de trabalhos do sistema de perfil](../../profile/api/profile-system-jobs.md). |
 | Contagem estimada de namespace de ID para um determinado segmento | Para contagens de perfis estimadas, a API de visualização agora relata:<ul><li>Contagem total de perfis estimados em um segmento para um determinado namespace.</li><li>Contagem total de perfis estimados no Esquema de união de perfil para um determinado namespace.</li></ul>Para saber mais, consulte o [manual de ponto de extremidade de API de visualização de perfil](../../profile/api/preview-sample-status.md). |
 
 Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo tutoriais e práticas recomendadas para trabalhar com dados do [!DNL Profile], comece lendo a [Visão geral do Perfil do cliente em tempo real](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da plataforma. Você pode assimilar dados de várias fontes, como aplicativos Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
+O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
@@ -76,7 +76,7 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Aprimoramentos no conector de origem do Adobe Audience Manager | Agora você pode filtrar e selecionar segmentos primários individuais do Audience Manager para assimilar na Platform, bem como filtrar características primárias. Consulte o tutorial sobre [criação de um conector de origem de Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obter mais informações. |
+| Aprimoramentos no conector de origem do Adobe Audience Manager | Agora é possível filtrar e selecionar segmentos primários individuais do Audience Manager para assimilar no Experience Platform, bem como filtrar características primárias. Consulte o tutorial sobre [criação de um conector de origem do Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) para obter mais informações. |
 | [!DNL Google BigQuery] aprimoramentos no conector de origem | Agora é possível assimilar arquivos com mais de 10 GB em uma execução de fluxo usando o conector de origem [!DNL BigQuery]. Consulte a [[!DNL BigQuery] visão geral do conector de origem](../../sources/connectors/databases/bigquery.md) para obter mais informações. |
 | Suporte a tipos de dados complexos para armazenamentos em nuvem | Agora é possível assimilar tipos de dados complexos, como matrizes em arquivos JSON, ao usar um conector de origem de armazenamento na nuvem. Consulte os tutoriais sobre como criar um fluxo de dados de armazenamento na nuvem [na interface](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) ou [usando a [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) para obter mais informações. |
 | Suporte para autenticação baseada em chave da entidade de serviço para a origem [!DNL Microsoft Dynamics] | Agora você pode autenticar em sua conta do [!DNL Dynamics] usando uma chave da entidade de serviço como alternativa à autenticação baseada em senha. Consulte a [[!DNL Dynamics] visão geral do conector de origem](../../sources/connectors/crm/ms-dynamics.md) para obter mais informações. |

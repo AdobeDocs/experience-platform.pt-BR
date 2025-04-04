@@ -2,9 +2,9 @@
 title: Criar uma conexão de transmissão da API HTTP usando a interface
 description: Este guia de interface ajudará você a criar uma conexão de transmissão usando o Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1003'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 
 ## Criar uma conexão de streaming
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -66,7 +66,7 @@ Com os dados carregados, você pode usar o lado direito da interface para visual
 
 ## Mapear campos de dados para um esquema XDM
 
-A etapa [!UICONTROL Mapping] é exibida, fornecendo uma interface para mapear os dados de origem para um conjunto de dados da plataforma.
+A etapa [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os dados de origem para um conjunto de dados do Experience Platform.
 
 A origem [!DNL HTTP API] oferece suporte à assimilação de arquivos JSON. Os arquivos JSON não exigem configuração manual se estiverem marcados como reclamação XDM. Caso contrário, você deve configurar explicitamente o mapeamento.
 
@@ -141,4 +141,4 @@ Com a conexão criada, a página de detalhes das origens é exibida. Esta págin
 
 Seguindo este tutorial, você criou uma conexão HTTP de transmissão, permitindo usar o ponto de extremidade de transmissão para acessar uma variedade de APIs do [!DNL Data Ingestion]. Para obter instruções sobre como criar uma conexão de streaming na API, leia o [tutorial sobre criação de uma conexão de streaming](../../../api/create/streaming/http.md).
 
-Para saber como transmitir dados para a Platform, leia o tutorial sobre [dados de série temporal de transmissão](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou o tutorial sobre [dados de registro de transmissão](../../../../../ingestion/tutorials/streaming-record-data.md).
+Para saber como transmitir dados para o Experience Platform, leia o tutorial sobre [transmissão de dados de série temporal](../../../../../ingestion/tutorials/streaming-time-series-data.md) ou o tutorial sobre [transmissão de dados de registro](../../../../../ingestion/tutorials/streaming-record-data.md).

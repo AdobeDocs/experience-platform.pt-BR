@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da assimilação parcial de lotes
 description: Este documento fornece um tutorial para gerenciar a assimilação parcial de lotes.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '946'
 ht-degree: 7%
@@ -21,10 +21,10 @@ Este documento fornece um tutorial para gerenciar a assimilação parcial de lot
 
 Este tutorial requer um conhecimento prático dos vários serviços da Adobe Experience Platform envolvidos com a assimilação parcial de lotes. Antes de iniciar este tutorial, revise a documentação dos seguintes serviços:
 
-- [Assimilação em lote](./overview.md): o método que [!DNL Platform] assimila e armazena dados de arquivos de dados, como CSV e Parquet.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente.
+- [Assimilação em lote](./overview.md): o método que [!DNL Experience Platform] assimila e armazena dados de arquivos de dados, como CSV e Parquet.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
 
-As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs do [!DNL Platform].
+As seções a seguir fornecem informações adicionais que você precisará saber para fazer chamadas com êxito para as APIs do [!DNL Experience Platform].
 
 ### Leitura de chamadas de API de amostra
 
@@ -32,19 +32,19 @@ Este manual fornece exemplos de chamadas de API para demonstrar como formatar su
 
 ### Coletar valores para cabeçalhos necessários
 
-Para fazer chamadas para APIs do [!DNL Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id `{ORG_ID}`
 
-Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
+Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes virtuais específicas. Todas as solicitações para [!DNL Experience Platform] APIs exigem um cabeçalho que especifique o nome da sandbox em que a operação ocorrerá:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Para obter mais informações sobre sandboxes em [!DNL Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
+>Para obter mais informações sobre sandboxes em [!DNL Experience Platform], consulte a [documentação de visão geral da sandbox](../../sandboxes/home.md).
 
 ## Ativar um lote para assimilação parcial de lotes na API {#enable-api}
 
@@ -65,7 +65,7 @@ Para criar um novo lote, siga as etapas no [guia do desenvolvedor de assimilaç�
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `enableErrorDiagnostics` | Um sinalizador que permite que o [!DNL Platform] gere mensagens de erro detalhadas sobre o lote. |
+| `enableErrorDiagnostics` | Um sinalizador que permite que o [!DNL Experience Platform] gere mensagens de erro detalhadas sobre o lote. |
 | `partialIngestionPercent` | A porcentagem de erros aceitáveis antes que todo o lote falhe. Portanto, neste exemplo, no máximo 5% do lote podem ser erros, antes que falhe. |
 
 
@@ -75,7 +75,7 @@ Para criar um novo lote, siga as etapas no [guia do desenvolvedor de assimilaç�
 >
 >Esta seção descreve como ativar um lote para assimilação parcial de lotes usando a interface do. Se você já tiver ativado um lote para assimilação parcial de lotes usando a API do, poderá pular para a próxima seção.
 
-Para habilitar um lote para assimilação parcial por meio da interface do usuário do [!DNL Platform], você pode criar um novo lote por meio de conexões de origem, criar um novo lote em um conjunto de dados existente ou criar um novo lote por meio do &quot;[!UICONTROL Mapear CSV para fluxo XDM]&quot;.
+Para habilitar um lote para assimilação parcial por meio da interface do usuário do [!DNL Experience Platform], você pode criar um novo lote por meio de conexões de origem, criar um novo lote em um conjunto de dados existente ou criar um novo lote por meio do &quot;[!UICONTROL Mapear CSV para fluxo XDM]&quot;.
 
 ### Criar uma nova conexão de origem {#new-source}
 
@@ -85,7 +85,7 @@ Para criar uma nova conexão de origem, siga as etapas listadas na [Visão geral
 
 O botão de alternância **[!UICONTROL Assimilação parcial]** permite habilitar ou desabilitar o uso de assimilação parcial em lote.
 
-A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Experience Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
@@ -99,7 +99,7 @@ Para usar um conjunto de dados existente, comece selecionando um conjunto de dad
 
 O botão de alternância **[!UICONTROL Assimilação parcial]** permite habilitar ou desabilitar o uso de assimilação parcial em lote.
 
-A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Experience Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
@@ -115,7 +115,7 @@ Para usar o fluxo &quot;[!UICONTROL Mapear CSV para esquema XDM]&quot;, siga as 
 
 O botão de alternância **[!UICONTROL Assimilação parcial]** permite habilitar ou desabilitar o uso de assimilação parcial em lote.
 
-A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Experience Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 

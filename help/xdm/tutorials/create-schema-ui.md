@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;interface;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;editor de esquemas;Editor de esquemas;esquema;Esquema;esquemas;esquemas;criar
+keywords: Experience Platform;página inicial;tópicos populares;ui;UI;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;editor de esquemas;Editor de esquemas;esquema;Esquema;esquemas;esquemas;criar
 solution: Experience Platform
 title: Criar um esquema usando o Editor de esquemas
 type: Tutorial
 description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas na Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4914'
+source-wordcount: '4915'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ Para fins de demonstração, as etapas deste tutorial envolvem a criação de um
 
 >[!NOTE]
 >
->Se você estiver assimilando dados CSV na Platform, poderá [mapear esses dados para um esquema XDM criado por recomendações geradas por IA](../../ingestion/tutorials/map-csv/recommendations.md) (atualmente na versão beta) sem precisar criar manualmente o esquema.
+>Se você estiver assimilando dados CSV na Experience Platform, poderá [mapear esses dados para um esquema XDM criado por recomendações geradas por IA](../../ingestion/tutorials/map-csv/recommendations.md) (atualmente na versão beta) sem precisar criar manualmente o esquema.
 >
 >Se preferir compor um esquema usando a API [!DNL Schema Registry], comece lendo o [[!DNL Schema Registry] guia do desenvolvedor](../api/getting-started.md) antes de tentar o tutorial sobre [criação de um esquema usando a API](create-schema-api.md).
 
@@ -28,13 +28,13 @@ Para fins de demonstração, as etapas deste tutorial envolvem a criação de um
 
 Este tutorial requer uma compreensão funcional dos vários aspectos do Adobe Experience Platform envolvidos na criação do esquema. Antes de iniciar este tutorial, revise a documentação dos seguintes conceitos:
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): a estrutura padronizada pela qual o [!DNL Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)]](../home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../schema/composition.md): uma visão geral dos esquemas XDM e seus blocos de construção, incluindo classes, grupos de campos de esquema, tipos de dados e campos individuais.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
 ## Abra o espaço de trabalho [!UICONTROL Esquemas] {#browse}
 
-O espaço de trabalho [!UICONTROL Esquemas] da interface do usuário [!DNL Platform] fornece uma visualização do [!DNL Schema Library], permitindo que você visualize e gerencie os esquemas disponíveis para sua organização. O espaço de trabalho também inclui o [!DNL Schema Editor], a tela na qual você pode compor um esquema através deste tutorial.
+O espaço de trabalho [!UICONTROL Esquemas] da interface do usuário [!DNL Experience Platform] fornece uma visualização do [!DNL Schema Library], permitindo que você visualize e gerencie os esquemas disponíveis para sua organização. O espaço de trabalho também inclui o [!DNL Schema Editor], a tela na qual você pode compor um esquema através deste tutorial.
 
 Depois de fazer logon em [!DNL Experience Platform], selecione **[!UICONTROL Esquemas]** na navegação à esquerda para abrir o espaço de trabalho **[!UICONTROL Esquemas]**. A guia **[!UICONTROL Procurar]** exibe uma lista de esquemas (uma representação do [!DNL Schema Library]) para que você possa exibi-los e personalizá-los. A lista inclui o nome, o tipo, a classe e o comportamento (registro ou série temporal) em que o esquema se baseia, bem como a data e a hora em que o esquema foi modificado pela última vez.
 
@@ -126,7 +126,7 @@ A tela do esquema será exibida novamente. A seção **[!UICONTROL Grupos de cam
 
 >[!NOTE]
 >
-No Editor de esquemas, classes e grupos de campos padrão (gerados por Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
+No Editor de esquemas, classes e grupos de campos padrão (gerados pela Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
 >
 ![O Editor de Esquemas com o ícone de cadeado realçado](../images/ui/explore/padlock-icon-highlight.png)
 
@@ -395,7 +395,7 @@ Selecione **[!UICONTROL Copiar estrutura JSON]** para gerar uma carga de exporta
 
 Agora que terminou de compor o esquema, você pode ver o esquema completo na tela. Selecione **[!UICONTROL Salvar]** e o esquema será salvo no [!DNL Schema Library], tornando-o acessível pelo [!DNL Schema Registry].
 
-Seu novo esquema agora pode ser usado para assimilar dados no [!DNL Platform]. Lembre-se de que, uma vez que o esquema tenha sido usado para assimilar dados, somente alterações aditivas poderão ser feitas. Consulte as [noções básicas da composição de esquema](../schema/composition.md) para obter mais informações sobre o controle de versão de esquema.
+Seu novo esquema agora pode ser usado para assimilar dados no [!DNL Experience Platform]. Lembre-se de que, uma vez que o esquema tenha sido usado para assimilar dados, somente alterações aditivas poderão ser feitas. Consulte as [noções básicas da composição de esquema](../schema/composition.md) para obter mais informações sobre o controle de versão de esquema.
 
 Agora você pode seguir o tutorial em [definição de uma relação de esquema na interface](./relationship-ui.md) para adicionar um novo campo de relação ao esquema &quot;Membros de Fidelidade&quot;.
 
@@ -405,9 +405,9 @@ O esquema &quot;Membros de fidelidade&quot; também está disponível para ser v
 
 >[!WARNING]
 >
-A interface do usuário [!DNL Platform] mostrada nos vídeos a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
+A interface do usuário [!DNL Experience Platform] mostrada nos vídeos a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 
-O vídeo a seguir mostra como criar um esquema simples na interface do usuário do [!DNL Platform].
+O vídeo a seguir mostra como criar um esquema simples na interface do usuário do [!DNL Experience Platform].
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 

@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;base para o sofá;Base para o sofá
+keywords: Experience Platform;home;popular tópicos;couchbase;Couchbase
 solution: Experience Platform
 title: Visão geral do Couchbase Source Connector
 description: Saiba como conectar o Couchbase ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 4b1cc352-3b1a-4015-baee-b1d42c15a400
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '203'
 ht-degree: 0%
@@ -23,15 +23,15 @@ O Adobe Experience Platform fornece conectividade nativa para provedores de banc
 
 Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Couchbase] ao [!DNL Platform] usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Couchbase] ao [!DNL Experience Platform] usando APIs ou a interface do usuário:
 
-## Conectar [!DNL Couchbase] a [!DNL Platform] usando APIs
+## Conectar [!DNL Couchbase] a [!DNL Experience Platform] usando APIs
 
 - [Criar uma conexão Couchbase base usando a API do Serviço de fluxo](../../tutorials/api/create/databases/couchbase.md)
 - [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
 - [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de fluxo](../../tutorials/api/collect/database-nosql.md)
 
-## Conectar [!DNL Couchbase] a [!DNL Platform] usando a interface
+## Conectar [!DNL Couchbase] a [!DNL Experience Platform] usando a interface
 
 - [Criar uma conexão de origem de Couchbase na interface](../../tutorials/ui/create/databases/couchbase.md)
 - [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface](../../tutorials/ui/dataflow/databases.md)

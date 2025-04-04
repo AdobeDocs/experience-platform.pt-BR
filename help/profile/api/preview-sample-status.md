@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;perfil;perfil de cliente em tempo real;solução de problemas;API;visualização;amostra;profile;real-time customer profile;troubleshooting;API;preview;sample
+keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução de problemas;API;visualização;amostra;;profile;real-time customer profile;troubleshooting;API;preview;sample
 title: Visualizar ponto de extremidade da API Status de amostra (Visualização de perfil)
 description: O ponto de extremidade de status da amostra de visualização da API do perfil do cliente em tempo real permite visualizar a amostra bem-sucedida mais recente dos dados do perfil, listar a distribuição do perfil por conjunto de dados e por identidade e gerar relatórios mostrando a sobreposição do conjunto de dados, a sobreposição de identidade e os perfis não compilados.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: 49196473f304585193e87393f8dc5dc37be7e4d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2906'
+source-wordcount: '2909'
 ht-degree: 1%
 
 ---
 
 # Visualizar ponto de extremidade do status da amostra (Visualização do perfil)
 
-O Adobe Experience Platform permite assimilar dados do cliente de várias fontes para criar um perfil robusto e unificado para cada cliente individual. À medida que os dados são assimilados na Platform, um trabalho de amostra é executado para atualizar a contagem de perfis e outras métricas relacionadas aos dados do Perfil do cliente em tempo real.
+O Adobe Experience Platform permite assimilar dados do cliente de várias fontes para criar um perfil robusto e unificado para cada cliente individual. À medida que os dados são assimilados na Experience Platform, um trabalho de amostra é executado para atualizar a contagem de perfis e outras métricas relacionadas aos dados do Perfil do cliente em tempo real.
 
 Os resultados deste trabalho de amostra podem ser exibidos usando o ponto de extremidade `/previewsamplestatus`, parte da API de Perfil do Cliente em Tempo Real. Esse endpoint também pode ser usado para listar distribuições de perfil por conjunto de dados e namespace de identidade, bem como para gerar vários relatórios para obter visibilidade sobre a composição do armazenamento de perfis de sua organização. Este guia aborda as etapas necessárias para exibir essas métricas usando o ponto de extremidade da API `/previewsamplestatus`.
 
@@ -31,26 +31,26 @@ Este guia faz referência a &quot;fragmentos de perfil&quot; e &quot;perfis mesc
 
 Cada perfil de cliente individual é composto por vários fragmentos de perfil que foram mesclados para formar uma única visualização desse cliente. Por exemplo, se um cliente interagir com sua marca em vários canais, sua organização provavelmente terá vários fragmentos de perfil relacionados a esse único cliente que aparecem em vários conjuntos de dados.
 
-Quando os fragmentos de perfil são assimilados na Platform, eles são mesclados (com base em uma política de mesclagem) para criar um único perfil para esse cliente. Portanto, o número total de fragmentos de perfil provavelmente sempre será maior que o número total de perfis mesclados, pois cada perfil é composto de vários fragmentos.
+Quando os fragmentos de perfil são assimilados na Experience Platform, eles são mesclados (com base em uma política de mesclagem) para criar um único perfil para esse cliente. Portanto, o número total de fragmentos de perfil provavelmente sempre será maior que o número total de perfis mesclados, pois cada perfil é composto de vários fragmentos.
 
-Para saber mais sobre os perfis e suas funções no Experience Platform, comece lendo a [Visão geral do Perfil do cliente em tempo real](../home.md).
+Para saber mais sobre os perfis e suas funções na Experience Platform, comece lendo a [Visão geral do Perfil do cliente em tempo real](../home.md).
 
 ## Como o trabalho de amostra é acionado
 
-Como os dados habilitados para o Perfil de cliente em tempo real são assimilados no [!DNL Platform], eles são armazenados no armazenamento de dados do Perfil. Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é acionado para atualizar a contagem. O modo como a amostra é acionada depende do tipo de ingestão sendo usado:
+Como os dados habilitados para o Perfil de cliente em tempo real são assimilados no [!DNL Experience Platform], eles são armazenados no armazenamento de dados do Perfil. Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é acionado para atualizar a contagem. O modo como a amostra é acionada depende do tipo de ingestão sendo usado:
 
 * Para **fluxos de trabalho de transmissão de dados**, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi atingido. Se tiver sido, um trabalho de amostra será automaticamente acionado para atualizar a contagem.
 * Para **assimilação em lote**, dentro de 15 minutos após a assimilação bem-sucedida de um lote no repositório de perfis, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem. Usando a API de perfil, é possível visualizar o trabalho de amostra bem-sucedido mais recente, bem como listar a distribuição do perfil por conjunto de dados e por namespace de identidade.
 
-A contagem de perfis e as métricas de namespace também estão disponíveis na seção [!UICONTROL Perfis] da interface do usuário do Experience Platform. Para obter informações sobre como acessar os dados do Perfil usando a interface do usuário, consulte o [[!DNL Profile] guia da interface](../ui/user-guide.md).
+A contagem de perfis e as métricas de namespace também estão disponíveis na seção [!UICONTROL Perfis] da interface do Experience Platform. Para obter informações sobre como acessar os dados do Perfil usando a interface do usuário, consulte o [[!DNL Profile] guia da interface](../ui/user-guide.md).
 
 ## Exibir status da última amostra {#view-last-sample-status}
 
-Você pode executar uma solicitação GET para o ponto de extremidade `/previewsamplestatus` a fim de exibir os detalhes do último trabalho de amostra bem-sucedido executado para sua organização. Isso inclui o número total de perfis na amostra, bem como a métrica de contagem de perfis ou o número total de perfis que sua organização tem no Experience Platform.
+Você pode executar uma solicitação GET para o ponto de extremidade `/previewsamplestatus` a fim de exibir os detalhes do último trabalho de amostra bem-sucedido que foi executado para sua organização. Isso inclui o número total de perfis na amostra, bem como a métrica de contagem de perfis ou o número total de perfis que sua organização tem na Experience Platform.
 
 A contagem de perfis é gerada após a mesclagem de fragmentos de perfis para formar um único perfil para cada cliente individual. Em outras palavras, quando os fragmentos de perfil são mesclados, eles retornam uma contagem de &quot;1&quot; perfil, pois todos estão relacionados ao mesmo indivíduo.
 
-A contagem de perfis também inclui perfis com atributos (dados de registro), bem como perfis que contêm apenas dados de série temporal (evento), como perfis do Adobe Analytics. O trabalho de amostra é atualizado regularmente à medida que os dados do perfil são assimilados para fornecer um número total atualizado de perfis na Platform.
+A contagem de perfis também inclui perfis com atributos (dados de registro), bem como perfis que contêm apenas dados de série temporal (evento), como perfis do Adobe Analytics. O trabalho de amostra é atualizado regularmente à medida que os dados do perfil são assimilados, a fim de fornecer um número total atualizado de perfis no Experience Platform.
 
 **Formato da API**
 
@@ -207,7 +207,7 @@ A resposta inclui uma matriz `data`, contendo uma lista de objetos de conjunto d
 
 ## Listar distribuição de perfil por namespace de identidade
 
-Você pode executar uma solicitação GET para o ponto de extremidade `/previewsamplestatus/report/namespace` para exibir o detalhamento por namespace de identidade em todos os perfis mesclados em seu repositório de perfis. Isso inclui as identidades padrão fornecidas pelo Adobe, bem como as identidades personalizadas definidas pela sua organização.
+Você pode executar uma solicitação GET para o ponto de extremidade `/previewsamplestatus/report/namespace` a fim de exibir o detalhamento por namespace de identidade em todos os perfis mesclados em seu repositório de perfis. Isso inclui as identidades padrão fornecidas pelo Adobe, bem como as identidades personalizadas definidas pela sua organização.
 
 Os namespaces de identidade são um componente importante do Serviço de identidade da Adobe Experience Platform que serve como indicadores do contexto ao qual os dados do cliente se relacionam. Para saber mais, comece lendo a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md).
 
@@ -445,7 +445,7 @@ Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de 
 | Propriedade | Descrição |
 |---|---|
 | `data` | O objeto `data` contém listas separadas por vírgulas com combinações exclusivas de códigos de namespace de identidade e suas respectivas contagens de perfil. |
-| Códigos de namespace | O `code` é um formulário curto para cada nome de namespace de identidade. Um mapeamento de cada `code` para seu `name` pode ser encontrado usando a [API do Serviço de Identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md). O `code` também é chamado de [!UICONTROL Símbolo de identidade] na interface do usuário do Experience Platform. Para saber mais, visite a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
+| Códigos de namespace | O `code` é um formulário curto para cada nome de namespace de identidade. Um mapeamento de cada `code` para seu `name` pode ser encontrado usando a [API do Serviço de Identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md). O `code` também é chamado de [!UICONTROL Símbolo de identidade] na interface do Experience Platform. Para saber mais, visite a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` foi fornecido durante a solicitação, o relatório retornado será para a data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
 
 ### Interpretação do relatório de sobreposição de namespace de identidade
@@ -559,7 +559,7 @@ Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de 
 
 ### Interpretação do relatório de perfis não compilados
 
-Os resultados do relatório podem fornecer insights sobre quantos perfis não compilados e inativos sua organização tem em seu armazenamento de Perfil.
+Os resultados do relatório podem fornecer à insight quantos perfis não compilados e inativos sua organização tem em seu armazenamento de Perfil.
 
 Considere o seguinte trecho do objeto `data`:
 

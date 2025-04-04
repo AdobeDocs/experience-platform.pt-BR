@@ -3,31 +3,31 @@ keywords: Experience Platform;página inicial;tópicos populares;sistema local;u
 solution: Experience Platform
 title: Criar um Conector Source para upload de arquivo local na interface
 type: Tutorial
-description: Saiba como criar uma conexão de origem para seu sistema local para trazer arquivos locais para a Platform
+description: Saiba como criar uma conexão de origem para seu sistema local para trazer arquivos locais para o Experience Platform
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '777'
 ht-degree: 0%
 
 ---
 
 # Criar um conector de origem de upload de arquivo local na interface
 
-Este tutorial fornece etapas para criar um conector de origem de upload de arquivo local para assimilar arquivos locais na Platform usando a interface do usuário.
+Este tutorial fornece etapas para a criação de um conector de origem de upload de arquivo local para assimilar arquivos locais no Experience Platform usando a interface do usuário.
 
 ## Introdução
 
-Este tutorial requer uma compreensão funcional dos seguintes componentes da Platform:
+Este tutorial requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual a Platform organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-## Fazer upload de arquivos locais para a Platform
+## Fazer upload de arquivos locais para o Experience Platform
 
-Na interface da Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes para as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes para as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
@@ -91,4 +91,4 @@ Depois que o arquivo CSV for mapeado e criado, você poderá monitorar os dados 
 
 ## Próximas etapas
 
-Ao seguir este tutorial, você mapeou com sucesso um arquivo CSV simples para um esquema XDM e o assimilou na Platform. Esses dados agora podem ser usados por serviços [!DNL Platform] downstream, como [!DNL Real-Time Customer Profile]. Consulte a visão geral de [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) para obter mais informações.
+Ao seguir este tutorial, você mapeou com sucesso um arquivo CSV simples para um esquema XDM e o assimilou na Experience Platform. Esses dados agora podem ser usados por serviços [!DNL Experience Platform] downstream, como [!DNL Real-Time Customer Profile]. Consulte a visão geral de [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) para obter mais informações.

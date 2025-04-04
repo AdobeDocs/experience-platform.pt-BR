@@ -3,9 +3,9 @@ keywords: Experience Platform;serviço de consulta;serviço de consulta;estrutur
 title: Nivelar Estruturas de Dados Aninhadas para Uso com Ferramentas de BI
 description: Este documento explica como nivelar esquemas XDM para todas as tabelas e exibições durante uma sessão ao usar ferramentas de BI de terceiros com o Serviço de consulta.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ O uso da configuração `FLATTEN` requer uma compreensão funcional dos seguinte
 
    * [Criar um esquema ad hoc](../../xdm/tutorials/ad-hoc.md): um esquema XDM com campos com namespace para uso somente por um único conjunto de dados é chamado de esquema ad hoc. Esquemas ad hoc são usados em vários workflows de assimilação de dados para o Experience Platform e para criar determinados tipos de conexões de origem.
 
-* [Sandboxes](../../sandboxes/home.md): o Experience Platform fornece sandboxes virtuais que particionam uma única instância da Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Sandboxes](../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 * [Estruturas de dados aninhadas](./nested-data-structures.md): este documento fornece exemplos de como criar, processar ou transformar conjuntos de dados com tipos de dados complexos, incluindo estruturas de dados aninhadas.
 

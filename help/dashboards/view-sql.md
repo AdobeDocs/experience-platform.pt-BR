@@ -2,16 +2,16 @@
 title: Exibir Insight SQL
 description: Visualize o SQL por trás de seu perfil, público-alvo, destino e insights personalizados e execute a consulta sob demanda por meio do Editor de consultas.
 exl-id: fd728926-c113-4593-92b1-916a02d09d41
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
 
 # Exibir insight SQL
 
-Use o recurso [!UICONTROL Exibir SQL] para exibir o SQL por trás de seu Perfil, Público-alvo, Destino e insights personalizados e executar a consulta sob demanda por meio do Editor de Consultas. Inspire-se no SQL de mais de 40 insights existentes para criar novas consultas que obtêm insights exclusivos dos dados da plataforma com base nas necessidades da empresa.
+Use o recurso [!UICONTROL Exibir SQL] para exibir o SQL por trás de seu Perfil, Público-alvo, Destino e insights personalizados e executar a consulta sob demanda por meio do Editor de Consultas. Inspire-se no SQL de mais de 40 insights existentes para criar novas consultas que obtêm insights exclusivos de dados do Experience Platform com base nas necessidades da empresa.
 
 ## Navegue até a visão geral do painel {#navigate-to-overview}
 
@@ -39,24 +39,24 @@ Selecione **[!UICONTROL Exibir SQL]** para abrir uma caixa de diálogo que cont�
 
 ## Caixa de diálogo SQL {#sql-dialog}
 
-Uma caixa de diálogo é exibida contendo o título do insight e do SQL que o gera.
+Uma caixa de diálogo é exibida contendo o título da insight e o SQL que a gera.
 
 >[!TIP]
 >
 >Você pode copiar toda a instrução SQL para a área de transferência selecionando o ícone copiar (![O ícone copiar.](/help/images/icons/copy.png)) na parte superior direita da caixa de diálogo.
 
-![Uma caixa de diálogo de insight com a instrução SQL realçada.](./images/view-sql/sql-dialog.png)
+![Uma caixa de diálogo do insight com a instrução SQL realçada.](./images/view-sql/sql-dialog.png)
 
 Selecione **[!UICONTROL Executar SQL]** para abrir o Editor de Consultas com a consulta pré-preenchida.
 
-![Uma caixa de diálogo de insight com [!UICONTROL Executar SQL] realçada.](./images/view-sql/run-sql.png)
+![Uma caixa de diálogo do insight com [!UICONTROL Executar SQL] realçada.](./images/view-sql/run-sql.png)
 
 ## Editar SQL existente {#edit-sql}
 
 O Editor de consultas é exibido. Agora você pode editar a instrução e consultar os dados da plataforma de uma maneira que melhor atenda às suas necessidades de relatórios. Salve o novo modelo de consulta com um nome apropriado.
 
-![O Editor de Consultas com o SQL insight escolhido foi preenchido previamente.](./images/view-sql/edit-sql.png)
+![O Editor de Consultas com o insight SQL escolhido foi preenchido previamente.](./images/view-sql/edit-sql.png)
 
 ## Próximas etapas
 
-Depois de ler este documento, agora você entende como acessar o SQL para qualquer insight nos painéis padrão ou em um painel definido pelo usuário. Se ainda não tiver feito isso, é recomendável ler o [documento do Modelo de Dados do Real-time Customer Data Platform Insights](./data-models/cdp-insights-data-model-b2c.md). Esse documento contém insights sobre como personalizar modelos SQL para relatórios Real-Time CDP personalizados para suas necessidades de marketing e KPI.
+Depois de ler este documento, você entende como acessar o SQL para qualquer insight nos painéis padrão ou em um painel definido pelo usuário. Se ainda não tiver feito isso, é recomendável ler o [documento do Modelo de Dados do Real-Time Customer Data Platform Insights](./data-models/cdp-insights-data-model-b2c.md). Esse documento contém insights sobre como personalizar modelos SQL para relatórios Real-Time CDP personalizados para suas necessidades de marketing e KPI.

@@ -5,7 +5,7 @@ title: Criar uma conexão PostgreSQL Source na interface
 type: Tutorial
 description: Saiba como criar uma conexão de origem PostgreSQL usando a interface do usuário do Adobe Experience Platform.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 # Criar uma conexão de origem [!DNL PostgreSQL] na interface
 
-Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL PostgreSQL] usando a interface do usuário [!DNL Platform].
+Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL PostgreSQL] usando a interface do usuário [!DNL Experience Platform].
 
 ## Introdução
 
@@ -29,7 +29,7 @@ Se você já tiver uma conexão [!DNL PostgreSQL] válida, ignore o restante des
 
 ### Coletar credenciais necessárias
 
-Para acessar sua conta do [!DNL PostgreSQL] em [!DNL Platform], você deve fornecer o seguinte valor:
+Para acessar sua conta do [!DNL PostgreSQL] em [!DNL Experience Platform], você deve fornecer o seguinte valor:
 
 | Credencial | Descrição |
 | ---------- | ----------- |
@@ -50,7 +50,7 @@ Este é um exemplo de uma cadeia de conexão [!DNL PostgreSQL] anexada com cript
 
 ## Conectar sua conta do [!DNL PostgreSQL]
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL PostgreSQL] ao [!DNL Platform].
+Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL PostgreSQL] ao [!DNL Experience Platform].
 
 Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
 
@@ -76,4 +76,4 @@ Para conectar uma conta existente, selecione a conta [!DNL PostgreSQL] com a qua
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL PostgreSQL]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Platform]](../../dataflow/databases.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL PostgreSQL]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Experience Platform]](../../dataflow/databases.md).

@@ -2,10 +2,10 @@
 title: Visão geral da extensão de rastreamento de vídeo do YouTube
 description: Saiba mais sobre a extensão de tag de rastreamento de vídeo do YouTube na Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 81%
+source-wordcount: '897'
+ht-degree: 78%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 81%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 **Pré-requisitos**
 
@@ -23,7 +23,7 @@ Cada propriedade de tag da Adobe Experience Platform exige que as seguintes exte
 * Serviço do Experience Cloud Visitor ID
 * Extensão principal
 
-Use o trecho de código [&quot;Incorpore um player usando uma tag \&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) dos documentos de desenvolvedor do Google no HTML de cada página da Web em que um player de vídeo deve ser renderizado.
+Use o trecho de código [&quot;Incorpore um player usando uma tag \&lt;iframe\>&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) dos documentos de desenvolvedor do Google na HTML de cada página da Web em que um player de vídeo deve ser renderizado.
 
 Esta extensão, versão 2.0.1, aceita a incorporação de um ou mais vídeos do YouTube em uma única página da Web inserindo um atributo `id` com um valor único na tag de script iframe e anexando `enablejsapi=1` e `rel=0` ao final do valor de atributo `src`, se ainda não estiver incluído. Por exemplo:
 
@@ -99,7 +99,7 @@ Os objetos de extensão de vídeo a seguir devem ser incluídos.
 
 >[!TIP]
 > 
->Para implementações em que não é possível usar várias eVars ou props para cada elemento de vídeo, os valores do elemento de dados podem ser concatenados na Platform, analisados em relatórios de classificação usando a ferramenta Construtor de regras de classificação, conforme explicado em [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=pt-BR](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=pt-BR), e aplicados como um segmento no Analysis Workspace.
+>Para implementações em que não é possível usar várias eVars ou props para cada elemento de vídeo, os valores do elemento de dados podem ser concatenados no Experience Platform, analisados em relatórios de classificação usando a ferramenta Construtor de regras de classificação, conforme explicado em [https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=pt-BR), e aplicados como um segmento no Analysis Workspace.
 
 Para concatenar valores de informações de vídeo, crie um novo elemento de dados chamado &quot;Metadados de vídeo&quot; e programe-o para obter todos os elementos de dados de vídeo (listados acima) e reuni-los. Por exemplo:
 
@@ -115,4 +115,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Para obter mais informações sobre como criar e aproveitar elementos de dados com eficiência na Platform, leia a documentação dos [elementos de dados](../../../ui/managing-resources/data-elements.md).
+Para obter mais informações sobre como criar e aproveitar elementos de dados com eficiência no Experience Platform, leia a documentação dos [elementos de dados](../../../ui/managing-resources/data-elements.md).

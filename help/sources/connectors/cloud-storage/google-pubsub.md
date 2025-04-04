@@ -3,9 +3,9 @@ title: Visão geral do Google PubSub Source
 description: Saiba como conectar o Google PubSub ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 >
 >A origem [!DNL Google PubSub] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
 
-O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como [!DNL AWS], [!DNL Google Cloud Platform] e [!DNL Azure], permitindo que você traga dados desses sistemas para a Plataforma para uso em serviços e destinos downstream.
+O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem como [!DNL AWS], [!DNL Google Cloud Platform] e [!DNL Azure], permitindo que você traga dados desses sistemas para o Experience Platform para uso em serviços e destinos downstream.
 
-As fontes de armazenamento na nuvem podem trazer seus dados para a Platform sem a necessidade de baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de origens. A Platform permite trazer dados de [!DNL Google PubSub] em tempo real.
+As fontes de armazenamento na nuvem podem trazer seus dados para a Experience Platform sem precisar baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de origens. O Experience Platform permite trazer dados de [!DNL Google PubSub] em tempo real.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -59,7 +59,7 @@ Para conceder permissões no nível de assinatura e tópico, navegue até a pág
 
 ## Configurações para o ideal [!DNL Google PubSub usage] {#optimal-configurations}
 
-Esta seção descreve as configurações recomendadas para otimizar o uso da fonte [!DNL Google PubSub] no Experience Platform.
+Esta seção descreve as configurações recomendadas para otimizar o uso da origem [!DNL Google PubSub] no Experience Platform.
 
 ### Propriedades da assinatura {#subscription-properties}
 
@@ -83,7 +83,7 @@ Você deve **definir a duração de retenção da mensagem da sua assinatura par
 
 ## Conectar [!DNL Google PubSub] ao Experience Platform
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Google PubSub] à Plataforma usando APIs ou a interface do usuário:
+A documentação abaixo fornece informações sobre como conectar o [!DNL Google PubSub] ao Experience Platform usando APIs ou a interface do usuário:
 
 ### Uso de APIs
 

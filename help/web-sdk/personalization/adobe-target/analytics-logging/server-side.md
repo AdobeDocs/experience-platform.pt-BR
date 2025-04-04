@@ -1,20 +1,20 @@
 ---
-title: Logon do lado do servidor para dados do A4T no SDK da Web da plataforma
-description: Saiba como ativar o registro do lado do servidor para o Adobe Analytics for Target (A4T) usando o SDK da Web do Experience Platform.
-seo-title: Server-side logging for A4T data in Platform Web SDK
+title: Logon do lado do servidor para dados do A4T no Experience Platform Web SDK
+description: Saiba como ativar o registro do lado do servidor para o Adobe Analytics for Target (A4T) usando o Experience Platform Web SDK.
+seo-title: Server-side logging for A4T data in Experience Platform Web SDK
 seo-description: Learn how to enable server-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: a4t;destino;web;sdk;plataforma;registro;
 exl-id: 26c25f58-e43c-4147-8595-69ea85af561f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '166'
 ht-degree: 1%
 
 ---
 
-# Logon do lado do servidor para dados do A4T no SDK da Web da plataforma
+# Logon do lado do servidor para dados do A4T no Experience Platform Web SDK
 
-O SDK da Web da Adobe Experience Platform permite implementar a funcionalidade Adobe Analytics for Target (A4T) no Platform Edge Network. Quando o registro no lado do servidor estiver ativado, todas as ocorrências do Analytics enviadas pelo Edge Network são aumentadas com detalhes do Target no lado do servidor, sem precisar passar pelo processo de compilação de ocorrências.
+O Adobe Experience Platform Web SDK permite implementar a funcionalidade Adobe Analytics for Target (A4T) no Experience Platform Edge Network. Quando o registro no lado do servidor estiver ativado, todas as ocorrências do Analytics enviadas por meio do Edge Network são aumentadas com detalhes do Target no lado do servidor, sem precisar passar pelo processo de compilação de ocorrências.
 
 O registro do lado do servidor para o Analytics é ativado quando o Analytics é ativado na configuração da sequência de dados:
 
@@ -26,4 +26,4 @@ O diagrama a seguir mostra como os dados fluem pelo sistema quando o log do Anal
 
 ## Próximas etapas
 
-Este guia abordou o registro no lado do servidor para dados do A4T no SDK da Web. Consulte o manual no [registro no lado do cliente](./client-side.md) para obter mais informações sobre como lidar com dados do A4T no lado do cliente.
+Este guia abordou o registro no lado do servidor para dados do A4T no Web SDK. Consulte o manual no [registro no lado do cliente](./client-side.md) para obter mais informações sobre como lidar com dados do A4T no lado do cliente.

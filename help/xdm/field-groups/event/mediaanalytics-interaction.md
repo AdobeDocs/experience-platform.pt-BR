@@ -2,9 +2,9 @@
 title: Grupo de campos Esquema de detalhes de interação do MediaAnalytics
 description: Saiba mais sobre o grupo de campos do esquema Detalhes da interação do MediaAnalytics.
 exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
-source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '234'
 ht-degree: 2%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 2%
 
 >[!TIP]
 >
->Você pode ocultar campos que não são usados pela API do Media Edge. Ocultar esses campos facilita a leitura e a compreensão do schema, mas não é obrigatório. Esses campos se referem apenas àqueles no grupo de campos [!UICONTROL Detalhes de interação do MediaAnalytics]. Para melhorar a legibilidade na interface do usuário da Platform, siga as instruções na [documentação do Media Analytics sobre como ocultar campos não utilizados](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
+>Você pode ocultar campos que não são usados pela API do Media Edge. Ocultar esses campos facilita a leitura e a compreensão do schema, mas não é obrigatório. Esses campos se referem apenas àqueles no grupo de campos [!UICONTROL Detalhes de interação do MediaAnalytics]. Para melhorar a legibilidade na interface do usuário do Experience Platform, siga as instruções na [documentação do Media Analytics sobre como ocultar campos não utilizados](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform).
 
 <!-- 
 >[!NOTE]

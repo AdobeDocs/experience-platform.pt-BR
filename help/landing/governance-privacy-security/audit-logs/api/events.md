@@ -4,16 +4,16 @@ description: Saiba como recuperar eventos de auditoria no Experience Platform us
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 2%
 
 ---
 
 # Endpoint de eventos de auditoria
 
-Os logs de auditoria são usados para fornecer detalhes da atividade do usuário para vários serviços e recursos. Cada ação registrada em um log contém metadados que indicam o tipo de ação, a data e a hora, a ID do email do usuário que executou a ação e atributos adicionais relevantes ao tipo de ação. O ponto de extremidade `/audit/events` na API [!DNL Audit Query] permite recuperar programaticamente dados do evento para a atividade de sua organização no [!DNL Platform].
+Os logs de auditoria são usados para fornecer detalhes da atividade do usuário para vários serviços e recursos. Cada ação registrada em um log contém metadados que indicam o tipo de ação, a data e a hora, a ID do email do usuário que executou a ação e atributos adicionais relevantes ao tipo de ação. O ponto de extremidade `/audit/events` na API [!DNL Audit Query] permite recuperar programaticamente dados do evento para a atividade de sua organização no [!DNL Experience Platform].
 
 ## Introdução
 
@@ -152,9 +152,9 @@ Uma resposta bem-sucedida retorna os pontos de dados resultantes para as métric
 | `imsOrgId` | A ID da organização na qual o evento ocorreu. |
 | `permissionResource` | O produto ou recurso que forneceu a permissão para executar a ação. Um recurso pode ser qualquer um dos seguintes: <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | O tipo de permissão envolvido na ação. |
-| `assetType` | O tipo de recurso da Platform no qual a ação foi executada. |
-| `assetId` | Um identificador exclusivo do recurso da Platform no qual a ação foi executada. |
-| `assetName` | O nome do recurso da plataforma no qual a ação foi executada. |
+| `assetType` | O tipo de recurso do Experience Platform no qual a ação foi executada. |
+| `assetId` | Um identificador exclusivo do recurso do Experience Platform no qual a ação foi executada. |
+| `assetName` | O nome do recurso Experience Platform no qual a ação foi executada. |
 | `action` | O tipo de ação que foi gravado para o evento. Uma ação pode ser qualquer um dos seguintes: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | O status da ação. Um status pode ser qualquer um dos seguintes: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 

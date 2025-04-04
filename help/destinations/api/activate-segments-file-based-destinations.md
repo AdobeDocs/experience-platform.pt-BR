@@ -4,9 +4,9 @@ title: Ative públicos para destinos baseados em arquivo usando a API do Serviç
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4760'
+source-wordcount: '4763'
 ht-degree: 3%
 
 ---
@@ -33,7 +33,7 @@ Este artigo explica o fluxo de trabalho necessário para usar a [API de Serviço
 
 >[!TIP]
 >
->Você também pode usar a interface de usuário do Experience Platform para exportar perfis para destinos de armazenamento na nuvem. Leia o [tutorial sobre ativação de destinos baseados em arquivo](/help/destinations/ui/activate-batch-profile-destinations.md) para obter mais informações.
+>Você também pode usar a interface do usuário do Experience Platform para exportar perfis para destinos de armazenamento na nuvem. Leia o [tutorial sobre ativação de destinos baseados em arquivo](/help/destinations/ui/activate-batch-profile-destinations.md) para obter mais informações.
 
 <!--
 
@@ -51,9 +51,9 @@ Este manual necessita de uma compreensão funcional dos seguintes componentes da
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] permite que você compile públicos e gere públicos no [!DNL Adobe Experience Platform] a partir dos dados do [!DNL Real-Time Customer Profile].
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-As seções a seguir fornecem informações adicionais que você precisa saber para ativar dados para destinos baseados em arquivo na Platform.
+As seções a seguir fornecem informações adicionais que você precisa saber para ativar dados para destinos baseados em arquivo no Experience Platform.
 
 ### Permissões necessárias {#permissions}
 
@@ -67,13 +67,13 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Colete valores para cabeçalhos obrigatórios e opcionais {#gather-values-headers}
 
-Para fazer chamadas para APIs [!DNL Platform], primeiro complete o [tutorial de autenticação de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação do Experience Platform](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id `{ORG_ID}`
 
-Os recursos em [!DNL Experience Platform] podem ser isolados em sandboxes virtuais específicas. Em solicitações para [!DNL Platform] APIs, é possível especificar o nome e a ID da sandbox em que a operação ocorrerá. Esses parâmetros são opcionais.
+Os recursos em [!DNL Experience Platform] podem ser isolados em sandboxes virtuais específicas. Em solicitações para [!DNL Experience Platform] APIs, é possível especificar o nome e a ID da sandbox em que a operação ocorrerá. Esses parâmetros são opcionais.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -326,7 +326,7 @@ Siga as etapas abaixo para configurar um fluxo de dados de exportação de públ
 
 ![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step2.png)
 
-Depois de decidir para qual destino você está exportando públicos, é necessário criar uma conexão de origem. A [conexão de origem](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) representa a conexão com o [repositório de Perfis de Experience Platform](/help/profile/home.md#profile-data-store) interno.
+Depois de decidir para qual destino você está exportando públicos, é necessário criar uma conexão de origem. A [conexão de origem](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) representa a conexão com o [repositório de Perfis da Experience Platform](/help/profile/home.md#profile-data-store) interno.
 
 >[!BEGINSHADEBOX]
 
@@ -3742,7 +3742,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Resposta com um exemplo de esquema**
 
-Inspect a resposta que você obtém ao executar a chamada acima. Você precisa detalhar a resposta para localizar o objeto `targetSpec.attributes.partnerSchema.jsonSchema`
+Inspecione a resposta obtida ao executar a chamada acima. Você precisa detalhar a resposta para localizar o objeto `targetSpec.attributes.partnerSchema.jsonSchema`
 
 +++ Resposta para obter esquema do parceiro para o esquema de saída
 
@@ -4817,11 +4817,11 @@ Você pode encontrar informações sobre os [vários parâmetros retornados pela
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform para obter mais informações sobre como interpretar respostas de erro.
+Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](/help/landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](/help/landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform para obter mais informações sobre como interpretar respostas de erro.
 
 ## Próximas etapas {#next-steps}
 
-Seguindo este tutorial, você conectou com sucesso o Platform a um dos seus destinos de armazenamento em nuvem preferidos e configurou um fluxo de dados para o respectivo destino para exportar públicos. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
+Seguindo este tutorial, você conectou com êxito o Experience Platform a um dos destinos de armazenamento na nuvem de sua preferência e configurou um fluxo de dados para o respectivo destino para exportar públicos. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
 
 * [Visão geral dos destinos](../home.md)
 * [Visão geral do Catálogo de destinos](../catalog/overview.md)

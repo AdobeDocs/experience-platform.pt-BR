@@ -1,16 +1,16 @@
 ---
 keywords: extensão livefyre;livefyre extension
-title: Extensão Adobe Livefyre
-description: A extensão Adobe Livefyre é um destino social no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
+title: Extensão do Adobe Livefyre
+description: A extensão do Adobe Livefyre é um destino social no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '443'
 ht-degree: 3%
 
 ---
 
-# Extensão Adobe Livefyre {#adobe-livefyre-extension}
+# Extensão do Adobe Livefyre {#adobe-livefyre-extension}
 
 ## Visão geral {#overview}
 
@@ -18,13 +18,13 @@ O Adobe Livefyre permite descobrir, organizar e publicar um fluxo constante de c
 
 O Adobe Livefyre é uma extensão social do Adobe Experience Platform. Para obter mais informações sobre o Adobe Livefyre, leia o [Guia de implementação do Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
-Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
+Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
 ![Extensão do Adobe Livefyre](../../assets/catalog/social/adobe-livefyre/catalog.png)
 
 ## Pré-requisitos {#prerequisites}
 
-Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Platform.
+Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
 Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite a concessão da permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
@@ -32,7 +32,7 @@ Para usar essa extensão, você precisa acessar as tags na Adobe Experience Plat
 
 Para instalar a extensão Adobe Livefyre:
 
-Na [Interface da plataforma](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
+Na [interface do Experience Platform](https://platform.adobe.com/), vá para **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**.
 
 Selecione a extensão no catálogo ou use a barra de pesquisa.
 

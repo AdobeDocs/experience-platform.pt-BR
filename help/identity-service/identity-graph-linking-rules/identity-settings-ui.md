@@ -2,9 +2,9 @@
 title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
+source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '644'
 ht-degree: 3%
 
 ---
@@ -71,7 +71,13 @@ A partir daqui, você deve confirmar o seguinte antes de prosseguir para a etapa
 
 ![Uma janela de confirmação com o botão &quot;confirmar&quot; selecionado.](../images/rules/confirmation.png)
 
-A etapa final é outra mensagem de confirmação indicando que os gráficos existentes só serão afetados pelo algoritmo de gráfico **se os gráficos forem atualizados depois de salvar suas configurações**, e que a identidade principal dos fragmentos de evento no Perfil de cliente em tempo real não será atualizada mesmo após as alterações de prioridade do namespace. Além disso, você receberá uma notificação de que levará até **seis horas** para que suas configurações novas ou atualizadas entrem em vigor. Para confirmar, digite o nome da sua sandbox e selecione **[!UICONTROL Confirmar]**.
+### Confirme suas configurações {#confirm-your-settings}
+
+>[!IMPORTANT]
+>
+>* A etapa final é outra mensagem de confirmação indicando que os gráficos existentes só serão afetados pelo algoritmo de gráfico **se os gráficos forem atualizados depois de salvar suas configurações**, e que a identidade principal dos fragmentos de evento no Perfil de cliente em tempo real não será atualizada mesmo após as alterações de prioridade do namespace.
+>
+>* Além disso, você receberá uma notificação de que levará até **seis horas** para que suas configurações novas ou atualizadas entrem em vigor. Para confirmar, digite o nome da sua sandbox e selecione **[!UICONTROL Confirmar]**.
 
 ![A janela de confirmação que exibe um aviso de atraso de cerca de seis horas antes que as configurações sejam processadas.](../images/rules/complete.png)
 

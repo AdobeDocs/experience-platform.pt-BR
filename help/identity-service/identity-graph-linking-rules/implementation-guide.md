@@ -2,9 +2,9 @@
 title: Guia de implementação para regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
+source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1835'
 ht-degree: 2%
 
 ---
@@ -15,10 +15,13 @@ ht-degree: 2%
 >
 >As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
 
+>[!IMPORTANT]
+>
+>Este documento supõe que você esteja iniciando a implementação em uma nova sandbox sem dados.
+
 Leia este documento para obter um guia passo a passo que você pode seguir ao implementar seus dados com o Adobe Experience Platform Identity Service.
 
 Estrutura passo a passo:
-
 
 1. [Pré-requisitos completos para a implementação](#prerequisites-for-implementation)
 2. [Criar os namespaces de identidade necessários](#namespace)

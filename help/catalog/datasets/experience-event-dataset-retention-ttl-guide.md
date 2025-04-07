@@ -2,9 +2,9 @@
 title: Gerenciar a retenção do conjunto de dados do evento de experiência no Data Lake usando TTL
 description: Saiba como avaliar, definir e gerenciar a Retenção de conjunto de dados de evento de experiência no data lake usando configurações de Tempo de vida (TTL) com APIs do Adobe Experience Platform. Este guia explica como a expiração em nível de linha de TTL suporta políticas de retenção de dados, otimiza a eficiência do armazenamento e garante um gerenciamento eficaz do ciclo de vida dos dados. Ela também fornece casos de uso e práticas recomendadas para ajudar você a aplicar o TTL de maneira eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 767e9536862799e31d1ab5c77588d485f80c59e9
 workflow-type: tm+mt
-source-wordcount: '2341'
+source-wordcount: '2407'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,13 @@ Antes de aplicar uma política de retenção, avalie se o conjunto de dados é u
 
 Se os registros históricos forem essenciais para análises de longo prazo ou operações de negócios, o TTL pode não ser a abordagem correta. A análise desses fatores garante que o TTL se alinhe às suas necessidades de retenção de dados sem afetar negativamente a disponibilidade dos dados.
 
-## Planejar suas consultas
+## Planejar suas consultas {#plan-queries}
 
-Antes de aplicar o TTL, use consultas para analisar o tamanho e a relevância do conjunto de dados. A execução de consultas direcionadas ajuda a determinar quantos dados seriam retidos ou removidos em diferentes configurações de TTL.
+Antes de aplicar o TTL, é importante avaliar o tamanho do conjunto de dados e a relevância dos dados e avaliar quantos dados históricos devem ser retidos. O visual a seguir descreve o processo completo de implementação do TTL, desde as consultas de planejamento até o monitoramento da eficácia da retenção.
 
-Por exemplo, a consulta SQL a seguir conta o número de registros criados nos últimos 30 dias:
+![Um fluxo de trabalho visual para implementar o TTL em conjuntos de dados de eventos de experiência. As etapas incluem: avaliar o tempo de vida dos dados e o impacto da remoção, validar configurações TTL com consultas, configurar o TTL por meio da API do Serviço de Catálogo, monitorar continuamente o impacto do TTL e fazer ajustes.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
+
+A execução de consultas direcionadas ajuda a determinar quantos dados seriam retidos ou removidos em diferentes configurações de TTL. Por exemplo, a consulta SQL a seguir conta o número de registros criados nos últimos 30 dias:
 
 ```sql
 SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);

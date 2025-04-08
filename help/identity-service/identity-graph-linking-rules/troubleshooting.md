@@ -2,9 +2,9 @@
 title: Guia de solução de problemas para regras de vinculação do gráfico de identidade
 description: Saiba como solucionar problemas comuns nas regras de vinculação do gráfico de identidade.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
 workflow-type: tm+mt
-source-wordcount: '3286'
+source-wordcount: '3338'
 ht-degree: 0%
 
 ---
@@ -175,6 +175,10 @@ Essa consulta pressupõe que:
 
 * Uma identidade é enviada a partir do identityMap e outra identidade é enviada a partir de um descritor de identidade. **OBSERVAÇÃO**: em esquemas do Experience Data Model (XDM), o descritor de identidade é o campo marcado como uma identidade.
 * O CRMID é enviado por identityMap. Se a CRMID for enviada como um campo, remova `key='Email'` da cláusula WHERE.
+
+>[!NOTE]
+>
+>**Na implementação do SDK da Web e na duplicação da ECID**: se o campo da ECID estiver marcado como uma identidade (descritor de identidade) em vez do identityMap, uma segunda ECID será gerada no identityMap. Essa duplicação pode impedir que o Perfil do cliente em tempo real armazene eventos anônimos devido à presença de duas ECIDs em um único evento.
 
 ## Problemas relacionados ao comportamento do gráfico {#graph-behavior-related-issues}
 

@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
+source-git-commit: d80378d6ffc9598c21bc217c0577f611fe8671cc
 workflow-type: tm+mt
-source-wordcount: '4371'
+source-wordcount: '4413'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,9 @@ O Portal de público-alvo é um hub central, no Adobe Experience Platform, que p
 
 No Audience Portal, você pode realizar as seguintes tarefas:
 
-- [Exibir uma lista de públicos](#audience-list)
+>[!BEGINSHADEBOX]
+
+- [Exibir uma lista de públicos](#list)
    - [Usar ações rápidas nos seus públicos](#quick-actions)
    - [Personalize as propriedades exibidas na lista de públicos-alvo](#customize)
    - [Use filtros, pastas e tags para organizar seus públicos](#manage-audiences)
@@ -28,6 +30,8 @@ No Audience Portal, você pode realizar as seguintes tarefas:
    - [Use a Federated Audience Composition para criar um público-alvo usando dados de seu data warehouse existente](#fac)
    - [Usar o Data Distiller para criar um público-alvo](#data-distiller)
 - [Importar públicos gerados externamente](#import-audience)
+
+>[!ENDSHADEBOX]
 
 Para abrir o Portal de público-alvo, selecione a guia **[!UICONTROL Procurar]** na seção Segmentação.
 
@@ -64,7 +68,7 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 | [!UICONTROL Copiar] | Serviço de segmentação | Duplica o público selecionado. Mais informações sobre esta função podem ser encontradas nas [Perguntas frequentes sobre segmentação](../faq.md#copy). |
 | [!UICONTROL Aplicar rótulos de acesso] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). |
 | [!UICONTROL Publicar] | Upload personalizado, Serviço de segmentação | Publica o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a seção [estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
-| [!UICONTROL Desativar] | Upload personalizado, Serviço de segmentação | Desativa o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a seção [estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
+| [!UICONTROL Desativar] | Upload personalizado, Serviço de segmentação | Desativa o público selecionado. Observe que para desativar um público-alvo, ele **não pode** ser ativado em **qualquer** destino (incluindo destinos que não sejam da Experience Platform) ou fazer parte de **qualquer** outros públicos-alvo. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a seção [estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 | [!UICONTROL Excluir] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. Públicos-alvo que são usados em destinos downstream ou que são dependentes de outros públicos-alvo **não podem** ser excluídos. Para obter mais informações sobre exclusão de público, leia as [perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
 | [!UICONTROL Adicionar ao pacote] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Move o público-alvo entre sandboxes. Para obter mais informações sobre este recurso, leia o [guia de ferramentas da sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
@@ -199,7 +203,7 @@ A lista de filtros disponíveis é exibida.
 
 | Filtro | Descrição |
 | ------ | ----------- |
-| [!UICONTROL Origem] | Permite filtrar com base na origem do público-alvo. As opções disponíveis incluem Serviço de segmentação, Upload personalizado, Composição de público-alvo e Audience Manager. |
+| [!UICONTROL Origem] | Permite filtrar com base na origem do público-alvo. Os valores possíveis incluem [Serviço de segmentação](#segment-builder), [Carregamento personalizado](#import-audience), [Composição de público-alvo](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Público-alvo semelhante](../types/lookalike-audiences.md), [Composição de público federado](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller) e [AJO B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Tem alguma marca] | Permite filtrar por tags. Você pode selecionar entre **[!UICONTROL Tem qualquer marca]** e **[!UICONTROL Tem todas as marcas]**. Quando a opção **[!UICONTROL Tem qualquer marca]** estiver selecionada, os públicos-alvo filtrados incluirão **qualquer** das marcas adicionadas. Quando **[!UICONTROL Tem todas as marcas]** é selecionado, os públicos filtrados devem incluir **todas** das marcas adicionadas. |
 | [!UICONTROL Status do ciclo de vida] | Permite filtrar com base no status do ciclo de vida do público-alvo. As opções disponíveis são [!UICONTROL Excluído], [!UICONTROL Rascunho], [!UICONTROL Inativo] e [!UICONTROL Publicado]. |
 | [!UICONTROL Frequência de atualização] | Permite filtrar com base na frequência de atualização do público-alvo (método de avaliação). As opções disponíveis incluem [!UICONTROL Lote], [!UICONTROL Streaming] e [!UICONTROL Edge] |

@@ -6,7 +6,7 @@ exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
 source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '2345'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -329,7 +329,7 @@ Ao dividir o público, você pode dividir por porcentagem ou dividir por atribut
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="Divisão persistente"
->abstract="Você pode tornar a divisão de porcentagem persistente ativando essa opção e selecionando um namespace de identidade."
+>abstract="Para tornar a divisão de porcentagem persistente, habilite essa opção e selecione um namespace de identidade."
 
 Ao dividir por porcentagem, os públicos-alvo serão divididos aleatoriamente, com base no número de caminhos e porcentagens fornecidos.
 

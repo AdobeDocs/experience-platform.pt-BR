@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '4980'
+source-wordcount: '5024'
 ht-degree: 7%
 
 ---
@@ -26,6 +26,16 @@ ht-degree: 7%
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Campos"
 >abstract="Os três tipos de campo que compõem uma definição de segmento são atributos, eventos e públicos-alvo. Os atributos permitem usar atributos de perfil que pertencem à classe de perfil individual XDM, os eventos permitem criar um público com base em ações ou eventos que ocorrem usando elementos de dados XDM ExperienceEvent e os públicos-alvo permitem usar públicos importados de fontes externas."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showfullxdmschema"
+>title="Mostrar esquema XDM completo"
+>abstract="Por padrão, somente os campos que contêm dados são exibidos. Ative essa opção para mostrar todos os campos no esquema XDM."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showdeprecatedfields"
+>title="Mostrar campos obsoletos"
+>abstract="Por padrão, campos XDM obsoletos não são exibidos. Habilite essa opção para mostrar campos XDM obsoletos."
 
 Os blocos fundamentais das definições de segmento são atributos e eventos. Além disso, os atributos e eventos contidos nos públicos-alvo existentes podem ser usados como componentes para novas definições.
 

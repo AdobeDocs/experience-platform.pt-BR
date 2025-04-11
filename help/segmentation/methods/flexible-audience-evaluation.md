@@ -3,9 +3,9 @@ title: Guia flexível de avaliação de público-alvo
 description: Saiba como usar a avaliação flexível de público para executar trabalhos de segmentação em lote sob demanda.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '1049'
+source-wordcount: '1063'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 5%
 >[!AVAILABILITY]
 >
 >A avaliação de público flexível está **somente** disponível em instâncias do Experience Platform em execução em [!DNL Microsoft Azure]. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../landing/multi-cloud.md).
+>
+>Além disso, a avaliação flexível de público-alvo está **somente** disponível para uso com o Real-Time CDP B2C Edition.
 
 A avaliação flexível do público-alvo permite executar um trabalho de segmentação em lote sob demanda. Com a avaliação flexível do público-alvo, você pode executar lançamentos de campanhas ad-hoc, comunicações just-in-time ou outras atividades sensíveis ao tempo.
 

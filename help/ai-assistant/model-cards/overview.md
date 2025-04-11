@@ -3,24 +3,31 @@ title: Cartões modelo para transparência do modelo de IA no Adobe Experience P
 description: Saiba mais sobre cartões de modelo no Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 21a95bd678cf83c72a08213b647ef778cfb49cfc
+exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
+source-git-commit: 1edecf0cb413b66d66973517421bc0062f475337
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
 # Modelos de cartões para a transparência do modelo de IA no Adobe Experience Platform
 
-Os cartões modelo são os formatos padrão pelos quais a transparência do modelo de IA é comunicada. Os cartões-modelo são públicos e têm como objetivo melhorar a compreensão dos clientes atuais e em potencial dos modelos de IA que o Adobe usa. As placas-modelo são geralmente estáticas. No entanto, há vários aspectos dos modelos de IA que podem mudar com o tempo, incluindo linhagem, viés e outros atributos de transparência.
+Um cartão de modelo de IA é o formato padrão pelo qual a transparência do modelo de IA é comunicada. Os cartões de modelo fornecem informações abrangentes sobre o modelo subjacente no qual uma determinada ferramenta de IA está incorporada. Os cartões de modelo incluem informações como a finalidade de uma ferramenta de IA, dados de treinamento, métricas de desempenho, limitações e considerações éticas. Você pode usar a transparência que os cartões de modelo fornecem para entender melhor os recursos e as limitações do modelo, bem como para promover melhor o uso responsável e justo da IA.
+
+Os cartões-modelo são públicos e têm como objetivo melhorar a compreensão dos clientes atuais e em potencial dos modelos de IA que o Adobe usa. As placas-modelo são geralmente estáticas. No entanto, há vários aspectos dos modelos de IA que podem mudar com o tempo, incluindo linhagem, viés e outros atributos de transparência.
 
 Leia este documento para saber mais sobre cartões de modelo no Adobe Experience Platform.
 
 ## Seções do cartão de modelo {#model-card-sections}
 
+Um cartão-modelo é composto por uma variedade de seções diferentes, cada uma focada em um aspecto específico do modelo de IA.
+
 Leia o seguinte para obter um guia sobre as diferentes seções de um cartão modelo, incluindo informações sobre as perguntas abordadas.
 
 ### Visão geral do modelo {#model-overview}
+
+A visão geral do modelo contém informações gerais sobre um modelo de IA. Use esta seção para fornecer informações como nome, finalidade e tipo do modelo de IA. Além disso, você pode usar esta seção para identificar os usuários desejados e detalhar como seu modelo se integra ao Experience Platform.
 
 +++Exibir perguntas e exemplos de respostas
 
@@ -38,6 +45,8 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 
 ### Uso previsto {#intended-use}
 
+A seção de uso pretendido contém informações sobre os principais casos de uso do modelo de IA. Você pode usar esta seção para expandir os problemas que seu modelo pretende resolver, os setores e/ou domínios para os quais seu modelo é relevante e os casos de uso incorreto que devem ser evitados ao usar seu modelo de IA.
+
 +++Exibir perguntas e exemplos de respostas
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
@@ -52,6 +61,8 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 +++
 
 ### Entradas e saídas do modelo {#model-inputs-and-outputs}
+
+A seção Entradas e saídas do modelo contém informações sobre os tipos de dados compatíveis que seu modelo assume como entrada e retorna como saída. Você pode usar esta seção para fornecer exemplos das entradas e saídas de dados relevantes para o modelo de IA.
 
 +++Exibir perguntas e exemplos de respostas
 
@@ -68,6 +79,8 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 
 ### Dados de treinamento {#training-data}
 
+A seção Dados de treinamento contém informações sobre os conjuntos de dados usados para treinar um determinado modelo de IA. Você pode usar esta seção para detalhar o tamanho e a fonte dos dados de treinamento, as distorções identificadas no conjunto de dados e como os dados foram pré-processados.
+
 +++Exibir perguntas e exemplos de respostas
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
@@ -82,6 +95,8 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 +++
 
 ### Arquitetura de modelos e treinamento {#model-architecture-and-training}
+
+A arquitetura do modelo e a seção de treinamento descrevem o blueprint do seu modelo de IA. Esta seção refere-se à estrutura e ao design do modelo de IA, incluindo detalhes sobre o tipo de algoritmo e os métodos de avaliação usados. Você também pode usar esta seção para fornecer informações sobre as estruturas de treinamento usadas, bem como os recursos de computação que foram usados no treinamento.
 
 +++Exibir perguntas e exemplos de respostas
 
@@ -99,6 +114,8 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 
 ### Desempenho e avaliação {#performance-and-evaluation}
 
+A seção Desempenho e avaliação contém informações sobre as métricas e os métodos usados para avaliar o desempenho do modelo em suas tarefas desejadas. Você pode usar esta seção para fornecer informações sobre as métricas de avaliação usadas, bem como as deficiências ou casos de falha identificados.
+
 +++Exibir perguntas e exemplos de respostas
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
@@ -114,19 +131,23 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 
 ### Equidade e viés {#fairness-and-bias}
 
+A seção Integridade e viés contém informações sobre o desempenho do modelo de IA em relação às métricas de integridade e viés. A equidade refere-se à capacidade do modelo de fornecer resultados equitativos em diferentes grupos demográficos e casos de uso, enquanto o viés se refere a erros sistemáticos que resultam em resultados injustos. Use esta seção para detalhar as verificações de integridade que foram executadas e discutir como o modelo reduz o viés.
+
 +++Exibir perguntas e exemplos de respostas
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
 | Que verificações de equidade foram realizadas? | Os processos de análise e mitigação de polarização executados. | O modelo foi submetido a testes de paridade demográfica e avaliações de equidade adversária para detectar disparidades de desempenho entre diferentes segmentos de usuários. |
 | O modelo afeta certos grupos de forma desproporcional? | Quaisquer disparidades no desempenho identificadas. | A análise revelou uma queda de desempenho de 5% para usuários com dados históricos de interação baixos. Para resolver isso, o modelo incorpora técnicas de reponderação durante o treinamento. |
-| Como o modelo atenua os benefícios? | As técnicas usadas para lidar com o viés. | O conjunto de dados é estratificado para garantir a representação proporcional de diferentes dados demográficos do cliente, e restrições de equidade são introduzidas durante o treinamento para evitar que o modelo favoreça qualquer grupo específico. Auditorias de viés regulares são realizadas usando análise de paridade demográfica, permitindo ajustes se forem detectadas disparidades de desempenho. |
+| Como o modelo reduz o viés? | As técnicas usadas para lidar com o viés. | O conjunto de dados é estratificado para garantir a representação proporcional de diferentes dados demográficos do cliente, e restrições de equidade são introduzidas durante o treinamento para evitar que o modelo favoreça qualquer grupo específico. Auditorias de viés regulares são realizadas usando análise de paridade demográfica, permitindo ajustes se forem detectadas disparidades de desempenho. |
 
 {style="table-layout:auto"}
 
 +++
 
 ### Explicabilidade e interpretabilidade {#explainability-and-interpretability}
+
+A seção Explicabilidade e interpretabilidade contém informações sobre a capacidade de um modelo de IA de fornecer explicações claras e compreensíveis e a facilidade com que um usuário humano pode entender como os recursos de entrada afetam previsões e respostas. Use esta seção para explicar como os usuários podem entender melhor por que seu modelo toma determinadas decisões e quais ferramentas ou técnicas estão disponíveis para interpretação.
 
 +++Exibir perguntas e exemplos de respostas
 
@@ -141,6 +162,12 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 
 ### Robustez e generalização {#robustness-and-generalization}
 
+A seção Robustez e generalização contém informações sobre o desempenho do modelo de IA em dados invisíveis. Além disso, você pode usar esta seção para detalhar como seu modelo mantém seu desempenho e precisão dadas entradas inesperadas ou desafiadoras.
+
+>[!TIP]
+>
+>Em IA, &quot;dados invisíveis&quot; se referem a dados diferentes dos dados em que um determinado modelo foi treinado.
+
 +++Exibir perguntas e exemplos de respostas
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
@@ -153,6 +180,8 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 +++
 
 ### Considerações de segurança e privacidade {#security-and-privacy-considerations}
+
+A seção considerações de segurança e privacidade contém informações sobre as medidas e práticas implementadas para proteger dados confidenciais e garantir o uso seguro de seu modelo. Você pode usar esta seção para responder perguntas sobre como seu modelo lida com dados confidenciais.
 
 +++Exibir perguntas e exemplos de respostas
 
@@ -167,6 +196,8 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 
 ### Monitoramento e manutenção {#monitoring-and-maintenance}
 
+A seção de monitoramento e manutenção contém informações sobre como o desempenho do modelo é monitorado ao longo do tempo e com que frequência o modelo é retreinado. Você pode usar esta seção para fornecer informações sobre como métricas como precisão, precisão, recuperação e latência são rastreadas.
+
 +++Exibir perguntas e exemplos de respostas
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
@@ -179,6 +210,8 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 +++
 
 ### Considerações éticas e IA responsável {#ethical-considerations-and-responsible-ai}
+
+A seção Considerações éticas e IA responsável contém informações sobre quaisquer preocupações éticas associadas ao Modelo de IA. Esta seção também contém como seu modelo se alinha aos princípios de IA responsável. Use esta seção para fornecer informações sobre os possíveis impactos éticos do uso do seu modelo, incluindo o reconhecimento de distorções, a garantia de equidade e a prevenção de danos a indivíduos ou grupos.
 
 +++Exibir perguntas e exemplos de respostas
 
@@ -193,6 +226,8 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 
 ### Limitações conhecidas {#known-limitations}
 
+A seção Limitações conhecidas contém informações sobre as limitações existentes identificadas para o modelo de IA. Use esta seção para sublinhar as condições nas quais seu modelo de IA pode ter um desempenho inadequado e destacar quaisquer limitações que os usuários devem conhecer.
+
 +++Exibir perguntas e exemplos de respostas
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
@@ -205,6 +240,8 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um cartão mo
 +++
 
 ### Melhorias futuras {#future-improvements}
+
+A seção de melhorias futuras contém informações sobre atualizações de recursos planejadas para seu modelo de IA. Use esta seção para detalhar seu roteiro de aprimoramento.
 
 +++Exibir perguntas e exemplos de respostas
 

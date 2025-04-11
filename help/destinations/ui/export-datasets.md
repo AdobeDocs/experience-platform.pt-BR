@@ -3,10 +3,10 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 5624dab337bcd27e28b4153459bb4e85fab22d6f
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '2594'
-ht-degree: 8%
+source-wordcount: '2703'
+ht-degree: 7%
 
 ---
 
@@ -14,15 +14,23 @@ ht-degree: 8%
 
 >[!AVAILABILITY]
 >
->* Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime ou Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Entre em contato com o representante da Adobe para obter mais informações.
+>Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime ou Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Entre em contato com seu representante da Adobe para obter mais informações.
 
-Este artigo explica o fluxo de trabalho necessário para exportar [conjuntos de dados](/help/catalog/datasets/overview.md) da Adobe Experience Platform para o local de armazenamento na nuvem preferido, como [!DNL Amazon S3], locais SFTP ou [!DNL Google Cloud Storage] usando a interface do usuário do Experience Platform.
+>[!IMPORTANT]
+>
+>**Item de ação**: a versão de [setembro de 2024 do Experience Platform](/help/release-notes/latest/latest.md#destinations) introduziu a opção para definir uma data `endTime` para fluxos de dados do conjunto de dados de exportação. A Adobe também introduziu uma data de término padrão em 1º de maio de 2025 para todos os fluxos de dados de exportação do conjunto de dados criados *antes da versão de setembro de 2024*.
+>
+>Para qualquer um desses fluxos de dados, é necessário atualizar manualmente a data final no fluxo de dados antes da data final, caso contrário, suas exportações serão interrompidas nessa data. Use a interface do usuário do Experience Platform para ver quais fluxos de dados serão definidos para serem interrompidos em 1º de maio de 2025.
+>
+>Consulte a [seção de agendamento](#scheduling) para obter informações sobre como editar a data final de um fluxo de dados de exportação do conjunto de dados.
 
-Você também pode usar as APIs de Experience Platform para exportar conjuntos de dados. Leia o [tutorial da API de conjuntos de dados de exportação](/help/destinations/api/export-datasets.md) para obter mais informações.
+Este artigo explica o fluxo de trabalho necessário para exportar [conjuntos de dados](/help/catalog/datasets/overview.md) da Adobe Experience Platform para o local de armazenamento na nuvem preferido, como [!DNL Amazon S3], locais SFTP ou [!DNL Google Cloud Storage], usando a interface do usuário do Experience Platform.
+
+Você também pode usar as APIs do Experience Platform para exportar conjuntos de dados. Leia o [tutorial da API de conjuntos de dados de exportação](/help/destinations/api/export-datasets.md) para obter mais informações.
 
 ## Conjuntos de dados disponíveis para exportação {#datasets-to-export}
 
-Os conjuntos de dados que você pode exportar variam com base no aplicativo Experience Platform (Real-Time CDP, Adobe Journey Optimizer), no nível (Prime ou Ultimate) e em qualquer complemento que você tenha adquirido (por exemplo: Data Distiller).
+Os conjuntos de dados que você pode exportar variam com base no aplicativo do Experience Platform (Real-Time CDP, Adobe Journey Optimizer), no nível (Prime ou Ultimate) e em qualquer complemento que você tenha adquirido (por exemplo: Data Distiller).
 
 Use a tabela abaixo para entender quais tipos de conjunto de dados você pode exportar, dependendo do aplicativo, da camada do produto e de qualquer complemento adquirido:
 
@@ -87,10 +95,10 @@ Atualmente, você pode exportar conjuntos de dados para os destinos de armazenam
 
 ## Quando ativar públicos ou exportar conjuntos de dados {#when-to-activate-audiences-or-activate-datasets}
 
-Alguns destinos baseados em arquivo no catálogo do Experience Platform são compatíveis com a ativação de público-alvo e a exportação de conjunto de dados.
+Alguns destinos baseados em arquivos no catálogo do Experience Platform são compatíveis com a ativação de público-alvo e a exportação de conjunto de dados.
 
 * Considere ativar públicos-alvo quando quiser que seus dados sejam estruturados em perfis agrupados por interesses ou qualificações de público-alvo.
-* Como alternativa, considere as exportações de conjunto de dados ao procurar exportar conjuntos de dados brutos, que não são agrupados ou estruturados por interesses ou qualificações de público-alvo. Você pode usar esses dados para relatórios, fluxos de trabalho de ciência de dados e muitos outros casos de uso. Por exemplo, como administrador, engenheiro de dados ou analista, você pode exportar dados do Experience Platform para sincronizar com o data warehouse, usar em ferramentas de análise de BI, ferramentas de aprendizado de máquina na nuvem externas ou armazenar em seu sistema para necessidades de armazenamento de longo prazo.
+* Como alternativa, considere as exportações de conjunto de dados ao procurar exportar conjuntos de dados brutos, que não são agrupados ou estruturados por interesses ou qualificações de público-alvo. Você pode usar esses dados para relatórios, fluxos de trabalho de ciência de dados e muitos outros casos de uso. Por exemplo, como administrador, engenheiro de dados ou analista, você pode exportar dados do Experience Platform para sincronizar com seu data warehouse, usar em ferramentas de análise de BI, ferramentas de aprendizado de máquina na nuvem externas ou armazenar em seu sistema para necessidades de armazenamento de longo prazo.
 
 Este documento contém todas as informações necessárias para exportar conjuntos de dados. Se você quiser ativar *públicos-alvo* para destinos de marketing por email ou armazenamento na nuvem, leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -214,9 +222,9 @@ Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção.
 
 ## Verificar se o conjunto de dados foi exportado com êxito {#verify}
 
-Ao exportar conjuntos de dados, o Experience Platform cria um ou vários arquivos `.json` ou `.parquet` no local de armazenamento fornecido. Espere que os novos arquivos sejam depositados no local de armazenamento de acordo com o agendamento de exportação fornecido.
+Ao exportar conjuntos de dados, o Experience Platform cria um ou vários arquivos do `.json` ou do `.parquet` no local de armazenamento fornecido. Espere que os novos arquivos sejam depositados no local de armazenamento de acordo com o agendamento de exportação fornecido.
 
-O Experience Platform cria uma estrutura de pastas no local de armazenamento especificado, onde deposita os arquivos exportados do conjunto de dados. O padrão de exportação de pasta padrão é mostrado abaixo, mas você pode [personalizar a estrutura de pastas com suas macros preferidas](#edit-folder-path).
+O Experience Platform cria uma estrutura de pastas no local de armazenamento especificado, onde ele deposita os arquivos exportados do conjunto de dados. O padrão de exportação de pasta padrão é mostrado abaixo, mas você pode [personalizar a estrutura de pastas com suas macros preferidas](#edit-folder-path).
 
 >[!TIP]
 > 
@@ -247,7 +255,7 @@ Há suporte para exportações para arquivos JSON *somente no modo compactado*. 
 
 Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas abaixo:
 
-1. Faça logon na [interface do usuário do Experience Platform](https://experience.adobe.com/platform/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecione **[!UICONTROL Procurar]** no cabeçalho superior para exibir seus fluxos de dados de destino existentes.
+1. Faça logon na [Interface do usuário do Experience Platform](https://experience.adobe.com/platform/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecione **[!UICONTROL Procurar]** no cabeçalho superior para exibir seus fluxos de dados de destino existentes.
 
    ![Exibição de navegação de destino com uma conexão de destino mostrada e o restante borrado.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -269,7 +277,7 @@ Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas a
 
 ## Direitos de exportação do conjunto de dados {#licensing-entitlement}
 
-Consulte os documentos de descrição do produto para entender quantos dados você está autorizado a exportar para cada aplicativo Experience Platform, por ano. Por exemplo, você pode exibir a Descrição do Produto Real-Time CDP [aqui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Consulte os documentos de descrição do produto para entender quantos dados você está autorizado a exportar para cada aplicativo do Experience Platform, por ano. Por exemplo, você pode exibir a Descrição do Produto Real-Time CDP [aqui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 Observe que os direitos de exportação de dados para diferentes aplicativos não são aditivos. Por exemplo, isso significa que, se você comprar o Real-Time CDP Ultimate e o Adobe Journey Optimizer Ultimate, o direito de exportação de perfil será o maior dos dois direitos, de acordo com as descrições do produto. Os direitos de volume são calculados calculando o número total de perfis licenciados e multiplicando por 500 KB para o Real-Time CDP Prime ou 700 KB para o Real-Time CDP Ultimate para determinar o volume de dados ao qual você tem direito.
 
@@ -293,7 +301,7 @@ Lembre-se das seguintes limitações da versão de disponibilidade geral das exp
 **É possível gerar um arquivo sem uma pasta se apenas salvarmos em `/` como o caminho da pasta? Além disso, se não exigirmos um caminho de pasta, como os arquivos com nomes duplicados serão gerados em uma pasta ou local?**
 
 +++Resposta
-A partir da versão de setembro de 2024, é possível personalizar o nome da pasta e até mesmo usar `/` para exportar arquivos para todos os conjuntos de dados na mesma pasta. O Adobe não recomenda isso para destinos que exportam vários conjuntos de dados, pois os nomes de arquivo gerados pelo sistema pertencentes a conjuntos de dados diferentes serão misturados na mesma pasta.
+A partir da versão de setembro de 2024, é possível personalizar o nome da pasta e até mesmo usar `/` para exportar arquivos para todos os conjuntos de dados na mesma pasta. A Adobe não recomenda isso para destinos que exportam vários conjuntos de dados, pois os nomes de arquivo gerados pelo sistema pertencentes a conjuntos de dados diferentes serão misturados na mesma pasta.
 +++
 
 **Você pode rotear o arquivo de manifesto para uma pasta e os arquivos de dados para outra pasta?**
@@ -329,7 +337,7 @@ Não há possibilidade de adicionar mais informações ao arquivo de manifesto. 
 **Como os arquivos de dados são divididos? Quantos registros por arquivo?**
 
 +++Resposta
-Os arquivos de dados são divididos pelo particionamento padrão no data lake do Experience Platform. Conjuntos de dados maiores têm um número maior de partições. O particionamento padrão não pode ser configurado pelo usuário, pois está otimizado para leitura.
+Os arquivos de dados são divididos pelo particionamento padrão no data lake da Experience Platform. Conjuntos de dados maiores têm um número maior de partições. O particionamento padrão não pode ser configurado pelo usuário, pois está otimizado para leitura.
 +++
 
 **É possível definir um limite (número de registros por arquivo)?**

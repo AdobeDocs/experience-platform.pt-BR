@@ -4,9 +4,9 @@ title: Exportar conjuntos de dados usando a API do Serviço de fluxo
 description: Saiba como usar a API do Serviço de fluxo para exportar conjuntos de dados para destinos selecionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '5149'
+source-wordcount: '5151'
 ht-degree: 3%
 
 ---
@@ -19,7 +19,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->**Item de ação**: a versão [de setembro de 2024 do Experience Platform](/help/release-notes/latest/latest.md#destinations) apresenta a opção de definir uma data `endTime` para fluxos de dados de conjunto de dados de exportação. A Adobe também está introduzindo uma data de término padrão de 1º de maio de 2025 para todos os fluxos de dados de exportação do conjunto de dados criados *antes da versão de setembro*. Para qualquer um desses fluxos de dados, é necessário atualizar a data final no fluxo de dados manualmente antes da data final, caso contrário, suas exportações para interrupção nessa data. Use a interface do usuário do Experience Platform para ver quais fluxos de dados serão definidos para serem interrompidos em 1º de maio.
+>**Item de ação**: a versão de [setembro de 2024 do Experience Platform](/help/release-notes/latest/latest.md#destinations) introduziu a opção para definir uma data `endTime` para fluxos de dados do conjunto de dados de exportação. A Adobe também introduziu uma data de término padrão em 1º de maio de 2025 para todos os fluxos de dados de exportação do conjunto de dados criados *antes da versão de setembro de 2024*.
+>
+>Para qualquer um desses fluxos de dados, é necessário atualizar manualmente a data final no fluxo de dados antes da data final, caso contrário, suas exportações serão interrompidas nessa data. Use a interface do usuário do Experience Platform para ver quais fluxos de dados serão definidos para serem interrompidos em 1º de maio de 2025.
 >
 >Da mesma forma, para qualquer fluxo de dados criado sem especificar uma data `endTime`, o padrão será uma hora de término de seis meses a partir da hora em que for criado.
 
@@ -34,7 +36,7 @@ Este artigo explica o fluxo de trabalho necessário para usar o [!DNL Flow Servi
 
 >[!TIP]
 >
->Também é possível usar a interface do usuário do Experience Platform para exportar conjuntos de dados. Leia o [tutorial da interface do usuário de conjuntos de dados de exportação](/help/destinations/ui/export-datasets.md) para obter mais informações.
+>Também é possível usar a interface Experience Platform usuário para exportar conjuntos de dados. Leia os [conjuntos de dados de exportação interface tutorial](/help/destinations/ui/export-datasets.md) para obter mais informações.
 
 ## Conjuntos de dados disponíveis para exportação {#datasets-to-export}
 
@@ -120,7 +122,7 @@ Antes de iniciar o fluxo de trabalho para exportar um conjunto de dados, identif
 
 {style="table-layout:auto"}
 
-Você precisa dessas IDs para construir várias entidades [!DNL Flow Service]. Também é necessário consultar partes do próprio [!DNL Connection Spec] para configurar determinadas entidades de modo que você possa recuperar o [!DNL Connection Spec] de [!DNL Flow Service APIs]. Veja os exemplos abaixo de recuperação das especificações de conexão para todos os destinos na tabela:
+Você precisa dessas IDs para construir várias entidades [!DNL Flow Service]. Também é necessário consultar partes do próprio [!DNL Connection Spec] para configurar determinadas entidades de modo que você possa recuperar o [!DNL Connection Spec] de [!DNL Flow Service APIs]. Veja os exemplos abaixo de recuperação de especificações de conexão para todos os destinos na tabela:
 
 >[!BEGINTABS]
 
@@ -128,7 +130,7 @@ Você precisa dessas IDs para construir várias entidades [!DNL Flow Service]. T
 
 **Solicitação**
 
-+++Recuperar [!DNL connection spec] para [!DNL Amazon S3]
+++Recuperar [!DNL connection spec] para [!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -226,7 +228,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Zona de Aterrissagem de Dados(DLZ)]
+>[!TAB Zona de aterrissagem de dados (DLZ)]
 
 **Solicitação**
 
@@ -510,9 +512,9 @@ Lembre-se também que:
 
 ## Criar uma conexão de base (destino) {#create-base-connection}
 
-![Diagrama mostrando a etapa 3 no fluxo de trabalho de exportação de conjuntos de dados](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
+![Diagrama que mostra a etapa 3 nos conjuntos de dados de exportação fluxo de Trabalho](../assets/api/export-datasets/export-datasets-api-workflow-create-base-connection.png)
 
-Uma conexão base armazena com segurança as credenciais no destino. Dependendo do tipo de destino, as credenciais necessárias para a autenticação nesse destino podem variar. Para localizar esses parâmetros de autenticação, primeiro recupere o [!DNL connection spec] do seu destino desejado, conforme descrito na seção [Coletar especificações de conexão e especificações de fluxo](#gather-connection-spec-flow-spec) e, em seguida, verifique a `authSpec` da resposta. Consulte as guias abaixo para obter as propriedades `authSpec` de todos os destinos com suporte.
+Uma conexão base armazena com segurança as credenciais para o seu destino. Dependendo do tipo de destino, as credenciais necessárias para autenticação nesse destino podem variar. Para encontrar esses parâmetros de autenticação, primeiro recupere o [!DNL connection spec] destino desejado conforme descrito na seção [Reunir especificações de conexão e especificações](#gather-connection-spec-flow-spec) de fluxo e, em seguida, examine a `authSpec` resposta. Faça referência às guias abaixo para as `authSpec` propriedades de todos os destinos suportados.
 
 >[!BEGINTABS]
 
@@ -1074,13 +1076,13 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Solicitação**
 
-+++SFTP com senha - Solicitação de conexão básica
++++SFTP com senha - Conexão base solicitação
 
 >[!TIP]
 >
->Para obter informações sobre como obter as credenciais de autenticação necessárias, consulte a seção [autenticar no destino](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) da página de documentação do destino SFTP.
+>Para obter informações sobre como obter as credenciais de autenticação necessárias, consulte a [seção de autenticação para o destino](/help/destinations/catalog/cloud-storage/sftp.md#authentication-information) da documentação de destino SFTP página.
 
-Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
+Observe as linhas destacadas com comentários em linha no solicitação exemplo, que fornecem informações adicionais. Remover o comentários em linha no solicitação ao copiar os solicitação para o terminal de escolha.
 
 ```shell {line-numbers="true" start-line="1" highlight="19"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1165,11 +1167,11 @@ Observe a ID de conexão da resposta. Essa ID será necessária na próxima etap
 
 ![Diagrama mostrando a etapa 4 do fluxo de trabalho dos conjuntos de dados de exportação](../assets/api/export-datasets/export-datasets-api-workflow-create-target-connection.png)
 
-Em seguida, é necessário criar uma conexão de destino que armazene os parâmetros de exportação para seus conjuntos de dados. Os parâmetros de exportação incluem local, formato de arquivo, compactação e outros detalhes. Consulte as propriedades `targetSpec` fornecidas na especificação de conexão do destino para entender as propriedades com suporte para cada tipo de destino. Consulte as guias abaixo para obter as propriedades `targetSpec` de todos os destinos com suporte.
+Em seguida, é necessário criar uma conexão de destino que armazene os parâmetros de exportação para seus conjuntos de dados. Os parâmetros de exportação incluem local, formato de arquivo, compactação e outros detalhes. Consulte as propriedades `targetSpec` fornecidas na especificação de conexão do destino para entender as propriedades com suporte para cada tipo de destino. Faça referência às guias abaixo para as `targetSpec` propriedades de todos os destinos suportados.
 
 >[!IMPORTANT]
 >
->As exportações para arquivos JSON são suportadas somente em um modo compactado. Há suporte para exportações para [!DNL Parquet] arquivos nos modos compactado e descompactado.
+>As exportações para arquivos JSON são suportadas somente em um modo compactado. As exportações para [!DNL Parquet] arquivos são suportadas nos modos compactado e descompactado.
 >
 >O formato do arquivo JSON exportado é NDJSON, que é o formato de intercâmbio padrão no ecossistema de big data. A Adobe recomenda usar um cliente compatível com NDJSON para ler os arquivos exportados.
 
@@ -1261,11 +1263,11 @@ Observe as linhas destacadas com comentários embutidos no exemplo [!DNL connect
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Azure Blob]
 
-+++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostrando parâmetros de conexão de destino
++++[!DNL Azure Blob Storage] - [!DNL Connection spec] exibição Direcionamento parâmetros de conexão
 
-Observe as linhas destacadas com comentários embutidos no exemplo [!DNL connection spec] abaixo, que fornecem informações adicionais sobre onde encontrar os parâmetros [!DNL target spec] na especificação da conexão. Você também pode ver no exemplo abaixo quais parâmetros de destino *não* se aplicam a destinos de exportação do conjunto de dados.
+Observe as linhas destacadas com comentários em linha no [!DNL connection spec] exemplo abaixo, que fornecem informações adicionais sobre onde encontrar os [!DNL target spec] parâmetros na especificação de conexão. Você também pode ver no exemplo abaixo quais parâmetros de Direcionamento não *são* aplicáveis a destinos de exportação conjunto de dados.
 
 ```json {line-numbers="true" start-line="1" highlight="10,29,44"}
 {
@@ -1725,14 +1727,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Solicitação**
 
-+++[!DNL Azure Blob Storage] - Solicitação de conexão de destino
++++[!DNL Azure Blob Storage] - solicitação de conexão Target
 
 >[!TIP]
 >
->Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) da página de documentação do Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
->Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
+>Para obter informações sobre como obter os parâmetros de Direcionamento necessários, consulte a [seção de detalhes](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) de destino do página de documentação de destino do Azure [!DNL Data Lake Gen 2(ADLS Gen2)] .
+>Para outros valores compatíveis, consulte a documentação de `datasetFileType`referência da API.
 
-Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
+Observe as linhas destacadas com comentários em linha no solicitação exemplo, que fornecem informações adicionais. Remover o comentários em linha no solicitação ao copiar os solicitação para o terminal de escolha.
 
 ```shell {line-numbers="true" start-line="1" highlight="18"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
@@ -1829,7 +1831,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Solicitação**
 
-+++[!DNL Google Cloud Storage] - Solicitação de conexão de destino
++++[!DNL Google Cloud Storage] - solicitação de conexão Target
 
 >[!TIP]
 >
@@ -1868,7 +1870,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Resposta**
 
-+++Conexão do Target - Resposta
+Conexão +++Target - Resposta
 
 ```json
 {
@@ -1883,11 +1885,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Solicitação**
 
-+++SFTP - Solicitação de conexão do Target
++++SFTP - Target conexão solicitação
 
 >[!TIP]
 >
->Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) da página de documentação do SFTP de destino.
+>Para obter informações sobre como obter os parâmetros de Direcionamento necessários, consulte a [seção de detalhes](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) de destino do página de documentação de destino SFTP.
 >Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
@@ -2018,7 +2020,7 @@ A tabela abaixo fornece descrições de todos os parâmetros na seção `schedul
 
 +++Criar fluxo de dados de conjunto de dados para [!DNL Azure Blob Storage] destino - Solicitação
 
-Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
+Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remover o comentários em linha no solicitação ao copiar os solicitação para o terminal de escolha.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2058,7 +2060,7 @@ A tabela abaixo fornece descrições de todos os parâmetros na seção `schedul
 
 | Parâmetro | Descrição |
 |---------|----------|
-| `exportMode` | Selecione `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Para obter mais informações sobre as duas opções, consulte [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) no tutorial de ativação de destinos em lote. As três opções de exportação disponíveis são: <br> **Arquivo completo - Uma vez**: `"DAILY_FULL_EXPORT"` só pode ser usado em combinação com `timeUnit`:`day` e `interval`:`0` para uma exportação completa única do conjunto de dados. Não há suporte para exportações completas diárias de conjuntos de dados. Se você precisar de exportações diárias, use a opção de exportação incremental. <br> **Exportações incrementais diárias**: selecione `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval` :`1` para exportações incrementais diárias. <br> **Exportações incrementais por hora**: Selecione `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval` :`3`,`6`,`9` ou `12` para exportações incrementais por hora. |
+| `exportMode` | Selecione `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Para obter mais informações sobre as duas opções, consulte [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) no tutorial de ativação de destinos em lote. As três opções de exportação disponíveis são: <br> **Arquivo completo - Uma vez**: `"DAILY_FULL_EXPORT"` só pode ser usado em combinação com `timeUnit`:`day` e `interval`:`0` para uma exportação completa única do conjunto de dados. Exportações completas diárias de conjuntos de dados não são suportadas. Se precisar de exportações diárias, use a opção de exportação incremental. <br> **Exportações diárias** incrementais: selecione `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, and `interval` :`1` para exportações incrementais diárias. <br> **Exportações** incrementais por hora: Selecione `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, and `interval` :`3`,`6``9`, ou `12` para exportações incrementais por hora. |
 | `timeUnit` | Selecione `day` ou `hour` dependendo da frequência com que você deseja exportar arquivos de conjunto de dados. |
 | `interval` | Selecione `1` quando o `timeUnit` for dia e `3`,`6`,`9`,`12` quando a unidade de tempo for `hour`. |
 | `startTime` | A data e hora em segundos do UNIX em que as exportações do conjunto de dados devem começar. |
@@ -2141,7 +2143,7 @@ A tabela abaixo fornece descrições de todos os parâmetros na seção `schedul
 
 **Resposta**
 
-+++Criar fluxo de dados - Resposta
+Fluxo de dados Criar ++Criar - Resposta
 
 ```json
 {
@@ -2152,7 +2154,7 @@ A tabela abaixo fornece descrições de todos os parâmetros na seção `schedul
 
 +++
 
->[!TAB Zona de Aterrissagem de Dados(DLZ)]
+>[!TAB Zona de aterrissagem de dados (DLZ)]
 
 **Solicitação**
 
@@ -2268,11 +2270,11 @@ A tabela abaixo fornece descrições de todos os parâmetros na seção `schedul
 | Parâmetro | Descrição |
 |---------|----------|
 | `exportMode` | Selecione `"DAILY_FULL_EXPORT"` ou `"FIRST_FULL_THEN_INCREMENTAL"`. Para obter mais informações sobre as duas opções, consulte [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) no tutorial de ativação de destinos em lote. As três opções de exportação disponíveis são: <br> **Arquivo completo - Uma vez**: `"DAILY_FULL_EXPORT"` só pode ser usado em combinação com `timeUnit`:`day` e `interval`:`0` para uma exportação completa única do conjunto de dados. Não há suporte para exportações completas diárias de conjuntos de dados. Se você precisar de exportações diárias, use a opção de exportação incremental. <br> **Exportações incrementais diárias**: selecione `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day` e `interval` :`1` para exportações incrementais diárias. <br> **Exportações incrementais por hora**: Selecione `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour` e `interval` :`3`,`6`,`9` ou `12` para exportações incrementais por hora. |
-| `timeUnit` | Selecione `day` ou `hour` dependendo da frequência com que você deseja exportar arquivos de conjunto de dados. |
+| `timeUnit` | Selecione `day` ou `hour` dependendo da frequência com a qual deseja exportar arquivos conjunto de dados. |
 | `interval` | Selecione `1` quando o `timeUnit` for dia e `3`,`6`,`9`,`12` quando a unidade de tempo for `hour`. |
 | `startTime` | A data e hora em segundos do UNIX em que as exportações do conjunto de dados devem começar. |
 | `endTime` | A data e a hora em segundos do UNIX em que as exportações do conjunto de dados devem terminar. |
-| `foldernameTemplate` | Especifique a estrutura de nome de pasta esperada no local de armazenamento onde os arquivos exportados serão depositados. <ul><li><code>DATASET_ID</code> = <span>Um identificador exclusivo para o conjunto de dados.</span></li><li><code>DESTINO</code> = <span>O nome do destino.</span></li><li><code>DATETIME</code> = <span>A data e a hora formatadas como yyyyMMdd_HHmmss.</span></li><li><code>HORA_EXPORTAÇÃO</code> = <span>O horário agendado para exportação de dados formatado como `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>O nome da instância específica do destino.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Um identificador exclusivo para a instância de destino.</span></li><li><code>NOME_DA_SANDBOX</code> = <span>O nome do ambiente de sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>O nome da organização.</span></li></ul> |
+| `foldernameTemplate` | Especifique a estrutura de nome de pasta esperada no local de armazenamento onde os arquivos exportados serão depositados. <ul><li><code>DATASET_ID</code> = <span>Um identificador exclusivo para o conjunto de dados.</span></li><li><code>DESTINO</code> = <span>O nome do destino.</span></li><li><code>DATA E HORA</code> = <span>A data e a hora formatadas como yyyyMMdd_HHmmss.</span></li><li><code>HORA_EXPORTAÇÃO</code> = <span>O horário agendado para exportação de dados formatado como `exportTime=YYYYMMDDHHMM`.</span></li><li><code>DESTINATION_INSTANCE_NAME</code> = <span>O nome da instância específica do destino.</span></li><li><code>DESTINATION_INSTANCE_ID</code> = <span>Um identificador exclusivo para a instância de destino.</span></li><li><code>NOME_DA_SANDBOX</code> = <span>O nome do ambiente de sandbox.</span></li><li><code>ORGANIZATION_NAME</code> = <span>O nome da organização.</span></li></ul> |
 
 {style="table-layout:auto"}
 
@@ -2365,9 +2367,9 @@ A tabela abaixo fornece descrições de todos os parâmetros na seção `schedul
 
 Observe a ID de fluxo de dados na resposta. Essa ID será necessária na próxima etapa, ao recuperar as execuções do fluxo de dados, para validar as exportações bem-sucedidas do conjunto de dados.
 
-## Obter as execuções de fluxo de dados {#get-dataflow-runs}
+## Faça o fluxo de dados ser executado {#get-dataflow-runs}
 
-![Diagrama mostrando a etapa 6 no fluxo de trabalho de exportação de conjuntos de dados](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
+![Diagrama mostrando a etapa 6 nos conjuntos de dados de exportação fluxo de Trabalho](../assets/api/export-datasets/export-datasets-api-workflow-validate-dataflow.png)
 
 Para verificar as execuções de um fluxo de dados, use a API de execuções de fluxo de dados:
 

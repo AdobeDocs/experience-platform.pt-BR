@@ -3,7 +3,7 @@ title: Guia flexível de avaliação de público-alvo
 description: Saiba como usar a avaliação flexível de público para executar trabalhos de segmentação em lote sob demanda.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
+source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
 workflow-type: tm+mt
 source-wordcount: '1063'
 ht-degree: 5%
@@ -387,3 +387,4 @@ Somente os públicos-alvo com a origem do Serviço de segmentação são compat�
 Execuções de avaliação de público flexíveis que foram criadas usando a API ou a interface do usuário contam para o limite máximo. No entanto, a execução diária do trabalho de segmentação em lotes que é executado à noite **não** contribui para esse limite.
 
 +++
+

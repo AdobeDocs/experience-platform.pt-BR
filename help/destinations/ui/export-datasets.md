@@ -1,7 +1,7 @@
 ---
-title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
+title: Exportar conjuntos de dados para destinos de armazenamento em nuvem
 type: Tutorial
-description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
+description: Aprenda a exportar conjuntos de dados de Adobe Experience Platform para o seu nuvem preferido armazenamento local.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
@@ -10,7 +10,7 @@ ht-degree: 7%
 
 ---
 
-# Exportar conjuntos de dados para destinos de armazenamento na nuvem
+# Exportar conjuntos de dados para nuvem destinos armazenamento
 
 >[!AVAILABILITY]
 >
@@ -37,7 +37,7 @@ Use a tabela abaixo para entender quais tipos de conjunto de dados você pode ex
 <table>
 <thead>
   <tr>
-    <th>Aplicativo/Complemento</th>
+    <th>Aplicativo/complemento</th>
     <th>Nível</th>
     <th>Conjuntos de dados disponíveis para exportação</th>
   </tr>
@@ -93,12 +93,12 @@ Atualmente, você pode exportar conjuntos de dados para os destinos de armazenam
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-## Quando ativar públicos ou exportar conjuntos de dados {#when-to-activate-audiences-or-activate-datasets}
+## Quando ativar públicos-alvo ou exportar conjuntos de dados {#when-to-activate-audiences-or-activate-datasets}
 
-Alguns destinos baseados em arquivos no catálogo do Experience Platform são compatíveis com a ativação de público-alvo e a exportação de conjunto de dados.
+Alguns destinos baseados em arquivos no catálogo de Experience Platform são compatíveis com público-alvo ativação e conjunto de dados exportação.
 
-* Considere ativar públicos-alvo quando quiser que seus dados sejam estruturados em perfis agrupados por interesses ou qualificações de público-alvo.
-* Como alternativa, considere as exportações de conjunto de dados ao procurar exportar conjuntos de dados brutos, que não são agrupados ou estruturados por interesses ou qualificações de público-alvo. Você pode usar esses dados para relatórios, fluxos de trabalho de ciência de dados e muitos outros casos de uso. Por exemplo, como administrador, engenheiro de dados ou analista, você pode exportar dados do Experience Platform para sincronizar com seu data warehouse, usar em ferramentas de análise de BI, ferramentas de aprendizado de máquina na nuvem externas ou armazenar em seu sistema para necessidades de armazenamento de longo prazo.
+* Considere ativar públicos quando quiser seus dados estruturados em perfis agrupados por interesses público-alvo ou qualificações.
+* Como alternativa, considere conjunto de dados exportações quando quiser exportar conjuntos de dados brutos, que não são agrupados ou estruturados por interesses ou qualificações público-alvo. Você pode usar esses dados para relatórios, workflows de ciência de dados e muitos outros casos de uso. Por exemplo, como administrador, engenheiro de dados ou analista, é possível exportar dados de Experience Platform para sincronizar com suas data warehouse, usar em ferramentas análise BI, ferramentas ML nuvem externas ou armazenamento no seu sistema para necessidades armazenamento de longo prazo.
 
 Este documento contém todas as informações necessárias para exportar conjuntos de dados. Se você quiser ativar *públicos-alvo* para destinos de marketing por email ou armazenamento na nuvem, leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md).
 
@@ -124,11 +124,11 @@ Siga as instruções para selecionar um destino em que você possa exportar seus
 
    ![Guia de catálogo de destino com controle Ativar realçado.](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-1. Selecione **[!UICONTROL Conjuntos de dados]**, selecione a conexão de destino para a qual você deseja exportar conjuntos de dados e selecione **[!UICONTROL Avançar]**.
+1. Selecione Conjuntos ]**de dados do tipo de dados e selecione**[!UICONTROL  a conexão de destino para a qual deseja exportar conjuntos de dados e selecione **[!UICONTROL Próximo]**.
 
 >[!TIP]
 > 
->Se quiser configurar um novo destino para exportar conjuntos de dados, selecione **[!UICONTROL Configurar novo destino]** para acionar o fluxo de trabalho [Conectar ao destino](/help/destinations/ui/connect-destination.md).
+>Se quiser configurar um novo destino para exportar conjuntos de dados, selecione **[!UICONTROL Configurar novo destino]** para acionar o [Fluxo de Trabalho de destino](/help/destinations/ui/connect-destination.md) .
 
 ![Fluxo de trabalho de ativação de destino com controle de Conjuntos de Dados realçado.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
@@ -238,9 +238,9 @@ O nome de arquivo padrão é gerado aleatoriamente e garante que os nomes de arq
 
 A presença desses arquivos no local de armazenamento é a confirmação de uma exportação bem-sucedida. Para entender como os arquivos exportados são estruturados, você pode baixar um [.arquivo parquet](../assets/common/part-00000-tid-253136349007858095-a93bcf2e-d8c5-4dd6-8619-5c662e261097-672704-1-c000.parquet) ou [.arquivo json](../assets/common/part-00000-tid-4172098795867639101-0b8c5520-9999-4cff-bdf5-1f32c8c47cb9-451986-1-c000.json) de amostra.
 
-#### Arquivos de conjunto de dados compactados {#compressed-dataset-files}
+#### Arquivos conjunto de dados compactados {#compressed-dataset-files}
 
-Em [conectar ao fluxo de trabalho de destino](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options), você pode selecionar os arquivos do conjunto de dados exportados a serem compactados, conforme mostrado abaixo:
+Na conexão com os [fluxo de Trabalho](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) de destino, você pode selecionar os arquivos de conjunto de dados exportados a serem compactados, conforme mostrado abaixo:
 
 ![Seleção de compactação e tipo de arquivo ao conectar-se a um destino para exportar conjuntos de dados.](/help/destinations/assets/ui/export-datasets/compression-format-datasets.gif)
 
@@ -261,9 +261,9 @@ Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas a
 
    >[!TIP]
    > 
-   >Selecione o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
+   >Selecione o ícone ![de filtro Filtrar ícone](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. É possível selecionar mais de um destino do lista para ver uma seleção filtrada de dataflows associados ao destino selecionado.
 
-2. Na coluna **[!UICONTROL Dados de ativação]**, selecione o controle de conjuntos de dados para exibir todos os conjuntos de dados mapeados para esse fluxo de dados de exportação.
+2. **[!UICONTROL Na coluna Activation de dados]**, selecione o controle dos conjuntos de dados para visualização todos os conjuntos de dados mapeados a esse fluxo de dados de exportação.
 
    ![A opção de navegação dos conjuntos de dados disponíveis foi realçada na coluna de dados de Ativação.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
@@ -289,9 +289,9 @@ Você pode exibir e acompanhar suas exportações de perfil em relação aos lim
 
 Lembre-se das seguintes limitações da versão de disponibilidade geral das exportações do conjunto de dados:
 
-* O Experience Platform pode exportar vários arquivos mesmo para conjuntos de dados pequenos. A exportação de conjuntos de dados foi projetada para integração de sistema para sistema e otimizada para desempenho, portanto, o número de arquivos exportados não é personalizável.
-* Nomes de arquivos exportados não podem ser personalizados no momento.
-* No momento, os conjuntos de dados criados por meio da API não estão disponíveis para exportação.
+* O Experience Platform pode exportar vários arquivos mesmo para conjuntos de dados pequenos. A exportação do conjunto de dados foi projetada para integração de sistema para sistema e otimizada para desempenho, portanto, o número de arquivos exportados não é personalizável.
+* No momento, os nomes de arquivos exportados não são personalizáveis.
+* Atualmente, os conjuntos de dados criados por meio da API não estão disponíveis para exportação.
 * No momento, a interface não impede que você exclua um conjunto de dados que está sendo exportado para um destino. Não exclua conjuntos de dados que estejam sendo exportados para destinos. [Remova o conjunto de dados](#remove-dataset) de um fluxo de dados de destino antes de excluí-lo.
 * Atualmente, as métricas de monitoramento para exportações de conjunto de dados estão misturadas com números para exportações de perfil, de modo que não refletem os números reais exportados.
 * Os dados com um carimbo de data e hora com mais de 365 dias são excluídos das exportações do conjunto de dados. Para obter mais informações, exiba as [medidas de proteção para exportações agendadas do conjunto de dados](/help/destinations/guardrails.md#guardrails-for-scheduled-dataset-exports)
@@ -346,8 +346,8 @@ Os arquivos de dados são divididos pelo particionamento padrão no data lake da
 Não, não é possível.
 +++
 
-**Como reenviar um conjunto de dados caso o envio inicial esteja incorreto?**
+**Como reenviar um conjunto de dados no evento de que o envio inicial é ruim?**
 
 +++Resposta
-As tentativas são implementadas automaticamente para a maioria dos tipos de erros do sistema.
+Tentativas estão em vigor automaticamente para a maioria dos tipos de erros do sistema.
 +++

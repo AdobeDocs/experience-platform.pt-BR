@@ -5,10 +5,10 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 66ebff274a5fb9255e284a2a38db780d64b45f2e
 workflow-type: tm+mt
-source-wordcount: '1282'
-ht-degree: 5%
+source-wordcount: '1290'
+ht-degree: 6%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 5%
    * [Excluir fluxos de dados de destino](./api/delete-destination-dataflow.md)
    * [Exportar conjuntos de dados](/help/destinations/api/export-datasets.md)
    * [Classificar e filtrar respostas da API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
-* Guias de interface do usuário {#ui}
+* Guias de interface {#ui}
    * [Espaço de trabalho Destinos](./ui/destinations-workspace.md)
    * [Criar uma nova conexão de destino](./ui/connect-destination.md)
    * Ativar dados para destinos{#activate}
@@ -51,6 +51,7 @@ ht-degree: 5%
       * [(Beta) Usar o atributo XDM do último horário de qualificação nos novos destinos de armazenamento na nuvem beta](./ui/activate-last-qualification-time.md)
       * [Exportar matrizes, mapas e objetos](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Executar transformações nos dados exportados para destinos de armazenamento na nuvem](/help/destinations/ui/data-transformations-calculated-fields.md)
+      * [Atualizar a data final dos fluxos de dados do conjunto de dados de exportação](/help/destinations/ui/update-end-date-export-dataflows.md)
    * [Exibir detalhes do destino](./ui/destination-details-page.md)
    * [Atualizar contas de destino](./ui/update-accounts.md)
    * [Excluir contas de destino](./ui/delete-destination-account.md)
@@ -149,11 +150,11 @@ ht-degree: 5%
       * [Conexão com o Microsoft Dynamics 365](./catalog/crm/microsoft-dynamics-365.md)
       * [Conexão de alcance](catalog/crm/outreach.md)
       * [Conexão do Zendesk](catalog/crm/zendesk.md)
-   * Destinos da Plataforma de Gerenciamento de Dados {#data-management}
+   * Destinos da Plataforma de gerenciamento de dados {#data-management}
       * [Visão geral dos destinos da Plataforma de gerenciamento de dados (DMP)](./catalog/data-management/overview.md)
       * [Extensão do Audience Manager DIL](./catalog/data-management/aam-dil-extension.md)
       * [Plataforma de marketing Zeta](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
-   * Parceiro de Dados e Identidade {#data-partner}
+   * Parceiro de dados e identidade {#data-partner}
       * [Supressão de prospecto da Acxiom](./catalog/data-partner/acxiom-prospect-suppression.md)
       * [Aprimoramento de dados da Acxiom](./catalog/data-partner/acxiom-data-enhancement.md)
       * [Conexões Merkury Enterprise](/help/destinations/catalog/data-partners/merkury-enterprise-connections.md)
@@ -178,7 +179,7 @@ ht-degree: 5%
       * [(Arquivos) Conexão do Salesforce Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [Conexão SendGrid](./catalog/email-marketing/sendgrid.md)
-   * Marcar extensões {#launch-extensions}
+   * Extensões de tag {#launch-extensions}
       * [Visão geral da extensão de tag](./catalog/launch-extensions/overview.md)
    * Automação de marketing {#marketing-automation}
       * [Perfis de participante RainFocus](/help/destinations/catalog/marketing-automation/rainfocus.md)
@@ -234,7 +235,7 @@ ht-degree: 5%
    * [Pré-requisitos de integração](./destination-sdk/integration-prerequisites.md)
    * [Introdução ao Destination SDK](./destination-sdk/getting-started.md)
    * [Glossário](/help/destinations/destination-sdk/glossary.md)
-   * Recurso {#functionality}
+   * Funcionalidade {#functionality}
       * [Opções de configuração](./destination-sdk/functionality/configuration-options.md)
       * Componentes do servidor de destino {#destination-server}
          * [Especificações do servidor](./destination-sdk/functionality/destination-server/server-specs.md)
@@ -293,7 +294,7 @@ ht-degree: 5%
       * [Atualizar uma configuração de credencial](./destination-sdk/credentials-api/update-credential-configuration.md)
       * [Excluir uma configuração de credencial](./destination-sdk/credentials-api/delete-credential-configuration.md)
    * Referência da API de teste de destino {#testing-api}
-      * API de teste de destino de streaming {#streaming-destinations}
+      * API de teste de destino de transmissão {#streaming-destinations}
          * [Visão geral da API de teste de destino de streaming](./destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md)
          * [Gerar perfis de amostra com base em um esquema de origem](./destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md)
          * [Gerar um modelo de transformação de mensagem de amostra](./destination-sdk/testing-api/streaming-destinations/sample-template-api.md)
@@ -309,7 +310,7 @@ ht-degree: 5%
    * Referência da API de publicação de destino {#publishing-api}
       * [Criar uma solicitação de publicação de destino](./destination-sdk/publishing-api/create-publishing-request.md)
       * [Recuperar uma solicitação de publicação de destino](./destination-sdk/publishing-api/retrieve-publishing-request.md)
-   * Documentar seu destino {#document-destination}
+   * Documentar o destino {#document-destination}
       * [Documentar seu destino no Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Usar a interface da Web do GitHub para criar uma página de documentação de destino](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [Use um editor de texto em seu ambiente local para criar uma página de documentação de destino](./destination-sdk/docs-framework/work-in-local-environment.md)

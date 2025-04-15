@@ -3,9 +3,10 @@ title: Conectar perfis de usuário da Algolia ao Experience Platform usando a in
 description: Saiba como conectar a intenção dos usuários da Algólia ao Experience Platform
 hide: true
 hidefromtoc: true
-source-git-commit: a55f0b37614bb43a66d7d2e9cf106484b4d6e8dc
+exl-id: d4c936a7-4983-4a12-a813-03b672116e44
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '1133'
+source-wordcount: '1137'
 ht-degree: 1%
 
 ---
@@ -53,13 +54,13 @@ Para usar o [!DNL Algolia], selecione o cartão de origem **[!UICONTROL Algolia]
 
 ## Autenticação
 
-### Conta existente
+### Usar uma conta existente
 
 Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e depois selecione a conta [!DNL Algolia User Profiles] que deseja usar. Para continuar, selecione **[!UICONTROL Avançar]**.
 
 ![A interface de conta existente.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
-### Nova conta
+### Criar uma nova conta
 
 Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e as credenciais [!DNL Algolia]. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
 
@@ -76,7 +77,7 @@ Depois de concluir a seleção e a visualização dos dados para assimilação, 
 
 ![A etapa de seleção de dados do fluxo de trabalho.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
-### Fornecer detalhes do fluxo de dados
+## Fornecer detalhes do fluxo de dados
 
 Se estiver usando um conjunto de dados existente, selecione um que esteja associado a um esquema que esteja usando o Grupo de Campos [!DNL Algolia Profile].
 
@@ -86,13 +87,13 @@ Se estiver criando um novo conjunto de dados, selecione um esquema que esteja us
 
 ![A nova etapa do conjunto de dados do fluxo de trabalho de fontes.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
-### Mapear campos de dados para um esquema XDM
+## Mapear campos de dados para um esquema XDM
 
 Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar dados na Experience Platform.  Para obter mais informações, leia o [guia de mapeamento na interface](../../../../../data-prep/ui/mapping.md).
 
 ![A etapa de mapeamento do fluxo de trabalho de origens.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
-### Programar execuções de assimilação
+## Programar execuções de assimilação
 
 Em seguida, use a interface de programação para definir a programação de assimilação do fluxo de dados.
 
@@ -107,7 +108,7 @@ Em seguida, use a interface de programação para definir a programação de ass
 | Hora de início | O carimbo de data e hora da execução projetada, apresentado no fuso horário UTC. |
 | Preenchimento retroativo | O preenchimento retroativo determina quais dados são assimilados inicialmente. Se o preenchimento retroativo estiver ativado, todos os arquivos atuais no caminho especificado serão assimilados durante a primeira assimilação agendada. Se o preenchimento retroativo estiver desativado, somente os arquivos carregados entre a primeira execução da assimilação e a hora de início serão assimilados. Os arquivos carregados antes da hora de início não serão assimilados. |
 
-### Revisar seu fluxo de dados
+## Revisar seu fluxo de dados
 
 Use a página de revisão para obter um resumo do seu fluxo de dados antes da assimilação. Os detalhes estão agrupados nas seguintes categorias:
 

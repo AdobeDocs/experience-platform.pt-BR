@@ -2,9 +2,9 @@
 description: Saiba como configurar o esquema de parceiro para destinos criados com o Destination SDK.
 title: Configuração de esquema de parceiro
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
 workflow-type: tm+mt
-source-wordcount: '1949'
+source-wordcount: '1896'
 ht-degree: 3%
 
 ---
@@ -105,8 +105,8 @@ Para criar um esquema estático com atributos de perfil, defina os atributos de 
 | `profileRequired` | Booleano | Opcional | Use `true` se os usuários puderem mapear atributos de perfil do Experience Platform para atributos personalizados na sua plataforma de destino. |
 | `segmentRequired` | Booleano | Obrigatório | Este parâmetro é requerido pela Destination SDK e deve sempre ser definido como `true`. |
 | `identityRequired` | Booleano | Obrigatório | Defina como `true` se os usuários puderem mapear [tipos de identidade](identity-namespace-configuration.md) do Experience Platform para os atributos definidos na matriz `profileFields`. |
-| `segmentNamespaceAllowList` | Matriz | Opcional | Define namespaces de público-alvo específicos a partir dos quais os usuários podem mapear públicos-alvo para o destino. Use esse parâmetro para impedir que os usuários do Experience Platform exportem públicos-alvo somente dos namespaces de público-alvo definidos na matriz. Este parâmetro não pode ser usado com `segmentNamespaceDenyList`.<br> <br> Exemplo: `"segmentNamespaceAllowList": ["AudienceManager"]` permitirá que os usuários mapeiem apenas públicos-alvo do namespace `AudienceManager` para esse destino. <br> <br> Para permitir que os usuários exportem qualquer público para o seu destino, você pode ignorar este parâmetro. <br> <br> Se `segmentNamespaceAllowList` e `segmentNamespaceDenyList` estiverem ausentes em sua configuração, os usuários só poderão exportar públicos-alvo originados do [Serviço de Segmentação](../../../../segmentation/home.md). |
-| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe os usuários no mapeamento de públicos-alvo para o destino, a partir dos namespaces de público-alvo definidos na matriz. Não é possível usar com `segmentNamespaceAllowed`. <br> <br> Exemplo: `"segmentNamespaceDenyList": ["AudienceManager"]` impedirá que os usuários mapeiem públicos do namespace `AudienceManager` para esse destino. <br> <br> Para permitir que os usuários exportem qualquer público para o seu destino, você pode ignorar este parâmetro. <br> <br> Se `segmentNamespaceAllowed` e `segmentNamespaceDenyList` estiverem ausentes na sua configuração, os usuários só poderão exportar públicos originados do [Serviço de Segmentação](../../../../segmentation/home.md). <br> <br> Para permitir a exportação de todos os públicos, independentemente da origem, defina `"segmentNamespaceDenyList":[]`. |
+| `segmentNamespaceAllowList` | Matriz | Opcional | Permite mapear somente públicos-alvo dos namespaces de público-alvo definidos na matriz para o destino. <br><br> O uso deste parâmetro é desencorajado na maioria dos casos. Em vez disso, use o `"segmentNamespaceDenyList":[]` para permitir que todos os tipos de público sejam exportados para o seu destino. <br><br> Se `segmentNamespaceAllowList` e `segmentNamespaceDenyList` estiverem ausentes em sua configuração, os usuários só poderão exportar públicos-alvo originados do [Serviço de Segmentação](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` e `segmentNamespaceDenyList` são mutuamente exclusivos. |
+| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe os usuários de mapear públicos-alvo a partir de namespaces de público-alvo definidos na matriz para o destino. <br><br>A Adobe recomenda permitir a exportação de todos os públicos-alvo, independentemente da origem, definindo `"segmentNamespaceDenyList":[]`. <br><br>Se `segmentNamespaceAllowed` e `segmentNamespaceDenyList` estiverem ausentes em sua configuração, os usuários só poderão exportar públicos-alvo originados do [Serviço de Segmentação](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` e `segmentNamespaceDenyList` são mutuamente exclusivos. |
 
 {style="table-layout:auto"}
 

@@ -8,7 +8,7 @@ role: Admin,Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 30%
+ht-degree: 32%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 30%
    - [Visão geral da ECID](./features/ecid.md)
 - [Guia de implementação](implementation.md)
 - [Medidas de proteção de dados de identidade](guardrails.md)
-- API do Serviço de Identidade {#api}
+- API do serviço de identidade {#api}
    - [Introdução](api/getting-started.md)
    - [Rotular um campo como identidade](api/label-identities.md)
    - [Listar identidades de cluster](api/list-cluster-identites.md)

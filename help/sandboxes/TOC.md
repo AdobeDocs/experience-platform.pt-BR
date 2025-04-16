@@ -15,7 +15,7 @@ ht-degree: 47%
 # Sandboxes {#sandbox}
 
 * [Visão geral de sandboxes](home.md)
-* Interface de usuário de sandbox {#ui}
+* Interface do usuário da sandbox {#ui}
    * [Visão geral da interface da sandbox](ui/overview.md)
    * [Guia do usuário de sandbox](ui/user-guide.md)
    * [Ferramentas de sandbox](ui/sandbox-tooling.md)
@@ -27,7 +27,7 @@ ht-degree: 47%
    * [Gerenciamento de sandbox](api/sandboxes.md)
    * [Tipos de sandbox](api/types.md)
    * [Apêndice](api/appendix.md)
-* API de Ferramentas de Sandbox {#sandbox-tooling-api}
+* API de ferramentas de sandbox {#sandbox-tooling-api}
    * [Visão geral](sandbox-tooling-api/overview.md)
    * [Introdução](sandbox-tooling-api/getting-started.md)
    * [Pacotes](sandbox-tooling-api/packages.md)

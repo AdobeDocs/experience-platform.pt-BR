@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de diversas fontes empresariais para criar perfis de clientes, criar públicos-alvo a partir desses perfis e ativar esses públicos-alvo para destinos de terceiros.
 role: Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3b2645927e4760114298295e920e07a20df3fcbd
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 64%
+source-wordcount: '307'
+ht-degree: 60%
 
 ---
 
@@ -26,14 +26,14 @@ ht-degree: 64%
       * [Exemplo de caso de uso](./b2b-use-case.md)
       * [Tutorial completo](./b2b-tutorial.md)
       * [Medidas de proteção da Real-Time CDP B2B Edition](b2b-guardrails.md)
-* Audience Manager e Real-Time CDP {#evolution}
+* AUDIENCE MANAGER e REAL-TIME CDP {#evolution}
    * [Evolução do Audience Manager](aam-to-rtcdp.md)
 * Perfis de conta {#account}
    * [Visão geral do perfil da conta](accounts/account-profile-overview.md)
    * [Guia da interface do perfil da conta](accounts/account-profile-ui-guide.md)
 * Administração {#admin}
    * [Visão geral da administração](administration/admin-overview.md)
-* Públicos e segmentação {#segmentation}
+* Públicos-alvo e segmentação {#segmentation}
    * [Visão geral da segmentação](segmentation/segmentation-overview.md)
    * [Guia do Audience Builder](segmentation/audience-builder.md)
    * [Segmentação na Real-Time CDP B2B Edition](segmentation/b2b.md)
@@ -54,7 +54,7 @@ ht-degree: 64%
    * [Medidas de proteção para ativação de dados por meio de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identidades {#identity}
    * [Identidades e namespaces de identidade](profile/identities-overview.md)
-* Políticas de mesclagem {#merge-policies}
+* Mesclar políticas {#merge-policies}
    * [Visão geral das políticas de mesclagem](profile/merge-policies.md)
 * Privacidade e governança de dados {#privacy}
    * [Visão geral de privacidade](privacy/privacy-overview.md)
@@ -62,24 +62,25 @@ ht-degree: 64%
 * Perfis {#profile}
    * [Visão geral do perfil](profile/profile-overview.md)
    * [Procurar perfil](profile/profile-browse.md)
-* Serviços de inteligência artificial/aprendizado de máquina da Real-Time CDP B2B Edition {#b2b-cdp-ai-ml}
+* Serviços Real-Time CDP B2B edition AI/ML {#b2b-cdp-ai-ml}
    * [Contas relacionadas](b2b-ai-ml-services/related-accounts.md)
    * [Correspondência de conta para lead](b2b-ai-ml-services/lead-to-account-matching.md)
-   * Pontuação preditiva de conta e lead {#predictive-lead-and-account-scoring-intro}
+   * Pontuação preditiva de leads e contas {#predictive-lead-and-account-scoring-intro}
       * [Visão geral de pontuação preditiva de conta e lead](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
       * [Gerenciar pontuação preditiva de conta e leads](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Esquemas {#schemas}
    * [Visão geral dos esquemas](schemas/overview.md)
    * [Esquemas no Real-Time CDP B2B Edition](schemas/b2b.md)
-* Fontes {#sources}
+* Origens {#sources}
    * [Visão geral das fontes](sources/sources-overview.md)
    * [Fontes na Real-Time CDP B2B Edition](sources/b2b.md)
 * Casos de uso {#use-cases}
    * [Visão geral de casos de uso de exemplo](/help/rtcdp/use-case-guides/overview.md)
-   * Aquisição de cliente {#customer-acquisition}
+   * Aquisição de clientes {#customer-acquisition}
       * [Envolva e adquira novos clientes sem dependência de cookies de terceiros](/help/rtcdp/partner-data/prospecting.md)
       * [Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Redirecionamento externo de usuários não autenticados](./partner-data/offsite-retargeting.md)
+      * [Redirecionamento externo de usuários não autenticados](./partner-data/unauthenticated-retargeting.md)
    * Enriquecimento de perfil {#profile-enrichment}
       * [Suplementar perfis próprios com atributos fornecidos por parceiros](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * Insights e engajamento personalizados {#personalization-insights-engagement}

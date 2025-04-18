@@ -242,7 +242,7 @@ Para excluir um segredo existente no espaço de trabalho **[!UICONTROL Segredos]
 
 ## Uso de segredos no encaminhamento de eventos
 
-Para usar um segredo no encaminhamento de eventos, primeiro você deve criar um [elemento de dados](../managing-resources/data-elements.md) que faça referência ao próprio segredo. Depois de salvar o elemento de dados, você pode incluí-lo no encaminhamento de eventos [regras](../managing-resources/rules.md) e adicionar essas regras a uma [biblioteca](../publishing/libraries.md), que, por sua vez, pode ser implantada nos servidores de Adobe como uma [compilação](../publishing/builds.md).
+Para usar um segredo no encaminhamento de eventos, primeiro você deve criar um [elemento de dados](../managing-resources/data-elements.md) que faça referência ao próprio segredo. Depois de salvar o elemento de dados, você pode incluí-lo no encaminhamento de eventos [regras](../managing-resources/rules.md) e adicionar essas regras a uma [biblioteca](../publishing/libraries.md), que, por sua vez, pode ser implantada nos servidores da Adobe como uma [compilação](../publishing/builds.md).
 
 Ao criar o elemento de dados, selecione a extensão **[!UICONTROL Core]** e **[!UICONTROL Secret]** para o tipo de elemento de dados. O painel direito atualiza e fornece controles suspensos para atribuir até três segredos ao elemento de dados: um para [!UICONTROL Desenvolvimento], [!UICONTROL Preparo] e [!UICONTROL Produção], respectivamente.
 

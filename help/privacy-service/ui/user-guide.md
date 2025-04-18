@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;início;tópicos populares;exportar;Exportar;;home;popular topics;export;Export
+keywords: Experience Platform;home;popular tópicos;exportar;Exportar;;home;popular topics;export;Export
 solution: Experience Platform
 title: Gerenciar processos de privacidade na interface do Privacy Service
-description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
+description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos da Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1770'
 ht-degree: 11%
 
 ---
@@ -22,7 +22,7 @@ Este documento fornece etapas para criar e gerenciar solicitações de privacida
 
 >[!IMPORTANT]
 >
->O Privacy Service se destina apenas a solicitações de titulares de dados e de direitos do consumidor. Qualquer outro uso do Privacy Service para limpeza ou manutenção de dados não é suportado ou permitido. A Adobe tem a obrigação legal de os cumprir em tempo útil. Dessa forma, o teste de carga no Privacy Service não é permitido, pois é um ambiente somente de produção e cria um backlog desnecessário de solicitações de privacidade válidas.
+>O Privacy Service destina-se apenas a solicitações de titulares de dados e de direitos do consumidor. Qualquer outro uso do Privacy Service para limpeza ou manutenção de dados não é suportado ou permitido. A Adobe tem a obrigação legal de cumpri-las em tempo hábil. Dessa forma, o teste de carga no Privacy Service não é permitido, pois é um ambiente somente de produção e cria uma lista de pendências desnecessária de solicitações de privacidade válidas.
 >
 >Um limite rígido de upload diário está em vigor para ajudar a evitar o abuso do serviço. Os usuários que abusam do sistema terão o acesso ao serviço desativado. Uma reunião subsequente será realizada com eles para abordar suas ações e discutir o uso aceitável do Privacy Service.
 
@@ -75,7 +75,7 @@ Waiting:
 
 As ordens de produção para cada tipo de regulamento são rastreadas separadamente. Para alternar entre tipos de regulamentos, selecione o menu suspenso **[!UICONTROL Tipo de Regulamento]** e selecione o regulamento desejado na lista.
 
-![O console Privacy Service com a lista suspensa Tipo de Regulamento.](../images/user-guide/regulation.png)
+![O console Privacy Service com a lista suspensa Tipo de Regulamentação.](../images/user-guide/regulation.png)
 
 Ao alterar o tipo de regulamento, o painel é atualizado para mostrar todas as operações, filtros, widgets e caixas de diálogo de criação de trabalho que se aplicam ao regulamento selecionado.
 
@@ -109,7 +109,7 @@ O espaço de trabalho [!UICONTROL Solicitações de Trabalho] lista detalhes sob
 >
 >Os dados de trabalhos criados anteriormente só podem ser acessados por 30 dias após a data de conclusão.
 
-Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo do título [!UICONTROL Solicitações de trabalho]. A lista filtra automaticamente à medida que você digita, mostrando solicitações que contêm valores correspondentes aos termos da pesquisa. O campo de pesquisa executa uma pesquisa &quot;rápida&quot; que corresponde IDs de trabalho de privacidade aos trabalhos renderizados/carregados atualmente na interface do usuário. Não é uma pesquisa abrangente de todas as tarefas submetidas. Em vez disso, é um filtro aplicado aos resultados carregados. Use a API de Privacy Service para [retornar trabalhos com base em um regulamento específico, intervalos de datas ou um único trabalho](../api/privacy-jobs.md#list).
+Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo do título [!UICONTROL Solicitações de trabalho]. A lista filtra automaticamente à medida que você digita, mostrando solicitações que contêm valores correspondentes aos termos da pesquisa. O campo de pesquisa executa uma pesquisa &quot;rápida&quot; que corresponde IDs de trabalho de privacidade aos trabalhos renderizados/carregados atualmente na interface do usuário. Não é uma pesquisa abrangente de todas as tarefas submetidas. Em vez disso, é um filtro aplicado aos resultados carregados. Use a API do Privacy Service para [retornar trabalhos com base em um regulamento específico, intervalos de datas ou um único trabalho](../api/privacy-jobs.md#list).
 
 >[!TIP]
 >
@@ -197,7 +197,7 @@ A caixa de diálogo **[!UICONTROL Carregar JSON]** é exibida, fornecendo uma ja
 
 ![](../images/user-guide/upload-json.png){width=500}
 
-Se você não tiver um arquivo JSON para carregar, selecione **[!UICONTROL Baixar Adobe-GDPR-Request.json]** para baixar um modelo que você pode preencher de acordo com os valores coletados dos titulares de dados.
+Se você não tiver um arquivo JSON para carregar, selecione **[!UICONTROL Baixar Adobe-GDPR-Request.json]** para baixar um modelo que pode ser preenchido de acordo com os valores coletados dos titulares de dados.
 
 
 ![](../images/user-guide/privacy-template.png){width=500}

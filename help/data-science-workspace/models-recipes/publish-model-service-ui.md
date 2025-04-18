@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;publicar um modelo;Data Science Workspace;tópicos populares;pontuação de um serviço;publish a model;Data Science;popular topics;score a service
+keywords: Experience Platform;publicar um modelo;Data Science Workspace;tópicos populares;pontuação de um serviço;;publish a model;Data Science;popular topics;score a service
 solution: Experience Platform
-title: Publish um modelo como um serviço na interface do usuário do Data Science Workspace
+title: Publicar um modelo como um serviço na interface do usuário do Data Science Workspace
 type: Tutorial
 description: O Adobe Experience Platform Data Science Workspace permite publicar seu Modelo como um serviço treinado e avaliado, permitindo que os usuários em sua organização marquem dados sem a necessidade de criar seus próprios modelos.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
@@ -35,13 +35,13 @@ Este tutorial requer um modelo existente com uma execução de treinamento bem-s
 
 Se preferir publicar um Modelo usando as APIs do Sensei Machine Learning, consulte o [tutorial sobre API](./publish-model-service-api.md).
 
-## Publish um modelo {#publish-a-model}
+## Publicar um modelo {#publish-a-model}
 
 No Adobe Experience Platform, selecione **[!UICONTROL Modelos]**, localizado na coluna de navegação à esquerda, e selecione a guia **[!UICONTROL Procurar]** para listar todos os Modelos existentes. Selecione o nome do Modelo que deseja publicar como um Serviço.
 
 ![](../images/models-recipes/publish-model/browse_model.png)
 
-Selecione **[!UICONTROL Publish]** próximo à parte superior direita da página Visão geral do modelo para iniciar um processo de criação de serviço.
+Selecione **[!UICONTROL Publicar]** próximo à parte superior direita da página Visão geral do modelo para iniciar um processo de criação de serviço.
 
 ![](../images/models-recipes/publish-model/view_training.png)
 

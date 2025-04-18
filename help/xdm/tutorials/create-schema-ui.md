@@ -7,7 +7,7 @@ description: Este tutorial aborda as etapas para a criação de um esquema usand
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4915'
+source-wordcount: '4924'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ A caixa de diálogo [!UICONTROL Criar um esquema] é exibida. Nesta caixa de di�
 
 ![A caixa de diálogo Criar um esquema com as opções de fluxo de trabalho e selecione realçada.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### [!BADGE Criação manual ou assistida por aprendizado de máquina do {Beta]{type=Informative} {#manual-or-assisted}
+### Beta [!BADGE Criação manual ou com ML]{type=Informative} do esquema {#manual-or-assisted}
 
 Para saber como usar um algoritmo de ML para recomendar uma estrutura de esquema com base em um arquivo carregado, consulte o [guia de criação de esquema assistido por aprendizado de máquina](../ui/ml-assisted-schema-creation.md). Este guia de interface do usuário se concentra no fluxo de trabalho de criação manual.
 
@@ -84,13 +84,13 @@ O [!DNL Schema Editor] aparece. Esta é a tela sobre a qual você irá compor se
 
 >[!NOTE]
 >
-Você pode atualizar o nome para exibição e a descrição opcional do esquema na barra lateral **[!UICONTROL Propriedades do esquema]**. Depois que um novo nome é inserido, a tela é atualizada automaticamente para refletir o novo nome do esquema.
+>Você pode atualizar o nome para exibição e a descrição opcional do esquema na barra lateral **[!UICONTROL Propriedades do esquema]**. Depois que um novo nome é inserido, a tela é atualizada automaticamente para refletir o novo nome do esquema.
 
 ![O Editor de Esquemas com a classe base e o diagrama de esquema realçado.](../images/tutorials/create-schema/loyalty-members-schema-editor.png)
 
 >[!NOTE]
 >
-Você pode [alterar a classe de um esquema](#change-class) em qualquer momento durante o processo de composição inicial, antes que o esquema tenha sido salvo, mas isso deve ser feito com muito cuidado. Os grupos de campos são compatíveis apenas com determinadas classes e, portanto, alterar a classe redefinirá a tela e quaisquer campos adicionados.
+>Você pode [alterar a classe de um esquema](#change-class) em qualquer momento durante o processo de composição inicial, antes que o esquema tenha sido salvo, mas isso deve ser feito com muito cuidado. Os grupos de campos são compatíveis apenas com determinadas classes e, portanto, alterar a classe redefinirá a tela e quaisquer campos adicionados.
 
 ## Adicionar um grupo de campos {#field-group}
 
@@ -126,17 +126,17 @@ A tela do esquema será exibida novamente. A seção **[!UICONTROL Grupos de cam
 
 >[!NOTE]
 >
-No Editor de esquemas, classes e grupos de campos padrão (gerados pela Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
+>No Editor de esquemas, classes e grupos de campos padrão (gerados pela Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
 >
-![O Editor de Esquemas com o ícone de cadeado realçado](../images/ui/explore/padlock-icon-highlight.png)
+>![O Editor de Esquemas com o ícone de cadeado realçado](../images/ui/explore/padlock-icon-highlight.png)
 
-Este grupo de campos contribui com vários campos sob o nome de nível superior `person` com o tipo de dados "[!UICONTROL Pessoa]&quot;. Esse grupo de campos descreve informações sobre um indivíduo, incluindo nome, data de nascimento e sexo.
+Este grupo de campos contribui com vários campos sob o nome de nível superior `person` com o tipo de dados &quot;[!UICONTROL Pessoa]&quot;. Esse grupo de campos descreve informações sobre um indivíduo, incluindo nome, data de nascimento e sexo.
 
 >[!NOTE]
 >
-Lembre-se de que os campos podem usar tipos escalares (such como sequência, número inteiro, matriz ou data), bem como qualquer tipo de dados (a grupo de campos que representam um conceito comum) definido em [!DNL Schema Registry].
+>Lembre-se de que os campos podem usar tipos escalares (como sequência, inteiro, matriz ou data), bem como qualquer tipo de dados (um grupo de campos que representa um conceito comum) definido em [!DNL Schema Registry].
 
-Observe que o campo `name` tem um tipo de dados of &quot;[!UICONTROL Nome completo]&quot;, o que significa que também descreve um conceito comum e contém subcampos relacionados ao nome, como nome, sobrenome, título de cortesia e sufixo.
+Observe que o campo `name` tem um tipo de dados de &quot;[!UICONTROL Nome completo]&quot;, o que significa que ele também descreve um conceito comum e contém subcampos relacionados ao nome, como nome, sobrenome, título de cortesia e sufixo.
 
 Selecione os diferentes campos na tela para revelar quaisquer campos adicionais com que eles contribuam para a estrutura do esquema.
 
@@ -154,7 +154,7 @@ A tela será exibida novamente com os grupos de campos adicionados listados em *
 
 ## Definir um grupo de campos personalizado {#define-field-group}
 
-O esquema [!UICONTROL Membros de Fidelidade] deve capturar dados relacionados aos membros de um programa de fidelidade, e o grupo de campos padrão [!UICONTROL Detalhes de Fidelidade] que você adicionou ao esquema fornece a maioria deles, incluindo o tipo de programa, points, data de adesão e muito mais.
+O esquema [!UICONTROL Membros de Fidelidade] deve capturar dados relacionados aos membros de um programa de fidelidade, e o grupo de campos padrão [!UICONTROL Detalhes de Fidelidade] adicionado ao esquema fornece a maioria desses dados, incluindo o tipo de programa, pontos, data de adesão e muito mais.
 
 No entanto, pode haver um cenário em que você deseje incluir campos personalizados adicionais não cobertos por grupos de campos padrão para atingir seus casos de uso. No caso de adicionar campos de fidelidade personalizados, você tem duas opções:
 
@@ -167,7 +167,7 @@ Para criar um novo grupo de campos, selecione **[!UICONTROL Adicionar]** na subs
 
 >[!NOTE]
 >
-Assim como com os nomes de classe, o nome do grupo de campos deve ser curto e simples, descrevendo o que o grupo de campos contribuirá para o esquema. Eles também são exclusivos, portanto, você não poderá reutilizar o nome e deve garantir que ele seja específico o suficiente.
+>Assim como com os nomes de classe, o nome do grupo de campos deve ser curto e simples, descrevendo o que o grupo de campos contribuirá para o esquema. Eles também são exclusivos, portanto, você não poderá reutilizar o nome e deve garantir que ele seja específico o suficiente.
 
 &quot;[!DNL Custom Loyalty Details]&quot; agora deve aparecer em **[!UICONTROL Grupos de campos]** no lado esquerdo da tela, mas ainda não há campos associados a ele e, portanto, nenhum campo novo aparece em **[!UICONTROL Estrutura]**.
 
@@ -183,7 +183,7 @@ Um espaço reservado para &quot;[!UICONTROL Campo sem título]&quot; é exibido 
 
 ![O Editor de Esquemas com um [!UICONTROL Campo sem título] e as [!UICONTROL Propriedades do campo] do esquema realçadas.](../images/tutorials/create-schema/untitled-field.png)
 
-Neste cenário, o esquema precisa ter um tipo de objeto field que descreve detalhadamente o nível de fidelidade atual da pessoa. Usando os controles no painel direito, comece criando um campo `loyaltyTier` com o tipo "[!UICONTROL Objeto]&quot; que será usado para manter seus campos relacionados.
+Nesse cenário, o esquema precisa ter um campo do tipo objeto que descreva detalhadamente o nível de fidelidade atual da pessoa. Usando os controles no painel direito, comece criando um campo `loyaltyTier` com o tipo &quot;[!UICONTROL Objeto]&quot; que será usado para manter seus campos relacionados.
 
 Em **[!UICONTROL Atribuir a]**, você deve selecionar um grupo de campos ao qual atribuir o campo. Lembre-se de que todos os campos de esquema pertencem a uma classe ou a um grupo de campos e, como esse esquema usa uma classe padrão, sua única opção é selecionar um grupo de campos. Comece a digitar o nome &quot;[!DNL Custom Loyalty Details]&quot; e selecione o grupo de campos na lista.
 
@@ -197,9 +197,9 @@ As alterações são aplicadas e o objeto `loyaltyTier` recém-criado é exibido
 
 >[!NOTE]
 >
-A presença do objeto de ID do locatário indica que os campos que você está adicionando estão contidos no namespace da sua organização.
+>A presença do objeto de ID do locatário indica que os campos que você está adicionando estão contidos no namespace da sua organização.
 >
-Em outras palavras, os campos que você está adicionando são exclusivos de sua organização e serão salvos no [!DNL Schema Registry] em uma área específica acessível somente para sua organização. Os campos definidos devem sempre ser adicionados ao namespace do locatário para evitar colisões com nomes de outras classes padrão, grupos de campos, tipos de dados, and campos.
+>Em outras palavras, os campos que você está adicionando são exclusivos de sua organização e serão salvos no [!DNL Schema Registry] em uma área específica acessível somente para sua organização. Os campos definidos devem sempre ser adicionados ao namespace do locatário para evitar colisões com nomes de outras classes padrão, grupos de campos, tipos de dados e campos.
 
 Selecione o ícone de **mais (+)** ao lado do objeto `loyaltyTier` para começar a adicionar subcampos. Um novo espaço reservado de campo é exibido e a seção **[!UICONTROL Propriedades do campo]** está visível no lado direito da tela.
 
@@ -211,10 +211,10 @@ Cada campo requer as seguintes informações:
    * Exemplo: fidelizlevel
 * **[!UICONTROL Nome para Exibição]:** O nome do campo, escrito em letra maiúscula. Esse é o nome que será exibido na tela ao visualizar ou editar o esquema.
    * Exemplo: Nível de fidelidade
-* **[!UICONTROL Tipo]:** O tipo de dados of o campo. Isso inclui tipos escalares básicos and quaisquer tipos de dados defined no [!DNL Schema Registry]. Exemplos: [!UICONTROL Cadeia de caracteres], [!UICONTROL Inteiro], [!UICONTROL Booleano], [!UICONTROL Pessoa], [!UICONTROL Endereço], [!UICONTROL Número de telefone], etc.
+* **[!UICONTROL Tipo]:** o tipo de dados do campo. Isso inclui tipos escalares básicos e quaisquer tipos de dados definidos em [!DNL Schema Registry]. Exemplos: [!UICONTROL Cadeia de caracteres], [!UICONTROL Inteiro], [!UICONTROL Booleano], [!UICONTROL Pessoa], [!UICONTROL Endereço], [!UICONTROL Número de telefone], etc.
 * **[!UICONTROL Descrição]:** Uma descrição opcional do campo deve ser incluída com no máximo 200 caracteres.
 
-O primeiro campo para o objeto `loyaltyTier` será uma cadeia de caracteres chamada `id`, representando a ID da camada atual do membro de fidelidade. A ID da camada será exclusiva para cada membro do programa de fidelidade, já que essa empresa define diferentes limites de ponto da camada de fidelidade para cada cliente com base em diferentes fatores. Definir o tipo do novo campo to A seção [!UICONTROL Cadeia de caracteres]&quot; e as **[!UICONTROL Propriedades do campo]** são populadas com várias opções para aplicar restrições, incluindo valor padrão, formato e comprimento máximo. Consulte a documentação sobre [práticas recomendadas para campos de validação de dados](../schema/best-practices.md#data-validation-fields) para saber mais.
+O primeiro campo para o objeto `loyaltyTier` será uma cadeia de caracteres chamada `id`, representando a ID da camada atual do membro de fidelidade. A ID da camada será exclusiva para cada membro do programa de fidelidade, já que essa empresa define diferentes limites de ponto da camada de fidelidade para cada cliente com base em diferentes fatores. Defina o novo tipo de campo como &quot;[!UICONTROL Cadeia de caracteres]&quot; e a seção **[!UICONTROL Propriedades do campo]** será preenchida com várias opções para aplicar restrições, incluindo valor padrão, formato e comprimento máximo. Consulte a documentação sobre [práticas recomendadas para campos de validação de dados](../schema/best-practices.md#data-validation-fields) para saber mais.
 
 ![O Editor de Esquemas com os valores de propriedade do campo para o novo campo de ID foi realçado.](../images/tutorials/create-schema/string-constraints.png)
 
@@ -238,17 +238,17 @@ Quando concluído, o objeto `loyaltyTier` conterá campos para `id`, `currentThr
 
 ## Adicionar um campo de enumeração ao grupo de campos {#enum}
 
-Ao definir campos no [!DNL Schema Editor], há algumas opções adicionais que você pode aplicar aos tipos de campos básicos in para fornecer mais restrições sobre os dados que o campo pode conter. Os casos de uso para essas restrições são explicados na tabela a seguir:
+Ao definir campos no [!DNL Schema Editor], há algumas opções adicionais que você pode aplicar aos tipos de campos básicos para fornecer restrições adicionais sobre os dados que o campo pode conter. Os casos de uso para essas restrições são explicados na tabela a seguir:
 
 | Restrição | Descrição |
 | --- | --- |
 | [!UICONTROL Obrigatório] | Indica que o campo é obrigatório para assimilação de dados. Quaisquer dados carregados em um conjunto de dados com base nesse esquema que não contenha esse campo falharão na assimilação. |
-| Matriz [!UICONTROL 1}] | Indica que o campo contém uma matriz de valores, cada um com o tipo de dados specified. Por exemplo, usar essa restrição em um campo com um tipo de dados of &quot;[!UICONTROL String]&quot; especifica que o campo conterá uma matriz de cadeias de caracteres. |
+| Matriz [!UICONTROL 1}] | Indica que o campo contém uma matriz de valores, cada um com o tipo de dados especificado. Por exemplo, o uso dessa restrição em um campo com o tipo de dados &quot;[!UICONTROL String]&quot; especifica que o campo conterá uma matriz de cadeias de caracteres. |
 | [!UICONTROL Enumeração E Valores Sugeridos] | Um enum indica que este campo deve conter um dos valores de uma lista enumerada de valores possíveis. Como alternativa, você também pode usar essa opção para fornecer apenas uma lista de valores sugeridos para um campo de string sem restringir o campo a esses valores. |
 | [!UICONTROL Identidade] | Indica que este campo é um campo de identidade. Mais informações sobre campos de identidade são fornecidas [mais tarde neste tutorial](#identity-field). |
 | [!UICONTROL Relação] | Embora as relações de esquema possam ser inferidas por meio do uso do esquema de união e [!DNL Real-Time Customer Profile], isso se aplica somente a esquemas que compartilham a mesma classe. A restrição [!UICONTROL Relationship] indica que este campo faz referência à identidade primária de um esquema com base em uma classe diferente, implicando uma relação entre os dois esquemas. Consulte o tutorial em [definindo uma relação](./relationship-ui.md) para obter mais informações. |
 
-{style="layout de tabela:automático"}
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -284,7 +284,7 @@ Em um esquema futuro, agora você pode atribuir um campo como um tipo &quot;[!DN
 
 >[!NOTE]
 >
-Você também pode criar e editar tipos de dados personalizados independentemente de editar esquemas. Consulte o manual sobre [criação e edição de tipos de dados](../ui/resources/data-types.md) para obter mais informações.
+>Você também pode criar e editar tipos de dados personalizados independentemente de editar esquemas. Consulte o manual sobre [criação e edição de tipos de dados](../ui/resources/data-types.md) para obter mais informações.
 
 ## Pesquisar e filtrar campos de esquema
 
@@ -298,7 +298,7 @@ Se estiver procurando um campo específico no esquema, também poderá usar a ba
 
 >[!IMPORTANT]
 >
-A função de pesquisa considera todos os filtros de grupo de campos selecionados ao exibir campos correspondentes. Se uma consulta de pesquisa não estiver exibindo os resultados esperados, talvez seja necessário verificar novamente se você não está filtrando nenhum grupo de campos relevante.
+>A função de pesquisa considera todos os filtros de grupo de campos selecionados ao exibir campos correspondentes. Se uma consulta de pesquisa não estiver exibindo os resultados esperados, talvez seja necessário verificar novamente se você não está filtrando nenhum grupo de campos relevante.
 
 ## Definir um campo de esquema como um campo de identidade {#identity-field}
 
@@ -310,15 +310,15 @@ Por exemplo, pode haver milhares de membros do programa de fidelidade pertencent
 
 >[!IMPORTANT]
 >
-As etapas descritas abaixo abordam como adicionar um descritor de identidade a um campo de esquema existente. Como alternativa para definir campos de identidade dentro da estrutura do próprio esquema, você também pode usar um campo `identityMap` para conter informações de identidade.
+>As etapas descritas abaixo abordam como adicionar um descritor de identidade a um campo de esquema existente. Como alternativa para definir campos de identidade dentro da estrutura do próprio esquema, você também pode usar um campo `identityMap` para conter informações de identidade.
 >
-Se você planeja usar `identityMap`, lembre-se de que ele substituirá qualquer identidade principal adicionada diretamente ao esquema. Consulte a seção sobre `identityMap` no [guia de composição de esquema](../schema/composition.md#identityMap) para obter mais informações.
+>Se você planeja usar `identityMap`, lembre-se de que ele substituirá qualquer identidade principal adicionada diretamente ao esquema. Consulte a seção sobre `identityMap` no [guia de composição de esquema](../schema/composition.md#identityMap) para obter mais informações.
 
 Selecione o campo `personalEmail.address` na tela e a caixa de seleção **[!UICONTROL Identidade]** aparecerá em **[!UICONTROL Propriedades do campo]**. Marque a caixa e a opção para definir isso como a **[!UICONTROL Identidade principal]** será exibida. Selecione esta caixa também.
 
 >[!NOTE]
 >
-Cada esquema pode conter apenas um campo de identidade principal. Depois que um campo de esquema é definido como a identidade primária, você receberá uma mensagem de erro se tentar posteriormente definir outro campo de identidade no esquema como a principal.
+>Cada esquema pode conter apenas um campo de identidade principal. Depois que um campo de esquema é definido como a identidade primária, você receberá uma mensagem de erro se tentar posteriormente definir outro campo de identidade no esquema como a principal.
 
 Em seguida, você deve fornecer um **[!UICONTROL Namespace de identidade]** da lista de namespaces predefinidos na lista suspensa. Como este campo é o endereço de email do cliente, selecione &quot;[!UICONTROL Email]&quot; na lista suspensa. Selecione **[!UICONTROL Aplicar]** para confirmar as atualizações do campo `personalEmail.address`.
 
@@ -326,7 +326,7 @@ Em seguida, você deve fornecer um **[!UICONTROL Namespace de identidade]** da l
 
 >[!NOTE]
 >
-Para obter uma lista de namespaces padrão e suas definições, consulte a [[!DNL Identity Service] documentação](../../identity-service/troubleshooting-guide.md#standard-namespaces).
+>Para obter uma lista de namespaces padrão e suas definições, consulte a [[!DNL Identity Service] documentação](../../identity-service/troubleshooting-guide.md#standard-namespaces).
 
 Depois de aplicar a alteração, o ícone de `personalEmail.address` mostra um símbolo de impressão digital, indicando que agora ele é um campo de identidade. O campo também está listado no painel esquerdo em **[!UICONTROL Identidades]**.
 
@@ -354,7 +354,7 @@ Selecione **[!UICONTROL Perfil]** e um popover será exibido, pedindo sua confir
 
 >[!WARNING]
 >
-Depois que um esquema é habilitado para [!DNL Real-Time Customer Profile] e salvo, ele não pode ser desabilitado.
+>Depois que um esquema é habilitado para [!DNL Real-Time Customer Profile] e salvo, ele não pode ser desabilitado.
 
 Selecione **[!UICONTROL Habilitar]** para confirmar sua escolha. Você pode selecionar a opção de alternância **[!UICONTROL Perfil]** novamente para desabilitar o esquema, se desejar, mas uma vez que o esquema tenha sido salvo enquanto [!DNL Profile] estiver habilitado, ele não poderá mais ser desabilitado.
 
@@ -366,20 +366,20 @@ No Editor de esquemas, você também pode realizar ações rápidas para copiar 
 
 ### Excluir um esquema {#delete-a-schema}
 
-[!CONTEXTUALHELP]
-id="platform_schemas_delete_profileenabledwithdatasets"
-title="Não é possível excluir esquemas"
-abstract="O esquema não pode ser excluído porque foi habilitado para Perfil e tem conjuntos de dados associados."
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenabledwithdatasets"
+>title="Não é possível excluir esquemas"
+>abstract="O esquema não pode ser excluído porque foi habilitado para Perfil e tem conjuntos de dados associados."
 
-[!CONTEXTUALHELP]
-id="platform_schemas_delete_profileenablednodatasets"
-title="Não é possível excluir esquemas"
-abstract="O esquema não pode ser excluído porque foi habilitado para Perfil."
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_profileenablednodatasets"
+>title="Não é possível excluir esquemas"
+>abstract="O esquema não pode ser excluído porque foi habilitado para Perfil."
 
-[!CONTEXTUALHELP]
-id="platform_schemas_delete_withdatasetsnotprofileenabled"
-title="Não é possível excluir esquemas"
-abstract="O esquema não pode ser excluído porque tem conjuntos de dados associados."
+>[!CONTEXTUALHELP]
+>id="platform_schemas_delete_withdatasetsnotprofileenabled"
+>title="Não é possível excluir esquemas"
+>abstract="O esquema não pode ser excluído porque tem conjuntos de dados associados."
 
 Um esquema pode ser excluído da interface do Editor de Esquemas por meio das ações [!UICONTROL Mais] e também dos detalhes do esquema na guia [!UICONTROL Procurar]. Há determinadas condições que impedem a exclusão de um esquema. Um esquema não pode ser excluído se:
 
@@ -405,7 +405,7 @@ O esquema &quot;Membros de fidelidade&quot; também está disponível para ser v
 
 >[!WARNING]
 >
-A interface do usuário [!DNL Experience Platform] mostrada nos vídeos a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
+>A interface do usuário [!DNL Experience Platform] mostrada nos vídeos a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 
 O vídeo a seguir mostra como criar um esquema simples na interface do usuário do [!DNL Experience Platform].
 
@@ -429,6 +429,6 @@ Você pode alterar a classe de um esquema em qualquer momento durante o processo
 
 >[!WARNING]
 >
-A reatribuição da classe para um schema deve ser feita com extremo cuidado. Os grupos de campos são compatíveis apenas com determinadas classes e, portanto, alterar a classe redefinirá a tela e quaisquer campos adicionados.
+>A reatribuição da classe para um schema deve ser feita com extremo cuidado. Os grupos de campos são compatíveis apenas com determinadas classes e, portanto, alterar a classe redefinirá a tela e quaisquer campos adicionados.
 
 Para saber como alterar a classe de um esquema, consulte o manual sobre [gerenciamento de esquemas na interface](../ui/resources/schemas.md#change-class).

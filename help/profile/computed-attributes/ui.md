@@ -118,7 +118,7 @@ Para obter mais informações sobre atualização rápida, leia a [seção atual
 
 Com essas etapas concluídas, agora é possível optar por salvar esse atributo calculado como rascunho ou publicá-lo imediatamente.
 
-![Os botões [!UICONTROL Salvar como rascunho] e [!UICONTROL Publish] estão realçados.](./images/ui/draft-or-publish.png)
+![Os botões [!UICONTROL Salvar como rascunho] e [!UICONTROL Publicar] estão realçados.](./images/ui/draft-or-publish.png)
 
 ## Exibir detalhes de um atributo calculado {#view-details}
 

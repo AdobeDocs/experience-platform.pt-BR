@@ -17,7 +17,7 @@ ht-degree: 17%
 
 A opção para configurar várias opções de formatação de arquivo para os arquivos exportados está disponível ao [conectar](/help/destinations/ui/connect-destination.md) a um destino baseado em arquivo, como o [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), o [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) ou o [SFTP](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
-Você pode configurar várias opções de formatação de arquivo para arquivos exportados usando a interface do usuário do Experience Platform. Você pode modificar várias propriedades dos arquivos exportados para corresponder aos requisitos do sistema de recebimento de arquivos do seu lado, a fim de ler e interpretar de maneira ideal os arquivos recebidos do Experience Platform.
+É possível configurar várias opções de formatação de arquivo para arquivos exportados usando a interface do usuário do Experience Platform. Você pode modificar várias propriedades dos arquivos exportados para corresponder aos requisitos do sistema de recebimento de arquivos do seu lado, a fim de ler e interpretar de maneira ideal os arquivos recebidos do Experience Platform.
 
 <!--
 * To configure file formatting options for exported files by using the Experience Platform UI, read this document.
@@ -32,7 +32,7 @@ Para exibir as opções de formatação de arquivo, inicie o fluxo de trabalho [
 >
 >O destino ao qual você está se conectando pode não ter todas essas opções disponíveis. Cabe ao desenvolvedor de destino determinar quais opções de formatação de arquivo ele deseja suportar em seu destino. O desenvolvedor de destino pode determinar quais opções estão disponíveis ao se conectar ao destino. As opções obrigatórias estão marcadas com um asterisco na interface do usuário do Experience Platform.
 > 
->Os destinos de armazenamento na nuvem criados pelo Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - atualmente só oferecem suporte às seis opções de CSV destacadas abaixo.
+>Os destinos de armazenamento na nuvem criados pela Adobe - [Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Azure Data Lake Storage Gen2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [Google Cloud Storage](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [SFTP](/help/destinations/catalog/cloud-storage/sftp.md) - atualmente só oferecem suporte às seis opções de CSV destacadas abaixo.
 
 ![Imagem mostrando algumas das opções de formatação de arquivo disponíveis.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -121,7 +121,7 @@ Use este controle para definir a representação da sequência de caracteres de 
 Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface.
 
 * Exemplo de saída com **[!UICONTROL null]** selecionado: `male,NULL,TestLastName`. Nesse caso, o Experience Platform transforma o valor vazio em um valor nulo.
-* Exemplo de saída com **&quot;** selecionado: `male,"",TestLastName`. Nesse caso, Experience Platform transforma o valor vazio em um par de aspas duplas.
+* Exemplo de saída com **&quot;** selecionado: `male,"",TestLastName`. Nesse caso, o Experience Platform transforma o valor vazio em um par de aspas duplas.
 * Exemplo de saída com **[!UICONTROL Cadeia de caracteres vazia]** selecionada: `male,,TestLastName`. Nesse caso, o Experience Platform mantém o valor vazio e o exporta como está (sem aspas duplas).
 
 >[!TIP]

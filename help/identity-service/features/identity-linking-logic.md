@@ -14,7 +14,7 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_simulatedgraph"
 >title="Gráfico simulado"
->abstract="As identidades são vinculadas quando o namespace de identidade e o valor da identidade correspondem."
+>abstract="As identidades são vinculadas quando o namespace de identidade e o valor de identidade são correspondentes."
 
 Um link entre duas identidades é estabelecido quando o namespace de identidade e os valores de identidade são correspondentes.
 
@@ -78,7 +78,7 @@ O Serviço de identidade reconhece que CRMID:60013ABC já existe em seu gráfico
 
 ## Cenário do cliente
 
-Você é um engenheiro de dados e assimila o seguinte conjunto de dados do CRM (registro de Perfil) no Experience Platform.
+Você é um engenheiro de dados e assimila o seguinte conjunto de dados do CRM (registro de Perfil) na Experience Platform.
 
 | CRMID** | Telefone* | E-mail* | Nome | Sobrenome |
 | --- | --- | --- | --- | --- |
@@ -105,7 +105,7 @@ A identidade primária para cada evento será determinada com base em [como voc�
 
 >[!NOTE]
 >
->* Se você selecionar o CRMID como principal, os eventos autenticados (eventos com mapa de identidade contendo o CRMID e ECID) terão uma identidade principal de CRMID. Para eventos não autenticados (eventos com o mapa de identidade contendo apenas a ECID), terá uma identidade principal da ECID. O Adobe recomenda essa opção.
+>* Se você selecionar o CRMID como principal, os eventos autenticados (eventos com mapa de identidade contendo o CRMID e ECID) terão uma identidade principal de CRMID. Para eventos não autenticados (eventos com o mapa de identidade contendo apenas a ECID), terá uma identidade principal da ECID. A Adobe recomenda essa opção.
 >
 >* Se você selecionar a ECID como a principal, independentemente do estado de autenticação, a ECID se tornará a identidade principal.
 

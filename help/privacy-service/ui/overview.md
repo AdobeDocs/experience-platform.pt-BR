@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
-title: Visão geral da interface do Privacy Service
-description: Introdução ao uso da interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos Experience Cloud.
+title: Visão geral da interface do usuário do Privacy Service
+description: Introdução ao uso da interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos do Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '226'
-ht-degree: 18%
+ht-degree: 20%
 
 ---
 
@@ -22,7 +22,7 @@ A interface do usuário do Privacy Service permite coordenar solicitações de p
 
 >[!NOTE]
 >
->Para obter informações sobre como gerenciar solicitações de conformidade de forma programática usando a API de Privacy Service, consulte o [guia de API de Privacy Service](../api/overview.md). Consulte o documento sobre [gerenciamento de permissões de Privacy Service](../permissions.md) para obter mais informações.
+>Para obter informações sobre como gerenciar solicitações de conformidade programaticamente usando a API do Privacy Service, consulte o [Guia da API do Privacy Service](../api/overview.md). Consulte o documento sobre [gerenciamento de permissões do Privacy Service](../permissions.md) para obter mais informações.
 
 ## Fazer logon na interface do usuário do [!DNL Privacy Service]
 
@@ -32,7 +32,7 @@ A interface do usuário do Privacy Service permite coordenar solicitações de p
 
 Para acessar a interface do usuário, faça logon no [Adobe Experience Cloud](https://experience.adobe.com/) e selecione **[!UICONTROL Interface do usuário de privacidade]** no menu de acesso rápido.
 
-![O painel Experience Cloud com a Interface do Usuário de Privacidade foi realçado.](../images/ui-overview/quick-access.png)
+![Painel do Experience Cloud com Interface do Usuário de Privacidade realçado.](../images/ui-overview/quick-access.png)
 
 
 ### Fazendo login de [!DNL Experience Platform]

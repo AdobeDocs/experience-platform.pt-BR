@@ -52,7 +52,7 @@ Isso indica ao navegador que quando essa tag de script é analisada, ele deve co
 
 Conforme descrito acima, em implantações síncronas, o navegador pausa a análise e renderiza a página enquanto a biblioteca de tags da Adobe Experience Platform é carregada e executada. Em implantações assíncronas, por outro lado, o navegador continua analisando e renderizando a página enquanto a biblioteca é carregada. É necessário levar em consideração a variabilidade de quando a biblioteca pode terminar o carregamento em relação à análise e à renderização da página.
 
-Primeiramente, como a biblioteca de tags pode terminar o carregamento antes ou depois que a parte inferior da página tenha sido analisada e executada, você não deve mais chamar o `_satellite.pageBottom()` do seu código de página (o `_satellite` não estará disponível até que a biblioteca tenha sido carregada). Isso é explicado na página sobre como [Carregar o código integrado de tag de forma assíncrona](#loading-the-tags-embed-code-asynchronously).
+Primeiramente, como a biblioteca de tags pode terminar o carregamento antes ou depois que a parte inferior da página tenha sido analisada e executada, você não deve mais chamar o `_satellite.pageBottom()` do seu código de página (o `_satellite` não estará disponível até que a biblioteca tenha sido carregada). Isso é explicado na página sobre como [Carregar o código incorporado de tag de forma assíncrona](#loading-the-tags-embed-code-asynchronously).
 
 Em segundo lugar, a biblioteca de tags pode terminar de ser carregada antes ou depois que o evento do navegador [`DOMContentLoaded`](https://developer.mozilla.org/pt-BR/docs/Web/Events/DOMContentLoaded) (DOM Pronto) ocorra.
 
@@ -82,13 +82,13 @@ Ao aplicar esses princípios ao seu próprio site, considere o seguinte:
 
 Caso veja algo fora de ordem, é provável que você tenha problemas com tempo para resolver. Implantações que requerem tempo preciso podem precisar usar ouvintes de eventos e o tipo de evento Evento personalizado ou Chamada direta para tornar suas implementações mais robustas e consistentes.
 
-## Carregamento do código embutido nas tags de forma assíncrona
+## Carregamento do código incorporado nas tags de forma assíncrona
 
-As tags oferecem um botão para ativar o carregamento assíncrono ao ser criado um código embutido quando você configura um [ambiente](../publishing/environments.md). Você também pode configurar o carregamento assíncrono sozinho:
+As tags oferecem um botão para ativar o carregamento assíncrono ao ser criado um código incorporado quando você configura um [ambiente](../publishing/environments.md). Você também pode configurar o carregamento assíncrono sozinho:
 
 1. Adicione um atributo assíncrono à tag `<script>` para carregar o script de maneira assíncrona.
 
-   Para o código embutido de tags, isso significa a alteração do seguinte:
+   Para o código incorporado de tags, isso significa a alteração do seguinte:
 
    ```markup
    <script src="//www.yoururl.com/launch-EN1a3807879cfd4acdc492427deca6c74e.min.js"></script>

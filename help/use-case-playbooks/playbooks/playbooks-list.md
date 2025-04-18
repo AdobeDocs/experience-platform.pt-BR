@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Playbooks de caso de uso disponíveis para Real-time Customer Data Platform e Adobe Journey Optimizer.
-description: Uma lista de todos os manuais no Real-time Customer Data Platform e no Adobe Journey Optimizer.
+title: Playbooks de caso de uso disponíveis para Real-Time Customer Data Platform e Adobe Journey Optimizer.
+description: Uma lista de todos os manuais no Real-Time Customer Data Platform e no Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Playbooks de caso de uso disponíveis
 
-Leia esta página para obter uma visão geral de todos os manuais disponíveis que você pode descobrir e usar no Real-time Customer Data Platform e no Adobe Journey Optimizer.
+Leia esta página para obter uma visão geral de todos os manuais disponíveis que você pode descobrir e usar na Real-time Customer Data Platform e no Adobe Journey Optimizer.
 
 ## Manuais de estratégia de casos de uso no Journey Optimizer {#optimizer-playbooks}
 
@@ -61,7 +61,7 @@ Leia esta página para obter uma visão geral de todos os manuais disponíveis q
 
 {style="table-layout:auto"}
 
-## Playbooks de caso de uso no Real-time Customer Data Platform {#rtcdp-playbooks}
+## Playbooks de caso de uso no Real-Time Customer Data Platform {#rtcdp-playbooks}
 
 | Nome do manual | Descrição |
 | ------------- | ----------- |

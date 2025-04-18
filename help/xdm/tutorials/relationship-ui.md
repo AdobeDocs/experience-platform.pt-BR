@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;interface do usuário;UI;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;editor de esquemas;Editor de esquemas;esquema;Esquema;esquemas;criar;relação;Relação;referência;Referência;
+keywords: Experience Platform;home;tópicos populares;ui;UI;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;editor de esquemas;Editor de esquemas;esquema;Esquemas;criar;relação;Relacionamento;referência;Referência;
 solution: Experience Platform
 title: Definir uma relação entre dois esquemas usando o editor de esquemas
-description: Este documento fornece um tutorial para definir uma relação entre dois esquemas usando o Editor de esquemas na interface do usuário Experience Platform.
+description: Este documento fornece um tutorial para definir uma relação entre dois esquemas usando o Editor de esquemas na interface do usuário do Experience Platform.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
@@ -41,7 +41,7 @@ Este documento fornece um tutorial para definir uma relação entre dois esquema
 
 >[!NOTE]
 >
->Para obter etapas sobre como criar uma relação muitos para um no Adobe Real-time Customer Data Platform B2B Edition, consulte o manual em [criando relações B2B](./relationship-b2b.md).
+>Para obter etapas sobre como criar uma relação muitos para um no Adobe Real-Time Customer Data Platform B2B edition, consulte o manual sobre [criação de relações B2B](./relationship-b2b.md).
 
 ## Introdução
 
@@ -119,7 +119,7 @@ A caixa de diálogo [!UICONTROL Adicionar relação] é exibida. Nessa caixa de 
 
 >[!NOTE]
 >
->Se você tiver acesso ao Real-Time CDP B2B Edition, poderá usar os controles do painel direito para definir um campo de relação, bem como criar uma relação muitos para um usando a [mesma caixa de diálogo](./relationship-b2b.md#relationship-field).
+>Se você tiver acesso ao Real-Time CDP B2B edition, poderá usar os controles do painel direito para definir um campo de relação, bem como criar uma relação muitos para um usando a [mesma caixa de diálogo](./relationship-b2b.md#relationship-field).
 
 ![A caixa de diálogo Adicionar relacionamento.](../images/tutorials/relationship/add-relationship-dialog.png)
 

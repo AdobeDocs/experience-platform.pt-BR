@@ -94,7 +94,7 @@ A página de detalhes do público-alvo é exibida. Selecione a guia **[!UICONTRO
 >title="Similaridade e alcance"
 >abstract="O gráfico de similaridade e alcance representa o alcance esperado de um Público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. É possível passar o mouse sobre um ponto específico do gráfico para exibir a porcentagem de similaridade e a contagem de perfis esperada para o ponto destacado no momento."
 
-A seção similaridade e alcance exibe um gráfico que representa o alcance esperado de um público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. A pontuação de similaridade representa a **distância** de similaridade entre o perfil básico do público-alvo e o perfil do insight semelhante.
+A seção similaridade e alcance exibe um gráfico que representa o alcance esperado de um público-alvo semelhante que consiste em perfis acima de uma pontuação de similaridade fornecida. A pontuação de similaridade representa a **distância** de similaridade entre o perfil básico do público-alvo e o perfil semelhante do insight.
 
 ![O gráfico de similaridade e alcance está destacado.](../images/types/lookalike/similarity-and-reach.png)
 

@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 22%
+source-wordcount: '404'
+ht-degree: 25%
 
 ---
 
@@ -20,19 +20,20 @@ ht-degree: 22%
 - [Proteções do serviço de consulta](guardrails.md)
 - Introdução {#get-started}
    - [Pré-requisitos](get-started/prerequisites.md)
-- Distiller de dados {#data-distiller}
+- Destilador de dados {#data-distiller}
    - [Visão geral](data-distiller/overview.md)
    - [Uso da licença](data-distiller/license-usage.md)
    - Conjuntos de dados derivados {#derived-datasets}
       - [Visão geral](data-distiller/derived-datasets/overview.md)
       - [Criar conjuntos de dados derivados com SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Criar conjuntos de dados derivados baseados em decil](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - SQL Insights para relatórios de aplicativo estendido {#sql-insights}
+   - SQL Insights para relatórios estendidos do aplicativo {#sql-insights}
       - [Visão geral](data-distiller/sql-insights/overview.md)
       - [Modo de consulta profissional](data-distiller/sql-insights/query-pro-mode.md)
+      - [Visão geral da loja acelerada](data-distiller/sql-insights/accelerated-store-overview.md)
       - [Enviar consultas aceleradas](data-distiller/sql-insights/send-accelerated-queries.md)
       - [Guia do modelo de dados de insights de relatórios](data-distiller/sql-insights/reporting-insights-data-model.md)
-   - Pipelines de recursos de AI/ML {#ml-feature-pipelines}
+   - Pipelines de recursos de IA/AM {#ml-feature-pipelines}
       - [Visão geral](data-distiller/ml-feature-pipelines/overview.md)
       - [Conectar-se aos Jupyter Notebooks](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Análise exploratória de dados](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -40,7 +41,7 @@ ht-degree: 22%
       - [Exportar dados para ambientes ML](data-distiller/ml-feature-pipelines/export-data.md)
       - [Fluxo de trabalho completo de enriquecimento do pipeline de dados de IA/ML](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
    - [Sessão do Summit 2025](data-distiller/top-tips-to-maximize-value.md)
-- Estatísticas de Distiller de dados e aprendizado de máquina {#advanced-statistics}
+- Estatísticas do Data Distiller e aprendizado de máquina {#advanced-statistics}
    - [Visão geral](advanced-statistics/overview.md)
    - [Engenharia de recursos](advanced-statistics/feature-engineering.md)
    - [Modelos](advanced-statistics/models.md)
@@ -53,7 +54,7 @@ ht-degree: 22%
    - Exemplos {#examples}
       - [Filtragem de bot usando estatísticas e aprendizado de máquina](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Preveja o abandono do cliente usando regressão logística baseada em SQL](advanced-statistics/examples/predict-customer-churn.md)
-- Públicos da Distiller de dados {#data-distiller-audiences}
+- Públicos-alvo do Data Distiller {#data-distiller-audiences}
    - [Criar públicos-alvo externos usando SQL](data-distiller-audiences/overview.md)
 - Exemplos {#use-cases}
    - [Visão geral](use-cases/overview.md)
@@ -85,9 +86,9 @@ ht-degree: 22%
    - [Desduplicação de dados](key-concepts/deduplication.md)
    - [Amostras de conjunto de dados](key-concepts/dataset-samples.md)
    - [Cálculo das estatísticas do conjunto de dados](key-concepts/dataset-statistics.md)
-- Hipercubos de Distiller de Dados {#hypercubes}
+- Hipercubos de Distiller de dados {#hypercubes}
    - [Análise eficiente de big data com hipercubos](hypercubes/overview.md)
-- Conectar clientes ao Serviço de Consulta {#clients}
+- Conectar clientes ao Serviço de consultas {#clients}
    - [Visão geral de conexões de clientes](clients/overview.md)
    - [Modos SSL](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
@@ -100,7 +101,7 @@ ht-degree: 22%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
-- Interface do Usuário do Serviço de Consulta {#ui}
+- Interface do usuário do serviço de consulta {#ui}
    - [Visão geral da interface](ui/overview.md)
    - [Guia do usuário do Editor de consultas](ui/user-guide.md)
    - [Modelos de consulta](ui/query-templates.md)
@@ -110,7 +111,7 @@ ht-degree: 22%
    - [Monitorar consultas programadas](ui/monitor-queries.md)
    - [Guia de credenciais](ui/credentials.md)
    - [Gerar conjuntos de dados de saída a partir dos resultados da consulta](ui/create-datasets.md)
-- API do Serviço de Consulta {#api}
+- API do serviço de consulta {#api}
    - [Introdução](api/getting-started.md)
    - [Consultas](api/queries.md)
    - [Parâmetros de conexão](api/connection-parameters.md)
@@ -119,7 +120,7 @@ ht-degree: 22%
    - [Modelos de consulta](api/query-templates.md)
    - [Consultas aceleradas](api/accelerated-queries.md)
    - [Assinaturas de alerta](api/alert-subscriptions.md)
-- API de autorização de Distiller de dados {#auth-api}
+- API de autorização do Data Distiller {#auth-api}
    - [Visão geral](auth-api/overview.md)
    - [Introdução](auth-api/getting-started.md)
    - [Acesso IP](auth-api/ip-access.md)

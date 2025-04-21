@@ -3,7 +3,7 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 500cad30178e6371c8d7431b032a67f6ed15a1d6
+source-git-commit: 11961e291188d509609a036f41084f4487cab584
 workflow-type: tm+mt
 source-wordcount: '4517'
 ht-degree: 10%
@@ -87,12 +87,12 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_weekly_messaging"
 >title="Exportações semanais"
->abstract="Selecione a data de início e as exportações subsequentes ocorrerão nesse dia da semana até a data de término selecionada."
+>abstract="<sup>*</sup> Selecione a data de início e as exportações subsequentes ocorrerão nesse dia da semana até a data de término selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_monthly_messaging"
 >title="Exportações mensais"
->abstract="Selecione a data de início e as exportações subsequentes ocorrerão nessa data do mês até a data de término selecionada. Para meses com menos de 30 ou 31 dias, a exportação ocorre no último dia do mês."
+>abstract="<sup>*</sup> Selecione a data de início e as exportações subsequentes ocorrerão nessa data do mês até a data de término selecionada. Para meses com menos de 30 ou 31 dias, a exportação ocorre no último dia do mês."
 
 [!DNL Adobe Experience Platform] exporta dados para destinos de marketing por email e armazenamento na nuvem como [tipos de arquivos diferentes](#supported-file-formats-export). Na página **[!UICONTROL Agendamento]**, você pode configurar o agendamento e os nomes de arquivo para cada público-alvo que está exportando.
 

@@ -3,22 +3,14 @@ keywords: atributos do dirigível;destino do dirigível
 title: Conexão com os atributos do dirigível
 description: Transmita facilmente os dados de público-alvo da Adobe para o Airship como atributos de público-alvo para direcionamento no Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1042'
 ht-degree: 2%
 
 ---
 
 # [!DNL Airship Attributes] conexão {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->* A partir de 25 de março de 2025, você poderá ver dois cartões [!DNL Airship Attributes] lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. O conector de destino [!DNL Airship Attributes] existente foi renomeado para **[!UICONTROL (Obsoleto) Atributos de Dirigível]** e uma nova placa com o nome **[!UICONTROL Atributos de Dirigível]** está disponível para você.
->* Use a conexão **[!UICONTROL Atributos da Aeronave]** no catálogo para novos fluxos de dados de ativação. Se você tiver fluxos de dados ativos para o destino **[!UICONTROL (Obsoleto) Atributos de Aeróstato]**, eles serão atualizados automaticamente, portanto, nenhuma ação é necessária.
->* Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores:
->   * ID da especificação de fluxo: `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * ID de especificação da conexão: `594bc002-4a47-49b7-8a98-ac0d21045502`
 
 ## Visão geral {#overview}
 

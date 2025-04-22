@@ -2,14 +2,14 @@
 title: Regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as regras de vinculação de gráficos de identidade no Serviço de identidade.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1497'
 ht-degree: 4%
 
 ---
 
-# Visão geral das regras de vinculação do gráfico de identidade {#identity-graph-linking-rules-overview}
+# Visão geral do [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
@@ -18,17 +18,21 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
+>As Regras de vinculação do gráfico de identidade estão atualmente em Disponibilidade limitada e podem ser acessadas por todos os clientes em sandboxes de desenvolvimento.
+>
+>* **Requisitos de ativação**: o recurso permanecerá inativo até que você configure e salve o [!DNL Identity Settings]. Sem essa configuração, o sistema continuará funcionando normalmente, sem alterações no comportamento.
+>* **Observações importantes**: durante esta fase de Disponibilidade limitada, a segmentação do Edge pode produzir resultados inesperados de associação de segmento. No entanto, o streaming e a segmentação em lote funcionarão conforme esperado.
+>* **Próximas etapas**: para obter informações sobre como habilitar este recurso em sandboxes de produção, contate a equipe de conta da Adobe.
 
-Com o Serviço de identidade da Adobe Experience Platform e o Perfil do cliente em tempo real, é fácil supor que seus dados são assimilados perfeitamente e que todos os perfis mesclados representam uma única pessoa por meio de um identificador de pessoa, como um CRMID. No entanto, há possíveis cenários em que determinados dados podem tentar mesclar vários perfis diferentes em um único perfil (&quot;colapso de gráfico&quot;). Para evitar essas mesclagens indesejadas, é possível usar as configurações fornecidas por meio das regras de vinculação do gráfico de identidade e permitir a personalização precisa para seus usuários.
+Com o Serviço de identidade da Adobe Experience Platform e o Perfil do cliente em tempo real, é fácil supor que seus dados são assimilados perfeitamente e que todos os perfis mesclados representam uma única pessoa por meio de um identificador de pessoa, como um CRMID. No entanto, há possíveis cenários em que determinados dados podem tentar mesclar vários perfis diferentes em um único perfil (&quot;colapso de gráfico&quot;). Para evitar essas mesclagens indesejadas, você pode usar as configurações fornecidas pelo [!DNL Identity Graph Linking Rules] e permitir a personalização precisa para seus usuários.
 
-Assista ao vídeo a seguir para obter mais informações sobre como usar as regras de vinculação do gráfico de identidade:
+Assista ao vídeo a seguir para obter informações adicionais sobre o uso de [!DNL Identity Graph Linking Rules]:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## Introdução
 
-Os documentos a seguir são essenciais para entender as regras de vinculação do gráfico de identidade.
+Os documentos a seguir são essenciais para entender [!DNL Identity Graph Linking Rules].
 
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Guia de implementação](./implementation-guide.md)
@@ -45,7 +49,7 @@ Os documentos a seguir são essenciais para entender as regras de vinculação d
 >title="Cenários de recolhimento de gráfico"
 >abstract="Há várias razões pelas quais os gráficos podem &quot;recolher&quot; ou representar várias entidades de pessoa."
 
-Esta seção descreve cenários de exemplo que você pode considerar ao configurar regras de vinculação de gráficos de identidade.
+Esta seção descreve cenários de exemplo que você pode considerar ao configurar o [!DNL Identity Graph Linking Rules].
 
 ### Dispositivo compartilhado
 
@@ -61,7 +65,7 @@ Há instâncias em que vários logons podem ocorrer em um único dispositivo:
 
 Nesses casos, do ponto de vista do gráfico, sem limites ativados, uma única ECID será vinculada a várias CRMIDs.
 
-Com as regras de vinculação do gráfico de identidade, você pode:
+Com [!DNL Identity Graph Linking Rules], você pode:
 
 * Configure a ID usada para fazer logon como identificador exclusivo. Por exemplo, você pode limitar um gráfico para armazenar apenas uma identidade com um namespace CRMID e, portanto, definir essa CRMID como o identificador exclusivo de um dispositivo compartilhado.
    * Ao fazer isso, você pode garantir que os CRMIDs não sejam mesclados pela ECID.
@@ -72,7 +76,7 @@ Também há instâncias de usuários que fornecem valores falsos como números d
 
 ![Um diagrama que representa cenários de email ou telefone inválidos.](../images/identity-settings/invalid-email-phone.png)
 
-Com as regras de vinculação do gráfico de identidade, você pode:
+Com [!DNL Identity Graph Linking Rules], você pode:
 
 * Configure o CRMID, o número de telefone ou o endereço de email como o identificador exclusivo e, portanto, limite uma pessoa a apenas um CRMID, número de telefone e/ou endereço de email associado à conta.
 
@@ -89,11 +93,11 @@ Essas identidades podem resultar nos seguintes gráficos, em que várias CRMIDs 
 
 ![Um exemplo de gráfico de dados de identidade com valores de identidade incorretos ou incorretos.](../images/identity-settings/bad-data.png)
 
-Com as regras de vinculação de gráficos de identidade, você pode configurar o CRMID como identificador exclusivo para impedir o colapso de perfis indesejados devido a esse tipo de dados.
+Com o [!DNL Identity Graph Linking Rules], você pode configurar o CRMID como identificador exclusivo para evitar o colapso de perfis indesejados devido a esse tipo de dados.
 
-## Regras de vinculação do gráfico de identidade {#identity-graph-linking-rules}
+## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
 
-Com as regras de vinculação do gráfico de identidade, você pode:
+Com [!DNL Identity Graph Linking Rules] você pode:
 
 * Crie um único gráfico de identidade/perfil mesclado para cada usuário configurando namespaces exclusivos, o que impedirá que dois identificadores de pessoa diferentes sejam mesclados em um gráfico de identidade.
 * Associar eventos online e autenticados à pessoa, configurando prioridades
@@ -151,7 +155,7 @@ Para obter mais informações, leia o manual sobre [prioridade de namespace](./n
 
 ## Próximas etapas
 
-Para obter mais informações sobre regras de vinculação de gráficos de identidade, leia a seguinte documentação:
+Para obter mais informações sobre [!DNL Identity Graph Linking Rules], leia a seguinte documentação:
 
 * [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
 * [Guia de implementação](./implementation-guide.md)

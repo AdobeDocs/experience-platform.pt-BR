@@ -2,9 +2,9 @@
 title: Algoritmo de otimização de identidade
 description: Saiba mais sobre o Algoritmo de otimização de identidade no Serviço de identidade.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1617'
 ht-degree: 4%
 
 ---
@@ -18,7 +18,11 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
+>As Regras de vinculação do gráfico de identidade estão atualmente em Disponibilidade limitada e podem ser acessadas por todos os clientes em sandboxes de desenvolvimento.
+>
+>* **Requisitos de ativação**: o recurso permanecerá inativo até que você configure e salve o [!DNL Identity Settings]. Sem essa configuração, o sistema continuará funcionando normalmente, sem alterações no comportamento.
+>* **Observações importantes**: durante esta fase de Disponibilidade limitada, a segmentação do Edge pode produzir resultados inesperados de associação de segmento. No entanto, o streaming e a segmentação em lote funcionarão conforme esperado.
+>* **Próximas etapas**: para obter informações sobre como habilitar este recurso em sandboxes de produção, contate a equipe de conta da Adobe.
 
 O algoritmo de otimização de identidade é um algoritmo de gráfico no Serviço de identidade que ajuda a garantir que um gráfico de identidade seja representativo de uma única pessoa e, portanto, impede a mesclagem indesejada de identidades no Perfil do cliente em tempo real.
 
@@ -163,9 +167,9 @@ Exiba o diagrama abaixo para entender melhor como a associação de eventos anô
 
 ## Próximas etapas
 
-Para obter mais informações sobre regras de vinculação de gráficos de identidade, leia a seguinte documentação:
+Para obter mais informações sobre [!DNL Identity Graph Linking Rules], leia a seguinte documentação:
 
-* [Visão geral das regras de vinculação do gráfico de identidade](./overview.md)
+* [Visão geral do [!DNL Identity Graph Linking Rules]](./overview.md)
 * [Guia de implementação](./implementation-guide.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)

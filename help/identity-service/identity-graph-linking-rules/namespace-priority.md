@@ -2,9 +2,9 @@
 title: Prioridade de namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '1866'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,11 @@ ht-degree: 2%
 
 >[!AVAILABILITY]
 >
->As regras de vinculação do gráfico de identidade estão atualmente com Disponibilidade limitada. Entre em contato com a equipe de conta da Adobe para obter informações sobre como acessar o recurso em sandboxes de desenvolvimento.
+>As Regras de vinculação do gráfico de identidade estão atualmente em Disponibilidade limitada e podem ser acessadas por todos os clientes em sandboxes de desenvolvimento.
+>
+>* **Requisitos de ativação**: o recurso permanecerá inativo até que você configure e salve o [!DNL Identity Settings]. Sem essa configuração, o sistema continuará funcionando normalmente, sem alterações no comportamento.
+>* **Observações importantes**: durante esta fase de Disponibilidade limitada, a segmentação do Edge pode produzir resultados inesperados de associação de segmento. No entanto, o streaming e a segmentação em lote funcionarão conforme esperado.
+>* **Próximas etapas**: para obter informações sobre como habilitar este recurso em sandboxes de produção, contate a equipe de conta da Adobe.
 
 Cada implementação de cliente é exclusiva e personalizada para atender às metas de uma organização específica e, como tal, a importância de um determinado namespace varia de acordo com o cliente. Exemplos reais incluem:
 

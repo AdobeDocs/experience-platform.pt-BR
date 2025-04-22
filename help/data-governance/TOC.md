@@ -1,14 +1,14 @@
 ---
 audience: user
-user-guide-title: Ajuda do Adobe Experience Platform Data Governance
-breadcrumb-title: Guia do Data Governance
+user-guide-title: Ajuda de governança de dados da Adobe Experience Platform
+breadcrumb-title: Guia de governança de dados
 user-guide-description: Imponha restrições de uso de dados por meio de rótulos, ações de marketing e políticas de governança.
 feature: Data Governance
 role: User,Developer,Admin
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 47%
+ht-degree: 53%
 
 ---
 
@@ -26,15 +26,15 @@ ht-degree: 47%
    * [Visão geral](policies/overview.md)
    * [Gerenciar políticas na interface](policies/user-guide.md)
    * [Criar uma política na API](policies/create.md)
-* Imposição de política {#enforcement}
+* Aplicação de política {#enforcement}
    * [Visão geral](enforcement/overview.md)
    * [Aplicação automática](enforcement/auto-enforcement.md)
    * [Imposição com base em API](enforcement/api-enforcement.md)
-* API de Serviço MTLS {#mtls-api}
+* API do serviço MTLS {#mtls-api}
    * [Visão geral](mtls-api/overview.md)
    * [Introdução](mtls-api/getting-started.md)
    * [Endpoint de certificado público](mtls-api/public-certificate-endpoint.md)
-* API de Serviço de Política {#api}
+* API de serviço de política {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
    * [Rótulos](api/labels.md)

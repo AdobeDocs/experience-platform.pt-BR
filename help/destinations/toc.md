@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
+source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1286'
 ht-degree: 6%
 
 ---
@@ -243,6 +243,7 @@ ht-degree: 6%
          * [Funções de transformação compatíveis](./destination-sdk/functionality/destination-server/supported-functions.md)
          * [Configuração da formatação de arquivo](./destination-sdk/functionality/destination-server/file-formatting.md)
       * Componentes de configuração de destino {#destination-configuration}
+         * [Configurar tipo de dados do público](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
          * [Configuração de autenticação do cliente](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
          * [Autorização OAuth2](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Campos de dados do cliente](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)

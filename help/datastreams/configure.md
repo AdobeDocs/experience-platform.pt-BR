@@ -2,7 +2,7 @@
 title: Criar e configurar sequências de dados
 description: Saiba como conectar a integração do SDK da Web do lado do cliente a outros produtos da Adobe e destinos de terceiros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 637f7d68c0de93ede5ee808b68a0066f6abe52c9
 workflow-type: tm+mt
 source-wordcount: '2822'
 ht-degree: 48%
@@ -81,7 +81,7 @@ As informações de dispositivo e hardware usam a cadeia de caracteres de matriz
 
 Além disso, verifique se cada campo XDM desejado existe no esquema. Caso contrário, você pode adicionar o grupo de campos `Environment Details` fornecido pela Adobe ao esquema.
 
-### Configurar opções avançadas {#@advanced-options}
+### Configurar opções avançadas {#advanced-options}
 
 Para revelar as opções avançadas de configuração, selecione **[!UICONTROL Opções Avançadas]**. Aqui, você pode definir configurações adicionais de sequência de dados, como ofuscação de IP, cookies de ID primária e muito mais.
 

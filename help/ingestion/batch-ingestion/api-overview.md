@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da API de assimilação em lote
 description: Este documento fornece um guia abrangente para desenvolvedores que trabalham com APIs de assimilação em lote para o Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2435'
 ht-degree: 6%
 
 ---
@@ -27,7 +27,9 @@ Antes de continuar, revise a [visão geral da API de assimilação em lote](over
 
 >[!NOTE]
 >
->As etapas a seguir se aplicam a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, será necessário alternar para upload de arquivo grande.
+>- As etapas a seguir se aplicam a arquivos pequenos (256 MB ou menos). Se você atingir um tempo limite do gateway ou solicitar erros de tamanho do corpo, será necessário alternar para upload de arquivo grande.
+>
+>- Use JSON de linha única em vez de JSON de várias linhas como entrada para assimilação em lote. O JSON de linha única permite melhor desempenho, pois o sistema pode dividir um arquivo de entrada em várias partes e processá-las em paralelo, enquanto o JSON de várias linhas não pode ser dividido. Isso pode reduzir significativamente os custos de processamento de dados e melhorar a latência do processamento em lote.
 
 ### Criar lote
 
@@ -405,7 +407,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Fazer upload de grandes partes de arquivo
 
-Agora que o arquivo foi criado, todos os blocos subsequentes podem ser carregados fazendo solicitações PATCH repetidas, uma para cada seção do arquivo.
+Agora que o arquivo foi criado, todos os blocos subsequentes podem ser carregados fazendo solicitações repetidas do PATCH, uma para cada seção do arquivo.
 
 **Formato da API**
 

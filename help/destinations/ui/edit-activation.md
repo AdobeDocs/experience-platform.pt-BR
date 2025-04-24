@@ -4,9 +4,9 @@ title: Editar fluxos de dados de ativação
 type: Tutorial
 description: Siga as etapas deste artigo para editar um fluxo de dados de ativação existente no Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: ca33131c505803b74075f6d8331095b016a301a0
+source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,12 @@ ht-degree: 0%
 
 No Adobe Experience Platform, você pode configurar vários componentes de fluxos de dados de ativação existentes para destinos, como:
 
-* [Habilitar ou desabilitar](#enable-disable-dataflows) fluxos de dados de ativação;
-* [Adicione mais públicos-alvo e atributos de perfil](#add-audiences) aos fluxos de dados de ativação;
-* [Adicionar conjuntos de dados adicionais](#add-datasets) aos fluxos de trabalho de ativação;
-* [Editar nomes e descrições](#edit-names-descriptions) para seus fluxos de dados de ativação;
+* [Habilitar ou desabilitar](#enable-disable-dataflows) fluxos de dados de ativação
+* [Adicionar mais públicos-alvo](#add-audiences) aos fluxos de dados de ativação
+* [Editar atributos e identidades mapeadas](#edit-mapped-attributes)
+* [Editar o agendamento de ativação e a frequência de exportação](#edit-schedule-frequency)
+* [Adicionar conjuntos de dados adicionais](#add-datasets) aos fluxos de trabalho de ativação
+* [Editar nomes e descrições](#edit-names-descriptions) para seus fluxos de dados de ativação
 
 <!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
@@ -26,7 +28,7 @@ No Adobe Experience Platform, você pode configurar vários componentes de fluxo
 
 Siga as etapas abaixo para procurar seus fluxos de dados de ativação existentes e identificar aquele que deseja editar.
 
-1. Faça logon na [interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecione **[!UICONTROL Procurar]** no cabeçalho superior para exibir seus fluxos de dados de destino existentes.
+1. Faça logon na [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecione **[!UICONTROL Procurar]** no cabeçalho superior para exibir seus fluxos de dados de destino existentes.
 
    ![Procurar destinos](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -48,15 +50,57 @@ Use a opção **[!UICONTROL Habilitado]/[!UICONTROL Desabilitado]** para iniciar
 
 ## Adicionar públicos-alvo a um fluxo de dados de ativação {#add-audiences}
 
-Selecione **[!UICONTROL Ativar públicos-alvo]** no painel direito para alterar quais públicos-alvo ou atributos de perfil enviar para o destino. Essa ação leva você ao fluxo de trabalho de ativação, que difere dependendo do tipo de destino.
+Selecione **[!UICONTROL Ativar públicos-alvo]** no painel direito para alterar quais públicos-alvo serão enviados para o destino. Essa ação leva você ao fluxo de trabalho de ativação.
 
-![imagem da interface do usuário do Experience Platform mostrando a opção de execução do fluxo de dados Ativar públicos-alvo.](../assets/ui/edit-activation/activate-audiences.png)
+![Imagem da interface do usuário do Experience Platform mostrando a opção de execução do fluxo de dados Ativar públicos-alvo.](../assets/ui/edit-activation/activate-audiences.png)
 
-Para obter mais informações sobre os workflows de ativação para cada tipo de destino, consulte os guias a seguir:
+Na etapa **[!UICONTROL Selecionar públicos-alvo]** do fluxo de trabalho de ativação, você pode remover públicos-alvo existentes ou adicionar novos públicos-alvo ao fluxo de trabalho de ativação.
+
+O fluxo de trabalho de ativação é ligeiramente diferente dependendo do tipo de destino. Para obter mais informações sobre os workflows de ativação para cada tipo de destino, leia os guias a seguir:
 
 * [Ativar públicos para destinos de streaming](./activate-segment-streaming-destinations.md) (por exemplo, Facebook ou Twitter);
 * [Ativar públicos para destinos de exportação de perfil em lote](./activate-batch-profile-destinations.md) (por exemplo, Amazon S3 ou Oracle Eloqua);
 * [Ative públicos para destinos de exportação de perfil de streaming](./activate-streaming-profile-destinations.md) (por exemplo, API HTTP ou Amazon Kinesis).
+
+## Editar o agendamento de ativação e a frequência de exportação {#edit-schedule-frequency}
+
+Selecione **[!UICONTROL Ativar públicos-alvo]** no painel direito. Essa ação leva você ao fluxo de trabalho de ativação.
+
+![Imagem da interface do usuário do Experience Platform mostrando a opção de execução do fluxo de dados Ativar públicos-alvo.](../assets/ui/edit-activation/activate-audiences.png)
+
+Selecione a etapa **[!UICONTROL Agendamento]** no fluxo de trabalho de ativação para editar o agendamento de ativação e a frequência de exportação para seu fluxo de dados. Essa etapa permite configurar com que frequência os dados são exportados para o destino.
+
+Na etapa **[!UICONTROL Agendamento]** do fluxo de trabalho de ativação, é possível:
+* Ajuste a frequência da exportação.
+* Defina ou modifique as datas de início e término do fluxo de dados de ativação e muito mais.
+
+As operações de programação que você pode executar variam um pouco, dependendo do tipo de destino. Para obter mais informações sobre os workflows de ativação para cada tipo de destino, leia os guias a seguir:
+
+* [Ativar públicos para destinos de streaming](./activate-segment-streaming-destinations.md) (por exemplo, Facebook ou Twitter);
+* [Ativar públicos para destinos de exportação de perfil em lote](./activate-batch-profile-destinations.md) (por exemplo, Amazon S3 ou Oracle Eloqua);
+* [Ative públicos para destinos de exportação de perfil de streaming](./activate-streaming-profile-destinations.md) (por exemplo, API HTTP ou Amazon Kinesis).
+
+## Editar atributos e identidades mapeadas {#edit-mapped-attributes}
+
+Selecione **[!UICONTROL Ativar públicos-alvo]** no painel direito. Essa ação leva você ao fluxo de trabalho de ativação.
+
+![Imagem da interface do usuário do Experience Platform mostrando a opção de execução do fluxo de dados Ativar públicos-alvo.](../assets/ui/edit-activation/activate-audiences.png)
+
+Selecione a etapa **[!UICONTROL Mapping]** do fluxo de trabalho de ativação para editar os atributos e as identidades mapeadas para o fluxo de dados de ativação. Isso permite ajustar quais atributos de perfil e identidades devem ser exportados para o destino.
+
+Na etapa **[!UICONTROL Mapeamento]** do fluxo de trabalho de ativação, é possível:
+
+* Adicione novos atributos ou identidades ao mapeamento.
+* Remova atributos ou identidades existentes do mapeamento.
+* Ajuste a ordem dos mapeamentos para definir a ordem das colunas nos arquivos exportados.
+
+O fluxo de trabalho de ativação é ligeiramente diferente dependendo do tipo de destino. Para obter mais informações sobre os workflows de ativação para cada tipo de destino, leia os guias a seguir:
+
+* [Ativar públicos para destinos de streaming](./activate-segment-streaming-destinations.md) (por exemplo, Facebook ou Twitter);
+* [Ativar públicos para destinos de exportação de perfil em lote](./activate-batch-profile-destinations.md) (por exemplo, Amazon S3 ou Oracle Eloqua);
+* [Ative públicos para destinos de exportação de perfil de streaming](./activate-streaming-profile-destinations.md) (por exemplo, API HTTP ou Amazon Kinesis).
+
+
 
 ## Adicionar conjuntos de dados a um fluxo de dados de ativação {#add-datasets}
 
@@ -66,7 +110,9 @@ Selecione **[!UICONTROL Exportar conjuntos de dados]** no painel direito para se
 >
 >Esta opção só é visível para [destinos que oferecem suporte à exportação do conjunto de dados](export-datasets.md#supported-destinations).
 
-![Imagem da interface do usuário do Experience Platform mostrando a opção de execução do fluxo de dados Exportar conjuntos de dados.](../assets/ui/edit-activation/export-datasets.png)
+![Imagem da interface do Experience Platform mostrando a opção de execução do fluxo de dados Exportar conjuntos de dados.](../assets/ui/edit-activation/export-datasets.png)
+
+
 
 <!-- ## Apply access labels {#apply-access-labels}
 

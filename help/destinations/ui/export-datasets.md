@@ -3,9 +3,9 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
-source-wordcount: '2703'
+source-wordcount: '2732'
 ht-degree: 7%
 
 ---
@@ -104,7 +104,10 @@ Este documento contém todas as informações necessárias para exportar conjunt
 
 ## Pré-requisitos {#prerequisites}
 
-Para exportar conjuntos de dados para destinos de armazenamento na nuvem, você deve ter [se conectado com êxito a um destino](./connect-destination.md). Se ainda não tiver feito isso, vá para o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
+Observe os seguintes pré-requisitos para exportar conjuntos de dados:
+
+* Para exportar conjuntos de dados para destinos de armazenamento na nuvem, você deve ter [se conectado com êxito a um destino](./connect-destination.md). Se ainda não tiver feito isso, vá para o [catálogo de destinos](../catalog/overview.md), navegue pelos destinos compatíveis e configure o destino que deseja usar.
+* Os conjuntos de dados do perfil precisam ser ativados para uso no Perfil do cliente em tempo real. [Leia mais](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) sobre como habilitar esta opção.
 
 ### Permissões necessárias {#permissions}
 

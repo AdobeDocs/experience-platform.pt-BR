@@ -5,7 +5,7 @@ title: Assimilar Dados Na Experience Platform
 type: Tutorial
 description: O Adobe Experience Platform permite importar dados facilmente como arquivos em lote na forma de arquivos do Parquet ou dados que estejam em conformidade com um esquema conhecido do Experience Data Model (XDM).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
 source-wordcount: '1322'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Na guia Informações também há um botão de alternância **[!UICONTROL Perfil
 
 ![Atividade do conjunto de dados](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Habilitar conjunto de dados para [!DNL Real-Time Customer Profile]
+## Habilitar conjunto de dados para [!DNL Real-Time Customer Profile] {#enable-for-profile}
 
 Conjuntos de dados são usados para assimilar dados no [!DNL Experience Platform], e esses dados são usados para identificar indivíduos e unir informações provenientes de várias fontes. Essas informações agrupadas são chamadas de [!DNL Real-Time Customer Profile]. Para que [!DNL Experience Platform] saiba quais informações devem ser incluídas em [!DNL Real-Time Profile], os conjuntos de dados podem ser marcados para inclusão usando a opção **[!UICONTROL Perfil]**.
 

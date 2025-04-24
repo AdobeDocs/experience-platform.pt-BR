@@ -3,7 +3,7 @@ title: Integração da extensão de API de eventos da Web do Adobe TikTok
 description: Essa API de eventos da Web do Adobe Experience Platform permite compartilhar interações do site diretamente com o TikTok.
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '1105'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Visão geral da extensão de API de eventos da Web do [!DNL TikTok]
 
-A API de eventos do [!DNL TikTok] é uma interface segura da [API do Edge Network Server](/help/server-api/overview.md) que permite compartilhar informações com o [!DNL TikTok] diretamente sobre as ações do usuário em seus sites. Você pode aproveitar as regras de encaminhamento de eventos para enviar dados de [!DNL Adobe Experience Platform Edge Network] para [!DNL TikTok] usando a extensão de API de Eventos da Web [!DNL TikTok].
+A API de eventos do [!DNL TikTok] é uma interface segura da [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/) que permite compartilhar informações com o [!DNL TikTok] diretamente sobre as ações do usuário em seus sites. Você pode aproveitar as regras de encaminhamento de eventos para enviar dados de [!DNL Adobe Experience Platform Edge Network] para [!DNL TikTok] usando a extensão de API de Eventos da Web [!DNL TikTok].
 
 ## [!DNL TikTok] pré-requisitos {#prerequisites}
 
@@ -52,7 +52,7 @@ Tela de configuração ![[!DNL TikTok] para a extensão de API de eventos da Web
 
 Depois que todos os seus elementos de dados estiverem configurados, você poderá começar a criar regras de encaminhamento de eventos que determinam quando e como seus eventos serão enviados para [!DNL TikTok].
 
-Crie uma nova [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão como **[!UICONTROL Extensão da API de Eventos da Web do TikTok]**. Para enviar eventos Edge Network para [!DNL TikTok], defina o **[!UICONTROL Tipo de Ação]** como **[!UICONTROL Enviar Evento de API de Eventos da Web do TikTok].**
+Crie uma nova [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão como **[!UICONTROL Extensão da API de Eventos da Web do TikTok]**. Para enviar eventos do Edge Network para [!DNL TikTok], defina o **[!UICONTROL Tipo de Ação]** como **[!UICONTROL Enviar Evento de API de Eventos da Web do TikTok].**
 
 ![O tipo de ação [!UICONTROL Enviar Evento de API de Eventos da Web do TikTok] está sendo selecionado para uma regra [!DNL TikTok] na interface da Coleção de Dados.](../../../images/extensions/server/tiktok/select-action.png)
 

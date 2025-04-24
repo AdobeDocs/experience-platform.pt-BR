@@ -3,9 +3,9 @@ keywords: destinos, perguntas, perguntas frequentes, faq, perguntas frequentes s
 title: Perguntas frequentes
 description: Respostas às perguntas mais frequentes sobre destinos do Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1675'
+source-wordcount: '1673'
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ Não, o [Web SDK](../web-sdk/home.md) não é necessário para ativar públicos 
 
 No entanto, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) for usado em vez do Web SDK, somente a personalização da próxima sessão será suportada.
 
-Para casos de uso de [personalização de mesma página e próxima página](ui/activate-edge-personalization-destinations.md), você deve usar o [Web SDK](../web-sdk/home.md) ou a [API do Edge Network Server](../server-api/overview.md). Consulte a documentação sobre [ativação de públicos-alvo para destinos de borda](ui/activate-edge-personalization-destinations.md) para obter mais detalhes de implementação.
+Para casos de uso de [personalização de mesma página e próxima página](ui/activate-edge-personalization-destinations.md), você deve usar o [Web SDK](../web-sdk/home.md) ou a [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Consulte a documentação sobre [ativação de públicos-alvo para destinos de borda](ui/activate-edge-personalization-destinations.md) para obter mais detalhes de implementação.
 +++
 
 ### Há um limite no número de atributos que posso enviar da Plataforma de dados do cliente em tempo real para a Adobe Target ou um destino de Personalization personalizado?
@@ -244,10 +244,10 @@ No momento, isso não é compatível com a interface de Destinos. Se precisar de
 Quando você exclui um destino, todos os públicos-alvo e atributos mapeados no destino são excluídos da Adobe Target e também são removidos da Edge Network.
 +++
 
-### A integração funciona usando a API do Edge Network Server?
+### A integração funciona usando a API do Edge Network?
 
 +++Resposta
-Sim, a API do Edge Network Server funciona com o destino do Personalization personalizado. Como os atributos de perfil podem conter dados confidenciais, para protegê-los, o destino Personalization personalizado exige que você use a API do Edge Network Server para coleta de dados. Além disso, todas as chamadas de API devem ser feitas em um [contexto autenticado](../server-api/authentication.md).
+Sim, a API do Edge Network funciona com o destino do Personalization personalizado. Como os atributos de perfil podem conter dados confidenciais, para protegê-los, o destino Personalization personalizado exige que você use a API do Edge Network para coleta de dados. Além disso, todas as chamadas de API devem ser feitas em um [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 +++
 
 ### Só posso ter uma política de mesclagem que esteja ativa no edge. Posso criar públicos-alvo que usem uma política de mesclagem diferente e ainda enviá-los para a Adobe Target como públicos-alvo de transmissão?

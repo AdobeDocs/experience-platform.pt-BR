@@ -2,9 +2,9 @@
 title: Notas da versão de março de 2022 da Adobe Experience Platform
 description: As notas da versão de março de 2022 da Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1182'
+source-wordcount: '1183'
 ht-degree: 13%
 
 ---
@@ -73,7 +73,7 @@ Para obter mais informações sobre alertas no Experience Platform, consulte a [
 
 ## Painéis {#dashboards}
 
-A Adobe Experience Platform fornece vários [!DNL dashboards] por meio dos quais você pode exibir informações importantes sobre os dados de sua organização, conforme capturados durante os instantâneos diários.
+A Adobe Experience Platform fornece vários [!DNL dashboards] através dos quais você pode exibir informações importantes sobre os dados da sua organização, conforme capturados durante os instantâneos diários.
 
 ### Painéis de Perfil
 
@@ -115,7 +115,7 @@ O Experience Platform fornece um conjunto de tecnologias que permitem coletar da
 | Recurso | Descrição |
 | --- | --- |
 | Configurações globais de sequência de dados | Agora você pode definir várias novas configurações globais ao configurar um fluxo de dados: localização geográfica, cookie de ID primária e sincronização de ID de terceiros. Consulte a seção sobre [configuração de uma sequência de dados](../../datastreams/overview.md#create) no guia da interface de sequências de dados para obter mais informações. |
-| [API do Edge Network Server](../../server-api/overview.md) | A API do servidor permite que os clientes interajam com o Experience Platform Edge Network usando um novo endpoint autenticado para potencializar uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. |
+| [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | A API do Edge Network permite que os clientes interajam com o Experience Platform Edge Network usando um novo endpoint autenticado para potencializar uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. |
 
 Para obter mais informações sobre a coleta de dados no Experience Platform, consulte a [visão geral da coleta de dados](../../collection/home.md).
 

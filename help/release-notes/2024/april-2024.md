@@ -2,9 +2,9 @@
 title: Notas de versão de abril de 2024 da Adobe Experience Platform
 description: As notas de versão de abril de 2024 da Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '1896'
 ht-degree: 21%
 
 ---
@@ -52,7 +52,7 @@ O Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Tipo | Recurso | Descrição |
 | --- | --- | --- |
 | Extensões | Extensão de [!DNL Acxiom Anonymous Visitor Insights] Tags | Descubra de onde vêm os visitantes do seu site com o [!DNL Acxiom's Visitor Insights]. Utilizando a tecnologia de pesquisa geográfica de IP, a Acxiom pode identificar a localização de navegadores anônimos. Uma vez identificada, uma pesquisa em seu banco de dados organizado produz insights adicionais que são enviados de volta para o navegador. Assim, os criadores de conteúdo podem adaptar seu conteúdo para corresponder a esses pontos de dados, fornecendo uma experiência mais personalizada e envolvente para os visitantes, mesmo que eles tenham começado como estranhos. |
-| Sequência de dados | [Detecção de bot do Edge Network](../../datastreams/bot-detection.md) | O tráfego proveniente de entidades não humanas, como programas automatizados, web scrapers, spiders e scanners com script, pode dificultar a identificação de eventos que ocorrem de visitantes humanos. Esse tipo de tráfego pode afetar negativamente métricas comerciais importantes, resultando em relatórios de tráfego incorretos. <br>A detecção de bot permite identificar eventos gerados pelo [Web SDK](../../web-sdk/home.md), [SDK Móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Server API]](../../server-api/overview.md) como sendo gerados pelos spiders e bots conhecidos. Ao configurar a detecção de bot para seus fluxos de dados, você pode identificar endereços IP, intervalos de IP e cabeçalhos de solicitação específicos que gostaria de classificar como eventos de bot. <br> A identificação do tráfego de bot pode fornecer uma medida mais precisa da atividade do usuário no seu site ou aplicativo móvel. |
+| Sequência de dados | [Detecção de bot do Edge Network](../../datastreams/bot-detection.md) | O tráfego proveniente de entidades não humanas, como programas automatizados, web scrapers, spiders e scanners com script, pode dificultar a identificação de eventos que ocorrem de visitantes humanos. Esse tipo de tráfego pode afetar negativamente métricas comerciais importantes, resultando em relatórios de tráfego incorretos. A <br>Detecção de bot permite identificar eventos gerados pelo [Web SDK](../../web-sdk/home.md), [SDK Móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/) como sendo gerados por spiders e bots conhecidos. Ao configurar a detecção de bot para seus fluxos de dados, você pode identificar endereços IP, intervalos de IP e cabeçalhos de solicitação específicos que gostaria de classificar como eventos de bot. <br> A identificação do tráfego de bot pode fornecer uma medida mais precisa da atividade do usuário no seu site ou aplicativo móvel. |
 | SDK móvel | Versão principal | Novas versões principais do Mobile SDK foram lançadas para as seguintes plataformas: iOS Mobile Core 5.x e extensões compatíveis do iOS, Android Mobile Core 3.x e extensões compatíveis do Android, React Native Core 6.x e extensões compatíveis do React Native, Flutter Core 4.x e extensões compatíveis do Flutter. Essa versão oferece vários novos recursos e aprimoramentos, incluindo suporte no Android SDK para Jetpack Compose, suporte para experiências baseadas em código do Adobe Journey Optimizer e disponibilidade geral da extensão de Mensagens do Adobe Journey Optimizer para Flutter. Para obter notas de versão mais detalhadas, consulte as [Notas de versão do Mobile SDK](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | SDK móvel | Privacidade | Devido à atualização da política do Apple, a partir de 1 de maio de 2024, os desenvolvedores deverão implementar novos recursos de privacidade para enviar para o App Store. Todos os clientes do Adobe que usam o Mobile SDK precisarão atualizar para a versão 5.x do SDK se quiserem receber a aprovação do App Store após 1º de maio. |
 | Roku SDK | Roku SDK | A primeira versão principal do Roku SDK foi lançada com suporte para mídia de transmissão para o Experience Platform Edge Network. |
@@ -69,7 +69,7 @@ Para saber mais sobre coleções de dados, leia a [visão geral da coleção de 
 
 [!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
-**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |

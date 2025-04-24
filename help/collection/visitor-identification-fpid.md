@@ -1,23 +1,23 @@
 ---
 title: Identificação do visitante via FPID
-description: Saiba como identificar visitantes de maneira consistente por meio da API do servidor, usando o FPID
-seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
+description: Saiba como identificar de forma consistente os visitantes por meio da API do Edge Network, usando o FPID
+seo-description: Learn how to consistently identify visitors via the Edge Network API, by using the FPID
 keywords: rede de borda;gateway;api;visitante;identificação;edge network;gateway;api;visitor;identification;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
 
 # Identificação do visitante via FPID
 
-[!DNL First-party IDs] (`FPIDs`) são IDs de dispositivo geradas, gerenciadas e armazenadas por clientes. Isso dá aos clientes controle sobre a identificação de dispositivos de usuário. Ao enviar `FPIDs`, o Edge Network não gera um `ECID` totalmente novo para uma solicitação que não contém um.
+[!DNL First-party IDs] (`FPIDs`) são IDs de dispositivo geradas, gerenciadas e armazenadas por clientes. Isso dá aos clientes controle sobre a identificação de dispositivos de usuário. Ao enviar `FPIDs`, a Edge Network não gera um `ECID` totalmente novo para uma solicitação que não contém um.
 
 O `FPID` pode ser incluído no corpo da solicitação de API como parte do `identityMap` ou pode ser enviado como um cookie.
 
-Um `FPID` pode ser convertido deterministicamente em um `ECID` pelo Edge Network, de modo que as identidades `FPID` sejam totalmente compatíveis com as soluções de Experience Cloud. A obtenção de um `ECID` de um `FPID` específico sempre produz o mesmo resultado, portanto, os usuários terão uma experiência consistente.
+Um `FPID` pode ser convertido deterministicamente em um `ECID` pela Edge Network, portanto, as identidades do `FPID` são totalmente compatíveis com as soluções da Experience Cloud. A obtenção de um `ECID` de um `FPID` específico sempre produz o mesmo resultado, portanto, os usuários terão uma experiência consistente.
 
 O `ECID` obtido dessa maneira pode ser recuperado por meio de uma consulta `identity.fetch`:
 
@@ -84,7 +84,7 @@ O seguinte grupo de campos `identityMap` resultará em uma resposta de erro quan
 }
 ```
 
-Nesse caso, a resposta de erro retornada pelo Edge Network é semelhante ao seguinte:
+A resposta de erro retornada pela Edge Network nesse caso é semelhante ao seguinte:
 
 ```json
 {
@@ -102,7 +102,7 @@ Nesse caso, a resposta de erro retornada pelo Edge Network é semelhante ao segu
 
 ## Identificação de visitante com `FPID`
 
-Para identificar usuários via `FPID`, verifique se o cookie `FPID` foi enviado antes de fazer qualquer solicitação para o Edge Network. O `FPID` pode ser transmitido em um cookie ou como parte de `identityMap` no corpo da solicitação.
+Para identificar usuários via `FPID`, verifique se o cookie `FPID` foi enviado antes de fazer qualquer solicitação à Edge Network. O `FPID` pode ser transmitido em um cookie ou como parte de `identityMap` no corpo da solicitação.
 
 <!--
 

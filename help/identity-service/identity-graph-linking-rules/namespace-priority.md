@@ -2,9 +2,9 @@
 title: Prioridade de namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1866'
+source-wordcount: '1865'
 ht-degree: 2%
 
 ---
@@ -86,7 +86,7 @@ Para estruturas de gráficos relativamente complexas, a prioridade de namespace 
 * Depois de definir as configurações de identidade para uma determinada sandbox, a identidade principal para eventos de experiência será determinada pela prioridade de namespace mais alta na configuração.
    * Isso ocorre porque os eventos de experiência são de natureza dinâmica. Um mapa de identidade pode conter três ou mais identidades, e a prioridade do namespace garante que o namespace mais importante esteja associado ao evento de experiência.
 * Como resultado, as seguintes configurações **não serão mais usadas pelo Perfil de Cliente em Tempo Real**:
-   * A configuração de identidade primária (`primary=true`) ao enviar identidades no identityMap usando o Web SDK, Mobile SDK ou a API do Edge Network Server (o namespace de identidade e o valor de identidade continuarão a ser usados no Perfil). **Observação**: os serviços fora do Perfil do Cliente em Tempo Real, como o armazenamento em data lake ou a Adobe Target, continuarão a usar a configuração de identidade principal (`primary=true`).
+   * A configuração de identidade primária (`primary=true`) ao enviar identidades no identityMap usando o Web SDK, Mobile SDK ou API do Edge Network (o namespace de identidade e o valor de identidade continuarão a ser usados no Perfil). **Observação**: os serviços fora do Perfil do Cliente em Tempo Real, como o armazenamento em data lake ou a Adobe Target, continuarão a usar a configuração de identidade principal (`primary=true`).
    * Quaisquer campos marcados como identidade primária em um esquema de Classe de evento de experiência XDM.
    * Configurações de identidade primária padrão no conector de origem do Adobe Analytics (ECID ou AAID).
 * Por outro lado, a **prioridade de namespace não determina a identidade principal dos registros de perfil**.

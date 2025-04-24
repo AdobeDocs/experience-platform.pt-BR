@@ -1,31 +1,31 @@
 ---
-title: Personalização híbrida usando o SDK da Web e a API do servidor do Edge Network
-description: Este artigo demonstra como você pode usar o SDK da Web em conjunto com a API do servidor para implantar personalização híbrida em suas propriedades da Web.
+title: Personalização híbrida usando o Web SDK e a API do Edge Network
+description: Este artigo demonstra como usar o Web SDK em conjunto com a API do Edge Network para implantar personalização híbrida em suas propriedades da Web.
 keywords: personalização; híbrido; api do servidor; lado do servidor; implementação híbrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '872'
 ht-degree: 3%
 
 ---
 
-# Personalização híbrida usando o SDK da Web e a API do servidor do Edge Network
+# Personalização híbrida usando o Web SDK e a API do Edge Network
 
 ## Visão geral {#overview}
 
-A personalização híbrida descreve o processo de recuperação de conteúdo de personalização no lado do servidor, usando a [API do Edge Network Server](../../server-api/overview.md), e de renderização no lado do cliente, usando o [SDK da Web](../home.md).
+A personalização híbrida descreve o processo de recuperação de conteúdo de personalização no lado do servidor, usando a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/), e de renderização no lado do cliente, usando a [Web SDK](../home.md).
 
-Você pode usar personalização híbrida com soluções de personalização como Adobe Target, Adobe Journey Optimizer ou Offer Decisioning, sendo que a diferença é o conteúdo da carga da [!UICONTROL API do servidor].
+Você pode usar personalização híbrida com soluções de personalização como Adobe Target, Adobe Journey Optimizer ou Offer Decisioning, sendo que a diferença é o conteúdo da carga da [!UICONTROL API do Edge Network].
 
 ## Pré-requisitos {#prerequisites}
 
 Antes de implementar a personalização híbrida em suas propriedades da Web, verifique se você atende às seguintes condições:
 
-* Você decidiu qual solução de personalização deseja usar. Isso terá um impacto no conteúdo da carga da [!UICONTROL API do servidor].
-* Você tem acesso a um servidor de aplicativos que pode ser usado para fazer as chamadas da [!UICONTROL API do Servidor].
-* Você tem acesso à [API do Edge Network Server](../../server-api/authentication.md).
-* Você [configurou](/help/web-sdk/commands/configure/overview.md) corretamente e implantou o SDK da Web nas páginas que deseja personalizar.
+* Você decidiu qual solução de personalização deseja usar. Isso terá um impacto no conteúdo da [!UICONTROL API do Edge Network].
+* Você tem acesso a um servidor de aplicativos que pode usar para fazer as chamadas da [!UICONTROL API do Edge Network].
+* Você tem acesso à [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/).
+* Você [configurou](/help/web-sdk/commands/configure/overview.md) corretamente e implantou o Web SDK nas páginas que deseja personalizar.
 
 ## Diagrama de Fluxo {#flow-diagram}
 
@@ -35,10 +35,10 @@ O diagrama de fluxo abaixo descreve a ordem das etapas executadas para fornecer 
 
 1. Todos os cookies existentes armazenados anteriormente pelo navegador, com o prefixo `kndctr_`, são incluídos na solicitação do navegador.
 1. O navegador da Web do cliente solicita a página da Web do servidor de aplicativos.
-1. Quando o servidor de aplicativos recebe a solicitação de página, ele faz uma solicitação `POST` ao [ponto de extremidade de coleta de dados interativa da API do servidor](../../server-api/interactive-data-collection.md) para buscar conteúdo de personalização. A solicitação `POST` contém um `event` e um `query`. Os cookies da etapa anterior, se disponíveis, estão incluídos na matriz `meta>state>entries`.
-1. A API do servidor retorna o conteúdo de personalização ao seu servidor de aplicativos.
-1. O servidor de aplicativos retorna uma resposta HTML para o navegador cliente, contendo os [cookies de identidade e de cluster](#cookies).
-1. Na página do cliente, o comando [!DNL Web SDK] `applyResponse` é chamado, transmitindo os cabeçalhos e o corpo da resposta da [!UICONTROL API do Servidor] da etapa anterior.
+1. Quando o servidor de aplicativos recebe a solicitação de página, ele faz uma solicitação `POST` ao [ponto de extremidade de coleta de dados interativa da API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) para buscar conteúdo de personalização. A solicitação `POST` contém um `event` e um `query`. Os cookies da etapa anterior, se disponíveis, estão incluídos na matriz `meta>state>entries`.
+1. A API do Edge Network retorna o conteúdo de personalização ao servidor de aplicativos.
+1. O servidor de aplicativos retorna uma resposta do HTML para o navegador cliente, contendo os [cookies de identidade e de cluster](#cookies).
+1. Na página do cliente, o comando [!DNL Web SDK] `applyResponse` é chamado, transmitindo os cabeçalhos e o corpo da resposta da [!UICONTROL API do Edge Network] da etapa anterior.
 1. O [!DNL Web SDK] renderiza ofertas do Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) e itens do Canal da Web do Journey Optimizer automaticamente, porque o sinalizador `renderDecisions` está definido como `true`.
 1. As ofertas [!DNL HTML]/[!DNL JSON] baseadas em formulário de destino e as experiências baseadas em código Journey Optimizer são aplicadas manualmente por meio do método `applyProposition`, para atualizar o [!DNL DOM] com base no conteúdo de personalização da proposta.
 1. Para ofertas [!DNL HTML]/[!DNL JSON] baseadas em formulário do Target e experiências baseadas em código Journey Optimizer, os eventos de exibição devem ser enviados manualmente para indicar quando o conteúdo retornado foi exibido. Isso é feito por meio do comando `sendEvent`.
@@ -50,11 +50,11 @@ Os cookies são usados para manter a identidade do usuário e as informações d
 | Cookie | Finalidade | Armazenado por | Enviado por |
 |---|---|---|---|
 | `kndctr_AdobeOrg_identity` | Contém detalhes da identidade do usuário. | Servidor de aplicativos | Servidor de aplicativos |
-| `kndctr_AdobeOrg_cluster` | Indica qual cluster de Edge Network deve ser usado para atender às solicitações. | Servidor de aplicativos | Servidor de aplicativos |
+| `kndctr_AdobeOrg_cluster` | Indica qual cluster do Edge Network deve ser usado para atender às solicitações. | Servidor de aplicativos | Servidor de aplicativos |
 
 ## Solicitar posicionamento {#request-placement}
 
-As solicitações de API do servidor são necessárias para obter apresentações e enviar uma notificação de exibição. Ao usar uma implementação híbrida, o servidor do aplicativo faz essas solicitações à API do servidor.
+As solicitações de API do Edge Network são necessárias para obter apresentações e enviar uma notificação de exibição. Ao usar uma implementação híbrida, o servidor de aplicativos faz essas solicitações à API do Edge Network.
 
 | Solicitação | Feito por |
 |---|---|
@@ -69,15 +69,15 @@ Quando você [configura uma sequência de dados](../../datastreams/overview.md) 
 
 A amostra dessa implementação usa dois fluxos de dados diferentes:
 
-* Uma sequência de dados configurada para o Analytics. Essa sequência de dados é usada para interações do SDK da Web.
-* Uma segunda sequência de dados sem uma configuração do Analytics. Essa sequência de dados é usada para solicitações de API do servidor. Você deve configurar essa sequência de dados com a mesma configuração de destino da sequência de dados configurada para o Analytics.
+* Uma sequência de dados configurada para o Analytics. Essa sequência de dados é usada para interações do Web SDK.
+* Uma segunda sequência de dados sem uma configuração do Analytics. Essa sequência de dados é usada para solicitações de API do Edge Network. Você deve configurar essa sequência de dados com a mesma configuração de destino da sequência de dados configurada para o Analytics.
 
 Dessa forma, a solicitação do lado do servidor não registra eventos do Analytics, mas as solicitações do lado do cliente registram. Isso faz com que as solicitações do Analytics sejam contadas com precisão.
 
 
 ## Solicitação do lado do servidor {#server-side-request}
 
-O exemplo de solicitação abaixo ilustra uma solicitação da API do servidor que o servidor de aplicativos poderia usar para recuperar o conteúdo de personalização.
+O exemplo de solicitação abaixo ilustra uma solicitação da API do Edge Network que o servidor de aplicativos poderia usar para recuperar o conteúdo de personalização.
 
 >[!IMPORTANT]
 >
@@ -162,12 +162,12 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 
 | Parâmetro | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
-| `dataStreamId` | `String` | Sim. | A ID do fluxo de dados que você usa para transmitir as interações para o Edge Network. Consulte a [visão geral das sequências de dados](../../datastreams/overview.md) para saber como configurar uma sequência de dados. |
-| `requestId` | `String` | Não | Uma ID aleatória para correlacionar solicitações internas do servidor. Se nenhum for fornecido, o Edge Network gera um e o retorna na resposta. |
+| `dataStreamId` | `String` | Sim. | A ID da sequência de dados usada para transmitir as interações para a Edge Network. Consulte a [visão geral das sequências de dados](../../datastreams/overview.md) para saber como configurar uma sequência de dados. |
+| `requestId` | `String` | Não | Uma ID aleatória para correlacionar solicitações internas do servidor. Se nenhum for fornecido, o Edge Network gerará um e o retornará na resposta. |
 
 ### Resposta do lado do servidor {#server-response}
 
-O exemplo de resposta abaixo mostra como pode ser a resposta da API do servidor.
+O exemplo de resposta abaixo mostra como pode ser a resposta da API do Edge Network.
 
 
 ```json

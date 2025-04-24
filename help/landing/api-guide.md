@@ -6,9 +6,9 @@ description: O Adobe Experience Platform fornece serviços de API que estão int
 role: Developer
 feature: API
 exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1472'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,7 @@ Para obter mais informações sobre endpoints específicos nas APIs do Experienc
 | [[!DNL Data Access] Guia de API](.././data-access/api.md) | A API [!DNL Data Access] permite que os desenvolvedores recuperem informações sobre conjuntos de dados assimilados na Experience Platform. Isso inclui acessar e baixar arquivos de conjunto de dados, recuperar informações de cabeçalho, listar lotes com falha e bem-sucedidos e baixar arquivos CSV/Parquet de visualização. |
 | [[!DNL Dataset Service] Guia de API](.././data-governance/labels/dataset-api.md) | A API de serviço do conjunto de dados permite aplicar e editar rótulos de uso para conjuntos de dados. Ela faz parte dos recursos de catálogo de dados da Adobe Experience Platform, mas é separada da API de serviço de catálogo que gerencia metadados do conjunto de dados. |
 | [[!DNL Data Hygiene API guide]](../hygiene/api/overview.md) | A API do [!DNL Data Hygiene] permite corrigir ou excluir programaticamente os dados pessoais armazenados dos clientes no Adobe Experience Platform, bem como programar datas de expiração para conjuntos de dados. |
-| [[!DNL Edge Network Server] Guia de API](../server-api/overview.md) | O [!DNL Edge Network Server API] pode ser usado para uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. O [!DNL Server API] pode ser usado em servidores, [!DNL IoT] dispositivos, decodificadores de sinais e uma variedade de outros dispositivos. |
+| [[!DNL Edge Network] Guia de API](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | O [!DNL Edge Network API] pode ser usado para uma variedade de casos de uso de coleta de dados, personalização, publicidade e marketing. O [!DNL Edge Network API] pode ser usado em servidores, [!DNL IoT] dispositivos, decodificadores de sinais e uma variedade de outros dispositivos. |
 | [[!DNL Identity Service] Guia de API](.././identity-service/api/getting-started.md) | A API do [!DNL Identity Service] permite que os desenvolvedores gerenciem a identificação entre dispositivos, canais e quase em tempo real dos clientes usando gráficos de identidade no Adobe Experience Platform. |
 | [[!DNL MTLS Service API guide]](../data-governance/mtls-api/overview.md) | A API [!DNL MTLS Service] permite recuperar com segurança certificados públicos emitidos pela Adobe para sua organização. |
 | [[!DNL Observability Insights] Guia de API](.././observability/api/overview.md) | [!DNL Observability Insights] é uma API RESTful que permite aos desenvolvedores expor as principais métricas de observabilidade no Adobe Experience Platform. Essas métricas fornecem insights sobre estatísticas de uso do Experience Platform, verificações de integridade de serviços do Experience Platform, tendências históricas e indicadores de desempenho para várias funcionalidades do Experience Platform. |

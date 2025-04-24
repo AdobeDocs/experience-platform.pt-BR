@@ -2,9 +2,9 @@
 title: Melhorar a coleta de dados com dados meteorológicos da DNL The Weather Channel
 description: Melhore os dados coletados por sequências de dados com dados meteorológicos do canal de clima DNL.
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
-source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '674'
+source-wordcount: '676'
 ht-degree: 68%
 
 ---
@@ -28,7 +28,7 @@ Há três tipos de dados disponíveis em [!DNL The Weather Channel]:
 Antes de usar os dados meteorológicos, verifique se os seguintes pré-requisitos estão sendo atendidos:
 
 * Você deve licenciar os dados meteorológicos que usará a partir de [!DNL The Weather Channel]. Eles serão então habilitados na sua conta.
-* Os dados meteorológicos estão disponíveis somente por meio de sequências de dados. Para usar os dados meteorológicos, você deve usar o [!DNL Web SDK], o [!DNL Mobile Edge Extension] ou a [API de Servidor](../../server-api/overview.md) para incluir esses dados.
+* Os dados meteorológicos estão disponíveis somente por meio de sequências de dados. Para usar os dados meteorológicos, você deve usar o [!DNL Web SDK], [!DNL Mobile Edge Extension] ou a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) para incluir esses dados.
 * Sua sequência de dados deve estar com a [[!UICONTROL Localização geográfica]](../configure.md#advanced-options) habilitada.
 * Adicione o [grupo de campos meteorológicos](#schema-configuration) ao esquema que você está usando.
 
@@ -66,11 +66,11 @@ No [!DNL Adobe Customer Journey Analytics], os dados meteorológicos estão disp
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-Os dados meteorológicos estão disponíveis na [Real-time Customer Data Platform](../../rtcdp/overview.md) para serem usados nos públicos-alvo. Os dados meteorológicos são anexados aos eventos.
+Os dados meteorológicos estão disponíveis na [Real-Time Customer Data Platform](../../rtcdp/overview.md) para serem usados nos públicos-alvo. Os dados meteorológicos são anexados aos eventos.
 
 ![Construtor de segmentos mostrando eventos meteorológicos](../assets/data-enrichment/weather/schema-builder.png)
 
-Como as condições meteorológicas mudam com frequência, o Adobe recomenda que você defina restrições de tempo para os públicos, como mostrado no exemplo acima. Um dia frio nos últimos dois dias tem muito mais impacto do que um dia frio 6 meses atrás.
+Como as condições meteorológicas mudam com frequência, a Adobe recomenda que você defina restrições de tempo para os públicos-alvo, conforme mostrado no exemplo acima. Um dia frio nos últimos dois dias tem muito mais impacto do que um dia frio 6 meses atrás.
 
 Consulte a [referência meteorológica](weather-reference.md) para ver os campos disponíveis.
 

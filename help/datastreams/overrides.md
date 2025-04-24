@@ -1,33 +1,33 @@
 ---
 title: Configurar substituições de sequência de dados
-description: Saiba como configurar substituições de sequência de dados na interface do usuário de sequências de dados e ativá-las por meio do SDK da Web ou do SDK móvel.
+description: Saiba como configurar substituições de fluxo de dados na interface do usuário de fluxos de dados e ativá-las por meio do Web SDK ou do Mobile SDK.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1083'
 ht-degree: 57%
 
 ---
 
 # Configurar substituições de sequência de dados
 
-As substituições de sequência de dados permitem definir configurações adicionais para as sequências de dados, que são transmitidas para o Edge Network por meio do SDK da Web ou do SDK móvel.
+As substituições de fluxos de dados permitem definir configurações adicionais para seus fluxos de dados, que são transmitidos para a Edge Network por meio da Web SDK ou da SDK móvel.
 
 Isso ajuda a acionar comportamentos de sequência de dados diferentes dos padrão, sem criar uma sequência de dados ou modificar as configurações existentes.
 
 A substituição da configuração da sequência de dados é um processo de duas etapas:
 
 1. Primeiro, você deve definir a substituição da configuração da sequência de dados na [página de configuração da sequência de dados](configure.md).
-2. Em seguida, você deve enviar as sobreposições para o Edge Network de uma das seguintes maneiras:
-   * Por meio dos comandos `sendEvent` ou `configure` [SDK da Web](#send-overrides).
-   * Por meio da [extensão de tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) do SDK da Web.
-   * Por meio da API [sendEvent](#send-overrides) do SDK móvel ou usando [Regras](#send-overrides).
+2. Em seguida, você deve enviar as sobreposições para a Edge Network de uma das seguintes maneiras:
+   * Por meio dos comandos `sendEvent` ou `configure` [Web SDK](#send-overrides).
+   * Por meio da [extensão de tag](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) do Web SDK.
+   * Por meio da API [sendEvent](#send-overrides) do Mobile SDK ou usando [Regras](#send-overrides).
 
 Este artigo explica o processo completo para criar cada tipo de substituição de configuração de sequência de dados compatível.
 
 >[!IMPORTANT]
 >
->As substituições de sequências de dados só têm suporte para integrações do [SDK da Web](../web-sdk/home.md) e do [SDK móvel](https://developer.adobe.com/client-sdks/home/). Atualmente, as integrações da [API de servidor](../server-api/overview.md) não oferecem suporte a substituições de sequência de dados.
+>As substituições de sequências de dados só têm suporte para integrações do [Web SDK](../web-sdk/home.md) e do [Mobile SDK](https://developer.adobe.com/client-sdks/home/). Atualmente, as integrações da [API de Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) não oferecem suporte a substituições de sequência de dados.
 ><br>
 >As substituições de sequência de dados devem ser usadas quando você precisa que dados diferentes sejam enviados para sequências de dados diferentes. Não use substituições de fluxo de dados para casos de uso de personalização ou dados de consentimento.
 
@@ -45,7 +45,7 @@ Um caso de uso comum pode ser o envio de dados para um fluxo de dados específic
 
 **Diferenciação de perfis e identidades para diferentes unidades de negócios**
 
-Uma empresa com várias unidades de negócios deseja usar várias sandboxes Experience Platform para armazenar dados específicos de cada unidade de negócios.
+Uma empresa com várias unidades de negócios deseja usar várias sandboxes da Experience Platform para armazenar dados específicos de cada unidade de negócios.
 
 Em vez de enviar dados para uma sequência de dados padrão, a empresa pode usar substituições de sequência de dados para garantir que cada unidade de negócios tenha sua própria sequência de dados para receber dados.
 
@@ -68,7 +68,7 @@ Depois de criar a sequência de dados, edite o serviço [Adobe Target](configure
 
 Depois de adicionar as substituições desejadas, salve as configurações da sequência de dados.
 
-Agora as substituições de sequência de dados do Adobe Target devem estar configuradas. Agora você pode [enviar as substituições para o Edge Network pelo SDK da Web ou SDK móvel](#send-overrides).
+Agora as substituições de sequência de dados do Adobe Target devem estar configuradas. Agora você pode [enviar as substituições para a Edge Network por meio do Web SDK ou do Mobile SDK](#send-overrides).
 
 ### Substituições de sequência de dados para o Adobe Analytics {#analytics-overrides}
 
@@ -82,7 +82,7 @@ Selecione **[!UICONTROL Mostrar modo de lote]** para habilitar a edição em lot
 
 Depois de adicionar as substituições desejadas, salve as configurações da sequência de dados.
 
-Agora as substituições de sequência de dados do Adobe Analytics devem estar configuradas. Agora você pode [enviar as substituições para o Edge Network pelo SDK da Web ou SDK móvel](#send-overrides).
+Agora as substituições de sequência de dados do Adobe Analytics devem estar configuradas. Agora você pode [enviar as substituições para a Edge Network por meio do Web SDK ou do Mobile SDK](#send-overrides).
 
 ### Substituições de sequência de dados para conjuntos de dados de eventos da Experience Platform {#event-dataset-overrides}
 
@@ -94,7 +94,7 @@ Depois de criar a sequência de dados, edite o serviço [Adobe Experience Platfo
 
 Depois de adicionar as substituições desejadas, salve as configurações da sequência de dados.
 
-Agora as substituições de sequência de dados da Adobe Experience Platform devem estar configuradas. Agora você pode [enviar as substituições para o Edge Network pelo SDK da Web ou SDK móvel](#send-overrides).
+Agora as substituições de sequência de dados da Adobe Experience Platform devem estar configuradas. Agora você pode [enviar as substituições para a Edge Network por meio do Web SDK ou do Mobile SDK](#send-overrides).
 
 ### Substituições de sequência de dados para containers de sincronização de ID de terceiros {#container-overrides}
 
@@ -112,14 +112,14 @@ Em seguida, use a seção **[!UICONTROL Substituições de ID de container]** pa
 
 Depois de adicionar as substituições desejadas, salve as configurações da sequência de dados.
 
-Agora as substituições do container de sincronização de ID devem estar configuradas. Agora você pode [enviar as substituições para o Edge Network pelo SDK da Web ou SDK móvel](#send-overrides).
+Agora as substituições do container de sincronização de ID devem estar configuradas. Agora você pode [enviar as substituições para a Edge Network por meio do Web SDK ou do Mobile SDK](#send-overrides).
 
-## Enviar as sobreposições para o Edge Network {#send-overrides}
+## Enviar as sobreposições para a Edge Network {#send-overrides}
 
-Depois de configurar as substituições de fluxo de dados na interface da Coleção de dados, você pode enviar as substituições para o Edge Network por meio do SDK da Web ou do SDK móvel.
+Depois de configurar as substituições de fluxo de dados na interface da Coleção de dados, você pode enviar as substituições para a Edge Network por meio da Web SDK ou do Mobile SDK.
 
-* **SDK da Web**: consulte [substituições da configuração da sequência de dados](../web-sdk/commands/datastream-overrides.md#library) para obter instruções sobre a extensão da marca e exemplos de código de biblioteca da JavaScript.
-* **SDK móvel**: você pode enviar substituições de ID de sequência de dados usando a [API sendEvent](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) ou usando as [Regras](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
+* **Web SDK**: consulte [substituições da configuração da sequência de dados](../web-sdk/commands/datastream-overrides.md#library) para obter instruções sobre a extensão da marca e exemplos de código da biblioteca JavaScript.
+* **SDK Móvel**: você pode enviar substituições de ID de sequência de dados usando a [API sendEvent](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) ou usando as [Regras](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/).
 
 ## Exemplo de conteúdo {#payload-example}
 

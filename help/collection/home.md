@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da coleção de dados
 description: Saiba mais sobre as várias tecnologias envolvidas na coleta de dados sobre as experiências do cliente no Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '479'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -29,7 +29,7 @@ A coleta de dados se concentra na descoberta e na acessibilidade de conjuntos de
 * [Encaminhamento de eventos](../tags/ui/event-forwarding/overview.md)
 * [SDK da Web da Adobe Experience Platform](../web-sdk/home.md)
 * [SDK móvel da Adobe Experience Platform](https://developer.adobe.com/client-sdks/documentation/)
-* [API do servidor da rede de borda](../server-api/overview.md)
+* [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/)
 * [Adobe Experience Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob?hl=en)
 * [Experience Platform Assurance](../assurance/home.md)
 

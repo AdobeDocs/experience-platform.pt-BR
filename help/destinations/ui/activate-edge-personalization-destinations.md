@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de personalização de borda
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de personalização de borda para casos de uso de personalização de mesma página e próxima página.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '1961'
+source-wordcount: '1964'
 ht-degree: 2%
 
 ---
@@ -150,9 +150,9 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 
 >[!IMPORTANT]
 >
->Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, o destino **[!UICONTROL Personalization Personalizado]** exige que você use a [API do Edge Network Server](../../server-api/overview.md) ao configurar o destino para personalização baseada em atributos. Todas as chamadas da API do Servidor devem ser feitas em um [contexto autenticado](../../server-api/authentication.md).
+>Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, o destino **[!UICONTROL Personalization Personalizado]** exige que você use a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/) ao configurar o destino para personalização baseada em atributos. Todas as chamadas de API do Edge Network devem ser feitas em um [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/).
 >
-><br>Se já estiver usando o Web SDK ou o Mobile SDK para sua integração, você poderá recuperar atributos por meio da API do servidor adicionando uma integração do lado do servidor.
+><br>Se já estiver usando o Web SDK ou o Mobile SDK para sua integração, você poderá recuperar atributos por meio da API do Edge Network adicionando uma integração do lado do servidor.
 >
 ><br>Se você não seguir os requisitos acima, a personalização será baseada somente na associação ao público-alvo.
 

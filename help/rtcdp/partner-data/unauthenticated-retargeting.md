@@ -1,15 +1,16 @@
 ---
-title: Redirecionamento externo de visitantes não autenticados
+title: Redirecionamento não autenticado do lado do servidor
 description: Saiba como redirecionar usuários não autenticados usando ECIDs
 feature: Use Cases, Customer Acquisition
-source-git-commit: 672b15b0c36efbf3b7d62ec616f254fffe3dbb81
+exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# Redirecionamento não autenticado {#unauthenticated-retargeting}
+# Redirecionamento não autenticado do lado do servidor {#unauthenticated-retargeting}
 
 À medida que os cookies de terceiros perdem a eficácia, as empresas estão fazendo a transição para soluções sem cookies para engajamento e redirecionamento personalizados. O redirecionamento externo permite que as empresas atinjam usuários de alto propósito com base em suas interações anteriores, sem depender do JavaScript do lado do cliente.
 

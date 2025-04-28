@@ -2,9 +2,9 @@
 title: Filtrar dados em nível de linha para uma Source usando a API do serviço de fluxo
 description: Este tutorial aborda as etapas sobre como filtrar dados no nível da origem usando a API do Serviço de fluxo
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67abd5cda9cff1da8757ef691ebbf27e9a5550c5
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1825'
 ht-degree: 5%
 
 ---
@@ -15,11 +15,12 @@ ht-degree: 5%
 >
 >Atualmente, o suporte para filtragem de dados em nível de linha está disponível apenas para as seguintes fontes:
 >
+>* [[Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
+>* [[!DNL Marketo Engage] atividades padrão](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
 >* [[!DNL Salesforce]](../../connectors/crm/salesforce.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
->* [[!DNL Marketo Engage] atividades padrão](../../connectors/adobe-applications/marketo/marketo.md)
 
 Leia este guia para obter as etapas sobre como filtrar dados de nível de linha para uma fonte usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 

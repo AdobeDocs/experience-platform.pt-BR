@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7e1eee48b45311f9ac358496e46ca8980df0112b
 workflow-type: tm+mt
-source-wordcount: '2276'
+source-wordcount: '2767'
 ht-degree: 1%
 
 ---
@@ -104,6 +104,50 @@ Use o Editor de consultas para gravar e executar consultas sem usar um cliente e
 
 ![O espaço de trabalho do Editor de Consultas.](../images/ui/overview/query-editor.png)
 
+### Baixar resultados da consulta {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Os recursos de download estão disponíveis somente para clientes com o complemento Data Distiller. Para saber mais sobre o Data Distiller, entre em contato com o representante da Adobe.
+
+Agora é possível baixar os resultados da consulta diretamente da interface do usuário do Editor de consultas. Após uma execução bem-sucedida da consulta, é possível baixar a saída no formato de arquivo CSV, XLSX ou JSON. Essa funcionalidade simplifica os fluxos de trabalho das equipes de marketing e análise, permitindo acesso imediato aos resultados da consulta para análise offline, relatórios e processos baseados no Excel.
+
+Para baixar os resultados da consulta, selecione **[!UICONTROL Download]** no canto superior direito da guia Editor de Consultas **[!UICONTROL Resultado]**. Em seguida, escolha **[!UICONTROL CSV]**, **[!UICONTROL XLSX]** ou **[!UICONTROL JSON]** no menu suspenso. O arquivo é baixado automaticamente no computador local.
+
+>[!NOTE]
+>
+>O botão **[!UICONTROL Download]** aparece somente quando uma consulta retorna resultados. Se nenhum registro for retornado, a guia **[!UICONTROL Resultado]** mostrará uma mensagem &#39;Nenhum resultado&#39; e a opção de download será desabilitada.
+
+![A guia de resultados do Editor de Consultas com Download e o menu suspenso realçado.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Ao abrir um arquivo CSV no Excel, você poderá ver o seguinte aviso:<br>&quot;Possível perda de dados. Alguns recursos poderão ser perdidos se você salvar esta pasta de trabalho no formato delimitado por vírgula (.csv). Para preservar esses recursos, salve-os em um formato de arquivo do Excel.&quot;<br>Além disso, esteja ciente de que a formatação de data e hora pode variar de acordo com o tipo de arquivo. Os arquivos CSV mantêm o formato mostrado nos resultados da consulta, enquanto os arquivos XLSX podem aplicar automaticamente a formatação localizada no Excel.
+
+### Exibir resultados em tela inteira {#view-results}
+
+Após executar uma consulta bem-sucedida, selecione **[!UICONTROL Exibir resultados]** na guia **[!UICONTROL Resultado]** para abrir uma exibição tabulada em tela inteira dos resultados.
+
+A visualização em tela cheia exibe a saída em uma grade redimensionável, facilitando a análise de grandes conjuntos de dados e a verificação em colunas. Esse modo de visualização é especialmente útil ao analisar tabelas amplas ou revisar detalhes no nível da linha.
+
+>[!NOTE]
+>
+>A visualização é somente leitura e não modifica a consulta ou o conjunto de dados.
+
+![A caixa de diálogo de visualização em tela cheia com Exibir resultados selecionados.](../images/ui/overview/view-results-fullscreen.png)
+
+### Copiar resultados {#copy-results}
+
+Use o recurso de cópia aprimorado no Editor de consultas para copiar rapidamente os resultados da consulta como valores separados por vírgula (CSV). Cole facilmente os dados copiados em aplicativos de planilha, como o Excel, para fazer análises adicionais. Essa funcionalidade melhora a legibilidade, preserva a formatação e simplifica os fluxos de trabalho de validação e relatórios sem depender de ferramentas de terceiros.
+
+Você pode copiar os resultados da consulta da guia [!UICONTROL Resultado] ou da visualização dos resultados em tela cheia. Na guia **[!UICONTROL Resultado]**, selecione o ícone de cópia (![Ícone de cópia.](../../images/icons/copy.png)) para copiar todos os resultados da consulta para a área de transferência. Na guia Resultados do Editor de consultas, selecione linhas individuais ou use o cabeçalho da coluna da caixa de seleção para selecionar todas as linhas. Selecione uma única linha para ativar o ícone de cópia.
+
+![A guia de resultados do Editor de Consultas com o ícone de cópia realçado.](../images/ui/overview/query-editor-copy-icon.png)
+
+Como alternativa, selecione **[!UICONTROL Exibir resultados]** para abrir a visualização em tela cheia. Nesta caixa de diálogo, selecione linhas individuais ou use a caixa de seleção no canto superior esquerdo para selecionar todas as linhas e, em seguida, selecione o ícone copiar (![Ícone copiar.](../../images/icons/copy.png)) para copiar os dados selecionados.
+
+![A caixa de diálogo de visualização em tela cheia com linhas de resultado selecionadas e o ícone de cópia destacado.](../images/ui/overview/results-copy.png)
+
 ## Consultas programadas {#scheduled-queries}
 
 As consultas que já foram salvas como um modelo podem ser agendadas para execução em uma cadência regular. Ao agendar uma consulta, você pode escolher a frequência de execuções, as datas de início e término, o dia da semana em que a consulta agendada é executada, bem como o conjunto de dados para o qual exportar a consulta. Os agendamentos de consulta são definidos com o Editor de consultas.
@@ -113,8 +157,6 @@ Para saber como agendar uma consulta por meio da interface, consulte o [guia de 
 Depois que uma consulta é agendada, ela aparece na lista de consultas agendadas na guia [!UICONTROL Consultas agendadas]. Detalhes completos sobre a consulta, execuções, criador e horários podem ser encontrados selecionando uma consulta agendada na lista.
 
 ![O espaço de trabalho Consultas com a guia Consultas Agendadas foi realçado e exibe linhas de agendamentos de consulta.](../images/ui/overview/scheduled-queries.png)
-
-<!--  -->
 
 | Coluna | Descrição |
 | --- | --- |

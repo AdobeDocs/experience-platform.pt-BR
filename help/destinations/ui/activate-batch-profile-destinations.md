@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 11961e291188d509609a036f41084f4487cab584
+source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
-source-wordcount: '4517'
+source-wordcount: '4596'
 ht-degree: 10%
 
 ---
@@ -125,7 +125,7 @@ Para editar vários agendamentos ao mesmo tempo, marque os públicos usando as c
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Ativar após avaliação do público-alvo"
->abstract="A ativação é executada imediatamente após a conclusão do processo diário de segmentação. Isso garante que os perfis mais atualizados sejam exportados."
+>abstract="<p>A ativação é executada imediatamente após a conclusão do processo diário de segmentação. Isso garante que os perfis mais atualizados sejam exportados.</p><p>A opção para exportar perfis após a avaliação do público-alvo é <i>não</i>, disponível para a frequência de exportação semanal e mensal.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -140,6 +140,8 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç�
 
    * **[!UICONTROL Uma vez]**: agendar uma exportação de arquivo completa sob demanda única.
    * **[!UICONTROL Diariamente]**: agendar exportações completas de arquivo uma vez por dia, todos os dias, na hora que você especificar.
+   * **[!UICONTROL Semanalmente]**: selecione a data de início e as exportações subsequentes ocorrerão nesse dia da semana até a data de término selecionada.
+   * **[!UICONTROL Monthly]**: selecione a data de início e as exportações subsequentes ocorrerão nessa data do mês até a data de término selecionada. Para meses com menos de 30 ou 31 dias, a exportação ocorre no último dia do mês.
 
 2. Use o **[!UICONTROL Time]** para selecionar se a exportação deve ocorrer imediatamente após a avaliação do público-alvo ou de acordo com um agendamento, em um horário especificado. Ao selecionar a opção **[!UICONTROL Agendado]**, você pode usar o seletor para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 
@@ -187,6 +189,7 @@ Selecione **[!UICONTROL Exportar arquivos incrementais]** para acionar uma expor
 
    * **[!UICONTROL Diariamente]**: agendar exportações de arquivos incrementais uma vez por dia, todos os dias, no horário especificado.
    * **[!UICONTROL Por hora]**: agende exportações de arquivos incrementais a cada 3, 6, 8 ou 12 horas.
+
 
 2. Use o seletor **[!UICONTROL Hora]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 

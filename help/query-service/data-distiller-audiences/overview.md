@@ -2,10 +2,10 @@
 title: Criar públicos-alvo usando SQL
 description: Saiba como usar a extensão de público-alvo SQL no Data Distiller do Adobe Experience Platform para criar, gerenciar e publicar públicos-alvo usando comandos SQL. Este guia aborda todos os aspectos do ciclo de vida do público-alvo, incluindo a criação, atualização e exclusão de perfis e o uso de definições de público-alvo orientadas por dados para direcionar destinos baseados em arquivos.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9e16282f9f10733fac9f66022c521684f8267167
 workflow-type: tm+mt
-source-wordcount: '1485'
-ht-degree: 1%
+source-wordcount: '1833'
+ht-degree: 2%
 
 ---
 
@@ -100,6 +100,97 @@ O exemplo a seguir demonstra como adicionar perfis a um público-alvo existente 
 INSERT INTO Audience aud_test
 SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
+
+### Substituir dados do público-alvo (INSERIR SUBSTITUIR) {#replace-audience}
+
+Use o comando `INSERT OVERWRITE INTO` para substituir todos os perfis existentes em um público-alvo pelos resultados de uma nova consulta SQL. Esse comando é útil para gerenciar segmentos de público-alvo dinâmicos, permitindo atualizar totalmente o conteúdo de um público-alvo em uma única etapa.
+
+>[!AVAILABILITY]
+>
+>O comando `INSERT OVERWRITE INTO` está disponível somente para clientes do Data Distiller. Para saber mais sobre o complemento Data Distiller, entre em contato com o representante da Adobe.
+
+Ao contrário de [`INSERT INTO`](#add-profiles-to-audience), que adiciona ao público-alvo atual, `INSERT OVERWRITE INTO` remove todos os membros existentes do público-alvo e insere somente aqueles retornados pela consulta. Isso proporciona maior controle e flexibilidade ao gerenciar públicos-alvo que exigem atualizações frequentes ou completas.
+
+Use o modelo de sintaxe a seguir para substituir um público-alvo por um novo conjunto de perfis:
+
+```sql
+INSERT OVERWRITE INTO audience_name
+SELECT select_query
+```
+
+**Parâmetros**
+
+A tabela abaixo explica os parâmetros necessários para o comando `INSERT OVERWRITE INTO`:
+
+| Parâmetro | Descrição |
+|-----------|-------------|
+| `audience_name` | O nome do público criado com o comando `CREATE AUDIENCE`. |
+| `select_query` | Uma instrução `SELECT` que define os perfis a serem incluídos no público. |
+
+**Exemplo:**
+
+Neste exemplo, o público-alvo `audience_monthly_refresh` é completamente substituído pelos resultados da query. Todos os perfis não retornados pelo query são removidos do público-alvo.
+
+>[!NOTE]
+>
+>Deve haver apenas um upload de lote associado ao público-alvo para que as operações de substituição funcionem corretamente.
+
+```sql
+INSERT OVERWRITE INTO audience_monthly_refresh
+SELECT user_id FROM latest_transaction_summary WHERE total_spend > 100;
+```
+
+#### Comportamento de substituição de público-alvo no Perfil do cliente em tempo real
+
+Ao substituir um público-alvo, o Perfil do cliente em tempo real aplica a seguinte lógica para atualizar a associação do perfil:
+
+- Os perfis que aparecem somente no novo lote são marcados como inseridos.
+- Os perfis que existiam somente no lote anterior são marcados como encerrados.
+- Os perfis presentes em ambos os lotes são deixados inalterados (nenhuma operação é executada).
+
+Isso garante que as atualizações de público sejam refletidas com precisão nos sistemas e fluxos de trabalho downstream.
+
+**Exemplo de cenário**
+
+Se uma audiência `A1` originalmente contém:
+
+| ID | NOME |
+|----|------|
+| A | Tomada |
+| B | John |
+| C | Martha |
+
+E a consulta de substituição retorna:
+
+| ID | NOME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+Em seguida, o público-alvo atualizado conterá:
+
+| ID | NOME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+O perfil B é removido, o perfil A é atualizado e o perfil C permanece inalterado.
+
+Se a consulta de substituição incluir um novo perfil:
+
+| ID | NOME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
+
+Então, o público final será:
+
+| ID | NOME |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
 
 ### Exemplo de público-alvo do modelo RFM {#rfm-model-audience-example}
 

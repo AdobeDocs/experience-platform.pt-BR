@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Práticas Recomendadas Para Modelagem De Dados
 description: Este documento fornece uma introdução aos esquemas do Experience Data Model (XDM) e aos componentes, princípios e práticas recomendadas para a composição de esquemas a serem usados no Adobe Experience Platform.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '3224'
+source-wordcount: '3236'
 ht-degree: 1%
 
 ---
@@ -251,7 +251,7 @@ Veja a seguir uma coleção de sugestões para manter a integridade dos dados ao
 * **Aplicar padrões para valores consistentes**: se os valores de identidade seguirem um padrão específico, você deverá usar a configuração **[!UICONTROL Padrão]** para impor essa restrição. Essa configuração pode incluir regras como somente dígitos, maiúsculas ou minúsculas ou combinações de caracteres específicas. Use expressões regulares para corresponder padrões em suas cadeias de caracteres.
 * **Limitar eVars em esquemas do Analytics**: normalmente, um esquema do Analytics deve ter apenas uma eVar designada como uma identidade. Se você pretende usar mais de uma eVar como identidade, verifique se a estrutura de dados pode ser otimizada.
 * **Garantir a exclusividade de um campo selecionado**: o campo escolhido deve ser exclusivo em comparação à identidade primária no esquema. Se não estiver, não marque-a como uma identidade. Por exemplo, se vários clientes puderem fornecer o mesmo endereço de email, esse namespace não será uma identidade adequada. Esse princípio também se aplica a outros namespaces de identidade, como números de telefone. Marcar um campo não exclusivo como uma identidade pode causar o recolhimento indesejado do perfil.
-* **Verificar comprimento mínimo da cadeia de caracteres**: todos os campos da cadeia de caracteres devem ter pelo menos um caractere, pois os valores da cadeia de caracteres nunca devem estar vazios. Valores nulos para campos não obrigatórios, no entanto, são aceitáveis.
+* **Verificar comprimento mínimo da cadeia de caracteres**: todos os campos da cadeia de caracteres devem ter pelo menos um caractere, pois os valores da cadeia de caracteres nunca devem estar vazios. Valores nulos para campos não obrigatórios, no entanto, são aceitáveis. Por padrão, os novos campos de sequência recebem um comprimento mínimo de um.
 
 ## Próximas etapas
 

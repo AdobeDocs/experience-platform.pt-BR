@@ -1,21 +1,21 @@
 ---
-description: Saiba como usar o painel de monitoramento para monitorar dados assimilados de fontes.
-title: Monitorar fluxos de dados para fontes na interface do usuário
+description: Saiba como usar o painel de monitoramento para monitorar dados assimilados no data lake.
+title: Monitorar assimilação do data lake
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 11%
+source-wordcount: '1303'
+ht-degree: 10%
 
 ---
 
-# Monitorar fluxos de dados de fontes na interface
+# Monitorar assimilação do data lake
 
 >[!IMPORTANT]
 >
 >As fontes de transmissão, como a [fonte de API HTTP](../../sources/connectors/streaming/http.md), não têm suporte atualmente no painel de monitoramento. Nesse momento, você só pode usar o painel para monitorar origens de lote.
 
-Leia este documento para saber como usar o painel de monitoramento para monitorar seus fluxos de dados de fontes na interface do usuário do Experience Platform.
+Leia este documento para saber como usar o painel de monitoramento para monitorar a assimilação de data lake na interface do usuário do Experience Platform.
 
 ## Introdução {#get-started}
 
@@ -28,7 +28,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Perfil de cliente em tempo real](../../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
 * [Sandboxes](../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Monitore os dados das suas fontes usando o painel de monitoramento
+## Usar o painel de monitoramento para assimilação de data lake
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -42,15 +42,11 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 >abstract="O processamento de fontes contém informações sobre o status da atividade de dados e métricas no serviço do data lake, incluindo registros assimilados e registros que falharam. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
-<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+Selecione **[!UICONTROL Data lake]** no cabeçalho principal do painel de monitoramento para exibir sua taxa de assimilação de data lake.
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
+![O painel de monitoramento com o cartão de origens selecionado.](../assets/ui/monitor-sources/data-lake.png)
 
-No painel de monitoramento, selecione [!UICONTROL Fontes] no cabeçalho principal para atualizar seu painel com uma exibição da taxa de assimilação do fluxo de dados de suas fontes.
-
-![O painel de monitoramento com o cartão de origens selecionado.](../assets/ui/monitor-sources/sources.png)
-
-O gráfico [!UICONTROL Taxa de assimilação] exibe a taxa de assimilação de dados com base no intervalo de tempo configurado. Por padrão, o painel de monitoramento exibe a taxa de assimilação das últimas 24 horas. Para obter etapas sobre como configurar seu intervalo de tempo, leia o guia em [configurando o intervalo de tempo de monitoramento](monitor.md#configure-monitoring-time-frame).
+O gráfico [!UICONTROL Taxa de assimilação] exibe a taxa de assimilação de dados com base no intervalo de tempo configurado. Por padrão, o painel de monitoramento exibe taxas de assimilação das últimas 24 horas. Para obter etapas sobre como configurar seu intervalo de tempo, leia o guia em [configurando o intervalo de tempo de monitoramento](monitor.md#configure-monitoring-time-frame).
 
 O gráfico é ativado para exibir por padrão. Para ocultar o gráfico, selecione **[!UICONTROL Métricas e gráficos]** para desabilitar a alternância e ocultar o gráfico.
 
@@ -132,11 +128,9 @@ Use a seção [!UICONTROL Registros com falha] para exibir métricas em registro
 >
 >Você só poderá usar diagnósticos de erro se o recurso tiver sido habilitado durante o processo de criação da conexão de origem.
 
-![Painel de erros de execução do fluxo de dados.](../assets/ui/monitor-sources/errors.png)
-
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você monitorou com êxito o fluxo de dados de assimilação no nível da origem usando o painel **[!UICONTROL Monitoramento]**. Você também identificou com sucesso erros que contribuíram para a falha dos fluxos de dados durante o processo de assimilação. Consulte os seguintes documentos para obter mais detalhes:
+Seguindo este tutorial, você aprendeu a monitorar a taxa de assimilação do data lake usando o painel **[!UICONTROL Monitoramento]**. Você também aprendeu a identificar erros que causam falhas de fluxo de dados durante a assimilação. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Monitorando dados de identidade](./monitor-identities.md).
 * [Monitorando dados do perfil](./monitor-profiles.md).

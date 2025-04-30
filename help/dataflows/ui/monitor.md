@@ -2,9 +2,9 @@
 title: Visão geral do painel de monitoramento
 description: Saiba como usar o painel de monitoramento na interface do usuário do Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cca405c58551a52a044ac513921298637974e88e
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -63,12 +63,6 @@ Selecione **[!UICONTROL Cliente e conta]** para atualizar seu painel e exibir m�
 
 ![O tipo de dados de monitoramento definido como &quot;Cliente e Conta&quot;.](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB Prospecto]
-
-Selecione **[!UICONTROL Prospecto]** para atualizar seu painel e exibir métricas em dados de prospecção que foram assimilados na Experience Platform durante um determinado período. **Observação**: você só poderá exibir atividades de tipos de dados de prospecto se estiver [qualificado para dados de prospecto](../../rtcdp/partner-data/prospecting.md).
-
-![O tipo de dados de monitoramento definido como &quot;Prospecto&quot;.](../assets/ui/monitor-overview/prospect.png)
-
 >[!TAB Enriquecimento do perfil da conta]
 
 Selecione **[!UICONTROL Enriquecimento do perfil da conta]** para atualizar seu painel e exibir as métricas nos dados de enriquecimento do perfil. **Observação**: você só poderá exibir métricas de enriquecimento do perfil da conta se tiver direito a [dados B2B](../../rtcdp/b2b-tutorial.md).
@@ -81,11 +75,11 @@ Use o cabeçalho superior do painel para obter uma experiência de monitoramento
 
 >[!BEGINTABS]
 
->[!TAB Fontes]
+>[!TAB Data lake]
 
-Selecione **[!UICONTROL Fontes]** para exibir as métricas sobre a taxa de assimilação das fontes. Leia o guia em [dados de fontes de monitoramento](monitor-sources.md) para obter mais informações.
+Selecione **[!UICONTROL Data lake]** para exibir métricas sobre sua taxa de assimilação de data lake. Leia o manual sobre [monitoramento da assimilação do data lake](monitor-sources.md) para obter mais informações.
 
-![O painel de monitoramento na interface do usuário com o cartão de origens selecionado.](../assets/ui/monitor-overview/sources.png)
+![O painel de monitoramento na interface do usuário com o cartão do data lake selecionado.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB Identidades]
 
@@ -133,8 +127,12 @@ Quando terminar, selecione **[!UICONTROL Aplicar]**.
 
 Agora, ao ler este documento, você pode navegar pelo painel de monitoramento na interface do usuário do. Para obter informações sobre como monitorar dados de um serviço Experience Platform específico, leia a documentação abaixo:
 
-* [Monitorar dados de fontes](monitor-sources.md).
+* [Monitorar assimilação de data lake](monitor-sources.md).
 * [Monitorar dados de identidade](monitor-identities.md).
 * [Monitorar dados de perfil](monitor-profiles.md).
 * [Monitorar dados de público-alvo](monitor-audiences.md).
 * [Monitorar dados de destinos](monitor-destinations.md).
+
+<!-- >[!TAB Prospect]
+
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->

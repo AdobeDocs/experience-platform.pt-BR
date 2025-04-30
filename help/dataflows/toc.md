@@ -4,10 +4,10 @@ user-guide-title: Guia de fluxos de dados
 user-guide-description: Saiba mais sobre fluxos de dados e como configurá-los em diferentes serviços.
 feature: Dataflows
 role: Developer
-source-git-commit: 8d7bb7058df67526710936e330c69e524d18b709
+source-git-commit: d4c1c9fce7ef5445c8f043d1f766603235b9bd88
 workflow-type: tm+mt
 source-wordcount: '60'
-ht-degree: 23%
+ht-degree: 26%
 
 ---
 
@@ -15,12 +15,12 @@ ht-degree: 23%
 # Fluxos de dados {#dataflows}
 
 - [Visão geral dos fluxos de dados](./home.md)
-- Guias de API {#api}
+- Guias da API {#api}
    - [Monitorar fluxos de dados](./api/monitor.md)
    - [Classificar e filtrar respostas da API](./api/sort-and-filter.md)
-- Guias de interface do usuário {#ui}
+- Guias de interface {#ui}
    - [Visão geral do painel de monitoramento](./ui/monitor.md)
-   - [Monitorar fluxos de dados em origens](./ui/monitor-sources.md)
+   - [Monitorar assimilação do data lake](./ui/monitor-sources.md)
    - [Monitorar fluxos de dados em identidades](./ui/monitor-identities.md)
    - [Monitorar fluxos de dados em Perfis](./ui/monitor-profiles.md)
    - [Monitorar fluxos de dados em públicos](./ui/monitor-audiences.md)

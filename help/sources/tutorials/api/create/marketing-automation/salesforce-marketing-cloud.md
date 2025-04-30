@@ -2,9 +2,9 @@
 title: Criar uma conexão básica do Salesforce Marketing Cloud usando a API do serviço de fluxo
 description: Saiba como autenticar sua conta do Salesforce Marketing Cloud no Experience Platform usando a API do Serviço de fluxo.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '544'
 ht-degree: 4%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 >[!WARNING]
 >
->A origem [!DNL Salesforce Marketing Cloud] será substituída no final de junho de 2025.
+>A origem [!DNL Salesforce Marketing Cloud] será substituída em janeiro de 2026. Uma nova fonte será lançada ainda este ano como alternativa. Depois que a nova origem for lançada, você deverá planejar migrar para a nova origem criando novas conexões de conta e fluxos de dados antes do final de janeiro de 2026.
 
 Uma conexão base representa a conexão autenticada entre uma origem e o Adobe Experience Platform.
 

@@ -1,8 +1,9 @@
 ---
 title: Visão geral do MariaDB Source Connector
 description: Saiba como conectar o MariaDB ao Adobe Experience Platform usando APIs ou a interface do usuário.
+last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 37b8f991-dca9-4f85-9bdd-4927a015e4c0
-source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
+source-git-commit: 04634c6edc13d8b8da01a01077161866235c61b1
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 0%

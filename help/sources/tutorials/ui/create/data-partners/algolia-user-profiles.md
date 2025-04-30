@@ -1,19 +1,17 @@
 ---
 title: Conectar perfis de usuário da Algolia ao Experience Platform usando a interface do
 description: Saiba como conectar a intenção dos usuários da Algólia ao Experience Platform
-hide: true
-hidefromtoc: true
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1136'
 ht-degree: 1%
 
 ---
 
 # Assimilar dados do [!DNL Algolia User Profiles] para a Experience Platform usando a interface do
 
-Leia este tutorial para saber como assimilar dados de pagamentos de sua conta do [!DNL Algolia User Profiles] para a Adobe Experience Platform usando a interface do usuário.
+Leia este tutorial para saber como assimilar dados da sua conta do [!DNL Algolia User Profiles] na Adobe Experience Platform usando a interface do usuário.
 
 ## Introdução
 

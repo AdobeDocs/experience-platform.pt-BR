@@ -4,20 +4,28 @@ description: As notas de versão mais recentes do Adobe Experience Platform Debu
 keywords: debugger;extensão do experience platform debugger;chrome;extensão;notas de versão
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: e82cd0b24504f807f7511aae1f5a0c9d77a40f74
+source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 98%
+source-wordcount: '850'
+ht-degree: 93%
 
 ---
 
 # Notas de versão do Adobe Experience Platform Debugger
 
+## Version 1.6.3 - April 30, 2025
+
+### Correções e melhorias
+
+* Fixed an issue where the Debugger would prevent DTM and Launch functions from working.
+* Fixed an issue where Analytics Post-Processed Hits would not appear in logs.
+* Fixed an issue where data in non-ASCII languages like Japanese would not show correctly in logs.
+
 ## Versão 1.6.2 - quarta-feira, 1 de outubro de 2024
 
 ### Correções e melhorias
 
-* Correção de um problema em que o Depurador era muito sensível a todos os erros da CSP
+* Fixed an issue where the Debugger was too sensitive to all CSP errors
 
 ## Versão 1.6.1 - 25 de julho de 2024
 

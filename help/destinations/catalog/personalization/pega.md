@@ -1,21 +1,25 @@
 ---
-title: Conexão do Hub de decisão do cliente Pega
-description: Use o destino do Pega Customer Decision Hub no Adobe Experience Platform para enviar atributos de perfil e dados de associação de público-alvo para o Pega Customer Decision Hub para a próxima melhor ação de decisão.
+title: (V1) Conexão de público-alvo em tempo real do Pega CDH
+description: Use o destino do Público-alvo em tempo real do Pega Customer Decision Hub no Adobe Experience Platform para enviar atributos de perfil e dados de associação de público-alvo para o Pega Customer Decision Hub para a próxima melhor ação de decisão.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 71de5b0d3e9c4413caa911fbe174e74c0e409d89
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1075'
 ht-degree: 3%
 
 ---
 
-# Conexão do Hub de decisão do cliente Pega
+# Pega CDH Conexão de público-alvo em tempo real
+
+>[!IMPORTANT]
+>
+>Essa versão do destino de público-alvo em tempo real do Pega Customer Decision Hub é compatível com apenas um aplicativo Pega Customer Decision. Se você tiver vários aplicativos do Pega Customer Decision Hub configurados, será necessário usar o [(V2) conector de destino do Pega CDH Realtime Audience](./pega-v2.md).
 
 ## Visão geral {#overview}
 
-Use o destino [!DNL Pega Customer Decision Hub] no Adobe Experience Platform para enviar atributos de perfil e dados de associação de público-alvo para [!DNL Pega Customer Decision Hub] para a tomada de decisão da próxima melhor ação.
+Use o destino do Público-alvo em tempo real [!DNL Pega Customer Decision Hub] no Adobe Experience Platform para enviar os atributos do perfil e os dados de associação do público-alvo para [!DNL Pega Customer Decision Hub] para a próxima melhor ação de decisão.
 
-A associação de público-alvo de perfil do Adobe Experience Platform, quando carregada no [!DNL Pega Customer Decision Hub], pode ser usada como preditiva em modelos adaptáveis e ajuda a fornecer os dados contextuais e comportamentais corretos para fins de decisão da próxima melhor ação.
+A associação de público-alvo de perfil do Adobe Experience Platform, quando carregada no [!DNL Pega Customer Decision Hub], pode ser usada como um preditor em modelos adaptáveis e ajuda a fornecer os dados contextuais e comportamentais corretos para fins de decisão da próxima melhor ação.
 
 >[!IMPORTANT]
 >
@@ -27,19 +31,19 @@ Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL C
 
 ### Telecomunicações
 
-Um profissional de marketing deseja aproveitar os insights da próxima melhor ação baseada em modelo de ciência de dados conforme entregue por [!DNL Pega Customer Decision Hub] para o envolvimento do cliente. [!DNL Pega Customer Decision Hub] é altamente dependente da intenção do cliente, por exemplo &quot;Interested_In_5G&quot;, &quot;Interested_in_Unlimited_Dataplan&quot; ou &quot;Interest_in_iPhone_Accessations&quot;.
+Um profissional de marketing deseja aproveitar os insights da próxima melhor ação baseada em modelo de ciência de dados conforme fornecidos por [!DNL Pega Customer Decision Hub] para o envolvimento do cliente. [!DNL Pega Customer Decision Hub] é altamente dependente da intenção do cliente, por exemplo &quot;Interested_In_5G&quot;, &quot;Interested_in_Unlimited_Dataplan&quot; ou &quot;Interest_in_iPhone_Accessations&quot;.
 
 ### Serviços financeiros
 
-Um profissional de marketing deseja otimizar as ofertas para clientes que assinaram ou cancelaram a assinatura dos boletins informativos de Plano de aposentadoria ou Plano de aposentadoria. As empresas de serviços financeiros podem assimilar várias IDs de clientes de seus próprios CRMs na Adobe Experience Platform, criar públicos-alvo a partir de seus próprios dados offline e enviar perfis que estão entrando e saindo dos públicos-alvo para [!DNL Pega Customer Decision Hub] para que a decisão da próxima melhor ação (NBA) seja tomada nos canais de saída.
+Um profissional de marketing deseja otimizar as ofertas para clientes que assinaram ou cancelaram a assinatura dos boletins informativos de Plano de aposentadoria ou Plano de aposentadoria. As empresas de serviços financeiros podem assimilar várias CustomerIDs de seus próprios CRMs na Adobe Experience Platform, criar públicos-alvo a partir de seus próprios dados offline e enviar perfis que estão entrando e saindo dos públicos-alvo para [!DNL Pega Customer Decision Hub] para que a decisão da próxima melhor ação (NBA) seja tomada nos canais de saída.
 
 ## Pré-requisitos {#prerequisites}
 
 Antes de usar este destino para exportar dados do Adobe Experience Platform, verifique se você concluiu os seguintes pré-requisitos em [!DNL Pega Customer Decision Hub]:
 
-* Configure o [Componente de integração de Perfil e Associação de Público-Alvo do Adobe Experience Platform](https://docs.pega.com/component/customer-decision-hub/adobe-experience-platform-profile-and-segment-membership-integration-component) na sua instância [!DNL Pega Customer Decision Hub].
-* Configure o Registro de Cliente do OAuth 2.0 [usando o tipo de concessão Credenciais de Cliente](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) na instância [!DNL Pega Customer Decision Hub].
-* Configure o [fluxo de dados de execução em tempo real](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) para o fluxo de dados de Associação de Público-Alvo Adobe na sua instância [!DNL Pega Customer Decision Hub].
+* Configure o [Componente de integração de Perfil e Associação de Público-Alvo do Adobe Experience Platform](https://docs.pega.com/bundle/components/page/customer-decision-hub/components/adobe-membership-component.html) na sua instância [!DNL Pega Customer Decision Hub].
+* Configure o Registro de Cliente do OAuth 2.0 [usando o tipo de concessão Credenciais de Cliente](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html) na instância [!DNL Pega Customer Decision Hub].
+* Configure o [fluxo de dados de execução em tempo real](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html) para o fluxo de dados de Associação de Público-Alvo da Adobe na sua instância [!DNL Pega Customer Decision Hub].
 
 ## Identidades suportadas {#supported-identities}
 
@@ -57,8 +61,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 ---------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Exportar todos os membros de um público-alvo com o identificador (*CustomerID*), atributos (sobrenome, nome, localização etc.) e dados de Associação de público-alvo. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões sempre ativas baseadas em API. Assim que um perfil é atualizado no Experience Platform, com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Para obter mais informações, consulte [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Exportar todos os membros de um público-alvo com o identificador (*CustomerID*), atributos (sobrenome, nome, local etc.) e dados de associação de público-alvo. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões sempre ativas baseadas em API. Assim que um perfil for atualizado no Experience Platform, com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Para obter mais informações, consulte [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -68,9 +72,9 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 ### Autenticar para o destino {#authenticate}
 
-#### Autenticação de Credenciais de Cliente OAuth 2 {#oauth-2-client-credentials-authentication}
+#### Autenticação de credenciais do cliente OAuth 2 {#oauth-2-client-credentials-authentication}
 
-![Imagem da tela da interface do usuário na qual você pode se conectar ao destino Pega CDH, usando OAuth 2 com autenticação de Credenciais de Cliente](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
+![Imagem da tela da interface do usuário na qual você pode se conectar ao destino Pega CDH usando OAuth 2 com autenticação de credenciais de cliente](../../assets/catalog/personalization/pega/pega-api-authentication-oauth2-client-credentials.png)
 
 Preencha os campos abaixo e selecione **[!UICONTROL Conectar ao destino]**:
 
@@ -88,7 +92,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e sele
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
-* **[!UICONTROL Nome do host]**: o nome do host do Pega Customer Decision Hub para o qual o perfil é exportado como dados json.
+* **[!UICONTROL Nome do host do Pega CDH]**: o nome do host do Pega Customer Decision Hub para o qual o perfil é exportado como dados JSON.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
@@ -101,7 +105,7 @@ Consulte [Ativar dados de público-alvo para destinos de exportação de perfil 
 
 ### Atributos de destino {#attributes}
 
-Na etapa [[!UICONTROL Selecionar atributos]](../../ui/activate-streaming-profile-destinations.md#select-attributes), o Adobe recomenda que você selecione um identificador exclusivo do seu [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino.
+Na etapa [[!UICONTROL Selecionar atributos]](../../ui/activate-streaming-profile-destinations.md#select-attributes), a Adobe recomenda selecionar um identificador exclusivo do seu [esquema de união](../../../profile/home.md#profile-fragments-and-union-schemas). Selecione o identificador exclusivo e quaisquer outros campos XDM que você deseja exportar para o destino.
 
 ### Exemplo de mapeamento: ativando atualizações de perfil em [!DNL Pega Customer Decision Hub] {#mapping-example}
 
@@ -121,22 +125,22 @@ Selecionar campos de destino:
 
 ## Dados exportados / Validar exportação de dados {#exported-data}
 
-Uma atualização bem-sucedida da associação de público-alvo de um perfil inseriria o identificador de público-alvo, o nome e os status no armazenamento de dados de associação de público de marketing da Pega. Os dados de associação estão associados a um cliente usando o Designer de Perfil do Cliente no [!DNL Pega Customer Decision Hub], conforme mostrado abaixo.
-![Imagem da tela da interface do usuário onde você pode associar dados de Associação de Público-Alvo do Adobe ao Cliente, usando o Designer de Perfil do Cliente](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
+Uma atualização bem-sucedida da associação de público-alvo de um perfil inseriria o identificador de público-alvo, o nome e os status no armazenamento de dados de associação de público de marketing da Pega. Os dados de associação estão associados a um cliente que usa o Designer de Perfil de Cliente no [!DNL Pega Customer Decision Hub], conforme mostrado abaixo.
+![Imagem da tela da interface do usuário onde você pode associar dados de Associação de Público-alvo da Adobe ao Cliente, usando o Designer de Perfil do Cliente](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
-Os dados de associação de público-alvo são usados nas políticas de Envolvimento da Designer de próxima ação para a próxima ação, conforme mostrado abaixo.
-![Imagem da tela da interface do usuário na qual você pode adicionar campos de associação de público-alvo como condições nas Políticas de Envolvimento da Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+Os dados de associação de público-alvo são usados nas políticas de envolvimento da Designer de próxima ação da Pega para a tomada de decisões de próxima ação, conforme mostrado abaixo.
+![Imagem da tela da interface do usuário na qual você pode adicionar campos de associação de público-alvo como condições nas Políticas de Envolvimento da Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 Os campos de dados de associação de público-alvo do cliente são adicionados como preditores em modelos adaptáveis, conforme mostrado abaixo.
-![Imagem da tela da interface do usuário onde você pode adicionar campos de associação de Público-alvo como predicadores em modelos adaptáveis, usando o Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
+![Imagem da tela da interface do usuário onde você pode adicionar campos de associação de Público-alvo como preditores em modelos adaptáveis, usando o Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Recursos adicionais {#additional-resources}
 
-Consulte [Configurando um registro de cliente OAuth 2.0](https://docs.pega.com/security/87/creating-and-configuring-oauth-20-client-registration) em [!DNL Pega Customer Decision Hub].
+Consulte os seguintes recursos de documentação do [!DNL Pega] para obter mais informações:
 
-Consulte [Criação de uma execução em tempo real para fluxos de dados](https://docs.pega.com/decision-management/87/creating-real-time-run-data-flows) em [!DNL Pega Customer Decision Hub].
-
-Consulte [Gerenciar registros de clientes no Designer de Perfil de Cliente](https://docs.pega.com/whats-new-pega-platform/manage-customer-records-customer-profile-designer-86).
+* [Configurando um registro de cliente OAuth 2.0](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
+* [Criando uma execução em tempo real para fluxos de dados](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
+* [Gerenciar registros de clientes no Designer de Perfil do Cliente](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)
 
 ## Uso e governança de dados {#data-usage-governance}
 

@@ -5,9 +5,9 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
+source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1292'
 ht-degree: 6%
 
 ---
@@ -203,7 +203,8 @@ ht-degree: 6%
       * [Extensão do Gainsight](./catalog/personalization/gainsight.md)
       * [Extensão do KickFire](./catalog/personalization/kickfire.md)
       * [Extensão do Marketo Web Personalization](./catalog/personalization/marketo-web-personalization.md)
-      * [Conexão do Hub de decisão do cliente Pega](./catalog/personalization/pega.md)
+      * [Pega CDH Conexão de público-alvo em tempo real](./catalog/personalization/pega.md)
+      * [(V2) Pega CDH Conexão de público-alvo em tempo real](./catalog/personalization/pega-v2.md)
       * [Conexão do Perfil Pega](./catalog/personalization/pega-profile.md)
    * Destinos sociais{#social}
       * [Visão geral de destinos sociais](./catalog/social/overview.md)

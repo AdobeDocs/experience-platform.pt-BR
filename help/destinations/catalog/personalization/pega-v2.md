@@ -1,7 +1,7 @@
 ---
 title: (V2) Pega CDH Conexão de público-alvo em tempo real
 description: Use o destino do Público-alvo em tempo real do Pega Customer Decision Hub no Adobe Experience Platform para enviar atributos de perfil e dados de associação de público-alvo para o Pega Customer Decision Hub para a próxima melhor ação de decisão.
-source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
+source-git-commit: a51f6bd189bc25018cf25e69fe23bc9f6b3372dd
 workflow-type: tm+mt
 source-wordcount: '1033'
 ht-degree: 3%
@@ -115,17 +115,21 @@ Veja abaixo um exemplo de mapeamento de identidade correto ao exportar perfis pa
 ## Dados exportados / Validar exportação de dados {#exported-data}
 
 Uma atualização bem-sucedida da associação de público-alvo de um perfil inseriria o identificador de público-alvo, o nome e os status no armazenamento de dados de associação de público de marketing da Pega. Os dados de associação estão associados a um cliente usando o Designer de Perfil do Cliente no [!DNL Pega Customer Decision Hub], conforme mostrado abaixo.
+
 ![Imagem da tela da interface do usuário onde você pode associar dados de Associação de Público-alvo da Adobe ao Cliente, usando o Designer de Perfil do Cliente](../../assets/catalog/personalization/pega/pega-profile-designer-associate.png)
 
 Os dados de associação de público-alvo são usados nas políticas de Envolvimento da Designer de próxima ação para a próxima ação, conforme mostrado abaixo.
-![Imagem da tela da interface do usuário na qual você pode adicionar campos de associação de público-alvo como condições nas Políticas de Envolvimento da Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagment.png)
+
+![Imagem da tela da interface do usuário na qual você pode adicionar campos de associação de público-alvo como condições nas Políticas de Envolvimento da Pega Next-Best-Action Designer](../../assets/catalog/personalization/pega/pega-profile-designer-engagement.png)
 
 Os campos de dados de associação de público-alvo do cliente são adicionados como preditores em modelos adaptáveis, conforme mostrado abaixo.
+
 ![Imagem da tela da interface do usuário onde você pode adicionar campos de associação de Público-alvo como predicadores em modelos adaptáveis, usando o Prediction Studio](../../assets/catalog/personalization/pega/pega-profile-designer-adaptivemodel.png)
 
 ## Recursos adicionais {#additional-resources}
 
 Consulte a documentação do [!DNL Pega] a seguir para obter mais informações:
+
 * [Configurando um registro de cliente OAuth 2.0](https://docs.pega.com/bundle/platform/page/platform/security/configure-oauth-2-client-registration.html)
 * [Criando uma execução em tempo real para fluxos de dados](https://docs.pega.com/bundle/platform/page/platform/decision-management/data-flow-run-real-time-create.html)
 * [Gerenciar registros de clientes no Designer de Perfil do Cliente](https://docs.pega.com/bundle/customer-decision-hub/page/customer-decision-hub/implement/profile-designer-data-management.html)

@@ -2,10 +2,10 @@
 title: Notas de versão de abril de 2025 da Adobe Experience Platform
 description: As notas de versão de abril de 2025 da Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
+source-git-commit: 65e0f0f98006f55bc08ccf24499841413def7a16
 workflow-type: tm+mt
-source-wordcount: '1706'
-ht-degree: 23%
+source-wordcount: '1899'
+ht-degree: 21%
 
 ---
 
@@ -31,6 +31,7 @@ Atualizações dos recursos e da documentação existentes no Adobe Experience P
 - [Query Service](#query-service)
 - [Perfil do cliente em tempo real](#profile)
 - [Origens](#sources)
+- [Manuais de casos de uso ](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -152,3 +153,21 @@ Use fontes na Experience Platform para assimilar dados de um aplicativo da Adobe
 {style="table-layout:auto"}
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).
+
+## Manuais de casos de uso  {#use-case-playbooks}
+
+Os manuais de casos de uso foram originalmente projetados para ajudar a superar desafios na introdução ao Real-Time Customer Data Platform ou Adobe Journey Optimizer. Eles continuam a evoluir e agora permitem que você comece rapidamente os principais casos de uso de marketing e forneça inspiração e ativos pré-criados para testar e entrar em produção.
+
+Os manuais de casos de uso passaram de uma ferramenta de descoberta para uma estrutura colaborativa. Agora, eles ajudam você a criar, gerenciar e compartilhar seus próprios manuais em diferentes organizações.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| [!BADGE Beta]{type=Informative} Crie e compartilhe seus próprios manuais | Uma nova estrutura de criação de manual permite que você crie, gerencie e compartilhe seus próprios manuais de casos de uso. Isso inclui suporte para captura de metadados principais, edição de mapas de jornada e associação de ativos técnicos relevantes. Você pode compartilhar manuais entre organizações para padronizar abordagens de marketing e manter a consistência. |
+
+{style="table-layout:auto"}
+
+Para saber como criar e compartilhar seus próprios manuais, leia o documento [Criar e compartilhar seus próprios manuais](/help/use-case-playbooks/playbooks/author.md).
+
+Para obter mais informações, leia a [Visão geral dos manuais de caso de uso](/help/use-case-playbooks/playbooks/overview.md), que fornece uma visão geral da funcionalidade dos manuais, sua finalidade e uma demonstração completa, incluindo como criar instâncias e importar ativos gerados em outros ambientes de sandbox.

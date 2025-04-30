@@ -1,7 +1,6 @@
 ---
 title: Notas de versão de abril de 2025 da Adobe Experience Platform
 description: As notas de versão de abril de 2025 da Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: d2ee1adb031af83569f7b226a8881297423fc257
 workflow-type: tm+mt
 source-wordcount: '1663'

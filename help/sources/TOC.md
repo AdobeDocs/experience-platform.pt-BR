@@ -5,10 +5,10 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
+source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
 workflow-type: tm+mt
-source-wordcount: '1070'
-ht-degree: 30%
+source-wordcount: '1075'
+ht-degree: 35%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 30%
 
 - [Visão geral das fontes](home.md)
 - Conectores de origem disponíveis {#connectors}
-   - Aplicativos Adobe {#adobe-applications}
+   - aplicativos Adobe {#adobe-applications}
       - [Origem de classificações do Analytics](connectors/adobe-applications/classifications.md)
       - [Fonte do Analytics](connectors/adobe-applications/analytics.md)
       - [Origem do Audience Manager](connectors/adobe-applications/audience-manager.md)
@@ -25,7 +25,7 @@ ht-degree: 30%
       - [Origem do Adobe Commerce](connectors/adobe-applications/commerce.md)
       - [Origem de atributos do cliente](connectors/adobe-applications/customer-attributes.md)
       - [Fonte da coleção de dados](connectors/adobe-applications/data-collection.md)
-      - Mapeamentos de campos {#mapping}
+      - Mapeamentos de campo {#mapping}
          - [Mapeamentos de campo do Analytics](connectors/adobe-applications/mapping/analytics.md)
          - [Mapeamentos de campo do Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
          - [Mapeamentos de campo do Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
@@ -75,6 +75,7 @@ ht-degree: 30%
       - [Conector Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive no conector do Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark no conector HDInsights do Azure](connectors/databases/spark.md)
+      - [Conector do Azure Databricks](connectors/databases/databricks.md)
       - [Conector do Azure Data Explorer](connectors/databases/data-explorer.md)
       - [Conector do Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de armazenamento de tabela do Azure](connectors/databases/ats.md)
@@ -99,7 +100,7 @@ ht-degree: 30%
       - [Intenção de Bombora](connectors/data-partners/bombora.md)
       - [Intenção do Demandbase](connectors/data-partners/demandbase.md)
       - [Resolução de identidade empresarial Merkury](connectors/data-partners/merkury.md)
-   - Comércio eletrônico {#ecommerce}
+   - comércio eletrônico {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
       - [Shopify Transmissão](connectors/ecommerce/shopify-streaming.md)
@@ -123,10 +124,10 @@ ht-degree: 30%
    - Protocolos {#protocols}
       - [Conector OData genérico](connectors/protocols/odata.md)
       - [Conector de API REST genérico](connectors/protocols/generic-rest.md)
-   - Transmitindo {#streaming}
+   - Transmissão {#streaming}
       - [Conector da API HTTP](connectors/streaming/http.md)
 - Tutoriais da API {#api-tutorials}
-   - Criar uma conexão base {#create}
+   - Criar uma conexão básica {#create}
       - Advertising {#advertising}
          - [Google Ads](tutorials/api/create/advertising/ads.md)
          - [Anúncios do Pinterest](tutorials/api/create/advertising/pinterest-ads.md)
@@ -165,6 +166,7 @@ ht-degree: 30%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive no Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark no Azure HDInsights](tutorials/api/create/databases/spark.md)
+         - [Azure Databricks](tutorials/api/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Armazenamento de tabelas do Azure](tutorials/api/create/databases/ats.md)
@@ -182,7 +184,7 @@ ht-degree: 30%
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
-      - Comércio eletrônico {#ecommerce}
+      - comércio eletrônico {#ecommerce}
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Transmissão](tutorials/api/create/ecommerce/shopify-streaming.md)
@@ -205,7 +207,7 @@ ht-degree: 30%
       - Protocolos {#protocols}
          - [OData genérico](tutorials/api/create/protocols/odata.md)
          - [API REST genérica](tutorials/api/create/protocols/generic-rest.md)
-      - Transmitindo {#streaming}
+      - Transmissão {#streaming}
          - [API HTTP](tutorials/api/create/streaming/http.md)
    - Explorar dados {#explore}
       - [Explorar dados de publicidade](tutorials/api/explore/advertising.md)
@@ -242,7 +244,7 @@ ht-degree: 30%
    - [Aplicar rótulos de acesso a um fluxo de dados](tutorials/api/labels.md)
 - Tutoriais da interface {#ui-tutorials}
    - Criar uma conexão de origem {#create}
-      - Aplicativos Adobe {#adobe-applications}
+      - aplicativos Adobe {#adobe-applications}
          - [Adobe Analytics (dados do conjunto de relatórios)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (dados de classificações)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -314,7 +316,7 @@ ht-degree: 30%
          - [Intenção de Bombora](tutorials/ui/create/data-partners/bombora.md)
          - [Intenção do Demandbase](tutorials/ui/create/data-partners/demandbase.md)
          - [Resolução de identidade empresarial Merkury](tutorials/ui/create/data-partners/merkury.md)
-      - Comércio eletrônico {#ecommerce}
+      - comércio eletrônico {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
          - [Shopify Transmissão](tutorials/ui/create/ecommerce/shopify-streaming.md)
@@ -339,7 +341,7 @@ ht-degree: 30%
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocolos {#protocols}
          - [OData genérico](tutorials/ui/create/protocols/odata.md)
-      - Transmitindo {#streaming}
+      - Transmissão {#streaming}
          - [API HTTP](tutorials/ui/create/streaming/http.md)
    - Configurar um fluxo de dados {#dataflow}
       - [Fluxo de dados de conexão do Advertising](tutorials/ui/dataflow/advertising.md)
@@ -367,14 +369,14 @@ ht-degree: 30%
    - [Assinar alertas de origens](tutorials/ui/alerts.md)
    - [Salvar um fluxo de dados como rascunho](tutorials/ui/draft.md)
    - [Aplicar rótulos de acesso a um fluxo de dados](tutorials/ui/labels.md)
-- Fontes de Autoatendimento (SDK em Lote) {#sdk}
+- Origens de Autoatendimento (SDK em Lote) {#sdk}
    - [Visão geral](sources-sdk/overview.md)
    - Configurar a especificação de conexão {#config}
       - [Opções de configuração](sources-sdk/config/config.md)
       - [Configurar especificação de autenticação](sources-sdk/config/authspec.md)
       - [Configurar especificação de origem](sources-sdk/config/sourcespec.md)
       - [Configurar especificação de exploração](sources-sdk/config/explorespec.md)
-   - Guia da API de Fontes de Autoatendimento (SDK em Lote) {#self-serve-api}
+   - Guia da API de fontes de autoatendimento (SDK em lote) {#self-serve-api}
       - [Visão geral da API de origens de autoatendimento (SDK em lote)](sources-sdk/api/api-overview.md)
       - [Introdução](sources-sdk/api/getting-started.md)
       - [Criar uma especificação de conexão](sources-sdk/api/create.md)
@@ -387,7 +389,7 @@ ht-degree: 30%
       - [Use um editor de texto em seu ambiente local para criar uma página de documentação de origens](sources-sdk/documentation/text-editor.md)
       - [Modelo da API de autoatendimento de documentação](sources-sdk/documentation/template.md)
       - [Modelo de interface de usuário de autoatendimento de documentação](sources-sdk/documentation/ui-template.md)
-   - Streaming de SDK {#streaming-sdk}
+   - SDK de transmissão {#streaming-sdk}
       - [Introdução a fontes de autoatendimento (SDK de transmissão)](sources-sdk/streaming/getting-started.md)
       - [Criar uma especificação de conexão para uma fonte de streaming](sources-sdk/streaming/create.md)
       - [Atualizar uma especificação de conexão para uma fonte de streaming](sources-sdk/streaming/update-connection-specs.md)

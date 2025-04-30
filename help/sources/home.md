@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos Source Connectors
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
+source-git-commit: 02fafc830e964bbfa94c125c2006f4998d9d193d
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1559'
 ht-degree: 2%
 
 ---
@@ -32,8 +32,8 @@ As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE Streaming]{type=Positive}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE Lote]{type=Informative}
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md)[!BADGE Streaming]{type=Positive}
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md)[!BADGE Lote]{type=Informative}
 - [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE Streaming]{type=Positive}
@@ -109,8 +109,8 @@ Os sistemas de CRM fornecem dados que podem ajudar a criar relacionamentos com o
 
 - [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE Lote]{type=Informative}
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE Lote]{type=Informative}
+- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md)[!BADGE Lote]{type=Informative}
+- [[!DNL Veeva CRM]](connectors/crm/veeva.md)[!BADGE Lote]{type=Informative}
 - [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE Lote]{type=Informative}
 
 ### Sucesso do cliente {#customer-success}
@@ -149,7 +149,7 @@ O Experience Platform oferece suporte para assimilação de dados de um parceiro
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md)
+- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE Lote]{type=Informative}
@@ -190,8 +190,8 @@ O Experience Platform oferece suporte para assimilação de dados de um sistema 
 O Experience Platform oferece suporte para assimilação de dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
 - [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Square]](connectors/payments/square.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE Lote]{type=Informative}
+- [[!DNL Square]](connectors/payments/square.md)[!BADGE Lote]{type=Informative}
+- [[!DNL Stripe]](connectors/payments/stripe.md)[!BADGE Lote]{type=Informative}
 
 ### Transmissão {#streaming}
 

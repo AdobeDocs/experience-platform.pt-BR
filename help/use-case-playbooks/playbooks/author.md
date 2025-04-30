@@ -4,9 +4,9 @@ title: Saiba como criar e compartilhar seus próprios manuais usando o Assistent
 description: Como criar e compartilhar seus próprios manuais de casos de uso.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: aa1e155fb8d71497958d0de1f6c10cf47e58dbf0
+source-git-commit: a910c922e9a51b60e276b0aac7e81e35d0a378fd
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1665'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ O [!DNL Playbook Authoring Framework], viabilizado pelo Assistente de IA no Adob
 
 A estrutura segue um processo de três etapas:
 
-1. **Captura de metadados**: use o Assistente de IA ou o [formulário da Web] para capturar metadados do manual.
+1. **Captura de metadados**: use o Assistente de IA ou o formulário da Web para capturar metadados do manual.
 
 2. **Associação técnica**: adicione ativos técnicos específicos, como jornadas ou públicos-alvo, ao manual. Você mantém controle total sobre o processo de criação de manuais em sua sandbox de desenvolvimento, garantindo o alinhamento com seus esquemas e outras estruturas de dados exclusivas.
 
@@ -26,7 +26,7 @@ A estrutura segue um processo de três etapas:
 
 ## Criar um manual
 
-Você pode criar um manual de duas maneiras: usando o Assistente de IA ou manualmente. Leia as seções a seguir para saber como.
+Você pode criar um manual de duas maneiras: usando o Assistente de IA ou manualmente. Leia as seções a seguir para saber como criar um manual com o Assistente de IA.
 
 ### Visão geral do manual
 
@@ -40,9 +40,9 @@ Selecione **[!UICONTROL Novo manual]** e **Gerar manual com o Assistente de IA**
 
 ![A interface do manual com a opção &quot;Gerar manual com o Assistente de IA&quot; está selecionada.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-No campo de prompt, descreva o caso de uso.
+Use o campo de prompt para descrever o caso de uso. Por exemplo:
 
-**Exemplo**: &quot;Envolva clientes da ACME que navegaram em tênis de corrida, mas não concluíram a compra.&quot;
+&quot;Envolva os clientes da ACME que navegaram em tênis de corrida, mas não concluíram a compra.&quot;
 
 ![A interface do manual com a área de formulário Web realçada.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
@@ -114,7 +114,7 @@ O Assistente de IA pode processar várias estruturas de prompt e extrair detalhe
 
 &quot;Crie uma campanha intitulada &quot;Complete the Look&quot; para aumentar as vendas e o CLV. A campanha incentiva os clientes a adquirir utensílios de cozinha ou mobiliário para concluir uma compra complementar através de recomendações personalizadas e ofertas relacionadas com a sua compra. Primeiro envie uma mensagem aos clientes com recomendações de produto. Se não fizer compras em 7 dias, ele receberá uma segunda mensagem com recomendações e ofertas de produto. Use as notificações por push e o email para entrar em contato com os clientes. Clientes-alvo que efetuaram uma compra nos últimos 7 dias na categoria de utensílios de cozinha ou mobiliário e que não foram visados nos últimos 30 dias. Como parte da campanha, queremos medir KPIs como cliques (email, aplicativo, sms, push), CTR, CTR da E-Wallet, Receita do AOV Conversion.CLV, Eventos de compra total (na loja, digital, call center).&quot;
 
-![Exemplo 1 de prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-prompt.png)
+![Exemplo mostrando um prompt longo na caixa de entrada de texto](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **Exemplo 2:**
 
@@ -126,20 +126,20 @@ Canais do projeto/Pontos de contato: Email
 Público alvo: clientes que assinaram comunicações com o boletim informativo de moda ACME.
 KPIs do Target/Métricas de engajamento/ROI: 1. Aumente a receita dos produtos. 2. Impulsionar a fidelidade do cliente.&quot;
 
-![Exemplo 2 de prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-2-prompt.png)
+![Exemplo mostrando um prompt organizado na caixa de entrada de texto](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
 
 **Exemplo 3:**
 
 &quot;Incentive os compradores a comprar produtos durante uma campanha promocional contínua de produtos.
 Interaja com os compradores durante uma promoção contínua enviando comunicações apropriadas por email, SMS ou notificações por push para comprar produtos. Envie a eles um email de lembrete depois de 24 horas sem engajamento na promoção.&quot;
 
-![Exemplo 3 de prompt](/help/use-case-playbooks/assets/playbooks/authoring/example-3-prompt.png)
+![Exemplo mostrando um prompt conciso na caixa de entrada de texto](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
 
 **Exemplo 4:**
 
 &quot;Vender sapatos para jogadores do ensino médio.&quot;
 
-![Prompt do exemplo 4](/help/use-case-playbooks/assets/playbooks/authoring/example-4-prompt.png)
+![Exemplo mostrando um prompt de uma linha](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
 
 O Assistente de IA remove todos os detalhes desnecessários, como &quot;Nome do projeto&quot; ou &quot;Plano de fundo&quot;. Ele extrai os elementos principais, como &quot;público-alvo&quot;, &quot;objetivo da campanha&quot; e &quot;canal de marketing&quot; e funciona com qualquer estilo de entrada.
 
@@ -157,6 +157,85 @@ Ao criar manuais, lembre-se do idioma e do conteúdo incluídos. Os manuais são
 
 Se um manual for sinalizado para conteúdo inadequado ou ofensivo, ele será automaticamente relatado ao Adobe para análise. Em seguida, o Adobe revisa o conteúdo sinalizado e, se ele for considerado inadequado, o cliente é notificado e o Manual é removido.
 
+## Compartilhamento de manuais entre sandboxes {#sharing-playbooks-sandboxes}
+
+Se sua organização contiver várias sandboxes, não será necessário compartilhar manuais com elas. Depois de criar e publicar um manual em uma sandbox, ele ficará disponível em todas as sandboxes dessa organização. Em seguida, você pode criar instâncias desse manual em qualquer uma das outras sandboxes.
+
+Se o manual referenciar campos que não estão disponíveis no esquema de união de outra sandbox, você poderá ver uma mensagem de erro ao tentar criar a instância. Essa mensagem chama os campos ausentes para que você possa atualizar o esquema conforme necessário.
+
+>[!IMPORTANT]
+>
+>Não há suporte para compartilhamento de playbook transitório. Se você compartilhar um manual de uma organização para outra e, em seguida, importá-lo, ele não poderá ser compartilhado novamente da organização de recebimento para uma terceira organização.
+
+## Compartilhamento de manuais entre organizações {#sharing-playbooks-organizations}
+
+Para compartilhar um manual de uma organização para outra, siga estas etapas:
+
+* **Faça logon na organização de origem**: navegue até a organização que contém o manual que você criou e deseja compartilhar na guia **[!UICONTROL Seus manuais]**.
+* **Publicar o manual**: se o manual ainda não tiver sido publicado, você deverá publicá-lo antes de compartilhá-lo.
+
+>[!NOTE]
+>
+>Uma parceria deve ser estabelecida entre as organizações de origem e de destino para permitir o compartilhamento do manual. Saiba como [criar uma solicitação de parceria de organização](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
+
+* **Iniciar o compartilhamento**: depois que o manual for publicado e uma parceria for estabelecida, selecione **[!UICONTROL Compartilhar Manual]**.
+* **Selecionar a organização de destino**: escolha a organização com a qual deseja compartilhar o manual quando solicitado.
+* **Confirmar e compartilhar**: confirme sua seleção. Você receberá mensagens de confirmação indicando que o compartilhamento foi bem-sucedido.
+* ***Verificar a organização de destino**: faça logon na organização de destino para verificar se o manual de reprodução está disponível.
+* **Importar o manual**: selecione **[!UICONTROL Importar]** para trazer o manual para a organização de destino. Você pode exibi-lo na guia **Guias de reprodução**.
+
+Se algum campo estiver ausente do esquema de união, uma caixa de diálogo o destacará durante a importação.
+
+![Campos ausentes do esquema de união listado durante o processo de importação](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
+
+Se o manual não for exibido, verifique se ele foi publicado e se a parceria com a organização está ativa.
+
+## Permissões necessárias
+
+Para acessar a sandbox e usar esse recurso, você precisa das seguintes permissões:
+
+* **Permissões da sandbox**:
+
+Eles são necessários para acessar o ambiente de sandbox onde o recurso existe:
+
+* **Gerenciar sandbox**
+* **Exibir sandbox**
+
+* **Permissões de compartilhamento de pacotes**:
+
+Essas permissões são necessárias para a funcionalidade de compartilhamento interno:
+
+* [**Gerenciar pacote**](/help/sandboxes/ui/sandbox-tooling.md)
+* [**Compartilhar pacote**](/help/sandboxes/ui/sharing-packages-across-orgs.md)
+
+Essas permissões permitirão:
+
+* Insira o ambiente de sandbox
+* Acessar o recurso na sandbox
+* Gerencie e compartilhe pacotes conforme necessário
+
+Essas permissões estão localizadas na seção **[!UICONTROL Sandboxes]** da lista de permissões.
+
+![A lista de permissões com as permissões relevantes realçadas.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+
+### Jornadas e objetos relacionados - permissões
+
+Ao criar Jornadas que usam manuais, você provavelmente referenciará outros objetos, como **Canais**, **Públicos-alvo** e outras entidades. Cada um deles tem seu próprio conjunto de permissões.
+
+Essas são as principais permissões para ações relacionadas à Jornada, como:
+
+* **Exibir jornada**
+* **Gerenciar jornada**
+* Permissões relacionadas a objetos como Públicos-alvo e Canais
+
+Você também precisará das seguintes permissões de público-alvo:
+
+* **Segmento lido**
+* **Perfil lido**
+* **Conjunto de dados lido**
+
+Como as Jornadas são altamente flexíveis e podem envolver muitos objetos interconectados, suas [permissões completas](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) são documentadas separadamente e podem variar de acordo com seu caso de uso específico.
+
 ## Próximas etapas
 
-Agora que você entende como criar e publicar manuais usando o Assistente de IA, saiba como começar a usar os manuais disponíveis e escolha o correto para o seu caso de uso em [Lista de manuais](/help/use-case-playbooks/playbooks/choose.md).
+Agora que você entende como criar, publicar e compartilhar manuais usando o Assistente de IA, saiba como começar a usar os manuais disponíveis e escolha o correto para seu caso de uso na [Lista de manuais](/help/use-case-playbooks/playbooks/choose.md).

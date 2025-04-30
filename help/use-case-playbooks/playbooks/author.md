@@ -4,9 +4,9 @@ title: Saiba como criar e compartilhar seus próprios manuais usando o Assistent
 description: Como criar e compartilhar seus próprios manuais de casos de uso.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: a910c922e9a51b60e276b0aac7e81e35d0a378fd
+source-git-commit: 401062fbea8845f16803edb72ccb14b75c3f8409
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1667'
 ht-degree: 0%
 
 ---
@@ -161,11 +161,11 @@ Se um manual for sinalizado para conteúdo inadequado ou ofensivo, ele será aut
 
 Se sua organização contiver várias sandboxes, não será necessário compartilhar manuais com elas. Depois de criar e publicar um manual em uma sandbox, ele ficará disponível em todas as sandboxes dessa organização. Em seguida, você pode criar instâncias desse manual em qualquer uma das outras sandboxes.
 
-Se o manual referenciar campos que não estão disponíveis no esquema de união de outra sandbox, você poderá ver uma mensagem de erro ao tentar criar a instância. Essa mensagem chama os campos ausentes para que você possa atualizar o esquema conforme necessário.
+Se o manual referenciar campos que não estão disponíveis no esquema de união da sandbox de destino ou não têm as permissões necessárias, você poderá ver uma mensagem de erro ao tentar criar a instância. Essa mensagem indica os campos ausentes e/ou as permissões ausentes.
 
->[!IMPORTANT]
->
->Não há suporte para compartilhamento de playbook transitório. Se você compartilhar um manual de uma organização para outra e, em seguida, importá-lo, ele não poderá ser compartilhado novamente da organização de recebimento para uma terceira organização.
+Se algum campo estiver ausente do esquema de união, uma caixa de diálogo o destacará durante a importação.
+
+![Campos ausentes do esquema de união listado durante o processo de importação](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 ## Compartilhamento de manuais entre organizações {#sharing-playbooks-organizations}
 
@@ -181,14 +181,14 @@ Para compartilhar um manual de uma organização para outra, siga estas etapas:
 * **Iniciar o compartilhamento**: depois que o manual for publicado e uma parceria for estabelecida, selecione **[!UICONTROL Compartilhar Manual]**.
 * **Selecionar a organização de destino**: escolha a organização com a qual deseja compartilhar o manual quando solicitado.
 * **Confirmar e compartilhar**: confirme sua seleção. Você receberá mensagens de confirmação indicando que o compartilhamento foi bem-sucedido.
-* ***Verificar a organização de destino**: faça logon na organização de destino para verificar se o manual de reprodução está disponível.
+* **Verificar a organização de destino**: faça logon na organização de destino para verificar se o manual de reprodução está disponível.
 * **Importar o manual**: selecione **[!UICONTROL Importar]** para trazer o manual para a organização de destino. Você pode exibi-lo na guia **Guias de reprodução**.
 
-Se algum campo estiver ausente do esquema de união, uma caixa de diálogo o destacará durante a importação.
-
-![Campos ausentes do esquema de união listado durante o processo de importação](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
-
 Se o manual não for exibido, verifique se ele foi publicado e se a parceria com a organização está ativa.
+
+>[!IMPORTANT]
+>
+>Não há suporte para compartilhamento de playbook transitório. Se você compartilhar um manual de uma organização para outra e, em seguida, importá-lo, ele não poderá ser compartilhado novamente da organização de recebimento para uma terceira organização.
 
 ## Permissões necessárias
 

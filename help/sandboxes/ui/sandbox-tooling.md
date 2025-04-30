@@ -2,9 +2,9 @@
 title: Ferramentas de sandbox
 description: Exporte e importe configurações de sandbox facilmente entre sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
+source-git-commit: 654a1c696d88d9e1748787402a1a50c8e232df57
 workflow-type: tm+mt
-source-wordcount: '2486'
+source-wordcount: '2513'
 ht-degree: 7%
 
 ---
@@ -49,18 +49,18 @@ Os seguintes objetos são importados, mas estão em um rascunho ou estão desabi
 
 A tabela abaixo lista [!DNL Adobe Journey Optimizer] objetos que atualmente têm suporte para ferramentas e limitações de sandbox:
 
-| Plataforma | Objeto | Detalhes |
-| --- | --- | --- |
-| [!DNL Adobe Journey Optimizer] | Público-alvo | Um público-alvo pode ser copiado como um objeto dependente do objeto de jornada. Você pode selecionar criar um novo público ou reutilizar um existente na sandbox de destino. |
-| [!DNL Adobe Journey Optimizer] | Esquema | Os esquemas usados na jornada podem ser copiados como objetos dependentes. Você pode selecionar criar um novo esquema ou reutilizar um existente na sandbox de destino. |
-| [!DNL Adobe Journey Optimizer] | Política de mesclagem | As políticas de mesclagem usadas na jornada podem ser copiadas como objetos dependentes. Na sandbox de destino, você **não pode** criar uma nova política de mesclagem, você só pode utilizar uma já existente. |
-| [!DNL Adobe Journey Optimizer] | Jornada - detalhes da tela | A representação da jornada na tela inclui os objetos na jornada, como condições, ações, eventos, públicos-alvo de leitura e assim por diante, que são copiados. A atividade de salto é excluída da cópia. |
-| [!DNL Adobe Journey Optimizer] | Evento | Os eventos e detalhes do evento usados na jornada são copiados. Ele sempre criará uma nova versão na sandbox de destino. |
-| [!DNL Adobe Journey Optimizer] | Ação | As mensagens de email e de push usadas na jornada podem ser copiadas como objetos dependentes. As atividades de ação de canal usadas nos campos de jornada, que são usadas para personalização na mensagem, não são verificadas para verificação de integridade. Os blocos de conteúdo não são copiados.<br><br>A ação de atualização de perfil usada na jornada pode ser copiada. Ações personalizadas e detalhes de ação usados na jornada também são copiados. Ele sempre criará uma nova versão na sandbox de destino. |
-| [!DNL Adobe Journey Optimizer] | Jornada | Adicionar uma jornada inteira a um pacote copiará a maioria dos objetos dos quais a jornada depende, incluindo públicos, esquemas, eventos e ações. |
-| [!DNL Adobe Journey Optimizer] | Modelo de conteúdo | Um template de conteúdo pode ser copiado como um objeto dependente do objeto de jornada. Modelos independentes permitem reutilizar facilmente o conteúdo personalizado em campanhas e jornadas do Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Fragmento | Um fragmento pode ser copiado como um objeto dependente do objeto de jornada. Os fragmentos são componentes reutilizáveis que podem ser referenciados em um ou mais emails em campanhas e jornadas do Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campanhas | As campanhas podem ser copiadas junto com todos os itens relacionados ao perfil, público-alvo, esquema, mensagens embutidas e objetos dependentes. Alguns itens não são copiados, como itens de decisão, rótulos de uso de dados e configurações de idioma. Para obter uma lista completa de objetos que não podem ser copiados, consulte o guia [exportação de objetos para outra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox). |
+| Plataforma | Objeto | Objetos Dependentes Compatíveis | Detalhes |
+| --- | --- | --- | --- |
+| [!DNL Adobe Journey Optimizer] | Público-alvo | | Um público-alvo pode ser copiado como um objeto dependente do objeto de jornada. Você pode selecionar criar um novo público ou reutilizar um existente na sandbox de destino. |
+| [!DNL Adobe Journey Optimizer] | Esquema | | Os esquemas usados na jornada podem ser copiados como objetos dependentes. Você pode selecionar criar um novo esquema ou reutilizar um existente na sandbox de destino. |
+| [!DNL Adobe Journey Optimizer] | Política de mesclagem | | As políticas de mesclagem usadas na jornada podem ser copiadas como objetos dependentes. Na sandbox de destino, você **não pode** criar uma nova política de mesclagem, você só pode usar uma existente. |
+| [!DNL Adobe Journey Optimizer] | Jornada | Os seguintes objetos usados na jornada são copiados como objetos dependentes. Durante o fluxo de trabalho de importação, você pode selecionar **[!UICONTROL Criar novo]** ou **[!UICONTROL Usar existente]** para cada: <ul><li>Públicos-alvo</li><li>Esquemas</li><li>Ações personalizadas</li><li>Eventos</li><li>Fragmentos</li><li>Modelos de conteúdo</li><li>Detalhes da tela</li></ul> | <ul><li>**[!UICONTROL Ações personalizadas]**: ao selecionar **[!UICONTROL Usar existente]** durante o processo de importação ao copiar uma jornada para outra sandbox, as ações personalizadas existentes selecionadas **devem** ser iguais à ação personalizada de origem. Se não forem as mesmas, a nova jornada terá erros que não poderão ser resolvidos.</li><li>Os eventos e detalhes do evento usados na jornada são copiados. Ele sempre criará uma nova versão na sandbox de destino.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Ação | | As mensagens de email e de push usadas na jornada podem ser copiadas como objetos dependentes. As atividades de ação de canal usadas nos campos de jornada, que são usadas para personalização na mensagem, não são verificadas para verificação de integridade. Os blocos de conteúdo não são copiados.<br><br>A ação de atualização de perfil usada na jornada pode ser copiada. As ações personalizadas podem ser adicionadas a um pacote independentemente. Os detalhes da ação usados na jornada também são copiados. Ele sempre criará uma nova versão na sandbox de destino. |
+| [!DNL Adobe Journey Optimizer] | Modelo de conteúdo | | Um template de conteúdo pode ser copiado como um objeto dependente do objeto de jornada. Modelos independentes permitem reutilizar facilmente o conteúdo personalizado em campanhas e jornadas do Journey Optimizer. |
+| [!DNL Adobe Journey Optimizer] | Fragmento | Todos os fragmentos aninhados. | Um fragmento pode ser copiado como um objeto dependente do objeto de jornada. Os fragmentos são componentes reutilizáveis que podem ser referenciados em um ou mais emails em campanhas e jornadas do Journey Optimizer. |
+| [!DNL Adobe Journey Optimizer] | Campanhas | | As campanhas podem ser copiadas junto com todos os itens relacionados ao perfil, público-alvo, esquema, mensagens embutidas e objetos dependentes. Alguns itens não são copiados, como itens de decisão, rótulos de uso de dados e configurações de idioma. Para obter uma lista completa de objetos que não podem ser copiados, consulte [exportando objetos para outra sandbox] |
+
+<!-- | [!DNL Adobe Journey Optimizer] | Campaigns | The following objects used in the campaign are copied as dependent objects: <ul><li>Campaigns</li><li>Audiences</li><li>Schemas</li><li>Content templates</li><li>Fragments</li><li>Message/Content</li><li>Channel configuration</li><li>Unified decision objects</li><li>Experiment settings/variants</li></ul>| Campaigns can be copied along with all items related to the profile, audience, schema, inline messages, and dependent objects. Some items are not copied, such as decision items, data usage labels, and language settings. For a complete list of objects that cannot be copied, refer the [exporting objects to another sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide. | -->
 
 As superfícies (por exemplo, predefinições) não são copiadas. O sistema seleciona automaticamente a correspondência mais próxima possível na sandbox de destino com base no tipo de mensagem e no nome da superfície. Se não houver superfícies encontradas na sandbox de destino, a cópia de superfície falhará, fazendo com que a cópia da mensagem falhe, pois uma mensagem requer que uma superfície esteja disponível para configuração. Nesse caso, pelo menos uma superfície precisa ser criada para o canal direito da mensagem para que a cópia funcione.
 

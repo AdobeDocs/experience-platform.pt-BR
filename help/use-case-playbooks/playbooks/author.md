@@ -1,20 +1,20 @@
 ---
 solution: Experience Platform
-title: Saiba como criar e compartilhar seus próprios manuais usando o Assistente de IA.
-description: Como criar e compartilhar seus próprios manuais de casos de uso.
+title: Aprenda a criar e compartilhar seus próprios manuales usando o Assistente de IA.
+description: Como criar e compartilhar seus próprios manuales de casos de uso.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: 401062fbea8845f16803edb72ccb14b75c3f8409
+source-git-commit: 9583d836d4e295bcb5cc2ce41ba8ba6d2046b114
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1679'
 ht-degree: 0%
 
 ---
 
 
-# Crie e compartilhe seus próprios manuais (Beta)
+# Autor e compartilhe seus próprios manuales (beta)
 
-O [!DNL Playbook Authoring Framework], viabilizado pelo Assistente de IA no Adobe Experience Platform, permite criar, gerenciar e compartilhar manuais com eficiência no Adobe Experience Platform.
+O [!DNL Playbook Authoring Framework]assistente de IA em Adobe Experience Platform permite criar, gerenciar e compartilhar manualmente com eficiência dentro Adobe Experience Platform.
 
 A estrutura segue um processo de três etapas:
 
@@ -34,7 +34,7 @@ Siga estas etapas para criar um manual com o Assistente de IA:
 
 No painel de navegação esquerdo, selecione **[!UICONTROL Livros de reprodução]**.
 
-![&quot;Guias de Reprodução&quot; realçado no painel de navegação esquerdo na interface do usuário.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
+![&quot;Manuales&quot; destacados no painel de navegação à esquerda no interface.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
 Selecione **[!UICONTROL Novo manual]** e **Gerar manual com o Assistente de IA**.
 
@@ -80,15 +80,15 @@ Independentemente de você criar um manual ou com o Assistente de IA, é necess�
 
 >[!NOTE]
 >
-> O suporte para o Real-Time CDP será adicionado em uma versão futura.
+> O suporte para CDP em tempo real será adicionado em uma versão futura.
 
-![A guia &quot;Ativos técnicos&quot; e o botão &quot;Adicionar produto necessário&quot; foram realçados.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![A guia &quot;Ativos técnica&quot; e a botão &quot;Adicionar produto obrigatório&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
-Escolha **[!UICONTROL Selecionar um Ativo]** para associar este manual a uma jornada, conforme mostrado na imagem abaixo. Em seguida, selecione **Publicar manual** para finalizar o manual.
+Escolha **[!UICONTROL Selecionar um ativo]** para associar este manual a uma jornada como mostrado na imagem abaixo. Em seguida, selecione **Publish manual** para finalizar o manual.
 
-![ O botão &quot;Selecionar ativos&quot; foi destacado na guia &quot;Ativos técnicos&quot;](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
+![&quot;Selecionar ativos&quot; botão destacado na guia &quot;Technical ativos&quot;](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
 
-![Selecionar uma jornada](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
+![Selecione uma jornada](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
 
 Depois de publicado, o manual extrai e associa automaticamente o esquema da jornada e os detalhes do público-alvo.
 
@@ -112,9 +112,9 @@ O Assistente de IA pode processar várias estruturas de prompt e extrair detalhe
 
 **Exemplo 1:**
 
-&quot;Crie uma campanha intitulada &quot;Complete the Look&quot; para aumentar as vendas e o CLV. A campanha incentiva os clientes a adquirir utensílios de cozinha ou mobiliário para concluir uma compra complementar através de recomendações personalizadas e ofertas relacionadas com a sua compra. Primeiro envie uma mensagem aos clientes com recomendações de produto. Se não fizer compras em 7 dias, ele receberá uma segunda mensagem com recomendações e ofertas de produto. Use as notificações por push e o email para entrar em contato com os clientes. Clientes-alvo que efetuaram uma compra nos últimos 7 dias na categoria de utensílios de cozinha ou mobiliário e que não foram visados nos últimos 30 dias. Como parte da campanha, queremos medir KPIs como cliques (email, aplicativo, sms, push), CTR, CTR da E-Wallet, Receita do AOV Conversion.CLV, Eventos de compra total (na loja, digital, call center).&quot;
+&quot;Criar um campanha intitulado &quot;Todos os Apps o Look&quot; em solicitar para aumentar as vendas e a CLV. A campanha recomenda que os clientes tenham kitchenware ou móveis comprados para realizar uma compra complementar por meio de recomendações personalizadas e ofertas relacionadas à sua compra. Primeiro envie uma mensagem aos clientes com recomendações de produto. Se não fizerem compras dentro de 7 dias, eles receberão uma segunda mensagem com recomendações e ofertas de produtos. Use notificações por push e email para entrar em contato com os clientes. Target clientes que compraram nos últimos 7 dias em kitchenware ou furniture categoria e não foram alvos nos últimos 30 dias. Como parte do campanha, queremos medir KPIs como cliques (email, aplicativo, sms, push), CTR, CTR E-Wallet, AOV Receita de Conversão.CLV, Eventos de compra total (em armazenamento, digitais, central de atendimento)&quot;.
 
-![Exemplo mostrando um prompt longo na caixa de entrada de texto](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
+![Exemplo que mostra um prompt longo na caixa de entrada de texto](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **Exemplo 2:**
 
@@ -157,11 +157,13 @@ Ao criar manuais, lembre-se do idioma e do conteúdo incluídos. Os manuais são
 
 Se um manual for sinalizado para conteúdo inadequado ou ofensivo, ele será automaticamente relatado ao Adobe para análise. Em seguida, o Adobe revisa o conteúdo sinalizado e, se ele for considerado inadequado, o cliente é notificado e o Manual é removido.
 
-## Compartilhamento de manuais entre sandboxes {#sharing-playbooks-sandboxes}
+## Compartilhar manuais entre sandboxes {#share-playbooks-sandboxes}
 
-Se sua organização contiver várias sandboxes, não será necessário compartilhar manuais com elas. Depois de criar e publicar um manual em uma sandbox, ele ficará disponível em todas as sandboxes dessa organização. Em seguida, você pode criar instâncias desse manual em qualquer uma das outras sandboxes.
+Ao criar e publicar um manual em uma sandbox, ele se torna disponível automaticamente em todas as sandboxes da organização. Isso elimina a necessidade de compartilhamento manual e permite criar instâncias do manual em qualquer outra sandbox sem problemas.
 
-Se o manual referenciar campos que não estão disponíveis no esquema de união da sandbox de destino ou não têm as permissões necessárias, você poderá ver uma mensagem de erro ao tentar criar a instância. Essa mensagem indica os campos ausentes e/ou as permissões ausentes.
+>[!TIP]
+>
+>Se o manual referenciar campos que não estão disponíveis no esquema de união da sandbox de destino ou não têm as permissões necessárias, você poderá ver uma mensagem de erro ao tentar criar a instância. Essa mensagem indica os campos ausentes e/ou as permissões ausentes.
 
 Se algum campo estiver ausente do esquema de união, uma caixa de diálogo o destacará durante a importação.
 
@@ -169,34 +171,34 @@ Se algum campo estiver ausente do esquema de união, uma caixa de diálogo o des
 
 ## Compartilhamento de manuais entre organizações {#sharing-playbooks-organizations}
 
-Para compartilhar um manual de uma organização para outra, siga estas etapas:
+O compartilhamento de manuais entre organizações ajuda a garantir consistência e eficiência quando várias equipes precisam seguir as mesmas práticas recomendadas. Para compartilhar um manual de uma organização para outra, siga estas etapas:
 
-* **Faça logon na organização de origem**: navegue até a organização que contém o manual que você criou e deseja compartilhar na guia **[!UICONTROL Seus manuais]**.
-* **Publicar o manual**: se o manual ainda não tiver sido publicado, você deverá publicá-lo antes de compartilhá-lo.
+1. **Faça logon na organização de origem**: navegue até a organização que contém o manual que você criou e deseja compartilhar na guia **[!UICONTROL Seus manuais]**.
+2. **Publicar o manual**: se o manual ainda não tiver sido publicado, você deverá publicá-lo antes de compartilhá-lo.
 
->[!NOTE]
->
->Uma parceria deve ser estabelecida entre as organizações de origem e de destino para permitir o compartilhamento do manual. Saiba como [criar uma solicitação de parceria de organização](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
+   >[!NOTE]
+   >
+   >Uma parceria deve ser estabelecida entre as organizações de origem e de destino para permitir o compartilhamento do manual. Saiba como [criar uma solicitação de parceria de organização](/help/sandboxes/ui/sharing-packages-across-orgs.md#create-an-organization-partnership-request).
 
-* **Iniciar o compartilhamento**: depois que o manual for publicado e uma parceria for estabelecida, selecione **[!UICONTROL Compartilhar Manual]**.
-* **Selecionar a organização de destino**: escolha a organização com a qual deseja compartilhar o manual quando solicitado.
-* **Confirmar e compartilhar**: confirme sua seleção. Você receberá mensagens de confirmação indicando que o compartilhamento foi bem-sucedido.
-* **Verificar a organização de destino**: faça logon na organização de destino para verificar se o manual de reprodução está disponível.
-* **Importar o manual**: selecione **[!UICONTROL Importar]** para trazer o manual para a organização de destino. Você pode exibi-lo na guia **Guias de reprodução**.
+3. **Iniciar o compartilhamento**: depois que o manual for publicado e uma parceria for estabelecida, selecione **[!UICONTROL Compartilhar Manual]**.
+4. **Selecionar a organização de destino**: escolha a organização com a qual deseja compartilhar o manual quando solicitado.
+5. **Confirmar e compartilhar**: confirme sua seleção. Você receberá mensagens de confirmação indicando que o compartilhamento foi bem-sucedido.
+6. **Verificar a organização de destino**: faça logon na organização de destino para verificar se o manual de reprodução está disponível.
+7. **Importar o manual**: selecione **[!UICONTROL Importar]** para trazer o manual para a organização de destino. Você pode exibi-lo na guia **Guias de reprodução**.
 
-Se o manual não for exibido, verifique se ele foi publicado e se a parceria com a organização está ativa.
+Se o manual não for exibido, verifique se ele foi publicado e se a parceria da organização está ativa.
 
 >[!IMPORTANT]
 >
 >Não há suporte para compartilhamento de playbook transitório. Se você compartilhar um manual de uma organização para outra e, em seguida, importá-lo, ele não poderá ser compartilhado novamente da organização de recebimento para uma terceira organização.
 
-## Permissões necessárias
+## Permissões necessárias {#required-permissions}
 
 Para acessar a sandbox e usar esse recurso, você precisa das seguintes permissões:
 
-* **Permissões da sandbox**:
+### Permissões de sandbox
 
-Eles são necessários para acessar o ambiente de sandbox onde o recurso existe:
+Essas permissões são necessárias para acessar o ambiente de sandbox onde o recurso existe:
 
 * **Gerenciar sandbox**
 * **Exibir sandbox**
@@ -214,13 +216,13 @@ Essas permissões permitirão:
 * Acessar o recurso na sandbox
 * Gerencie e compartilhe pacotes conforme necessário
 
-Essas permissões estão localizadas na seção **[!UICONTROL Sandboxes]** da lista de permissões.
+Essas permissões estão localizadas na **[!UICONTROL seção Sandboxes]** das lista de permissões.
 
-![A lista de permissões com as permissões relevantes realçadas.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+![As permissões lista com as permissões relevantes destacadas.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
 
 ### Jornadas e objetos relacionados - permissões
 
-Ao criar Jornadas que usam manuais, você provavelmente referenciará outros objetos, como **Canais**, **Públicos-alvo** e outras entidades. Cada um deles tem seu próprio conjunto de permissões.
+Ao construir Jornadas que usam Manuales, provavelmente você fará referência a outros objetos, como **Canais**, **Audiences** e outras entidades. Cada um deles tem suas próprias permissão definidas.
 
 Essas são as principais permissões para ações relacionadas à Jornada, como:
 

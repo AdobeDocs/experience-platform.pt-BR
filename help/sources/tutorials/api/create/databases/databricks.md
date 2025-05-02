@@ -4,7 +4,7 @@ description: Saiba como conectar o Azure Databricks ao Experience Platform usand
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 2%
@@ -32,7 +32,7 @@ Leia o manual sobre [como começar a usar as APIs do Experience Platform](../../
 
 ### Configurar pré-requisitos
 
-Leia a [[!DNL Databricks] visão geral](../../../../connectors/databases/databricks.md) para obter informações sobre as configurações de pré-requisito que devem ser concluídas primeiro, antes de conectar sua conta à Experience Platform.
+Leia a [[!DNL Databricks] visão geral](../../../../connectors/databases/databricks.md) para saber mais sobre as configurações de pré-requisito que devem ser concluídas antes de você poder conectar sua conta à Experience Platform.
 
 ### Coletar credenciais necessárias
 

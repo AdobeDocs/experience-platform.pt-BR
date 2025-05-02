@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxe SQL no Serviço de consulta
 description: Este documento detalha e explica a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
+source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
 workflow-type: tm+mt
-source-wordcount: '4623'
+source-wordcount: '4649'
 ht-degree: 1%
 
 ---
@@ -110,17 +110,21 @@ SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
 SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN 'HEAD' AND start_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND 'TAIL';
 
-SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id) C;
 
 (SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
   INNER JOIN 
 (SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
   ON a.id = b.id;
 ```
+
+>[!NOTE]
+>
+>Ao usar `HEAD` ou `TAIL` em uma cláusula `SNAPSHOT`, você deve envolvê-los entre aspas simples (por exemplo, &#39;HEAD&#39;, &#39;TAIL&#39;). Usá-los sem aspas resulta em um erro de sintaxe.
 
 A tabela abaixo explica o significado de cada opção de sintaxe na cláusula SNAPSHOT.
 
@@ -130,7 +134,7 @@ A tabela abaixo explica o significado de cada opção de sintaxe na cláusula SN
 | `AS OF end_snapshot_id` | Lê os dados como estavam na ID de instantâneo especificada (inclusive). |
 | `BETWEEN start_snapshot_id AND end_snapshot_id` | Lê dados entre as IDs de instantâneo de início e término especificadas. É exclusivo de `start_snapshot_id` e inclui de `end_snapshot_id`. |
 | `BETWEEN HEAD AND start_snapshot_id` | Lê dados desde o início (antes do primeiro instantâneo) até a ID de instantâneo inicial especificada (inclusive). Observe que isso retorna somente linhas em `start_snapshot_id`. |
-| `BETWEEN end_snapshot_id AND TAIL` | Lê dados logo após o `end-snapshot_id` especificado até o final do conjunto de dados (excluindo a ID do instantâneo). Isso significa que se `end_snapshot_id` for o último instantâneo no conjunto de dados, a consulta retornará zero linhas porque não há instantâneos além do último instantâneo. |
+| `BETWEEN end_snapshot_id AND TAIL` | Lê dados logo após o `end_snapshot_id` especificado até o final do conjunto de dados (excluindo a ID do instantâneo). Isso significa que se `end_snapshot_id` for o último instantâneo no conjunto de dados, a consulta retornará zero linhas porque não há instantâneos além do último instantâneo. |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Lê dados iniciando a partir da ID de instantâneo especificada de `table_to_be_queried` e une-os com os dados de `table_to_be_joined` como estavam em `your_chosen_snapshot_id`. A associação é baseada em IDs correspondentes das colunas ID das duas tabelas que estão sendo unidas. |
 
 Uma cláusula `SNAPSHOT` funciona com um alias de tabela ou tabela, mas não sobre uma subconsulta ou exibição. Uma cláusula `SNAPSHOT` funciona em qualquer lugar que uma consulta `SELECT` em uma tabela possa ser aplicada.
@@ -141,7 +145,7 @@ Além disso, você pode usar `HEAD` e `TAIL` como valores de deslocamento especi
 >
 >Se você estiver consultando entre duas IDs de instantâneo, os dois cenários a seguir poderão ocorrer se o instantâneo de início expirar e o sinalizador de comportamento de fallback opcional (`resolve_fallback_snapshot_on_failure`) estiver definido:
 >
->- Se o sinalizador de comportamento de fallback opcional estiver definido, o Serviço de Consulta escolherá o instantâneo disponível mais antigo, definirá-o como o instantâneo inicial e retornará os dados entre o instantâneo disponível mais antigo e o instantâneo final especificado. Estes dados são **inclusivos** do instantâneo mais antigo disponível.
+>- Se o sinalizador de comportamento de fallback opcional estiver definido, o Serviço de Consulta escolherá o instantâneo disponível mais antigo, o definirá como o instantâneo inicial e retornará os dados entre o instantâneo disponível mais antigo e o instantâneo final especificado. Estes dados são **inclusivos** do instantâneo mais antigo disponível.
 
 ### Cláusula WHERE
 

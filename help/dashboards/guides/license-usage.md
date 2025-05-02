@@ -4,10 +4,10 @@ title: Painel de Uso da Licença
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3398'
-ht-degree: 22%
+source-wordcount: '3442'
+ht-degree: 21%
 
 ---
 
@@ -307,7 +307,7 @@ O painel de uso da licença relata várias métricas exclusivas que são aplicá
 | [!UICONTROL Número de Pacotes de Riqueza de Perfis] | Um aumento do volume de dados total autorizado em 25 KB por perfil para cada pacote adicional de riqueza do perfil. |
 | [!UICONTROL Horas de Computação do Serviço de Consulta] | Uma medida do tempo utilizado pelos mecanismos do serviço de consulta para ler, processar e gravar dados no data lake ao executar uma consulta em lote. |
 | [!UICONTROL Número de pacotes de segmentação de streaming] | Os pacotes atualizam a associação de segmentos de um perfil de pessoa à medida que novos dados entram no serviço de segmentação por meio de um fluxo de transmissão. A associação de segmentos é avaliada com base nos atributos atuais do perfil da pessoa e no valor do evento atual, sem considerar o comportamento histórico. A segmentação por transmissão é um recurso compartilhado. |
-| [!UICONTROL Volume de Dados Total] | A quantidade total de dados disponíveis para o Perfil do cliente em tempo real usar em fluxos de trabalho de envolvimento. Consulte as [perguntas frequentes sobre o Volume Total de Dados](../../landing/license-usage-and-guardrails/total-data-volume.md) para saber mais. |
+| [!UICONTROL Volume de Dados Total] | A quantidade total de dados disponíveis para o Perfil do cliente em tempo real usar em fluxos de trabalho de envolvimento. O Volume de Dados Total é calculado usando a seguinte fórmula: **Volume de Dados Total = Público-Alvo Endereçável × Riqueza Média do Perfil**. Essa métrica reflete os dados armazenados somente no Armazenamento de perfis e exclui o armazenamento do data lake. Ele fornece uma visualização mais focada de dados relevantes para o envolvimento baseado em perfis. Consulte as [perguntas frequentes sobre o Volume Total de Dados](../../landing/license-usage-and-guardrails/total-data-volume.md) para saber mais. |
 | [!UICONTROL Volume total de saída de dados] | O volume anual cumulativo de dados exportados do Adobe Experience Platform para data warehouses de terceiros. |
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->

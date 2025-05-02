@@ -1,21 +1,21 @@
 ---
 title: Métrica de volume de dados total
 description: Saiba mais sobre a nova métrica Volume de dados total e como ela substitui a métrica de riqueza média de perfil anterior.
-hide: true
-hidefromtoc: true
-source-git-commit: 9aba85d4e5a481b0eff53e1d87311c395934f585
+exl-id: 4b21d25c-b82b-4d1a-83ce-b510f02fd160
+source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '593'
 ht-degree: 1%
 
 ---
 
-
 # Métrica Volume de Dados Total
 
-A partir de 24 de setembro de 2024, a métrica Volume total de dados substituirá a métrica anterior Riqueza média de perfil.
+O Volume de dados total substitui a métrica Anterior de Riqueza média de perfil como uma maneira mais simples e explicável de rastrear o uso em relação aos direitos do Armazenamento de perfil.
 
-Volume de dados total representa a quantidade total de dados disponíveis para o Perfil de cliente em tempo real da Adobe Experience Platform usar em fluxos de trabalho de envolvimento. Este valor é equivalente à métrica de Público-alvo endereçável multiplicada pela Riqueza média do perfil.
+**Volume De Dados Total = Público-Alvo Endereçável × Riqueza Média Do Perfil**
+
+Esta métrica reflete a quantidade total de dados armazenados na **Loja de perfis** e disponíveis para uso nos fluxos de trabalho de envolvimento do Perfil do cliente em tempo real. **não** inclui dados armazenados no **data lake**. Essa alteração fornece uma exibição mais focada e transparente de dados relevantes para a personalização e o envolvimento baseados em perfil.
 
 ## Perguntas frequentes {#faq}
 
@@ -36,6 +36,16 @@ Não. Você ainda obterá os benefícios dos pacotes de direitos que adquiriu an
 ### Por que vejo um valor diferente para meu Volume de dados total em comparação ao meu direito de armazenamento de perfil?
 
 Volume de Dados Total representa a quantidade **total** de dados disponíveis para o Perfil usar em fluxos de trabalho de envolvimento. A medição foi atualizada para ser mais determinística e explicável. A maioria dos usuários **não** deve ver uma alteração significativa entre seu Volume de Dados Total e seu armazenamento de perfil total. Se você tiver alguma dúvida, crie um tíquete para o seu representante de atendimento ao cliente.
+
+### Como é calculado o Volume total de dados? Ele inclui o armazenamento Data Lake?
+
+O volume de dados total é calculado usando a seguinte fórmula:
+
+**Volume De Dados Total = Público-Alvo Endereçável × Riqueza Média Do Perfil**
+
+Essa métrica reflete a quantidade total de dados armazenados na Loja de perfis que está disponível para o Perfil do cliente em tempo real usar em fluxos de trabalho de envolvimento. **não** inclui dados armazenados no data lake.
+
+Anteriormente, algumas ofertas herdadas usavam uma métrica de &quot;armazenamento total&quot; que combinava o uso do Armazenamento de perfis e do Data Lake. No entanto, o Volume total de dados está limitado apenas ao Armazenamento de perfis, fornecendo uma visualização mais focada de dados relevantes para o engajamento baseado em perfil.
 
 ### Preciso recriar minhas alterações para continuar gerenciando minha riqueza média de perfis?
 

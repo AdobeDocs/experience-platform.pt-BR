@@ -2,10 +2,10 @@
 title: Notas de versão de abril de 2025 da Adobe Experience Platform
 description: As notas de versão de abril de 2025 da Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 52f6995beeff05948958bc7349242e2744e2fb05
+source-git-commit: be9e1a995e62fa5a437be82aa15187815bbc5a9d
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 20%
+source-wordcount: '2147'
+ht-degree: 21%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 20%
 Atualizações dos recursos e da documentação existentes no Adobe Experience Platform:
 
 - [Experience League](#experience-league)
+- [Coleção de dados](#data-collection)
 - [Destinos](#destinations)
 - [Experience Data Model](#xdm)
 - [Serviço de identidade](#identity)
@@ -41,6 +42,18 @@ O Experience League é uma plataforma de aprendizado abrangente, projetada para 
 | Recurso | Descrição |
 | --- | --- |
 | Página inicial personalizada | Acesse e personalize sua página inicial personalizada no [Experience League](https://experienceleague.adobe.com/en/home#). Entre com suas credenciais do Adobe e selecione **[!UICONTROL Experience League]** no menu superior para começar a otimizar sua experiência de aprendizado: <ul><li>**Marcadores**: use o recurso [!UICONTROL Marcadores] para salvar e coletar seus recursos favoritos em um único local. Você pode salvar uma variedade de conteúdo, incluindo listas de reprodução, artigos e tutoriais.</li><li>**Personalize seu aprendizado**: melhore sua experiência de aprendizado atualizando seu perfil do Experience League com as funções, os setores, os produtos e o nível de experiência que melhor atendem às suas necessidades.</li><li>**Recomendações**: exibir conteúdo de aprendizado recomendado com base em sua atividade recente.</li><li>**Visualizado recentemente**: use a seção [!UICONTROL Visualizado recentemente] para voltar rapidamente para conteúdo visualizado recentemente, como documentação e vídeos.</li><li>**Recursos de aprendizado**: use o painel [!UICONTROL Todos os recursos de aprendizado] para navegar até tutoriais, documentação, comunidade, eventos e certificações.</li><li>**Novidades**: veja a seção [!UICONTROL Novidades] para obter um fluxo do conteúdo mais recente no Experience League.</li><li>**Assista a eventos anteriores sob demanda**: assista a fluxos ao vivo previamente gravados em holofotes de produtos, casos de uso e tutoriais com a [!UICONTROL seção Assista a eventos anteriores sob demanda].</li></ul><br> ![Página inicial personalizada no Experience League.](../2025/assets/april/personalized-home-page.png "Página inicial personalizada no Experience League."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+## Coleção de dados {#data-collection}
+
+A Adobe Experience Platform fornece um conjunto de tecnologias que permitem coletar dados da experiência do cliente e enviá-los à Rede de borda da Adobe Experience Platform, onde eles podem ser enriquecidos, transformados e distribuídos para destinos da Adobe ou de outras empresas.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Extensão de API de eventos da Web do [!DNL Amazon] | A extensão de API de Conversões do [!DNL Amazon] permite que os anunciantes compartilhem interações de site diretamente com o [!DNL Amazon], fornecendo atribuição aprimorada, confiabilidade de dados e otimização de campanha. Essa extensão é compatível com o encaminhamento de eventos, permitindo enviar eventos de conversão, como compras, adições ao carrinho e muito mais, garantindo a desduplicação adequada para relatórios precisos. Para obter mais informações, consulte a [visão geral da extensão do Amazon](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
 

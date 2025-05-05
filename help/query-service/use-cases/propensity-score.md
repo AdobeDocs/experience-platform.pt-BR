@@ -185,7 +185,9 @@ Após os números serem obtidos, eles podem ser portados para uma função sigmo
 ```sql
 SELECT CASE WHEN 1 / (1 + EXP(- (f1 + f2 + f3 + f4 + FLOAT(intercept)))) > 0.5 THEN 1 ELSE 0 END AS Prediction;
 ```
+
  
+
 ### Um exemplo completo
 
 Em uma situação em que você tem duas colunas (`c1` e `c2`), se `c1` tiver duas categorias, o algoritmo [!DNL Logistic Regression] será treinado com a seguinte função:
@@ -194,6 +196,7 @@ Em uma situação em que você tem duas colunas (`c1` e `c2`), se `c1` tiver dua
 ```python
 y = 0.1 * "c1=category 1"+ 0.2 * "c1=category 2" +0.3 * c2+0.4
 ```
+
  
 O equivalente no SQL é o seguinte:
 
@@ -209,6 +212,7 @@ FROM
     FROM TABLE
   )
 ```
+
  
 O código [!DNL Python] para automatizar o processo de tradução é o seguinte:
 

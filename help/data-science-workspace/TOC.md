@@ -36,7 +36,7 @@ ht-degree: 33%
    * [MLServices](api/mlservices.md)
    * [Insights](api/insights.md)
    * [Apêndice](api/appendix.md)
-* Receitas {#pre-built-recipes} pré-compiladas
+* Receitas pré-compiladas {#pre-built-recipes}
    * [Receita de recomendação do produto](pre-built-recipes/product-recommendations.md)
    * [Previsão de compra do produto](pre-built-recipes/product-purchase-prediction.md)
    * [Receita de venda de varejo](pre-built-recipes/retail-sales.md)

@@ -125,6 +125,6 @@ A tela atualiza o tipo de dados do campo de &quot;[!UICONTROL Objeto]&quot; para
 
 ## Próximas etapas {#next-steps}
 
-Este guia abordou como criar e editar tipos de dados usando a interface do usuário do Experience Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
+Este guia abordou como criar e editar tipos de dados usando a interface do usuário do Experience Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).
 
 Para saber como gerenciar tipos de dados usando a API [!DNL Schema Registry], consulte o [manual de ponto de extremidade de tipos de dados](../../api/data-types.md).

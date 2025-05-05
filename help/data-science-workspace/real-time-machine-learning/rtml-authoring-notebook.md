@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >O Machine Learning em tempo real ainda não está disponível para todos os usuários. Esse recurso está na alfa e ainda está sendo testado. Esta documento está sujeita a mudanças.
 
-O guia a seguir descreve as etapas necessárias para build um aplicativo de Aprendizagem de máquina em tempo real. Usando o Adobe Systems notebook ML ]**Python em tempo real fornecido**[!UICONTROL  modelo, este guia aborda treinamento um modelo, a criação de um DSL, a publicação de DSL para o Edge e a pontuação da solicitação. Conforme você avança na implementação do seu modelo de Aprendizado de máquina em tempo real, espera-se modificar o modelo para atender às necessidades do seu conjunto de dados.
+O guia a seguir descreve as etapas necessárias para build um aplicativo de Aprendizagem de máquina em tempo real. Usando o Adobe Systems notebook ML **Python em tempo real fornecido** modelo, este guia aborda treinamento um modelo, a criação de um DSL, a publicação de DSL para o Edge e a pontuação da solicitação. Conforme você avança na implementação do seu modelo de Aprendizado de máquina em tempo real, espera-se modificar o modelo para atender às necessidades do seu conjunto de dados.
 
 ## Criar um bloco de anotações do Aprendizado de Máquina em Tempo Real
 
@@ -96,7 +96,7 @@ Se quiser usar um conjunto de dados dentro do Adobe Experience Platform, remova 
 
 ![conjunto de dados rtml](../images/rtml/rtml-dataset.png)
 
-Para acessar um conjunto de dados no bloco de anotações [!DNL JupyterLab], selecione a guia **Dados** no menu de navegação esquerdo de [!DNL JupyterLab]. Os **[!UICONTROL diretórios Conjuntos]** de dados e **[!UICONTROL Schemas]** são exibidos. Selecione Conjuntos ]**de dados e clique com o botão direito do mouse e selecione**[!UICONTROL  a opção **[!UICONTROL Explorar dados em notebook]** no menu suspenso na conjunto de dados que deseja usar. Uma entrada de código executável aparece na parte inferior do notebook. Essa célula tem o seu `dataset_id`.
+Para acessar um conjunto de dados no bloco de anotações [!DNL JupyterLab], selecione a guia **Dados** no menu de navegação esquerdo de [!DNL JupyterLab]. Os **[!UICONTROL diretórios Conjuntos]** de dados e **[!UICONTROL Schemas]** são exibidos. Selecione Conjuntos **de dados e clique com o botão direito do mouse e selecione** a opção **[!UICONTROL Explorar dados em notebook]** no menu suspenso na conjunto de dados que deseja usar. Uma entrada de código executável aparece na parte inferior do notebook. Essa célula tem o seu `dataset_id`.
 
 ![acesso ao conjunto de dados](../images/rtml/access-dataset.png)
 
@@ -117,7 +117,7 @@ config_properties = {
 
 ### Preparar seu modelo
 
-Usando o modelo de ML ]**em tempo real**[!UICONTROL  você precisa analisar, pré-processar, treinar e avaliar seu modelo de ML. Isso é feito aplicando transformações de dados e criando um pipeline de treinamento.
+Usando o modelo de ML **em tempo real** você precisa analisar, pré-processar, treinar e avaliar seu modelo de ML. Isso é feito aplicando transformações de dados e criando um pipeline de treinamento.
 
 **Transformações de dados**
 

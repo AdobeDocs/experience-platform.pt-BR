@@ -46,7 +46,7 @@ Antes de iniciar essa tutorial, você deve ter os seguintes pré-requisitos:
 
    >[!NOTE]
    >
-   >Se um novo Inicializador guia não aparecer automaticamente, abra um novo Inicializador guia clicando Arquivo selecione **[!UICONTROL Novo Inicializador]**.]****[!UICONTROL 
+   >Se um novo Inicializador guia não aparecer automaticamente, abra um novo Inicializador guia clicando Arquivo selecione **[!UICONTROL Novo Inicializador]**.**&#x200B;**
 
 2. Na guia inicializador, clique no **[!UICONTROL ícone Em branco]** em um Python 3 ambiente para abrir um notebook vazio.
 

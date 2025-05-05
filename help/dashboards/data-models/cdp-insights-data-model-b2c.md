@@ -49,7 +49,7 @@ A lógica usada para o widget [!UICONTROL Contagem de perfis] retorna o número 
 
 O SQL que gera o widget [!UICONTROL Contagem de perfis] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -69,7 +69,7 @@ A lógica usada pelo widget [!UICONTROL Perfis de identidade única] fornece uma
 
 O SQL que gera o widget [!UICONTROL Perfis de identidade única] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -102,7 +102,7 @@ O widget [!UICONTROL Perfis por identidade] exibe o detalhamento de identidades 
 
 O SQL que gera o widget [!UICONTROL Perfis por identidade] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -126,7 +126,7 @@ A lógica usada pelo widget [!UICONTROL Perfis de identidade únicos por identid
 
 O SQL que gera o widget [!UICONTROL Perfis de identidade únicos por identidade] é visto na seção recolhível abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -165,7 +165,7 @@ A lógica usada para o widget [!UICONTROL Tamanho do público-alvo] retorna o n�
 
 O SQL que gera o widget [!UICONTROL Tamanho do público-alvo] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT
@@ -189,7 +189,7 @@ A lógica usada para o widget [!UICONTROL Tendência de alteração de tamanho d
 
 O SQL que gera o widget [!UICONTROL Tendência de alteração de tamanho de público] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT date_key,
@@ -226,7 +226,7 @@ A lógica usada no widget [!UICONTROL Destinos mais usados] lista os destinos ma
 
 O SQL que gera o widget [!UICONTROL Destinos mais usados] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -251,7 +251,7 @@ A lógica do widget [!UICONTROL Públicos-alvo recentemente ativados] fornece um
 
 O SQL que gera o widget [!UICONTROL Públicos-alvo recentemente ativados] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT
@@ -295,7 +295,7 @@ A lógica usada no widget [!UICONTROL Perfis por identidade] fornece um detalham
 
 O SQL que gera o widget [!UICONTROL Perfis por identidade] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -331,7 +331,7 @@ A lógica usada no widget [!UICONTROL Sobreposição de identidade] exibe a sobr
 
 O SQL que gera o widget [!UICONTROL Sobreposição de identidade] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -400,7 +400,7 @@ A lógica usada no widget [!UICONTROL Públicos-alvo] do painel [!UICONTROL Sobr
 
 O SQL que gera o widget [!UICONTROL Sobreposição de identidade] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,

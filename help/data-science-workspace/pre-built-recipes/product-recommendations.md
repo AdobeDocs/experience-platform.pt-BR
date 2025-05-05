@@ -38,7 +38,7 @@ Você pode começar seguindo o Adobe Experience Platform Lab tutorial (consulte 
 
 ## schema de dados
 
-Essa fórmula usa esquemas](../../xdm/schema/field-dictionary.md) XDM personalizados [para modelar os dados de entrada e saída:
+Essa fórmula usa esquemas[&#128279;](../../xdm/schema/field-dictionary.md) XDM personalizados para modelar os dados de entrada e saída:
 
 ### schema de dados de entrada
 

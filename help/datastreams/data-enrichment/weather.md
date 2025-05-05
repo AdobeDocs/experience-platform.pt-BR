@@ -11,7 +11,7 @@ ht-degree: 68%
 
 # Aprimorar a coleta de dados com dados meteorológicos de [!DNL The Weather Channel]
 
-A Adobe fez parceria com o [!DNL [The Weather Company]](https://www.ibm.com/weather) para trazer o contexto adicional de clima dos Estados Unidos para os dados coletados por sequências de dados. Você pode usar esses dados para análise, direcionamento e criação de público no Experience Platform.
+A Adobe fez parceria com o [[!DNL [The Weather Company]]](https://www.ibm.com/weather) para trazer o contexto adicional de clima dos Estados Unidos para os dados coletados por sequências de dados. Você pode usar esses dados para análise, direcionamento e criação de público no Experience Platform.
 
 Há três tipos de dados disponíveis em [!DNL The Weather Channel]:
 

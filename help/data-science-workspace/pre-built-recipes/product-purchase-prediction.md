@@ -37,7 +37,7 @@ O fórmula de Previsão de compra de produtos utiliza o aprendizado de máquina 
 
 ## schema de dados
 
-Essa fórmula usa esquemas [](../../xdm/home.md) XDM para modelar os dados. A schema usada para esta fórmula é mostrada abaixo:
+Essa fórmula usa esquemas [&#128279;](../../xdm/home.md) XDM para modelar os dados. A schema usada para esta fórmula é mostrada abaixo:
 
 | Nome do campo | Tipo |
 | --- | --- |

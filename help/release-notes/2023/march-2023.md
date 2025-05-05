@@ -139,8 +139,8 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | Grupo de campos | (Vários) | [Adição de vários tipos de evento XDM aos [!UICONTROL relatórios de mídia]](https://github.com/adobe/xdm/pull/1670/files). |
 | Grupo de campos | [!UICONTROL Evento de alteração do Workfront] | Os grupos de campos `Full Record` e `Accessor Employee Ids` foram adicionados. |
 | Tipo de dados | [[!UICONTROL Item da lista de produtos]](https://github.com/adobe/xdm/pull/1685/files) | O [!UICONTROL Valor do reembolso] foi adicionado para indicar o valor reembolsado do item, se houver. |
-| Tipo de dados | [[!UICONTROL Pedido ]](https://github.com/adobe/xdm/pull/1685/files) | A [!UICONTROL Lista de reembolsos] foi adicionada à lista deste pedido. |
-| Tipo de dados | [[!UICONTROL Item da lista de produtos ]](https://github.com/adobe/xdm/pull/1677/files) | Categorias de produto foram adicionadas à lista de dados de categoria deste produto. |
+| Tipo de dados | [[!UICONTROL Pedido &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | A [!UICONTROL Lista de reembolsos] foi adicionada à lista deste pedido. |
+| Tipo de dados | [[!UICONTROL Item da lista de produtos &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | Categorias de produto foram adicionadas à lista de dados de categoria deste produto. |
 | Tipo de dados | [!UICONTROL Informações de detalhes da sessão] | Adição do campo de string `pev3` que [indica o tipo de fluxo de mídia usado para criar relatórios](https://github.com/adobe/xdm/pull/1676/files). Também foi adicionada a propriedade `pccr`, que indica se ocorreu um redirecionamento. |
 | Tipo de dados | [!UICONTROL Lista de requisições] | Fornece as [propriedades da lista de requisições](https://github.com/adobe/xdm/pull/1675/files). Estas incluem: nome, ID e descrição. |
 | Tipo de dados | [!UICONTROL Comércio] | O [tipo de dados do Comércio foi atualizado](https://github.com/adobe/xdm/pull/1675/files) para incluir `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals` e `requisitionList`. |
@@ -201,9 +201,9 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| Disponibilidade beta do [!DNL Chatlio] | A origem do [!DNL Chatlio] está disponível na versão beta. Use a origem do [!DNL Chatlio] para transmitir dados de eventos do [!DNL Chatlio] para a Experience Platform. Para obter mais informações, leia a visão geral](../../sources/connectors/marketing-automation/chatlio-webhook.md) do [[!DNL Chatlio] . |
-| Disponibilidade beta do [!DNL Customer.io] | A origem do [!DNL Customer.io] agora está disponível na versão beta. Use a origem do [!DNL Customer.io] para transmitir dados de evento de clientes para a Experience Platform. Para obter mais informações, leia a visão geral](../../sources/connectors/marketing-automation/customerio-webhook.md) do [[!DNL Customer.io] . |
-| Disponibilidade beta do [!DNL Pendo] | A origem do [!DNL Pendo] agora está disponível na versão beta. Use a origem do [!DNL Pendo] para transmitir os dados de análise do produto para a Experience Platform. Para obter mais informações, leia a visão geral](../../sources/connectors/analytics/pendo-webhook.md) do [[!DNL Pendo] . |
+| Disponibilidade beta do [!DNL Chatlio] | A origem do [!DNL Chatlio] está disponível na versão beta. Use a origem do [!DNL Chatlio] para transmitir dados de eventos do [!DNL Chatlio] para a Experience Platform. Para obter mais informações, leia a visão geral[&#128279;](../../sources/connectors/marketing-automation/chatlio-webhook.md) do [!DNL Chatlio] . |
+| Disponibilidade beta do [!DNL Customer.io] | A origem do [!DNL Customer.io] agora está disponível na versão beta. Use a origem do [!DNL Customer.io] para transmitir dados de evento de clientes para a Experience Platform. Para obter mais informações, leia a visão geral[&#128279;](../../sources/connectors/marketing-automation/customerio-webhook.md) do [!DNL Customer.io] . |
+| Disponibilidade beta do [!DNL Pendo] | A origem do [!DNL Pendo] agora está disponível na versão beta. Use a origem do [!DNL Pendo] para transmitir os dados de análise do produto para a Experience Platform. Para obter mais informações, leia a visão geral[&#128279;](../../sources/connectors/analytics/pendo-webhook.md) do [!DNL Pendo] . |
 | Suporte para fluxos de dados de rascunho | Agora você pode usar a API do serviço de fluxo para atribuir um estado de rascunho aos fluxos de dados. Os fluxos de dados em rascunho podem ser atualizados e publicados posteriormente com novas informações. Para obter mais informações, leia o guia [Definir os fluxos de dados de origem como rascunhos](../../sources/tutorials/api/draft.md). |
 
 {style="table-layout:auto"}

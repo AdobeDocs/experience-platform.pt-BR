@@ -31,7 +31,7 @@ Há também duas métricas:
 * Impressões do ativo
 * Cliques em ativos.
 
-Esses relatórios devem ser ativados usando o Administrador do Analytics (clique em **[!UICONTROL Analytics] > [!UICONTROL  Administrador] > [!UICONTROL Conjuntos de relatórios] > `<report suite>` > [!UICONTROL Editar configurações] > [!UICONTROL AEM] > [!UICONTROL Relatórios do AEM Assets]**) para que eles possam ser preenchidos usando essa extensão.
+Esses relatórios devem ser ativados usando o Administrador do Analytics (clique em **[!UICONTROL Analytics] > [!UICONTROL &#x200B; Administrador] > [!UICONTROL Conjuntos de relatórios] > `<report suite>` > [!UICONTROL Editar configurações] > [!UICONTROL AEM] > [!UICONTROL Relatórios do AEM Assets]**) para que eles possam ser preenchidos usando essa extensão.
 
 A extensão de tag do &quot;*Adobe Analytics*&quot; para o Adobe Experience Platform deve ser instalada na mesma propriedade da web.
 

@@ -161,6 +161,7 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL Marketing
      | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * Um exemplo com os mapeamentos acima é mostrado abaixo:
+
      ![Exemplo de captura de tela da interface do Experience Platform mostrando os mapeamentos do Target.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecione **[!UICONTROL Avançar]**.

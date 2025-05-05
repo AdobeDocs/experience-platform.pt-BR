@@ -1,5 +1,5 @@
 ---
-description: Saiba como configurar opções de formatação de arquivo para destinos baseados em arquivo criados com o Adobe Experience Platform Destination SDK, por meio do endpoint `/destination-servers`.
+description: Saiba como configurar opções de formatação de arquivo para destinos baseados em arquivo criados com o Adobe Experience Platform Destination SDK, por meio do endpoint &grave;/destination-servers&grave;.
 title: Configuração da formatação de arquivo
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c

@@ -167,6 +167,7 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
 
 1. Na janela **[!UICONTROL Selecionar campo de destino]**, selecione o tipo de campo de destino para o qual você deseja mapear seu campo de origem.
    * **[!UICONTROL Selecionar namespace de identidade]**: selecione esta opção para mapear seu campo de origem para um namespace de identidade da lista.
+
      ![Captura de tela da interface do Experience Platform mostrando o Target mapping para contactid.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * Adicione o mapeamento a seguir entre o esquema de perfil XDM e a instância [!DNL Dynamics 365]:
@@ -176,6 +177,7 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
      | `contactid` | `contactid` | Sim |
 
    * **[!UICONTROL Selecionar atributos personalizados]**: selecione esta opção para mapear o campo de origem para um atributo personalizado definido no campo **[!UICONTROL Nome do atributo]**. Consulte a [[!DNL Dynamics 365] documentação](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) para obter uma lista abrangente dos atributos suportados.
+
      ![Captura de tela da interface do Experience Platform mostrando o Target mapping para email.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]

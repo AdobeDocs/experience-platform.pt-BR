@@ -222,6 +222,7 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL (API) Sal
      | `xdm: personalEmail.address` | `Attribute: Email` | O endereço de email do contato. |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
+
      ![Exemplo de captura de tela da interface do Experience Platform mostrando os mapeamentos do Target.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **Trabalhando com clientes em potencial**
@@ -238,6 +239,7 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL (API) Sal
      | `xdm: personalEmail.address` | `Attribute: Email` | O endereço de email do lead. |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
+
      ![Exemplo de captura de tela da interface do Experience Platform mostrando os mapeamentos do Target.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecione **[!UICONTROL Avançar]**.
@@ -288,17 +290,21 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
    **Trabalhando com Contatos**
 
    * Se você selecionou *Contatos* no seu segmento do Experience Platform, navegue até a página **[!DNL Apps]** > **[!DNL Contacts]**.
+
      ![Captura de tela do Salesforce CRM mostrando a página Contatos com os perfis do segmento.](../../assets/catalog/crm/salesforce/contacts.png)
 
    * Selecione um *Contato* e verifique se os campos estão atualizados. Você pode ver que cada status de público-alvo em [!DNL Salesforce CRM] foi atualizado com o status de público-alvo correspondente do Experience Platform, com base no valor **[!UICONTROL ID de Mapeamento]** fornecido durante o [agendamento de público-alvo](#schedule-segment-export-example).
+
      ![Captura de tela do Salesforce CRM mostrando a página Detalhes do Contato com status de público-alvo atualizados.](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **Trabalhando com clientes em potencial**
 
    * Se você selecionou *Clientes potenciais* no seu segmento do Experience Platform, navegue até a página **[!DNL Apps]** > **[!DNL Leads]**.
+
      ![Captura de tela do Salesforce CRM mostrando a página de clientes potenciais com os perfis do segmento.](../../assets/catalog/crm/salesforce/leads.png)
 
    * Selecione um *cliente em potencial* e verifique se os campos estão atualizados. Você pode ver que cada status de público-alvo em [!DNL Salesforce CRM] foi atualizado com o status de público-alvo correspondente do Experience Platform, com base no valor **[!UICONTROL ID de Mapeamento]** fornecido durante o [agendamento de público-alvo](#schedule-segment-export-example).
+
      ![Captura de tela do Salesforce CRM mostrando a página Detalhes do cliente potencial com status de público atualizado.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Uso e governança de dados {#data-usage-governance}

@@ -64,7 +64,7 @@ A etapa final de configuração é selecionar os perfis de produto dos quais ess
 
 >[!NOTE]
 >
-Os perfis de produto e as permissões granulares que fornecem são criados e gerenciados por administradores por meio do Adobe Admin Console. Consulte o guia em [Permissões do Privacy Service](../permissions.md) para obter mais informações.
+>Os perfis de produto e as permissões granulares que fornecem são criados e gerenciados por administradores por meio do Adobe Admin Console. Consulte o guia em [Permissões do Privacy Service](../permissions.md) para obter mais informações.
 
 Quando terminar, selecione **[!UICONTROL Salvar API configurada]**.
 

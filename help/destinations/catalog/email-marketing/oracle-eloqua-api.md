@@ -165,6 +165,7 @@ Para mapear seus campos XDM para os campos de destino [!DNL Oracle Eloqua], siga
      | `xdm: workAddress.city` | `Attribute: city` | |
 
    * Um exemplo com os mapeamentos acima é mostrado abaixo:
+
      ![Exemplo de captura de tela da interface do Experience Platform com mapeamentos de atributos.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]

@@ -22,7 +22,7 @@ A caixa de diálogo **[!UICONTROL Filtros]** é exibida. Nessa exibição, escol
 
 1. Selecione um **[!UICONTROL Público-alvo]**: escolha o segmento de público-alvo que você deseja analisar (por exemplo, **Canadá - Alberta**).
 2. Especifique uma **[!UICONTROL Política de mesclagem]**: defina a política de mesclagem que determina como as identidades são combinadas entre o público selecionado (na captura de tela de exemplo, a política **Baseado em tempo padrão** é selecionada).
-3. Selecione uma **[!UICONTROL Identidade A]** e uma **[!UICONTROL Identidade B]** para comparação**: escolha os dois tipos de identidade a serem comparados. No exemplo, a **Identidade A** está selecionada como &quot;crmId&quot; e a **Identidade B** está selecionada como &quot;email&quot;.
+3. Selecione uma **[!UICONTROL Identidade A]** e uma **[!UICONTROL Identidade B]** para comparação&#x200B;**: escolha os dois tipos de identidade a serem comparados. No exemplo, a &#x200B;** Identidade A **&#x200B; está selecionada como &quot;crmId&quot; e a &#x200B;** Identidade B** está selecionada como &quot;email&quot;.
 4. **Definir um intervalo de datas**: escolha um intervalo predefinido como &quot;Hoje&quot; ou defina manualmente as datas de início e término usando os campos de calendário.
 
 ![A caixa de diálogo Filtros no painel Sobreposições de Identidade de Público-Alvo.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)

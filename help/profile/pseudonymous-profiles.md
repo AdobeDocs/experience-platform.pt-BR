@@ -130,7 +130,7 @@ Em um caso de uso típico, você pode definir a expiração de dados do evento d
 
 +++ Resposta
 
-- O sistema de exclusão &quot;primeiro a entrar, primeiro a sair&quot;](../identity-service/guardrails.md) do Serviço de Identidade [ poderia excluir ECIDs do gráfico de identidade, que estão armazenados no Serviço de Identidade.
+- O sistema de exclusão &quot;primeiro a entrar, primeiro a sair&quot;[&#128279;](../identity-service/guardrails.md) do Serviço de Identidade  poderia excluir ECIDs do gráfico de identidade, que estão armazenados no Serviço de Identidade.
 - Se esse comportamento de exclusão resultar no armazenamento de um perfil somente ECID no Perfil do cliente em tempo real (armazenamento de perfil), a expiração dos dados do perfil pseudônimo excluirá esse perfil do armazenamento de perfil.
 
 +++

@@ -48,7 +48,7 @@ Uma lista de endereços IP deve ser adicionada a uma inclui na lista de permiss�
 
 ### Configurar permissões no Experience Platform
 
-Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Bombora] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o guia](../../../access-control/abac/ui/permissions.md) de [interface de controle de acesso.
+Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Bombora] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o guia[&#128279;](../../../access-control/abac/ui/permissions.md) de interface de controle de acesso.
 
 ### Restrições de nomenclatura para arquivos e diretórios
 

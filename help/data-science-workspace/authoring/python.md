@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Esta documentação destina-se a clientes existentes com direitos anteriores à Data Science Área de trabalho.
 
-A documento a seguir contém exemplos sobre como acessar dados usando Python para usar em Área de trabalho de ciência de dados. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visita a documentação de acesso](../jupyterlab/access-notebook-data.md) a dados dos [notebooks JupyterLab.
+A documento a seguir contém exemplos sobre como acessar dados usando Python para usar em Área de trabalho de ciência de dados. Para obter informações sobre como acessar dados usando notebooks JupyterLab, visita a documentação de acesso[&#128279;](../jupyterlab/access-notebook-data.md) a dados dos notebooks JupyterLab.
 
 ## Leitura de uma conjunto de dados
 

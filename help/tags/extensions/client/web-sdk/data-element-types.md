@@ -34,7 +34,7 @@ No elemento de dados [!UICONTROL Mapa de identidade], você fornecerá as seguin
 
 Você não deve fornecer um [!DNL ECID] ao criar um mapa de identidade. Ao usar o SDK, um [!DNL ECID] é gerado automaticamente no servidor e incluído no mapa de identidade.
 
-O elemento de dados do mapa de identidade é frequentemente usado em conjunto com o [[!UICONTROL tipo de elemento de dados](#xdm-object) do objeto XDM] e o [[!UICONTROL tipo de ação Definir consentimento]](action-types.md#set-consent).
+O elemento de dados do mapa de identidade é frequentemente usado em conjunto com o [[[!UICONTROL tipo de elemento de dados]](#xdm-object) do objeto XDM] e o [[!UICONTROL tipo de ação Definir consentimento]](action-types.md#set-consent).
 
 Leia mais sobre o [Adobe Experience Platform Identity Service](../../../../identity-service/home.md).
 

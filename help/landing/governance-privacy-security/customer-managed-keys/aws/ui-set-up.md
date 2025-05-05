@@ -47,7 +47,7 @@ Na interface do Experience Platform, vá para a seção **[!UICONTROL Administra
 
 ![O espaço de trabalho Configuração de Criptografia do Experience Platform com Configurar foi realçado no cartão Chaves Gerenciadas pelo Cliente.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
-A [!UICONTROL configuração de Chaves gerenciadas pelo cliente] é exibida. Copie o objeto `statement` da política KMS CMK exibida na [!UICONTROL Configuração de Criptografia] das ] [!UICONTROL Chaves Gerenciadas pelo Cliente.
+A [!UICONTROL configuração de Chaves gerenciadas pelo cliente] é exibida. Copie o objeto `statement` da política KMS CMK exibida na [!UICONTROL Configuração de Criptografia] das  Chaves Gerenciadas pelo Cliente.
 
 <!-- Select the copy icon (![A copy icon.](../../../../images/icons/copy.png)) to copy the CMK KMS policy to your clipboard. A green pop-up notification confirms that the policy was copied.  -->
 

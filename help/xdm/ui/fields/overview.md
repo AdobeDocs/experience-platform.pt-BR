@@ -108,7 +108,7 @@ Para saber mais sobre esses tipos especiais, consulte a seguinte documentação:
 
 * [Mapa](./map.md)
 * [[!UICONTROL Obrigatório]](./required.md)
-* [Matriz [!UICONTROL 1}]](./array.md)
+* [Matriz [!UICONTROL 1&rbrace;]](./array.md)
 * [[!UICONTROL Enumeração]](./enum.md)
 * [[!UICONTROL Identidade]](./identity.md) (Disponível somente para campos de cadeia de caracteres)
 * [[!UICONTROL Relacionamento]](./relationship.md) (Disponível somente para campos de sequência de caracteres)
@@ -119,4 +119,4 @@ Embora tecnicamente não seja um tipo de campo especial, também é recomendáve
 
 Este guia forneceu uma visão geral sobre como definir campos XDM na interface do usuário. Lembre-se de que os campos só podem ser adicionados a esquemas por meio do uso de classes e grupos de campos. Para saber mais sobre como gerenciar esses recursos na interface, consulte os guias sobre criação e edição de [classes](../resources/classes.md) e [grupos de campos](../resources/field-groups.md).
 
-Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
+Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).

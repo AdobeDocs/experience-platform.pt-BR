@@ -92,6 +92,6 @@ Se o mesmo grupo de campos já estiver empregado em outros esquemas, os campos r
 
 ## Próximas etapas {#next-steps}
 
-Este guia abordou como criar e editar grupos de campos usando a interface do usuário do Experience Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
+Este guia abordou como criar e editar grupos de campos usando a interface do usuário do Experience Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).
 
 Para saber como gerenciar grupos de campos usando a API [!DNL Schema Registry], consulte o [manual de ponto de extremidade de grupos de campos](../../api/field-groups.md).

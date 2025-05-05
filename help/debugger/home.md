@@ -20,7 +20,7 @@ A extensão do Adobe Experience Platform Debugger para [Chrome](https://chrome.g
 Você pode usar o Experience Platform Debugger com outras soluções de ativação da Adobe para executar o seguinte:
 
 1. Use as [marcas](../tags/home.md) para inserir o código que ativa os produtos do [Adobe Experience Cloud](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=pt-BR) nas suas páginas.
-1. Use a [**[!UICONTROL guia Auditor ]**](./auditor/overview.md) no Experience Platform Debugger para testar as implementações.
+1. Use a [**[!UICONTROL guia Auditor &#x200B;]**](./auditor/overview.md) no Experience Platform Debugger para testar as implementações.
 1. Use ferramentas baseadas em eventos e específicas da solução no Experience Platform Debugger para depurar os problemas encontrados pelo Auditor ou para examinar outras informações sobre as implementações.
 
 >[!NOTE]

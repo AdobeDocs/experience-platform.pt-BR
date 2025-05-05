@@ -46,7 +46,7 @@ Acionado quando um tag de âncora com uma propriedade `href` é clicado.
 
 +++
 
-Condição +++Regra
++++Condição Regra
 
 Aciona somente nos domínios desejados.
 
@@ -61,7 +61,7 @@ Aciona somente nos domínios desejados.
 
 +++
 
-Ação +++Regra
++++Ação Regra
 
 Anexe a identidade ao URL.
 

@@ -140,7 +140,7 @@ As ações comuns das células são descritas abaixo:
 
 * **Mover uma célula:** Coloque o cursor à direita da célula que deseja mover, clique e arraste a célula para um novo local. Além disso, mover uma célula de um notebook para outro replica a célula junto com seu conteúdo.
 
-* **Execute uma célula:** Clique no corpo da célula que deseja executar e clique no ícone **reproduzir** (****) no menu do bloco de anotações. Um asterisco (**\***) é exibido no contador de execução da célula quando o kernel está processando a execução e é substituído por um número inteiro após a conclusão.
+* **Execute uma célula:** Clique no corpo da célula que deseja executar e clique no ícone **reproduzir** (**&#x200B;**) no menu do bloco de anotações. Um asterisco (**\***) é exibido no contador de execução da célula quando o kernel está processando a execução e é substituído por um número inteiro após a conclusão.
 
 * **Excluir uma célula:** clique no corpo da célula que deseja excluir e clique no ícone **tesoura**.
 

@@ -41,7 +41,7 @@ A fluxo de Trabalho a seguir descreve as etapas típicas e os resultados envolvi
 
 ### Ingestão e preparações de dados
 
-Os dados são assimilados e transformados com o [!DNL Experience Data Model] (XDM) na Adobe Experience Platform. Esses dados são usados para modelos de treinamento. Para saber mais sobre o XDM, visita a visão geral](../../xdm/home.md) do [XDM.
+Os dados são assimilados e transformados com o [!DNL Experience Data Model] (XDM) na Adobe Experience Platform. Esses dados são usados para modelos de treinamento. Para saber mais sobre o XDM, visita a visão geral[&#128279;](../../xdm/home.md) do XDM.
 
 ### Criação
 

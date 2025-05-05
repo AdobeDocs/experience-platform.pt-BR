@@ -33,7 +33,7 @@ Para obter mais informações sobre casos de uso específicos do [!DNL Mixpanel]
 
 * [Novo para [!DNL Mixpanel]](https://docs.mixpanel.com/docs)
 * [O que é [!DNL Mixpanel]?](https://developer.mixpanel.com/docs)
-* [12}recursos](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/) de experimentação obrigatória [!DNL Mixpanel] 
+* [12&rbrace;recursos](https://mixpanel.com/blog/12-things-you-probably-didnt-know-you-could-do-with-mixpanel/) de experimentação obrigatória [!DNL Mixpanel] 
 
 ## [!DNL Mixpanel] pré-requisitos {#prerequisites-mixpanel}
 

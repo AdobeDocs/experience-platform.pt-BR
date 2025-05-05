@@ -152,6 +152,7 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
 
 1. Na janela [!UICONTROL Selecionar campo de destino], selecione o tipo de campo de destino para o qual você deseja mapear seu campo de origem.
    * **[!UICONTROL Selecionar namespace de identidade]**: selecione esta opção para mapear seu campo de origem para um namespace de identidade da lista.
+
      ![Captura de tela da interface do Experience Platform mostrando o mapeamento de público-alvo usando a OutreachId.](../../assets/catalog/crm/outreach/target-mapping.png)
 
    * Adicione o mapeamento a seguir entre o esquema de perfil XDM e a instância [!DNL Outreach]:
@@ -161,6 +162,7 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
      | `Oid` | `OutreachId` | Sim |
 
    * **[!UICONTROL Selecionar atributos personalizados]**: selecione esta opção para mapear o campo de origem para um atributo personalizado definido no campo [!UICONTROL Nome do atributo]. Consulte a [[!DNL Outreach] documentação do cliente potencial](https://api.outreach.io/api/v2/docs#prospect) para obter uma lista abrangente dos atributos suportados.
+
      ![Captura de tela da interface do Experience Platform mostrando o Target mapping usando LastName.](../../assets/catalog/crm/outreach/target-mapping-lastname.png)
 
    * Por exemplo, dependendo dos valores que você deseja atualizar, adicione o seguinte mapeamento entre o esquema de perfil XDM e a instância [!DNL Outreach]:
@@ -171,6 +173,7 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
      | `person.name.lastName` | `lastName` |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
+
      ![Exemplo de captura de tela da interface do Experience Platform mostrando os mapeamentos do Target.](../../assets/catalog/crm/outreach/mappings.png)
 
 ### Agendar exportação de público e exemplo {#schedule-segment-export-example}

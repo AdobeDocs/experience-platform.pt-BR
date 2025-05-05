@@ -2,7 +2,7 @@
 keywords: Experience Platform;página inicial;tópicos populares;preparação de dados;guia de api;conjuntos de mapeamento;
 solution: Experience Platform
 title: Mapeamento Define o Ponto de Extremidade da API
-description: Você pode usar o endpoint `/mappingSets` na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente conjuntos de mapeamento.
+description: Você pode usar o endpoint &grave;/mappingSets&grave; na API do Adobe Experience Platform para recuperar, criar, atualizar e validar programaticamente conjuntos de mapeamento.
 exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt

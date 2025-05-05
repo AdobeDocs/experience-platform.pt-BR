@@ -75,7 +75,7 @@ A próxima etapa é mapear as propriedades do evento Splunk para os elementos de
 
 | Nome do campo | Descrição |
 | --- | --- |
-| [!UICONTROL Evento ]<br><br>**(OBRIGATÓRIO)** | Indique como você deseja fornecer os dados do evento. Os dados do evento podem ser atribuídos à chave `event` no objeto JSON na solicitação HTTP ou podem ser texto bruto. A chave `event` está no mesmo nível no pacote de eventos JSON que as chaves de metadados. Dentro das chaves de valor-chave `event`, os dados podem estar em qualquer forma que você exigir (como uma sequência, um número, outro objeto JSON e assim por diante). |
+| [!UICONTROL Evento &#x200B;]<br><br>**(OBRIGATÓRIO)** | Indique como você deseja fornecer os dados do evento. Os dados do evento podem ser atribuídos à chave `event` no objeto JSON na solicitação HTTP ou podem ser texto bruto. A chave `event` está no mesmo nível no pacote de eventos JSON que as chaves de metadados. Dentro das chaves de valor-chave `event`, os dados podem estar em qualquer forma que você exigir (como uma sequência, um número, outro objeto JSON e assim por diante). |
 | [!UICONTROL Host] | O hostname do cliente do qual você está enviando dados. |
 | [!UICONTROL Tipo de Source] | O tipo de origem a ser atribuído aos dados do evento. |
 | [!UICONTROL Source] | O valor de origem a ser atribuído aos dados do evento. Por exemplo, se estiver enviando dados de um aplicativo que está desenvolvendo, defina essa chave como o nome do aplicativo. |

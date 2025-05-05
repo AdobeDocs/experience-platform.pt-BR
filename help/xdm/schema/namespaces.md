@@ -21,7 +21,7 @@ Todos os campos nos esquemas do Experience Data Model (XDM) têm um namespace as
 
 O namespace permite definir um campo em um namespace como significando algo diferente do mesmo campo em um namespace diferente. Na prática, o namespace de um campo indica quem criou o campo (como o XDM padrão (Adobe), um fornecedor ou sua organização).
 
-Por exemplo, considere um esquema XDM que usa o [[!UICONTROL grupo de campos ](../field-groups/profile/demographic-details.md) de Detalhes de Contato Pessoal], que tem um campo `mobilePhone` padrão que existe no namespace `xdm`. No mesmo esquema, você também pode criar um campo `mobilePhone` separado em um namespace diferente (sua [ID de locatário](../api/getting-started.md#know-your-tenant_id)). Ambos os campos podem coexistir enquanto têm diferentes significados ou restrições subjacentes.
+Por exemplo, considere um esquema XDM que usa o [[[!UICONTROL grupo de campos &#x200B;]](../field-groups/profile/demographic-details.md) de Detalhes de Contato Pessoal], que tem um campo `mobilePhone` padrão que existe no namespace `xdm`. No mesmo esquema, você também pode criar um campo `mobilePhone` separado em um namespace diferente (sua [ID de locatário](../api/getting-started.md#know-your-tenant_id)). Ambos os campos podem coexistir enquanto têm diferentes significados ou restrições subjacentes.
 
 ## Sintaxe de namespace
 

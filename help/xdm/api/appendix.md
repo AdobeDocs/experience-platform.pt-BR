@@ -75,52 +75,52 @@ Veja a seguir uma comparação lado a lado que mostra campos relacionados ao ani
   <tr>
   <td>
   <pre class=" language-json">
-{
-  "xdm:birthDate": {
+&lbrace;
+  "xdm:birthDate": &lbrace;
     "title": "Birth Date",
     "type": "string",
     "format": "date"
-  },
-  "xdm:birthDayAndMonth": {
+  &rbrace;,
+  "xdm:birthDayAndMonth": &lbrace;
     "title": "Birth Date",
     "type": "string",
     "padrão": "[0-1][0-9]-[0-9][0-9]"
-  },
-  "xdm:birthYear": {
+  &rbrace;,
+  "xdm:birthYear": &lbrace;
     "title": "Birth year",
     "type": "integer",
     "minimum": 1,
     "maximum": 32767
-  }
-}
+  &rbrace;
+&rbrace;
   </pre>
   </td>
   <td>
   <pre class=" language-json">
-{
-  "birthDate": {
+&lbrace;
+  "birthDate": &lbrace;
     "title": "Birth Date",
     "type": "string",
     "format": "date",
     "meta:xdmField": "xdm:birthDate",
     "meta:xdmType": "date"
-  },
-  "birthDayAndMonth": {
+  &rbrace;,
+  "birthDayAndMonth": &lbrace;
     "title": "Birth Date",
     "type": "string",
     "padrão": "[0-1][0-9]-[0-9][0-9]",
     "meta:xdmField": "xdm:birthDayAndMonth",
     "meta:xdmType": "string"
-  },
-  "birthYear": {
+  &rbrace;,
+  "birthYear": &lbrace;
     "title": "Birth year",
     "type": "integer",
     "minimum": 1,
     "maximum": 32767,
     "meta:xdmField": "xdm:birthYear",
     "meta:xdmType": "short"
-  }
-}
+  &rbrace;
+&rbrace;
       </pre>
   </td>
   </tr>

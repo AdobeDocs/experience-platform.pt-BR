@@ -230,4 +230,4 @@ Depois de copiar o JSON de exportação para o esquema, você pode usá-lo como 
 
 ## Próximas etapas
 
-Ao seguir este guia, você exportou com êxito um esquema XDM para uma organização ou sandbox diferente. Para obter mais informações sobre os recursos da interface do usuário de [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral da interface do usuário de ]](./overview.md).
+Ao seguir este guia, você exportou com êxito um esquema XDM para uma organização ou sandbox diferente. Para obter mais informações sobre os recursos da interface do usuário de [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral da interface do usuário de &#x200B;]](./overview.md).

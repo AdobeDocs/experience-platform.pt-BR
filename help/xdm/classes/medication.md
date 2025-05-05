@@ -23,4 +23,4 @@ No Experience Data Model (XDM), a classe [!UICONTROL Medication] captura o conju
 
 {style="table-layout:auto"}
 
-A classe pode ser estendida com o [[!UICONTROL grupo de campo ](../field-groups/medication/healthcare-medication.md) de medicação para assistência médica] para descrever mais detalhes sobre o medicamento ou o medicamento.
+A classe pode ser estendida com o [[[!UICONTROL grupo de campo &#x200B;]](../field-groups/medication/healthcare-medication.md) de medicação para assistência médica] para descrever mais detalhes sobre o medicamento ou o medicamento.

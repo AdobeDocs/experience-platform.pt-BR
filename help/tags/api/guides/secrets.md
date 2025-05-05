@@ -131,7 +131,7 @@ Depois que o artefato do Exchange é salvo com êxito no ambiente, o atributo `a
 
 ## Referência de segredos {#referencing-secrets}
 
-Para referenciar um segredo, você deve criar um elemento de dados do tipo &quot;[!UICONTROL Segredo]&quot; (fornecido pela [[!UICONTROL Extensão ]](../../extensions/client/core/overview.md)) em uma propriedade de encaminhamento de eventos. Ao configurar esse elemento de dados, você será solicitado a indicar qual segredo usar para cada ambiente. Em seguida, você pode criar regras que fazem referência a um elemento de dados secreto, como no cabeçalho de uma chamada HTTP.
+Para referenciar um segredo, você deve criar um elemento de dados do tipo &quot;[!UICONTROL Segredo]&quot; (fornecido pela [[!UICONTROL Extensão &#x200B;]](../../extensions/client/core/overview.md)) em uma propriedade de encaminhamento de eventos. Ao configurar esse elemento de dados, você será solicitado a indicar qual segredo usar para cada ambiente. Em seguida, você pode criar regras que fazem referência a um elemento de dados secreto, como no cabeçalho de uma chamada HTTP.
 
 ![Elemento de dados secreto](../../images/api/guides/secrets/data-element.png)
 

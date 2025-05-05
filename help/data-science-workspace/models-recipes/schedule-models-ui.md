@@ -49,7 +49,7 @@ Configure as frequência, start data, data de término, conjunto de dados de ent
 
 ![](../images/models-recipes/schedule/set_scoring_schedule.png)
 
-O cronograma de pontuação atualizado é mostrado na página Visão geral ]**do**[!UICONTROL  serviço.
+O cronograma de pontuação atualizado é mostrado na página Visão geral **do** serviço.
 
 ![](../images/models-recipes/schedule/scoring_set.png)
 
@@ -71,7 +71,7 @@ Configure a frequência, a data start, a data de término e a conjunto de dados 
 
 ![](../images/models-recipes/schedule/set_training_schedule.png)
 
-Sua programação treinamento atualizada é mostrada na página Visão geral ]**do**[!UICONTROL  serviço.
+Sua programação treinamento atualizada é mostrada na página Visão geral **do** serviço.
 
 ![](../images/models-recipes/schedule/training_set.png)
 

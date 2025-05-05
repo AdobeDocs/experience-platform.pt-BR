@@ -284,7 +284,7 @@ Se o lote tiver um ou mais erros e tiver o diagnóstico de erros ativado, a resp
 >
 >Se o diagnóstico de erro não estiver disponível, a seguinte mensagem de erro será exibida:
 >
-```json
+>```json
 >{
 >       "errors": [{
 >               "code": "INGEST-1211-400",

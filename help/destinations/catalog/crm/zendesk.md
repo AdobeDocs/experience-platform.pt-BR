@@ -131,6 +131,7 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL Zendesk],
      | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
+
      ![Exemplo de captura de tela da interface do Experience Platform com mapeamentos de atributos.](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
@@ -159,7 +160,7 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 1. Monitore o resumo do público-alvo e verifique se a contagem de perfis corresponde à contagem no segmento.
    ![Exemplo de captura de tela da interface do Experience Platform mostrando o Segmento.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Faça logon no site [!DNL Zendesk] e navegue até a página **[!UICONTROL Contatos]** para verificar se os perfis do público-alvo foram adicionados. Esta lista pode ser configurada para exibir colunas para os campos adicionais criados com o público-alvo**[!UICONTROL ID de Mapeamento]** e status de público-alvo.
+1. Faça logon no site [!DNL Zendesk] e navegue até a página **[!UICONTROL Contatos]** para verificar se os perfis do público-alvo foram adicionados. Esta lista pode ser configurada para exibir colunas para os campos adicionais criados com o público-alvo&#x200B;**[!UICONTROL ID de Mapeamento]** e status de público-alvo.
    ![Captura de tela da interface do Zendesk mostrando a página Contatos com os campos adicionais criados com o nome do público-alvo.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. Como alternativa, você pode detalhar uma página individual de **[!UICONTROL Pessoa]** e verificar a seção **[!UICONTROL Campos adicionais]** que exibe o nome do público-alvo e os status do público-alvo.

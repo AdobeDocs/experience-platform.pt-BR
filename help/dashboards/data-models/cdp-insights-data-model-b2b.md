@@ -60,7 +60,7 @@ A lógica usada para o insight [!UICONTROL Novas contas por setor] retorna os ci
 
 O SQL que gera o insight [!UICONTROL Novas contas por setor] é visto na seção que pode ser recolhida abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 WITH RankedIndustries AS (
@@ -101,7 +101,7 @@ A lógica usada para o insight [!UICONTROL Novas contas por tipo] retorna a divi
 
 O SQL que gera o insight [!UICONTROL Novas contas por tipo] é visto na seção recolhível abaixo.
 
-Consulta +++SQL
++++Consulta SQL
 
 ```sql
 SELECT t.account_type,

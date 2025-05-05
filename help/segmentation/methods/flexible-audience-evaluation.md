@@ -3,9 +3,9 @@ title: Guia flexível de avaliação de público-alvo
 description: Saiba como usar a avaliação flexível de público para executar trabalhos de segmentação em lote sob demanda.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
+source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1084'
 ht-degree: 5%
 
 ---
@@ -326,7 +326,7 @@ Depois de confirmar que os públicos-alvo corretos estão listados, você pode c
 
 O vídeo a seguir demonstra como acessar e usar a avaliação de público-alvo flexível no Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453645?&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Perguntas frequentes {#faq}
 
@@ -337,6 +337,14 @@ A seção a seguir lista as perguntas frequentes relacionadas à avaliação fle
 +++ Resposta
 
 Você pode ativar um público-alvo usando a avaliação de público-alvo flexível imediatamente após sua criação.
+
++++
+
+### Quanto tempo leva a avaliação flexível do público-alvo?
+
++++ Resposta
+
+Um trabalho de avaliação de público-alvo flexível pode levar até quatro horas para ser concluído.
 
 +++
 

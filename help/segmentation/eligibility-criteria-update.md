@@ -3,17 +3,17 @@ title: Atualização dos critérios de qualificação de segmentação
 description: Saiba mais sobre as atualizações de critérios de qualificação de segmentação que afetam os tipos de públicos que podem ser avaliados usando a segmentação de borda e de transmissão.
 hide: true
 hidefromtoc: true
-source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
+exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
+source-git-commit: e6deed1fe52a0a852f521100171323f0de23295b
 workflow-type: tm+mt
 source-wordcount: '371'
 ht-degree: 0%
 
 ---
 
-
 # Atualização dos critérios de qualificação de segmentação
 
-A partir de 24 de setembro de 2024, serão feitas duas atualizações que afetarão a qualificação de segmentação.
+A partir de 23 de maio de 2025, serão feitas duas atualizações que afetarão a qualificação de segmentação.
 
 1. Tipos de consulta de segmentação de borda e transmissão
 2. Políticas de mesclagem de transmissão e segmentação de borda
@@ -53,4 +53,4 @@ Em seguida, é possível combiná-los fazendo referência a Q3 ou Q4.
 
 Todas as definições de segmento **novas ou editadas** qualificadas para streaming ou segmentação de borda **devem** estar na política de mesclagem &quot;Ativo no Edge&quot;.
 
-Todas as definições de segmento existentes que são avaliadas usando a segmentação de transmissão ou de borda continuarão funcionando como estão.
+All existing segment definitions that are evaluated using streaming or edge segmentation will continue to work as is.

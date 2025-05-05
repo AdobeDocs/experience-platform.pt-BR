@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Depois de assistir ao vídeo mostrando [uma experiência do cliente viabilizada pelo Experience Platform](customer-experience.md), vá para os bastidores para ver como o Adobe Experience Platform foi usado para potencializar esta experiência.
 
->[!VIDEO](https://video.tv.adobe.com/v/28144?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36313?quality=12&learn=on&captions=por_br)

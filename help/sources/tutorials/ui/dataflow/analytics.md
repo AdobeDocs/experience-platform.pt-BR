@@ -151,4 +151,4 @@ Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer d
 >
 > A interface do usuário do Experience Platform mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 >
->[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32645?quality=12&learn=on&captions=por_br)

@@ -64,4 +64,4 @@ O vídeo a seguir tem como objetivo fornecer suporte à sua compreensão do Serv
 >
 >A interface do Experience Platform mostrada no vídeo a seguir está desatualizada. Consulte a documentação para obter as capturas de tela e a funcionalidade mais recentes da interface.
 
->[!VIDEO](https://video.tv.adobe.com/v/28167?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31684?quality=12&learn=on&captions=por_br)

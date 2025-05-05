@@ -27,4 +27,4 @@ Se você estiver interessado em criar um segmento usando a API de segmentação,
 >
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter mudado desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [guia do Construtor de segmentos](../ui/segment-builder.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31685?quality=12&learn=on&captions=por_br)

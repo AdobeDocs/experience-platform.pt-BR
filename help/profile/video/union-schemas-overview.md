@@ -25,4 +25,4 @@ Este vídeo fornece uma compreensão básica dos esquemas de união no Adobe Exp
 >
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [guia da interface dos esquemas de união](../ui/union-schema.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/329940?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/342826?quality=12&learn=on&captions=por_br)

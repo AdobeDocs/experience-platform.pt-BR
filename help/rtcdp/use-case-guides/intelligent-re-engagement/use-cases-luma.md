@@ -16,12 +16,12 @@ Saiba como a Adobe adaptou o caso de uso de Reengajamento inteligente para traba
 
 ## Implementação
 
->[!VIDEO](https://video.tv.adobe.com/v/3425184/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454278/?quality=12&learn=on&captions=por_br)
 
 ## Configuração do Jornada
 
->[!VIDEO](https://video.tv.adobe.com/v/3427101/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453966/?quality=12&learn=on&captions=por_br)
 
 ## Configuração de público-alvo e destino
 
->[!VIDEO](https://video.tv.adobe.com/v/3427451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452912/?quality=12&learn=on&captions=por_br)

@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Este vídeo fornece uma rápida introdução ao [!DNL Experience Platform] e descreve alguns dos desafios comerciais que ele soluciona.
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428499?quality=12&learn=on&captions=por_br)

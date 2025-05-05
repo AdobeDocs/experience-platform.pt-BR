@@ -258,7 +258,7 @@ Quando a importação for concluída, uma notificação será recebida na interf
 
 O vídeo a seguir é destinado a ajudá-lo a entender as ferramentas de sandbox e descreve como criar um novo pacote, publicar um pacote e importar um pacote.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446089/?learn=on&captions=por_br)
 
 ## Próximas etapas
 

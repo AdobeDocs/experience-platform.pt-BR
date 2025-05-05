@@ -53,7 +53,7 @@ Depois que uma sandbox é selecionada, a tela é atualizada e atualizada para a 
 
 Assista ao vídeo a seguir para obter uma visão geral rápida sobre como usar sandboxes na Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430295/?quality=12&learn=on&captions=por_br)
 
 Para criar uma nova sandbox, selecione **[!UICONTROL Criar sandbox]** no canto superior direito da tela.
 

@@ -20,4 +20,4 @@ Este vídeo fornece uma rápida introdução ao Experience Platform e descreve a
 
 Para saber mais, comece lendo a [visão geral do Experience Platform](../home.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428499?quality=12&learn=on&captions=por_br)

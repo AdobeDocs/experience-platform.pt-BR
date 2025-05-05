@@ -23,4 +23,4 @@ Este vídeo fornece um rápido tour pela interface do usuário (UI) do Adobe Exp
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter mudado desde a gravação deste vídeo. Para obter as informações mais atualizadas, visite o [guia da interface do usuário do Adobe Experience Platform](../ui-guide.md).
 
 
->[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430444?quality=12&learn=on&captions=por_br)

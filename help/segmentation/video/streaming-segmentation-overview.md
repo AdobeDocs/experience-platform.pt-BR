@@ -27,4 +27,4 @@ Se você estiver interessado na segmentação por transmissão usando a API de s
 >
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [guia da interface de segmentação de streaming](../methods/streaming-segmentation.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40067?quality=12&learn=on&captions=por_br)

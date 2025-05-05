@@ -29,7 +29,7 @@ O Attribution AI é compatível com duas categorias de pontuações, algorítmic
 
 O vídeo a seguir foi criado para corroborar sua compreensão do Attribution AI.
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36595?learn=on&quality=12&captions=por_br)
 
 ## Exemplos de casos de uso de negócios
 

@@ -33,4 +33,4 @@ Para começar a usar a IA do cliente, você precisa seguir o [tutorial de prepar
 
 Para saber mais sobre a IA do cliente, comece visitando a [Visão geral da IA do cliente](../../intelligent-services/customer-ai/overview.md). Além disso, o vídeo a seguir mostra como o Customer AI enriquece os perfis do cliente com propensões baseadas em IA e capacita os esforços de segmentação e direcionamento do cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/40374/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/328480/?quality=12&learn=on&captions=por_br)

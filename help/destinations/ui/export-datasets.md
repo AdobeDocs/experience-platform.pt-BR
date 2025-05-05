@@ -78,7 +78,7 @@ Use a tabela abaixo para entender quais tipos de conjunto de dados você pode ex
 
 Assista ao vídeo abaixo para obter uma explicação completa do fluxo de trabalho descrito nesta página, os benefícios de usar a funcionalidade de conjunto de dados de exportação e alguns casos de uso sugeridos.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424392/)
+>[!VIDEO](https://video.tv.adobe.com/v/3448823?captions=por_br)
 
 ## Destinos compatíveis {#supported-destinations}
 

@@ -24,4 +24,4 @@ Este vídeo analisa os principais recursos do Experience Platform:
 1. Melhorar a entrega e a personalização de experiências em tempo real
 1. Ganhe confiança com controles de governança, segurança e privacidade
 
->[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428511?quality=12&learn=on&captions=por_br)

@@ -17,7 +17,7 @@ O Adobe Experience Platform assimila dados de várias fontes. Um grande desafio 
 
 Você pode usar o Serviço de consulta para conectar a jornada de cliente online a offline e entender a atribuição omnicanal para sua marca. O vídeo a seguir mostra como uma empresa baseada em experiências pode usar o Serviço de consulta para tratar dos principais casos de uso e como esse Serviço funciona.
 
->[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33187?quality=12&learn=on&captions=por_br)
 
 ## Uso do Serviço de consulta {#usage}
 
@@ -66,4 +66,4 @@ Ao ler este documento, você foi introduzido ao Serviço de consulta e a como el
 
 Para preparar-se melhor para executar consultas, assista ao vídeo a seguir. Este vídeo compartilha dicas e práticas recomendadas para executar consultas na interface do editor de consultas, clientes PSQL, soluções de business intelligence (BI) e a API HTTP.
 
->[!VIDEO](https://video.tv.adobe.com/v/29811?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33186?quality=12&learn=on&captions=por_br)

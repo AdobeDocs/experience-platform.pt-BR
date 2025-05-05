@@ -47,7 +47,7 @@ Um sistema de borda consolidado permite gerenciar campanhas de publicidade, mark
 
 Assista ao vídeo abaixo para obter uma visão geral do Adobe Experience Platform [!DNL Web SDK] e do [!DNL Edge Network].
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37265?quality=12&learn=on&captions=por_br)
 
 ## Bibliotecas substituídas pelo Web SDK {#sdks}
 
@@ -64,7 +64,7 @@ Ele também apresenta um novo endpoint que simplifica as solicitações HTTP par
 
 Assista ao vídeo abaixo para ver o Adobe Experience Platform [!DNL Web SDK] e [!DNL Edge Network] em ação, usando uma única chamada para enviar dados para [!DNL Experience Platform], [!DNL Analytics], [!DNL Audience Manager] e [!DNL Target].
 
->[!VIDEO](https://video.tv.adobe.com/v/34148)
+>[!VIDEO](https://video.tv.adobe.com/v/3417875?captions=por_br)
 
 ## Migração de bibliotecas existentes para o Web SDK {#migrating-to-web-sdk}
 

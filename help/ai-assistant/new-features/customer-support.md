@@ -59,5 +59,5 @@ Para obter acesso ao Assistente de IA para Suporte ao cliente, entre em contato 
 
 Para obter mais informações, assista ao vídeo a seguir para saber como usar o Assistente de IA para suporte ao cliente para solucionar problemas com facilidade sem sair dos fluxos de trabalho.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443188?learn=on&captions=por_br)
 

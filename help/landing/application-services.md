@@ -22,4 +22,4 @@ o Adobe criou vários aplicativos sobre o Experience Platform. Você pode encont
 
 O vídeo abaixo descreve os casos de uso de cada aplicativo criado na parte superior do Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428522/?learn=on&captions=por_br)

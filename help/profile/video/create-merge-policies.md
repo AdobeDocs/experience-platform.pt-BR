@@ -25,4 +25,4 @@ Este vídeo fornece uma compreensão básica das políticas de mesclagem no Adob
 >
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte o [guia da interface do usuário de políticas de mesclagem](../merge-policies/ui-guide.md).
 
->[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/3413365?quality=12&learn=on&captions=por_br)

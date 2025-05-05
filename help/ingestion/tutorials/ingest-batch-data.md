@@ -152,4 +152,4 @@ Para saber mais sobre a assimilação em lote, leia a [Visão geral de assimila�
 >
 >A interface do usuário [!DNL Experience Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 
->[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34332?quality=12&learn=on&captions=por_br)

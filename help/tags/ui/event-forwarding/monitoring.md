@@ -28,7 +28,7 @@ Este guia pressupõe que você adquiriu o encaminhamento de eventos e que possui
 
 Assista ao vídeo a seguir para obter uma visão geral de alto nível do recurso de monitoramento:
 
->[!VIDEO](https://video.tv.adobe.com/v/343999?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3412566?quality=12&learn=on&captions=por_br)
 
 ## Seleção de propriedades e ambientes
 

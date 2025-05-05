@@ -254,7 +254,7 @@ O vídeo a seguir mostra como executar queries na interface do Adobe Experience 
 >
 >A interface do usuário descrita no vídeo está desatualizada, mas a lógica usada no fluxo de trabalho permanece a mesma.
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33393?quality=12&learn=on&captions=por_br)
 
 ## Próximas etapas
 

@@ -90,7 +90,7 @@ Para perguntas sobre insights operacionais, as respostas podem não refletir o e
 
 Assista ao vídeo a seguir para obter mais informações sobre os insights operacionais do Assistente de IA:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444037?learn=on&enablevpops&captions=por_br)
 
 ### Escopo do recurso {#feature-scope}
 

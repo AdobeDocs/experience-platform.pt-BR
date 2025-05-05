@@ -35,4 +35,4 @@ Depois de incluir esses campos no esquema na sandbox de desenvolvimento, volte p
 
 Para obter mais informações, assista ao vídeo abaixo para criar grupos de campos de esquema.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413605/?learn=on&captions=por_br)

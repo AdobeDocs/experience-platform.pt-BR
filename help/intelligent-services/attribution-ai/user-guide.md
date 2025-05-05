@@ -273,4 +273,4 @@ Ao seguir este tutorial, você criou com êxito uma instância de serviço na IA
 
 O vídeo a seguir descreve um fluxo de trabalho completo para criar uma nova instância na IA de atribuição.
 
->[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36601?learn=on&quality=12&captions=por_br)

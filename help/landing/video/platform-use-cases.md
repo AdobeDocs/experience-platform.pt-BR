@@ -23,4 +23,4 @@ Este vídeo fornece uma visão geral de quatro casos de uso principais do Experi
 * Entrega e experiência entre canais
 * Desenvolvimento de aplicativos de experiência do cliente
 
->[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430461?quality=12&learn=on&captions=por_br)

@@ -231,4 +231,4 @@ Este documento descreveu os insights fornecidos por uma instância do serviço d
 
 O vídeo a seguir descreve como usar a IA do cliente para ver a saída dos modelos e fatores influentes.
 
->[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36602?learn=on&quality=12&captions=por_br)

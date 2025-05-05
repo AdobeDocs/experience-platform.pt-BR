@@ -6,7 +6,7 @@ exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '2250'
-ht-degree: 9%
+ht-degree: 10%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Modelos para fontes na interface do usuário do Experience Platform"
+>title="Modelos para fontes na interface da Experience Platform"
 >abstract="Os modelos incluem ativos gerados automaticamente, como esquemas, conjuntos de dados, identidades, regras de mapeamento, namespaces de identidade e fluxos de dados que você pode usar ao trazer dados de uma fonte para a Experience Platform. É possível atualizar ativos gerados automaticamente para personalização de acordo com seus casos de uso."
 
 >[!IMPORTANT]
@@ -45,7 +45,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 * [[!DNL Experience Data Model (XDM)] Sistema](../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
 * [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Usar modelos na interface do usuário do Experience Platform {#use-templates-in-the-platform-ui}
+## Usar modelos na interface da Experience Platform {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"

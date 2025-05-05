@@ -7,7 +7,7 @@ exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1476'
-ht-degree: 26%
+ht-degree: 31%
 
 ---
 
@@ -16,17 +16,17 @@ ht-degree: 26%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Principais ações"
->abstract="Esse widget mostra os principais tipos de ações que foram realizadas na Experience Platform no período selecionado. Para ver a lista completa de ações registradas no Experience Platform, selecione **Auditorias** na navegação à esquerda."
+>abstract="Esse widget mostra os principais tipos de ações que foram realizadas na Experience Platform no período selecionado. Para ver a lista completa de ações registradas na Experience Platform, selecione **Auditorias** no painel de navegação esquerdo."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Principais usuários"
->abstract="Esse widget mostra os usuários que executaram mais ações na Experience Platform no período selecionado. Para ver a lista completa de ações registradas no Experience Platform, selecione **Auditorias** na navegação à esquerda."
+>abstract="Esse widget mostra os usuários que executaram mais ações na Experience Platform no período selecionado. Para ver a lista completa de ações registradas na Experience Platform, selecione **Auditorias** no painel de navegação esquerdo."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Monitorar atividades do usuário no Experience Platform"
->abstract="<h2>Descrição</h2><p>Você pode monitorar a atividade do usuário para vários serviços e recursos da Experience Platform na forma de logs de auditoria. Esses logs formam uma trilha de auditoria que registra <b>quem</b> executou <b>que</b> ação e <b>quando</b>. Os logs de auditoria podem ajudar na solução de problemas no Experience Platform e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.</p>"
+>title="Monitorar atividades do usuário na Experience Platform"
+>abstract="<h2>Descrição</h2><p>É possível monitorar a atividade do usuário em vários serviços e recursos da Experience Platform no formato de logs de auditoria. Esses logs formam uma trilha de auditoria que registra <b>quem</b> executou <b>qual</b> ação e <b>quando</b>. Os logs de auditoria podem ajudar com a solução de problemas na Experience Platform e auxiliar você a manter seu negócio em efetiva conformidade com as políticas corporativas de gerenciamento de dados e os requisitos regulatórios.</p>"
 
 Para aumentar a transparência e a visibilidade das atividades realizadas no sistema, o Adobe Experience Platform permite auditar a atividade do usuário em vários serviços e recursos na forma de &quot;logs de auditoria&quot;. Esses registros formam uma trilha de auditoria que pode ajudar na solução de problemas no Experience Platform e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.
 

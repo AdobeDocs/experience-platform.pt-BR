@@ -5,7 +5,7 @@ exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
 source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
 source-wordcount: '1497'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="Regras de vinculação do gráfico de identidade"
->abstract="Para evitar essas mesclagens indesejadas, é possível usar as configurações fornecidas por meio das regras de vinculação do gráfico de identidade e permitir a personalização precisa para seus usuários."
+>abstract="Para evitar essas mesclagens indesejadas, é possível usar as configurações fornecidas por meio das regras de vinculação do gráfico de identidade e permitir uma personalização precisa para seus usuários."
 
 >[!AVAILABILITY]
 >

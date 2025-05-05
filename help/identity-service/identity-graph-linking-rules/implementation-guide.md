@@ -5,7 +5,7 @@ exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
 source-wordcount: '1888'
-ht-degree: 2%
+ht-degree: 6%
 
 ---
 
@@ -70,9 +70,9 @@ Se você estiver usando o [conector de origem do Adobe Analytics](../../sources/
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_xdm"
 >title="Certifique-se de ter um único identificador de pessoa"
->abstract="Durante o processo de pré-implementação, você deve garantir que os eventos autenticados que seu sistema enviará para a Experience Platform sempre contenham um **identificador de pessoa** único, como um CRMID."
+>abstract="Durante o processo de pré-implementação, certifique-se de que os eventos autenticados que seu sistema enviará para a Experience Platform sempre contenham um **único** identificador de pessoa, como um CRMID."
 
-Durante o processo de pré-implementação, você deve garantir que os eventos autenticados que seu sistema enviará para a Experience Platform sempre contenham um **identificador de pessoa** único, como um CRMID.
+Durante o processo de pré-implementação, certifique-se de que os eventos autenticados que seu sistema enviará para a Experience Platform sempre contenham um **único** identificador de pessoa, como um CRMID.
 
 * (Recomendado) Eventos autenticados com um identificador de pessoa exclusivo.
 * (Não recomendado) Eventos autenticados com dois identificadores de pessoa exclusivos. Se você tiver mais de um identificador de pessoa exclusivo, poderá encontrar um colapso de gráfico indesejado.

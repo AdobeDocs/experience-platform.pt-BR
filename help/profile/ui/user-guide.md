@@ -131,7 +131,7 @@ Depois que um valor for inserido, selecione **[!UICONTROL Exibir]** e um único 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="Entidade não encontrada"
->abstract="Isso significa que o Experience Platform não pôde encontrar a entidade solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID do perfil correta está listada no URL da entidade que você está tentando acessar.</li><li>Verifique se você tem a combinação correta de Organização e sandbox para a entidade que está tentando acessar.</li></ul>"
+>abstract="Isso significa que a Experience Platform não encontrou a entidade solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID do perfil correta está listada no URL da entidade que você está tentando acessar.</li><li>Verifique se você tem a combinação correta de Organização e sandbox para a entidade que está tentando acessar.</li></ul>"
 
 Depois de selecionar uma **[!UICONTROL ID de perfil]**, a guia **[!UICONTROL Detalhes]** é aberta. As informações do perfil exibidas na guia **[!UICONTROL Detalhes]** foram mescladas de vários fragmentos de perfil para formar uma única visualização do cliente individual. Isso inclui detalhes do cliente, como atributos básicos, identidades vinculadas e preferências de canal.
 

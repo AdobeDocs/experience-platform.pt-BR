@@ -6,7 +6,7 @@ exl-id: 85699716-339d-4992-8390-95563c7ea7fe
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '619'
-ht-degree: 21%
+ht-degree: 23%
 
 ---
 
@@ -19,7 +19,7 @@ As funções definem o acesso que um(a) admin, especialista ou usuário final te
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Criar nova função"
->abstract="Crie novas funções para categorizar melhor os usuários que interagem com sua instância do Experience Platform. Por exemplo, é possível criar uma função para uma equipe interna de marketing e aplicar o rótulo de dados de saúde regulamentados (RHD) a essa função, permitindo que sua equipe de marketing interna acesse informações de saúde protegidas (PHI). Como alternativa, também é possível criar uma função para uma agência externa e negar o acesso dela aos dados de PHI por não aplicar o rótulo RHD a essa função."
+>abstract="Crie novas funções para categorizar melhor os usuários que interagem com sua instância da Experience Platform. Por exemplo, é possível criar uma função para uma equipe interna de marketing e aplicar o rótulo de dados de saúde regulamentados (RHD) a essa função, permitindo que sua equipe de marketing interna acesse informações de saúde protegidas (PHI). Como alternativa, também é possível criar uma função para uma agência externa e negar o acesso dela aos dados de PHI por não aplicar o rótulo RHD a essa função."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Gerenciar uma função"
 >additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Aplicar rótulos a uma função"
 

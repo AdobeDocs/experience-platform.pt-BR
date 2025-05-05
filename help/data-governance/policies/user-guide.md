@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1769'
-ht-degree: 15%
+ht-degree: 16%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 15%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_description"
 >title="Integrar e aplicar o consentimento do cliente nos dados do seu perfil"
->abstract="<h2>Descrição</h2><p>O Experience Platform permite integrar os dados de consentimento coletados dos clientes aos respectivos perfis. É possível configurar políticas de consentimento para determinar se esses dados podem ser incluídos em segmentos ativados para determinados destinos.</p>"
+>abstract="<h2>Descrição</h2><p>A Experience Platform permite integrar os dados de consentimento coletados dos clientes nos seus respectivos perfis. É possível configurar políticas de consentimento para determinar se esses dados podem ser incluídos em segmentos ativados para determinados destinos.</p>"
 
 Este documento aborda como usar o espaço de trabalho **[!UICONTROL Políticas]** na interface do usuário do Adobe Experience Platform para criar e gerenciar políticas de uso de dados.
 

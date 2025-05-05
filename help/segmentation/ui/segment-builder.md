@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '5024'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -359,7 +359,7 @@ Depois de selecionar **[!UICONTROL Decodificar contêiner]**, o contêiner filho
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Mesclar políticas"
->abstract="Uma política de mesclagem permite mesclar diferentes conjuntos de dados para formar o perfil. A Experience Platform forneceu uma política de mesclagem padrão ou você pode criar uma nova política de mesclagem padrão em Perfis. Escolha uma política de mesclagem que corresponda à sua finalidade de marketing para este público-alvo."
+>abstract="Uma política de mesclagem permite mesclar diferentes conjuntos de dados para formar o perfil. A Experience Platform fornece uma política de mesclagem padrão, mas você também pode criar uma nova política de mesclagem padrão em Perfis. Escolha uma política de mesclagem que corresponda à sua finalidade de marketing para este público-alvo."
 
 O [!DNL Experience Platform] permite reunir dados de várias fontes e combiná-los para obter uma visão completa de cada cliente individual. Ao reunir esses dados, as políticas de mesclagem são as regras que [!DNL Experience Platform] usa para determinar como os dados serão priorizados e quais dados serão combinados para criar um perfil.
 

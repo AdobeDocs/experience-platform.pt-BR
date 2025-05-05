@@ -32,7 +32,7 @@ Este guia requer uma compreensão funcional de vários recursos importantes do [
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Política de mesclagem não encontrada"
->abstract="Isso significa que o Experience Platform não pôde encontrar a política de mesclagem solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID da política de mesclagem correta está listada no URL.</li><li>Verifique se você tem a combinação correta de organização e sandbox para a política de mesclagem que está tentando acessar.</li></ul>"
+>abstract="Isso significa que a Experience Platform não encontrou a política de mesclagem solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID da política de mesclagem correta está listada no URL.</li><li>Verifique se você tem a combinação correta de organização e sandbox para a política de mesclagem que está tentando acessar.</li></ul>"
 
 Na interface do usuário do [!DNL Experience Platform], você pode começar a trabalhar com políticas de mesclagem selecionando **[!UICONTROL Perfis]** na navegação à esquerda e selecionando a guia **[!UICONTROL Políticas de mesclagem]**.
 

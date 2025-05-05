@@ -7,7 +7,7 @@ exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
 source-wordcount: '1603'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -66,7 +66,7 @@ O espaço de trabalho de Permissões para a interface do Experience Platform é 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="O que são rótulos?"
->abstract="Use rótulos para categorizar conjuntos de dados e campos de acordo com as políticas de uso e acesso aplicáveis. A Adobe Experience Platform fornece vários rótulos de uso de dados do <strong>core</strong> definidos pela Adobe, que abrangem uma grande variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sensíveis <strong>S</strong> como os de dados de saúde regulamentados (RHD) permitem categorizar dados referentes a informações de saúde protegidas (PHI). Também é possível definir seus próprios rótulos personalizados para atender às necessidades de sua organização."
+>abstract="Use rótulos para categorizar conjuntos de dados e campos de acordo com as políticas de uso e acesso aplicáveis. A Adobe Experience Platform fornece vários rótulos de uso de dados <strong>essenciais</strong> definidos pela Adobe e que abrangem uma ampla variedade de restrições comuns aplicáveis à governança de dados. Por exemplo, rótulos sensíveis <strong>S</strong> como os de dados de saúde regulamentados (RHD) permitem categorizar dados referentes a informações de saúde protegidas (PHI). Também é possível definir seus próprios rótulos personalizados para atender às necessidades de sua organização."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=pt-BR#understanding-data-usage-labels" text="Visão geral dos rótulos de uso de dados"
 
 Funções são maneiras de categorizar os tipos de usuários que interagem com sua instância do Experience Platform e são blocos fundamentais das políticas de controle de acesso. Uma função tem determinado conjunto de permissões, e os membros da sua organização podem ser atribuídos a uma ou mais funções, dependendo do escopo de acesso de que precisam.

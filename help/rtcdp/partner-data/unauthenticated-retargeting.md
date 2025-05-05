@@ -76,7 +76,7 @@ Configure um encaminhamento de eventos na Platform para enviar dados coletados d
 
 Verifique se a extensão de redirecionamento externo está anexada a uma regra de evento válida na Coleção de dados da Adobe Experience Platform. Normalmente, uma regra global deve ser criada para ser acionada em ações principais, como `page load` ou interações específicas do usuário.
 
-Para saber mais sobre como configurar a extensão, leia a documentação [Encaminhamento de eventos](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started).
+Para saber mais sobre como configurar a extensão, leia a documentação [Encaminhamento de eventos](https://experienceleague.adobe.com/pt-br/docs/experience-platform/tags/event-forwarding/getting-started).
 
 ## Outros casos de uso {#other-use-cases}
 

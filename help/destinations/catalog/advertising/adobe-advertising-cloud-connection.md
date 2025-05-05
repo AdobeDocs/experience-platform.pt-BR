@@ -13,7 +13,7 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-O destino do Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) permite compartilhar públicos-alvo primários autenticados com anunciantes e usuários aprovados para ativação de campanha com o DSP. Para saber mais sobre a integração do Real-Time CDP com o DSP, consulte [Sobre a ativação de públicos autenticados de fontes de público-alvo](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+O destino do Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP) permite compartilhar públicos-alvo primários autenticados com anunciantes e usuários aprovados para ativação de campanha com o DSP. Para saber mais sobre a integração do Real-Time CDP com o DSP, consulte [Sobre a ativação de públicos autenticados de fontes de público-alvo](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=pt-BR).
 
 >[!IMPORTANT]
 >
@@ -35,8 +35,8 @@ Uma agência de mídia com uma conta DSP está realizando uma campanha de redire
 
 * Configurações de nível de conta e nível de campanha do DSP para permitir o compartilhamento de público com [!DNL LiveRamp RampID], que traduzirá os dados do cliente para [!DNL RampIDs] a fim de criar segmentos direcionáveis. Sua equipe de conta DSP executará essa configuração. O [!DNL RampID] está disponível por meio de uma parceria entre o DSP e o [!DNL LiveRamp], e você não precisa de sua própria associação do [!DNL LiveRamp] para usá-lo.
 * A ID da organização Experience Cloud para a conta Experience Platform. Você pode encontrar sua ID na página de perfil do usuário [!DNL Real-Time CDP].
-* Uma [[!DNL Real-Time CDP] fonte no DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) para receber públicos-alvo para ativação de campanha. Sua equipe de conta DSP criará a fonte usando sua ID de organização da Experience Cloud.
-* A chave de origem para a conta ou anunciante do DSP, que é gerada quando uma [[!DNL Real-Time CDP] origem é criada no DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Sua equipe de conta DSP compartilhará essa chave com você. Você o usará no Experience Platform para criar uma conexão de destino com o destino do Advertising Cloud DSP, conforme [explicado abaixo](#authenticate).
+* Uma [[!DNL Real-Time CDP] fonte no DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=pt-BR) para receber públicos-alvo para ativação de campanha. Sua equipe de conta DSP criará a fonte usando sua ID de organização da Experience Cloud.
+* A chave de origem para a conta ou anunciante do DSP, que é gerada quando uma [[!DNL Real-Time CDP] origem é criada no DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=pt-BR). Sua equipe de conta DSP compartilhará essa chave com você. Você o usará no Experience Platform para criar uma conexão de destino com o destino do Advertising Cloud DSP, conforme [explicado abaixo](#authenticate).
 * Dados do cliente que consistem em emails ou emails com hash.
 
 ## Identidades suportadas {#supported-identities}
@@ -72,7 +72,7 @@ Para se conectar ao destino, siga as instruções para [criar uma conexão de de
 
 Para se conectar ao destino, forneça o seguinte parâmetro na seção [!UICONTROL Tipo de conexão] e selecione **[!UICONTROL Conectar ao destino]**.:
 
-* **[!UICONTROL Chave de Conta ou de Anunciante]**: esta [!UICONTROL Chave do Source] é gerada quando uma [[!DNL Real-Time CDP] origem é criada na interface de usuário DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html). Sua equipe de conta do DSP compartilhará essa chave com você após criar a fonte.
+* **[!UICONTROL Chave de Conta ou de Anunciante]**: esta [!UICONTROL Chave do Source] é gerada quando uma [[!DNL Real-Time CDP] origem é criada na interface de usuário DSP](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=pt-BR). Sua equipe de conta do DSP compartilhará essa chave com você após criar a fonte.
 
 ![Campo de tipo de conexão](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 

@@ -95,7 +95,7 @@ Para criar instâncias de manuais no Journey Optimizer, é necessário configura
 
 ### Superfície de canal de email
 
-Vá para `Channels` na interface do Journey Optimizer. Configure subdomínios e pools de IP separados para emails de marketing e mensagens transacionais, se ainda não estiver configurado. Essas são as práticas recomendadas para garantir que mensagens transacionais, como emails de confirmação de pedidos, sejam enviadas aos clientes. Insira nomes, endereços de email e configurações adicionais. Selecione **Enviar** no canto superior direito da página para criar a superfície de canal de marketing. Leia a documentação sobre [como configurar superfícies de canal de email](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Vá para `Channels` na interface do Journey Optimizer. Configure subdomínios e pools de IP separados para emails de marketing e mensagens transacionais, se ainda não estiver configurado. Essas são as práticas recomendadas para garantir que mensagens transacionais, como emails de confirmação de pedidos, sejam enviadas aos clientes. Insira nomes, endereços de email e configurações adicionais. Selecione **Enviar** no canto superior direito da página para criar a superfície de canal de marketing. Leia a documentação sobre [como configurar superfícies de canal de email](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=pt-BR).
 
 ### Superfície de canal de SMS
 
@@ -111,7 +111,7 @@ Confirme se as configurações de canal estão definidas na interface Experience
 
 Em seguida, selecione o canal, as plataformas e os aplicativos que você visualizou nas configurações de canal. Selecione **Enviar** para criar a superfície de canal de push.
 
-Leia a documentação sobre [como configurar superfícies de canal de push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
+Leia a documentação sobre [como configurar superfícies de canal de push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=pt-BR).
 
 ## Próximas etapas {#next-steps}
 

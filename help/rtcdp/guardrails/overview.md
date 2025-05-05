@@ -16,7 +16,7 @@ As garantias são limites que fornecem orientação para o uso de dados e do sis
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Comece aqui e siga os links abaixo para entender todas as medidas de proteção nos vários serviços e áreas do Real-Time CDP:
 
@@ -30,7 +30,7 @@ Comece aqui e siga os links abaixo para entender todas as medidas de proteção 
 
 >[!TIP]
 >
->Além disso, visite [os blueprints de experiência digital](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html) para obter mais informações, como [diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+>Além disso, visite [os blueprints de experiência digital](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=pt-BR) para obter mais informações, como [diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=pt-BR#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
 
 ## Tipos de grade de proteção {#guardrail-types}
 
@@ -47,17 +47,17 @@ Observe que os dois tipos de proteção em todas as áreas e serviços da Real-T
 
 Além disso, consulte os links de descrição do produto abaixo para obter informações sobre licenciamento e direitos com base na edição e no nível da Real-Time CDP que você adquiriu:
 
-* [Todas as descrições de produtos da Adobe](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR)
-* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (Edição B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Todas as descrições de produtos da Adobe](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR)
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (Edição B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
 
 ## Medidas de proteção para outros aplicativos da Experience Platform  {#guardrails-other-aep-apps}
 
 Existem medidas de proteção semelhantes para outros aplicativos da Experience Platform. Acesse os links abaixo para obter mais informações:
 
-* [medidas de proteção do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=en)
-* [medidas de proteção do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+* [medidas de proteção do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=pt-BR)
+* [medidas de proteção do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=pt-BR)
 
 ## Próximas etapas
 

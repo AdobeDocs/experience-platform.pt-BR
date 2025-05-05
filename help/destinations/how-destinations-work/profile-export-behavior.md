@@ -42,7 +42,7 @@ A política de agregação é configurável e os desenvolvedores de destino pode
 
 >[!IMPORTANT]
 >
-> Os destinos corporativos estão disponíveis somente para clientes do [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Os destinos corporativos estão disponíveis somente para clientes do [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 Os [destinos da empresa](/help/destinations/destination-types.md#advanced-enterprise-destinations) no Experience Platform são Amazon Kinesis, Hubs de Eventos do Azure e API HTTP.
 

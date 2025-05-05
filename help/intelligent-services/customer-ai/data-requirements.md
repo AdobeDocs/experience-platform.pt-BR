@@ -49,8 +49,8 @@ A IA do cliente funciona analisando os seguintes conjuntos de dados para prever 
 
 - Dados do Adobe Analytics usando o [conector de origem do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Dados do Adobe Audience Manager usando o [conector de origem do Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Conjunto de dados de Evento de Experiência](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
-- [Conjunto de dados do Evento de experiência do consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
+- [Conjunto de dados de Evento de Experiência](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=pt-BR)
+- [Conjunto de dados do Evento de experiência do consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=pt-BR#cee-schema)
 
 Você pode adicionar vários conjuntos de dados de diferentes fontes se cada um dos conjuntos de dados compartilhar o mesmo tipo de identidade (namespace), como uma ECID. Para obter mais informações sobre como adicionar vários conjuntos de dados, visite o [Guia do usuário da IA do cliente](../customer-ai/user-guide/configure.md).
 

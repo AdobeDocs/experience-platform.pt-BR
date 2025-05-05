@@ -23,7 +23,7 @@ A coleta de dados é compatível com as seguintes fontes do lado do cliente:
 
 A coleta de dados se concentra na descoberta e na acessibilidade de conjuntos de dados assimilados, abrangendo o seguinte:
 
-* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
+* [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=pt-BR)
 * [Tags](../tags/home.md)
 * [Sequências de dados](../datastreams/overview.md)
 * [Encaminhamento de eventos](../tags/ui/event-forwarding/overview.md)

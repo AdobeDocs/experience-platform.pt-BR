@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Usando [!DNL Adobe Journey Optimizer] com [!DNL Experience Platform Web SDK]
 
-O [!DNL Adobe Experience Platform] [!DNL Web SDK] pode entregar e renderizar experiências personalizadas gerenciadas no [!DNL Adobe Journey Optimizer] para o canal da Web. Você pode usar um editor de WYSIWYG, o [!DNL Adobe Journey Optimizer] [Canal da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), ou uma interface não visual, o [Canal de Experiência baseado em Código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) para criar, ativar e entregar suas campanhas do [!DNL Journey Optimizer Web] e experiências de personalização.
+O [!DNL Adobe Experience Platform] [!DNL Web SDK] pode entregar e renderizar experiências personalizadas gerenciadas no [!DNL Adobe Journey Optimizer] para o canal da Web. Você pode usar um editor de WYSIWYG, o [!DNL Adobe Journey Optimizer] [Canal da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=pt-BR), ou uma interface não visual, o [Canal de Experiência baseado em Código](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/code-based-experience/get-started-code-based) para criar, ativar e entregar suas campanhas do [!DNL Journey Optimizer Web] e experiências de personalização.
 
 >[!IMPORTANT]
 >
@@ -28,7 +28,7 @@ O [!DNL Adobe Experience Platform] [!DNL Web SDK] pode entregar e renderizar exp
 
 Para começar a usar o [!DNL Adobe Journey Optimizer], siga as etapas abaixo.
 
-1. Passe pelos [pré-requisitos](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) do [!DNL Adobe Journey Optimizer] [Guia de Experiências da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), especificamente:
+1. Passe pelos [pré-requisitos](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=pt-BR#prerequesites) do [!DNL Adobe Journey Optimizer] [Guia de Experiências da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=pt-BR), especificamente:
    * Configurar [!DNL Adobe Experience Cloud Visual Editing Helper].
    * Habilitar [!DNL Adobe Journey Optimizer] na sua [sequência de dados](../../../datastreams/overview.md).
    * Habilite a opção [!UICONTROL Política de Mesclagem Ativa-na-Edge].
@@ -84,7 +84,7 @@ Para começar a usar o [!DNL Adobe Journey Optimizer], siga as etapas abaixo.
 
 ## Criação de experiências da Web no Adobe Journey Optimizer {#create-ajo-web-experiences}
 
-Siga as instruções de [criação de campanha da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) do [!DNL Adobe Journey Optimizer] [Guia de Experiências da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) para criar [!DNL Journey Optimizer Web] campanhas e experiências.
+Siga as instruções de [criação de campanha da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=pt-BR#create-web-campaign) do [!DNL Adobe Journey Optimizer] [Guia de Experiências da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=pt-BR) para criar [!DNL Journey Optimizer Web] campanhas e experiências.
 
 ## Renderização de conteúdo personalizado {#rendering-personalized-content}
 

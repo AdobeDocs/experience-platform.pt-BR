@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Depois que sua organização for provisionada para a Adobe Experience Platform, seu administrador poderá conceder a você acesso a [!DNL Query Service]. No entanto, para que você possa usar todos os recursos oferecidos pelo [!DNL Query Service], primeiro é necessário assimilar dados na Adobe Experience Platform.
 
-Este [vídeo tutorial sobre a assimilação de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) fornece uma visão geral sobre como criar um conjunto de dados, mapear um conjunto de dados para um esquema, adicionar dados ao conjunto de dados e confirmar a assimilação. A [documentação de visão geral da assimilação](../../ingestion/home.md) complementa isso e fornece informações mais detalhadas e links para outros recursos de aprendizagem.
+Este [vídeo tutorial sobre a assimilação de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) fornece uma visão geral sobre como criar um conjunto de dados, mapear um conjunto de dados para um esquema, adicionar dados ao conjunto de dados e confirmar a assimilação. A [documentação de visão geral da assimilação](../../ingestion/home.md) complementa isso e fornece informações mais detalhadas e links para outros recursos de aprendizagem.
 
 Após assimilar seus dados na Adobe Experience Platform, você pode começar a trabalhar com o [!DNL Query Service] usando a [[!DNL Query Editor] na interface do usuário do Experience Platform](../ui/user-guide.md) ou a [[!DNL Query Service] API](../api/getting-started.md). A documentação completa sobre como usar cada uma dessas ferramentas pode ser encontrada nas respectivas seções.
 

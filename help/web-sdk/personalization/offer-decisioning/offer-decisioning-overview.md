@@ -22,7 +22,7 @@ O Adobe Experience Platform [!DNL Web SDK] pode entregar e renderizar ofertas pe
 
 ## Terminologia
 
-É importante entender a seguinte terminologia ao trabalhar com o Offer Decisioning. Para obter mais informações e exibir termos adicionais, visite o [glossário do Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html).
+É importante entender a seguinte terminologia ao trabalhar com o Offer Decisioning. Para obter mais informações e exibir termos adicionais, visite o [glossário do Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=pt-BR).
 
 * **Escopos de Decisão:** Para o Offer Decisioning, os escopos de decisão são as cadeias de caracteres codificadas em Base64 do JSON que contêm as IDs de atividade e posicionamento que você deseja que o serviço do Offer Decisioning use para propor ofertas.
 
@@ -81,7 +81,7 @@ Para ativar o Offer Decisioning, execute as seguintes etapas:
    * Instalar o SDK por meio de tags
 
       1. [Criar uma propriedade de tag](/help/tags/ui/administration/companies-and-properties.md)
-      1. [Adicionar o código de inserção](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Adicionar o código de inserção](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=pt-BR)
       1. Instale e configure a extensão Experience Platform Web SDK com a sequência de dados criada selecionando a configuração na lista suspensa &quot;Sequência de dados&quot;. Consulte a documentação em [extensões](/help/tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
@@ -328,4 +328,4 @@ Para ativar o Offer Decisioning, execute as seguintes etapas:
 
 ## Limitações
 
-No momento, algumas restrições de oferta não são compatíveis com os workflows móveis do Edge Network, por exemplo, Limite. O valor do campo Limite especifica o número de vezes que uma oferta pode ser apresentada a todos os usuários. Para obter mais detalhes, consulte [Documentação de regras e restrições de qualificação da oferta](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+No momento, algumas restrições de oferta não são compatíveis com os workflows móveis do Edge Network, por exemplo, Limite. O valor do campo Limite especifica o número de vezes que uma oferta pode ser apresentada a todos os usuários. Para obter mais detalhes, consulte [Documentação de regras e restrições de qualificação da oferta](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html?lang=pt-BR#eligibility).

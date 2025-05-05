@@ -81,7 +81,7 @@ A próxima etapa é criar uma definição de segmento e gerar públicos-alvo a p
 * Ative todas as definições de segmento para a segmentação programada.
 * Ative as definições de segmento especificadas para a segmentação por transmissão.
 
-Como alternativa, também há um [tutorial de vídeo do construtor de segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) disponível para obter mais informações.
+Como alternativa, também há um [tutorial de vídeo do construtor de segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=pt-BR) disponível para obter mais informações.
 
 ## Ativar o público-alvo para uma campanha por email {#activate-audience-for-campaign}
 

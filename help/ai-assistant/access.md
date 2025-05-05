@@ -46,13 +46,13 @@ Se sua organização estiver legalmente qualificada para usar o Assistente de IA
 
 O acesso ao AI Assistant é regido pelos seguintes parâmetros:
 
-* **Acessar o aplicativo:** Você pode acessar o Assistente de IA no Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer e [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+* **Acessar o aplicativo:** Você pode acessar o Assistente de IA no Adobe Experience Platform, Adobe Real-Time CDP, Adobe Journey Optimizer e [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/ai-assistant).
 <!-- * **Contractual access:** Your company must agree to certain [!DNL GenAI]-related legal terms before your organization can use AI Assistant. Contact your organization's administrator or your Adobe Account Team if you are not able to access AI Assistant.  -->
 * **Permissões:** Use a [Interface do usuário de permissões](../access-control/abac/ui/permissions.md) para conceder ou revogar acesso ao Assistente de IA em sua organização. Para usar o Assistente de IA, um determinado usuário deve pertencer a uma função provisionada com as permissões **Habilitar Assistente de IA** e **Exibir Insights Operacionais**.
    * Como administrador, você pode adicionar o **Habilitar o Assistente de IA** a uma determinada função e adicionar um usuário a essa função, para permitir que ele acesse o Assistente de IA em sua organização. **Observação**: essa permissão permite que o usuário acesse o Assistente de IA, pois ela não concede a ele nenhuma capacidade administrativa para conceder a outros o acesso ao Assistente de IA.
    * Como administrador, você pode adicionar o **Exibir Insights Operacionais** a uma determinada função e adicionar um usuário a essa função, para permitir que ele use os recursos de insights operacionais do Assistente de IA. Os insights operacionais estão atualmente na versão beta.
 
-Use a [interface de permissões](../access-control/abac/ui/roles.md) para conceder permissões para usar o Assistente de IA no Experience Platform e no Journey Optimizer. Para obter informações sobre como acessar o Assistente de IA no Customer Journey Analytics. Leia a documentação no [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant).
+Use a [interface de permissões](../access-control/abac/ui/roles.md) para conceder permissões para usar o Assistente de IA no Experience Platform e no Journey Optimizer. Para obter informações sobre como acessar o Assistente de IA no Customer Journey Analytics. Leia a documentação no [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/ai-assistant).
 
 ![A página da interface do usuário de permissões com o Assistente de IA habilitado e as permissões de Insights Operacionais de Exibição incluídas em uma determinada função.](./images/access/access-permissions.png)
 

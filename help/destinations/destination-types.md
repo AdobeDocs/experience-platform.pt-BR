@@ -41,7 +41,7 @@ Os destinos de exportação de perfil recebem dados brutos, geralmente com o end
 
 >[!IMPORTANT]
 >
->Destinos corporativos avançados, ou destinos de exportação de perfil de streaming, estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+>Destinos corporativos avançados, ou destinos de exportação de perfil de streaming, estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 Use os conectores avançados de dados de destino corporativo para fornecer perfis do Adobe Real-Time Customer Data Platform em tempo quase real a sistemas internos ou a outros sistemas de terceiros para sincronização de dados, análise e outros casos de uso de enriquecimento de perfil.
 

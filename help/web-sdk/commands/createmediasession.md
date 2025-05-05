@@ -13,12 +13,12 @@ ht-degree: 7%
 
 O comando `createMediaSession` faz parte do componente `streamingMedia` do SDK da Web. Você pode usar esse componente para coletar dados relacionados a sessões de mídia no seu site. Consulte a `streamingMedia` [documentação](configure/streamingmedia.md) para saber como configurar este componente.
 
-Os dados coletados podem incluir informações sobre reprodução de mídia, pausas, conclusões e outros eventos relacionados. Depois de coletados, você pode enviar esses dados para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/en/docs/media-analytics/using/media-overview?lang=pt-BR), para agregar métricas. Esse recurso fornece uma solução abrangente para rastrear e entender o comportamento de consumo de mídia no site.
+Os dados coletados podem incluir informações sobre reprodução de mídia, pausas, conclusões e outros eventos relacionados. Depois de coletados, você pode enviar esses dados para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/pt-br/docs/media-analytics/using/media-overview?lang=pt-BR), para agregar métricas. Esse recurso fornece uma solução abrangente para rastrear e entender o comportamento de consumo de mídia no site.
 
 Você pode criar sessões de mídia no SDK da Web de duas maneiras:
 
-* [Sessões de mídia rastreadas automaticamente](#automatic) permitem que o SDK da Web gerencie a expedição de eventos de ping de mídia para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/en/docs/media-analytics/using/media-overview?lang=pt-BR). A frequência desses pings é determinada pelas definições de configuração do componente [streamingMedia](configure/streamingmedia.md).
-* [Sessões de mídia rastreadas manualmente](#manual) dão a você mais controle sobre o envio de eventos de ping de sessão para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/en/docs/media-analytics/using/media-overview?lang=pt-BR). Além disso, você pode armazenar o `sessionID` para sessões de mídia.
+* [Sessões de mídia rastreadas automaticamente](#automatic) permitem que o SDK da Web gerencie a expedição de eventos de ping de mídia para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/pt-br/docs/media-analytics/using/media-overview?lang=pt-BR). A frequência desses pings é determinada pelas definições de configuração do componente [streamingMedia](configure/streamingmedia.md).
+* [Sessões de mídia rastreadas manualmente](#manual) dão a você mais controle sobre o envio de eventos de ping de sessão para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/pt-br/docs/media-analytics/using/media-overview?lang=pt-BR). Além disso, você pode armazenar o `sessionID` para sessões de mídia.
 
 ## Criar uma sessão de mídia rastreada automaticamente {#automatic}
 

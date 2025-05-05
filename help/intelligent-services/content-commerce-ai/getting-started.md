@@ -67,6 +67,6 @@ Este manual fornece exemplos de chamadas de API para demonstrar como formatar su
 
 Depois de ter todas as suas credenciais, você estará pronto para configurar um trabalhador personalizado para [!DNL Content tagging]. Os documentos a seguir ajudam a entender a estrutura de extensibilidade e a configuração do ambiente.
 
-Para saber mais sobre a Estrutura de extensibilidade, comece lendo o documento [introdução à extensibilidade](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html). Este documento descreve os pré-requisitos e os requisitos de provisionamento.
+Para saber mais sobre a Estrutura de extensibilidade, comece lendo o documento [introdução à extensibilidade](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=pt-BR). Este documento descreve os pré-requisitos e os requisitos de provisionamento.
 
-Para saber mais sobre como configurar um ambiente para [!DNL Content tagging], comece lendo o guia para [configurar um ambiente de desenvolvedor](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). Este documento fornece instruções de configuração que permitem desenvolver para o Serviço do Asset Compute.
+Para saber mais sobre como configurar um ambiente para [!DNL Content tagging], comece lendo o guia para [configurar um ambiente de desenvolvedor](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html?lang=pt-BR). Este documento fornece instruções de configuração que permitem desenvolver para o Serviço do Asset Compute.

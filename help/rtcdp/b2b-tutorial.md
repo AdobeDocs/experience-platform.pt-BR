@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Introdução ao Real-Time Customer Data Platform B2B edition
 description: Use esse cenário como exemplo ao configurar sua implementação do Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -100,9 +100,9 @@ No espaço de trabalho [!UICONTROL Segmentos] da interface do Experience Platfor
 
 >[!NOTE]
 > 
->Consulte o tutorial sobre [ativação de um público-alvo para um destino](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) para obter etapas abrangentes sobre como fazer isso.
+>Consulte o tutorial sobre [ativação de um público-alvo para um destino](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=pt-BR) para obter etapas abrangentes sobre como fazer isso.
 
-O profissional de marketing do Bodea ativa o público-alvo para o destino do Marketo, o que permite enviar dados de público-alvo do Experience Platform para o Marketo Engage na forma de uma lista estática. Consulte o guia no [destino do Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) para obter mais informações.
+O profissional de marketing do Bodea ativa o público-alvo para o destino do Marketo, o que permite enviar dados de público-alvo do Experience Platform para o Marketo Engage na forma de uma lista estática. Consulte o guia no [destino do Marketo](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=pt-BR) para obter mais informações.
 
 ## Próximas etapas
 

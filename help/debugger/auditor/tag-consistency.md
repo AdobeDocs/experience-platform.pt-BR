@@ -21,6 +21,6 @@ Os testes de consistência de tags procuram inconsistências em todas as página
 
 | Teste | Peso | Critérios | Recomendação |
 | --- | --- | --- | --- |
-| Adobe Analytics - Versão de código consistente | 5 | Mais de uma versão do código do Analytics foi encontrada. | Substitua todas as instâncias do Analytics pela versão atual.<br><br>[Informações adicionais](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) |
+| Adobe Analytics - Versão de código consistente | 5 | Mais de uma versão do código do Analytics foi encontrada. | Substitua todas as instâncias do Analytics pela versão atual.<br><br>[Informações adicionais](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=pt-BR) |
 
 {style="table-layout:auto"}

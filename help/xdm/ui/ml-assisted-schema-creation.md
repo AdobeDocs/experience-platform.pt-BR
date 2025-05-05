@@ -24,7 +24,7 @@ Com a geração do esquema de ML, você pode integrar rapidamente novas fontes d
 
 Este tutorial requer um entendimento prático dos requisitos para a criação de esquema. Antes de continuar com este guia, você deve ler o [guia da interface do usuário para criar e editar esquemas](./resources/schemas.md).
 
-Este guia explica como criar esquemas usando algoritmos de aprendizado de máquina (ML) para gerar um esquema a partir de dados de amostra. Consulte o [manual schema creation workflow guide](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) para obter informações sobre como criar esquemas ou o documento sobre [workflows baseados em campo no Editor de esquemas](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) para aprimorar sua compreensão do processo de criação de esquema.
+Este guia explica como criar esquemas usando algoritmos de aprendizado de máquina (ML) para gerar um esquema a partir de dados de amostra. Consulte o [manual schema creation workflow guide](https://experienceleague.adobe.com/pt-br/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) para obter informações sobre como criar esquemas ou o documento sobre [workflows baseados em campo no Editor de esquemas](https://experienceleague.adobe.com/pt-br/docs/experience-platform/xdm/ui/field-based-workflows) para aprimorar sua compreensão do processo de criação de esquema.
 
 >[!NOTE]
 >
@@ -125,4 +125,4 @@ O Editor de esquemas é exibido com o esquema recém-criado exibido na tela. Sel
 
 Depois de criar o esquema, você pode usar o Editor de esquemas para fazer mais modificações, se necessário. Seu novo esquema agora está pronto para ser integrado às fontes de dados e usado para análise de dados.
 
-Consulte o [Guia Editar um esquema existente](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) para obter mais informações sobre o uso do Editor de Esquemas.
+Consulte o [Guia Editar um esquema existente](https://experienceleague.adobe.com/pt-br/docs/experience-platform/xdm/ui/resources/schemas#edit) para obter mais informações sobre o uso do Editor de Esquemas.

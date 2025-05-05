@@ -99,4 +99,4 @@ Os atributos calculados derivam automaticamente rótulos de uso de dados dos cam
 
 ## Como usar atributos computados com o Adobe Journey Optimizer?
 
-Para usar atributos computados no jornada, você precisará adicionar o grupo de campos `SystemComputedAttributes` à fonte de dados Experience Platform. Para obter mais informações sobre como configurar a fonte de dados do Experience Platform, leia o [guia da fonte de dados do Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).
+Para usar atributos computados no jornada, você precisará adicionar o grupo de campos `SystemComputedAttributes` à fonte de dados Experience Platform. Para obter mais informações sobre como configurar a fonte de dados do Experience Platform, leia o [guia da fonte de dados do Adobe Experience Platform](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=pt-BR).

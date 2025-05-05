@@ -16,7 +16,7 @@ ht-degree: 3%
 
 O Adobe Livefyre permite descobrir, organizar e publicar um fluxo constante de conteúdo gerado pelo usuário em seu site para criar experiências autênticas e altamente personalizadas.
 
-O Adobe Livefyre é uma extensão social do Adobe Experience Platform. Para obter mais informações sobre o Adobe Livefyre, leia o [Guia de implementação do Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
+O Adobe Livefyre é uma extensão social do Adobe Experience Platform. Para obter mais informações sobre o Adobe Livefyre, leia o [Guia de implementação do Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=pt-BR).
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 

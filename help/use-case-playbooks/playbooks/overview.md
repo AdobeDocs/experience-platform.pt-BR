@@ -52,7 +52,7 @@ Assista a este vídeo para saber como descobrir, criar, publicar e solucionar pr
 
 ## Disponibilidade {#availability}
 
-Alguns [!UICONTROL manuais de casos de uso] foram adaptados aos casos de uso do Real-Time CDP, enquanto outros são mais adequados para clientes que usam o Journey Optimizer. Navegue pelo catálogo para encontrar os manuais mais adequados para seu produto e caso de uso. Saiba mais sobre o Real-Time CDP e o Journey Optimizer na [descrição dos produtos Adobe](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR).
+Alguns [!UICONTROL manuais de casos de uso] foram adaptados aos casos de uso do Real-Time CDP, enquanto outros são mais adequados para clientes que usam o Journey Optimizer. Navegue pelo catálogo para encontrar os manuais mais adequados para seu produto e caso de uso. Saiba mais sobre o Real-Time CDP e o Journey Optimizer na [descrição dos produtos Adobe](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR).
 
 ## Guias de interface {#ui-guides}
 

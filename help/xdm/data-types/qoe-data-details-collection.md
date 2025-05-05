@@ -23,9 +23,9 @@ A Coleção [!UICONTROL Detalhes de dados de QoE] é um tipo de dados padrão do
 
 | Nome de exibição | Propriedade | Tipo de dados | Obrigatório | Descrição |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-----------|-----------|---------------------------------------------------------------------------------------|
-| [[!UICONTROL Taxa de bits]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#average-bitrate) | `bitrate` | inteiro | Não | O valor da taxa de bits (em kbps). |
-| [[!UICONTROL Quadros Ignorados]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#dropped-frames) | `droppedFrames` | inteiro | Não | A contagem total de quadros perdidos durante a reprodução. |
-| [[!UICONTROL Quadros por Segundo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#frames-per-second) | `framesPerSecond` | inteiro | Não | A taxa de quadros do fluxo atual (em quadros por segundo). |
-| [[!UICONTROL Hora De Início]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#time-to-start-1) | `timeToStart` | inteiro | Não | Duração (em segundos) entre o carregamento e o início do vídeo. |
+| [[!UICONTROL Taxa de bits]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=pt-BR#average-bitrate) | `bitrate` | inteiro | Não | O valor da taxa de bits (em kbps). |
+| [[!UICONTROL Quadros Ignorados]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=pt-BR#dropped-frames) | `droppedFrames` | inteiro | Não | A contagem total de quadros perdidos durante a reprodução. |
+| [[!UICONTROL Quadros por Segundo]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=pt-BR#frames-per-second) | `framesPerSecond` | inteiro | Não | A taxa de quadros do fluxo atual (em quadros por segundo). |
+| [[!UICONTROL Hora De Início]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=pt-BR#time-to-start-1) | `timeToStart` | inteiro | Não | Duração (em segundos) entre o carregamento e o início do vídeo. |
 
 {style="table-layout:auto"}

@@ -73,7 +73,7 @@ A prioridade de namespace pode ser definida usando a [interface do usuário de c
 
 ## Uso da prioridade de namespace
 
-Atualmente, a prioridade do namespace influencia o comportamento do sistema do Perfil do cliente em tempo real. O diagrama abaixo ilustra esse conceito. Para obter mais informações, leia o guia em [diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Atualmente, a prioridade do namespace influencia o comportamento do sistema do Perfil do cliente em tempo real. O diagrama abaixo ilustra esse conceito. Para obter mais informações, leia o guia em [diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/pt-br/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Um diagrama do escopo de aplicativo de prioridade de namespace](../images/namespace-priority/application-scope.png)
 

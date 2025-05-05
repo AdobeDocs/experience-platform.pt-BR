@@ -52,7 +52,7 @@ Como visto na tabela abaixo, os dados do evento são renderizados usando palavra
 
 Públicos-alvo externos também podem ser usados como componentes de uma nova definição de segmento, adicionando suas regras de atributo às novas definições de segmento.
 
-Atualmente, somente o Adobe Audience Manager é compatível como público-alvo externo, com fontes adicionais sendo ativadas no futuro. Mais informações sobre como usar os públicos da Adobe Audience Manager com o Experience Platform podem ser encontradas no [guia de compartilhamento de público-alvo na documentação da Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html).
+Atualmente, somente o Adobe Audience Manager é compatível como público-alvo externo, com fontes adicionais sendo ativadas no futuro. Mais informações sobre como usar os públicos da Adobe Audience Manager com o Experience Platform podem ser encontradas no [guia de compartilhamento de público-alvo na documentação da Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=pt-BR).
 
 ### Compartilhamento de definição de segmento
 

@@ -22,10 +22,10 @@ A integração entre a IA de atribuição e a Governança de dados da Adobe Expe
 
 Os rótulos e políticas de uso de dados criados em conjuntos de dados consumidos pelo Experience Platform podem ser exibidos no fluxo de trabalho de configuração da IA de atribuição. Esses rótulos interrompem ou avisam os usuários que usam campos rotulados.
 
-Essa integração permite gerenciar a conformidade com mais eficiência. Os administradores de dados da sua organização podem definir políticas de restrição de uso. Como resultado, você pode usar dados que estejam em conformidade com as políticas definidas pelos administradores de dados. Leia a documentação em [Rótulos e políticas](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) para saber mais.
+Essa integração permite gerenciar a conformidade com mais eficiência. Os administradores de dados da sua organização podem definir políticas de restrição de uso. Como resultado, você pode usar dados que estejam em conformidade com as políticas definidas pelos administradores de dados. Leia a documentação em [Rótulos e políticas](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=pt-BR) para saber mais.
 
 Saiba mais sobre esse recurso aqui:
 
 [Introdução à IA de atribuição](../../attribution-ai/getting-started.md)
-[Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
+[Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=pt-BR)
 [Diagramas de arquitetura do Adobe Experience Cloud](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=pt-BR)

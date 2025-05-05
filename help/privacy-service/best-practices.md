@@ -77,7 +77,7 @@ Se um trabalho específico ainda estiver pendente ou tiver retornado um erro, vo
 
 ## Acessar dados de solicitação {#access-request-data}
 
-Quando as informações do titular dos dados são solicitadas, cada serviço retorna dados em um formato consistente com a maneira como eles armazenam e usam esses dados. Depois que todos os serviços concluírem a solicitação, um URL de arquivo .ZIP será fornecido nos detalhes do trabalho para permitir que esses dados sejam baixados. Consulte o guia de solução de problemas para obter informações sobre [como baixar os resultados do trabalho de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
+Quando as informações do titular dos dados são solicitadas, cada serviço retorna dados em um formato consistente com a maneira como eles armazenam e usam esses dados. Depois que todos os serviços concluírem a solicitação, um URL de arquivo .ZIP será fornecido nos detalhes do trabalho para permitir que esses dados sejam baixados. Consulte o guia de solução de problemas para obter informações sobre [como baixar os resultados do trabalho de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=pt-BR#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F).
 
 A seguir, os principais itens de observação relacionados à gestão do arquivo de dados:
 

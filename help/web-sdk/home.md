@@ -82,6 +82,6 @@ Antes de migrar páginas usando o `AT.js` para o Web SDK, habilite as seguintes 
 >Os seguintes recursos do Target não têm suporte ao migrar do `at.js` para o Web SDK:
 >
 >* [Ofertas de redirecionamento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=pt-BR)
->* [Suporte a CNAME e entre domínios](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html)
+>* [Suporte a CNAME e entre domínios](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html?lang=pt-BR)
 
 Depois de migrar do `AT.js` para o Web SDK, remova a opção `targetMigrationEnabled` da sua configuração.

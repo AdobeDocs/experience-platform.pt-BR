@@ -236,7 +236,7 @@ Você também precisa das seguintes permissões de público-alvo:
 * **Perfil lido**
 * **Conjunto de dados lido**
 
-Como as Jornadas são altamente flexíveis e podem envolver muitos objetos interconectados, suas [permissões completas](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) são documentadas separadamente e podem variar de acordo com seu caso de uso específico.
+Como as Jornadas são altamente flexíveis e podem envolver muitos objetos interconectados, suas [permissões completas](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) são documentadas separadamente e podem variar de acordo com seu caso de uso específico.
 
 ## Próximas etapas
 

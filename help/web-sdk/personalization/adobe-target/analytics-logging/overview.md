@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Logon do Adobe Analytics for Target (A4T) no Experience Platform Web SDK
 
-Ao usar o Adobe Target para personalização, você pode escolher qual sistema deseja usar para a avaliação de desempenho. Cada [Atividade do Target](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html) permite selecionar entre relatórios do Target e do Adobe Analytics.
+Ao usar o Adobe Target para personalização, você pode escolher qual sistema deseja usar para a avaliação de desempenho. Cada [Atividade do Target](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=pt-BR) permite selecionar entre relatórios do Target e do Adobe Analytics.
 
 Se você estiver usando os relatórios do Analytics, a Adobe Target precisará comunicar o seguinte ao Analytics:
 
@@ -27,7 +27,7 @@ O Adobe Experience Platform Web SDK é compatível com dois tipos de registro do
 | Método de registro | Descrição |
 | --- | --- |
 | Registro de análises do servidor | Todas as ocorrências do Analytics enviadas pelo Edge Network são aumentadas com detalhes do Target no lado do servidor, sem precisar passar pelo processo de compilação de ocorrências. |
-| Registro de análises do cliente | Os dados de destino são retornados no lado do cliente, permitindo que você aumente e envie dados manualmente para o Analytics usando a [API de inserção de dados](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html). |
+| Registro de análises do cliente | Os dados de destino são retornados no lado do cliente, permitindo que você aumente e envie dados manualmente para o Analytics usando a [API de inserção de dados](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html?lang=pt-BR). |
 
 O método de log é determinado se você tem o Adobe Analytics habilitado na sua [sequência de dados](../../../../datastreams/overview.md) configurada:
 

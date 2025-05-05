@@ -17,4 +17,4 @@ ht-degree: 28%
 - [Desenvolvimento de integrações ETL](home.md)
 - [Transformação ETL](transformations.md)
 - [Fluxo de trabalho ETL](workflow.md)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)

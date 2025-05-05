@@ -46,7 +46,7 @@ Para implementar com êxito esse caso de uso, você deve usar várias áreas do 
 - [Conjuntos de dados](../../catalog/datasets/overview.md)
 - [Esquemas](../../xdm//home.md)
 - [Públicos-alvo](../../segmentation/home.md)
-- [Jornadas do Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [Jornadas do Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Como atingir o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 
@@ -89,7 +89,7 @@ Agora que seu pacote de sandbox dourada foi concluído, você estabeleceu um cen
 
 >[!NOTE]
 >
-> As etapas acima seguem o processo na interface do usuário do Experience Platform. É possível seguir as mesmas etapas usando a API em vários endpoints. Consulte o `sandboxes` [manual de ponto de extremidade](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) e o `packages` [manual de ponto de extremidade](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages) para obter informações sobre como fazer cada solicitação por meio da API.
+> As etapas acima seguem o processo na interface do usuário do Experience Platform. É possível seguir as mesmas etapas usando a API em vários endpoints. Consulte o `sandboxes` [manual de ponto de extremidade](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sandbox/api/sandboxes#create) e o `packages` [manual de ponto de extremidade](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sandbox/sandbox-tooling-api/packages) para obter informações sobre como fazer cada solicitação por meio da API.
 
 ## Outros casos de uso obtidos por meio da compatibilidade com dados de parceiros {#other-use-cases}
 

@@ -3,7 +3,7 @@ title: Pontuação preditiva de leads e contas no Real-Time CDP B2B
 type: Documentation
 description: Uma visão geral e mais informações sobre o recurso preditivo de lead e pontuação de conta no Experience Platform CDP B2B.
 feature: Profiles, B2B
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d3afbabb-005d-4537-831a-857c88043759
 source-git-commit: db57fa753a3980dca671d476521f9849147880f1
 workflow-type: tm+mt

@@ -159,12 +159,12 @@ A seção **[!UICONTROL Monitoramento]** permite monitorar a assimilação de lo
 
 ### [!UICONTROL Dados federados]
 
-A seção **[!UICONTROL Modelos]** permite projetar e criar modelos de dados e esquemas que definem a estrutura, as relações e as restrições de seus dados. Você pode encontrar mais informações sobre modelos de dados e esquemas no [guia do usuário da Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas).
+A seção **[!UICONTROL Modelos]** permite projetar e criar modelos de dados e esquemas que definem a estrutura, as relações e as restrições de seus dados. Você pode encontrar mais informações sobre modelos de dados e esquemas no [guia do usuário da Federated Audience Composition](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/config/datamodel/schemas).
 
 A seção **[!UICONTROL Trilha de auditoria]** fornece um registro detalhado e cronológico de todas as ações e eventos que foram feitos em seu ambiente em tempo real. Você pode encontrar mais informações sobre a trilha de auditoria no [Guia do usuário da Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail).
 
 
-A seção **[!UICONTROL Federated databases]** permite conectar o Adobe Experience Platform ao data warehouse da sua empresa. Você pode encontrar mais informações sobre conexão com bancos de dados federados no [guia do usuário do Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db).
+A seção **[!UICONTROL Federated databases]** permite conectar o Adobe Experience Platform ao data warehouse da sua empresa. Você pode encontrar mais informações sobre conexão com bancos de dados federados no [guia do usuário do Federated Audience Composition](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/config/federated-db).
 
 ### [!UICONTROL Decisão]
 

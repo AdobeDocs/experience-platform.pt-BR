@@ -23,7 +23,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 **Recursos**:
 
-* Adição de um novo recurso para permitir que os usuários exibam e editem uma versão JSON da [Ação Definir Variáveis](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables). A Extensão Adobe Web SDK também inclui uma ação para [preencher uma variável de análise](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) fornecendo JSON. Copiando dados JSON da extensão AA para a extensão Web SDK, os clientes da migração podem facilmente transferir várias configurações de uma só vez, em vez de adicionar cada variável manualmente.
+* Adição de um novo recurso para permitir que os usuários exibam e editem uma versão JSON da [Ação Definir Variáveis](https://experienceleague.adobe.com/pt-br/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables). A Extensão Adobe Web SDK também inclui uma ação para [preencher uma variável de análise](https://experienceleague.adobe.com/pt-br/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) fornecendo JSON. Copiando dados JSON da extensão AA para a extensão Web SDK, os clientes da migração podem facilmente transferir várias configurações de uma só vez, em vez de adicionar cada variável manualmente.
 
 ## 12 de agosto de 2024
 
@@ -61,7 +61,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 **Correções de erros**:
 
-* Adição de tratamento de erros para navegadores com [dicas do cliente de usuário-agente](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) de alta entropia com falha.
+* Adição de tratamento de erros para navegadores com [dicas do cliente de usuário-agente](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html?lang=pt-BR) de alta entropia com falha.
 * O cabeçalho [POST](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods/POST) Content-Type foi alterado para usar `x-www-form-urlencoded` por padrão.
 
 ## sábado, 23 de setembro de 2022
@@ -218,7 +218,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 * Atualização da extensão do Adobe Analytics para oferecer suporte à DIL 9.2 para o Audience Manager
 
-* Atualização da extensão para oferecer suporte ao [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.15.0)
+* Atualização da extensão para oferecer suporte ao [AppMeasurement 2.15.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR#version-2.15.0)
 * A caixa de seleção a seguir foi removida, pois não há mais suporte: &quot;Não anexe o IFRAME de publicação de destino aos destinos DOM ou fire&quot;
 
 ## 4 de junho de 2019
@@ -227,7 +227,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Adobe Analyt
 
 **Recursos**:
 
-* Atualização da extensão do Adobe Analytics para o [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html#version-2.14.0), que inclui uma correção para um problema conhecido de clearVars
+* Atualização da extensão do Adobe Analytics para o [AppMeasurement 2.14.0](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html?lang=pt-BR#version-2.14.0), que inclui uma correção para um problema conhecido de clearVars
 * Adição de um link Exchange à extensão. É possível acessar a listagem do Exchange selecionando o menu suspenso e escolhendo &quot;informações de extensão&quot;
 
 **Correções de erros**:

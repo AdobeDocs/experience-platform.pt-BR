@@ -13,7 +13,7 @@ ht-degree: 11%
 
 [!UICONTROL Detalhes de Cliente Potencial do Parceiro (Amostra)] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md). Os [!UICONTROL Detalhes de Cliente Potencial do Parceiro (Amostra)] fornecem uma estrutura de exemplo para vários detalhes relacionados ao perfil de um cliente potencial. Essa estrutura simplifica o processo de organização e gerenciamento de diversas informações relacionadas a clientes potenciais.
 
-Este grupo de campos estende a [classe de Perfil de Cliente Potencial Individual](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html) no contexto de um parceiro.
+Este grupo de campos estende a [classe de Perfil de Cliente Potencial Individual](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=pt-BR) no contexto de um parceiro.
 
 ![Um diagrama do grupo de campos [!UICONTROL Detalhes de Cliente Potencial do Parceiro (Amostra)].](../../images/field-groups/partner/partner-prospect-details-sample.png)
 

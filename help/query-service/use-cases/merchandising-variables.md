@@ -26,7 +26,7 @@ No Adobe Analytics, os dados personalizados a nível de produto podem ser coleta
 
 Essas variáveis são chamadas de variáveis de merchandising da sintaxe do produto. Isso permite a coleta de informações, como um &quot;valor de desconto&quot; por produto ou informações sobre o &quot;local na página&quot; do produto nos resultados de pesquisa do cliente.
 
-Para saber mais sobre como usar a sintaxe do produto, leia a documentação do Adobe Analytics em [implementação de eVars usando a sintaxe do produto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+Para saber mais sobre como usar a sintaxe do produto, leia a documentação do Adobe Analytics em [implementação de eVars usando a sintaxe do produto](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=pt-BR#implement-using-product-syntax).
 
 As seções abaixo descrevem os campos XDM necessários para acessar as variáveis de merchandising em seu conjunto de dados [!DNL Analytics]:
 
@@ -127,7 +127,7 @@ Nos relatórios, os pedidos, a receita, as visualizações do produto e as adiç
 | pesquisa interna:camisa de verão | 19,99 | 1 | 1 | 1 |
 | pesquisa interna:chapéu de inverno | 12,99 | 1 | 1 | 1 |
 
-Para saber mais sobre como usar a sintaxe da variável de conversão, leia a documentação do Adobe Analytics em [implementação de eVars usando a sintaxe da variável de conversão](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+Para saber mais sobre como usar a sintaxe da variável de conversão, leia a documentação do Adobe Analytics em [implementação de eVars usando a sintaxe da variável de conversão](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=pt-BR#implement-using-conversion-variable-syntax).
 
 Os campos XDM são exibidos abaixo para produzir a sintaxe da variável de conversão no conjunto de dados [!DNL Analytics]:
 

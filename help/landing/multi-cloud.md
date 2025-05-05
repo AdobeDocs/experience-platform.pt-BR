@@ -72,7 +72,7 @@ O Adobe tem o compromisso de oferecer paridade de recursos entre plataformas de 
 
 * [Real-Time Customer Data Platform](../rtcdp/home.md)
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/ajo-home)
-* [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing)
+* [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-landing)
 
 No entanto, algumas funcionalidades podem diferir entre as implementações do Azure e do AWS. Essas diferenças são descritas na seção abaixo e em outras partes da documentação do produto, quando aplicável.
 

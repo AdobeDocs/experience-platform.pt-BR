@@ -17,7 +17,7 @@ Este documento fornece etapas sobre como usar seu ambiente local para criar docu
 
 >[!TIP]
 >
->Os seguintes documentos do guia de contribuição da Adobe podem ser usados para apoiar ainda mais seu processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Os seguintes documentos do guia de contribuição da Adobe podem ser usados para apoiar ainda mais seu processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=pt-BR)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=pt-BR)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=pt-BR)</li></ul>
 
 ## Pré-requisitos
 
@@ -37,7 +37,7 @@ Para clonar o repositório no computador local, selecione **Código**. No menu s
 
 >[!TIP]
 >
->Para obter mais informações, consulte o tutorial sobre [configuração do repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
+>Para obter mais informações, consulte o tutorial sobre [configuração do repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=pt-BR#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
@@ -59,7 +59,7 @@ Em seguida, selecione **Publicar ramificação**.
 
 ## Crie a página de documentação da sua fonte
 
-Com o repositório clonado em sua máquina local e uma nova ramificação criada, agora é possível começar a criar a página de documentação para sua nova fonte por meio do [editor de texto de sua escolha](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors).
+Com o repositório clonado em sua máquina local e uma nova ramificação criada, agora é possível começar a criar a página de documentação para sua nova fonte por meio do [editor de texto de sua escolha](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=pt-BR#understand-markdown-editors).
 
 A Adobe recomenda que você use o [Visual Studio Code](https://code.visualstudio.com/) e instale a extensão de Criação do Adobe Markdown. Para instalar a extensão, inicie o Visual Studio Code e selecione a guia **Extensões** no menu de navegação esquerdo.
 

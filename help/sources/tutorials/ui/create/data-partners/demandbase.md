@@ -1,8 +1,8 @@
 ---
 title: Conectar a intenção do Demandbase ao Experience Platform usando a interface
 description: Saiba como conectar o Demandbase Intent ao Experience Platform
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
+badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
 exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
 source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
 workflow-type: tm+mt

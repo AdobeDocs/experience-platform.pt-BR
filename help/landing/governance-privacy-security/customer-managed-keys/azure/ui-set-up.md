@@ -21,7 +21,7 @@ Para obter instruções sobre como concluir esse processo para instâncias do Ex
 
 Para exibir e visitar a seção [!UICONTROL Criptografia] no Adobe Experience Platform, você deve ter criado uma função e atribuído a permissão [!UICONTROL Gerenciar chave gerenciada pelo cliente] a essa função. Qualquer usuário com a permissão [!UICONTROL Gerenciar Chave gerenciada pelo cliente] pode habilitar o CMK para sua organização.
 
-Para obter mais informações sobre atribuição de funções e permissões no Experience Platform, consulte a [documentação sobre configuração de permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Para obter mais informações sobre atribuição de funções e permissões no Experience Platform, consulte a [documentação sobre configuração de permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=pt-BR).
 
 Para habilitar o CMK, o [[!DNL Azure] Cofre da Chave deve ser configurado](./azure-key-vault-config.md) com as seguintes configurações:
 

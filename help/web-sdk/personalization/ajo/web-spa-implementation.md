@@ -61,7 +61,7 @@ As visualizações XDM podem ser aproveitadas no Adobe Journey Optimizer para ca
 
 Isso requer a execução das seguintes etapas para concluir uma configuração de desenvolvedor única:
 
-1. Instale o [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) e verifique a página [pré-requisitos do canal da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html).
+1. Instale o [Adobe Experience Platform Web SDK](/help/web-sdk/install/overview.md) e verifique a página [pré-requisitos do canal da Web](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html?lang=pt-BR).
 
 2. Determine todas as exibições XDM no aplicativo de página única que deseja personalizar.
 

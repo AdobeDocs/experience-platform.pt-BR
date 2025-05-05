@@ -30,7 +30,7 @@ Antes de criar uma conexão de origem para trazer seu Campaign v8 para o Experie
 
 >[!IMPORTANT]
 >
->Você deve ter acesso ao Console do cliente do Adobe Campaign v8 para visualizar os dados de log no Campaign. Visite a [documentação do Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) para obter informações sobre como baixar e instalar o console do cliente.
+>Você deve ter acesso ao Console do cliente do Adobe Campaign v8 para visualizar os dados de log no Campaign. Visite a [documentação do Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=pt-BR) para obter informações sobre como baixar e instalar o console do cliente.
 
 Faça logon na instância do Campaign v8 por meio do Console do cliente. Na guia [!DNL Explorer], selecione [!DNL Administration] e [!DNL Configuration]. Em seguida, selecione [!DNL Data schemas] e aplique o filtro `broadLog` para nome ou rótulo. Na lista exibida, selecione o esquema de origem dos logs de entrega do destinatário com o nome `broadLogRcp`.
 

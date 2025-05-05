@@ -17,7 +17,7 @@ Este documento fornece etapas sobre como usar a interface da Web do GitHub para 
 
 >[!TIP]
 >
->Os seguintes documentos do guia de contribuição da Adobe podem ser usados para apoiar ainda mais seu processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Os seguintes documentos do guia de contribuição da Adobe podem ser usados para apoiar ainda mais seu processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=pt-BR)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=pt-BR)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=pt-BR)</li></ul>
 
 ## Configurar o ambiente do GitHub
 

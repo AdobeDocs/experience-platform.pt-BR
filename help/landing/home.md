@@ -30,7 +30,7 @@ Baseado em APIs RESTful, o [!DNL Experience Platform] expõe a funcionalidade co
 
 A documentação do [!DNL Experience Platform] é fornecida em vários formatos para diversos recursos e aplicativos. Para saber mais sobre os tipos de documentação disponíveis, visite a [visão geral da documentação do Experience Platform](documentation/overview.md).
 
-Para começar a saber mais sobre um serviço [!DNL Experience Platform] específico, retorne à [página de aterrissagem da documentação](https://experienceleague.adobe.com/docs/experience-platform.html) e selecione o guia apropriado.
+Para começar a saber mais sobre um serviço [!DNL Experience Platform] específico, retorne à [página de aterrissagem da documentação](https://experienceleague.adobe.com/docs/experience-platform.html?lang=pt-BR) e selecione o guia apropriado.
 
 ### Documentação dos aplicativos compilados em [!DNL Experience Platform]
 
@@ -40,8 +40,8 @@ A Adobe criou vários aplicativos com base no Experience Platform. Você pode en
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=pt-BR)
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=pt-BR)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=pt-BR)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=pt-BR)
 
 O vídeo abaixo descreve os casos de uso de cada aplicativo criado com base no Experience Platform.
 
@@ -64,7 +64,7 @@ Visite a página de aterrissagem dos [tutoriais do Experience Platform](https://
 * [**Glossário**](glossary.md)\
   Revise a terminologia do Adobe Experience Platform.
 
-* [**Notas de versão**](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)\
+* [**Notas de versão**](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)\
   Encontre informações sobre a versão mais recente do [!DNL Experience Platform] e revise versões anteriores.
 
 * [**Guia de solução de problemas**](troubleshooting.md)\

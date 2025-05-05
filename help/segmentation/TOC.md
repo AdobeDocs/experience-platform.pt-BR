@@ -17,7 +17,7 @@ ht-degree: 41%
 
 - [Visão geral do serviço de segmentação](home.md)
 - [Tipos de dados de segmentação](data-types.md)
-- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=pt-BR#segmentation-guardrails)
 - API de segmentação {#api}
    - [Visão geral](api/overview.md)
    - [Introdução](api/getting-started.md)
@@ -80,4 +80,4 @@ ht-degree: 41%
 - [Atualização dos critérios de elegibilidade](./eligibility-criteria-update.md)
 - [Perguntas frequentes](./faq.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)

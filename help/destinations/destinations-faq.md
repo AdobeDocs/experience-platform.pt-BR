@@ -199,7 +199,7 @@ O [!DNL LinkedIn Matched Audiences] oferece suporte à ativação das seguintes 
 +++Resposta
 Não, o [Web SDK](../web-sdk/home.md) não é necessário para ativar públicos para o [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-No entanto, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) for usado em vez do Web SDK, somente a personalização da próxima sessão será suportada.
+No entanto, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=pt-BR) for usado em vez do Web SDK, somente a personalização da próxima sessão será suportada.
 
 Para casos de uso de [personalização de mesma página e próxima página](ui/activate-edge-personalization-destinations.md), você deve usar o [Web SDK](../web-sdk/home.md) ou a [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Consulte a documentação sobre [ativação de públicos-alvo para destinos de borda](ui/activate-edge-personalization-destinations.md) para obter mais detalhes de implementação.
 +++
@@ -229,7 +229,7 @@ As definições de público-alvo são propagadas para o [Edge Network](../web-sd
 ### Onde posso ver os atributos ativados no Adobe Target?
 
 +++Resposta
-Os atributos estarão disponíveis para uso no Target nas ofertas [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
+Os atributos estarão disponíveis para uso no Target nas ofertas [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=pt-BR) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=pt-BR).
 +++
 
 ### Posso criar um destino sem um fluxo de dados e, em seguida, adicionar um fluxo de dados ao mesmo destino em um ponto posterior?

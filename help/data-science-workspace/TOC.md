@@ -65,4 +65,4 @@ ht-degree: 33%
    * [Programar treinamento automatizado e pontuação em um serviço (UI)](models-recipes/schedule-models-ui.md)
 * [Manual de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)

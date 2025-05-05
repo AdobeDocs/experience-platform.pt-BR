@@ -31,5 +31,5 @@ ht-degree: 29%
    * [Visão geral dos cartões de modelo](./model-cards/overview.md)
    * Cartões-modelo de IA {#ai-model-cards}
       * [Pontuação de propensão do Customer AI](./model-cards/ai-model-cards/customer-ai.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
 

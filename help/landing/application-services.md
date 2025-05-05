@@ -15,10 +15,10 @@ ht-degree: 1%
 o Adobe criou vários aplicativos sobre o Experience Platform. Você pode encontrar a documentação desses aplicativos usando os links abaixo:
 
 * [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=pt-BR)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=pt-BR)
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=pt-BR)
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
-* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=pt-BR)
 
 O vídeo abaixo descreve os casos de uso de cada aplicativo criado na parte superior do Experience Platform.
 

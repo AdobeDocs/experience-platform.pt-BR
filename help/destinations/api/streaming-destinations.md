@@ -563,7 +563,7 @@ A resposta retornada deve incluir no parâmetro `transformations` os públicos-a
 
 >[!IMPORTANT]
 >
-> Além dos atributos de perfil e dos públicos-alvo na etapa [Ativar dados para o novo destino](#activate-data), os dados exportados no [!DNL AWS Kinesis] e no [!DNL Azure Event Hubs] também incluirão informações sobre o mapa de identidade. Representa as identidades dos perfis exportados (por exemplo, [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID de celular, Google ID, endereço de email, etc.). Veja um exemplo abaixo.
+> Além dos atributos de perfil e dos públicos-alvo na etapa [Ativar dados para o novo destino](#activate-data), os dados exportados no [!DNL AWS Kinesis] e no [!DNL Azure Event Hubs] também incluirão informações sobre o mapa de identidade. Representa as identidades dos perfis exportados (por exemplo, [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=pt-BR), ID de celular, Google ID, endereço de email, etc.). Veja um exemplo abaixo.
 
 ```json
 {

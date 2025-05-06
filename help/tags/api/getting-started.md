@@ -2,7 +2,7 @@
 title: Autenticar e acessar a API do Reator
 description: Saiba como começar a usar a API do Reactor, incluindo etapas para gerar as credenciais de acesso necessárias.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 31e52dce23c558aaba822fe27d2e58ed6a7ce18d
 workflow-type: tm+mt
 source-wordcount: '912'
 ht-degree: 47%
@@ -16,6 +16,8 @@ Para usar a [API do Reator](https://developer.adobe.com/experience-platform-apis
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
+* `Accept: application/vnd.api+json;revision=1`
+* `Content-Type: application/vnd.api+json`
 
 Este guia mostra como usar o Adobe Developer Console a fim de coletar os valores de cada um desses cabeçalhos para que você possa começar a fazer chamadas à API do reator.
 
@@ -51,7 +53,7 @@ Em seguida, selecione o tipo de autenticação para gerar tokens de acesso e ace
 
 >[!IMPORTANT]
 >
->Selecione o método **[!UICONTROL OAuth Server-to-Server]**, pois esse será o único método com suporte no futuro. O método **[!UICONTROL Conta de Serviço (JWT)]** está obsoleto. Embora as integrações que usam o método de autenticação JWT continuem a funcionar até 1º de janeiro de 2025, a Adobe recomenda que você migre as integrações existentes para o novo método servidor para servidor OAuth antes dessa data. Obtenha mais informações na seção [!BADGE Obsoleto]{type=negative}[Gere um JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) no tutorial de autenticação da API do Experience Platform.
+>Selecione o método **[!UICONTROL OAuth Server-to-Server]**, pois esse será o único método com suporte no futuro. O método **[!UICONTROL Conta de Serviço (JWT)]** está obsoleto. Embora as integrações que usam o método de autenticação JWT continuem a funcionar até 1º de janeiro de 2025, a Adobe recomenda que você migre as integrações existentes para o novo método servidor para servidor OAuth antes dessa data. Obtenha mais informações na seção [!BADGE Obsoleto]{type=negative} [Gerar um JSON Web Token (JWT)](/help/landing/api-authentication.md#jwt) no tutorial de autenticação de API do Experience Platform.
 
 Clique em **Avançar** para continuar.
 

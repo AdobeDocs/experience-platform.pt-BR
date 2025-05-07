@@ -6,9 +6,9 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 3bd3ef14cd0bd2c079c1c881a70865b067f28341
+source-git-commit: 28eb48ec9fb7c9c5a5927c8582960cbd99199613
 workflow-type: tm+mt
-source-wordcount: '779'
+source-wordcount: '780'
 ht-degree: 44%
 
 ---
@@ -247,6 +247,8 @@ ht-degree: 44%
       * [Hub de decisão do cliente Pega](https://exchange.adobe.com/apps/ec/107597)
       * [!DNL Pinterest] {#pinterest}
          * [Visão geral](./extensions/server/pinterest/overview.md)
+      * [!DNL Reddit] {#reddit}
+         * [Visão geral](./extensions/server/reddit/overview.md)
       * [!DNL Snapchat] {#snap}
          * [Visão geral](./extensions/server/snap/overview.md)
       * [!DNL Snowflake] {#snowflake}
@@ -333,5 +335,5 @@ ht-degree: 44%
 * [Perguntas frequentes](./faq.md)
 * [Atualizações de terminologia](./term-updates.md)
 * [Substituição do suporte para o Internet Explorer 10 e 11](./ie-deprecation.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
 

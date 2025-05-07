@@ -15,7 +15,7 @@ O Reddit é uma plataforma de mídia social com uma base de usuários diversific
 
 Use a [[!DNL Reddit] Extensão da API de conversões](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API) para enviar os eventos de interação do usuário capturados no Adobe Experience Platform Edge Network para [!DNL Reddit Ads]. Use essa extensão para ajudar sua marca a alcançar um público de mais de 379 milhões de usuários ativos semanalmente, e entender melhor o comportamento do usuário e executar anúncios direcionados.
 
-Leia este guia para saber como instalar, configurar e usar a extensão de API de Conversões do [!DNL Reddit] nas [regras](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) do encaminhamento de eventos.
+Leia este guia para saber como instalar, configurar e usar a extensão de API de Conversões do [!DNL Reddit] nas [regras](https://experienceleague.adobe.com/pt-br/docs/experience-platform/tags/ui/rules) do encaminhamento de eventos.
 
 ## Principais benefícios {#benefits}
 
@@ -42,7 +42,7 @@ Para conectar o Experience Platform a [!DNL Reddit], as seguintes entradas são 
 
 Siga estas etapas para instalar e configurar a extensão de API de Conversões do [!DNL Reddit]:
 
-1. Na interface da Coleção de dados do Experience Platform, selecione [!UICONTROL Extensões] na navegação à esquerda para acessar o catálogo [!UICONTROL Extensões]. Em seguida, [Crie uma nova propriedade de encaminhamento de eventos](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties) ou selecione uma propriedade existente.
+1. Na interface da Coleção de dados do Experience Platform, selecione [!UICONTROL Extensões] na navegação à esquerda para acessar o catálogo [!UICONTROL Extensões]. Em seguida, [Crie uma nova propriedade de encaminhamento de eventos](https://experienceleague.adobe.com/pt-br/docs/experience-platform/tags/event-forwarding/overview#properties) ou selecione uma propriedade existente.
 2. Navegue até **[!UICONTROL Extensões]** no painel de navegação esquerdo. Selecione **[!UICONTROL Catálogo]** e a extensão **[!DNL Reddit]**.
    ![O catálogo de Extensões do Adobe Experience Platform com a extensão Reddit está realçado.](../../../images/extensions/server/reddit/reddit-extension.png)
 3. Forneça os seguintes detalhes de configuração:
@@ -55,7 +55,7 @@ Siga estas etapas para instalar e configurar a extensão de API de Conversões d
 
 Após configurar seus elementos de dados, crie regras de encaminhamento de eventos para determinar quando e como os eventos são enviados para [!DNL Reddit Ads].
 
-1. Navegue até **Regras** na propriedade de encaminhamento de eventos e crie uma nova [regra](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
+1. Navegue até **Regras** na propriedade de encaminhamento de eventos e crie uma nova [regra](https://experienceleague.adobe.com/pt-br/docs/experience-platform/tags/ui/rules).
 2. Em **Ações**, adicione uma nova ação e defina a extensão como **[!DNL Reddit CAPI]**.
 3. Defina o **Tipo de Ação** como **Enviar Evento**.
    ![Interface de configuração da regra de encaminhamento de eventos para a extensão de API de Conversões Reddit, com os campos de extensão e tipo de ação realçados.](../../../images/extensions/server/reddit/reddit-rule.png)

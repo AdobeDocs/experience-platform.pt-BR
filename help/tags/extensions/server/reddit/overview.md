@@ -48,6 +48,7 @@ Siga estas etapas para instalar e configurar a extensão de API de Conversões d
 3. Forneça os seguintes detalhes de configuração:
    - **ID do Pixel**: insira seu [!DNL Reddit Ads] ID do Pixel.
    - **Token de acesso de conversão**: insira o token gerado na sua conta [!DNL Reddit Ads] e selecione **[!UICONTROL Salvar]** quando terminar.
+
      ![Detalhes de configuração da extensão de API de Conversões de Reddit, incluindo campos para ID de Pixel e Token de Acesso de Conversão.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## Configurar uma regra de encaminhamento de eventos {#config-rule}

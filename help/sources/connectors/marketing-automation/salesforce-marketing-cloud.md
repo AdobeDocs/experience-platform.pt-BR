@@ -4,9 +4,9 @@ title: Visão geral do Salesforce Marketing Cloud Source
 description: Saiba como conectar o Salesforce Marketing Cloud ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-04-29T00:00:00Z
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: ce96dbc64845fddb40ebee709828c56d51a6c6ba
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,13 @@ Para obter mais informações sobre escopos, incluindo uma lista de suas permiss
 >
 >No momento, a assimilação de objetos personalizados não tem suporte da integração de origem [!DNL Salesforce Marketing Cloud].
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUIR NA LISTA DE PERMISSÕES endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da sua região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
+
+>[!WARNING]
+>
+>Incluir na lista de permissões Se você não adicionar os endereços IP necessários ao arquivo, a conta do [!DNL Salesforce Marketing Cloud] não será conectada ao Experience Platform.
 
 ## Conectar o [!DNL Salesforce Marketing Cloud] ao Experience Platform usando APIs
 

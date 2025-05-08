@@ -2,9 +2,9 @@
 title: Guia de implementação para regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
+source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
 workflow-type: tm+mt
-source-wordcount: '1886'
+source-wordcount: '1958'
 ht-degree: 6%
 
 ---
@@ -160,6 +160,8 @@ Na simulação do gráfico, essa assimilação pode ser semelhante a:
 ![A interface do usuário de simulação de gráfico com um gráfico de exemplo renderizado.](../images/implementation/example-graph.png)
 
 >[!TAB Eventos autenticados sem identificadores de pessoa]
+
+Neste exemplo, você pode supor que o evento a seguir foi enviado para o Experience Platform enquanto John (o usuário final) estava navegando em seu site enquanto estava autenticado. No entanto, apesar de estar autenticado, o Experience Platform não consegue identificar John devido à falta de identificadores de pessoas no evento. Portanto, esse evento é interpretado como um usuário anônimo que navega no site Adobe Business, em vez de reconhecê-lo como uma atividade online associada especificamente a John.
 
 ```json
 {

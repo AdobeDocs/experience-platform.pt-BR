@@ -2,10 +2,10 @@
 title: Notas de versão da extensão principal
 description: As notas de versão mais recentes da extensão principal no Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
+source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
 workflow-type: tm+mt
-source-wordcount: '1651'
-ht-degree: 61%
+source-wordcount: '1693'
+ht-degree: 59%
 
 ---
 
@@ -14,6 +14,14 @@ ht-degree: 61%
 >[!NOTE]
 >
 >O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 8 de maio de 2025
+
+v3.4.3
+
+* Corrige um problema em que **Elementos de Dados** > **Ferramentas de Javascript** > **Substituição Simples** mostra uma caixa de seleção para **Substituir Tudo**, mas causa um erro ao tentar salvar a Regra com a caixa de seleção ativada.
+* Atualiza @adobe/react-spectrum para v3.41.0.
+* Atualiza @adobe/reator-sandbox para v13.2.1.
 
 ## 23 de outubro de 2024
 
@@ -70,7 +78,7 @@ As seguintes alterações foram introduzidas no elemento de dados Valor condicio
 * Os valores numéricos são expostos como números no objeto de configurações.
 * O valor condicional não é mais necessário para que possa se comportar da mesma maneira que o valor de fallback.
 
-## sábado, 17 de setembro de 2021
+## 17 de setembro de 2021
 
 v3.1.1
 
@@ -94,7 +102,7 @@ v3.0.0
 
 * PDCL-6153: adiciona suporte para obter de forma confiável o URL totalmente qualificado para ações de código personalizado em cache.
 
-A v3.0.0 da Extensão principal é combinada com alterações no [v27.2.0 do tempo de execução da Web do Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite que os usuários carreguem sua biblioteca entre muitas regiões de hospedagem gerenciadas por Adobe se a empresa do usuário oferecer suporte à CDN Premium.
+A v3.0.0 da Extensão principal é combinada com alterações no [v27.2.0 do tempo de execução da Web do Turbine](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), que permite que os usuários carreguem sua biblioteca entre muitas regiões de hospedagem gerenciadas pela Adobe se a empresa do usuário oferecer suporte à CDN Premium.
 
 Essa atualização é opcional e compatível com versões anteriores para usuários sem a CDN Premium e obrigatória para clientes que têm a CDN Premium ativada em suas empresas.
 
@@ -123,7 +131,7 @@ v2.0.4
 
 * Adição de Suporte ao elemento de dados para vários campos - O suporte ao elemento de dados foi adicionado aos seguintes eventos: &quot;Tempo na página&quot;, &quot;Insere Viewport&quot;, &quot;Passe o mouse&quot; e &quot;Tempo de mídia reproduzido&quot;. Além das seguintes condições: &quot;Tempo no site&quot; e &quot;Comparação de valores&quot;
 * Adiciona suporte para comportamento padrão para ctrl/cmd + clique e clique do meio do mouse ao usar o atraso de link
-* **Atraso de link marcado no evento de clique como &quot;não é mais suportado&quot;.** — mais informações podem ser encontradas no [Blog de coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=pt) da Adobe Experience Platform
+* **Atraso de link marcado no evento de clique como &quot;não é mais suportado&quot;.** — mais informações podem ser encontradas no [Blog de coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) da Adobe Experience Platform
 
 ## 6 de janeiro de 2021
 
@@ -135,13 +143,13 @@ v1.9.0
 
 v1.8.4
 
-* Correção de um bug em que um usuário não conseguia limpar ou não definir o nonce CSP.
+* Correção de um erro em que um usuário não conseguia limpar ou não definir o nonce CSP.
 
 ## 28 de julho de 2020
 
 v1.8.3
 
-* Correção de um bug em que o nonce do CSP era lido somente uma vez na inicialização da extensão em vez de ser reproduzido durante a invocação da ação de código personalizado.
+* Correção de um erro em que o nonce do CSP era lido somente uma vez na inicialização da extensão em vez de ser reproduzido durante a invocação da ação de código personalizado.
 
 ## 13 de julho de 2020
 
@@ -221,7 +229,7 @@ v1.4.2
 ## 24 de maio de 2018
 
 * **Recurso** - Adicionada uma condição Value Comparison, essa comparação compara dois valores usando qualquer um dos vários sinais de operação disponíveis. Isso substitui a funcionalidade de várias condições mais antigas que eram muito específicas.
-* **Recurso** - Adição de uma condição Max Frequency; essa condição permite especificar o número de vezes que a condição deve retornar “true” dentro de um período ou ocorrência de evento. Exemplos: 5 vezes por dia, 2 vezes por visita.
+* **Recurso** - Adição de uma condição Frequência máx.; essa condição permite especificar o número de vezes que a condição deve retornar “true” dentro de um período ou ocorrência de evento. Exemplos: 5 vezes por dia, 2 vezes por visita.
 
 ## 11 de abril de 2018
 

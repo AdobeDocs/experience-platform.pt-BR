@@ -2,9 +2,9 @@
 title: Gerenciar a retenção do conjunto de dados do evento de experiência no Data Lake usando TTL
 description: Saiba como avaliar, definir e gerenciar a Retenção de conjunto de dados de evento de experiência no data lake usando configurações de Tempo de vida (TTL) com APIs do Adobe Experience Platform. Este guia explica como a expiração em nível de linha de TTL suporta políticas de retenção de dados, otimiza a eficiência do armazenamento e garante um gerenciamento eficaz do ciclo de vida dos dados. Ela também fornece casos de uso e práticas recomendadas para ajudar você a aplicar o TTL de maneira eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 06b58d714047cb69f237469ecd548bb824e565ab
+source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
 workflow-type: tm+mt
-source-wordcount: '2456'
+source-wordcount: '2452'
 ht-degree: 0%
 
 ---
@@ -301,12 +301,12 @@ Estas perguntas frequentes abordam questões práticas sobre tarefas de retenç�
 ### A quais tipos de conjuntos de dados posso aplicar regras de política de retenção?
 
 +++Resposta
-Você pode aplicar políticas de retenção baseadas em TTL a qualquer conjunto de dados que use um esquema de série temporal. Isso inclui conjuntos de dados com base na classe XDM ExperienceEvent padrão, bem como esquemas personalizados que estendem a classe XDM Time Series.
+Você pode aplicar políticas de retenção baseadas em TTL a qualquer conjunto de dados que use comportamento de série temporal. Isso inclui conjuntos de dados com base na classe XDM ExperienceEvent padrão, bem como esquemas personalizados projetados para capturar dados de séries de tempo.
 
 A expiração em nível de linha requer as seguintes condições técnicas:
 
-- O esquema deve estender a classe base de Série de Tempo XDM.
-- O esquema deve incluir um campo de carimbo de data e hora, usado para avaliar a expiração.
+- O esquema deve ser projetado para capturar dados de série temporal.
+- O esquema deve incluir um campo de carimbo de data e hora usado para avaliar a expiração.
 - O conjunto de dados deve armazenar dados no nível do evento, normalmente usando ou estendendo a classe XDM ExperienceEvent.
 - O conjunto de dados deve ser registrado no Serviço de Catálogo, já que as configurações de TTL são aplicadas via `extensions.adobe_lakeHouse.rowExpiration`.
 - Os valores TTL devem usar o formato duration ISO-8601 (por exemplo, `P30D`, `P6M`, `P1Y`).

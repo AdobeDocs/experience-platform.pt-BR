@@ -44,7 +44,7 @@ Para obter mais informações sobre como a imposição automática funciona no E
 
 [!DNL Experience Platform] pode compartilhar segmentos com a Adobe Audience Manager. Quaisquer Controles de Exportação de Dados que tenham sido aplicados a segmentos do Audience Manager são traduzidos em rótulos equivalentes e ações de marketing reconhecidas pela Governança de Dados do [!DNL Experience Platform].
 
-Para obter uma referência sobre como os Controles de Exportação de Dados específicos são mapeados para rótulos de uso de dados no [!DNL Experience Platform], consulte a [documentação do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Para obter uma referência sobre como os Controles de Exportação de Dados específicos são mapeados para rótulos de uso de dados no [!DNL Experience Platform], consulte a [documentação do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=pt-BR#aam-data-export-control-in-aep).
 
 ## Gerenciamento dos rótulos de uso de dados na [!DNL Experience Platform] {#manage-labels}
 

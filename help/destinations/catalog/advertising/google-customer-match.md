@@ -3,9 +3,9 @@ keywords: correspondência do cliente do google;correspondência do cliente do G
 title: Conexão de Correspondência de cliente do Google
 description: O Google Customer Match permite usar seus dados online e offline para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping e Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
 workflow-type: tm+mt
-source-wordcount: '2046'
+source-wordcount: '2360'
 ht-degree: 1%
 
 ---
@@ -58,11 +58,15 @@ Alguns destinos no Experience Platform têm determinadas regras e obrigações p
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Selecione essa identidade de destino quando a identidade de origem for um namespace GAID. |
-| IDFA | Apple ID para anunciantes | Selecione essa identidade de destino quando sua identidade de origem for um namespace IDFA. |
-| phone_sha256_e.164 | Números de telefone no formato E164, com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
-| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
-| user_id | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
+| `GAID` | GOOGLE ADVERTISING ID | Selecione essa identidade de destino quando a identidade de origem for um namespace GAID. |
+| `IDFA` | Apple ID para anunciantes | Selecione essa identidade de destino quando sua identidade de origem for um namespace IDFA. |
+| `phone_sha256_e.164` | Números de telefone no formato E164, com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
+| `email_lc_sha256` | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
+| `user_id` | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
+| `address_info_first_name` | Nome do usuário | Esta identidade de destino deve ser usada com `address_info_last_name`, `address_info_country_code` e `address_info_postal_code` quando você quiser enviar dados de endereço de correspondência para seu destino. <br><br>Para garantir que o Google corresponda ao endereço, mapeie todos os quatro campos de endereço (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e verifique se nenhum desses campos tem dados ausentes nos perfis exportados. <br> Se algum campo não estiver mapeado ou contiver dados ausentes, o Google não corresponderá ao endereço. |
+| `address_info_last_name` | Sobrenome do usuário | Esta identidade de destino deve ser usada com `address_info_first_name`, `address_info_country_code` e `address_info_postal_code` quando você quiser enviar dados de endereço de correspondência para seu destino. <br><br>Para garantir que o Google corresponda ao endereço, mapeie todos os quatro campos de endereço (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e verifique se nenhum desses campos tem dados ausentes nos perfis exportados. <br> Se algum campo não estiver mapeado ou contiver dados ausentes, o Google não corresponderá ao endereço. |
+| `address_info_country_code` | Código do país do endereço do usuário | Esta identidade de destino deve ser usada com `address_info_first_name`, `address_info_last_name` e `address_info_postal_code` quando você quiser enviar dados de endereço de correspondência para seu destino. <br><br>Para garantir que o Google corresponda ao endereço, mapeie todos os quatro campos de endereço (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e verifique se nenhum desses campos tem dados ausentes nos perfis exportados. <br> Se algum campo não estiver mapeado ou contiver dados ausentes, o Google não corresponderá ao endereço. <br><br>Formato aceito: códigos de país de duas letras em minúsculas no formato [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
+| `address_info_postal_code` | CEP do endereço do usuário | Esta identidade de destino deve ser usada com `address_info_first_name`, `address_info_last_name` e `address_info_country_code` quando você quiser enviar dados de endereço de correspondência para seu destino. <br><br>Para garantir que o Google corresponda ao endereço, mapeie todos os quatro campos de endereço (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`) e verifique se nenhum desses campos tem dados ausentes nos perfis exportados. <br> Se algum campo não estiver mapeado ou contiver dados ausentes, o Google não corresponderá ao endereço. |
 
 {style="table-layout:auto"}
 
@@ -152,7 +156,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 Assista ao vídeo abaixo para obter uma explicação dos benefícios e como ativar os dados para o Google Customer Match.
 
->[!VIDEO](https://video.tv.adobe.com/v/326489?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Conectar ao destino {#connect}
 
@@ -227,6 +231,10 @@ Os dados de origem do atributo não são automaticamente transformados em hash. 
 ## Monitorar destino {#monitor-destination}
 
 Depois de se conectar ao destino e estabelecer um fluxo de dados de destino, você pode usar a [funcionalidade de monitoramento](/help/dataflows/ui/monitor-destinations.md) do Real-Time CDP para obter informações abrangentes sobre os registros de perfil ativados para o destino em cada execução de fluxo de dados.
+
+>[!IMPORTANT]
+>
+>Quando você mapeia as quatro identidades de destino relacionadas ao endereço (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` e `address_info_postal_code`), elas são contadas como identidades individuais separadas para cada perfil na página de monitoramento de fluxo de dados.
 
 ## Verificar se a ativação do público-alvo foi bem-sucedida {#verify-activation}
 

@@ -2,9 +2,9 @@
 title: Notas de versão de abril de 2025 da Adobe Experience Platform
 description: As notas de versão de abril de 2025 da Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: b0ed9e38dbc3b4a4f4f7cde5751c2edd35355b59
+source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
 workflow-type: tm+mt
-source-wordcount: '2197'
+source-wordcount: '2192'
 ht-degree: 21%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 21%
 >Consulte a documentação a seguir para obter as notas de versão de outros aplicativos da Adobe Experience Platform:
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest?lang=pt-BR)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest?lang=pt-BR)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 29 de abril de 2025**
 
@@ -41,7 +41,7 @@ O Experience League é uma plataforma de aprendizado abrangente, projetada para 
 
 | Recurso | Descrição |
 | --- | --- |
-| Página inicial personalizada | Acesse e personalize sua página inicial personalizada no [Experience League](https://experienceleague.adobe.com/pt-br/home#). Entre com suas credenciais do Adobe e selecione **[!UICONTROL Experience League]** no menu superior para começar a otimizar sua experiência de aprendizado: <ul><li>**Marcadores**: use o recurso [!UICONTROL Marcadores] para salvar e coletar seus recursos favoritos em um único local. Você pode salvar uma variedade de conteúdo, incluindo listas de reprodução, artigos e tutoriais.</li><li>**Personalize seu aprendizado**: melhore sua experiência de aprendizado atualizando seu perfil do Experience League com as funções, os setores, os produtos e o nível de experiência que melhor atendem às suas necessidades.</li><li>**Recomendações**: exibir conteúdo de aprendizado recomendado com base em sua atividade recente.</li><li>**Visualizado recentemente**: use a seção [!UICONTROL Visualizado recentemente] para voltar rapidamente para conteúdo visualizado recentemente, como documentação e vídeos.</li><li>**Recursos de aprendizado**: use o painel [!UICONTROL Todos os recursos de aprendizado] para navegar até tutoriais, documentação, comunidade, eventos e certificações.</li><li>**Novidades**: veja a seção [!UICONTROL Novidades] para obter um fluxo do conteúdo mais recente no Experience League.</li><li>**Assista a eventos anteriores sob demanda**: assista a fluxos ao vivo previamente gravados em holofotes de produtos, casos de uso e tutoriais com a [!UICONTROL seção Assista a eventos anteriores sob demanda].</li></ul><br> ![Página inicial personalizada no Experience League.](../2025/assets/april/personalized-home-page.png "Página inicial personalizada no Experience League."){width="250" align="center" zoomable="yes"} |
+| Página inicial personalizada | Acesse e personalize sua página inicial personalizada no [Experience League](https://experienceleague.adobe.com/en/home#). Entre com suas credenciais do Adobe e selecione **[!UICONTROL Experience League]** no menu superior para começar a otimizar sua experiência de aprendizado: <ul><li>**Marcadores**: use o recurso [!UICONTROL Marcadores] para salvar e coletar seus recursos favoritos em um único local. Você pode salvar uma variedade de conteúdo, incluindo listas de reprodução, artigos e tutoriais.</li><li>**Personalize seu aprendizado**: melhore sua experiência de aprendizado atualizando seu perfil do Experience League com as funções, os setores, os produtos e o nível de experiência que melhor atendem às suas necessidades.</li><li>**Recomendações**: exibir conteúdo de aprendizado recomendado com base em sua atividade recente.</li><li>**Visualizado recentemente**: use a seção [!UICONTROL Visualizado recentemente] para voltar rapidamente para conteúdo visualizado recentemente, como documentação e vídeos.</li><li>**Recursos de aprendizado**: use o painel [!UICONTROL Todos os recursos de aprendizado] para navegar até tutoriais, documentação, comunidade, eventos e certificações.</li><li>**Novidades**: veja a seção [!UICONTROL Novidades] para obter um fluxo do conteúdo mais recente no Experience League.</li><li>**Assista a eventos anteriores sob demanda**: assista a fluxos ao vivo previamente gravados em holofotes de produtos, casos de uso e tutoriais com a [!UICONTROL seção Assista a eventos anteriores sob demanda].</li></ul><br> ![Página inicial personalizada no Experience League.](../2025/assets/april/personalized-home-page.png "Página inicial personalizada no Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Use o Serviço de identidade da Adobe Experience Platform para criar uma visão 
 
 | Recurso | Descrição |
 | --- | --- |
-| [!BADGE Disponibilidade Limitada]{type=Informative} [!DNL Identity Graph Linking Rules] | As Regras de vinculação do gráfico de identidade agora estão em Disponibilidade limitada e podem ser acessadas por todos os clientes em sandboxes de desenvolvimento. <ul><li>**Requisitos de ativação**: o recurso permanecerá inativo até que você configure e salve o [!DNL Identity Settings]. Sem essa configuração, o sistema continuará funcionando normalmente, sem alterações no comportamento.</li><li>**Observações importantes**: durante esta fase de Disponibilidade limitada, a segmentação do Edge pode produzir resultados inesperados de associação de segmento. No entanto, o streaming e a segmentação em lote funcionarão conforme esperado.</li><li>**Próximas etapas**: para obter informações sobre como habilitar este recurso em sandboxes de produção, contate a equipe de conta da Adobe.</li></ul> |
+| [!BADGE Disponibilidade Limitada]{type=Informative} [!DNL Identity Graph Linking Rules] | As Regras de vinculação do gráfico de identidade agora podem ser acessadas por todos os clientes em sandboxes de desenvolvimento. <ul><li>**Requisitos de ativação**: o recurso permanecerá inativo até que você configure e salve o [!DNL Identity Settings]. Sem essa configuração, o sistema continuará funcionando normalmente, sem alterações no comportamento.</li><li>**Observações importantes**: durante esta fase de Disponibilidade limitada, a segmentação do Edge pode produzir resultados inesperados de associação de segmento. No entanto, o streaming e a segmentação em lote funcionarão conforme esperado.</li><li>**Próximas etapas**: para obter informações sobre como habilitar este recurso em sandboxes de produção, contate a equipe de conta da Adobe.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -158,7 +158,7 @@ Para obter mais informações sobre sandboxes, leia a [visão geral das sandboxe
 
 ## Origens {#sources}
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 Use fontes na Experience Platform para assimilar dados de um aplicativo da Adobe ou de uma fonte de dados de terceiros.
 

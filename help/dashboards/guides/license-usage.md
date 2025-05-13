@@ -6,7 +6,7 @@ type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
 workflow-type: tm+mt
-source-wordcount: '3442'
+source-wordcount: '3455'
 ht-degree: 38%
 
 ---
@@ -14,7 +14,10 @@ ht-degree: 38%
 # Painel de uso da licença {#license-usage-dashboard}
 
 >[!CONTEXTUALHELP]
->
+>id="testy-mctestface"
+>title="Caixa de diálogo de teste que não deve estar visível"
+>abstract="O objeto {name} está sendo exibido em {date}."
+
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_core"
 >title="Tabela de produtos principais"
@@ -213,7 +216,7 @@ Você pode exportar dados históricos de utilização da métrica selecionada e 
 
 A guia **[!UICONTROL Produtos]** apresenta dados de uso de licença agrupados por produtos comprados e quaisquer complementos associados. A guia [!UICONTROL Produtos] contém duas tabelas:
 
-- **[!UICONTROL Tabela de &#x200B;] de produtos principais**: esta tabela lista os principais produtos da Adobe Experience Platform licenciados pela sua organização. Cada produto lista sua métrica principal, o rastreamento de uso e o uso previsto.
+- **[!UICONTROL Tabela de ] de produtos principais**: esta tabela lista os principais produtos da Adobe Experience Platform licenciados pela sua organização. Cada produto lista sua métrica principal, o rastreamento de uso e o uso previsto.
 - **[!UICONTROL Tabela de complementos]**: lista itens suplementares cujos valores de licença contribuem para as métricas de produtos principais. Os complementos não têm métricas separadas, mas aprimoram o rastreamento de uso dos principais produtos aos quais estão associados.
 
 | Nome da coluna | Descrição |
@@ -320,11 +323,11 @@ A disponibilidade dessas métricas e a definição específica de cada uma delas
 
 | Licença | Descrição do produto |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:PADRÃO OD</li><li>ADOBE EXPERIENCE PLATFORM:MUITO PESADO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/br/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Serviços de Aplicativos e Serviços Inteligentes](https://helpx.adobe.com/br/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD PRFL PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD PRFL PARA 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) |
-| <ul><li>AEP:ATIVAÇÃO OD</li><li>AEP:OD ATIVATION PRFL PARA 10M</li><li>AEP:OD ATIVATION PRFL ATÉ 50 M</li></ul> | [Ativação do Adobe Experience Platform](https://helpx.adobe.com/br/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>AEP:INTELIGÊNCIA OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/br/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:PADRÃO OD</li><li>ADOBE EXPERIENCE PLATFORM:MUITO PESADO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Serviços de Aplicativos e Serviços Inteligentes](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD PRFL PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD PRFL PARA 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) |
+| <ul><li>AEP:ATIVAÇÃO OD</li><li>AEP:OD ATIVATION PRFL PARA 10M</li><li>AEP:OD ATIVATION PRFL ATÉ 50 M</li></ul> | [Ativação do Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:INTELIGÊNCIA OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:ORQUESTRAÇÃO DE PERFIL OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/br/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]

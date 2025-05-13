@@ -2,7 +2,7 @@
 audience: user
 user-guide-title: Ajuda da Ingestão de dados da Adobe Experience Platform
 breadcrumb-title: Guia da Ingestão de dados
-user-guide-description: Traga seus dados para a Experience Platform por meio de uma assimilação em lote ou por transmissão.
+user-guide-description: Traga seus dados para a Experience Platform por meio de uma ingestão em lote ou por transmissão.
 feature: Data Ingestion
 role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
@@ -16,7 +16,7 @@ ht-degree: 21%
 # Assimilação de dados Adobe Experience Platform {#ingestion}
 
 - [Visão geral da assimilação de dados](home.md)
-- Assimilação de transmissão {#streaming}
+- Assimilação por transmissão {#streaming}
    - [Visão geral](streaming-ingestion/overview.md)
    - [Conector Kafka](streaming-ingestion/kafka.md)
    - [Solução de problemas](streaming-ingestion/troubleshooting.md)
@@ -38,7 +38,7 @@ ht-degree: 21%
    - [Transmissão de dados de registro](tutorials/streaming-record-data.md)
    - [Transmissão de dados de série temporal](tutorials/streaming-time-series-data.md)
    - [Transmissão de várias mensagens](tutorials/streaming-multiple-messages.md)
-- Qualidade de dados e monitoramento{#quality}
+- Qualidade e monitoramento dos dados{#quality}
    - [Visão geral](quality/overview.md)
    - [Monitorar assimilação de dados](quality/monitor-data-ingestion.md)
    - [Recuperar diagnóstico de erro](quality/error-diagnostics.md)
@@ -48,4 +48,4 @@ ht-degree: 21%
 - [Conectores do Source](source-connectors.md)
 - [Referência da API de assimilação em lote](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [Referência da API de assimilação de fluxo](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

@@ -216,7 +216,7 @@ Você pode exportar dados históricos de utilização da métrica selecionada e 
 
 A guia **[!UICONTROL Produtos]** apresenta dados de uso de licença agrupados por produtos comprados e quaisquer complementos associados. A guia [!UICONTROL Produtos] contém duas tabelas:
 
-- **[!UICONTROL Tabela de ] de produtos principais**: esta tabela lista os principais produtos da Adobe Experience Platform licenciados pela sua organização. Cada produto lista sua métrica principal, o rastreamento de uso e o uso previsto.
+- **[!UICONTROL Tabela de &#x200B;] de produtos principais**: esta tabela lista os principais produtos da Adobe Experience Platform licenciados pela sua organização. Cada produto lista sua métrica principal, o rastreamento de uso e o uso previsto.
 - **[!UICONTROL Tabela de complementos]**: lista itens suplementares cujos valores de licença contribuem para as métricas de produtos principais. Os complementos não têm métricas separadas, mas aprimoram o rastreamento de uso dos principais produtos aos quais estão associados.
 
 | Nome da coluna | Descrição |

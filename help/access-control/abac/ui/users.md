@@ -15,7 +15,7 @@ ht-degree: 11%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_users_about"
 >title="O que são usuários?"
->abstract="Usuários são indivíduos que têm acesso à Experience Platform. O acesso de um usuário individual aos recursos de uma organização é gerenciado por meio de funções."
+>abstract="Usuários são pessoas que têm acesso à Experience Platform. O acesso de um usuário individual aos recursos de uma organização é gerenciado por meio de funções."
 >additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gerenciar funções"
 
 Se quiser exibir os detalhes e as funções dos usuários aos quais eles estão atribuídos, selecione a guia **[!UICONTROL Usuários]**.
@@ -42,7 +42,7 @@ A transição para as permissões do Adobe Experience Platform tem etapas adicio
 
 O vídeo a seguir é destinado a fornecer suporte à sua compreensão das credenciais de desenvolvedor e de API do.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446403/?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 
 ## Próximas etapas
 

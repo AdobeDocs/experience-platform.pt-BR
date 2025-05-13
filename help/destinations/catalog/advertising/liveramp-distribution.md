@@ -187,7 +187,7 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 >[!CONTEXTUALHELP]
 >id="platform_destinations_liveramp_distribution_disney_email"
 >title="Seu endereço de email"
->abstract="Insira um endereço de email vinculado a um indivíduo. Esse endereço de email serve como uma assinatura do contrato de termos de dados do anunciante. Esse endereço de email também será usado para entrar em contato com você, se necessário."
+>abstract="Insira um endereço de email vinculado a uma pessoa. Esse endereço de email serve como uma assinatura do contrato de termos de dados do anunciante. Esse endereço de email também será usado para entrar em contato com você, se necessário."
 
 Para configurar detalhes para o destino, preencha os campos abaixo.
 

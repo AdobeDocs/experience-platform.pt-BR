@@ -17,7 +17,7 @@ A assimilação de dados permite assimilar seus dados na Adobe Experience Platfo
 
 Este guia do usuário fornece etapas sobre como monitorar seus dados na interface do usuário do Adobe Experience Platform. Este guia requer que você tenha uma Adobe ID e acesso ao Adobe Experience Platform.
 
-## Monitorar a assimilação de dados na transmissão de ponta a ponta {#monitor-streaming-end-to-end-data-ingestion}
+## Monitorar a ingestão de dados na transmissão de ponta a ponta {#monitor-streaming-end-to-end-data-ingestion}
 
 >[!CONTEXTUALHELP]
 >id="platform_ingestion_streaming_ingestionrate"

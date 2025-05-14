@@ -4,9 +4,9 @@ title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil para um endpoint HTTP de terceiros para executar sua própria análise ou executar outras operações necessárias nos dados de perfil exportados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
+source-git-commit: d78b7a06318dabff5dac763068ca7c21a5a86633
 workflow-type: tm+mt
-source-wordcount: '2701'
+source-wordcount: '2692'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 O destino da API HTTP é um destino de streaming [!DNL Adobe Experience Platform] que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
 
@@ -71,13 +71,11 @@ Você pode usar [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) para garant
 
 Se você quiser usar [!DNL mTLS] com [!DNL HTTP API] destinos, o endereço do servidor inserido na página [detalhes do destino](#destination-details) deve ter [!DNL TLS] protocolos desabilitados e apenas [!DNL mTLS] habilitado. Se o protocolo [!DNL TLS] 1.2 ainda estiver habilitado no ponto de extremidade, nenhum certificado será enviado para a autenticação de cliente. Isso significa que para usar [!DNL mTLS] com seu destino [!DNL HTTP API], seu ponto de extremidade de servidor de &quot;recebimento&quot; deve ser um ponto de extremidade de conexão habilitado somente para [!DNL mTLS].
 
-### Baixar certificado {#certificate}
+### Recuperar e inspecionar detalhes do certificado {#certificate}
 
-Se você quiser verificar o [!DNL Common Name] (CN) e o [!DNL Subject Alternative Names] (SAN) para fazer validação adicional de terceiros, poderá baixar o certificado abaixo:
+Se você quiser inspecionar detalhes de certificados como o [!DNL Common Name] (CN) e o [!DNL Subject Alternative Names] (SAN) para validação adicional de terceiros, use a API para recuperar o certificado e extrair esses campos da resposta.
 
-* [Certificado público mTLS para API HTTP](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
-
-Você também pode recuperar certificados públicos com segurança fazendo uma solicitação GET para o ponto de extremidade MTLS. Consulte a [documentação do ponto de extremidade do certificado público](../../../data-governance/mtls-api/public-certificate-endpoint.md) para obter mais informações.
+Consulte a [documentação do ponto de extremidade do certificado público](../../../data-governance/mtls-api/public-certificate-endpoint.md) para obter mais informações.
 
 ## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allowlist}
 

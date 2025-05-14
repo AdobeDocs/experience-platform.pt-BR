@@ -269,7 +269,7 @@ Os campos [!UICONTROL DateTime] são indicados por `type: string` e `format: dat
 }
 ```
 
-## Matriz [!UICONTROL 1}] {#array}
+## Matriz [!UICONTROL 1&rbrace;] {#array}
 
 Os campos [!UICONTROL Matriz] são indicados por `type: array` e um objeto `items` que define o esquema dos itens que a matriz aceitará.
 

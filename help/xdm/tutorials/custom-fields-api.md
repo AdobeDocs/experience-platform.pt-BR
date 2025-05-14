@@ -2,7 +2,7 @@
 title: Definir campos XDM na API do registro de esquema
 description: Saiba como definir campos diferentes ao criar recursos personalizados do Experience Data Model (XDM) na API do registro de esquema.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 6c6104a6aa0a80c886f4f02486a7645eb95da781
 workflow-type: tm+mt
 source-wordcount: '1197'
 ht-degree: 0%
@@ -188,7 +188,7 @@ O equivalente de um campo [!UICONTROL Long] criado por meio da interface do usu�
 
 ## [!UICONTROL Curto] {#short}
 
-O equivalente de um campo [!UICONTROL Short] criado por meio da interface do usuário do Construtor de Esquemas é um campo do tipo [`integer`](#integer) com `minimum` e `maximum` valores específicos (`-32768` e `32768`, respectivamente).
+O equivalente de um campo [!UICONTROL Short] criado por meio da interface do usuário do Construtor de Esquemas é um campo do tipo [`integer`](#integer) com `minimum` e `maximum` valores específicos (`-32768` e `32767`, respectivamente).
 
 ```json
 "sampleField": {
@@ -196,13 +196,13 @@ O equivalente de um campo [!UICONTROL Short] criado por meio da interface do usu
   "description": "An example short field.",
   "type": "integer",
   "minimum": -32768,
-  "maximum": 32768
+  "maximum": 32767
 }
 ```
 
 ## [!UICONTROL Byte] {#byte}
 
-O equivalente de um campo [!UICONTROL Byte] criado por meio da interface do usuário do Construtor de Esquemas é um campo do tipo [`integer`](#integer) com `minimum` e `maximum` valores específicos (`-128` e `128`, respectivamente).
+O equivalente de um campo [!UICONTROL Byte] criado por meio da interface do usuário do Construtor de Esquemas é um campo do tipo [`integer`](#integer) com `minimum` e `maximum` valores específicos (`-128` e `127`, respectivamente).
 
 ```json
 "sampleField": {
@@ -210,7 +210,7 @@ O equivalente de um campo [!UICONTROL Byte] criado por meio da interface do usu�
   "description": "An example byte field.",
   "type": "integer",
   "minimum": -128,
-  "maximum": 128
+  "maximum": 127
 }
 ```
 
@@ -269,7 +269,7 @@ Os campos [!UICONTROL DateTime] são indicados por `type: string` e `format: dat
 }
 ```
 
-## Matriz [!UICONTROL 1&rbrace;] {#array}
+## Matriz [!UICONTROL 1}] {#array}
 
 Os campos [!UICONTROL Matriz] são indicados por `type: array` e um objeto `items` que define o esquema dos itens que a matriz aceitará.
 

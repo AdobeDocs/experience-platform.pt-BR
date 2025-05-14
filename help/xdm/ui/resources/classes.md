@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e editar classes na interface
 description: Saiba como criar e editar classes na interface do usuário do Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
 workflow-type: tm+mt
-source-wordcount: '1692'
+source-wordcount: '1691'
 ht-degree: 5%
 
 ---
@@ -120,7 +120,7 @@ Consulte o manual sobre [definição de campos na interface](../fields/overview.
 
 Se você tiver criado esquemas que empregam essa classe, os campos recém-adicionados aparecerão automaticamente nesses esquemas.
 
-## Editar uma classe (#edit-a-class)
+## Editar uma classe {#edit-a-class}
 
 >[!NOTE]
 >
@@ -156,6 +156,6 @@ Consulte o manual sobre [criação e edição de esquemas](./schemas.md#change-c
 
 ## Próximas etapas {#next-steps}
 
-Este documento abordou como criar e editar classes usando a interface do usuário do Experience Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).
+Este documento abordou como criar e editar classes usando a interface do usuário do Experience Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
 
 Para saber como gerenciar classes usando a API do Registro de Esquema, consulte o [manual de ponto de extremidade de classes](../../api/classes.md).

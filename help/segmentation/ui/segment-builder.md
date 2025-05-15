@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
 source-wordcount: '5024'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -30,7 +30,7 @@ ht-degree: 8%
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showfullxdmschema"
 >title="Mostrar esquema XDM completo"
->abstract="Por padrão, somente os campos que contêm dados são exibidos. Ative essa opção para mostrar todos os campos no esquema XDM."
+>abstract="Por padrão, somente os campos que contêm dados são exibidos. Habilite essa opção para mostrar todos os campos no esquema XDM."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_showdeprecatedfields"

@@ -2,13 +2,13 @@
 audience: user
 user-guide-title: Ajuda do Adobe Experience Platform Privacy Service
 breadcrumb-title: Guia do Serviço de privacidade
-user-guide-description: Gerencie solicitações de dados do cliente para cumprir com as normas legais de privacidade, como o GDPR e o CCPA.
+user-guide-description: Gerencie solicitações de dados do cliente para cumprir com as normas legais de privacidade, como o RGPD e o CCPA.
 feature: Privacy
 role: User,Admin
 source-git-commit: 306f7fcd09f395895fde241b668c41a2479a8d2d
 workflow-type: tm+mt
 source-wordcount: '92'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -27,11 +27,11 @@ ht-degree: 100%
    * [Consentimento](./api/consent.md)
    * [Conteúdo](./api/content.md)
    * [Apêndice](./api/appendix.md)
-* Interface do Privacy Service {#ui}
+* Interface do usuário do Privacy Service {#ui}
    * [Visão geral](./ui/overview.md)
    * [Gerenciar processos de privacidade](./ui/user-guide.md)
 * [Inscrever-se em eventos de privacidade](./privacy-events.md)
-* Regulamentos de privacidade {#regulations}
+* Regras de privacidade {#regulations}
    * [Visão geral](./regulations/overview.md)
    * [Perguntas frequentes](./regulations/faq.md)
    * [Terminologia](./regulations/terminology.md)

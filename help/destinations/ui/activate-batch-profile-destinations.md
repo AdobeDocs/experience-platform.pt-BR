@@ -6,7 +6,7 @@ exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
 source-wordcount: '4596'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -87,12 +87,12 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_weekly_messaging"
 >title="Exportações semanais"
->abstract="<sup>*</sup> Selecione a data de início e as exportações subsequentes ocorrerão nesse dia da semana até a data de término selecionada."
+>abstract="<sup>*</sup> Selecione a data inicial e as exportações subsequentes ocorrerão nesse dia da semana até a data final selecionada."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_schedule_monthly_messaging"
 >title="Exportações mensais"
->abstract="<sup>*</sup> Selecione a data de início e as exportações subsequentes ocorrerão nessa data do mês até a data de término selecionada. Para meses com menos de 30 ou 31 dias, a exportação ocorre no último dia do mês."
+>abstract="<sup>*</sup> Selecione a data inicial e as exportações subsequentes ocorrerão nessa data do mês até a data final selecionada. Para meses com menos de 30 ou 31 dias, a exportação ocorre no último dia do mês."
 
 [!DNL Adobe Experience Platform] exporta dados para destinos de marketing por email e armazenamento na nuvem como [tipos de arquivos diferentes](#supported-file-formats-export). Na página **[!UICONTROL Agendamento]**, você pode configurar o agendamento e os nomes de arquivo para cada público-alvo que está exportando.
 
@@ -125,7 +125,7 @@ Para editar vários agendamentos ao mesmo tempo, marque os públicos usando as c
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Ativar após avaliação do público-alvo"
->abstract="<p>A ativação é executada imediatamente após a conclusão do processo diário de segmentação. Isso garante que os perfis mais atualizados sejam exportados.</p><p>A opção para exportar perfis após a avaliação do público-alvo é <i>não</i>, disponível para a frequência de exportação semanal e mensal.</p>"
+>abstract="<p>A ativação é executada imediatamente após a conclusão do processo diário de segmentação. Isso garante que os perfis mais atualizados sejam exportados.</p><p>A opção de exportar perfis após a avaliação do público-alvo <i>não</i> está disponível para as frequências de exportação semanal e mensal.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -450,7 +450,7 @@ A Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 
 ### Comportamento de desduplicação para perfis com o mesmo carimbo de data e hora {#deduplication-same-timestamp}
 
-Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Principais considerações
 

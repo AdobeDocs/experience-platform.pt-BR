@@ -28,7 +28,7 @@ Com o Serviço de identidade da Adobe Experience Platform e o Perfil do cliente 
 
 Assista ao vídeo a seguir para obter informações adicionais sobre o uso de [!DNL Identity Graph Linking Rules]:
 
->[!VIDEO](https://video.tv.adobe.com/v/3448277/?learn=on&enablevpops&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## Introdução
 

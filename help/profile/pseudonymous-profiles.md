@@ -7,7 +7,7 @@ exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
 source-wordcount: '1264'
-ht-degree: 4%
+ht-degree: 7%
 
 ---
 
@@ -26,7 +26,7 @@ No Adobe Experience Platform, é possível configurar as horas de expiração de
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
 >title="Expiração de dados de perfil pseudônimo"
->abstract="A expiração dos dados do perfil pseudônimo representa o número de dias que um perfil pseudônimo permanecerá no Adobe Experience Platform antes de ser removido. Esse valor deve ser definido como pelo menos 1. Observe que pode levar até três dias para que o perfil pseudônimo seja removido."
+>abstract="A expiração de dados de perfil pseudônimo representa o número de dias que um perfil pseudônimo permanecerá na Adobe Experience Platform antes de ser removido. Esse valor deve ser definido como pelo menos 1. Observe que pode levar até três dias para que o perfil pseudônimo seja removido."
 
 Um perfil é considerado para expiração de dados pseudônimos se atender às seguintes condições:
 
@@ -131,7 +131,7 @@ Em um caso de uso típico, você pode definir a expiração de dados do evento d
 
 +++ Resposta
 
-- O sistema de exclusão &quot;primeiro a entrar, primeiro a sair&quot;[&#128279;](../identity-service/guardrails.md) do Serviço de Identidade  poderia excluir ECIDs do gráfico de identidade, que estão armazenados no Serviço de Identidade.
+- O sistema de exclusão &quot;primeiro a entrar, primeiro a sair&quot;](../identity-service/guardrails.md) do Serviço de Identidade [ poderia excluir ECIDs do gráfico de identidade, que estão armazenados no Serviço de Identidade.
 - Se esse comportamento de exclusão resultar no armazenamento de um perfil somente ECID no Perfil do cliente em tempo real (armazenamento de perfil), a expiração dos dados do perfil pseudônimo excluirá esse perfil do armazenamento de perfil.
 
 +++

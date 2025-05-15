@@ -28,7 +28,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 * [Perfil de cliente em tempo real](../../profile/home.md): fornece um perfil de cliente unificado em tempo real com base em dados agregados de várias fontes.
 * [Sandboxes](../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
-## Usar o painel de monitoramento para assimilação de data lake
+## Usar o painel de monitoramento para assimilação do data lake
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"

@@ -68,7 +68,7 @@ Para excluir registros de todos os conjuntos de dados, selecione **[!UICONTROL T
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Namespace de identidade"
->abstract="Um namespace de identidade é um atributo que vincula um registro ao perfil de consumidor na Experience Platform. O campo de namespace de identidade de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nessa coluna, é necessário fornecer o tipo (ou namespace) para namespace da identidade do registro, como `email` para endereços de email e `ecid` para IDs da Experience Cloud. Para saber mais, consulte o guia da interface do ciclo de vida dos dados."
+>abstract="Um namespace de identidade é um atributo que vincula um registro ao perfil de consumidor na Experience Platform. O campo de namespace de identidade de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nessa coluna, é necessário fornecer o tipo (ou namespace) para namespace de identidade do registro, como `email` para endereços de email e `ecid` para IDs da Experience Cloud. Para saber mais, consulte o guia da interface do ciclo de vida dos dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"

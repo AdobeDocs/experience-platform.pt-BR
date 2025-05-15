@@ -16,7 +16,7 @@ ht-degree: 8%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Adicionar campos calculados"
 >abstract="<p>Use o controle **Adicionar campo calculado** para executar várias transformações de dados em dados exportados para destinos de armazenamento na nuvem. Por exemplo, é possível aplicar hash em dados, concatenar matrizes em strings e muito mais."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="Exemplos"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=pt-BR#examples" text="Exemplos"
 
 >[!AVAILABILITY]
 >

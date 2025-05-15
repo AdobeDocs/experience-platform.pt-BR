@@ -2,9 +2,9 @@
 description: Saiba mais sobre os endereços IP que você precisa adicionar ao seu arquivo de inclui na lista de permissões do para usar com êxito as fontes da Adobe Experience Platform.
 title: INCLUI NA LISTA DE PERMISSÕES de endereço IP para origens
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -290,6 +290,10 @@ Incluir na lista de permissões Você deve adicionar os seguintes endereços IP 
 
 ## Endereços IP para incluir na lista de permissões a conexão de origens com o Experience Platform em [!DNL Amazon Web Services] (AWS) {#aws}
 
-Incluir na lista de permissões Você deve adicionar o seguinte endereço IP ao seu arquivo para conectar sua origem à Experience no AWS:
+Incluir na lista de permissões Você deve adicionar o seguinte endereço IP ao seu arquivo para conectar sua origem à Experience no AWS:.
 
-- `66.117.18.0/24`
+### VA6
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`

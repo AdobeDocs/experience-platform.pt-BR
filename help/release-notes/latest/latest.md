@@ -2,10 +2,10 @@
 title: Notas de versão de abril de 2025 da Adobe Experience Platform
 description: As notas de versão de abril de 2025 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
+source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
 workflow-type: tm+mt
-source-wordcount: '2192'
-ht-degree: 21%
+source-wordcount: '2069'
+ht-degree: 17%
 
 ---
 
@@ -16,9 +16,9 @@ ht-degree: 21%
 >Consulte a documentação a seguir para obter as notas de versão de outros aplicativos da Adobe Experience Platform:
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest?lang=pt-BR)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest?lang=pt-BR)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 29 de abril de 2025**
 
@@ -30,7 +30,6 @@ Atualizações dos recursos e da documentação existentes no Adobe Experience P
 - [Experience Data Model](#xdm)
 - [Serviço de identidade](#identity)
 - [Query Service](#query-service)
-- [Perfil do cliente em tempo real](#profile)
 - [Sandboxes](#sandboxes)
 - [Origens](#sources)
 - [Manuais de casos de uso ](#use-case-playbooks)
@@ -41,7 +40,7 @@ O Experience League é uma plataforma de aprendizado abrangente, projetada para 
 
 | Recurso | Descrição |
 | --- | --- |
-| Página inicial personalizada | Acesse e personalize sua página inicial personalizada no [Experience League](https://experienceleague.adobe.com/pt-br/home#). Entre com suas credenciais do Adobe e selecione **[!UICONTROL Experience League]** no menu superior para começar a otimizar sua experiência de aprendizado: <ul><li>**Marcadores**: use o recurso [!UICONTROL Marcadores] para salvar e coletar seus recursos favoritos em um único local. Você pode salvar uma variedade de conteúdo, incluindo listas de reprodução, artigos e tutoriais.</li><li>**Personalize seu aprendizado**: melhore sua experiência de aprendizado atualizando seu perfil do Experience League com as funções, os setores, os produtos e o nível de experiência que melhor atendem às suas necessidades.</li><li>**Recomendações**: exibir conteúdo de aprendizado recomendado com base em sua atividade recente.</li><li>**Visualizado recentemente**: use a seção [!UICONTROL Visualizado recentemente] para voltar rapidamente para conteúdo visualizado recentemente, como documentação e vídeos.</li><li>**Recursos de aprendizado**: use o painel [!UICONTROL Todos os recursos de aprendizado] para navegar até tutoriais, documentação, comunidade, eventos e certificações.</li><li>**Novidades**: veja a seção [!UICONTROL Novidades] para obter um fluxo do conteúdo mais recente no Experience League.</li><li>**Assista a eventos anteriores sob demanda**: assista a fluxos ao vivo previamente gravados em holofotes de produtos, casos de uso e tutoriais com a [!UICONTROL seção Assista a eventos anteriores sob demanda].</li></ul><br> ![Página inicial personalizada no Experience League.](../2025/assets/april/personalized-home-page.png "Página inicial personalizada no Experience League."){width="250" align="center" zoomable="yes"} |
+| Página inicial personalizada | Acesse e personalize sua página inicial personalizada no [Experience League](https://experienceleague.adobe.com/en/home#). Entre com suas credenciais do Adobe e selecione **[!UICONTROL Experience League]** no menu superior para começar a otimizar sua experiência de aprendizado: <ul><li>**Marcadores**: use o recurso [!UICONTROL Marcadores] para salvar e coletar seus recursos favoritos em um único local. Você pode salvar uma variedade de conteúdo, incluindo listas de reprodução, artigos e tutoriais.</li><li>**Personalize seu aprendizado**: melhore sua experiência de aprendizado atualizando seu perfil do Experience League com as funções, os setores, os produtos e o nível de experiência que melhor atendem às suas necessidades.</li><li>**Recomendações**: exibir conteúdo de aprendizado recomendado com base em sua atividade recente.</li><li>**Visualizado recentemente**: use a seção [!UICONTROL Visualizado recentemente] para voltar rapidamente para conteúdo visualizado recentemente, como documentação e vídeos.</li><li>**Recursos de aprendizado**: use o painel [!UICONTROL Todos os recursos de aprendizado] para navegar até tutoriais, documentação, comunidade, eventos e certificações.</li><li>**Novidades**: veja a seção [!UICONTROL Novidades] para obter um fluxo do conteúdo mais recente no Experience League.</li><li>**Assista a eventos anteriores sob demanda**: assista a fluxos ao vivo previamente gravados em holofotes de produtos, casos de uso e tutoriais com a [!UICONTROL seção Assista a eventos anteriores sob demanda].</li></ul><br> ![Página inicial personalizada no Experience League.](../2025/assets/april/personalized-home-page.png "Página inicial personalizada no Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -129,18 +128,6 @@ Consultar dados no data lake da Adobe Experience Platform usando SQL padrão com
 | Salvar saídas de previsão do modelo usando CREATE TABLE e INSERT INTO | [Salvar saídas de previsão selecionadas em novas tabelas usando CREATE TABLE AS SELECT ou inserir em tabelas existentes usando INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). Se a seleção de coluna aprimorada estiver ativada, resultados intermediários, como vetores de recursos e probabilidades, também poderão ser mantidos junto com as previsões finais. Para obter exemplos de uso, consulte a [documentação sobre sintaxe SQL](../../query-service/sql/syntax.md#create-table-as-select). |
 
 Para obter mais informações sobre [!DNL Query Service], consulte a [[!DNL Query Service] visão geral](../../query-service/home.md).
-
-## Perfil do cliente em tempo real {#profile}
-
-A Adobe Experience Platform permite gerar experiências coordenadas, consistentes e relevantes para seus clientes, independentemente de onde ou quando eles interagem com sua marca. Com o Perfil do cliente em tempo real, é possível ter uma visão integral de cada cliente ao combinar dados de vários canais, incluindo online, offline, CRM e de terceiros. O Perfil permite consolidar os dados do cliente em uma visualização unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
-
-| Recurso | Descrição |
-| ------- | ----------- |
-| Expiração de dados de perfil pseudônimo | Gerencie a expiração de dados do seu perfil pseudônimo no painel Perfil. Para saber mais sobre este recurso e Perfis pseudônimos, leia o [Guia de expiração de dados do perfil pseudônimo](../../profile/pseudonymous-profiles.md). |
-
-{style="table-layout:auto"}
-
-Para saber mais sobre o Perfil de cliente em tempo real, leia a [Visão geral do perfil](../../profile/home.md)
 
 ## Sandboxes {#sandboxes}
 

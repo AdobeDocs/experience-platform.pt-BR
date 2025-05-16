@@ -3,10 +3,10 @@ keywords: correspondência do cliente do google;correspondência do cliente do G
 title: Conexão de Correspondência de cliente do Google
 description: O Google Customer Match permite usar seus dados online e offline para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping e Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
+source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
 workflow-type: tm+mt
-source-wordcount: '2360'
-ht-degree: 1%
+source-wordcount: '2410'
+ht-degree: 0%
 
 ---
 
@@ -137,6 +137,12 @@ Para saber mais sobre a assimilação de endereços de email no Experience Platf
 
 Se você optar por criar o hash dos endereços de email, certifique-se de cumprir os requisitos da Google, descritos nos links acima.
 
+### Requisitos de hash do campo de endereço {#address-field-hashing}
+
+Ao mapear campos relacionados a endereços para [!DNL Google Customer Match], o Experience Platform **hash** automaticamente os valores `address_info_first_name` e `address_info_last_name` antes de enviá-los para o Google. Esse hash automático é necessário para estar em conformidade com os requisitos de segurança e privacidade da Google.
+
+**não** forneça valores com hash para `address_info_first_name` ou `address_info_last_name`. Se você fornecer valores com hash, o processo correspondente falhará.
+
 ### Uso de namespaces personalizados {#custom-namespaces}
 
 Antes de poder usar o namespace `User_ID` para enviar dados para o Google, sincronize seus próprios identificadores usando o [!DNL gTag]. Consulte a [documentação oficial da Google](https://support.google.com/google-ads/answer/9199250) para obter informações detalhadas.
@@ -156,7 +162,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 Assista ao vídeo abaixo para obter uma explicação dos benefícios e como ativar os dados para o Google Customer Match.
 
->[!VIDEO](https://video.tv.adobe.com/v/326489?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Conectar ao destino {#connect}
 

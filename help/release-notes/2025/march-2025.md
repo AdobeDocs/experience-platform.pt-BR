@@ -2,10 +2,10 @@
 title: Notas da versão de março de 2025 da Adobe Experience Platform
 description: As notas da versão de março de 2025 da Adobe Experience Platform.
 exl-id: 3da1c912-2581-4afa-bd21-0b8303531dcd
-source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
+source-git-commit: ca2793f6e498f63bffb0f30ebc9797ea5ed52a70
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 21%
+source-wordcount: '1248'
+ht-degree: 20%
 
 ---
 
@@ -52,12 +52,12 @@ Para obter mais informações sobre painéis, incluindo como conceder permissõe
 
 {style="table-layout:auto"}
 
-**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
 
 | Recurso | Descrição |
 | --- | --- |
 | [Aprimoramentos na precisão dos relatórios para destinos de streaming](../../dataflows/ui/monitor-destinations.md) | A partir de março de 2025, a Adobe está lançando uma atualização para aumentar a precisão dos relatórios para destinos de transmissão. Esse aprimoramento garante um melhor alinhamento entre os relatórios no Experience Platform e as plataformas de destino. <br> Antes desta atualização, **[!UICONTROL Falha nas identidades]** incluiu todas as tentativas de ativação. Após essa atualização, somente a última tentativa de ativação será incluída na contagem total. <br> Esse aprimoramento se aplica a todos os destinos de streaming. <br> Após esse aprimoramento, os usuários de destinos de streaming podem observar uma queda esperada em sua contagem de **[!UICONTROL Falha de identidades]**. |
-| [Suporte à exportação de campos do tipo mapa para destinos corporativos e de borda](/help/destinations/ui/export-arrays-maps-objects.md) | Ao exportar dados para os destinos [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) e [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md), agora é possível selecionar campos do tipo mapa para exportação na etapa de mapeamento do fluxo de trabalho de ativação. <br> ![Exportar campo do tipo mapa para destino da empresa.](../2025/assets/march/export-map.png "Exportar campo do tipo mapa para destino da empresa."){width="250" align="center" zoomable="yes"} |
+| [Suporte à exportação de campos do tipo mapa para destinos corporativos e de borda](/help/destinations/ui/export-arrays-maps-objects.md) | Ao exportar dados para os destinos do [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md) e [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), agora é possível selecionar campos do tipo mapa para exportação na etapa de mapeamento do fluxo de trabalho de ativação. <br> ![Exportar campo do tipo mapa para destino da empresa.](../2025/assets/march/export-map.png "Exportar campo do tipo mapa para destino da empresa."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -65,7 +65,7 @@ Para obter mais informações, leia a [visão geral de destinos](../../destinati
 
 ## Composição de público-alvo federado {#federated-audience-composition}
 
-Para obter informações sobre as atualizações mais recentes da Federated Audience Composition, leia as [notas de versão dedicadas](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes) aqui.
+Para obter informações sobre as atualizações mais recentes da Federated Audience Composition, leia as [notas de versão dedicadas](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes) aqui.
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -80,7 +80,7 @@ Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [V
 
 ## Origens {#sources}
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 Use fontes na Experience Platform para assimilar dados de um aplicativo da Adobe ou de uma fonte de dados de terceiros.
 

@@ -2,10 +2,10 @@
 title: Práticas recomendadas de direitos de licença de gerenciamento de dados
 description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
 workflow-type: tm+mt
-source-wordcount: '2154'
-ht-degree: 2%
+source-wordcount: '2338'
+ht-degree: 1%
 
 ---
 
@@ -15,13 +15,34 @@ O Adobe Experience Platform é um sistema aberto que transforma seus dados em pe
 
 A Experience Platform oferece licenças que estabelecem o número de perfis que você pode criar e a quantidade de dados que você pode trazer. Dada a capacidade de trazer qualquer fonte, volume ou histórico de dados, é possível exceder seus direitos de licenciamento à medida que os volumes de dados crescem.
 
-Este documento descreve as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
+Leia este guia para conhecer as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Experience Platform.
 
-## Noções básicas sobre o armazenamento de dados do Adobe Experience Platform
+## Resumo dos recursos {#summary-of-features}
 
-O Experience Platform é composto principalmente de dois repositórios de dados: o [!DNL data lake] e o Armazenamento de perfil.
+Use as práticas recomendadas e as ferramentas descritas neste documento para gerenciar melhor o uso de direitos de licença na Experience Platform. Este documento é atualizado à medida que recursos adicionais são lançados para ajudar a fornecer visibilidade e controle a todos os clientes do Experience Platform.
 
-O **[!DNL data lake]** atende principalmente às seguintes finalidades:
+A tabela a seguir descreve a lista dos recursos disponíveis no momento à sua disposição, para gerenciar melhor seus direitos de uso de licença.
+
+| Recurso | Descrição |
+| --- | --- |
+| [Interface do usuário do conjunto de dados - Retenção de dados do evento de experiência](../../catalog/datasets/user-guide.md#data-retention-policy) | Configure um período de retenção fixo para dados no data lake e no armazenamento de perfis. Os registros são excluídos quando o período de retenção configurado termina. |
+| [Habilitar/Desabilitar Conjuntos de Dados para o Perfil de Cliente em Tempo Real](../../catalog/datasets/user-guide.md) | Ative ou desative a assimilação do conjunto de dados no Perfil do cliente em tempo real. |
+| [Expirações do evento de experiência no repositório de perfis](../../profile/event-expirations.md) | Aplique uma hora de expiração para todos os eventos assimilados em um conjunto de dados habilitado para perfil. Entre em contato com a equipe de conta da Adobe ou com o Atendimento ao cliente para ativar esse recurso. |
+| [Filtros de Preparação de Dados do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Aplicar [!DNL Kafka] filtros para excluir dados desnecessários da assimilação. |
+| [Filtros do conector de origem do Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplique filtros de conexão de origem do Audience Manager para excluir dados desnecessários da assimilação. |
+| [Filtros de dados do encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) | Aplicar filtros [!DNL Kafka] do lado do servidor para excluir dados desnecessários da assimilação.  Consulte a documentação sobre [regras de tags](../../tags/ui/managing-resources/rules.md) para obter mais informações. |
+| [Interface do Usuário do Painel de Uso da Licença](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Monitore o consumo de produtos da Experience Platform por parte de sua organização em relação aos direitos licenciados. Acesse instantâneos de uso diário, tendências preditivas e dados detalhados em nível de sandbox para oferecer suporte ao gerenciamento pró-ativo de licenças. |
+| [API do Relatório de Sobreposição de Conjunto de Dados](../../profile/tutorials/dataset-overlap-report.md) | Gera os conjuntos de dados que mais contribuem para o Público-alvo endereçável. |
+| [API do Relatório de Sobreposição de Identidade](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Gera os namespaces de identidade que mais contribuem para o Público-alvo endereçável. |
+| [Expirações de dados de perfil pseudônimo](../../profile/pseudonymous-profiles.md) | Configure os tempos de expiração de dados para perfis pseudônimos e remova automaticamente os dados do armazenamento de Perfil. |
+
+{style="table-layout:auto"}
+
+## Noções básicas sobre o armazenamento de dados do Experience Platform
+
+O Experience Platform é composto principalmente de dois repositórios de dados: o data lake e o Armazenamento de perfis.
+
+O Data Lake serve principalmente às seguintes finalidades:
 
 * Atua como a área de preparo para integrar dados no Experience Platform;
 * Atua como o armazenamento de dados de longo prazo para todos os dados do Experience Platform;
@@ -40,9 +61,9 @@ O **Repositório de perfis** é onde os perfis de clientes são criados e serve 
 
 Ao licenciar o Experience Platform, você recebe direitos de uso de licença que variam de acordo com a SKU:
 
-**[!DNL Addressable Audience]** - o número total de perfis de clientes permitidos por contrato no Experience Platform, incluindo perfis conhecidos e com pseudônimos.
+**[!DNL Addressable Audience]**: o número total de perfis de clientes permitidos por contrato no Experience Platform, incluindo perfis conhecidos e com pseudônimos.
 
-**[!DNL Total Data Volume]** - a quantidade total de dados disponíveis para o Serviço de Perfil da Adobe Experience Platform usar em fluxos de trabalho de envolvimento.
+**[!DNL Total Data Volume]**: a quantidade total de dados disponíveis para o Perfil de cliente em tempo real usar em fluxos de trabalho de envolvimento.
 
 A disponibilidade dessas métricas e a definição específica de cada uma delas variam de acordo com o licenciamento adquirido pela sua organização.
 
@@ -123,7 +144,7 @@ A Loja de perfis é composta pelos seguintes componentes:
 
 {style="table-layout:auto"}
 
-#### Relatórios de composição da loja de perfis
+### Relatórios de composição da loja de perfis
 
 Há vários relatórios disponíveis para ajudá-lo a entender a composição do armazenamento de Perfis. Esses relatórios ajudam você a tomar decisões embasadas sobre como e onde definir as expirações do evento de experiência para otimizar o uso da sua licença:
 
@@ -132,13 +153,17 @@ Há vários relatórios disponíveis para ajudá-lo a entender a composição do
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### Expirações de dados do perfil de pseudônimo {#pseudonymous-profile-expirations}
+### Expirações de dados do perfil de pseudônimo {#pseudonymous-profile-expirations}
 
-Esse recurso permite remover automaticamente perfis pseudônimos obsoletos da loja de perfis. Para obter mais informações sobre este recurso, leia a [Visão geral da expiração de dados do perfil pseudônimo](../../profile/pseudonymous-profiles.md).
+Use o recurso de expiração de dados de perfis pseudônimos para remover automaticamente dados do que não são mais válidos ou úteis para seus casos de uso do Armazenamento de perfis. A expiração de dados do perfil pseudônimo remove os registros de evento e perfil. Como resultado, essa configuração reduzirá os volumes de Público-alvo endereçável. Para obter mais informações sobre este recurso, leia a [Visão geral da expiração de dados do perfil pseudônimo](../../profile/pseudonymous-profiles.md).
 
-#### Expirações do evento de experiência {#event-expirations}
+### Interface do usuário do conjunto de dados - Retenção do conjunto de dados do evento de experiência {#data-retention}
 
-Esse recurso permite remover automaticamente os dados comportamentais de um conjunto de dados habilitado para perfil que não é mais valioso para seus casos de uso. Consulte a visão geral em [Expirações do evento de experiência](../../profile/event-expirations.md) para obter detalhes sobre como esse processo funciona depois de ser habilitado para um conjunto de dados.
+Defina as configurações de expiração e retenção do conjunto de dados para aplicar um período de retenção fixo para seus dados no data lake e no armazenamento de perfis. Quando o período de retenção terminar, os dados serão excluídos. A expiração dos dados do Evento de experiência remove apenas eventos e não remove os dados da classe de perfil, o que reduzirá o [volume de dados total](total-data-volume.md) nas métricas de uso de licença. Para obter mais informações, leia o guia em [definindo a política de retenção de dados](../../catalog/datasets/user-guide.md#data-retention-policy).
+
+### Expirações de evento de experiência de perfil {#event-expirations}
+
+Configure os tempos de expiração para remover automaticamente os dados comportamentais do conjunto de dados habilitado para perfil depois que eles não forem mais valiosos para seus casos de uso. Leia a visão geral em [Expirações do evento de experiência](../../profile/event-expirations.md) para obter mais informações.
 
 ## Resumo das práticas recomendadas para conformidade com o uso de licenças {#best-practices}
 
@@ -147,24 +172,6 @@ Esta é uma lista de algumas práticas recomendadas que você pode seguir para g
 * Use o [painel de uso de licença](../../dashboards/guides/license-usage.md) para rastrear e monitorar as tendências de uso dos clientes. Isso permite que você se antecipe a possíveis excedentes que possam ocorrer.
 * Configure os [filtros de assimilação](#ingestion-filters) identificando os eventos necessários para seus casos de uso de segmentação e personalização. Isso permite enviar somente eventos importantes necessários para seus casos de uso.
 * Verifique se você tem apenas [conjuntos de dados habilitados para o perfil](#ingestion-filters) que sejam necessários para seus casos de uso de segmentação e personalização.
-* Configure as [Expirações do evento de experiência](#event-expirations) e as [Expirações de dados do perfil pseudônimo](#pseudonymous-profile-expirations) para dados de alta frequência, como dados da Web.
+* Configure as [Expirações do evento de experiência](../../catalog/datasets/user-guide.md#data-retention-policy) e as [Expirações de dados do perfil pseudônimo](../../profile/pseudonymous-profiles.md) para dados de alta frequência, como dados da Web.
+* Configure [políticas de retenção de TTL (Time-to-Live) para conjuntos de dados de eventos de experiência](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) no data lake para remover automaticamente registros desatualizados e otimizar o uso do armazenamento de acordo com seus direitos de licença.
 * Verifique periodicamente os [Relatórios de Composição de Perfil](#profile-store-composition-reports) para entender sua composição no repositório de perfis. Isso permite compreender as fontes de dados que mais contribuem para o consumo de licença.
-
-## Resumo e disponibilidade de recursos {#feature-summary}
-
-As práticas recomendadas e as ferramentas descritas neste documento ajudarão você a gerenciar melhor o uso dos direitos de licença na Adobe Experience Platform. Este documento será atualizado à medida que recursos adicionais forem lançados para ajudar a fornecer visibilidade e controle a todos os clientes do Experience Platform.
-
-A tabela a seguir descreve a lista dos recursos disponíveis no momento à sua disposição, para gerenciar melhor seus direitos de uso de licença.
-
-| Recurso | Descrição |
-| --- | --- |
-| [Habilitar/Desabilitar Conjuntos de Dados para o Perfil](../../catalog/datasets/user-guide.md) | Ative ou desative a assimilação do conjunto de dados no Perfil do cliente em tempo real. |
-| [Expirações do evento de experiência](../../profile/event-expirations.md) | Aplique uma hora de expiração para todos os eventos assimilados em um conjunto de dados habilitado para perfil. Entre em contato com a equipe de conta da Adobe ou com o Atendimento ao cliente para ativar esse recurso. |
-| [Filtros de Preparação de Dados do Adobe Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | Aplicar [!DNL Kafka] filtros para excluir dados desnecessários da assimilação |
-| [Filtros do conector de origem do Adobe Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Aplicar filtros de conexão de origem do Audience Manager para excluir dados desnecessários da assimilação |
-| [Filtros de dados do encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md) | Aplicar filtros [!DNL Kafka] do lado do servidor para excluir dados desnecessários da assimilação.  Consulte a documentação sobre [regras de tags](../../tags/ui/managing-resources/rules.md) para obter mais informações. |
-| [Interface do Usuário do Painel de Uso da Licença](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Exibir um instantâneo dos dados relacionados à licença de sua organização para o Experience Platform |
-| [API do Relatório de Sobreposição de Conjunto de Dados](../../profile/tutorials/dataset-overlap-report.md) | Gera os conjuntos de dados que mais contribuem para o Público-alvo endereçável |
-| [API do Relatório de Sobreposição de Identidade](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Gera os namespaces de identidade que mais contribuem para o Público-alvo endereçável |
-
-{style="table-layout:auto"}

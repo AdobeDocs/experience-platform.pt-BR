@@ -3,9 +3,9 @@ title: Visão geral do Snowflake Source Connector
 description: Saiba como conectar o Snowflake ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 573691db9f71fcbe8b5edd4ea647d718ab3784e4
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >* A origem [!DNL Snowflake] está disponível no catálogo de origens para usuários que compraram o Real-Time Customer Data Platform Ultimate.
 >* Por padrão, a origem [!DNL Snowflake] interpreta `null` como uma cadeia de caracteres vazia. Entre em contato com o representante da Adobe para garantir que os valores de `null` sejam gravados corretamente como `null` no Adobe Experience Platform.
 >* Para que o Experience Platform assimile dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC. O único carimbo de data/hora com suporte para a origem [!DNL Snowflake] é TIMESTAMP_NTZ com a hora UTC.
+
+>[!WARNING]
+>
+>A autenticação básica (ou autenticação de chave de conta) para a origem [!DNL Snowflake] será substituída em novembro de 2025. Você deve migrar para a autenticação baseada em par de chaves para continuar usando a origem e assimilando dados do banco de dados para o Experience Platform. Para obter mais informações sobre a descontinuação, leia o [[!DNL Snowflake] manual de práticas recomendadas sobre como mitigar os riscos de comprometimento de credenciais](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 

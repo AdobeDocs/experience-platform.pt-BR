@@ -2,10 +2,10 @@
 description: Saiba como usar o painel de monitoramento para monitorar dados assimilados no data lake.
 title: Monitorar assimilação do data lake
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
+source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1303'
-ht-degree: 10%
+source-wordcount: '1458'
+ht-degree: 9%
 
 ---
 
@@ -15,7 +15,9 @@ ht-degree: 10%
 >
 >As fontes de transmissão, como a [fonte de API HTTP](../../sources/connectors/streaming/http.md), não têm suporte atualmente no painel de monitoramento. Nesse momento, você só pode usar o painel para monitorar origens de lote.
 
-Leia este documento para saber como usar o painel de monitoramento para monitorar a assimilação de data lake na interface do usuário do Experience Platform.
+Você pode usar o painel de monitoramento na interface do usuário do Adobe Experience Platform para recuperar métricas sobre os processos de assimilação e retenção de dados no data lake. Use os gráficos na interface para monitorar as tendências de assimilação e retenção ao longo do tempo e resumir o desempenho em todos os fluxos de dados de suas origens.
+
+Leia este documento para saber como você pode usar o painel de monitoramento para monitorar todo o processamento de dados no data lake, incluindo a assimilação e a retenção.
 
 ## Introdução {#get-started}
 
@@ -60,6 +62,7 @@ A parte inferior do painel exibe uma tabela que descreve o relatório de métric
 | --- | --- |
 | Registros recebidos | O número total de registros recebidos de uma determinada fonte. |
 | Registros assimilados | O número total de registros assimilados no data lake. |
+| Registros excluídos | O número total de registros excluídos devido às configurações de retenção do data lake ou às operações de captura de dados de alteração. |
 | Registros ignorados | O número total de registros ignorados. Um registro ignorado se refere a campos que foram ignorados porque não foram necessários para assimilação. Por exemplo, se você criar um fluxo de dados de origens com a assimilação parcial ativada, poderá configurar um limite de taxa de erro aceitável. Durante o processo de assimilação, a assimilação ignorará registros de campos que não são obrigatórios, como campos de identidade, desde que estejam dentro do limite de erro. |
 | Registros com falha | O número total de registros que não puderam ser assimilados devido a erros. |
 | Taxa de assimilação | A porcentagem de registros assimilados com base no número total de registros recebidos. |
@@ -79,7 +82,19 @@ Você pode filtrar ainda mais seus dados usando as opções fornecidas acima da 
 
 {style="table-layout:auto"}
 
+Para personalizar a exibição da coluna, selecione o ícone de configurações de coluna ![column-icon](/help/images/icons/column-settings.png).
+
+![O painel de monitoramento com o ícone de configurações de coluna selecionado.](../assets/ui/monitor-sources/edit-columns.png)
+
+Em seguida, use a janela *[!UICONTROL Personalizar tabela]* para selecionar as colunas que deseja que o painel exiba. Quando terminar, selecione **[!UICONTROL Aplicar]**.
+
+![A janela pop-up personalizar coluna no painel de monitoramento.](../assets/ui/monitor-sources/customize-table.png)
+
 Para monitorar os dados que estão sendo assimilados em um fluxo de dados específico, selecione o ícone de filtro ![filtro](/help/images/icons/filter-add.png) ao lado de uma origem.
+
+>[!TIP]
+>
+>Você pode usar o painel de monitoramento para monitorar métricas de exclusão de dados para registros excluídos usando políticas de retenção de dados. Para obter mais informações sobre retenção de dados, leia o guia em [definindo políticas de retenção de dados](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ![Monitore um fluxo de dados específico selecionando o ícone de filtro ao lado de uma determinada fonte.](../assets/ui/monitor-sources/monitor-dataflow.png)
 

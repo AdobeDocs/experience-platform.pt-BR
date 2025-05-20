@@ -447,7 +447,7 @@ loginID: ID_C, ECID: 222
 CRMID: Tom, loginID: ID_D
 ```
 
->[!TAB  LoginID &#39;] &#39; pendente&#39;
+>[!TAB LoginID &#39; &#39; pendente&#39;]
 
 O gráfico a seguir simula um cenário de ID de logon &quot;pendente&quot;. Neste exemplo, duas IDs de logon diferentes são vinculadas à mesma ECID. No entanto, `{loginID:ID_C}` não está vinculado ao CRMID. Portanto, não há como o Serviço de identidade detectar que essas duas IDs de logon representam duas entidades diferentes.
 

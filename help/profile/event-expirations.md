@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Expirações do evento de experiência
 description: Este documento fornece orientação geral sobre como configurar tempos de expiração para eventos de experiência individuais em um conjunto de dados do Adobe Experience Platform.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
+source-git-commit: 05479dcfd1a375b3589ce212168f324aa72af4ba
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 No Adobe Experience Platform, você pode configurar as horas de expiração para todos os Eventos de experiência que são assimilados em um conjunto de dados habilitado para o [Perfil de cliente em tempo real](./home.md). Isso permite remover automaticamente dados do armazenamento de Perfil que não são mais válidos ou úteis para seus casos de uso.
 
-As expirações do evento de experiência não podem ser configuradas por meio da interface do usuário ou das APIs do Experience Platform. Em vez disso, você deve entrar em contato com o suporte para ativar as expirações do evento de experiência nos conjuntos de dados necessários.
+Para saber como gerenciar as expirações do Evento de experiência em seus conjuntos de dados, leia o [guia da interface do usuário do conjunto de dados](../catalog/datasets/user-guide.md#data-retention-policy).
 
 >[!IMPORTANT]
 >

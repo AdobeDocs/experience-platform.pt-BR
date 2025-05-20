@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda os conceitos essenciais relacionados ao processamento de solicitações de privacidade para o Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6eaa384feb1b84e6081f03cb4de9687ad26f437d
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1757'
 ht-degree: 1%
 
 ---
@@ -200,10 +200,10 @@ Se você também incluiu o Serviço de Identidade (`identity`) e o data lake (`a
 
 | Produtos incluídos | Efeitos |
 | --- | --- |
-| Somente `ProfileService` | O perfil é excluído imediatamente assim que o Experience Platform envia a confirmação de que a solicitação de exclusão foi recebida. No entanto, o gráfico de identidade do perfil ainda permanece e o perfil pode ser reconstruído à medida que novos dados com as mesmas identidades são assimilados. Os dados associados ao perfil também permanecem no data lake. |
-| `ProfileService` e `identity` | O perfil e seu gráfico de identidade associado são excluídos imediatamente assim que o Experience Platform envia a confirmação de que a solicitação de exclusão foi recebida. Os dados associados ao perfil permanecem no data lake. |
-| `ProfileService` e `aepDataLake` | O perfil é excluído imediatamente assim que o Experience Platform envia a confirmação de que a solicitação de exclusão foi recebida. No entanto, o gráfico de identidade do perfil ainda permanece e o perfil pode ser reconstruído à medida que novos dados com as mesmas identidades são assimilados.<br><br>Quando o produto do data lake responder que a solicitação foi recebida e está processando no momento, os dados associados ao perfil são excluídos por software e, portanto, não podem ser acessados por nenhum serviço [!DNL Experience Platform]. Quando o trabalho for concluído, os dados serão removidos completamente do data lake. |
-| `ProfileService`, `identity` e `aepDataLake` | O perfil e seu gráfico de identidade associado são excluídos imediatamente assim que o Experience Platform envia a confirmação de que a solicitação de exclusão foi recebida.<br><br>Quando o produto do data lake responder que a solicitação foi recebida e está processando no momento, os dados associados ao perfil são excluídos por software e, portanto, não podem ser acessados por nenhum serviço [!DNL Experience Platform]. Quando o trabalho for concluído, os dados serão removidos completamente do data lake. |
+| Somente `ProfileService` | O perfil é considerado excluído imediatamente assim que o Privacy Service envia a confirmação de que a solicitação de exclusão foi concluída. No entanto, o gráfico de identidade do perfil ainda permanece e o perfil pode ser reconstruído à medida que novos dados com as mesmas identidades são assimilados. Os dados não pessoalmente identificáveis associados ao perfil também permanecem no data lake. |
+| `ProfileService` e `identity` | O perfil e seu gráfico de identidade associado são excluídos imediatamente assim que o Privacy Service envia a confirmação de que a solicitação de exclusão foi concluída. Os dados não pessoalmente identificáveis associados ao perfil também permanecem no data lake. |
+| `ProfileService` e `aepDataLake` | O perfil é excluído imediatamente assim que o Privacy Service envia a confirmação de que a solicitação de exclusão foi concluída. No entanto, o gráfico de identidade do perfil ainda permanece e o perfil pode ser reconstruído à medida que novos dados com as mesmas identidades são assimilados.<br><br>Quando o produto do data lake responder que a solicitação foi recebida e está processando no momento, os dados associados ao perfil são excluídos por software e, portanto, não podem ser acessados por nenhum serviço [!DNL Experience Platform]. Quando o trabalho for concluído, os dados serão removidos completamente do data lake. |
+| `ProfileService`, `identity` e `aepDataLake` | O perfil e seu gráfico de identidade associado são excluídos imediatamente assim que o Privacy Service envia a confirmação de que a solicitação de exclusão foi concluída.<br><br>Quando o produto do data lake responder que a solicitação foi recebida e está processando no momento, os dados associados ao perfil são excluídos por software e, portanto, não podem ser acessados por nenhum serviço [!DNL Experience Platform]. Quando o trabalho for concluído, os dados serão removidos completamente do data lake. |
 
 Consulte a [[!DNL Privacy Service] documentação](../privacy-service/home.md#monitor) para obter mais informações sobre o rastreamento de status de trabalho.
 

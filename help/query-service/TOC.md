@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Serviço de consulta
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
+source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '409'
 ht-degree: 25%
 
 ---
@@ -110,6 +110,7 @@ ht-degree: 25%
    - [Logs de consulta](ui/query-logs.md)
    - [Monitorar consultas programadas](ui/monitor-queries.md)
    - [Guia de credenciais](ui/credentials.md)
+   - [Migrar JWT para credenciais do OAuth](ui/migrate-jwt-to-oauth.md)
    - [Gerar conjuntos de dados de saída a partir dos resultados da consulta](ui/create-datasets.md)
 - API do serviço de consulta {#api}
    - [Introdução](api/getting-started.md)
@@ -144,4 +145,4 @@ ht-degree: 25%
 - [Perguntas frequentes](troubleshooting-guide.md)
 - [INCLUIR NA LISTA DE PERMISSÕES endereço IP](ip-address-allowlist.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

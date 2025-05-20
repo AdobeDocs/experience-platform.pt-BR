@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de credenciais do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: c8c04d79584093c8d13ffa205849e78ab04c0fc1
+source-git-commit: 264d3b12d8fd3bd100018513af1576b3de1cbb33
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1955'
 ht-degree: 5%
 
 ---
@@ -46,11 +46,11 @@ A seção **[!UICONTROL Credenciais que estão expirando]** fornece as seguintes
 >
 >![A guia Configurações do Admin Console com Privacidade e Segurança, Configurações de autenticação e Vida máxima da sessão foi realçada.](../images/ui/credentials/max-session-life.png)
 >
->Consulte a documentação de Ajuda do Adobe para obter mais informações sobre as [Configurações avançadas](https://helpx.adobe.com/br/enterprise/using/authentication-settings.html#advanced-settings) oferecidas pelo Admin Console.
+>Consulte a documentação de Ajuda do Adobe para obter mais informações sobre as [Configurações avançadas](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) oferecidas pelo Admin Console.
 
 ### Conectar-se aos dados do Customer Journey Analytics nas sessões de consulta {#connect-to-customer-journey-analytics}
 
-Use a extensão Customer Journey Analytics BI com Power BI ou Tableau para acessar suas [visualizações de dados](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-dataviews/data-views) do Customer Journey Analytics com SQL. Ao integrar o Serviço de consulta à extensão BI, você pode acessar suas visualizações de dados diretamente nas sessões do Serviço de consulta. Essa integração simplifica a funcionalidade das ferramentas de BI que usam o Serviço de consulta como interface PostgreSQL. Essa funcionalidade elimina a necessidade de duplicar visualizações de dados em ferramentas de BI, garante a geração de relatórios consistentes entre plataformas e simplifica a integração dos dados do Customer Journey Analytics com outras fontes em plataformas de BI.
+Use a extensão Customer Journey Analytics BI com Power BI ou Tableau para acessar suas [visualizações de dados](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) do Customer Journey Analytics com SQL. Ao integrar o Serviço de consulta à extensão BI, você pode acessar suas visualizações de dados diretamente nas sessões do Serviço de consulta. Essa integração simplifica a funcionalidade das ferramentas de BI que usam o Serviço de consulta como interface PostgreSQL. Essa funcionalidade elimina a necessidade de duplicar visualizações de dados em ferramentas de BI, garante a geração de relatórios consistentes entre plataformas e simplifica a integração dos dados do Customer Journey Analytics com outras fontes em plataformas de BI.
 
 Consulte a documentação para saber como [conectar o Serviço de consulta a uma variedade de aplicativos de cliente de desktop](../clients/overview.md), como [Power BI](../clients/power-bi.md) ou [Tableau](../clients/tableau.md)
 
@@ -68,7 +68,7 @@ Para acessar os dados do Customer Journey Analytics no Power BI ou Tableau, sele
 
 Você também pode acessar os dados do Customer Journey Analytics diretamente do Editor de consultas ou da CLI do Postgres. Para fazer isso, faça referência ao banco de dados `cja` ao gravar sua consulta. Consulte o [guia de criação de consultas](./user-guide.md#query-authoring) do Editor de consultas para obter mais informações sobre como gravar, executar e salvar consultas.
 
-Consulte o [guia de extensão de BI](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-dataviews/bi-extension) para obter instruções completas sobre como acessar suas visualizações de dados do Customer Journey Analytics com SQL.
+Consulte o [guia de extensão de BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) para obter instruções completas sobre como acessar suas visualizações de dados do Customer Journey Analytics com SQL.
 
 ## Credenciais sem expiração {#non-expiring-credentials}
 
@@ -146,6 +146,18 @@ Ao editar uma credencial sem expiração, um modal é exibido. Você pode fornec
 ![A caixa de diálogo Atualizar conta.](../images/ui/credentials/update-credentials.png)
 
 Depois de fornecer todos os detalhes necessários, selecione **[!UICONTROL Atualizar conta]** para concluir a atualização de suas credenciais.
+
+### Migrar credenciais para o OAuth {#migrate-credentials}
+
+Se você estiver usando credenciais JWT sem expiração, migre cada uma para o servidor OAuth para o servidor antes de 30 de junho de 2025 para evitar a interrupção do serviço.
+
+>[!IMPORTANT]
+>
+>As credenciais do JWT deixarão de funcionar após 30 de junho de 2025. Você deve concluir manualmente essa migração para manter a autorização.
+
+Para saber como identificar credenciais afetadas e concluir a migração, consulte o [guia de credenciais de migração do JWT para o servidor do OAuth](./migrate-jwt-to-oauth.md).
+
+Para perguntas comuns, consulte as [perguntas frequentes sobre migração](./migrate-jwt-to-oauth.md#faq).
 
 ## Usar credenciais para se conectar a clientes externos {#use-credential-to-connect}
 

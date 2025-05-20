@@ -3,9 +3,9 @@ keywords: conexão do facebook;conexão do facebook;destinos do facebook;instagr
 title: Conexão com o Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
 workflow-type: tm+mt
-source-wordcount: '2091'
+source-wordcount: '2137'
 ht-degree: 6%
 
 ---
@@ -157,7 +157,15 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL 
 
 ### Atualizar credenciais de autenticação {#refresh-authentication-credentials}
 
-Os tokens do Facebook expiram a cada 60 dias. Quando o token expira, as exportações de dados para o destino param de funcionar. Para evitar essa situação, autentique novamente executando as seguintes etapas:
+Os tokens de autenticação do Facebook expiram a cada 60 dias. Quando o token expira, as exportações de dados para o destino param de funcionar.
+
+É possível monitorar as datas de expiração do token a partir da coluna **[!UICONTROL Data de expiração da conta]** nas guias **[!UICONTROL Contas]** ou **[!UICONTROL Procurar]**.
+
+![Coluna de data de expiração do token da conta do Facebook na guia Procurar](../../assets/catalog/social/facebook/account-expiration-browse.png)
+
+![Coluna de data de expiração do token da conta do Facebook na guia Contas](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+
+Para evitar que a expiração do token cause interrupções em seus fluxos de dados de ativação, reautentique executando as seguintes etapas:
 
 1. Navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Contas]**
 2. (Opcional) Use os filtros disponíveis na página para exibir somente contas do Facebook.

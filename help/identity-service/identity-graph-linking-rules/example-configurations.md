@@ -1,10 +1,10 @@
 ---
 title: Exemplos de configurações de gráfico
-description: Saiba mais sobre cenários de gráficos comuns que você pode encontrar ao trabalhar com regras de vinculação de gráficos de identidade e dados de identidade.
+description: Saiba mais sobre cenários de gráficos comuns que você pode encontrar ao trabalhar com Regras de vinculação de gráfico de identidade e dados de identidade.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '2849'
+source-wordcount: '2759'
 ht-degree: 6%
 
 ---
@@ -15,14 +15,6 @@ ht-degree: 6%
 >id="platform_identities_algorithmconfiguration"
 >title="Configuração do algoritmo"
 >abstract="Configure um namespace único e uma prioridade de namespace adaptados às suas identidades assimiladas."
-
->[!AVAILABILITY]
->
->As Regras de vinculação do gráfico de identidade estão atualmente em Disponibilidade limitada e podem ser acessadas por todos os clientes em sandboxes de desenvolvimento.
->
->* **Requisitos de ativação**: o recurso permanecerá inativo até que você configure e salve o [!DNL Identity Settings]. Sem essa configuração, o sistema continuará funcionando normalmente, sem alterações no comportamento.
->* **Observações importantes**: durante esta fase de Disponibilidade limitada, a segmentação do Edge pode produzir resultados inesperados de associação de segmento. No entanto, o streaming e a segmentação em lote funcionarão conforme esperado.
->* **Próximas etapas**: para obter informações sobre como habilitar este recurso em sandboxes de produção, contate a equipe de conta da Adobe.
 
 >[!NOTE]
 >
@@ -455,7 +447,7 @@ loginID: ID_C, ECID: 222
 CRMID: Tom, loginID: ID_D
 ```
 
->[!TAB LoginID &#39; &#39; pendente&#39;]
+>[!TAB  LoginID &#39;] &#39; pendente&#39;
 
 O gráfico a seguir simula um cenário de ID de logon &quot;pendente&quot;. Neste exemplo, duas IDs de logon diferentes são vinculadas à mesma ECID. No entanto, `{loginID:ID_C}` não está vinculado ao CRMID. Portanto, não há como o Serviço de identidade detectar que essas duas IDs de logon representam duas entidades diferentes.
 

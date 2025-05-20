@@ -1,23 +1,15 @@
 ---
-title: Guia de implementação para regras de vinculação do gráfico de identidade
-description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com configurações de regras de vinculação de gráfico de identidade.
+title: Guia De Implementação Para Regras De Vinculação Do Gráfico De Identidade
+description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com as configurações de Regras de vinculação do gráfico de identidade.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1958'
+source-wordcount: '1864'
 ht-degree: 6%
 
 ---
 
-# Guia de implementação para regras de vinculação do gráfico de identidade
-
->[!AVAILABILITY]
->
->As Regras de vinculação do gráfico de identidade estão atualmente em Disponibilidade limitada e podem ser acessadas por todos os clientes em sandboxes de desenvolvimento.
->
->* **Requisitos de ativação**: o recurso permanecerá inativo até que você configure e salve o [!DNL Identity Settings]. Sem essa configuração, o sistema continuará funcionando normalmente, sem alterações no comportamento.
->* **Observações importantes**: durante esta fase de Disponibilidade limitada, a segmentação do Edge pode produzir resultados inesperados de associação de segmento. No entanto, o streaming e a segmentação em lote funcionarão conforme esperado.
->* **Próximas etapas**: para obter informações sobre como habilitar este recurso em sandboxes de produção, contate a equipe de conta da Adobe.
+# Guia de implementação para [!DNL Identity Graph Linking Rules]
 
 >[!IMPORTANT]
 >
@@ -29,7 +21,7 @@ Estrutura passo a passo:
 
 1. [Pré-requisitos completos para a implementação](#prerequisites-for-implementation)
 2. [Criar os namespaces de identidade necessários](#namespace)
-3. [Use a ferramenta de simulação de gráficos para se familiarizar com o algoritmo de otimização de identidade](#graph-simulation)
+3. [Use a ferramenta de simulação de gráficos para se familiarizar com o Algoritmo de otimização de identidade](#graph-simulation)
 4. [Use a interface das configurações de identidade para designar seus namespaces exclusivos e configurar classificações de prioridade para seus namespaces](#identity-settings)
 5. [Criar um esquema do Experience Data Model (XDM)](#schema)
 6. [Criar um conjunto de dados](#dataset)
@@ -203,7 +195,7 @@ Se os dados exigirem, primeiro crie os namespaces apropriados para sua organiza�
 
 Em seguida, navegue até a [ferramenta de simulação de gráficos](./graph-simulation.md), no espaço de trabalho da interface do usuário do Serviço de Identidade. Você pode usar a ferramenta de simulação de gráficos para simular gráficos de identidade, criados com uma variedade de diferentes configurações de namespace único e prioridade de namespace.
 
-Ao criar configurações diferentes, você pode usar a ferramenta de simulação de gráficos para conhecer e entender melhor como o algoritmo de otimização de identidade e determinadas configurações podem afetar como seu gráfico se comporta.
+Ao criar diferentes configurações, você pode usar a ferramenta de simulação de gráficos para conhecer e entender melhor como o Algoritmo de otimização de identidade e determinadas configurações podem afetar o comportamento do gráfico.
 
 ## Definir configurações de identidade {#identity-settings}
 

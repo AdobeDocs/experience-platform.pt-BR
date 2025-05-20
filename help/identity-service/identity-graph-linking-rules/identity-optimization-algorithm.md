@@ -2,9 +2,9 @@
 title: Algoritmo de otimização de identidade
 description: Saiba mais sobre o Algoritmo de otimização de identidade no Serviço de identidade.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1527'
 ht-degree: 4%
 
 ---
@@ -16,19 +16,11 @@ ht-degree: 4%
 >title="Namespace único"
 >abstract="Um gráfico não pode ter duas identidades com um namespace único. Se um gráfico tentar exceder esse limite, os links mais recentes serão mantidos e os links mais antigos serão removidos."
 
->[!AVAILABILITY]
->
->As Regras de vinculação do gráfico de identidade estão atualmente em Disponibilidade limitada e podem ser acessadas por todos os clientes em sandboxes de desenvolvimento.
->
->* **Requisitos de ativação**: o recurso permanecerá inativo até que você configure e salve o [!DNL Identity Settings]. Sem essa configuração, o sistema continuará funcionando normalmente, sem alterações no comportamento.
->* **Observações importantes**: durante esta fase de Disponibilidade limitada, a segmentação do Edge pode produzir resultados inesperados de associação de segmento. No entanto, o streaming e a segmentação em lote funcionarão conforme esperado.
->* **Próximas etapas**: para obter informações sobre como habilitar este recurso em sandboxes de produção, contate a equipe de conta da Adobe.
-
-O algoritmo de otimização de identidade é um algoritmo de gráfico no Serviço de identidade que ajuda a garantir que um gráfico de identidade seja representativo de uma única pessoa e, portanto, impede a mesclagem indesejada de identidades no Perfil do cliente em tempo real.
+O Algoritmo de otimização de identidade é um algoritmo de gráfico no Serviço de identidade que ajuda a garantir que um gráfico de identidade seja representativo de uma única pessoa e, portanto, impede a mesclagem indesejada de identidades no Perfil do cliente em tempo real.
 
 ## Parâmetros de entrada {#input-parameters}
 
-Leia esta seção para obter informações sobre namespaces exclusivos e prioridade de namespace. Esses dois conceitos servem como parâmetros de entrada exigidos pelo algoritmo de otimização de identidade.
+Leia esta seção para obter informações sobre namespaces exclusivos e prioridade de namespace. Esses dois conceitos servem como parâmetros de entrada exigidos pelo Algoritmo de otimização de identidade.
 
 ### Namespace exclusivo {#unique-namespace}
 
@@ -36,7 +28,7 @@ Um namespace exclusivo determina os links que serão removidos se ocorrer o reco
 
 Um único perfil mesclado e seu gráfico de identidade correspondente devem representar um único indivíduo (entidade pessoa). Um único indivíduo geralmente é representado por CRMIDs e/ou IDs de logon. A expectativa é que dois indivíduos (CRMIDs) não sejam mesclados em um único perfil ou gráfico.
 
-Você deve especificar quais namespaces representam uma entidade de pessoa no Serviço de identidade usando o algoritmo de otimização de identidade. Por exemplo, se um banco de dados do CRM definir que uma conta de usuário seja associada a um único CRMID e um único endereço de email, as configurações de identidade para essa sandbox serão semelhantes a:
+Você deve especificar quais namespaces representam uma entidade de pessoa no Serviço de identidade usando o Algoritmo de otimização de identidade. Por exemplo, se um banco de dados do CRM definir que uma conta de usuário seja associada a um único CRMID e um único endereço de email, as configurações de identidade para essa sandbox serão semelhantes a:
 
 * Namespace CRMID = exclusivo
 * Namespace do email = exclusivo
@@ -61,14 +53,14 @@ Para uma análise detalhada da prioridade do namespace e de suas funcionalidades
 
 ## Processo {#process}
 
-Ao assimilar novas identidades, o Serviço de identidade verifica se as novas identidades e seus namespaces correspondentes seguem configurações de namespace exclusivas. Se as configurações forem seguidas, a assimilação continua e as novas identidades são vinculadas ao gráfico. No entanto, se as configurações não forem seguidas, o algoritmo de otimização de identidade:
+Ao assimilar novas identidades, o Serviço de identidade verifica se as novas identidades e seus namespaces correspondentes seguem configurações de namespace exclusivas. Se as configurações forem seguidas, a assimilação continua e as novas identidades são vinculadas ao gráfico. No entanto, se as configurações não forem seguidas, o Algoritmo de otimização de identidade:
 
 * Assimile o evento mais recente, ao mesmo tempo em que leva a prioridade do namespace em consideração.
 * Remova o link que mesclaria duas entidades de pessoa da camada de gráfico apropriada.
 
 ## Detalhes do algoritmo de otimização de identidade
 
-Quando a restrição de namespace exclusivo é violada, o algoritmo de otimização de identidade &quot;repetirá&quot; os links e recriará o gráfico do zero.
+Quando a restrição de namespace exclusivo é violada, o Algoritmo de otimização de identidade &quot;repetirá&quot; os links e reconstruirá o gráfico do zero.
 
 * Os links são classificados pela seguinte ordem:
    * Evento mais recente.
@@ -76,11 +68,11 @@ Quando a restrição de namespace exclusivo é violada, o algoritmo de otimizaç
 * O gráfico seria restabelecido com base na ordem acima. Se a adição do link violar a restrição de limite (por exemplo, o gráfico contiver duas ou mais identidades com um namespace exclusivo), os links serão removidos.
 * O gráfico resultante será compatível com a restrição de namespace exclusivo que você configurou.
 
-![Um diagrama que visualiza o algoritmo de otimização de identidade.](../images/ido_algorithm.png)
+![Um diagrama que visualiza o Algoritmo de Otimização de Identidade.](../images/ido_algorithm.png)
 
 ## Exemplos de cenários para o algoritmo de otimização de identidade
 
-A seção a seguir descreve como o algoritmo de otimização de identidade se comporta, em cenários como dispositivo compartilhado ou assimilação de dados com o mesmo carimbo de data e hora.
+A seção a seguir descreve como o Algoritmo de otimização de identidade se comporta, em cenários como dispositivo compartilhado ou assimilação de dados com o mesmo carimbo de data e hora.
 
 ### Dispositivo compartilhado
 
@@ -100,7 +92,7 @@ Neste exemplo, o CRMID e o Email são designados como namespaces exclusivos. Em 
 
 * `timestamp=1`: Jane faz logon em seu site de comércio eletrônico usando um laptop. Jane é representada pelo CRMID e pelo e-mail, enquanto o navegador da Web no laptop é representado por uma ECID.
 * `timestamp=2`: João faz logon no site de comércio eletrônico usando o mesmo laptop. John é representado por seu CRMID e Email, enquanto o navegador da Web que ele usou já é representado por um ECID. Devido ao mesmo ECID estar vinculado a dois gráficos diferentes, o Serviço de identidade pode saber que esse dispositivo (laptop) é um dispositivo compartilhado.
-* No entanto, devido à configuração exclusiva de namespace que define um máximo de um namespace CRMID e um namespace de email por gráfico, o algoritmo de otimização de identidade divide o gráfico em dois.
+* No entanto, devido à configuração exclusiva de namespace que define um máximo de um namespace CRMID e um namespace de email por gráfico, o Algoritmo de otimização de identidade divide o gráfico em dois.
    * Por fim, como John é o último usuário autenticado, a ECID que representa o laptop permanece vinculada ao seu gráfico, em vez de à de Jane.
 
 ![caso de dispositivo compartilhado um](../images/identity-settings/shared-device-case-one.png)
@@ -117,7 +109,7 @@ Neste exemplo, o namespace CRMID é designado como um namespace exclusivo.
 * `timestamp=1`: Jane faz logon em seu site de comércio eletrônico usando um laptop. Ela é representada por sua CRMID e o navegador da Web no laptop é representado pela ECID.
 * `timestamp=2`: João faz logon no site de comércio eletrônico usando o mesmo laptop. Ele é representado por sua CRMID e o navegador da Web que ele usa é representado pela mesma ECID.
    * Esse evento vincula dois CRMIDs independentes à mesma ECID, o que excede o limite configurado de um CRMID.
-   * Como resultado, o algoritmo de otimização de identidade remove o link mais antigo, que neste caso é o CRMID de Jane que estava vinculado em `timestamp=1`.
+   * Como resultado, o Algoritmo de otimização de identidade remove o link mais antigo, que neste caso é o CRMID de Jane que foi vinculado em `timestamp=1`.
    * No entanto, embora a CRMID da Jane não exista mais como um gráfico no Serviço de identidade, ela ainda persistirá como um perfil no Perfil do cliente em tempo real. Isso ocorre porque um gráfico de identidade deve conter pelo menos duas identidades vinculadas e, como resultado da remoção dos links, o CRMID da Jane não tem mais outra identidade para a qual vincular.
 
 ![caso-de-dispositivo-compartilhado-dois](../images/identity-settings/shared-device-case-two.png)
@@ -141,9 +133,9 @@ Neste exemplo, os namespaces CRMID e Email são designados como exclusivos. Cons
 * `timestamp=3`: Seu engenheiro de dados assimila o registro do CRM de Jane, o que resulta no link do CRMID dela para o email incorreto.
 * `timestamp=4`: seu engenheiro de dados assimila o registro CRM de John, o que resulta no link do CRMID dele para o email incorreto.
    * Isso se torna uma violação da configuração de namespace exclusivo, pois cria um único gráfico com dois namespaces CRMID.
-   * Como resultado, o algoritmo de otimização de identidade exclui o link mais antigo, que neste caso é o link entre a identidade de Jane com o namespace CRMID e a identidade com test<span>@test.
+   * Como resultado, o Algoritmo de otimização de identidade exclui o link mais antigo, que neste caso é o link entre a identidade de Jane com namespace CRMID e a identidade com test<span>@test.
 
-Com o algoritmo de otimização de identidade, valores de identidade inválidos, como emails falsos ou números de telefone, não são propagados por vários gráficos de identidade diferentes.
+Com o Algoritmo de otimização de identidade, valores de identidade inválidos, como emails falsos ou números de telefone, não são propagados por vários gráficos de identidade diferentes.
 
 ![email incorreto](../images/identity-settings/bad-email.png)
 

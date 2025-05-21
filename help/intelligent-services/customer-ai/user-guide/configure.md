@@ -255,4 +255,4 @@ O vídeo a seguir foi projetado para oferecer suporte à sua compreensão do flu
 >
 > O vídeo a seguir está desatualizado. Para obter as informações mais atualizadas, consulte a documentação.
 
->[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36603?learn=on&quality=12&captions=por_br)

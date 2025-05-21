@@ -5,9 +5,9 @@ feature: Customer AI
 title: Configurar uma instância da IA do cliente
 description: Os Serviços de IA/ML fornecem IA do cliente como um serviço da Adobe Sensei simples de usar que pode ser configurado para casos de uso diferentes. As seções a seguir fornecem etapas para configurar uma instância da IA do cliente.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2829'
+source-wordcount: '3092'
 ht-degree: 0%
 
 ---
@@ -23,13 +23,13 @@ Os Serviços de IA/ML fornecem IA do cliente como um serviço da Adobe Sensei si
 
 Na interface do usuário do Experience Platform, selecione **[!UICONTROL Serviços]** na navegação à esquerda. O navegador **[!UICONTROL Serviços]** é exibido e exibe todos os serviços disponíveis à sua disposição. No contêiner da IA do cliente, selecione **[!UICONTROL Abrir]**.
 
-![](../images/user-guide/navigate-to-service.png)
+![Navegue até o serviço IA do cliente na interface do usuário do Experience Platform.](../images/user-guide/navigate-to-service.png)
 
 A interface do usuário da **IA do cliente** é exibida e mostra todas as instâncias de serviço.
 
 - Você pode encontrar a métrica **[!UICONTROL Total de perfis pontuados]** localizada no lado inferior direito do contêiner **[!UICONTROL Criar instância]**. Essa métrica rastreia o número total de perfis pontuados pela IA do cliente no ano civil atual, incluindo todos os ambientes de sandbox e todas as instâncias de serviço excluídas.
 
-![](../images/user-guide/total-profiles.png)
+![Métrica de total de perfis pontuados na IA do cliente.](../images/user-guide/total-profiles.png)
 
 As instâncias de serviço podem ser editadas, clonadas e excluídas usando os controles no lado direito da interface. Para exibir esses controles, selecione uma instância de suas **[!UICONTROL Instâncias de serviço]** existentes. Os controles contêm o seguinte:
 
@@ -40,11 +40,11 @@ As instâncias de serviço podem ser editadas, clonadas e excluídas usando os c
 - **[!UICONTROL Detalhes da última execução]**: exibido somente quando uma execução falha. As informações sobre por que a execução falhou, como códigos de erro, são exibidas aqui.
 - **[!UICONTROL Definição de pontuação]**: uma visão geral rápida da meta que você configurou para esta instância.
 
-![](../images/user-guide/service-instance-panel.png)
+![Painel de instâncias de serviço na IA do cliente.](../images/user-guide/service-instance-panel.png)
 
 Para criar uma nova instância, selecione **[!UICONTROL Criar instância]**.
 
-![](../images/user-guide/dashboard.png)
+![Painel da IA do cliente mostrando uma visão geral das instâncias de serviço e seus status.](../images/user-guide/dashboard.png)
 
 ## Configuração
 
@@ -52,13 +52,13 @@ O fluxo de trabalho de criação da instância é exibido, iniciando na etapa **
 
 Abaixo estão informações importantes sobre valores que você deve fornecer à instância com:
 
-- **[!UICONTROL Nome]:** o nome da instância é usado em todos os locais onde as pontuações da IA do cliente são exibidas. Portanto, os nomes devem descrever o que as pontuações de previsão representam. Por exemplo, &quot;Probabilidade de cancelamento da assinatura de uma revista&quot;.
+-**[!UICONTROL Nome]:** o nome da instância é usado em todos os locais onde as pontuações da IA do Cliente são exibidas. Portanto, os nomes devem descrever o que as pontuações de previsão representam. Por exemplo, &quot;Probabilidade de cancelamento da assinatura de uma revista&quot;.
 
-- **[!UICONTROL Descrição]:** Uma descrição indicando o que você está tentando prever.
+-**[!UICONTROL Descrição]:** Uma descrição indicando o que você está tentando prever.
 
-- **[!UICONTROL Tipo de propensão]:** O tipo de propensão determina a intenção da pontuação e a polaridade da métrica. Você pode escolher **[!UICONTROL Churn]** ou **[!UICONTROL Conversão]**. Consulte a observação em [resumo de pontuação](./discover-insights.md#scoring-summary) no documento de descoberta de insights para obter mais informações sobre como o tipo de propensão afeta sua instância.
+-**[!UICONTROL Tipo de propensão]:** O tipo de propensão determina a intenção da pontuação e a polaridade da métrica. Você pode escolher **[!UICONTROL Churn]** ou **[!UICONTROL Conversão]**. Consulte a observação em [resumo de pontuação](./discover-insights.md#scoring-summary) no documento de descoberta de insights para obter mais informações sobre como o tipo de propensão afeta sua instância.
 
-![Tela de instalação](../images/user-guide/create-instance.png)
+![Tela de Instalação mostrando o fluxo de trabalho de criação de instância na IA do Cliente.](../images/user-guide/create-instance.png)
 
 Forneça os valores necessários e selecione **[!UICONTROL Avançar]** para continuar.
 
@@ -66,15 +66,15 @@ Forneça os valores necessários e selecione **[!UICONTROL Avançar]** para cont
 
 Por design, a IA do cliente usa Adobe Analytics, Adobe Audience Manager, Eventos de experiência em geral e dados de Eventos de experiência do consumidor para calcular as pontuações de propensão. Ao selecionar um conjunto de dados, somente os compatíveis com a IA do cliente são listados. Para selecionar um conjunto de dados, selecione o símbolo (**+**) ao lado do nome do conjunto de dados ou marque a caixa de seleção para adicionar vários conjuntos de dados de uma vez. Use a opção de pesquisa para encontrar rapidamente os conjuntos de dados em que você está interessado.
 
-![Selecionar e pesquisar pelo conjunto de dados](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
+![Tela de seleção do conjunto de dados mostrando a barra de pesquisa e as opções de salvar realçadas.](../images/user-guide/configure-dataset-page-save-and-exit-cai.png)
 
 Depois de selecionar os conjuntos de dados que deseja usar, clique no botão **[!UICONTROL Adicionar]** para adicionar os conjuntos de dados ao painel de visualização do conjunto de dados.
 
-![Selecionar conjuntos de dados](../images/user-guide/select-datasets.png)
+![Tela de seleção do conjunto de dados mostrando os conjuntos de dados selecionados no painel de visualização.](../images/user-guide/select-datasets.png)
 
 Selecionar o ícone de informações ![ícone de informações](/help/images/icons/info.png) ao lado do conjunto de dados abre o popover de visualização do conjunto de dados.
 
-![Selecionar e pesquisar pelo conjunto de dados](../images/user-guide/dataset-info.png)
+![Tela de seleção do conjunto de dados mostrando a barra de pesquisa e as informações do conjunto de dados.](../images/user-guide/dataset-info.png)
 
 A visualização do conjunto de dados contém dados como o tempo da última atualização, o esquema de origem e uma visualização das primeiras dez colunas.
 
@@ -90,13 +90,13 @@ Há um valor percentual de integridade do conjunto de dados na visualização do
 >
 >A integridade do conjunto de dados é calculada usando a janela máxima de treinamento para a IA do cliente (um ano). Isso significa que os dados com mais de um ano não são considerados ao exibir o valor de integridade do conjunto de dados.
 
-![Integridade do conjunto de dados](../images/user-guide/dataset-info-2.png)
+![Integridade do conjunto de dados mostrando uma visualização do conjunto de dados com porcentagem de integridade destacada.](../images/user-guide/dataset-info-2.png)
 
 ### Selecionar uma identidade {#identity}
 
 Agora é possível unir vários conjuntos de dados uns aos outros com base no mapa de identidade (campo). Você deve selecionar um tipo de identidade (também conhecido como &quot;namespace de identidade&quot;) e um valor de identidade dentro desse namespace. Se você tiver atribuído mais de um campo como uma identidade no esquema no mesmo namespace, todos os valores de identidade atribuídos aparecerão na lista suspensa de identidades anexada ao namespace, como `EMAIL (personalEmail.address)` ou `EMAIL (workEmail.address)`.
 
-[selecionar o mesmo namespace](../images/user-guide/cai-identity-map.png)
+![Tela de seleção do mapa de identidade mostrando o mesmo namespace sendo selecionado para vários conjuntos de dados.](../images/user-guide/cai-identity-map.png)
 
 >[!IMPORTANT]
 >
@@ -104,12 +104,11 @@ Agora é possível unir vários conjuntos de dados uns aos outros com base no ma
 
 Para selecionar uma identidade, selecione o valor sublinhado localizado na coluna de identidade. O popover Selecionar uma identidade é exibido.
 
-<!-- ![select same namespace](../images/user-guide/identity-type.png) -->
-[selecionar o mesmo namespace](../images/user-guide/cai-identity-namespace.png)
+![Tela de seleção do mapa de identidade mostrando o mesmo namespace sendo selecionado para vários conjuntos de dados.](../images/user-guide/cai-identity-namespace.png)
 
 Caso haja mais de uma identidade disponível em um namespace, selecione o campo de identidade correto para seu caso de uso. Por exemplo, duas identidades de email estão disponíveis no namespace de email: um email comercial e pessoal. Dependendo do caso de uso, um email pessoal tem mais probabilidade de ser preenchido e ser mais útil em previsões individuais. Isso significa que `EMAIL (personalEmail.address)` seria selecionado como a identidade.
 
-![Chave do conjunto de dados não selecionada](../images/user-guide/select-identity.png)
+![Um exemplo mostrando uma chave de conjunto de dados não selecionada na tela de seleção do mapa de identidade.](../images/user-guide/select-identity.png)
 
 >[!NOTE]
 >
@@ -117,14 +116,11 @@ Caso haja mais de uma identidade disponível em um namespace, selecione o campo 
 
 ## Definir meta {#define-a-goal}
 
-<!-- https://www.adobe.com/go/cai-define-a-goal -->
-
 A etapa **[!UICONTROL Definir meta]** é exibida e fornece um ambiente interativo para que você defina visualmente uma meta de previsão. Uma meta é composta por um ou mais eventos, em que a ocorrência de cada evento é baseada na condição que mantém. O objetivo de uma instância da IA do cliente é determinar a probabilidade de atingir sua meta em um determinado período de tempo.
 
 Para criar uma meta, selecione **[!UICONTROL Inserir Nome do Campo]** e, em seguida, um campo da lista suspensa. Selecione a segunda entrada, uma cláusula para a condição do evento e, opcionalmente, forneça o valor de destino para concluir o evento. Eventos adicionais podem ser configurados selecionando **[!UICONTROL Adicionar evento]**. Por fim, complete a meta aplicando um período de tempo de previsão em número de dias e selecione **[!UICONTROL Próximo]**.
 
-<!-- ![](../images/user-guide/define-a-goal.png) -->
-![](../images/user-guide/cai-define-a-goal.png)
+![Defina a etapa da meta na IA do cliente mostrando o ambiente interativo para definir uma meta de previsão.](../images/user-guide/cai-define-a-goal.png)
 
 ### Ocorrerá e não ocorrerá
 
@@ -133,13 +129,13 @@ Ao definir sua meta, você tem a opção de selecionar **[!UICONTROL Ocorrerá]*
 Por exemplo, se você deseja configurar um aplicativo para prever se um cliente fará uma compra, você pode selecionar **[!UICONTROL Ocorrerá]** seguido de **[!UICONTROL Todos de]** e inserir **commerce.purchases.id** (ou um campo semelhante) e **[!UICONTROL existe]** como operador.
 
 <!-- ![will occur](../images/user-guide/occur.png) -->
-![ocorrerá](../images/user-guide/cai-will-occur.png)
+![Um exemplo mostrando a configuração de uma meta em que um evento ocorrerá.](../images/user-guide/cai-will-occur.png)
 
 No entanto, pode haver casos em que você esteja interessado em prever se algum evento não ocorrerá em um determinado período. Para configurar uma meta com esta opção, selecione **[!UICONTROL Não ocorrerá]** na lista suspensa de nível superior.
 
 Por exemplo, se você estiver interessado em prever quais clientes se tornam menos engajados e não visitar a página de logon da conta no mês seguinte. Selecione **[!UICONTROL Não ocorrerá]** seguido por **[!UICONTROL Todos de]** e insira **web.webInteraction.URL** (ou um campo semelhante) e **[!UICONTROL é igual]** como o operador com **account-login** como o valor.
 
-![não ocorrerá](../images/user-guide/not-occur.png)
+![Um exemplo mostrando a configuração de uma meta em que um evento não ocorrerá.](../images/user-guide/not-occur.png)
 
 ### Todos os e qualquer um de
 
@@ -147,19 +143,19 @@ Em alguns casos, você pode querer prever se uma combinação de eventos ocorrer
 
 Por exemplo, você pode querer prever se um cliente compra um produto específico. Esta meta de previsão é definida por duas condições: a `commerce.order.purchaseID` **existe** e a `productListItems.SKU` **é igual** a algum valor específico.
 
-![Todos do exemplo](../images/user-guide/all-of.png)
+![Um exemplo mostrando a configuração de uma meta em que todas as condições devem ser atendidas.](../images/user-guide/all-of.png)
 
 Para prever se um cliente terá algum evento de um determinado conjunto, você pode usar a opção **[!UICONTROL Qualquer um de]**.
 
 Por exemplo, você pode querer prever se um cliente visita um determinado URL ou uma página da Web com um nome específico. Esta meta de previsão é definida por duas condições: `web.webPageDetails.URL` **começa com** um determinado valor e `web.webPageDetails.name` **começa com** um determinado valor.
 
-![Qualquer um dos exemplos](../images/user-guide/any-of.png)
+![Um exemplo mostrando a configuração de uma meta em que qualquer condição pode ser atendida.](../images/user-guide/any-of.png)
 
 ### População qualificada *(opcional)*
 
 Por padrão, as pontuações de propensão são geradas para todos os perfis, a menos que uma população qualificada seja especificada. Você pode especificar uma população elegível definindo condições para incluir ou excluir perfis com base em eventos.
 
-![população qualificada](../images/user-guide/eligible-population.png)
+![Um exemplo mostrando a configuração de uma população qualificada na IA do cliente.](../images/user-guide/eligible-population.png)
 
 ### Eventos personalizados (*opcional*) {#custom-events}
 
@@ -169,19 +165,19 @@ Se você tiver informações adicionais além dos [campos de evento padrão](../
 >
 > Para obter uma explicação detalhada sobre como os eventos personalizados afetam os resultados de pontuação da IA do cliente, visite a seção [Exemplo de evento personalizado](#custom-event).
 
-![recurso de evento](../images/user-guide/event-feature.png)
+![Um exemplo mostrando a configuração de um recurso de evento na IA do cliente.](../images/user-guide/event-feature.png)
 
 Para adicionar um evento personalizado, selecione **[!UICONTROL Adicionar evento personalizado]**. Em seguida, insira um nome de evento personalizado e mapeie-o para o campo de evento no esquema. Os nomes de eventos personalizados são exibidos no lugar do valor dos campos ao observar fatores influentes e outros insights. Isso significa que o nome do evento personalizado será usado em vez da ID/valor do evento. Para obter mais informações sobre como os eventos personalizados são exibidos, consulte a [seção de exemplo de evento personalizado](#custom-event). Esses eventos personalizados adicionais são usados pela IA do cliente para melhorar a qualidade do seu modelo e fornecer resultados mais precisos.
 
-![Campo Evento personalizado](../images/user-guide/custom-event.png)
+![Um exemplo mostrando a configuração de um campo de evento personalizado na IA do cliente.](../images/user-guide/custom-event.png)
 
 Em seguida, selecione o operador que deseja usar no menu suspenso de operadores disponíveis. Somente os operadores compatíveis com o evento são listados.
 
-![Operador de Evento Personalizado](../images/user-guide/custom-operator.png)
+![Um exemplo mostrando os operadores disponíveis para configurar um evento personalizado na IA do cliente.](../images/user-guide/custom-operator.png)
 
 Por fim, insira os valores do campo se o operador selecionado exigir um. Neste exemplo, só precisamos ver se existe uma reserva de hotel ou restaurante. No entanto, se quisermos ser mais exatos, podemos usar o operador equals e inserir um valor exato no prompt de valor.
 
-![Valor do campo Evento personalizado](../images/user-guide/custom-value.png)
+![Um exemplo mostrando a configuração de um valor de campo de evento personalizado na IA do cliente.](../images/user-guide/custom-value.png)
 
 Depois de concluído, selecione **[!UICONTROL Próximo]** no canto superior direito para continuar.
 
@@ -193,7 +189,7 @@ Você pode definir campos importantes do conjunto de dados do Perfil (com carimb
 >
 >A adição de um atributo de perfil personalizado segue o mesmo fluxo de trabalho que a adição de um evento personalizado. Semelhante aos eventos personalizados, os atributos de perfil personalizados afetam a pontuação do modelo da mesma forma. Para uma explicação detalhada, visite a seção [Exemplo de evento personalizado](#custom-event).
 
-![adicionar um atributo de perfil personalizado](../images/user-guide/profile-attributes.png)
+![Um exemplo mostrando a configuração de um atributo de perfil personalizado na IA do cliente.](../images/user-guide/profile-attributes.png)
 
 #### Selecione atributos de perfil na exportação de instantâneos do perfil
 
@@ -209,7 +205,7 @@ No exemplo a seguir, um evento personalizado e um atributo de perfil são adicio
 
 A IA do cliente aplica automaticamente a geração de recursos como &quot;Dias desde&quot; ou &quot;Contagens de&quot; em relação a eventos personalizados como **Assistir à compra**. Se esse evento foi considerado um fator influente no motivo pelo qual os clientes têm alta, média ou baixa propensão, a IA do cliente o exibe como `Days since prd1013 purchase` ou `Count of prd1013 purchase`. Ao criar esse evento como um evento personalizado, você pode dar ao evento um novo nome, tornando os resultados muito mais fáceis de ler. Por exemplo, `Days since Watch purchase`. Além disso, a IA do cliente usa esse evento em seu treinamento e pontuação, mesmo que o evento não seja um evento padrão. Isso significa que é possível adicionar vários eventos que você acha que podem ser influentes e personalizar ainda mais seu modelo, incluindo dados como reservas, registros de visitantes e outros eventos. Adicionar esses pontos de dados aumenta ainda mais a precisão do modelo de IA do cliente.
 
-![exemplo de um evento personalizado](../images/user-guide/custom-event-name.png)
+![Um exemplo mostrando a configuração de um evento personalizado com um nome definido pelo usuário na IA do cliente.](../images/user-guide/custom-event-name.png)
 
 ## Definir opções
 
@@ -219,7 +215,7 @@ A etapa Definir opções permite configurar um agendamento para automatizar exec
 
 Para definir um agendamento de pontuação, comece configurando a **[!UICONTROL Frequência de Pontuação]**. As execuções de previsão automatizadas podem ser programadas para serem executadas semanal ou mensalmente.
 
-![](../images/user-guide/schedule.png)
+![Um exemplo mostrando as opções de configuração de agendamento de pontuação na IA do cliente.](../images/user-guide/schedule.png)
 
 ### Exclusões de previsão *(opcional)*
 
@@ -227,7 +223,7 @@ Se o conjunto de dados continha colunas adicionadas como dados de teste, é poss
 
 Para excluir um evento, selecione **[!UICONTROL Adicionar exclusão]** e defina o evento. Para remover uma exclusão, selecione as reticências (**[!UICONTROL ...]**) no canto superior direito do contêiner de evento e selecione **[!UICONTROL Remover Contêiner]**.
 
-![](../images/user-guide/exclusion.png)
+![Um exemplo mostrando a configuração das exclusões de previsão na IA do cliente.](../images/user-guide/exclusion.png)
 
 ### Alternar perfil
 
@@ -235,7 +231,7 @@ A opção de Perfil permite que a IA do cliente exporte os resultados da pontua�
 
 Ao usar a IA do cliente pela primeira vez, é possível desativar esse recurso até que você esteja satisfeito com os resultados de saída do modelo. Isso impede que você faça upload de vários conjuntos de dados de pontuação para seus Perfis de cliente enquanto ajusta o modelo. Após concluir a calibração do modelo, você pode cloná-lo usando a [opção de clonagem](#set-up-your-instance) da página **Instâncias de serviço**. Isso permite criar uma cópia do modelo e alternar o perfil no.
 
-![Alternância de perfil](../images/user-guide/advanced-workflow-save.png)
+![Um exemplo mostrando a opção de alternância Perfil no fluxo de trabalho avançado da IA do cliente.](../images/user-guide/advanced-workflow-save.png)
 
 Depois de definir seu cronograma de pontuação, incluir exclusões de previsão e alternar o perfil para onde você deseja que esteja, selecione **[!UICONTROL Concluir]** no canto superior direito para criar sua instância da IA do cliente.
 
@@ -259,6 +255,4 @@ O vídeo a seguir foi projetado para oferecer suporte à sua compreensão do flu
 >
 > O vídeo a seguir está desatualizado. Para obter as informações mais atualizadas, consulte a documentação.
 
->[!VIDEO](https://video.tv.adobe.com/v/36603?learn=on&quality=12&captions=por_br)
-
-<!-- comment -->
+>[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)

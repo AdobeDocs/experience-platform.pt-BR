@@ -6,9 +6,9 @@ title: Solução de problemas de erro do Customer AI
 description: Encontre respostas para erros comuns na IA do cliente.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 32c1affecb4cf58412eb91fd90e1a13f4bc43541
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1780'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 A IA do cliente exibe erros quando o treinamento do modelo, a pontuação e a configuração falham. Na seção **[!UICONTROL Instâncias de serviço]**, uma coluna para **[!UICONTROL STATUS DA ÚLTIMA EXECUÇÃO]** exibe uma das seguintes mensagens: **[!UICONTROL Êxito]**, **[!UICONTROL Problema de treinamento]** e **[!UICONTROL Falha]**.
 
-![status da última execução](./images/errors/last-run-status.png)
+![Status da última execução mostrando êxito, problema de treinamento ou falha.](./images/errors/last-run-status.png)
 
 Caso **[!UICONTROL Falha]** ou **[!UICONTROL Problema de treinamento]** seja exibido, você pode selecionar o status de execução para abrir um painel lateral. O painel lateral contém o **[!UICONTROL status da última execução]** e os **[!UICONTROL detalhes da última execução]**. **[!UICONTROL Detalhes da última execução]** contém informações sobre o motivo da falha na execução. Caso a IA do cliente não possa fornecer detalhes sobre o erro, entre em contato com o suporte com o código de erro fornecido.
 
@@ -27,13 +27,13 @@ Caso **[!UICONTROL Falha]** ou **[!UICONTROL Problema de treinamento]** seja exi
 
 Erros de carregamento no modo incógnito do Google Chrome estão presentes devido a atualizações nas configurações de segurança do modo incógnito do Google Chrome. O problema está sendo ativamente trabalhada com a Chrome para tornar experience.adobe.com um domínio confiável.
 
-![Imagem de erro](./images/errors/error.PNG){width=500}
+![Imagem de erro mostrando um exemplo de mensagem de erro da IA do cliente.](./images/errors/error.PNG){width=500}
 
 ### Correção recomendada
 
 Para contornar esse problema, é necessário adicionar experience.adobe.com como um site que sempre pode usar cookies. Comece navegando até **chrome://settings/cookies**. Em seguida, role para baixo até a seção **Comportamentos personalizados**, seguida pelo botão **Adicionar** ao lado de &quot;sites que sempre podem usar cookies&quot;. Na janela pop-up exibida, copie e cole `[*.]experience.adobe.com` e marque a caixa de seleção **Incluir cookies de terceiros** neste site. Depois de concluído, selecione **Adicionar** e recarregue a IA do cliente em incógnito.
 
-![correção recomendada](./images/errors/cookies2.gif)
+![Animação mostrando as etapas para adicionar o site experience.adobe.com como um site que sempre pode usar cookies nas configurações do Chrome.](./images/errors/cookies2.gif)
 
 ## A qualidade do modelo é ruim
 

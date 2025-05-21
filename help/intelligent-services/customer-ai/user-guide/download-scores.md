@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;baixar pontuações;ia do cliente;tópicos populares;Exportar;exportar;download de ia do cliente;pontuações de ia do cliente
+keywords: Experience Platform;pontuações de download;ia do cliente;tópicos populares;Exportar;exportação;download de ia do cliente;pontuações de ia do cliente
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Baixar pontuações na IA do cliente
 description: A IA do cliente permite baixar pontuações no formato de arquivo Parquet.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '987'
 ht-degree: 3%
 
 ---
@@ -31,11 +31,11 @@ Atualmente, há duas maneiras de baixar as pontuações da IA do cliente:
 
 Na instância do serviço para obter insights da IA do cliente, clique na lista suspensa *Mais ações* na navegação no canto superior direito e selecione **[!UICONTROL Pontuações de acesso]**.
 
-![mais ações](../images/insights/more-actions.png)
+![Menu suspenso de mais ações mostrando a opção &quot;Pontuações de acesso&quot;.](../images/insights/more-actions.png)
 
 Uma nova caixa de diálogo é exibida, contendo um link para a documentação de pontuações de download e a ID do conjunto de dados para sua instância atual. Copie a ID do conjunto de dados para a área de transferência e prossiga para a próxima etapa.
 
-![ID do conjunto de dados](../images/download-scores/access-scores.png)
+![Caixa de diálogo Pontuações de Acesso mostrando a ID do conjunto de dados da instância atual.](../images/download-scores/access-scores.png)
 
 ## Recuperar a ID do lote {#retrieve-your-batch-id}
 
@@ -236,7 +236,6 @@ A resposta contém uma matriz de dados que pode ter uma única entrada ou uma li
 | --------- | ----------- |
 | `_links.self.href` | O URL de solicitação GET usado para baixar um arquivo no diretório. |
 
-
 Copie o valor `href` para qualquer objeto de arquivo na matriz `data` e prossiga para a próxima etapa.
 
 ## Baixar os dados do arquivo
@@ -277,7 +276,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 A resposta baixa o arquivo solicitado no seu diretório atual. Neste exemplo, o nome do arquivo é &quot;filename.parquet&quot;.
 
-![Terminal](../images/download-scores/response.png)
+![Exemplo de resposta de terminal mostrando uma chamada de API bem-sucedida.](../images/download-scores/response.png)
 
 ## Baixar um segmento configurado com a IA do cliente {#segment}
 

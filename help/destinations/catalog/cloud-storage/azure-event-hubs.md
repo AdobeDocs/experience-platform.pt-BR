@@ -4,9 +4,9 @@ title: Conexão do Azure Event Hubs
 description: Crie uma conexão de saída em tempo real com o armazenamento do  [!DNL Azure Event Hubs]  para transmitir dados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
 workflow-type: tm+mt
-source-wordcount: '2088'
+source-wordcount: '2084'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 [!DNL Azure Event Hubs] é uma plataforma de transmissão de big data e um serviço de assimilação de eventos. Ele pode receber e processar milhões de eventos por segundo. Os dados enviados para um hub de eventos podem ser transformados e armazenados usando qualquer provedor de análise em tempo real ou adaptadores de armazenamento/agrupamento.
 
@@ -147,7 +147,7 @@ Com relação aos dados exportados para um determinado perfil, é importante ent
 
 | O que determina uma exportação de destino | O que está incluído na exportação de destino |
 |---------|----------|
-| <ul><li>Atributos e públicos mapeados servem como indicação para uma exportação de destino. Isso significa que se qualquer público mapeado alterar os estados (de `null` para `realized` ou de `realized` para `exiting`) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como atualmente as identidades não podem ser mapeadas para [!DNL Azure Event Hubs] destinos, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração em um atributo é definida como qualquer atualização no atributo, seja ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração, mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>O objeto `segmentMembership` inclui o público mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou de saída de público. Observe que outros públicos não mapeados para os quais o perfil se qualificou podem fazer parte da exportação de destino, se esses públicos pertencerem à mesma [política de mesclagem](/help/profile/merge-policies/overview.md) que o público mapeado no fluxo de dados de ativação. </li><li>Todas as identidades no objeto `identityMap` também estão incluídas (no momento, o Experience Platform não oferece suporte ao mapeamento de identidade no destino [!DNL Azure Event Hubs]).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
+| <ul><li>Atributos e segmentos mapeados servem como dica para uma exportação de destino. Isso significa que se o status `segmentMembership` de um perfil for alterado para `realized` ou `exiting` ou qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como atualmente as identidades não podem ser mapeadas para [!DNL Azure Event Hubs] destinos, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração em um atributo é definida como qualquer atualização no atributo, seja ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração, mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>O objeto `segmentMembership` inclui o segmento mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou saída de segmento. Observe que outros segmentos não mapeados para os quais o perfil se qualificou podem fazer parte da exportação de destino, se esses segmentos pertencerem à mesma [política de mesclagem](/help/profile/merge-policies/overview.md) que o segmento mapeado no fluxo de dados de ativação. </li><li>Todas as identidades no objeto `identityMap` também estão incluídas (no momento, o Experience Platform não oferece suporte ao mapeamento de identidade no destino [!DNL Azure Event Hubs]).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
 
 {style="table-layout:fixed"}
 

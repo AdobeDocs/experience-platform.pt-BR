@@ -1,10 +1,10 @@
 ---
 title: Comportamento de exportação de perfil
-description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos Experience Platform.
+description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos do Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 6c2d10cffa30d9feb4d342014ea1b712094bb673
+source-git-commit: ede6f3ed4518babddb537a62cdb16915e2d37310
 workflow-type: tm+mt
-source-wordcount: '2939'
+source-wordcount: '2935'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Há vários tipos de destino no Experience Platform, conforme mostrado no diagra
 
 Antes de mergulhar em informações específicas por tipo de destino, é importante entender o conceito de agregação de mensagens para *destinos de streaming*.
 
-Os destinos Experience Platform exportam dados para integrações baseadas em API, como chamadas HTTPS. Assim que o serviço de destinos for notificado por outros serviços upstream de que os perfis foram atualizados como resultado da assimilação em lote, assimilação por streaming, segmentação em lote, segmentação por streaming ou alterações no gráfico de identidade, os dados serão exportados e enviados para destinos de streaming.
+Os destinos do Experience Platform exportam dados para integrações baseadas em API, como chamadas HTTPS. Assim que o serviço de destinos for notificado por outros serviços upstream de que os perfis foram atualizados como resultado da assimilação em lote, assimilação por streaming, segmentação em lote, segmentação por streaming ou alterações no gráfico de identidade, os dados serão exportados e enviados para destinos de streaming.
 
 Os perfis são agregados em mensagens HTTPS antes de serem despachados para endpoints da API de destino.
 
@@ -32,9 +32,9 @@ Pegue o [destino do Facebook](/help/destinations/catalog/social/facebook.md) com
 * Número de registros (máximo de 10.000) ou
 * Intervalo da janela de tempo (300 segundos)
 
-Qualquer que seja o limite acima atingido primeiro aciona uma exportação para o Facebook. Assim, no painel [!DNL Facebook Custom Audiences], você pode ver públicos-alvo vindos do Experience Platform em incrementos de 10.000 registros. Você pode estar vendo 10.000 registros a cada 2-3 minutos porque os dados são processados e agregados mais rapidamente do que o intervalo de exportação de 300 segundos e são enviados mais rapidamente, portanto, aproximadamente a cada 2-3 minutos até que todos os registros tenham sido processados. Se não houver registros suficientes para compor um lote de 10.000, o número atual de registros será enviado como está quando o limite da janela de tempo for atingido, portanto, você também poderá ver lotes menores enviados para o Facebook.
+Qualquer que seja o limite acima atingido primeiro aciona uma exportação para o Facebook. Portanto, no painel [!DNL Facebook Custom Audiences], você pode ver públicos-alvo vindos do Experience Platform em incrementos de 10.000 registros. Você pode estar vendo 10.000 registros a cada 2-3 minutos porque os dados são processados e agregados mais rapidamente do que o intervalo de exportação de 300 segundos e são enviados mais rapidamente, portanto, aproximadamente a cada 2-3 minutos até que todos os registros tenham sido processados. Se não houver registros suficientes para compor um lote de 10.000, o número atual de registros será enviado como está quando o limite da janela de tempo for atingido, portanto, você também pode ver lotes menores enviados para o Facebook.
 
-Como outro exemplo, considere o [destino da API HTTP](/help/destinations/catalog/streaming/http-destination.md), que tem uma política de *[agregação de melhor esforço](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*, com `maxUsersPerRequest: 10`. Isso significa que no máximo dez perfis serão agregados antes que uma chamada HTTP seja disparada para esse destino, mas o Experience Platform tenta despachar perfis para o destino assim que o serviço de destinos recebe informações de reavaliação atualizadas de um serviço upstream.
+Como outro exemplo, considere o [destino da API HTTP](/help/destinations/catalog/streaming/http-destination.md), que tem uma política de *[agregação de melhor esforço](../destination-sdk/functionality/destination-configuration/aggregation-policy.md)*, com `maxUsersPerRequest: 10`. Isso significa que no máximo dez perfis serão agregados antes que uma chamada HTTP seja disparada para esse destino, mas o Experience Platform tenta despachar perfis para o destino assim que o serviço de destinos receber informações de reavaliação atualizadas de um serviço upstream.
 
 A política de agregação é configurável e os desenvolvedores de destino podem decidir como configurar a política de agregação para melhor atender às limitações de taxa dos endpoints da API downstream. Leia mais sobre [política de agregação](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) na documentação do Destination SDK.
 
@@ -42,9 +42,9 @@ A política de agregação é configurável e os desenvolvedores de destino pode
 
 >[!IMPORTANT]
 >
-> Os destinos corporativos estão disponíveis somente para clientes do [Adobe Real-time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Os destinos corporativos estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
-Os [destinos da empresa](/help/destinations/destination-types.md#advanced-enterprise-destinations) no Experience Platform são Amazon Kinesis, Hubs de Eventos do Azure e API HTTP.
+Os [destinos corporativos](/help/destinations/destination-types.md#advanced-enterprise-destinations) no Experience Platform são Amazon Kinesis, Hubs de Eventos do Azure e API HTTP.
 
 O Experience Platform otimiza o comportamento de exportação de perfis para o destino da sua empresa, a fim de exportar dados somente para o endpoint da API quando atualizações relevantes para um perfil tiverem ocorrido após a qualificação de público-alvo ou outros eventos significativos. Os perfis são exportados para seu destino nas seguintes situações:
 
@@ -62,7 +62,7 @@ Com relação aos dados exportados para um determinado perfil, é importante ent
 
 | O que determina uma exportação de destino | O que está incluído na exportação de destino |
 |---------|----------|
-| <ul><li>Atributos e públicos mapeados servem como indicação para uma exportação de destino. Isso significa que se qualquer público mapeado alterar os estados (de `null` para `realized` ou de `realized` para `exiting`) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas para destinos corporativos no momento, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração em um atributo é definida como qualquer atualização no atributo, seja ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração, mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>O objeto `segmentMembership` inclui o público mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou de saída de público. Observe que outros públicos não mapeados para os quais o perfil se qualificou podem fazer parte da exportação de destino, se esses públicos pertencerem à mesma [política de mesclagem](/help/profile/merge-policies/overview.md) que o público mapeado no fluxo de dados de ativação. </li><li>Todas as identidades no objeto `identityMap` também estão incluídas (no momento, o Experience Platform não oferece suporte ao mapeamento de identidade no destino da empresa).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
+| <ul><li>Atributos e segmentos mapeados servem como dica para uma exportação de destino. Isso significa que se o status `segmentMembership` de um perfil for alterado para `realized` ou `exiting` ou qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas para destinos corporativos no momento, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração em um atributo é definida como qualquer atualização no atributo, seja ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração, mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>O objeto `segmentMembership` inclui o segmento mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou saída de segmento. Observe que outros segmentos não mapeados para os quais o perfil se qualificou podem fazer parte da exportação de destino, se esses segmentos pertencerem à mesma [política de mesclagem](/help/profile/merge-policies/overview.md) que o segmento mapeado no fluxo de dados de ativação. </li><li>Todas as identidades no objeto `identityMap` também estão incluídas (no momento, o Experience Platform não oferece suporte ao mapeamento de identidades no destino da empresa).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -84,7 +84,7 @@ Do ponto de vista dos atributos de perfil, qualquer alteração nos quatro atrib
 
 >[!TIP]
 >
-> Você pode ver exemplos de dados exportados para vários destinos da empresa nas páginas de documentação de destino do [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md#exported-data), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#exported-data) e [HTTP API](/help/destinations/catalog/streaming/http-destination.md#exported-data).
+> Você pode ver exemplos de dados exportados para vários destinos da empresa nas páginas de documentação de destino do [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md#exported-data), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#exported-data) e [API HTTP](/help/destinations/catalog/streaming/http-destination.md#exported-data).
 
 ## Destinos baseados em API de streaming {#streaming-api-based-destinations}
 
@@ -92,7 +92,7 @@ O comportamento de exportação de perfil para destinos de transmissão, como Fa
 
 Exemplos de destinos de transmissão são os destinos pertencentes às [categorias sociais e de publicidade](/help/destinations/destination-types.md#categories) no catálogo.
 
-O Experience Platform otimiza o comportamento de exportação de perfil para seu destino de streaming, para exportar dados somente para destinos baseados em API de streaming quando atualizações relevantes para um perfil tiverem ocorrido após a qualificação de público-alvo ou outros eventos significativos. Os perfis são exportados para seu destino nas seguintes situações:
+O Experience Platform otimiza o comportamento de exportação de perfil para seu destino de streaming, a fim de exportar dados somente para destinos baseados em API de streaming quando atualizações relevantes para um perfil tiverem ocorrido após a qualificação de público-alvo ou outros eventos significativos. Os perfis são exportados para seu destino nas seguintes situações:
 
 * A atualização do perfil foi determinada por uma alteração na [associação de público](/help/xdm/field-groups/profile/segmentation.md) para pelo menos um dos públicos mapeados para o destino. Por exemplo, o perfil se qualificou para um dos públicos mapeados para o destino ou saiu de um dos públicos mapeados para o destino.
 * A atualização do perfil foi determinada por uma alteração no [mapa de identidade](/help/xdm/field-groups/profile/identitymap.md) para um namespace de identidade que está marcado para exportação para esta instância de destino. Por exemplo, um perfil que já se qualificou para um dos públicos-alvo mapeados para o destino recebeu uma nova identidade no atributo de mapa de identidade.
@@ -109,7 +109,7 @@ Em relação aos dados exportados para um determinado perfil, é importante ente
 
 | O que determina uma exportação de destino | O que está incluído na exportação de destino |
 |---------|----------|
-| <ul><li>Atributos e públicos mapeados servem como indicação para uma exportação de destino. Isso significa que se qualquer público mapeado alterar os estados (de `null` para `realized` ou de `realized` para `exiting`) ou se qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Uma alteração no mapa de identidade é definida como uma identidade adicionada/removida para o [gráfico de identidade](/help/identity-service/features/identity-graph-viewer.md) do perfil, para namespaces de identidade mapeados para exportação.</li><li>Uma alteração em um atributo é definida como qualquer atualização no atributo, para atributos que são mapeados para o destino.</li></ul> | <ul><li>Os públicos mapeados para o destino e alterados serão incluídos no objeto `segmentMembership`. Em alguns cenários, eles podem ser exportados usando várias chamadas. Além disso, em alguns cenários, alguns públicos que não foram alterados também podem ser incluídos na chamada do. Em qualquer caso, somente os públicos-alvo mapeados serão exportados.</li><li>Todas as identidades dos namespaces que estão mapeadas para o destino no objeto `identityMap` também estão incluídas.</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
+| <ul><li>Atributos e segmentos mapeados servem como dica para uma exportação de destino. Isso significa que se o status `segmentMembership` de um perfil for alterado para `realized` ou `exiting` ou qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Uma alteração no mapa de identidade é definida como uma identidade adicionada/removida para o [gráfico de identidade](/help/identity-service/features/identity-graph-viewer.md) do perfil, para namespaces de identidade mapeados para exportação.</li><li>Uma alteração em um atributo é definida como qualquer atualização no atributo, para atributos que são mapeados para o destino.</li></ul> | <ul><li>Os segmentos mapeados para o destino e alterados serão incluídos no objeto `segmentMembership`. Em alguns cenários, eles podem ser exportados usando várias chamadas. Além disso, em alguns cenários, alguns segmentos que não foram alterados também podem ser incluídos na chamada do. Em qualquer caso, somente os segmentos mapeados serão exportados.</li><li>Todas as identidades dos namespaces que estão mapeadas para o destino no objeto `identityMap` também estão incluídas.</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -131,7 +131,7 @@ Do ponto de vista dos atributos de perfil, qualquer alteração nos três atribu
 
 ## Destinos em lote (baseados em arquivo) {#file-based-destinations}
 
-Ao exportar perfis para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based) em Experience Platform, há três tipos de agendamentos (listados abaixo) e duas opções de exportação de arquivos (arquivos completos ou incrementais) que você pode usar. Todas essas configurações são definidas em nível de público-alvo, mesmo quando vários públicos-alvo são mapeados para um único fluxo de dados de destino.
+Ao exportar perfis para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based) no Experience Platform, há três tipos de agendamentos (listados abaixo) e duas opções de exportação de arquivos (arquivos completos ou incrementais) que você pode usar. Todas essas configurações são definidas em nível de público-alvo, mesmo quando vários públicos-alvo são mapeados para um único fluxo de dados de destino.
 
 * Exportações programadas: configure um destino, adicione um ou mais segmentos, selecione se deseja exportar arquivos completos ou incrementais e selecione um horário definido a cada dia ou várias vezes por dia quando os arquivos devem ser exportados. Por exemplo, um horário de exportação de 17h significa que os perfis qualificados para o público serão exportados às 17h.
 * Após a avaliação do segmento: a exportação é acionada imediatamente após a execução diária do trabalho de avaliação do público-alvo. Isso significa que os números de perfil exportados no arquivo estão o mais próximo possível da população avaliada mais recentemente do segmento.

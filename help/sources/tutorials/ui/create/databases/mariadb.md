@@ -2,9 +2,9 @@
 title: Conectar o MariaDB ao Experience Platform usando a interface
 description: Saiba como conectar sua conta MariaDB ao Experience Platform usando o espaço de trabalho de origens na interface do usuário do Experience Platform.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -54,9 +54,9 @@ Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um n
 
 ![A nova interface de conta no fluxo de trabalho de origem com um nome de conta e uma descrição opcional fornecidos.](../../../../images/tutorials/create/maria-db/new.png)
 
-### Conectar-se ao Experience Platform no Azure {#azure}
+### Conectar-se ao Experience Platform
 
-Você pode conectar sua conta do [!DNL MariaDB] ao Experience Platform no Azure usando a chave da conta ou a autenticação básica.
+Você pode conectar sua conta do [!DNL MariaDB] à Experience Platform usando a chave da conta ou a autenticação básica.
 
 >[!BEGINTABS]
 
@@ -73,17 +73,5 @@ Para usar a autenticação básica, selecione **[!UICONTROL Autenticação bási
 ![A nova interface de conta no fluxo de trabalho de origens com &quot;Autenticação básica&quot; selecionada.](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 >[!ENDTABS]
-
-### Conectar-se ao Experience Platform no Amazon Web Services (AWS) {#aws}
-
->[!AVAILABILITY]
->
->Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../../../landing/multi-cloud.md).
-
-Para criar uma nova conta do [!DNL MariaDB] e conectar-se ao Experience Platform no AWS, verifique se você está em uma sandbox VA6 e forneça as [credenciais necessárias para autenticação](../../../../connectors/databases/mariadb.md#aws).
-
-![A nova interface de conta no fluxo de trabalho de origens para se conectar ao AWS.](../../../../images/tutorials/create/maria-db/basic-auth.png)
-
-## Próximas etapas
 
 Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL MariaDB]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](../../dataflow/databases.md).

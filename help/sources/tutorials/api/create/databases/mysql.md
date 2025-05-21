@@ -2,9 +2,9 @@
 title: Conectar o MySQL ao Experience Platform usando a API do Serviço de fluxo
 description: Saiba como conectar seu banco de dados MySQL ao Experience Platform usando APIs.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '607'
 ht-degree: 5%
 
 ---
@@ -124,11 +124,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "DISABLED"
           }
       },
       "connectionSpec": {
@@ -202,11 +203,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -222,7 +224,7 @@ curl -X POST \
 | `auth.params.database` | O nome do banco de dados. |
 | `auth.params.username` | O nome de usuário que corresponde ao banco de dados. |
 | `auth.params.password` | A senha que corresponde ao banco de dados. |
-| `auth.params.sslMode` | O método pelo qual os dados são criptografados durante a transferência. |
+| `auth.params.sslMode` | Um valor booleano que controla se o SSL é imposto ou não, dependendo do suporte do servidor. O padrão dessa configuração é `false`. |
 | `connectionSpec.id` | A ID da especificação de conexão [!DNL MySQL] é: `26d738e0-8963-47ea-aadf-c60de735468a`. |
 
 +++

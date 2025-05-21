@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2355'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 5%
 
 Este documento aborda as notas de versão do Adobe Experience Platform Web SDK.
 Para obter as notas de versão mais recentes da extensão de tag do Web SDK, consulte as [notas de versão da extensão de tag do Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versão 2.27.0 - quarta-feira, 20 de maio de 2025
+
+**Correções e melhorias**
+
+- Correção de um problema com mensagens no aplicativo em que o estilo personalizado não era aplicado corretamente.
+- Alteração do formato do histórico de eventos. Isso fará com que mensagens no aplicativo e cartões de conteúdo sejam exibidos novamente conforme os dados antigos do histórico são excluídos.
+- Correção de um problema em que as apresentações eram reaplicadas em casos de uso de SPA.
+- Correção de um problema com o rastreamento de cliques em elementos DOM sombra.
 
 ## Versão 2.26.0 - 5 de março de 2025
 

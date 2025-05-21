@@ -2,9 +2,9 @@
 title: Notas de versão da extensão para Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2583'
+source-wordcount: '2652'
 ht-degree: 29%
 
 ---
@@ -12,6 +12,24 @@ ht-degree: 29%
 # Notas de versão da extensão do Adobe Experience Platform Web SDK
 
 Este documento aborda as notas de versão da extensão de tag do Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes do próprio SDK, consulte as [notas de versão do Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versão 2.30.0 - quinta-feira, 21 de maio de 2025
+
+**Novos recursos**
+
+- Agora você pode especificar um elemento de dados ao ativar cookies de terceiros.
+- Adição de botões de limpeza nos campos de código.
+- Contém a [versão 2.27.0](../../../../web-sdk/release-notes.md#2-27-0) do Adobe Experience Platform Web SDK.
+
+**Correções e melhorias**
+
+- Validação adicionada para impedir a configuração `onBeforeLinkClickSend` quando o agrupamento de eventos está habilitado.
+
+## Versão 2.29.1 - sexta-feira, 8 de maio de 2025
+
+**Correções e melhorias**
+
+- Correção de um problema em que as configurações não eram salvas ao clicar imediatamente em &quot;salvar&quot; após a edição.
 
 ## Versão 2.29.0 - 5 de março de 2025
 

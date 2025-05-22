@@ -65,7 +65,7 @@ A prioridade de namespace pode ser definida usando a [interface do usuário de c
 
 ## Uso da prioridade de namespace
 
-Atualmente, a prioridade do namespace influencia o comportamento do sistema do Perfil do cliente em tempo real. O diagrama abaixo ilustra esse conceito. Para obter mais informações, leia o guia em [diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Atualmente, a prioridade do namespace influencia o comportamento do sistema do Perfil do cliente em tempo real. O diagrama abaixo ilustra esse conceito. Para obter mais informações, leia o guia em [diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/pt-br/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Um diagrama do escopo de aplicativo de prioridade de namespace.](../images/namespace-priority/application-scope.png "Um diagrama do escopo de aplicativo de prioridade de namespace."){zoomable="yes"}
 
@@ -208,13 +208,13 @@ Em um determinado evento, verifique se todos os namespaces que representam uma e
 
 * **Aplicabilidade de evento**: esse comportamento se aplica somente a eventos enviados diretamente para a Edge Network (como WebSDK e Mobile SDK). Os eventos assimilados do [hub do Experience Platform](../../landing/edge-and-hub-comparison.md), como aqueles assimilados com a fonte da API HTTP, outras fontes de transmissão e fontes em lote, não estão sujeitos a essa limitação.
 * **Especificidade da segmentação do Edge**: esse comportamento é específico da segmentação de borda. A segmentação em lote e por transmissão são serviços separados avaliados no hub e não seguem o mesmo processo. Leia o [guia de segmentação de borda](../../segmentation/methods/edge-segmentation.md) para obter mais informações.
-* Leia as [páginas de diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) e [comparação de Edge Network e hub](../../landing/edge-and-hub-comparison.md) para obter mais informações.
+* Leia as [páginas de diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/pt-br/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) e [comparação de Edge Network e hub](../../landing/edge-and-hub-comparison.md) para obter mais informações.
 
 #### aplicativos Edge Network
 
 Para garantir que os aplicativos na Edge Network tenham acesso ao Perfil do Edge sem demora, verifique se os eventos incluem `primary=true` no CRMID. Isso garante disponibilidade imediata sem esperar por atualizações do gráfico de identidade do hub.
 
 * Aplicativos no Edge Network, como Adobe Target, Offer Decisioning e Destinos personalizados do Personalization continuarão a depender da identidade principal nos eventos para acessar perfis do Perfil do Edge.
-* Leia o [diagrama de arquitetura do Experience Platform Web SDK &amp; Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obter mais informações sobre o comportamento do Edge Network.
+* Leia o [diagrama de arquitetura do Experience Platform Web SDK &amp; Edge Network](https://experienceleague.adobe.com/pt-br/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obter mais informações sobre o comportamento do Edge Network.
 * Leia a documentação sobre [Tipos de elementos de dados](../../tags/extensions/client/web-sdk/data-element-types.md) e [Dados de identidade no Web SDK](../../web-sdk/identity/overview.md) para obter mais informações sobre como configurar a identidade principal no Web SDK.
 * Verifique se a ECID está incluída no evento de experiência. Se a ECID estiver ausente, ela será adicionada à carga do evento com `primary=true`, o que pode levar a resultados inesperados.

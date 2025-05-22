@@ -2,9 +2,9 @@
 title: Guia de solução de problemas para regras de vinculação do gráfico de identidade
 description: Saiba como solucionar problemas comuns nas Regras de vinculação do gráfico de identidade.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '3285'
+source-wordcount: '3295'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Ao testar e validar o [!DNL Identity Graph Linking Rules], você pode se deparar
 
 O diagrama a seguir é uma representação simplificada de como os dados fluem para o Adobe Experience Platform e os aplicativos. Use este diagrama como referência para ajudá-lo a entender melhor o conteúdo desta página.
 
-![Um diagrama de como a assimilação de dados flui no Serviço de identidade.](../images/troubleshooting/dataflow_in_identity.png)
+![Um diagrama de como a assimilação de dados flui no Serviço de identidade.](../images/troubleshooting/dataflow_in_identity.png "Um diagrama de como a assimilação de dados flui no Serviço de identidade."){zoomable="yes"}
 
 É importante observar os seguintes fatores:
 

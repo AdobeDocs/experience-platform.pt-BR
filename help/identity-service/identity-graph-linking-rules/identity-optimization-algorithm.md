@@ -2,9 +2,9 @@
 title: Algoritmo de otimização de identidade
 description: Saiba mais sobre o Algoritmo de otimização de identidade no Serviço de identidade.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1580'
 ht-degree: 4%
 
 ---
@@ -49,7 +49,7 @@ Os namespaces no serviço de identidade têm uma ordem de importância relativa 
 
 Para uma análise detalhada da prioridade do namespace e de suas funcionalidades e usos completos, leia o [guia de prioridade do namespace](./namespace-priority.md).
 
-![prioridade de namespace e camadas de gráfico](../images/namespace-priority/graph-layers.png)
+![As camadas do gráfico e a prioridade do namespace.](../images/namespace-priority/graph-layers.png "As camadas do gráfico e a prioridade do namespace."){zoomable="yes"}
 
 ## Processo {#process}
 
@@ -68,7 +68,7 @@ Quando a restrição de namespace exclusivo é violada, o Algoritmo de otimizaç
 * O gráfico seria restabelecido com base na ordem acima. Se a adição do link violar a restrição de limite (por exemplo, o gráfico contiver duas ou mais identidades com um namespace exclusivo), os links serão removidos.
 * O gráfico resultante será compatível com a restrição de namespace exclusivo que você configurou.
 
-![Um diagrama que visualiza o Algoritmo de Otimização de Identidade.](../images/ido_algorithm.png)
+![Um diagrama que visualiza o Algoritmo de Otimização de Identidade.](../images/ido_algorithm.png "Um diagrama que visualiza o Algoritmo de Otimização de Identidade."){zoomable="yes"}
 
 ## Exemplos de cenários para o algoritmo de otimização de identidade
 
@@ -95,7 +95,7 @@ Neste exemplo, o CRMID e o Email são designados como namespaces exclusivos. Em 
 * No entanto, devido à configuração exclusiva de namespace que define um máximo de um namespace CRMID e um namespace de email por gráfico, o Algoritmo de otimização de identidade divide o gráfico em dois.
    * Por fim, como John é o último usuário autenticado, a ECID que representa o laptop permanece vinculada ao seu gráfico, em vez de à de Jane.
 
-![caso de dispositivo compartilhado um](../images/identity-settings/shared-device-case-one.png)
+![Caso um do dispositivo compartilhado.](../images/identity-settings/shared-device-case-one.png "Caso um do dispositivo compartilhado."){zoomable="yes"}
 
 >[!TAB Exemplo dois]
 
@@ -112,7 +112,7 @@ Neste exemplo, o namespace CRMID é designado como um namespace exclusivo.
    * Como resultado, o Algoritmo de otimização de identidade remove o link mais antigo, que neste caso é o CRMID de Jane que foi vinculado em `timestamp=1`.
    * No entanto, embora a CRMID da Jane não exista mais como um gráfico no Serviço de identidade, ela ainda persistirá como um perfil no Perfil do cliente em tempo real. Isso ocorre porque um gráfico de identidade deve conter pelo menos duas identidades vinculadas e, como resultado da remoção dos links, o CRMID da Jane não tem mais outra identidade para a qual vincular.
 
-![caso-de-dispositivo-compartilhado-dois](../images/identity-settings/shared-device-case-two.png)
+![Caso dois do dispositivo compartilhado.](../images/identity-settings/shared-device-case-two.png "Caso dois do dispositivo compartilhado."){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -137,7 +137,7 @@ Neste exemplo, os namespaces CRMID e Email são designados como exclusivos. Cons
 
 Com o Algoritmo de otimização de identidade, valores de identidade inválidos, como emails falsos ou números de telefone, não são propagados por vários gráficos de identidade diferentes.
 
-![email incorreto](../images/identity-settings/bad-email.png)
+![Um diagrama de uma assimilação de email incorreta.](../images/identity-settings/bad-email.png "Um diagrama de uma assimilação de email incorreta."){zoomable="yes"}
 
 ## Associação de evento anônimo
 
@@ -154,7 +154,7 @@ Exiba o diagrama abaixo para entender melhor como a associação de eventos anô
       * Antes do seu login inicial antes de `timestamp=1`; e
       * Quaisquer atividades que ele ou Nora realizaram enquanto navegavam anonimamente entre o primeiro e o segundo logon de Kevin.
 
-![anon-event-association](../images/identity-settings/anon-event-association.png)
+![Um diagrama de associação de evento anônimo.](../images/identity-settings/anon-event-association.png "Um diagrama de associação de evento anônimo."){zoomable="yes"}
 
 
 ## Próximas etapas

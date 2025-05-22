@@ -1,17 +1,17 @@
 ---
-title: Instalar o SDK da Web usando o pacote NPM
-description: Use um pacote NPM para instalar e fazer referência à biblioteca do SDK da Web.
+title: Instalar o Web SDK usando o pacote NPM
+description: Use um pacote NPM para instalar e fazer referência à biblioteca Web SDK.
 exl-id: 4c70ec5d-33fd-4ef7-ba9e-5b92ff6c3e86
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 8b6c958613923127880263679ce00ce359151300
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-# Instalar o SDK da Web usando o pacote NPM
+# Instalar o Web SDK usando o pacote NPM
 
-O Adobe Experience Platform Web SDK está disponível como um [pacote NPM](https://www.npmjs.com). A instalação do pacote NPM permite que você tenha controle do processo de criação da biblioteca JavaScript do SDK da Web da Adobe Experience Platform. O pacote NPM expõe os módulos do EcmaScript versão 5 ou os módulos do EcmaScript versão 2015 (ES6) destinados a serem executados no navegador.
+O Adobe Experience Platform Web SDK está disponível como um [pacote NPM](https://www.npmjs.com). A instalação do pacote NPM permite que você tenha controle do processo de criação da biblioteca JavaScript do Adobe Experience Platform Web SDK. O pacote NPM expõe os módulos do EcmaScript versão 5 ou os módulos do EcmaScript versão 2015 (ES6) destinados a serem executados no navegador.
 
 ```bash
 npm install @adobe/alloy
@@ -24,7 +24,7 @@ O pacote NPM do Adobe Experience Platform Web SDK expõe uma função `createIns
 ```js
 import { createInstance } from "@adobe/alloy";
 const alloy = createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```
 
@@ -37,6 +37,6 @@ alloy("sendEvent", { ... });
 ```js
 var alloyLibrary = require("@adobe/alloy");
 var alloy = alloyLibrary.createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```

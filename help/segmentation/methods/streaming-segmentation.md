@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia de segmentação de streaming
 description: Saiba mais sobre a segmentação por transmissão, incluindo o que é, como criar um público avaliado usando a segmentação por transmissão e como visualizar seus públicos criados usando a segmentação por transmissão.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: cd22213be0dbc2e5a076927e560f1b23b467b306
+source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
 workflow-type: tm+mt
-source-wordcount: '2013'
+source-wordcount: '2022'
 ht-degree: 2%
 
 ---
@@ -140,6 +140,8 @@ Além disso, a desqualificação de segmentos, semelhante à qualificação de s
 
 Para combinar dados de fontes de lote e de transmissão, será necessário separar os componentes de lote e transmissão em públicos separados.
 
+### Atributo de perfil e evento de experiência {#profile-and-event}
+
 Por exemplo, vamos considerar os dois seguintes públicos-alvo de amostra:
 
 | Público-alvo | Esquema | Tipo de Source | Definição de consulta | ID do público-alvo |
@@ -159,7 +161,9 @@ WHEN(<= 24 hours before now)])
 
 O público-alvo resultante *será avaliado* usando a segmentação por transmissão, pois ela aproveita a associação do público-alvo em lote referindo-se ao componente de público-alvo em lote.
 
-No entanto, se você quiser combinar dois públicos-alvo com dados de evento, **não poderá** apenas combinar os dois eventos. Você precisará criar ambos os públicos e, em seguida, criar outro público que use o `inSegment` para se referir a esses dois públicos.
+### Vários eventos de experiência {#two-events}
+
+Se você deseja combinar vários públicos com dados do evento, **não pode** apenas combinar os eventos. Você precisará criar um público-alvo para cada evento e, em seguida, criar outro público-alvo que use `inSegment` para fazer referência a todos os públicos-alvo.
 
 Por exemplo, digamos que você tenha dois públicos-alvo, com ambos os públicos-alvo abrigando dados do esquema do evento de experiência:
 

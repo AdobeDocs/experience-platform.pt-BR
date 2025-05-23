@@ -3,16 +3,24 @@ keywords: conexão do facebook;conexão do facebook;destinos do facebook;instagr
 title: Conexão com o Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
+source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
 workflow-type: tm+mt
-source-wordcount: '2137'
-ht-degree: 6%
+source-wordcount: '2843'
+ht-degree: 5%
 
 ---
 
 # [!DNL Facebook] conexão
 
 ## Visão geral {#overview}
+
+>[!IMPORTANT]
+>
+>* A partir de 23 de maio de 2025 e durante todo o mês de junho de 2025, você poderá ver temporariamente dois cartões de destino **[!DNL Facebook Custom Audience]** no catálogo de destinos por até algumas horas. Isso se deve a uma atualização interna no serviço de destinos e para oferecer suporte a novos campos para melhorar o direcionamento e a correspondência com perfis nas propriedades do Facebook. Para obter detalhes sobre os novos campos relacionados ao endereço, consulte a seção [identidades com suporte](#supported-identities).
+>* Se você vir um cartão rotulado como **[!UICONTROL (Novo) Público-alvo personalizado do Facebook]**, use esse cartão para novos fluxos de dados de ativação. Seus fluxos de dados existentes serão atualizados automaticamente, portanto, nenhuma ação é necessária. Quaisquer alterações feitas aos fluxos de dados existentes durante esse período serão preservadas após a atualização. Quando a atualização for concluída, o cartão de destino **[!UICONTROL (Novo) Público-alvo personalizado do Facebook]** será renomeado para **[!DNL Facebook Custom Audience]**.
+>* Se você estiver criando fluxos de dados usando a [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] com os seguintes valores:
+>   * ID da especificação de fluxo: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
+>   * ID de especificação da conexão: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 Ative perfis para suas campanhas do [!DNL Facebook] para direcionamento de público, personalização e supressão com base em emails com hash.
 
@@ -42,11 +50,20 @@ Em seguida, eles podem usar seus dados offline, incluindo IDs de associação as
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Selecione a identidade de destino GAID quando a identidade de origem for um namespace GAID. |
-| IDFA | Apple ID para anunciantes | Selecione a identidade de destino do IDFA quando a identidade de origem for um namespace do IDFA. |
-| phone_sha256 | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
-| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
-| extern_id | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
+| `GAID` | GOOGLE ADVERTISING ID | Selecione a identidade de destino GAID quando a identidade de origem for um namespace GAID. |
+| `IDFA` | Apple ID para anunciantes | Selecione a identidade de destino do IDFA quando a identidade de origem for um namespace do IDFA. |
+| `phone_sha256` | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
+| `email_lc_sha256` | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
+| `extern_id` | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
+| `gender` | Gênero | Valores aceitos: <ul><li>`m`para masculino</li><li>`f`para feminino</li></ul> O Experience Platform **coloca automaticamente hash** nesse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
+| `date_of_birth` | Data de nascimento | Formato aceito: `yyyy-MM-DD`. <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
+| `last_name` | Sobrenome | Formato aceito: Minúsculas, somente `a-z` caracteres, sem pontuação. Use a codificação UTF-8 para caracteres especiais.  <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
+| `first_name` | Nome | Formato aceito: Minúsculas, somente `a-z` caracteres, sem pontuação, sem espaços. Use a codificação UTF-8 para caracteres especiais.  <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
+| `first_name_initial` | Inicial do nome | Formato aceito: Minúsculas, somente `a-z` caracteres. Use a codificação UTF-8 para caracteres especiais.  <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
+| `state` | Estado | Use o código de abreviação ANSI de [2 caracteres](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code) em minúsculas. Para estados que não sejam dos EUA, use caracteres em minúsculas, sem pontuação, sem caracteres especiais e sem espaços.  <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
+| `city` | Cidade | Formato aceito: Minúsculas, somente `a-z` caracteres, sem pontuação, sem caracteres especiais, sem espaços.  <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
+| `zip` | Código postal | Formato aceito: Minúsculas, sem espaços. Para códigos postais dos EUA, use apenas os primeiros 5 dígitos. Para o Reino Unido, use o formato `Area/District/Sector`.  <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
+| `country` | País | Formato aceito: Códigos de país de duas letras em minúsculas no formato [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).  <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
@@ -93,6 +110,12 @@ Antes de enviar seus públicos-alvo para o [!DNL Facebook], verifique se você a
 [!DNL Facebook] exige que nenhuma informação pessoal identificável (PII) seja enviada em branco. Portanto, os públicos ativados para [!DNL Facebook] podem ser digitados de *identificadores com hash*, como endereços de email ou números de telefone.
 
 Dependendo do tipo de IDs que você assimila no Adobe Experience Platform, é necessário seguir os requisitos correspondentes.
+
+## Maximizar as taxas de correspondência do público-alvo {#match-rates}
+
+Para atingir as taxas de correspondência de público-alvo mais altas em [!DNL Facebook], é altamente recomendável usar as identidades de destino `phone_sha256` e `email_lc_sha256`.
+
+Esses identificadores são os principais usados por [!DNL Facebook] para corresponder públicos-alvo em suas plataformas. Verifique se os dados de origem estão mapeados corretamente para essas identidades de destino e se seguem os requisitos de hash do [!DNL Facebook's].
 
 ## Requisitos de hash de número de telefone {#phone-number-hashing-requirements}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Noções básicas da composição do esquema
 description: Saiba mais sobre esquemas do Experience Data Model (XDM) e os componentes, princípios e práticas recomendadas para a composição de esquemas no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4373'
+source-wordcount: '4350'
 ht-degree: 8%
 
 ---
@@ -55,24 +55,24 @@ Os esquemas de registro e série temporal contêm um mapa de identidades (`xdm:i
 >title="Identidades em esquemas"
 >abstract="Identidades são campos principais em um esquema que podem ser usados para identificar um assunto, como um endereço de email ou uma ID de marketing. Esses campos são usados para criar o gráfico de identidade de cada pessoa e criar perfis de cliente. Consulte a documentação para obter mais informações sobre identidades em esquemas."
 
-Os esquemas são usados para assimilar dados na Experience Platform. Esses dados podem ser usados em vários serviços para criar uma visualização única e unificada de uma entidade individual. Portanto, é importante ao projetar esquemas para identidades de clientes considerar quais campos podem ser usados para identificar um assunto, independentemente de onde os dados possam vir.
+Os esquemas definem a estrutura dos dados assimilados na Experience Platform. Esses dados potencializam vários serviços na plataforma e ajudam a criar uma visualização única e unificada de cada indivíduo. Portanto, ao criar esquemas, pense com cuidado sobre quais campos marcar como identidades — esses controlam como os perfis são compilados entre conjuntos de dados.
 
 Para ajudar nesse processo, os campos principais em seus esquemas podem ser marcados como identidades. Após a assimilação de dados, os dados nesses campos são inseridos no &quot;[!UICONTROL Gráfico de identidade]&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-Time Customer Profile]](../../profile/home.md) e outros serviços da Experience Platform para fornecer uma visualização unificada de cada cliente individual.
 
 Os campos comumente marcados como &quot;[!UICONTROL Identidade]&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR), ID do CRM ou outros campos de ID exclusivos. Considere quaisquer identificadores exclusivos específicos da sua organização, pois eles também podem ser bons campos de &quot;[!UICONTROL Identidade]&quot;.
 
-É importante pensar nas identidades do cliente durante a fase de planejamento do esquema para ajudar a garantir que os dados estejam sendo trazidos juntos para criar o perfil mais robusto possível. Para saber mais sobre como as informações de identidade podem ajudar você a fornecer experiências digitais aos seus clientes, consulte a [visão geral do Serviço de identidade](../../identity-service/home.md). Consulte o documento de práticas recomendadas de modelagem de dados para [dicas sobre o uso de identidades ao criar um esquema](./best-practices.md#data-validation-fields).
+Para saber mais sobre como as informações de identidade podem ajudar você a fornecer experiências digitais aos seus clientes, consulte a [visão geral do Serviço de identidade](../../identity-service/home.md). Consulte o documento de práticas recomendadas de modelagem de dados para [dicas sobre o uso de identidades ao criar um esquema](./best-practices.md#data-validation-fields).
 
 Há duas maneiras de enviar dados de identidade para o Experience Platform:
 
 1. Adicionando descritores de identidade a campos individuais, por meio da [Interface do Editor de Esquemas](../ui/fields/identity.md) ou usando a [API do Registro de Esquemas](../api/descriptors.md#create)
-1. Usando um campo [`identityMap`](#identityMap)
+2. Usando um campo [`identityMap`](#identityMap)
 
 #### `identityMap` {#identityMap}
 
 `identityMap` é um campo do tipo mapa que descreve os vários valores de identidade para um indivíduo, juntamente com seus namespaces associados. Este campo pode ser usado para fornecer informações de identidade para seus esquemas, em vez de definir valores de identidade na estrutura do próprio esquema.
 
-A principal desvantagem de usar o `identityMap` é que as identidades se tornam incorporadas aos dados e, consequentemente, menos visíveis. Se estiver assimilando dados brutos, você deve definir campos de identidade individuais na estrutura do esquema real.
+A principal desvantagem de usar o `identityMap` é que os valores de identidade estão aninhados e pode ser mais difícil de utilizar em ferramentas que esperam campos de identidade de nível superior, como o Construtor de segmentos ou algumas integrações de terceiros.
 
 >[!NOTE]
 >
@@ -129,7 +129,7 @@ A tabela a seguir detalha quais alterações são suportadas ao editar esquemas,
 
 | Alterações suportadas | Quebra de alterações (não suportado) |
 | --- | --- |
-| <ul><li>Adicionar novos campos ao recurso</li><li>Tornar um campo obrigatório opcional</li><li>Introdução de novos campos obrigatórios*</li><li>Alteração do nome de exibição e da descrição do recurso</li><li>Ativação do esquema para participar do perfil</li></ul> | <ul><li>Remoção de campos definidos anteriormente</li><li>Renomear ou redefinir campos existentes</li><li>Remoção ou restrição de valores de campo compatíveis anteriormente</li><li>Mover campos existentes para um local diferente na árvore</li><li>Exclusão do esquema</li><li>Desativar a participação do esquema no perfil</li></ul> |
+| <ul><li>Adicionar novos campos ao recurso</li><li>Tornar um campo obrigatório opcional</li><li>Introdução de novos campos obrigatórios*</li><li>Alteração do nome de exibição e da descrição do recurso</li><li>Ativação do esquema para participar do perfil</li></ul> | <ul><li>Remoção de campos definidos anteriormente</li><li>Renomear ou redefinir campos existentes</li><li>Remoção ou restrição de valores de campo compatíveis anteriormente</li><li>Mover campos existentes para um local diferente na árvore</li><li>Exclusão do esquema</li><li>Desativar a participação do esquema no perfil</li><li>Alteração do campo de identidade principal em um esquema habilitado para Perfil e que tenha dados assimilados</li></ul> |
 
 \**Consulte a seção abaixo para considerações importantes sobre a [configuração de novos campos obrigatórios](#post-ingestion-required-fields).*
 
@@ -161,9 +161,9 @@ O Experience Platform usa uma abordagem de composição na qual os blocos de con
 
 Os esquemas são compostos usando a seguinte fórmula:
 
-**Classe + Grupo de Campos de Esquema&ast; = Esquema XDM**
+**Classe + Grupo de Campos de Esquema&amp;ast; = Esquema XDM**
 
-&ast;Um esquema é composto por uma classe e zero ou mais grupos de campos de esquema. Isso significa que você pode compor um esquema de conjunto de dados sem usar grupos de campos.
+&amp;ast;Um esquema é composto por uma classe e zero ou mais grupos de campos de esquema. Isso significa que você pode compor um esquema de conjunto de dados sem usar grupos de campos.
 
 ### Classe {#class}
 

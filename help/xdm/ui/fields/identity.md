@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Definir campos de identidade na interface
 description: Saiba como definir um campo de identidade na interface do usuário do Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '665'
 ht-degree: 6%
 
 ---
@@ -46,7 +46,7 @@ Quando terminar, selecione **[!UICONTROL Aplicar]** para aplicar a alteração a
 
 >[!IMPORTANT]
 >
->Se um campo de identidade principal já estiver definido, você poderá alterar o campo de identidade principal no esquema seguindo as etapas acima. No entanto, você deve desativar e depois reativar todos os conjuntos de dados associados no perfil para que a alteração tenha efeito.
+>Depois que um esquema é habilitado para uso no Perfil do Cliente em Tempo Real e os dados são assimilados, **não é possível alterar o campo de identidade principal**. Tentar fazer isso resultará em um erro de validação. Se você precisar usar uma identidade principal diferente, crie um novo esquema e um novo conjunto de dados com a configuração de identidade atualizada.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
@@ -63,4 +63,3 @@ Se você definiu uma identidade primária para o esquema, agora é possível pro
 Este guia abordou como definir um campo de identidade na interface do usuário do. À medida que os dados são assimilados usando esse esquema, seus gráficos de identidade do cliente serão atualizados para refletir os campos de identidade do esquema. Consulte o guia no [visualizador de gráficos de identidade](../../../identity-service/features/identity-graph-viewer.md) para saber como explorar o gráfico privado de sua organização na interface do usuário.
 
 Consulte a visão geral em [definindo campos na interface](./overview.md#special) para saber como definir outros tipos de campos XDM no [!DNL Schema Editor].
-

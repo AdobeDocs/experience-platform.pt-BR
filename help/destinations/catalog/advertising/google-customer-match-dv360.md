@@ -3,7 +3,7 @@ title: Correspondência de cliente do Google + conexão de vídeo e exibição 3
 description: Com o conector de destino do Google Customer Match + Display & Video 360, você pode usar seus dados online e offline do Experience Platform para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping, Gmail e YouTube.
 badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: 08a880bac8e06627ae59ef036877791f8771c87a
+source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
 workflow-type: tm+mt
 source-wordcount: '2032'
 ht-degree: 1%
@@ -70,14 +70,6 @@ Para promover a versão, eles carregam endereços de email do banco de dados do 
 | email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
 
 {style="table-layout:auto"}
-
-<!-- not supported in beta
-
-|GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
-|user_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.| 
-
--->
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: f66e85ee5fb3fdaf7036b131f9689082d9d96127
+source-git-commit: 132024313dbe0d83c9af22d30927a01e32c9d94f
 workflow-type: tm+mt
 source-wordcount: '4237'
 ht-degree: 5%
@@ -180,7 +180,7 @@ Gerencie as configurações de expiração e retenção do conjunto de dados usa
 
 >[!IMPORTANT]
 >
->Para aplicar ou atualizar regras de retenção para um conjunto de dados ExperienceEvent, sua função de usuário deve incluir a permissão **Gerenciar conjuntos de dados**. Esse controle de acesso baseado em função garante que somente usuários autorizados possam modificar as configurações de retenção do conjunto de dados.
+>Para aplicar ou atualizar regras de retenção para um conjunto de dados ExperienceEvent, sua função de usuário deve incluir a permissão **[!UICONTROL Gerenciar conjuntos de dados]**. Esse controle de acesso baseado em função garante que somente usuários autorizados possam modificar as configurações de retenção do conjunto de dados.
 >
 >Consulte a [Visão geral do controle de acesso](../../access-control/home.md#platform-permissions) para obter mais informações sobre a atribuição de permissões no Adobe Experience Platform.
 

@@ -1,10 +1,10 @@
 ---
-keywords: extensão de encaminhamento de eventos;twitter;extensão de encaminhamento de eventos do twitter
+keywords: extensão de encaminhamento de eventos;extensão de encaminhamento de eventos do twitter;event forwarding extension
 title: Extensão de encaminhamento de eventos do Twitter
-description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite assimilar eventos no Twitter para atender aos requisitos da sua empresa.
+description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite assimilar eventos no Twitter para atender às necessidades da sua empresa.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 3%
@@ -15,13 +15,13 @@ ht-degree: 3%
 
 [[!DNL Twitter]](https://twitter.com/i/flow/login) é uma rede social online e um serviço de rede social, no qual os usuários postam e interagem com mensagens de 280 caracteres conhecidas como tweets. Os usuários podem interagir com o Twitter usando um navegador, software de front-end móvel ou programaticamente por meio de suas [APIs](https://developer.twitter.com/en/docs/twitter-api)
 
-A extensão [!DNL Twitter] da API [de encaminhamento de eventos](../../../ui/event-forwarding/overview.md) das Conversões da Web permite que você aproveite os dados capturados no Edge Network do Adobe Experience Platform e os envie para [!DNL Twitter]. Este documento aborda os casos de uso da extensão, como instalá-la e como integrar seus recursos ao encaminhamento de eventos [regras](../../../ui/managing-resources/rules.md).
+A extensão [!DNL Twitter] da API de Conversões da Web [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) permite que você aproveite os dados capturados no Adobe Experience Platform Edge Network e os envie para [!DNL Twitter]. Este documento aborda os casos de uso da extensão, como instalá-la e como integrar seus recursos ao encaminhamento de eventos [regras](../../../ui/managing-resources/rules.md).
 
 [!DNL Twitter] requer [OAuth 1.0](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) para autenticação com a API [!DNL Twitter] [!DNL Web Conversions].
 
 ## Casos de uso
 
-Essa extensão deve ser usada se você quiser usar dados do Edge Network em [!DNL Twitter] para aproveitar seus recursos de análise e direcionamento de clientes.
+Essa extensão deve ser usada se você quiser usar dados da Edge Network no [!DNL Twitter] para aproveitar seus recursos de análise e direcionamento de clientes.
 
 Por exemplo, considere uma equipe de marketing em uma organização. A equipe captura dados do evento de interação do usuário de seu site como dados do evento de seu site e os carrega em [!DNL Twitter] usando esta extensão de encaminhamento de eventos.
 
@@ -45,7 +45,7 @@ Para conectar o Experience Platform a [!DNL Twitter], as seguintes entradas são
 
 | Tipo de chave | Descrição |
 | --- | --- |
-| Chave do consumidor | &#x200B; a chave de API do aplicativo para acessar a API [!DNL Twitter]. Consulte a documentação do [!DNL Twitter] sobre [chaves e segredos da api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) para obter orientação. | |
+| Chave do consumidor | &#x200B; a chave de API do aplicativo para acessar a API [!DNL Twitter]. Consulte a documentação do [!DNL Twitter] sobre [chaves e segredos da api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) para obter orientação. |
 | Segredo do consumidor | O Segredo de API permite que seu aplicativo acesse a API [!DNL Twitter]. Consulte a documentação do [!DNL Twitter] sobre [chaves e segredos da api](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/api-key-and-secret) para obter orientação. |
 | Segredo do token | O token secreto sem expiração do seu aplicativo, que é usado para autenticação na API [!DNL Twitter] via OAuth. Consulte a documentação do [!DNL Twitter] sobre [obtenção de tokens de acesso de uso](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) para obter orientação. |
 | Token de acesso | O token de acesso sem expiração do seu aplicativo, que é usado para autenticação na API [!DNL Twitter] via OAuth. Consulte a documentação do [!DNL Twitter] sobre [obtenção de tokens de acesso de uso](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) para obter orientação. |
@@ -79,7 +79,7 @@ Tela de configuração ![[!DNL Twitter] para a extensão [!DNL Twitter].](../../
 
 Depois que todos os seus elementos de dados estiverem configurados, você poderá começar a criar regras de encaminhamento de eventos que determinam quando e como seus eventos serão enviados para [!DNL Twitter].
 
-Crie uma nova [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão como **[!UICONTROL Twitter]**. Para enviar eventos Edge Network para [!DNL Twitter], defina o **[!UICONTROL Tipo de Ação]** como **[!UICONTROL Enviar Conversão da Web].**
+Crie uma nova [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão como **[!UICONTROL Twitter]**. Para enviar eventos do Edge Network para [!DNL Twitter], defina o **[!UICONTROL Tipo de Ação]** como **[!UICONTROL Enviar Conversão da Web].**
 
 Após a seleção, controles adicionais são exibidos para configurar ainda mais o evento. Você precisa mapear as propriedades de evento [!DNL Twitter] para os elementos de dados criados anteriormente. Para obter mais informações, consulte a [[!DNL Twitter] API de Conversões da Web](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions).
 

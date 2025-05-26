@@ -2,10 +2,10 @@
 title: Configurando segredos no encaminhamento de eventos
 description: Saiba como configurar segredos na interface do usuário para autenticar em pontos de extremidade usados nas propriedades de encaminhamento de eventos.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2426'
-ht-degree: 3%
+source-wordcount: '2577'
+ht-degree: 2%
 
 ---
 
@@ -17,6 +17,7 @@ Os seguintes tipos secretos são suportados no momento:
 
 | Tipo secreto | Descrição |
 | --- | --- |
+| [!UICONTROL Amazon OAuth 2] | Habilita a autenticação segura com os serviços [!DNL Amazon]. O sistema armazena com segurança o token e lida com sua renovação em intervalos especificados. |
 | [!UICONTROL Google OAuth 2] | Contém vários atributos para oferecer suporte à especificação de autenticação do [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) para uso na [API do Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview) e na [API Pub/Sub](https://cloud.google.com/pubsub/docs/reference/service_apis_overview). O sistema solicita as informações necessárias e, em seguida, lida com a renovação desses tokens em um intervalo especificado. |
 | [!UICONTROL HTTP] | Contém dois atributos de string para um nome de usuário e senha, respectivamente. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | O sistema solicita as informações necessárias e, em seguida, lida com a renovação desses tokens em um intervalo especificado. |
@@ -78,6 +79,7 @@ Aqui, as etapas para criar o segredo diferem dependendo do tipo de segredo que e
 * [[!UICONTROL JWT do OAuth 2]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 * [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
+* [[!UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -186,7 +188,7 @@ Para criar um segredo do OAuth 2 [!DNL LinkedIn], selecione **[!UICONTROL [!DNL 
 
 Um popover é exibido informando que o segredo precisa ser autorizado manualmente por meio do [!DNL LinkedIn]. Selecione **[!UICONTROL Criar e autorizar segredo com[!DNL LinkedIn]]** para continuar.
 
-Popover de autorização ![[!DNL LinkedIn] destacando [!UICONTROL Criar e autorizar segredo com [!DNL LinkedIn]].](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![Popover de autorização do LinkedIn destacando o botão &quot;Criar e autorizar segredo com o LinkedIn&quot;.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 Uma caixa de diálogo é exibida solicitando que você insira suas credenciais do [!DNL LinkedIn]. Siga as instruções para conceder acesso ao encaminhamento de eventos para seus dados.
 
@@ -209,6 +211,22 @@ Você será redirecionado para a guia [!UICONTROL Segredos]. Os segredos listado
 ![A guia [!UICONTROL Segredo] destacando a [!UICONTROL Autenticação Necessária]para o segredo [!DNL LinkedIn].](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 Uma caixa de diálogo é exibida solicitando que você insira suas credenciais do [!DNL LinkedIn]. Siga as instruções para reautorizar o segredo.
+
+### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
+
+Para criar um segredo OAuth 2 [!DNL Amazon], selecione **[!UICONTROL [!DNL Amazon]OAuth 2]** na lista suspensa **[!UICONTROL Tipo]**. Em seguida, selecione **[!UICONTROL Criar Segredo]**.
+
+![A guia [!UICONTROL Criar Segredo] com o campo [!UICONTROL Tipo] realçado.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+
+Um popover é exibido informando que o segredo precisa ser autorizado manualmente por meio do [!DNL Amazon]. Selecione **[!UICONTROL Criar e autorizar segredo com[!DNL Amazon]]** para continuar.
+
+![Popover de autorização do Amazon destacando o botão &quot;Criar e autorizar segredo com o Amazon&quot;.](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
+
+Uma caixa de diálogo é exibida solicitando que você insira suas credenciais do [!DNL Amazon]. Siga as instruções para conceder acesso ao encaminhamento de eventos para seus dados.
+
+Quando o processo de autorização for concluído, você retornará à guia **[!UICONTROL Segredos]**, na qual poderá ver o segredo recém-criado. Aqui você pode ver o status do segredo e a data de expiração.
+
+![A guia [!UICONTROL Segredo] destacando o segredo recém-criado.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## Editar um segredo
 

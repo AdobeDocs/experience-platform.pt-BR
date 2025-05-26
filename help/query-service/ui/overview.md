@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 62e481925df33ddfae6f630c900febbb027a2059
+source-git-commit: 0553b8bc62d54c3ab98c60b16840ce730d9ed5c0
 workflow-type: tm+mt
 source-wordcount: '2467'
 ht-degree: 1%
@@ -176,7 +176,7 @@ A guia **[!UICONTROL Log]** fornece uma lista de consultas que foram executadas 
 | **[!UICONTROL Cliente]** | O cliente usado para a consulta. |
 | **[!UICONTROL Criado por]** | O nome da pessoa que criou a consulta. |
 
->
+>[!NOTE]
 >
 >Selecione o ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)) de qualquer linha do log de consultas para navegar até o Editor de Consultas. A consulta é pré-preenchida para edição conveniente.
 

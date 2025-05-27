@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
+source-git-commit: dbcfd7bfbf2f2d8268d3d8b5748f75ec9f186597
 workflow-type: tm+mt
-source-wordcount: '1075'
+source-wordcount: '1078'
 ht-degree: 35%
 
 ---
@@ -242,6 +242,7 @@ ht-degree: 35%
    - [Assimilar dados criptografados](tutorials/api/encrypt-data.md)
    - [Salvar um fluxo de dados como rascunho](tutorials/api/draft.md)
    - [Aplicar rótulos de acesso a um fluxo de dados](tutorials/api/labels.md)
+   - [Usar pontos de extremidade privados](tutorials/api/private-link.md)
 - Tutoriais da interface {#ui-tutorials}
    - Criar uma conexão de origem {#create}
       - aplicativos Adobe {#adobe-applications}
@@ -405,4 +406,4 @@ ht-degree: 35%
 - [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
 - [Perguntas frequentes](./troubleshooting.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

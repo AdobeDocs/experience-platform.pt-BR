@@ -2,10 +2,10 @@
 title: Visão geral da extensão do Cloud Connector
 description: Saiba mais sobre a extensão de encaminhamento de eventos do Cloud Connector na Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
 workflow-type: tm+mt
-source-wordcount: '1356'
-ht-degree: 98%
+source-wordcount: '1715'
+ht-degree: 79%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 98%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A extensão de encaminhamento de eventos do Cloud Connector permite criar solicitações HTTP personalizadas para enviar ou recuperar dados de um destino. A extensão do Cloud Connector é como ter o Postman na Adobe Experience Platform Edge Network e pode ser usada para enviar dados a um terminal que ainda não tem uma extensão dedicada.
 
@@ -125,3 +125,41 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
+
+## Usar a Segurança da Camada de Transporte Mútuo [!DNL mTLS] nas regras de Encaminhamento de Eventos {#mtls-rules}
+
+O certificado [!DNL mTLS] é uma credencial digital que comprova a identidade de um servidor ou cliente em comunicações seguras. Quando você usa a API de Serviço [!DNL mTLS], esses certificados ajudam a verificar e criptografar suas interações com o Adobe Experience Platform Event Forwarding. Esse processo não só protege seus dados, mas também garante que cada conexão seja de um parceiro confiável.
+
+### Instalar a extensão do Adobe Cloud Connector {#install}
+
+Para instalar a extensão, [crie uma propriedade de encaminhamento de eventos](../../../ui/event-forwarding/overview.md#properties) ou selecione uma propriedade existente para editar.
+
+Selecione **[!UICONTROL Extensões]** no painel esquerdo. Na guia **[!UICONTROL Catálogo]**, selecione o cartão de API **[!UICONTROL Conector de nuvem do Adobe]** Conversões em tempo real e **[!UICONTROL Instalar]**.
+
+![O catálogo de extensões que mostra a instalação do destaque do cartão de extensão [!DNL Adobe Cloud Connector].](../../../images/extensions/server/cloud-connector/install-extension.png)
+
+### Configurar uma regra de encaminhamento de eventos {#rule}
+
+>[!NOTE]
+>
+>Para configurar uma regra para usar o [!DNL mTLS], você deve ter o Adobe Cloud Connector versão 1.2.4 ou posterior.
+
+Depois de instalar a extensão, você pode criar uma regra de Encaminhamento de Eventos que use o [!DNL mTLS] e adicioná-la à biblioteca.
+
+Crie uma nova [regra](../../../ui/managing-resources/rules.md) de encaminhamento de eventos na propriedade de encaminhamento de eventos. Forneça um nome para a regra e, em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão como **[!UICONTROL Adobe Cloud Connector]**. Em seguida, selecione **[!UICONTROL Fazer chamada de busca]** para o **[!UICONTROL Tipo de ação]**.
+
+![A exibição de Regras de Propriedade de Encaminhamento de Eventos, com os campos necessários para adicionar uma configuração de ação de regra de encaminhamento de eventos realçada.](../../../images/extensions/server/cloud-connector/event-action.png)
+
+Depois de fazer a seleção, controles adicionais aparecerão para configurar os métodos e o destino da solicitação [!DNL mTLS]. Para habilitar o uso de certificados ativos nos ambientes, selecione **[!UICONTROL Habilitar em[!DNL mTLS]]** e **[!UICONTROL Manter alterações]** para salvar a regra.
+
+![A exibição de Regras de Propriedade do Encaminhamento de Eventos, com os campos de controle adicionais e mantendo as alterações destacadas.](../../../images/extensions/server/cloud-connector/save-rule.png)
+
+Sua nova regra está pronta. Selecione **[!UICONTROL Salvar na biblioteca]** e **[!UICONTROL Compilar]** para implantá-la. A solicitação [!DNL mTLS] agora está ativa e disponível em sua biblioteca.
+
+![A regra de Encaminhamento de Eventos com save to library e build destacada.](../../../images/extensions/server/cloud-connector/save-build.png)
+
+## Próximas etapas
+
+Este guia abordou como configurar regras mTLS no encaminhamento de eventos. Para obter mais detalhes sobre como configurar o mTLS para um ambiente, consulte o [guia](../cloud-connector/mtls.md) da Segurança da Camada de Transporte Mútuo [!DNL mTLS] .
+
+Para obter mais informações sobre os recursos de encaminhamento de eventos do Experience Platform, consulte a [visão geral do encaminhamento de eventos](../../../ui/event-forwarding/overview.md).

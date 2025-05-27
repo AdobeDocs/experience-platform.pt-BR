@@ -6,10 +6,10 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 28eb48ec9fb7c9c5a5927c8582960cbd99199613
+source-git-commit: a2d93b5c13194707e8a87d633e47d0446b9afabd
 workflow-type: tm+mt
-source-wordcount: '780'
-ht-degree: 44%
+source-wordcount: '782'
+ht-degree: 43%
 
 ---
 
@@ -217,6 +217,7 @@ ht-degree: 44%
       * [Visão geral](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [Visão geral](./extensions/server/cloud-connector/overview.md)
+         * [Certificados mTLS](./extensions/server/cloud-connector/mtls.md)
          * [Notas de versão](./extensions/server/cloud-connector/release-notes.md)
       * [!DNL Adform] {#adform}
          * [Visão geral](./extensions/server/adform/overview.md)
@@ -335,5 +336,5 @@ ht-degree: 44%
 * [Perguntas frequentes](./faq.md)
 * [Atualizações de terminologia](./term-updates.md)
 * [Substituição do suporte para o Internet Explorer 10 e 11](./ie-deprecation.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
 

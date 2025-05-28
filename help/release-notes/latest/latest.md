@@ -2,10 +2,10 @@
 title: Notas da versão de maio de 2025 da Adobe Experience Platform
 description: As notas de versão de maio de 2025 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
-source-wordcount: '1368'
-ht-degree: 20%
+source-wordcount: '1530'
+ht-degree: 19%
 
 ---
 
@@ -17,14 +17,15 @@ ht-degree: 20%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest?lang=pt-BR)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest?lang=pt-BR)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 20 de maio de 2025**
 
 Atualizações dos recursos e da documentação existentes no Adobe Experience Platform:
 
+- [Assistente de IA](#ai-assistant)
 - [Serviço de catálogo](#catalog-service)
 - [Preparação de dados](#data-prep)
 - [Destinos](#destinations)
@@ -33,6 +34,18 @@ Atualizações dos recursos e da documentação existentes no Adobe Experience P
 - [Sandboxes](#sandboxes)
 - [Serviço de segmentação](#segmentation-service)
 - [Origens](#sources)
+
+## Assistente de IA {#ai-assistant}
+
+O Assistente de IA no Adobe Experience Platform é uma experiência de conversação que você pode usar para acelerar seus fluxos de trabalho em aplicativos do Adobe. Você pode usar o AI Assistant para entender melhor o conhecimento do produto, solucionar problemas ou pesquisar informações e encontrar insights operacionais. O Assistente de IA é compatível com Experience Platform, Real-Time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
+
+**Recursos atualizados**
+
+| Recurso | Descrição |
+| --- | --- |
+| Disponibilidade geral do Agente de suporte ao produto | Agora você pode usar o Agente de suporte do produto no Assistente de IA para solucionar problemas com facilidade sem sair dos fluxos de trabalho. Os administradores de suporte da sua organização agora podem usar o Agente de suporte do produto para criar tíquetes de suporte ao cliente, completos com detalhes de contexto e sessão de suas interações com o Assistente de IA. <br><br>O acesso ao Agente de Suporte ao Produto estará disponível até 30 de novembro de 2025. Você deve entrar em contato com seu representante de conta da Adobe para obter uma licença do Agente de suporte ao produto e continuar usando o recurso após essa data. Para obter mais informações, leia a [documentação do Agente de Suporte do Produto](../../ai-assistant/new-features/customer-support.md). |
+
+Para obter mais informações, leia a [Visão geral do Assistente de IA](../../ai-assistant/landing.md).
 
 ## Serviço de catálogo {#catalog-service}
 

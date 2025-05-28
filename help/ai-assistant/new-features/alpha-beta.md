@@ -1,19 +1,20 @@
 ---
-title: Recursos de Alpha e Beta para o Assistente de IA
-description: Saiba mais sobre os recursos do Assistente de IA que estão atualmente nos estágios Alpha ou Beta.
+title: Recursos do Alpha e do Beta para o Assistente de IA
+description: Saiba mais sobre os recursos do Assistente de IA que estão atualmente nos estágios do Alpha ou Beta.
 badge: Alfa
 exl-id: 48e7737e-9aee-4d01-8f24-bc562e443e3a
-source-git-commit: ed09335f7b703be49ed08448ed03ed7bc91831f1
+source-git-commit: 5b89a5fb30b64c0439543c06d559059e7553376c
 workflow-type: tm+mt
-source-wordcount: '66'
+source-wordcount: '67'
 ht-degree: 1%
 
 ---
 
-# Recursos de Alpha e Beta para o Assistente de IA
+# Recursos do Alpha e do Beta para o Assistente de IA
 
-Leia os seguintes documentos para saber mais sobre os recursos do Assistente de IA para Adobe Experience Platform que estão atualmente em estágios Alpha ou Beta:
+Leia os seguintes documentos para saber mais sobre os recursos do Assistente de IA para Adobe Experience Platform que estão atualmente nos estágios do Alpha ou do Beta:
 
-* [Assistente de IA para Suporte ao cliente](./customer-support.md)
+* [Agente de suporte ao produto](./customer-support.md)
 * [Monitoramento de alterações significativas e previsão de público-alvo](./audience-forecasting.md)
 * [Estimativa em linguagem natural](./natural-language.md)
+* [Descoberta de campo XDM](./xdm-field-discovery.md)

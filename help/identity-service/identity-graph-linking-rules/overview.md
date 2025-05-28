@@ -2,9 +2,9 @@
 title: Regras de vinculação do gráfico de identidade
 description: Saiba mais sobre as regras de vinculação do gráfico de identidade no Serviço de identidade.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
+source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
-source-wordcount: '1600'
+source-wordcount: '1605'
 ht-degree: 7%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->[!DNL Identity Graph Linking Rules] está agora disponível. Entre em contato com o Suporte da Adobe se tiver uma sandbox que exija que os gráficos recolhidos sejam desrecolhidos (&quot;corrigidos&quot;) após ativar as configurações de identidade.
+>[!DNL Identity Graph Linking Rules] está agora disponível. Entre em contato com a Equipe de conta da Adobe ou com o Suporte da Adobe se tiver uma sandbox que exija que os gráficos recolhidos sejam desrecolhidos (&quot;corrigidos&quot;) após ativar as configurações de identidade.
 
 Com o Serviço de identidade da Adobe Experience Platform e o Perfil do cliente em tempo real, é fácil supor que seus dados são assimilados perfeitamente e que todos os perfis mesclados representam uma única pessoa por meio de um identificador de pessoa, como um CRMID. No entanto, há possíveis cenários em que determinados dados podem tentar mesclar vários perfis diferentes em um único perfil (&quot;colapso de gráfico&quot;). Para evitar essas mesclagens indesejadas, você pode usar as configurações fornecidas pelo [!DNL Identity Graph Linking Rules] e permitir a personalização precisa para seus usuários.
 
@@ -40,12 +40,12 @@ Assista aos vídeos a seguir para saber mais sobre alguns dos aspectos fundament
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/pt-br/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/pt-br/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/pt-br/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -55,7 +55,7 @@ Assista aos vídeos a seguir para saber mais sobre alguns dos aspectos fundament
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/pt-br/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Visão geral das regras de vinculação do gráfico de identidade" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448277/?format=jpeg&nocache=1747851655227&captions=por_br" alt="Visão geral das regras de vinculação do gráfico de identidade"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Visão geral das regras de vinculação do gráfico de identidade"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ Assista aos vídeos a seguir para saber mais sobre alguns dos aspectos fundament
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/pt-br/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Regras de vinculação do gráfico de identidade - Simulação de gráfico" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444048/?format=jpeg&nocache=1747851655237&captions=por_br" alt="Regras de vinculação do gráfico de identidade - Simulação de gráfico"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Regras de vinculação do gráfico de identidade - Simulação de gráfico"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -100,7 +100,7 @@ Assista aos vídeos a seguir para saber mais sobre alguns dos aspectos fundament
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/pt-br/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Regras de vinculação do gráfico de identidade - Configurações de identidade" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Regras de vinculação do gráfico de identidade - Configurações de identidade" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Regras de vinculação do gráfico de identidade - Configurações de identidade"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -109,11 +109,11 @@ Assista aos vídeos a seguir para saber mais sobre alguns dos aspectos fundament
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/pt-br/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Regras de vinculação do gráfico de identidade - Configurações de identidade">Regras de vinculação do gráfico de identidade - Configurações de identidade</a>
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Regras de vinculação do gráfico de identidade - Configurações de identidade">Regras de vinculação do gráfico de identidade - Configurações de identidade</a>
                     </p>
                     <p class="is-size-6">Saiba como habilitar e configurar regras de vinculação de gráficos de identidade para criar perfis de cliente precisos</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/pt-br/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Assistir</span>
                 </a>
             </div>

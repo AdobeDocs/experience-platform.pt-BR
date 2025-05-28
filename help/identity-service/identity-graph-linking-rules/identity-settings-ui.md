@@ -2,9 +2,9 @@
 title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
+source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '665'
 ht-degree: 2%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Identity Graph Linking Rules] está agora disponível. Entre em contato com o Suporte da Adobe se tiver uma sandbox que exija que os gráficos recolhidos sejam desrecolhidos (&quot;corrigidos&quot;) após ativar as configurações de identidade.
+>[!DNL Identity Graph Linking Rules] está agora disponível. Entre em contato com a Equipe de conta da Adobe ou com o Suporte da Adobe se tiver uma sandbox que exija que os gráficos recolhidos sejam desrecolhidos (&quot;corrigidos&quot;) após ativar as configurações de identidade.
 
 As configurações de identidade são um recurso na interface do serviço de identidade da Adobe Experience Platform que pode ser usado para designar namespaces exclusivos e configurar a prioridade de namespace.
 
@@ -82,6 +82,8 @@ A partir daqui, você deve confirmar o seguinte antes de prosseguir para a etapa
 >* A etapa final é outra mensagem de confirmação indicando que os gráficos existentes só serão afetados pelo algoritmo de gráfico **se os gráficos forem atualizados depois de salvar suas configurações**, e que a identidade principal dos fragmentos de evento no Perfil de cliente em tempo real não será atualizada mesmo após as alterações de prioridade do namespace.
 >
 >* Serão necessárias até **24 horas** para que suas configurações novas ou atualizadas entrem em vigor. Para confirmar, digite o nome da sua sandbox e selecione **[!UICONTROL Confirmar]**.
+>
+>* Não haverá alterações nos dados até que você salve as configurações de identidade.
 
 ![A janela de confirmação que exibe um aviso de atraso de cerca de seis horas antes que as configurações sejam processadas.](../images/rules/complete.png)
 

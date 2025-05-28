@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Terminologia dos regulamentos de privacidade
 description: Este documento fornece definições para termos-chave relacionados a regulamentos de privacidade compatíveis com o Adobe Experience Cloud.
 exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
-source-git-commit: 16a3900e7cb54ae1525c11c9316b3928e5f43096
+source-git-commit: ccde37961bd98275030db98440800925d3a6703e
 workflow-type: tm+mt
-source-wordcount: '2404'
-ht-degree: 1%
+source-wordcount: '2630'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 
 **CCPA**: a [!DNL California Consumer Privacy Act] (CCPA) oferece aos residentes da Califórnia mais controle sobre as informações pessoais coletadas pelas empresas. A lei prevê vários novos direitos para os consumidores, incluindo o direito de acesso e as informações pessoais coletadas deles, e o direito de recusar a venda de suas informações pessoais a terceiros.
 
-**CPA**: O [!DNL Colorado Privacy Act] (CPA) fornece aos consumidores do Colorado insights adicionais sobre o que os controladores de dados pessoais coletam, compartilham e vendem, e como esses dados são usados. A CPA protege os dados pessoais dos residentes do Colorado quando eles agem em um contexto individual ou doméstico. Essas regras detalham as especificações técnicas de um ou mais mecanismos de recusa universais. Estes mecanismos comunicam claramente a escolha afirmativa, livre e inequívoca do consumidor de não participar no tratamento de dados pessoais para efeitos de publicidade direcionada ou de venda de dados pessoais.
+**CPA**: O [!DNL Colorado Privacy Act] (CPA) fornece aos consumidores do Colorado mais insight sobre o que os controladores de dados pessoais coletam, compartilham e vendem, e como esses dados são usados. A CPA protege os dados pessoais dos residentes do Colorado quando eles agem em um contexto individual ou doméstico. Essas regras detalham as especificações técnicas de um ou mais mecanismos de recusa universais. Estes mecanismos comunicam claramente a escolha afirmativa, livre e inequívoca do consumidor de não participar no tratamento de dados pessoais para efeitos de publicidade direcionada ou de venda de dados pessoais.
 
 **CTDPA**: a [!DNL Connecticut Data Privacy Act] (CTDPA) concede aos residentes de Connecticut certos direitos sobre seus dados pessoais e estabelece responsabilidades e padrões de proteção de privacidade para controladores de dados que processam seus dados pessoais. A CTDPA concede a eles os seguintes direitos: acessar, corrigir, excluir, obter uma cópia ou recusar a venda, o processamento ou a definição de perfil de seus dados pessoais. A CTDPA protege um residente de Connecticut agindo como indivíduo ou em um contexto familiar.
 
@@ -87,11 +87,11 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 
 ## I
 
-**Identity Management Services (IMS)**: a implementação Adobe do Federated ID e do OAuth 2.0 para autenticação de usuários do Adobe ID e autorização para recursos Adobe. Integre o IMS ao seu aplicativo ou serviço Adobe para permitir que os usuários façam logon e acessem os serviços da Adobe. Os usuários podem fazer logon diretamente com o Renga (o provedor de serviços de identidade Adobe) ou por meio de um domínio de autenticação confiável de terceiros (como [!DNL Google], [!DNL Facebook] ou um LDAP corporativo/da organização).
+**Identity Management Services (IMS)**: a implementação do Federated ID e do OAuth 2.0 no Adobe para a autenticação de usuários do Adobe ID e a autorização para os recursos do Adobe. Integre o IMS ao seu aplicativo ou serviço do Adobe para permitir que os usuários façam logon e acessem os serviços da Adobe. Os usuários podem fazer logon diretamente com o Renga (o provedor de serviços de identidade da Adobe) ou por meio de um domínio de autenticação confiável de terceiros (como [!DNL Google], [!DNL Facebook] ou um LDAP corporativo/da organização).
 
 **Consentimento implícito**: também conhecido como consentimento inequívoco. Consentimento implícito refere-se ao consentimento que não foi explicitamente dado pelo titular dos dados, mas, no entanto, é de natureza inequívoca. Por exemplo, durante o processo de inscrição em um site de empresa, é dado um aviso de que, ao fornecer um endereço de email, o titular dos dados consente em receber emails sobre ofertas especiais. Se o titular dos dados ler o aviso, a ação afirmativa de inserir seu email é suficiente para ser considerada consentimento implícito.
 
-**ID da Organização IMS**: Refere-se a um token de autorização de Adobe para autenticação de serviço para serviço, que não requer logon do usuário. Ele é emitido para um cliente IMS e não tem um usuário associado. Um cliente IMS precisa de um token de serviço para autorizar solicitações de canal de retorno entre os serviços. (O termo &quot;token do sistema&quot; é usado ocasionalmente para significar token de serviço).
+**ID da Organização IMS**: refere-se a um token de autorização do Adobe para autenticação de serviço para serviço, que não requer logon do usuário. Ele é emitido para um cliente IMS e não tem um usuário associado. Um cliente IMS precisa de um token de serviço para autorizar solicitações de canal de retorno entre os serviços. (O termo &quot;token do sistema&quot; é usado ocasionalmente para significar token de serviço).
 
 **[!DNL Iowa Consumer Data Protection Act]**: uma lei estadual de privacidade que concede aos residentes de Iowa o direito de acessar, excluir e recusar a venda de seus dados pessoais. O ICDPA se aplica a empresas que processam dados de mais de 100 mil residentes de Iowa ou que obtêm mais de 50% da receita com a venda de dados. Isenções notáveis incluem organizações sem fins lucrativos e instituições educacionais. A lei prevê um período de cura de 90 dias para que as empresas corrijam as violações antes da imposição de sanções.
 
@@ -108,6 +108,8 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 **Estabelecimento principal**: o local dentro da União onde são tomadas as principais decisões em relação ao processamento de dados; em relação ao processador.
 
 **MHMDAa**: o [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) aprimora os direitos de privacidade dos consumidores em relação aos seus dados de saúde. Ela exige a divulgação, o consentimento do consumidor e os direitos de exclusão dos dados de saúde, e proíbe a venda de dados de saúde sem autorização. Além disso, a lei torna ilegal o uso de geofencing em instalações de saúde.
+
+**[!DNL Minnesota Consumer Data Privacy Act]** (MCDPA): A partir de 31 de julho de 2025, o MCDPA concede aos residentes de Minnesota direitos de acesso, correção, exclusão e obtenção de seus dados pessoais, bem como recusa de venda de dados, publicidade direcionada e determinados perfis. Ela se aplica a empresas que operam em ou que têm como alvo Minnesota e processam dados de mais de 100.000 consumidores por ano (excluindo dados somente de pagamento) ou mais de 25.000 consumidores se mais de 25% da receita for proveniente de vendas de dados. As entidades cobertas devem implementar medidas razoáveis de segurança de dados e realizar avaliações de risco.O procurador-geral de Minnesota aplica a lei e pode emitir multas de até US$ 7.500 por violação. No entanto, as empresas têm até 31 de janeiro de 2026 para corrigir quaisquer violações antes da aplicação de sanções.
 
 **[!DNL Montana Consumer Data Privacy Act]**: Essa lei concede aos moradores de Montana o direito de acessar, corrigir, excluir e solicitar cópias de seus dados pessoais. A MCDPA aplica-se a empresas que processam dados para mais de 50 mil consumidores de Montana e enfatiza a proteção de dados pessoais sensíveis, como informações biométricas e genéticas. Ela reforça a transparência em torno das práticas de coleta, compartilhamento e venda de dados.
 
@@ -169,6 +171,8 @@ Este documento fornece definições para termos-chave relacionados a regulamento
 ## T
 
 **TDPSA**: a Lei de Privacidade e Segurança de Dados do Texas (TDPSA) é uma legislação abrangente que protege os direitos de dados pessoais dos residentes do Texas. Ele concede aos indivíduos o direito de acessar, corrigir, excluir e obter cópias de seus dados e recusar a venda de dados e a publicidade direcionada. As empresas que violarem essa legislação poderão enfrentar penalidades financeiras.
+
+**[!DNL Tennessee Information Protection Act (TIPA)]**: A partir de 1º de julho de 2025, o TIPA concede aos residentes o direito de acessar, corrigir, excluir e obter seus dados pessoais. Ela também permite que eles recusem a venda de dados, a publicidade direcionada e a definição de perfis usadas para tomar decisões que produzem efeitos legais ou significativos de forma semelhante. Ela se aplica a empresas com mais de US$ 25 milhões em receita anual que processam dados de 175 mil ou mais consumidores, ou 25 mil se mais da metade da receita for proveniente da venda de dados pessoais. As empresas abrangidas devem adotar medidas de segurança razoáveis e realizar avaliações de proteção de dados para certas atividades de processamento de alto risco. O Procurador-Geral do Tennessee aplica a lei, com multas de até US$ 7.500 por violação. As empresas têm 60 dias para corrigir violações antes de enfrentarem penalidades, mas violações intencionais ou conscientes podem resultar em danos triplos.
 
 **Trílogos**: trílogos são negociações informais entre a Comissão Europeia, o Parlamento Europeu e o Conselho da União Europeia. Estas negociações são geralmente realizadas após as primeiras leituras da legislação proposta, para chegar mais rapidamente a acordo sobre um texto de compromisso a adotar.
 chegar mais rapidamente a acordo sobre a adoção de um texto de compromisso.

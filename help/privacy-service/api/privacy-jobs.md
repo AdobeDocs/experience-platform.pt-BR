@@ -2,17 +2,23 @@
 keywords: Experience Platform;página inicial;tópicos populares
 solution: Experience Platform
 title: Ponto de extremidade da API de trabalhos de privacidade
-description: Saiba como gerenciar processos de privacidade para aplicativos Experience Cloud usando a API de Privacy Service.
+description: Saiba como gerenciar processos de privacidade para aplicativos do Experience Cloud usando a API do Privacy Service.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 26a50f21c1ebebf485eaf62712bd02de3406cceb
+source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1861'
 ht-degree: 2%
 
 ---
 
 # Ponto de extremidade de trabalhos de privacidade
+
+>[!IMPORTANT]
+>
+>Para dar suporte ao número crescente de leis estaduais de privacidade dos EUA, a Privacy Service está alterando seus valores `regulation_type`. Use os novos valores que incluem abreviações de estado (por exemplo, `ucpa_ut_usa`) a partir de **12 de junho de 2025**. Os valores mais antigos (por exemplo, `ucpa_usa`) param de funcionar após **28 de julho de 2025**.
+>
+>Atualize suas integrações antes do prazo para evitar falhas de solicitação.
 
 Este documento aborda como trabalhar com processos de privacidade usando chamadas de API. Especificamente, ela abrange o uso do ponto de extremidade `/job` na API [!DNL Privacy Service]. Antes de ler este manual, consulte o [guia de introdução](./getting-started.md) para obter informações importantes que você precisa saber para fazer chamadas com êxito para a API, incluindo cabeçalhos necessários e como ler chamadas de exemplo de API.
 
@@ -26,7 +32,7 @@ Você pode exibir uma lista de todos os trabalhos de privacidade disponíveis em
 
 **Formato da API**
 
-Este formato de solicitação usa um parâmetro de consulta `regulation` no ponto de extremidade `/jobs`, portanto, começa com um ponto de interrogação (`?`), como mostrado abaixo. Ao listar recursos, a API de Privacy Service retorna até 1000 tarefas e pagina a resposta. Use outros parâmetros de consulta (`page`, `size` e filtros de data) para filtrar a resposta. Você pode separar vários parâmetros usando &quot;E&quot; comercial (`&`).
+Este formato de solicitação usa um parâmetro de consulta `regulation` no ponto de extremidade `/jobs`, portanto, começa com um ponto de interrogação (`?`), como mostrado abaixo. Ao listar recursos, a API do Privacy Service retorna até 1000 tarefas e pagina a resposta. Use outros parâmetros de consulta (`page`, `size` e filtros de data) para filtrar a resposta. Você pode separar vários parâmetros usando &quot;E&quot; comercial (`&`).
 
 >[!TIP]
 >
@@ -42,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`dpdpa`</li><li>`fdbr_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br>Consulte a visão geral em [regulamentos com suporte](../regulations/overview.md) para obter mais informações sobre os regulamentos de privacidade que os valores acima representam. |
+| `{REGULATION}` | O tipo de regulamento a ser consultado. Os valores aceitos incluem: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br>Consulte a visão geral em [regulamentos com suporte](../regulations/overview.md) para obter mais informações sobre os regulamentos de privacidade que os valores acima representam. |
 | `{PAGE}` | A página de dados a ser exibida, usando a numeração com base em 0. O padrão é `0`. |
 | `{SIZE}` | O número de resultados a serem exibidos em cada página. O padrão é `100` e o máximo é `1000`. Exceder o máximo faz com que a API retorne um erro de código 400. |
 | `{status}` | O comportamento padrão é incluir todos os status. Se você especificar um tipo de status, a solicitação retornará somente os processos de privacidade que correspondam a esse tipo de status. Os valores aceitos incluem: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -76,7 +82,7 @@ Para buscar o próximo conjunto de resultados em uma resposta paginada, você de
 
 >[!IMPORTANT]
 >
->O Privacy Service se destina apenas a solicitações de titulares de dados e de direitos do consumidor. Qualquer outro uso do Privacy Service para limpeza ou manutenção de dados não é suportado ou permitido. A Adobe tem a obrigação legal de os cumprir em tempo útil. Dessa forma, o teste de carga no Privacy Service não é permitido, pois é um ambiente somente de produção e cria um backlog desnecessário de solicitações de privacidade válidas.
+>O Privacy Service destina-se apenas a solicitações de titulares de dados e de direitos do consumidor. Qualquer outro uso do Privacy Service para limpeza ou manutenção de dados não é suportado ou permitido. A Adobe tem a obrigação legal de cumpri-las em tempo hábil. Dessa forma, o teste de carga no Privacy Service não é permitido, pois é um ambiente somente de produção e cria uma lista de pendências desnecessária de solicitações de privacidade válidas.
 >
 >Um limite rígido de upload diário está em vigor para ajudar a evitar o abuso do serviço. Os usuários que abusam do sistema terão o acesso ao serviço desativado. Uma reunião subsequente será realizada com eles para abordar suas ações e discutir o uso aceitável do Privacy Service.
 
@@ -84,7 +90,7 @@ Antes de criar uma nova solicitação de emprego, primeiro você deve coletar in
 
 >[!NOTE]
 >
->Aplicativos compatíveis com o Adobe Experience Cloud usam valores diferentes para identificar titulares de dados. Consulte o manual sobre [aplicativos de Privacy Service e Experience Cloud](../experience-cloud-apps.md) para obter mais informações sobre os identificadores necessários para seu(s) aplicativo(s). Para obter orientações mais gerais sobre como determinar quais IDs enviar para o [!DNL Privacy Service], consulte o documento sobre [dados de identidade em solicitações de privacidade](../identity-data.md).
+>Aplicativos compatíveis com o Adobe Experience Cloud usam valores diferentes para identificar titulares de dados. Consulte o manual sobre [aplicativos do Privacy Service e do Experience Cloud](../experience-cloud-apps.md) para obter mais informações sobre os identificadores necessários para seu(s) aplicativo(s). Para obter orientações mais gerais sobre como determinar quais IDs enviar para o [!DNL Privacy Service], consulte o documento sobre [dados de identidade em solicitações de privacidade](../identity-data.md).
 
 A API [!DNL Privacy Service] oferece suporte a dois tipos de solicitações de trabalho para dados pessoais:
 
@@ -168,9 +174,9 @@ curl -X POST \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `companyContexts` **(Obrigatório)** | Uma matriz que contém informações de autenticação para sua organização. Cada identificador listado inclui os seguintes atributos: <ul><li>`namespace`: O namespace de um identificador.</li><li>`value`: O valor do identificador.</li></ul>É **necessário** que um dos identificadores use `imsOrgId` como seu `namespace`, com seu `value` contendo a ID exclusiva para sua organização. <br/><br/>Os identificadores adicionais podem ser qualificadores de empresa específicos do produto (por exemplo, `Campaign`), que identificam uma integração com um aplicativo Adobe pertencente à sua organização. Os valores potenciais incluem nomes de conta, códigos de cliente, IDs de locatário ou outros identificadores de aplicativo. |
+| `companyContexts` **(Obrigatório)** | Uma matriz que contém informações de autenticação para sua organização. Cada identificador listado inclui os seguintes atributos: <ul><li>`namespace`: O namespace de um identificador.</li><li>`value`: O valor do identificador.</li></ul>É **necessário** que um dos identificadores use `imsOrgId` como seu `namespace`, com seu `value` contendo a ID exclusiva para sua organização. <br/><br/>Os identificadores adicionais podem ser qualificadores de empresa específicos do produto (por exemplo, `Campaign`), que identificam uma integração com um aplicativo do Adobe pertencente à sua organização. Os valores potenciais incluem nomes de conta, códigos de cliente, IDs de locatário ou outros identificadores de aplicativo. |
 | `users` **(Obrigatório)** | Uma matriz que contém uma coleção de pelo menos um usuário cujas informações você deseja acessar ou excluir. Um máximo de 1000 usuários pode ser fornecido em uma única solicitação. Cada objeto de usuário contém as seguintes informações: <ul><li>`key`: um identificador para um usuário que é usado para qualificar as IDs de trabalho separadas nos dados de resposta. É uma prática recomendada escolher uma string exclusiva e de fácil identificação para esse valor, para que ele possa ser facilmente referenciado ou pesquisado posteriormente.</li><li>`action`: uma matriz que lista as ações desejadas para realizar os dados do usuário. Dependendo das ações que você deseja realizar, esta matriz deve incluir `access`, `delete` ou ambos.</li><li>`userIDs`: uma coleção de identidades para o usuário. O número de identidades que um único usuário pode ter é limitado a nove. Cada identidade consiste em um `namespace`, um `value` e um qualificador de namespace (`type`). Consulte o [apêndice](appendix.md) para obter mais detalhes sobre essas propriedades necessárias.</li></ul> Para obter uma explicação mais detalhada de `users` e `userIDs`, consulte o [guia de solução de problemas](../troubleshooting-guide.md#user-ids). |
-| `include` **(Obrigatório)** | Uma matriz de produtos Adobe a serem incluídos no processamento. Se esse valor estiver ausente ou vazio, a solicitação será rejeitada. Inclua somente produtos com os quais sua organização tenha uma integração. Consulte a seção sobre [valores de produtos aceitos](appendix.md) no apêndice para obter mais informações. |
+| `include` **(Obrigatório)** | Uma variedade de produtos Adobe para incluir no processamento. Se esse valor estiver ausente ou vazio, a solicitação será rejeitada. Inclua somente produtos com os quais sua organização tenha uma integração. Consulte a seção sobre [valores de produtos aceitos](appendix.md) no apêndice para obter mais informações. |
 | `expandIDs` | Uma propriedade opcional que, quando definida como `true`, representa uma otimização para o processamento de IDs nos aplicativos (atualmente apenas com suporte do [!DNL Analytics]). Se omitido, esse valor assumirá `false` como padrão. |
 | `priority` | Uma propriedade opcional usada pelo Adobe Analytics que define a prioridade para processar solicitações. Os valores permitidos são `normal` e `low`. Se `priority` for omitido, o comportamento padrão será `normal`. |
 | `mergePolicyId` | Ao fazer solicitações de privacidade para o Perfil de cliente em tempo real (`profileService`), você pode fornecer a ID da [política de mesclagem](../../profile/merge-policies/overview.md) específica que deseja usar para a compilação de ID. Ao especificar uma política de mesclagem, as solicitações de privacidade podem incluir informações de público-alvo ao retornar dados sobre um cliente. Somente uma política de mesclagem pode ser especificada por solicitação. Se nenhuma política de mesclagem for fornecida, as informações de segmentação não serão incluídas na resposta. |

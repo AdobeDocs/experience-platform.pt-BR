@@ -1,14 +1,15 @@
 ---
 title: Visão geral da Segurança da camada de transporte mútua (mTLS)
 description: Saiba como você pode usar o mTLS para recuperar com segurança certificados públicos emitidos pelo Adobe para encaminhamento de eventos.
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
+source-git-commit: ab16cc3f70ec54460c7c4834e665c828d75d4d9e
 workflow-type: tm+mt
-source-wordcount: '637'
-ht-degree: 1%
+source-wordcount: '638'
+ht-degree: 2%
 
 ---
 
-# Visão geral da Segurança da Camada de Transporte Mútuo [!DNL mTLS]
+# Visão geral da Segurança da Camada de Transporte Mútuo ([!DNL mTLS])
 
 Associe os certificados da Segurança da Camada de Transporte Mútuo ([!DNL mTLS]) na [!UICONTROL Interface do Usuário de Ambientes] para assumir o controle da segurança da sua extensão. O certificado [!DNL mTLS] é uma credencial digital que comprova a identidade de um servidor ou cliente em comunicações seguras. Quando você usa a API de Serviço [!DNL mTLS], esses certificados ajudam a verificar e criptografar suas interações com o Adobe Experience Platform Event Forwarding. Esse processo não só protege seus dados, mas também garante que cada conexão seja de um parceiro confiável.
 
@@ -48,14 +49,14 @@ Para exibir os detalhes do certificado de um ambiente, selecione a guia **[!UICO
 
 Os detalhes do certificado a seguir são exibidos:
 
-| Ambiente | Descrição |
+| Nome do campo | Descrição |
 | --- | --- |
 | Certificado | Detalhes do certificado, que incluem:<ul><li>**Nome**: o nome do certificado.</li><li>**Data de criação**: a data de criação do certificado.</li><li>**Status**: o status atual do certificado:<ul><li>**Atual**: o certificado está sendo usado ativamente.</li><li>**Obsoleto**: o certificado não está em uso, mas ainda não expirou. Ele ainda poderá ser selecionado para uso.</li><li>**Expirado**: o certificado expirou, está esmaecido e não está mais disponível para uso.</li></ul></ul> |
 | Expira | Data em que o certificado expirará. |
 | Variable Name | O nome da variável do certificado. |
 | Status | O status atual do certificado:<ul><li>**Implantado**: o certificado foi implantado com êxito e está ativo.</li><li>**Implantando**: o certificado está em processo de implantação.</li><li>**Precisa da Implantação**: este status aparece quando um certificado obsoleto é selecionado.</li></ul> |
 
-![A página Editar Ambiente de Desenvolvimento, destacando os detalhes do [!UICONTROL Certificado].](../../../images/extensions/server/cloud-connector/create-environment.png)
+![A página Editar Ambiente de Desenvolvimento, destacando os detalhes do [!UICONTROL Certificado].](../../../images/extensions/server/cloud-connector/certificate-details.png)
 
 ### Selecionar e implantar um certificado obsoleto {#deploy-obsolete-certificate}
 

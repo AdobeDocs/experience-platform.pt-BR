@@ -32,5 +32,5 @@ ht-degree: 28%
    * Cartões-modelo de IA {#ai-model-cards}
       * [Linguagem para SQL dos Insights Operacionais Naturais do Assistente de IA](./model-cards/ai-model-cards/natural-language-to-sql.md)
       * [Pontuação de propensão do Customer AI](./model-cards/ai-model-cards/customer-ai.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
 

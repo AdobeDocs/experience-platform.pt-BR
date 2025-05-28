@@ -62,5 +62,5 @@ Após concluir essas etapas, qualquer administrador de suporte da organização 
 
 Para obter mais informações, assista ao vídeo a seguir para saber como você pode usar o Agente de suporte do produto para solucionar problemas com facilidade sem sair dos fluxos de trabalho.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443188?learn=on&captions=por_br)
 

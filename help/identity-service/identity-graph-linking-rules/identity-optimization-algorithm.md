@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de otimização de identidade
+title: Algoritmo de otimização de identidades
 description: Saiba mais sobre o Algoritmo de otimização de identidade no Serviço de identidade.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
 source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
@@ -9,7 +9,7 @@ ht-degree: 4%
 
 ---
 
-# Algoritmo de otimização de identidade {#identity-optimization-algorithm}
+# Algoritmo de otimização de identidades {#identity-optimization-algorithm}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"

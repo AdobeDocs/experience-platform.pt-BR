@@ -5,7 +5,7 @@ exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
 source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
 source-wordcount: '1446'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
 >title="Simulação de gráfico"
->abstract="Simule gráficos para entender como o Serviço de identidade vincula identidades e como o Algoritmo de otimização de identidade funciona."
+>abstract="Simule gráficos para entender como o serviço de identidade vincula identidades e como o algoritmo de otimização de identidades funciona."
 
 [!DNL Graph Simulation] é uma ferramenta na interface do usuário do Serviço de Identidade que você pode usar para simular como um gráfico de identidade se comporta considerando uma combinação específica de identidades e como você configura o [Algoritmo de Otimização de Identidade](./identity-optimization-algorithm.md).
 
 Assista ao vídeo a seguir para obter mais informações sobre como usar a interface [!DNL Graph Simulation] no espaço de trabalho da interface do usuário do Serviço de Identidade:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444048/?learn=on&enablevpops&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 
 Leia este documento para saber como você pode usar o [!DNL Graph Simulation] para entender melhor o comportamento do gráfico de identidade e como ele funciona.
 
@@ -177,7 +177,7 @@ No gráfico de exemplo abaixo, uma linha pontilhada existe entre `{Email: tom@ac
 Após a leitura deste documento, você sabe como usar a ferramenta [!DNL Graph Simulation] para entender melhor como seus dados de identidade são tratados com base em um conjunto específico de regras e configurações. Para obter mais informações, leia os seguintes documentos:
 
 * [Visão geral do [!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
+* [Algoritmo de otimização de identidades](./identity-optimization-algorithm.md)
 * [Guia de implementação](./implementation-guide.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)

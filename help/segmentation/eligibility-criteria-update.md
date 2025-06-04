@@ -4,7 +4,7 @@ description: Saiba mais sobre as atualizações de critérios de qualificação 
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: eafb7337edacc5d2b2aa9c38540aff946c8d39c0
+source-git-commit: 2af73be351cb818862006adc8d0f1a33f95d93cf
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 3%
@@ -68,13 +68,13 @@ Por exemplo, digamos que você tenha dois públicos-alvo, com ambos os públicos
 
 | Público-alvo | Esquema | Tipo de Source | Definição de consulta | ID do público-alvo |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Desistências recentes | Evento de experiência | Lote | Tem pelo menos um evento de abandono nas últimas 24 horas | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Desistências recentes | Evento de experiência | Lote | Tem pelo menos um evento de abandono nas últimas 24 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Check-outs recentes | Evento de experiência | Transmissão | Tem pelo menos um check-out nas últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Nessa situação, seria necessário criar um terceiro público-alvo da seguinte maneira:
 
 ```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+inSegment("7deb246a-49b4-4687-95f9-6316df049948") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
 ```
 
 >[!IMPORTANT]

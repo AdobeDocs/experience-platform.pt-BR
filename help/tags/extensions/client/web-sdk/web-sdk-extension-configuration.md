@@ -42,7 +42,7 @@ Ao criar uma build personalizada do Web SDK, ela é usada por todas as instânci
 >[!IMPORTANT]
 >
 >A desativação dos componentes do Web SDK pode interromper a implementação existente. Cada vez que desabilitar um componente, certifique-se de testar sua implementação completamente para garantir que todas as funcionalidades necessárias estejam funcionando como esperado.
->>Quando você desativa um componente, não pode mais editar as configurações desse componente.
+>&#x200B;>Quando você desativa um componente, não pode mais editar as configurações desse componente.
 
 Para criar um build personalizado do Web SDK usando a extensão de tag da Web SDK, siga as etapas abaixo.
 
@@ -117,9 +117,10 @@ Esta seção permite definir o comportamento do Web SDK quando se trata de lidar
 * **[!UICONTROL Usar cookies de terceiros]**: quando esta opção é habilitada, o Web SDK tenta armazenar um identificador de usuário em um cookie de terceiros. Se for bem-sucedido, o usuário será identificado como um único usuário durante a navegação em vários domínios, em vez de ser identificado como um usuário separado em cada domínio. Se essa opção estiver ativada, o SDK ainda poderá não conseguir armazenar o identificador do usuário em um cookie de terceiros se o navegador não for compatível com cookies de terceiros ou tiver sido configurado pelo usuário para não permitir cookies de terceiros. Nesse caso, o SDK armazena apenas o identificador no domínio próprio.
 
   >[!IMPORTANT]
-  >>Cookies de terceiros não são compatíveis com a funcionalidade [ID de dispositivo próprio](../../../../web-sdk/identity/first-party-device-ids.md) no Web SDK.
-  >>Você pode usar IDs de dispositivo primário ou cookies de terceiros, mas não pode usar ambos os recursos simultaneamente.
+  >&#x200B;>Cookies de terceiros não são compatíveis com a funcionalidade [ID de dispositivo próprio](../../../../web-sdk/identity/first-party-device-ids.md) no Web SDK.
+  >&#x200B;>Você pode usar IDs de dispositivo primário ou cookies de terceiros, mas não pode usar ambos os recursos simultaneamente.
   >
+
 ## Definir configurações de personalização {#personalization}
 
 Esta seção permite configurar como você deseja ocultar determinadas partes de uma página enquanto o conteúdo personalizado é carregado. Isso garante que seus visitantes vejam apenas a página personalizada.
@@ -140,7 +141,7 @@ Para usar o trecho pré-ocultação, copie-o e cole-o dentro do elemento `<head>
 
 >[!IMPORTANT]
 >
-Ao usar o trecho pré-ocultação, a Adobe recomenda usar a mesma regra [!DNL CSS] usada pelo [estilo pré-ocultação](#prehiding-style).
+>Ao usar o trecho pré-ocultação, a Adobe recomenda usar a mesma regra [!DNL CSS] usada pelo [estilo pré-ocultação](#prehiding-style).
 
 ## Definir configurações da coleção de dados {#data-collection}
 
@@ -171,7 +172,7 @@ Gerenciar definições de configuração da coleta de dados. Configurações sem
 
 >[!TIP]
 >
-O campo **[!UICONTROL Ativado antes do link clicar em enviar]** é um retorno de chamada obsoleto visível apenas para propriedades que já o têm configurado. É a marca equivalente a [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) na biblioteca JavaScript. Use o retorno de chamada **[!UICONTROL Filtrar propriedades de clique]** para filtrar ou ajustar dados de clique, ou use a **[!UICONTROL Ativar antes de enviar o retorno de chamada]** para filtrar ou ajustar a carga geral enviada para a Adobe. Se o retorno de chamada **[!UICONTROL Propriedades de clique de Filtro]** e o retorno de chamada **[!UICONTROL Ativado antes do envio de cliques em links]** estiverem definidos, somente o retorno de chamada **[!UICONTROL Propriedades de clique de Filtro]** será executado.
+>O campo **[!UICONTROL Ativado antes do link clicar em enviar]** é um retorno de chamada obsoleto visível apenas para propriedades que já o têm configurado. É a marca equivalente a [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) na biblioteca JavaScript. Use o retorno de chamada **[!UICONTROL Filtrar propriedades de clique]** para filtrar ou ajustar dados de clique, ou use a **[!UICONTROL Ativar antes de enviar o retorno de chamada]** para filtrar ou ajustar a carga geral enviada para a Adobe. Se o retorno de chamada **[!UICONTROL Propriedades de clique de Filtro]** e o retorno de chamada **[!UICONTROL Ativado antes do envio de cliques em links]** estiverem definidos, somente o retorno de chamada **[!UICONTROL Propriedades de clique de Filtro]** será executado.
 
 ## Definir configurações de coleção de mídia {#media-collection}
 
@@ -205,7 +206,7 @@ Como alternativa à transmissão de sobreposições por meio de um comando do We
 
 >[!IMPORTANT]
 >
-As substituições de fluxo de dados devem ser configuradas com base no ambiente. Os ambientes de desenvolvimento, armazenamento temporário e produção têm substituições separadas. Você pode copiar as configurações entre elas usando as opções dedicadas mostradas na tela abaixo.
+>As substituições de fluxo de dados devem ser configuradas com base no ambiente. Os ambientes de desenvolvimento, armazenamento temporário e produção têm substituições separadas. Você pode copiar as configurações entre elas usando as opções dedicadas mostradas na tela abaixo.
 
 ![Imagem mostrando as substituições da configuração da sequência de dados usando a página de extensão de marca do Web SDK.](assets/datastream-overrides.png)
 

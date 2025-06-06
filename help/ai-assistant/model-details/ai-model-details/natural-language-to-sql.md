@@ -4,9 +4,9 @@ description: Saiba mais sobre a Linguagem natural do assistente de IA para o mod
 hide: true
 hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a8cc7c6f202cdd2786a69e548810b3957d69fdb3
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ WHERE
 
 ## Avaliação do modelo {#model-evaluation}
 
-* **Métricas e procedimentos de avaliação**: o modelo é avaliado usando a precisão. Por exemplo, de todas as [!DNL NL2SQL] solicitações, quantas produzem os resultados SQL corretos. O processo de avaliação é uma combinação de correspondência baseada em regras (padronização de SQL e, em seguida, correspondência direta de sequência de SQL), solucionador de SQL baseado em LLM e avaliação humana.
+* **Métricas e procedimentos de avaliação**: o modelo é avaliado observando as [!DNL NL2SQL] solicitações e avaliando quantas delas produzem os resultados SQL corretos. O processo de avaliação é uma combinação de correspondência baseada em regras (padronização de SQL e, em seguida, correspondência direta de sequência de SQL), solucionador de SQL baseado em LLM e avaliação humana.
 * **Dados de avaliação e pré-processamento**: usamos conjuntos abertos para testes de regressão e também temos projetos de anotação semanais para monitorar o desempenho do modelo por meio do tráfego real do cliente amostrado.
 
 ## Implantação do modelo {#model-deployment}
 
 * **Monitoramento de modelo**: o modelo base está hospedado por [!DNL Azure].
-* **Atualização de modelo**: o modelo é atualizado regularmente, semanalmente, por meio da expansão do banco de perguntas. O modelo também é atualizado por meio de novas estratégias de solicitação e instruções quando necessário.
+* **Atualização do modelo**: a Linguagem natural para o modelo SQL dos Insights Operacionais do Assistente de IA do Adobe Experience Platform é atualizada regularmente (semanalmente) por meio da expansão do banco de perguntas. O modelo também é atualizado por meio de novas estratégias de solicitação e instruções quando necessário.
 
 ## Equidade e viés {#fairness-and-bias}
 

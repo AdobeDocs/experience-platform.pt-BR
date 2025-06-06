@@ -4,9 +4,9 @@ description: Saiba mais sobre o modelo de IA usado para a IA do cliente.
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,8 @@ ht-degree: 0%
 
 ## Treinamento de modelo {#model-training}
 
-* **Dados de treinamento e pré-processamento**: o conjunto de dados de treinamento para cada cliente é originado diretamente de seus próprios dados na Adobe Experience Platform. Isso inclui interações históricas do cliente, registros transacionais, logs de envolvimento comportamental e informações demográficas, conforme coletadas e armazenadas na instância do Adobe Experience Platform. O conjunto de dados aproveita dados específicos do cliente ao longo do período escolhido, capturando suas tendências sazonais exclusivas e os padrões de engajamento. Antes de usar, o conjunto de dados de cada cliente passa por um pré-processamento adaptado às suas características de dados, incluindo manipulação de valor ausente, codificação categórica, dimensionamento de recursos, detecção de valores atípicos e engenharia de recursos para garantir a qualidade e a usabilidade ideais para seu caso de uso específico
+* **Dados de treinamento e pré-processamento**: o conjunto de dados de treinamento para cada cliente é originado diretamente de seus próprios dados na Adobe Experience Platform. Isso inclui interações históricas do cliente, registros transacionais, logs de envolvimento comportamental e informações demográficas, conforme coletadas e armazenadas na instância do Adobe Experience Platform. O conjunto de dados aproveita dados específicos do cliente ao longo do período escolhido, capturando suas tendências sazonais exclusivas e os padrões de engajamento. Antes de usar, o conjunto de dados de cada cliente passa por um pré-processamento adaptado às suas características de dados, incluindo manipulação de valor ausente, codificação categórica, dimensionamento de recursos, detecção de valores atípicos e engenharia de recursos para garantir a qualidade e a usabilidade ideais para seu caso de uso específico.
+   * Os dados do consumidor usados para treinamento não são usados entre clientes.
 * **Especificações de treinamento**: o modelo aproveita [!DNL LightGBM] usando [!DNL GBM], otimizado para dados estruturados. Ele é treinado em sequências históricas de eventos do cliente para identificar padrões comportamentais preditivos.
 * **Estruturas de treinamento**: o modelo foi desenvolvido usando o [!DNL LightGBM] e o [!DNL scikit-learn] e é treinado na infraestrutura em nuvem da IA do Adobe.
 * **Infraestrutura de treinamento**: [!DNL Databricks] clusters.
@@ -64,7 +65,7 @@ ht-degree: 0%
 
 * **Implantação do modelo**: o modelo está hospedado nos serviços de IA da Adobe Experience Platform e integrado a vários aplicativos da Adobe. Ele está disponível por meio de endpoints de API, permitindo acesso perfeito para previsões em tempo real e processamento em lote em fluxos de trabalho de marketing e envolvimento do consumidor.
 * **Monitoramento de modelo**: o modelo é monitorado continuamente por meio do monitoramento de modelo para ver o descompasso da configuração de treinamento. Treinos periódicos (uma vez a cada 3 meses) são executados automaticamente.
-* **Atualização do modelo**: o modelo é retreinado uma vez a cada vários meses (máximo de uma vez a cada 6 meses) usando dados atualizados de interação com o consumidor para garantir relevância contínua. O novo treinamento periódico ajuda a reduzir a deriva de dados e as flutuações sazonais que podem afetar a precisão preditiva.
+* **Atualização de modelo**: o modelo é retreinado uma vez a cada vários meses (no máximo uma vez a cada 6 meses) usando dados atualizados de interação com o consumidor para garantir relevância contínua. O novo treinamento periódico ajuda a reduzir a deriva de dados e as flutuações sazonais que podem afetar a precisão preditiva.
 
 ## Explicabilidade {#explainability}
 

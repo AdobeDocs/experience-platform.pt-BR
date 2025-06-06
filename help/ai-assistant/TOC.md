@@ -33,5 +33,5 @@ ht-degree: 29%
       * [Linguagem para SQL dos Insights Operacionais Naturais do Assistente de IA](./model-details/ai-model-details/natural-language-to-sql.md)
       * [Pontuação de propensão do Customer AI](./model-details/ai-model-details/customer-ai.md)
       * [Otimização de tempo de envio](./model-details/ai-model-details/send-time-optimization.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
 

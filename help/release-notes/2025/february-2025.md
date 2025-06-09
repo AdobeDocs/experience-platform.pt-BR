@@ -13,7 +13,7 @@ ht-degree: 16%
 
 >[!TIP]
 >
->Esta versão inclui melhorias no complemento Federated Audience Composition. Para obter mais informações, leia as [notas de versão da Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes).
+>Esta versão inclui melhorias no complemento Federated Audience Composition. Para obter mais informações, leia as [notas de versão da Federated Audience Composition](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes).
 
 **Data de lançamento: quarta-feira, 18 de fevereiro de 2025**
 
@@ -96,7 +96,7 @@ Para obter mais informações, leia a [Visão geral do Preparo de Dados](../../d
 | --- | --- |
 | Usar rótulos de acesso para gerenciar o acesso do usuário aos fluxos de dados de destino | Como parte da funcionalidade do [[!UICONTROL controle de acesso baseado em atributos]](/help/access-control/abac/overview.md) no Real-Time CDP, agora é possível aplicar rótulos de acesso aos [fluxos de dados de destino](/help/dataflows/ui/monitor-destinations.md). Dessa forma, você pode garantir que apenas um subconjunto de usuários em sua organização tenha acesso a fluxos de dados de destino específicos. <br> **Importante**: ao pesquisar fluxos de dados de destino usando a caixa de pesquisa na parte superior da interface do usuário do Experience Platform, os resultados podem incluir fluxos de dados de destino que os rótulos de acesso do usuário impedem que você veja. Esse comportamento será corrigido em uma atualização futura. |
 | [Relatórios no nível do público-alvo](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) da [conexão com o Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md) | Agora você pode [exibir informações](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) sobre as identidades ativadas, excluídas ou com falha detalhadas em um nível de público-alvo, para cada público que faz parte dos fluxos de dados deste destino. |
-| Suporte a públicos externos para as conexões [TikTok](/help/destinations/catalog/social/tiktok.md) e [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | Você pode ativar públicos externos para esses destinos em [uploads personalizados](../../segmentation/ui/audience-portal.md#import-audience) e [Composição de Público Federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+| Suporte a públicos externos para as conexões [TikTok](/help/destinations/catalog/social/tiktok.md) e [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | Você pode ativar públicos externos para esses destinos em [uploads personalizados](../../segmentation/ui/audience-portal.md#import-audience) e [Composição de Público Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/start/audiences). |
 | Exportar arrays, mapas e objetos para destinos de armazenamento na nuvem | Ao usar o botão de alternância **[!UICONTROL Exportar matrizes, mapas, objetos]** ao se conectar a um destino de armazenamento na nuvem, você pode exportar novos objetos complexos para destinos selecionados. [Leia mais](/help/destinations/ui/export-arrays-maps-objects.md) sobre a funcionalidade. |
 
 {style="table-layout:auto"}

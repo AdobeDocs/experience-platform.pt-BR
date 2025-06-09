@@ -2,10 +2,10 @@
 title: Notas da versão de fevereiro de 2025 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2025 da Adobe Experience Platform.
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: c8fe5f05b7dcef7db2ae44d5b6575e123cbd014d
 workflow-type: tm+mt
-source-wordcount: '1645'
-ht-degree: 17%
+source-wordcount: '1677'
+ht-degree: 16%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 17%
 
 >[!TIP]
 >
->Esta versão inclui melhorias no complemento Federated Audience Composition. Para obter mais informações, leia as [notas de versão da Federated Audience Composition](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes).
+>Esta versão inclui melhorias no complemento Federated Audience Composition. Para obter mais informações, leia as [notas de versão da Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes).
 
 **Data de lançamento: quarta-feira, 18 de fevereiro de 2025**
 
@@ -90,13 +90,13 @@ Para obter mais informações, leia a [Visão geral do Preparo de Dados](../../d
 
 {style="table-layout:auto"}
 
-**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
 
 | Recurso | Descrição |
 | --- | --- |
 | Usar rótulos de acesso para gerenciar o acesso do usuário aos fluxos de dados de destino | Como parte da funcionalidade do [[!UICONTROL controle de acesso baseado em atributos]](/help/access-control/abac/overview.md) no Real-Time CDP, agora é possível aplicar rótulos de acesso aos [fluxos de dados de destino](/help/dataflows/ui/monitor-destinations.md). Dessa forma, você pode garantir que apenas um subconjunto de usuários em sua organização tenha acesso a fluxos de dados de destino específicos. <br> **Importante**: ao pesquisar fluxos de dados de destino usando a caixa de pesquisa na parte superior da interface do usuário do Experience Platform, os resultados podem incluir fluxos de dados de destino que os rótulos de acesso do usuário impedem que você veja. Esse comportamento será corrigido em uma atualização futura. |
 | [Relatórios no nível do público-alvo](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) da [conexão com o Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md) | Agora você pode [exibir informações](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) sobre as identidades ativadas, excluídas ou com falha detalhadas em um nível de público-alvo, para cada público que faz parte dos fluxos de dados deste destino. |
-| Suporte a públicos externos para as conexões [TikTok](/help/destinations/catalog/social/tiktok.md) e [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | Você pode ativar públicos externos para esses destinos em [uploads personalizados](../../segmentation/ui/audience-portal.md#import-audience) e [Composição de Público Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/start/audiences). |
+| Suporte a públicos externos para as conexões [TikTok](/help/destinations/catalog/social/tiktok.md) e [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | Você pode ativar públicos externos para esses destinos em [uploads personalizados](../../segmentation/ui/audience-portal.md#import-audience) e [Composição de Público Federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
 | Exportar arrays, mapas e objetos para destinos de armazenamento na nuvem | Ao usar o botão de alternância **[!UICONTROL Exportar matrizes, mapas, objetos]** ao se conectar a um destino de armazenamento na nuvem, você pode exportar novos objetos complexos para destinos selecionados. [Leia mais](/help/destinations/ui/export-arrays-maps-objects.md) sobre a funcionalidade. |
 
 {style="table-layout:auto"}
@@ -123,7 +123,7 @@ Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [V
 
 ## Origens {#sources}
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 Use fontes na Experience Platform para assimilar dados de um aplicativo da Adobe ou de uma fonte de dados de terceiros.
 
@@ -132,6 +132,7 @@ Use fontes na Experience Platform para assimilar dados de um aplicativo da Adobe
 | Recurso | Descrição |
 | --- | --- |
 | Suporte para Exibições em [!DNL Microsoft Dynamics] | Agora você pode assimilar `"entityType": "view"` ao usar a origem [!DNL Microsoft Dynamics]. Para obter mais informações, leia o guia em [conectando uma [!DNL Microsoft Dynamics] origem à Experience Platform](../../sources/tutorials/api/create/crm/ms-dynamics.md). |
+| Novos endereços IP para incluir na lista de permissões | Você deve adicionar os seguintes endereços IP ao arquivo de inclui na lista de permissões para usar as fontes da Experience Platform com êxito.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> <br></br>Para obter mais informações, leia o [guia de inclui na lista de permissões de endereço IP de origens](../../sources/ip-address-allow-list.md). |
 
 {style="table-layout:auto"}
 

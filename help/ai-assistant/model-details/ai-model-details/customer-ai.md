@@ -4,7 +4,7 @@ description: Saiba mais sobre o modelo de IA usado para a IA do cliente.
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
+source-git-commit: 8230c71c9b7896dfb71506632754d48583d0dc21
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -53,7 +53,7 @@ ht-degree: 0%
 * **Dados de treinamento e pré-processamento**: o conjunto de dados de treinamento para cada cliente é originado diretamente de seus próprios dados na Adobe Experience Platform. Isso inclui interações históricas do cliente, registros transacionais, logs de envolvimento comportamental e informações demográficas, conforme coletadas e armazenadas na instância do Adobe Experience Platform. O conjunto de dados aproveita dados específicos do cliente ao longo do período escolhido, capturando suas tendências sazonais exclusivas e os padrões de engajamento. Antes de usar, o conjunto de dados de cada cliente passa por um pré-processamento adaptado às suas características de dados, incluindo manipulação de valor ausente, codificação categórica, dimensionamento de recursos, detecção de valores atípicos e engenharia de recursos para garantir a qualidade e a usabilidade ideais para seu caso de uso específico.
    * Os dados do consumidor usados para treinamento não são usados entre clientes.
 * **Especificações de treinamento**: o modelo aproveita [!DNL LightGBM] usando [!DNL GBM], otimizado para dados estruturados. Ele é treinado em sequências históricas de eventos do cliente para identificar padrões comportamentais preditivos.
-* **Estruturas de treinamento**: o modelo foi desenvolvido usando o [!DNL LightGBM] e o [!DNL scikit-learn] e é treinado na infraestrutura em nuvem da IA do Adobe.
+* **Estruturas de treinamento**: o modelo foi desenvolvido com o [!DNL LightGBM] e o [!DNL scikit-learn] e está hospedado na infraestrutura em nuvem da IA do Adobe.
 * **Infraestrutura de treinamento**: [!DNL Databricks] clusters.
 
 ## Avaliação do modelo {#model-evaluation}

@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;conexão de tra
 title: Criar uma conexão de transmissão da API HTTP usando a API do serviço de fluxo
 description: Este tutorial fornece etapas sobre como criar uma conexão de transmissão usando a fonte de API HTTP para dados brutos e XDM usando a API do serviço de fluxo
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1684'
 ht-degree: 4%
 
 ---
@@ -457,6 +457,10 @@ Uma resposta bem-sucedida retorna detalhes do mapeamento recém-criado, incluind
 ```
 
 ## Criar um fluxo de dados
+
+>[!NOTE]
+>
+>Depois de criar ou atualizar um fluxo de dados de transmissão, é necessária uma breve pausa de 5 minutos na assimilação de dados para evitar possíveis instâncias de perda ou perda de dados.
 
 Com as conexões de origem e de destino criadas, agora é possível criar um fluxo de dados. O fluxo de dados é responsável por agendar e coletar dados de uma origem. Você pode criar um fluxo de dados executando uma solicitação POST para o ponto de extremidade `/flows`.
 

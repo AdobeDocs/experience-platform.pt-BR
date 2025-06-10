@@ -5,9 +5,9 @@ title: Criar um fluxo de dados de transmissão para dados brutos usando a API do
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de transmissão e trazê-los para o Experience Platform usando conectores de origem e APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1208'
 ht-degree: 3%
 
 ---
@@ -414,6 +414,10 @@ Uma resposta bem-sucedida retorna uma lista de especificações de fluxo de dado
 ```
 
 ## Criar um fluxo de dados
+
+>[!NOTE]
+>
+>Depois de criar ou atualizar um fluxo de dados de transmissão, é necessária uma breve pausa de 5 minutos na assimilação de dados para evitar possíveis instâncias de perda ou perda de dados.
 
 A última etapa para coletar dados de transmissão é criar um fluxo de dados. Até agora, você tem os seguintes valores necessários preparados:
 

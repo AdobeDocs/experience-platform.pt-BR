@@ -4,9 +4,9 @@ description: Saiba como criar uma conexão de origem e um fluxo de dados para as
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '841'
 ht-degree: 1%
 
 ---
@@ -86,6 +86,10 @@ Para obter mais informações sobre o gerenciamento de funções e privilégios,
       * `TIMESTAMP_TZ` não pode ser usada uma coluna de carimbo de data/hora ou em um mapeamento.
 
 ## Próximas etapas
+
+>[!NOTE]
+>
+>Depois de criar ou atualizar um fluxo de dados de transmissão, é necessária uma breve pausa de 5 minutos na assimilação de dados para evitar possíveis instâncias de perda ou perda de dados.
 
 O tutorial a seguir fornece etapas sobre como conectar sua fonte de streaming do [!DNL Snowflake] ao Experience Platform usando a API:
 

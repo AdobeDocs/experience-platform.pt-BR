@@ -3,9 +3,9 @@ title: Criar uma conexão do Source com os Hubs de Eventos do Azure usando a API
 description: Saiba como conectar o Adobe Experience Platform a uma conta do Azure Event Hubs usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1524'
 ht-degree: 2%
 
 ---
@@ -384,6 +384,10 @@ curl -X POST \
 | `params.dataType` | Esse parâmetro define o tipo de dados que está sendo assimilado. Os tipos de dados suportados incluem: `raw` e `xdm`. |
 | `params.reset` | Esse parâmetro define como os dados serão lidos. Use `latest` para começar a ler os dados mais recentes e use `earliest` para começar a ler os primeiros dados disponíveis no fluxo. Este parâmetro é opcional e o padrão é `earliest` se não for fornecido. |
 | `params.consumerGroup` | O mecanismo de publicação ou assinatura a ser usado para [!DNL Event Hubs]. Este parâmetro é opcional e o padrão é `$Default` se não for fornecido. Consulte este [[!DNL Event Hubs] guia sobre consumidores de eventos](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) para obter mais informações. **Observação**: um grupo de consumidores [!DNL Event Hubs] só pode ser usado para um único fluxo em um determinado momento. |
+
+>[!NOTE]
+>
+>Depois de criar ou atualizar um fluxo de dados de transmissão, é necessária uma breve pausa de 5 minutos na assimilação de dados para evitar possíveis instâncias de perda ou perda de dados.
 
 ## Próximas etapas
 

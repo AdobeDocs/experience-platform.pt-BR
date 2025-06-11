@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de identidade da Experience Platform
 user-guide-description: Une as identidades dos clientes em todos os dispositivos e sistemas para entregar experiências digitais personalizadas.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 6690854048324567f9a8a1f000bd10f45d7c8340
 workflow-type: tm+mt
-source-wordcount: '145'
-ht-degree: 33%
+source-wordcount: '144'
+ht-degree: 36%
 
 ---
 
@@ -24,9 +24,9 @@ ht-degree: 33%
    - [Exclusões no serviço de identidade](./features/deletion.md)
    - Regras de vinculação do gráfico de identidade {#identity-graph-linking-rules}
       - [Visão geral do recurso](./identity-graph-linking-rules/overview.md)
-      - [Algoritmo de otimização de identidade](./identity-graph-linking-rules/identity-optimization-algorithm.md)
+      - [Algoritmo de otimização de identidades](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Guia de implementação para regras de vinculação do gráfico de identidade](./identity-graph-linking-rules/implementation-guide.md)
-      - [Exemplo de configurações de gráfico](./identity-graph-linking-rules/example-configurations.md)
+      - [Guia de configurações](./identity-graph-linking-rules/example-configurations.md)
       - [Solução de problemas das regras de vinculação do gráfico de identidade](./identity-graph-linking-rules/troubleshooting.md)
       - [Prioridade de namespace](./identity-graph-linking-rules/namespace-priority.md)
       - [Interface de simulação de gráfico](./identity-graph-linking-rules/graph-simulation.md)
@@ -47,4 +47,4 @@ ht-degree: 33%
 - [Definir campos de identidade na interface](label-identities.md)
 - [Processamento de solicitação de privacidade](privacy.md)
 - [Manual de solução de problemas](troubleshooting-guide.md)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

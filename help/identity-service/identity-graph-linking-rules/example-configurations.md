@@ -1,15 +1,17 @@
 ---
-title: Exemplos de configurações de gráfico
-description: Saiba mais sobre cenários de gráficos comuns que você pode encontrar ao trabalhar com Regras de vinculação de gráfico de identidade e dados de identidade.
+title: Guia de configurações de regras de vinculação do gráfico de identidade
+description: Saiba mais sobre os diferentes tipos de implementação que você pode configurar usando as Regras de vinculação do gráfico de identidade.
+hide: true
+hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: cd9104e253cda4ce9a004f7931b9c38907874941
+source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
 workflow-type: tm+mt
-source-wordcount: '3316'
-ht-degree: 5%
+source-wordcount: '1934'
+ht-degree: 7%
 
 ---
 
-# Exemplos de configurações de gráfico {#examples-of-graph-configurations}
+# Guia de configurações do [!DNL Identity Graph Linking Rules] {#configurations-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
@@ -21,740 +23,547 @@ ht-degree: 5%
 >* &quot;CRMID&quot; e &quot;loginID&quot; são namespaces personalizados. Neste documento, &quot;CRMID&quot; é um identificador de pessoa e &quot;loginID&quot; é um identificador de logon associado a uma determinada pessoa.
 >* Para simular os cenários de gráficos de exemplo descritos neste documento, primeiro você deve criar dois namespaces personalizados, um com o símbolo de identidade &quot;CRMID&quot; e outro com o símbolo de identidade &quot;loginID&quot;. Os símbolos de identidade diferenciam maiúsculas de minúsculas.
 
-Este documento descreve exemplos de configuração de gráficos de cenários comuns que você pode encontrar ao trabalhar com [!DNL Identity Graph Linking Rules] e dados de identidade.
+Leia este documento para saber mais sobre os diferentes tipos de implementação que você pode configurar usando o [!DNL Identity Graph Linking Rules].
 
-## Somente CRMID
+Os cenários de gráficos do cliente podem ser agrupados em três categorias diferentes.
 
-Este é um exemplo de um cenário de implementação simples em que os eventos online (CRMID e ECID) são assimilados e os eventos offline (registros de perfil) são armazenados somente no CRMID.
+* **Básico**: [As implementações básicas](#basic-implementations) incluem gráficos que frequentemente incluem implementações simples. Essas implementações tendem a girar em torno de um único namespace entre dispositivos (por exemplo, CRMID). Embora as implementações básicas sejam relativamente simples, o colapso de gráficos ainda pode ocorrer, geralmente devido a **cenários de dispositivo compartilhado**.
+* **Intermediário**: [As implementações intermediárias](#intermediate-implementations) incluem várias variáveis, como **vários namespaces entre dispositivos**, **identidades não exclusivas** e **vários namespaces exclusivos**.
+* **Avançado**: [As implementações avançadas](#advanced-implementations) envolvem cenários gráficos complexos de várias camadas. Para implementações avançadas, é essencial estabelecer a ordem correta de prioridade do namespace para garantir que os links apropriados sejam removidos, evitando assim o colapso do gráfico.
 
-**Implementação:**
+## Introdução
 
-| Namespaces usados | Método de coleta de comportamento da Web |
-| --- | --- |
-| CRMID, ECID | Web SDK |
+Antes de mergulhar no documento a seguir, familiarize-se com vários conceitos importantes do Serviço de identidade e [!DNL Identity Graph Linking Rules].
 
-**Eventos:**
+* [Visão geral do serviço de identidade](../home.md)
+* [Visão geral do [!DNL Identity Graph Linking Rules]](../identity-graph-linking-rules/namespace-priority.md)
+* [Prioridade de namespace](namespace-priority.md)
+* [Namespace exclusivo](overview.md#unique-namespace)
+* [Simulação de gráfico](graph-simulation.md)
 
-Você pode criar esse cenário na simulação de gráfico copiando os seguintes eventos no modo de texto:
+## Implementações básicas {#basic-implementations}
 
-```shell
-CRMID: Tom, ECID: 111
+Leia esta seção para implementações básicas do [!DNL Identity Graph Linking Rules].
+
+### Caso de uso: implementação simples que usa um namespace entre dispositivos
+
+Geralmente, os clientes do Adobe têm um único namespace entre dispositivos que é usado em todas as suas propriedades, incluindo Web, dispositivos móveis e aplicativos. Esse sistema é independente tanto do setor quanto geograficamente, já que os clientes de varejo, telecomunicações e serviços financeiros usam esse tipo de implementação.
+
+Normalmente, um usuário final é representado por um namespace entre dispositivos (geralmente um CRMID), portanto, o CRMID deve ser classificado como um namespace exclusivo. Um usuário final que possui um computador e um [!DNL iPhone] e não compartilha seu dispositivo, pode ter um gráfico de identidade como o seguinte.
+
+Imagine que você seja um arquiteto de dados em uma empresa de comércio eletrônico chamada **ACME**. John e Jane são seus clientes. São usuários finais que vivem juntos em San Jose, Califórnia. Eles compartilham um computador desktop e usam este computador para navegar em seu site. Da mesma forma, John e Jane também compartilham [!DNL iPad] e ocasionalmente usam este [!DNL iPad] para navegar na Internet, inclusive em seu site.
+
+**Modo texto**
+
+```json
+CRMID: John, ECID: 123
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**Configuração do algoritmo:**
+**Configuração de algoritmo (Configurações de identidade)**
 
-Você pode criar esse cenário na simulação de gráfico definindo a seguinte configuração para a configuração do algoritmo:
+Defina as seguintes configurações na interface de Simulação de gráfico antes de simular o gráfico.
 
-| Prioridade | Nome de exibição | Tipo de identidade | Único por gráfico |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Sim |
-| 2 | ECID | COOKIE | Não |
+| Nome de exibição | Símbolo de identidade | Tipo de identidade | Único por gráfico | Prioridade de namespace |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| ECID | ECID | COOKIE | | 2 |
+| IDFA | IDFA | DISPOSITIVO | | 3 |
 
-**Seleção de identidade principal para o Perfil de Cliente em Tempo Real:**
+**Gráfico simulado**
 
-No contexto dessa configuração, a identidade primária será definida da seguinte maneira:
++++Selecione para exibir o gráfico simulado
 
-| Status de autenticação | Namespace(s) em eventos | Identidade principal |
-| --- | --- | --- |
-| Autenticado | CRMID, ECID | CRMID |
-| Não autenticado | ECID | ECID |
+Neste gráfico, John (o usuário final) é representado pela CRMID. {ECID: 123} representa o navegador da Web que John usou em seu computador pessoal para visitar sua plataforma de comércio eletrônico. {ECID: 999} representa o navegador que ele usou em seu [!DNL iPhone] e {IDFA: a-b-c} representa seu [!DNL iPhone].
 
-**Exemplos de gráfico**
+![Uma implementação simples com um namespace entre dispositivos..](../images/configs/basic/simple-implementation.png)
+
++++
+
+### Exercício
+
+Simule a seguinte configuração na Simulação de gráfico. Você pode criar seus próprios eventos ou copiar e colar usando o modo de texto.
 
 >[!BEGINTABS]
 
->[!TAB Gráfico ideal para uma única pessoa]
+>[!TAB Dispositivo compartilhado (PC)]
 
-Veja a seguir um exemplo de um gráfico ideal para uma única pessoa, em que a CRMID é exclusiva e recebe a maior prioridade.
+**Dispositivo compartilhado (PC)**
 
-![Um exemplo simulado de um gráfico ideal para uma única pessoa, em que a CRMID é exclusiva e recebe a maior prioridade.](../images/graph-examples/crmid_only_single.png "Um exemplo simulado de um gráfico ideal para uma única pessoa, em que a CRMID é exclusiva e recebe a maior prioridade."){zoomable="yes"}
+**Modo de texto:**
 
->[!TAB Gráfico de várias pessoas]
-
-Veja a seguir um exemplo de gráfico com várias pessoas. Este exemplo exibe um cenário de &quot;dispositivo compartilhado&quot;, em que há dois CRMIDs e o que tem o link estabelecido mais antigo é removido.
-
-![Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido.](../images/graph-examples/crmid_only_multi.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
+
+**Gráfico simulado**
+
++++Selecione para exibir o gráfico simulado
+
+Neste gráfico, John e Jane são representados por suas próprias CRMIDs:
+
+* {CRMID: John}
+* {CRMID: Jane}
+
+O navegador no computador desktop que ambos usam para visitar sua plataforma de comércio eletrônico é representado por {ECID: 111}. Neste cenário gráfico, Jane é o último usuário final autenticado e, portanto, o vínculo entre {ECID: 111} e {CRMID: John} é removido.
+
+![Um gráfico simulado para um PC (dispositivo compartilhado).](../images/configs/basic/shared-device-pc.png)
+
++++
+
+>[!TAB Dispositivo compartilhado (celular)]
+
+**Dispositivo compartilhado (celular)**
+
+**Modo de texto:**
+
+```json
+CRMID: John, ECID: 111, IDFA: a-b-c
+CRMID: Jane, ECID: 111, IDFA: a-b-c
+```
+
+**Gráfico simulado**
+
++++Selecione para exibir o gráfico simulado
+
+Nesse gráfico, John e Jane são representados por suas próprias CRMIDs. O navegador usado é representado por {ECID: 111} e o [!DNL iPad] que ele compartilha é representado por {IDFA: a-b-c}. Neste cenário gráfico, Jane é o último usuário final autenticado e, portanto, os links de {ECID: 111} e {IDFA: a-b-c} para {CRMID: John} são removidos.
+
+![Um gráfico simulado para um dispositivo compartilhado (dispositivo móvel).](../images/configs/basic/shared-device-mobile.png)
+
++++
 
 >[!ENDTABS]
 
-## CRMID com email com hash
+## Implementações intermediárias {#intermediate-implementations}
 
-Nesse cenário, um CRMID é assimilado e representa os dados online (evento de experiência) e offline (registro de perfil). Esse cenário também envolve a assimilação de um email com hash, que representa outro namespace enviado no conjunto de dados de registro do CRM junto com o CRMID.
+Leia esta seção para implementações intermediárias de [!DNL Identity Graph Linking Rules].
 
->[!IMPORTANT]
+### Caso de uso: seus dados incluem identidades não exclusivas
+
+>[!TIP]
 >
->**É crucial que a CRMID seja sempre enviada para cada usuário**. Se isso não for feito, poderá ocorrer um cenário de ID de logon &quot;pendente&quot;, em que uma única entidade de pessoa compartilha um dispositivo com outra pessoa.
+>* Uma **identidade não exclusiva** é uma identidade associada a um namespace não exclusivo.
+>
+>* Nos exemplos abaixo, `CChash` é um namespace personalizado que representa um número de cartão de crédito com hash.
 
-**Implementação:**
+Você é um arquiteto de dados que trabalha para um banco comercial que emite cartões de crédito. Sua equipe de marketing indicou que deseja incluir o histórico de transações de cartões de crédito passados em um perfil. Este gráfico de identidade pode ser semelhante ao seguinte.
 
-| Namespaces usados | Método de coleta de comportamento da Web |
-| --- | --- |
-| CRMID, Email_LC_SHA256, ECID | Web SDK |
+**Modo de texto:**
 
-**Eventos:**
-
-Você pode criar esse cenário na simulação de gráfico copiando os seguintes eventos no modo de texto:
-
-```shell
-CRMID: Tom, Email_LC_SHA256: tom<span>@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: summer<span>@acme.com
-CRMID: Summer, ECID: 222
+```json
+CRMID: John, CChash: 1111-2222 
+CRMID: John, CChash: 3333-4444 
+CRMID: John, ECID: 123 
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**Configuração do algoritmo:**
+**Configuração de algoritmo (Configurações de identidade)**
 
-Você pode criar esse cenário na simulação de gráfico definindo a seguinte configuração para a configuração do algoritmo:
+Defina as seguintes configurações na interface de Simulação de gráfico antes de simular o gráfico.
 
-| Prioridade | Nome de exibição | Tipo de identidade | Único por gráfico |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Sim |
-| 2 | Emails (SHA256, em letras minúsculas) | Email | Não |
-| 3 | ECID | COOKIE | Não |
+| Nome de exibição | Símbolo de identidade | Tipo de identidade | Único por gráfico | Prioridade de namespace |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| Hash | Hash | CROSS_DEVICE | | 2 |
+| ECID | ECID | COOKIE | | 3 |
+| IDFA | IDFA | DISPOSITIVO | | 4 |
 
-**Seleção de identidade principal para o Perfil:**
+**Gráfico simulado**
 
-No contexto dessa configuração, a identidade primária será definida da seguinte maneira:
++++Selecione para exibir o gráfico simulado
 
-| Status de autenticação | Namespace(s) em eventos | Identidade principal |
-| --- | --- | --- |
-| Autenticado | CRMID, ECID | CRMID |
-| Não autenticado | ECID | ECID |
+![Imagem do gráfico simulado](../images/configs/basic/simple-implementation-non-unique.png)
 
-**Exemplos de gráfico**
++++
+
+Não há garantias de que esses números de cartão de crédito, ou qualquer outro namespace não exclusivo, sempre serão associados a um único usuário final. Dois usuários finais podem se registrar no mesmo cartão de crédito. Pode haver valores não exclusivos de espaço reservado que foram assimilados incorretamente. Simplificando, não há garantia de que namespaces não exclusivos não causarão o colapso do gráfico.
+
+Para resolver esse problema, o Serviço de identidade remove os links mais antigos e mantém os links mais recentes. Isso garante que você tenha apenas uma CRMID em um gráfico, evitando assim o seu colapso.
+
+### Exercício
+
+Simule as seguintes configurações na Simulação de gráfico. Você pode criar seus próprios eventos ou copiar e colar usando o modo de texto.
 
 >[!BEGINTABS]
 
->[!TAB Gráfico ideal para uma única pessoa]
+>[!TAB Dois usuários finais com o mesmo cartão de crédito]
 
-A seguir estão exemplos de um par de gráficos ideais para uma única pessoa, em que cada CRMID é associado ao seu respectivo namespace de email com hash e ECID.
+Dois usuários finais diferentes se inscrevem no seu site de comércio eletrônico com o mesmo cartão de crédito. Sua equipe de marketing deseja evitar o colapso dos gráficos, garantindo que o cartão de crédito esteja associado a apenas um único perfil.
 
-![Neste exemplo, dois gráficos separados são gerados, cada um representando uma entidade de uma única pessoa.](../images/graph-examples/crmid_hashed_single.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
+**Modo de texto:**
 
->[!TAB Gráfico multipessoa: dispositivo compartilhado]
-
-Este é um exemplo de um cenário de gráfico de várias pessoas em que um dispositivo é compartilhado por duas pessoas.
-
-![Neste exemplo, o gráfico simulado exibe um cenário de &quot;dispositivo compartilhado&quot; porque Tom e Summer estão associados à mesma ECID.](../images/graph-examples/crmid_hashed_shared_device.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 1111-2222
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:456
 ```
 
->[!TAB Gráfico de várias pessoas: email não exclusivo]
+**Gráfico simulado**
 
-Este é um exemplo de um cenário de gráfico de várias pessoas em que o email não é único e está sendo associado a dois CRMIDs diferentes.
++++Selecione para exibir o gráfico simulado
 
-![Este cenário é semelhante a um cenário de &quot;dispositivo compartilhado&quot;. No entanto, em vez de as entidades pessoas compartilharem a ECID, elas são associadas à mesma conta de email. &quot;Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido.&quot;](../images/graph-examples/crmid_hashed_nonunique_email.png){zoomable="yes"}
+![Um gráfico em que dois usuários finais se inscrevem com o mesmo cartão de crédito.](../images/configs/intermediate/graph-with-same-credit-card.png)
 
-**Entrada de eventos de simulação de gráfico**
++++
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+>[!TAB Número de cartão de crédito inválido]
+
+Devido a dados não limpos, um número de cartão de crédito inválido é assimilado na Experience Platform.
+
+**Modo de texto:**
+
+```json
+CRMID: John, CChash: undefined
+CRMID: Jane, CChash: undefined
+CRMID: Jack, CChash: undefined
+CRMID: Jill, CChash: undefined
 ```
+
+**Gráfico simulado**
+
++++Selecione para exibir o gráfico simulado
+
+![Um gráfico em que problemas de hash resultem em um cartão de crédito inválido.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
+
++++
 
 >[!ENDTABS]
 
-## CRMID com email com hash, telefone com hash, GAID e IDFA
+### Caso de uso: seus dados incluem CRMIDs com e sem hash
 
-Esse cenário é semelhante ao anterior. No entanto, neste cenário, email e telefone com hash estão sendo marcados como identidades a serem utilizadas no [[!DNL Segment Match]](../../segmentation/ui/segment-match/overview.md).
+Você está assimilando um CRMID com hash (offline) e um CRMID com hash (online). Eles esperam uma relação direta entre CRMIDs com hash e sem hash. Quando um usuário final navega com uma conta autenticada, a CRMID com hash é enviada junto com a ID do dispositivo (representada no Serviço de identidade como uma ECID).
 
->[!IMPORTANT]
->
->**É crucial que a CRMID seja sempre enviada para cada usuário**. Se isso não for feito, poderá ocorrer um cenário de ID de logon &quot;pendente&quot;, em que uma única entidade de pessoa compartilha um dispositivo com outra pessoa.
+**Configuração de algoritmo (Configurações de identidade)**
 
-**Implementação:**
+Defina as seguintes configurações na interface de Simulação de gráfico antes de simular o gráfico.
 
-| Namespaces usados | Método de coleta de comportamento da Web |
-| --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, GAID, IDFA, ECID | Web SDK |
+| Nome de exibição | Símbolo de identidade | Tipo de identidade | Único por gráfico | Prioridade de namespace |
+| --- | --- | --- | --- | --- | 
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
+| ECID | ECID | COOKIE | | 3 |
 
-**Eventos:**
 
-Você pode criar esse cenário na simulação de gráfico copiando os seguintes eventos no modo de texto:
+**Exercício**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-```
-
-**Configuração do algoritmo:**
-
-Você pode criar esse cenário na simulação de gráfico definindo a seguinte configuração para a configuração do algoritmo:
-
-| Prioridade | Nome de exibição | Tipo de identidade | Único por gráfico |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Sim |
-| 2 | Emails (SHA256, em letras minúsculas) | Email | Não |
-| 3 | Telefone (SHA256) | Telefone | Não |
-| 4 | ID de anúncio do Google (GAID) | DISPOSITIVO | Não |
-| 5 | Apple IDFA (ID para Apple) | DISPOSITIVO | Não |
-| 6 | ECID | COOKIE | Não |
-
-**Seleção de identidade principal para o Perfil:**
-
-No contexto dessa configuração, a identidade primária será definida da seguinte maneira:
-
-| Status de autenticação | Namespace(s) em eventos | Identidade principal |
-| --- | --- | --- |
-| Autenticado | CRMID, IDFA, ECID | CRMID |
-| Autenticado | CRMID, GAID, ECID | CRMID |
-| Autenticado | CRMID, ECID | CRMID |
-| Não autenticado | GAID, ECID | GAID |
-| Não autenticado | IDFA, ECID | IDFA |
-| Não autenticado | ECID | ECID |
-
-**Exemplos de gráfico**
+Simule as seguintes configurações na Simulação de gráfico. Você pode criar seus próprios eventos ou copiar e colar usando o modo de texto.
 
 >[!BEGINTABS]
 
->[!TAB Gráfico ideal para uma única pessoa]
+>[!TAB Cenário 1: dispositivo compartilhado]
 
-Este é um cenário ideal de gráficos de pessoa única no qual emails com hash e telefones com hash são marcados como identidades para uso no [!DNL Segment Match]. Nesse cenário, os gráficos são divididos em dois, para representar entidades de pessoas diferentes.
+John e Jane compartilham um dispositivo.
 
-![Um cenário ideal de gráfico de pessoa única.](../images/graph-examples/crmid_hashed_single_seg_match.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
+**Modo de texto:**
 
->[!TAB Gráfico multipessoas: dispositivo compartilhado, computador compartilhado]
-
-Veja a seguir um cenário de gráfico de várias pessoas em que um dispositivo (computador) é compartilhado por duas pessoas. Neste cenário, o computador compartilhado é representado por `{ECID: 111}` e está vinculado a `{CRMID: Summer}` porque esse é o link estabelecido mais recentemente. `{CRMID: Tom}` foi removido porque o vínculo entre `{CRMID: Tom}` e `{ECID: 111}` é mais antigo e porque CRMID é o namespace exclusivo designado nesta configuração.
-
-![Um cenário de gráfico de várias pessoas em que dois usuários estão compartilhando um computador.](../images/graph-examples/shared_device_shared_computer.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CRMIDhash: John
+CRMID: Jane, CRMIDhash: Jane
+CRMIDhash: John, ECID: 111 
+CRMIDhash: Jane, ECID: 111
 ```
 
->[!TAB Gráfico multipessoa: dispositivo compartilhado, dispositivo móvel android]
+![espaço reservado](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
-Veja a seguir um gráfico de várias pessoas no qual um dispositivo Android é compartilhado por duas pessoas. Nesse cenário, o CRMID é configurado como um namespace exclusivo e, portanto, o link mais recente de `{CRMID: Tom, GAID: B-B-B, ECID:444}` substitui o `{CRMID: Summer, GAID: B-B-B, ECID:444}` mais antigo.
+>[!TAB Cenário 2: dados incorretos]
 
-![Um cenário de gráfico de várias pessoas em que dois usuários estão compartilhando um dispositivo móvel android.](../images/graph-examples/shared_device_android.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
+Devido a erros no processo de hash, uma CRMID com hash não exclusiva é gerada e enviada para o Serviço de identidade.
 
-**Entrada de eventos de simulação de gráfico**
+**Modo de texto:**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Tom, ECID: 444, GAID: B-B-B
+```json
+CRMID: John, CRMIDhash: aaaa
+CRMID: Jane, CRMIDhash: aaaa
 ```
 
->[!TAB Gráfico multipessoas: dispositivo compartilhado, dispositivo móvel apple, sem redefinição de ECID]
+![Um gráfico de dispositivos compartilhados com um erro no processo de hash, resultando em um CRMID com hash não exclusivo.](../images/configs/intermediate/hashing-error.png)
 
-Este é um cenário de gráfico de várias pessoas em que um dispositivo Apple é compartilhado por duas pessoas. Nesse cenário, o IDFA é compartilhado, mas a ECID não é redefinida.
+>[!ENDTABS]
+<!-- 
+### Use case: You are using Real-Time CDP and Adobe Commerce
 
-![Um cenário de gráfico de várias pessoas em que dois usuários estão compartilhando um dispositivo móvel Apple.](../images/graph-examples/shared_device_apple_no_reset.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
+You have two types of end-users:
 
-**Entrada de eventos de simulação de gráfico**
+* **Members**: An end-user who is assigned a CRMID and has an email account registered to your system.
+* **Guests**: An end-user who is not a member. They do not have an assigned CRMID and their email accounts are not registered to your system.
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 222, IDFA: A-A-A
+In this scenario, your customers are sending data from Adobe Commerce to Real-Time CDP.
+
+**Exercise**
+
+Simulate the following configurations in the graph simulation tool. You can either create your own events, or copy and paste using text mode.
+
+>[!BEGINTABS]
+
+>[!TAB Shared device between two members]
+
+In this scenario, two members share the same device to browse an e-commerce website.
+
+**Text mode**
+
+```json
+CRMID: John, Email: john@g
+CRMID: Jane, Email: jane@g
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB Gráfico multipessoa: dispositivo compartilhado, apple, redefinições de ECID]
+![A graph that displays two authenticated members who share a device.](../images/configs/intermediate/shared-device-two-members.png)
 
-Este é um cenário de gráfico de várias pessoas em que um dispositivo Apple é compartilhado por duas pessoas. Nesse cenário, a ECID é redefinida, mas o IDFA permanece o mesmo.
+>[!TAB Shared device between two guests]
 
-![Um cenário de gráfico de várias pessoas em que dois usuários estão compartilhando um dispositivo móvel Apple, mas a ECID é redefinida.](../images/graph-examples/shared_device_apple_with_reset.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
+In this scenario, two guests share the same device to browse an e-commerce website.
 
-**Entrada de eventos de simulação de gráfico**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 555, IDFA: A-A-A
+```json
+Email: john@g, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
->[!TAB Gráfico de várias pessoas: telefone não exclusivo]
+![A graph that displays two guests who share a device.](../images/configs/intermediate/shared-device-two-guests.png)
 
-Veja a seguir um cenário de gráfico de várias pessoas em que o mesmo número de telefone está sendo compartilhado por duas pessoas.
+>[!TAB Shared device between a member and a guest]
 
-![Um cenário de gráfico multipessoas em que o namespace do telefone não é exclusivo.](../images/graph-examples/non_unique_phone.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
+In this scenario, a member and a guest share the same device to browse an e-commerce website.
 
-**Entrada de eventos de simulação de gráfico**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Phone_SHA256: 123-4567
+```json
+CRMID: John, Email: john@g
+CRMID: John, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
-Neste exemplo, `{Phone_SHA256}` também é marcado como um namespace exclusivo. Portanto, um gráfico não pode ter mais de uma identidade com o namespace `{Phone_SHA256}`. Neste cenário, `{Phone_SHA256: 765-4321}` está desvinculado de `{CRMID: Summer}` e `{Email_LC_SHA256: ddeeff}` porque é o link mais antigo,
+![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
-![Um cenário de gráfico de várias pessoas em que Phone_SHA256 é exclusivo.](../images/graph-examples/unique_phone.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
+>[!ENDTABS] -->
 
->[!TAB Gráfico de várias pessoas: email não exclusivo]
+### Caso de uso: seus dados incluem três namespaces exclusivos
 
-Este é um cenário de gráfico de várias pessoas em que o email é compartilhado por duas pessoas.
+Seu cliente define uma entidade unipessoal da seguinte maneira:
 
-![Um cenário de gráfico de várias pessoas em que o email não é exclusivo](../images/graph-examples/non_unique_email.png "Um exemplo simulado de gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
+* Um usuário final com uma CRMID atribuída.
+* Um usuário final que está associado a um endereço de email com hash, para que os perfis possam ser ativados para destinos que oferecem suporte a email com hash (por exemplo, [!DNL Facebook]).
+* Um usuário final associado a um endereço de email, para que a equipe de suporte possa pesquisar seu perfil no Real-Time CDP usando esse endereço de email.
 
-**Entrada de eventos de simulação de gráfico**
+| Nome de exibição | Símbolo de identidade | Tipo de identidade | Único por gráfico | Prioridade de namespace |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| Email | Email | Email | ✔️ | 2 |
+| Email_LC_SHA256 | Email_LC_SHA256 | Email | ✔️ | 3 |
+| ECID | ECID | COOKIE | | 4 |
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Email_LC_SHA256: aabbcc
+Simule as seguintes configurações na ferramenta de simulação de gráfico. Você pode criar seus próprios eventos ou copiar e colar usando o modo de texto.
+
+>[!BEGINTABS]
+
+>[!TAB Dois usuários finais fizeram logon]
+
+Nesse cenário, John e Jane fazem logon em um site de comércio eletrônico.
+
+**Modo texto**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash 
+CRMID: Jane, Email: jane@g, Email_LC_SHA256: jane_hash 
+CRMID: John, ECID: 111 
+CRMID: Jane, ECID: 111
 ```
+
+![Um gráfico que mostra dois usuários finais que fazem logon no site usando o mesmo dispositivo.](../images/configs/intermediate/two-end-users-log-ing.png)
+
+>[!TAB Um usuário final altera seu email]
+
+**Modo texto**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash
+CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
+```
+
+![Um gráfico que mostra um usuário final que alterou seu email.](../images/configs/intermediate/end-user-changes-email.png)
 
 >[!ENDTABS]
 
-## CRMID único com várias IDs de logon (versão simples)
+## Implementações avançadas {#advanced-implementations}
 
-Nesse cenário, há um único CRMID que representa uma entidade de pessoa. No entanto, uma entidade de pessoa pode ter vários identificadores de logon:
+As implementações avançadas envolvem cenários de gráficos complexos e de várias camadas. Esses tipos de implementações incluem o uso de **prioridade de namespace** para identificar os links corretos que devem ser removidos para evitar o recolhimento do gráfico.
 
-* Uma determinada entidade de pessoa pode ter diferentes tipos de conta (pessoal vs. comercial, conta por estado, conta por marca, etc.)
-* Uma determinada entidade de pessoa pode usar endereços de email diferentes para qualquer número de contas.
+**Prioridade de namespace** são metadados que classificam os namespaces por sua importância. Se um gráfico contiver duas identidades, cada uma com um namespace exclusivo diferente, o Serviço de identidade usará a prioridade de namespace para decidir quais links remover. Para obter mais informações, leia a [documentação sobre prioridade de namespace](../identity-graph-linking-rules/namespace-priority.md).
 
->[!IMPORTANT]
->
->**É crucial que a CRMID seja sempre enviada para cada usuário**. Se isso não for feito, poderá ocorrer um cenário de ID de logon &quot;pendente&quot;, em que uma única entidade de pessoa compartilha um dispositivo com outra pessoa.
+A prioridade de namespace desempenha um papel essencial em cenários de gráficos complexos. Os gráficos podem ter várias camadas - um usuário final pode estar associado a várias IDs de logon e essas IDs de logon podem ter hash. Além disso, diferentes ECIDs podem ser vinculados a diferentes IDs de logon. Para garantir que o link correto, na camada correta, seja removido, as configurações de prioridade do namespace devem estar corretas.
 
-**Implementação:**
+Leia esta seção para implementações avançadas de [!DNL Identity Graph Linking Rules].
 
-| Namespaces usados | Método de coleta de comportamento da Web |
-| --- | --- |
-| CRMID, ID de logon, ECID | Web SDK |
+### Caso de uso: você precisa de suporte para várias linhas de negócios
 
-**Eventos:**
+Seus usuários finais têm duas contas diferentes: uma conta pessoal e uma conta comercial. Cada conta é identificada por uma ID diferente. Nesse cenário, um gráfico típico seria semelhante ao seguinte:
 
-Você pode criar esse cenário na simulação de gráfico copiando os seguintes eventos no modo de texto:
+**Modo de texto***
 
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JohnPersonal, ECID: 222
+loginID: JohnBusiness, ECID: 222
 ```
 
-**Configuração do algoritmo:**
+**Configuração de algoritmo (Configurações de identidade)**
 
-Você pode criar esse cenário na simulação de gráfico definindo a seguinte configuração para a configuração do algoritmo:
+Defina as seguintes configurações na interface de Simulação de gráfico antes de simular o gráfico.
 
-| Prioridade | Nome de exibição | Tipo de identidade | Único por gráfico |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Sim |
-| 2 | loginID | CROSS_DEVICE | Não |
-| 3 | ECID | COOKIE | Não |
+| Nome de exibição | Símbolo de identidade | Tipo de identidade | Único por gráfico | Prioridade de namespace |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| loginID | loginID | CROSS_DEVICE | | 2 |
+| ECID | ECID | COOKIE | | 3 |
 
-**Seleção de identidade principal para o Perfil:**
+**Gráfico simulado**
 
-No contexto dessa configuração, a identidade primária será definida da seguinte maneira:
++++Selecione para exibir o gráfico simulado
 
-| Status de autenticação | Namespace(s) em eventos | Identidade principal |
-| --- | --- | --- |
-| Autenticado | ID de logon, ECID | loginID |
-| Autenticado | ID de logon, ECID | loginID |
-| Autenticado | CRMID, ID de logon, ECID | CRMID |
-| Autenticado | CRMID, ECID | CRMID |
-| Não autenticado | ECID | ECID |
+![Um gráfico de identidade para um usuário final com um email comercial e pessoal.](../images/configs/advanced/advanced.png)
 
-**Exemplos de gráfico**
++++
+
+
+**Exercício**
+
+Simule a seguinte configuração na Simulação de gráfico. Você pode criar seus próprios eventos ou copiar e colar usando o modo de texto.
 
 >[!BEGINTABS]
 
->[!TAB Cenário ideal para uma única pessoa]
+>[!TAB Dispositivo compartilhado]
 
-Veja a seguir um cenário de gráfico de uma única pessoa com um único CRMID e várias IDs de logon.
+**Modo texto**
 
-![Um cenário de gráfico que inclui uma única CRMID e várias IDs de logon.](../images/graph-examples/single_crmid.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
-
->[!TAB Cenário de gráfico de várias pessoas: dispositivo compartilhado]
-
-Veja a seguir um cenário de gráfico de várias pessoas em que um dispositivo é compartilhado por duas pessoas. Neste cenário, `{ECID:111}` está vinculado com `{loginID:ID_A}` e `{loginID:ID_C}` e o link mais antigo estabelecido de `{ECID:111, loginID:ID_A}` é removido.
-
-![Um cenário de dispositivo compartilhado com várias pessoas.](../images/graph-examples/single_crmid_shared_device.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: JaneBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 111
 ```
 
->[!TAB Cenário de gráfico de várias pessoas: dados incorretos]
+![Um gráfico de um dispositivo compartilhado avançado.](../images/configs/advanced/advanced-shared-device.png)
 
-Veja a seguir um cenário de gráfico com várias pessoas que envolve dados incorretos. Neste cenário, `{loginID:ID_D}` está incorretamente vinculado a dois usuários diferentes e o link com o carimbo de data e hora mais antigo é excluído em favor do link estabelecido mais recentemente.
+>[!TAB Dados inválidos enviados para o Real-Time CDP]
 
-![Um cenário de gráfico multipessoa com dados incorretos.](../images/graph-examples/single_crmid_bad_data.png "Um exemplo simulado de um gráfico de várias pessoas. Este exemplo exibe um cenário de dispositivo compartilhado, em que há dois CRMIDs e o link estabelecido mais antigo é removido."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_D
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: error
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: error
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 222
 ```
 
->[!TAB LoginID &#39; &#39; pendente&#39;]
-
-O gráfico a seguir simula um cenário de ID de logon &quot;pendente&quot;. Neste exemplo, duas IDs de logon diferentes são vinculadas à mesma ECID. No entanto, `{loginID:ID_C}` não está vinculado ao CRMID. Portanto, não há como o Serviço de identidade detectar que essas duas IDs de logon representam duas entidades diferentes.
-
-![Um cenário de loginID pendente.](../images/graph-examples/dangling_example.png "Um cenário de loginID pendente."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-loginID: ID_C, ECID: 111
-```
+![Um gráfico que mostra um cenário em que dados incorretos são enviados para a Real-Time CDP.](../images/configs/advanced/advanced-bad-data.png)
 
 >[!ENDTABS]
 
-## CRMID único com várias IDs de logon (versão complexa)
+### Caso de uso: você tem implementações complexas que exigem vários namespaces
 
-Nesse cenário, há um único CRMID que representa uma entidade de pessoa. No entanto, uma entidade de pessoa pode ter vários identificadores de logon:
+Você é uma empresa de mídia e entretenimento e seus usuários finais têm o seguinte:
+* UMA CRMID
+* Uma ID de fidelidade
+Além disso, os usuários finais podem fazer uma compra no site de comércio eletrônico e esses dados são vinculados ao endereço de email. Os dados do usuário também são enriquecidos por um provedor de banco de dados de terceiros e enviados para a Experience Platform em lotes.
 
-* Uma determinada entidade de pessoa pode ter diferentes tipos de conta (pessoal vs. comercial, conta por estado, conta por marca, etc.)
-* Uma determinada entidade de pessoa pode usar endereços de email diferentes para qualquer número de contas.
+**Modo texto**
 
->[!IMPORTANT]
->
->**É crucial que a CRMID seja sempre enviada para cada usuário**. Se isso não for feito, poderá ocorrer um cenário de ID de logon &quot;pendente&quot;, em que uma única entidade de pessoa compartilha um dispositivo com outra pessoa.
-
-**Implementação:**
-
-| Namespaces usados | Método de coleta de comportamento da Web |
-| --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, ID de logon, ECID | Conector de origem do Adobe Analytics. <br> **Observação:** por padrão, as AAIDs estão bloqueadas no Serviço de identidade e, portanto, você deve colocar em suas ECIDs uma prioridade maior do que as AAIDs ao usar a fonte do Analytics. Leia o [guia de implementação](./implementation-guide.md#ingest-your-data) para obter mais informações.</br> |
-
-**Eventos:**
-
-Você pode criar esse cenário na simulação de gráfico copiando os seguintes eventos no modo de texto:
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+Email: john@g, orderID: aaa
+CRMID: John, thirdPartyID: xyz
+CRMID: John, ECID: 111
 ```
 
-**Configuração do algoritmo:**
+**Configuração de algoritmo (Configurações de identidade)**
 
-Você pode criar esse cenário na simulação de gráfico definindo a seguinte configuração para a configuração do algoritmo:
+Defina as seguintes configurações na interface de Simulação de gráfico antes de simular o gráfico.
 
-| Prioridade | Nome de exibição | Tipo de identidade | Único por gráfico |
-| ---| --- | --- | --- | 
-| 1 | CRMID | CROSS_DEVICE | Sim |
-| 2 | Email_LC_SHA256 | Email | Não |
-| 3 | Phone_SHA256 | Telefone | Não |
-| 4 | loginID | CROSS_DEVICE | Não |
-| 5 | ECID | COOKIE | Não |
-| 6 | AAID | COOKIE | Não |
+| Nome de exibição | Símbolo de identidade | Tipo de identidade | Único por gráfico | Prioridade de namespace |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| fidelid | fidelid | CROSS_DEVICE | | 2 |
+| Email | Email | Email | | 3 |
+| thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
+| orderID | orderID | CROSS_DEVICE | | 5 |
+| ECID | ECID | COOKIE | | 6 |
 
-**Seleção de identidade principal para o Perfil:**
+**Exercício**
 
-No contexto dessa configuração, a identidade primária será definida da seguinte maneira:
-
-| Status de autenticação | Namespace(s) em eventos | Identidade principal |
-| --- | --- | --- |
-| Autenticado | ID de logon, ECID | loginID |
-| Autenticado | ID de logon, ECID | loginID |
-| Autenticado | CRMID, ID de logon, ECID | CRMID |
-| Autenticado | CRMID, ECID | CRMID |
-| Não autenticado | ECID | ECID |
-
-**Exemplos de gráfico**
+Simule a seguinte configuração na Simulação de gráfico. Você pode criar seus próprios eventos ou copiar e colar usando o modo de texto.
 
 >[!BEGINTABS]
 
->[!TAB Gráfico ideal para uma única pessoa]
+>[!TAB Dispositivo compartilhado]
 
-Veja a seguir um exemplo de dois gráficos de uma pessoa em que cada um tem uma CRMID e várias IDs de logon.
+**Modo texto**
 
-![Um gráfico de uma única pessoa que envolve uma CRMID e várias IDs de logon.](../images/graph-examples/complex_single_person.png "Um gráfico de uma única pessoa que envolve uma CRMID e várias IDs de logon."){zoomable="yes"}
-
->[!TAB Gráfico multipessoa: dispositivo compartilhado 1]
-
-Este é um cenário de dispositivo compartilhado com várias pessoas em que `{ECID:111}` está vinculado a `{loginID:ID_A}` e `{loginID:ID_C}`. Nesse caso, os links estabelecidos mais antigos são removidos em favor dos links estabelecidos mais recentemente.
-
-![Um cenário de gráfico de dispositivo compartilhado com várias pessoas.](../images/graph-examples/complex_shared_device_one.png "Um cenário de gráfico de dispositivo compartilhado com várias pessoas."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa 
+CRMID: John, thirdPartyID: xyz 
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB Gráfico multipessoa: dispositivo compartilhado 2]
+![Um exemplo de gráfico complexo de dispositivo compartilhado.](../images/configs/advanced/complex-shared-device.png)
 
-Nesse cenário, em vez de enviar somente a ID de logon, a ID de logon e a CRMID são enviadas como eventos de experiência.
+>[!TAB O usuário final altera seu endereço de email]
 
-![Um cenário de gráfico de dispositivo compartilhado com várias pessoas em que o loginID e o CRMID são enviados como eventos de experiência.](../images/graph-examples/complex_shared_device_two.png "Um cenário de gráfico de dispositivo compartilhado com várias pessoas em que o loginID e o CRMID são enviados como eventos de experiência."){zoomable="yes"}
+**Modo texto**
 
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, loginID: ID_C, ECID: 111
-loginID: ID_A, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: John, loyaltyID: John, Email: john@y
 ```
 
->[!TAB Gráfico entre várias pessoas: dados de ID de logon incorretos]
+![Um gráfico que mostra o comportamento de identidade após uma alteração de email.](../images/configs/advanced/complex-email-change.png)
 
-Neste cenário, `{loginID:ID_C}` está vinculado ao `{CRMID:Tom}` e ao `{CRMID:Summer}` e, portanto, é considerado um dado incorreto porque os cenários de gráficos ideais não devem vincular as mesmas IDs de logon a dois usuários diferentes. Nesse caso, os links estabelecidos mais antigos são removidos em favor dos links estabelecidos mais recentemente.
+>[!TAB A associação thirdPartyID muda]
 
-![Um cenário de gráfico multipessoas que envolve dados de logon incorretos.](../images/graph-examples/complex_bad_data.png "Um cenário de gráfico multipessoas que envolve dados de logon incorretos."){zoomable="yes"}
+**Modo texto**
 
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_C
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+CRMID: John, thirdPartyID: xyz
+CRMID: Jane, thirdPartyID: xyz
 ```
 
->[!TAB Gráfico de várias pessoas: email não exclusivo]
+![Um gráfico que exibe o comportamento da identidade considerando uma alteração na associação da ID de terceiros.](../images/configs/advanced/complex-third-party-change.png)
 
-Nesse cenário, um email não exclusivo está sendo vinculado a dois CRMIDs diferentes, portanto, os links estabelecidos mais antigos são removidos em favor dos links estabelecidos mais recentemente.
+>[!TAB ID de ordem não exclusiva]
 
-![Um cenário de gráfico de várias pessoas que envolve um email não exclusivo.](../images/graph-examples/complex_non_unique_email.png "Um cenário de gráfico de várias pessoas que envolve um email não exclusivo."){zoomable="yes"}
+**Modo texto**
 
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa
+Email: jane@g, orderID: aaa
 ```
 
->[!TAB Gráfico de várias pessoas: telefone não exclusivo]
+![Um gráfico que mostra o comportamento da identidade com uma ID de pedido não exclusiva.](../images/configs/advanced/complex-non-unique.png)
 
-Nesse cenário, um número de telefone não exclusivo está sendo vinculado a dois CRMIDs diferentes, os links estabelecidos mais antigos são removidos em favor dos links estabelecidos mais recentemente.
+>[!TAB ID de fidelidade incorreta]
 
-![Um cenário de gráfico multipessoas que envolve um número de telefone não exclusivo.](../images/graph-examples/complex_non_unique_phone.png "Um cenário de gráfico multipessoas que envolve um número de telefone não exclusivo."){zoomable="yes"}
+**Modo texto**
 
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, Phone_SHA256: 111-1111
-CRMID: Summer, Phone_SHA256: 111-1111
+```json
+CRMID: John, loyaltyID: aaa, Email: john@g
+CRMID: Jane, loyaltyID: aaa, Email: jane@g
 ```
 
->[!ENDTABS]
-
-## Uso em outro Adobe Commerce
-
-Os exemplos de configuração de gráfico nesta seção descrevem os casos de uso do Adobe Commerce. Os exemplos abaixo estão focados em clientes de varejo com dois tipos de usuário:
-
-* Usuário registrado (usuários que criaram uma conta)
-* Usuários convidados (usuários que têm apenas um endereço de email)
-
->[!IMPORTANT]
->
->**É crucial que a CRMID seja sempre enviada para cada usuário**. Se isso não for feito, poderá ocorrer um cenário de ID de logon &quot;pendente&quot;, em que uma única entidade de pessoa compartilha um dispositivo com outra pessoa.
-
-**Implementação:**
-
-| Namespaces usados | Método de coleta de comportamento da Web |
-| --- | --- |
-| CRMID, Email, ECID | Web SDK |
-
-**Eventos:**
-
-Você pode criar esse cenário na simulação de gráfico copiando os seguintes eventos no modo de texto:
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-```
-
-**Configuração do algoritmo:**
-
-Você pode criar esse cenário na simulação de gráfico definindo a seguinte configuração para a configuração do algoritmo:
-
-| Prioridade | Nome de exibição | Tipo de identidade | Único por gráfico |
-| ---| --- | --- | --- | 
-| 1 | CRMID | CROSS_DEVICE | Sim |
-| 2 | Email | Email | Sim |
-| 5 | ECID | COOKIE | Não |
-
-**Seleção de identidade principal para o Perfil:**
-
-No contexto dessa configuração, a identidade primária será definida da seguinte maneira:
-
-| Atividade do usuário | Namespace(s) em eventos | Identidade principal |
-| --- | --- | --- |
-| Navegação autenticada | CRMID, ECID | CRMID |
-| Check-out de convidado | Email, ECID | Email |
-| Navegação não autenticada | ECID | ECID |
-
->[!WARNING]
->
->Os usuários registrados devem ter o CRMID e o email em seus perfis para que os cenários de gráfico a seguir funcionem.
-
-**Exemplos de gráfico**
-
->[!BEGINTABS]
-
->[!TAB Gráfico ideal para uma única pessoa]
-
-Veja a seguir um exemplo de um gráfico ideal para uma única pessoa.
-
-![Um exemplo de gráfico ideal para uma única pessoa com um namespace de email.](../images/graph-examples/single_person_email.png "Um exemplo de gráfico ideal para uma única pessoa com um namespace de email."){zoomable="yes"}
-
->[!TAB Gráficos de várias pessoas]
-
-Este é um exemplo de um gráfico de várias pessoas em que dois usuários registrados estão navegando usando o mesmo dispositivo.
-
-![Um cenário de gráfico de várias pessoas em que dois usuários registrados estão navegando usando o mesmo dispositivo.](../images/graph-examples/two_registered_users.png "Um cenário de gráfico de várias pessoas em que dois usuários registrados estão navegando usando o mesmo dispositivo."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Summer, Email: summer@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
-```
-
-Nesse cenário, um usuário registrado e um usuário convidado compartilham o mesmo dispositivo.
-
-![Um exemplo de gráfico de várias pessoas em que um usuário registrado e um convidado compartilham o mesmo dispositivo.](../images/graph-examples/one_guest.png "Um exemplo de gráfico de várias pessoas em que um usuário registrado e um convidado estão compartilhando o mesmo dispositivo."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-Nesse cenário, um usuário registrado e um usuário convidado compartilham um dispositivo. No entanto, ocorre um erro de implementação, pois o CRMID não contém um namespace de email correspondente. Neste cenário, Tom é o usuário registrado e Summer é o usuário convidado. Diferentemente do cenário anterior, as duas entidades são mescladas, pois não há namespaces de email comuns entre as duas entidades de pessoa.
-
-![Um exemplo de gráfico de várias pessoas em que um usuário registrado e um convidado compartilham o mesmo dispositivo. No entanto, ocorre um erro de implementação, pois o CRMID não contém um namespace de email.](../images/graph-examples/no_email_namespace_in_crmid.png "Um exemplo de gráfico de várias pessoas em que um usuário registrado e um convidado compartilham o mesmo dispositivo. No entanto, ocorre um erro de implementação, pois o CRMID não contém um namespace de email."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-Nesse cenário, dois usuários convidados compartilham o mesmo dispositivo.
-
-![Um cenário de gráfico multipessoas em que dois usuários convidados compartilham o mesmo dispositivo.](../images/graph-examples/two_guests.png){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-Nesse cenário, um usuário convidado faz check-out de um item e, em seguida, faz o registro usando o mesmo dispositivo.
-
-![Um cenário de gráfico em que um usuário convidado compra um item e, em seguida, se registra em uma conta.](../images/graph-examples/guest_purchase.png "Um cenário de gráfico em que um usuário convidado compra um item e, em seguida, se registra em uma conta."){zoomable="yes"}
-
-**Entrada de eventos de simulação de gráfico**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: tom@acme.com, CRMID: Tom
-CRMID: Tom, ECID: 111
-```
+![Um gráfico que mostra o comportamento da identidade com uma ID de fidelidade incorreta.](../images/configs/advanced/complex-error.png)
 
 >[!ENDTABS]
 
@@ -763,7 +572,7 @@ CRMID: Tom, ECID: 111
 Para obter mais informações sobre [!DNL Identity Graph Linking Rules], leia a seguinte documentação:
 
 * [Visão geral do [!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
+* [Algoritmo de otimização de identidades](./identity-optimization-algorithm.md)
 * [Guia de implementação](./implementation-guide.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
 * [Prioridade de namespace](./namespace-priority.md)

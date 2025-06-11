@@ -2,34 +2,64 @@
 title: Ver mais
 description: Saiba mais sobre as diferentes opções de exibição para seus dados analisados por SQL. No painel personalizado, é possível visualizar os resultados tabulados da análise ou baixar os dados processados no formato CSV.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 87675263b817a2026741d6bdd094010831d6ea28
 workflow-type: tm+mt
-source-wordcount: '551'
+source-wordcount: '793'
 ht-degree: 1%
 
 ---
 
-# Exibir mais {#view-more}
+# Visualizar mais {#view-more}
 
-Depois de criar um [insight personalizado](./overview.md) com o [modo profissional de consulta](./overview.md#query-pro-mode), você poderá exibir os dados do seu gráfico em diferentes formatos. Você pode exibir um formulário tabulado dos resultados ou baixar os dados como um arquivo CSV para exibir em uma planilha.
+Depois de criar uma [insight personalizada](./overview.md) usando o [modo profissional de consulta](./overview.md#query-pro-mode), você pode exibir os dados do gráfico em vários formatos. É possível exibir um formulário tabelado dos resultados ou exportar os dados no formato CSV ou por email.
 
 ## Resultados em tabela {#tabulated-results}
 
-Para cada gráfico criado usando o modo pro de consulta por meio do SQL, é possível exibir os resultados tabelados de sua análise na interface do Experience Platform.
+Para cada gráfico criado usando o modo profissional de consulta por meio do SQL, é possível exibir os resultados tabelados de sua análise na interface do Experience Platform.
 
 No painel personalizado, selecione as reticências (`...`) em qualquer widget para acessar as opções [!UICONTROL Exibir mais] e [!UICONTROL Exibir SQL].
 
-![Um painel personalizado com um menu suspenso de reticências de insight e as opções Exibir mais e Exibir SQL destacadas.](../images/sql-insights-query-pro-mode/ellipses-dropdown.png)
+![Um painel personalizado com um menu suspenso de reticências do insight e as opções Exibir mais e Exibir SQL realçadas.](../images/sql-insights-query-pro-mode/ellipses-dropdown.png)
 
-## Baixar CSV {#download-csv}
+## Exportar {#export}
 
-O recurso [!UICONTROL Exibir mais] exibe os pontos de dados específicos do gráfico em forma de tabela. Para simplificar o processo de compartilhamento e manipulação de dados, você pode baixar os dados processados no formato CSV nesta caixa de diálogo. Selecione **[!UICONTROL Baixar CSV]** para baixar seus dados.
+Na caixa de diálogo **[!UICONTROL Exibir mais]**, exporte os dados da tabela baixando um arquivo CSV diretamente ou enviando um link para seu email para download seguro mais tarde.
+
+>[!IMPORTANT]
+>
+>Para acessar as opções de exportação, seu administrador deve conceder a permissão **[!UICONTROL Exportar Dados do Painel]**. Se o botão [!UICONTROL Exportar] estiver esmaecido, contate o administrador. Consulte a [Visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre permissões de painel.
+
+>[!NOTE]
+>
+>Exportações somente para visualização não exigem a permissão [!UICONTROL Exportar Dados do Painel]. Por exemplo, exportar dados processados de seus [insights de painel personalizados no formato PDF](./export-pdf.md), ou de [insights de painel da interface do usuário da plataforma](../download.md).
+
+### Baixar CSV {#download-csv}
+
+Na caixa de diálogo [!UICONTROL Exibir mais], selecione **[!UICONTROL Exportar]** e escolha **[!UICONTROL Baixar CSV]** para baixar os dados do gráfico no formato CSV.
 
 >[!NOTE]
 >
 >O download do CSV é limitado aos primeiros 500 registros.
 
-![Uma caixa de diálogo exibindo uma visualização do seu insight e dos resultados tabelados do SQL que gerou o insight.](../images/sql-insights-query-pro-mode/view-more-download-csv.png)
+![Uma caixa de diálogo exibindo uma visualização da sua insight e os resultados tabulados do seu SQL que gerou a insight.](../images/sql-insights-query-pro-mode/view-more-download-csv.png)
+
+### Enviar como email {#send-as-email}
+
+Para exportar mais de 500 registros, selecione **[!UICONTROL Exportar]** e escolha **[!UICONTROL Enviar como email]** na caixa de diálogo [!UICONTROL Exportar arquivo]. Essa opção envia com segurança um link de download para seu endereço de email associado à Adobe. O nome do destinatário e o endereço de email registrado do Adobe aparecem na seção [!UICONTROL Destinatários] da caixa de diálogo.
+
+![A opção Exibir mais dados do gráfico com as opções Exportar e Enviar como email foi realçada.](../images/sql-insights-query-pro-mode/send-as-email.png)
+
+Depois de selecionar [!UICONTROL Enviar como email], o Adobe gera um relatório e envia um email para o endereço registrado do Adobe. O email inclui um link de download seguro que requer autenticação por meio do Experience Platform.
+
+>[!NOTE]
+>
+>Você deve baixar o relatório dentro de 24 horas após a geração do link; depois disso, o arquivo expira.
+
+![A interface do usuário do Experience Platform com a caixa de diálogo de êxito Geração de arquivo exibida contendo a opção Baixar relatório.](../images/sql-insights-query-pro-mode/download-report.png)
+
+Para proteger seus dados, o Adobe hospeda com segurança os arquivos exportados em vez de enviá-los como anexos. O Access exige autenticação por meio da interface do usuário do Experience Platform, e o Adobe verifica se o arquivo foi baixado somente pelo recipient pretendido.
+
+Este método permite exportar **até 10.000 registros** e garante o acesso seguro a dados confidenciais.
 
 ## Classificar por coluna {#sort-column}
 
@@ -65,6 +95,6 @@ A paginação é aplicada automaticamente às tabelas no recurso [!UICONTROL Exi
 
 ## Próximas etapas
 
-Depois de ler este documento, agora você sabe como visualizar os resultados tabulados da análise SQL do gráfico personalizado e baixar os dados como um arquivo CSV. Consulte o documento SQL de exibição para saber como [exibir o SQL por trás de seus insights personalizados](./view-sql.md).
+Depois de ler este documento, agora você sabe como visualizar os resultados tabulados da análise SQL do gráfico personalizado e como exportar esses dados com segurança. Consulte o documento SQL de exibição para saber como [exibir o SQL por trás de seus insights personalizados](./view-sql.md).
 
 Você também pode aprender a gerar gráficos a partir de modelos de dados existentes na interface do usuário do Adobe Experience Platform com o [guia de modo de design guiado](../standard-dashboards.md).

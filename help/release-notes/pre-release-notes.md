@@ -23,9 +23,9 @@ ht-degree: 16%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest?lang=pt-BR)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest?lang=pt-BR)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quinta-feira, 18 de junho de 2025**
 
@@ -120,7 +120,7 @@ A Federated Audience Composition permite que as empresas componham dados para ob
 
 | Novo recurso | Descrição |
 | ----------- | ----------- |
-| Preparo para a HIPAA | A Federated Audience Composition agora é compatível com a HIPAA. Para obter mais informações sobre as medidas de privacidade e segurança da Federated Audience Composition, leia a [visão geral sobre privacidade e segurança na Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). Para obter mais informações sobre a conformidade com a HIPAA para produtos da Experience Platform em geral, leia a [visão geral sobre produtos e serviços da HIPAA e da Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
+| Preparo para a HIPAA | A Federated Audience Composition agora é compatível com a HIPAA. Para obter mais informações sobre as medidas de privacidade e segurança da Federated Audience Composition, leia a [visão geral sobre privacidade e segurança na Federated Audience Composition](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/start/privacy-security). Para obter mais informações sobre a conformidade com a HIPAA para produtos da Experience Platform em geral, leia a [visão geral sobre produtos e serviços da HIPAA e da Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
 Para obter mais informações, leia a [documentação sobre a Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
 
@@ -132,7 +132,7 @@ Várias regulamentações legais e organizacionais dão aos usuários o direito 
 
 | Recurso | Descrição |
 |--- | ---|
-| Suporte às leis de privacidade do Tennessee e de Minnesota | A Privacy Service agora oferece suporte à Lei de Proteção de Informações do Tennessee (`tipa_tn_usa`) e à Lei de Privacidade de Dados do Consumidor de Minnesota (`mcdpa_mn_usa`). Você pode processar solicitações de acesso e exclusão em conformidade com esses novos regulamentos de nível de estado. Consulte a [Visão geral de Regulamentos](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) para obter mais detalhes. |
+| Suporte às leis de privacidade do Tennessee e de Minnesota | A Privacy Service agora oferece suporte à Lei de Proteção de Informações do Tennessee (`tipa_tn_usa`) e à Lei de Privacidade de Dados do Consumidor de Minnesota (`mcdpa_mn_usa`). Você pode processar solicitações de acesso e exclusão em conformidade com esses novos regulamentos de nível de estado. Consulte a [Visão geral de Regulamentos](https://experienceleague.adobe.com/pt-br/docs/experience-platform/privacy/regulations/overview) para obter mais detalhes. |
 
 Consulte a [visão geral do Privacy Service](../privacy-service/home.md) para obter mais informações sobre o serviço.
 

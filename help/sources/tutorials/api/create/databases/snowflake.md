@@ -3,9 +3,9 @@ title: Conectar o Snowflake ao Experience Platform usando a API do Serviço de f
 description: Saiba como conectar o Adobe Experience Platform ao Snowflake usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1251'
 ht-degree: 3%
 
 ---
@@ -36,6 +36,10 @@ A seção a seguir fornece informações adicionais que você precisará saber p
 Leia as etapas abaixo para obter informações sobre como conectar sua origem do [!DNL Snowflake] à Experience Platform no Azure.
 
 ### Coletar credenciais necessárias
+
+>[!WARNING]
+>
+>A autenticação básica (ou autenticação de chave de conta) para a origem [!DNL Snowflake] será substituída em novembro de 2025. Você deve migrar para a autenticação baseada em par de chaves para continuar usando a origem e assimilando dados do banco de dados para o Experience Platform. Para obter mais informações sobre a descontinuação, leia o [[!DNL Snowflake] manual de práticas recomendadas sobre como mitigar os riscos de comprometimento de credenciais](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 Você deve fornecer valores para as seguintes propriedades de credencial para autenticar sua origem [!DNL Snowflake].
 

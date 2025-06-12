@@ -2,9 +2,9 @@
 title: Criar uma conexão do Salesforce Service Cloud Source usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform à Salesforce Service Cloud usando a API do Serviço de fluxo.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '818'
 ht-degree: 3%
 
 ---
@@ -25,6 +25,10 @@ Este manual necessita de uma compreensão funcional dos seguintes componentes da
 As seções a seguir fornecem informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Salesforce Service Cloud] usando a API [!DNL Flow Service].
 
 ### Coletar credenciais necessárias
+
+>[!WARNING]
+>
+>A autenticação básica para a origem [!DNL Salesforce Service Cloud] será descontinuada em janeiro de 2026. Você deve mudar para a autenticação de Credencial do cliente OAuth 2 para continuar usando a origem e assimilando dados da conta do [!DNL Salesforce Service Cloud] para o Experience Platform.
 
 A origem [!DNL Salesforce Service Cloud] dá suporte à autenticação básica e à Credencial do Cliente OAuth2.
 
@@ -57,7 +61,7 @@ Para conectar sua conta do [!DNL Salesforce Service Cloud] ao [!DNL Flow Service
 | `apiVersion` | A versão da API REST da instância [!DNL Salesforce Service Cloud] que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, será necessário inserir o valor como `52.0`. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. Esse valor é obrigatório para autenticação de Credencial do cliente OAuth2. |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Salesforce Service Cloud] é: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
-Para obter mais informações sobre como usar o OAuth para [!DNL Salesforce Service Cloud], leia o [[!DNL Salesforce Service Cloud] guia sobre Fluxos de Autorização do OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+Para obter mais informações sobre como usar o OAuth para [!DNL Salesforce Service Cloud], leia o [[!DNL Salesforce Service Cloud] guia sobre Fluxos de Autorização do OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
 >[!ENDTABS]
 

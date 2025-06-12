@@ -2,10 +2,10 @@
 title: Conectar sua conta da Salesforce Service Cloud usando a interface do usuário da Experience Platform
 description: Saiba como conectar sua conta da Salesforce Service Cloud e trazer seus dados de sucesso do cliente para a Experience Platform usando a interface do usuário.
 exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '844'
-ht-degree: 3%
+source-wordcount: '880'
+ht-degree: 2%
 
 ---
 
@@ -25,6 +25,10 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 Se você já tiver uma conexão válida do [!DNL Salesforce Service Cloud], ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados para o sucesso de um cliente](../../dataflow/customer-success.md)
 
 ### Coletar credenciais necessárias
+
+>[!WARNING]
+>
+>A autenticação básica para a origem [!DNL Salesforce Service Cloud] será descontinuada em janeiro de 2026. Você deve mudar para a autenticação de Credencial do cliente OAuth 2 para continuar usando a origem e assimilando dados da conta do [!DNL Salesforce Service Cloud] para o Experience Platform.
 
 A origem [!DNL Salesforce Service Cloud] dá suporte à autenticação básica e à Credencial do Cliente OAuth2.
 
@@ -55,7 +59,7 @@ Você deve fornecer valores para as credenciais a seguir para conectar sua conta
 | Segredo do cliente | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Salesforce Service Cloud]. |
 | Versão da API | A versão da API REST da instância [!DNL Salesforce Service Cloud] que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, será necessário inserir o valor como `52.0`. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
 
-Para obter mais informações sobre como usar o OAuth para [!DNL Salesforce Service Cloud], leia o [[!DNL Salesforce Service Cloud] guia sobre Fluxos de Autorização do OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+Para obter mais informações sobre como usar o OAuth para [!DNL Salesforce Service Cloud], leia o [[!DNL Salesforce Service Cloud] guia sobre Fluxos de Autorização do OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
 >[!ENDTABS]
 

@@ -4,10 +4,10 @@ description: Saiba mais sobre as atualizações de critérios de qualificação 
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: 2af73be351cb818862006adc8d0f1a33f95d93cf
+source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 3%
+source-wordcount: '586'
+ht-degree: 2%
 
 ---
 
@@ -47,8 +47,8 @@ Por exemplo, digamos que você tenha dois públicos-alvo, com um público-alvo h
 
 | Público-alvo | Esquema | Tipo de Source | Definição de consulta | ID do público-alvo |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Residentes da Califórnia | Perfil | Lote | O endereço residencial é no estado da Califórnia | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
-| Check-outs recentes | Evento de experiência | Transmissão | Tem pelo menos um check-out nas últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| Residentes da Califórnia | Perfil | Origem do lote | O endereço residencial é no estado da Califórnia | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Check-outs recentes | Evento de experiência | Fonte de transmissão | Tem pelo menos um check-out nas últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Se você quiser usar o componente de lote no público-alvo de transmissão, será necessário fazer uma referência ao público-alvo em lote usando o segmento de segmentos.
 
@@ -68,8 +68,8 @@ Por exemplo, digamos que você tenha dois públicos-alvo, com ambos os públicos
 
 | Público-alvo | Esquema | Tipo de Source | Definição de consulta | ID do público-alvo |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Desistências recentes | Evento de experiência | Lote | Tem pelo menos um evento de abandono nas últimas 24 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
-| Check-outs recentes | Evento de experiência | Transmissão | Tem pelo menos um check-out nas últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+| Desistências recentes | Evento de experiência | Origem do lote | Tem pelo menos um evento de abandono nas últimas 48 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
+| Check-outs recentes | Evento de experiência | Fonte de transmissão | Tem pelo menos um check-out nas últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Nessa situação, seria necessário criar um terceiro público-alvo da seguinte maneira:
 

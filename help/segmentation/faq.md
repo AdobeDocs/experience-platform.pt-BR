@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 92b70dc6d6085067f11d43436bc74d64bce72dd0
 workflow-type: tm+mt
-source-wordcount: '4842'
+source-wordcount: '4837'
 ht-degree: 2%
 
 ---
@@ -430,4 +430,4 @@ Leva até uma hora para uma definição de segmento estar disponível.
 
 ### Existem limitações para os dados que estão sendo transmitidos?
 
-Para que os dados transmitidos sejam usados na segmentação por transmissão, **deve** haver um espaçamento entre os eventos transmitidos. Se muitos eventos forem transmitidos no mesmo segundo, o Experience Platform tratará esses eventos como dados gerados por bot e eles serão descartados. Como prática recomendada, você deve ter **pelo menos** cinco segundos entre os dados do evento para garantir que os dados sejam usados corretamente.
+Ao usar a segmentação de borda ou transmissão, verifique se os eventos de cada perfil estão espaçados. Se muitos eventos forem transmitidos no mesmo segundo, o Experience Platform tratará esses eventos como dados gerados por bot e eles serão descartados. Como prática recomendada, você deve ter **pelo menos** cinco segundos entre os dados do evento para garantir que os dados sejam usados corretamente.

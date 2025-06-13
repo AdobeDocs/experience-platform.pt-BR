@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia de segmentação de streaming
 description: Saiba mais sobre a segmentação por transmissão, incluindo o que é, como criar um público avaliado usando a segmentação por transmissão e como visualizar seus públicos criados usando a segmentação por transmissão.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 4a8d509286c92a76a897be663a68709bb3b71391
+source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
 workflow-type: tm+mt
 source-wordcount: '2022'
 ht-degree: 2%
@@ -169,7 +169,7 @@ Por exemplo, digamos que você tenha dois públicos-alvo, com ambos os públicos
 
 | Público-alvo | Esquema | Tipo de Source | Definição de consulta | ID do público-alvo |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Desistências recentes | Evento de experiência | Lote | Tem pelo menos um evento de abandono nas últimas 24 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
+| Desistências recentes | Evento de experiência | Lote | Tem pelo menos um evento de abandono nas últimas 48 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Check-outs recentes | Evento de experiência | Transmissão | Tem pelo menos um check-out nas últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 Nessa situação, seria necessário criar um terceiro público-alvo da seguinte maneira:

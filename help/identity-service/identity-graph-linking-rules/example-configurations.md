@@ -4,9 +4,9 @@ description: Saiba mais sobre os diferentes tipos de implementação que você p
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
+source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '1999'
 ht-degree: 7%
 
 ---
@@ -43,6 +43,10 @@ Antes de mergulhar no documento a seguir, familiarize-se com vários conceitos i
 
 ## Implementações básicas {#basic-implementations}
 
+>[!TIP]
+>
+>Você deve criar um namespace entre dispositivos personalizado para &quot;CRMID&quot; para concluir os exercícios de implementação básica abaixo.
+
 Leia esta seção para implementações básicas do [!DNL Identity Graph Linking Rules].
 
 ### Caso de uso: implementação simples que usa um namespace entre dispositivos
@@ -72,15 +76,11 @@ Defina as seguintes configurações na interface de Simulação de gráfico ante
 
 **Gráfico simulado**
 
-+++Selecione para exibir o gráfico simulado
-
-Neste gráfico, John (o usuário final) é representado pela CRMID. {ECID: 123} representa o navegador da Web que John usou em seu computador pessoal para visitar sua plataforma de comércio eletrônico. {ECID: 999} representa o navegador que ele usou em seu [!DNL iPhone] e {IDFA: a-b-c} representa seu [!DNL iPhone].
+Neste gráfico, John (o usuário final) é representado pela CRMID. `{ECID: 123}` representa o navegador da Web que John usou em seu computador pessoal para visitar sua plataforma de comércio eletrônico. `{ECID: 999}` representa o navegador que ele usou em seu [!DNL iPhone] e `{IDFA: a-b-c}` representa seu [!DNL iPhone].
 
 ![Uma implementação simples com um namespace entre dispositivos..](../images/configs/basic/simple-implementation.png)
 
-+++
-
-### Exercício
+**Exercício**
 
 Simule a seguinte configuração na Simulação de gráfico. Você pode criar seus próprios eventos ou copiar e colar usando o modo de texto.
 
@@ -99,18 +99,14 @@ CRMID: Jane, ECID: 111
 
 **Gráfico simulado**
 
-+++Selecione para exibir o gráfico simulado
-
 Neste gráfico, John e Jane são representados por suas próprias CRMIDs:
 
-* {CRMID: John}
-* {CRMID: Jane}
+* `{CRMID: John}`
+* `{CRMID: Jane}`
 
-O navegador no computador desktop que ambos usam para visitar sua plataforma de comércio eletrônico é representado por {ECID: 111}. Neste cenário gráfico, Jane é o último usuário final autenticado e, portanto, o vínculo entre {ECID: 111} e {CRMID: John} é removido.
+O navegador no computador desktop que ambos usam para visitar sua plataforma de comércio eletrônico é representado por `{ECID: 111}`. Neste cenário gráfico, Jane é o último usuário final autenticado e, portanto, o vínculo entre `{ECID: 111}` e `{CRMID: John}` é removido.
 
 ![Um gráfico simulado para um PC (dispositivo compartilhado).](../images/configs/basic/shared-device-pc.png)
-
-+++
 
 >[!TAB Dispositivo compartilhado (celular)]
 
@@ -125,13 +121,9 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 **Gráfico simulado**
 
-+++Selecione para exibir o gráfico simulado
-
-Nesse gráfico, John e Jane são representados por suas próprias CRMIDs. O navegador usado é representado por {ECID: 111} e o [!DNL iPad] que ele compartilha é representado por {IDFA: a-b-c}. Neste cenário gráfico, Jane é o último usuário final autenticado e, portanto, os links de {ECID: 111} e {IDFA: a-b-c} para {CRMID: John} são removidos.
+Nesse gráfico, John e Jane são representados por suas próprias CRMIDs. O navegador usado é representado por `{ECID: 111}` e o [!DNL iPad] compartilhado é representado por `{IDFA: a-b-c}`. Neste cenário gráfico, Jane é o último usuário final autenticado e, portanto, os links de `{ECID: 111}` e `{IDFA: a-b-c}` a `{CRMID: John}` são removidos.
 
 ![Um gráfico simulado para um dispositivo compartilhado (dispositivo móvel).](../images/configs/basic/shared-device-mobile.png)
-
-+++
 
 >[!ENDTABS]
 
@@ -145,9 +137,9 @@ Leia esta seção para implementações intermediárias de [!DNL Identity Graph 
 >
 >* Uma **identidade não exclusiva** é uma identidade associada a um namespace não exclusivo.
 >
->* Nos exemplos abaixo, `CChash` é um namespace personalizado que representa um número de cartão de crédito com hash.
+>* Você deve criar namespaces personalizados entre dispositivos para &quot;CRMID&quot; e &quot;Hash&quot; para concluir os exercícios de implementação intermediários abaixo. &quot;CCHash&quot; é um namespace personalizado que representa um número de cartão de crédito com hash.
 
-Você é um arquiteto de dados que trabalha para um banco comercial que emite cartões de crédito. Sua equipe de marketing indicou que deseja incluir o histórico de transações de cartões de crédito passados em um perfil. Este gráfico de identidade pode ser semelhante ao seguinte.
+Imagine que você seja um arquiteto de dados trabalhando em um banco comercial que emite cartões de crédito. Sua equipe de marketing indicou que deseja incluir o histórico de transações de cartões de crédito passados em um perfil. Este gráfico de identidade pode ser semelhante ao seguinte.
 
 **Modo de texto:**
 
@@ -171,21 +163,32 @@ Defina as seguintes configurações na interface de Simulação de gráfico ante
 
 **Gráfico simulado**
 
-+++Selecione para exibir o gráfico simulado
-
 ![Imagem do gráfico simulado](../images/configs/basic/simple-implementation-non-unique.png)
-
-+++
 
 Não há garantias de que esses números de cartão de crédito, ou qualquer outro namespace não exclusivo, sempre serão associados a um único usuário final. Dois usuários finais podem se registrar no mesmo cartão de crédito. Pode haver valores não exclusivos de espaço reservado que foram assimilados incorretamente. Simplificando, não há garantia de que namespaces não exclusivos não causarão o colapso do gráfico.
 
 Para resolver esse problema, o Serviço de identidade remove os links mais antigos e mantém os links mais recentes. Isso garante que você tenha apenas uma CRMID em um gráfico, evitando assim o seu colapso.
 
-### Exercício
+**Exercício**
 
 Simule as seguintes configurações na Simulação de gráfico. Você pode criar seus próprios eventos ou copiar e colar usando o modo de texto.
 
 >[!BEGINTABS]
+
+>[!TAB Dispositivo compartilhado]
+
+**Modo de texto:**
+
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 3333-4444
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:123
+```
+
+**Gráfico simulado**
+
+![Um gráfico de dispositivo compartilhado intermediário com hash.](../images/configs/intermediate/intermediate-shared-device.png)
 
 >[!TAB Dois usuários finais com o mesmo cartão de crédito]
 
@@ -202,11 +205,7 @@ CRMID: Jane, ECID:456
 
 **Gráfico simulado**
 
-+++Selecione para exibir o gráfico simulado
-
 ![Um gráfico em que dois usuários finais se inscrevem com o mesmo cartão de crédito.](../images/configs/intermediate/graph-with-same-credit-card.png)
-
-+++
 
 >[!TAB Número de cartão de crédito inválido]
 
@@ -223,17 +222,17 @@ CRMID: Jill, CChash: undefined
 
 **Gráfico simulado**
 
-+++Selecione para exibir o gráfico simulado
-
 ![Um gráfico em que problemas de hash resultem em um cartão de crédito inválido.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
-
-+++
 
 >[!ENDTABS]
 
 ### Caso de uso: seus dados incluem CRMIDs com e sem hash
 
-Você está assimilando um CRMID com hash (offline) e um CRMID com hash (online). Eles esperam uma relação direta entre CRMIDs com hash e sem hash. Quando um usuário final navega com uma conta autenticada, a CRMID com hash é enviada junto com a ID do dispositivo (representada no Serviço de identidade como uma ECID).
+>[!TIP]
+>
+>Você deve criar namespaces personalizados entre dispositivos para &quot;CRMID&quot; e &quot;CRMIDhash&quot; para concluir os exercícios de implementação intermediários abaixo.
+
+Você está assimilando um CRMID com hash (offline) e um CRMID com hash (online). A expectativa é que haja uma relação direta entre CRMIDs com hash e sem hash. Quando um usuário final navega com uma conta autenticada, a CRMID com hash é enviada junto com a ID do dispositivo (representada no Serviço de identidade como uma ECID).
 
 **Configuração de algoritmo (Configurações de identidade)**
 
@@ -252,7 +251,7 @@ Simule as seguintes configurações na Simulação de gráfico. Você pode criar
 
 >[!BEGINTABS]
 
->[!TAB Cenário 1: dispositivo compartilhado]
+>[!TAB Dispositivo compartilhado]
 
 John e Jane compartilham um dispositivo.
 
@@ -265,9 +264,9 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
-![espaço reservado](../images/configs/intermediate/shared-device-hashed-crmid.png)
+![Um gráfico de dispositivos compartilhados com CRMID com hash](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
->[!TAB Cenário 2: dados incorretos]
+>[!TAB Dados incorretos]
 
 Devido a erros no processo de hash, uma CRMID com hash não exclusiva é gerada e enviada para o Serviço de identidade.
 
@@ -360,7 +359,7 @@ Simule as seguintes configurações na ferramenta de simulação de gráfico. Vo
 
 >[!BEGINTABS]
 
->[!TAB Dois usuários finais fizeram logon]
+>[!TAB Dispositivo compartilhado]
 
 Nesse cenário, John e Jane fazem logon em um site de comércio eletrônico.
 
@@ -399,6 +398,10 @@ A prioridade de namespace desempenha um papel essencial em cenários de gráfico
 Leia esta seção para implementações avançadas de [!DNL Identity Graph Linking Rules].
 
 ### Caso de uso: você precisa de suporte para várias linhas de negócios
+
+>[!TIP]
+>
+>Você deve criar namespaces personalizados entre dispositivos para &quot;CRMID&quot; e &quot;loginID&quot; para concluir os exercícios avançados de implementação abaixo.
 
 Seus usuários finais têm duas contas diferentes: uma conta pessoal e uma conta comercial. Cada conta é identificada por uma ID diferente. Nesse cenário, um gráfico típico seria semelhante ao seguinte:
 
@@ -469,9 +472,15 @@ loginID: JanePersonal, ECID: 222
 
 ### Caso de uso: você tem implementações complexas que exigem vários namespaces
 
+>[!TIP]
+>
+>Você deve criar namespaces personalizados entre dispositivos para &quot;CRMID&quot;, &quot;fidelidID&quot;, &quot;thirdPartyID&quot; e &quot;orderID&quot; para concluir os exercícios avançados de implementação abaixo.
+
 Você é uma empresa de mídia e entretenimento e seus usuários finais têm o seguinte:
+
 * UMA CRMID
 * Uma ID de fidelidade
+
 Além disso, os usuários finais podem fazer uma compra no site de comércio eletrônico e esses dados são vinculados ao endereço de email. Os dados do usuário também são enriquecidos por um provedor de banco de dados de terceiros e enviados para a Experience Platform em lotes.
 
 **Modo texto**

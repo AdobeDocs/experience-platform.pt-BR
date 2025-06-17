@@ -3,9 +3,9 @@ keywords: conexão do facebook;conexão do facebook;destinos do facebook;instagr
 title: Conexão com o Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
+source-git-commit: dd725b4d383bbcd93e68c81d4fe5182d6086e9be
 workflow-type: tm+mt
-source-wordcount: '2843'
+source-wordcount: '2690'
 ht-degree: 5%
 
 ---
@@ -13,14 +13,6 @@ ht-degree: 5%
 # [!DNL Facebook] conexão
 
 ## Visão geral {#overview}
-
->[!IMPORTANT]
->
->* A partir de 23 de maio de 2025 e durante todo o mês de junho de 2025, você poderá ver temporariamente dois cartões de destino **[!DNL Facebook Custom Audience]** no catálogo de destinos por até algumas horas. Isso se deve a uma atualização interna no serviço de destinos e para oferecer suporte a novos campos para melhorar o direcionamento e a correspondência com perfis nas propriedades do Facebook. Para obter detalhes sobre os novos campos relacionados ao endereço, consulte a seção [identidades com suporte](#supported-identities).
->* Se você vir um cartão rotulado como **[!UICONTROL (Novo) Público-alvo personalizado do Facebook]**, use esse cartão para novos fluxos de dados de ativação. Seus fluxos de dados existentes serão atualizados automaticamente, portanto, nenhuma ação é necessária. Quaisquer alterações feitas aos fluxos de dados existentes durante esse período serão preservadas após a atualização. Quando a atualização for concluída, o cartão de destino **[!UICONTROL (Novo) Público-alvo personalizado do Facebook]** será renomeado para **[!DNL Facebook Custom Audience]**.
->* Se você estiver criando fluxos de dados usando a [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] com os seguintes valores:
->   * ID da especificação de fluxo: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
->   * ID de especificação da conexão: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 Ative perfis para suas campanhas do [!DNL Facebook] para direcionamento de público, personalização e supressão com base em emails com hash.
 
@@ -146,8 +138,8 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 >[!NOTE]
 >
 >O hash automático de dados de namespaces sem hash é criado por [!DNL Experience Platform] após a ativação.
-> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
-> A opção **[!UICONTROL Aplicar transformação]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
+>> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
+>> A opção **[!UICONTROL Aplicar transformação]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
 
 ![Aplicar controle de transformação realçado na etapa de mapeamento.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 

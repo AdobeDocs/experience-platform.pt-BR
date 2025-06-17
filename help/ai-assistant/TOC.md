@@ -31,5 +31,5 @@ ht-degree: 31%
    * [Visão geral dos detalhes do modelo](./model-details/overview.md)
    * [Linguagem para SQL dos Insights Operacionais Naturais do Assistente de IA](./model-details/natural-language-to-sql.md)
    * [Otimização de tempo de envio](./model-details/send-time-optimization.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
 

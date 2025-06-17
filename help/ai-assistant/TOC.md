@@ -4,10 +4,10 @@ user-guide-title: Guia do Assistente de IA na Adobe Experience Platform
 user-guide-description: Saiba como usar o Assistente de IA para acelerar o fluxo de trabalho com a Adobe Experience Platform e a Real-time Customer Data Platform.
 description: Este documento lista o índice do Assistente de IA no Adobe Experience Platform.
 role: Admin,User,Developer,Leader
-source-git-commit: 9113e6ad429d11afebab1a146e1426aa515fef73
+source-git-commit: c5ca8c8e13c5bf889a8ed4d67f00e955aea56e75
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 29%
+source-wordcount: '119'
+ht-degree: 30%
 
 ---
 
@@ -31,7 +31,6 @@ ht-degree: 29%
    * [Visão geral dos detalhes do modelo](./model-details/overview.md)
    * Detalhes do modelo de IA {#ai-model-details}
       * [Linguagem para SQL dos Insights Operacionais Naturais do Assistente de IA](./model-details/ai-model-details/natural-language-to-sql.md)
-      * [Pontuação de propensão do Customer AI](./model-details/ai-model-details/customer-ai.md)
       * [Otimização de tempo de envio](./model-details/ai-model-details/send-time-optimization.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
 

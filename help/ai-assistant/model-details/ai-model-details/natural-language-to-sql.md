@@ -1,17 +1,19 @@
 ---
 title: Linguagem natural do assistente de IA para detalhes do modelo SQL
 description: Saiba mais sobre a Linguagem natural do assistente de IA para o modelo de IA do SQL.
-hide: true
-hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
+source-git-commit: 3d870c367317d73bba8b75b38f7b2a93ab6b5bbd
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
 
 # Detalhes do modelo de Linguagem natural para SQL dos Insights operacionais do assistente de IA
+
+>[!IMPORTANT]
+>
+>A Adobe está publicando ativamente mais detalhes do modelo; uma documentação adicional será adicionada ao Experience League assim que estiver disponível.
 
 ## Visão geral do modelo {#model-overview}
 

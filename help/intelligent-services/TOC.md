@@ -5,10 +5,10 @@ user-guide-title: Ajuda dos Serviços inteligentes
 breadcrumb-title: Guia dos Serviços inteligentes
 user-guide-description: Utilize os serviços inteligentes de IA para gerar pontuações, descobrir insights e criar segmentos a partir dos dados dos eventos de marketing.
 role: User
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c5ca8c8e13c5bf889a8ed4d67f00e955aea56e75
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 37%
+source-wordcount: '143'
+ht-degree: 46%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 37%
 - Marcação de conteúdo {#content-commerce-ai}
    - [Visão geral](content-commerce-ai/overview.md)
    - [Introdução](content-commerce-ai/getting-started.md)
-   - API de Marcação de Conteúdo{#api}
+   - API de marcação de conteúdo{#api}
       - [Marcação de cores](content-commerce-ai/api/color-tagging.md)
       - [Marcação de palavra-chave](content-commerce-ai/api/keyword-tagging.md)
       - [Presença de texto e reconhecimento óptico de caracteres](content-commerce-ai/api/optical-character-recognition.md)
@@ -43,7 +43,8 @@ ht-degree: 37%
    - [Visão geral](customer-ai/overview.md)
    - [Introdução à IA do cliente](customer-ai/getting-started.md)
    - [Requisitos de dados](customer-ai/data-requirements.md)
-   - Guias de interface do usuário{#user-guide}
+   - [Detalhes do modelo de Pontuação de propensão da IA do cliente](customer-ai/model-detail.md)
+   - Guias de interface{#user-guide}
       - [Configurar uma instância](customer-ai/user-guide/configure.md)
       - [Descubra insights](customer-ai/user-guide/discover-insights.md)
       - [Criar segmentos usando pontuações da IA do cliente](customer-ai/user-guide/create-segment.md)
@@ -55,4 +56,4 @@ ht-degree: 37%
       - [Chaves gerenciadas pelo cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Governança de dados](customer-ai/cai-data-governance/data-governance.md)
       - [Políticas de governança](customer-ai/cai-data-governance/governance-policies.md)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

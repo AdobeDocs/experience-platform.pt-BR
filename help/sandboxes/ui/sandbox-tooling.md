@@ -2,10 +2,10 @@
 title: Ferramentas de sandbox
 description: Exporte e importe configurações de sandbox facilmente entre sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 208c9c47b4bde211506867cf59b8743556db7fc8
+source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
 workflow-type: tm+mt
-source-wordcount: '2678'
-ht-degree: 7%
+source-wordcount: '3414'
+ht-degree: 5%
 
 ---
 
@@ -59,7 +59,7 @@ A tabela abaixo lista [!DNL Adobe Journey Optimizer] objetos que atualmente têm
 | [!DNL Adobe Journey Optimizer] | Ações Personalizadas |  | As ações personalizadas podem ser adicionadas a um pacote independentemente. Depois que uma ação personalizada é atribuída a uma jornada, ela não pode mais ser editada. Para atualizar ações personalizadas, você deve: <ul><li>mover ações personalizadas antes de migrar uma jornada</li><li>atualizar configurações (como cabeçalhos de solicitação, parâmetros de consulta e autenticação) para ações personalizadas após a migração</li><li>migrar objetos do jornada com as ações personalizadas adicionadas durante a primeira etapa</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Modelo de conteúdo | | Um template de conteúdo pode ser copiado como um objeto dependente do objeto de jornada. Modelos independentes permitem reutilizar facilmente o conteúdo personalizado em campanhas e jornadas do Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Fragmento | Todos os fragmentos aninhados. | Um fragmento pode ser copiado como um objeto dependente do objeto de jornada. Os fragmentos são componentes reutilizáveis que podem ser referenciados em um ou mais emails em campanhas e jornadas do Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campanhas | Os seguintes objetos usados na campanha são copiados como objetos dependentes: <ul><li>Campanhas</li><li>Públicos-alvo</li><li>Esquemas</li><li>Modelos de conteúdo</li><li>Fragmentos</li><li>Mensagem/Conteúdo</li><li>Configuração de canais</li><li>Objetos de decisão unificados</li><li>Configurações/variantes de experimentos</li></ul> | <ul><li>As campanhas podem ser copiadas junto com todos os itens relacionados ao perfil, público-alvo, esquema, mensagens embutidas e objetos dependentes. Alguns itens não são copiados, como rótulos de uso de dados e configurações de idioma. Para obter uma lista completa de objetos que não podem ser copiados, consulte o guia [exportação de objetos para outra sandbox](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>O sistema detectará e reutilizará automaticamente um objeto de configuração de canal existente na sandbox de destino se existir uma configuração idêntica. Se nenhuma configuração correspondente for encontrada, a configuração do canal será ignorada durante a importação e os usuários deverão atualizar manualmente as configurações do canal na sandbox de destino para essa jornada.</li><li>Os usuários podem reutilizar experimentos e públicos-alvo existentes na sandbox de destino como objetos dependentes de campanhas selecionadas.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campanhas | Os seguintes objetos usados na campanha são copiados como objetos dependentes: <ul><li>Campanhas</li><li>Públicos-alvo</li><li>Esquemas</li><li>Modelos de conteúdo</li><li>Fragmentos</li><li>Mensagem/Conteúdo</li><li>Configuração de canais</li><li>Objetos de decisão unificados</li><li>Configurações/variantes de experimentos</li></ul> | <ul><li>As campanhas podem ser copiadas junto com todos os itens relacionados ao perfil, público-alvo, esquema, mensagens embutidas e objetos dependentes. Alguns itens não são copiados, como rótulos de uso de dados e configurações de idioma. Para obter uma lista completa de objetos que não podem ser copiados, consulte o guia [exportação de objetos para outra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>O sistema detectará e reutilizará automaticamente um objeto de configuração de canal existente na sandbox de destino se existir uma configuração idêntica. Se nenhuma configuração correspondente for encontrada, a configuração do canal será ignorada durante a importação e os usuários deverão atualizar manualmente as configurações do canal na sandbox de destino para essa jornada.</li><li>Os usuários podem reutilizar experimentos e públicos-alvo existentes na sandbox de destino como objetos dependentes de campanhas selecionadas.</li></ul> |
 
 As superfícies (por exemplo, predefinições) não são copiadas. O sistema seleciona automaticamente a correspondência mais próxima possível na sandbox de destino com base no tipo de mensagem e no nome da superfície. Se não houver superfícies encontradas na sandbox de destino, a cópia de superfície falhará, fazendo com que a cópia da mensagem falhe, pois uma mensagem requer que uma superfície esteja disponível para configuração. Nesse caso, pelo menos uma superfície precisa ser criada para o canal direito da mensagem para que a cópia funcione.
 
@@ -253,11 +253,99 @@ A caixa de diálogo **[!UICONTROL Resumo de importação]** mostra um detalhamen
 
 Quando a importação for concluída, uma notificação será recebida na interface do usuário do Experience Platform. Você pode acessar essas notificações pelo ícone de alertas. Você pode acessar a solução de problemas aqui se uma tarefa não for bem-sucedida.
 
+## Transferir atualizações de configurações de objetos iterativos em sandboxes por meio da ferramenta sandbox {#move-configs}
+
+Você pode usar as ferramentas de sandbox para transferir configurações de objetos entre diferentes sandboxes. Anteriormente, as atualizações de configuração de seus objetos (como esquemas, grupos de campos e tipos de dados) precisavam ser recriadas ou reimportadas manualmente para serem transferidas para outras sandboxes. Com esse recurso, você pode usar ferramentas de sandbox para acelerar seus fluxos de trabalho e reduzir possíveis erros, transferindo facilmente suas atualizações de configuração em diferentes sandboxes.
+
+![Um diagrama que mostra como as atualizações são movidas entre sandboxes.](../images/ui/sandbox-tooling/move-updates-diagram.png)
+
+>[!TIP]
+>
+> Verifique se você tem os seguintes pré-requisitos antes de tentar transferir as configurações de objeto em diferentes sandboxes.
+>
+>- As permissões apropriadas para acessar as ferramentas da sandbox.
+>- Um objeto recém-criado ou atualizado (como um esquema) na sandbox de origem.
+
+>[!BEGINSHADEBOX]
+
+### Tipos de objeto compatíveis com a operação de atualização
+
+Os seguintes tipos de objetos são compatíveis com a atualização:
+
+- Esquemas
+- Grupos de campos
+- Tipos de dados
+
+| Atualizações suportadas | Atualizações não suportadas |
+| --- | --- |
+| <ul><li>Adicionar novos campos/grupos de campos ao recurso.</li><li>Tornando um campo obrigatório opcional.</li><li>Introdução de novos campos obrigatórios.</li><li>Apresentando um novo campo de relacionamento.</li><li>Introdução de um novo campo de identidade.</li><li>Alteração do nome de exibição e da descrição do recurso.</li></ul> | <ul><li>Removendo campos definidos anteriormente.</li><li>Redefinição de campos existentes quando o esquema é ativado para o Perfil de cliente em tempo real.</li><li>Remoção ou restrição de valores de campo compatíveis anteriormente.</li><li>Mover campos existentes para um local diferente na árvore de esquema: isso criará um novo campo na sandbox de destino, mas o campo anterior não será removido.</li><li>Habilitar ou desabilitar o esquema para participar do Perfil - esta operação será ignorada na comparação de diferenças.</li><li>Rótulos de controle de acesso.</li></ul> |
+
+>[!ENDSHADEBOX]
+
+Siga as etapas abaixo para saber como usar ferramentas de sandbox para transferir suas configurações de objeto em diferentes sandboxes.
+
+### Objetos importados anteriormente
+
+Siga estas etapas se seu caso de uso envolver objetos existentes em sua sandbox de origem que exigem atualizações de configuração, após já terem sido empacotados e importados para outras sandboxes.
+
+Primeiro, atualize o objeto na sandbox de origem. Por exemplo, navegue até o espaço de trabalho **[!UICONTROL Esquemas]**, selecione seu esquema e adicione um novo grupo de campos.
+
+![O espaço de trabalho de esquema com um esquema atualizado.](../images/ui/sandbox-tooling/update-schema.png)
+
+Depois de atualizar o esquema, navegue até **[!UICONTROL Sandboxes]**, selecione **[!UICONTROL Pacotes]** e localize o pacote existente.
+
+![A interface de ferramentas de sandbox com um pacote selecionado](../images/ui/sandbox-tooling/select-package.png)
+
+Use a interface de pacotes para verificar as alterações. Selecione **[!UICONTROL Verificar atualizações]** para exibir as alterações nos artefatos do pacote. Em seguida, selecione **[!UICONTROL Exibir comparação]** para receber um resumo detalhado de todas as alterações realizadas em relação aos artefatos.
+
+![A interface de pacote com o botão exibir diferencial selecionado.](../images/ui/sandbox-tooling/view-diff.png)
+
+A interface [!UICONTROL Exibir comparação] é exibida. Consulte essa ferramenta para obter informações sobre os artefatos de origem e de destino, bem como as alterações a serem aplicadas a eles.
+
+![O resumo das alterações.](../images/ui/sandbox-tooling/summary-of-changes.png)
+
+Durante esta etapa, você também pode selecionar [!UICONTROL Resumir com IA] para obter um resumo passo a passo de todas as alterações.
+
+![O resumo com a IA habilitada.](../images/ui/sandbox-tooling/ai-summary.png)
+
+Quando estiver pronto, selecione **[!UICONTROL Atualizar pacote]** e **[!UICONTROL Confirmar]** na janela pop-up exibida. Quando o trabalho for concluído, você poderá atualizar a página e selecionar **[!UICONTROL Exibir histórico]** para verificar a versão do seu pacote.
+
+![A janela de confirmação.](../images/ui/sandbox-tooling/confirm-changes.png)
+
+Para importar as alterações, volte para o diretório [!UICONTROL Pacotes] e selecione as reticências (`...`) ao lado do pacote e selecione **[!UICONTROL Importar pacote]**. O Experience Platform seleciona automaticamente [!UICONTROL Atualizar objetos existentes]. Verifique as alterações e selecione **[!UICONTROL Concluir]**.
+
+>[!NOTE]
+>
+>Todos os objetos dependentes são atualizados automaticamente na sandbox de destino como parte desse workflow.
+
+![A interface do objetivo de importação.](../images/ui/sandbox-tooling/import-objective.png)
+
+Para validar ainda mais seu processo de importação, navegue até a sandbox de destino e visualize manualmente o objeto atualizado nessa sandbox.
+
+### Objetos criados manualmente na sandbox de destino
+
+Siga estas etapas se o caso de uso envolver a aplicação de alterações de configuração a objetos que foram criados manualmente em sandboxes separadas.
+
+Primeiro, crie e publique um novo pacote com o objeto atualizado.
+
+Em seguida, importe o pacote para a sandbox de destino que contém os objetos que você também deseja atualizar. Durante o processo de importação, selecione **[!UICONTROL Atualizar objetos existentes]** e use o navegador de objetos para selecionar manualmente os objetos de destino aos quais você deseja aplicar as atualizações.
+
+>[!NOTE]
+>
+>- É opcional selecionar um target mapping em uma sandbox diferente para objetos dependentes. Se nenhum estiver selecionado, um novo será criado.
+>- Para o namespace de identidade, o sistema detecta automaticamente se uma nova identidade precisa ser criada se uma existente precisar ser reutilizada na sandbox de destino.
+
+![A interface do objetivo de importação com espaços reservados para os objetos de destino a serem atualizados.](../images/ui/sandbox-tooling/update-existing-objects.png)
+
+Depois de identificar os objetos de destino que você deseja atualizar, selecione **[!UICONTROL Concluir]**.
+
+![Os objetos de destino selecionados.](../images/ui/sandbox-tooling/add-updated-objects.png)
+
 ## Tutorial em vídeo
 
 O vídeo a seguir é destinado a ajudá-lo a entender as ferramentas de sandbox e descreve como criar um novo pacote, publicar um pacote e importar um pacote.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446089/?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Próximas etapas
 

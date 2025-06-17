@@ -2,10 +2,10 @@
 title: Guia De Implementação Para Regras De Vinculação Do Gráfico De Identidade
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com as configurações de Regras de vinculação do gráfico de identidade.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
+source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
 workflow-type: tm+mt
-source-wordcount: '1955'
-ht-degree: 5%
+source-wordcount: '1956'
+ht-degree: 6%
 
 ---
 
@@ -35,7 +35,7 @@ Esta seção descreve as etapas de pré-requisito que devem ser concluídas ante
 
 #### Requisito de namespace para uma única pessoa {#single-person-namespace-requirement}
 
-Você deve garantir que o namespace exclusivo com a maior prioridade esteja sempre presente em cada perfil. Isso permite que o Serviço de identidade detecte o identificador de pessoa apropriado em um determinado gráfico.
+Você deve garantir que o namespace exclusivo com a maior prioridade esteja sempre presente em todos os perfis conhecidos. Isso permite que o Serviço de identidade detecte o identificador de pessoa apropriado em um determinado gráfico.
 
 +++Selecione para exibir um exemplo de gráfico sem um namespace de identificador de pessoa singular
 
@@ -292,7 +292,7 @@ Este exemplo também mostra que Tom e Summer são entidades de pessoas diferente
 Para obter mais informações sobre [!DNL Identity Graph Linking Rules], leia a seguinte documentação:
 
 * [Visão geral do [!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
+* [Algoritmo de otimização de identidades](./identity-optimization-algorithm.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)
 * [Prioridade de namespace](./namespace-priority.md)

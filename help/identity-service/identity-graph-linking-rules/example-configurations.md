@@ -4,9 +4,9 @@ description: Saiba mais sobre os diferentes tipos de implementação que você p
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
+source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '1951'
 ht-degree: 7%
 
 ---
@@ -17,11 +17,6 @@ ht-degree: 7%
 >id="platform_identities_algorithmconfiguration"
 >title="Configuração do algoritmo"
 >abstract="Configure um namespace único e uma prioridade de namespace adaptados às suas identidades assimiladas."
-
->[!NOTE]
->
->* &quot;CRMID&quot; e &quot;loginID&quot; são namespaces personalizados. Neste documento, &quot;CRMID&quot; é um identificador de pessoa e &quot;loginID&quot; é um identificador de logon associado a uma determinada pessoa.
->* Para simular os cenários de gráficos de exemplo descritos neste documento, primeiro você deve criar dois namespaces personalizados, um com o símbolo de identidade &quot;CRMID&quot; e outro com o símbolo de identidade &quot;loginID&quot;. Os símbolos de identidade diferenciam maiúsculas de minúsculas.
 
 Leia este documento para saber mais sobre os diferentes tipos de implementação que você pode configurar usando o [!DNL Identity Graph Linking Rules].
 
@@ -43,9 +38,9 @@ Antes de mergulhar no documento a seguir, familiarize-se com vários conceitos i
 
 ## Implementações básicas {#basic-implementations}
 
->[!TIP]
+>[!NOTE]
 >
->Você deve criar um namespace entre dispositivos personalizado para &quot;CRMID&quot; para concluir os exercícios de implementação básica abaixo.
+>Para concluir as implementações abaixo, você deve criar um namespace personalizado com o símbolo de identidade (diferencia maiúsculas de minúsculas) de: `CRMID`.
 
 Leia esta seção para implementações básicas do [!DNL Identity Graph Linking Rules].
 
@@ -90,7 +85,7 @@ Simule a seguinte configuração na Simulação de gráfico. Você pode criar se
 
 **Dispositivo compartilhado (PC)**
 
-**Modo de texto:**
+**Modo texto**
 
 ```json
 CRMID: John, ECID: 111
@@ -112,7 +107,7 @@ O navegador no computador desktop que ambos usam para visitar sua plataforma de 
 
 **Dispositivo compartilhado (celular)**
 
-**Modo de texto:**
+**Modo texto**
 
 ```json
 CRMID: John, ECID: 111, IDFA: a-b-c
@@ -129,19 +124,23 @@ Nesse gráfico, John e Jane são representados por suas próprias CRMIDs. O nave
 
 ## Implementações intermediárias {#intermediate-implementations}
 
+>[!TIP]
+>
+>Uma **identidade não exclusiva** é uma identidade associada a um namespace não exclusivo.
+
 Leia esta seção para implementações intermediárias de [!DNL Identity Graph Linking Rules].
 
 ### Caso de uso: seus dados incluem identidades não exclusivas
 
->[!TIP]
+>[!NOTE]
 >
->* Uma **identidade não exclusiva** é uma identidade associada a um namespace não exclusivo.
->
->* Você deve criar namespaces personalizados entre dispositivos para &quot;CRMID&quot; e &quot;Hash&quot; para concluir os exercícios de implementação intermediários abaixo. &quot;CCHash&quot; é um namespace personalizado que representa um número de cartão de crédito com hash.
+>Para concluir as implementações abaixo, você deve criar os seguintes namespaces personalizados com os símbolos de identidade (diferencia maiúsculas de minúsculas) de:
+>* `CRMID`
+>* `CCHash` (Este é um namespace personalizado que representa um número de cartão de crédito com hash.)
 
 Imagine que você seja um arquiteto de dados trabalhando em um banco comercial que emite cartões de crédito. Sua equipe de marketing indicou que deseja incluir o histórico de transações de cartões de crédito passados em um perfil. Este gráfico de identidade pode ser semelhante ao seguinte.
 
-**Modo de texto:**
+**Modo texto**
 
 ```json
 CRMID: John, CChash: 1111-2222 
@@ -177,7 +176,7 @@ Simule as seguintes configurações na Simulação de gráfico. Você pode criar
 
 >[!TAB Dispositivo compartilhado]
 
-**Modo de texto:**
+**Modo texto**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -194,7 +193,7 @@ CRMID: Jane, ECID:123
 
 Dois usuários finais diferentes se inscrevem no seu site de comércio eletrônico com o mesmo cartão de crédito. Sua equipe de marketing deseja evitar o colapso dos gráficos, garantindo que o cartão de crédito esteja associado a apenas um único perfil.
 
-**Modo de texto:**
+**Modo texto**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -211,7 +210,7 @@ CRMID: Jane, ECID:456
 
 Devido a dados não limpos, um número de cartão de crédito inválido é assimilado na Experience Platform.
 
-**Modo de texto:**
+**Modo texto**
 
 ```json
 CRMID: John, CChash: undefined
@@ -228,9 +227,11 @@ CRMID: Jill, CChash: undefined
 
 ### Caso de uso: seus dados incluem CRMIDs com e sem hash
 
->[!TIP]
+>[!NOTE]
 >
->Você deve criar namespaces personalizados entre dispositivos para &quot;CRMID&quot; e &quot;CRMIDhash&quot; para concluir os exercícios de implementação intermediários abaixo.
+>Para concluir as implementações abaixo, você deve criar namespaces personalizados com os símbolos de identidade (diferencia maiúsculas de minúsculas) de:
+>* `CRMID`
+>* `CRMIDhash`
 
 Você está assimilando um CRMID com hash (offline) e um CRMID com hash (online). A expectativa é que haja uma relação direta entre CRMIDs com hash e sem hash. Quando um usuário final navega com uma conta autenticada, a CRMID com hash é enviada junto com a ID do dispositivo (representada no Serviço de identidade como uma ECID).
 
@@ -255,7 +256,7 @@ Simule as seguintes configurações na Simulação de gráfico. Você pode criar
 
 John e Jane compartilham um dispositivo.
 
-**Modo de texto:**
+**Modo texto**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -270,7 +271,7 @@ CRMIDhash: Jane, ECID: 111
 
 Devido a erros no processo de hash, uma CRMID com hash não exclusiva é gerada e enviada para o Serviço de identidade.
 
-**Modo de texto:**
+**Modo texto**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
@@ -342,6 +343,10 @@ Email: jane@g, ECID: 111
 
 ### Caso de uso: seus dados incluem três namespaces exclusivos
 
+>[!NOTE]
+>
+>Para concluir as implementações abaixo, você deve criar um namespace personalizado com o símbolo de identidade (diferencia maiúsculas de minúsculas) de: `CRMID`.
+
 Seu cliente define uma entidade unipessoal da seguinte maneira:
 
 * Um usuário final com uma CRMID atribuída.
@@ -399,13 +404,15 @@ Leia esta seção para implementações avançadas de [!DNL Identity Graph Linki
 
 ### Caso de uso: você precisa de suporte para várias linhas de negócios
 
->[!TIP]
+>[!NOTE]
 >
->Você deve criar namespaces personalizados entre dispositivos para &quot;CRMID&quot; e &quot;loginID&quot; para concluir os exercícios avançados de implementação abaixo.
+>Para concluir as implementações abaixo, você deve criar namespaces personalizados com os símbolos de identidade (diferencia maiúsculas de minúsculas) de:
+>* `CRMID`
+>* `loginID`
 
 Seus usuários finais têm duas contas diferentes: uma conta pessoal e uma conta comercial. Cada conta é identificada por uma ID diferente. Nesse cenário, um gráfico típico seria semelhante ao seguinte:
 
-**Modo de texto***
+**Modo texto**
 
 ```json
 CRMID: John, loginID: JohnPersonal
@@ -427,12 +434,7 @@ Defina as seguintes configurações na interface de Simulação de gráfico ante
 
 **Gráfico simulado**
 
-+++Selecione para exibir o gráfico simulado
-
 ![Um gráfico de identidade para um usuário final com um email comercial e pessoal.](../images/configs/advanced/advanced.png)
-
-+++
-
 
 **Exercício**
 
@@ -457,6 +459,8 @@ loginID: JanePersonal, ECID: 111
 
 >[!TAB Dados inválidos enviados para o Real-Time CDP]
 
+**Modo texto**
+
 ```json
 CRMID: John, loginID: JohnPersonal
 CRMID: John, loginID: error
@@ -472,9 +476,12 @@ loginID: JanePersonal, ECID: 222
 
 ### Caso de uso: você tem implementações complexas que exigem vários namespaces
 
->[!TIP]
+>[!NOTE]
 >
->Você deve criar namespaces personalizados entre dispositivos para &quot;CRMID&quot;, &quot;fidelidID&quot;, &quot;thirdPartyID&quot; e &quot;orderID&quot; para concluir os exercícios avançados de implementação abaixo.
+>Para concluir as implementações abaixo, você deve criar namespaces personalizados com os símbolos de identidade (diferencia maiúsculas de minúsculas) de:
+>* `CRMID`
+>* `loyaltyID`
+>* `thirdPartyID`
 
 Você é uma empresa de mídia e entretenimento e seus usuários finais têm o seguinte:
 
@@ -499,8 +506,8 @@ Defina as seguintes configurações na interface de Simulação de gráfico ante
 | Nome de exibição | Símbolo de identidade | Tipo de identidade | Único por gráfico | Prioridade de namespace |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
-| fidelid | fidelid | CROSS_DEVICE | | 2 |
-| Email | Email | Email | | 3 |
+| fidelid | fidelid | CROSS_DEVICE | ✔️ | 2 |
+| Email | Email | Email | ✔️ | 3 |
 | thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | COOKIE | | 6 |

@@ -4,10 +4,10 @@ description: Saiba como conectar o Azure Databricks ao Experience Platform usand
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 2%
+source-wordcount: '534'
+ht-degree: 3%
 
 ---
 
@@ -47,6 +47,8 @@ Forneça valores para as credenciais a seguir para conectar [!DNL Databricks] ao
 | `accessToken` | O token de acesso que autentica a conta do [!DNL Databricks]. Você pode gerar seu token de acesso usando o espaço de trabalho [!DNL Databricks]. |
 | `database` | O nome do banco de dados no lago delta. |
 | `connectionSpec.Id` | A ID de especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID de especificação da conexão para [!DNL Databricks] é `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
+
+Para obter mais informações, leia a visão geral](../../../../connectors/databases/databricks.md) do [[!DNL Azure Databricks] .
 
 ## Criar uma conexão básica
 

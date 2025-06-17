@@ -3,11 +3,11 @@ title: Azure Databricks
 description: Saiba mais sobre as etapas de pré-requisito necessárias para conectar o Azure Databricks ao Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: c466c30bddf4e67117c88072bea00818d755e408
+source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '616'
 ht-degree: 3%
 
 ---
@@ -161,6 +161,9 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ![A interface do usuário do Databricks no Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
-## Conectar o [!DNL Databricks] ao Experience Platform usando APIs
+## Conectar [!DNL Databricks] ao Experience Platform
 
-Agora que você concluiu as etapas de pré-requisito, poderá prosseguir para o guia em [conectando sua conta [!DNL Databricks] à Experience Platform usando a API](../../tutorials/api/create/databases/databricks.md).
+Agora que você concluiu as etapas de pré-requisito, pode prosseguir e conectar sua conta do [!DNL Databricks] à Experience Platform:
+
+* [Conectar-se por meio da API](../../tutorials/api/create/databases/databricks.md)
+* [Conectar-se por meio do espaço de trabalho de origens na interface](../../tutorials/ui/create/databases/databricks.md)

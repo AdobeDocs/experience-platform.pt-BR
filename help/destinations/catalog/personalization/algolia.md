@@ -119,9 +119,9 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >[!IMPORTANT]
 > 
 >* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar identidades, você precisa da [permissão de controle de acesso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) para Exibir Gráfico de Identidade.
+>* Para exportar identidades, você precisa da [permissão de controle de acesso](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home#permissions) para Exibir Gráfico de Identidade.
 
-Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obter instruções sobre como ativar públicos-alvo para este destino.
+Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ### Mapear atributos e identidades {#mapping-attributes-identities}
 

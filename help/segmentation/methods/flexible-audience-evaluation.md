@@ -3,9 +3,9 @@ title: Guia flexível de avaliação de público-alvo
 description: Saiba como usar a avaliação flexível de público para executar trabalhos de segmentação em lote sob demanda.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
+source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1140'
 ht-degree: 5%
 
 ---
@@ -326,7 +326,7 @@ Depois de confirmar que os públicos-alvo corretos estão listados, você pode c
 
 O vídeo a seguir demonstra como acessar e usar a avaliação de público-alvo flexível no Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453645?&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Perguntas frequentes {#faq}
 
@@ -396,3 +396,10 @@ Execuções de avaliação de público flexíveis que foram criadas usando a API
 
 +++
 
+### Preciso avaliar todos os públicos-alvo dependentes ao avaliar o público-alvo principal com uma avaliação de público-alvo flexível?
+
++++ Resposta
+
+Não. A avaliação flexível do público-alvo avaliará automaticamente todos os públicos-alvo dependentes. Por exemplo, se o Público-alvo A depender do Público-alvo B, você só precisará avaliar o Público-alvo B. Uma avaliação flexível do público-alvo avaliará automaticamente o Público-alvo A e depois o Público-alvo B.
+
++++

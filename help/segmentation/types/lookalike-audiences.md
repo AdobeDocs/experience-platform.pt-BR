@@ -3,18 +3,26 @@ solution: Experience Platform
 title: Públicos-alvo semelhantes
 description: Saiba como direcionar novos públicos-alvo de alto valor no Adobe Experience Platform usando públicos-alvo semelhantes.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
 workflow-type: tm+mt
-source-wordcount: '2193'
+source-wordcount: '2299'
 ht-degree: 9%
 
 ---
 
 # Guia de públicos-alvo semelhantes
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >Insights semelhantes e públicos semelhantes só estão disponíveis na **edição B2C**.
+
+>[!IMPORTANT]
+>
+>Insights semelhantes e públicos semelhantes são desativados automaticamente para ambientes que mostram baixo uso. Baixa utilização é definida como não visualizar insights semelhantes nos últimos três meses ou não criar um novo público-alvo semelhante para os últimos seis meses.
+>
+>Se os Insights semelhantes estiverem desativados para o seu ambiente, você poderá solicitar acesso enviando um email para a equipe de Atendimento ao cliente da Adobe, incluindo a ID da organização e os detalhes do ambiente na mensagem.
+>
+>Depois de receber a confirmação do Atendimento ao cliente da Adobe, insights e públicos semelhantes serão ativados em todas as sandboxes em seu ambiente.
 
 No Adobe Experience Platform, os públicos-alvo semelhantes fornecem insights inteligentes sobre cada um dos públicos-alvo, aproveitando insights baseados em aprendizado de máquina para identificar e direcionar clientes de alto valor com suas campanhas de marketing.
 
@@ -75,7 +83,9 @@ Os seguintes direitos se aplicam ao uso de públicos-alvo semelhantes:
 
 Os pacotes complementares, que estarão disponíveis posteriormente, aumentam os direitos para sandboxes de produção em 20 públicos semelhantes por pacote.
 
-Para confirmar se você tem acesso a públicos semelhantes, entre em contato com o representante da Adobe.
+## Acesso {#access}
+
+Para confirmar se você tem acesso a públicos-alvo semelhantes, selecione qualquer público-alvo no Portal de público-alvo e verifique se a guia **[!UICONTROL Insights semelhantes]** está visível.
 
 ## Exibir insights semelhantes {#view}
 
@@ -118,7 +128,7 @@ A seção Públicos-alvo semelhantes exibe uma lista de todos os públicos-alvo 
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Fatores influentes"
 >abstract="Fatores influentes são atributos, eventos e associações de público-alvo que são importantes para explicar a similaridade de um perfil aos membros do público-alvo básico. Políticas e rótulos de uso de dados podem ser usados para impedir que determinados dados sejam considerados como fatores influentes em modelos semelhantes."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=pt-BR#exclude" text="Excluir dados"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="Excluir dados"
 
 A seção Fatores influentes exibe os 100 principais fatores que influenciam o modelo semelhante para o público-alvo básico selecionado. Esses fatores influentes são os atributos do perfil, os eventos de experiência e as associações de público-alvo que são os mais importantes para explicar as semelhanças no público-alvo básico. Compreender os principais fatores influentes permite personalizar melhor seu conteúdo de marketing para esse público-alvo e qualquer público semelhante que você criar a partir dele. Observe que nem todos os fatores influentes que afetam o modelo semelhante serão exibidos.
 

@@ -1,7 +1,7 @@
 ---
 title: Algólia
 description: Use esse conector para ativar públicos na Algolia para personalização e uso em pesquisas e recomendações. Em seguida, você pode usar o conector de origem do Perfil de usuário da Algolia para importar os perfis para o Real-Time CDP e criar públicos-alvo avançados.
-source-git-commit: 2205ba48a6c17b8f34c4796c1777bfc53a6a7fe5
+source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
 workflow-type: tm+mt
 source-wordcount: '1052'
 ht-degree: 3%
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->O conector de destino [!DNL Algolia] e a página de documentação são criados e mantidos pela equipe do Algolia Integration Services. Para consultas ou solicitações de atualização, contate-os em [adobe-algolia-solutions@algolia.com](adobe-algolia-solutions@algolia.com).
+>O conector de destino [!DNL Algolia] e a página de documentação são criados e mantidos pela equipe do Algolia Integration Services. Para consultas ou solicitações de atualização, contate-os em [adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com).
 
 Use a conexão de destino [!DNL Algolia] para enviar públicos-alvo da Adobe Experience Platform para a Algólia para pesquisa e recomendações personalizadas. Antes de usar o conector de destino [!DNL Algolia], você deve primeiro configurar o conector de origem [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md). Durante o tutorial de configuração do conector de origem, você criará a identidade do token de usuário da Algolia. Essa identidade é necessária para mapeamento ao configurar o conector de destino.
 
@@ -119,9 +119,9 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >[!IMPORTANT]
 > 
 >* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar identidades, você precisa da [permissão de controle de acesso](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home#permissions) para Exibir Gráfico de Identidade.
+>* Para exportar identidades, você precisa da [permissão de controle de acesso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) para Exibir Gráfico de Identidade.
 
-Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obter instruções sobre como ativar públicos-alvo para este destino.
+Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ### Mapear atributos e identidades {#mapping-attributes-identities}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Sintaxe SQL no Serviço de consulta
 description: Este documento detalha e explica a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '4649'
+source-wordcount: '4686'
 ht-degree: 1%
 
 ---
@@ -335,6 +335,10 @@ As limitações a seguir aplicam-se ao usar `TRANSFORM` com `CREATE TABLE`. Cons
 ## INSERIR EM
 
 O comando `INSERT INTO` é definido da seguinte maneira:
+
+>[!IMPORTANT]
+>
+>O Serviço de Consulta oferece suporte a **operações somente acréscimo** usando o mecanismo ITAS. `INSERT INTO` é o único comando de manipulação de dados com suporte; as operações **update** e **delete** não estão disponíveis. Para refletir as alterações em seus dados, insira novos registros que representem o estado desejado.
 
 ```sql
 INSERT INTO table_name select_query

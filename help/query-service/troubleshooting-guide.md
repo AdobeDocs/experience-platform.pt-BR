@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Perguntas frequentes sobre o Serviço de consulta e o Data Distiller
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta e ao Data Distiller. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '5029'
+source-wordcount: '5055'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Uma possível causa é o recurso de preenchimento automático. O recurso process
 ### Posso usar [!DNL Postman] para a API do Serviço de consulta?
 
 +++Resposta
-Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/31682?captions=por_br) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Há um limite para o número máximo de linhas retornadas de uma consulta por meio da interface do usuário?
@@ -717,12 +717,18 @@ and timestamp < to_timestamp('2022-07-23');
 A construção MERGE INTO SQL não tem suporte no Data Distiller ou no Serviço de Consulta.
 +++
 
-## Consultas ITAS
+## Consultas ITAS {#itas-queries}
 
 ### O que são consultas de ITAS?
 
 +++Resposta
 As consultas INSERT INTO são chamadas de consultas ITAS. Observe que as consultas CREATE TABLE são chamadas de consultas CTAS.
++++
+
+### O Serviço de Consulta oferece suporte a operações de atualização e exclusão?
+
++++Resposta
+Não, o Serviço de consulta não oferece suporte a operações de atualização ou exclusão. Ele só oferece suporte a operações somente acréscimo usando ITAS.
 +++
 
 ## Ferramentas de terceiros {#third-party-tools}

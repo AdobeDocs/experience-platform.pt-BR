@@ -2,10 +2,10 @@
 title: Conectar sua conta do Salesforce Marketing Cloud à Experience Platform por meio da interface
 description: Saiba como conectar sua conta do Salesforce Marketing Cloud ao Experience Platform por meio da interface do usuário.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: 0c6a51d06e57eb6de063a350bd4b17022555a0b4
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 2%
+source-wordcount: '576'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 2%
 >
 >A origem [!DNL Salesforce Marketing Cloud] será substituída em janeiro de 2026. Uma nova fonte será lançada ainda este ano como alternativa. Depois que a nova origem for lançada, você deverá planejar migrar para a nova origem criando novas conexões de conta e fluxos de dados antes do final de janeiro de 2026.
 
-Este tutorial fornece etapas sobre como conectar sua conta do [!DNL Salesforce Marketing Cloud] à Adobe Experience Platform por meio da interface do usuário.
+Leia este guia para saber como conectar sua conta do [!DNL Salesforce Marketing Cloud] à Adobe Experience Platform usando o espaço de trabalho de fontes na interface do usuário do Experience Platform.
 
 ## Introdução
 
@@ -30,46 +30,51 @@ Se você já tiver uma conta [!DNL Salesforce Marketing Cloud], ignore o restant
 
 ### Coletar credenciais necessárias
 
-Para acessar sua conta do [!DNL Salesforce Marketing Cloud] no Experience Platform, você deve fornecer os seguintes valores:
+Leia a [[!DNL Salesforce Marketing Cloud] visão geral](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#prerequisites) para obter informações sobre autenticação.
 
-| Credencial | Descrição |
-| ---------- | ----------- |
-| Host | O servidor host do aplicativo. Esse geralmente é o seu subdomínio. **Observação:** ao inserir seu valor `host`, você precisa especificar o `{subdomain}.rest.marketingcloudapis.com`. Por exemplo, se a URL do host for `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/`, você deve inserir `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` como valor do host. |
-| ID de cliente | A ID do cliente associada ao aplicativo [!DNL Salesforce Marketing Cloud]. |
-| Segredo do cliente | O segredo do cliente associado ao aplicativo [!DNL Salesforce Marketing Cloud]. |
-
-Para obter mais informações sobre autenticação para [!DNL Salesforce Marketing Cloud], consulte a [[!DNL Salesforce] documentação de autenticação](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
-
-## Conectar sua conta do [!DNL Salesforce Marketing Cloud]
+## Navegar pelo catálogo de origens
 
 >[!IMPORTANT]
 >
 >No momento, a assimilação de objetos personalizados não tem suporte da integração de origem [!DNL Salesforce Marketing Cloud].
 
-Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. O [!UICONTROL Catálogo] exibe uma variedade de fontes suportadas pela Experience Platform.
 
-Você pode selecionar a categoria apropriada na lista de categorias. Você também pode usar a barra de pesquisa para filtrar por uma fonte específica.
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Fontes]*. Escolha uma categoria ou use a barra de pesquisa para localizar sua fonte.
 
-Na categoria [!UICONTROL Automação de marketing], selecione **[!UICONTROL Salesforce Marketing Cloud]** e **[!UICONTROL Configurar]**.
+Para se conectar a [!DNL Salesforce Marketing Cloud], vá para a categoria *[!UICONTROL Automação de Marketing]*, selecione o cartão de origem **[!UICONTROL Salesforce Marketing Cloud]** e selecione **[!UICONTROL Configurar]**.
 
-![O catálogo de origens com a origem do Salesforce Marketing Cloud selecionada.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+>[!TIP]
+>
+>As origens no catálogo de origens exibem a opção **[!UICONTROL Configurar]** quando uma determinada origem ainda não tem uma conta autenticada. Após a criação de uma conta autenticada, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
 
-A página **[!UICONTROL Conectar-se ao Salesforce Marketing Cloud]** é exibida. Nesta página, você pode criar uma nova conta ou usar uma conta existente.
+![O catálogo de origens com o cartão de origem do Salesforce Marketing Cloud selecionado.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-### Nova conta
+## Usar uma conta existente {#existing}
 
-Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome para a sua conta, uma descrição opcional e as credenciais de autenticação que correspondem à sua conta do [!DNL Salesforce Marketing Cloud].
+Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e depois selecione a conta [!DNL Salesforce Marketing Cloud] que deseja usar.
 
-Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
+![A interface de contas existentes no fluxo de trabalho de origem com a opção &quot;Conta existente&quot; selecionada.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
-![A nova interface de conta na qual você pode autenticar uma nova conta para o Salesforce Marketing Cloud.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+## Criar uma nova conta {#new}
 
-### Conta existente
+Você pode usar a origem [!DNL Salesforce Marketing Cloud] para se conectar ao Experience Platform em [!DNL Azure] ou [!DNL Amazon Web Services] (AWS).
 
-Se você já tiver uma conta existente, selecione **[!UICONTROL Conta existente]** e, em seguida, selecione a conta que deseja usar na lista exibida.
+### Conectar-se ao Experience Platform em [!DNL Azure] {#azure}
 
-![A interface de conta existente onde você pode selecionar em uma lista de contas existentes do Salesforce Marketing Cloud.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+Para se conectar ao Experience Platform em [!DNL Azure], forneça um nome de conta, uma descrição opcional e suas [credenciais de autenticação de conta](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#azure). Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns momentos para estabelecer a conexão.
 
-## Próximas etapas
+![A nova interface de conta no fluxo de trabalho de origens para conexão com a Experience Platform no Azure.](../../../../images/tutorials/create/salesforce-marketing-cloud/new-azure.png)
 
-Seguindo este tutorial, você estabeleceu uma conexão entre sua conta do [!DNL Salesforce Marketing Cloud] e a Experience Platform. Agora você pode seguir para o próximo tutorial e [criar um fluxo de dados para trazer seus dados de automação de marketing para o Experience Platform](../../dataflow/marketing-automation.md).
+### Conectar-se ao Experience Platform no Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../../../landing/multi-cloud.md).
+
+Para se conectar ao Experience Platform em [!DNL AWS], verifique se você está em uma sandbox VA6 e forneça um nome de conta, uma descrição opcional e suas [credenciais de autenticação de conta](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#aws). Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns momentos para estabelecer a conexão.
+
+![A nova interface de conta no fluxo de trabalho de origens para conexão com o Experience Platform no AWS](../../../../images/tutorials/create/salesforce-marketing-cloud/new-aws.png)
+
+## Criar um fluxo de dados para dados de [!DNL Salesforce Marketing Cloud]
+
+Agora que você conectou o [!DNL Salesforce Marketing Cloud] com êxito, é possível [criar um fluxo de dados e assimilar dados do seu provedor de automação de marketing no Experience Platform](../../dataflow/marketing-automation.md).

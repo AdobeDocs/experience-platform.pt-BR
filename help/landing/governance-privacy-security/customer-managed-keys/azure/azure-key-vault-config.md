@@ -4,9 +4,9 @@ description: Saiba como criar uma nova conta corporativa com o Azure ou usar uma
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: f4100506947da7584de5b9fb42946ac877c8c102
+source-git-commit: c920f78363ee5f040964dbd3a0d0815474094b07
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,14 @@ Se o Cofre da Chave estiver configurado para restringir o acesso público a dete
 
 Selecione **[!DNL Networking]** na navegação à esquerda. Em **[!DNL Firewalls and virtual networks]**, marque a caixa de seleção **[!DNL Allow trusted Microsoft services to bypass this firewall]** e selecione **[!DNL Apply]**.
 
+>[!NOTE]
+>
+>Se o cofre de chaves usa acesso restrito à rede, a Adobe recomenda adicionar o seguinte endereço IP estático: `20.88.123.53`. A adição desse endereço IP permite que os serviços da Adobe monitorem a conectividade com mais eficiência e forneçam alertas na plataforma quando problemas de acesso forem detectados.
+>
+>Para saber mais sobre quando incluir na lista de permissões o endereço IP da Adobe, como os alertas funcionam e como responder às principais notificações de falha de acesso, consulte [Configurar Alertas e Acesso IP para Azure CMK](./alerts-and-ip-access.md).
+>
+>Se o cofre de chaves já estiver configurado para permitir o acesso à rede pública, nenhuma outra ação será necessária.
+
 ![A guia [!DNL Networking] de [!DNL Microsoft Azure] com [!DNL Networking] e [!DNL Allow trusted Microsoft surfaces to bypass this firewall] exceção realçada.](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
 ### Gerar uma chave {#generate-a-key}
@@ -69,7 +77,7 @@ Use o formulário fornecido para fornecer um nome para a chave e selecione **RSA
 
 >[!NOTE]
 >
->Lembre-se do nome fornecido para a chave, pois ele é necessário para enviar a chave ao Adobe.
+>Lembre-se do nome fornecido para a chave, pois ele é necessário para enviá-la à Adobe.
 
 Use os controles restantes para configurar a chave que deseja gerar ou importar conforme desejado. Quando terminar, selecione **[!DNL Create]**.
 

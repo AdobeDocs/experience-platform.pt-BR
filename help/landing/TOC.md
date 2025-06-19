@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Visão geral da Adobe Experience Platform
 breadcrumb-title: Visão geral da Experience Platform
 user-guide-description: Saiba como a Experience Platform permite oferecer experiências personalizadas a clientes em tempo real com guias, documentação e tutoriais.
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e53616a183cc8fe834782c82c56f8483d7b43eb1
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 26%
+source-wordcount: '332'
+ht-degree: 28%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 26%
 * [Visão geral do Experience Platform (Vídeo)](video/platform-overview.md)
 * [Visão geral de várias nuvens](multi-cloud.md)
 * [Comparação entre Edge Network e hub](./edge-and-hub-comparison.md)
-* [Tutoriais da Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=pt-BR)
+* [Tutoriais da Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Uma experiência do cliente viabilizada pelo Experience Platform (Vídeo)](video/customer-experience.md)
 * [Nos bastidores de uma experiência do cliente viabilizada pelo Experience Platform (Vídeo)](video/customer-experience-bts.md)
 * Introdução {#getting-started}
@@ -38,17 +38,17 @@ ht-degree: 26%
    * [Fundamentos da API](api-fundamentals.md)
    * [Uso do Postman com APIs do Experience Platform](postman.md)
    * [Documentos de referência de API](https://www.adobe.com/go/platform-api-reference-en)
-* Documentação do Experience Platform {#documentation}
+* Documentação da Experience Platform {#documentation}
    * [Visão geral](documentation/overview.md)
    * [Idiomas disponíveis](documentation/language-support.md)
 * Aplicativos criados no Experience Platform {#ecosystem}
    * [Visão geral](application-services.md)
-   * [Adobe Real-Time Customer Data Platform (todas as edições)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=pt-BR)
+   * [Adobe Real-Time Customer Data Platform (todas as edições)](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Serviços inteligentes e de aplicativos (Vídeo)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=pt-BR)
    * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=pt-BR)
-   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=pt-BR)
-   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=pt-BR)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Integrações do Experience Platform com o Experience Cloud (Vídeo)](video/experience-cloud-integrations.md)
 * Governança, privacidade e segurança {#governance-privacy-security}
    * [Visão geral](./governance-privacy-security/overview.md)
@@ -62,18 +62,19 @@ ht-degree: 26%
       * [Integre o Experience Platform Web SDK para processar dados de consentimento e preferência](./governance-privacy-security/consent/sdk.md)
    * Logs de auditoria {#audit-logs}
       * [Visão geral](./governance-privacy-security/audit-logs/overview.md)
-      * API de Consulta de Auditoria {#audit-api}
+      * API de consulta de auditoria {#audit-api}
          * [Visão geral](./governance-privacy-security/audit-logs/api/overview.md)
          * [Introdução](./governance-privacy-security/audit-logs/api/getting-started.md)
          * [Eventos](./governance-privacy-security/audit-logs/api/events.md)
          * [Exportar](./governance-privacy-security/audit-logs/api/export.md)
    * [Criptografia de dados](./governance-privacy-security/encryption.md)
-   * Chaves gerenciadas pelo cliente {#customer-managed-keys}
+   * Customer Managed Keys {#customer-managed-keys}
       * [Customer Managed Keys](./governance-privacy-security/customer-managed-keys/overview.md)
       * Azure {#azure}
          * [Configurar um Cofre de Chaves do Azure](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
          * [Usar a API para configurar o CMK](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
          * [Use a interface do usuário para configurar o CMK](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
+         * [Configurar alertas e inclui na lista de permissões de IP para o CMK do Azure](./governance-privacy-security/customer-managed-keys/azure/alerts-and-ip-access.md)
       * Amazon Web Services {#aws}
          * [Configurar o AWS KMS para CMK](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
          * [Usar a interface do para configurar o CMK no AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
@@ -81,10 +82,10 @@ ht-degree: 26%
    * [Práticas recomendadas de qualificação de licença de gerenciamento de dados](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Painel de uso da licença](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Tamanho total de dados](./license-usage-and-guardrails/total-data-volume.md)
-   * [medidas de proteção do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=pt-BR)
-   * [medidas de proteção do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=pt-BR)
-   * [medidas de proteção do Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html?lang=pt-BR)
+   * [medidas de proteção do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [medidas de proteção do Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [medidas de proteção do Real-Time CDP](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Manual de solução de problemas](troubleshooting.md)
 * [Migração de data lake Gen2](adls2-gen2-migration.md)
 * [Glossário](glossary.md)
-* [Notas de versão](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

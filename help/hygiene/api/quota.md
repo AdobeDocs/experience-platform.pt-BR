@@ -3,9 +3,9 @@ title: Endpoint da API de Cota
 description: O ponto de extremidade /quota na API da higiene de dados permite monitorar o uso do Gerenciamento avançado do ciclo de vida de dados em relação aos limites de cota mensais de sua organização para cada tipo de trabalho.
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 48a83e2b615fc9116a93611a5e6a8e7f78cb4dee
+source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '492'
 ht-degree: 2%
 
 ---
@@ -14,10 +14,7 @@ ht-degree: 2%
 
 O ponto de extremidade `/quota` na API da higiene de dados permite monitorar o uso do Gerenciamento avançado do ciclo de vida de dados em relação aos limites de cota da organização para cada tipo de trabalho.
 
-As cotas são aplicadas para cada tipo de trabalho do ciclo de vida dos dados das seguintes maneiras:
-
-* As exclusões e atualizações de registros estão limitadas a um determinado número de solicitações a cada mês.
-* As expirações de conjunto de dados têm um limite simples para o número de trabalhos ativos simultaneamente, independentemente de quando as expirações serão executadas.
+O uso de cota é rastreado para cada tipo de trabalho do ciclo de vida dos dados. Os limites de cota reais dependem dos direitos da sua organização e podem ser revisados periodicamente. As expirações de conjuntos de dados estão sujeitas a um limite rígido no número de tarefas ativas ao mesmo tempo.
 
 ## Introdução
 
@@ -25,7 +22,15 @@ O endpoint usado neste guia faz parte da API de higiene de dados. Antes de conti
 
 * Links para a documentação relacionada
 * Um guia para ler as chamadas de API de amostra neste documento
-* Informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform
+* Informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API do Experience Platform
+
+## Cotas e cronogramas de processamento {#quotas}
+
+As solicitações de exclusão de registros estão sujeitas a cotas e expectativas de nível de serviço com base em seus direitos de licença. Esses limites se aplicam às solicitações de exclusão baseadas em interface e API.
+
+>[!TIP]
+> 
+>Este documento mostra como consultar seu uso em relação a limites baseados em direitos. Para obter uma descrição completa das camadas de cota, dos direitos de exclusão de registro e do comportamento da SLA, consulte os documentos [exclusão de registro com base na interface](../ui/record-delete.md#quotas) ou[exclusão de registro com base em API](./workorder.md#quotas).
 
 ## Listar cotas {#list}
 
@@ -70,13 +75,13 @@ Uma resposta bem-sucedida retorna os detalhes das cotas de ciclo de vida dos dad
       "name": "dailyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
       "consumed": 0,
-      "quota": 600000
+      "quota": 1000000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
       "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
       "consumed": 841,
-      "quota": 600000
+      "quota": 2000000
     },
     {
       "name": "monthlyUpdatedFieldIdentitiesQuota",
@@ -89,7 +94,5 @@ Uma resposta bem-sucedida retorna os detalhes das cotas de ciclo de vida dos dad
 ```
 
 | Propriedade | Descrição |
-| --- | --- |
+| -------- | ------- |
 | `quotas` | Lista as informações de cota para cada tipo de trabalho do ciclo de vida dos dados. Cada objeto de cota contém as seguintes propriedades:<ul><li>`name`: O tipo de trabalho do ciclo de vida dos dados:<ul><li>`expirationDatasetQuota`: Expirações do conjunto de dados</li><li>`deleteIdentityWorkOrderDatasetQuota`: exclusões de registro</li></ul></li><li>`description`: uma descrição do tipo de trabalho do ciclo de vida dos dados.</li><li>`consumed`: O número de trabalhos desse tipo executados no período atual. O nome do objeto indica o período de cota.</li><li>`quota`: A atribuição para este tipo de trabalho para sua organização. Para exclusões e atualizações de registros, a cota representa o número de trabalhos que podem ser executados para cada período mensal. Para expirações de conjunto de dados, a cota representa o número de trabalhos que podem estar ativos simultaneamente em um determinado momento.</li></ul> |
-
-{style="table-layout:auto"}

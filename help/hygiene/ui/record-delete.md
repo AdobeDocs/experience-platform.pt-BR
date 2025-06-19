@@ -1,24 +1,20 @@
 ---
-title: Excluir Registros
+title: Solicitações de exclusão de registro (fluxo de trabalho da interface)
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
 workflow-type: tm+mt
-source-wordcount: '1574'
-ht-degree: 8%
+source-wordcount: '1797'
+ht-degree: 7%
 
 ---
 
-# Excluir registros {#record-delete}
+# Registrar solicitações de exclusão (Fluxo de trabalho da interface do usuário) {#record-delete}
 
 Use o [[!UICONTROL espaço de trabalho do Ciclo de Vida de Dados]](./overview.md) para excluir registros no Adobe Experience Platform com base em suas identidades primárias. Esses registros podem ser vinculados a consumidores individuais ou a qualquer outra entidade incluída no gráfico de identidade.
 
 >[!IMPORTANT]
-> 
->O recurso de Exclusão de Registro está atualmente no Beta e só está disponível em uma **versão limitada**. Não está disponível para todos os clientes. As solicitações de exclusão de registro só estão disponíveis para organizações na versão limitada.
-> 
-> 
+>
 >As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles **não** devem ser usados para solicitações de direitos do titular dos dados (conformidade) relacionadas a regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use o [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 
 ## Pré-requisitos {#prerequisites}
@@ -134,13 +130,59 @@ Para adicionar mais identidades, selecione o ícone de adição (![A ícone de a
 
 ![Fluxo de trabalho de criação de solicitação com o ícone de adição e o ícone de adição de identidade realçados.](../images/ui/record-delete/more-identities.png)
 
+## Cotas e cronogramas de processamento {#quotas}
+
+As solicitações de exclusão de registros estão sujeitas a limites diários e mensais de envio de identificadores, determinados pelo direito de licença da organização. Esses limites se aplicam às solicitações de exclusão baseadas em interface e API.
+
+>[!NOTE]
+>
+>Você pode enviar até **1.000.000 identificadores por dia**, mas somente se sua cota mensal restante permitir. Se o limite mensal for inferior a 1 milhão, os envios diários não poderão exceder esse limite.
+
+### Direito de envio mensal por produto {#quota-limits}
+
+A tabela abaixo descreve os limites de envio de identificadores por produto e nível de direito. Para cada produto, o limite mensal é o menor de dois valores: um limite de identificador fixo ou um limite baseado em porcentagem vinculado ao volume de dados licenciado.
+
+| Produto | Descrição do Direito | Limite mensal (o que for menor) |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDP ou Adobe Journey Optimizer | Sem o Privacy and Security Shield ou o complemento Healthcare Shield | 2.000.000 identificadores ou 5% do público endereçável |
+| Real-Time CDP ou Adobe Journey Optimizer | Com o Privacy and Security Shield ou o complemento Healthcare Shield | 15.000.000 identificadores ou 10% do público endereçável |
+| Customer Journey Analytics | Sem o Privacy and Security Shield ou o complemento Healthcare Shield | 2.000.000 identificadores ou 100 identificadores por milhão de linhas de direito do CJA |
+| Customer Journey Analytics | Com o Privacy and Security Shield ou o complemento Healthcare Shield | 15.000.000 identificadores ou 200 identificadores por milhão de linhas de direito do CJA |
+
+>[!NOTE]
+>
+> A maioria das organizações terá limites mensais mais baixos com base no público-alvo endereçável real ou nos direitos de linha do CJA.
+
+As cotas são redefinidas no primeiro dia de cada mês. Cota não utilizada **não** é transferida.
+
+>[!NOTE]
+>
+>As cotas são baseadas no direito mensal licenciado de sua organização para **identificadores enviados**. Esses procedimentos não são aplicados pelas medidas de proteção do sistema, mas podem ser monitorados e revisados.
+>
+>A Exclusão de Registro é um **serviço compartilhado**. Seu limite mensal reflete os direitos mais altos no Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics e em qualquer complemento do Shield aplicável.
+
+### Processamento de cronogramas para envios de identificadores {#sla-processing-timelines}
+
+Após o envio, as solicitações de exclusão de registro são enfileiradas e processadas com base no seu nível de direito.
+
+| Descrição do produto e dos direitos | Duração da Fila | Tempo máximo de processamento (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Sem o Privacy and Security Shield ou o complemento Healthcare Shield | Até 15 dias | 30 dias |
+| Com o Privacy and Security Shield ou o complemento Healthcare Shield | Normalmente, 24 horas | 15 dias |
+
+Se sua organização exigir limites mais altos, entre em contato com o representante da Adobe para obter uma revisão de direito.
+
+>[!TIP]
+>
+>Para verificar seu nível atual de uso de cota ou direito, consulte o [Guia de referência de cota](../api/quota.md).
+
 ## Enviar a solicitação {#submit}
 
 Quando terminar de adicionar identidades à solicitação, em **[!UICONTROL Configurações da solicitação]**, forneça um nome e uma descrição opcional para a solicitação antes de selecionar **[!UICONTROL Enviar]**.
 
->[!IMPORTANT]
-> 
->Há diferentes limites para o número total de exclusões de registros de identidade únicos que podem ser enviadas a cada mês. Esses limites são baseados no seu contrato de licença. As organizações que compraram todas as edições do Adobe Real-Time Customer Data Platform ou do Adobe Journey Optimizer podem enviar até 100.000 exclusões de registro de identidade a cada mês. As organizações que compraram o **Adobe Healthcare Shield** ou o **Adobe Privacy &amp; Security Shield** podem enviar até 600.000 exclusões de registros de identidade a cada mês.<br>Uma única solicitação de exclusão de registro por meio da interface do usuário permite enviar 10.000 IDs de uma vez. O [método de API para excluir registros](../api/workorder.md#create) permite o envio de 100.000 IDs de uma vez.<br>É prática recomendada enviar o máximo possível de IDs por solicitação, até o limite de ID. Quando você pretende excluir um grande volume de IDs, deve evitar o envio de um pequeno volume ou de uma única ID por solicitação de exclusão de registro.
+>[!TIP]
+>
+>É possível enviar até 10.000 identidades por solicitação por meio da interface do usuário do. Para enviar volumes maiores (até 100.000 IDs por solicitação), use o [método de API](../api/workorder.md#create).
 
 ![Campos de [!UICONTROL Nome] e [!UICONTROL Descrição] da configuração de solicitação com [!UICONTROL Envio] realçados.](../images/ui/record-delete/submit.png)
 

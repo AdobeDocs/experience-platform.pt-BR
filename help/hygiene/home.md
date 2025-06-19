@@ -2,9 +2,9 @@
 title: Visão geral do gerenciamento avançado do ciclo de vida dos dados
 description: O Gerenciamento avançado do ciclo de vida dos dados permite gerenciar o ciclo de vida dos dados atualizando ou removendo registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9ffd2db5555a4c157171d488deb9641aadbb08b4
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '865'
 ht-degree: 1%
 
 ---
@@ -42,6 +42,11 @@ A interface do [!UICONTROL Ciclo de vida dos dados] foi criada com base na API d
 
 [As solicitações de exclusão de registro](./ui/record-delete.md) e de expiração de conjunto de dados têm suas próprias linhas do tempo de processamento e fornecem atualizações de transparência em pontos-chave em seus respectivos fluxos de trabalho.
 
+>[!TIP]
+>
+>Para monitorar seu uso atual em relação aos limites de cota, consulte o [Guia de referência de cota](./api/quota.md).\
+>Para regras de direitos, limites mensais, linhas do tempo do SLA e políticas de tratamento de exceções, consulte a documentação [Exclusão de registros (UI)](./ui/record-delete.md#quotas) e [Ordem de trabalho (API)](./api/workorder.md#quotas).
+
 O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados](./ui/dataset-expiration.md) é criada:
 
 | Estágio | Tempo após a expiração programada | Descrição |
@@ -51,7 +56,7 @@ O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados]
 | Conjunto de dados descartado | 3 horas | **Uma hora depois que o conjunto de dados for sinalizado para exclusão**, ele será totalmente removido do sistema. Neste ponto, o conjunto de dados é descartado da [página de inventário do conjunto de dados](../catalog/datasets/user-guide.md) na interface. No entanto, os dados no data lake são excluídos apenas por software neste estágio e permanecerão assim até que o processo de exclusão permanente seja concluído. |
 | Contagem de perfis atualizada | 30 horas | Dependendo do conteúdo do conjunto de dados que está sendo excluído, alguns perfis podem ser removidos do sistema se todos os atributos do componente estiverem vinculados a esse conjunto de dados. 30 horas após a exclusão do conjunto de dados, as alterações resultantes na contagem geral dos perfis são refletidas nos [widgets do painel](../dashboards/guides/profiles.md#profile-count-trend) e outros relatórios. |
 | Públicos atualizados | 48 horas | Depois que todos os perfis afetados forem atualizados, todos os [públicos-alvo](../segmentation/home.md) relacionados serão atualizados para refletir seu novo tamanho. Dependendo do conjunto de dados removido e dos atributos nos quais você está segmentando, o tamanho de cada público pode aumentar ou diminuir como resultado da exclusão. |
-| Jornadas e destinos atualizados | 50 horas | [Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=pt-BR), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=pt-BR) e [destinos](../destinations/home.md) são atualizados de acordo com as alterações nos segmentos relacionados. |
+| Jornadas e destinos atualizados | 50 horas | [Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) e [destinos](../destinations/home.md) são atualizados de acordo com as alterações nos segmentos relacionados. |
 | Exclusão forçada concluída | 15 dias | Todos os dados relacionados ao conjunto de dados são excluídos permanentemente do data lake. O [status do trabalho do ciclo de vida dos dados](./ui/browse.md#view-details) que excluiu o conjunto de dados foi atualizado para refletir isso. |
 
 {style="table-layout:auto"}
@@ -72,7 +77,7 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 | Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted. |
 | Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
 | Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
-| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=pt-BR), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=pt-BR), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
+| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
 | Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
 | Data vacuuming completed | 14 days | The [status of the lifecycle job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
 

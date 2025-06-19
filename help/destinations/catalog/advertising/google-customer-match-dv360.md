@@ -1,11 +1,10 @@
 ---
 title: Correspondência de cliente do Google + conexão de vídeo e exibição 360
 description: Com o conector de destino do Google Customer Match + Display & Video 360, você pode usar seus dados online e offline do Experience Platform para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping, Gmail e YouTube.
-badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: feb3077daf8b3632ff00b57099195523bbeac358
 workflow-type: tm+mt
-source-wordcount: '2032'
+source-wordcount: '2252'
 ht-degree: 1%
 
 ---
@@ -18,10 +17,6 @@ Determinados terceiros integrados à Google, como o Adobe Real-Time CDP, podem u
 
 Com a capacidade recém-introduzida de utilizar o [!DNL Customer Matched] público-alvo através do [!DNL Display & Video 360], você agora pode direcionar públicos-alvo através de uma lista expandida de fontes de inventário.
 
->[!IMPORTANT]
->
->Este conector de destino está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso, entre em contato com o representante da Adobe.
-
 ![Correspondência de cliente do Google + destino DV360 na interface do usuário do Adobe Experience Platform.](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png)
 
 ## Aviso importante sobre alterações nos destinos do Google relacionadas aos requisitos de consentimento atualizados na União Europeia
@@ -29,12 +24,12 @@ Com a capacidade recém-introduzida de utilizar o [!DNL Customer Matched] públi
 >[!IMPORTANT]
 >
 > A Google está lançando alterações na [API do Google Ads](https://developers.google.com/google-ads/api/docs/start), na [Correspondência do Cliente](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) e na [API de Exibição e Vídeo 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para oferecer suporte aos requisitos de conformidade e consentimento definidos na [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) da União Europeia ([Política de Consentimento do Usuário](https://www.google.com/about/company/user-consent-policy/) da UE). A aplicação dessas alterações aos requisitos de consentimento estará em vigor a partir de 6 de março de 2024.
-><br/>
->Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como parceiro da Google, a Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
-><br/>
->Os clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram uma [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos não precisam tomar nenhuma ação.
-><br/>
->Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar os recursos de [definição de segmento](../../../segmentation/home.md#segment-definitions) no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos do Real-Time CDP Google existentes sem interrupção.
+> ><br/>
+> >Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como parceiro da Google, a Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
+> ><br/>
+> >Os clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram uma [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos não precisam tomar nenhuma ação.
+> ><br/>
+> >Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar os recursos de [definição de segmento](../../../segmentation/home.md#segment-definitions) no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos do Real-Time CDP Google existentes sem interrupção.
 
 ## Quando usar este destino
 
@@ -97,7 +92,33 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Antes de configurar um destino [!DNL Google Customer Match] no Experience Platform, leia e siga a política da Google para usar o [!DNL Customer Match], descrita na [documentação de suporte do Google](https://support.google.com/google-ads/answer/6299717).
 
-Em seguida, verifique se a sua conta [!DNL Google] está configurada para um nível de permissão [!DNL Standard] ou superior. Consulte a [documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.
+Em seguida, verifique se a sua conta [!DNL Google] está configurada para um nível de permissão [!DNL Standard] ou superior. Consulte a [documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) para obter detalhes.
+
+### Requisitos de vinculação de contas {#linking}
+
+Antes de configurar esse conector de destino, você deve vincular sua ID de conta da Google à ID de conta da Google da Adobe: `4641108541`.
+
+As exportações de dados falharão se sua conta do Google não estiver vinculada corretamente à ID da conta da Adobe.
+
+>[!NOTE]
+>
+>A Adobe atualizou a ID da conta de parceiro Google de `6219889373` para `4641108541`.
+>
+>**Se sua conta da Google estiver atualmente vinculada à antiga ID de Conta de Parceiro da Adobe (`6219889373`), siga as etapas abaixo:**
+>
+>1. Desvincule sua conta da Google da ID de Conta de Parceiro da Adobe antiga (`6219889373`)
+>2. Vincular sua conta da Google à nova ID de Conta de Parceiro da Adobe (`4641108541`)
+>3. Remover todos os públicos-alvo dos fluxos de dados existentes
+>4. Criar novos fluxos de dados e mapear seus públicos
+>
+>Se sua conta do Google já estiver vinculada à nova ID de Conta de Parceiro da Adobe (`4641108541`), nenhuma ação será necessária.
+
+**Para organizações com contas de gerente:**
+
+Se sua organização usar uma [conta de gerente [!DNL Google] 2} para gerenciar várias contas de cliente, siga estes requisitos específicos de vinculação:](https://support.google.com/google-ads/answer/6139186)
+
+* **Para exportar para uma conta de cliente específica:** Vincule essa conta de cliente individual (não a conta de gerente) à ID de conta da Google da Adobe: `4641108541`
+* **A vinculação de conta de gerente sozinha não é suficiente** e causará falhas de exportação de dados
 
 ### Lista de permissões {#allowlist}
 
@@ -133,7 +154,6 @@ Para obter mais informações sobre os requisitos de hash do Google e outras res
 * [[!DNL Customer Match] com número de telefone](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
 * [[!DNL Customer Match] com IDs de dispositivo móvel](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
-
 Para saber mais sobre a assimilação de endereços de email no Experience Platform, consulte a [visão geral da assimilação em lote](../../../ingestion/batch-ingestion/overview.md) e a [visão geral da assimilação de streaming](../../../ingestion/streaming-ingestion/overview.md).
 
 Se você optar por criar o hash dos endereços de email, certifique-se de cumprir os requisitos da Google, descritos nos links acima.
@@ -154,6 +174,11 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Conectar ao destino {#connect}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gcm_dv360_accountID"
+>title="Vincular contas do Google e do Adobe"
+>abstract="Verifique se a ID de conta da Google inserida aqui já está vinculada à sua conta da Adobe. Se você tiver uma conta de gerente do Google com várias contas de clientes e pretender exportar dados do Experience Platform para uma conta de cliente específica, vincule essa conta de cliente à sua conta do Adobe e insira a ID da conta aqui."
 
 >[!IMPORTANT]
 > 
@@ -239,4 +264,4 @@ Ao configurar esse destino, você pode receber o seguinte erro:
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Este erro ocorre quando as contas de clientes não atendem aos [pré-requisitos](#google-account-prerequisites). Para corrigir esse problema, contate a Google e verifique se sua conta está incluída na lista de permissões e configurada para um nível de permissão [!DNL Standard] ou superior. Consulte a [documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.
+Este erro ocorre quando as contas de clientes não atendem aos [pré-requisitos](#google-account-prerequisites). Para corrigir esse problema, contate a Google e verifique se sua conta está incluída na lista de permissões e configurada para um nível de permissão [!DNL Standard] ou superior. Consulte a [documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) para obter detalhes.

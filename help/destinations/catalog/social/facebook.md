@@ -3,7 +3,7 @@ keywords: conexão do facebook;conexão do facebook;destinos do facebook;instagr
 title: Conexão com o Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: dd725b4d383bbcd93e68c81d4fe5182d6086e9be
+source-git-commit: 6ca3687d067044c3fcb9455ec287863c4ffaafd2
 workflow-type: tm+mt
 source-wordcount: '2690'
 ht-degree: 5%
@@ -47,7 +47,7 @@ Em seguida, eles podem usar seus dados offline, incluindo IDs de associação as
 | `phone_sha256` | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
 | `email_lc_sha256` | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
 | `extern_id` | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
-| `gender` | Gênero | Valores aceitos: <ul><li>`m`para masculino</li><li>`f`para feminino</li></ul> O Experience Platform **coloca automaticamente hash** nesse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
+| `gender` | Gênero | Valores aceitos: <ul><li>`m` para masculino</li><li>`f` para feminino</li></ul> O Experience Platform **coloca automaticamente hash** nesse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
 | `date_of_birth` | Data de nascimento | Formato aceito: `yyyy-MM-DD`. <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
 | `last_name` | Sobrenome | Formato aceito: Minúsculas, somente `a-z` caracteres, sem pontuação. Use a codificação UTF-8 para caracteres especiais.  <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
 | `first_name` | Nome | Formato aceito: Minúsculas, somente `a-z` caracteres, sem pontuação, sem espaços. Use a codificação UTF-8 para caracteres especiais.  <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
@@ -138,8 +138,8 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 >[!NOTE]
 >
 >O hash automático de dados de namespaces sem hash é criado por [!DNL Experience Platform] após a ativação.
->&#x200B;> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
->&#x200B;> A opção **[!UICONTROL Aplicar transformação]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
+>> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
+>> A opção **[!UICONTROL Aplicar transformação]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
 
 ![Aplicar controle de transformação realçado na etapa de mapeamento.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 

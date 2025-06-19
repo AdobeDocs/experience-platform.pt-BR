@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
+source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
 workflow-type: tm+mt
-source-wordcount: '5024'
-ht-degree: 9%
+source-wordcount: '5195'
+ht-degree: 8%
 
 ---
 
@@ -324,7 +324,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 >[!NOTE]
 >
 >Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
->Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
 >
 >Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
 >
@@ -382,13 +382,27 @@ Para selecionar uma política de mesclagem para a definição do segmento, selec
 >abstract="Você pode atualizar as estimativas do seu segmento para ver imediatamente uma visualização de quantos perfis se qualificariam para a definição do segmento proposto. As estimativas de público-alvo são geradas usando um tamanho de amostra dos dados de amostra desse dia."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=pt-BR#estimate-and-preview-an-audience" text="Estimar e visualizar um público-alvo"
 
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
+>title="Perfis qualificados"
+>abstract="Perfis qualificados indica o número real de perfis que correspondem às regras da definição de segmento. Esse número é atualizado a cada 24 horas, após a execução do trabalho de avaliação do segmento."
+
+>[!CONTEXTUALHELP]
+>id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
+>title="Perfis estimados"
+>abstract="Perfis estimados indica um número aproximado de perfis, com base no trabalho de amostra, que se qualificariam para as regras de definição do segmento. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode diferir do número real de perfis qualificados. A amostra de perfil estimada tem um intervalo de confiança de 95%. <br><br>Este número é atualizado quando o trabalho de exemplo é atualizado, o que ocorre quando há mais de 5% de alteração nos dados do cliente ou quando o último trabalho de exemplo tem mais de 7 dias."
+
 Ao criar uma definição de segmento, a seção **[!UICONTROL Propriedades do público-alvo]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho da definição de segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.
 
 **[!UICONTROL Perfis qualificados]** indica o número **real** de perfis que correspondem às regras de definição de segmento. Esse número é atualizado a cada 24 horas, após a execução do trabalho de avaliação do segmento.
 
 O carimbo de data/hora para perfis qualificados indica o trabalho de avaliação de segmento mais recente do **lote** e é **não** exibido para definições de segmento avaliadas usando a segmentação de borda ou de streaming. Se você editar a definição do segmento, o número de perfis qualificados permanecerá o mesmo até que o próximo trabalho de avaliação de segmento seja executado.
 
-**[!UICONTROL Perfis estimados]** indica um **número aproximado** de perfis com base no **trabalho de amostra**. Você poderá ver uma versão atualizada desse valor depois de adicionar novas regras ou condições e selecionar **[!UICONTROL Atualizar estimativa]**. Selecionar a bolha de informações fornece o limite de erro e a hora do trabalho de amostra mais recente.
+**[!UICONTROL Perfis estimados]** indica um **número aproximado** de perfis, com base no **trabalho de amostra**. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode diferir do número real de perfis qualificados. A amostra de perfil estimada tem um intervalo de confiança de 95%.
+
+Esse número é atualizado quando o trabalho de amostra é atualizado, o que ocorre quando há mais de 5% de alteração nos dados do cliente ou o último trabalho de amostra tem mais de 7 dias.&quot;
+
+Selecionar a bolha de informações fornece o limite de erro e a hora do trabalho de amostra mais recente.
 
 ![Perfis qualificados e Perfis estimados são realçados na seção Propriedades de público-alvo.](../images/ui/segment-builder/audience-estimates.png)
 

@@ -1,9 +1,10 @@
 ---
 title: Visão geral da extensão de tags do Algolia
 description: Saiba mais sobre a extensão Tags do Algolia no Adobe Experience Platform.
-source-git-commit: 5b488a596472fe61b487f75ad62d741237caa820
+exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
+source-git-commit: 605f89a09f58568c2ec2492f788bedbe610292ae
 workflow-type: tm+mt
-source-wordcount: '1495'
+source-wordcount: '1635'
 ht-degree: 2%
 
 ---
@@ -79,9 +80,18 @@ Adicione a ação **[!UICONTROL Clicar]** à sua regra de marca para enviar even
 | Propriedade | Descrição |
 | --- | --- |
 | [!UICONTROL Nome do Evento] | O Nome do evento que pode ser usado para refinar ainda mais este evento de clique. |
-| Elemento de dados Detalhes do evento | O Elemento de Dados que recuperará os detalhes do evento, incluindo `indexName`, `objectIDs` e opcionalmente `queryID`, `position`. Se `queryID` e `position` forem incluídos, o evento será categorizado como *IDs de objeto clicado após a Pesquisa*, caso contrário, será tratado como um evento de *IDs de objeto clicado*. Se o elemento de dados não fornecer um Nome de índice, o Nome de índice padrão será usado ao enviar o evento. |
+| Elemento de dados Detalhes do evento | O elemento de dados retorna detalhes do evento, incluindo: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (opcional)</li><li>`position` (opcional)</li></ul> |
+
+>[!NOTE]
+>
+>Se `queryID` e `position` forem incluídos, o evento será classificado como **IDs de objeto clicado após a Pesquisa**. Caso contrário, ele será classificado como um evento de **IDs de objeto clicado**.
+>><br><br>
+>>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
+
+Para obter mais informações sobre categorias de evento, consulte as [IDs de objeto clicadas após a pesquisa](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/)
+e guias de [IDs de objeto clicado](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/).
 
 ### Convertido {#converted}
 
@@ -90,9 +100,17 @@ Adicione a ação **[!UICONTROL Convertido]** à sua regra de marcas para enviar
 | Propriedade | Descrição |
 | --- | --- |
 | Nome do evento | O Nome do Evento que será usado para refinar ainda mais este evento **convert**. |
-| Elemento de dados Detalhes do evento | O Elemento de Dados que recuperará os detalhes do evento, incluindo `indexName`, `objectId` e opcionalmente `queryId`. Se o Elemento de Dados contiver `queryId`, o evento será classificado como *Convertido após a Pesquisa*; caso contrário, será considerado uma classe de evento *Convertido*. Se o elemento de dados não fornecer um Nome de índice, o Nome de índice padrão será usado ao enviar o evento. |
+| Elemento de dados Detalhes do evento | O elemento de dados retorna detalhes do evento, incluindo: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (opcional)</li></ul> |
+
+>[!NOTE]
+>
+>Se o Elemento de Dados contiver `queryId`, o evento será classificado como **Convertido após a Pesquisa**. Caso contrário, será classificado como um evento **Converted**.
+>><br><br>
+>>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
 
 ![](../../../images/extensions/client/algolia/converted.png)
+
+Para obter mais informações sobre as categorias de evento, consulte os guias [IDs de objeto convertido após a pesquisa](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/) e [IDs de objeto convertido](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/).
 
 ### Adicionado ao carrinho {#added-to-cart}
 
@@ -101,32 +119,60 @@ Adicione a ação **[!UICONTROL Adicionado ao carrinho]** à sua regra de tag pa
 | Propriedade | Descrição |
 | --- | --- |
 | Nome do evento | O Nome do Evento que será usado para refinar ainda mais este evento **convert**. |
-| Elemento de dados Detalhes do evento | O Elemento de Dados que recuperará os detalhes do evento, incluindo `indexName`, `objectId` e opcionalmente `queryId`, `objectData`. Se o Elemento de dados contiver `queryId`, o evento será classificado como *Adicionado às IDs de objeto do carrinho após a pesquisa*; caso contrário, será considerado uma *classe de evento Adicionada às IDs de objeto do carrinho*. Se o elemento de dados não fornecer um Nome de índice, o Nome de índice padrão será usado ao enviar o evento. |
+| Elemento de dados Detalhes do evento | O elemento de dados retorna detalhes do evento, incluindo: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (opcional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (opcional)</li></ul>. |
 | Currency | Especifica o tipo de moeda, como `USD`. |
+
+>[!NOTE]
+>
+>Se o Elemento de Dados contiver `queryId`, o evento será classificado como **Adicionado às IDs de objeto do carrinho após a Pesquisa**. Caso contrário, será classificado como um evento **Adicionado às IDs de objeto do carrinho**.
+>><br><br>
+>>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
+>><br><br>
+>>Se os Elementos de dados padrão não atenderem aos seus requisitos, um Elemento de dados personalizado poderá ser criado para retornar os detalhes do evento desejado.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
+Para obter mais informações sobre as categorias de eventos, consulte os guias [Adicionado às IDs de objeto do carrinho após a pesquisa](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/) e [Adicionado às IDs de objeto do carrinho](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/).
+
 ### Comprado {#purchased}
 
-Adicione a ação **[!UICONTROL Adicionado ao carrinho]** à sua regra de marca para enviar eventos comprados para [!DNL Algolia]. Crie uma nova regra de tag ou abra uma existente. Defina as condições de acordo com suas necessidades, selecione **[!UICONTROL Algólia]** como [!UICONTROL Extensão] e **[!UICONTROL Comprado]** como [!UICONTROL Tipo de Ação].
+Adicione a ação **[!UICONTROL Comprado]** à sua regra de marca para enviar eventos comprados para [!DNL Algolia]. Crie uma nova regra de tag ou abra uma existente. Defina as condições de acordo com suas necessidades, selecione **[!UICONTROL Algólia]** como [!UICONTROL Extensão] e **[!UICONTROL Comprado]** como [!UICONTROL Tipo de Ação].
 
 | Propriedade | Descrição |
 | --- | --- |
 | Nome do evento | O Nome do Evento que será usado para refinar ainda mais este evento **compra**. |
-| Elemento de dados Detalhes do evento | O Elemento de Dados que recuperará os detalhes do evento, incluindo `indexName`, `objectId` e opcionalmente `queryId`. Se o Elemento de Dados contiver `queryId`, o evento será classificado como *IDs de objeto comprado após a pesquisa*; caso contrário, será considerado uma classe de evento *IDs de objeto comprado*. Se o elemento de dados não fornecer um Nome de índice, o Nome de índice padrão será usado ao enviar o evento. |
+| Elemento de dados Detalhes do evento | O elemento de dados retorna detalhes do evento, incluindo: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (opcional)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (opcional)</li></ul>. |
+| Currency | Especifica o tipo de moeda, como `USD`. |
+
+>[!NOTE]
+>
+>Se o Elemento de Dados contiver `queryId`, o evento será classificado como **IDs de objeto comprado após a Pesquisa**. Caso contrário, será classificado como um evento **IDs de objeto compradas**.
+>><br><br>
+>>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
+>><br><br>
+>>Se os Elementos de dados padrão não atenderem aos seus requisitos, um Elemento de dados personalizado poderá ser criado para retornar os detalhes do evento desejado.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
+Para obter mais informações sobre categorias de evento, consulte as [IDs de objeto compradas após a pesquisa](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids-after-search/)
+e guias de [IDs de objeto comprado](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids/).
+
 ### Exibido {#viewed}
 
-Adicione a ação **[!UICONTROL Adicionado ao carrinho]** à sua regra de marca para enviar eventos comprados para [!DNL Algolia]. Crie uma nova regra de tag ou abra uma existente. Defina as condições de acordo com suas necessidades e selecione **[!UICONTROL Algolia]** como a [!UICONTROL Extensão] e **[!UICONTROL Visualizada]** como o [!UICONTROL Tipo de Ação].
-
-![](../../../images/extensions/client/algolia/viewed.png)
+Adicione a ação **[!UICONTROL Visualizado]** à sua regra de marca para enviar eventos comprados para [!DNL Algolia]. Crie uma nova regra de tag ou abra uma existente. Defina as condições de acordo com suas necessidades e selecione **[!UICONTROL Algolia]** como a [!UICONTROL Extensão] e **[!UICONTROL Visualizada]** como o [!UICONTROL Tipo de Ação].
 
 | Propriedade | Descrição |
 | --- | --- |
 | Nome do evento | O Nome do Evento que será usado para refinar este evento **exibir**. |
-| Elemento de dados Detalhes do evento | O Elemento de Dados que recuperará os detalhes do evento, incluindo `indexName` e `objectId`. Se `indexName` não estiver disponível, o Nome de Índice padrão será usado ao enviar os eventos. |
+| Elemento de dados Detalhes do evento | O elemento de dados retorna detalhes do evento, incluindo: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+
+>[!NOTE]
+>
+>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado ao enviar o evento.
+
+![](../../../images/extensions/client/algolia/viewed.png)
+
+Para obter mais informações sobre o evento de exibição, consulte o guia [IDs de objeto visualizadas](https://www.algolia.com/doc/api-reference/api-methods/viewed-object-ids/).
 
 ## Elementos de dados da extensão do Insights do [!DNL Algolia] {#data-elements}
 
@@ -148,10 +194,10 @@ Esse elemento de dados retorna:
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs,
-    positions
+  queryID,
+  indexName,
+  objectIDs,
+  positions
 }
 ```
 
@@ -186,9 +232,9 @@ Esse elemento de dados retorna:
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs
+  queryID,
+  indexName,
+  objectIDs
 }
 ```
 
@@ -211,9 +257,9 @@ Esse elemento de dados retorna o que está armazenado no Armazenamento da sessã
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs
+  queryID,
+  indexName,
+  objectIDs
 }
 ```
 
@@ -228,6 +274,7 @@ Os eventos *Clicados após a Pesquisa* ou *Convertidos após a Pesquisa* exigem 
 * [[!DNL Algolia] Iniciar Repositório GitHub de Extensão](https://github.com/algolia/algolia-launch-extension)
 * [Documentação do InstantSearch.js](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
 * [[!DNL Algolia] Documentação da API do Insights](https://www.algolia.com/doc/rest-api/insights/)
+* [Repositório de Código da Extensão do Algolia Launch](https://github.com/algolia/algolia-launch-extension)
 
 ## Próximas etapas {#next-steps}
 

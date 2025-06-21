@@ -2,7 +2,7 @@
 title: Visão geral da extensão de tags do Algolia
 description: Saiba mais sobre a extensão Tags do Algolia no Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 605f89a09f58568c2ec2492f788bedbe610292ae
+source-git-commit: 24d2dc76fc4208f8e1555d90fd3c3ef2cf55643e
 workflow-type: tm+mt
 source-wordcount: '1635'
 ht-degree: 2%
@@ -85,8 +85,8 @@ Adicione a ação **[!UICONTROL Clicar]** à sua regra de marca para enviar even
 >[!NOTE]
 >
 >Se `queryID` e `position` forem incluídos, o evento será classificado como **IDs de objeto clicado após a Pesquisa**. Caso contrário, ele será classificado como um evento de **IDs de objeto clicado**.
->&#x200B;><br><br>
->&#x200B;>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
+>><br>
+>>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -105,8 +105,8 @@ Adicione a ação **[!UICONTROL Convertido]** à sua regra de marcas para enviar
 >[!NOTE]
 >
 >Se o Elemento de Dados contiver `queryId`, o evento será classificado como **Convertido após a Pesquisa**. Caso contrário, será classificado como um evento **Converted**.
->&#x200B;><br><br>
->&#x200B;>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
+>><br>
+>>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -125,10 +125,10 @@ Adicione a ação **[!UICONTROL Adicionado ao carrinho]** à sua regra de tag pa
 >[!NOTE]
 >
 >Se o Elemento de Dados contiver `queryId`, o evento será classificado como **Adicionado às IDs de objeto do carrinho após a Pesquisa**. Caso contrário, será classificado como um evento **Adicionado às IDs de objeto do carrinho**.
->&#x200B;><br><br>
->&#x200B;>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
->&#x200B;><br><br>
->&#x200B;>Se os Elementos de dados padrão não atenderem aos seus requisitos, um Elemento de dados personalizado poderá ser criado para retornar os detalhes do evento desejado.
+>><br>
+>>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
+>><br>
+>>Se os Elementos de dados padrão não atenderem aos seus requisitos, um Elemento de dados personalizado poderá ser criado para retornar os detalhes do evento desejado.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -147,10 +147,10 @@ Adicione a ação **[!UICONTROL Comprado]** à sua regra de marca para enviar ev
 >[!NOTE]
 >
 >Se o Elemento de Dados contiver `queryId`, o evento será classificado como **IDs de objeto comprado após a Pesquisa**. Caso contrário, será classificado como um evento **IDs de objeto compradas**.
->&#x200B;><br><br>
->&#x200B;>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
->&#x200B;><br><br>
->&#x200B;>Se os Elementos de dados padrão não atenderem aos seus requisitos, um Elemento de dados personalizado poderá ser criado para retornar os detalhes do evento desejado.
+>><br>
+>>Se o Elemento de Dados não fornecer um `indexName`, o **Nome de Índice Padrão** será usado quando o evento for enviado.
+>><br>
+>>Se os Elementos de dados padrão não atenderem aos seus requisitos, um Elemento de dados personalizado poderá ser criado para retornar os detalhes do evento desejado.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 

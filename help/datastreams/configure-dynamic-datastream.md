@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: c193a6aa45d179acdf655a70987875bf0da51b2b
+source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1160'
 ht-degree: 3%
 
 ---
@@ -38,6 +38,7 @@ As configurações dinâmicas de sequência de dados têm limites específicos e
 | Grade de Proteção | Limite | Tipo de limite |
 |---------|------------|------|
 | Número máximo de configurações de sequência de dados dinâmicas por sequência de dados para serviços Experience Platform | 5 | Proteção de desempenho |
+| Número máximo de configurações de sequência de dados dinâmicas por sequência de dados para encaminhamento de eventos | 5 | Proteção de desempenho |
 | Número máximo de configurações de sequência de dados dinâmicas por sequência de dados para Adobe Analytics | 5 | Proteção de desempenho |
 | Número máximo de configurações de sequência de dados dinâmicas por sequência de dados para Adobe Target | 5 | Proteção de desempenho |
 | Número máximo de configurações de sequência de dados dinâmicas por sequência de dados para Adobe Audience Manager | 5 | Proteção de desempenho |

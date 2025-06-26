@@ -2,10 +2,10 @@
 title: Conexão com o Amazon S3
 description: Crie uma conexão de saída ativa com seu armazenamento Amazon Web Services (AWS) S3 para exportar arquivos de dados CSV da Adobe Experience Platform periodicamente para seus próprios buckets do S3.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
-source-wordcount: '1503'
-ht-degree: 16%
+source-wordcount: '1818'
+ht-degree: 13%
 
 ---
 
@@ -87,7 +87,7 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 * Autenticação da chave de acesso e da chave secreta
 * Autenticação de função presumida
 
-#### Autenticação da chave de acesso e da chave secreta
+#### Autenticação com chave de acesso S3 e chave secreta
 
 Use esse método de autenticação quando quiser inserir sua chave de acesso e chave secreta do Amazon S3 para permitir que o Experience Platform exporte dados para suas propriedades do Amazon S3.
 
@@ -98,21 +98,103 @@ Use esse método de autenticação quando quiser inserir sua chave de acesso e c
 
   ![Imagem mostrando um exemplo de uma chave PGP formatada corretamente na interface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Função presumida {#assumed-role-authentication}
+#### Autenticação com função assumida S3 {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="Autenticação de função presumida"
 >abstract="Use esse tipo de autenticação se preferir não compartilhar chaves de conta e chaves secretas com a Adobe. Em vez disso, a Experience Platform se conecta ao local do Amazon S3 usando acesso com base em função. Cole o ARN da função que você criou no AWS para o usuário da Adobe. O padrão é semelhante a `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
-![Imagem dos campos obrigatórios ao selecionar a autenticação de função presumida.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
-
 Use esse tipo de autenticação se preferir não compartilhar chaves de conta e chaves secretas com a Adobe. Em vez disso, o Experience Platform se conecta ao local do Amazon S3 usando acesso com base em função.
 
-Para fazer isso, você precisa criar no console do AWS um usuário presumido do Adobe com as [permissões necessárias certas](#minimum-permissions-iam-user) para gravar em seus buckets do Amazon S3. Crie uma **[!UICONTROL Entidade confiável]** na AWS com a conta da Adobe **[!UICONTROL 670664943635]**. Para obter mais informações, consulte a [documentação do AWS sobre criação de funções](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+![Imagem dos campos obrigatórios ao selecionar a autenticação de função presumida.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-* **[!DNL Role]**: Cole o ARN da função que você criou no AWS para o usuário do Adobe. O padrão é semelhante a `arn:aws:iam::800873819705:role/destinations-role-customer`.
+* **[!DNL Role]**: Cole o ARN da função que você criou no AWS para o usuário do Adobe. O padrão é semelhante a `arn:aws:iam::800873819705:role/destinations-role-customer`. Consulte as etapas abaixo para obter orientações detalhadas sobre como configurar o acesso S3 corretamente.
 * **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
+
+Para fazer isso, você precisa criar no console do AWS uma função assumida para o Adobe com as [permissões certas necessárias](#minimum-permissions-iam-user) para gravar em seus buckets do Amazon S3.
+
+**Criar uma política com as permissões necessárias**
+
+1. Abra o Console do AWS e acesse IAM > Políticas > Criar política
+2. Selecione Editor de políticas > JSON e adicione as permissões abaixo.
+
+   ```json
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "VisualEditor0",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:PutObject",
+                   "s3:GetObject",
+                   "s3:DeleteObject",
+                   "s3:GetBucketLocation",
+                   "s3:ListMultipartUploadParts"
+               ],
+               "Resource": "arn:aws:s3:::bucket/folder/*"
+           },
+           {
+               "Sid": "VisualEditor1",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:ListBucket"
+               ],
+               "Resource": "arn:aws:s3:::bucket"
+           }
+       ]
+   }
+   ```
+
+3. Na próxima página, digite um nome para a política e salve-a para referência. Você precisará desse nome de política ao criar a função na próxima etapa.
+
+**Criar função de usuário em sua conta de cliente S3**
+
+1. Abra o Console do AWS e acesse IAM > Funções > Criar nova função
+2. Selecione **Tipo de entidade confiável** > **Conta da AWS**
+3. Selecione **Uma conta do AWS** > **Outra conta do AWS** e insira a ID da conta do Adobe: `670664943635`
+4. Adicionar permissões usando a política criada anteriormente
+5. Insira um nome de função (por exemplo, `destinations-role-customer`). O nome da função deve ser tratado como confidencial, semelhante a uma senha. Ele pode ter até 64 caracteres e pode conter caracteres alfanuméricos e os seguintes caracteres especiais: `+=,.@-_`. Em seguida, verifique se:
+   * A ID da conta da Adobe `670664943635` está presente na seção **[!UICONTROL Selecionar entidades confiáveis]**
+   * A política criada anteriormente está presente no **[!UICONTROL Resumo da política de permissões]**
+
+**Forneça a função a ser assumida pela Adobe**
+
+Depois de criar a função no AWS, é necessário fornecer a função ARN para o Adobe. O ARN segue este padrão: `arn:aws:iam::800873819705:role/destinations-role-customer`
+
+Você pode encontrar o ARN na página principal depois de criar a função no console do AWS. Você usará este ARN ao criar o destino.
+
+**Verificar permissões de função e relações de confiança**
+
+Certifique-se de que sua função tenha a seguinte configuração:
+
+* **Permissões**: a função deve ter permissões para acessar S3 (acesso total ou as permissões mínimas fornecidas na etapa **Criar uma política com as permissões necessárias** acima)
+* **Relações de confiança**: a função deve ter a conta raiz Adobe (`670664943635`) em suas relações de confiança
+
+**Alternativa: Restringir a um usuário específico do Adobe (Opcional)**
+
+Se preferir não permitir toda a conta do Adobe, é possível restringir o acesso somente ao usuário específico do Adobe. Para fazer isso, edite a diretiva de confiança com a seguinte configuração:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:user/destinations-adobe-user"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+        }
+    ]
+}
+```
+
+Para obter mais informações, consulte a [documentação do AWS sobre criação de funções](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+
 
 ### Preencher detalhes do destino {#destination-details}
 

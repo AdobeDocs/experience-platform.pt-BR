@@ -4,23 +4,14 @@ title: Conexão Braze
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 37e78035f2656a3693a771ab5a9622f5446a4c9d
+source-git-commit: 2440a4d4ec5d572d1d44228fe99914a01e19d60d
 workflow-type: tm+mt
-source-wordcount: '1230'
-ht-degree: 2%
+source-wordcount: '1123'
+ht-degree: 3%
 
 ---
 
 # [!DNL Braze] conexão
-
->[!IMPORTANT]
->
->* A partir de 19 de junho de 2025, você poderá ver dois cartões **[!DNL Braze]** lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. O conector de destino [!DNL Braze] existente foi renomeado para **[!UICONTROL (obsoleto) Braze]** e um novo cartão com o nome **[!UICONTROL Braze]** está disponível para você.
->* Use a conexão **[!UICONTROL Braze]** no catálogo para novos fluxos de dados de ativação. Se você tiver fluxos de dados ativos para o destino **[!UICONTROL (Obsoleto) Braze]**, eles serão atualizados automaticamente, portanto, nenhuma ação é necessária.
->* Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores:
->   * ID da especificação de fluxo: `cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`
->   * ID de especificação da conexão: `ab957205-5a78-4393-b901-b930ed548220`
-
 
 ## Visão geral {#overview}
 

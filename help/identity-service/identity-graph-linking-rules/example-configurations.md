@@ -9,7 +9,7 @@ ht-degree: 7%
 
 ---
 
-# Guia de configurações do [!DNL Identity Graph Linking Rules] {#configurations-guide}
+# Guia de configurações das [!DNL Identity Graph Linking Rules] {#configurations-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"

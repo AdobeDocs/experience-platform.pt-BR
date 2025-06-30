@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: Notas de versão;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '972'
 ht-degree: 20%
 
 ---
@@ -124,14 +124,13 @@ Para obter mais informações sobre [!DNL Privacy Service], comece lendo a [vis�
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Experience Platform]. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 **Novos recursos**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Suporte a API e interface do usuário para bancos de dados | Novos conectores de origem para [!DNL Apache Spark] (no HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage], [!DNL Hive] (no HDInsights) e [!DNL Phoenix]. |
-| Suporte a API e IU para aplicativos baseados em pagamentos | Novos conectores de origem para [!DNL PayPal]. |
+| Suporte a API e interface do usuário para bancos de dados | Novos conectores de origem para [!DNL Apache Spark] (em HDInsights), [!DNL Azure Synapse Analytics], [!DNL Azure Table Storage] e [!DNL Hive]. |
 | Suporte de API e interface do usuário para aplicativos baseados em protocolos | Novos conectores de origem para [!DNL Generic OData]. |
 
 **Problemas conhecidos**

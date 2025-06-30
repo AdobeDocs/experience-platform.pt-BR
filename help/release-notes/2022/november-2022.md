@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de novembro de 2022
 description: As notas de versão de novembro de 2022 da Adobe Experience Platform.
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 56%
+source-wordcount: '312'
+ht-degree: 55%
 
 ---
 
@@ -46,17 +46,3 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 {style="table-layout:auto"}
 
 Para obter mais informações sobre o XDM no Experience Platform, consulte a [visão geral do sistema XDM](../../xdm/home.md).
-
-## Origens {#sources}
-
-O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
-
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
-
-**Recursos atualizados**
-
-| Recurso | Descrição |
-| --- | --- | 
-| Disponibilidade do Beta para a origem do Oracle Service Cloud | Use a fonte da Oracle Service Cloud para assimilar dados da sua conta da Oracle Service Cloud para a Experience Platform. Para obter mais informações, leia a documentação na [fonte da Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md). |
-
-Para saber mais sobre origens, leia a [visão geral de origens](../../sources/home.md).

@@ -2,10 +2,10 @@
 title: Notas de versão da Adobe Experience Platform de outubro de 2021
 description: As notas de versão de outubro de 2021 da Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 24%
+source-wordcount: '433'
+ht-degree: 25%
 
 ---
 
@@ -53,12 +53,11 @@ Consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md) para saber m
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 | Recurso | Descrição |
 | --- | --- |
 | [!DNL Amazon S3] aprimoramentos na origem | Agora você pode usar o parâmetro `s3SessionToken` para conectar sua conta do [!DNL Amazon S3] ao Experience Platform usando credenciais de segurança temporárias. Este token permite fornecer acesso temporário a curto prazo aos recursos do [!DNL Amazon S3] para usuários em ambientes não confiáveis. Consulte a [[!DNL Amazon S3] documentação](../../sources/connectors/cloud-storage/s3.md#prerequisites) para obter mais informações. |
 | [!DNL Generic REST API] (Beta) | Agora você pode criar uma conexão de origem [!DNL Generic REST API] usando a [[!DNL Flow Service] API](../../sources/tutorials/api/create/protocols/generic-rest.md) para trazer dados de um aplicativo REST genérico para a Experience Platform. Consulte a [[!DNL Generic REST API] visão geral](../../sources/connectors/protocols/generic-rest.md) para obter mais informações. |
-| [!DNL Zoho CRM] (Beta) | Agora você pode criar uma conexão de origem [!DNL Zoho CRM] usando a [[!DNL Flow Service] API](../../sources/tutorials/api/create/crm/zoho.md) ou a [interface de usuário](../../sources/tutorials/ui/create/crm/zoho.md) para trazer dados da sua conta [!DNL Zoho CRM] para a Experience Platform. Consulte a [[!DNL Zoho CRM] visão geral](../../sources/connectors/crm/zoho.md) para obter mais informações. |
 
 Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).

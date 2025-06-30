@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos Source Connectors
 description: O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1554'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Com o Experience Platform, você pode centralizar os dados coletados de fontes d
 
 ## Fontes empresariais avançadas {#advanced-enterprise-sources}
 
-As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE Streaming]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE Lote]{type=Informative}
@@ -112,13 +112,11 @@ Os sistemas de CRM fornecem dados que podem ajudar a criar relacionamentos com o
 - [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE Lote]{type=Informative}
 - [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE Lote]{type=Informative}
 
 ### Sucesso do cliente {#customer-success}
 
 A Experience Platform oferece suporte para assimilação de dados de um aplicativo de sucesso de clientes de terceiros. Consulte os seguintes documentos relacionados para obter mais informações:
 
-- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE Lote]{type=Informative}
 - [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE Lote]{type=Informative}
@@ -131,7 +129,6 @@ O Experience Platform oferece suporte para assimilação de dados de um banco de
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE Lote]{type=Informative}
 - [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE Lote]{type=Informative}
 - [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE Lote]{type=Informative}
 - [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE Lote]{type=Informative}
@@ -139,7 +136,6 @@ O Experience Platform oferece suporte para assimilação de dados de um banco de
 - [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE Lote]{type=Informative}
 - [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE Lote]{type=Informative}
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE Lote]{type=Informative}
 - [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE Lote]{type=Informative}
 
@@ -181,15 +177,11 @@ O Experience Platform oferece suporte para assimilação de dados de um sistema 
 - [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE Lote]{type=Informative}
 - [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE Lote]{type=Informative}
-<!-- 
-- [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
--->
 
 ### Pagamentos {#payments}
 
 O Experience Platform oferece suporte para assimilação de dados de um sistema de pagamentos de terceiros. Consulte os seguintes documentos relacionados para obter mais informações sobre conectores de origem específicos:
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Square]](connectors/payments/square.md) [!BADGE Lote]{type=Informative}
 - [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE Lote]{type=Informative}
 

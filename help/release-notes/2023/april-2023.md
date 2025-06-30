@@ -2,10 +2,10 @@
 title: Notas de versão de abril de 2023 da Adobe Experience Platform
 description: As notas de versão de abril de 2023 da Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '2040'
-ht-degree: 97%
+source-wordcount: '2010'
+ht-degree: 96%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 97%
 
 >[!IMPORTANT]
 >
->A partir de 15 de maio de 2023, o status `Existing` será descontinuado do mapa de associação de segmento para remover a redundância no ciclo de vida da associação de segmento. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized` e os perfis desqualificados continuarão a ser representados como `Exited`. Para obter mais detalhes sobre esta alteração, leia a [seção Serviço de segmentação](#segmentation).
+>A partir de 15 de maio de 2023, o status `Existing` será descontinuado do mapa de segmentos de associação para remover a redundância no ciclo de vida da associação a um segmento. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized` e os perfis desqualificados continuarão a ser representados como `Exited`. Para obter mais detalhes sobre esta alteração, leia a [seção Serviço de segmentação](#segmentation).
 
 **Data de lançamento: 26 de abril de 2023**
 
@@ -85,7 +85,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 {style="table-layout:auto"}
 
-**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
@@ -131,7 +131,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
-| Grupo de campos | [[!UICONTROL Extensão de união de conta do Serviço de perfil unificado da Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Um grupo de campos de extensão de conta para o Perfil do cliente em tempo real foi adicionado. Ele permite aos usuários a adição de associações de segmentos na união de contas. |
+| Grupo de campos | [[!UICONTROL Extensão de união de conta do Serviço de perfil unificado da Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Um grupo de campos de extensão de conta para o Perfil do cliente em tempo real foi adicionado. Ele permite aos usuários a adição de segmentos de associação na união de contas. |
 | Esquema | [[!UICONTROL Esquema do Sistema de Atributos Calculados]](https://github.com/adobe/xdm/pull/1696/files) | O grupo de campos Atributos calculados usado pelo Perfil do cliente em tempo real foi atualizado para um esquema global de somente leitura do sistema. |
 | Grupo de campos | Múltiplo | Foram adicionados vários eventos como campos para o [[!UICONTROL Esquema de série temporal]](https://github.com/adobe/xdm/pull/1718/files). |
 | Grupo de campos | Detalhes de fidelidade do perfil | [Corrigido o título](https://github.com/adobe/xdm/pull/1717/files) para `xdm:upgradeDate` de “Nome do programa” para “Data de atualização”. |
@@ -168,13 +168,13 @@ A Adobe Experience Platform permite gerar experiências coordenadas, consistente
 
 ## Serviço de segmentação {#segmentation}
 
-O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de séries temporais que representam interações de clientes com sua marca.
+O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de série temporal que representam interações de clientes com sua marca.
 
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Mapa da associação de segmento | Seguindo o anúncio anterior em fevereiro, em 15 de maio de 2023, o status `Existing` será descontinuado do mapa da associação de segmento para remover a redundância no ciclo de vida da associação de segmento. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized`, e os perfis desqualificados continuarão a ser representados como `Exited`.<br/><br/> Essa alteração pode impactar quem se estiver usando os [destinos corporativos](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Hubs de Eventos do Azure, API HTTP) e que tenha processos de downstream automatizados em vigor com base no status `Existing`. Se esse for o seu caso, revise suas integrações downstream. Caso se interesse em identificar perfis recém-qualificados além de um determinado período, considere usar uma combinação dos status `Realized` e `lastQualificationTime` no mapa de associação de segmento. Para obter mais informações, entre em contato com o representante da Adobe. |
+| Mapa de segmentos de associação | Seguindo o anúncio anterior em fevereiro, em 15 de maio de 2023, o status `Existing` será descontinuado do mapa de segmentos de associação para remover a redundância no ciclo de vida da associação a um segmento. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized`, e os perfis desqualificados continuarão a ser representados como `Exited`.<br/><br/> Essa alteração pode impactar quem se estiver usando os [destinos corporativos](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Hubs de Eventos do Azure, API HTTP) e que tenha processos de downstream automatizados em vigor com base no status `Existing`. Se esse for o seu caso, revise suas integrações downstream. Caso se interesse em identificar perfis recém-qualificados além de um determinado período, considere usar uma combinação dos status `Realized` e `lastQualificationTime` no mapa de segmentos de associação. Para obter mais informações, entre em contato com o representante da Adobe. |
 
 {style="table-layout:auto"}
 
@@ -184,7 +184,7 @@ Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [V
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e permite estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 **Recursos atualizados**
 
@@ -193,7 +193,6 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 | Suporte à API para filtrar dados em nível de linha para origens do Salesforce CRM. | Use operadores lógicos e de comparação para filtrar dados no nível da linha para origens do Salesforce CRM. Leia o manual sobre [filtragem de dados de uma origem usando a API](../../sources/tutorials/api/filter.md) para obter mais informações. |
 | Disponibilidade beta da transmissão do Shopify | A [Origem de Transmissão do Shopify](../../sources/connectors/ecommerce/shopify-streaming.md) agora está disponível na versão beta. Use a origem de Transmissão do Shopify para transmitir os dados da conta de seus parceiros do Shopify para a Experience Platform. |
 | Disponibilidade geral da integração do OneTrust | A [Origem de integração do OneTrust](../../sources/connectors/consent-and-preferences/onetrust.md) agora está disponível para todos(as). Use a origem de Integração do OneTrust para trazer dados de consentimento e preferências da sua conta de Integração do OneTrust para a Experience Platform. |
-| Disponibilidade geral do Oracle Service Cloud | A [Origem do Oracle Service Cloud](../../sources/connectors/customer-success/oracle-service-cloud.md) agora está disponível para todos(as). Use a origem do Oracle Service Cloud para trazer seus dados do Oracle Service Cloud para a Experience Platform. |
 
 {style="table-layout:auto"}
 

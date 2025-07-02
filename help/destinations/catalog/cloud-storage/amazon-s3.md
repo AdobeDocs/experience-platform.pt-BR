@@ -5,7 +5,7 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
 source-wordcount: '1818'
-ht-degree: 13%
+ht-degree: 14%
 
 ---
 
@@ -98,7 +98,7 @@ Use esse método de autenticação quando quiser inserir sua chave de acesso e c
 
   ![Imagem mostrando um exemplo de uma chave PGP formatada corretamente na interface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Autenticação com função assumida S3 {#assumed-role-authentication}
+#### Autenticação com função S3 assumida {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"

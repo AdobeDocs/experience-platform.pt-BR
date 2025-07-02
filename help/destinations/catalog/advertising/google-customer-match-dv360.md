@@ -5,7 +5,7 @@ exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
 source-git-commit: feb3077daf8b3632ff00b57099195523bbeac358
 workflow-type: tm+mt
 source-wordcount: '2252'
-ht-degree: 1%
+ht-degree: 4%
 
 ---
 
@@ -24,12 +24,12 @@ Com a capacidade recém-introduzida de utilizar o [!DNL Customer Matched] públi
 >[!IMPORTANT]
 >
 > A Google está lançando alterações na [API do Google Ads](https://developers.google.com/google-ads/api/docs/start), na [Correspondência do Cliente](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) e na [API de Exibição e Vídeo 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para oferecer suporte aos requisitos de conformidade e consentimento definidos na [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) da União Europeia ([Política de Consentimento do Usuário](https://www.google.com/about/company/user-consent-policy/) da UE). A aplicação dessas alterações aos requisitos de consentimento estará em vigor a partir de 6 de março de 2024.
-> &#x200B;><br/>
-> &#x200B;>Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como parceiro da Google, a Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
-> &#x200B;><br/>
-> &#x200B;>Os clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram uma [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos não precisam tomar nenhuma ação.
-> &#x200B;><br/>
-> &#x200B;>Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar os recursos de [definição de segmento](../../../segmentation/home.md#segment-definitions) no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos do Real-Time CDP Google existentes sem interrupção.
+> ><br/>
+> >Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como parceiro da Google, a Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
+> ><br/>
+> >Os clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram uma [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos não precisam tomar nenhuma ação.
+> ><br/>
+> >Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar os recursos de [definição de segmento](../../../segmentation/home.md#segment-definitions) no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos do Real-Time CDP Google existentes sem interrupção.
 
 ## Quando usar este destino
 
@@ -115,7 +115,7 @@ As exportações de dados falharão se sua conta do Google não estiver vinculad
 
 **Para organizações com contas de gerente:**
 
-Se sua organização usar uma [conta de gerente [!DNL Google] 2&rbrace; para gerenciar várias contas de cliente, siga estes requisitos específicos de vinculação:](https://support.google.com/google-ads/answer/6139186)
+Se sua organização usar uma [conta de gerente [!DNL Google] 2} para gerenciar várias contas de cliente, siga estes requisitos específicos de vinculação:](https://support.google.com/google-ads/answer/6139186)
 
 * **Para exportar para uma conta de cliente específica:** Vincule essa conta de cliente individual (não a conta de gerente) à ID de conta da Google da Adobe: `4641108541`
 * **A vinculação de conta de gerente sozinha não é suficiente** e causará falhas de exportação de dados
@@ -177,8 +177,8 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gcm_dv360_accountID"
->title="Vincular contas do Google e do Adobe"
->abstract="Verifique se a ID de conta da Google inserida aqui já está vinculada à sua conta da Adobe. Se você tiver uma conta de gerente do Google com várias contas de clientes e pretender exportar dados do Experience Platform para uma conta de cliente específica, vincule essa conta de cliente à sua conta do Adobe e insira a ID da conta aqui."
+>title="Vincular contas do Google e da Adobe"
+>abstract="Verifique se a ID de conta do Google inserida aqui já está vinculada à sua conta da Adobe. Se você tiver uma conta de gerente do Google com várias contas de clientes e pretender exportar dados da Experience Platform para uma conta de cliente específica, vincule essa conta de cliente à sua conta da Adobe e insira a ID da conta aqui."
 
 >[!IMPORTANT]
 > 

@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 7be3e6c143d792113a0d623e2d12d6710a3be70c
 workflow-type: tm+mt
 source-wordcount: '5195'
-ht-degree: 8%
+ht-degree: 11%
 
 ---
 
@@ -324,7 +324,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 >[!NOTE]
 >
 >Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
->&#x200B;>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
 >
 >Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
 >
@@ -385,20 +385,20 @@ Para selecionar uma política de mesclagem para a definição do segmento, selec
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Perfis qualificados"
->abstract="Perfis qualificados indica o número real de perfis que correspondem às regras da definição de segmento. Esse número é atualizado a cada 24 horas, após a execução do trabalho de avaliação do segmento."
+>abstract="Perfis qualificados indica o número real de perfis que correspondem às regras da definição de segmento. Esse número atualiza a cada 24 horas, após a execução do trabalho de avaliação do segmento."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Perfis estimados"
->abstract="Perfis estimados indica um número aproximado de perfis, com base no trabalho de amostra, que se qualificariam para as regras de definição do segmento. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode diferir do número real de perfis qualificados. A amostra de perfil estimada tem um intervalo de confiança de 95%. <br><br>Este número é atualizado quando o trabalho de exemplo é atualizado, o que ocorre quando há mais de 5% de alteração nos dados do cliente ou quando o último trabalho de exemplo tem mais de 7 dias."
+>abstract="Perfis estimados indica um número aproximado de perfis, com base no trabalho de amostra, que se qualificariam para as regras de definição do segmento. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode ser diferente do número real de perfis qualificados. A amostra de perfis estimada tem um intervalo de confiança de 95%. <br><br>Este número é atualizado quando o trabalho de amostra é atualizado, o que ocorre quando há mais de 5% de alteração nos dados do cliente ou quando o trabalho de amostra mais recente tem mais de 7 dias."
 
 Ao criar uma definição de segmento, a seção **[!UICONTROL Propriedades do público-alvo]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho da definição de segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.
 
-**[!UICONTROL Perfis qualificados]** indica o número **real** de perfis que correspondem às regras de definição de segmento. Esse número é atualizado a cada 24 horas, após a execução do trabalho de avaliação do segmento.
+**[!UICONTROL Perfis qualificados]** indica o número **real** de perfis que correspondem às regras de definição de segmento. Esse número atualiza a cada 24 horas, após a execução do trabalho de avaliação do segmento.
 
 O carimbo de data/hora para perfis qualificados indica o trabalho de avaliação de segmento mais recente do **lote** e é **não** exibido para definições de segmento avaliadas usando a segmentação de borda ou de streaming. Se você editar a definição do segmento, o número de perfis qualificados permanecerá o mesmo até que o próximo trabalho de avaliação de segmento seja executado.
 
-**[!UICONTROL Perfis estimados]** indica um **número aproximado** de perfis, com base no **trabalho de amostra**. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode diferir do número real de perfis qualificados. A amostra de perfil estimada tem um intervalo de confiança de 95%.
+**[!UICONTROL Perfis estimados]** indica um **número aproximado** de perfis, com base no **trabalho de amostra**. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode ser diferente do número real de perfis qualificados. A amostra de perfil estimada tem um intervalo de confiança de 95%.
 
 Esse número é atualizado quando o trabalho de amostra é atualizado, o que ocorre quando há mais de 5% de alteração nos dados do cliente ou o último trabalho de amostra tem mais de 7 dias.&quot;
 

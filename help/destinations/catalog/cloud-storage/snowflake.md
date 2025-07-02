@@ -8,7 +8,7 @@ exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
 source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
 workflow-type: tm+mt
 source-wordcount: '1054'
-ht-degree: 2%
+ht-degree: 5%
 
 ---
 
@@ -89,7 +89,7 @@ Para autenticar no destino, selecione **[!UICONTROL Conectar ao destino]**.
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
->title="Digite sua ID de conta da Snowflake"
+>title="Insira sua ID da conta do Snowflake"
 >abstract="Se sua conta estiver vinculada a uma organização, use este formato: `OrganizationName.AccountName`<br><br> Se sua conta não estiver vinculada a uma organização, use este formato:`AccountName`"
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.

@@ -2,9 +2,9 @@
 title: Solicitações de exclusão de registro (fluxo de trabalho da interface)
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
+source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1848'
 ht-degree: 7%
 
 ---
@@ -45,19 +45,28 @@ O workflow de criação da solicitação é exibido. Por padrão, a opção **[!
 
 ## Selecionar conjuntos de dados {#select-dataset}
 
-A próxima etapa é determinar se você deseja excluir registros de um único conjunto de dados ou de todos os conjuntos de dados. Se esta opção não estiver disponível para você, continue na seção [Fornecer identidades](#provide-identities) do guia.
+A próxima etapa é determinar se você deseja excluir registros de um único conjunto de dados ou de todos os conjuntos de dados. Dependendo da configuração de sua organização, a opção de seleção de conjunto de dados pode não estar disponível. Se você não vir essa opção, continue na seção [Fornecer identidades](#provide-identities) do guia.
 
-Na seção **[!UICONTROL Detalhes do registro]**, use o botão de opção para selecionar entre um conjunto de dados específico e todos os conjuntos de dados. Se você escolher **[!UICONTROL Selecionar conjunto de dados]**, prossiga para selecionar o ícone do banco de dados (![O ícone do banco de dados](/help/images/icons/database.png)) para abrir uma caixa de diálogo que fornece uma lista de conjuntos de dados disponíveis. Selecione o conjunto de dados desejado na lista, seguido por **[!UICONTROL Concluído]**.
+Na seção **[!UICONTROL Detalhes do Registro]**, selecione um botão de opção para escolher um conjunto de dados específico ou todos os conjuntos de dados.
+
+Para excluir de um conjunto de dados específico, selecione **[!UICONTROL Selecionar conjunto de dados]** e, em seguida, selecione o ícone do banco de dados (![O ícone do banco de dados](/help/images/icons/database.png)). Na caixa de diálogo exibida, escolha um conjunto de dados e selecione **[!UICONTROL Concluído]** para confirmar.
 
 ![A caixa de diálogo [!UICONTROL Selecionar conjunto de dados] com um conjunto de dados selecionado e [!UICONTROL Concluído] realçado.](../images/ui/record-delete/select-dataset.png)
 
-Para excluir registros de todos os conjuntos de dados, selecione **[!UICONTROL Todos os conjuntos de dados]**.
+Para excluir de todos os conjuntos de dados, selecione **[!UICONTROL Todos os conjuntos de dados]**. Essa opção aumenta o escopo da operação e requer que você forneça todos os tipos de identidade relevantes.
 
 ![A caixa de diálogo [!UICONTROL Selecionar conjunto de dados] com a opção [!UICONTROL Todos os conjuntos de dados] selecionada.](../images/ui/record-delete/all-datasets.png)
 
->[!NOTE]
+>[!WARNING]
 >
->Selecionar a opção **[!UICONTROL Todos os conjuntos de dados]** pode fazer com que a operação de exclusão demore mais e não resulte na exclusão precisa do registro.
+>Selecionar **[!UICONTROL Todos os conjuntos de dados]** expande a operação para todos os conjuntos de dados na sua organização. Cada conjunto de dados pode usar um tipo de identidade principal diferente. Você deve fornecer **todos os tipos de identidade necessários** para garantir uma correspondência precisa.
+>
+>Se qualquer tipo de identidade estiver ausente, alguns registros poderão ser ignorados durante a exclusão. Isso pode atrasar o processamento e levar a **resultados parciais**.
+
+Cada conjunto de dados na Experience Platform oferece suporte a apenas um tipo de identidade principal.
+
+* Ao excluir de um **único conjunto de dados**, todas as identidades em sua solicitação devem usar o **mesmo tipo**.
+* Ao excluir de **todos os conjuntos de dados**, você pode incluir **vários tipos de identidade**, já que conjuntos de dados diferentes podem confiar em identidades primárias diferentes.&quot;
 
 ## Fornecer identidades {#provide-identities}
 
@@ -80,8 +89,6 @@ Como todos os campos de identidade no Experience Platform, um namespace de ident
 >Se você não souber o namespace de identidade de um conjunto de dados específico, poderá encontrá-lo na interface do usuário do Experience Platform. No espaço de trabalho **[!UICONTROL Conjuntos de Dados]**, selecione o conjunto de dados em questão na lista. Na página de detalhes do conjunto de dados, passe o mouse sobre o nome do esquema do conjunto de dados no painel direito. O namespace de identidade é exibido junto com o nome e a descrição do esquema.
 >
 >![O painel Conjuntos de Dados com um conjunto de dados selecionado e uma caixa de diálogo de esquema aberta no painel de detalhes do conjunto de dados. A ID primária do conjunto de dados está realçada.](../images/ui/record-delete/dataset-primary-identity.png)
-
-Se você estiver excluindo registros de um único conjunto de dados, todas as identidades fornecidas deverão ter o mesmo tipo, já que um conjunto de dados só pode ter um namespace de identidade. Se estiver excluindo de todos os conjuntos de dados, você poderá incluir vários tipos de identidade, pois conjuntos de dados diferentes podem ter identidades principais diferentes.
 
 Há duas opções para fornecer identidades ao excluir registros:
 

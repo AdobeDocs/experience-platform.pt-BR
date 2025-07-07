@@ -2,9 +2,9 @@
 title: Gerenciar a retenção do conjunto de dados do evento de experiência no Data Lake usando TTL
 description: Saiba como avaliar, definir e gerenciar a Retenção de conjunto de dados de evento de experiência no data lake usando configurações de Tempo de vida (TTL) com APIs do Adobe Experience Platform. Este guia explica como a expiração em nível de linha de TTL suporta políticas de retenção de dados, otimiza a eficiência do armazenamento e garante um gerenciamento eficaz do ciclo de vida dos dados. Ela também fornece casos de uso e práticas recomendadas para ajudar você a aplicar o TTL de maneira eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
+source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
 workflow-type: tm+mt
-source-wordcount: '2452'
+source-wordcount: '2458'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,7 @@ Use o ponto de extremidade `/ttl/{DATASET_ID}` da API de Higiene de Dados para a
 
 Consulte a documentação da [API de higiene de dados](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) do Adobe Developer para obter mais informações.
 
-Para [verificar o TTL aplicado atualmente a um conjunto de dados](#check-applied-ttl-values), faça uma solicitação GET para o ponto de extremidade `/dataSets/{DATASET_ID}` da [API do Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/).
+Para [verificar o TTL aplicado atualmente a um conjunto de dados](#check-applied-ttl-values), faça uma solicitação GET para o ponto de extremidade [ da ](https://developer.adobe.com/experience-platform-apis/references/catalog/)API do Serviço de Catálogo`/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
@@ -333,7 +333,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### Posso definir políticas de retenção diferentes para data lake e serviços de perfil?
 
 +++Resposta
-Sim, você pode definir políticas de retenção diferentes para os serviços de perfil e data lake. No entanto, o período de retenção do Perfil não deve ser menor que o definido para o data lake.
+Sim, você pode definir políticas de retenção diferentes para os serviços de perfil e data lake. O período de retenção do armazenamento de perfis pode ser menor ou mais longo que o período de retenção do data lake, dependendo das necessidades da sua organização.
 +++
 
 ### Como posso verificar o uso do meu conjunto de dados atual?

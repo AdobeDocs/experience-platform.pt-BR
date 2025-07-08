@@ -1,9 +1,10 @@
 ---
 title: Referência de Resolução de Alerta CMK
 description: Identificar, solucionar problemas e resolver alertas comuns acionados por erros de configuração da Chave gerenciada pelo cliente (CMK) no Adobe Experience Platform. Use este guia para seguir instruções claras e passo a passo e restaurar o acesso seguro à chave.
-source-git-commit: 0d9cc046956dd380bb8816f0d8bf497bbad6140b
+exl-id: ffe2eadc-dfb5-418b-a201-2c20dcc9cfe4
+source-git-commit: e8cfed9ebd50cf50f03e232755eddef1cb8c0d3b
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
@@ -22,11 +23,7 @@ As seções a seguir descrevem os tipos de alertas que podem ser acionados por p
 
 ## Acesso à chave desabilitado {#key-access-disabled}
 
-Esse alerta indica que o Adobe Experience Platform não pode acessar o CMK configurado porque a chave está desativada ou foi renderizada inacessível devido a problemas de configuração relacionados.
-
->[!IMPORTANT]
->
->Nesse caso, o Adobe CMK trata a falha de acesso como uma remoção intencional e limpará todos os dados associados à sua organização, com base em sua SLA.
+Esse alerta indica que o Adobe Experience Platform não pode acessar o CMK configurado porque a chave está desativada ou inacessível devido à sua configuração. Nesses casos, o sistema trata a condição como uma remoção intencional da chave de acesso.
 
 ### Quando ocorre
 

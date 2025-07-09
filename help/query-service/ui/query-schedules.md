@@ -2,9 +2,9 @@
 title: Agendamentos de consulta
 description: Saiba como automatizar execuções de consultas programadas, excluir ou desativar um agendamento de consultas e utilizar as opções de agendamento disponíveis por meio da interface do usuário do Adobe Experience Platform.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04b804b81b605040c74db040bc5118e0392ddd32
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2181'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,24 @@ Você pode automatizar as execuções de consulta criando programações de cons
 >
 >Você só pode adicionar um agendamento a uma consulta que já foi criada e salva.
 
-Quaisquer consultas agendadas são adicionadas à lista na guia [!UICONTROL Consultas agendadas]. Nesse espaço de trabalho, é possível monitorar o status de todos os trabalhos de consulta agendados por meio da interface do usuário. Na guia [!UICONTROL Consultas agendadas], você pode encontrar informações importantes sobre a execução de consultas e assinar alertas. As informações disponíveis incluem o status, os detalhes da programação e as mensagens/códigos de erro em caso de falha na execução. Consulte o [Documento de monitoramento de consultas agendadas](./monitor-queries.md) para obter mais informações.
+## Requisitos de conta para consultas agendadas {#technical-account-user-requirements}
 
-Esse fluxo de trabalho abrange o processo de agendamento na interface do usuário do serviço de consulta. Para saber como adicionar agendamentos usando a API, leia o [manual de endpoint de consultas agendadas](../api/scheduled-queries.md).
+Para ajudar na execução confiável das consultas agendadas, a Adobe recomenda que os administradores provisionem uma conta técnica (usando as credenciais de servidor para servidor do OAuth) para criar consultas agendadas. As consultas programadas também podem ser criadas com uma conta de usuário pessoal, mas as consultas criadas dessa maneira deixarão de ser executadas se o acesso desse usuário for removido ou desativado.
+
+Para obter detalhes sobre como configurar contas técnicas e atribuir as permissões necessárias, consulte os [pré-requisitos do guia de credenciais](./credentials.md#prerequisites) e a [autenticação de API](../../landing/api-authentication.md).
+
+Para obter orientação adicional sobre como criar e configurar uma conta técnica, consulte:
+
+- [Configuração do Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): instruções passo a passo para configurar o Adobe Developer Console e obter credenciais do OAuth.
+- [Configuração completa de conta técnica](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): uma apresentação detalhada para criar e configurar uma conta técnica no Adobe Experience Platform.
+
+Se você usar apenas a interface do Serviço de consulta, verifique se tem as permissões necessárias ou coordene com um administrador que gerencia contas técnicas. Quaisquer consultas agendadas são adicionadas à lista na guia [!UICONTROL Consultas agendadas], onde você pode monitorar o status, os detalhes do agendamento e as mensagens de erro de todos os trabalhos de consultas agendadas, bem como assinar alertas. Para obter mais informações sobre o monitoramento e o gerenciamento de consultas, consulte o [documento de consultas agendadas do monitor](./monitor-queries.md).
+
+Esse fluxo de trabalho abrange o processo de agendamento na interface do usuário do serviço de consulta. Para saber como adicionar agendamentos usando a API, consulte o [manual de endpoint de consultas agendadas](../api/scheduled-queries.md).
+
+>[!NOTE]
+>
+>Use uma conta técnica para garantir que as consultas programadas continuem sendo executadas mesmo se os usuários deixarem a organização ou suas funções forem alteradas. Escolha uma conta técnica sempre que possível para automação de consulta ininterrupta.
 
 ## Criar um agendamento de consulta {#create-schedule}
 
@@ -163,7 +178,6 @@ A tabela a seguir fornece descrições de cada coluna disponível na seção de 
 >[!NOTE]
 >
 >Os dados de Horas de computação estão disponíveis em 15/08/2024. Os dados anteriores a essa data aparecem como &#39;Não disponível&#39;.
-
 
 Consulte o [guia consultado agendado do monitor](./monitor-queries.md#inline-actions) para obter informações completas sobre como monitorar o status de todos os trabalhos de consulta por meio da interface.
 

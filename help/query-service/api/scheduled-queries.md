@@ -5,18 +5,32 @@ title: Endpoint de agendamentos
 description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para consultas programadas com a API de serviço de consulta.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
+source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
 workflow-type: tm+mt
-source-wordcount: '1224'
-ht-degree: 3%
+source-wordcount: '1410'
+ht-degree: 2%
 
 ---
 
 # Endpoint de agendamentos
 
+Saiba como criar, gerenciar e monitorar consultas agendadas de forma programática usando a API de agendamentos do Serviço de consulta com informações detalhadas e exemplos.
+
+## Requisitos e pré-requisitos
+
+Você pode criar consultas programadas usando uma conta técnica (autenticada por meio de credenciais de servidor para servidor do OAuth) ou uma conta de usuário pessoal (token de usuário). No entanto, a Adobe recomenda utilizar uma conta técnica para garantir a execução ininterrupta e segura de consultas programadas, especialmente para cargas de trabalho de longo prazo ou de produção.
+
+Os queries criados com uma conta de usuário pessoal falharão se o acesso desse usuário for revogado ou sua conta for desativada. As contas técnicas oferecem maior estabilidade porque não estão vinculadas ao status de emprego ou aos direitos de acesso de um usuário individual.
+
+>[!IMPORTANT]
+>
+>Considerações importantes ao gerenciar consultas programadas:<ul><li>As consultas programadas falharão se a conta (técnica ou usuário) usada para criá-las perder acesso ou permissões.</li><li>As consultas programadas devem ser desativadas antes de excluir por meio da API ou da interface do usuário.</li><li>Não há suporte para agendamento indefinido sem uma data final; uma data final deve ser sempre especificada.</li></ul>
+
+Para obter orientações detalhadas sobre requisitos de conta, configuração de permissões e gerenciamento de consultas agendadas, consulte a [Documentação de agendamentos de consulta](../ui/query-schedules.md#technical-account-user-requirements). Para obter instruções passo a passo sobre como criar e configurar uma conta técnica, consulte a [instalação do Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) e a [configuração completa de conta técnica](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
+
 ## Exemplos de chamadas de API
 
-Agora que você entende quais cabeçalhos usar, você está pronto para começar a fazer chamadas para a API [!DNL Query Service]. As seções a seguir abordam as várias chamadas de API que podem ser feitas usando a API [!DNL Query Service]. Cada chamada inclui o formato da API geral, uma solicitação de amostra mostrando os cabeçalhos necessários e uma resposta de amostra.
+Após configurar os cabeçalhos de autenticação necessários (consulte o [guia de autenticação de API](../../landing/api-authentication.md)), você pode começar a fazer chamadas para a API [!DNL Query Service]. As seções a seguir demonstram várias chamadas de API com formatos gerais, exemplos de solicitações, incluindo cabeçalhos obrigatórios e exemplos de respostas.
 
 ### Recuperar uma lista de consultas agendadas
 

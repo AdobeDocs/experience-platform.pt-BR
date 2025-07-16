@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie públicos-alvo a partir dos dados do perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
 feature: Segments
 role: User
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '208'
 ht-degree: 41%
 
 ---
@@ -17,12 +17,14 @@ ht-degree: 41%
 
 - [Visão geral do serviço de segmentação](home.md)
 - [Tipos de dados de segmentação](data-types.md)
-- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=pt-BR#segmentation-guardrails)
+- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API de segmentação {#api}
    - [Visão geral](api/overview.md)
    - [Introdução](api/getting-started.md)
+   - [Criar metadados de público](api/create-audience.md)
    - [Públicos-alvo](api/audiences.md)
    - [Exportar trabalhos](api/export-jobs.md)
+   - [Públicos externos](api/external-audiences.md)
    - [Visualizações e estimativas](api/previews-and-estimates.md)
    - [Programações](api/schedules.md)
    - [Definições de segmento](api/segment-definitions.md)
@@ -46,7 +48,7 @@ ht-degree: 41%
    - [Segmentação de transmissão](methods/streaming-segmentation.md)
    - [Segmentação de borda](methods/edge-segmentation.md)
    - [Avaliação flexível do público](methods/flexible-audience-evaluation.md)
-- Tipos de público-alvo {#types}
+- Tipos de público {#types}
    - [Visão geral](types/overview.md)
    - [Públicos-alvo de pessoas](types/people-audiences.md)
    - [Públicos-alvo em potencial](types/prospect-audiences.md)
@@ -80,4 +82,4 @@ ht-degree: 41%
 - [Atualização dos critérios de elegibilidade](./eligibility-criteria-update.md)
 - [Perguntas frequentes](./faq.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

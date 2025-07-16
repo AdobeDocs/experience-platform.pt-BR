@@ -4,10 +4,10 @@ title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil para um endpoint HTTP de terceiros para executar sua própria análise ou executar outras operações necessárias nos dados de perfil exportados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
+source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
 workflow-type: tm+mt
-source-wordcount: '2690'
-ht-degree: 8%
+source-wordcount: '2746'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 O destino da API HTTP é um destino de streaming [!DNL Adobe Experience Platform] que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
 
@@ -45,7 +45,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
----------|----------|---------|
+| ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela de mapeamento do [fluxo de trabalho de ativação de destino](../../ui/activate-segment-streaming-destinations.md#mapping). |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -58,6 +58,7 @@ Para usar o destino da API HTTP para exportar dados do Experience Platform, voc�
 * Você deve ter um endpoint HTTP compatível com REST API.
 * Seu endpoint HTTP deve ser compatível com o esquema de perfil do Experience Platform. Nenhuma transformação em um esquema de carga de terceiros é compatível com o destino da API HTTP. Consulte a seção [dados exportados](#exported-data) para obter um exemplo do esquema de saída do Experience Platform.
 * Seu ponto de extremidade HTTP deve oferecer suporte a cabeçalhos.
+* Seu endpoint HTTP deve responder em 2 segundos para garantir o processamento de dados adequado e evitar erros de tempo limite.
 
 >[!TIP]
 >
@@ -363,3 +364,7 @@ Abaixo estão mais exemplos de dados exportados, dependendo das configurações 
 Em 95% das vezes, o Experience Platform tenta oferecer uma latência de taxa de transferência de menos de 10 minutos para mensagens enviadas com êxito, com uma taxa de menos de 10 mil solicitações por segundo para cada fluxo de dados a um destino HTTP.
 
 No caso de solicitações com falha para o destino da API HTTP, o Experience Platform armazena as solicitações com falha e tenta enviar as solicitações duas vezes para o seu endpoint.
+
+## Solução de problemas {#troubleshooting}
+
+Para garantir a entrega de dados confiável e evitar problemas de tempo limite, verifique se o seu ponto de extremidade HTTP responde em 2 segundos às solicitações do Experience Platform, conforme especificado na seção [pré-requisitos](#prerequisites). Respostas que demoram mais resultarão em erros de tempo limite.

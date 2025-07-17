@@ -2,9 +2,9 @@
 title: Conectar O Adobe Analytics Ao Experience Platform
 description: Saiba como trazer seus dados do conjunto de relatórios do Adobe Analytics para o Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 086777a09eec17c94a7e0a5d2db58e4a1f6b523f
+source-git-commit: d6a290b9891b3507d531a595a5428955c7e9ee90
 workflow-type: tm+mt
-source-wordcount: '2731'
+source-wordcount: '2750'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 É importante entender os seguintes termos principais usados neste documento:
 
 * **Atributo padrão**: atributos padrão são atributos predefinidos pela Adobe. Eles contêm o mesmo significado para todos os clientes e estão disponíveis nos grupos de campos de dados de origem do Analytics e esquema do Analytics.
-* **Atributo personalizado**: os atributos personalizados são qualquer atributo na hierarquia de variáveis personalizadas no Analytics. Os atributos personalizados são usados em uma implementação do Adobe Analytics para capturar informações específicas em um conjunto de relatórios e podem diferir no uso de cada conjunto de relatórios. Os atributos personalizados incluem eVars, propriedades e listas. Consulte a seguinte [documentação do Analytics sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=pt-BR) para obter mais informações sobre eVars.
+* **Atributo personalizado**: os atributos personalizados são qualquer atributo na hierarquia de variáveis personalizadas no Analytics. Os atributos personalizados são usados em uma implementação do Adobe Analytics para capturar informações específicas em um conjunto de relatórios e podem diferir no uso de cada conjunto de relatórios. Os atributos personalizados incluem eVars, propriedades e listas. Consulte a seguinte [documentação do Analytics sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obter mais informações sobre eVars.
 * **Qualquer atributo em grupos de campos personalizados**: atributos originários de grupos de campos criados por clientes são todos definidos pelo usuário e não são considerados atributos padrão nem personalizados.
 
 ## Navegar pelo catálogo de origens
@@ -287,6 +287,10 @@ Para obter mais informações sobre preenchimento retroativo, dados em tempo rea
 
 ## Excluir seu fluxo de dados {#delete-dataflow}
 
+>[!NOTE]
+>
+>Não é possível desativar um fluxo de dados do Analytics. Para interromper o fluxo de dados do Analytics, você deve **excluir** totalmente o fluxo de dados.
+
 Para excluir o fluxo de dados do Analytics, selecione **[!UICONTROL Fluxos de dados]** no cabeçalho superior do espaço de trabalho de fontes. Use a página de fluxos de dados para localizar o fluxo de dados do Analytics que você deseja excluir e selecione as reticências (`...`) ao lado dela. Em seguida, use o menu suspenso e selecione **[!UICONTROL Excluir]**.
 
 * A exclusão do fluxo de dados ativo do Analytics também excluirá seu conjunto de dados subjacente.
@@ -307,5 +311,5 @@ O vídeo a seguir é destinado a ajudá-lo a entender a assimilação de dados u
 >
 > A interface do usuário [!DNL Experience Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430257?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 

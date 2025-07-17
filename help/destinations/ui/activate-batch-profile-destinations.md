@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 13adf42a23458d10e217d216d8fe79e8ce33376d
+source-git-commit: 00cec76319c1209e4527e31fad36992b7e778367
 workflow-type: tm+mt
-source-wordcount: '4595'
+source-wordcount: '4644'
 ht-degree: 12%
 
 ---
@@ -142,6 +142,18 @@ Selecione **[!UICONTROL Exportar arquivos completos]** para acionar a exportaç�
    * **[!UICONTROL Diariamente]**: agendar exportações completas de arquivo uma vez por dia, todos os dias, na hora que você especificar.
    * **[!UICONTROL Semanalmente]**: selecione a data de início e as exportações subsequentes ocorrerão nesse dia da semana até a data de término selecionada.
    * **[!UICONTROL Monthly]**: selecione a data de início e as exportações subsequentes ocorrerão nessa data do mês até a data de término selecionada. Para meses com menos de 30 ou 31 dias, a exportação ocorre no último dia do mês.
+
+   >[!NOTE]
+   >
+   > Atualmente, só há suporte para opções de agendamento semanais e mensais para os seguintes destinos de armazenamento na nuvem baseado em arquivo, e apenas ao ativar [públicos-alvo de pessoas](../../segmentation/types/overview.md#people-audience) e [públicos-alvo de clientes potenciais](../../segmentation/types/overview.md#prospect-audience).
+   > 
+   > * [Amazon S3](../catalog/cloud-storage/amazon-s3.md)
+   > * [Armazenamento Azure Blob](../catalog/cloud-storage/azure-blob.md)
+   > * [Zona de Aterrissagem de Dados](../catalog/cloud-storage/data-landing-zone.md)
+   > * [Armazenamento na nuvem do Google](../catalog/cloud-storage/google-cloud-storage.md)
+   > * [SFTP](../catalog/cloud-storage/sftp.md)
+   > 
+   > As opções de agendamento semanal e mensal não estão disponíveis para outros tipos de destino.
 
 2. Use o **[!UICONTROL Time]** para selecionar se a exportação deve ocorrer imediatamente após a avaliação do público-alvo ou de acordo com um agendamento, em um horário especificado. Ao selecionar a opção **[!UICONTROL Agendado]**, você pode usar o seletor para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 
@@ -450,7 +462,7 @@ A Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 
 ### Comportamento de desduplicação para perfis com o mesmo carimbo de data e hora {#deduplication-same-timestamp}
 
-Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Principais considerações
 

@@ -3,13 +3,13 @@ title: Endpoint da API de públicos externos
 description: Saiba como usar a API de públicos-alvo externos para criar, atualizar, ativar e excluir seus públicos-alvo externos do Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
 workflow-type: tm+mt
-source-wordcount: '2312'
-ht-degree: 5%
+source-wordcount: '2405'
+ht-degree: 4%
 
 ---
-
 
 # Endpoint de públicos externos
 
@@ -381,7 +381,7 @@ Você pode iniciar uma assimilação de público-alvo fazendo uma solicitação 
 **Formato da API**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **Solicitação**
@@ -391,7 +391,7 @@ A solicitação a seguir aciona uma execução de assimilação para o público-
 +++ Um exemplo de solicitação para iniciar uma assimilação de público-alvo.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -442,6 +442,10 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes sobre a execuç
 +++
 
 ## Recuperar status de assimilação de público específico {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>Para usar o endpoint a seguir, é necessário ter o `audienceId` do público-alvo externo e o `runId` da ID de execução da assimilação. Você pode obter `audienceId` de uma chamada bem-sucedida para o ponto de extremidade `GET /external-audiences/operations/{OPERATION_ID}` e `runId` de uma chamada bem-sucedida anterior do ponto de extremidade `POST /external-audience/{AUDIENCE_ID}/runs`.
 
 Você pode recuperar o status de uma assimilação de público-alvo fazendo uma solicitação GET para o endpoint a seguir enquanto fornece o público-alvo e as IDs de execução.
 
@@ -514,9 +518,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da assimilaçã
 
 +++
 
-## Listar status de assimilação de público {#list-ingestion-statuses}
+## Listar execuções de assimilação de público {#list-ingestion-runs}
 
-Você pode recuperar todos os status de assimilação do público externo selecionado fazendo uma solicitação GET para o endpoint seguinte ao fornecer a ID do público. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
+>[!NOTE]
+>
+>Para usar o ponto de extremidade a seguir, é necessário ter o `audienceId` do público-alvo externo. Você pode obter seu `audienceId` de uma chamada bem-sucedida para o ponto de extremidade `GET /external-audiences/operations/{OPERATION_ID}`.
+
+Você pode recuperar todas as execuções de assimilação para o público externo selecionado fazendo uma solicitação GET para o endpoint a seguir ao fornecer a ID de público. Vários parâmetros podem ser incluídos, separados por &quot;E&quot; comercial (`&`).
 
 **Formato da API**
 
@@ -534,16 +542,16 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | Parâmetro | Descrição | Exemplo |
 | --------- | ----------- | ------- |
 | `limit` | O número máximo de itens retornados na resposta. Esse valor pode variar de 1 a 40. Por padrão, o limite é definido como 20. | `limit=30` |
-| `sortBy` | A ordem na qual os itens devolvidos são classificados. Você pode classificar por `name` ou por `ingestionTime`. Além disso, você pode adicionar um sinal `-` para classificar por ordem **decrescente** em vez de ordem **ascendente**. Por padrão, os itens são classificados por `ingestionTime` em ordem decrescente. | `sortBy=name` |
-| `property` | Um filtro para determinar quais execuções de assimilação de público-alvo são exibidas. Você pode filtrar pelas seguintes propriedades: <ul><li>`name`: permite filtrar pelo nome do público. Se estiver usando esta propriedade, você poderá comparar usando `=`, `!=`, `=contains` ou `!=contains`. </li><li>`ingestionTime`: permite filtrar pelo tempo de assimilação. Se estiver usando esta propriedade, você poderá comparar usando `>=` ou `<=`.</li><li>`status`: permite filtrar pelo status da execução de assimilação. Se estiver usando esta propriedade, você poderá comparar usando `=`, `!=`, `=contains` ou `!=contains`. </li></ul> | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `sortBy` | A ordem na qual os itens devolvidos são classificados. Você pode classificar por `name` ou por `createdAt`. Além disso, você pode adicionar um sinal `-` para classificar por ordem **decrescente** em vez de ordem **ascendente**. Por padrão, os itens são classificados por `createdAt` em ordem decrescente. | `sortBy=name` |
+| `property` | Um filtro para determinar quais execuções de assimilação de público-alvo são exibidas. Você pode filtrar pelas seguintes propriedades: <ul><li>`name`: permite filtrar pelo nome do público. Se estiver usando esta propriedade, você poderá comparar usando `=`, `!=`, `=contains` ou `!=contains`. </li><li>`createdAt`: permite filtrar pelo tempo de assimilação. Se estiver usando esta propriedade, você poderá comparar usando `>=` ou `<=`.</li><li>`status`: permite filtrar pelo status da execução de assimilação. Se estiver usando esta propriedade, você poderá comparar usando `=`, `!=`, `=contains` ou `!=contains`. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
 +++
 
 **Solicitação**
 
-A solicitação a seguir recupera todos os status de assimilação para o público-alvo externo.
+A solicitação a seguir recupera todas as execuções de assimilação para o público-alvo externo.
 
-+++ Uma solicitação de amostra para obter uma lista de status de assimilação de público-alvo.
++++ Uma solicitação de amostra para obter uma lista de execuções de assimilação de público-alvo.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -557,9 +565,9 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de status de assimilação para o público-alvo externo especificado.
+Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções de assimilação para o público externo especificado.
 
-+++ Uma resposta de amostra quando você recupera uma lista dos status de assimilação de público-alvo.
++++ Uma resposta de amostra quando você recupera uma lista de execuções de assimilação de público-alvo.
 
 ```json
 {
@@ -573,19 +581,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de status de a
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -596,19 +592,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de status de a
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -627,6 +611,10 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de status de a
 +++
 
 ## Excluir um público-alvo externo {#delete-audience}
+
+>[!NOTE]
+>
+>Para usar o ponto de extremidade a seguir, é necessário ter o `audienceId` do público-alvo externo. Você pode obter seu `audienceId` de uma chamada bem-sucedida para o ponto de extremidade `GET /external-audiences/operations/{OPERATION_ID}`.
 
 É possível excluir um público-alvo externo fazendo uma solicitação DELETE para o seguinte endpoint ao fornecer a ID do público-alvo.
 

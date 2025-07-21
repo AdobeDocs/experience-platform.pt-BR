@@ -5,10 +5,10 @@ hide: true
 hidefromtoc: true
 badgeBeta: label="Beta" type="Informative"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: b78f36ed20d5a08036598fa2a1da7dd066c401fa
+source-git-commit: dca3762169d2a469948ee7e877213697f4c444b6
 workflow-type: tm+mt
-source-wordcount: '1054'
-ht-degree: 5%
+source-wordcount: '1126'
+ht-degree: 4%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 ## Visão geral {#overview}
 
-Use o conector de destino do Snowflake para exportar dados para a instância do Snowflake da Adobe e, em seguida, compartilhe-os com sua instância por meio de [listagens privadas](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+Use o conector de destino do Snowflake para exportar dados para a instância do Snowflake do Adobe, que o Adobe compartilha com sua instância por meio de [listagens privadas](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
 
 Leia as seções a seguir para entender como o destino do Snowflake funciona e como os dados são transferidos entre o Adobe e o Snowflake.
 
@@ -29,6 +29,8 @@ Leia as seções a seguir para entender como o destino do Snowflake funciona e c
 Esse destino usa um compartilhamento de dados do [!DNL Snowflake], o que significa que nenhum dado é fisicamente exportado ou transferido para sua própria instância do Snowflake. Em vez disso, o Adobe concede acesso somente leitura a uma tabela ativa hospedada no ambiente Snowflake do Adobe. Você pode consultar essa tabela compartilhada diretamente da sua conta da Snowflake, mas não é o proprietário da tabela e não pode modificá-la ou mantê-la além do período de retenção especificado. O Adobe gerencia totalmente o ciclo de vida e a estrutura da tabela compartilhada.
 
 Na primeira vez que compartilhar dados da instância Snowflake do Adobe com a sua, você será solicitado a aceitar a lista privada do Adobe.
+
+![Captura de tela mostrando a tela de aceitação da lista privada do Snowflake](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
 
 ### Retenção de dados e TTL (Time-to-Live) {#ttl}
 
@@ -51,12 +53,12 @@ Antes de configurar a conexão do Snowflake, verifique se os seguintes pré-requ
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
+Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino. As duas tabelas abaixo indicam a quais públicos este conector dá suporte, por _origem do público-alvo_ e _tipos de perfil incluídos no público-alvo_:
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| Todas as outras origens de público-alvo | ✓ | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 

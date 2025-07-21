@@ -3,9 +3,9 @@ keywords: personalização personalizada, destino, destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de público-alvo do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do público-alvo do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: c037e75da7fa419051a7e38b365a5b6b3a1fc346
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '960'
 ht-degree: 9%
 
 ---
@@ -67,7 +67,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="Sobre IDs de sequências de dados"
+>title="Sobre fluxos de dados"
 >abstract="Essa opção determina em qual sequência de coleção de dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Você deve configurar uma sequência de dados de dados antes de configurar seu destino."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=pt-BR" text="Saiba como configurar uma sequência de dados"
 
@@ -84,7 +84,7 @@ Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornec
 * **[!UICONTROL Nome]**: preencha o nome preferencial para este destino.
 * **[!UICONTROL Descrição]**: insira uma descrição para o seu destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
 * **[!UICONTROL Alias de integração]**: esse valor é enviado para o Experience Platform Web SDK como um nome de objeto JSON.
-* **[!UICONTROL ID da Sequência de Dados]**: Isso determina em qual sequência de dados de Coleção de Dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Consulte [Configurando uma sequência de dados](../../../datastreams/overview.md) para obter mais detalhes.
+* **[!UICONTROL Sequência de dados]**: determina em qual sequência de dados de Coleção de Dados os públicos-alvo serão incluídos na resposta à página. O menu suspenso mostra apenas as sequências de dados com a configuração de destino habilitada. Consulte [Configurando uma sequência de dados](../../../datastreams/overview.md) para obter mais detalhes.
 
 ### Ativar alertas {#enable-alerts}
 

@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 92b70dc6d6085067f11d43436bc74d64bce72dd0
+source-git-commit: 721024192b54fcbab11b483cc26fa84151bb61a7
 workflow-type: tm+mt
-source-wordcount: '4837'
+source-wordcount: '4841'
 ht-degree: 2%
 
 ---
@@ -306,7 +306,7 @@ O componente de composição &quot;colocação&quot; segue uma estrutura rígida
 4. Opcionalmente, é possível adicionar um bloco [!UICONTROL Classificação] ou [!UICONTROL Divisão]. Você pode **ter somente** um desses blocos por composição.
 5. Você **sempre** termina com um bloco [!UICONTROL Salvar] para salvar seu público-alvo.
 
-Além disso, as seguintes restrições (?) aplicar ao usar estes blocos:
+Além disso, as seguintes restrições se aplicam ao usar esses blocos:
 
 - Dividir bloco
    - Este bloco só dá suporte a tipos de dados **Cadeia**. O bloco Split **não** oferece suporte ao tipo de dados date ou boolean.
@@ -326,7 +326,7 @@ Após a criação da composição de público-alvo, pode levar até 48 horas par
 
 ### Quando posso usar o público-alvo que criei?
 
-O público-alvo criado na Composição do público-alvo **imediatamente** será exibido no Portal de público-alvo. No entanto, para usá-lo no Adobe Journey Optimizer, você deve aguardar pelo menos 24 horas após a avaliação.
+O público-alvo criado na Composição do público-alvo **imediatamente** será exibido no Portal de público-alvo. No entanto, para usá-lo em serviços downstream, como o Adobe Journey Optimizer, você deve aguardar pelo menos 24 horas após a avaliação.
 
 ### Os trabalhos de avaliação estão visíveis na seção de monitoramento?
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
 workflow-type: tm+mt
-source-wordcount: '2345'
+source-wordcount: '2362'
 ht-degree: 16%
 
 ---
@@ -310,6 +310,10 @@ Além disso, é possível limitar o número de perfis retornados habilitando a o
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Outros perfis"
 >abstract="A opção Outros perfis permite criar um caminho adicional com os perfis restantes que não correspondem a nenhuma das condições específicas dos outros caminhos."
+
+>[!NOTE]
+>
+>Para usar o bloco **[!UICONTROL Split]**, você **deve** ter pelo menos 10 perfis no seu público-alvo.
 
 O tipo de bloco **[!UICONTROL Split]** permite dividir o novo público em vários subpúblicos. Você pode dividir esse público com base na porcentagem ou por um atributo.
 

@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 00cec76319c1209e4527e31fad36992b7e778367
+source-git-commit: ec0a51bc8a6151a6d713d8f4639d6733989bbb16
 workflow-type: tm+mt
-source-wordcount: '4644'
+source-wordcount: '4678'
 ht-degree: 12%
 
 ---
@@ -285,6 +285,10 @@ Nesta etapa, você deve selecionar os atributos de perfil que deseja adicionar a
 
 1. O campo selecionado para exportação agora aparece na visualização de mapeamento. Se desejar, edite o nome do cabeçalho no arquivo exportado. Para fazer isso, selecione o ícone no campo de destino.
 
+   >[!NOTE]
+   >
+   >Pontos (`.`) não são suportados em nomes de campos em arquivos exportados. Se um nome de campo incluir pontos (como `person.name.firstName`), cada ponto será substituído por um sublinhado (`_`) no nome de coluna exportado. Por exemplo, `person.name.firstName` se tornará `person_name_firstName` no arquivo exportado.
+
    ![Janela modal que mostra atributos de perfil que podem ser exportados para o destino.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
 1. Na página **[!UICONTROL Selecionar campo de destino]**, digite o nome desejado do cabeçalho no arquivo exportado e escolha **[!UICONTROL Selecionar]**.
@@ -462,7 +466,7 @@ A Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 
 ### Comportamento de desduplicação para perfis com o mesmo carimbo de data e hora {#deduplication-same-timestamp}
 
-Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Principais considerações
 

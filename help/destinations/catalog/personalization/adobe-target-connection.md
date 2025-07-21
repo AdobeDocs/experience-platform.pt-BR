@@ -33,7 +33,7 @@ O Adobe Target é uma conexão de personalização no catálogo de destinos do A
 
 Para obter uma breve visão geral sobre como configurar a conexão do Adobe Target no Experience Platform, assista ao vídeo abaixo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449798/?quality=12&learn=on&captions=por_br)
 
 ## Casos de uso compatíveis com base no tipo de implementação {#supported-use-cases}
 

@@ -3,13 +3,13 @@ title: Notas de pré-lançamento do Experience Platform
 description: Uma visualização das notas de versão mais recentes do Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: c716bac1db556fe7a47462e38ee64d7b46bbefcc
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
+source-git-commit: d30778ef3152b779157206ce0d416c0e61ba98c3
 workflow-type: tm+mt
-source-wordcount: '1299'
-ht-degree: 17%
+source-wordcount: '1380'
+ht-degree: 14%
 
 ---
-
 
 # Notas de pré-lançamento do Adobe Experience Platform
 
@@ -23,148 +23,132 @@ ht-degree: 17%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
-**Data de lançamento: quinta-feira, 18 de junho de 2025**
+**Data de lançamento: quarta-feira, 29 de julho de 2025**
 
 Novos recursos e atualizações dos recursos existentes no Adobe Experience Platform:
 
-- [Controle de acesso](#access-control)
-- [Gerenciamento avançado do ciclo de vida dos dados](#advanced-data-lifecycle-management)
-- [Painéis](#dashboards)
-- [Governança de dados](#data-governance)
 - [Destinos](#destinations)
-- [Composição de público-alvo federado](#fac)
-- [Privacy Service](#privacy-service)
+- [Ingestão de dados](#ingestion)
+- [Query Service](#query-service)
+- [Real-Time CDP B2B Edition](#b2b)
 - [Sandboxes](#sandboxes)
+- [Serviço de segmentação](#segmentation)
 - [Origens](#sources)
-
-## Controle de acesso {#access-control}
-
-O Experience Platform aproveita os perfis de produto do [Adobe Admin Console](https://adminconsole.adobe.com) para vincular usuários com permissões e sandboxes. As permissões controlam o acesso a vários recursos do Experience Platform, incluindo modelagem de dados, gerenciamento de perfis e administração de sandbox.
-
-**Principais recursos**
-
-| Recurso | Descrição |
-| ------- | ----------- |
-| Permissão Exportar dados do painel | As opções **[!UICONTROL Baixar CSV]** e **[!UICONTROL Enviar como email]** nos painéis agora exigem a permissão **[!UICONTROL Exportar Dados do Painel]**. Essa permissão garante que somente os usuários autorizados possam exportar dados tabelados do insight, oferecendo suporte a políticas mais rigorosas de controle de governança e acesso aos dados. |
-
-Para obter mais informações, consulte a [visão geral do controle de acesso](../access-control/home.md).
-
-## Gerenciamento avançado do ciclo de vida dos dados {#advanced-data-lifecycle-management}
-
-O Experience Platform fornece um conjunto de recursos de higiene de dados que permitem gerenciar os dados armazenados por meio de exclusões programáticas de registros e conjuntos de dados do consumidor. Usando o espaço de trabalho Ciclo de vida dos dados na interface do usuário ou por meio de chamadas para a API de higiene de dados, você pode gerenciar com eficiência seus armazenamentos de dados. Use esses recursos para garantir que as informações sejam usadas conforme esperado, sejam atualizadas quando dados incorretos precisarem de correção e sejam excluídas quando as políticas organizacionais considerarem necessário.
-
-**Nova documentação**
-
-| Nova documentação | Descrição |
-| --- | --- |
-| Disponibilidade Geral de Exclusão de Registro | Agora é possível excluir registros individuais com base em campos de identidade usando a interface ou a API. Esse recurso ajuda a reduzir o armazenamento, impor a governança e melhorar a higiene de dados permitindo exclusões de um único conjunto de dados ou em todos os conjuntos de dados. Limites de volume e requisitos de qualificação se aplicam. |
-
-Para obter mais informações, leia a [visão geral avançada do gerenciamento do ciclo de vida dos dados](../hygiene/home.md).
-
-## Painéis {#dashboards}
-
-O Experience Platform fornece vários painéis por meio dos quais você pode visualizar insights importantes sobre os dados de sua organização, conforme capturados durante instantâneos diários.
-
-**Recursos novos ou atualizados**
-
-| Recurso | Descrição |
-| ------- | ----------- |
-| Opção de exportação Enviar como email | Agora é possível exportar até 10.000 registros dos painéis do modo Query Pro selecionando **[!UICONTROL Enviar como email]** no menu **[!UICONTROL Exibir mais]**. Essa opção envia com segurança um link de download para o email associado à Adobe para exportações maiores. |
-
-Para obter mais informações sobre painéis, incluindo como conceder permissões de acesso e criar widgets personalizados, comece lendo a [visão geral dos painéis](../dashboards/home.md).
-
-## Governança de dados {#data-governance}
-
-A Governança de dados da Adobe Experience Platform é uma série de estratégias e tecnologias usadas para gerenciar dados de clientes e garantir a conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ele desempenha uma função importante no [!DNL Experience Platform] em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de acesso a dados e controle de acesso a dados para ações de marketing.
-
-**Novos recursos**
-
-| Recurso | Descrição |
-| --- | --- |
-| Configurações de Alertas CMK do Azure e Inclui na lista de permissões de IP | Incluir na lista de permissões Agora você pode atualizar o endereço IP estático da Adobe no Cofre de chaves do Azure para garantir acesso contínuo quando as restrições de rede forem ativadas. Isso ajuda a evitar interrupções nos serviços da Platform devido ao acesso restrito à chave. |
-| Alertas e resoluções de configuração do CMK | O Experience Platform agora aciona alertas quando os serviços da Adobe perdem acesso ao Cofre de Chaves do Azure (por exemplo, devido a entradas de inclui na lista de permissões IP removidas ou chaves desabilitadas). Um novo guia ajuda você a entender cada alerta e tomar medidas corretivas. |
-
-Para obter mais informações, leia a [visão geral da governança de dados](../data-governance/home.md).
 
 ## Destinos {#destinations}
 
 [!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
-**Novos destinos**
+**Destinos atualizados**
 
 | Destino | Descrição |
 | --- | --- |
-| Segmentos de usuário da Algólia | O destino Segmentos de usuário da Algolia permite que profissionais de marketing forneçam personalização consistente em todos os sites, desde a home page até a pesquisa. Crie públicos-alvo avançados de várias fontes de dados e compartilhe-os em vários canais para melhorar as estratégias de direcionamento e a personalização da campanha. |
+| Consolidação de placas de destino Marketo | Os cartões de destino do Marketo V2 e do Marketo Engage Person Sync foram consolidados em um único cartão de destino unificado. Essa consolidação simplifica o processo de seleção de destino e fornece uma experiência mais simplificada para integrações do Marketo. |
 
 **Funcionalidade nova ou atualizada**
 
 | Recurso | Descrição |
 | --- | --- |
-| Informações de expiração da conta do LinkedIn | As informações de expiração de conta para destinos do LinkedIn agora estão disponíveis diretamente nos modos de exibição [!UICONTROL Procurar] e [!UICONTROL Contas]. Anteriormente, essas informações só estavam disponíveis na documentação. Esse aprimoramento oferece melhor visibilidade do status de autenticação e do gerenciamento de credenciais do LinkedIn. |
-| Correspondência de clientes da Google + disponibilidade geral e aprimoramento do DV360 | O destino Google Customer Match + DV360 agora está disponível para todos os usuários do Experience Platform. A documentação agora inclui orientações detalhadas para a vinculação de contas entre as contas de publicidade do Adobe e da Google. |
-| Suporte à criptografia de destino da Zona de aterrissagem de dados (DLZ) | Adição de suporte de criptografia para o destino da Data Landing Zone. Agora é possível anexar chaves públicas formatadas em RSA para adicionar criptografia aos arquivos exportados. |
-| Monitoramento no nível do público-alvo para destinos corporativos | O monitoramento no nível de público agora está disponível para os seguintes destinos corporativos: [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md). |
+| Suporte à criptografia de destino da Zona de aterrissagem de dados (DLZ) | Adição de suporte de criptografia para o destino da Data Landing Zone. Agora é possível anexar chaves públicas formatadas em RSA para adicionar criptografia aos arquivos exportados, fornecendo segurança aprimorada para exportações de dados confidenciais. |
+| Informações de sequência de dados aprimoradas para destinos de borda | Agora, as informações aprimoradas no painel direito para destinos Adobe Target e Personalization personalizados exibem os campos Nome da sequência de dados e ID da sequência de dados, fornecendo visibilidade mais clara das configurações de sequência de dados associadas e reduzindo a confusão ao revisar fluxos de dados existentes. O seletor de **[!UICONTROL ID de Sequência de Dados]** na tela de configuração de destino foi atualizado para **[!UICONTROL Sequência de Dados]** para maior clareza na interface. |
+| Visibilidade de ações de marketing na seleção de destino | As ações de marketing agora são exibidas no painel direito da etapa [!UICONTROL Selecionar destino] ao configurar um fluxo de dados, fornecendo visibilidade imediata das alterações da ação de marketing sem exigir navegação para a página de exibição. Esse aprimoramento melhora a experiência do usuário, facilitando a verificação das configurações de ação de marketing durante a configuração do destino. |
+| Editar ações de marketing para destinos | Agora é possível editar ações de marketing para destinos existentes. |
+| Nomes e descrições de conta para conexões de destino | Agora é possível adicionar nomes e descrições de conta ao se conectar a destinos, permitindo um melhor gerenciamento de destinos com várias contas. |
 
-{style="table-layout:auto"}
+**Correções**
+
+| Problema | Descrição |
+| --- | --- |
+| Funcionalidade de rolagem de categorias | Correção de um problema em que o menu lateral de categorias no catálogo de destinos e origens não rolava corretamente sobre o mouse, melhorando a usabilidade da navegação para usuários que navegavam em categorias de destino. |
 
 Para obter mais informações, leia a [Visão geral dos Destinos](../destinations/home.md).
 
-## Composição de público-alvo federado {#fac}
+## Ingestão de dados {#ingestion}
 
-A Federated Audience Composition permite que as empresas componham dados para obter uma melhor aplicação em vários casos de uso. Com essa nova abordagem, como usuário da Adobe Real-Time Customer Data Platform e/ou Adobe Journey Optimizer, você pode federar conjuntos de dados diretamente do data warehouse existente para criar e enriquecer públicos-alvo e atributos da Adobe Experience Platform, tudo em um sistema.
-
-| Novo recurso | Descrição |
-| ----------- | ----------- |
-| Preparo para a HIPAA | A Federated Audience Composition agora é compatível com a HIPAA. Para obter mais informações sobre as medidas de privacidade e segurança da Federated Audience Composition, leia a [visão geral sobre privacidade e segurança na Federated Audience Composition](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/start/privacy-security). Para obter mais informações sobre a conformidade com a HIPAA para produtos da Experience Platform em geral, leia a [visão geral sobre produtos e serviços da HIPAA e da Adobe](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
-
-Para obter mais informações, leia a [documentação sobre a Composição de Público-Alvo Federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home).
-
-## [!DNL Privacy Service] {#privacy}
-
-Várias regulamentações legais e organizacionais dão aos usuários o direito de acessar ou excluir seus dados pessoais dos armazenamentos de dados, mediante solicitação. O Adobe Experience Platform [!DNL Privacy Service] fornece uma API RESTful e uma interface para ajudar você a gerenciar essas solicitações de dados de seus clientes. Com o [!DNL Privacy Service], você pode enviar solicitações para acessar e excluir dados privados ou pessoais dos clientes por meio dos aplicativos da Adobe Experience Cloud, facilitando a conformidade automatizada com as regulamentações legais e organizacionais de privacidade.
+O Experience Platform fornece uma estrutura abrangente de assimilação de dados que oferece suporte à assimilação de dados em lote e por transmissão de várias fontes.
 
 **Novos recursos**
 
 | Recurso | Descrição |
-|--- | ---|
-| Suporte às leis de privacidade do Tennessee e de Minnesota | A Privacy Service agora oferece suporte à Lei de Proteção de Informações do Tennessee (`tipa_tn_usa`) e à Lei de Privacidade de Dados do Consumidor de Minnesota (`mcdpa_mn_usa`). Você pode processar solicitações de acesso e exclusão em conformidade com esses novos regulamentos de nível de estado. Consulte a [Visão geral de Regulamentos](https://experienceleague.adobe.com/pt-br/docs/experience-platform/privacy/regulations/overview) para obter mais detalhes. |
+| ------- | ----------- |
+| Suporte para monitorar a assimilação de perfil de transmissão | O monitoramento em tempo real para assimilação de perfil por transmissão agora está disponível, fornecendo transparência às métricas de taxa de transferência, latência e qualidade de dados. Isso oferece suporte a alertas proativos e insights acionáveis para ajudar os engenheiros de dados a identificar violações de capacidade e problemas de assimilação. |
 
-Consulte a [visão geral do Privacy Service](../privacy-service/home.md) para obter mais informações sobre o serviço.
+Para obter mais informações, leia a [visão geral da assimilação de dados](../ingestion/home.md).
+
+## Query Service {#query-service}
+
+O Adobe Experience Platform Query Service fornece uma interface SQL robusta para análise e exploração de dados em toda a plataforma.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Gerenciamento de sessão aprimorado | O Data Distiller agora inclui recursos aprimorados de gerenciamento de sessões, fornecendo melhor controle sobre as sessões do usuário e melhor monitoramento do desempenho em ambientes de desenvolvimento e produção. |
+| Suporte para restrições de caracteres de senha de credenciais sem expiração | O Data Distiller agora oferece suporte a credenciais sem expiração com restrições de caracteres específicas. Embora as senhas exijam pelo menos um número, uma letra minúscula, uma maiúscula e um caractere especial, o cifrão ($) não é compatível. Os caracteres especiais recomendados incluem `!, @, #, ^, or &`. |
+| Maior consistência de desempenho entre ambientes | O desempenho do Data Distiller agora é consistente entre sandboxes de desenvolvimento e produção, com recursos de back-end semelhantes disponíveis em ambos os ambientes. As horas de computação consumidas podem variar com base no volume de dados e nos recursos de computação de back-end disponíveis no momento do processamento. |
+
+Para obter mais informações, leia a [Visão geral do Serviço de consulta](../query-service/home.md).
+
+## Real-Time CDP B2B Edition {#b2b}
+
+O Real-Time CDP B2B edition fornece recursos abrangentes de gerenciamento de dados de clientes B2B, permitindo que as organizações criem perfis unificados de clientes, criem públicos B2B sofisticados e ativem dados em vários canais de marketing.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Atualização da arquitetura B2B | A Experience Platform está atualizando para uma nova arquitetura B2B que introduz melhorias significativas em públicos-alvo de várias entidades com atributos B2B. Essa atualização consolida o suporte à política de mesclagem, melhora a precisão das contagens de público e melhora os recursos de resolução da entidade. |
+| Consolidação de política de mesclagem para públicos-alvo de várias entidades | Públicos-alvo de várias entidades com atributos B2B agora oferecem suporte a apenas uma única política de mesclagem — a política de mesclagem padrão — em vez de oferecer suporte a várias políticas de mesclagem. Essa alteração garante uma composição consistente do público-alvo e simplifica o gerenciamento da lógica de mesclagem. |
+| Atualizações das restrições de público-alvo da conta | Os públicos-alvo da conta não têm mais as restrições anteriores de uma janela de pesquisa de 30 dias para Eventos de experiência, restrições de entidade personalizadas ou limitações no uso de eventos `inSegment`. Essas atualizações fornecem maior flexibilidade ao criar definições complexas de público-alvo B2B. |
+| Contagens de público aprimoradas para entidades B2B | As estimativas de tamanho para públicos-alvo com entidades B2B, como Contas e Oportunidades, agora são exatas, com base nos resultados da segmentação em tempo real. Essa melhoria fornece estimativas mais precisas e confiáveis para públicos-alvo que envolvem relacionamentos complexos B2B. |
+| Instantâneos de conta para associação de público-alvo | Os detalhes de associação ao público-alvo agora são incluídos para entidades Account em exportações de instantâneo, permitindo acesso ao status do público-alvo no nível da conta, carimbos de data e hora e indicadores de associação. Isso traz paridade de recursos entre os modelos de segmentação de Perfil (Pessoa) e Conta. |
+| Alterações nas ferramentas de sandbox para públicos de várias entidades | Não há mais suporte para a importação de públicos-alvo de várias entidades com entidades B2B e eventos de experiência exportados antes da migração. Esses públicos-alvo falharão na validação da importação e não poderão ser convertidos automaticamente para a nova arquitetura. Os públicos devem ser reexportados após a migração antes da importação para sandboxes de destino. |
+| Desaprovações da API de entidade B2B | A criação de público-alvo por meio da API para entidades B2B (Conta, Oportunidade, Relação conta-pessoa, Relação oportunidade-pessoa, Campanha, Membro de campanha, Lista de marketing e Membro da Lista de marketing) agora está obsoleta. Além disso, as operações de pesquisa e exclusão da API de acesso ao perfil para essas entidades B2B também estão obsoletas. |
+| Atualizações no namespace de identidade para Resolução de Entidade | As entidades de Conta e Oportunidade agora usam mesclagem baseada em precedência de tempo com namespaces de identidade específicos (`b2b_account` para Conta, `b2b_opportunity` para Oportunidade). Todas as outras entidades são unificadas com sobreposições de identidade primárias mescladas usando a mesclagem baseada em precedência de tempo. |
+
+Para obter mais informações, leia a [visão geral do Real-Time CDP B2B edition](../rtcdp/b2b-overview.md).
 
 ## Sandboxes {#sandboxes}
 
-O Adobe Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional.
+O Experience Platform foi criado para enriquecer aplicativos de experiência digital em escala global. As empresas geralmente executam vários aplicativos de experiência digital em paralelo e precisam atender ao desenvolvimento, ao teste e à implantação desses aplicativos enquanto garantem a conformidade operacional.
 
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
-| Migração de atualizações de configuração de objeto | Agora é possível migrar atualizações de configuração de objetos iterativos em sandboxes após a replicação inicial. Esse aprimoramento suporta fluxos de trabalho de desenvolvimento em que as configurações precisam ser atualizadas e propagadas entre ambientes sem recriar toda a configuração da sandbox. |
-
-{style="table-layout:auto"}
+| Alterações nas importações de público-alvo de várias entidades | As ferramentas de sandbox foram atualizadas para oferecer suporte à nova atualização da arquitetura B2B. Públicos-alvo de várias entidades contendo entidades B2B e Eventos de experiência devem ser reexportados após a atualização da arquitetura antes de serem importados para sandboxes de destino por meio de ferramentas de sandbox. A validação será falha ao importar versões pré-atualização. |
 
 Para obter mais informações sobre sandboxes, leia a [visão geral das sandboxes](../sandboxes/home.md).
+
+## Serviço de segmentação {#segmentation-service}
+
+O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os públicos podem ser baseados em dados de registro (como informações demográficas) ou eventos de séries temporais que representam interações do cliente com sua marca.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| API de público-alvo externo | Você pode usar a API de públicos externos para importar programaticamente públicos gerados externamente para o Adobe Experience Platform. |
 
 ## Origens {#sources}
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
-**Recursos atualizados**
+**Novas fontes**
+
+| Fonte | Descrição |
+| --- | --- |
+| Suporte para [!DNL Didomi] (SDK de Streaming) | O conector de origem do [!DNL Didomi] permite assimilar dados de gerenciamento de consentimento da plataforma do [!DNL Didomi], oferecendo suporte à conformidade com as regulamentações de privacidade e estratégias de marketing baseadas em consentimento. |
+
+**Funcionalidade nova ou atualizada**
 
 | Recurso | Descrição |
 | --- | --- |
-| Suporte para novo tipo de autenticação para [!DNL Azure Synapse Analytics] | O [!DNL Azure Synapse Analytics] agora também oferecerá suporte à autenticação da entidade de serviço, além da autenticação da cadeia de conexão existente. |
-
-**Atualizações importantes de autenticação**
-
-| Atualização | Descrição |
-| --- | --- |
-| Descontinuação da Autenticação Básica do [!DNL Salesforce] | A Autenticação básica do Salesforce CRM e do Salesforce Service Cloud será substituída em janeiro de 2026. Os clientes devem migrar para a autenticação OAuth 2.0 para manter a conectividade. Essa alteração afeta os conectores de origem e garante maior segurança e conformidade com os padrões de autenticação da Salesforce. |
-
-{style="table-layout:auto"}
+| Suporte para captura de dados de alteração em origens selecionadas | Agora é possível criar fluxos de dados que permitem a captura de dados de alteração para assimilação incremental usando conectores de origem. Esse recurso permite que os clientes tragam tipos de dados de alteração para assimilação incremental, melhorando a atualização de dados e reduzindo a sobrecarga de processamento. |
+| Suporte para exclusão reversível de registros em [!DNL Salesforce] | A origem [!DNL Salesforce] agora dá suporte à inclusão de registros excluídos por meio de um parâmetro `includeDeletedObjects` opcional. Quando definido como verdadeiro, os clientes podem incluir registros excluídos por software em suas consultas [!DNL Salesforce] e trazer esses registros para a Experience Platform. |
 
 Para obter mais informações, leia a [visão geral de fontes](../sources/home.md).

@@ -3,9 +3,9 @@ title: Criar uma nova conexão de destino
 type: Tutorial
 description: Saiba como se conectar a um destino no Adobe Experience Platform, ativar alertas e configurar ações de marketing para o destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
-source-wordcount: '1145'
+source-wordcount: '1176'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,11 @@ Antes de enviar dados do público-alvo para um destino, é necessário configura
    ![Captura de tela da interface do usuário do Experience Platform, mostrando uma lista de destinos disponíveis e o controle Configurar novo destino destacado.](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## Autenticar para o destino {#authenticate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="Nome da conta"
+>abstract="Digite um nome que o ajudará a identificar facilmente esta conta de destino no futuro. Isso é especialmente útil se você tiver várias conexões com o mesmo tipo de destino."
 
 A primeira etapa na conexão com um destino é autenticar na plataforma de destino.
 

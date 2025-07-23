@@ -2,10 +2,10 @@
 title: Hosts SFTP
 description: Saiba como configurar tags na Adobe Experience Platform para fornecer builds de biblioteca a um servidor SFTP seguro e auto-hospedado.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 34%
+source-wordcount: '815'
+ht-degree: 37%
 
 ---
 
@@ -37,27 +37,11 @@ A chave privada é usada para criptografar a chave pública. Será necessário f
 
 ### Incluir na lista de permissões endereços IP da Experience Platform
 
->[!IMPORTANT]
->
-> Em 23 de junho de 2025, o Adobe Launch atualizará os endereços IP externos usados para oferecer suporte ao tipo de host SFTP e à funcionalidade de API de retorno de chamada. Para continuar usando qualquer um desses recursos, verifique se as regras de firewall permitem o tráfego dos novos endereços IP.
->
-> Para manter o acesso ininterrupto, recomendamos adicionar os novos IPs agora e remover os antigos após 23 de junho de 2025.
->
->**Endereços IP antigos:**
-> * `184.72.239.68`
-> * `23.20.85.113`
-> * `54.226.193.184`
->
->**Novos endereços IP:**
-> * `34.227.138.75 `
-> * `44.194.43.191`
-> * `3.215.163.18`
-
 Talvez seja necessário aprovar um conjunto de endereços IP a ser usado no firewall da empresa para permitir que o Experience Platform acesse o servidor SFTP e se conecte a ele. Esses endereços IP são:
 
-* `184.72.239.68`
-* `23.20.85.113`
-* `54.226.193.184`
+* `34.227.138.75`
+* `44.194.43.191`
+* `3.215.163.18`
 
 >[!NOTE]
 >

@@ -4,9 +4,9 @@ description: Uma visualização das notas de versão mais recentes do Adobe Expe
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d30778ef3152b779157206ce0d416c0e61ba98c3
+source-git-commit: fddefb7de85b5dcb8c8721e14d04efc0567ccae4
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1358'
 ht-degree: 14%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 14%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 29 de julho de 2025**
 
@@ -53,10 +53,9 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 
 | Recurso | Descrição |
 | --- | --- |
-| Suporte à criptografia de destino da Zona de aterrissagem de dados (DLZ) | Adição de suporte de criptografia para o destino da Data Landing Zone. Agora é possível anexar chaves públicas formatadas em RSA para adicionar criptografia aos arquivos exportados, fornecendo segurança aprimorada para exportações de dados confidenciais. |
-| Informações de sequência de dados aprimoradas para destinos de borda | Agora, as informações aprimoradas no painel direito para destinos Adobe Target e Personalization personalizados exibem os campos Nome da sequência de dados e ID da sequência de dados, fornecendo visibilidade mais clara das configurações de sequência de dados associadas e reduzindo a confusão ao revisar fluxos de dados existentes. O seletor de **[!UICONTROL ID de Sequência de Dados]** na tela de configuração de destino foi atualizado para **[!UICONTROL Sequência de Dados]** para maior clareza na interface. |
-| Visibilidade de ações de marketing na seleção de destino | As ações de marketing agora são exibidas no painel direito da etapa [!UICONTROL Selecionar destino] ao configurar um fluxo de dados, fornecendo visibilidade imediata das alterações da ação de marketing sem exigir navegação para a página de exibição. Esse aprimoramento melhora a experiência do usuário, facilitando a verificação das configurações de ação de marketing durante a configuração do destino. |
-| Editar ações de marketing para destinos | Agora é possível editar ações de marketing para destinos existentes. |
+| Informações de sequência de dados aprimoradas para destinos de borda | As informações aprimoradas do painel direito para destinos Adobe Target e Personalization personalizados agora exibem o nome do fluxo de dados, fornecendo visibilidade mais clara das configurações de fluxo de dados associadas e reduzindo a confusão ao revisar fluxos de dados existentes. O seletor de **[!UICONTROL ID de Sequência de Dados]** na tela de configuração de destino foi atualizado para **[!UICONTROL Sequência de Dados]** para maior clareza na interface. |
+| Visibilidade de ações de marketing na seleção de destino | As ações de marketing agora são exibidas no painel direito da guia **[!UICONTROL Procurar]** de destino e na página **[!UICONTROL Execuções de fluxo de dados]**, fornecendo visibilidade imediata das alterações da ação de marketing sem exigir navegação para a página de exibição. Esse aprimoramento melhora a experiência do usuário, facilitando a verificação das configurações de ação de marketing durante a configuração do destino. |
+| (Beta limitado) Editar ações de marketing para destinos | Agora é possível editar ações de marketing para destinos existentes. Essa funcionalidade está na versão beta limitada. Para solicitar acesso, entre em contato com o representante da Adobe. |
 | Nomes e descrições de conta para conexões de destino | Agora é possível adicionar nomes e descrições de conta ao se conectar a destinos, permitindo um melhor gerenciamento de destinos com várias contas. |
 
 **Correções**

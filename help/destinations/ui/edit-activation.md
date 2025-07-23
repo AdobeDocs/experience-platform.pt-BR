@@ -4,9 +4,9 @@ title: Editar fluxos de dados de ativação
 type: Tutorial
 description: Siga as etapas deste artigo para editar um fluxo de dados de ativação existente no Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
+source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -19,10 +19,9 @@ No Adobe Experience Platform, você pode configurar vários componentes de fluxo
 * [Adicionar mais públicos-alvo](#add-audiences) aos fluxos de dados de ativação
 * [Editar atributos e identidades mapeadas](#edit-mapped-attributes)
 * [Editar o agendamento de ativação e a frequência de exportação](#edit-schedule-frequency)
-* [Adicionar conjuntos de dados adicionais](#add-datasets) aos fluxos de trabalho de ativação
+* [Adicionar conjuntos de dados adicionais](#add-datasets) ao fluxo de trabalho de ativação
+* [Aplicar rótulos de acesso](#apply-access-labels) aos dados exportados
 * [Editar nomes e descrições](#edit-names-descriptions) para seus fluxos de dados de ativação
-
-<!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
 ## Procurar fluxos de dados de ativação {#browse-activation-dataflows}
 
@@ -100,8 +99,6 @@ O fluxo de trabalho de ativação é ligeiramente diferente dependendo do tipo d
 * [Ativar públicos para destinos de exportação de perfil em lote](./activate-batch-profile-destinations.md) (por exemplo, Amazon S3 ou Oracle Eloqua);
 * [Ative públicos para destinos de exportação de perfil de streaming](./activate-streaming-profile-destinations.md) (por exemplo, API HTTP ou Amazon Kinesis).
 
-
-
 ## Adicionar conjuntos de dados a um fluxo de dados de ativação {#add-datasets}
 
 Selecione **[!UICONTROL Exportar conjuntos de dados]** no painel direito para selecionar conjuntos de dados adicionais para exportar para o seu destino. Essa opção direciona você ao [fluxo de trabalho de exportação do conjunto de dados](export-datasets.md).
@@ -112,13 +109,11 @@ Selecione **[!UICONTROL Exportar conjuntos de dados]** no painel direito para se
 
 ![Imagem da interface do Experience Platform mostrando a opção de execução do fluxo de dados Exportar conjuntos de dados.](../assets/ui/edit-activation/export-datasets.png)
 
+## Aplicar rótulos de acesso {#apply-access-labels}
 
+Selecione **[!UICONTROL Aplicar rótulos de acesso]** para editar os rótulos de uso de dados dos dados exportados. Consulte a [documentação de rótulos de uso de dados](../../data-governance/labels/overview.md) para saber mais.
 
-<!-- ## Apply access labels {#apply-access-labels}
-
-Select **[!UICONTROL Apply access labels]** to edit the data usage labels for the exported data. See the [data usage labels documentation](../../data-governance/labels/overview.md) to learn more.
-
-![Experience Platform UI image showing the Export datasets dataflow run option.](../assets/ui/edit-activation/apply-access-labels.png) -->
+![Imagem da interface do Experience Platform mostrando a opção de execução do fluxo de dados Exportar conjuntos de dados.](../assets/ui/edit-activation/apply-access-labels.png)
 
 ## Editar nomes e descrições do fluxo de dados de ativação {#edit-names-descriptions}
 

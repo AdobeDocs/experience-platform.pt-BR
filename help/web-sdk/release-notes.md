@@ -3,18 +3,31 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2355'
+source-wordcount: '2438'
 ht-degree: 5%
 
 ---
 
 
-# Notas de versão
+# Notas de versão do Web SDK
 
 Este documento aborda as notas de versão do Adobe Experience Platform Web SDK.
 Para obter as notas de versão mais recentes da extensão de tag do Web SDK, consulte as [notas de versão da extensão de tag do Web SDK](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versão 2.28.0 - sexta-feira, 24 de julho de 2025
+
+**Novos recursos**
+
+- Adição de suporte para regras de desqualificação do Adobe Journey Optimizer.
+
+**Correções e melhorias**
+
+- Correção de um erro no [rastreador do Media Analytics](commands/getmediaanalyticstracker.md) em que a propriedade `length` do objeto de mídia aceitava incorretamente tipos de dados inválidos.
+- Melhoria na manipulação de erros de [gerenciamento de identidade](identity/overview.md) para processar corretamente rejeições de promessas quando a pesquisa de identidade falha.
+- Solução de um problema em que o [conteúdo de personalização](personalization/rendering-personalization-content.md) com itens de conteúdo do HTML não era renderizado com um erro relacionado a um `renderStatusHandler` ausente.
+- Corrigido o Activity Map [coleção de URLs](commands/configure/clickcollectionenabled.md) para manipular corretamente URLs não HTTP.
 
 ## Versão 2.27.0 - quarta-feira, 20 de maio de 2025
 

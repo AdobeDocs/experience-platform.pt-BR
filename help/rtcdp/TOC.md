@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de diversas fontes empresariais para criar perfis de clientes, criar públicos-alvo a partir desses perfis e ativar esses públicos-alvo para destinos de terceiros.
 role: Admin
-source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
+source-git-commit: 74a73b568c850f8e749afea039afd2821858bd69
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 61%
+source-wordcount: '311'
+ht-degree: 60%
 
 ---
 
@@ -26,6 +26,7 @@ ht-degree: 61%
       * [Exemplo de caso de uso](./b2b-use-case.md)
       * [Tutorial completo](./b2b-tutorial.md)
       * [Medidas de proteção da Real-Time CDP B2B Edition](b2b-guardrails.md)
+      * [Atualizações da arquitetura do Real-Time CDP B2B edition](b2b-architecture-upgrade.md)
 * AUDIENCE MANAGER e REAL-TIME CDP {#evolution}
    * [Evolução do Audience Manager](aam-to-rtcdp.md)
 * Perfis de conta {#account}
@@ -46,12 +47,12 @@ ht-degree: 61%
    * [Destinos na Real-Time CDP B2B Edition](destinations/b2b.md)
 * Medidas de proteção {#guardrails}
    * [Visão geral das medidas de proteção do Real-Time CDP](guardrails/overview.md)
-   * [Medidas de proteção para assimilação de dados](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=pt-BR){target="_blank"}
+   * [Medidas de proteção para assimilação de dados](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Medidas de proteção para [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Medidas de proteção para [!DNL Real-Time Customer Profile] dados e segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=pt-BR){target="_blank"}
-   * [Medidas de proteção para [!DNL Identity Service] dados](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=pt-BR){target="_blank"}
-   * [Medidas de proteção para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=pt-BR){target="_blank"}
-   * [Medidas de proteção para ativação de dados por meio de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=pt-BR){target="_blank"}
+   * [Medidas de proteção para [!DNL Identity Service] dados](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Medidas de proteção para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Medidas de proteção para ativação de dados por meio de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identidades {#identity}
    * [Identidades e namespaces de identidade](profile/identities-overview.md)
 * Mesclar políticas {#merge-policies}
@@ -87,5 +88,5 @@ ht-degree: 61%
       * [Evoluir valor único do cliente para valor vitalício](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Reenvolva seus clientes de forma inteligente](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Reenvolva seus clientes de forma inteligente: exemplos da Luma](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)
 * [Glossário da Experience Platform](https://www.adobe.com/go/platform-glossary-en)

@@ -2,7 +2,7 @@
 description: Saiba como definir as configurações de exportação de arquivo para destinos criados com o Destination SDK.
 title: Configuração em lote
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a149e0b96b68c8ac61e355cf8605742feb4eec41
 workflow-type: tm+mt
 source-wordcount: '1058'
 ht-degree: 2%
@@ -33,7 +33,7 @@ Este artigo descreve todas as opções de configuração em lote compatíveis qu
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -63,7 +63,9 @@ Os valores configurados aqui são exibidos na etapa [Agendar exportação de pú
       "EVERY_6_HOURS",
       "EVERY_8_HOURS",
       "EVERY_12_HOURS",
-      "ONCE"
+      "ONCE",
+      "WEEKLY",
+      "MONTHLY"
    ],
    "defaultFrequency":"DAILY",
    "defaultStartTime":"00:00",
@@ -92,7 +94,7 @@ Os valores configurados aqui são exibidos na etapa [Agendar exportação de pú
 | `allowDedupeKeyFieldSelection` | Booleano | Defina como `true` para permitir que os clientes especifiquem chaves de desduplicação. O valor padrão é `false`.  Consulte [Chaves de desduplicação](../../../ui/activate-batch-profile-destinations.md#deduplication-keys) para obter mais informações. |
 | `defaultExportMode` | Enumeração | Define o modo de exportação de arquivo padrão. Valores compatíveis:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> O valor padrão é `DAILY_FULL_EXPORT`. Consulte a [documentação de ativação em lote](../../../ui/activate-batch-profile-destinations.md#scheduling) para obter detalhes sobre o agendamento de exportações de arquivos. |
 | `allowedExportModes` | Lista | Define os modos de exportação de arquivo disponíveis para clientes. Valores compatíveis:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
-| `allowedScheduleFrequency` | Lista | Define a frequência de exportação de arquivos disponível para os clientes. Valores compatíveis:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
+| `allowedScheduleFrequency` | Lista | Define a frequência de exportação de arquivos disponível para os clientes. Valores compatíveis:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> |
 | `defaultFrequency` | Enumeração | Define a frequência de exportação de arquivo padrão. Valores compatíveis:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> O valor padrão é `DAILY`. |
 | `defaultStartTime` | String | Define a hora de início padrão da exportação de arquivos. Usa o formato de arquivo de 24 horas. O valor padrão é &quot;00:00&quot;. |
 | `filenameConfig.allowedFilenameAppendOptions` | String | *Obrigatório*. Lista de macros de nome de arquivo disponíveis para os usuários escolherem. Isso determina quais itens são anexados a nomes de arquivo exportados (ID de público-alvo, nome da organização, data e hora da exportação e outros). Ao configurar `defaultFilename`, evite a duplicação de macros. <br><br>Valores com suporte: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Independentemente da ordem em que você define as macros, a interface do usuário do Experience Platform sempre as exibirá na ordem apresentada aqui. <br><br> Se `defaultFilename` estiver vazio, a lista `allowedFilenameAppendOptions` deverá conter pelo menos uma macro. |

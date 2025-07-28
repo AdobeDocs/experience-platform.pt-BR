@@ -5,10 +5,10 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 079c1d7ac790fb7df72a6127a980080bdaa49518
+source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 35%
+source-wordcount: '1047'
+ht-degree: 34%
 
 ---
 
@@ -59,6 +59,7 @@ ht-degree: 35%
       - [Conector SFTP](connectors/cloud-storage/sftp.md)
       - [Conector de blob do Amazon S3 e Azure](connectors/cloud-storage/blob-s3.md)
    - Consentimento e preferências {#consent}
+      - [Didomi](connectors/consent-and-preferences/didomi.md)
       - [Integração com o OneTrust](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Conector do Microsoft Dynamics](connectors/crm/ms-dynamics.md)
@@ -264,6 +265,7 @@ ht-degree: 35%
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 e Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - Consentimento e preferências {#consent}
+         - [Didomi](tutorials/ui/create/consent-and-preferences/didomi.md)
          - [Integração com o OneTrust](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
@@ -389,4 +391,4 @@ ht-degree: 35%
 - [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
 - [Perguntas frequentes](./troubleshooting.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest?lang=pt-BR)

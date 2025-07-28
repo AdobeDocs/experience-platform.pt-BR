@@ -5,9 +5,9 @@ title: Criar um fluxo de dados para fontes de armazenamento na nuvem usando a AP
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um armazenamento em nuvem de terceiros e trazê-los para a Experience Platform usando conectores de origem e APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '1792'
 ht-degree: 3%
 
 ---
@@ -81,7 +81,8 @@ curl -X POST \
       },
       "params": {
           "path": "/acme/summerCampaign/account.csv",
-          "type": "file"
+          "type": "file",
+          "cdcEnabled": true
       },
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
@@ -100,6 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | (Opcional) Uma propriedade que define o tipo de arquivo compactado para assimilação. Os tipos de arquivos compactados com suporte são: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip` e `tar`. **Observação**: a propriedade `compressionType` só pode ser usada ao assimilar arquivos delimitados ou JSON. |
 | `params.path` | O caminho do arquivo de origem que você está acessando. Esse parâmetro aponta para um arquivo individual ou uma pasta inteira.  **Observação**: você pode usar um asterisco no lugar do nome do arquivo para especificar a assimilação de uma pasta inteira. Por exemplo: `/acme/summerCampaign/*.csv` assimilará toda a pasta `/acme/summerCampaign/`. |
 | `params.type` | O tipo do arquivo de dados de origem que você está assimilando. Use o tipo `file` para assimilar um arquivo individual e use o tipo `folder` para assimilar uma pasta inteira. |
+| `params.cdcEnabled` | Um valor booleano que indica se a captura do histórico de alterações está ativada ou não. Esta propriedade tem suporte nas seguintes fontes de armazenamento na nuvem: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> Para obter mais informações, leia o manual sobre como usar a [captura de dados de alteração nas fontes](../change-data-capture.md). |
 | `connectionSpec.id` | A ID de especificação de conexão associada à sua fonte de armazenamento em nuvem específica. Consulte o [apêndice](#appendix) para obter uma lista de IDs de especificação de conexão. |
 
 **Resposta**

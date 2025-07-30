@@ -131,7 +131,7 @@ Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses 
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Públicos externos"
 >abstract="Os públicos importados por meio da guia Públicos-alvo agora são exibidos automaticamente no Portal de público-alvo. Os públicos-alvo assimilados da Audience Manager, Customer Journey Analytics, Correspondência de segmentos e outras integrações personalizadas estão prontamente disponíveis, sem configuração no Construtor de segmentos primeiro. A partir de 1º de setembro de 2025, todos os públicos-alvo serão recuperados exclusivamente por meio da Pesquisa unificada, e o fluxo de trabalho anterior não será mais compatível."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de público-alvo"
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de público-alvo"
 
 >[!NOTE]
 >

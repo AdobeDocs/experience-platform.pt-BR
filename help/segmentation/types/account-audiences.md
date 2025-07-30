@@ -1,13 +1,13 @@
 ---
 title: Públicos da conta
 description: Saiba como criar e usar públicos-alvo da conta para direcionar perfis de conta em destinos downstream.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1495'
-ht-degree: 21%
+source-wordcount: '1528'
+ht-degree: 20%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 21%
 Com a segmentação de conta, o Adobe Experience Platform permite que você ofereça a total facilidade e sofisticação da experiência de segmentação de marketing de públicos com base em pessoas para públicos com base em conta.
 
 Os públicos da conta podem ser usados como uma entrada para destinos baseados em conta, permitindo direcionar as pessoas nessas contas nos serviços downstream. Por exemplo, você pode usar públicos baseados em conta para recuperar registros de todas as contas que **não** têm informações de contato de qualquer pessoa com o título Diretor de Operações (COO) ou Diretor de Marketing (CMO).
+
+>[!NOTE]
+>
+>Como parte da atualização da arquitetura B2B, as estimativas de tamanho do público-alvo para públicos-alvo com entidades B2B agora são calculadas com precisão exata. Essas estimativas estão disponíveis durante a pré-visualização e fornecem insights mais precisos e confiáveis para públicos-alvo que envolvem relacionamentos B2B complexos. <br>Para obter mais informações, leia a [visão geral das atualizações da arquitetura do Real-Time CDP B2B edition](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminologia {#terminology}
 
@@ -126,8 +130,8 @@ A seção a seguir fornece informações adicionais sobre os públicos-alvo da c
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="Erro máximo da janela de pesquisa"
->abstract="A janela de pesquisa máxima para Eventos de experiência é de 30 dias."
+>title="Janela de pesquisa"
+>abstract="Use a janela de pesquisa para exibir o histórico completo de eventos de nível de pessoa."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
@@ -196,18 +200,19 @@ A seção a seguir fornece informações adicionais sobre os públicos-alvo da c
 
 Ao usar públicos da conta, o público-alvo **deve** estar em conformidade com as seguintes restrições:
 
-- A janela de pesquisa máxima para Eventos de Experiência é de **30 dias**.
 - A profundidade máxima de contêineres aninhados é **5**.
    - Isso significa que você **não pode** ter mais de cinco containers aninhados ao criar seu público-alvo.
 - O número máximo de regras em um único contêiner é **5**.
    - Isso significa que seu público-alvo **não pode** ter mais de cinco regras que compõem seu público-alvo.
 - O número máximo de entidades cruzadas que podem ser usadas é **5**.
    - Uma entidade cruzada é quando você altera entre entidades diferentes no seu público-alvo. Por exemplo, ir de uma Conta para uma Pessoa e de lá para uma Lista de marketing.
-- Entidades personalizadas **não podem** ser usadas.
 - O número máximo de valores que podem ser verificados para um único campo é **50**.
    - Por exemplo, se você tiver um campo de &quot;Nome da cidade&quot;, será possível verificar esse valor em relação a 50 nomes de cidade.
-- Públicos-alvo da conta **não podem** usar `inSegment` eventos.
 - Públicos-alvo da conta **não podem** usar eventos sequenciais.
 - Públicos-alvo da conta **não podem** usar mapas.
 - A profundidade máxima de matrizes aninhadas é **5**.
 - O número máximo de objetos aninhados é **10**.
+
+<!-- - The maximum lookback window for Experience Events is **30 days**. -->
+<!-- - Account audiences **cannot** use `inSegment` events. -->
+<!-- - Custom entities **cannot** be used. -->

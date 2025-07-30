@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 152ec3ca36a69bea79b8ed3c33dd21bd9479171f
+source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
 workflow-type: tm+mt
-source-wordcount: '5128'
+source-wordcount: '5188'
 ht-degree: 10%
 
 ---
@@ -126,6 +126,12 @@ Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses 
 >id="platform_segmentation_segmentBuilder_b2b_decomposition"
 >title="Avaliação complexa"
 >abstract="A expressão a seguir é muito complicada para ser expressa como um único público-alvo. Para usar regras B2B e eventos baseados em pessoas na mesma definição de segmento, siga as etapas abaixo.<ol><li>Crie uma definição de segmento que se refira apenas aos eventos com base em pessoas e salve-a como sua própria definição de segmento.</li><li>Em uma nova definição de segmento, importe a definição de segmento criada anteriormente enquanto se refere às regras B2B.</li></ol>"
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_externalaudiences"
+>title="Públicos externos"
+>abstract="Os públicos importados por meio da guia Públicos-alvo agora são exibidos automaticamente no Portal de público-alvo. Os públicos-alvo assimilados da Audience Manager, Customer Journey Analytics, Correspondência de segmentos e outras integrações personalizadas estão prontamente disponíveis, sem configuração no Construtor de segmentos primeiro. A partir de 1º de setembro de 2025, todos os públicos-alvo serão recuperados exclusivamente por meio da Pesquisa unificada, e o fluxo de trabalho anterior não será mais compatível."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de público-alvo"
 
 >[!NOTE]
 >
@@ -324,7 +330,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 >[!NOTE]
 >
 >Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
->&#x200B;>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
 >
 >Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
 >

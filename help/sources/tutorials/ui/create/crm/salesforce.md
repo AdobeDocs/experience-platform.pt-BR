@@ -2,16 +2,16 @@
 title: Conectar sua conta da Salesforce usando a interface do usuário da Experience Platform
 description: Saiba como conectar sua conta do Salesforce e trazer seus dados do CRM para o Experience Platform usando a interface do usuário.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1003'
 ht-degree: 2%
 
 ---
 
 # Conectar sua conta do [!DNL Salesforce] à Experience Platform usando a interface
 
-Este tutorial fornece etapas sobre como conectar sua conta do [!DNL Salesforce] e trazer seus dados do CRM para a Adobe Experience Platform usando a interface do usuário do Experience Platform.
+Leia este guia para saber como conectar sua conta do [!DNL Salesforce] e trazer seus dados do CRM para a Adobe Experience Platform usando a interface do usuário do Experience Platform.
 
 ## Introdução
 
@@ -58,6 +58,7 @@ Você deve fornecer valores para as credenciais a seguir para conectar sua conta
 | ID de cliente | A ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Salesforce]. |
 | Segredo do cliente | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Salesforce]. |
 | Versão da API | A versão da API REST da instância [!DNL Salesforce] que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, será necessário inserir o valor como `52.0`. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
+| Incluir objetos excluídos | Um valor booleano usado para determinar se os registros excluídos por software devem ser incluídos. Se definido como verdadeiro, os registros excluídos por software podem ser incluídos na consulta do [!DNL Salesforce] e assimilados de sua conta na Experience Platform. Se você não especificar sua configuração, esse valor assumirá como padrão `false`. |
 
 Para obter mais informações sobre como usar o OAuth para [!DNL Salesforce], leia o [[!DNL Salesforce] guia sobre Fluxos de Autorização do OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
@@ -67,13 +68,13 @@ Depois de obter as credenciais necessárias, você poderá seguir as etapas abai
 
 ## Conectar sua conta do [!DNL Salesforce]
 
-Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface do Experience Platform, navegue até **[!UICONTROL Fontes]** no menu esquerdo para abrir o espaço de trabalho [!UICONTROL Fontes]. Use o catálogo à esquerda para procurar categorias ou use a barra de pesquisa para localizar rapidamente a origem que deseja conectar.
 
 Selecione **[!DNL Salesforce]** na categoria *[!UICONTROL CRM]* e selecione **[!UICONTROL Adicionar dados]**.
 
 >[!TIP]
 >
->As origens no catálogo de origens exibem a opção **[!UICONTROL Configurar]** quando uma determinada origem ainda não tem uma conta autenticada. Quando uma conta autenticada existir, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
+>No catálogo de fontes, você verá **[!UICONTROL Configurar]** se nenhuma conta estiver conectada, ou **[!UICONTROL Adicionar dados]** se uma conta já estiver autenticada.
 
 ![O catálogo de origens na interface do usuário do Experience Platform com o cartão de origem do Salesforce selecionado.](../../../../images/tutorials/create/salesforce/catalog.png)
 
@@ -116,10 +117,11 @@ Para a Credencial do cliente OAuth 2, selecione **[!UICONTROL Credencial do clie
 * ID de cliente
 * Segredo do cliente
 * Versão da API
+* Incluir objetos de exclusão
 
 Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
 
-![A interface OAuth para a criação de conta do Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
+![A interface OAuth para a criação de conta do Salesforce.](../../../../images/tutorials/create/salesforce/oauth.png)
 
 >[!ENDTABS]
 

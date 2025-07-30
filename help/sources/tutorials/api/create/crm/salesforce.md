@@ -2,9 +2,9 @@
 title: Conectar O Salesforce Ao Experience Platform Usando A API Do Serviço De Fluxo
 description: Saiba como conectar o Adobe Experience Platform a uma conta do Salesforce usando a API do serviço de fluxo.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1175'
 ht-degree: 3%
 
 ---
@@ -63,6 +63,7 @@ Para conectar sua conta do [!DNL Salesforce] ao [!DNL Flow Service] usando a Cre
 | `clientId` | A ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Salesforce]. |
 | `clientSecret` | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação OAuth2. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Salesforce]. |
 | `apiVersion` | A versão da API REST da instância [!DNL Salesforce] que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, será necessário inserir o valor como `52.0`. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. Esse valor é obrigatório para autenticação de Credencial do cliente OAuth2. |
+| `includeDeletedObjects` | Um valor booleano usado para determinar se os registros excluídos por software devem ser incluídos. Se definido como verdadeiro, os registros excluídos por software podem ser incluídos na consulta do [!DNL Salesforce] e assimilados da sua conta na Experience Platform. Se você não especificar sua configuração, este valor será o padrão `false`. |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Salesforce] é: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 Para obter mais informações sobre como usar o OAuth para [!DNL Salesforce], leia o [[!DNL Salesforce] guia sobre Fluxos de Autorização do OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
@@ -162,7 +163,8 @@ curl -X POST \
             "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
             "clientId": "xxxx",
             "clientSecret": "xxxx",
-            "apiVersion": "60.0"
+            "apiVersion": "60.0",
+            "includeDeletedObjects": true
         }
       },
       "connectionSpec": {
@@ -178,6 +180,7 @@ curl -X POST \
 | `auth.params.clientId` | A ID do cliente associada à sua conta do [!DNL Salesforce]. |
 | `auth.params.clientSecret` | O segredo do cliente associado à sua conta do [!DNL Salesforce]. |
 | `auth.params.apiVersion` | A versão da API REST da instância [!DNL Salesforce] que você está usando. |
+| `auth.params.includeDeletedObjects` | Um valor booliano usado para determinar se os registros excluídos por software devem ou não ser incluídos. |
 | `connectionSpec.id` | A ID da especificação de conexão [!DNL Salesforce]: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`. |
 
 +++

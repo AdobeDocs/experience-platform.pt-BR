@@ -4,9 +4,9 @@ title: Editar fluxos de dados de ativação
 type: Tutorial
 description: Siga as etapas deste artigo para editar um fluxo de dados de ativação existente no Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
+source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,7 @@ No Adobe Experience Platform, você pode configurar vários componentes de fluxo
 * [Editar atributos e identidades mapeadas](#edit-mapped-attributes)
 * [Editar o agendamento de ativação e a frequência de exportação](#edit-schedule-frequency)
 * [Adicionar conjuntos de dados adicionais](#add-datasets) ao fluxo de trabalho de ativação
+* [Editar ações de marketing](#edit-marketing-actions) para seus fluxos de dados de ativação
 * [Aplicar rótulos de acesso](#apply-access-labels) aos dados exportados
 * [Editar nomes e descrições](#edit-names-descriptions) para seus fluxos de dados de ativação
 
@@ -108,6 +109,23 @@ Selecione **[!UICONTROL Exportar conjuntos de dados]** no painel direito para se
 >Esta opção só é visível para [destinos que oferecem suporte à exportação do conjunto de dados](export-datasets.md#supported-destinations).
 
 ![Imagem da interface do Experience Platform mostrando a opção de execução do fluxo de dados Exportar conjuntos de dados.](../assets/ui/edit-activation/export-datasets.png)
+
+## [!BADGE Beta]{type=Informative} Editar ações de marketing {#edit-marketing-actions}
+
+>[!NOTE]
+>
+>Este recurso está atualmente em **beta**. Para solicitar acesso, entre em contato com o representante da Adobe.
+
+Você pode adicionar ou remover ações de marketing configuradas ao se conectar inicialmente ao destino.
+
+Selecione **[!UICONTROL Editar ações de marketing]** no painel direito para abrir a tela de seleção de ações de marketing.
+
+![Imagem da interface do Experience Platform mostrando a opção de edição de ações de marketing.](../assets/ui/edit-activation/edit-marketing-actions.png)
+
+Selecione as ações de marketing aplicáveis e selecione **[!UICONTROL Salvar]** para aplicar as alterações.
+
+![Imagem da interface do Experience Platform mostrando a tela editar ações de marketing.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
+
 
 ## Aplicar rótulos de acesso {#apply-access-labels}
 

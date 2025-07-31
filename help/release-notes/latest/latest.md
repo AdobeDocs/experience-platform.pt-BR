@@ -1,14 +1,12 @@
 ---
 title: Notas de versão da Adobe Experience Platform de julho de 2025
 description: As notas de versão de julho de 2025 da Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
+source-git-commit: fff6318e7f70176aee5fafe2e024c71922496aff
 workflow-type: tm+mt
-source-wordcount: '1457'
-ht-degree: 14%
+source-wordcount: '1573'
+ht-degree: 13%
 
 ---
-
 
 # Notas de versão da Adobe Experience Platform
 
@@ -18,9 +16,9 @@ ht-degree: 14%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 29 de julho de 2025**
 
@@ -33,6 +31,7 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 - [Sandboxes](#sandboxes)
 - [Serviço de segmentação](#segmentation-service)
 - [Origens](#sources)
+
 
 ## Capacidade {#capacity}
 
@@ -53,6 +52,7 @@ Para obter mais informações, leia a [Visão geral da capacidade](../../landing
 | Destino | Descrição |
 | --- | --- |
 | Disponibilidade limitada da [Correspondência de cliente do Google + Exibição e vídeo da conexão 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md) | Depois de estar disponível brevemente para todos os clientes em junho, a Adobe retornou essa integração para disponibilidade limitada. Atualmente, o acesso a esse destino está restrito aos clientes que já estão ativados, enquanto a Adobe e a Google trabalham para resolver problemas de implementação. Se você estiver interessado em usar essa integração depois que a implantação mais ampla for retomada, entre em contato com o representante da Adobe para expressar sua intenção. |
+| Atualização interna de [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) | A partir de 31 de julho de 2025, você poderá ver dois cartões [!DNL The Trade Desk] lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. <br><br>O conector de destino [!DNL The Trade Desk] existente foi renomeado para **[!UICONTROL (obsoleto) Trade Desk]** e um novo cartão com o nome **[!UICONTROL The Trade Desk]** está disponível. Use a nova conexão **[!UICONTROL Trade Desk]** no catálogo para novos fluxos de dados de ativação. <br><br>Se você tiver fluxos de dados ativos para o destino **[!UICONTROL (Obsoleto) da Trade Desk]**, eles serão atualizados automaticamente; portanto, nenhuma ação será necessária. <br><br>Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores:<ul><li>ID da especificação de fluxo: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>ID de especificação da conexão: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **Funcionalidade nova ou atualizada**
 
@@ -141,6 +141,7 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 | Recurso | Descrição |
 | --- | --- |
 | Suporte para captura de dados de alteração em fontes selecionadas usando a API [!DNL Flow Service] | Agora é possível criar fluxos de dados que permitem a captura de dados de alteração para assimilação incremental usando conectores de origem. Esse recurso permite que os clientes tragam tipos de dados de alteração para assimilação incremental, melhorando a atualização de dados e reduzindo a sobrecarga de processamento. Para obter mais informações, leia a documentação sobre [usando a captura de dados de alteração para fontes](../../sources/tutorials/api/change-data-capture.md) |
-| Suporte para exclusão reversível de registros em [!DNL Salesforce] | A origem [!DNL Salesforce] agora dá suporte à inclusão de registros excluídos por meio de um parâmetro `includeDeletedObjects` opcional. Quando definido como verdadeiro, os clientes podem incluir registros excluídos por software em suas consultas [!DNL Salesforce] e trazer esses registros para a Experience Platform. Leia a documentação da origem[&#128279;](../../sources/connectors/crm/salesforce.md) do [!DNL Salesforce]  para obter mais informações. |
+| Suporte para exclusão reversível de registros em [!DNL Salesforce] | A origem [!DNL Salesforce] agora dá suporte à inclusão de registros excluídos por meio de um parâmetro `includeDeletedObjects` opcional. Quando definido como verdadeiro, os clientes podem incluir registros excluídos por software em suas consultas [!DNL Salesforce] e trazer esses registros para a Experience Platform. Leia a documentação da origem](../../sources/connectors/crm/salesforce.md) do [[!DNL Salesforce]  para obter mais informações. |
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).
+

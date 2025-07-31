@@ -21,7 +21,7 @@ Ao usar mensagens no aplicativo, você pode se envolver efetivamente com seu pú
 >
 >As Mensagens no Aplicativo Web são um recurso do [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=pt-BR), que usa o Web SDK para fornecer o conteúdo personalizado.
 >
->Para obter instruções detalhadas sobre como configurar a campanha de Mensagens no Aplicativo da Web, consulte a [documentação do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
+>Para obter instruções detalhadas sobre como configurar a campanha de Mensagens no Aplicativo da Web, consulte a [documentação do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=pt-BR).
 
 
 ## Pré-requisitos {#prerequisites}
@@ -184,5 +184,5 @@ Você pode optar por mostrar mensagens no aplicativo aos usuários por um númer
 
 Na [configuração do Web SDK](../commands/configure/overview.md), defina a opção `personalizationStorageEnabled` de acordo com suas necessidades:
 
-* `personalizationStorageEnabled: true` aciona a mensagem no aplicativo com a frequência que você definiu na [campanha do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp).
+* `personalizationStorageEnabled: true` aciona a mensagem no aplicativo com a frequência que você definiu na [campanha do Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=pt-BR#configure-inapp).
 * `personalizationStorageEnabled: false` aciona a mensagem no aplicativo em cada carregamento de página.

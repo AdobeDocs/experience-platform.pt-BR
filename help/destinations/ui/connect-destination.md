@@ -6,7 +6,7 @@ exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
 source-wordcount: '1280'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -54,7 +54,7 @@ Antes de enviar dados do público-alvo para um destino, é necessário configura
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Nome da conta"
->abstract="Digite um nome que o ajudará a identificar facilmente esta conta de destino no futuro. Isso é especialmente útil se você tiver várias conexões com o mesmo destino."
+>abstract="Insira um nome que ajudará a identificar facilmente esta conta de destino no futuro. Isso é especialmente útil se você tiver várias conexões com o mesmo destino."
 
 A primeira etapa na conexão com um destino é autenticar na plataforma de destino.
 

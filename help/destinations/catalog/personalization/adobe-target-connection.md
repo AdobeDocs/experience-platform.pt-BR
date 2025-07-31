@@ -72,8 +72,8 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 >[!IMPORTANT]
 >
 >Ao ativar *públicos-alvo de borda para casos de uso de personalização de mesma página e próxima página*, os públicos-alvo *devem* usar uma [política de mesclagem ativa na borda](../../../segmentation/ui/segment-builder.md#merge-policies). A política de mesclagem do [!DNL active-on-edge] garante que os públicos-alvo sejam avaliados constantemente [na borda](../../../segmentation/methods/edge-segmentation.md) e estejam disponíveis para casos de uso de personalização em tempo real e de próxima página.  Leia sobre [todos os casos de uso disponíveis](#parameter), com base no tipo de implementação.
->>Se você mapear públicos-alvo de borda que usam uma política de mesclagem diferente para destinos do Adobe Target, esses públicos-alvo não serão avaliados para casos de uso em tempo real e na próxima página.
->>Siga as instruções em [criando uma política de mesclagem](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e habilite a **[!UICONTROL Política de mesclagem Ative-On-Edge]**.
+>&#x200B;>Se você mapear públicos-alvo de borda que usam uma política de mesclagem diferente para destinos do Adobe Target, esses públicos-alvo não serão avaliados para casos de uso em tempo real e na próxima página.
+>&#x200B;>Siga as instruções em [criando uma política de mesclagem](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e habilite a **[!UICONTROL Política de mesclagem Ative-On-Edge]**.
 
 
 | Origem do público | Suportado | Descrição |
@@ -140,8 +140,8 @@ Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornec
 >[!NOTE]
 >
 >Ao usar um espaço de trabalho de Destino personalizado para [personalização de mesma página e próxima página com atributos](../../ui/activate-edge-personalization-destinations.md), somente os [públicos selecionados](../../ui/activate-edge-personalization-destinations.md#select-audiences) serão enviados para o espaço de trabalho de Destino selecionado. Os [atributos mapeados](../../ui/activate-edge-personalization-destinations.md#mapping) são enviados para o espaço de trabalho de Destino padrão.
->><br>
->>Esse comportamento será alterado em uma atualização futura.
+>&#x200B;><br>
+>&#x200B;>Esse comportamento será alterado em uma atualização futura.
 
 ### Ativar alertas {#enable-alerts}
 

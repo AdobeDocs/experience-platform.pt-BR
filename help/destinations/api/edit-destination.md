@@ -4,10 +4,10 @@ title: Editar conexões de destino usando a API do Serviço de fluxo
 type: Tutorial
 description: Saiba como editar vários componentes de uma conexão de destino usando a API de serviço de fluxo.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
 workflow-type: tm+mt
-source-wordcount: '1609'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ Este tutorial aborda as etapas para editar vários componentes de uma conexão d
 
 >[!NOTE]
 >
-> No momento, as operações de edição descritas neste tutorial só são permitidas por meio da API de serviço de fluxo.
+> As operações de edição descritas neste tutorial também são compatíveis com a interface do usuário do Experience Platform. Leia o tutorial sobre como [editar destinos na interface](/help/destinations/ui/edit-destination.md) para obter mais informações.
 
 ## Introdução {#get-started}
 

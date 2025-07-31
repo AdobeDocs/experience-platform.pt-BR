@@ -1,37 +1,37 @@
 ---
-description: Esta página fornece todas as informações necessárias para enviar para revisão um destino produzido criado por meio do Destination SDK.
-title: Enviar para análise um destino produzido criado no Destination SDK
+description: Esta página fornece todas as informações necessárias para enviar um destino produzido para revisão quando criado usando o Destination SDK.
+title: Enviar um destino produzido para revisão
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 756c14c67e349a9ca906c027a07766e952485525
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1045'
 ht-degree: 0%
 
 ---
 
-# Enviar para análise um destino produzido criado no Destination SDK
+# Enviar um destino produzido para revisão
 
 ## Visão geral {#overview}
 
 >[!IMPORTANT]
 >
->* O processo documentado aqui só é necessário para parceiros que enviam destinos (públicos) produzidos. Se você está criando um destino privado para seu próprio uso, não é necessário produzir e compartilhar esses materiais com o Adobe.
+>* O processo documentado aqui só é necessário para parceiros que enviam destinos (públicos) produzidos. Se você estiver criando um destino privado para seu próprio uso, não será necessário produzir e compartilhar esses materiais com a Adobe.
 >
->* O tempo de resposta padrão do Adobe para revisar solicitações de publicação de destino é de cinco dias úteis.
+>* O tempo de resposta padrão da Adobe para revisar solicitações de publicação de destino é de cinco dias úteis.
 >
 >* Se a equipe do Adobe solicitar que você faça atualizações em suas configurações após o envio inicial, será necessário enviar outra solicitação de publicação de destino depois de fazer as atualizações.
 >
->* Mesmo depois que o destino estiver ativo no catálogo de Experience Platform, se precisar fazer atualizações nas configurações, você deverá enviar uma nova solicitação de publicação de destino para que as atualizações sejam refletidas nas configurações.
+>* Mesmo depois que o destino estiver ativo no catálogo do Experience Platform, se precisar fazer atualizações nas configurações, você deverá enviar uma nova solicitação de publicação de destino para que as atualizações sejam refletidas nas configurações.
 >
 >* A linha do tempo de revisão e os artefatos necessários são os mesmos para novos destinos e destinos existentes que você está atualizando.
 
-Antes de publicar seu destino no [catálogo de destinos de Experience Platform](/help/destinations/catalog/overview.md), forneça ao Adobe determinadas informações sobre o destino e os testes realizados, para garantir que os usuários desfrutem da melhor experiência possível ao ativar dados na sua plataforma.
+Antes de publicar seu destino no [catálogo de destinos do Experience Platform](/help/destinations/catalog/overview.md), forneça à Adobe determinadas informações sobre o destino e os testes que você realizou, para garantir que os usuários desfrutem da melhor experiência possível ao ativar dados para sua plataforma.
 
 Esta página lista todas as informações que você precisa fornecer ao enviar ou atualizar um destino criado usando o Adobe Experience Platform Destination SDK. Para enviar um destino no Adobe Experience Platform com êxito, envie um email para <aepdestsdk@adobe.com> que inclua:
 
 * Uma descrição dos casos de uso que seu destino resolve. Isso só será necessário se você estiver enviando uma nova configuração de destino.
 * Uma descrição do motivo para o envio do seu destino. Isso só será necessário se você estiver atualizando uma configuração de destino existente.
-* Teste os resultados após usar o endpoint da API de destino de teste para executar uma chamada HTTP no destino. Compartilhe com o Adobe uma chamada de API feita para o endpoint de destino e a resposta da API recebida do endpoint de destino.
+* Teste os resultados após usar o endpoint da API de destino de teste para executar uma chamada HTTP no destino. Compartilhe com a Adobe uma chamada de API feita para o terminal de destino e a resposta da API recebida do terminal.
 * Uma gravação de tela que mostra a experiência do usuário para alguém se conectar ao seu destino e prosseguir com as etapas de ativação.
 * Requisitos adicionais para destinos baseados em arquivo:
    * Compartilhe uma solicitação e uma amostra de resposta após usar a API de teste para [testar seu destino baseado em arquivo com perfis de amostra](../testing-api/batch-destinations/file-based-destination-testing-api.md).
@@ -39,13 +39,13 @@ Esta página lista todas as informações que você precisa fornecer ao enviar o
    * Envie alguma forma de prova de que você assimilou com êxito o arquivo exportado do local de armazenamento no sistema.
 * Prova de que você enviou uma solicitação de publicação de destino para o seu destino usando a [API de publicação de destino](../publishing-api/create-publishing-request.md).
 * Uma PR (solicitação de pull) de documentação, seguindo as instruções descritas no [processo de documentação de autoatendimento](../docs-framework/documentation-instructions.md).
-* Um arquivo de imagem que será exibido como um logotipo para o cartão de destino no catálogo de destinos de Experience Platform.
+* Um arquivo de imagem que será exibido como um logotipo para seu cartão de destino no catálogo de destinos do Experience Platform.
 
 Você pode encontrar informações detalhadas sobre cada item nas seções abaixo:
 
 ## Descrição do caso de uso {#use-case-description}
 
-Forneça uma descrição dos casos de uso que seu destino resolve para clientes do Experience Platform. Suas descrições podem ser semelhantes aos casos de uso de parceiros existentes:
+Forneça uma descrição dos casos de uso que seu destino resolve para os clientes do Experience Platform. Suas descrições podem ser semelhantes aos casos de uso de parceiros existentes:
 
 * [Pinterest](/help/destinations/catalog/advertising/pinterest.md): crie públicos-alvo a partir de suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
 * [Yahoo Data X](/help/destinations/catalog/advertising/datax.md#use-cases): as APIs DataX estão disponíveis para anunciantes que desejam direcionar um grupo de público-alvo específico digitado de endereços de email na Verizon Media (VMG). Elas podem criar rapidamente um novo público-alvo e enviar por push o grupo de público-alvo desejado usando a API quase em tempo real do VMG.
@@ -246,7 +246,7 @@ Por fim, você deve fornecer alguma forma de prova de que os dados foram assimil
 
 * Capturas de tela ou um breve vídeo de captura de tela, em que você obtém o arquivo manualmente do local de armazenamento e o assimila no sistema.
 * Capturas de tela ou um breve vídeo de captura de tela em que a interface do usuário do sistema confirma que o nome de arquivo gerado pelo Experience Platform foi assimilado com êxito no sistema.
-* Registra linhas do seu sistema que o Adobe pode correlacionar com o nome do arquivo ou com os dados gerados pelo Experience Platform.
+* Registra linhas do seu sistema que o Adobe pode correlacionar com o nome do arquivo ou com os dados gerados a partir do Experience Platform.
 
 ## Prova de que você enviou uma solicitação de publicação de destino {#destination-publishing-request-proof}
 
@@ -268,4 +268,4 @@ Os requisitos de imagem são:
 
 ## Baixar email de amostra {#download-sample-email}
 
-[Baixe](../assets/guides/sample-email-submit-destination.rtf) um email de exemplo com todas as informações que você precisa fornecer ao Adobe.
+[Baixe](../assets/guides/sample-email-submit-destination.rtf) um email de exemplo com todas as informações que você precisa fornecer à Adobe.

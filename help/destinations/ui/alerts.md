@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares; alertas;destin
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 title: Assinar alertas de destino em contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 8%
@@ -83,7 +83,7 @@ A página [!UICONTROL Detalhes da execução do fluxo de dados] é exibida. A me
 
 ![Imagem da interface do usuário mostrando a página de detalhes da execução do fluxo de dados.](../assets/ui/alerts/dataflow-overview.png)
 
-A metade inferior da página exibe [!UICONTROL erros de execução do fluxo de dados] ocorridos durante o estágio de execução do fluxo de dados. Aqui, você pode visualizar o diagnóstico de erros ou usar a [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para baixar o diagnóstico de erros ou o manifesto de arquivo que corresponde ao seu fluxo de dados.
+A metade inferior da página exibe [!UICONTROL erros de execução do fluxo de dados] que ocorreram durante o estágio de execução do fluxo de dados. Aqui, você pode visualizar o diagnóstico de erros ou usar a [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para baixar o diagnóstico de erros ou o manifesto de arquivo que corresponde ao seu fluxo de dados.
 
 ![Imagem da interface do usuário mostrando a página de detalhes da execução do fluxo de dados, com destaque na seção de erros.](../assets/ui/alerts/dataflow-run-error.png)
 

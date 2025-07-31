@@ -5,7 +5,7 @@ title: Atualizar fluxos de dados de destino usando a API de serviço de fluxo
 type: Tutorial
 description: Este tutorial aborda as etapas para atualizar um fluxo de dados de destino. Saiba como habilitar ou desabilitar o fluxo de dados, atualizar suas informações básicas ou adicionar e remover públicos-alvo e atributos usando a API do Serviço de fluxo.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '2410'
 ht-degree: 4%
@@ -646,7 +646,7 @@ Consulte os exemplos abaixo para obter mais exemplos de componentes de público-
 
 +++ Clique para ver um exemplo em que uma exportação de público-alvo é atualizada de ser ativada todos os dias em um horário especificado para ser ativada todos os dias após a conclusão do trabalho de segmentação em lote do Experience Platform.
 
-O público-alvo é exportado todos os dias às 16:00 UTC.
+O público é exportado todos os dias às 16:00 UTC.
 
 ```json
 {

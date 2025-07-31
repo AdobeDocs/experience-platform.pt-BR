@@ -3,7 +3,7 @@ title: Personalização híbrida usando o Web SDK e a API do Edge Network
 description: Este artigo demonstra como usar o Web SDK em conjunto com a API do Edge Network para implantar personalização híbrida em suas propriedades da Web.
 keywords: personalização; híbrido; api do servidor; lado do servidor; implementação híbrida;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 7b91f4f486db67d4673877477a6be8287693533a
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1200'
 ht-degree: 2%
@@ -39,7 +39,7 @@ O diagrama de fluxo abaixo descreve a ordem das etapas executadas para fornecer 
 1. A API do Edge Network retorna o conteúdo de personalização ao servidor de aplicativos.
 1. O servidor de aplicativos retorna uma resposta do HTML para o navegador cliente, contendo os [cookies de identidade e de cluster](#cookies).
 1. Na página do cliente, o comando [!DNL Web SDK] `applyResponse` é chamado, transmitindo os cabeçalhos e o corpo da resposta da [!UICONTROL API do Edge Network] da etapa anterior.
-1. O [!DNL Web SDK] renderiza ofertas do Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR) e itens do Canal da Web do Journey Optimizer automaticamente, porque o sinalizador `renderDecisions` está definido como `true`.
+1. O [!DNL Web SDK] renderiza ofertas do Target [[!DNL Visual Experience Composer (VEC)]](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) e itens do Canal da Web do Journey Optimizer automaticamente, porque o sinalizador `renderDecisions` está definido como `true`.
 1. As ofertas [!DNL HTML]/[!DNL JSON] baseadas em formulário de destino e as experiências baseadas em código Journey Optimizer são aplicadas manualmente por meio do método `applyProposition`, para atualizar o [!DNL DOM] com base no conteúdo de personalização da proposta.
 1. Para ofertas [!DNL HTML]/[!DNL JSON] baseadas em formulário do Target e experiências baseadas em código Journey Optimizer, os eventos de exibição devem ser enviados manualmente para indicar quando o conteúdo retornado foi exibido. Isso é feito por meio do comando `sendEvent`.
 
@@ -92,7 +92,7 @@ Se nenhuma dica de localização (ou seja, nenhum cookie) estiver presente, use 
 
 >[!TIP]
 >
->Como prática recomendada, você deve usar uma lista de locais permitidos. Isso impede que a dica de localização seja temperada com, pois é fornecida por meio de cookies do lado do cliente.
+>Como prática recomendada, você deve usar uma lista de locais permitidos. Isso impede que a dica de localização seja adulterada, pois é fornecida por meio de cookies do lado do cliente.
 
 ## Implicações do Analytics {#analytics}
 

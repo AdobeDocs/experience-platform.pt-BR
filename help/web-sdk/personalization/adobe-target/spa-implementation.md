@@ -3,7 +3,7 @@ title: Implementação de aplicativos de página única para o Adobe Experience 
 description: Saiba como criar uma implementação de aplicativo de página única (SPA) do Adobe Experience Platform Web SDK usando o Adobe Target.
 keywords: destino;adobe destino;exibições xdm; exibições;aplicativos de página única;SPA;ciclo de vida SPA;lado do cliente;teste AB;Direcionamento de experiência;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1818'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Os sites tradicionais funcionavam em modelos de navegação &quot;página para p
 
 Aplicativos da Web modernos, como aplicativos de página única, adotaram um modelo que impulsiona o uso rápido da renderização da interface do usuário do navegador, que geralmente é independente dos recarregamentos de página. Essas experiências podem ser acionadas por interações do cliente, como rolagens, cliques e movimentos de cursor. À medida que os paradigmas da Web moderna evoluíram, a relevância dos eventos genéricos tradicionais, como um carregamento de página, para implantar a personalização e a experimentação não funciona mais.
 
-![Diagrama que mostra o ciclo de vida de SPA comparado ao ciclo de vida de página tradicional.](assets/spa-vs-traditional-lifecycle.png)
+![Diagrama mostrando o ciclo de vida de SPA comparado ao ciclo de vida de página tradicional.](assets/spa-vs-traditional-lifecycle.png)
 
 ## Benefícios do Experience Platform Web SDK para SPAs
 

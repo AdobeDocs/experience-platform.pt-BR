@@ -1,19 +1,19 @@
 ---
-title: Instale o SDK da Web usando a biblioteca do JavaScript
-description: Faça referência à biblioteca do SDK da Web usando um arquivo CDN independente.
+title: Instale o Web SDK usando a biblioteca JavaScript
+description: Faça referência à biblioteca do Web SDK usando um arquivo CDN independente.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 9876390f7ba34c312f2ce4c00fe39e3ea1ef1ace
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-# Instale o SDK da Web usando a biblioteca do JavaScript
+# Instale o Web SDK usando a biblioteca JavaScript
 
-Uma alternativa para instalar o SDK da Web sem [usar a extensão de tag](extension.md) é fazer referência à biblioteca de JavaScript hospedada em um CDN. Você pode fazer referência à biblioteca diretamente ou baixá-la e hospedá-la em sua própria infraestrutura. Ele está disponível em formatos minificados e completos.
+Uma alternativa para instalar o Web SDK sem [usar a extensão de tag](extension.md) é fazer referência à biblioteca de JavaScript hospedada em um CDN. Você pode fazer referência à biblioteca diretamente ou baixá-la e hospedá-la em sua própria infraestrutura. Ele está disponível em formatos minificados e completos.
 
-A biblioteca do SDK da Web está disponível usando a seguinte estrutura de URL:
+A biblioteca do Web SDK está disponível usando a seguinte estrutura de URL:
 
 * **Minificado**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js`
 * **Cheio**: `https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.js`
@@ -22,7 +22,7 @@ Consulte as [notas de versão](../release-notes.md) para obter a versão mais re
 
 ## Adição do código
 
-Adicione o seguinte bloco de código o mais alto possível na tag `<head>` do seu HTML:
+Adicione o seguinte bloco de código o mais alto possível na tag `<head>` da sua HTML:
 
 ```html
 <script>
@@ -34,4 +34,4 @@ Adicione o seguinte bloco de código o mais alto possível na tag `<head>` do se
 <script src="https://cdn1.adoberesources.net/alloy/2.19.1/alloy.min.js" async></script>
 ```
 
-Esse código cria de forma assíncrona um objeto `alloy` que permite chamar qualquer comando do SDK da Web. Se quiser carregar o SDK da Web de forma síncrona, você pode remover o atributo `async` na última linha do bloco de código. A remoção do atributo `async` impede que o restante do documento HTML seja analisado e renderizado pelo navegador até que a biblioteca seja carregada e executada. Normalmente, esse atraso adicional antes de exibir o conteúdo principal aos usuários não é recomendado, mas pode fazer sentido, dependendo das necessidades da empresa.
+Esse código cria de forma assíncrona um objeto `alloy` que permite chamar qualquer comando do Web SDK. Se quiser carregar o Web SDK de forma síncrona, você pode remover o atributo `async` na última linha do bloco de código. A remoção do atributo `async` impede que o restante do documento do HTML seja analisado e renderizado pelo navegador até que a biblioteca seja carregada e executada. Normalmente, esse atraso adicional antes de exibir o conteúdo principal aos usuários não é recomendado, mas pode fazer sentido, dependendo das necessidades da empresa.

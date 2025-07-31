@@ -1,9 +1,9 @@
 ---
-title: Renderizar conteúdo personalizado usando o SDK da Web da Adobe Experience Platform
+title: Renderizar conteúdo personalizado usando o Adobe Experience Platform Web SDK
 description: Saiba como renderizar conteúdo personalizado com o Adobe Experience Platform Web SDK.
 keywords: personalização;renderDecisions;sendEvent;decisionScopes;propositions;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Renderizar conteúdo personalizado
 
-O SDK da Web da Adobe Experience Platform oferece suporte à recuperação de conteúdo personalizado de soluções de personalização do Adobe, incluindo [Adobe Target](https://business.adobe.com/br/products/target/adobe-target.html), [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=pt-BR) e [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=pt-BR).
+O Adobe Experience Platform Web SDK oferece suporte à recuperação de conteúdo personalizado de soluções de personalização da Adobe, incluindo o [Adobe Target](https://business.adobe.com/br/products/target/adobe-target.html), o [Offer Decisioning](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=pt-BR) e o [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=pt-BR).
 
-Além disso, o SDK da Web habilita recursos de personalização de mesma página e próxima página por meio de destinos de personalização do Adobe Experience Platform, como o [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e a [conexão de personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para saber como configurar o Experience Platform para personalização de mesma página e próxima página, consulte o [guia dedicado](../../destinations/ui/activate-edge-personalization-destinations.md).
+Além disso, o Web SDK habilita recursos de personalização de mesma página e próxima página por meio de destinos de personalização do Adobe Experience Platform, como o [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e a [conexão de personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para saber como configurar o Experience Platform para personalização de mesma página e próxima página, consulte o [guia dedicado](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-O conteúdo criado no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR) e na [Interface do usuário do Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=pt-BR) do Adobe Target Adobe Journey Optimizer pode ser recuperado e renderizado automaticamente pelo SDK. O conteúdo criado no [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=pt-BR), no [Canal de experiência baseado em código](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/code-based-experience/get-started-code-based) ou no Offer Decisioning do Adobe Target Adobe Journey Optimizer não pode ser renderizado automaticamente pelo SDK. Em vez disso, você deve solicitar esse conteúdo usando o SDK e, em seguida, renderizar manualmente o conteúdo.
+O conteúdo criado no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) do Adobe Target e na [Interface do usuário do Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) do Adobe Journey Optimizer pode ser recuperado e renderizado automaticamente pela SDK. O conteúdo criado no [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) do Adobe Target, no [Canal de experiência baseado em código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) do Adobe Journey Optimizer ou no Offer Decisioning não pode ser renderizado automaticamente pelo SDK. Em vez disso, você deve solicitar esse conteúdo usando o SDK e, em seguida, renderizar manualmente o conteúdo.
 
 ## Renderização automática de conteúdo {#automatic}
 
@@ -103,7 +103,7 @@ A matriz `propositions` pode ser semelhante a este exemplo:
 ]
 ```
 
-No exemplo, a opção `renderDecisions` não estava definida como `true` quando o comando `sendEvent` foi executado, portanto, o SDK não tentou renderizar automaticamente nenhum conteúdo. No entanto, o SDK ainda recuperou automaticamente o conteúdo elegível para renderização automática e forneceu isso para renderização manual, se desejar. Observe que cada objeto de proposta tem sua propriedade `renderAttempted` definida como `false`.
+No exemplo, a opção `renderDecisions` não estava definida como `true` quando o comando `sendEvent` foi executado, portanto, o SDK não tentou renderizar conteúdo automaticamente. No entanto, o SDK ainda recuperou automaticamente o conteúdo qualificado para renderização automática e forneceu isso para renderização manual, se você desejar. Observe que cada objeto de proposta tem sua propriedade `renderAttempted` definida como `false`.
 
 Se você tivesse definido a opção `renderDecisions` como `true` ao enviar o evento, o SDK teria tentado renderizar qualquer proposta qualificada para renderização automática (conforme descrito anteriormente). Como consequência, cada objeto de proposta teria sua propriedade `renderAttempted` definida como `true`. Não haveria necessidade de renderizar manualmente essas apresentações nesse caso.
 
@@ -224,8 +224,8 @@ Nesse ponto, é possível renderizar o conteúdo da proposta conforme você julg
 
 1. Extrair apresentações do objeto `result`.
 1. Execute um loop em cada proposta, procurando pela proposta com um escopo de `discount`.
-1. Se encontrar uma proposta, percorra cada item na proposta, procurando o item que seja conteúdo de HTML. (É melhor verificar do que supor.)
-1. Se você encontrar um item com conteúdo HTML, encontre o elemento `daily-special` na página e substitua o HTML pelo conteúdo personalizado.
+1. Se encontrar uma proposta, percorra cada item na proposta, procurando o item que seja conteúdo do HTML. (É melhor verificar do que supor.)
+1. Se você encontrar um item com conteúdo HTML, localize o elemento `daily-special` na página e substitua seu HTML pelo conteúdo personalizado.
 1. Depois que o conteúdo for renderizado, envie um evento `display`.
 
 Seu código seria semelhante ao seguinte:
@@ -252,7 +252,7 @@ alloy("sendEvent", {
   var discountHtml;
   if (discountProposition) {
     // Find the item from proposition that should be rendered.
-    // Rather than assuming there a single item that has HTML
+    // Rather than assuming there is a single item that has HTML
     // content, find the first item whose schema indicates
     // it contains HTML content.
     for (var j = 0; j < discountProposition.items.length; j++) {
@@ -263,7 +263,7 @@ alloy("sendEvent", {
         var dailySpecialElement = document.getElementById("daily-special");
         dailySpecialElement.innerHTML = discountHtml;
         
-        // For this example, we assume there is only a signle place to update in the HTML.
+        // For this example, we assume there is only a single place to update in the HTML.
         break;  
       }
     }
@@ -298,7 +298,7 @@ alloy("sendEvent", {
 
 ### Gerenciar cintilação
 
-O SDK fornece recursos para [gerenciar a cintilação](../personalization/manage-flicker.md) durante o processo de personalização.
+A SDK fornece recursos para [gerenciar a cintilação](../personalization/manage-flicker.md) durante o processo de personalização.
 
 ## Renderiza apresentações em aplicativos de página única sem incrementar métricas {#applypropositions}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### Caso de uso 2: renderizar apresentações que não têm um seletor
 
-Este caso de uso se aplica a experiências criadas usando o [!DNL Target Form-based Experience Composer] ou o [Canal de experiência baseado em código](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/code-based-experience/get-started-code-based) do Adobe Journey Optimizer.
+Este caso de uso se aplica a experiências criadas usando o [!DNL Target Form-based Experience Composer] ou o [Canal de experiência baseado em código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) do Adobe Journey Optimizer.
 
 Você deve fornecer o seletor, a ação e o escopo na chamada `applyPropositions`.
 

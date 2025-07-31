@@ -1,10 +1,10 @@
 ---
-title: Conexão com a Lista de clientes do pinterest
+title: Conexão com a Lista de clientes do Pinterest
 description: Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '808'
 ht-degree: 3%
 
 ---
@@ -26,14 +26,14 @@ Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram s
 
 ## Identidades suportadas {#supported-identities}
 
-O destino [!DNL Pinterest Customer List] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR#getting-started).
+O destino [!DNL Pinterest Customer List] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 Na [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do fluxo de trabalho de ativação de destino, mapeie as identidades desejadas para o campo de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest.
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Mapeie o namespace de identidade de origem *GAID* para o campo de identidade de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest. |
-| IDFA | [!DNL Apple ID for Advertisers] | Mapeie o namespace de identidade de origem *IDFA* para o campo de identidade de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest. |
+| GAID | [!DNL Google Advertising ID] | Mapeie o namespace de identidade de origem *GAID* para o campo de identidade de destino *pinterest_audience*. |
+| IDFA | [!DNL Apple ID for Advertisers] | Mapeie o namespace de identidade de origem *IDFA* para o campo de identidade de destino *pinterest_audience*. |
 | EMAIL | Endereços de email (texto limpo ou hash com o algoritmo SHA256) | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. <br> Mapeie o namespace de identidade de origem *Email* ou *Email_LC_SHA256* para o campo de identidade de destino *pinterest_audience*. |
 
 {style="table-layout:auto"}
@@ -45,7 +45,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público-alvo com os identificadores (nome, número de telefone ou outros) usados no destino da Lista de clientes do Pinterest. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornec
 
 ### Atualizar credenciais de autenticação {#refresh-authentication-credentials}
 
-Os tokens do pinterest expiram a cada 30 dias. Quando o token expira, as exportações de dados para o destino param de funcionar. Para evitar essa situação, autentique novamente executando as seguintes etapas:
+Os tokens do Pinterest expiram a cada 30 dias. Quando o token expira, as exportações de dados para o destino param de funcionar. Para evitar essa situação, autentique novamente executando as seguintes etapas:
 
 1. Navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Contas]**
 2. (Opcional) Use os filtros disponíveis na página para exibir somente contas do Pinterest.

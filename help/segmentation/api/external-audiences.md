@@ -1,13 +1,11 @@
 ---
 title: Endpoint da API de públicos externos
 description: Saiba como usar a API de públicos-alvo externos para criar, atualizar, ativar e excluir seus públicos-alvo externos do Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
+source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
 workflow-type: tm+mt
-source-wordcount: '2405'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -528,24 +526,23 @@ Você pode recuperar todas as execuções de assimilação para o público exter
 
 **Formato da API**
 
-O endpoint a seguir oferece suporte a vários parâmetros de consulta para ajudar a filtrar os resultados. Embora esses parâmetros sejam opcionais, seu uso é altamente recomendado para ajudar a focalizar seus resultados.
+<!-- The following endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help focus your results. -->
 
 ```http
 GET /external-audience/{AUDIENCE_ID}/runs
-GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 ```
 
-**Parâmetros de consulta**
+<!-- **Query parameters**
 
-+++ Uma lista de parâmetros de consulta disponíveis.
++++ A list of available query parameters. 
 
-| Parâmetro | Descrição | Exemplo |
+| Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `limit` | O número máximo de itens retornados na resposta. Esse valor pode variar de 1 a 40. Por padrão, o limite é definido como 20. | `limit=30` |
-| `sortBy` | A ordem na qual os itens devolvidos são classificados. Você pode classificar por `name` ou por `createdAt`. Além disso, você pode adicionar um sinal `-` para classificar por ordem **decrescente** em vez de ordem **ascendente**. Por padrão, os itens são classificados por `createdAt` em ordem decrescente. | `sortBy=name` |
-| `property` | Um filtro para determinar quais execuções de assimilação de público-alvo são exibidas. Você pode filtrar pelas seguintes propriedades: <ul><li>`name`: permite filtrar pelo nome do público. Se estiver usando esta propriedade, você poderá comparar usando `=`, `!=`, `=contains` ou `!=contains`. </li><li>`createdAt`: permite filtrar pelo tempo de assimilação. Se estiver usando esta propriedade, você poderá comparar usando `>=` ou `<=`.</li><li>`status`: permite filtrar pelo status da execução de assimilação. Se estiver usando esta propriedade, você poderá comparar usando `=`, `!=`, `=contains` ou `!=contains`. </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `limit` | The maximum number of items returned in the response. This value can range from 1 to 40. By default, the limit is set to 20. | `limit=30` |
+| `sortBy` | The order in which the returned items are sorted. You can sort by either `name` or by `createdAt`. Additionally, you can add a `-` sign to sort by **descending** order instead of **ascending** order. By default, the items are sorted by `createdAt` in descending order. | `sortBy=name` |
+| `property` | A filter to determine which audience ingestion runs are displayed. You can filter on the following properties: <ul><li>`name`: Lets you filter by the audience name. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li><li>`createdAt`: Lets you filter by the ingestion time. If using this property, you can compare by using `>=` or `<=`.</li><li>`status`: Lets you filter by the ingestion run's status. If using this property, you can compare by using `=`, `!=`, `=contains`, or `!=contains`. </li></ul>  | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
-+++
++++ -->
 
 **Solicitação**
 
@@ -594,19 +591,23 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções
             "createdAt": 1749324248,
             "createdBy": "{USER_ID}"
         }
-    ],
+    ]
+}
+```
+
+<!-- ,
     "_page": {
         "limit": 20,
         "count": 2,
         "totalCount": 2
     }
-}
-```
+    
+| `_page` | Object | An object that contains the pagination information about the list of results. |
+     -->
 
 | Propriedade | Tipo | Descrição |
 | -------- | ---- | ----------- |
 | `runs` | Objeto | Um objeto que contém a lista de execuções de assimilação que pertence ao público-alvo. Mais informações sobre este objeto podem ser encontradas na [seção recuperar status de assimilação](#retrieve-ingestion-status). |
-| `_page` | Objeto | Um objeto que contém as informações de paginação sobre a lista de resultados. |
 
 +++
 

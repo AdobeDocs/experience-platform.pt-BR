@@ -2,9 +2,9 @@
 title: Endpoint da API de Pacotes de Ferramentas de Sandbox
 description: O ponto de extremidade /packages na API de ferramentas da sandbox permite gerenciar programaticamente pacotes no Adobe Experience Platform.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
+source-git-commit: 1d8c29178927c7ee3aceb0b68f97baeaefd9f695
 workflow-type: tm+mt
-source-wordcount: '2547'
+source-wordcount: '2933'
 ht-degree: 10%
 
 ---
@@ -17,7 +17,7 @@ O ponto de extremidade `/packages` na API de ferramentas da sandbox permite gere
 
 ## Criar um pacote {#create}
 
-Você pode criar um pacote de vários artefatos fazendo uma solicitação POST para o ponto de extremidade `/packages` e fornecendo valores para o nome e o tipo do pacote.
+Você pode criar um pacote de vários artefatos fazendo uma solicitação POST para o ponto de extremidade `/packages` enquanto fornece valores para o nome e o tipo do pacote.
 
 **Formato da API**
 
@@ -100,7 +100,7 @@ Uma resposta bem-sucedida retorna o pacote recém-criado. A resposta inclui a ID
 
 ## Atualizar um pacote {#update}
 
-Você pode atualizar um pacote fazendo uma solicitação PUT para o ponto de extremidade `/packages`.
+Use o ponto de extremidade `/packages` na API de ferramentas da sandbox para atualizar um pacote.
 
 ### Adicionar artefatos a um pacote {#add-artifacts}
 
@@ -139,7 +139,7 @@ curl -X PUT \
 | `id` | A ID do pacote a ser atualizado. | String | Sim |
 | `action` | Para adicionar artefatos ao pacote, o valor da ação deve ser **ADICIONAR**. Esta ação só tem suporte para tipos de pacote **PARTIAL**. | String | Sim |
 | `artifacts` | Uma lista de artefatos a serem adicionados ao pacote. Não haveria alteração no pacote se a lista fosse **nula** ou **vazia**. Os artefatos são deduplicados antes de serem adicionados ao pacote. Consulte a tabela abaixo para obter uma lista completa de artefatos compatíveis. | Matriz | Não |
-| `expiry` | O carimbo de data e hora que define a data de expiração do pacote. O valor padrão é 90 dias a partir do momento em que a API de PUT é chamada, se a expiração não for especificada na carga. O campo de expiração da resposta será a hora UTC da época. | String (formato de carimbo de data e hora UTC) | Não |
+| `expiry` | O carimbo de data e hora que define a data de expiração do pacote. O valor padrão é 90 dias a partir do momento em que a API do PUT é chamada, se a expiração não for especificada na carga. O campo de expiração da resposta será a hora UTC da época. | String (formato de carimbo de data e hora UTC) | Não |
 
 Os seguintes tipos de artefatos são suportados no momento.
 
@@ -198,7 +198,7 @@ Uma resposta bem-sucedida retorna o pacote atualizado. A resposta inclui a ID do
 
 ### Excluir artefatos de um pacote {#delete-artifacts}
 
-Para excluir artefatos de um pacote, você deve fornecer um `id` e incluir **DELETE** para o `action`.
+Para excluir artefatos de um pacote, você deve fornecer um `id` e incluir o **DELETE** para o `action`.
 
 **Formato da API**
 
@@ -380,7 +380,7 @@ Uma resposta bem-sucedida retorna um motivo que mostra a ID do pacote excluída.
 }
 ```
 
-## Publish um pacote {#publish}
+## Publicar um pacote {#publish}
 
 Para habilitar a importação de um pacote em uma sandbox, você deve publicá-lo. Faça uma solicitação GET para o ponto de extremidade `/packages` ao especificar a ID do pacote que você deseja publicar.
 
@@ -1223,7 +1223,7 @@ Uma resposta bem-sucedida retorna detalhes sobre sua solicitação de compartilh
             "modifiedByName": "{MODIFIED_BY}",
             "modifiedByIMSOrgId": "{ORG_ID}",
             "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
-            "linkingId": "{LINKIND_ID}"
+            "linkingId": "{LINKING_ID}"
         }
     },
     "failedRequests": {}
@@ -1975,5 +1975,497 @@ Uma resposta bem-sucedida retorna a carga do pacote.
 {
     "imsOrgId": "{ORG_ID}",
     "packageId": "{PACKAGE_ID}"
+}
+```
+
+## Migrar atualizações de configuração de objeto
+
+Use o ponto de extremidade /packages na API de ferramentas da sandbox para migrar atualizações de configuração de objeto.
+
+### Atualizar operações (#update-operations)
+
+Compare uma versão especificada ou mais recente de um instantâneo de pacote com o estado atual da sandbox de origem ou com uma sandbox de destino usada anteriormente em que o pacote foi importado fazendo uma solicitação POST para o ponto de extremidade `/packages/{packageId}/version/compare`, fornecendo a ID do pacote.
+
+***Formato da API***
+
+```http
+PATCH /packages/{packageId}/version/compare
+```
+
+| Propriedade | Descrição | Tipo | Obrigatório |
+| --- | --- | --- | --- |
+| `packageId` | A ID do pacote. | String | Sim |
+
+**Solicitação**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/compare/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "triggerNew": true,
+      "targetSandbox": "{SANDBOX_NAME}"
+  }'
+```
+
+| Propriedade | Descrição | Tipo | Obrigatório |
+| --- | --- | --- | --- |
+| `triggerNew` | Sinalizador para acionar o novo trabalho de cálculo de comparação, mesmo que já exista um trabalho ativo ou concluído. | Booleano | Não |
+| `targetSandbox` | Representa o nome da sandbox de destino com a qual o diferencial deve ser calculado. Se não especificada, a sandbox de origem será usada como sandbox de destino. | String | Não |
+
+**Resposta**
+
+Uma resposta bem-sucedida para um trabalho concluído anteriormente retorna o objeto de trabalho com os resultados de comparação calculados anteriormente. Um trabalho recém-concluído retorna a JobId.
+
++++Exibir resposta (tarefa enviada)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "c4b7d07ae4c646279e2070a31c50bd5c",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "SUCCESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "deltaPackageVersion": {
+            "packageId": "{PACKAGE_ID}",
+            "currentVersion": 0,
+            "validated": false,
+            "rootArtifacts": [
+                {
+                    "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de",
+                    "type": "REGISTRY_SCHEMA",
+                    "found": false,
+                    "count": 0
+                }
+            ],
+            "eximGraphDelta": {
+                "vertices": [],
+                "pluginDeltas": [
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 2_1738766274074",
+                                "newValue": "Custom FieldGroup 2"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    },
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 4_1738766274074",
+                                "newValue": "Custom FieldGroup 4"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "importReplacementMap": {
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+            "5a45f8cd309d5ed5797be9a0af65e89152a51d57a6c74b52": "4ae041fa182d6faf2e7c56463399170d913138a7c5712909",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/b2b7705e770a35341b8bc5ec5e3644d9c7387266777fe4ba": "https://ns.adobe.com/sandboxtoolingstage/schemas/838c4e21ad81543ac14238ac1756012f7f98f0e0bec6b425",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de": "https://ns.adobe.com/sandboxtoolingstage/schemas/9a55692d527169d0239e126137a694ed9db2406c9bcbd06a",
+            "8f45c79235c91e7f0c09af676a77d170a34b5ee0ad5de72c": "65d755cc3300674c3cfcec620c59876af07f046884afd359",
+            "f04b8e461396ff426f8ba8dc5544f799bf287baa8e0fa5c": "b6fa821ada8cb97cac384f0b0354bbe74209ec97fb6a83a3",
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+            "c8304f3cb7986e8c9b613cd8d832125bd867fb4a5aedf67a": "4d21e9bf89ce0042b52d7d41ff177a7697d695e2617d1fc1"
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
++++Exibir resposta (tarefa recém-enviada)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "aa5cfacf35a8478c8cf44a675fab1c30 ",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "IN_PROGRESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
+### Atualizar versão do pacote (#package-versioning)
+
+Atualize o pacote para uma nova versão usando o instantâneo mais recente da sandbox de origem para cada objeto fazendo uma solicitação GET para o ponto de extremidade `/packages/{packageId}/version/save`, fornecendo a ID do pacote.
+
+***Formato da API***
+
+```http
+PATCH /packages/{packageId}/version/save
+```
+
+| Propriedade | Descrição | Tipo | Obrigatório |
+| --- | --- | --- | --- |
+| `packageId` | A ID do pacote. | String | Sim |
+
+**Solicitação**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/save/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o status do trabalho para a atualização da versão.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Version Job Package: {JOB_ID}",
+    "description": null,
+    "visibility": "TENANT",
+    "requestType": "VERSION",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPGRADE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### Recuperar histórico de versão do pacote (#package-version-history)
+
+Recupere o histórico de controle de versão do pacote, incluindo o carimbo de data/hora e o modificador, fazendo uma solicitação GET para o ponto de extremidade `/packages/{packageId}/history` e fornecendo a ID do pacote.
+
+***Formato da API***
+
+```http
+PATCH /packages/{packageId}/history
+```
+
+| Propriedade | Descrição | Tipo | Obrigatório |
+| --- | --- | --- | --- |
+| `packageId` | A ID do pacote. | String | Sim |
+
+**Solicitação**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/history/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o histórico de versões de um pacote.
+
+```json
+[
+    {
+        "id": "cb68591a1ed941e191e7f52e33637a26",
+        "version": 0,
+        "createdDate": 1739516784000,
+        "modifiedDate": 1739516784000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 3
+    },
+    {
+        "id": "e26189e6e4df476bb66c3fc3e66a1499",
+        "version": 0,
+        "createdDate": 1739343268000,
+        "modifiedDate": 1739343268000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 2
+    },
+    {
+        "id": "11af34c0eee449ac84ef28c66d9383e3",
+        "version": 0,
+        "createdDate": 1739343073000,
+        "modifiedDate": 1739343073000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 1
+    }
+]
+```
+
+### Enviar um trabalho de atualização (#submit-update)
+
+Envie novas atualizações para os objetos de sandbox de destino fazendo uma solicitação PATCH para o ponto de extremidade `/packages/{packageId}/import`, fornecendo a ID do pacote.
+
+***Formato da API***
+
+```http
+PATCH /packages/{packageId}/import
+```
+
+| Propriedade | Descrição | Tipo | Obrigatório |
+| --- | --- | --- | --- |
+| `packageId` | A ID do pacote. | String | Sim |
+
+**Solicitação**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "id": "50fd94f8072b4f248737a2b57b41058f",
+      "name": "Test Update",
+      "destinationSandbox": {
+        "name": "test-sandbox-sbt",
+        "imsOrgId": "{ORG_ID}"
+      },
+      "overwriteMappings": {
+        "https://ns.adobe.com/sandboxtoolingstage/schemas/327a48c83a5359f8160420a00d5a07f0ba8631a1fd466f9e" : {
+            "id" : "https://ns.adobe.com/sandboxtoolingstage/schemas/e346bb2cd7b26576cb51920d214aebbd42940a9bf94a75cd",
+            "type" : "REGISTRY_SCHEMA"
+        }
+      }
+  }'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna a ID do trabalho para a atualização.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Update Job Name",
+    "description": "Update Job Description",
+    "visibility": "TENANT",
+    "requestType": "IMPORT",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPDATE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "amanda-1",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### Desabilitar atualização e substituição para um pacote (#disable-update)
+
+Desabilite a atualização e a substituição de pacotes sem suporte a eles, fazendo uma solicitação GET para o ponto de extremidade `/packages/{packageId}/?{QUERY_PARAMS}` e fornecendo a ID do pacote.
+
+***Formato da API***
+
+```http
+PATCH /packages/{packageId}?{QUERY_PARAMS}
+```
+
+| Propriedade | Descrição | Tipo | Obrigatório |
+| --- | --- | --- | --- |
+| `packageId` | A ID do pacote. | String | Sim |
+| {QUERY_PARAM} | O parâmetro de consulta getCapabilites. Isto deve ser configurado para `true` ou `false` | Booleano | Sim |
+
+**Solicitação**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}?getCapabilities=true'/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna uma lista dos recursos do pacote.
+
+```json
+{
+    "id": "80230dde96574a828191144709bb9b51",
+    "version": 3,
+    "createdDate": 1749808582000,
+    "modifiedDate": 1749808648000,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "Ankit_Primary_Descriptor_Test",
+    "description": "RestPackage",
+    "imsOrgId": "{ORG_ID}",
+    "clientId": "usecasebuilder",
+    "packageType": "PARTIAL",
+    "expiry": 1757584598000,
+    "publishDate": 1749808648000,
+    "status": "PUBLISHED",
+    "packageVisibility": "PRIVATE",
+    "latestPackageVersion": 0,
+    "packageAccessType": "TENANT",
+    "artifactsList": [
+        {
+            "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/1c767056056de64d8030380d1b9f570d26bc15501a1e0e95",
+            "altId": null,
+            "type": "REGISTRY_SCHEMA",
+            "found": false,
+            "count": 0
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "atul-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "packageCapabilities": {
+        "capabilities": [
+            "VERSIONABLE"
+        ]
+    }
 }
 ```

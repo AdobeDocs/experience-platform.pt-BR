@@ -1,15 +1,13 @@
 ---
 title: Uso e capacidade da licença
 description: Saiba mais sobre o uso de sua licença e os limites de capacidade no Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: b3b0792a1a1dd5270dec697539ed58d895814fc8
+exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
+source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 1%
+source-wordcount: '577'
+ht-degree: 6%
 
 ---
-
 
 # Uso e capacidades da licença
 
@@ -26,13 +24,13 @@ Para obter mais informações sobre medidas de proteção no Experience Platform
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
->title="Contagem de público-alvo de transmissão"
->abstract="O número máximo de públicos-alvo de transmissão por sandbox. Esse número inclui o número de públicos-alvo de borda que você tem na sandbox."
+>title="Contagem de públicos-alvo de transmissão"
+>abstract="O número máximo de públicos-alvo de transmissão por sandbox. Esse número inclui o número de públicos-alvo do Edge que você tem na sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
 >title="Públicos da Edge"
->abstract="O número máximo de públicos-alvo de borda por sandbox."
+>abstract="O número máximo de públicos-alvo do Edge por sandbox."
 
 Atualmente, o Capacity oferece suporte aos seguintes serviços:
 

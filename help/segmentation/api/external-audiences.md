@@ -2,10 +2,10 @@
 title: Endpoint da API de públicos externos
 description: Saiba como usar a API de públicos-alvo externos para criar, atualizar, ativar e excluir seus públicos-alvo externos do Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
+source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2189'
+ht-degree: 5%
 
 ---
 
@@ -78,10 +78,12 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
         },
         "ttlInDays": "40",
         "labels": ["core/C1"],
@@ -95,8 +97,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | String | O nome do público-alvo externo. |
 | `description` | String | Uma descrição opcional para o público-alvo externo. |
 | `customAudienceId` | String | Um identificador opcional para seu público-alvo externo. |
-| `fields` | Matriz de objetos | A lista de campos e seus tipos de dados. Ao criar a lista de campos, você pode adicionar os seguintes itens: <ul><li>`name`: **Obrigatório** O nome do campo que faz parte da especificação de público-alvo externo.</li><li>`type`: **Obrigatório** O tipo de dados que entra no campo. Os valores com suporte incluem `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) e `boolean`.</li>`identityNs`: **Obrigatório para o campo de identidade** O namespace usado pelo campo de identidade. Os valores suportados incluem todos os namespaces válidos, como `ECID` ou `email`.li><li>`labels`: *Opcional* Uma matriz de rótulos de controle de acesso para o campo. Mais informações sobre os rótulos de controle de acesso disponíveis podem ser encontradas no [glossário de rótulos de uso de dados](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objeto | Um objeto que contém as informações onde o público-alvo externo está localizado. Ao usar este objeto, você **deve** incluir as seguintes informações: <ul><li>`path`: **Obrigatório**: o local do público-alvo externo ou a pasta que contém o público-alvo externo na origem.</li><li>`type`: **Obrigatório** O tipo do objeto que você está recuperando da origem. Este valor pode ser `file` ou `folder`.</li><li>`sourceType`: *Opcional* O tipo de origem da qual você está recuperando. No momento, o único valor com suporte é `Cloud Storage`.</li><li>`cloudType`: *Opcional* O tipo de armazenamento em nuvem, com base no tipo de origem. Os valores suportados incluem `S3`, `DLZ`, `GCS` e `SFTP`.</li><li>`baseConnectionId`: a ID da conexão base, e é fornecida pelo seu provedor de origem. Este valor é **necessário** se estiver usando um valor `cloudType` de `S3`, `GCS` ou `SFTP`. Para obter mais informações, leia a [visão geral dos conectores de origem](../../sources/home.md)li></ul> |
+| `fields` | Matriz de objetos | A lista de campos e seus tipos de dados. Ao criar a lista de campos, você pode adicionar os seguintes itens: <ul><li>`name`: **Obrigatório** O nome do campo que faz parte da especificação de público-alvo externo.</li><li>`type`: **Obrigatório** O tipo de dados que entra no campo. Os valores com suporte incluem `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) e `boolean`.</li><li>`identityNs`: **Obrigatório para o campo de identidade** O namespace usado pelo campo de identidade. Os valores suportados incluem todos os namespaces válidos, como `ECID` ou `email`.</li><li>`labels`: *Opcional* Uma matriz de rótulos de controle de acesso para o campo. Mais informações sobre os rótulos de controle de acesso disponíveis podem ser encontradas no [glossário de rótulos de uso de dados](/help/data-governance/labels/reference.md). </li></ul> |
+| `sourceSpec` | Objeto | Um objeto que contém as informações onde o público-alvo externo está localizado. Ao usar este objeto, você **deve** incluir as seguintes informações: <ul><li>`path`: **Obrigatório**: o local do público-alvo externo ou a pasta que contém o público-alvo externo na origem.</li><li>`type`: **Obrigatório** O tipo do objeto que você está recuperando da origem. Este valor pode ser `file` ou `folder`.</li><li>`sourceType`: *Opcional* O tipo de origem da qual você está recuperando. No momento, o único valor com suporte é `Cloud Storage`.</li><li>`cloudType`: *Opcional* O tipo de armazenamento em nuvem, com base no tipo de origem. Os valores suportados incluem `S3`, `DLZ`, `GCS` e `SFTP`.</li><li>`baseConnectionId`: a ID da conexão base, e é fornecida pelo seu provedor de origem. Este valor é **necessário** se estiver usando um valor `cloudType` de `S3`, `GCS` ou `SFTP`. Para obter mais informações, leia a [visão geral dos conectores de origem](../../sources/home.md)</li></ul> |
 | `ttlInDays` | Número inteiro | A expiração dos dados para o público externo, em dias. Esse valor pode ser definido de 1 a 90. Por padrão, a expiração dos dados está definida como 30 dias. |
 | `audienceType` | String | O tipo de público-alvo para o público externo. Atualmente, somente `people` é suportado. |
 | `originName` | String | **Obrigatório** A origem do público-alvo. Isso indica de onde o público-alvo vem. Para públicos externos, você deve usar `CUSTOM_UPLOAD`. |
@@ -139,11 +141,13 @@ Uma resposta bem-sucedida retorna o status HTTP 202 com detalhes do público-alv
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -231,11 +235,13 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do status da ta
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -276,6 +282,7 @@ Ao usar esse endpoint, é possível atualizar os seguintes campos:
 - Descrição de público-alvo
 - Rótulos do controle de acesso em nível de campo
 - Rótulos de controle de acesso no nível do público
+- A expiração dos dados do público-alvo
 
 A atualização do campo usando este ponto de extremidade **substitui** o conteúdo do campo solicitado.
 
@@ -403,7 +410,6 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 | -------- | ---- | ----------- |
 | `dataFilterStartTime` | Carimbo de data e hora da época | **Obrigatório** O intervalo que especifica a hora inicial em que o fluxo será executado para selecionar quais arquivos serão processados. |
 | `dataFilterEndTime` | Carimbo de data e hora da época | O intervalo que especifica a hora final em que o fluxo será executado para selecionar quais arquivos serão processados. |
-| `differentialIngestion` | Booleano | Um campo que determina se a assimilação será uma assimilação parcial com base na diferença desde a última assimilação ou uma assimilação completa de público. Por padrão, este valor é `true`. |
 
 +++
 

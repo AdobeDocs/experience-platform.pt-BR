@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Perguntas frequentes sobre o Serviço de consulta e o Data Distiller
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta e ao Data Distiller. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
+source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
 workflow-type: tm+mt
-source-wordcount: '5055'
+source-wordcount: '5186'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,7 @@ Uma possível causa é o recurso de preenchimento automático. O recurso process
 ### Posso usar [!DNL Postman] para a API do Serviço de consulta?
 
 +++Resposta
-Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/31682?captions=por_br) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Há um limite para o número máximo de linhas retornadas de uma consulta por meio da interface do usuário?
@@ -406,7 +406,7 @@ A saída do console fornecida na interface do Serviço de consulta é um formato
 
 #### Converter do carimbo de data e hora UTC
 
-O método `from_utc_timestamp()` interpreta os parâmetros fornecidos **a partir do carimbo de data/hora de seu fuso horário local** e fornece o carimbo de data/hora equivalente da região desejada no formato UTC. No exemplo abaixo, a hora é 14h40 no fuso horário local do usuário. O fuso horário de Seul transmitido como uma variável está nove horas à frente do fuso horário local.
+O método `from_utc_timestamp()` interpreta os parâmetros fornecidos **a partir do carimbo de data/hora de seu fuso horário local** e fornece o carimbo de data/hora equivalente da região desejada no formato UTC. No exemplo abaixo, a hora é 2:40PM no fuso horário local do usuário. O fuso horário de Seul transmitido como uma variável está nove horas à frente do fuso horário local.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
@@ -647,6 +647,14 @@ As horas de cálculo de uma consulta podem variar devido a vários fatores. Isso
 A infraestrutura de back-end é aprimorada constantemente para otimizar a utilização de horas de computação e o tempo de processamento. Como resultado, você pode notar alterações ao longo do tempo à medida que são implementadas melhorias de desempenho.
 +++
 
+### O desempenho do Data Distiller difere entre as sandboxes de desenvolvimento e produção?
+
++++Resposta
+Você pode esperar desempenho semelhante ao executar consultas em sandboxes de desenvolvimento e produção. Ambos os ambientes foram projetados para fornecer o mesmo nível de capacidade de processamento. No entanto, podem ocorrer diferenças nas horas de computação, dependendo da quantidade de dados processados e da atividade geral do sistema no momento em que você executa o query.
+
+Rastreie o uso de horas do seu computador no [painel Uso da licença](../dashboards/guides/license-usage.md), na interface do usuário do Experience Platform.
++++
+
 ## Interface de consultas
 
 ### O &quot;Criar consulta&quot; está travado &quot;Inicializando conexão...&quot; ao tentar se conectar ao Serviço de consulta. Como corrijo o problema?
@@ -754,6 +762,12 @@ O valor para credenciais sem expiração são os argumentos concatenados de `tec
 Consulte a documentação para obter mais informações sobre como [conectar-se a clientes externos com credenciais](./ui/credentials.md#using-credentials-to-connect-to-external-clients).
 +++
 
+### Existem restrições sobre caracteres especiais para senhas de credenciais sem expiração?
+
++++Resposta
+Sim. Ao definir uma senha para credenciais sem expiração, você deve incluir pelo menos um número, uma letra minúscula, uma letra maiúscula e um caractere especial. O cifrão ($) não é compatível. Use caracteres especiais como !, @, #, ^ ou &amp; em vez disso.
++++
+
 ### Que tipo de editores SQL de terceiros posso conectar ao Editor de serviço de consulta?
 
 +++Resposta
@@ -798,7 +812,7 @@ A tabela a seguir fornece códigos de erro PSQL e suas possíveis causas.
 | **53400** | Consulta | O LIMITE excede o valor máximo | O usuário especificou uma cláusula LIMIT maior que 100.000 |
 | **53400** | Consulta | Tempo limite da instrução | O demonstrativo ao vivo enviado levou mais do que o máximo de 10 minutos |
 | **58000** | Consulta | Erro do sistema | Falha interna do sistema |
-| **0A000** | Consulta/Comando | Não suportado | O recurso/funcionalidade na consulta/comando não é compatível |
+| **0A000** | Consulta/Comando | Incompatível | O recurso/funcionalidade na consulta/comando não é compatível |
 | **42501** | DROP TABLE Query | Tabela de remoção não criada pelo Serviço de consulta | A tabela que está sendo removida não foi criada pelo Serviço de Consulta usando a instrução `CREATE TABLE` |
 | **42501** | DROP TABLE Query | Tabela não criada pelo usuário autenticado | A tabela que está sendo removida não foi criada pelo usuário conectado no momento |
 | **42P01** | DROP TABLE Query | Tabela não encontrada | A tabela especificada na consulta não foi encontrada |

@@ -2,9 +2,9 @@
 title: Criar um filtro global
 description: Saiba como filtrar seus insights de dados com um filtro aplicado globalmente e personalizado.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 473aaa8dedd549cf524d77c9b0a37d71b4688805
+source-git-commit: 60b0c73766c89b98685810b4f58cfe1a40316dc9
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,17 @@ Para criar um filtro global, primeiro selecione **[!UICONTROL Adicionar filtro]*
 
 Você pode alterar rapidamente os insights fornecidos pelo SQL com filtros globais personalizados.
 
-A caixa de diálogo [!UICONTROL Criar um filtro global] é aberta. A criação de um filtro global segue o mesmo processo que a criação de um insight com SQL. Primeiro, selecione um banco de dados (modelo de dados de insights) para consultar, em seguida, insira seu SQL personalizado no Editor de Consultas e, finalmente, selecione o ícone de execução (![Um ícone de execução.](/help/images/icons/play.png)).
+A caixa de diálogo [!UICONTROL Criar um filtro global] é aberta. A criação de um filtro global segue o mesmo processo que a criação de uma insight com SQL. Primeiro, selecione um banco de dados (modelo de dados de insights) para consultar, em seguida, insira seu SQL personalizado no Editor de Consultas e, finalmente, selecione o ícone de execução (![Um ícone de execução.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
 >Você deve incluir uma ID e um valor ao criar um filtro global. Os valores de amostra permitem executar a instrução SQL e criar o gráfico. Observe que os valores de amostra fornecidos ao compor a instrução são substituídos pelos valores reais selecionados para o filtro de data ou global no tempo de execução.
 
 Após executar o query com êxito, a guia results exibe os resultados. Selecione **[!UICONTROL Próximo]**.
+
+>[!NOTE]
+>
+>Os resultados da consulta são limitados a 100 linhas por padrão. Para retornar mais linhas, adicione uma cláusula LIMIT à consulta SQL com a contagem de linhas desejada. Para recuperar todas as linhas e remover o limite padrão, use LIMIT 0 no query.
 
 ![A [!UICONTROL caixa de diálogo Criar um filtro global] com o menu suspenso do conjunto de dados, o ícone Executar e o Próximo realçados.](../../images/sql-insights-query-pro-mode/global-filter.png)
 

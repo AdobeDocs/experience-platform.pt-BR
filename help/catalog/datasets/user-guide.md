@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 47cb1e9851a288961ecca01cf609b72342c58631
+source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
 workflow-type: tm+mt
-source-wordcount: '4551'
+source-wordcount: '4482'
 ht-degree: 5%
 
 ---
@@ -108,25 +108,26 @@ Mais informações sobre essas ações disponíveis podem ser encontradas nas re
 
 ### Visualizar um conjunto de dados {#preview}
 
-Você pode visualizar os dados de amostra do conjunto de dados nas opções embutidas da guia [!UICONTROL Procurar] e também na exibição [!UICONTROL Atividade do conjunto de dados]. Uma nova janela de visualização do conjunto de dados está disponível com navegação adicional e melhorias de contexto.
+Você pode visualizar até 100 linhas de dados de amostra para qualquer conjunto de dados, seja das opções em linha na guia [!UICONTROL Procurar] ou da exibição [!UICONTROL Atividade do conjunto de dados].
 
-Na guia [!UICONTROL Procurar], selecione as reticências (...) ao lado do nome do conjunto de dados que deseja visualizar. Uma lista de opções é exibida. Em seguida, selecione [!UICONTROL Visualizar conjunto de dados] nas opções disponíveis. Se o conjunto de dados estiver vazio, o link de visualização será desativado e indicará que a visualização não está disponível.
+Na guia [!UICONTROL Procurar], selecione as reticências (...) ao lado do nome do conjunto de dados e escolha [!UICONTROL Visualizar conjunto de dados]. Se o conjunto de dados estiver vazio, a opção de visualização será desativada. Como alternativa, na tela **[!UICONTROL Atividade do conjunto de dados]**, selecione **[!UICONTROL Visualizar conjunto de dados]** próximo ao canto superior direito da tela.
 
 ![A guia Procurar do espaço de trabalho Conjuntos de Dados com a opção de conjunto de dados reticências e Visualização realçada para o conjunto de dados escolhido.](../images/datasets/user-guide/preview-dataset-option.png)
 
-Isso abre a janela de pré-visualização, onde a visualização hierárquica do esquema do conjunto de dados é mostrada à esquerda.
+Isso abre a janela de pré-visualização, onde a visualização hierárquica do esquema do conjunto de dados aparece à esquerda.
 
 >[!NOTE]
 >
->O diagrama do esquema no lado esquerdo da visualização exibe apenas os campos que contêm dados. Os campos sem dados são ocultos automaticamente para simplificar a interface do usuário e se concentrar em informações relevantes.
+>O diagrama do esquema à esquerda exibe apenas os campos que contêm dados. Os campos sem dados são ocultos automaticamente para simplificar a interface do usuário e se concentrar em informações relevantes.
 
 ![A caixa de diálogo de visualização do conjunto de dados com informações sobre a estrutura, bem como valores de exemplo, para o conjunto de dados são mostrados.](../images/datasets/user-guide/preview-dataset.png)
 
-Como alternativa, na tela **[!UICONTROL Atividade do conjunto de dados]**, selecione **[!UICONTROL Visualizar conjunto de dados]** próximo ao canto superior direito da tela para visualizar até 100 linhas de dados.
+Como alternativa, na tela **[!UICONTROL Atividade do conjunto de dados]**, selecione **[!UICONTROL Visualizar conjunto de dados]** para abrir a janela de visualização e revisar uma amostra da estrutura e dos valores do seu conjunto de dados.
 
 ![O botão Visualizar conjunto de dados está realçado.](../images/datasets/user-guide/select-preview.png)
 
-A janela de visualização do conjunto de dados fornece uma interface simplificada para explorar e validar conjuntos de dados.
+A janela de visualização do conjunto de dados fornece uma maneira rápida de explorar e validar a estrutura e os dados do seu conjunto de dados.
+
 
 #### Janela de visualização do conjunto de dados {#dataset-preview-window}
 
@@ -137,34 +138,25 @@ A animação a seguir mostra a janela de visualização do conjunto de dados com
 A janela de visualização do conjunto de dados inclui:
 
 * Uma barra lateral do navegador de objetos à esquerda para navegar e filtrar campos do conjunto de dados.
-* Indicadores de tipo de dados exibidos ao lado de cada nome de coluna para insight rápido na estrutura do conjunto de dados.
+* Indicadores de tipo de dados ao lado de cada nome de coluna para o insight na estrutura do conjunto de dados.
 * Uma consulta SQL é exibida na parte superior da janela, mostrando a consulta usada para gerar o conjunto de dados.
-* Uma exibição de tabela formatada de até 100 linhas na área inferior direita para uma análise eficiente dos dados.
-* Navegação direta para o Editor de consultas para usuários do Data Distiller, com a consulta SQL pré-preenchida para posterior exploração ou modificação.
+* Uma exibição de tabela formatada de até 100 linhas para uma análise eficiente dos dados.
 
-Esses recursos oferecem suporte para navegação rápida, compreensão de esquemas e validação transparente de conjuntos de dados.
-
-Selecione **[!UICONTROL Visualizar conjunto de dados]** nas ações embutidas ou na tela [!UICONTROL Atividade do conjunto de dados] para abrir a janela de visualização.
-
->[!NOTE]
->
->A janela de pré-visualização exibe uma amostra de até 100 linhas. Os campos sem dados são excluídos da visualização.
+Esses recursos ajudam você a navegar, entender detalhes do esquema e validar dados de amostra com eficiência.
 
 #### Atalho do Editor de consultas avançado {#query-editor-shortcut}
 
-Se sua organização tiver uma licença do Data Distiller, você poderá acessar o Editor de consultas avançadas diretamente da janela de visualização do conjunto de dados.
+Se sua organização tiver uma licença do Data Distiller, você poderá acessar o [!UICONTROL Editor de Consulta Avançado] diretamente da janela de visualização do conjunto de dados. Use esse atalho para mover facilmente da visualização de dados de amostra para a execução e refinamento de consultas no Serviço de consulta.
 
 >[!AVAILABILITY]
 >
->Somente os usuários com a licença necessária do Data Distiller podem acessar essa funcionalidade. Se sua organização não tiver o Data Distiller, a opção [!UICONTROL Editor de consulta avançado] não estará visível.
+>O acesso ao [!UICONTROL Editor de Consulta Avançado] é limitado a organizações com uma licença de SKU do Data Distiller. Se sua organização não tiver a licença necessária, essa opção não aparecerá na janela de visualização do conjunto de dados.
 
-Selecione **[!UICONTROL Editor de consulta avançado]** no canto superior direito da janela de visualização para abrir o Editor de consulta. A consulta de visualização atual é pré-carregada e está pronta para execução ou análise adicional.
+Selecione [!UICONTROL Editor de Consulta Avançado] no canto superior direito da janela de visualização para abrir o Serviço de Consulta com sua consulta SQL atual pré-carregada e executada. Você pode continuar analisando ou modificando o SQL sem inserir a consulta novamente.
 
-![Janela de visualização do conjunto de dados mostrando o botão do editor de consulta avançado no canto superior direito.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+![Janela de visualização do conjunto de dados mostrando o botão Editor de Consulta Avançado no canto superior direito.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
-Esse atalho permite mover facilmente da visualização de dados de amostra para a execução e refinamento de consultas no Serviço de consulta sem inserir novamente o SQL ou o contexto.
-
-Para acesso e análise de dados adicionais, use serviços downstream como [!DNL Query Service] e [!DNL JupyterLab]. Consulte os seguintes documentos para obter mais informações:
+Para análise adicional, use serviços downstream como [!DNL Query Service] e [!DNL JupyterLab]. Consulte os seguintes documentos para obter mais informações:
 
 * [Visão geral do Serviço de consulta](../../query-service/home.md)
 * [Guia do usuário do JupyterLab](../../data-science-workspace/jupyterlab/overview.md)

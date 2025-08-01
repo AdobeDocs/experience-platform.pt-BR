@@ -3,9 +3,9 @@ title: Guia da API do Serviço de segmentação
 description: A API do Serviço de segmentação permite que os desenvolvedores gerenciem programaticamente as operações de segmentação no Adobe Experience Platform. Siga este manual para saber como executar operações importantes usando a API.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: af79493c831c401c0bf14e391eb36a8175b4a2dd
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '614'
 ht-degree: 3%
 
 ---
@@ -29,6 +29,12 @@ Para obter mais informações sobre como usar este ponto de extremidade, leia o 
 Os trabalhos de exportação são processos assíncronos usados para manter membros do segmento de público-alvo em conjuntos de dados. Você pode usar o ponto de extremidade `/export/jobs` para recuperar todos os trabalhos de exportação, criar um novo trabalho de exportação, recuperar detalhes de um trabalho de exportação específico ou cancelar um trabalho de exportação específico.
 
 Para obter mais informações sobre como usar este ponto de extremidade, leia o [manual do ponto de extremidade de trabalhos de exportação](./export-jobs.md).
+
+## Públicos externos
+
+Você pode importar públicos externos para a Experience Platform, recuperar o status de criação de um público, atualizar um público externo, iniciar uma execução de assimilação de público, recuperar um status de assimilação de público externo, listar execuções de assimilação de público e excluir um público externo usando o ponto de extremidade `/core/ais/external-audiences`.
+
+Para obter mais informações sobre como usar este ponto de extremidade, leia o [manual do ponto de extremidade de públicos externos](./external-audiences.md).
 
 ## Visualizações e estimativas
 

@@ -2,10 +2,10 @@
 title: Interface de configurações de identidade
 description: Saiba como usar a interface do usuário de configurações de identidade.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '665'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ Leia este guia para saber como definir suas configurações de identidade na int
 Leia os seguintes documentos antes de começar a trabalhar com configurações de identidade:
 
 * [[!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
+* [Algoritmo de otimização de identidades](./identity-optimization-algorithm.md)
 * [Guia de implementação](./implementation-guide.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Prioridade de namespace](./namespace-priority.md)
@@ -85,14 +85,14 @@ A partir daqui, você deve confirmar o seguinte antes de prosseguir para a etapa
 >
 >* Não haverá alterações nos dados até que você salve as configurações de identidade.
 
-![A janela de confirmação que exibe um aviso de atraso de cerca de seis horas antes que as configurações sejam processadas.](../images/rules/complete.png)
+![A janela de confirmação que exibe um aviso sobre um atraso de 24 horas antes de as configurações serem processadas.](../images/rules/complete.png)
 
 ## Próximas etapas
 
 Para obter mais informações sobre [!DNL Identity Graph Linking Rules], leia a seguinte documentação:
 
 * [Visão geral do [!DNL Identity Graph Linking Rules]](./overview.md)
-* [Algoritmo de otimização de identidade](./identity-optimization-algorithm.md)
+* [Algoritmo de otimização de identidades](./identity-optimization-algorithm.md)
 * [Guia de implementação](./implementation-guide.md)
 * [Exemplos de configurações de gráfico](./example-configurations.md)
 * [Solução de problemas e perguntas frequentes](./troubleshooting.md)

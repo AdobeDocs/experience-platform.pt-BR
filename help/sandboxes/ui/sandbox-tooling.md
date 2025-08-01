@@ -2,9 +2,9 @@
 title: Ferramentas de sandbox
 description: Exporte e importe configurações de sandbox facilmente entre sandboxes.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
+source-git-commit: a3db2b69400a43abe399f90036041aaeaf0bd0a0
 workflow-type: tm+mt
-source-wordcount: '3414'
+source-wordcount: '3496'
 ht-degree: 5%
 
 ---
@@ -24,6 +24,17 @@ Você pode usar o recurso de ferramenta sandbox para selecionar objetos diferent
 O recurso de ferramenta de sandbox fornece a capacidade de exportar objetos [!DNL Adobe Real-Time Customer Data Platform] e [!DNL Adobe Journey Optimizer] para um pacote.
 
 ### Objetos da Real-time Customer Data Platform {#real-time-cdp-objects}
+
+>[!BEGINSHADEBOX]
+
+### Alterações nas importações de público-alvo de várias entidades
+
+Com as [atualizações de arquitetura B2B](../../rtcdp/b2b-architecture-upgrade.md), você não poderá mais importar públicos de várias entidades com atributos B2B e Eventos de Experiência se um pacote que inclui esses públicos tiver sido publicado antes da atualização. Esses públicos-alvo não serão importados e não poderão ser convertidos automaticamente para a nova arquitetura.
+
+Para contornar essa limitação, você deve criar um novo pacote com os públicos atualizados e, em seguida, importá-los para suas respectivas sandboxes de destino usando as ferramentas da sandbox.
+
+
+>[!ENDSHADEBOX]
 
 A tabela abaixo lista [!DNL Adobe Real-Time Customer Data Platform] objetos que atualmente têm suporte para ferramentas de sandbox:
 
@@ -54,12 +65,12 @@ A tabela abaixo lista [!DNL Adobe Journey Optimizer] objetos que atualmente têm
 | [!DNL Adobe Journey Optimizer] | Público-alvo | | Um público-alvo pode ser copiado como um objeto dependente do objeto de jornada. Você pode selecionar criar um novo público ou reutilizar um existente na sandbox de destino. |
 | [!DNL Adobe Journey Optimizer] | Esquema | | Os esquemas usados na jornada podem ser copiados como objetos dependentes. Você pode selecionar criar um novo esquema ou reutilizar um existente na sandbox de destino. |
 | [!DNL Adobe Journey Optimizer] | Política de mesclagem | | As políticas de mesclagem usadas na jornada podem ser copiadas como objetos dependentes. Na sandbox de destino, você **não pode** criar uma nova política de mesclagem, você só pode usar uma existente. |
-| [!DNL Adobe Journey Optimizer] | Jornada | Os seguintes objetos usados na jornada são copiados como objetos dependentes. Durante o fluxo de trabalho de importação, você pode selecionar **[!UICONTROL Criar novo]** ou **[!UICONTROL Usar existente]** para cada: <ul><li>Públicos-alvo</li><li>Esquemas</li><li>Ações personalizadas</li><li>Eventos</li><li>Fragmentos</li><li>Modelos de conteúdo</li><li>Detalhes da tela</li></ul> | <ul><li>**[!UICONTROL Ações personalizadas]**: ao selecionar **[!UICONTROL Usar existente]** durante o processo de importação ao copiar uma jornada para outra sandbox, as ações personalizadas existentes selecionadas **devem** ser iguais à ação personalizada de origem. Se não forem as mesmas, a nova jornada terá erros que não poderão ser resolvidos.</li><li>Os eventos e detalhes do evento usados na jornada são copiados. Ele sempre criará uma nova versão na sandbox de destino.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Jornada | Os seguintes objetos usados na jornada são copiados como objetos dependentes. Durante o fluxo de trabalho de importação, você pode escolher **[!UICONTROL Criar novo]** ou **[!UICONTROL Usar existente]** para cada: <ul><li>Públicos-alvo</li><li>Detalhes da tela</li><li>Modelos de conteúdo</li><li>Ações personalizadas</li><li>Fontes de dados</li><li>Eventos</li><li>Grupos de campos</li><li>Fragmentos</li><li>Esquemas</li></ul> | Ao selecionar **[!UICONTROL Usar existente]** durante o processo de importação para copiar uma jornada para outra sandbox, as ações personalizadas existentes que você escolher **devem** corresponder exatamente à ação personalizada de origem. Se não corresponderem, a nova jornada gerará erros que não poderão ser resolvidos.<br>O sistema copia os eventos e os detalhes do evento usados na jornada e cria uma nova versão na sandbox de destino. |
 | [!DNL Adobe Journey Optimizer] | Ação | | As mensagens de email e de push usadas na jornada podem ser copiadas como objetos dependentes. As atividades de ação de canal usadas nos campos de jornada, que são usadas para personalização na mensagem, não são verificadas para verificação de integridade. Os blocos de conteúdo não são copiados.<br><br>A ação de atualização de perfil usada na jornada pode ser copiada. As ações personalizadas podem ser adicionadas a um pacote independentemente. Os detalhes da ação usados na jornada também são copiados. Ele sempre criará uma nova versão na sandbox de destino. |
 | [!DNL Adobe Journey Optimizer] | Ações Personalizadas |  | As ações personalizadas podem ser adicionadas a um pacote independentemente. Depois que uma ação personalizada é atribuída a uma jornada, ela não pode mais ser editada. Para atualizar ações personalizadas, você deve: <ul><li>mover ações personalizadas antes de migrar uma jornada</li><li>atualizar configurações (como cabeçalhos de solicitação, parâmetros de consulta e autenticação) para ações personalizadas após a migração</li><li>migrar objetos do jornada com as ações personalizadas adicionadas durante a primeira etapa</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Modelo de conteúdo | | Um template de conteúdo pode ser copiado como um objeto dependente do objeto de jornada. Modelos independentes permitem reutilizar facilmente o conteúdo personalizado em campanhas e jornadas do Journey Optimizer. |
 | [!DNL Adobe Journey Optimizer] | Fragmento | Todos os fragmentos aninhados. | Um fragmento pode ser copiado como um objeto dependente do objeto de jornada. Os fragmentos são componentes reutilizáveis que podem ser referenciados em um ou mais emails em campanhas e jornadas do Journey Optimizer. |
-| [!DNL Adobe Journey Optimizer] | Campanhas | Os seguintes objetos usados na campanha são copiados como objetos dependentes: <ul><li>Campanhas</li><li>Públicos-alvo</li><li>Esquemas</li><li>Modelos de conteúdo</li><li>Fragmentos</li><li>Mensagem/Conteúdo</li><li>Configuração de canais</li><li>Objetos de decisão unificados</li><li>Configurações/variantes de experimentos</li></ul> | <ul><li>As campanhas podem ser copiadas junto com todos os itens relacionados ao perfil, público-alvo, esquema, mensagens embutidas e objetos dependentes. Alguns itens não são copiados, como rótulos de uso de dados e configurações de idioma. Para obter uma lista completa de objetos que não podem ser copiados, consulte o guia [exportação de objetos para outra sandbox](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>O sistema detectará e reutilizará automaticamente um objeto de configuração de canal existente na sandbox de destino se existir uma configuração idêntica. Se nenhuma configuração correspondente for encontrada, a configuração do canal será ignorada durante a importação e os usuários deverão atualizar manualmente as configurações do canal na sandbox de destino para essa jornada.</li><li>Os usuários podem reutilizar experimentos e públicos-alvo existentes na sandbox de destino como objetos dependentes de campanhas selecionadas.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campanhas | Os seguintes objetos usados na campanha são copiados como objetos dependentes: <ul><li>Campanhas</li><li>Públicos-alvo</li><li>Esquemas</li><li>Modelos de conteúdo</li><li>Fragmentos</li><li>Mensagem/Conteúdo</li><li>Configuração de canais</li><li>Objetos de decisão unificados</li><li>Configurações/variantes de experimentos</li></ul> | <ul><li>As campanhas podem ser copiadas junto com todos os itens relacionados ao perfil, público-alvo, esquema, mensagens embutidas e objetos dependentes. Alguns itens não são copiados, como rótulos de uso de dados e configurações de idioma. Para obter uma lista completa de objetos que não podem ser copiados, consulte o guia [exportação de objetos para outra sandbox](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox).</li><li>O sistema detectará e reutilizará automaticamente um objeto de configuração de canal existente na sandbox de destino se existir uma configuração idêntica. Se nenhuma configuração correspondente for encontrada, a configuração do canal será ignorada durante a importação e os usuários deverão atualizar manualmente as configurações do canal na sandbox de destino para essa jornada.</li><li>Os usuários podem reutilizar experimentos e públicos-alvo existentes na sandbox de destino como objetos dependentes de campanhas selecionadas.</li></ul> |
 
 As superfícies (por exemplo, predefinições) não são copiadas. O sistema seleciona automaticamente a correspondência mais próxima possível na sandbox de destino com base no tipo de mensagem e no nome da superfície. Se não houver superfícies encontradas na sandbox de destino, a cópia de superfície falhará, fazendo com que a cópia da mensagem falhe, pois uma mensagem requer que uma superfície esteja disponível para configuração. Nesse caso, pelo menos uma superfície precisa ser criada para o canal direito da mensagem para que a cópia funcione.
 
@@ -345,7 +356,7 @@ Depois de identificar os objetos de destino que você deseja atualizar, selecion
 
 O vídeo a seguir é destinado a ajudá-lo a entender as ferramentas de sandbox e descreve como criar um novo pacote, publicar um pacote e importar um pacote.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446089/?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Próximas etapas
 

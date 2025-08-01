@@ -2,7 +2,7 @@
 title: Guia De Implementação Para Regras De Vinculação Do Gráfico De Identidade
 description: Saiba mais sobre as etapas recomendadas a serem seguidas ao implementar seus dados com as configurações de Regras de vinculação do gráfico de identidade.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '1956'
 ht-degree: 6%
@@ -203,7 +203,11 @@ Assim que tiver uma ideia melhor de como deseja que o gráfico se comporte, nave
 
 ![A página de navegação das identidades com o botão de configurações realçado.](../images/implementation/settings.png "A página de navegação das identidades com o botão de configurações realçado."){zoomable="yes"}
 
-Use a interface de configurações de identidade para designar seus namespaces exclusivos e configurar seus namespaces por ordem de prioridade. Quando terminar de aplicar as configurações, aguarde pelo menos seis horas para continuar a assimilar dados, pois levará pelo menos seis horas para que as novas configurações sejam refletidas no Serviço de identidade.
+Use a interface de configurações de identidade para designar seus namespaces exclusivos e configurar seus namespaces por ordem de prioridade.
+
+>[!IMPORTANT]
+>
+>Quando terminar de aplicar as configurações, aguarde pelo menos 24 horas para poder continuar a assimilar dados, pois demora pelo menos 24 horas para que as novas configurações sejam refletidas no Serviço de identidade.
 
 Para obter mais informações, leia o [guia da interface do usuário de configurações de identidade](./identity-settings-ui.md).
 

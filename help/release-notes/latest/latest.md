@@ -2,9 +2,9 @@
 title: Notas de versão da Adobe Experience Platform de julho de 2025
 description: As notas de versão de julho de 2025 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ba475df04342424dc0b22cb1d3d429d12701dbd1
+source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1574'
 ht-degree: 13%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 13%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 29 de julho de 2025**
 
@@ -135,13 +135,13 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Fonte | Descrição |
 | --- | --- |
-| Suporte para [!DNL Didomi] (SDK de Streaming) | Use a fonte [!DNL Didomi] para assimilar dados de gerenciamento de consentimento e preferências de [!DNL Didomi], oferecendo suporte à conformidade com as regulamentações de privacidade e estratégias de marketing baseadas em consentimento. Leia a [[!DNL Didomi] visão geral da origem](../../sources/connectors/consent-and-preferences/didomi.md) para obter informações sobre como obter a instalação. Para obter etapas sobre como criar uma conexão de origem, leia o [[!DNL Didomi] guia de conexão de origem](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md). |
+| Suporte do [!BADGE Beta]{type=Informative} para [!DNL Didomi] (SDK de Streaming) | Use a fonte [!DNL Didomi] para assimilar dados de gerenciamento de consentimento e preferências de [!DNL Didomi], oferecendo suporte à conformidade com as regulamentações de privacidade e estratégias de marketing baseadas em consentimento. Leia a [[!DNL Didomi] visão geral da origem](../../sources/connectors/consent-and-preferences/didomi.md) para obter informações sobre como obter a instalação. Para obter etapas sobre como criar uma conexão de origem, leia o [[!DNL Didomi] guia de conexão de origem](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md). |
 
 **Funcionalidade nova ou atualizada**
 
 | Recurso | Descrição |
 | --- | --- |
 | Suporte para captura de dados de alteração em fontes selecionadas usando a API [!DNL Flow Service] | Agora é possível criar fluxos de dados que permitem a captura de dados de alteração para assimilação incremental usando conectores de origem. Esse recurso permite que os clientes tragam tipos de dados de alteração para assimilação incremental, melhorando a atualização de dados e reduzindo a sobrecarga de processamento. Para obter mais informações, leia a documentação sobre [usando a captura de dados de alteração para fontes](../../sources/tutorials/api/change-data-capture.md) |
-| Suporte para exclusão reversível de registros em [!DNL Salesforce] | A origem [!DNL Salesforce] agora dá suporte à inclusão de registros excluídos por meio de um parâmetro `includeDeletedObjects` opcional. Quando definido como verdadeiro, os clientes podem incluir registros excluídos por software em suas consultas [!DNL Salesforce] e trazer esses registros para a Experience Platform. Leia a documentação da origem[&#128279;](../../sources/connectors/crm/salesforce.md) do [!DNL Salesforce]  para obter mais informações. |
+| Suporte para exclusão reversível de registros em [!DNL Salesforce] | A origem [!DNL Salesforce] agora dá suporte à inclusão de registros excluídos por meio de um parâmetro `includeDeletedObjects` opcional. Quando definido como verdadeiro, os clientes podem incluir registros excluídos por software em suas consultas [!DNL Salesforce] e trazer esses registros para a Experience Platform. Leia a documentação da origem](../../sources/connectors/crm/salesforce.md) do [[!DNL Salesforce]  para obter mais informações. |
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).

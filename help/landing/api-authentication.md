@@ -8,7 +8,7 @@ feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2508'
+source-wordcount: '2507'
 ht-degree: 3%
 
 ---
@@ -60,7 +60,7 @@ Depois de atribuído como desenvolvedor, você pode começar a criar integraçõ
 
 O administrador do Admin Console também deve adicioná-lo como usuário ao mesmo perfil de produto. Com o acesso do usuário, é possível ver na interface do usuário o resultado das operações de API executadas.
 
-Consulte o manual sobre [gerenciamento de grupos de usuários no Admin Console](https://helpx.adobe.com/br/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) para obter mais informações.
+Consulte o manual sobre [gerenciamento de grupos de usuários no Admin Console](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) para obter mais informações.
 
 ## Gerar uma chave de API (ID do cliente) e uma ID da organização {#generate-credentials}
 
@@ -100,7 +100,7 @@ Em seguida, selecione o tipo de autenticação **[!UICONTROL OAuth Server-to-Ser
 
 >[!IMPORTANT]
 >
->O método **[!UICONTROL OAuth Server-to-Server]** é o único método de geração de token com suporte no futuro. O método **[!UICONTROL Conta de Serviço (JWT)]** anteriormente aceito está obsoleto e não pode ser selecionado para novas integrações. Embora as integrações existentes que usam o método de autenticação JWT continuem a funcionar até 30 de junho de 2025, a Adobe recomenda que você migre as integrações existentes para o novo método [!UICONTROL OAuth Server-to-Server] antes dessa data. Obtenha mais informações na seção [!BADGE Obsoleto]{type=negative}[Gerar um JSON Web Token (JWT)](#jwt).
+>O método **[!UICONTROL OAuth Server-to-Server]** é o único método de geração de token com suporte no futuro. O método **[!UICONTROL Conta de Serviço (JWT)]** anteriormente aceito está obsoleto e não pode ser selecionado para novas integrações. Embora as integrações existentes que usam o método de autenticação JWT continuem a funcionar até 30 de junho de 2025, a Adobe recomenda que você migre as integrações existentes para o novo método [!UICONTROL OAuth Server-to-Server] antes dessa data. Obtenha mais informações na seção [!BADGE Obsoleto]{type=negative} [Gerar um JSON Web Token (JWT)](#jwt).
 
 ![Selecione o método de autenticação OAuth de servidor para servidor para a API do Experience Platform.](./images/api-authentication/oauth-authentication-method.png)
 
@@ -118,7 +118,7 @@ Selecione **[!UICONTROL Salvar API configurada]** quando estiver pronto.
 
 Uma apresentação das etapas descritas acima para configurar uma integração com a API do Experience Platform também está disponível no tutorial em vídeo abaixo:
 
->[!VIDEO](https://video.tv.adobe.com/v/31682/?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
 
 ### Coletar credenciais {#gather-credentials}
 
@@ -171,15 +171,15 @@ Em seguida, use o seletor suspenso para abrir a janela de credenciais, gerar um 
 >
 >O bloco de credenciais do topo da página permanece exibido enquanto você navega entre páginas de endpoint diferentes na documentação de referência da API do Experience Platform.
 
-## [!BADGE Obsoleto]{type=negativo} Gerar um JSON Web Token (JWT) {#jwt}
+## [!BADGE Obsoleto]{type=negative} Gerar um JSON Web Token (JWT) {#jwt}
 
 >[!WARNING]
 >
 >O método JWT para gerar tokens de acesso foi descontinuado. Todas as novas integrações devem ser criadas usando o [método de autenticação Servidor para Servidor do OAuth](#select-oauth-server-to-server). A Adobe também exige que você migre suas integrações existentes para o método OAuth até 30 de junho de 2025 para que suas integrações continuem funcionando. Leia a seguinte documentação importante:
 > 
->* [Guia de migração para seus aplicativos do JWT para o OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
->* [Guia de implementação para aplicativos novos e antigos com OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
->* [Vantagens de usar o método de credenciais OAuth de servidor para servidor](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+> * [Guia de migração para seus aplicativos do JWT para o OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+> * [Guia de implementação para aplicativos novos e antigos com OAuth](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+> * [Vantagens de usar o método de credenciais OAuth de servidor para servidor](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ Exibir informações obsoletas
 
@@ -241,7 +241,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | Propriedade | Descrição |
 | --- | --- |
-| `token_type` | O tipo of token sendo retornado. Para tokens de acesso, esse valor é sempre `bearer`. |
+| `token_type` | O tipo de token que está sendo retornado. Para tokens de acesso, esse valor é sempre `bearer`. |
 | `access_token` | O `{ACCESS_TOKEN}` gerado. Este valor, prefixado com a palavra `Bearer`, é necessário como o cabeçalho `Authentication` para todas as chamadas de API do Experience Platform. |
 | `expires_in` | O número de milissegundos restantes até que o token de acesso expire. Quando esse valor atingir 0, um novo token de acesso deverá ser gerado para continuar usando as APIs do Experience Platform. |
 
@@ -298,7 +298,7 @@ Para acessar ou modificar vários recursos no Experience Platform, você deve te
 
 Informações detalhadas sobre como um administrador do sistema pode conceder as permissões necessárias para acessar os recursos do Experience Platform por meio da API também estão disponíveis no tutorial em vídeo abaixo:
 
->[!VIDEO](https://video.tv.adobe.com/v/31682/?learn=on&t=159&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=159)
 
 ## Usar o Postman para autenticar e testar chamadas de API {#use-postman}
 
@@ -308,17 +308,17 @@ Informações detalhadas sobre o uso do Postman com coleções e ambientes do Ex
 
 **Baixe e importe um ambiente do Postman para usar com as APIs do Experience Platform**
 
->[!VIDEO](https://video.tv.adobe.com/v/31682/?learn=on&t=106&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&t=106)
 
 **Usar uma coleção do Postman para gerar tokens de acesso**
 
 Baixe a [coleção do Identity Management Service Postman](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) e assista ao vídeo abaixo para saber como gerar tokens de acesso.
 
->[!VIDEO](https://video.tv.adobe.com/v/32726/?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
 **Baixe coleções do Postman da API do Experience Platform e interaja com as APIs**
 
->[!VIDEO](https://video.tv.adobe.com/v/32724/?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
 
 <!--
 This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Experience Platform APIs.
@@ -360,13 +360,13 @@ O desenvolvedor foi adicionado com sucesso e aparece na guia **[!UICONTROL Desen
 
 >[!NOTE]
 >
->Somente um administrador do sistema pode atribuir APIs a funções na interface do usuário do Experience Platform.
+> Somente um administrador do sistema pode atribuir APIs a funções na interface do usuário do Experience Platform.
 
 Para usar e executar operações nas APIs do Experience Platform, um administrador do sistema precisa adicionar as credenciais da API, além de um conjunto de permissões fornecido pela função. Obtenha mais informações na seção sobre [gerenciamento de credenciais de API para uma função](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
 
 Uma apresentação das etapas descritas acima para adicionar desenvolvedores a perfis de produtos e atribuir APIs a funções também está disponível no tutorial em vídeo abaixo:
 
->[!VIDEO](https://video.tv.adobe.com/v/3446403/?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 
 ## Recursos adicionais {#additional-resources}
 

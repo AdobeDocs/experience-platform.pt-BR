@@ -2,9 +2,9 @@
 description: Saiba como configurar o esquema de parceiro para destinos criados com o Destination SDK.
 title: Configuração de esquema de parceiro
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
+source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
 workflow-type: tm+mt
-source-wordcount: '1896'
+source-wordcount: '1910'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Este artigo descreve todas as opções de configuração de esquema compatíveis
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -106,7 +106,7 @@ Para criar um esquema estático com atributos de perfil, defina os atributos de 
 | `segmentRequired` | Booleano | Obrigatório | Este parâmetro é requerido pela Destination SDK e deve sempre ser definido como `true`. |
 | `identityRequired` | Booleano | Obrigatório | Defina como `true` se os usuários puderem mapear [tipos de identidade](identity-namespace-configuration.md) do Experience Platform para os atributos definidos na matriz `profileFields`. |
 | `segmentNamespaceAllowList` | Matriz | Opcional | Permite mapear somente públicos-alvo dos namespaces de público-alvo definidos na matriz para o destino. <br><br> O uso deste parâmetro é desencorajado na maioria dos casos. Em vez disso, use o `"segmentNamespaceDenyList":[]` para permitir que todos os tipos de público sejam exportados para o seu destino. <br><br> Se `segmentNamespaceAllowList` e `segmentNamespaceDenyList` estiverem ausentes em sua configuração, os usuários só poderão exportar públicos-alvo originados do [Serviço de Segmentação](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` e `segmentNamespaceDenyList` são mutuamente exclusivos. |
-| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe os usuários de mapear públicos-alvo a partir de namespaces de público-alvo definidos na matriz para o destino. <br><br>A Adobe recomenda permitir a exportação de todos os públicos-alvo, independentemente da origem, definindo `"segmentNamespaceDenyList":[]`. <br><br>Se `segmentNamespaceAllowed` e `segmentNamespaceDenyList` estiverem ausentes em sua configuração, os usuários só poderão exportar públicos-alvo originados do [Serviço de Segmentação](../../../../segmentation/home.md). <br><br>`segmentNamespaceAllowList` e `segmentNamespaceDenyList` são mutuamente exclusivos. |
+| `segmentNamespaceDenyList` | Matriz | Opcional | Restringe os usuários de mapear públicos-alvo a partir de namespaces de público-alvo definidos na matriz para o destino. <br><br>A Adobe recomenda permitir a exportação de todos os públicos-alvo, independentemente da origem, definindo `"segmentNamespaceDenyList":[]`. <br><br>**Importante:** se você não especificar `segmentNamespaceDenyList` em seu `schemaConfig` e não usar o `segmentNamespaceAllowList`, o sistema definirá automaticamente o `segmentNamespaceDenyList` como `[]`. Isso evita a perda de públicos-alvo personalizados no futuro. Por questões de segurança, a Adobe recomenda que você defina explicitamente o `"segmentNamespaceDenyList":[]` na sua configuração. <br><br>`segmentNamespaceAllowList` e `segmentNamespaceDenyList` são mutuamente exclusivos. |
 
 {style="table-layout:auto"}
 

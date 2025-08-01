@@ -60,7 +60,7 @@ Depois de atribuído como desenvolvedor, você pode começar a criar integraçõ
 
 O administrador do Admin Console também deve adicioná-lo como usuário ao mesmo perfil de produto. Com o acesso do usuário, é possível ver na interface do usuário o resultado das operações de API executadas.
 
-Consulte o manual sobre [gerenciamento de grupos de usuários no Admin Console](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) para obter mais informações.
+Consulte o manual sobre [gerenciamento de grupos de usuários no Admin Console](https://helpx.adobe.com/br/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) para obter mais informações.
 
 ## Gerar uma chave de API (ID do cliente) e uma ID da organização {#generate-credentials}
 

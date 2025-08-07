@@ -3,26 +3,26 @@ title: Ponto de extremidade da API de expiração do conjunto de dados
 description: O ponto de extremidade /ttl na API da higiene de dados permite agendar programaticamente as expirações do conjunto de dados no Adobe Experience Platform.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ca6d7d257085da65b3f08376f0bd32e51e293533
 workflow-type: tm+mt
-source-wordcount: '1966'
+source-wordcount: '2331'
 ht-degree: 2%
 
 ---
 
 # Ponto de extremidade de expiração do conjunto de dados
 
-O ponto de extremidade `/ttl` na API da higiene de dados permite agendar datas de expiração para conjuntos de dados na Adobe Experience Platform.
+Use o ponto de extremidade `/ttl` na API de higiene de dados para agendar quando os conjuntos de dados na Adobe Experience Platform devem ser excluídos.
 
-A expiração de um conjunto de dados é apenas uma operação de exclusão com tempo atrasado. O conjunto de dados não está protegido enquanto isso, portanto, ele pode ser excluído por outros meios antes de atingir sua expiração.
+A expiração de um conjunto de dados é uma operação de exclusão atrasada. O conjunto de dados não é protegido enquanto isso e pode ser excluído por outros meios antes da expiração programada.
 
 >[!NOTE]
 >
 >Embora a expiração seja especificada como um instante de tempo específico, pode haver até 24 horas de atraso após a expiração antes do início da exclusão real. Depois que a exclusão é iniciada, pode levar até sete dias para que todos os rastreamentos do conjunto de dados sejam removidos dos sistemas do Experience Platform.
 
-A qualquer momento antes da exclusão do conjunto de dados ser iniciada, você pode cancelar a expiração ou modificar a hora do acionador. Depois de cancelar uma expiração de conjunto de dados, você pode reabri-la definindo uma nova expiração.
+Antes de começar a exclusão, você pode cancelar a expiração ou alterar o horário agendado. Para reabrir uma expiração cancelada, defina uma nova expiração.
 
-Depois que a exclusão do conjunto de dados for iniciada, seu trabalho de expiração será marcado como `executing`, e talvez não seja alterado. O conjunto de dados em si pode ser recuperável por até sete dias, mas somente por meio de um processo manual iniciado por meio de uma solicitação de serviço da Adobe. À medida que a solicitação é executada, o data lake, o Serviço de identidade e o Perfil do cliente em tempo real iniciam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Depois que os dados forem excluídos dos três serviços, a expiração será marcada como `completed`.
+Depois que a exclusão começar, o trabalho de expiração será marcado como `executing` e não poderá mais ser modificado. O conjunto de dados pode ser recuperado por até sete dias, mas somente por meio de uma solicitação de serviço manual da Adobe. Durante a exclusão, o data lake, o Serviço de identidade e o Perfil do cliente em tempo real removem separadamente o conteúdo do conjunto de dados. Quando a exclusão for concluída, a expiração será marcada como `completed`.
 
 >[!WARNING]
 >
@@ -44,7 +44,9 @@ O endpoint usado neste guia faz parte da API de higiene de dados. Antes de conti
 
 ## Listar expirações do conjunto de dados {#list}
 
-Você pode listar todas as expirações de conjunto de dados para sua organização fazendo uma solicitação GET. Parâmetros de consulta podem ser usados para filtrar a resposta para resultados apropriados.
+Você pode listar todas as expirações de conjunto de dados configuradas para sua organização fazendo uma solicitação GET para o ponto de extremidade `/ttl`.
+
+Filtrar resultados usando parâmetros de consulta para retornar somente as expirações que atendem aos seus critérios. Cada resultado inclui detalhes de status e configuração para cada expiração do conjunto de dados.
 
 **Formato da API**
 
@@ -54,11 +56,20 @@ GET /ttl?{QUERY_PARAMETERS}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{QUERY_PARAMETERS}` | Uma lista de parâmetros de consulta opcionais, com vários parâmetros separados por `&` caracteres. Parâmetros comuns incluem `limit` e `page` para fins de paginação. Para obter uma lista completa de parâmetros de consulta com suporte, consulte a [seção do apêndice](#query-params). |
+| `{QUERY_PARAMETERS}` | Uma lista de parâmetros de consulta opcionais, com vários parâmetros separados por `&` caracteres. Parâmetros comuns incluem `limit` e `page` para fins de paginação. Para obter uma lista completa de parâmetros de consulta com suporte, consulte a [seção do apêndice](#query-params) uma lista completa de parâmetros de consulta com suporte. Os parâmetros mais usados estão incluídos abaixo e no apêndice. |
+| `author` | Filtre pelo usuário que atualizou ou criou a expiração do conjunto de dados mais recentemente. Suporta padrões semelhantes a SQL (por exemplo, `LIKE %john%`). |
+| `datasetId` | Filtrar expirações por uma ID de conjunto de dados específica. |
+| `datasetName` | Um filtro que não diferencia maiúsculas de minúsculas para nomes de conjuntos de dados corresponde a. |
+| `status` | Filtre por uma lista separada por vírgulas com os status: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiryDate` | Filtre por expirações com uma data de expiração específica. |
+| `limit` | Estipule o número máximo de resultados a serem retornados (1-100, padrão: 25). |
+| `page` | Paginar resultados com um índice baseado em zero (tamanho de página padrão: 50, máx.: 100). |
 
 {style="table-layout:auto"}
 
 **Solicitação**
+
+A solicitação a seguir recupera todas as expirações do conjunto de dados atualizadas antes de 1º de agosto de 2021 e atualizadas pela última vez por um usuário cujo nome corresponda a &quot;Jane Doe&quot;.
 
 ```shell
 curl -X GET \
@@ -81,15 +92,17 @@ Uma resposta bem-sucedida lista as expirações do conjunto de dados resultantes
 {
   "results": [
     {
-      "ttlId": "SD-b16c8b48-a15a-45c8-9215-587ea89369bf",
-      "datasetId": "629bd9125b31471b2da7645c",
-      "datasetName": "Sample Acme dataset",
-      "sandboxName": "hygiene-beta",
-      "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
+      "ttlId": "SD-c9f113f2-d751-44bc-bc20-9d5ca0b6ae15",
+      "datasetId": "3e9f815ae1194c65b2a4c5ea",
+      "datasetName": "Acme_Profile_Engagements",
+      "sandboxName": "acme-beta",
+      "displayName": "Engagement Data Retention Policy",
+      "description": "Scheduled expiry for Acme marketing data",
+      "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
       "status": "pending",
-      "expiry": "2050-01-01T00:00:00Z",
-      "updatedAt": "2023-06-09T16:52:44.136028Z",
-      "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e"
+      "expiry": "2027-01-12T17:15:31.000Z",
+      "updatedAt": "2026-12-15T12:40:20.000Z",
+      "updatedBy": "t.lannister@acme.com <t.lannister@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
     }
   ],
   "current_page": 0,
@@ -100,30 +113,43 @@ Uma resposta bem-sucedida lista as expirações do conjunto de dados resultantes
 
 | Propriedade | Descrição |
 | --- | --- |
-| `total_count` | A contagem de expirações do conjunto de dados que corresponderam aos parâmetros da chamada de listagem. |
-| `results` | Contém os detalhes das expirações do conjunto de dados retornadas. Para obter mais detalhes sobre as propriedades de uma expiração de conjunto de dados, consulte a seção de resposta para fazer uma [chamada de pesquisa](#lookup). |
+| `results` | Uma matriz de configurações de expiração do conjunto de dados. |
+| `ttlId` | O identificador exclusivo da configuração de expiração do conjunto de dados. |
+| `datasetId` | O identificador exclusivo do conjunto de dados associado a essa configuração. |
+| `datasetName` | O nome do conjunto de dados. |
+| `sandboxName` | A sandbox em que essa expiração do conjunto de dados é configurada. |
+| `displayName` | Um nome legível para a configuração de expiração. |
+| `description` | Uma descrição da configuração de expiração. |
+| `imsOrg` | O identificador exclusivo da organização. |
+| `status` | O status atual da expiração. Um de: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | A data e a hora de expiração programadas (formato ISO 8601). |
+| `updatedAt` | O carimbo de data e hora da última atualização dessa configuração. |
+| `updatedBy` | O identificador e o email do usuário ou serviço que atualizou a configuração pela última vez. |
+| `current_page` | O índice da página de resultados atual (baseado em zero). |
+| `total_pages` | O número total de páginas de resultados disponíveis. |
+| `total_count` | O número total de registros de configuração de expiração do conjunto de dados retornados. |
 
 {style="table-layout:auto"}
 
 ## Pesquisar uma expiração de conjunto de dados {#lookup}
 
-Para pesquisar uma expiração de conjunto de dados, faça uma solicitação GET com `{DATASET_ID}` ou `{DATASET_EXPIRATION_ID}`.
+Recupere os detalhes de uma configuração específica de expiração do conjunto de dados fazendo uma solicitação do GET com a ID de expiração do conjunto de dados ou a ID do conjunto de dados como o parâmetro de caminho.
 
 >[!IMPORTANT]
 >
->O `{DATASET_EXPIRATION_ID}` é mencionado como `ttlId` na resposta. Ambos se referem ao identificador exclusivo para a expiração do conjunto de dados.
+>Você pode fornecer uma ID de expiração do conjunto de dados (por exemplo, `SD-xxxxxx-xxxx`) ou uma ID de conjunto de dados no caminho. O `ttlId` na resposta é o identificador exclusivo para a expiração do conjunto de dados.
 
 **Formato da API**
 
 ```http
-GET /ttl/{DATASET_ID}?include=history
-GET /ttl/{DATASET_EXPIRATION_ID}
+GET /ttl/{ID}
+GET /ttl/{ID}?include=history
 ```
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{DATASET_ID}` | A ID do conjunto de dados cuja expiração você deseja pesquisar. |
-| `{DATASET_EXPIRATION_ID}` | A ID da expiração do conjunto de dados. |
+| `{ID}` | O identificador exclusivo da configuração de expiração do conjunto de dados. Você pode fornecer uma ID de expiração do conjunto de dados ou uma ID do conjunto de dados. |
+| `include` | (Opcional) Se definido como `history`, a resposta inclui uma matriz `history` com eventos de alteração para a configuração. |
 
 {style="table-layout:auto"}
 
@@ -150,29 +176,29 @@ Uma resposta bem-sucedida retorna os detalhes da expiração do conjunto de dado
     "datasetId": "62759f2ede9e601b63a2ee14",
     "datasetName": "XtVRwq9-38734",
     "sandboxName": "prod",
-    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
-    "status": "pending",
-    "expiry": "2024-12-31T23:59:59Z",
-    "updatedAt": "2024-05-11T15:12:40.393115Z",
-    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
     "displayName": "Delete Acme Data before 2025",
-    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+    "description": "The Acme information in this dataset is licensed for our use through the end of 2024.",
+    "imsOrg": "885737B25DC460C50A49411B@AdobeOrg",
+    "status": "pending",
+    "expiry": "2035-09-25T00:00:00Z",
+    "updatedAt": "2025-05-01T19:00:55.000Z",
+    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `ttlId` | A ID da expiração do conjunto de dados. |
-| `datasetId` | A ID do conjunto de dados ao qual essa expiração se aplica. |
-| `datasetName` | O nome de exibição do conjunto de dados ao qual esta expiração se aplica. |
-| `sandboxName` | O nome da sandbox em que o conjunto de dados de destino está localizado. |
-| `imsOrg` | A ID da sua organização. |
-| `status` | O status atual da expiração do conjunto de dados. |
-| `expiry` | A data e a hora agendadas em que o conjunto de dados será excluído. |
-| `updatedAt` | Um carimbo de data e hora de quando a expiração foi atualizada pela última vez. |
-| `updatedBy` | O usuário que atualizou a expiração pela última vez. |
-| `displayName` | O nome de exibição da solicitação de expiração. |
-| `description` | Uma descrição para a solicitação de expiração. |
+| `ttlId` | O identificador exclusivo da configuração de expiração do conjunto de dados. |
+| `datasetId` | O identificador exclusivo do conjunto de dados. |
+| `datasetName` | O nome do conjunto de dados. |
+| `sandboxName` | A sandbox na qual a expiração do conjunto de dados é configurada. |
+| `displayName` | Um nome legível para a configuração de expiração do conjunto de dados. |
+| `description` | Uma descrição da configuração de expiração do conjunto de dados. |
+| `imsOrg` | O identificador exclusivo da organização associado a essa configuração. |
+| `status` | O status atual da configuração de expiração do conjunto de dados.<br>Um de: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | O carimbo de data e hora de expiração agendado para o conjunto de dados (formato ISO 8601). |
+| `updatedAt` | Carimbo de data e hora da atualização mais recente. |
+| `updatedBy` | O identificador e o email do usuário ou serviço que atualizou a expiração do conjunto de dados pela última vez. |
 
 {style="table-layout:auto"}
 
@@ -180,7 +206,7 @@ Uma resposta bem-sucedida retorna os detalhes da expiração do conjunto de dado
 
 Ao usar a [API do catálogo](../../catalog/api/getting-started.md) para pesquisar detalhes do conjunto de dados, se o conjunto de dados tiver uma expiração ativa, ele será listado em `tags.adobe/hygiene/ttl`.
 
-O JSON a seguir representa uma resposta truncada para os detalhes de um conjunto de dados do catálogo, que tem um valor de expiração de `32503680000000`. O valor da tag codifica a expiração como um número inteiro de milissegundos desde o início da época do Unix.
+O JSON a seguir mostra uma resposta de API de catálogo truncada para um conjunto de dados com um valor de expiração de `32503680000000`. A tag codifica a expiração como o número de milissegundos desde a época do Unix.
 
 ```json
 {
@@ -200,11 +226,16 @@ O JSON a seguir representa uma resposta truncada para os detalhes de um conjunto
 
 ## Criar uma expiração de conjunto de dados {#create}
 
-Para garantir que os dados sejam removidos do sistema após um período especificado, programe uma expiração para um conjunto de dados específico fornecendo a ID do conjunto de dados e a data e hora de expiração no formato ISO 8601.
-
-Para criar uma expiração do conjunto de dados, execute uma solicitação POST, como mostrado abaixo, e forneça os valores mencionados abaixo na carga.
+Crie uma nova configuração de expiração do conjunto de dados para definir quando um conjunto de dados expirará e estará qualificado para exclusão.\
+Forneça a ID do conjunto de dados, a data de expiração ou a data-hora (no formato ISO 8601), um nome de exibição e (opcionalmente) uma descrição.
 
 >[!NOTE]
+>
+>O valor de expiração pode ser uma data (AAAA-MM-DD) ou uma data e hora (AAAA-MM-DDTHH:MM:SSZ). Se você fornecer apenas uma data, o sistema usará a meia-noite UTC (00:00:00Z) nesse dia. A expiração deve ser de pelo menos 24 horas no futuro.
+
+Para criar uma expiração do conjunto de dados, envie uma solicitação POST, como mostrado abaixo.
+
+>[!TIP]
 >
 >Se você receber um erro 404, verifique se a solicitação não tem barras &quot;/&quot; adicionais. Uma barra à direita pode causar falha em uma solicitação POST.
 
@@ -219,68 +250,69 @@ POST /ttl
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/hygiene/ttl \
-  -H `Authorization: Bearer {ACCESS_TOKEN}`
-  -H `x-gw-ims-org-id: {ORG_ID}`
-  -H `x-api-key: {API_KEY}`
-  -H `Accept: application/json`
-  -d {
-      "datasetId": "5b020a27e7040801dedbf46e",
-      "expiry": "2030-12-31T23:59:59Z"
-      "displayName": "Delete Acme Data before 2025",
-      "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
-      }
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "datasetId": "3e9f815ae1194c65b2a4c5ea",
+        "expiry": "2030-12-31",
+        "displayName": "Expiry rule for Acme customers",
+        "description": "Set expiration for Acme customer dataset"
+      }'
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `datasetId` | **Obrigatório** A ID do conjunto de dados de destino para o qual você deseja agendar uma expiração. |
-| `expiry` | **Obrigatório** Uma data e hora no formato ISO 8601. Se a cadeia de caracteres não tiver deslocamento de fuso horário explícito, o fuso horário será considerado UTC. O tempo de vida dos dados no sistema é definido de acordo com o valor de expiração fornecido.<br>Observação:<ul><li>A solicitação falhará se uma expiração de conjunto de dados já existir para o conjunto de dados.</li><li>Esta data e hora devem ser pelo menos **24 horas no futuro**.</li></ul> |
-| `displayName` | Um nome de exibição opcional para a solicitação de expiração do conjunto de dados. |
-| `description` | Uma descrição opcional para a solicitação de expiração. |
+| `datasetId` | **Obrigatório.** O identificador exclusivo do conjunto de dados para aplicar a expiração. |
+| `expiry` | **Obrigatório.** A data e hora de expiração no formato ISO 8601. Isso define a duração dos dados no sistema. Se apenas uma data for fornecida, o padrão será meia-noite UTC (00:00:00Z). A expiração **deve ser de pelo menos 24 horas no futuro**. <br>**NOTA**:<ul><li>A solicitação falhará se uma expiração de conjunto de dados já existir para o conjunto de dados.</li></ul> |
+| `displayName` | **Obrigatório.** Um nome legível para a configuração de expiração do conjunto de dados. |
+| `description` | Uma descrição opcional para a configuração de expiração do conjunto de dados. |
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna um status HTTP 201 (Criado) e o novo estado da expiração do conjunto de dados.
+Uma resposta bem-sucedida retorna um status HTTP 201 (Criado) e a nova configuração de expiração do conjunto de dados.
 
 ```json
 {
-  "ttlId":       "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
-  "datasetId":   "5b020a27e7040801dedbf46e",
-  "datasetName": "Acme licensed data",
-  "sandboxName": "prod",
-  "imsOrg":      "{ORG_ID}",
-  "status":      "pending",
-  "expiry":      "2030-12-31T23:59:59Z",
-  "updatedAt":   "2021-08-19T11:14:16Z",
-  "updatedBy":   "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-  "displayName": "Delete Acme Data before 2031",
-  "description": "The Acme information in this dataset is licensed for our use through the end of 2030."
+  "ttlId": "SD-2aaf113e-3f17-4321-bf29-a2c51152b042",
+  "datasetId": "3e9f815ae1194c65b2a4c5ea",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Expiry rule for Acme customers",
+  "description": "Set expiration for Acme customer dataset",
+  "imsOrg": "{ORG_ID}",
+  "status": "pending",
+  "expiry": "2030-12-31T00:00:00Z",
+  "updatedAt": "2025-01-02T10:35:45.000Z",
+  "updatedBy": "s.stark@acme.com <s.stark@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `ttlId` | A ID da expiração do conjunto de dados. |
-| `datasetId` | A ID do conjunto de dados ao qual essa expiração se aplica. |
-| `datasetName` | O nome de exibição do conjunto de dados ao qual esta expiração se aplica. |
-| `sandboxName` | O nome da sandbox em que o conjunto de dados de destino está localizado. |
-| `imsOrg` | A ID da sua organização. |
-| `status` | O status atual da expiração do conjunto de dados. |
-| `expiry` | A data e a hora agendadas em que o conjunto de dados será excluído. |
-| `updatedAt` | Um carimbo de data e hora de quando a expiração foi atualizada pela última vez. |
-| `updatedBy` | O usuário que atualizou a expiração pela última vez. |
-| `displayName` | Um nome de exibição para a solicitação de expiração. |
-| `description` | Uma descrição para a solicitação de expiração. |
+| `ttlId` | O identificador exclusivo da configuração de expiração do conjunto de dados criado. |
+| `datasetId` | O identificador exclusivo do conjunto de dados. |
+| `datasetName` | O nome do conjunto de dados. |
+| `sandboxName` | A sandbox em que essa expiração do conjunto de dados é configurada. |
+| `displayName` | O nome de exibição da configuração de expiração do conjunto de dados. |
+| `description` | Uma descrição da configuração de expiração do conjunto de dados. |
+| `imsOrg` | O identificador exclusivo da organização associado a essa configuração. |
+| `status` | O status atual da configuração de expiração do conjunto de dados.<br>Um de: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | O carimbo de data e hora de expiração agendado para o conjunto de dados. |
+| `updatedAt` | O carimbo de data/hora da atualização mais recente. |
+| `updatedBy` | O identificador e o email do usuário ou serviço que atualizou a configuração de expiração do conjunto de dados pela última vez. |
 
-Um status HTTP 400 (Solicitação inválida) ocorre se a expiração de um conjunto de dados já existir para o conjunto de dados. Uma resposta sem sucesso retornará um status HTTP 404 (Não encontrado) se essa expiração de conjunto de dados não existir (ou se você não tiver acesso ao conjunto de dados).
+Um status HTTP 400 (Solicitação inválida) ocorre se a expiração de um conjunto de dados já existir para o conjunto de dados. Um status HTTP 404 (Não encontrado) ocorre se esse conjunto de dados não existir ou se você não tiver acesso ao conjunto de dados.
 
-## Atualizar uma expiração de conjunto de dados {#update}
+## Atualizar uma configuração de expiração do conjunto de dados {#update}
 
-Para atualizar uma data de expiração para um conjunto de dados, use uma solicitação PUT e o `ttlId`. Você pode atualizar as informações de `displayName`, `description` e/ou `expiry`.
+Para atualizar uma configuração de expiração de conjunto de dados existente, faça uma solicitação PUT para `/ttl/DATASET_EXPIRATION_ID`. Você só pode atualizar os campos `displayName`, `description` e `expiry` da configuração. Atualizações só são permitidas quando o status de expiração é `pending`.
 
 >[!NOTE]
 >
->Se você alterar a data e a hora de expiração, ela deverá ser de pelo menos 24 horas no futuro. Esse atraso imposto oferece uma oportunidade para cancelar ou reagendar a expiração e evitar qualquer perda acidental de dados.
+>O campo `expiry` aceita uma data (AAAA-MM-DD) ou data e hora (AAAA-MM-DDTHH:MM:SSZ). Se apenas uma data for fornecida, o sistema usará a meia-noite UTC (00:00:00Z) nesse dia. A expiração **deve ser de pelo menos 24 horas no futuro**.
 
 **Formato da API**
 
@@ -290,62 +322,70 @@ PUT /ttl/{DATASET_EXPIRATION_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{DATASET_EXPIRATION_ID}` | A ID da expiração do conjunto de dados que você deseja alterar. Observação: isso é chamado de `ttlId` na resposta. |
+| `{DATASET_EXPIRATION_ID}` | O identificador exclusivo da configuração de expiração do conjunto de dados. **OBSERVAÇÃO**: isso é chamado de `ttlId` na resposta. |
 
 **Solicitação**
 
-A solicitação a seguir reagenda a expiração de um conjunto de dados `SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f` para o final de 2024 (Horário de Greenwich). Se a expiração do conjunto de dados existente for encontrada, ela será atualizada com o novo valor `expiry`.
+A solicitação a seguir atualiza a expiração, o nome de exibição e a descrição da expiração do conjunto de dados `SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45`:
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-        "expiry": "2024-12-31T23:59:59Z",
-        "displayName": "Delete Acme Data before 2025",
-        "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+        "displayName": "Customer Dataset Expiry Rule",
+        "description": "Updated description for Acme customer dataset",
+        "expiry": "2031-06-15"
       }'
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `expiry` | **Obrigatório** Uma data e hora no formato ISO 8601. Se a cadeia de caracteres não tiver deslocamento de fuso horário explícito, o fuso horário será considerado UTC. O tempo de vida dos dados no sistema é definido de acordo com o valor de expiração fornecido. Qualquer carimbo de data e hora de expiração anterior do mesmo conjunto de dados deve ser substituído pelo novo valor de expiração fornecido. Esta data e hora devem ser pelo menos **24 horas no futuro**. |
-| `displayName` | Um nome de exibição para a solicitação de expiração. |
-| `description` | Uma descrição opcional para a solicitação de expiração. |
+| `displayName` | (Opcional) Um novo nome legível para a configuração de expiração do conjunto de dados. |
+| `description` | (Opcional) Uma nova descrição para a configuração de expiração do conjunto de dados. |
+| `expiry` | (Opcional) Uma nova data de expiração ou data e hora no formato ISO 8601. Se apenas uma data for fornecida, o padrão será meia-noite UTC. A expiração deve ser **pelo menos 24 horas no futuro**. |
 
-{style="table-layout:auto"}
+>[!NOTE]
+>
+>Pelo menos um desses campos deve ser fornecido na solicitação.
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o novo estado da expiração do conjunto de dados e um status HTTP 200 (OK) se uma expiração pré-existente tiver sido atualizada.
+Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e a configuração de expiração do conjunto de dados atualizada.
 
 ```json
 {
-    "ttlId": "SD-c8c75921-2416-4be7-9cfd-9ab01de66c5f",
-    "datasetId": "5b020a27e7040801dedbf46e",
-    "imsOrg": "A2A5*EF06164773A8A49418C@AdobeOrg",
-    "status": "pending",
-    "expiry": "2024-12-31T23:59:59Z",
-    "updatedAt": "2022-05-09T22:38:40.393115Z",
-    "updatedBy": "Jane Doe <jdoe@adobe.com> 77A51F696282E48C0A494 012@64d18d6361fae88d49412d.e",
-    "displayName": "Delete Acme Data before 2025",
-    "description": "The Acme information in this dataset is licensed for our use through the end of 2024."
+  "ttlId": "SD-c1f902aa-57cb-412e-bb2b-c70b8e1a5f45",
+  "datasetId": "3e9f815ae1194c65b2a4c5ea",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Customer Dataset Expiry Rule",
+  "description": "Updated description for Acme customer dataset",
+  "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
+  "status": "pending",
+  "expiry": "2031-06-15T00:00:00Z",
+  "updatedAt": "2031-05-01T14:11:12.000Z",
+  "updatedBy": "b.tarth@acme.com <b.tarth@acme.com> 3E9F815AE1194C65B2A4C5EA@acme.com"
 }
 ```
 
 | Propriedade | Descrição |
 | --- | --- |
-| `ttlId` | A ID da expiração do conjunto de dados. |
-| `datasetId` | A ID do conjunto de dados ao qual essa expiração se aplica. |
-| `imsOrg` | A ID da sua organização. |
-| `status` | O status atual da expiração do conjunto de dados. |
-| `expiry` | A data e a hora agendadas em que o conjunto de dados será excluído. |
-| `updatedAt` | Um carimbo de data e hora de quando a expiração foi atualizada pela última vez. |
-| `updatedBy` | O usuário que atualizou a expiração pela última vez. |
+| `ttlId` | O identificador exclusivo da configuração de expiração atualizada do conjunto de dados. |
+| `datasetId` | O identificador exclusivo do conjunto de dados. |
+| `datasetName` | O nome do conjunto de dados. |
+| `sandboxName` | A sandbox em que essa expiração do conjunto de dados é configurada. |
+| `displayName` | O nome de exibição da configuração de expiração do conjunto de dados. |
+| `description` | Uma descrição da configuração de expiração do conjunto de dados. |
+| `imsOrg` | A ID da organização associada a essa configuração. |
+| `status` | O status atual da configuração de expiração do conjunto de dados.<br>Um de: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | O carimbo de data e hora de expiração agendado para o conjunto de dados. |
+| `updatedAt` | O carimbo de data/hora da atualização mais recente. |
+| `updatedBy` | O identificador e o email do usuário ou serviço que atualizou a configuração de expiração do conjunto de dados pela última vez. |
 
 {style="table-layout:auto"}
 
@@ -353,31 +393,31 @@ Uma resposta sem sucesso retornará um status HTTP 404 (Não encontrado) se essa
 
 ## Cancelar a expiração de um conjunto de dados {#delete}
 
-Você pode cancelar a expiração de um conjunto de dados fazendo uma solicitação DELETE.
+Cancele uma configuração de expiração pendente do conjunto de dados fazendo uma solicitação DELETE para `/ttl/{ID}`.
 
 >[!NOTE]
 >
->Somente as expirações de conjunto de dados com status `pending` podem ser canceladas. A tentativa de cancelar uma expiração que foi executada ou já foi cancelada retorna um erro HTTP 404.
+>Somente as expirações do conjunto de dados no status `pending` podem ser canceladas. A tentativa de cancelar uma expiração que já é `executing`, `completed` ou `cancelled` retorna HTTP 400 (Solicitação inválida).
 
 **Formato da API**
 
 ```http
-DELETE /ttl/{EXPIRATION_ID}
+DELETE /ttl/{ID}
 ```
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{EXPIRATION_ID}` | O `ttlId` da expiração do conjunto de dados que você deseja cancelar. |
+| `{ID}` | O identificador exclusivo da configuração de expiração do conjunto de dados. Você pode fornecer uma ID de expiração do conjunto de dados ou uma ID do conjunto de dados. |
 
 {style="table-layout:auto"}
 
 **Solicitação**
 
-A solicitação a seguir cancela uma expiração do conjunto de dados com a ID `SD-b16c8b48-a15a-45c8-9215-587ea89369bf`:
+A solicitação a seguir cancela uma expiração do conjunto de dados com a ID `SD-d4a7d918-283b-41fd-bfe1-4e730a613d21`:
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/core/hygiene/ttl/SD-b16c8b48-a15a-45c8-9215-587ea89369bf \
+  https://platform.adobe.io/data/core/hygiene/ttl/SD-d4a7d918-283b-41fd-bfe1-4e730a613d21 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -386,7 +426,71 @@ curl -X DELETE \
 
 **Resposta**
 
-Uma resposta bem-sucedida retorna o status HTTP 204 (Sem Conteúdo), e o atributo `status` da expiração está definido como `cancelled`.
+Uma resposta bem-sucedida retorna o status HTTP 200 (OK) e a configuração de expiração do conjunto de dados cancelado. Observe que o atributo `status` da expiração está definido como `cancelled`.
+
+```json
+{
+  "ttlId": "SD-d4a7d918-283b-41fd-bfe1-4e730a613d21",
+  "datasetId": "5a9e2c68d3b24f03b55a91ce",
+  "datasetName": "Acme_Customer_Data",
+  "sandboxName": "acme-prod",
+  "displayName": "Customer Dataset Expiry Rule",
+  "description": "Cancelled expiry configuration for Acme customer dataset",
+  "imsOrg": "C9D8E7F6A5B41234567890AB@AcmeOrg",
+  "status": "cancelled",
+  "expiry": "2032-02-28T00:00:00Z",
+  "updatedAt": "2032-01-15T08:27:31.000Z",
+  "updatedBy": "s.clegane@acme.com <s.clegane@acme.com> 5A9E2C68D3B24F03B55A91CE@acme.com"
+}
+```
+
+| Propriedade | Descrição |
+|---|---|
+| `ttlId` | O identificador exclusivo da configuração de expiração do conjunto de dados excluído. |
+| `datasetId` | O identificador exclusivo do conjunto de dados. |
+| `datasetName` | O nome do conjunto de dados. |
+| `sandboxName` | A sandbox em que essa expiração do conjunto de dados é configurada. |
+| `displayName` | O nome de exibição da configuração de expiração do conjunto de dados. |
+| `description` | Uma descrição da configuração de expiração do conjunto de dados. |
+| `imsOrg` | O identificador exclusivo da organização associado a essa configuração. |
+| `status` | O status atual da configuração de expiração do conjunto de dados.<br>Um de: `pending`, `executing`, `cancelled`, `completed`. |
+| `expiry` | O carimbo de data e hora de expiração agendado para o conjunto de dados. |
+| `updatedAt` | O carimbo de data/hora da atualização mais recente. |
+| `updatedBy` | O identificador e o email do usuário ou serviço que atualizou a configuração de expiração do conjunto de dados pela última vez. |
+
+**Exemplo de resposta 400 (Solicitação inválida)**
+
+Erro 400 ao tentar cancelar um conjunto de dados com uma configuração de expiração de `executing`, `completed` ou `cancelled`.
+
+```json
+{
+  "type": "http://ns.adobe.com/aep/errors/HYGN-3102-400",
+  "title": "The requested dataset already has an existing expiration. Additional detail: A TTL already exists for datasetId=686e9ca25ef7462aefe72c93",
+  "status": 400,
+  "report": {
+    "tenantInfo": {
+      "sandboxName": "prod",
+      "sandboxId": "not-applicable",
+      "imsOrgId": "{IMS_ORG_ID}"
+    },
+    "additionalContext": {
+      "Invoking Client ID": "acp_privacy_hygiene"
+    }
+  },
+  "error-chain": [
+    {
+      "serviceId": "HYGN",
+      "errorCode": "HYGN-3102-400",
+      "invokingServiceId": "acp_privacy_hygiene",
+      "unixTimeStampMs": 1754408150394
+    }
+  ]
+}
+```
+
+>[!NOTE]
+>
+>Erro 404 ao tentar cancelar uma expiração de conjunto de dados que já é `completed` ou `cancelled`.
 
 ## Apêndice
 

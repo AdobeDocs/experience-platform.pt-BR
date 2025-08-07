@@ -61,7 +61,7 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
 
 ### Fontes empresariais avançadas {#advanced-enterprise-sources}
 
-As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Fonte | Categoria | Tipo de assimilação | Nuvem |
 | --- | --- | --- | --- |

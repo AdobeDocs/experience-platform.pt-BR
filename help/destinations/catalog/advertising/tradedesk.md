@@ -3,9 +3,9 @@ keywords: publicidade; a trade desk; advertising trade desk
 title: A conexão com a Trade Desk
 description: A Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais de redirecionamento e direcionadas por público-alvo em origens de inventário de exibição, vídeo e dispositivos móveis.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 92ba27aeb35685741151a618e64c78b4c8318865
+source-git-commit: 564ee7fbd45677c35057c56de049158f3282d7ad
 workflow-type: tm+mt
-source-wordcount: '910'
+source-wordcount: '1017'
 ht-degree: 3%
 
 ---
@@ -13,6 +13,23 @@ ht-degree: 3%
 # [!DNL The Trade Desk] conexão
 
 ## Visão geral {#overview}
+
+
+>[!IMPORTANT]
+>
+> Após a [atualização interna](../../../release-notes/2025/july-2025.md#destinations) para o serviço de destinos a partir de julho de 2025, você poderá observar uma **queda no número de perfis ativados** em seus fluxos de dados para [!DNL The Trade Desk].
+> > Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
+>
+>**O que mudou:**
+>
+>* O mapeamento ECID (Experience Cloud ID) agora é **obrigatório** para todas as ativações de perfil.
+>* Perfis sem mapeamento ECID serão **descartados** dos fluxos de dados de ativação existentes.
+>
+>**O que é necessário fazer:**
+>
+>* Analise seus dados de público-alvo para confirmar se os perfis têm valores ECID válidos.
+>* Monitore suas métricas de ativação para verificar as contagens esperadas de perfis.
+
 
 Use este conector de destino para enviar dados de perfil para [!DNL The Trade Desk]. Este conector envia dados para o ponto de extremidade primário [!DNL The Trade Desk]. A integração entre o Adobe Experience Platform e o [!DNL The Trade Desk] não oferece suporte à exportação de dados para o ponto de extremidade de terceiros [!DNL The Trade Desk].
 
@@ -67,7 +84,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/pt-br/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
 
 ## Conectar ao destino {#connect}
 
@@ -121,7 +138,7 @@ Todas as identidades de destino descritas na seção [identidades com suporte](#
 * **ECID** (Experience Cloud ID)
 * **A ID da Trade Desk**
 
-Falha ao mapear todas as identidades necessárias impedirá a ativação bem-sucedida do público para [!DNL The Trade Desk]. Cada identidade serve a um propósito específico na integração e todas são necessárias para que o destino funcione corretamente.
+A falha no mapeamento de todas as identidades necessárias impede a conclusão do fluxo de trabalho de ativação. Cada identidade serve a um propósito específico na integração e todas são necessárias para que o destino funcione corretamente.
 
 ![Captura de tela mostrando os mapeamentos obrigatórios](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
 

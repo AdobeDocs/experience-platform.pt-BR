@@ -1,69 +1,73 @@
 ---
-keywords: Experience Platform;home;tópicos populares;Oracle DB;oracle db
-solution: Experience Platform
-title: Criar uma conexão do Oracle DB Source na interface
-type: Tutorial
-description: Saiba como criar uma conexão de origem do Oracle DB usando a interface do usuário do Adobe Experience Platform.
+title: Conectar o Oracle DB ao Experience Platform usando a interface
+description: Saiba como conectar sua instância do Oracle DB ao Experience Platform usando a interface do usuário do.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
 workflow-type: tm+mt
-source-wordcount: '459'
-ht-degree: 1%
+source-wordcount: '463'
+ht-degree: 0%
 
 ---
 
 # Criar uma conexão de origem [!DNL Oracle DB] na interface
 
-Os conectores do Source no Adobe Experience Platform fornecem a capacidade de assimilar dados obtidos externamente de forma programada. Este tutorial fornece etapas para a criação de um conector de origem [!DNL Oracle DB] usando a interface do usuário [!DNL Experience Platform].
+Leia este guia para saber como conectar sua instância do [!DNL Oracle DB] ao Adobe Experience Platform usando o espaço de trabalho de origens na interface do usuário do Experience Platform.
 
 ## Introdução
 
 Este tutorial requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
+* [[!DNL Experience Data Model (XDM)] Sistema](../../../../../xdm/home.md): a estrutura padronizada pela qual o Experience Platform organiza os dados de experiência do cliente.
    * [Noções básicas sobre a composição de esquema](../../../../../xdm/schema/composition.md): saiba mais sobre os blocos de construção básicos de esquemas XDM, incluindo princípios-chave e práticas recomendadas na composição de esquema.
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver uma conexão [!DNL Oracle DB] válida, ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/databases.md).
+Se você já tiver uma conexão [!DNL Oracle DB], ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/databases.md).
 
 ### Coletar credenciais necessárias
 
-Para acessar sua conta do [!DNL Oracle DB] em [!DNL Experience Platform], você deve fornecer os seguintes valores:
+Leia a [[!DNL Oracle DB] visão geral](../../../../connectors/databases/oracle.md#prerequisites) para obter informações sobre autenticação.
 
-| Credencial | Descrição |
-| ---------- | ----------- |
-| `connectionString` | A cadeia de conexão usada para se conectar a [!DNL Oracle DB]. O padrão da cadeia de conexão [!DNL Oracle DB] é: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}`. |
-| `connectionSpec.id` | O identificador exclusivo necessário para criar uma conexão. A ID da especificação de conexão para [!DNL Oracle DB] é `d6b52d86-f0f8-475f-89d4-ce54c8527328`. |
+## Navegar pelo catálogo de origens
 
-Para obter mais informações sobre a introdução, consulte [este documento do Oracle](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Fontes]*. Escolha uma categoria ou use a barra de pesquisa para localizar sua fonte.
 
-## Conectar sua conta do [!DNL Oracle DB]
+Para se conectar a [!DNL Oracle DB], vá para a categoria *[!UICONTROL Bancos de Dados]*, selecione o cartão de origem **[!UICONTROL Oracle DB]** e selecione **[!UICONTROL Configurar]**.
 
-Depois de obter as credenciais necessárias, siga as etapas abaixo para vincular sua conta do [!DNL Oracle DB] e conectar-se ao [!DNL Experience Platform].
+>[!TIP]
+>
+>As fontes mostram **[!UICONTROL Configurar]** para novas conexões e **[!UICONTROL Adicionar dados]** se uma conta já existir.
 
-Faça logon em [Adobe Experience Platform](https://platform.adobe.com) e selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho **[!UICONTROL Fontes]**. A tela **[!UICONTROL Catálogo]** exibe uma variedade de fontes com as quais você pode criar uma conta.
+![O catálogo de origens com &quot;Oracle DB&quot; selecionado.](../../../../images/tutorials/create/oracle/catalog.png)
 
-Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+## Usar uma conta existente {#existing}
 
-Na categoria **[!UICONTROL Databases]**, selecione **[!UICONTROL Oracle DB]**. Se esta for a primeira vez que você usa este conector, selecione **[!UICONTROL Configurar]**. Caso contrário, selecione **[!UICONTROL Adicionar dados]** para criar um novo conector [!DNL Oracle DB].
+Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e depois selecione a conta [!DNL Oracle DB] que deseja usar.
 
-![catálogo](../../../../images/tutorials/create/oracle/catalog.png)
+![A interface de contas existentes no fluxo de trabalho de origem com a opção &quot;Conta existente&quot; selecionada.](../../../../images/tutorials/create/oracle/existing.png)
 
-A página **[!UICONTROL Conectar-se ao Oracle DB]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+## Criar uma nova conta {#new}
 
-### Nova conta
+Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e, opcionalmente, adicione uma descrição para sua conta.
 
-Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada que aparece, forneça um nome, uma descrição opcional e suas credenciais do [!DNL Oracle DB]. Quando terminar, selecione **[!UICONTROL Conectar]** e aguarde algum tempo para que a nova conexão seja estabelecida.
+### Conectar-se ao Experience Platform no Azure {#azure}
 
-![conectar](../../../../images/tutorials/create/oracle/new.png)
+Você pode conectar seu banco de dados do [!DNL Oracle DB] ao Experience Platform no Azure usando uma cadeia de conexão.
 
-### Conta existente
+Para usar a autenticação da cadeia de conexão, forneça sua [cadeia de conexão](../../../../connectors/databases/oracle.md#azure) e selecione **[!UICONTROL Conectar à origem]**.
 
-Para conectar uma conta existente, selecione a conta [!DNL Oracle DB] com a qual deseja se conectar e clique em **[!UICONTROL Avançar]** para continuar.
+![A nova interface de conta no fluxo de trabalho de origens com &quot;Autenticação da cadeia de conexão&quot; selecionada.](../../../../images/tutorials/create/oracle/azure.png)
 
-![existente](../../../../images/tutorials/create/oracle/existing.png)
+### Conectar-se ao Experience Platform no Amazon Web Services (AWS) {#aws}
 
-## Próximas etapas
+>[!AVAILABILITY]
+>
+>Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../../../landing/multi-cloud.md).
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Oracle DB]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para o  [!DNL Experience Platform]](../../dataflow/databases.md).
+Para criar uma nova conta do [!DNL Oracle DB] e conectar-se ao Experience Platform no AWS, verifique se você está em uma sandbox VA6 e forneça as [credenciais necessárias para autenticação](../../../../connectors/databases/oracle.md#aws).
+
+![A nova interface de conta no fluxo de trabalho de origens para se conectar ao AWS.](../../../../images/tutorials/create/oracle/aws.png)
+
+## Criar um fluxo de dados para dados de [!DNL Oracle DB]
+
+Agora que você conectou com êxito o banco de dados [!DNL Oracle DB], agora é possível [criar um fluxo de dados e assimilar dados do banco de dados na Experience Platform](../../dataflow/databases.md).

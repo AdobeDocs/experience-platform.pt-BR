@@ -1,15 +1,15 @@
 ---
-title: Monitorar assimilação de perfil por transmissão
+title: Monitorar assimilação de perfil de transmissão
 description: Saiba como usar o painel de monitoramento para monitorar a assimilação do perfil de transmissão
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
 workflow-type: tm+mt
 source-wordcount: '1820'
-ht-degree: 2%
+ht-degree: 20%
 
 ---
 
-# Monitorar assimilação de perfil por transmissão
+# Monitorar assimilação de perfil de transmissão
 
 Você pode usar o painel de monitoramento na interface do usuário do Adobe Experience Platform para realizar o monitoramento em tempo real da assimilação do perfil de transmissão na organização. Use esse recurso para acessar com mais transparência as métricas de taxa de transferência, latência e qualidade de dados relacionadas aos dados de transmissão. Além disso, use esse recurso para alertas proativos e recuperação de insights acionáveis para ajudar a identificar possíveis violações de capacidade e problemas de assimilação de dados.
 
@@ -26,19 +26,19 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Experie
 
 >[!NOTE]
 >
->A capacidade de taxa de transferência de transmissão suporta até 1500 eventos de entrada por segundo. Você pode comprar Segmentação de streaming adicional para oferecer suporte a até um máximo adicional de 13.500 eventos de entrada por segundo&#x200B;. Para obter mais informações, consulte as [descrições de produto do Real-Time CDP B2C Edition - Prime e Ultimate Packages](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>A capacidade de taxa de transferência de transmissão suporta até 1500 eventos de entrada por segundo. Você pode comprar Segmentação de streaming adicional para oferecer suporte a até um máximo adicional de 13.500 eventos de entrada por segundo&#x200B;. Para obter mais informações, consulte as [descrições de produto do Real-Time CDP B2C Edition - Prime e Ultimate Packages](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
-## Métricas de monitoramento para assimilação de perfil de transmissão {#streaming-profile-metrics}
+## Métricas de monitoramento para a assimilação de perfil de transmissão {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
->title="Monitorar assimilação de perfil por transmissão"
->abstract="O painel de monitoramento para perfis de transmissão exibe informações sobre taxa de transferência, taxas de assimilação e latência. Use esse painel para exibir, entender e analisar as métricas de processamento de dados. de seus perfis de streaming no Experience Platform."
+>title="Monitorar assimilação de perfil de transmissão"
+>abstract="O painel de monitoramento para perfis de transmissão exibe informações sobre taxa de transferência, taxas de assimilação e latência. Use esse painel para visualizar, entender e analisar as métricas de processamento de dados. dos perfis de transmissão na Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_request_throughput"
->title="Taxa de transferência da solicitação"
+>title="Taxa de transferência de solicitação"
 >abstract="Essa métrica representa o número de eventos que entram no sistema de assimilação por segundo."
 >text="Learn more in documentation"
 
@@ -51,25 +51,25 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Experie
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_p95_ingestion_latency"
 >title="Latência de assimilação P95"
->abstract="Essa métrica mede a latência do percentil 95 do momento em que um evento chega ao Experience Platform até quando ele é assimilado com êxito no armazenamento de Perfil."
+>abstract="Essa métrica mede a latência do percentil 95 do momento em que um evento chega à Experience Platform até ele ser assimilado com sucesso no armazenamento de perfis."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_max_throughput"
 >title="Taxa de transferência máxima"
->abstract="Essa métrica representa o número máximo de solicitações de entrada por segundo ao entrar na assimilação do perfil de streaming."
+>abstract="Essa métrica representa o número máximo de solicitações de entrada por segundo recebidas pela assimilação do perfil de transmissão."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_records_ingested"
 >title="Registros assimilados"
->abstract="Essa métrica representa o número total de registros assimilados no armazenamento de Perfil em uma janela de tempo configurada."
+>abstract="Essa métrica representa o número total de registros assimilados no armazenamento de perfis em uma janela de tempo configurada."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile_records_failed"
 >title="Registros com falha"
->abstract="Essa métrica representa o número total de registros que falharam na assimilação no armazenamento de Perfil, em uma janela de tempo configurada, devido a erros."
+>abstract="Essa métrica representa o número total de registros que falharam ao serem assimilados no armazenamento de perfis em uma janela de tempo configurada, devido a erros."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -88,12 +88,12 @@ Use a tabela de métricas para obter informações específicas para seus fluxos
 
 | Métrica | Descrição | Dimensões | Frequência de medição |
 | --- | --- | --- | --- |
-| Taxa de transferência da solicitação | Essa métrica representa o número de eventos que entram no sistema de assimilação por segundo. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
+| Taxa de transferência de solicitação | Essa métrica representa o número de eventos que entram no sistema de assimilação por segundo. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
 | Taxa de transferência de processamento | Essa métrica representa o número de eventos assimilados com êxito pelo sistema a cada segundo. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
-| Latência de assimilação P95 | Essa métrica mede a latência do percentil 95 do momento em que um evento chega ao Experience Platform até quando ele é assimilado com êxito no armazenamento de Perfil. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
+| Latência de assimilação P95 | Essa métrica mede a latência do percentil 95 do momento em que um evento chega à Experience Platform até ele ser assimilado com sucesso no armazenamento de perfis. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
 | Taxa de transferência máxima | Essa métrica representa o número máximo de solicitações de entrada por segundo ao entrar na assimilação do perfil de streaming | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> |
-| Registros assimilados | Essa métrica representa o número total de registros assimilados no armazenamento de Perfil em uma janela de tempo configurada. | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> | <ul><li>Sandbox/Fluxo de dados: monitoramento em tempo real com uma atualização de dados a cada 60 segundos.</li><li>Execução do fluxo de dados: agrupado em 15 minutos.</li></ul> |
-| Registros com falha | Essa métrica representa o número total de registros que falharam na assimilação no armazenamento de Perfil, em uma janela de tempo configurada, devido a erros. | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> | <ul><li>Sandbox/Fluxo de dados: monitoramento em tempo real com uma atualização de dados a cada 60 segundos.</li><li>Execução do fluxo de dados: agrupado em 15 minutos.</li></ul> |
+| Registros assimilados | Essa métrica representa o número total de registros assimilados no armazenamento de perfis em uma janela de tempo configurada. | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> | <ul><li>Sandbox/Fluxo de dados: monitoramento em tempo real com uma atualização de dados a cada 60 segundos.</li><li>Execução do fluxo de dados: agrupado em 15 minutos.</li></ul> |
+| Registros com falha | Essa métrica representa o número total de registros que falharam ao serem assimilados no armazenamento de perfis em uma janela de tempo configurada, devido a erros. | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> | <ul><li>Sandbox/Fluxo de dados: monitoramento em tempo real com uma atualização de dados a cada 60 segundos.</li><li>Execução do fluxo de dados: agrupado em 15 minutos.</li></ul> |
 | Registros ignorados | Essa métrica representa o número total de registros que foram descartados em uma janela de tempo configurada devido a falhas de configuração ou de capacidade. | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> | <ul><li>Sandbox/Fluxo de dados: monitoramento em tempo real com uma atualização de dados a cada 60 segundos.</li><li>Execução do fluxo de dados: agrupado em 15 minutos.</li></ul> |
 | Detalhes do erro | Essa métrica representa o número de eventos com falha devido a erros. | Execução do fluxo de dados | Agrupado em uma janela por hora. |
 

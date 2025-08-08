@@ -5,7 +5,7 @@ exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
 source-wordcount: '577'
-ht-degree: 6%
+ht-degree: 11%
 
 ---
 
@@ -15,22 +15,22 @@ No Adobe Experience Platform, as capacidades informam se sua organização exced
 
 Para obter mais informações sobre medidas de proteção no Experience Platform, leia a [visão geral das medidas de proteção do Real-Time CDP](../../rtcdp/guardrails/overview.md).
 
-## Comportamento da capacidade {#behavior}
+## Comportamento de capacidade {#behavior}
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Taxa de transferência de transmissão"
->abstract="O valor da taxa de transferência de transmissão mede o pico combinado de eventos de entrada por segundo para a assimilação de streaming no serviço de perfil, em suas sandboxes de produção e desenvolvimento."
+>abstract="O valor da taxa de transferência de transmissão mede o pico combinado de eventos de entrada por segundo para assimilação da transmissão no serviço de perfil, em suas sandboxes de produção e desenvolvimento."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
->title="Contagem de públicos-alvo de transmissão"
->abstract="O número máximo de públicos-alvo de transmissão por sandbox. Esse número inclui o número de públicos-alvo do Edge que você tem na sandbox."
+>title="Contagem de público-alvo de transmissão"
+>abstract="O número máximo de públicos-alvo de transmissão por sandbox. Esse número inclui o número de públicos-alvo de borda que você tem na sandbox."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_edgeaudiences"
->title="Públicos da Edge"
->abstract="O número máximo de públicos-alvo do Edge por sandbox."
+>title="Públicos-alvo de borda"
+>abstract="O número máximo de públicos-alvo de borda por sandbox."
 
 Atualmente, o Capacity oferece suporte aos seguintes serviços:
 

@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
 workflow-type: tm+mt
 source-wordcount: '5188'
-ht-degree: 10%
+ht-degree: 11%
 
 ---
 
@@ -129,9 +129,9 @@ Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses 
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
->title="Públicos externos"
->abstract="Os públicos importados por meio da guia Públicos-alvo agora são exibidos automaticamente no Portal de público-alvo. Os públicos-alvo assimilados da Audience Manager, Customer Journey Analytics, Correspondência de segmentos e outras integrações personalizadas estão prontamente disponíveis, sem configuração no Construtor de segmentos primeiro. A partir de 1º de setembro de 2025, todos os públicos-alvo serão recuperados exclusivamente por meio da Pesquisa unificada, e o fluxo de trabalho anterior não será mais compatível."
->additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de público-alvo"
+>title="Públicos-alvo externos"
+>abstract="Os públicos-alvo importados por meio da guia Públicos-alvo agora são disponibilizados automaticamente no Portal de público-alvo. Os públicos-alvo assimilados a partir do Audience Manager, Customer Journey Analytics, da correspondência de segmentos e outras integrações personalizadas estão prontamente disponíveis, sem a necessidade de configuração prévia no Construtor de segmentos.  A partir de 1º de setembro de 2025, todos os públicos-alvo serão recuperados exclusivamente por meio da Pesquisa unificada e o fluxo de trabalho anterior não será mais compatível."
+>additional-url="https://experienceleague.adobe.com/pt-BR/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de público-alvo"
 
 >[!NOTE]
 >
@@ -330,7 +330,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 >[!NOTE]
 >
 >Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
->&#x200B;>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
 >
 >Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
 >

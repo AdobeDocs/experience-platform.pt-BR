@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos Source Connectors
 description: A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1643'
+source-wordcount: '1644'
 ht-degree: 11%
 
 ---
@@ -61,7 +61,7 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
 
 ### Fontes empresariais avançadas {#advanced-enterprise-sources}
 
-As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Fonte | Categoria | Tipo de assimilação | Nuvem |
 | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time
 | [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Banco de dados | Lote | Azure |
 | [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Armazenamento na nuvem | Transmissão | Azure, AWS |
 | [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Banco de dados | Lote | Azure |
-| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Banco de dados | Lote | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Banco de dados | Lote | Azure, AWS |
 | [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Armazenamento na nuvem | Transmissão | Azure |
 | [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Banco de dados | Transmissão | Azure, AWS |
 | [[!DNL Snowflake]](connectors/databases/snowflake.md) | Banco de dados | Lote | Azure, AWS |

@@ -1,20 +1,15 @@
 ---
 title: Assimilar dados criptografados na interface do usuário de origens do Workspace
 description: Saiba como assimilar dados criptografados no espaço de trabalho da interface do usuário de origens.
-badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1436'
 ht-degree: 6%
 
 ---
 
 # Assimilar dados criptografados na interface do usuário de origens
-
->[!AVAILABILITY]
->
->O suporte para assimilação de dados criptografados na interface do usuário de origens está na versão beta. O recurso e a documentação estão sujeitos a alterações.
 
 Você pode assimilar arquivos e pastas de dados criptografados para a Adobe Experience Platform usando fontes de lote de armazenamento na nuvem. Com a assimilação de dados criptografados, você pode aproveitar os mecanismos assimétricos de criptografia para transferir com segurança os dados em lote para o Experience Platform. Os mecanismos de criptografia assimétrica compatíveis são PGP e GPG.
 

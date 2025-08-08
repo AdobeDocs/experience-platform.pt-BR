@@ -268,7 +268,7 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_rank_profilelimit_text"
 >title="Adicionar limite de perfil"
->abstract="A opção Adicionar limite de perfil permite especificar um número máximo de perfis a serem incluídos como parte do processo de classificação."
+>abstract="O botão de alternância Adicionar limite de perfil permite especificar um número máximo de perfis a serem incluídos como parte do processo de classificação."
 
 O tipo de bloco **[!UICONTROL Rank]** permite classificar e classificar perfis com base em um atributo especificado e incluir esses perfis classificados na sua composição.
 
@@ -309,7 +309,7 @@ Além disso, é possível limitar o número de perfis retornados habilitando a o
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Outros perfis"
->abstract="A opção Outros perfis permite criar um caminho adicional com os perfis restantes que não correspondem a nenhuma das condições específicas dos outros caminhos."
+>abstract="O botão de alternância Outros perfis permite criar um caminho adicional com os perfis restantes que não correspondem a nenhuma das condições específicas dos outros caminhos."
 
 >[!NOTE]
 >

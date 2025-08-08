@@ -31,7 +31,7 @@ Para executar várias transformações nos dados exportados para destinos de arm
 
 Para usar campos calculados para transformações de dados:
 
-1. [Conecte](/help/destinations/ui/connect-destination.md) a um destino de armazenamento na nuvem desejado. Ao se conectar ao destino de nuvem desejado, desative a opção **[!UICONTROL Exportar matrizes, mapas, objetos]** [&#128279;](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Conecte](/help/destinations/ui/connect-destination.md) a um destino de armazenamento na nuvem desejado. Ao se conectar ao destino de nuvem desejado, desative a opção **[!UICONTROL Exportar matrizes, mapas, objetos]** [](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Percorra as [etapas de ativação para destinos de armazenamento na nuvem](/help/destinations/ui/activate-batch-profile-destinations.md) e vá para a etapa [mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Como trabalhar com campos calculados {#how-to-export-calculated-fields}
@@ -44,7 +44,7 @@ Para usar campos calculados para transformações de dados:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Controle Adicionar campos calculados desabilitado"
->abstract="Este controle está desabilitado porque você *ativou* a opção **Exportar matrizes, mapas e objetos** ao configurar a conexão de destino. Para usar campos calculados e as funções disponíveis neles, configure uma nova conexão de destino com a opção **Exportar matrizes, mapas e objetos** *desativada*."
+>abstract="Este controle está desabilitado porque você *ativou* o botão de alternância **Exportar matrizes, mapas e objetos** ao configurar a conexão de destino. Para usar campos calculados e as funções disponíveis neles, configure uma nova conexão de destino com o botão de alternância **Exportar matrizes, mapas e objetos***desativado*."
 
 >[!IMPORTANT]
 >

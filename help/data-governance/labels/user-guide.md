@@ -112,8 +112,8 @@ A opção **[!UICONTROL Mostrar rótulos herdados]** está ativada por padrão, 
 >[!NOTE]
 >
 >Os rótulos aplicados antes da desativação do recurso de rotulagem do conjunto de dados podem ser removidos do conjunto de dados localizando o conjunto de dados relevante e selecionando o ícone de cancelamento no rótulo.
->>![A guia Governança de Dados do espaço de trabalho Conjuntos de Dados com um rótulo excluível destacado.](../images/labels/remove-governance-labels.png)
->>Consulte a documentação para obter instruções sobre [como migrar rótulos aplicados anteriormente do conjunto de dados para o nível de esquema](../e2e.md#migrate-labels).
+>&#x200B;>![A guia Governança de Dados do espaço de trabalho Conjuntos de Dados com um rótulo excluível destacado.](../images/labels/remove-governance-labels.png)
+>&#x200B;>Consulte a documentação para obter instruções sobre [como migrar rótulos aplicados anteriormente do conjunto de dados para o nível de esquema](../e2e.md#migrate-labels).
 
 ## Gerenciar rótulos personalizados {#manage-custom-labels}
 

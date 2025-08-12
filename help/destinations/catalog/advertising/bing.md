@@ -24,7 +24,7 @@ ht-degree: 7%
 >   * ID de especificação da conexão: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
 >
 > Após esta atualização, você pode enfrentar uma **queda no número de perfis ativados** em seus fluxos de dados para [!DNL Microsoft Bing].
-> > Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
+> &#x200B;> Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
 >
 >**O que mudou:**
 >

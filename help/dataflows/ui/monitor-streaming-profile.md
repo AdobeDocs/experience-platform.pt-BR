@@ -2,10 +2,10 @@
 title: Monitorar assimilação de perfil de transmissão
 description: Saiba como usar o painel de monitoramento para monitorar a assimilação do perfil de transmissão
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75e0231aa9a040226584aeb05f10756b6db8bb62
+source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 20%
+source-wordcount: '1967'
+ht-degree: 19%
 
 ---
 
@@ -26,7 +26,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Experie
 
 >[!NOTE]
 >
->A capacidade de taxa de transferência de transmissão suporta até 1500 eventos de entrada por segundo. Você pode comprar Segmentação de streaming adicional para oferecer suporte a até um máximo adicional de 13.500 eventos de entrada por segundo&#x200B;. Para obter mais informações, consulte as [descrições de produto do Real-Time CDP B2C Edition - Prime e Ultimate Packages](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>A capacidade de taxa de transferência de transmissão suporta até 1500 eventos de entrada por segundo. Você pode comprar Segmentação de streaming adicional para oferecer suporte a até um máximo adicional de 13.500 eventos de entrada por segundo&#x200B;. Para obter mais informações, consulte as [descrições de produto do Real-Time CDP B2C Edition - Prime e Ultimate Packages](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Métricas de monitoramento para a assimilação de perfil de transmissão {#streaming-profile-metrics}
 
@@ -197,6 +197,28 @@ Se o seu limite atual de **1.500 eventos por segundo** for insuficiente, conside
 | Assimilação desnecessária de dados | A ingestão de dados não é necessária para personalização e aumenta a taxa de transferência sem adicionar valor, desperdiçando recursos. Por exemplo, assimilar todo o tráfego de análises em perfis, independentemente da relevância. | O excesso de dados não relevantes cria ruído, dificultando a identificação de pontos de dados impactantes. Também pode causar atrito ao definir e gerenciar públicos e perfis. | Assimile somente dados necessários para seus casos de uso. Filtre os dados desnecessários.<ul><li>**Adobe Analytics**: use a [filtragem em nível de linha](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) para otimizar a entrada de dados.</li><li>**Fontes**: Use a [[!DNL Flow Service] API para filtrar dados de nível de linha](../../sources/tutorials/api/filter.md) de fontes com suporte, como [!DNL Snowflake] e [!DNL Google BigQuery].</li></li>**Sequência de dados do Edge**: configure [sequências de dados dinâmicas](../../datastreams/configure-dynamic-datastream.md) para executar a filtragem em nível de linha do tráfego proveniente do SDK da Web.</li></ul> |
 
 {style="table-layout:auto"}
+
+### Perguntas frequentes {#faq}
+
+Leia esta seção para obter respostas a perguntas frequentes sobre o monitoramento da assimilação do perfil de transmissão.
+
+#### Por que minhas métricas são diferentes nos painéis Capacidade e Monitoramento para a taxa de transferência de solicitação?
+
++++Resposta
+
+O painel [!UICONTROL Monitoramento] mostra métricas em tempo real para assimilação e processamento. Esses números são métricas exatas registradas no momento da atividade. Por outro lado, o painel [!UICONTROL Capacidade] usa um mecanismo de suavização para o cálculo da capacidade de taxa de transferência. Esse mecanismo ajuda a reduzir picos de vida curta de qualificação instantânea como violações e garante que os alertas de capacidade se concentrem em tendências sustentadas, em vez de picos momentâneos.
+
+Devido ao mecanismo de suavização, você pode notar:
+
+* Pequenos picos em [!UICONTROL Monitoramento] que não aparecem em [!UICONTROL Capacidade].
+* Valores ligeiramente menores em [!UICONTROL Capacity] comparados a [!UICONTROL Monitoring] no mesmo carimbo de data/hora.
+
+Os dois painéis são precisos, mas foram projetados para finalidades diferentes.
+
+* [!UICONTROL Monitoramento]: visibilidade operacional detalhada, momento a momento.
+* [!UICONTROL Capacidade]: exibição estratégica para identificar padrões de uso e violação.
+
++++
 
 ## Próximas etapas {#next-steps}
 

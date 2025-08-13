@@ -3,10 +3,10 @@ keywords: publicidade; bing;
 title: Conexão com o Microsoft Bing
 description: Com o destino da conexão do Microsoft Bing, você pode executar campanhas digitais direcionadas por público e redirecionamento em toda a Microsoft Advertising Network, incluindo Publicidade de exibição, Pesquisa e Nativo.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: c52cdd0f2a3aff506bff31ec0775420c66bea11f
+source-git-commit: 34520b42554a4ff72b05e9254bd923173629d611
 workflow-type: tm+mt
-source-wordcount: '981'
-ht-degree: 7%
+source-wordcount: '877'
+ht-degree: 8%
 
 ---
 
@@ -17,14 +17,9 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
->* A partir de 11 de agosto de 2025, você poderá ver dois cartões **[!DNL Microsoft Bing]** lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. O conector de destino **[!DNL Microsoft Bing]** existente foi renomeado para **[!UICONTROL (obsoleto) Microsoft Bing]** e um novo cartão com o nome **[!UICONTROL Microsoft Bing]** está disponível para você.
->* Use a nova conexão do **[!UICONTROL Microsoft Bing]** no catálogo para novos fluxos de dados de ativação. Se você tiver fluxos de dados ativos para o destino **[!UICONTROL (obsoleto) do Microsoft Bing]**, eles serão atualizados automaticamente, portanto, nenhuma ação é necessária.
->* Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores:
->   * ID da especificação de fluxo: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
->   * ID de especificação da conexão: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>Após uma atualização interna para o serviço de destinos a partir de agosto de 2025, você pode enfrentar uma **queda no número de perfis ativados** em seus fluxos de dados para [!DNL Microsoft Bing].
 >
-> Após esta atualização, você pode enfrentar uma **queda no número de perfis ativados** em seus fluxos de dados para [!DNL Microsoft Bing].
-> &#x200B;> Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
+> Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
 >
 >**O que mudou:**
 >
@@ -85,7 +80,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL Microsoft Bing] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=pt-BR) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL Microsoft Bing] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL Microsoft Bing] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL Microsoft Bing] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
 
 Ao configurar o destino, você deve fornecer as seguintes informações:
 

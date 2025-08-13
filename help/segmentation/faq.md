@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: b7bf7a2b7628f61231321205e2a6b9d675afce8b
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '4828'
+source-wordcount: '4849'
 ht-degree: 2%
 
 ---
@@ -293,6 +293,10 @@ Nesse momento, não. No entanto, esse recurso deve estar disponível em breve.
 Sim! Você pode usar públicos-alvo da Composição de público-alvo em Campanhas do Adobe Journey Optimizer, destinos do Real-Time CDP e Jornadas da Adobe Journey Optimizer.
 
 ### Existem medidas de proteção para o número de composições?
+
+>[!IMPORTANT]
+>
+>Esta garantia se aplica somente a composições criadas com a Composição de público-alvo e **não** se aplica a composições criadas com a Composição de público federado.
 
 Neste momento, você só pode ter **10** composições publicadas por sandbox. Esta garantia será aumentada em uma versão futura.
 

@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1536201961211aeb747e418794196c146d86e869
+source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
 workflow-type: tm+mt
-source-wordcount: '2636'
+source-wordcount: '2649'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ O Adobe Experience Platform permite fornecer experiências personalizadas entre 
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Este documento fornece limites de uso e taxa padrão para ajudar você a modelar seus dados de perfil para obter o melhor desempenho do sistema. Ao revisar as medidas de proteção a seguir, presume-se que você tenha modelado os dados corretamente. Em caso de dúvidas sobre como modelar os dados, entre em contato com o representante do Atendimento ao cliente.
 
@@ -125,7 +125,7 @@ As medidas de proteção descritas nesta seção referem-se ao número e à natu
 | Taxa de transferência de transmissão em todas as sandboxes | 1500 RPS | Proteção de desempenho | A segmentação de transmissão oferece suporte a um valor de pico combinado de 1.500 eventos de entrada por segundo em suas sandboxes de produção e desenvolvimento. A segmentação de transmissão pode levar até 5 minutos para qualificar um perfil para associação de segmento. Leia mais sobre [públicos-alvo de streaming](/help/segmentation/methods/streaming-segmentation.md). |
 | Públicos em lote por sandbox | 4000 | Proteção de desempenho | Você pode ter até 4000 públicos-alvo em lote **ativos** por sandbox. Você pode ter mais de 4000 públicos-alvo em lote por organização, desde que haja menos de 4000 públicos-alvo em lote em cada sandbox **individual**. Tentar criar públicos-alvo em lote adicionais pode afetar o desempenho do sistema. |
 | Públicos-alvo da conta por sandbox | 50 | Proteção imposta pelo sistema | Você pode criar no máximo 50 públicos-alvo de conta em uma sandbox. Depois de atingir 50 públicos-alvo em uma sandbox, o controle **[!UICONTROL Criar público-alvo]** é desabilitado ao tentar criar um novo público-alvo para a conta. Leia mais sobre [públicos-alvo da conta](/help/segmentation/types/account-audiences.md). |
-| Composições publicadas por sandbox | 10 | Proteção de desempenho | Você pode ter no máximo 10 composições publicadas em uma sandbox. Leia mais sobre [composição de público-alvo no guia da interface](/help/segmentation/ui/audience-composition.md). |
+| Composições publicadas por sandbox | 10 | Proteção de desempenho | Você pode ter no máximo 10 composições publicadas em uma sandbox. Leia mais sobre [composição de público-alvo no guia da interface](/help/segmentation/ui/audience-composition.md). **Observação**: as composições criadas com a Composição de Público Federado são **não** contadas com esta garantia. |
 | Tamanho máximo do público | 30 por cento | Proteção de desempenho | A associação máxima recomendada de um público-alvo é de 30% do número total de perfis no sistema. É possível criar públicos-alvo com mais de 30% dos perfis como membros ou vários públicos-alvo grandes, mas isso afetará o desempenho do sistema. |
 | Execuções flexíveis de avaliação de público | 50 por ano (sandbox de produção)<br/>100 por ano (sandbox de desenvolvimento) | Proteção imposta pelo sistema | Você tem no máximo 50 execuções de avaliação de público flexíveis por ano por sandbox de **produção**. Você tem no máximo 100 execuções de avaliação de público-alvo flexíveis por ano por sandbox de **desenvolvimento**. |
 | Execuções flexíveis de avaliação de público | 2 por dia | Proteção imposta pelo sistema | Você tem no máximo 2 execuções por dia por sandbox. |
@@ -188,7 +188,7 @@ Vários conjuntos de relatórios podem ser ativados para o Perfil desde que todo
 Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=pt-BR#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

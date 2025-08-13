@@ -2,7 +2,7 @@
 title: Uso e capacidade da licença
 description: Saiba mais sobre o uso de sua licença e os limites de capacidade no Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: b65765d8e93b13fbb3c2a3e44f47725b936223eb
+source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 6%
@@ -59,7 +59,7 @@ Nesses serviços, as seguintes medidas de proteção são rastreadas:
 
 A capacidade de público-alvo está no nível de **sandbox**. Isso significa que, para cada sandbox que você tem em sua organização, você pode ter 500 públicos-alvo de transmissão, dos quais 150 podem ser públicos-alvo de borda.
 
-A capacidade de taxa de transferência está em um nível de **organização** e pode ser distribuída para suas sandboxes individuais. Por exemplo, com a taxa de transferência de segmentação de transmissão de 1500 rps, é possível definir a sandbox de produção para 1500 rps e a sandbox de desenvolvimento para 150 rps.
+A capacidade de taxa de transferência está em um nível de **organização** e pode ser distribuída para suas sandboxes individuais. Por exemplo, com a taxa de transferência de segmentação de streaming de 1500 rps, é possível definir a sandbox de produção como 1350 rps e a sandbox de desenvolvimento como 150 rps.
 
 O Experience Platform calcula a taxa de transferência da sandbox em intervalos contínuos de 15 minutos. Essa taxa de transferência é medida em tempo real, com os dados sendo atualizados a cada 60 segundos.
 

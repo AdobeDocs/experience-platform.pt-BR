@@ -4,10 +4,10 @@ description: Uma visualização das notas de versão mais recentes do Adobe Expe
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
+source-git-commit: bcf3045fbbf4f9673e954a5ebf95d1225d4cdcd7
 workflow-type: tm+mt
-source-wordcount: '1116'
-ht-degree: 18%
+source-wordcount: '1074'
+ht-degree: 19%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 18%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: agosto de 2025**
 
@@ -53,28 +53,31 @@ Para obter mais informações sobre alertas, leia a [[!DNL Observability Insight
 
 [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
+>[!IMPORTANT]
+>
+>**Extensão de agendamento de exportação do conjunto de dados**
+>
+>Se sua organização tiver fluxos de dados de exportação do conjunto de dados criados antes de novembro de 2024, esses fluxos de dados deixarão de funcionar em **1º de setembro de 2025**. Se precisar que os fluxos de dados continuem exportando dados após 1º de setembro de 2025, estenda suas agendas para cada destino para o qual você está exportando conjuntos de dados seguindo as etapas no [este guia](../destinations/ui/dataset-expiration-update.md).
+
 **Novos destinos**
 
 | Destino | Descrição |
 | --- | --- |
 | [!DNL Acxiom Real ID Audience] destino | Use o destino [!DNL Acxiom Real ID Audience Connection] para aprimorar públicos com a tecnologia [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) e ativar públicos para várias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais. |
 
-
 **Destinos atualizados**
 
 | Destino | Descrição |
 | --- | --- |
-| Detalhes de expiração da autenticação para [!DNL LinkedIn] destinos | Nunca mais se preocupe com credenciais expiradas. As informações de expiração de conta agora estão visíveis diretamente na interface do Experience Platform, para que você possa ver quando a autenticação do [!DNL LinkedIn] expirará e a renovará antes de causar interrupções nos fluxos de dados. |
+| Detalhes de expiração da autenticação para [!DNL LinkedIn] e [!DNL Pinterest] destinos | As informações de expiração de conta agora estão visíveis diretamente na interface do Experience Platform, para que você possa ver quando a autenticação do [!DNL LinkedIn] e do [!DNL Pinterest] expirará e a renovará antes de causar interrupções nos fluxos de dados. |
 | Suporte a criptografia para [!DNL Data Landing Zone] destinos | Proteja seus dados exportados com criptografia. Agora é possível anexar chaves públicas formatadas em RSA para criptografar seus arquivos exportados, proporcionando o mesmo nível de segurança que outros destinos de armazenamento em nuvem oferecem para suas informações confidenciais. |
 | Atualização interna de [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) | A partir de 11 de agosto de 2025, você poderá ver dois cartões **[!DNL Microsoft Bing]** lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. O conector de destino **[!DNL Microsoft Bing]** existente foi renomeado para **[!UICONTROL (obsoleto) Microsoft Bing]** e um novo cartão com o nome **[!UICONTROL Microsoft Bing]** está disponível para você. Use a nova conexão do **[!UICONTROL Microsoft Bing]** no catálogo para novos fluxos de dados de ativação. Se você tiver fluxos de dados ativos para o destino **[!UICONTROL (obsoleto) do Microsoft Bing]**, eles serão atualizados automaticamente, portanto, nenhuma ação é necessária. <br><br>Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores:<ul><li>ID da especificação de fluxo: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>ID de especificação da conexão: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Após esta atualização, você pode enfrentar uma **queda no número de perfis ativados** em seus fluxos de dados para [!DNL Microsoft Bing]. Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. |
-| Identificadores adicionais para [!DNL Amazon Ads] destinos | O destino do Amazon Ads agora oferece suporte a novas identidades (`firstName`, `lastName`, `street`, `city`, `state`, `zip`, `country`). Esses campos têm como objetivo melhorar as taxas de correspondência do público-alvo e são transmitidos em texto sem formatação, com hash SHA256 opcional. |
 | [!DNL Marketo] consolidação de cartões de destino | Simplifique a configuração de destino do [!DNL Marketo] com nosso cartão de destino unificado. Consolidamos os cartões [!DNL Marketo] V2 e V3 em uma opção simplificada, facilitando a escolha do destino certo e a rápida introdução. |
 
 **Funcionalidade nova ou atualizada**
 
 | Recurso | Descrição |
 | --- | --- |
-| Estender programações de exportação do conjunto de dados para fluxos de dados criados antes de novembro de 2024 | Se sua organização tiver fluxos de dados de exportação do conjunto de dados criados antes de novembro de 2024, esses fluxos de dados deixarão de funcionar em 1º de setembro de 2025. Se precisar que os fluxos de dados continuem exportando dados após 1º de setembro de 2025, estenda suas agendas para cada destino para o qual você está exportando conjuntos de dados seguindo as etapas no [este guia](../destinations/ui/dataset-expiration-update.md). |
 | Recursos aprimorados de pesquisa, filtragem e marcação para destinos | Melhore o fluxo de trabalho de gerenciamento de destino com recursos aprimorados de pesquisa, filtragem e marcação nas guias Procurar e Contas. Agora é possível pesquisar fluxos de dados e contas específicos por nome, filtrar por vários critérios, incluindo plataforma de destino, status e datas, e criar tags personalizadas para organizar seus destinos. A classificação de colunas também está disponível para campos principais, como último tempo de execução do fluxo de dados, facilitando a identificação e o gerenciamento das conexões de destino. |
 
 Para obter mais informações, leia a [Visão geral dos Destinos](../destinations/home.md).
@@ -101,7 +104,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Estimativas de público | As estimativas de público-alvo agora são geradas automaticamente no Construtor de segmentos. Esse valor será atualizado sempre que você modificar o público-alvo e sempre refletirá as regras de público-alvo mais recentes. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Origens {#sources}
 

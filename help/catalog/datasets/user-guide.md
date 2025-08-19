@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
+source-git-commit: 1b278562c815953d2068a5142dbefcf1572baff5
 workflow-type: tm+mt
-source-wordcount: '4482'
+source-wordcount: '4497'
 ht-degree: 5%
 
 ---
@@ -237,6 +237,8 @@ Configure seu período de retenção preferido na caixa de diálogo de configura
 >[!NOTE]
 > 
 >O período mínimo de retenção para o data lake é de 30 dias. O período mínimo de retenção do Serviço de perfil é de um dia.
+>
+>Além disso, você só pode atualizar o período de retenção do Serviço de perfil uma vez a cada 30 dias.
 
 Para oferecer suporte à transparência e ao monitoramento, os carimbos de data e hora são fornecidos para as execuções de trabalho de retenção de dados **last** e **next**. Os carimbos de data e hora ajudam a entender quando ocorreu a última limpeza de dados e quando a próxima está programada.
 

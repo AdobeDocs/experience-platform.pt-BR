@@ -3,9 +3,9 @@ keywords: serviço de catálogo, perguntas, perguntas frequentes, perguntas freq
 title: Perguntas frequentes
 description: Respostas às perguntas mais frequentes sobre o Adobe Experience Platform Catalog Service e conjuntos de dados.
 exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 38f63f1fc985601c53925a529e603f47dc7fb58b
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '487'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,10 @@ Você pode configurar políticas de retenção em conjuntos de dados criados usa
 ### Posso definir políticas de retenção diferentes para o data lake e o serviço de perfil?
 
 +++Resposta
+
+>[!NOTE]
+>
+>O período de retenção do Serviço de perfil só pode ser atualizado uma vez a cada 30 dias.
 
 Sim, você pode aplicar políticas de retenção diferentes para o data lake e o Serviço de perfil.
 

@@ -2,9 +2,9 @@
 title: Gerenciar a retenção do conjunto de dados do evento de experiência no Data Lake usando TTL
 description: Saiba como avaliar, definir e gerenciar a Retenção de conjunto de dados de evento de experiência no data lake usando configurações de Tempo de vida (TTL) com APIs do Adobe Experience Platform. Este guia explica como a expiração em nível de linha de TTL suporta políticas de retenção de dados, otimiza a eficiência do armazenamento e garante um gerenciamento eficaz do ciclo de vida dos dados. Ela também fornece casos de uso e práticas recomendadas para ajudar você a aplicar o TTL de maneira eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
+source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
 workflow-type: tm+mt
-source-wordcount: '2458'
+source-wordcount: '2472'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,7 @@ curl -X GET \
 
 Uma resposta bem-sucedida retorna os valores de TTL recomendados, máximos e mínimos com base nos direitos da organização, juntamente com um TTL sugerido (`defaultValue`) para o conjunto de dados. Esta `defaultValue` é uma duração de TTL recomendada, fornecida somente para orientação. Ela não é aplicada a menos que seja configurada explicitamente por você. A resposta não inclui valores TTL personalizados que já possam ter sido definidos. Para exibir o TTL atual de um conjunto de dados, use o ponto de extremidade `/catalog/dataSets/{DATASET_ID}` do GET.
 
-+++Selecione para exibir a resposta
++++Selecionar para exibir a resposta
 
 ```json
 {
@@ -333,7 +333,13 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### Posso definir políticas de retenção diferentes para data lake e serviços de perfil?
 
 +++Resposta
+
+>[!NOTE]
+>
+>O período de retenção do Serviço de perfil só pode ser atualizado uma vez a cada 30 dias.
+
 Sim, você pode definir políticas de retenção diferentes para os serviços de perfil e data lake. O período de retenção do armazenamento de perfis pode ser menor ou mais longo que o período de retenção do data lake, dependendo das necessidades da sua organização.
+
 +++
 
 ### Como posso verificar o uso do meu conjunto de dados atual?
@@ -366,13 +372,13 @@ Não, depois que uma política de retenção é aplicada, os dados anteriores ao
 
 ### Qual é o TTL mínimo que posso configurar em um conjunto de dados de Evento de experiência do data lake?
 
-+++Resposta
++++Resposta 
 O TTL mínimo para um conjunto de dados de Evento de experiência do data lake é de 30 dias. O data lake funciona como um sistema de processamento de backup e recuperação durante a assimilação e o processamento iniciais. Como resultado, os dados devem permanecer no data lake por pelo menos 30 dias após a ingestão antes de expirarem.
 +++
 
 ### E se for necessário reter alguns campos do data lake por mais tempo do que minha política de TTL permite?
 
-+++Resposta
++++Resposta 
 Use o Data Distiller para reter campos específicos além do TTL do conjunto de dados, mantendo-o dentro dos limites de utilização. Crie um trabalho que grava regularmente apenas os campos necessários em um conjunto de dados derivado. Esse fluxo de trabalho garante a conformidade com um TTL mais curto, preservando os dados críticos para uso estendido.
 
 Para obter mais detalhes, consulte o [Criar conjuntos de dados derivados com o guia SQL](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md).

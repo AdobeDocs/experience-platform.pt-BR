@@ -5,9 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
+source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '631'
 ht-degree: 3%
 
 ---
@@ -160,6 +160,12 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | Token SAS | O token de assinatura de acesso compartilhado para o seu [!DNL Azure Blob Storage]. Você pode obter esse valor recuperando suas credenciais do [!DNL Azure Blob Storage]. |
 
 ![A interface do usuário do Databricks no Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+
+Se não for fornecida, a atividade de cópia na execução do fluxo falhará e retornará o seguinte erro:
+
+```shell
+Unable to access container '{CONTAINER_NAME}' in account '{STORAGE_ACCOUNT}.blob.core.windows.net' using anonymous credentials. No credentials found in the configuration. Public access is not permitted on this storage account.
+```
 
 ## Conectar [!DNL Databricks] ao Experience Platform
 

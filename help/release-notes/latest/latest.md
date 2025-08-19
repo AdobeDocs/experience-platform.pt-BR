@@ -2,7 +2,7 @@
 title: Notas de versão de agosto de 2025 da Adobe Experience Platform
 description: As notas de versão de agosto de 2025 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b67b2b33b37d631f73d9ea13786cae0e0db59ce
+source-git-commit: af669d58ac4031354e477954a8a733cf0bd7a64b
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 19%
@@ -17,9 +17,9 @@ ht-degree: 19%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 19 de agosto de 2025**
 
@@ -41,7 +41,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 **Novos recursos**
 
 | Recurso | Descrição |
-| ------- | ----------- |
+| --- | --- |
 | Alertas de capacidade de taxa de transferência de transmissão | Três novos alertas permitem que os usuários assinem e configurem alertas para gerenciar e monitorar proativamente o desempenho da capacidade de taxa de transferência de transmissão. Os novos alertas incluem quando a taxa de transferência de transmissão atinge 80%, 90% ou excede os limites de capacidade. Para obter mais informações, leia o [guia de regras de alerta de capacidade](../../observability/alerts/rules.md#capacity). |
 
 Para obter mais informações sobre alertas, leia a [[!DNL Observability Insights] visão geral](../../observability/home.md).
@@ -157,7 +157,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Estimativas de público | As estimativas de público-alvo agora são geradas automaticamente no Construtor de segmentos. Esse valor será atualizado sempre que você modificar o público-alvo e sempre refletirá as regras de público-alvo mais recentes. Além disso, a estimativa agora será exibida como um **intervalo**, que se baseia no intervalo de confiança dos dados de amostragem. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Origens {#sources}
 
@@ -168,6 +168,6 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 | Recurso | Descrição |
 | --- | --- |
 | Suporte do [!BADGE Beta]{type=Informative} para [!DNL Azure Private Links] na interface | Agora você pode usar [!DNL Azure Private Links] para um grupo selecionado de fontes na interface. Use este recurso para criar um ponto de extremidade privado ao qual a fonte possa se conectar. Com endpoints privados, você pode configurar conexões e fluxos de dados que ignoram a Internet pública, proporcionando maior segurança e isolamento de rede para seus dados confidenciais. O suporte para [!DNL Azure Private Links] está disponível para as seguintes fontes: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Para obter mais informações, leia o guia em [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
-| Autenticação aprimorada para [!DNL Azure Blob Storage] | Agora você pode usar a autenticação baseada na entidade de serviço para conectar sua origem do [!DNL Azure Blob Storage] à Experience Platform. Use a autenticação baseada na entidade de serviço para segurança aprimorada, rotação de credenciais mais fácil e um controle de acesso mais granular para sua conta. Para obter mais informações, leia a visão geral[&#128279;](../../sources/connectors/cloud-storage/blob.md) do [!DNL Azure Blob Storage] . |
+| Autenticação aprimorada para [!DNL Azure Blob Storage] | Agora você pode usar a autenticação baseada na entidade de serviço para conectar sua origem do [!DNL Azure Blob Storage] à Experience Platform. Use a autenticação baseada na entidade de serviço para segurança aprimorada, rotação de credenciais mais fácil e um controle de acesso mais granular para sua conta. Para obter mais informações, leia a visão geral](../../sources/connectors/cloud-storage/blob.md) do [[!DNL Azure Blob Storage] . |
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).

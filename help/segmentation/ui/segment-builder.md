@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: d942093bffc680501384f7c8193f4cdddc1cef33
+source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
 workflow-type: tm+mt
-source-wordcount: '5188'
-ht-degree: 11%
+source-wordcount: '5174'
+ht-degree: 10%
 
 ---
 
@@ -330,7 +330,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 >[!NOTE]
 >
 >Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
->&#x200B;>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
 >
 >Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
 >
@@ -375,12 +375,12 @@ Para selecionar uma política de mesclagem para a definição do segmento, selec
 
 ![O seletor de política de mesclagem está realçado. Isso permite escolher qual política de mesclagem selecionar para a definição de segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
-## Propriedades de definição do segmento {#segment-properties}
+## Propriedades de público-alvo {#audience-properties}
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_segmentproperties"
->title="Propriedades de definição do segmento"
->abstract="A seção de propriedades de definição do segmento exibe uma estimativa do tamanho da definição do segmento, exibindo o número de perfis qualificados em comparação ao número total de perfis. Isso permite ajustar a definição do segmento, conforme necessário, antes de criar o público."
+>title="Propriedades de público-alvo"
+>abstract="A seção Propriedades do público-alvo exibe uma estimativa do tamanho do público-alvo resultante, exibindo o número de perfis qualificados em comparação ao número total de perfis. Isso permite ajustar o público-alvo conforme necessário antes de criá-lo."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
@@ -391,12 +391,12 @@ Para selecionar uma política de mesclagem para a definição do segmento, selec
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Perfis qualificados"
->abstract="Perfis qualificados indica o número real de perfis que correspondem às regras da definição de segmento. Esse número atualiza a cada 24 horas, após a execução do trabalho de avaliação do segmento."
+>abstract="Perfis qualificados indica o número real de perfis que correspondem às regras do público-alvo. Esse número atualiza a cada 24 horas, após a execução do trabalho de avaliação do segmento."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Perfis estimados"
->abstract="Os perfis estimados indicam um número aproximado de perfis, com base na amostra de tarefa, que se qualificariam para as regras de definição de segmentos."
+>abstract="Perfis estimados indicam um número aproximado de perfis, com base no trabalho de amostra, que se qualificariam para as regras do público-alvo."
 
 Ao criar uma definição de segmento, a seção **[!UICONTROL Propriedades do público-alvo]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho da definição de segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.
 
@@ -404,22 +404,22 @@ Ao criar uma definição de segmento, a seção **[!UICONTROL Propriedades do p�
 
 O carimbo de data/hora para perfis qualificados indica o trabalho de avaliação de segmento mais recente do **lote** e é **não** exibido para definições de segmento avaliadas usando a segmentação de borda ou de streaming. Se você editar a definição do segmento, o número de perfis qualificados permanecerá o mesmo até que o próximo trabalho de avaliação de segmento seja executado.
 
-**[!UICONTROL Perfis estimados]** indica um **número aproximado** de perfis, com base no **trabalho de amostra**. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode ser diferente do número real de perfis qualificados. A amostra de perfil estimada tem um intervalo de confiança de 95%.
+**[!UICONTROL Perfis estimados]** indica um **intervalo aproximado** de perfis, com base no **trabalho de amostra**. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode ser diferente do número real de perfis qualificados. A amostra de perfil estimada tem um intervalo de confiança de 95%.
 
 Esse número é atualizado em dois cenários:
 
-1. Há uma alteração maior que 5% nos dados do cliente ou o último trabalho de amostra tem mais de sete dias.
+1. Há uma alteração maior que 3% nos dados do cliente ou o último trabalho de amostra tem mais de três dias.
 2. As regras do público-alvo foram modificadas ou removidas.
 
-Selecionar a bolha de informações fornece o limite de erro e a hora do trabalho de amostra mais recente.
+Selecionar a bolha de informações fornece a data e a hora em que o último trabalho de amostra foi executado.
 
 ![Perfis qualificados e Perfis estimados são realçados na seção Propriedades de público-alvo.](../images/ui/segment-builder/audience-estimates.png)
 
-A seção **[!UICONTROL Propriedades de público-alvo]** também é o local onde você pode especificar informações importantes sobre a definição do segmento, incluindo nome, descrição e tipo de avaliação. Os nomes de definição de segmento são usados para identificar sua definição de segmento entre os definidos pela organização e, portanto, devem ser descritivos, concisos e exclusivos.
+A seção **[!UICONTROL Propriedades do público-alvo]** também é o local onde você pode especificar informações importantes sobre o público-alvo, incluindo nome, descrição e tipo de avaliação. Os nomes são usados para identificar a definição do segmento entre os definidos pela organização e, portanto, devem ser descritivos, concisos e exclusivos.
 
-À medida que você continua a criar sua definição de segmento, pode visualizar uma paginação do público selecionando **[!UICONTROL Exibir perfis]**.
+Enquanto você continua a criar seu público-alvo, pode visualizá-lo paginado selecionando **[!UICONTROL Exibir Perfis]**.
 
-![A seção de propriedades de definição de segmento está realçada. As propriedades de definição de segmento incluem, mas não estão limitadas a, o nome de definição de segmento, a descrição e o método de avaliação.](../images/ui/segment-builder/segment-properties.png)
+![A seção de propriedades do público-alvo está realçada. As propriedades de público incluem, mas não estão limitadas a, o nome, a descrição e o método de avaliação.](../images/ui/segment-builder/segment-properties.png)
 
 >[!NOTE]
 >
@@ -453,4 +453,4 @@ O Construtor de segmentos fornece um fluxo de trabalho avançado que permite iso
 - Ative todas as definições de segmento para a segmentação programada.
 - Ative as definições de segmento especificadas para a segmentação por transmissão.
 
-Para saber mais sobre [!DNL Segmentation Service], continue lendo a documentação e complemente seu aprendizado assistindo aos vídeos relacionados. Para saber mais sobre as outras partes da interface do [!DNL Segmentation Service], leia o [[!DNL Segmentation Service] guia do usuário](./overview.md)
+Para saber mais sobre [!DNL Segmentation Service], continue lendo a documentação e complemente seu aprendizado assistindo aos vídeos relacionados. Para saber mais sobre as outras partes da interface do [!DNL Segmentation Service], leia o [[!DNL Segmentation Service] guia do usuário](./overview.md).

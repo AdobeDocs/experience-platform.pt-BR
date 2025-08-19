@@ -2,9 +2,8 @@
 title: Usar o Link privado do Azure para origens na interface
 description: Saiba como usar os Links privados do Azure para origens na interface do usuário do Experience Platform.
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 4f6e3049ac320cecdd56dc661dbf90030f0d7d7d
+exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
+source-git-commit: b88cf63e907b3f127f83304aa95f82300b47ce0b
 workflow-type: tm+mt
 source-wordcount: '744'
 ht-degree: 0%

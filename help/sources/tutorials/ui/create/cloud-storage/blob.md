@@ -1,17 +1,17 @@
 ---
-title: Criar uma conexão do Azure Blob Source na interface
-description: Saiba como criar um conector de origem do Azure Blob usando a interface do usuário do Experience Platform.
+title: Conectar o Armazenamento Azure Blob ao Experience Platform na interface
+description: Saiba como conectar sua conta de Armazenamento de Blobs do Azure à Experience Platform usando o espaço de trabalho de origens na interface do usuário.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
 workflow-type: tm+mt
-source-wordcount: '819'
-ht-degree: 2%
+source-wordcount: '595'
+ht-degree: 1%
 
 ---
 
-# Criar uma conexão de origem [!DNL Azure Blob] na interface
+# Conectar o [!DNL Azure Blob Storage] ao Experience Platform usando a interface
 
-Este tutorial fornece etapas para a criação de uma conexão de origem [!DNL Azure Blob] (a seguir denominada &quot;[!DNL Blob]&quot;) usando a interface do usuário do Experience Platform.
+Leia este guia para saber como conectar sua instância do [!DNL Azure Blob Storage] ao Adobe Experience Platform usando o espaço de trabalho de origens na interface do usuário do Experience Platform.
 
 ## Introdução
 
@@ -22,7 +22,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
    * [Tutorial do Editor de esquemas](../../../../../xdm/tutorials/create-schema-ui.md): saiba como criar esquemas personalizados usando a interface do Editor de esquemas.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 
-Se você já tiver uma conexão [!DNL Blob] válida, ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/batch/cloud-storage.md).
+Se você já tiver uma conexão [!DNL Azure Blob Storage] válida, ignore o restante deste documento e prossiga para o tutorial em [configurando um fluxo de dados](../../dataflow/batch/cloud-storage.md).
 
 ### Formatos de arquivo compatíveis
 
@@ -34,78 +34,56 @@ O Experience Platform oferece suporte aos seguintes formatos de arquivo para ser
 
 ### Coletar credenciais necessárias
 
-Para acessar seu armazenamento do [!DNL Blob] no Experience Platform, você deve fornecer valores válidos para as seguintes credenciais:
+Leia a [[!DNL Azure Blob Storage] visão geral](../../../../connectors/cloud-storage/blob.md#authentication) para obter informações sobre autenticação.
 
->[!BEGINTABS]
+## Navegar pelo catálogo de origens
 
->[!TAB Autenticação da cadeia de conexão]
+Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Fontes]*. Escolha uma categoria ou use a barra de pesquisa para localizar sua fonte.
 
-| Credencial | Descrição |
-| --- | --- |
-| String de conexão | Uma cadeia de caracteres que contém as informações de autorização necessárias para autenticar [!DNL Blob] no Experience Platform. O padrão da cadeia de conexão [!DNL Blob] é: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. Para obter mais informações sobre cadeias de conexão, consulte este documento [!DNL Blob] em [configurando cadeias de conexão](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
-
->[!TAB Autenticação do URI SAS]
-
-| Credencial | Descrição |
-| --- | --- |
-| URI SAS | O URI de assinatura de acesso compartilhado que você pode usar como um tipo de autenticação alternativo para conectar sua conta do [!DNL Blob]. O padrão do URI SAS [!DNL Blob] é: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` Para obter mais informações, consulte este [!DNL Blob] documento em [URIs de assinatura de acesso compartilhado](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
-| Contêiner | O nome do container ao qual você deseja designar acesso. Ao criar uma nova conta com a origem [!DNL Blob], você pode fornecer um nome de contêiner para especificar o acesso do usuário à subpasta de sua escolha. |
-| Caminho da pasta | O caminho para a pasta à qual você deseja fornecer acesso. |
-
->[!ENDTABS]
-
-Depois de obter as credenciais necessárias, você poderá seguir as etapas abaixo para conectar seu armazenamento do [!DNL Blob] à Experience Platform
-
-## Conectar sua conta do [!DNL Blob]
-
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
-
-Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a barra de pesquisa.
-
-Na categoria [!UICONTROL Armazenamento na nuvem], selecione **[!UICONTROL Armazenamento do Azure Blob]** e **[!UICONTROL Adicionar dados]**.
-
-![O catálogo de origens da Experience Platform com a origem do Armazenamento de Blob do Azure selecionada.](../../../../images/tutorials/create/blob/catalog.png)
-
-A página **[!UICONTROL Conectar-se ao Armazenamento Azure Blob]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
-
-### Conta existente
-
-Para usar uma conta existente, selecione a conta [!DNL Blob] com a qual deseja criar um novo fluxo de dados e clique em **[!UICONTROL Avançar]** para continuar.
-
-![existente](../../../../images/tutorials/create/blob/existing.png)
-
-### Nova conta
+Para se conectar ao [!DNL Azure Blob Storage], vá para a categoria *[!UICONTROL Armazenamento na nuvem]*, selecione o cartão de origem **[!UICONTROL Armazenamento de Blobs do Azure]** e selecione **[!UICONTROL Configurar]**.
 
 >[!TIP]
 >
->Depois de criada, você não pode alterar o tipo de autenticação de uma conexão de base [!DNL Blob]. Para alterar o tipo de autenticação, você deve criar uma nova conexão base.
+>As fontes mostram **[!UICONTROL Configurar]** para novas conexões e **[!UICONTROL Adicionar dados]** se uma conta já existir.
 
-Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e uma descrição opcional para sua nova conta [!DNL Blob].
+![O catálogo de origens com a origem de Armazenamento de Blob do Azure selecionada.](../../../../images/tutorials/create/blob/catalog.png)
 
-![A tela da nova conta para a fonte do Armazenamento Azure Blob.](../../../../images/tutorials/create/blob/new.png)
+## Usar uma conta existente
 
-A origem [!DNL Blob] dá suporte à autenticação de chave de conta e à autenticação de assinatura de acesso compartilhado (SAS). Uma autenticação baseada em chave de conta requer uma cadeia de conexão para verificação, enquanto uma autenticação SAS usa um URI que permite autorização delegada segura de sua conta.
+Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e depois selecione a conta [!DNL Azure Blob Storage] que deseja usar.
 
-Durante essa etapa, também é possível designar as subpastas às quais sua conta terá acesso definindo o nome do container e o caminho para a subpasta.
+![A interface de origem existente para o Armazenamento Azure Blob.](../../../../images/tutorials/create/blob/existing.png)
+
+## Criar uma nova conta
+
+Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e, opcionalmente, adicione uma descrição para sua conta. Você pode conectar sua conta do [!DNL Azure Blob Storage] à Experience Platform usando estes tipos de autenticação:
+
+* **Autenticação da chave da conta**: usa a chave de acesso da conta de armazenamento para autenticar e conectar-se à sua conta do [!DNL Azure Blob Storage].
+* **Assinatura de acesso compartilhado (SAS)**: usa um URI SAS para fornecer acesso delegado e limitado por tempo aos recursos da sua conta [!DNL Azure Blob Storage].
+* **Autenticação baseada na entidade de serviço**: usa uma entidade de serviço do Azure Ative Diretory (AAD) (ID de cliente e segredo) para autenticar com segurança em sua conta de Armazenamento de Blobs do Azure.
 
 >[!BEGINTABS]
 
->[!TAB Cadeia de Conexão]
+>[!TAB Autenticação da chave da conta]
 
-Para autenticar com uma chave de conta, selecione **[!UICONTROL Autenticação da chave de conta]** e forneça sua cadeia de conexão. Durante essa etapa, também é possível designar o nome e o caminho do container para a subpasta à qual você deseja acessar o. Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
+Selecione a **[!UICONTROL Autenticação da chave da conta]** e forneça suas `connectionString`, `container` e `folderPath`. Em seguida, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns momentos para estabelecer a conexão.
 
-![cadeia de conexão](../../../../images/tutorials/create/blob/connectionstring.png)
+![A opção de autenticação de chave de conta na etapa de criação da nova conta.](../../../../images/tutorials/create/blob/account-key.png)
 
->[!TAB URI SAS]
+>[!TAB Assinatura de acesso compartilhado]
 
-Você pode usar SAS para criar credenciais de autenticação com vários graus de acesso, já que uma autenticação baseada em SAS permite definir permissões, datas de início e expiração, bem como provisões para recursos específicos.
+Selecione **[!UICONTROL Assinatura de acesso compartilhado]** e forneça seu `sasUri`, `container` e `folderPath`. Em seguida, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns momentos para estabelecer a conexão.
 
-Para autenticar com uma assinatura de acesso compartilhado, selecione **[!UICONTROL Autenticação de assinatura de acesso compartilhado]** e forneça seu URI SAS. Durante essa etapa, também é possível designar o nome e o caminho do container para a subpasta à qual você deseja acessar o. Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
+![A opção de autenticação de assinatura de acesso compartilhado na etapa de criação da nova conta.](../../../../images/tutorials/create/blob/sas.png)
 
-![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
+>[!TAB Autenticação baseada na entidade de serviço]
+
+Selecione a **[!UICONTROL Autenticação baseada na entidade de serviço]** e forneça suas `serviceEndpoint`, `servicePrincipalId`, `servicePrincipalKey`, `accountKind`, `tenant`, `container` e `folderPath`. Em seguida, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns momentos para estabelecer a conexão.
+
+![A opção de autenticação baseada na entidade de serviço na etapa de criação da nova conta.](../../../../images/tutorials/create/blob/service-principal.png)
 
 >[!ENDTABS]
 
 ## Próximas etapas
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Blob]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para o Experience Platform](../../dataflow/batch/cloud-storage.md).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta do [!DNL Azure Blob Storage]. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados do seu armazenamento em nuvem para o Experience Platform](../../dataflow/batch/cloud-storage.md).

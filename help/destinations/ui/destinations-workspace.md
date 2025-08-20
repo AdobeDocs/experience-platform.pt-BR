@@ -3,10 +3,10 @@ keywords: plataforma;destinos;destinos espaço de trabalho;espaço de trabalho;u
 title: Espaço de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em cinco seções: Visão geral, Catálogo, Procurar, Contas e Exibição de sistema. Eles são descritos nas seções abaixo.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 80ceb279e943037fb4507419b7818575b4a84fe5
+source-git-commit: 73d84174a9960e180a81c3db938f3f18f68f3beb
 workflow-type: tm+mt
-source-wordcount: '1384'
-ht-degree: 1%
+source-wordcount: '2235'
+ht-degree: 0%
 
 ---
 
@@ -32,14 +32,15 @@ A guia **[!UICONTROL Visão geral]** exibe o painel [!UICONTROL Destinos], forne
 
 A guia **[!UICONTROL Catálogo]** exibe uma lista de todos os destinos disponíveis em [!DNL Experience Platform] para os quais você pode enviar dados.
 
+![Catálogo de destinos mostrando vários destinos.](../assets/ui/workspace/catalog.png)
+
 A interface de usuário do [!DNL Experience Platform] fornece várias opções de pesquisa e filtro na página de catálogo de destinos:
 
 * Use a funcionalidade de pesquisa na página para localizar um destino específico.
-* Filtrar destinos usando o controle [!UICONTROL Categorias].
-* Alternar entre [!UICONTROL Todos os destinos] e [!UICONTROL Meus destinos]. Quando você seleciona **[!UICONTROL Todos os destinos]**, todos os destinos [!DNL Experience Platform] disponíveis são exibidos. Ao selecionar **[!UICONTROL Meus destinos]**, você só poderá ver os destinos com os quais tiver estabelecido uma conexão.
+* Filtrar destinos usando o controle **[!UICONTROL Categorias]**.
+* Alternar entre **[!UICONTROL Todos os destinos]** e **[!UICONTROL Meus destinos]**. Quando você seleciona **[!UICONTROL Todos os destinos]**, todos os destinos [!DNL Experience Platform] disponíveis são exibidos. Ao selecionar **[!UICONTROL Meus destinos]**, você só poderá ver os destinos com os quais tiver estabelecido uma conexão.
 * Selecione para exibir os tipos de **[!UICONTROL Conexões]** e/ou **[!UICONTROL Extensões]**. Para entender a diferença entre as duas categorias, leia [Tipos de Destino e Categorias](../destination-types.md).
-
-![Catálogo de destinos que mostra alguns destinos de anúncios e de armazenamento na nuvem.](../assets/ui/workspace/catalog.png)
+* Filtre os destinos disponíveis com base no [tipo de dados](/help/destinations/destination-sdk/functionality/destination-configuration/audience-data-type.md) com suporte. Escolha entre públicos-alvo de pessoas, públicos-alvo de contas, públicos-alvo de clientes potenciais ou exportações de conjunto de dados.
 
 Os cartões de destino contêm opções de controle primário e secundário. Os controles primários incluem [!UICONTROL Configurar], [!UICONTROL Ativar], [!UICONTROL Ativar públicos] ou [!UICONTROL Exportar conjuntos de dados]. Os controles secundários permitem opções de exibição. Esses controles estão descritos abaixo:
 
@@ -63,17 +64,130 @@ Selecione um cartão de destino no catálogo para abrir o painel direito. Aqui, 
 
 Para obter mais informações sobre categorias de destino e informações sobre cada destino, consulte o [Catálogo de destinos](../catalog/overview.md) e [Tipos e categorias de destino](../destination-types.md).
 
+## [!UICONTROL Procurar] {#browse}
+
+A guia **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma conexão.
+
+>[!TIP]
+>
+> Comece com a [barra de pesquisa](#search-browse) para encontrar fluxos de dados específicos e, em seguida, use os [filtros da barra lateral](#filter-options-browse) para restringir ainda mais seus resultados.
+
+Os destinos com a opção de alternância **[!UICONTROL Habilitado/Desabilitado]** ativada definem o destino como **[!UICONTROL Habilitado]** ou **[!UICONTROL Desabilitado]**, respectivamente. Você também pode exibir os destinos nos quais há dados fluindo selecionando **[!UICONTROL Públicos-alvo]** > **[!UICONTROL Procurar]** e selecionando um público a ser inspecionado.
+
+>[!TIP]
+>
+> ![Guia Procurar](../assets/ui/workspace/browse-tab.png)
+> 
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Ativar públicos-alvo](/help/images/icons/data-add.png) **[!UICONTROL Ativar públicos-alvo]** para exportar públicos-alvo ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino ]**para editar conexões de destino existentes. Leia o tutorial sobre [edição de destinos](/help/destinations/ui/edit-destination.md) para obter mais informações.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar ações de marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Editar ações de marketing]** para [alterar as ações de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) para o destino selecionado.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Excluir](/help/images/icons/delete.png) **[!UICONTROL Excluir]** para [remover](delete-destinations.md) uma conexão existente com um destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Exibir no controle de monitoramento](/help/images/icons/monitoring.png) **[!UICONTROL Exibir no monitoramento]** para exibir informações de ativação para este destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Assinar alertas ](/help/images/icons/alert-add.png) **[!UICONTROL Assinar alertas]** para assinar alertas de fluxo de dados de destino. Você pode assinar alertas para receber mensagens sobre o status, o sucesso ou a falha da execução do fluxo. Consulte [Assinar alertas de destino em contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Gerenciar marcas](/help/images/icons/manage-tags.png) **[!UICONTROL Gerenciar marcas]** para adicionar ou remover marcas de um destino. Consulte a seção [Gerenciar tags de destino](#manage-tags) para obter informações detalhadas sobre o uso de tags.
+
+Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino na guia [!UICONTROL Procurar].
+
+| Elemento | Descrição |
+|---------|----------|
+| Nome | O nome fornecido para o fluxo de ativação para esse destino. |
+| Tipo de dados | O tipo de dados aceito pela conexão de destino. Tipos de dados compatíveis: <ul><li>**[!UICONTROL Clientes]**</li><li>**[!UICONTROL Clientes Potenciais]**</li><li>**[!UICONTROL Contas]**</li><li>**[!UICONTROL Conjuntos de dados]**</li></ul> |
+| [!UICONTROL Status da Última Execução do Fluxo de Dados] | O status da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
+| [!UICONTROL Data da Última Execução do Fluxo de Dados] | Hora e data em que ocorreu a última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
+| [!UICONTROL Destino] | A plataforma de destino selecionada para o fluxo de ativação. |
+| [!UICONTROL Data de vencimento da conta] | A data em que a autorização de conexão com este destino expirará. <br>**Importante**: esta coluna está disponível no momento somente para a conexão [Facebook](../catalog/social/facebook.md). |
+| [!UICONTROL Nome de usuário] | As credenciais de conta selecionadas para o fluxo de destino. |
+| [!UICONTROL Dados de ativação] | Indica o número de públicos-alvo que estão sendo ativados para esse destino. Selecione este controle para saber mais sobre os públicos ativados. Consulte [Dados de ativação](/help/destinations/ui/destination-details-page.md#activation-data) na página de detalhes do destino para obter mais informações sobre os públicos ativados. |
+| [!UICONTROL Criado] | A data e hora UTC quando o fluxo de ativação para o destino foi criado. Selecione o símbolo de seta para cima/para baixo para classificar os fluxos de ativação pelo mais recente primeiro ou pelo mais antigo primeiro. |
+| [!UICONTROL Status] | `Enabled` ou `Disabled`. Indica se os dados estão sendo ativados para este destino. |
+| [!UICONTROL Acessar rótulos] | Exibe todos os rótulos de acesso que foram adicionados a esse fluxo de dados de destino. Leia mais sobre [aplicação de rótulos de acesso a fluxos de dados de destino](/help/access-control/abac/apply-access-labels-destinations.md). |
+| [!UICONTROL Tags] | Exibe todas as tags adicionadas a esse fluxo de dados de destino. Use tags para organizar e categorizar seus fluxos de dados para facilitar o gerenciamento. |
+
+Clique em uma linha de destino para exibir mais informações sobre o destino no painel direito, como ID de destino, descrição, o número de públicos ativados e muito mais.
+
+![Clique na linha de destino](../assets/ui/workspace/click-destination-row.png)
+
+Selecione o nome do destino para ver informações sobre os públicos ativados para esse destino. Clique em **[!UICONTROL Editar destino]** para [modificar as configurações de destino](/help/destinations/ui/edit-destination.md) ou **[!UICONTROL Ativar públicos-alvo]** para adicionar novos públicos-alvo ao fluxo de dados.
+
+### Filtrar fluxos de dados na guia Procurar {#filter-browse}
+
+A guia **[!UICONTROL Procurar]** inclui recursos aprimorados de filtragem e pesquisa para ajudá-lo a localizar e gerenciar rapidamente seus fluxos de dados de destino. Use a barra lateral esquerda para aplicar filtros e a barra de pesquisa para localizar fluxos de dados específicos por nome.
+
+### Funcionalidade de pesquisa {#search-browse}
+
+Use a barra de pesquisa na parte superior da tabela para localizar rapidamente os fluxos de dados por nome. À medida que você digita, os resultados são filtrados automaticamente para mostrar apenas os fluxos de dados correspondentes.
+
+>[!NOTE]
+>
+> Ao pesquisar fluxos de dados usando a caixa de pesquisa, os resultados podem incluir fluxos de dados que seus [rótulos de acesso do usuário](/help/access-control/abac/apply-access-labels-destinations.md) impedem que você veja. Esse comportamento será corrigido em uma atualização futura. A seleção desses fluxos de dados não exibe as informações no painel direito e os usuários sem acesso aos rótulos necessários não podem executar modificações, como mapear públicos-alvo para o fluxo de dados ou editar sua programação.
+
+![Demonstração animada de pesquisa de um fluxo de dados de destino na guia Procurar](../assets/ui/workspace/search.gif)
+
+### Opções de filtro {#filter-options-browse}
+
+Use os filtros na barra lateral esquerda para restringir sua pesquisa.
+
+![Filtros de destino na guia Procurar](../assets/ui/workspace/destination-filters.png)
+
+
+* **[!UICONTROL Plataforma de destino]**: filtre fluxos de dados por plataformas de destino específicas (por exemplo, [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience] etc.). Você pode selecionar várias plataformas simultaneamente.
+* **[!UICONTROL Tem qualquer marca]**: filtre fluxos de dados que tenham marcas específicas atribuídas a eles. Isso ajuda a organizar e encontrar fluxos de dados com base em sua marcação personalizada.
+* **[!UICONTROL Status]**: filtre os fluxos de dados de acordo com seu status operacional:
+   * **[!UICONTROL Habilitado]**: mostra somente fluxos de dados ativos
+   * **[!UICONTROL Desabilitado]**: mostra somente fluxos de dados inativos
+* **[!UICONTROL Nome da conta]**: filtre fluxos de dados pelo nome da conta associada. Isso ajuda a encontrar todos os fluxos de dados conectados a uma conta de destino específica.
+* **[!UICONTROL Criado]**: filtre os fluxos de dados pelo usuário que os criou. Use esse filtro para localizar fluxos de dados criados por membros de equipe específicos.
+* **[!UICONTROL Modificado por]**: filtre os fluxos de dados pelo usuário que os modificou pela última vez. Use esse filtro para identificar alterações recentes feitas por usuários específicos.
+* **[!UICONTROL Data de criação]**: filtre os fluxos de dados por data de criação usando um intervalo de datas:
+   * **[!UICONTROL Data de início]**: definir o início do intervalo de datas
+   * **[!UICONTROL Data final]**: definir o fim do intervalo de datas
+* **[!UICONTROL Data de modificação]**: filtre os fluxos de dados por data de modificação usando um intervalo de datas:
+   * **[!UICONTROL Data de início]**: definir o início do intervalo de datas
+   * **[!UICONTROL Data final]**: definir o fim do intervalo de datas
+
+### Filtros ativos {#active-filters-browse}
+
+Quando você aplica filtros, eles são exibidos como tags abaixo da barra de pesquisa.
+
+![Filtros ativos exibidos como marcas abaixo da barra de pesquisa](../assets/ui/workspace/active-filters.png)
+
+Lá é possível:
+
+* Exibir todos os filtros ativos no momento
+* Remova filtros individuais clicando no ícone `X` em cada tag de filtro
+* Limpar todos os filtros de uma só vez usando a opção **[!UICONTROL Limpar tudo]**
+
+### Gerenciar tags de destino {#manage-tags}
+
+As tags ajudam a organizar e categorizar os fluxos de dados de destino para facilitar o gerenciamento. É possível adicionar e remover tags de fluxos de dados individuais para agrupá-las com base nas necessidades da empresa.
+
+Para adicionar uma marca a um fluxo de dados, selecione as reticências (`...`) na coluna **[!UICONTROL Nome]** e selecione **[!UICONTROL Gerenciar marcas]** no menu de contexto.
+Digite o nome de uma nova marca no campo **[!UICONTROL Marcas]** e selecione **[!UICONTROL Salvar]** para aplicar as alterações.
+
+![Caixa de diálogo Gerenciar marcas mostrando as opções de seleção e criação de marcas](../assets/ui/workspace/tags.gif)
+
+Para remover uma marca de um fluxo de dados, selecione as reticências (`...`) na coluna **[!UICONTROL Nome]** e selecione **[!UICONTROL Gerenciar marcas]** no menu de contexto. Em seguida, selecione o ícone `X` na marca que deseja remover.
+
+### Práticas recomendadas de marcação {#tag-best-practices}
+
+Certifique-se de que os fluxos de dados de destino permaneçam organizados, fáceis de encontrar e gerenciáveis seguindo as diretrizes de marcação abaixo.
+
+* **Usar nomes descritivos**: crie marcas que indiquem claramente a finalidade ou a categoria do fluxo de dados (por exemplo, &quot;Campanhas de marketing&quot;, &quot;Retenção de clientes&quot;, &quot;Promoções da estação&quot;)
+* **Seja consistente**: use uma convenção de nomenclatura consistente em sua organização
+* **Mantenha a simplicidade**: evite criar muitas marcas, pois isso pode tornar a filtragem menos eficaz
+* **Usar marcas hierárquicas**: considere usar prefixos para agrupar marcas relacionadas (por exemplo, &quot;Campanha-Q4&quot;, &quot;Campanha-Q1&quot;)
+
 ## [!UICONTROL Contas] {#accounts}
 
 A guia **[!UICONTROL Contas]** mostra detalhes sobre as conexões estabelecidas com vários destinos e permite atualizar ou excluir detalhes de contas existentes. Consulte a tabela abaixo para obter todas as informações que você pode obter em cada conta de destino.
 
 >[!TIP]
 >
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Ativate](/help/images/icons/data-add.png)**[!UICONTROL Ativate &#x200B;]**/**[!UICONTROL &#x200B; Ativate audiences &#x200B;]**/**[!UICONTROL &#x200B; Export datasets &#x200B;]**&#x200B;para exportar audiences ou conjuntos de dados para esse destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Editar detalhes](/help/images/icons/edit.png)**[!UICONTROL Editar detalhes &#x200B;]**&#x200B;para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Excluir](/help/images/icons/delete.png)**[!UICONTROL Excluir &#x200B;]**&#x200B;para [excluir](delete-destination-account.md) uma conta de destino existente.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Ativate](/help/images/icons/data-add.png)**[!UICONTROL Ativate ]**/**[!UICONTROL  Ativate audiences ]**/**[!UICONTROL  Export datasets ]**para exportar audiences ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Editar detalhes](/help/images/icons/edit.png)**[!UICONTROL Editar detalhes ]**para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Excluir](/help/images/icons/delete.png)**[!UICONTROL Excluir ]**para [excluir](delete-destination-account.md) uma conta de destino existente.
 
-![Guia Contas](../assets/ui/workspace/destination-account-options.png)
+![Guia Contas](../assets/ui/workspace/accounts-tab.png)
 
 | Elemento | Descrição |
 |---|---|
@@ -87,48 +201,43 @@ A guia **[!UICONTROL Contas]** mostra detalhes sobre as conexões estabelecidas 
 
 {style="table-layout:auto"}
 
-## [!UICONTROL Procurar] {#browse}
+### Filtrar contas {#filter-accounts}
 
-A guia **[!UICONTROL Procurar]** exibe os destinos com os quais você estabeleceu uma conexão. Os destinos com a opção **[!UICONTROL Habilitada/Desabilitada]** ativada definem o destino como ativo ou inativo, respectivamente. Você também pode exibir os destinos nos quais há dados fluindo selecionando **[!UICONTROL Públicos-alvo]** > **[!UICONTROL Procurar]** e selecionando um público a ser inspecionado. Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino na guia [!UICONTROL Procurar]:
+A guia **[!UICONTROL Contas]** inclui recursos aprimorados de filtragem e pesquisa para ajudá-lo a encontrar e gerenciar rapidamente suas contas de destino. Use a barra lateral esquerda para aplicar filtros e a barra de pesquisa para localizar contas específicas por nome.
 
->[!TIP]
->
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Ativar públicos-alvo](/help/images/icons/data-add.png) **[!UICONTROL Ativar públicos-alvo]** para exportar públicos-alvo ou conjuntos de dados para esse destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino &#x200B;]**&#x200B;para editar conexões de destino existentes. Leia o tutorial sobre [edição de destinos](/help/destinations/ui/edit-destination.md) para obter mais informações.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar ações de marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Editar ações de marketing]** para [alterar as ações de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) para o destino selecionado.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Excluir](/help/images/icons/delete.png) **[!UICONTROL Excluir]** para [remover](delete-destinations.md) uma conexão existente com um destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Exibir no controle de monitoramento](/help/images/icons/monitoring.png) **[!UICONTROL Exibir no monitoramento]** para exibir informações de ativação para este destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Assinar alertas ](/help/images/icons/alert-add.png) **[!UICONTROL Assinar alertas]** para assinar alertas de fluxo de dados de destino. Você pode assinar alertas para receber mensagens sobre o status, o sucesso ou a falha da execução do fluxo. Consulte [Assinar alertas de destino em contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
+#### Pesquisar contas {#search-accounts}
 
-![Guia Procurar](../assets/ui/workspace/browse-tab.png)
+Use a barra de pesquisa na parte superior da tabela para localizar rapidamente as contas por nome. À medida que você digita, os resultados são filtrados automaticamente para mostrar somente as contas correspondentes.
 
-| Elemento | Descrição |
-|---------|----------|
-| Nome | O nome fornecido para o fluxo de ativação para esse destino. |
-| Tipo de dados | O tipo de dados aceito pela conexão de destino. Tipos de dados compatíveis: <ul><li>**[!UICONTROL Clientes]**</li><li>**[!UICONTROL Clientes Potenciais]**</li><li>**[!UICONTROL Contas]**</li><li>**[!UICONTROL Conjuntos de dados]**</li></ul> |
-| [!UICONTROL Status da Última Execução do Fluxo de Dados] | O status da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
-| [!UICONTROL Data da Última Execução do Fluxo de Dados] | Hora e data em que ocorreu a última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
-| [!UICONTROL Destino] | A plataforma de destino selecionada para o fluxo de ativação. |
-| [!UICONTROL Data de vencimento da conta] | A data em que a autorização de conexão com este destino expirará. <br>**Importante**: esta coluna está disponível no momento somente para a conexão [Facebook](../catalog/social/facebook.md). |
-| [!UICONTROL Tipo de conexão] | Representa o tipo de conexão para seu bucket de armazenamento ou destino. <ul><li>Para destinos de marketing por email: pode ser S3, FTP ou [!DNL Azure Blob].</li><li>Para destinos de anúncios em tempo real: de servidor para servidor.</li><li>Para destinos de streaming: pode ser [!DNL Azure Event Hubs] ou [!DNL Amazon Kinesis].</li></ul> |
-| [!UICONTROL Nome de usuário] | As credenciais de conta selecionadas para o fluxo de destino. |
-| [!UICONTROL Dados de ativação] | Indica o número de públicos-alvo que estão sendo ativados para esse destino. Selecione este controle para saber mais sobre os públicos ativados. Consulte [Dados de ativação](/help/destinations/ui/destination-details-page.md#activation-data) na página de detalhes do destino para obter mais informações sobre os públicos ativados. |
-| [!UICONTROL Criado] | A data e hora UTC quando o fluxo de ativação para o destino foi criado. Selecione o símbolo de seta para cima/para baixo para classificar os fluxos de ativação pelo mais recente primeiro ou pelo mais antigo primeiro. |
-| [!UICONTROL Status] | `Enabled` ou `Disabled`. Indica se os dados estão sendo ativados para este destino. |
-| [!UICONTROL Acessar rótulos] | Exibe todos os rótulos de acesso que foram adicionados a esse fluxo de dados de destino. Leia mais sobre [aplicação de rótulos de acesso a fluxos de dados de destino](/help/access-control/abac/apply-access-labels-destinations.md). |
+![Barra de pesquisa na guia Contas.](../assets/ui/workspace/accounts-search.gif)
 
-Clique em uma linha de destino para exibir mais informações sobre o destino no painel direito, como ID de destino, descrição, o número de públicos ativados e muito mais.
+#### Opções de filtro {#filter-options-accounts}
 
-![Clique na linha de destino](../assets/ui/workspace/click-destination-row.png)
+Use os filtros na barra lateral esquerda para restringir sua pesquisa.
 
-Selecione o nome do destino para ver informações sobre os públicos ativados para esse destino. Clique em **[!UICONTROL Editar ativação]** para modificar ou adicionar aos públicos-alvo que estão sendo enviados a este destino.
+![Filtros de conta na guia Contas](../assets/ui/workspace/account-filters.png)
+
+* **[!UICONTROL Plataforma de destino]**: filtre contas por plataformas de destino específicas (por exemplo: [!DNL Microsoft Bing], [!DNL Amazon S3], [!DNL Facebook Custom Audiences], [!DNL LinkedIn Matched Audiences] e assim por diante). Você pode selecionar várias plataformas simultaneamente.
+* **[!UICONTROL Criado por]**: filtre contas pelo usuário que as criou. Use esse filtro para localizar contas criadas por membros de equipe específicos.
+
+#### Filtros ativos {#active-filters-accounts}
+
+Quando você aplica filtros, eles são exibidos como tags abaixo da barra de pesquisa.
+
+![Filtros ativos exibidos como marcas na guia Contas](../assets/ui/workspace/accounts-active-filters.png)
+
+Lá é possível:
+
+* Exibir todos os filtros ativos no momento
+* Remova filtros individuais clicando no ícone `X` em cada tag de filtro
+* Limpar todos os filtros de uma só vez usando a opção **[!UICONTROL Limpar tudo]**
 
 ## [!UICONTROL Exibição do Sistema] {#system-view}
 
 A guia **[!UICONTROL Exibição de Sistema]** exibe uma representação gráfica dos fluxos de ativação configurados no Adobe Experience Platform.
 
-![Fluxos de dados1](../assets/ui/workspace/data-flows1.png)
+![Fluxos de dados1](../assets/ui/workspace/system-view-dataflows.png)
 
 Selecione qualquer um dos destinos exibidos na página e clique em **[!UICONTROL Exibir fluxos de dados]** para ver informações sobre todas as conexões configuradas para cada destino.
 
-![Fluxos de dados2](../assets/ui/workspace/data-flows2.png)
+![Fluxos de dados2](../assets/ui/workspace/system-view-dataflows-2.png)

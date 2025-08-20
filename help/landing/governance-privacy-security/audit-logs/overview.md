@@ -4,10 +4,10 @@ description: Saiba como os logs de auditoria permitem ver quem realizou quais a�
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
 workflow-type: tm+mt
-source-wordcount: '1476'
-ht-degree: 31%
+source-wordcount: '1624'
+ht-degree: 28%
 
 ---
 
@@ -31,6 +31,8 @@ ht-degree: 31%
 Para aumentar a transparência e a visibilidade das atividades realizadas no sistema, o Adobe Experience Platform permite auditar a atividade do usuário em vários serviços e recursos na forma de &quot;logs de auditoria&quot;. Esses registros formam uma trilha de auditoria que pode ajudar na solução de problemas no Experience Platform e ajudar sua empresa a cumprir com as políticas corporativas de gerenciamento de dados e os requisitos normativos.
 
 Basicamente, um log de auditoria informa **quem** executou a ação **o que** e **quando**. Cada ação registrada em um log contém metadados que indicam o tipo de ação, a data e a hora, a ID do email do usuário que executou a ação e atributos adicionais relevantes ao tipo de ação.
+
+Quando um usuário executa uma ação, dois tipos de eventos de auditoria são registrados. Um evento principal captura o resultado de autorização da ação [!UICONTROL allow] ou [!UICONTROL deny], enquanto um evento aprimorado captura o resultado da execução, [!UICONTROL success] ou [!UICONTROL failure]. Vários eventos aprimorados podem ser vinculados ao mesmo evento principal. Por exemplo, ao ativar um destino, o evento principal registra a autorização da ação [!UICONTROL Atualização de Destino], enquanto os eventos aprimorados registram várias ações [!UICONTROL Ativar Segmento].
 
 >[!NOTE]
 >
@@ -89,7 +91,7 @@ Você pode exibir logs de auditoria para diferentes recursos do Experience Platf
 
 Os logs de auditoria são retidos por 365 dias após os quais serão excluídos do sistema. Se você precisar de dados com mais de 365 dias, exporte logs regularmente para atender aos requisitos da política interna.
 
-Seu método de solicitar logs de auditoria altera o período permitido e o número de registros aos quais você terá acesso. [A exportação de logs](#export-audit-logs) permite voltar 365 dias (em intervalos de 90 dias) a um máximo de 10.000 registros, enquanto a [IU do log de atividades](#filter-audit-logs) no Experience Platform exibe os últimos 90 dias a um máximo de 1.000 registros.
+Seu método de solicitar logs de auditoria altera o período permitido e o número de registros aos quais você terá acesso. [A exportação de logs](#export-audit-logs) permite voltar 365 dias (em intervalos de 90 dias) para um máximo de 10.000 logs de auditoria (principais ou aprimorados), em que a [IU do log de atividades](#filter-audit-logs) no Experience Platform exibe os últimos 90 dias a um máximo de 1.000 eventos principais, cada um deles com os eventos aprimorados correspondentes.
 
 Selecione um evento na lista para exibir seus detalhes no painel direito.
 
@@ -101,7 +103,7 @@ Selecione o ícone de funil (![Ícone de filtro](/help/images/icons/filter.png))
 
 >[!NOTE]
 >
->A interface do usuário do Experience Platform exibe apenas os últimos 90 dias até o máximo de 1000 registros, independentemente dos filtros aplicados. Se você precisar de logs depois disso (até um máximo de 365 dias), precisará [exportar seus logs de auditoria](#export-audit-logs).
+>A interface do usuário do Experience Platform só exibe os últimos 90 dias até o máximo de 1000 eventos principais, cada um com os eventos aprimorados correspondentes, independentemente dos filtros aplicados. Se você precisar de logs depois disso (até um máximo de 365 dias), precisará [exportar seus logs de auditoria](#export-audit-logs).
 
 ![O painel de Auditorias com o log de atividades filtrado realçado.](../../images/audit-logs/filters.png)
 
@@ -112,7 +114,7 @@ Os seguintes filtros estão disponíveis para eventos de auditoria na interface 
 | [!UICONTROL Categoria] | Use o menu suspenso para filtrar os resultados exibidos por [categoria](#category). |
 | [!UICONTROL Ação] | Filtrar por ação. As ações disponíveis para cada serviço podem ser vistas na tabela de recursos acima. |
 | [!UICONTROL Usuário] | Insira a ID de usuário completa (por exemplo, `johndoe@acme.com`) para filtrar por usuário. |
-| [!UICONTROL Status] | Filtre se a ação foi permitida (concluída) ou negada devido à falta de permissões de [controle de acesso](../../../access-control/home.md). |
+| [!UICONTROL Status] | Filtrar eventos de auditoria por resultado: êxito, falha, permissão ou negação devido à falta de [permissões de controle de acesso](../../../access-control/home.md). Para uma ação executada, os eventos principais mostram [!UICONTROL Permitir] ou [!UICONTROL Negar]. Quando o evento principal é [!UICONTROL Permitir], ele pode ter anexado um ou mais eventos aprimorados mostrando **[!UICONTROL Sucesso]** ou **[!UICONTROL Falha]**. Por exemplo, uma ação bem-sucedida mostra [!UICONTROL Permitir] no evento principal e [!UICONTROL Sucesso] no evento aprimorado anexado. |
 | [!UICONTROL Data] | Selecione uma data inicial e/ou final para definir um intervalo de datas para filtrar os resultados. Os dados podem ser exportados com um período de lookback de 90 dias (por exemplo, 2021-12-15 para 2022-03-15). Isso pode diferir por tipo de evento. |
 
 Para remover um filtro, selecione o &quot;X&quot; no ícone de preenchimento do filtro em questão ou selecione **[!UICONTROL Limpar tudo]** para remover todos os filtros.
@@ -137,7 +139,7 @@ Para exportar a lista atual de logs de auditoria, selecione **[!UICONTROL Baixar
 
 >[!NOTE]
 >
->Os registros podem ser solicitados em intervalos de 90 dias até 365 dias retroativamente. No entanto, a quantidade máxima de logs que podem ser retornados durante uma única exportação é 10.000.
+>Os registros podem ser solicitados em intervalos de 90 dias até 365 dias retroativamente. No entanto, a quantidade máxima de logs que podem ser retornados durante uma única exportação é de 10.000 eventos de auditoria (principais ou aprimorados).
 
 ![Painel de Auditorias com o [!UICONTROL Log de download] realçado.](../../images/audit-logs/download.png)
 
@@ -167,7 +169,7 @@ Todas as ações que você pode executar na interface do usuário também podem 
 
 ## Gerenciamento de logs de auditoria para o Adobe Admin Console
 
-Para saber como gerenciar logs de auditoria para atividades no Adobe Admin Console, consulte o seguinte [documento](https://helpx.adobe.com/br/enterprise/using/audit-logs.html).
+Para saber como gerenciar logs de auditoria para atividades no Adobe Admin Console, consulte o seguinte [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Próximas etapas e recursos adicionais
 
@@ -175,4 +177,4 @@ Este guia abordou como gerenciar logs de auditoria no Experience Platform. Para 
 
 Para reforçar sua compreensão de logs de auditoria no Experience Platform, assista ao seguinte vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/344653?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

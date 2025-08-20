@@ -2,9 +2,9 @@
 title: Notas de versão de agosto de 2025 da Adobe Experience Platform
 description: As notas de versão de agosto de 2025 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: af669d58ac4031354e477954a8a733cf0bd7a64b
+source-git-commit: 6672ed3fd4ee4f48952dcf5ffb6561de026fe55b
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1448'
 ht-degree: 19%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 19%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 19 de agosto de 2025**
 
@@ -108,7 +108,8 @@ Para obter mais informações sobre o Serviço de Catálogo, leia a [visão gera
 
 | Recurso | Descrição |
 | --- | --- |
-| Recursos aprimorados de pesquisa, filtragem e marcação para destinos | Melhore seu fluxo de trabalho de gerenciamento de destino com recursos aprimorados de pesquisa, filtragem e marcação nas guias [Procurar](../../destinations/ui/destinations-workspace.md#browse) e [Contas](../../destinations/ui/destinations-workspace.md#accounts). Agora é possível pesquisar fluxos de dados e contas específicos por nome, filtrar por vários critérios, incluindo plataforma de destino, status e datas, e criar tags personalizadas para organizar seus destinos. A classificação de colunas também está disponível para campos principais, como último tempo de execução do fluxo de dados, facilitando a identificação e o gerenciamento das conexões de destino. |
+| Recursos aprimorados de pesquisa, filtragem e marcação para destinos | Melhore seu fluxo de trabalho de gerenciamento de destino com recursos aprimorados de pesquisa, filtragem e marcação nas guias [Procurar](../../destinations/ui/destinations-workspace.md#browse) e [Contas](../../destinations/ui/destinations-workspace.md#accounts). <br> Agora você pode pesquisar fluxos de dados e contas específicos por nome, filtrar por vários critérios, incluindo plataforma de destino, status e datas, e criar marcas personalizadas para organizar seus destinos. A classificação de colunas também está disponível para campos principais, como último tempo de execução do fluxo de dados, facilitando a identificação e o gerenciamento das conexões de destino. <br> ![Demonstração animada de pesquisa de um fluxo de dados de destino na guia Procurar](../../destinations/assets/ui/workspace/search.gif) |
+
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -157,7 +158,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Estimativas de público | As estimativas de público-alvo agora são geradas automaticamente no Construtor de segmentos. Esse valor será atualizado sempre que você modificar o público-alvo e sempre refletirá as regras de público-alvo mais recentes. Além disso, a estimativa agora será exibida como um **intervalo**, que se baseia no intervalo de confiança dos dados de amostragem. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Origens {#sources}
 
@@ -168,6 +169,6 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 | Recurso | Descrição |
 | --- | --- |
 | Suporte do [!BADGE Beta]{type=Informative} para [!DNL Azure Private Links] na interface | Agora você pode usar [!DNL Azure Private Links] para um grupo selecionado de fontes na interface. Use este recurso para criar um ponto de extremidade privado ao qual a fonte possa se conectar. Com endpoints privados, você pode configurar conexões e fluxos de dados que ignoram a Internet pública, proporcionando maior segurança e isolamento de rede para seus dados confidenciais. O suporte para [!DNL Azure Private Links] está disponível para as seguintes fontes: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Para obter mais informações, leia o guia em [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
-| Autenticação aprimorada para [!DNL Azure Blob Storage] | Agora você pode usar a autenticação baseada na entidade de serviço para conectar sua origem do [!DNL Azure Blob Storage] à Experience Platform. Use a autenticação baseada na entidade de serviço para segurança aprimorada, rotação de credenciais mais fácil e um controle de acesso mais granular para sua conta. Para obter mais informações, leia a visão geral[&#128279;](../../sources/connectors/cloud-storage/blob.md) do [!DNL Azure Blob Storage] . |
+| Autenticação aprimorada para [!DNL Azure Blob Storage] | Agora você pode usar a autenticação baseada na entidade de serviço para conectar sua origem do [!DNL Azure Blob Storage] à Experience Platform. Use a autenticação baseada na entidade de serviço para segurança aprimorada, rotação de credenciais mais fácil e um controle de acesso mais granular para sua conta. Para obter mais informações, leia a visão geral](../../sources/connectors/cloud-storage/blob.md) do [[!DNL Azure Blob Storage] . |
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).

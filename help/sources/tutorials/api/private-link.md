@@ -1,17 +1,16 @@
 ---
-title: Suporte a link privado em origens
+title: Usar o Link privado do Azure para origens na API
 description: Saiba como criar e usar links privados para Fontes do Adobe Experience Platform
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 4c91ffc60a2537fcc76ce935bf3b163984fdc5e4
+exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
+source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
 workflow-type: tm+mt
-source-wordcount: '1326'
-ht-degree: 6%
+source-wordcount: '1380'
+ht-degree: 5%
 
 ---
 
-# Suporte a link privado em origens
+# Usar [!DNL Azure Private Link] para fontes na API
 
 >[!AVAILABILITY]
 >
@@ -22,11 +21,13 @@ ht-degree: 6%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Leia este guia para saber como estabelecer uma conexão de ponto de extremidade privado com fontes baseadas no Azure por meio de um link privado e permitir um mecanismo de transferência mais seguro para seus dados.
+Você pode usar o recurso [!DNL Azure Private Link] para criar pontos de extremidade privados para que suas fontes da Adobe Experience Platform se conectem. Conecte com segurança suas fontes a uma rede virtual usando endereços IP privados, eliminando a necessidade de IPs públicos e reduzindo a superfície de ataque.Simplifique a configuração da rede removendo a necessidade de configurações complexas de firewall ou tradução de endereço de rede, garantindo que o tráfego de dados atinja apenas os serviços aprovados.
+
+Leia este guia para saber como você pode usar APIs para criar e usar um terminal privado.
 
 ## Introdução
 
-Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
 * [Fontes](../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
 * [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.

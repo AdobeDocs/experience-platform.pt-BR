@@ -2,7 +2,7 @@
 title: Uso e capacidade da licença
 description: Saiba mais sobre o uso de sua licença e os limites de capacidade no Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
+source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
 workflow-type: tm+mt
 source-wordcount: '1537'
 ht-degree: 6%

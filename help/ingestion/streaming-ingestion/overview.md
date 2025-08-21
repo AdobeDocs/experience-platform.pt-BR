@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da assimilação de fluxo
 description: A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
 workflow-type: tm+mt
-source-wordcount: '424'
-ht-degree: 2%
+source-wordcount: '419'
+ht-degree: 3%
 
 ---
 
@@ -21,7 +21,7 @@ O Adobe Experience Platform permite gerar experiências coordenadas, consistente
 
 O vídeo a seguir foi projetado para ajudar a entender a assimilação de streaming e descreve os conceitos acima.
 
->[!VIDEO](https://video.tv.adobe.com/v/31683?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Registros de perfil de fluxo e [!DNL ExperienceEvents]
 
@@ -39,7 +39,7 @@ Para obter mais informações sobre como habilitar um conjunto de dados para [!D
 
 >[!IMPORTANT]
 >
->As garantias para a assimilação por transmissão são calculadas no nível da organização, e não no nível da sandbox. Isso significa que o uso de dados por sandbox está vinculado ao direito de uso total de licença que corresponde a toda a organização. Além disso, o uso de dados em sandboxes de desenvolvimento é limitado a 10% do total de perfis. Para obter mais informações sobre direitos de uso de licença, leia o [guia de práticas recomendadas de gerenciamento de dados](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>As garantias para assimilação por transmissão estão vinculadas ao direito de uso total de licença que corresponde a toda a organização. Além disso, o uso de dados em sandboxes de desenvolvimento é limitado a 10% do total de perfis. Para obter mais informações sobre direitos de uso de licença, leia o [guia de práticas recomendadas de gerenciamento de dados](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Para saber como definir limites para sua taxa de transferência de streaming, leia a [Visão geral da capacidade](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Destino | Latência esperada |
 | --------- | ---------------- |

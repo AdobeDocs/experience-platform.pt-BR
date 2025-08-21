@@ -2,9 +2,10 @@
 title: Acxiom Real ID&trade; Audience Connection
 description: Use o  [!DNL Acxiom Real ID&trade; Audience Connection] destino para aprimorar públicos-alvo com a  [!DNL Acxiom's Real ID] tecnologia e ativar públicos-alvo para várias plataformas, como  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
 badge: label="Beta" type="Informative"
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
+source-git-commit: 1013487e2c38aeb1e2b0388f0c317afdcf02ba62
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '939'
 ht-degree: 3%
 
 ---
@@ -34,7 +35,7 @@ Por exemplo, o departamento de Operações de marketing de uma marca global de s
 
 * **Confirmar Termos de Uso:** Antes de configurar um novo destino do [!DNL Acxiom Real ID Audience Connection], você deve ler e assinar o Contrato de Termos de Uso do [!DNL Acxiom's]. Você receberá o link para o contrato assim que a ordem de venda executada for concluída. Até que você assine o contrato, você não verá o cartão de destino [!DNL Acxiom Real ID Audience Connection] no catálogo de destino do Experience Platform. Depois que você aceitar e assinar o contrato, o [!DNL Adobe] concluirá o processo de integração e você verá o cartão de destino [!DNL Acxiom Real ID Audience Connection].
 * **Conhece sua ID da organização da Adobe:** Sua ID da organização [!DNL Adobe] é necessária para concluir seus Termos de Contrato do Usuário. Consulte o tópico [!DNL Adobe's] *Organizações na Experience Cloud* para obter detalhes sobre como [exibir a ID da sua organização](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Obter licença para o produto [!DNL Acxiom's Real ID]:** depois que a licença for obtida, disponibilize a Real ID da Acxiom no Real-Time CDP. Consulte [Acxiom Data Enhancement](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) para obter mais informações.
+* **Obter licença para o produto [!DNL Acxiom's Real ID]:** depois que a licença for obtida, disponibilize a Real ID da Acxiom no Real-Time CDP. Consulte [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) para obter mais informações.
 
 
 ## Identidades suportadas {#supported-identities}
@@ -53,7 +54,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------------|----------------|----------------|
 | Serviço de segmentação | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home) da Experience Platform. |
-| Uploads personalizados | ✓ | Públicos [importados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/ui/audience-portal#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | ✓ | Públicos [importados](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#import-audience) para o Experience Platform de arquivos CSV. |
 
 
 ## Destinos compatíveis {#supported-destinations}
@@ -88,11 +89,13 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
->
->* Para ativar dados, você precisa de **Exibir Destinos**, **Ativar Destinos**, **Exibir Perfis** e **Exibir Segmentos** ![permissões de controle de acesso](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home#permissions). Leia a ![visão geral do controle de acesso](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/ui/overview) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar identidades, você precisa da **Exibir Gráfico de Identidade** ![permissão de controle de acesso](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home#permissions).
+> 
+>* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-Leia ![Ativar dados de público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obter instruções sobre como ativar públicos-alvo para esse destino.
+
+
+Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 >[!NOTE]
 >
@@ -129,7 +132,7 @@ Se você estiver satisfeito com os resultados, selecione **[!UICONTROL Concluir]
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/data-governance/home).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Solução de problemas {#troubleshooting}
 
@@ -145,9 +148,3 @@ Será necessário fornecer as seguintes informações ao representante do [!DNL 
 ## Próximas etapas {#next-steps}
 
 Ao seguir este tutorial, você ativou com êxito um público-alvo para a plataforma de destino selecionada. Em seguida, entre em contato com o representante da plataforma de destino para começar a configurar o Campaign.
-
-
-
-
-
-

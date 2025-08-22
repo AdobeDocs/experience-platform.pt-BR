@@ -95,7 +95,7 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do Market
 >* As duas limitações chamadas no vídeo não se aplicam mais. Agora é possível mapear vários outros campos de atributo de perfil, além das informações de associação de público-alvo aceitas no momento em que o vídeo foi gravado. Você também pode exportar membros do público-alvo para o Marketo que ainda não existem nas listas estáticas do Marketo e eles serão adicionados às listas.
 >* Na **[!UICONTROL etapa Agendar público-alvo]** do fluxo de trabalho de ativação, no Marketo V1, foi necessário adicionar manualmente uma **[!UICONTROL ID de Mapeamento]** para exportar dados com êxito para o Marketo. Esta etapa manual não é mais necessária no Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3440163?quality=12&captions=por_br)
 
 ## Monitorar destino {#monitor-destination}
 

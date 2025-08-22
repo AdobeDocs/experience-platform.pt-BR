@@ -45,7 +45,7 @@ Eles podem ativar seus públicos no Marketo Engage e usar o tipo de sincronizaç
 
 ## Pré-requisitos {#prerequisites}
 
-O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) em sua instância e partição do Marketo.
+O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) em sua instância e partição do Marketo.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -144,7 +144,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
    * **[!UICONTROL Somente perfil]**: selecione esta opção quando quiser manter os perfis de clientes potenciais da Marketo atualizados com as informações mais recentes da Experience Platform.
    * **[!UICONTROL Somente público-alvo]**: selecione esta opção quando quiser adicionar membros do público-alvo às listas do Marketo sem atualizar suas informações de perfil.
 * **[!UICONTROL Partição]**: *A seleção de partição está disponível somente ao escolher **[!UICONTROL Somente perfil]**&#x200B;ou **[!UICONTROL Tipos de sincronização de Público-alvo e perfil]***. Selecione uma ID de partição do Marketo associada ao espaço de trabalho escolhido. Isso permite especificar qual partição de cliente potencial no Marketo receberá os dados exportados. Se você não escolher uma partição específica, seus dados serão enviados para a partição **[!UICONTROL Padrão]** no Marketo.
-* **[!UICONTROL Campo de eliminação de duplicação do Marketo]**: selecione o campo de eliminação de duplicação do Marketo que deseja usar ao atualizar clientes potenciais existentes no Marketo. Este seletor mostra os campos marcados como campos de desduplicação no Marketo. Se quiser que um campo específico do Marketo seja exibido como um campo de desduplicação, você deve marcar o campo como um [campo pesquisável](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) no Marketo.
+* **[!UICONTROL Campo de eliminação de duplicação do Marketo]**: selecione o campo de eliminação de duplicação do Marketo que deseja usar ao atualizar clientes potenciais existentes no Marketo. Este seletor mostra os campos marcados como campos de desduplicação no Marketo. Se quiser que um campo específico do Marketo seja exibido como um campo de desduplicação, você deve marcar o campo como um [campo pesquisável](https://experienceleague.adobe.com/pt-br/docs/marketo-developer/marketo/rest/lead-database/lead-database) no Marketo.
 
   >[!NOTE]
   >

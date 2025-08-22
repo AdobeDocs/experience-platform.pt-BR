@@ -78,7 +78,7 @@ Se sua empresa tiver acesso a várias organizações, certifique-se de usar a me
 
 >[!IMPORTANT]
 >
->O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
+>O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
 
 ![Conectar ao Destino](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -89,7 +89,7 @@ Se sua empresa tiver acesso a várias organizações, certifique-se de usar a me
 * **[!UICONTROL Primeiro campo pesquisável]**: campo no qual desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. O padrão é email
 * **[!UICONTROL Primeiro campo pesquisável]**: um campo secundário para desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. Opcional
 
-Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
+Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
 
 >[!IMPORTANT]
 > 

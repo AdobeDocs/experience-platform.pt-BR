@@ -3,9 +3,9 @@ keywords: plataforma;destinos;destinos espaço de trabalho;espaço de trabalho;u
 title: Espaço de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em cinco seções: Visão geral, Catálogo, Procurar, Contas e Exibição de sistema. Eles são descritos nas seções abaixo.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 73d84174a9960e180a81c3db938f3f18f68f3beb
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
-source-wordcount: '2235'
+source-wordcount: '2240'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Os destinos com a opção de alternância **[!UICONTROL Habilitado/Desabilitado]
 > ![Guia Procurar](../assets/ui/workspace/browse-tab.png)
 > 
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Ativar públicos-alvo](/help/images/icons/data-add.png) **[!UICONTROL Ativar públicos-alvo]** para exportar públicos-alvo ou conjuntos de dados para esse destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino &#x200B;]**&#x200B;para editar conexões de destino existentes. Leia o tutorial sobre [edição de destinos](/help/destinations/ui/edit-destination.md) para obter mais informações.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino ]**para editar conexões de destino existentes. Leia o tutorial sobre [edição de destinos](/help/destinations/ui/edit-destination.md) para obter mais informações.
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar ações de marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Editar ações de marketing]** para [alterar as ações de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) para o destino selecionado.
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Excluir](/help/images/icons/delete.png) **[!UICONTROL Excluir]** para [remover](delete-destinations.md) uma conexão existente com um destino.
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Exibir no controle de monitoramento](/help/images/icons/monitoring.png) **[!UICONTROL Exibir no monitoramento]** para exibir informações de ativação para este destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
@@ -128,7 +128,6 @@ Use a barra de pesquisa na parte superior da tabela para localizar rapidamente o
 Use os filtros na barra lateral esquerda para restringir sua pesquisa.
 
 ![Filtros de destino na guia Procurar](../assets/ui/workspace/destination-filters.png)
-
 
 * **[!UICONTROL Plataforma de destino]**: filtre fluxos de dados por plataformas de destino específicas (por exemplo, [!DNL Amazon S3], [!DNL Facebook Custom Audience], [!DNL LinkedIn Matched Audience] etc.). Você pode selecionar várias plataformas simultaneamente.
 * **[!UICONTROL Tem qualquer marca]**: filtre fluxos de dados que tenham marcas específicas atribuídas a eles. Isso ajuda a organizar e encontrar fluxos de dados com base em sua marcação personalizada.
@@ -183,9 +182,9 @@ A guia **[!UICONTROL Contas]** mostra detalhes sobre as conexões estabelecidas 
 
 >[!TIP]
 >
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Ativate](/help/images/icons/data-add.png)**[!UICONTROL Ativate &#x200B;]**/**[!UICONTROL &#x200B; Ativate audiences &#x200B;]**/**[!UICONTROL &#x200B; Export datasets &#x200B;]**&#x200B;para exportar audiences ou conjuntos de dados para esse destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Editar detalhes](/help/images/icons/edit.png)**[!UICONTROL Editar detalhes &#x200B;]**&#x200B;para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Excluir](/help/images/icons/delete.png)**[!UICONTROL Excluir &#x200B;]**&#x200B;para [excluir](delete-destination-account.md) uma conta de destino existente.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Ativate](/help/images/icons/data-add.png)**[!UICONTROL Ativate ]**/**[!UICONTROL  Ativate audiences ]**/**[!UICONTROL  Export datasets ]**para exportar audiences ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Editar detalhes](/help/images/icons/edit.png)**[!UICONTROL Editar detalhes ]**para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Excluir](/help/images/icons/delete.png)**[!UICONTROL Excluir ]**para [excluir](delete-destination-account.md) uma conta de destino existente.
 
 ![Guia Contas](../assets/ui/workspace/accounts-tab.png)
 
@@ -197,7 +196,7 @@ A guia **[!UICONTROL Contas]** mostra detalhes sobre as conexões estabelecidas 
 | [!UICONTROL Nome de usuário] | O nome de usuário selecionado no [fluxo de trabalho de destino de conexão](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Conexões] | Representa o número de fluxos de dados de destino exclusivos bem-sucedidos conectados às informações básicas criadas para um destino. |
 | [!UICONTROL Data de autorização] | A data em que a conexão com esse destino foi autorizada. |
-| [!UICONTROL Data de vencimento] | A data em que a autorização de conexão com este destino expirará. <br>**Importante**: esta coluna está disponível no momento somente para a conexão [Facebook](../catalog/social/facebook.md). |
+| [!UICONTROL Data de vencimento] | A data em que a autorização de conexão com este destino expirará. <br>**Importante**: esta coluna está disponível no momento apenas para as conexões do [Facebook](../catalog/social/facebook.md), [LinkedIn](../catalog/social/linkedin.md) e [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). |
 
 {style="table-layout:auto"}
 

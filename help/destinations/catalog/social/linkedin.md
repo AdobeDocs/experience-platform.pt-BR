@@ -3,10 +3,10 @@ keywords: conexão linkedin;conexão linkedin;destinos linkedin;linkedin;
 title: Conexão de públicos correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
-source-wordcount: '1201'
-ht-degree: 4%
+source-wordcount: '1220'
+ht-degree: 3%
 
 ---
 
@@ -88,7 +88,7 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 >[!NOTE]
 >
 >O hash automático de dados de namespaces sem hash é criado por [!DNL Experience Platform] após a ativação.
-> Os dados de origem do atributo não são automaticamente transformados em hash.
+>> Os dados de origem do atributo não são automaticamente transformados em hash.
 > 
 > Durante a etapa [Mapeamento de Identidade](../../ui/activate-segment-streaming-destinations.md#mapping), quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
 > 
@@ -121,7 +121,9 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL 
 
 ### Atualizar credenciais de autenticação {#refresh-authentication-credentials}
 
-Os tokens do LinkedIn expiram a cada 60 dias. Quando o token expira, as exportações de dados para o destino param de funcionar. Para evitar essa situação, autentique novamente executando as seguintes etapas:
+Os tokens do LinkedIn expiram a cada 60 dias. É possível monitorar as datas de expiração do token a partir da coluna **[!UICONTROL Data de expiração da conta]** nas guias **[[!UICONTROL Contas]](../../ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Procurar]](../../ui/destinations-workspace.md#browse)**.
+
+Quando o token expira, as exportações de dados para o destino param de funcionar. Para evitar essa situação, autentique novamente executando as seguintes etapas:
 
 1. Navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Contas]**
 2. (Opcional) Use os filtros disponíveis na página para exibir somente contas do LinkedIn.

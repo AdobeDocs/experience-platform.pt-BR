@@ -3,7 +3,7 @@ keywords: conexão do facebook;conexão do facebook;destinos do facebook;instagr
 title: Conexão com o Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 6ca3687d067044c3fcb9455ec287863c4ffaafd2
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
 source-wordcount: '2690'
 ht-degree: 5%
@@ -84,7 +84,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 Antes de enviar seus públicos-alvo para o [!DNL Facebook], verifique se você atende aos seguintes requisitos:
 
 * Sua conta de usuário do [!DNL Facebook] deve ter acesso total ao [!DNL Facebook Business Account], proprietário da conta de Anúncio que você está usando.
-* A permissão **[!DNL Manage campaigns]** da conta de usuário [!DNL Facebook] deve estar habilitada para a conta de Anúncio que você pretende usar.
+* A permissão [!DNL Facebook] da conta de usuário **[!DNL Manage campaigns]** deve estar habilitada para a conta de Anúncio que você pretende usar.
 * A conta comercial **Adobe Experience Cloud** deve ser adicionada como um parceiro de publicidade em seu [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
 
   >[!IMPORTANT]
@@ -138,8 +138,8 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 >[!NOTE]
 >
 >O hash automático de dados de namespaces sem hash é criado por [!DNL Experience Platform] após a ativação.
->&#x200B;> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
->&#x200B;> A opção **[!UICONTROL Aplicar transformação]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
+>> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
+>> A opção **[!UICONTROL Aplicar transformação]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
 
 ![Aplicar controle de transformação realçado na etapa de mapeamento.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -174,7 +174,7 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL 
 
 Os tokens de autenticação do Facebook expiram a cada 60 dias. Quando o token expira, as exportações de dados para o destino param de funcionar.
 
-É possível monitorar as datas de expiração do token a partir da coluna **[!UICONTROL Data de expiração da conta]** nas guias **[!UICONTROL Contas]** ou **[!UICONTROL Procurar]**.
+É possível monitorar as datas de expiração do token a partir da coluna **[!UICONTROL Data de expiração da conta]** nas guias **[[!UICONTROL Contas]](../../ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Procurar]](../../ui/destinations-workspace.md#browse)**.
 
 ![Coluna de data de expiração do token da conta do Facebook na guia Procurar](../../assets/catalog/social/facebook/account-expiration-browse.png)
 

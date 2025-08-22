@@ -2,10 +2,10 @@
 title: Notas de versão de agosto de 2025 da Adobe Experience Platform
 description: As notas de versão de agosto de 2025 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cb32846bcbd917f267cba587b60dc323f6bc7d96
+source-git-commit: d2b605925a8fd7ea06f198ba8a9f85747a2e585b
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 19%
+source-wordcount: '1643'
+ht-degree: 17%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 19%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 19 de agosto de 2025**
 
@@ -97,12 +97,14 @@ Para obter mais informações sobre o Serviço de Catálogo, leia a [visão gera
 | Destino | Descrição |
 | --- | --- |
 | [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) destino | Use o destino [!DNL Acxiom Real ID Audience Connection] para aprimorar públicos com a tecnologia [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/) e ativar públicos para várias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais. |
+| Destino [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) aprimorado | O destino [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) aprimorado é uma versão atualizada do conector [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) existente. Esse novo conector traz recursos de sincronização de perfil, além dos recursos de sincronização de público existentes do conector herdado, fornecendo uma integração mais estreita com o [!DNL Marketo Engage]. <br> O conector [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) será substituído em **março de 2026**. Para garantir uma transição suave para o novo destino do **[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)**, analise os seguintes pontos principais e ações necessárias: <ul><li>Todos os usuários do **[!UICONTROL (Herdado) (V2) Marketo Engage]** existente devem migrar para o novo destino do **[!UICONTROL Marketo Engage]** até março de 2026.</li><li> **Os fluxos de dados existentes não serão migrados automaticamente.** Você deve [configurar uma nova conexão](../../destinations/ui/connect-destination.md) com o novo destino **[!UICONTROL Marketo Engage]** e ativar seus públicos lá.</li></ul> |
 
 **Destinos atualizados**
 
 | Destino | Descrição |
 | --- | --- |
 | Atualização interna de [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) | A partir de 11 de agosto de 2025, por um curto período, você pode ter visto dois cartões **[!DNL Microsoft Bing]** lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. O conector de destino **[!DNL Microsoft Bing]** existente foi renomeado para **[!UICONTROL (obsoleto) Microsoft Bing]** e um novo cartão com o nome **[!UICONTROL Microsoft Bing]** está disponível para você. <br> A atualização foi concluída e o cartão obsoleto foi removido do catálogo de destino. Use a conexão **[!UICONTROL Microsoft Bing]** no catálogo para novos fluxos de dados de ativação. Se você tiver fluxos de dados ativos para o destino **[!UICONTROL (obsoleto) do Microsoft Bing]**, eles serão atualizados automaticamente, portanto, nenhuma ação é necessária. <br><br>Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores:<ul><li>ID da especificação de fluxo: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>ID de especificação da conexão: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Após esta atualização, você pode enfrentar uma **queda no número de perfis ativados** em seus fluxos de dados para [!DNL Microsoft Bing]. Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. |
+| Detalhes de expiração da autenticação para destinos [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) e [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md) | As informações de expiração da autenticação para destinos [!DNL LinkedIn] agora estão visíveis diretamente na interface do Experience Platform, para que você possa ver quando sua autenticação expirará e a renovará antes de causar interrupções em seus fluxos de dados. É possível monitorar as datas de expiração do token a partir da coluna **[!UICONTROL Data de expiração da conta]** nas guias **[[!UICONTROL Contas]](../../destinations/ui/destinations-workspace.md#accounts)** ou **[[!UICONTROL Procurar]](../../destinations/ui/destinations-workspace.md#browse)**. |
 
 **Funcionalidade nova ou atualizada**
 
@@ -158,7 +160,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Estimativas de público | As estimativas de público-alvo agora são geradas automaticamente no Construtor de segmentos. Esse valor será atualizado sempre que você modificar o público-alvo e sempre refletirá as regras de público-alvo mais recentes. Além disso, a estimativa agora será exibida como um **intervalo**, que se baseia no intervalo de confiança dos dados de amostragem. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Origens {#sources}
 
@@ -169,6 +171,6 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 | Recurso | Descrição |
 | --- | --- |
 | Suporte do [!BADGE Beta]{type=Informative} para [!DNL Azure Private Links] na interface | Agora você pode usar [!DNL Azure Private Links] para um grupo selecionado de fontes na interface. Use este recurso para criar um ponto de extremidade privado ao qual a fonte possa se conectar. Com endpoints privados, você pode configurar conexões e fluxos de dados que ignoram a Internet pública, proporcionando maior segurança e isolamento de rede para seus dados confidenciais. O suporte para [!DNL Azure Private Links] está disponível para as seguintes fontes: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Para obter mais informações, leia o guia em [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
-| Autenticação aprimorada para [!DNL Azure Blob Storage] | Agora você pode usar a autenticação baseada na entidade de serviço para conectar sua origem do [!DNL Azure Blob Storage] à Experience Platform. Use a autenticação baseada na entidade de serviço para segurança aprimorada, rotação de credenciais mais fácil e um controle de acesso mais granular para sua conta. Para obter mais informações, leia a visão geral[&#128279;](../../sources/connectors/cloud-storage/blob.md) do [!DNL Azure Blob Storage] . |
+| Autenticação aprimorada para [!DNL Azure Blob Storage] | Agora você pode usar a autenticação baseada na entidade de serviço para conectar sua origem do [!DNL Azure Blob Storage] à Experience Platform. Use a autenticação baseada na entidade de serviço para segurança aprimorada, rotação de credenciais mais fácil e um controle de acesso mais granular para sua conta. Para obter mais informações, leia a visão geral](../../sources/connectors/cloud-storage/blob.md) do [[!DNL Azure Blob Storage] . |
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).

@@ -3,9 +3,9 @@ keywords: etiquetas do dirigível;destino do dirigível
 title: Conexão com as Tags do Aeróstato
 description: Transmita continuamente os dados do público-alvo da Adobe para o Airship como tags de público-alvo para direcionamento no Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '1082'
 ht-degree: 2%
 
 ---
@@ -13,6 +13,14 @@ ht-degree: 2%
 # [!DNL Airship Tags] conexão {#airship-tags-destination}
 
 ## Visão geral
+
+>[!IMPORTANT]
+>
+>* A partir de 21 de agosto de 2025, você poderá ver dois cartões **[!DNL Airship Tags]** lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. O conector de destino **[!DNL Airship Tags]** existente foi renomeado para **[!UICONTROL (Obsoleto) Etiquetas de Dirigível]** e uma nova placa com o nome **[!UICONTROL Etiquetas de Dirigível]** está disponível para você.
+>* Use a nova conexão **[!UICONTROL Tags de Dirigível]** no catálogo para novos fluxos de dados de ativação. Se você tiver fluxos de dados ativos para o destino **[!UICONTROL (Obsoleto) Tags de dirigível]**, eles serão atualizados automaticamente, portanto, nenhuma ação é necessária.
+>* Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores:
+>   * ID da especificação de fluxo: `0c7e71c8-4d60-4685-a216-77f57e37b04a`
+>   * ID de especificação da conexão: `aec13e22-8226-4b5d-9961-6baa35b251d2`
 
 O [!DNL Airship] é a principal plataforma de engajamento do cliente, ajudando você a fornecer mensagens omnicanais relevantes e personalizadas aos seus usuários em cada estágio do ciclo de vida do cliente.
 

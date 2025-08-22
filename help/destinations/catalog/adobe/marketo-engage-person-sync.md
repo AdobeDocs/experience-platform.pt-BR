@@ -1,25 +1,35 @@
 ---
-title: Sincronização de pessoa Marketo Engage
+title: Sincronização de pessoas do Marketo Engage
 description: Use o conector de sincronização de pessoas do Marketo Engage para transmitir atualizações do público-alvo de uma pessoa para os registros correspondentes no seu Marketo Engage.
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
+exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
+source-git-commit: 88864353d4872d62258914d6490b90331692fa96
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1124'
 ht-degree: 3%
 
 ---
 
-
-# Conexão de Sincronização de Pessoas com o Marketo Engage {#marketo-engage-person-sync}
+# Conexão de Sincronização da Pessoa do Marketo Engage {#marketo-engage-person-sync}
 
 >[!IMPORTANT]
 >
 >Este conector de destino está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso, entre em contato com o representante da Adobe.
 
+>[!IMPORTANT]
+>
+>O cartão de destino da **[!UICONTROL Sincronização de pessoa do Marketo Engage]** será descontinuado em **março de 2026**.
+>
+>Para garantir uma transição suave para o novo destino do **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, analise os seguintes pontos principais e ações necessárias:
+>
+>* Todos os usuários dos destinos **[!UICONTROL Sincronização de pessoa do Marketo Engage]** devem migrar para o novo destino **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** até março de 2026.
+>* **Os fluxos de dados existentes não serão migrados automaticamente.** Você deve [configurar uma nova conexão](marketo-engage-connection.md#connect-to-the-destination) com o novo destino **[!UICONTROL Marketo Engage]** e ativar seus públicos lá.
+
+
 ## Visão geral {#overview}
 
-Use o conector de sincronização de pessoas do Marketo Engage para transmitir atualizações dos públicos-alvo de pessoas para os registros correspondentes na instância do Marketo Engage.
+Use o conector de sincronização de pessoas do Marketo Engage para transmitir atualizações dos públicos-alvo de pessoas para os registros correspondentes na sua instância do Marketo Engage.
 
 >[!IMPORTANT]
 > 
@@ -45,7 +55,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Serviço de segmentação | ✓ | Públicos gerados por meio do [Serviço de segmentação](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home) do Experience Platform. |
+| Serviço de segmentação | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home) da Experience Platform. |
 | Uploads personalizados | ✓ | Públicos importados para o Experience Platform de arquivos CSV. |
 
 ## Tipo e frequência de exportação {#export-type-and-frequency}
@@ -54,7 +64,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 | ---------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Frequência de exportação | Transmissão | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | Transmissão | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -64,22 +74,22 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 >
 >* Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 
-Se sua empresa tiver acesso a várias organizações, certifique-se de usar a mesma organização no Marketo Engage e no Real-Time CDP, onde você está configurando o conector de destino para o Marketo.  Se você já tiver configurado um destino, poderá selecionar uma conta existente do Marketo para usar com sua nova configuração.  Caso contrário, clique no prompt Conector para destino, que permitirá definir o nome, a descrição e a Marketo Munchkin ID do destino desejado.  A Munchkin ID da sua instância do Marketo pode ser encontrada no menu Admin->Munchkin.
+Se sua empresa tiver acesso a várias organizações, certifique-se de usar a mesma organização na Marketo Engage e no Real-Time CDP, onde você está configurando o conector de destino para o Marketo.  Se você já tiver configurado um destino, poderá selecionar uma conta existente do Marketo para usar com sua nova configuração.  Caso contrário, clique no prompt Conector para destino, que permitirá definir o nome, a descrição e a Marketo Munchkin ID do destino desejado.  A Munchkin ID da sua instância do Marketo pode ser encontrada no menu Admin->Munchkin.
 
 >[!IMPORTANT]
 >
->O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
+>O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
 
 ![Conectar ao Destino](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
 * **[!UICONTROL Munchkin ID]**: a Munchkin ID é o identificador exclusivo de uma instância específica do Marketo.
-* **[!UICONTROL Partição]**: um conceito em Marketo Engage usado para separar registros de cliente potencial por preocupação comercial
+* **[!UICONTROL Partição]**: um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial
 * **[!UICONTROL Primeiro campo pesquisável]**: campo no qual desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. O padrão é email
 * **[!UICONTROL Primeiro campo pesquisável]**: um campo secundário para desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. Opcional
 
-Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito em Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
+Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
 
 >[!IMPORTANT]
 > 
@@ -90,7 +100,7 @@ Depois de selecionar a instância, também será necessário selecionar a Parti�
 Ao enviar atualizações para o envolvimento do Marketo, os registros são selecionados com base na partição selecionada e em um ou dois campos selecionados pelo usuário. Se o destino estiver configurado com a partição da América do Norte e tiver Endereço de email e Nome da empresa configurados como campos de desduplicação, todos os três campos deverão corresponder para aplicar alterações a um registro existente. Por exemplo:
 
 * O destino está configurado com a partição da América do Norte
-* Pessoa com Email <test@example.com> e Nome da empresa Example Inc. em Experience Platform corresponde ao público de destino
+* Pessoa com Email <test@example.com> e Nome da empresa Example Inc. no Experience Platform corresponde ao público de destino
 * A menos que um registro com esses valores já exista na partição da América do Norte no Marketo, um novo registro de cliente potencial será criado
 
 Se nenhum registro de cliente potencial correspondente for encontrado, um novo registro será criado.
@@ -115,9 +125,9 @@ Para que as alterações em um atributo de pessoa específico sejam enviadas par
 
 ![Mapeamento de campos](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
 
-Os tipos de dados Experience Platform e Marketo podem ser mapeados das seguintes maneiras:
+Os tipos de dados do Experience Platform e do Marketo podem ser mapeados das seguintes maneiras:
 
-| Tipo de dados Experience Platform | Tipo de dados do Marketo |
+| Tipo de dados do Experience Platform | Tipo de dados do Marketo |
 | ----------------------------- | ------------------------------------ |
 | String | String, Área De Texto, Url, Telefone, Email |
 | Enumeração | String |
@@ -128,10 +138,10 @@ Os tipos de dados Experience Platform e Marketo podem ser mapeados das seguintes
 | Longo | Ponto flutuante |
 | Duplo | Moeda, Flutuante, Porcentagem |
 | Booleano | Booleano |
-| Matriz | Não suportado |
-| Objeto | Não suportado |
-| Mapa | Não suportado |
-| Byte | Não suportado |
+| Matriz | Incompatível |
+| Objeto | Incompatível |
+| Mapa | Incompatível |
+| Byte | Incompatível |
 
 {style="table-layout:auto"}
 

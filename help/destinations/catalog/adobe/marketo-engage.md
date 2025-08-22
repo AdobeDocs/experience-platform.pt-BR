@@ -1,23 +1,25 @@
 ---
 title: Destino do Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análises e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais de CRM e do envolvimento do cliente para o marketing baseado em conta e a atribuição de receita.
-exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c57a519b5a230dc62699808cf5c020d48cc79083
+source-git-commit: 47d808b4dd1736f3444ddb479c3a460c289d09f8
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '949'
 ht-degree: 1%
 
 ---
 
-# Destino do Marketo Engage {#beta-marketo-engage-destination}
+# (Herdado) (V2) Destino do Marketo Engage {#beta-marketo-engage-destination}
 
 ## Log de alterações de destino {#changelog}
 
 >[!IMPORTANT]
 >
->Com o lançamento do [conector de destino aprimorado do Marketo V2](/help/release-notes/2022/july-2022.md#destinations), agora você está vendo duas placas Marketo no catálogo de destinos.
->* Se você já estiver ativando dados para o destino do **[!UICONTROL Marketo V1]**: crie novos fluxos de dados para o destino do **[!UICONTROL Marketo V2]** e exclua os fluxos de dados existentes para o destino do **[!UICONTROL Marketo V1]** até fevereiro de 2023. A partir dessa data, o cartão de destino do **[!UICONTROL Marketo V1]** será removido.
->* Se você ainda não criou nenhum fluxo de dados para o destino do **[!UICONTROL Marketo V1]**, use o novo cartão do **[!UICONTROL Marketo V2]** para se conectar e exportar dados para o Marketo.
+>O **[!UICONTROL (Herdado) (V2) Marketo Engage]** será descontinuado em **março de 2026**.
+>
+>Para garantir uma transição suave para o novo destino do **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, analise os seguintes pontos principais e ações necessárias:
+>
+>* Todos os usuários do **[!UICONTROL (Herdado) (V2) Marketo Engage]** existente devem migrar para o novo destino do **[!UICONTROL Marketo Engage]** até março de 2026.
+>* **Os fluxos de dados existentes não serão migrados automaticamente.** Você deve [configurar uma nova conexão](../../ui/connect-destination.md) com o novo destino **[!UICONTROL Marketo Engage]** e ativar seus públicos lá.
 
 ![Imagem dos dois cartões de destino do Marketo em uma exibição lado a lado.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
@@ -80,7 +82,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 >* Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 >* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para obter instruções detalhadas sobre como configurar o destino e ativar públicos, leia [Enviar um público-alvo da Adobe Experience Platform para uma lista estática do Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=pt-BR) na documentação do Marketo.
+Para obter instruções detalhadas sobre como configurar o destino e ativar públicos, leia [Enviar um público-alvo da Adobe Experience Platform para uma lista estática do Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) na documentação do Marketo.
 
 O vídeo abaixo também demonstra as etapas para configurar um destino do Marketo e ativar públicos-alvo.
 
@@ -93,7 +95,7 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do Market
 >* As duas limitações chamadas no vídeo não se aplicam mais. Agora é possível mapear vários outros campos de atributo de perfil, além das informações de associação de público-alvo aceitas no momento em que o vídeo foi gravado. Você também pode exportar membros do público-alvo para o Marketo que ainda não existem nas listas estáticas do Marketo e eles serão adicionados às listas.
 >* Na **[!UICONTROL etapa Agendar público-alvo]** do fluxo de trabalho de ativação, no Marketo V1, foi necessário adicionar manualmente uma **[!UICONTROL ID de Mapeamento]** para exportar dados com êxito para o Marketo. Esta etapa manual não é mais necessária no Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440163?quality=12&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Monitorar destino {#monitor-destination}
 
@@ -104,4 +106,3 @@ As informações de monitoramento da conexão [!DNL Marketo Engage] incluem info
 ## Uso e governança de dados {#data-usage-governance}
 
 Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] impõe a governança de dados, consulte a [visão geral da governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=pt-BR).
-

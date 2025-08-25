@@ -422,7 +422,7 @@ Depois de configurar seu destino usando os pontos de extremidade de configuraç�
 Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar públicos-alvo, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
 
 * [Criar um público-alvo: página de documentação](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Criar um público-alvo - apresentação em vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
+* [Criar um público-alvo - apresentação em vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR)
 
 ## Etapa 6: publicar seu destino {#publish-destination}
 

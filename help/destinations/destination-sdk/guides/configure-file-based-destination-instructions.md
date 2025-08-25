@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino baseado em arquivo usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino baseado em arquivo
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '745'
 ht-degree: 1%
 
 ---
@@ -413,8 +413,7 @@ Se você especificar `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `"auth
    * [Autenticação SFTP com chave SSH](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [Autenticação SFTP com senha](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Se você selecionou `"authenticationRule": "PLATFORM_AUTHENTICATION"`, consulte a [documentação da API de configuração de credencial](../credentials-api/create-credential-configuration.md#when-to-use).
-
+* Se você selecionou `"authenticationRule": "PLATFORM_AUTHENTICATION"`, deve criar uma [configuração de credenciais](../credentials-api/create-credential-configuration.md) e passar a ID do objeto de credencial no parâmetro `authenticationId` na configuração de [entrega de destino](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 ## Etapa 5: testar o destino {#test-destination}
 
@@ -423,7 +422,7 @@ Depois de configurar seu destino usando os pontos de extremidade de configuraç�
 Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar públicos-alvo, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
 
 * [Criar um público-alvo: página de documentação](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Criar um público-alvo - apresentação em vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR)
+* [Criar um público-alvo - apresentação em vídeo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Etapa 6: publicar seu destino {#publish-destination}
 

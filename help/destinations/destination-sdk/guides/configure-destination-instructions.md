@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -275,7 +275,7 @@ Se você especificar `"authenticationRule": "CUSTOMER_AUTHENTICATION"` ou `"auth
 
 Se você selecionou `"authenticationRule": "CUSTOMER_AUTHENTICATION"` na configuração de destino e seu destino oferece suporte ao método de autenticação OAuth 2, leia [Autenticação do OAuth 2](../functionality/destination-configuration/oauth2-authorization.md).
 
-Se você selecionou `"authenticationRule": "PLATFORM_AUTHENTICATION"`, deve criar uma [configuração de credenciais](../credentials-api/create-credential-configuration.md).
+Se você selecionou `"authenticationRule": "PLATFORM_AUTHENTICATION"`, deve criar uma [configuração de credenciais](../credentials-api/create-credential-configuration.md) e passar a ID do objeto de credencial no parâmetro `authenticationId` na configuração de [entrega de destino](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 ## Etapa 6: testar o destino {#test-destination}
 
@@ -284,7 +284,7 @@ Depois de configurar seu destino usando os pontos de extremidade de configuraç�
 Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar segmentos, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
 
 * [Criar uma página de documentação de público-alvo](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Criar uma apresentação de vídeo de público](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR)
+* [Criar uma apresentação de vídeo de público](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Etapa 7: publicar seu destino {#publish-destination}
 

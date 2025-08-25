@@ -2,10 +2,10 @@
 description: Esta página exemplifica a chamada à API usada para recuperar uma configuração de credencial por meio do Adobe Experience Platform Destination SDK.
 title: Recuperar uma configuração de credencial
 exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 1%
+source-wordcount: '499'
+ht-degree: 2%
 
 ---
 
@@ -27,11 +27,11 @@ Esta página exemplifica a solicitação de API e a carga que você pode usar pa
 
 Use este ponto de extremidade de API para criar uma configuração de credencial somente se houver um sistema de autenticação global entre o Adobe e a plataforma de destino, e o cliente do [!DNL Experience Platform] não precisar fornecer credenciais de autenticação para se conectar ao destino. Nesse caso, você deve criar uma configuração de credencial usando o ponto de extremidade da API `/credentials`.
 
-Ao usar um sistema de autenticação global, você deve definir `"authenticationRule":"PLATFORM_AUTHENTICATION"` na configuração de [entrega de destino](../functionality/destination-configuration/destination-delivery.md), ao [criar uma nova configuração de destino](../authoring-api/destination-configuration/create-destination-configuration.md).
+Ao usar um sistema de autenticação global, você deve definir `"authenticationRule":"PLATFORM_AUTHENTICATION"` na configuração de [entrega de destino](../functionality/destination-configuration/destination-delivery.md), ao [criar uma nova configuração de destino](../authoring-api/destination-configuration/create-destination-configuration.md). Em seguida, você deve criar uma [configuração de credenciais](../credentials-api/create-credential-configuration.md) e passar a ID do objeto de credencial no parâmetro `authenticationId` na configuração de [entrega de destino](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication).
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de credenciais {#get-started}
 

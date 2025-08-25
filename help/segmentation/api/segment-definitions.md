@@ -4,9 +4,9 @@ title: Endpoint da API de definições de segmento
 description: O endpoint de definições de segmento na API do Serviço de segmentação do Adobe Experience Platform permite gerenciar de forma programática as definições de segmento da sua organização.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
+source-git-commit: 5f19bd0601770115cae859fd6dc85bd9c9f6e92c
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1571'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!WARNING]
 >
->A criação de públicos-alvo usando entidades B2B usando a API do serviço de segmentação está obsoleta. Não é mais possível criar públicos-alvo usando as seguintes entidades B2B: Conta, Relação conta-pessoa, Campanha, Membro da campanha, Lista de marketing, Membro da lista de marketing, Oportunidade e Relação oportunidade-pessoa.
+>A criação de públicos-alvo usando entidades B2B usando a API do serviço de segmentação está obsoleta. Não é mais possível criar públicos-alvo usando as seguintes entidades B2B: Conta, Relação conta-pessoa, Campanha, Membro da campanha, Lista de marketing, Membro da lista de marketing, Oportunidade e Relação oportunidade-pessoa. Para obter mais informações, leia o guia em [Atualizações da arquitetura do Real-Time CDP B2B edition](../../rtcdp/b2b-architecture-upgrade.md).
 
 O Adobe Experience Platform permite criar definições de segmento que definem um grupo de atributos ou comportamentos específicos a partir de um grupo de perfis. Uma definição de segmento é um objeto que encapsula uma consulta gravada em [!DNL Profile Query Language] (PQL). As definições de segmento são aplicadas aos perfis para criar públicos. Esse objeto (definição de segmento) também é chamado de predicado PQL. Os predicados da PQL definem as regras para a definição de segmento com base nas condições relacionadas a qualquer registro ou dados de série temporal fornecidos a [!DNL Real-Time Customer Profile]. Consulte o [guia do PQL](../pql/overview.md) para obter mais informações sobre como gravar consultas do PQL.
 

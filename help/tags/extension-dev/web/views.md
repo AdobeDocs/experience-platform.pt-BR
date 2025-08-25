@@ -2,10 +2,10 @@
 title: Visualizações em extensões da Web
 description: 'Saiba como definir visualizações para módulos de biblioteca em extensões da Web do Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
 workflow-type: tm+mt
-source-wordcount: '2063'
-ht-degree: 96%
+source-wordcount: '2148'
+ht-degree: 91%
 
 ---
 
@@ -68,15 +68,22 @@ O conteúdo de cada um dos métodos precisará ser modificado para acomodar seus
 O método `init` será chamado pelas tags assim que a visualização for carregada no iframe. Será transmitido um único argumento (`info`) que deve ser um objeto com as seguintes propriedades:
 
 | Propriedade | Descrição |
-| --- | --- |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `settings` | Um objeto que contém as configurações que foram salvas anteriormente dessa visualização. Se `settings` for `null`, isso indicará que o usuário está criando as configurações iniciais em vez de carregar uma versão salva. Se `settings` for um objeto, você deverá usá-lo para preencher sua visualização, pois o usuário optou por editar as configurações persistidas anteriormente. |
 | `extensionSettings` | Configurações salvas da visualização de configuração de extensão. Isso pode ser útil para acessar configurações de extensão em visualizações que não sejam a de configuração de extensão. Se a visualização atual for a de configuração de extensão, use `settings`. |
 | `propertySettings` | Um objeto que contém configurações da propriedade. Consulte o [guia de objetos de turbina](../turbine.md#property-settings) para obter detalhes sobre o que está contido nesse objeto. |
 | `tokens` | Um objeto que contém tokens de API. Para acessar as APIs da Adobe na visualização, geralmente é necessário usar um token IMS em `tokens.imsAccess`. Esse token será disponibilizado somente para extensões desenvolvidas pela Adobe. Se você for um funcionário da Adobe que representa uma extensão criada pela Adobe, [envie um email à equipe de engenharia de coleta de dados](mailto:reactor@adobe.com) e forneça o nome da extensão para que seja possível adicioná-la à lista de permissões. |
-| `company` | Um objeto que contém uma única propriedade, `orgId`, que representa ela mesma sua Adobe Experience Cloud ID (uma string alfanumérica de 24 caracteres). |
+| `company` | Um objeto que contém o `orgId` (sua Adobe Experience Cloud ID de 24 caracteres), `id` (o identificador exclusivo de sua empresa na API do Reator) e `tenantId` (o identificador exclusivo de uma organização no Sistema Identity Management da Adobe). |
 | `schema` | Um objeto no formato de [esquema JSON](https://json-schema.org/). Este objeto será proveniente do [manifesto da extensão](../manifest.md) e pode ser útil para validar o formulário. |
+| `apiEndpoints` | Um objeto que contém `reactor` e uma referência ao endereço Web da API do Reator. |
+| `userConsentPermissions` | Um Objeto que contém sinalizadores de consentimento dos [Dados de Uso do Produto](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) da Adobe. Use o sinalizador armazenado em `globalDataCollectionAndUsage` para entender se sua extensão tem permissão para coletar *quaisquer* dados de clientes. |
+| `preferredLanguages` | Uma matriz de cadeias de caracteres de idioma. |
 
 A visualização deve usar essas informações para renderizar e gerenciar o formulário. É provável que você só precise lidar com `info.settings`, mas as outras informações são fornecidas, caso sejam necessárias.
+
+>[!IMPORTANT]
+>
+>Para manter a extensão compatível com o GDPR, use o sinalizador `userConsentPermissions.globalDataCollectionAndUsage` para determinar se a extensão tem permissão para coletar dados sobre o usuário.
 
 ### [!DNL validate]
 

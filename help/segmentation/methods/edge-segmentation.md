@@ -2,9 +2,9 @@
 title: Guia de segmentação do Edge
 description: Saiba como usar a segmentação de borda para avaliar públicos no Experience Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: a741fdb4393863dbc011c03c733e27572da0ae6c
+source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
 workflow-type: tm+mt
-source-wordcount: '1116'
+source-wordcount: '1148'
 ht-degree: 1%
 
 ---
@@ -26,6 +26,8 @@ Uma consulta pode ser avaliada com segmentação de borda se atender a qualquer 
 >[!NOTE]
 >
 >Se a consulta corresponder a qualquer um dos tipos de consulta na tabela a seguir, ela será avaliada automaticamente usando a segmentação de borda. O sistema determina essa capacidade automaticamente com base na expressão de consulta.
+>
+>Além disso, se o público-alvo **only** contiver atributos de perfil, ele será avaliado diariamente. Se você quiser que seu público seja avaliado em tempo real, será necessário adicionar dados do evento ao público.
 
 | Tipo de consulta | Detalhes | Consulta | Exemplo |
 | ---------- | ------- | ----- | ------- |
@@ -100,7 +102,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da definição de segmento recém-criada.
 
-+++Uma resposta de amostra ao criar uma definição de segmento.
++++Um exemplo de resposta ao criar uma definição de segmento.
 
 ```json
 {

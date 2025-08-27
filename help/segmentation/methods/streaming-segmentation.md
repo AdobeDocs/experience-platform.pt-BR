@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia de segmentação de streaming
 description: Saiba mais sobre a segmentação por transmissão, incluindo o que é, como criar um público avaliado usando a segmentação por transmissão e como visualizar seus públicos criados usando a segmentação por transmissão.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
+source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
 workflow-type: tm+mt
-source-wordcount: '2022'
-ht-degree: 2%
+source-wordcount: '2051'
+ht-degree: 3%
 
 ---
 
@@ -38,6 +38,10 @@ Qualquer definição de segmento **nova ou editada** que corresponda aos conjunt
 Para avaliar um público com segmentação por transmissão, ele **deve** ser restrito em uma janela de tempo de 24 horas.
 
 ## Inclusão de dados em lote em públicos de transmissão {#include-batch-data}
+
+>[!NOTE]
+>
+>Para manter a segmentação de transmissão precisa ao usar dados em lote, verifique se os dados em lote são **somente** mantidos dentro do público-alvo do lote e se são referenciados dentro do público-alvo de transmissão.
 
 Antes dessa atualização, você poderia criar uma definição de público-alvo de transmissão que combinasse fontes de dados de lote e de transmissão. No entanto, com a atualização mais recente, a criação de um público-alvo com fontes de dados em lote e de transmissão será avaliada usando a segmentação em lote.
 
@@ -102,7 +106,7 @@ Com a segmentação por transmissão, a qualificação de público-alvo agora ac
 
 >[!IMPORTANT]
 >
->Para usar a segmentação por transmissão, você **deve** usar uma política de mesclagem que esteja &quot;Ativa no Edge&quot;. Para obter mais informações sobre políticas de mesclagem, leia a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md).
+>Para usar a segmentação por transmissão, você **deve** usar uma política de mesclagem que esteja &quot;Ativa no Edge&quot;. Para obter mais informações sobre políticas de mesclagem, leia a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md).
 
 Um conjunto de regras será elegível para segmentação por transmissão se atender a qualquer um dos critérios descritos na tabela a seguir.
 
@@ -236,7 +240,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da definição de segmento recém-criada.
 
-+++Uma resposta de amostra ao criar uma definição de segmento.
++++Um exemplo de resposta ao criar uma definição de segmento.
 
 ```json
 {
@@ -338,7 +342,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com uma matriz de definições de segmento na organização que estão habilitadas para segmentação por transmissão.
 
-+++Uma resposta de amostra que contém uma lista de todas as definições de segmento habilitadas para segmentação por transmissão na organização
++++Um exemplo de resposta que contém uma lista de todas as definições de segmento habilitadas para segmentação por transmissão na organização
 
 ```json
 {

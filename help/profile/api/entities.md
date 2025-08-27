@@ -5,18 +5,14 @@ type: Documentation
 description: O Adobe Experience Platform permite acessar os dados do Perfil do cliente em tempo real usando as APIs RESTful ou a interface do usuário. Este guia descreve como acessar entidades, mais conhecidas como "perfis", usando a API de perfil.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1981'
 ht-degree: 3%
 
 ---
 
 # Endpoint de entidades (Acesso ao perfil)
-
->[!IMPORTANT]
->
->A pesquisa ExperienceEvent usando a API de acesso de perfil será descontinuada. Use recursos como atributos computados para casos de uso que exigem a pesquisa de ExperienceEvents. Para obter mais informações sobre essa alteração, entre em contato com o Atendimento ao cliente da Adobe.
 
 O Adobe Experience Platform permite que você acesse dados do [!DNL Real-Time Customer Profile] usando APIs RESTful ou a interface do usuário. Este guia descreve como acessar entidades, mais conhecidas como &quot;perfis&quot;, usando a API. Para obter mais informações sobre como acessar perfis usando a interface do usuário do [!DNL Experience Platform], consulte o [Guia do usuário do perfil](../ui/user-guide.md).
 
@@ -44,6 +40,12 @@ Como resultado dessa atualização, a API [!DNL Profile Access] agora reflete a 
 >[!ENDSHADEBOX]
 
 ## Recuperar uma entidade {#retrieve-entity}
+
+>[!IMPORTANT]
+>
+>As seguintes entidades B2B não são mais suportadas para solicitações de pesquisa por meio da API: **Relação Conta-Pessoa, Relação Oportunidade-Pessoa, Campanha, Membro de Campanha, Lista de Marketing e Membro da Lista de Marketing**.
+>
+>O suporte para essas entidades foi descontinuado. Se você tiver integrações ou fluxos de trabalho existentes que dependem do acesso a essas entidades, atualize-os para usar tipos de entidade compatíveis para garantir a funcionalidade contínua.
 
 Você pode recuperar uma entidade de Perfil fazendo uma solicitação GET para o ponto de extremidade `/access/entities` junto com os parâmetros de consulta necessários.
 
@@ -1202,6 +1204,19 @@ Uma resposta bem-sucedida retorna a próxima página de resultados. Esta respost
 +++
 
 ## Excluir uma entidade {#delete-entity}
+
+>[!IMPORTANT]
+>
+>As solicitações de exclusão para as seguintes entidades B2B foram descontinuadas:
+>
+>- Conta
+>- Relação Conta-Pessoa
+>- Oportunidade
+>- Relação oportunidade-pessoa
+>- Campaign
+>- Membro da campanha
+>- Lista de marketing
+>- Membros da lista de marketing
 
 Você pode excluir uma entidade do Repositório de Perfis fazendo uma solicitação DELETE para o ponto de extremidade `/access/entities` junto com os parâmetros de consulta necessários.
 

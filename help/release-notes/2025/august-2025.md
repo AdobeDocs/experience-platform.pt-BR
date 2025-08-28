@@ -2,9 +2,9 @@
 title: Notas de versão de agosto de 2025 da Adobe Experience Platform
 description: As notas de versão de agosto de 2025 da Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: bbeab81e64a86a59a1f85ca139935abf220ef361
 workflow-type: tm+mt
-source-wordcount: '1567'
+source-wordcount: '1448'
 ht-degree: 18%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 18%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-no)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 19 de agosto de 2025**
 
@@ -30,7 +30,6 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 - [Serviço de catálogo](#catalog-service)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Perfil do cliente em tempo real](#profile)
 - [Sandboxes](#sandboxes)
 - [Serviço de segmentação](#segmentation-service)
 - [Origens](#sources)
@@ -125,17 +124,20 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 Para obter mais informações, leia a [visão geral do XDM](../../xdm/home.md).
 
-## Perfil do cliente em tempo real {#profile}
+<!--
+## Real-Time Customer Profile {#profile}
 
-O Perfil do cliente em tempo real fornece uma visualização unificada e acionável de cada cliente, consolidando dados de todos os canais em um único perfil.
+Real-Time Customer Profile provides a unified, actionable view of each customer by consolidating data from all channels into a single profile.
 
-**Recursos novos ou atualizados**
+**New or updated features**
 
-| Recurso | Descrição |
+| Feature | Description |
 | --- | --- |
-| Funcionalidade de pesquisa aprimorada na API de entidades | A API de entidades agora é compatível com o seguinte: <ul><li>Pessoa (Perfil)</li><li>Eventos de experiência</li><li>Conta</li><li>Oportunidade</li></ul> Essa atualização simplifica o uso da API e ajuda a garantir desempenho e confiabilidade ideais. Se você já usou pesquisas para outros tipos de entidade, incluindo tabelas conjuntas e tipos personalizados de várias entidades, agora é uma ótima oportunidade para analisar o uso da API e aproveitar a experiência aprimorada. Para obter mais informações, leia o [Guia de atualização da arquitetura do Real-Time CDB B2B edition](../../rtcdp/b2b-architecture-upgrade.md). |
+| Enhanced lookup functionality in the Entities API | The Entities API now supports the following: <ul><li>Person (Profile)</li><li>Experience Events</li><li>Account</li><li>Opportunity</li></ul> This update simplifies API usage and helps ensure optimal performance and reliability. If you previously used lookups for other entity types—including join tables and custom Multi-Entity types—now is a great opportunity to review your API usage and take advantage of the improved experience. For more information, read the [Real-Time CDB B2B Edition architecture upgrade guide](../../rtcdp/b2b-architecture-upgrade.md). |
 
-Para obter mais informações sobre o Perfil do cliente em tempo real, leia a [Visão geral do perfil](../../profile/home.md).
+For more information on Real-Time Customer Profile, read the [Profile overview](../../profile/home.md).
+
+-->
 
 ## Sandboxes {#sandboxes}
 
@@ -160,7 +162,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Estimativas de público | As estimativas de público-alvo agora são geradas automaticamente no Construtor de segmentos. Esse valor será atualizado sempre que você modificar o público-alvo e sempre refletirá as regras de público-alvo mais recentes. Além disso, a estimativa agora será exibida como um **intervalo**, que se baseia no intervalo de confiança dos dados de amostragem. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Origens {#sources}
 
@@ -170,7 +172,7 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| Autenticação aprimorada para [!DNL Azure Blob Storage] | Agora você pode usar a autenticação baseada na entidade de serviço para conectar sua origem do [!DNL Azure Blob Storage] à Experience Platform. Use a autenticação baseada na entidade de serviço para segurança aprimorada, rotação de credenciais mais fácil e um controle de acesso mais granular para sua conta. Para obter mais informações, leia a visão geral[&#128279;](../../sources/connectors/cloud-storage/blob.md) do [!DNL Azure Blob Storage] . |
+| Autenticação aprimorada para [!DNL Azure Blob Storage] | Agora você pode usar a autenticação baseada na entidade de serviço para conectar sua origem do [!DNL Azure Blob Storage] à Experience Platform. Use a autenticação baseada na entidade de serviço para segurança aprimorada, rotação de credenciais mais fácil e um controle de acesso mais granular para sua conta. Para obter mais informações, leia a visão geral](../../sources/connectors/cloud-storage/blob.md) do [[!DNL Azure Blob Storage] . |
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).
 

@@ -1,16 +1,18 @@
 ---
-title: Usar o Link privado do Azure para origens na API
+title: Suporte A Link Privado Para Origens Na API
 description: Saiba como criar e usar links privados para Fontes do Adobe Experience Platform
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1657'
+source-wordcount: '1661'
 ht-degree: 4%
 
 ---
 
-# Usar [!DNL Azure Private Link] para fontes na API
+# Suporte a link privado para fontes na API
 
 >[!AVAILABILITY]
 >
@@ -21,7 +23,7 @@ ht-degree: 4%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Você pode usar o recurso [!DNL Azure Private Link] para criar pontos de extremidade privados para que suas fontes da Adobe Experience Platform se conectem. Conecte com segurança suas fontes a uma rede virtual usando endereços IP privados, eliminando a necessidade de IPs públicos e reduzindo a superfície de ataque.Simplifique a configuração da rede removendo a necessidade de configurações complexas de firewall ou tradução de endereço de rede, garantindo que o tráfego de dados atinja apenas os serviços aprovados.
+Você pode usar o recurso Link privado para criar endpoints privados para as fontes da Adobe Experience Platform às quais se conectar. Conecte com segurança suas fontes a uma rede virtual usando endereços IP privados, eliminando a necessidade de IPs públicos e reduzindo sua superfície de ataque. Simplifique a configuração da rede, eliminando a necessidade de configurações complexas de firewall ou tradução de endereço de rede, garantindo que o tráfego de dados atinja apenas os serviços aprovados.
 
 Leia este guia para saber como você pode usar APIs para criar e usar um terminal privado.
 

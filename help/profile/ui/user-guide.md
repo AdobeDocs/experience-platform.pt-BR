@@ -3,7 +3,7 @@ keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '2219'
 ht-degree: 3%
@@ -60,7 +60,7 @@ A contagem de perfis também inclui perfis com atributos (dados de registro), be
 
 #### Atualização da métrica de contagem de perfis
 
-Quando a assimilação de registros no armazenamento [!DNL Profile] aumenta ou diminui a contagem em mais de 5%, um trabalho é acionado para atualizar a contagem. Para workflows de dados de transmissão, uma verificação é feita por hora para determinar se o limite de aumento ou diminuição de 5% foi atingido. Se tiver sido, uma tarefa será automaticamente acionada para atualizar a contagem de perfis. Para assimilação em lote, dentro de 15 minutos após a assimilação bem-sucedida de um lote no Armazenamento de perfis, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem de perfis.
+Quando a assimilação de registros no armazenamento [!DNL Profile] aumenta ou diminui a contagem em mais de 3%, um trabalho é acionado para atualizar a contagem. Para workflows de dados de transmissão, uma verificação é feita por hora para determinar se o limite de aumento ou diminuição de 3% foi atingido. Se tiver sido, uma tarefa será automaticamente acionada para atualizar a contagem de perfis. Para assimilação em lote, dentro de 15 minutos após a assimilação bem-sucedida de um lote no Armazenamento de perfis, se o limite de aumento ou diminuição de 3% for atingido, um trabalho será executado para atualizar a contagem de perfis.
 
 ### [!UICONTROL Perfis por namespace] {#profiles-by-namespace}
 

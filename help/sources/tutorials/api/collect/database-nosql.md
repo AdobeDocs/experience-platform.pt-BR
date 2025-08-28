@@ -1,22 +1,22 @@
 ---
 title: Criar um Fluxo de Dados para Origens de Banco de Dados Usando a API de Serviço de Fluxo
 type: Tutorial
-description: Este tutorial aborda as etapas para recuperar dados de um banco de dados e assimilá-los no Experience Platform usando conectores de origem e APIs.
+description: Saiba como usar a API do Serviço de fluxo para criar um fluxo de dados e assimilar dados do banco de dados na Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1455'
 ht-degree: 3%
 
 ---
 
 # Criar um fluxo de dados para fontes de banco de dados usando a API [!DNL Flow Service]
 
-Este tutorial aborda as etapas para recuperar dados de uma fonte de banco de dados e trazê-los para a Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Leia este tutorial para saber como criar um fluxo de dados e assimilar dados do seu banco de dados para a Adobe Experience Platform usando a [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma origem de banco de dados. Se você não tiver essa ID, consulte a [visão geral das fontes](../../../home.md#database) para obter uma lista de fontes de banco de dados com as quais você pode criar uma conexão base.
+>* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma origem de banco de dados. Se você não tiver essa ID, visite o [catálogo de fontes](../../../home.md#database) para obter uma lista de fontes de banco de dados com as quais você pode criar uma conexão base.
 >* Para que o Experience Platform assimile dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC. O único carimbo de data/hora com suporte para [[!DNL Snowflake] origem](../../../connectors/databases/snowflake.md) é TIMESTAMP_NTZ com hora UTC.
 
 ## Introdução

@@ -2,10 +2,10 @@
 title: Criar um fluxo de dados para assimilar dados de um CRM na Experience Platform
 description: Saiba como usar a API de serviço de fluxo para criar um fluxo de dados e assimilar dados de origem na Experience Platform.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '2105'
-ht-degree: 3%
+source-wordcount: '2112'
+ht-degree: 2%
 
 ---
 
@@ -17,8 +17,8 @@ Leia este guia para saber como criar um fluxo de dados e assimilar dados na Adob
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Assimilação em lote](../../../../ingestion/batch-ingestion/overview.md): descubra como você pode carregar grandes volumes de dados com eficiência em lotes.
-* [Serviço de catálogo](../../../../catalog/datasets/overview.md): organize e acompanhe seus conjuntos de dados no Experience Platform.
+* [Assimilação em lote](../../../../ingestion/batch-ingestion/overview.md): descubra como você pode fazer upload de grandes volumes de dados em lotes de maneira rápida e eficiente.
+* [Serviço de catálogo](../../../../catalog/datasets/overview.md): organize e acompanhe seus conjuntos de dados na Experience Platform.
 * [Preparo de dados](../../../../data-prep/home.md): transforme e mapeie seus dados de entrada para corresponder aos requisitos do esquema.
 * [Fluxos de dados](../../../../dataflows/home.md): configure e gerencie os pipelines que movem seus dados das fontes para os destinos.
 * [Esquemas do Experience Data Model (XDM)](../../../../xdm/home.md): estruture seus dados usando esquemas XDM para que estejam prontos para uso no Experience Platform.
@@ -31,13 +31,13 @@ Para obter informações sobre como fazer chamadas com êxito para APIs do Exper
 
 ### Criar conexão básica {#base}
 
-Para criar um fluxo de dados com êxito para sua origem, você precisa de uma conta de origem totalmente autenticada e sua ID de conexão base correspondente. Se você não tiver essa ID, visite o [catálogo de fontes](../../../home.md) para encontrar uma lista de fontes para as quais você pode criar uma conexão base.
+Para criar um fluxo de dados para sua origem, você precisará de uma conta de origem totalmente autenticada e sua ID de conexão base correspondente. Se você não tiver essa ID, visite o [catálogo de fontes](../../../home.md) para encontrar uma lista de fontes para as quais você pode criar uma conexão base.
 
 ### Criar um esquema XDM de destino {#target-schema}
 
 Um esquema do Experience Data Model (XDM) fornece uma maneira padronizada para organizar e descrever os dados de experiência do cliente no Experience Platform. Para assimilar os dados de origem na Experience Platform, primeiro você deve criar um esquema XDM de destino que defina a estrutura e os tipos de dados que deseja assimilar. Esse esquema serve de blueprint para o conjunto de dados do Experience Platform em que seus dados assimilados residirão.
 
-Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Leia os guias a seguir para obter detalhes sobre as etapas de criação de um esquema XDM do Target:
+Um esquema XDM de destino pode ser criado executando uma solicitação POST para a [API do Registro de Esquema](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Para obter etapas detalhadas sobre como criar um esquema XDM de destino, leia os seguintes guias:
 
 * [Criar um esquema usando a API](../../../../xdm/api/schemas.md).
 * [Criar um esquema usando a interface](../../../../xdm/tutorials/create-schema-ui.md).
@@ -46,7 +46,7 @@ Depois de criado, o esquema XDM de destino `$id` será necessário posteriorment
 
 ### Criar um conjunto de dados de destino {#target-dataset}
 
-Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os dados assimilados com sucesso na Experience Platform são armazenados no data lake como conjuntos de dados. Durante essa etapa, você pode criar um novo conjunto de dados ou usar um conjunto de dados existente.
+Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente estruturada como uma tabela com colunas (esquema) e linhas (campos). Os dados assimilados com sucesso na Experience Platform são armazenados no data lake como conjuntos de dados. Durante essa etapa, você pode criar um novo conjunto de dados ou usar um existente.
 
 Você pode criar um conjunto de dados de destino fazendo uma solicitação POST para a [API de Serviço de Catálogo](https://developer.adobe.com/experience-platform-apis/references/catalog/) e, ao mesmo tempo, fornecendo a ID do esquema de destino na carga. Para obter etapas detalhadas sobre como criar um conjunto de dados de destino, leia o manual sobre [criação de um conjunto de dados usando a API](../../../../catalog/api/create-dataset.md).
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Solicitação**
 
-O exemplo a seguir mostra como criar um conjunto de dados de destino que esteja ativado para assimilação de Perfil do cliente em tempo real. Nesta solicitação, a propriedade `unifiedProfile` está definida como `true` (no objeto `tags`), o que instrui a Experience Platform a incluir esse conjunto de dados no Perfil de Cliente em Tempo Real.
+O exemplo a seguir mostra como criar um conjunto de dados de destino que esteja ativado para assimilação de Perfil do cliente em tempo real. Nesta solicitação, a propriedade `unifiedProfile` está definida como `true` (no objeto `tags`), o que instrui a Experience Platform a incluir o conjunto de dados no Perfil de Cliente em Tempo Real.
 
 ```shell
 curl -X POST \
@@ -243,7 +243,7 @@ curl -X POST \
 
 ## Mapeamento {#mapping}
 
-Em seguida, você deve mapear os dados de origem para o esquema de destino ao qual o conjunto de dados de destino adere. Para criar um mapeamento, faça uma solicitação POST para o ponto de extremidade `mappingSets` da [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/), forneça a ID do esquema XDM de destino e os detalhes dos conjuntos de mapeamento que deseja criar.
+Em seguida, mapeie os dados de origem para o esquema de destino ao qual o conjunto de dados de destino adere. Para criar um mapeamento, faça uma solicitação POST para o ponto de extremidade `mappingSets` da [[!DNL Data Prep] API](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Inclua a ID do esquema XDM do público-alvo e os detalhes dos conjuntos de mapeamento que deseja criar.
 
 **Formato da API**
 
@@ -635,7 +635,7 @@ Para garantir que você esteja usando a especificação de fluxo de dados corret
 
 Um fluxo de dados é um pipeline configurado que transfere dados entre os serviços da Experience Platform. Ele define como os dados são assimilados de fontes externas (como bancos de dados, armazenamento em nuvem ou APIs), processados e roteados para conjuntos de dados de destino. Esses conjuntos de dados são usados por serviços como o Serviço de identidade, Perfil do cliente em tempo real e Destinos para ativação e análise.
 
-Para criar um fluxo de dados, você deve ter valores para os seguintes itens:
+Para criar um fluxo de dados, será necessário fornecer valores para os seguintes itens:
 
 * [ID de conexão do Source](#source)
 * [ID da conexão de destino](#target)
@@ -647,8 +647,8 @@ Durante essa etapa, você pode usar os seguintes parâmetros no `scheduleParams`
 | Parâmetro de agendamento | Descrição |
 | --- | --- |
 | `startTime` | O tempo da época (em segundos) em que o fluxo de dados deve começar. |
-| `frequency` | A frequência da ingestão. Configure a frequência para indicar a frequência de execução do fluxo de dados. Você pode definir a frequência como: <ul><li>`once`: Defina sua frequência como `once` para criar uma assimilação única. As configurações para intervalo e preenchimento retroativo não estão disponíveis ao criar um fluxo de dados de assimilação única. Por padrão, a frequência de agendamento é definida como uma vez.</li><li>`minute`: Defina sua frequência como `minute` para agendar seu fluxo de dados para assimilar dados por minuto.</li><li>`hour`: Defina sua frequência como `hour` para agendar seu fluxo de dados para assimilar dados por hora.</li><li>`day`: Defina sua frequência como `day` para agendar seu fluxo de dados para assimilar dados por dia.</li><li>`week`: Defina sua frequência como `week` para agendar seu fluxo de dados para assimilar dados por semana.</li></ul> |
-| `interval` | O intervalo entre as assimilações consecutivas (necessário para todas as frequências, exceto `once`). Defina a configuração de intervalo para estabelecer o intervalo de tempo entre cada assimilação. Por exemplo, se você definir a frequência como dia e configurar o intervalo como 15, o fluxo de dados será executado a cada 15 dias. Você não pode definir o intervalo como zero. O valor mínimo de intervalo aceito para cada frequência é o seguinte:<ul><li>`once`: n/d</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
+| `frequency` | A frequência da ingestão. Configure a frequência para indicar a frequência de execução do fluxo de dados. Você pode definir a frequência como: <ul><li>`once`: Defina sua frequência como `once` para criar uma assimilação única. As configurações de intervalo e preenchimento retroativo não estão disponíveis para trabalhos de assimilação únicos. Por padrão, a frequência de agendamento é definida como uma vez.</li><li>`minute`: Defina sua frequência como `minute` para agendar seu fluxo de dados para assimilar dados por minuto.</li><li>`hour`: Defina sua frequência como `hour` para agendar seu fluxo de dados para assimilar dados por hora.</li><li>`day`: Defina sua frequência como `day` para agendar seu fluxo de dados para assimilar dados por dia.</li><li>`week`: Defina sua frequência como `week` para agendar seu fluxo de dados para assimilar dados por semana.</li></ul> |
+| `interval` | O intervalo entre as assimilações consecutivas (necessário para todas as frequências, exceto `once`). Defina a configuração de intervalo para estabelecer o intervalo de tempo entre cada assimilação. Por exemplo, se sua frequência estiver definida como dia e o intervalo for 15, o fluxo de dados será executado a cada 15 dias. Você não pode definir o intervalo como zero. O valor mínimo de intervalo aceito para cada frequência é o seguinte:<ul><li>`once`: n/d</li><li>`minute`: 15</li><li>`hour`: 1</li><li>`day`: 1</li><li>`week`: 1</li></ul> |
 | `backfill` | Indica se os dados históricos devem ser assimilados antes de `startTime`. |
 
 {style="table-layout:auto"}
@@ -723,7 +723,7 @@ curl -X POST \
 | `transformations.params.mappingId` | A ID de mapeamento que foi gerada em uma etapa anterior. |
 | `scheduleParams.startTime` | A hora de início do fluxo de dados em época (segundos desde a época Unix). Determina quando o fluxo de dados iniciará sua primeira execução. |
 | `scheduleParams.frequency` | A frequência na qual o fluxo de dados será executado. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day` ou `week`. |
-| `scheduleParams.interval` | O intervalo entre execuções consecutivas de fluxo de dados, com base na frequência selecionada. Deve ser um inteiro diferente de zero. Por exemplo, um intervalo de `15` com frequência `minute` significa que o fluxo de dados é executado a cada 15 minutos. |
+| `scheduleParams.interval` | O intervalo entre execuções consecutivas de fluxo de dados, com base na frequência selecionada. Deve ser um inteiro diferente de zero. Por exemplo, se sua frequência estiver definida como minuto e o intervalo for de 15, o fluxo de dados será executado a cada 15 minutos. |
 | `scheduleParams.backfill` | Um valor booliano (`true` ou `false`) que determina se os dados históricos devem ser assimilados (preenchimento retroativo) quando o fluxo de dados é criado pela primeira vez. |
 
 {style="table-layout:auto"}
@@ -755,11 +755,11 @@ Este tutorial guiou você pelo processo de criação de um fluxo de dados no Exp
 
 ### Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para exibir informações sobre taxas de assimilação, sucesso e erros. Para obter mais informações sobre como monitorar o fluxo de dados, visite o tutorial em [monitoramento de contas e fluxos de dados](../../../../dataflows/ui/monitor-sources.md).
+Depois que o fluxo de dados é criado, é possível monitorar o desempenho diretamente na interface do Experience Platform. Isso inclui o rastreamento das taxas de assimilação, as métricas de sucesso e quaisquer erros que ocorram. Para obter mais informações sobre como monitorar o fluxo de dados, visite o tutorial em [monitoramento de contas e fluxos de dados](../../../../dataflows/ui/monitor-sources.md).
 
 ### Atualizar seu fluxo de dados
 
-Para atualizar as configurações do agendamento de fluxos de dados, mapeamento e informações gerais, visite o tutorial em [atualizando fluxos de dados de fontes](../../api/update-dataflows.md).
+Para atualizar as configurações do agendamento de fluxos de dados, mapeamento ou informações gerais, visite o tutorial em [atualizando fluxos de dados de fontes](../../api/update-dataflows.md).
 
 ## Excluir seu fluxo de dados
 

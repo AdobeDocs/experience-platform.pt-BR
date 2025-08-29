@@ -3,20 +3,20 @@ title: Criar um Fluxo de Dados para Origens de Banco de Dados Usando a API de Se
 type: Tutorial
 description: Saiba como usar a API do Serviço de fluxo para criar um fluxo de dados e assimilar dados do banco de dados na Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1456'
 ht-degree: 3%
 
 ---
 
 # Criar um fluxo de dados para fontes de banco de dados usando a API [!DNL Flow Service]
 
-Leia este tutorial para saber como criar um fluxo de dados e assimilar dados do seu banco de dados para a Adobe Experience Platform usando a [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Leia este tutorial para saber como criar um fluxo de dados e assimilar dados do seu banco de dados na Adobe Experience Platform usando a [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma origem de banco de dados. Se você não tiver essa ID, visite o [catálogo de fontes](../../../home.md#database) para obter uma lista de fontes de banco de dados com as quais você pode criar uma conexão base.
+>* Para criar um fluxo de dados, você já deve ter uma ID de conexão base válida com uma origem de banco de dados. Se você não tiver essa ID, visite o [catálogo de fontes](../../../home.md#database) para exibir uma lista de fontes de banco de dados com as quais você pode criar uma conexão base.
 >* Para que o Experience Platform assimile dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC. O único carimbo de data/hora com suporte para [[!DNL Snowflake] origem](../../../connectors/databases/snowflake.md) é TIMESTAMP_NTZ com hora UTC.
 
 ## Introdução

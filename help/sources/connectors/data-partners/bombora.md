@@ -1,20 +1,20 @@
 ---
-title: Intenção bombora
-description: Conheça a fonte de intenção bombora no Experience Platform.
+title: Intenção de Bombora
+description: Saiba mais sobre a fonte Bombora Intent no Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
-badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1615'
+source-wordcount: '1607'
 ht-degree: 1%
 
 ---
 
 # [!DNL Bombora Intent]
 
-[!DNL Bombora] é uma solução de público-alvo abrangente especializada em dados de intenções B2B. O [!DNL Bombora Intent] é uma fonte do Adobe Experience Platform que você pode usar para conectar sua conta do [!DNL Bombora] à Experience Platform e integrar seus dados de intenção de conta.
+[!DNL Bombora] é uma solução de público-alvo abrangente especializada em dados de intenção B2B. O [!DNL Bombora Intent] é uma fonte do Adobe Experience Platform que você pode usar para conectar sua conta do [!DNL Bombora] à Experience Platform e integrar seus dados de intenção de conta.
 
 Com a origem [!DNL Bombora Intent], você pode integrar os dados de intenção de sobretensão da empresa [!DNL Bombora's] para identificar contas que estão pesquisando ativamente seus produtos ou serviços. Use o [!DNL Bombora] para priorizar contas no mercado a fim de criar segmentos precisos e executar campanhas ABM hiperdirecionadas, garantindo que seus esforços de marketing se concentrem nas contas com maior probabilidade de conversão. Além disso, você pode aproveitar estratégias orientadas por intenções para otimizar os gastos com anúncios, aumentar o engajamento e maximizar o ROI.
 
@@ -24,11 +24,11 @@ Leia este documento para obter as informações de pré-requisito sobre a origem
 
 Leia a seguir os exemplos de caso de uso que você pode aplicar à origem [!DNL Bombora].
 
-### Integração de Platform do Lado da demanda (DSP)
+### Integração do Demand-Side Platform (DSP)
 
-Como B2B profissional de marketing, você pode criar uma conta lista no CDP em tempo real, identificar empresas que demonstram grande intenção para seus produtos e, em seguida, ativá-la lista em [!DNL Bombora], que se integra diretamente a DSPs, permitindo que você execute campanhas de publicidade programática direcionadas usando [!DNL Bombora's] dados. Isso garante que seus publicidade gastos se concentrem nas empresas mais propensas a converter.
+Como comerciante B2B, você pode criar uma lista de contas no Real-Time CDP, identificar empresas que mostram alta intenção para seus produtos e ativar essa lista no [!DNL Bombora], que se integra diretamente aos DSPs, permitindo que você execute campanhas de anúncios programáticos direcionadas usando dados do [!DNL Bombora's]. Isso garante que seu investimento em anúncios se concentre em empresas com maior probabilidade de conversão.
 
-### Recursos de marketing baseado em conta (ABM)
+### Recursos do Account-Based Marketing (ABM)
 
 Como profissional de marketing B2B, você pode criar uma lista de contas com base em sinais de intenção próprios e de terceiros. É possível então ativar essa lista em [!DNL Bombora], onde os recursos de ABM permitem direcionar os funcionários para essas contas especificamente, garantindo que seus anúncios cheguem aos responsáveis pelas decisões em vez de a um público-alvo maior.
 
@@ -48,7 +48,7 @@ Uma lista de endereços IP deve ser adicionada a uma inclui na lista de permiss�
 
 ### Configurar permissões no Experience Platform
 
-Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Bombora] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o guia[&#128279;](../../../access-control/abac/ui/permissions.md) de interface de controle de acesso.
+Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Bombora] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../access-control/abac/ui/permissions.md).
 
 ### Restrições de nomenclatura para arquivos e diretórios
 
@@ -58,37 +58,46 @@ As restrições listadas abaixo devem ser consideradas ao nomear o arquivo ou di
 * Nomes de diretório e arquivo não podem terminar com uma barra (`/`). Se fornecido, ele será removido automaticamente.
 * Os seguintes caracteres de URL reservados devem ter um escape adequado: `! ' ( ) ; @ & = + $ , % # [ ]`
 * Os seguintes caracteres não são permitidos: `" \ / : | < > * ?`.
-* Caracteres de caminho URL ilegais não são permitidos. Code pontos curtir `\uE000`, embora válidos em nomes de arquivo NTFS, são caracteres Unicode inválidos. Além disso, alguns caracteres ASCII ou Unicode, curtir caracteres de controle (0x00 a 0x1F, \u0081 etc.), também não são permitidos. Para regras que regem as cadeias de caracteres Unicode em HTTP/1.1, consulte [RFC 2616, Seção 2.2: Regras](https://www.ietf.org/rfc/rfc2616.txt) básicas e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
-* Os seguintes nomes de arquivo não são permitidos: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, ponto character (.), e dois caracteres de ponto (..).
+* Caracteres de caminho de URL inválidos não são permitidos. Pontos de código como `\uE000`, embora válidos em nomes de arquivo NTFS, não são caracteres Unicode válidos. Além disso, alguns caracteres ASCII ou Unicode, como caracteres de controle (0x00 a 0x1F, \u0081 etc.), também não são permitidos. Para regras que regem cadeias de caracteres Unicode em HTTP/1.1, consulte [RFC 2616, Seção 2.2: Regras Básicas](https://www.ietf.org/rfc/rfc2616.txt) e [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+* Os seguintes nomes de arquivo não são permitidos: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, caractere de ponto (.) e dois caracteres de ponto (..).
 
-### Reunir as credenciais necessárias
+### Coletar credenciais necessárias
 
-[!DNL Bombora] no Experience Platform é hospedado por [!DNL Google Cloud Storage]. No solicitar para autenticar seu [!DNL Bombora] conta com êxito, você deve fornecer os valores apropriados para as seguintes credenciais:
+[!DNL Bombora] no Experience Platform está hospedado por [!DNL Google Cloud Storage]. Para autenticar com êxito sua conta do [!DNL Bombora], você deve fornecer os valores apropriados para as seguintes credenciais:
 
 | Credencial | Descrição |
 | --- | --- |
-| ID da chave de acesso | A ID da chave de acesso [!DNL Bombora]. Essa é uma sequência de 61 caracteres alfanuméricos necessários para autenticar os conta para Experience Platform. |
+| ID da chave de acesso | A ID da chave de acesso [!DNL Bombora]. Esta é uma sequência de 61 caracteres alfanuméricos necessária para autenticar sua conta no Experience Platform. |
 | Chave de acesso secreta | A chave de acesso secreta [!DNL Bombora]. Esta é uma sequência de 40 caracteres codificada em base 64 necessária para autenticar sua conta no Experience Platform. |
 | Nome do bucket | O bucket [!DNL Bombora] do qual os dados serão extraídos. |
 
-Para obter mais informações sobre essas credenciais, leia o [[!DNL Google Cloud Storage] guia de chaves HMAC](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Para obter etapas sobre como gerar sua própria chave de acesso, leia o [guia de pré-requisito na visão geral](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account) da [!DNL Google Cloud Storage] fonte.
+Para obter mais informações sobre essas credenciais, leia o [[!DNL Google Cloud Storage] guia de chaves HMAC](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Para obter etapas sobre como gerar sua própria chave de acesso, leia o [guia de pré-requisito na [!DNL Google Cloud Storage] visão geral da origem](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
 
-## [!DNL Bombora] esquema {#schema}
+## Esquema [!DNL Bombora] {#schema}
 
-Leia esta seção para obter informações sobre o [!DNL Bombora] schema e a estrutura de dados.
+Leia esta seção para obter informações sobre o esquema [!DNL Bombora] e a estrutura de dados.
 
-A [!DNL Bombora] schema é chamada de **Semana da Intenção** da Conta. São as informações de intenção semanais (anônimos B2B comprador pesquisa e consumo conteúdo) em contas e tópicos especificados. Os dados estão no formato parquet.
+O esquema [!DNL Bombora] é chamado **Intenção da Conta Bombora B2B**. São as informações de intenção semanal (pesquisa de comprador B2B anônimo e consumo de conteúdo) sobre contas e tópicos especificados. Os dados estão em formato parquet.
 
-| Nome do campo | Tipo de dados | Obrigatório | chave Empresas | Notas |
-| --- | --- | --- | --- | --- |
-| `Account_Name` | STRING | TRUE | SIM | O nome canônico da empresa. |
-| `Domain` | STRING | TRUE | SIM | O domínio da conta identificada que está mostrando a intenção. |
-| `Topic_Id` | STRING | TRUE | SIM | A [!DNL Bombora] ID do tópico. |
-| `Topic_Name` | CORDA | VERDADEIRO | | O nome do [!DNL Bombora] tópico. |
-| `Cluster_Name` | CORDA | VERDADEIRO | | O nome do cluster em [!DNL Bombora] para um determinado tópico. |
-| `Cluster_Id` | STRING | TRUE | | A ID do cluster associada a um determinado tópico. |
-| `Composite_Score` | INTEIRO | TRUE | | A pontuação composta representa o padrão de consumo de um domínio para um determinado tópico durante um período especificado. A pontuação composta é medida entre 0 e 100, onde 100 representa a maior pontuação possível e 0 representa a menor pontuação possível. Uma pontuação composta acima de 60 representa um aumento no interesse em um tópico específico por um domínio. Isso também é conhecido como &quot;aumento de tropas&quot;. |
-| `Partition_Date` | DATA | TRUE | | A data do calendário de um instantâneo. Isso é feito semanalmente, no formato de fim de semana `mm/dd/yyyy` . |
+* Classe - XDM [!DNL Bombora Account Intent]
+* Namespace - B2B [!DNL Bombora Account Intent]
+* Identidade principal - `intentID`
+* Relacionamentos - Conta B2B
+
+| Nome do campo | Tipo de dados | Descrição |
+|------------------------|-----------|----------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJETO | Este campo é usado pelo sistema para auditoria do sistema de origem. |
+| `_id` | STRING | Este campo é usado pelo sistema como um identificador exclusivo. |
+| `accountDomain` | STRING | Esse campo contém o domínio da conta. |
+| `accountID` | STRING | Esse campo contém a ID da conta B2B à qual esse registro de intenção está associado. |
+| `bomboraAccountName` | STRING | Esse campo contém a ID da empresa em Bombora. |
+| `clusterID` | STRING | Este campo contém a ID do cluster. |
+| `clusterName` | STRING | Este campo contém o nome do cluster. |
+| `compositeScore` | INTEIRO | Esse campo contém a pontuação composta da intenção. |
+| `intentID` | STRING | Este campo contém um valor exclusivo gerado pelo sistema. |
+| `partitionDate` | DATA | Este campo contém a data da partição. Isso é feito semanalmente, no final da semana, no formato `mm/dd/yyyy`. |
+| `topicID` | STRING | Esse campo contém a ID do tópico de intenção da Bombora. |
+| `topicName` | STRING | Este campo contém o nome do tópico de intenção de Bombora. |
 
 {style="table-layout:auto"}
 
@@ -124,7 +133,7 @@ Atualmente, você só pode usar campos [!DNL Bombora] padrão para assimilação
 
 +++Resposta
 
-Sim, você pode assimilar dados de [!DNL Bombora] uma base publicidade hoc. Você pode criar um novo fluxo de dados para assimilar os dados de intenção mais recentes, desde que haja novos dados de [!DNL Bombora]. No entanto, você só pode ter um fluxo de dados ativo por vez. Portanto, certifique-se de excluir o fluxo de dados existente antes de criar um novo.
+Sim, você pode assimilar dados de [!DNL Bombora] de forma ad hoc. Você pode criar um novo fluxo de dados para assimilar os dados de intenção mais recentes, desde que haja novos dados de [!DNL Bombora]. No entanto, você só pode ter um fluxo de dados ativo por vez. Portanto, certifique-se de excluir o fluxo de dados existente antes de criar um novo.
 
 +++
 
@@ -140,23 +149,23 @@ Para validar os dados de intenção e determinar quais sinais de intenção est�
 
 +++Resposta
 
-Execute uma query SQL no [Serviço](../../../query-service/home.md) de consulta para pesquisa para dados de intenção usando o nome da empresa ou AccountID. Para visualização todos os dados de intenção de um empresa específico, você pode executar um query SQL no Serviço de consulta usando o nome empresa ou AccountID para buscar todos os sinais de intenção associados.
+Execute uma consulta SQL no [Serviço de consulta](../../../query-service/home.md) para procurar dados de intenção usando o nome da empresa ou AccountID. Para exibir todos os dados de intenção de uma empresa específica, é possível executar uma consulta SQL no Serviço de consulta usando o nome da empresa ou AccountID para buscar todos os sinais de intenção associados.
 
 +++
 
 
-### Encontrei um problema com o conta processo de correspondência no Experience Platform, o que devo fazer?
+### Encontrei um problema com o processo de correspondência de contas no Experience Platform, o que devo fazer?
 
 +++Resposta
 
-A resolução depende do problema específico:
+A resolução depende da questão específica:
 
-* **Domínio de empresa incorreto ou ausente no Experience Platform**: se o problema decorre de um valor de domínio empresa incorreto nos dados de conta, atualize o campo de domínio empresa em Experience Platform para garantir uma correspondência precisa.
-* **Mapeamento de campo incorreto no fluxo de** dados: se o problema for devido a um caminho incorreto empresa campo de domínio no fluxo de dados, atualize a configuração do dataflow para fazer referência ao caminho de campo correto.
+* **Domínio de empresa incorreto ou ausente no Experience Platform**: se o problema resultar de um valor de domínio de empresa incorreto nos dados da conta, atualize o campo Domínio de empresa no Experience Platform para garantir uma correspondência precisa.
+* **Mapeamento de campo incorreto no fluxo de dados**: se o problema se deve a um caminho de campo de domínio de empresa incorreto no fluxo de dados, atualize a configuração do fluxo de dados para fazer referência ao caminho de campo correto.
 
 +++
 
-### Como excluo os dados de intenção no Experience Platform?
+### Como excluir dados de intenção no Experience Platform?
 
 +++Resposta
 
@@ -172,7 +181,7 @@ O campo `accountOrganization.domain` é usado para contas correspondentes. Se su
 
 +++
 
-### O que acontece quando um domínio do empresa é atualizado no Experience Platform?
+### O que acontece quando um domínio de empresa é atualizado no Experience Platform?
 
 +++Resposta
 
@@ -184,11 +193,11 @@ Quando um domínio de empresa é atualizado, o novo valor de domínio é aplicad
 
 +++
 
-### Qual é o processo de correspondência de domínio?
+### Qual é o processo de correspondência de domínios?
 
 +++Resposta
 
-A correspondência de domínio em Experience Platform baseia-se em uma correspondência exata do valor do campo de domínio limpo. O Experience Platform remove automaticamente os prefixos (por exemplo, https:/<span>/www.) e mantém o domínio de nível superior (por exemplo, adobe.com). A correspondência requer um valor de domínio exato, sem suporte para correspondência difusa ou subdomínios.
+A correspondência de domínios no Experience Platform é baseada em uma correspondência exata do valor do campo de domínio depurado. O Experience Platform remove automaticamente os prefixos (por exemplo, https:/<span>/www.) e mantém o domínio de nível superior (por exemplo, adobe.com). A correspondência requer um valor de domínio exato, sem suporte para correspondência difusa ou subdomínios.
 
 +++
 

@@ -2,12 +2,12 @@
 title: Intenção do Demandbase
 description: Saiba mais sobre a fonte de intenção do Demandbase no Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
-badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1480'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -60,25 +60,33 @@ Para obter mais informações sobre essas credenciais, leia o [[!DNL Google Clou
 
 Leia esta seção para obter informações sobre o esquema [!DNL Demandbase] e a estrutura de dados.
 
-O esquema [!DNL Demandbase] é chamado de **Intenção Semanal da Empresa**. São as informações de intenção semanal (pesquisa de comprador B2B anônimo e consumo de conteúdo) em uma conta e palavras-chave especificadas. Os dados estão em formato parquet.
+O esquema [!DNL Demandbase] é chamado **Intenção da conta do Demandbase B2B**. São as informações de intenção semanal (pesquisa de comprador B2B anônimo e consumo de conteúdo) em uma conta e palavras-chave especificadas. Os dados estão em formato parquet.
 
-| Nome do campo | Tipo de dados | Obrigatório | Chave comercial | Notas |
-| --- | --- | --- | --- | --- |
-| `company_id` | STRING | TRUE | SIM | A ID canônica da empresa. |
-| `domain` | STRING | TRUE | SIM | O domínio identificado da conta que mostra a intenção. |
-| `start_date` | DATA | TRUE | SIM | A data inicial de quando a atividade de intenção ocorreu no período de duração. |
-| `end_date` | DATA | TRUE | SIM | A data final de quando a atividade de intenção ocorreu no período de duração. |
-| `duration_type` | STRING | TRUE | SIM | O tipo de duração. Geralmente, esse valor pode ser diário, semanal ou mensal, dependendo da duração do roll-up escolhida. Para esta amostra de dados, este valor é `week`. |
-| `keyword_set_id` | STRING | TRUE | SIM | A ID do conjunto de palavras-chave. É exclusivo para cada cliente. |
-| `keyword_set` | STRING | TRUE | SIM | O nome do conjunto de palavras-chave. |
-| `keyword` | STRING | TRUE | | A palavra-chave de intenção. |
-| `is_trending` | STRING | TRUE | | O estado atual de uma determinada tendência. O estado de tendência é medido como uma intermitência na atividade de intenção na última semana em relação às médias das sete semanas anteriores. |
-| `intent_strength` | ENUM[CADEIA DE CARACTERES] | TRUE | | Uma medida quantificada da intensidade da intenção. Os valores aceitos incluem: `HIGH`, `MED` e `LOW`. |
-| `num_people_researching` | INTEIRO | TRUE | | A contagem de pessoas pertencentes a `company_id` que pesquisaram a palavra-chave nos últimos sete dias. |
-| `num_trending_days` | INTEIRO | TRUE | | O número de dias de tendência da palavra-chave em uma determinada duração. |
-| `trending_score` | INTEIRO | TRUE | | A pontuação de tendência. |
-| `record_id` | STRING | TRUE | | A ID exclusiva do registro principal. |
-| `partition_date` | DATA | TRUE | | A data do calendário do instantâneo. Isso é feito semanalmente, no final da semana. |
+* Classe - XDM [!DNL Demandbase Account Intent]
+* Namespace - B2B [!DNL Demandbase Account Intent]
+* Identidade principal - `intentID`
+* Relacionamentos - Conta B2B
+
+| Nome do campo | Tipo de dados | Descrição |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJETO | Este campo contém informações de auditoria do sistema da fonte externa. |
+| `_id` | STRING | É o identificador de sistema exclusivo do registro. |
+| `accountDomain` | STRING | Esse campo contém o domínio da conta. |
+| `accountID` | STRING | É a ID da conta B2B à qual esse registro de intenção está associado. |
+| `demandbaseAccountID` | STRING | Esta é a ID da empresa em [!DNL Demandbase]. |
+| `durationType` | STRING | Esse campo especifica o tipo de período de validade da intenção, por exemplo, &quot;semana&quot;. |
+| `endDate` | DATA | Esta é a data final do período de validade da intenção. |
+| `intentID` | STRING | Este é um valor exclusivo gerado pelo sistema para o registro de intenção. |
+| `intentStrength` | STRING | Esse campo especifica o tipo de período de validade da intenção, como &quot;DIA&quot;, &quot;SEMANA&quot; ou &quot;MÊS&quot;. |
+| `isTrending` | BOOLEANO | Esse campo indica se a palavra-chave está em tendência, com valores possíveis de Baixo, Medium ou Alto. |
+| `keyword` | STRING | Este campo contém a palavra-chave ou frase indicando intenção de [!DNL Demandbase]. |
+| `keywordSetID` | STRING | Este é o identificador para o conjunto de palavras-chave. |
+| `keywordSetName` | STRING | Este é o nome do conjunto de palavras-chave. |
+| `numTrendingDays` | INTEIRO | Este campo indica o número de dias de tendência da palavra-chave. |
+| `partitionDate` | DATA | Esta é a data de partição do registro. |
+| `peopleResearchingCount` | INTEIRO | Este campo indica o número de pessoas pesquisando a palavra-chave. |
+| `startDate` | DATA | Esta é a data de início do período de validade da intenção. |
+| `trendingScore` | INTEIRO | Esse campo contém a pontuação de tendência da palavra-chave. |
 
 {style="table-layout:auto"}
 

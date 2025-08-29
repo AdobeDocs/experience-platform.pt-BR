@@ -103,8 +103,8 @@ O objeto conversionDetails captura informações de rastreamento para conversõe
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `trackingCode` | String | O código de rastreamento de conversão do evento. Para obter uma lista de formatos possíveis, consulte [Formatos de ID AMO](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
-| `trackingIdentities` | String | A ID EF ou os detalhes de identidade de rastreamento de um evento. Para obter uma lista de formatos possíveis, consulte [Formatos de ID EF](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
+| `trackingCode` | String | O código de rastreamento de conversão do evento. Para obter uma lista de formatos possíveis, consulte [Formatos de ID AMO](https://experienceleague.adobe.com/pt-br/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
+| `trackingIdentities` | String | A ID EF ou os detalhes de identidade de rastreamento de um evento. Para obter uma lista de formatos possíveis, consulte [Formatos de ID EF](https://experienceleague.adobe.com/pt-br/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
 | `conversionProperties` | Objeto | Um mapa de propriedades de conversão, representado como uma matriz de cadeias de pares de valores chave (como `subscriptions=253`). |
 
 ## `fees` {#fees}

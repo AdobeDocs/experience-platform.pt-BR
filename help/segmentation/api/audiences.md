@@ -3,7 +3,7 @@ title: Endpoint da API de públicos-alvo
 description: Use o endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform para criar, gerenciar e atualizar programaticamente os públicos-alvo da sua organização.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
+source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 3%
@@ -33,11 +33,11 @@ GET /audiences?{QUERY_PARAMETERS}
 
 >[!NOTE]
 >
->Se você usar este ponto de extremidade sem nenhum parâmetro de consulta, os públicos-alvo inativos **não** serão retornados. No entanto, se você usar este ponto de extremidade em conjunto com o parâmetro de consulta `property=audienceId`, os públicos-alvo inativos **&#x200B;**&#x200B;serão retornados.
+>Se você usar este ponto de extremidade sem nenhum parâmetro de consulta, os públicos-alvo inativos **não** serão retornados. No entanto, se você usar este ponto de extremidade em conjunto com o parâmetro de consulta `property=audienceId`, os públicos-alvo inativos **** serão retornados.
 
 Os seguintes parâmetros de consulta podem ser usados ao recuperar uma lista de públicos-alvo:
 
-| Parâmetro de consulta | Descrição | Exemplo |
+| Parâmetros de consulta | Descrição | Exemplo |
 | --------------- | ----------- | ------- |
 | `start` | Especifica o deslocamento inicial dos públicos-alvo retornados. | `start=5` |
 | `limit` | Especifica o número máximo de públicos-alvo retornados por página. | `limit=10` |
@@ -166,7 +166,12 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
     ],
     "_page":{
       "totalCount": 111,
-      "pageSize": 2,
+      "totalPages": 21,
+      "sortField": "name",
+      "sort": "asc", 
+      "pageSize": 5,
+      "limit": 5,
+      "start": "0",
       "next": "1"
    },
    "_links":{
@@ -177,7 +182,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
 }
 ```
 
-| Propriedade | Tipo de público | Descrição |
+| Propriedade | Tipo de público-alvo | Descrição |
 | -------- | ------------- | ----------- | 
 | `id` | Ambos | Um identificador somente leitura gerado pelo sistema para o público-alvo. |
 | `audienceId` | Ambos | Se o público for gerado pela Platform, o valor será igual ao `id`. Se o público-alvo for gerado externamente, esse valor será fornecido pelo cliente. |
@@ -339,7 +344,7 @@ GET /audiences/{AUDIENCE_ID}
 
 **Solicitação**
 
-+++Uma solicitação de amostra para recuperar um público-alvo
++++Um exemplo de solicitação para recuperar um público-alvo
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab \
@@ -355,7 +360,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o público-alvo especificado.
 
-+++Uma resposta de amostra ao recuperar um público-alvo gerado pela Platform.
++++Um exemplo de resposta ao recuperar um público-alvo gerado pela Platform.
 
 ```json
 {
@@ -438,7 +443,7 @@ PUT /audiences/{AUDIENCE_ID}
 
 **Solicitação**
 
-+++Uma solicitação de amostra para atualizar um público-alvo inteiro.
++++Um exemplo de solicitação para atualizar um público-alvo inteiro.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -559,7 +564,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com o público-alvo atualizado.
 
-+++Uma resposta de amostra ao corrigir um campo em um público-alvo.
++++Um exemplo de resposta ao corrigir um campo em um público-alvo.
 
 ```json
 {

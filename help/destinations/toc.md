@@ -5,7 +5,7 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: cbf00cbe66aa3332f5b5abd41ac5dc9f41170a95
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 6%
@@ -32,7 +32,7 @@ ht-degree: 6%
    * [Excluir contas de destino](./api/delete-destination-account.md)
    * [Excluir fluxos de dados de destino](./api/delete-destination-dataflow.md)
    * [Exportar conjuntos de dados](/help/destinations/api/export-datasets.md)
-   * [Classificar e filtrar respostas da API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=pt-BR#use-cases)
+   * [Classificar e filtrar respostas da API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guias de interface {#ui}
    * [Espaço de trabalho Destinos](./ui/destinations-workspace.md)
    * [Criar uma nova conexão de destino](./ui/connect-destination.md)
@@ -70,10 +70,10 @@ ht-degree: 6%
       * [Conexão do Marketo Engage (herdada) (V2)](./catalog/adobe/marketo-engage.md)
       * [(Beta) Conexão de sincronização de pessoas do Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Conexão com o Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Compartilhamento de público do Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=pt-BR)
+      * [Compartilhamento de público do Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Conexão de Composição de Público Federado](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos do Advertising{#advertising}
-      * [(Beta) Distribuição de público-alvo da Acxiom](./catalog/advertising/acxiom-audience-connection.md)
+      * [(Beta) Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
       * [(Beta) Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
       * [Visão geral dos destinos do Advertising](./catalog/advertising/overview.md)
       * [Conexão com a Adobe Advertising Cloud](./catalog/advertising/adobe-advertising-cloud-connection.md)
@@ -323,4 +323,4 @@ ht-degree: 6%
       * [Modelo de autoatendimento de documentação](./destination-sdk/docs-framework/self-service-template.md)
       * [Práticas recomendadas de criação](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Perguntas frequentes](./destinations-faq.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

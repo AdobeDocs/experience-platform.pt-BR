@@ -1,43 +1,43 @@
 ---
-title: Distribuição de público-alvo da Acxiom
-description: Use o  [!DNL Acxiom Audience Distribution] destino para aprimorar públicos-alvo com a  [!DNL Acxiom's Real ID] tecnologia e ativar públicos-alvo para várias plataformas, como  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
+title: Acxiom Audience Connection
+description: Use o  [!DNL Acxiom Audience Connection] destino para aprimorar públicos-alvo com a  [!DNL Acxiom's Real ID] tecnologia e ativar públicos-alvo para várias plataformas, como  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 290d6eb20b7d35839b4bb37e71e2c993b112d896
+source-git-commit: 70a1cdcfd99ae006f02289ab5a20ced624b51ccc
 workflow-type: tm+mt
 source-wordcount: '927'
 ht-degree: 7%
 
 ---
 
-# [!DNL Acxiom Audience Distribution] destino
+# [!DNL Acxiom Audience Connection] destino
 
 >[!NOTE]
 >
->O destino [!DNL Acxiom Audience Distribution] está na versão beta. Esse conector de destino e a página de documentação são criados e mantidos pela equipe [!DNL Acxiom]. Para fazer consultas ou solicitações de atualização, entre em contato diretamente com a Acxiom [aqui](mailto:acxiom-adobe-help@acxiom.com).
+>O destino [!DNL Acxiom Audience Connection] está na versão beta. Esse conector de destino e a página de documentação são criados e mantidos pela equipe [!DNL Acxiom]. Para fazer consultas ou solicitações de atualização, entre em contato diretamente com a Acxiom [aqui](mailto:acxiom-adobe-help@acxiom.com).
 
-Use o destino [!DNL Acxiom Audience Distribution] para aprimorar públicos com a tecnologia [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) e ativar públicos para várias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
+Use o destino [!DNL Acxiom Audience Connection] para aprimorar públicos com a tecnologia [!DNL Acxiom's] [Real ID™](https://www.acxiom.com/real-id/real-id/) e ativar públicos para várias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
 
-Este tutorial fornece instruções para criar um conector de destino [!DNL Acxiom Audience Distribution] usando a interface do usuário [!DNL Adobe Experience Platform]. Esse conector é usado para criar e distribuir públicos-alvo para destinos selecionados.
+Este tutorial fornece instruções para criar um conector de destino [!DNL Acxiom Audience Connection] usando a interface do usuário [!DNL Adobe Experience Platform]. Esse conector é usado para criar e distribuir públicos-alvo para destinos selecionados.
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Acxiom Audience Distribution], este é um exemplo de caso de uso que os clientes [!DNL Adobe Experience Platform] podem resolver usando este conector.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Acxiom Audience Connection], este é um exemplo de caso de uso que os clientes [!DNL Adobe Experience Platform] podem resolver usando este conector.
 
 ### Enviar públicos-alvo do Experience Platform para a sua conta da Acxiom {#send-audiences}
 
 Use este conector de destino se você for um profissional de marketing que deseja enviar públicos-alvo de [!DNL Experience Platform] para sua conta do [!DNL Acxiom], para aquisição entre canais.
 
-Por exemplo, o departamento de Operações de marketing de uma marca global de serviços financeiros está interessado na aquisição de clientes entre canais por meio de várias plataformas de publicidade. Eles podem usar o conector de destino [!DNL Acxiom Audience Distribution] para enviar públicos de [!DNL Experience Platform] para [!DNL Acxiom], aprimorar os públicos com a tecnologia [!DNL Acxiom's Real ID] e ativar os públicos para várias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
+Por exemplo, o departamento de Operações de marketing de uma marca global de serviços financeiros está interessado na aquisição de clientes entre canais por meio de várias plataformas de publicidade. Eles podem usar o conector de destino [!DNL Acxiom Audience Connection] para enviar públicos de [!DNL Experience Platform] para [!DNL Acxiom], aprimorar os públicos com a tecnologia [!DNL Acxiom's Real ID] e ativar os públicos para várias plataformas, como [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
 
 ## Pré-requisitos {#prerequisites}
 
-* **Confirmar Termos de Uso:** Antes de configurar um novo destino do [!DNL Acxiom Audience Distribution], você deve ler e assinar o Contrato de Termos de Uso do [!DNL Acxiom's]. Você receberá o link para o contrato assim que a ordem de venda executada for concluída. Até que você assine o contrato, você não verá o cartão de destino [!DNL Acxiom Audience Distribution] no catálogo de destino do Experience Platform. Depois que você aceitar e assinar o contrato, o [!DNL Adobe] concluirá o processo de integração e você verá o cartão de destino [!DNL Acxiom Audience Distribution].
+* **Confirmar Termos de Uso:** Antes de configurar um novo destino do [!DNL Acxiom Audience Connection], você deve ler e assinar o Contrato de Termos de Uso do [!DNL Acxiom's]. Você receberá o link para o contrato assim que a ordem de venda executada for concluída. Até que você assine o contrato, você não verá o cartão de destino [!DNL Acxiom Audience Connection] no catálogo de destino do Experience Platform. Depois que você aceitar e assinar o contrato, o [!DNL Adobe] concluirá o processo de integração e você verá o cartão de destino [!DNL Acxiom Audience Connection].
 * **Conhece sua ID da organização da Adobe:** Sua ID da organização [!DNL Adobe] é necessária para concluir seus Termos de Contrato do Usuário. Consulte o tópico [!DNL Adobe's] *Organizações na Experience Cloud* para obter detalhes sobre como [exibir a ID da sua organização](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 
 ## Destinos suportados {#supported-destinations}
 
-O destino [!DNL Acxiom Audience Distribution] atualmente oferece suporte à ativação de público-alvo para as seguintes plataformas.<br>
+O destino [!DNL Acxiom Audience Connection] atualmente oferece suporte à ativação de público-alvo para as seguintes plataformas.<br>
 
 * [!DNL Altice]
 * [!DNL Ampersand]
@@ -49,11 +49,11 @@ O destino [!DNL Acxiom Audience Distribution] atualmente oferece suporte à ativ
 
 ## Conectar ao destino {#connect}
 
-A autenticação para o destino [!DNL Acxiom's Audience Distribution] é tratada automaticamente em segundo plano para sua conveniência.
+A autenticação para o destino [!DNL Acxiom's Audience Connection] é tratada automaticamente em segundo plano para sua conveniência.
 
 ## Configurações específicas de destino {#destination-settings}
 
-Alguns destinos do [!DNL Acxiom Audience Distribution] exigem informações adicionais. As seções abaixo fornecem orientação detalhada sobre como configurar essas opções.
+Alguns destinos do [!DNL Acxiom Audience Connection] exigem informações adicionais. As seções abaixo fornecem orientação detalhada sobre como configurar essas opções.
 
 ### [!DNL LG Ads] {#lg-ads}
 
@@ -74,13 +74,13 @@ Leia [Ativar dados de público-alvo para destinos de exportação de perfil em l
 
 >[!NOTE]
 >
->O destino [!DNL Acxiom Audience Distribution] dá suporte apenas a exportações completas de arquivos.
+>O destino [!DNL Acxiom Audience Connection] dá suporte apenas a exportações completas de arquivos.
 
 ### Mapear atributos e identidades {#map}
 
-Para que o destino [!DNL Acxiom Audience Distribution] receba corretamente os dados de público-alvo, você deve mapear os campos de origem do Experience Platform para os campos de destino [!DNL Acxiom Audience Distribution] corretos.
+Para que o destino [!DNL Acxiom Audience Connection] receba corretamente os dados de público-alvo, você deve mapear os campos de origem do Experience Platform para os campos de destino [!DNL Acxiom Audience Connection] corretos.
 
-[!DNL Acxiom Audience Distribution] permite o mapeamento somente para os seguintes campos de destino. Os campos de destino descritos na tabela abaixo devem ser mapeados na ordem mostrada abaixo.
+[!DNL Acxiom Audience Connection] permite o mapeamento somente para os seguintes campos de destino. Os campos de destino descritos na tabela abaixo devem ser mapeados na ordem mostrada abaixo.
 
 | Nome do campo | Descrição | Obrigatório | Ordem dos campos | Comprimento máximo |
 |---|---|---|---|---|          
@@ -105,7 +105,7 @@ Se você não estiver usando o esquema padrão [!DNL Adobe's], consulte a docume
 
 ### Revisar {#review}
 
-Depois de concluir todas as etapas acima, você terá a oportunidade de revisar o status da conexão de destino e os detalhes do público-alvo antes de ativá-lo (distribuí-lo). Os públicos selecionados aparecerão na parte inferior de uma lista. Cada público será uma chamada separada para a API [!DNL Acxiom Audience Distribution].
+Depois de concluir todas as etapas acima, você terá a oportunidade de revisar o status da conexão de destino e os detalhes do público-alvo antes de ativá-lo (distribuí-lo). Os públicos selecionados aparecerão na parte inferior de uma lista. Cada público será uma chamada separada para a API [!DNL Acxiom Audience Connection].
 
 Se você estiver satisfeito com os resultados, selecione **[!UICONTROL Concluir]** para ativar seu destino.
 
@@ -128,4 +128,4 @@ Ao seguir este tutorial, você ativou com êxito um público-alvo para a platafo
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/data-governance/home).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).

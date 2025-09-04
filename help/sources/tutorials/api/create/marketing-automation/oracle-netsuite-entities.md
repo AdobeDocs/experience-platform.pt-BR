@@ -1,22 +1,15 @@
 ---
 title: Criar uma conexão de origem e um fluxo de dados para Entidades do Oracle NetSuite usando a API de Serviço de Fluxo
 description: Saiba como criar uma conexão de origem e um fluxo de dados para trazer contatos do Oracle NetSuite e dados do cliente para a Experience Platform usando a API do Serviço de fluxo.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: ddbb413e-a6ca-49df-b68d-37c9d2aab61b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2177'
+source-wordcount: '2160'
 ht-degree: 1%
 
 ---
 
 # Crie uma conexão de origem e um fluxo de dados para [!DNL Oracle NetSuite Entities] usando a API de Serviço de Fluxo
-
->[!NOTE]
->
->A origem [!DNL Oracle NetSuite Entities] está na versão beta. Consulte a [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
 Leia o tutorial a seguir para saber como trazer contatos e dados de clientes da sua conta do [!DNL Oracle NetSuite Activities Entities] para a Adobe Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -174,7 +167,7 @@ Da mesma forma, dependendo do tipo de objeto que você está usando a resposta r
 
 Uma resposta bem-sucedida retorna uma estrutura, como abaixo.
 
-+++Selecione para exibir a carga JSON
++++Selecione para visualizar a carga JSON
 
 ```json
     "format": "hierarchical",
@@ -490,7 +483,7 @@ Uma resposta bem-sucedida retorna uma estrutura, como abaixo.
 
 Uma resposta bem-sucedida retorna uma estrutura, como abaixo.
 
-+++Selecione para exibir a carga JSON
++++Selecione para visualizar a carga JSON
 
 ```json
 {

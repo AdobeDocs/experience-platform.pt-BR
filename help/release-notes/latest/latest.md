@@ -2,10 +2,10 @@
 title: Notas de versão de agosto de 2025 da Adobe Experience Platform
 description: As notas de versão de agosto de 2025 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1321'
-ht-degree: 20%
+source-wordcount: '1432'
+ht-degree: 21%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 20%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-no)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 19 de agosto de 2025**
 
@@ -162,7 +162,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Estimativas de público | As estimativas de público-alvo agora são exibidas como um **intervalo**, que se baseia no intervalo de confiança dos dados de amostragem. Para saber mais sobre estimativas, leia o [guia do Construtor de segmentos](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Origens {#sources}
 
@@ -172,7 +172,10 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Recurso | Descrição |
 | --- | --- |
-| Autenticação aprimorada para [!DNL Azure Blob Storage] | Agora você pode usar a autenticação baseada na entidade de serviço para conectar sua origem do [!DNL Azure Blob Storage] à Experience Platform. Use a autenticação baseada na entidade de serviço para segurança aprimorada, rotação de credenciais mais fácil e um controle de acesso mais granular para sua conta. Para obter mais informações, leia a visão geral[&#128279;](../../sources/connectors/cloud-storage/blob.md) do [!DNL Azure Blob Storage] . |
+| Disponibilidade geral da origem do [!DNL Oracle NetSuite]  | A origem [!DNL Oracle NetSuite] agora está disponível. Agora você pode conectar sua conta do [!DNL Oracle NetSuite] à Experience Platform para assimilar dados de atividades e entidades para análise e ativação unificadas. Para obter mais informações, leia a visão geral](../../sources/connectors/marketing-automation/oracle-netsuite.md) do [[!DNL Oracle NetSuite] . |
+| Disponibilidade geral da origem do [!DNL PathFactory]  | A origem [!DNL PathFactory] agora está disponível. Você pode conectar sua conta do [!DNL PathFactory] à Experience Platform para assimilar dados de visitantes, sessões e exibições de página para análise e ativação unificadas. Para obter mais informações, leia a visão geral](../../sources/connectors/marketing-automation/pathfactory.md) do [[!DNL PathFactory] . |
+| Disponibilidade geral da origem do [!DNL Stripe]  | A origem [!DNL Stripe] agora está disponível. Você pode conectar sua conta do [!DNL Stripe] à Experience Platform para assimilar dados de pagamento e transação para análise e ativação unificadas. Para obter mais informações, leia a visão geral](../../sources/connectors/payments/stripe.md) do [[!DNL Stripe] . |
+| Autenticação aprimorada para [!DNL Azure Blob Storage] | Agora você pode usar a autenticação baseada na entidade de serviço para conectar sua origem do [!DNL Azure Blob Storage] à Experience Platform. Use a autenticação baseada na entidade de serviço para segurança aprimorada, rotação de credenciais mais fácil e um controle de acesso mais granular para sua conta. Para obter mais informações, leia a visão geral](../../sources/connectors/cloud-storage/blob.md) do [[!DNL Azure Blob Storage] . |
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).
 

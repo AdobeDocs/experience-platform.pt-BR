@@ -3,18 +3,14 @@ title: Assimilar dados de pagamentos de sua conta  [!DNL Stripe]  para a Experie
 description: Saiba como assimilar dados de pagamentos de sua conta do Stripe para a Experience Platform usando a API do Serviço de fluxo
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2006'
 ht-degree: 2%
 
 ---
 
 # Assimilar dados de pagamentos de sua conta do [!DNL Stripe] para a Experience Platform usando APIs
-
->[!NOTE]
->
->A origem [!DNL Stripe] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
 
 Leia o tutorial a seguir para saber como assimilar seus dados de pagamentos do [!DNL Stripe] para a Adobe Experience Platform usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -132,7 +128,7 @@ curl -X GET \
 
 Uma resposta bem-sucedida retorna uma estrutura JSON como a seguinte:
 
-+++Selecione para exibir a carga JSON
++++Selecione para visualizar a carga JSON
 
 ```json
 {
@@ -880,7 +876,7 @@ curl -X POST \
 | `transformations.params.mappingId` | A [ID de mapeamento](#mapping) gerou em uma etapa anterior. |
 | `transformations.params.mappingVersion` | A versão correspondente da ID de mapeamento. O padrão deste valor é `0`. |
 | `scheduleParams.startTime` | A hora em que seu fluxo de dados começará. Você deve fornecer o valor de hora de início no formato de um carimbo de data e hora Unix. |
-| `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Você pode configurar a frequência de assimilação para:  <ul><li>**Uma vez**: defina sua frequência como `once` para criar uma assimilação única. As configurações para intervalo e preenchimento retroativo não estão disponíveis ao criar um fluxo de dados de assimilação única. Por padrão, a frequência de agendamento é definida como uma vez.</li><li>**Minuto**: Defina sua frequência como `minute` para agendar seu fluxo de dados para assimilar dados por minuto.</li><li>**Hora**:Defina sua frequência como `hour` para agendar seu fluxo de dados para assimilar dados por hora.</li><li>**Dia**: Defina sua frequência como `day` para agendar seu fluxo de dados para assimilar dados por dia.</li><li>**Semana**: Defina sua frequência como `week` para agendar seu fluxo de dados para assimilar dados por semana.</li></ul> |
+| `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Você pode configurar a frequência de assimilação para:  <ul><li>**Uma vez**: defina sua frequência como `once` para criar uma assimilação única. As configurações para intervalo e preenchimento retroativo não estão disponíveis ao criar um fluxo de dados de assimilação única. Por padrão, a frequência de agendamento é definida como uma vez.</li><li>**Minuto**: Defina sua frequência como `minute` para agendar seu fluxo de dados para assimilar dados por minuto.</li><li>**Hora**:Set sua frequência até `hour` para agendar seu fluxo de dados para assimilar dados por hora.</li><li>**Dia**: Defina sua frequência como `day` para agendar seu fluxo de dados para assimilar dados por dia.</li><li>**Semana**: Defina sua frequência como `week` para agendar seu fluxo de dados para assimilar dados por semana.</li></ul> |
 | `scheduleParams.interval` | O intervalo designa o período entre duas execuções de fluxo consecutivas. Por exemplo, se você definir a frequência como dia e configurar o intervalo como 15, o fluxo de dados será executado a cada 15 dias. O valor do intervalo deve ser um inteiro diferente de zero. O valor mínimo de intervalo aceito para cada frequência é o seguinte:<ul><li>**Uma vez**: n/d</li><li>**Minuto**: 15</li><li>**Hora**: 1</li><li>**Dia**: 1</li><li>**Semana**: 1</li></ul> |
 
 **Resposta**

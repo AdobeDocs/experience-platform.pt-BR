@@ -1,22 +1,15 @@
 ---
 title: Criar uma conexão de origem  [!DNL Oracle NetSuite Activities]  na interface
 description: Saiba como criar uma conexão de origem de Atividades do Oracle NetSuite usando a interface do usuário do Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '607'
 ht-degree: 2%
 
 ---
 
 # Criar uma conexão de origem [!DNL Oracle NetSuite Activities] na interface
-
->[!NOTE]
->
->A origem [!DNL Oracle NetSuite Activities] está na versão beta. Consulte a [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
 Leia o tutorial a seguir para saber como trazer dados de eventos da sua conta do [!DNL Oracle NetSuite Activities] para a Adobe Experience Platform na interface do usuário.
 
@@ -77,7 +70,7 @@ O Experience Platform fornece recomendações inteligentes para campos mapeados 
 >
 >Os campos exibidos dependem das assinaturas às quais a conta do [!DNL Oracle NetSuite] tem acesso. Por exemplo, se você não tiver acesso a faturamento, não verá os campos relacionados a faturamento.
 
-### Agendando {#scheduling}
+### Agendamento {#scheduling}
 
 Ao agendar o fluxo de dados do [!DNL Oracle NetSuite Activities] para assimilação, você deve selecionar a seguinte configuração de frequência e intervalo:
 

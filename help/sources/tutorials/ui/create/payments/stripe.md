@@ -3,18 +3,14 @@ title: Assimilar dados de pagamentos de sua conta do Stripe para o Experience Pl
 description: Saiba como assimilar dados de pagamentos de sua conta do Stripe para o Experience Platform usando a interface do usuário.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1658'
+source-wordcount: '1637'
 ht-degree: 3%
 
 ---
 
 # Assimilar dados de pagamentos de sua conta [!DNL Stripe] para a Experience Platform usando a interface do usuário
-
->[!NOTE]
->
->A origem [!DNL Stripe] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
 
 Leia o tutorial a seguir para saber como assimilar dados de pagamentos de sua conta do [!DNL Stripe] para a Adobe Experience Platform usando a interface do usuário.
 
@@ -116,7 +112,7 @@ Se você já tiver um conjunto de dados existente, selecione **[!UICONTROL Conju
 
 >[!ENDTABS]
 
-+++Selecione para obter as etapas para habilitar a Assimilação de perfil, o diagnóstico de erros e a assimilação parcial.
++++Selecione para obter as etapas para ativar a Assimilação de perfil, Diagnóstico de erro e Assimilação parcial.
 
 Se o seu conjunto de dados estiver habilitado para o Perfil de cliente em tempo real, durante essa etapa você poderá alternar para **[!UICONTROL o conjunto de dados do perfil]** para habilitar seus dados para assimilação de perfil. Você também pode usar esta etapa para habilitar o **[!UICONTROL Diagnóstico de erro]** e a **[!UICONTROL Assimilação parcial]**.
 

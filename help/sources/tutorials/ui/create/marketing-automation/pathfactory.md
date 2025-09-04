@@ -1,11 +1,10 @@
 ---
 title: Conectar sua conta do PathFactory à Experience Platform por meio da interface
 description: Saiba como conectar sua conta do PathFactory ao Experience Platform por meio da interface do usuário do.
-badge: Beta
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '571'
 ht-degree: 2%
 
 ---

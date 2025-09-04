@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
+source-git-commit: 8fe725ee41472d49cbc8411a0d2db665ac3c1814
 workflow-type: tm+mt
-source-wordcount: '5174'
+source-wordcount: '5200'
 ht-degree: 11%
 
 ---
@@ -330,7 +330,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 >[!NOTE]
 >
 >Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
->&#x200B;>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
 >
 >Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
 >
@@ -406,10 +406,7 @@ O carimbo de data/hora para perfis qualificados indica o trabalho de avaliação
 
 **[!UICONTROL Perfis estimados]** indica um **intervalo aproximado** de perfis, com base no **trabalho de amostra**. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode ser diferente do número real de perfis qualificados. A amostra de perfil estimada tem um intervalo de confiança de 95%.
 
-Esse número é atualizado em dois cenários:
-
-1. Há uma alteração maior que 3% nos dados do cliente ou o último trabalho de amostra tem mais de três dias.
-2. As regras do público-alvo foram modificadas ou removidas.
+Ao fazer alterações nas regras do público-alvo, você pode selecionar o botão **[!UICONTROL Atualizar estimativa]** para ver uma contagem atualizada dos perfis estimados. No entanto, esse número ainda se baseia no trabalho de amostra anterior. O trabalho de amostra é atualizado quando há uma alteração maior que 3% nos dados do cliente ou o último trabalho de amostra tem mais de três dias.
 
 Selecionar a bolha de informações fornece a data e a hora em que o último trabalho de amostra foi executado.
 

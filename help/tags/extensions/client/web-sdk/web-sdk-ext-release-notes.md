@@ -2,10 +2,10 @@
 title: Notas de versão da extensão para Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
+source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
 workflow-type: tm+mt
-source-wordcount: '2825'
-ht-degree: 27%
+source-wordcount: '2947'
+ht-degree: 26%
 
 ---
 
@@ -13,6 +13,18 @@ ht-degree: 27%
 # Notas de versão da extensão do Web SDK
 
 Este documento aborda as notas de versão da extensão de tag do Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes do próprio SDK, consulte as [notas de versão do Experience Platform Web SDK](/help/web-sdk/release-notes.md).
+
+## Versão 2.32.0 - 4 de setembro de 2025
+
+**Novos recursos**
+
+- Contém a [versão 2.29.0](../../../../web-sdk/release-notes.md#2-29-0) do Adobe Experience Platform Web SDK.
+- Adição de suporte para o Adobe Advertising como um novo componente de build personalizado. Configure na configuração da extensão e em enviar chamadas de evento.
+- Adição de suporte para gravar detalhes da assinatura push no Perfil. Isso é feito por meio de uma nova ação, &quot;Detalhes da assinatura por push&quot;
+
+**Correções e melhorias**
+
+- Edição de elemento de dados XDM aprimorada quando esquemas ou sandboxes não estão disponíveis. Agora é possível editar elementos de dados de Objeto e Variável XDM mesmo quando seus esquemas referenciados não puderem ser encontrados ou quando as sandboxes estiverem inacessíveis. Isso soluciona problemas que normalmente ocorrem durante as migrações da organização para novos data centers, em que as IDs de esquema podem mudar e que anteriormente faziam com que as interfaces de edição exibissem erros e se tornassem inutilizáveis.
 
 ## Versão 2.31.1 - sexta-feira, 31 de julho de 2025
 
@@ -34,7 +46,6 @@ Este documento aborda as notas de versão da extensão de tag do Adobe Experienc
 **Problemas conhecidos**
 
 - Após o lançamento da v2.31.0, um problema foi identificado com o processo [build de componentes personalizados](/help/web-sdk/install/create-custom-build.md). Enquanto as builds personalizadas continuam a operar, todos os componentes estão incluídos atualmente na build, resultando em um pacote de tamanho normal independentemente da seleção de componentes. Uma correção para esse problema está sendo desenvolvida. Se você depender da seleção de componentes personalizados para minimizar o tamanho da criação, é recomendável aguardar uma versão futura.
-
 
 ## Versão 2.30.1 - quarta-feira, 27 de maio de 2025
 
@@ -398,7 +409,7 @@ Contém a versão 2.3.0 da biblioteca de SDK da Web da Adobe Experience Platform
 - Atualizar para Alloy v. 2.1.0 ([Notas de versão](/help/web-sdk/release-notes.md)).
 - Suporte ao Padrão de consentimento IAB 2.0 na ação `setConsent`.
 - Suporte à substituição da ID do conjunto de dados na ação `sendEvent`.
-- Adiciona um novo Elemento de dados do tipo `IdentityMap`, que pode ser usado para preencher a entrada `identityMap` no Elemento de dados do objeto XDM (agora ativado) e na ação `setConsent`.
+- Adiciona um novo Elemento de dados do tipo `IdentityMap`, que pode ser usado para preencher a entrada `identityMap` no Elemento de dados do objeto XDM (agora habilitado) e na ação `setConsent`.
 - Suporte à transmissão de um mapa de identidade na ação `setConsent`.
 - Suporte à escolha de uma sandbox do Experience Platform no Elemento de dados do objeto XDM.
 

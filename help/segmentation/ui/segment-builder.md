@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 8fe725ee41472d49cbc8411a0d2db665ac3c1814
+source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
 workflow-type: tm+mt
-source-wordcount: '5200'
-ht-degree: 11%
+source-wordcount: '5248'
+ht-degree: 10%
 
 ---
 
@@ -130,7 +130,7 @@ Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Públicos-alvo externos"
->abstract="Os públicos-alvo importados por meio da guia Públicos-alvo agora são disponibilizados automaticamente no Portal de público-alvo. Os públicos-alvo assimilados a partir do Audience Manager, Customer Journey Analytics, da correspondência de segmentos e outras integrações personalizadas estão prontamente disponíveis, sem a necessidade de configuração prévia no Construtor de segmentos.  A partir de 1º de setembro de 2025, todos os públicos-alvo serão recuperados exclusivamente por meio da Pesquisa unificada e o fluxo de trabalho anterior não será mais compatível."
+>abstract="Os públicos-alvo importados por meio da guia Públicos-alvo agora são disponibilizados automaticamente no Portal de público-alvo. Isso inclui públicos-alvo assimilados da Audience Manager, do Customer Journey Analytics, da Correspondência de segmentos e de outras integrações personalizadas.<br/><br/>Até o final de setembro de 2025, os públicos-alvo serão recuperados exclusivamente por meio da Pesquisa unificada, e o fluxo de trabalho anterior não terá mais suporte. A Correspondência de segmentos permanece disponível somente para um pequeno número de clientes designados enquanto fazemos a transição do serviço. O acesso para novos clientes da Correspondência de segmentos ainda pode ser ativado mediante solicitação, antes que o serviço seja totalmente removido.<br/><br/>Para casos de uso de colaboração de dados em andamento, a Adobe recomenda mudar para o Collaboration, que é a solução com suporte a longo prazo."
 >additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de público-alvo"
 
 >[!NOTE]
@@ -330,7 +330,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 >[!NOTE]
 >
 >Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
->&#x200B;>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
 >
 >Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
 >

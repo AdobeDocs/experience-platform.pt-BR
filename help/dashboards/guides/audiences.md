@@ -89,7 +89,7 @@ Uma transferência de widget padrão é fornecida para todas as novas instância
 >[!NOTE]
 >
 >A partir de 26 de julho de 2023, os painéis de Visão geral do [!UICONTROL Perfis], [!UICONTROL Públicos-alvo] e [!UICONTROL Destinos] foram redefinidos como uma nova carga de widget padrão para todos os usuários que não modificaram suas visualizações nos seis meses anteriores.
->>Consulte a documentação nas seções de widget padrão [Perfis](./profiles.md#default-widgets) e [Destinos](./destinations.md#default-widgets) para obter detalhes sobre quais widgets são incluídos como parte dos carregamentos de widget padrão. Você pode continuar personalizando seus widgets de painel como antes.
+>&#x200B;>Consulte a documentação nas seções de widget padrão [Perfis](./profiles.md#default-widgets) e [Destinos](./destinations.md#default-widgets) para obter detalhes sobre quais widgets são incluídos como parte dos carregamentos de widget padrão. Você pode continuar personalizando seus widgets de painel como antes.
 
 ## Widgets da IA do cliente {#customer-ai-audiences-widgets}
 

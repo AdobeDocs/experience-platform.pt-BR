@@ -3,9 +3,9 @@ title: Estender programações de exportação do conjunto de dados para fluxos 
 description: Saiba como estender a programação de exportação para fluxos de dados de exportação de conjunto de dados criados antes de novembro de 2024 que deixarão de funcionar em 1º de setembro de 2025.
 type: Tutorial
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
-source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
+source-git-commit: 0da592dd2846ed0f1eeb31102842c8895cac6952
 workflow-type: tm+mt
-source-wordcount: '670'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -87,8 +87,6 @@ Agora você pode modificar a programação de exportação para estender-se alé
 
 ## O que acontece se eu perder o prazo final de 1º de setembro de 2025? {#missed-deadline}
 
-Se os fluxos de dados de exportação do seu conjunto de dados expiram em 1º de setembro de 2025 e você não estendeu suas agendas, há um **período de carência de 30 dias** em que você pode entrar em contato com a Adobe para reabilitar seus fluxos de dados sem perda de dados. Isso inclui dados que não foram exportados entre 1º de setembro e a data em que você entrou em contato com a Adobe.
+Se os fluxos de dados de exportação do seu conjunto de dados expiraram em 1º de setembro de 2025 e você ainda deseja estendê-los, siga as etapas nas seções acima para estender sua programação.
 
->[!IMPORTANT]
->
->Embora a Adobe forneça esse período de carência, recomendamos estender suas programações antes do prazo final de 1º de setembro de 2025 para garantir exportações de dados ininterruptas e evitar possíveis interrupções do serviço.
+Se você estender o agendamento de exportação em 30 dias (ou menos se o [tempo de vida definido no conjunto de dados exportado](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) for inferior a 30 dias), ainda será possível obter um preenchimento retroativo dos dados que não foram exportados entre 1º de setembro e a data em que você reabilitar a exportação. Ao definir uma nova hora de término, haverá *não* uma exportação de arquivo completa primeiro. Em vez disso, as exportações continuarão incrementalmente de onde pararam em 1º de setembro.

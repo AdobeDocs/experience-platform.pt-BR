@@ -316,7 +316,7 @@ Depois de aplicar as alterações, o novo campo aparece sob o namespace da ID do
 >[!CONTEXTUALHELP]
 >id="platform_schemas_enableforprofile"
 >title="Habilitar um esquema para o perfil"
->abstract="Quando um esquema é ativado para o perfil, qualquer conjunto de dados criado a partir desse esquema participa do perfil do cliente em tempo real, que mescla dados de fontes diferentes para construir uma visualização completa de cada cliente. Depois que um esquema é usado para assimilar dados no perfil, ele não pode ser desabilitado. Consulte a documentação para obter mais informações."
+>abstract="Quando um esquema é habilitado para o perfil, qualquer conjunto de dados criado a partir desse esquema participa do perfil do cliente em tempo real, que mescla dados de fontes diferentes para construir uma visualização completa de cada cliente. Depois que um esquema é usado para assimilar dados no perfil, ele não pode ser desabilitado. Consulte a documentação para obter mais informações."
 
 O [Perfil de Cliente em Tempo Real](../../../profile/home.md) mescla dados de diferentes fontes para criar uma exibição completa de cada cliente individual. Se quiser que os dados capturados por um esquema participem desse processo, habilite o esquema para uso em [!DNL Profile].
 
@@ -390,6 +390,6 @@ Depois de confirmar a alteração de classe, a tela será redefinida e todo o pr
 
 Este documento abordou as noções básicas para a criação e edição de esquemas na interface do usuário do Experience Platform. É altamente recomendável que você consulte o [tutorial de criação de esquemas](../../tutorials/create-schema-ui.md) para obter um fluxo de trabalho abrangente e criar um esquema completo na interface do usuário, incluindo a criação de grupos de campos personalizados e tipos de dados para casos de uso exclusivos.
 
-Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).
+Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
 
 Para saber como gerenciar esquemas na API [!DNL Schema Registry], consulte o [manual de endpoint de esquemas](../../api/schemas.md).

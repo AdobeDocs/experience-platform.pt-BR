@@ -330,7 +330,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 >[!NOTE]
 >
 >Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
->&#x200B;>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
 >
 >Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
 >

@@ -67,7 +67,7 @@ Além das composições de público-alvo e definições de segmento, você pode 
 >id="platform_segments_evaluation_streaming"
 >title="Avaliação de transmissão"
 >abstract="A segmentação de transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html?lang=pt-BR" text="Avaliar eventos em tempo quase real com a segmentação de transmissão"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Avaliar eventos em tempo quase real com a segmentação de transmissão"
 
 Atualmente, a Experience Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda.
 
@@ -82,9 +82,9 @@ Para saber mais sobre a segmentação por transmissão, leia a [documentação s
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_batch"
 >title="Avaliação em lote"
->abstract="Como alternativa a um processo de seleção de dados contínuo, a segmentação em lote move todos os dados do perfil de uma só vez por meio das definições de segmento para produzir públicos correspondentes. Depois de criado, o público-alvo é salvo e armazenado para que você possa exportá-lo para uso."
+>abstract="Como alternativa a um processo de seleção de dados contínuo, a segmentação em lote move todos os dados do perfil de uma só vez por meio das definições de segmento para produzir públicos-alvos correspondentes. Depois de criado, o público-alvo é salvo e armazenado para que você possa exportá-lo para uso."
 
-Como alternativa a um processo de seleção de dados contínuo, a segmentação em lote move todos os dados do perfil de uma só vez por meio das definições de segmento para produzir públicos correspondentes. Depois de criado, o público-alvo resultante é salvo e armazenado para que você possa exportá-lo para uso.
+Como alternativa a um processo de seleção de dados contínuo, a segmentação em lote move todos os dados do perfil de uma só vez por meio das definições de segmento para produzir públicos-alvos correspondentes. Depois de criado, o público-alvo resultante é salvo e armazenado para que você possa exportá-lo para uso.
 
 Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se quiser avaliar um público-alvo em lote sob demanda, você pode usar um trabalho de segmento. Para saber mais sobre trabalhos de segmento, leia a [documentação de trabalhos de segmento](./api/segment-jobs.md).
 
@@ -94,7 +94,7 @@ Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se qui
 >id="platform_segments_evaluation_edge"
 >title="Avaliação da borda"
 >abstract="A segmentação de borda é a capacidade de avaliar segmentos na Edge Network da Experience Platform instantaneamente, permitindo casos de uso de personalização da mesma página ou da próxima página."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=pt-BR" text="Guia de segmentação de borda"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Guia de segmentação de borda"
 
 A segmentação do Edge é a capacidade de avaliar segmentos no Experience Platform instantaneamente [no Edge Network](../landing/edge-and-hub-comparison.md), permitindo casos de uso de personalização de mesma página e próxima página.
 

@@ -138,8 +138,8 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 >[!NOTE]
 >
 >O hash automático de dados de namespaces sem hash é criado por [!DNL Experience Platform] após a ativação.
->&#x200B;> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
->&#x200B;> A opção **[!UICONTROL Aplicar transformação]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
+>> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
+>> A opção **[!UICONTROL Aplicar transformação]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
 
 ![Aplicar controle de transformação realçado na etapa de mapeamento.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -217,22 +217,22 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
->title="Origem do público"
+>title="Origem do público-alvo"
 >abstract="Escolha como os dados do cliente no público-alvo foram coletados originalmente. Os dados serão exibidos no Facebook quando um usuário for direcionado pelo segmento"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
->title="Origem do público"
+>title="Origem do público-alvo"
 >abstract="Os anunciantes coletaram dados diretamente dos clientes."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_partners"
->title="Origem do público"
+>title="Origem do público-alvo"
 >abstract="Os anunciantes coletaram dados diretamente de seus parceiros."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customersandpartners"
->title="Origem do público"
+>title="Origem do público-alvo"
 >abstract="Os anunciantes coletaram dados diretamente de seus clientes e parceiros."
 
 >[!IMPORTANT]

@@ -24,7 +24,7 @@ Este guia do usuário aborda etapas para trabalhar com rótulos de uso de dados 
 
 Para aplicar rótulos aos seus dados, você precisa da permissão **[!UICONTROL Gerenciar rótulos de uso]** para usar na sandbox de produção padrão chamada &quot;prod&quot;. Para criar um rótulo personalizado, você também deve ter direitos administrativos no perfil do produto. Cada organização tem apenas uma lista de rótulos aplicáveis. Você **não pode** excluir rótulos. Em vez disso, você pode removê-los dos conjuntos de dados ou campos aos quais são aplicados.
 
-Consulte o manual sobre como [configurar permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=pt-BR) ou a [visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre como atribuir uma permissão. Se você não tiver acesso à Admin Console para sua organização, entre em contato com o administrador da organização.
+Consulte o manual sobre como [configurar permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou a [visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre como atribuir uma permissão. Se você não tiver acesso à Admin Console para sua organização, entre em contato com o administrador da organização.
 
 ## Gerenciar rótulos no nível do esquema
 
@@ -61,7 +61,7 @@ Depois de criar um novo esquema ou selecionar um esquema existente da lista na g
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Instruções"
->abstract="<ol><li>Selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=pt-BR">Conjuntos de dados</a> na navegação à esquerda e selecione o conjunto de dados cujos dados você deseja restringir.</li><li>Na visualização de detalhes do conjunto de dados, selecione a guia <b>Governança de dados</b>.</li><li>Selecione os campos do conjunto de dados que deseja restringir e selecione <b>Editar rótulos de governança</b> para rotular os dados com base em restrições de uso.</li><li>Depois de rotular os dados, selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=pt-BR">Políticas</a> na navegação à esquerda, e selecione <b>Criar Política</b>.</li><li>Escolha criar uma <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=pt-BR#create-governance-policy">Política de governança de dados</a>, em seguida, selecione os rótulos de uso de dados que a política aplicará à política.</li><li>Selecione as ações de marketing que a política negará para quaisquer dados que contenham esses rótulos. Depois que a política for criada, selecione-a na lista e ative-a usando o botão de alternância no painel direito.</li><li>Para cada política habilitada, a Experience Platform impede que quaisquer dados que contenham os rótulos especificados sejam usados para as ações de marketing definidas. Essa imposição ocorre automaticamente quando você tenta ativar dados rotulados para um destino com ações de marketing associadas (casos de uso).</li></ol>"
+>abstract="<ol><li>Selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html?lang=pt-BR">Conjuntos de dados</a> na navegação à esquerda e selecione o conjunto de dados cujos dados você deseja restringir.</li><li>Na visualização de detalhes do conjunto de dados, selecione a guia <b>Governança de dados</b>.</li><li>Selecione os campos do conjunto de dados que deseja restringir e selecione <b>Editar rótulos de governança</b> para rotular os dados com base em restrições de uso.</li><li>Depois de rotular os dados, selecione <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html?lang=pt-BR">Políticas</a> na navegação à esquerda, e selecione <b>Criar Política</b>.</li><li>Escolha criar uma <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html?lang=pt-BR#create-governance-policy">Política de governança de dados</a>, em seguida, selecione os rótulos de uso de dados que a política aplicará à política.</li><li>Selecione as ações de marketing que a política negará para quaisquer dados que contenham esses rótulos. Depois que a política for criada, selecione-a na lista e habilite-a usando o botão de alternância no painel direito.</li><li>Para cada política habilitada, a Experience Platform impede que quaisquer dados que contenham os rótulos especificados sejam usados para as ações de marketing definidas. Essa imposição ocorre automaticamente quando você tenta ativar dados rotulados para um destino com ações de marketing associadas (casos de uso).</li></ol>"
 
 >[!IMPORTANT]
 >
@@ -112,8 +112,8 @@ A opção **[!UICONTROL Mostrar rótulos herdados]** está ativada por padrão, 
 >[!NOTE]
 >
 >Os rótulos aplicados antes da desativação do recurso de rotulagem do conjunto de dados podem ser removidos do conjunto de dados localizando o conjunto de dados relevante e selecionando o ícone de cancelamento no rótulo.
->&#x200B;>![A guia Governança de Dados do espaço de trabalho Conjuntos de Dados com um rótulo excluível destacado.](../images/labels/remove-governance-labels.png)
->&#x200B;>Consulte a documentação para obter instruções sobre [como migrar rótulos aplicados anteriormente do conjunto de dados para o nível de esquema](../e2e.md#migrate-labels).
+>>![A guia Governança de Dados do espaço de trabalho Conjuntos de Dados com um rótulo excluível destacado.](../images/labels/remove-governance-labels.png)
+>>Consulte a documentação para obter instruções sobre [como migrar rótulos aplicados anteriormente do conjunto de dados para o nível de esquema](../e2e.md#migrate-labels).
 
 ## Gerenciar rótulos personalizados {#manage-custom-labels}
 
@@ -156,4 +156,4 @@ Agora também é possível definir políticas de uso de dados com base nos rótu
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422793?quality=12&enable10seconds=on&speedcontrol=on&captions=por_br) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->

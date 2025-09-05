@@ -89,7 +89,7 @@ Uma transferência de widget padrão é fornecida para todas as novas instância
 >[!NOTE]
 >
 >A partir de 26 de julho de 2023, os painéis de Visão geral do [!UICONTROL Perfis], [!UICONTROL Públicos-alvo] e [!UICONTROL Destinos] foram redefinidos como uma nova carga de widget padrão para todos os usuários que não modificaram suas visualizações nos seis meses anteriores.
->Consulte a documentação nas seções de widget padrão [Perfis](./profiles.md#default-widgets) e [Destinos](./destinations.md#default-widgets) para obter detalhes sobre quais widgets são incluídos como parte dos carregamentos de widget padrão. Você pode continuar personalizando seus widgets de painel como antes.
+>>Consulte a documentação nas seções de widget padrão [Perfis](./profiles.md#default-widgets) e [Destinos](./destinations.md#default-widgets) para obter detalhes sobre quais widgets são incluídos como parte dos carregamentos de widget padrão. Você pode continuar personalizando seus widgets de painel como antes.
 
 ## Widgets da IA do cliente {#customer-ai-audiences-widgets}
 
@@ -184,7 +184,7 @@ Para obter mais informações sobre fragmentos e perfis mesclados, consulte a [V
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_segments_audiencesizetrend"
->title="Tendência de tamanho do público"
+>title="Tendência de tamanho do público-alvo"
 >abstract="Esse widget fornece informações sobre o número total de perfis que atendem aos critérios de **qualquer** definição de segmento, conforme capturado durante o instantâneo diário, nos últimos 30 dias, 90 dias ou 12 meses."
 
 O widget **[!UICONTROL Tendência de tamanho do público-alvo]** fornece uma ilustração de gráfico de linhas para o número total de perfis qualificados para **qualquer** público-alvo em um determinado período. A tendência de tamanho do público pode ser visualizada em períodos de 30 dias, 90 dias e 12 meses. O período é escolhido em um menu suspenso no widget. O tamanho do público é refletido no eixo y e a hora no eixo x.

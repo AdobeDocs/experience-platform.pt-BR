@@ -66,7 +66,7 @@ Uma transferência de widget padrão é fornecida para todas as novas instância
 >[!NOTE]
 >
 >A partir de 26 de julho de 2023, os painéis de Visão geral do [!UICONTROL Perfis], [!UICONTROL Públicos-alvo] e [!UICONTROL Destinos] foram redefinidos como uma nova carga de widget padrão para todos os usuários que não modificaram suas visualizações nos seis meses anteriores.
->Consulte a documentação nas seções de widget padrão [Perfis](./profiles.md#default-widgets) e [Públicos-alvo](./audiences.md#default-widgets) para obter detalhes sobre quais widgets são incluídos como parte dos carregamentos de widget padrão. Você pode continuar personalizando seus widgets de painel como antes.
+>>Consulte a documentação nas seções de widget padrão [Perfis](./profiles.md#default-widgets) e [Públicos-alvo](./audiences.md#default-widgets) para obter detalhes sobre quais widgets são incluídos como parte dos carregamentos de widget padrão. Você pode continuar personalizando seus widgets de painel como antes.
 
 ## Widgets padrão {#standard-widgets}
 
@@ -172,7 +172,7 @@ Consulte a seção de pré-requisitos para as [definições de termos usados](#p
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_audiencesizetrend"
->title="Tendência de tamanho do público"
+>title="Tendência de tamanho do público-alvo"
 >abstract="Esse dispositivo ilustra o número de perfis contidos no público-alvo que estão sendo enviados para a conta de destino diariamente. O primeiro menu suspenso ajusta o período da tendência do público-alvo. O segundo menu suspenso do dispositivo seleciona o público-alvo para análise. O destino é escolhido na lista suspensa de visão geral."
 
 O widget **[!UICONTROL Tendência de tamanho do público-alvo]** ilustra a relação da contagem de perfis durante um período para um público-alvo que foi mapeado para essa conta de destino. O widget usa um gráfico de linhas para ilustrar o número de perfis contidos no público-alvo, que estão sendo enviados para a conta de destino diariamente.
@@ -217,11 +217,11 @@ Esse dispositivo fornece uma lista dos cinco principais públicos-alvo **mapeado
 
 O widget **[!UICONTROL Públicos mapeados por identidade]** destaca rapidamente a probabilidade de direcionar com êxito as oportunidades de perfil para uma campanha no destino escolhido. Uma campanha direcionada eficiente não depende do número de perfis enviados para o destino, mas sim do número de IDs de origem que provavelmente serão correspondidas às IDs de destino para fornecer dados úteis e acionáveis.
 
-### Públicos comuns {#common-audiences}
+### Públicos-alvos comuns {#common-audiences}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_commonaudiences"
->title="Públicos comuns"
+>title="Públicos-alvos comuns"
 >abstract="Esse dispositivo fornece uma lista dos cinco principais públicos-alvo ativados na conta de destino escolhida na parte superior da página e o destino selecionado na lista suspensa do dispositivo. A lista de públicos-alvo é ordenada de acordo com a data mais recente de ativação. O público-alvo ativado mais recentemente é exibido na parte superior."
 
 O widget **[!UICONTROL Públicos-alvo comuns]** fornece uma lista dos cinco principais públicos-alvo ativados na conta de destino escolhida na parte superior da página, e o destino selecionado na lista suspensa do widget. A lista de públicos-alvo é ordenada de acordo com a data mais recente de ativação. O público-alvo ativado mais recentemente é exibido na parte superior.
@@ -238,12 +238,12 @@ Selecione **[!UICONTROL Públicos-alvo]** para navegar até a guia [!UICONTROL P
 
 ![O widget Públicos mapeados.](../images/destinations/mapped-audiences.png)
 
-### Integridade do público mapeado {#mapped-audience-health}
+### Integridade do público-alvo mapeado {#mapped-audience-health}
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mappedaudiencehealth"
->title="Integridade do público mapeado"
->abstract="Esse dispositivo fornece uma lista de até 20 públicos-alvo mapeados cujas contagens totais de perfil apresentam pelo menos um desvio padrão do tamanho médio de públicos-alvo (em um período de 30 dias) mapeados para esse destino. Ele fornece uma métrica calculada para a dispersão dos tamanhos do público da média nos últimos 30 dias. Os tamanhos do público são classificados do maior ao menor."
+>title="Integridade do público-alvo mapeado"
+>abstract="Esse dispositivo fornece uma lista de até 20 públicos-alvo mapeados cujas contagens totais de perfil apresentam pelo menos um desvio padrão do tamanho médio de públicos-alvo (em um período de 30 dias) mapeados para esse destino. Ele fornece uma métrica calculada para a dispersão dos tamanhos do público-alvo da média nos últimos 30 dias. Os tamanhos do público-alvo são classificados do maior ao menor."
 
 O widget fornece uma lista de até 20 públicos-alvo mapeados cujo total de perfis conta, a partir do último instantâneo diário, desvio por um fator de pelo menos um desvio padrão do tamanho médio do público-alvo de 30 dias mapeado para esse destino.
 
@@ -266,7 +266,7 @@ Se um público do widget [!UICONTROL Integridade do público-alvo mapeado] estiv
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_destinationscount"
 >title="Contagem de destinos"
->abstract="Esse widget fornece o número total de pontos de acesso disponíveis, onde um público pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos."
+>abstract="Esse widget fornece o número total de pontos de acesso disponíveis, onde um público-alvo pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos."
 
 O widget [!UICONTROL Contagem de destinos] fornece o número total de pontos de extremidade disponíveis nos quais um público-alvo pode ser ativado e entregue no sistema. Esse número inclui destinos ativos e inativos.
 

@@ -4,9 +4,9 @@ description: Use o conector de sincronização de pessoas do Marketo Engage para
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 88864353d4872d62258914d6490b90331692fa96
+source-git-commit: 7d9f06f77f2265f3ae62542fd7fc1bd09d34d078
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1127'
 ht-degree: 3%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->O cartão de destino da **[!UICONTROL Sincronização de pessoa do Marketo Engage]** será descontinuado em **março de 2026**.
+>O cartão de destino da **[!UICONTROL Sincronização de pessoa do Marketo Engage]** será descontinuado em **outubro de 2025**.
 >
 >Para garantir uma transição suave para o novo destino do **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)**, analise os seguintes pontos principais e ações necessárias:
 >
->* Todos os usuários dos destinos **[!UICONTROL Sincronização de pessoa do Marketo Engage]** devem migrar para o novo destino **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** até março de 2026.
+>* Todos os usuários devem **parar de usar o destino da Sincronização de Pessoas do Marketo Engage** e migrar para o novo destino do **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** até outubro de 2025.
 >* **Os fluxos de dados existentes não serão migrados automaticamente.** Você deve [configurar uma nova conexão](marketo-engage-connection.md#connect-to-the-destination) com o novo destino **[!UICONTROL Marketo Engage]** e ativar seus públicos lá.
 
 
@@ -78,7 +78,7 @@ Se sua empresa tiver acesso a várias organizações, certifique-se de usar a me
 
 >[!IMPORTANT]
 >
->O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
+>O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
 
 ![Conectar ao Destino](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -89,7 +89,7 @@ Se sua empresa tiver acesso a várias organizações, certifique-se de usar a me
 * **[!UICONTROL Primeiro campo pesquisável]**: campo no qual desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. O padrão é email
 * **[!UICONTROL Primeiro campo pesquisável]**: um campo secundário para desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. Opcional
 
-Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
+Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
 
 >[!IMPORTANT]
 > 

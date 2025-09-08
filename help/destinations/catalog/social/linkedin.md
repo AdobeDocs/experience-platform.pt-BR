@@ -3,9 +3,9 @@ keywords: conexão linkedin;conexão linkedin;destinos linkedin;linkedin;
 title: Conexão de públicos correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
+source-git-commit: 13b95db846d70c36233cf8ded491d19e1c93e4c0
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1329'
 ht-degree: 3%
 
 ---
@@ -13,6 +13,15 @@ ht-degree: 3%
 # [!DNL LinkedIn Matched Audiences] conexão
 
 ## Visão geral {#overview}
+
+>[!IMPORTANT]
+>
+>* A partir de 9 de setembro de 2025, você poderá ver dois cartões **[!DNL LinkedIn Matched Audiences]** lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. O conector de destino **[!DNL LinkedIn Matched Audiences]** existente foi renomeado para **[!UICONTROL (obsoleto) LinkedIn Matched Audiences]** e um novo cartão com o nome **[!UICONTROL LinkedIn Matched Audiences]** está disponível para você.
+>* Use a nova conexão **[!UICONTROL Públicos-alvo correspondentes do LinkedIn]** no catálogo para novos fluxos de dados de ativação. Se você tiver fluxos de dados ativos para o destino **[!UICONTROL (obsoleto) LinkedIn Matched Audiences]**, eles serão atualizados automaticamente, portanto, nenhuma ação é necessária.
+>* A nova conexão **[!UICONTROL Públicos-alvo correspondentes do LinkedIn]** não oferece mais suporte às identidades [!DNL IDFA].
+>* Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores:
+>   * ID da especificação de fluxo: `963604d1-811d-4ce4-ac66-1fc78bde7c42`
+>   * ID de especificação da conexão: `393a7ce1-e527-4fdb-8d99-0b11dc910279`
 
 Ative perfis para suas campanhas do [!DNL LinkedIn] para direcionamento de público, personalização e supressão, com base em emails com hash e IDs de dispositivos móveis.
 
@@ -31,7 +40,6 @@ Uma empresa de software organiza uma conferência e deseja manter contato com os
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Selecione essa identidade de destino quando a identidade de origem for um namespace GAID. |
-| IDFA | Apple ID para anunciantes | Selecione essa identidade de destino quando sua identidade de origem for um namespace IDFA. |
 | email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para emails com texto sem formatação e hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
 
 {style="table-layout:auto"}
@@ -88,7 +96,7 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 >[!NOTE]
 >
 >O hash automático de dados de namespaces sem hash é criado por [!DNL Experience Platform] após a ativação.
->&#x200B;> Os dados de origem do atributo não são automaticamente transformados em hash.
+>> Os dados de origem do atributo não são automaticamente transformados em hash.
 > 
 > Durante a etapa [Mapeamento de Identidade](../../ui/activate-segment-streaming-destinations.md#mapping), quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
 > 

@@ -162,7 +162,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 Assista ao vídeo abaixo para obter uma explicação dos benefícios e como ativar os dados para o Google Customer Match.
 
->[!VIDEO](https://video.tv.adobe.com/v/38180/)
+>[!VIDEO](https://video.tv.adobe.com/v/326489?captions=por_br)
 
 ## Conectar ao destino {#connect}
 

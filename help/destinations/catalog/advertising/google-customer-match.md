@@ -3,9 +3,9 @@ keywords: correspondência do cliente do google;correspondência do cliente do G
 title: Conexão de Correspondência de cliente do Google
 description: O Google Customer Match permite usar seus dados online e offline para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping e Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
+source-git-commit: 4541e812ac1f44b5374b81685c1e41cb7f00993f
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2451'
 ht-degree: 0%
 
 ---
@@ -15,12 +15,12 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > A Google está lançando alterações na [API do Google Ads](https://developers.google.com/google-ads/api/docs/start), na [Correspondência do Cliente](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) e na [API de Exibição e Vídeo 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para oferecer suporte aos requisitos de conformidade e consentimento definidos na [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) da União Europeia ([Política de Consentimento do Usuário](https://www.google.com/about/company/user-consent-policy/) da UE). A aplicação dessas alterações aos requisitos de consentimento estará em vigor a partir de 6 de março de 2024.
-><br/>
->Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como parceiro da Google, a Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
-><br/>
->Os clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram uma [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos não precisam tomar nenhuma ação.
-><br/>
->Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar os recursos de [definição de segmento](../../../segmentation/home.md#segment-definitions) no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos do Real-Time CDP Google existentes sem interrupção.
+> ><br/>
+> >Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como parceiro da Google, a Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
+> ><br/>
+> >Os clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram uma [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos não precisam tomar nenhuma ação.
+> ><br/>
+> >Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar os recursos de [definição de segmento](../../../segmentation/home.md#segment-definitions) no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos do Real-Time CDP Google existentes sem interrupção.
 
 O [[!DNL Google Customer Match]](https://support.google.com/google-ads/answer/6379332?hl=en) permite que você use seus dados online e offline para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como: [!DNL Search], [!DNL Shopping] e [!DNL Gmail].
 
@@ -96,7 +96,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Antes de configurar um destino [!DNL Google Customer Match] no Experience Platform, leia e siga a política da Google para usar o [!DNL Customer Match], descrita na [documentação de suporte do Google](https://support.google.com/google-ads/answer/6299717).
 
-Em seguida, verifique se a sua conta [!DNL Google] está configurada para um nível de permissão [!DNL Standard] ou superior. Consulte a [documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.
+Em seguida, verifique se a sua conta [!DNL Google] está configurada para um nível de permissão [!DNL Standard] ou superior. Consulte a [documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) para obter detalhes.
 
 ### Lista de permissões {#allowlist}
 
@@ -162,7 +162,7 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 
 Assista ao vídeo abaixo para obter uma explicação dos benefícios e como ativar os dados para o Google Customer Match.
 
->[!VIDEO](https://video.tv.adobe.com/v/326489?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/38180/)
 
 ## Conectar ao destino {#connect}
 
@@ -179,6 +179,10 @@ Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornec
 * **[!UICONTROL Nome]**: forneça um nome para esta conexão de destino
 * **[!UICONTROL Descrição]**: forneça uma descrição para esta conexão de destino
 * **[!UICONTROL ID da conta]**: sua [ID de cliente do Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en). O formato da ID é xxx-xxx-xxxx. Se você estiver usando o [!DNL Google Ads Manager Account (My Client Center)], não use sua ID de Conta de Gerente. Em vez disso, use a [ID de cliente do Google Ads](https://support.google.com/google-ads/answer/1704344?hl=en).
+
+>[!NOTE]
+>
+>Durante o processo de conexão OAuth2, você pode ver &quot;Marketo Test&quot; exibido como o nome do projeto OAuth do Google. Esse é um comportamento normal, pois a Adobe usa esse nome de projeto para a integração do Customer Match da Google. Isso não afeta a configuração de destino.
 
 >[!IMPORTANT]
 >
@@ -256,4 +260,4 @@ Ao configurar esse destino, você pode receber o seguinte erro:
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Este erro ocorre quando as contas de clientes não atendem aos [pré-requisitos](#google-account-prerequisites). Para corrigir esse problema, contate a Google e verifique se sua conta está incluída na lista de permissões e configurada para um nível de permissão [!DNL Standard] ou superior. Consulte a [documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) para obter detalhes.
+Este erro ocorre quando as contas de clientes não atendem aos [pré-requisitos](#google-account-prerequisites). Para corrigir esse problema, contate a Google e verifique se sua conta está incluída na lista de permissões e configurada para um nível de permissão [!DNL Standard] ou superior. Consulte a [documentação do Google Ads](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) para obter detalhes.

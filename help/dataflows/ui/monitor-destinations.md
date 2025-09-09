@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
+source-git-commit: 9d92999df8e35ac6223986ece8a98af72ab6ace8
 workflow-type: tm+mt
-source-wordcount: '3621'
+source-wordcount: '3623'
 ht-degree: 9%
 
 ---
@@ -40,7 +40,7 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 
 | Status | Descrição |
 | ------ | ----------- |
-| Ativado | O status `Enabled` indica que um fluxo de dados está ativo e está exportando dados de acordo com o agendamento fornecido. |
+| Habilitado | O status `Enabled` indica que um fluxo de dados está ativo e está exportando dados de acordo com o agendamento fornecido. |
 | Desabilitado | O status `Disabled` indica que um fluxo de dados está inativo e não está exportando dados. |
 | Processamento | O status `Processing` indica que um fluxo de dados ainda não está ativo. Esse status geralmente é encontrado imediatamente após a criação de um novo fluxo de dados. |
 | Erro | O status `Error` indica que o processo de ativação de um fluxo de dados foi interrompido. |
@@ -86,10 +86,10 @@ Uma lista de execuções individuais e suas métricas específicas é exibida, j
 
 Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 
-- **[!UICONTROL Início da execução do fluxo de dados]**: a hora em que a execução do fluxo de dados começou. Para execuções de fluxo de dados de transmissão, o Experience Platform captura as métricas com base no início da execução do fluxo de dados, na forma de métricas por hora. Isso significa que, para execuções de fluxo de dados de transmissão, se uma execução de fluxo de dados tiver começado, por exemplo, às 22h30, a métrica mostrará a hora de início como 22h na interface do usuário.
+- **[!UICONTROL Início da execução do fluxo de dados]**: a hora em que a execução do fluxo de dados começou. Para execuções de fluxo de dados de transmissão, o Experience Platform captura as métricas com base no início da execução do fluxo de dados, na forma de métricas por hora. Isso significa que, para execuções de fluxo de dados de transmissão, se uma execução de fluxo de dados tiver começado, por exemplo, em 10:30PM, a métrica mostrará a hora de início como 10:00 PM na interface do usuário.
 - **[!UICONTROL Tempo de processamento]**: o tempo necessário para a execução do fluxo de dados ser processada.
    - Para execuções de **[!UICONTROL concluídas]**, a métrica de tempo de processamento sempre mostra uma hora.
-   - Para execuções de fluxo de dados que ainda estão em um estado **[!UICONTROL processando]**, a janela para capturar todas as métricas permanece aberta por mais de uma hora, para processar todas as métricas que correspondem à execução do fluxo de dados. Por exemplo, uma execução de fluxo de dados iniciada às 9h30 pode permanecer em um estado de processamento por uma hora e trinta minutos para capturar e processar todas as métricas. Em seguida, quando a janela de processamento fechar e o status da execução do fluxo de dados atualizar para **concluído**, o tempo de processamento exibido será alterado para uma hora.
+   - Para execuções de fluxo de dados que ainda estão em um estado **[!UICONTROL processando]**, a janela para capturar todas as métricas permanece aberta por mais de uma hora, para processar todas as métricas que correspondem à execução do fluxo de dados. Por exemplo, uma execução de fluxo de dados iniciada às 9h00 pode permanecer em um estado de processamento por uma hora e trinta minutos para capturar e processar todas as métricas. :30 Em seguida, quando a janela de processamento fechar e o status da execução do fluxo de dados atualizar para **concluído**, o tempo de processamento exibido será alterado para uma hora.
 - **[!UICONTROL Perfis recebidos]**: o número total de perfis recebidos no fluxo de dados.
 - **[!UICONTROL Identidades ativadas]**: o número total de identidades de perfil ativadas com êxito para o destino selecionado como parte da execução do fluxo de dados. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados.
 - **[!UICONTROL Identidades excluídas]**: o número total de identidades de perfil excluídas da ativação com base em atributos ausentes e violação de consentimento.
@@ -327,11 +327,27 @@ Por exemplo, você está ativando um público-alvo chamado &quot;Membros de fide
 >
 >- A exibição no nível do público-alvo está disponível atualmente para os destinos listados abaixo. A implantação está planejada para outros destinos de streaming.
 >
->   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
->   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
->   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
->   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - Conexão com o [[!DNL (API) Oracle Eloqua] ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+>   - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+>   - [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+>   - [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+>   - [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+>   - [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+>   - [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+>   - [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+>   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+>   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+>   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+>   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - Destinos em lote (baseados em arquivo)
 > 
 >- Para destinos em lote, as métricas no nível do público-alvo são atualmente registradas somente para execuções bem-sucedidas de fluxo de dados. Eles não são registrados para execuções de fluxo de dados com falha e registros excluídos. Para execuções de fluxo de dados para destinos de transmissão, as métricas são capturadas e exibidas para registros ativados e excluídos.

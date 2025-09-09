@@ -4,9 +4,9 @@ title: Ative públicos para destinos baseados em arquivo usando a API do Serviç
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
 workflow-type: tm+mt
-source-wordcount: '4763'
+source-wordcount: '4911'
 ht-degree: 3%
 
 ---
@@ -1081,7 +1081,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Resposta**
 
-+++SFTP - Resposta à conexão básica
++++SFTP - Resposta de conexão básica
 
 ```json
 {
@@ -1137,11 +1137,11 @@ Como opção, você pode adicionar criptografia aos arquivos exportados. Para fa
             ]
 ```
 
-+++
++++ 
 
 **Solicitação**
 
-+++Adicionar criptografia à conexão básica - Solicitar
++++Adicionar criptografia à conexão básica - Solicitação
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -1181,7 +1181,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Resposta**
 
-+++Adicionar criptografia à conexão básica - Resposta
++++Adicionar criptografia à conexão base - Resposta
 
 ```json
 {
@@ -2422,7 +2422,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec id
@@ -2456,6 +2457,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2514,7 +2516,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "container": "your-container-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec id
@@ -2548,6 +2551,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2605,7 +2609,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "be2c3209-53bc-47e7-ab25-145db8b873e1", // Azure Data Lake Gen 2(ADLS Gen2) connection spec id
@@ -2639,6 +2644,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2696,7 +2702,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone connection spec id
@@ -2730,6 +2737,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2788,7 +2796,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99", // Google Cloud Storage connection spec id
@@ -2822,6 +2831,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2879,7 +2889,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "remotePath": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec id
@@ -2913,6 +2924,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -3292,7 +3304,7 @@ Veja abaixo exemplos de solicitações e respostas para recuperar atributos e id
 
 **Solicitação para obter atributos**
 
-+++Obter atributos disponíveis do esquema de união - Solicitação
++++Obter atributos disponíveis do seu esquema de união - Solicitação
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/entityTypes/_xdm.context.profile?property=fullSchema==true&property=includeRelationshipDescriptors==true' \ 
@@ -3726,7 +3738,7 @@ Em seguida, você deve configurar o schema de saída para sua exportação. Prim
 
 **Solicitação**
 
-+++Solicitação para obter esquema de parceiro para o esquema de saída
++++Solicitação para obter o esquema do parceiro para o esquema de saída
 
 Observe que o exemplo abaixo usa `connection spec ID` para Amazon S3. Substitua esse valor pela ID de especificação da conexão específica ao seu destino.
 
@@ -4504,7 +4516,7 @@ A resposta da API do Serviço de fluxo retorna a ID do fluxo de dados atualizado
 
 ![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/step7.png)
 
-Para fazer atualizações no fluxo de dados, use a operação `PATCH`. Por exemplo, você pode adicionar uma ação de marketing aos seus fluxos de dados. Ou você pode atualizar seus fluxos de dados para selecionar campos como chaves obrigatórias ou chaves de desduplicação.
+Para fazer atualizações no fluxo de dados, use a operação `PATCH`. Por exemplo, você pode adicionar uma ação de marketing aos fluxos de dados, atualizar seus fluxos de dados para selecionar campos como chaves obrigatórias ou chaves de desduplicação ou adicionar a geração de manifesto de arquivo aos destinos existentes.
 
 ### Adicionar uma ação de marketing {#add-marketing-action}
 
@@ -4697,7 +4709,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 +++
 
-+++Adicionar um atributo XDM como chave de desduplicação - Solicitar
++++Adicionar um atributo XDM como chave de desduplicação - Solicitação
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -4736,6 +4748,44 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ```
 
 +++
+
+>[!ENDSHADEBOX]
+
+### Adicionar geração de manifesto de arquivo ao destino existente {#add-file-manifest}
+
+Para adicionar a geração de manifesto de arquivo a um destino existente, é necessário atualizar os parâmetros de conexão de destino usando a operação `PATCH`. Isso habilita a geração de arquivo de manifesto para o seu destino, que fornece metadados sobre os arquivos exportados.
+
+>[!IMPORTANT]
+>
+>O cabeçalho `If-Match` é necessário ao fazer uma solicitação `PATCH`. O valor desse cabeçalho é a versão exclusiva da conexão de destino que você deseja atualizar. O valor da tag é atualizado com cada atualização bem-sucedida de uma entidade de fluxo, como fluxo de dados, conexão de destino e outras.
+>
+> Para obter a versão mais recente do valor da tag, execute uma solicitação GET para o ponto de extremidade `https://platform.adobe.io/data/foundation/flowservice/targetConnections/{ID}`, em que `{ID}` é a ID de conexão de destino que você deseja atualizar.
+>
+> Certifique-se de colocar o valor do cabeçalho `If-Match` entre aspas duplas, como nos exemplos abaixo, ao fazer solicitações `PATCH`.
+
+>[!BEGINSHADEBOX]
+
+**Solicitação**
+
++++Adicionar manifesto de arquivo à conexão de destino existente - Solicitação
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+  {
+    "op": "add",
+    "path": "/params/includeFileManifest",
+    "value": true
+  }
+]'
+```
 
 >[!ENDSHADEBOX]
 

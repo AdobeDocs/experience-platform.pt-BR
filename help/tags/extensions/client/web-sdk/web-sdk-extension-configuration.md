@@ -42,7 +42,7 @@ Ao criar uma build personalizada do Web SDK, ela é usada por todas as instânci
 >[!IMPORTANT]
 >
 >A desativação dos componentes do Web SDK pode interromper a implementação existente. Cada vez que desabilitar um componente, certifique-se de testar sua implementação completamente para garantir que todas as funcionalidades necessárias estejam funcionando como esperado.
->>Quando você desativa um componente, não pode mais editar as configurações desse componente.
+>&#x200B;>Quando você desativa um componente, não pode mais editar as configurações desse componente.
 
 Para criar um build personalizado do Web SDK usando a extensão de tag da Web SDK, siga as etapas abaixo.
 
@@ -123,9 +123,10 @@ Esta seção permite definir o comportamento do Web SDK quando se trata de lidar
 * **[!UICONTROL Usar cookies de terceiros]**: quando esta opção é habilitada, o Web SDK tenta armazenar um identificador de usuário em um cookie de terceiros. Se for bem-sucedido, o usuário será identificado como um único usuário durante a navegação em vários domínios, em vez de ser identificado como um usuário separado em cada domínio. Se essa opção estiver ativada, o SDK ainda poderá não conseguir armazenar o identificador do usuário em um cookie de terceiros se o navegador não for compatível com cookies de terceiros ou tiver sido configurado pelo usuário para não permitir cookies de terceiros. Nesse caso, o SDK armazena apenas o identificador no domínio próprio.
 
   >[!IMPORTANT]
-  >>Cookies de terceiros não são compatíveis com a funcionalidade [ID de dispositivo próprio](../../../../web-sdk/identity/first-party-device-ids.md) no Web SDK.
-  >>Você pode usar IDs de dispositivo primário ou cookies de terceiros, mas não pode usar ambos os recursos simultaneamente.
+  >&#x200B;>Cookies de terceiros não são compatíveis com a funcionalidade [ID de dispositivo próprio](../../../../web-sdk/identity/first-party-device-ids.md) no Web SDK.
+  >&#x200B;>Você pode usar IDs de dispositivo primário ou cookies de terceiros, mas não pode usar ambos os recursos simultaneamente.
   >
+
 ## Definir configurações de personalização {#personalization}
 
 Esta seção permite configurar como você deseja ocultar determinadas partes de uma página enquanto o conteúdo personalizado é carregado. Isso garante que seus visitantes vejam apenas a página personalizada.

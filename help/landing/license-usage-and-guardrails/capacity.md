@@ -2,9 +2,9 @@
 title: Uso e capacidade da licença
 description: Saiba mais sobre o uso de sua licença e os limites de capacidade no Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
+source-git-commit: 568a0ba7707402496167145ce2673181b240496e
 workflow-type: tm+mt
-source-wordcount: '1537'
+source-wordcount: '1593'
 ht-degree: 6%
 
 ---
@@ -55,11 +55,13 @@ Nesses serviços, as seguintes medidas de proteção são rastreadas:
 
 - O número máximo de públicos-alvo de transmissão é 500
    - Desses 500 públicos-alvo de transmissão, o número máximo de públicos-alvo de borda é 150
-- A taxa de transferência máxima combinada para a segmentação por transmissão é de 1500 registros por segundo (rps)
+- A taxa de transferência inicial combinada para assimilação por transmissão é de 1500 registros por segundo (rps)
+   - Essa taxa de transferência de transmissão combinada mede o pico combinado de eventos de entrada por segundo para a assimilação de transmissão no Perfil do cliente em tempo real em suas sandboxes de produção e desenvolvimento.
+   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 A capacidade de público-alvo está no nível de **sandbox**. Isso significa que, para cada sandbox que você tem em sua organização, você pode ter 500 públicos-alvo de transmissão, dos quais 150 podem ser públicos-alvo de borda.
 
-A capacidade de taxa de transferência está em um nível de **organização** e pode ser distribuída para suas sandboxes individuais. Por exemplo, com a taxa de transferência de segmentação de streaming de 1500 rps, é possível definir a sandbox de produção como 1350 rps e a sandbox de desenvolvimento como 150 rps.
+A capacidade de taxa de transferência de transmissão está em um nível de **organização** e pode ser distribuída para suas sandboxes individuais. Por exemplo, com a taxa de transferência de assimilação de 1500 rps para streaming, é possível definir a sandbox de produção como 1300 rps e a sandbox de desenvolvimento como 200 rps.
 
 O Experience Platform calcula a taxa de transferência da sandbox em intervalos contínuos de 15 minutos. Essa taxa de transferência é medida em tempo real, com os dados sendo atualizados a cada 60 segundos.
 
@@ -202,11 +204,11 @@ Você garante um desempenho consistente durante os eventos de pico, evitando pro
 
 +++
 
-### Quais são as práticas recomendadas para gerenciar a taxa de transferência da segmentação por transmissão?
+### Quais são as práticas recomendadas para gerenciar a taxa de transferência de assimilação por transmissão?
 
 +++ Resposta
 
-Para gerenciar melhor a taxa de transferência da segmentação por transmissão, avalie os conjuntos de dados para garantir que eles estejam priorizando os dados necessários para personalização.
+Para gerenciar melhor a taxa de transferência de assimilação de streaming, você deve avaliar seus conjuntos de dados para garantir que eles estejam priorizando os dados necessários para personalização.
 
 
 Se o processamento em tempo real não for necessário, você deverá usar a assimilação em lote em vez da assimilação por transmissão.

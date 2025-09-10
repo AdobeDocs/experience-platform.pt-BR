@@ -2,7 +2,7 @@
 title: Guia de segmentação do Edge
 description: Saiba como usar a segmentação de borda para avaliar públicos no Experience Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
+source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
 workflow-type: tm+mt
 source-wordcount: '1148'
 ht-degree: 1%
@@ -31,10 +31,10 @@ Uma consulta pode ser avaliada com segmentação de borda se atender a qualquer 
 
 | Tipo de consulta | Detalhes | Consulta | Exemplo |
 | ---------- | ------- | ----- | ------- |
-| Evento único em uma janela de tempo de menos de 24 horas | Qualquer definição de segmento que se refira a um único evento recebido em uma janela de tempo de menos de 24 horas. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Um exemplo de um único evento em uma janela de tempo relativa é mostrado.](../images/methods/edge/single-event.png) |
-| Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. | `homeAddress.country.equals("US", false)` | ![Um exemplo de um atributo de perfil mostrado.](../images/methods/edge/profile-attribute.png) |
-| Evento único com um atributo de perfil em uma janela de tempo relativa de menos de 24 horas | Qualquer definição de segmento que se refere a um único evento recebido, com um ou mais atributos de perfil, e ocorre em uma janela de tempo relativa de menos de 24 horas. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Um exemplo de um único evento com um atributo de perfil em uma janela de tempo relativa é mostrado.](../images/methods/edge/single-event-with-profile-attribute.png) |
-| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos de lote ou de borda. **Observação:** se um segmento de segmentos for usado, a desqualificação de perfis ocorrerá **a cada 24 horas**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![Um exemplo de segmento de segmentos é mostrado.](../images/methods/edge/segment-of-segments.png) |
+| Evento único em uma janela de tempo de menos de 24 horas | Qualquer definição de segmento que se refira a um único evento recebido em uma janela de tempo de menos de 24 horas. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Um exemplo de um único evento em uma janela de tempo relativa é mostrado.](../images/methods/edge/single-event.png){zoomable="yes"} |
+| Somente perfil | Qualquer definição de segmento que se refere apenas a um atributo de perfil. | `homeAddress.country.equals("US", false)` | ![Um exemplo de um atributo de perfil mostrado.](../images/methods/edge/profile-attribute.png){zoomable="yes"} |
+| Evento único com um atributo de perfil em uma janela de tempo relativa de menos de 24 horas | Qualquer definição de segmento que se refere a um único evento recebido, com um ou mais atributos de perfil, e ocorre em uma janela de tempo relativa de menos de 24 horas. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![Um exemplo de um único evento com um atributo de perfil em uma janela de tempo relativa é mostrado.](../images/methods/edge/single-event-with-profile-attribute.png){zoomable="yes"} |
+| Segmento de segmentos | Qualquer definição de segmento que contenha um ou mais segmentos de lote ou de borda. **Observação:** se um segmento de segmentos for usado, a desqualificação de perfis ocorrerá **a cada 24 horas**. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![Um exemplo de segmento de segmentos é mostrado.](../images/methods/edge/segment-of-segments.png){zoomable="yes"} |
 
 Além disso, a definição de segmento **deve** estar vinculada a uma política de mesclagem que esteja ativa na borda. Para obter mais informações sobre políticas de mesclagem, leia o [guia de políticas de mesclagem](../../profile/api/merge-policies.md).
 
@@ -153,15 +153,15 @@ Mais informações sobre como usar este ponto de extremidade podem ser encontrad
 
 No Portal de Público, selecione **[!UICONTROL Criar público-alvo]**.
 
-![O botão Criar público-alvo está realçado no Portal de Público-Alvo.](../images/methods/edge/select-create-audience.png)
+![O botão Criar público-alvo está realçado no Portal de Público-Alvo.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
 Um popover é exibido. Selecione **[!UICONTROL Regras de compilação]** para entrar no Construtor de segmentos.
 
-![O botão Criar regras está realçado no popover Criar público-alvo.](../images/methods/edge/select-build-rules.png)
+![O botão Criar regras está realçado no popover Criar público-alvo.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
 No Construtor de segmentos, crie uma definição de segmento que corresponda a um dos [tipos de consulta qualificados](#eligible-query-types). Se a definição de segmento se qualificar para segmentação de borda, você poderá selecionar **[!UICONTROL Edge]** como o **[!UICONTROL método de avaliação]**.
 
-![A definição de segmento é exibida. O tipo de avaliação está realçado, mostrando que a definição de segmento pode ser avaliada usando a segmentação de borda.](../images/methods/edge/edge-evaluation-method.png)
+![A definição de segmento é exibida. O tipo de avaliação está realçado, mostrando que a definição de segmento pode ser avaliada usando a segmentação de borda.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
 Para saber mais sobre como criar definições de segmento, leia o [Guia do Construtor de segmentos](../ui/segment-builder.md)
 
@@ -297,11 +297,11 @@ Informações mais detalhadas sobre a definição de segmento retornada podem se
 
 Você pode recuperar todos os públicos-alvo que estão ativados para segmentação de borda na organização usando filtros no Portal de público-alvo. Selecione o ícone ![filtro](../../images/icons/filter.png) para exibir a lista de filtros.
 
-![O ícone de filtro está realçado no Audience Portal.](../images/methods/filter-audiences.png)
+![O ícone de filtro está realçado no Audience Portal.](../images/methods/filter-audiences.png){zoomable="yes"}
 
 Nos filtros disponíveis, vá para **Atualizar frequência** e selecione &quot;Edge&quot;. O uso desse filtro exibe todos os públicos-alvo na sua organização que são avaliados usando a segmentação de borda.
 
-![A frequência de atualização do Edge está selecionada, exibindo todos os públicos-alvo na organização que são avaliados usando a segmentação de borda.](../images/methods/edge/filter-edge.png)
+![A frequência de atualização do Edge está selecionada, exibindo todos os públicos-alvo na organização que são avaliados usando a segmentação de borda.](../images/methods/edge/filter-edge.png){zoomable="yes"}
 
 Para saber mais sobre como exibir públicos-alvo no Experience Platform, leia o [Guia do Portal de Público-Alvo](../ui/audience-portal.md).
 
@@ -321,7 +321,7 @@ A métrica **[!UICONTROL Total qualificado]** representa o número total de púb
 
 A métrica **[!UICONTROL Novo público atualizado]** é representada por um gráfico de linhas que mostra a alteração no tamanho do público-alvo por meio da segmentação de borda. Você pode ajustar a lista suspensa para mostrar as últimas 24 horas, a última semana ou os últimos 30 dias.
 
-![Os perfis no cartão de ponto estão realçados.](../images/methods/edge/profiles-over-time.png)
+![Os perfis no cartão de ponto estão realçados.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
 Para obter mais detalhes sobre detalhes do público-alvo, leia a [Visão geral do Portal de público-alvo](../ui/audience-portal.md#audience-details).
 

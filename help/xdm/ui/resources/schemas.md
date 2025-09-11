@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar e editar esquemas na interface
 description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
 workflow-type: tm+mt
-source-wordcount: '4078'
-ht-degree: 1%
+source-wordcount: '4178'
+ht-degree: 2%
 
 ---
 
@@ -167,27 +167,43 @@ Depois de adicionar um grupo de campos a um esquema, você pode, opcionalmente, 
 
 ### Remover campos adicionados de grupos de campos {#remove-fields}
 
-Depois de adicionar um grupo de campos a um esquema, você pode remover os campos desnecessários.
+Depois de adicionar um grupo de campos a um esquema, você pode remover campos globalmente do grupo de campos ou ocultá-los localmente do esquema atual. Entender a diferença entre essas ações é essencial para evitar alterações não intencionais no esquema.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->A remoção de campos de um grupo de campos afeta apenas o esquema que está sendo trabalhado e não afeta o próprio grupo de campos. Se você remover campos em um esquema, esses campos ainda estarão disponíveis em todos os outros esquemas que empregam o mesmo grupo de campos.
+>Selecionar **[!UICONTROL Remover]** exclui o campo do próprio grupo de campos, afetando *todos* esquemas que usam esse grupo de campos.
+>>Não use esta opção, a menos que deseje **remover o campo de cada esquema que inclua o grupo de campos**.
 
-No exemplo a seguir, o grupo de campos padrão **[!UICONTROL Detalhes demográficos]** foi adicionado a um esquema. Para remover um único campo, como `taxId`, selecione o campo na tela e selecione **[!UICONTROL Remover]** no painel direito.
+Para excluir um campo do grupo de campos, selecione-o na tela e selecione **[!UICONTROL Remover]** no painel direito. Este exemplo mostra o campo `taxId` do grupo **[!UICONTROL Detalhes Demográficos]**.
 
 ![O [!DNL Schema Editor] com [!UICONTROL Remover] realçado. Esta ação remove um único campo.](../../images/ui/resources/schemas/remove-single-field.png)
 
-Se houver vários campos que você deseja remover, é possível gerenciar o grupo de campos como um todo. Selecione um campo pertencente ao grupo na tela e selecione **[!UICONTROL Gerenciar campos relacionados]** no painel direito.
+Para ocultar vários campos de um esquema sem removê-los do próprio grupo de campos, use a opção **[!UICONTROL Gerenciar campos relacionados]**. Selecione qualquer campo do grupo na tela e selecione **[!UICONTROL Gerenciar campos relacionados]** no painel direito.
 
 ![O [!DNL Schema Editor] com [!UICONTROL Gerenciar campos relacionados] foi realçado.](../../images/ui/resources/schemas/manage-related-fields.png)
 
-Uma caixa de diálogo é exibida mostrando a estrutura do grupo de campos em questão. Aqui, é possível usar as caixas de seleção fornecidas para marcar ou desmarcar os campos necessários. Quando estiver satisfeito, selecione **[!UICONTROL Confirmar]**.
+Uma caixa de diálogo é exibida mostrando a estrutura do grupo de campos. Use as caixas de seleção para marcar ou desmarcar os campos que deseja incluir.
 
 ![A caixa de diálogo [!UICONTROL Gerenciar campos relacionados] com campos selecionados e [!UICONTROL Confirmar] realçada.](../../images/ui/resources/schemas/select-fields.png)
 
-A tela reaparece com apenas os campos selecionados presentes na estrutura do esquema.
+Selecione **[!UICONTROL Confirmar]** para atualizar a tela e refletir os campos selecionados.
+
 
 ![Campos adicionados](../../images/ui/resources/schemas/fields-added.png)
+
+### Comportamento do campo ao remover ou descontinuar campos {#field-removal-deprecation-behavior}
+
+Use a tabela abaixo para entender o escopo de cada ação.
+
+| Ação | Aplica-se somente ao esquema atual | Modifica o grupo de campos | Afeta outros esquemas | Descrição |
+|--------------------------|--------------------------------|----------------------|-----------------------|-------------|
+| **Remover campo** | Não | Sim | Sim | Exclui o campo do grupo de campos. Isso o remove de todos os esquemas que usam esse grupo. |
+| **Gerenciar campos relacionados** | Sim | Não | Não | Oculta campos somente do esquema atual. O grupo de campos permanece inalterado. |
+| **Desativar campo** | Não | Sim | Sim | Marca o campo como obsoleto no grupo de campos. Não está mais disponível para uso em nenhum schema. |
+
+>[!NOTE]
+>
+>Esse comportamento é consistente em esquemas baseados em registros e em eventos.
 
 ### Adicionar campos personalizados a grupos de campos {#add-fields}
 
@@ -390,6 +406,6 @@ Depois de confirmar a alteração de classe, a tela será redefinida e todo o pr
 
 Este documento abordou as noções básicas para a criação e edição de esquemas na interface do usuário do Experience Platform. É altamente recomendável que você consulte o [tutorial de criação de esquemas](../../tutorials/create-schema-ui.md) para obter um fluxo de trabalho abrangente e criar um esquema completo na interface do usuário, incluindo a criação de grupos de campos personalizados e tipos de dados para casos de uso exclusivos.
 
-Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).
+Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
 
 Para saber como gerenciar esquemas na API [!DNL Schema Registry], consulte o [manual de endpoint de esquemas](../../api/schemas.md).

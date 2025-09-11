@@ -75,20 +75,20 @@ O objeto de configuração deve ser estruturado da seguinte maneira:
       <td><code>schema</code></td>
       <td>Um objeto de <a href="https://json-schema.org/">Esquema JSON</a> que descreve o formato de um objeto válido sendo salvo da visualização de configuração de extensão. Como você é o desenvolvedor da visualização de configuração, é sua responsabilidade garantir que qualquer objeto de configuração salvo corresponda a esse esquema. Esse esquema também será usado para validação quando os usuários tentarem salvar dados usando os serviços da Experience Platform.<br><br>Este é um exemplo de objeto de esquema:
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       Recomendamos usar uma ferramenta como o <a href="https://www.jsonschemavalidator.net/">validador de Esquema JSON</a> para testar manualmente seu esquema.</td>
     </tr>
@@ -135,20 +135,20 @@ Uma definição de tipo é um objeto usado para descrever um evento, uma condiç
       <td><code>schema</code></td>
       <td>Um objeto de <a href="https://json-schema.org/">Esquema JSON</a> descrevendo o formato de um objeto de configurações válido que pode ser salvo pelo usuário. Normalmente, as configurações são definidas e salvas por um usuário por meio da interface da Coleção de dados. Nesses casos, a visualização da extensão pode tomar as etapas necessárias para validar as configurações fornecidas pelo usuário. Por outro lado, alguns usuários optam por usar APIs de tags diretamente, sem a ajuda de qualquer interface do usuário. A finalidade desse esquema é permitir que o Experience Platform valide adequadamente se os objetos de configurações salvos pelos usuários, independentemente de uma interface do usuário ser usada, estão em um formato compatível com o módulo da biblioteca que atuará sobre o objeto de configurações no tempo de execução.<br><br>Este é um exemplo de objeto de esquema:<br>
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       Recomendamos usar uma ferramenta como o <a href="https://www.jsonschemavalidator.net/">validador de Esquema JSON</a> para testar manualmente seu esquema.</td>
     </tr>

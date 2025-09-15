@@ -5,9 +5,9 @@ title: Conectar-se a destinos em lote e ativar dados usando a API do Serviço de
 description: Instruções detalhadas sobre como usar a API do Serviço de fluxo para criar um armazenamento em nuvem em lote ou um destino de marketing por email no Experience Platform e ativar dados
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 81641f707dbd9fb2952589506bc42c3dd6cd83b3
+source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
 workflow-type: tm+mt
-source-wordcount: '3416'
+source-wordcount: '3450'
 ht-degree: 3%
 
 ---
@@ -591,18 +591,21 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -638,7 +641,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -674,7 +678,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -710,12 +715,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -751,12 +758,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -792,12 +801,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -832,6 +843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -850,6 +862,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.bucketName` | Para conexões S3, forneça o nome do bucket para o qual os arquivos serão exportados. |
 | `params.path` | Para conexões S3, forneça o caminho do arquivo no local de armazenamento para onde os arquivos serão exportados. |
 | `params.format` | No momento, `CSV` é o único tipo de exportação de arquivo com suporte. |
+| `params.includeFileManifest` | *Opcional*. Defina como `true` para habilitar a geração de arquivo de manifesto para o seu destino. Quando ativado, um arquivo de manifesto é criado junto com os arquivos de dados exportados, fornecendo metadados sobre os arquivos exportados. Exibir um [arquivo de manifesto de exemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). |
 
 {style="table-layout:auto"}
 

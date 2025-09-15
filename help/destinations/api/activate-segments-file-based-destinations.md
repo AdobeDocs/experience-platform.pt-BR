@@ -4,9 +4,9 @@ title: Ative públicos para destinos baseados em arquivo usando a API do Serviç
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
+source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
 workflow-type: tm+mt
-source-wordcount: '4911'
+source-wordcount: '4986'
 ht-degree: 3%
 
 ---
@@ -4752,6 +4752,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 >[!ENDSHADEBOX]
 
 ### Adicionar geração de manifesto de arquivo ao destino existente {#add-file-manifest}
+
+Os arquivos JSON de manifesto contêm informações sobre o local de exportação, o tamanho da exportação e muito mais. O manifesto é nomeado usando o formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Exibir um [arquivo de manifesto de exemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). O arquivo de manifesto inclui os seguintes campos:
+
+* `flowRunId`: A [execução do fluxo de dados](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que gerou o arquivo exportado.
+* `scheduledTime`: A hora em UTC quando o arquivo foi exportado.
+* `exportResults.sinkPath`: O caminho no local de armazenamento onde o arquivo exportado está depositado.
+* `exportResults.name`: O nome do arquivo exportado.
+* `size`: O tamanho do arquivo exportado, em bytes.
 
 Para adicionar a geração de manifesto de arquivo a um destino existente, é necessário atualizar os parâmetros de conexão de destino usando a operação `PATCH`. Isso habilita a geração de arquivo de manifesto para o seu destino, que fornece metadados sobre os arquivos exportados.
 

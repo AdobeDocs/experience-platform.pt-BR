@@ -67,7 +67,7 @@ Leia mais sobre [Metadados de taxonomia](https://developer.verizonmedia.com/data
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Verizon Media] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+[!DNL Verizon Media] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR#getting-started).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

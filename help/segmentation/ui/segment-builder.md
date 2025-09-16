@@ -6,7 +6,7 @@ exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
 workflow-type: tm+mt
 source-wordcount: '5248'
-ht-degree: 10%
+ht-degree: 12%
 
 ---
 
@@ -130,7 +130,7 @@ Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Públicos-alvo externos"
->abstract="Os públicos-alvo importados por meio da guia Públicos-alvo agora são disponibilizados automaticamente no Portal de público-alvo. Isso inclui públicos-alvo assimilados da Audience Manager, do Customer Journey Analytics, da Correspondência de segmentos e de outras integrações personalizadas.<br/><br/>Até o final de setembro de 2025, os públicos-alvo serão recuperados exclusivamente por meio da Pesquisa unificada, e o fluxo de trabalho anterior não terá mais suporte. A Correspondência de segmentos permanece disponível somente para um pequeno número de clientes designados enquanto fazemos a transição do serviço. O acesso para novos clientes da Correspondência de segmentos ainda pode ser ativado mediante solicitação, antes que o serviço seja totalmente removido.<br/><br/>Para casos de uso de colaboração de dados em andamento, a Adobe recomenda mudar para o Collaboration, que é a solução com suporte a longo prazo."
+>abstract="Os públicos-alvo importados por meio da guia Públicos-alvo agora são disponibilizados automaticamente no Portal de público-alvo. Isso inclui públicos-alvo assimilados do Audience Manager, do Customer Journey Analytics, da correspondência de segmentos e de outras integrações personalizadas.<br/><br/>Até o final de setembro de 2025, os públicos-alvo serão recuperados exclusivamente por meio da Pesquisa unificada e o fluxo de trabalho anterior não terá mais suporte. A Correspondência de segmentos permanece disponível somente para um pequeno número de clientes selecionados enquanto fazemos a transição do serviço. O acesso de novos clientes à Correspondência de segmentos ainda pode ser habilitado mediante solicitação antes que o serviço seja totalmente descontinuado.<br/><br/>Para casos de uso de colaboração de dados em andamento, a Adobe recomenda a transição para o Collaboration, que é a solução com suporte a longo prazo."
 >additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/ui/audience-portal#list" text="Portal de público-alvo"
 
 >[!NOTE]
@@ -330,7 +330,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 >[!NOTE]
 >
 >Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
->&#x200B;>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
 >
 >Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
 >

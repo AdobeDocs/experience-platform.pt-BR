@@ -2,10 +2,10 @@
 title: Notas de versão da extensão do Adobe Content Analytics
 description: As notas de versão mais recentes da extensão de tag da Content Analytics na Adobe Experience Platform.
 exl-id: 37b34915-655b-40de-b17b-43028c579e37
-source-git-commit: 77d19ab813f881cd3c48c27ed4a9ac02e268e23f
+source-git-commit: dcd880ed73cc8294e6019c43021cb27ea6dd9995
 workflow-type: tm+mt
-source-wordcount: '282'
-ht-degree: 1%
+source-wordcount: '401'
+ht-degree: 0%
 
 ---
 
@@ -15,6 +15,7 @@ Veja a seguir uma lista das notas de versão da extensão de tag do Content Anal
 
 | Versão | Data | Correções |
 |---|---|---|
+| 1.0.49 | 12 de setembro de 2025 | <ul><li>Correção de um pequeno erro que resultava na não carga da interface da extensão de tags se o usuário não tivesse permissões de sequência de dados. A interface agora exibirá um aviso de permissão na opção de sequência de dados **[!UICONTROL Escolher da lista]** e ainda permitirá que o usuário insira valores manualmente.</li><li>Atualização de um problema de caminho para l10n.</li><li>Correção de um problema em que algumas imagens que eram elementos secundários de pais sem imagem não capturavam corretamente cliques em ativos para esses elementos de imagem secundários.</li><li>Se um usuário tiver o WebSDK configurado em tags com um nome de instância diferente de `alloy`, a biblioteca Content Analytics detectará a primeira instância da biblioteca do WebSDK e a usará para enviar eventos Content Analytics.</li></ul> |
 | 1.0.48 | 25 de agosto de 2025 | <ul><li>Adiciona suporte para rastrear ativos nos elementos DOM de raiz-sombra de um documento.</li></ul> |
 | 1.0.47 | 23 de julho de 2025 | <ul><li>Correção de um bug que ocorria quando as experiências não estavam ativadas, causando falha na verificação da expressão regular para as experiências. Esse problema impedia que os dados do Content Analytics fossem coletados.</li><li>Correção de um problema com a configuração de idioma padrão que impedia a exibição da interface do usuário de tags para alguns usuários que não tinham o idioma padrão principal definido no Experience Cloud.</li></ul> |
 | 1.0.46 | 18 de junho de 2025 | <ul><li>Adição de uma notificação em caixa de informações ao tentar salvar a configuração da extensão, se uma sequência de dados de produção não estiver presente.</li><li>Correção temporária do problema de visibilidade da carga do Content Analytics, colocando o conteúdo de carga restrito no console.</li><li>Adição de suporte à localização na interface do usuário da extensão.</li><li>Correção parcial de um problema de CSS que causava o preenchimento extra ao redor do conteúdo da interface do usuário da extensão.</li></ul> |

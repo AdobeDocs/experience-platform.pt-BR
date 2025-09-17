@@ -3,9 +3,9 @@ title: LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento na nu
 type: Documentation
 description: Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar dados com segurança do Experience Platform para destinos de armazenamento na nuvem.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
+source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '305'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,7 @@ As informações de intervalo IP nesta página se aplicam aos seguintes conector
 
 >[!IMPORTANT]
 >
->Os intervalos IP documentados nesta página *não* têm suporte para os seguintes destinos de armazenamento na nuvem baseados em arquivo: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] e [!UICONTROL Data Landing Zone].
+>Os intervalos IP documentados nesta página *não* têm suporte para os seguintes destinos de armazenamento na nuvem baseados em arquivo: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL Data Landing Zone] e servidores SFTP hospedados no Microsoft Azure.
 
 ## Visão geral {#overview}
 

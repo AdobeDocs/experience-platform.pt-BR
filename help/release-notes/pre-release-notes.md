@@ -2,10 +2,10 @@
 title: Notas de pré-lançamento do Experience Platform
 description: Uma visualização das notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
+source-git-commit: c592d007932835f5263d7f78b2e8155790313840
 workflow-type: tm+mt
-source-wordcount: '1271'
-ht-degree: 23%
+source-wordcount: '1217'
+ht-degree: 24%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 23%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-no)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: setembro de 2025**
 
@@ -46,9 +46,8 @@ O Assistente de IA do Adobe Experience Platform é uma experiência de conversa�
 
 | Recurso | Descrição |
 | --- | --- |
-| Agent Orchestrator | O Adobe Experience Platform Agent Orchestrator é seu assistente inteligente para aplicativos Experience Cloud. Quando você faz perguntas ou solicita ajuda, o Agent Orchestrator chama automaticamente agentes especializados para obter as respostas certas. O Agent Orchestrator lembra seu histórico de conversas, permitindo que você se baseie em perguntas anteriores naturalmente sem repetir o contexto e combina insights de vários agentes para apresentar respostas claras e unificadas. Você pode usar os recursos do Agent Orchestrator por meio da interface conversacional do Assistente de IA. |
+| Agent Orchestrator | O Adobe Experience Platform Agent Orchestrator é a camada inteligente que ativa o Assistente de IA. Quando você faz perguntas ou solicita ajuda, o Agent Orchestrator chama automaticamente agentes especializados para obter as respostas certas. O Agent Orchestrator lembra seu histórico de conversas, permitindo que você se baseie em perguntas anteriores naturalmente sem repetir o contexto e combina insights de vários agentes para apresentar respostas claras e unificadas. |
 | Audience Agent | O Audience Agent permite exibir insights sobre públicos-alvo, incluindo a detecção de alterações significativas no tamanho do público-alvo, a detecção de públicos-alvo duplicados, a exploração do inventário do público-alvo e a recuperação do tamanho dele. |
-| Agente de descoberta de campo | O Field Discovery Agent ajuda os usuários a descobrir e entender campos de dados automaticamente em seus esquemas e conjuntos de dados. Esse agente inteligente analisa sua estrutura de dados e fornece informações sobre o uso em campo, relacionamentos e recomendações de otimização. |
 
 Para obter mais informações, leia a [Visão geral do Assistente de IA](../ai-assistant/home.md).
 
@@ -127,7 +126,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | O público estima a reversão de atualização automática | O aprimoramento da atualização automática para estimativas de público-alvo foi revertido. As estimativas de público-alvo continuarão a ser geradas no Construtor de segmentos, mas a funcionalidade de atualização automática foi removida. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Origens {#sources}
 

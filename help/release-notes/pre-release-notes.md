@@ -126,7 +126,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | O público estima a reversão de atualização automática | O aprimoramento da atualização automática para estimativas de público-alvo foi revertido. As estimativas de público-alvo continuarão a ser geradas no Construtor de segmentos, mas a funcionalidade de atualização automática foi removida. |
 
-Para obter mais informações, leia a visão geral](../segmentation/home.md) do [[!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral[&#128279;](../segmentation/home.md) do [!DNL Segmentation Service] .
 
 ## Origens {#sources}
 

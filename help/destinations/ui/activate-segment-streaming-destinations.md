@@ -3,7 +3,7 @@ title: Ativar dados do público-alvo para destinos de transmissão
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform mapeando-os para destinos de transmissão.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 595856842a3890426bb196218bd8be4e321ff8aa
 workflow-type: tm+mt
 source-wordcount: '1189'
 ht-degree: 6%
@@ -17,7 +17,7 @@ ht-degree: 6%
 > 
 > * Para ativar públicos e habilitar a [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 > * Para ativar os públicos-alvo sem passar pela [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Segmento sem Mapeamento]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
->* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
+> * Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 > 
 > Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
@@ -64,7 +64,7 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 >Esta etapa se aplica somente a alguns destinos de transmissão de público. Se o destino não tiver uma etapa de **[!UICONTROL Mapeamento]**, pule para [agendamento de público-alvo](#scheduling).
 >
 >Ao ativar públicos para destinos de streaming, você também deve mapear *pelo menos um namespace de identidade de destino*, além dos atributos de perfil de destino. Caso contrário, os públicos-alvo não serão ativados para a plataforma de destino.
-> ![Imagem da etapa de mapeamento mostrando um mapeamento de namespace de identidade obrigatório.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+>> ![Imagem da etapa de mapeamento mostrando um mapeamento de namespace de identidade obrigatório.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 Alguns destinos de transmissão de público exigem que você selecione atributos de origem ou namespaces de identidade para mapear como identidades de destino no destino.
@@ -108,7 +108,7 @@ Ao mapear atributos de origem com hash não atribuídos para atributos de destin
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_enddate"
->title="Data de término"
+>title="Data final"
 >abstract="A adição de uma data final para a programação de público-alvo não está disponível."
 
 Por padrão, a página **[!UICONTROL Agenda de público-alvo]** mostra apenas os públicos-alvo recém-selecionados que você escolheu no fluxo de ativação atual.

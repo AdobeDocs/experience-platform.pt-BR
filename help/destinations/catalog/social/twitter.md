@@ -2,24 +2,16 @@
 title: Conexão de públicos-alvo personalizados do Twitter
 description: Direcione seus seguidores e clientes existentes no Twitter e crie campanhas de re-marketing relevantes ativando seus públicos-alvo criados no Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 5b529a1af62c2745c3226029de1a1ff508bddfc7
+source-git-commit: ee7e85afd48f7b1c40f0152ad76c8c718b8f1432
 workflow-type: tm+mt
-source-wordcount: '971'
-ht-degree: 4%
+source-wordcount: '855'
+ht-degree: 5%
 
 ---
 
 # [!DNL Twitter Custom Audiences] conexão
 
 ## Visão geral {#overview}
-
->[!IMPORTANT]
->
->* A partir de 9 de setembro de 2025, você poderá ver dois cartões **[!DNL Twitter Custom Audiences]** lado a lado no catálogo de destinos. Isso se deve a uma atualização interna do serviço de destinos. O conector de destino **[!DNL Twitter Custom Audiences]** existente foi renomeado para **[!UICONTROL (obsoleto) Públicos-alvo personalizados do Twitter]** e um novo cartão com o nome **[!UICONTROL Públicos-alvo personalizados do Twitter]** está disponível para você.
->* Use a nova conexão **[!UICONTROL Públicos-alvo personalizados do Twitter]** no catálogo para novos fluxos de dados de ativação. Se você tiver fluxos de dados ativos para o destino **[!UICONTROL (obsoleto) de Públicos-alvo personalizados do Twitter]**, eles serão atualizados automaticamente; portanto, nenhuma ação é necessária.
->* Se você estiver criando fluxos de dados por meio da [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/), atualize o [!DNL flow spec ID] e o [!DNL connection spec ID] para os seguintes valores:
->   * ID da especificação de fluxo: `903da9e4-7cf5-442a-9498-a237e4f064f9`
->   * ID de especificação da conexão: `9eb18875-a095-4b89-854e-39b9e29ccd41`
 
 Direcione seus seguidores e clientes existentes no Twitter e crie campanhas de re-marketing relevantes ativando seus públicos-alvo criados no Adobe Experience Platform.
 
@@ -32,7 +24,7 @@ Antes de configurar o destino do [!DNL Twitter Custom Audiences], verifique os s
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Twitter Custom Audiences] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR#getting-started).
+[!DNL Twitter Custom Audiences] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

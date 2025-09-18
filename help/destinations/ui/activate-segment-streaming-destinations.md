@@ -64,7 +64,7 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 >Esta etapa se aplica somente a alguns destinos de transmissão de público. Se o destino não tiver uma etapa de **[!UICONTROL Mapeamento]**, pule para [agendamento de público-alvo](#scheduling).
 >
 >Ao ativar públicos para destinos de streaming, você também deve mapear *pelo menos um namespace de identidade de destino*, além dos atributos de perfil de destino. Caso contrário, os públicos-alvo não serão ativados para a plataforma de destino.
->> ![Imagem da etapa de mapeamento mostrando um mapeamento de namespace de identidade obrigatório.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+>&#x200B;> ![Imagem da etapa de mapeamento mostrando um mapeamento de namespace de identidade obrigatório.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 Alguns destinos de transmissão de público exigem que você selecione atributos de origem ou namespaces de identidade para mapear como identidades de destino no destino.

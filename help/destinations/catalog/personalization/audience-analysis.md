@@ -3,16 +3,18 @@ title: Destino da Análise de público-alvo
 description: Visualize públicos para os quais os clientes se qualificam no Customer Journey Analytics.
 badgeLimitedAvailability: label="Disponibilidade limitada" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+hide: true
+hidefromtoc: true
+source-git-commit: 4bd94c292a13a80405a3d726295ebd6eaf86aaaa
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '799'
 ht-degree: 3%
 
 ---
 
 # Destino da Análise de público-alvo
 
-O destino [!UICONTROL Audience Analysis] permite enriquecer os dados de público-alvo do Adobe Experience Platform na [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=pt-BR). Você pode selecionar quais públicos-alvo deseja incluir nos dados enriquecidos resultantes. As qualificações de público-alvo estão disponíveis como dimensões nos relatórios do [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=pt-BR).
+O destino [!UICONTROL Audience Analysis] permite enriquecer os dados de público-alvo do Adobe Experience Platform na [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=pt-BR). Você pode selecionar quais públicos-alvo deseja incluir nos dados enriquecidos resultantes. As qualificações de público-alvo estão disponíveis como dimensões nos relatórios do [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
 
 >[!AVAILABILITY]
 >

@@ -4,7 +4,7 @@ title: Criar uma definição de segmento usando a API do serviço de segmentaç�
 type: Tutorial
 description: Siga este tutorial para saber como desenvolver, testar, visualizar e salvar uma definição de segmento usando a API do serviço de segmentação do Adobe Experience Platform.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 6%
@@ -72,7 +72,7 @@ Há duas etapas necessárias para visualizar ou obter uma estimativa da definiç
 
 ### Como as estimativas são geradas
 
-Como os dados ativados para o Perfil do cliente em tempo real são assimilados na Experience Platform, eles são armazenados no armazenamento de dados do Perfil. Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é acionado para atualizar a contagem. Se a contagem de perfis não for alterada em mais de 5%, o trabalho de amostragem será executado automaticamente uma vez por semana.
+Como os dados ativados para o Perfil do cliente em tempo real são assimilados na Experience Platform, eles são armazenados no armazenamento de dados do Perfil. Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 3%, um trabalho de amostragem é acionado para atualizar a contagem. Se a contagem de perfis não for alterada em mais de 3%, o trabalho de amostragem será executado automaticamente uma vez por semana.
 
 O modo como a amostra é acionada depende do tipo de ingestão sendo usado:
 

@@ -4,7 +4,7 @@ title: Visualizações e estimativas de endpoints de API
 description: À medida que a definição de segmento é desenvolvida, é possível usar as ferramentas de estimativa e pré-visualização no Adobe Experience Platform para exibir informações em nível de resumo e ajudar a garantir que você esteja isolando o público-alvo esperado.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 2%
@@ -29,7 +29,7 @@ Os pontos de extremidade usados neste guia fazem parte da API [!DNL Adobe Experi
 
 ## Como as estimativas são geradas
 
-Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é acionado para atualizar a contagem. A maneira como a amostragem de dados é acionada depende do método de assimilação:
+Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 3%, um trabalho de amostragem é acionado para atualizar a contagem. A maneira como a amostragem de dados é acionada depende do método de assimilação:
 
 * **Assimilação em lote:** Para assimilação em lote, em 15 minutos após a assimilação bem-sucedida de um lote no repositório de perfis, se o limite de aumento ou diminuição de 3% for atingido, um trabalho será executado para atualizar a contagem.
 * **Assimilação de streaming:** Para fluxos de trabalho de dados de streaming, uma verificação é feita a cada hora para determinar se o limite de aumento ou diminuição de 3% foi atingido. Se tiver sido, uma tarefa será automaticamente acionada para atualizar a contagem.

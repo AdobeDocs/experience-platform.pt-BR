@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;mapear csv;mape
 title: Guia da interface de preparação de dados
 description: Saiba como usar as funções de preparação de dados na interface do usuário do Experience Platform para mapear arquivos CSV para um esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c9638cdca887f439c57f1dc01f93d63016869b29
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1505'
 ht-degree: 1%
 
 ---
@@ -151,6 +151,10 @@ Quando terminar, selecione **[!UICONTROL Carregar arquivo]** e selecione o arqui
 >[!ENDTABS]
 
 Com os mapeamentos concluídos, agora é possível selecionar **[!UICONTROL Concluir]** e prosseguir para a próxima etapa para concluir o fluxo de dados.
+
+>[!TIP]
+>
+>Depois de concluir a criação dos mapeamentos, aguarde até 10 minutos antes de iniciar a assimilação de dados. Esse período de espera garante que os novos mapeamentos sejam totalmente salvos e estejam disponíveis no sistema.
 
 ![A interface de mapeamento com um conjunto completo de mapeamentos.](../images/ui/mapping/completed_mappings.png)
 

@@ -3,9 +3,9 @@ keywords: conexão linkedin;conexão linkedin;destinos linkedin;linkedin;
 title: Conexão de públicos correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 653f43ac6afb25445fe8ef3c2832be8f1c4723fe
+source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1250'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Uma empresa de software organiza uma conferência e deseja manter contato com os
 
 >[!IMPORTANT]
 >
->A partir de setembro de 2025, o destino [!DNL LinkedIn Matched Audiences] não oferecerá mais suporte às identidades [!DNL IDFA] (Identificador para Anunciantes).  Essa alteração se deve aos requisitos do LinkedIn e não está relacionada a nenhuma atualização de serviço de destino do Experience Platform.
+>A partir de setembro de 2025, não será mais possível mapear [!DNL IDFA] como identidade de destino, pois [!DNL IDFA] não é mais suportado pelo destino [!DNL LinkedIn Matched Audiences]. Consulte a [!DNL LinkedIn Matched Audiences]documentação[ da integração de ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) para obter mais detalhes. Essa alteração se deve aos requisitos do LinkedIn e não está relacionada a nenhuma atualização de serviço de destino do Experience Platform.
 
 
 | Identidade de destino | Descrição | Considerações |
@@ -92,7 +92,7 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 >[!NOTE]
 >
 >O hash automático de dados de namespaces sem hash é criado por [!DNL Experience Platform] após a ativação.
->&#x200B;> Os dados de origem do atributo não são automaticamente transformados em hash.
+>> Os dados de origem do atributo não são automaticamente transformados em hash.
 > 
 > Durante a etapa [Mapeamento de Identidade](../../ui/activate-segment-streaming-destinations.md#mapping), quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
 > 

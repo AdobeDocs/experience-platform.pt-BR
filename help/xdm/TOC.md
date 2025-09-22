@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Explore uma visão geral do sistema do Experience Data Model (XDM) na Experience Platform e saiba como usar classes e grupos de campos de esquema para padronizar os dados de experiência.
 feature: Schemas
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
 workflow-type: tm+mt
-source-wordcount: '698'
-ht-degree: 45%
+source-wordcount: '703'
+ht-degree: 49%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 45%
       * [Serviços de saúde](./schema/industries/healthcare.md)
       * [Telecomunicações](./schema/industries/telecom.md)
       * [Viagens e hospitalidade](./schema/industries/travel-hospitality.md)
-   * Modelo V2 de Dados de Assistência Médica {#healthcare}
+   * Modelo V2 de dados da área de saúde {#healthcare}
       * [Assistência médica V2](./schema/healthcare/healthcare-v2.md)
       * Classes {#classes}
          * [Localização](./schema/healthcare/classes/location.md)
@@ -48,7 +48,7 @@ ht-degree: 45%
          * [Paciente](./schema/healthcare/field-groups/patient.md)
          * [Profissional](./schema/healthcare/field-groups/practioner.md)
          * [Agendar](./schema/healthcare/field-groups/schedule.md)
-      * Tipos de Dados {#data-types}
+      * Tipos de dado {#data-types}
          * [Endereço](./schema/healthcare/data-types/address.md)
          * [Anotação](./schema/healthcare/data-types/annotation.md)
          * [Disponibilidade](./schema/healthcare/data-types/availability.md)
@@ -94,7 +94,7 @@ ht-degree: 45%
       * [Lista de marketing de negócios XDM](./classes/b2b/business-marketing-list.md)
       * [Membros da lista de marketing empresarial XDM](./classes/b2b/business-marketing-list-members.md)
 * Grupos de campos {#field-groups}
-   * Perfil Individual XDM {#profile}
+   * Perfil individual XDM {#profile}
       * [Consentimentos e preferências](./field-groups/profile/consents.md)
       * [Detalhes demográficos](./field-groups/profile/demographic-details.md)
       * [Detalhes do membro da área de saúde](./field-groups/profile/healthcare-member-details.md)
@@ -108,10 +108,11 @@ ht-degree: 45%
       * [Detalhes de contato comercial](./field-groups/profile/work-contact-details.md)
       * [Componentes de pessoa de negócios XDM](./field-groups/profile/business-person-components.md)
       * [Detalhes de pessoa de negócios XDM](./field-groups/profile/business-person-details.md)
-   * Perfil de Cliente Potencial Individual XDM {#prospect-profile}
+   * Perfil de cliente potencial individual XDM {#prospect-profile}
       * [Detalhes de Cliente Potencial do Parceiro (Exemplo)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Extensão completa do Adobe Analytics](./field-groups/event/analytics-full-extension.md)
+      * [Extensão completa da Adobe Advertising Cloud](./field-groups/event/advertising-full-extension.md)
       * [Detalhes de publicidade](./field-groups/event/advertising-details.md)
       * [Detalhes do aplicativo](./field-groups/event/application-details.md)
       * [Transferências de saldo](./field-groups/event/balance-transfers.md)
@@ -203,7 +204,7 @@ ht-degree: 45%
    * [Detalhes da coleção de mídia](./data-types/media-collection-details.md)
    * [Informações do evento de mídia](./data-types/media-event-information.md)
    * [Detalhes de relatórios de mídia](./data-types/media-reporting-details.md)
-   * [Pedido](./data-types/order.md)
+   * [Ordem](./data-types/order.md)
    * [Detalhes do POI](./data-types/poi-details.md)
    * [Interação de POI](./data-types/poi-interaction.md)
    * [Item de pagamento](./data-types/payment-item.md)
@@ -230,7 +231,7 @@ ht-degree: 45%
    * [Informações da Web](./data-types/web-information.md)
    * [Interação na Web](./data-types/web-interaction.md)
    * [Detalhes da página da Web](./data-types/webpage-details.md)
-* [!UICONTROL Esquemas] IU {#ui}
+* [!UICONTROL Esquemas] interface {#ui}
    * [Visão geral](./ui/overview.md)
    * [Explorar recursos do XDM](./ui/explore.md)
    * Criar e editar recursos {#resources}
@@ -251,7 +252,7 @@ ht-degree: 45%
    * [Criação de esquema assistido por aprendizado de máquina](./ui/ml-assisted-schema-creation.md)
    * [Gerar dados de amostra XDM](./ui/sample.md)
    * [Exportar esquemas XDM](./ui/export.md)
-* API do Registro de Esquema {#api}
+* API do registro de esquema {#api}
    * [Visão geral](api/overview.md)
    * [Introdução](api/getting-started.md)
    * [Esquemas](api/schemas.md)
@@ -284,4 +285,4 @@ ht-degree: 45%
    * [Criar um esquema ad hoc](tutorials/ad-hoc.md)
 * [Manual de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

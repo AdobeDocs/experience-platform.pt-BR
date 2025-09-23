@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil do cliente em tempo real;interface d
 title: Personalização de detalhes do perfil na interface
 description: Este guia fornece instruções passo a passo para personalizar a forma como os dados do Perfil do cliente em tempo real são exibidos na interface do usuário do Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e253be0c4e02b82bfc8926ac4531589782b9c8fe
 workflow-type: tm+mt
-source-wordcount: '1395'
+source-wordcount: '1368'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,6 @@ Depois de optar por modificar o painel, é possível reordenar os cartões selec
 ![O botão de redimensionamento está realçado no cartão de atributos Básico.](../images/profile-customization/resize.png)
 
 A placa selecionada se ajusta ao tamanho desejado e as placas ao redor são reposicionadas dinamicamente. Isso pode fazer com que alguns cartões sejam movidos para linhas adicionais, exigindo que você role para baixo para ver todos os cartões. Por exemplo, quando o cartão &quot;[!UICONTROL Atributos básicos]&quot; é redimensionado, o cartão &quot;[!UICONTROL Identidades vinculadas]&quot; não fica mais visível na linha superior e agora aparece em uma nova segunda linha do perfil (não exibido). Para retornar o cartão &quot;[!UICONTROL Identidades vinculadas]&quot; para a linha superior, você pode arrastá-lo e soltá-lo na posição atual do cartão &quot;[!UICONTROL Preferências de canal]&quot;.
-
-![Um cartão redimensionado está realçado.](../images/profile-customization/resized.png)
 
 ## Editar e remover cartões
 
@@ -70,8 +68,6 @@ Ao retornar para a tela **[!UICONTROL Editar widget]**, a lista de atributos no 
 
 Depois de salvar, você retornará à guia **[!UICONTROL Detalhes]**, onde o cartão atualizado e os atributos ficam visíveis.
 
-![Os atributos recém-adicionados são exibidos no cartão, no painel Perfil.](../images/profile-customization/added-attributes.png)
-
 ## Adicionar um novo cartão {#add-a-new-card}
 
 Para personalizar ainda mais a aparência dos perfis no Experience Platform, você pode optar por adicionar novos cartões ao painel e selecionar os atributos que deseja exibir nesses cartões. Para começar, selecione **[!UICONTROL Modificar painel]** na guia **[!UICONTROL Detalhes]**.
@@ -99,8 +95,6 @@ Para salvar seu novo cartão, primeiro forneça um **[!UICONTROL título do cart
 ![O novo widget é visualizado na tela Editar widget.](../images/profile-customization/new-widget.png)
 
 Depois de salvar, você retornará à guia **[!UICONTROL Detalhes]**, onde o novo cartão e os novos atributos estarão visíveis.
-
-![O novo widget é adicionado ao painel Perfil.](../images/profile-customization/added-widget.png)
 
 ## Restaurar cartões padrão
 

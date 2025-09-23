@@ -3,10 +3,10 @@ keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
 workflow-type: tm+mt
-source-wordcount: '2219'
-ht-degree: 3%
+source-wordcount: '1990'
+ht-degree: 4%
 
 ---
 
@@ -38,43 +38,15 @@ Para saber mais, visite o [guia do painel do perfil](../../dashboards/guides/pro
 
 ![O painel Perfil é exibido.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## Métricas da guia [!UICONTROL Procurar]
+## Guia [!UICONTROL Procurar]
 
-Selecione a guia **[!UICONTROL Procurar]** para exibir várias métricas relacionadas aos dados de perfil de sua organização. Você também pode usar essa guia para navegar no armazenamento de Perfil usando uma política de mesclagem ou uma identidade, conforme descrito na próxima seção deste guia.
+Na guia **[!UICONTROL Procurar]**, você pode exibir seus perfis em um modo de exibição de **cartão** ou em um modo de exibição de **gráfico** selecionando o botão de alternância.
 
-No lado direito da guia **[!UICONTROL Procurar]** está a [contagem de perfis](#profile-count) e uma listagem de [perfis por namespace](#profiles-by-namespace).
+![A opção de exibição de cartão e gráfico está realçada.](../images/user-guide/card-graph-view.png)
 
->[!NOTE]
->
->Estas métricas de perfil podem ser diferentes das métricas exibidas no [painel de perfil](#profile-dashboard), pois são avaliadas usando a política de mesclagem padrão de sua organização. Para obter mais informações sobre como trabalhar com políticas de mesclagem, incluindo como definir uma política de mesclagem padrão, consulte a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
+Além disso, você pode navegar pelos perfis usando uma política de mesclagem ou pesquisar perfis específicos usando um namespace de identidade e valor.
 
-Além dessas métricas, esta seção fornece uma data e hora da última atualização, mostrando quando as métricas foram avaliadas pela última vez.
-
-![As métricas do Perfil são exibidas e destacadas.](../images/user-guide/browse-metrics.png)
-
-### Contagem de perfis {#profile-count}
-
-A contagem de perfis exibe o número total de perfis que sua organização tem na Experience Platform, depois que a política de mesclagem padrão da organização se mescla com fragmentos de perfil para formar um único perfil para cada cliente individual. Em outras palavras, sua organização pode ter vários fragmentos de perfil relacionados a um único cliente que interage com sua marca em diferentes canais, mas esses fragmentos seriam mesclados (de acordo com a política de mesclagem padrão) e retornariam uma contagem de &quot;1&quot; perfil, pois todos estão relacionados ao mesmo indivíduo.
-
-A contagem de perfis também inclui perfis com atributos (dados de registro), bem como perfis que contêm apenas dados de série temporal (evento), como perfis do Adobe Analytics. A contagem de perfis é atualizada regularmente para fornecer um número total de perfis atualizado no Experience Platform.
-
-#### Atualização da métrica de contagem de perfis
-
-Quando a assimilação de registros no armazenamento [!DNL Profile] aumenta ou diminui a contagem em mais de 3%, um trabalho é acionado para atualizar a contagem. Para workflows de dados de transmissão, uma verificação é feita por hora para determinar se o limite de aumento ou diminuição de 3% foi atingido. Se tiver sido, uma tarefa será automaticamente acionada para atualizar a contagem de perfis. Para assimilação em lote, dentro de 15 minutos após a assimilação bem-sucedida de um lote no Armazenamento de perfis, se o limite de aumento ou diminuição de 3% for atingido, um trabalho será executado para atualizar a contagem de perfis.
-
-### [!UICONTROL Perfis por namespace] {#profiles-by-namespace}
-
-A métrica **[!UICONTROL Perfis por namespace]** exibe a contagem total e o detalhamento de namespaces em todos os perfis mesclados no repositório de perfis. O número total de perfis por namespace (em outras palavras, somando os valores mostrados para cada namespace) sempre será maior que a métrica de contagem de perfis, pois um perfil pode ter vários namespaces associados a ele. Por exemplo, se um cliente interagir com sua marca em mais de um canal, vários namespaces serão associados a esse cliente individual.
-
-#### Atualizando a métrica [!UICONTROL Perfis por namespace]
-
-Semelhante à métrica [contagem de perfis](#profile-count), quando a assimilação de registros no repositório [!DNL Profile] aumenta ou diminui a contagem em mais de 5%, um trabalho é acionado para atualizar as métricas de namespace. Para workflows de dados de transmissão, uma verificação é feita por hora para determinar se o limite de aumento ou diminuição de 5% foi atingido. Se tiver sido, uma tarefa será automaticamente acionada para atualizar a contagem de perfis. Para assimilação em lote, dentro de 15 minutos após a assimilação bem-sucedida de um lote no repositório [!DNL Profile], se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar as métricas.
-
-## Use a guia [!UICONTROL Procurar] para exibir perfis
-
-Na guia **[!UICONTROL Procurar]**, é possível exibir perfis de exemplo usando uma política de mesclagem ou pesquisar perfis específicos usando um valor e um namespace de identidade.
-
-![Os perfis que pertencem à organização são exibidos.](../images/user-guide/none-selected.png)
+![Os perfis que pertencem à organização são exibidos.](../images/user-guide/profile-browse.png)
 
 ### Procurar por [!UICONTROL Política de mesclagem]
 
@@ -94,7 +66,7 @@ Os perfis exibidos representam uma amostra de até 20 perfis do armazenamento de
 
 Para exibir os detalhes de um dos perfis de exemplo, selecione a **[!UICONTROL ID do Perfil]**. Para obter mais informações, consulte a seção mais adiante neste guia em [exibindo detalhes do perfil](#profile-detail).
 
-![Perfis de exemplo que correspondem à política de mesclagem são exibidos.](../images/user-guide/sample-profiles.png)
+![Perfis de exemplo que correspondem à política de mesclagem são exibidos.](../images/user-guide/profile-browse-table.png)
 
 Para saber mais sobre as políticas de mesclagem e sua função na Experience Platform, consulte a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
@@ -120,13 +92,13 @@ Depois de selecionar um [!UICONTROL namespace de identidade] e retornar à guia 
 >
 >Esse valor é específico para um perfil de cliente individual e deve ser uma entrada válida para o namespace fornecido. Por exemplo, selecionar o namespace de identidade &quot;Email&quot; exigiria um valor de identidade na forma de um endereço de email válido.
 
-![O valor de identidade pelo qual você deseja filtrar está realçado.](../images/user-guide/filter-identity-value.png)
+![O valor de identidade pelo qual você deseja filtrar está realçado.](../images/user-guide/browse-identity.png)
 
-Depois que um valor for inserido, selecione **[!UICONTROL Exibir]** e um único perfil correspondente ao valor será retornado. Selecione a **[!UICONTROL ID do Perfil]** para exibir os detalhes do perfil.
+Depois que um valor for inserido, selecione **[!UICONTROL Exibir]** e um único perfil correspondente ao valor será retornado. Selecione a **[!UICONTROL ID do Perfil]** para exibir um perfil.
 
 ![O perfil que corresponde ao valor de identidade está realçado.](../images/user-guide/filtered-identity-value.png)
 
-## Exibir detalhes do perfil {#profile-detail}
+## Exibir perfil {#view-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
@@ -135,17 +107,55 @@ Depois que um valor for inserido, selecione **[!UICONTROL Exibir]** e um único 
 
 Depois de selecionar uma **[!UICONTROL ID de perfil]**, a guia **[!UICONTROL Detalhes]** é aberta. As informações do perfil exibidas na guia **[!UICONTROL Detalhes]** foram mescladas de vários fragmentos de perfil para formar uma única visualização do cliente individual. Isso inclui detalhes do cliente, como atributos básicos, identidades vinculadas e preferências de canal.
 
+Além disso, você pode exibir outros detalhes sobre perfis, como seus [atributos](#attributes), [eventos](#events) e [associação de público](#audience-membership).
+
+### Guia Detalhes {#profile-detail}
+
+A guia **[!UICONTROL Detalhes]** fornece informações mais detalhadas sobre o perfil selecionado e é separada em quatro seções: Insights do perfil do cliente, widgets do AI insight, widgets personalizáveis e widgets classificados automaticamente.
+
+![A página de detalhes do perfil é exibida.](../images/user-guide/profile-details.png)
+
+Além disso, você pode alternar se os insights gerados pela IA são exibidos, mostrar os detalhes do hub em comparação com a borda, bem como visualizar os detalhes na exibição de gráfico.
+
+![Os alternadores listados acima (insights gerados por IA, dados de Hub ou Edge e exibição de Cartão ou Gráfico) estão destacados.](../images/user-guide/profile-toggles.png)
+
+#### Insights do perfil do cliente {#customer-profile-insights}
+
+A seção **[!UICONTROL Insights do perfil do cliente]** exibe uma breve introdução aos atributos do perfil. Isso inclui a ID do perfil, o email, o número de telefone, o gênero, a data de nascimento, bem como as identidades e as associações de público-alvo do perfil.
+
+![A seção de insights do perfil do cliente é exibida.](../images/user-guide/customer-profile-insights.png)
+
+#### Widgets de insight de IA {#ai-insight-widgets}
+
+A seção **[!UICONTROL widgets do insight de IA]** exibe widgets gerados pela IA. Esses widgets fornecem insights rápidos sobre o perfil, com base nos dados do perfil, incluindo dados demográficos (como idade, gênero ou local), comportamentos do usuário (como histórico de compras, atividade do site ou engajamento nas redes sociais), bem como psicográficos (como interesses, preferência ou opções de estilo de vida). Todos os widgets de IA usam dados que **já** existem no perfil.
+
+![A seção widgets do insight de IA é exibida.](../images/user-guide/ai-insight-widgets.png)
+
+#### Widgets personalizáveis {#customizable-widgets}
+
+A seção **[!UICONTROL Widgets personalizáveis]** exibe widgets que você pode personalizar de acordo com suas necessidades comerciais. Você pode agrupar atributos em widgets separados, remover widgets indesejados ou ajustar o layout dos widgets.
+
 Os campos padrão mostrados também podem ser alterados em um nível organizacional para exibir atributos de perfil preferenciais. Para saber mais sobre como personalizar esses campos, incluindo instruções passo a passo para adicionar e remover atributos e redimensionar painéis de painel, leia o [guia de personalização de detalhes do perfil](profile-customization.md).
 
-![A guia Detalhes está realçada. Os detalhes do perfil são exibidos.](../images/user-guide/profile-detail-row-name.png)
+![A seção widgets personalizáveis é exibida.](../images/user-guide/customizable-widgets.png)
 
 Você também pode optar por alternar entre visualizar os nomes de atributo como seus nomes de exibição e os nomes de caminho do campo. Para alternar entre essas duas exibições, selecione a opção **[!UICONTROL Mostrar nomes para exibição]**.
 
-![A opção Mostrar nomes para exibição está realçada e os nomes para exibição são mostrados sob os atributos.](../images/user-guide/profile-detail.png)
+![A opção Mostrar nomes para exibição está realçada.](../images/user-guide/show-display-names.png)
 
-Para exibir informações adicionais relacionadas ao perfil de cliente individual, selecione uma das outras guias disponíveis. Essas guias incluem atributos, eventos e a guia de associação de público-alvo que mostra os públicos para os quais o perfil está qualificado no momento.
+#### Widgets classificados automaticamente {#auto-classified-widgets}
 
-### Guia Atributos
+A seção **[!UICONTROL Widgets classificados automaticamente]** exibe widgets que usam o esquema de união para determinar os grupos de campos de origem aos quais um atributo pertence, fornecendo um contexto mais claro sobre a origem dos dados. Você pode usar a barra de pesquisa para procurar mais facilmente por palavras-chave em seus widgets.
+
+Esses widgets combinam dados de evento (com o widget Eventos de experiência) e dados de atributo, permitindo que você tenha uma visualização unificada do seu perfil. Você pode usar esses widgets para explorar a estrutura dos dados do seu perfil e estruturar melhor seus [widgets personalizáveis](#customizable-widgets).
+
+>[!NOTE]
+>
+>Se houver vários grupos de campos de origem, os widgets usarão somente **um** das opções disponíveis.
+
+![A seção widgets classificados automaticamente é exibida.](../images/user-guide/auto-classified-widgets.png)
+
+### Guia Atributos {#attributes}
 
 A guia **[!UICONTROL Atributos]** fornece uma exibição de lista resumindo todos os atributos relacionados a um único perfil, após a política de mesclagem especificada ser aplicada.
 
@@ -159,7 +169,7 @@ Para exibir os atributos disponíveis na Edge, selecione **[!UICONTROL Edge]** n
 
 Para obter mais informações sobre perfis de borda, leia a [documentação sobre perfis de borda](../edge-profiles.md).
 
-### Guia Eventos
+### Guia Eventos {#events}
 
 A guia **[!UICONTROL Eventos]** contém dados dos 100 Eventos de Experiência mais recentes associados ao cliente. Esses dados podem incluir aberturas de email, atividades de carrinho e exibições de página. Selecionar **[!UICONTROL Exibir todos]** para qualquer evento individual fornece campos e valores adicionais para capturas como parte do evento.
 
@@ -167,7 +177,7 @@ Os eventos também podem ser exibidos como um objeto JSON ao selecionar **[!UICO
 
 ![A guia Eventos está realçada. Os eventos de perfil são exibidos.](../images/user-guide/events.png)
 
-### Guia Associação de público
+### Guia Associação de público {#audience-membership}
 
 A guia **[!UICONTROL Associação de público-alvo]** exibe uma lista com o nome e a descrição dos públicos-alvo aos quais o perfil de cliente individual pertence atualmente. Essa lista é atualizada automaticamente conforme o perfil se qualifica ou expira dos públicos-alvo. A contagem total de públicos para os quais o perfil está qualificado no momento é mostrada no lado direito da guia.
 

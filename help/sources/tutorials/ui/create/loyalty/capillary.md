@@ -1,16 +1,20 @@
 ---
-title: Conectar o Capilar ao Experience Platform usando a interface
+title: Conectar o Capilar ao Experience Platform usando a interface do usuário
 description: Saiba como conectar o Capilary ao Experience Platform usando a interface do usuário
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+badge: Beta
+exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '781'
+source-wordcount: '827'
 ht-degree: 5%
 
 ---
 
-# Conectar o [!DNL Capillary] ao Experience Platform usando a interface
+# Conectar o [!DNL Capillary Streaming Events] ao Experience Platform usando a interface
+
+>[!AVAILABILITY]
+>
+>A origem [!DNL Capillary Streaming Events] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
 
 Leia este guia para saber como conectar seu banco de dados do [!DNL Capillary] ao Adobe Experience Platform usando o espaço de trabalho de origens na interface do usuário do Experience Platform.
 
@@ -74,19 +78,23 @@ Depois que o conjunto de dados é configurado, você deve fornecer detalhes sobr
 | --- | --- |
 | Nome do fluxo de dados | O nome do fluxo de dados.  Por padrão, esse campo usará o nome do arquivo que está sendo importado. |
 | Descrição | (Opcional) Uma breve descrição do fluxo de dados. |
-| Alertas | O Experience Platform pode produzir alertas baseados em eventos, nos quais os usuários podem assinar. Todas essas opções dependem de um fluxo de dados em execução para acioná-los.  Para obter mais informações, leia a [visão geral dos alertas](../../alerts.md) <ul><li>**Início da Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação quando a execução do fluxo de dados começar.</li><li>**Êxito na Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação se o fluxo de dados terminar sem erros.</li><li>**Falha na execução do fluxo de dados de fontes**: selecione este alerta para receber uma notificação se a execução do fluxo de dados terminar com erros.</li></ul> |
+| Alertas | O Experience Platform pode produzir alertas baseados em eventos, nos quais os usuários podem assinar. Essas opções permitem que um fluxo de dados em execução acione esses alertas.  Para obter mais informações, leia a [visão geral dos alertas](../../alerts.md) <ul><li>**Início da Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação quando a execução do fluxo de dados começar.</li><li>**Êxito na Execução do Fluxo de Dados de Fontes**: selecione este alerta para receber uma notificação se o fluxo de dados terminar sem erros.</li><li>**Falha na execução do fluxo de dados de fontes**: selecione este alerta para receber uma notificação se a execução do fluxo de dados terminar com erros.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Mapeamento
 
-Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar dados na Experience Platform.  Para obter mais informações, leia o [guia de mapeamento na interface](../../../../../data-prep/ui/mapping.md).
+Use a interface de mapeamento para mapear os dados de origem para os campos de esquema apropriados antes de assimilar dados na Experience Platform. Para obter mais informações, leia o [guia de mapeamento na interface](../../../../../data-prep/ui/mapping.md).
+
+>[!TIP]
+>
+>Você pode baixar os [Eventos e mapeamentos de perfil](../../../../images/tutorials/create/capillary/mappings.zip) para [!DNL Capillary] e [importar os arquivos para o Preparo de Dados](../../../../../data-prep/ui/mapping.md#import-mapping) quando estiver pronto para mapear seus dados.
 
 ![A interface de mapeamento para Capilar.](../../../../images/tutorials/create/capillary/mappings.png)
 
 ## Revisar
 
-A etapa *[!UICONTROL Revisar]* é exibida, permitindo que você revise os detalhes do fluxo de dados antes que ele seja criado. Os detalhes estão agrupados nas seguintes categorias:
+A etapa *[!UICONTROL Revisar]* é exibida, permitindo que você revise os detalhes do fluxo de dados antes que ele seja criado. Os detalhes são agrupados nas seguintes categorias:
 
 * **[!UICONTROL Conexão]**: mostra o nome da conta, a plataforma de origem e o nome de origem.
 * **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: mostra o conjunto de dados de destino e o esquema ao qual o conjunto de dados pertence.

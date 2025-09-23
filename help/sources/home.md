@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos Source Connectors
 description: A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: a236019dc3478c32ee035bfd337096346780d14b
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1666'
 ht-degree: 11%
 
 ---
@@ -61,7 +61,7 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
 
 ### Fontes empresariais avançadas {#advanced-enterprise-sources}
 
-As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Fonte | Categoria | Tipo de assimilação | Nuvem |
 | --- | --- | --- | --- |
@@ -218,6 +218,14 @@ Você pode usar as seguintes fontes para assimilar dados do sistema local para o
 | [Carregamento de arquivo local](connectors/local-system/local-file-upload.md) | Lote | Azure |
 
 {style="table-layout:auto"}
+
+### Fidelidade {#loyalty}
+
+Você pode usar as seguintes fontes para assimilar dados do programa de fidelidade da Experience Platform.
+
+| Fonte | Tipo de assimilação | Nuvem |
+| --- | --- | --- |
+| [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Transmissão | Azure |
 
 ### Automação de marketing {#marketing-automation}
 

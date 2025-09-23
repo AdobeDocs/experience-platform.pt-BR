@@ -1,20 +1,15 @@
 ---
 title: Criar uma conexão de origem do SAP Commerce na interface
 description: Saiba como criar uma conexão de origem do SAP Commerce usando a interface do usuário do Adobe Experience Platform.
-badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '959'
 ht-degree: 2%
 
 ---
 
 # Criar uma conexão de origem [!DNL SAP Commerce] na interface
-
->[!NOTE]
->
->A origem [!DNL SAP Commerce] está na versão beta. Consulte a [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
 O tutorial a seguir orienta você pelas etapas para criar uma conexão de origem do [!DNL SAP Commerce] para trazer contatos de [[!DNL SAP] Faturamento da assinatura](https://www.sap.com/products/financial-management/subscription-billing.html) e dados do cliente usando a interface do usuário do Adobe Experience Platform.
 

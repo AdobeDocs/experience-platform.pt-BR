@@ -1,24 +1,19 @@
 ---
 title: Importação de dados de prospecção da Acxiom
 description: Saiba como conectar dados de prospecção da Acxiom à Adobe Experience Platform e à Adobe Real-Time CDP por meio da interface.
-badge: Beta
 exl-id: 6df674d9-c14b-42ea-a287-5377484e567d
-source-git-commit: 9419da451616ca7f087ecea7aa66a6c10a474fb3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '544'
 ht-degree: 5%
 
 ---
 
 # [!DNL Acxiom Prospecting Data Import]
 
->[!NOTE]
->
->A origem [!DNL Acxiom Prospecting Data Import] está na versão beta. Leia a [visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
-
 A Adobe Experience Platform oferece suporte para assimilação de dados de um aplicativo de parceiro de dados. O suporte para parceiros de dados e identidade inclui [!DNL Acxiom Prospecting Data Import].
 
-A importação de dados de prospecção do [!DNL Acxiom] para o Adobe Real-time Customer Data Platform é um processo para fornecer os públicos-alvo de prospecção mais produtivos possíveis. O [!DNL Acxiom] coleta dados primários da Real-Time CDP por meio de uma exportação segura e executa esses dados por meio de um sistema premiado de higiene e resolução de identidades. Um arquivo de dados que pode ser usado como uma lista de supressão é produzido. Este arquivo de dados é comparado ao banco de dados [!DNL Acxiom Global], o que permite que as listas de clientes potenciais sejam personalizadas para importação.
+A importação de dados de prospecção do [!DNL Acxiom] para o Adobe Real-Time Customer Data Platform é um processo para fornecer os públicos-alvo de prospecção mais produtivos possíveis. O [!DNL Acxiom] coleta dados primários da Real-Time CDP por meio de uma exportação segura e executa esses dados por meio de um sistema premiado de higiene e resolução de identidades. Um arquivo de dados que pode ser usado como uma lista de supressão é produzido. Este arquivo de dados é comparado ao banco de dados [!DNL Acxiom Global], o que permite que as listas de clientes potenciais sejam personalizadas para importação.
 
 Você pode usar a origem [!DNL Acxiom] para recuperar e mapear respostas do serviço de prospecto [!DNL Acxiom] usando [!DNL Amazon S3] como ponto de depósito.
 
@@ -28,7 +23,7 @@ Leia o documento abaixo para obter informações sobre como configurar sua conta
 
 ## Pré-requisitos
 
-Para acessar seu bucket no Experience Platform, é necessário fornecer valores válidos para as seguintes credenciais:
+Para acessar seu bucket no Experience Platform, você precisa fornecer valores válidos para as seguintes credenciais:
 
 | Credencial | Descrição |
 | --- | --- |
@@ -37,13 +32,13 @@ Para acessar seu bucket no Experience Platform, é necessário fornecer valores 
 | [!DNL Amazon S3] chave secreta | A ID da chave secreta para o seu bucket. Você pode recuperar esse valor da equipe [!DNL Acxiom]. |
 | Nome do bucket | Esse é o seu bucket onde os arquivos serão compartilhados. Você pode recuperar esse valor da equipe [!DNL Acxiom]. |
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUIR NA LISTA DE PERMISSÕES endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Antes de usar conectores de origem, você deve adicionar os endereços IP necessários para sua região ao incluo na lista de permissões de pesquisa. Se você não adicionar esses endereços IP, os conectores de origem poderão não funcionar corretamente ou poderão gerar erros. Para obter instruções detalhadas e a lista de endereços IP permitidos, leia a página [inclui na lista de permissões de endereço IP](../../ip-address-allow-list.md).
 
 ### Configurar permissões no Experience Platform
 
-Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Acxiom Prospecting Data Import] ao Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../access-control/abac/ui/permissions.md).
+Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Acxiom Prospecting Data Import] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../access-control/abac/ui/permissions.md).
 
 ## Restrições de nomenclatura para arquivos e diretórios
 
@@ -58,4 +53,4 @@ As restrições listadas abaixo devem ser consideradas ao nomear o arquivo ou di
 
 ## Próximas etapas
 
-Ao ler este documento, você concluiu a configuração de pré-requisito necessária para trazer dados da sua conta [!DNL Acxiom] para o Experience Platform. Agora você pode prosseguir para o guia em [conectando [!DNL Acxiom Prospecting Data Import] ao Experience Platform usando a interface de usuário](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md).
+Ao ler este documento, você concluiu a configuração de pré-requisito necessária para trazer dados da sua conta do [!DNL Acxiom] para a Experience Platform. Agora você pode prosseguir para o guia em [conectando [!DNL Acxiom Prospecting Data Import] ao Experience Platform usando a interface do usuário](../../tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md).

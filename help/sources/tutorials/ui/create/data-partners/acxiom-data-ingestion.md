@@ -1,21 +1,15 @@
 ---
 title: Assimilação de dados da Acxiom
 description: Use a assimilação de dados da Acxiom para assimilar dados da Acxiom na Real-Time CDP e enriquecer perfis primários. Use os perfis primários enriquecidos pela Acxiom para melhorar os públicos e ativá-los nos canais de marketing.
-last-substantial-update: 2024-03-19T00:00:00Z
-badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1839'
+source-wordcount: '1817'
 ht-degree: 3%
 
 ---
 
 # Criar uma conexão e um fluxo de dados de origem [!DNL Acxiom Data Ingestion] na interface do usuário
-
->[!NOTE]
->
->A origem [!DNL Acxiom Data Ingestion] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
 
 Use a fonte [!DNL Acxiom Data Ingestion] para assimilar dados [!DNL Acxiom] na Real-Time Customer Data Platform e enriquecer perfis próprios. Em seguida, você pode usar seus perfis primários enriquecidos com [!DNL Acxiom] para melhorar os públicos e ativar em canais de marketing.
 
@@ -125,7 +119,7 @@ Você pode selecionar **[!UICONTROL Pesquisa avançada]** para exibir uma janela
 
 >[!ENDTABS]
 
-+++Selecione para obter as etapas para habilitar a Assimilação de perfil, o diagnóstico de erros e a assimilação parcial.
++++Selecione para obter as etapas para ativar a Assimilação de perfil, Diagnóstico de erro e Assimilação parcial.
 
 Se o seu conjunto de dados estiver habilitado para o Perfil de cliente em tempo real, durante essa etapa você poderá alternar para **[!UICONTROL o conjunto de dados do perfil]** para habilitar seus dados para assimilação de perfil. Você também pode usar esta etapa para habilitar o **[!UICONTROL Diagnóstico de erro]** e a **[!UICONTROL Assimilação parcial]**.
 

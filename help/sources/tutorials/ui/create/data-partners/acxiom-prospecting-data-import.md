@@ -1,21 +1,15 @@
 ---
 title: Importação de dados de prospecção da Acxiom
 description: Saiba como conectar dados de prospecção da Acxiom à Adobe Experience Platform e à Adobe Real-Time CDP por meio da interface.
-last-substantial-update: 2024-02-21T00:00:00Z
-badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1862'
+source-wordcount: '1844'
 ht-degree: 5%
 
 ---
 
 # Criar uma conexão e um fluxo de dados de origem [!DNL Acxiom Prospecting Data Import] na interface do usuário
-
->[!NOTE]
->
->A origem [!DNL Acxiom Prospecting Data Import] está na versão beta. Leia a [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
 A importação de dados de prospecção do [!DNL Acxiom] para o Adobe Real-Time Customer Data Platform é um processo para fornecer os públicos-alvo de prospecção mais produtivos possíveis. O [!DNL Acxiom] coleta dados primários da Real-Time CDP por meio de uma exportação segura e executa esses dados por meio de um sistema premiado de higiene e resolução de identidades. Isso produz um arquivo de dados a ser usado como uma lista de supressão. Esse arquivo de dados é comparado ao banco de dados global da Acxiom, o que permite que as listas de clientes potenciais sejam personalizadas para importação.
 

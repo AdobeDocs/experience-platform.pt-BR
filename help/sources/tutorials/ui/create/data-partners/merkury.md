@@ -1,21 +1,15 @@
 ---
 title: Criar uma conexão e um fluxo de dados Source de resolução de identidade corporativa do Merkury na interface
 description: Saiba como criar uma conexão de origem de resolução de identidade corporativa do Merkury usando a interface do usuário do Adobe Experience Platform.
-last-substantial-update: 2023-12=12
-badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '2146'
-ht-degree: 1%
+source-wordcount: '2128'
+ht-degree: 0%
 
 ---
 
 # Criar uma conexão de origem e um fluxo de dados de [!DNL Merkury Enterprise Identity Resolution] na interface do usuário
-
->[!NOTE]
->
->A origem [!DNL Merkury Enterprise Identity Resolution] está na versão beta. Leia a [visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
 Este tutorial fornece etapas para criar uma conexão de origem e um fluxo de dados do [!DNL Merkury Enterprise Identity Resolution] usando a interface do usuário do Adobe Experience Platform.
 
@@ -155,7 +149,7 @@ O [!UICONTROL Diagnóstico de erro] habilita a geração de mensagens de erro de
 
 ### Ativar alertas
 
-+++Selecione para exibir etapas para ativar alertas
++++Selecione para ver as etapas para ativar alertas
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de fontes usando a interface](../../alerts.md).
 

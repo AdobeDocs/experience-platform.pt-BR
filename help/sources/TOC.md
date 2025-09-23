@@ -5,10 +5,10 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 197cdc89abd292d87276d792201dedb2373f5564
+source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
 workflow-type: tm+mt
-source-wordcount: '1056'
-ht-degree: 35%
+source-wordcount: '1070'
+ht-degree: 34%
 
 ---
 
@@ -103,6 +103,8 @@ ht-degree: 35%
       - [Shopify Transmissão](connectors/ecommerce/shopify-streaming.md)
    - Sistema local {#local-system}
       - [Conector de carregamento de arquivo local](connectors/local-system/local-file-upload.md)
+   - Fidelidade {#loyalty}
+      - [Eventos de transmissão capilares](connectors/loyalty/capillary.md)
    - Automação de marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -179,6 +181,8 @@ ht-degree: 35%
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/api/create/ecommerce/shopify.md)
          - [Shopify Transmissão](tutorials/api/create/ecommerce/shopify-streaming.md)
+      - Fidelidade {#loyalty}
+         - [Eventos de transmissão capilares](tutorials/api/create/loyalty/capillary.md)
       - Automação de marketing {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -311,6 +315,8 @@ ht-degree: 35%
          - [Shopify Transmissão](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Sistema local {#local-system}
          - [Carregamento de arquivo local](tutorials/ui/create/local-system/local-file-upload.md)
+      - Fidelidade {#loyalty}
+         - [Eventos de transmissão capilares](tutorials/ui/create/loyalty/capillary.md)
       - Automação de marketing {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -322,6 +328,7 @@ ht-degree: 35%
          - [Atividades do Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Entidades do Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
+         - [Conector de retransmissão](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [ Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamentos {#payments}
          - [Quadrado](tutorials/ui/create/payments/square.md)
@@ -393,4 +400,4 @@ ht-degree: 35%
 - [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
 - [Perguntas frequentes](./troubleshooting.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

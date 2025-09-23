@@ -1,24 +1,24 @@
 ---
-title: Conexão de transmissão do Snowflake
+title: Conexão em lote do Snowflake
 description: Exporte dados para sua conta da Snowflake usando listas privadas.
 badgeBeta: label="Beta" type="Informative"
-exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 183858daac3a2471cb842f1d7308f91cf514c5ee
+badgeUltimate: label="Ultimate" type="Positive"
+source-git-commit: 3500e5ba00727c6299331cff79c56a99009cfd37
 workflow-type: tm+mt
-source-wordcount: '1438'
-ht-degree: 3%
+source-wordcount: '1642'
+ht-degree: 4%
 
 ---
 
-# Conexão de transmissão do Snowflake {#snowflake-destination}
+# Conexão em lote do Snowflake {#snowflake-destination}
 
 >[!IMPORTANT]
 >
->Este conector de destino está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso, entre em contato com o representante da Adobe.
+>Esse conector de destino está na versão beta e só está disponível para clientes do Real-Time CDP Ultimate. A funcionalidade e a documentação estão sujeitas a alterações.
 
 ## Visão geral {#overview}
 
-Use o conector de destino do Snowflake para exportar dados para a instância do Snowflake do Adobe, que o Adobe compartilha com sua instância por meio de [listagens privadas](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about).
+Use esse destino para enviar dados de público-alvo para tabelas dinâmicas na sua conta do Snowflake. As tabelas dinâmicas fornecem acesso aos dados sem exigir cópias físicas dos dados.
 
 Leia as seções a seguir para entender como o destino do Snowflake funciona e como os dados são transferidos entre o Adobe e o Snowflake.
 
@@ -26,29 +26,35 @@ Leia as seções a seguir para entender como o destino do Snowflake funciona e c
 
 Esse destino usa um compartilhamento de dados do [!DNL Snowflake], o que significa que nenhum dado é fisicamente exportado ou transferido para sua própria instância do Snowflake. Em vez disso, o Adobe concede acesso somente leitura a uma tabela ativa hospedada no ambiente Snowflake do Adobe. Você pode consultar essa tabela compartilhada diretamente da sua conta da Snowflake, mas não é o proprietário da tabela e não pode modificá-la ou mantê-la além do período de retenção especificado. O Adobe gerencia totalmente o ciclo de vida e a estrutura da tabela compartilhada.
 
-Na primeira vez que compartilhar dados da instância Snowflake do Adobe com a sua, você será solicitado a aceitar a lista privada do Adobe.
+Na primeira vez depois de configurar um fluxo de dados do Adobe para sua conta da Snowflake, você será solicitado a aceitar a lista privada do Adobe.
 
-![Captura de tela mostrando a tela de aceitação da lista privada do Snowflake](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![Captura de tela mostrando a tela de aceitação da lista privada do Snowflake](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
 
 ### Retenção de dados e TTL (Time-to-Live) {#ttl}
 
-Todos os dados compartilhados por meio dessa integração têm um TTL (Time-to-Live) fixo de sete dias. Sete dias após a última exportação, a tabela compartilhada expira automaticamente e se torna inacessível, independentemente de o fluxo de dados ainda estar ativo. Se você precisar reter os dados por mais de sete dias, copie o conteúdo em uma tabela de sua propriedade na própria instância do Snowflake antes que o TTL expire.
+Todos os dados compartilhados por meio dessa integração têm um TTL (Time-to-Live) fixo de sete dias. Sete dias após a última exportação, a tabela dinâmica expira automaticamente e se torna inacessível, independentemente de o fluxo de dados ainda estar ativo. Se você precisar reter os dados por mais de sete dias, copie o conteúdo em uma tabela de sua propriedade na própria instância do Snowflake antes que o TTL expire.
+
+>[!IMPORTANT]
+>
+>A exclusão de um fluxo de dados no Experience Platform resultará no desaparecimento da tabela dinâmica da sua conta do Snowflake.
 
 ### Comportamento de atualização do público {#audience-update-behavior}
 
 Se o público-alvo for avaliado no [modo de lote](../../../segmentation/methods/batch-segmentation.md), os dados na tabela compartilhada serão atualizados a cada 24 horas. Isso significa que pode haver um atraso de até 24 horas entre as alterações na associação de público-alvo e quando essas alterações são refletidas na tabela compartilhada.
 
-### Lógica de exportação incremental {#incremental-export}
+### Lógica de compartilhamento de dados em lote {#batch-data-sharing}
 
-Quando um fluxo de dados é executado para um público-alvo pela primeira vez, ele executa um preenchimento retroativo e compartilha todos os perfis qualificados no momento. Após esse preenchimento retroativo inicial, somente as atualizações incrementais serão refletidas na tabela compartilhada. Isso significa que os perfis são adicionados ou removidos do público-alvo. Essa abordagem garante atualizações eficientes e mantém a tabela compartilhada atualizada.
+Quando um fluxo de dados é executado para um público-alvo pela primeira vez, ele executa um preenchimento retroativo e compartilha todos os perfis qualificados no momento. Após esse preenchimento retroativo inicial, o destino fornece instantâneos periódicos da associação completa do público-alvo. Cada instantâneo substitui os dados anteriores na tabela compartilhada, garantindo que você sempre veja a exibição completa mais recente do público-alvo sem dados históricos.
 
 ## Compartilhamento de dados em lote versus transmissão {#batch-vs-streaming}
 
-A Experience Platform fornece dois tipos de destinos do Snowflake: [Streaming do Snowflake](snowflake.md) e [Lote do Snowflake](../cloud-storage/snowflake-batch.md).
+A Experience Platform fornece dois tipos de destinos do Snowflake: [Streaming do Snowflake](/help/destinations/catalog/cloud-storage/snowflake.md) e [Lote do Snowflake](snowflake-batch.md).
 
-A tabela abaixo ajudará você a decidir qual destino usar, descrevendo os cenários em que cada método de compartilhamento de dados é mais apropriado.
+Embora ambos os destinos forneçam acesso aos seus dados no Snowflake de maneira zero, há algumas práticas recomendadas em termos de casos de uso para cada conector.
 
-|  | Escolha o [Lote do Snowflake](../cloud-storage/snowflake-batch.md) quando precisar | Escolha [Streaming do Snowflake](snowflake.md) quando precisar |
+A tabela abaixo ajudará você a decidir qual conector usar, descrevendo os cenários em que cada método de compartilhamento de dados é mais apropriado.
+
+|  | Escolha o [Lote do Snowflake](snowflake-batch.md) quando precisar | Escolha [Streaming do Snowflake](/help/destinations/catalog/cloud-storage/snowflake.md) quando precisar |
 |--------|-------------------|----------------------|
 | **Frequência de atualização** | Instantâneos periódicos | Atualizações contínuas em tempo real |
 | **Apresentação de dados** | Instantâneo completo do público-alvo que substitui os dados anteriores | Atualizações incrementais com base em alterações de perfil |
@@ -56,26 +62,19 @@ A tabela abaixo ajudará você a decidir qual destino usar, descrevendo os cená
 | **Gerenciamento de dados** | Sempre ver instantâneo concluído mais recente | Atualizações incrementais com base em alterações de associação de público |
 | **Exemplos de cenários** | Relatórios de negócios, análise de dados, treinamento de modelo de ML | Supressão da campanha de marketing, personalização em tempo real |
 
-Para obter mais informações sobre o compartilhamento de dados em lote, consulte a documentação da [Conexão em lote do Snowflake](../cloud-storage/snowflake-batch.md).
+Para obter mais informações sobre compartilhamento de dados de transmissão, consulte a documentação da [Conexão de transmissão do Snowflake](../cloud-storage/snowflake.md).
 
 ## Casos de uso {#use-cases}
 
-O compartilhamento de dados de transmissão é ideal para cenários em que você precisa de atualizações imediatas quando um perfil altera sua associação ou outros atributos. Isso é fundamental para casos de uso que exigem capacidade de resposta em tempo real, como:
+O compartilhamento de dados em lote é ideal para cenários em que você precisa de um instantâneo completo do seu público-alvo e em que não são necessárias atualizações em tempo real, como:
 
-* **Supressão da campanha de marketing**: suprime imediatamente campanhas de marketing para usuários que realizaram ações específicas, como se inscrever em um serviço ou fazer uma compra
-* **Personalização em tempo real**: atualize as experiências do usuário instantaneamente quando os atributos do perfil forem alterados, como quando um usuário visita um site, visualiza uma página de produto ou adiciona itens a um carrinho de compras
-* **Cenários de ação imediata**: execute supressão e redirecionamento rápidos com base em dados em tempo real para reduzir atrasos e garantir que as campanhas de marketing sejam mais relevantes e oportunas
-* **Eficiência e nuance**: permita maior eficiência e nuance nos esforços de marketing, permitindo uma resposta rápida às alterações de comportamento do usuário
-* **Otimização da jornada do cliente em tempo real**: atualize as experiências do cliente imediatamente quando a associação do segmento ou os atributos do perfil forem alterados
+* **Cargas de trabalho analíticas**: ao executar tarefas de análise de dados, relatórios ou business intelligence que exigem uma exibição completa da associação de público-alvo
+* **Fluxos de trabalho de aprendizado de máquina**: Para modelos de aprendizado de máquina ou execução de análises preditivas que se beneficiam de instantâneos completos de público-alvo
+* **Data warehouse**: quando é necessário manter uma cópia atual dos dados do público-alvo em sua própria instância do Snowflake
+* **Relatórios periódicos**: para relatórios comerciais regulares nos quais você precisa do estado do público-alvo mais recente sem o rastreamento de alterações históricas
+* **Processos ETL**: quando você precisa transformar ou processar dados de público-alvo em lotes
 
-O compartilhamento de dados de transmissão fornece atualizações contínuas com base em alterações de segmento, alterações no mapa de identidade ou alterações de atributo, tornando-o adequado para cenários em que a latência é crítica e são necessárias atualizações imediatas.
-
-## Pré-requisitos {#prerequisites}
-
-Antes de configurar a conexão do Snowflake, verifique se os seguintes pré-requisitos estão sendo atendidos:
-
-* Você tem acesso a uma conta [!DNL Snowflake].
-* Sua conta do Snowflake tem inscrições em listas privadas. Você ou alguém em sua empresa que tenha privilégios de administrador de conta no Snowflake pode configurar isso.
+O compartilhamento de dados em lote simplifica o gerenciamento de dados fornecendo instantâneos completos, eliminando a necessidade de gerenciar atualizações incrementais ou mesclar alterações manualmente.
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
@@ -88,6 +87,17 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 {style="table-layout:auto"}
 
+Públicos-alvo compatíveis por tipo de dados de público-alvo:
+
+| Tipo de dados de público | Suportado | Descrição | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Públicos-alvo](/help/segmentation/types/people-audiences.md) | ✓ | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
+| [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
+| [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+
+{style="table-layout:auto"}
+
 ## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
@@ -95,7 +105,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL Snowflake]. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Lote]** | Esse destino fornece instantâneos periódicos da associação completa do público-alvo por meio do compartilhamento de dados do Snowflake. Cada instantâneo substitui os dados anteriores, garantindo que você sempre tenha a visualização completa mais recente do público-alvo. |
 
 {style="table-layout:auto"}
 
@@ -109,20 +119,20 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 ### Autenticar para o destino {#authenticate}
 
-Para autenticar no destino, selecione **[!UICONTROL Conectar ao destino]**.
+Para autenticar no destino, selecione **[!UICONTROL Conectar ao destino]** e forneça um nome de conta e, opcionalmente, uma descrição de conta.
 
-![Captura de tela de exemplo mostrando como autenticar no destino](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)
+![Captura de tela de exemplo mostrando como autenticar no destino](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png)
 
 ### Preencher detalhes do destino {#destination-details}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_snowflake_accountID"
+>id="platform_destinations_snowflake_batch_accountID"
 >title="Insira sua ID da conta do Snowflake"
 >abstract="Se sua conta estiver vinculada a uma organização, use este formato: `OrganizationName.AccountName`<br><br> Se sua conta não estiver vinculada a uma organização, use este formato:`AccountName`"
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-![Captura de tela de exemplo mostrando como preencher detalhes para o seu destino](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
+![Captura de tela de exemplo mostrando como preencher detalhes para o seu destino](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png)
 
 * **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
@@ -148,19 +158,37 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
+Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ### Mapear atributos {#map}
 
-O destino do Snowflake oferece suporte ao mapeamento de atributos de perfil para atributos personalizados.
+Você pode exportar identidades e atributos de perfil para esse destino.
 
-![Imagem da interface do usuário do Experience Platform mostrando a tela de mapeamento para o destino do Snowflake.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Imagem da interface do usuário do Experience Platform mostrando a tela de mapeamento para o destino do Snowflake.](../../assets/catalog/cloud-storage/snowflake-batch/mapping.png)
+
+Você pode usar o [controle de campos calculados](../../ui/data-transformations-calculated-fields.md) para exportar e executar operações em matrizes.
 
 Os atributos de destino são criados automaticamente no Snowflake usando o nome do atributo fornecido no campo **[!UICONTROL Nome do atributo]**.
 
 ## Dados exportados / Validar exportação de dados {#exported-data}
 
-Verifique sua conta do Snowflake para verificar se os dados foram exportados corretamente.
+Os dados são transferidos para sua conta do Snowflake por meio de uma tabela dinâmica. Verifique sua conta do Snowflake para verificar se os dados foram exportados corretamente.
+
+### Estrutura de dados {#data-structure}
+
+A tabela dinâmica contém as seguintes colunas:
+
+* **TS**: uma coluna de carimbo de data/hora que representa quando cada linha foi atualizada pela última vez
+* **Atributos de mapeamento**: todos os atributos de mapeamento selecionados durante o fluxo de trabalho de ativação são representados como um cabeçalho de coluna no Snowflake
+* **Associação de público-alvo**: a associação a qualquer público mapeado para o fluxo de dados é indicada por meio de uma entrada `active` na célula correspondente
+
+![Captura de tela mostrando a interface do Snowflake com dados da tabela dinâmica](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
+
+## Limitações conhecidas {#known-limitations}
+
+### Várias políticas de mesclagem
+
+Públicos-alvo com várias políticas de mesclagem não são compatíveis com um único fluxo de dados. Diferentes políticas de mesclagem produzem instantâneos diferentes e, na prática, os dados relacionados a um público seriam substituídos pelos dados do outro público, em vez de serem exportados como esperado.
 
 ## Uso e governança de dados {#data-usage-governance}
 

@@ -3,9 +3,9 @@ keywords: plataforma;destinos;destinos espaço de trabalho;espaço de trabalho;u
 title: Espaço de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em cinco seções: Visão geral, Catálogo, Procurar, Contas e Exibição de sistema. Eles são descritos nas seções abaixo.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
+source-git-commit: ff566e6ec409d237d3831d787d7428859dd4b566
 workflow-type: tm+mt
-source-wordcount: '2240'
+source-wordcount: '2369'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Os destinos com a opção de alternância **[!UICONTROL Habilitado/Desabilitado]
 > ![Guia Procurar](../assets/ui/workspace/browse-tab.png)
 > 
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Ativar públicos-alvo](/help/images/icons/data-add.png) **[!UICONTROL Ativar públicos-alvo]** para exportar públicos-alvo ou conjuntos de dados para esse destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino &#x200B;]**&#x200B;para editar conexões de destino existentes. Leia o tutorial sobre [edição de destinos](/help/destinations/ui/edit-destination.md) para obter mais informações.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar destino](/help/images/icons/edit.png)**[!UICONTROL Editar destino ]**para editar conexões de destino existentes. Leia o tutorial sobre [edição de destinos](/help/destinations/ui/edit-destination.md) para obter mais informações.
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Editar ações de marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Editar ações de marketing]** para [alterar as ações de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) para o destino selecionado.
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Excluir](/help/images/icons/delete.png) **[!UICONTROL Excluir]** para [remover](delete-destinations.md) uma conexão existente com um destino.
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Nome] e use o controle ![Exibir no controle de monitoramento](/help/images/icons/monitoring.png) **[!UICONTROL Exibir no monitoramento]** para exibir informações de ativação para este destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
@@ -93,12 +93,13 @@ Consulte a tabela abaixo para obter todas as informações fornecidas para cada 
 | Nome | O nome fornecido para o fluxo de ativação para esse destino. |
 | Tipo de dados | O tipo de dados aceito pela conexão de destino. Tipos de dados compatíveis: <ul><li>**[!UICONTROL Clientes]**</li><li>**[!UICONTROL Clientes Potenciais]**</li><li>**[!UICONTROL Contas]**</li><li>**[!UICONTROL Conjuntos de dados]**</li></ul> |
 | [!UICONTROL Status da Última Execução do Fluxo de Dados] | O status da última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
-| [!UICONTROL Data da Última Execução do Fluxo de Dados] | Hora e data em que ocorreu a última execução do fluxo de dados. Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
+| [!UICONTROL Data da Última Execução do Fluxo de Dados] | Hora e data em que ocorreu a última execução do fluxo de dados. Selecione o cabeçalho da coluna para acessar as opções de classificação (**[!UICONTROL Classificar em ordem crescente]**, **[!UICONTROL Classificar em ordem decrescente]**). Consulte [Exibir detalhes do destino](destination-details-page.md) para obter mais informações sobre execuções de fluxo de dados. |
 | [!UICONTROL Destino] | A plataforma de destino selecionada para o fluxo de ativação. |
-| [!UICONTROL Data de vencimento da conta] | A data em que a autorização de conexão com este destino expirará. <br>**Importante**: esta coluna está disponível no momento somente para a conexão [Facebook](../catalog/social/facebook.md). |
+| [!UICONTROL Data de vencimento da conta] | A data em que a autorização de conexão com este destino expirará. <br> Um ícone de aviso ![Aviso: ícone de expiração da conta](/help/images/icons/alert-expiration.png) é exibido antes da data de expiração para alertá-lo de que a conexão irá expirar e pode exigir renovação. Os fluxos de dados para conexões expiradas são interrompidos e você deve reautenticar para retomar os fluxos de trabalho de ativação. <br>**Importante**: esta coluna está disponível no momento apenas para as conexões [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) e [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). <br> ![Exemplo de aviso de expiração de conta na guia Procurar](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."} |
 | [!UICONTROL Nome de usuário] | As credenciais de conta selecionadas para o fluxo de destino. |
 | [!UICONTROL Dados de ativação] | Indica o número de públicos-alvo que estão sendo ativados para esse destino. Selecione este controle para saber mais sobre os públicos ativados. Consulte [Dados de ativação](/help/destinations/ui/destination-details-page.md#activation-data) na página de detalhes do destino para obter mais informações sobre os públicos ativados. |
-| [!UICONTROL Criado] | A data e hora UTC quando o fluxo de ativação para o destino foi criado. Selecione o símbolo de seta para cima/para baixo para classificar os fluxos de ativação pelo mais recente primeiro ou pelo mais antigo primeiro. |
+| [!UICONTROL Criado] | A data e a hora em que o fluxo de ativação para o destino foi criado. Selecione o símbolo de seta para cima/para baixo para classificar os fluxos de ativação pelo mais recente primeiro ou pelo mais antigo primeiro. |
+| [!UICONTROL Modificado] | A data e a hora em que o fluxo de ativação para o destino foi modificado pela última vez. |
 | [!UICONTROL Status] | `Enabled` ou `Disabled`. Indica se os dados estão sendo ativados para este destino. |
 | [!UICONTROL Acessar rótulos] | Exibe todos os rótulos de acesso que foram adicionados a esse fluxo de dados de destino. Leia mais sobre [aplicação de rótulos de acesso a fluxos de dados de destino](/help/access-control/abac/apply-access-labels-destinations.md). |
 | [!UICONTROL Tags] | Exibe todas as tags adicionadas a esse fluxo de dados de destino. Use tags para organizar e categorizar seus fluxos de dados para facilitar o gerenciamento. |
@@ -182,21 +183,21 @@ A guia **[!UICONTROL Contas]** mostra detalhes sobre as conexões estabelecidas 
 
 >[!TIP]
 >
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Ativate](/help/images/icons/data-add.png)**[!UICONTROL Ativate &#x200B;]**/**[!UICONTROL &#x200B; Ativate audiences &#x200B;]**/**[!UICONTROL &#x200B; Export datasets &#x200B;]**&#x200B;para exportar audiences ou conjuntos de dados para esse destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Editar detalhes](/help/images/icons/edit.png)**[!UICONTROL Editar detalhes &#x200B;]**&#x200B;para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Excluir](/help/images/icons/delete.png)**[!UICONTROL Excluir &#x200B;]**&#x200B;para [excluir](delete-destination-account.md) uma conta de destino existente.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Ativate](/help/images/icons/data-add.png)**[!UICONTROL Ativate ]**/**[!UICONTROL  Ativate audiences ]**/**[!UICONTROL  Export datasets ]**para exportar audiences ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Editar detalhes](/help/images/icons/edit.png)**[!UICONTROL Editar detalhes ]**para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Plataforma] e use o controle ![Excluir](/help/images/icons/delete.png)**[!UICONTROL Excluir ]**para [excluir](delete-destination-account.md) uma conta de destino existente.
 
 ![Guia Contas](../assets/ui/workspace/accounts-tab.png)
 
 | Elemento | Descrição |
 |---|---|
-| [!UICONTROL Nome] | O nome atribuído à conta de destino ao [configurar](connect-destination.md#authenticate) o destino. |
+| [!UICONTROL Nome] | O nome atribuído à conta de destino ao [configurar](connect-destination.md#authenticate) o destino. Selecione o cabeçalho da coluna para acessar as opções de classificação (**[!UICONTROL Classificar em ordem crescente]**, **[!UICONTROL Classificar em ordem decrescente]**). |
 | [!UICONTROL Destino] | O conector de destino para o qual você configurou a conexão. |
 | [!UICONTROL Tipo de conexão] | Representa o tipo de conexão de conta para seu bucket de armazenamento ou destino. Dependendo do destino, as opções de autenticação são: <ul><li>Para destinos de marketing por email: pode ser S3, FTP ou Blob do Azure.</li><li>Para destinos de anúncios em tempo real: de servidor para servidor</li><li>Para destinos de armazenamento na nuvem do Amazon S3: Chave de acesso </li><li>Para destinos de armazenamento na nuvem SFTP: autenticação básica para SFTP</li><li>Autenticação OAuth 1 ou OAuth 2</li><li>Autenticação de token do portador</li></ul> |
 | [!UICONTROL Nome de usuário] | O nome de usuário selecionado no [fluxo de trabalho de destino de conexão](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Conexões] | Representa o número de fluxos de dados de destino exclusivos bem-sucedidos conectados às informações básicas criadas para um destino. |
 | [!UICONTROL Data de autorização] | A data em que a conexão com esse destino foi autorizada. |
-| [!UICONTROL Data de vencimento] | A data em que a autorização de conexão com este destino expirará. <br>**Importante**: esta coluna está disponível no momento apenas para as conexões do [Facebook](../catalog/social/facebook.md), [LinkedIn](../catalog/social/linkedin.md) e [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). |
+| [!UICONTROL Data de vencimento] | A data em que a autorização de conexão com este destino expirará. <br> Um ícone de aviso ![Ícone de aviso de conta expirada.](/help/images/icons/alert-expiration.png) é exibido antes da data de expiração para alertá-lo de que a conexão irá expirar e pode exigir renovação. Os fluxos de dados para conexões expiradas são interrompidos e você deve reautenticar para retomar os fluxos de trabalho de ativação. <br>**Importante**: esta coluna está disponível no momento apenas para as conexões do [Pinterest](../catalog/advertising/pinterest.md), [LinkedIn](../catalog/social/linkedin.md) e [LinkedIn Matched Audiences](../catalog/social/linkedin-b2b.md). <br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

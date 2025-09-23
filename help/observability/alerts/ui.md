@@ -4,10 +4,10 @@ title: Guia da interface de alertas
 description: Saiba como gerenciar alertas na interface do usuário do Experience Platform.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 57261ca37bf10e394f47ea4bb3c01856a18b197d
 workflow-type: tm+mt
-source-wordcount: '798'
-ht-degree: 4%
+source-wordcount: '814'
+ht-degree: 5%
 
 ---
 
@@ -96,10 +96,12 @@ Os limites de alerta podem ser personalizados para os seguintes tipos de alerta:
 | Atraso na execução do fluxo de destino | Limite de atraso |
 | Atraso na execução do fluxo do serviço de identidade | Limite de atraso |
 | Atraso na execução do fluxo de perfil | Limite de atraso |
+| Taxa de falhas de assimilação de transmissão de perfis excedida | Limite de erro |
+| Taxa de Ignorar Assimilação de Streaming de Perfil Excedida | Limite de erro |
 | Atraso na execução do fluxo de fontes | Limite de atraso |
+| Taxa de erro de assimilação de origens excedida | Limite de erro |
 | Atraso da execução da consulta | Limite de atraso |
 | Taxa de Ignorar Ativação Excedida | Limite de erro |
-| Taxa de erro de assimilação de origens excedida | Limite de erro |
 
 Selecione as reticências (**...**) ao lado do nome de uma regra, uma lista suspensa exibe controles. Selecione **[!UICONTROL Editar]**.
 

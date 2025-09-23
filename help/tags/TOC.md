@@ -6,9 +6,9 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 24ff17af89bc882f08ec0f331ebae53b61f35d78
+source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '788'
 ht-degree: 44%
 
 ---
@@ -202,6 +202,8 @@ ht-degree: 44%
       * [Pesquisa de SDI](https://exchange.adobe.com/apps/ec/102991)
       * [Toolkit de SDI](https://exchange.adobe.com/apps/ec/101460)
       * [CamSessão](https://exchange.adobe.com/apps/ec/100517)
+      * [!DNL Snap Pixel] {#snap-pixel}
+         * [Visão geral](./extensions/client/snap-pixel/overview.md)
       * [Abrangente de Armazenamento](https://exchange.adobe.com/apps/ec/102990)
       * [TAGS por Horizonte de Loop](https://exchange.adobe.com/apps/ec/106092)
       * [Coleta de teálio](https://exchange.adobe.com/apps/ec/104217)
@@ -341,5 +343,5 @@ ht-degree: 44%
 * [Perguntas frequentes](./faq.md)
 * [Atualizações de terminologia](./term-updates.md)
 * [Substituição do suporte para o Internet Explorer 10 e 11](./ie-deprecation.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)
 

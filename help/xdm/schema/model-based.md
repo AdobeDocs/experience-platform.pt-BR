@@ -38,7 +38,7 @@ Use esquemas baseados em modelo para:
 
 ## Como os esquemas baseados em modelo diferem dos esquemas XDM padrão
 
-Os esquemas XDM padrão no Experience Platform seguem um dos três comportamentos de dados: Registro, Série temporal ou Ad-hoc. Para obter definições e detalhes, consulte [Comportamentos de dados XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
+Os esquemas XDM padrão no Experience Platform seguem um dos três comportamentos de dados: Registro, Série temporal ou Ad-hoc. Para obter definições e detalhes, consulte [Comportamentos de dados XDM](https://experienceleague.adobe.com/pt-br/docs/experience-platform/xdm/home#data-behaviors).
 
 No modelo tradicional, os esquemas de registro e série temporal participam de [esquemas de união](../api/unions.md) (consulte também o [guia da interface do usuário do esquema de união](../../profile/ui/union-schema.md)). Esses esquemas evoluem automaticamente à medida que [grupos de campos](./composition.md#field-group) compartilhados são atualizados e os campos personalizados devem ser aninhados em um namespace de locatário. Embora eficiente, esse modelo pode retardar a integração, produzir esquemas muito complexos com campos não utilizados e exigir mapeamento ou transformação de dados adicionais. Esses fatores aumentam a curva de aprendizado e o esforço contínuo de manutenção.
 

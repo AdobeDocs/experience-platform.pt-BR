@@ -79,8 +79,8 @@ Em seguida, prossiga para [definir chaves primárias](../fields/identity.md#defi
 
 >[!NOTE]
 >
->Depois de salvo, o campo [!UICONTROL Tipo] na barra lateral [!UICONTROL  Propriedades do esquema] indica que este é um esquema [!UICONTROL baseado em modelo]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
->>![A tela Editor de Esquemas mostrando uma estrutura de esquema baseada em modelo vazia com o tipo baseado em modelo realçado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+>Depois de salvo, o campo [!UICONTROL Tipo] na barra lateral [!UICONTROL &#x200B; Propriedades do esquema] indica que este é um esquema [!UICONTROL baseado em modelo]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
+>&#x200B;>![A tela Editor de Esquemas mostrando uma estrutura de esquema baseada em modelo vazia com o tipo baseado em modelo realçado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Fazer upload de um arquivo DDL {#upload-ddl-file}
 
@@ -253,7 +253,7 @@ Depois de adicionar um grupo de campos a um esquema, você pode remover campos g
 >[!IMPORTANT]
 >
 >Selecionar **[!UICONTROL Remover]** exclui o campo do próprio grupo de campos, afetando *todos* esquemas que usam esse grupo de campos.
->>Não use esta opção, a menos que deseje **remover o campo de cada esquema que inclua o grupo de campos**.
+>&#x200B;>Não use esta opção, a menos que deseje **remover o campo de cada esquema que inclua o grupo de campos**.
 
 Para excluir um campo do grupo de campos, selecione-o na tela e selecione **[!UICONTROL Remover]** no painel direito. Este exemplo mostra o campo `taxId` do grupo **[!UICONTROL Detalhes Demográficos]**.
 
@@ -487,6 +487,6 @@ Depois de confirmar a alteração de classe, a tela será redefinida e todo o pr
 
 Este documento abordou as noções básicas para a criação e edição de esquemas na interface do usuário do Experience Platform. É altamente recomendável que você consulte o [tutorial de criação de esquemas](../../tutorials/create-schema-ui.md) para obter um fluxo de trabalho abrangente e criar um esquema completo na interface do usuário, incluindo a criação de grupos de campos personalizados e tipos de dados para casos de uso exclusivos.
 
-Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
+Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).
 
 Para saber como gerenciar esquemas na API [!DNL Schema Registry], consulte o [manual de endpoint de esquemas](../../api/schemas.md).

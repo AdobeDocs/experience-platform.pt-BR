@@ -525,7 +525,7 @@ O descritor de chave primária (`xdm:descriptorPrimaryKey`) impõe restrições 
 
 >[!NOTE]
 >
->No Editor de Esquema da Interface do Usuário, o descritor de versão aparece como &quot;[!UICOTRNOL Identificador de versão]&quot;.
+>No Editor de Esquema da Interface do Usuário, o descritor de versão aparece como &quot;[ !UICOTRNOL Identificador de versão]&quot;.
 
 O descritor de versão (`xdm:descriptorVersion`) designa um campo para detectar e evitar conflitos de eventos de alteração fora de ordem.
 
@@ -547,7 +547,7 @@ O descritor de versão (`xdm:descriptorVersion`) designa um campo para detectar 
 
 >[!NOTE]
 >
->No Editor de Esquema de Interface do Usuário, o descritor de carimbo de data/hora aparece como &quot;[!UICOTRNOL Identificador de carimbo de data/hora]&quot;.
+>No Editor de Esquema de Interface do Usuário, o descritor de carimbo de data/hora aparece como &quot;[ !UICOTRNOL Identificador de carimbo de data/hora]&quot;.
 
 O descritor de carimbo de data/hora (`xdm:descriptorTimestamp`) designa um campo de data/hora como carimbo de data/hora para esquemas com `"meta:behaviorType": "time-series"`.
 

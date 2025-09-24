@@ -302,7 +302,7 @@ Crie o esquema primeiro com `POST /tenant/schemas`. Em seguida, adicione os desc
 
 >[!NOTE]
 >
->No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data/hora aparecem como &quot;[!UICOTRNOL Identificador de versão]&quot; e &quot;[!UICOTRNOL Identificador de carimbo de data/hora]&quot;, respectivamente.
+>No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data/hora aparecem como &quot;[ !UICOTRNOL Identificador de versão]&quot; e &quot;[ !UICOTRNOL Identificador de carimbo de data/hora]&quot;, respectivamente.
 
 <!-- >[!AVAILABILITY]
 >

@@ -71,7 +71,7 @@ Use um descritor de chave primária para garantir que cada registro seja identif
 
 >[!NOTE]
 >
->No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data/hora aparecem como &quot;[!UICOTRNOL Identificador de versão]&quot; e &quot;[!UICOTRNOL Identificador de carimbo de data/hora]&quot;, respectivamente.
+>No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data/hora aparecem como &quot;[ !UICOTRNOL Identificador de versão]&quot; e &quot;[ !UICOTRNOL Identificador de carimbo de data/hora]&quot;, respectivamente.
 
 **Exemplo (campo único):**
 

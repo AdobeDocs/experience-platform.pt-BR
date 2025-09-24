@@ -83,5 +83,5 @@ Use esses valores para configurar o webhook no **Console de Retransmissão**. Pa
 
 ## Recursos adicionais
 
-* [Criar uma nova especificação de conexão usando a API de Serviço de Fluxo](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Conectar à sua origem usando a interface](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Criar uma nova especificação de conexão usando a API de Serviço de Fluxo](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Conectar à sua origem usando a interface](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

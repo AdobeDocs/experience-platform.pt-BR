@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1069'
 ht-degree: 34%
 
 ---
@@ -363,7 +363,7 @@ ht-degree: 34%
    - [Assinar alertas de origens](tutorials/ui/alerts.md)
    - [Salvar um fluxo de dados como rascunho](tutorials/ui/draft.md)
    - [Aplicar rótulos de acesso a um fluxo de dados](tutorials/ui/labels.md)
-   - [Criar um ponto de extremidade privado do Azure](tutorials/ui/private-link.md)
+   - [Criar um ponto de extremidade privado](tutorials/ui/private-link.md)
 - Origens de Autoatendimento (SDK em Lote) {#sdk}
    - [Visão geral](sources-sdk/overview.md)
    - Configurar a especificação de conexão {#config}

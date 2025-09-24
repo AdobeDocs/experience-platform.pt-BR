@@ -1,7 +1,10 @@
 ---
 title: Connect Relay to Experience Platform na interface do usuário
 description: Saiba como criar uma conexão de origem personalizada do Conector de retransmissão usando a interface do usuário do Adobe Experience Platform.
-source-git-commit: b16600888bd5e70dd97d67ceb265e3a1848d2a66
+hide: true
+hidefromtoc: true
+exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
 source-wordcount: '568'
 ht-degree: 1%
@@ -80,5 +83,5 @@ Use esses valores para configurar o webhook no **Console de Retransmissão**. Pa
 
 ## Recursos adicionais
 
-* [Criar uma nova especificação de conexão usando a API de Serviço de Fluxo](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [Conectar à sua origem usando a interface](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [Criar uma nova especificação de conexão usando a API de Serviço de Fluxo](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [Conectar à sua origem usando a interface](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

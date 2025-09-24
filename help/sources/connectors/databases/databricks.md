@@ -1,26 +1,26 @@
 ---
-title: Azure Databricks
-description: Saiba mais sobre as etapas de pré-requisito necessárias para conectar o Azure Databricks ao Experience Platform.
+title: Databricks
+description: Saiba mais sobre as etapas de pré-requisito necessárias para conectar o Databricks ao Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '628'
 ht-degree: 3%
 
 ---
 
-# [!DNL Azure Databricks]
+# [!DNL Databricks]
 
 >[!AVAILABILITY]
 >
->* A origem [!DNL Azure Databricks] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
+>* A origem [!DNL Databricks] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
 >
->* A origem [!DNL Azure Databricks] está na versão beta. Leia os [termos e condições](../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
+>* A origem [!DNL Databricks] está na versão beta. Leia os [termos e condições](../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
 
-[!DNL Azure Databricks] é uma plataforma baseada em nuvem projetada para análise de dados, aprendizado de máquina e IA. Você pode usar o [!DNL Databricks] para integrar com o [!DNL Azure] e fornecer um ambiente holístico para criar, implantar e gerenciar soluções de dados em escala.
+[!DNL Databricks] é uma plataforma baseada em nuvem projetada para análise de dados, aprendizado de máquina e IA. Você pode usar o [!DNL Databricks] para integrar e fornecer um ambiente holístico para criar, implantar e gerenciar soluções de dados em escala.
 
 Use a fonte [!DNL Databricks] para conectar sua conta e assimilar os dados do [!DNL Databricks] na Adobe Experience Platform.
 

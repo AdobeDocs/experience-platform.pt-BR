@@ -1,10 +1,11 @@
 ---
 title: Notas de versão da Adobe Experience Platform de setembro de 2025
 description: As notas de versão de setembro de 2025 da Adobe Experience Platform.
-source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
+exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
+source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
 workflow-type: tm+mt
-source-wordcount: '1402'
-ht-degree: 21%
+source-wordcount: '1388'
+ht-degree: 22%
 
 ---
 
@@ -16,9 +17,9 @@ ht-degree: 21%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-no)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: 23 de setembro de 2025**
 
@@ -126,7 +127,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | O público estima a reversão de atualização automática | O aprimoramento da atualização automática para estimativas de público-alvo foi revertido. As estimativas de público-alvo continuarão a ser geradas no Construtor de segmentos, mas a funcionalidade de atualização automática foi removida. |
 | Público externo | A partir de 30 de setembro, os públicos-alvo externos serão recuperados por meio da Pesquisa unificada no Construtor de segmentos. Se você estiver usando a Correspondência de segmentos, poderá habilitar a experiência herdada no Construtor de segmentos. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Origens {#sources}
 
@@ -138,7 +139,10 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 | --- | --- |
 | Novas fontes de disponibilidade geral | As seguintes origens estão agora em Disponibilidade geral: vários conectores de origem foram atualizados do Beta para o GA: <ul><li>[Assimilação de dados da Acxiom](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Assimilação de dados de prospecto da Acxiom](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Empresa](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Essas origens agora estão totalmente compatíveis e prontas para uso de produção. |
 | Suporte à autenticação de par de chaves do [!DNL Snowflake] | Segurança aprimorada para conexões do Snowflake com suporte para autenticação de par de chaves. A autenticação básica (nome de usuário/senha) será descontinuada em novembro de 2025, portanto, os clientes são incentivados a migrar para a autenticação de par de chaves para melhorar a segurança. Para obter mais informações, leia a [[!DNL Snowflake] documentação](../../sources/connectors/databases/snowflake.md). |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use a [[!DNL Capillary Streaming Events] origem](../../sources/connectors/loyalty/capillary.md) para transmitir dados de fidelidade da sua conta do [!DNL Capillary] para a Experience Platform. |
 | Disponibilidade geral do suporte a link privado nas origens | Agora você pode usar **links privados** para um grupo selecionado de fontes. Use este recurso para criar um ponto de extremidade privado ao qual a fonte possa se conectar. Com endpoints privados, você pode configurar conexões e fluxos de dados que ignoram a Internet pública, proporcionando maior segurança e isolamento de rede para seus dados confidenciais. O suporte para links privados está disponível para as seguintes fontes: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Para obter mais informações, leia os guias sobre como criar links privados [na API](../../sources/tutorials/api/private-link.md) e [na interface](../../sources/tutorials/ui/private-link.md). |
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).
+
+<!--
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
+-->

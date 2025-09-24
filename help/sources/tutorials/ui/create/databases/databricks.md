@@ -1,24 +1,25 @@
 ---
-title: Conectar o Azure Databricks ao Experience Platform usando a interface do
-description: Saiba como conectar o Azure Databricks ao Experience Platform usando a interface do usuário do.
+title: Conectar databricks ao Experience Platform usando a interface do
+description: Saiba como conectar Databricks ao Experience Platform usando a interface do usuário do.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2bd16d5a55c5bbeedbc6a6012d9f0229eee8433a
+exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '481'
 ht-degree: 4%
 
 ---
 
-# Conectar o [!DNL Azure Databricks] ao Experience Platform na interface
+# Conectar o [!DNL Databricks] ao Experience Platform na interface
 
 >[!AVAILABILITY]
 >
->* A origem [!DNL Azure Databricks] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
+>* A origem [!DNL Databricks] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
 >
->* A origem [!DNL Azure Databricks] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
+>* A origem [!DNL Databricks] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
 
-Leia este guia para saber como conectar sua conta do [!DNL Azure Databricks] à Adobe Experience Platform usando o espaço de trabalho de fontes na interface do usuário.
+Leia este guia para saber como conectar sua conta do [!DNL Databricks] à Adobe Experience Platform usando o espaço de trabalho de fontes na interface do usuário.
 
 ## Introdução
 
@@ -29,22 +30,22 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Experie
 
 ### Coletar credenciais necessárias
 
-Forneça valores para as credenciais a seguir para conectar [!DNL Azure Databricks] ao Experience Platform.
+Forneça valores para as credenciais a seguir para conectar [!DNL Databricks] ao Experience Platform.
 
 | Credencial | Descrição |
 | --- | --- |
-| Domínio | A URL do espaço de trabalho [!DNL Azure Databricks]. Por exemplo, `https://adb-1234567890123456.7.azuredatabricks.net`. |
-| ID do cluster | A ID do cluster em [!DNL Azure Databricks]. Este cluster já deve ser um cluster existente e deve ser um cluster interativo. |
-| Token de acesso | O token de acesso que autentica a conta do [!DNL Azure Databricks]. Você pode gerar seu token de acesso usando o espaço de trabalho [!DNL Azure Databricks]. |
+| Domínio | A URL do espaço de trabalho [!DNL Databricks]. Por exemplo, `https://adb-1234567890123456.7.azuredatabricks.net`. |
+| ID do cluster | A ID do cluster em [!DNL Databricks]. Este cluster já deve ser um cluster existente e deve ser um cluster interativo. |
+| Token de acesso | O token de acesso que autentica a conta do [!DNL Databricks]. Você pode gerar seu token de acesso usando o espaço de trabalho [!DNL Databricks]. |
 | Banco de dados | O nome do banco de dados no lago delta. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../../../connectors/databases/databricks.md) do [!DNL Azure Databricks] .
+Para obter mais informações, leia a visão geral](../../../../connectors/databases/databricks.md) do [[!DNL Databricks] .
 
 ## Navegar pelo catálogo de origens
 
 Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Fontes]*. Escolha uma categoria ou use a barra de pesquisa para localizar sua fonte.
 
-Para se conectar a [!DNL Azure Databricks], vá para a categoria *[!UICONTROL Bancos de dados]*, selecione o cartão de origem **[!UICONTROL Blocos de dados do Azure]** e selecione **[!UICONTROL Configurar]**.
+Para se conectar a [!DNL Databricks], vá para a categoria *[!UICONTROL Bancos de dados]*, selecione o cartão de origem **[!UICONTROL Blocos de dados do Azure]** e selecione **[!UICONTROL Configurar]**.
 
 >[!TIP]
 >

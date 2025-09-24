@@ -3,9 +3,9 @@ title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar públicos e exportar conjuntos de dados.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4eef1804d6974fd54f5e74e0efe62257190f408b
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '2019'
 ht-degree: 2%
 
 ---
@@ -71,7 +71,7 @@ Ao exportar *conjuntos de dados*, o Experience Platform cria um arquivo `.parque
 
 >[!AVAILABILITY]
 >
->Esta seção se aplica às implementações do Experience Platform em execução no Microsoft Azure. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/multi-cloud).
+>Esta seção se aplica às implementações do Experience Platform em execução no Microsoft Azure. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Você pode ler e gravar arquivos no seu contêiner por meio do [!DNL Azure Storage Explorer] ou da interface de linha de comando.
 
@@ -210,7 +210,7 @@ Com o contêiner [!DNL Data Landing Zone] conectado ao [!DNL Azure Storage Explo
 
 >[!AVAILABILITY]
 >
->Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/multi-cloud).
+>Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Execute as operações abaixo para obter credenciais para sua instância do [!DNL Data Landing Zone] provisionada no AWS. Em seguida, use um cliente de sua escolha para se conectar à sua instância do [!DNL Data Landing Zone].
 
@@ -282,7 +282,7 @@ A resposta a seguir retorna as informações de credencial da sua zona de aterri
 > 
 >Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 
@@ -292,6 +292,8 @@ Verifique se você conectou o contêiner [!DNL Data Landing Zone] a [!DNL Azure 
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
+* **[!UICONTROL Chave de criptografia]**: como opção, você pode anexar sua chave pública formatada em RSA para adicionar criptografia aos arquivos exportados. Veja um exemplo de uma chave de criptografia formatada corretamente na imagem abaixo.
+  ![Imagem mostrando um exemplo de uma chave PGP formatada corretamente na interface.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 * **[!UICONTROL Nome]**: preencha o nome preferencial para este destino.
 * **[!UICONTROL Descrição]**: Opcional. Por exemplo, você pode mencionar para qual campanha está usando esse destino.
 * **[!UICONTROL Caminho da pasta]**: insira o caminho para a pasta de destino que hospedará os arquivos exportados.
@@ -319,7 +321,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-### Agendando
+### Agendamento
 
 Na etapa **[!UICONTROL Agendamento]**, você pode [configurar o agendamento de exportação](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) para o seu destino [!DNL Data Landing Zone] e também [configurar o nome dos seus arquivos exportados](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 

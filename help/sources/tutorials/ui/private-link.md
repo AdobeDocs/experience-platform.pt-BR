@@ -1,13 +1,10 @@
 ---
 title: Suporte a link privado para origens na interface do usuário
 description: Saiba como usar os Links privados do Azure para origens na interface do usuário do Experience Platform.
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '750'
+source-wordcount: '814'
 ht-degree: 0%
 
 ---
@@ -16,16 +13,29 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Esse recurso está na versão beta e, no momento, é compatível apenas com as seguintes fontes:
+>Esse recurso é compatível com as seguintes fontes:
 >
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>No momento, o Suporte a links privados está disponível apenas para organizações que compraram o Adobe Healthcare Shield ou o Adobe Privacy &amp; Security Shield.
 
 Você pode usar o recurso Links privados para criar endpoints privados para que suas fontes da Adobe Experience Platform se conectem ao. Conecte com segurança suas fontes a uma rede virtual usando endereços IP privados, eliminando a necessidade de IPs públicos e reduzindo sua superfície de ataque. Simplifique a configuração da rede, eliminando a necessidade de configurações complexas de firewall ou tradução de endereço de rede, garantindo que o tráfego de dados atinja apenas os serviços aprovados.
 
 Leia este guia para saber como você pode usar o espaço de trabalho de origens na interface do usuário do Experience Platform para criar e usar um endpoint privado.
+
+>[!BEGINSHADEBOX]
+
+## Direito de uso de licença para suporte a link privado
+
+As métricas de direito de uso de licença para suporte a links privados nas origens são as seguintes:
+
+* Os clientes têm direito a até 2 TB por ano de transferência de dados por meio de fontes compatíveis ([!DNL Azure Blob Storage], [!DNL ADLS Gen2] e [!DNL Azure File Storage]), em todas as sandboxes e organizações.
+* Cada organização pode ter no máximo 10 endpoints para todas as sandboxes de produção.
+* Cada organização pode ter no máximo um terminal para todas as sandboxes de desenvolvimento.
+
+>[!ENDSHADEBOX]
 
 ## Criar um ponto de extremidade privado
 
@@ -45,7 +55,6 @@ Em seguida, escolha a origem desejada e insira valores para as seguintes proprie
 | `subscriptionId` | A ID associada à sua assinatura do [!DNL Azure]. Para obter mais informações, leia o guia [!DNL Azure] em [recuperando sua assinatura e IDs de locatário de [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | O nome do seu grupo de recursos em [!DNL Azure]. Um grupo de recursos contém recursos relacionados para uma solução [!DNL Azure]. Para obter mais informações, leia o guia [!DNL Azure] em [gerenciando grupos de recursos](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceGroup` | O nome do recurso. Em [!DNL Azure], um recurso se refere a instâncias como máquinas virtuais, aplicativos Web e bancos de dados. Para obter mais informações, leia o guia [!DNL Azure] em [noções básicas sobre o [!DNL Azure] gerenciador de recursos](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | Os nomes de domínio totalmente qualificados para sua origem. **OBSERVAÇÃO**: esta propriedade é necessária somente ao usar a origem [!DNL Snowflake]. |
 
 {style="table-layout:auto"}
 

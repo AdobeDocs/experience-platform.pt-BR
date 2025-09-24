@@ -1,13 +1,10 @@
 ---
 title: Suporte A Link Privado Para Origens Na API
 description: Saiba como criar e usar links privados para Fontes do Adobe Experience Platform
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1515'
 ht-degree: 4%
 
 ---
@@ -16,23 +13,36 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->Este recurso está em Disponibilidade Limitada e, no momento, só tem suporte nas seguintes fontes:
+>Esse recurso é compatível com as seguintes fontes:
 >
->* [[!DNL Azure Blob]](../../connectors/cloud-storage/blob.md)
->* [[!DNL Azure Data Lake Gen2]](../../connectors/cloud-storage/adls-gen2.md)
+>* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
+>* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>No momento, o Suporte a links privados está disponível apenas para organizações que compraram o Adobe Healthcare Shield ou o Adobe Privacy &amp; Security Shield.
 
 Você pode usar o recurso Link privado para criar endpoints privados para as fontes da Adobe Experience Platform às quais se conectar. Conecte com segurança suas fontes a uma rede virtual usando endereços IP privados, eliminando a necessidade de IPs públicos e reduzindo sua superfície de ataque. Simplifique a configuração da rede, eliminando a necessidade de configurações complexas de firewall ou tradução de endereço de rede, garantindo que o tráfego de dados atinja apenas os serviços aprovados.
 
 Leia este guia para saber como você pode usar APIs para criar e usar um terminal privado.
 
+>[!BEGINSHADEBOX]
+
+## Direito de uso de licença para suporte a link privado
+
+As métricas de direito de uso de licença para suporte a links privados nas origens são as seguintes:
+
+* Os clientes têm direito a até 2 TB por ano de transferência de dados por meio de fontes compatíveis ([!DNL Azure Blob Storage], [!DNL ADLS Gen2] e [!DNL Azure File Storage]), em todas as sandboxes e organizações.
+* Cada organização pode ter no máximo 10 endpoints para todas as sandboxes de produção.
+* Cada organização pode ter no máximo um terminal para todas as sandboxes de desenvolvimento.
+
+>[!ENDSHADEBOX]
+
 ## Introdução
 
 Este guia requer uma compreensão funcional dos seguintes componentes do Experience Platform:
 
-* [Fontes](../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do [!DNL Platform].
-* [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do [!DNL Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
+* [Fontes](../../home.md): o Experience Platform permite a assimilação de dados de várias fontes, ao mesmo tempo em que fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços do Experience Platform.
+* [Sandboxes](../../../sandboxes/home.md): a Experience Platform fornece sandboxes virtuais que particionam uma única instância do Experience Platform em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 ### Uso de APIs da plataforma
 
@@ -67,7 +77,6 @@ curl -X POST \
       "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
       "resourceGroupName": "acme-sources-experience-platform",
       "resourceName": "acmeexperienceplatform",
-      "fqdns": [],
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
@@ -81,7 +90,6 @@ curl -X POST \
 | `subscriptionId` | A ID associada à sua assinatura do [!DNL Azure]. Para obter mais informações, leia o guia [!DNL Azure] em [recuperando sua assinatura e IDs de locatário de [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | O nome do seu grupo de recursos em [!DNL Azure]. Um grupo de recursos contém recursos relacionados para uma solução [!DNL Azure]. Para obter mais informações, leia o guia [!DNL Azure] em [gerenciando grupos de recursos](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceName` | O nome do recurso. Em [!DNL Azure], um recurso se refere a instâncias como máquinas virtuais, aplicativos Web e bancos de dados. Para obter mais informações, leia o guia [!DNL Azure] em [noções básicas sobre o [!DNL Azure] gerenciador de recursos](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | Os nomes de domínio totalmente qualificados para sua origem. Esta propriedade é necessária somente ao usar a origem [!DNL Snowflake]. |
 | `connectionSpec.id` | A ID de especificação da conexão da origem que você está usando. |
 | `connectionSpec.version` | A versão da ID de especificação de conexão que você está usando. |
 
@@ -100,7 +108,6 @@ Uma resposta bem-sucedida retorna o seguinte:
   "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
   "resourceGroupName": "acme-sources-experience-platform",
   "resourceName": "acmeexperienceplatform",
-  "fqdns": [],
   "connectionSpec": {
       "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
       "version": "1.0"
@@ -116,7 +123,6 @@ Uma resposta bem-sucedida retorna o seguinte:
 | `subscriptionId` | A ID associada à sua assinatura do [!DNL Azure]. Para obter mais informações, leia o guia [!DNL Azure] em [recuperando sua assinatura e IDs de locatário de [!DNL Azure Portal]](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | O nome do seu grupo de recursos em [!DNL Azure]. Um grupo de recursos contém recursos relacionados para uma solução [!DNL Azure]. Para obter mais informações, leia o guia [!DNL Azure] em [gerenciando grupos de recursos](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceName` | O nome do recurso. Em [!DNL Azure], um recurso se refere a instâncias como máquinas virtuais, aplicativos Web e bancos de dados. Para obter mais informações, leia o guia [!DNL Azure] em [noções básicas sobre o [!DNL Azure] gerenciador de recursos](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview). |
-| `fqdns` | Os nomes de domínio totalmente qualificados para sua origem. Esta propriedade é necessária somente ao usar a origem [!DNL Snowflake]. |
 | `connectionSpec.id` | A ID de especificação da conexão da origem que você está usando. |
 | `connectionSpec.version` | A versão da ID de especificação de conexão que você está usando. |
 | `state` | O estado atual do seu ponto de extremidade privado. Os estados válidos incluem: <ul><li>`Pending`</li><li>`Failed`</li><li>`Approved`</li><li>`Rejected`</li></ul> |
@@ -543,7 +549,7 @@ POST /connections/
 
 **Solicitação**
 
-A solicitação a seguir cria uma conexão de base autenticada para [!DNL Snowflake], ao mesmo tempo em que usa um ponto de extremidade privado.
+A solicitação a seguir cria uma conexão de base autenticada para [!DNL Azure Blob Storage], ao mesmo tempo em que usa um ponto de extremidade privado.
 
 +++Selecione para exibir o exemplo de solicitação
 
@@ -556,8 +562,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection",
-      "description": "A base connection for a Snowflake source that uses a private link.",
+      "name": "Azure Blob Storage base connection",
+      "description": "A base connection for a Azure Blob Storage source that uses a private link.",
       "auth": {
           "specName": "ConnectionString",
           "params": {
@@ -566,7 +572,7 @@ curl -X POST \
           }
       },
       "connectionSpec": {
-          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
       }
   }'
@@ -577,10 +583,10 @@ curl -X POST \
 | `name` | O nome da sua conexão básica. |
 | `description` | (Opcional) Uma descrição que fornece informações adicionais sobre sua conexão. |
 | `auth.specName` | A autenticação que está sendo usada para conectar sua origem ao Experience Platform. |
-| `auth.params.connectionString` | A cadeia de conexão [!DNL Snowflake]. Para obter mais informações, leia o [[!DNL Snowflake] guia de autenticação de API](../api/create/databases/snowflake.md). |
+| `auth.params.connectionString` | A cadeia de conexão [!DNL Azure Blob Storage]. Para obter mais informações, leia o [[!DNL Azure Blob Storage] guia de autenticação de API](../api/create/cloud-storage/blob.md). |
 | `auth.params.usePrivateLink` | Um valor booleano que determina se você está usando ou não um ponto de extremidade privado. Defina esse valor como `true` se estiver usando um ponto de extremidade privado. |
-| `connectionSpec.id` | A ID de especificação de conexão de [!DNL Snowflake]. |
-| `connectionSpec.version` | A versão da ID de especificação da conexão do [!DNL Snowflake]. |
+| `connectionSpec.id` | A ID de especificação de conexão de [!DNL Azure Blob Storage]. |
+| `connectionSpec.version` | A versão da ID de especificação da conexão do [!DNL Azure Blob Storage]. |
 
 +++
 
@@ -830,24 +836,32 @@ Uma resposta bem-sucedida retorna todas as conexões vinculadas a pontos de extr
 
 Leia esta seção para obter informações adicionais usando os links privados do [!DNL Azure] na API.
 
-### Configurar a conta do [!DNL Snowflake] para se conectar a links privados
+### Aprovar um ponto de extremidade privado para [!DNL Azure Blob] e [!DNL Azure Data Lake Gen2]
 
-Você deve concluir as etapas de pré-requisito a seguir para usar a origem [!DNL Snowflake] com links privados.
+Para aprovar uma solicitação de ponto de extremidade privado para as fontes [!DNL Azure Blob] e [!DNL Azure Data Lake Gen2], faça logon no [!DNL Azure Portal]. Na navegação à esquerda, selecione **[!DNL Data storage]**, vá para a guia **[!DNL Security + networking]** e escolha **[!DNL Networking]**. Em seguida, selecione **[!DNL Private endpoints]** para ver uma lista de pontos de extremidade privados associados à sua conta e seus estados de conexão atuais. Para aprovar uma solicitação pendente, selecione o ponto de extremidade desejado e clique em **[!DNL Approve]**.
 
-Primeiro, você deve levantar um tíquete de suporte em [!DNL Snowflake] e solicitar a **ID do recurso do serviço de ponto de extremidade** da região [!DNL Azure] da sua conta [!DNL Snowflake]. Siga as etapas abaixo para criar um tíquete [!DNL Snowflake]:
+![O portal do Azure com uma lista de pontos de extremidade privados pendentes.](../../images/tutorials/private-links/azure.png)
 
-1. Navegue até a [[!DNL Snowflake] interface](https://app.snowflake.com) e entre com sua conta de email. Durante essa etapa, você deve garantir que seu email seja verificado nas configurações do perfil.
-2. Selecione o **menu de usuário** e selecione **suporte** para acessar o suporte do [!DNL Snowflake].
-3. Para criar um caso de suporte, selecione **[!DNL + Support Case]**. Em seguida, preencha o formulário com os detalhes relevantes e anexe os arquivos necessários.
-4. Quando terminar, envie o caso.
+<!--
 
-A ID do recurso do endpoint é formatada da seguinte maneira:
+### Configure your [!DNL Snowflake] account to connect to private links
+
+You must complete the following prerequisite steps in order to use the [!DNL Snowflake] source with private links.
+
+First, you must raise a support ticket in [!DNL Snowflake] and request for the **endpoint service resource ID** of the [!DNL Azure] region of your [!DNL Snowflake] account. Follow the steps below to raise a [!DNL Snowflake] ticket:
+
+1. Navigate to the [[!DNL Snowflake] UI](https://app.snowflake.com) and sign in with your email account. During this step, you must ensure that your email is verified in profile settings.
+2. Select your **user menu** and then select **support** to access [!DNL Snowflake] support.
+3. To create a support case, select **[!DNL + Support Case]**. Then, fill out the form with relevant details and attach any necessary files.
+4. When finished, submit the case.
+
+The endpoint resource ID is formatted as follows:
 
 ```shell
 subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
 ```
 
-+++Selecione para exibir o exemplo
++++Select to view example
 
 ```shell
 /subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
@@ -855,14 +869,14 @@ subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/
 
 +++
 
-| Parâmetro | Descrição | Exemplo |
+| Parameter | Description | Example |
 | --- | --- | --- |
-| `{SUBSCRIPTION_ID}` | A ID exclusiva que identifica a assinatura do [!DNL Azure]. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
-| `{REGION}` | A região [!DNL Azure] da sua conta [!DNL Snowflake]. | `azwestus2` |
+| `{SUBSCRIPTION_ID}` | The unique ID that identifies your [!DNL Azure] subscription. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | The [!DNL Azure] region of your [!DNL Snowflake] account. | `azwestus2` |
 
-### Recupere os detalhes de configuração do seu link privado
+### Retrieve your private link configuration details
 
-Para recuperar os detalhes de configuração do link privado, execute o seguinte comando em [!DNL Snowflake]:
+To retrieve your private link configuration details, you must run the following command in [!DNL Snowflake]:
 
 ```sql
 USE ROLE accountadmin;
@@ -870,21 +884,21 @@ SELECT key, value::varchar
 FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
 ```
 
-Em seguida, recupere valores para as seguintes propriedades:
+Next, retrieve values for the following properties:
 
 * `privatelink-account-url`
 * `regionless-privatelink-account-url`
 * `privatelink_ocsp-url`
 
-Após recuperar os valores, faça a seguinte chamada para criar um link privado para [!DNL Snowflake].
+Once you have retrieved the values, you can make the following call to create a private link for [!DNL Snowflake].
 
-**Solicitação**
+**Request**
 
-A solicitação a seguir cria um ponto de extremidade privado para [!DNL Snowflake]:
+The following request creates a private endpoint for [!DNL Snowflake]:
 
 >[!BEGINTABS]
 
->[!TAB Modelo]
+>[!TAB Template]
 
 ```shell
 curl -X POST \
@@ -911,7 +925,7 @@ curl -X POST \
   }'
 ```
 
->[!TAB Exemplo]
+>[!TAB Example]
 
 ```shell
 curl -X POST \
@@ -938,11 +952,6 @@ curl -X POST \
   }'
 ```
 
-
 >[!ENDTABS]
 
-### Aprovar um ponto de extremidade privado para [!DNL Azure Blob] e [!DNL Azure Data Lake Gen2]
-
-Para aprovar uma solicitação de ponto de extremidade privado para as fontes [!DNL Azure Blob] e [!DNL Azure Data Lake Gen2], faça logon no [!DNL Azure Portal]. Na navegação à esquerda, selecione **[!DNL Data storage]**, vá para a guia **[!DNL Security + networking]** e escolha **[!DNL Networking]**. Em seguida, selecione **[!DNL Private endpoints]** para ver uma lista de pontos de extremidade privados associados à sua conta e seus estados de conexão atuais. Para aprovar uma solicitação pendente, selecione o ponto de extremidade desejado e clique em **[!DNL Approve]**.
-
-![O portal do Azure com uma lista de pontos de extremidade privados pendentes.](../../images/tutorials/private-links/azure.png)
+-->

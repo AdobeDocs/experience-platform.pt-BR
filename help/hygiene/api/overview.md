@@ -3,9 +3,9 @@ title: Guia da API de higiene de dados
 description: Saiba como corrigir ou excluir programaticamente os dados pessoais armazenados dos clientes no Adobe Experience Platform.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '432'
 ht-degree: 6%
 
 ---
@@ -20,7 +20,7 @@ Você pode acessar a API de Limpeza de Dados pelo seguinte caminho raiz: `https:
 
 Essas seções abaixo descrevem os conceitos principais que você precisa saber antes de tentar fazer chamadas para a API.
 
-### Coletar valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos obrigatórios
 
 Para fazer chamadas para a API de higiene de dados, primeiro colete suas credenciais de autenticação. Siga o [guia de autenticação de API](../../landing/api-authentication.md) para gerar valores para cada um dos cabeçalhos necessários para a API de Limpeza de Dados, conforme mostrado abaixo:
 
@@ -43,9 +43,6 @@ A expiração de um conjunto de dados é uma ação de &quot;exclusão de um con
 ## Exclusões de registro
 
 >[!IMPORTANT]
->
->As solicitações de exclusão de registros só estão disponíveis para organizações que compraram o **Adobe Healthcare Shield**.
->
 >
 >As exclusões de registros devem ser usadas para limpeza de dados, remoção de dados anônimos ou minimização de dados. Eles **não** devem ser usados para solicitações de direitos do titular dos dados (conformidade) relacionadas a regulamentos de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR). Para todos os casos de uso de conformidade, use o [Adobe Experience Platform Privacy Service](../../privacy-service/home.md).
 

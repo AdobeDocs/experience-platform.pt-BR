@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint da API de descritores
 description: O ponto de extremidade /descriptors na API do registro de esquema permite gerenciar programaticamente os descritores XDM no aplicativo de experiência.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2888'
 ht-degree: 1%
@@ -525,7 +525,7 @@ O descritor de chave primária (`xdm:descriptorPrimaryKey`) impõe restrições 
 
 >[!NOTE]
 >
->No Editor de Esquema da Interface do Usuário, o descritor de versão aparece como &quot;[ !UICOTRNOL Identificador de versão]&quot;.
+>No Editor de Esquema da Interface do Usuário, o descritor de versão aparece como &quot;[!UICONTROL Identificador de versão]&quot;.
 
 O descritor de versão (`xdm:descriptorVersion`) designa um campo para detectar e evitar conflitos de eventos de alteração fora de ordem.
 
@@ -547,7 +547,7 @@ O descritor de versão (`xdm:descriptorVersion`) designa um campo para detectar 
 
 >[!NOTE]
 >
->No Editor de Esquema de Interface do Usuário, o descritor de carimbo de data/hora aparece como &quot;[ !UICOTRNOL Identificador de carimbo de data/hora]&quot;.
+>No Editor de Esquema de Interface do Usuário, o descritor de carimbo de data/hora aparece como &quot;[!UICONTROL Identificador de carimbo de data/hora]&quot;.
 
 O descritor de carimbo de data/hora (`xdm:descriptorTimestamp`) designa um campo de data/hora como carimbo de data/hora para esquemas com `"meta:behaviorType": "time-series"`.
 

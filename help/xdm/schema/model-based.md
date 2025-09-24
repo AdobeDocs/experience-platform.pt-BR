@@ -4,7 +4,8 @@ solution: Experience Platform
 title: Esquemas baseados em modelo
 description: Saiba mais sobre esquemas baseados em modelo (também chamados de esquemas relacionais) no Adobe Experience Platform, incluindo recursos, campos obrigatórios, relações e limitações.
 badge: Disponibilidade limitada
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '1306'
 ht-degree: 0%
@@ -37,7 +38,7 @@ Use esquemas baseados em modelo para:
 
 ## Como os esquemas baseados em modelo diferem dos esquemas XDM padrão
 
-Os esquemas XDM padrão no Experience Platform seguem um dos três comportamentos de dados: Registro, Série temporal ou Ad-hoc. Para obter definições e detalhes, consulte [Comportamentos de dados XDM](https://experienceleague.adobe.com/pt-br/docs/experience-platform/xdm/home#data-behaviors).
+Os esquemas XDM padrão no Experience Platform seguem um dos três comportamentos de dados: Registro, Série temporal ou Ad-hoc. Para obter definições e detalhes, consulte [Comportamentos de dados XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
 No modelo tradicional, os esquemas de registro e série temporal participam de [esquemas de união](../api/unions.md) (consulte também o [guia da interface do usuário do esquema de união](../../profile/ui/union-schema.md)). Esses esquemas evoluem automaticamente à medida que [grupos de campos](./composition.md#field-group) compartilhados são atualizados e os campos personalizados devem ser aninhados em um namespace de locatário. Embora eficiente, esse modelo pode retardar a integração, produzir esquemas muito complexos com campos não utilizados e exigir mapeamento ou transformação de dados adicionais. Esses fatores aumentam a curva de aprendizado e o esforço contínuo de manutenção.
 
@@ -71,7 +72,7 @@ Use um descritor de chave primária para garantir que cada registro seja identif
 
 >[!NOTE]
 >
->No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data/hora aparecem como &quot;[ !UICOTRNOL Identificador de versão]&quot; e &quot;[ !UICOTRNOL Identificador de carimbo de data/hora]&quot;, respectivamente.
+>No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data/hora aparecem como &quot;[!UICONTROL Identificador de versão]&quot; e &quot;[!UICONTROL Identificador de carimbo de data/hora]&quot;, respectivamente.
 
 **Exemplo (campo único):**
 
@@ -210,4 +211,3 @@ Revise as seguintes limitações antes de usar esquemas baseados em modelo:
 * As relações são limitadas a um e muitos a um.
 * A disponibilidade depende da sua licença ou da ativação de recursos.
 * As chaves primárias compostas são necessárias para esquemas de série temporal.
-

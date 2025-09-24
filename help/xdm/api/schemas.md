@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Endpoint da API de esquemas
 description: O ponto de extremidade /schemas na API do registro de esquema permite gerenciar de forma programática esquemas XDM no aplicativo de experiência.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
 source-wordcount: '2095'
 ht-degree: 4%
@@ -302,7 +302,7 @@ Crie o esquema primeiro com `POST /tenant/schemas`. Em seguida, adicione os desc
 
 >[!NOTE]
 >
->No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data/hora aparecem como &quot;[ !UICOTRNOL Identificador de versão]&quot; e &quot;[ !UICOTRNOL Identificador de carimbo de data/hora]&quot;, respectivamente.
+>No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data/hora aparecem como &quot;[!UICONTROL Identificador de versão]&quot; e &quot;[!UICONTROL Identificador de carimbo de data/hora]&quot;, respectivamente.
 
 <!-- >[!AVAILABILITY]
 >

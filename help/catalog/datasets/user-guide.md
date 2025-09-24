@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 1b278562c815953d2068a5142dbefcf1572baff5
+source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
 workflow-type: tm+mt
 source-wordcount: '4497'
-ht-degree: 5%
+ht-degree: 4%
 
 ---
 
@@ -57,7 +57,7 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campanhas orquestradas"
->abstract="Habilite este botão de alternância para permitir que o conjunto de dados selecionado seja usado nas Campanhas orquestradas do Adobe Journey Optimizer. O conjunto de dados deve usar um esquema relacional e somente um conjunto de dados pode ser criado por esquema."
+>abstract="Ative essa opção para permitir que o conjunto de dados selecionado seja usado em campanhas do Adobe Journey Optimizer Orchestrated. O conjunto de dados deve usar um esquema baseado em modelo e apenas um conjunto de dados pode ser criado por esquema."
 
 Na interface do usuário do [!DNL Experience Platform], selecione **[!UICONTROL Conjuntos de dados]** no menu de navegação esquerdo para abrir o painel **[!UICONTROL Conjuntos de dados]**. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo o nome, o esquema ao qual o conjunto de dados pertence e o status da execução de assimilação mais recente.
 

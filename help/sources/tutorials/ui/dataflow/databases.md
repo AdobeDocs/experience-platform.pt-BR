@@ -5,9 +5,9 @@ title: Criar um Fluxo de Dados Usando um Source de Banco de Dados na Interface
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados do Experience Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma origem de banco de dados usando a interface do usuário do Experience Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
 workflow-type: tm+mt
-source-wordcount: '1576'
+source-wordcount: '1698'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,16 @@ A etapa [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear
 
 O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../data-prep/ui/mapping.md).
 
+>[!NOTE]
+>
+>Ao mapear para esquemas baseados em modelo, certifique-se de que seus dados de origem incluam os campos obrigatórios, como uma chave primária e um identificador de versão ou um identificador de carimbo de data e hora para esquemas de série temporal.
+
+Colunas de controle como `_change_request_type`, usadas para captura de dados de alteração, são lidas durante a assimilação, mas não são armazenadas no esquema de destino.
+
+Os esquemas baseados em modelo também aceitam relações entre conjuntos de dados usando mapeamentos de chave primária e estrangeira.
+
+Para obter mais informações, consulte a [visão geral do Data Mirror](../../../../xdm/data-mirror/overview.md) e a [referência técnica de esquemas baseados em modelo](../../../../xdm/schema/model-based.md).
+
 Depois que os dados de origem forem mapeados com êxito, selecione **[!UICONTROL Próximo]**.
 
 ![mapeamento](../../../images/tutorials/dataflow/table-based/mapping.png)
@@ -123,7 +133,7 @@ Consulte a tabela abaixo para obter mais informações sobre como programar conf
 A etapa **[!UICONTROL Revisão]** é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
 * **[!UICONTROL Conexão]**: mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
-* **[!UICONTROL Atribuir campos de conjunto de dados e mapa]**: mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados pertence.
+* **[!UICONTROL Atribuir campos de mapa e conjunto de dados]**: exibe o conjunto de dados no qual os dados de origem serão assimilados, juntamente com o esquema associado. Se estiver usando um esquema baseado em modelo, verifique se os campos obrigatórios, como a chave primária e o identificador de versão, estão mapeados corretamente. Além disso, verifique se as colunas de controle da captura de dados de alteração estão configuradas corretamente. Os conjuntos de dados que usam esquemas baseados em modelo suportam vários modelos de dados e habilitam [fluxos de trabalho de captura de dados de alteração](../../api/change-data-capture.md).
 * **[!UICONTROL Agendamento]**: mostra o período, a frequência e o intervalo ativos do agendamento de assimilação.
 
 Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e aguarde algum tempo para que o fluxo de dados seja criado.

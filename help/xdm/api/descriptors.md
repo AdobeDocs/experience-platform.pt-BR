@@ -4,26 +4,41 @@ solution: Experience Platform
 title: Endpoint da API de descritores
 description: O ponto de extremidade /descriptors na API do registro de esquema permite gerenciar programaticamente os descritores XDM no aplicativo de experiência.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2192'
+source-wordcount: '2888'
 ht-degree: 1%
 
 ---
 
 # Ponto de extremidade de descritores
 
-Os esquemas definem uma visualização estática das entidades de dados, mas não fornecem detalhes específicos sobre como os dados baseados nesses esquemas (conjuntos de dados, por exemplo) podem se relacionar. O Adobe Experience Platform permite descrever esses relacionamentos e outros metadados interpretativos sobre um esquema usando descritores.
+Os esquemas definem a estrutura das entidades de dados, mas não especificam como os conjuntos de dados criados a partir desses esquemas se relacionam entre si. No Adobe Experience Platform, você pode usar descritores para descrever esses relacionamentos e adicionar metadados interpretativos a um esquema.
 
-Os descritores de esquema são metadados em nível de locatário, o que significa que são exclusivos de sua organização e todas as operações do descritor ocorrem no contêiner do locatário.
+Os descritores são objetos de metadados em nível de locatário aplicados a esquemas no Adobe Experience Platform. Eles definem relações estruturais, chaves e campos comportamentais (como carimbos de data e hora ou controle de versão) que influenciam como os dados são validados, unidos ou interpretados downstream.
 
-Cada esquema pode ter uma ou mais entidades de descritor de esquema aplicadas a ele. Cada entidade do descritor de esquema inclui um descritor `@type` e o `sourceSchema` ao qual ele se aplica. Depois de aplicados, esses descritores serão aplicados a todos os conjuntos de dados criados usando o esquema.
+Um esquema pode ter um ou mais descritores. Cada descritor define um `@type` e o `sourceSchema` ao qual ele se aplica. O descritor se aplica automaticamente a todos os conjuntos de dados criados a partir desse esquema.
+
+No Adobe Experience Platform, um descritor são metadados que adicionam regras comportamentais ou significado estrutural a um esquema.
+Há vários tipos de descritores, incluindo:
+
+- [Descritor de identidade](#identity-descriptor) - marca um campo como uma identidade
+- [Descritor de chave primária](#primary-key-descriptor) - impõe exclusividade
+- [Descritor de relacionamento](#relationship-descriptor) - define uma associação de chave estrangeira
+- [Descritor de informações de exibição alternativo](#friendly-name) - permite renomear um campo na interface
+- Descritores de [Versão](#version-descriptor) e [carimbo de data/hora](#timestamp-descriptor) - rastrear a ordenação de eventos e a detecção de alterações
 
 O ponto de extremidade `/descriptors` na API [!DNL Schema Registry] permite gerenciar de forma programática os descritores no aplicativo de experiência.
 
 ## Introdução
 
 O ponto de extremidade usado neste guia faz parte da [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
+
+Além dos descritores padrão, o [!DNL Schema Registry] dá suporte a tipos de descritores para esquemas baseados em modelo, como **chave primária**, **versão** e **carimbo de data/hora**. Eles impõem exclusividade, controlam versão e definem campos de série temporal no nível do esquema. Se você não estiver familiarizado com esquemas baseados em modelo, revise a [visão geral do Data Mirror](../data-mirror/overview.md) e a [referência técnica de esquemas baseados em modelo](../schema/model-based.md) antes de continuar.
+
+>[!IMPORTANT]
+>
+>Consulte o [Apêndice](#defining-descriptors) para obter detalhes sobre todos os tipos de descritor.
 
 ## Recuperar uma lista de descritores {#list}
 
@@ -86,7 +101,7 @@ Ao usar o cabeçalho `link` `Accept`, cada descritor é mostrado como um item de
 
 ## Pesquisar um descritor {#lookup}
 
-Se quiser exibir os detalhes de um descritor específico, você pode pesquisar (GET) um descritor individual usando seu `@id`.
+Para exibir os detalhes de um descritor específico, envie uma solicitação GET usando seu `@id`.
 
 **Formato da API**
 
@@ -283,7 +298,7 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo e
 
 Para confirmar se o descritor foi excluído, você pode executar uma [solicitação de pesquisa](#lookup) em relação ao descritor `@id`. A resposta retorna o status HTTP 404 (Não Encontrado) porque o descritor foi removido de [!DNL Schema Registry].
 
-## Apêndice
+## Apêndice {#appendix}
 
 A seção a seguir fornece informações adicionais sobre como trabalhar com descritores na API [!DNL Schema Registry].
 
@@ -299,9 +314,9 @@ As seções a seguir fornecem uma visão geral dos tipos de descritores disponí
 >
 >Não é possível rotular o objeto de namespace do locatário, pois o sistema aplicaria esse rótulo a cada campo personalizado nessa sandbox. Em vez disso, você deve especificar o nó de folha sob esse objeto que você precisa rotular.
 
-#### Descritor de identidade
+#### Descritor de identidade {#identity-descriptor}
 
-Um descritor de identidade indica que &quot;[!UICONTROL sourceProperty]&quot; de &quot;[!UICONTROL sourceSchema]&quot; é um campo [!DNL Identity], conforme descrito pelo [Serviço de Identidade da Adobe Experience Platform](../../identity-service/home.md).
+Um descritor de identidade indica que &quot;[!UICONTROL sourceProperty]&quot; de &quot;[!UICONTROL sourceSchema]&quot; é um campo [!DNL Identity], conforme descrito pelo [Serviço de Identidade da Experience Platform](../../identity-service/home.md).
 
 ```json
 {
@@ -371,21 +386,36 @@ Descritores de nome amigável permitem que um usuário modifique os valores `tit
 
 #### Descritor de relacionamento {#relationship-descriptor}
 
-Os descritores de relacionamento descrevem uma relação entre dois esquemas diferentes, digitados nas propriedades descritas em `sourceProperty` e `destinationProperty`. Consulte o tutorial em [definindo uma relação entre dois esquemas](../tutorials/relationship-api.md) para obter mais informações.
+Os descritores de relacionamento descrevem uma relação entre dois esquemas diferentes, digitados nas propriedades descritas em `xdm:sourceProperty` e `xdm:destinationProperty`. Consulte o tutorial em [definindo uma relação entre dois esquemas](../tutorials/relationship-api.md) para obter mais informações.
+
+Use estas propriedades para declarar como um campo de origem (chave estrangeira) se relaciona a um campo de destino ([chave primária](#primary-key-descriptor) ou chave candidata).
+
+>[!TIP]
+>
+>Uma **chave estrangeira** é um campo no esquema de origem (definido por `xdm:sourceProperty`) que faz referência a um campo de chave em outro esquema. Uma **chave candidata** é qualquer campo (ou conjunto de campos) no esquema de destino que identifica exclusivamente um registro e pode ser usada em vez da chave primária.
+
+A API oferece suporte a dois padrões:
+
+- `xdm:descriptorOneToOne`: relação padrão 1:1.
+- `xdm:descriptorRelationship`: padrão geral para novos esquemas de trabalho e baseados em modelo (suporta cardinalidade, nomeação e alvos de chave não primária).
+
+##### Relação um para um (esquemas padrão)
+
+Use isso ao manter integrações de esquema padrão existentes que já dependem de `xdm:descriptorOneToOne`.
 
 ```json
 {
   "@type": "xdm:descriptorOneToOne",
-  "xdm:sourceSchema":
-    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
   "xdm:sourceVersion": 1,
   "xdm:sourceProperty": "/parentField/subField",
-  "xdm:destinationSchema": 
-    "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
   "xdm:destinationVersion": 1,
   "xdm:destinationProperty": "/parentField/subField"
 }
 ```
+
+A tabela a seguir descreve os campos necessários para definir um descritor de relacionamento um para um.
 
 | Propriedade | Descrição |
 | --- | --- |
@@ -397,7 +427,143 @@ Os descritores de relacionamento descrevem uma relação entre dois esquemas dif
 | `xdm:destinationVersion` | A versão principal do esquema de referência. |
 | `xdm:destinationProperty` | (Opcional) Caminho para um campo de destino no esquema de referência. Se essa propriedade for omitida, o campo de destino será inferido por quaisquer campos que contenham um descritor de identidade de referência correspondente (veja abaixo). |
 
-{style="table-layout:auto"}
+##### Relação geral (esquemas baseados em modelo e recomendados para novos projetos)
+
+Use esse descritor para todas as novas implementações e para esquemas baseados em modelo. Ela permite definir a cardinalidade da relação (como um para um ou muitos para um), especificar nomes de relação e vincular a um campo de destino que não seja a chave primária (chave não primária).
+
+Os exemplos a seguir mostram como definir um descritor de relacionamento geral.
+
+**Exemplo mínimo:**
+
+Este exemplo mínimo inclui apenas os campos necessários para definir uma relação muitos para um entre dois schemas.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:sourceVersion": 1,
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:cardinality": "M:1"
+}
+```
+
+**Exemplo com todos os campos opcionais:**
+
+Este exemplo inclui todos os campos opcionais, como nomes de relacionamento, títulos de exibição e um campo de destino de chave não primária explícito.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:destinationProperty": "/customer_id",
+  "xdm:sourceToDestinationName": "CampaignToCustomer",
+  "xdm:destinationToSourceName": "CustomerToCampaign",
+  "xdm:sourceToDestinationTitle": "Customer campaigns",
+  "xdm:destinationToSourceTitle": "Campaign customers",
+  "xdm:cardinality": "M:1"
+}
+```
+
+##### Escolha de um descritor de relacionamento
+
+Use as diretrizes a seguir para decidir qual descritor de relacionamento aplicar:
+
+| Situação | Descritor a ser usado |
+| --------------------------------------------------------------------- | ----------------------------------------- |
+| Novos esquemas baseados em trabalho ou modelo | `xdm:descriptorRelationship` |
+| Mapeamento 1:1 existente em esquemas padrão | Continue usando o `xdm:descriptorOneToOne` a menos que precise de recursos com suporte apenas do `xdm:descriptorRelationship`. |
+| É necessária uma cardinalidade de muitos para um ou opcional (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship` |
+| São necessários nomes ou títulos de relacionamento para legibilidade da interface do usuário/downstream | `xdm:descriptorRelationship` |
+| É necessário um destino que não seja uma identidade | `xdm:descriptorRelationship` |
+
+>[!NOTE]
+>
+>Para descritores `xdm:descriptorOneToOne` existentes em esquemas padrão, continue usando-os a menos que precise de recursos como destinos de identidade não primários, nomenclatura personalizada ou opções de cardinalidade expandidas.
+
+##### Comparação de recursos
+
+A tabela a seguir compara os recursos dos dois tipos de descritor:
+
+| Recurso | `xdm:descriptorOneToOne` | `xdm:descriptorRelationship` |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------ |
+| Cardinalidade | 1:1 | 1:1, 1:0, M:1, M:0 (informativo) |
+| Destino | Campo de identidade/explícito | Chave primária por padrão, ou chave não primária via `xdm:destinationProperty` |
+| Nomeação de campos | Incompatível | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` e títulos |
+| Ajuste relacional | Limitado | Padrão principal para esquemas baseados em modelo |
+
+##### Restrições e validação
+
+Siga estes requisitos e recomendações ao definir um descritor de relacionamento geral:
+
+- Para esquemas baseados em modelo, coloque o campo de origem (chave estrangeira) no nível raiz. Essa é uma limitação técnica atual para assimilação, não apenas uma recomendação de práticas recomendadas.
+- Verifique se os tipos de dados dos campos de origem e destino são compatíveis (numérico, data, booleano, string).
+- Lembre-se de que a cardinalidade é informativa; o armazenamento não a impõe. Especifique a cardinalidade no formato `<source>:<destination>`. Os valores aceitos são: `1:1`, `1:0`, `M:1` ou `M:0`.
+
+#### Descritor de chave primária {#primary-key-descriptor}
+
+O descritor de chave primária (`xdm:descriptorPrimaryKey`) impõe restrições de exclusividade e não nulas em um ou mais campos em um esquema.
+
+```json
+{
+  "@type": "xdm:descriptorPrimaryKey",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": ["/orderId", "/orderLineId"]
+}
+```
+
+| Propriedade | Descrição |
+| -------------------- | ----------------------------------------------------------------------------- |
+| `@type` | Deve ser `xdm:descriptorPrimaryKey`. |
+| `xdm:sourceSchema` | `$id` URI do esquema. |
+| `xdm:sourceProperty` | Ponteiro(s) JSON para o(s) campo(s) de chave primária. Use uma matriz para chaves compostas. Para esquemas de série temporal, a chave composta deve incluir o campo de carimbo de data e hora para garantir exclusividade em registros de evento. |
+
+#### Descritor de versão {#version-descriptor}
+
+>[!NOTE]
+>
+>No Editor de Esquema da Interface do Usuário, o descritor de versão aparece como &quot;[!UICOTRNOL Identificador de versão]&quot;.
+
+O descritor de versão (`xdm:descriptorVersion`) designa um campo para detectar e evitar conflitos de eventos de alteração fora de ordem.
+
+```json
+{
+  "@type": "xdm:descriptorVersion",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/versionNumber"
+}
+```
+
+| Propriedade | Descrição |
+| -------------------- | ------------------------------------------------------------- |
+| `@type` | Deve ser `xdm:descriptorVersion`. |
+| `xdm:sourceSchema` | `$id` URI do esquema. |
+| `xdm:sourceProperty` | Ponteiro JSON para o campo de versão. Deve ser marcado como `required`. |
+
+#### Descritor de carimbo de data e hora {#timestamp-descriptor}
+
+>[!NOTE]
+>
+>No Editor de Esquema de Interface do Usuário, o descritor de carimbo de data/hora aparece como &quot;[!UICOTRNOL Identificador de carimbo de data/hora]&quot;.
+
+O descritor de carimbo de data/hora (`xdm:descriptorTimestamp`) designa um campo de data/hora como carimbo de data/hora para esquemas com `"meta:behaviorType": "time-series"`.
+
+```json
+{
+  "@type": "xdm:descriptorTimestamp",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/eventTime"
+}
+```
+
+| Propriedade | Descrição |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `@type` | Deve ser `xdm:descriptorTimestamp`. |
+| `xdm:sourceSchema` | `$id` URI do esquema. |
+| `xdm:sourceProperty` | Ponteiro JSON para o campo de carimbo de data e hora. Deve ser marcado como `required` e ser do tipo `date-time`. |
 
 ##### Descritor de relacionamento B2B {#B2B-relationship-descriptor}
 
@@ -427,7 +593,7 @@ O Real-Time CDP B2B edition apresenta uma maneira alternativa de definir relaç�
 | `xdm:sourceProperty` | Caminho para o campo no esquema de origem em que a relação está sendo definida. Deve começar com &quot;/&quot; e não terminar com &quot;/&quot;. Não inclua &quot;propriedades&quot; no caminho (por exemplo, &quot;/personalEmail/address&quot; em vez de &quot;/properties/personalEmail/properties/address&quot;). |
 | `xdm:destinationSchema` | O URI `$id` do esquema de referência com o qual este descritor está definindo uma relação. |
 | `xdm:destinationVersion` | A versão principal do esquema de referência. |
-| `xdm:destinationProperty` | (Opcional) Caminho para um campo de destino no esquema de referência, que deve ser a ID primária do esquema. Se essa propriedade for omitida, o campo de destino será inferido por quaisquer campos que contenham um descritor de identidade de referência correspondente (veja abaixo). |
+| `xdm:destinationProperty` | (Opcional) Caminho para um campo de destino no esquema de referência. Isso deve resolver para a ID primária do esquema ou para outro campo com um tipo de dados compatível com `xdm:sourceProperty`. Se omitida, a relação pode não funcionar conforme esperado. |
 | `xdm:destinationNamespace` | O namespace da ID primária do esquema de referência. |
 | `xdm:destinationToSourceTitle` | O nome de exibição do relacionamento entre o esquema de referência e o esquema de origem. |
 | `xdm:sourceToDestinationTitle` | O nome de exibição do relacionamento do esquema de origem com o esquema de referência. |

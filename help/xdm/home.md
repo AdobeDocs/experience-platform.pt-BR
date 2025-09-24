@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral do sistema XDM
 description: A padronização e a interoperabilidade são os principais conceitos por trás da Adobe Experience Platform. O Experience Data Model (XDM), orientado pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7527732c91e55f6ffaefbf98c37a2c4aad3aa3b9
 workflow-type: tm+mt
-source-wordcount: '2135'
-ht-degree: 4%
+source-wordcount: '2452'
+ht-degree: 3%
 
 ---
 
@@ -105,6 +105,40 @@ Para começar a assimilar dados na Experience Platform, você pode usar o Servi�
 
 Consulte a [Visão geral do Serviço de Catálogo](../catalog/home.md) para obter mais informações. Consulte a [Visão geral da assimilação de dados](../ingestion/home.md) para obter mais informações sobre a assimilação de dados do Adobe Experience Platform.
 
+### Data Mirror e esquemas baseados em modelo {#model-based-schemas}
+
+>[!AVAILABILITY]
+>
+>O Data Mirror e os esquemas baseados em modelo estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
+
+O Data Mirror é um recurso do Adobe Experience Platform que permite a sincronização avançada do banco de dados usando esquemas baseados em modelo. Para obter uma visão geral completa dos recursos e casos de uso do Data Mirror, consulte a [visão geral do Data Mirror](./data-mirror/overview.md).
+
+O Data Mirror opera por meio de esquemas baseados em modelo, que são projetados para padrões de dados estruturados e de estilo relacional. Eles impõem chaves primárias, aceitam identificadores de versão e definem relações esquema a esquema usando chaves primárias e estrangeiras. Diferentemente dos esquemas XDM padrão, eles não exigem classes ou grupos de campos e são otimizados para alterar os fluxos de trabalho de assimilação de captura de dados.
+
+Para obter detalhes sobre como definir relações esquema a esquema, consulte a [documentação do endpoint de descritores](./api/descriptors.md).
+
+Use o Data Mirror quando precisar:
+
+* Sincronizar alterações de dados de sistemas externos, como Snowflake, Databricks ou BigQuery
+* Preservar as relações do banco de dados e impor a integridade dos dados durante a assimilação
+* Suporte à análise avançada e à orquestração de jornadas
+* Habilitar o controle preciso de alterações com substituições e exclusões
+
+Para criar um esquema baseado em modelo, selecione **[!UICONTROL baseado em modelo]** ao criar um esquema. Esquemas baseados em modelo não usam classes ou grupos de campos. Em vez disso, defina a estrutura manualmente ou faça upload de um arquivo DDL. Os esquemas baseados em modelo exigem uma chave primária, um identificador de versão e, se aplicável, campos de identificador de carimbo de data e hora. Em seguida, você pode configurar campos adicionais e definir relações com outros esquemas.
+
+>[!NOTE]
+>
+>As colunas de controle usadas durante a assimilação (como `_change_request_type` para fluxos de trabalho de captura de dados de alteração) são lidas no momento da assimilação e não são armazenadas no esquema nem mapeadas para campos XDM. Os esquemas relacionais estão disponíveis com direitos apropriados do Experience Platform e ativação de recursos.
+
+Para obter as etapas detalhadas e as orientações para o caso de uso, consulte:
+
+* [Visão geral do Data Mirror](./data-mirror/overview.md) - Recursos, casos de uso e planejamento de implementação
+* [Referência técnica de esquema baseada em modelo](./schema/model-based.md) - Especificações técnicas e restrições
+* [Tutorial de interface do usuário](./ui/resources/schemas.md#create-model-based-schema)
+* [Tutorial de API](./api/schemas.md#create-model-based-schema)
+* [Documentação do descritor (identificador)](./api/descriptors.md#relationship-descriptor)
+* [Habilitar captura de dados de alteração](../sources/tutorials/api/change-data-capture.md)
+
 ### Query Service {#query-service}
 
 Você pode usar o SQL padrão para consultar dados do Experience Platform e oferecer suporte a vários casos de uso diferentes com o Serviço de consulta da Adobe Experience Platform.
@@ -147,4 +181,4 @@ Para saber mais sobre os princípios de design e as práticas recomendadas para 
 
 Para reforçar sua compreensão do [!DNL XDM System] no Experience Platform, assista ao vídeo a seguir:
 
->[!VIDEO](https://video.tv.adobe.com/v/38512?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

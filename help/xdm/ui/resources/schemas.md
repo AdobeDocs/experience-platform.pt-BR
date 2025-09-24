@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar e editar esquemas na interface
 description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '4178'
-ht-degree: 2%
+source-wordcount: '4873'
+ht-degree: 1%
 
 ---
 
@@ -27,15 +27,96 @@ Este guia requer uma compreensão funcional do Sistema XDM. Consulte a [Visão g
 
 ## Criar um novo esquema {#create}
 
+No espaço de trabalho [!UICONTROL Esquemas], selecione **[!UICONTROL Criar esquema]** no canto superior direito. O menu suspenso &#39;Selecionar tipo de esquema&#39; é exibido com opções para esquemas [!UICONTROL Padrão] ou [!UICONTROL Baseados em modelo].
+
+![O espaço de trabalho Esquemas com [!UICONTROL Criar Esquema] realçado e a lista suspensa &#39;Selecionar tipo de esquema&#39; exibida](../../images/ui/resources/schemas/create-schema.png).
+
+## Crie um esquema baseado em modelo {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>O Data Mirror e os esquemas baseados em modelo estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
+
+Selecione **[!UICONTROL Baseado em modelo]** para definir esquemas estruturados de estilo baseado em modelo com controle refinado sobre registros. Os esquemas baseados em modelo são compatíveis com imposição de chave primária, controle de versão em nível de registro e relações em nível de esquema por meio de chaves primárias e estrangeiras. Eles também são otimizados para assimilação incremental usando captura de dados de alteração e oferecem suporte a vários modelos de dados usados em implementações do Campaign Orchestration, Data Distiller e B2B.
+
+Para saber mais, consulte a visão geral do [Data Mirror](../../data-mirror/overview.md) ou do [esquema baseado em modelo](../../schema/model-based.md).
+
+### Criar manualmente {#create-manually}
+
+>[!AVAILABILITY]
+>
+>O upload do arquivo DDL está disponível somente para titulares de licenças do Adobe Journey Optimizer Orchestrated campaign. Sua interface do usuário pode aparecer de forma diferente.
+
+A caixa de diálogo **[!UICONTROL Criar um esquema baseado em modelo]** é exibida. Você pode escolher **[!UICONTROL Criar manualmente]** ou [**[!UICONTROL Carregar arquivo DDL]**](#upload-ddl-file) para definir a estrutura do esquema.
+
+Na caixa de diálogo **[!UICONTROL Criar um esquema baseado em modelo]**, selecione **[!UICONTROL Criar manualmente]** e **[!UICONTROL Avançar]**.
+
+![A caixa de diálogo Criar um esquema baseado em modelo com a opção Criar selecionado manualmente e a opção Avançar realçada.](../../images/ui/resources/schemas/relational-dialog.png)
+
+A página **[!UICONTROL Detalhes do esquema baseado em modelo]** é exibida. Insira um nome para exibição de esquema e uma descrição opcional e selecione **[!UICONTROL Concluir]** para criar o esquema.
+
+![A exibição de detalhes do esquema baseado em modelo com [!UICONTROL Nome para exibição do esquema], [!UICONTROL Descrição] e [!UICONTROL Término] realçados.](../../images/ui/resources/schemas/relational-details.png)
+
+O Editor de esquemas é aberto com uma tela vazia para definir a estrutura do esquema. Você pode adicionar campos como de costume.
+
+#### Adicionar um campo de identificador de versão {#add-version-identifier}
+
+Para ativar o rastreamento de versão e suportar a captura de dados de alteração, você deve designar um campo de identificador de versão no esquema. No Editor de Esquemas, selecione o ícone de adição (![A.](/help/images/icons/plus.png)) ícone ao lado do nome do esquema para adicionar um novo campo.
+
+Insira um nome de campo como `updateSequence` e escolha um tipo de dados de **[!UICONTROL DateTime]** ou **[!UICONTROL Number]**.
+
+No painel direito, habilite a caixa de seleção **[!UICONTROL Identificador de Versão]** e selecione **[!UICONTROL Aplicar]** para confirmar o campo.
+
+![O Editor de Esquemas com um campo DateTime chamado `updateSequence` foi adicionado e a caixa de seleção Identificador de Versão foi selecionada.](../../images/ui/resources/schemas/add-version-identifier.png)
+
+>[!IMPORTANT]
+>
+>Um esquema baseado em modelo deve incluir um campo de identificador de versão para oferecer suporte a atualizações no nível do registro e alterar a assimilação da captura de dados.
+
+Para definir relações, selecione **[!UICONTROL Adicionar Relação]** no Editor de Esquemas para criar relações de chave primária/estrangeira em nível de esquema. Consulte o tutorial em [adicionando relações de nível de esquema](../../tutorials/relationship-ui.md#relationship-field) para obter mais informações.
+
+Em seguida, prossiga para [definir chaves primárias](../fields/identity.md#define-a-identity-field) e [adicionar outros campos](#add-field-groups), conforme necessário. Para obter orientação sobre como habilitar a captura de dados de alteração nas Fontes do Experience Platform, consulte o [guia de assimilação da captura de dados de alteração](../../../sources/tutorials/api/change-data-capture.md).
+
 >[!NOTE]
 >
->Esta seção aborda como criar manualmente um novo esquema na interface do usuário do. Se você estiver assimilando dados CSV na Experience Platform, poderá usar algoritmos de aprendizado de máquina (ML) para **gerar um esquema a partir de dados CSV de amostra**. Esse workflow corresponde ao formato de dados e cria automaticamente um novo schema com base na estrutura e no conteúdo do arquivo CSV. Consulte o [Guia de criação de esquema com assistência de ML](../ml-assisted-schema-creation.md) para obter mais informações sobre este fluxo de trabalho.
+>Depois de salvo, o campo [!UICONTROL Tipo] na barra lateral [!UICONTROL  Propriedades do esquema] indica que este é um esquema [!UICONTROL baseado em modelo]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
+>>![A tela Editor de Esquemas mostrando uma estrutura de esquema baseada em modelo vazia com o tipo baseado em modelo realçado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
-No espaço de trabalho [!UICONTROL Esquemas], selecione **[!UICONTROL Criar esquema]** no canto superior direito.
+### Fazer upload de um arquivo DDL {#upload-ddl-file}
 
-![O espaço de trabalho Esquemas com [!UICONTROL Criar Esquema] realçado.](../../images/ui/resources/schemas/create-schema.png)
+>[!AVAILABILITY]
+>
+>O upload do arquivo DDL está disponível somente para titulares de licenças do Adobe Journey Optimizer Orchestrated campaign.
 
-A caixa de diálogo [!UICONTROL Criar um esquema] é exibida. Nesta caixa de diálogo, você pode optar por criar manualmente um esquema adicionando campos e grupos de campos ou pode fazer upload de um arquivo CSV e usar algoritmos de ML para gerar um esquema. Selecione um workflow de criação de esquema na caixa de diálogo.
+Use esse fluxo de trabalho para definir o esquema fazendo upload de um arquivo DDL. Na caixa de diálogo **[!UICONTROL Criar um esquema baseado em modelo]**, selecione **[!UICONTROL Carregar arquivo DDL]** e arraste um arquivo DDL local do sistema ou selecione **[!UICONTROL Escolher arquivos]**. O Experience Platform valida o esquema e exibe uma marca de seleção verde se o upload do arquivo for bem-sucedido. Selecione **[!UICONTROL Avançar]** para confirmar o carregamento.
+
+![A caixa de diálogo Criar um esquema baseado em modelo com [!UICONTROL Carregar arquivo DDL] foi selecionada e [!UICONTROL Avançar] foi realçado.](../../images/ui/resources/schemas/upload-ddl-file.png)
+
+A caixa de diálogo [!UICONTROL Selecionar entidades e campos para importar] é exibida, permitindo que você visualize o esquema. Revise a estrutura do esquema e use os botões de opção e as caixas de seleção para garantir que cada entidade tenha uma chave primária e um identificador de versão especificados.
+
+>[!IMPORTANT]
+>
+>A estrutura da tabela deve conter uma **chave primária** e um **identificador de versão**, como um campo `updateSequence` do tipo datetime ou number.
+>
+>Para assimilação de captura de dados de alteração, uma coluna especial chamada `_change_request_type` do tipo Cadeia de caracteres também é necessária para habilitar o processamento incremental. Este campo indica o tipo de alteração de dados (por exemplo, `u` (substituição) ou `d` (exclusão)).
+
+Embora seja necessário durante a assimilação, colunas de controle como `_change_request_type` não são armazenadas no esquema e não aparecem na estrutura final do esquema. Se tudo estiver correto, selecione **[!UICONTROL Concluído]** para criar o esquema.
+
+>[!NOTE]
+>
+>O tamanho máximo de arquivo suportado para um upload de DDL é 10 MB.
+
+![A exibição de revisão de esquema baseada em modelo com campos importados mostrados e [!UICONTROL Término] realçados.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+
+O esquema é aberto no Editor de esquemas, onde você pode ajustar a estrutura antes de salvar.
+
+Em seguida, prossiga para [adicionar mais campos](#add-field-groups) e [adicionar mais relações de nível de esquema](../../tutorials/relationship-ui.md#relationship-field), conforme necessário.
+
+Para obter orientação sobre como habilitar a captura de dados de alteração nas Fontes do Experience Platform, consulte o [guia de assimilação da captura de dados de alteração](../../../sources/tutorials/api/change-data-capture.md).
+
+## Criação de esquema padrão {#standard-based-creation}
+
+Se você selecionar &#39;Tipo de esquema padrão&#39; no menu suspenso &#39;Selecionar tipo de esquema&#39;, a caixa de diálogo [!UICONTROL Criar um esquema] será exibida. Nesta caixa de diálogo, você pode optar por criar manualmente um esquema adicionando campos e grupos de campos ou pode fazer upload de um arquivo CSV e usar algoritmos de ML para gerar um esquema. Selecione um workflow de criação de esquema na caixa de diálogo.
 
 ![A caixa de diálogo Criar um esquema com as opções de fluxo de trabalho e selecione realçada.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
@@ -172,7 +253,7 @@ Depois de adicionar um grupo de campos a um esquema, você pode remover campos g
 >[!IMPORTANT]
 >
 >Selecionar **[!UICONTROL Remover]** exclui o campo do próprio grupo de campos, afetando *todos* esquemas que usam esse grupo de campos.
->&#x200B;>Não use esta opção, a menos que deseje **remover o campo de cada esquema que inclua o grupo de campos**.
+>>Não use esta opção, a menos que deseje **remover o campo de cada esquema que inclua o grupo de campos**.
 
 Para excluir um campo do grupo de campos, selecione-o na tela e selecione **[!UICONTROL Remover]** no painel direito. Este exemplo mostra o campo `taxId` do grupo **[!UICONTROL Detalhes Demográficos]**.
 
@@ -406,6 +487,6 @@ Depois de confirmar a alteração de classe, a tela será redefinida e todo o pr
 
 Este documento abordou as noções básicas para a criação e edição de esquemas na interface do usuário do Experience Platform. É altamente recomendável que você consulte o [tutorial de criação de esquemas](../../tutorials/create-schema-ui.md) para obter um fluxo de trabalho abrangente e criar um esquema completo na interface do usuário, incluindo a criação de grupos de campos personalizados e tipos de dados para casos de uso exclusivos.
 
-Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).
+Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
 
 Para saber como gerenciar esquemas na API [!DNL Schema Registry], consulte o [manual de endpoint de esquemas](../../api/schemas.md).

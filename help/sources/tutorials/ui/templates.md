@@ -3,9 +3,9 @@ description: Saiba como usar modelos na interface do usuário do Adobe Experienc
 title: Criar um fluxo de dados de origem usando modelos na interface
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2250'
+source-wordcount: '2314'
 ht-degree: 10%
 
 ---
@@ -65,6 +65,12 @@ Uma janela pop-up é exibida, apresentando a opção de procurar modelos ou usar
 
 * **Procurar modelos**: os modelos de fontes criam esquemas, identidades, conjuntos de dados e fluxos de dados automaticamente com regras de mapeamento para você. Você pode personalizar esses ativos conforme necessário.
 * **Usar meus ativos existentes**: assimile seus dados usando conjuntos de dados e esquemas existentes que você criou. Você também pode criar novos conjuntos de dados e esquemas, se necessário.
+
+>[!NOTE]
+>
+>Os modelos podem gerar esquemas baseados em modelo automaticamente ao trabalhar com origens que exigem workflows de captura de dados de alteração ou suportam vários modelos de dados. Esses esquemas ativam os recursos do Data Mirror para sincronização de dados em tempo real.\
+>Ao usar modelos com esquemas baseados em modelo, os ativos gerados automaticamente incluirão os campos obrigatórios chave primária, identificador de versão e identificador de carimbo de data e hora.\
+>Para obter mais informações, consulte a [visão geral do Data Mirror](../../../xdm/data-mirror/overview.md) e a [referência técnica de esquemas baseados em modelo](../../../xdm/schema/model-based.md).
 
 Para usar os ativos gerados automaticamente, selecione **[!UICONTROL Procurar modelos]** e **[!UICONTROL Selecionar]**.
 

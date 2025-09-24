@@ -2,10 +2,10 @@
 title: Solicitações de exclusão de registro (fluxo de trabalho da interface)
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
+source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
 workflow-type: tm+mt
-source-wordcount: '1848'
-ht-degree: 7%
+source-wordcount: '2420'
+ht-degree: 5%
 
 ---
 
@@ -204,6 +204,69 @@ Depois que a solicitação for enviada, uma ordem de serviço será criada e exi
 >Consulte a seção de visão geral em [linhas do tempo e transparência](../home.md#record-delete-transparency) para obter detalhes sobre como as exclusões de registros são processadas após a execução.
 
 ![A guia [!UICONTROL Registro] do espaço de trabalho [!UICONTROL Ciclo de Vida dos Dados] com a nova solicitação realçada.](../images/ui/record-delete/request-log.png)
+
+## Exclusão de registros dos conjuntos de dados baseados em modelo {#model-based-record-delete}
+
+Se o conjunto de dados do qual você está excluindo for um esquema baseado em modelo, analise as seguintes considerações para garantir que os registros sejam removidos corretamente e não sejam assimilados novamente devido a incompatibilidades entre o Experience Platform e o sistema de origem.
+
+### Comportamento de exclusão de registro
+
+A tabela a seguir descreve como as exclusões de registros se comportam em sistemas Experience Platform e de origem, dependendo do método de assimilação e da configuração de captura de dados de alteração.
+
+| Aspecto | Comportamento |
+|---------------------|--------------------------------------------------------------------------|
+| Exclusão da plataforma | Os registros são removidos do conjunto de dados e do data lake da Experience Platform. |
+| Retenção do Source | Os registros permanecem no sistema de origem, a menos que sejam explicitamente excluídos desse sistema. |
+| Impacto total na atualização | Se estiver usando a atualização completa, os registros excluídos poderão ser assimilados novamente, a menos que sejam removidos ou excluídos da origem. |
+| Alterar comportamento de captura de dados | Os registros sinalizados com `_change_request_type = 'd'` são excluídos durante a assimilação. Os registros não sinalizados podem ser assimilados novamente. |
+
+Para evitar a reassimilação, aplique a mesma abordagem de exclusão no sistema de origem e no Experience Platform, removendo registros de ambos os sistemas ou incluindo `_change_request_type = 'd'` para os registros que você pretende excluir.
+
+### Alterar colunas de controle e captura de dados
+
+Esquemas baseados em modelo que usam Origens com captura de dados de alteração podem usar a coluna de controle `_change_request_type` ao diferenciar exclusões de substituições. Durante a assimilação, os registros sinalizados com `d` são excluídos do conjunto de dados, enquanto aqueles sinalizados com `u` ou sem a coluna são tratados como substituições. A coluna `_change_request_type` é lida somente no momento da assimilação e não é armazenada no esquema de destino ou mapeada para campos XDM.
+
+>[!NOTE]
+>
+>A exclusão de registros por meio da interface do usuário do ciclo de vida dos dados não afeta o sistema de origem. Para remover dados de ambos os locais, exclua-os na Experience Platform e na origem.
+
+### Métodos de exclusão adicionais para esquemas baseados em modelo
+
+Além do fluxo de trabalho padrão de exclusão de registros, os esquemas baseados em modelo oferecem suporte a métodos adicionais para casos de uso específicos:
+
+* **Abordagem do conjunto de dados de cópia segura**: duplicar o conjunto de dados de produção e aplicar exclusões à cópia para teste controlado ou reconciliação antes de aplicar alterações aos dados de produção.
+* **Upload em lote somente com exclusões**: carregue um arquivo contendo apenas operações de exclusão para limpeza direcionada quando precisar remover registros específicos sem afetar outros dados.
+
+### Suporte de descritor para operações de higiene {#descriptor-support}
+
+Os descritores de esquema baseados em modelo fornecem metadados essenciais para operações de higiene precisas:
+
+* **Descritor de chave primária**: identifica registros exclusivamente para atualizações ou exclusões direcionadas, garantindo que os registros corretos sejam afetados.
+* **Descritor de versão**: garante que as exclusões e atualizações sejam aplicadas na ordem cronológica correta, evitando operações fora de sequência.
+* **Descritor de carimbo de data/hora (esquemas de série temporal)**: alinha as operações de exclusão com tempos de ocorrência de eventos em vez de tempos de assimilação.
+
+>[!NOTE]
+>
+>Os processos de higiene operam no nível do conjunto de dados. Para conjuntos de dados habilitados para perfis, podem ser necessários fluxos de trabalho de perfil adicionais para manter a consistência no Perfil do cliente em tempo real.
+
+### Retenção programada para esquemas baseados em modelo
+
+Para uma higiene automatizada com base na idade dos dados em vez de identidades específicas, consulte [Gerenciar a retenção do conjunto de dados (TTL) do evento de experiência](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) para retenção no nível de linha agendada no data lake.
+
+>[!NOTE]
+>
+>A expiração em nível de linha é compatível somente com conjuntos de dados que usam comportamento de série temporal.
+
+### Práticas recomendadas para exclusão de registro baseada em modelo
+
+Para evitar a reassimilação não intencional e manter a consistência dos dados entre sistemas, siga estas práticas recomendadas:
+
+* **Coordenar exclusões**: alinhe as exclusões de registro com sua configuração de captura de dados de alteração e estratégia de gerenciamento de dados de origem.
+* **Monitorar fluxos de captura de dados de alteração**: após excluir registros na Plataforma, monitore os fluxos de dados e confirme se o sistema de origem remove os mesmos registros ou os inclui com `_change_request_type = 'd'`.
+* **Limpar a origem**: para origens que usam assimilação de atualização completa ou aquelas que não oferecem suporte a exclusões por meio da captura de dados de alteração, exclua registros diretamente do sistema de origem para evitar a reassimilação.
+
+Para obter mais detalhes sobre requisitos do esquema, consulte [requisitos do descritor de esquema baseado em modelo](../../xdm/schema/model-based.md#model-based-schemas).\
+Para saber como a captura de dados de alteração funciona com origens, consulte [Habilitar captura de dados de alteração nas origens](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
 
 ## Próximas etapas
 

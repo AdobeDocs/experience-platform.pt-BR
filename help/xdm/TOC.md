@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Explore uma visão geral do sistema do Experience Data Model (XDM) na Experience Platform e saiba como usar classes e grupos de campos de esquema para padronizar os dados de experiência.
 feature: Schemas
 role: Developer
-source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
+source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 49%
+source-wordcount: '708'
+ht-degree: 48%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 49%
    * [Práticas recomendadas de modelagem de dados](schema/best-practices.md)
    * [Dados sensíveis e pessoais](./schema/sensitive-and-personal-data.md)
    * [Restrições de tipo de campo XDM](schema/field-constraints.md)
+   * [Esquema baseado em modelo](./schema/model-based.md)
    * [Namespace no XDM](./schema/namespaces.md)
    * Modelos de dados do setor {#industries}
       * [Visão geral](./schema/industries/overview.md)
@@ -73,6 +74,8 @@ ht-degree: 49%
          * [Tempo](./schema/healthcare/data-types/timing.md)
          * [Serviço virtual](./schema/healthcare/data-types/virtual-service-detail.md)
    * [Dicionário de campo XDM](schema/field-dictionary.md)
+* Data Mirror {#data-mirror}
+   * [Visão geral](./data-mirror/overview.md)
 * Classes {#classes}
    * [Perfil individual XDM](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)

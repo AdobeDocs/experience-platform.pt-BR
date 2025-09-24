@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;esquema;Esquema;esquemas;esquemas;criar
+keywords: Experience Platform;home;tópicos populares;api;API;XDM;sistema XDM;modelo de dados de experiência;modelo de dados de experiência;modelo de dados de experiência;modelo de dados;modelo de dados;modelo de dados;registro de esquemas;esquema;Esquema;esquemas;esquemas;criar
 solution: Experience Platform
 title: Endpoint da API de esquemas
 description: O ponto de extremidade /schemas na API do registro de esquema permite gerenciar de forma programática esquemas XDM no aplicativo de experiência.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '1443'
-ht-degree: 3%
+source-wordcount: '2095'
+ht-degree: 4%
 
 ---
 
@@ -17,7 +17,7 @@ Um esquema pode ser visto como o blueprint dos dados que você deseja assimilar 
 
 ## Introdução
 
-O ponto de extremidade de API usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
+O ponto de extremidade de API usado neste guia faz parte da [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Recuperar uma lista de esquemas {#list}
 
@@ -35,7 +35,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{CONTAINER_ID}` | O contêiner que abriga os esquemas que você deseja recuperar: `global` para esquemas criados por Adobe ou `tenant` para esquemas de propriedade de sua organização. |
+| `{CONTAINER_ID}` | O contêiner que abriga os esquemas que você deseja recuperar: `global` para esquemas criados pela Adobe ou `tenant` para esquemas de propriedade de sua organização. |
 | `{QUERY_PARAMS}` | Parâmetros de consulta opcionais para filtrar os resultados. Consulte o [documento do apêndice](./appendix.md#query) para obter uma lista de parâmetros disponíveis. |
 
 {style="table-layout:auto"}
@@ -109,7 +109,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{CONTAINER_ID}` | O contêiner que abriga o esquema que você deseja recuperar: `global` para um esquema criado por Adobe ou `tenant` para um esquema pertencente à sua organização. |
+| `{CONTAINER_ID}` | O contêiner que abriga o esquema que você deseja recuperar: `global` para um esquema criado pela Adobe ou `tenant` para um esquema pertencente à sua organização. |
 | `{SCHEMA_ID}` | O `meta:altId` ou o `$id` codificado na URL do esquema que você deseja pesquisar. |
 
 {style="table-layout:auto"}
@@ -198,6 +198,8 @@ Uma resposta bem-sucedida retorna os detalhes do esquema. Os campos retornados d
 
 O processo de composição do esquema começa atribuindo uma classe. A classe define os principais aspectos comportamentais dos dados (registro ou série temporal), bem como os campos mínimos necessários para descrever os dados que serão assimilados.
 
+Para obter instruções sobre como criar um esquema sem classes ou grupos de campos, conhecido como esquema baseado em modelo, consulte a seção [Criar um esquema baseado em modelo](#create-model-based-schema).
+
 >[!NOTE]
 >
 >O exemplo de chamada abaixo é apenas um exemplo de linha de base de como criar um esquema na API, com os requisitos mínimos de composição de uma classe e nenhum grupo de campos. Para obter as etapas completas sobre como criar um esquema na API, incluindo como atribuir campos usando grupos de campos e tipos de dados, consulte o [tutorial de criação de esquema](../tutorials/create-schema-api.md).
@@ -275,13 +277,199 @@ Uma resposta bem-sucedida retorna o status HTTP 201 (Criado) e uma carga contend
 }
 ```
 
-Executar uma solicitação GET para [listar todos os esquemas](#list) no contêiner de locatário agora incluiria o novo esquema. Você pode executar uma [solicitação de pesquisa (GET)](#lookup) usando o URI `$id` codificado em URL para exibir o novo esquema diretamente.
+A execução de uma solicitação GET para [listar todos os esquemas](#list) no contêiner de locatário agora incluiria o novo esquema. Você pode executar uma [solicitação de pesquisa (GET)](#lookup) usando o URI `$id` codificado em URL para exibir o novo esquema diretamente.
 
-Para adicionar campos extras a um esquema, você pode executar uma [operação PATCH](#patch) para adicionar grupos de campos às matrizes `allOf` e `meta:extends` do esquema.
+Para adicionar campos extras a um esquema, você pode executar uma [operação do PATCH](#patch) para adicionar grupos de campos às matrizes `allOf` e `meta:extends` do esquema.
+
+## Crie um esquema baseado em modelo {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>O Data Mirror e os esquemas baseados em modelo estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
+
+Crie um esquema baseado em modelo fazendo uma solicitação POST para o ponto de extremidade `/schemas`. Esquemas baseados em modelo armazenam dados estruturados de estilo relacional **sem** classes ou grupos de campos. Defina campos diretamente no esquema e identifique o esquema como baseado em modelo usando uma tag de comportamento lógico.
+
+>[!IMPORTANT]
+>
+>Para criar um esquema baseado em modelo, defina `meta:extends` como `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Este é um **identificador de comportamento lógico** (não é uma classe ou comportamento físico). **não** faz referência a classes ou grupos de campos em `allOf`, e **não** inclui classes ou grupos de campos em `meta:extends`.
+
+Crie o esquema primeiro com `POST /tenant/schemas`. Em seguida, adicione os descritores necessários com a [API de descritores (`POST /tenant/descriptors`)](../api/descriptors.md):
+
+- [Descritor de chave primária](../api/descriptors.md#primary-key-descriptor): um campo de chave primária deve estar no **nível raiz** e **marcado como obrigatório**.
+- [Descritor de versão](../api/descriptors.md#version-descriptor): **Obrigatório** quando existe uma chave primária.
+- [Descritor de relacionamento](../api/descriptors.md#relationship-descriptor): opcional, define junções; cardinalidade não imposta na assimilação.
+- [Descritor de carimbo de data/hora](../api/descriptors.md#timestamp-descriptor): para esquemas de série temporal, a chave primária deve ser uma chave **composta** que inclua o campo de carimbo de data/hora.
+
+>[!NOTE]
+>
+>No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data/hora aparecem como &quot;[!UICOTRNOL Identificador de versão]&quot; e &quot;[!UICOTRNOL Identificador de carimbo de data/hora]&quot;, respectivamente.
+
+<!-- >[!AVAILABILITY]
+>
+>Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+
+>[!CAUTION]
+>
+>Os esquemas baseados em modelo **não são compatíveis com os esquemas de união**. Não aplique a marca `union` a `meta:immutableTags` ao trabalhar com esquemas baseados em modelo. Essa configuração está bloqueada na interface do usuário, mas não está bloqueada no momento pela API. Consulte o [manual de endpoint de uniões](./unions.md) para obter mais informações sobre o comportamento do esquema de união.
+
+**Formato da API**
+
+```http
+POST /tenant/schemas
+```
+
+**Solicitação**
+
+```shell
+curl --request POST \
+  --url https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
+  -H 'Accept: application/vnd.adobe.xed+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+  "title": "marketing.customers",
+  "type": "object",
+  "description": "Schema of the Marketing Customers table.",
+  "definitions": {
+    "customFields": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/customFields",
+      "meta:xdmType": "object"
+    }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record"
+}
+'
+```
+
+### Propriedades do corpo da solicitação
+
+| Propriedade | Tipo | Descrição |
+| ------------------------------- | ------ | --------------------------------------------------------- |
+| `title` | String | Nome de exibição do esquema. |
+| `description` | String | Breve explicação da finalidade do esquema. |
+| `type` | String | Deve ser `"object"` para esquemas baseados em modelo. |
+| `definitions` | Objeto | Contém os objetos de nível raiz que definem os campos do esquema. |
+| `definitions.<name>.properties` | Objeto | Nomes de campos e tipos de dados. |
+| `allOf` | Matriz | Faz referência à definição de objeto de nível raiz (por exemplo, `#/definitions/marketing_customers`). |
+| `meta:extends` | Matriz | É necessário incluir `"https://ns.adobe.com/xdm/data/adhoc-v2"` para identificar o esquema como baseado em modelo. |
+| `meta:behaviorType` | String | Defina como `"record"`. Use `"time-series"` somente quando habilitado e apropriado. |
+
+>[!IMPORTANT]
+>
+>A evolução do esquema para esquemas baseados em modelo segue as mesmas regras aditivas que os esquemas padrão. Você pode adicionar novos campos com uma solicitação PATCH. Alterações como renomear ou remover campos só são permitidas se nenhum dado tiver sido assimilado no conjunto de dados.
+
+**Resposta**
+
+Uma solicitação bem-sucedida retorna **HTTP 201 (Criado)** e o esquema criado.
+
+>[!NOTE]
+>
+>Os esquemas baseados em modelo não herdam campos pré-implantados (por exemplo, id, carimbo de data e hora ou eventType). Defina todos os campos obrigatórios explicitamente no esquema.
+
+**Exemplo de resposta**
+
+```json
+{
+  "$id": "https://ns.adobe.com/<TENANT_ID>/schemas/<SCHEMA_UUID>",
+  "meta:altId": "_<SCHEMA_ALT_ID>",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "marketing.customers",
+  "description": "Schema of the Marketing Customers table.",
+  "type": "object",
+  "definitions": {
+    "marketing_customers": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    { "$ref": "#/definitions/marketing_customers" }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record",
+  "meta:containerId": "tenant"
+}
+```
+
+### Propriedades do corpo de resposta
+
+| Propriedade | Tipo | Descrição |
+| ------------------- | ------ | -------------------------- |
+| `$id` | String | O URL exclusivo do esquema criado. Use em chamadas de API subsequentes. |
+| `meta:altId` | String | Um identificador alternativo do esquema. |
+| `meta:resourceType` | String | O tipo de recurso (sempre `"schemas"`). |
+| `version` | String | Uma versão de esquema atribuída na criação. |
+| `title` | String | O nome de exibição do esquema. |
+| `description` | String | Uma breve explicação da finalidade do esquema. |
+| `type` | String | O tipo de esquema. |
+| `definitions` | Objeto | Define objetos reutilizáveis ou grupos de campos usados no esquema. Normalmente, isso inclui a estrutura de dados principal e é referenciado na matriz `allOf` para definir a raiz do esquema. |
+| `allOf` | Matriz | Especifica o objeto raiz do esquema referenciando uma ou mais definições (por exemplo, `#/definitions/marketing_customers`). |
+| `meta:extends` | Matriz | Identifica o esquema como baseado em modelo (`adhoc-v2`). |
+| `meta:behaviorType` | String | Tipo de comportamento (`record` ou `time-series`, quando habilitado). |
+| `meta:containerId` | String | Contêiner no qual o esquema é armazenado (por exemplo, `tenant`). |
+
+Para adicionar campos a um esquema baseado em modelo após sua criação, faça uma [solicitação PATCH](#patch). Os esquemas baseados em modelo não herdam ou evoluem automaticamente. Alterações estruturais como renomear ou excluir campos só são permitidas se nenhum dado tiver sido assimilado no conjunto de dados. Quando os dados existirem, somente **alterações aditivas** (como a adição de novos campos) serão suportadas.
+
+Você pode adicionar novos campos de nível raiz (dentro da definição raiz ou raiz `properties`), mas não pode remover, renomear ou alterar o tipo de campos existentes.
+
+>[!CAUTION]
+>
+>A evolução do esquema fica restrita depois que um conjunto de dados é inicializado usando o esquema. Planeje os nomes e tipos de campo com antecedência, pois após a assimilação dos dados, os campos não poderão ser excluídos ou modificados.
 
 ## Atualizar um esquema {#put}
 
-Você pode substituir um esquema inteiro por meio de uma operação PUT, essencialmente reescrevendo o recurso. Ao atualizar um esquema por meio de uma solicitação PUT, o corpo deve incluir todos os campos que seriam necessários ao [criar um novo esquema](#create) em uma solicitação POST.
+É possível substituir um esquema inteiro por meio de uma operação do PUT, essencialmente reescrevendo o recurso. Ao atualizar um esquema por meio de uma solicitação PUT, o corpo deve incluir todos os campos que seriam necessários ao [criar um novo esquema](#create) em uma solicitação POST.
 
 >[!NOTE]
 >
@@ -368,7 +556,7 @@ Você pode atualizar uma parte de um esquema usando uma solicitação PATCH. O [
 >
 >Se você quiser substituir um recurso inteiro por novos valores em vez de atualizar campos individuais, consulte a seção sobre [substituição de um esquema usando uma operação PUT](#put).
 
-Uma das operações de PATCH mais comuns envolve a adição de grupos de campos definidos anteriormente a um esquema, conforme demonstrado pelo exemplo abaixo.
+Uma das operações mais comuns do PATCH envolve adicionar grupos de campos definidos anteriormente a um esquema, conforme demonstrado pelo exemplo abaixo.
 
 **Formato da API**
 

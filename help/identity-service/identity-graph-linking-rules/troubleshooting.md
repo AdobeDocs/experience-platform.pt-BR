@@ -2,9 +2,9 @@
 title: Guia de solução de problemas para regras de vinculação do gráfico de identidade
 description: Saiba como solucionar problemas comuns nas Regras de vinculação do gráfico de identidade.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
+source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
 workflow-type: tm+mt
-source-wordcount: '3295'
+source-wordcount: '3451'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,27 @@ Há vários motivos que contribuem para que os fragmentos de evento de experiên
    * Por exemplo, um evento de experiência deve conter um `_id` e um `timestamp`.
    * Além disso, o `_id` deve ser exclusivo para cada evento (registro).
 
-No contexto da prioridade de namespace, o Perfil rejeitará qualquer evento que contenha duas ou mais identidades com a maior prioridade de namespace. Por exemplo, se GAID não estiver marcada como um namespace exclusivo e duas identidades tiverem um namespace GAID e valores de identidade diferentes, o Perfil não armazenará nenhum dos eventos.
+No contexto de prioridade de namespace, o Perfil rejeitará qualquer evento que contenha duas ou mais identidades com a maior prioridade de namespace no **determinado evento de entrada**. Por exemplo, suponha que suas configurações de identidade estejam definidas da seguinte maneira:
+
+| Namespace | Único por gráfico | Prioridade |
+| --- | --- | --- |
+| CRMID | ✔️ | 1 |
+| GAID | | 2 |
+| ECID | | 3 |
+
+Para cada cenário, suponha que Eventos de experiência contenham os seguintes eventos:
+
+**Cenário 1: 2 GAIDs, 1 ECID**
+
+* Nesse cenário, um Evento de experiência recebido contém 2 GAIDs e 1 ECID. Entre esses namespaces, o GAID é configurado como o namespace com a maior prioridade. No entanto, como há 2 GAIDs, o Perfil **não** armazena esse Evento de Experiência.
+
+**Cenário 2: 2 CRMIDs, 1 GAID**
+
+* Nesse cenário, um Evento de experiência de entrada contém dois CRMIDs e um GAID. Entre esses namespaces, o CRMID é configurado como o namespace com a maior prioridade de namespace. No entanto, como há 2 GAIDs, o Perfil **não** armazena esse Evento de Experiência.
+
+**Cenário 3: 1 CRMID, 2 GAIDs**
+
+* Nesse cenário, um Evento de experiência de entrada contém 1 CRMID e 2 GAIDs. Entre esses namespaces, o CRMID é configurado como o namespace com a maior prioridade de namespace. Como há apenas uma CRMID, o Perfil assimilará os Eventos de experiência porque há apenas uma instância do namespace com a maior prioridade de namespace.
 
 **Etapas de solução de problemas**
 
@@ -320,7 +340,7 @@ Você pode usar a seguinte consulta no conjunto de dados de exportação de inst
 
 Esta seção descreve uma lista de respostas a perguntas frequentes sobre [!DNL Identity Graph Linking Rules].
 
-## Algoritmo de otimização de identidade {#identity-optimization-algorithm}
+## Algoritmo de otimização de identidades {#identity-optimization-algorithm}
 
 Leia esta seção para obter respostas a perguntas frequentes sobre o [Algoritmo de Otimização de Identidade](./identity-optimization-algorithm.md).
 

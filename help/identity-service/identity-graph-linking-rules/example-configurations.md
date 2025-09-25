@@ -2,7 +2,7 @@
 title: Guia de configurações de regras de vinculação do gráfico de identidade
 description: Saiba mais sobre os diferentes tipos de implementação que você pode configurar usando as Regras de vinculação do gráfico de identidade.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
+source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -133,6 +133,7 @@ Leia esta seção para implementações intermediárias de [!DNL Identity Graph 
 >[!NOTE]
 >
 >Para concluir as implementações abaixo, você deve criar os seguintes namespaces personalizados com os símbolos de identidade (diferencia maiúsculas de minúsculas) de:
+>
 >* `CRMID`
 >* `CChash` (Este é um namespace personalizado que representa um número de cartão de crédito com hash.)
 
@@ -228,6 +229,7 @@ CRMID: Jill, CChash: undefined
 >[!NOTE]
 >
 >Para concluir as implementações abaixo, você deve criar namespaces personalizados com os símbolos de identidade (diferencia maiúsculas de minúsculas) de:
+>
 >* `CRMID`
 >* `CRMIDhash`
 
@@ -477,6 +479,7 @@ loginID: JanePersonal, ECID: 222
 >[!NOTE]
 >
 >Para concluir as implementações abaixo, você deve criar namespaces personalizados com os símbolos de identidade (diferencia maiúsculas de minúsculas) de:
+>
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`

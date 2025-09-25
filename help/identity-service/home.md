@@ -105,7 +105,7 @@ Um gráfico de identidade é um mapa de relacionamentos entre diferentes namespa
 
 O vídeo a seguir tem como objetivo fornecer suporte à sua compreensão de identidades e gráficos de identidade.
 
->[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422776?quality=12&learn=on&captions=por_br)
 
 ## Noções básicas sobre a função do serviço de identidade na infraestrutura da Experience Platform
 

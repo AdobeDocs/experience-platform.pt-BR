@@ -2,10 +2,10 @@
 title: Notas de versão da extensão principal
 description: As notas de versão mais recentes da extensão principal no Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
+source-git-commit: 1dab2b2778844ac08c1fbc013405dc81fa7dc0b5
 workflow-type: tm+mt
-source-wordcount: '1693'
-ht-degree: 59%
+source-wordcount: '1723'
+ht-degree: 58%
 
 ---
 
@@ -14,6 +14,15 @@ ht-degree: 59%
 >[!NOTE]
 >
 >O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+
+## 25 de setembro de 2025
+
+v3.4.4
+
+* Adicione o campo `releaseNotesUrl` ao extension.json com esta página como o valor.
+* Dependências de auditoria.
+* Remova o Yarn e alinhe o processo de criação com nossos outros repositórios de código aberto.
+
 
 ## 8 de maio de 2025
 
@@ -131,7 +140,7 @@ v2.0.4
 
 * Adição de Suporte ao elemento de dados para vários campos - O suporte ao elemento de dados foi adicionado aos seguintes eventos: &quot;Tempo na página&quot;, &quot;Insere Viewport&quot;, &quot;Passe o mouse&quot; e &quot;Tempo de mídia reproduzido&quot;. Além das seguintes condições: &quot;Tempo no site&quot; e &quot;Comparação de valores&quot;
 * Adiciona suporte para comportamento padrão para ctrl/cmd + clique e clique do meio do mouse ao usar o atraso de link
-* **Atraso de link marcado no evento de clique como &quot;não é mais suportado&quot;.** — mais informações podem ser encontradas no [Blog de coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403?profile.language=pt) da Adobe Experience Platform
+* **Atraso de link marcado no evento de clique como &quot;não é mais suportado&quot;.** — mais informações podem ser encontradas no [Blog de coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/explainer-link-delay/ba-p/398403) da Adobe Experience Platform
 
 ## 6 de janeiro de 2021
 
@@ -216,7 +225,7 @@ v1.4.3
 
 v1.4.2
 
-* **Evento Enters Viewport** - Anteriormente, o evento Enters Viewport só era disparado uma vez por página. Esse comportamento pode ser configurado para ser acionado sempre que o elemento entrar no viewport.
+* **Evento Enters Viewport** - Anteriormente, o evento Enters Viewport só era acionado uma vez por página. Esse comportamento pode ser configurado para ser acionado sempre que o elemento entrar no viewport.
 * **Custom Event** - Os eventos personalizados agora podem conter dados contextuais que podem ser usados dentro de condições e ações.
 * **Evento Click** - Ao definir um atraso de link no evento Click, essa função agora faz corretamente o registro para descendentes da âncora e não apenas na âncora propriamente dita.
 
@@ -228,7 +237,7 @@ v1.4.2
 
 ## 24 de maio de 2018
 
-* **Recurso** - Adicionada uma condição Value Comparison, essa comparação compara dois valores usando qualquer um dos vários sinais de operação disponíveis. Isso substitui a funcionalidade de várias condições mais antigas que eram muito específicas.
+* **Recurso** - Adicionada uma condição Value Comparison, essa comparação compara dois valores usando qualquer um dos vários operadores disponíveis. Isso substitui a funcionalidade de várias condições mais antigas que eram muito específicas.
 * **Recurso** - Adição de uma condição Frequência máx.; essa condição permite especificar o número de vezes que a condição deve retornar “true” dentro de um período ou ocorrência de evento. Exemplos: 5 vezes por dia, 2 vezes por visita.
 
 ## 11 de abril de 2018

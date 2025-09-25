@@ -2,9 +2,9 @@
 title: Configurar a extensão de tag do Web SDK
 description: Saiba como configurar a extensão de tag do Experience Platform Web SDK na interface do usuário de tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '3095'
+source-wordcount: '3107'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Ao criar uma build personalizada do Web SDK, ela é usada por todas as instânci
 >[!IMPORTANT]
 >
 >A desativação dos componentes do Web SDK pode interromper a implementação existente. Cada vez que desabilitar um componente, certifique-se de testar sua implementação completamente para garantir que todas as funcionalidades necessárias estejam funcionando como esperado.
->&#x200B;>Quando você desativa um componente, não pode mais editar as configurações desse componente.
+>>Quando você desativa um componente, não pode mais editar as configurações desse componente.
 
 Para criar um build personalizado do Web SDK usando a extensão de tag da Web SDK, siga as etapas abaixo.
 
@@ -60,7 +60,8 @@ Para criar um build personalizado do Web SDK usando a extensão de tag da Web SD
    * **[!UICONTROL Ponte do Media Analytics]**: esse componente habilita o Edge Network Streaming Media usando a interface do Media Analytics. A desabilitação desse componente desabilita os seguintes elementos:
       * [Obter tipo de ação do Media Analytics Tracker](action-types.md#get-media-analytics-tracker)
    * **[!UICONTROL Personalization]**: este componente habilita as integrações do Adobe Target e do Adobe Journey Optimizer. A desabilitação desse componente desabilita os seguintes elementos:
-      * [Aplicar tipo de ação](action-types.md) de propostas
+      * [Aplicar propostas](action-types.md#apply-propositions)tipo de ação
+   * **[!UICONTROL Notificações por push]**: este componente habilita notificações por push da Web para Adobe Journey Optimizer.
    * **[!UICONTROL Mecanismo de regras]**: esse componente habilita a decisão no dispositivo do Adobe Journey Optimizer. A desabilitação desse componente desabilita os seguintes elementos:
       * [Avaliar tipo de ação de conjuntos de regras](action-types.md#evaluate-rulesets)
       * [Assinar itens do conjunto de regras](event-types.md#subscribe-ruleset-items) tipo de evento
@@ -123,10 +124,9 @@ Esta seção permite definir o comportamento do Web SDK quando se trata de lidar
 * **[!UICONTROL Usar cookies de terceiros]**: quando esta opção é habilitada, o Web SDK tenta armazenar um identificador de usuário em um cookie de terceiros. Se for bem-sucedido, o usuário será identificado como um único usuário durante a navegação em vários domínios, em vez de ser identificado como um usuário separado em cada domínio. Se essa opção estiver ativada, o SDK ainda poderá não conseguir armazenar o identificador do usuário em um cookie de terceiros se o navegador não for compatível com cookies de terceiros ou tiver sido configurado pelo usuário para não permitir cookies de terceiros. Nesse caso, o SDK armazena apenas o identificador no domínio próprio.
 
   >[!IMPORTANT]
-  >&#x200B;>Cookies de terceiros não são compatíveis com a funcionalidade [ID de dispositivo próprio](../../../../web-sdk/identity/first-party-device-ids.md) no Web SDK.
-  >&#x200B;>Você pode usar IDs de dispositivo primário ou cookies de terceiros, mas não pode usar ambos os recursos simultaneamente.
+  >>Cookies de terceiros não são compatíveis com a funcionalidade [ID de dispositivo próprio](../../../../web-sdk/identity/first-party-device-ids.md) no Web SDK.
+  >>Você pode usar IDs de dispositivo primário ou cookies de terceiros, mas não pode usar ambos os recursos simultaneamente.
   >
-
 ## Definir configurações de personalização {#personalization}
 
 Esta seção permite configurar como você deseja ocultar determinadas partes de uma página enquanto o conteúdo personalizado é carregado. Isso garante que seus visitantes vejam apenas a página personalizada.

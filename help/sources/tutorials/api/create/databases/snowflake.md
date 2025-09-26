@@ -3,10 +3,10 @@ title: Conectar o Snowflake ao Experience Platform usando a API do Serviço de f
 description: Saiba como conectar o Adobe Experience Platform ao Snowflake usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 0476c42924bf0163380e650141fad8e50b98d4cf
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 3%
+source-wordcount: '880'
+ht-degree: 4%
 
 ---
 
@@ -31,48 +31,17 @@ Para obter informações sobre como fazer chamadas para APIs do Experience Platf
 
 A seção a seguir fornece informações adicionais que você precisará saber para se conectar com êxito ao [!DNL Snowflake] usando a API [!DNL Flow Service].
 
-## Conectar [!DNL Snowflake] ao Experience Platform no Azure {#azure}
-
-Leia as etapas abaixo para obter informações sobre como conectar sua origem do [!DNL Snowflake] à Experience Platform no Azure.
-
 ### Coletar credenciais necessárias
+
+Leia a [[!DNL Snowflake] visão geral](../../../../connectors/databases/snowflake.md#prerequisites) para obter informações sobre autenticação.
+
+## Conectar [!DNL Snowflake] ao Experience Platform no Azure {#azure}
 
 >[!WARNING]
 >
 >A autenticação básica (ou autenticação de chave de conta) para a origem [!DNL Snowflake] será substituída em novembro de 2025. Você deve migrar para a autenticação baseada em par de chaves para continuar usando a origem e assimilando dados do banco de dados para o Experience Platform. Para obter mais informações sobre a descontinuação, leia o [[!DNL Snowflake] manual de práticas recomendadas sobre como mitigar os riscos de comprometimento de credenciais](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
-Você deve fornecer valores para as seguintes propriedades de credencial para autenticar sua origem [!DNL Snowflake].
-
->[!BEGINTABS]
-
->[!TAB Autenticação da chave da conta]
-
-| Credencial | Descrição |
-| ---------- | ----------- |
-| `account` | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `orgname-account_name`. Leia o guia em [recuperando seu [!DNL Snowflake] identificador de conta](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) para obter orientação adicional. Para obter mais informações, consulte a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| `warehouse` | O warehouse [!DNL Snowflake] gerencia o processo de execução da consulta para o aplicativo. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente ao trazer dados para a Experience Platform. |
-| `database` | O banco de dados [!DNL Snowflake] contém os dados que você deseja trazer para a Experience Platform. |
-| `username` | O nome de usuário da conta [!DNL Snowflake]. |
-| `password` | A senha da conta de usuário [!DNL Snowflake]. |
-| `role` | A função de controle de acesso padrão a ser usada na sessão [!DNL Snowflake]. A função deve ser uma função existente que já foi atribuída ao usuário especificado. A função padrão é `PUBLIC`. |
-| `connectionString` | A cadeia de conexão usada para se conectar à sua instância do [!DNL Snowflake]. O padrão da cadeia de conexão para [!DNL Snowflake] é `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
-
->[!TAB Autenticação de par de chaves]
-
-Para usar a autenticação de par de chaves, você deve gerar um par de chaves RSA de 2048 bits e fornecer os seguintes valores ao criar uma conta para sua origem [!DNL Snowflake].
-
-| Credencial | Descrição |
-| --- | --- |
-| `account` | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `orgname-account_name`. Leia o guia em [recuperando seu [!DNL Snowflake] identificador de conta](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) para obter orientação adicional. Para obter mais informações, consulte a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| `username` | O nome de usuário da sua conta [!DNL Snowflake]. |
-| `privateKey` | A chave privada [!DNL Base64-]codificada da sua conta [!DNL Snowflake]. Você pode gerar chaves privadas criptografadas ou não. Se você estiver usando uma chave privada criptografada, também deverá fornecer uma senha de chave privada ao autenticar no Experience Platform. Leia o guia em [recuperando sua [!DNL Snowflake] chave privada](../../../../connectors/databases/snowflake.md) para obter mais informações. |
-| `privateKeyPassphrase` | A senha da chave privada é uma camada adicional de segurança que deve ser usada ao autenticar com uma chave privada criptografada. Não é necessário fornecer a senha se você estiver usando uma chave privada não criptografada. |
-| `database` | O banco de dados [!DNL Snowflake] que contém os dados que você deseja assimilar na Experience Platform. |
-| `warehouse` | O warehouse [!DNL Snowflake] gerencia o processo de execução da consulta para o aplicativo. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente ao trazer dados para a Experience Platform. |
-
-Para obter mais informações sobre esses valores, consulte o [[!DNL Snowflake] guia de autenticação de par de chaves](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
-
->[!ENDTABS]
+Leia as etapas abaixo para obter informações sobre como conectar sua origem do [!DNL Snowflake] à Experience Platform no Azure.
 
 >[!NOTE]
 >
@@ -190,7 +159,7 @@ curl -X POST \
 
 +++Resposta
 
-Uma resposta bem-sucedida retorna a conexão recém-criada, incluindo seu identificador de conexão exclusivo (`id`). Essa ID é necessária para explorar seus dados no próximo tutorial.
+Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`).
 
 ```json
 {
@@ -214,8 +183,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection with encrypted private key",
-      "description": "Snowflake base connection with encrypted private key",
+      "name": "Snowflake base connection with unencrypted private key",
+      "description": "Snowflake base connection with unencrypted private key",
       "auth": {
         "specName": "KeyPair Authentication",
         "params": {
@@ -246,7 +215,7 @@ curl -X POST \
 
 +++Resposta
 
-Uma resposta bem-sucedida retorna a conexão recém-criada, incluindo seu identificador de conexão exclusivo (`id`). Essa ID é necessária para explorar seus dados no próximo tutorial.
+Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`).
 
 ```json
 {
@@ -275,11 +244,13 @@ Leia as etapas abaixo para obter informações sobre como conectar sua origem do
 POST /connections
 ```
 
-**Solicitação**
+>[!BEGINTABS]
 
-A solicitação a seguir cria uma conexão básica para [!DNL Snowflake] para assimilar a data no Experience Platform no AWS:
+>[!TAB Autenticação básica]
 
-+++Selecione para exibir o exemplo
+A solicitação a seguir cria uma conexão base para [!DNL Snowflake] para assimilar dados para o Experience Platform no AWS:
+
++++Solicitação
 
 ```shell
 curl -X POST \
@@ -323,11 +294,9 @@ curl -X POST \
 
 +++
 
-**Resposta**
++++Resposta
 
-Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID é necessária para explorar seu armazenamento no próximo tutorial.
-
-+++Selecione para exibir o exemplo
+Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`).
 
 ```json
 {
@@ -337,6 +306,65 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 ```
 
 +++
+
+>[!TAB Autenticação de par de chaves com chave privada não criptografada]
+
++++Solicitação
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Snowflake base connection with unencrypted private key",
+      "description": "Snowflake base connection with unencrypted private key",
+      "auth": {
+        "specName": "KeyPair Authentication",
+        "params": {
+            "account": "acme-snowflake123",
+            "username": "acme-cj123",
+            "database": "ACME_DB",
+            "privateKey": "{BASE_64_ENCODED_PRIVATE_KEY}",
+            "warehouse": "COMPUTE_WH"
+        }
+    },
+    "connectionSpec": {
+        "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+        "version": "1.0"
+    }
+  }'
+```
+
+| Propriedade | Descrição |
+| -------- | ----------- |
+| `auth.params.account` | O nome da sua conta [!DNL Snowflake]. |
+| `auth.params.username` | O nome de usuário associado à sua conta [!DNL Snowflake]. |
+| `auth.params.database` | O banco de dados [!DNL Snowflake] de onde os dados serão extraídos. |
+| `auth.params.privateKey` | A chave privada não criptografada codificada [!DNL Base64-] da sua conta [!DNL Snowflake]. |
+| `auth.params.warehouse` | O warehouse [!DNL Snowflake] que você está usando. |
+| `connectionSpec.id` | A ID da especificação de conexão [!DNL Snowflake]: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
+
++++
+
+
++++Resposta
+
+Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`).
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700d77b-0000-0200-0000-5e3b41a10000\""
+}
+```
+
++++
+
+>[!ENDTABS]
 
 Seguindo este tutorial, você criou uma conexão de base [!DNL Snowflake] usando a API [!DNL Flow Service]. Você pode usar essa ID de conexão básica nos seguintes tutoriais:
 

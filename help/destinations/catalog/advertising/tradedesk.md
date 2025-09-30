@@ -3,9 +3,9 @@ keywords: publicidade; a trade desk; advertising trade desk
 title: A conexão com a Trade Desk
 description: A Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais de redirecionamento e direcionadas por público-alvo em origens de inventário de exibição, vídeo e dispositivos móveis.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 564ee7fbd45677c35057c56de049158f3282d7ad
+source-git-commit: f078d7b20bc16bf1a6cca065e5e6fba85d9d0648
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1066'
 ht-degree: 3%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 3%
 >[!IMPORTANT]
 >
 > Após a [atualização interna](../../../release-notes/2025/july-2025.md#destinations) para o serviço de destinos a partir de julho de 2025, você poderá observar uma **queda no número de perfis ativados** em seus fluxos de dados para [!DNL The Trade Desk].
-> &#x200B;> Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
+> > Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
 >
 >**O que mudou:**
 >
@@ -84,7 +84,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/pt-br/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
 
 ## Conectar ao destino {#connect}
 
@@ -131,16 +131,33 @@ Ao mapear públicos-alvo, a Adobe recomenda usar o nome do público-alvo do Expe
 
 ### Mapeamentos obrigatórios {#mandatory-mappings}
 
-Todas as identidades de destino descritas na seção [identidades com suporte](#supported-identities) são obrigatórias e devem ser mapeadas durante o processo de ativação do público-alvo. Isso inclui:
+Todas as identidades de destino descritas na seção [identidades com suporte](#supported-identities) devem ser mapeadas na etapa de mapeamento do fluxo de trabalho de ativação de público. Isso inclui:
 
-* **GAID** (Google Advertising ID)
-* **IDFA** (Apple ID para anunciantes)
-* **ECID** (Experience Cloud ID)
-* **A ID da Trade Desk**
-
-A falha no mapeamento de todas as identidades necessárias impede a conclusão do fluxo de trabalho de ativação. Cada identidade serve a um propósito específico na integração e todas são necessárias para que o destino funcione corretamente.
+* [!DNL GAID] (Google Advertising ID)
+* [!DNL IDFA] (Apple ID para anunciantes)
+* [!DNL ECID] (Experience Cloud ID)
+* [!DNL The Trade Desk ID]
 
 ![Captura de tela mostrando os mapeamentos obrigatórios](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png)
+
+O mapeamento de todas as identidades de destino garante que a ativação possa dividir e entregar perfis corretamente usando qualquer identidade presente. Isso não significa que todas as identidades devem estar presentes em cada perfil.
+
+Para que a exportação para a Trade Desk tenha êxito, um perfil deve conter:
+
+* [!DNL ECID] e
+* pelo menos um de: [!DNL GAID], [!DNL IDFA] ou [!DNL The Trade Desk ID]
+
+Exemplos:
+
+* Somente [!DNL ECID]: não exportado
+* [!DNL ECID] + [!DNL The Trade Desk ID]: exportado
+* [!DNL ECID] + [!DNL IDFA]: exportado
+* [!DNL ECID] + [!DNL GAID]: exportado
+* [!DNL IDFA] + [!DNL The Trade Desk ID] (sem [!DNL ECID]): não exportado
+
+>[!NOTE]
+> 
+>Após a atualização[ de ](/help/release-notes/2025/july-2025.md#destinations)julho de 2025 para o serviço de destinos, o mapeamento [!DNL ECID] será aplicado. Os perfis que não têm [!DNL ECID] agora são descartados conforme esperado, o que pode mostrar contagens de ativação mais baixas em comparação ao comportamento herdado.
 
 ## Dados exportados {#exported-data}
 

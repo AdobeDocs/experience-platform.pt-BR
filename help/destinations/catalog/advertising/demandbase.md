@@ -1,13 +1,13 @@
 ---
 title: Conexão Demandbase
 description: Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas do target por meio do Demand Side Platform B2B (DSP) da DemandBase. As contas do Target também podem ser enriquecidas com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
-badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
+source-git-commit: 39012e2308af57af7c9193bdc4894f8f2e358606
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '762'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->&#x200B;>A funcionalidade para ativar públicos-alvo para o destino do Demandbase está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-Time Customer Data Platform.
+>A funcionalidade para ativar públicos-alvo para o destino do Demandbase está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-Time Customer Data Platform.
 
 Ative perfis para suas campanhas do Demandbase para direcionamento de público, personalização e supressão, com base em [públicos-alvo de conta](/help/segmentation/types/account-audiences.md).
 
@@ -24,7 +24,7 @@ Ative perfis para suas campanhas do Demandbase para direcionamento de público, 
 
 Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas do target por meio do Demand Side Platform B2B (DSP) da DemandBase. As contas do Target também podem ser enriquecidas com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas.
 
-Por exemplo, aproveite o DSP de tecnologia de anúncios do Demandbase para direcionar perfis ou funções específicas em contas-chave para a geração de leads topo de funil ou para criar e expandir grupos de compras. Use o destino do Demandbase para explorar outros casos de uso para direcionar suas contas com eficiência.
+Por exemplo, aproveite o DSP de tecnologia de anúncios do Demandbase para direcionar personas ou funções específicas em contas-chave para a geração de leads topo da funnel ou para criar e expandir grupos de compras. Use o destino do Demandbase para explorar outros casos de uso para direcionar suas contas com eficiência.
 
 Com essa integração, você também pode personalizar a experiência do site usando a pesquisa de informações da conta em tempo real para otimizar o engajamento.
 
@@ -93,6 +93,20 @@ Agora você está pronto para ativar seus públicos no Demandbase.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
 Leia [Ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md) para obter instruções sobre como ativar públicos-alvo da conta para este destino.
+
+### Mapeamentos obrigatórios {#mandatory-mappings}
+
+Ao ativar públicos para o destino [!DNL Demandbase], você deve configurar os seguintes mapeamentos de campo obrigatórios na etapa de mapeamento:
+
+| Campo de origem | Campo de destino | Descrição |
+|--------------|--------------|-------------|
+| `xdm: accountName` | `xdm: accountName` | O nome da conta |
+| `xdm: accountOrganization.domain` | `xdm: accountEmailDomain` | O domínio de email da organização da conta |
+| `xdm: accountKey.sourceKey` | `Identity: primaryId` | O identificador principal da conta |
+
+![Mapeamentos do Demandbase](/help/destinations/assets/catalog/advertising/demandbase/demandbase-mapping.png)
+
+Esses mapeamentos são necessários para que o destino funcione corretamente e devem ser configurados antes de você poder continuar com o fluxo de trabalho de ativação.
 
 ## Observações adicionais e chamadas de retorno importantes {#additional-notes}
 

@@ -6,10 +6,10 @@ breadcrumb-title: Guia do SDK da Web
 user-guide-description: Interaja com os serviços da Experience Cloud por meio da Rede de borda.
 feature: Web SDK
 role: Developer
-source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
+source-git-commit: c697d0e924545caf430382385797bde340b57d94
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 23%
+source-wordcount: '241'
+ht-degree: 27%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 23%
    * [Instalar o Web SDK usando o pacote NPM](install/npm.md)
    * [Criar um build personalizado do Web SDK usando o pacote NPM](install/create-custom-build.md)
 * Comandos {#commands}
-   * configurar {#configure}
+   * configure {#configure}
       * [Visão geral](commands/configure/overview.md)
       * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
@@ -43,6 +43,7 @@ ht-degree: 23%
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
       * [prehideStyle](commands/configure/prehidingstyle.md)
+      * [notificações por push](commands/configure/pushnotifications.md)
       * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent {#sendevent}
@@ -63,13 +64,14 @@ ht-degree: 23%
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
+   * [sendPushSubscription](commands/sendPushSubscription.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [Configurar substituições de sequência de dados](commands/datastream-overrides.md)
    * [Respostas de comando](commands/command-responses.md)
 
 * Identidade {#identity}
    * [Visão geral](identity/overview.md)
-   * [IDs de dispositivo próprio](identity/first-party-device-ids.md)
+   * [IDs próprias para dispositivos](identity/first-party-device-ids.md)
    * [Compartilhamento de ID de dispositivo móvel para Web e entre domínios](identity/id-sharing.md)
 
 * Personalização {#personalization}
@@ -83,7 +85,7 @@ ht-degree: 23%
       * [Acesso aos tokens de resposta](personalization/adobe-target/accessing-response-tokens.md)
       * [Uso da ID de terceiros da mbox](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [Comparação da biblioteca at.js com a Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * Log do Analytics for Target (A4T) {#a4t}
+      * Registro do Analytics for Target (A4T) {#a4t}
          * [Visão geral](personalization/adobe-target/analytics-logging/overview.md)
          * [Registro no lado do cliente](personalization/adobe-target/analytics-logging/client-side.md)
          * [Registro do lado do servidor](personalization/adobe-target/analytics-logging/server-side.md)

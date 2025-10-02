@@ -2,10 +2,11 @@
 title: Conexão de transmissão do Snowflake
 description: Exporte dados para sua conta da Snowflake usando listas privadas.
 badgeBeta: label="Beta" type="Informative"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 183858daac3a2471cb842f1d7308f91cf514c5ee
+source-git-commit: eed90a5ce988acafface0bac9191f1b3ae28f90c
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1442'
 ht-degree: 3%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->Este conector de destino está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso, entre em contato com o representante da Adobe.
+>Esse conector de destino está na versão beta e só está disponível para clientes do Real-Time CDP Ultimate. A funcionalidade e a documentação estão sujeitas a alterações.
 
 ## Visão geral {#overview}
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '2004'
 ht-degree: 4%
 
 ---
@@ -127,6 +127,8 @@ A seção **[!UICONTROL Insights do perfil do cliente]** exibe uma breve introdu
 
 #### Widgets de insight de IA {#ai-insight-widgets}
 
+[!BADGE Alpha]{type=Informative} Este recurso atualmente está no Alpha.
+
 A seção **[!UICONTROL widgets do insight de IA]** exibe widgets gerados pela IA. Esses widgets fornecem insights rápidos sobre o perfil, com base nos dados do perfil, incluindo dados demográficos (como idade, gênero ou local), comportamentos do usuário (como histórico de compras, atividade do site ou engajamento nas redes sociais), bem como psicográficos (como interesses, preferência ou opções de estilo de vida). Todos os widgets de IA usam dados que **já** existem no perfil.
 
 ![A seção widgets do insight de IA é exibida.](../images/user-guide/ai-insight-widgets.png)
@@ -144,6 +146,8 @@ Você também pode optar por alternar entre visualizar os nomes de atributo como
 ![A opção Mostrar nomes para exibição está realçada.](../images/user-guide/show-display-names.png)
 
 #### Widgets classificados automaticamente {#auto-classified-widgets}
+
+[!BADGE Alpha]{type=Informative} Este recurso atualmente está no Alpha.
 
 A seção **[!UICONTROL Widgets classificados automaticamente]** exibe widgets que usam o esquema de união para determinar os grupos de campos de origem aos quais um atributo pertence, fornecendo um contexto mais claro sobre a origem dos dados. Você pode usar a barra de pesquisa para procurar mais facilmente por palavras-chave em seus widgets.
 

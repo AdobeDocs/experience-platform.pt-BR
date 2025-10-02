@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos conjuntos de mapeamento
 description: Saiba como usar conjuntos de mapeamento com o Preparo de dados do Adobe Experience Platform.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb0366284f1850bd9742b18d95608f901319f642
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ O JSON a seguir é um exemplo de um conjunto de mapeamento típico:
 ## Configuração de origens de mapeamento
 
 Em um mapeamento, o `source` pode ser um campo, expressão ou um valor estático. Com base no tipo de origem fornecido, o valor pode ser extraído de várias maneiras.
+
+>[!TIP]
+>
+>Aguarde até 10 minutos depois de salvar os mapeamentos antes de iniciar a assimilação de dados para garantir que eles sejam totalmente salvos.
 
 ### Campo em dados de colunas
 

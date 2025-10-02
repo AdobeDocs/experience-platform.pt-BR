@@ -174,7 +174,7 @@ Além disso, você pode examinar seus fluxos de dados e ver se pode otimizar sua
 
 O vídeo a seguir fornece uma visão geral da Capacidade.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475278/?learn=on&enablevpops&captions=por_br)
 
 ## Perguntas frequentes {#faq}
 

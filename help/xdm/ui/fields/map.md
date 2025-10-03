@@ -2,9 +2,9 @@
 title: Definir campos de mapa na interface
 description: Saiba como definir um campo de mapa na interface do usuário do Experience Platform.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c0421974493884488e4d639278106835ad1d8b1b
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 O Adobe Experience Platform permite personalizar totalmente a estrutura de suas classes personalizadas do Experience Data Model (XDM), grupos de campos de esquema e tipos de dados.
 
-Você também pode definir campos de mapa no Editor de esquemas para modelar estruturas de dados flexíveis e dinâmicas ou armazenar uma coleção de pares de valores chave.
+Você também pode definir campos de mapa no Editor de esquemas para armazenar uma coleção de pares de valores-chave com chaves flexíveis e dinâmicas.
 
 Ao definir um novo campo na interface (UI) do Experience Platform, use a lista suspensa **[!UICONTROL Tipo]** e selecione &quot;**[!UICONTROL Mapa]**&quot; na lista.
 
@@ -36,6 +36,8 @@ O XDM impõe as seguintes restrições ao uso desse tipo de dados:
 * Os tipos de mapa DEVEM incluir um campo `additionalProperties.type` que descreva os valores que podem ser colocados no mapa, `string` ou `integer`.
 * A segmentação de várias entidades só pode ser definida com base nas chaves do mapa, e não nos valores.
 * Os mapas não são compatíveis com os públicos-alvo da conta.
+* Os mapas definidos em objetos XDM personalizados são limitados a um único nível. Não é possível criar mapas aninhados. Essa restrição não se aplica a mapas definidos em objetos XDM padrão.
+* Matrizes de mapas não são compatíveis.
 
 Certifique-se de que você só esteja usando campos do tipo mapa quando for absolutamente necessário, pois eles apresentam as seguintes desvantagens de desempenho:
 
@@ -50,4 +52,4 @@ Certifique-se de que você só esteja usando campos do tipo mapa quando for abso
 
 Depois de ler este documento, agora é possível definir campos de mapa na interface do usuário do Experience Platform. Lembre-se de que você só pode usar classes e grupos de campos para adicionar campos a esquemas. Para saber mais sobre como gerenciar esses recursos na interface, consulte os guias sobre criação e edição de [classes](../resources/classes.md) e [grupos de campos](../resources/field-groups.md).
 
-Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).
+Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).

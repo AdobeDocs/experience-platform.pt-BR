@@ -52,4 +52,4 @@ Certifique-se de que você só esteja usando campos do tipo mapa quando for abso
 
 Depois de ler este documento, agora é possível definir campos de mapa na interface do usuário do Experience Platform. Lembre-se de que você só pode usar classes e grupos de campos para adicionar campos a esquemas. Para saber mais sobre como gerenciar esses recursos na interface, consulte os guias sobre criação e edição de [classes](../resources/classes.md) e [grupos de campos](../resources/field-groups.md).
 
-Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de ]](../overview.md).
+Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).

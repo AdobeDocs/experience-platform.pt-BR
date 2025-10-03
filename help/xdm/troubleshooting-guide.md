@@ -142,7 +142,7 @@ O esquema não é ativado automaticamente para o Perfil de cliente em tempo real
 
 ### Posso excluir esquemas habilitados para perfil?
 
-Não é possível excluir um esquema depois que ele é ativado para o Perfil de cliente em tempo real. Depois que um esquema é ativado para o Perfil, ele não pode ser desativado ou excluído e os campos não podem ser removidos do esquema. Portanto, é crucial planejar e verificar cuidadosamente a configuração do esquema antes de habilitá-lo para o Perfil. No entanto, você pode excluir um conjunto de dados habilitado para perfil. Informações encontradas aqui: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Não é possível excluir um esquema depois que ele é ativado para o Perfil de cliente em tempo real. Depois que um esquema é ativado para o Perfil, ele não pode ser desativado ou excluído e os campos não podem ser removidos do esquema. Portanto, é crucial planejar e verificar cuidadosamente a configuração do esquema antes de habilitá-lo para o Perfil. No entanto, você pode excluir um conjunto de dados habilitado para perfil. Informações encontradas aqui: <https://experienceleague.adobe.com/pt-br/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Se você não quiser mais que um esquema habilitado para perfil seja usado, é recomendável renomear o esquema para incluir **Não usar** ou **Inativo**.
 

@@ -1,13 +1,13 @@
 ---
 title: Conexão de pessoas do Demandbase
 description: Use esse destino para ativar seus públicos-alvo e enriquecê-los com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas.
-source-git-commit: df2cb1edbf998082fca961e6d9bb567a1ad3b7e6
+exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
+source-git-commit: ab29c1113dbbd1811acd3d5add5a247cb2703884
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '819'
 ht-degree: 4%
 
 ---
-
 
 # Conexão de pessoas do Demandbase {#demandbase-people}
 
@@ -99,6 +99,21 @@ Agora você está pronto para ativar seus públicos-alvo no Demandbase People.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
 Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
+
+### Mapeamentos obrigatórios {#mandatory-mappings}
+
+Ao ativar públicos para o destino [!DNL Demandbase People], você deve configurar os seguintes mapeamentos de campo obrigatórios na etapa de mapeamento:
+
+| Campo de origem | Campo de destino | Descrição |
+|--------------|--------------|-------------|
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | O identificador exclusivo da pessoa |
+| `xdm: person.name.lastName` | `xdm: lastName` | O sobrenome da pessoa |
+| `xdm: person.name.firstName` | `xdm: firstName` | O nome da pessoa |
+| `xdm: workEmail.address` | `Identity: email` | O email comercial da pessoa |
+
+![Mapeamentos de pessoas do Demandbase](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+
+Esses mapeamentos são necessários para que o destino funcione corretamente e devem ser configurados antes de você poder continuar com o fluxo de trabalho de ativação.
 
 ## Observações adicionais e chamadas de retorno importantes {#additional-notes}
 

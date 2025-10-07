@@ -2,7 +2,7 @@
 title: Guia de solução de problemas para regras de vinculação do gráfico de identidade
 description: Saiba como solucionar problemas comuns nas Regras de vinculação do gráfico de identidade.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
+source-git-commit: 10cdbef8281ec43a21af9fead80345f1c78b9d2c
 workflow-type: tm+mt
 source-wordcount: '3451'
 ht-degree: 0%
@@ -162,11 +162,11 @@ Para cada cenário, suponha que Eventos de experiência contenham os seguintes e
 
 **Cenário 2: 2 CRMIDs, 1 GAID**
 
-* Nesse cenário, um Evento de experiência de entrada contém dois CRMIDs e um GAID. Entre esses namespaces, o CRMID é configurado como o namespace com a maior prioridade de namespace. No entanto, como há 2 GAIDs, o Perfil **não** armazena esse Evento de Experiência.
+* Nesse cenário, um Evento de experiência de entrada contém dois CRMIDs e um GAID. Entre esses namespaces, o CRMID é configurado como o namespace com a maior prioridade de namespace. No entanto, como há 2 CRMIDs, o Perfil **não** armazena esse Evento de Experiência.
 
 **Cenário 3: 1 CRMID, 2 GAIDs**
 
-* Nesse cenário, um Evento de experiência de entrada contém 1 CRMID e 2 GAIDs. Entre esses namespaces, o CRMID é configurado como o namespace com a maior prioridade de namespace. Como há apenas uma CRMID, o Perfil assimilará os Eventos de experiência porque há apenas uma instância do namespace com a maior prioridade de namespace.
+* Nesse cenário, um Evento de experiência de entrada contém 1 CRMID e 2 GAIDs. Entre esses namespaces, o CRMID é configurado como o namespace com a maior prioridade de namespace. Como há apenas um CRMID, o Perfil assimilará os Eventos de experiência porque há apenas uma identidade do namespace com a maior prioridade de namespace.
 
 **Etapas de solução de problemas**
 

@@ -2,9 +2,9 @@
 title: Endpoint da API de públicos externos
 description: Saiba como usar a API de públicos-alvo externos para criar, atualizar, ativar e excluir seus públicos-alvo externos do Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
+source-git-commit: 0a37ef2f5fc08eb515c7c5056936fd904ea6d360
 workflow-type: tm+mt
-source-wordcount: '2189'
+source-wordcount: '2253'
 ht-degree: 5%
 
 ---
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | String | Uma descrição opcional para o público-alvo externo. |
 | `customAudienceId` | String | Um identificador opcional para seu público-alvo externo. |
 | `fields` | Matriz de objetos | A lista de campos e seus tipos de dados. Ao criar a lista de campos, você pode adicionar os seguintes itens: <ul><li>`name`: **Obrigatório** O nome do campo que faz parte da especificação de público-alvo externo.</li><li>`type`: **Obrigatório** O tipo de dados que entra no campo. Os valores com suporte incluem `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) e `boolean`.</li><li>`identityNs`: **Obrigatório para o campo de identidade** O namespace usado pelo campo de identidade. Os valores suportados incluem todos os namespaces válidos, como `ECID` ou `email`.</li><li>`labels`: *Opcional* Uma matriz de rótulos de controle de acesso para o campo. Mais informações sobre os rótulos de controle de acesso disponíveis podem ser encontradas no [glossário de rótulos de uso de dados](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objeto | Um objeto que contém as informações onde o público-alvo externo está localizado. Ao usar este objeto, você **deve** incluir as seguintes informações: <ul><li>`path`: **Obrigatório**: o local do público-alvo externo ou a pasta que contém o público-alvo externo na origem.</li><li>`type`: **Obrigatório** O tipo do objeto que você está recuperando da origem. Este valor pode ser `file` ou `folder`.</li><li>`sourceType`: *Opcional* O tipo de origem da qual você está recuperando. No momento, o único valor com suporte é `Cloud Storage`.</li><li>`cloudType`: *Opcional* O tipo de armazenamento em nuvem, com base no tipo de origem. Os valores suportados incluem `S3`, `DLZ`, `GCS` e `SFTP`.</li><li>`baseConnectionId`: a ID da conexão base, e é fornecida pelo seu provedor de origem. Este valor é **necessário** se estiver usando um valor `cloudType` de `S3`, `GCS` ou `SFTP`. Para obter mais informações, leia a [visão geral dos conectores de origem](../../sources/home.md)</li></ul> |
+| `sourceSpec` | Objeto | Um objeto que contém as informações onde o público-alvo externo está localizado. Ao usar este objeto, você **deve** incluir as seguintes informações: <ul><li>`path`: **Obrigatório**: o local do público-alvo externo ou a pasta que contém o público-alvo externo na origem. O caminho de arquivo **não pode** conter espaços. Por exemplo, se o caminho for `activation/sample-source/Example CSV File.csv`, defina o caminho como `activation/sample-source/ExampleCSVFile.csv`. Você pode encontrar o caminho para sua origem na coluna de **dados do Source** da seção de fluxos de dados.</li><li>`type`: **Obrigatório** O tipo do objeto que você está recuperando da origem. Este valor pode ser `file` ou `folder`.</li><li>`sourceType`: *Opcional* O tipo de origem da qual você está recuperando. No momento, o único valor com suporte é `Cloud Storage`.</li><li>`cloudType`: **Obrigatório** O tipo de armazenamento em nuvem, com base no tipo de origem. Os valores suportados incluem `S3`, `DLZ`, `GCS`, `Azure` e `SFTP`.</li><li>`baseConnectionId`: a ID da conexão base, e é fornecida pelo seu provedor de origem. Este valor é **necessário** se estiver usando um valor `cloudType` de `S3`, `GCS` ou `SFTP`. Caso contrário, você **não** precisará incluir este parâmetro. Para obter mais informações, leia a [visão geral dos conectores de origem](../../sources/home.md).</li></ul> |
 | `ttlInDays` | Número inteiro | A expiração dos dados para o público externo, em dias. Esse valor pode ser definido de 1 a 90. Por padrão, a expiração dos dados está definida como 30 dias. |
 | `audienceType` | String | O tipo de público-alvo para o público externo. Atualmente, somente `people` é suportado. |
 | `originName` | String | **Obrigatório** A origem do público-alvo. Isso indica de onde o público-alvo vem. Para públicos externos, você deve usar `CUSTOM_UPLOAD`. |
@@ -408,8 +408,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 
 | Propriedade | Tipo | Descrição |
 | -------- | ---- | ----------- |
-| `dataFilterStartTime` | Carimbo de data e hora da época | **Obrigatório** O intervalo que especifica a hora inicial em que o fluxo será executado para selecionar quais arquivos serão processados. |
-| `dataFilterEndTime` | Carimbo de data e hora da época | O intervalo que especifica a hora final em que o fluxo será executado para selecionar quais arquivos serão processados. |
+| `dataFilterStartTime` | Carimbo de data e hora da época | **Obrigatório** O intervalo que especifica a hora inicial para determinar quais arquivos serão processados. Isso significa que os arquivos selecionados serão arquivos **após** no horário especificado. |
+| `dataFilterEndTime` | Carimbo de data e hora da época | O intervalo que especifica a hora final em que o fluxo será executado para selecionar quais arquivos serão processados. Isto significa que os arquivos selecionados serão arquivos **antes** do horário especificado. |
 
 +++
 

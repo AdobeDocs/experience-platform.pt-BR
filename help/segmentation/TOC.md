@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie públicos-alvo a partir dos dados do perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
 feature: Segments
 role: User
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 41%
+source-wordcount: '207'
+ht-degree: 43%
 
 ---
 
@@ -17,14 +17,14 @@ ht-degree: 41%
 
 - [Visão geral do serviço de segmentação](home.md)
 - [Tipos de dados de segmentação](data-types.md)
-- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=pt-BR#segmentation-guardrails)
+- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API de segmentação {#api}
    - [Visão geral](api/overview.md)
    - [Introdução](api/getting-started.md)
    - [Criar metadados de público](api/create-audience.md)
    - [Públicos-alvo](api/audiences.md)
    - [Exportar trabalhos](api/export-jobs.md)
-   - [Públicos externos](api/external-audiences.md)
+   - [Públicos-alvo externos](api/external-audiences.md)
    - [Visualizações e estimativas](api/previews-and-estimates.md)
    - [Programações](api/schedules.md)
    - [Definições de segmento](api/segment-definitions.md)
@@ -41,7 +41,7 @@ ht-degree: 41%
    - [Refatoração de restrições de tempo](ui/segment-refactoring.md)
    - Correspondência de segmentos {#segment-match}
       - [Visão geral da correspondência de segmentos](ui/segment-match/overview.md)
-      - [Solução de problemas](ui/segment-match/troubleshooting.md)
+      - [Resolução de problemas](ui/segment-match/troubleshooting.md)
 - Métodos de segmentação {#methods}
    - [Visão geral](methods/overview.md)
    - [Segmentação em lote](methods/batch-segmentation.md)
@@ -62,7 +62,7 @@ ht-degree: 41%
    - [Segmentação de várias entidades](tutorials/multi-entity-segmentation.md)
    - [Cumprimento do consentimento](tutorials/consents.md)
    - [Avaliar uma definição de segmento](tutorials/evaluate-a-segment.md)
-   - [Importação e uso de públicos externos](tutorials/using-external-audiences.md)
+   - [Criação de públicos externos](tutorials/create-external-audience.md)
    - [Criar um conjunto de dados para exportar dados](tutorials/create-dataset-export-segment.md)
    - [Impor a conformidade de uso de dados para públicos](tutorials/governance.md)
 - Profile Query Language {#pql}
@@ -82,4 +82,4 @@ ht-degree: 41%
 - [Atualização dos critérios de elegibilidade](./eligibility-criteria-update.md)
 - [Perguntas frequentes](./faq.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [Notas de versão da Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

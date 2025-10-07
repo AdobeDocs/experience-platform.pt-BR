@@ -3,17 +3,17 @@ title: Criar ponto de extremidade da API de público-alvo
 description: Saiba como criar os metadados para um público externo usando a API.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
+source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '246'
 ht-degree: 7%
 
 ---
 
-
 # Criar ponto de extremidade do público-alvo
 
-O ponto de extremidade POST `/audiences` pode ser usado para criar os metadados de um público-alvo externo. Você deve usar esse endpoint se a assimilação do público-alvo for gerenciada em um serviço separado, como a assimilação em lote.
+O ponto de extremidade `/audiences` da POSTAGEM pode ser usado para criar os metadados de um público externo, o que permite que o público fique visível no Portal de Público. Você deve usar esse endpoint se a assimilação do público-alvo for gerenciada em um serviço separado, como a assimilação em lote.
 
 ## Introdução
 

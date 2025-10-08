@@ -1,11 +1,11 @@
 ---
 title: Anúncios do Amazon
 description: O Amazon Ads oferece uma variedade de opções para ajudá-lo a atingir suas metas de publicidade para vendedores registrados, fornecedores, fornecedores de livros, autores de KDP (Kindle Direct Publishing), desenvolvedores de aplicativos e/ou agências. A integração do Amazon Ads com o Adobe Experience Platform fornece integração pronta para uso para produtos Amazon Ads, incluindo o Amazon DSP (ADSP). Usando o destino do Amazon Ads no Adobe Experience Platform, os usuários podem definir públicos-alvo do anunciante para direcionamento e ativação no Amazon DSP.
-last-substantial-update: 2025-01-07T00:00:00Z
+last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6afb8d56b8af8e5b0450f769414d3afcac1d58eb
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '2038'
 ht-degree: 2%
 
 ---
@@ -57,6 +57,13 @@ A conexão *[!DNL Amazon Ads]* oferece suporte à ativação das identidades des
 |---|---|---|
 | phone_sha256 | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
 | email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Aplicar transformação]** para que [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
+| `firstName` | Nome do usuário | Suporta texto simples ou SHA256. Se o texto simples for usado, habilite [!UICONTROL Aplicar transformação] na interface do usuário do Adobe. |
+| `lastName` | Sobrenome do usuário | Suporta texto simples ou SHA256. Se o texto simples for usado, habilite [!UICONTROL Aplicar transformação] na interface do usuário do Adobe. |
+| `street` | Endereço do usuário no nível da rua | Somente a entrada com hash SHA256 tem suporte. Normalize antes do hash. **não** habilitar a transformação do lado do Adobe. |
+| `city` | Cidade do usuário | Suporta texto simples ou SHA256. Se o texto simples for usado, habilite [!UICONTROL Aplicar transformação] na interface do usuário do Adobe. |
+| `state` | Estado ou província do usuário | Suporta texto simples ou SHA256. Se o texto simples for usado, habilite [!UICONTROL Aplicar transformação] na interface do usuário do Adobe. |
+| `zip` | CEP do usuário | Suporta texto simples ou SHA256. Se o texto simples for usado, habilite [!UICONTROL Aplicar transformação] na interface do usuário do Adobe. |
+| `country` | País do usuário | Suporta texto simples ou SHA256. Se o texto simples for usado, habilite [!UICONTROL Aplicar transformação] na interface do usuário do Adobe. |
 
 {style="table-layout:auto"}
 
@@ -65,7 +72,7 @@ A conexão *[!DNL Amazon Ads]* oferece suporte à ativação das identidades des
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
----------|----------|---------|
+| ---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino *[!DNL Amazon Ads]*. |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -129,6 +136,14 @@ A conexão [!DNL Amazon Ads] oferece suporte a endereços de email com hash e n�
 * Para mapear endereços de email ou números de telefone sem hash, selecione os namespaces de identidade correspondentes como campos de origem e marque a opção `Apply Transformation` para que o Experience Platform coloque as identidades em hash na ativação.
 * *NOVO a partir da versão de setembro de 2024*: o Amazon Ads exige o mapeamento de um campo contendo um valor `countryCode` no formato ISO de 2 caracteres para facilitar o processo de resolução de identidade (por exemplo: US, GB, MX, CA e assim por diante). Conexões sem `countryCode` mapeamentos resultarão em impacto negativo nas taxas de correspondência de identidade.
 
+>[!NOTE]
+>
+>Para usar esses campos:
+> 
+>* Todos os valores de identidade devem ser normalizados antes da assimilação. Consulte o [Guia de normalização](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
+>* O hash SHA256 é necessário, no lado do cliente ou ao ativar a configuração de transformação do Adobe.
+>* A interface do usuário do Adobe fornece uma caixa de seleção para aplicar transformação por campo de identidade durante a configuração do conector.
+
 Você só seleciona um determinado campo de destino uma vez em uma configuração de destino do conector [!DNL Amazon Ads].  Por exemplo, se você enviar um email comercial, não poderá mapear o email pessoal na mesma configuração de destino.
 
 É altamente recomendável mapear quantos campos estiverem disponíveis. Se apenas um atributo de origem estiver disponível, você poderá mapear um único campo. O destino [!DNL Amazon Ads] utiliza todos os campos mapeados para fins de mapeamento, produzindo taxas de correspondência mais altas se mais campos forem fornecidos. Para obter mais informações sobre os identificadores aceitos, visite a [página de ajuda com hash sobre o público-alvo do Amazon Ads](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
@@ -159,7 +174,7 @@ Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as p
 
 Para obter a documentação de ajuda adicional, visite os seguintes [!DNL Amazon Ads] recursos de ajuda:
 
-* [Central de ajuda do Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
+* [Central de ajuda do Amazon DSP](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_bt_desktop_us&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
 ## Changelog {#changelog}
 
@@ -169,6 +184,7 @@ Esta seção captura a funcionalidade e as atualizações de documentação sign
 
 | Mês de lançamento | Tipo de atualização | Descrição |
 |---|---|---|
+| Outubro de 2025 | Suporte adicionado a campos de identidade adicionais | Adição de suporte adicional a identificadores pessoais, como `firstName`, `lastName`, `street`, `city`, `state`, `zip` e `country`. O mapeamento desses campos pode melhorar as taxas de correspondência do público-alvo. |
 | Fevereiro de 2025 | Adição do requisito de adicionar o **[!UICONTROL Sinal de consentimento do Amazon Ads]** para exportar fluxos de dados e promover o destino de beta para disponível de modo geral. |
 | Maio de 2024 | Atualização de funcionalidade e documentação | Adicionada a opção de mapeamento para exportar o parâmetro `countryCode` para o Amazon Ads. Use o `countryCode` na [etapa de mapeamento](#map) para melhorar suas taxas de correspondência de identidade com a Amazon. |
 | Março de 2024 | Atualização de funcionalidade e documentação | Adicionada a opção para exportar públicos-alvo a serem usados em [!DNL Amazon Marketing Cloud] (AMC). |

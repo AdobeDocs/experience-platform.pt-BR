@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Perguntas frequentes sobre o Serviço de consulta e o Data Distiller
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta e ao Data Distiller. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
+source-git-commit: f072f95823768d5b65169b56bb874ae9c3986c44
 workflow-type: tm+mt
-source-wordcount: '5186'
-ht-degree: 0%
+source-wordcount: '5441'
+ht-degree: 1%
 
 ---
 
@@ -65,7 +65,7 @@ Uma possível causa é o recurso de preenchimento automático. O recurso process
 ### Posso usar [!DNL Postman] para a API do Serviço de consulta?
 
 +++Resposta
-Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/31682?captions=por_br) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Há um limite para o número máximo de linhas retornadas de uma consulta por meio da interface do usuário?
@@ -573,18 +573,6 @@ Há três abordagens para restringir o acesso. Elas são as seguintes:
 Sim, os modos SSL são compatíveis. Consulte a [documentação sobre modos SSL](./clients/ssl-modes.md) para obter um detalhamento dos diferentes modos SSL disponíveis e o nível de proteção fornecido por eles.
 +++
 
-### Usamos o TLS 1.2 para todas as conexões de clientes Power BI para o serviço de consulta?
-
-+++Resposta
-Sim. Os dados em trânsito são sempre compatíveis com HTTPS. A versão atualmente compatível é TLS1.2.
-+++
-
-### Uma conexão feita na porta 80 ainda usa https?
-
-+++Resposta
-Sim, uma conexão feita na porta 80 ainda usa SSL. Você também pode usar a porta 5432.
-+++
-
 ### Posso controlar o acesso a conjuntos de dados e colunas específicos para uma conexão específica? Como isso é configurado?
 
 +++Resposta
@@ -615,35 +603,73 @@ Sim, você pode usar o comando `CREATE VIEW` sem acesso ao Data Distiller. Esse 
 Sim. Embora alguns clientes de terceiros, como DbVisualizer, possam exigir um identificador separado antes e depois de um bloco SQL para indicar que uma parte de um script deve ser tratada como uma única instrução. Mais detalhes podem ser encontrados na [documentação de bloqueio anônimo](./key-concepts/anonymous-block.md) ou na [documentação oficial do DbVisualizer](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect).
 +++
 
+## TLS, acesso à porta e criptografia {#tls-port-questions}
+
+### Uma conexão feita na porta 80 ainda usa a criptografia HTTPS e TLS?
+
++++Resposta
+Sim. As conexões na porta 80 são protegidas por criptografia TLS, e a aplicação de TLS é exigida pelo serviço. Conexões HTTP simples não são aceitas. A porta 80 tem suporte para acomodar determinadas políticas de rede do cliente. Se sua organização bloquear a porta 80, use a porta 5432. Ambas as portas exigem TLS e fornecem a mesma postura de segurança.
++++
+
+### O Serviço de consulta da Adobe expõe dados por HTTP não criptografado (porta 80)?
+
++++Resposta
+Não. As conexões na porta 80 exigem TLS, e qualquer solicitação HTTP de texto sem formatação é rejeitada no lado do servidor. A porta 5432 também é suportada e é criptografada por TLS.
++++
+
+### O uso da porta 80 para o Serviço de consulta e o Data Distiller é uma configuração herdada?
+
++++Resposta
+Não. A porta 80 com TLS obrigatório é uma configuração compatível projetada para clientes com requisitos específicos de rede. Não é um modo herdado ou inseguro. Se seu ambiente restringir conexões de saída na porta 80, use a porta 5432; ambas as portas impõem TLS.
++++
+
+### Usamos o TLS 1.2 para todas as conexões de clientes Power BI com o Serviço de consulta?
+
++++Resposta
+Sim. Os dados em trânsito são sempre protegidos usando HTTPS, e a versão atualmente compatível é TLS 1.2. Todas as conexões do Power BI com o Serviço de consulta exigem transporte criptografado.
++++
+
+### A porta 80 não é criptografada quando usada com o Data Distiller?
+
++++Resposta
+Não. O Data Distiller impõe TLS na porta 80 e rejeita qualquer solicitação HTTP de texto sem formatação. A porta 5432 também é suportada e é criptografada por TLS.
++++
+
+### Existem riscos ou limitações ao usar a porta 80 com o Serviço de consulta ou o Data Distiller?
+
++++Resposta
+Sim. O TLS é aplicado na porta 80 e as conexões não criptografadas não são compatíveis. Algumas organizações bloqueiam o tráfego de saída na porta 80 devido a restrições de política. Se isso se aplicar à sua rede, use a porta 5432. Ambas as portas fornecem o mesmo nível de segurança, pois o TLS é necessário em todos os casos.
++++
+
 ## Destilador de dados {#data-distiller}
 
 ### Como o uso de licença da Data Distiller é rastreado e onde posso ver essas informações?
 
-+++Resposta\
++++Resposta  
 A principal métrica usada para rastrear o uso de consulta em lote é a Hora do cálculo. Você tem acesso a essas informações e ao seu consumo atual por meio do [painel de uso de licenças](../dashboards/guides/license-usage.md).
 +++
 
 ### O que é uma hora de computação?
 
-+++Resposta\
++++Resposta  
 As horas de computação são a medida de tempo que os mecanismos de Serviço de consulta levam para ler, processar e gravar dados no data lake quando uma consulta em lote é executada.
 +++
 
 ### Como são medidas as horas de computação?
 
-+++Resposta\
++++Resposta  
 As horas de computação são medidas cumulativamente em todas as sandboxes autorizadas.
 +++
 
 ### Por que às vezes noto uma variação no consumo de Horas de computação mesmo quando executo a mesma consulta consecutivamente?
 
-+++Resposta\
++++Resposta  
 As horas de cálculo de uma consulta podem variar devido a vários fatores. Isso inclui o volume de dados processado, a complexidade das operações de transformação dentro da consulta SQL e assim por diante. O Serviço de consulta dimensiona o cluster com base nos parâmetros acima para cada consulta, o que pode levar a diferenças nas Horas de computação.
 +++
 
 ### É normal notar uma redução nas Horas de computação quando executo a mesma consulta usando os mesmos dados por um longo período de tempo? Por que isso pode estar acontecendo?
 
-+++Resposta\
++++Resposta  
 A infraestrutura de back-end é aprimorada constantemente para otimizar a utilização de horas de computação e o tempo de processamento. Como resultado, você pode notar alterações ao longo do tempo à medida que são implementadas melhorias de desempenho.
 +++
 

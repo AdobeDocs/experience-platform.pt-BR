@@ -2,9 +2,9 @@
 title: Uso e capacidade da licença
 description: Saiba mais sobre o uso de sua licença e os limites de capacidade no Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: ae0c626eaad66f663c9d97137087b2cca24d747e
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1621'
 ht-degree: 6%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 6%
 >   - Esta permissão possibilita **visualizar** a capacidade inicial.
 >- **Gerenciar Sandboxes**
 >   - Essa permissão permite **editar** suas alocações de capacidade.
+>   - Além disso, você **deve** ter acesso a todas as sandboxes para as quais deseja editar as alocações de capacidade.
 >
 >Mais informações sobre permissões no Experience Platform podem ser encontradas na [visão geral do controle de acesso](/help/access-control/home.md#permissions)
 >
@@ -57,7 +58,7 @@ Nesses serviços, as seguintes medidas de proteção são rastreadas:
    - Desses 500 públicos-alvo de transmissão, o número máximo de públicos-alvo de borda é 150
 - A taxa de transferência inicial combinada para assimilação por transmissão é de 1500 registros por segundo (rps)
    - Essa taxa de transferência de transmissão combinada mede o pico combinado de eventos de entrada por segundo para a assimilação de transmissão no Perfil do cliente em tempo real em suas sandboxes de produção e desenvolvimento.
-   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 A capacidade de público-alvo está no nível de **sandbox**. Isso significa que, para cada sandbox que você tem em sua organização, você pode ter 500 públicos-alvo de transmissão, dos quais 150 podem ser públicos-alvo de borda.
 
@@ -174,7 +175,7 @@ Além disso, você pode examinar seus fluxos de dados e ver se pode otimizar sua
 
 O vídeo a seguir fornece uma visão geral da Capacidade.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475278/?learn=on&enablevpops&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Perguntas frequentes {#faq}
 

@@ -2,9 +2,9 @@
 title: Copiar recursos
 description: Saiba como criar um novo recurso de tags usando as configurações de um recurso de tags existente na Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: a4e4fe0ae0f52a3b4b5bfa2c42ef4dce7f2a6a59
+source-git-commit: 319496975bcdbfd0a670cf8d36fb7e562b2ef2de
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '834'
 ht-degree: 87%
 
 ---
@@ -45,7 +45,7 @@ Quando você faz uma cópia de uma propriedade completa, há algumas coisas que 
 
 >[!IMPORTANT]
 >
->Os recursos que usam o tipo de variável de atualização de elemento de dados exigirão etapas adicionais após a cópia. Edite cada ação de atualização de variável, faça uma edição em qualquer valor nos dados ou no objeto XDM e salve as alterações. A biblioteca publicada deve funcionar conforme esperado. Entre em contato com o suporte técnico em caso de dúvidas sobre esse processo.
+>Os recursos que usam o tipo de variável de atualização de elemento de dados exigirão etapas adicionais após a cópia. Edite cada ação de atualização de variável, faça uma alteração em qualquer valor nos dados ou no objeto XDM e salve as alterações. A biblioteca publicada deve funcionar conforme esperado. Entre em contato com o Suporte Técnico em caso de dúvidas sobre esse processo.
 
 * As configurações de propriedade serão copiadas exatamente como estão (domínios, configurações avançadas etc.)
 * Regras, elementos de dados e extensões da propriedade de origem serão copiados para a nova propriedade de destino. Adaptadores, ambientes e bibliotecas não serão copiados.

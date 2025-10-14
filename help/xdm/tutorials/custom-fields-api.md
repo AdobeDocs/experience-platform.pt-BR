@@ -174,7 +174,7 @@ Opcionalmente, é possível restringir o intervalo do inteiro adicionando as pro
 
 ## [!UICONTROL Longo] {#long}
 
-O equivalente de um campo [!UICONTROL Long] criado por meio da interface do usuário do Construtor de Esquemas é um campo do tipo [`integer` ](#integer) com `minimum` e `maximum` valores específicos (`-9007199254740992` e `9007199254740992`, respectivamente).
+O equivalente de um campo [!UICONTROL Long] criado por meio da interface do usuário do Construtor de Esquemas é um campo do tipo [`integer` &#x200B;](#integer) com `minimum` e `maximum` valores específicos (`-9007199254740992` e `9007199254740992`, respectivamente).
 
 ```json
 "sampleField": {

@@ -49,7 +49,7 @@ O tutorial a seguir usa um modelo personalizado de propensão de compra da Luma.
 
 ### Crie o esquema de dados da Web Luma e assimile os dados
 
-Para criar um modelo, você deve ter um conjunto de dados no Experience Platform que é usado para treinar e pontuar seu modelo. O tutorial em vídeo a seguir do [curso do Data Science Workspace](https://experienceleague.adobe.com/?lang=pt-br&recommended=ExperiencePlatform-U-1-2021.1.dsw&amp;lang=pt-BR) orienta você na criação do esquema Luma e na assimilação dos dados usados pelo modelo de propensão de compra.
+Para criar um modelo, você deve ter um conjunto de dados no Experience Platform que é usado para treinar e pontuar seu modelo. O tutorial em vídeo a seguir do [curso do Data Science Workspace](https://experienceleague.adobe.com/?lang=pt-br&recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=pt-BR) orienta você na criação do esquema Luma e na assimilação dos dados usados pelo modelo de propensão de compra.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3447159?captions=por_br)
 

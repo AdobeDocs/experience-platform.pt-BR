@@ -86,7 +86,7 @@ Depois que o novo campo calculado for adicionado, selecione **[!UICONTROL Mapear
 >
 >Os carimbos de data e hora brasileiros não são expressos em milissegundos, mas em segundos. Para que os carimbos de data e hora no Experience Platform sejam refletidos com precisão, é necessário criar campos calculados em milissegundos. Um cálculo de &quot;tempo * 1000&quot; será convertido corretamente em milissegundos, adequado para mapear para um campo de carimbo de data e hora no Experience Platform.
 >
->![Criando um campo calculado para o carimbo de data/hora ](../../../../images/tutorials/create/braze/create-calculated-field.png)
+>![Criando um campo calculado para o carimbo de data/hora &#x200B;](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ![O mapeamento sem erros.](../../../../images/tutorials/create/braze/completed_mapping.png)
 

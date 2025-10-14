@@ -130,7 +130,7 @@ Depois que o widget composer for preenchido com dados da tabela escolhida, execu
   ![O widget composer com o ícone de adição e menu suspenso realçado.](../images/standard-dashboards/attributes-dropdown.png)
 - Pesquise [!UICONTROL Atributos] para `[!UICONTROL count_of_profiles]`, em seguida, use o ícone + para adicionar o atributo `[!UICONTROL count_of_profiles]` ao eixo Y do menu suspenso.
 - Selecione o ícone `...` (elipses) no campo [!UICONTROL Eixo Y] e selecione a função de agregação [!UICONTROL SUM] no menu suspenso.
-  ![Widget de Tendências de consentimento do widget com o modelo de dados, a tabela, o menu suspenso do eixo Y e o recurso SOMA destacados. ](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
+  ![Widget de Tendências de consentimento do widget com o modelo de dados, a tabela, o menu suspenso do eixo Y e o recurso SOMA destacados. &#x200B;](../images/insights-use-cases/consent-analysis/y-axis-sum-function.png)
 - Selecione o menu suspenso [!UICONTROL Marcas] e altere o tipo de gráfico para [!UICONTROL Linha].
 - Pesquise [!UICONTROL Atributos] para `[!UICONTROL segment_name]`, em seguida, use o ícone + para adicionar o `segment_name` como um [!UICONTROL Filtro] no menu suspenso. A caixa de diálogo [!UICONTROL Filtro: Nome_do_Segmento] é exibida. Selecione os públicos-alvo criados anteriormente que estão relacionados ao consentimento. Para este exemplo, selecione **[!UICONTROL Usuários Consentidos em Chamadas]**, **[!UICONTROL Usuários Consentidos em SMS]** e **[!UICONTROL Usuários Consentidos em Email]**, seguido de **[!UICONTROL Aplicar]**.
 - Pesquise [!UICONTROL Atributos] para `[!UICONTROL segment_name]` e selecione o ícone + para adicionar `segment_name` como [!UICONTROL Cor] no menu suspenso.

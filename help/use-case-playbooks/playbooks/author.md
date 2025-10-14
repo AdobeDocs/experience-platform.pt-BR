@@ -96,7 +96,7 @@ Depois de publicado, o manual extrai e associa automaticamente o esquema da jorn
 
 Todos os manuais criados estão disponíveis na guia **Seus manuais**.
 
-![ Guia &quot;Seus manuais&quot; exibindo uma lista de manuais criados.](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
+![&#x200B; Guia &quot;Seus manuais&quot; exibindo uma lista de manuais criados.](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
 
 Você pode selecionar qualquer manual do catálogo para criar instâncias para reutilização. Consulte a documentação para [saber como criar instâncias](/help/use-case-playbooks/playbooks/create-share-reuse.md).
 

@@ -71,7 +71,7 @@ Selecionando o **[!DNL Import]** [!DNL Data Connectivity mode], o conjunto de da
 
 Para importar uma tabela, insira os detalhes do servidor e do banco de dados [conforme descrito acima](#connect-power-bi) e selecione o **[!DNL Import]** [!DNL Data Connectivity mode], seguido de **[!DNL OK]**. A caixa de diálogo [!DNL Navigator] é exibida, exibindo uma lista de todas as tabelas disponíveis. Selecione a tabela que deseja visualizar, seguida de **[!DNL Load]** para trazer o conjunto de dados para a Power BI. A tabela foi importada para [!DNL Power BI].
 
-[Informações gerais sobre como se conectar aos dados no aplicativo ](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-quickstart-connect-to-data#connect-to-data) do PowerBi desktop podem ser encontradas na documentação oficial.
+[Informações gerais sobre como se conectar aos dados no aplicativo &#x200B;](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-quickstart-connect-to-data#connect-to-data) do PowerBi desktop podem ser encontradas na documentação oficial.
 
 ### Importar tabelas usando SQL personalizado
 

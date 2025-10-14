@@ -53,7 +53,7 @@ Depois que os dados forem carregados, você poderá usar a seção [!UICONTROL V
 
 Em seguida, use a interface *[!UICONTROL Detalhes do fluxo de dados]* para fornecer um **nome** e uma **descrição opcional** para o fluxo de dados. Além disso, selecione o **[!UICONTROL Conjunto de dados de destino]** que você deseja usar. Você pode criar um novo conjunto de dados ou usar um conjunto de dados existente.
 
-![A interface de detalhes do fluxo de dados. ](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
+![A interface de detalhes do fluxo de dados. &#x200B;](../../../../images/tutorials/create/relay-connector/dataflow.jpg)
 
 ### Mapeamento
 

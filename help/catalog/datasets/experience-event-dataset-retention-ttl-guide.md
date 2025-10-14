@@ -112,7 +112,7 @@ Use o ponto de extremidade `/ttl/{DATASET_ID}` da API de Higiene de Dados para a
 
 Consulte a documentação da [API de higiene de dados](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) do Adobe Developer para obter mais informações.
 
-Para [verificar o TTL aplicado atualmente a um conjunto de dados](#check-applied-ttl-values), faça uma solicitação GET para o ponto de extremidade [ da ](https://developer.adobe.com/experience-platform-apis/references/catalog/)API do Serviço de Catálogo`/dataSets/{DATASET_ID}`.
+Para [verificar o TTL aplicado atualmente a um conjunto de dados](#check-applied-ttl-values), faça uma solicitação GET para o ponto de extremidade [&#x200B; da &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/)API do Serviço de Catálogo`/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >

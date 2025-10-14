@@ -73,7 +73,7 @@ Consulte a documentação [Adicionar campos personalizados a grupos de campos pa
 
 Alguns nomes de campos recebem um sublinhado como prefixo, por exemplo, `_repo` e `_id`. Eles representam espaços reservados para campos que o sistema gerará e atribuirá automaticamente à medida que os dados forem assimilados.
 
-Dessa forma, a maioria desses campos deve ser excluída da estrutura dos dados ao assimilar na Experience Platform. A principal exceção para essa regra é o campo [`_{TENANT_ID}` ](../api/getting-started.md#know-your-tenant_id), no qual todos os campos XDM criados em sua organização devem ter o namespace.
+Dessa forma, a maioria desses campos deve ser excluída da estrutura dos dados ao assimilar na Experience Platform. A principal exceção para essa regra é o campo [`_{TENANT_ID}` &#x200B;](../api/getting-started.md#know-your-tenant_id), no qual todos os campos XDM criados em sua organização devem ter o namespace.
 
 ### Tipos de dados {#data-types}
 

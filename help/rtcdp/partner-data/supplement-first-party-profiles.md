@@ -78,7 +78,7 @@ Para incluir atributos fornecidos por parceiros a um esquema, é possível criar
 Leia as páginas da documentação abaixo para obter mais informações:
 
 * [Noções básicas da composição de esquemas](/help/xdm/schema/composition.md)
-* [Visão geral da classe [!UICONTROL Perfil individual XDM] ](/help/xdm/classes/individual-profile.md)
+* [Visão geral da classe [!UICONTROL Perfil individual XDM] &#x200B;](/help/xdm/classes/individual-profile.md)
 * [Criar e editar esquemas na interface](/help/xdm/ui/resources/schemas.md)
 * [Criar e editar grupos de campos de esquema na interface](/help/xdm/ui/resources/field-groups.md)
 

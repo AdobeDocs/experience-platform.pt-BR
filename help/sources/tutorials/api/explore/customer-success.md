@@ -30,7 +30,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 Para explorar seu sistema CS usando APIs do [!DNL Experience Platform], você deve possuir uma ID de conexão base válida. Se você ainda não tiver uma conexão básica para o sistema CS com o qual deseja trabalhar, crie uma por meio dos seguintes tutoriais:
 
-* [ Service Cloud](../create/customer-success/salesforce-service-cloud.md)
+* [&#x200B; Service Cloud](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
 
 ### Leitura de chamadas de API de amostra

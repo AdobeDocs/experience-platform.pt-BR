@@ -23,7 +23,7 @@ Comece aqui e siga os links abaixo para entender todas as medidas de proteção 
 * [Medidas de proteção para assimilação de dados](/help/ingestion/guardrails.md)
 * [Medidas de proteção para [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/)
 * [Medidas de proteção para  [!DNL Real-Time Customer Profile]  dados e segmentação](/help/profile/guardrails.md)
-* [Medidas de proteção para dados [!DNL Identity Service] ](/help/identity-service/guardrails.md)
+* [Medidas de proteção para dados [!DNL Identity Service] &#x200B;](/help/identity-service/guardrails.md)
 * [Medidas de proteção para  [!DNL Query Service]](/help/query-service/guardrails.md)
 * [Medidas de proteção para ativação de dados por meio de destinos](/help/destinations/guardrails.md)
 * [Medidas de proteção para o Real-Time CDP B2B](/help/rtcdp/b2b-guardrails.md)

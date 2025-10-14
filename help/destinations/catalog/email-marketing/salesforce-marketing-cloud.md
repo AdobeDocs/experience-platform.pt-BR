@@ -112,4 +112,4 @@ Para destinos [!DNL Salesforce Marketing Cloud], o Experience Platform cria um a
 
 ## Configurar importação de dados para [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-Depois de conectar [!DNL Experience Platform] ao armazenamento do [!DNL SFTP], você deve configurar a importação de dados do local de armazenamento para o [!DNL Salesforce Marketing Cloud]. Para saber como fazer isso, consulte [Importando Assinantes para o Marketing Cloud de um Arquivo](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&amp;type=5) em [!DNL Salesforce Help Center].
+Depois de conectar [!DNL Experience Platform] ao armazenamento do [!DNL SFTP], você deve configurar a importação de dados do local de armazenamento para o [!DNL Salesforce Marketing Cloud]. Para saber como fazer isso, consulte [Importando Assinantes para o Marketing Cloud de um Arquivo](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5) em [!DNL Salesforce Help Center].

@@ -63,7 +63,7 @@ Com o repositório clonado em sua máquina local e uma nova ramificação criada
 
 A Adobe recomenda que você use o [Visual Studio Code](https://code.visualstudio.com/) e instale a extensão de Criação do Adobe Markdown. Para instalar a extensão, inicie o Visual Studio Code e selecione a guia **Extensões** no menu de navegação esquerdo.
 
-![ extensão](../assets/extension.png)
+![&#x200B; extensão](../assets/extension.png)
 
 Em seguida, digite `Adobe Markdown Authoring` na barra de pesquisa e selecione **Instalar** na página exibida.
 

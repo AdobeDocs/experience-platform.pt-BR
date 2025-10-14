@@ -126,7 +126,7 @@ alloy("getIdentity",{
 
 ## Usando o `identityMap` {#using-identitymap}
 
-Usando um campo XDM [`identityMap` ](../../xdm/schema/composition.md#identityMap), você pode identificar um dispositivo/usuário usando várias identidades, definir seu estado de autenticação e decidir qual identificador é considerado o principal. Se nenhum identificador tiver sido definido como `primary`, o padrão principal será `ECID`.
+Usando um campo XDM [`identityMap` &#x200B;](../../xdm/schema/composition.md#identityMap), você pode identificar um dispositivo/usuário usando várias identidades, definir seu estado de autenticação e decidir qual identificador é considerado o principal. Se nenhum identificador tiver sido definido como `primary`, o padrão principal será `ECID`.
 
 `identityMap` campos são atualizados usando o comando `sentEvent`.
 

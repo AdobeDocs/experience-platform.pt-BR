@@ -216,7 +216,7 @@ Como alternativa, você pode exibir uma versão baseada em código de uma regra 
 
 A visualização de código fornece um botão que permite copiar o valor da definição de segmento para usar em chamadas de API. Para obter a versão mais recente da definição de segmento, salve as alterações mais recentes na definição de segmento.
 
-![O botão Copiar Código está realçado, o que permite ](../images/ui/segment-builder/copy-code.png)
+![O botão Copiar Código está realçado, o que permite &#x200B;](../images/ui/segment-builder/copy-code.png)
 
 ### Funções de agregação
 

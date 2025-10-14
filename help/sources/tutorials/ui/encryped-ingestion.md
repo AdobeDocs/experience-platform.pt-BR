@@ -133,7 +133,7 @@ Autentique com a fonte de armazenamento em nuvem de sua escolha. Durante a etapa
 
 Em seguida, selecione um arquivo de amostra dos dados de origem. Como os dados são criptografados, o Experience Platform exigirá um arquivo de amostra para criar um esquema XDM que possa ser mapeado para os dados de origem.
 
-![A mensagem &quot;Este arquivo está criptografado?&quot; alternar entre ativado e o botão &quot;Selecionar arquivo de amostra&quot; selecionado. ](../../images/tutorials/edi/select_sample_file.png)
+![A mensagem &quot;Este arquivo está criptografado?&quot; alternar entre ativado e o botão &quot;Selecionar arquivo de amostra&quot; selecionado. &#x200B;](../../images/tutorials/edi/select_sample_file.png)
 
 Depois de selecionar o arquivo de amostra, defina as configurações dos dados, como o formato de dados, delimitador e tipo de compactação correspondentes. Aguarde algum tempo para que a interface de visualização seja totalmente renderizada e selecione **[!UICONTROL Salvar]**.
 

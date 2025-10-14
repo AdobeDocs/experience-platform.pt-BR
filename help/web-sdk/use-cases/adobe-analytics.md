@@ -15,7 +15,7 @@ ht-degree: 0%
 O SDK da Web do Experience Platform pode enviar dados para o Adobe Analytics por meio do Edge Network de Experience Platform. O Adobe fornece várias opções para enviar dados para o Adobe Analytics usando o SDK da Web:
 
 * Adicione o [**[!UICONTROL grupo de campos do Adobe Analytics ExperienceEvent]**](../../xdm/field-groups/event/analytics-full-extension.md) ao esquema e use o [`XDM` objeto](../commands/sendevent/xdm.md).
-* Use o objeto [`data` ](../commands/sendevent/data.md) para enviar dados para a Adobe Analytics sem um esquema XDM.
+* Use o objeto [`data` &#x200B;](../commands/sendevent/data.md) para enviar dados para a Adobe Analytics sem um esquema XDM.
 * Use [variáveis de dados de contexto](https://experienceleague.adobe.com/pt-br/docs/analytics/implementation/vars/page-vars/contextdata) e [regras de processamento](https://experienceleague.adobe.com/pt-br/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/c-processing-rules-configuration/processing-rules-about) geradas automaticamente.
 
 ## Usar o objeto `XDM` {#use-xdm-object}

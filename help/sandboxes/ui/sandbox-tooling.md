@@ -180,7 +180,7 @@ As opções para criar um novo ou usar um existente são exibidas. Selecione **[
 
 A caixa de diálogo **[!UICONTROL Grupo de campos]** mostra uma lista de grupos de campos disponíveis para o objeto. Selecione os grupos de campos necessários e selecione **[!UICONTROL Salvar]**.
 
-![Uma lista de campos mostrados na caixa de diálogo [!UICONTROL Grupo de campos], destacando a seleção [!UICONTROL Salvar]. ](../images/ui/sandbox-tooling/field-group-list.png)
+![Uma lista de campos mostrados na caixa de diálogo [!UICONTROL Grupo de campos], destacando a seleção [!UICONTROL Salvar]. &#x200B;](../images/ui/sandbox-tooling/field-group-list.png)
 
 Você retornou à página [!UICONTROL Dependências e objeto de pacote]. Aqui, selecione **[!UICONTROL Concluir]** para concluir a importação do pacote.
 

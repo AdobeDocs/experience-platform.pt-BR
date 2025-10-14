@@ -44,13 +44,13 @@ As configurações disponíveis para os usuários ao se conectarem a um destino 
 
 Por exemplo, para [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations), um desenvolvedor de destino pode configurar quais identidades seu destino aceita e somente essas identidades serão exibidas para o usuário na [etapa de mapeamento do fluxo de trabalho de ativação](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), conforme mostrado abaixo:
 
-![Gravação de tela da seleção de identidade para o campo de destino na etapa de mapeamento do fluxo de trabalho de ativação. ](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![Gravação de tela da seleção de identidade para o campo de destino na etapa de mapeamento do fluxo de trabalho de ativação. &#x200B;](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
 Da mesma forma, para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based), o desenvolvedor de destino pode determinar quais [opções de acréscimo de nome de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) ele deseja disponibilizar para seu destino ou quais [opções de formatação de arquivo](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) ele deseja disponibilizar, e o usuário poderá selecionar apenas dessas opções, conforme mostrado abaixo:
 
 ![Gravação de tela da opção de formatação de arquivo ao conectar-se a um destino baseado em arquivo.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![Gravação de tela da opção de acréscimo de nome de arquivo na etapa de agendamento do fluxo de trabalho de ativação. ](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![Gravação de tela da opção de acréscimo de nome de arquivo na etapa de agendamento do fluxo de trabalho de ativação. &#x200B;](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
 Leia mais sobre as diferentes opções e etapas disponíveis no fluxo de trabalho de ativação:
 

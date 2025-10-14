@@ -24,7 +24,7 @@ O Adobe Experience Platform [!DNL Query Service] tem dois modelos de execução 
 
 ### Execução de consulta interativa
 
-As consultas podem ser executadas interativamente enviando-as por meio da interface do usuário [!DNL Query Service] ou [ por meio de um cliente conectado](../clients/overview.md). Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até que a consulta enviada retorne ou expire.
+As consultas podem ser executadas interativamente enviando-as por meio da interface do usuário [!DNL Query Service] ou [&#x200B; por meio de um cliente conectado](../clients/overview.md). Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até que a consulta enviada retorne ou expire.
 
 A execução de consulta interativa tem as seguintes limitações:
 

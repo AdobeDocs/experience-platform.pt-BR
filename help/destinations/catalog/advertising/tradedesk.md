@@ -157,7 +157,7 @@ Exemplos:
 
 >[!NOTE]
 > 
->Após a atualização[ de ](/help/release-notes/2025/july-2025.md#destinations)julho de 2025 para o serviço de destinos, o mapeamento [!DNL ECID] será aplicado. Os perfis que não têm [!DNL ECID] agora são descartados conforme esperado, o que pode mostrar contagens de ativação mais baixas em comparação ao comportamento herdado.
+>Após a atualização[&#x200B; de &#x200B;](/help/release-notes/2025/july-2025.md#destinations)julho de 2025 para o serviço de destinos, o mapeamento [!DNL ECID] será aplicado. Os perfis que não têm [!DNL ECID] agora são descartados conforme esperado, o que pode mostrar contagens de ativação mais baixas em comparação ao comportamento herdado.
 
 ## Dados exportados {#exported-data}
 

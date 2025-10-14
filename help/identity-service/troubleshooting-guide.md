@@ -55,7 +55,7 @@ Campos como CEPs e endereços IP não devem ser rotulados como identidades para 
 
 ## Por que os campos de identidade não estão vinculados da maneira esperada?
 
-Usando o ponto de extremidade [`/cluster/members` ](./api/list-cluster-identites.md) na API do serviço de identidade, você pode exibir as identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, forneça as informações de identidade apropriadas em seus dados XDM. Consulte a seção sobre [fornecendo dados XDM ao Serviço de identidade](./home.md) na visão geral do Serviço de identidade para obter mais informações.
+Usando o ponto de extremidade [`/cluster/members` &#x200B;](./api/list-cluster-identites.md) na API do serviço de identidade, você pode exibir as identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, forneça as informações de identidade apropriadas em seus dados XDM. Consulte a seção sobre [fornecendo dados XDM ao Serviço de identidade](./home.md) na visão geral do Serviço de identidade para obter mais informações.
 
 ## O que é um namespace de identidade?
 

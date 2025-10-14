@@ -114,7 +114,7 @@ ht-degree: 34%
       - [Conector Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
-      - [ Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
+      - [&#x200B; Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamentos {#payments}
       - [Conector quadrado](connectors/payments/square.md)
       - [Conector do Stripe](connectors/payments/stripe.md)
@@ -154,7 +154,7 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [ Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [&#x200B; Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
@@ -193,7 +193,7 @@ ht-degree: 34%
          - [Atividades do Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Entidades do Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
-         - [ Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [&#x200B; Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamentos {#payments}
          - [Quadrado](tutorials/api/create/payments/square.md)
          - [Stripe](tutorials/api/create/payments/stripe.md)
@@ -279,7 +279,7 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [ Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [&#x200B; Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
@@ -329,7 +329,7 @@ ht-degree: 34%
          - [Entidades do Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Conector de retransmissão](tutorials/ui/create/marketing-automation/relay-connector.md)
-         - [ Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [&#x200B; Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamentos {#payments}
          - [Quadrado](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)

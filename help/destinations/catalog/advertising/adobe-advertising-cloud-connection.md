@@ -64,7 +64,7 @@ Consulte a tabela a seguir para obter informações sobre o tipo e a frequência
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa da **[!UICONTROL Exibir Destinos]** e da **[!UICONTROL Permissão de controle de acesso]** [ para o Experience Platform. ](/help/access-control/home.md#permissions) Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa da **[!UICONTROL Exibir Destinos]** e da **[!UICONTROL Permissão de controle de acesso]** [&#x200B; para o Experience Platform. &#x200B;](/help/access-control/home.md#permissions) Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar ao destino, siga as instruções para [criar uma conexão de destino](/help/destinations/ui/connect-destination.md) usando a interface do usuário do Experience Platform. No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 

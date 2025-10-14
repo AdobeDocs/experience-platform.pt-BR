@@ -44,9 +44,9 @@ Observe os seguintes pré-requisitos para exportar dados do Experience Platform 
 
 Uma conta do [!DNL Marketing Cloud Account Engagement] com uma assinatura do produto [Envolvimento da conta da Marketing Cloud](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) é obrigatória para continuar.
 
-A conta [!DNL Salesforce] deve ter [!DNL Salesforce] `Account Engagement Administrator role`. Isso é necessário para [criar campos de cliente potencial personalizados](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&amp;type=5).
+A conta [!DNL Salesforce] deve ter [!DNL Salesforce] `Account Engagement Administrator role`. Isso é necessário para [criar campos de cliente potencial personalizados](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&type=5).
 
-Por fim, sua conta também pode acessar o [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&amp;type=5).
+Por fim, sua conta também pode acessar o [[!DNL Account Engagement Lightning App]](https://help.salesforce.com/s/articleView?id=sf.pardot_lightning_enable.htm&type=5).
 
 Entre em contato com o [[!DNL Salesforce] Suporte](https://www.salesforce.com/company/contact-us/?d=cta-glob-footer-10) ou com o administrador de conta do [!DNL Salesforce] se você não tiver uma conta, ou se a conta não tiver a assinatura do [!DNL Marketing Cloud Account Engagement] ou o [!DNL Account Engagement Administrator role].
 
@@ -68,7 +68,7 @@ Consulte os [!DNL Marketing Cloud Account Engagement] [limites de taxa](https://
 
 >[!IMPORTANT]
 >
->Se o administrador da sua conta do [!DNL Salesforce] tiver restringido o acesso a intervalos IP confiáveis, você precisará contatá-los para obter [IPs do Experience Platform incluir na lista de permissões](/help/destinations/catalog/streaming/ip-address-allow-list.md). Consulte a documentação [!DNL Salesforce] [Restringir Acesso a Intervalos IP Confiáveis para um Aplicativo Conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) se precisar de orientação adicional.
+>Se o administrador da sua conta do [!DNL Salesforce] tiver restringido o acesso a intervalos IP confiáveis, você precisará contatá-los para obter [IPs do Experience Platform incluir na lista de permissões](/help/destinations/catalog/streaming/ip-address-allow-list.md). Consulte a documentação [!DNL Salesforce] [Restringir Acesso a Intervalos IP Confiáveis para um Aplicativo Conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) se precisar de orientação adicional.
 
 ## Identidades suportadas {#supported-identities}
 

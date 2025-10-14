@@ -25,7 +25,7 @@ A fonte [!DNL Customer Attributes] cria automaticamente o conjunto de dados para
 
 ## Identidades
 
-A identidade principal de um conjunto de dados está contida na primeira coluna do arquivo CSV dos dados de origem. A origem [!DNL Customer Attributes] presume que a identidade sempre está mapeada para o namespace [`CORE` ](../../../identity-service/features/namespaces.md), um namespace gerado pelo sistema com suporte de [[!DNL Identity Service]](../../../identity-service/home.md).
+A identidade principal de um conjunto de dados está contida na primeira coluna do arquivo CSV dos dados de origem. A origem [!DNL Customer Attributes] presume que a identidade sempre está mapeada para o namespace [`CORE` &#x200B;](../../../identity-service/features/namespaces.md), um namespace gerado pelo sistema com suporte de [[!DNL Identity Service]](../../../identity-service/home.md).
 
 Não é possível selecionar um namespace existente para a identidade ao usar a origem [!DNL Customer Attributes] porque [!DNL Customer Attributes] presume que a identidade primária para o esquema está sempre no mapa de identidade. [!DNL Customer Attributes] em seguida, cria o mapeamento da ID de origem para a UUID do mapa de identidade de maneira automatizada.
 

@@ -32,7 +32,7 @@ Atualizações dos recursos e da documentação existentes no Adobe Experience P
 - [Query Service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Origens](#sources)
-- [Manuais de casos de uso ](#use-case-playbooks)
+- [Manuais de casos de uso &#x200B;](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 

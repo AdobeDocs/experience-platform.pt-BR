@@ -45,11 +45,11 @@ Vá para a página de [!DNL Salesforce] [avaliação](https://www.salesforce.com
 
 #### Configurar um aplicativo conectado no [!DNL Salesforce] {#prerequisites-connected-app}
 
-Primeiro, você precisa configurar um [[!DNL Salesforce] aplicativo conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&amp;language=en_US&amp;r=https%3A%2F%2Fhelp.salesforce.com%2F&amp;type=5) na sua conta do [!DNL Salesforce], se ainda não tiver um. [!DNL Salesforce CRM] aproveitará o aplicativo conectado para se conectar a [!DNL Salesforce].
+Primeiro, você precisa configurar um [[!DNL Salesforce] aplicativo conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_create.htm&language=en_US&r=https%3A%2F%2Fhelp.salesforce.com%2F&type=5) na sua conta do [!DNL Salesforce], se ainda não tiver um. [!DNL Salesforce CRM] aproveitará o aplicativo conectado para se conectar a [!DNL Salesforce].
 
-Em seguida, habilite [!DNL OAuth Settings for API Integration] para o [!DNL Salesforce connected app]. Consulte a documentação de [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) para obter orientação.
+Em seguida, habilite [!DNL OAuth Settings for API Integration] para o [!DNL Salesforce connected app]. Consulte a documentação de [[!DNL Salesforce]](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) para obter orientação.
 
-Além disso, verifique se os [escopos](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&amp;type=5&amp;language=en_US) mencionados abaixo estão selecionados para o [!DNL Salesforce connected app].
+Além disso, verifique se os [escopos](https://help.salesforce.com/s/articleView?id=connected_app_create_api_integration.htm&type=5&language=en_US) mencionados abaixo estão selecionados para o [!DNL Salesforce connected app].
 
 * ``chatter_api``
 * ``lightning``
@@ -62,11 +62,11 @@ Além disso, verifique se os [escopos](https://help.salesforce.com/s/articleView
 * ``refresh_token``
 * ``offline_access``
 
-Finalmente, certifique-se de que a concessão `password` esteja habilitada em sua conta [!DNL Salesforce]. Consulte a documentação do [!DNL Salesforce] [Fluxo de Nome de Usuário-Senha do OAuth 2.0 para Cenários Especiais](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&amp;type=5) se precisar de orientação.
+Finalmente, certifique-se de que a concessão `password` esteja habilitada em sua conta [!DNL Salesforce]. Consulte a documentação do [!DNL Salesforce] [Fluxo de Nome de Usuário-Senha do OAuth 2.0 para Cenários Especiais](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_username_password_flow.htm&type=5) se precisar de orientação.
 
 >[!IMPORTANT]
 >
->Se o administrador da sua conta do [!DNL Salesforce] tiver restringido o acesso a intervalos IP confiáveis, você precisará contatá-los para obter [IPs do Experience Platform incluir na lista de permissões](/help/destinations/catalog/streaming/ip-address-allow-list.md). Consulte a documentação [!DNL Salesforce] [Restringir Acesso a Intervalos IP Confiáveis para um Aplicativo Conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) se precisar de orientação adicional.
+>Se o administrador da sua conta do [!DNL Salesforce] tiver restringido o acesso a intervalos IP confiáveis, você precisará contatá-los para obter [IPs do Experience Platform incluir na lista de permissões](/help/destinations/catalog/streaming/ip-address-allow-list.md). Consulte a documentação [!DNL Salesforce] [Restringir Acesso a Intervalos IP Confiáveis para um Aplicativo Conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) se precisar de orientação adicional.
 
 #### Criar campos personalizados em [!DNL Salesforce] {#prerequisites-custom-field}
 
@@ -74,7 +74,7 @@ Ao ativar públicos para o destino [!DNL Salesforce CRM], você deve inserir um 
 
 [!DNL Salesforce CRM] exige esse valor para ler e interpretar corretamente os públicos-alvo provenientes da Experience Platform e atualizar o status dos públicos-alvo em [!DNL Salesforce]. Consulte a documentação do Experience Platform para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
-Para cada público-alvo ativado do Experience Platform para [!DNL Salesforce CRM], é necessário criar um campo personalizado do tipo `Text Area (Long)` em [!DNL Salesforce]. Você pode definir o comprimento de caracteres de qualquer tamanho entre 256 e 131.072 caracteres de acordo com suas necessidades comerciais. Consulte a página de documentação [!DNL Salesforce] [Tipos de campo personalizado](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&amp;type=5) para obter informações adicionais sobre tipos de campo personalizado. Consulte também a documentação do [!DNL Salesforce] para [criar campos personalizados](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&amp;type=5&amp;language=en_US), se precisar de assistência para a criação de campos.
+Para cada público-alvo ativado do Experience Platform para [!DNL Salesforce CRM], é necessário criar um campo personalizado do tipo `Text Area (Long)` em [!DNL Salesforce]. Você pode definir o comprimento de caracteres de qualquer tamanho entre 256 e 131.072 caracteres de acordo com suas necessidades comerciais. Consulte a página de documentação [!DNL Salesforce] [Tipos de campo personalizado](https://help.salesforce.com/s/articleView?id=sf.custom_field_types.htm&type=5) para obter informações adicionais sobre tipos de campo personalizado. Consulte também a documentação do [!DNL Salesforce] para [criar campos personalizados](https://help.salesforce.com/s/articleView?id=mc_cab_create_an_attribute.htm&type=5&language=en_US), se precisar de assistência para a criação de campos.
 
 >[!IMPORTANT]
 >
@@ -94,7 +94,7 @@ Um exemplo de criação de campo personalizado em [!DNL Salesforce], *Etapa 2 - 
 
 >[!NOTE]
 >
->* Os objetos no Salesforce são restritos a 25 campos externos, consulte [Atributos de campo personalizado](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5).
+>* Os objetos no Salesforce são restritos a 25 campos externos, consulte [Atributos de campo personalizado](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5).
 >* Essa restrição implica que você só pode ter um máximo de 25 associações de público-alvo do Experience Platform ativas a qualquer momento.
 >* Se você tiver atingido esse limite no Salesforce, remova os atributos personalizados do Salesforce que foram usados para armazenar o status do público-alvo em relação a públicos-alvo mais antigos no Experience Platform, antes que uma nova **[!UICONTROL ID de mapeamento]** possa ser usada.
 
@@ -106,16 +106,16 @@ Anote os itens abaixo antes de autenticar no destino [!DNL Salesforce CRM]:
 | --- | --- | --- |
 | `Username` | Seu nome de usuário da conta [!DNL Salesforce]. | |
 | `Password` | A senha da sua conta [!DNL Salesforce]. | |
-| `Security Token` | O token de segurança [!DNL Salesforce] que você anexará posteriormente ao final da Senha [!DNL Salesforce] para criar uma cadeia de caracteres concatenada a ser usada como a **[!UICONTROL Senha]** ao [autenticar no destino](#authenticate).<br> Consulte a documentação do [!DNL Salesforce] para [redefinir seu token de segurança](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&amp;type=5) e saber como gerá-lo novamente a partir da interface do [!DNL Salesforce] se você não tiver o Token de Segurança. |  |
-| `Custom Domain` | O prefixo de domínio [!DNL Salesforce]. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&amp;type=5) para saber como obter este valor da interface [!DNL Salesforce]. | Se o domínio [!DNL Salesforce] for <br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> você precisará de `d5i000000isb4eak-dev-ed` como valor. |
-| `Client ID` | Seu Salesforce `Consumer Key`. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) para saber como obter este valor na interface [!DNL Salesforce]. | |
-| `Client Secret` | Seu Salesforce `Consumer Secret`. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&amp;type=5) para saber como obter este valor na interface [!DNL Salesforce]. | |
+| `Security Token` | O token de segurança [!DNL Salesforce] que você anexará posteriormente ao final da Senha [!DNL Salesforce] para criar uma cadeia de caracteres concatenada a ser usada como a **[!UICONTROL Senha]** ao [autenticar no destino](#authenticate).<br> Consulte a documentação do [!DNL Salesforce] para [redefinir seu token de segurança](https://help.salesforce.com/s/articleView?id=sf.user_security_token.htm&type=5) e saber como gerá-lo novamente a partir da interface do [!DNL Salesforce] se você não tiver o Token de Segurança. |  |
+| `Custom Domain` | O prefixo de domínio [!DNL Salesforce]. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.domain_name_setting_login_policy.htm&type=5) para saber como obter este valor da interface [!DNL Salesforce]. | Se o domínio [!DNL Salesforce] for <br> *`d5i000000isb4eak-dev-ed`.my.salesforce.com*,<br> você precisará de `d5i000000isb4eak-dev-ed` como valor. |
+| `Client ID` | Seu Salesforce `Consumer Key`. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) para saber como obter este valor na interface [!DNL Salesforce]. | |
+| `Client Secret` | Seu Salesforce `Consumer Secret`. <br> Consulte a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.connected_app_rotate_consumer_details.htm&type=5) para saber como obter este valor na interface [!DNL Salesforce]. | |
 
 ### Medidas de proteção {#guardrails}
 
 [!DNL Salesforce] equilibra cargas de transação impondo limites de solicitação, taxa e tempo limite. Consulte [Limites e alocações de solicitação de API](https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm) para obter detalhes.
 
-Se o administrador da conta do [!DNL Salesforce] impôs restrições de IP, será necessário adicionar [endereços IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aos intervalos IP confiáveis das contas do [!DNL Salesforce]. Consulte a documentação [!DNL Salesforce] [Restringir Acesso a Intervalos IP Confiáveis para um Aplicativo Conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) se precisar de orientação adicional.
+Se o administrador da conta do [!DNL Salesforce] impôs restrições de IP, será necessário adicionar [endereços IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aos intervalos IP confiáveis das contas do [!DNL Salesforce]. Consulte a documentação [!DNL Salesforce] [Restringir Acesso a Intervalos IP Confiáveis para um Aplicativo Conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) se precisar de orientação adicional.
 
 >[!IMPORTANT]
 >
@@ -198,14 +198,14 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
 
 Os atributos especificados no **[!UICONTROL campo de Destino]** devem ser nomeados exatamente como descrito na tabela de mapeamentos de atributos, pois esses atributos formarão o corpo da solicitação.
 
-Os atributos especificados no **[!UICONTROL campo Source]** não seguem nenhuma restrição desse tipo. Você pode mapeá-los com base na sua necessidade. No entanto, verifique se o formato dos dados de entrada é válido de acordo com a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5). Se os dados de entrada não forem válidos, a chamada de atualização para [!DNL Salesforce] falhará e seus contatos/clientes potenciais não serão atualizados.
+Os atributos especificados no **[!UICONTROL campo Source]** não seguem nenhuma restrição desse tipo. Você pode mapeá-los com base na sua necessidade. No entanto, verifique se o formato dos dados de entrada é válido de acordo com a [[!DNL Salesforce] documentação](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5). Se os dados de entrada não forem válidos, a chamada de atualização para [!DNL Salesforce] falhará e seus contatos/clientes potenciais não serão atualizados.
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL (API) Salesforce CRM], siga estas etapas:
 
 1. Na etapa **[!UICONTROL Mapeamento]**, selecione **[!UICONTROL Adicionar novo mapeamento]**. Você verá uma nova linha de mapeamento na tela.
    ![Exemplo de captura de tela da interface do Experience Platform para Adicionar novo mapeamento.](../../assets/catalog/crm/salesforce/add-new-mapping.png)
 1. Na janela **[!UICONTROL Selecionar campo de origem]**, escolha a categoria **[!UICONTROL Selecionar atributos]** e selecione o atributo XDM ou escolha o **[!UICONTROL Selecionar namespace de identidade]** e selecione uma identidade.
-1. Na janela **[!UICONTROL Selecionar campo de destino]**, escolha o **[!UICONTROL Selecionar namespace de identidade]** e selecione uma identidade ou escolha a categoria **[!UICONTROL Selecionar atributos personalizados]** e selecione um atributo ou defina um usando o campo **[!UICONTROL Nome do atributo]**, conforme necessário. Consulte a [[!DNL Salesforce CRM] documentação](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5) para obter orientação sobre os atributos suportados.
+1. Na janela **[!UICONTROL Selecionar campo de destino]**, escolha o **[!UICONTROL Selecionar namespace de identidade]** e selecione uma identidade ou escolha a categoria **[!UICONTROL Selecionar atributos personalizados]** e selecione um atributo ou defina um usando o campo **[!UICONTROL Nome do atributo]**, conforme necessário. Consulte a [[!DNL Salesforce CRM] documentação](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&type=5) para obter orientação sobre os atributos suportados.
    * Repita essas etapas para adicionar os seguintes mapeamentos entre o esquema de perfil XDM e o [!DNL (API) Salesforce CRM]:
 
    **Trabalhando com Contatos**
@@ -321,7 +321,7 @@ Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as p
    * Para corrigir esse erro, verifique se a **[!UICONTROL ID de Mapeamento]** fornecida no fluxo de trabalho de ativação para o destino [!DNL Salesforce CRM] corresponde exatamente ao valor do tipo de campo personalizado criado em [!DNL Salesforce]. Consulte a seção [Criar campos personalizados em [!DNL Salesforce]](#prerequisites-custom-field) para obter orientação.
 
 * Ao ativar um segmento, você pode obter uma mensagem de erro: `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * Para corrigir esse erro, contate o administrador da conta [!DNL Salesforce] para adicionar [endereços IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aos intervalos IP confiáveis das contas do [!DNL Salesforce]. Consulte a documentação [!DNL Salesforce] [Restringir Acesso a Intervalos IP Confiáveis para um Aplicativo Conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&amp;type=5) se precisar de orientação adicional.
+   * Para corrigir esse erro, contate o administrador da conta [!DNL Salesforce] para adicionar [endereços IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aos intervalos IP confiáveis das contas do [!DNL Salesforce]. Consulte a documentação [!DNL Salesforce] [Restringir Acesso a Intervalos IP Confiáveis para um Aplicativo Conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_edit_ip_ranges.htm&type=5) se precisar de orientação adicional.
 
 ## Recursos adicionais {#additional-resources}
 

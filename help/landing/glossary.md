@@ -345,7 +345,7 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 **Política de mesclagem**: as políticas de mesclagem são regras que a Experience Platform usa para determinar como os fragmentos de dados do cliente de várias fontes serão combinados para criar um perfil individual. Quando ocorre um conflito de dados, a política de mesclagem determina quais dados devem ser priorizados para inclusão no perfil.
 
-**MHMDAa**: o [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) aprimora os direitos de privacidade dos consumidores em relação aos seus dados de saúde. Ela exige a divulgação, o consentimento do consumidor e os direitos de exclusão dos dados de saúde, e proíbe a venda de dados de saúde sem autorização. Além disso, a lei torna ilegal o uso de geofencing em instalações de saúde.
+**MHMDAa**: o [[!DNL Washington My Health My Data Act]](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&full=true) aprimora os direitos de privacidade dos consumidores em relação aos seus dados de saúde. Ela exige a divulgação, o consentimento do consumidor e os direitos de exclusão dos dados de saúde, e proíbe a venda de dados de saúde sem autorização. Além disso, a lei torna ilegal o uso de geofencing em instalações de saúde.
 
 **Mixin**: consulte &quot;Grupo de campos de esquema&quot;.
 

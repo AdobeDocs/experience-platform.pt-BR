@@ -13,8 +13,8 @@ ht-degree: 2%
 
 O ponto de extremidade `/rpc/import` na API [!DNL Schema Registry] permite criar recursos do Experience Data Model (XDM) a partir de cargas de exportação geradas. As cargas úteis de exportação podem ser criadas a partir de duas fontes:
 
-* O ponto de extremidade [`/rpc/export` ](./export.md) cria cargas de exportação de recursos XDM existentes, permitindo que você compartilhe recursos entre sandboxes.
-* O ponto de extremidade [`/rpc/csv2schema` ](./csv-to-schema.md) cria cargas de exportação de modelos CSV.
+* O ponto de extremidade [`/rpc/export` &#x200B;](./export.md) cria cargas de exportação de recursos XDM existentes, permitindo que você compartilhe recursos entre sandboxes.
+* O ponto de extremidade [`/rpc/csv2schema` &#x200B;](./csv-to-schema.md) cria cargas de exportação de modelos CSV.
 
 Depois de criar uma carga de exportação, você pode usar o ponto de extremidade `/rpc/import` para gerar o recurso (e todos os recursos dependentes) na sandbox de sua escolha.
 
@@ -36,7 +36,7 @@ POST /rpc/import
 
 **Solicitação**
 
-A solicitação a seguir pega a carga retornada de uma chamada para o ponto de extremidade [`/rpc/export` ](./export.md) para importar um grupo de campos (`Restaurant`) para uma nova organização e sandbox, conforme determinado pelos cabeçalhos `x-gw-ims-org-id` e `x-sandbox-name`, respectivamente.
+A solicitação a seguir pega a carga retornada de uma chamada para o ponto de extremidade [`/rpc/export` &#x200B;](./export.md) para importar um grupo de campos (`Restaurant`) para uma nova organização e sandbox, conforme determinado pelos cabeçalhos `x-gw-ims-org-id` e `x-sandbox-name`, respectivamente.
 
 ```shell
 curl -X POST \

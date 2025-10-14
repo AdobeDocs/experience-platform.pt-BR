@@ -636,7 +636,7 @@ Esta ação aciona todas as regras que usam um [evento de chamada direta](#direc
 
 ![Captura de tela de uma ação de Acionar Chamada Direta na Interface da Coleção de Dados](../../../images/extensions/client/core/direct-call-action.png)
 
-A ação mapeia diretamente para o método [`track` ](../../../ui/client-side/satellite-object.md#track) no objeto `satellite`, que pode ser acessado pelo código do lado do cliente.
+A ação mapeia diretamente para o método [`track` &#x200B;](../../../ui/client-side/satellite-object.md#track) no objeto `satellite`, que pode ser acessado pelo código do lado do cliente.
 
 ## Tipos de elementos de dados da extensão principal
 

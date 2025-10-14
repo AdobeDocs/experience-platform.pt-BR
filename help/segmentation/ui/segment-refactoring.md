@@ -24,7 +24,7 @@ Antes da versão de janeiro de 2024, todas as restrições de tempo no nível da
 
 Anteriormente, um evento individual podia ter várias regras de restrição de tempo anexadas a ele. Com esta atualização recente, tentar adicionar uma restrição de tempo a uma regra resultará em um **erro**.
 
-![A restrição de tempo em nível de regra está realçada. O erro que ocorrerá posteriormente também é destacado. ](../images/ui/segment-refactoring/rule-time-constraint.png)
+![A restrição de tempo em nível de regra está realçada. O erro que ocorrerá posteriormente também é destacado. &#x200B;](../images/ui/segment-refactoring/rule-time-constraint.png)
 
 As restrições de tempo agora só podem ser aplicadas no nível da tela ou do cartão.
 

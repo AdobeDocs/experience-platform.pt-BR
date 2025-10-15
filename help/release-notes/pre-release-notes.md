@@ -2,10 +2,10 @@
 title: Notas de pré-lançamento do Experience Platform
 description: Uma visualização das notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 9cf809f8fd6e424b4dcd800c3d554e4eb0e337dc
+source-git-commit: de95e9a51c979e9249ddf9ceb262fc521d2b38f4
 workflow-type: tm+mt
-source-wordcount: '944'
-ht-degree: 15%
+source-wordcount: '1008'
+ht-degree: 14%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 15%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: outubro de 2025**
 
@@ -57,7 +57,9 @@ Para obter mais informações sobre alertas, leia a [[!DNL Observability Insight
 | Destino | Descrição |
 | --- | --- |
 | [!DNL AdForm] | Use este destino para enviar públicos-alvo da Adobe Real-Time CDP para o [!DNL AdForm] para ativação com base na Experience Cloud ID (ECID) e na Fusão de ID do [!DNL AdForm]. O ID Fusion do [!DNL AdForm] é um serviço de resolução de ID que permite ativar os públicos originais com base na Experience Cloud ID (ECID). |
-| `Amazon Ads` | Adicionamos suporte adicional a identificadores pessoais, como `firstName`, `lastName`, `street`, `city`, `state`, `zip` e `country`. Mapear esses campos como identidades de destino pode melhorar as taxas de correspondência do público-alvo. |
+| [!DNL Amazon Ads] | Adicionamos suporte adicional a identificadores pessoais, como `firstName`, `lastName`, `street`, `city`, `state`, `zip` e `country`. Mapear esses campos como identidades de destino pode melhorar as taxas de correspondência do público-alvo. |
+| [!DNL Snowflake Batch] (Disponibilidade limitada) | Crie um compartilhamento de dados [!DNL Snowflake] em tempo real para receber atualizações diárias de público diretamente como tabelas compartilhadas em sua conta. Essa integração está disponível atualmente para organizações de clientes provisionadas na região do VA7. |
+| [!DNL Snowflake Streaming] (Disponibilidade limitada) | Crie um compartilhamento de dados [!DNL Snowflake] em tempo real para receber atualizações de público-alvo de transmissão diretamente como tabelas compartilhadas na sua conta. Essa integração está disponível atualmente para organizações de clientes provisionadas na região do VA7. |
 
 **Funcionalidade nova ou atualizada**
 
@@ -80,7 +82,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Monitoramento da segmentação de transmissão | O monitoramento em tempo real da segmentação por transmissão oferece transparência às métricas de taxa de avaliação, latência e qualidade de dados nos níveis de sandbox, conjunto de dados e público-alvo. Isso oferece suporte a alertas proativos e insights acionáveis para ajudar os engenheiros de dados a identificar violações de capacidade e problemas de assimilação. As métricas de monitoramento incluem taxa de avaliação, latência de assimilação P95, bem como registros recebidos, avaliados, com falha e ignorados. Os recursos visualizar por conjunto de dados e visualizar por público-alvo fornecem visibilidade abrangente sobre novos perfis qualificados e desqualificados. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Origens {#sources}
 

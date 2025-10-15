@@ -82,7 +82,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Monitoramento da segmentação de transmissão | O monitoramento em tempo real da segmentação por transmissão oferece transparência às métricas de taxa de avaliação, latência e qualidade de dados nos níveis de sandbox, conjunto de dados e público-alvo. Isso oferece suporte a alertas proativos e insights acionáveis para ajudar os engenheiros de dados a identificar violações de capacidade e problemas de assimilação. As métricas de monitoramento incluem taxa de avaliação, latência de assimilação P95, bem como registros recebidos, avaliados, com falha e ignorados. Os recursos visualizar por conjunto de dados e visualizar por público-alvo fornecem visibilidade abrangente sobre novos perfis qualificados e desqualificados. |
 
-Para obter mais informações, leia a visão geral](../segmentation/home.md) do [[!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral[&#128279;](../segmentation/home.md) do [!DNL Segmentation Service] .
 
 ## Origens {#sources}
 

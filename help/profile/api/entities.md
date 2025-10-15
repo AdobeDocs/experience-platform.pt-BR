@@ -5,9 +5,9 @@ type: Documentation
 description: O Adobe Experience Platform permite acessar os dados do Perfil do cliente em tempo real usando as APIs RESTful ou a interface do usuário. Este guia descreve como acessar entidades, mais conhecidas como "perfis", usando a API de perfil.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
+source-git-commit: 193045d530d73d8a3e4f7ac3df4e1f43e8ad5b15
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '2141'
 ht-degree: 3%
 
 ---
@@ -66,6 +66,10 @@ Para acessar uma entidade Perfil, você **deve** fornecer os seguintes parâmetr
 - `schema.name`: o nome do esquema XDM da entidade. Nesse caso de uso, o `schema.name=_xdm.context.profile`.
 - `entityId`: a ID da entidade que você está tentando recuperar.
 - `entityIdNS`: O namespace da entidade que você está tentando recuperar. Este valor deve ser fornecido se `entityId` for **não** um XID.
+
+Além disso, o uso do seguinte parâmetro de consulta é *altamente* recomendado:
+
+- `mergePolicyId`: a ID da política de mesclagem com a qual você deseja filtrar os dados. Se nenhuma política de mesclagem for especificada, a política de mesclagem padrão da sua organização será usada.
 
 Uma lista completa de parâmetros válidos é fornecida na seção [parâmetros de consulta](#query-parameters) do apêndice.
 
@@ -180,6 +184,10 @@ Para acessar os dados da Conta B2B, você **deve** fornecer os seguintes parâme
 - `entityId`: a ID da entidade que você está tentando recuperar.
 - `entityIdNS`: O namespace da entidade que você está tentando recuperar. Este valor deve ser fornecido se `entityId` for **não** um XID.
 
+Além disso, o uso do seguinte parâmetro de consulta é *altamente* recomendado:
+
+- `mergePolicyId`: a ID da política de mesclagem com a qual você deseja filtrar os dados. Se nenhuma política de mesclagem for especificada, a política de mesclagem padrão da sua organização será usada.
+
 Uma lista completa de parâmetros válidos é fornecida na seção [parâmetros de consulta](#query-parameters) do apêndice.
 
 **Solicitação**
@@ -271,6 +279,10 @@ Para acessar uma entidade de Oportunidade B2B, você **deve** fornecer os seguin
 - `schema.name`: o nome do esquema XDM da entidade. Nesse caso de uso, o `schema.name=_xdm.context.opportunity`.
 - `entityId`: a ID da entidade que você está tentando recuperar.
 - `entityIdNS`: O namespace da entidade que você está tentando recuperar. Este valor deve ser fornecido se `entityId` for **não** um XID.
+
+Além disso, o uso do seguinte parâmetro de consulta é *altamente* recomendado:
+
+- `mergePolicyId`: a ID da política de mesclagem com a qual você deseja filtrar os dados. Se nenhuma política de mesclagem for especificada, a política de mesclagem padrão da sua organização será usada.
 
 Uma lista completa de parâmetros válidos é fornecida na seção [parâmetros de consulta](#query-parameters) do apêndice.
 
@@ -1207,7 +1219,9 @@ Uma resposta bem-sucedida retorna a próxima página de resultados. Esta respost
 
 >[!IMPORTANT]
 >
->As solicitações de exclusão para as seguintes entidades B2B foram descontinuadas:
+>O ponto de extremidade da entidade de exclusão será descontinuado até o final de outubro de 2025. Se você deseja executar operações de exclusão de registro, é possível usar o [fluxo de trabalho da API de exclusão de registro do ciclo de vida dos dados](/help/hygiene/api/workorder.md) ou o [fluxo de trabalho da interface do usuário para exclusão de registro do ciclo de vida dos dados](/help/hygiene/ui/record-delete.md).
+>
+>Além disso, as solicitações de exclusão das seguintes entidades B2B já foram descontinuadas:
 >
 >- Conta
 >- Relação Conta-Pessoa
@@ -1276,7 +1290,7 @@ Os parâmetros a seguir são usados no caminho para solicitações GET para o po
 | `relatedEntityId` | Se `schema.name` for `_xdm.context.experienceevent`, esse valor **deverá** especificar a ID da entidade de perfil relacionada. Este valor segue as mesmas regras que `entityId`. | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | Se `schema.name` for &quot;_xdm.context.experienceevent&quot;, esse valor deverá especificar o namespace de identidade da entidade especificada em `relatedEntityId`. | `relatedEntityIdNS=CRMID` |
 | `fields` | Filtra os dados retornados na resposta. Use isso para especificar quais valores de campo de esquema incluir nos dados recuperados. Para vários campos, separe os valores por vírgula sem espaços entre eles. | `fields=personalEmail,person.name,person.gender` |
-| `mergePolicyId` | Identifica a política de mesclagem pela qual controlar os dados retornados. Se um não for especificado na chamada, o padrão de sua organização para esse esquema será usado. Se nenhuma política de mesclagem padrão tiver sido configurada, o padrão será sem mesclagem de perfis e sem compilação de identidades. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
+| `mergePolicyId` | *Recomendado* Identifica a política de mesclagem pela qual controlar os dados retornados. Se um não for especificado na chamada, o padrão de sua organização para esse esquema será usado. Se nenhuma política de mesclagem padrão tiver sido definida para o esquema solicitado, a API retornará um código de status de erro HTTP 422. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
 | `orderBy` | A ordem de classificação das entidades recuperadas por carimbo de data e hora. Isso é gravado como `(+/-)timestamp`, com o padrão sendo `+timestamp`. | `orderby=-timestamp` |
 | `startTime` | Especifica a hora de início para filtrar as entidades (em milissegundos). | `startTime=1539838505` |
 | `endTime` | Especifica a hora final para filtrar entidades (em milissegundos). | `endTime=1539838510` |

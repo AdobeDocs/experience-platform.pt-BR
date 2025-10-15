@@ -2,9 +2,9 @@
 title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos do Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
+source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
 workflow-type: tm+mt
-source-wordcount: '3068'
+source-wordcount: '2935'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,12 @@ Há vários tipos de destino no Experience Platform, conforme mostrado no diagra
 
 >[!IMPORTANT]
 >
->* Observe a alteração no comportamento de exportação introduzida em setembro de 2025 para [destinos corporativos](#enterprise-behavior)
->* Esta página de documentação descreve apenas o comportamento de exportação do perfil das conexões destacadas na parte inferior do diagrama.
+>Esta página de documentação descreve apenas o comportamento de exportação do perfil das conexões destacadas na parte inferior do diagrama.
+
+<!--
+>* Note the export behavior change introduced in September 2025 for [enterprise destinations](#enterprise-behavior)
+>* This documentation page only describes the profile export behavior for the connections highlighted at the bottom of the diagram.
+-->
 
 ![Diagrama de tipos de destinos](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
@@ -43,7 +47,7 @@ A política de agregação é configurável e os desenvolvedores de destino pode
 
 >[!IMPORTANT]
 >
-> Os destinos corporativos estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Os destinos corporativos estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 Os [destinos corporativos](/help/destinations/destination-types.md#advanced-enterprise-destinations) no Experience Platform são Amazon Kinesis, Hubs de Eventos do Azure e API HTTP.
 
@@ -63,7 +67,7 @@ Com relação aos dados exportados para um determinado perfil, é importante ent
 
 | O que determina uma exportação de destino | O que está incluído na exportação de destino |
 |---------|----------|
-| <ul><li>Atributos e segmentos mapeados servem como dica para uma exportação de destino. Isso significa que se o status `segmentMembership` de um perfil for alterado para `realized` ou `exiting` ou qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas para destinos corporativos no momento, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração em um atributo é definida como qualquer atualização no atributo, seja ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração, mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>**Observação**: o comportamento de exportação para destinos corporativos foi atualizado com a versão de setembro de 2025. O novo comportamento destacado abaixo atualmente se aplica somente aos novos destinos corporativos criados após esta versão. Para destinos corporativos existentes, você pode continuar usando o comportamento de exportação antigo ou entrar em contato com a Adobe para migrar para o novo comportamento em que somente os públicos mapeados são exportados. Todas as organizações serão migradas gradualmente para o novo comportamento em 2026. <br><br> <span class="preview"> **Novo comportamento de exportação**: os segmentos mapeados para o destino e alterados serão incluídos no objeto `segmentMembership`. Em alguns cenários, eles podem ser exportados usando várias chamadas. Além disso, em alguns cenários, alguns segmentos que não foram alterados também podem ser incluídos na chamada do. Em qualquer caso, somente segmentos mapeados no fluxo de dados serão exportados.</span></li><br>**Comportamento antigo**: o objeto `segmentMembership` inclui o segmento mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou saída de segmento. Outros segmentos não mapeados para os quais o perfil qualificado pode fazer parte da exportação de destino, se esses segmentos pertencerem à mesma [política de mesclagem](/help/profile/merge-policies/overview.md) que o segmento mapeado no fluxo de dados de ativação.<li>Todas as identidades no objeto `identityMap` também estão incluídas (no momento, o Experience Platform não oferece suporte ao mapeamento de identidades no destino da empresa).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
+| <ul><li>Atributos e segmentos mapeados servem como dica para uma exportação de destino. Isso significa que se o status `segmentMembership` de um perfil for alterado para `realized` ou `exiting` ou qualquer atributo mapeado for atualizado, uma exportação de destino será iniciada.</li><li>Como as identidades não podem ser mapeadas para destinos corporativos no momento, as alterações em qualquer identidade em um determinado perfil também determinam as exportações de destino.</li><li>Uma alteração em um atributo é definida como qualquer atualização no atributo, seja ou não o mesmo valor. Isso significa que uma substituição em um atributo é considerada uma alteração, mesmo que o valor em si não tenha sido alterado.</li></ul> | <ul><li>O objeto `segmentMembership` inclui o segmento mapeado no fluxo de dados de ativação, para o qual o status do perfil foi alterado após um evento de qualificação ou saída de segmento. Observe que outros segmentos não mapeados para os quais o perfil se qualificou podem fazer parte da exportação de destino, se esses segmentos pertencerem à mesma [política de mesclagem](/help/profile/merge-policies/overview.md) que o segmento mapeado no fluxo de dados de ativação. </li><li>Todas as identidades no objeto `identityMap` também estão incluídas (no momento, o Experience Platform não oferece suporte ao mapeamento de identidades no destino da empresa).</li><li>Somente os atributos mapeados são incluídos na exportação de destino.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -77,8 +81,7 @@ Por exemplo, considere esse fluxo de dados para um destino HTTP, onde três púb
 
 ![fluxo de dados de destino da empresa](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Uma exportação de perfil para o destino pode ser determinada por um perfil qualificado para ou saindo dos *três segmentos mapeados*. Na exportação de dados, no objeto `segmentMembership`, outros públicos mapeados poderão aparecer se esse perfil específico for membro deles e se eles compartilharem a mesma política de mesclagem que o público-alvo que acionou a exportação. Se um perfil se qualificar para o público-alvo **Cliente com Carros DeLosands** e também for membro dos segmentos **Cidade e Ativo do Site Básico - Dallas**, esses outros dois públicos-alvo também estarão presentes no objeto `segmentMembership` da exportação de dados, porque eles são mapeados no fluxo de dados, se compartilharem a mesma política de mesclagem com o segmento **Cliente com Carros DeLosands**.
-
+Uma exportação de perfil para o destino pode ser determinada por um perfil qualificado para ou saindo dos *três segmentos mapeados*. No entanto, na exportação de dados, no objeto `segmentMembership`, outros públicos não mapeados poderão aparecer se esse perfil específico for membro deles e se eles compartilharem a mesma política de mesclagem que o público-alvo que acionou a exportação. Se um perfil se qualificar para o público-alvo **Customer with DeLosands Cars**, mas também for membro dos **segmentos assistidos de &quot;Back to the Future&quot;** e **Fãs de ficção científica**, esses dois outros públicos-alvo também estarão presentes no objeto `segmentMembership` da exportação de dados, mesmo que não estejam mapeados no fluxo de dados, se compartilharem a mesma política de mesclagem com o segmento **Customer with DeLosands Cars**.
 
 Do ponto de vista dos atributos de perfil, qualquer alteração nos quatro atributos mapeados acima determinará uma exportação de destino e qualquer um dos quatro atributos mapeados presentes no perfil estará presente na exportação de dados.
 

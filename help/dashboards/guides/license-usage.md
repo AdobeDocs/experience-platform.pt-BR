@@ -258,7 +258,7 @@ Gerencie e otimize proativamente seus recursos de licenciamento com previsões d
 
 Exiba um resumo do uso de direitos de um produto na guia [!UICONTROL Produto] na tabela [!UICONTROL Produtos principais].
 
-![A guia [!UICONTROL Uso da licença][!UICONTROL Produto] com um produto e a coluna de uso previsto realçada.](../images/license-usage/product-predicted-usage.png)
+![A guia [!UICONTROL Uso da licença]&#x200B;[!UICONTROL Produto] com um produto e a coluna de uso previsto realçada.](../images/license-usage/product-predicted-usage.png)
 
 >[!NOTE]
 >

@@ -2,10 +2,10 @@
 title: Visão geral do Google Ads Source
 description: Saiba como conectar o Google Ads ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: a0977e98219797eda14dd8d7ddb6cf3f1410cef0
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 0%
+ht-degree: 5%
 
 ---
 
@@ -15,15 +15,15 @@ ht-degree: 0%
 >
 >A origem [!DNL Google Ads] está na versão beta. Consulte a [Visão geral das fontes](../../home.md#terms-and-conditions) para obter mais informações sobre o uso de conectores rotulados com beta.
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
 O Experience Platform fornece suporte para assimilação de dados de um sistema de publicidade de terceiros. O suporte para provedores de publicidade inclui [!DNL Google Ads].
 
 ## Pré-requisitos {#prerequisites}
 
-### LISTA DE PERMISSÕES de endereço IP
+### INCLUIR NA LISTA DE PERMISSÕES endereço IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da sua região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ### Configurar permissões no Experience Platform
 
@@ -41,7 +41,7 @@ Você deve fornecer os valores apropriados para as credenciais a seguir para con
 | `refreshToken` | O token de atualização faz parte da autenticação [!DNL OAuth2]. Esse token permite gerar novamente os tokens de acesso após a expiração. |
 | `clientId` | A ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação [!DNL OAuth2]. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Google]. |
 | `clientSecret` | O segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação [!DNL OAuth2]. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Google]. |
-| `googleAdsApiVersion` | A versão da API atual com suporte por [!DNL Google Ads]. Enquanto a última versão é `v18`, a última versão com suporte no Experience Platform é `v17`. |
+| `googleAdsApiVersion` | A versão da API atual com suporte por [!DNL Google Ads]. Embora a versão mais recente da API do [!DNL Google Ads] seja a v21, o Experience Platform atualmente oferece suporte à versão v19 e mais recente. Verifique se você está usando uma dessas versões compatíveis para garantir a compatibilidade. |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Google Ads] é: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. Esse valor é necessário se você estiver conectando sua conta do [!DNL Google Ads] usando a API do [!DNL Flow Service]. |
 
 ## Conectar [!DNL Google Ads] ao Experience Platform

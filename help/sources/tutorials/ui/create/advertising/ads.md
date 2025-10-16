@@ -1,23 +1,22 @@
 ---
 title: Conectar o Google Ads ao Experience Platform usando a interface
 description: Saiba como conectar sua conta do Google Ads ao Adobe Experience Platform na interface do usuário do.
+badge: Beta
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 906da82a8940233b3eb226d376c454b477514bc5
 workflow-type: tm+mt
-source-wordcount: '877'
-ht-degree: 0%
+source-wordcount: '893'
+ht-degree: 1%
 
 ---
 
 # Conectar o [!DNL Google Ads] ao Experience Platform usando a interface
 
->[!WARNING]
->
->A origem [!DNL Google Ads] não está disponível na interface do usuário no momento. Você pode continuar assimilando seus dados do [!DNL Google Ads] no Experience Platform [usando a API](../../../api/create/advertising/ads.md).
-
 >[!NOTE]
 >
->A origem [!DNL Google Ads] está na versão beta. Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
+> A origem [!DNL Google Ads] está atualmente na versão beta e só oferece suporte à assimilação única. Você pode usar o [método de API](../../../api/create/advertising/ads.md) para realizar a assimilação incremental de dados de [!DNL Google Ads] na Experience Platform.
+>
+>Consulte a [Visão geral das fontes](../../../../home.md#terms-and-conditions) para obter mais informações sobre o uso de fontes com rótulo beta.
 
 Leia este guia para saber como conectar sua conta do [!DNL Google Ads] à Adobe Experience Platform usando o espaço de trabalho de fontes na interface do usuário do Experience Platform.
 
@@ -64,7 +63,7 @@ Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um n
 * **Token de atualização**: o token de atualização faz parte da autenticação [!DNL OAuth2]. Esse token permite gerar novamente os tokens de acesso após a expiração.
 * **ID do Cliente**: a ID do cliente é usada em conjunto com o segredo do cliente como parte da autenticação [!DNL OAuth2]. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Google].
 * **Segredo do cliente**: o segredo do cliente é usado em conjunto com a ID do cliente como parte da autenticação [!DNL OAuth2]. Juntos, a ID do cliente e o segredo do cliente permitem que o aplicativo opere em nome da sua conta, identificando o aplicativo no [!DNL Google].
-* Versão da API **[!DNL Google Ads]**: a versão da API atual com suporte de [!DNL Google Ads]. Enquanto a última versão é `v18`, a última versão com suporte no Experience Platform é `v17`.
+* Versão da API **[!DNL Google Ads]**: a versão da API atual com suporte de [!DNL Google Ads]. Embora a versão mais recente da API do [!DNL Google Ads] seja a v21, o Experience Platform atualmente oferece suporte à versão v19 e mais recente. Verifique se você está usando uma dessas versões compatíveis para garantir a compatibilidade.
 
 Depois de inserir suas credenciais, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns minutos para que a conexão seja processada. Quando terminar, selecione **[!UICONTROL Próximo]**.
 
@@ -72,7 +71,7 @@ Depois de inserir suas credenciais, selecione **[!UICONTROL Conectar à origem]*
 
 ## Selecionar dados {#select-data}
 
-Com [!DNL Google Ads], você deve fornecer a lista de atributos para assimilação durante a fase de seleção de dados do fluxo de trabalho. Para recuperar esses atributos, você deve usar o [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v17/overview_query_builder).
+Com [!DNL Google Ads], você deve fornecer a lista de atributos para assimilação durante a fase de seleção de dados do fluxo de trabalho. Para recuperar esses atributos, você deve usar o [[!DNL Google Ads Query Builder]](https://developers.google.com/google-ads/api/fields/v19/overview_query_builder).
 
 No [!DNL Google Ads Query Builder], navegue até o tipo de recurso que deseja usar e use o seletor de atributos para selecionar seus atributos, segmentos e métricas.
 

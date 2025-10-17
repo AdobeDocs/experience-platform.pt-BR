@@ -3,9 +3,9 @@ title: Visão geral do Snowflake Streaming Source Connector
 description: Saiba como criar uma conexão de origem e um fluxo de dados para assimilar dados de transmissão da sua instância do Snowflake para a Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 0d646136da2c508fe7ce99a15787ee15c5921a6c
+source-git-commit: 1d0cc448293ab3cad6ccb971bb2edc86c1b01a5c
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1510'
 ht-degree: 3%
 
 ---
@@ -157,6 +157,25 @@ Você deve configurar privilégios para uma função, mesmo que a função públ
 >O reinício automático e a suspensão automática devem estar ativados na configuração avançada do seu warehouse.
 
 Para obter mais informações sobre o gerenciamento de funções e privilégios, consulte a [[!DNL Snowflake] Referência da API](<https://docs.snowflake.com/en/sql-reference/sql/grant-privilege>).
+
+## Converter hora Unix em campos de data
+
+O [!DNL Snowflake Streaming] analisa e grava os campos ` DATE` como o número de dias desde a época Unix (01-1970). Por exemplo, um valor de `DATE` de 0 significa 1 de janeiro de 1970, enquanto um valor de 1 significa 2 de janeiro de 1970. Portanto, Ao preparar o arquivo para criar mapeamentos na origem [!DNL Snowflake Streaming], certifique-se de que a coluna `DATE` seja representada como um inteiro.
+
+Você pode usar as [funções de dados e tempo do Preparo de Dados](../../../data-prep/functions.md#date-and-time-functions) para converter o horário Unix em campos de data que podem ser assimilados no Experience Platform. Por exemplo:
+
+```shell
+dformat({DATE_COLUMN} * 86400000, "yyyy-MM-dd")
+```
+
+Nesta função:
+
+* `{DATE_COLUMN}` é a coluna de data que contém o número inteiro da época.
+* Multiplicar por 86400000 converte os dias da época em milissegundos.
+* &#39;aaaa-MM-dd&#39; especifica o formato de data desejado.
+
+Essa conversão garante que a data seja representada corretamente no conjunto de dados.
+
 
 ## Limitações e perguntas frequentes {#limitations-and-frequently-asked-questions}
 

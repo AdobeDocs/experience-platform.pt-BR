@@ -2,9 +2,9 @@
 title: Assimilação sob demanda para fluxos de dados de origens na interface
 description: Saiba como criar fluxos de dados sob demanda para suas conexões de origem usando a interface do usuário do Experience Platform.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fabacf273fb5774ddcee42d0cdcf12281eb0216b
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Este documento fornece etapas sobre como criar fluxos de dados sob demanda para 
 
 **O que é uma execução de fluxo?**
 
-As execuções de fluxo representam uma instância da execução do fluxo de dados. Por exemplo, se um fluxo de dados estiver programado para ser executado por hora às 9h, 10h e 11h, você terá três instâncias de um fluxo em execução. As execuções de fluxo são específicas para sua organização específica.
+As execuções de fluxo representam uma instância da execução do fluxo de dados. Por exemplo, se um fluxo de dados estiver agendado para ser executado por hora às 9h00, 10h10 e 11h20, você terá três instâncias de um fluxo em execução. :00:00:00 As execuções de fluxo são específicas para sua organização específica.
 
 >[!ENDSHADEBOX]
 
@@ -58,6 +58,10 @@ Selecione **[!UICONTROL Agendar]** e aguarde alguns momentos para o fluxo de dad
 ![A janela de configuração de agendamento para assimilação sob demanda.](../../images/tutorials/on-demand/configure-schedule.png)
 
 Selecione o nome do fluxo de dados para exibir a atividade do fluxo de dados. Aqui você verá uma lista de execuções de fluxo de dados que foram processadas. Você pode executar novamente iterações individuais das execuções do fluxo de dados, independentemente de terem falhado ou sido bem-sucedidas. Para iterações de execução que falharam, você pode usar **[!UICONTROL Repetir]** para iniciar a execução novamente após diagnosticar e resolver quaisquer erros que tenham sido encontrados durante o processo de criação.
+
+>[!TIP]
+>
+>A repetição de uma execução de fluxo processará somente arquivos com carimbos de data e hora que se enquadrem na faixa da execução original.
 
 ![Uma lista de execuções de fluxo processadas para um fluxo de dados selecionado.](../../images/tutorials/on-demand/processed.png)
 

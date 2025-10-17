@@ -6,9 +6,9 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 84cc86e4afa74668ba00a7ef5ba824f44db3f8f1
+source-git-commit: cc89bf68011499e69f4ed8c7dc891ec02a34d361
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '791'
 ht-degree: 44%
 
 ---
@@ -306,6 +306,7 @@ ht-degree: 44%
    * [Hospedagem de bibliotecas de terceiros](./extension-dev/third-party-libraries.md)
    * [Variável sem turbina](./extension-dev/turbine.md)
    * [Padrão de compatibilidade com versões anteriores](./extension-dev/backwards-compatibility.md)
+   * [Extensões privadas compartilhadas](./extension-dev/shared-private-extensions.md)
 * API do Reactor {#api}
    * [Visão geral](./api/overview.md)
    * [Autenticar e acessar a API do Reator](./api/getting-started.md)

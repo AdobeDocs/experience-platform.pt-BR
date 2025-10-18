@@ -19,7 +19,7 @@ As configurações de identidade são um recurso na interface do serviço de ide
 
 Assista ao vídeo a seguir para obter mais informações sobre como usar a interface [!DNL Graph Simulation] no espaço de trabalho da interface do usuário do Serviço de Identidade:
 
->[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475967/?captions=por_br&learn=on&enablevpops)
 
 Leia este guia para saber como definir suas configurações de identidade na interface do usuário.
 

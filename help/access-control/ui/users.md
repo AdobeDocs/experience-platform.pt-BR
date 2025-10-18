@@ -29,7 +29,7 @@ Depois de selecionar um usuário, selecione **[!UICONTROL Salvar]** para adicion
 
 O vídeo a seguir é destinado a ajudá-lo a entender o gerenciamento de administradores para um perfil de produto.
 
->[!VIDEO](https://video.tv.adobe.com/v/333860/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475946/?captions=por_br&learn=on)
 
 ## Próximas etapas
 

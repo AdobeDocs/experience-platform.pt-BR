@@ -61,7 +61,7 @@ O conhecimento do produto refere-se a conceitos e tópicos fundamentados na docu
 
 Assista ao vídeo a seguir para obter informações adicionais sobre o conhecimento do produto do Assistente de IA:
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475935/?captions=por_br&learn=on)
 
 ### Insights operacionais {#operational-insights}
 

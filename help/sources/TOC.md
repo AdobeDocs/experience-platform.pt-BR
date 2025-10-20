@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 52dfba88ce3549fb93e8cfcca144e6be720bc26b
+source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1073'
 ht-degree: 34%
 
 ---
@@ -105,6 +105,7 @@ ht-degree: 34%
       - [Conector de carregamento de arquivo local](connectors/local-system/local-file-upload.md)
    - Fidelidade {#loyalty}
       - [Eventos de transmissão capilares](connectors/loyalty/capillary.md)
+      - [Talon.One](connectors/loyalty/talon-one.md)
    - Automação de marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -114,7 +115,7 @@ ht-degree: 34%
       - [Conector Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
-      - [&#x200B; Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
+      - [ Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamentos {#payments}
       - [Conector quadrado](connectors/payments/square.md)
       - [Conector do Stripe](connectors/payments/stripe.md)
@@ -154,7 +155,7 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [&#x200B; Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [ Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
@@ -191,7 +192,7 @@ ht-degree: 34%
          - [Atividades do Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Entidades do Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
-         - [&#x200B; Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [ Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamentos {#payments}
          - [Quadrado](tutorials/api/create/payments/square.md)
          - [Stripe](tutorials/api/create/payments/stripe.md)
@@ -277,7 +278,7 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [&#x200B; Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [ Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
@@ -315,6 +316,8 @@ ht-degree: 34%
          - [Carregamento de arquivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Fidelidade {#loyalty}
          - [Eventos de transmissão capilares](tutorials/ui/create/loyalty/capillary.md)
+         - [Eventos de transmissão Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
+         - [Conector Talon.One Batch Source](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Automação de marketing {#marketing-automation}
          - [Braze Currents](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -327,7 +330,7 @@ ht-degree: 34%
          - [Entidades do Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Conector de retransmissão](tutorials/ui/create/marketing-automation/relay-connector.md)
-         - [&#x200B; Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [ Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamentos {#payments}
          - [Quadrado](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)

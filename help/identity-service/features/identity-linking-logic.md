@@ -2,9 +2,9 @@
 title: Lógica de vinculação do serviço de identidade
 description: Saiba mais sobre como o Serviço de identidade vincula identidades diferentes para criar uma visualização abrangente de um cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '966'
 ht-degree: 2%
 
 ---
@@ -22,6 +22,10 @@ Há dois tipos de identidades que são vinculadas:
 
 * **Registros de perfil**: essas identidades geralmente vêm de sistemas CRM.
 * **Eventos de experiência**: essas identidades geralmente vêm da implementação do SDK da Web ou da origem do Adobe Analytics.
+
+>[!IMPORTANT]
+>
+>O Serviço de identidade diferencia maiúsculas e minúsculas. Por exemplo, **abc<span>@gmail.com** e **ABC<span>@GMAIL.COM** seriam tratados como duas identidades de email separadas.
 
 ## Significado semântico do estabelecimento de vínculos
 
@@ -70,7 +74,7 @@ Um par de identidades é assimilado em seu gráfico e esse par contém:
 
 >[!TAB Gráfico atualizado]
 
-O Serviço de identidade reconhece que CRMID:60013ABC já existe em seu gráfico e, portanto, vincula apenas a nova ECID
+O Serviço de identidade reconhece que o CRMID:60013ABC já existe no seu gráfico e, portanto, vincula somente a nova ECID
 
 ![gráfico atualizado](../images/identity-settings/updated-graph.png)
 
@@ -111,7 +115,7 @@ A identidade primária para cada evento será determinada com base em [como voc�
 
 Neste exemplo:
 
-* `t=1`, usou um computador desktop (ECID:38652) e para exibir a navegação da página inicial de forma anônima.
+* `t=1`, usou um computador desktop (ECID:38652) e, para exibir a navegação da home page, navegou anonimamente.
 * `t=2`, usou o mesmo computador desktop, fez logon (CRMID:31260XYZ) e procurou sapatos.
    * Depois que um usuário é conectado, o evento envia ECID e CRMID para o Serviço de identidade.
 * `t=3`, usou um laptop (ECID:44675) e navegou anonimamente.
@@ -133,25 +137,25 @@ Em `timestamp=0`, você tem dois gráficos de identidade para dois clientes dife
 
 >[!TAB carimbo de data/hora=1]
 
-No `timestamp=1`, um cliente usa um laptop para visitar seu site de comércio eletrônico, exibir sua home page e navegar anonimamente. Esse evento de navegação anônimo é identificado como ECID:38652. Como o Serviço de identidade armazena apenas eventos com pelo menos duas identidades, essas informações não são armazenadas.
+No `timestamp=1`, um cliente usa um laptop para visitar seu site de comércio eletrônico, exibir sua home page e navegar anonimamente. Este evento de navegação anônimo é identificado como ECID:38652. Como o Serviço de identidade armazena apenas eventos com pelo menos duas identidades, essas informações não são armazenadas.
 
 ![carimbo-de-data-hora-um](../images/identity-settings/timestamp-one.png)
 
 >[!TAB carimbo de data/hora=2]
 
-No `timestamp=2`, um cliente usa o mesmo laptop para visitar o site de comércio eletrônico. Eles fazem logon com sua combinação de nome de usuário e senha e procuram sapatos. O serviço de identidade identifica a conta do cliente quando ele faz logon, pois ela corresponde à CRMID: 31260XYZ. Além disso, o Serviço de identidade relaciona ECID:38562 a CRMID:31260XYZ, pois ambos usam o mesmo navegador no mesmo dispositivo.
+No `timestamp=2`, um cliente usa o mesmo laptop para visitar o site de comércio eletrônico. Eles fazem logon com sua combinação de nome de usuário e senha e procuram sapatos. O serviço de identidade identifica a conta do cliente quando ele faz logon, pois ela corresponde à CRMID: 31260XYZ. Além disso, o Serviço de Identidade relaciona a ECID:38562 ao CRMID:31260XYZ, pois ambos estão usando o mesmo navegador no mesmo dispositivo.
 
 ![carimbo de data/hora-dois](../images/identity-settings/timestamp-two.png)
 
 >[!TAB carimbo de data/hora=3]
 
-No `timestamp=3`, um cliente usa um tablet para visitar seu site de comércio eletrônico e navegar anonimamente. Esse evento de navegação anônimo é identificado como ECID:44675. Como o Serviço de identidade armazena apenas eventos com pelo menos duas identidades, essas informações não são armazenadas.
+No `timestamp=3`, um cliente usa um tablet para visitar seu site de comércio eletrônico e navegar anonimamente. Este evento de navegação anônimo é identificado como ECID:44675. Como o Serviço de identidade armazena apenas eventos com pelo menos duas identidades, essas informações não são armazenadas.
 
 ![carimbo de data/hora-três](../images/identity-settings/timestamp-three.png)
 
 >[!TAB carimbo de data/hora=4]
 
-Em `timestamp=4`, um cliente usa o mesmo tablet, faz logon em sua conta (CRMID:31260XYZ) e visualiza o histórico de compras. Esse evento vincula seu CRMID:31260XYZ ao identificador de cookie atribuído à atividade de navegação anônima, ECID:44675, e vincula o ECID:44675 ao gráfico de identidade do cliente dois.
+Em `timestamp=4`, um cliente usa o mesmo tablet, faz logon em sua conta (CRMID:31260XYZ) e exibe seu histórico de compras. Este evento vincula seu CRMID:31260XYZ ao identificador de cookie atribuído à atividade de navegação anônima, ECID:44675, e vincula o ECID:44675 ao gráfico de identidade do cliente dois.
 
 ![carimbo-data-hora-quatro](../images/identity-settings/timestamp-four.png)
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossário do Adobe Experience Platform
 description: Um glossário de termos importantes na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '8009'
+source-wordcount: '8170'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 **Atributos**: atributos são características especificadas que representam um perfil.
 
-**Mesclagem de atributos**: ao definir uma política de mesclagem usando a API de perfil de cliente em tempo real, o objeto `attributeMerge` indica a maneira pela qual a política de mesclagem priorizará os atributos de perfil em caso de conflitos de dados. É equivalente a selecionar um [!UICONTROL método de mesclagem] ao definir uma política de mesclagem na interface do usuário do Experience Platform.
+**Mesclagem de atributos**: ao definir uma política de mesclagem usando a API de perfil de cliente em tempo real, o objeto `attributeMerge` indica a maneira pela qual a política de mesclagem priorizará os atributos de perfil em caso de conflitos de dados. É equivalente a selecionar um [!UICONTROL Merge method] ao definir uma política de mesclagem na interface do usuário do Experience Platform.
 
 **IA de atribuição**: [!DNL Attribution AI] é um Serviço inteligente fornecido pela Adobe Sensei que fornece recursos de atribuição de vários canais algorítmicos por todo o ciclo de vida do cliente.
 
@@ -281,7 +281,7 @@ O **Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) é uma estr
 
 **Rótulos de identidade (&quot;I&quot;)**: os rótulos de uso de dados de identidade (&quot;I&quot;) são usados para categorizar dados que podem identificar ou contatar uma pessoa específica.
 
-**Gráfico de identidade**: um gráfico de identidade é um mapa de relacionamentos entre identidades compiladas e vinculadas que existem para um cliente individual. Cada gráfico de identidade é atualizado em tempo quase real com a atividade do cliente. A estrutura comum das relações de identidade em seus dados é representada pelo [!UICONTROL Gráfico privado], que serve como blueprint estrutural para cada gráfico de identidade individual.
+**Gráfico de identidade**: um gráfico de identidade é um mapa de relacionamentos entre identidades compiladas e vinculadas que existem para um cliente individual. Cada gráfico de identidade é atualizado em tempo quase real com a atividade do cliente. A estrutura comum das relações de identidade em seus dados é representada pelo [!UICONTROL Private Graph], que serve como blueprint estrutural para cada gráfico de identidade individual.
 
 **Namespace de identidade**: um namespace de identidade define o contexto de um identificador, como um endereço de email ou uma ID de CRM.
 
@@ -351,6 +351,8 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 **Módulo**: no contexto de marcas, um módulo é um trecho de JavaScript executável fornecido por uma extensão, que executa ações em um ambiente cliente sem precisar criar uma regra.
 
+**MODPA**: o [!DNL Maryland Online Data Privacy Act] (MODPA) de 2024 concede aos residentes de Maryland direitos incluindo acesso, correção, exclusão e portabilidade de dados. Os residentes podem recusar a publicidade direcionada, a venda de dados pessoais e a definição de perfis. Os controladores devem fornecer os avisos de privacidade e realizar avaliações de proteção de dados para processamento de alto risco. O MODPA se destaca pela proibição de geofencing em torno de instalações de saúde mental ou reprodutiva. A lei se aplica a entidades que processam dados de mais de 35 mil consumidores, ou àquelas que processam dados de mais de 10 mil consumidores e obtêm mais de 20% de sua receita com a venda desses dados. É aplicado pelo Procurador Geral de Maryland.
+
 ## N
 
 **[!DNL New Zealand Privacy Act]**: O [[!DNL New Zealand Privacy Act]](https://www.privacy.org.nz/privacy-act-2020/privacy-principles/) controla como as agências podem coletar, usar, divulgar, armazenar e dar acesso às informações pessoais de cidadãos e organizações da Nova Zelândia. Em 2020, a versão mais recente da lei introduziu atualizações significativas nessas leis de privacidade, incluindo novas infrações, aumento das multas, notificações obrigatórias por violações de dados e aumento dos poderes do Comissário para a Privacidade.
@@ -377,17 +379,15 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 ## P
 
-**Assimilação parcial**: a assimilação parcial permite a assimilação de registros válidos de dados em lote dentro de um limite de erro especificado. O diagnóstico de erro para registros com falha pode ser baixado ou acessado na visão geral de execução do fluxo de dados de [!UICONTROL Monitoramento] ou [!UICONTROL Fontes].
+**Assimilação parcial**: a assimilação parcial permite a assimilação de registros válidos de dados em lote dentro de um limite de erro especificado. O diagnóstico de erro para registros com falha pode ser baixado ou acessado na visão geral de execução do fluxo de dados [!UICONTROL Monitoring] ou [!UICONTROL Sources].
 
 **Arquivos Parquet**: um arquivo Parquet é um formato de arquivo de armazenamento em colunas com estruturas de dados aninhadas complexas. Os arquivos Parquet são necessários para adicionar dados a fim de preencher um conjunto de dados de esquema.
 
 **PDPA**: o [[!DNL Personal Data Protection Act (PDPA)]](https://www.pdpc.gov.sg/Overview-of-PDPA/The-Legislation/Personal-Data-Protection-Act) foi introduzido para proteger os proprietários de dados tailandeses da coleta, uso ou divulgação ilegais de seus dados pessoais. Inspirado pelo GDPR da União Europeia, o regulamento concede aos cidadãos tailandeses o direito de solicitar acesso ou a exclusão de seus dados pessoais armazenados.
 
-<!-- Not yet released
-**PDPD**: The [[!DNL Personal Data Protection Decree] (PDPD) 
--->
-
 **Ofertas personalizadas**: uma oferta personalizada é uma mensagem de marketing personalizável baseada em regras de elegibilidade e restrições.
+
+**PIPA** (Coreia do Sul): o [[!DNL Personal Information Protection Act] (PIPA)](https://elaw.klri.re.kr/eng_service/lawView.do?hseq=53044&lang=ENG) regula o processamento e a proteção de dados pessoais para residentes da Coreia do Sul. O PIPA concede direitos para ser informado, acessar, obter cópias e solicitar correção, exclusão ou suspensão do processamento. Os controladores de informações pessoais devem especificar os objetivos de coleta, processar os dados legalmente na extensão mínima necessária e garantir a precisão dos dados. A PIPA também criou a Comissão de Proteção de Informações Pessoais para investigar e aplicar as regulamentações de proteção de dados pessoais.
 
 **Posicionamentos**: um posicionamento é o local e/ou contexto em que uma oferta é exibida para o usuário final.
 

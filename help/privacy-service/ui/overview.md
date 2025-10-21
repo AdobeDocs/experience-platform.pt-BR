@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da interface do usuário do Privacy Service
 description: Introdução ao uso da interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos do Experience Cloud.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
-source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 20%
+source-wordcount: '223'
+ht-degree: 21%
 
 ---
 
@@ -30,14 +30,14 @@ A interface do usuário do Privacy Service permite coordenar solicitações de p
 >
 >É necessário ter uma Adobe ID para autenticar na interface do usuário do [!DNL Privacy Service].
 
-Para acessar a interface do usuário, faça logon no [Adobe Experience Cloud](https://experience.adobe.com/) e selecione **[!UICONTROL Interface do usuário de privacidade]** no menu de acesso rápido.
+Para acessar a interface, faça logon no [Adobe Experience Cloud](https://experience.adobe.com/) e selecione **[!UICONTROL Privacy Service]** no menu de acesso rápido.
 
-![Painel do Experience Cloud com Interface do Usuário de Privacidade realçado.](../images/ui-overview/quick-access.png)
+![Painel do Experience Cloud com Privacy Service realçado.](../images/ui-overview/quick-access.png)
 
 
 ### Fazendo login de [!DNL Experience Platform]
 
-Se você tiver acesso à interface do Adobe Experience Platform, também poderá acessar a interface do usuário [!DNL Privacy Service] por meio da guia **[!UICONTROL Solicitações]** na navegação à esquerda.
+Se você tiver acesso à interface do Adobe Experience Platform, também poderá acessar a interface do usuário [!DNL Privacy Service] por meio da guia **[!UICONTROL Requests]** na navegação à esquerda.
 
 ![A interface do usuário do Adobe Experience Platform com Solicitações é realçada na barra de navegação à esquerda.](../images/ui-overview/platform.png)
 

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Gerenciar processos de privacidade na interface do Privacy Service
 description: Saiba como usar a interface do usuário do Privacy Service para coordenar e monitorar solicitações de privacidade em vários aplicativos da Experience Cloud.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
+source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
 workflow-type: tm+mt
-source-wordcount: '1770'
-ht-degree: 11%
+source-wordcount: '1689'
+ht-degree: 12%
 
 ---
 
@@ -28,52 +28,61 @@ Este documento fornece etapas para criar e gerenciar solicitações de privacida
 
 ## Navegar no painel da interface do usuário [!DNL Privacy Service]
 
-O painel da interface do usuário do [!DNL Privacy Service] fornece dois widgets que permitem exibir o status dos seus trabalhos de privacidade: &quot;[!UICONTROL Relatório de Status]&quot; e &quot;[!UICONTROL Solicitações de Trabalho]&quot;. O painel também exibe o regulamento selecionado atual para os trabalhos exibidos.
+O painel da interface do usuário do [!DNL Privacy Service] fornece dois widgets que permitem exibir o status dos seus trabalhos de privacidade: &quot;[!UICONTROL Status Report]&quot; e &quot;[!UICONTROL Job Requests]&quot;. O painel também exibe o regulamento selecionado atual para os trabalhos exibidos.
 
 ![painel da interface](../images/user-guide/dashboard.png)
 
-### Tipo de regulação
+### Tipo de regulamento
 
-O [!DNL Privacy Service] dá suporte a solicitações de trabalho para vários regulamentos de privacidade. A tabela a seguir lista os regulamentos compatíveis e seus rótulos correspondentes, conforme representados na interface do usuário:
+O [!DNL Privacy Service] dá suporte a solicitações de trabalho para vários regulamentos de privacidade. A tabela a seguir lista os regulamentos compatíveis e seus rótulos correspondentes, conforme representados na interface do usuário do.
 
-| Rótulo da interface | Regulação |
-|-------------------------------------|------------------------|
-| [!UICONTROL APA_AUS (Austrália)] | O [!DNL Australia Privacy Act] |
-| [!UICONTROL CCPA (Califórnia)] | O [!DNL California Consumer Privacy Act] |
-| [!UICONTROL CPA_USA (Colorado)] | O [!DNL Colorado Privacy Act] |
-| [!UICONTROL CPRA_USA (Califórnia)] | O [!DNL California Consumer Privacy Rights Act (CPRA)] |
-| [!UICONTROL CTDPA_USA (Connecticut)] | O [!DNL Connecticut Data Privacy Act] |
-| [!UICONTROL DPDPA_USA (Delaware)] | O [!DNL Delaware Personal Data Privacy Act] |
-| [!UICONTROL FDBR_USA (Flórida)] | O [!DNL Florida Digital Bill of Rights] |
-| [!UICONTROL GDPR (União Europeia)] | O [!DNL General Data Protection Regulation] da União Europeia |
-| [!UICONTROL HIPPA_USA (Estados Unidos)] | O [!DNL Health Insurance Portability and Accountability Act] |
-| [!UICONTROL ICDPA_USA] (Iowa) | O [!DNL Iowa Consumer Data Protection Act] |
-| [!UICONTROL LGPD_BRA (Brasil)] | Brasil: &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
-| [!UICONTROL MHMDA_USA (Washington)] | O [!DNL Washington My Health My Data Act] |
-| [!UICONTROL MCDPA_USA (Montana)] | O [!DNL Montana Consumer Data Privacy Act] |
-| [!UICONTROL NDPA_USA (Nebraska)] | O [!DNL Nebraska Data Protection Act] |
-| [!UICONTROL NZPA_NZL (Nova Zelândia)] | Nova Zelândia: [!DNL Privacy Act] |
-| [!UICONTROL NHPA_USA (New Hampshire)] | O [!DNL New Hampshire Privacy Act] |
-| [!UICONTROL NJDPA_USA (Nova Jersey)] | O [!DNL New Jersey Data Protection Act] |
-| [!UICONTROL OCPA EUA (Oregon)] | O [!DNL Oregon Consumer Privacy Act] |
-| [!UICONTROL PDPA_THA (Tailândia)] | Da Tailândia: [!DNL Personal Data Protection Act] |
-| [!UICONTROL QL25_CAN (Quebec)] | [!DNL Quebec Law 25] |
-| [!UICONTROL TDPSA EUA (Texas)] | O [!DNL Texas Data Privacy and Security Act] |
-| [!UICONTROL UCPA_USA (Utah)] | O [!DNL Utah Consumer Privacy Act] |
-| [!UICONTROL VCDPA_USA (Virgínia)] | O [!DNL Virginia Consumer Data Protection Act] |
+Consulte a [Visão geral das regras de privacidade](../regulations/overview.md) para obter uma descrição de cada regra que explica os direitos do consumidor e as obrigações comerciais obrigatórias.
+
+>[!TIP]
+>
+>O tipo de regulamento API foi incluído para conveniência geral.
+
+| Rótulo da interface | API `regulation_type` | Regulação |
+|-------------------------------------------|-----------------------|----------------|
+| [!UICONTROL APA_AUS (Australia)] | `apa_aus` | [!DNL Australia Privacy Act] |
+| [!UICONTROL CCCA (California)] | `ccpa` | [!DNL California Consumer Privacy Act] (CCPA) |
+| [!UICONTROL CPA_CO_USA (Colorado)] | `cpa_co_usa` | [!DNL Colorado Privacy Act] |
+| [!UICONTROL CPRA_CA_USA (California)] | `cpra_ca_usa` | [!DNL California Privacy Rights Act] (CPRA) |
+| [!UICONTROL CTDPA_CT_USA (Connecticut)] | `ctdpa_ct_usa` | [!DNL Connecticut Data Privacy Act] |
+| [!UICONTROL DPDPA_DE_USA (Delaware)] | `dpdpa_de_usa` | [!DNL Delaware Personal Data Privacy Act] |
+| [!UICONTROL FDBR_FL_USA (Florida)] | `fdbr_fl_usa` | [!DNL Florida Digital Bill of Rights] |
+| [!UICONTROL GDPR (European Union)] | `gdpr` | O [!DNL General Data Protection Regulation] da União Europeia |
+| [!UICONTROL HIPAA_USA (United States)] | `hipaa_usa` | [!DNL Health Insurance Portability and Accountability Act] |
+| [!UICONTROL ICDPALIA_USA (Iowa)] | `icdpa_ia_usa` | [!DNL Iowa Consumer Data Protection Act] |
+| [!UICONTROL LGPD_BRA (Brazil)] | `lgpd_bra` | Brasil: &quot;[!DNL General Data Protection Law]&quot; [!DNL Lei Geral de Proteção de Dados] |
+| [!UICONTROL MCDPA_MN_USA (Minnesota)] | `mcdpa_mn_usa` | [!DNL Minnesota Consumer Data Privacy Act] |
+| [!UICONTROL MCDPA_MT_USA (Montana)] | `mcdpa_mt_usa` | [!DNL Montana Consumer Data Privacy Act] |
+| [!UICONTROL MHMDA_WA_USA (Washington)] | `mhmda_wa_usa` | [!DNL Washington My Health My Data Act] |
+| [!UICONTROL MODPA_MD_USA (Maryland)] | `modpa_md_usa` | [!DNL Maryland Online Data Privacy Act] |
+| [!UICONTROL NDPA_NE_USA (Nebraska)] | `ndpa_ne_usa` | [!DNL Nebraska Data Protection Act] |
+| [!UICONTROL NHPA_NH_USA (New Hampshire)] | `nhpa_nh_usa` | [!DNL New Hampshire Privacy Act] |
+| [!UICONTROL NJDPA_NJ_USA (New Jersey)] | `njdpa_nj_usa` | [!DNL New Jersey Data Protection Act] |
+| [!UICONTROL NZPA_NZL (New Zealand)] | `nzpa_nzl` | Nova Zelândia: [!DNL Privacy Act] (PA) |
+| [!UICONTROL OCPA_OR_USA (Oregon)] | `ocpa_or_usa` | [!DNL Oregon Consumer Privacy Act] |
+| [!UICONTROL PDPA_THA (Thailand)] | `pdpa_tha` | [!DNL Personal Data Protection Act] da Tailândia (PDPA) |
+| [!UICONTROL PIPA_KOR (South Korea)] | `pipa_kor` | Coreia do Sul [!DNL Personal Information Privacy Act] (PIPA) |
+| [!UICONTROL QL25_QC_CAN (Quebec)] | `ql25_qc_can` | [!DNL Quebec Law 25] |
+| [!UICONTROL TDPSA_TX_USA (Texas)] | `tdpsa_tx_usa` | [!DNL Texas Data Privacy and Security Act] |
+| [!UICONTROL TIPA_TN_USA (Tennessee)] | `tipa_tn_usa` | [!DNL Tennessee Information Protection Act] |
+| [!UICONTROL UCPA_UT_USA (Utah)] | `ucpa_ut_usa` | [!DNL Utah Consumer Privacy Act] |
+| [!UICONTROL VCDPA_VA_USA (Virginia)] | `vcdpa_va_usa` | [!DNL Virginia Consumer Data Protection Act] (VCDPA) |
 
 {style="table-layout:auto"}
 
-<!-- 
-Waiting:
-| **[!UICONTROL PIPA_KOR]**  ?        | South Korea [!DNL Personal Information Privacy Act] |
- -->
+<!-- | [!UICONTROL ICDPA_IN_USA (Indiana)]       | `icdpa_in_usa` | [!DNL Indiana Consumer Data Protection Act]| NOT SUPP YET JAN 1st ### ... -->
+<!-- | [!UICONTROL KCDPA_KY_USA (Kentucky)]      | `kcdpa_ky_usa`| [!DNL Kentucky Consumer Data Protection Act]|  NOT SUPP YET JAN 1st ### ... -->
+<!-- | [!UICONTROL RIDTPPA_RI_USA (Rhode Island)]| `ridtppa_ri_usa` | [!DNL Rhode Island Data Transparency and Privacy Protection Act]|  NOT SUPP YET JAN 1st ### ... -->
 
 >[!NOTE]
 >
 >Consulte a visão geral em [regulamentos de privacidade compatíveis](../regulations/overview.md) para obter mais informações sobre o contexto legal de cada regulamento.
 
-As ordens de produção para cada tipo de regulamento são rastreadas separadamente. Para alternar entre tipos de regulamentos, selecione o menu suspenso **[!UICONTROL Tipo de Regulamento]** e selecione o regulamento desejado na lista.
+As ordens de produção para cada tipo de regulamento são rastreadas separadamente. Para alternar entre tipos de regulamentos, selecione o menu suspenso **[!UICONTROL Regulation Type]** e selecione o regulamento desejado na lista.
 
 ![O console Privacy Service com a lista suspensa Tipo de Regulamentação.](../images/user-guide/regulation.png)
 
@@ -81,7 +90,7 @@ Ao alterar o tipo de regulamento, o painel é atualizado para mostrar todas as o
 
 ![Painel atualizado](../images/user-guide/dashboard-update.png)
 
-### Status do relatório
+### Relatório de Status
 
 O gráfico no lado esquerdo do widget Relatório de status rastreia as tarefas enviadas em relação às tarefas que foram relatadas com erros. O gráfico no lado direito rastreia os trabalhos próximos ao final da janela de conformidade de 30 dias.
 
@@ -103,13 +112,13 @@ Para exibir mais detalhes sobre determinado ponto de dados, selecione o ponto de
 
 ### Solicitações de tarefa {#job-requests}
 
-O espaço de trabalho [!UICONTROL Solicitações de Trabalho] lista detalhes sobre as solicitações de trabalho recentes na sua organização. Os detalhes incluem tipo de solicitação, status atual, data de vencimento, email do solicitante e assim por diante. Conjuntos de 100 registros são carregados de cada vez. Por padrão, os trabalhos criados mais recentemente são exibidos na parte superior com mais conjuntos de registros carregados à medida que você rolar a tela para baixo para navegar.
+O espaço de trabalho [!UICONTROL Job Requests] lista detalhes sobre as solicitações de trabalho recentes em sua organização. Os detalhes incluem tipo de solicitação, status atual, data de vencimento, email do solicitante e assim por diante. Conjuntos de 100 registros são carregados de cada vez. Por padrão, os trabalhos criados mais recentemente são exibidos na parte superior com mais conjuntos de registros carregados à medida que você rolar a tela para baixo para navegar.
 
 >[!NOTE]
 >
 >Os dados de trabalhos criados anteriormente só podem ser acessados por 30 dias após a data de conclusão.
 
-Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo do título [!UICONTROL Solicitações de trabalho]. A lista filtra automaticamente à medida que você digita, mostrando solicitações que contêm valores correspondentes aos termos da pesquisa. O campo de pesquisa executa uma pesquisa &quot;rápida&quot; que corresponde IDs de trabalho de privacidade aos trabalhos renderizados/carregados atualmente na interface do usuário. Não é uma pesquisa abrangente de todas as tarefas submetidas. Em vez disso, é um filtro aplicado aos resultados carregados. Use a API do Privacy Service para [retornar trabalhos com base em um regulamento específico, intervalos de datas ou um único trabalho](../api/privacy-jobs.md#list).
+Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo do título [!UICONTROL Job Requests]. A lista filtra automaticamente à medida que você digita, mostrando solicitações que contêm valores correspondentes aos termos da pesquisa. O campo de pesquisa executa uma pesquisa &quot;rápida&quot; que corresponde IDs de trabalho de privacidade aos trabalhos renderizados/carregados atualmente na interface do usuário. Não é uma pesquisa abrangente de todas as tarefas submetidas. Em vez disso, é um filtro aplicado aos resultados carregados. Use a API do Privacy Service para [retornar trabalhos com base em um regulamento específico, intervalos de datas ou um único trabalho](../api/privacy-jobs.md#list).
 
 >[!TIP]
 >
@@ -117,11 +126,11 @@ Você pode filtrar a lista digitando palavras-chave na barra de pesquisa abaixo 
 
 ![A seção Solicitação de Trabalho do Console de Privacidade com o campo de pesquisa realçado.](../images/user-guide/job-search.png)
 
-Como alternativa, use o botão de pesquisa para executar uma consulta de trabalho de privacidade que abrange um intervalo de datas específico. Essa ação retorna todas as tarefas de privacidade enviadas por sua organização durante o período determinado. Selecione o menu suspenso **[!UICONTROL Solicitado em]** para escolher uma data de início e término para a consulta. As opções disponíveis incluem [!UICONTROL Hoje], [!UICONTROL Últimos 7 Dias], [!UICONTROL Últimas 2 Semanas], [!UICONTROL Últimos 30 Dias] ou [!UICONTROL Personalizado]. Quando usado com a opção [!UICONTROL Solicitado em], o recurso de pesquisa exibe somente as solicitações de trabalho que foram enviadas entre os intervalos de datas escolhidos.
+Como alternativa, use o botão de pesquisa para executar uma consulta de trabalho de privacidade que abrange um intervalo de datas específico. Essa ação retorna todas as tarefas de privacidade enviadas por sua organização durante o período determinado. Selecione o menu suspenso **[!UICONTROL Requested on]** para escolher uma data de início e término para a consulta. As opções disponíveis incluem [!UICONTROL Today], [!UICONTROL Last 7 Days], [!UICONTROL Last 2 Weeks], [!UICONTROL Last 30 Days] ou [!UICONTROL Custom]. Quando usado com a opção [!UICONTROL Requested on], o recurso de pesquisa exibe somente solicitações de trabalho que foram enviadas entre os intervalos de datas escolhidos.
 
 ![A seção Solicitação de Trabalho com o campo de pesquisa, Solicitado no menu suspenso, e o botão Pesquisar realçado.](../images/user-guide/requested-on-dropdown-menu.png)
 
-Para exibir os detalhes de uma solicitação de trabalho específica, selecione a ID do trabalho da solicitação na lista para abrir a página **[!UICONTROL Detalhes do trabalho]**.
+Para exibir os detalhes de uma solicitação de trabalho específica, selecione a ID do trabalho da solicitação na lista para abrir a página **[!UICONTROL Job Details]**.
 
 ![Detalhes do Trabalho da Interface do GDPR](../images/user-guide/job-details.png)
 
@@ -129,7 +138,7 @@ Esta caixa de diálogo contém informações de status sobre cada solução [!DN
 
 Se uma solução tiver fornecido dados adicionais, ela será exibida nessa caixa de diálogo. Você pode visualizar esses dados selecionando linhas de produto individuais.
 
-Para baixar os dados completos do trabalho como um arquivo CSV, selecione **[!UICONTROL Exportar para CSV]** na parte superior direita da caixa de diálogo.
+Para baixar os dados completos do trabalho como um arquivo CSV, selecione **[!UICONTROL Export to CSV]** na parte superior direita da caixa de diálogo.
 
 ## Criar uma nova solicitação de processo de privacidade {#create-a-new-privacy-job-request}
 
@@ -153,21 +162,21 @@ As etapas para usar cada um desses métodos são fornecidas nas seções a segui
 
 Usando o Construtor de solicitações, você pode criar manualmente uma nova solicitação de trabalho de privacidade na interface do usuário. O Construtor de solicitações é mais adequado para conjuntos de solicitações mais simples e menores, pois o Construtor de solicitações limita as solicitações a terem somente o tipo de ID por usuário. Para solicitações mais complicadas, talvez seja melhor [carregar um arquivo JSON](#json).
 
-Para começar a usar o Construtor de solicitações, selecione **[!UICONTROL Criar solicitação]** abaixo do widget Relatório de status no lado direito da tela.
+Para começar a usar o construtor de Solicitações, selecione **[!UICONTROL Create Request]** abaixo do widget Relatório de Status no lado direito da tela.
 
 ![Selecionar Criar Solicitação](../images/user-guide/create-request.png)
 
-A caixa de diálogo **[!UICONTROL Criar Solicitação]** é aberta, exibindo as opções disponíveis para enviar uma solicitação de trabalho de privacidade para o tipo de regulamento selecionado atualmente.
+A caixa de diálogo **[!UICONTROL Create Request]** é aberta, exibindo as opções disponíveis para enviar uma solicitação de trabalho de privacidade para o tipo de regulamento selecionado atualmente.
 
 ![](../images/user-guide/request-builder.png){width=500}
 
-Selecione o **[!UICONTROL Tipo de Trabalho]** da solicitação (&quot;Excluir&quot; ou &quot;Acessar&quot;) e um ou mais produtos disponíveis na lista.
+Selecione o **[!UICONTROL Job Type]** da solicitação (&quot;Excluir&quot; ou &quot;Acessar&quot;) e um ou mais produtos disponíveis na lista.
 
-O Privacy Service oferece suporte a dois tipos de solicitações de trabalho para dados pessoais: [!UICONTROL Acesso] (leitura) e/ou [!UICONTROL Exclusão]. Você pode enviar uma solicitação para receber todas as informações contidas no produto relacionadas ao assunto da pesquisa ou solicitar a exclusão de todas as informações relacionadas ao assunto da pesquisa.
+O Privacy Service oferece suporte a dois tipos de solicitações de trabalho para dados pessoais: [!UICONTROL Access] (leitura) e/ou [!UICONTROL Delete]. Você pode enviar uma solicitação para receber todas as informações contidas no produto relacionadas ao assunto da pesquisa ou solicitar a exclusão de todas as informações relacionadas ao assunto da pesquisa.
 
 ![](../images/user-guide/type-and-products.png){width=500}
 
-Em **[!UICONTROL Tipo de namespace]**, selecione o tipo de namespace apropriado para as IDs do cliente que estão sendo enviadas para [!DNL Privacy Service].
+Em **[!UICONTROL Namespace type]**, selecione o tipo de namespace apropriado para as IDs do cliente que estão sendo enviadas para [!DNL Privacy Service].
 
 ![](../images/user-guide/namespace-type.png){width=500}
 
@@ -179,7 +188,7 @@ Ao usar o tipo de namespace personalizado, você deve digitar manualmente o name
 
 ![](../images/user-guide/custom-namespace.png){width=500}
 
-Quando terminar, selecione **[!UICONTROL Criar]**.
+Quando terminar, selecione **[!UICONTROL Create]**.
 
 ![](../images/user-guide/request-builder-create.png){width=500}
 
@@ -189,15 +198,15 @@ A caixa de diálogo desaparece e a nova tarefa (ou tarefas) é listada no widget
 
 Ao criar solicitações mais complicadas, como as que usam vários tipos de ID para cada titular de dados que está sendo processado, é possível criar uma solicitação carregando um arquivo JSON.
 
-Selecione a seta ao lado de **[!UICONTROL Criar solicitação]**, abaixo do widget Relatório de status no lado direito da tela. Na lista de opções exibida, selecione **[!UICONTROL Carregar JSON]**.
+Selecione a seta próxima a **[!UICONTROL Create Request]** abaixo do widget Relatório de Status no lado direito da tela. Na lista de opções exibida, selecione **[!UICONTROL Upload JSON]**.
 
 ![Solicitar opções de criação](../images/user-guide/create-options.png)
 
-A caixa de diálogo **[!UICONTROL Carregar JSON]** é exibida, fornecendo uma janela para que você arraste e solte seu arquivo JSON.
+A caixa de diálogo **[!UICONTROL Upload JSON]** é exibida, fornecendo uma janela para você arrastar e soltar seu arquivo JSON.
 
 ![](../images/user-guide/upload-json.png){width=500}
 
-Se você não tiver um arquivo JSON para carregar, selecione **[!UICONTROL Baixar Adobe-GDPR-Request.json]** para baixar um modelo que pode ser preenchido de acordo com os valores coletados dos titulares de dados.
+Se você não tiver um arquivo JSON para carregar, selecione **[!UICONTROL Download Adobe-GDPR-Request.json]** para baixar um modelo que pode ser preenchido de acordo com os valores coletados dos titulares de dados.
 
 
 ![](../images/user-guide/privacy-template.png){width=500}
@@ -205,7 +214,7 @@ Se você não tiver um arquivo JSON para carregar, selecione **[!UICONTROL Baixa
 
 Localize o arquivo JSON no computador e arraste-o para a janela de diálogo. Se o upload for bem-sucedido, o nome do arquivo aparecerá na caixa de diálogo. Você pode continuar a adicionar mais arquivos JSON, conforme necessário, arrastando-os e soltando-os na caixa de diálogo.
 
-Quando terminar, selecione **[!UICONTROL Criar]**. A caixa de diálogo desaparece e a nova tarefa (ou tarefas) é listada no widget Solicitações de tarefa junto com seu status de processamento atual.
+Quando terminar, selecione **[!UICONTROL Create]**. A caixa de diálogo desaparece e a nova tarefa (ou tarefas) é listada no widget Solicitações de tarefa junto com seu status de processamento atual.
 
 ### Próximas etapas
 

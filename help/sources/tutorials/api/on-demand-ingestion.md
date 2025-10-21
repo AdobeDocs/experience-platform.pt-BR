@@ -3,20 +3,24 @@ keywords: Experience Platform;página inicial;tópicos populares;serviço de flu
 title: Criar uma execução de fluxo para assimilação sob demanda usando a API do serviço de fluxo
 description: Saiba como criar uma execução de fluxo para assimilação sob demanda usando a API do serviço de fluxo
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: b2b835faf9cf52ea0461d43b29076eaf7b0688f1
 workflow-type: tm+mt
-source-wordcount: '801'
+source-wordcount: '823'
 ht-degree: 2%
 
 ---
 
 # Crie uma execução de fluxo para assimilação sob demanda usando a API [!DNL Flow Service]
 
-As execuções de fluxo representam uma instância da execução de fluxo. Por exemplo, se um fluxo estiver programado para ser executado por hora às 9h, 10h e 11h, você terá três instâncias de um fluxo em execução. As execuções de fluxo são específicas para sua organização específica.
+As execuções de fluxo representam uma instância da execução de fluxo. Por exemplo, se um fluxo estiver agendado para ser executado por hora às 9h00, 10h10 e 11h20, você terá três instâncias de um fluxo em execução. :00:00:00 As execuções de fluxo são específicas para sua organização específica.
 
 A assimilação sob demanda oferece a capacidade de criar uma execução de fluxo em relação a um determinado fluxo de dados. Isso permite que seus usuários criem uma execução de fluxo, com base em determinados parâmetros, e criem um ciclo de assimilação, sem tokens de serviço. O suporte para assimilação sob demanda está disponível somente para origens em lote.
 
 Este tutorial aborda as etapas sobre como usar a assimilação sob demanda e criar uma execução de fluxo usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+
+>[!TIP]
+>
+>A repetição de uma execução de fluxo processará somente arquivos com carimbos de data e hora que se enquadrem na faixa da execução original.
 
 ## Introdução
 

@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
+source-git-commit: 0a9782b6018e5c5405c79ce37d969754d7b99fd6
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1712'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Esta página fornece limites de uso e taxa padrão em relação ao comportamento de ativação. Ao revisar as medidas de proteção a seguir, presume-se que você [esteja conectado corretamente aos destinos](/help/destinations/ui/connect-destination.md).
 
@@ -105,7 +105,7 @@ As medidas de proteção abaixo se aplicam à ativação por meio de [destinos d
 
 ### Exportações de conjunto de dados {#dataset-exports}
 
-Atualmente, há suporte para exportações de conjunto de dados em um **[!UICONTROL Primeiro Padrão Completo e depois Incremental]** [padrão](/help/destinations/ui/export-datasets.md#scheduling). As medidas de proteção descritas nesta seção *se aplicam à primeira exportação completa* que ocorre após a configuração de um fluxo de trabalho de exportação do conjunto de dados.
+Atualmente, há suporte para exportações de conjunto de dados em um **[!UICONTROL First Full and then Incremental]** [padrão](/help/destinations/ui/export-datasets.md#scheduling). As medidas de proteção descritas nesta seção *se aplicam à primeira exportação completa* que ocorre após a configuração de um fluxo de trabalho de exportação do conjunto de dados.
 
 <!--
 
@@ -121,11 +121,9 @@ Atualmente, há suporte para exportações de conjunto de dados em um **[!UICONT
 
 As medidas de proteção de exportação do conjunto de dados se aplicam a dois tipos de conjuntos de dados exportados do Experience Platform, conforme descrito abaixo:
 
-**Conjuntos de dados com base no esquema de Eventos de Experiência XDM**
-No caso de conjuntos de dados baseados no esquema XDM Experience Events, o esquema do conjunto de dados inclui uma coluna *timestamp* de nível superior. Os dados são assimilados somente de forma anexada.
+**Conjuntos de dados com base no esquema XDM Experience Events e conjuntos de dados com base em qualquer outro esquema**
 
-**Conjuntos de dados com base no esquema do Perfil Individual XDM**
-No caso de conjuntos de dados baseados no esquema do Perfil individual XDM, o esquema do conjunto de dados não inclui uma coluna *carimbo de data/hora* de nível superior. Os dados são assimilados de forma ascendente.
+No caso de conjuntos de dados baseados no esquema XDM Experience Events, o esquema do conjunto de dados inclui uma coluna de carimbo de data e hora de nível superior. Os dados são assimilados somente de forma anexada. No caso de conjuntos de dados baseados em qualquer outro esquema, o esquema do conjunto de dados pode incluir uma coluna de carimbo de data e hora e os dados são assimilados de forma ascendente.
 
 A proteção simples abaixo se aplica a todos os conjuntos de dados exportados do Experience Platform. Revise também as medidas de proteção rígidas mais abaixo, específicas para diferentes conjuntos de dados e tipos de compactação.
 
@@ -146,7 +144,7 @@ Para exportações agendadas ou recorrentes de conjunto de dados, as medidas de 
 | Tipo de conjunto de dados | Grade de Proteção | Tipo de grade de proteção | Descrição |
 ---------|----------|---------|-------|
 | Conjuntos de dados com base no **esquema de Eventos de experiência XDM** | Últimos 365 dias de dados | Proteção imposta pelo sistema | Os dados do último ano civil são exportados. |
-| Conjuntos de dados com base no **esquema do Perfil Individual XDM** | Dez bilhões de registros em todos os arquivos exportados em um fluxo de dados | Proteção imposta pelo sistema | A contagem de registros do conjunto de dados deve ser inferior a dez bilhões para arquivos JSON ou parquet compactados e um milhão para arquivos parquet não compactados, caso contrário, a exportação falhará. Reduza o tamanho do conjunto de dados que você está tentando exportar se ele for maior que o limite permitido. |
+| Conjuntos de dados baseados em **qualquer esquema, exceto o esquema XDM Experience Events** | Dez bilhões de registros em todos os arquivos exportados em um fluxo de dados | Proteção imposta pelo sistema | A contagem de registros do conjunto de dados deve ser inferior a dez bilhões para arquivos JSON ou parquet compactados e um milhão para arquivos parquet não compactados, caso contrário, a exportação falhará. Reduza o tamanho do conjunto de dados que você está tentando exportar se ele for maior que o limite permitido. |
 
 {style="table-layout:auto"}
 
@@ -198,7 +196,7 @@ Detalhes sobre limites ou limitações de limitação para determinados destinos
 Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=pt-BR#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

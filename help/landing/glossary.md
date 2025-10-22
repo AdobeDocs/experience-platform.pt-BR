@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossário do Adobe Experience Platform
 description: Um glossário de termos importantes na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b960e67789acaeb27a0a39db933a2bbb7d84f4d5
+source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
 workflow-type: tm+mt
-source-wordcount: '8170'
+source-wordcount: '8169'
 ht-degree: 0%
 
 ---
@@ -351,7 +351,7 @@ Rótulo de uso de dados **I2**: o rótulo de uso de dados `I2` é usado para cla
 
 **Módulo**: no contexto de marcas, um módulo é um trecho de JavaScript executável fornecido por uma extensão, que executa ações em um ambiente cliente sem precisar criar uma regra.
 
-**MODPA**: o [!DNL Maryland Online Data Privacy Act] (MODPA) de 2024 concede aos residentes de Maryland direitos incluindo acesso, correção, exclusão e portabilidade de dados. Os residentes podem recusar a publicidade direcionada, a venda de dados pessoais e a definição de perfis. Os controladores devem fornecer os avisos de privacidade e realizar avaliações de proteção de dados para processamento de alto risco. O MODPA se destaca pela proibição de geofencing em torno de instalações de saúde mental ou reprodutiva. A lei se aplica a entidades que processam dados de mais de 35 mil consumidores, ou àquelas que processam dados de mais de 10 mil consumidores e obtêm mais de 20% de sua receita com a venda desses dados. É aplicado pelo Procurador Geral de Maryland.
+**MODPA**: o [!DNL Maryland Online Data Privacy Act] (MODPA) de 2024 concede aos residentes de Maryland direitos incluindo acesso, correção, exclusão e portabilidade de dados. Os residentes podem recusar a publicidade direcionada, a venda de dados pessoais e a definição de perfis. Os controladores devem fornecer avisos de privacidade e realizar avaliações de proteção de dados para processamento de alto risco. O MODPA se destaca pela proibição de geofencing em torno de instalações de saúde mental ou reprodutiva. A lei se aplica a entidades que processam dados de mais de 35 mil consumidores, ou àquelas que processam dados de mais de 10 mil consumidores e obtêm mais de 20% de sua receita com a venda desses dados. É aplicado pelo Procurador Geral de Maryland.
 
 ## N
 

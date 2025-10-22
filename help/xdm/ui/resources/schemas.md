@@ -83,8 +83,8 @@ Em seguida, prossiga para [definir chaves primárias](../fields/identity.md#defi
 
 >[!NOTE]
 >
->Depois de salvo, o campo [!UICONTROL Type] na barra lateral [!UICONTROL  Schema properties] indica que este é um esquema [!UICONTROL Relational]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
->>![A tela Editor de Esquemas mostrando uma estrutura de esquema relacional vazia com o tipo relacional realçado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+>Depois de salvo, o campo [!UICONTROL Type] na barra lateral [!UICONTROL &#x200B; Schema properties] indica que este é um esquema [!UICONTROL Relational]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
+>&#x200B;>![A tela Editor de Esquemas mostrando uma estrutura de esquema relacional vazia com o tipo relacional realçado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Fazer upload de um arquivo DDL {#upload-ddl-file}
 
@@ -258,7 +258,7 @@ Depois de adicionar um grupo de campos a um esquema, você pode remover campos g
 >[!IMPORTANT]
 >
 >Selecionar **[!UICONTROL Remove]** exclui o campo do próprio grupo de campos, afetando *todos* esquemas que usam esse grupo de campos.
->>Não use esta opção, a menos que deseje **remover o campo de cada esquema que inclua o grupo de campos**.
+>&#x200B;>Não use esta opção, a menos que deseje **remover o campo de cada esquema que inclua o grupo de campos**.
 
 Para excluir um campo do grupo de campos, selecione-o na tela e selecione **[!UICONTROL Remove]** no painel direito. Este exemplo mostra o campo `taxId` do grupo **[!UICONTROL Demographic Details]**.
 

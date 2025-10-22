@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface de conjuntos de dados
 description: Saiba como executar ações comuns ao trabalhar com conjuntos de dados na interface do usuário do Adobe Experience Platform.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '4497'
+source-wordcount: '4259'
 ht-degree: 4%
 
 ---
@@ -57,24 +57,24 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campanhas orquestradas"
->abstract="Ative essa opção para permitir que o conjunto de dados selecionado seja usado em campanhas do Adobe Journey Optimizer Orchestrated. O conjunto de dados deve usar um esquema baseado em modelo e apenas um conjunto de dados pode ser criado por esquema."
+>abstract="Ative essa opção para permitir que o conjunto de dados selecionado seja usado em campanhas do Adobe Journey Optimizer Orchestrated. O conjunto de dados deve usar um esquema relacional e somente um conjunto de dados pode ser criado por esquema."
 
-Na interface do usuário do [!DNL Experience Platform], selecione **[!UICONTROL Conjuntos de dados]** no menu de navegação esquerdo para abrir o painel **[!UICONTROL Conjuntos de dados]**. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo o nome, o esquema ao qual o conjunto de dados pertence e o status da execução de assimilação mais recente.
+Na interface do usuário do [!DNL Experience Platform], selecione **[!UICONTROL Datasets]** no painel de navegação esquerdo para abrir o painel **[!UICONTROL Datasets]**. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo o nome, o esquema ao qual o conjunto de dados pertence e o status da execução de assimilação mais recente.
 
 ![A interface do usuário do Experience Platform com o item Conjuntos de Dados realçado na barra de navegação à esquerda.](../images/datasets/user-guide/browse-datasets.png)
 
-Selecione o nome de um conjunto de dados na guia [!UICONTROL Procurar] para acessar a tela **[!UICONTROL Atividade do conjunto de dados]** e ver detalhes do conjunto de dados selecionado. A guia Atividade inclui um gráfico que visualiza a taxa de mensagens que estão sendo consumidas, bem como uma lista de lotes bem-sucedidos e com falha.
+Selecione o nome de um conjunto de dados na guia [!UICONTROL Browse] para acessar sua tela **[!UICONTROL Dataset activity]** e ver detalhes do conjunto de dados selecionado. A guia Atividade inclui um gráfico que visualiza a taxa de mensagens que estão sendo consumidas, bem como uma lista de lotes bem-sucedidos e com falha.
 
 ![As métricas e visualizações do conjunto de dados selecionado estão destacadas.](../images/datasets/user-guide/dataset-activity-1.png)
 ![Os lotes de amostra relacionados ao conjunto de dados selecionado estão destacados.](../images/datasets/user-guide/dataset-activity-2.png)
 
 ## Mais ações {#more-actions}
 
-Você pode [!UICONTROL Excluir] ou [!UICONTROL Habilitar um conjunto de dados para o Perfil] da exibição de detalhes do [!UICONTROL Conjunto de Dados]. Para ver as ações disponíveis, selecione **[!UICONTROL ... Mais]** na parte superior direita da interface do usuário. O menu suspenso é exibido.
+Você pode [!UICONTROL Delete] ou [!UICONTROL Enable a dataset for Profile] da exibição de detalhes de [!UICONTROL Dataset]. Para ver as ações disponíveis, selecione **[!UICONTROL ... More]** na parte superior direita da interface. O menu suspenso é exibido.
 
-![O espaço de trabalho dos Conjuntos de Dados com o [!UICONTROL ... Menu suspenso Mais] realçado.](../images/datasets/user-guide/more-actions.png)
+![O espaço de trabalho de Conjuntos de Dados com o menu suspenso [!UICONTROL ... More] realçado.](../images/datasets/user-guide/more-actions.png)
 
-Se você selecionar **[!UICONTROL Habilitar um conjunto de dados para o Perfil]**, uma caixa de diálogo de confirmação será exibida. Selecione **[!UICONTROL Habilitar]** para confirmar sua escolha.
+Se você selecionar **[!UICONTROL Enable a dataset for Profile]**, uma caixa de diálogo de confirmação será exibida. Selecione **[!UICONTROL Enable]** para confirmar sua escolha.
 
 >[!NOTE]
 >
@@ -82,13 +82,13 @@ Se você selecionar **[!UICONTROL Habilitar um conjunto de dados para o Perfil]*
 
 ![A caixa de diálogo de confirmação Habilitar conjunto de dados.](../images/datasets/user-guide/profile-enable-confirmation-dialog.png)
 
-Se você selecionar **[!UICONTROL Excluir]**, a caixa de diálogo de confirmação [!UICONTROL Excluir conjunto de dados] será exibida. Selecione **[!UICONTROL Excluir]** para confirmar sua escolha.
+Se você selecionar **[!UICONTROL Delete]**, a caixa de diálogo de confirmação [!UICONTROL Delete dataset] será exibida. Selecione **[!UICONTROL Delete]** para confirmar sua escolha.
 
 >[!NOTE]
 >
 >Não é possível excluir conjuntos de dados do sistema.
 
-Você também pode excluir ou adicionar um conjunto de dados para uso com o Perfil de Cliente em Tempo Real a partir das ações embutidas encontradas na guia [!UICONTROL Procurar]. Consulte a [seção de ações embutidas](#inline-actions) para obter mais informações.
+Você também pode excluir ou adicionar um conjunto de dados para uso com o Perfil de Cliente em Tempo Real a partir das ações embutidas encontradas na guia [!UICONTROL Browse]. Consulte a [seção de ações embutidas](#inline-actions) para obter mais informações.
 
 ![A caixa de diálogo de confirmação Excluir conjunto de dados.](../images/datasets/user-guide/delete-confirmation-dialog.png)
 
@@ -96,21 +96,21 @@ Você também pode excluir ou adicionar um conjunto de dados para uso com o Perf
 
 A interface dos conjuntos de dados agora oferece uma coleção de ações em linha para cada conjunto de dados disponível. Selecione as reticências (...) de um conjunto de dados que você deseja gerenciar para ver as opções disponíveis em um menu pop-up. As ações disponíveis incluem:
 
-* [[!UICONTROL Visualizar conjunto de dados]](#preview)
-* [[!UICONTROL Gerenciar dados e acessar rótulos]](#manage-and-enforce-data-governance)
-* [[!UICONTROL Habilitar perfil unificado]](#enable-profile)
-* [[!UICONTROL Gerenciar marcas]](#manage-tags)
-* [[!UICONTROL Definir política de retenção de dados]](#data-retention-policy)
-* [[!UICONTROL Mover para pastas]](#move-to-folders)
-* [[!UICONTROL Excluir]](#delete).
+* [[!UICONTROL Preview dataset]](#preview)
+* [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance)
+* [[!UICONTROL Enable unified profile]](#enable-profile)
+* [[!UICONTROL Manage tags]](#manage-tags)
+* [[!UICONTROL Set data retention policy]](#data-retention-policy)
+* [[!UICONTROL Move to folders]](#move-to-folders)
+* [[!UICONTROL Delete]](#delete).
 
 Mais informações sobre essas ações disponíveis podem ser encontradas nas respectivas seções. Para saber como gerenciar grandes números de conjuntos de dados simultaneamente, consulte a seção [ações em massa](#bulk-actions).
 
 ### Visualizar um conjunto de dados {#preview}
 
-Você pode visualizar até 100 linhas de dados de amostra para qualquer conjunto de dados, seja das opções em linha na guia [!UICONTROL Procurar] ou da exibição [!UICONTROL Atividade do conjunto de dados].
+Você pode visualizar até 100 linhas de dados de amostra para qualquer conjunto de dados, seja das opções em linha na guia [!UICONTROL Browse] ou da exibição [!UICONTROL Dataset activity].
 
-Na guia [!UICONTROL Procurar], selecione as reticências (...) ao lado do nome do conjunto de dados e escolha [!UICONTROL Visualizar conjunto de dados]. Se o conjunto de dados estiver vazio, a opção de visualização será desativada. Como alternativa, na tela **[!UICONTROL Atividade do conjunto de dados]**, selecione **[!UICONTROL Visualizar conjunto de dados]** próximo ao canto superior direito da tela.
+Na guia [!UICONTROL Browse], selecione as reticências (...) ao lado do nome do conjunto de dados e escolha [!UICONTROL Preview dataset]. Se o conjunto de dados estiver vazio, a opção de visualização será desativada. Como alternativa, na tela **[!UICONTROL Dataset activity]**, selecione **[!UICONTROL Preview dataset]** próximo ao canto superior direito da tela.
 
 ![A guia Procurar do espaço de trabalho Conjuntos de Dados com a opção de conjunto de dados reticências e Visualização realçada para o conjunto de dados escolhido.](../images/datasets/user-guide/preview-dataset-option.png)
 
@@ -122,7 +122,7 @@ Isso abre a janela de pré-visualização, onde a visualização hierárquica do
 
 ![A caixa de diálogo de visualização do conjunto de dados com informações sobre a estrutura, bem como valores de exemplo, para o conjunto de dados são mostrados.](../images/datasets/user-guide/preview-dataset.png)
 
-Como alternativa, na tela **[!UICONTROL Atividade do conjunto de dados]**, selecione **[!UICONTROL Visualizar conjunto de dados]** para abrir a janela de visualização e revisar uma amostra da estrutura e dos valores do seu conjunto de dados.
+Como alternativa, na tela **[!UICONTROL Dataset activity]**, selecione **[!UICONTROL Preview dataset]** para abrir a janela de visualização e revisar uma amostra da estrutura e dos valores do seu conjunto de dados.
 
 ![O botão Visualizar conjunto de dados está realçado.](../images/datasets/user-guide/select-preview.png)
 
@@ -146,13 +146,13 @@ Esses recursos ajudam você a navegar, entender detalhes do esquema e validar da
 
 #### Atalho do Editor de consultas avançado {#query-editor-shortcut}
 
-Se sua organização tiver uma licença do Data Distiller, você poderá acessar o [!UICONTROL Editor de Consulta Avançado] diretamente da janela de visualização do conjunto de dados. Use esse atalho para mover facilmente da visualização de dados de amostra para a execução e refinamento de consultas no Serviço de consulta.
+Se sua organização tiver uma licença do Data Distiller, você poderá acessar o [!UICONTROL Advanced Query Editor] diretamente da janela de visualização do conjunto de dados. Use esse atalho para mover facilmente da visualização de dados de amostra para a execução e refinamento de consultas no Serviço de consulta.
 
 >[!AVAILABILITY]
 >
->O acesso ao [!UICONTROL Editor de Consulta Avançado] é limitado a organizações com uma licença de SKU do Data Distiller. Se sua organização não tiver a licença necessária, essa opção não aparecerá na janela de visualização do conjunto de dados.
+>O acesso ao [!UICONTROL Advanced Query Editor] é limitado a organizações com uma licença do Data Distiller SKU. Se sua organização não tiver a licença necessária, essa opção não aparecerá na janela de visualização do conjunto de dados.
 
-Selecione [!UICONTROL Editor de Consulta Avançado] no canto superior direito da janela de visualização para abrir o Serviço de Consulta com sua consulta SQL atual pré-carregada e executada. Você pode continuar analisando ou modificando o SQL sem inserir a consulta novamente.
+Selecione [!UICONTROL Advanced Query Editor] no canto superior direito da janela de visualização para abrir o Serviço de consulta com sua consulta SQL atual pré-carregada e executada. Você pode continuar analisando ou modificando o SQL sem inserir a consulta novamente.
 
 ![Janela de visualização do conjunto de dados mostrando o botão Editor de Consulta Avançado no canto superior direito.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
@@ -163,7 +163,7 @@ Para análise adicional, use serviços downstream como [!DNL Query Service] e [!
 
 ### Gerenciar e aplicar a governança de dados em um conjunto de dados {#manage-and-enforce-data-governance}
 
-Você pode gerenciar os rótulos de governança de dados para um conjunto de dados selecionando as opções em linha da guia [!UICONTROL Procurar]. Selecione as reticências (...) ao lado do nome do conjunto de dados que você deseja gerenciar, seguido por **[!UICONTROL Gerenciar dados e acessar rótulos]** no menu suspenso.
+Você pode gerenciar os rótulos de governança de dados para um conjunto de dados selecionando as opções em linha da guia [!UICONTROL Browse]. Selecione as reticências (...) ao lado do nome do conjunto de dados que você deseja gerenciar, seguido por **[!UICONTROL Manage data and access labels]** no menu suspenso.
 
 Os rótulos de uso de dados, aplicados no nível do esquema, permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Consulte a [visão geral da Governança de dados](../../data-governance/home.md) para saber mais sobre rótulos ou consulte o [guia do usuário de rótulos de uso de dados](../../data-governance/labels/overview.md) para obter instruções sobre como aplicar rótulos a esquemas para propagação para conjuntos de dados.
 
@@ -176,11 +176,11 @@ Cada conjunto de dados tem a capacidade de enriquecer os perfis do cliente com s
 
 Para obter mais informações sobre como habilitar um esquema para [!DNL Profile], consulte o [guia do usuário do Editor de Esquemas](../../xdm/tutorials/create-schema-ui.md).
 
-Você pode habilitar um conjunto de dados para o Perfil nas opções embutidas da guia [!UICONTROL Procurar] e também na exibição [!UICONTROL Atividade do conjunto de dados]. Na guia [!UICONTROL Procurar] do espaço de trabalho [!UICONTROL Conjuntos de Dados], selecione as reticências de um conjunto de dados que você deseja habilitar para o Perfil. Uma lista de opções de menu é exibida. Em seguida, selecione **[!UICONTROL Habilitar perfil unificado]** na lista de opções disponíveis.
+Você pode habilitar um conjunto de dados para o Perfil nas opções embutidas da guia [!UICONTROL Browse] e também na exibição [!UICONTROL Dataset activity]. Na guia [!UICONTROL Browse] do espaço de trabalho [!UICONTROL Datasets], selecione as reticências de um conjunto de dados que você deseja habilitar para o Perfil. Uma lista de opções de menu é exibida. Em seguida, selecione **[!UICONTROL Enable unified profile]** na lista de opções disponíveis.
 
 ![A guia Procurar do espaço de trabalho Conjuntos de Dados com as reticências e Habilitar perfil unificado foi realçada.](../images/datasets/user-guide/enable-for-profile.png)
 
-Como alternativa, na tela da **[!UICONTROL Atividade do conjunto de dados]** do conjunto de dados, selecione a opção de alternância **[!UICONTROL Perfil]** na coluna **[!UICONTROL Propriedades]**. Depois de ativados, os dados assimilados no conjunto de dados também serão usados para preencher perfis de clientes.
+Como alternativa, na tela **[!UICONTROL Dataset activity]** do conjunto de dados, selecione a opção **[!UICONTROL Profile]** na coluna **[!UICONTROL Properties]**. Depois de ativados, os dados assimilados no conjunto de dados também serão usados para preencher perfis de clientes.
 
 >[!NOTE]
 >
@@ -192,15 +192,15 @@ Os conjuntos de dados que foram ativados para o Perfil também podem ser filtrad
 
 ### Gerenciar tags do conjunto de dados {#manage-tags}
 
-Adicione tags criadas personalizadas para organizar conjuntos de dados e melhorar os recursos de pesquisa, filtragem e classificação. Na guia [!UICONTROL Procurar] do espaço de trabalho [!UICONTROL Conjuntos de Dados], selecione as reticências de um conjunto de dados que você deseja gerenciar, seguido de **[!UICONTROL Gerenciar marcas]** no menu suspenso.
+Adicione tags criadas personalizadas para organizar conjuntos de dados e melhorar os recursos de pesquisa, filtragem e classificação. Na guia [!UICONTROL Browse] do espaço de trabalho [!UICONTROL Datasets], selecione as reticências de um conjunto de dados que você deseja gerenciar, seguidas por **[!UICONTROL Manage tags]** no menu suspenso.
 
 ![A guia Procurar do espaço de trabalho Conjuntos de Dados com a opção de reticências e Gerenciar marcas foi realçada para o conjunto de dados escolhido.](../images/datasets/user-guide/manage-tags.png)
 
-A caixa de diálogo [!UICONTROL Gerenciar tags] é exibida. Insira uma breve descrição para criar uma tag personalizada ou escolha em uma tag pré-existente para rotular seu conjunto de dados. Selecione **[!UICONTROL Salvar]** para confirmar suas configurações.
+A caixa de diálogo [!UICONTROL Manage tags] é exibida. Insira uma breve descrição para criar uma tag personalizada ou escolha em uma tag pré-existente para rotular seu conjunto de dados. Selecione **[!UICONTROL Save]** para confirmar suas configurações.
 
 ![A caixa de diálogo Gerenciar marcas com marcas personalizadas foi realçada.](../images/datasets/user-guide/manage-tags-dialog.png)
 
-A caixa de diálogo [!UICONTROL Gerenciar marcas] também pode remover marcas existentes de um conjunto de dados. Basta selecionar o &#39;x&#39; ao lado da tag que deseja remover e selecionar **[!UICONTROL Salvar]**.
+A caixa de diálogo [!UICONTROL Manage tags] também pode remover marcas existentes de um conjunto de dados. Basta selecionar o &#39;x&#39; ao lado da tag que deseja remover e selecionar **[!UICONTROL Save]**.
 
 Depois que uma tag é adicionada a um conjunto de dados, os conjuntos de dados podem ser filtrados com base na tag correspondente. Consulte a seção sobre como [filtrar conjuntos de dados por marcas](#enable-profile) para obter mais informações.
 
@@ -208,11 +208,11 @@ Para obter mais informações sobre como classificar objetos comerciais para fac
 
 ### Definir política de retenção de dados {#data-retention-policy}
 
-Gerencie as configurações de expiração e retenção do conjunto de dados usando o menu de ação em linha da guia [!UICONTROL Procurar] do espaço de trabalho [!UICONTROL Conjuntos de Dados]. Você pode usar esse recurso para configurar por quanto tempo os dados são retidos no data lake e no armazenamento de perfis. A data de expiração se baseia em quando os dados foram assimilados na Experience Platform e no período de retenção configurado.
+Gerencie as configurações de expiração e retenção do conjunto de dados usando o menu de ação em linha da guia [!UICONTROL Browse] do espaço de trabalho [!UICONTROL Datasets]. Você pode usar esse recurso para configurar por quanto tempo os dados são retidos no data lake e no armazenamento de perfis. A data de expiração se baseia em quando os dados foram assimilados na Experience Platform e no período de retenção configurado.
 
 >[!IMPORTANT]
 >
->Para aplicar ou atualizar regras de retenção para um conjunto de dados ExperienceEvent, sua função de usuário deve incluir a permissão **[!UICONTROL Gerenciar conjuntos de dados]**. Esse controle de acesso baseado em função garante que somente usuários autorizados possam modificar as configurações de retenção do conjunto de dados.
+>Para aplicar ou atualizar regras de retenção para um conjunto de dados ExperienceEvent, sua função de usuário deve incluir a permissão **[!UICONTROL Manage datasets]**. Esse controle de acesso baseado em função garante que somente usuários autorizados possam modificar as configurações de retenção do conjunto de dados.
 >
 >Consulte a [Visão geral do controle de acesso](../../access-control/home.md#platform-permissions) para obter mais informações sobre a atribuição de permissões no Adobe Experience Platform.
 
@@ -220,11 +220,11 @@ Gerencie as configurações de expiração e retenção do conjunto de dados usa
 >
 >O data lake armazena dados brutos e não processados, como logs de eventos, dados de sequência de cliques e registros assimilados em massa, para análise e processamento. A Loja de perfis contém dados identificáveis pelo cliente, incluindo eventos compilados por identidade e informações de atributos, para oferecer suporte à personalização e ativação em tempo real.
 
-Para configurar o período de retenção, selecione as reticências ao lado do conjunto de dados seguido por **[!UICONTROL Definir política de retenção de dados]** no menu suspenso.
+Para configurar o período de retenção, selecione as reticências ao lado do conjunto de dados seguido por **[!UICONTROL Set data retention policy]** no menu suspenso.
 
 ![A guia Procurar do espaço de trabalho Conjuntos de Dados com as reticências e a opção Definir política de retenção de dados realçada.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
 
-A caixa de diálogo [!UICONTROL Definir retenção do conjunto de dados] é exibida. A caixa de diálogo exibe métricas de uso de licença em nível de sandbox, detalhes em nível de conjunto de dados e configurações atuais de retenção de dados. Essas métricas mostram sua utilização em comparação aos seus direitos e ajudam a avaliar as configurações de armazenamento e retenção específicas do conjunto de dados. As métricas incluem o nome do conjunto de dados, o tipo, o status de ativação do perfil e o uso do data lake e do armazenamento de perfil.
+A caixa de diálogo [!UICONTROL Set dataset retention] é exibida. A caixa de diálogo exibe métricas de uso de licença em nível de sandbox, detalhes em nível de conjunto de dados e configurações atuais de retenção de dados. Essas métricas mostram sua utilização em comparação aos seus direitos e ajudam a avaliar as configurações de armazenamento e retenção específicas do conjunto de dados. As métricas incluem o nome do conjunto de dados, o tipo, o status de ativação do perfil e o uso do data lake e do armazenamento de perfil.
 
 >[!NOTE]
 >
@@ -244,7 +244,7 @@ Para oferecer suporte à transparência e ao monitoramento, os carimbos de data 
 
 #### Insights de impacto do armazenamento {#storage-impact-insights}
 
-Para abrir uma previsão visual do impacto de armazenamento de diferentes políticas de retenção, selecione **[!UICONTROL Exibir distribuição de dados do evento de experiência]**.
+Para abrir uma previsão visual do impacto de armazenamento de diferentes políticas de retenção, selecione **[!UICONTROL View Experience Event Data distribution]**.
 
 O gráfico exibe a distribuição de eventos de experiência em vários períodos de retenção para o conjunto de dados selecionado no momento. Passe o mouse sobre cada barra para ver o número exato de registros que serão removidos se o período de retenção selecionado for aplicado.
 
@@ -256,7 +256,7 @@ Você pode usar a previsão visual para avaliar o impacto de diferentes período
 
 ![A caixa de diálogo Definir retenção de dados com o gráfico de distribuição Evento de Experiência foi exibida.](../images/datasets/user-guide/visual-forecast.png)
 
-Quando estiver satisfeito com sua configuração, selecione **[!UICONTROL Salvar]** para confirmar suas configurações.
+Quando estiver satisfeito com sua configuração, selecione **[!UICONTROL Save]** para confirmar suas configurações.
 
 >[!IMPORTANT]
 >
@@ -284,10 +284,10 @@ A tabela a seguir fornece uma visão geral das novas métricas de retenção e a
 
 | Título da coluna | Descrição |
 |---|---|
-| [!UICONTROL Retenção no Data Lake] | O período de retenção atual para cada conjunto de dados no data lake. Esse valor é configurável e determina por quanto tempo os dados são retidos antes da exclusão. |
-| [!UICONTROL Armazenamento Data Lake] | O uso de armazenamento atual para cada conjunto de dados no data lake. Use essa métrica para gerenciar limites de armazenamento e otimizar o uso. |
-| [!UICONTROL Armazenamento de perfil] | O uso de armazenamento atual para cada conjunto de dados no Serviço de perfil. Ajuda a monitorar o consumo de armazenamento e a apoiar as decisões de gerenciamento de dados. |
-| [!UICONTROL Retenção de Perfil] | O período de retenção atual para conjuntos de dados de Perfil. Você pode atualizar esse valor para controlar por quanto tempo os dados do perfil são retidos. |
+| [!UICONTROL Data Lake Retention] | O período de retenção atual para cada conjunto de dados no data lake. Esse valor é configurável e determina por quanto tempo os dados são retidos antes da exclusão. |
+| [!UICONTROL Data Lake Storage] | O uso de armazenamento atual para cada conjunto de dados no data lake. Use essa métrica para gerenciar limites de armazenamento e otimizar o uso. |
+| [!UICONTROL Profile Storage] | O uso de armazenamento atual para cada conjunto de dados no Serviço de perfil. Ajuda a monitorar o consumo de armazenamento e a apoiar as decisões de gerenciamento de dados. |
+| [!UICONTROL Profile Retention] | O período de retenção atual para conjuntos de dados de Perfil. Você pode atualizar esse valor para controlar por quanto tempo os dados do perfil são retidos. |
 
 {style="table-layout:auto"}
 
@@ -295,33 +295,33 @@ Para agir com base nos insights das métricas de armazenamento e retenção, con
 
 ### Mover para pastas {#move-to-folders}
 
-Você pode colocar conjuntos de dados em pastas para melhorar o gerenciamento do conjunto de dados. Para mover um conjunto de dados para uma pasta, selecione as reticências (...) ao lado do nome do conjunto de dados que você deseja gerenciar, seguido por **[!UICONTROL Mover para a pasta]** no menu suspenso.
+Você pode colocar conjuntos de dados em pastas para melhorar o gerenciamento do conjunto de dados. Para mover um conjunto de dados para uma pasta, selecione as reticências (...) ao lado do nome do conjunto de dados que você deseja gerenciar, seguido por **[!UICONTROL Move to folder]** no menu suspenso.
 
-![O painel [!UICONTROL Conjuntos de Dados] com as reticências e [!UICONTROL Mover para a pasta] realçados.](../images/datasets/user-guide/move-to-folder.png)
+![O painel [!UICONTROL Datasets] com as reticências e [!UICONTROL Move to folder] realçado.](../images/datasets/user-guide/move-to-folder.png)
 
-A caixa de diálogo [!UICONTROL Mover] conjunto de dados para pasta é exibida. Selecione a pasta para onde deseja mover o público-alvo e selecione **[!UICONTROL Mover]**. Uma notificação pop-up informa que a movimentação do conjunto de dados foi bem-sucedida.
+A caixa de diálogo [!UICONTROL Move] conjunto de dados para pasta é exibida. Selecione a pasta para onde deseja mover o público-alvo e selecione **[!UICONTROL Move]**. Uma notificação pop-up informa que a movimentação do conjunto de dados foi bem-sucedida.
 
-![A caixa de diálogo [!UICONTROL Mover] do conjunto de dados com [!UICONTROL Mover] foi realçada.](../images/datasets/user-guide/move-dialog.png)
+![A caixa de diálogo do conjunto de dados [!UICONTROL Move] com [!UICONTROL Move] está realçada.](../images/datasets/user-guide/move-dialog.png)
 
 >[!TIP]
 >
 >Você também pode criar pastas diretamente na caixa de diálogo Mover conjunto de dados. Para criar uma pasta, selecione o ícone criar pasta (![O ícone criar pasta.](/help/images/icons/folder-add.png)) na parte superior direita da caixa de diálogo.
 >
->![A caixa de diálogo [!UICONTROL Mover] do conjunto de dados com o ícone de criação de pasta realçado.](/help/catalog/images/datasets/user-guide/create-folder.png)
+>![A caixa de diálogo do conjunto de dados [!UICONTROL Move] com o ícone de criação de pasta está realçada.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
 Quando o conjunto de dados estiver em uma pasta, você poderá optar por exibir somente os conjuntos de dados que pertencem a uma pasta específica. Para abrir a estrutura de pastas, selecione o ícone mostrar pastas (![O ícone mostrar pastas](/help/images/icons/rail-left.png)). Em seguida, selecione a pasta escolhida para ver todos os conjuntos de dados associados.
 
-![Os painéis [!UICONTROL Conjuntos de Dados] com a estrutura de pastas dos conjuntos de dados exibida, o ícone mostrar pastas e uma pasta selecionada realçada.](../images/datasets/user-guide/folder-structure.png)
+![Os painéis [!UICONTROL Datasets] com a estrutura de pastas dos conjuntos de dados exibida, o ícone mostrar pastas e uma pasta selecionada realçada.](../images/datasets/user-guide/folder-structure.png)
 
 ### Excluir um conjunto de dados {#delete}
 
-Você pode excluir um conjunto de dados das ações embutidas do conjunto de dados na guia [!UICONTROL Procurar] ou na parte superior direita da exibição [!UICONTROL Atividade do conjunto de dados]. No modo de exibição [!UICONTROL Procurar], selecione as reticências (...) ao lado do nome do conjunto de dados que deseja excluir. Uma lista de opções de menu é exibida. Em seguida, selecione **[!UICONTROL Excluir]** no menu suspenso.
+Você pode excluir um conjunto de dados das ações embutidas do conjunto de dados na guia [!UICONTROL Browse] ou na parte superior direita da exibição [!UICONTROL Dataset activity]. Na exibição [!UICONTROL Browse], selecione as reticências (...) ao lado do nome do conjunto de dados que deseja excluir. Uma lista de opções de menu é exibida. Em seguida, selecione **[!UICONTROL Delete]** no menu suspenso.
 
 ![A guia Procurar do espaço de trabalho Conjuntos de Dados com as reticências e a opção Excluir realçada para o conjunto de dados escolhido.](../images/datasets/user-guide/inline-delete-dataset.png)
 
-Uma caixa de diálogo de confirmação é exibida. Selecione **[!UICONTROL Excluir]** para confirmar.
+Uma caixa de diálogo de confirmação é exibida. Selecione **[!UICONTROL Delete]** para confirmar.
 
-Como alternativa, selecione **[!UICONTROL Excluir conjunto de dados]** na tela **[!UICONTROL Atividade do conjunto de dados]**.
+Como alternativa, selecione **[!UICONTROL Delete dataset]** na tela **[!UICONTROL Dataset activity]**.
 
 >[!NOTE]
 >
@@ -329,7 +329,7 @@ Como alternativa, selecione **[!UICONTROL Excluir conjunto de dados]** na tela *
 
 ![O botão Excluir conjunto de dados está realçado na página de detalhes do conjunto de dados.](../images/datasets/user-guide/delete-dataset.png)
 
-Uma caixa de confirmação é exibida. Selecione **[!UICONTROL Excluir]** para confirmar a exclusão do conjunto de dados.
+Uma caixa de confirmação é exibida. Selecione **[!UICONTROL Delete]** para confirmar a exclusão do conjunto de dados.
 
 ![O modal de confirmação para exclusão é exibido, com o botão Excluir realçado.](../images/datasets/user-guide/confirm-delete.png)
 
@@ -341,7 +341,7 @@ Você pode excluir dados de perfil associados a um conjunto de dados do armazena
 
 ## Pesquisar e filtrar conjuntos de dados {#search-and-filter}
 
-Para pesquisar ou filtrar a lista de conjuntos de dados disponíveis, selecione o ícone de filtro (![O ícone de filtro.](/help/images/icons/filter.png)) na parte superior esquerda do espaço de trabalho. Um conjunto de opções de filtro no painel esquerdo é exibido. Há vários métodos para filtrar seus conjuntos de dados disponíveis. Estes incluem: [[!UICONTROL Mostrar Conjuntos de Dados do Sistema]](#show-system-datasets), [[!UICONTROL Incluídos no perfil]](#filter-profile-enabled-datasets), [[!UICONTROL Marcas]](#filter-by-tag), [[!UICONTROL Data de criação]](#filter-by-creation-date), [[!UICONTROL Data de modificação], [!UICONTROL Criado por]](#filter-by-creation-date) e [[!UICONTROL Esquema]](#filter-by-schema).
+Para pesquisar ou filtrar a lista de conjuntos de dados disponíveis, selecione o ícone de filtro (![O ícone de filtro.](/help/images/icons/filter.png)) na parte superior esquerda do espaço de trabalho. Um conjunto de opções de filtro no painel esquerdo é exibido. Há vários métodos para filtrar seus conjuntos de dados disponíveis. Isso inclui: [[!UICONTROL Show System Datasets]](#show-system-datasets), [[!UICONTROL Included in profile]](#filter-profile-enabled-datasets), [[!UICONTROL Tags]](#filter-by-tag), [[!UICONTROL Creation date]](#filter-by-creation-date), [[!UICONTROL Modified date], [!UICONTROL Created by]](#filter-by-creation-date) e [[!UICONTROL Schema]](#filter-by-schema).
 
 A lista de filtros aplicados é exibida acima dos resultados filtrados.
 
@@ -349,31 +349,31 @@ A lista de filtros aplicados é exibida acima dos resultados filtrados.
 
 ### Mostrar conjuntos de dados do sistema {#show-system-datasets}
 
-Por padrão, somente os conjuntos de dados que você assimilou no são mostrados. Se quiser ver os conjuntos de dados gerados pelo sistema, marque a caixa de seleção **[!UICONTROL Sim]** na seção [!UICONTROL Mostrar conjuntos de dados do sistema]. Os conjuntos de dados gerados pelo sistema são usados apenas para processar outros componentes. Por exemplo, o conjunto de dados de exportação de perfil gerado pelo sistema é usado para processar o painel de perfis.
+Por padrão, somente os conjuntos de dados que você assimilou no são mostrados. Se quiser ver os conjuntos de dados gerados pelo sistema, marque a caixa de seleção **[!UICONTROL Yes]** na seção [!UICONTROL Show system datasets]. Os conjuntos de dados gerados pelo sistema são usados apenas para processar outros componentes. Por exemplo, o conjunto de dados de exportação de perfil gerado pelo sistema é usado para processar o painel de perfis.
 
-![As opções de filtro do espaço de trabalho Conjuntos de Dados com a seção [!UICONTROL Mostrar conjuntos de dados do sistema] realçada.](../images/datasets/user-guide/show-system-datasets.png)
+![As opções de filtro do espaço de trabalho de Conjuntos de Dados com a seção [!UICONTROL Show system datasets] realçada.](../images/datasets/user-guide/show-system-datasets.png)
 
 ### Filtrar conjuntos de dados habilitados para o perfil {#filter-profile-enabled-datasets}
 
 Os conjuntos de dados que foram habilitados para dados de Perfil são usados para preencher perfis de clientes após a assimilação de dados. Consulte a seção sobre [habilitação de conjuntos de dados para o Perfil](#enable-profile) para saber mais.
 
-Para filtrar seu conjunto de dados com base no fato de terem sido habilitados para o Perfil, marque a caixa de seleção [!UICONTROL Sim] nas opções de filtro.
+Para filtrar seu conjunto de dados com base no fato de terem sido habilitados para o Perfil, marque a caixa de seleção [!UICONTROL Yes] nas opções de filtro.
 
-![As opções de filtro do espaço de trabalho de Conjuntos de Dados com a seção [!UICONTROL Incluído no Perfil] realçada.](../images/datasets/user-guide/included-in-profile.png)
+![As opções de filtro do espaço de trabalho de Conjuntos de Dados com a seção [!UICONTROL Included in Profile] realçada.](../images/datasets/user-guide/included-in-profile.png)
 
 ### Filtrar conjuntos de dados por tag {#filter-by-tag}
 
-Insira o nome da sua marca personalizada na entrada de [!UICONTROL Marcas] e selecione sua marca na lista de opções disponíveis para pesquisar e filtrar conjuntos de dados que correspondam a essa marca.
+Insira seu nome de tag personalizado na entrada [!UICONTROL Tags] e selecione sua tag na lista de opções disponíveis para pesquisar e filtrar conjuntos de dados que correspondam a essa tag.
 
-![As opções de filtro do espaço de trabalho Conjuntos de Dados com a entrada [!UICONTROL Marcas] e o ícone de filtro destacados.](../images/datasets/user-guide/filter-tags.png)
+![As opções de filtro do espaço de trabalho Conjuntos de Dados com o ícone de filtro e entrada [!UICONTROL Tags] realçado.](../images/datasets/user-guide/filter-tags.png)
 
 ### Filtrar conjuntos de dados por data de criação {#filter-by-creation-date}
 
-Os conjuntos de dados podem ser filtrados pela data de criação em um período personalizado. Isso pode ser usado para excluir dados históricos ou gerar insights de dados cronológicos e relatórios específicos. Escolha uma [!UICONTROL Data de início] e uma [!UICONTROL Data de término] selecionando o ícone de calendário de cada campo. Depois disso, somente os conjuntos de dados que estão em conformidade com esses critérios aparecerão na guia Procurar.
+Os conjuntos de dados podem ser filtrados pela data de criação em um período personalizado. Isso pode ser usado para excluir dados históricos ou gerar insights de dados cronológicos e relatórios específicos. Escolha uma [!UICONTROL Start date] e uma [!UICONTROL End date] selecionando o ícone de calendário de cada campo. Depois disso, somente os conjuntos de dados que estão em conformidade com esses critérios aparecerão na guia Procurar.
 
 ### Filtrar conjuntos de dados por data de modificação {#filter-by-modified-date}
 
-Semelhante ao filtro para data de criação, é possível filtrar seus conjuntos de dados com base na data em que foram modificados pela última vez. Na seção [!UICONTROL Data de modificação], escolha uma [!UICONTROL Data de início] e uma [!UICONTROL Data de término] selecionando o ícone de calendário para cada campo. Depois disso, somente os conjuntos de dados modificados durante esse período aparecerão na guia Procurar.
+Semelhante ao filtro para data de criação, é possível filtrar seus conjuntos de dados com base na data em que foram modificados pela última vez. Na seção [!UICONTROL Modified date], escolha um [!UICONTROL Start date] e um [!UICONTROL End date] selecionando o ícone de calendário de cada campo. Depois disso, somente os conjuntos de dados modificados durante esse período aparecerão na guia Procurar.
 
 ### Filtrar por esquema {#filter-by-schema}
 
@@ -394,13 +394,13 @@ Quando você aplica ações em massa a conjuntos de dados, as seguintes condiç�
 
 ## Classificar conjuntos de dados por data de criação {#sort}
 
-Os conjuntos de dados na guia [!UICONTROL Procurar] podem ser classificados por datas crescentes ou decrescentes. Selecione os títulos de coluna [!UICONTROL Criado] ou [!UICONTROL Última atualização] para alternar entre crescente e decrescente. Depois de selecionada, a coluna indica isso com uma seta para cima ou para baixo ao lado do cabeçalho da coluna.
+Os conjuntos de dados na guia [!UICONTROL Browse] podem ser classificados por datas crescentes ou decrescentes. Selecione os cabeçalhos de coluna [!UICONTROL Created] ou [!UICONTROL Last updated] para alternar entre ordem crescente e decrescente. Depois de selecionada, a coluna indica isso com uma seta para cima ou para baixo ao lado do cabeçalho da coluna.
 
 ![A guia Procurar do espaço de trabalho Conjuntos de Dados com a coluna Criado e Última atualização realçada.](../images/datasets/user-guide/ascending-descending-columns.png)
 
 ## Criar um conjunto de dados {#create}
 
-Para criar um novo conjunto de dados, comece selecionando **[!UICONTROL Criar conjunto de dados]** no painel **[!UICONTROL Conjuntos de dados]**.
+Para criar um novo conjunto de dados, comece selecionando **[!UICONTROL Create dataset]** no painel **[!UICONTROL Datasets]**.
 
 ![O botão Criar conjunto de dados está realçado.](../images/datasets/user-guide/select-create.png)
 
@@ -411,15 +411,15 @@ Na próxima tela, você verá as duas opções a seguir para criar um novo conju
 
 ### Criar um conjunto de dados com um esquema existente {#schema}
 
-Na tela **[!UICONTROL Criar conjunto de dados]**, selecione **[!UICONTROL Criar conjunto de dados a partir do esquema]** para criar um novo conjunto de dados vazio.
+Na tela **[!UICONTROL Create dataset]**, selecione **[!UICONTROL Create dataset from schema]** para criar um novo conjunto de dados vazio.
 
 ![O botão Criar conjunto de dados a partir do esquema está realçado.](../images/datasets/user-guide/create-dataset-schema.png)
 
-A etapa **[!UICONTROL Selecionar esquema]** é exibida. Procure a lista de esquemas e selecione o esquema ao qual o conjunto de dados seguirá antes de selecionar **[!UICONTROL Próximo]**.
+A etapa **[!UICONTROL Select schema]** é exibida. Procure a lista de esquemas e selecione o esquema ao qual o conjunto de dados seguirá antes de selecionar **[!UICONTROL Next]**.
 
 ![Uma lista de esquemas é exibida. O esquema que será usado para criar o conjunto de dados está realçado.](../images/datasets/user-guide/select-schema.png)
 
-A etapa **[!UICONTROL Configurar conjunto de dados]** é exibida. Forneça um nome e uma descrição opcional ao conjunto de dados e selecione **[!UICONTROL Concluir]** para criar o conjunto de dados.
+A etapa **[!UICONTROL Configure dataset]** é exibida. Forneça um nome e uma descrição opcional ao conjunto de dados e selecione **[!UICONTROL Finish]** para criar o conjunto de dados.
 
 ![Os detalhes de configuração do conjunto de dados foram inseridos. Isso inclui detalhes como nome e descrição do conjunto de dados.](../images/datasets/user-guide/configure-dataset-schema.png)
 
@@ -427,15 +427,15 @@ Os conjuntos de dados podem ser filtrados da lista de conjuntos de dados dispon�
 
 ### Criar um conjunto de dados com um arquivo CSV {#csv}
 
-Quando um conjunto de dados é criado usando um arquivo CSV, um esquema ad hoc é criado para fornecer ao conjunto de dados uma estrutura que corresponde ao arquivo CSV fornecido. Na tela **[!UICONTROL Criar conjunto de dados]**, selecione **[!UICONTROL Criar conjunto de dados do arquivo CSV]**.
+Quando um conjunto de dados é criado usando um arquivo CSV, um esquema ad hoc é criado para fornecer ao conjunto de dados uma estrutura que corresponde ao arquivo CSV fornecido. Na tela **[!UICONTROL Create dataset]**, selecione **[!UICONTROL Create dataset from CSV file]**.
 
 ![O botão Criar conjunto de dados a partir de arquivo CSV está realçado.](../images/datasets/user-guide/create-dataset-csv.png)
 
-A etapa **[!UICONTROL Configurar]** é exibida. Forneça um nome e uma descrição opcional ao conjunto de dados e selecione **[!UICONTROL Avançar]**.
+A etapa **[!UICONTROL Configure]** é exibida. Forneça um nome e uma descrição opcional ao conjunto de dados e selecione **[!UICONTROL Next]**.
 
 ![Os detalhes de configuração do conjunto de dados foram inseridos. Isso inclui detalhes como nome e descrição do conjunto de dados.](../images/datasets/user-guide/configure-dataset-csv.png)
 
-A etapa **[!UICONTROL Adicionar dados]** é exibida. Carregue o arquivo CSV arrastando-o e soltando-o no centro da tela ou selecione **[!UICONTROL Procurar]** para explorar o diretório de arquivos. O arquivo pode ter até dez gigabytes. Após carregar o arquivo CSV, selecione **[!UICONTROL Salvar]** para criar o conjunto de dados.
+A etapa **[!UICONTROL Add data]** é exibida. Carregue o arquivo CSV arrastando-o e soltando-o no centro da tela ou selecione **[!UICONTROL Browse]** para explorar o diretório do arquivo. O arquivo pode ter até dez gigabytes. Após carregar o arquivo CSV, selecione **[!UICONTROL Save]** para criar o conjunto de dados.
 
 >[!NOTE]
 >
@@ -445,15 +445,15 @@ A etapa **[!UICONTROL Adicionar dados]** é exibida. Carregue o arquivo CSV arra
 
 ## Monitorar assimilação de dados
 
-Na interface do usuário do [!DNL Experience Platform], selecione **[!UICONTROL Monitoramento]** na navegação à esquerda. O painel de **[!UICONTROL Monitoramento]** permite que você visualize os status dos dados de entrada a partir da assimilação em lote ou por transmissão. Para exibir os status de lotes individuais, selecione **[!UICONTROL Lote de ponta a ponta]** ou **[!UICONTROL Transmissão de ponta a ponta]**. Os painéis listam todas as execuções de assimilação em lote ou por transmissão, incluindo as que foram bem-sucedidas, falharam ou ainda estão em andamento. Cada lista fornece detalhes do lote, incluindo a ID do lote, o nome do conjunto de dados de destino e o número de registros assimilados. Se o conjunto de dados de destino estiver habilitado para [!DNL Profile], o número de registros de identidade e perfil assimilados também será exibido.
+Na interface do usuário do [!DNL Experience Platform], selecione **[!UICONTROL Monitoring]** no menu de navegação esquerdo. O painel **[!UICONTROL Monitoring]** permite a visualização dos status dos dados de entrada a partir da assimilação em lote ou por transmissão. Para exibir os status de lotes individuais, selecione **[!UICONTROL Batch end-to-end]** ou **[!UICONTROL Streaming end-to-end]**. Os painéis listam todas as execuções de assimilação em lote ou por transmissão, incluindo as que foram bem-sucedidas, falharam ou ainda estão em andamento. Cada lista fornece detalhes do lote, incluindo a ID do lote, o nome do conjunto de dados de destino e o número de registros assimilados. Se o conjunto de dados de destino estiver habilitado para [!DNL Profile], o número de registros de identidade e perfil assimilados também será exibido.
 
 ![A tela inteira do lote de monitoramento é mostrada. Tanto o monitoramento quanto o lote a lote estão destacados.](../images/datasets/user-guide/batch-listing.png)
 
-Você pode selecionar em um **[!UICONTROL ID do Lote]** individual para acessar o painel **[!UICONTROL Visão geral do lote]** e ver os detalhes do lote, incluindo logs de erros caso o lote não seja assimilado.
+Você pode selecionar um **[!UICONTROL Batch ID]** individual para acessar o painel **[!UICONTROL Batch overview]** e ver os detalhes do lote, incluindo logs de erros caso o lote não seja assimilado.
 
 ![Detalhes do lote selecionado são exibidos. Isso inclui o número de registros assimilados, o número de registros com falha, o status do lote, o tamanho do arquivo, as horas inicial e final da assimilação, o conjunto de dados e as IDs do lote, a ID da organização, o nome do conjunto de dados e as informações de acesso.](../images/datasets/user-guide/batch-overview.png)
 
-Se desejar excluir o lote, selecione **[!UICONTROL Excluir lote]** próximo à parte superior direita do painel. A exclusão de um lote também remove seus registros do conjunto de dados ao qual o lote foi originalmente assimilado.
+Se desejar excluir o lote, selecione **[!UICONTROL Delete batch]** próximo à parte superior direita do painel. A exclusão de um lote também remove seus registros do conjunto de dados ao qual o lote foi originalmente assimilado.
 
 >[!NOTE]
 >

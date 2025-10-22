@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de descritores
 description: O ponto de extremidade /descriptors na API do registro de esquema permite gerenciar programaticamente os descritores XDM no aplicativo de experiência.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '2888'
+source-wordcount: '2916'
 ht-degree: 1%
 
 ---
@@ -34,7 +34,11 @@ O ponto de extremidade `/descriptors` na API [!DNL Schema Registry] permite gere
 
 O ponto de extremidade usado neste guia faz parte da [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
-Além dos descritores padrão, o [!DNL Schema Registry] dá suporte a tipos de descritores para esquemas baseados em modelo, como **chave primária**, **versão** e **carimbo de data/hora**. Eles impõem exclusividade, controlam versão e definem campos de série temporal no nível do esquema. Se você não estiver familiarizado com esquemas baseados em modelo, revise a [visão geral do Data Mirror](../data-mirror/overview.md) e a [referência técnica de esquemas baseados em modelo](../schema/model-based.md) antes de continuar.
+Além dos descritores padrão, o [!DNL Schema Registry] dá suporte a tipos de descritores para esquemas relacionais, como **chave primária**, **versão** e **carimbo de data/hora**. Eles impõem exclusividade, controlam versão e definem campos de série temporal no nível do esquema. Se você não estiver familiarizado com esquemas relacionais, revise a [visão geral do Data Mirror](../data-mirror/overview.md) e a [referência técnica de esquemas relacionais](../schema/relational.md) antes de continuar.
+
+>[!NOTE]
+>
+>Os esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação do Adobe Experience Platform. A funcionalidade do descritor e os endpoints da API permanecem inalterados. Somente a terminologia foi atualizada para maior clareza.
 
 >[!IMPORTANT]
 >
@@ -397,7 +401,7 @@ Use estas propriedades para declarar como um campo de origem (chave estrangeira)
 A API oferece suporte a dois padrões:
 
 - `xdm:descriptorOneToOne`: relação padrão 1:1.
-- `xdm:descriptorRelationship`: padrão geral para novos esquemas de trabalho e baseados em modelo (suporta cardinalidade, nomeação e alvos de chave não primária).
+- `xdm:descriptorRelationship`: padrão geral para novos esquemas de trabalho e relacionais (suporta cardinalidade, nomeação e alvos de chave não primária).
 
 ##### Relação um para um (esquemas padrão)
 
@@ -427,9 +431,9 @@ A tabela a seguir descreve os campos necessários para definir um descritor de r
 | `xdm:destinationVersion` | A versão principal do esquema de referência. |
 | `xdm:destinationProperty` | (Opcional) Caminho para um campo de destino no esquema de referência. Se essa propriedade for omitida, o campo de destino será inferido por quaisquer campos que contenham um descritor de identidade de referência correspondente (veja abaixo). |
 
-##### Relação geral (esquemas baseados em modelo e recomendados para novos projetos)
+##### Relação geral (esquemas relacionais e recomendados para novos projetos)
 
-Use esse descritor para todas as novas implementações e para esquemas baseados em modelo. Ela permite definir a cardinalidade da relação (como um para um ou muitos para um), especificar nomes de relação e vincular a um campo de destino que não seja a chave primária (chave não primária).
+Use esse descritor para todas as novas implementações e para esquemas relacionais. Ela permite definir a cardinalidade da relação (como um para um ou muitos para um), especificar nomes de relação e vincular a um campo de destino que não seja a chave primária (chave não primária).
 
 Os exemplos a seguir mostram como definir um descritor de relacionamento geral.
 
@@ -474,7 +478,7 @@ Use as diretrizes a seguir para decidir qual descritor de relacionamento aplicar
 
 | Situação | Descritor a ser usado |
 | --------------------------------------------------------------------- | ----------------------------------------- |
-| Novos esquemas baseados em trabalho ou modelo | `xdm:descriptorRelationship` |
+| Novo trabalho ou esquemas relacionais | `xdm:descriptorRelationship` |
 | Mapeamento 1:1 existente em esquemas padrão | Continue usando o `xdm:descriptorOneToOne` a menos que precise de recursos com suporte apenas do `xdm:descriptorRelationship`. |
 | É necessária uma cardinalidade de muitos para um ou opcional (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship` |
 | São necessários nomes ou títulos de relacionamento para legibilidade da interface do usuário/downstream | `xdm:descriptorRelationship` |
@@ -493,13 +497,13 @@ A tabela a seguir compara os recursos dos dois tipos de descritor:
 | Cardinalidade | 1:1 | 1:1, 1:0, M:1, M:0 (informativo) |
 | Destino | Campo de identidade/explícito | Chave primária por padrão, ou chave não primária via `xdm:destinationProperty` |
 | Nomeação de campos | Incompatível | `xdm:sourceToDestinationName`, `xdm:destinationToSourceName` e títulos |
-| Ajuste relacional | Limitado | Padrão principal para esquemas baseados em modelo |
+| Ajuste relacional | Limitado | Padrão principal para esquemas relacionais |
 
 ##### Restrições e validação
 
 Siga estes requisitos e recomendações ao definir um descritor de relacionamento geral:
 
-- Para esquemas baseados em modelo, coloque o campo de origem (chave estrangeira) no nível raiz. Essa é uma limitação técnica atual para assimilação, não apenas uma recomendação de práticas recomendadas.
+- Para esquemas relacionais, coloque o campo de origem (chave estrangeira) no nível raiz. Essa é uma limitação técnica atual para assimilação, não apenas uma recomendação de práticas recomendadas.
 - Verifique se os tipos de dados dos campos de origem e destino são compatíveis (numérico, data, booleano, string).
 - Lembre-se de que a cardinalidade é informativa; o armazenamento não a impõe. Especifique a cardinalidade no formato `<source>:<destination>`. Os valores aceitos são: `1:1`, `1:0`, `M:1` ou `M:0`.
 
@@ -525,7 +529,7 @@ O descritor de chave primária (`xdm:descriptorPrimaryKey`) impõe restrições 
 
 >[!NOTE]
 >
->No Editor de Esquema da Interface do Usuário, o descritor de versão aparece como &quot;[!UICONTROL Identificador de versão]&quot;.
+>No Editor de Esquema de Interface do Usuário, o descritor de versão aparece como &quot;[!UICONTROL Version identifier]&quot;.
 
 O descritor de versão (`xdm:descriptorVersion`) designa um campo para detectar e evitar conflitos de eventos de alteração fora de ordem.
 
@@ -547,7 +551,7 @@ O descritor de versão (`xdm:descriptorVersion`) designa um campo para detectar 
 
 >[!NOTE]
 >
->No Editor de Esquema de Interface do Usuário, o descritor de carimbo de data/hora aparece como &quot;[!UICONTROL Identificador de carimbo de data/hora]&quot;.
+>No Editor de Esquema de Interface do Usuário, o descritor de carimbo de data/hora aparece como &quot;[!UICONTROL Timestamp identifier]&quot;.
 
 O descritor de carimbo de data/hora (`xdm:descriptorTimestamp`) designa um campo de data/hora como carimbo de data/hora para esquemas com `"meta:behaviorType": "time-series"`.
 

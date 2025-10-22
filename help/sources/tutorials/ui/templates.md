@@ -3,9 +3,9 @@ description: Saiba como usar modelos na interface do usuário do Adobe Experienc
 title: Criar um fluxo de dados de origem usando modelos na interface
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: f9e3c19fdfd4ca0e03fdf3b3a7b5e82b72490dbc
 workflow-type: tm+mt
-source-wordcount: '2314'
+source-wordcount: '2271'
 ht-degree: 10%
 
 ---
@@ -53,11 +53,11 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 >abstract="Selecione o tipo de empresa apropriado para seu caso de uso. O acesso pode variar dependendo da conta de assinatura da Real-time Customer Data Platform."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR" text="Visão geral da Real-Time CDP"
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes] e ver um catálogo de fontes disponíveis no Experience Platform.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Sources]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Sources] e ver um catálogo de fontes disponíveis no Experience Platform.
 
-Use o menu *[!UICONTROL Categorias]* para filtrar fontes por categoria. Como alternativa, insira um nome de origem na barra de pesquisa para localizar uma origem específica do catálogo.
+Use o menu *[!UICONTROL Categories]* para filtrar fontes por categoria. Como alternativa, insira um nome de origem na barra de pesquisa para localizar uma origem específica do catálogo.
 
-Vá para a categoria [!UICONTROL aplicativos Adobe] para ver o cartão de origem [!DNL Marketo Engage] e selecione [!UICONTROL Adicionar dados] para começar.
+Vá para a categoria [!UICONTROL Adobe applications] para ver o cartão de origem [!DNL Marketo Engage] e selecione [!UICONTROL Add data] para começar.
 
 ![Um catálogo do espaço de trabalho de origens com a origem do Marketo Engage realçada.](../../images/tutorials/templates/catalog.png)
 
@@ -68,11 +68,11 @@ Uma janela pop-up é exibida, apresentando a opção de procurar modelos ou usar
 
 >[!NOTE]
 >
->Os modelos podem gerar esquemas baseados em modelo automaticamente ao trabalhar com origens que exigem workflows de captura de dados de alteração ou suportam vários modelos de dados. Esses esquemas ativam os recursos do Data Mirror para sincronização de dados em tempo real.\
->Ao usar modelos com esquemas baseados em modelo, os ativos gerados automaticamente incluirão os campos obrigatórios chave primária, identificador de versão e identificador de carimbo de data e hora.\
->Para obter mais informações, consulte a [visão geral do Data Mirror](../../../xdm/data-mirror/overview.md) e a [referência técnica de esquemas baseados em modelo](../../../xdm/schema/model-based.md).
+>Os modelos podem gerar esquemas relacionais automaticamente ao trabalhar com origens que exigem workflows de captura de dados de alteração ou suportam vários modelos de dados. Esses esquemas ativam os recursos do Data Mirror para sincronização de dados em tempo real.\
+>Ao usar modelos com esquemas relacionais, os ativos gerados automaticamente incluirão os campos obrigatórios de chave primária, identificador de versão e identificador de carimbo de data e hora.\
+>Para obter mais informações, consulte a [visão geral do Data Mirror](../../../xdm/data-mirror/overview.md) e a [referência técnica de esquemas relacionais](../../../xdm/schema/relational.md).
 
-Para usar os ativos gerados automaticamente, selecione **[!UICONTROL Procurar modelos]** e **[!UICONTROL Selecionar]**.
+Para usar os ativos gerados automaticamente, selecione **[!UICONTROL Browse templates]** e **[!UICONTROL Select]**.
 
 ![Uma janela pop-up com opções para procurar modelos ou usar ativos existentes.](../../images/tutorials/templates/browse-templates.png)
 
@@ -84,13 +84,13 @@ A etapa de autenticação é exibida, solicitando que você crie uma nova conta 
 
 >[!TAB Usar uma conta existente]
 
-Para usar uma conta existente, selecione [!UICONTROL Conta existente] e, em seguida, selecione a conta que deseja usar na lista exibida.
+Para usar uma conta existente, selecione [!UICONTROL Existing account] e, em seguida, selecione a conta que deseja usar na lista exibida.
 
 ![A página de seleção de uma conta existente com uma lista de contas existentes que você pode acessar.](../../images/tutorials/templates/existing-account.png)
 
 >[!TAB Criar uma nova conta]
 
-Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça os detalhes da conexão de origem e as credenciais de autenticação da conta. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para estabelecer a nova conexão.
+Para criar uma nova conta, selecione **[!UICONTROL New account]** e forneça os detalhes da conexão de origem e as credenciais de autenticação da conta. Quando terminar, selecione **[!UICONTROL Connect to source]** e aguarde algum tempo para a nova conexão ser estabelecida.
 
 ![A página de autenticação de uma nova conta com detalhes de conexão de origem e credenciais de autenticação de conta.](../../images/tutorials/templates/new-account.png)
 
@@ -184,11 +184,11 @@ Dependendo do tipo de negócio selecionado, uma lista de modelos é exibida. Sel
 
 ![Uma lista de modelos com o ícone de visualização realçado.](../../images/tutorials/templates/templates.png)
 
-A janela de pré-visualização é exibida, permitindo explorar e inspecionar dados de amostra do seu modelo. Quando terminar, selecione **[!UICONTROL Obteve]**.
+A janela de pré-visualização é exibida, permitindo explorar e inspecionar dados de amostra do seu modelo. Quando terminar, selecione **[!UICONTROL Got it]**.
 
 ![A janela de dados de amostra de visualização.](../../images/tutorials/templates/preview-sample-data.png)
 
-Em seguida, selecione o template que deseja usar na lista. Você pode selecionar vários modelos e criar vários fluxos de dados de uma só vez. No entanto, um template só pode ser usado uma vez por conta. Depois de selecionar seus modelos, selecione **[!UICONTROL Concluir]** e aguarde alguns momentos para os ativos serem gerados.
+Em seguida, selecione o template que deseja usar na lista. Você pode selecionar vários modelos e criar vários fluxos de dados de uma só vez. No entanto, um template só pode ser usado uma vez por conta. Depois de selecionar seus modelos, selecione **[!UICONTROL Finish]** e aguarde alguns momentos para os ativos serem gerados.
 
 Se você selecionar um item ou itens parciais da lista de modelos disponíveis, todos os esquemas B2B e namespaces de identidade ainda serão gerados para garantir que os relacionamentos B2B entre esquemas sejam configurados corretamente.
 
@@ -210,7 +210,7 @@ Como alternativa, você pode definir a frequência de assimilação como **Minut
 
 Durante esta etapa, você também pode habilitar o **preenchimento retroativo** e definir uma coluna para a assimilação incremental de dados. O preenchimento retroativo é usado para assimilar dados históricos, enquanto a coluna definida para assimilação incremental permite que novos dados sejam diferenciados dos dados existentes.
 
-Após concluir a configuração do agendamento de assimilação, selecione **[!UICONTROL Concluir]**.
+Depois de concluir a configuração do agendamento de assimilação, selecione **[!UICONTROL Finish]**.
 
 ![A interface de agendamento para modelos do Dynamics e do Salesforce com preenchimento retroativo habilitado.](../../images/tutorials/templates/backfill.png)
 
@@ -221,17 +221,17 @@ Após concluir a configuração do agendamento de assimilação, selecione **[!U
 >title="Revisar os ativos gerados automaticamente"
 >abstract="Pode levar até cinco minutos para gerar todos os ativos. Se você optar por sair da página, receberá uma notificação para retornar depois que os ativos forem concluídos. Você pode revisar os ativos depois que eles são gerados e fazer configurações adicionais ao seu fluxo de dados a qualquer momento."
 
-A página [!UICONTROL Revisar ativos do modelo] exibe os ativos gerados automaticamente como parte do modelo. Nesta página, você pode exibir os esquemas, conjuntos de dados, namespaces de identidade e fluxos de dados gerados automaticamente associados à conexão de origem. Pode levar até cinco minutos para gerar todos os ativos. Se você optar por sair da página, receberá uma notificação para retornar depois que os ativos forem concluídos. Você pode revisar os ativos depois que eles são gerados e fazer configurações adicionais ao seu fluxo de dados a qualquer momento.
+A página [!UICONTROL Review template assets] exibe os ativos gerados automaticamente como parte do modelo. Nesta página, você pode exibir os esquemas, conjuntos de dados, namespaces de identidade e fluxos de dados gerados automaticamente associados à conexão de origem. Pode levar até cinco minutos para gerar todos os ativos. Se você optar por sair da página, receberá uma notificação para retornar depois que os ativos forem concluídos. Você pode revisar os ativos depois que eles são gerados e fazer configurações adicionais ao seu fluxo de dados a qualquer momento.
 
-Por padrão, os fluxos de dados gerados automaticamente são definidos como um estado de rascunho para permitir mais personalização em configurações, como regras de mapeamento ou frequências programadas. Selecione as reticências (`...`) ao lado do nome do fluxo de dados e selecione **[!UICONTROL Visualizar mapeamentos]** para ver os conjuntos de mapeamento criados para o fluxo de dados de rascunho.
+Por padrão, os fluxos de dados gerados automaticamente são definidos como um estado de rascunho para permitir mais personalização em configurações, como regras de mapeamento ou frequências programadas. Selecione as reticências (`...`) ao lado do nome do fluxo de dados e selecione **[!UICONTROL Preview mappings]** para ver os conjuntos de mapeamento criados para o fluxo de dados de rascunho.
 
 ![Uma janela suspensa com a opção de visualização de mapeamentos selecionada.](../../images/tutorials/templates/preview.png)
 
-Uma página de visualização é exibida, permitindo que você inspecione a relação de mapeamento entre os campos de dados de origem e os campos de esquema de destino. Depois de visualizar os mapeamentos do fluxo de dados. Selecione **[!UICONTROL Obteve.]**
+Uma página de visualização é exibida, permitindo que você inspecione a relação de mapeamento entre os campos de dados de origem e os campos de esquema de destino. Depois de visualizar os mapeamentos do fluxo de dados. Selecionar **[!UICONTROL Got it.]**
 
 ![A janela de visualização de mapeamento.](../../images/tutorials/templates/preview-mappings.png)
 
-Você pode atualizar seus fluxos de dados a qualquer momento após a execução. Selecione as reticências (`...`) ao lado do nome do fluxo de dados e selecione **[!UICONTROL Atualizar fluxo de dados]**. Você é levado para a página de fluxo de trabalho de origens, onde é possível atualizar os detalhes do fluxo de dados, incluindo configurações para assimilação parcial, diagnósticos de erro e notificações de alerta, bem como o mapeamento do fluxo de dados.
+Você pode atualizar seus fluxos de dados a qualquer momento após a execução. Selecione as reticências (`...`) ao lado do nome do fluxo de dados e selecione **[!UICONTROL Update dataflow]**. Você é levado para a página de fluxo de trabalho de origens, onde é possível atualizar os detalhes do fluxo de dados, incluindo configurações para assimilação parcial, diagnósticos de erro e notificações de alerta, bem como o mapeamento do fluxo de dados.
 
 Você pode usar a visualização do editor de esquemas para atualizar o esquema gerado automaticamente. Consulte o guia em [usando o editor de esquemas](../../../xdm/tutorials/create-schema-ui.md) para obter mais informações.
 
@@ -239,29 +239,29 @@ Você pode usar a visualização do editor de esquemas para atualizar o esquema 
 
 >[!TIP]
 >
->Você pode acessar o fluxo de dados de rascunho por meio da página de catálogo [!UICONTROL Fluxos de Dados] no espaço de trabalho de fontes. Selecione **[!UICONTROL Fluxos de dados]** no cabeçalho superior e selecione na lista o fluxo de dados que você deseja atualizar.
+>Você pode acessar o fluxo de dados de rascunho na página de catálogo [!UICONTROL Dataflows] no espaço de trabalho de origens. Selecione **[!UICONTROL Dataflows]** no cabeçalho superior e selecione o fluxo de dados que você deseja atualizar na lista.
 >
 >![Uma lista de fluxos de dados existentes no catálogo de fluxos de dados do espaço de trabalho de fontes.](../../images/tutorials/templates/dataflows.png)
 
 ### Publicar seu fluxo de dados
 
-Comece o processo de publicação navegando pelo fluxo de trabalho de origens. Depois de selecionar [!UICONTROL Atualizar fluxo de dados], você será direcionado para a etapa *[!UICONTROL Adicionar dados]* do fluxo de trabalho. Selecione **[!UICONTROL Avançar]** para continuar.
+Comece o processo de publicação navegando pelo fluxo de trabalho de origens. Depois de selecionar [!UICONTROL Update dataflow], você será direcionado para a etapa *[!UICONTROL Add data]* do fluxo de trabalho. Selecione **[!UICONTROL Next]** para continuar.
 
 ![A etapa para adicionar dados para um fluxo de dados de rascunho](../../images/tutorials/templates/continue-draft.png)
 
-Em seguida, confirme os detalhes do fluxo de dados e defina as configurações para diagnósticos de erro, assimilação parcial e notificações de alerta. Quando terminar, selecione **[!UICONTROL Próximo]**.
+Em seguida, confirme os detalhes do fluxo de dados e defina as configurações para diagnósticos de erro, assimilação parcial e notificações de alerta. Quando terminar, selecione **[!UICONTROL Next]**.
 
 ![A etapa de detalhes do fluxo de dados para um fluxo de dados de rascunho.](../../images/tutorials/templates/dataflow-detail.png)
 
 >[!NOTE]
 >
->Você pode selecionar **[!UICONTROL Salvar como rascunho]** a qualquer momento para parar e salvar as alterações feitas no fluxo de dados.
+>Você pode selecionar **[!UICONTROL Save as draft]** a qualquer momento para parar e salvar as alterações feitas no fluxo de dados.
 
 A etapa de mapeamento é exibida. Durante essa etapa, você pode reconfigurar as configurações de mapeamento do fluxo de dados. Para obter um guia abrangente sobre as funções de preparação de dados usadas para mapeamento, visite o [guia da interface do usuário de preparação de dados](../../../data-prep/ui/mapping.md).
 
 ![A etapa de mapeamento para um fluxo de dados de rascunho.](../../images/tutorials/templates/mapping.png)
 
-Finalmente, revise os detalhes do seu fluxo de dados e selecione **[!UICONTROL Salvar e assimilar]** para publicar seu rascunho.
+Finalmente, revise os detalhes do seu fluxo de dados e selecione **[!UICONTROL Save & ingest]** para publicar seu rascunho.
 
 ![A etapa de revisão para um fluxo de dados de rascunho.](../../images/tutorials/templates/review.png)
 

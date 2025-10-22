@@ -2,9 +2,9 @@
 title: Habilitar captura de dados de alteração para conexões de origem na API
 description: Saiba como habilitar a captura de dados de alteração para conexões de origem na API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
 workflow-type: tm+mt
-source-wordcount: '1238'
+source-wordcount: '1261'
 ht-degree: 0%
 
 ---
@@ -17,32 +17,36 @@ Atualmente, o Experience Platform oferece suporte a **cópia de dados incrementa
 
 Por outro lado, a captura de dados de alteração captura e aplica inserções, atualizações e exclusões em tempo quase real. Esse controle abrangente de alterações garante que os conjuntos de dados permaneçam totalmente alinhados ao sistema de origem e fornece um histórico completo de alterações, além do que a cópia incremental suporta. No entanto, as operações de exclusão exigem consideração especial, pois afetam todos os aplicativos que usam os conjuntos de dados de destino.
 
-A alteração da captura de dados no Experience Platform exige o **[Data Mirror](../../../xdm/data-mirror/overview.md)** com [esquemas baseados em modelo](../../../xdm/schema/model-based.md) (também chamados de esquemas relacionais). Você pode fornecer dados de alteração ao Data Mirror de duas maneiras:
+A alteração da captura de dados no Experience Platform requer o **[Data Mirror](../../../xdm/data-mirror/overview.md)** com [esquemas relacionais](../../../xdm/schema/relational.md). Você pode fornecer dados de alteração ao Data Mirror de duas maneiras:
 
 * **[Controle manual de alterações](#file-based-sources)**: inclua uma coluna `_change_request_type` em seu conjunto de dados para fontes que não geram nativamente registros de captura de dados de alteração
 * **[Exportações de captura de dados de alteração nativa](#database-sources)**: usar registros de captura de dados de alteração exportados diretamente do sistema de origem
 
-Ambas as abordagens exigem o Data Mirror com esquemas baseados em modelo para preservar relacionamentos e impor exclusividade.
+Ambas as abordagens exigem o Data Mirror com esquemas relacionais para preservar relacionamentos e impor exclusividade.
 
-## Data Mirror com esquemas baseados em modelo
+## Data Mirror com esquemas relacionais
 
 >[!AVAILABILITY]
 >
->O Data Mirror e os esquemas baseados em modelo estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
+>O Data Mirror e esquemas relacionais estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
+
+>[!NOTE]
+>
+>Esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação do Adobe Experience Platform. A funcionalidade e os recursos de captura de dados de alteração permanecem inalterados.
 
 >[!NOTE]
 >
 >**Usuários de campanhas orquestradas**: use os recursos do Data Mirror descritos neste documento para trabalhar com dados do cliente que mantenham integridade referencial. Mesmo que a origem não use a formatação de captura de dados de alteração, o Data Mirror oferece suporte a recursos relacionais, como imposição de chave primária, upserts em nível de registro e relacionamentos de esquema. Esses recursos garantem uma modelagem de dados consistente e confiável em todos os conjuntos de dados conectados.
 
-O Data Mirror usa esquemas baseados em modelo para estender a captura de dados de alteração e habilitar recursos avançados de sincronização de banco de dados. Para obter uma visão geral do Data Mirror, consulte [visão geral do Data Mirror](../../../xdm/data-mirror/overview.md).
+O Data Mirror usa esquemas relacionais para estender a captura de dados de alteração e habilitar recursos avançados de sincronização de banco de dados. Para obter uma visão geral do Data Mirror, consulte [visão geral do Data Mirror](../../../xdm/data-mirror/overview.md).
 
-Os esquemas baseados em modelo estendem o Experience Platform para aplicar a exclusividade da chave primária, rastrear alterações no nível da linha e definir relações no nível do esquema. Com a captura de dados de alteração, eles aplicam inserções, atualizações e exclusões diretamente no data lake, reduzindo a necessidade de extrair, transformar, carregar (ETL) ou reconciliação manual.
+Os esquemas relacionais estendem o Experience Platform para impor a exclusividade da chave primária, rastrear alterações no nível da linha e definir relações no nível do esquema. Com a captura de dados de alteração, eles aplicam inserções, atualizações e exclusões diretamente no data lake, reduzindo a necessidade de extrair, transformar, carregar (ETL) ou reconciliação manual.
 
-Consulte [Visão geral dos esquemas baseados em modelo](../../../xdm/schema/model-based.md) para obter mais informações.
+Consulte [Visão geral de esquemas relacionais](../../../xdm/schema/relational.md) para obter mais informações.
 
-### Requisitos do esquema baseado em modelo para captura de dados de alteração
+### Requisitos de esquema relacional para captura de dados de alteração
 
-Antes de usar um schema baseado em modelo com a captura de dados de alteração, configure os seguintes identificadores:
+Antes de usar um esquema relacional com captura de dados de alteração, configure os seguintes identificadores:
 
 * Identifique exclusivamente cada registro com uma chave primária.
 * Aplique atualizações em sequência usando um identificador de versão.
@@ -59,9 +63,9 @@ Essa coluna é avaliada somente durante a assimilação e não é armazenada ou 
 
 ### Fluxo de trabalho {#workflow}
 
-Para ativar a captura de dados de alteração com um esquema baseado em modelo:
+Para habilitar a captura de dados de alteração com um esquema relacional:
 
-1. Crie um esquema baseado em modelo.
+1. Criar um esquema relacional.
 2. Adicione os descritores necessários:
    * [Descritor de chave primária](../../../xdm/api/descriptors.md#primary-key-descriptor)
    * [Descritor de versão](../../../xdm/api/descriptors.md#version-descriptor)
@@ -76,13 +80,13 @@ Para ativar a captura de dados de alteração com um esquema baseado em modelo:
 
 >[!IMPORTANT]
 >
->**O planejamento de exclusão de dados é necessário**. Todos os aplicativos que usam esquemas baseados em modelo devem entender as implicações de exclusão antes de implementar a captura de dados de alteração. Planeje como as exclusões afetarão os conjuntos de dados relacionados, os requisitos de conformidade e os processos de downstream. Consulte [considerações sobre higiene de dados](../../../hygiene/ui/record-delete.md#model-based-record-delete) para obter orientação.
+>**O planejamento de exclusão de dados é necessário**. Todos os aplicativos que usam esquemas relacionais devem entender as implicações de exclusão antes de implementar a captura de dados de alteração. Planeje como as exclusões afetarão os conjuntos de dados relacionados, os requisitos de conformidade e os processos de downstream. Consulte [considerações sobre higiene de dados](../../../hygiene/ui/record-delete.md#relational-record-delete) para obter orientação.
 
 ## Fornecendo dados de alteração para fontes baseadas em arquivo {#file-based-sources}
 
 >[!IMPORTANT]
 >
->A captura de dados de alteração com base em arquivo exige o Data Mirror com esquemas baseados em modelo. Antes de seguir as etapas de formatação de arquivo abaixo, verifique se você concluiu o [fluxo de trabalho de instalação do Data Mirror](#workflow) descrito anteriormente neste documento. As etapas abaixo descrevem como formatar seus arquivos de dados para incluir informações de controle de alterações que serão processadas pelo Data Mirror.
+>A captura de dados de alteração baseada em arquivo requer o Data Mirror com esquemas relacionais. Antes de seguir as etapas de formatação de arquivo abaixo, verifique se você concluiu o [fluxo de trabalho de instalação do Data Mirror](#workflow) descrito anteriormente neste documento. As etapas abaixo descrevem como formatar seus arquivos de dados para incluir informações de controle de alterações que serão processadas pelo Data Mirror.
 
 Para fontes baseadas em arquivo ([!DNL Amazon S3], [!DNL Azure Blob], [!DNL Google Cloud Storage] e [!DNL SFTP]), inclua uma coluna `_change_request_type` em seus arquivos.
 
@@ -115,7 +119,7 @@ Todas as fontes de armazenamento na nuvem usam o mesmo formato de coluna `_chang
 
 ### [!DNL Azure Databricks]
 
-Para usar a captura de dados de alteração com o [!DNL Azure Databricks], você deve habilitar o **feed de dados de alteração** nas tabelas de origem e configurar o Data Mirror com esquemas baseados em modelo no Experience Platform.
+Para usar a captura de dados de alteração com o [!DNL Azure Databricks], você deve habilitar o **feed de dados de alteração** nas tabelas de origem e configurar o Data Mirror com esquemas relacionais no Experience Platform.
 
 Use os seguintes comandos para habilitar a alteração do feed de dados nas tabelas:
 
@@ -152,7 +156,7 @@ Leia a documentação a seguir para obter as etapas sobre como habilitar a captu
 
 ### [!DNL Data Landing Zone]
 
-Para usar a captura de dados de alteração com o [!DNL Data Landing Zone], você deve habilitar o **feed de dados de alteração** nas tabelas de origem e configurar o Data Mirror com esquemas baseados em modelo no Experience Platform.
+Para usar a captura de dados de alteração com o [!DNL Data Landing Zone], você deve habilitar o **feed de dados de alteração** nas tabelas de origem e configurar o Data Mirror com esquemas relacionais no Experience Platform.
 
 Leia a documentação a seguir para obter as etapas sobre como habilitar a captura de dados de alteração para sua conexão de origem do [!DNL Data Landing Zone]:
 
@@ -161,7 +165,7 @@ Leia a documentação a seguir para obter as etapas sobre como habilitar a captu
 
 ### [!DNL Google BigQuery]
 
-Para usar a captura de dados de alteração com o [!DNL Google BigQuery], você deve habilitar o histórico de alterações em suas tabelas de origem e configurar o Data Mirror com esquemas baseados em modelo no Experience Platform.
+Para usar a captura de dados de alteração com o [!DNL Google BigQuery], você deve habilitar o histórico de alterações nas tabelas de origem e configurar o Data Mirror com esquemas relacionais no Experience Platform.
 
 Para habilitar o histórico de alterações na conexão de origem do [!DNL Google BigQuery], navegue até a página [!DNL Google BigQuery] no console [!DNL Google Cloud] e defina `enable_change_history` como `TRUE`. Essa propriedade ativa o histórico de alterações da tabela de dados.
 
@@ -174,7 +178,7 @@ Leia a documentação a seguir para obter as etapas sobre como habilitar a captu
 
 ### [!DNL Snowflake]
 
-Para usar a captura de dados de alteração com [!DNL Snowflake], você deve habilitar o **controle de alterações** nas tabelas de origem e configurar o Data Mirror com esquemas baseados em modelo no Experience Platform.
+Para usar a captura de dados de alteração com [!DNL Snowflake], você deve habilitar o **controle de alterações** nas tabelas de origem e configurar o Data Mirror com esquemas relacionais no Experience Platform.
 
 Em [!DNL Snowflake], habilite o controle de alterações usando `ALTER TABLE` e definindo `CHANGE_TRACKING` como `TRUE`.
 

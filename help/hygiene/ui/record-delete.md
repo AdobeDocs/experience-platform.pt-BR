@@ -2,16 +2,16 @@
 title: Solicitações de exclusão de registro (fluxo de trabalho da interface)
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
+source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
 workflow-type: tm+mt
-source-wordcount: '2420'
-ht-degree: 5%
+source-wordcount: '2383'
+ht-degree: 6%
 
 ---
 
 # Registrar solicitações de exclusão (Fluxo de trabalho da interface do usuário) {#record-delete}
 
-Use o [[!UICONTROL espaço de trabalho do Ciclo de Vida de Dados]](./overview.md) para excluir registros no Adobe Experience Platform com base em suas identidades primárias. Esses registros podem ser vinculados a consumidores individuais ou a qualquer outra entidade incluída no gráfico de identidade.
+Use o [[!UICONTROL Data Lifecycle] espaço de trabalho](./overview.md) para excluir registros no Adobe Experience Platform com base em suas identidades primárias. Esses registros podem ser vinculados a consumidores individuais ou a qualquer outra entidade incluída no gráfico de identidade.
 
 >[!IMPORTANT]
 >
@@ -31,35 +31,35 @@ Consulte a seguinte documentação para obter mais informações sobre identidad
 
 ## Criar uma solicitação {#create-request}
 
-Para iniciar o processo, selecione **[!UICONTROL Ciclo de Vida dos Dados]** na navegação à esquerda da interface do Experience Platform. O espaço de trabalho [!UICONTROL Solicitações do ciclo de vida dos dados] é exibido. Em seguida, selecione **[!UICONTROL Criar solicitação]** na página principal do espaço de trabalho.
+Para iniciar o processo, selecione **[!UICONTROL Data Lifecycle]** na navegação à esquerda da interface do Experience Platform. O espaço de trabalho [!UICONTROL Data lifecycle requests] é exibido. Em seguida, selecione **[!UICONTROL Create request]** na página principal do espaço de trabalho.
 
-![O espaço de trabalho [!UICONTROL Solicitações do ciclo de vida dos dados] com [!UICONTROL Solicitação de criação] selecionada.](../images/ui/record-delete/create-request-button.png)
+![O espaço de trabalho [!UICONTROL Data lifecycle requests] com [!UICONTROL Create request] selecionado.](../images/ui/record-delete/create-request-button.png)
 
-O workflow de criação da solicitação é exibido. Por padrão, a opção **[!UICONTROL Excluir registro]** está selecionada na seção **[!UICONTROL Ação solicitada]**. Deixe essa opção selecionada.
+O workflow de criação da solicitação é exibido. Por padrão, a opção **[!UICONTROL Delete record]** está selecionada na seção **[!UICONTROL Requested Action]**. Deixe essa opção selecionada.
 
 >[!IMPORTANT]
 > 
 >Para melhorar a eficiência e tornar as operações do conjunto de dados mais baratas, as organizações que foram movidas para o formato Delta podem excluir dados do Serviço de identidade, do Perfil do cliente em tempo real e do data lake. Esse tipo de usuário é chamado de delta-migrado. Os usuários de organizações que receberam a migração delta podem optar por excluir registros de um único conjunto de dados ou de todos eles. Os usuários de organizações que não passaram pela migração delta não podem excluir seletivamente registros de um único conjunto de dados ou de todos os conjuntos de dados, conforme mostrado na imagem abaixo. Nesse caso, continue para a seção [Fornecer identidades](#provide-identities) do guia.
 
-![O fluxo de trabalho de criação da solicitação com a opção [!UICONTROL Excluir registro] foi selecionado e realçado.](../images/ui/record-delete/delete-record.png)
+![O fluxo de trabalho de criação da solicitação com a opção [!UICONTROL Delete record] selecionada e realçada.](../images/ui/record-delete/delete-record.png)
 
 ## Selecionar conjuntos de dados {#select-dataset}
 
 A próxima etapa é determinar se você deseja excluir registros de um único conjunto de dados ou de todos os conjuntos de dados. Dependendo da configuração de sua organização, a opção de seleção de conjunto de dados pode não estar disponível. Se você não vir essa opção, continue na seção [Fornecer identidades](#provide-identities) do guia.
 
-Na seção **[!UICONTROL Detalhes do Registro]**, selecione um botão de opção para escolher um conjunto de dados específico ou todos os conjuntos de dados.
+Na seção **[!UICONTROL Record Details]**, selecione um botão de opção para escolher um conjunto de dados específico ou todos os conjuntos de dados.
 
-Para excluir de um conjunto de dados específico, selecione **[!UICONTROL Selecionar conjunto de dados]** e, em seguida, selecione o ícone do banco de dados (![O ícone do banco de dados](/help/images/icons/database.png)). Na caixa de diálogo exibida, escolha um conjunto de dados e selecione **[!UICONTROL Concluído]** para confirmar.
+Para excluir de um conjunto de dados específico, selecione **[!UICONTROL Select dataset]** e, em seguida, selecione o ícone do banco de dados (![O ícone do banco de dados](/help/images/icons/database.png)). Na caixa de diálogo exibida, escolha um conjunto de dados e selecione **[!UICONTROL Done]** para confirmar.
 
-![A caixa de diálogo [!UICONTROL Selecionar conjunto de dados] com um conjunto de dados selecionado e [!UICONTROL Concluído] realçado.](../images/ui/record-delete/select-dataset.png)
+![A caixa de diálogo [!UICONTROL Select dataset] com um conjunto de dados selecionado e [!UICONTROL Done] realçado.](../images/ui/record-delete/select-dataset.png)
 
-Para excluir de todos os conjuntos de dados, selecione **[!UICONTROL Todos os conjuntos de dados]**. Essa opção aumenta o escopo da operação e requer que você forneça todos os tipos de identidade relevantes.
+Para excluir de todos os conjuntos de dados, selecione **[!UICONTROL All datasets]**. Essa opção aumenta o escopo da operação e requer que você forneça todos os tipos de identidade relevantes.
 
-![A caixa de diálogo [!UICONTROL Selecionar conjunto de dados] com a opção [!UICONTROL Todos os conjuntos de dados] selecionada.](../images/ui/record-delete/all-datasets.png)
+![A caixa de diálogo [!UICONTROL Select dataset] com a opção [!UICONTROL All datasets] selecionada.](../images/ui/record-delete/all-datasets.png)
 
 >[!WARNING]
 >
->Selecionar **[!UICONTROL Todos os conjuntos de dados]** expande a operação para todos os conjuntos de dados na sua organização. Cada conjunto de dados pode usar um tipo de identidade principal diferente. Você deve fornecer **todos os tipos de identidade necessários** para garantir uma correspondência precisa.
+>Selecionar **[!UICONTROL All datasets]** expande a operação para todos os conjuntos de dados na organização. Cada conjunto de dados pode usar um tipo de identidade principal diferente. Você deve fornecer **todos os tipos de identidade necessários** para garantir uma correspondência precisa.
 >
 >Se qualquer tipo de identidade estiver ausente, alguns registros poderão ser ignorados durante a exclusão. Isso pode atrasar o processamento e levar a **resultados parciais**.
 
@@ -86,7 +86,7 @@ Como todos os campos de identidade no Experience Platform, um namespace de ident
 
 >[!TIP]
 >
->Se você não souber o namespace de identidade de um conjunto de dados específico, poderá encontrá-lo na interface do usuário do Experience Platform. No espaço de trabalho **[!UICONTROL Conjuntos de Dados]**, selecione o conjunto de dados em questão na lista. Na página de detalhes do conjunto de dados, passe o mouse sobre o nome do esquema do conjunto de dados no painel direito. O namespace de identidade é exibido junto com o nome e a descrição do esquema.
+>Se você não souber o namespace de identidade de um conjunto de dados específico, poderá encontrá-lo na interface do usuário do Experience Platform. No espaço de trabalho **[!UICONTROL Datasets]**, selecione o conjunto de dados em questão na lista. Na página de detalhes do conjunto de dados, passe o mouse sobre o nome do esquema do conjunto de dados no painel direito. O namespace de identidade é exibido junto com o nome e a descrição do esquema.
 >
 >![O painel Conjuntos de Dados com um conjunto de dados selecionado e uma caixa de diálogo de esquema aberta no painel de detalhes do conjunto de dados. A ID primária do conjunto de dados está realçada.](../images/ui/record-delete/dataset-primary-identity.png)
 
@@ -97,7 +97,7 @@ Há duas opções para fornecer identidades ao excluir registros:
 
 ### Fazer upload de um arquivo JSON {#upload-json}
 
-Para carregar um arquivo JSON, você pode arrastar e soltar o arquivo na área fornecida ou selecionar **[!UICONTROL Escolher arquivos]** para procurar e selecionar no diretório local.
+Para carregar um arquivo JSON, você pode arrastar e soltar o arquivo na área fornecida ou selecionar **[!UICONTROL Choose files]** para procurar e selecionar no diretório local.
 
 ![O fluxo de trabalho de criação da solicitação com a interface escolher arquivos e arrastar e soltar para carregar arquivos JSON foi realçado.](../images/ui/record-delete/upload-json.png)
 
@@ -125,15 +125,15 @@ Depois que o arquivo for carregado, você poderá continuar a [enviar a solicita
 
 ### Inserir identidades manualmente {#manual-identity}
 
-Para inserir identidades manualmente, selecione **[!UICONTROL Adicionar identidade]**.
+Para inserir identidades manualmente, selecione **[!UICONTROL Add identity]**.
 
-![O fluxo de trabalho de criação da solicitação com a opção [!UICONTROL Adicionar identidade] foi realçado.](../images/ui/record-delete/add-identity.png)
+![O fluxo de trabalho de criação da solicitação com a opção [!UICONTROL Add identity] realçada.](../images/ui/record-delete/add-identity.png)
 
-São exibidos controles que permitem inserir identidades, uma de cada vez. Em **[!UICONTROL namespace de identidade]**, use o menu suspenso para selecionar o tipo de identidade. Em **[!UICONTROL Valor de Identidade Principal]**, forneça o valor do namespace de identidade para o registro.
+São exibidos controles que permitem inserir identidades, uma de cada vez. Em **[!UICONTROL identity namespace]**, use o menu suspenso para selecionar o tipo de identidade. Em **[!UICONTROL Primary Identity Value]**, forneça o valor do namespace de identidade para o registro.
 
 ![O fluxo de trabalho de criação da solicitação com um campo de identidade adicionado manualmente.](../images/ui/record-delete/identity-added.png)
 
-Para adicionar mais identidades, selecione o ícone de adição (![A ícone de adição.](/help/images/icons/tree-expand-all.png)) ao lado de uma das linhas ou selecione **[!UICONTROL Adicionar identidade]**.
+Para adicionar mais identidades, selecione o ícone de adição (![A ícone de adição.](/help/images/icons/tree-expand-all.png)) ao lado de uma das linhas ou selecione **[!UICONTROL Add identity]**.
 
 ![Fluxo de trabalho de criação de solicitação com o ícone de adição e o ícone de adição de identidade realçados.](../images/ui/record-delete/more-identities.png)
 
@@ -185,29 +185,33 @@ Se sua organização exigir limites mais altos, entre em contato com o represent
 
 ## Enviar a solicitação {#submit}
 
-Quando terminar de adicionar identidades à solicitação, em **[!UICONTROL Configurações da solicitação]**, forneça um nome e uma descrição opcional para a solicitação antes de selecionar **[!UICONTROL Enviar]**.
+Quando terminar de adicionar identidades à solicitação, em **[!UICONTROL Request settings]**, forneça um nome e uma descrição opcional para a solicitação antes de selecionar **[!UICONTROL Submit]**.
 
 >[!TIP]
 >
 >É possível enviar até 10.000 identidades por solicitação por meio da interface do usuário do. Para enviar volumes maiores (até 100.000 IDs por solicitação), use o [método de API](../api/workorder.md#create).
 
-![Campos de [!UICONTROL Nome] e [!UICONTROL Descrição] da configuração de solicitação com [!UICONTROL Envio] realçados.](../images/ui/record-delete/submit.png)
+![A configuração da solicitação [!UICONTROL Name] e [!UICONTROL Description] campos com [!UICONTROL Submit] realçados.](../images/ui/record-delete/submit.png)
 
-Uma caixa de diálogo [!UICONTROL Confirmar solicitação] aparece para indicar que as identidades não podem ser recuperadas após serem excluídas. Selecione **[!UICONTROL Enviar]** para confirmar a lista de identidades cujos dados você deseja excluir.
+Uma caixa de diálogo [!UICONTROL Confirm request] é exibida para indicar que as identidades não podem ser recuperadas depois de excluídas. Selecione **[!UICONTROL Submit]** para confirmar a lista de identidades cujos dados você deseja excluir.
 
-![A caixa de diálogo [!UICONTROL Confirmar solicitação].](../images/ui/record-delete/confirm-request.png)
+![A caixa de diálogo [!UICONTROL Confirm request].](../images/ui/record-delete/confirm-request.png)
 
-Depois que a solicitação for enviada, uma ordem de serviço será criada e exibida na guia [!UICONTROL Registro] do espaço de trabalho [!UICONTROL Ciclo de vida dos dados]. Aqui, você pode monitorar o status da ordem de serviço à medida que ela processa a solicitação.
+Após o envio da solicitação, uma ordem de serviço é criada e aparece na guia [!UICONTROL Record] do espaço de trabalho [!UICONTROL Data Lifecycle]. Aqui, você pode monitorar o status da ordem de serviço à medida que ela processa a solicitação.
 
 >[!NOTE]
 >
 >Consulte a seção de visão geral em [linhas do tempo e transparência](../home.md#record-delete-transparency) para obter detalhes sobre como as exclusões de registros são processadas após a execução.
 
-![A guia [!UICONTROL Registro] do espaço de trabalho [!UICONTROL Ciclo de Vida dos Dados] com a nova solicitação realçada.](../images/ui/record-delete/request-log.png)
+![A guia [!UICONTROL Record] do espaço de trabalho [!UICONTROL Data Lifecycle] com a nova solicitação realçada.](../images/ui/record-delete/request-log.png)
 
-## Exclusão de registros dos conjuntos de dados baseados em modelo {#model-based-record-delete}
+## Exclusão de registros de conjuntos de dados com base em esquemas relacionais {#relational-record-delete}
 
-Se o conjunto de dados do qual você está excluindo for um esquema baseado em modelo, analise as seguintes considerações para garantir que os registros sejam removidos corretamente e não sejam assimilados novamente devido a incompatibilidades entre o Experience Platform e o sistema de origem.
+Se o conjunto de dados do qual você está excluindo for baseado em um esquema relacional, analise as seguintes considerações para garantir que os registros sejam removidos corretamente e não sejam assimilados novamente devido a incompatibilidades entre o Experience Platform e o sistema de origem.
+
+>[!NOTE]
+>
+>Esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação do Adobe Experience Platform. A funcionalidade e o comportamento de exclusão permanecem inalterados.
 
 ### Comportamento de exclusão de registro
 
@@ -224,22 +228,22 @@ Para evitar a reassimilação, aplique a mesma abordagem de exclusão no sistema
 
 ### Alterar colunas de controle e captura de dados
 
-Esquemas baseados em modelo que usam Origens com captura de dados de alteração podem usar a coluna de controle `_change_request_type` ao diferenciar exclusões de substituições. Durante a assimilação, os registros sinalizados com `d` são excluídos do conjunto de dados, enquanto aqueles sinalizados com `u` ou sem a coluna são tratados como substituições. A coluna `_change_request_type` é lida somente no momento da assimilação e não é armazenada no esquema de destino ou mapeada para campos XDM.
+Esquemas relacionais que usam Origens com captura de dados de alteração podem usar a coluna de controle `_change_request_type` ao diferenciar exclusões de substituições. Durante a assimilação, os registros sinalizados com `d` são excluídos do conjunto de dados, enquanto aqueles sinalizados com `u` ou sem a coluna são tratados como substituições. A coluna `_change_request_type` é lida somente no momento da assimilação e não é armazenada no esquema de destino ou mapeada para campos XDM.
 
 >[!NOTE]
 >
 >A exclusão de registros por meio da interface do usuário do ciclo de vida dos dados não afeta o sistema de origem. Para remover dados de ambos os locais, exclua-os na Experience Platform e na origem.
 
-### Métodos de exclusão adicionais para esquemas baseados em modelo
+### Métodos de exclusão adicionais para esquemas relacionais
 
-Além do fluxo de trabalho padrão de exclusão de registros, os esquemas baseados em modelo oferecem suporte a métodos adicionais para casos de uso específicos:
+Além do fluxo de trabalho padrão de exclusão de registros, os esquemas relacionais oferecem suporte a métodos adicionais para casos de uso específicos:
 
 * **Abordagem do conjunto de dados de cópia segura**: duplicar o conjunto de dados de produção e aplicar exclusões à cópia para teste controlado ou reconciliação antes de aplicar alterações aos dados de produção.
 * **Upload em lote somente com exclusões**: carregue um arquivo contendo apenas operações de exclusão para limpeza direcionada quando precisar remover registros específicos sem afetar outros dados.
 
 ### Suporte de descritor para operações de higiene {#descriptor-support}
 
-Os descritores de esquema baseados em modelo fornecem metadados essenciais para operações de higiene precisas:
+Os descritores de esquema relacionais fornecem metadados essenciais para operações de higiene precisas:
 
 * **Descritor de chave primária**: identifica registros exclusivamente para atualizações ou exclusões direcionadas, garantindo que os registros corretos sejam afetados.
 * **Descritor de versão**: garante que as exclusões e atualizações sejam aplicadas na ordem cronológica correta, evitando operações fora de sequência.
@@ -249,7 +253,7 @@ Os descritores de esquema baseados em modelo fornecem metadados essenciais para 
 >
 >Os processos de higiene operam no nível do conjunto de dados. Para conjuntos de dados habilitados para perfis, podem ser necessários fluxos de trabalho de perfil adicionais para manter a consistência no Perfil do cliente em tempo real.
 
-### Retenção programada para esquemas baseados em modelo
+### Retenção programada para esquemas relacionais
 
 Para uma higiene automatizada com base na idade dos dados em vez de identidades específicas, consulte [Gerenciar a retenção do conjunto de dados (TTL) do evento de experiência](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) para retenção no nível de linha agendada no data lake.
 
@@ -257,7 +261,7 @@ Para uma higiene automatizada com base na idade dos dados em vez de identidades 
 >
 >A expiração em nível de linha é compatível somente com conjuntos de dados que usam comportamento de série temporal.
 
-### Práticas recomendadas para exclusão de registro baseada em modelo
+### Práticas recomendadas para exclusão de registro relacional
 
 Para evitar a reassimilação não intencional e manter a consistência dos dados entre sistemas, siga estas práticas recomendadas:
 
@@ -265,8 +269,9 @@ Para evitar a reassimilação não intencional e manter a consistência dos dado
 * **Monitorar fluxos de captura de dados de alteração**: após excluir registros na Plataforma, monitore os fluxos de dados e confirme se o sistema de origem remove os mesmos registros ou os inclui com `_change_request_type = 'd'`.
 * **Limpar a origem**: para origens que usam assimilação de atualização completa ou aquelas que não oferecem suporte a exclusões por meio da captura de dados de alteração, exclua registros diretamente do sistema de origem para evitar a reassimilação.
 
-Para obter mais detalhes sobre requisitos do esquema, consulte [requisitos do descritor de esquema baseado em modelo](../../xdm/schema/model-based.md#model-based-schemas).\
-Para saber como a captura de dados de alteração funciona com origens, consulte [Habilitar captura de dados de alteração nas origens](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
+Para obter mais detalhes sobre requisitos do esquema, consulte [requisitos do descritor de esquema relacional](../../xdm/schema/relational.md#relational-schemas).
+
+Para saber como a captura de dados de alteração funciona com origens, consulte [Habilitar captura de dados de alteração nas origens](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-relational-schemas).
 
 ## Próximas etapas
 

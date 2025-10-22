@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos Source Connectors
 description: A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: fac942a469f61461b5a14d9be5b9a39d921c6b25
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1666'
 ht-degree: 11%
 
 ---
@@ -61,7 +61,7 @@ O Experience Platform permite que os dados sejam assimilados de outros aplicativ
 
 ### Fontes empresariais avançadas {#advanced-enterprise-sources}
 
-As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+As fontes a seguir estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 | Fonte | Categoria | Tipo de assimilação | Nuvem |
 | --- | --- | --- | --- |
@@ -282,15 +282,15 @@ Você pode usar as seguintes fontes para assimilar dados de protocolo na Experie
 
 ## Controle de acesso para fontes na assimilação de dados
 
-As permissões para fontes na assimilação de dados podem ser gerenciadas no Adobe Admin Console. Você pode acessar permissões por meio da guia **[!UICONTROL Permissões]** em um perfil de produto específico. No painel **[!UICONTROL Editar Permissões]**, você pode acessar as permissões relacionadas às origens por meio da entrada de menu **[!UICONTROL assimilação de dados]**. A permissão **[!UICONTROL Exibir Fontes]** concede acesso somente leitura às fontes disponíveis na guia **[!UICONTROL Catálogo]** e às fontes autenticadas na guia **[!UICONTROL Procurar]**, enquanto a permissão **[!UICONTROL Gerenciar Fontes]** concede acesso total às fontes de leitura, criação, edição e desabilitação.
+As permissões para fontes na assimilação de dados podem ser gerenciadas no Adobe Admin Console. Você pode acessar permissões por meio da guia **[!UICONTROL Permissions]** em um perfil de produto específico. No painel **[!UICONTROL Edit Permissions]**, você pode acessar as permissões relacionadas às origens por meio da entrada de menu **[!UICONTROL data ingestion]**. A permissão **[!UICONTROL View Sources]** concede acesso somente leitura às fontes disponíveis na guia **[!UICONTROL Catalog]** e às fontes autenticadas na guia **[!UICONTROL Browse]**, enquanto a permissão **[!UICONTROL Manage Sources]** concede acesso total às fontes de leitura, criação, edição e desabilitação.
 
 A tabela a seguir descreve como a interface do usuário se comporta com base em diferentes combinações dessas permissões:
 
 | Nível de permissão | Descrição |
 | ---- | ----|
-| **[!UICONTROL Exibir Fontes]** Em | Conceda acesso somente leitura às origens em cada tipo de origem na guia Catálogo, bem como nas guias Procurar, Contas e Fluxo de dados. |
-| **[!UICONTROL Gerenciar Fontes]** Em | Além das funções incluídas em **[!UICONTROL Exibir Fontes]**, concede acesso à opção **[!UICONTROL Conectar Source]** do **[!UICONTROL Catálogo]** e à opção **[!UICONTROL Selecionar Dados]** do **[!UICONTROL Procurar]**. **[!UICONTROL Gerenciar Fontes]** também permite habilitar ou desabilitar **[!UICONTROL DataFlows]** e editar suas agendas. |
-| **[!UICONTROL Exibir Fontes]** Desativada e **[!UICONTROL Gerenciar Fontes]** Desativada | Revogar todo o acesso a origens. |
+| **[!UICONTROL View Sources]** Em | Conceda acesso somente leitura às origens em cada tipo de origem na guia Catálogo, bem como nas guias Procurar, Contas e Fluxo de dados. |
+| **[!UICONTROL Manage Sources]** Em | Além das funções incluídas em **[!UICONTROL View Sources]**, concede acesso às opções **[!UICONTROL Connect Source]** em **[!UICONTROL Catalog]** e **[!UICONTROL Select Data]** em **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** também permite habilitar ou desabilitar **[!UICONTROL DataFlows]** e editar seus cronogramas. |
+| **[!UICONTROL View Sources]** Desativado e **[!UICONTROL Manage Sources]** Desativado | Revogar todo o acesso a origens. |
 
 Para obter mais informações sobre as permissões disponíveis concedidas por meio das Permissões do Adobe, leia a [visão geral do controle de acesso](../access-control/home.md).
 
@@ -308,11 +308,11 @@ Com o controle de acesso baseado em atributos, é possível aplicar configuraç�
 
 - Aplique rótulos a campos de esquema para definir o acesso a campos de esquema específicos na organização. Uma vez estabelecido o acesso a campos de esquema específicos, os usuários só poderão criar mapeamentos para os campos aos quais têm acesso.
 - Os usuários sem as funções apropriadas não poderão criar ou atualizar fluxos de dados com mapeamentos que envolvam campos de esquema inacessíveis. Além disso, os usuários não autorizados não podem atualizar, excluir, ativar ou desativar fluxos de dados existentes com campos de esquema inacessíveis.
-- Além disso, um fluxo de dados deve ter exatamente a mesma ID e versão do esquema em seu mapeamento, conjunto de dados de destino e conexão de destino. Isso se aplica a esquemas XDM padrão e esquemas baseados em modelo.
+- Além disso, um fluxo de dados deve ter exatamente a mesma ID e versão do esquema em seu mapeamento, conjunto de dados de destino e conexão de destino. Isso se aplica aos esquemas XDM padrão e aos esquemas relacionais.
 
 >[!NOTE]
 >
->Os esquemas baseados em modelo têm requisitos adicionais, incluindo campos de chave primária e identificador de versão. Para obter mais informações, consulte a [visão geral do esquema baseado em modelo](../xdm/schema/model-based.md).
+>Os esquemas relacionais têm requisitos adicionais, incluindo campos de chave primária e identificador de versão. Para obter mais informações, consulte a [visão geral do esquema relacional](../xdm/schema/relational.md).
 
 Para obter mais informações sobre o controle de acesso baseado em atributos, leia a [visão geral do controle de acesso baseado em atributos](../access-control/abac/overview.md).
 

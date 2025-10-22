@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de esquemas
 description: O ponto de extremidade /schemas na API do registro de esquema permite gerenciar de forma programática esquemas XDM no aplicativo de experiência.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
+source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2122'
 ht-degree: 4%
 
 ---
@@ -198,7 +198,7 @@ Uma resposta bem-sucedida retorna os detalhes do esquema. Os campos retornados d
 
 O processo de composição do esquema começa atribuindo uma classe. A classe define os principais aspectos comportamentais dos dados (registro ou série temporal), bem como os campos mínimos necessários para descrever os dados que serão assimilados.
 
-Para obter instruções sobre como criar um esquema sem classes ou grupos de campos, conhecido como esquema baseado em modelo, consulte a seção [Criar um esquema baseado em modelo](#create-model-based-schema).
+Para obter instruções sobre como criar um esquema sem classes ou grupos de campos, conhecido como esquema relacional, consulte a seção [Criar um esquema relacional](#create-relational-schema).
 
 >[!NOTE]
 >
@@ -281,17 +281,21 @@ A execução de uma solicitação GET para [listar todos os esquemas](#list) no 
 
 Para adicionar campos extras a um esquema, você pode executar uma [operação do PATCH](#patch) para adicionar grupos de campos às matrizes `allOf` e `meta:extends` do esquema.
 
-## Crie um esquema baseado em modelo {#create-model-based-schema}
+## Criar um esquema relacional {#create-relational-schema}
 
 >[!AVAILABILITY]
 >
->O Data Mirror e os esquemas baseados em modelo estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
+>O Data Mirror e esquemas relacionais estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
 
-Crie um esquema baseado em modelo fazendo uma solicitação POST para o ponto de extremidade `/schemas`. Esquemas baseados em modelo armazenam dados estruturados de estilo relacional **sem** classes ou grupos de campos. Defina campos diretamente no esquema e identifique o esquema como baseado em modelo usando uma tag de comportamento lógico.
+>[!NOTE]
+>
+>Os esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação da API do Adobe Experience Platform. A funcionalidade permanece a mesma. Somente a terminologia foi alterada para maior clareza.
+
+Crie um esquema relacional fazendo uma solicitação POST para o ponto de extremidade `/schemas`. Esquemas relacionais armazenam dados estruturados de estilo relacional **sem** classes ou grupos de campos. Defina os campos diretamente no esquema e identifique o esquema como relacional usando uma tag de comportamento lógico.
 
 >[!IMPORTANT]
 >
->Para criar um esquema baseado em modelo, defina `meta:extends` como `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Este é um **identificador de comportamento lógico** (não é uma classe ou comportamento físico). **não** faz referência a classes ou grupos de campos em `allOf`, e **não** inclui classes ou grupos de campos em `meta:extends`.
+>Para criar um esquema relacional, defina `meta:extends` como `"https://ns.adobe.com/xdm/data/adhoc-v2"`. Este é um **identificador de comportamento lógico** (não é uma classe ou comportamento físico). **não** faz referência a classes ou grupos de campos em `allOf`, e **não** inclui classes ou grupos de campos em `meta:extends`.
 
 Crie o esquema primeiro com `POST /tenant/schemas`. Em seguida, adicione os descritores necessários com a [API de descritores (`POST /tenant/descriptors`)](../api/descriptors.md):
 
@@ -302,15 +306,11 @@ Crie o esquema primeiro com `POST /tenant/schemas`. Em seguida, adicione os desc
 
 >[!NOTE]
 >
->No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data/hora aparecem como &quot;[!UICONTROL Identificador de versão]&quot; e &quot;[!UICONTROL Identificador de carimbo de data/hora]&quot;, respectivamente.
-
-<!-- >[!AVAILABILITY]
->
->Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+>No Editor de Esquema de Interface do Usuário, o descritor de versão e os descritores de carimbo de data e hora aparecem como &quot;[!UICONTROL Version identifier]&quot; e &quot;[!UICONTROL Timestamp identifier]&quot;, respectivamente.
 
 >[!CAUTION]
 >
->Os esquemas baseados em modelo **não são compatíveis com os esquemas de união**. Não aplique a marca `union` a `meta:immutableTags` ao trabalhar com esquemas baseados em modelo. Essa configuração está bloqueada na interface do usuário, mas não está bloqueada no momento pela API. Consulte o [manual de endpoint de uniões](./unions.md) para obter mais informações sobre o comportamento do esquema de união.
+>Os esquemas relacionais **não são compatíveis com os esquemas de união**. Não aplique a tag `union` a `meta:immutableTags` ao trabalhar com esquemas relacionais. Essa configuração está bloqueada na interface do usuário, mas não está bloqueada no momento pela API. Consulte o [manual de endpoint de uniões](./unions.md) para obter mais informações sobre o comportamento do esquema de união.
 
 **Formato da API**
 
@@ -377,16 +377,16 @@ curl --request POST \
 | ------------------------------- | ------ | --------------------------------------------------------- |
 | `title` | String | Nome de exibição do esquema. |
 | `description` | String | Breve explicação da finalidade do esquema. |
-| `type` | String | Deve ser `"object"` para esquemas baseados em modelo. |
+| `type` | String | Deve ser `"object"` para esquemas relacionais. |
 | `definitions` | Objeto | Contém os objetos de nível raiz que definem os campos do esquema. |
 | `definitions.<name>.properties` | Objeto | Nomes de campos e tipos de dados. |
 | `allOf` | Matriz | Faz referência à definição de objeto de nível raiz (por exemplo, `#/definitions/marketing_customers`). |
-| `meta:extends` | Matriz | É necessário incluir `"https://ns.adobe.com/xdm/data/adhoc-v2"` para identificar o esquema como baseado em modelo. |
+| `meta:extends` | Matriz | É necessário incluir `"https://ns.adobe.com/xdm/data/adhoc-v2"` para identificar o esquema como relacional. |
 | `meta:behaviorType` | String | Defina como `"record"`. Use `"time-series"` somente quando habilitado e apropriado. |
 
 >[!IMPORTANT]
 >
->A evolução do esquema para esquemas baseados em modelo segue as mesmas regras aditivas que os esquemas padrão. Você pode adicionar novos campos com uma solicitação PATCH. Alterações como renomear ou remover campos só são permitidas se nenhum dado tiver sido assimilado no conjunto de dados.
+>A evolução do esquema para esquemas relacionais segue as mesmas regras aditivas que os esquemas padrão. Você pode adicionar novos campos com uma solicitação PATCH. Alterações como renomear ou remover campos só são permitidas se nenhum dado tiver sido assimilado no conjunto de dados.
 
 **Resposta**
 
@@ -394,7 +394,7 @@ Uma solicitação bem-sucedida retorna **HTTP 201 (Criado)** e o esquema criado.
 
 >[!NOTE]
 >
->Os esquemas baseados em modelo não herdam campos pré-implantados (por exemplo, id, carimbo de data e hora ou eventType). Defina todos os campos obrigatórios explicitamente no esquema.
+>Os esquemas relacionais não herdam campos pré-implantados (por exemplo, id, carimbo de data e hora ou eventType). Defina todos os campos obrigatórios explicitamente no esquema.
 
 **Exemplo de resposta**
 
@@ -455,11 +455,11 @@ Uma solicitação bem-sucedida retorna **HTTP 201 (Criado)** e o esquema criado.
 | `type` | String | O tipo de esquema. |
 | `definitions` | Objeto | Define objetos reutilizáveis ou grupos de campos usados no esquema. Normalmente, isso inclui a estrutura de dados principal e é referenciado na matriz `allOf` para definir a raiz do esquema. |
 | `allOf` | Matriz | Especifica o objeto raiz do esquema referenciando uma ou mais definições (por exemplo, `#/definitions/marketing_customers`). |
-| `meta:extends` | Matriz | Identifica o esquema como baseado em modelo (`adhoc-v2`). |
+| `meta:extends` | Matriz | Identifica o esquema como relacional (`adhoc-v2`). |
 | `meta:behaviorType` | String | Tipo de comportamento (`record` ou `time-series`, quando habilitado). |
 | `meta:containerId` | String | Contêiner no qual o esquema é armazenado (por exemplo, `tenant`). |
 
-Para adicionar campos a um esquema baseado em modelo após sua criação, faça uma [solicitação PATCH](#patch). Os esquemas baseados em modelo não herdam ou evoluem automaticamente. Alterações estruturais como renomear ou excluir campos só são permitidas se nenhum dado tiver sido assimilado no conjunto de dados. Quando os dados existirem, somente **alterações aditivas** (como a adição de novos campos) serão suportadas.
+Para adicionar campos a um esquema relacional após sua criação, faça uma [solicitação PATCH](#patch). Os esquemas relacionais não herdam ou evoluem automaticamente. Alterações estruturais como renomear ou excluir campos só são permitidas se nenhum dado tiver sido assimilado no conjunto de dados. Quando os dados existirem, somente **alterações aditivas** (como a adição de novos campos) serão suportadas.
 
 Você pode adicionar novos campos de nível raiz (dentro da definição raiz ou raiz `properties`), mas não pode remover, renomear ou alterar o tipo de campos existentes.
 

@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Explore uma visão geral do sistema do Experience Data Model (XDM) na Experience Platform e saiba como usar classes e grupos de campos de esquema para padronizar os dados de experiência.
 feature: Schemas
 role: Developer
-source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '708'
-ht-degree: 48%
+source-wordcount: '707'
+ht-degree: 20%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 48%
    * [Práticas recomendadas de modelagem de dados](schema/best-practices.md)
    * [Dados sensíveis e pessoais](./schema/sensitive-and-personal-data.md)
    * [Restrições de tipo de campo XDM](schema/field-constraints.md)
-   * [Esquema baseado em modelo](./schema/model-based.md)
+   * [Esquema relacional](./schema/relational.md)
    * [Namespace no XDM](./schema/namespaces.md)
    * Modelos de dados do setor {#industries}
       * [Visão geral](./schema/industries/overview.md)
@@ -95,7 +95,7 @@ ht-degree: 48%
       * [Oportunidade de negócios XDM](./classes/b2b/business-opportunity.md)
       * [Relação pessoal de oportunidade de negócios XDM](./classes/b2b/business-opportunity-person-relation.md)
       * [Lista de marketing de negócios XDM](./classes/b2b/business-marketing-list.md)
-      * [Membros da lista de marketing empresarial XDM](./classes/b2b/business-marketing-list-members.md)
+      * [Membros da lista de marketing de negócios XDM](./classes/b2b/business-marketing-list-members.md)
 * Grupos de campos {#field-groups}
    * Perfil individual XDM {#profile}
       * [Consentimentos e preferências](./field-groups/profile/consents.md)
@@ -116,14 +116,14 @@ ht-degree: 48%
    * XDM ExperienceEvent {#event}
       * [Extensão completa do Adobe Analytics](./field-groups/event/analytics-full-extension.md)
       * [Extensão completa da Adobe Advertising Cloud](./field-groups/event/advertising-full-extension.md)
-      * [Detalhes de publicidade](./field-groups/event/advertising-details.md)
+      * [Detalhes do Advertising](./field-groups/event/advertising-details.md)
       * [Detalhes do aplicativo](./field-groups/event/application-details.md)
       * [Transferências de saldo](./field-groups/event/balance-transfers.md)
       * [Detecção de bot](./field-groups/event/bot-detection-information.md)
-      * [Detalhes de marketing de campanha](./field-groups/event/campaign-marketing-details.md)
+      * [Detalhes de marketing da campanha](./field-groups/event/campaign-marketing-details.md)
       * [Ações do cartão](./field-groups/event/card-actions.md)
       * [Detalhes do canal](./field-groups/event/channel-details.md)
-      * [Detalhes de comércio](./field-groups/event/commerce-details.md)
+      * [Detalhes do Commerce](./field-groups/event/commerce-details.md)
       * [Detalhes do depósito](./field-groups/event/deposit-details.md)
       * [Detalhes de troca do dispositivo](./field-groups/event/device-trade-in-details.md)
       * [Reserva para o jantar](./field-groups/event/dining-reservation.md)
@@ -136,8 +136,8 @@ ht-degree: 48%
       * [Detalhes da solicitação de orçamento](./field-groups/event/quote-request-details.md)
       * [Detalhes da reserva](./field-groups/event/reservation-details.md)
       * [Detalhes do sitetool](./field-groups/event/sitetool-details.md)
-      * [Pesquisa de sites de suporte](./field-groups/event/support-site-search.md)
-      * [Atualizar detalhes](./field-groups/event/upgrade-details.md)
+      * [Pesquisa no site de suporte](./field-groups/event/support-site-search.md)
+      * [Detalhes da atualização](./field-groups/event/upgrade-details.md)
       * [Detalhes de venda adicional](./field-groups/event/upsell-details.md)
       * [Detalhes da Web](./field-groups/event/web-details.md)
    * Campanha de negócios XDM {#b2b-campaign}
@@ -154,7 +154,7 @@ ht-degree: 48%
    * Provedor {#provider}
       * [Provedor de assistência médica](./field-groups/provider/healthcare-provider.md)
    * Compartilhado {#shared}
-      * [Detalhes de auditoria sobre sistema de origem externo](./field-groups/shared/external-source-system-audit-details.md)
+      * [Detalhes de auditoria externa do sistema Source](./field-groups/shared/external-source-system-audit-details.md)
    * [Atualizações de nome de grupo de campos](./field-groups/name-updates.md)
 * Tipos de dados {#data-types}
    * [Detalhes da conta](./data-types/account-details.md)
@@ -165,8 +165,8 @@ ht-degree: 48%
    * [Coleção de detalhes do pod do Advertising](./data-types/advertising-pod-details-collection.md)
    * [Relatório de detalhes do pod Advertising](./data-types/advertising-pod-details-reporting.md)
    * [Aplicativo](./data-types/application.md)
-   * [Origem B2B](./data-types/b2b-source.md)
-   * [Beacon](./data-types/beacon.md)
+   * [Source B2B](./data-types/b2b-source.md)
+   * [Sinal](./data-types/beacon.md)
    * [Detalhes do navegador](./data-types/browser-details.md)
    * [Carrinho](./data-types/cart.md)
    * [Dados da categoria](./data-types/category-data.md)
@@ -184,21 +184,21 @@ ht-degree: 48%
    * [Ambiente](./data-types/environment.md)
    * [Coleção de detalhes do erro](./data-types/error-details-collection.md)
    * [Canal de experiência](./data-types/experience-channel.md)
-   * [Atributos de auditoria do sistema de origem externa](./data-types/external-source-system-audit-attributes.md)
+   * [Atributos de auditoria externa do sistema Source](./data-types/external-source-system-audit-attributes.md)
    * [Conta financeira](./data-types/financial-account.md)
    * [Campo de consentimento genérico](./data-types/consent-field.md)
    * [Campo de preferência de marketing genérico com assinaturas](./data-types/marketing-field-subscriptions.md)
    * [Campo de preferência de marketing genérico](./data-types/marketing-field.md)
-   * [Campo de preferência de personalização genérico](./data-types/personalization-field.md)
+   * [Campo de preferência Personalization genérico](./data-types/personalization-field.md)
    * [Círculo geográfico](./data-types/geo-circle.md)
    * [Coordenadas geográficas](./data-types/geo-coordinates.md)
    * [Forma geográfica](./data-types/geo-shape.md)
    * [Detalhes de Interação Geográfica](./data-types/geo-interaction-details.md)
    * [Geo](./data-types/geo.md)
    * [Identidade](./data-types/identity.md)
-   * [Detalhes de implementação](./data-types/implementation-details.md)
+   * [Detalhes da implementação](./data-types/implementation-details.md)
    * [Impressões](./data-types/impressions.md)
-   * [Pesquisa interna de sites](./data-types/internal-site-search.md)
+   * [Pesquisa interna do site](./data-types/internal-site-search.md)
    * [Par de valores da chave](./data-types/key-value-pair.md)
    * [Lista de Coleção de Términos de Estados](./data-types/list-of-states-end-collection.md)
    * [Lista de Estados que iniciam a coleção](./data-types/list-of-states-start-collection.md)
@@ -228,13 +228,13 @@ ht-degree: 48%
    * [Coleção de Detalhes da Sessão](./data-types/session-details-collection.md)
    * [Relatório de detalhes da sessão](./data-types/session-details-reporting.md)
    * [Envio](./data-types/shipping.md)
-   * [Assinatura](./data-types/subscription.md)
+   * [Inscrição](./data-types/subscription.md)
    * [Assinatura de serviço de telecomunicação](./data-types/telecom-subscription.md)
    * [Transação](./data-types/transaction.md)
    * [Informações da Web](./data-types/web-information.md)
    * [Interação na Web](./data-types/web-interaction.md)
    * [Detalhes da página da Web](./data-types/webpage-details.md)
-* [!UICONTROL Esquemas] interface {#ui}
+* IU [!UICONTROL Schemas] {#ui}
    * [Visão geral](./ui/overview.md)
    * [Explorar recursos do XDM](./ui/explore.md)
    * Criar e editar recursos {#resources}

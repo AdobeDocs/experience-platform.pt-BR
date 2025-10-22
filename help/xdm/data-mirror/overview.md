@@ -1,12 +1,13 @@
 ---
-keywords: Experience Platform;espelho de dados;esquema baseado em modelo;esquema relacional;alterar captura de dados;sincronização do banco de dados;chave primária;relacionamentos
+keywords: Experience Platform;espelhamento de dados;esquema relacional;alterar captura de dados;sincronização de banco de dados;chave primária;relacionamentos
 solution: Experience Platform
 title: Visão geral do Data Mirror
-description: Saiba como o Data Mirror permite a assimilação de alterações no nível da linha de bancos de dados externos na Adobe Experience Platform usando esquemas baseados em modelo com exclusividade, relações e controle de versão imposto.
+description: Saiba como o Data Mirror permite a assimilação de alterações no nível da linha de bancos de dados externos na Adobe Experience Platform usando esquemas relacionais com exclusividade, relações e controle de versão imposto.
 badge: Disponibilidade limitada
-source-git-commit: 6ce214073f625a253fcc5bb14dfdb6a4a61e6e7b
+exl-id: bb92c77a-6c7a-47df-885a-794cf55811dd
+source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
 workflow-type: tm+mt
-source-wordcount: '1355'
+source-wordcount: '1356'
 ht-degree: 0%
 
 ---
@@ -15,9 +16,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->O Data Mirror e os esquemas baseados em modelo estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
+>O Data Mirror e esquemas relacionais estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
 
-O Data Mirror é um recurso do Adobe Experience Platform que permite a assimilação de alterações no nível da linha de bancos de dados externos no data lake usando esquemas baseados em modelo. Ele preserva os relacionamentos de dados, impõe exclusividade e oferece suporte ao controle de versão sem exigir processos de extração, transformação e carregamento (ETL) de upstream.
+>[!NOTE]
+>
+>Esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação do Adobe Experience Platform. A funcionalidade permanece a mesma.
+
+O Data Mirror é um recurso do Adobe Experience Platform que permite a assimilação de alterações no nível da linha de bancos de dados externos no data lake usando esquemas relacionais. Ele preserva os relacionamentos de dados, impõe exclusividade e oferece suporte ao controle de versão sem exigir processos de extração, transformação e carregamento (ETL) de upstream.
 
 Use o Data Mirror para sincronizar inserções, atualizações e exclusões (dados mutáveis) de sistemas externos como [!DNL Snowflake], [!DNL Databricks] ou [!DNL BigQuery] diretamente no Experience Platform. Isso ajuda a preservar a estrutura do modelo de banco de dados existente e a integridade dos dados conforme você traz os dados para a Platform.
 
@@ -33,7 +38,7 @@ O Data Mirror fornece os seguintes recursos essenciais para a sincronização do
 
 Use o Data Mirror para assimilar alterações diretamente de seus sistemas de origem, impor a integridade do esquema e disponibilizar os dados para análises, orquestração de jornadas e workflows de conformidade. O Data Mirror elimina processos complexos de ETL upstream e acelera a implementação, permitindo o espelhamento direto dos modelos de banco de dados existentes.
 
-Planeje a exclusão e os requisitos de higiene de dados ao implementar esquemas baseados em modelo com o Data Mirror. Todos os aplicativos devem considerar como as exclusões afetam os conjuntos de dados relacionados, os fluxos de trabalho de conformidade e os processos downstream antes da implantação.
+Planeje a exclusão e os requisitos de higiene de dados ao implementar esquemas relacionais com o Data Mirror. Todos os aplicativos devem considerar como as exclusões afetam os conjuntos de dados relacionados, os fluxos de trabalho de conformidade e os processos downstream antes da implantação.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -42,12 +47,12 @@ Antes de começar, você deve entender os seguintes componentes do Experience Pl
 * [Criar esquemas na interface do Experience Platform](../ui/resources/schemas.md) ou [API](../api/schemas.md)
 * [Configurar conexões de origem na nuvem](../../sources/home.md#cloud-storage)
 * [Aplicar conceitos de captura de dados de alteração](../../sources/tutorials/api/change-data-capture.md) (substituições, exclusões)
-* Distinguir entre [esquemas padrão](../schema/composition.md) e [esquemas baseados em modelo](../schema/model-based.md)
+* Distinguir entre [padrão](../schema/composition.md) e [esquemas relacionais](../schema/relational.md)
 * [Definir relações estruturais com descritores](../api/descriptors.md)
 
 ### Requisitos de implementação
 
-A instância da Platform e os dados de origem devem atender a requisitos específicos para que o Data Mirror funcione corretamente. O Data Mirror requer **esquemas baseados em modelo**, que são estruturas de dados flexíveis com restrições impostas. Atualmente, o Data Mirror funciona principalmente com esquemas baseados em modelo, embora a integração com esquemas XDM padrão seja compatível com os recursos futuros de Objetos personalizados B2B (planejados para outubro de 2025).
+A instância da Platform e os dados de origem devem atender a requisitos específicos para que o Data Mirror funcione corretamente. O Data Mirror requer **esquemas relacionais**, que são estruturas de dados flexíveis com restrições impostas.
 
 Inclua uma **chave primária e um descritor de versão** em todos os esquemas. Se você estiver trabalhando com um esquema de série temporal, também é necessário um **descritor de carimbo de data/hora**.
 
@@ -61,17 +66,17 @@ Diferentemente das abordagens de assimilação padrão, o Data Mirror preserva s
 
 ### Definir a estrutura do esquema
 
-Crie [esquemas baseados em modelo](../schema/model-based.md) com os descritores necessários (metadados que definem o comportamento e as restrições do esquema). Escolha um método que se ajuste ao fluxo de trabalho da sua equipe, por meio da interface do usuário ou diretamente pela API.
+Crie [esquemas relacionais](../schema/relational.md) com descritores necessários (metadados que definem o comportamento e as restrições do esquema). Escolha um método que se ajuste ao fluxo de trabalho da sua equipe, por meio da interface do usuário ou diretamente pela API.
 
-* **Abordagem da interface**: [Criar esquemas baseados em modelo no Editor de Esquemas](../ui/resources/schemas.md#create-model-based-schema)
-* **Abordagem da API**: [Criar esquemas por meio da API do Registro de Esquemas](../api/schemas.md#create-model-based-schema)
+* **Abordagem da interface**: [Criar esquemas relacionais no Editor de Esquemas](../ui/resources/schemas.md#create-relational-schema)
+* **Abordagem da API**: [Criar esquemas por meio da API do Registro de Esquemas](../api/schemas.md#create-relational-schema)
 
 ### Mapear relacionamentos e definir o gerenciamento de dados
 
 Defina conexões entre conjuntos de dados usando descritores de relacionamento. Gerencie relacionamentos e mantenha a qualidade dos dados em conjuntos de dados. Essas tarefas garantem associações consistentes e oferecem suporte à conformidade com os requisitos de higiene de dados.
 
 * **Relacionamentos de esquema**: [Defina relações entre conjuntos de dados usando descritores](../api/descriptors.md)
-* **Higiene de registros**: [Gerenciar exclusões de registros de precisão](../../hygiene/ui/record-delete.md#model-based-record-delete)
+* **Higiene de registros**: [Gerenciar exclusões de registros de precisão para conjuntos de dados com base em esquemas relacionais](../../hygiene/ui/record-delete.md#relational-record-delete)
 
 ### Configurar a conexão de origem
 
@@ -93,7 +98,7 @@ Revise os casos de uso comuns listados abaixo, nos quais o Data Mirror oferece s
 
 ### Modelagem de dados relacionais
 
-Use [esquemas baseados em modelo](../schema/model-based.md) (também chamados de esquemas relacionais) no Data Mirror para representar entidades, processar inserções, atualizações e exclusões no nível de linha e manter as relações de chave primária e estrangeira existentes nas fontes de dados. Essa abordagem traz princípios de modelagem de dados relacionais para a Experience Platform e garante a consistência estrutural entre conjuntos de dados.
+Use [esquemas relacionais](../schema/relational.md) no Data Mirror para representar entidades, processar inserções, atualizações e exclusões no nível da linha e manter as relações de chave primária e estrangeira existentes nas suas fontes de dados. Essa abordagem traz princípios de modelagem de dados relacionais para a Experience Platform e garante a consistência estrutural entre conjuntos de dados.
 
 ### Sincronização de warehouse para lake
 
@@ -121,11 +126,11 @@ Revise essas considerações principais para garantir que sua implementação es
 
 ### Exclusão de dados e requisitos de higiene
 
-Todos os aplicativos que usam esquemas baseados em modelo e o Data Mirror devem entender as implicações da exclusão de dados. Os esquemas baseados em modelo permitem exclusões precisas no nível do registro que podem afetar os dados relacionados nos conjuntos de dados conectados. Esses recursos de exclusão afetam a integridade dos dados, a conformidade e o comportamento downstream do aplicativo, independentemente do caso de uso específico. Revise os [requisitos de higiene de dados](../../hygiene/ui/record-delete.md#model-based-record-delete) e planeje cenários de exclusão antes da implementação.
+Todos os aplicativos que usam esquemas relacionais e o Data Mirror devem entender as implicações da exclusão de dados. Os esquemas relacionais permitem exclusões precisas no nível do registro que podem afetar os dados relacionados nos conjuntos de dados conectados. Esses recursos de exclusão afetam a integridade dos dados, a conformidade e o comportamento downstream do aplicativo, independentemente do caso de uso específico. Revise [os requisitos de higiene de dados para conjuntos de dados com base em esquemas relacionais](../../hygiene/ui/record-delete.md#relational-record-delete) e planeje cenários de exclusão antes da implementação.
 
 ### Seleção do comportamento do esquema
 
-Os esquemas baseados em modelo assumem o padrão de **comportamento de registro**, que captura o estado da entidade (clientes, contas, etc.). Se você precisar de **comportamento de série temporal** para o rastreamento de eventos, configure-o explicitamente.
+Esquemas relacionais padrão para **registrar comportamento**, que captura o estado da entidade (clientes, contas, etc.). Se você precisar de **comportamento de série temporal** para o rastreamento de eventos, configure-o explicitamente.
 
 ### Comparação do método de assimilação
 
@@ -146,8 +151,8 @@ O Data Mirror oferece suporte a relações **um para um** e **muitos para um** u
 Depois de revisar esta visão geral, você poderá determinar se o Data Mirror se adapta ao seu caso de uso e entender os requisitos de implementação. Para começar:
 
 1. Os **arquitetos de dados** devem avaliar seu modelo de dados para garantir que ele aceite chaves primárias, controle de versão e recursos de controle de alterações.
-2. As **partes interessadas do negócio** devem confirmar se sua licença inclui suporte a esquema baseado em modelo e as edições necessárias do Experience Platform.
+2. As **partes interessadas do negócio** devem confirmar se sua licença inclui suporte a esquema relacional e as edições necessárias do Experience Platform.
 3. **Os designers de esquema** devem planejar sua estrutura de esquema para identificar os descritores, as relações de campo e as necessidades de governança de dados necessários.
 4. As **equipes de implementação** devem escolher um método de assimilação com base nos seus sistemas de origem, requisitos em tempo real e fluxos de trabalho operacionais.
 
-Para obter detalhes sobre a implementação, consulte a [documentação sobre esquemas baseados em modelo](../schema/model-based.md).
+Para obter detalhes sobre a implementação, consulte a [documentação sobre esquemas relacionais](../schema/relational.md).

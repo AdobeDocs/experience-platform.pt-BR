@@ -1,18 +1,18 @@
 ---
 keywords: Catálogo;catálogo
 title: Visão geral do catálogo de destinos
-description: O catálogo de Destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções para Adobe, plataformas de publicidade, plataformas de pesquisa, plataformas de marketing por email e muito mais.
+description: O catálogo de Destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções da Adobe, plataformas de publicidade, plataformas de pesquisa, plataformas de marketing por email e muito mais.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 212faadcc31e064c4b74cef2f10906003ab1e781
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
 
 # Visão geral do catálogo de destinos
 
-O catálogo de destinos fornece uma lista de plataformas de destino disponíveis que estão prontas para receber dados. Essas plataformas de destino incluem soluções Adobe, plataformas de publicidade, plataformas de pesquisa, plataformas de marketing por email, extensões Experience Platform e muito mais.
+O catálogo de destinos fornece uma lista de plataformas de destino disponíveis que estão prontas para receber dados. Essas plataformas de destino incluem soluções da Adobe, plataformas de publicidade, plataformas de pesquisa, plataformas de marketing por email, extensões do Experience Platform e muito mais.
 
 Navegue pelo catálogo para determinar quais plataformas de destino são melhores para seus casos de uso de publicidade e personalização e, em seguida, configure fluxos para ativar seus públicos para destinos.
 
@@ -27,15 +27,15 @@ Navegue pelo catálogo para determinar quais plataformas de destino são melhore
 
 Você pode ativar seus dados para diferentes categorias de destino no Adobe Experience Platform. Os links abaixo fornecem mais informações sobre cada categoria de destino:
 
-- [Visão geral de [!UICONTROL destinos] do Adobe](adobe/overview.md)
-- [Visão geral de [!UICONTROL Advertising] [!UICONTROL destinos]](advertising/overview.md)
-- [Visão geral do [!UICONTROL Analytics] [!UICONTROL destinos]](analytics/overview.md)
-- [[!UICONTROL Visão geral do [!UICONTROL Destinos] do armazenamento na nuvem]](cloud-storage/overview.md)
-- [Visão geral de [!UICONTROL Plataforma de gerenciamento de dados] (DMP) [!UICONTROL destinos]](data-management/overview.md)
-- [[!UICONTROL Marketing por email] [!UICONTROL destinos] visão geral](email-marketing/overview.md)
-- [[!UICONTROL Engajamento móvel] [!UICONTROL destinos] visão geral](mobile-engagement/overview.md)
-- [Visão geral de [!UICONTROL Personalization] [!UICONTROL destinos]](personalization/overview.md)
-- [Visão geral de [!UICONTROL Social] [!UICONTROL destinos]](social/overview.md)
-- [[!UICONTROL Streaming] [!UICONTROL destinos] (links para destino HTTP)](streaming/http-destination.md)
-- [[!UICONTROL Pesquisa] [!UICONTROL destinos] visão geral](survey/overview.md)
-- [Visão geral da [!UICONTROL Voz do cliente] [!UICONTROL destinos]](voice/overview.md)
+- [Visão geral do Adobe [!UICONTROL destinations]](adobe/overview.md)
+- [Visão geral de [!UICONTROL Advertising] [!UICONTROL destinations]](advertising/overview.md)
+- [Visão geral de [!UICONTROL Analytics] [!UICONTROL destinations]](analytics/overview.md)
+- [Visão geral de [!UICONTROL Cloud storage] [!UICONTROL destinations]](cloud-storage/overview.md)
+- [Visão geral de [!UICONTROL Data Management Platform] (DMP) [!UICONTROL destinations]](data-management/overview.md)
+- [Visão geral de [!UICONTROL Email marketing] [!UICONTROL destinations]](email-marketing/overview.md)
+- [Visão geral de [!UICONTROL Mobile engagement] [!UICONTROL destinations]](mobile-engagement/overview.md)
+- [Visão geral de [!UICONTROL Personalization] [!UICONTROL destinations]](personalization/overview.md)
+- [Visão geral de [!UICONTROL Social] [!UICONTROL destinations]](social/overview.md)
+- [[!UICONTROL Streaming] [!UICONTROL destinations] (links para destino HTTP)](streaming/http-destination.md)
+- [Visão geral de [!UICONTROL Survey] [!UICONTROL destinations]](survey/overview.md)
+- [Visão geral de [!UICONTROL Voice of the Customer] [!UICONTROL destinations]](voice/overview.md)

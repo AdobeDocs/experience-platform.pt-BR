@@ -2,7 +2,7 @@
 title: Lógica de vinculação do serviço de identidade
 description: Saiba mais sobre como o Serviço de identidade vincula identidades diferentes para criar uma visualização abrangente de um cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 5c05f2dbcf9088b95eb8d35e455912219e87662f
+source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 2%
@@ -23,10 +23,6 @@ Há dois tipos de identidades que são vinculadas:
 * **Registros de perfil**: essas identidades geralmente vêm de sistemas CRM.
 * **Eventos de experiência**: essas identidades geralmente vêm da implementação do SDK da Web ou da origem do Adobe Analytics.
 
->[!IMPORTANT]
->
->O Serviço de identidade diferencia maiúsculas e minúsculas. Por exemplo, **abc<span>@gmail.com** e **ABC<span>@GMAIL.COM** seriam tratados como duas identidades de email separadas.
-
 ## Significado semântico do estabelecimento de vínculos
 
 Uma identidade representa uma entidade real. Se houver um vínculo estabelecido entre duas identidades, significa que as duas identidades estão associadas uma à outra. Veja a seguir alguns exemplos que ilustram esse conceito:
@@ -44,6 +40,7 @@ Uma identidade consiste em um namespace de identidade e um valor de identidade.
 
 * Um namespace de identidade é o contexto de um determinado valor de identidade para. Exemplos comuns de namespaces de identidade incluem CRMID, Email e Telefone.
 * Um valor de identidade é a string que representa uma entidade real. Por exemplo: &quot;julien<span>@acme.com&quot; pode ser um valor de identidade para um namespace de email e 555-555-1234 pode ser um valor de identidade correspondente para um namespace de telefone.
+* O Serviço de identidade diferencia maiúsculas e minúsculas. Por exemplo, **julien<span>@gmail.com** e **JULIEN<span>@GMAIL.COM** seriam tratados como duas identidades de email separadas.
 
 >[!TIP]
 >

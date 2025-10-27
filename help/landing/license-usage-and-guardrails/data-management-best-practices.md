@@ -2,9 +2,9 @@
 title: Práticas recomendadas de direitos de licença de gerenciamento de dados
 description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
+source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
 workflow-type: tm+mt
-source-wordcount: '2338'
+source-wordcount: '2957'
 ht-degree: 1%
 
 ---
@@ -175,3 +175,99 @@ Esta é uma lista de algumas práticas recomendadas que você pode seguir para g
 * Configure as [Expirações do evento de experiência](../../catalog/datasets/user-guide.md#data-retention-policy) e as [Expirações de dados do perfil pseudônimo](../../profile/pseudonymous-profiles.md) para dados de alta frequência, como dados da Web.
 * Configure [políticas de retenção de TTL (Time-to-Live) para conjuntos de dados de eventos de experiência](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) no data lake para remover automaticamente registros desatualizados e otimizar o uso do armazenamento de acordo com seus direitos de licença.
 * Verifique periodicamente os [Relatórios de Composição de Perfil](#profile-store-composition-reports) para entender sua composição no repositório de perfis. Isso permite compreender as fontes de dados que mais contribuem para o consumo de licença.
+
+## Caso de uso: Conformidade com o uso de licenças
+
+### Por que considerar este caso de uso
+
+Ao garantir sua conformidade com as **provisões de uso de licença** para o armazenamento do data lake e do Perfil, você pode evitar sobreposições com confiança, otimizar custos e alinhar suas políticas de retenção de dados aos requisitos da sua empresa.
+
+### Pré-requisitos e planejamento
+
+Considere os seguintes pré-requisitos no processo de planejamento:
+
+* **Acesso e permissões**:
+   * Verifique se você tem a permissão **Gerenciar conjuntos de dados** para usar o Experience Event TTL.
+   * Verifique se você tem as **Configurações de Gerenciamento de Perfil** para usar o TTL de Perfil Pseudônimo.
+* **Noções básicas sobre a política de retenção de dados**:
+   * Políticas organizacionais relacionadas à retenção e à conformidade de dados
+   * Necessidades dos negócios para janelas de análise de dados e retrospectiva de segmentação
+
+### Funcionalidade da interface do usuário, componentes do Experience Platform e produtos da Experience Cloud que você usará
+
+Para implementar com êxito esse caso de uso, você deve usar várias áreas do Adobe Experience Platform. Verifique se você tem as permissões de controle de acesso baseadas em atributos necessárias para todas essas áreas ou peça ao administrador do sistema para concedê-las.
+
+* Painel de uso da licença - visualize seu uso de direitos atual no nível da sandbox.
+* Gerenciamento de conjuntos de dados - monitore e gerencie políticas de retenção em nível de conjunto de dados.
+* Públicos (Perfil do cliente em tempo real) - garanta que a janela de retrospectiva das regras de segmentação esteja alinhada às janelas de retenção de dados.
+* Monitoramento e alertas - controle atualizações e receba insights sobre operações de retenção de conjuntos de dados.
+
+### Como atingir o caso de uso: instruções passo a passo
+
+Leia as seções abaixo, que incluem links para documentação adicional, para concluir cada uma das etapas da visão geral de alto nível acima.
+
+**Verifique o uso da sua licença atual**
+
+Primeiro, navegue até o **painel de uso de licença** e revise seu uso de direito no nível da sandbox.
+
+>[!BEGINTABS]
+
+>[!TAB Sandbox de produção]
+
+Use a interface [!UICONTROL Metrics] para exibir suas métricas de uso de licença. A interface exibe informações para sua sandbox de produção por padrão.
+
+![A interface do painel de uso de licença exibindo suas métricas de uso de licença para uma sandbox de produção.](../images/data-management/prod-sandbox.png)
+
+>[!TAB Sandbox de desenvolvimento]
+
+Selecione [!UICONTROL Development] para exibir as métricas de uso de licença relacionadas às suas sandboxes de desenvolvimento.
+
+![A interface do painel de uso de licença exibindo suas métricas de uso de licença para sandboxes de desenvolvimento.](../images/data-management/dev-sandbox.png)
+
+>[!ENDTABS]
+
+Para obter mais informações, leia a documentação sobre [usando o painel de uso de licença](../../dashboards/guides/license-usage.md).
+
+**Analisar uso de armazenamento no nível do conjunto de dados**
+
+Use a **Exibição de navegação do conjunto de dados** para revisar as métricas de uso do conjunto de dados para o data lake e o Perfil do cliente em tempo real. Selecione os cabeçalhos de coluna para **[!UICONTROL Data Lake Storage]** ou **[!UICONTROL Profile Storage]** e selecione **[!UICONTROL Sort Descending]** no painel pop-up.
+
+>[!BEGINTABS]
+
+>[!TAB Armazenamento do data lake]
+
+Seus conjuntos de dados no data lake são classificados por tamanho de armazenamento. Use esse recurso para identificar os maiores consumidores de armazenamento no data lake.
+
+![Os conjuntos de dados no data lake foram classificados do maior para o menor.](../images/data-management/data-lake-storage.png)
+
+>[!TAB Armazenamento de perfil]
+
+Seus conjuntos de dados no Perfil são classificados por tamanho de armazenamento. Use esse recurso para identificar os maiores consumidores de armazenamento no Perfil.
+
+![Os conjuntos de dados do Perfil foram classificados do maior para o menor.](../images/data-management/profile-storage.png)
+
+>[!ENDTABS]
+
+**Avaliar e configurar a regra de retenção**
+
+Em seguida, determine se seus conjuntos de dados têm as políticas de retenção apropriadas com base nos limites de licença e nos requisitos de negócios para o Analytics e a Segmentação. Para exibir a política de retenção de um conjunto de dados, selecione as reticências (`...`) ao lado do conjunto de dados e selecione **[!UICONTROL Set data retention policy]**.
+
+![O painel pop-up com opções de conjunto de dados, incluindo &quot;Definir política de retenção de dados&quot;](../images/data-management/set-retention-policy.png)
+
+A interface *[!UICONTROL Set dataset retention]* é exibida. Use essa interface para configurar uma política de retenção para seu conjunto de dados. Você também pode usá-lo para visualizar quanto espaço de armazenamento seu conjunto de dados está consumindo no data lake ou no Perfil.
+
+![A interface &quot;definir retenção de conjunto de dados&quot;.](../images/data-management/dataset-retention.png)
+
+Você pode analisar ainda mais o impacto da retenção do conjunto de dados usando o forecaster de impacto. Selecione **[!UICONTROL View ExperienceEvent data distribution]** para exibir um gráfico que mostre sua janela de retenção e a porcentagem total de armazenamento definida para expirar.
+
+Quando terminar, selecione **[!UICONTROL Save]**
+
+![O previsor de impacto na interface de retenção do conjunto de dados.](../images/data-management/impact-forecaster.png)
+
+**Validar alterações de retenção**
+
+Depois de aplicar suas políticas de retenção, você poderá usar as seguintes ferramentas para validar suas alterações:
+
+* [Métricas de uso do conjunto de dados](../../catalog/datasets/user-guide.md#enhanced-visibility-of-retention-periods-and-storage-metrics) na exibição de navegação do conjunto de dados.
+* O [painel de monitoramento](../../dataflows/ui/monitor.md) para exibir e analisar o impacto da retenção.
+* O [painel de uso de licença](../../dashboards/guides/license-usage.md) para exibir instantâneos diários, tendências preditivas e insights em nível de sandbox.

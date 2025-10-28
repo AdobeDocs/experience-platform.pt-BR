@@ -4,9 +4,9 @@ title: Visualizar ponto de extremidade da API Status de amostra (Visualização 
 description: O ponto de extremidade de status da amostra de visualização da API do perfil do cliente em tempo real permite visualizar a amostra bem-sucedida mais recente dos dados do perfil, listar a distribuição do perfil por conjunto de dados e por identidade e gerar relatórios mostrando a sobreposição do conjunto de dados, a sobreposição de identidade e os perfis não compilados.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d1eb9191c74add1ab21cd268327bab9a3255d182
 workflow-type: tm+mt
-source-wordcount: '2909'
+source-wordcount: '2904'
 ht-degree: 1%
 
 ---
@@ -37,12 +37,12 @@ Para saber mais sobre os perfis e suas funções na Experience Platform, comece 
 
 ## Como o trabalho de amostra é acionado
 
-Como os dados habilitados para o Perfil de cliente em tempo real são assimilados no [!DNL Experience Platform], eles são armazenados no armazenamento de dados do Perfil. Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 5%, um trabalho de amostragem é acionado para atualizar a contagem. O modo como a amostra é acionada depende do tipo de ingestão sendo usado:
+Como os dados habilitados para o Perfil de cliente em tempo real são assimilados no [!DNL Experience Platform], eles são armazenados no armazenamento de dados do Perfil. Quando a assimilação de registros no armazenamento de Perfil aumenta ou diminui a contagem total de perfis em mais de 3%, um trabalho de amostragem é acionado para atualizar a contagem. O modo como a amostra é acionada depende do tipo de ingestão sendo usado:
 
-* Para **fluxos de trabalho de transmissão de dados**, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 5% foi atingido. Se tiver sido, um trabalho de amostra será automaticamente acionado para atualizar a contagem.
-* Para **assimilação em lote**, dentro de 15 minutos após a assimilação bem-sucedida de um lote no repositório de perfis, se o limite de aumento ou diminuição de 5% for atingido, um trabalho será executado para atualizar a contagem. Usando a API de perfil, é possível visualizar o trabalho de amostra bem-sucedido mais recente, bem como listar a distribuição do perfil por conjunto de dados e por namespace de identidade.
+* Para **fluxos de trabalho de transmissão de dados**, uma verificação é feita de hora em hora para determinar se o limite de aumento ou diminuição de 3% foi atingido. Se tiver sido, um trabalho de amostra será automaticamente acionado para atualizar a contagem.
+* Para **assimilação em lote**, dentro de 15 minutos após a assimilação bem-sucedida de um lote no repositório de perfis, se o limite de aumento ou diminuição de 3% for atingido, um trabalho será executado para atualizar a contagem. Usando a API de perfil, é possível visualizar o trabalho de amostra bem-sucedido mais recente, bem como listar a distribuição do perfil por conjunto de dados e por namespace de identidade.
 
-A contagem de perfis e as métricas de namespace também estão disponíveis na seção [!UICONTROL Perfis] da interface do Experience Platform. Para obter informações sobre como acessar os dados do Perfil usando a interface do usuário, consulte o [[!DNL Profile] guia da interface](../ui/user-guide.md).
+A contagem de perfis e as métricas de namespace também estão disponíveis na seção [!UICONTROL Profiles] da interface do Experience Platform. Para obter informações sobre como acessar os dados do Perfil usando a interface do usuário, consulte o [[!DNL Profile] guia da interface](../ui/user-guide.md).
 
 ## Exibir status da última amostra {#view-last-sample-status}
 
@@ -299,7 +299,7 @@ A resposta inclui uma matriz `data`, com objetos individuais contendo os detalhe
 | `fullIDsFragmentCount` | O número total de fragmentos de perfil no namespace. |
 | `fullIDsCount` | O número total de perfis mesclados no namespace. |
 | `fullIDsPercentage` | O `fullIDsCount` como uma porcentagem do total de perfis mesclados (o valor `totalRows`, conforme retornado no [último status de amostra](#view-last-sample-status)), expresso em formato decimal. |
-| `code` | O `code` para o namespace. Isso pode ser encontrado ao trabalhar com namespaces usando a [API do Serviço de Identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md) e também é mencionado como o [!UICONTROL Símbolo de identidade] na interface do usuário do Experience Platform. Para saber mais, visite a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
+| `code` | O `code` para o namespace. Isso pode ser encontrado ao trabalhar com namespaces usando a [API do Serviço de Identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md) e também é conhecido como [!UICONTROL Identity symbol] na interface do usuário do Experience Platform. Para saber mais, visite a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
 | `value` | O valor `id` do namespace. Isso pode ser encontrado ao trabalhar com namespaces usando a [API do Serviço de Identidade](../../identity-service/api/list-namespaces.md). |
 
 ## Gerar o relatório de sobreposição do conjunto de dados
@@ -445,7 +445,7 @@ Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de 
 | Propriedade | Descrição |
 |---|---|
 | `data` | O objeto `data` contém listas separadas por vírgulas com combinações exclusivas de códigos de namespace de identidade e suas respectivas contagens de perfil. |
-| Códigos de namespace | O `code` é um formulário curto para cada nome de namespace de identidade. Um mapeamento de cada `code` para seu `name` pode ser encontrado usando a [API do Serviço de Identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md). O `code` também é chamado de [!UICONTROL Símbolo de identidade] na interface do Experience Platform. Para saber mais, visite a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
+| Códigos de namespace | O `code` é um formulário curto para cada nome de namespace de identidade. Um mapeamento de cada `code` para seu `name` pode ser encontrado usando a [API do Serviço de Identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md). O `code` também é chamado de [!UICONTROL Identity symbol] na interface do usuário do Experience Platform. Para saber mais, visite a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
 | `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` foi fornecido durante a solicitação, o relatório retornado será para a data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
 
 ### Interpretação do relatório de sobreposição de namespace de identidade

@@ -46,7 +46,7 @@ Os tipos de contêiner organizam os dados de consentimento, mas não podem ser u
 | Tipo de contêiner | Descrição |
 |----------------|-------------|
 | **Objeto** | Um container com um esquema fixo que armazena vários campos de tipos diferentes. |
-| Matriz **1}** | Um contêiner que armazena vários valores do mesmo tipo. |
+| Matriz **1&rbrace;** | Um contêiner que armazena vários valores do mesmo tipo. |
 | **Mapa** | Um contêiner com chaves dinâmicas que pode conter objetos ou outros tipos de campo. |
 
 >[!IMPORTANT]

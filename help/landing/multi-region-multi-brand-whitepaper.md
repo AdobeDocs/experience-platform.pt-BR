@@ -431,7 +431,7 @@ A Experience Platform fornece às empresas uma estrutura robusta para centraliza
 
    - Você deve avaliar cuidadosamente se deve implantar **várias IDs de organização ou várias sandboxes** com base na residência dos dados, na conformidade e nas necessidades operacionais.
 
-   - As **IDs de organização** oferecem isolamento completo**, enquanto as configurações de várias sandboxes fornecem flexibilidade operacional em uma estrutura de governança compartilhada**.
+   - As **IDs de organização** oferecem isolamento completo&#x200B;**, enquanto as configurações de várias sandboxes fornecem flexibilidade operacional em uma estrutura de governança compartilhada**.
 
 ## Pensamentos finais
 

@@ -167,7 +167,7 @@ A próxima etapa é configurar sua solução de personalização para recuperar 
 >[!IMPORTANT]
 >
 >Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, você deve recuperar os atributos do perfil por meio da [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/). Além disso, você deve recuperar os atributos do perfil por meio da API do Edge Network [ponto de extremidade de coleta de dados interativa](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/), para que as chamadas de API sejam autenticadas.
->><br>Se você não seguir os requisitos acima, a personalização será baseada somente na associação ao público-alvo e os atributos de perfil não estarão disponíveis para você.
+>&#x200B;><br>Se você não seguir os requisitos acima, a personalização será baseada somente na associação ao público-alvo e os atributos de perfil não estarão disponíveis para você.
 
 A sequência de dados configurada na [etapa 1](#create-datastream) agora está pronta para aceitar dados de eventos de entrada e responder com informações de perfil de borda.
 

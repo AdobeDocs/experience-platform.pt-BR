@@ -176,7 +176,7 @@ A tabela abaixo descreve os parâmetros normalmente necessários para se conecta
 >[!NOTE]
 >
 >Ao conectar-se a um host usando credenciais sem expiração, ainda é necessário usar todos os parâmetros listados na seção [!UICONTROL EXPIRING CREDENTIALS], exceto a senha e o nome de usuário.
->>O formato para inserir seu nome de usuário e senha usa valores separados por dois pontos, como neste exemplo `username:{your_username}` e `password:{password_string}`.
+>&#x200B;>O formato para inserir seu nome de usuário e senha usa valores separados por dois pontos, como neste exemplo `username:{your_username}` e `password:{password_string}`.
 
 | Parâmetro | Descrição | Exemplo |
 |---|---|---|

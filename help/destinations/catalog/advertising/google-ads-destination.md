@@ -77,7 +77,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 >[!NOTE]
 >
 >A inclusão na lista de permissões é obrigatória antes de configurar seu primeiro destino do [!DNL Google Ads] no Experience Platform. Verifique se o processo de inclusão na lista de permissões descrito abaixo foi concluído por [!DNL Google] antes de criar um destino.
->>A exceção a esta regra é para clientes do [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html). Se você já tiver criado uma conexão com esse destino do Google no Audience Manager, não será necessário passar pelo processo de inclusão na lista de permissões novamente e você poderá prosseguir para as próximas etapas.
+>&#x200B;>A exceção a esta regra é para clientes do [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html). Se você já tiver criado uma conexão com esse destino do Google no Audience Manager, não será necessário passar pelo processo de inclusão na lista de permissões novamente e você poderá prosseguir para as próximas etapas.
 
 Antes de criar o destino [!DNL Google Ads] no Experience Platform, contate [!DNL Google] para que o Adobe seja colocado na lista de provedores de dados permitidos e para que sua conta seja adicionada ao incluo na lista de permissões. Contate [!DNL Google] e forneça as seguintes informações:
 

@@ -51,8 +51,8 @@ Se você não tiver um aplicativo privado, siga a documentação para [Criar um 
 >[!IMPORTANT]
 >
 > O aplicativo privado deve ser atribuído aos escopos abaixo:
-> > `crm.objects.contacts.write`, `crm.objects.contacts.read`
-> > `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
+> &#x200B;> `crm.objects.contacts.write`, `crm.objects.contacts.read`
+> &#x200B;> `crm.schemas.contacts.write`, `crm.schemas.contacts.read`
 
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |

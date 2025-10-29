@@ -147,7 +147,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Antes de excluir a conta de destino, você deve excluir todos os fluxos de dados existentes para a conta de destino.
->>Para excluir fluxos de dados existentes, consulte as páginas abaixo:
+>&#x200B;>Para excluir fluxos de dados existentes, consulte as páginas abaixo:
 >
 >* [Usar a interface do usuário do Experience Platform](../ui/delete-destinations.md) para excluir fluxos de dados existentes;
 >* [Use a API de Serviço de Fluxo](delete-destination-dataflow.md) para excluir fluxos de dados existentes.

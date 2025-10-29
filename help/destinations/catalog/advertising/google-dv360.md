@@ -14,12 +14,12 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 > A Google está lançando alterações na [API do Google Ads](https://developers.google.com/google-ads/api/docs/start), na [Correspondência do Cliente](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) e na [API de Exibição e Vídeo 360](https://developers.google.com/display-video/api/guides/getting-started/overview) para oferecer suporte aos requisitos de conformidade e consentimento definidos na [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_en) (DMA) da União Europeia ([Política de Consentimento do Usuário](https://www.google.com/about/company/user-consent-policy/) da UE). A aplicação dessas alterações aos requisitos de consentimento estará em vigor a partir de 6 de março de 2024.
-> ><br/>
-> >Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como parceiro da Google, a Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
-> ><br/>
-> >Os clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram uma [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos não precisam tomar nenhuma ação.
-> ><br/>
-> >Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar os recursos de [definição de segmento](../../../segmentation/home.md#segment-definitions) no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos do Real-Time CDP Google existentes sem interrupção.
+> &#x200B;><br/>
+> &#x200B;>Para aderir à política de consentimento do usuário da UE e continuar criando listas de públicos-alvo para usuários no Espaço Econômico Europeu (EEE), anunciantes e parceiros devem garantir que eles transmitem o consentimento do usuário final ao fazer upload dos dados de público-alvo. Como parceiro da Google, a Adobe fornece as ferramentas necessárias para cumprir esses requisitos de consentimento de acordo com a DMA na União Europeia.
+> &#x200B;><br/>
+> &#x200B;>Os clientes que compraram o Adobe Privacy &amp; Security Shield e configuraram uma [política de consentimento](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) para filtrar perfis não consentidos não precisam tomar nenhuma ação.
+> &#x200B;><br/>
+> &#x200B;>Os clientes que não compraram o Adobe Privacy &amp; Security Shield devem usar os recursos de [definição de segmento](../../../segmentation/home.md#segment-definitions) no [Construtor de segmentos](../../../segmentation/ui/segment-builder.md) para filtrar perfis não consentidos, a fim de continuar usando os Destinos do Real-Time CDP Google existentes sem interrupção.
 
 O [!DNL Display & Video 360], anteriormente conhecido como [!DNL DoubleClick Bid Manager], é uma ferramenta usada para executar campanhas digitais com direcionamento de público e redirecionamento em fontes de inventário de vídeo, dispositivos móveis e exibição.
 
@@ -75,7 +75,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 >[!NOTE]
 >
 >A inclusão na lista de permissões é obrigatória antes de configurar seu primeiro destino do [!DNL Google Display & Video 360] no Experience Platform. Verifique se o processo de inclusão na lista de permissões descrito abaixo foi concluído por [!DNL Google] antes de criar um destino.
->>A exceção a esta regra é para clientes do [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html). Se você já tiver criado uma conexão com esse destino do Google no Audience Manager, não será necessário passar pelo processo de inclusão na lista de permissões novamente e você poderá prosseguir para as próximas etapas.
+>&#x200B;>A exceção a esta regra é para clientes do [Audience Manager](https://docs.adobe.com/content/help/pt-BR/experience-cloud/user-guides/home.translate.html). Se você já tiver criado uma conexão com esse destino do Google no Audience Manager, não será necessário passar pelo processo de inclusão na lista de permissões novamente e você poderá prosseguir para as próximas etapas.
 
 Antes de criar o destino [!DNL Google Display & Video 360] no Experience Platform, você deve contatar a Google, solicitando que o Adobe seja colocado na lista de provedores de dados permitidos e que sua conta seja adicionada ao incluo na lista de permissões. Entre em contato com a Google e forneça as seguintes informações:
 

@@ -138,8 +138,8 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 >[!NOTE]
 >
 >O hash automático de dados de namespaces sem hash é criado por [!DNL Experience Platform] após a ativação.
->> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
->> A opção **[!UICONTROL Apply transformation]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
+>&#x200B;> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
+>&#x200B;> A opção **[!UICONTROL Apply transformation]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
 
 ![Aplicar controle de transformação realçado na etapa de mapeamento.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 

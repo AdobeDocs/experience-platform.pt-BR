@@ -160,7 +160,7 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 1. Monitore o resumo do público-alvo e verifique se a contagem de perfis corresponde à contagem no segmento.
    ![Exemplo de captura de tela da interface do Experience Platform mostrando o Segmento.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Faça logon no site do [!DNL Zendesk] e navegue até a página **[!UICONTROL Contacts]** para verificar se os perfis do público-alvo foram adicionados. Esta lista pode ser configurada para exibir colunas para os campos adicionais criados com o público-alvo**[!UICONTROL Mapping ID]** e os status do público-alvo.
+1. Faça logon no site do [!DNL Zendesk] e navegue até a página **[!UICONTROL Contacts]** para verificar se os perfis do público-alvo foram adicionados. Esta lista pode ser configurada para exibir colunas para os campos adicionais criados com o público-alvo&#x200B;**[!UICONTROL Mapping ID]** e os status do público-alvo.
    ![Captura de tela da interface do Zendesk mostrando a página Contatos com os campos adicionais criados com o nome do público-alvo.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. Como alternativa, você pode detalhar uma página individual de **[!UICONTROL Person]** e verificar a seção **[!UICONTROL Additional fields]**, que exibe o nome do público-alvo e os status do público-alvo.

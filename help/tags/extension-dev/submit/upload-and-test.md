@@ -63,8 +63,8 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > Por padrão, o carregador espera credenciais do Adobe I/O para um fluxo Oauth de servidor para servidor. As credenciais `jwt-auth` herdadas
-> > O pode ser usado executando o `npx @adobe/reactor-uploader@v5.2.0` até a desativação em 1º de janeiro de 2025. Os parâmetros necessários
-> > para executar a versão `jwt-auth` pode ser encontrado [aqui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> &#x200B;> O pode ser usado executando o `npx @adobe/reactor-uploader@v5.2.0` até a desativação em 1º de janeiro de 2025. Os parâmetros necessários
+> &#x200B;> para executar a versão `jwt-auth` pode ser encontrado [aqui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
 O carregador requer que você insira apenas algumas informações. Os `clientId` e `clientSecret` podem ser recuperados do console do Adobe I/O. Navegue até a [página Integrações](https://console.adobe.io/integrations) no console do I/O. Selecione a organização correta na lista suspensa, localize a integração apropriada e selecione **[!UICONTROL View]**.
 

@@ -79,7 +79,7 @@ Para cada público-alvo ativado do Experience Platform para [!DNL Salesforce CRM
 >[!IMPORTANT]
 >
 >Não inclua caracteres de espaço em branco no nome do campo. Em vez disso, use o caractere de sublinhado `(_)` como separador.
->>Em [!DNL Salesforce] você deve criar campos personalizados com um **[!UICONTROL Field Name]** que corresponda exatamente ao valor especificado em **[!UICONTROL Mapping ID]** para cada segmento ativado do Experience Platform. Por exemplo, a captura de tela abaixo mostra um campo personalizado chamado `crm_2_seg`. Ao ativar um público-alvo para esse destino, adicione `crm_2_seg` como **[!UICONTROL Mapping ID]** para preencher públicos-alvo do Experience Platform nesse campo personalizado.
+>&#x200B;>Em [!DNL Salesforce] você deve criar campos personalizados com um **[!UICONTROL Field Name]** que corresponda exatamente ao valor especificado em **[!UICONTROL Mapping ID]** para cada segmento ativado do Experience Platform. Por exemplo, a captura de tela abaixo mostra um campo personalizado chamado `crm_2_seg`. Ao ativar um público-alvo para esse destino, adicione `crm_2_seg` como **[!UICONTROL Mapping ID]** para preencher públicos-alvo do Experience Platform nesse campo personalizado.
 
 Um exemplo de criação de campo personalizado em [!DNL Salesforce], *Etapa 1 - Selecionar o tipo de dados*, é mostrado abaixo:
 ![Captura de tela da interface do usuário do Salesforce mostrando a criação de campo personalizado, Etapa 1 - Selecione o tipo de dados.](../../assets/catalog/crm/salesforce/create-salesforce-custom-field-step-1.png)

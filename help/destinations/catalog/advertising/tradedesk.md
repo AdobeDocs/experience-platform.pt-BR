@@ -18,7 +18,7 @@ ht-degree: 3%
 >[!IMPORTANT]
 >
 > Após a [atualização interna](../../../release-notes/2025/july-2025.md#destinations) para o serviço de destinos a partir de julho de 2025, você poderá observar uma **queda no número de perfis ativados** em seus fluxos de dados para [!DNL The Trade Desk].
-> > Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
+> &#x200B;> Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
 >
 >**O que mudou:**
 >
@@ -157,7 +157,7 @@ Exemplos:
 
 >[!NOTE]
 > 
->Após a atualização[ de ](/help/release-notes/2025/july-2025.md#destinations)julho de 2025 para o serviço de destinos, o mapeamento [!DNL ECID] será aplicado. Os perfis que não têm [!DNL ECID] agora são descartados conforme esperado, o que pode mostrar contagens de ativação mais baixas em comparação ao comportamento herdado.
+>Após a atualização[&#x200B; de &#x200B;](/help/release-notes/2025/july-2025.md#destinations)julho de 2025 para o serviço de destinos, o mapeamento [!DNL ECID] será aplicado. Os perfis que não têm [!DNL ECID] agora são descartados conforme esperado, o que pode mostrar contagens de ativação mais baixas em comparação ao comportamento herdado.
 
 ## Dados exportados {#exported-data}
 

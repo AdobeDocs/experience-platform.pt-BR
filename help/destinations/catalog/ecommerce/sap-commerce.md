@@ -289,7 +289,7 @@ Para fazer isso, selecione cada segmento e digite o nome da referência personal
 >[!IMPORTANT]
 >
 > Não use o rótulo de referência personalizado como o valor.
-> >![Imagem indicando que você não deve usar o valor de rótulo de referência personalizado para mapeamento.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
+> &#x200B;>![Imagem indicando que você não deve usar o valor de rótulo de referência personalizado para mapeamento.](../../assets/catalog/ecommerce/sap-commerce/custom-reference-dont-use-label-for-mapping.png)
 
 Por exemplo, se a audiência selecionada do Experience Platform for `sap_audience1` e você quiser que seu status seja atualizado para a [!DNL SAP Subscription Billing] referência personalizada `SAP_1`, especifique esse valor no campo [!DNL SAP_Commerce] **[!UICONTROL Mapping ID]**.
 

@@ -2,9 +2,9 @@
 title: (API) Conexão com o Salesforce Marketing Cloud
 description: O destino Salesforce Marketing Cloud (anteriormente conhecido como ExactTarget) permite exportar os dados da conta e ativá-los no Salesforce Marketing Cloud para atender às suas necessidades comerciais.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2823'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ O departamento de vendas de uma plataforma de aluguel de residências quer trans
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL (API) Salesforce Marketing Cloud], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL (API) Salesforce Marketing Cloud], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criados em [!DNL Experience Platform].
 
 ### Pré-requisitos em [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
@@ -51,7 +51,7 @@ Entre em contato com o [[!DNL Salesforce] Suporte](https://www.salesforce.com/co
 
 #### Criar atributos em [!DNL Salesforce Marketing Cloud] {#prerequisites-attribute}
 
-Ao ativar públicos para o destino [!DNL (API) Salesforce Marketing Cloud], você deve inserir um valor no campo **[!UICONTROL ID de Mapeamento]** para cada público ativado, na etapa **[Agenda de público-alvo](#schedule-segment-export-example)**.
+Ao ativar públicos para o destino [!DNL (API) Salesforce Marketing Cloud], você deve inserir um valor no campo **[!UICONTROL Mapping ID]** para cada público ativado, na etapa **[Agenda de público](#schedule-segment-export-example)**.
 
 [!DNL Salesforce] exige esse valor para ler e interpretar corretamente os públicos-alvo provenientes da Experience Platform e atualizar o status dos públicos-alvo em [!DNL Salesforce Marketing Cloud]. Consulte a documentação do Experience Platform para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
@@ -67,11 +67,11 @@ Uma exibição de um grupo de atributos [!DNL Salesforce Marketing Cloud] [!DNL 
 
 O destino [!DNL (API) Salesforce Marketing Cloud] usa a [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) para recuperar dinamicamente as extensões de dados e seus atributos vinculados&#39; definidos em [!DNL Salesforce Marketing Cloud].
 
-Eles são exibidos na janela de seleção **[!UICONTROL Campo de destino]** quando você configura o [mapeamento](#mapping-considerations-example) no fluxo de trabalho para [ativar públicos para o destino](#activate).
+Eles são exibidos na janela de seleção **[!UICONTROL Target field]** quando você configura o [mapeamento](#mapping-considerations-example) no fluxo de trabalho para [ativar públicos para o destino](#activate).
 
 >[!IMPORTANT]
 >
-> Em [!DNL Salesforce Marketing Cloud], você deve criar atributos com um **[!UICONTROL NOME DO CAMPO]** que corresponda exatamente ao valor especificado em **[!UICONTROL ID de Mapeamento]** para cada segmento do Experience Platform ativado. Por exemplo, a captura de tela abaixo mostra um atributo chamado `salesforce_mc_segment_1`. Ao ativar um público-alvo para esse destino, adicione `salesforce_mc_segment_1` como **[!UICONTROL ID de Mapeamento]** para preencher públicos-alvo do Experience Platform nesse atributo.
+> Em [!DNL Salesforce Marketing Cloud], você deve criar atributos com um **[!UICONTROL FIELD NAME]** que corresponda exatamente ao valor especificado em **[!UICONTROL Mapping ID]** para cada segmento ativado do Experience Platform. Por exemplo, a captura de tela abaixo mostra um atributo chamado `salesforce_mc_segment_1`. Ao ativar um público-alvo para esse destino, adicione `salesforce_mc_segment_1` como **[!UICONTROL Mapping ID]** para preencher públicos-alvo do Experience Platform nesse atributo.
 
 Um exemplo de criação de atributo em [!DNL Salesforce Marketing Cloud], é mostrado abaixo:
 ![Captura de tela da interface do usuário do Salesforce Marketing Cloud mostrando um atributo.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
@@ -121,7 +121,7 @@ Anote os itens abaixo antes de autenticar no destino [!DNL (API) Salesforce Mark
    * Consulte a [!DNL Salesforce] [documentação](https://help.salesforce.com/s/articleView?id=sf.custom_field_allocations.htm&type=5) para obter orientação adicional.
    * Se você atingiu o limite definido para *campos personalizados permitidos por objeto* em [!DNL Salesforce Marketing Cloud], será necessário
       * Remova os atributos mais antigos antes de adicionar novos atributos em [!DNL Salesforce Marketing Cloud].
-      * Atualize ou remova qualquer público ativado nos destinos do Experience Platform que usam esses nomes de atributo mais antigos como o valor fornecido para a **[!UICONTROL ID de Mapeamento]** durante a etapa [agendamento de público-alvo](#schedule-segment-export-example).
+      * Atualize ou remova qualquer público ativado nos destinos do Experience Platform que usam esses nomes de atributos mais antigos como o valor fornecido para **[!UICONTROL Mapping ID]** durante a etapa [agendamento de público-alvo](#schedule-segment-export-example).
 
 ## Identidades suportadas {#supported-identities}
 
@@ -147,8 +147,8 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
----------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campos.</li><li> Cada status de segmento em [!DNL Salesforce Marketing Cloud] é atualizado com o status de público correspondente do Experience Platform, com base no valor **[!UICONTROL ID de Mapeamento]** fornecido durante a etapa [agendamento de público-alvo](#schedule-segment-export-example).</li></ul> |
+|---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Profile-based]** | <ul><li>Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados *(por exemplo: endereço de email, número de telefone, sobrenome)*, de acordo com o mapeamento de campos.</li><li> Cada status de segmento em [!DNL Salesforce Marketing Cloud] é atualizado com o status de público correspondente do Experience Platform, com base no valor **[!UICONTROL Mapping ID]** fornecido durante a etapa [agendamento de público-alvo](#schedule-segment-export-example).</li></ul> |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -157,46 +157,46 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
-> Para se conectar ao destino, você precisa da **[!UICONTROL Permissão de controle de acesso]** [Gerenciar Destinos](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+> Para se conectar ao destino, você precisa da **[!UICONTROL Manage Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
-Em **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]**, procure por [!DNL (API) Salesforce Marketing Cloud]. Como alternativa, você pode localizá-lo na categoria **[!UICONTROL Email marketing]**.
+Em **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, procure por [!DNL (API) Salesforce Marketing Cloud]. Como alternativa, você pode localizá-lo na categoria **[!UICONTROL Email marketing]**.
 
 ### Autenticar para o destino {#authenticate}
 
-Para autenticar no destino, preencha os campos obrigatórios abaixo e selecione **[!UICONTROL Conectar ao destino]**. Consulte a seção [Coletar [!DNL Salesforce Marketing Cloud] credenciais](#gather-credentials) para obter qualquer orientação.
+Para autenticar no destino, preencha os campos obrigatórios abaixo e selecione **[!UICONTROL Connect to destination]**. Consulte a seção [Coletar [!DNL Salesforce Marketing Cloud] credenciais](#gather-credentials) para obter qualquer orientação.
 
 | [!DNL (API) Salesforce Marketing Cloud] destino | [!DNL Salesforce Marketing Cloud] |
 | --- | --- |
-| **[!UICONTROL Subdomínio]** | O prefixo de domínio [!DNL Salesforce Marketing Cloud]. <br>Por exemplo, se seu domínio for <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br> é necessário fornecer `mcq4jrssqdlyc4lph19nnqgzzs84` como valor. |
-| **[!UICONTROL ID do cliente]** | Seu [!DNL Salesforce Marketing Cloud] `Client ID`. |
-| **[!UICONTROL Segredo do cliente]** | Seu [!DNL Salesforce Marketing Cloud] `Client Secret`. |
+| **[!UICONTROL Subdomain]** | O prefixo de domínio [!DNL Salesforce Marketing Cloud]. <br>Por exemplo, se seu domínio for <br> *`mcq4jrssqdlyc4lph19nnqgzzs84`.login.exacttarget.com*, <br> é necessário fornecer `mcq4jrssqdlyc4lph19nnqgzzs84` como valor. |
+| **[!UICONTROL Client ID]** | Seu [!DNL Salesforce Marketing Cloud] `Client ID`. |
+| **[!UICONTROL Client Secret]** | Seu [!DNL Salesforce Marketing Cloud] `Client Secret`. |
 
 ![Captura de tela da interface do usuário do Experience Platform mostrando como autenticar no Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
-Se os detalhes fornecidos forem válidos, a interface exibirá um status **[!UICONTROL Conectado]** com uma marca de seleção verde, você poderá prosseguir para a próxima etapa.
+Se os detalhes fornecidos forem válidos, a interface exibirá um status **[!UICONTROL Connected]** com uma marca de seleção verde e você poderá prosseguir para a próxima etapa.
 
 ### Preencher detalhes do destino {#destination-details}
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 ![Captura de tela da interface do Experience Platform mostrando os detalhes do destino.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-details.png)
 
-* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
-* **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
+* **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
+* **[!UICONTROL Description]**: uma descrição que ajudará você a identificar este destino no futuro.
 
 ### Ativar alertas {#enable-alerts}
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
-> * Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
-> * Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
+> * Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+> * Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
 Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
@@ -210,12 +210,12 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL (API) Sal
 >
 > * Embora seus nomes de atributos sejam iguais aos da conta do [!DNL Salesforce Marketing Cloud], os mapeamentos para `contactKey` e `personalEmail.address` são obrigatórios.
 >
-> * A integração com a API [!DNL Salesforce Marketing Cloud] está sujeita a um limite de paginação de quantos atributos o Experience Platform pode recuperar do Salesforce. Isso significa que durante a etapa **[!UICONTROL Mapping]**, o esquema de campo de destino pode exibir no máximo 2000 atributos da sua conta do Salesforce.
+> * A integração com a API [!DNL Salesforce Marketing Cloud] está sujeita a um limite de paginação de quantos atributos o Experience Platform pode recuperar do Salesforce. Isso significa que, durante a etapa **[!UICONTROL Mapping]**, o esquema de campo de destino pode exibir no máximo 2000 atributos da sua conta do Salesforce.
 
-1. Na etapa **[!UICONTROL Mapeamento]**, selecione **[!UICONTROL Adicionar novo mapeamento]**. Você verá uma nova linha de mapeamento na tela.
+1. Na etapa **[!UICONTROL Mapping]**, selecione **[!UICONTROL Add new mapping]**. Você verá uma nova linha de mapeamento na tela.
    ![Exemplo de captura de tela da interface do Experience Platform para Adicionar novo mapeamento.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/add-new-mapping.png)
-1. Na janela **[!UICONTROL Selecionar campo de origem]**, escolha a categoria **[!UICONTROL Selecionar atributos]** e selecione o atributo XDM ou escolha o **[!UICONTROL Selecionar namespace de identidade]** e selecione uma identidade.
-1. Na janela **[!UICONTROL Selecionar campo de destino]**, escolha o **[!UICONTROL Selecionar namespace de identidade]** e selecione uma identidade ou escolha a categoria **[!UICONTROL Selecionar atributos]** e selecione um atributo nas extensões de dados exibidas conforme necessário. O destino [!DNL (API) Salesforce Marketing Cloud] usa a [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) para recuperar dinamicamente as extensões de dados e seus atributos vinculados&#39; definidos em [!DNL Salesforce Marketing Cloud]. Eles são exibidos no pop-up **[!UICONTROL Campo de destino]** quando você configura o [mapeamento](#mapping-considerations-example) no [fluxo de trabalho para ativar públicos](#activate).
+1. Na janela **[!UICONTROL Select source field]**, escolha a categoria **[!UICONTROL Select attributes]** e selecione o atributo XDM ou escolha a **[!UICONTROL Select identity namespace]** e selecione uma identidade.
+1. Na janela **[!UICONTROL Select target field]**, escolha a **[!UICONTROL Select identity namespace]** e selecione uma identidade ou escolha a categoria **[!UICONTROL Select attributes]** e selecione um atributo nas extensões de dados exibidas conforme necessário. O destino [!DNL (API) Salesforce Marketing Cloud] usa a [!DNL Salesforce Marketing Cloud] [!DNL Search Attribute-Set Definitions REST] [API](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/retrieveAttributeSetDefinitions.html) para recuperar dinamicamente as extensões de dados e seus atributos vinculados&#39; definidos em [!DNL Salesforce Marketing Cloud]. Eles são exibidos no pop-up **[!UICONTROL Target field]** quando você configura o [mapeamento](#mapping-considerations-example) no [fluxo de trabalho para ativar públicos](#activate).
 
    * Repita essas etapas para adicionar os seguintes mapeamentos entre o esquema de perfil XDM e o [!DNL (API) Salesforce Marketing Cloud]:
 
@@ -226,33 +226,32 @@ Para mapear corretamente os campos XDM para os campos de destino [!DNL (API) Sal
      | `xdm: person.name.firstName` | `Attribute: First Name` da extensão de dados [!DNL Salesforce Marketing Cloud] desejada. | - |
 
    * Um exemplo usando esses mapeamentos é mostrado abaixo:
-
      ![Exemplo de captura de tela da interface do Experience Platform mostrando os mapeamentos do Target.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
 
-Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecione **[!UICONTROL Avançar]**.
+Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecione **[!UICONTROL Next]**.
 
 ### Agendar exportação de público e exemplo {#schedule-segment-export-example}
 
 Ao executar a etapa [Agendar exportação de público-alvo](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling), mapeie manualmente os públicos-alvo do Experience Platform para os [atributos](#prerequisites-attribute) em [!DNL Salesforce Marketing Cloud].
 
-Para fazer isso, selecione cada segmento e digite o nome do atributo de [!DNL Salesforce Marketing Cloud] no campo [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID de Mapeamento]**. Consulte a seção [Criar atributo em [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) para obter orientação e práticas recomendadas sobre como criar atributos em [!DNL Salesforce Marketing Cloud].
+Para fazer isso, selecione cada segmento e digite o nome do atributo de [!DNL Salesforce Marketing Cloud] no campo [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]**. Consulte a seção [Criar atributo em [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) para obter orientação e práticas recomendadas sobre como criar atributos em [!DNL Salesforce Marketing Cloud].
 
-Por exemplo, se o atributo [!DNL Salesforce Marketing Cloud] for `salesforce_mc_segment_1`, especifique esse valor na [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID de Mapeamento]** para popular os públicos-alvo da Experience Platform neste atributo.
+Por exemplo, se o atributo [!DNL Salesforce Marketing Cloud] for `salesforce_mc_segment_1`, especifique esse valor no [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** para preencher os públicos-alvo do Experience Platform para esse atributo.
 
 Um exemplo de atributo de [!DNL Salesforce Marketing Cloud] é mostrado abaixo:
 ![Captura de tela da interface do usuário do Salesforce Marketing Cloud mostrando um atributo.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/salesforce-custom-field.png)
 
-Um exemplo indicando o local da [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID de Mapeamento]** é mostrado abaixo:
+Um exemplo indicando o local de [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** é mostrado abaixo:
 
 ![Exemplo de captura de tela da interface do Experience Platform mostrando a opção Agendar exportação de público-alvo.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
-Como mostrado, a [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID do Mapeamento]** deve corresponder exatamente ao valor especificado em [!DNL Salesforce Marketing Cloud] **[!UICONTROL NOME DO CAMPO]**.
+Como mostrado, [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** deve corresponder exatamente ao valor especificado em [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]**.
 
 Repita esta seção para cada segmento do Experience Platform ativado.
 
 Um exemplo típico com base na imagem mostrada acima pode ser.
 
-| Nome do segmento [!DNL (API) Salesforce Marketing Cloud] | [!DNL Salesforce Marketing Cloud] **[!UICONTROL NOME DO CAMPO]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL ID de Mapeamento]** |
+| Nome do segmento [!DNL (API) Salesforce Marketing Cloud] | [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** | [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** |
 | --- | --- | --- |
 | público-alvo do salesforce mc 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
@@ -261,10 +260,10 @@ Um exemplo típico com base na imagem mostrada acima pode ser.
 
 Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
-1. Selecione **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]** para navegar até a lista de destinos.
+1. Selecione **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** para navegar até a lista de destinos.
    ![Captura de tela da interface do Experience Platform mostrando os Destinos de Navegação.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)
 
-1. Selecione o destino e valide se o status é **[!UICONTROL habilitado]**.
+1. Selecione o destino e valide se o status é **[!UICONTROL enabled]**.
    ![Captura de tela da interface do Experience Platform mostrando a execução do fluxo de dados de destinos.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
 
 1. Alterne para a guia **[!DNL Activation data]** e selecione um nome de público-alvo.
@@ -276,7 +275,7 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 1. Faça logon no site [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/). Navegue até a página **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** e verifique se os perfis do público-alvo foram adicionados.
    ![Captura de tela da interface do usuário do Salesforce Marketing Cloud mostrando a página Contatos com perfis usados no segmento.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
-1. Para verificar se algum perfil foi atualizado, navegue até a página **[!UICONTROL Email]** e verifique se os valores de atributo do perfil do público-alvo foram atualizados. Se for bem-sucedido, você poderá ver que cada status de público-alvo em [!DNL Salesforce Marketing Cloud] foi atualizado com o status de público-alvo correspondente do Experience Platform, com base no valor **[!UICONTROL ID de Mapeamento]** fornecido na etapa [agendamento de público-alvo](#schedule-segment-export-example).
+1. Para verificar se algum perfil foi atualizado, navegue até a página **[!UICONTROL Email]** e verifique se os valores de atributo do perfil do público-alvo foram atualizados. Se for bem-sucedido, você poderá ver que cada status de público-alvo em [!DNL Salesforce Marketing Cloud] foi atualizado com o status de público-alvo correspondente do Experience Platform, com base no valor **[!UICONTROL Mapping ID]** fornecido na etapa [agendamento de público-alvo](#schedule-segment-export-example).
    ![Captura de tela da interface do usuário do Salesforce Marketing Cloud mostrando a página de Email dos Contatos selecionada com status de público atualizado.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
 
 ## Uso e governança de dados {#data-usage-governance}
@@ -290,10 +289,10 @@ Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as p
 * Ao verificar uma execução de fluxo de dados, você pode encontrar a seguinte mensagem de erro: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
   ![Captura de tela da interface do Experience Platform mostrando erro.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
 
-   * Para corrigir esse erro, verifique se a **[!UICONTROL ID de Mapeamento]** fornecida no fluxo de trabalho de ativação para o destino [!DNL (API) Salesforce Marketing Cloud] corresponde exatamente ao nome do atributo criado em [!DNL Salesforce Marketing Cloud]. Consulte a seção [Criar atributo em [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) para obter orientação.
+   * Para corrigir esse erro, verifique se o **[!UICONTROL Mapping ID]** fornecido no fluxo de trabalho de ativação para o destino [!DNL (API) Salesforce Marketing Cloud] corresponde exatamente ao nome do atributo criado em [!DNL Salesforce Marketing Cloud]. Consulte a seção [Criar atributo em [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) para obter orientação.
 
 * Ao ativar um segmento, você pode obter uma mensagem de erro: `The client's IP address is unauthorized for this account. Allowlist the client's IP address...`
-   * Para corrigir esse erro, contate o administrador da conta [!DNL Salesforce Marketing Cloud] para adicionar [endereços IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aos intervalos IP confiáveis das contas do [!DNL Salesforce Marketing Cloud]. Incluir na lista de permissões Consulte a documentação [!DNL Salesforce Marketing Cloud] [Endereços IP para Inclusão em na Marketing Cloud](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&type=5) se precisar de orientação adicional.
+   * Para corrigir esse erro, contate o administrador da conta [!DNL Salesforce Marketing Cloud] para adicionar [endereços IP Experience Platform](/help/destinations/catalog/streaming/ip-address-allow-list.md) aos intervalos IP confiáveis das contas do [!DNL Salesforce Marketing Cloud]. Consulte os [!DNL Salesforce Marketing Cloud] [Endereços IP para Inclusão em Incluis na lista de permissões na documentação do Marketing Cloud](https://help.salesforce.com/s/articleView?id=sf.mc_es_ip_addresses_for_inclusion.htm&type=5), se precisar de orientação adicional.
 
 ## Recursos adicionais {#additional-resources}
 

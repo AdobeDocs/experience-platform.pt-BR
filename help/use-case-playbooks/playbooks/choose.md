@@ -4,16 +4,16 @@ title: Escolher de uma seleção de manuais
 description: Saiba como escolher o manual correto para seu caso de uso, habilitar manuais.
 role: User
 exl-id: 3dae6ad6-adb3-4606-ad63-c0d4ef6beeba
-source-git-commit: 1781aa552107b6ca1fed357c053a4f892960dc55
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '757'
-ht-degree: 92%
+source-wordcount: '738'
+ht-degree: 87%
 
 ---
 
 # Escolher de uma seleção de manuais
 
-Para usar um manual, selecione **[!UICONTROL Manuais]** na navegação à esquerda. Explore e use as várias opções de pesquisa e filtragem na página para selecionar e começar a usar um manual de estratégia específico.
+Para usar um manual, selecione **[!UICONTROL Playbooks]** na navegação à esquerda. Explore e use as várias opções de pesquisa e filtragem na página para selecionar e começar a usar um manual de estratégia específico.
 
 ## Pesquisar e filtrar {#search-and-filter}
 
@@ -35,7 +35,7 @@ Experimente com as opções de filtros e pesquisa e encontre o manual de estrat�
 
 ## Exibir o manual de estratégia e gerar ativos {#view-playbook-generate-assets}
 
-Antes de definir um manual de estratégia e criar instâncias, você deve inspecionar o manual para verificar se atende às suas necessidades. Para ajudar a entender melhor os casos de uso abordados, todos os manuais de estratégia contêm as seções listadas abaixo. Quando desejar continuar e gerar ativos, selecione **[!UICONTROL Criar instância]**.
+Antes de definir um manual de estratégia e criar instâncias, você deve inspecionar o manual para verificar se atende às suas necessidades. Para ajudar a entender melhor os casos de uso abordados, todos os manuais de estratégia contêm as seções listadas abaixo. Quando estiver pronto para continuar e gerar ativos, selecione **[!UICONTROL Create Instance]**.
 
 ### Mapa mental {#mindmap}
 
@@ -52,13 +52,13 @@ O mapa mental começa com uma definição de quem se atinge com a jornada do usu
 >title="Ativos"
 >abstract="Esses são os ativos gerados por este manual de estratégia. Depois de criar uma instância do manual de estratégia, você poderá ver os ativos na sandbox de inspiração e promovê-los para outras sandboxes, conforme desejado."
 
-Inspecione a seção de resumo para entender quais ativos são gerados depois que você cria instâncias do manual de estratégia. Os ativos gerados para cada manual de estratégia são adaptados ao caso de uso que o manual possibilita. Obtenha mais informações abaixo sobre todos os itens na seção de resumo.
+Inspecione a seção de resumo para entender quais ativos são gerados depois que você cria instâncias do manual de estratégia. Os habilitos gerados para cada manual de estratégia são adaptados ao caso de uso que o manual possibilita. Obtenha mais informações abaixo sobre todos os itens na seção de resumo.
 
 | Item | Descrição |
----------|----------|
-| **[!UICONTROL Público-alvo]** | Descreve as personalidades que você deseja alcançar por meio deste manual de estratégia de casos de uso. |
-| **[!UICONTROL Canais de marketing]** | Descreve os canais usados para acessar as personalidades direcionadas no manual de estratégia. |
-| **[!UICONTROL Ativos técnicos]** | Uma lista dos ativos técnicos que são gerados após a criação de instâncias do manual de estratégia. Os ativos gerados diferem por manual de estratégia, dependendo do caso de uso. Alguns manuais de estratégia podem gerar esquemas, segmentos e jornadas. Outros podem gerar destinos. Consulte a seção [Entender os ativos gerados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) (mais adiante no guia sobre criação e reutilização de instâncias) para obter mais informações sobre como usar e reutilizar os ativos gerados. |
+|---------|----------|
+| **[!UICONTROL Target audience]** | Descreve as personalidades que você deseja alcançar por meio deste manual de estratégia de casos de uso. |
+| **[!UICONTROL Marketing Channels]** | Descreve os canais usados para acessar as personalidades direcionadas no manual de estratégia. |
+| **[!UICONTROL Technical assets]** | Uma lista dos ativos técnicos que são gerados após a criação de instâncias do manual de estratégia. Os ativos gerados diferem por manual de estratégia, dependendo do caso de uso. Alguns manuais de estratégia podem gerar esquemas, segmentos e jornadas. Outros podem gerar destinos. Consulte a seção [Entender os ativos gerados](/help/use-case-playbooks/playbooks/create-share-reuse.md#understand-assets) (mais adiante no guia sobre criação e reutilização de instâncias) para obter mais informações sobre como usar e reutilizar os ativos gerados. |
 
 {style="table-layout:auto"}
 
@@ -70,11 +70,11 @@ Role para baixo até a seção de instâncias para obter uma visão geral das in
 
 | Item | Descrição |
 |---------|----------|
-| **[!UICONTROL Nome]** | O nome da instância com base no manual de estratégia. Você pode personalizar o nome e a descrição de uma instância. Leia a seção sobre [como editar metadados da instância](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata) para obter mais informações. |
-| **[!UICONTROL Status]** | Indica o status da instância. Uma instância **[!UICONTROL enviada]** está pronta para uso. |
-| **[!UICONTROL Criado]** | Indica quando a instância foi criada. |
-| **[!UICONTROL Criada por]** | Indica quem criou a instância. |
-| **[!UICONTROL Última modificação]** | Indica quando a instância foi modificada pela última vez. |
+| **[!UICONTROL Name]** | O nome da instância com base no manual de estratégia. Você pode personalizar o nome e a descrição de uma instância. Leia a seção sobre [como editar metadados da instância](/help/use-case-playbooks/playbooks/create-share-reuse.md#edit-instance-metadata) para obter mais informações. |
+| **[!UICONTROL Status]** | Indica o status da instância. Uma instância **[!UICONTROL submitted]** está pronta para uso. |
+| **[!UICONTROL Created]** | Indica quando a instância foi criada. |
+| **[!UICONTROL Created By]** | Indica quem criou a instância. |
+| **[!UICONTROL Last Modified]** | Indica quando a instância foi modificada pela última vez. |
 
 {style="table-layout:auto"}
 
@@ -82,4 +82,4 @@ Role para baixo até a seção de instâncias para obter uma visão geral das in
 
 ## Próximas etapas - Criar uma instância do manual de estratégia {#next-steps-create-instance}
 
-Quando desejar continuar e criar uma instância do manual de estratégia, selecione **[!UICONTROL Criar instância]** para continuar com o manual e gerar ativos técnicos. Leia o guia sobre [como criar, compartilhar e reutilizar instâncias do manual de estratégia](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obter mais informações.
+Quando estiver pronto para continuar com um manual e criar uma instância, selecione **[!UICONTROL Create Instance]** para continuar com o manual e gerar ativos técnicos. Leia o guia sobre [como criar, compartilhar e reutilizar instâncias do manual de estratégia](/help/use-case-playbooks/playbooks/create-share-reuse.md) para obter mais informações.

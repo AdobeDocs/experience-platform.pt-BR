@@ -4,9 +4,9 @@ title: Conexão Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Kinesis para transmitir dados do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1978'
+source-wordcount: '1944'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 O serviço [!DNL Kinesis Data Streams] de [!DNL Amazon Web Services] permite coletar e processar grandes fluxos de registros de dados em tempo real.
 
@@ -51,15 +51,15 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
----------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+|---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Profile-based]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allowlist}
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP {#ip-address-allowlist}
 
-Para atender aos requisitos de segurança e conformidade dos clientes, a Experience Platform incluir na lista de permissões fornece uma lista de IPs estáticos que você pode pesquisar pelo destino [!DNL Amazon Kinesis]. Consulte a [lista de permissões de endereço IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
+Para atender aos requisitos de segurança e conformidade dos clientes, a Experience Platform fornece uma lista de IPs estáticos que você pode incluir na lista de permissões para o destino [!DNL Amazon Kinesis]. Consulte [lista de permissões de endereço IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
 
 ## [!DNL Amazon Kinesis] permissões necessárias {#required-kinesis-permission}
 
@@ -106,18 +106,18 @@ Para obter mais informações sobre como controlar o acesso a [!DNL Kinesis] flu
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). Ao se conectar a esse destino, você deve fornecer as seguintes informações:
 
 ### Informações de autenticação {#authentication-information}
 
-Insira os campos abaixo e selecione **[!UICONTROL Conectar ao destino]**:
+Insira os campos abaixo e selecione **[!UICONTROL Connect to destination]**:
 
 ![Imagem da tela da interface do usuário mostrando campos concluídos para os detalhes de autenticação do Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
 * **[!DNL Amazon Web Services]chave de acesso e chave secreta**: em [!DNL Amazon Web Services], gere um par `access key - secret access key` para conceder ao Experience Platform acesso à sua conta [!DNL Amazon Kinesis]. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
-* **[!UICONTROL Região]**: indicar para qual região [!DNL Amazon Web Services] transmitir dados.
+* **[!UICONTROL Region]**: Indique para qual região [!DNL Amazon Web Services] transmitir dados.
 
 ### Preencher detalhes do destino {#destination-details}
 
@@ -135,11 +135,11 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 ![Imagem da tela da interface do usuário mostrando campos concluídos para os detalhes de destino do Amazon Kinesis](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
-* **[!UICONTROL Nome]**: forneça um nome para sua conexão com [!DNL Amazon Kinesis]
-* **[!UICONTROL Descrição]**: forneça uma descrição para sua conexão com [!DNL Amazon Kinesis].
-* **[!UICONTROL Fluxo]**: forneça o nome de um fluxo de dados existente em sua conta [!DNL Amazon Kinesis]. O Experience Platform exportará dados para esse fluxo.
-* **[!UICONTROL Incluir nomes de segmentos]**: alterne se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
-* **[!UICONTROL Incluir carimbos de data/hora do segmento]**: ative se desejar que a exportação de dados inclua o carimbo de data/hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data/hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
+* **[!UICONTROL Name]**: Forneça um nome para sua conexão com [!DNL Amazon Kinesis]
+* **[!UICONTROL Description]**: forneça uma descrição para sua conexão com [!DNL Amazon Kinesis].
+* **[!UICONTROL Stream]**: forneça o nome de um fluxo de dados existente em sua conta [!DNL Amazon Kinesis]. O Experience Platform exportará dados para esse fluxo.
+* **[!UICONTROL Include Segment Names]**: alterne se quiser que a exportação de dados inclua os nomes dos públicos que você está exportando. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
+* **[!UICONTROL Include Segment Timestamps]**: alterne se desejar que a exportação de dados inclua o carimbo de data e hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
 
 <!--
 
@@ -153,13 +153,13 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* [A avaliação de política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) não tem suporte atualmente em exportações para o destino do Amazon Kinesis. [Leia mais](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Ativar dados de público-alvo para destinos de exportação de perfil de streaming](../../ui/activate-streaming-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
@@ -259,7 +259,7 @@ Os dados exportados do [!DNL Experience Platform] chegam ao destino [!DNL Amazon
 }
 ```
 
-Abaixo estão mais exemplos de dados exportados, dependendo das configurações de interface do usuário que você selecionar no fluxo de destino de conexão para as opções **[!UICONTROL Incluir nomes de segmento]** e **[!UICONTROL Incluir carimbos de data/hora de segmento]**:
+Abaixo estão mais exemplos de dados exportados, dependendo das configurações de interface do usuário que você selecionar no fluxo de destino de conexão para as opções **[!UICONTROL Include Segment Names]** e **[!UICONTROL Include Segment Timestamps]**:
 
 +++ A amostra de exportação de dados abaixo inclui nomes de público na seção `segmentMembership`
 

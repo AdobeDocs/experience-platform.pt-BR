@@ -2,7 +2,7 @@
 title: Criptografar valores
 description: Saiba como criptografar valores confidenciais ao usar a API do Reactor.
 exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 100%
@@ -11,7 +11,7 @@ ht-degree: 100%
 
 # Criptografar valores
 
-Ao serem usadas tags na Adobe Experience Platform, alguns workflows exigem o fornecimento de valores confidenciais (por exemplo, o fornecimento de uma chave privada ao enviar bibliotecas a ambientes por meio de hosts). A natureza confidencial dessas credenciais exige
+Ao serem usadas tags na Adobe Experience Platform, alguns fluxos de trabalho exigem o fornecimento de valores confidenciais (por exemplo, o fornecimento de uma chave privada ao enviar bibliotecas a ambientes por meio de hosts). A natureza confidencial dessas credenciais exige
 transferência e armazenamento seguros.
 
 Este documento descreve como criptografar valores confidenciais usando a [criptografia GnuPG](https://www.gnupg.org/gph/en/manual/x110.html) (também conhecida como GPG) para que somente o sistema de tags possa lê-los.
@@ -65,7 +65,7 @@ O comando acima usa a chave pública de `Tags Data Encryption <launch@adobe.com>
 A saída do comando seria semelhante ao seguinte:
 
 ```shell
------BEGIN PGP MESSAGE-----
+|-----BEGIN PGP MESSAGE-----
 
 hQIMAxJHCI6fydT/ARAAwQ0Y0k7eSAbd0T9seoaWX75G70O2gxAF20KY5FWiZ9/m
 /RkgJwhJusZyEdazC/CmAdfXi9bsVxQT0i06ErUxXfQF0VtweRlcyRBsxzLz6Hr+
@@ -81,13 +81,13 @@ ekGD+p3PyyvxjfS5G/wf9HQZ085+mnjpKFa7fuFBQPbg4WpBadhWrhobthC+hN3S
 SAE9yWU11Y3xpoxqg4y7iYZ6rnX+qP2oUNYxC2/hdhsFbbZtUh4s51qaoLbe0iWB
 OUoIPf4KxTaboHZOEy32ZBng5heVrn4i9w==
 =jrfE
------END PGP MESSAGE-----
+|-----END PGP MESSAGE-----
 ```
 
 Essa saída só pode ser descriptografada por sistemas que tenham a chave privada que
 corresponde à chave pública `Tags Data Encryption <launch@adobe.com>`.
 
-Essa saída é o valor que deve ser fornecido ao serem enviados dados à API do Reactor. O sistema armazena essa saída criptografada e a decodifica temporariamente, conforme a necessidade. Por exemplo, o sistema descriptografa as credenciais do host por tempo suficiente para iniciar uma conexão com o servidor e remove imediatamente todos os rastreamentos do valor descriptografado.
+Essa saída é o valor que deve ser fornecido ao serem enviados dados à API do Reactor. O sistema armazena essa saída criptografada e a descriptografa temporariamente, conforme a necessidade. Por exemplo, o sistema descriptografa as credenciais do host por tempo suficiente para iniciar uma conexão com o servidor e remove imediatamente todos os rastreamentos do valor descriptografado.
 
 >[!NOTE]
 >

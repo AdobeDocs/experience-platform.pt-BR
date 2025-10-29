@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 06b2bc91524299505bde4e5ee30e03cfc6a3c7ba
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '4545'
+source-wordcount: '4341'
 ht-degree: 5%
 
 ---
@@ -33,7 +33,7 @@ No Audience Portal, você pode realizar as seguintes tarefas:
 
 >[!ENDSHADEBOX]
 
-Para abrir o Portal de público-alvo, selecione a guia **[!UICONTROL Procurar]** na seção Segmentação.
+Para abrir o Portal de público-alvo, selecione a guia **[!UICONTROL Browse]** na seção Segmentação.
 
 ## Lista de públicos-alvo {#list}
 
@@ -55,22 +55,22 @@ Por padrão, o Portal de público-alvo exibe uma lista de todos os públicos-alv
 
 Ao lado de cada público há um ícone de reticências. Selecionar essa opção exibe uma lista de ações rápidas disponíveis para o público-alvo. Essa lista de ações é diferente com base na origem do público-alvo.
 
-![A lista de ações rápidas é exibida para públicos-alvo com a origem de [!UICONTROL Composição de público-alvo].](../images/ui/audience-portal/browse-audience-composition-details.png)
+![A lista de ações rápidas é exibida para públicos-alvo com a origem de [!UICONTROL Audience composition].](../images/ui/audience-portal/browse-audience-composition-details.png)
 
 | Ação | Origens | Descrição |
 | ------ | ------- | ----------- |
-| [!UICONTROL Editar] | Serviço de segmentação | Abre o Construtor de segmentos para editar o público-alvo. Observe que, se o público-alvo foi criado por meio da API, você **não** poderá editá-lo usando o Construtor de segmentos. Para obter mais informações sobre como usar o Construtor de segmentos, leia o [Guia da interface do Construtor de segmentos](./segment-builder.md). |
-| [!UICONTROL Abrir composição] | Composição de público-alvo | Abre a composição de Público-alvo para ver seu público-alvo. Para obter mais informações sobre a Composição de público, leia o [guia da interface da composição de público](./audience-composition.md). |
-| [!UICONTROL Ativar para destino] | Serviço de segmentação | Ativa o público-alvo para um destino. Para obter informações mais detalhadas sobre como ativar um público para um destino, leia a [visão geral da ativação](../../destinations/ui/activation-overview.md). |
-| [!UICONTROL Compartilhar com parceiros] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Compartilha o público com outros usuários do Experience Platform. Para obter mais informações sobre este recurso, leia a [Visão geral da correspondência de segmentos](./segment-match/overview.md). |
-| [!UICONTROL Gerenciar marcas] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia as tags definidas pelo usuário que pertencem ao público. Para obter mais informações sobre este recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
-| [!UICONTROL Mover para a pasta] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia a pasta à qual o público-alvo pertence. Para obter mais informações sobre este recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
-| [!UICONTROL Copiar] | Serviço de segmentação | Duplica o público selecionado. Mais informações sobre esta função podem ser encontradas nas [Perguntas frequentes sobre segmentação](../faq.md#copy). |
-| [!UICONTROL Aplicar rótulos de acesso] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Publicar] | Upload personalizado, Serviço de segmentação | Publica o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a seção [estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
-| [!UICONTROL Desativar] | Upload personalizado, Serviço de segmentação | Desativa o público selecionado. Observe que para desativar um público-alvo, ele **não pode** ser ativado em **qualquer** destino (incluindo destinos que não sejam da Experience Platform) ou fazer parte de **qualquer** outros públicos-alvo. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a seção [estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
-| [!UICONTROL Excluir] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. Públicos-alvo que são usados em destinos downstream ou que são dependentes de outros públicos-alvo **não podem** ser excluídos. Para obter mais informações sobre exclusão de público, leia as [perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
-| [!UICONTROL Adicionar ao pacote] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Move o público-alvo entre sandboxes. Para obter mais informações sobre este recurso, leia o [guia de ferramentas da sandbox](../../sandboxes/ui/sandbox-tooling.md). |
+| [!UICONTROL Edit] | Serviço de segmentação | Abre o Construtor de segmentos para editar o público-alvo. Observe que, se o público-alvo foi criado por meio da API, você **não** poderá editá-lo usando o Construtor de segmentos. Para obter mais informações sobre como usar o Construtor de segmentos, leia o [Guia da interface do Construtor de segmentos](./segment-builder.md). |
+| [!UICONTROL Open composition] | Composição de público-alvo | Abre a composição de Público-alvo para ver seu público-alvo. Para obter mais informações sobre a Composição de público, leia o [guia da interface da composição de público](./audience-composition.md). |
+| [!UICONTROL Activate to destination] | Serviço de segmentação | Ativa o público-alvo para um destino. Para obter informações mais detalhadas sobre como ativar um público para um destino, leia a [visão geral da ativação](../../destinations/ui/activation-overview.md). |
+| [!UICONTROL Share with partners] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Compartilha o público com outros usuários do Experience Platform. Para obter mais informações sobre este recurso, leia a [Visão geral da correspondência de segmentos](./segment-match/overview.md). |
+| [!UICONTROL Manage tags] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia as tags definidas pelo usuário que pertencem ao público. Para obter mais informações sobre este recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
+| [!UICONTROL Move to folder] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia a pasta à qual o público-alvo pertence. Para obter mais informações sobre este recurso, leia a seção sobre [filtragem e marcação](#manage-audiences). |
+| [!UICONTROL Copy] | Serviço de segmentação | Duplica o público selecionado. Mais informações sobre esta função podem ser encontradas nas [Perguntas frequentes sobre segmentação](../faq.md#copy). |
+| [!UICONTROL Apply access labels] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Gerencia os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Publish] | Upload personalizado, Serviço de segmentação | Publica o público selecionado. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a seção [estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
+| [!UICONTROL Deactivate] | Upload personalizado, Serviço de segmentação | Desativa o público selecionado. Observe que para desativar um público-alvo, ele **não pode** ser ativado em **qualquer** destino (incluindo destinos que não sejam da Experience Platform) ou fazer parte de **qualquer** outros públicos-alvo. Para obter mais informações sobre o gerenciamento do status do ciclo de vida, leia a seção [estado do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
+| [!UICONTROL Delete] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Exclui o público selecionado. Públicos-alvo que são usados em destinos downstream ou que são dependentes de outros públicos-alvo **não podem** ser excluídos. Para obter mais informações sobre exclusão de público, leia as [perguntas frequentes sobre segmentação](../faq.md#lifecycle-states). |
+| [!UICONTROL Add to package] | Composição de público-alvo, Upload personalizado, Serviço de segmentação | Move o público-alvo entre sandboxes. Para obter mais informações sobre este recurso, leia o [guia de ferramentas da sandbox](../../sandboxes/ui/sandbox-tooling.md). |
 
 >[!IMPORTANT]
 >
@@ -78,15 +78,15 @@ Ao lado de cada público há um ícone de reticências. Selecionar essa opção 
 
 Na parte superior da página há opções para adicionar todos os públicos-alvo a um agendamento, importar um público-alvo, criar um novo público-alvo e exibir um resumo da avaliação do público-alvo.
 
-Alternar **[!UICONTROL Agendar todos os públicos-alvo]** habilitará a segmentação agendada. Mais informações sobre a segmentação agendada podem ser encontradas na [seção segmentação agendada deste guia do usuário](#scheduled-segmentation).
+Alternar **[!UICONTROL Schedule all audiences]** habilitará a segmentação agendada. Mais informações sobre a segmentação agendada podem ser encontradas na [seção segmentação agendada deste guia do usuário](#scheduled-segmentation).
 
-Selecionar **[!UICONTROL Importar público-alvo]** permitirá importar um público-alvo gerado externamente. Para saber mais sobre como importar públicos, leia a seção sobre [importação de um público no guia do usuário](#import-audience).
+Selecionar **[!UICONTROL Import audience]** permitirá importar um público gerado externamente. Para saber mais sobre como importar públicos, leia a seção sobre [importação de um público no guia do usuário](#import-audience).
 
-Selecionar **[!UICONTROL Criar público-alvo]** permitirá criar um público-alvo. Para saber mais sobre como criar públicos-alvo, leia a seção sobre [criação de um público-alvo no guia do usuário](#create-audience).
+Selecionar **[!UICONTROL Create audience]** permitirá criar um público-alvo. Para saber mais sobre como criar públicos-alvo, leia a seção sobre [criação de um público-alvo no guia do usuário](#create-audience).
 
 ![A barra de navegação superior na página de navegação do público-alvo está realçada. Esta barra contém um botão para criar um público-alvo e um botão para importar um público-alvo.](../images/ui/audience-portal/browse-audiences-top.png)
 
-Você pode selecionar **[!UICONTROL Resumo da avaliação]** para exibir um gráfico de pizza que mostre um resumo das avaliações de público-alvo.
+Você pode selecionar **[!UICONTROL Evaluation summary]** para exibir um gráfico de pizza que mostre um resumo das avaliações de público-alvo.
 
 ![O botão Resumo da avaliação está realçado.](../images/ui/audience-portal/browse-audience-evaluation-summary.png)
 
@@ -100,29 +100,29 @@ Você pode adicionar outros campos ao Portal de público selecionando ![o ícone
 
 | Campo | Descrição |
 | ----- | ----------- |
-| [!UICONTROL Nome] | O nome do público. |
-| [!UICONTROL Contagem de perfis] | O número total de perfis qualificados para o público-alvo. |
-| [!UICONTROL Origem] | A origem do público. Isso indica de onde o público-alvo vem. Os valores possíveis incluem [Serviço de segmentação](#segment-builder), [Carregamento personalizado](#import-audience), [Composição de público-alvo](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/pt-br/docs/audience-manager/user-guide/aam-home), [Público-alvo semelhante](../types/lookalike-audiences.md), [Composição de público federado](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
-| [!UICONTROL Status do ciclo de vida] | O status do público. Os valores possíveis para este campo incluem `Draft`, `Inactive` e `Published`. Mais informações sobre os status do ciclo de vida, incluindo o que significam os diferentes estados e como mover públicos para diferentes estados do ciclo de vida, leia a [seção status do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-status). |
-| [!UICONTROL Frequência de atualização] | Um valor que indica a frequência com que os dados do público-alvo são atualizados. Os valores possíveis para este campo incluem [!UICONTROL Lote], [!UICONTROL Streaming], [!UICONTROL Edge] e [!UICONTROL Não Agendado]. |
-| [!UICONTROL Última atualização por] | O nome da última pessoa que atualizou o público. |
-| [!UICONTROL Criado] | A data e a hora, em UTC, em que o público-alvo foi criado. |
-| [!UICONTROL Última atualização] | A data e a hora, em UTC, em que o público-alvo foi atualizado pela última vez. |
+| [!UICONTROL Name] | O nome do público. |
+| [!UICONTROL Profile count] | O número total de perfis qualificados para o público-alvo. |
+| [!UICONTROL Origin] | A origem do público. Isso indica de onde o público-alvo vem. Os valores possíveis incluem [Serviço de segmentação](#segment-builder), [Carregamento personalizado](#import-audience), [Composição de público-alvo](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Público-alvo semelhante](../types/lookalike-audiences.md), [Composição de público federado](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Lifecycle status] | O status do público. Os valores possíveis para este campo incluem `Draft`, `Inactive` e `Published`. Mais informações sobre os status do ciclo de vida, incluindo o que significam os diferentes estados e como mover públicos para diferentes estados do ciclo de vida, leia a [seção status do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-status). |
+| [!UICONTROL Update frequency] | Um valor que indica a frequência com que os dados do público-alvo são atualizados. Os valores possíveis para este campo incluem [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] e [!UICONTROL Not Scheduled]. |
+| [!UICONTROL Last updated by] | O nome da última pessoa que atualizou o público. |
+| [!UICONTROL Created] | A data e a hora, em UTC, em que o público-alvo foi criado. |
+| [!UICONTROL Last updated] | A data e a hora, em UTC, em que o público-alvo foi atualizado pela última vez. |
 | [!UICONTROL Tags] | As tags definidas pelo usuário que pertencem ao público. Mais informações sobre essas marcas podem ser encontradas na [seção sobre marcas](#tags). |
-| [!UICONTROL Descrição] | A descrição do público. |
-| [!UICONTROL Criado por] | O nome da pessoa que criou o público-alvo. |
-| [!UICONTROL Acessar rótulos] | Os rótulos de acesso do público-alvo. Os rótulos de acesso permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Esses rótulos podem ser aplicados a qualquer momento, fornecendo flexibilidade na maneira como você escolhe controlar os dados. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). |
-| [!UICONTROL Detalhamento] | O detalhamento do status do perfil para o público-alvo. Uma descrição mais detalhada desse detalhamento do status do perfil pode ser encontrada abaixo. |
+| [!UICONTROL Description] | A descrição do público. |
+| [!UICONTROL Created by] | O nome da pessoa que criou o público-alvo. |
+| [!UICONTROL Access labels] | Os rótulos de acesso do público-alvo. Os rótulos de acesso permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. Esses rótulos podem ser aplicados a qualquer momento, fornecendo flexibilidade na maneira como você escolhe controlar os dados. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md). |
+| [!UICONTROL Breakdown] | O detalhamento do status do perfil para o público-alvo. Uma descrição mais detalhada desse detalhamento do status do perfil pode ser encontrada abaixo. |
 
-Se o detalhamento for selecionado, a exibição mostrará um gráfico de barras descrevendo a porcentagem de perfis que pertencem a cada um dos seguintes status de perfil calculado: [!UICONTROL Realizado], [!UICONTROL Existente] e [!UICONTROL Saindo]. Além disso, o detalhamento mostrado na guia [!UICONTROL Procurar] é o detalhamento mais preciso do status de definição de segmento. Se esse número for diferente do declarado na guia [!UICONTROL Visão geral], você deverá usar os números na guia [!UICONTROL Procurar] como a fonte de informações correta, já que os números de guia [!UICONTROL Visão geral] são atualizados apenas uma vez por dia.
+Se o detalhamento for selecionado, a exibição mostrará um gráfico de barras descrevendo a porcentagem de perfis que pertencem a cada um dos seguintes status de perfil calculado: [!UICONTROL Realized], [!UICONTROL Existing] e [!UICONTROL Exiting]. Além disso, o detalhamento mostrado na guia [!UICONTROL Browse] é o detalhamento mais preciso do status de definição de segmento. Se esse número for diferente do declarado na guia [!UICONTROL Overview], você deverá usar os números na guia [!UICONTROL Browse] como a fonte correta de informações, já que os números de guia [!UICONTROL Overview] são atualizados apenas uma vez por dia.
 
 | Status | Descrição |
 | ------ | ----------- |
-| [!UICONTROL Realizado] | A contagem de perfis que **qualificaram** para o público nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
-| [!UICONTROL Existente] | A contagem de perfis que **permaneceram** no público nas últimas 24 horas desde a execução do último trabalho de segmento em lote. Este campo é **calculado** e não aparece no [`segmentMembership` objeto](../../xdm/field-groups/profile/segmentation.md). |
-| [!UICONTROL Saindo] | A contagem de perfis que **saiu** do público-alvo nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
+| [!UICONTROL Realized] | A contagem de perfis que **qualificaram** para o público nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
+| [!UICONTROL Existing] | A contagem de perfis que **permaneceram** no público nas últimas 24 horas desde a execução do último trabalho de segmento em lote. Este campo é **calculado** e não aparece no [`segmentMembership` objeto](../../xdm/field-groups/profile/segmentation.md). |
+| [!UICONTROL Exiting] | A contagem de perfis que **saiu** do público-alvo nas últimas 24 horas desde a execução do último trabalho de segmento em lote. |
 
-Após selecionar os campos que deseja exibir, você também pode redimensionar a largura das colunas exibidas. Você pode fazer isso arrastando a área entre as colunas ou selecionando o ![ícone de seta](/help/images/icons/chevron-down.png) da coluna que deseja redimensionar, seguido de **[!UICONTROL Redimensionar coluna]**.
+Após selecionar os campos que deseja exibir, você também pode redimensionar a largura das colunas exibidas. Você pode fazer isso arrastando a área entre as colunas ou selecionando o ![ícone de seta](/help/images/icons/chevron-down.png) da coluna que deseja redimensionar, seguido de **[!UICONTROL Resize column]**.
 
 ![O botão Redimensionar coluna está realçado.](../images/ui/audience-portal/browse-audience-resize-column.png)
 
@@ -130,7 +130,7 @@ Após selecionar os campos que deseja exibir, você também pode redimensionar a
 
 Para melhorar a eficiência do trabalho, você pode pesquisar públicos existentes, adicionar tags definidas pelo usuário a públicos, colocar públicos em pastas e filtrar os públicos exibidos.
 
-#### Pesquisa {#search}
+#### Pesquisa {#searching}
 
 Você pode pesquisar seus públicos existentes em até 9 idiomas diferentes com o [!DNL Unified Search].
 
@@ -138,28 +138,28 @@ Para usar [!DNL Unified Search], adicione o termo que você deseja pesquisar na 
 
 ![A barra de pesquisa está realçada.](../images/ui/audience-portal/browse-audience-search.png)
 
-Para obter mais informações sobre [!DNL Unified Search], incluindo os recursos com suporte, leia a [documentação de Pesquisa Unificada](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=pt-BR).
+Para obter mais informações sobre [!DNL Unified Search], incluindo os recursos com suporte, leia a [documentação de Pesquisa Unificada](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
 #### Tags {#tags}
 
 Você pode adicionar tags definidas pelo usuário para descrever, localizar e gerenciar melhor seus públicos-alvo.
 
-Para adicionar uma marca, selecione **[!UICONTROL Gerenciar marcas]** no público-alvo que você deseja marcar.
+Para adicionar uma marca, selecione **[!UICONTROL Manage tags]** no público que deseja marcar.
 
-![O botão [!UICONTROL Gerenciar marcas] está selecionado para um público-alvo especificado.](../images/ui/audience-portal/browse-manage-tags.png)
+![O botão [!UICONTROL Manage tags] está selecionado para um público-alvo especificado.](../images/ui/audience-portal/browse-manage-tags.png)
 
-O popover **[!UICONTROL Gerenciar tags]** é exibido. Nesse pop-over, você pode selecionar uma tag categorizada ou uma tag não categorizada.
+O popover **[!UICONTROL Manage tags]** é exibido. Nesse pop-over, você pode selecionar uma tag categorizada ou uma tag não categorizada.
 
 | Tipo de tag | Descrição |
 | -------- | ----------- |
 | Categorizado | Uma tag criada e gerenciada pelos administradores da organização. |
-| Sem categoria | Uma marca que é criada no popover [!UICONTROL Gerenciar marcas]. Qualquer pessoa pode criar ou gerenciar esses tipos de tags. |
+| Sem categoria | Uma tag criada no popover [!UICONTROL Manage tags]. Qualquer pessoa pode criar ou gerenciar esses tipos de tags. |
 
-![O popover [!UICONTROL Gerenciar marcas] é exibido. As opções para escolher um categorizado ou não categorizado são realçadas.](../images/ui/audience-portal/create-tag.png)
+![O popover [!UICONTROL Manage tags] é exibido. As opções para escolher um categorizado ou não categorizado são realçadas.](../images/ui/audience-portal/create-tag.png)
 
-Depois de adicionar todas as tags que você deseja anexar ao público-alvo, selecione **[!UICONTROL Salvar]**.
+Depois de adicionar todas as tags que você deseja anexar ao público-alvo, selecione **[!UICONTROL Save]**.
 
-![No popover [!UICONTROL Gerenciar marcas], as marcas adicionadas serão destacadas.](../images/ui/audience-portal/created-tags.png)
+![No popover [!UICONTROL Manage tags], as marcas adicionadas são realçadas.](../images/ui/audience-portal/created-tags.png)
 
 Para obter mais informações sobre como criar e gerenciar tags, leia o [Guia de Gerenciamento de Tags](../../administrative-tags/ui/managing-tags.md).
 
@@ -167,23 +167,23 @@ Para obter mais informações sobre como criar e gerenciar tags, leia o [Guia de
 
 Você pode colocar públicos-alvo em pastas para melhorar o gerenciamento do público-alvo.
 
-Para criar uma pasta para armazenar seus públicos, selecione **[!UICONTROL Criar pasta]**.
+Para criar uma pasta para armazenar seus públicos, selecione **[!UICONTROL Create folder]**.
 
 ![O botão Criar pasta está realçado.](../images/ui/audience-portal/create-folder.png)
 
 >[!NOTE]
 >
->Você só pode criar uma pasta se estiver em outra pasta. Isso significa que você **não pode** criar uma pasta se tiver **[!UICONTROL Todos os Públicos-alvo]** selecionados na barra de navegação à esquerda.
+>Você só pode criar uma pasta se estiver em outra pasta. Isso significa que você **não pode** criar uma pasta se **[!UICONTROL All Audiences]** estiver selecionado na barra de navegação à esquerda.
 
-Uma janela pop-up é exibida, permitindo nomear a pasta recém-criada. Selecione **[!UICONTROL Salvar]** depois de nomear sua pasta para concluir a criação da pasta. Observe que os nomes **deve** ser exclusivos para a pasta pai.
+Uma janela pop-up é exibida, permitindo nomear a pasta recém-criada. Selecione **[!UICONTROL Save]** depois de nomear sua pasta para concluir a criação da pasta. Observe que os nomes **deve** ser exclusivos para a pasta pai.
 
 ![O botão Salvar na caixa de diálogo Criar pasta está realçado.](../images/ui/audience-portal/create-folder-dialog.png)
 
-Para mover um público-alvo para uma pasta, selecione **[!UICONTROL Mover para a pasta]** no público-alvo que você deseja mover.
+Para mover um público-alvo para uma pasta, selecione **[!UICONTROL Move to folder]** no público-alvo que deseja mover.
 
-![O botão [!UICONTROL Mover para a pasta] está selecionado para um público-alvo específico.](../images/ui/audience-portal/browse-move-to-folder.png)
+![O botão [!UICONTROL Move to folder] está selecionado para um público-alvo específico.](../images/ui/audience-portal/browse-move-to-folder.png)
 
-O popover **Mover público-alvo para pasta** é exibido. Selecione a pasta para onde deseja mover o público-alvo e selecione **[!UICONTROL Salvar]**.
+O popover **Mover público-alvo para pasta** é exibido. Selecione a pasta para onde deseja mover o público-alvo e selecione **[!UICONTROL Save]**.
 
 ![O popover Mover público-alvo para pasta é exibido. A pasta para onde o público será movido está realçada.](../images/ui/audience-portal/move-to-folder.png)
 
@@ -203,13 +203,13 @@ A lista de filtros disponíveis é exibida.
 
 | Filtro | Descrição |
 | ------ | ----------- |
-| [!UICONTROL Origem] | Permite filtrar com base na origem do público-alvo. Os valores possíveis incluem [Serviço de segmentação](#segment-builder), [Carregamento personalizado](#import-audience), [Composição de público-alvo](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/pt-br/docs/audience-manager/user-guide/aam-home), [Público-alvo semelhante](../types/lookalike-audiences.md), [Composição de público federado](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
-| [!UICONTROL Tem alguma marca] | Permite filtrar por tags. Você pode selecionar entre **[!UICONTROL Tem qualquer marca]** e **[!UICONTROL Tem todas as marcas]**. Quando a opção **[!UICONTROL Tem qualquer marca]** estiver selecionada, os públicos-alvo filtrados incluirão **qualquer** das marcas adicionadas. Quando **[!UICONTROL Tem todas as marcas]** é selecionado, os públicos filtrados devem incluir **todas** das marcas adicionadas. |
-| [!UICONTROL Status do ciclo de vida] | Permite filtrar com base no status do ciclo de vida do público-alvo. As opções disponíveis são [!UICONTROL Excluído], [!UICONTROL Rascunho], [!UICONTROL Inativo] e [!UICONTROL Publicado]. |
-| [!UICONTROL Frequência de atualização] | Permite filtrar com base na frequência de atualização do público-alvo (método de avaliação). As opções disponíveis incluem [!UICONTROL Lote], [!UICONTROL Streaming] e [!UICONTROL Edge] |
-| [!UICONTROL Criado por] | Permite filtrar com base na pessoa que criou o público. |
-| [!UICONTROL Data de criação] | Permite filtrar com base na data de criação do público-alvo. Você pode escolher um intervalo de datas para filtrar quando o público-alvo foi criado. |
-| [!UICONTROL Data de modificação] | Permite filtrar com base na data da última modificação do público-alvo. Você pode escolher um intervalo de datas para filtrar quando o público-alvo foi modificado pela última vez. |
+| [!UICONTROL Origin] | Permite filtrar com base na origem do público-alvo. Os valores possíveis incluem [Serviço de segmentação](#segment-builder), [Carregamento personalizado](#import-audience), [Composição de público-alvo](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Público-alvo semelhante](../types/lookalike-audiences.md), [Composição de público federado](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Has any tag] | Permite filtrar por tags. Você pode selecionar entre **[!UICONTROL Has any tag]** e **[!UICONTROL Has all tags]**. Quando **[!UICONTROL Has any tag]** for selecionado, os públicos filtrados incluirão **qualquer** das marcas adicionadas. Quando **[!UICONTROL Has all tags]** é selecionado, os públicos filtrados devem incluir **todos** das marcas adicionadas. |
+| [!UICONTROL Lifecycle status] | Permite filtrar com base no status do ciclo de vida do público-alvo. As opções disponíveis incluem [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive] e [!UICONTROL Published]. |
+| [!UICONTROL Update frequency] | Permite filtrar com base na frequência de atualização do público-alvo (método de avaliação). As opções disponíveis incluem [!UICONTROL Batch], [!UICONTROL Streaming] e [!UICONTROL Edge] |
+| [!UICONTROL Created by] | Permite filtrar com base na pessoa que criou o público. |
+| [!UICONTROL Creation date] | Permite filtrar com base na data de criação do público-alvo. Você pode escolher um intervalo de datas para filtrar quando o público-alvo foi criado. |
+| [!UICONTROL Modified date] | Permite filtrar com base na data da última modificação do público-alvo. Você pode escolher um intervalo de datas para filtrar quando o público-alvo foi modificado pela última vez. |
 
 ![Os filtros disponíveis são exibidos e realçados na página procurar públicos-alvo.](../images/ui/audience-portal/filter-audiences.png)
 
@@ -231,7 +231,7 @@ A avaliação flexível do público-alvo permite executar um trabalho de segment
 
 ## Detalhes do público-alvo {#audience-details}
 
-Para ver mais detalhes sobre um público-alvo específico, selecione o nome de um público-alvo na guia **[!UICONTROL Procurar]**.
+Para ver mais detalhes sobre um público-alvo específico, selecione o nome de um público na guia **[!UICONTROL Browse]**.
 
 A página de detalhes do público-alvo é exibida. Na parte superior, há um resumo do público-alvo, informações sobre o tamanho do público-alvo qualificado, bem como destinos para os quais o segmento é ativado.
 
@@ -239,15 +239,15 @@ A página de detalhes do público-alvo é exibida. Na parte superior, há um res
 
 ### Resumo do público-alvo {#audience-summary}
 
-A seção **[!UICONTROL Resumo do público-alvo]** fornece informações como ID, nome, descrição, origem e detalhes dos atributos.
+A seção **[!UICONTROL Audience summary]** fornece informações como ID, nome, descrição, origem e detalhes dos atributos.
 
 Além disso, você tem a opção de ativar o público para um destino, aplicar rótulos de acesso ou editar/atualizar o público.
 
-Selecionar **[!UICONTROL Ativar para destino]** permite ativar o público-alvo para um destino. Para obter informações mais detalhadas sobre como ativar um público para um destino, leia a [visão geral da ativação](../../destinations/ui/activation-overview.md).
+Selecionar **[!UICONTROL Activate to destination]** permite ativar o público-alvo para um destino. Para obter informações mais detalhadas sobre como ativar um público para um destino, leia a [visão geral da ativação](../../destinations/ui/activation-overview.md).
 
 ![O botão Ativar para destino está realçado.](../images/ui/audience-portal/audience-details-activate.png)
 
-Selecionar **[!UICONTROL Aplicar rótulos de acesso]** permite gerenciar os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md).
+Selecionar **[!UICONTROL Apply access labels]** permite gerenciar os rótulos de acesso que pertencem ao público. Para obter mais informações sobre rótulos de acesso, leia a documentação em [gerenciando rótulos](../../access-control/abac/ui/labels.md).
 
 ![O botão Aplicar rótulos de acesso está realçado.](../images/ui/audience-portal/audience-details-access-labels.png)
 
@@ -255,31 +255,31 @@ Selecionar **[!UICONTROL Aplicar rótulos de acesso]** permite gerenciar os rót
 
 >[!TAB Composição de público-alvo]
 
-![A página de detalhes do público-alvo é exibida, com o botão [!UICONTROL Abrir composição] realçado.](../images/ui/audience-portal/audience-details-open-composition.png)
+![A página de detalhes do público-alvo é exibida, com o botão [!UICONTROL Open composition] realçado.](../images/ui/audience-portal/audience-details-open-composition.png)
 
-Selecionar **[!UICONTROL Abrir composição]** permite que você visualize seu público na Composição de Público-Alvo. Para obter mais informações sobre a Composição de público, leia o [guia da interface do usuário de Composição de público](./audience-composition.md).
+Selecionar **[!UICONTROL Open composition]** permite que você visualize seu público na Composição de Público-Alvo. Para obter mais informações sobre a Composição de público, leia o [guia da interface do usuário de Composição de público](./audience-composition.md).
 
 >[!TAB Upload personalizado]
 
-![A página de detalhes do público-alvo é exibida, com o botão [!UICONTROL Atualizar público-alvo] realçado.](../images/ui/audience-portal/audience-details-update-audience.png)
+![A página de detalhes do público-alvo é exibida, com o botão [!UICONTROL Update audience] realçado.](../images/ui/audience-portal/audience-details-update-audience.png)
 
-Selecionar **[!UICONTROL Atualizar público-alvo]** permite que você carregue novamente um público-alvo gerado externamente. Para obter mais informações sobre como importar um público gerado externamente, leia a seção sobre [como importar um público](#import-audience).
+Selecionar **[!UICONTROL Update audience]** permite que você carregue novamente um público gerado externamente. Para obter mais informações sobre como importar um público gerado externamente, leia a seção sobre [como importar um público](#import-audience).
 
 >[!TAB Serviço de segmentação]
 
-![A página de detalhes do público-alvo é exibida, com o botão [!UICONTROL Editar público-alvo] realçado.](../images/ui/audience-portal/audience-details-edit-audience.png)
+![A página de detalhes do público-alvo é exibida, com o botão [!UICONTROL Edit audience] realçado.](../images/ui/audience-portal/audience-details-edit-audience.png)
 
-Selecionar **[!UICONTROL Editar público-alvo]** permite editar seu público-alvo no Construtor de segmentos. Para obter informações mais detalhadas sobre como usar o espaço de trabalho [!DNL Segment Builder], leia o [[!DNL Segment Builder] guia do usuário](./segment-builder.md).
+Selecionar **[!UICONTROL Edit audience]** permite editar o público-alvo no Construtor de segmentos. Para obter informações mais detalhadas sobre como usar o espaço de trabalho [!DNL Segment Builder], leia o [[!DNL Segment Builder] guia do usuário](./segment-builder.md).
 
 >[!ENDTABS]
 
-Selecionar **[!UICONTROL Editar propriedades]** permitirá que você edite os detalhes básicos do público-alvo, como o nome, a descrição e as tags.
+Selecionar **[!UICONTROL Edit properties]** permitirá que você edite os detalhes básicos do público, como nome, descrição e tags.
 
 ![O botão Editar propriedades está realçado na página de detalhes do público-alvo.](../images/ui/audience-portal/audience-details-edit-properties.png)
 
 ### Total de público {#audience-total}
 
-Para públicos-alvo e composições geradas pela Experience Platform, a seção **[!UICONTROL Total de público-alvo]** mostra o número total de perfis qualificados para o público-alvo.
+Para públicos-alvo e composições geradas pela Experience Platform, a seção **[!UICONTROL Audience total]** mostra o número total de perfis qualificados para o público-alvo.
 
 >[!NOTE]
 >
@@ -289,7 +289,7 @@ As estimativas são geradas usando um tamanho de amostra dos dados de amostra de
 
 ### Detalhes de ingestão {#ingestion-details}
 
-Para públicos-alvo com uma origem de **[!UICONTROL Upload personalizado]**, a seção **[!UICONTROL Detalhes da assimilação]** mostra o total do perfil, bem como os detalhes do conjunto de dados em que o público-alvo gerado externamente foi assimilado.
+Para públicos-alvo com uma origem de **[!UICONTROL Custom upload]**, a seção **[!UICONTROL Ingestion details]** mostra o total do perfil, bem como detalhes do conjunto de dados em que o público-alvo gerado externamente foi assimilado.
 
 >[!NOTE]
 >
@@ -315,7 +315,7 @@ Para públicos-alvo com uma origem de **[!UICONTROL Upload personalizado]**, a s
 
 ### Destinos ativados {#activated-destinations}
 
-A seção **[!UICONTROL Destinos ativados]** mostra os destinos para os quais esse público-alvo está ativado.
+A seção **[!UICONTROL Activated destinations]** mostra os destinos para os quais esse público-alvo está ativado.
 
 >[!NOTE]
 >
@@ -356,7 +356,7 @@ A avaliação sob demanda envolve o uso da API para executar a avaliação e cri
 
 ### Ativar segmentação programada {#enable-scheduled-segmentation}
 
-A habilitação dos públicos para avaliação agendada pode ser feita usando a interface ou a API. Na interface, retorne à guia **[!UICONTROL Procurar]** em **[!UICONTROL Públicos-alvo]** e alterne para **[!UICONTROL Agendar todos os públicos-alvo]**. Isso fará com que todos os públicos-alvo sejam avaliados com base no agendamento definido por sua organização.
+A habilitação dos públicos para avaliação agendada pode ser feita usando a interface ou a API. Na interface, retorne à guia **[!UICONTROL Browse]** em **[!UICONTROL Audiences]** e alterne para **[!UICONTROL Schedule all audiences]**. Isso fará com que todos os públicos-alvo sejam avaliados com base no agendamento definido por sua organização.
 
 >[!NOTE]
 >
@@ -368,7 +368,7 @@ Atualmente, os cronogramas só podem ser criados usando a API. Para obter etapas
 
 ## Criação de um público {#create-audience}
 
-Você pode selecionar **[!UICONTROL Criar público-alvo]** para criar um público.
+Você pode selecionar **[!UICONTROL Create audience]** para criar uma audiência.
 
 ![Na página de navegação do Público-alvo, o botão Criar público-alvo é realçado.](../images/ui/audience-portal/browse-create-audience.png)
 
@@ -378,13 +378,13 @@ Um popover é exibido, permitindo que você escolha entre compor um público-alv
 
 ### Composição de público-alvo {#audience-composition}
 
-Selecionar **[!UICONTROL Compor públicos-alvo]** leva você à Composição de público-alvo. Esse espaço de trabalho fornece controles intuitivos para criar e editar públicos, como arrastar e soltar blocos usados para representar ações diferentes. Para saber mais sobre como criar públicos-alvo, leia o [Guia de Composição de Público-alvo](./audience-composition.md).
+Ao selecionar **[!UICONTROL Compose audiences]**, você será direcionado para a Composição do público-alvo. Esse espaço de trabalho fornece controles intuitivos para criar e editar públicos, como arrastar e soltar blocos usados para representar ações diferentes. Para saber mais sobre como criar públicos-alvo, leia o [Guia de Composição de Público-alvo](./audience-composition.md).
 
 ![O espaço de trabalho de Composição de Público-Alvo é exibido.](../images/ui/audience-portal/audience-composition.png)
 
 ### Construtor de segmentos {#segment-builder}
 
-Selecionar a **[!UICONTROL regra de compilação]** leva você ao Construtor de segmentos. Esse espaço de trabalho fornece controles intuitivos para criar e editar definições de segmento, como blocos de arrastar e soltar usados para representar propriedades de dados. Para saber mais sobre como criar definições de segmento, leia o [Guia do Construtor de segmentos](./segment-builder.md)
+Selecionar **[!UICONTROL Build rule]** leva você ao Construtor de segmentos. Esse espaço de trabalho fornece controles intuitivos para criar e editar definições de segmento, como blocos de arrastar e soltar usados para representar propriedades de dados. Para saber mais sobre como criar definições de segmento, leia o [Guia do Construtor de segmentos](./segment-builder.md)
 
 ![O espaço de trabalho do Construtor de segmentos é exibido.](../images/ui/audience-portal/segment-builder.png)
 
@@ -411,15 +411,15 @@ Mais informações sobre o Data Distiller podem ser encontradas na [criação de
 
 >[!IMPORTANT]
 >
->Para importar um público gerado externamente, você **deve** ter as seguintes permissões: [!UICONTROL Exibir segmentos], [!UICONTROL Gerenciar segmentos] e [!UICONTROL Importar público]. Para obter mais informações sobre essa permissão, leia a [visão geral do controle de acesso](../../access-control/home.md#permissions).
+>Para importar um público gerado externamente, você **deve** ter as seguintes permissões: [!UICONTROL View segments], [!UICONTROL Manage segments] e [!UICONTROL Import audience]. Para obter mais informações sobre essa permissão, leia a [visão geral do controle de acesso](../../access-control/home.md#permissions).
 
-Você pode selecionar **[!UICONTROL Importar público-alvo]** para importar um público-alvo gerado externamente.
+Você pode selecionar **[!UICONTROL Import audience]** para importar um público gerado externamente.
 
 ![Na página de navegação do Público-alvo, o botão Importar público-alvo está realçado.](../images/ui/audience-portal/browse-import-audience.png)
 
-O fluxo de trabalho **[!UICONTROL Importar CSV de público-alvo]** aparece. Você pode selecionar um arquivo CSV para importar como um público-alvo gerado externamente.
+O fluxo de trabalho **[!UICONTROL Import audience CSV]** é exibido. Você pode selecionar um arquivo CSV para importar como um público-alvo gerado externamente.
 
-![No fluxo de trabalho [!UICONTROL Importar CSV de público-alvo], a caixa [!UICONTROL Arrastar e soltar arquivos] está realçada, mostrando onde você pode carregar seu público-alvo gerado externamente.](../images/ui/audience-portal/import-audience-csv.png)
+![No fluxo de trabalho [!UICONTROL Import audience CSV], a caixa [!UICONTROL Drag and drop files] é realçada, mostrando onde você pode carregar seu público gerado externamente.](../images/ui/audience-portal/import-audience-csv.png)
 
 >[!NOTE]
 >
@@ -429,15 +429,15 @@ O fluxo de trabalho **[!UICONTROL Importar CSV de público-alvo]** aparece. Voc�
 >
 >Por exemplo, o valor da primeira linha pode ser &quot;FirstName&quot; ou &quot;First_Name&quot;, mas não pode ser &quot;First Name&quot; ou &quot;First-Name&quot;.
 
-Depois de selecionar o arquivo CSV a ser importado, uma lista de dados de amostra é mostrada para esse público-alvo gerado externamente. Depois de confirmar que os dados de exemplo estão corretos, selecione **[!UICONTROL Próximo]**.
+Depois de selecionar o arquivo CSV a ser importado, uma lista de dados de amostra é mostrada para esse público-alvo gerado externamente. Depois de confirmar que os dados de exemplo estão corretos, selecione **[!UICONTROL Next]**.
 
 ![Dados de exemplo para o público gerado externamente são exibidos.](../images/ui/audience-portal/import-audience-sample-data.png)
 
-A página **[!UICONTROL Detalhes do público-alvo]** é exibida. Você pode adicionar informações sobre o público-alvo, incluindo nome, descrição, identidade principal e valor do namespace de identidade.
+A página **[!UICONTROL Audience details]** é exibida. Você pode adicionar informações sobre o público-alvo, incluindo nome, descrição, identidade principal e valor do namespace de identidade.
 
 Ao importar o público gerado externamente, você deve selecionar uma das colunas para ser o campo de identidade principal e especificar o valor do namespace. Observe que todos os campos restantes serão considerados **atributos de carga**. Estes atributos são considerados **não duráveis**, pois somente serão associados a este público-alvo para fins de personalização, e **não** estão conectados ao perfil.
 
-![A página [!UICONTROL Detalhes do público-alvo] é exibida.](../images/ui/audience-portal/import-audience-audience-details.png)
+![A página [!UICONTROL Audience details] é exibida.](../images/ui/audience-portal/import-audience-audience-details.png)
 
 Opcionalmente, também é possível adicionar alguns detalhes extras ao público-alvo gerado externamente, incluindo fornecer uma ID externa, definir a política de mesclagem, editar o tipo de dados da coluna ou aplicar uma expiração de dados personalizada.
 
@@ -456,15 +456,15 @@ Opcionalmente, também é possível adicionar alguns detalhes extras ao público
 >
 >A expiração de dados personalizados define o número de dias que os perfis **permanecerão** na associação de público-alvo. Depois que a expiração dos dados terminar, os perfis sairão da associação de público-alvo. Esse valor pode ser definido de 1 a 90 dias.
 
-Depois de preencher os detalhes do seu público, selecione **[!UICONTROL Próximo]**.
+Depois de preencher os detalhes do público-alvo, selecione **[!UICONTROL Next]**.
 
-![O botão [!UICONTROL Avançar] está realçado na página [!UICONTROL Detalhes do público-alvo].](../images/ui/audience-portal/import-audience-filled-details.png)
+![O botão [!UICONTROL Next] está realçado na página [!UICONTROL Audience details].](../images/ui/audience-portal/import-audience-filled-details.png)
 
-A página **[!UICONTROL Revisão]** é exibida. Você pode revisar os detalhes do público-alvo recém-importado gerado externamente.
+A página **[!UICONTROL Review]** é exibida. Você pode revisar os detalhes do público-alvo recém-importado gerado externamente.
 
-![A página [!UICONTROL Avaliação] é exibida, mostrando detalhes do público recém-importado gerado externamente.](../images/ui/audience-portal/import-audience-review-details.png)
+![A página [!UICONTROL Review] é exibida, mostrando detalhes do público recém-importado gerado externamente.](../images/ui/audience-portal/import-audience-review-details.png)
 
-Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Concluir]** para importar o público gerado externamente para a Adobe Experience Platform.
+Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Finish]** para importar o público gerado externamente para a Adobe Experience Platform.
 
 >[!IMPORTANT]
 >

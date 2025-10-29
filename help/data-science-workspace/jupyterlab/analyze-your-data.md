@@ -5,9 +5,9 @@ title: Analise seus dados usando notebooks
 type: Tutorial
 description: Este tutorial foca em como usar o Jupyter Notebooks, integrado ao Data Science Workspace, para acessar, explorar e visualizar seus dados.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Por padrão, a fórmula Tensorflow funciona em um cluster GPU e o Python é exec
 
 ### Criar um novo bloco de anotações
 
-Na interface do usuário do [!DNL Adobe Experience Platform], selecione [!UICONTROL Data Science] no menu superior para direcioná-lo para o Data Science Workspace. Nesta página, selecione [!DNL JupyterLab] para abrir o inicializador [!DNL JupyterLab]. Você deverá ver uma página semelhante a esta.
+Na interface do usuário do [!DNL Adobe Experience Platform], selecione [!UICONTROL Data Science] no menu superior para direcionar você ao Data Science Workspace. Nesta página, selecione [!DNL JupyterLab] para abrir o inicializador [!DNL JupyterLab]. Você deverá ver uma página semelhante a esta.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
@@ -84,7 +84,7 @@ Agora, vamos acessar os dados de [!DNL Experience Platform].
 
 Para esta seção, estamos usando o conjunto de dados de Vendas de varejo, que é o mesmo conjunto de dados usado no bloco de anotações de amostra Vendas de varejo.
 
-No Jupyter Notebook, você pode acessar os dados da **guia Dados** ![guia Dados](../images/jupyterlab/analyze-data/dataset-tab.png) à esquerda. Ao selecionar a guia, duas pastas são fornecidas. Selecione a pasta **[!UICONTROL Conjuntos de dados]**.
+No Jupyter Notebook, você pode acessar os dados da **guia Dados** ![guia Dados](../images/jupyterlab/analyze-data/dataset-tab.png) à esquerda. Ao selecionar a guia, duas pastas são fornecidas. Selecione a pasta **[!UICONTROL Datasets]**.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
@@ -120,6 +120,7 @@ Se você reiniciar seu kernel e executar todas as células novamente, você deve
 ### Explore seus dados
 
 Agora que podemos acessar seus dados, vamos nos concentrar nos próprios dados usando estatísticas e visualização. O conjunto de dados que estamos usando é um conjunto de dados de varejo que fornece informações diversas sobre 45 lojas diferentes em um determinado dia. Algumas características para um determinado `date` e `store` incluem o seguinte:
+
 - `storeType`
 - `weeklySales`
 - `storeSize`
@@ -161,6 +162,7 @@ Isso significa que 22 lojas são de `storeType` `A`, 17 são `storeType` `B` e 6
 #### Visualização de dados
 
 Agora que conhecemos os valores de quadro de dados, queremos complementar isso com visualizações para tornar as coisas mais claras e fáceis de identificar padrões. Os gráficos também são úteis ao transmitir resultados para um público-alvo. Algumas bibliotecas do [!DNL Python] que são úteis para visualização incluem:
+
 - [Matplotlib](https://matplotlib.org/)
 - [pandas](https://pandas.pydata.org/)
 - [seaborn](https://seaborn.pydata.org/)
@@ -201,6 +203,7 @@ Observe a diagonal de 1&#39;s abaixo do centro. Isso mostra que, ao comparar uma
 ## Próximas etapas
 
 Este tutorial abordou como criar um novo Jupyter Notebook no Data Science Workspace e como acessar dados externamente e do [!DNL Adobe Experience Platform]. Especificamente, analisamos as seguintes etapas:
+
 - Criar um novo Jupyter Notebook
 - Acessar conjuntos de dados e esquemas
 - Explorar conjuntos de dados

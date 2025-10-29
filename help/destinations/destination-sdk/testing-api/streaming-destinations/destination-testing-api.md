@@ -2,7 +2,7 @@
 description: Saiba como usar a API de teste de destino para testar se o destino de transmissão está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
 title: Teste seu destino de streaming com perfis de amostra
 exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '607'
 ht-degree: 2%
@@ -26,9 +26,9 @@ Você pode usar a [Amostra da API de geração de perfil](sample-profile-generat
 
 >[!IMPORTANT]
 >
->* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Leia [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR) e [ativar perfis e públicos a um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=pt-BR) para obter mais informações.
-> * Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar em chamadas de API para este ponto de extremidade ao [navegar em uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=pt-BR).
->![Imagem da interface do usuário para obter a ID da instância de destino](../../assets/testing-api/get-destination-instance-id.png)
+>* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Leia [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [ativar perfis e públicos a um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obter mais informações.
+>* Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar em chamadas de API para este ponto de extremidade ao [navegar em uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>  >![Imagem da interface do usuário para obter a ID da instância de destino](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Introdução às operações de API de teste de destino {#get-started}
 
@@ -158,7 +158,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a resposta da API 
 | -------- | ----------- |
 | `aggregationKey` | Inclui informações sobre a política de agregação configurada para o destino. Para obter mais informações, leia a documentação da [Política de agregação](../../functionality/destination-configuration/aggregation-policy.md). |
 | `traceId` | Um identificador exclusivo para a operação. Ao encontrar erros, é possível compartilhar essa ID com a equipe do Adobe para fins de solução de problemas. |
-| `results.httpCalls.request` | Inclui a solicitação que foi enviada pelo Adobe para o seu destino. |
+| `results.httpCalls.request` | Inclui a solicitação enviada pelo Adobe para o seu destino. |
 | `results.httpCalls.response` | Inclui a resposta recebida pelo Adobe do seu destino. |
 | `inputProfiles` | Inclui os perfis que foram exportados na chamada para o seu destino. Os perfis correspondem ao esquema de origem. |
 
@@ -322,8 +322,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a resposta da API 
 
 ## Manipulação de erros de API {#api-error-handling}
 
-Os endpoints da API Destination SDK seguem os princípios gerais de mensagem de erro da API Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
+Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas da Platform.
 
 ## Próximas etapas
 
-Depois de ler este documento, você sabe como testar seu destino. Agora você pode usar o Adobe [processo de documentação de autoatendimento](../../docs-framework/documentation-instructions.md) para criar uma página de documentação para seu destino.
+Depois de ler este documento, você sabe como testar seu destino. Agora você pode usar o [processo de documentação de autoatendimento](../../docs-framework/documentation-instructions.md) do Adobe para criar uma página de documentação para o seu destino.

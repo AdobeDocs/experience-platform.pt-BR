@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Acesso aos dados nos notebooks Jupyterlab
 description: Este guia tem como foco o uso do Jupyter Notebooks, integrado ao Data Science Workspace para acessar seus dados.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '3346'
+source-wordcount: '3274'
 ht-degree: 3%
 
 ---
@@ -154,13 +154,13 @@ df = dataset_reader.limit(100).offset(10).read()
 
 ### Gravar em um conjunto de dados no Python {#write-python}
 
-Para gravar em um conjunto de dados no notebook JupyterLab, selecione a guia Data icon (destacada abaixo) na navegação à esquerda do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Conjuntos de Dados]**, clique com o botão direito do mouse e selecione a opção **[!UICONTROL Gravar Dados no Bloco de Anotações]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
+Para gravar em um conjunto de dados no notebook JupyterLab, selecione a guia Data icon (destacada abaixo) na navegação à esquerda do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Datasets]** e clique com o botão direito do mouse e selecione a opção **[!UICONTROL Write Data in Notebook]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
 
 ![](../images/jupyterlab/data-access/write-dataset.png)
 
-- Use **[!UICONTROL Gravar Dados no Bloco de Anotações]** para gerar uma célula de gravação com o conjunto de dados selecionado.
-- Use o **[!UICONTROL Explorar Dados no Bloco de Anotações]** para gerar uma célula de leitura com o conjunto de dados selecionado.
-- Use a **[!UICONTROL Consultar Dados no Bloco de Anotações]** para gerar uma célula de consulta básica com o conjunto de dados selecionado.
+- Use **[!UICONTROL Write Data in Notebook]** para gerar uma célula de gravação com o conjunto de dados selecionado.
+- Use **[!UICONTROL Explore Data in Notebook]** para gerar uma célula de leitura com o conjunto de dados selecionado.
+- Use **[!UICONTROL Query Data in Notebook]** para gerar uma célula de consulta básica com o conjunto de dados selecionado.
 
 Como alternativa, você pode copiar e colar a seguinte célula de código. Substitua `{DATASET_ID}` e `{PANDA_DATAFRAME}`.
 
@@ -179,7 +179,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 Antes de usar [!DNL Query Service] em [!DNL JupyterLab], verifique se você tem uma compreensão funcional da [[!DNL Query Service] sintaxe SQL](https://www.adobe.com/go/query-service-sql-syntax-en).
 
-A consulta de dados usando [!DNL Query Service] exige que você forneça o nome do conjunto de dados de destino. Você pode gerar as células de código necessárias localizando o conjunto de dados desejado usando o **[!UICONTROL Data Explorer]**. Clique com o botão direito do mouse na lista do conjunto de dados e clique em **[!UICONTROL Consultar Dados no Bloco de Anotações]** para gerar duas células de código no seu bloco de anotações. Estas duas células são descritas em mais detalhes abaixo.
+A consulta de dados usando [!DNL Query Service] exige que você forneça o nome do conjunto de dados de destino. Você pode gerar as células de código necessárias localizando o conjunto de dados desejado usando o **[!UICONTROL Data explorer]**. Clique com o botão direito do mouse na lista do conjunto de dados e clique em **[!UICONTROL Query Data in Notebook]** para gerar duas células de código no seu bloco de anotações. Estas duas células são descritas em mais detalhes abaixo.
 
 ![](../images/jupyterlab/data-access/python-query-dataset.png)
 
@@ -290,12 +290,12 @@ df0 <- dataset_reader$limit(100L)$offset(10L)$read()
 
 ### Gravar em um conjunto de dados no R {#write-r}
 
-Para gravar em um conjunto de dados no notebook JupyterLab, selecione a guia Data icon (destacada abaixo) na navegação à esquerda do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Conjuntos de Dados]**, clique com o botão direito do mouse e selecione a opção **[!UICONTROL Gravar Dados no Bloco de Anotações]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
+Para gravar em um conjunto de dados no notebook JupyterLab, selecione a guia Data icon (destacada abaixo) na navegação à esquerda do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Datasets]** e clique com o botão direito do mouse e selecione a opção **[!UICONTROL Write Data in Notebook]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
 
 ![](../images/jupyterlab/data-access/r-write-dataset.png)
 
-- Use **[!UICONTROL Gravar Dados no Bloco de Anotações]** para gerar uma célula de gravação com o conjunto de dados selecionado.
-- Use o **[!UICONTROL Explorar Dados no Bloco de Anotações]** para gerar uma célula de leitura com o conjunto de dados selecionado.
+- Use **[!UICONTROL Write Data in Notebook]** para gerar uma célula de gravação com o conjunto de dados selecionado.
+- Use **[!UICONTROL Explore Data in Notebook]** para gerar uma célula de leitura com o conjunto de dados selecionado.
 
 Como alternativa, você pode copiar e colar a seguinte célula de código:
 
@@ -402,10 +402,10 @@ Um comando mágico [!DNL Data Science Workspace] personalizado para ler ou grava
 
 Você pode gerar automaticamente os exemplos acima na compra do JupyterLab usando o seguinte método:
 
-Selecione a guia Data icon (destacada abaixo) no menu de navegação esquerdo do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Conjuntos de Dados]**, clique com o botão direito do mouse e selecione a opção **[!UICONTROL Gravar Dados no Bloco de Anotações]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
+Selecione a guia Data icon (destacada abaixo) no menu de navegação esquerdo do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Datasets]** e clique com o botão direito do mouse e selecione a opção **[!UICONTROL Write Data in Notebook]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
 
-- Use o **[!UICONTROL Explorar Dados no Bloco de Anotações]** para gerar uma célula de leitura.
-- Use **[!UICONTROL Gravar Dados no Bloco de Anotações]** para gerar uma célula de gravação.
+- Use **[!UICONTROL Explore Data in Notebook]** para gerar uma célula de leitura.
+- Use **[!UICONTROL Write Data in Notebook]** para gerar uma célula de gravação.
 
 ![](../images/jupyterlab/data-access/pyspark-write-dataset.png)
 
@@ -534,10 +534,12 @@ df1.show(10)
 
 Você pode gerar automaticamente o exemplo acima na compra do JupyterLab usando o seguinte método:
 
-Selecione a guia Data icon (destacada abaixo) no menu de navegação esquerdo do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Conjuntos de Dados]**, clique com o botão direito do mouse e selecione a opção **[!UICONTROL Explorar Dados no Bloco de Anotações]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
+Selecione a guia Data icon (destacada abaixo) no menu de navegação esquerdo do JupyterLab. Os diretórios **[!UICONTROL Datasets]** e **[!UICONTROL Schemas]** são exibidos. Selecione **[!UICONTROL Datasets]** e clique com o botão direito do mouse e selecione a opção **[!UICONTROL Explore Data in Notebook]** no menu suspenso do conjunto de dados que você deseja usar. Uma entrada de código executável é exibida na parte inferior do bloco de anotações.
+
 E
-- Use o **[!UICONTROL Explorar Dados no Bloco de Anotações]** para gerar uma célula de leitura.
-- Use **[!UICONTROL Gravar Dados no Bloco de Anotações]** para gerar uma célula de gravação.
+
+- Use **[!UICONTROL Explore Data in Notebook]** para gerar uma célula de leitura.
+- Use **[!UICONTROL Write Data in Notebook]** para gerar uma célula de gravação.
 
 ![](../images/jupyterlab/data-access/scala-write-dataset.png)
 

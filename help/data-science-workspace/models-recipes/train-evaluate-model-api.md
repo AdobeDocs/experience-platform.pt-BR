@@ -5,7 +5,7 @@ title: Treinar e avaliar um modelo usando a API de aprendizado de máquina do Se
 type: Tutorial
 description: Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas da API do Sensei Machine Learning.
 exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1240'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Este tutorial mostrará como criar, treinar e avaliar um Modelo usando chamadas 
 
 Siga a [Importar uma fórmula empacotada usando a API](./import-packaged-recipe-api.md) para criar um Mecanismo, necessário para treinar e avaliar um Modelo usando a API.
 
-Siga o [tutorial de autenticação da API de Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para começar a fazer chamadas de API.
+Siga o [tutorial de autenticação da API do Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para começar a fazer chamadas de API.
 
 No tutorial, agora você deve ter os seguintes valores:
 
@@ -401,7 +401,7 @@ curl -X GET \
 
 **Resposta**
 
-A chamada do GET fornecerá o status no parâmetro `state` como mostrado abaixo:
+A chamada GET fornecerá o status no parâmetro `state`, conforme mostrado abaixo:
 
 ```JSON
 {
@@ -438,6 +438,7 @@ A chamada do GET fornecerá o status no parâmetro `state` como mostrado abaixo:
 `{EXPERIMENT_ID}`: a identificação que representa o experimento sob o qual a execução do experimento está.
 
 Além do estado `DONE`, outros estados incluem:
+
 - `PENDING`
 - `RUNNING`
 - `FAILED`
@@ -493,7 +494,7 @@ A resposta representa o modelo treinado que foi criado.
 
 ### Parar e excluir um experimento agendado
 
-Se você quiser parar a execução de um Experimento agendado antes de seu `endTime`, isso pode ser feito consultando uma solicitação DELETE para o `{EXPERIMENT_ID}`
+Se você deseja parar a execução de um Experimento agendado antes de seu `endTime`, isso pode ser feito consultando uma solicitação DELETE para o `{EXPERIMENT_ID}`
 
 **Solicitação**
 

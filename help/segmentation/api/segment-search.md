@@ -3,9 +3,9 @@ title: Endpoint da API de pesquisa de segmento
 description: Na API do Serviço de segmentação da Adobe Experience Platform, a Pesquisa de segmentos é usada para pesquisar campos contidos em várias fontes de dados e retorná-los em tempo quase real. Este guia fornece informações para ajudá-lo a entender melhor a Pesquisa de segmentos e inclui exemplos de chamadas de API para executar ações básicas usando a API.
 role: Developer
 exl-id: bcafbed7-e4ae-49c0-a8ba-7845d8ad663b
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1178'
 ht-degree: 2%
 
 ---
@@ -225,7 +225,9 @@ Depois de ler este guia, você compreenderá melhor como a Pesquisa de segmento 
 
 As seções a seguir fornecem informações adicionais sobre como os termos de pesquisa funcionam. As consultas de pesquisa são gravadas da seguinte maneira: `s={FieldName}:{SearchExpression}`. Assim, por exemplo, para procurar uma definição de segmento chamada AAM ou [!DNL Platform], você usaria a seguinte consulta de pesquisa: `s=segmentName:AAM%20OR%20Platform`.
 
->  Para as práticas recomendadas, a expressão de pesquisa deve ser codificada em HTML, como no exemplo mostrado acima.
+>[!NOTE]
+>
+>Para práticas recomendadas, a expressão de pesquisa deve ser codificada em HTML, como no exemplo mostrado acima.
 
 ### Pesquisar campos {#search-fields}
 
@@ -244,7 +246,9 @@ A tabela a seguir lista os campos que podem ser pesquisados dentro do parâmetro
 
 A tabela a seguir lista as especificidades de como as consultas de pesquisa funcionam ao usar a API de pesquisa de segmento.
 
->  Os exemplos a seguir são mostrados em um formato não codificado por HTML para maior clareza. Para obter as práticas recomendadas, HTML codifique a expressão de pesquisa.
+>[!NOTE]
+>
+>Os exemplos a seguir são mostrados em um formato codificado não HTML para maior clareza. Para obter as práticas recomendadas, o HTML codifica a expressão de pesquisa.
 
 | Exemplo de expressão de pesquisa | Descrição |
 | ------------------------- | ----------- |

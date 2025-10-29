@@ -4,7 +4,7 @@ title: Criar um pipeline de recurso usando o SDK de criação de modelo
 type: Tutorial
 description: O Adobe Experience Platform permite criar e criar pipelines de recursos personalizados para executar a engenharia de recursos em escala por meio do Sensei Machine Learning Framework Runtime. Este documento descreve as várias classes encontradas em um pipeline de recursos e fornece um tutorial passo a passo para a criação de um pipeline de recursos personalizados usando o SDK de criação de modelo no PySpark.
 exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1438'
 ht-degree: 0%
@@ -40,6 +40,7 @@ O fluxo de trabalho a seguir ocorre quando um pipeline de recursos é executado:
 ## Introdução
 
 Para executar uma fórmula em qualquer organização, é necessário:
+
 - Um conjunto de dados de entrada.
 - O Esquema do conjunto de dados.
 - Um esquema transformado e um conjunto de dados vazio com base nesse esquema.

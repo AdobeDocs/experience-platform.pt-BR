@@ -1,12 +1,12 @@
 ---
 title: (Empresas) LinkedIn connection
 description: Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
-badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '693'
+source-wordcount: '649'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 4%
 >
 >A funcionalidade para ativar públicos-alvo da conta para o destino do LinkedIn (Empresas) está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-Time Customer Data Platform.
 
-Use este destino para ativar seus [públicos-alvo da conta](/help/segmentation/types/account-audiences.md) para casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas de destino por meio do LinkedIn **[!UICONTROL (Empresas)]** de destino B2B. Visite a documentação do LinkedIn para [saber mais sobre o direcionamento de conta](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) na plataforma do LinkedIn.
+Use este destino para ativar seus [públicos-alvo da conta](/help/segmentation/types/account-audiences.md) para casos de uso do Account-Based Marketing (ABM). Anuncie para perfis e funções relevantes em suas contas do target por meio do **[!UICONTROL (Companies) LinkedIn]** destino B2B. Visite a documentação do LinkedIn para [saber mais sobre o direcionamento de conta](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) na plataforma do LinkedIn.
 
 >[!TIP]
 >
@@ -30,7 +30,7 @@ Use este destino para ativar seus [públicos-alvo da conta](/help/segmentation/t
 Esta seção descreve que tipo de público-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
----------|----------|----------|
+|---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Uploads personalizados | X | Públicos [importados](../../../segmentation/ui/overview.md#import-audience) para o Experience Platform de arquivos CSV. |
 
@@ -53,7 +53,7 @@ Verifique os pré-requisitos abaixo para exportar públicos-alvo da conta para o
 
 ### Pré-requisitos da conta do LinkedIn {#LinkedIn-account-prerequisites}
 
-Antes de usar o destino [!UICONTROL (Empresas) LinkedIn Matched Audience], verifique se a sua conta [!DNL LinkedIn Campaign Manager] tem o nível de permissão [!DNL Creative Manager] ou superior.
+Antes de usar o destino [!UICONTROL (Companies) LinkedIn Matched Audience], verifique se a sua conta [!DNL LinkedIn Campaign Manager] tem o nível de permissão [!DNL Creative Manager] ou superior.
 
 Para saber como editar suas permissões de usuário do [!DNL LinkedIn Campaign Manager], consulte [Adicionar, Editar, e Remover Permissões de Usuário em Contas do Advertising](https://www.linkedin.com/help/lms/answer/5753) na documentação do LinkedIn.
 
@@ -61,14 +61,14 @@ Para saber como editar suas permissões de usuário do [!DNL LinkedIn Campaign M
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa da **[!UICONTROL Permissão de controle de acesso]** e **[!UICONTROL Gerenciar Destinos]** [Permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa da **[!UICONTROL View Destinations]** e da **[!UICONTROL Manage Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 
-1. Localize o destino [!DNL (Companies) LinkedIn Matched Audiences] no catálogo de destino e selecione **[!UICONTROL Configurar]**.
-2. Selecione **[!UICONTROL Conectar ao destino]**.
+1. Localize o destino [!DNL (Companies) LinkedIn Matched Audiences] no catálogo de destino e selecione **[!UICONTROL Set Up]**.
+2. Selecione **[!UICONTROL Connect to destination]**.
    ![Autenticar para o LinkedIn](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
 3. Insira suas credenciais do LinkedIn e selecione **Fazer logon**.
 
@@ -78,9 +78,9 @@ Depois de concluir o processo de logon com o LinkedIn, você pode prosseguir par
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
-* **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
-* **[!UICONTROL ID da Conta]**: Seu [!DNL LinkedIn Campaign Manager Account ID]. Você pode encontrar essa ID na sua conta do [!DNL LinkedIn Campaign Manager].
+* **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
+* **[!UICONTROL Description]**: uma descrição que ajudará você a identificar este destino no futuro.
+* **[!UICONTROL Account ID]**: Seu [!DNL LinkedIn Campaign Manager Account ID]. Você pode encontrar essa ID na sua conta do [!DNL LinkedIn Campaign Manager].
 
 Agora você está pronto para ativar os públicos-alvo da conta para o LinkedIn.
 
@@ -88,21 +88,21 @@ Agora você está pronto para ativar os públicos-alvo da conta para o LinkedIn.
 
 >[!IMPORTANT]
 > 
->* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar os públicos-alvo da conta para os destinos.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar os públicos-alvo da conta para destinos."){width="100" zoomable="yes"}
+>* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar os públicos-alvo da conta para os destinos.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar os públicos-alvo da conta para destinos."){width="100" zoomable="yes"}
 
 Leia [Ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md) para obter instruções sobre como ativar públicos-alvo da conta para este destino.
 
-## Pares de mapeamento necessários na etapa de mapeamento ao ativar públicos da conta para o destino **[!UICONTROL (Empresas) LinkedIn Matched Audiences]** {#required-mappings}
+## Pares de mapeamento necessários na etapa de mapeamento ao ativar públicos da conta para o destino **[!UICONTROL (Companies) LinkedIn Matched Audiences]** {#required-mappings}
 
-Ao ativar públicos da conta para o destino **[!UICONTROL (Empresas) LinkedIn Matched Audiences]**, observe que os dois pares de mapeamento a seguir são obrigatórios para exportar dados com êxito:
+Ao ativar públicos-alvo da conta para o destino **[!UICONTROL (Companies) LinkedIn Matched Audiences]**, observe que os dois pares de mapeamento a seguir são obrigatórios para exportar dados com êxito:
 
 ![Campos obrigatórios de mapeamento do LinkedIn.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 
 | Campo de origem | Campo de destino |
 |---------|----------|
 | `accountName` | `companyName` |
-| `accountKey.sourceKey` | `primaryId` (selecione este campo no modo de exibição **[!UICONTROL Selecionar namespace de identidade]**, ao selecionar o **[!UICONTROL Campo de Destino]**). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar os públicos-alvo da conta para os destinos.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar os públicos-alvo da conta para destinos."){width="100" zoomable="yes"} |
+| `accountKey.sourceKey` | `primaryId` (selecione este campo no modo de exibição **[!UICONTROL Select Identity namespace]** ao selecionar o **[!UICONTROL Target Field]**). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar os públicos-alvo da conta para os destinos.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar os públicos-alvo da conta para destinos."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 

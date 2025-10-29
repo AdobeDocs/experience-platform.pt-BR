@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;serviço de con
 title: Listar as exibições de página de um usuário
 description: Saiba como gravar consultas que usam Eventos de experiência para criar uma lista das últimas 100 páginas que um usuário especificado usou.
 exl-id: d831910d-d3a4-4a5a-b897-b09f0546dab0
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 1%
@@ -40,7 +40,7 @@ Os resultados dessa query podem ser vistos abaixo.
 
 ```console
       timestamp       |  referrerType  |                            referrer                                |                 pageName            |  A  |  B  |  C  | pageViews
-----------------------+----------------+--------------------------------------------------------------------+-------------------------------------+-----+-----+-----+--------------
+|----------------------+----------------+--------------------------------------------------------------------+-------------------------------------+-----+-----+-----+--------------
 2019-11-08 17:15:28.0 | typed_bookmark |                                                                    |                                     |     |     |     |
 2019-11-08 17:53:05.0 | social         | http://www.reddit.com                                              | Home                                |     |     |     |          1.0
 2019-11-08 17:53:45.0 | typed_bookmark |                                                                    | Kids                                |     |     |     |          1.0

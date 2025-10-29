@@ -1,7 +1,8 @@
 ---
 title: Filtragem de bot usando estatística e aprendizado de máquina
 description: Saiba como usar estatísticas do Data Distiller e aprendizado de máquina para identificar e filtrar a atividade de bot para garantir análises precisas e melhor integridade dos dados.
-source-git-commit: a8abbf61bdc646c0834c296a64b27c71c98ea1d3
+exl-id: 30d98281-7d15-47a6-b365-3baa07356010
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1623'
 ht-degree: 0%
@@ -18,7 +19,7 @@ Este documento fornece um guia abrangente para identificar e filtrar a atividade
 
 A atividade de bot pode ser identificada pela detecção de picos nas ações do usuário em intervalos de tempo específicos. Por exemplo, cliques excessivos executados por um único usuário em um curto período de tempo podem indicar o comportamento do bot. Os dois principais atributos usados na filtragem de bot são:
 
-- **ECID (ID de visitante do Experience Cloud):** uma ID persistente e universal que identifica visitantes.
+- **ECID (Experience Cloud Visitor ID):** uma ID persistente e universal que identifica visitantes.
 - **Carimbo de data/hora:** a data e a hora em que uma atividade ocorre no site.
 
 Os exemplos abaixo demonstram como usar técnicas de SQL e aprendizado de máquina para identificar, refinar e prever a atividade do bot. Use esses métodos para melhorar a integridade dos dados e garantir análises acionáveis.
@@ -168,7 +169,7 @@ Este segundo exemplo se baseia na filtragem SQL básica, incorporando técnicas 
 
 Primeiro, prepare um conjunto de dados com estruturas planas e aninhadas que o modelo de aprendizado de máquina possa usar (conforme descrito acima). Mais orientações sobre como fazer isso podem ser encontradas na [documentação Trabalho com estruturas de dados aninhadas](../../key-concepts/nested-data-structures.md). Agrupe os dados por carimbo de data e hora, ID de usuário e nome da página da Web para identificar padrões na atividade de bot.
 
-### Usar cláusulas TRANSFORM e OPTIONS para criação de modelo {#transform-and-preprocess}
+### Usar as cláusulas TRANSFORM e OPTIONS para criação de modelo {#transform-and-preprocess}
 
 Para transformar seu conjunto de dados e configurar seu modelo de aprendizado de máquina de maneira eficaz, siga as etapas abaixo. As etapas detalham como lidar com valores nulos, preparar recursos e definir os parâmetros do modelo para um desempenho ideal.
 
@@ -209,7 +210,7 @@ Nos resultados exibidos abaixo, o modelo `bot_filtering_model` foi criado com ê
 
 ```console
            Created Model ID           |       Created Model       | Version
---------------------------------------+---------------------------+---------
+|--------------------------------------+---------------------------+---------
  2fb4b49e-d35c-44cf-af19-cc210e7dc72c | bot_filtering_model       |       1
 ```
 
@@ -244,7 +245,7 @@ A resposta inclui métricas como precisão, precisão, recuperação e AUC-ROC. 
 
 ```console
 auc_roc | accuracy | precision | recall
----------+----------+-----------+--------
+|---------+----------+-----------+--------
      1.0 |      1.0 |       1.0 |    1.0
 ```
 
@@ -282,7 +283,7 @@ A resposta inclui previsões para cada usuário (`id`), juntamente com detalhes 
 
 ```console
          id          | count.one_minute | count.five_minute | count.thirty_minute |                                                                  web.webpagedetails.name                                                                  | prediction
----------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
+|---------------------+------------------+-------------------+---------------------+-------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------
                      |              110 |                   |                     |   4UNDilcY5VAgu2pRmX4/gtVnj+YxDDQaJd1G8p8WX46//wYcrHy+APUN0I556E80j1gIzFmilA6DV4s0Zcs4ruiP36gLgC7bj4TH0q6LU0E=                                             |        1.0  
                      |              105 |                   |                     |   lrSaZk04Yq+5P9+6l4BohwXik0s0/XeW9X28ZgWt1yj1QQztiAt9Qgt2WYrWcAeoGZChAJw/l8e4ojZDT5WHCjteSt35S01Vv1JzDGPAg+IyhIzMTsVyLpW8WWpXjJoMCt6Tv7fFdF73EIH+IrK5fA== |        1.0
  2553215812530219515 |               99 |                 1 |                   1 |   KR+CC8TQzPyK4ord6w1PfJay1+h6snSF++xFERc4ogrEX4clJROgzkGgnSTSGWWZfNS/Ouz2K0VtkHG77vwoTg==                                                                 |        1.0

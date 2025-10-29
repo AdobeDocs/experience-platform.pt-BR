@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;serviço de con
 title: Listar visitantes pelo número de visualizações de página
 description: Saiba como escrever consultas que usam Eventos de experiência para recuperar uma lista de visitantes organizada pelo número de exibições de página.
 exl-id: 6e8eed0c-838e-4cd0-ae8c-453114fbf4ea
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Os resultados da query são exibidos na tabela abaixo.
 
 ```console
                id                  | pageViews
------------------------------------+-----------
+|-----------------------------------+-----------
  457C3510571E5930-69AA721C4CBF9339 |     706.0
  776F85658792C017-6491FE6570382A01 |     700.0
  6BEC9C6AB52E779F-28F5B023113F2C85 |     654.0

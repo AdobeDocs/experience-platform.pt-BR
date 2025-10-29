@@ -1,13 +1,13 @@
 ---
 title: Compartilhamento de pacotes de extensão privados na API do Reator
 description: Saiba como autorizar outras empresas a compartilhar pacotes de extensão privados na API do Reator.
-source-git-commit: ea9a2bb00d3ce59e28ea4cda0d30945e77aa95cb
+exl-id: 3300a630-6d22-46e1-8b1b-b5d12a3ea44c
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 3%
 
 ---
-
 
 # Compartilhamento de pacotes de extensão privados
 
@@ -66,7 +66,7 @@ O estado inicial da autorização está no estágio `pending_approval`. Antes de
 
 ## Aprovar uma autorização {#approve-authorization}
 
-Para aprovar uma autorização, você deve ter os direitos de `manage_properties`. Como empresa autorizada, você precisará enviar uma solicitação PATCH para a autorização de uso do pacote de extensão, incluindo o `ID` da autorização e definir o estado definido como `approved`.
+Para aprovar uma autorização, você deve ter os direitos de `manage_properties`. Como empresa autorizada, será necessário enviar uma solicitação PATCH para a autorização de uso do pacote de extensão, incluindo o `ID` da autorização e definir o estado definido como `approved`.
 
 **Formato da API**
 
@@ -82,7 +82,7 @@ PATCH //extension_package_usage_authorizations/{EXTENSION_PACKAGE_USAGE_AUTHORIZ
 
 **Solicitação**
 
-A solicitação de PATCH a seguir define o `state` de uma autorização como `approved`.
+A solicitação do PATCH a seguir define o `state` de uma autorização como `approved`.
 
 ```shell
 curl -X PATCH \
@@ -94,10 +94,10 @@ curl -X PATCH \
   -d '{
         "data": {
           "attributes": {
-	          "state": "approved"
-	        },
-	        "id": ":extension_package_usage_authorization_id",
-	        "type": "extension_package_usage_authorizations"
+            "state": "approved"
+            },
+            "id": ":extension_package_usage_authorization_id",
+            "type": "extension_package_usage_authorizations"
         }
       }
 ```
@@ -126,7 +126,7 @@ DELETE //extension_package_usage_authorizations/{EXTENSION_PACKAGE_USAGE_AUTHORI
 
 **Solicitação**
 
-A solicitação de DELETE a seguir remove os privilégios de autorização de uma empresa.
+A solicitação do DELETE a seguir remove os privilégios de autorização de uma empresa.
 
 ```shell
 curl -X DELETE \

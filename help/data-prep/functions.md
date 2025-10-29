@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Funções de mapeamento de preparação de dados
 description: Este documento apresenta as funções de mapeamento usadas com o Preparo de dados.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '6028'
-ht-degree: 2%
+source-wordcount: '6009'
+ht-degree: 1%
 
 ---
 
@@ -63,8 +63,8 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | ltrim | Remove o espaço em branco do início da cadeira de caracteres. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres da qual você deseja remover o espaço em branco.</li></ul> | ltrim(STRING) | ltrim(&quot; Olá&quot;) | &quot;olá&quot; |
 | rtrim | Remove o espaço em branco do final da cadeira de caracteres. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres da qual você deseja remover o espaço em branco.</li></ul> | rtrim(STRING) | rtrim(&quot;alô&quot;) | &quot;olá&quot; |
 | trim | Remove o espaço em branco do início e do fim da sequência de caracteres. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres da qual você deseja remover o espaço em branco.</li></ul> | trim(STRING) | trim(&quot; olá &quot;) | &quot;olá&quot; |
-| igual a | Compara duas strings para confirmar se são iguais. Esta função diferencia maiúsculas de minúsculas. | <ul><li>STRING1: **Obrigatório** A primeira cadeia de caracteres que você deseja comparar.</li><li>CADEIA DE CARACTERES2: **Obrigatório** A segunda cadeia de caracteres que você deseja comparar.</li></ul> | STRING1.&#x200B;equals(&#x200B;STRING2) | &quot;string1&quot;.&#x200B;equals&#x200B;(&quot;STRING1&quot;) | falso |
-| equalsIgnoreCase | Compara duas strings para confirmar se são iguais. Esta função **não** diferencia maiúsculas de minúsculas. | <ul><li>STRING1: **Obrigatório** A primeira cadeia de caracteres que você deseja comparar.</li><li>CADEIA DE CARACTERES2: **Obrigatório** A segunda cadeia de caracteres que você deseja comparar.</li></ul> | STRING1.&#x200B;equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;.&#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | verdadeiro |
+| igual a | Compara duas strings para confirmar se são iguais. Esta função diferencia maiúsculas de minúsculas. | <ul><li>STRING1: **Obrigatório** A primeira cadeia de caracteres que você deseja comparar.</li><li>CADEIA DE CARACTERES2: **Obrigatório** A segunda cadeia de caracteres que você deseja comparar.</li></ul> | STRING1.&#x200B;equals(&#x200B;STRING2) | &quot;string1&quot;.&#x200B;equals&#x200B;(&quot;STRING1&quot;) | false |
+| equalsIgnoreCase | Compara duas strings para confirmar se são iguais. Esta função **não** diferencia maiúsculas de minúsculas. | <ul><li>STRING1: **Obrigatório** A primeira cadeia de caracteres que você deseja comparar.</li><li>CADEIA DE CARACTERES2: **Obrigatório** A segunda cadeia de caracteres que você deseja comparar.</li></ul> | STRING1.&#x200B;equalsIgnoreCase&#x200B;(STRING2) | &quot;string1&quot;.&#x200B;equalsIgnoreCase&#x200B;(&quot;STRING1) | true |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
 | extract_regex | Extrai grupos da string de entrada, com base em uma expressão regular. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres da qual você está extraindo os grupos.</li><li>REGEX: **Obrigatório** A expressão regular que você deseja que o grupo corresponda.</li></ul> | extract_regex(STRING, REGEX) | extract_regex&#x200B;(&quot;E259,E259B_009,1_1&quot;&#x200B;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | [&quot;E259,E259B_009,1_1&quot;, &quot;E259&quot;, &quot;1_1&quot;] |
-| matches_regex | Verifica se a string corresponde à expressão regular inserida. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que você está verificando corresponde à expressão regular.</li><li>REGEX: **Obrigatório** A expressão regular com a qual você está comparando.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | verdadeiro |
+| matches_regex | Verifica se a string corresponde à expressão regular inserida. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que você está verificando corresponde à expressão regular.</li><li>REGEX: **Obrigatório** A expressão regular com a qual você está comparando.</li></ul> | matches_regex(STRING, REGEX) | matches_regex(&quot;E259,E259B_009,1_1&quot;, &quot;([^,]+),[^,]*,([^,]+)&quot;) | true |
 
 {style="table-layout:auto"}
 
@@ -105,7 +105,7 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 | get_url_host | Retorna o host do URL fornecido. Se a entrada for inválida, retornará null. | <ul><li>URL: **Obrigatório** A URL da qual o host precisa ser extraído.</li></ul> | get_url_host&#x200B;(URL) | get_url_host&#x200B;(&quot;https://platform&#x200B;.adobe.com/home&quot;) | platform.adobe.com |
 | get_url_port | Retorna a porta do URL fornecido. Se a entrada for inválida, retornará null. | <ul><li>URL: **Obrigatório** A URL da qual a porta precisa ser extraída.</li></ul> | get_url_port(URL) | get_url_port&#x200B;(&quot;sftp://example.com//home/&#x200B;joe/employee.csv&quot;) | 22 |
 | get_url_path | Retorna o caminho do URL fornecido. Por padrão, o caminho completo é retornado. | <ul><li>URL: **Obrigatório** A URL da qual o caminho precisa ser extraído.</li><li>FULL_PATH: *Opcional* Um valor booliano que determina se o caminho completo é retornado. Se definido como false, somente o final do caminho é retornado.</li></ul> | get_url_path&#x200B;(URL, CAMINHO_COMPLETO) | get_url_path&#x200B;(&quot;sftp://example.com//&#x200B;home/joe/employee.csv&quot;) | &quot;//home/joe/&#x200B;employee.csv&quot; |
-| get_url_query_str | Retorna a cadeia de caracteres de consulta de um determinado URL como um mapa de nome de cadeia de caracteres de consulta e valor de cadeia de caracteres de consulta. | <ul><li>URL: **Obrigatório** A URL da qual você está tentando obter a cadeia de caracteres de consulta.</li><li>ÂNCORA: **Obrigatório** Determina o que será feito com a âncora na cadeia de caracteres de consulta. Pode ser um destes três valores: &quot;keep&quot;, &quot;remove&quot; ou &quot;append&quot;.<br><br>Se o valor for &quot;reter&quot;, a âncora será anexada ao valor retornado.<br>Se o valor for &quot;remover&quot;, a âncora será removida do valor retornado.<br>Se o valor for &quot;append&quot;, a âncora será retornada como um valor separado.</li></ul> | get_url_query_str&#x200B;(URL, ÂNCORA) | get_url query_str&#x200B;(&quot;foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#reter&quot;, &quot;0&rbrace;get_url_query_str&#x200B; &#x200B; &#x200B; &#x200B; &#x200B; &#x200B;(&quot;foo://example.com:8042acima/there?name=ferret&quot;, &quot;remover&quot;)<br>get_url_query_strr(&quot;foo://example.com04/over/therename?impossível=ferret#nariz&quot;, &quot;append&quot;)<br> | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
+| get_url_query_str | Retorna a cadeia de caracteres de consulta de um determinado URL como um mapa de nome de cadeia de caracteres de consulta e valor de cadeia de caracteres de consulta. | <ul><li>URL: **Obrigatório** A URL da qual você está tentando obter a cadeia de caracteres de consulta.</li><li>ÂNCORA: **Obrigatório** Determina o que será feito com a âncora na cadeia de caracteres de consulta. Pode ser um destes três valores: &quot;keep&quot;, &quot;remove&quot; ou &quot;append&quot;.<br><br>Se o valor for &quot;reter&quot;, a âncora será anexada ao valor retornado.<br>Se o valor for &quot;remover&quot;, a âncora será removida do valor retornado.<br>Se o valor for &quot;append&quot;, a âncora será retornada como um valor separado.</li></ul> | get_url_query_str&#x200B;(URL, ÂNCORA) | get_url_query&#x200B;(&quot;foo://example.com foo://example.com:8042&#x200B;/over/there?name=&#x200B;ferret#ferret&quot;, &quot;reter&quot;)<br>get url_str&#x200B; &#x200B; &#x200B; &#x200B; &#x200B; &#x200B;(&quot;2}acima/lá?name=ferrett&quot;, &quot;remove&quot;:8042get url_query_str(&quot;foo://example.com4}/acima/ali?name=ferret#nariz&quot;, &quot;append&quot;)<br>:8042 | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}` |
 | get_url_encoded | Essa função pega uma URL como entrada e substitui ou codifica os caracteres especiais por caracteres ASCII. Para obter mais informações sobre caracteres especiais, leia a [lista de caracteres especiais](#special-characters) no apêndice deste documento. | <ul><li>URL: **Obrigatório** A URL de entrada com caracteres especiais que você deseja substituir ou codificar com caracteres ASCII.</li></ul> | get_url_encoded(URL) | get_url_encoded(&quot;https</span>://example.com/partneralliance_asia-pacific_2022&quot;) | https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022 |
 | get_url_decoded | Essa função pega uma URL como entrada e decodifica os caracteres ASCII em caracteres especiais.  Para obter mais informações sobre caracteres especiais, leia a [lista de caracteres especiais](#special-characters) no apêndice deste documento. | <ul><li>URL: **Obrigatório** A URL de entrada com caracteres ASCII que você deseja decodificar em caracteres especiais.</li></ul> | get_url_decoded(URL) | get_url_decoded(&quot;https%3A%2F%2Fexample.com%2Fpartneralliance_asia-pacific_2022&quot;) | https</span>://example.com/partneralliance_asia-pacific_2022 |
 
@@ -142,11 +142,11 @@ As tabelas a seguir listam todas as funções de mapeamento compatíveis, inclui
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| is_empty | Verifica se um objeto está ou não vazio. | <ul><li>ENTRADA: **Obrigatório** O objeto que você está tentando verificar está vazio.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | falso |
+| is_empty | Verifica se um objeto está ou não vazio. | <ul><li>ENTRADA: **Obrigatório** O objeto que você está tentando verificar está vazio.</li></ul> | is_empty(INPUT) | `is_empty([1, null, 2, 3])` | false |
 | arrays_to_object | Cria uma lista de objetos. | <ul><li>ENTRADA: **Obrigatório** Um agrupamento de pares de chaves e matrizes.</li></ul> | arrays_to_object(ENTRADA) | `arrays_to_objects('sku', explode("id1\|id2", '\\\|'), 'price', [22.5,14.35])` | ```[{ "sku": "id1", "price": 22.5 }, { "sku": "id2", "price": 14.35 }]``` |
 | to_object | Cria um objeto com base nos pares de chave/valor simples fornecidos. | <ul><li>ENTRADA: **Obrigatório** Uma lista simples de pares de chave/valor.</li></ul> | to_object(ENTRADA) | to_object&#x200B;(&quot;firstName&quot;, &quot;John&quot;, &quot;lastName&quot;, &quot;Doe&quot;) | `{"firstName": "John", "lastName": "Doe"}` |
 | str_to_object | Cria um objeto a partir da cadeia de caracteres de entrada. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que está sendo analisada para criar um objeto.</li><li>VALUE_DELIMITER: *Opcional* O delimitador que separa um campo do valor. O delimitador padrão é `:`.</li><li>FIELD_DELIMITER: *Opcional* O delimitador que separa pares de valores de campo. O delimitador padrão é `,`.</li></ul> | str_to_object&#x200B;(STRING, VALUE_DELIMITER, FIELD_DELIMITER) **Observação**: é possível usar a função `get()` juntamente com `str_to_object()` para recuperar valores para as chaves na cadeia de caracteres. | <ul><li>Exemplo #1: str_to_object(&quot;firstName - John ; lastName - ; - 123 345 7890&quot;, &quot;-&quot;, &quot;;&quot;)</li><li>Exemplo #2: str_to_object(&quot;firstName - John ; lastName - ; phone - 123 456 7890&quot;, &quot;-&quot;, &quot;;&quot;).get(&quot;firstName&quot;)</li></ul> | <ul><li>Exemplo #1:`{"firstName": "John", "lastName": "Doe", "phone": "123 456 7890"}`</li><li>Exemplo #2: &quot;John&quot;</li></ul> |
-| contains_key | Verifica se o objeto existe nos dados de origem. **Observação:** esta função substitui a função `is_set()` obsoleta. | <ul><li>ENTRADA: **Obrigatório** O caminho a ser verificado se ele existir nos dados de origem.</li></ul> | contains_key(ENTRADA) | contains_key(&quot;evars.evar.field1&quot;) | verdadeiro |
+| contains_key | Verifica se o objeto existe nos dados de origem. **Observação:** esta função substitui a função `is_set()` obsoleta. | <ul><li>ENTRADA: **Obrigatório** O caminho a ser verificado se ele existir nos dados de origem.</li></ul> | contains_key(ENTRADA) | contains_key(&quot;evars.evar.field1&quot;) | true |
 | nullify | Define o valor do atributo para `null`. Isso deve ser usado quando você não deseja copiar o campo para o schema de destino. | | nullify() | nullify() | `null` |
 | get_keys | Analisa os pares chave/valor e retorna todas as chaves. | <ul><li>OBJETO: **Obrigatório** O objeto do qual as chaves serão extraídas.</li></ul> | get_keys(OBJECT) | get_keys({&quot;book1&quot;: &quot;Orgulho e Preconceito&quot;, &quot;book2&quot;: &quot;1984&quot;}) | `["book1", "book2"]` |
 | get_values | Analisa os pares chave/valor e retorna o valor da string, com base na chave fornecida. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres que você deseja analisar.</li><li>KEY: **Obrigatório** A chave para a qual o valor deve ser extraído.</li><li>VALUE_DELIMITER: **Obrigatório** O delimitador que separa o campo e o valor. Se for fornecido um `null` ou uma cadeia de caracteres vazia, este valor será `:`.</li><li>FIELD_DELIMITER: *Opcional* O delimitador que separa pares de campo e valor. Se for fornecido um `null` ou uma cadeia de caracteres vazia, este valor será `,`.</li></ul> | get_values(STRING, CHAVE, VALUE_DELIMITER, FIELD_DELIMITER) | get_values(\&quot;firstName - John , lastName - Cena , phone - 555 420 8692\&quot;, \&quot;firstName\&quot;, \&quot;-\&quot;, \&quot;,\&quot;) | John |
@@ -248,7 +248,7 @@ Para obter informações sobre o recurso de cópia de objeto, consulte a seção
 
 | Função | Descrição | Parâmetros | Sintaxe | Expressão | Saída de exemplo |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
-| json_to_object | Desserialize o conteúdo JSON da string fornecida. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres JSON a ser desserializada.</li></ul> | json_to_object&#x200B;(STRING) | json_to_object&#x200B;({&quot;info&quot;:{&quot;firstName&quot;:&quot;John&quot;,&quot;lastName&quot;: &quot;Doe&quot;}}) | Um objeto que representa o JSON. |
+| json_to_object | Desserialize o conteúdo JSON da string fornecida. | <ul><li>CADEIA DE CARACTERES: **Obrigatório** A cadeia de caracteres JSON a ser desserializada.</li></ul> | json_to_object&#x200B;(STRING) | `json_to_object&#x200B;({"info":{"firstName":"John","lastName": "Doe"}})` | Um objeto que representa o JSON. |
 
 {style="table-layout:auto"}
 
@@ -387,11 +387,11 @@ A tabela abaixo descreve uma lista de caracteres reservados e seus caracteres co
 | > | %3E |
 | ? | %3F |
 | @ | %40 |
-| &lbrack; | %5B |
+| [ | %5B |
 | | | %5C |
-| &rbrack; | %5D |
+| ] | %5D |
 | ^ | %5E |
-| &grave; | %60 |
+| ` | %60 |
 | ~ | %7E |
 
 {style="table-layout:auto"}

@@ -1,86 +1,87 @@
 ---
-keywords: Experience Platform; guia do desenvolvedor; Área de trabalho de ciência de dados; tópicos populares; Aprendizado de máquina em tempo real;
+keywords: Experience Platform;guia do desenvolvedor;Data Science Workspace;tópicos populares;Aprendizado de máquina em tempo real;
 solution: Experience Platform
-title: Visão geral de aprendizado de máquina em tempo real
-description: A aprendizagem de máquina em tempo real pode aumentar drasticamente a relevância dos seus experiência conteúdo digitais para seus usuários finais. Isso é possibilitado utilizando a inferência e o aprendizado contínuo em tempo real na Experience Platform Edge Network.
+title: Visão geral do Aprendizado de máquina em tempo real
+description: O Aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do seu conteúdo de experiência digital para os seus usuários finais. Isso é possível aproveitando a inferência em tempo real e o aprendizado contínuo no Experience Platform Edge Network.
 exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '574'
 ht-degree: 1%
 
 ---
 
-# Visão geral de aprendizado de máquina em tempo real (Alpha)
+# Visão geral do Aprendizado de máquina em tempo real (Alpha)
 
 >[!NOTE]
 >
->O Área de trabalho de ciência de dados não está mais disponível para compra.
+>O Data Science Workspace não está mais disponível para compra.
 >
->Esta documentação destina-se a clientes existentes com direitos anteriores à Data Science Área de trabalho.
+>Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
 >[!IMPORTANT]
 >
->O Machine Learning em tempo real ainda não está disponível para todos os usuários. Esse recurso está na alfa e ainda está sendo testado. Esta documento está sujeita a mudanças.
+>O Aprendizado de máquina em tempo real ainda não está disponível para todos os usuários. Esse recurso está em alfa e ainda está sendo testado. Este documento está sujeito a alterações.
 
-A aprendizagem de máquina em tempo real pode aumentar drasticamente a relevância dos seus experiência conteúdo digitais para seus usuários finais. Isso é possibilitado ao aproveitar a inferência em tempo real e o aprendizado contínuo sobre o [!DNL Experience Platform Edge Network].
+O Aprendizado de máquina em tempo real pode melhorar consideravelmente a relevância do seu conteúdo de experiência digital para os seus usuários finais. Isso é possível aproveitando a inferência em tempo real e o aprendizado contínuo no [!DNL Experience Platform Edge Network].
 
-Uma combinação de computação perfeita no Hub e [!DNL Edge] reduz drasticamente a latência que está tradicionalmente envolvida na alimentação de experiências hiper-personalizadas que são relevantes e responsivo. Portanto, o Machine Learning em tempo real fornece inferências com latência incrivelmente baixa para a tomada de decisões síncrona. Os exemplos incluem a renderização de página conteúdo web personalizadas ou o acesso a uma oferta ou desconto para reduzir churn e aumentar as conversões em uma loja na web.
+Uma combinação de computação contínua no Hub e no [!DNL Edge] reduz drasticamente a latência tradicionalmente envolvida na geração de experiências hiperpersonalizadas que são relevantes e responsivas. Portanto, o Aprendizado de máquina em tempo real fornece inferências com uma latência incrivelmente baixa para a tomada de decisões síncronas. Os exemplos incluem a renderização de conteúdo personalizado da página da Web ou a exibição de uma oferta ou desconto para reduzir o churn e aumentar as conversões em uma loja da Web.
 
-## Arquitetura de aprendizado de máquina em tempo real {#architecture}
+## Arquitetura do Real-time Machine Learning {#architecture}
 
-Os diagramas a seguir fornecem uma visão geral da arquitetura de aprendizado de máquina em tempo real. Atualmente, o alpha tem uma versão mais simplificada.
+Os diagramas a seguir fornecem uma visão geral da arquitetura de aprendizado de máquina em tempo real. Atualmente, o alfa tem uma versão mais simplificada.
 
 ![alfa-arco](../images/rtml/alpha-arch.png)
 
 ![Visão geral simplificada](../images/rtml/end-to-end-arch.png)
 
-## fluxo de Trabalho de aprendizado de máquina em tempo real
+## Fluxo de trabalho do Aprendizado de máquina em tempo real
 
-A fluxo de Trabalho a seguir descreve as etapas típicas e os resultados envolvidos na criação e utilização de um modelo de Aprendizagem de máquina em tempo real.
+O fluxo de trabalho a seguir descreve as etapas e os resultados típicos envolvidos na criação e utilização de um modelo de Aprendizado de máquina em tempo real.
 
-### Ingestão e preparações de dados
+### Assimilação e preparações de dados
 
-Os dados são assimilados e transformados com o [!DNL Experience Data Model] (XDM) na Adobe Experience Platform. Esses dados são usados para modelos de treinamento. Para saber mais sobre o XDM, visita a visão geral[&#128279;](../../xdm/home.md) do XDM.
+Os dados são assimilados e transformados com o [!DNL Experience Data Model] (XDM) no Adobe Experience Platform. Esses dados são usados para treinamento de modelo. Para saber mais sobre o XDM, visite a [visão geral do XDM](../../xdm/home.md).
 
 ### Criação
 
-Criar um modelo de Aprendizagem de Máquina em Tempo Real, criando-o do zero ou trazendo-o como um modelo ONNX serializado pré-treinado em Adobe Experience Platform Notebooks Jupyter.
+Crie um modelo de Aprendizado de máquina em tempo real criando do zero ou trazendo-o como um modelo ONX serializado pré-treinado no Adobe Experience Platform Jupyter Notebooks.
 
 ### Implantação
 
-Implante seu modelo para [!DNL Edge Network] criar um serviço de aprendizagem de máquina em tempo real na [!UICONTROL Galeria] de serviços usando o endpoint da API de previsão.
+Implante seu modelo no [!DNL Edge Network] para criar um serviço de Aprendizado de Máquina em Tempo Real no [!UICONTROL Service Gallery] usando o ponto de extremidade da API de Previsão.
 
 ### Inferência
 
-Use o endpoint da API Forecast REST para gerar insights de aprendizado de máquina em tempo real.
+Use o endpoint da API REST de previsão para gerar insights de aprendizado de máquina em tempo real.
 
 ### Entrega
 
-Os profissionais de marketing podem definir segmentos e regras que mapeiam as pontuações de Aprendizagem de máquina em tempo real para experiências usando Adobe Target. Isso permite que os visitantes do site da sua marca sejam mostrados da mesma página hiper-personalizadas experiência em tempo real.
+Os profissionais de marketing podem definir segmentos e regras que mapeiam pontuações do Aprendizado de máquina em tempo real para experiências usando o Adobe Target. Isso permite que os visitantes do site da sua marca tenham uma experiência hiperpersonalizada de mesma página ou de próxima página em tempo real.
 
-## Funcionalidade atuais
+## Funcionalidade atual
 
-O Machine Learning em tempo real está atualmente na alfa. A funcionalidade descrita abaixo está sujeita à mudança à medida que mais recursos e nós são disponibilizados.
+O Aprendizado de Máquina em Tempo Real está atualmente em alfa. A funcionalidade descrita abaixo está sujeita a alterações à medida que mais recursos e nós são disponibilizados.
 
 >[!NOTE]
 >
-> Limitações alfa:
-> - Atualmente, somente modelos baseados em ONNX são suportados.
+> Limitações do Alpha:
+>
+> - Atualmente, somente os modelos baseados em ONNX são compatíveis.
 > - As funções usadas em nós não podem ser serializadas. Por exemplo, uma função lambda usada em um nó Pandas.
 > - Há uma suspensão de 20 segundos após a implantação de [!DNL Edge] ser feita manualmente.
-> - Para o deep learning, seus dados precisam ser enviados de forma que, quando `df.values` for chamado, retornem uma matriz que seja aceitável pelo seu modelo DL. Isso ocorre porque o modelo ONNX de pontuação nó usa `df.values` e envia a saída para pontuação em relação ao modelo.
+> - Para o deep learning, seus dados precisam ser enviados de forma que, quando `df.values` for chamado, retornem uma matriz que seja aceitável pelo seu modelo DL. Isso ocorre porque o nó de pontuação do modelo ONNX usa `df.values` e envia a saída para pontuação em relação ao modelo.
 
 
-### Características:
+### Recursos:
 
-| | Alfa (maio) |
+| | Alpha (maio) |
 | --- | --- |
-| **Recursos** | - Uso do notebook modelo, autor, teste e implantar de um modelo personalizado de aprendizado de máquina. <br> - Suporte para importação de modelos de aprendizado de máquina pré-treinados. <br> - SDK de aprendizado de máquina em tempo real. <br> - Conjunto inicial de nós de criação. <br> - Implantado no Adobe Experience Platform Hub. |
+| **Recursos** | - Uso do modelo de bloco de anotações RTML, crie, teste e implante um modelo de aprendizado de máquina personalizado. <br> - Suporte para importação de modelos de aprendizado de máquina pré-treinados. <br> - SDK do Real-time Machine Learning. <br> - Conjunto inicial de nós de criação. <br> - Implantado no Hub do Adobe Experience Platform. |
 | **Disponibilidade** | América do Norte |
-| **Criação de nós** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Split <br> - ModelUpload <br> - OneHotEncoder |
-| **Pontuação de tempos de execução** | ONNX |
+| **Nós de Criação** | - Pandas <br> - ScikitLearn <br> - ONNXNode <br> - Divisão <br> - ModelUpload <br> - OneHotEncoder |
+| **Tempos de execução de pontuação** | ONNX |
 
 ## Próximas etapas
 
-Você pode começar seguindo o guia de [introdução](./getting-started.md). Este guia o conduz pela configuração de todos os pré-requisitos necessários para a criação de um modelo de Aprendizagem de máquina em tempo real.
+Você pode começar seguindo o guia de [introdução](./getting-started.md). Este guia aborda a configuração de todos os pré-requisitos necessários para criar um modelo de Aprendizado de máquina em tempo real.

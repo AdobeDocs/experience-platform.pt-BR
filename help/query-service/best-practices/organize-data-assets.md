@@ -2,7 +2,7 @@
 title: Práticas recomendadas para a organização de ativos de dados no serviço de consulta
 description: Este documento descreve um meio lógico de organizar os dados para facilitar o uso com o Serviço de consulta.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '787'
 ht-degree: 0%
@@ -66,7 +66,7 @@ A listagem de todos os bancos de dados em `dbname="all"` exibe três bancos de d
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 databaseB
 databaseC
@@ -78,7 +78,7 @@ Listar todos os esquemas em `dbname="all"` exibe os três esquemas relacionados 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 databaseB      | schema3
@@ -90,14 +90,14 @@ Ao fazer uma conexão [!DNL PostgreSQL] usando `dbname="databaseA"`, você pode 
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
  
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 databaseA      | schema2
 ```
@@ -108,20 +108,20 @@ A notação de pontos permite acessar cada tabela associada a um esquema especí
 SHOW DATABASES;
   
 name     
----------
+|---------
 databaseA
 
 
 SHOW SCHEMAS;
   
 database       | schema
-----------------------
+|----------------------
 databaseA      | schema1
 
 
 SHOW tables;
 name       | type
-----------------------
+|----------------------
 dataset1| table
 dataset2| table
 dataset3| table

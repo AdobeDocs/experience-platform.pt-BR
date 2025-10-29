@@ -2,9 +2,9 @@
 title: Conexão com Medallia
 description: Ative perfis para pesquisas direcionadas do Medallia e coleta de feedback para entender melhor as necessidades e expectativas dos clientes.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1098'
 ht-degree: 2%
 
 ---
@@ -29,11 +29,12 @@ Uma marca B2B deseja avaliar e simplificar seu programa de integração. Eles go
 
 ### Caso de uso #2
 
-Um varejista deseja entender melhor as preferências do cliente para o atendimento do pedido. Eles desejam enviar uma breve pesquisa SMS com uma pergunta para clientes que fizeram compras online e na loja no mês passado.
+Uma retailer pretende entender melhor as preferências do cliente para o atendimento de pedidos. Eles desejam enviar uma breve pesquisa SMS com uma pergunta para clientes que fizeram compras online e na loja no mês passado.
 
 ## Pré-requisitos {#prerequisites}
 
 As seguintes informações são necessárias para estabelecer a conexão com Medallia:
+
 * **URL do Ponto de Extremidade do Token do OAuth**
 * **ID do cliente**
 * **Segredo do cliente**
@@ -58,9 +59,9 @@ O Medallia suporta a ativação de identidades descritas na tabela abaixo. Saiba
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
----------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros recém-qualificados de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do público-alvo, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+|---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Profile-based]** | Você está exportando todos os membros recém-qualificados de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](/help/destinations/ui/activate-batch-profile-destinations.md#select-attributes). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -68,17 +69,17 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 
-Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
+Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL URL do Ponto de Extremidade do Token do OAuth]**: geralmente toma a forma de https://instance.medallia.tld/oauth/tenant/token.
-* **[!UICONTROL ID do cliente]**: obtenha junto à equipe de entrega da Medallia.
-* **[!UICONTROL Segredo do cliente]**: obtenha junto à equipe de entrega do Medallia.
+* **[!UICONTROL OAuth Token Endpoint URL]**: Geralmente toma a forma de https://instance.medallia.tld/oauth/tenant/token.
+* **[!UICONTROL Client ID]**: Obtenha de sua equipe de entrega do Medallia.
+* **[!UICONTROL Client Secret]**: Obtenha de sua equipe de entrega do Medallia.
 
 ![Imagem mostrando a tela de autenticação para este destino.](/help/destinations/assets/catalog/voice/medallia-destination-oauth.png)
 
@@ -86,10 +87,10 @@ Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UIC
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
-* **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
-* **[!UICONTROL URL do Gateway da API]**: obtenha junto à equipe de entrega da Medallia. Normalmente assume a forma de https://instance-tenant.apis.medallia.com.
-* **[!UICONTROL Importar nome da API]**: obtenha junto à equipe de entrega do Medallia. Nome da API de importação do Medallia (também conhecido como Feed da Web) a ser usada nesta conexão. Você pode ativar públicos diferentes para APIs de importação diferentes para acionar programas de pesquisa diferentes.
+* **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
+* **[!UICONTROL Description]**: uma descrição que ajudará você a identificar este destino no futuro.
+* **[!UICONTROL API Gateway URL]**: Obtenha de sua equipe de entrega do Medallia. Normalmente assume a forma de https://instance-tenant.apis.medallia.com.
+* **[!UICONTROL Import API Name]**: Obtenha de sua equipe de entrega do Medallia. Nome da API de importação do Medallia (também conhecido como Feed da Web) a ser usada nesta conexão. Você pode ativar públicos diferentes para APIs de importação diferentes para acionar programas de pesquisa diferentes.
 
 ![Imagem mostrando a tela de detalhes do destino para este destino.](/help/destinations/assets/catalog/voice/medallia-destination-details.png)
 
@@ -97,28 +98,31 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
+>* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
 Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ### Mapear atributos e identidades {#map}
 
 Os seguintes namespaces de identidade de destino devem ser mapeados dependendo do caso de uso:
+
 * Para pesquisas baseadas em email, o **email** deve ser mapeado como um campo de destino usando o **Campo de destino** > **Selecionar namespace de identidade** > **email**
 * Para pesquisas baseadas em SMS, o **telefone** deve ser mapeado como um campo de destino usando o **campo de destino** > **Selecionar namespace de identidade** > **telefone**. Os números de telefone devem estar no formato E.164, que inclui um sinal de adição (+), um código de chamada de país internacional, um código de área local e um número de telefone
 
 É altamente recomendável também mapear atributos personalizados adicionais do target para criar pesquisas personalizadas e anexar informações adicionais sobre o cliente ao registro da pesquisa:
 
 * Pesquisas personalizadas geralmente abordam o cliente por nome
+
    * Mapeie o nome do cliente para **Campo de destino** > **Selecionar atributos personalizados** > **Nome do atributo** > **nome**
    * Mapeie o sobrenome do cliente para **Campo de destino** > **Selecionar atributos personalizados** > **Nome do atributo** > **sobrenome**
+
 * Adicione mapeamentos para quaisquer outros atributos personalizados do Target, conforme desejado
 
 ![Imagem mostrando um mapeamento de exemplo para identidades e atributos.](/help/destinations/assets/catalog/voice/medallia-destination-mapping.png)

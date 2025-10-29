@@ -1,7 +1,8 @@
 ---
 title: Prever o churn do cliente com regressão logística baseada em SQL
 description: Saiba como prever a rotatividade do cliente usando regressão logística baseada em SQL. Este guia aborda todo o processo, da criação de modelos à avaliação e previsão. Obtenha insights acionáveis do comportamento de compra do cliente para implementar estratégias de retenção proativas e otimizar as decisões de negócios.
-source-git-commit: 95c7ad3f8eb86cacd42077008824eea9e25b4db0
+exl-id: 3b18870d-104c-4dce-8549-a6818dc40d24
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1126'
 ht-degree: 1%
@@ -45,7 +46,7 @@ Para gerar previsões de churn do cliente, o modelo depende dos campos principai
 | `timestamp` | A data e hora exatas de cada evento de compra. |
 | `commerce.order.purchaseID` | Um valor necessário que confirma uma compra concluída. |
 
-O conjunto de dados deve conter registros históricos estruturados de transações de clientes, com cada linha representando um evento de compra. Cada evento deve incluir carimbos de data e hora em um formato de data e hora apropriado compatível com a função SQL `DATEDIFF` (por exemplo, AAAA-MM-DD HH:MI:SS). Além disso, cada registro deve conter uma ID de Experience Cloud válida (`ECID`) no campo `identityMap` para identificar os clientes de forma exclusiva.
+O conjunto de dados deve conter registros históricos estruturados de transações de clientes, com cada linha representando um evento de compra. Cada evento deve incluir carimbos de data e hora em um formato de data e hora apropriado compatível com a função SQL `DATEDIFF` (por exemplo, AAAA-MM-DD HH:MI:SS). Além disso, cada registro deve conter uma ID do Experience Cloud válida (`ECID`) no campo `identityMap` para identificar os clientes de forma exclusiva.
 
 >[!TIP]
 >
@@ -128,7 +129,7 @@ O conjunto de dados de saída contém métricas relacionadas ao cliente e seu st
 
 ```console
  customer_id  | total_purchases | total_revenue | avg_order_value  | customer_lifetime | days_since_last_purchase | purchase_frequency | churned |
---------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
+|--------------+-----------------+---------------+------------------+-------------------+--------------------------+--------------------+----------
   100001      | 25              | 1250.00       | 50.00            | 540               | 20                       | 10                 | 0       
   100002      | 3               | 90.00         | 30.00            | 120               | 95                       | 1                  | 1       
   100003      | 60              | 7200.00       | 120.00           | 800               | 5                        | 24                 | 0       
@@ -203,7 +204,7 @@ Os resultados da avaliação incluem as principais métricas de desempenho, como
 
 ```console
  auc_roc | accuracy | precision | recall 
----------+----------+-----------+--------
+|---------+----------+-----------+--------
 1        | 0.99998  |  1        |  1      
 ```
 
@@ -279,7 +280,7 @@ O conjunto de dados de saída inclui os principais recursos do cliente e seu sta
 
 ```console
  total_purchases | total_revenue | avg_order_value | customer_lifetime | days_since_last_purchase | purchase_frequency | churned | prediction
------------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
+|-----------------+---------------+-----------------+-------------------+--------------------------+--------------------+---------+------------
  2               | 299           | 149.5           | 0                 | 13                        | 1                  | 0       | 0
  1               | 710           | 710.00          | 0                 | 149                       | 1                  | 1       | 1
  1               | 19.99         | 19.99           | 0                 | 30                        | 1                  | 0       | 0

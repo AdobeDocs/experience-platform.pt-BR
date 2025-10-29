@@ -4,9 +4,9 @@ title: Conexão do Azure Event Hubs
 description: Crie uma conexão de saída em tempo real com o armazenamento do  [!DNL Azure Event Hubs]  para transmitir dados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2022'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 [!DNL Azure Event Hubs] é uma plataforma de transmissão de big data e um serviço de assimilação de eventos. Ele pode receber e processar milhões de eventos por segundo. Os dados enviados para um hub de eventos podem ser transformados e armazenados usando qualquer provedor de análise em tempo real ou adaptadores de armazenamento/agrupamento.
 
@@ -51,21 +51,21 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
----------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Baseado em perfil]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
+|---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Profile-based]** | Você está exportando todos os membros de um segmento, juntamente com os campos de esquema desejados (por exemplo: endereço de email, número de telefone, sobrenome), conforme escolhido na tela selecionar atributos de perfil do [fluxo de trabalho de ativação de destino](../../ui/activate-batch-profile-destinations.md#select-attributes). |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
-## INCLUIR NA LISTA DE PERMISSÕES endereço IP {#ip-address-allowlist}
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP {#ip-address-allowlist}
 
-Para atender aos requisitos de segurança e conformidade dos clientes, a Experience Platform incluir na lista de permissões fornece uma lista de IPs estáticos que você pode pesquisar pelo destino [!DNL Azure Event Hubs]. Consulte a [lista de permissões de endereço IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
+Para atender aos requisitos de segurança e conformidade dos clientes, a Experience Platform fornece uma lista de IPs estáticos que você pode incluir na lista de permissões para o destino [!DNL Azure Event Hubs]. Consulte [lista de permissões de endereço IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
 
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). Ao se conectar a esse destino, você deve fornecer as seguintes informações:
 
@@ -75,22 +75,22 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 ![Imagem da tela da interface do usuário mostrando campos concluídos para os detalhes de autenticação padrão dos Hubs de Eventos do Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
 
-Se você selecionar o tipo **[!UICONTROL Autenticação padrão]** para se conectar ao seu ponto de extremidade HTTP, insira os campos abaixo e selecione **[!UICONTROL Conectar ao destino]**:
+Se você selecionar o tipo **[!UICONTROL Standard authentication]** para se conectar ao seu ponto de extremidade HTTP, insira os campos abaixo e selecione **[!UICONTROL Connect to destination]**:
 
-* **[!UICONTROL Nome da Chave SAS]**: o nome da regra de autorização, que também é conhecido como o nome da chave SAS.
-* **[!UICONTROL Chave SAS]**: a chave primária do namespace de Hubs de Eventos. O `sasPolicy` ao qual `sasKey` corresponde deve ter os direitos **manage** configurados para que a lista de Hubs de Eventos seja populada. Saiba mais sobre como autenticar para [!DNL Azure Event Hubs] com chaves SAS na [documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* **[!UICONTROL Namespace]**: preencha seu namespace [!DNL Azure Event Hubs]. Saiba mais sobre os namespaces [!DNL Azure Event Hubs] na [documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL SAS Key Name]**: o nome da regra de autorização, que também é conhecido como o nome da chave SAS.
+* **[!UICONTROL SAS Key]**: a chave primária do namespace de Hubs de Eventos. O `sasPolicy` ao qual `sasKey` corresponde deve ter os direitos **manage** configurados para que a lista de Hubs de Eventos seja populada. Saiba mais sobre como autenticar para [!DNL Azure Event Hubs] com chaves SAS na [documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Namespace]**: Preencha seu namespace [!DNL Azure Event Hubs]. Saiba mais sobre os namespaces [!DNL Azure Event Hubs] na [documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 #### Autenticação SAS (Assinatura de Acesso Compartilhado) {#sas-authentication}
 
 ![Imagem da tela da interface do usuário mostrando campos concluídos para os detalhes de autenticação padrão dos Hubs de Eventos do Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
-Se você selecionar o tipo **[!UICONTROL Autenticação padrão]** para se conectar ao seu ponto de extremidade HTTP, insira os campos abaixo e selecione **[!UICONTROL Conectar ao destino]**:
+Se você selecionar o tipo **[!UICONTROL Standard authentication]** para se conectar ao seu ponto de extremidade HTTP, insira os campos abaixo e selecione **[!UICONTROL Connect to destination]**:
 
-* **[!UICONTROL Nome da Chave SAS]**: o nome da regra de autorização, que também é conhecido como o nome da chave SAS.
-* **[!UICONTROL Chave SAS]**: a chave primária do namespace de Hubs de Eventos. O `sasPolicy` ao qual `sasKey` corresponde deve ter os direitos **manage** configurados para que a lista de Hubs de Eventos seja populada. Saiba mais sobre como autenticar para [!DNL Azure Event Hubs] com chaves SAS na [documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
-* **[!UICONTROL Namespace]**: preencha seu namespace [!DNL Azure Event Hubs]. Saiba mais sobre os namespaces [!DNL Azure Event Hubs] na [documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
-* **[!UICONTROL Nome do Hub de Eventos]**: preencha com seu nome [!DNL Azure Event Hub]. Saiba mais sobre os nomes de [!DNL Azure Event Hubs] na [documentação do Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
+* **[!UICONTROL SAS Key Name]**: o nome da regra de autorização, que também é conhecido como o nome da chave SAS.
+* **[!UICONTROL SAS Key]**: a chave primária do namespace de Hubs de Eventos. O `sasPolicy` ao qual `sasKey` corresponde deve ter os direitos **manage** configurados para que a lista de Hubs de Eventos seja populada. Saiba mais sobre como autenticar para [!DNL Azure Event Hubs] com chaves SAS na [documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
+* **[!UICONTROL Namespace]**: Preencha seu namespace [!DNL Azure Event Hubs]. Saiba mais sobre os namespaces [!DNL Azure Event Hubs] na [documentação do Microsoft](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
+* **[!UICONTROL Event Hub Name]**: Preencha seu nome [!DNL Azure Event Hub]. Saiba mais sobre os nomes de [!DNL Azure Event Hubs] na [documentação do Microsoft](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hub).
 
 ### Preencher detalhes do destino {#destination-details}
 
@@ -108,23 +108,23 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 ![Imagem da tela da interface do usuário mostrando campos concluídos para os detalhes de destino do Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
-* **[!UICONTROL Nome]**: preencha um nome para a conexão com [!DNL Azure Event Hubs].
-* **[!UICONTROL Descrição]**: forneça uma descrição da conexão.  Exemplos: &quot;Clientes de nível Premium&quot;, &quot;Clientes interessados em kitesurfing&quot;.
-* **[!UICONTROL eventHubName]**: forneça um nome para o fluxo ao seu destino [!DNL Azure Event Hubs].
-* **[!UICONTROL Incluir nomes de segmentos]**: alterne se quiser que a exportação de dados inclua os nomes dos públicos-alvo que você está exportando. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
-* **[!UICONTROL Incluir carimbos de data/hora do segmento]**: ative se desejar que a exportação de dados inclua o carimbo de data/hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data/hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
+* **[!UICONTROL Name]**: Preencha um nome para a conexão com [!DNL Azure Event Hubs].
+* **[!UICONTROL Description]**: forneça uma descrição da conexão.  Exemplos: &quot;Clientes de nível Premium&quot;, &quot;Clientes interessados em kitesurfing&quot;.
+* **[!UICONTROL eventHubName]**: Forneça um nome para o fluxo para o destino [!DNL Azure Event Hubs].
+* **[!UICONTROL Include Segment Names]**: alterne se quiser que a exportação de dados inclua os nomes dos públicos que você está exportando. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
+* **[!UICONTROL Include Segment Timestamps]**: alterne se desejar que a exportação de dados inclua o carimbo de data e hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
 
 ### Ativar alertas {#enable-alerts}
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* [A avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) não tem suporte atualmente em exportações para o destino dos Hubs de Eventos do Azure. [Leia mais](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Ativar dados de público-alvo para destinos de exportação de perfil de streaming](../../ui/activate-streaming-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
@@ -224,7 +224,7 @@ Os dados exportados do [!DNL Experience Platform] chegam ao destino [!DNL Azure 
 }
 ```
 
-Abaixo estão mais exemplos de dados exportados, dependendo das configurações de interface do usuário que você selecionar no fluxo de destino de conexão para as opções **[!UICONTROL Incluir nomes de segmento]** e **[!UICONTROL Incluir carimbos de data/hora de segmento]**:
+Abaixo estão mais exemplos de dados exportados, dependendo das configurações de interface do usuário que você selecionar no fluxo de destino de conexão para as opções **[!UICONTROL Include Segment Names]** e **[!UICONTROL Include Segment Timestamps]**:
 
 +++ A amostra de exportação de dados abaixo inclui nomes de público na seção `segmentMembership`
 

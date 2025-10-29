@@ -2,10 +2,10 @@
 title: Lançar uma extensão
 description: Saiba como lançar de forma privada ou pública uma extensão de tag na Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 2152cf98d9809654cca7abd7b8469a72e8387b2a
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '479'
-ht-degree: 67%
+source-wordcount: '478'
+ht-degree: 64%
 
 ---
 
@@ -37,11 +37,11 @@ npx @adobe/reactor-releaser
 `npx` permite baixar e executar um pacote npm sem instalá-lo na sua máquina. Essa é a maneira mais simples de executar o lançador.
 
 >[!NOTE]
-> Por padrão, o lançador espera credenciais de Adobe I/O para um fluxo Oauth de servidor para servidor. As credenciais `jwt-auth` herdadas
-> O pode ser usado executando o `npx @adobe/reactor-releaser@v3.1.3` até a desativação em 1º de janeiro de 2025. Os parâmetros necessários
-> para executar a versão `jwt-auth` pode ser encontrado [aqui](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> Por padrão, o lançador espera as credenciais do Adobe I/O para um fluxo Oauth de servidor para servidor. As credenciais `jwt-auth` herdadas
+> > O pode ser usado executando o `npx @adobe/reactor-releaser@v3.1.3` até a desativação em 1º de janeiro de 2025. Os parâmetros necessários
+> > para executar a versão `jwt-auth` pode ser encontrado [aqui](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
-O lançador requer que você insira apenas algumas informações. Os `clientId` e `clientSecret` podem ser recuperados do console Adobe I/O. Navegue até a [página Integrações](https://console.adobe.io/integrations) no console do I/O. Selecione a organização correta na lista suspensa, localize a integração apropriada e escolha **[!UICONTROL Exibir]**.
+O lançador requer que você insira apenas algumas informações. Os `clientId` e `clientSecret` podem ser recuperados do console do Adobe I/O. Navegue até a [página Integrações](https://console.adobe.io/integrations) no console do I/O. Selecione a organização correta na lista suspensa, localize a integração apropriada e selecione **[!UICONTROL View]**.
 
 - Qual é o seu `clientId`? Copie e cole isso do Console do I/O.
 - Qual é o seu `clientSecret`? Copie e cole isso do Console do I/O.
@@ -49,7 +49,7 @@ O lançador requer que você insira apenas algumas informações. Os `clientId` 
 O lançador lerá os campos `name` e `platform` do manifesto da extensão e consultará a API para obter um pacote de extensão correspondente na disponibilidade de desenvolvimento.
 O lançador solicitará que você confirme se encontrou o pacote de extensão correto que deseja liberar para disponibilidade privada.
 
-Se quiser lançar sua extensão com disponibilidade privada usando a API diretamente, veja o exemplo de chamada para [lançar de forma privada um pacote de extensão](../../api/endpoints/extension-packages.md/#private-release) na documentação da API para obter mais detalhes.
+Se quiser lançar sua extensão com disponibilidade privada usando a API diretamente, veja o exemplo de chamada para [lançar de forma privada um pacote de extensão](/help/tags/api/endpoints/extension-packages.md#private-release) na documentação da API para obter mais detalhes.
 
 ## Lançamento público
 

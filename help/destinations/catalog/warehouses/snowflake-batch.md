@@ -4,7 +4,7 @@ description: Crie um compartilhamento de dados em tempo real do Snowflake para r
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: c429ee227bd93455f541a32266bfbef9ddeaae06
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '1659'
 ht-degree: 4%
@@ -113,7 +113,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
----------|----------|---------|
+|---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Audience export]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL Snowflake]. |
 | Frequência de exportação | **[!UICONTROL Batch]** | Esse destino fornece instantâneos periódicos da associação completa do público-alvo por meio do compartilhamento de dados do Snowflake. Cada instantâneo substitui os dados anteriores, garantindo que você sempre tenha a visualização completa mais recente do público-alvo. |
 

@@ -2,9 +2,9 @@
 title: Destino do Marketo Engage
 description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análises e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais de CRM e do envolvimento do cliente para o marketing baseado em conta e a atribuição de receita.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: 891484b279d2521115c6b1edc58f45c594a55382
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '874'
+source-wordcount: '847'
 ht-degree: 1%
 
 ---
@@ -29,8 +29,8 @@ ht-degree: 1%
 
 As melhorias no destino do Marketo V2 incluem:
 
-* Na etapa **[!UICONTROL Segmento de agendamento]** do fluxo de trabalho de ativação, no Marketo V1, foi necessário adicionar manualmente uma **ID de Mapeamento** para exportar dados com êxito para o Marketo. Esta etapa manual não é mais necessária no Marketo V2.
-* Na etapa **[!UICONTROL Mapeamento]** do fluxo de trabalho de ativação, no Marketo V1, você conseguiu mapear campos XDM para apenas três campos de destino no Marketo: `firstName`, `lastName` e `companyName`. Com a versão Marketo V2, agora é possível mapear campos XDM para muitos mais campos no Marketo. Para obter mais informações, leia a seção [atributos suportados](#supported-attributes) mais abaixo.
+* Na etapa **[!UICONTROL Schedule segment]** do fluxo de trabalho de ativação, no Marketo V1, você precisava adicionar manualmente uma **ID de Mapeamento** para exportar dados com êxito para o Marketo. Esta etapa manual não é mais necessária no Marketo V2.
+* Na etapa **[!UICONTROL Mapping]** do fluxo de trabalho de ativação, no Marketo V1, você conseguiu mapear campos XDM para apenas três campos de destino no Marketo: `firstName`, `lastName` e `companyName`. Com a versão Marketo V2, agora é possível mapear campos XDM para muitos mais campos no Marketo. Para obter mais informações, leia a seção [atributos suportados](#supported-attributes) mais abaixo.
 
 ## Visão geral {#overview}
 
@@ -73,8 +73,8 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
----------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público com os identificadores (email, ECID) usados no destino [!DNL Marketo Engage]. |
+|---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Audience export]** | Você está exportando todos os membros de um público com os identificadores (email, ECID) usados no destino [!DNL Marketo Engage]. |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -83,10 +83,10 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 > 
->* Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
->* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+>* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para obter instruções detalhadas sobre como configurar o destino e ativar públicos, leia [Enviar um público-alvo da Adobe Experience Platform para uma lista estática do Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=pt-BR) na documentação do Marketo.
+Para obter instruções detalhadas sobre como configurar o destino e ativar públicos, leia [Enviar um público-alvo da Adobe Experience Platform para uma lista estática do Marketo](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) na documentação do Marketo.
 
 O vídeo abaixo também demonstra as etapas para configurar um destino do Marketo e ativar públicos-alvo.
 
@@ -94,12 +94,12 @@ O vídeo abaixo também demonstra as etapas para configurar um destino do Market
 >
 >O vídeo não reflete totalmente a capacidade atual. Para obter as informações mais atualizadas, consulte o manual vinculado acima. As seguintes partes do vídeo estão desatualizadas:
 > 
->* O cartão de destino que você deve usar na interface do Experience Platform é o **[!UICONTROL Marketo V2]**.
->* O vídeo não mostra o novo campo seletor **[!UICONTROL Criação de pessoa]** na conexão com o fluxo de trabalho de destino. Para usar esse campo, você deve mapear o nome e o sobrenome durante a etapa de mapeamento do atributo.
+>* O cartão de destino que você deve usar na interface do Experience Platform é **[!UICONTROL Marketo V2]**.
+>* O vídeo não mostra o novo campo seletor **[!UICONTROL Person creation]** no fluxo de trabalho conectar-se ao destino. Para usar esse campo, você deve mapear o nome e o sobrenome durante a etapa de mapeamento do atributo.
 >* As duas limitações chamadas no vídeo não se aplicam mais. Agora é possível mapear vários outros campos de atributo de perfil, além das informações de associação de público-alvo aceitas no momento em que o vídeo foi gravado. Você também pode exportar membros do público-alvo para o Marketo que ainda não existem nas listas estáticas do Marketo e eles serão adicionados às listas.
->* Na **[!UICONTROL etapa Agendar público-alvo]** do fluxo de trabalho de ativação, no Marketo V1, foi necessário adicionar manualmente uma **[!UICONTROL ID de Mapeamento]** para exportar dados com êxito para o Marketo. Esta etapa manual não é mais necessária no Marketo V2.
+>* No **[!UICONTROL Schedule audience step]** do fluxo de trabalho de ativação, no Marketo V1, era necessário adicionar manualmente um **[!UICONTROL Mapping ID]** para exportar dados com êxito para o Marketo. Esta etapa manual não é mais necessária no Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440163?quality=12&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Monitorar destino {#monitor-destination}
 

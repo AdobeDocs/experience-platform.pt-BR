@@ -3,9 +3,9 @@ keywords: etiquetas do dirigível;destino do dirigível
 title: Conexão com as Tags do Aeróstato
 description: Transmita continuamente os dados do público-alvo da Adobe para o Airship como tags de público-alvo para direcionamento no Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 5a2f1c87381c39d6d15f569523cfb3b00d02b34b
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '934'
 ht-degree: 2%
 
 ---
@@ -52,8 +52,8 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
----------|----------|---------|
-| Tipo de exportação | **[!UICONTROL Exportação de público-alvo]** | Você está exportando todos os membros de um público-alvo com os identificadores usados no destino Tags de dirigível. |
+|---------|----------|---------|
+| Tipo de exportação | **[!UICONTROL Audience export]** | Você está exportando todos os membros de um público-alvo com os identificadores usados no destino Tags de dirigível. |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -72,13 +72,13 @@ Consulte [Gerenciar grupos de marcas](https://docs.airship.com/tutorials/manage-
 
 ## Gerar token de portador
 
-Vá para **[!UICONTROL Configurações]**&quot; **[!UICONTROL APIs e integrações]** no [Painel de dirigíveis](https://go.airship.com) e selecione **[!UICONTROL Tokens]** no menu à esquerda.
+Vá para **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** no [Painel de dirigível](https://go.airship.com) e selecione **[!UICONTROL Tokens]** no menu à esquerda.
 
-Clique em **[!UICONTROL Criar token]**.
+Clique em **[!UICONTROL Create Token]**.
 
 Forneça um nome amigável para o token, por exemplo, &quot;Destino de tags da Adobe&quot; e selecione &quot;Acesso integral&quot; para a função.
 
-Clique em **[!UICONTROL Criar token]** e salve os detalhes como confidenciais.
+Clique em **[!UICONTROL Create Token]** e salve os detalhes como confidenciais.
 
 ## Casos de uso
 
@@ -98,41 +98,41 @@ Por exemplo, uma retailer configura um público-alvo específico de uma marca je
 
 >[!IMPORTANT]
 > 
->Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 
-Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
+Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL Token de portador]**: o token de portador gerado pelo painel [!DNL Airship].
+* **[!UICONTROL Bearer token]**: o token de portador gerado pelo painel [!DNL Airship].
 
 ### Preencher detalhes do destino {#destination-details}
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-* **[!UICONTROL Nome]**: digite um nome que o ajudará a identificar este destino.
-* **[!UICONTROL Descrição]**: digite uma descrição para este destino.
-* **[!UICONTROL Domínio]**: selecione um data center dos EUA ou da UE, dependendo do data center [!DNL Airship] aplicável a este destino.
+* **[!UICONTROL Name]**: digite um nome que o ajudará a identificar este destino.
+* **[!UICONTROL Description]**: digite uma descrição para este destino.
+* **[!UICONTROL Domain]**: selecione um data center dos EUA ou da UE, dependendo de qual data center [!DNL Airship] se aplica a esse destino.
 
 ### Ativar alertas {#enable-alerts}
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
->Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Consulte [Ativar dados de público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ## Considerações de mapeamento {#mapping-considerations}
 
-[!DNL Airship] marcas podem ser definidas em um canal, que representa a instância do dispositivo, por exemplo, iPhone, ou em um usuário nomeado, que mapeia todos os dispositivos de um usuário para um identificador comum, como uma ID de cliente. Se você tiver endereços de email de texto sem formatação (sem hash) como identidade principal no esquema, selecione o campo de email nos seus **[!UICONTROL Atributos do Source]** e mapeie para o [!DNL Airship] usuário nomeado na coluna à direita em **[!UICONTROL Identidades de Destino]**, conforme mostrado abaixo.
+[!DNL Airship] marcas podem ser definidas em um canal, que representa a instância do dispositivo, por exemplo, iPhone, ou em um usuário nomeado, que mapeia todos os dispositivos de um usuário para um identificador comum, como uma ID de cliente. Se você tiver endereços de email de texto sem formatação (sem hash) como identidade principal no esquema, selecione o campo de email em seu **[!UICONTROL Source Attributes]** e mapeie para o [!DNL Airship] usuário nomeado na coluna direita em **[!UICONTROL Target Identities]**, como mostrado abaixo.
 
 ![Mapeamento de Usuário Nomeado](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 

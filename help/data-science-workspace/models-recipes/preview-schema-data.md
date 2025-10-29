@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;visualizar dados do esquema;Data Science Workspace;tópicos populares;preview schema data;Data Science;popular topics
+keywords: Experience Platform;visualizar dados do esquema;Data Science Workspace;tópicos populares;;preview schema data;Data Science;popular topics
 solution: Experience Platform
 title: Visualizar o Esquema de Vendas de Varejo e o Conjunto de Dados
 type: Tutorial
 description: O documento a seguir descreve a visualização de esquemas e conjuntos de dados no Adobe Experience Platform.
 exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '259'
+source-wordcount: '255'
 ht-degree: 3%
 
 ---
@@ -22,15 +22,15 @@ ht-degree: 3%
 
 Após a conclusão bem-sucedida do script de inicialização do [esquema de vendas de varejo e tutorial de conjunto de dados](./create-retails-sales-dataset.md). Esquemas de saída e conjuntos de dados podem ser exibidos em [!DNL Experience Platform]. Para exibir os esquemas e conjuntos de dados, siga as etapas abaixo:
 
-Selecione a guia **[!UICONTROL Esquemas]**, localizada na navegação à esquerda, e localize o esquema de entrada criado pelo script de inicialização. O nome do esquema corresponderá ao que foi definido em `config.yaml` na etapa anterior. Exiba os detalhes do esquema e sua composição clicando nele.
+Selecione a guia **[!UICONTROL Schemas]**, localizada na navegação à esquerda, e localize o esquema de entrada criado pelo script de inicialização. O nome do esquema corresponderá ao que foi definido em `config.yaml` na etapa anterior. Exiba os detalhes do esquema e sua composição clicando nele.
 
 ![](../images/models-recipes/access-data/schema.PNG)
 
-Selecione a guia **[!UICONTROL Conjuntos de Dados]**, localizada na navegação à esquerda, e abra o conjunto de dados de entrada criado selecionando o nome do conjunto de dados. O nome do conjunto de dados corresponde ao que foi definido em `config.yaml` na etapa anterior.
+Selecione a guia **[!UICONTROL Datasets]**, localizada na navegação à esquerda, e abra o conjunto de dados de entrada criado selecionando o nome do conjunto de dados. O nome do conjunto de dados corresponde ao que foi definido em `config.yaml` na etapa anterior.
 
 ![](../images/models-recipes/access-data/dataset.PNG)
 
-Selecione **[!UICONTROL Visualizar Conjunto de Dados]**, localizado no canto superior direito, para visualizar um subconjunto do conjunto de dados.
+Selecione **[!UICONTROL Preview Dataset]**, localizado no canto superior direito, para visualizar um subconjunto do conjunto de dados.
 
 ![](../images/models-recipes/access-data/preview.PNG)
 
@@ -39,6 +39,7 @@ Selecione **[!UICONTROL Visualizar Conjunto de Dados]**, localizado no canto sup
 Você assimilou com êxito dados de amostra de Vendas de Varejo em [!DNL Experience Platform] usando o script de inicialização fornecido.
 
 Para continuar trabalhando com os dados assimilados:
+
 - [Analise dados usando o Jupyter Notebooks](../jupyterlab/analyze-your-data.md)
    - Use o Jupyter Notebooks no [!DNL Data Science Workspace] para acessar, explorar, visualizar e entender seus dados.
 - [Compactar arquivos de origem em uma fórmula](./package-source-files-recipe.md)

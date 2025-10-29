@@ -4,7 +4,7 @@ title: Recursos gerais de acessibilidade no Experience Platform
 type: Documentation
 description: Saiba mais sobre os recursos gerais de acessibilidade compatíveis com o Adobe Experience Platform, incluindo navegação pelo teclado, paletas e contraste de cores e suporte à tecnologia assistiva.
 exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '483'
 ht-degree: 0%
@@ -24,6 +24,7 @@ Os usuários portadores de deficiências frequentemente dependem de hardware e s
 O Experience Platform se esforça para oferecer suporte à acessibilidade total do teclado.
 
 Os seguintes elementos de navegação facilitam a acessibilidade:
+
 * A tecla Tab se move entre elementos da interface, seções e grupos de menu.
 * As teclas de seta se movem dentro de grupos de menus para definir o foco para elementos ativos individuais.
 * Shift + Tab move-se para trás pela ordem de tabulação.

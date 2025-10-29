@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;receita de vendas de varejo;Data Science Workspace;tópicos populares;receitas;;retail sales revenue;Data Science;popular topics;recipes
+keywords: Experience Platform;receita de vendas de varejo;Ciência de dados;Workspace;tópicos populares;receitas;;retail sales revenue;Data Science;popular topics;recipes
 solution: Experience Platform
 title: Criar o esquema e o conjunto de dados de vendas de varejo
 type: Tutorial
-description: Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais do Adobe Experience Platform Data Science Workspace. Após a conclusão, o esquema de Vendas de varejo e os conjuntos de dados estarão disponíveis para você e os membros de sua organização no Experience Platform.
+description: Este tutorial fornece os pré-requisitos e os ativos necessários para todos os outros tutoriais do Adobe Experience Platform Data Science Workspace. Após a conclusão, o esquema de Vendas de varejo e os conjuntos de dados estarão disponíveis para você e os membros de sua organização na Experience Platform.
 exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 2%
@@ -26,6 +26,7 @@ Este tutorial fornece os pré-requisitos e os ativos necessários para todos os 
 ## Introdução
 
 Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
+
 - Acesso a [!DNL Adobe Experience Platform]. Se você não tiver acesso a uma organização no [!DNL Experience Platform], fale com o administrador do sistema antes de continuar.
 - Autorização para fazer chamadas de API [!DNL Experience Platform]. Conclua o tutorial [Autenticar e acessar APIs do Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) para obter os seguintes valores para concluir com êxito este tutorial:
    - Autorização: `{ACCESS_TOKEN}`
@@ -33,7 +34,7 @@ Antes de iniciar este tutorial, você deve ter os seguintes pré-requisitos:
    - x-gw-ims-org-id `{ORG_ID}`
    - Segredo do cliente: `{CLIENT_SECRET}`
    - Certificado do cliente: `{PRIVATE_KEY}`
-- Dados de exemplo e arquivos de origem para a [Receita de Vendas de Varejo](../pre-built-recipes/retail-sales.md). Baixe os ativos necessários para este e outros tutoriais do [!DNL Data Science Workspace] no [repositório Git público do Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
+- Dados de exemplo e arquivos de origem para a [Receita de Vendas de Varejo](../pre-built-recipes/retail-sales.md). Baixe os ativos necessários para este e outros tutoriais do [!DNL Data Science Workspace] no [repositório Git público da Adobe](https://github.com/adobe/experience-platform-dsw-reference/).
 - [Python >= 2.7](https://www.python.org/downloads/) e os seguintes [!DNL Python] pacotes:
    - [pip](https://pypi.org/project/pip/)
    - [PyYAML](https://pyyaml.org/)
@@ -117,6 +118,7 @@ para obter mais informações.
 Você também assimilou com êxito dados de amostra de Vendas de Varejo em [!DNL Experience Platform] usando o script de inicialização fornecido.
 
 Para continuar trabalhando com os dados assimilados:
+
 - [Analise dados usando o Jupyter Notebooks](../jupyterlab/analyze-your-data.md)
    - Use o Jupyter Notebooks no Data Science Workspace para acessar, explorar, visualizar e entender seus dados.
 - [Compactar arquivos de origem em uma fórmula](./package-source-files-recipe.md)

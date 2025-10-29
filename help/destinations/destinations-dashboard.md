@@ -1,22 +1,26 @@
 ---
-keywords: Experience Platform;interface do usuário;UI;personalização;uso de licença painel;painel;uso de licença;direito;consumo
+keywords: Experience Platform;interface do usuário;UI;personalização;uso de licença painel;painel;uso de licença;direito;consumo;;user interface;UI;customization;license usage dashboard;dashboard;license usage;entitlement;consumption
 title: Painel de destinos
 description: A interface do usuário do Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
-source-git-commit: 998332007465c1f8457b5d8cf0e153d513505d39
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '121'
+source-wordcount: '65'
 ht-degree: 0%
 
 ---
 
 
-# Painel [!UICONTROL Destinos] {#destinations-dashboard}
+# Painel [!UICONTROL Destinations] {#destinations-dashboard}
 
 A interface do usuário (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os destinos ativos da sua organização, conforme capturados durante um instantâneo diário.
 
-Para obter instruções detalhadas sobre como acessar e interagir com o painel de destinos na interface do usuário, bem como para saber mais sobre as métricas disponíveis exibidas no painel, visite o [guia do painel de destinos](../dashboards/guides/destinations.md).
+<!--
+Broken links; this article is not in TOC
 
-Para obter uma visão geral de todos os recursos do painel no Experience Platform, comece lendo a [visão geral dos painéis](../../dashboards/home.md).
+For detailed instructions on how to access and interact with the destinations dashboard in the UI, as well as to learn more about the available metrics displayed in the dashboard, please visit the [destinations dashboard guide](../dashboards/guides/destinations.md).  
+
+For an overview of all of the dashboard features within Experience Platform, please begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ![](images/destinations-dashboard/dashboard-overview.png)
+-->

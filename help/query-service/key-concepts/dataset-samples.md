@@ -2,7 +2,7 @@
 title: Amostras de conjunto de dados
 description: Os conjuntos de dados de amostra do Serviço de consulta permitem realizar consultas exploratórias em grandes volumes de dados com tempo de processamento bastante reduzido, à custa da precisão da consulta. Este guia fornece informações sobre como gerenciar suas amostras para o processamento aproximado de consultas
 exl-id: 9e676d7c-c24f-4234-878f-3e57bf57af44
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '633'
 ht-degree: 1%
@@ -18,12 +18,12 @@ Como muitos usuários não precisam de uma resposta exata para uma operação ag
 Para ajudar você a gerenciar suas amostras para o processamento aproximado de consultas, o Serviço de consulta oferece suporte às seguintes operações para amostras de conjunto de dados:
 
 - [Amostras de conjunto de dados](#dataset-samples)
-   - [Introdução {#get-started}](#getting-started-get-started)
-   - [Criar uma amostra de conjunto de dados aleatório uniforme {#create-a-sample}](#create-a-uniform-random-dataset-sample-create-a-sample)
-   - [Opcionalmente, especifique um critério de filtro {#optional-filter-criteria}](#optionally-specify-a-filter-criteria-optional-filter-criteria)
-   - [Exibir a lista de amostras {#view-list-of-samples}](#view-the-list-of-samples-view-list-of-samples)
-   - [Consulte o conjunto de dados de exemplo {#query-sample-datasets}](#query-the-sample-dataset-query-sample-datasets)
-   - [Excluir amostras do conjunto de dados {#delete-a-sample}](#delete-dataset-samples-delete-a-sample)
+   - [Introdução](#getting-started-get-started)
+   - [Criar uma amostra uniforme de conjunto de dados aleatório](#create-a-uniform-random-dataset-sample-create-a-sample)
+   - [Opcionalmente, especifique um critério de filtro](#optionally-specify-a-filter-criteria-optional-filter-criteria)
+   - [Exibir a lista de amostras](#view-the-list-of-samples-view-list-of-samples)
+   - [Consulte o conjunto de dados de amostra](#query-the-sample-dataset-query-sample-datasets)
+   - [Excluir amostras do conjunto de dados](#delete-dataset-samples-delete-a-sample)
 
 ## Introdução {#get-started}
 
@@ -83,7 +83,7 @@ A lista de amostras de conjunto de dados é exibida no formato do exemplo abaixo
 
 ```shell
                   sample_table_name                  |    sample_dataset_id     |    parent_dataset_id     | sample_type | sampling_rate | sample_num_rows |       created      
------------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
+|-----------------------------------------------------+--------------------------+--------------------------+-------------+---------------+-----------------+---------------------
  x5e5cd8ea0a83c418a8ef0928_uniform_4_0_percent_ughk7 | 62ff19853d338f1c07b18965 | 5e5cd8ea0a83c418a8ef0928 | uniform     |           4.0 |             391 | 19/08/2022 05:03:01
 (1 row)
 ```

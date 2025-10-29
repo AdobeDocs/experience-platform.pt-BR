@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da interface do usuário do JupyterLab
 description: O JupyterLab é uma interface de usuário baseada na Web para o Projeto Jupyter e está totalmente integrado ao Adobe Experience Platform. Ele fornece um ambiente de desenvolvimento interativo para cientistas de dados trabalharem com notebooks, códigos e dados Jupyter. Este documento fornece uma visão geral do JupyterLab e seus recursos, bem como instruções para executar ações comuns.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1831'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ Informações sobre os principais recursos do [!DNL JupyterLab] e instruções s
 
 ### Acessar [!DNL JupyterLab] {#access-jupyterlab}
 
-Em [Adobe Experience Platform](https://platform.adobe.com), selecione **[!UICONTROL Blocos de Anotações]** na coluna de navegação esquerda. Aguarde algum tempo para que [!DNL JupyterLab] seja totalmente inicializado.
+Em [Adobe Experience Platform](https://platform.adobe.com), selecione **[!UICONTROL Notebooks]** na coluna de navegação esquerda. Aguarde algum tempo para que [!DNL JupyterLab] seja totalmente inicializado.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -112,7 +112,7 @@ A área de trabalho principal do [!DNL JupyterLab] permite que você organize do
 
 ### Configuração do servidor de GPU e memória em [!DNL Python]/R
 
-Em [!DNL JupyterLab], selecione o ícone de engrenagem no canto superior direito para abrir a *Configuração do Notebook Server*. Você pode ativar a GPU e alocar a quantidade de memória necessária usando o controle deslizante. A quantidade de memória que você pode alocar depende do quanto sua organização provisionou. Selecione **[!UICONTROL Atualizar configurações]** para salvar.
+Em [!DNL JupyterLab], selecione o ícone de engrenagem no canto superior direito para abrir a *Configuração do Notebook Server*. Você pode ativar a GPU e alocar a quantidade de memória necessária usando o controle deslizante. A quantidade de memória que você pode alocar depende do quanto sua organização provisionou. Selecione **[!UICONTROL Update configs]** para salvar.
 
 >[!NOTE]
 >
@@ -122,9 +122,9 @@ Em [!DNL JupyterLab], selecione o ícone de engrenagem no canto superior direito
 
 ### Encerrar e reiniciar [!DNL JupyterLab]
 
-No [!DNL JupyterLab], você pode encerrar sua sessão para impedir que outros recursos sejam usados. Comece selecionando o **ícone de energia** ![ícone de energia](/help/images/icons/power.png) e selecione **[!UICONTROL Desligar]** no popover que parece encerrar sua sessão. As sessões de notebook são encerradas automaticamente após 12 horas sem atividade.
+No [!DNL JupyterLab], você pode encerrar sua sessão para impedir que outros recursos sejam usados. Comece selecionando o **ícone de energia** ![ícone de energia](/help/images/icons/power.png) e selecione **[!UICONTROL Shut Down]** no popover que parece encerrar sua sessão. As sessões de notebook são encerradas automaticamente após 12 horas sem atividade.
 
-Para reiniciar [!DNL JupyterLab], selecione o **ícone de reiniciar** ![ícone de reiniciar](/help/images/icons/restart.png) localizado diretamente à esquerda do ícone de energia e selecione **[!UICONTROL Reiniciar]** no popover exibido.
+Para reiniciar [!DNL JupyterLab], selecione o **ícone de reiniciar** ![ícone de reiniciar](/help/images/icons/restart.png), localizado diretamente à esquerda do ícone de energia, e selecione **[!UICONTROL Restart]** no popover exibido.
 
 ![finalizar jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
@@ -140,7 +140,7 @@ As ações comuns das células são descritas abaixo:
 
 * **Mover uma célula:** Coloque o cursor à direita da célula que deseja mover, clique e arraste a célula para um novo local. Além disso, mover uma célula de um notebook para outro replica a célula junto com seu conteúdo.
 
-* **Execute uma célula:** Clique no corpo da célula que deseja executar e clique no ícone **reproduzir** (**&#x200B;**) no menu do bloco de anotações. Um asterisco (**\***) é exibido no contador de execução da célula quando o kernel está processando a execução e é substituído por um número inteiro após a conclusão.
+* **Execute uma célula:** clique no corpo da célula que deseja executar e clique no ícone **reproduzir** (**▶**) no menu do bloco de anotações. Um asterisco (**\***) é exibido no contador de execução da célula quando o kernel está processando a execução e é substituído por um número inteiro após a conclusão.
 
 * **Excluir uma célula:** clique no corpo da célula que deseja excluir e clique no ícone **tesoura**.
 
@@ -264,6 +264,7 @@ Para obter uma lista de pacotes compatíveis com o Python, R e PySpark, copie e 
 ![exemplo](../images/jupyterlab/user-guide/libraries.PNG)
 
 Além disso, as seguintes dependências são usadas, mas não listadas:
+
 * CUDA 11.2
 * CUDNN 8.1
 

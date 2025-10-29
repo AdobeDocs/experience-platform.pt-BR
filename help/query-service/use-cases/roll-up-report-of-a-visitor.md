@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;serviço de con
 title: Exibir um relatório de rollup para um visitante específico
 description: O documento a seguir fornece exemplos de consultas envolvendo eventos de experiência no serviço de consulta da Adobe Experience Platform.
 exl-id: 1348503f-65c1-41f9-b111-1284a49449a1
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 1%
@@ -43,7 +43,7 @@ Os resultados da query são exibidos na tabela abaixo.
 
 ```console
                id                 | pageViews |   A   |   B   |   C   | viewedParkas
-----------------------------------+-----------+-------+-------+-------+--------------
+|----------------------------------+-----------+-------+-------+-------+--------------
 457C3510571E5930-69AA721C4CBF9339 |     706.0 | 83.0  |  7.0  | 38.0  |          22
 ```
 

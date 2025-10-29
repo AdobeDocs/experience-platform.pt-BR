@@ -5,10 +5,10 @@ title: Excluir uma conta de destino usando a API de Serviço de Fluxo
 type: Tutorial
 description: Saiba como excluir uma conta de destino usando a API de serviço de fluxo.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 16%
+source-wordcount: '762'
+ht-degree: 21%
 
 ---
 
@@ -35,11 +35,11 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Leitura de chamadas de API de amostra {#reading-sample-api-calls}
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas da [!DNL Experience Platform].
 
-### Coletar valores para cabeçalhos necessários {#gather-values-for-required-headers}
+### Coletar valores para cabeçalhos obrigatórios {#gather-values-for-required-headers}
 
-Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs da [!DNL Experience Platform], você deve concluir primeiro o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -64,7 +64,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 A primeira etapa ao excluir uma conta de destino é descobrir a ID de conexão que corresponde à conta de destino que você deseja excluir.
 
-Na interface do usuário do Experience Platform, navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Contas]** e selecione a conta que deseja excluir selecionando o número na coluna **[!UICONTROL Destinos]**.
+Na interface do Experience Platform, navegue até **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** e selecione a conta que deseja excluir selecionando o número na coluna **[!UICONTROL Destinations]**.
 
 ![Selecione a conta de destino a ser excluída](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
@@ -147,7 +147,8 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Antes de excluir a conta de destino, você deve excluir todos os fluxos de dados existentes para a conta de destino.
->Para excluir fluxos de dados existentes, consulte as páginas abaixo:
+>>Para excluir fluxos de dados existentes, consulte as páginas abaixo:
+>
 >* [Usar a interface do usuário do Experience Platform](../ui/delete-destinations.md) para excluir fluxos de dados existentes;
 >* [Use a API de Serviço de Fluxo](delete-destination-dataflow.md) para excluir fluxos de dados existentes.
 

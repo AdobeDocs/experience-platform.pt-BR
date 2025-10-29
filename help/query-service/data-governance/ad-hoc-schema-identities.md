@@ -2,7 +2,7 @@
 title: Definir identidades principais em um conjunto de dados ad hoc
 description: O Adobe Experience Platform Query Service permite definir uma identidade ou uma identidade primária para campos de conjunto de dados de esquema ad hoc diretamente por meio do comando SQL ALTER TABLE. O documento explica como usar o comando ALTER TABLE para definir uma identidade primária ou secundária.
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '447'
 ht-degree: 1%
@@ -68,7 +68,7 @@ Um exemplo de uma tabela retornada é exibido abaixo.
 
 ```console
  tableName | columnName | datatype | namespace | ifPrimary
------------+------------+----------+-----------+----------
+|-----------+------------+----------+-----------+----------
 (0 rows)
 ```
 
@@ -78,4 +78,4 @@ A lista a seguir explica considerações importantes para atualizar identidades 
 
 * Para especificar uma coluna como identidade, você **deve** também definir o namespace a ser preservado como metadados para a coluna.
 * O XDM não oferece suporte à especificação de um nome de coluna no atributo de namespace.
-* Se o esquema usar o campo XDM `identityMap`, o objeto **de nível superior ou raiz `identityMap` deverá** ser rotulado como uma identidade ou identidade primária.
+* Se o esquema usar o campo XDM `identityMap`, o objeto `identityMap` de nível superior ou raiz **deverá** ser rotulado como uma identidade ou identidade primária.

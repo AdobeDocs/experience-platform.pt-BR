@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;receita de vendas de varejo;Data Science Workspace;tópicos populares;receitas;receita de pré-compilação
+keywords: Experience Platform;receita de vendas de varejo;Ciência de dados Workspace;tópicos populares;receitas;receita de pré-compilação
 solution: Experience Platform
 title: Receita de vendas de varejo
-description: A fórmula de Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período de tempo. Com um modelo de previsão preciso, o varejista seria capaz de encontrar a relação entre as políticas de demanda e de preços e tomar decisões de preços otimizadas para maximizar as vendas e a receita.
+description: A fórmula de Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período de tempo. Com um modelo de previsão preciso, a retailer seria capaz de encontrar a relação entre as políticas de demanda e de preços e tomar decisões de preços otimizadas para maximizar as vendas e a receita.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 2%
@@ -19,16 +19,17 @@ ht-degree: 2%
 >
 >Esta documentação destina-se aos clientes existentes com direitos anteriores ao Data Science Workspace.
 
-A fórmula de Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período de tempo. Com um modelo de previsão preciso, o varejista seria capaz de encontrar a relação entre as políticas de demanda e de preços e tomar decisões de preços otimizadas para maximizar as vendas e a receita.
+A fórmula de Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período de tempo. Com um modelo de previsão preciso, a retailer seria capaz de encontrar a relação entre as políticas de demanda e de preços e tomar decisões de preços otimizadas para maximizar as vendas e a receita.
 
 O documento a seguir responderá perguntas como:
+
 * Para quem esta receita foi criada?
 * O que esta receita faz?
 * Como começar?
 
 ## Para quem esta receita foi criada?
 
-Um varejista enfrenta muitos desafios para se manter competitivo no mercado atual. Sua marca busca aumentar as vendas anuais para sua marca de varejo, mas há muitas decisões a serem tomadas para minimizar seus custos operacionais. Demasiada oferta aumenta os custos de estoque, enquanto uma oferta muito pequena aumenta o risco de perder clientes para outras marcas. Você precisa pedir mais suprimentos para os próximos meses? Como você decide os preços ideais para seus produtos a fim de manter as metas de vendas semanais?
+Um retailer enfrenta muitos desafios para se manter competitivo no mercado atual. Sua marca busca aumentar as vendas anuais para sua marca de varejo, mas há muitas decisões a serem tomadas para minimizar seus custos operacionais. Demasiada oferta aumenta os custos de estoque, enquanto uma oferta muito pequena aumenta o risco de perder clientes para outras marcas. Você precisa pedir mais suprimentos para os próximos meses? Como você decide os preços ideais para seus produtos a fim de manter as metas de vendas semanais?
 
 ## O que esta receita faz?
 

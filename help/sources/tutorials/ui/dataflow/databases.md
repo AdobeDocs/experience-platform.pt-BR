@@ -5,9 +5,9 @@ title: Criar um Fluxo de Dados Usando um Source de Banco de Dados na Interface
 type: Tutorial
 description: Um fluxo de dados é uma tarefa agendada que recupera e assimila dados de uma origem para um conjunto de dados do Experience Platform. Este tutorial fornece etapas sobre como criar um fluxo de dados para uma origem de banco de dados usando a interface do usuário do Experience Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: 6de14e210b78b321ed7d2c4c30769c260694f474
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1787'
 ht-degree: 1%
 
 ---
@@ -120,13 +120,20 @@ Consulte a tabela abaixo para obter mais informações sobre como programar conf
 
 | Configuração de agendamento | Descrição |
 | --- | --- |
-| Frequência | Configure a frequência para indicar a frequência de execução do fluxo de dados. Você pode definir a frequência como: <ul><li>**Uma vez**: defina sua frequência como `once` para criar uma assimilação única. As configurações para intervalo e preenchimento retroativo não estão disponíveis ao criar um fluxo de dados de assimilação única. Por padrão, a frequência de agendamento é definida como uma vez.</li><li>**Minuto**: Defina sua frequência como `minute` para agendar seu fluxo de dados para assimilar dados por minuto.</li><li>**Hora**: Defina sua frequência como `hour` para agendar seu fluxo de dados para assimilar dados por hora.</li><li>**Dia**: Defina sua frequência como `day` para agendar seu fluxo de dados para assimilar dados por dia.</li><li>**Semana**: Defina sua frequência como `week` para agendar seu fluxo de dados para assimilar dados por semana.</li></ul> |
+| Frequência | Configure a frequência para indicar a frequência de execução do fluxo de dados. Você pode definir a frequência como: <ul><li>**Uma vez**: defina sua frequência como `once` para criar uma assimilação única. As configurações para intervalo e preenchimento retroativo não estão disponíveis ao criar um fluxo de dados de assimilação única. Por padrão, a frequência de agendamento é definida como uma vez.</li><li>**Minuto**: Defina sua frequência como `minute` para agendar seu fluxo de dados para assimilar dados por minuto.</li><li>**Hora**: Defina sua frequência como `hour` para agendar seu fluxo de dados para assimilar dados por hora.</li><li>**Dia**: Defina sua frequência como `day` para agendar seu fluxo de dados para assimilar dados por dia.</li><li>**Semana**: Defina sua frequência como `week` para agendar seu fluxo de dados para assimilar dados por semana. Para obter mais informações, leia a seção sobre [noções básicas sobre a programação de assimilação semanal] (#weekly).</li></ul> |
 | Intervalo | Depois de selecionar uma frequência, você pode definir o intervalo para estabelecer o intervalo de tempo entre cada assimilação. Por exemplo, se você definir a frequência como dia e configurar o intervalo como 15, o fluxo de dados será executado a cada 15 dias. Você não pode definir o intervalo como zero. O valor mínimo de intervalo aceito para cada frequência é o seguinte:<ul><li>**Uma vez**: n/d</li><li>**Minuto**: 15</li><li>**Hora**: 1</li><li>**Dia**: 1</li><li>**Semana**: 1</li></ul> |
 | Hora de início | O carimbo de data e hora da execução projetada, apresentado no fuso horário UTC. |
 | Preenchimento retroativo | O preenchimento retroativo determina quais dados são assimilados inicialmente. Se o preenchimento retroativo estiver ativado, todos os arquivos atuais no caminho especificado serão assimilados durante a primeira assimilação agendada. Se o preenchimento retroativo estiver desativado, somente os arquivos carregados entre a primeira execução da assimilação e a hora de início serão assimilados. Os arquivos carregados antes da hora de início não serão assimilados. |
 | Carregar dados incrementais por | Uma opção com um conjunto filtrado de campos de esquema de origem de tipo, data ou hora. O campo selecionado para **[!UICONTROL Load incremental data by]** deve ter seus valores de data e hora no fuso horário UTC para carregar corretamente os dados incrementais. Todas as origens de lote baseadas em tabela selecionam dados incrementais comparando um valor de carimbo de data/hora da coluna delta com a janela de execução de fluxo correspondente Horário UTC e, em seguida, copiando os dados da origem, se algum dado novo for encontrado na janela de tempo UTC. |
 
 ![preenchimento retroativo](../../../images/tutorials/dataflow/table-based/backfill.png)
+
+### Noções básicas da programação de assimilação semanal {#weekly}
+
+Quando você opta por definir seu fluxo de dados para execução semanal, o fluxo de dados é executado com base em um destes cenários:
+
+* Se sua fonte de dados tiver sido criada, mas nenhum dado tiver sido assimilado ainda, o primeiro fluxo de dados semanal será executado sete dias após a data de criação da fonte. Esse intervalo de 7 dias sempre começa a partir de quando a origem foi criada, independentemente de quando você configurou o agendamento. Após a execução inicial, o fluxo de dados continuará a ser executado semanalmente, de acordo com o agendamento configurado.
+* Se os dados da sua fonte tiverem sido assimilados anteriormente e você os agendar para assimilação semanal novamente, o próximo fluxo de dados será executado 7 dias após a assimilação bem-sucedida mais recente.
 
 ## Revisar seu fluxo de dados
 

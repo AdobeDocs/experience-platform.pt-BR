@@ -4,7 +4,7 @@ description: Saiba mais sobre o uso de sua licença e os limites de capacidade n
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
 source-git-commit: ae0c626eaad66f663c9d97137087b2cca24d747e
 workflow-type: tm+mt
-source-wordcount: '1621'
+source-wordcount: '1605'
 ht-degree: 6%
 
 ---
@@ -35,7 +35,7 @@ Para obter mais informações sobre medidas de proteção no Experience Platform
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Taxa de transferência de transmissão"
->abstract="O valor da taxa de transferência de transmissão mede o pico combinado de eventos de entrada por segundo para assimilação da transmissão no serviço de perfil, em suas sandboxes de produção e desenvolvimento."
+>abstract="O valor da taxa de transferência de transmissão mede o pico combinado de eventos de entrada por segundo para ingestão de transmissão no serviço de perfil, em suas sandboxes de produção e desenvolvimento."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
@@ -58,7 +58,7 @@ Nesses serviços, as seguintes medidas de proteção são rastreadas:
    - Desses 500 públicos-alvo de transmissão, o número máximo de públicos-alvo de borda é 150
 - A taxa de transferência inicial combinada para assimilação por transmissão é de 1500 registros por segundo (rps)
    - Essa taxa de transferência de transmissão combinada mede o pico combinado de eventos de entrada por segundo para a assimilação de transmissão no Perfil do cliente em tempo real em suas sandboxes de produção e desenvolvimento.
-   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 A capacidade de público-alvo está no nível de **sandbox**. Isso significa que, para cada sandbox que você tem em sua organização, você pode ter 500 públicos-alvo de transmissão, dos quais 150 podem ser públicos-alvo de borda.
 
@@ -72,7 +72,7 @@ Se o uso ultrapassar 100% da capacidade licenciada, você será considerado em v
 
 ## Acesso {#access}
 
-Para acessar a visão geral de Capacidade, selecione **[!UICONTROL Uso da licença]** seguido por **[!UICONTROL Capacidade]**.
+Para acessar a visão geral de Capacidade, selecione **[!UICONTROL License usage]** seguido por **[!UICONTROL Capacity]**.
 
 ![O método para acessar a seção Capacidade está realçado.](/help/landing/images/capacity/access-capacity.png)
 
@@ -82,7 +82,7 @@ A página Visão geral da capacidade é exibida, mostrando informações, inclui
 
 ### Histórico de alertas {#alert-history}
 
-A seção **[!UICONTROL Histórico de alertas]** exibe uma lista das violações de capacidade mais recentes na sua organização.
+A seção **[!UICONTROL Alert history]** exibe uma lista das violações de capacidade mais recentes em sua organização.
 
 ![A seção Histórico de alertas é exibida.](/help/landing/images/capacity/alert-history.png)
 
@@ -92,7 +92,7 @@ A seção **[!UICONTROL Histórico de alertas]** exibe uma lista das violações
 | Alerta | A capacidade que foi violada na sandbox. |
 | Carimbo de data e hora | Os dados e a hora em que a violação ocorreu. |
 
-Para exibir um histórico completo dos alertas da sua organização, selecione o ![ícone de três pontos](/help/images/icons/more.png), seguido por **[!UICONTROL Exibir todos]**.
+Para exibir um histórico completo dos alertas da sua organização, selecione o ![ícone de três pontos](/help/images/icons/more.png), seguido de **[!UICONTROL View all]**.
 
 ![O histórico completo de alertas é exibido para uma organização.](/help/landing/images/capacity/full-alert-history.png)
 
@@ -127,7 +127,7 @@ A página de detalhes da Taxa de transferência de transmissão é exibida. Voc�
 
 ![A página de taxa de transferência de streaming é exibida, mostrando informações detalhadas sobre a taxa de transferência de streaming da sandbox selecionada.](/help/landing/images/capacity/streaming-capacity-allocation.png)
 
-Para atualizar as capacidades de taxa de transferência de streaming da organização, selecione **[!UICONTROL Alocar capacidades]**.
+Para atualizar as capacidades de taxa de transferência de streaming da organização, selecione **[!UICONTROL Allocate capacities]**.
 
 ![O botão Alocar capacidades está realçado na página de detalhes da taxa de transferência de streaming.](/help/landing/images/capacity/select-allocate.png)
 
@@ -141,11 +141,11 @@ A página de alocação é exibida. Nesta página, você pode definir suas capac
 >
 >Se o valor não for da ordem de 100, ele será arredondado para cima ou para baixo de acordo.
 
-Depois de atualizar as alocações de capacidade, selecione **[!UICONTROL Salvar]** para concluir as atualizações. Observe que pode levar até 10 minutos para que as alterações sejam refletidas em sua organização.
+Depois de atualizar as alocações de capacidade, selecione **[!UICONTROL Save]** para concluir as atualizações. Observe que pode levar até 10 minutos para que as alterações sejam refletidas em sua organização.
 
 #### Contagem de público-alvo {#audience-count}
 
-As seções **[!UICONTROL Contagem de público-alvo de streaming]** e **[!UICONTROL Contagem de público-alvo do Edge]** exibem o número de públicos de streaming e de borda na sandbox, bem como o número máximo de públicos de streaming e de borda permitidos na sandbox.
+As seções **[!UICONTROL Streaming audience count]** e **[!UICONTROL Edge audience count]** exibem o número de públicos de streaming e borda na sandbox, bem como o número máximo de públicos de streaming e borda permitidos na sandbox.
 
 ![As seções de contagem de público-alvo são exibidas.](/help/landing/images/capacity/audience-count.png)
 
@@ -175,7 +175,7 @@ Além disso, você pode examinar seus fluxos de dados e ver se pode otimizar sua
 
 O vídeo a seguir fornece uma visão geral da Capacidade.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475278/?learn=on&enablevpops&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Perguntas frequentes {#faq}
 

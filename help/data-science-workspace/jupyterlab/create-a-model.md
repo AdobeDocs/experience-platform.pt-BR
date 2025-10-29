@@ -69,7 +69,7 @@ O restante deste tutorial aborda os seguintes arquivos que são predefinidos no 
 
 O tutorial em vídeo a seguir explica o bloco de anotações do modelo de propensão Luma:
 
->[!VIDEO](https://video.tv.adobe.com/v/333570)
+>[!VIDEO](https://video.tv.adobe.com/v/3452497?captions=por_br)
 
 ### Arquivo de requisitos {#requirements-file}
 

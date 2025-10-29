@@ -195,4 +195,4 @@ Quando terminar de filtrar os dados e puder exibir as informações apropriadas,
 
 O vídeo a seguir foi projetado para ajudar a saber como usar a página de insights do Attribution AI para entender o ROI de canais e campanhas de marketing.
 
->[!VIDEO](https://video.tv.adobe.com/v/32669?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3413369?captions=por_br&learn=on&quality=12)

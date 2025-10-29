@@ -158,4 +158,4 @@ Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as p
 
 ## Recursos adicionais {#additional-resources}
 
-* [Conector de Source de Streaming RainFocus](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [Conector de Source de Streaming RainFocus](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sources/connectors/analytics/rainfocus)

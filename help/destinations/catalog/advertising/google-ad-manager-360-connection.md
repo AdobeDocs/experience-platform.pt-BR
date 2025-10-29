@@ -90,7 +90,7 @@ A inclusão na lista de permissões é obrigatória antes de configurar seu prim
 > 
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 

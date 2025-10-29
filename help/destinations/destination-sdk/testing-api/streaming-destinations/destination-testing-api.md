@@ -26,8 +26,8 @@ Você pode usar a [Amostra da API de geração de perfil](sample-profile-generat
 
 >[!IMPORTANT]
 >
->* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Leia [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [ativar perfis e públicos a um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obter mais informações.
->* Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar em chamadas de API para este ponto de extremidade ao [navegar em uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Leia [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR) e [ativar perfis e públicos a um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=pt-BR) para obter mais informações.
+>* Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar em chamadas de API para este ponto de extremidade ao [navegar em uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=pt-BR).
 >  &#x200B;>![Imagem da interface do usuário para obter a ID da instância de destino](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Introdução às operações de API de teste de destino {#get-started}

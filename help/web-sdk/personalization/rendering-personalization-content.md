@@ -16,7 +16,7 @@ O Adobe Experience Platform Web SDK oferece suporte à recuperação de conteúd
 
 Além disso, o Web SDK habilita recursos de personalização de mesma página e próxima página por meio de destinos de personalização do Adobe Experience Platform, como o [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) e a [conexão de personalização personalizada](../../destinations/catalog/personalization/custom-personalization.md). Para saber como configurar o Experience Platform para personalização de mesma página e próxima página, consulte o [guia dedicado](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-O conteúdo criado no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) do Adobe Target e na [Interface do usuário do Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) do Adobe Journey Optimizer pode ser recuperado e renderizado automaticamente pela SDK. O conteúdo criado no [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) do Adobe Target, no [Canal de experiência baseado em código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) do Adobe Journey Optimizer ou no Offer Decisioning não pode ser renderizado automaticamente pelo SDK. Em vez disso, você deve solicitar esse conteúdo usando o SDK e, em seguida, renderizar manualmente o conteúdo.
+O conteúdo criado no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR) do Adobe Target e na [Interface do usuário do Web Campaign](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=pt-BR) do Adobe Journey Optimizer pode ser recuperado e renderizado automaticamente pela SDK. O conteúdo criado no [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=pt-BR) do Adobe Target, no [Canal de experiência baseado em código](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/code-based-experience/get-started-code-based) do Adobe Journey Optimizer ou no Offer Decisioning não pode ser renderizado automaticamente pelo SDK. Em vez disso, você deve solicitar esse conteúdo usando o SDK e, em seguida, renderizar manualmente o conteúdo.
 
 ## Renderização automática de conteúdo {#automatic}
 
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### Caso de uso 2: renderizar apresentações que não têm um seletor
 
-Este caso de uso se aplica a experiências criadas usando o [!DNL Target Form-based Experience Composer] ou o [Canal de experiência baseado em código](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) do Adobe Journey Optimizer.
+Este caso de uso se aplica a experiências criadas usando o [!DNL Target Form-based Experience Composer] ou o [Canal de experiência baseado em código](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/code-based-experience/get-started-code-based) do Adobe Journey Optimizer.
 
 Você deve fornecer o seletor, a ação e o escopo na chamada `applyPropositions`.
 

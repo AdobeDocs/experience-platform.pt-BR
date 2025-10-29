@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Funções SQL definidas pela Adobe no Serviço de consulta
 
-As funções definidas pelo Adobe, aqui chamadas de ADFs, são funções pré-criadas no Serviço de Consulta do Adobe Experience Platform que ajudam a executar tarefas comerciais comuns em dados do [!DNL Experience Event]. Isso inclui funções para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) e [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) como aquelas encontradas no Adobe Analytics.
+As funções definidas pelo Adobe, aqui chamadas de ADFs, são funções pré-criadas no Serviço de Consulta do Adobe Experience Platform que ajudam a executar tarefas comerciais comuns em dados do [!DNL Experience Event]. Isso inclui funções para [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=pt-BR) e [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=pt-BR) como aquelas encontradas no Adobe Analytics.
 
 Este documento fornece informações para funções definidas pela Adobe disponíveis em [!DNL Query Service].
 
@@ -47,7 +47,7 @@ Ao trabalhar com dados do [!DNL Experience Event] originados de um site, aplicat
 
 Esse agrupamento ou sessão de dados ajuda a associar os eventos para descobrir mais contexto sobre a experiência do cliente.
 
-Para obter mais informações sobre a sessão no Adobe Analytics, consulte a documentação em [sessões com reconhecimento de contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Para obter mais informações sobre a sessão no Adobe Analytics, consulte a documentação em [sessões com reconhecimento de contexto](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=pt-BR).
 
 **Sintaxe de consulta**
 

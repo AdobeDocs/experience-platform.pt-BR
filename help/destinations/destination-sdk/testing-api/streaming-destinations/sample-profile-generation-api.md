@@ -47,8 +47,8 @@ Para obter a ID de uma instância de destino, primeiro crie uma conexão na inte
 
 >[!IMPORTANT]
 >
->* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Leia [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [ativar perfis e públicos a um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obter mais informações.
->* Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar em chamadas de API para este ponto de extremidade ao [navegar em uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Leia [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR) e [ativar perfis e públicos a um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=pt-BR) para obter mais informações.
+>* Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar em chamadas de API para este ponto de extremidade ao [navegar em uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=pt-BR).
 >
 >![Imagem da interface do usuário sobre como obter a ID da instância de destino](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -182,10 +182,10 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o número especificado d
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `segmentMembership` | Um objeto de mapa que descreve as associações de público-alvo do indivíduo. Para obter mais informações sobre `segmentMembership`, leia [Detalhes da Associação de Público-Alvo](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
+| `segmentMembership` | Um objeto de mapa que descreve as associações de público-alvo do indivíduo. Para obter mais informações sobre `segmentMembership`, leia [Detalhes da Associação de Público-Alvo](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=pt-BR). |
 | `lastQualificationTime` | Um carimbo de data e hora da última vez que esse perfil se qualificou para o segmento. |
 | `xdm:status` | Um campo de string que indica se a associação de público-alvo foi realizada como parte da solicitação atual. Os seguintes valores são aceitos: <ul><li>`realized`: O perfil faz parte do segmento.</li><li>`exited`: O perfil está saindo do público como parte da solicitação atual.</li></ul> |
-| `identityMap` | Um campo do tipo mapa que descreve os vários valores de identidade para um indivíduo, juntamente com seus namespaces associados. Para obter mais informações sobre `identityMap`, leia [Base da composição do esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
+| `identityMap` | Um campo do tipo mapa que descreve os vários valores de identidade para um indivíduo, juntamente com seus namespaces associados. Para obter mais informações sobre `identityMap`, leia [Base da composição do esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=pt-BR#identityMap). |
 
 {style="table-layout:auto"}
 

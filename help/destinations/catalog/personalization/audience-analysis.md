@@ -14,7 +14,7 @@ ht-degree: 3%
 
 # Destino da Análise de público-alvo
 
-O destino [!UICONTROL Audience Analysis] permite enriquecer os dados de público-alvo do Adobe Experience Platform no [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=pt-BR). Você pode selecionar quais públicos-alvo deseja incluir nos dados enriquecidos resultantes. As qualificações de público-alvo estão disponíveis como dimensões nos relatórios do [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
+O destino [!UICONTROL Audience Analysis] permite enriquecer os dados de público-alvo do Adobe Experience Platform no [Customer Journey Analytics](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=pt-BR). Você pode selecionar quais públicos-alvo deseja incluir nos dados enriquecidos resultantes. As qualificações de público-alvo estão disponíveis como dimensões nos relatórios do [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=pt-BR).
 
 >[!AVAILABILITY]
 >

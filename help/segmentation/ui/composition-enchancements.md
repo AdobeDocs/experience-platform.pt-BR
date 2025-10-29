@@ -3,7 +3,7 @@ title: Melhorias na composição do público-alvo
 description: Saiba mais sobre os aprimoramentos feitos na Composição de público-alvo com enriquecimento de público e ativação mais rápida.
 hide: true
 hidefromtoc: true
-source-git-commit: 9c790f0b47161301fa8c02c4afb7edfb925e1499
+source-git-commit: 065990790307124e0992731139abe9641a742a1b
 workflow-type: tm+mt
 source-wordcount: '470'
 ht-degree: 0%
@@ -48,12 +48,16 @@ Lembre-se dos seguintes detalhes e medidas de proteção ao usar o enriqueciment
 - O primeiro bloco usado na composição **deve** ser uma audiência baseada em regras.
 - Você **não pode** usar quaisquer outras operações dentro da composição.
 - Depois de publicado, você **não pode** editar a composição no público-alvo baseado em regras.
+
    - Você *pode* copiar a composição em um rascunho e editar esse rascunho se desejar fazer alterações na composição base ou no público-alvo com base em regras.
+
 - Somente uma matriz de objetos **one** pode ser usada para gerar a carga de enriquecimento em um único público-alvo
+
    - A matriz de carga pode ser aninhada em um objeto (até sete camadas no esquema de perfil), mas **não pode** estar contido em outra matriz.
    - A matriz de carga **deve** ter 50 linhas ou menos.
    - Todas as colunas de saída na carga **devem** ser de um tipo primitivo.
    - Somente as primeiras **vinte** colunas da matriz são geradas.
+
 - Apenas **dez** composições de público-alvo estão disponíveis para uso no momento
 
 ## Ativação mais rápida {#faster-activation}

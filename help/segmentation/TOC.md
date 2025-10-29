@@ -5,7 +5,7 @@ breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie públicos-alvo a partir dos dados do perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
 feature: Segments
 role: User
-source-git-commit: 0f1ccaf9ea698737eccc25cec6f5b46b7184fc11
+source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 43%
@@ -17,7 +17,7 @@ ht-degree: 43%
 
 - [Visão geral do serviço de segmentação](home.md)
 - [Tipos de dados de segmentação](data-types.md)
-- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=pt-BR#segmentation-guardrails)
+- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API de segmentação {#api}
    - [Visão geral](api/overview.md)
    - [Introdução](api/getting-started.md)
@@ -35,7 +35,7 @@ ht-degree: 43%
    - [Painel de público-alvo](ui/audience-dashboard.md)
    - [Portal de público-alvo](ui/audience-portal.md)
    - [Composição de público-alvo](ui/audience-composition.md)
-   - [Melhorias na composição do público-alvo](ui/composition-enchancements.md)
+   - [Melhorias na composição do público-alvo](ui/composition-enhancements.md)
    - [Construtor de segmentos](ui/segment-builder.md)
    - [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/home)
    - [Ignorar atualização de restrição de tempo anual](ui/ignore-year.md)
@@ -63,7 +63,7 @@ ht-degree: 43%
    - [Segmentação de várias entidades](tutorials/multi-entity-segmentation.md)
    - [Cumprimento do consentimento](tutorials/consents.md)
    - [Avaliar uma definição de segmento](tutorials/evaluate-a-segment.md)
-   - [Criação de públicos externos](tutorials/create-external-audience.md)
+   - [Criação de um público externo](tutorials/create-external-audience.md)
    - [Criar um conjunto de dados para exportar dados](tutorials/create-dataset-export-segment.md)
    - [Impor a conformidade de uso de dados para públicos](tutorials/governance.md)
 - Profile Query Language {#pql}

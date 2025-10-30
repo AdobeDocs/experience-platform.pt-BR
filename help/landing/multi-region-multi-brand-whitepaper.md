@@ -80,13 +80,13 @@ Você pode definir controles de acesso com funções e permissões para controla
 
 Considere um engenheiro de dados que pode não precisar de acesso a todas as funcionalidades do Experience Platform e de aplicativos baseados em plataforma. Normalmente, eles são responsáveis por criar definições de dados (esquemas), configurar fontes de dados para assimilar dados e criar conjuntos de dados. No entanto, eles podem não ser a mesma persona que cria e ativa públicos para experiências personalizadas do cliente. Para esta persona, crie uma função, adicione as permissões apropriadas e conceda acesso somente à funcionalidade necessária. Por outro lado, uma persona do profissional de marketing não criaria esquemas e assimilaria dados, mas sim se concentraria na criação e ativação de públicos para permitir experiências personalizadas do cliente.
 
-Se desejar, considere adicionar controles de acesso granulares para limitar o acesso a campos específicos no perfil unificado do cliente com controle de acesso baseado em atributo/recurso de controle de acesso em nível de campo. Esses são mecanismos de governança no Experience Platform que permitem restringir o acesso a atributos de dados com base em rótulos predefinidos. Com o controle de acesso em nível de campo, os dados de identificação pessoal podem ser controlados e o acesso é restrito em todos os workflows de aplicativos e do Experience Platform. Para obter mais detalhes sobre os recursos de controle de acesso, consulte a [documentação de controle de acesso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
+Se desejar, considere adicionar controles de acesso granulares para limitar o acesso a campos específicos no perfil unificado do cliente com controle de acesso baseado em atributo/recurso de controle de acesso em nível de campo. Esses são mecanismos de governança no Experience Platform que permitem restringir o acesso a atributos de dados com base em rótulos predefinidos. Com o controle de acesso em nível de campo, os dados de identificação pessoal podem ser controlados e o acesso é restrito em todos os workflows de aplicativos e do Experience Platform. Para obter mais detalhes sobre os recursos de controle de acesso, consulte a [documentação de controle de acesso](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home).
 
 ![Controles de Acesso à CDP, Configurar Permissões de Função](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
 **Ciclo de vida de desenvolvimento com sandboxes de desenvolvimento**
 
-Uma sandbox de desenvolvimento se comporta da mesma forma que uma sandbox de produção em todos os aspectos funcionais. É diferente porque ele terá algumas medidas de proteção contratuais para mantê-lo dentro dos limites da sua licença. Ele foi projetado exclusivamente para desenvolvimento e teste com perfis não relacionados à produção, compatíveis com até 10% do compromisso do seu perfil licenciado (medido cumulativamente em todas as sandboxes de desenvolvimento autorizadas). Para obter detalhes adicionais e medidas de proteção, consulte a [documentação de visão geral das sandboxes](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sandbox/home) e a [página de descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) para obter detalhes sobre os direitos.
+Uma sandbox de desenvolvimento se comporta da mesma forma que uma sandbox de produção em todos os aspectos funcionais. É diferente porque ele terá algumas medidas de proteção contratuais para mantê-lo dentro dos limites da sua licença. Ele foi projetado exclusivamente para desenvolvimento e teste com perfis não relacionados à produção, compatíveis com até 10% do compromisso do seu perfil licenciado (medido cumulativamente em todas as sandboxes de desenvolvimento autorizadas). Para obter detalhes adicionais e medidas de proteção, consulte a [documentação de visão geral das sandboxes](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sandbox/home) e a [página de descrições do produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) para obter detalhes sobre os direitos.
 
 Você pode ter várias sandboxes de desenvolvimento (até quatro neste exemplo corporativo, já que estamos usando uma sandbox de produção) para o ciclo de vida de desenvolvimento e teste.
 
@@ -102,7 +102,7 @@ Com o recurso de ferramenta sandbox, é possível selecionar vários objetos e e
 
 Você tem a opção de usar APIs do Experience Platform para automatizar implantações de sandbox e tarefas de configuração. As APIs permitem o controle programável de tarefas repetitivas, como exportar, importar ou modificar configurações de sandbox, fornecendo flexibilidade se você preferir workflows automatizados.
 
-Para obter detalhes adicionais sobre as ferramentas de sandbox, consulte a [documentação sobre as ferramentas de sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Para obter detalhes adicionais sobre as ferramentas de sandbox, consulte a [documentação sobre as ferramentas de sandbox](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Criar um Pacote](./images/whitepaper/create-package.png) | ![Pacotes da Lista de CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -229,7 +229,7 @@ Além disso, você pode utilizar a Correspondência de segmentos do Experience P
 
 Esse serviço de compartilhamento de segmentos permite que dois ou mais usuários troquem dados de segmento de maneira segura, controlada e compatível com a privacidade.
 
-Para obter detalhes adicionais sobre o recurso de Correspondência de segmentos, consulte a [documentação sobre Correspondência de segmentos](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
+Para obter detalhes adicionais sobre o recurso de Correspondência de segmentos, consulte a [documentação sobre Correspondência de segmentos](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### Uma combinação de abordagens para operações globais, regionais e específicas da marca
 

@@ -2,10 +2,10 @@
 title: Pesquisar endpoint
 description: Saiba como fazer chamadas para o endpoint /search na API do Reactor.
 exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '652'
-ht-degree: 97%
+ht-degree: 94%
 
 ---
 
@@ -33,8 +33,9 @@ Todas as consultas têm como escopo sua empresa atual e as propriedades acessív
 >[!IMPORTANT]
 >
 >A funcionalidade de pesquisa tem as seguintes ressalvas e exceções:
+>
 >* meta não é pesquisável nem é retornado nos resultados de pesquisa.
->* Os campos de esquema para delegados de pacote de extensão (ações, condições etc.) são pesquisáveis como texto, não como uma estrutura de dados aninhada.
+>* Os campos de esquema para delegados de pacote de extensão (ações, condições etc.) podem ser pesquisados como texto, não como uma estrutura de dados aninhada.
 >* Atualmente, as consultas de intervalo só aceitam números inteiros.
 
 Para obter informações mais detalhadas sobre como usar essa funcionalidade, consulte o [manual de pesquisa](../guides/search.md).

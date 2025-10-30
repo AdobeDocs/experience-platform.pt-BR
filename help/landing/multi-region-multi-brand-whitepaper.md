@@ -1,7 +1,7 @@
 ---
 title: Adobe Experience Platform para empresas de várias regiões e marcas
 description: Saiba como capacitar suas equipes de implementação com as ferramentas e os insights necessários para navegar pelas complexidades do Adobe Experience Platform de maneira eficaz.
-source-git-commit: e930b070f18e220cc1fa97bb0183520d495f33be
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '5325'
 ht-degree: 0%
@@ -17,7 +17,7 @@ A Adobe Experience Platform está na vanguarda de soluções transformadoras, pe
 
 O Experience Platform permite que você represente a estrutura e controle os dados de sua empresa para implementações escaláveis e flexíveis. A implementação de aplicativos da Platform é uma jornada importante que requer planejamento estratégico e considerações cuidadosas, especialmente se você opera em domínios globais, regionais e específicos da marca ou em uma combinação de todos esses aspectos.
 
-Este informe oficial serve como referência, oferecendo um ponto de vista do produto e um conjunto de diretrizes. Seu objetivo principal é capacitar você e suas equipes de implementação com as ferramentas e os insights necessários para navegar pelas complexidades do Experience Platform de maneira eficaz. Ao fornecer uma estrutura estruturada para avaliar seus requisitos específicos, suas considerações e casos de uso reais, ele fornece o conhecimento necessário para liberar todo o potencial dos aplicativos baseados em Experience Platform e plataforma. Ao ler as seções a seguir, você encontrará insights e recomendações inestimáveis para simplificar o processo de implementação e elevar a capacidade de sua organização de fornecer experiências excepcionais para seu público enquanto fornece a governança e os controles para manter a privacidade e a conformidade.
+Este informe oficial serve como referência, oferecendo um ponto de vista do produto e um conjunto de diretrizes. Seu objetivo principal é capacitar você e suas equipes de implementação com as ferramentas e os insights necessários para navegar pelas complexidades do Experience Platform de maneira eficaz. Ao fornecer uma estrutura estruturada para avaliar seus requisitos específicos, suas considerações e casos de uso reais, ele fornece o conhecimento necessário para liberar todo o potencial dos aplicativos baseados em Experience Platform e plataforma. Ao ler as seções a seguir, você encontrará insights e recomendações valiosos para simplificar o processo de implementação e elevar a capacidade de sua organização de fornecer experiências excepcionais para seu público-alvo, enquanto fornece a governança e os controles para manter a privacidade e a conformidade.
 
 ![Perfil CDP-Unificado](./images/whitepaper/CDPoverview.png)
 
@@ -28,14 +28,17 @@ Se você opera uma empresa com várias marcas e várias regiões, provavelmente 
 Ao explorar opções de implantação, é necessário entender e considerar os perfis que interagirão com o Experience Platform e os aplicativos baseados em plataforma. Projetar a experiência com base em suas funções e interesses garante uma implementação bem-sucedida. Estas são três personalidades importantes que você deve considerar ao explorar as opções:
 
 **Mary, a profissional de marketing:**
+
 - Foco: aquisição do cliente e personalização da experiência em escala.
 - Metas: criar perfis abrangentes, melhorar a eficiência da mídia.
 
 **Ted, o tecnólogo**
+
 - Foco: gerenciamento de dados organizacional.
 - Metas: garantia de conformidade, gerenciamento de silos de dados e atendimento a várias linhas de negócios.
 
 **Dan, o arquiteto de dados**
+
 - Foco: precisão e qualidade dos dados.
 - Metas: garantir a privacidade e a confiança dos dados, projetar esquemas e modelos de dados e gerenciar fontes de dados.
 
@@ -77,13 +80,13 @@ Você pode definir controles de acesso com funções e permissões para controla
 
 Considere um engenheiro de dados que pode não precisar de acesso a todas as funcionalidades do Experience Platform e de aplicativos baseados em plataforma. Normalmente, eles são responsáveis por criar definições de dados (esquemas), configurar fontes de dados para assimilar dados e criar conjuntos de dados. No entanto, eles podem não ser a mesma persona que cria e ativa públicos para experiências personalizadas do cliente. Para esta persona, crie uma função, adicione as permissões apropriadas e conceda acesso somente à funcionalidade necessária. Por outro lado, uma persona do profissional de marketing não criaria esquemas e assimilaria dados, mas sim se concentraria na criação e ativação de públicos para permitir experiências personalizadas do cliente.
 
-Se desejar, considere adicionar controles de acesso granulares para limitar o acesso a campos específicos no perfil unificado do cliente com controle de acesso baseado em atributo/recurso de controle de acesso em nível de campo. Esses são mecanismos de governança no Experience Platform que permitem restringir o acesso a atributos de dados com base em rótulos predefinidos. Com o controle de acesso em nível de campo, os dados de identificação pessoal podem ser controlados e o acesso é restrito em todos os workflows de aplicativos e do Experience Platform. Para obter mais detalhes sobre os recursos de controle de acesso, consulte a [documentação de controle de acesso](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home).
+Se desejar, considere adicionar controles de acesso granulares para limitar o acesso a campos específicos no perfil unificado do cliente com controle de acesso baseado em atributo/recurso de controle de acesso em nível de campo. Esses são mecanismos de governança no Experience Platform que permitem restringir o acesso a atributos de dados com base em rótulos predefinidos. Com o controle de acesso em nível de campo, os dados de identificação pessoal podem ser controlados e o acesso é restrito em todos os workflows de aplicativos e do Experience Platform. Para obter mais detalhes sobre os recursos de controle de acesso, consulte a [documentação de controle de acesso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
 
 ![Controles de Acesso à CDP, Configurar Permissões de Função](./images/whitepaper/Access-Controls-Configure-RolePermissions.png)
 
 **Ciclo de vida de desenvolvimento com sandboxes de desenvolvimento**
 
-Uma sandbox de desenvolvimento se comporta da mesma forma que uma sandbox de produção em todos os aspectos funcionais. É diferente porque terá algumas medidas de proteção contratuais para mantê-lo dentro dos limites da sua licença. Ele foi projetado exclusivamente para desenvolvimento e teste com perfis não relacionados à produção, compatíveis com até 10% do compromisso do seu perfil licenciado (medido cumulativamente em todas as sandboxes de desenvolvimento autorizadas). Para obter detalhes adicionais e medidas de proteção, consulte a [documentação de visão geral das sandboxes](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sandbox/home) e a [página de descrições do produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) para obter detalhes sobre os direitos.
+Uma sandbox de desenvolvimento se comporta da mesma forma que uma sandbox de produção em todos os aspectos funcionais. É diferente porque ele terá algumas medidas de proteção contratuais para mantê-lo dentro dos limites da sua licença. Ele foi projetado exclusivamente para desenvolvimento e teste com perfis não relacionados à produção, compatíveis com até 10% do compromisso do seu perfil licenciado (medido cumulativamente em todas as sandboxes de desenvolvimento autorizadas). Para obter detalhes adicionais e medidas de proteção, consulte a [documentação de visão geral das sandboxes](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sandbox/home) e a [página de descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) para obter detalhes sobre os direitos.
 
 Você pode ter várias sandboxes de desenvolvimento (até quatro neste exemplo corporativo, já que estamos usando uma sandbox de produção) para o ciclo de vida de desenvolvimento e teste.
 
@@ -99,7 +102,7 @@ Com o recurso de ferramenta sandbox, é possível selecionar vários objetos e e
 
 Você tem a opção de usar APIs do Experience Platform para automatizar implantações de sandbox e tarefas de configuração. As APIs permitem o controle programável de tarefas repetitivas, como exportar, importar ou modificar configurações de sandbox, fornecendo flexibilidade se você preferir workflows automatizados.
 
-Para obter detalhes adicionais sobre as ferramentas de sandbox, consulte a [documentação sobre as ferramentas de sandbox](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sandbox/ui/sandbox-tooling).
+Para obter detalhes adicionais sobre as ferramentas de sandbox, consulte a [documentação sobre as ferramentas de sandbox](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sandbox-tooling).
 
 | ![CDP-Criar um Pacote](./images/whitepaper/create-package.png) | ![Pacotes da Lista de CDP](./images/whitepaper/list-packages.png) |
 | --- | --- |
@@ -226,7 +229,7 @@ Além disso, você pode utilizar a Correspondência de segmentos do Experience P
 
 Esse serviço de compartilhamento de segmentos permite que dois ou mais usuários troquem dados de segmento de maneira segura, controlada e compatível com a privacidade.
 
-Para obter detalhes adicionais sobre o recurso de Correspondência de segmentos, consulte a [documentação sobre Correspondência de segmentos](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/ui/segment-match/overview).
+Para obter detalhes adicionais sobre o recurso de Correspondência de segmentos, consulte a [documentação sobre Correspondência de segmentos](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview).
 
 ### 3. Uma combinação de abordagens para operações globais, regionais e específicas da marca
 
@@ -285,23 +288,23 @@ Esquema de perfil individual XDM:
 ```
 \- PII
 \- Germany
-	\- name --> Label: "Germany"
-	\- email --> Label: "Germany"
-	\- birthdate --> Label: "Germany"
+    \- name --> Label: "Germany"
+    \- email --> Label: "Germany"
+    \- birthdate --> Label: "Germany"
 
 \- France
-	\- name --> Label: "France"
-	\- email --> Label: "France"
-	\- birthdate --> Label: "France"
+    \- name --> Label: "France"
+    \- email --> Label: "France"
+    \- birthdate --> Label: "France"
 
 \- Netherland
-	\- name --> Label: "Netherland", "Germany"
-	\- email --> Label: "Netherland", "Germany"
-	\- birthdate --> Label: "Netherland", "Germany"
+    \- name --> Label: "Netherland", "Germany"
+    \- email --> Label: "Netherland", "Germany"
+    \- birthdate --> Label: "Netherland", "Germany"
 
 \- Loyalty
-	\- member
-	\- registrationDate
+    \- member
+    \- registrationDate
 ```
 
 ###### Públicos: use o controle de acesso baseado em atributos: Controle de acesso no nível do objeto para controlar o acesso a públicos específicos da marca/país
@@ -431,7 +434,7 @@ A Experience Platform fornece às empresas uma estrutura robusta para centraliza
 
    - Você deve avaliar cuidadosamente se deve implantar **várias IDs de organização ou várias sandboxes** com base na residência dos dados, na conformidade e nas necessidades operacionais.
 
-   - As **IDs de organização** oferecem isolamento completo&#x200B;**, enquanto as configurações de várias sandboxes fornecem flexibilidade operacional em uma estrutura de governança compartilhada**.
+   - As **IDs de organização** oferecem isolamento completo**, enquanto as configurações de várias sandboxes fornecem flexibilidade operacional em uma estrutura de governança compartilhada**.
 
 ## Pensamentos finais
 

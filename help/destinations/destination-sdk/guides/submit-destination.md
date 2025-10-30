@@ -2,7 +2,7 @@
 description: Esta página fornece todas as informações necessárias para enviar um destino produzido para revisão quando criado usando o Destination SDK.
 title: Enviar um destino produzido para revisão
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1045'
 ht-degree: 0%
@@ -263,6 +263,7 @@ Se você for um ISV (Fornecedor Independente de Software) ou um SI (Integrador d
 O catálogo de destinos inclui um logotipo para cada cartão de destino. No email de envio, inclua uma imagem com o logotipo do seu destino.
 
 Os requisitos de imagem são:
+
 * **Formato**: `SVG`
 * **Tamanho**: menos de 2 MB
 

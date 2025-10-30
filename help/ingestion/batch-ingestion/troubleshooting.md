@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;dados assimilados;solução de problemas;perguntas frequentes;Assimilação em lote;Assimilação em lote;
+keywords: Experience Platform;página inicial;tópicos populares;dados assimilados;solução de problemas;perguntas frequentes;Assimilação;Assimilação em lote;assimilação em lote;
 solution: Experience Platform
 title: Guia de solução de problemas de assimilação em lote
 description: Esta documentação ajudará a responder às perguntas frequentes sobre as APIs de assimilação de dados em lote do Adobe Experience Platform.
 exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
-source-git-commit: 37b241f15f297263cc7aa20f382c115a2d131c7e
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1426'
 ht-degree: 1%
@@ -189,7 +189,7 @@ Um lote pode, em seu ciclo de vida, passar pelos seguintes estados:
 | Inativo | x | O lote foi promovido com sucesso, mas foi revertido ou expirou. O lote não estará mais disponível para consumo downstream, mas os dados subjacentes permanecerão no Principal até que ele tenha sido retido, arquivado ou excluído de alguma outra forma. |
 | Carregando | | No momento, o cliente está gravando dados para o lote. O lote **não** está pronto para promoção, neste momento. |
 | Carregado | | O cliente concluiu a gravação de dados para o lote. O lote está pronto para promoção. |
-| Retido | | Os dados foram retirados do Principal e em um arquivo designado no Adobe Data Lake. |
+| Retido | | Os dados foram removidos do Principal e em um arquivo designado no Adobe Data Lake. |
 | Armazenamento temporário | | O cliente sinalizou com êxito o lote para promoção e os dados estão sendo preparados para consumo downstream. |
 | Repetindo | | O cliente sinalizou o lote para promoção, mas devido a um erro, o lote está sendo repetido por um serviço de Monitoramento de Lote. Esse estado pode ser usado para informar aos clientes que pode haver um atraso na assimilação dos dados. |
 | Paralisado | | O cliente sinalizou o lote para promoção, mas depois de `n` tentativas por um serviço de Monitoramento de Lote, a promoção do lote foi interrompida. |
@@ -272,4 +272,4 @@ Há dois motivos pelos quais as métricas podem não estar disponíveis em seu l
 | 200 | O lote foi aceito para processamento e passará para um estado final, como Ativo ou Falha. Depois de enviado, o lote pode ser monitorado usando o endpoint `GetBatch`. |
 | 400 | Solicitação inválida. Retornado se houver partes ausentes ou sobrepostas em um lote. |
 
-[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files
+`[large-file-upload]: batch_data_ingestion_developer_guide.md#how-to-ingest-large-parquet-files`

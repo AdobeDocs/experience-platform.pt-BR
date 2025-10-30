@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;mapeamento de Audience Manager;mapeamento do audience manager
+keywords: Experience Platform;página inicial;tópicos populares;mapeamento do Audience Manager;mapeamento do audience manager
 solution: Experience Platform
 title: Mapeamento de campos para o Adobe Audience Manager Source Connector
-description: Saiba como mapear dados do Adobe Audience Manager (dados em tempo real, integrados e de perfil) para campos correspondentes do Experience Data Model (XDM) para o conector de origem do Audience Manager.
+description: Saiba como mapear dados do Adobe Audience Manager (dados em tempo real, integrados e de perfil) para campos correspondentes do Experience Data Model (XDM) do conector de origem do Audience Manager.
 exl-id: b800ba43-c308-4334-adce-3d554d50cefb
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
 
 ---
 
-# mapeamentos de campo Audience Manager
+# Mapeamentos de campo do Audience Manager
 
 As tabelas abaixo contêm os mapeamentos entre os campos nos dados do Adobe Audience Manager (dados em tempo real, integrados e de perfil) e seus campos XDM correspondentes.
 
@@ -27,7 +27,7 @@ Tipo: dados em tempo real
 | `requestIds[]` | `ExperienceEvent.endUserIds` - *Somente para namespaces presentes em endUserIds e somente o primeiro valor.* |
 | `primaryDeviceId` | `ExperienceEvent.identityMap["CORE"]` |
 | `primaryDeviceId` | ExperienceEvent.endUserIds - *Somente para namespaces presentes em endUserIds e somente o primeiro valor.* |
-| `trait[] ` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+| `trait[]` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
 | `segments[]` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `mergeRules[]` | `ExperienceEvent.profileStitch[]` |
 | `timestamps` | `ExperienceEvent.timeStamp` |

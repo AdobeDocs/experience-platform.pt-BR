@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 2c62ab01fe94e71095df33e24615fa7e596e84d3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '5248'
+source-wordcount: '5161'
 ht-degree: 12%
 
 ---
@@ -52,21 +52,21 @@ Os blocos fundamentais das definições de segmento são atributos e eventos. Al
 >
 >No entanto, um atributo **não** terá dados de resumo se for um dado de várias entidades vinculado ao perfil por meio de uma relação. Por exemplo, se você tiver um esquema personalizado chamado `Vehicle`, as **propriedades** do esquema `Vehicle` **não** terão dados de resumo.
 
-Você pode ver estes blocos de construção na seção **[!UICONTROL Campos]** à esquerda do espaço de trabalho [!DNL Segment Builder]. **[!UICONTROL Campos]** contém uma guia para cada um dos blocos de construção principais: &quot;[!UICONTROL Atributos]&quot;, &quot;[!UICONTROL Eventos]&quot; e &quot;[!UICONTROL Públicos]&quot;.
+Você pode ver esses blocos de construção na seção **[!UICONTROL Fields]** à esquerda do espaço de trabalho [!DNL Segment Builder]. **[!UICONTROL Fields]** contém uma guia para cada bloco de construção principal: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot; e &quot;[!UICONTROL Audiences]&quot;.
 
 ![A seção de campos do Construtor de segmentos está realçada.](../images/ui/segment-builder/segment-fields.png)
 
 ### Atributos
 
-A guia **[!UICONTROL Atributos]** permite procurar atributos [!DNL Profile] pertencentes à classe [!DNL XDM Individual Profile]. Cada pasta pode ser expandida para revelar atributos adicionais, em que cada atributo é um bloco que pode ser arrastado para a tela do construtor de regras no centro do espaço de trabalho. A [tela do construtor de regras](#rule-builder-canvas) será discutida com mais detalhes posteriormente neste guia.
+A guia **[!UICONTROL Attributes]** permite procurar atributos [!DNL Profile] pertencentes à classe [!DNL XDM Individual Profile]. Cada pasta pode ser expandida para revelar atributos adicionais, em que cada atributo é um bloco que pode ser arrastado para a tela do construtor de regras no centro do espaço de trabalho. A [tela do construtor de regras](#rule-builder-canvas) será discutida com mais detalhes posteriormente neste guia.
 
 ![A seção de atributos dos campos do Construtor de segmentos está realçada.](../images/ui/segment-builder/attributes.png)
 
 ### Eventos
 
-A guia **[!UICONTROL Eventos]** permite criar um público-alvo com base em eventos ou ações que ocorreram usando [!DNL XDM ExperienceEvent] elementos de dados. Você também pode encontrar Tipos de evento na guia **[!UICONTROL Eventos]**, que são uma coleção de eventos comumente usados para permitir que você crie suas definições de segmento mais rapidamente.
+A guia **[!UICONTROL Events]** permite criar um público-alvo com base em eventos ou ações que ocorreram usando elementos de dados [!DNL XDM ExperienceEvent]. Você também pode encontrar Tipos de evento na guia **[!UICONTROL Events]**, que são uma coleção de eventos comumente usados para permitir que você crie suas definições de segmento mais rapidamente.
 
-Além de poder procurar elementos de [!DNL ExperienceEvent], você também pode procurar Tipos de Evento. Os Tipos de Evento usam a mesma lógica de codificação que [!DNL ExperienceEvents], sem exigir que você pesquise a classe [!DNL XDM ExperienceEvent] procurando o evento correto. Por exemplo, usar a barra de pesquisa para pesquisar &quot;carrinho&quot; retorna os Tipos de Evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, que são duas ações de carrinho muito usadas ao criar definições de segmento.
+Além de poder procurar elementos de [!DNL ExperienceEvent], você também pode procurar Tipos de Evento. Os Tipos de Evento usam a mesma lógica de codificação que [!DNL ExperienceEvents], sem exigir que você pesquise a classe [!DNL XDM ExperienceEvent] procurando o evento correto. Por exemplo, usar a barra de pesquisa para pesquisar &quot;carrinho&quot; retorna os Tipos de Evento &quot;[!UICONTROL AddCart]&quot; e &quot;[!UICONTROL RemoveCart]&quot;, que são duas ações de carrinho usadas com muita frequência ao criar definições de segmento.
 
 Qualquer tipo de componente pode ser pesquisado digitando seu nome na barra de pesquisa, que usa a [sintaxe de pesquisa do Lucene](https://docs.microsoft.com/en-us/azure/search/query-lucene-syntax). Os resultados da pesquisa começam a ser preenchidos à medida que palavras inteiras são inseridas. Por exemplo, para criar uma regra com base no campo XDM `ExperienceEvent.commerce.productViews`, comece digitando &quot;exibições de produto&quot; no campo de pesquisa. Após digitar a palavra &quot;produto&quot;, os resultados da pesquisa começam a aparecer. Cada resultado inclui a hierarquia de objetos à qual ele pertence.
 
@@ -74,11 +74,11 @@ Qualquer tipo de componente pode ser pesquisado digitando seu nome na barra de p
 >
 >Os campos de esquema personalizados definidos por sua organização podem levar até 24 horas para serem exibidos e disponibilizados para uso nas regras de criação.
 
-Em seguida, você pode arrastar e soltar facilmente [!DNL ExperienceEvents] e &quot;[!UICONTROL Tipos de evento]&quot; na definição do seu segmento.
+Em seguida, você pode arrastar e soltar facilmente [!DNL ExperienceEvents] e &quot;[!UICONTROL Event Types]&quot; na definição do seu segmento.
 
 ![A seção de eventos da interface do usuário do Construtor de segmentos está realçada.](../images/ui/segment-builder/events.png)
 
-Por padrão, somente os campos de esquema preenchidos no armazenamento de dados são mostrados. Isso inclui &quot;[!UICONTROL Tipos de Evento]&quot;. Se a lista &quot;[!UICONTROL Tipos de Evento]&quot; não estiver visível ou você só puder selecionar &quot;[!UICONTROL Qualquer]&quot; como um &quot;[!UICONTROL Tipo de Evento]&quot;, selecione o **ícone de engrenagem** ao lado de **[!UICONTROL Campos]** e selecione **[!UICONTROL Mostrar esquema XDM completo]** em **[!UICONTROL Campos Disponíveis]**. Selecione o **ícone de engrenagem** novamente para retornar à guia **[!UICONTROL Campos]** e, agora, você poderá exibir vários &quot;[!UICONTROL Tipos de evento]&quot; e campos de esquema, independentemente de eles conterem ou não dados.
+Por padrão, somente os campos de esquema preenchidos no armazenamento de dados são mostrados. Isso inclui &quot;[!UICONTROL Event Types]&quot;. Se a lista &quot;[!UICONTROL Event Types]&quot; não estiver visível ou você só puder selecionar &quot;[!UICONTROL Any]&quot; como &quot;[!UICONTROL Event Type]&quot;, selecione o **ícone de engrenagem** ao lado de **[!UICONTROL Fields]** e selecione **[!UICONTROL Show full XDM schema]** em **[!UICONTROL Available Fields]**. Selecione o **ícone de engrenagem** novamente para retornar à guia **[!UICONTROL Fields]** e, agora, você poderá exibir vários campos de esquema e &quot;[!UICONTROL Event Types]&quot;, independentemente de eles conterem ou não dados.
 
 ![Os botões de opção que permitem escolher entre mostrar apenas os campos com dados ou mostrar todos os campos XDM são realçados.](../images/ui/segment-builder/show-populated.png)
 
@@ -137,9 +137,9 @@ Depois que os conjuntos de relatórios forem mapeados, você poderá usar esses 
 >
 >Para públicos criados no Experience Platform, somente os públicos com a **mesma** política de mesclagem serão exibidos.
 
-A guia **[!UICONTROL Públicos-alvo]** lista todos os públicos-alvo importados de fontes externas, como Adobe Audience Manager ou Customer Journey Analytics, bem como os públicos-alvo criados em [!DNL Experience Platform].
+A guia **[!UICONTROL Audiences]** lista todos os públicos-alvo importados de fontes externas, como Adobe Audience Manager ou Customer Journey Analytics, bem como os públicos-alvo criados em [!DNL Experience Platform].
 
-Na guia **[!UICONTROL Públicos-alvo]**, você pode ver todas as fontes disponíveis como um grupo de pastas. À medida que você seleciona as pastas, as subpastas e os públicos-alvo disponíveis podem ser vistos. Além disso, você pode selecionar o ícone de pasta (como mostrado na imagem à direita) para visualizar a estrutura de pastas (uma marca de seleção indica a pasta em que você está no momento) e navegar facilmente de volta pelas pastas selecionando o nome de uma pasta na árvore.
+Na guia **[!UICONTROL Audiences]**, é possível ver todas as fontes disponíveis como um grupo de pastas. À medida que você seleciona as pastas, as subpastas e os públicos-alvo disponíveis podem ser vistos. Além disso, você pode selecionar o ícone de pasta (como mostrado na imagem à direita) para visualizar a estrutura de pastas (uma marca de seleção indica a pasta em que você está no momento) e navegar facilmente de volta pelas pastas selecionando o nome de uma pasta na árvore.
 
 Você pode passar o mouse sobre a ⓘ ao lado de um público-alvo para ver informações sobre ele, incluindo a ID, a descrição e a hierarquia de pastas para localizá-lo.
 
@@ -157,7 +157,7 @@ Você pode passar o mouse sobre a ⓘ ao lado de um público-alvo para ver infor
 
 Uma definição de segmento é uma coleção de regras usadas para descrever as principais características ou comportamento de um público-alvo. Essas regras são criadas usando a tela do construtor de regras, localizada no centro de [!DNL Segment Builder].
 
-Para adicionar uma nova regra à definição de segmento, arraste um bloco da guia **[!UICONTROL Campos]** e solte-o na tela do construtor de regras. Serão apresentadas opções específicas do contexto de acordo com o tipo de dados que está sendo adicionado. Os tipos de dados disponíveis incluem: cadeias de caracteres, datas, [!DNL ExperienceEvents], &quot;[!UICONTROL Tipos de evento]&quot; e públicos-alvo.
+Para adicionar uma nova regra à definição de segmento, arraste um bloco da guia **[!UICONTROL Fields]** e solte-o na tela do construtor de regras. Serão apresentadas opções específicas do contexto de acordo com o tipo de dados que está sendo adicionado. Os tipos de dados disponíveis incluem: cadeias de caracteres, datas, [!DNL ExperienceEvents], &quot;[!UICONTROL Event Types]&quot; e públicos-alvo.
 
 ![A tela do construtor de regras em branco.](../images/ui/segment-builder/rule-builder-canvas.png)
 
@@ -173,11 +173,11 @@ Se selecionar um valor desta lista de enumerações, o valor será contornado co
 
 ![Um aviso que é exibido se você estiver inserindo um valor que não faz parte da lista de enumerações.](../images/ui/segment-builder/enum-warning.png)
 
-Se estiver criando vários valores, é possível adicionar todos eles de uma só vez usando o upload em massa. Selecione o ![ícone de adição](/help/images/icons/add-circle.png) para mostrar o popover **[!UICONTROL Adicionar valores em massa]**.
+Se estiver criando vários valores, é possível adicionar todos eles de uma só vez usando o upload em massa. Selecione o ![ícone de adição](/help/images/icons/add-circle.png) para mostrar o popover **[!UICONTROL Add values in bulk]**.
 
 ![O ícone de adição é realçado, mostrando o botão que você pode selecionar para acessar o popover de carregamento em massa.](../images/ui/segment-builder/add-bulk-values.png)
 
-No popover **[!UICONTROL Adicionar valores em massa]**, você pode carregar um arquivo CSV ou TSV.
+No popover **[!UICONTROL Add values in bulk]**, você pode carregar um arquivo CSV ou TSV.
 
 ![O popover Adicionar valores em massa é exibido. A caixa de diálogo que você pode selecionar para carregar um arquivo CSV ou TSV está realçada.](../images/ui/segment-builder/bulk-values-popover.png)
 
@@ -196,7 +196,7 @@ Observe que há um máximo de 250 valores permitidos. Se você exceder esse valo
 >title="Procurar atualizações"
 >abstract="O sistema de pesquisa foi atualizado para usar a Pesquisa unificada. A Pesquisa unificada permite que você pesquise seus públicos-alvo de forma mais fácil e robusta quanto à associação a um segmento."
 
-Você pode arrastar e soltar um público-alvo da guia **[!UICONTROL Público-alvo]** na tela do construtor de regras para fazer referência à associação de público-alvo na nova definição de segmento. Isso permite incluir ou excluir a associação de público-alvo como um atributo nas novas regras de definição de segmento.
+Você pode arrastar e soltar um público-alvo da guia **[!UICONTROL Audience]** na tela do construtor de regras para fazer referência à associação de público-alvo na nova definição de segmento. Isso permite incluir ou excluir a associação de público-alvo como um atributo nas novas regras de definição de segmento.
 
 Para [!DNL Experience Platform] públicos-alvo criados com o [!DNL Segment Builder], você tem a opção de converter o público-alvo para o conjunto de regras que foram usadas na definição de segmento desse público-alvo. Essa conversão faz uma cópia da lógica da regra, que pode ser modificada sem afetar a definição do segmento original. Certifique-se de ter salvo as alterações recentes na definição do segmento antes de convertê-lo na lógica da regra.
 
@@ -210,23 +210,23 @@ Se surgirem conflitos ao converter públicos-alvo em regras, o [!DNL Segment Bui
 
 ### Visualização de código
 
-Como alternativa, você pode exibir uma versão baseada em código de uma regra criada no [!DNL Segment Builder]. Depois de criar a regra na tela do construtor de regras, você pode selecionar **[!UICONTROL Visualização de código]** para ver a definição do segmento como PQL.
+Como alternativa, você pode exibir uma versão baseada em código de uma regra criada no [!DNL Segment Builder]. Depois de criar a regra na tela do construtor de regras, você pode selecionar **[!UICONTROL Code view]** para ver a definição de segmento como PQL.
 
 ![O botão de exibição de código está realçado, o que permite que você veja a definição de segmento como PQL.](../images/ui/segment-builder/code-view.png)
 
 A visualização de código fornece um botão que permite copiar o valor da definição de segmento para usar em chamadas de API. Para obter a versão mais recente da definição de segmento, salve as alterações mais recentes na definição de segmento.
 
-![O botão Copiar Código está realçado, o que permite &#x200B;](../images/ui/segment-builder/copy-code.png)
+![O botão Copiar Código está realçado, o que permite](../images/ui/segment-builder/copy-code.png)
 
 ### Funções de agregação
 
 Uma agregação em [!DNL Segment Builder] é um cálculo em um grupo de atributos XDM cujo tipo de dados é um número (duplo ou inteiro). As quatro funções de agregação compatíveis com o Construtor de segmentos são SUM, AVERAGE, MIN e MAX.
 
-Para criar uma função de agregação, selecione um evento no painel esquerdo e insira-o no contêiner [!UICONTROL Eventos].
+Para criar uma função de agregação, selecione um evento no painel esquerdo e insira-o no container [!UICONTROL Events].
 
 ![A seção de eventos está realçada.](../images/ui/segment-builder/events.png)
 
-Depois de colocar o evento no contêiner Eventos, selecione o ícone de reticências (...), seguido por **[!UICONTROL Agregar]**.
+Depois de colocar o evento no contêiner Eventos, selecione o ícone de reticências (...), seguido por **[!UICONTROL Aggregate]**.
 
 ![O texto agregado está realçado. Selecionar essa opção permite selecionar funções de agregação.](../images/ui/segment-builder/add-aggregation.png)
 
@@ -238,11 +238,11 @@ A agregação agora é adicionada. Agora você pode selecionar a função de agr
 
 As funções de contagem no Construtor de segmentos são usadas para procurar eventos especificados e contar o número de vezes que eles são concluídos. As funções de contagem compatíveis no Construtor de segmentos são &quot;No mínimo&quot;, &quot;No máximo&quot;, &quot;Exatamente&quot;, &quot;Entre&quot; e &quot;Todos&quot;.
 
-Para criar uma função de contagem, selecione um evento no painel esquerdo e insira-o no contêiner [!UICONTROL Eventos].
+Para criar uma função de contagem, selecione um evento no painel esquerdo e insira-o no container [!UICONTROL Events].
 
 ![Os campos de eventos estão realçados.](../images/ui/segment-builder/events.png)
 
-Depois de colocar o evento no contêiner Eventos, selecione o botão [!UICONTROL Pelo menos 1].
+Depois de colocar o evento no contêiner Eventos, selecione o botão [!UICONTROL At least 1].
 
 ![A opção Pelo menos está realçada, mostrando a área a ser selecionada para ver uma lista completa de funções de contagem.](../images/ui/segment-builder/add-count.png)
 
@@ -270,7 +270,7 @@ A lista de restrições de tempo disponíveis é a seguinte:
 >
 >Todas as restrições de tempo são baseadas em UTC.
 >
->Além disso, se a caixa de seleção [!UICONTROL Ignorar ano] estiver habilitada, o ano **não** será comparado como parte da avaliação de definição de segmento.
+>Além disso, se a caixa de seleção [!UICONTROL Ignore year] estiver habilitada, o ano **não** será comparado como parte da avaliação de definição de segmento.
 
 | Restrição de tempo | Descrição | Pode permitir ignorar ano | Exemplo |
 | --------------- | ----------- | ------------------- | ------- |
@@ -281,7 +281,7 @@ A lista de restrições de tempo disponíveis é a seguinte:
 | Data personalizada | O atributo ou evento que está sendo comparado **deve** ocorrer na data especificada. | Sim | ![Um exemplo de restrição de tempo de &quot;Data personalizada&quot; sendo usada.](../images/ui/segment-builder/time-constraints/custom-date.png){width="100" zoomable="yes"} |
 | No(s) último(s) | O atributo ou evento que está sendo comparado **deve** ocorrer no último período escolhido. Este período é **inclusivo** até o momento da avaliação. | Não | ![Um exemplo da restrição de tempo &quot;No último&quot; sendo usada.](../images/ui/segment-builder/time-constraints/in-last.png){width="100" zoomable="yes"} |
 | De (para) | O atributo ou evento sendo comparado **deve** ocorrer dentro das duas datas do calendário escolhidas. Este período é **inclusivo** das duas datas. | Sim, se for uma data personalizada | ![Um exemplo de &quot;De para&quot; sendo usado.](../images/ui/segment-builder/time-constraints/from-to.png){width="100" zoomable="yes"} |
-| Durante | O atributo ou evento que está sendo comparado **deve** ocorrer dentro do mês ou ano selecionado. Se um mês for selecionado, você precisará escolher o mês e um ano em que o atributo ou evento ocorreu.  Se um ano for selecionado, você precisará apenas escolher o ano em que o atributo ou evento ocorreu. Se você selecionar um mês, também poderá habilitar a caixa de seleção [!UICONTROL Ignorar ano]. | Sim | ![Um exemplo de restrição de tempo &quot;Durante&quot; sendo usada.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
+| Durante | O atributo ou evento que está sendo comparado **deve** ocorrer dentro do mês ou ano selecionado. Se um mês for selecionado, você precisará escolher o mês e um ano em que o atributo ou evento ocorreu.  Se um ano for selecionado, você precisará apenas escolher o ano em que o atributo ou evento ocorreu. Se você selecionar um mês, também poderá habilitar a caixa de seleção [!UICONTROL Ignore year]. | Sim | ![Um exemplo de restrição de tempo &quot;Durante&quot; sendo usada.](../images/ui/segment-builder/time-constraints/during.png){width="100" zoomable="yes"} |
 | No prazo de (+/-) | O atributo ou evento que está sendo comparado **deve** ocorrer em dias, semanas, meses ou anos a partir da data selecionada. Este período é **inclusivo** das duas datas. A data selecionada pode ser hoje, ontem ou outra data personalizada de sua escolha. | Sim | ![Um exemplo de restrição de tempo &quot;Within&quot; sendo usada.](../images/ui/segment-builder/time-constraints/within.png){width="100" zoomable="yes"} |
 | Antes | O atributo ou evento que está sendo comparado **deve** ocorrer antes da data selecionada. A data selecionada pode ser uma data personalizada de sua escolha ou uma seleção entre dias, semanas, meses ou anos atrás. | Sim | ![Um exemplo da restrição de tempo &quot;Antes&quot; que está sendo usada.](../images/ui/segment-builder/time-constraints/before.png){width="100" zoomable="yes"} |
 | Depois | O atributo ou evento que está sendo comparado **deve** ocorrer após a data selecionada. A data selecionada pode ser uma data personalizada de sua escolha ou uma seleção entre dias, semanas, meses ou anos atrás. | Sim | ![Um exemplo de restrição de tempo &quot;Depois&quot; sendo usada.](../images/ui/segment-builder/time-constraints/after.png){width="100" zoomable="yes"} |
@@ -304,7 +304,7 @@ Quando você aplica uma restrição de tempo no nível da tela, ela se aplica a 
 
 #### Restrição no nível do cartão
 
-Para aplicar uma restrição no nível do cartão, selecione o cartão no qual deseja aplicar a restrição de tempo, seguido pelo ícone de reticências e **[!UICONTROL Aplicar regra de tempo]**. Isso permite selecionar uma restrição de tempo no contêiner **[!UICONTROL Regras de evento]**.
+Para aplicar uma restrição no nível do cartão, selecione o cartão no qual deseja aplicar a restrição de tempo, seguido pelo ícone de reticências e **[!UICONTROL Apply time rule]**. Isso permite selecionar uma restrição de tempo no contêiner **[!UICONTROL Event Rules]**.
 
 ![O seletor de restrição de tempo em nível de cartão está realçado.](../images/ui/segment-builder/time-constraints/card-level.png)
 
@@ -330,7 +330,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 >[!NOTE]
 >
 >Ao usar a restrição de tempo &quot;Depois&quot;, o último evento pode ocorrer por mais tempo do que o listado na restrição de tempo. >
->&#x200B;>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
+>>Por exemplo, se você tiver um evento de Exibição de página e um evento de Check-out e colocar a restrição de tempo &quot;Após 1 hora&quot; entre esses dois eventos, uma definição de segmento com um evento de Check-out 2 horas após o evento de Exibição de página será qualificada.
 >
 >Além disso, essas duas restrições de tempo podem ser usadas em coordenação umas com as outras.
 >
@@ -342,17 +342,17 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 
 As regras de segmento são avaliadas na ordem em que são listadas. Os containers permitem controlar a ordem de execução por meio do uso de consultas aninhadas.
 
-Depois de adicionar pelo menos um bloco à tela do construtor de regras, você pode começar a adicionar contêineres. Para criar um novo contêiner, selecione as reticências (...) no canto superior direito do bloco e selecione **[!UICONTROL Adicionar contêiner]**.
+Depois de adicionar pelo menos um bloco à tela do construtor de regras, você pode começar a adicionar contêineres. Para criar um novo contêiner, selecione as reticências (...) no canto superior direito do bloco e selecione **[!UICONTROL Add container]**.
 
 ![O botão adicionar contêiner está realçado, o que permite que você adicione um contêiner como filho do primeiro contêiner.](../images/ui/segment-builder/add-container.png)
 
-Um novo contêiner é exibido como filho do primeiro contêiner, mas você pode ajustar a hierarquia arrastando e movendo os contêineres. O comportamento padrão de um contêiner é &quot;[!UICONTROL Incluir]&quot; o atributo, evento ou público fornecido. É possível definir a regra para &quot;[!UICONTROL Excluir]&quot; perfis que correspondam aos critérios do contêiner ao selecionar **[!UICONTROL Incluir]** no canto superior esquerdo do bloco e selecionar &quot;[!UICONTROL Excluir]&quot;.
+Um novo contêiner é exibido como filho do primeiro contêiner, mas você pode ajustar a hierarquia arrastando e movendo os contêineres. O comportamento padrão de um contêiner é &quot;[!UICONTROL Include]&quot; para o atributo, evento ou público fornecido. Você pode definir a regra para &quot;[!UICONTROL Exclude]&quot; perfis que correspondam aos critérios do contêiner selecionando **[!UICONTROL Include]** no canto superior esquerdo do bloco e selecionando &quot;[!UICONTROL Exclude]&quot;.
 
 Um contêiner filho também pode ser extraído e adicionado em linha ao contêiner pai selecionando &quot;Decodificar contêiner&quot; no contêiner filho. Selecione as reticências (...) no canto superior direito do container filho para acessar essa opção.
 
 ![As opções que permitem decodificar ou excluir o contêiner estão realçadas.](../images/ui/segment-builder/include-exclude.png)
 
-Depois de selecionar **[!UICONTROL Decodificar contêiner]**, o contêiner filho será removido e os critérios aparecerão embutidos.
+Depois de selecionar **[!UICONTROL Unwrap container]**, o contêiner filho será removido e os critérios aparecerão embutidos.
 
 >[!NOTE]
 >
@@ -371,7 +371,7 @@ O [!DNL Experience Platform] permite reunir dados de várias fontes e combiná-l
 
 Você pode selecionar uma política de mesclagem que corresponda à sua finalidade de marketing para este público ou usar a política de mesclagem padrão fornecida por [!DNL Experience Platform]. É possível criar várias políticas de mesclagem exclusivas para sua organização, incluindo a criação de sua própria política de mesclagem padrão. Para obter instruções passo a passo sobre como criar políticas de mesclagem para sua organização, comece lendo a [visão geral das políticas de mesclagem](../../profile/merge-policies/overview.md).
 
-Para selecionar uma política de mesclagem para a definição do segmento, selecione o ícone de engrenagem na guia **[!UICONTROL Campos]** e use o menu suspenso **[!UICONTROL Política de mesclagem]** para selecionar a política de mesclagem que deseja usar.
+Para selecionar uma política de mesclagem para a definição de segmento, selecione o ícone de engrenagem na guia **[!UICONTROL Fields]** e use o menu suspenso **[!UICONTROL Merge Policy]** para selecionar a política de mesclagem que deseja usar.
 
 ![O seletor de política de mesclagem está realçado. Isso permite escolher qual política de mesclagem selecionar para a definição de segmento.](../images/ui/segment-builder/merge-policy-selector.png)
 
@@ -398,23 +398,23 @@ Para selecionar uma política de mesclagem para a definição do segmento, selec
 >title="Perfis estimados"
 >abstract="Perfis estimados indicam um número aproximado de perfis, com base na amostra de tarefa, que se qualificariam para as regras do público-alvo."
 
-Ao criar uma definição de segmento, a seção **[!UICONTROL Propriedades do público-alvo]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho da definição de segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.
+Ao criar uma definição de segmento, a seção **[!UICONTROL Audience properties]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho da definição de segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.
 
-**[!UICONTROL Perfis qualificados]** indica o número **real** de perfis que correspondem às regras de definição de segmento. Esse número atualiza a cada 24 horas, após a execução do trabalho de avaliação do segmento.
+**[!UICONTROL Qualified Profiles]** indica o número **real** de perfis que correspondem às regras da definição de segmento. Esse número atualiza a cada 24 horas, após a execução do trabalho de avaliação do segmento.
 
 O carimbo de data/hora para perfis qualificados indica o trabalho de avaliação de segmento mais recente do **lote** e é **não** exibido para definições de segmento avaliadas usando a segmentação de borda ou de streaming. Se você editar a definição do segmento, o número de perfis qualificados permanecerá o mesmo até que o próximo trabalho de avaliação de segmento seja executado.
 
-**[!UICONTROL Perfis estimados]** indica um **intervalo aproximado** de perfis, com base no **trabalho de amostra**. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode ser diferente do número real de perfis qualificados. A amostra de perfil estimada tem um intervalo de confiança de 95%.
+**[!UICONTROL Estimated Profiles]** indica um **intervalo aproximado** de perfis, com base no **trabalho de amostra**. Isso significa que os dados de amostra são projetados no conjunto maior de perfis, resultando em um número estimado que pode ser diferente do número real de perfis qualificados. A amostra de perfil estimada tem um intervalo de confiança de 95%.
 
-Ao fazer alterações nas regras do público-alvo, você pode selecionar o botão **[!UICONTROL Atualizar estimativa]** para ver uma contagem atualizada dos perfis estimados. No entanto, esse número ainda se baseia no trabalho de amostra anterior. O trabalho de amostra é atualizado quando há uma alteração maior que 3% nos dados do cliente ou o último trabalho de amostra tem mais de três dias.
+Ao fazer alterações nas regras do público-alvo, você pode clicar no botão **[!UICONTROL Refresh estimate]** para ver uma contagem atualizada dos perfis estimados. No entanto, esse número ainda se baseia no trabalho de amostra anterior. O trabalho de amostra é atualizado quando há uma alteração maior que 3% nos dados do cliente ou o último trabalho de amostra tem mais de três dias.
 
 Selecionar a bolha de informações fornece a data e a hora em que o último trabalho de amostra foi executado.
 
 ![Perfis qualificados e Perfis estimados são realçados na seção Propriedades de público-alvo.](../images/ui/segment-builder/audience-estimates.png)
 
-A seção **[!UICONTROL Propriedades do público-alvo]** também é o local onde você pode especificar informações importantes sobre o público-alvo, incluindo nome, descrição e tipo de avaliação. Os nomes são usados para identificar a definição do segmento entre os definidos pela organização e, portanto, devem ser descritivos, concisos e exclusivos.
+A seção **[!UICONTROL Audience properties]** também é o local onde você pode especificar informações importantes sobre seu público-alvo, incluindo nome, descrição e tipo de avaliação. Os nomes são usados para identificar a definição do segmento entre os definidos pela organização e, portanto, devem ser descritivos, concisos e exclusivos.
 
-Enquanto você continua a criar seu público-alvo, pode visualizá-lo paginado selecionando **[!UICONTROL Exibir Perfis]**.
+À medida que você continua a criar seu público-alvo, você pode visualizá-lo paginado selecionando **[!UICONTROL View Profiles]**.
 
 ![A seção de propriedades do público-alvo está realçada. As propriedades de público incluem, mas não estão limitadas a, o nome, a descrição e o método de avaliação.](../images/ui/segment-builder/segment-properties.png)
 
@@ -428,9 +428,9 @@ Enquanto você continua a criar seu público-alvo, pode visualizá-lo paginado s
 
 Você também pode selecionar seu método de avaliação. Se você souber qual método de avaliação deseja usar, poderá selecionar o método de avaliação desejado usando a lista suspensa. Se quiser saber para quais tipos de avaliação essa definição de segmento se qualifica, você pode selecionar o ícone de navegação ![ícone de pasta com uma lupa](/help/images/icons/folder-search.png) para ver uma lista dos métodos de avaliação de definição de segmento disponíveis.
 
-O popover [!UICONTROL Qualificação para o método de avaliação] é exibido. Esse popover exibe os métodos de avaliação disponíveis, que são batch, streaming e edge. O popover mostra quais métodos de avaliação são elegíveis e inelegíveis. Dependendo dos parâmetros usados na definição do segmento, ele pode não se qualificar para determinados métodos de avaliação. Para obter mais informações sobre os requisitos de cada método de avaliação, leia as visões gerais da [segmentação de transmissão](../methods/streaming-segmentation.md#query-types) ou da [segmentação de borda](../methods/edge-segmentation.md#query-types).
+O popover [!UICONTROL Evaluation method eligibility] é exibido. Esse popover exibe os métodos de avaliação disponíveis, que são batch, streaming e edge. O popover mostra quais métodos de avaliação são elegíveis e inelegíveis. Dependendo dos parâmetros usados na definição do segmento, ele pode não se qualificar para determinados métodos de avaliação. Para obter mais informações sobre os requisitos de cada método de avaliação, leia as visões gerais da [segmentação de transmissão](../methods/streaming-segmentation.md#query-types) ou da [segmentação de borda](../methods/edge-segmentation.md#query-types).
 
-Você também pode alterar o método de avaliação da definição do segmento depois de terminar de criá-lo. Se você alterar o método de avaliação de Edge ou Streaming para Batch, **não** poderá alterá-lo de volta para Edge ou Streaming. A alteração no método de avaliação **somente** entrará em vigor depois que você selecionar **[!UICONTROL Salvar]** no popover. Cancelar a caixa de diálogo **manterá** o método de avaliação original.
+Você também pode alterar o método de avaliação da definição do segmento depois de terminar de criá-lo. Se você alterar o método de avaliação de Edge ou Streaming para Batch, **não** poderá alterá-lo de volta para Edge ou Streaming. A alteração no método de avaliação **somente** entrará em vigor depois que você selecionar **[!UICONTROL Save]** no popover. Cancelar a caixa de diálogo **manterá** o método de avaliação original.
 
 ![A janela pop-up de qualificação do método de avaliação é exibida. Isso exibe quais métodos de avaliação são qualificados e não qualificados para a definição de segmento.](../images/ui/segment-builder/select-evaluation-method.png)
 

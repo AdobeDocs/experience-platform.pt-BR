@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da marcação de conteúdo
 description: A marcação de conteúdo é um conjunto de serviços de IA que permite extrair recursos inteligentes do seu conteúdo, organizar, simplificar o fluxo de conteúdo e fornecer experiências personalizadas mais impactantes aos seus clientes.
 exl-id: 65c527d7-b1bd-414f-aba1-8445676a7052
-source-git-commit: a42bb4af3ec0f752874827c5a9bf70a66beb6d91
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '322'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -31,16 +31,19 @@ O conteúdo é um componente essencial dessas experiências. Para responder melh
 A visão geral da Marcação de conteúdo é dividida em três etapas para realizar o envolvimento ideal do cliente e maximizar KPIs orientados pelo cliente.
 
 **Etapa 1: Compreender o conteúdo**
+
 - Extrair recursos e metadados inteligentes.
 - Organize o conteúdo (marque, categorize, agrupe, remova a duplicação).
 - Associar dados de conteúdo a ativos.
 
 **Etapa 2: Noções básicas sobre o cliente**
+
 - Associar as ações do cliente aos recursos de conteúdo.
 - Obtenha as preferências e afinidades do cliente a partir do conteúdo e das ações.
 - Adicione preferências ao perfil do cliente.
 
 **Etapa 3: Habilitando a otimização de experiência**
+
 - Use o perfil do cliente para fornecer experiências aprimoradas e personalizadas na sessão e para experiências subsequentes.
 - Use recursos de conteúdo para obter insights sobre os comportamentos dos clientes que direcionam KPIs.
 - Use insights de conteúdo para melhorar a criação, a criação e a seleção de conteúdo.

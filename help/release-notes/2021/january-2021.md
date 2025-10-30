@@ -5,9 +5,9 @@ doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
 exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '720'
+source-wordcount: '722'
 ht-degree: 27%
 
 ---
@@ -70,7 +70,7 @@ Para obter mais informações sobre o Perfil do cliente em tempo real, incluindo
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 **Novos recursos**
 
@@ -80,6 +80,6 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 | [!DNL Google BigQuery] aprimoramentos no conector de origem | Agora é possível assimilar arquivos com mais de 10 GB em uma execução de fluxo usando o conector de origem [!DNL BigQuery]. Consulte a [[!DNL BigQuery] visão geral do conector de origem](../../sources/connectors/databases/bigquery.md) para obter mais informações. |
 | Suporte a tipos de dados complexos para armazenamentos em nuvem | Agora é possível assimilar tipos de dados complexos, como matrizes em arquivos JSON, ao usar um conector de origem de armazenamento na nuvem. Consulte os tutoriais sobre como criar um fluxo de dados de armazenamento na nuvem [na interface](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) ou [usando a [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) para obter mais informações. |
 | Suporte para autenticação baseada em chave da entidade de serviço para a origem [!DNL Microsoft Dynamics] | Agora você pode autenticar em sua conta do [!DNL Dynamics] usando uma chave da entidade de serviço como alternativa à autenticação baseada em senha. Consulte a [[!DNL Dynamics] visão geral do conector de origem](../../sources/connectors/crm/ms-dynamics.md) para obter mais informações. |
-| Suporte à interface do usuário para separadores personalizados em fontes de armazenamento em nuvem | Agora é possível definir um delimitador de coluna personalizado, como vírgula (`,`), tabulação (`\t`) ou barra vertical (`|`), para coletar arquivos delimitados na interface do usuário. Consulte o tutorial sobre [criação de um fluxo de dados com um conector de origem de armazenamento na nuvem](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obter mais informações |
+| Suporte à interface do usuário para separadores personalizados em fontes de armazenamento em nuvem | Agora é possível definir um delimitador de coluna personalizado, como vírgula (`,`), tabulação (`\t`) ou barra vertical (&amp;vert;), para coletar arquivos delimitados na interface do usuário. Consulte o tutorial sobre [criação de um fluxo de dados com um conector de origem de armazenamento na nuvem](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) para obter mais informações |
 
 Para saber mais sobre fontes, consulte a [visão geral das fontes](../../sources/home.md).

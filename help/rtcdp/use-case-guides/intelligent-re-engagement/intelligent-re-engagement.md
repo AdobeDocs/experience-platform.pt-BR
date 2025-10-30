@@ -3,9 +3,9 @@ title: Reengajamento inteligente
 description: Ofereça experiências atraentes e conectadas durante os principais momentos de conversão para engajar novamente clientes pouco frequentes de forma inteligente.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '3896'
+source-wordcount: '3871'
 ht-degree: 4%
 
 ---
@@ -36,18 +36,18 @@ Você construirá esquemas, conjuntos de dados e públicos à medida que trabalh
 
 Ao concluir as etapas para implementar o caso de uso, você usará a seguinte funcionalidade do Real-Time CDP e do Adobe Journey Optimizer (listada na ordem em que será usada). Verifique se tem as [permissões de controle de acesso baseado em atributo](/help/access-control/home.md) necessárias para todas essas áreas, ou solicite ao(à) administrador(a) que as conceda a você.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=pt-BR) - Integra dados em fontes de dados para alimentar a campanha. Esses dados são usados para criar os públicos-alvo da campanha e exibir elementos de dados personalizados usados no email e nos blocos promocionais da Web (por exemplo, nome ou informações relacionadas à conta). A CDP também é usada para ativar públicos-alvo no email e na Web (via [!DNL Adobe Target]).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integra dados em fontes de dados para alimentar a campanha. Esses dados são usados para criar os públicos-alvo da campanha e exibir elementos de dados personalizados usados no email e nos blocos promocionais da Web (por exemplo, nome ou informações relacionadas à conta). A CDP também é usada para ativar públicos-alvo no email e na Web (via [!DNL Adobe Target]).
    * [Esquemas](/help/xdm/home.md)
    * [Perfis](/help/profile/home.md)
    * [Conjuntos de dados](/help/catalog/datasets/overview.md)
    * [Públicos-alvo](/help/segmentation/home.md)
-   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [Destinos](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=pt-BR) - Ajuda você a fornecer experiências conectadas, contextuais e personalizadas aos seus clientes.
-   * [Acionador de evento ou público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=pt-BR)
+   * [Acionador de evento ou público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Públicos-alvo/Eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=pt-BR)
-   * [Ações de Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR)
+   * [Ações de Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Como obter o caso de uso {#achieve-use-case-instruction}
 
@@ -59,7 +59,7 @@ Abaixo está uma visão geral de alto nível dos três exemplos de cenários de 
 
 O cenário de navegação de produto abandonado segmenta a navegação de produto abandonada no site e no aplicativo móvel. Esse cenário é acionado quando um produto foi visualizado, mas não foi comprado ou adicionado ao carrinho. Neste exemplo, o engajamento da marca é acionado após três dias se não houver adições à lista nas últimas 24 horas.<p>![Visão geral visual de alto nível do cenário de navegação inteligente de produto abandonada do cliente.](../intelligent-re-engagement/images/re-engagement-journey.png "Visão geral visual de alto nível do cenário de navegação inteligente de produto abandonada do cliente."){width="1920" zoomable="yes"}</p>
 
-1. Crie esquemas e conjuntos de dados e habilite para [!UICONTROL Perfil].
+1. Você cria esquemas e conjuntos de dados e habilita para [!UICONTROL Profile].
 2. Você assimila dados na Experience Platform por meio da Web SDK, Mobile SDK ou API. O Analytics Source Connector também pode ser usado, mas pode resultar em latência de jornada.
 3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você compila públicos-alvo focalizados a partir da lista de perfis para verificar se um **cliente** fez um compromisso nos últimos três dias.
@@ -71,10 +71,10 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
 
 O cenário de carrinho abandonado se aplica quando os produtos foram colocados no carrinho, mas ainda não foram comprados no site e no aplicativo móvel. Além disso, as campanhas de Mídia paga são iniciadas e interrompidas usando esse método.<p>![Visão geral visual de alto nível do cenário de carrinho abandonado pelo cliente.](../intelligent-re-engagement/images/abandoned-cart-journey.png "Visão geral visual de alto nível do cenário de carrinho abandonado pelo cliente."){width="1920" zoomable="yes"}</p>
 
-1. Você cria esquemas e conjuntos de dados, o habilitado para [!UICONTROL Perfil].
+1. Você cria esquemas e conjuntos de dados, o habilitado para [!UICONTROL Profile].
 2. Você assimila dados na Experience Platform por meio da Web SDK, Mobile SDK ou API. O Analytics Source Connector também pode ser usado, mas pode resultar em latência de jornada.
 3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
-4. Você compila públicos-alvo focalizados a partir da lista de perfis para verificar se um **cliente** colocou um item no carrinho, mas não concluiu a compra. O evento **[!UICONTROL Adicionar ao carrinho]** aciona um temporizador que aguarda 30 minutos e verifica a compra. Se nenhuma compra for feita, o **cliente** será adicionado aos públicos-alvo do **[!UICONTROL Abandonar carrinho]**.
+4. Você compila públicos-alvo focalizados a partir da lista de perfis para verificar se um **cliente** colocou um item no carrinho, mas não concluiu a compra. O evento **[!UICONTROL Add to cart]** inicia um temporizador que aguarda 30 minutos e verifica a compra. Se nenhuma compra for feita, o **cliente** será adicionado aos públicos-alvo de **[!UICONTROL Abandon Cart]**.
 5. Você cria uma jornada de carrinho abandonada em [!DNL Adobe Journey Optimizer].
 6. Se necessário, trabalhe com o **parceiro de dados** para a ativação de públicos-alvo para os destinos de mídia paga desejados.
 7. [!DNL Adobe Journey Optimizer] verifica o consentimento e envia as várias ações configuradas.
@@ -83,7 +83,7 @@ O cenário de carrinho abandonado se aplica quando os produtos foram colocados n
 
 O cenário de confirmação de pedido se concentra nas compras de produtos feitas pelo site e pelo aplicativo móvel.<p>![Visão geral visual de alto nível do cenário de confirmação de pedido do cliente.](../intelligent-re-engagement/images/order-confirmation-journey.png "Visão geral visual de alto nível do cenário de confirmação de pedido do cliente."){width="1920" zoomable="yes"}</p>
 
-1. Crie esquemas e conjuntos de dados e habilite para [!UICONTROL Perfil].
+1. Você cria esquemas e conjuntos de dados e habilita para [!UICONTROL Profile].
 2. Você assimila dados na Experience Platform por meio da Web SDK, Mobile SDK ou API. O Analytics Source Connector também pode ser usado, mas pode resultar em latência de jornada.
 3. Você assimila dados adicionais ativados por perfil, que podem ser vinculados ao visitante da Web e do aplicativo móvel autenticado por meio de gráficos de identidade.
 4. Você cria uma jornada de confirmação em [!DNL Adobe Journey Optimizer].
@@ -95,7 +95,7 @@ Para concluir cada uma das etapas das visões gerais de alto nível acima, leia 
 
 ### Criar esquemas e especificar grupos de campos {#schema-design}
 
-Os recursos do Experience Data Model (XDM) são gerenciados no espaço de trabalho [!UICONTROL Esquemas] em [!DNL Adobe Experience Platform]. Você pode visualizar e explorar os recursos principais fornecidos por [!DNL Adobe] (por exemplo, grupos de campos) e criar recursos e esquemas personalizados para sua organização.
+Os recursos do Experience Data Model (XDM) são gerenciados no espaço de trabalho [!UICONTROL Schemas] em [!DNL Adobe Experience Platform]. Você pode visualizar e explorar os recursos principais fornecidos por [!DNL Adobe] (por exemplo, grupos de campos) e criar recursos e esquemas personalizados para sua organização.
 
 Para obter mais informações sobre como criar [esquemas](/help/xdm/home.md), consulte o tutorial [criar esquema.](/help/xdm/tutorials/create-schema-ui.md) e [Modelar seus dados de experiência do cliente com XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
 
@@ -105,7 +105,7 @@ Há quatro designs de esquema que são usados para o caso de uso de reengajament
 
 Esse esquema é usado para estruturar e fazer referência aos dados do perfil que compõem as informações do cliente. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] por meio do seu CRM ou sistema semelhante e são necessários para consultar os detalhes do cliente usados para personalização, consentimento de marketing e recursos aprimorados do público-alvo.
 
-O esquema de atributos do cliente é representado por uma classe [[!UICONTROL Perfil individual XDM]](/help/xdm/classes/individual-profile.md), que inclui os seguintes grupos de campos:
+O esquema de atributos do cliente é representado por uma classe [[!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md), que inclui os seguintes grupos de campos:
 
 +++Detalhes de contato pessoal (grupo de campos)
 
@@ -141,7 +141,7 @@ O grupo de campos [Consentimentos e Preferências](/help/xdm/field-groups//profi
 
 +++Detalhes do teste de perfil (grupo de campos)
 
-Este grupo de campos permite testar sua jornada antes de ela ser publicada, usando perfis de teste. Para obter mais informações sobre como criar perfis de teste, leia o [tutorial Criar perfis de teste](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=pt-BR) e o [tutorial Testar o jornada](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=pt-BR).
+Este grupo de campos permite testar sua jornada antes de ela ser publicada, usando perfis de teste. Para obter mais informações sobre como criar perfis de teste, leia o [tutorial Criar perfis de teste](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) e o [tutorial Testar o jornada](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
 
 +++
 
@@ -178,7 +178,7 @@ O grupo de campos [Detalhes da ID do Usuário Final](/help/xdm/field-groups/even
 
 +++
 
-+++Detalhes do Commerce (Grupo de campos)
++++Detalhes do Commerce (Grupo de Campos)
 
 O grupo de campos [Detalhes do Commerce](/help/xdm/field-groups/event/commerce-details.md) é usado para descrever dados de comércio, como informações do produto (SKU, nome, quantidade) e operações padrão do carrinho (pedido, check-out, abandono).
 
@@ -221,7 +221,7 @@ A classe [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md
 
 +++
 
-+++Detalhes do Commerce (Grupo de campos)
++++Detalhes do Commerce (Grupo de Campos)
 
 O grupo de campos [Detalhes do Commerce](/help/xdm/field-groups/event/commerce-details.md) é usado para descrever dados de comércio, como informações do produto (SKU, nome, quantidade) e operações padrão do carrinho (pedido, check-out, abandono).
 
@@ -251,7 +251,7 @@ O grupo de campos [Detalhes do Commerce](/help/xdm/field-groups/event/commerce-d
 
 +++
 
-+++Detalhes de auditoria externa do sistema Source (grupo de campos)
++++Detalhes de auditoria externa do sistema Source (grupo de campos) 
 
 Atributos de auditoria de sistema do Source externo é um tipo de dados padrão do Experience Data Model (XDM) que captura os detalhes de auditoria sobre um sistema de origem externa.
 
@@ -314,11 +314,11 @@ Para obter mais informações sobre como criar um [conjunto de dados](/help/cata
 
 >[!IMPORTANT]
 >
->Oferecer aos clientes a capacidade de cancelar a inscrição para receber comunicações de uma marca, bem como garantir que essa escolha seja respeitada, é um requisito legal. Saiba mais sobre a legislação aplicável na [Visão geral das regras de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=pt-BR).
+>Oferecer aos clientes a capacidade de cancelar a inscrição para receber comunicações de uma marca, bem como garantir que essa escolha seja respeitada, é um requisito legal. Saiba mais sobre a legislação aplicável na [Visão geral das regras de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
 #### Políticas de consentimento
 
-Ao criar um caminho de reengajamento, considere adicionar as [políticas de consentimento](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=pt-BR) a seguir:
+Ao criar um caminho de reengajamento, considere adicionar as [políticas de consentimento](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) a seguir:
 
 * Se `consents.marketing.email.val = "Y"` então pode enviar um email
 * Se `consents.marketing.sms.val = "Y"` então pode SMS
@@ -346,7 +346,7 @@ Não há [políticas de uso de dados](/help/data-governance/policies/overview.md
 
 Os cenários de reengajamento usam públicos para definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Os públicos podem ser criados de várias maneiras no [!DNL Adobe Experience Platform].
 
-Para obter mais informações sobre como criar um público, leia o [guia da interface do usuário do serviço de público-alvo](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=pt-BR#create-audience).
+Para obter mais informações sobre como criar um público, leia o [guia da interface do usuário do serviço de público-alvo](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 Para obter mais informações sobre como compor diretamente [Públicos-alvo](/help/segmentation/home.md), leia o [Guia da Interface do Usuário de Composição de Público](/help/segmentation/ui/audience-composition.md).
 
@@ -383,7 +383,7 @@ Os seguintes campos e condições são obrigatórios ao configurar este público
 * `Timestamp: > 4 days`
 +++
 
-+++Transmissão do engajamento no último dia
++++Transmissão de engajamento no último dia
 
 O evento a seguir é usado para o cenário de navegação de produto abandonado em que os usuários se envolveram (visitas ao site, visitas de aplicativos, compras online, compras offline e eventos de adição ao carrinho) nos últimos 1 dia.
 
@@ -414,7 +414,7 @@ Os eventos a seguir são usados para o cenário de carrinho abandonado em que os
 Os seguintes campos e condições são obrigatórios ao configurar este público-alvo:
 
 * `eventType: commerce.productListAdds`
-   * `Timestamp: >= 1 days before now AND <= 4 days before now `
+   * `Timestamp: >= 1 days before now AND <= 4 days before now`
 * `eventType: commerce.purchases`
    * `Timestamp: <= 4 days before now`
 * `eventType: commerce.productListRemovals`
@@ -434,9 +434,9 @@ Esta jornada não requer a criação de públicos-alvo.
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] não abrange tudo o que é mostrado nos diagramas. Todos os [anúncios de mídia pagos](/help/destinations/catalog/social/overview.md) são criados em [!UICONTROL Destinos].
+>[!DNL Adobe Journey Optimizer] não abrange tudo o que é mostrado nos diagramas. Todos os [anúncios de mídia pagos](/help/destinations/catalog/social/overview.md) são criados em [!UICONTROL Destinations].
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR) ajuda você a fornecer experiências conectadas, contextuais e personalizadas aos seus clientes. A jornada do cliente envolve todo o processo de interação do cliente com a marca. Cada jornada de caso de uso requer informações específicas. Veja abaixo os dados precisos necessários para cada jornada.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) ajuda você a fornecer experiências conectadas, contextuais e personalizadas aos seus clientes. A jornada do cliente envolve todo o processo de interação do cliente com a marca. Cada jornada de caso de uso requer informações específicas. Veja abaixo os dados precisos necessários para cada jornada.
 
 >[!BEGINTABS]
 
@@ -446,7 +446,7 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
 
 +++Eventos
 
-Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=pt-BR).
+Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 1: visualizações do produto
    * Esquema: Transações digitais do cliente
@@ -534,7 +534,7 @@ Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens
 
 +++
 
-+++Lógica da chave da tela de Jornada
++++Jornada lógica da chave da tela
 
 A lógica da chave da tela de jornada exige que você identifique eventos específicos e configure as ações que devem ocorrer após a ocorrência do evento.
 
@@ -571,7 +571,7 @@ O cenário de carrinho abandonado segmenta os produtos que foram colocados no ca
 
 +++Eventos
 
-Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=pt-BR).
+Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 2: Adicionar ao carrinho
    * Esquema: Transações digitais do cliente
@@ -666,7 +666,7 @@ Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens
 
 +++
 
-+++Lógica da chave da tela de Jornada
++++Jornada lógica da chave da tela
 
 A lógica da chave da tela de jornada exige que você identifique eventos específicos e configure as ações que devem ocorrer após a ocorrência do evento.
 
@@ -704,7 +704,7 @@ O cenário de confirmação de pedido se concentra nas compras de produtos feita
 
 +++Eventos
 
-Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=pt-BR).
+Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 4: compras online
    * Esquema: Transações digitais do cliente
@@ -734,7 +734,7 @@ Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens
 
 +++
 
-+++Lógica da chave da tela de Jornada
++++Jornada lógica da chave da tela
 
 A lógica da chave da tela de jornada exige que você identifique eventos específicos e configure as ações que devem ocorrer após a ocorrência do evento.
 
@@ -755,7 +755,7 @@ A lógica da chave da tela de jornada exige que você identifique eventos espec�
 
 >[!ENDTABS]
 
-Para obter mais informações sobre como criar jornadas no [!DNL Adobe Journey Optimizer], leia o [Guia de Introdução ao jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR).
+Para obter mais informações sobre como criar jornadas no [!DNL Adobe Journey Optimizer], leia o [Guia de Introdução ao jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Configuração de anúncios de mídia paga em destinos {#paid-media-ads}
 

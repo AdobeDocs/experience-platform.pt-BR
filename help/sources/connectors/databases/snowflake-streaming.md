@@ -3,7 +3,7 @@ title: Visão geral do Snowflake Streaming Source Connector
 description: Saiba como criar uma conexão de origem e um fluxo de dados para assimilar dados de transmissão da sua instância do Snowflake para a Adobe Experience Platform
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 3%
@@ -160,7 +160,7 @@ Para obter mais informações sobre o gerenciamento de funções e privilégios,
 
 ## Converter hora Unix em campos de data
 
-O [!DNL Snowflake Streaming] analisa e grava os campos ` DATE` como o número de dias desde a época Unix (01-1970). Por exemplo, um valor de `DATE` de 0 significa 1 de janeiro de 1970, enquanto um valor de 1 significa 2 de janeiro de 1970. Portanto, Ao preparar o arquivo para criar mapeamentos na origem [!DNL Snowflake Streaming], certifique-se de que a coluna `DATE` seja representada como um inteiro.
+O [!DNL Snowflake Streaming] analisa e grava campos `DATE` como o número de dias desde a época Unix (01-1970). Por exemplo, um valor de `DATE` de 0 significa 1 de janeiro de 1970, enquanto um valor de 1 significa 2 de janeiro de 1970. Portanto, Ao preparar o arquivo para criar mapeamentos na origem [!DNL Snowflake Streaming], certifique-se de que a coluna `DATE` seja representada como um inteiro.
 
 Você pode usar as [funções de dados e tempo do Preparo de Dados](../../../data-prep/functions.md#date-and-time-functions) para converter o horário Unix em campos de data que podem ser assimilados no Experience Platform. Por exemplo:
 

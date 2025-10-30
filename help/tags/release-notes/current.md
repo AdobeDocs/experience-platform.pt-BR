@@ -2,10 +2,10 @@
 title: Notas de versão para tags e encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 93%
+source-wordcount: '771'
+ht-degree: 88%
 
 ---
 
@@ -28,6 +28,7 @@ Lançamento da nova extensão a seguir:
 **Fluxos de trabalho de início rápido (Beta)**
 
 Acesse os novos fluxos de trabalho de início rápido na seção de “Introdução” da página inicial da Coleção de dados. Os fluxos de trabalho a seguir agora estão disponíveis para clientes como um Beta público.
+
 * **[API de conversões da Meta](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html?lang=pt-br#quick-start)**: clientes que encaminham eventos podem coletar e encaminhar dados de eventos do lado do servidor para a Meta rapidamente, a fim de realizar conversões de anúncios em apenas algumas etapas simples.
 * **[SDK móvel](https://developer.adobe.com/client-sdks/documentation/)**: clientes podem implementar rapidamente o SDK móvel e validar eventos móveis básicos em apenas algumas etapas simples.
 
@@ -44,7 +45,7 @@ Lançamento de novas extensões:
    1. Propriedades, regras e elementos de dados recentes
    1. Extensões populares
    1. Novas atualizações de extensão com recurso de instalação rápida
-* **Enviar dados para o [!DNL Google Ads] usando o encaminhamento de eventos**: agora é possível usar a extensão da API [[!DNL Google Ads Enhanced Conversions] &#x200B;](../extensions/server/google-ads-enhanced-conversions/overview.md) para encaminhamento de eventos juntamente com os [segredos do Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2) para enviar dados do lado do servidor para o [!DNL Google Ads] em tempo real e com segurança.
+* **Enviar dados para o [!DNL Google Ads] usando o encaminhamento de eventos**: agora é possível usar a extensão da API [[!DNL Google Ads Enhanced Conversions] ](../extensions/server/google-ads-enhanced-conversions/overview.md) para encaminhamento de eventos juntamente com os [segredos do Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2) para enviar dados do lado do servidor para o [!DNL Google Ads] em tempo real e com segurança.
 
 ## 23 de novembro de 2022
 
@@ -60,9 +61,9 @@ Lançamento de novas extensões:
 
 ## 28 de setembro de 2022
 
-* **Integração com o menu de navegação esquerdo da Adobe Experience Platform**: todos os recursos anteriormente exclusivos da interface da Coleção de dados (incluindo tags e encaminhamento de eventos) agora também estão disponíveis por meio do menu de navegação esquerdo na interface da Experience Platform, na categoria **[!UICONTROL Coleção de dados]**. Isso elimina a necessidade de alternar entre interfaces do usuário ao trabalhar com recursos de coleta de dados no Experience Platform.
+* **Integração com a navegação à esquerda do Adobe Experience Platform**: todos os recursos que antes eram exclusivos da interface da Coleção de Dados (incluindo marcas e encaminhamento de eventos) agora também estão disponíveis através da navegação à esquerda na interface da Experience Platform, na categoria **[!UICONTROL Data Collection]**. Isso elimina a necessidade de alternar entre interfaces do usuário ao trabalhar com recursos de coleta de dados no Experience Platform.
 * **Atribuição de usuário em tags e encaminhamento de eventos**: ao listar propriedades disponíveis em tags e no encaminhamento de eventos, cada propriedade listada agora mostra quando foi atualizada pela última vez e por quem.
-* Extensão da **[[!DNL Snap Conversions API] &#x200B;](https://exchange.adobe.com/apps/ec/108550) para encaminhamento de eventos**: agora é possível enviar dados para a [!DNL Snapchat Conversions API] usando uma extensão de [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md). Para obter mais informações sobre como autenticar e usar a API, consulte a [[!DNL Snapchat Marketing API] documentação](https://marketingapi.snapchat.com/docs/conversion.html).
+* Extensão da **[[!DNL Snap Conversions API] ](https://exchange.adobe.com/apps/ec/108550) para encaminhamento de eventos**: agora é possível enviar dados para a [!DNL Snapchat Conversions API] usando uma extensão de [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md). Para obter mais informações sobre como autenticar e usar a API, consulte a [[!DNL Snapchat Marketing API] documentação](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## 27 de julho de 2022
 

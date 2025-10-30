@@ -3,7 +3,7 @@ keywords: plataforma;destinos;destinos espaço de trabalho;espaço de trabalho;u
 title: Espaço de trabalho Destinos
 description: 'O espaço de trabalho Destinos consiste em cinco seções: Visão geral, Catálogo, Procurar, Contas e Exibição de sistema. Eles são descritos nas seções abaixo.'
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: de71e9e7825ab9a3eaf1e06d03046636406493db
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2150'
 ht-degree: 0%
@@ -83,11 +83,11 @@ Destinos com a opção **[!UICONTROL Enabled/Disabled]** ativada definem o desti
 > ![Guia Procurar](../assets/ui/workspace/browse-tab.png)
 > 
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![Ativar públicos-alvo](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]** para exportar públicos-alvo ou conjuntos de dados para esse destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![Editar controle de destino &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;para editar conexões de destino existentes. Leia o tutorial sobre [edição de destinos](/help/destinations/ui/edit-destination.md) para obter mais informações.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![Editar controle de destino ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**para editar conexões de destino existentes. Leia o tutorial sobre [edição de destinos](/help/destinations/ui/edit-destination.md) para obter mais informações.
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![Editar ações de marketing](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Edit marketing actions]** para [alterar as ações de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) do destino selecionado.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![&#x200B; &#x200B;](/help/images/icons/delete.png)Excluir **[!UICONTROL Delete]** para [remover](delete-destinations.md) uma conexão existente com um destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![ ](/help/images/icons/delete.png)Excluir **[!UICONTROL Delete]** para [remover](delete-destinations.md) uma conexão existente com um destino.
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![Exibir no controle de monitoramento](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]** para exibir informações de ativação para este destino no [painel de monitoramento](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard).
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![Assinar alertas &#x200B;](/help/images/icons/alert-add.png) **[!UICONTROL Subscribe to alerts]** para assinar alertas de fluxo de dados de destino. Você pode assinar alertas para receber mensagens sobre o status, o sucesso ou a falha da execução do fluxo. Consulte [Assinar alertas de destino em contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![Assinar alertas](/help/images/icons/alert-add.png) **[!UICONTROL Subscribe to alerts]** para assinar alertas de fluxo de dados de destino. Você pode assinar alertas para receber mensagens sobre o status, o sucesso ou a falha da execução do fluxo. Consulte [Assinar alertas de destino em contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
 > * Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![Gerenciar marcas](/help/images/icons/manage-tags.png) **[!UICONTROL Manage tags]** para adicionar ou remover marcas de um destino. Consulte a seção [Gerenciar tags de destino](#manage-tags) para obter informações detalhadas sobre o uso de tags.
 
 Consulte a tabela abaixo para obter todas as informações fornecidas para cada destino na guia [!UICONTROL Browse].
@@ -183,9 +183,9 @@ A guia **[!UICONTROL Accounts]** mostra detalhes sobre as conexões estabelecida
 
 >[!TIP]
 >
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Ativar controle &#x200B;](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**&#x200B;para exportar públicos ou conjuntos de dados para esse destino.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Editar detalhes &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit details]**&#x200B;para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
-> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Excluir &#x200B;](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;para [excluir](delete-destination-account.md) uma conta de destino existente.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Ativar controle ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**para exportar públicos ou conjuntos de dados para esse destino.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Editar detalhes ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**para [atualizar](update-accounts.md) os detalhes de uma conta de destino existente.
+> * Selecione as reticências (`...`) na coluna [!UICONTROL Platform] e use o controle ![Excluir ](/help/images/icons/delete.png)**[!UICONTROL Delete]**para [excluir](delete-destination-account.md) uma conta de destino existente.
 
 ![Guia Contas](../assets/ui/workspace/accounts-tab.png)
 

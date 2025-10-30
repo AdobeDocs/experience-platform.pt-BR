@@ -6,7 +6,7 @@ last-update: April 13, 2020
 author: ens71067
 keywords: Notas de versão;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '972'
 ht-degree: 20%
@@ -18,9 +18,11 @@ ht-degree: 20%
 **Data de lançamento: quinta-feira, 8 de abril de 2020**
 
 Novos recursos na Adobe Experience Platform:
+
 * [[!DNL Intelligent Services]](#intelligent)
 
 Atualizações dos recursos existentes:
+
 * [[!DNL Experience Data Model (XDM)]](#xdm)
 * [Governança de dados](#governance)
 * [[!DNL Destinations]](#destinations)

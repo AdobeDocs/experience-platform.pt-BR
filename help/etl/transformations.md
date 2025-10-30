@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Exemplos de transformações ETL
 description: Este artigo demonstra o exemplo de transformações a seguir que um desenvolvedor de ETL (extract, transform, load) pode encontrar.
 exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
-source-git-commit: 1a7ba52b48460d77d0b7695aa0ab2d5be127d921
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '452'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Este artigo demonstra o exemplo de transformações a seguir que um desenvolvedo
 
 ### Arquivos de exemplo
 
-Arquivos CSV e JSON de exemplo estão disponíveis no repositório ETL público de Referência [!DNL GitHub] mantido pelo Adobe:
+Arquivos CSV e JSON de exemplo estão disponíveis no repositório ETL público de Referência [!DNL GitHub] mantido pela Adobe:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -42,6 +42,7 @@ Dr  Cammi   Haslen  F   1973-12-17  chaslenqv@ehow.com  56059cd5-5006-ce5f-2f5f-
 ### Mapeamento
 
 Os requisitos de mapeamento para os dados do CRM são descritos na tabela a seguir e incluem as seguintes transformações:
+
 - Colunas de identidade para `identityMap` propriedades
 - Data de nascimento (DOB) do ano e do mês-dia
 - Cadeias de Caracteres para Duplos ou Inteiros Curtos.
@@ -62,7 +63,7 @@ Os requisitos de mapeamento para os dados do CRM são descritos na tabela a segu
 | RUA | homeAddress.street1 | Copiar como sequência de caracteres |
 | CIDADE | homeAddress.city | Copiar como sequência de caracteres |
 | ESTADO | homeAddress.stateProvince | Copiar como sequência de caracteres |
-| País | homeAddress.country | Copiar como sequência de caracteres |
+| PAÍS | homeAddress.country | Copiar como sequência de caracteres |
 | ZIP | homeAddress.postalCode | Copiar como sequência de caracteres |
 | LAT | homeAddress.latitude | Converter para duplo |
 | LONGO | homeAddress.longitude | Converter para duplo |
@@ -284,9 +285,9 @@ Os requisitos de mapeamento para a matriz de identidades são descritos na tabel
 
 | Campo de identidade | Campo identityMap | Tipo de dados |
 | -------------- | ----------------- | --------- |
-| identidades[0].id | identityMap[Email][{"id"}] | copiar como string |
-| identidades[1].id | identityMap[CRMID][{"id"}] | copiar como string |
-| identidades[2].id | identityMap[LOYALTYID][{"id"}] | copiar como string |
+| `identities[0].id` | `identityMap[Email][{"id"}]` | copiar como string |
+| `identities[1].id` | `identityMap[CRMID][{"id"}]` | copiar como string |
+| `identities[2].id` | `identityMap[LOYALTYID][{"id"}]` | copiar como string |
 
 ### XDM de saída
 

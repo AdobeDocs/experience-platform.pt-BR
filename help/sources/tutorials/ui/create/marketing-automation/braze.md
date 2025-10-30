@@ -4,9 +4,9 @@ description: Saiba como criar um fluxo de dados para sua conta do Brasil usando 
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '971'
 ht-degree: 1%
 
 ---
@@ -47,19 +47,19 @@ Se você já tiver uma conexão [!DNL Braze], ignore o restante deste documento 
 >
 >Você deve criar um esquema do Experience Data Model (XDM) se esta for a primeira vez que você cria uma conexão [!DNL Braze Currents]. Se você já criou um esquema para [!DNL Braze Currents], ignore esta etapa e prossiga para [conectando sua conta ao Experience Platform](#connect).
 
-Na interface do usuário do Experience Platform, use a navegação à esquerda e selecione **[!UICONTROL Esquemas]** para acessar o espaço de trabalho [!UICONTROL Esquemas]. Em seguida, selecione **[!UICONTROL Criar esquema]** e **[!UICONTROL Evento de experiência]**. Para continuar, selecione **[!UICONTROL Avançar]**.
+Na interface do usuário do Experience Platform, use a navegação à esquerda e selecione **[!UICONTROL Schemas]** para acessar o espaço de trabalho [!UICONTROL Schemas]. Em seguida, selecione **[!UICONTROL Create schema]** e, em seguida, **[!UICONTROL Experience Event]**. Para continuar, selecione **[!UICONTROL Next]**.
 
 ![Um esquema concluído.](../../../../images/tutorials/create/braze/schema.png)
 
-Forneça um nome e uma descrição para o esquema. Em seguida, use o painel [!UICONTROL Composição] para configurar os atributos do esquema. Em [!UICONTROL Grupos de campos], selecione **[!UICONTROL Adicionar]** e adicione o grupo de campos [!UICONTROL Braço Evento do Usuário Atual]. Quando terminar, selecione **[!UICONTROL Salvar]**.
+Forneça um nome e uma descrição para o esquema. Em seguida, use o painel [!UICONTROL Composition] para configurar os atributos do esquema. Em [!UICONTROL Field groups], selecione **[!UICONTROL Add]** e adicione o grupo de campos [!UICONTROL Braze Currents User Event]. Quando terminar, selecione **[!UICONTROL Save]**.
 
 Para obter mais informações sobre esquemas, leia o guia para [criar esquemas na interface](../../../../../xdm/tutorials/create-schema-ui.md).
 
 ## Conectar sua conta do [!DNL Braze] à Experience Platform {#connect}
 
-Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface do Experience Platform, selecione **[!UICONTROL Sources]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Sources]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria *Automação de Marketing*, selecione **[!UICONTROL Correntes brasileiras]** e **[!UICONTROL Adicionar dados]**.
+Na categoria *Automação de Marketing*, selecione **[!UICONTROL Braze Currents]** e **[!UICONTROL Add data]**.
 
 ![O catálogo de origens na interface do usuário do Experience Platform com a origem de Correntes do Brasil selecionada.](../../../../images/tutorials/create/braze/catalog.png)
 
@@ -78,19 +78,19 @@ O mapeamento terá os seguintes problemas que precisam ser resolvidos.
 
 Nos dados de origem, *id* será mapeada incorretamente para *_braze.appID*. Você deve alterar o campo de target mapping para *_id* no nível raiz do esquema. Em seguida, verifique se *properties.is_amp* está mapeado para *_braze.messaging.email.isAMP*.
 
-Em seguida, exclua o mapeamento de *hora* para *carimbo de data/hora*, selecione o ícone adicionar (`+`) e selecione **[!UICONTROL Adicionar campo calculado]**. Na caixa fornecida, insira *hora \* 1000* e selecione **[!UICONTROL Salvar]**.
+Em seguida, exclua o mapeamento de *hora* para *carimbo de data/hora*, selecione o ícone adicionar (`+`) e selecione **[!UICONTROL Add calculated field]**. Na caixa fornecida, insira *hora \* 1000* e selecione **[!UICONTROL Save]**.
 
-Depois que o novo campo calculado for adicionado, selecione **[!UICONTROL Mapear campo de destino]** ao lado do novo campo de origem e mapeie-o para *carimbo de data/hora* no nível raiz do esquema. Você deve selecionar **[!UICONTROL Validar]** para garantir que não haja mais erros.
+Depois que o novo campo calculado for adicionado, selecione **[!UICONTROL Map target field]** ao lado do novo campo de origem e mapeie-o para *carimbo de data/hora* no nível raiz do esquema. Você deve selecionar **[!UICONTROL Validate]** para garantir que não tenha mais erros.
 
 >[!IMPORTANT]
 >
 >Os carimbos de data e hora brasileiros não são expressos em milissegundos, mas em segundos. Para que os carimbos de data e hora no Experience Platform sejam refletidos com precisão, é necessário criar campos calculados em milissegundos. Um cálculo de &quot;tempo * 1000&quot; será convertido corretamente em milissegundos, adequado para mapear para um campo de carimbo de data e hora no Experience Platform.
 >
->![Criando um campo calculado para o carimbo de data/hora &#x200B;](../../../../images/tutorials/create/braze/create-calculated-field.png)
+>![Criando um campo calculado para o carimbo de data/hora](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
 ![O mapeamento sem erros.](../../../../images/tutorials/create/braze/completed_mapping.png)
 
-Quando terminar, selecione **[!UICONTROL Próximo]**. Use a página de revisão para confirmar os detalhes do fluxo de dados e selecione **[!UICONTROL Concluir]**.
+Quando terminar, selecione **[!UICONTROL Next]**. Use a página de revisão para confirmar os detalhes do fluxo de dados e selecione **[!UICONTROL Finish]**.
 
 ### Coletar credenciais necessárias
 
@@ -100,7 +100,7 @@ Depois que a conexão for criada, é necessário coletar os seguintes valores de
 | --- | --- |
 | ID de cliente | A ID do cliente associada à origem do Experience Platform. |
 | Segredo do cliente | O segredo do cliente associado à origem do Experience Platform. |
-| ID do locatário | A ID do locatário associada à origem do Experience Platform. |
+| ID do inquilino | A ID do locatário associada à origem do Experience Platform. |
 | Nome da sandbox | A sandbox associada à origem do Experience Platform. |
 | ID do fluxo de dados | A ID de fluxo de dados associada à origem do Experience Platform. |
 | Endpoint de transmissão | O terminal de transmissão associado à origem do Experience Platform. **Observação**: [!DNL Braze] converte automaticamente isso no ponto de extremidade de streaming em lote. |

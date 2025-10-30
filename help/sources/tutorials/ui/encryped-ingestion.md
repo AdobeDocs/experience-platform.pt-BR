@@ -2,9 +2,9 @@
 title: Assimilar dados criptografados na interface do usuário de origens do Workspace
 description: Saiba como assimilar dados criptografados no espaço de trabalho da interface do usuário de origens.
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: cad2cafdf39c718c3ba971eaa4e7f2318bd5f517
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1414'
 ht-degree: 6%
 
 ---
@@ -51,19 +51,19 @@ Você pode criar seu par de chaves de criptografia por meio da interface do usu�
 
 >[!ENDSHADEBOX]
 
-Na interface do usuário do Experience Platform, navegue até o espaço de trabalho de origens e selecione [!UICONTROL Pares de chaves] no cabeçalho superior.
+Na interface do usuário do Experience Platform, navegue até o espaço de trabalho de origens e selecione [!UICONTROL Key Pairs] no cabeçalho superior.
 
 ![O catálogo de fontes com o cabeçalho &quot;Pares de Chaves&quot; selecionado.](../../images/tutorials/edi/catalog.png)
 
-Você é direcionado a uma página que exibe uma lista de pares de chaves de criptografia existentes em sua organização. Esta página fornece informações sobre o título, ID, tipo, algoritmo de criptografia, expiração e status de uma determinada chave. Para criar um novo par de chaves, selecione **[!UICONTROL Criar chave]**.
+Você é direcionado a uma página que exibe uma lista de pares de chaves de criptografia existentes em sua organização. Esta página fornece informações sobre o título, ID, tipo, algoritmo de criptografia, expiração e status de uma determinada chave. Para criar um novo par de chaves, selecione **[!UICONTROL Create Key]**.
 
 ![A página Pares de Chaves, com &quot;chave de criptografia&quot; selecionada como o tipo de chave e o botão &quot;criar chave&quot; selecionado.](../../images/tutorials/edi/encryption_key_page.png)
 
-Em seguida, escolha o tipo de chave que deseja criar. Para criar uma chave de criptografia, selecione **[!UICONTROL Chave de criptografia]** e **[!UICONTROL Continuar]**.
+Em seguida, escolha o tipo de chave que deseja criar. Para criar uma chave de criptografia, selecione **[!UICONTROL Encryption Key]** e **[!UICONTROL Continue]**.
 
 ![A janela de criação de chave, com chave de criptografia selecionada.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
-Forneça um título e uma senha para a chave de criptografia. A senha é uma camada adicional de proteção para suas chaves de criptografia. Após a criação, o Experience Platform armazena a senha em um cofre seguro diferente da chave pública. Você deve fornecer uma sequência de caracteres não vazia como senha. Quando terminar, selecione **[!UICONTROL Criar]**.
+Forneça um título e uma senha para a chave de criptografia. A senha é uma camada adicional de proteção para suas chaves de criptografia. Após a criação, o Experience Platform armazena a senha em um cofre seguro diferente da chave pública. Você deve fornecer uma sequência de caracteres não vazia como senha. Quando terminar, selecione **[!UICONTROL Create]**.
 
 ![A janela de criação da chave de criptografia, onde é fornecido um título e uma senha.](../../images/tutorials/edi/create_encryption_key.png)
 
@@ -71,7 +71,7 @@ Se for bem-sucedido, uma nova janela será exibida, exibindo a nova chave de cri
 
 ![A janela que exibe informações sobre o par de chaves de criptografia recém-criado.](../../images/tutorials/edi/encryption_key_details.png)
 
-Para exibir informações sobre uma chave de criptografia existente, selecione as reticências (`...`) ao lado do título da chave. Selecione **[!UICONTROL Detalhes da chave]** para exibir a chave pública e a ID da chave. Como alternativa, se você deseja excluir sua chave de criptografia, selecione **[!UICONTROL Excluir]**.
+Para exibir informações sobre uma chave de criptografia existente, selecione as reticências (`...`) ao lado do título da chave. Selecione **[!UICONTROL Key details]** para exibir a chave pública e a ID da chave. Como alternativa, se você deseja excluir sua chave de criptografia, selecione **[!UICONTROL Delete]**.
 
 ![A página de pares de chaves, onde uma lista de chaves de criptografia é exibida. As reticências ao lado de &quot;acme-encryption-key&quot; são selecionadas e a lista suspensa exibe opções para exibir detalhes da chave ou excluir as chaves.](../../images/tutorials/edi/configuration_options.png)
 
@@ -90,11 +90,11 @@ Uma chave de verificação de sinal é outro mecanismo de criptografia que envol
 
 >[!ENDSHADEBOX]
 
-Para criar uma chave de verificação de assinatura, selecione **[!UICONTROL Assinar Chave de Verificação]** na janela de seleção de tipo de chave e selecione **[!UICONTROL Continuar]**.
+Para criar uma chave de verificação de assinatura, selecione **[!UICONTROL Sign Verification Key]** na janela de seleção de tipo de chave e selecione **[!UICONTROL Continue]**.
 
 ![A janela de seleção de tipo de chave na qual a chave de verificação de assinatura está selecionada.](../../images/tutorials/edi/choose_sign_verification_key_type.png)
 
-Em seguida, forneça um título e uma chave PGP codificada em [!DNL Base64] como sua chave pública e selecione **[!UICONTROL Criar]**.
+Em seguida, forneça um título e uma chave PGP codificada em [!DNL Base64] como sua chave pública e selecione **[!UICONTROL Create]**.
 
 ![A janela criar chave de verificação de assinatura.](../../images/tutorials/edi/create_sign_verification_key.png)
 
@@ -127,15 +127,15 @@ Você pode assimilar dados criptografados usando as seguintes fontes de lote de 
 * [[!DNL Oracle Object Storage]](../ui/create/cloud-storage/oracle-object-storage.md)
 * [[!DNL SFTP]](../ui/create/cloud-storage/sftp.md)
 
-Autentique com a fonte de armazenamento em nuvem de sua escolha. Durante a etapa de seleção de dados do fluxo de trabalho, selecione o arquivo ou pasta criptografado que você deseja assimilar e habilite a opção **[!UICONTROL É o arquivo criptografado]**.
+Autentique com a fonte de armazenamento em nuvem de sua escolha. Durante a etapa de seleção de dados do fluxo de trabalho, selecione o arquivo ou pasta criptografado que você deseja assimilar e habilite a opção **[!UICONTROL Is the file encrypted]**.
 
 ![A etapa &quot;selecionar dados&quot; do fluxo de trabalho de fontes, onde um arquivo de dados criptografado é selecionado para assimilação.](../../images/tutorials/edi/select_data.png)
 
 Em seguida, selecione um arquivo de amostra dos dados de origem. Como os dados são criptografados, o Experience Platform exigirá um arquivo de amostra para criar um esquema XDM que possa ser mapeado para os dados de origem.
 
-![A mensagem &quot;Este arquivo está criptografado?&quot; alternar entre ativado e o botão &quot;Selecionar arquivo de amostra&quot; selecionado. &#x200B;](../../images/tutorials/edi/select_sample_file.png)
+![A mensagem &quot;Este arquivo está criptografado?&quot; alternância habilitada e o botão &quot;Selecionar arquivo de amostra&quot; selecionado](../../images/tutorials/edi/select_sample_file.png).
 
-Depois de selecionar o arquivo de amostra, defina as configurações dos dados, como o formato de dados, delimitador e tipo de compactação correspondentes. Aguarde algum tempo para que a interface de visualização seja totalmente renderizada e selecione **[!UICONTROL Salvar]**.
+Depois de selecionar o arquivo de amostra, defina as configurações dos dados, como o formato de dados, delimitador e tipo de compactação correspondentes. Aguarde algum tempo para que a interface de visualização seja totalmente renderizada e selecione **[!UICONTROL Save]**.
 
 ![Uma amostra foi selecionada para assimilação e a visualização do arquivo está totalmente carregada.](../../images/tutorials/edi/file_preview.png)
 
@@ -147,7 +147,7 @@ Se você também usou o par de chaves de verificação de sinal para fornecer um
 
 ![O título da chave de verificação de assinatura da ID da chave que corresponde à criptografia de verificação de assinatura.](../../images/tutorials/edi/custom_key_id.png)
 
-Quando terminar, selecione **[!UICONTROL Próximo]**.
+Quando terminar, selecione **[!UICONTROL Next]**.
 
 Conclua as etapas restantes no fluxo de trabalho de origens para concluir a criação do fluxo de dados.
 

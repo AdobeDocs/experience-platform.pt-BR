@@ -1,8 +1,8 @@
 ---
 title: createMediaSession
-description: Saiba como configurar o SDK da Web para gerenciar sessões de mídia automaticamente
+description: Saiba como configurar o Web SDK para gerenciar sessões de mídia automaticamente
 exl-id: abcb26f6-7249-4235-99eb-e4b9aeecff3e
-source-git-commit: 57d42d88ec9a93744450a2a352590ab57d9e5bb7
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 7%
@@ -11,14 +11,14 @@ ht-degree: 7%
 
 # `createMediaSession`
 
-O comando `createMediaSession` faz parte do componente `streamingMedia` do SDK da Web. Você pode usar esse componente para coletar dados relacionados a sessões de mídia no seu site. Consulte a `streamingMedia` [documentação](configure/streamingmedia.md) para saber como configurar este componente.
+O comando `createMediaSession` faz parte do componente `streamingMedia` do Web SDK. Você pode usar esse componente para coletar dados relacionados a sessões de mídia no seu site. Consulte a `streamingMedia` [documentação](configure/streamingmedia.md) para saber como configurar este componente.
 
-Os dados coletados podem incluir informações sobre reprodução de mídia, pausas, conclusões e outros eventos relacionados. Depois de coletados, você pode enviar esses dados para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/pt-br/docs/media-analytics/using/media-overview?lang=pt-BR), para agregar métricas. Esse recurso fornece uma solução abrangente para rastrear e entender o comportamento de consumo de mídia no site.
+Os dados coletados podem incluir informações sobre reprodução de mídia, pausas, conclusões e outros eventos relacionados. Depois de coletados, você pode enviar esses dados para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/pt-br/docs/media-analytics/using/media-overview), para agregar métricas. Esse recurso fornece uma solução abrangente para rastrear e entender o comportamento de consumo de mídia no site.
 
-Você pode criar sessões de mídia no SDK da Web de duas maneiras:
+Você pode criar sessões de mídia no Web SDK de duas maneiras:
 
-* [Sessões de mídia rastreadas automaticamente](#automatic) permitem que o SDK da Web gerencie a expedição de eventos de ping de mídia para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/pt-br/docs/media-analytics/using/media-overview?lang=pt-BR). A frequência desses pings é determinada pelas definições de configuração do componente [streamingMedia](configure/streamingmedia.md).
-* [Sessões de mídia rastreadas manualmente](#manual) dão a você mais controle sobre o envio de eventos de ping de sessão para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/pt-br/docs/media-analytics/using/media-overview?lang=pt-BR). Além disso, você pode armazenar o `sessionID` para sessões de mídia.
+* [Sessões de mídia rastreadas automaticamente](#automatic) permitem que o Web SDK gerencie a expedição de eventos de ping de mídia para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/pt-br/docs/media-analytics/using/media-overview). A frequência desses pings é determinada pelas definições de configuração do componente [streamingMedia](configure/streamingmedia.md).
+* [Sessões de mídia rastreadas manualmente](#manual) dão a você mais controle sobre o envio de eventos de ping de sessão para o [Adobe Analytics para mídia de streaming](https://experienceleague.adobe.com/pt-br/docs/media-analytics/using/media-overview). Além disso, você pode armazenar o `sessionID` para sessões de mídia.
 
 ## Criar uma sessão de mídia rastreada automaticamente {#automatic}
 
@@ -52,8 +52,8 @@ Para começar a rastrear uma sessão de mídia automaticamente, chame o método 
 | Propriedade | Tipo | Obrigatório | Descrição |
 |---------|----------|---------|---------|
 | `playerId` | String | Sim | A ID do reprodutor, um identificador exclusivo que representa a sessão de mídia. |
-| `getPlayerDetails` | Função | Sim | Uma função que retorna os detalhes do reprodutor. Essa função de retorno de chamada será chamada pelo SDK da Web antes de cada evento de mídia para o `playerId` fornecido. |
-| `xdm.eventType ` | Objeto | Não | O tipo de evento de mídia. Se não for fornecido, será automaticamente definido como `media.sessionStart`. |
+| `getPlayerDetails` | Função | Sim | Uma função que retorna os detalhes do reprodutor. Essa função de retorno de chamada será chamada pelo Web SDK antes de cada evento de mídia para o `playerId` fornecido. |
+| `xdm.eventType` | Objeto | Não | O tipo de evento de mídia. Se não for fornecido, será automaticamente definido como `media.sessionStart`. |
 | `xdm.mediaCollection.sessionDetails` | Objeto | Sim | O objeto de detalhes da sessão. O objeto `sessionDetails` deve conter as propriedades de detalhes da sessão. Consulte a documentação do [esquema da Coleção de mídia](../../xdm/data-types/media-collection-details.md) para obter mais informações. |
 
 

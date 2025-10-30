@@ -4,9 +4,9 @@ title: Endpoint da API de Agendamentos
 description: Os cronogramas são uma ferramenta que pode ser usada para executar automaticamente trabalhos de segmentação em lote uma vez por dia.
 role: Developer
 exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2088'
 ht-degree: 3%
 
 ---
@@ -110,7 +110,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de agendamento
 | `children.type` | O tipo de trabalho como uma string. Os dois tipos compatíveis são &quot;batch_segmentation&quot; e &quot;export&quot;. |
 | `children.properties` | Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
 | `children.properties.segments` | Usar `["*"]` garante que todos os segmentos sejam incluídos. |
-| `children.schedule` | Uma string contendo o agendamento do job. Os jobs só podem ser programados para serem executados uma vez por dia, o que significa que você não pode programar um job para ser executado mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. |
+| `children.schedule` | Uma string contendo o agendamento do job. Os jobs só podem ser programados para serem executados uma vez por dia, o que significa que você não pode programar um job para ser executado mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;`0 0 1 * *`&quot; significa que este agendamento será executado às 1:00 AM todos os dias. |
 | `children.state` | Uma string que contém o estado do agendamento. Os dois estados compatíveis são &quot;ativo&quot; e &quot;inativo&quot;. Por padrão, o estado é definido como &quot;inativo&quot;. |
 
 +++
@@ -127,7 +127,7 @@ POST /config/schedules
 
 **Solicitação**
 
-+++ Um exemplo de solicitação para criar um agendamento.
++++ Um exemplo de solicitação para criar um agendamento. 
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
@@ -156,7 +156,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/config/schedules \
 | `type` | **Obrigatório.** O tipo de trabalho como uma cadeia de caracteres. Os dois tipos compatíveis são &quot;batch_segmentation&quot; e &quot;export&quot;. |
 | `properties` | **Obrigatório.** Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
 | `properties.segments` | **Obrigatório quando `type` é igual a &quot;batch_segmentation&quot;.** usar `["*"]` garante que todos os segmentos sejam incluídos. |
-| `schedule` | *Opcional.* Uma cadeia de caracteres que contém o cronograma do trabalho. Os jobs só podem ser programados para serem executados uma vez por dia, o que significa que você não pode programar um job para ser executado mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. <br><br>Se esta cadeia de caracteres não for fornecida, um agendamento gerado pelo sistema será gerado automaticamente. |
+| `schedule` | *Opcional.* Uma cadeia de caracteres que contém o cronograma do trabalho. Os jobs só podem ser programados para serem executados uma vez por dia, o que significa que você não pode programar um job para ser executado mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;`0 0 1 * *`&quot; significa que este agendamento será executado às 1:00 AM todos os dias. <br><br>Se esta cadeia de caracteres não for fornecida, um agendamento gerado pelo sistema será gerado automaticamente. |
 | `state` | *Opcional.* Uma cadeia de caracteres que contém o estado do agendamento. Os dois estados compatíveis são &quot;ativo&quot; e &quot;inativo&quot;. Por padrão, o estado é definido como &quot;inativo&quot;. |
 
 +++
@@ -209,7 +209,7 @@ GET /config/schedules/{SCHEDULE_ID}
 
 **Solicitação**
 
-+++ Uma solicitação de amostra para recuperar um agendamento.
++++ Uma solicitação de amostra para recuperar um agendamento. 
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/config/schedules/4e538382-dbd8-449e-988a-4ac639ebe72b
@@ -257,7 +257,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 | `type` | O tipo de trabalho como uma string. Os dois tipos suportados são `batch_segmentation` e `export`. |
 | `properties` | Um objeto que contém propriedades adicionais relacionadas ao agendamento. |
 | `properties.segments` | Usar `["*"]` garante que todos os segmentos sejam incluídos. |
-| `schedule` | Uma string contendo o agendamento do job. As ordens de produção só podem ser programadas para serem executadas uma vez por dia, o que significa que não é possível programar uma ordem de produção para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;0 0 1 * *&quot; significa que este agendamento será executado às 1:00 AM todos os dias. |
+| `schedule` | Uma string contendo o agendamento do job. As ordens de produção só podem ser programadas para serem executadas uma vez por dia, o que significa que não é possível programar uma ordem de produção para ser executada mais de uma vez durante um período de 24 horas. Para obter mais informações sobre cronogramas cron, leia o apêndice no [formato de expressão cron](#appendix). Neste exemplo, &quot;`0 0 1 * *`&quot; significa que este agendamento será executado às 1:00 AM todos os dias. |
 | `state` | Uma string que contém o estado do agendamento. Os dois estados com suporte são `active` e `inactive`. Por padrão, o estado é definido como `inactive`. |
 
 +++
@@ -406,9 +406,9 @@ Em uma sequência de expressão cron, o primeiro campo representa os segundos, o
 | Minutes | Sim | 0-59 | `, - * /` |
 | Horas | Sim | 0-23 | `, - * /` |
 | Dia do mês | Sim | 1-31 | `, - * ? / L W` |
-| Mês | Sim | 1-12, JAN-DEZ | `, - * /` |
+| Month | Sim | 1-12, JAN-DEZ | `, - * /` |
 | Dia da semana | Sim | 1-7, SOL-SÁB | `, - * ? / L #` |
-| Ano | Não | Vazio, 1970-2099 | `, - * /` |
+| Year | Não | Vazio, 1970-2099 | `, - * /` |
 
 >[!NOTE]
 >
@@ -434,10 +434,10 @@ A tabela a seguir mostra exemplos de cadeias de caracteres de expressão cron e 
 | Expressão | Explicação |
 | ---------- | ----------- |
 | `0 0 13 * * ?` | O evento será disparado às 1 P.M. todos os dias. |
-| `0 30 9 * * ? 2022` | O evento será disparado todos os dias às 9h30 do ano de 2022. |
-| `0 * 18 * * ?` | O evento será acionado a cada minuto, começando às 18h e terminando às 18h59, todos os dias. |
+| `0 30 9 * * ? 2022` | O evento será disparado todos os dias às 9:30AM no ano de 2022. |
+| `0 * 18 * * ?` | O evento será acionado a cada minuto, começando às 18h e terminando às 6:59PM, todos os dias. |
 | `0 0/10 17 * * ?` | O evento será disparado a cada 10 minutos, começando às 17h e terminando às 18h, todos os dias. |
-| `0 13,38 5 ? 6 WED` | O evento será disparado às 5h13 e às 5h38 toda quarta-feira de junho. |
-| `0 30 12 ? * 4#3` | O evento será disparado às 12h30 da terceira quarta-feira todos os meses. |
-| `0 30 12 ? * 6L` | O evento será disparado às 12h30 da última sexta-feira de cada mês. |
-| `0 45 11 ? * MON-THU` | O evento será disparado às 11h45 toda segunda, terça, quarta e quinta-feira. |
+| `0 13,38 5 ? 6 WED` | O evento será disparado às 5:13AM e 5:38AM toda quarta-feira de junho. |
+| `0 30 12 ? * 4#3` | O evento será disparado às 12:30PM na terceira quarta-feira todos os meses. |
+| `0 30 12 ? * 6L` | O evento será disparado às 12:30PM na última sexta-feira de cada mês. |
+| `0 45 11 ? * MON-THU` | O evento será disparado às 11:45AM toda segunda, terça, quarta e quinta. |

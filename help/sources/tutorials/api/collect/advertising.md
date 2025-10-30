@@ -5,7 +5,7 @@ title: Criar um fluxo de dados para fontes do Advertising usando a API do servi�
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um aplicativo de publicidade de terceiros e assimilá-los no Experience Platform usando conectores de origem e a API do serviço de fluxo.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1351'
 ht-degree: 3%

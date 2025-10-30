@@ -2,9 +2,9 @@
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1368'
+source-wordcount: '1296'
 ht-degree: 3%
 
 ---
@@ -61,12 +61,12 @@ A tabela a seguir descreve as permissões e as combinações de permissões nece
 
 | Nível de permissão | Descrição |
 | ---- | ---- |
-| **[!UICONTROL Exibir Destinos]** | Para acessar a guia de destinos na interface do usuário do Experience Platform, você precisa da **[[!UICONTROL permissão de controle de acesso]](/help/access-control/home.md#permissions) de [Exibir Destinos]**. |
-| **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Gerenciar Destinos]** | Para se conectar a destinos, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** | Para ativar públicos para destinos e habilitar a [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar segmentos sem mapeamento]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** | Para adicionar ou remover públicos-alvo de fluxos de dados existentes sem ter acesso à [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Segmentos sem Mapeamento]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Gerenciar e Ativar Destinos do Conjunto de Dados]** | Para exportar conjuntos de dados para destinos, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar e Ativar Destinos de Conjuntos de Dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL Exibir Gráfico De Identidade]** | Para exportar *identidades* para destinos, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"} |
+| **[!UICONTROL View Destinations]** | Para acessar a guia de destinos na interface do Experience Platform, você precisa da **[!UICONTROL View Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Para se conectar a destinos, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** | Para ativar públicos para destinos e habilitar a [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** | Para adicionar ou remover públicos de fluxos de dados existentes sem ter acesso à [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Para exportar conjuntos de dados para destinos, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Identity Graph]** | Para exportar *identidades* para destinos, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Para obter mais informações sobre como os destinos funcionam com os controles 
 
 ## Remoção de perfil dos destinos {#profile-removal}
 
-Quando um perfil é removido de um público-alvo ativado para um destino, esse perfil também é removido do público-alvo correspondente na plataforma de destino. Por exemplo, se um perfil for removido de um público que foi ativado anteriormente para o LinkedIn, esse perfil será removido do [!UICONTROL Público-alvo correspondente do LinkedIn] associado.
+Quando um perfil é removido de um público-alvo ativado para um destino, esse perfil também é removido do público-alvo correspondente na plataforma de destino. Por exemplo, se um perfil for removido de um público que foi ativado anteriormente para o LinkedIn, esse perfil será removido do [!UICONTROL LinkedIn Matched Audience] associado.
 
 A remoção de perfis de destinos — também conhecida como não segmentação — ocorre na mesma cadência que a segmentação. Assim que um perfil é removido de um público-alvo no Experience Platform, o próximo fluxo de dados agendado para o destino reflete essa alteração e remove o perfil do público-alvo de destino.
 
@@ -118,7 +118,7 @@ Para obter mais informações sobre como selecionar ações de marketing no flux
 * [Destinos de marketing por email](./catalog/email-marketing/overview.md)
 * [Destinos sociais](./catalog/social/overview.md)
 
-Para obter mais informações sobre violações de política de dados no fluxo de trabalho de ativação de público, consulte a etapa **[!UICONTROL Revisão]** dos guias a seguir:
+Para obter mais informações sobre violações de política de dados no fluxo de trabalho de ativação de público, consulte a etapa **[!UICONTROL Review]** dos guias a seguir:
 
 * [Ativar dados do público-alvo para streaming de públicos-alvo exportar destinos](./ui/activate-segment-streaming-destinations.md#review)
 * [Ativar dados do público-alvo para destinos de exportação de perfil de transmissão](./ui/activate-streaming-profile-destinations.md#review)

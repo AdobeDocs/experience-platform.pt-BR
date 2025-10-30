@@ -2,7 +2,7 @@
 description: Esta página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
 title: Formato da mensagem
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2489'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Pré-requisitos - Conceitos do Adobe Experience Platform {#prerequisites}
 
-Para entender o formato da mensagem e o processo de configuração e transformação de perfil no lado do Adobe, familiarize-se com os seguintes conceitos de Experience Platform:
+Para entender o formato da mensagem e o processo de configuração e transformação de perfil no Adobe, familiarize-se com os seguintes conceitos do Experience Platform:
 
 * **Experience Data Model (XDM)**. [Visão geral do XDM](../../../../xdm/home.md) e [Como criar um esquema XDM no Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Classe**. [Criar e editar classes na interface](../../../../xdm/ui/resources/classes.md).
@@ -22,7 +22,7 @@ Para entender o formato da mensagem e o processo de configuração e transforma�
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -59,7 +59,7 @@ Users who want to activate data to your destination need to map the fields in th
 
 **Esquema XDM do destino (2)**: com base no esquema padrão JSON (3) do formato esperado do seu destino e nos atributos que seu destino pode interpretar, você pode definir atributos de perfil e identidades no esquema XDM do destino. Você pode fazer isso na configuração de destinos, nos objetos [schemaConfig](../../functionality/destination-configuration/schema-configuration.md) e [identityNamespaces](../../functionality/destination-configuration/identity-namespace-configuration.md).
 
-**Esquema padrão JSON dos atributos de perfil de destino (3)**: este exemplo representa um [esquema JSON](https://json-schema.org/learn/miscellaneous-examples.html) de todos os atributos de perfil aos quais sua plataforma dá suporte e seus tipos (por exemplo: objeto, cadeia de caracteres, matriz). Exemplos de campos aos quais o destino poderia dar suporte podem ser `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` e assim por diante. Você precisa de um [modelo de transformação de mensagem](#using-templating) para adaptar os dados exportados do Experience Platform para o formato esperado.
+**Esquema padrão JSON dos atributos de perfil de destino (3)**: este exemplo representa um [esquema JSON](https://json-schema.org/learn/miscellaneous-examples.html) de todos os atributos de perfil aos quais sua plataforma dá suporte e seus tipos (por exemplo: objeto, cadeia de caracteres, matriz). Exemplos de campos aos quais o destino poderia dar suporte podem ser `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName` e assim por diante. Você precisa de um [modelo de transformação de mensagem](#using-templating) para ajustar os dados exportados do Experience Platform ao formato esperado.
 
 Com base nas transformações de esquema descritas acima, veja como uma configuração de perfil muda entre o esquema XDM de origem e um esquema de amostra no lado do parceiro:
 
@@ -94,7 +94,7 @@ Considerando o formato da mensagem, as transformações correspondentes são as 
 
 | Atributo no esquema XDM do parceiro no lado do Adobe | Transformação | Atributo em mensagem HTTP do seu lado |
 |---------|----------|---------|
-| `_your_custom_schema.firstName` | ` attributes.first_name` | `first_name` |
+| `_your_custom_schema.firstName` | `attributes.first_name` | `first_name` |
 | `_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 | `personalEmail.address` | `attributes.external_id` | `external_id` |
 
@@ -178,7 +178,7 @@ Esta seção fornece vários exemplos de como essas transformações são feitas
 
 1. Exemplos simples de transformação. Saiba como o modelo funciona com transformações simples para os [atributos de perfil](#attributes), a [associação de público-alvo](#segment-membership) e os campos [Identidade](#identities).
 2. Exemplos de complexidade maior de modelos que combinam os campos acima: [Crie um modelo que envie públicos-alvo e identidades](./message-format.md#segments-and-identities) e [Crie um modelo que envie segmentos, identidades e atributos de perfil](#segments-identities-attributes).
-3. Modelos que incluem a chave de agregação. Quando você usa a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, o Experience Platform agrupa os perfis exportados para o seu destino com base em critérios como ID de público-alvo, status do público-alvo ou namespaces de identidade.
+3. Modelos que incluem a chave de agregação. Quando você usa a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, o Experience Platform agrupa os perfis exportados para o seu destino com base em critérios como ID de público-alvo, status de público-alvo ou namespaces de identidade.
 
 ### Atributos do perfil {#attributes}
 
@@ -492,7 +492,7 @@ Perfil 2:
 
 ### Criar um modelo que envia públicos e identidades {#segments-and-identities}
 
-Esta seção fornece um exemplo de uma transformação comumente usada entre o esquema XDM do Adobe e o esquema de destino do parceiro.
+Esta seção fornece um exemplo de uma transformação comumente usada entre o esquema XDM da Adobe e o esquema de destino do parceiro.
 O exemplo abaixo mostra como transformar a associação de público-alvo e o formato de identidades e exibi-los no seu destino.
 
 **Entrada**
@@ -659,7 +659,7 @@ O `json` abaixo representa os dados exportados do Adobe Experience Platform.
 
 ### Criar um modelo que envia segmentos, identidades e atributos de perfil {#segments-identities-attributes}
 
-Esta seção fornece um exemplo de uma transformação comumente usada entre o esquema XDM do Adobe e o esquema de destino do parceiro.
+Esta seção fornece um exemplo de uma transformação comumente usada entre o esquema XDM da Adobe e o esquema de destino do parceiro.
 
 Outro caso de uso comum é a exportação de dados que contêm associação de público-alvo, identidades (por exemplo: endereço de email, número de telefone, ID de publicidade) e atributos de perfil. Para exportar dados dessa maneira, consulte o exemplo abaixo:
 
@@ -1205,7 +1205,7 @@ A tabela abaixo fornece descrições para as funções dos exemplos acima.
 
 | Função | Descrição | Exemplo |
 |---------|----------|----------|
-| `input.profile` | O perfil, representado como um [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue o esquema XDM do parceiro mencionado mais acima nesta página. |
+| `input.profile` | O perfil, representado como um [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue o esquema XDM do parceiro mencionado mais acima nesta página. |  |
 | `hasSegments` | Essa função pega um mapa de IDs de público-alvo de namespace como parâmetro. A função retornará `true` se houver pelo menos um público-alvo no mapa (independentemente do status), e `false` caso contrário. Você pode usar essa função para decidir se vai iterar em um mapa de públicos ou não. | `hasSegments(input.profile.segmentMembership)` |
 | `destination.namespaceSegmentAliases` | Mapear IDs de público-alvo em um namespace específico do Adobe Experience Platform para aliases de público-alvo no sistema do parceiro. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
 | `destination.namespaceSegmentNames` | Mapear de nomes de público-alvo em namespaces específicos do Adobe Experience Platform para nomes de público-alvo no sistema do parceiro. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
@@ -1220,7 +1220,7 @@ A tabela abaixo fornece descrições para as funções dos exemplos acima.
 
 ## Próximas etapas {#next-steps}
 
-Depois de ler este documento, você sabe como os dados exportados do Experience Platform são transformados. Em seguida, leia as seguintes páginas para concluir seu conhecimento sobre a criação de modelos de transformação de mensagem para seu destino:
+Depois de ler este documento, agora você sabe como os dados exportados do Experience Platform são transformados. Em seguida, leia as seguintes páginas para concluir seu conhecimento sobre a criação de modelos de transformação de mensagem para seu destino:
 
 * [Criar e testar um modelo de transformação de mensagem](../../testing-api/streaming-destinations/create-template.md)
 * [Renderizar operações de API de modelo](../../testing-api/streaming-destinations/render-template-api.md)

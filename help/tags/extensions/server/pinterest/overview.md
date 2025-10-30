@@ -1,12 +1,12 @@
 ---
-keywords: extensão de encaminhamento de eventos;extensão de encaminhamento de eventos do pinterest;pinterest
-title: Extensão de encaminhamento de eventos do pinterest
+keywords: extensão de encaminhamento de eventos;pinterest;extensão de encaminhamento de eventos pinterest
+title: Extensão de encaminhamento de eventos do Pinterest
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite assimilar eventos no Pinterest para atender aos requisitos da empresa.
 last-substantial-update: 2023-04-27T00:00:00Z
 exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1427'
 ht-degree: 3%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 3%
 
 O [!DNL Pinterest] é um mecanismo de descoberta visual para encontrar ideias como receitas, decoração da casa, inspiração de estilo e muito mais. Há bilhões de pins no [!DNL Pinterest], que também podem ser compartilhados com outras pessoas no [!DNL Pinterest]. Você pode agrupar os eventos de interação do usuário e aproveitar o [!DNL Pinterest Analytics] para entender o comportamento do usuário e executar anúncios direcionados.
 
-A extensão [[!DNL Pinterest] Conversões](https://developers.pinterest.com/docs/conversions/conversion-management/) da API [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) permite que você aproveite os dados capturados no Edge Network do Adobe Experience Platform e os envie para [!DNL Pinterest]. Este documento aborda os casos de uso da extensão, como instalá-la e como integrar seus recursos ao encaminhamento de eventos [regras](../../../ui/managing-resources/rules.md).
+A extensão [[!DNL Pinterest] Conversões](https://developers.pinterest.com/docs/conversions/conversion-management/) do [encaminhamento de eventos](../../../ui/event-forwarding/overview.md) da API permite que você aproveite os dados capturados no Adobe Experience Platform Edge Network e os envie para [!DNL Pinterest]. Este documento aborda os casos de uso da extensão, como instalá-la e como integrar seus recursos ao encaminhamento de eventos [regras](../../../ui/managing-resources/rules.md).
 
 Os tokens de acesso de conversões são o método de autenticação usado por [!DNL Pinterest] ao interagir com a API [!DNL Pinterest].
 
 ## Casos de uso
 
-Essa extensão deve ser usada se você quiser usar dados do Edge Network em [!DNL Pinterest] para aproveitar seus recursos de análise do cliente.
+Essa extensão deve ser usada se você quiser usar dados da Edge Network no [!DNL Pinterest] para aproveitar seus recursos de análise do cliente.
 
 Por exemplo, considere uma equipe de marketing em uma organização. A equipe captura dados do evento de interação do usuário de seu site e os carrega no [!DNL Pinterest] usando esta extensão de encaminhamento de eventos.
 
@@ -33,7 +33,7 @@ Para obter mais informações sobre casos de uso específicos do [!DNL Pinterest
 
 Você deve ter uma [!DNL Pinterest] [conta comercial](https://help.pinterest.com/en/business/article/get-a-business-account) válida para usar esta extensão. Vá para a [[!DNL Pinterest] página de registro](https://www.pinterest.com/business/create/) para se registrar e criar uma conta, caso ainda não tenha uma.
 
-Você também precisará de uma conta de desenvolvedor [!DNL Pinterest], que precisará ser associada à sua conta comercial [!DNL Pinterest]. Para associar a conta de desenvolvedor à conta comercial, consulte a [[!DNL Pinterest &#x200B;] conta de desenvolvedor](https://developers.pinterest.com/account-setup/).
+Você também precisará de uma conta de desenvolvedor [!DNL Pinterest], que precisará ser associada à sua conta comercial [!DNL Pinterest]. Para associar a conta de desenvolvedor à conta comercial, consulte a [[!DNL Pinterest ] conta de desenvolvedor](https://developers.pinterest.com/account-setup/).
 
 ### Coletar detalhes de configuração necessários {#configuration-details}
 
@@ -48,9 +48,9 @@ Para conectar o Experience Platform a [!DNL Pinterest], as seguintes entradas s�
 
 Para instalar a extensão, [crie uma propriedade de encaminhamento de eventos](../../../ui/event-forwarding/overview.md#properties) ou escolha uma propriedade existente para editar.
 
-Na navegação à esquerda, selecione **[!UICONTROL Extensões]**. Selecione **[!UICONTROL Instalar]** no cartão para a extensão [!DNL Pinterest] na guia **[!UICONTROL Catálogo]**.
+Na navegação à esquerda, selecione **[!UICONTROL Extensions]**. Selecione **[!UICONTROL Install]** no cartão para a extensão [!DNL Pinterest] na guia **[!UICONTROL Catalog]**.
 
-![Catálogo exibindo a extensão [!DNL Pinterest] com o realce [!UICONTROL Instalar].](../../../images/extensions/server/pinterest/install.png)
+![Catálogo exibindo a extensão [!DNL Pinterest] com [!UICONTROL Install] realçado.](../../../images/extensions/server/pinterest/install.png)
 
 ### Configurar a extensão [!DNL Pinterest]
 
@@ -58,37 +58,37 @@ Na navegação à esquerda, selecione **[!UICONTROL Extensões]**. Selecione **[
 >
 >Dependendo das suas necessidades de implementação, talvez seja necessário criar um esquema, elementos de dados e um conjunto de dados antes de configurar a extensão. Revise todas as etapas de configuração antes de começar para determinar quais entidades você precisa configurar para seu caso de uso.
 
-Na navegação à esquerda, selecione **[!UICONTROL Extensões]**. Selecione **[!UICONTROL Configurar]** no cartão para a extensão [!DNL Pinterest] na guia [!UICONTROL Instalado]**.
+Na navegação à esquerda, selecione **[!UICONTROL Extensions]**. Selecione **[!UICONTROL Configure]** no cartão para a extensão [!DNL Pinterest] na guia [!UICONTROL Installed]**.
 
-A extensão ![[!DNL Pinterest] mostrada na guia [!UICONTROL Instalar] com o realce [!UICONTROL Configurar].](../../../images/extensions/server/pinterest/configure.png)
+Extensão ![[!DNL Pinterest] mostrada na guia [!UICONTROL Install] com [!UICONTROL Configure] realçada.](../../../images/extensions/server/pinterest/configure.png)
 
-Na próxima tela, insira o [!UICONTROL ID da Conta do Ads] e o [!UICONTROL Token de Acesso de Conversão] coletados anteriormente na seção [detalhes de configuração](#configuration-details). Quando terminar, selecione **[!UICONTROL Salvar]**.
+Na próxima tela, insira os [!UICONTROL Ads Account Id] e [!UICONTROL Conversion Access Token] coletados anteriormente na seção [detalhes de configuração](#configuration-details). Quando terminar, selecione **[!UICONTROL Save]**.
 
-![A tela [!DNL Pinterest] [!UICONTROL Configurar] destacando os campos de entrada [!UICONTROL Id da Conta do Ads] e [!UICONTROL Token de Acesso de Conversão].](../../../images/extensions/server/pinterest/input.png)
+![A tela [!DNL Pinterest] [!UICONTROL Configure] destacando os campos de entrada [!UICONTROL Ads Account Id] e [!UICONTROL Conversion Access Token].](../../../images/extensions/server/pinterest/input.png)
 
 ## Configurar uma regra de encaminhamento de eventos {#config-rule}
 
 Depois que todos os seus elementos de dados estiverem configurados, você poderá começar a criar regras de encaminhamento de eventos que determinam quando e como seus eventos serão enviados para [!DNL Pinterest].
 
-Crie uma nova [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão como **[!UICONTROL Pinterest]**. Para enviar eventos Edge Network para [!DNL Pinterest], defina o **[!UICONTROL Tipo de Ação]** como **[!UICONTROL Enviar Evento].**
+Crie uma nova [regra](../../../ui/managing-resources/rules.md) na propriedade de encaminhamento de eventos. Em **[!UICONTROL Actions]**, adicione uma nova ação e defina a extensão como **[!UICONTROL Pinterest]**. Para enviar eventos do Edge Network para [!DNL Pinterest], defina **[!UICONTROL Action Type]** como **[!UICONTROL Send Event].**
 
-![A criação da regra [!DNL Pinterest] [!UICONTROL Enviar Evento].](../../../images/extensions/server/pinterest/rule.png)
+![A [!DNL Pinterest] [!UICONTROL Send Event] criação de regra.](../../../images/extensions/server/pinterest/rule.png)
 
 Após a seleção, controles adicionais são exibidos para configurar ainda mais o evento. Você precisa mapear as propriedades de evento [!DNL Pinterest] para os elementos de dados criados anteriormente.
 
-### [!UICONTROL Dados do evento]
+### [!UICONTROL Event Data]
 
 Os seguintes dados de evento serão necessários para criar a nova regra:
 
 | Nome do campo | Descrição | Exemplo |
 | --- | --- | --- | 
-| [!UICONTROL Nome do Evento] | O tipo de evento do usuário. Isso pode ser qualquer tipo de evento. No entanto, para aproveitar [!DNL Pinterest Analytics], é recomendável usar [[!DNL Pinterest] códigos de evento](https://help.pinterest.com/en/business/article/add-event-codes) | * check-out <br> * add_to_cart <br> * page_visit <br> * inscrição <br> * [Evento definido pelo usuário] |
-| [!UICONTROL Source de Ação] | A origem que indica onde o evento de conversão ocorreu. | * app_android <br> * app_ios <br> * web <br> * offline |
-| [!UICONTROL Hora do Evento] | Refere-se à hora do evento. O formato de hora padrão usado é UNIX, no formato `<seconds>.<miliseconds>`, dependendo do fuso horário local. Para obter mais informações, consulte a [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255.500 indica 1433188255 segundos e 500 milissegundos após a época, ou segunda-feira, 1 de junho de 2015, às 19h55 GMT.:50: |
-| [!UICONTROL ID do Evento] | Uma sequência de ID exclusiva que identifica esse evento e pode ser usada para desduplicação entre eventos assimilados por meio da API de conversão e do rastreamento do Pinterest. Sem isso, os dados do evento provavelmente serão contados duas vezes e relatarão a inflação de métrica. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
-| [!UICONTROL Propriedades do Evento] | Um objeto JSON que contém propriedades personalizadas do evento. Escolha entre fornecer JSON bruto ou usar um conjunto simplificado de entradas de valores-chave. | { &quot;event_source_url&quot;: &quot;http://site.com&quot; } |
+| [!UICONTROL Event Name] | O tipo de evento do usuário. Isso pode ser qualquer tipo de evento. No entanto, para aproveitar [!DNL Pinterest Analytics], é recomendável usar [[!DNL Pinterest] códigos de evento](https://help.pinterest.com/en/business/article/add-event-codes) | &amp;ast; check-out <br> &amp;ast; add_to_cart <br> &amp;ast; visita_página <br> &amp;ast; inscrição <br> &amp;ast; [Evento definido pelo usuário] |
+| [!UICONTROL Action Source] | A origem que indica onde o evento de conversão ocorreu. | &amp;ast; app_android <br> &amp;ast; app_ios <br> &amp;ast; web <br> &amp;ast; offline |
+| [!UICONTROL Event Time] | Refere-se à hora do evento. O formato de hora padrão usado é UNIX, no formato `<seconds>.<miliseconds>`, dependendo do fuso horário local. Para obter mais informações, consulte a [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255.500 indica 1433188255 segundos e 500 milissegundos após a época, ou segunda-feira, 1 de junho de 2015, às 19h55 GMT.:50: |
+| [!UICONTROL Event ID] | Uma sequência de ID exclusiva que identifica esse evento e pode ser usada para desduplicação entre eventos assimilados por meio da API de conversão e do rastreamento do Pinterest. Sem isso, os dados do evento provavelmente serão contados duas vezes e relatarão a inflação de métrica. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
+| [!UICONTROL Event Properties] | Um objeto JSON que contém propriedades personalizadas do evento. Escolha entre fornecer JSON bruto ou usar um conjunto simplificado de entradas de valores-chave. | { &quot;event_source_url&quot;: &quot;http://site.com&quot; } |
 
-![Os [!DNL Pinterest] [!UICONTROL Dados do Evento] destacados na ação de regra.](../../../images/extensions/server/pinterest/event-data.png)
+![O [!DNL Pinterest] [!UICONTROL Event Data] realçado na ação de regra.](../../../images/extensions/server/pinterest/event-data.png)
 
 As seguintes propriedades de evento podem ser configuradas:
 
@@ -105,19 +105,19 @@ As seguintes propriedades de evento podem ser configuradas:
 | Versão do SO | Versão do sistema operacional do dispositivo. |
 | Idioma do usuário | Código de idioma ISO-639-1 de dois caracteres indicando o idioma do usuário. |
 
-### [!UICONTROL Dados do usuário]
+### [!UICONTROL User Data]
 
 Os seguintes dados do usuário podem ser inseridos por não são campos obrigatórios:
 
 | Nome do campo | Descrição | Exemplo |
 | --- | --- | --- | 
 | [!UICONTROL Email] | Endereço de email do usuário ou um hash SHA256 do email do endereço do usuário. | ebd543592.f2b7e1 |
-| [!UICONTROL IDs de Anúncios Móveis] | Hashes Sha256 das &quot;IDs do Google Advertising&quot; (GAIDs) ou do &quot;Identificador da Apple para anunciantes&quot; (IDFAs) do usuário | ebd543592.f2b7e1 |
-| [!UICONTROL Endereço IP do Cliente] | O endereço IP do usuário, que pode estar no formato IPv4 ou IPv6. Usado para correspondência. | 192.168.0.1 |
-| [!UICONTROL Agente de Usuário Cliente] | A sequência de agente do usuário do navegador da Web do usuário. | Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion |
-| [!UICONTROL Dados de informações do cliente] | Um objeto JSON que contém outras informações do cliente. Escolha entre fornecer JSON bruto ou usar um conjunto simplificado de entradas de valores-chave. | { &quot;ph&quot;: &quot;122333445&quot; } |
+| [!UICONTROL Mobile Adverstising IDs] | Hashes Sha256 das &quot;IDs do Google Advertising&quot; (GAIDs) ou do &quot;Identificador da Apple para anunciantes&quot; (IDFAs) do usuário | ebd543592.f2b7e1 |
+| [!UICONTROL Client IP Address] | O endereço IP do usuário, que pode estar no formato IPv4 ou IPv6. Usado para correspondência. | 192.168.0.1 |
+| [!UICONTROL Client User Agent] | A sequência de agente do usuário do navegador da Web do usuário. | Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion |
+| [!UICONTROL Customer information data] | Um objeto JSON que contém outras informações do cliente. Escolha entre fornecer JSON bruto ou usar um conjunto simplificado de entradas de valores-chave. | { &quot;ph&quot;: &quot;122333445&quot; } |
 
-![Os [!DNL Pinterest] [!UICONTROL Dados do Usuário] destacados na ação da regra.](../../../images/extensions/server/pinterest/user-data.png)
+![O [!DNL Pinterest] [!UICONTROL User Data] realçado na ação de regra.](../../../images/extensions/server/pinterest/user-data.png)
 
 As propriedades de informações do cliente que podem ser configuradas são:
 
@@ -139,7 +139,7 @@ As propriedades de informações do cliente que podem ser configuradas são:
 >
 >Antes de enviar os dados para o ponto de extremidade da API [!DNL Pinterest], a extensão aplicará hash e normalizará os valores dos seguintes campos: Email, Número de Telefone, Nome, Sobrenome, Gênero, Data de Nascimento, Cidade, Estado, CEP, País e ID Externa. A extensão não aplicará hash ao valor desses campos se uma string SHA256 já estiver presente.
 
-### [!UICONTROL Dados personalizados]
+### [!UICONTROL Custom Data]
 
 Os seguintes dados personalizados podem ser inseridos para a regra:
 
@@ -153,7 +153,7 @@ Os seguintes dados personalizados podem ser inseridos para a regra:
 | IDs de conteúdo | Lista (matriz) de IDs de produtos. |
 | Conteúdo | Uma lista (matriz) de objetos que contém informações sobre produtos, como preço e quantidade. |
 
-![Os [!DNL Pinterest] [!UICONTROL Dados Personalizados] destacados na ação de regra.](../../../images/extensions/server/pinterest/custom-data.png)
+![O [!DNL Pinterest] [!UICONTROL Custom Data] realçado na ação de regra.](../../../images/extensions/server/pinterest/custom-data.png)
 
 ## Validar dados em [!DNL Pinterest]
 

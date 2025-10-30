@@ -2,9 +2,9 @@
 title: Visão geral da extensão do AEM Asset Insights
 description: Saiba mais sobre a extensão de tag do AEM Asset Insights no Adobe Experience Platform.
 exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1063'
+source-wordcount: '1046'
 ht-degree: 98%
 
 ---
@@ -28,22 +28,23 @@ Os relatórios do AEM Asset no Analytics contêm três dimensões do AEM:
 * Ativo clicado
 
 Há também duas métricas:
+
 * Impressões do ativo
 * Cliques em ativos.
 
-Esses relatórios devem ser ativados usando o Administrador do Analytics (clique em **[!UICONTROL Analytics] > [!UICONTROL &#x200B; Administrador] > [!UICONTROL Conjuntos de relatórios] > `<report suite>` > [!UICONTROL Editar configurações] > [!UICONTROL AEM] > [!UICONTROL Relatórios do AEM Assets]**) para que eles possam ser preenchidos usando essa extensão.
+Esses relatórios devem ser habilitados usando o Administrador do Analytics (selecione **[!UICONTROL Analytics]> [!UICONTROL Admin] > [!UICONTROL Report Suites] > `<report suite>` > [!UICONTROL Edit Settings] > [!UICONTROL AEM] >[!UICONTROL AEM Assets Reporting]**) para que possam ser preenchidos usando essa extensão.
 
 A extensão de tag do &quot;*Adobe Analytics*&quot; para o Adobe Experience Platform deve ser instalada na mesma propriedade da web.
 
 ### Adobe Experience Manager (AEM)
 
-1. Ative o [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR). No AEM, selecione **[!UICONTROL Ferramentas > Ativos]** e abra o painel **[!UICONTROL Configuração do Insights]**.
+1. Habilite o [AEM Asset Insights](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR). No AEM, selecione **[!UICONTROL Tools > Assets]** e, em seguida, abra o painel **[!UICONTROL Insights Configuration]**.
 
 1. Desabilitar rastreamento de UUID.
 
    >[!IMPORTANT]
    >
-   >Essa extensão *não* funcionará se a configuração do AEM Assets **[!UICONTROL Desabilitar rastreamento de UUID]** estiver marcada. Ela está desmarcada por padrão.
+   >Essa extensão *não* funcionará se a configuração **[!UICONTROL Disable UUID Tracking]** do AEM Asset estiver marcada. Ela está desmarcada por padrão.
 
    ![Desabilitar o rastreamento de UUID](images/disableassets.jpg)
 
@@ -59,11 +60,11 @@ A integração recomendada do [Experience Platform](https://experienceleague.ado
 
 2. [Criar uma configuração de Cloud Service da Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/create-launch-cloud-service.html?lang=pt-BR).
 
-### Ativar o Asset Insight no AEM
+### Habilitar o Asset Insight no AEM
 
-Para obter instruções sobre como ativar o Asset Insights, consulte o [Guia do usuário do Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR).
+Para obter instruções sobre como habilitar o Asset Insights, consulte o [Guia do usuário do Experience Manager 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/assets/managing/configure-asset-insights.html?lang=pt-BR).
 
-### Ativar o rastreamento de UUID para o Assets
+### Habilitar o rastreamento de UUID para o Assets
 
 Rastrear ativos no Analytics usando a UUID do ativo no AEM.
 
@@ -71,7 +72,7 @@ Para habilitar o rastreamento com a UUID do ativo, abra o console de política d
 
 ![](images/uuid.png)
 
-Depois de ativar o UUID, você deve ver o elemento de dados “data-asset-id” que está preenchido com a UUID do ativo. O Analytics rastreia o clique ou impressão do ativo com essa UUID.
+Depois de habilitar o UUID, você deve ver o elemento de dados “data-asset-id” que está preenchido com a UUID do ativo. O Analytics rastreia o clique ou impressão do ativo com essa UUID.
 
 ![](images/uuid-code.png)
 
@@ -79,9 +80,9 @@ Depois de ativar o UUID, você deve ver o elemento de dados “data-asset-id” 
 
 Essa extensão tem dois eventos e uma ação.
 
-* **Ativo clicado:** um _evento_ que é acionado quando o visitante seleciona um AEM Asset que está ativado para rastreamento e tem um destino (atributo href).
+* **Ativo clicado:** um _evento_ que é acionado quando o visitante seleciona um AEM Asset que está habilitado para rastreamento e tem um destino (atributo href).
 
-* **Ativo clicado (sem destino):** um _evento_ que é acionado quando o visitante seleciona um AEM Asset que está ativado para rastreamento e não tem um destino (nenhum atributo href).
+* **Ativo clicado (sem destino):** um _evento_ que é acionado quando o visitante seleciona um AEM Asset que está habilitado para rastreamento e não tem um destino (nenhum atributo href).
 
 * **Definir variáveis AA:** uma _ação_ que define as variáveis do Analytics reservadas para o AEM Assets (variáveis de dados de contexto `a.assets.source`, `a.assets.idlist` e `a.asset.clickedid`) dependendo de qual evento foi usado e como o evento e a ação são configurados. Essa extensão não usa eventos, props ou eVars do Analytics.
 

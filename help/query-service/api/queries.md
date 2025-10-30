@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;guia de api;consultas;consulta;serviço de consulta;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;guia da api;consultas;consulta;serviço de consulta;
 solution: Experience Platform
 title: Endpoint da API de consultas
 description: As seções a seguir abordam as chamadas que você pode fazer usando o endpoint /queries na API de serviço de consulta.
 role: Developer
 exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '950'
 ht-degree: 3%
@@ -40,7 +40,7 @@ Veja a seguir uma lista de parâmetros de consulta disponíveis para consultas d
 | `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos com suporte são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por ordem crescente criada. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por ordem decrescente. |
 | `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
 | `start` | Especifique um carimbo de data e hora no formato ISO para ordenar os resultados. Se nenhuma data de início for especificada, a chamada à API retornará primeiro a consulta criada mais antiga e, em seguida, continuará a listar os resultados mais recentes.Os carimbos de data e hora ISO <br> permitem diferentes níveis de granularidade na data e hora. Os carimbos de data e hora ISO básicos assumem o formato de: `2020-09-07` para expressar a data em 7 de setembro de 2020. Um exemplo mais complexo seria escrito como `2022-11-05T08:15:30-05:00` e corresponde a 5 de novembro de 2022, às 8:15:30 am, Hora Padrão do Leste dos EUA. Um fuso horário pode ser fornecido com um deslocamento UTC e é indicado pelo sufixo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se nenhum fuso horário for fornecido, o padrão será zero. |
-| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter HTML de escape. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos com suporte são `created`, `updated`, `state` e `id`. A lista de operadores com suporte é `>` (maior que), `<` (menor que), `>=` (maior ou igual a), `<=` (menor ou igual a), `==` (igual a), `!=` (diferente de) e `~` (contém). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todas as consultas com a ID especificada. |
+| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter HTML com escape. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos com suporte são `created`, `updated`, `state` e `id`. A lista de operadores com suporte é `>` (maior que), `<` (menor que), `>=` (maior ou igual a), `<=` (menor ou igual a), `==` (igual a), `!=` (diferente de) e `~` (contém). Por exemplo, `id==6ebd9c2d-494d-425a-aa91-24033f3abeec` retornará todas as consultas com a ID especificada. |
 | `excludeSoftDeleted` | Indica se uma consulta que foi excluída por software deve ser incluída. Por exemplo, `excludeSoftDeleted=false` irá **incluir** consultas excluídas por software. (*Booleano, valor padrão: true*) |
 | `excludeHidden` | Indica se as consultas não orientadas por usuário devem ser exibidas. Se este valor for definido como falso **incluirá** consultas não orientadas por usuário, como definições de CURSOR, BUSCAR ou consultas de metadados. (*Booleano, valor padrão: true*) |
 | `isPrevLink` | O parâmetro de consulta `isPrevLink` é usado para paginação. Os resultados da chamada de API são classificados usando o carimbo de data/hora `created` e a propriedade `orderby`. Ao navegar pelas páginas de resultados, `isPrevLink` é definido como verdadeiro quando a página é retroativa. Inverte a ordem da consulta. Consulte os links &quot;próximo&quot; e &quot;anterior&quot; como exemplos. |
@@ -329,7 +329,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `op` | O tipo de operação a ser executada no recurso. Os valores aceitos são `cancel` e `soft_delete`. Para cancelar a consulta, você deve definir o parâmetro op com o valor `cancel `. Observe que a operação de exclusão reversível impede que a consulta seja retornada em solicitações GET, mas não a exclui do sistema. |
+| `op` | O tipo de operação a ser executada no recurso. Os valores permitidos são `cancel` e `soft_delete`. Para cancelar a consulta, você deve definir o parâmetro op com o valor `cancel`. Observe que a operação de exclusão reversível impede que a consulta seja retornada em solicitações GET, mas não a exclui do sistema. |
 
 **Resposta**
 

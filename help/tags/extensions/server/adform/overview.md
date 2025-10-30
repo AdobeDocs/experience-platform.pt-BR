@@ -3,10 +3,11 @@ keywords: integração adform, adform,
 title: Integração do Adobe Form para redirecionamento não autenticado
 description: Essa integração do Adobe Experience Platform permite redirecionar usuários com base na ECID.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 23da6e12b1f5bdc37240d7aa11a44e040b29e3f7
+exl-id: 37eb9453-fc3c-481e-94ea-54d9b1545631
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '726'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
@@ -47,7 +48,7 @@ Antes de integrar o Adobe Form com o Adobe, verifique se os seguintes pré-requi
 2. **SKU de CDP ou Conexão**: você deve ter a SKU de Prime ou Ultimate da Adobe Customer Data Platform (CDP) ou a SKU de Conexão para habilitar a comunicação perfeita entre o cliente e o servidor.
 
 3. **Configuração do Adobe Experience Platform Edge Network**:
-   * Verifique se o Edge Network está configurado para suportar o encaminhamento de eventos em tempo real para redirecionamento externo. Consulte o [Guia de Introdução ao encaminhamento de eventos](https://experienceleague.adobe.com/pt-br/docs/experience-platform/tags/event-forwarding/getting-started) da Adobe para obter mais informações.
+   * Verifique se o Edge Network está configurado para suportar o encaminhamento de eventos em tempo real para redirecionamento externo. Consulte o [Guia de Introdução ao encaminhamento de eventos](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) da Adobe para obter mais informações.
    * Essa etapa é essencial para transmitir dados ao endpoint do lado do servidor da Adobe com eficiência.
 
 Depois que esses pré-requisitos estiverem em vigor, você poderá continuar a configurar e implantar a extensão [!DNL Adform].
@@ -105,6 +106,7 @@ A extensão deve ser anexada a uma regra para funcionar corretamente. Se nenhuma
 ## Validar e implantar
 
 Verifique se a extensão está instalada e configurada corretamente e se todos os elementos de dados necessários estão mapeados, incluindo:
+
 * [ECID](/help/identity-service/features/ecid.md)
 * Nome da página
 * URL de referência

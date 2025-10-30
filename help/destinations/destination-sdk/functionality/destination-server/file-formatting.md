@@ -1,8 +1,8 @@
 ---
-description: Saiba como configurar opções de formatação de arquivo para destinos baseados em arquivo criados com o Adobe Experience Platform Destination SDK, por meio do endpoint &grave;/destination-servers&grave;.
+description: Saiba como configurar opções de formatação de arquivo para destinos baseados em arquivo criados com o Adobe Experience Platform Destination SDK, por meio do endpoint `/destination-servers`.
 title: Configuração da formatação de arquivo
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1094'
 ht-degree: 2%
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # Configuração da formatação de arquivo
 
-O Destination SDK suporta um conjunto flexível de recursos que você pode configurar de acordo com suas necessidades de integração. Entre esses recursos está o suporte para a formatação de arquivo [!DNL CSV].
+O Destination SDK oferece suporte a um conjunto flexível de recursos que você pode configurar de acordo com suas necessidades de integração. Entre esses recursos está o suporte para a formatação de arquivo [!DNL CSV].
 
 Ao criar destinos baseados em arquivo por meio do Destination SDK, é possível definir como os arquivos CSV exportados devem ser formatados. É possível personalizar muitas opções de formatação, como, mas não limitado a:
 
@@ -24,7 +24,7 @@ Dependendo da configuração de destino, os usuários verão determinadas opçõ
 
 As configurações de formatação de arquivo fazem parte da configuração do servidor de destino para destinos baseados em arquivo.
 
-Para entender onde esse componente se encaixa em uma integração criada com o Destination SDK, consulte o diagrama na documentação de [opções de configuração](../configuration-options.md) ou consulte o guia sobre como [usar o Destination SDK para configurar um destino baseado em arquivo](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
+Para entender onde esse componente se encaixa em uma integração criada com o Destination SDK, consulte o diagrama na documentação de [opções de configuração](../configuration-options.md) ou o guia sobre como [usar o Destination SDK para configurar um destino baseado em arquivo](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
 Você pode configurar as opções de formatação de arquivo por meio do ponto de extremidade `/authoring/destination-servers`. Consulte as seguintes páginas de referência de API para obter exemplos detalhados de chamadas de API, onde é possível configurar os componentes mostrados nesta página.
 
@@ -35,7 +35,7 @@ Esta página descreve todas as configurações de formatação de arquivo com su
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros suportados pelo Destination SDK fazem **distinção entre maiúsculas e minúsculas**. Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -48,7 +48,7 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 ## Parâmetros compatíveis {#supported-parameters}
 
-Você pode modificar várias propriedades dos arquivos exportados para corresponder aos requisitos do sistema de recebimento de arquivos de destino, a fim de ler e interpretar de maneira ideal os arquivos recebidos do Experience Platform.
+Você pode modificar várias propriedades dos arquivos exportados para corresponder aos requisitos do sistema de recebimento de arquivos do destino, a fim de ler e interpretar de maneira ideal os arquivos recebidos do Experience Platform.
 
 >[!NOTE]
 >
@@ -179,7 +179,7 @@ No exemplo de configuração abaixo, nenhuma das opções de CSV é predefinida.
 >
 >As opções de formatação de arquivo CSV descritas abaixo também estão documentadas no [guia do Apache Spark para arquivos CSV](https://spark.apache.org/docs/latest/sql-data-sources-csv.html). As descrições usadas abaixo foram tiradas do guia do Apache Spark.
 
-Abaixo está uma referência completa de todas as opções de formatação de arquivo disponíveis em Destination SDK, juntamente com exemplos de saída para cada opção.
+Abaixo está uma referência completa de todas as opções de formatação de arquivo disponíveis no Destination SDK, juntamente com exemplos de saída para cada opção.
 
 | Campo | Obrigatório/Opcional | Descrição | Valor padrão | Exemplo de saída 1 | Exemplo de saída 2 |
 |---|---|---|---|---|---|
@@ -199,8 +199,8 @@ Abaixo está uma referência completa de todas as opções de formatação de ar
 | `csvOptions.timestampFormat.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define a cadeia de caracteres que indica um formato de carimbo de data e hora. | `yyyy-MM-dd'T'HH:mm:ss[.SSS][XXX]` | - | - |
 | `csvOptions.charToEscapeQuoteEscaping.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define um único caractere usado para escapar do escape para o caractere de citação. | `\` quando os caracteres de escape e aspas são diferentes. `\0` quando o caractere de escape e aspas são iguais. | - | - |
 | `csvOptions.emptyValue.value` | Opcional | *Somente para`"fileType.value": "csv"`*. Define a representação da cadeia de caracteres de um valor vazio. | `""` | `"emptyValue":""` --> `male,"",John` | `"emptyValue":"empty"` --> `male,empty,John` |
-| `maxFileRowCount` | Opcional | Indica o número máximo de linhas por arquivo exportado, entre 1.000.000 e 10.000.000 linhas. | 5.000.000 |
-| `includeFileManifest` | Opcional | Habilita o suporte para exportação de um manifesto de arquivo junto com as exportações de arquivo. O arquivo JSON de manifesto contém informações sobre o local de exportação, o tamanho da exportação e muito mais. O manifesto é nomeado usando o formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Exibir um [arquivo de manifesto de exemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). O arquivo de manifesto inclui os seguintes campos: <ul><li>`flowRunId`: A [execução do fluxo de dados](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que gerou o arquivo exportado.</li><li>`scheduledTime`: A hora em UTC quando o arquivo foi exportado. </li><li>`exportResults.sinkPath`: O caminho no local de armazenamento onde o arquivo exportado está depositado. </li><li>`exportResults.name`: O nome do arquivo exportado.</li><li>`size`: O tamanho do arquivo exportado, em bytes.</li></ul> |
+| `maxFileRowCount` | Opcional | Indica o número máximo de linhas por arquivo exportado, entre 1.000.000 e 10.000.000 linhas. | 5.000.000 | - | - |
+| `includeFileManifest` | Opcional | Habilita o suporte para exportação de um manifesto de arquivo junto com as exportações de arquivo. O arquivo JSON de manifesto contém informações sobre o local de exportação, o tamanho da exportação e muito mais. O manifesto é nomeado usando o formato `manifest-<<destinationId>>-<<dataflowRunId>>.json`. | Exibir um [arquivo de manifesto de exemplo](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). O arquivo de manifesto inclui os seguintes campos: <ul><li>`flowRunId`: A [execução do fluxo de dados](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) que gerou o arquivo exportado.</li><li>`scheduledTime`: A hora em UTC quando o arquivo foi exportado. </li><li>`exportResults.sinkPath`: O caminho no local de armazenamento onde o arquivo exportado está depositado. </li><li>`exportResults.name`: O nome do arquivo exportado.</li><li>`size`: O tamanho do arquivo exportado, em bytes.</li></ul> | - | - |
 
 {style="table-layout:auto"}
 

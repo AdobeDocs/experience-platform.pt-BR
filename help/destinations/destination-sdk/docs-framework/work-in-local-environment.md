@@ -2,7 +2,7 @@
 title: Use um editor de texto em seu ambiente local para criar uma página de documentação de destino
 description: As instruções nesta página mostram como usar um editor de texto para trabalhar no ambiente local a fim de criar uma página de documentação para o destino do Experience Platform e enviá-la para revisão.
 exl-id: 125f2d10-0190-4255-909c-5bd5bb59fcba
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '795'
 ht-degree: 0%
@@ -16,18 +16,19 @@ As instruções nesta página mostram como usar um editor de texto para trabalha
 >[!TIP]
 >
 >Consulte também a documentação de suporte no guia do colaborador do Adobe:
->* [Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=pt-BR)
->* [Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=pt-BR)
->* [Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=pt-BR).
+>
+>* [Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
+>* [Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
+>* [Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Conectar-se ao GitHub e configurar o ambiente de criação local {#set-up-environment}
 
 1. Em seu navegador, navegue até `https://github.com/AdobeDocs/experience-platform.en`
-2. Para [bifurcar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=pt-BR#fork-the-repository) o repositório, clique em **Bifurcar** conforme mostrado abaixo. Isso cria uma cópia do repositório do Experience Platform em sua própria conta GitHub.
+2. Para [bifurcar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) o repositório, clique em **Bifurcar** conforme mostrado abaixo. Isso cria uma cópia do repositório do Experience Platform em sua própria conta GitHub.
 
    ![Bifurcar repositório de documentação do Adobe](../assets/docs-framework/ssd-fork-repository.gif)
 
-3. Clonar o repositório no computador local. Selecione **Código > HTTPS > Abrir com o GitHub Desktop**, conforme mostrado abaixo. Verifique se você tem o [GitHub Desktop](https://desktop.github.com/) instalado. Para mais referências, leia [Criar um clone local do repositório](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=pt-BR#create-a-local-clone-of-the-repository) no guia do colaborador do Adobe.
+3. Clonar o repositório no computador local. Selecione **Código > HTTPS > Abrir com o GitHub Desktop**, conforme mostrado abaixo. Verifique se você tem o [GitHub Desktop](https://desktop.github.com/) instalado. Para mais referências, leia [Criar um clone local do repositório](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository) no guia do colaborador do Adobe.
 
    ![Clonar o repositório da documentação do Adobe para o ambiente local](../assets/docs-framework/clone-local.png)
 
@@ -36,10 +37,10 @@ As instruções nesta página mostram como usar um editor de texto para trabalha
 ## Crie a página de documentação do seu destino {#author-documentation}
 
 1. Sua página de documentação é baseada no [modelo de destino de autoatendimento](../docs-framework/self-service-template.md). Baixe o [modelo de destino](../assets/docs-framework/yourdestination-template.zip). Descompacte e extraia o arquivo `yourdestination-template.md` no diretório mencionado na etapa 4 acima.  Renomeie o arquivo `YOURDESTINATION.md`, onde YOURDESTINATION é o nome do seu destino no Adobe Experience Platform. Por exemplo, se sua empresa se chama Moviestar, você chamaria seu arquivo de `moviestar.md`.
-2. Abra o novo arquivo em seu [editor de texto preferido](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=pt-BR#understand-markdown-editors). A Adobe recomenda o uso do [Visual Studio Code](https://code.visualstudio.com/) e a instalação da extensão de Criação do Adobe Markdown. Para instalar a extensão, abra o Visual Studio Code, selecione a guia **[!DNL Extensions]** à esquerda da tela e procure por `adobe markdown authoring`. Selecione a extensão e clique em **[!DNL Install]**.
+2. Abra o novo arquivo em seu [editor de texto preferido](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors). A Adobe recomenda o uso do [Visual Studio Code](https://code.visualstudio.com/) e a instalação da extensão de Criação do Adobe Markdown. Para instalar a extensão, abra o Visual Studio Code, selecione a guia **[!DNL Extensions]** à esquerda da tela e procure por `adobe markdown authoring`. Selecione a extensão e clique em **[!DNL Install]**.
    ![Instalar a extensão de Criação do Adobe Markdown](../assets/docs-framework/install-adobe-markdown-extension.gif)
 3. Edite o template com informações relevantes para o seu destino. Siga as instruções no modelo.
-4. Para capturas de tela ou imagens que você planeja adicionar à documentação, vá para `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`, onde `[...]` é a categoria desejada para o seu destino. Por exemplo, se estiver adicionando um destino de personalização ao Experience Platform, selecione a pasta `personalization`. Crie uma nova pasta para o destino e salve as imagens aqui. Você deve vinculá-los a partir da página que está criando. Consulte [instruções sobre como vincular a imagens](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=pt-BR#link-to-images).
+4. Para capturas de tela ou imagens que você planeja adicionar à documentação, vá para `GitHub/experience-platform.en/help/destinations/assets/catalog/[...]`, onde `[...]` é a categoria desejada para o seu destino. Por exemplo, se estiver adicionando um destino de personalização ao Experience Platform, selecione a pasta `personalization`. Crie uma nova pasta para o destino e salve as imagens aqui. Você deve vinculá-los a partir da página que está criando. Consulte [instruções sobre como vincular a imagens](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images).
 5. Quando estiver pronto, salve o arquivo em que está trabalhando.
 
 ## Envie sua documentação para revisão {#submit-review}
@@ -82,4 +83,4 @@ As instruções nesta página mostram como usar um editor de texto para trabalha
 
 >[!TIP]
 >
->Para adicionar imagens e links à sua documentação e a qualquer outra pergunta sobre o Markdown, leia [Usando o Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=pt-BR) no guia de escrita colaborativa da Adobe.
+>Para adicionar imagens e links à sua documentação e a qualquer outra pergunta sobre o Markdown, leia [Usando o Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) no guia de escrita colaborativa da Adobe.

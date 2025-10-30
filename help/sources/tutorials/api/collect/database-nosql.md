@@ -3,7 +3,7 @@ title: Criar um Fluxo de Dados para Origens de Banco de Dados Usando a API de Se
 type: Tutorial
 description: Saiba como usar a API do Serviço de fluxo para criar um fluxo de dados e assimilar dados do banco de dados na Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 2ad0ffba128e8c51f173d24d4dd2404b9cbbb59a
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 3%

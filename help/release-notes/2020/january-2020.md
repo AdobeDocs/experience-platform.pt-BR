@@ -5,10 +5,10 @@ doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
 exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '890'
-ht-degree: 20%
+source-wordcount: '887'
+ht-degree: 21%
 
 ---
 
@@ -54,7 +54,7 @@ As novas regulamentações legais e organizacionais dão aos usuários o direito
 | Novos pontos de acesso de API | O caminho base da API [!DNL Privacy Service] foi atualizado de `/data/privacy/gdpr` para `/data/core/privacy/jobs`. |
 | Nova propriedade `regulation` necessária | Ao criar novos processos na API do [!DNL Privacy Service], é necessário fornecer uma propriedade `regulation` no conteúdo da solicitação para indicar sob qual regulamento monitorar o processo. Os valores aceitos são `gdpr` e `ccpa`. |
 | Compatibilidade com o [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] agora aceita solicitações de acesso/exclusão do Adobe [!DNL Primetime Authentication], usando `primetimeAuthentication` como valor de produto. |
-| Aprimoramentos na interface do usuário do Privacy Service | Páginas de rastreamento de trabalho separadas para os regulamentos do GDPR e da CCPA. Novo menu suspenso **Tipo de regulamento &#x200B;** para alternar entre dados de rastreamento para o GDPR e a CCPA. |
+| Aprimoramentos na interface do usuário do Privacy Service | Páginas de rastreamento de trabalho separadas para os regulamentos do GDPR e da CCPA. Nova lista suspensa **Tipo de regulamentação** para alternar entre os dados de rastreamento do RGPD e da CCPA. |
 
 **Problemas conhecidos**
 
@@ -66,7 +66,7 @@ Para obter mais informações sobre [!DNL Privacy Service], comece lendo a [vis�
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Experience Platform]. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, software de terceiros e seu sistema de CRM.
 
-O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 **Novos recursos**
 
@@ -81,7 +81,7 @@ O [!DNL Experience Platform] fornece uma API RESTful e uma interface do usuário
 | Categoria | Permissão | Descrição |
 |--- | --- | ---|
 | Assimilação de dados | Gerenciar fontes | Acesso para ler, criar, editar e desativar fontes. |
-| Assimilação de dados | Exibir fontes | Acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catálogo]** e fontes autenticadas na guia **[!UICONTROL Procurar]**. |
+| Assimilação de dados | Exibir fontes | Acesso somente leitura a fontes disponíveis na guia **[!UICONTROL Catalog]** e fontes autenticadas na guia **[!UICONTROL Browse]**. |
 
 **Problemas conhecidos**
 
@@ -104,7 +104,7 @@ No [Real-Time CDP](../../rtcdp/overview.md), os destinos são integrações pré
 | Categoria | Permissão | Descrição |
 |--- | --- | ---|
 | Destinos | Gerenciar destinos | Acesso para ler, criar, editar e desativar destinos. |
-| Destinos | Exibir destinos | Acesso somente leitura aos destinos disponíveis na guia **[!UICONTROL Catálogo]** e destinos autenticados na guia **Procurar**. |
+| Destinos | Exibir destinos | Acesso somente leitura aos destinos disponíveis na guia **[!UICONTROL Catalog]** e aos destinos autenticados na guia **Procurar**. |
 | Destinos | Ativar destinos | Capacidade de ativar dados para destinos. Essa permissão requer que &quot;Gerenciar destinos&quot; ou &quot;Exibir destinos&quot; sejam adicionados ao perfil do produto. |
 
 **Problemas conhecidos**

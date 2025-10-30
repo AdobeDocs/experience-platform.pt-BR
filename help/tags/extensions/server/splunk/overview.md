@@ -2,9 +2,9 @@
 title: Visão geral da extensão do Splunk
 description: Saiba mais sobre a extensão do Splunk para o encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '958'
 ht-degree: 1%
 
 ---
@@ -61,13 +61,13 @@ Selecione **Extensões** na navegação à esquerda. Em **Instalado**, selecione
 
 ![Botão Configurar para a extensão do Splunk que está sendo selecionada na interface](../../../images/extensions/server/splunk/configure.png)
 
-Para a URL do **[!UICONTROL Coletor de Eventos HTTP]**, digite o endereço e a porta da instância da plataforma do Splunk. Em **[!UICONTROL Token de Acesso]**, digite o valor de [!DNL Event Collector Token]. Quando terminar, selecione **[!UICONTROL Salvar]**.
+Para **[!UICONTROL HTTP Event Collector URL]**, insira o endereço e a porta da instância da plataforma Splunk. Em **[!UICONTROL Access Token]**, insira o valor [!DNL Event Collector Token]. Quando terminar, selecione **[!UICONTROL Save]**.
 
 ![Opções de configuração preenchidas na interface do usuário](../../../images/extensions/server/splunk/input.png)
 
 ## Configurar uma regra de encaminhamento de eventos {#config_rule}
 
-Comece a criar uma nova regra de encaminhamento de eventos [regra](../../../ui/managing-resources/rules.md) e configure suas condições conforme desejado. Ao selecionar as ações para a regra, selecione a extensão [!UICONTROL Splunk] e selecione o tipo de ação [!UICONTROL Criar Evento]. Controles adicionais são exibidos para configurar ainda mais o evento do Splunk.
+Comece a criar uma nova regra de encaminhamento de eventos [regra](../../../ui/managing-resources/rules.md) e configure suas condições conforme desejado. Ao selecionar as ações para a regra, selecione a extensão [!UICONTROL Splunk] e o tipo de ação [!UICONTROL Create Event]. Controles adicionais são exibidos para configurar ainda mais o evento do Splunk.
 
 ![Definir Configuração de Ação](../../../images/extensions/server/splunk/action-configurations.png)
 
@@ -75,13 +75,13 @@ A próxima etapa é mapear as propriedades do evento Splunk para os elementos de
 
 | Nome do campo | Descrição |
 | --- | --- |
-| [!UICONTROL Evento &#x200B;]<br><br>**(OBRIGATÓRIO)** | Indique como você deseja fornecer os dados do evento. Os dados do evento podem ser atribuídos à chave `event` no objeto JSON na solicitação HTTP ou podem ser texto bruto. A chave `event` está no mesmo nível no pacote de eventos JSON que as chaves de metadados. Dentro das chaves de valor-chave `event`, os dados podem estar em qualquer forma que você exigir (como uma sequência, um número, outro objeto JSON e assim por diante). |
+| [!UICONTROL Event]<br><br>**(OBRIGATÓRIO)** | Indique como você deseja fornecer os dados do evento. Os dados do evento podem ser atribuídos à chave `event` no objeto JSON na solicitação HTTP ou podem ser texto bruto. A chave `event` está no mesmo nível no pacote de eventos JSON que as chaves de metadados. Dentro das chaves de valor-chave `event`, os dados podem estar em qualquer forma que você exigir (como uma sequência, um número, outro objeto JSON e assim por diante). |
 | [!UICONTROL Host] | O hostname do cliente do qual você está enviando dados. |
-| [!UICONTROL Tipo de Source] | O tipo de origem a ser atribuído aos dados do evento. |
+| [!UICONTROL Source Type] | O tipo de origem a ser atribuído aos dados do evento. |
 | [!UICONTROL Source] | O valor de origem a ser atribuído aos dados do evento. Por exemplo, se estiver enviando dados de um aplicativo que está desenvolvendo, defina essa chave como o nome do aplicativo. |
-| [!UICONTROL Índice] | O nome do índice dos dados do evento. O índice especificado aqui deve estar dentro da lista de índices permitidos se o token tiver o parâmetro index definido. |
-| [!UICONTROL Hora] | A hora do evento. O formato de hora padrão é UNIX time (no formato `<sec>.<ms>`) e depende do fuso horário local. Por exemplo, `1433188255.500` indica 1433188255 segundos e 500 milissegundos após a época, ou segunda-feira, 1 de junho de 2015, às 19h55 GMT.:50: |
-| [!UICONTROL Campos] | Especifique um objeto JSON bruto ou um conjunto de pares de valores chave que contenham campos personalizados explícitos a serem definidos no momento do índice.  A chave `fields` não se aplica a dados brutos.<br><br>As solicitações que contêm a propriedade `fields` devem ser enviadas para o ponto de extremidade `/collector/event` ou não serão indexadas. Para obter mais informações, consulte a documentação do Splunk em [extrações de campos indexados](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
+| [!UICONTROL Index] | O nome do índice dos dados do evento. O índice especificado aqui deve estar dentro da lista de índices permitidos se o token tiver o parâmetro index definido. |
+| [!UICONTROL Time] | A hora do evento. O formato de hora padrão é UNIX time (no formato `<sec>.<ms>`) e depende do fuso horário local. Por exemplo, `1433188255.500` indica 1433188255 segundos e 500 milissegundos após a época, ou segunda-feira, 1 de junho de 2015, às 19h55 GMT.:50: |
+| [!UICONTROL Fields] | Especifique um objeto JSON bruto ou um conjunto de pares de valores chave que contenham campos personalizados explícitos a serem definidos no momento do índice.  A chave `fields` não se aplica a dados brutos.<br><br>As solicitações que contêm a propriedade `fields` devem ser enviadas para o ponto de extremidade `/collector/event` ou não serão indexadas. Para obter mais informações, consulte a documentação do Splunk em [extrações de campos indexados](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/IFXandHEC). |
 
 ### Validar dados no Splunk {#validate}
 

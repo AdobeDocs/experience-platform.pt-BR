@@ -2,10 +2,10 @@
 title: Visualização do Editor de validação
 description: Este manual detalha informações sobre a visualização do Editor de validação no Adobe Experience Platform Assurance.
 exl-id: 09be531c-8dc3-48b8-814f-b7a06adf1da3
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 100%
+source-wordcount: '496'
+ht-degree: 93%
 
 ---
 
@@ -15,7 +15,7 @@ O Editor de validação permite gerenciar funções JavaScript de maneira rápid
 
 ## Introdução ao Editor de validação
 
-Após [configurar o Assurance](../tutorials/implement-assurance.md), na visualização **[!UICONTROL Página inicial]** selecione **[!UICONTROL Editor de validação]**.
+Depois de [configurar o Assurance](../tutorials/implement-assurance.md), na exibição **[!UICONTROL Home]**, selecione **[!UICONTROL Validation Editor]**.
 
 ![Validation-Editor-Screen-Shot](https://user-images.githubusercontent.com/6597105/198680074-f548a646-6f2f-4a65-82fd-0f1687d869bf.png)
 
@@ -23,11 +23,11 @@ Após [configurar o Assurance](../tutorials/implement-assurance.md), na visualiz
 
 Esse recurso permite criar, editar ou excluir funções de validação para suas sessões do Adobe Experience Platform Assurance.
 
-1. Selecione **[!UICONTROL Criar uma nova validação]**.
+1. Selecione **[!UICONTROL Create a New Validation]**.
 2. Insira um **nome** para identificar a validação e, em seguida, forneça uma **categoria** e uma **descrição**.
 3. Edite o código no editor para validar os eventos da sua sessão do Assurance.
 
-Quando os testes de função estiverem concluídos, clique em **[!UICONTROL Publicar]** para salvar sua validação.
+Após a conclusão dos testes de função, selecione **[!UICONTROL Publish]** para salvar sua validação.
 
 ### Definição de evento
 
@@ -57,7 +57,7 @@ A função de validação deve retornar um objeto que contenha o seguinte:
 | :--- | :--- | :--- |
 | `message` | String | A mensagem de validação a ser exibida nos resultados do resumo. |
 | `events` | Matriz | Uma matriz de uuids de evento a serem relatados como correspondentes ou não correspondentes. |
-| `links` | Matriz | Uma matriz de objetos `ValidationResultLink` para fazer referência à documentação e a outros recursos `{( type: 'doc'|'product', url: String )}` |
+| `links` | Matriz | Uma matriz de `ValidationResultLink` objetos para fazer referência à documentação e a outros recursos `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
 | `result` | String | Este é o resultado da validação. Espera-se que seja uma das seguintes strings enumeradas: “correspondente”, “não correspondente”, “desconhecido” |
 
 ## Visualizar os resultados da validação

@@ -5,7 +5,7 @@ title: Criar um fluxo de dados para fontes de sucesso do cliente usando a API do
 type: Tutorial
 description: Este tutorial aborda as etapas para recuperar dados de um sistema de sucesso do cliente e assimilá-los no Experience Platform usando conectores de origem e APIs.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1267'
 ht-degree: 3%

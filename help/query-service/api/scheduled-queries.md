@@ -5,9 +5,9 @@ title: Endpoint de agendamentos
 description: As seções a seguir abordam as várias chamadas de API que podem ser feitas para consultas programadas com a API de serviço de consulta.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1409'
 ht-degree: 2%
 
 ---
@@ -26,7 +26,7 @@ Os queries criados com uma conta de usuário pessoal falharão se o acesso desse
 >
 >Considerações importantes ao gerenciar consultas programadas:<ul><li>As consultas programadas falharão se a conta (técnica ou usuário) usada para criá-las perder acesso ou permissões.</li><li>As consultas programadas devem ser desativadas antes de excluir por meio da API ou da interface do usuário.</li><li>Não há suporte para agendamento indefinido sem uma data final; uma data final deve ser sempre especificada.</li></ul>
 
-Para obter orientações detalhadas sobre requisitos de conta, configuração de permissões e gerenciamento de consultas agendadas, consulte a [Documentação de agendamentos de consulta](../ui/query-schedules.md#technical-account-user-requirements). Para obter instruções passo a passo sobre como criar e configurar uma conta técnica, consulte a [instalação do Developer Console](https://experienceleague.adobe.com/pt-br/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) e a [configuração completa de conta técnica](https://experienceleague.adobe.com/pt-br/docs/platform-learn/tutorial-comprehensive-technical/setup).
+Para obter orientações detalhadas sobre requisitos de conta, configuração de permissões e gerenciamento de consultas agendadas, consulte a [Documentação de agendamentos de consulta](../ui/query-schedules.md#technical-account-user-requirements). Para obter instruções passo a passo sobre como criar e configurar uma conta técnica, consulte a [instalação do Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) e a [configuração completa de conta técnica](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
 
 ## Exemplos de chamadas de API
 
@@ -176,7 +176,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 | `query.sql` | A consulta SQL a ser executada no agendamento definido. |
 | `query.name` | O nome da consulta agendada. |
 | `query.description` | Uma descrição opcional para a consulta agendada. |
-| `schedule.schedule` | O cronograma cron para a consulta. Consulte [Crontab.guru](https://crontab.guru/) para obter uma maneira interativa de criar, validar e entender expressões cron. Neste exemplo, &quot;30 * * * *&quot; significa que a consulta será executada a cada hora na marca de 30 minutos.<br><br>Como alternativa, você pode usar as seguintes expressões abreviadas:<ul><li>`@once`: a consulta é executada apenas uma vez.</li><li>`@hourly`: A consulta é executada a cada hora no início da hora. É equivalente à expressão CRON `0 * * * *`.</li><li>`@daily`: A consulta é executada uma vez por dia à meia-noite. É equivalente à expressão CRON `0 0 * * *`.</li><li>`@weekly`: A consulta é executada uma vez por semana, no domingo, à meia-noite. É equivalente à expressão CRON `0 0 * * 0`.</li><li>`@monthly`: A consulta é executada uma vez por mês, no primeiro dia do mês, à meia-noite. É equivalente à expressão CRON `0 0 1 * *`.</li><li>`@yearly`: A consulta é executada uma vez por ano, em 1º de janeiro, à meia-noite. É equivalente à expressão CRON `0 0 1 1 *`. |
+| `schedule.schedule` | O cronograma cron para a consulta. Consulte [Crontab.guru](https://crontab.guru/) para obter uma maneira interativa de criar, validar e entender expressões cron. Neste exemplo, &quot;`30 * * * *`&quot; significa que a consulta será executada a cada hora na marca de 30 minutos.<br><br>Como alternativa, você pode usar as seguintes expressões abreviadas:<ul><li>`@once`: a consulta é executada apenas uma vez.</li><li>`@hourly`: A consulta é executada a cada hora no início da hora. É equivalente à expressão CRON `0 * * * *`.</li><li>`@daily`: A consulta é executada uma vez por dia à meia-noite. É equivalente à expressão CRON `0 0 * * *`.</li><li>`@weekly`: A consulta é executada uma vez por semana, no domingo, à meia-noite. É equivalente à expressão CRON `0 0 * * 0`.</li><li>`@monthly`: A consulta é executada uma vez por mês, no primeiro dia do mês, à meia-noite. É equivalente à expressão CRON `0 0 1 * *`.</li><li>`@yearly`: A consulta é executada uma vez por ano, em 1º de janeiro, à meia-noite. É equivalente à expressão CRON `0 0 1 1 *`. |
 | `schedule.startDate` | A data de início da consulta agendada, gravada como carimbo de data e hora UTC. |
 
 **Resposta**

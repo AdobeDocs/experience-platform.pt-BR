@@ -5,7 +5,7 @@ title: Criar um modelo usando o JupyterLab Notebooks
 type: Tutorial
 description: Este tutorial percorre as etapas necessárias para criar uma fórmula usando o modelo do construtor de fórmula de notebooks JupyterLab.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '2079'
 ht-degree: 0%
@@ -69,7 +69,7 @@ O restante deste tutorial aborda os seguintes arquivos que são predefinidos no 
 
 O tutorial em vídeo a seguir explica o bloco de anotações do modelo de propensão Luma:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452497?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/333570)
 
 ### Arquivo de requisitos {#requirements-file}
 
@@ -93,7 +93,7 @@ Para o notebook modelo de propensão Luma, os requisitos não precisam ser atual
 
 Os arquivos de configuração, `training.conf` e `scoring.conf`, são usados para especificar os conjuntos de dados que você deseja usar para treinamento e pontuação, bem como para adicionar hiperparâmetros. Há configurações separadas para treinamento e pontuação.
 
-Para que um modelo execute o treinamento, você deve fornecer os `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` e `tenantId`. Além disso, para a pontuação, você deve fornecer o `scoringDataSetId`, `tenantId` e `scoringResultsDataSetId `.
+Para que um modelo execute o treinamento, você deve fornecer os `trainingDataSetId`, `ACP_DSW_TRAINING_XDM_SCHEMA` e `tenantId`. Além disso, para a pontuação, você deve fornecer o `scoringDataSetId`, `tenantId` e `scoringResultsDataSetId`.
 
 Para localizar o conjunto de dados e as IDs do esquema, vá para a guia de dados ![guia de dados](../images/jupyterlab/create-recipe/dataset-tab.png) nos blocos de anotações da barra de navegação esquerda (sob o ícone de pasta). Três IDs diferentes do conjunto de dados precisam ser fornecidas. O `scoringResultsDataSetId` é usado para armazenar os resultados da pontuação do modelo e deve ser um conjunto de dados vazio. Esses conjuntos de dados foram criados anteriormente na etapa [Ativos obrigatórios](#assets).
 

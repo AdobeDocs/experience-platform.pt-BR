@@ -4,7 +4,7 @@ title: Ponto de extremidade da API de trabalhos de segmento
 description: O endpoint de trabalhos de segmento na API do Serviço de segmentação do Adobe Experience Platform permite gerenciar de forma programática os trabalhos de segmento da sua organização.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1232'
 ht-degree: 3%
@@ -43,7 +43,7 @@ GET /segment/jobs?{QUERY_PARAMETERS}
 | `start` | Especifica o deslocamento inicial dos trabalhos de segmento retornados. | `start=1` |
 | `limit` | Especifica o número de trabalhos de segmento retornados por página. | `limit=20` |
 | `status` | Filtra os resultados com base no status. Os valores compatíveis são NEW, QUEUED, PROCESSING, SUCCEEDED, FAILED, CANCELING, CANCELED | `status=NEW` |
-| `sort` | Ordena os trabalhos do segmento retornados. Está gravado no formato `[attributeName]:[desc|asc]`. | `sort=creationTime:desc` |
+| `sort` | Ordena os trabalhos do segmento retornados. É gravado no formato `[attributeName]:[desc|asc]`. `sort=creationTime:desc` |
 | `property` | Filtra trabalhos de segmento e obtém correspondências exatas para o filtro fornecido. Ele pode ser escrito em um dos seguintes formatos: <ul><li>`[jsonObjectPath]==[value]` - filtrando na chave do objeto</li><li>`[arrayTypeAttributeName]~[objectKey]==[value]` - filtrando dentro da matriz</li></ul> | `property=segments~segmentId==workInUS` |
 
 +++
@@ -70,7 +70,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de trabalhos d
 >
 >A resposta a seguir foi truncada por questões de espaço e mostrará apenas a primeira tarefa retornada.
 
-+++ Uma resposta de amostra ao recuperar uma lista de trabalhos de segmento.
++++ Uma resposta de amostra ao recuperar uma lista de trabalhos de segmento. 
 
 ```json
 {
@@ -201,7 +201,7 @@ POST /segment/jobs
 
 **Solicitação**
 
-+++Uma solicitação de amostra para criar um novo trabalho de segmento
++++Um exemplo de solicitação para criar um novo trabalho de segmento
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \

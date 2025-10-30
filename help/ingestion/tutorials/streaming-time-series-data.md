@@ -5,7 +5,7 @@ title: Transmitir dados de série temporal usando APIs de assimilação de fluxo
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar as APIs de assimilação de fluxo, parte das APIs de serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1214'
 ht-degree: 2%
@@ -402,7 +402,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do [!DNL Profil
 | -------- | ----------- |
 | `{CONNECTION_ID}` | O `inletId` da conexão de streaming criada anteriormente. |
 | `xactionId` | Um identificador exclusivo gerado no lado do servidor para o registro que você acabou de enviar. Essa ID ajuda a Adobe a rastrear o ciclo de vida desse registro por vários sistemas e com depuração. |
-| `receivedTimeMs`: Um carimbo de data/hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |
+| `receivedTimeMs`: Um carimbo de data/hora (época em milissegundos) que mostra a hora em que a solicitação foi recebida. |  |
 | `syncValidation.status` | Como o parâmetro de consulta `syncValidation=true` foi adicionado, este valor aparecerá. Se a validação tiver êxito, o status será `pass`. |
 
 ## Recuperar os dados de série temporal recém-assimilados

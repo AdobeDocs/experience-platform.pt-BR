@@ -3,10 +3,10 @@ title: Visão geral da extensão da API de conversões do Snapchat
 description: Use a conversão do Snapchat para enviar dados do evento do lado do servidor para o Snap.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '966'
-ht-degree: 3%
+source-wordcount: '920'
+ht-degree: 2%
 
 ---
 
@@ -25,27 +25,27 @@ Crie um [Datastream](/help/tags/ui/event-forwarding/getting-started.md) e adicio
 
 Uma conta do **[!DNL Snapchat]** [Business Manager](https://business.snapchat.com/) é necessária para usar a API de Conversões. O Business Manager ajuda os anunciantes a integrar os esforços de marketing de **[!DNL Snapchat]** em seus negócios e com parceiros externos. Consulte o **[!DNL Snapchat]** [artigo da central de ajuda](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) sobre como criar uma conta do Business Manager, se você não tiver uma.
 
-Um [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) deve ser configurado no Gerenciador de Anúncios do Snapchat e você deve ter acesso para visualizar o `Pixel ID`. O `Pixel ID` pode ser encontrado na seção [[!UICONTROL [Gerenciador de Eventos]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
+Um [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) deve ser configurado no Gerenciador de Anúncios do Snapchat e você deve ter acesso para visualizar o `Pixel ID`. O `Pixel ID` pode ser encontrado na seção [!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US).
 
 Você precisa de um token de API estático de longa duração. Consulte a [[!DNL Snapchat] Documentação da API de conversões](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) para obter este token.
 
 ## Instalar e configurar a extensão de API de eventos Web do [!DNL Snapchat] {#install}
 
-Para instalar a extensão, navegue até **[!UICONTROL Coleção de Dados]**>**[!UICONTROL Encaminhamento de Eventos]**. Selecione a propriedade em que deseja instalar a extensão.
+Para instalar a extensão, navegue até **[!UICONTROL Data Collection]**>**[!UICONTROL Event Forwarding]**. Selecione a propriedade em que deseja instalar a extensão.
 
 Depois que a propriedade desejada for selecionada, siga estas etapas:
 
-1. No painel de navegação esquerdo, selecione **[!UICONTROL Extensões]**.
-2. Procure a **[!UICONTROL Extensão da API de Conversão do Snap]** e selecione **[!UICONTROL Instalar]**.
+1. No painel de navegação esquerdo, selecione **[!UICONTROL Extensions]**.
+2. Pesquise por **[!UICONTROL Snap Conversion API Extension]** e selecione **[!UICONTROL Install]**.
 
    ![Imagem mostrando o botão de instalação](../../../images/extensions/server/snap/install.png)
 
 3. Na tela de configuração, insira os seguintes valores:
 
-* **[!UICONTROL Id Do Pixel]**
-* **[!UICONTROL Token de API]**
+* **[!UICONTROL Pixel Id]**
+* **[!UICONTROL API Token]**
 
-Quando terminar, selecione **[!UICONTROL Salvar]**.
+Quando terminar, selecione **[!UICONTROL Save]**.
 
 ![Imagem mostrando a ID do Pixel e o botão do token da API](../../../images/extensions/server/snap/configure.png)
 <!-- 
@@ -53,23 +53,23 @@ Quando terminar, selecione **[!UICONTROL Salvar]**.
 
 ## Criar elementos de dados {#create-data-elements}
 
-Para enviar dados para a extensão de API de conversões [!DNL Snapchat], crie [elementos de dados](https://experienceleague.adobe.com/pt-br/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) para cada parâmetro de dados. Siga estas etapas:
+Para enviar dados para a extensão de API de conversões [!DNL Snapchat], crie [elementos de dados](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) para cada parâmetro de dados. Siga estas etapas:
 
-1. Navegue até **[!UICONTROL Criação]**>**[!UICONTROL Elementos de Dados]** na tela **[!UICONTROL Informações da Propriedade]** da propriedade e selecione **[!UICONTROL Adicionar Elemento de Dados]**.
+1. Navegue até **[!UICONTROL Authoring]**>**[!UICONTROL Data Elements]** na tela **[!UICONTROL Property Info]** da propriedade e selecione **[!UICONTROL Add Data Element]**.
 
    ![Imagem mostrando o botão adicionar elemento de dados](../../../images/extensions/server/snap/add_data_element.png)
 
 2. Insira um nome para o elemento de dados.
 
-3. Selecione **[!UICONTROL Núcleo]** como a extensão e **[!UICONTROL Caminho]** como o tipo de elemento de dados.
+3. Selecione **[!UICONTROL Core]** como extensão e **[!UICONTROL Path]** como tipo de elemento de dados.
 
-4. No menu suspenso, selecione o item apropriado e preencha o campo [!UICONTROL Caminho] no painel direito para fazer referência aos dados desejados no esquema.
+4. No menu suspenso, selecione o item apropriado e preencha o campo [!UICONTROL Path] no painel direito para fazer referência aos dados desejados no esquema.
 
    ![Imagem mostrando a tela criar elemento de dados](../../../images/extensions/server/snap/create_data_element.png)
 
 Por exemplo, se você estiver criando um elemento de dados que faça referência a `snapClickId` no esquema mostrado abaixo:
 
-![Imagem mostrando o esquema &#x200B;](../../../images/extensions/server/snap/schema.png)
+![Imagem mostrando o esquema](../../../images/extensions/server/snap/schema.png)
 
 Você deve configurar o elemento de dados porque `snapClickId` está localizado em `_snap.inc.exchange` no esquema XDM.
 
@@ -79,11 +79,11 @@ Consulte a [documentação de propriedades do Encaminhamento de Eventos](/help/t
 
 ## Criar regras para enviar eventos de conversão ao Snap {#create-snap-rules}
 
-[Regras](https://experienceleague.adobe.com/pt-br/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) são usadas para acionar extensões no Experience Platform. Esta seção descreve como criar regras na propriedade de encaminhamento de eventos para enviar eventos de conversão ao Snap usando a extensão de API de conversões.
+[Regras](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) são usadas para acionar extensões no Experience Platform. Esta seção descreve como criar regras na propriedade de encaminhamento de eventos para enviar eventos de conversão ao Snap usando a extensão de API de conversões.
 
 ### Criar uma nova regra
 
-1. Navegue até a propriedade de encaminhamento de eventos e selecione **[!UICONTROL Regras]** no menu Criação. Em seguida, clique em **[!UICONTROL Criar nova regra]**.
+1. Navegue até a propriedade de encaminhamento de eventos e selecione **[!UICONTROL Rules]** no menu Criação. Em seguida, clique em **[!UICONTROL Create New Rule]**.
 
    ![Imagem mostrando as regras na navegação à esquerda](../../../images/extensions/server/snap/create_new_rule.png)
 
@@ -93,15 +93,15 @@ Consulte a [documentação de propriedades do Encaminhamento de Eventos](/help/t
 
 3. Depois de salvar a condição, adicione uma ação para acionar a API de conversão de snap. No painel do lado esquerdo:
 
-   * Defina o menu suspenso [!UICONTROL Extensão] como [!UICONTROL Extensão da API de Conversões Snap].
+   * Defina o menu suspenso [!UICONTROL Extension] como [!UICONTROL Snap Conversions API Extension].
 
-   * Defina o menu suspenso [!UICONTROL Tipo de Ação] como [!UICONTROL Conversões de Relatórios da Web].
+   * Defina o menu suspenso [!UICONTROL Action Type] como [!UICONTROL Report Web Conversions].
 
    * Nomeie a regra de acordo.
 
    ![Imagem mostrando a tela de configuração de ação](../../../images/extensions/server/snap/action_configuration.png)
 
-4. Configure os [valores de parâmetro CAPI](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) que você deseja enviar para o evento na seção **[!UICONTROL Associações de Dados]** no painel direito. Os campos na extensão são mapeados para parâmetros CAPI, conforme mostrado abaixo. Consulte a [Documentação da API de Conversões do Snapchat](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) para obter mais informações sobre cada parâmetro.
+4. Configure os [valores de parâmetro CAPI](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) que você deseja enviar para o evento na seção **[!UICONTROL Data Bindings]** no painel direito. Os campos na extensão são mapeados para parâmetros CAPI, conforme mostrado abaixo. Consulte a [Documentação da API de Conversões do Snapchat](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) para obter mais informações sobre cada parâmetro.
 
 | Campo de vinculação de dados | Ajustar parâmetro CAPI |
 | --- | --- |
@@ -154,7 +154,7 @@ Cada evento requer `event_source`, que é sempre definido como `WEB.` Para corre
 
 * Para eventos `Purchase`, os campos `Currency` e `Price` são obrigatórios.
 
-* Habilitar a caixa de seleção **[!UICONTROL Modo de teste]** envia eventos como eventos de teste, que aparecem na ferramenta de evento de teste em vez de relatórios padrão. Consulte este [artigo da central de ajuda empresarial](https://businesshelp.snapchat.com/s/article/capi-event-testing?language=en_US#:~:text=Snap&#39;s%20Conversions%20API%20(CAPI)%20Test,being%20processed%20as%20production%20results.) para obter mais detalhes.
+* Habilitar a caixa de seleção **[!UICONTROL Test Mode]** envia eventos como eventos de teste, que aparecem na ferramenta de evento de teste em vez de relatórios padrão. Consulte este [artigo da central de ajuda empresarial](https://businesshelp.snapchat.com/s/article/capi-event-testing?language=en_US#:~:text=Snap's%20Conversions%20API%20(CAPI)%20Test,being%20processed%20as%20production%20results.) para obter mais detalhes.
 
 * O parâmetro `contents` deve ser uma cadeia de caracteres JSON contendo pelo menos um dos seguintes campos:
 

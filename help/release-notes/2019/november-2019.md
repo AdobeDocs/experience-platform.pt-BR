@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '1889'
 ht-degree: 7%
@@ -17,11 +17,13 @@ ht-degree: 7%
 **Data de lançamento: 18 de novembro de 2019**
 
 Novos recursos na Adobe Experience Platform:
+
 * [[!DNL Real-Time Customer Data Platform]](#rtcdp)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Sources]](#sources)
 
 Atualizações dos recursos existentes:
+
 * [[!DNL Data Science Workspace]](#dsw)
 * [[!DNL Experience Data Model (XDM) System]](#xdm)
 * [[!DNL Real-Time Customer Profile]](#profile)
@@ -48,7 +50,7 @@ Para obter mais informações, consulte a [documentação do Real-Time Customer 
 
 | Recurso | Descrição |
 |---|---|
-| Destinos | Integrações pré-criadas com plataformas de destino compatíveis com o [!DNL Real-Time Customer Data Platform] da Adobe que ativam os dados para esses parceiros de forma contínua. Consulte [Destinos](#destinations) abaixo para obter mais informações. |
+| Destinos | Integrações pré-criadas com plataformas de destino compatíveis com o [!DNL Real-Time Customer Data Platform] da Adobe que ativam dados para esses parceiros de forma contínua. Consulte [Destinos](#destinations) abaixo para obter mais informações. |
 | Painel de métricas da página inicial | A página inicial do Real-Time Customer Data Platform (Real-Time CDP) inclui um painel de métricas que mostra informações sobre perfis e segmentos. A página inicial também contém links para materiais de aprendizado. Consulte a seção sobre [métricas do Real-Time Customer Data Platform](#real-time-customer-data-platform-metrics) abaixo. |
 | Origens | Você pode assimilar dados de várias fontes, como Soluções da Adobe, armazenamento na nuvem, software de terceiros e seu CRM. Consulte a seção [Fontes](#sources) abaixo para saber mais. |
 
@@ -148,7 +150,7 @@ A Adobe Experience Platform permite gerar experiências coordenadas, consistente
 | Limpar dados para um determinado conjunto de dados | Os usuários agora podem excluir dados de um determinado conjunto de dados ou lote usando a API de Trabalhos do Sistema [!DNL Profile]. |
 | Aprimoramentos de consulta do Edge [!DNL Profile] | Os aplicativos agora podem consultar o Edge [!DNL Profile] por qualquer uma das identidades de um determinado perfil. |
 | Configurar políticas de mesclagem por projeção | Os aplicativos agora podem configurar políticas de mesclagem por projeção para gerar uma visualização dos dados conforme regido por uma política de mesclagem específica. |
-| Atributos computados | Os atributos computados calculam automaticamente o valor dos campos com base em outros valores, cálculos e expressões. Os atributos calculados operam no nível do perfil para agregar valores como &quot;compra total&quot;, &quot;valor vitalício&quot; ou &quot;status de funil&quot; com base em um evento recebido, um evento recebido e dados de perfil, ou um evento recebido, dados de perfil e eventos históricos. |
+| Atributos computados | Os atributos computados calculam automaticamente o valor dos campos com base em outros valores, cálculos e expressões. Os atributos calculados operam no nível do perfil para agregar valores como &quot;compra total&quot;, &quot;valor vitalício&quot; ou &quot;status do funnel&quot; com base em um evento recebido, um evento recebido e dados de perfil, ou um evento recebido, dados de perfil e eventos históricos. |
 
 **Correções de erros**
 
@@ -164,7 +166,7 @@ Para obter mais informações sobre o [!DNL Real-Time Customer Profile], incluin
 
 O Adobe Experience Platform [!DNL Segmentation Service] fornece uma interface de usuário e uma API RESTful que permite que você crie segmentos e gere públicos a partir dos dados do [!DNL Real-Time Customer Profile]. Esses segmentos são configurados e mantidos centralmente no [!DNL Experience Platform], tornando-os prontamente acessíveis por qualquer aplicativo do Adobe.
 
-O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de séries temporais que representam interações de clientes com sua marca.
+O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de série temporal que representam interações de clientes com sua marca.
 
 | Recurso | Descrição |
 | -----------| ---------- |

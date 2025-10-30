@@ -2,9 +2,9 @@
 title: Monitorar assimilação de perfil de transmissão
 description: Saiba como usar o painel de monitoramento para monitorar a assimilação do perfil de transmissão
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: 75ccdfdff4ded0a13213089d1c7dcc4d8f14e0f8
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1967'
+source-wordcount: '1932'
 ht-degree: 19%
 
 ---
@@ -26,7 +26,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Experie
 
 >[!NOTE]
 >
->A capacidade de taxa de transferência de transmissão suporta até 1500 eventos de entrada por segundo. Você pode comprar Segmentação de streaming adicional para oferecer suporte a até um máximo adicional de 13.500 eventos de entrada por segundo&#x200B;. Para obter mais informações, consulte as [descrições de produto do Real-Time CDP B2C Edition - Prime e Ultimate Packages](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>A capacidade de taxa de transferência de transmissão suporta até 1500 eventos de entrada por segundo. Você pode comprar Segmentação de streaming adicional para oferecer suporte a até um máximo adicional de 13.500 eventos de entrada por segundo&#x200B;. Para obter mais informações, consulte as [descrições de produto do Real-Time CDP B2C Edition - Prime e Ultimate Packages](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Métricas de monitoramento para a assimilação de perfil de transmissão {#streaming-profile-metrics}
 
@@ -91,7 +91,7 @@ Use a tabela de métricas para obter informações específicas para seus fluxos
 | Taxa de transferência de solicitação | Essa métrica representa o número de eventos que entram no sistema de assimilação por segundo. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
 | Taxa de transferência de processamento | Essa métrica representa o número de eventos assimilados com êxito pelo sistema a cada segundo. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
 | Latência de assimilação P95 | Essa métrica mede a latência do percentil 95 do momento em que um evento chega à Experience Platform até ele ser assimilado com sucesso no armazenamento de perfis. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
-| Taxa de transferência máxima | Essa métrica representa o número máximo de solicitações de entrada por segundo ao entrar na assimilação do perfil de streaming | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> |
+| Taxa de transferência máxima | Essa métrica representa o número máximo de solicitações de entrada por segundo ao entrar na assimilação do perfil de streaming | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> |  |
 | Registros assimilados | Essa métrica representa o número total de registros assimilados no armazenamento de perfis em uma janela de tempo configurada. | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> | <ul><li>Sandbox/Fluxo de dados: monitoramento em tempo real com uma atualização de dados a cada 60 segundos.</li><li>Execução do fluxo de dados: agrupado em 15 minutos.</li></ul> |
 | Registros com falha | Essa métrica representa o número total de registros que falharam ao serem assimilados no armazenamento de perfis em uma janela de tempo configurada, devido a erros. | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> | <ul><li>Sandbox/Fluxo de dados: monitoramento em tempo real com uma atualização de dados a cada 60 segundos.</li><li>Execução do fluxo de dados: agrupado em 15 minutos.</li></ul> |
 | Registros ignorados | Essa métrica representa o número total de registros que foram descartados em uma janela de tempo configurada devido a falhas de configuração ou de capacidade. | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> | <ul><li>Sandbox/Fluxo de dados: monitoramento em tempo real com uma atualização de dados a cada 60 segundos.</li><li>Execução do fluxo de dados: agrupado em 15 minutos.</li></ul> |
@@ -101,31 +101,31 @@ Use a tabela de métricas para obter informações específicas para seus fluxos
 
 ## Usar o painel de monitoramento para assimilação do perfil de streaming
 
-Para acessar o painel de monitoramento para assimilação do perfil de streaming, vá para a interface do usuário do Experience Platform, selecione **[!UICONTROL Monitoramento]** no menu de navegação esquerdo e selecione **[!UICONTROL Streaming de ponta a ponta]**.
+Para acessar o painel de monitoramento para assimilação do perfil de streaming, vá para a interface do usuário do Experience Platform, selecione **[!UICONTROL Monitoring]** na navegação à esquerda e selecione **[!UICONTROL Streaming end-to-end]**.
 
 ![O painel de monitoramento para assimilação do perfil de streaming.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Consulte o cabeçalho superior do painel para o cartão de métricas *[!UICONTROL Perfil]*. Use esta exibição para exibir informações sobre os registros assimilados, com falha e ignorados, bem como informações sobre o status atual da taxa de transferência e latência da solicitação.
+Consulte o cabeçalho superior do painel para o cartão de métricas *[!UICONTROL Profile]*. Use esta exibição para exibir informações sobre os registros assimilados, com falha e ignorados, bem como informações sobre o status atual da taxa de transferência e latência da solicitação.
 
 ![O cartão de perfil.](../assets/ui/streaming-profiles/profile-card.png)
 
 Em seguida, use a interface para exibir informações detalhadas sobre as métricas de assimilação do perfil de streaming. Use o recurso de calendário para alternar entre períodos diferentes. Você pode selecionar entre as seguintes janelas de tempo pré-configuradas:
 
-* [!UICONTROL Últimas 6 horas]
-* [!UICONTROL Últimas 12 horas]
-* [!UICONTROL Últimas 24 horas]
-* [!UICONTROL Últimos 7 dias]
-* [!UICONTROL Últimos 30 dias]
+* [!UICONTROL Last 6 hours]
+* [!UICONTROL Last 12 hours]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
 Como alternativa, você pode configurar manualmente seu próprio período de tempo usando o calendário.
 
-Você pode usar três categorias de métrica diferentes no painel de monitoramento para assimilação do perfil de streaming: [!UICONTROL Taxa de transferência], [!UICONTROL Assimilação] e [!UICONTROL Latência].
+Você pode usar três categorias de métricas diferentes no painel de monitoramento para assimilação do perfil de streaming: [!UICONTROL Throughput], [!UICONTROL Ingestion] e [!UICONTROL Latency].
 
 >[!BEGINTABS]
 
 >[!TAB Taxa de transferência]
 
-Selecione **[!UICONTROL Taxa de transferência]** para exibir informações sobre a quantidade de dados que o Experience Platform está processando, dado um período configurado. Consulte esta métrica para avaliar a eficiência e a capacidade do seu sistema.
+Selecione **[!UICONTROL Throughput]** para exibir informações sobre a quantidade de dados que o Experience Platform está processando, dado um período configurado. Consulte esta métrica para avaliar a eficiência e a capacidade do seu sistema.
 
 ![O painel com a exibição definida como &quot;taxa de transferência&quot;.](../assets/ui/streaming-profiles/throughput.png)
 
@@ -135,7 +135,7 @@ Selecione **[!UICONTROL Taxa de transferência]** para exibir informações sobr
 
 >[!TAB Assimilação]
 
-**Assimilação**: selecione **[!UICONTROL Assimilação]** para exibir informações sobre os trabalhos de assimilação na sandbox. Esses trabalhos de assimilação são medidos em três métricas diferentes.
+**Assimilação**: selecione **[!UICONTROL Ingestion]** para exibir informações sobre os trabalhos de assimilação na sua sandbox. Esses trabalhos de assimilação são medidos em três métricas diferentes.
 
 ![O painel com a exibição definida como &quot;assimilação&quot;.](../assets/ui/streaming-profiles/ingestion.png)
 
@@ -145,7 +145,7 @@ Selecione **[!UICONTROL Taxa de transferência]** para exibir informações sobr
 
 >[!TAB Latência]
 
-Selecione **[!UICONTROL Latência]** para exibir informações sobre o tempo que a Experience Platform leva para responder a uma solicitação ou concluir uma operação em um determinado período.
+Selecione **[!UICONTROL Latency]** para exibir informações sobre o tempo que o Experience Platform leva para responder a uma solicitação ou concluir uma operação em um determinado período de tempo.
 
 ![O painel com a exibição definida como &quot;latência&quot;.](../assets/ui/streaming-profiles/latency.png)
 
@@ -155,7 +155,7 @@ Selecione **[!UICONTROL Latência]** para exibir informações sobre o tempo que
 
 A tabela de fluxo de dados lista todas as atividades de assimilação de streaming com seu conjunto correspondente de métricas para o Perfil do cliente em tempo real. Cada fluxo de dados é listado com seu conjunto de dados correspondente.
 
-Se você estiver se aproximando dos limites de sua capacidade no nível da sandbox, poderá consultar a coluna [!UICONTROL Taxa de transferência máxima] para identificar quaisquer fluxos de dados existentes que estejam contribuindo para suas taxas de consumo. Leia a [seção de práticas recomendadas](#best-practices) para obter mais informações sobre as práticas recomendadas de gerenciamento de fluxo de dados.
+Se estiver se aproximando dos limites da sua capacidade no nível da sandbox, você pode consultar a coluna [!UICONTROL Max throughput] para identificar quaisquer fluxos de dados existentes que estejam contribuindo para suas taxas de consumo. Leia a [seção de práticas recomendadas](#best-practices) para obter mais informações sobre as práticas recomendadas de gerenciamento de fluxo de dados.
 
 Para monitorar os dados que estão sendo assimilados em um fluxo de dados específico, selecione o ícone de filtro ![filtro](/help/images/icons/filter-add.png) ao lado do nome do fluxo de dados.
 
@@ -206,17 +206,17 @@ Leia esta seção para obter respostas a perguntas frequentes sobre o monitorame
 
 +++Resposta
 
-O painel [!UICONTROL Monitoramento] mostra métricas em tempo real para assimilação e processamento. Esses números são métricas exatas registradas no momento da atividade. Por outro lado, o painel [!UICONTROL Capacidade] usa um mecanismo de suavização para o cálculo da capacidade de taxa de transferência. Esse mecanismo ajuda a reduzir picos de vida curta de qualificação instantânea como violações e garante que os alertas de capacidade se concentrem em tendências sustentadas, em vez de picos momentâneos.
+O painel [!UICONTROL Monitoring] mostra métricas em tempo real para assimilação e processamento. Esses números são métricas exatas registradas no momento da atividade. Por outro lado, o painel [!UICONTROL Capacity] usa um mecanismo de suavização para o cálculo da capacidade de taxa de transferência. Esse mecanismo ajuda a reduzir picos de vida curta de qualificação instantânea como violações e garante que os alertas de capacidade se concentrem em tendências sustentadas, em vez de picos momentâneos.
 
 Devido ao mecanismo de suavização, você pode notar:
 
-* Pequenos picos em [!UICONTROL Monitoramento] que não aparecem em [!UICONTROL Capacidade].
-* Valores ligeiramente menores em [!UICONTROL Capacity] comparados a [!UICONTROL Monitoring] no mesmo carimbo de data/hora.
+* Pequenos picos em [!UICONTROL Monitoring] que não aparecem em [!UICONTROL Capacity].
+* Valores um pouco mais baixos em [!UICONTROL Capacity] em comparação a [!UICONTROL Monitoring] no mesmo carimbo de data/hora.
 
 Os dois painéis são precisos, mas foram projetados para finalidades diferentes.
 
-* [!UICONTROL Monitoramento]: visibilidade operacional detalhada, momento a momento.
-* [!UICONTROL Capacidade]: exibição estratégica para identificar padrões de uso e violação.
+* [!UICONTROL Monitoring]: visibilidade operacional detalhada, momento a momento.
+* [!UICONTROL Capacity]: exibição estratégica para identificar padrões de uso e violação.
 
 +++
 

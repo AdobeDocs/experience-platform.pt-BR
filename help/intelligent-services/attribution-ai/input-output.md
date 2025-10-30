@@ -4,9 +4,9 @@ feature: Attribution AI
 title: Entrada e saída na IA de atribuição
 description: O documento a seguir descreve as diferentes entradas e saídas utilizadas na IA de atribuição.
 exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '2474'
+source-wordcount: '2467'
 ht-degree: 3%
 
 ---
@@ -64,6 +64,7 @@ Os conjuntos de dados de Evento de experiência (EE) não precisam ter explicita
 >[!IMPORTANT]
 >
 > A quantidade mínima de dados necessária para que a IA de atribuição funcione é a seguinte:
+>
 > - Você precisa fornecer pelo menos 3 meses (90 dias) de dados para executar um bom modelo.
 > - Você precisa de pelo menos 1000 conversões.
 
@@ -102,9 +103,10 @@ A IA de atribuição gera pontuações de atribuição no nível mais granular p
 
 >[!NOTE]
 >
-> Você poderá ver qualquer coluna de relatório desejada do conjunto de dados de entrada no conjunto de dados de saída da pontuação somente se uma das seguintes opções for verdadeira:
-> - A coluna de relatório é incluída na página de configuração como parte do ponto de contato ou da configuração de definição de conversão.
-> - A coluna de relatório é incluída em colunas adicionais do conjunto de dados de pontuação.
+>Você poderá ver qualquer coluna de relatório desejada do conjunto de dados de entrada no conjunto de dados de saída da pontuação somente se uma das seguintes opções for verdadeira:
+>
+>- A coluna de relatório é incluída na página de configuração como parte do ponto de contato ou da configuração de definição de conversão.
+>- A coluna de relatório é incluída em colunas adicionais do conjunto de dados de pontuação.
 
 A tabela a seguir descreve os campos de esquema na saída de exemplo de pontuações brutas:
 
@@ -137,18 +139,18 @@ A tabela a seguir descreve os campos de esquema na saída de exemplo de pontuaç
 | identity (Objeto) | Falso | Contém os detalhes do usuário usado para criar o modelo, como `id` e `namespace`. |
 | id (String) | Verdadeiro | ID de identidade do usuário, como ID de cookie, Adobe Analytics ID (AAID), Experience Cloud ID (ECID, também conhecida como MCID ou como ID de visitante) etc. <br> **Exemplo:** 1734876272540865634688320891369597404 |
 | namespace (String) | Verdadeiro | Namespace de identidade usado para criar os caminhos e, portanto, o modelo. <br> **Exemplo:** aaid |
-| touchpointsDetail (Matriz de objetos) | Verdadeiro | A lista de detalhes do ponto de contato que levam à conversão ordenada por | ocorrência do ponto de contato ou carimbo de data e hora. |
+| touchpointsDetail (Matriz de objetos) | Verdadeiro | A lista de detalhes do ponto de contato que leva à conversão ordenada pela ocorrência do ponto de contato ou carimbo de data e hora. |
 | touchpointName (String) | Verdadeiro | Nome do ponto de contato configurado durante a configuração. <br> **Exemplo:** PAID_SEARCH_CLICK |
 | scores (Objeto) | Verdadeiro | Contribuição do ponto de contato para essa conversão como pontuação. Para obter mais informações sobre as pontuações produzidas nesse objeto, consulte a seção [pontuações de atribuição agregadas](#aggregated-attribution-scores). |
 | touchPoint (Objeto) | Verdadeiro | Metadados do ponto de contato. Para obter mais informações sobre as pontuações produzidas nesse objeto, consulte a seção [pontuações agregadas](#aggregated-scores). |
 
 ### Exibição de caminhos de pontuação brutos (UI) {#raw-score-path}
 
-Você pode visualizar o caminho para suas pontuações brutas na interface do usuário do. Comece selecionando **[!UICONTROL Esquemas]** na interface do Experience Platform e depois procure e selecione seu esquema de pontuações da IA de atribuição na guia **[!UICONTROL Procurar]**.
+Você pode visualizar o caminho para suas pontuações brutas na interface do usuário do. Comece selecionando **[!UICONTROL Schemas]** na interface do Experience Platform e depois procure e selecione seu esquema de pontuações da IA de atribuição na guia **[!UICONTROL Browse]**.
 
 ![Escolha seu esquema](./images/input-output/schemas_browse.png)
 
-Em seguida, selecione um campo na janela **[!UICONTROL Estrutura]** da interface. A guia **[!UICONTROL Propriedades do campo]** será aberta. Nas **[!UICONTROL Propriedades do campo]** está o campo de caminho que mapeia para suas pontuações brutas.
+Em seguida, selecione um campo na janela **[!UICONTROL Structure]** da interface do usuário. A guia **[!UICONTROL Field properties]** é aberta. Dentro de **[!UICONTROL Field properties]** é o campo de caminho que mapeia para suas pontuações brutas.
 
 ![Escolher um esquema](./images/input-output/field_properties.png)
 

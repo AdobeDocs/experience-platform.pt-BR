@@ -3,9 +3,9 @@ title: Pesquisar atributos de perfil de borda em tempo real
 description: Saiba como pesquisar atributos de perfil de borda em tempo real, usando o destino do Personalization personalizado e a API do Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1843'
+source-wordcount: '1839'
 ht-degree: 1%
 
 ---
@@ -54,7 +54,7 @@ Siga as etapas na documentação da [configuração da sequência de dados](../.
 >
 >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-    ![Imagem da interface do usuário do Experience Platform mostrando a tela de configuração da sequência de dados.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+![Imagem da interface do Experience Platform mostrando a tela de configuração da sequência de dados.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Etapa 2: configurar os públicos-alvo para avaliação de borda {#audience-edge-evaluation}
@@ -125,8 +125,6 @@ Depois de criar uma conexão **[!UICONTROL Custom Personalization With Attribute
 
      ![Gravação de tela mostrando como selecionar um atributo XDM na etapa de mapeamento](../assets/ui/activate-edge-personalization-destinations/mapping-step-select-target-attribute.gif)
 
-
-
 Quando terminar de mapear os atributos do perfil, selecione **[!UICONTROL Next]**.
 
 Na página **[!UICONTROL Review]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancel]** para interromper o fluxo, **[!UICONTROL Back]** para modificar as configurações ou **[!UICONTROL Finish]** para confirmar a seleção e começar a enviar dados de perfil para a Edge Network.
@@ -167,7 +165,8 @@ A próxima etapa é configurar sua solução de personalização para recuperar 
 >[!IMPORTANT]
 >
 >Os atributos do perfil podem conter dados confidenciais. Para proteger esses dados, você deve recuperar os atributos do perfil por meio da [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/). Além disso, você deve recuperar os atributos do perfil por meio da API do Edge Network [ponto de extremidade de coleta de dados interativa](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/), para que as chamadas de API sejam autenticadas.
->&#x200B;><br>Se você não seguir os requisitos acima, a personalização será baseada somente na associação ao público-alvo e os atributos de perfil não estarão disponíveis para você.
+>
+>Se você não seguir os requisitos acima, a personalização será baseada somente na associação ao público-alvo e os atributos de perfil não estarão disponíveis para você.
 
 A sequência de dados configurada na [etapa 1](#create-datastream) agora está pronta para aceitar dados de eventos de entrada e responder com informações de perfil de borda.
 

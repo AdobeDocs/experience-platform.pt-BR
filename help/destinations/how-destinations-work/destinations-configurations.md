@@ -2,7 +2,7 @@
 title: Configurações de exportação configuráveis e comuns em destinos
 description: Saiba quais configurações de exportação em destinos são configuráveis em um nível de destino e quais são fixas e não podem ser editadas.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: 47197b745bebb6564d912d9dc045593bc076ae2a
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '834'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Configurações de exportação configuráveis e comuns em destinos
 
-Ao pensar no comportamento de exportação para destinos de Experience Platform, é necessário considerar três níveis separados nos quais as configurações agem.
+Ao pensar no comportamento de exportação para destinos do Experience Platform, é necessário considerar três níveis separados nos quais as configurações agem.
 
 * Em um primeiro nível, algumas das configurações relacionadas ao comportamento de exportação do perfil e às configurações são comuns em todos os destinos que pertencem a um tipo de destino. Essas configurações se referem ao que aciona uma exportação de destino e ao que está incluído em uma exportação e não pode ser editado por desenvolvedores de destino ou usuários do Real-Time CDP.
 * Em um segundo nível, algumas configurações podem ser personalizadas em um nível de destino pelo desenvolvedor de destino ao criar destinos usando o Destination SDK.
@@ -23,7 +23,7 @@ Esta página descreve ou cria links para todas as definições de exportação c
 
 ## Configurações comuns de exportação em tipos de destino {#common-settings-across-destination-types}
 
-O comportamento de exportação de destino é consistente entre destinos pertencentes a um tipo de destino no que diz respeito a *o que aciona uma exportação de destino* e *o que está incluído nas exportações de destino*. As exportações de destino são acionadas por notificações que o serviço de destinos recebe do [serviço upstream de Perfil do Cliente em Tempo Real](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=pt-BR#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+O comportamento de exportação de destino é consistente entre destinos pertencentes a um tipo de destino no que diz respeito a *o que aciona uma exportação de destino* e *o que está incluído nas exportações de destino*. As exportações de destino são acionadas por notificações que o serviço de destinos recebe do [serviço upstream de Perfil do Cliente em Tempo Real](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 O que está incluído nas exportações de destino varia ligeiramente entre os tipos de destino. Leia mais sobre os [padrões de comportamento de exportação comuns por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md). Essas configurações não podem ser editadas por desenvolvedores de destino ou usuários do Real-Time CDP.
 
@@ -32,7 +32,7 @@ O que está incluído nas exportações de destino varia ligeiramente entre os t
 Os desenvolvedores de destino podem usar o [Destination SDK](/help/destinations/destination-sdk/overview.md) para criar destinos personalizados ou de produção (privados ou públicos). O Destination SDK fornece aos desenvolvedores grande flexibilidade para configurar destinos com base nos recursos de downstream de seus endpoints de API e sistemas de recepção de arquivos. Com base nos recursos de downstream, os desenvolvedores de destino têm as seguintes opções de configuração disponíveis ao configurar um destino usando o Destination SDK:
 
 * Determine quais atributos e identidades podem ser exportados do Experience Platform para o destino. Determine também quais identidades são exigidas por seus destinos para uma exportação de dados bem-sucedida.
-* Defina uma política de agregação, que determina quanto tempo o Experience Platform deve esperar ao agregar mensagens HTTP para ser enviado às integrações de API. Os desenvolvedores de destino podem configurar diferentes tipos de agregação para determinar quantos perfis devem ser incluídos em mensagens HTTP de saída e quanto tempo o Experience Platform deve esperar até que a mensagem HTTP seja enviada. Encontre informações abrangentes sobre as [opções de configuração de política de agregação](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) disponíveis para desenvolvedores de destino na documentação do Destination SDK.
+* Defina uma política de agregação, que determina por quanto tempo o Experience Platform deve aguardar ao agregar mensagens HTTP para serem enviadas às integrações de API. Os desenvolvedores de destino podem configurar diferentes tipos de agregação para determinar quantos perfis devem ser incluídos em mensagens HTTP de saída e quanto tempo o Experience Platform deve esperar até que a mensagem HTTP seja despachada. Encontre informações abrangentes sobre as [opções de configuração de política de agregação](../destination-sdk/functionality/destination-configuration/aggregation-policy.md) disponíveis para desenvolvedores de destino na documentação do Destination SDK.
 * Determine se as exportações de mensagens HTTP devem incluir perfis qualificados para segmentos, que são removidos de segmentos ou ambos.
 * Determine quais configurações de nome de arquivo e formatação de arquivo devem estar disponíveis para os usuários ao exportar arquivos.
 
@@ -44,13 +44,13 @@ As configurações disponíveis para os usuários ao se conectarem a um destino 
 
 Por exemplo, para [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations), um desenvolvedor de destino pode configurar quais identidades seu destino aceita e somente essas identidades serão exibidas para o usuário na [etapa de mapeamento do fluxo de trabalho de ativação](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping), conforme mostrado abaixo:
 
-![Gravação de tela da seleção de identidade para o campo de destino na etapa de mapeamento do fluxo de trabalho de ativação. &#x200B;](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
+![Gravação de tela da seleção de identidade para o campo de destino na etapa de mapeamento do fluxo de trabalho de ativação.](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
 Da mesma forma, para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based), o desenvolvedor de destino pode determinar quais [opções de acréscimo de nome de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) ele deseja disponibilizar para seu destino ou quais [opções de formatação de arquivo](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) ele deseja disponibilizar, e o usuário poderá selecionar apenas dessas opções, conforme mostrado abaixo:
 
 ![Gravação de tela da opção de formatação de arquivo ao conectar-se a um destino baseado em arquivo.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 
-![Gravação de tela da opção de acréscimo de nome de arquivo na etapa de agendamento do fluxo de trabalho de ativação. &#x200B;](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
+![Gravação de tela da opção de acréscimo de nome de arquivo na etapa de agendamento do fluxo de trabalho de ativação.](/help/destinations/assets/how-destinations-work/filename-append-options.gif)
 
 Leia mais sobre as diferentes opções e etapas disponíveis no fluxo de trabalho de ativação:
 

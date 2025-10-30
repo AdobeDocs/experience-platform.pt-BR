@@ -2,9 +2,9 @@
 description: Saiba como configurar o esquema de parceiro para destinos criados com o Destination SDK.
 title: Configuração de esquema de parceiro
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '1912'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ Este artigo descreve todas as opções de configuração de esquema compatíveis
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -167,6 +167,7 @@ Por exemplo, é possível impor que o campo de endereço de email sempre seja en
 >[!NOTE]
 >
 >As seguintes combinações de mapeamentos necessários são compatíveis no momento:
+>
 >* Você pode configurar um campo de origem e um campo de destino obrigatórios. Nesse caso, os usuários não podem editar ou selecionar nenhum dos dois campos e só podem visualizar a seleção.
 >* Você pode configurar apenas um campo de destino obrigatório. Nesse caso, os usuários poderão selecionar um campo de origem para mapear para o destino.
 >
@@ -203,7 +204,7 @@ O exemplo abaixo mostra os mapeamentos de origem e de destino necessários. Quan
 
 {style="table-layout:auto"}
 
-Como resultado, as seções do **[!UICONTROL campo do Source]** e do **[!UICONTROL campo do Target]** na interface do usuário do Experience Platform estão esmaecidas.
+Como resultado, as seções **[!UICONTROL Source field]** e **[!UICONTROL Target field]** na interface do usuário do Experience Platform estão esmaecidas.
 
 ![Imagem dos mapeamentos necessários no fluxo de ativação da interface do usuário.](../../assets/functionality/destination-configuration/required-mappings-2.png)
 
@@ -233,7 +234,7 @@ O exemplo abaixo mostra um mapeamento de destino necessário. Se apenas o campo 
 
 {style="table-layout:auto"}
 
-Como resultado, a seção **[!UICONTROL Campo de destino]** da interface do usuário do Experience Platform fica esmaecida, enquanto a seção **[!UICONTROL Campo do Source]** está ativa e os usuários podem interagir com ela. As opções **[!UICONTROL Chave obrigatória]** e **[!UICONTROL Chave de desduplicação]** estão ativas e os usuários não podem alterá-las.
+Como resultado, a seção **[!UICONTROL Target field]** na interface do usuário do Experience Platform fica esmaecida, enquanto a seção **[!UICONTROL Source field]** está ativa e os usuários podem interagir com ela. As opções **[!UICONTROL Mandatory key]** e **[!UICONTROL Deduplication key]** estão ativas e os usuários não podem alterá-las.
 
 ![Imagem dos mapeamentos necessários no fluxo de ativação da interface do usuário.](../../assets/functionality/destination-configuration/required-mappings-1.png)
 

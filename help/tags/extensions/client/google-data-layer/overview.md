@@ -2,9 +2,9 @@
 title: Extensão da camada de dados do Google
 description: Saiba mais sobre a extensão de tag da Camada de dados do cliente da Google na Adobe Experience Platform.
 exl-id: 7990351d-8669-432b-94a9-4f9db1c2b3fe
-source-git-commit: c61afdc2c3df98a0ef815d7cb034ba2907c52908
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '934'
 ht-degree: 12%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 12%
 
 A extensão Camada de dados do Google permite usar uma camada de dados do Google na implementação de tags. A extensão pode ser usada de forma independente ou simultânea com as soluções da Google e com a [Biblioteca de Auxiliar de Camada de Dados](https://github.com/google/data-layer-helper) de código aberto da Google.
 
-A Biblioteca de ajuda fornece funcionalidade semelhante orientada por eventos para a Camada de dados de clientes Adobe (ACDL). Os elementos de dados, as regras e as ações da extensão da Camada de Dados do Google fornecem funcionalidade semelhante àqueles na [extensão ACDL](../client-data-layer/overview.md).
+A Biblioteca de ajuda fornece funcionalidade semelhante orientada por eventos para a Adobe Client Data Layer (ACDL). Os elementos de dados, as regras e as ações da extensão da Camada de Dados do Google fornecem funcionalidade semelhante àqueles na [extensão ACDL](../client-data-layer/overview.md).
 
 ## Instalação
 
-Para instalar a extensão, navegue até o catálogo de extensões na interface da Coleção de Dados e selecione **[!UICONTROL Camada de Dados da Google]**.
+Para instalar a extensão, navegue até o catálogo de extensões na interface da Coleção de Dados e selecione **[!UICONTROL Google Data Layer]**.
 
 Depois de instalada, a extensão cria ou acessa uma camada de dados em cada carregamento da biblioteca de tags do Adobe Experience Platform.
 
@@ -29,13 +29,14 @@ O nome padrão da camada de dados é o nome padrão do Google `dataLayer`.
 
 >[!NOTE]
 >
->Não importa se o código Google ou Adobe é carregado primeiro e cria a camada de dados. Ambos os sistemas se comportam da mesma forma: crie a camada de dados se ela não estiver presente ou use a camada de dados existente.
+>Não importa se o código do Google ou do Adobe é carregado primeiro e cria a camada de dados. Ambos os sistemas se comportam da mesma forma: crie a camada de dados se ela não estiver presente ou use a camada de dados existente.
 
 ## Eventos
 
 >[!NOTE]
 >
 >A palavra _evento_ é sobrecarregada quando uma camada de dados orientada por eventos é usada em marcas Adobe Experience Platform. _Eventos_ podem ser:
+>
 > - Eventos de tags do Adobe Experience Platform (biblioteca carregada e assim por diante).
 > - Eventos do JavaScript.
 > - Dados enviados para a camada de dados com a palavra-chave _event_.

@@ -2,7 +2,7 @@
 title: Extensão de camada de dados do cliente Adobe
 description: Saiba mais sobre a extensão de tag da Camada de dados do cliente do Adobe na Adobe Experience Platform.
 exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 91%
@@ -51,12 +51,12 @@ Se você selecionar essa opção, seu ouvinte de eventos ouvirá qualquer altera
 
 O exemplo de eventos de push a seguir seria rastreado pelo ouvinte:
 
-* ` adobeDataLayer.push({"data":"something"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"data":"something"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 O exemplo de evento de push a seguir não seria rastreado pelo ouvinte:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent"})`
 
 ### Ouvir todos os eventos
 
@@ -64,8 +64,8 @@ Se você selecionar essa opção, o ouvinte do evento ouvirá qualquer evento en
 
 O exemplo de eventos de push a seguir seria rastreado pelo ouvinte:
 
-* ` adobeDataLayer.push({"event":"myevent"})`
-* ` adobeDataLayer.push({"event":"myevent","data":"something"})`
+* `adobeDataLayer.push({"event":"myevent"})`
+* `adobeDataLayer.push({"event":"myevent","data":"something"})`
 
 O exemplo de evento de push a seguir não seria rastreado pelo ouvinte:
 

@@ -2,7 +2,7 @@
 description: Saiba como usar a API de teste de destino para testar a configuração de destino de transmissão antes de publicá-la.
 title: Visão geral da API de teste de destino de streaming
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 0befd65b91e49cacab67c76fd9ed5d77bf790b9d
+source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
 workflow-type: tm+mt
 source-wordcount: '512'
 ht-degree: 0%
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Visão geral da API de teste de destino de streaming
 
-Como parte do Destination SDK, o Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como testar a configuração de destino. Para obter informações sobre como criar um modelo de transformação de mensagem, leia [Criar e testar um modelo de transformação de mensagem](../../testing-api/streaming-destinations/create-template.md).
+Como parte do Destination SDK, a Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como testar a configuração de destino. Para obter informações sobre como criar um modelo de transformação de mensagem, leia [Criar e testar um modelo de transformação de mensagem](../../testing-api/streaming-destinations/create-template.md).
 
 Para **testar se o destino está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado**, use a *Ferramenta de teste de destino*. Com essa ferramenta, você pode testar a configuração de destino enviando mensagens para o endpoint da API REST.
 
-Veja abaixo como o teste de seu destino se encaixa no [fluxo de trabalho de configuração de destino](../../guides/configure-destination-instructions.md) em Destination SDK:
+Veja abaixo como testar seu destino se encaixa no [fluxo de trabalho de configuração de destino](../../guides/configure-destination-instructions.md) no Destination SDK:
 
 ![Gráfico de onde a etapa de teste de destino se encaixa no fluxo de trabalho de configuração de destino](../../assets/testing-api/test-destination-step.png)
 
@@ -25,10 +25,12 @@ Veja abaixo como o teste de seu destino se encaixa no [fluxo de trabalho de conf
 Use a ferramenta de teste de destino para testar a configuração de destino enviando mensagens para o ponto de extremidade do parceiro fornecido na [configuração do servidor](../../authoring-api/destination-server/create-destination-server.md).
 
 Antes de usar a ferramenta, verifique se você:
+
 * Configure seu destino seguindo as etapas descritas em [workflow de configuração de destino](../../authoring-api/destination-configuration/create-destination-configuration.md) e
 * Estabeleça uma conexão com seu destino, conforme detalhado em [Como obter a ID da instância de destino](../../testing-api/streaming-destinations/destination-testing-api.md#get-destination-instance-id).
 
 Com essa ferramenta, após configurar seu destino, é possível:
+
 * Testar se o destino está configurado corretamente;
 * Verifique a integridade dos fluxos de dados para o destino configurado.
 
@@ -40,12 +42,13 @@ Com essa ferramenta, após configurar seu destino, é possível:
 
 Você pode fazer chamadas para o endpoint da API de teste de destino com ou sem adicionar perfis na solicitação.
 
-Se você não adicionar nenhum perfil na solicitação, o Adobe os gerará internamente e os adicionará à solicitação. Para gerar perfis a serem usados nesta solicitação, consulte a [Referência da API de geração de perfil de amostra](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Você precisa gerar perfis com base no esquema XDM de origem, conforme mostrado na [referência de API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Observe que o esquema de origem é o [esquema de união](../../../../profile/ui/union-schema.md) da sandbox que você está usando.
+Se você não adicionar perfis na solicitação, o Adobe os gerará internamente e os adicionará à solicitação. Para gerar perfis a serem usados nesta solicitação, consulte a [Referência da API de geração de perfil de amostra](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Você precisa gerar perfis com base no esquema XDM de origem, conforme mostrado na [referência de API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Observe que o esquema de origem é o [esquema de união](../../../../profile/ui/union-schema.md) da sandbox que você está usando.
 
 A resposta contém o resultado do processamento da solicitação de destino. A solicitação inclui três seções principais:
+
 * A solicitação gerada pelo Adobe para o destino.
 * A resposta recebida do seu destino.
-* A lista de perfis enviada na solicitação, quer os perfis tenham sido [adicionados por você na solicitação](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles), ou gerados por Adobe se [o corpo da solicitação de teste de destino estiver vazio](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
+* A lista de perfis enviada na solicitação, quer os perfis tenham sido [adicionados por você na solicitação](../../testing-api/streaming-destinations/destination-testing-api.md#test-with-added-profiles), ou gerados pelo Adobe se [o corpo da solicitação de teste de destino estiver vazio](../../testing-api/streaming-destinations/destination-testing-api.md#test-without-adding-profiles).
 
 >[!NOTE]
 >

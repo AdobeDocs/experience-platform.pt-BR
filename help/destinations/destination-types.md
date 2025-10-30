@@ -71,7 +71,7 @@ Leia mais sobre como [configurar destinos de personalização para personalizaç
 
 O vídeo abaixo mostra as particularidades dos dois tipos de destinos:
 
->[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32691?captions=por_br&quality=12)
 
 ## Tipos de públicos exportados {#exported-audiences-types}
 

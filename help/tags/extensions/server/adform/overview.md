@@ -48,7 +48,7 @@ Antes de integrar o Adobe Form com o Adobe, verifique se os seguintes pré-requi
 2. **SKU de CDP ou Conexão**: você deve ter a SKU de Prime ou Ultimate da Adobe Customer Data Platform (CDP) ou a SKU de Conexão para habilitar a comunicação perfeita entre o cliente e o servidor.
 
 3. **Configuração do Adobe Experience Platform Edge Network**:
-   * Verifique se o Edge Network está configurado para suportar o encaminhamento de eventos em tempo real para redirecionamento externo. Consulte o [Guia de Introdução ao encaminhamento de eventos](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) da Adobe para obter mais informações.
+   * Verifique se o Edge Network está configurado para suportar o encaminhamento de eventos em tempo real para redirecionamento externo. Consulte o [Guia de Introdução ao encaminhamento de eventos](https://experienceleague.adobe.com/pt-br/docs/experience-platform/tags/event-forwarding/getting-started) da Adobe para obter mais informações.
    * Essa etapa é essencial para transmitir dados ao endpoint do lado do servidor da Adobe com eficiência.
 
 Depois que esses pré-requisitos estiverem em vigor, você poderá continuar a configurar e implantar a extensão [!DNL Adform].

@@ -23,7 +23,7 @@ Esta página descreve ou cria links para todas as definições de exportação c
 
 ## Configurações comuns de exportação em tipos de destino {#common-settings-across-destination-types}
 
-O comportamento de exportação de destino é consistente entre destinos pertencentes a um tipo de destino no que diz respeito a *o que aciona uma exportação de destino* e *o que está incluído nas exportações de destino*. As exportações de destino são acionadas por notificações que o serviço de destinos recebe do [serviço upstream de Perfil do Cliente em Tempo Real](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+O comportamento de exportação de destino é consistente entre destinos pertencentes a um tipo de destino no que diz respeito a *o que aciona uma exportação de destino* e *o que está incluído nas exportações de destino*. As exportações de destino são acionadas por notificações que o serviço de destinos recebe do [serviço upstream de Perfil do Cliente em Tempo Real](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=pt-BR#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
 O que está incluído nas exportações de destino varia ligeiramente entre os tipos de destino. Leia mais sobre os [padrões de comportamento de exportação comuns por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md). Essas configurações não podem ser editadas por desenvolvedores de destino ou usuários do Real-Time CDP.
 

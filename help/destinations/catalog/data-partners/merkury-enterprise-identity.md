@@ -46,8 +46,8 @@ O destino [!DNL Merkury Enterprise Identity] fornece a capacidade de transferir 
 
 >[!IMPORTANT]
 >
->* Para se conectar ao destino, você precisa de **Exibir Destinos** e **Gerenciar Destinos**, **Ativar Destinos**, **Exibir Perfis** e **Exibir Segmentos** [[permissões de controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leia a [[visão geral do controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisa do **Exibir Gráfico de Identidade** [[permissão de controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions).\![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
+>* Para se conectar ao destino, você precisa de **Exibir Destinos** e **Gerenciar Destinos**, **Ativar Destinos**, **Exibir Perfis** e **Exibir Segmentos** [[permissões de controle de acesso]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home#permissions). Leia a [[visão geral do controle de acesso]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/ui/overview) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa do **Exibir Gráfico de Identidade** [[permissão de controle de acesso]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home#permissions).\![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](../../assets/catalog/data-partners/merkury-identity/media/image3.png)
 
 ## Identidades suportadas {#supported-identities}
 
@@ -69,7 +69,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 | **Público-alvo** | **Com suporte** | **Descrição** |
 |---|---|---|
 | Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home). |
-| Uploads personalizados | x | Públicos [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | x | Públicos [[importados]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/ui/overview#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -80,7 +80,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | **Público-alvo** | **Com suporte** | **Origem da descrição** |
 |---|---|---|      
 | Serviço de segmentação | ✓ | Públicos gerados por meio do Experience Platform [[Serviço de segmentação]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home). |
-| Uploads personalizados | X | Públicos [[importados]](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) para o Experience Platform de arquivos CSV. |
+| Uploads personalizados | X | Públicos [[importados]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/ui/overview#import-audience) para o Experience Platform de arquivos CSV. |
 
 {style="table-layout:auto"}
 
@@ -88,9 +88,9 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Para se conectar ao destino, você precisa do **Exibir Destinos** e do **Gerenciar e Ativar Destinos de Conjuntos de Dados** [[permissões de controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions). Leia a [[visão geral do controle de acesso]](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/ui/overview) ou contate o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa do **Exibir Destinos** e do **Gerenciar e Ativar Destinos de Conjuntos de Dados** [[permissões de controle de acesso]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home#permissions). Leia a [[visão geral do controle de acesso]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/ui/overview) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a este destino, siga as etapas descritas no [[tutorial de configuração de destino]](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
+Para se conectar a este destino, siga as etapas descritas no [[tutorial de configuração de destino]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/ui/connect-destination). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino
 
@@ -136,7 +136,7 @@ As contas já definidas usando o destino Merkury Enterprise Identity são exibid
 
 ### Ativar alertas
 
-Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/alerts).
+Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/ui/alerts).
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **Avançar**.
 
@@ -147,7 +147,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **Avança
 >* Para ativar dados, você precisa de **Exibir Destinos**, **Ativar Destinos**, **Exibir Perfis** e **Exibir Segmentos** permissões de controle de acesso. Leia a visão geral do controle de acesso ou entre em contato com o administrador do produto para obter as permissões necessárias.
 >* Para exportar identidades, você precisa da permissão de controle de acesso **Exibir Gráfico de Identidade**.
 
-Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obter instruções sobre como ativar públicos-alvo para esse destino.
+Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 ## Sugestões de mapeamento
 
@@ -176,7 +176,7 @@ Para verificar se os dados foram exportados com êxito, verifique o bucket do Am
 
 ## Uso e governança de dados
 
-Todos os destinos do Adobe Experience Platform estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como a Adobe Experience Platform fiscaliza a governança de dados, leia a [visão geral da Governança de dados](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
+Todos os destinos do Adobe Experience Platform estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como a Adobe Experience Platform fiscaliza a governança de dados, leia a [visão geral da Governança de dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/data-governance/home).
 
 ## Próximas etapas
 

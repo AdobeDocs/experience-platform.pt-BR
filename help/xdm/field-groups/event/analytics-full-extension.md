@@ -37,7 +37,7 @@ O grupo de campos fornece um único objeto `_experience` a um esquema, que cont�
 
 ## `customDimensions` {#custom-dimensions}
 
-`customDimensions` captura [dimensões](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html) personalizadas que são rastreadas pelo Analytics.
+`customDimensions` captura [dimensões](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html?lang=pt-BR) personalizadas que são rastreadas pelo Analytics.
 
 ![campo customDimensions](../../images/field-groups/analytics-full-extension/customDimensions.png)
 
@@ -45,8 +45,8 @@ O grupo de campos fornece um único objeto `_experience` a um esquema, que cont�
 | --- | --- | --- |
 | `eVars` | Objeto | Um objeto que captura até 250 variáveis de conversão ([eVars](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html?lang=pt-BR)). As propriedades deste objeto são digitadas de `eVar1` para `eVar250` e só aceitam cadeias de caracteres para seus tipos de dados. |
 | `hierarchies` | Objeto | Um objeto que captura até cinco variáveis de hierarquia personalizadas ([hiers](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=pt-BR)). As propriedades desse objeto são digitadas de `hier1` para `hier5`, que são objetos com as seguintes subpropriedades:<ul><li>`delimiter`: o delimitador original usado para gerar a lista fornecida em `values`.</li><li>`values`: uma lista delimitada de nomes de nível de hierarquia, representados como uma cadeia de caracteres.</li></ul> |
-| `listProps` | Objeto | Um objeto que captura até 75 [propriedades de lista](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html#list-props). As propriedades desse objeto são digitadas de `prop1` para `prop75`, que são objetos com as seguintes subpropriedades:<ul><li>`delimiter`: o delimitador original usado para gerar a lista fornecida em `values`.</li><li>`values`: uma lista delimitada de valores para a prop, representada como uma cadeia de caracteres.</li></ul> |
-| `lists` | Objeto | Um objeto que captura até três [listas](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html). As propriedades deste objeto são digitadas de `list1` para `list3`. Cada uma dessas propriedades contém uma única matriz `list` de [[!UICONTROL Key Value Pair]](../../data-types/key-value-pair.md) tipos de dados. |
+| `listProps` | Objeto | Um objeto que captura até 75 [propriedades de lista](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=pt-BR#list-props). As propriedades desse objeto são digitadas de `prop1` para `prop75`, que são objetos com as seguintes subpropriedades:<ul><li>`delimiter`: o delimitador original usado para gerar a lista fornecida em `values`.</li><li>`values`: uma lista delimitada de valores para a prop, representada como uma cadeia de caracteres.</li></ul> |
+| `lists` | Objeto | Um objeto que captura até três [listas](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=pt-BR). As propriedades deste objeto são digitadas de `list1` para `list3`. Cada uma dessas propriedades contém uma única matriz `list` de [[!UICONTROL Key Value Pair]](../../data-types/key-value-pair.md) tipos de dados. |
 | `props` | Objeto | Um objeto que captura até 75 [props](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=pt-BR). As propriedades deste objeto são digitadas de `prop1` para `prop75` e só aceitam cadeias de caracteres para seus tipos de dados. |
 | `postalCode` | String | Um CEP ou código postal fornecido pelo cliente. |
 | `stateProvince` | String | Um estado ou província fornecido pelo cliente. |
@@ -72,12 +72,12 @@ O grupo de campos fornece um único objeto `_experience` a um esquema, que cont�
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `browserIDStr` | String | O identificador Adobe Analytics do navegador usado (também conhecido como [dimensão de tipo de navegador](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)). |
-| `operatingSystemIDStr` | String | O identificador Adobe Analytics do sistema operacional usado (também conhecido como [dimensão de tipo de sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)). |
+| `browserIDStr` | String | O identificador Adobe Analytics do navegador usado (também conhecido como [dimensão de tipo de navegador](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html?lang=pt-BR)). |
+| `operatingSystemIDStr` | String | O identificador Adobe Analytics do sistema operacional usado (também conhecido como [dimensão de tipo de sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html?lang=pt-BR)). |
 
 ## Campos de evento personalizados {#events}
 
-O grupo de campos de extensão do Analytics fornece dez campos de objeto que capturam até 100 [métricas de evento personalizadas](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html) cada, para um total de 1000 para o grupo de campos.
+O grupo de campos de extensão do Analytics fornece dez campos de objeto que capturam até 100 [métricas de evento personalizadas](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html?lang=pt-BR) cada, para um total de 1000 para o grupo de campos.
 
 Cada objeto de evento de nível superior contém os objetos de evento individuais para seu respectivo intervalo. Por exemplo, `event101to200` contém os eventos de `event101` a `event200`.
 

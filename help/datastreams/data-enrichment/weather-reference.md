@@ -11,7 +11,7 @@ ht-degree: 99%
 
 # Mapeamentos do campo de dados meteorológicos
 
-A Adobe fez uma parceria com o [!DNL [The Weather Company]](https://www.ibm.com/weather) para trazer o contexto adicional do clima dos Estados Unidos para os dados coletados por sequências de dados. Você pode usar esses dados para análise, direcionamento e criação de segmentos na Experience Platform.
+A Adobe fez uma parceria com o [[!DNL [The Weather Company]]](https://www.ibm.com/weather) para trazer o contexto adicional do clima dos Estados Unidos para os dados coletados por sequências de dados. Você pode usar esses dados para análise, direcionamento e criação de segmentos na Experience Platform.
 
 Esta página lista todos os campos disponíveis que você pode usar para enriquecer os dados do público-alvo.
 
@@ -110,7 +110,7 @@ A previsão do tempo para o usuário, com base na sua localização em um perío
 | [!DNL Day 1 Forecast Night Snow Range] | Previsão do tempo para um dia. Informações meteorológicas para um período noturno. Bloco de possibilidade de precipitação de neve (1-3 pol., 3-6 pol. etc.). | `weather.forecast.day01Forecast.night.snowRange` |
 | [!DNL Day 1 Forecast Night Temperature Celsius] | Previsão do tempo para um dia. Informações meteorológicas para um período noturno. Temperatura em uma unidade de medida definida. Intervalo: -140 a 140. Temperatura em graus Celsius | `weather.forecast.day01Forecast.night.temperature.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Fahrenheit] | Previsão do tempo para um dia. Informações meteorológicas para um período noturno. Temperatura em uma unidade de medida definida. Intervalo: -140 a 140. Temperatura em graus Fahrenheit | `weather.forecast.day01Forecast.night.temperature.fahrenheit` |
-| [!DNL  Day 1 Forecast Night Temperature Heat Index Celsius] | Previsão do tempo para um dia. Informações meteorológicas para um período noturno. Sensação térmica para uma pessoa exposta com base na temperatura e umidade. Temperatura em graus Celsius | `weather.forecast.day01Forecast.night.temperatureHeatIndex.celsius` |
+| [!DNL &#x200B; Day 1 Forecast Night Temperature Heat Index Celsius] | Previsão do tempo para um dia. Informações meteorológicas para um período noturno. Sensação térmica para uma pessoa exposta com base na temperatura e umidade. Temperatura em graus Celsius | `weather.forecast.day01Forecast.night.temperatureHeatIndex.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Heat Index Fahrenheit] | Previsão do tempo para um dia. Informações meteorológicas para um período noturno. Sensação térmica para uma pessoa exposta com base na temperatura e umidade. Temperatura em graus Fahrenheit | `weather.forecast.day01Forecast.night.temperatureHeatIndex.fahrenheit` |
 | [!DNL Day 1 Forecast Night Temperature Wind Chill Celsius] | Previsão do tempo para um dia. Informações meteorológicas para um período noturno. Sensação térmica para uma pessoa exposta com base na temperatura e velocidade do vento. Temperatura em graus Celsius | `weather.forecast.day01Forecast.night.temperatureWindChill.celsius` |
 | [!UICONTROL Day 1 Forecast Night Temperature Wind Chill Fahrenheit] | Previsão do tempo para um dia. Informações meteorológicas para um período noturno. Sensação térmica para uma pessoa exposta com base na temperatura e velocidade do vento. Temperatura em graus Fahrenheit | `weather.forecast.day01Forecast.night.temperatureWindChill.fahrenheit` |

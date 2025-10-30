@@ -57,7 +57,7 @@ A função de validação deve retornar um objeto que contenha o seguinte:
 | :--- | :--- | :--- |
 | `message` | String | A mensagem de validação a ser exibida nos resultados do resumo. |
 | `events` | Matriz | Uma matriz de uuids de evento a serem relatados como correspondentes ou não correspondentes. |
-| `links` | Matriz | Uma matriz de `ValidationResultLink` objetos para fazer referência à documentação e a outros recursos `{( type: 'doc'`&amp;vert;`'product', url: String )}` |
+| `links` | Matriz | Uma matriz de `ValidationResultLink` objetos para fazer referência à documentação e a outros recursos `{( type: 'doc'`&vert;`'product', url: String )}` |
 | `result` | String | Este é o resultado da validação. Espera-se que seja uma das seguintes strings enumeradas: “correspondente”, “não correspondente”, “desconhecido” |
 
 ## Visualizar os resultados da validação

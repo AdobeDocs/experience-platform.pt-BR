@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da assimilação parcial de lotes
 description: Este documento fornece um tutorial para gerenciar a assimilação parcial de lotes.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: bc72f77b1b4a48126be9b49c5c663ff11e9054ea
 workflow-type: tm+mt
-source-wordcount: '946'
-ht-degree: 7%
+source-wordcount: '1209'
+ht-degree: 9%
 
 ---
 
@@ -28,11 +28,11 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Leitura de chamadas de API de amostra
 
-Este manual fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
+Este manual fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas da [!DNL Experience Platform].
 
-### Coletar valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos obrigatórios
 
-Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs da [!DNL Experience Platform], você deve concluir primeiro o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - Autorização: Portador `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -54,7 +54,7 @@ Todos os recursos em [!DNL Experience Platform] estão isolados em sandboxes vir
 
 Você pode criar um novo lote com a assimilação parcial ativada.
 
-Para criar um novo lote, siga as etapas no [guia do desenvolvedor de assimilação em lote](./api-overview.md). Depois de atingir a etapa **[!UICONTROL Criar lote]**, adicione o seguinte campo no corpo da solicitação:
+Para criar um novo lote, siga as etapas no [guia do desenvolvedor de assimilação em lote](./api-overview.md). Ao atingir a etapa **[!UICONTROL Create batch]**, adicione o seguinte campo no corpo da solicitação:
 
 ```json
 {
@@ -75,21 +75,21 @@ Para criar um novo lote, siga as etapas no [guia do desenvolvedor de assimilaç�
 >
 >Esta seção descreve como ativar um lote para assimilação parcial de lotes usando a interface do. Se você já tiver ativado um lote para assimilação parcial de lotes usando a API do, poderá pular para a próxima seção.
 
-Para habilitar um lote para assimilação parcial por meio da interface do usuário do [!DNL Experience Platform], você pode criar um novo lote por meio de conexões de origem, criar um novo lote em um conjunto de dados existente ou criar um novo lote por meio do &quot;[!UICONTROL Mapear CSV para fluxo XDM]&quot;.
+Para habilitar um lote para assimilação parcial por meio da interface do usuário do [!DNL Experience Platform], você pode criar um novo lote por meio de conexões de origem, criar um novo lote em um conjunto de dados existente ou criar um novo lote por meio do &quot;[!UICONTROL Map CSV to XDM flow]&quot;.
 
 ### Criar uma nova conexão de origem {#new-source}
 
-Para criar uma nova conexão de origem, siga as etapas listadas na [Visão geral das fontes](../../sources/home.md). Depois de atingir a etapa **[!UICONTROL detalhes do fluxo de dados]**, anote os campos **[!UICONTROL Assimilação parcial]** e **[!UICONTROL Diagnóstico de erros]**.
+Para criar uma nova conexão de origem, siga as etapas listadas na [Visão geral das fontes](../../sources/home.md). Depois de atingir a etapa **[!UICONTROL Dataflow detail]**, anote os campos **[!UICONTROL Partial ingestion]** e **[!UICONTROL Error diagnostics]**.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch.png)
 
-O botão de alternância **[!UICONTROL Assimilação parcial]** permite habilitar ou desabilitar o uso de assimilação parcial em lote.
+O botão **[!UICONTROL Partial ingestion]** permite habilitar ou desabilitar o uso de assimilação parcial de lotes.
 
-A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Experience Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A opção de alternância **[!UICONTROL Error diagnostics]** aparece somente quando a opção de alternância **[!UICONTROL Partial ingestion]** está desativada. Este recurso permite que o [!DNL Experience Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção **[!UICONTROL Partial ingestion]** estiver ativada, o diagnóstico de erro aprimorado será aplicado automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
-O **[!UICONTROL Limite de erros]** permite que você defina a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
+O **[!UICONTROL Error threshold]** permite definir a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
 
 ### Usar um conjunto de dados existente {#existing-dataset}
 
@@ -97,29 +97,129 @@ Para usar um conjunto de dados existente, comece selecionando um conjunto de dad
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset.png)
 
-O botão de alternância **[!UICONTROL Assimilação parcial]** permite habilitar ou desabilitar o uso de assimilação parcial em lote.
+O botão **[!UICONTROL Partial ingestion]** permite habilitar ou desabilitar o uso de assimilação parcial de lotes.
 
-A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Experience Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A opção de alternância **[!UICONTROL Error diagnostics]** aparece somente quando a opção de alternância **[!UICONTROL Partial ingestion]** está desativada. Este recurso permite que o [!DNL Experience Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção **[!UICONTROL Partial ingestion]** estiver ativada, o diagnóstico de erro aprimorado será aplicado automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
-O **[!UICONTROL Limite de erros]** permite que você defina a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
+O **[!UICONTROL Error threshold]** permite definir a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
 
 Agora é possível carregar dados usando o botão **Adicionar dados**, que será assimilado usando a assimilação parcial.
 
-### Usar o fluxo &quot;[!UICONTROL Mapear CSV para esquema XDM]&quot; {#map-flow}
+### Usar o fluxo &quot;[!UICONTROL Map CSV to XDM schema]&quot; {#map-flow}
 
-Para usar o fluxo &quot;[!UICONTROL Mapear CSV para esquema XDM]&quot;, siga as etapas listadas no [Tutorial Mapear um arquivo CSV](../tutorials/map-csv/overview.md). Ao atingir a etapa **[!UICONTROL Adicionar dados]**, anote os campos **[!UICONTROL Assimilação parcial]** e **[!UICONTROL Diagnóstico de erros]**.
+Para usar o fluxo &quot;[!UICONTROL Map CSV to XDM schema]&quot;, siga as etapas listadas no [Tutorial de Mapear um arquivo CSV](../tutorials/map-csv/overview.md). Depois de atingir a etapa **[!UICONTROL Add data]**, anote os campos **[!UICONTROL Partial ingestion]** e **[!UICONTROL Error diagnostics]**.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow.png)
 
-O botão de alternância **[!UICONTROL Assimilação parcial]** permite habilitar ou desabilitar o uso de assimilação parcial em lote.
+O botão **[!UICONTROL Partial ingestion]** permite habilitar ou desabilitar o uso de assimilação parcial de lotes.
 
-A opção **[!UICONTROL Diagnóstico de erro]** só aparece quando a opção **[!UICONTROL Assimilação parcial]** está desativada. Este recurso permite que o [!DNL Experience Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção de **[!UICONTROL Assimilação parcial]** estiver ativada, os diagnósticos de erro aprimorados serão aplicados automaticamente.
+A opção de alternância **[!UICONTROL Error diagnostics]** aparece somente quando a opção de alternância **[!UICONTROL Partial ingestion]** está desativada. Este recurso permite que o [!DNL Experience Platform] gere mensagens de erro detalhadas sobre os lotes assimilados. Se a opção **[!UICONTROL Partial ingestion]** estiver ativada, o diagnóstico de erro aprimorado será aplicado automaticamente.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 
-**[!UICONTROL Limite de erros]** permite que você defina a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
+**[!UICONTROL Error threshold]** permite definir a porcentagem de erros aceitáveis antes que todo o lote falhe. Por padrão, esse valor é definido como 5%.
+
+## Habilitar assimilação parcial e diagnóstico de erro para um fluxo de dados existente
+
+Se um fluxo de dados no Experience Platform foi criado sem ativar a assimilação parcial ou o diagnóstico de erro, você ainda poderá ativar esses recursos sem recriar o fluxo. Ao habilitar a assimilação parcial e o diagnóstico de erro robusto, você pode melhorar muito a confiabilidade e a facilidade de solução de problemas em seus fluxos de trabalho de assimilação de dados. Leia as seções abaixo para saber como habilitar a assimilação parcial e o diagnóstico de erros para um fluxo de dados existente usando a API [!DNL Flow Service].
+
+Por padrão, os fluxos de dados podem não ter assimilação parcial ou diagnóstico de erro ativado. Esses recursos são úteis para identificar e isolar problemas durante a assimilação de dados. Usando a API [!DNL Flow Service], você pode recuperar a configuração de fluxo de dados atual e aplicar as alterações necessárias usando uma solicitação PATCH.
+
+Siga as etapas abaixo para ativar a assimilação parcial e o diagnóstico de erro para um fluxo de dados existente.
+
+### Recuperar detalhes do fluxo
+
+Para recuperar as configurações de fluxo de dados, faça uma solicitação GET para o ponto de extremidade `/flows/{FLOW_ID}` e forneça a ID do fluxo de dados. Para obter mais informações sobre como recuperar detalhes do fluxo de dados, consulte o guia [Atualizar fluxos de dados usando a [!DNL Flow Service] API](../../sources/tutorials/api/update-dataflows.md).
+
+Não deixe de salvar o valor do campo `etag` retornado na resposta. Isso é necessário para que a solicitação de atualização garanta a consistência da versão.
+
+### Atualizar configuração de fluxo
+
+Em seguida, faça uma solicitação PATCH para o ponto de extremidade `/flows/` e forneça a ID do fluxo de dados para o qual você deseja habilitar a assimilação parcial e o diagnóstico de erros.
+
+>[!IMPORTANT]
+>
+>- Inclua o valor `etag` salvo anteriormente no cabeçalho da solicitação usando a chave If-Match.
+>- Você pode modificar o valor `partialIngestionPercent` para atender às suas necessidades específicas.
+
+**Formato da API**
+
+```http
+PATCH /flows/{FLOW_ID}
+```
+
+**Solicitação**
+
+```shell
+curl -X PATCH \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {ORG_ID}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
+    -d '[
+        {
+            "op": "add",
+            "path": "/options",
+            "value": {
+                "partialIngestionPercent": "10"
+            }
+        },
+        {
+            "op": "add",
+            "path": "/options/errorDiagnosticsEnabled",
+            "value": true
+        }
+    ]'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o `id` do fluxo de dados e um `etag` atualizado.
+
+```json
+{
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"2c000802-0000-0200-0000-613976440000\""
+}
+```
+
+### Verificar a atualização
+
+Depois que a PATCH for concluída, faça uma solicitação do GET e recupere o fluxo de dados para verificar se as alterações foram concluídas com êxito.
+
+**Formato da API**
+
+```http
+GET /flows/{FLOW_ID}
+```
+
+**Solicitação**
+
+A solicitação a seguir recupera informações atualizadas sobre a ID de fluxo.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna os detalhes do fluxo de dados, confirmando que a assimilação parcial e o diagnóstico de erro agora estão habilitados na seção `options`.
+
+```json
+"options": {
+    "partialIngestionPercent": 10,
+    "errorDiagnosticsEnabled": true
+}
+```
 
 ## Próximas etapas {#next-steps}
 

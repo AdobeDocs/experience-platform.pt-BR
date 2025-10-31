@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Mapeamento de campos para o Marketo Engage Source
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e os campos XDM correspondentes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 5%
@@ -66,7 +66,7 @@ Leia a documentação da [classe do Evento de experiência XDM](../../../../xdm/
 | primaryAttributeValueId quando activityTypeId em (7, 8, 9, 10, 11, 27) | 7, 8, 9, 10, 11, 27 | `directMarketing.mailingName` | `directMarketing.mailingName` |  |
 |  |  | `directMarketing.testVariantName` | `directMarketing.testVariantName` |  |
 | `attributes.Test Variant` |  | `directMarketing.testVariantID` | `directMarketing.testVariantID` |  |
-| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → MENSAGEM BLOQUEADA</li><li>1003 → SPAM BLOQUEADO NO SOURCE</li><li>1004 → SPAM BLOQUEADO NA MENSAGEM</li><li>2003 → ENDEREÇO DE E-MAIL INVÁLIDO</li><li>2001 → ERRO DE ENDEREÇO DE EMAIL</li><li>*` &rarr;`MOTIVO DESCONHECIDO PARA REJEIÇÃO</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → MENSAGEM NÃO ACEITA</li><li>3001 → CAIXA DE ENTRADA CHEIA</li><li>3004 → OCORREU UM TEMPO LIMITE</li><li>4003 → FALHA DE DNS</li><li>4002 → MENSAGEM MUITO GRANDE</li><li>4006 → VIOLAÇÃO DE POLÍTICAS</li><li>4999 → FALHA TRANSITÓRIA</li><li>9999 → RESPOSTA INCORRETA RECEBIDA</li><li>*→ MOTIVO DESCONHECIDO PARA REJEIÇÃO TEMPORÁRIA</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
+| `attributes.Subcategory` <ul><li><strong>activityTypeId = 8</strong><ul><li>1099 → MENSAGEM BLOQUEADA</li><li>1003 → SPAM BLOQUEADO NO SOURCE</li><li>1004 → SPAM BLOQUEADO NA MENSAGEM</li><li>2003 → ENDEREÇO DE E-MAIL INVÁLIDO</li><li>2001 → ERRO DE ENDEREÇO DE EMAIL</li><li> `&rarr;` MOTIVO DESCONHECIDO PARA REJEIÇÃO</li></ul></li><li><strong>activityTypeId = 27</strong><ul><li>3999 → MENSAGEM NÃO ACEITA</li><li>3001 → CAIXA DE ENTRADA CHEIA</li><li>3004 → OCORREU UM TEMPO LIMITE</li><li>4003 → FALHA DE DNS</li><li>4002 → MENSAGEM MUITO GRANDE</li><li>4006 → VIOLAÇÃO DE POLÍTICAS</li><li>4999 → FALHA TRANSITÓRIA</li><li>9999 → RESPOSTA INCORRETA RECEBIDA</li><li> → MOTIVO DESCONHECIDO PARA REJEIÇÃO TEMPORÁRIA</li></ul></li></ul> | 8, 27 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |  |
 | `attributes.Details` |  | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |  |
 | `attributes.Email` |  | `directMarketing.email` | `directMarketing.email` |  |
 | `attributes.Is Mobile Device` |  | `device.isMobileDevice` | `device.isMobileDevice` |  |

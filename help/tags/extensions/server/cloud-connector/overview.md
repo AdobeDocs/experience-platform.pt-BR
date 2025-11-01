@@ -2,10 +2,10 @@
 title: Visão geral da extensão do Cloud Connector
 description: Saiba mais sobre a extensão de encaminhamento de eventos do Cloud Connector na Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: e832694fed5dbb86b5ed544473d6a79e500a6222
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 79%
+source-wordcount: '1681'
+ht-degree: 75%
 
 ---
 
@@ -25,7 +25,7 @@ Esta seção descreve o tipo de ação Enviar dados disponível na extensão do 
 
 ### Tipo de solicitação
 
-Para selecionar o tipo de solicitação exigido pelo ponto de extremidade, selecione o tipo apropriado na lista suspensa [!UICONTROL Tipo de solicitação].
+Para selecionar o tipo de solicitação exigido pelo ponto de extremidade, selecione o tipo apropriado na lista suspensa [!UICONTROL Request Type].
 
 | Método | Descrição |
 |---|---|
@@ -47,13 +47,13 @@ Use cada uma dessas guias (Parâmetros de consulta, Cabeçalhos e Elementos de d
 
 Defina uma chave e um valor para cada par de valor-chave que você deseja enviar como um parâmetro de string de consulta. Para inserir manualmente um elemento de dados, use a tokenização de elemento de dados com chave para o encaminhamento de eventos. Para referenciar o valor de um elemento de dados chamado &quot;siteSection&quot; como uma chave ou valor, digite `{{siteSection}}`. Ou selecione o elemento de dados criado anteriormente, selecionando-o no menu suspenso.
 
-Para adicionar mais parâmetros de consulta, selecione **[!UICONTROL Adicionar outro]**.
+Para adicionar parâmetros de consulta, selecione **[!UICONTROL Add Another]**.
 
 #### Cabeçalhos
 
 Defina uma chave e um valor para cada par de valor-chave que você deseja enviar como cabeçalho. Para inserir manualmente um elemento de dados, use a tokenização de elemento de dados com chave para o encaminhamento de eventos. Para referenciar o valor de um elemento de dados chamado &quot;pageName&quot; como uma chave ou valor, digite `{{pageName}}`. Ou selecione o elemento de dados criado anteriormente, selecionando-o no menu suspenso.
 
-Para adicionar mais cabeçalhos, selecione **[!UICONTROL Adicionar outro]**.
+Para adicionar cabeçalhos, selecione **[!UICONTROL Add Another]**.
 
 A tabela a seguir lista os cabeçalhos predefinidos. Você não está limitado a esses cabeçalhos e pode adicionar seus próprios cabeçalhos personalizados, se necessário, mas eles são disponibilizados para sua conveniência.
 
@@ -90,12 +90,12 @@ A tabela a seguir lista os cabeçalhos predefinidos. Você não está limitado a
 | [Se-Inalterado-Desde](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
 | [Máx-Encaminhados](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/If-Unmodified-Since) | |
 | [Origem](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Origin) | |
-| [Pragma](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Pragma) | Cabeçalho específico da implementação que pode ter vários efeitos em qualquer lugar na cadeia de solicitação-resposta. Usado para compatibilidade com versões anteriores com caches HTTP/1.0 nos quais o cabeçalho Cache-Control ainda não está presente. | |
-| [Autorização de proxy](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Proxy-Authorization) |
-| [Intervalo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Range) | Indica a parte de um documento que o servidor deve retornar. | |
-| [Referer](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Referer) | O endereço da página da Web anterior na qual foi seguido um link para a página solicitada no momento. | |
+| [Pragma](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Pragma) | Cabeçalho específico da implementação que pode ter vários efeitos em qualquer lugar na cadeia de solicitação-resposta. Usado para compatibilidade com versões anteriores com caches HTTP/1.0 nos quais o cabeçalho Cache-Control ainda não está presente. |
+| [Autorização de proxy](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Proxy-Authorization) |  |
+| [Intervalo](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Range) | Indica a parte de um documento que o servidor deve retornar. |
+| [Referer](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Referer) | O endereço da página da Web anterior na qual foi seguido um link para a página solicitada no momento. |
 | TE | Especifica as codificações de transferência que o agente do usuário está disposto a aceitar. (Você pode chamá-lo informalmente de `Accept-Transfer-Encoding`, o que é mais intuitivo.) |
-| Atualização | O documento RFC relevante para o campo de cabeçalho [`Upgrade` é RFC 7230, seção 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). O padrão estabelece regras para se atualizar ou alterar para um protocolo diferente na conexão atual de cliente, servidor e protocolo de transporte. Por exemplo, esse padrão de cabeçalho permite que um cliente mude de HTTP 1.1 para HTTP 2.0, pressupondo que o servidor decida reconhecer e implementar o campo de cabeçalho `Upgrade`. Nenhuma das partes é obrigada a aceitar os termos especificados no campo de cabeçalho `Upgrade`. Ele pode ser usado nos cabeçalhos do cliente e do servidor. Se o campo de cabeçalho `Upgrade` for especificado, o remetente também DEVERÁ enviar o campo de cabeçalho `Connection` com a opção `upgrade` especificada. | |
+| Atualização | O documento RFC relevante para o campo de cabeçalho [`Upgrade` é RFC 7230, seção 6.7](https://tools.ietf.org/html/rfc7230#section-6.7). O padrão estabelece regras para se atualizar ou alterar para um protocolo diferente na conexão atual de cliente, servidor e protocolo de transporte. Por exemplo, esse padrão de cabeçalho permite que um cliente mude de HTTP 1.1 para HTTP 2.0, pressupondo que o servidor decida reconhecer e implementar o campo de cabeçalho `Upgrade`. Nenhuma das partes é obrigada a aceitar os termos especificados no campo de cabeçalho `Upgrade`. Ele pode ser usado nos cabeçalhos do cliente e do servidor. Se o campo de cabeçalho `Upgrade` for especificado, o remetente também DEVERÁ enviar o campo de cabeçalho `Connection` com a opção `upgrade` especificada. |
 | [User-Agent](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/User-Agent) | Contém uma string característica que permite que os pares de protocolo de rede identifiquem o tipo de aplicativo, o sistema operacional, o fornecedor ou a versão de software do agente de usuário do software solicitante. |
 | [Via](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Via) | Adicionados por proxies, tanto encaminhados quanto reversos, e podem aparecer nos cabeçalhos de solicitação e nos cabeçalhos de resposta. |
 | [Aviso](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Headers/Warning) | Informações gerais de aviso sobre possíveis problemas. |
@@ -104,9 +104,9 @@ A tabela a seguir lista os cabeçalhos predefinidos. Você não está limitado a
 
 #### Corpo como JSON
 
-Defina uma chave e um valor para cada par de valor-chave que você desejar enviar no corpo da solicitação. Para inserir manualmente um elemento de dados, use a tokenização de elemento de dados com chave para o encaminhamento de eventos. Para referenciar o valor de um elemento de dados chamado &quot;appSection&quot; como uma chave ou um valor, digite `{{appSection}}`. Ou selecione o elemento de dados criado anteriormente, selecionando-o no menu suspenso.
+Defina uma chave e um valor para cada par de valor-chave que você desejar enviar no corpo da solicitação. Para inserir manualmente um elemento de dados, use a tokenização de elemento de dados com chave para o encaminhamento de eventos. Para referenciar o valor de um elemento de dados chamado &quot;appSection&quot; como uma chave ou valor, digite `{{appSection}}`. Ou selecione o elemento de dados criado anteriormente, selecionando-o no menu suspenso.
 
-Para adicionar outros pares de valor-chave, selecione **[!UICONTROL Adicionar outro]**.
+Para adicionar outros pares de valor-chave, selecione **[!UICONTROL Add Another]**.
 
 #### Corpo como bruto
 
@@ -116,7 +116,7 @@ Defina uma chave e um valor para cada par de valor-chave que você desejar envia
 
 As ações nas regras no encaminhamento de eventos são executadas sequencialmente. Pode haver situações em que você deseje recuperar dados de uma origem externa que não esteja presente no evento recebido do cliente e, em seguida, tomar essa resposta e transformar ou enviar esses dados a um destino final em uma ação subsequente, em uma única regra. A opção &quot;Salvar a resposta da solicitação&quot; na seção avançada permite isso.
 
-Para salvar o corpo da resposta de um ponto de extremidade, marque a caixa **[!UICONTROL Salvar a resposta da solicitação]** e defina a chave de resposta no campo de texto.
+Para salvar o corpo da resposta de um ponto de extremidade, marque a caixa **[!UICONTROL Save the request response]** e defina uma chave de resposta no campo de texto.
 
 Se você tiver definido a chave de resposta como `productDetails`, faça referência a esses dados em um elemento de dados e, em seguida, faça referência a esse elemento de dados em uma ação subsequente na mesma regra. Para criar um elemento de dados que faça referência a `productDetail`, crie um elemento de dados do tipo `path` e insira o seguinte caminho:
 
@@ -134,7 +134,7 @@ O certificado [!DNL mTLS] é uma credencial digital que comprova a identidade de
 
 Para instalar a extensão, [crie uma propriedade de encaminhamento de eventos](../../../ui/event-forwarding/overview.md#properties) ou selecione uma propriedade existente para editar.
 
-Selecione **[!UICONTROL Extensões]** no painel esquerdo. Na guia **[!UICONTROL Catálogo]**, selecione o cartão **[!UICONTROL Adobe Cloud Connector]** e selecione **[!UICONTROL Instalar]**.
+Selecione **[!UICONTROL Extensions]** no painel esquerdo. Na guia **[!UICONTROL Catalog]**, selecione o cartão **[!UICONTROL Adobe Cloud Connector]** e, em seguida, **[!UICONTROL Install]**.
 
 ![O catálogo de extensões que mostra a instalação do destaque do cartão de extensão [!DNL Adobe Cloud Connector].](../../../images/extensions/server/cloud-connector/install-extension.png)
 
@@ -146,15 +146,15 @@ Selecione **[!UICONTROL Extensões]** no painel esquerdo. Na guia **[!UICONTROL 
 
 Depois de instalar a extensão, você pode criar uma regra de Encaminhamento de Eventos que use o [!DNL mTLS] e adicioná-la à biblioteca.
 
-Crie uma nova [regra](../../../ui/managing-resources/rules.md) de encaminhamento de eventos na propriedade de encaminhamento de eventos. Forneça um nome para a regra e, em **[!UICONTROL Ações]**, adicione uma nova ação e defina a extensão como **[!UICONTROL Adobe Cloud Connector]**. Em seguida, selecione **[!UICONTROL Fazer chamada de busca]** para o **[!UICONTROL Tipo de ação]**.
+Crie uma nova [regra](../../../ui/managing-resources/rules.md) de encaminhamento de eventos na propriedade de encaminhamento de eventos. Forneça um nome para a regra e, em **[!UICONTROL Actions]**, adicione uma nova ação e defina a extensão como **[!UICONTROL Adobe Cloud Connector]**. Em seguida, selecione **[!UICONTROL Make Fetch Call]** para o **[!UICONTROL Action Type]**.
 
 ![A exibição de Regras de Propriedade de Encaminhamento de Eventos, com os campos necessários para adicionar uma configuração de ação de regra de encaminhamento de eventos realçada.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-Depois de fazer a seleção, controles adicionais aparecerão para configurar o método e o destino para a solicitação [!DNL mTLS]. Para habilitar o uso de certificados ativos nos ambientes, selecione **[!UICONTROL Habilitar em[!DNL mTLS]]** e **[!UICONTROL Manter alterações]** para salvar a regra.
+Depois de fazer a seleção, controles adicionais aparecerão para configurar o método e o destino para a solicitação [!DNL mTLS]. Para habilitar o uso de certificados ativos nos ambientes, selecione **[!UICONTROL Enable in [!DNL mTLS]]** e **[!UICONTROL Keep Changes]** para salvar a regra.
 
 ![A exibição de Regras de Propriedade do Encaminhamento de Eventos, com os campos de controle adicionais e mantendo as alterações destacadas.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
-Sua nova regra está pronta. Selecione **[!UICONTROL Salvar na biblioteca]** e **[!UICONTROL Compilar]** para implantá-la. A solicitação [!DNL mTLS] agora está ativa e disponível em sua biblioteca.
+Sua nova regra está pronta. Selecione **[!UICONTROL Save to Library]** e **[!UICONTROL Build]** para implantá-lo. A solicitação [!DNL mTLS] agora está ativa e disponível em sua biblioteca.
 
 ![A regra de Encaminhamento de Eventos com save to library e build destacada.](../../../images/extensions/server/cloud-connector/save-build.png)
 

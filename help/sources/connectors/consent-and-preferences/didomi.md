@@ -4,9 +4,9 @@ description: Saiba como conectar o Didomi ao Adobe Experience Platform usando a 
 last-substantial-update: 2025-07-29T00:00:00Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '893'
 ht-degree: 1%
 
 ---
@@ -29,13 +29,13 @@ Use a origem [!DNL Didomi] para transmitir dados de consentimento e preferência
 
 Conclua as etapas de pré-requisito descritas abaixo para conectar com êxito sua conta do [!DNL Didomi] à Experience Platform.
 
-### INCLUIR NA LISTA DE PERMISSÕES endereço IP
+### INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Você deve adicionar endereços IP específicos da sua região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ### Configurar permissões no Experience Platform
 
-Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Didomi] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../access-control/ui/overview.md).
+Você deve ter as permissões **[!UICONTROL View Sources]** e **[!UICONTROL Manage Sources]** habilitadas para sua conta para conectar sua conta do [!DNL Didomi] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../access-control/ui/overview.md).
 
 ### Coletar credenciais da API do Adobe
 
@@ -51,9 +51,9 @@ Leia o manual sobre [introdução às APIs do Experience Platform](../../../land
 
 Um **esquema do Experience Data Model (XDM)** define a estrutura dos dados que você enviará de [!DNL Didomi] (por exemplo, IDs de usuário, fins de consentimento) para a Experience Platform.
 
-Para criar um esquema, selecione [!UICONTROL Esquemas] na navegação à esquerda da interface do Experience Platform e selecione **[!UICONTROL Criar esquema]**. Em seguida, selecione **[!UICONTROL Padrão]** como o tipo de esquema e selecione **[!UICONTROL Manual]** para criar os campos manualmente. Selecione uma classe base para o esquema e forneça um nome para ele.
+Para criar um esquema, selecione [!UICONTROL Schemas] na navegação à esquerda da interface do usuário do Experience Platform e selecione **[!UICONTROL Create schema]**. Em seguida, selecione **[!UICONTROL Standard]** como o tipo de esquema e selecione **[!UICONTROL Manual]** para criar os campos manualmente. Selecione uma classe base para o esquema e forneça um nome para ele.
 
-Depois de criado, atualize o esquema adicionando qualquer um dos campos obrigatórios. Certifique-se de que pelo menos um campo seja um campo [!UICONTROL Identidade] para informar à Experience Platform sobre seus valores de identidade primários. Por fim, habilite a opção de alternância [!UICONTROL Perfil] para armazenar seus dados com êxito.
+Depois de criado, atualize o esquema adicionando qualquer um dos campos obrigatórios. Certifique-se de que pelo menos um campo seja um campo [!UICONTROL Identity] para informar à Experience Platform sobre seus valores de identidade primários. Finalmente, habilite o botão [!UICONTROL Profile] para armazenar seus dados com êxito.
 
 ![criar-esquema](../../images/tutorials/create/didomi/create-schema.png)
 
@@ -67,7 +67,7 @@ Para obter mais informações, leia o manual sobre [criação de esquemas na int
 
 Um **conjunto de dados** no Experience Platform é usado para armazenar dados de entrada com base no esquema definido por você.
 
-Para criar um conjunto de dados, selecione [!UICONTROL Conjuntos de dados] na navegação à esquerda da interface do Experience Platform e selecione **[!UICONTROL Criar conjunto de dados]**. Em seguida, selecione **[!UICONTROL Criar conjunto de dados a partir do esquema]** e selecione seu esquema para associar ao novo conjunto de dados.
+Para criar um conjunto de dados, selecione [!UICONTROL Datasets] na navegação à esquerda da interface do Experience Platform e selecione **[!UICONTROL Create dataset]**. Em seguida, selecione **[!UICONTROL Create dataset from schema]** e, em seguida, selecione seu esquema para associar ao novo conjunto de dados.
 
 ![criar-conjunto-dados](../../images/tutorials/create/didomi/create-dataset.png)
 
@@ -82,7 +82,7 @@ Para garantir a compatibilidade com o Experience Platform, seu webhook deve aten
 | Campo | Descrição | Exemplo |
 | --- | --- | --- | 
 | Segredo do cliente | A chave secreta associada às credenciais da API do Adobe. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
-| Chave de API | A chave de API pública usada para autenticar solicitações para serviços da Adobe. |
+| Chave de API | A chave de API pública usada para autenticar solicitações para serviços da Adobe. |  |
 | Tipo de concessão | O método pelo qual um aplicativo obtém um token de acesso do servidor de autorização. Defina este valor como `client_credentials`. | `client_credentials` |
 | Escopo | Os escopos de autorização definem as permissões específicas ou os níveis de acesso que um aplicativo está solicitando ao provedor de API. | `openid,AdobeID,read_organizations,additional_info.projectedProductContext,session` |
 | Cabeçalho de autenticação | Os cabeçalhos adicionais necessários para a solicitação de token do Adobe. | `{"Content-type": "application/x-www-form-urlencoded"}` |
@@ -96,7 +96,7 @@ Em seguida, configure as seguintes opções para o [!DNL webhook].
 | Campo | Descrição | Valor |
 | ---| --- | --- | 
 | Cabeçalhos de solicitação | Os cabeçalhos personalizados para [!DNL webhook]. Certifique-se de incluir o `x-adobe-flow-id`. Você pode recuperar esse valor após a criação do [fluxo de dados](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url). | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
-| Flatten | Esta propriedade deve ser verificada, pois garante que os dados de [!DNL webhook] sejam enviados como um objeto simples. | Ativado |
+| Flatten | Esta propriedade deve ser verificada, pois garante que os dados de [!DNL webhook] sejam enviados como um objeto simples. | Habilitado |
 | Tipos de evento | Selecione o grupo específico de [!DNL Didomi] eventos (`event.*` ou `user.*`) que deve disparar o [!DNL webhook]. Use `event.*` para rastrear alterações de consentimento ou preferência e use `user.*` para rastrear atualizações de perfil de usuário. Essa seleção é necessária para garantir que somente eventos compatíveis sejam enviados para a Adobe. O Adobe suporta apenas um esquema por fluxo de dados, portanto, selecionar ambos os tipos de evento pode causar erros de assimilação. | A lista de tipos de eventos compatíveis é: <ul><li>`Event.created`</li><li>`Event.updated`</li><li>`Event.deleted`</li><li>`User.created`</li><li>`User.updated`</li><li>`User.deleted`</li></ul> |
 
 ### Baixe o arquivo de carga de amostra {#download-the-sample-payload-file}

@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;fontes;conectores;conectores de origem;fontes sdk;sdk;SDK
-title: Configurar as especificações de exploração para Fontes de autoatendimento (SDK em lote)
-description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Fontes de autoatendimento (SDK em lote).
+title: Configurar especificações de exploração para Origens de Autoatendimento (SDK em Lote)
+description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Origens de Autoatendimento (SDK em Lote).
 exl-id: 423a7e56-9dd1-4071-bd26-ee4f9f206122
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '254'
 ht-degree: 1%
 
 ---
 
-# Configurar as especificações de exploração para Fontes de autoatendimento (SDK em lote)
+# Configurar especificações de exploração para Origens de Autoatendimento (SDK em Lote)
 
 Explorar especificações define os parâmetros necessários para explorar e inspecionar objetos contidos na sua origem. Explorar especificações também define o formato de resposta retornado quando os objetos são explorados e inspecionados.
 
@@ -67,17 +67,17 @@ Explorar especificações define os parâmetros necessários para explorar e ins
 | --- | --- | --- |
 | `name` | Define o nome ou identificador da especificação de exploração. | `Resource` |
 | `type` | Define o tipo da especificação de exploração. | `Resource` |
-| `requestSpec` | Contém os parâmetros necessários para explorar objetos na conexão. |
+| `requestSpec` | Contém os parâmetros necessários para explorar objetos na conexão. |  |
 | `requestSpec.type` | Define o tipo de dados da especificação da solicitação. | `object` |
-| `responseSpec` | Contém os parâmetros que definem o formato da mensagem de resposta retornada em relação a uma chamada de exploração. |
+| `responseSpec` | Contém os parâmetros que definem o formato da mensagem de resposta retornada em relação a uma chamada de exploração. |  |
 | `responseSpec.type` | Define o tipo de dados da especificação da resposta. | `object` |
-| `responseSpec.properties` | Contém informações relacionadas a como a mensagem de resposta está formatada. |
+| `responseSpec.properties` | Contém informações relacionadas a como a mensagem de resposta está formatada. |  |
 | `responseSpec.properties.format` | Define a formatação do schema de resposta. | `object` |
 | `responseSpec.properties.format.type` | Define o tipo de dados das propriedades. | `string` |
-| `responseSpec.schema` | Contém informações relacionadas a como o esquema de resposta é formatado. |
+| `responseSpec.schema` | Contém informações relacionadas a como o esquema de resposta é formatado. |  |
 | `responseSpec.schema.type` | Define o tipo de dados do esquema. | `object` |
-| `responseSpec.schema.properties` | Contém informações sobre as colunas, o tipo e os itens mantidos em um esquema. |
-| `responseSpec.schema.properties.columns.items.properties.name` | Exibe o nome do arquivo. |
+| `responseSpec.schema.properties` | Contém informações sobre as colunas, o tipo e os itens mantidos em um esquema. |  |
+| `responseSpec.schema.properties.columns.items.properties.name` | Exibe o nome do arquivo. |  |
 | `responseSpec.schema.properties.columns.items.properties.name.type` | Define o tipo de dados do nome do arquivo. | `string` |
 
 {style="table-layout:auto"}

@@ -3,7 +3,7 @@ title: Criar uma conexão básica do Microsoft SQL Server usando a API do servi�
 type: Tutorial
 description: Saiba como conectar o Adobe Experience Platform a um Microsoft SQL Server usando a API do Serviço de fluxo.
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '477'
 ht-degree: 5%
@@ -32,7 +32,7 @@ Para se conectar a [!DNL Microsoft SQL Server], você deve fornecer a seguinte p
 | Credencial | Descrição | Exemplo |
 | --- | --- | --- |
 | `connectionString` | A cadeia de conexão associada à sua conta [!DNL Microsoft SQL Server]. O padrão da cadeia de caracteres de conexão depende se você está usando o nome do servidor ou o nome da instância para a fonte de dados:<ul><li>Cadeia de conexão usando o nome do servidor: `Data Source={SERVER_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};`</li><li>Cadeia de conexão usando nome de instância:`Data Source={INSTANCE_NAME};Initial Catalog={DATABASE};Integrated Security=False;User ID={USER_ID};Password={PASSWORD};` | `Data Source=mssqlserver.database.windows.net;Initial Catalog=mssqlserver_e2e_db;Integrated Security=False;User ID=mssqluser;Password=mssqlpassword` |
-| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Microsoft SQL Server] é `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |
+| `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão para [!DNL Microsoft SQL Server] é `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec`. |  |
 
 Para obter mais informações sobre como obter uma cadeia de conexão, consulte este [[!DNL Microsoft SQL Server] documento](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/authentication-in-sql-server).
 
@@ -99,5 +99,5 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 
 Seguindo este tutorial, você criou uma conexão de base [!DNL Microsoft SQL Server] usando a API [!DNL Flow Service]. Você pode usar essa ID de conexão básica nos seguintes tutoriais:
 
-* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
-* [Crie um fluxo de dados para trazer dados do banco de dados para a Experience Platform usando a API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] ](../../explore/tabular.md)
+* [Crie um fluxo de dados para trazer dados do banco de dados para a Experience Platform usando a API  [!DNL Flow Service] ](../../collect/database-nosql.md)

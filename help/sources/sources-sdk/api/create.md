@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar uma nova especificação de conexão usando a API do Serviço de fluxo
 description: O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando a API de Serviço de Fluxo e integrar uma nova origem por meio de Origens de Autoatendimento.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: f47b7f725475fc7f7fac6dd406975b46f257e390
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '773'
 ht-degree: 2%
 
 ---
@@ -19,11 +19,11 @@ O documento a seguir fornece etapas sobre como criar uma especificação de cone
 
 ## Introdução
 
-Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas para qualquer API Experience Platform com êxito.
+Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 ## Coletar artefatos
 
-Para criar uma nova origem em lote usando Fontes de autoatendimento, primeiro você deve coordenar com o Adobe, solicitar um repositório Git privado e alinhar com o Adobe nos detalhes relativos ao rótulo, descrição, categoria e ícone da origem.
+Para criar uma nova origem em lote usando Origens de Autoatendimento, primeiro você deve coordenar com o Adobe, solicitar um repositório Git privado e alinhar-se ao Adobe nos detalhes relativos ao rótulo, descrição, categoria e ícone da origem.
 
 Depois de fornecido, você deve estruturar seu repositório Git privado da seguinte maneira:
 
@@ -39,10 +39,10 @@ Depois de fornecido, você deve estruturar seu repositório Git privado da segui
 | Artefatos (nomes de arquivo) | Descrição | Exemplo |
 | --- | --- | --- |
 | {your_source} | O nome da fonte. Esta pasta deve conter todos os artefatos relacionados à sua origem, dentro do seu repositório Git privado. | `mailchimp-members` |
-| {your_source}-category.txt | A categoria à qual a origem pertence, formatada como um arquivo de texto. A lista de categorias de origem disponíveis compatíveis com Fontes de autoatendimento (SDK em lote) inclui: <ul><li>Advertising</li><li>Analytics</li><li>Consentimento e preferências</li><li>CRM</li><li>Sucesso do cliente</li><li>Banco de dados</li><li>e-Commerce</li><li>Automação de marketing</li><li>Pagamentos</li><li>Protocolos</li></ul> **Observação**: se você acredita que a sua fonte não se encaixa em nenhuma das categorias acima, contate o representante da Adobe para discutir. | `mailchimp-members-category.txt` Dentro do arquivo, especifique a categoria de sua origem, como: `marketingAutomation`. |
-| {your_source}-descrição.txt | Uma breve descrição da sua origem. | [!DNL Mailchimp Members] é a fonte de automação de marketing que você pode usar para trazer [!DNL Mailchimp Members] dados para o Experience Platform. |
-| {your_source}-icon.svg | A imagem a ser usada para representar sua fonte no catálogo de fontes de Experience Platform. Esse ícone deve ser um arquivo SVG. |
-| {your_source}-rótulo.txt | O nome da fonte como deve aparecer no catálogo de fontes Experience Platform. | Membros do Mailchimp |
+| {your_source}-category.txt | A categoria à qual a origem pertence, formatada como um arquivo de texto. A lista de categorias de origem disponíveis suportadas por Origens de Autoatendimento (SDK em Lote) inclui: <ul><li>Advertising</li><li>Analytics</li><li>Consentimento e preferências</li><li>CRM</li><li>Sucesso do cliente</li><li>Banco de dados</li><li>e-Commerce</li><li>Automação de marketing</li><li>Pagamentos</li><li>Protocolos</li></ul> **Observação**: se você acredita que a sua fonte não se encaixa em nenhuma das categorias acima, contate o representante da Adobe para discutir. | `mailchimp-members-category.txt` Dentro do arquivo, especifique a categoria de sua origem, como: `marketingAutomation`. |
+| {your_source}-descrição.txt | Uma breve descrição da sua origem. | O [!DNL Mailchimp Members] é a fonte de automação de marketing que você pode usar para trazer dados do [!DNL Mailchimp Members] para a Experience Platform. |
+| {your_source}-icon.svg | A imagem a ser usada para representar sua fonte no catálogo de fontes do Experience Platform. Esse ícone deve ser um arquivo do SVG. |  |
+| {your_source}-rótulo.txt | O nome da origem como deve aparecer no catálogo de origens do Experience Platform. | Membros do Mailchimp |
 | {your_source}-connectionSpec.json | Um arquivo JSON que contém a especificação de conexão da origem. Inicialmente, esse arquivo não é necessário, pois você preencherá a especificação de conexão ao concluir este guia. | `mailchimp-members-connectionSpec.json` |
 
 {style="table-layout:auto"}
@@ -51,7 +51,7 @@ Depois de fornecido, você deve estruturar seu repositório Git privado da segui
 >
 >Durante o período de teste de sua especificação de conexão, no lugar dos valores de chave, você pode usar `text` na especificação de conexão.
 
-Depois de adicionar os arquivos necessários ao repositório Git privado, você deve criar uma solicitação de pull (PR) para o Adobe revisar. Quando sua PR for aprovada e mesclada, você receberá uma ID que poderá ser usada para a especificação da conexão para consultar o rótulo, a descrição e o ícone da fonte.
+Depois de adicionar os arquivos necessários ao repositório Git privado, você deve criar uma solicitação de pull (PR) para que o Adobe revise. Quando sua PR for aprovada e mesclada, você receberá uma ID que poderá ser usada para a especificação da conexão para consultar o rótulo, a descrição e o ícone da fonte.
 
 Em seguida, siga as etapas descritas abaixo para configurar sua especificação de conexão. Para obter orientação adicional sobre as diferentes funcionalidades que podem ser adicionadas à sua origem, como o agendamento avançado, o esquema personalizado ou diferentes tipos de paginação, consulte o manual em [configurando especificações da origem](../config/sourcespec.md).
 
@@ -452,7 +452,7 @@ Consulte os seguintes documentos para obter instruções sobre como preencher os
 * [Configurar a especificação de origem](../config/sourcespec.md)
 * [Configurar a especificação de exploração](../config/explorespec.md)
 
-Com suas informações de especificação atualizadas, você pode enviar a nova especificação de conexão fazendo uma solicitação POST para o ponto de extremidade `/connectionSpecs` da API [!DNL Flow Service].
+Com as informações de especificação atualizadas, você pode enviar a nova especificação de conexão fazendo uma solicitação POST para o ponto de extremidade `/connectionSpecs` da API [!DNL Flow Service].
 
 **Formato da API**
 

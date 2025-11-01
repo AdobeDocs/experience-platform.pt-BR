@@ -2,9 +2,9 @@
 title: Conectar a zona de aterrissagem de dados à Adobe Experience Platform usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform à Data Landing Zone usando a API do serviço de fluxo.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '1419'
+source-wordcount: '1417'
 ht-degree: 4%
 
 ---
@@ -34,7 +34,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 >[!IMPORTANT]
 >
->Você deve ter a permissão de controle de acesso **[!UICONTROL Gerenciar Fontes]** para usar as APIs [!DNL Data Landing Zone] e recuperar `type=user_drop_zone`. Para obter mais informações, leia a [visão geral do controle de acesso](../../../../../access-control/home.md) ou contate o administrador do produto para obter as permissões necessárias.
+>Você deve ter a permissão de controle de acesso **[!UICONTROL Manage Sources]** para usar as APIs [!DNL Data Landing Zone] e recuperar `type=user_drop_zone`. Para obter mais informações, leia a [visão geral do controle de acesso](../../../../../access-control/home.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 A primeira etapa no uso de APIs para acessar o [!DNL Data Landing Zone] é fazer uma solicitação GET para o ponto de extremidade `/landingzone` da API [!DNL Connectors] e, ao mesmo tempo, fornecer `type=user_drop_zone` como parte do cabeçalho da sua solicitação.
 
@@ -395,7 +395,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT
 
 | Parâmetro | Descrição | Exemplo |
 | --- | --- | --- |
-| `{CONNECTION_SPEC_ID}` | A ID da especificação de conexão que corresponde a [!DNL Data Landing Zone]. Esta ID fixa é: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{CONNECTION_SPEC_ID}` | A ID da especificação de conexão que corresponde a [!DNL Data Landing Zone]. Esta ID fixa é: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |  |
 | `{OBJECT_TYPE}` | O tipo do objeto que você deseja acessar. | `file` |
 | `{OBJECT}` | O caminho e o nome do objeto que você deseja acessar. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | O tipo do arquivo. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
@@ -517,7 +517,7 @@ curl -X GET \
 
 Uma resposta bem-sucedida retorna a estrutura do arquivo consultado, incluindo nomes de arquivos e tipos de dados, bem como uma chave `properties`, contendo informações sobre `fileType`, `compressionType` e `columnDelimiter`.
 
-+++Clique
++++Clique em mim
 
 ```json
 {

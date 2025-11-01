@@ -2,7 +2,7 @@
 title: Mensagens de erro de origens
 description: Saiba mais sobre as mensagens de erro que você pode encontrar ao usar o Serviço de fluxo para fontes.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 48%
@@ -24,8 +24,8 @@ Este documento fornece um catálogo de mensagens de erro, descrições e resolu�
 | `1004-415` | Tipo de mídia incompatível | O formato de conteúdo fornecido não é compatível. Verifique a solicitação fornecida e tente novamente. |
 | `1005-500` | Erro interno | Ocorreu um erro interno. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
 | `1006-408` | Tempo limite da solicitação | Erro ao processar a solicitação. A solicitação atingiu o tempo limite. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
-| `1007-400` | Parâmetro de cabeçalho inválido | Um parâmetro de cabeçalho inválido: {headerName} foi recebido. Verifique os parâmetros do cabeçalho e tente novamente. |
-| `1008-401` | | Token de autorização inválido | O token de autorização não tem acesso a esta organização ou a organização não existe. Certifique-se de que a organização existe ou entre em contato com seu administrador para obter acesso. |
+| `1007-400` | Parâmetro de cabeçalho inválido | Um parâmetro de cabeçalho inválido: `{headerName}` foi recebido. Verifique os parâmetros do cabeçalho e tente novamente. |
+| `1008-401` | Token de autorização inválido | O token de autorização não tem acesso a esta organização ou a organização não existe. Certifique-se de que a organização existe ou entre em contato com seu administrador para obter acesso. |
 | `1009-403` | A ID da organização IMS está ausente ou em branco | O cabeçalho de solicitação de ID da organização está ausente ou vazio. Atualize o valor do cabeçalho e tente novamente. |
 | `1010-500` | Mensagem detalhada inválida | O parâmetro na mensagem detalhada não foi fornecido corretamente. Verifique o parâmetro na mensagem detalhada e tente novamente. |
 | `1011-503` | Serviço indisponível | O serviço está temporariamente indisponível. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
@@ -44,7 +44,7 @@ Este documento fornece um catálogo de mensagens de erro, descrições e resolu�
 | `1104-504` | Tempo limite do gateway | O gateway atingiu o tempo limite. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
 | `1105-401` | Não autorizado | Usuário não autorizado. {detailedMessage} |
 | `1106-403` | Proibido | A operação solicitada é proibida. {detailedMessage} |
-| `1107-412` | Falha da pré-condição | A condição definida pelos cabeçalhos If-Unmodified-Since ou If-None-Match não é atendida. {detailedMessage} |
+| `1107-412` | Falha da pré-condição | A condição definida pelos cabeçalhos If-Unmodified-Since ou If-None-Match não é atendida. `{detailedMessage}` |
 
 ## Erros de criptografia
 
@@ -114,7 +114,7 @@ Este documento fornece um catálogo de mensagens de erro, descrições e resolu�
 | `1350-400` | Solicitação inválida | Nenhum operador foi fornecido para o filtro na origem. Forneça uma solicitação de filtro válida com o operador apropriado e tente novamente. |
 | `1351-400` | Solicitação inválida | O operador fornecido {operator} não tem suporte para o filtro na origem deste conector. Forneça um operador válido e tente novamente. |
 | `1352-400` | Solicitação inválida | O operador fornecido {operator} não pode ser mapeado para nenhum operador nativo com suporte para {ql}. Forneça um operador válido e tente novamente. |
-| `1353-400` | Solicitação inválida | O filtro na origem ainda não tem suporte para o conector {connectorType}. Verifique os conectores compatíveis na documentação: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=pt-BR. |
+| `1353-400` | Solicitação inválida | O filtro na origem ainda não tem suporte para o conector {connectorType}. Verifique os conectores compatíveis na documentação: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
 | `1354-400` | Solicitação inválida | O idioma de consulta {ql} ainda não tem suporte para o filtro na origem. Forneça um idioma de consulta válido e tente novamente. |
 | `1355-400` | Solicitação inválida | O tipo de filtro fornecido é inválido. O tipo de filtro suportado é PQL. Forneça um tipo de filtro válido e tente novamente. |
 | `1356-400` | Solicitação inválida | O formato de filtro fornecido é inválido. O formato de filtro compatível é: pql/json. Forneça um formato de filtro válido e tente novamente. |

@@ -2,9 +2,9 @@
 title: Mapeamento de campos para o Adobe Analytics Source Connector
 description: Mapeie campos do Adobe Analytics para campos XDM usando o Analytics Source Connector.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
-source-wordcount: '3838'
+source-wordcount: '3832'
 ht-degree: 5%
 
 ---
@@ -242,7 +242,7 @@ Selecionar campos provenientes do ADC devem ser transformados, exigindo que uma 
 | `m_page_type` | `web.webPageDetails.isErrorPage` | booleano | Uma variável usada para preencher a dimensão Páginas não encontradas. Essa variável deve estar vazia ou conter &quot;ErrorPage&quot;. |
 | `m_pagename_no_url` | `web.webPageDetails.name` | número | O nome da página (se definido). Se nenhuma página for especificada, esse valor será deixado vazio. |
 | `m_paid_search` | `search.isPaid` | booleano | Um sinalizador que é definido se a ocorrência corresponder à detecção de pesquisa paga. |
-| `m_product_list` | `productListItems[].items` | matriz | A lista de produtos, conforme enviado por meio da variável products. | {SKU (string), quantidade (inteiro), priceTotal (número)} |
+| `m_product_list` | `productListItems[].items` | matriz | A lista de produtos, conforme enviado por meio da variável products. `{SKU (string), quantity (integer), priceTotal (number)}` |
 | `m_ref_type` | `web.webReferrer.type` | sequência de caracteres | Uma ID numérica que representa o tipo de referência para a ocorrência.<br/>`1`: Dentro do site<br/>`2`: Outros sites<br/>`3`: Mecanismos de pesquisa<br/>`4`: Disco rígido<br/>`5`: USENET<br/>`6`: Digitado/Marcado (sem referenciador)<br/>`7`: email<br/>`8`: Sem JavaScript<br/>`9`: Redes sociais |
 | `m_search_engine` | `search.searchEngine` | sequência de caracteres | A ID numérica que representa o mecanismo de pesquisa que direcionou o visitante ao seu site. |
 | `post_currency` | `commerce.order.currencyCode` | sequência de caracteres | O código de moeda usado durante a transação. |

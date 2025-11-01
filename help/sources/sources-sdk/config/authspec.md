@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Configurar especificações de autenticação para fontes de autoatendimento (SDK em lote)
 description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Origens de Autoatendimento (SDK em Lote).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
 workflow-type: tm+mt
 source-wordcount: '772'
 ht-degree: 3%
@@ -116,20 +116,20 @@ Um código de atualização OAuth 2 permite acesso seguro a um aplicativo gerand
 | --- | --- | --- |
 | `authSpec.name` | Exibe o nome do tipo de autenticação suportado. | `oAuth2-refresh-code` |
 | `authSpec.type` | Define o tipo de autenticação aceito pela origem. | `oAuth2-refresh-code` |
-| `authSpec.spec` | Contém informações sobre o esquema, o tipo de dados e as propriedades da autenticação. |
+| `authSpec.spec` | Contém informações sobre o esquema, o tipo de dados e as propriedades da autenticação. |  |
 | `authSpec.spec.$schema` | Define o esquema usado para a autenticação. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Define o tipo de dados do esquema. | `object` |
-| `authSpec.spec.properties` | Contém informações sobre as credenciais usadas para a autenticação. |
-| `authSpec.spec.properties.description` | Exibe uma breve descrição da credencial. |
+| `authSpec.spec.properties` | Contém informações sobre as credenciais usadas para a autenticação. |  |
+| `authSpec.spec.properties.description` | Exibe uma breve descrição da credencial. |  |
 | `authSpec.spec.properties.type` | Define o tipo de dados da credencial. | `string` |
-| `authSpec.spec.properties.clientId` | A ID do cliente associada ao aplicativo. A ID do cliente é usada juntamente com o segredo do cliente para recuperar o token de acesso. |
-| `authSpec.spec.properties.clientSecret` | O segredo do cliente associado ao aplicativo. O segredo do cliente é usado em conjunto com a ID do cliente para recuperar o token de acesso. |
-| `authSpec.spec.properties.accessToken` | O token de acesso autoriza o acesso seguro ao aplicativo. |
-| `authSpec.spec.properties.refreshToken` | O token de atualização é usado para gerar um novo token de acesso, quando o token de acesso expira. |
-| `authSpec.spec.properties.expirationDate` | Define a data de expiração do token de acesso. |
-| `authSpec.spec.properties.refreshTokenUrl` | O URL usado para recuperar o token de atualização. |
-| `authSpec.spec.properties.accessTokenUrl` | O URL usado para recuperar o token de atualização. |
-| `authSpec.spec.properties.requestParameterOverride` | Permite que você especifique parâmetros de credencial a serem substituídos na autenticação. |
+| `authSpec.spec.properties.clientId` | A ID do cliente associada ao aplicativo. A ID do cliente é usada juntamente com o segredo do cliente para recuperar o token de acesso. |  |
+| `authSpec.spec.properties.clientSecret` | O segredo do cliente associado ao aplicativo. O segredo do cliente é usado em conjunto com a ID do cliente para recuperar o token de acesso. |  |
+| `authSpec.spec.properties.accessToken` | O token de acesso autoriza o acesso seguro ao aplicativo. |  |
+| `authSpec.spec.properties.refreshToken` | O token de atualização é usado para gerar um novo token de acesso, quando o token de acesso expira. |  |
+| `authSpec.spec.properties.expirationDate` | Define a data de expiração do token de acesso. |  |
+| `authSpec.spec.properties.refreshTokenUrl` | O URL usado para recuperar o token de atualização. |  |
+| `authSpec.spec.properties.accessTokenUrl` | O URL usado para recuperar o token de atualização. |  |
+| `authSpec.spec.properties.requestParameterOverride` | Permite que você especifique parâmetros de credencial a serem substituídos na autenticação. |  |
 | `authSpec.spec.required` | Exibe as credenciais necessárias para a autenticação. | `accessToken` |
 
 {style="table-layout:auto"}
@@ -173,13 +173,13 @@ A autenticação básica é um tipo de autenticação que permite acessar seu ap
 | --- | --- | --- |
 | `authSpec.name` | Exibe o nome do tipo de autenticação suportado. | `Basic Authentication` |
 | `authSpec.type` | Define o tipo de autenticação aceito pela origem. | `BasicAuthentication` |
-| `authSpec.spec` | Contém informações sobre o esquema, o tipo de dados e as propriedades da autenticação. |
+| `authSpec.spec` | Contém informações sobre o esquema, o tipo de dados e as propriedades da autenticação. |  |
 | `authSpec.spec.$schema` | Define o esquema usado para a autenticação. | `http://json-schema.org/draft-07/schema#` |
 | `authSpec.spec.type` | Define o tipo de dados do esquema. | `object` |
-| `authSpec.spec.description` | Exibe mais informações específicas para o seu tipo de autenticação. |
-| `authSpec.spec.properties` | Contém informações sobre as credenciais usadas para a autenticação. |
-| `authSpec.spec.properties.username` | O nome de usuário da conta associado ao aplicativo. |
-| `authSpec.spec.properties.password` | A senha da conta associada ao aplicativo. |
+| `authSpec.spec.description` | Exibe mais informações específicas para o seu tipo de autenticação. |  |
+| `authSpec.spec.properties` | Contém informações sobre as credenciais usadas para a autenticação. |  |
+| `authSpec.spec.properties.username` | O nome de usuário da conta associado ao aplicativo. |  |
+| `authSpec.spec.properties.password` | A senha da conta associada ao aplicativo. |  |
 | `authSpec.spec.required` | Especifica os campos obrigatórios a serem inseridos no Experience Platform. | `username` |
 
 {style="table-layout:auto"}
@@ -282,7 +282,7 @@ GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
 
 Este é um exemplo de uma especificação de autenticação concluída usando uma origem [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md).
 
-+++Exibir especificação de autenticação de exemplo
++++Ver exemplo de especificação de autenticação
 
 ```json
   "authSpec": [

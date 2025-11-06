@@ -2,16 +2,16 @@
 title: Monitorar assimilação de perfil de transmissão
 description: Saiba como usar o painel de monitoramento para monitorar a assimilação do perfil de transmissão
 exl-id: da7bb08d-2684-45a1-b666-7580f2383748
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
 workflow-type: tm+mt
-source-wordcount: '1932'
-ht-degree: 19%
+source-wordcount: '1835'
+ht-degree: 18%
 
 ---
 
 # Monitorar assimilação de perfil de transmissão
 
-Você pode usar o painel de monitoramento na interface do usuário do Adobe Experience Platform para realizar o monitoramento em tempo real da assimilação do perfil de transmissão na organização. Use esse recurso para acessar com mais transparência as métricas de taxa de transferência, latência e qualidade de dados relacionadas aos dados de transmissão. Além disso, use esse recurso para alertas proativos e recuperação de insights acionáveis para ajudar a identificar possíveis violações de capacidade e problemas de assimilação de dados.
+Você pode usar o painel de monitoramento na interface do usuário do Adobe Experience Platform para realizar o monitoramento em tempo real da assimilação do perfil de transmissão na organização. Use esse recurso para acessar com mais transparência as métricas de taxa de transferência e qualidade de dados relacionadas aos dados de transmissão. Além disso, use esse recurso para alertas proativos e recuperação de insights acionáveis para ajudar a identificar possíveis violações de capacidade e problemas de assimilação de dados.
 
 Leia o guia a seguir para saber como usar o painel de monitoramento para rastrear taxas e métricas para trabalhos de assimilação de perfil de transmissão na sua organização.
 
@@ -21,19 +21,19 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Experie
 
 * [Fluxos de dados](../home.md): os fluxos de dados representam trabalhos de dados que transferem informações pela Experience Platform. Eles são configurados em vários serviços para facilitar a movimentação de dados dos conectores de origem para os conjuntos de dados de destino, bem como para o Serviço de identidade, o Perfil do cliente em tempo real e os Destinos.
 * [Perfil do cliente em tempo real](../../profile/home.md): o Perfil do cliente em tempo real combina dados de várias fontes (online, offline, CRM e de terceiros) em uma única exibição acionável de cada cliente, permitindo experiências consistentes e personalizadas em todos os pontos de contato.
-* [Assimilação por streaming](../../ingestion/streaming-ingestion/overview.md): a Assimilação por streaming para o Experience Platform fornece aos usuários um método para enviar dados de dispositivos no lado do cliente e do servidor para o Experience Platform em tempo real.O Experience Platform permite gerar experiências coordenadas, consistentes e relevantes, gerando um Perfil de cliente em tempo real para cada um de seus clientes individuais. &#x200B;A assimilação de streaming desempenha um papel fundamental na criação desses perfis com a menor latência possível.
+* [Assimilação por streaming](../../ingestion/streaming-ingestion/overview.md): a Assimilação por streaming para o Experience Platform fornece aos usuários um método para enviar dados de dispositivos no lado do cliente e do servidor para o Experience Platform em tempo real.O Experience Platform permite gerar experiências coordenadas, consistentes e relevantes, gerando um Perfil de cliente em tempo real para cada um de seus clientes individuais. .
 * [Capacidades](../../landing/license-usage-and-guardrails/capacity.md): no Experience Platform, as capacidades informam se sua organização excedeu alguma das medidas de proteção e fornecem informações sobre como corrigir esses problemas.
 
 >[!NOTE]
 >
->A capacidade de taxa de transferência de transmissão suporta até 1500 eventos de entrada por segundo. Você pode comprar Segmentação de streaming adicional para oferecer suporte a até um máximo adicional de 13.500 eventos de entrada por segundo&#x200B;. Para obter mais informações, consulte as [descrições de produto do Real-Time CDP B2C Edition - Prime e Ultimate Packages](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>A capacidade de taxa de transferência de transmissão suporta até 1500 eventos de entrada por segundo. Você pode comprar Segmentação de streaming adicional para oferecer suporte a até um máximo adicional de 13.500 eventos de entrada por segundo&#x200B;. Para obter mais informações, consulte as [descrições de produto do Real-Time CDP B2C Edition - Prime e Ultimate Packages](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Métricas de monitoramento para a assimilação de perfil de transmissão {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="Monitorar assimilação de perfil de transmissão"
->abstract="O painel de monitoramento para perfis de transmissão exibe informações sobre taxa de transferência, taxas de assimilação e latência. Use esse painel para visualizar, entender e analisar as métricas de processamento de dados. dos perfis de transmissão na Experience Platform."
+>abstract="O painel de monitoramento para perfis de transmissão exibe informações sobre taxas de transferência e assimilação. Use esse painel para visualizar, entender e analisar as métricas de processamento de dados. dos perfis de transmissão na Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]
@@ -90,7 +90,6 @@ Use a tabela de métricas para obter informações específicas para seus fluxos
 | --- | --- | --- | --- |
 | Taxa de transferência de solicitação | Essa métrica representa o número de eventos que entram no sistema de assimilação por segundo. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
 | Taxa de transferência de processamento | Essa métrica representa o número de eventos assimilados com êxito pelo sistema a cada segundo. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
-| Latência de assimilação P95 | Essa métrica mede a latência do percentil 95 do momento em que um evento chega à Experience Platform até ele ser assimilado com sucesso no armazenamento de perfis. | Sandbox/Fluxo de dados | Monitoramento em tempo real com uma atualização de dados a cada 60 segundos. |
 | Taxa de transferência máxima | Essa métrica representa o número máximo de solicitações de entrada por segundo ao entrar na assimilação do perfil de streaming | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> |  |
 | Registros assimilados | Essa métrica representa o número total de registros assimilados no armazenamento de perfis em uma janela de tempo configurada. | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> | <ul><li>Sandbox/Fluxo de dados: monitoramento em tempo real com uma atualização de dados a cada 60 segundos.</li><li>Execução do fluxo de dados: agrupado em 15 minutos.</li></ul> |
 | Registros com falha | Essa métrica representa o número total de registros que falharam ao serem assimilados no armazenamento de perfis em uma janela de tempo configurada, devido a erros. | <ul><li>Sandbox/Fluxo de dados</li><li>Execução do fluxo de dados</li></ul> | <ul><li>Sandbox/Fluxo de dados: monitoramento em tempo real com uma atualização de dados a cada 60 segundos.</li><li>Execução do fluxo de dados: agrupado em 15 minutos.</li></ul> |
@@ -105,7 +104,7 @@ Para acessar o painel de monitoramento para assimilação do perfil de streaming
 
 ![O painel de monitoramento para assimilação do perfil de streaming.](../assets/ui/streaming-profiles/monitoring-dashboard.png)
 
-Consulte o cabeçalho superior do painel para o cartão de métricas *[!UICONTROL Profile]*. Use esta exibição para exibir informações sobre os registros assimilados, com falha e ignorados, bem como informações sobre o status atual da taxa de transferência e latência da solicitação.
+Consulte o cabeçalho superior do painel para o cartão de métricas *[!UICONTROL Profile]*. Use esta exibição para exibir informações sobre os registros assimilados, com falha e ignorados, bem como informações sobre o status atual da taxa de transferência da solicitação.
 
 ![O cartão de perfil.](../assets/ui/streaming-profiles/profile-card.png)
 
@@ -119,7 +118,7 @@ Em seguida, use a interface para exibir informações detalhadas sobre as métri
 
 Como alternativa, você pode configurar manualmente seu próprio período de tempo usando o calendário.
 
-Você pode usar três categorias de métricas diferentes no painel de monitoramento para assimilação do perfil de streaming: [!UICONTROL Throughput], [!UICONTROL Ingestion] e [!UICONTROL Latency].
+Você pode usar duas categorias de métrica diferentes no painel de monitoramento para assimilação do perfil de streaming: [!UICONTROL Throughput] e [!UICONTROL Ingestion].
 
 >[!BEGINTABS]
 
@@ -142,12 +141,6 @@ Selecione **[!UICONTROL Throughput]** para exibir informações sobre a quantida
 * **Registros assimilados**: a quantidade total de registros criados em um determinado período. Essa métrica representa processos de assimilação de dados bem-sucedidos em sua sandbox.
 * **Registros ignorados**: o número total de registros não assimilados devido a erros.
 * **Registros ignorados**: o número total de registros que foram ignorados devido à violação dos limites de capacidade.
-
->[!TAB Latência]
-
-Selecione **[!UICONTROL Latency]** para exibir informações sobre o tempo que o Experience Platform leva para responder a uma solicitação ou concluir uma operação em um determinado período de tempo.
-
-![O painel com a exibição definida como &quot;latência&quot;.](../assets/ui/streaming-profiles/latency.png)
 
 >[!ENDTABS]
 

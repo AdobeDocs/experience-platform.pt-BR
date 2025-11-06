@@ -51,13 +51,13 @@ O tutorial a seguir usa um modelo personalizado de propensão de compra da Luma.
 
 Para criar um modelo, você deve ter um conjunto de dados no Experience Platform que é usado para treinar e pontuar seu modelo. O tutorial em vídeo a seguir do [curso do Data Science Workspace](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw&lang=pt-BR) orienta você na criação do esquema Luma e na assimilação dos dados usados pelo modelo de propensão de compra.
 
->[!VIDEO](https://video.tv.adobe.com/v/333312)
+>[!VIDEO](https://video.tv.adobe.com/v/3447159?captions=por_br)
 
 ### Criar os conjuntos de dados de resultados de treinamento, pontuação e pontuação
 
 Para executar o bloco de anotações do construtor de fórmula ou usar a API para treinar e pontuar um modelo, é necessário especificar os conjuntos de dados e esquemas usados para treinamento/pontuação. O tutorial de vídeo a seguir orienta você na configuração dos conjuntos de dados de resultados de treinamento, pontuação e pontuação, bem como do esquema de resultados de pontuação usado no modelo de propensão de compra da Luma.
 
->[!VIDEO](https://video.tv.adobe.com/v/333426)
+>[!VIDEO](https://video.tv.adobe.com/v/3447426?captions=por_br)
 
 ## Próximas etapas
 

@@ -2,10 +2,10 @@
 title: Tipos de público
 description: Saiba mais sobre os diferentes tipos de públicos-alvo que você pode criar no Adobe Experience Platform.
 exl-id: c95c6276-d1a4-4d92-95cf-60d895c3fe10
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 03f8124f0fc750efa9b7bca0ff80de4c9263915d
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 2%
+source-wordcount: '250'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +19,7 @@ Um público-alvo de pessoas é um público-alvo criado com os dados de perfil do
 
 Para obter informações mais detalhadas sobre públicos-alvo de pessoas, leia a [visão geral do público-alvo de pessoas](./people-audiences.md).
 
-## [!BADGE Público-alvo semelhante ao B2C Edition]
+## Público-alvo semelhante
 
 Um público-alvo semelhante é um público-alvo criado ao analisar um público-alvo de alto valor com um modelo semelhante de aprendizado de máquina. O modelo semelhante pode criar um público-alvo que corresponda ao limite de similaridade do público-alvo de alto valor analisado.
 
@@ -39,4 +39,4 @@ Para obter informações mais detalhadas sobre públicos-alvo de clientes potenc
 
 ## Próximas etapas
 
-Depois de ler esta visão geral, você agora tem uma melhor compreensão dos diferentes tipos of públicos-alvo disponíveis no Experience Platform. Para conhecer os diferentes métodos de avaliação, leia a [visão geral do método de avaliação](../methods/overview.md).
+Depois de ler esta visão geral, você agora tem uma melhor compreensão dos diferentes tipos de públicos-alvo disponíveis no Experience Platform. Para conhecer os diferentes métodos de avaliação, leia a [visão geral do método de avaliação](../methods/overview.md).

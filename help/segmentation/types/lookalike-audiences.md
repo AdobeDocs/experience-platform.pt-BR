@@ -3,18 +3,14 @@ solution: Experience Platform
 title: Públicos-alvo semelhantes
 description: Saiba como direcionar novos públicos-alvo de alto valor no Adobe Experience Platform usando públicos-alvo semelhantes.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
+source-git-commit: 03f8124f0fc750efa9b7bca0ff80de4c9263915d
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2250'
 ht-degree: 9%
 
 ---
 
 # Guia de públicos-alvo semelhantes
-
->[!AVAILABILITY]
->
->Insights semelhantes e públicos semelhantes só estão disponíveis na **edição B2C**.
 
 >[!IMPORTANT]
 >
@@ -85,15 +81,15 @@ Os pacotes complementares, que estarão disponíveis posteriormente, aumentam os
 
 ## Acesso {#access}
 
-Para confirmar se você tem acesso a públicos-alvo semelhantes, selecione qualquer público-alvo no Portal de público-alvo e verifique se a guia **[!UICONTROL Insights semelhantes]** está visível.
+Para confirmar se você tem acesso a públicos-alvo semelhantes, selecione qualquer público-alvo no Portal de público-alvo e verifique se a guia **[!UICONTROL Look-alike insights]** está visível.
 
 ## Exibir insights semelhantes {#view}
 
-Os insights semelhantes são incorporados à página de detalhes do público-alvo. Para analisar os insights semelhantes de um público, selecione **[!UICONTROL Públicos-alvo]** na barra de navegação à esquerda, seguido de **[!UICONTROL Procurar]**, e o público-alvo para o qual deseja exibir os insights.
+Os insights semelhantes são incorporados à página de detalhes do público-alvo. Para analisar os insights semelhantes de um público, selecione **[!UICONTROL Audiences]** na barra de navegação à esquerda, seguido por **[!UICONTROL Browse]**, e o público para o qual deseja exibir os insights.
 
 ![O botão Públicos-alvo está realçado, assim como o público-alvo básico que está sendo usado para modelagem por semelhança.](../images/types/lookalike/browse.png)
 
-A página de detalhes do público-alvo é exibida. Selecione a guia **[!UICONTROL Insights semelhantes]** para exibir os insights semelhantes do público-alvo. A página **[!UICONTROL Insights semelhantes]** é exibida. Esta página tem três elementos principais: o gráfico de similaridade e alcance, os públicos semelhantes e os fatores influentes.
+A página de detalhes do público-alvo é exibida. Selecione a guia **[!UICONTROL Look-alike insights]** para exibir os insights semelhantes do público-alvo. A página **[!UICONTROL Look-alike insights]** é exibida. Esta página tem três elementos principais: o gráfico de similaridade e alcance, os públicos semelhantes e os fatores influentes.
 
 ![A guia Insights semelhantes está destacada, exibindo os insights semelhantes para o público base.](../images/types/lookalike/look-alike-insights.png)
 
@@ -128,7 +124,7 @@ A seção Públicos-alvo semelhantes exibe uma lista de todos os públicos-alvo 
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Fatores influentes"
 >abstract="Fatores influentes são atributos, eventos e associações de público-alvo que são importantes para explicar a similaridade de um perfil aos membros do público-alvo básico. Políticas e rótulos de uso de dados podem ser usados para impedir que determinados dados sejam considerados como fatores influentes em modelos semelhantes."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=pt-BR#exclude" text="Excluir dados"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="Excluir dados"
 
 A seção Fatores influentes exibe os 100 principais fatores que influenciam o modelo semelhante para o público-alvo básico selecionado. Esses fatores influentes são os atributos do perfil, os eventos de experiência e as associações de público-alvo que são os mais importantes para explicar as semelhanças no público-alvo básico. Compreender os principais fatores influentes permite personalizar melhor seu conteúdo de marketing para esse público-alvo e qualquer público semelhante que você criar a partir dele. Observe que nem todos os fatores influentes que afetam o modelo semelhante serão exibidos.
 
@@ -155,17 +151,17 @@ Esses buckets são recalculados regularmente para garantir que os dados sejam ma
 >
 >Você **não pode** usar um público-alvo semelhante como o público-alvo base de outro público semelhante. Ou seja, você **não** pode criar públicos semelhantes encadeados.
 
-Para criar um público-alvo semelhante, será necessário selecionar o público-alvo do qual deseja basear o público semelhante. Para acessar sua lista de públicos disponíveis, selecione **[!UICONTROL Públicos-alvo]** na barra de navegação à esquerda, seguido de **[!UICONTROL Procurar]**. A lista de públicos-alvo é exibida. Nesta página, você pode selecionar o público-alvo que deseja usar como público-alvo base.
+Para criar um público-alvo semelhante, será necessário selecionar o público-alvo do qual deseja basear o público semelhante. Para acessar sua lista de públicos disponíveis, selecione **[!UICONTROL Audiences]** na barra de navegação esquerda, seguido por **[!UICONTROL Browse]**. A lista de públicos-alvo é exibida. Nesta página, você pode selecionar o público-alvo que deseja usar como público-alvo base.
 
 ![O botão Públicos-alvo está realçado, assim como o público-alvo básico que está sendo usado para modelagem por semelhança.](../images/types/lookalike/browse.png)
 
-Na página de detalhes do público-alvo, selecione **[!UICONTROL Criar público-alvo semelhante]** para iniciar o processo de criação de um público semelhante.
+Na página de detalhes do público-alvo, selecione **[!UICONTROL Create look-alike audience]** para iniciar o processo de criação de um público-alvo semelhante.
 
-![O botão [!UICONTROL Criar público-alvo semelhante] está realçado.](../images/types/lookalike/create-look-alike-audience.png)
+![O botão [!UICONTROL Create look-alike audience] está realçado.](../images/types/lookalike/create-look-alike-audience.png)
 
-O popover **[!UICONTROL Criar um público-alvo semelhante]** é exibido. Nessa página, é possível definir a porcentagem de similaridade para o público-alvo semelhante.
+O popover **[!UICONTROL Create a look-alike audience]** é exibido. Nessa página, é possível definir a porcentagem de similaridade para o público-alvo semelhante.
 
-![O popover [!UICONTROL Criar um público-alvo semelhante] é exibido.](../images/types/lookalike/create-audience.png)
+![O popover [!UICONTROL Create a look-alike audience] é exibido.](../images/types/lookalike/create-audience.png)
 
 Você pode definir essa porcentagem de similaridade de três maneiras diferentes:
 
@@ -175,17 +171,17 @@ Você pode definir essa porcentagem de similaridade de três maneiras diferentes
 
 Você também pode atualizar detalhes sobre o público-alvo semelhante, incluindo o nome e a descrição. Por padrão, o nome do público-alvo semelhante será gerado com base no nome do público-alvo base e na porcentagem de similaridade especificada anteriormente.
 
-![As informações básicas estão destacadas no popover [!UICONTROL Criar um público-alvo semelhante].](../images/types/lookalike/basic-info.png)
+![As informações básicas estão realçadas no popover [!UICONTROL Create a look-alike audience].](../images/types/lookalike/basic-info.png)
 
-Selecione **[!UICONTROL Criar]** para concluir a criação do seu público-alvo semelhante.
+Selecione **[!UICONTROL Create]** para concluir a criação do seu público-alvo semelhante.
 
-![O botão Criar está realçado no popover [!UICONTROL Criar um público-alvo semelhante].](../images/types/lookalike/create-audience.png)
+![O botão Criar está realçado dentro do popover [!UICONTROL Create a look-alike audience].](../images/types/lookalike/create-audience.png)
 
-O público-alvo semelhante recém-criado pode ser acessado na seção **[!UICONTROL Públicos-alvo semelhantes]** da página de detalhes do público-alvo e também está disponível no Portal de público-alvo e para outros usos downstream. Observe que levará algum tempo para que o público-alvo semelhante seja pontuado. Até que seja pontuada, a contagem de perfis parecerá ser 0.
+O público-alvo semelhante recém-criado pode ser acessado na seção **[!UICONTROL Look-alike audiences]** da página de detalhes do público-alvo e também está disponível no Portal de público-alvo e para outros usos downstream. Observe que levará algum tempo para que o público-alvo semelhante seja pontuado. Até que seja pontuada, a contagem de perfis parecerá ser 0.
 
 ## Exibir detalhes do público-alvo semelhante {#view-details}
 
-Para exibir detalhes de um público-alvo semelhante, selecione-o na seção **[!UICONTROL Públicos-alvo semelhantes]** do público-alvo base.
+Para exibir detalhes de um público-alvo semelhante, selecione-o na seção **[!UICONTROL Look-alike audiences]** do público-alvo base.
 
 ![A seção Públicos-alvo Semelhantes está destacada.](../images/types/lookalike/select-laa.png)
 

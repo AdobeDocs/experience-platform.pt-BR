@@ -96,7 +96,7 @@ O esquema CEE, como todos os esquemas XDM ExperienceEvent, captura o estado do s
 
 Como todos os esquemas XDM, o grupo de campos do esquema CEE é extensível. Em outras palavras, campos adicionais podem ser adicionados ao grupo de campos CEE e variações diferentes podem ser incluídas em vários esquemas, se necessário.
 
-Um exemplo completo do grupo de campos pode ser encontrado no [repositório XDM público](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Além disso, você pode visualizar e copiar o seguinte [arquivo JSON](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para obter um exemplo de como os dados podem ser estruturados para estar em conformidade com o esquema CEE. Consulte ambos os exemplos ao saber mais sobre os campos principais descritos na seção abaixo, para determinar como mapear seus próprios dados para o esquema.
+Um exemplo completo do grupo de campos pode ser encontrado no [repositório XDM público](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). Além disso, você pode visualizar e copiar o seguinte [arquivo JSON](https://github.com/AdobeDocs/experience-platform.pt-BR/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para obter um exemplo de como os dados podem ser estruturados para estar em conformidade com o esquema CEE. Consulte ambos os exemplos ao saber mais sobre os campos principais descritos na seção abaixo, para determinar como mapear seus próprios dados para o esquema.
 
 ## Campos-chave
 
@@ -355,7 +355,7 @@ Se estiver assimilando dados de um arquivo CSV local, você pode pular para a pr
 
 #### Mapear e assimilar dados {#ingest}
 
-Depois de criar um esquema e um conjunto de dados CEE, você pode começar a mapear suas tabelas de dados para o esquema e assimilar esses dados na Experience Platform. Consulte o tutorial sobre [mapeamento de um arquivo CSV para um esquema XDM](../ingestion/tutorials/map-csv/overview.md) para obter etapas sobre como fazer isso na interface do usuário. Você pode usar o seguinte [arquivo JSON de amostra](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para testar o processo de assimilação antes de usar seus próprios dados.
+Depois de criar um esquema e um conjunto de dados CEE, você pode começar a mapear suas tabelas de dados para o esquema e assimilar esses dados na Experience Platform. Consulte o tutorial sobre [mapeamento de um arquivo CSV para um esquema XDM](../ingestion/tutorials/map-csv/overview.md) para obter etapas sobre como fazer isso na interface do usuário. Você pode usar o seguinte [arquivo JSON de amostra](https://github.com/AdobeDocs/experience-platform.pt-BR/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) para testar o processo de assimilação antes de usar seus próprios dados.
 
 Depois que um conjunto de dados é preenchido, o mesmo conjunto de dados pode ser usado para assimilar arquivos de dados adicionais.
 

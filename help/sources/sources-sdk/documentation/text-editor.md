@@ -25,7 +25,7 @@ O tutorial a seguir requer que o GitHub Desktop esteja instalado em sua máquina
 
 ## Conectar-se ao GitHub e configurar o ambiente de criação local
 
-A primeira etapa na configuração do seu ambiente de criação local é navegar até o [repositório do GitHub da Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
+A primeira etapa na configuração do seu ambiente de criação local é navegar até o [repositório do GitHub da Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.pt-BR).
 
 ![repositório-plataforma](../assets/platform-repo.png)
 
@@ -97,6 +97,6 @@ Certifique-se de que as ramificações base e de comparação estejam corretas. 
 
 ![create-pr](../assets/create-pr.png)
 
-É possível confirmar se a solicitação de pull foi enviada ao inspecionar a guia pull requests em https://github.com/AdobeDocs/experience-platform.en.
+É possível confirmar se a solicitação de pull foi enviada ao inspecionar a guia pull requests em https://github.com/AdobeDocs/experience-platform.pt-BR.
 
 ![confirm-pr](../assets/confirm-pr.png)

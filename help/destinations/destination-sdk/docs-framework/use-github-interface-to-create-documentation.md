@@ -23,7 +23,7 @@ As instruções abaixo mostram como usar a interface da Web do GitHub para criar
 
 ## Configurar o ambiente de criação do GitHub {#set-up-environment}
 
-1. Em seu navegador, navegue até `https://github.com/AdobeDocs/experience-platform.en`.
+1. Em seu navegador, navegue até `https://github.com/AdobeDocs/experience-platform.pt-BR`.
 1. Para [bifurcar](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=pt-BR#fork-the-repository) o repositório, clique em **Bifurcar** conforme mostrado abaixo. Isso cria uma cópia do repositório do Experience Platform em sua própria conta GitHub.
 
    ![Bifurcar repositório de documentação do Adobe](../assets/docs-framework/ssd-fork-repository.gif)
@@ -75,7 +75,7 @@ As instruções abaixo mostram como usar a interface da Web do GitHub para criar
 
 1. Nesse momento, é exibida uma notificação solicitando que você assine o Contrato de licença de colaborador (CLA) da Adobe. Essa é uma etapa obrigatória. Depois de assinar o CLA, atualize a página da PR e envie a solicitação de pull.
 
-1. É possível confirmar se a solicitação de pull foi enviada ao inspecionar a guia **Solicitações de pull** em `https://github.com/AdobeDocs/experience-platform.en`.
+1. É possível confirmar se a solicitação de pull foi enviada ao inspecionar a guia **Solicitações de pull** em `https://github.com/AdobeDocs/experience-platform.pt-BR`.
 
    ![PR bem-sucedida](../assets/docs-framework/ssd-pr-successful.png)
 

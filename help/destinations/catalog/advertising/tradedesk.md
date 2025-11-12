@@ -3,10 +3,10 @@ keywords: publicidade; a trade desk; advertising trade desk
 title: A conexão com a Trade Desk
 description: A Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais de redirecionamento e direcionadas por público-alvo em origens de inventário de exibição, vídeo e dispositivos móveis.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 940128bf73f856d8459bee23905213651b44916e
 workflow-type: tm+mt
-source-wordcount: '1028'
-ht-degree: 3%
+source-wordcount: '1093'
+ht-degree: 2%
 
 ---
 
@@ -17,19 +17,18 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
-> Após a [atualização interna](../../../release-notes/2025/july-2025.md#destinations) para o serviço de destinos a partir de julho de 2025, você poderá observar uma **queda no número de perfis ativados** em seus fluxos de dados para [!DNL The Trade Desk].
-> &#x200B;> Esta queda é causada pela introdução do **requisito de mapeamento ECID** para todas as ativações nesta plataforma de destino. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
+> Após a [atualização interna](../../../release-notes/2025/july-2025.md#destinations) para o serviço de destinos a partir de julho de 2025, você pode observar uma **queda no número de perfis ativados** em seus fluxos de dados para [!DNL The Trade Desk].
+> Essa queda é causada pela melhor visibilidade do monitoramento. Perfis sem ECID agora são contados corretamente como descartados nas métricas de ativação. Consulte a seção [mapeamento obrigatório](#mandatory-mappings) nesta página para obter informações detalhadas.
 >
 >**O que mudou:**
 >
->* O mapeamento ECID (Experience Cloud ID) agora é **obrigatório** para todas as ativações de perfil.
->* Perfis sem mapeamento ECID serão **descartados** dos fluxos de dados de ativação existentes.
+>* O serviço de destinos agora relata corretamente quando perfis sem ECID são descartados da ativação.
+>* **Importante:** Perfis sem ECID nunca chegaram a [!DNL The Trade Desk] mesmo antes desta atualização. A integração sempre exigiu a ECID. Essa atualização corrige um erro que anteriormente impedia que essas quedas ficassem visíveis em suas métricas.
 >
 >**O que é necessário fazer:**
 >
 >* Analise seus dados de público-alvo para confirmar se os perfis têm valores ECID válidos.
->* Monitore suas métricas de ativação para verificar as contagens esperadas de perfis.
-
+>* Monitore suas métricas de ativação para verificar as contagens esperadas de perfis. As contagens mais baixas refletem relatórios precisos, não uma alteração no comportamento de destino.
 
 Use este conector de destino para enviar dados de perfil para [!DNL The Trade Desk]. Este conector envia dados para o ponto de extremidade primário [!DNL The Trade Desk]. A integração entre o Adobe Experience Platform e o [!DNL The Trade Desk] não oferece suporte à exportação de dados para o ponto de extremidade de terceiros [!DNL The Trade Desk].
 
@@ -84,7 +83,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/pt-br/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
 
 ## Conectar ao destino {#connect}
 
@@ -157,7 +156,7 @@ Exemplos:
 
 >[!NOTE]
 > 
->Após a atualização[&#x200B; de &#x200B;](/help/release-notes/2025/july-2025.md#destinations)julho de 2025 para o serviço de destinos, o mapeamento [!DNL ECID] será aplicado. Os perfis que não têm [!DNL ECID] agora são descartados conforme esperado, o que pode mostrar contagens de ativação mais baixas em comparação ao comportamento herdado.
+>Após a atualização [de julho de 2025](/help/release-notes/2025/july-2025.md#destinations) para o serviço de destinos, os perfis com [!DNL ECID] ausente agora são relatados corretamente como descartados nas métricas de ativação. Esse sempre foi o comportamento da integração - perfis sem [!DNL ECID] nunca chegaram a [!DNL The Trade Desk] - mas as quedas agora estão adequadamente visíveis no monitoramento do fluxo de dados. As contagens de ativação mais baixas refletem relatórios precisos, não uma alteração na funcionalidade de destino.
 
 ## Dados exportados {#exported-data}
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão Geral do SQL Server Source Connector
 description: Saiba como conectar o Microsoft SQL Server ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '247'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 
 [!DNL Experience Platform] fornece suporte para assimilação de dados de um banco de dados de terceiros. [!DNL Experience Platform] pode se conectar a diferentes tipos de bancos de dados, como bancos relacionais, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui o SQL Server [!DNL Microsoft].
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 A documentação abaixo fornece informações sobre como conectar o [!DNL Microsoft] SQL Server ao [!DNL Experience Platform] usando APIs ou a interface do usuário:
 

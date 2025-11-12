@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão Geral Do Conector Do Mailchimp
 description: Saiba como conectar o Mailchimp ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: eedb4fe0-3aae-4e93-bf13-c095171e2d11
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '214'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 
 O Experience Platform oferece suporte para assimilação de dados de um sistema de automação de marketing de terceiros. O suporte para provedores de automação de marketing inclui [!DNL Mailchimp].
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 A documentação abaixo fornece informações sobre como conectar o [!DNL Mailchimp] ao Experience Platform e trazer dados do [!DNL Mailchimp Campaigns] ou [!DNL Mailchimp Members] usando APIs ou a interface do usuário:
 

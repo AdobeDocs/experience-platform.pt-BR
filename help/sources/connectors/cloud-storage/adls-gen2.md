@@ -2,9 +2,9 @@
 title: Visão geral do Azure Data Lake Storage Gen2 Source Connector
 description: Saiba como conectar o Azure Data Lake Storage Gen2 à Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 424d7278-44d9-4653-82c0-eb21cbb9b623
-source-git-commit: 8877e7dceeebfb1d4f31b63fef4544a69c72b38e
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '451'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 O Adobe Experience Platform fornece conectividade nativa para provedores de nuvem, como o AWS, o [!DNL Google Cloud Platform] e o [!DNL Azure], permitindo que você traga seus dados desses sistemas.
 
-As fontes de armazenamento na nuvem podem trazer seus próprios dados para o Experience Platform sem a necessidade de baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Origens. O Experience Platform permite trazer dados de [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) por meio de lotes.
+As fontes de armazenamento na nuvem podem trazer seus próprios dados para a Experience Platform sem a necessidade de baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho Origens. O Experience Platform permite trazer dados de [!DNL Azure Data Lake Storage Gen2] (ADLS Gen2) por meio de lotes.
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 >[!IMPORTANT]
 >
->A origem [!DNL Azure Data Lake Storage Gen2] não dá suporte à conectividade da mesma região com o Experience Platform. Se a instância do [!DNL Azure] estiver usando a mesma região de rede que o Experience Platform, não será possível estabelecer uma conexão com fontes de Experience Platform. Atualmente, somente a conectividade entre regiões é compatível.
+>A origem [!DNL Azure Data Lake Storage Gen2] não dá suporte à conectividade da mesma região com o Experience Platform. Se a instância do [!DNL Azure] estiver usando a mesma região de rede que o Experience Platform, não será possível estabelecer uma conexão com as origens do Experience Platform. Atualmente, somente a conectividade entre regiões é compatível.
 
 ## Restrições de nomenclatura para arquivos e diretórios
 
@@ -38,7 +38,7 @@ Veja a seguir uma lista de restrições que você deve considerar ao nomear seu 
 
 >[!NOTE]
 >
->A entidade de serviço usada para criar uma conta [!DNL Azure Data Lake Storage Gen2] deve ter pelo menos a função de Reader de Dados de Blob de Armazenamento **atribuída pelo controle de acesso (IAM)**
+>A entidade de serviço usada na criação de uma conta [!DNL Azure Data Lake Storage Gen2] deve ter pelo menos a função **Storage Blob Data Reader** atribuída pelo controle de acesso (IAM)
 
 A documentação abaixo fornece informações sobre como conectar o [!DNL Azure Data Lake Storage Gen2] ao Experience Platform usando APIs ou a interface do usuário:
 

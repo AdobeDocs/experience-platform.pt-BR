@@ -4,9 +4,9 @@ description: Saiba como conectar o SAP Commerce ao Adobe Experience Platform usa
 last-substantial-update: 2023-07-26T00:00:00Z
 badge: Beta
 exl-id: d2ddfec3-a421-48a7-b765-86ce9162f26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '351'
+source-wordcount: '335'
 ht-degree: 3%
 
 ---
@@ -26,9 +26,9 @@ A fonte [!DNL SAP Commerce] permite assimilar informações de clientes e contat
 
 Além disso, se [!DNL SAP Commerce] for executado para recuperar dados do cliente, a API de [Relações Cliente-Contato](https://api.sap.com/api/BusinessPartner_APIs/path/GET_relationships-customer-contacts) também será chamada para recuperar as informações de contato do cliente.
 
-## LISTA DE PERMISSÕES de endereço IP {#ip-allow-list}
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP {#ip-allow-list}
 
-Pode ser necessário adicionar uma lista de endereços IP a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ## Pré-requisitos {#prerequisites}
 

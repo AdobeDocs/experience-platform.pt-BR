@@ -3,10 +3,10 @@ title: Visão geral do Amazon Redshift Source Connector
 description: Saiba como conectar o Amazon Redshift ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 0%
+source-wordcount: '396'
+ht-degree: 7%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 0%
 >- Agora você pode usar a origem [!DNL Amazon Redshift] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../landing/multi-cloud.md).
 
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
 O Experience Platform oferece suporte para assimilação de dados de um banco de dados de terceiros. O Experience Platform pode se conectar a diferentes tipos de bancos de dados, como bancos de dados relacionais, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL Amazon Redshift].
 
@@ -27,9 +27,9 @@ O Experience Platform oferece suporte para assimilação de dados de um banco de
 
 Siga as etapas abaixo para saber como configurar sua conta do [!DNL Amazon Redshift] para o Experience Platform no Azure.
 
-### LISTA DE PERMISSÕES de endereço IP
+### INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao seu incluo na lista de permissões antes de conectar suas fontes à Experience Platform no Azure. Para obter mais informações, leia o manual sobre [sobre como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform no Azure](../../ip-address-allow-list.md) para obter mais informações.
 
 ## Configure sua origem do [!DNL Amazon Redshift] para o Experience Platform no Amazon Web Services {#aws}
 
@@ -37,9 +37,9 @@ Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes 
 >
 >Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../landing/multi-cloud.md).
 
-### INCLUI NA LISTA DE PERMISSÕES de endereço IP para conexão no AWS
+### INCLUO NA LISTA DE PERMISSÕES de endereços IP para conexão no AWS
 
-Você deve adicionar endereços IP específicos da sua região à inclui na lista de permissões antes de conectar suas fontes à Experience Platform no AWS. Para obter mais informações, leia o manual sobre [sobre como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform no AWS](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform no AWS. Para obter mais informações, leia o manual sobre [sobre como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform no AWS](../../ip-address-allow-list.md) para obter mais informações.
 
 ## Conectar o [!DNL Amazon Redshift] ao Experience Platform usando APIs
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do conector Source da API REST genérica
 description: Saiba como conectar a REST API genérica ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: e3449e33-7261-4aa2-bce9-5530eb4fcc68
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ A Experience Platform fornece suporte para assimilação de dados de aplicativos
 
 A fonte [!DNL Generic REST API] permite trazer dados de aplicativos baseados em REST para a Experience Platform. O [!DNL Generic REST API] oferece suporte à autenticação básica e à atualização de autenticação baseada em código do OAuth 2.
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 A documentação abaixo fornece informações sobre como conectar uma origem [!DNL Generic REST API] ao Experience Platform usando APIs.
 

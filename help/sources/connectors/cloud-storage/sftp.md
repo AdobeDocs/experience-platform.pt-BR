@@ -2,16 +2,16 @@
 title: Visão geral do conector SFTP Source
 description: Saiba como conectar um servidor SFTP ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1215'
-ht-degree: 0%
+source-wordcount: '1205'
+ht-degree: 2%
 
 ---
 
 # Conector SFTP
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
 Leia este documento para obter as etapas de pré-requisito que você precisa concluir para conectar com êxito sua conta do [!DNL SFTP] ao Experience Platform.
 
@@ -23,9 +23,9 @@ Leia este documento para obter as etapas de pré-requisito que você precisa con
 
 Leia esta seção para obter as etapas de pré-requisito que você deve concluir para conectar com êxito a origem do [!DNL SFTP] ao Experience Platform.
 
-### INCLUIR NA LISTA DE PERMISSÕES endereço IP
+### INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma inclui na lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região ao seu incluo na lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [inclui na lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ### Restrições de nomenclatura para arquivos e diretórios
 

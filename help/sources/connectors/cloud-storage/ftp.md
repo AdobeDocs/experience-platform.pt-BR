@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do conector FTP Source
 description: Saiba como conectar um servidor FTP ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: a6186fad-8a7b-4103-80c7-a522ff69fe9e
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -25,9 +25,9 @@ As fontes de armazenamento na nuvem podem trazer seus próprios dados para o [!D
 >
 >Ao criar um fluxo de dados com o conector de origem FTP, é altamente recomendável definir para um agendamento de assimilação única devido a problemas persistentes com atualizações incrementais encontradas em servidores FTP.
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ## Restrições de nomenclatura para arquivos e diretórios
 

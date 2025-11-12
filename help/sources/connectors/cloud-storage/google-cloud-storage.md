@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do Google Cloud Storage Source Connector
 description: Saiba como conectar o Google Cloud Storage ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -21,21 +21,21 @@ O Adobe Experience Platform fornece conectividade nativa para provedores de nuve
 
 As fontes de armazenamento na nuvem podem trazer seus próprios dados para a Experience Platform sem a necessidade de baixar, formatar ou carregar. Os dados assimilados podem ser formatados como JSON ou Parquet compatível com o Experience Data Model (XDM) ou em um formato delimitado. Cada etapa do processo é integrada ao fluxo de trabalho de origens. O Experience Platform permite trazer dados de [!DNL Google Cloud Storage] por meio de lotes.
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ## Pré-requisito de configuração para conectar sua conta do [!DNL Google Cloud Storage]
 
-Para se conectar ao Experience Platform, primeiro você deve habilitar a interoperabilidade para sua conta [!DNL Google Cloud Storage]. Para acessar a configuração de interoperabilidade, abra o [!DNL Google Cloud Platform] e selecione **[!UICONTROL Configurações]** na opção **[!UICONTROL Armazenamento na nuvem]** no painel de navegação.
+Para se conectar ao Experience Platform, primeiro você deve habilitar a interoperabilidade para sua conta [!DNL Google Cloud Storage]. Para acessar a configuração de interoperabilidade, abra o [!DNL Google Cloud Platform] e selecione **[!UICONTROL Settings]** na opção **[!UICONTROL Cloud Storage]** no painel de navegação.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
-A página **[!UICONTROL Configurações]** é exibida. Aqui, você pode ver informações sobre sua ID de projeto do [!DNL Google] e detalhes sobre sua conta do [!DNL Google Cloud Storage]. Para acessar as configurações de interoperabilidade, selecione **[!UICONTROL Interoperabilidade]** no cabeçalho superior.
+A página **[!UICONTROL Settings]** é exibida. Aqui, você pode ver informações sobre sua ID de projeto do [!DNL Google] e detalhes sobre sua conta do [!DNL Google Cloud Storage]. Para acessar as configurações de interoperabilidade, selecione **[!UICONTROL Interoperability]** no cabeçalho superior.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/project-access.png) -->
 
-A página **[!UICONTROL Interoperabilidade]** contém informações sobre autenticação, chaves de acesso e o projeto padrão associado à sua conta de serviço. Para gerar uma nova ID de chave de acesso e uma chave de acesso secreta para sua conta de serviço, selecione **[!UICONTROL Criar uma Chave para uma Conta de Serviço]**.
+A página **[!UICONTROL Interoperability]** contém informações sobre autenticação, chaves de acesso e o projeto padrão associado à sua conta de serviço. Para gerar uma nova ID de chave de acesso e uma chave de acesso secreta para sua conta de serviço, selecione **[!UICONTROL Create a Key for a Service Account]**.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 

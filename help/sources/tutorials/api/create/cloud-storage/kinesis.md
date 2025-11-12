@@ -3,9 +3,9 @@ title: Criar uma conexão Amazon Kinesis Source usando a API do serviço de flux
 description: Saiba como conectar o Adobe Experience Platform a uma origem Amazon Kinesis usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '759'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,7 @@ Para que [!DNL Flow Service] se conecte à sua conta [!DNL Amazon Kinesis], voc�
 | ---------- | ----------- |
 | `accessKeyId` | A ID da chave de acesso é metade do par de chaves de acesso usado para autenticar sua conta do [!DNL Kinesis] no Experience Platform. |
 | `secretKey` | A chave de acesso secreta é a outra metade do par de chaves de acesso usado para autenticar sua conta do [!DNL Kinesis] no Experience Platform. |
-| `region` | A região da sua conta [!DNL Kinesis]. Consulte o manual sobre [adição de endereços IP à lista de permissões](../../../../ip-address-allow-list.md) para obter mais informações sobre regiões. |
+| `region` | A região da sua conta [!DNL Kinesis]. Consulte o manual sobre [adição de endereços IP ao seu incluo na lista de permissões](../../../../ip-address-allow-list.md) para obter mais informações sobre regiões. |
 | `connectionSpec.id` | A especificação de conexão retorna as propriedades do conector de uma origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID da especificação de conexão [!DNL Kinesis] é: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 Para obter mais informações sobre [!DNL Kinesis] chaves de acesso e como gerá-las, consulte este [[!DNL AWS] guia sobre como gerenciar chaves de acesso para usuários do IAM](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).

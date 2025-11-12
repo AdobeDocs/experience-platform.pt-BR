@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do Oracle Object Storage Source Connector
 description: Saiba como conectar o Oracle Object Storage ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ O Adobe Experience Platform fornece conectividade nativa para provedores de nuve
 
 As fontes de armazenamento na nuvem podem trazer seus dados para a Experience Platform sem precisar baixar, formatar ou carregar. Os dados assimilados podem ser formatados como XDM JSON, XDM Parquet ou delimitados. Cada etapa do processo é integrada ao fluxo de trabalho de origens. O Experience Platform permite trazer dados de [!DNL Oracle Object Storage] por meio de lotes.
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte o documento [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ## Restrições de nomenclatura para arquivos e diretórios
 

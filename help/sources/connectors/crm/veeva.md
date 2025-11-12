@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do Conector Veeva CRM Source
 description: Saiba como conectar o Veeva CRM ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 
 A Experience Platform oferece suporte para assimilação de dados de um sistema CRM de terceiros. O suporte para provedores de CRM inclui [!DNL Veeva CRM].
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 A documentação abaixo fornece informações sobre como conectar o [!DNL Veeva CRM] ao Experience Platform usando APIs ou a interface do usuário:
 

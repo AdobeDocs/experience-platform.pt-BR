@@ -3,24 +3,24 @@ title: Visão geral do Zendesk Source Connector
 description: Saiba como conectar o Zendesk ao Adobe Experience Platform usando APIs ou a interface do usuário.
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: 9f245783-949d-4f40-9cf3-8991b4b6d780
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '344'
-ht-degree: 0%
+source-wordcount: '330'
+ht-degree: 8%
 
 ---
 
 # [!DNL Zendesk]
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
 A Experience Platform oferece suporte para assimilação de dados de um aplicativo de sucesso de clientes de terceiros. O suporte para provedores de sucesso do cliente inclui [!DNL Zendesk].
 
 Estas [fontes](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=pt-BR) do Adobe Experience Platform usam a [API do Zendesk Search > Exportar Resultados da Pesquisa](https://developer.zendesk.com/api-reference/ticketing/ticket-management/search/#export-search-results) que retorna informações dos usuários para o Experience Platform do Zendesk para processamento adicional.
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ## Autentique sua conta do [!DNL Zendesk]
 
@@ -45,5 +45,5 @@ A documentação abaixo fornece informações sobre como conectar o [!DNL Zendes
 
 ## Conectar o [!DNL Zendesk] ao Experience Platform usando a interface
 
-* [Criar uma conexão de origem  [!DNL Zendesk &#x200B;] na interface](../../tutorials/ui/create/customer-success/zendesk.md)
+* [Criar uma conexão de origem  [!DNL Zendesk ] na interface](../../tutorials/ui/create/customer-success/zendesk.md)
 * [Criar um fluxo de dados para uma conexão de origem de sucesso do cliente na interface](../../tutorials/ui/dataflow/customer-success.md)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do conector GreenPlum Source
 description: Saiba como conectar o GreenPlum ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '178'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ O Adobe Experience Platform fornece conectividade nativa para provedores de banc
 
 Há suporte para diferentes tipos de bancos de dados de terceiros, incluindo bancos de dados relacionais, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL GreenPlum].
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 A documentação abaixo fornece informações sobre como conectar o [!DNL GreenPlum] ao [!DNL Experience Platform] usando APIs ou a interface do usuário:
 

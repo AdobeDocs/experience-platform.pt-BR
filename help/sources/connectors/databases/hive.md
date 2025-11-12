@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do Apache Hive no Conector do Source do Azure HDInsights
 description: Saiba como conectar o Apache Hive no Azure HDInsights ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: f55f9e9a-779e-426a-bca6-7567ea843698
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '261'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 
 [!DNL Experience Platform] fornece suporte para assimilação de dados de um banco de dados de terceiros. [!DNL Experience Platform] pode se conectar a diferentes tipos de bancos de dados, como bancos relacionais, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL Apache Hive] em [!DNL Azure HDInsights].
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 A documentação abaixo fornece informações sobre como conectar [!DNL Apache Hive] em [!DNL Azure HDInsights] a [!DNL Experience Platform] usando APIs ou a interface do usuário:
 

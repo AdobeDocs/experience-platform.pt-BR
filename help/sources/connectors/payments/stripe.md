@@ -2,9 +2,9 @@
 title: Stripe
 description: Saiba como assimilar dados de pagamentos de sua conta do Stripe para o Adobe Experience Platform
 exl-id: 191d217e-036d-491a-b7dd-abcad74625ba
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '773'
 ht-degree: 1%
 
 ---
@@ -466,13 +466,13 @@ Em [!DNL Stripe], os **preços** representam o custo unitário, a moeda e o cicl
 >[!ENDTABS]
 
 
-### LISTA DE PERMISSÕES de endereço IP
+### INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ### Configurar permissões no Experience Platform
 
-Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Stripe] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../access-control/ui/overview.md).
+Você deve ter as permissões **[!UICONTROL View Sources]** e **[!UICONTROL Manage Sources]** habilitadas para sua conta para conectar sua conta do [!DNL Stripe] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../access-control/ui/overview.md).
 
 ## Próximas etapas
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Modelo de documentação de autoatendimento para a interface do
 description: Saiba como criar uma conexão de origem YOURSOURCE usando a interface do usuário do Adobe Experience Platform.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '710'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,7 @@ Este tutorial fornece etapas para a criação de um conector de origem *YOURSOUR
 
 *Adicione nesta seção informações sobre qualquer item que os clientes precisem saber antes de começar a configurar a origem na interface do usuário do Adobe Experience Platform. Isso pode ser sobre:*
 
-* *que precisa ser adicionado a uma lista de permissões*
+* *que precisa ser adicionado a um incluo na lista de permissões*
 * *requisitos para hash de email*
 * *qualquer especificação de conta da sua parte*
 * *como obter as credenciais de autenticação para se conectar à sua plataforma*
@@ -49,11 +49,11 @@ Para obter mais informações sobre essas credenciais, consulte a documentação
 
 ## Conecte sua conta *YOURSOURCE*
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Sources]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Sources]. A tela [!UICONTROL Catalog] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria *CATEGORIA* de YOURSOURCE, selecione *YOURSOURCE* e **[!UICONTROL Adicionar dados]**.
+Na categoria *CATEGORIA* de YOURSOURCE, selecione *YOURSOURCE* e **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
@@ -61,17 +61,17 @@ Na categoria *CATEGORIA* de YOURSOURCE, selecione *YOURSOURCE* e **[!UICONTROL A
 
 ![catálogo](../assets/ui/catalog.png)
 
-A página **[!UICONTROL Conectar sua conta de ORIGEM]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Connect YOURSOURCE account]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente
 
-Para usar uma conta existente, selecione a conta *YOURSOURCE* com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Avançar]** para continuar.
+Para usar uma conta existente, selecione a conta *YOURSOURCE* com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Next]** para continuar.
 
 ![existente](../assets/ui/existing.png)
 
 ### Nova conta
 
-Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
+Se você estiver criando uma nova conta, selecione **[!UICONTROL New account]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Connect to source]** e aguarde algum tempo para a nova conexão ser estabelecida.
 
 ![novo](../assets/ui/new.png)
 
@@ -79,7 +79,7 @@ Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e
 
 *Os fluxos de trabalho para as etapas restantes da criação de um fluxo de dados são modularizados. Se houver chamadas específicas que você queira fazer em relação à sua origem, consulte a seção de recursos adicionais abaixo.*
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta *YOURSOURCE*. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=pt-BR).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta *YOURSOURCE*. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
 
 ## Recursos adicionais
 

@@ -3,9 +3,9 @@ title: Visão geral do Oracle Eloqua Connector
 description: Saiba como conectar o Oracle Eloqua ao Adobe Experience Platform usando APIs ou a interface do usuário.
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: ebe16bff-4c89-4d45-9973-e5aa13b61a36
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '254'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ O Adobe Experience Platform permite que os dados sejam assimilados de fontes ext
 
 O Experience Platform oferece suporte para assimilação de dados de um sistema de automação de marketing de terceiros. O suporte para provedores de automação de marketing inclui [!DNL Oracle Eloqua].
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 A documentação abaixo fornece informações sobre como conectar o [!DNL Oracle Eloqua] ao Experience Platform usando APIs ou a interface do usuário:
 

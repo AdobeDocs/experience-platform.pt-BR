@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 6debb9eeb811c98d322c99b1b779f5f9eff8573c
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '1073'
+source-wordcount: '1072'
 ht-degree: 34%
 
 ---
@@ -91,7 +91,7 @@ ht-degree: 34%
       - [Conector do Snowflake](connectors/databases/snowflake.md)
       - [Conector do Teradata Vantage](connectors/databases/teradata-vantage.md)
    - Parceiro de dados e identidade {#data-partner}
-      - [Assimilação de dados da Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
+      - [Ingestão de dados da Acxiom](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importação de dados de prospecção da Acxiom](connectors/data-partners/acxiom-prospecting-data-import.md)
       - [Perfis de usuários da Algolia](connectors/data-partners/algolia-user-profiles.md)
       - [Intenção de Bombora](connectors/data-partners/bombora.md)
@@ -115,7 +115,7 @@ ht-degree: 34%
       - [Conector Oracle Eloqua](connectors/marketing-automation/oracle-eloqua.md)
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
-      - [&#x200B; Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
+      - [ Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Pagamentos {#payments}
       - [Conector quadrado](connectors/payments/square.md)
       - [Conector do Stripe](connectors/payments/stripe.md)
@@ -155,7 +155,7 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [&#x200B; Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [ Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
@@ -192,7 +192,7 @@ ht-degree: 34%
          - [Atividades do Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-activities.md)
          - [Entidades do Oracle NetSuite](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
-         - [&#x200B; Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [ Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamentos {#payments}
          - [Quadrado](tutorials/api/create/payments/square.md)
          - [Stripe](tutorials/api/create/payments/stripe.md)
@@ -223,7 +223,7 @@ ht-degree: 34%
       - [Coletar dados de pagamento](tutorials/api/collect/payments.md)
       - [Coletar dados de protocolo](tutorials/api/collect/protocols.md)
       - [Coletar dados de transmissão](tutorials/api/collect/streaming.md)
-   - [Assimilação sob demanda](tutorials/api/on-demand-ingestion.md)
+   - [Ingestão sob demanda](tutorials/api/on-demand-ingestion.md)
    - [Filtrar dados no nível da origem](tutorials/api/filter.md)
    - [Monitorar fluxos de dados](tutorials/api/monitor.md)
    - [Atualizar contas](tutorials/api/update.md)
@@ -278,7 +278,7 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [&#x200B; Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [ Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
@@ -302,7 +302,7 @@ ht-degree: 34%
          - [Transmissão do Snowflake](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Parceiro de dados e identidade {#data-partner}
-         - [Assimilação de dados da Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
+         - [Ingestão de dados da Acxiom](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importação de dados de prospecção da Acxiom](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
          - [Perfis de usuários da Algolia](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [Intenção de Bombora](tutorials/ui/create/data-partners/bombora.md)
@@ -330,7 +330,7 @@ ht-degree: 34%
          - [Entidades do Oracle NetSuite](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
          - [Conector de retransmissão](tutorials/ui/create/marketing-automation/relay-connector.md)
-         - [&#x200B; Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [ Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Pagamentos {#payments}
          - [Quadrado](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
@@ -354,7 +354,7 @@ ht-degree: 34%
    - [Criar um fluxo de dados de origem usando modelos na interface](tutorials/ui/templates.md)
    - [Filtrar objetos de fontes](tutorials/ui/filter.md)
    - [Assimilar dados criptografados](tutorials/ui/encryped-ingestion.md)
-   - [Assimilação sob demanda](tutorials/ui/on-demand-ingestion.md)
+   - [Ingestão sob demanda](tutorials/ui/on-demand-ingestion.md)
    - [Monitorar fluxos de dados em lote](tutorials/ui/monitor.md)
    - [Monitorar fluxos de dados de transmissão](tutorials/ui/monitor-streaming.md)
    - [Atualizar contas](tutorials/ui/update.md)
@@ -398,7 +398,7 @@ ht-degree: 34%
    - [Mensagens de erro em origens](./errors/sources-errors.md)
    - [Mensagens de erro no serviço de fluxo](./errors/flow-service-errors.md)
 - [Notificações de execução de fluxo](notifications.md)
-- [LISTA DE PERMISSÕES de endereço IP](ip-address-allow-list.md)
+- [INCLUO NA LISTA DE PERMISSÕES de endereços IP](ip-address-allow-list.md)
 - [Perguntas frequentes](./troubleshooting.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

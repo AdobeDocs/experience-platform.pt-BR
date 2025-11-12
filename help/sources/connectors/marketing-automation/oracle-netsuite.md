@@ -3,9 +3,9 @@ title: Visão geral do Oracle NetSuite Source
 description: Saiba como conectar o Oracle NetSuite ao Adobe Experience Platform usando APIs ou a interface do usuário.
 last-substantial-update: 2024-01-30T00:00:00Z
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '722'
 ht-degree: 6%
 
 ---
@@ -31,9 +31,9 @@ Exiba a tabela a seguir para obter mais informações sobre as duas fontes [!DNL
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Cliente | Recupere dados específicos do cliente, incluindo detalhes como nomes, endereços e identificadores-chave do cliente. |
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Contato | Recupere nomes de contato, emails, números de telefone e quaisquer campos personalizados relacionados a contatos associados aos clientes. |
 
-## LISTA DE PERMISSÕES de endereço IP {#ip-allow-list}
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP {#ip-allow-list}
 
-Pode ser necessário adicionar uma lista de endereços IP a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ## Pré-requisitos {#prerequisites}
 

@@ -3,16 +3,16 @@ title: Visão geral do SugarCRM Source
 description: Saiba como conectar o SugarCRM ao Adobe Experience Platform usando APIs ou a interface do usuário.
 last-substantial-update: 2023-08-23T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 0%
+source-wordcount: '349'
+ht-degree: 8%
 
 ---
 
 # [!DNL SugarCRM]
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
 O Experience Platform oferece suporte para assimilação de dados de um aplicativo de CRM de terceiros. O suporte para provedores de CRM inclui [!DNL SugarCRM].
 
@@ -26,9 +26,9 @@ A fonte [!DNL SugarCRM] permite assimilar dados de contas, contatos e eventos do
 
 O [!DNL SugarCRM] usa tokens de portador como um mecanismo de autenticação para se comunicar com as APIs de Conta e Contato do [!DNL SugarCRM] e a API de Eventos do [!DNL SugarCRM].
 
-## LISTA DE PERMISSÕES de endereço IP
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região à lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 ## Pré-requisitos
 

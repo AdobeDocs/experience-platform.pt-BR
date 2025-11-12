@@ -79,7 +79,7 @@ Se você estiver criando uma nova conta, selecione **[!UICONTROL New account]** 
 
 *Os fluxos de trabalho para as etapas restantes da criação de um fluxo de dados são modularizados. Se houver chamadas específicas que você queira fazer em relação à sua origem, consulte a seção de recursos adicionais abaixo.*
 
-Ao seguir este tutorial, você estabeleceu uma conexão com sua conta *YOURSOURCE*. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+Ao seguir este tutorial, você estabeleceu uma conexão com sua conta *YOURSOURCE*. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=pt-BR).
 
 ## Recursos adicionais
 

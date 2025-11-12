@@ -94,7 +94,7 @@ Quando terminar, selecione **[!UICONTROL Next]**.
 
 A etapa [!UICONTROL Mapping] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
-O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html?lang=pt-BR).
 
 Após mapear os dados de origem com êxito, selecione **[!UICONTROL Next]**.
 
@@ -123,7 +123,7 @@ Para recuperar o ponto de extremidade de streaming, vá para a página [!UICONTR
 
 *Os fluxos de trabalho para as etapas restantes da criação de um fluxo de dados são modularizados. Se houver chamadas específicas que você queira fazer em relação à sua origem, consulte a seção de recursos adicionais abaixo.*
 
-Seguindo este tutorial, você estabeleceu uma conexão com sua conta *YOURSOURCE*. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html).
+Seguindo este tutorial, você estabeleceu uma conexão com sua conta *YOURSOURCE*. Agora você pode seguir para o próximo tutorial e [configurar um fluxo de dados para trazer dados para a Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html?lang=pt-BR).
 
 ## Recursos adicionais
 

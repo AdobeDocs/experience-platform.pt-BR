@@ -1,10 +1,10 @@
 ---
-description: Saiba como configurar especificações do servidor de destino no Adobe Experience Platform Destination SDK por meio do endpoint &grave;/authoring/destination-servers&grave;.
+description: Saiba como configurar especificações do servidor de destino no Adobe Experience Platform Destination SDK por meio do endpoint `/authoring/destination-servers`.
 title: Especificações do servidor para destinos criados com o Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
 workflow-type: tm+mt
-source-wordcount: '2753'
+source-wordcount: '2775'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Esta página mostra todos os tipos de servidor de destino compatíveis com o Des
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -78,7 +78,7 @@ No exemplo abaixo, um parceiro cria um servidor de destino da Zona de aterrissag
          "templatingStrategy":"NONE",
          "value":"Your/hardcoded/path/here"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -307,7 +307,7 @@ A amostra abaixo mostra um exemplo de uma configuração de servidor de destino 
          "templatingStrategy":"PEBBLE_V1",
          "value":"{{customerData.path}}"
       },
-      "useCase": "Your use case"
+      "useCase": "dlz_destination"
    }
 }
 ```
@@ -318,6 +318,7 @@ A amostra abaixo mostra um exemplo de uma configuração de servidor de destino 
 | `destinationServerType` | String | Defina esse valor de acordo com sua plataforma de destino. Para destinos [!DNL Data Landing Zone], defina como `FILE_BASED_DLZ`. |
 | `fileBasedDlzDestination.path.templatingStrategy` | String | *Obrigatório*. Defina este valor de acordo com o tipo de valor usado no campo `path.value`.<ul><li>Se você quiser que seus usuários insiram sua própria conta do [!DNL Data Landing Zone] na interface do usuário do Experience Platform, defina esse valor como `PEBBLE_V1`. Nesse caso, você deve modelar o campo `path.value` para ler um valor dos [campos de dados do cliente](../destination-configuration/customer-data-fields.md) preenchidos pelo usuário. Esse caso de uso é mostrado no exemplo acima.</li><li>Se estiver usando um caminho embutido em código para sua integração, como `"path.value": "https://myaccount.blob.core.windows.net/"`, então defina esse valor como `NONE`. |
 | `fileBasedDlzDestination.path.value` | String | O caminho para a pasta de destino que hospedará os arquivos exportados. |
+| `fileBasedDlzDestination.useCase` | String | *Obrigatório*. Defina como `"dlz_destination"`. Esta propriedade identifica o destino como um destino [!DNL Data Landing Zone]. Esta propriedade só é usada ao criar um destino [!DNL Data Landing Zone]. |
 
 {style="table-layout:auto"}
 

@@ -4,9 +4,9 @@ title: Visualizar ponto de extremidade da API Status de amostra (Visualização 
 description: O ponto de extremidade de status da amostra de visualização da API do perfil do cliente em tempo real permite visualizar a amostra bem-sucedida mais recente dos dados do perfil, listar a distribuição do perfil por conjunto de dados e por identidade e gerar relatórios mostrando a sobreposição do conjunto de dados, a sobreposição de identidade e os perfis não compilados.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: d1eb9191c74add1ab21cd268327bab9a3255d182
+source-git-commit: bb2cfb479031f9e204006ba489281b389e6c6c04
 workflow-type: tm+mt
-source-wordcount: '2904'
+source-wordcount: '2306'
 ht-degree: 1%
 
 ---
@@ -46,7 +46,7 @@ A contagem de perfis e as métricas de namespace também estão disponíveis na 
 
 ## Exibir status da última amostra {#view-last-sample-status}
 
-Você pode executar uma solicitação GET para o ponto de extremidade `/previewsamplestatus` a fim de exibir os detalhes do último trabalho de amostra bem-sucedido que foi executado para sua organização. Isso inclui o número total de perfis na amostra, bem como a métrica de contagem de perfis ou o número total de perfis que sua organização tem na Experience Platform.
+Você pode exibir os detalhes do último trabalho de amostra bem-sucedido executado para sua organização fazendo uma solicitação GET para o ponto de extremidade `/previewsamplestatus`. Esse relatório inclui o número total de perfis na amostra, bem como a métrica de contagem de perfis ou o número total de perfis que sua organização tem na Experience Platform.
 
 A contagem de perfis é gerada após a mesclagem de fragmentos de perfis para formar um único perfil para cada cliente individual. Em outras palavras, quando os fragmentos de perfil são mesclados, eles retornam uma contagem de &quot;1&quot; perfil, pois todos estão relacionados ao mesmo indivíduo.
 
@@ -60,6 +60,8 @@ GET /previewsamplestatus
 
 **Solicitação**
 
++++ Uma solicitação de amostra para exibir o último status de amostra.
+
 ```shell
 curl -X GET \
   https://platform.adobe.io/data/core/ups/previewsamplestatus \
@@ -69,9 +71,13 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 **Resposta**
 
-A resposta inclui os detalhes do último trabalho de amostra bem-sucedido executado para a organização.
+Uma resposta bem-sucedida retorna o status HTTP 200 e inclui os detalhes do último trabalho de amostra bem-sucedido executado para a organização.
+
++++ Uma resposta de amostra que contém o último status de amostra.
 
 >[!NOTE]
 >
@@ -98,23 +104,25 @@ A resposta inclui os detalhes do último trabalho de amostra bem-sucedido execut
 ```
 
 | Propriedade | Descrição |
-|---|---|
+| -------- | ----------- |
 | `numRowsToRead` | O número total de perfis mesclados na amostra. |
 | `sampleJobRunning` | Um valor booleano que retorna `true` quando um trabalho de exemplo está em andamento. Fornece transparência na latência que ocorre de quando um arquivo em lote é carregado para quando ele é realmente adicionado ao armazenamento de Perfil. |
 | `docCount` | Contagem total de documentos no banco de dados. |
 | `totalFragmentCount` | Número total de fragmentos de perfil no armazenamento Perfil. |
 | `lastSuccessfulBatchTimestamp` | Carimbo de data e hora da última assimilação de lote bem-sucedida. |
 | `streamingDriven` | *Este campo foi descontinuado e não tem significado para a resposta.* |
-| `totalRows` | Número total de perfis mesclados no Experience Platform, também conhecido como &quot;contagem de perfis&quot;. |
+| `totalRows` | Número total de perfis mesclados no Experience Platform, também conhecido como contagem de perfis. |
 | `lastBatchId` | ID de assimilação do último lote. |
 | `status` | Status da última amostra. |
 | `samplingRatio` | Taxa de perfis mesclados da amostra (`numRowsToRead`) para o total de perfis mesclados (`totalRows`), expressa como uma porcentagem no formato decimal. |
 | `mergeStrategy` | Estratégia de mesclagem usada na amostra. |
 | `lastSampledTimestamp` | Carimbo de data/hora da última amostra bem-sucedida. |
 
++++
+
 ## Listar distribuição de perfis por conjunto de dados
 
-Para ver a distribuição de perfis por conjunto de dados, você pode executar uma solicitação GET para o ponto de extremidade `/previewsamplestatus/report/dataset`.
+Você pode ver a distribuição de perfis por conjunto de dados fazendo uma solicitação GET para o ponto de extremidade `/previewsamplestatus/report/dataset`.
 
 **Formato da API**
 
@@ -123,30 +131,39 @@ GET /previewsamplestatus/report/dataset
 GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 ```
 
-| Parâmetro | Descrição |
-|---|---|
-| `date` | Especifique a data do relatório a ser retornado. Se vários relatórios tiverem sido executados na data, o relatório mais recente dessa data será retornado. Se não existir um relatório para a data especificada, um erro 404 (Não encontrado) será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: AAAA-MM-DD. Exemplo: `date=2024-12-31` |
+| Parâmetros de consulta | Descrição | Exemplo |
+| --------------- | ----------- | ------- |
+| `date` | Especifique a data do relatório a ser retornado. Se vários relatórios tiverem sido executados na data, o relatório mais recente dessa data será retornado. Se não existir um relatório para a data especificada, um erro 404 (Não encontrado) será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: AAAA-MM-DD. | `date=2024-12-31` |
 
 **Solicitação**
 
 A solicitação a seguir usa o parâmetro `date` para retornar o relatório mais recente para a data especificada.
 
++++ Uma solicitação de amostra para recuperar a distribuição do perfil por conjunto de dados.
+
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset?date=2020-08-01 \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset?date=2020-08-01 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-**Resposta**
++++
 
-A resposta inclui uma matriz `data`, contendo uma lista de objetos de conjunto de dados. A resposta mostrada foi truncada para mostrar três conjuntos de dados.
+**Resposta**
 
 >[!NOTE]
 >
 >Se houver vários relatórios para a data, somente o relatório mais recente será retornado. Se não existir um relatório de conjunto de dados para a data fornecida, o Status HTTP 404 (Não encontrado) será retornado.
+
+Uma resposta bem-sucedida retorna o status HTTP 200 e inclui uma matriz `data`, contendo uma lista de objetos de conjunto de dados.
+
++++ Uma resposta de amostra que contém os objetos de conjunto de dados mais recentes.
+
+>[!NOTE]
+>
+>A resposta a seguir mostrada foi truncada para mostrar três conjuntos de dados.
 
 ```json
 {
@@ -193,7 +210,7 @@ A resposta inclui uma matriz `data`, contendo uma lista de objetos de conjunto d
 ```
 
 | Propriedade | Descrição |
-|---|---|
+| -------- | ----------- |
 | `sampleCount` | O número total de perfis mesclados amostrados com essa ID de conjunto de dados. |
 | `samplePercentage` | O `sampleCount` como uma porcentagem do número total de perfis mesclados de amostra (o valor `numRowsToRead`, conforme retornado no [último status de amostra](#view-last-sample-status)), expresso em formato decimal. |
 | `fullIDsCount` | O número total de perfis mesclados com essa ID de conjunto de dados. |
@@ -204,6 +221,8 @@ A resposta inclui uma matriz `data`, contendo uma lista de objetos de conjunto d
 | `streamingIngestionEnabled` | Se o conjunto de dados está ativado para assimilação por transmissão. |
 | `createdUser` | A ID do usuário que criou o conjunto de dados. |
 | `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` foi fornecido durante a solicitação, o relatório retornado será para a data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
+
++++
 
 ## Listar distribuição de perfil por namespace de identidade
 
@@ -222,26 +241,31 @@ GET /previewsamplestatus/report/namespace
 GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 ```
 
-| Parâmetro | Descrição |
-|---|---|
-| `date` | Especifique a data do relatório a ser retornado. Se vários relatórios tiverem sido executados na data, o relatório mais recente dessa data será retornado. Se não existir um relatório para a data especificada, um erro 404 (Não encontrado) será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: AAAA-MM-DD. Exemplo: `date=2024-12-31` |
+| Parâmetros de consulta | Descrição | Exemplo |
+| --------------- | ----------- | ------- |
+| `date` | Especifica a data do relatório a ser retornado. Se vários relatórios tiverem sido executados na data, o relatório mais recente dessa data será retornado. Se não existir um relatório para a data especificada, um erro 404 (Não encontrado) será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: `YYYY-MM-DD`. | `date=2025-6-20` |
 
 **Solicitação**
 
-A solicitação a seguir não especifica um parâmetro `date` e, portanto, retornará o relatório mais recente.
+A solicitação a seguir não especifica um parâmetro `date` e retornará o relatório mais recente.
+
++++ Um exemplo de solicitação para retornar o relatório mais recente para distribuição de perfil por namespace. 
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 **Resposta**
 
-A resposta inclui uma matriz `data`, com objetos individuais contendo os detalhes de cada namespace. A resposta mostrada foi truncada para mostrar quatro namespaces.
+Uma resposta bem-sucedida retorna o status HTTP 200 e inclui uma matriz `data`, com objetos individuais contendo os detalhes de cada namespace. A resposta mostrada foi truncada para mostrar quatro namespaces.
+
++++ Uma resposta de amostra contém informações sobre a distribuição de perfil por namespace.
 
 ```json
 {
@@ -292,7 +316,7 @@ A resposta inclui uma matriz `data`, com objetos individuais contendo os detalhe
 ```
 
 | Propriedade | Descrição |
-|---|---|
+| -------- | ----------- |
 | `sampleCount` | O número total de perfis mesclados de amostra no namespace. |
 | `samplePercentage` | O `sampleCount` como uma porcentagem de perfis mesclados amostrados (o valor `numRowsToRead`, conforme retornado no [último status de amostra](#view-last-sample-status)), expresso em formato decimal. |
 | `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` foi fornecido durante a solicitação, o relatório retornado será para a data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
@@ -302,294 +326,220 @@ A resposta inclui uma matriz `data`, com objetos individuais contendo os detalhe
 | `code` | O `code` para o namespace. Isso pode ser encontrado ao trabalhar com namespaces usando a [API do Serviço de Identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md) e também é conhecido como [!UICONTROL Identity symbol] na interface do usuário do Experience Platform. Para saber mais, visite a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
 | `value` | O valor `id` do namespace. Isso pode ser encontrado ao trabalhar com namespaces usando a [API do Serviço de Identidade](../../identity-service/api/list-namespaces.md). |
 
-## Gerar o relatório de sobreposição do conjunto de dados
++++
 
-O relatório de sobreposição de conjunto de dados fornece visibilidade sobre a composição do armazenamento de perfis da sua organização, expondo os conjuntos de dados que mais contribuem para seu público-alvo endereçável (perfis mesclados). Além de fornecer insights sobre seus dados, esse relatório pode ajudá-lo a tomar medidas para otimizar o uso da licença, como definir expirações para determinados conjuntos de dados.
+## Listar as estatísticas do conjunto de dados {#dataset-stats}
 
-Você pode gerar o relatório de sobreposição do conjunto de dados executando uma solicitação GET para o ponto de extremidade `/previewsamplestatus/report/dataset/overlap`.
-
-Para obter instruções passo a passo sobre como gerar o relatório de sobreposição do conjunto de dados usando a linha de comando ou a interface do usuário do Postman, consulte o [tutorial sobre geração de relatório de sobreposição do conjunto de dados](../tutorials/dataset-overlap-report.md).
+Você pode gerar um relatório que forneça estatísticas sobre o conjunto de dados fazendo uma solicitação GET para o ponto de extremidade `/previewsamplestatus/report/dataset_stats`.
 
 **Formato da API**
 
 ```http
-GET /previewsamplestatus/report/dataset/overlap
-GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
-```
-
-| Parâmetro | Descrição |
-|---|---|
-| `date` | Especifique a data do relatório a ser retornado. Se vários relatórios forem executados na mesma data, o relatório mais recente dessa data será retornado. Se não existir um relatório para a data especificada, um erro 404 (Não encontrado) será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: AAAA-MM-DD. Exemplo: `date=2024-12-31` |
-
-**Solicitação**
-
-A solicitação a seguir usa o parâmetro `date` para retornar o relatório mais recente para a data especificada.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-```
-
-**Resposta**
-
-Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de sobreposição do conjunto de dados.
-
-```json
-{
-    "data": {
-        "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
-        "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
-        "5eeda0032af7bb19162172a7": 107
-    },
-    "reportTimestamp": "2021-12-29T19:55:31.147"
-}
-```
-
-| Propriedade | Descrição |
-|---|---|
-| `data` | O objeto `data` contém listas de conjuntos de dados separadas por vírgulas e suas respectivas contagens de perfis. |
-| `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` foi fornecido durante a solicitação, o relatório retornado será para a data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
-
-### Interpretação do relatório de sobreposição do conjunto de dados
-
-Os resultados do relatório podem ser interpretados a partir dos conjuntos de dados e das contagens de perfil na resposta. Considere o exemplo de objeto de relatório `data` a seguir:
-
-```json
-  "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
-  "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
-  "5eeda0032af7bb19162172a7": 107
-```
-
-Esse relatório fornece as seguintes informações:
-
-* Há 123 perfis compostos de dados provenientes dos seguintes conjuntos de dados: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
-* Há 454.412 perfis compostos de dados provenientes destes dois conjuntos de dados: `5d92921872831c163452edc8` e `5eb2cdc6fa3f9a18a7592a98`.
-* Há 107 perfis compostos apenas de dados do conjunto de dados `5eeda0032af7bb19162172a7`.
-* Há um total de 454.642 perfis na organização.
-
-## Gerar o relatório de sobreposição de namespace de identidade {#identity-overlap-report}
-
-O relatório de sobreposição de namespace de identidade fornece visibilidade sobre a composição do armazenamento de perfis da sua organização, expondo os namespaces de identidade que mais contribuem para seu público-alvo endereçável (perfis mesclados). Isso inclui os namespaces de identidade padrão fornecidos pelo Adobe, bem como os namespaces de identidade personalizados definidos pela sua organização.
-
-Você pode gerar o relatório de sobreposição de namespace de identidade executando uma solicitação GET para o ponto de extremidade `/previewsamplestatus/report/namespace/overlap`.
-
-**Formato da API**
-
-```http
-GET /previewsamplestatus/report/namespace/overlap
-GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
-```
-
-| Parâmetro | Descrição |
-|---|---|
-| `date` | Especifique a data do relatório a ser retornado. Se vários relatórios forem executados na mesma data, o relatório mais recente dessa data será retornado. Se não existir um relatório para a data especificada, um erro 404 (Não encontrado) será retornado. Se nenhuma data for especificada, o relatório mais recente será retornado. Formato: AAAA-MM-DD. Exemplo: `date=2024-12-31` |
-
-**Solicitação**
-
-A solicitação a seguir usa o parâmetro `date` para retornar o relatório mais recente para a data especificada.
-
-```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-```
-
-**Resposta**
-
-Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de sobreposição de namespace de identidade.
-
-```json
-{
-    "data": {
-        "Email,crmid,loyal": 2,
-        "ECID,Email,crmid": 7,
-        "ECID,Email,mobilenr": 12,
-        "AAID,ECID,loyal": 1,
-        "mobilenr": 25,
-        "AAID,ECID": 1508,
-        "ECID,crmid": 1,
-        "AAID,ECID,crmid": 2,
-        "Email,crmid": 328,
-        "CORE": 49,
-        "AAID": 446,
-        "crmid,loyal": 20988,
-        "Email": 10904,
-        "crmid": 249,
-        "ECID,Email": 74,
-        "Phone": 40,
-        "Email,Phone,loyal": 48,
-        "AAID,AVID,ECID": 85,
-        "Email,loyal": 1002,
-        "AAID,ECID,Email,Phone,crmid": 5,
-        "AAID,ECID,Email,crmid,loyal": 23,
-        "AAID,AVID,ECID,Email,crmid": 2,
-        "AVID": 3,
-        "AAID,ECID,Phone": 1,
-        "loyal": 43,
-        "ECID,Email,crmid,loyal": 6,
-        "AAID,ECID,Email,Phone,crmid,loyal": 1,
-        "AAID,ECID,Email": 2,
-        "AAID,ECID,Email,crmid": 142,
-        "AVID,ECID": 24,
-        "ECID": 6565
-    },
-    "reportTimestamp": "2021-12-29T16:55:03.624"
-}
-```
-
-| Propriedade | Descrição |
-|---|---|
-| `data` | O objeto `data` contém listas separadas por vírgulas com combinações exclusivas de códigos de namespace de identidade e suas respectivas contagens de perfil. |
-| Códigos de namespace | O `code` é um formulário curto para cada nome de namespace de identidade. Um mapeamento de cada `code` para seu `name` pode ser encontrado usando a [API do Serviço de Identidade da Adobe Experience Platform](../../identity-service/api/list-namespaces.md). O `code` também é chamado de [!UICONTROL Identity symbol] na interface do usuário do Experience Platform. Para saber mais, visite a [visão geral do namespace de identidade](../../identity-service/features/namespaces.md). |
-| `reportTimestamp` | O carimbo de data e hora do relatório. Se um parâmetro `date` foi fornecido durante a solicitação, o relatório retornado será para a data fornecida. Se nenhum parâmetro `date` for fornecido, o relatório mais recente será retornado. |
-
-### Interpretação do relatório de sobreposição de namespace de identidade
-
-Os resultados do relatório podem ser interpretados a partir das identidades e das contagens de perfil na resposta. O valor numérico de cada linha informa quantos perfis são compostos dessa combinação exata de namespaces de identidade padrão e personalizados.
-
-Considere o seguinte trecho do objeto `data`:
-
-```json
-  "AAID,ECID,Email,crmid": 142,
-  "AVID,ECID": 24,
-  "ECID": 6565
-```
-
-Esse relatório fornece as seguintes informações:
-
-* Há 142 perfis compostos de identidades padrão `AAID`, `ECID` e `Email`, bem como de um namespace de identidade `crmid` personalizado.
-* Há 24 perfis compostos de `AAID` e `ECID` namespaces de identidade.
-* Há 6.565 perfis que incluem apenas uma identidade `ECID`.
-
-## Gerar o relatório de perfis não compilados
-
-Você pode obter mais visibilidade sobre a composição do armazenamento de perfis de sua organização por meio do relatório de perfis não compilados. Um perfil &quot;não corrigido&quot; é um perfil que contém apenas um fragmento de perfil. Um perfil &quot;desconhecido&quot; é um perfil associado a namespaces de identidade pseudônimos, como `ECID` e `AAID`. Perfis desconhecidos estão inativos, o que significa que eles não adicionaram novos eventos no período especificado. O relatório de perfis não compilados fornece um detalhamento de perfis por um período de 7, 30, 60, 90 e 120 dias.
-
-Você pode gerar o relatório de perfis não compilados executando uma solicitação GET para o ponto de extremidade `/previewsamplestatus/report/unstitchedProfiles`.
-
-**Formato da API**
-
-```http
-GET /previewsamplestatus/report/unstitchedProfiles
+GET /previewsamplestatus/report/dataset_stats
 ```
 
 **Solicitação**
 
-A solicitação a seguir retorna o relatório de perfis não compilados.
++++ Uma solicitação de amostra para gerar o relatório de estatísticas do conjunto de dados.
 
 ```shell
-curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unstitchedProfiles \
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset_stats \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
+
++++
 
 **Resposta**
 
-Uma solicitação bem-sucedida retorna o Status HTTP 200 (OK) e o relatório de perfis não compilados.
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre as estatísticas do conjunto de dados.
+
++++ Um exemplo de resposta que contém informações sobre as estatísticas do conjunto de dados.
 
 >[!NOTE]
 >
->Para os fins deste guia, o relatório foi truncado para incluir apenas `"120days"` e &quot;`7days`&quot; períodos de tempo. O relatório de perfis não compilados completos fornece um detalhamento de perfis por um período de 7, 30, 60, 90 e 120 dias.
+>A resposta a seguir foi truncada para mostrar três conjuntos de dados.
 
 ```json
 {
-  "data": {
-      "totalNumberOfProfiles": 63606,
-      "totalNumberOfEvents": 130977,
-      "unstitchedProfiles": {
-          "120days": {
-              "countOfProfiles": 1644,
-              "eventsAssociated": 26824,
-              "nsDistribution": {
-                  "Email": {
-                      "countOfProfiles": 18,
-                      "eventsAssociated": 95
-                  },
-                  "loyal": {
-                      "countOfProfiles": 26,
-                      "eventsAssociated": 71
-                  },
-                  "ECID": {
-                      "countOfProfiles": 1600,
-                      "eventsAssociated": 26658
-                  }
-              }
-          },
-          "7days": {
-              "countOfProfiles": 1782,
-              "eventsAssociated": 29151,
-              "nsDistribution": {
-                  "Email": {
-                      "countOfProfiles": 19,
-                      "eventsAssociated": 97
-                  },
-                  "ECID": {
-                      "countOfProfiles": 1734,
-                      "eventsAssociated": 28591
-                  },
-                  "loyal": {
-                      "countOfProfiles": 29,
-                      "eventsAssociated": 463
-                  }
-              }
-          }
-      }
-  },
-  "reportTimestamp": "2025-08-25T22:14:55.186"
+    "data": [
+        {
+            "120days": 4,
+            "14days": 4,
+            "30days": 4,
+            "365days": 4,
+            "60days": 4,
+            "7days": 4,
+            "90days": 4,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "ExperienceEvents",
+            "percentEvents": 0.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 1,
+            "records": 4,
+            "totalProfiles": 1
+        },
+        {
+            "120days": 155435837,
+            "14days": 32888631,
+            "30days": 66496282,
+            "365days": 155435837,
+            "60days": 116433804,
+            "7days": 18202004,
+            "90days": 155435837,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "ExperienceEvents",
+            "percentEvents": 16.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 5410745,
+            "records": 155435837,
+            "totalProfiles": 4524723
+        },
+        {
+            "120days": 0,
+            "14days": 0,
+            "30days": 0,
+            "365days": 0,
+            "60days": 0,
+            "7days": 0,
+            "90days": 0,
+            "datasetId": "{DATASET_ID}",
+            "datasetType": "Profiles",
+            "percentEvents": 0.0,
+            "percentProfiles": 0.0,
+            "profileFragments": 3589,
+            "records": 3589,
+            "totalProfiles": 3589
+        }
+    ],
+    "reportTimestamp": "2025-10-29T16:20:18.956"
 }
 ```
 
 | Propriedade | Descrição |
-|---|---|
-| `data` | O objeto `data` contém as informações retornadas para o relatório de perfis não compilados. |
-| `totalNumberOfProfiles` | A contagem total de perfis únicos no armazenamento de Perfil. Isso é equivalente à contagem de público-alvo endereçável. Inclui perfis conhecidos e não compilados. |
-| `totalNumberOfEvents` | O número total de ExperienceEvents no armazenamento de Perfil. |
-| `unstitchedProfiles` | Um objeto que contém um detalhamento de perfis não compilados por período de tempo. O relatório de perfis não compilados fornece um detalhamento dos perfis por períodos de 7, 30, 60, 90 e 120 dias. |
-| `countOfProfiles` | A contagem de perfis não compilados para o período de tempo ou a contagem de perfis não compilados para o namespace. |
-| `eventsAssociated` | O número de ExperienceEvents para o intervalo de tempo ou o número de eventos para o namespace. |
-| `nsDistribution` | Um objeto que contém namespaces de identidade individuais com a distribuição de perfis e eventos não compilados para cada namespace. Observação: a adição do total `countOfProfiles` para cada namespace de identidade no objeto `nsDistribution` é igual ao `countOfProfiles` para o período de tempo. O mesmo é verdadeiro para `eventsAssociated` por namespace e o total de `eventsAssociated` por período de tempo. |
-| `reportTimestamp` | O carimbo de data e hora do relatório. |
+| -------- | ----------- |
+| `120days` | O número de registros que permanecerão no conjunto de dados após 120 dias de expiração. |
+| `14days` | O número de registros que permanecerão no conjunto de dados após 14 dias de expiração. |
+| `30days` | O número de registros que permanecerão no conjunto de dados após 30 dias de expiração. |
+| `365days` | O número de registros que permanecerão no conjunto de dados após a expiração de 365 dias. |
+| `60days` | O número de registros que permanecerão no conjunto de dados após uma expiração de dados de 60 dias. |
+| `7days` | O número de registros que permanecerão no conjunto de dados após uma expiração de dados de 7 dias. |
+| `90days` | O número de registros que permanecerão no conjunto de dados após uma expiração de dados de 90 dias. |
+| `datasetId` | A ID do conjunto de dados. |
+| `datasetType` | O tipo de conjunto de dados. Este valor pode ser `Profiles` ou `ExperienceEvents`. |
+| `percentEvents` | A porcentagem de registros de Eventos de experiência que estão no conjunto de dados. |
+| `percentProfiles` | A porcentagem de registros do Perfil que estão dentro do conjunto de dados. |
+| `profileFragments` | O número total de fragmentos de perfil existentes no conjunto de dados. |
+| `records` | O número total de registros de perfil assimilados no conjunto de dados. |
+| `totalProfiles` | O número total de Perfis assimilados no conjunto de dados. |
 
-### Interpretação do relatório de perfis não compilados
++++
 
-Os resultados do relatório podem fornecer à insight quantos perfis não compilados e inativos sua organização tem em seu armazenamento de Perfil.
+## Obter o tamanho do conjunto de dados {#character-count}
 
-Considere o seguinte trecho do objeto `data`:
+Você pode usar esse endpoint para obter o tamanho do conjunto de dados em bytes semana a semana.
 
-```json
-  "7days": {
-    "countOfProfiles": 1782,
-    "eventsAssociated": 29151,
-    "nsDistribution": {
-      "Email": {
-        "countOfProfiles": 19,
-        "eventsAssociated": 97
-      },
-      "ECID": {
-        "countOfProfiles": 1734,
-        "eventsAssociated": 28591
-      },
-      "loyal": {
-        "countOfProfiles": 29,
-        "eventsAssociated": 463
-      }
-    }
-  }
+**Formato da API**
+
+```http
+GET /previewsamplestatus/report/character_count
 ```
 
-Esse relatório fornece as seguintes informações:
+**Solicitação**
 
-* Há 1.782 perfis que contêm apenas um fragmento de perfil e não têm eventos novos nos últimos sete dias.
-* Há 29.151 ExperienceEvents associados aos 1.782 perfis não compilados.
-* Há 1.734 perfis não compilados contendo um único fragmento de perfil do namespace de identidade da ECID.
-* Há 28.591 eventos associados aos 1.734 perfis não compilados que contêm um único fragmento de perfil do namespace de identidade da ECID.
++++Um exemplo de solicitação para gerar o relatório de contagem de caracteres.
+
+```shell
+curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+```
+
++++
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o tamanho do conjunto de dados durante as semanas.
+
++++ Uma resposta de amostra que contém informações sobre o tamanho do conjunto de dados após as expirações de dados.
+
+>[!NOTE]
+>
+>A resposta a seguir foi truncada para mostrar três conjuntos de dados.
+
+```json
+{
+    "data": [
+        {
+            "datasetIds": [
+                {
+                    "datasetId": "67aba91a453f7d298cd2a643",
+                    "recordType": "keyvalue",
+                    "weeks": [
+                        {
+                            "size": 107773533894,
+                            "week": "2025-10-26"
+                        }
+                    ]
+                },
+                {
+                    "datasetId": "67aa6c867c3110298b017f0e",
+                    "recordType": "timeseries",
+                    "weeks": [
+                        {
+                            "size": 242902062440,
+                            "week": "2025-10-26"
+                        },
+                        {
+                            "size": 837539413062,
+                            "week": "2025-10-19"
+                        },
+                        {
+                            "size": 479253986484,
+                            "week": "2025-10-12"
+                        },
+                        {
+                            "size": 358911988990,
+                            "week": "2025-10-05"
+                        },
+                        {
+                            "size": 349701073042,
+                            "week": "2025-09-28"
+                        }
+                    ]
+                },
+                {
+                    "datasetId": "680c043667c0d7298c9ea275",
+                    "recordType": "keyvalue",
+                    "weeks": [
+                        {
+                            "size": 18392459832,
+                            "week": "2025-10-26"
+                        }
+                    ]
+                }
+            ],
+            "modelName": "_xdm.context.profile",
+            "reportTimestamp": "2025-10-30T00:28:30.069Z"
+        }
+    ],
+    "reportTimestamp": "2025-10-30T00:28:30.069Z"
+}
+```
+
+| Propriedade | Descrição |
+| -------- | ----------- |
+| `datasetId` | A ID do conjunto de dados. |
+| `recordType` | O tipo de dados no conjunto de dados. O tipo de registro afeta o valor da variável `weeks`. Os valores suportados incluem `keyvalue` e `timeseries`. |
+| `weeks` | Uma matriz que contém as informações de tamanho sobre o conjunto de dados. Para conjuntos de dados do tipo de registro `keyvalue`, isso contém a semana mais recente, bem como o tamanho total do conjunto de dados em bytes. Para conjuntos de dados do tipo de registro `timeseries`, contém todas as semanas desde a assimilação do conjunto de dados até a semana mais recente e o tamanho total do conjunto de dados em bytes para cada uma dessas semanas. |
+| `modelName` | O nome do modelo do conjunto de dados. Os valores possíveis incluem `_xdm.context.profile` e `_xdm.context.experienceevent`. |
+| `reportTimestamp` | A data e a hora em que o relatório foi gerado. |
+
++++
 
 ## Próximas etapas
 

@@ -319,5 +319,5 @@ O vídeo a seguir é destinado a ajudá-lo a entender a assimilação de dados u
 >
 > A interface do usuário [!DNL Experience Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 
->[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430257?captions=por_br&quality=12&learn=on)
 

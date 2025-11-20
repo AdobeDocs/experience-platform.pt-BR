@@ -55,7 +55,7 @@ As relações de esquema são representadas por um campo dedicado dentro de um *
 
 Para estabelecer uma relação, o schema de referência deve ter uma identidade primária definida. Ao definir uma identidade principal para uma entidade B2B, lembre-se de que as IDs de entidade baseadas em sequência podem se sobrepor se você as estiver coletando em diferentes sistemas ou locais, o que pode levar a conflitos de dados no Experience Platform.
 
-Para levar em conta isso, todas as classes B2B padrão contêm campos &quot;key&quot; que estão em conformidade com o tipo de dados [[!UICONTROL B2B Source] ](../data-types/b2b-source.md). Esse tipo de dados fornece campos para um identificador de sequência para a entidade B2B, juntamente com outras informações contextuais sobre a origem do identificador. Um desses campos, `sourceKey`, concatena os valores dos outros campos no tipo de dados para produzir um identificador totalmente exclusivo para a entidade. Este campo deve ser sempre usado como a identidade principal para esquemas de entidade B2B.
+Para levar em conta isso, todas as classes B2B padrão contêm campos &quot;key&quot; que estão em conformidade com o tipo de dados [[!UICONTROL B2B Source] &#x200B;](../data-types/b2b-source.md). Esse tipo de dados fornece campos para um identificador de sequência para a entidade B2B, juntamente com outras informações contextuais sobre a origem do identificador. Um desses campos, `sourceKey`, concatena os valores dos outros campos no tipo de dados para produzir um identificador totalmente exclusivo para a entidade. Este campo deve ser sempre usado como a identidade principal para esquemas de entidade B2B.
 
 ![campo sourceKey](../images/tutorials/relationship-b2b/sourcekey.png)
 

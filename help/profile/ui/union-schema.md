@@ -64,7 +64,7 @@ Selecione qualquer campo para exibir seus detalhes, incluindo nome de exibição
 
 Selecionar o nome de um schema contribuinte revela os nomes dos conjuntos de dados relacionados a esse schema que estão assimilando dados no campo selecionado. Cada nome conjunto de dados aparece como uma link. Selecionar um conjunto de dados nome abre a guia de atividade para esse conjunto de dados em uma nova janela.
 
-Para obter mais informações sobre conjuntos de dados, incluindo a visualização conjunto de dados atividade e a visualização de dados do conjunto de dados no interface, visita o guia[ de interface de ](../../catalog/datasets/user-guide.md)conjuntos de dados.
+Para obter mais informações sobre conjuntos de dados, incluindo a visualização conjunto de dados atividade e a visualização de dados do conjunto de dados no interface, visita o guia[&#x200B; de interface de &#x200B;](../../catalog/datasets/user-guide.md)conjuntos de dados.
 
 ![As lista de conjuntos de dados relacionados ao schema são destacadas.](../images/union-schema/datasets.png)
 

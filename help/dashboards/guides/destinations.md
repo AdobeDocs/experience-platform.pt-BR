@@ -294,7 +294,7 @@ O widget [!UICONTROL Activated audiences across all destinations] fornece o núm
 
 ![Widget de Públicos ativados em todos os destinos.](../images/destinations/activated-audiences-across-all-destinations.png)
 
-Selecione **[!UICONTROL Audiences]** para navegar até a guia de destinos [!UICONTROL Browse]. Esta página fornece uma lista de todos os destinos ativados e diversas métricas relevantes. Consulte a documentação para obter mais informações sobre a [[!UICONTROL Browse] guia ](../../destinations/ui/destinations-workspace.md#browse).
+Selecione **[!UICONTROL Audiences]** para navegar até a guia de destinos [!UICONTROL Browse]. Esta página fornece uma lista de todos os destinos ativados e diversas métricas relevantes. Consulte a documentação para obter mais informações sobre a [[!UICONTROL Browse] guia &#x200B;](../../destinations/ui/destinations-workspace.md#browse).
 
 Consulte a seção de pré-requisitos para as [definições de termos usados](#prerequisites) nesta descrição.
 

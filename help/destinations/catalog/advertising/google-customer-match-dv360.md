@@ -120,7 +120,7 @@ As exportações de dados falharão se sua conta do Google não estiver vinculad
 
 **Para organizações com contas de gerente:**
 
-Se sua organização usar uma [conta de gerente [!DNL Google] 2} para gerenciar várias contas de cliente, siga estes requisitos específicos de vinculação:](https://support.google.com/google-ads/answer/6139186)
+Se sua organização usar uma [conta de gerente [!DNL Google] 2&rbrace; para gerenciar várias contas de cliente, siga estes requisitos específicos de vinculação:](https://support.google.com/google-ads/answer/6139186)
 
 * **Para exportar para uma conta de cliente específica:** Vincule essa conta de cliente individual (não a conta de gerente) à ID de conta da Google da Adobe: `4641108541`
 * **A vinculação de conta de gerente sozinha não é suficiente** e causará falhas de exportação de dados

@@ -22,7 +22,7 @@ Como profissional de marketing, desejo enviar públicos-alvo do Adobe Experience
 
 ## Pré-requisitos {#prerequisites}
 
-A conexão [!DNL LiveRamp - Onboarding] exporta arquivos usando o armazenamento SFTP[ do ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
+A conexão [!DNL LiveRamp - Onboarding] exporta arquivos usando o armazenamento SFTP[&#x200B; do &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
 
 Antes de enviar dados do Experience Platform para o [!DNL LiveRamp - Onboarding], você precisa de suas credenciais do [!DNL LiveRamp]. Entre em contato com o representante do [!DNL LiveRamp] para obter suas credenciais, caso ainda não as tenha.
 

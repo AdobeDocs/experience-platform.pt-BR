@@ -83,7 +83,7 @@ Em seguida, prossiga para [definir chaves primárias](../fields/identity.md#defi
 
 >[!NOTE]
 >
->Depois de salvo, o campo [!UICONTROL Type] na barra lateral [!UICONTROL  Schema properties] indica que este é um esquema [!UICONTROL Relational]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
+>Depois de salvo, o campo [!UICONTROL Type] na barra lateral [!UICONTROL &#x200B; Schema properties] indica que este é um esquema [!UICONTROL Relational]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
 >![A tela Editor de Esquemas mostrando uma estrutura de esquema relacional vazia com o tipo relacional realçado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Fazer upload de um arquivo DDL {#upload-ddl-file}

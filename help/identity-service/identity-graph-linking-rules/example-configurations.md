@@ -203,7 +203,7 @@ CRMID: Jane, ECID:456
 
 **Gráfico simulado**
 
-![Um gráfico em que dois usuários finais se inscrevem com o mesmo cartão de crédito.](../images/configs/intermediate/graph-with-same-credit-card.png)
+![A graph where two end-users sign up with the same credit card.](../images/configs/intermediate/graph-with-same-credit-card.png)
 
 >[!TAB Número de cartão de crédito inválido]
 

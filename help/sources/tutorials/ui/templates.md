@@ -55,15 +55,15 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 
 Na interface do usuário do Experience Platform, selecione **[!UICONTROL Sources]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Sources] e ver um catálogo de fontes disponíveis no Experience Platform.
 
-Use o menu *[!UICONTROL Categories]* para filtrar fontes por categoria. Como alternativa, insira um nome de origem na barra de pesquisa para localizar uma origem específica do catálogo.
+Use the *[!UICONTROL Categories]* menu to filter sources by category. Alternatively, enter a source name in the search bar to find a specific source from the catalog.
 
-Vá para a categoria [!UICONTROL Adobe applications] para ver o cartão de origem [!DNL Marketo Engage] e selecione [!UICONTROL Add data] para começar.
+Go to the [!UICONTROL Adobe applications] category to see the [!DNL Marketo Engage] source card and then, select [!UICONTROL Add data] to begin.
 
-![Um catálogo do espaço de trabalho de origens com a origem do Marketo Engage realçada.](../../images/tutorials/templates/catalog.png)
+![A catalog of the sources workspace with the Marketo Engage source highlighted.](../../images/tutorials/templates/catalog.png)
 
-Uma janela pop-up é exibida, apresentando a opção de procurar modelos ou usar esquemas e conjuntos de dados existentes.
+A pop-up window appears presenting you with the option to browse templates or use existing schemas and datasets.
 
-* **Procurar modelos**: os modelos de fontes criam esquemas, identidades, conjuntos de dados e fluxos de dados automaticamente com regras de mapeamento para você. Você pode personalizar esses ativos conforme necessário.
+* **Browse templates**: Sources templates auto-creates schemas, identities, datasets, and dataflows with mapping rules for you. You can customize these assets as needed.
 * **Usar meus ativos existentes**: assimile seus dados usando conjuntos de dados e esquemas existentes que você criou. Você também pode criar novos conjuntos de dados e esquemas, se necessário.
 
 >[!NOTE]
@@ -127,12 +127,12 @@ A tabela a seguir descreve os modelos B2B disponíveis para a origem [!DNL Sales
 | --- | --- |
 | Relação de contato da conta | O modelo de Relação de Contato de Conta captura a relação entre um contato e uma ou mais contas. |
 | Contas | O modelo de Conta captura detalhes da conta comercial, como informações firmográficas, locais e informações de faturamento da empresa. |
-| Membros da campanha | O modelo Membros da Campanha captura a relação entre um cliente potencial ou contato individual e uma campanha [!DNL Salesforce] específica. |
+| Campaign Members | O modelo Membros da Campanha captura a relação entre um cliente potencial ou contato individual e uma campanha [!DNL Salesforce] específica. |
 | Campanhas | O modelo Campanhas captura detalhes da conta de negócios, como informações firmográficas, localização e informações de faturamento da empresa. |
-| Contatos | O modelo Contato captura atributos para contatos, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
-| Clientes potenciais | O modelo de Clientes potenciais captura atributos para clientes potenciais, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
-| Oportunidades | O modelo de Oportunidades captura detalhes da oportunidade comercial, como tipo, estágio de vendas e conta relacionada. |
-| Funções do contato da oportunidade | O modelo Funções de contato da oportunidade captura detalhes sobre as funções para clientes potenciais associadas a uma oportunidade específica. |
+| Contatos | The Contact template captures attributes for contacts such as demographics details, contact information, and related business entities. |
+| Clientes potenciais | The Leads template captures attributes for leads such as demographics details, contact information, and related business entities. |
+| Oportunidades | The Opportunities template captures business opportunity details such as type, sales stage, and related account. |
+| Opportunity Contact Roles | O modelo Funções de contato da oportunidade captura detalhes sobre as funções para clientes potenciais associadas a uma oportunidade específica. |
 
 {style="table-layout:auto"}
 
@@ -153,9 +153,9 @@ A tabela a seguir descreve os modelos B2C disponíveis para a origem [!DNL Sales
 +++[!DNL Microsoft Dynamics] modelos B2B
 A tabela a seguir descreve os modelos B2B disponíveis para a origem [!DNL Microsoft Dynamics].
 
-| [!DNL Microsoft Dynamics] modelos B2B | Descrição |
+| [!DNL Microsoft Dynamics] B2B templates | Descrição |
 | --- | --- |
-| Contas | O modelo de Conta captura detalhes da conta comercial, como informações firmográficas, locais e informações de faturamento da empresa. |
+| Contas | The Account template captures business account details such as company firmographic information, location, and billing information. |
 | Campanhas | O modelo Campanhas captura detalhes da conta de negócios, como informações firmográficas, localização e informações de faturamento da empresa. |
 | Contatos | O modelo Contato captura atributos para contatos, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
 | Clientes potenciais | O modelo de Clientes potenciais captura atributos para clientes potenciais, como detalhes demográficos, informações de contato e entidades comerciais relacionadas. |
@@ -202,15 +202,15 @@ Se você selecionar um item ou itens parciais da lista de modelos disponíveis, 
 
 As origens [!DNL Microsoft Dynamics] e [!DNL Salesforce] oferecem suporte ao agendamento de fluxos de dados.
 
-Use a interface de programação para configurar uma programação de assimilação para seus fluxos de dados. Defina a frequência de assimilação como **Uma vez** para criar uma assimilação única.
+Use the scheduling interface to configure an ingestion schedule for your dataflows. Defina a frequência de assimilação como **Uma vez** para criar uma assimilação única.
 
 ![A interface de agendamento para modelos do Dynamics e do Salesforce.](../../images/tutorials/templates/schedule.png)
 
 Como alternativa, você pode definir a frequência de assimilação como **Minuto**, **Hora**, **Dia** ou **Semana**. Se você agendar seu fluxo de dados para várias assimilações, deverá definir um intervalo para estabelecer um intervalo de tempo entre cada assimilação. Por exemplo, uma frequência de assimilação definida como **Hora** e um intervalo definido como **15** significa que o fluxo de dados está agendado para assimilar dados a cada **15 horas**.
 
-Durante esta etapa, você também pode habilitar o **preenchimento retroativo** e definir uma coluna para a assimilação incremental de dados. O preenchimento retroativo é usado para assimilar dados históricos, enquanto a coluna definida para assimilação incremental permite que novos dados sejam diferenciados dos dados existentes.
+Durante esta etapa, você também pode habilitar o **preenchimento retroativo** e definir uma coluna para a assimilação incremental de dados. Backfill is used to ingest historical data, while the column you define for incremental ingestion allows new data to be differentiated from existing data.
 
-Depois de concluir a configuração do agendamento de assimilação, selecione **[!UICONTROL Finish]**.
+Once you have completed configuring your ingestion schedule, select **[!UICONTROL Finish]**.
 
 ![A interface de agendamento para modelos do Dynamics e do Salesforce com preenchimento retroativo habilitado.](../../images/tutorials/templates/backfill.png)
 
@@ -231,17 +231,17 @@ Uma página de visualização é exibida, permitindo que você inspecione a rela
 
 ![A janela de visualização de mapeamento.](../../images/tutorials/templates/preview-mappings.png)
 
-Você pode atualizar seus fluxos de dados a qualquer momento após a execução. Selecione as reticências (`...`) ao lado do nome do fluxo de dados e selecione **[!UICONTROL Update dataflow]**. Você é levado para a página de fluxo de trabalho de origens, onde é possível atualizar os detalhes do fluxo de dados, incluindo configurações para assimilação parcial, diagnósticos de erro e notificações de alerta, bem como o mapeamento do fluxo de dados.
+Você pode atualizar seus fluxos de dados a qualquer momento após a execução. Selecione as reticências (`...`) ao lado do nome do fluxo de dados e selecione **[!UICONTROL Update dataflow]**. You are taken to the sources workflow page where you can update your dataflow details, including settings for partial ingestion, error diagnostics, and alert notifications, as well as your dataflow&#39;s mapping.
 
-Você pode usar a visualização do editor de esquemas para atualizar o esquema gerado automaticamente. Consulte o guia em [usando o editor de esquemas](../../../xdm/tutorials/create-schema-ui.md) para obter mais informações.
+You can use the schema editor view to make updates to your auto-generated schema. Visit the guide on [using the schema editor](../../../xdm/tutorials/create-schema-ui.md) for more information.
 
-![Uma janela suspensa com a opção de atualização de fluxos de dados selecionada.](../../images/tutorials/templates/update.png)
+![A dropdown window with the update dataflows option selected.](../../images/tutorials/templates/update.png)
 
 >[!TIP]
 >
->Você pode acessar o fluxo de dados de rascunho na página de catálogo [!UICONTROL Dataflows] no espaço de trabalho de origens. Selecione **[!UICONTROL Dataflows]** no cabeçalho superior e selecione o fluxo de dados que você deseja atualizar na lista.
+>You can access your draft dataflow through the [!UICONTROL Dataflows] catalog page in the sources workspace. Select **[!UICONTROL Dataflows]** from the top header and then select the dataflow that you want to update from the list.
 >
->![Uma lista de fluxos de dados existentes no catálogo de fluxos de dados do espaço de trabalho de fontes.](../../images/tutorials/templates/dataflows.png)
+>![A list of existing dataflows in the dataflows catalog of the sources workspace.](../../images/tutorials/templates/dataflows.png)
 
 ### Publicar seu fluxo de dados
 

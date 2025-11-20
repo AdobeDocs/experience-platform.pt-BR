@@ -5,7 +5,7 @@ description: Este documento fornece informações sobre como gerenciar sandboxes
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '260'
+source-wordcount: '258'
 ht-degree: 18%
 
 ---
@@ -32,7 +32,7 @@ A guia de detalhes fornece uma visão geral da sandbox. A visão geral exibe o n
 
 ![flac-sandboxes-details](../../images/flac-ui/flac-sandboxes-details.png)
 
-Selecione a guia **[!UICONTROL Funções]** para exibir as funções às quais a sandbox está atribuída.
+Selecione a guia **[!UICONTROL Roles]** para exibir as funções às quais a sandbox está atribuída.
 
 ![funções-sandboxes-flac](../../images/flac-ui/flac-sandboxes-roles.png)
 

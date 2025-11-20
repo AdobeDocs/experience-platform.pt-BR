@@ -6,7 +6,7 @@ description: Saiba mais sobre esquemas do Experience Data Model (XDM) e os compo
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4350'
+source-wordcount: '4308'
 ht-degree: 8%
 
 ---
@@ -48,7 +48,7 @@ Todos os esquemas XDM descrevem dados que podem ser categorizados como registro 
 
 Os esquemas de registro e série temporal contêm um mapa de identidades (`xdm:identityMap`). Este campo contém a representação de identidade de uma pessoa, desenhada a partir de campos marcados como &quot;Identidade&quot;, conforme descrito na próxima seção.
 
-### [!UICONTROL Identidade] {#identity}
+### [!UICONTROL Identity] {#identity}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_identities"
@@ -57,9 +57,9 @@ Os esquemas de registro e série temporal contêm um mapa de identidades (`xdm:i
 
 Os esquemas definem a estrutura dos dados assimilados na Experience Platform. Esses dados potencializam vários serviços na plataforma e ajudam a criar uma visualização única e unificada de cada indivíduo. Portanto, ao criar esquemas, pense com cuidado sobre quais campos marcar como identidades — esses controlam como os perfis são compilados entre conjuntos de dados.
 
-Para ajudar nesse processo, os campos principais em seus esquemas podem ser marcados como identidades. Após a assimilação de dados, os dados nesses campos são inseridos no &quot;[!UICONTROL Gráfico de identidade]&quot; desse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-Time Customer Profile]](../../profile/home.md) e outros serviços da Experience Platform para fornecer uma visualização unificada de cada cliente individual.
+Para ajudar nesse processo, os campos principais em seus esquemas podem ser marcados como identidades. Após a assimilação de dados, os dados nesses campos são inseridos em &quot;[!UICONTROL Identity Graph]&quot; para esse indivíduo. Os dados do gráfico podem ser acessados por [[!DNL Real-Time Customer Profile]](../../profile/home.md) e outros serviços da Experience Platform para fornecer uma visualização unificada de cada cliente individual.
 
-Os campos comumente marcados como &quot;[!UICONTROL Identidade]&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR), ID do CRM ou outros campos de ID exclusivos. Considere quaisquer identificadores exclusivos específicos da sua organização, pois eles também podem ser bons campos de &quot;[!UICONTROL Identidade]&quot;.
+Os campos comumente marcados como &quot;[!UICONTROL Identity]&quot; incluem: endereço de email, número de telefone, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR), ID de CRM ou outros campos de ID exclusivos. Considere quaisquer identificadores exclusivos específicos da sua organização, pois eles também podem ser bons campos &quot;[!UICONTROL Identity]&quot;.
 
 Para saber mais sobre como as informações de identidade podem ajudar você a fornecer experiências digitais aos seus clientes, consulte a [visão geral do Serviço de identidade](../../identity-service/home.md). Consulte o documento de práticas recomendadas de modelagem de dados para [dicas sobre o uso de identidades ao criar um esquema](./best-practices.md#data-validation-fields).
 
@@ -161,9 +161,9 @@ O Experience Platform usa uma abordagem de composição na qual os blocos de con
 
 Os esquemas são compostos usando a seguinte fórmula:
 
-**Classe + Grupo de Campos de Esquema&ast; = Esquema XDM**
+**Classe + Grupo de Campos de Esquema&amp;ast; = Esquema XDM**
 
-&ast;Um esquema é composto por uma classe e zero ou mais grupos de campos de esquema. Isso significa que você pode compor um esquema de conjunto de dados sem usar grupos de campos.
+&amp;ast;Um esquema é composto por uma classe e zero ou mais grupos de campos de esquema. Isso significa que você pode compor um esquema de conjunto de dados sem usar grupos de campos.
 
 ### Classe {#class}
 
@@ -183,9 +183,9 @@ A classe de um esquema determina quais grupos de campos estão qualificados para
 
 O Adobe fornece várias classes XDM padrão (&quot;núcleo&quot;). Duas dessas classes, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], são necessárias para quase todos os processos downstream do Experience Platform. Além dessas classes principais, você também pode criar suas próprias classes personalizadas para descrever casos de uso mais específicos para sua organização. As classes personalizadas são definidas por uma organização quando não há classes principais definidas pela Adobe disponíveis para descrever um caso de uso exclusivo.
 
-A captura de tela a seguir demonstra como as classes são representadas na interface do usuário do Experience Platform. Como o esquema de exemplo mostrado não contém nenhum grupo de campos, todos os campos exibidos são fornecidos pela classe do esquema ([!UICONTROL Perfil individual XDM]).
+A captura de tela a seguir demonstra como as classes são representadas na interface do usuário do Experience Platform. Como o esquema de exemplo mostrado não contém nenhum grupo de campos, todos os campos exibidos são fornecidos pela classe do esquema ([!UICONTROL XDM Individual Profile]).
 
-![O [!UICONTROL Perfil Individual XDM] no Editor de Esquemas.](../images/schema-composition/class.png)
+![O [!UICONTROL XDM Individual Profile] no Editor de Esquemas.](../images/schema-composition/class.png)
 
 Para obter a lista mais atualizada de classes XDM padrão disponíveis, consulte o [repositório XDM oficial](https://github.com/adobe/xdm/tree/master/components/classes). Como alternativa, consulte o guia em [explorando componentes XDM](../ui/explore.md) se preferir exibir recursos na interface.
 
@@ -207,7 +207,7 @@ Os grupos de campos definem a(s) classe(s) com a(s) qual(is) eles são compatív
 
 O Experience Platform inclui muitos grupos de campos padrão do Adobe, além de permitir que os fornecedores definam grupos de campos para seus usuários e que os usuários individuais definam grupos de campos para seus próprios conceitos específicos.
 
-Por exemplo, para capturar detalhes como &quot;[!UICONTROL Nome]&quot; e &quot;[!UICONTROL Endereço Residencial]&quot; do esquema &quot;[!UICONTROL Membros de Fidelidade]&quot;, você poderá usar grupos de campos padrão que definem esses conceitos comuns. No entanto, os conceitos mais específicos da sua organização (como detalhes do programa de fidelidade personalizado ou atributos do produto) que podem não ser cobertos por grupos de campos padrão. Nesse caso, você deve definir seu próprio grupo de campos para capturar essas informações.
+Por exemplo, para capturar detalhes como &quot;[!UICONTROL First Name]&quot; e &quot;[!UICONTROL Home Address]&quot; para o esquema &quot;[!UICONTROL Loyalty Members]&quot;, você poderia usar grupos de campos padrão que definem esses conceitos comuns. No entanto, os conceitos mais específicos da sua organização (como detalhes do programa de fidelidade personalizado ou atributos do produto) que podem não ser cobertos por grupos de campos padrão. Nesse caso, você deve definir seu próprio grupo de campos para capturar essas informações.
 
 >[!NOTE]
 >
@@ -217,9 +217,9 @@ Por exemplo, para capturar detalhes como &quot;[!UICONTROL Nome]&quot; e &quot;[
 
 Lembre-se de que os esquemas são compostos de &quot;zero ou mais&quot; grupos de campos, portanto, isso significa que você pode compor um esquema válido sem usar nenhum grupo de campos.
 
-A captura de tela a seguir demonstra como os grupos de campos são representados na interface do usuário do Experience Platform. Um único grupo de campos ([!UICONTROL Detalhes Demográficos]) foi adicionado a um esquema neste exemplo, que fornece um agrupamento de campos para a estrutura do esquema.
+A captura de tela a seguir demonstra como os grupos de campos são representados na interface do usuário do Experience Platform. Um único grupo de campos ([!UICONTROL Demographic Details]) é adicionado a um esquema neste exemplo, que fornece um agrupamento de campos para a estrutura do esquema.
 
-![O Editor de Esquemas com o grupo de campos [!UICONTROL Detalhes Demográficos] destacado em um esquema de exemplo.](../images/schema-composition/field-group.png)
+![O Editor de Esquemas com o grupo de campos [!UICONTROL Demographic Details] realçado em um esquema de exemplo.](../images/schema-composition/field-group.png)
 
 Para obter a lista mais atualizada de grupos de campos XDM padrão disponíveis, consulte o [repositório XDM oficial](https://github.com/adobe/xdm/tree/master/components/fieldgroups). Como alternativa, consulte o guia em [explorando componentes XDM](../ui/explore.md) se preferir exibir recursos na interface.
 
@@ -237,7 +237,7 @@ Os tipos de dados são usados como tipos de campo de referência em classes ou e
 
 O Experience Platform fornece vários tipos de dados comuns como parte do [!DNL Schema Registry] para dar suporte ao uso de padrões padrão para descrever estruturas de dados comuns. Isso é explicado com mais detalhes nos [tutoriais do Registro de esquemas](../tutorials/create-schema-api.md) e ficará mais claro à medida que você percorrer as etapas para definir os tipos de dados.
 
-A captura de tela a seguir demonstra como os tipos de dados são representados na interface do usuário do Experience Platform. Um dos campos fornecidos pelo grupo de campos [!UICONTROL Detalhes Demográficos] usa o tipo de dados &quot;[!UICONTROL Objeto]&quot;, conforme indicado pelo texto após o caractere de barra vertical (`|`) ao lado do nome do campo. Esse tipo de dados específico fornece vários subcampos relacionados ao nome de uma pessoa individual, uma construção que pode ser reutilizada para outros campos em que o nome de uma pessoa precisa ser capturado.
+A captura de tela a seguir demonstra como os tipos de dados são representados na interface do usuário do Experience Platform. Um dos campos fornecidos pelo grupo de campos [!UICONTROL Demographic Details] usa o tipo de dados &quot;[!UICONTROL Object]&quot;, conforme indicado pelo texto após o caractere de barra vertical (`|`) ao lado do nome do campo. Esse tipo de dados específico fornece vários subcampos relacionados ao nome de uma pessoa individual, uma construção que pode ser reutilizada para outros campos em que o nome de uma pessoa precisa ser capturado.
 
 ![Um diagrama no Editor de Esquemas para uma pessoa individual com o objeto Nome completo e os atributos realçados.](../images/schema-composition/data-type.png)
 
@@ -264,7 +264,7 @@ Um campo é o bloco de construção mais básico de um esquema. Os campos fornec
 
 Os intervalos válidos desses tipos escalares podem ser ainda mais restritos a determinados padrões, formatos, mínimos/máximos ou valores predefinidos. Usando essas restrições, uma grande variedade de tipos de campos mais específicos pode ser representada, incluindo:
 
-* Enumeração
+* Lista Discriminada
 * Longo
 * Curto
 * Byte
@@ -280,11 +280,11 @@ Os intervalos válidos desses tipos escalares podem ser ainda mais restritos a d
 
 Os esquemas são criados usando um modelo de composição e representam o formato e a estrutura dos dados a serem assimilados em [!DNL Experience Platform]. Como mencionado anteriormente, esses esquemas são compostos de uma classe e zero ou mais grupos de campos compatíveis com essa classe.
 
-Por exemplo, um esquema que descreve compras feitas em uma loja de varejo pode ser chamado de &quot;[!UICONTROL Transações da loja]&quot;. O esquema implementa a classe [!DNL XDM ExperienceEvent] combinada com o grupo de campos [!UICONTROL Commerce] padrão e um grupo de campos [!UICONTROL Informações do Produto] definido pelo usuário.
+Por exemplo, um esquema que descreve compras feitas em uma loja de varejo pode ser chamado de &quot;[!UICONTROL Store Transactions]&quot;. O esquema implementa a classe [!DNL XDM ExperienceEvent] combinada com o grupo de campos [!UICONTROL Commerce] padrão e um grupo de campos [!UICONTROL Product Info] definido pelo usuário.
 
-Outro esquema que rastreia o tráfego do site pode ser chamado de &quot;[!UICONTROL Visitas na Web]&quot;. Ele também implementa a classe [!DNL XDM ExperienceEvent], mas desta vez combina o grupo de campos [!UICONTROL Web] padrão.
+Outro esquema que rastreia o tráfego do site pode ser chamado de &quot;[!UICONTROL Web Visits]&quot;. Ele também implementa a classe [!DNL XDM ExperienceEvent], mas desta vez combina o grupo de campos [!UICONTROL Web] padrão.
 
-O diagrama abaixo mostra esses esquemas e os campos contribuídos por cada grupo de campos. Ela também contém dois esquemas baseados na classe [!DNL XDM Individual Profile], incluindo o esquema &quot;[!UICONTROL Membros de fidelidade]&quot; mencionado anteriormente neste guia.
+O diagrama abaixo mostra esses esquemas e os campos contribuídos por cada grupo de campos. Ela também contém dois esquemas baseados na classe [!DNL XDM Individual Profile], incluindo o esquema &quot;[!UICONTROL Loyalty Members]&quot; mencionado anteriormente neste guia.
 
 ![Um diagrama de fluxo de quatro esquemas e dos grupos de campos que contribuem com eles.](../images/schema-composition/composition.png)
 
@@ -306,8 +306,8 @@ Todos os arquivos de dados assimilados na Experience Platform devem estar em con
 
 Se você estiver trazendo públicos-alvo de sistemas externos para a Experience Platform, deverá usar os seguintes componentes para capturá-los em seus esquemas:
 
-* [[!UICONTROL Definição de segmento] classe](../classes/segment-definition.md): use esta classe padrão para capturar os principais atributos de uma definição de segmento externo.
-* [[!UICONTROL Detalhes da associação do segmento] grupo de campos](../field-groups/profile/segmentation.md): adicione este grupo de campos ao esquema [!UICONTROL Perfil individual XDM] para associar perfis de clientes a públicos específicos.
+* [[!UICONTROL Segment definition] classe](../classes/segment-definition.md): use esta classe padrão para capturar atributos de chave de uma definição de segmento externo.
+* [[!UICONTROL Segment Membership Details] grupo de campos](../field-groups/profile/segmentation.md): adicione este grupo de campos ao esquema [!UICONTROL XDM Individual Profile] para associar perfis de clientes a públicos específicos.
 
 ## Próximas etapas
 

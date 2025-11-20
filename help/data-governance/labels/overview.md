@@ -6,7 +6,7 @@ description: Saiba como os rótulos de uso de dados são usados para ajudar a im
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
 source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '786'
 ht-degree: 16%
 
 ---
@@ -44,7 +44,7 @@ Para obter mais informações sobre como a imposição automática funciona no E
 
 [!DNL Experience Platform] pode compartilhar segmentos com a Adobe Audience Manager. Quaisquer Controles de Exportação de Dados que tenham sido aplicados a segmentos do Audience Manager são traduzidos em rótulos equivalentes e ações de marketing reconhecidas pela Governança de Dados do [!DNL Experience Platform].
 
-Para obter uma referência sobre como os Controles de Exportação de Dados específicos são mapeados para rótulos de uso de dados no [!DNL Experience Platform], consulte a [documentação do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=pt-BR#aam-data-export-control-in-aep).
+Para obter uma referência sobre como os Controles de Exportação de Dados específicos são mapeados para rótulos de uso de dados no [!DNL Experience Platform], consulte a [documentação do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Gerenciamento dos rótulos de uso de dados na [!DNL Experience Platform] {#manage-labels}
 
@@ -57,7 +57,7 @@ Você pode gerenciar rótulos de uso de dados usando as APIs do [!DNL Experience
 
 ### Uso da interface
 
-O espaço de trabalho **[!UICONTROL Políticas]** da interface do usuário do [!DNL Experience Platform] permite exibir e gerenciar rótulos principais e personalizados para sua organização. Você pode usar o espaço de trabalho **[!UICONTROL Esquemas]** para [aplicar rótulos aos seus esquemas do Experience Data Model (XDM)](../../xdm/tutorials/labels.md) ou aprender a [criar e gerenciar rótulos personalizados na **[!UICONTROL Interface do usuário]**](./user-guide.md) lendo o guia do usuário de rótulos de uso de dados.
+O espaço de trabalho **[!UICONTROL Policies]** na interface do usuário do [!DNL Experience Platform] permite exibir e gerenciar rótulos principais e personalizados para sua organização. Você pode usar o espaço de trabalho **[!UICONTROL Schemas]** para [aplicar rótulos aos seus esquemas do Experience Data Model (XDM)](../../xdm/tutorials/labels.md) ou aprender a [criar e gerenciar rótulos personalizados na **[!UICONTROL Policies]** interface](./user-guide.md) lendo o guia do usuário de rótulos de uso de dados.
 
 >[!IMPORTANT]
 >

@@ -4,7 +4,7 @@ description: Saiba mais sobre as etapas recomendadas a serem seguidas ao impleme
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
 source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
-source-wordcount: '1956'
+source-wordcount: '1944'
 ht-degree: 6%
 
 ---
@@ -94,7 +94,7 @@ Durante o processo de pré-implementação, certifique-se de que os eventos aute
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/br/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ Você deve **não** enviar uma carga como a seguir:
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/br/",
+          "URL": "https://business.adobe.com/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ Neste exemplo, você pode supor que o evento a seguir foi enviado para o Experie
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/br/",
+            "URL": "https://business.adobe.com/",
             "name": "Adobe Business"
         }
     }
@@ -182,8 +182,8 @@ Neste exemplo, você pode supor que o evento a seguir foi enviado para o Experie
 
 A primeira etapa do processo de implementação do Serviço de identidade é garantir que sua conta da Experience Platform seja adicionada a uma função que seja provisionada com as permissões necessárias. O administrador pode configurar permissões para sua conta navegando até a interface de permissões no Adobe Experience Cloud. A partir daí, sua conta deve ser adicionada a uma função com as seguintes permissões:
 
-* [!UICONTROL Exibir Configurações de Identidade]: aplique esta permissão para poder exibir namespaces exclusivos e a prioridade de namespace na página de procura de namespace de identidade.
-* [!UICONTROL Editar configurações de identidade]: aplique esta permissão para poder editar e salvar suas configurações de identidade.
+* [!UICONTROL View Identity Settings]: aplique esta permissão para poder exibir namespaces exclusivos e a prioridade de namespace na página de procura de namespace de identidade.
+* [!UICONTROL Edit Identity Settings]: aplique esta permissão para poder editar e salvar suas configurações de identidade.
 
 Para obter mais informações sobre permissões, leia o [guia de permissões](../../access-control/abac/ui/permissions.md).
 
@@ -199,7 +199,7 @@ Ao criar diferentes configurações, você pode usar a ferramenta de simulação
 
 ## Definir configurações de identidade {#identity-settings}
 
-Assim que tiver uma ideia melhor de como deseja que o gráfico se comporte, navegue até a [interface de configurações de identidade](./identity-settings-ui.md) no espaço de trabalho da interface do usuário do Serviço de Identidade. Para acessar a interface de configurações de identidade, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione **[!UICONTROL Configurações]**.
+Assim que tiver uma ideia melhor de como deseja que o gráfico se comporte, navegue até a [interface de configurações de identidade](./identity-settings-ui.md) no espaço de trabalho da interface do usuário do Serviço de Identidade. Para acessar a interface de configurações de identidade, selecione **[!UICONTROL Identities]** na navegação à esquerda e **[!UICONTROL Settings]**.
 
 ![A página de navegação das identidades com o botão de configurações realçado.](../images/implementation/settings.png "A página de navegação das identidades com o botão de configurações realçado."){zoomable="yes"}
 
@@ -245,13 +245,13 @@ Depois de ter todos os itens listados acima, você pode começar a assimilar seu
 >
 >Depois que os dados são assimilados, a carga de dados brutos do XDM não é alterada. Você ainda pode ver suas configurações de identidade principais na interface do usuário. No entanto, essas configurações serão substituídas pelas configurações de identidade.
 
-Para qualquer comentário, use a opção **[!UICONTROL comentários sobre o Beta]** no espaço de trabalho da interface do usuário do Serviço de Identidade.
+Para qualquer comentário, use a opção **[!UICONTROL Beta feedback]** no espaço de trabalho da interface do usuário do Serviço de Identidade.
 
 ## Validar seus gráficos {#validate}
 
 Use o painel de identidade para obter insights sobre o estado dos gráficos de identidade, como a contagem geral de identidades e as tendências de contagem de gráficos, a contagem de identidades por namespace e a contagem de gráficos por tamanho do gráfico. Você também pode usar o painel de identidade para exibir tendências em gráficos com duas ou mais identidades, organizadas por namespace.
 
-Selecione as reticências (`...`) e selecione **[!UICONTROL Exibir mais]** para obter mais informações e validar se não há gráficos recolhidos.
+Selecione as reticências (`...`) e selecione **[!UICONTROL View more]** para obter mais informações e validar se não há gráficos recolhidos.
 
 ![O painel de identidade no espaço de trabalho da interface do usuário do Serviço de Identidade.](../images/implementation/identity_dashboard.png "O painel de identidade no espaço de trabalho da interface do usuário do Serviço de Identidade."){zoomable="yes"}
 

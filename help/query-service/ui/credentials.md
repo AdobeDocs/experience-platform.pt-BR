@@ -46,11 +46,11 @@ A seção **[!UICONTROL Expiring credentials]** fornece as seguintes informaçõ
 >
 >![A guia Configurações do Admin Console com Privacidade e Segurança, Configurações de autenticação e Vida máxima da sessão foi realçada.](../images/ui/credentials/max-session-life.png)
 >
->Consulte a documentação de Ajuda do Adobe para obter mais informações sobre as [Configurações avançadas](https://helpx.adobe.com/br/enterprise/using/authentication-settings.html#advanced-settings) oferecidas pelo Admin Console.
+>Consulte a documentação de Ajuda do Adobe para obter mais informações sobre as [Configurações avançadas](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) oferecidas pelo Admin Console.
 
 ### Conectar-se aos dados do Customer Journey Analytics nas sessões de consulta {#connect-to-customer-journey-analytics}
 
-Use a extensão Customer Journey Analytics BI com Power BI ou Tableau para acessar suas [visualizações de dados](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-dataviews/data-views) do Customer Journey Analytics com SQL. Ao integrar o Serviço de consulta à extensão BI, você pode acessar suas visualizações de dados diretamente nas sessões do Serviço de consulta. Essa integração simplifica a funcionalidade das ferramentas de BI que usam o Serviço de consulta como interface PostgreSQL. Essa funcionalidade elimina a necessidade de duplicar visualizações de dados em ferramentas de BI, garante a geração de relatórios consistentes entre plataformas e simplifica a integração dos dados do Customer Journey Analytics com outras fontes em plataformas de BI.
+Use a extensão Customer Journey Analytics BI com Power BI ou Tableau para acessar suas [visualizações de dados](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) do Customer Journey Analytics com SQL. Ao integrar o Serviço de consulta à extensão BI, você pode acessar suas visualizações de dados diretamente nas sessões do Serviço de consulta. Essa integração simplifica a funcionalidade das ferramentas de BI que usam o Serviço de consulta como interface PostgreSQL. Essa funcionalidade elimina a necessidade de duplicar visualizações de dados em ferramentas de BI, garante a geração de relatórios consistentes entre plataformas e simplifica a integração dos dados do Customer Journey Analytics com outras fontes em plataformas de BI.
 
 Consulte a documentação para saber como [conectar o Serviço de consulta a uma variedade de aplicativos de cliente de desktop](../clients/overview.md), como [Power BI](../clients/power-bi.md) ou [Tableau](../clients/tableau.md)
 
@@ -68,7 +68,7 @@ Para acessar os dados do Customer Journey Analytics no Power BI ou Tableau, sele
 
 Você também pode acessar os dados do Customer Journey Analytics diretamente do Editor de consultas ou da CLI do Postgres. Para fazer isso, faça referência ao banco de dados `cja` ao gravar sua consulta. Consulte o [guia de criação de consultas](./user-guide.md#query-authoring) do Editor de consultas para obter mais informações sobre como gravar, executar e salvar consultas.
 
-Consulte o [guia de extensão de BI](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-dataviews/bi-extension) para obter instruções completas sobre como acessar suas visualizações de dados do Customer Journey Analytics com SQL.
+Consulte o [guia de extensão de BI](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) para obter instruções completas sobre como acessar suas visualizações de dados do Customer Journey Analytics com SQL.
 
 ## Credenciais sem expiração {#non-expiring-credentials}
 
@@ -176,7 +176,7 @@ A tabela abaixo descreve os parâmetros normalmente necessários para se conecta
 >[!NOTE]
 >
 >Ao conectar-se a um host usando credenciais sem expiração, ainda é necessário usar todos os parâmetros listados na seção [!UICONTROL EXPIRING CREDENTIALS], exceto a senha e o nome de usuário.
->&#x200B;>O formato para inserir seu nome de usuário e senha usa valores separados por dois pontos, como neste exemplo `username:{your_username}` e `password:{password_string}`.
+>O formato para inserir seu nome de usuário e senha usa valores separados por dois pontos, como neste exemplo `username:{your_username}` e `password:{password_string}`.
 
 | Parâmetro | Descrição | Exemplo |
 |---|---|---|

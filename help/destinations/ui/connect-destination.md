@@ -5,8 +5,8 @@ description: Saiba como se conectar a um destino no Adobe Experience Platform, a
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1280'
-ht-degree: 2%
+source-wordcount: '1236'
+ht-degree: 4%
 
 ---
 
@@ -14,8 +14,8 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 > 
->* Para se conectar a um destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* Para se conectar a um destino com suporte a exportações de conjunto de dados, você precisa das **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar e Ativar Destinos de Conjunto de Dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para se conectar a um destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para se conectar a um destino compatível com exportações de conjunto de dados, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 ## Visão geral {#overview}
 
@@ -23,29 +23,29 @@ Antes de enviar dados do público-alvo para um destino, é necessário configura
 
 ## Localize o destino desejado no catálogo {#setup}
 
-1. Vá para **[!UICONTROL Conexões]** > **[!UICONTROL Destinos]** e selecione a guia **[!UICONTROL Catálogo]**.
+1. Vá para **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e selecione a guia **[!UICONTROL Catalog]**.
 
    ![Captura de tela da interface do usuário do Experience Platform mostrando a página do catálogo de destinos.](../assets/ui/connect-destinations/catalog.png)
 
 2. Os cartões de destino no catálogo podem ter controles de ação diferentes, dependendo se você tem uma conexão existente com o destino e se os destinos oferecem suporte à ativação de públicos, exportação de conjuntos de dados ou ambos. Você pode ver qualquer um dos seguintes controles para cartões de destino:
 
-   * **[!UICONTROL Configurar]**. Primeiro, é necessário configurar uma conexão com esse destino para que você possa ativar públicos ou exportar conjuntos de dados.
-   * **[!UICONTROL Ativar]**. Já foi configurada uma conexão com este destino. Esse destino oferece suporte à ativação de públicos-alvo e exportações de conjunto de dados.
-   * **[!UICONTROL Ativar públicos]**. Já foi configurada uma conexão com este destino. Este destino oferece suporte somente à ativação de público-alvo.
+   * **[!UICONTROL Set up]**. Primeiro, é necessário configurar uma conexão com esse destino para que você possa ativar públicos ou exportar conjuntos de dados.
+   * **[!UICONTROL Activate]**. Já foi configurada uma conexão com este destino. Esse destino oferece suporte à ativação de públicos-alvo e exportações de conjunto de dados.
+   * **[!UICONTROL Activate audiences]**. Já foi configurada uma conexão com este destino. Este destino oferece suporte somente à ativação de público-alvo.
 
    Para obter mais informações sobre a diferença entre esses controles, consulte também a seção [Catálogo](../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
 
-   Selecione **[!UICONTROL Configurar]**, **[!UICONTROL Ativar]** ou **[!UICONTROL Ativar públicos-alvo]**, dependendo de qual controle está disponível para você.
+   Selecione **[!UICONTROL Set up]**, **[!UICONTROL Activate]** ou **[!UICONTROL Activate audiences]**, dependendo de qual controle está disponível para você.
 
    ![Captura de tela da interface do Experience Platform, mostrando a página do catálogo de destinos com o controle Configurar realçado.](../assets/ui/connect-destinations/set-up.png)
 
    ![Captura de tela da interface do usuário do Experience Platform mostrando a página do catálogo de destinos com o controle Ativar públicos destacado.](../assets/ui/connect-destinations/activate-segments.png)
 
-3. Se você selecionou **[!UICONTROL Configurar]**, pule para a próxima etapa para [autenticar](#authenticate) para o destino.
+3. Se você selecionou **[!UICONTROL Set up]**, pule para a próxima etapa para [autenticar](#authenticate) para o destino.
 
-   Se você selecionou **[!UICONTROL Ativar]**, **[!UICONTROL Ativar públicos-alvo]** ou **[!UICONTROL Exportar conjuntos de dados]**, agora é possível ver uma lista de conexões de destino existentes.
+   Se você selecionou **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]** ou **[!UICONTROL Export datasets]**, agora é possível ver uma lista de conexões de destino existentes.
 
-   Selecione **[!UICONTROL Configurar novo destino]** para estabelecer uma nova conexão com o destino.
+   Selecione **[!UICONTROL Configure new destination]** para estabelecer uma nova conexão com o destino.
 
    ![Captura de tela da interface do usuário do Experience Platform, mostrando uma lista de destinos disponíveis e o controle Configurar novo destino destacado.](../assets/ui/connect-destinations/configure-new-destination.png)
 
@@ -60,10 +60,10 @@ A primeira etapa na conexão com um destino é autenticar na plataforma de desti
 
 Dependendo do destino ao qual você está se conectando, você pode ser levado à página do parceiro de destino para autenticar ou pode ser solicitado a inserir credenciais de autenticação diretamente no fluxo de trabalho do Experience Platform.
 
-Ao configurar uma nova conexão de destino, você deve fornecer um **[!UICONTROL Nome da conta]** e, opcionalmente, uma **[!UICONTROL Descrição]**. Esses campos estão disponíveis para todos os destinos.
+Ao configurar uma nova conexão de destino, você deve fornecer um **[!UICONTROL Account name]** e, opcionalmente, um **[!UICONTROL Description]**. Esses campos estão disponíveis para todos os destinos.
 
-* **[!UICONTROL Nome da conta]**: digite um nome que o ajudará a identificar facilmente esta conta de destino no futuro. Isso é especialmente útil se você tiver várias conexões com o mesmo destino.
-* **[!UICONTROL Descrição]** (opcional): adicione detalhes adicionais que ajudarão você ou sua equipe a distinguir entre contas, como a finalidade da conexão ou o contexto comercial relevante.
+* **[!UICONTROL Account name]**: Digite um nome que o ajudará a identificar facilmente esta conta de destino no futuro. Isso é especialmente útil se você tiver várias conexões com o mesmo destino.
+* **[!UICONTROL Description]** (opcional): adicione detalhes adicionais que ajudarão você ou sua equipe a distinguir contas, como a finalidade da conexão ou o contexto comercial relevante.
 
 Fornecer informações claras e descritivas nesses campos facilita o gerenciamento e a seleção da conta de destino correta ao ativar públicos.
 
@@ -113,7 +113,7 @@ Alguns destinos baseados em arquivo oferecem suporte à ativação de públicos-
 
    ![A caixa de diálogo Configurar novo destino com as opções de assinatura de alertas de destino em contexto foi realçada.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
-2. Selecione **[!UICONTROL Próximo]**.
+2. Selecione **[!UICONTROL Next]**.
 
    ![A caixa de diálogo Configurar novo destino com o controle Avançar foi realçada, permitindo que o usuário prossiga para a próxima etapa do fluxo de trabalho.](../assets/ui/connect-destinations/next.png)
 
@@ -123,7 +123,7 @@ Alguns destinos baseados em arquivo oferecem suporte à ativação de públicos-
 
    ![A caixa de diálogo Configurar novo destino com as ações de marketing disponíveis foi realçada. Os controles disponíveis para concluir o fluxo de trabalho Conectar ao destino também são destacados.](../assets/ui/connect-destinations/governance.png)
 
-2. Selecione **[!UICONTROL Salvar e Sair]** para salvar a configuração de destino ou selecione **[!UICONTROL Avançar]** para prosseguir para o [fluxo de ativação](activation-overview.md) dos dados de público-alvo.
+2. Selecione **[!UICONTROL Save & Exit]** para salvar a configuração de destino ou **[!UICONTROL Next]** para prosseguir para o [fluxo de ativação](activation-overview.md) dos dados de público-alvo.
 
 ## Próximas etapas {#next-steps}
 

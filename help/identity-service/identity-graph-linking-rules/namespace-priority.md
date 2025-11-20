@@ -4,7 +4,7 @@ description: Saiba mais sobre a prioridade de namespace no Serviço de identidad
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
 source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
 workflow-type: tm+mt
-source-wordcount: '2120'
+source-wordcount: '2119'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 Cada implementação de cliente é exclusiva e personalizada para atender às metas de uma organização específica e, como tal, a importância de um determinado namespace varia de acordo com o cliente. Exemplos reais incluem:
 
 * Sua empresa pode considerar cada endereço de email para representar uma entidade de uma única pessoa e, portanto, usar [configurações de identidade](./identity-settings-ui.md) para configurar o namespace de email como exclusivo. No entanto, outra empresa pode querer representar entidades de uma única pessoa com vários endereços de email e, portanto, configurar o namespace de email como não exclusivo. Essas empresas precisariam usar outro namespace de identidade como exclusivo, como um namespace CRMID, para que possa haver um identificador de uma única pessoa vinculado aos vários endereços de email.
-* Você pode coletar o comportamento online usando um namespace de &quot;ID de logon&quot;. Essa ID de logon pode ter uma relação 1:1 com a CRMID, que armazena atributos de um sistema CRM e pode ser considerada o namespace mais importante. Nesse caso, você está determinando que o namespace CRMID é uma representação mais precisa de uma pessoa, enquanto o namespace da ID de logon é o segundo mais importante.
+* Você pode coletar o comportamento online usando um namespace de &quot;ID de logon&quot;. Esta ID de Logon pode ter uma relação 1:1 com o CRMID, que armazena atributos de um sistema CRM e pode ser considerada o namespace mais importante. Nesse caso, você está determinando que o namespace CRMID é uma representação mais precisa de uma pessoa, enquanto o namespace da ID de logon é o segundo mais importante.
 
 Você deve fazer configurações no Serviço de identidade que reflitam a importância dos namespaces, pois isso influencia como os perfis e seus gráficos de identidade relacionados são formados e divididos.
 
@@ -65,7 +65,7 @@ A prioridade de namespace pode ser definida usando a [interface do usuário de c
 
 ## Uso da prioridade de namespace
 
-Atualmente, a prioridade do namespace influencia o comportamento do sistema do Perfil do cliente em tempo real. O diagrama abaixo ilustra esse conceito. Para obter mais informações, leia o guia em [diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/pt-br/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Atualmente, a prioridade do namespace influencia o comportamento do sistema do Perfil do cliente em tempo real. O diagrama abaixo ilustra esse conceito. Para obter mais informações, leia o guia em [diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Um diagrama do escopo de aplicativo de prioridade de namespace.](../images/namespace-priority/application-scope.png "Um diagrama do escopo de aplicativo de prioridade de namespace."){zoomable="yes"}
 
@@ -141,7 +141,7 @@ Se os critérios de qualificação de segmento fossem baseados apenas em eventos
 
 Esta seção descreve como a prioridade de namespace pode afetar outros serviços da Experience Platform.
 
-### Gerenciamento avançado do ciclo de vida dos dados
+### Gerenciamento avançado do ciclo de vida de dados
 
 A exclusão de registros da higiene de dados solicita funções da seguinte maneira, para uma determinada identidade:
 
@@ -208,13 +208,13 @@ Em um determinado evento, verifique se todos os namespaces que representam uma e
 
 * **Aplicabilidade de evento**: esse comportamento se aplica somente a eventos enviados diretamente para a Edge Network (como WebSDK e Mobile SDK). Os eventos assimilados do [hub do Experience Platform](../../landing/edge-and-hub-comparison.md), como aqueles assimilados com a fonte da API HTTP, outras fontes de transmissão e fontes em lote, não estão sujeitos a essa limitação.
 * **Especificidade da segmentação do Edge**: esse comportamento é específico da segmentação de borda. A segmentação em lote e por transmissão são serviços separados avaliados no hub e não seguem o mesmo processo. Leia o [guia de segmentação de borda](../../segmentation/methods/edge-segmentation.md) para obter mais informações.
-* Leia as [páginas de diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/pt-br/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) e [comparação de Edge Network e hub](../../landing/edge-and-hub-comparison.md) para obter mais informações.
+* Leia as [páginas de diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) e [comparação de Edge Network e hub](../../landing/edge-and-hub-comparison.md) para obter mais informações.
 
 #### aplicativos Edge Network
 
 Para garantir que os aplicativos na Edge Network tenham acesso ao Perfil do Edge sem demora, verifique se os eventos incluem `primary=true` no CRMID. Isso garante disponibilidade imediata sem esperar por atualizações do gráfico de identidade do hub.
 
 * Aplicativos no Edge Network, como Adobe Target, Offer Decisioning e Destinos personalizados do Personalization continuarão a depender da identidade principal nos eventos para acessar perfis do Perfil do Edge.
-* Leia o [diagrama de arquitetura do Experience Platform Web SDK &amp; Edge Network](https://experienceleague.adobe.com/pt-br/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obter mais informações sobre o comportamento do Edge Network.
+* Leia o [diagrama de arquitetura do Experience Platform Web SDK &amp; Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obter mais informações sobre o comportamento do Edge Network.
 * Leia a documentação sobre [Tipos de elementos de dados](../../tags/extensions/client/web-sdk/data-element-types.md) e [Dados de identidade no Web SDK](../../web-sdk/identity/overview.md) para obter mais informações sobre como configurar a identidade principal no Web SDK.
 * Verifique se a ECID está incluída no evento de experiência. Se a ECID estiver ausente, ela será adicionada à carga do evento com `primary=true`, o que pode levar a resultados inesperados.

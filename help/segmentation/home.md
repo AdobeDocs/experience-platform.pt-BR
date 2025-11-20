@@ -67,7 +67,7 @@ Além das composições de público-alvo e definições de segmento, você pode 
 >id="platform_segments_evaluation_streaming"
 >title="Avaliação de transmissão"
 >abstract="A segmentação de transmissão é um processo contínuo de seleção de dados que atualiza os públicos-alvo em resposta à atividade do usuário."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html?lang=pt-BR" text="Avaliar eventos em tempo quase real com a segmentação de transmissão"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Avaliar eventos em tempo quase real com a segmentação de transmissão"
 
 Atualmente, a Experience Platform aceita três métodos de avaliação de públicos-alvo: segmentação de transmissão, segmentação em lote e segmentação de borda.
 
@@ -94,7 +94,7 @@ Os públicos-alvo em lote são avaliados automaticamente a cada 24 horas. Se qui
 >id="platform_segments_evaluation_edge"
 >title="Avaliação da borda"
 >abstract="A segmentação de borda é a capacidade de avaliar segmentos na Edge Network da Experience Platform instantaneamente, permitindo casos de uso de personalização da mesma página ou da próxima página."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html?lang=pt-BR" text="Guia de segmentação de borda"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Guia de segmentação de borda"
 
 A segmentação do Edge é a capacidade de avaliar segmentos no Experience Platform instantaneamente [no Edge Network](../landing/edge-and-hub-comparison.md), permitindo casos de uso de personalização de mesma página e próxima página.
 

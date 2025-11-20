@@ -6,7 +6,7 @@ type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '636'
 ht-degree: 11%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 11%
 
 Todos os recursos na Biblioteca de esquemas estão contidos em uma sandbox específica em uma organização. Em alguns casos, é possível compartilhar recursos do Experience Data Model (XDM) entre sandboxes e organizações.
 
-Para atender a essa necessidade, o espaço de trabalho [!UICONTROL Esquemas] da interface do usuário do Adobe Experience Platform permite gerar uma carga de exportação para qualquer esquema da na Biblioteca de Esquemas. Essa carga pode ser usada em uma chamada à API do Registro de esquema para importar o esquema (e todos os recursos dependentes) para uma sandbox e organização de destino.
+Para atender a essa necessidade, o espaço de trabalho [!UICONTROL Schemas] na interface do usuário do Adobe Experience Platform permite gerar uma carga de exportação para qualquer esquema na Biblioteca de Esquemas. Essa carga pode ser usada em uma chamada à API do Registro de esquema para importar o esquema (e todos os recursos dependentes) para uma sandbox e organização de destino.
 
 >[!NOTE]
 >
@@ -32,21 +32,21 @@ Embora a interface do Experience Platform permita exportar recursos XDM, você d
 
 ## Gerar uma carga de exportação {#generate-export-payload}
 
-As cargas de exportação podem ser geradas na interface do usuário do Experience Platform a partir do painel de detalhes na guia [!UICONTROL Procurar] ou diretamente da tela do esquema no Editor de esquemas.
+As cargas de exportação podem ser geradas na interface do usuário do Experience Platform a partir do painel de detalhes na guia [!UICONTROL Browse] ou diretamente da tela do esquema no Editor de esquemas.
 
-Para gerar uma carga de exportação, selecione **[!UICONTROL Esquemas]** na navegação à esquerda. No espaço de trabalho [!UICONTROL Esquemas], selecione a linha do esquema que deseja exportar para exibir os detalhes do esquema na barra lateral direita.
+Para gerar uma carga de exportação, selecione **[!UICONTROL Schemas]** na navegação à esquerda. No espaço de trabalho [!UICONTROL Schemas], selecione a linha do esquema que deseja exportar para exibir os detalhes do esquema na barra lateral direita.
 
 >[!TIP]
 >
 >Consulte o guia em [explorando recursos XDM](./explore.md) para obter detalhes sobre como encontrar o recurso XDM que você está procurando.
 
-Em seguida, selecione o ícone **[!UICONTROL Copiar JSON]** (![Copiar Ícone](/help/images/icons/copy.png)) das opções disponíveis.
+Em seguida, selecione o ícone **[!UICONTROL Copy JSON]** (![Copiar Ícone](/help/images/icons/copy.png)) nas opções disponíveis.
 
-![O espaço de trabalho Esquemas com uma linha de esquema e [!UICONTROL Copiar para JSON] realçado.](../images/ui/export/copy-json.png)
+![O espaço de trabalho Esquemas com uma linha de esquema e [!UICONTROL Copy to JSON] realçado.](../images/ui/export/copy-json.png)
 
 Isso copia uma carga JSON para a área de transferência, gerada com base na estrutura do esquema. Para o esquema &quot;[!DNL Loyalty Members]&quot; mostrado acima, o seguinte JSON é gerado:
 
-+++Selecione para expandir uma carga JSON de exemplo
++++Selecione para expandir um exemplo de carga JSON
 
 ```json
 [
@@ -212,13 +212,13 @@ Isso copia uma carga JSON para a área de transferência, gerada com base na est
 
 +++
 
-A carga também pode ser copiada selecionando [!UICONTROL Mais] na parte superior direita do Editor de esquemas. Um menu suspenso fornece duas opções, [!UICONTROL Copiar estrutura JSON] e [!UICONTROL Excluir esquema].
+A carga também pode ser copiada selecionando [!UICONTROL More] na parte superior direita do Editor de esquemas. Um menu suspenso fornece duas opções, [!UICONTROL Copy JSON structure] e [!UICONTROL Delete schema].
 
 >[!NOTE]
 >
 >Um esquema não pode ser excluído quando está habilitado para o Perfil ou tem conjuntos de dados associados.
 
-![O Editor de Esquemas com [!UICONTROL Mais] e [!UICONTROL Copiar para JSON] foi realçado.](../images/ui/export/schema-editor-copy-json.png)
+![O Editor de Esquemas com [!UICONTROL More] e [!UICONTROL Copy to JSON] realçados.](../images/ui/export/schema-editor-copy-json.png)
 
 A carga assume a forma de uma matriz, com cada item de matriz sendo um objeto que representa um recurso XDM personalizado a ser exportado. No exemplo acima, o grupo de campos personalizados &quot;[!DNL Loyalty details]&quot; e o esquema &quot;[!DNL Loyalty Members]&quot; foram incluídos. Quaisquer recursos principais empregados pelo esquema não são incluídos na exportação, pois esses recursos estão disponíveis em todas as sandboxes e organizações.
 
@@ -230,4 +230,4 @@ Depois de copiar o JSON de exportação para o esquema, você pode usá-lo como 
 
 ## Próximas etapas
 
-Ao seguir este guia, você exportou com êxito um esquema XDM para uma organização ou sandbox diferente. Para obter mais informações sobre os recursos da interface do usuário de [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral da interface do usuário de &#x200B;]](./overview.md).
+Ao seguir este guia, você exportou com êxito um esquema XDM para uma organização ou sandbox diferente. Para obter mais informações sobre os recursos da interface do usuário do [!UICONTROL Schemas], consulte a visão geral da interface do usuário do [[!UICONTROL Schemas]](./overview.md).

@@ -5,7 +5,7 @@ description: Este documento fornece informações sobre como gerenciar usuários
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '280'
 ht-degree: 11%
 
 ---
@@ -18,19 +18,19 @@ ht-degree: 11%
 >abstract="Usuários são pessoas que têm acesso à Experience Platform. O acesso de um usuário individual aos recursos de uma organização é gerenciado por meio de funções."
 >additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Gerenciar funções"
 
-Se quiser exibir os detalhes e as funções dos usuários aos quais eles estão atribuídos, selecione a guia **[!UICONTROL Usuários]**.
+Se quiser exibir os detalhes do usuário e as funções às quais ele está atribuído, selecione a guia **[!UICONTROL Users]**.
 
-![Página de usuários exibida com a guia [!UICONTROL Usuários] destacada.](../../images/flac-ui/flac-users-tab.png)
+![Página de usuários mostrada com a guia [!UICONTROL Users] destacada.](../../images/flac-ui/flac-users-tab.png)
 
 Uma lista de usuários é exibida. Selecione o usuário que deseja visualizar na lista. Como alternativa, use a barra de pesquisa para procurar o usuário inserindo seu nome ou endereço de email.
 
 A guia de detalhes fornece uma visão geral do usuário. A visão geral exibe o nome do usuário, o tipo de conta, o email, a ID de autenticação, as informações de contato e os detalhes de localização.
 
-![Página de detalhes do usuário com a guia [!UICONTROL Detalhes] e o perfil de usuário destacado.](../../images/flac-ui/flac-users-details.png)
+![Página de detalhes do usuário com a guia [!UICONTROL Details] e o perfil de usuário destacado.](../../images/flac-ui/flac-users-details.png)
 
-Selecione a guia **[!UICONTROL Funções]** para exibir as funções às quais o usuário está atribuído.
+Selecione a guia **[!UICONTROL Roles]** para exibir as funções às quais o usuário está atribuído.
 
-A página ![Funções foi exibida com a guia [!UICONTROL Funções] e a função destacada.](../../images/flac-ui/flac-users-roles.png)
+A página ![Funções foi exibida com a guia [!UICONTROL Roles] e a função realçada.](../../images/flac-ui/flac-users-roles.png)
 
 ## Desenvolvedor e controle de acesso à API com permissões do Experience Platform
 
@@ -42,7 +42,7 @@ A transição para as permissões do Adobe Experience Platform tem etapas adicio
 
 O vídeo a seguir é destinado a fornecer suporte à sua compreensão das credenciais de desenvolvedor e de API do.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446403/?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 
 ## Próximas etapas
 

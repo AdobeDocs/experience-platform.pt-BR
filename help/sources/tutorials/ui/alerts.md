@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares; alertas
+keywords: Experience Platform;home;popular topics; alerts
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 title: Assinar alertas de contexto na interface do usuário
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
-ht-degree: 7%
+source-wordcount: '809'
+ht-degree: 13%
 
 ---
 
 # Assinar alertas para fluxos de dados de fontes na interface
 
-O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar a [[!DNL Observability Insights] API](../../../observability/api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreram erros.
+A Adobe Experience Platform permite que você se inscreva para receber alertas baseados em eventos relacionados às atividades da Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de pesquisar a [[!DNL Observability Insights] API](../../../observability/api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreu algum erro.
 
 Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 
-Este documento fornece etapas sobre como assinar mensagens de alertas de recebimento para seus fluxos de dados de origens.
+This document provides steps on how to subscribe receive alerts messages for your sources dataflows.
 
 ## Introdução
 
@@ -38,7 +38,7 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ad
 >
 >Você deve ativar notificações instantâneas de emails para sua conta do Experience Platform a fim de receber notificações de alerta baseadas em email para seus fluxos de dados.
 
-Você pode habilitar alertas para seus fluxos de dados durante a etapa [!UICONTROL detalhes do fluxo de dados] do fluxo de trabalho de fontes no espaço de trabalho de fontes.
+Você pode habilitar alertas para seus fluxos de dados durante a etapa [!UICONTROL Dataflow detail] do fluxo de trabalho de fontes no espaço de trabalho de fontes.
 
 ![detalhes do fluxo de dados](../../images/tutorials/alerts/dataflow-detail.png)
 
@@ -46,17 +46,17 @@ Os alertas disponíveis para fluxos de dados de origens são:
 
 >[!NOTE]
 >
->Atualmente, os alertas não oferecem suporte para fontes de transmissão. Você só pode assinar notificações de alerta para origens de lote.
+>Streaming sources are currently not supported by alerts. You can only subscribe to alert notifications for batch sources.
 
 | Alertas | Descrição |
 | --- | --- |
 | Início da execução do fluxo de fontes | Esse alerta envia uma mensagem quando o fluxo de dados de origem é iniciado. |
-| Êxito na execução do fluxo de fontes | Esse alerta envia uma mensagem quando os dados da sua fonte são assimilados com êxito na Experience Platform. |
-| Falha na execução do fluxo de fontes | Esse alerta envia uma mensagem se ocorrer um erro no fluxo de dados. |
+| Sources Flow Run Success | This alert sends you a message when data from your source is successfully ingested to Experience Platform. |
+| Sources Flow Run Failure | This alert sends you a message if an error occurs in your dataflow. |
 
-Selecione os alertas que você deseja assinar e selecione **[!UICONTROL Avançar]** para revisar e concluir seu fluxo de dados.
+Selecione os alertas que você deseja assinar e selecione **[!UICONTROL Next]** para revisar e concluir seu fluxo de dados.
 
-![selecionar-alertas](../../images/tutorials/alerts/select-alerts.png)
+![select-alerts](../../images/tutorials/alerts/select-alerts.png)
 
 Consulte os guias a seguir para obter etapas detalhadas sobre como criar um fluxo de dados de origens na interface do usuário:
 
@@ -72,7 +72,7 @@ Consulte os guias a seguir para obter etapas detalhadas sobre como criar um flux
 
 ## Receber alertas
 
-Depois que o fluxo de dados for executado, você poderá receber alertas por meio da interface do usuário ou por email.
+Once your dataflow runs, you can receive alerts through the UI or by email.
 
 ### Na interface
 
@@ -92,33 +92,33 @@ Selecione a mensagem de alerta para ver informações específicas sobre o fluxo
 
 ![selecionar-mensagem-alerta](../../images/tutorials/alerts/select-alert-message.png)
 
-A página [!UICONTROL Visão geral da execução do fluxo de dados] é exibida. A metade superior da tela exibe uma visão geral do fluxo de dados, incluindo informações sobre seus atributos, a ID de execução do fluxo de dados correspondente e um resumo de erros de alto nível.
+A página [!UICONTROL Dataflow run overview] é exibida. A metade superior da tela exibe uma visão geral do fluxo de dados, incluindo informações sobre seus atributos, a ID de execução do fluxo de dados correspondente e um resumo de erros de alto nível.
 
 ![visão geral do fluxo de dados](../../images/tutorials/alerts/dataflow-overview.png)
 
-A metade inferior da página exibe [!UICONTROL erros de execução do fluxo de dados] ocorridos durante o estágio de execução do fluxo de dados. Aqui, você pode visualizar o diagnóstico de erros ou usar a [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para baixar o diagnóstico de erros ou o manifesto de arquivo que corresponde ao seu fluxo de dados.
+A metade inferior da página exibe qualquer [!UICONTROL Dataflow run errors] que tenha ocorrido durante o estágio de execução do fluxo de dados. Aqui, você pode visualizar o diagnóstico de erros ou usar a [[!DNL Data Access] API](https://www.adobe.io/experience-platform-apis/references/data-access/) para baixar o diagnóstico de erros ou o manifesto de arquivo que corresponde ao seu fluxo de dados.
 
 ![erros de execução de fluxo de dados](../../images/tutorials/alerts/dataflow-run-error.png)
 
 Para obter mais informações sobre como manipular erros de fluxo de dados, consulte o manual sobre [monitoramento de fluxos de dados de fontes na interface](../../../dataflows/ui/monitor-sources.md).
 
-### Por email
+### By email
 
 Os alertas para seus fluxos de dados também são entregues a você por email. Selecione o nome do fluxo de dados no corpo do email para ver mais informações sobre o fluxo de dados.
 
 ![email](../../images/tutorials/alerts/email.png)
 
-Semelhante ao alerta da interface do usuário, a página [!UICONTROL Visão geral da execução do fluxo de dados] é exibida, fornecendo uma interface para investigar quaisquer erros associados ao seu fluxo de dados.
+Semelhante ao alerta da interface do usuário, a página [!UICONTROL Dataflow run overview] é exibida, fornecendo uma interface para investigar quaisquer erros associados ao fluxo de dados.
 
 ![visão geral do fluxo de dados](../../images/tutorials/alerts/dataflow-overview.png)
 
 ## Assinar e cancelar inscrição em alertas
 
-Você pode assinar mais alertas ou cancelar a assinatura de alertas estabelecidos para um fluxo de dados existente na página [!UICONTROL Fluxos de Dados]. Localize o fluxo de dados criado na lista e selecione as reticências (`...`) para ver um menu suspenso de opções. Em seguida, selecione **[!UICONTROL Assinar alertas]** para modificar as configurações de alerta do seu fluxo de dados.
+You can subscribe to more alerts or unsubscribe from established alerts for an existing dataflow in the [!UICONTROL Dataflows] page. Locate the dataflow you create from the list and then select the ellipses (`...`) to see a dropdown menu of options. Next, select **[!UICONTROL Subscribe alerts]** to modify the alert settings of your dataflow.
 
-![opções](../../images/tutorials/alerts/options.png)
+![options](../../images/tutorials/alerts/options.png)
 
-Uma janela pop-up é exibida, fornecendo uma lista de fontes e alertas. Selecione os alertas que deseja assinar ou desmarque os alertas dos quais deseja cancelar a assinatura. Quando terminar, selecione **[!UICONTROL Salvar]**.
+A pop-up window appears, providing you with a list of sources alerts. Selecione os alertas que deseja assinar ou desmarque os alertas dos quais deseja cancelar a assinatura. Quando terminar, selecione **[!UICONTROL Save]**.
 
 ![salvar](../../images/tutorials/alerts/save.png)
 

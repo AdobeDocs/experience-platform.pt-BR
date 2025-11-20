@@ -4,7 +4,7 @@ title: Configurar opções de formatação de arquivo para destinos baseados em 
 exl-id: f59b1952-e317-40ba-81d1-35535e132a72
 source-git-commit: 4dd6e8685ff5cc61342b20e971216416918b95da
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1191'
 ht-degree: 17%
 
 ---
@@ -55,11 +55,11 @@ Use esse controle para definir um separador para cada campo e valor nos arquivos
 
 Veja os exemplos abaixo do conteúdo nos arquivos CSV exportados com cada uma das seleções na interface do usuário.
 
-* Exemplo de saída com **[!UICONTROL Dois-pontos`(:)`]** selecionados: `male:John:Doe`
-* Exemplo de saída com **[!UICONTROL Vírgula`(,)`]** selecionada: `male,John,Doe`
-* Exemplo de saída com **[!UICONTROL Pipe`(|)`]** selecionado: `male|John|Doe`
-* Exemplo de saída com **[!UICONTROL Ponto e vírgula`(;)`]** selecionado: `male;John;Doe`
-* Exemplo de saída com **[!UICONTROL Tab`(\t)`]** selecionada: `male \t John \t Doe`
+* Exemplo de saída com **[!UICONTROL Colon `(:)`]** selecionado: `male:John:Doe`
+* Exemplo de saída com **[!UICONTROL Comma `(,)`]** selecionado: `male,John,Doe`
+* Exemplo de saída com **[!UICONTROL Pipe `(|)`]** selecionado: `male|John|Doe`
+* Exemplo de saída com **[!UICONTROL Semicolon `(;)`]** selecionado: `male;John;Doe`
+* Exemplo de saída com **[!UICONTROL Tab `(\t)`]** selecionado: `male \t John \t Doe`
 
 ### Caractere de aspas {#quote-character}
 
@@ -72,8 +72,8 @@ Use essa opção para controlar se as aspas duplas devem ser removidas ou mantid
 
 As opções disponíveis são:
 
-* **[!UICONTROL Caractere Nulo (\0000)]**. Use essa opção para remover aspas duplas de arquivos CSV exportados.
-* **[!UICONTROL Aspas Duplas (&quot;)]**. Use essa opção quando os valores da string contiverem um delimitador ou aspas duplas. Essa opção ajuda a manter os delimitadores ou aspas duplas nos arquivos CSV exportados, para que você possa identificar corretamente qual valor corresponde a qual campo.
+* **[!UICONTROL Null Character (\0000)]**. Use essa opção para remover aspas duplas de arquivos CSV exportados.
+* **[!UICONTROL Double Quotes (")]**. Use essa opção quando os valores da string contiverem um delimitador ou aspas duplas. Essa opção ajuda a manter os delimitadores ou aspas duplas nos arquivos CSV exportados, para que você possa identificar corretamente qual valor corresponde a qual campo.
 
 #### Exemplos
 
@@ -81,8 +81,8 @@ Considere o valor de entrada `Anna,"Doe,John"`.
 
 Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface.
 
-* Exemplo de saída com **[!UICONTROL Caractere nulo (\0000)]** selecionado: `Anna,Doe,John`
-* Exemplo de saída com **[!UICONTROL Aspas Duplas (&quot;)]** selecionadas: `Anna,"Doe,John"`
+* Exemplo de saída com **[!UICONTROL Null Character (\0000)]** selecionado: `Anna,Doe,John`
+* Exemplo de saída com **[!UICONTROL Double Quotes (")]** selecionado: `Anna,"Doe,John"`
 
 ### Caractere de escape {#escape-character}
 
@@ -100,8 +100,8 @@ Use esta opção para definir um caractere único para aspas de escape dentro de
 
 Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das seleções na interface.
 
-* Exemplo de saída com **[!UICONTROL Barra invertida`(\)`]** selecionada: `"Test,\"John\",LastName"`
-* Exemplo de saída com **[!UICONTROL Aspas simples`(')`]** selecionadas: `"Test,'"John'",LastName"`
+* Exemplo de saída com **[!UICONTROL Back slash `(\)`]** selecionado: `"Test,\"John\",LastName"`
+* Exemplo de saída com **[!UICONTROL Single quote `(')`]** selecionado: `"Test,'"John'",LastName"`
 
 ### Saída de valor vazio {#empty-value-output}
 
@@ -112,9 +112,9 @@ Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das
 
 Use este controle para definir a representação da sequência de caracteres de um valor vazio. Essa opção determina como os valores vazios são representados nos arquivos CSV exportados. As opções disponíveis são:
 
-* **[!UICONTROL Nulo (nulo)]**
+* **[!UICONTROL Null (null)]**
 * **Cadeia de Caracteres Vazia entre Aspas Duplas (&quot;&quot;)**
-* **[!UICONTROL Cadeia de caracteres vazia]**
+* **[!UICONTROL Empty string]**
 
 #### Exemplos
 
@@ -122,7 +122,7 @@ Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das
 
 * Exemplo de saída com **[!UICONTROL null]** selecionado: `male,NULL,TestLastName`. Nesse caso, o Experience Platform transforma o valor vazio em um valor nulo.
 * Exemplo de saída com **&quot;** selecionado: `male,"",TestLastName`. Nesse caso, o Experience Platform transforma o valor vazio em um par de aspas duplas.
-* Exemplo de saída com **[!UICONTROL Cadeia de caracteres vazia]** selecionada: `male,,TestLastName`. Nesse caso, o Experience Platform mantém o valor vazio e o exporta como está (sem aspas duplas).
+* Exemplo de saída com **[!UICONTROL Empty string]** selecionado: `male,,TestLastName`. Nesse caso, o Experience Platform mantém o valor vazio e o exporta como está (sem aspas duplas).
 
 >[!TIP]
 >
@@ -137,9 +137,9 @@ Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das
 
 Use esse controle para definir como as strings de valor nulo devem ser representadas nos arquivos exportados. Essa opção determina como os valores nulos são representados nos arquivos CSV exportados. As opções disponíveis são:
 
-* **[!UICONTROL Nulo (nulo)]**
+* **[!UICONTROL Null (null)]**
 * **Cadeia de Caracteres Vazia entre Aspas Duplas (&quot;&quot;)**
-* **[!UICONTROL Cadeia de caracteres vazia]**
+* **[!UICONTROL Empty string]**
 
 #### Exemplos
 
@@ -147,7 +147,7 @@ Veja os exemplos abaixo do conteúdo de arquivos CSV exportados com cada uma das
 
 * Exemplo de saída com **[!UICONTROL null]** selecionado: `male,NULL,TestLastName`. Nesse caso, não ocorre nenhuma transformação e o arquivo CSV contém o valor nulo.
 * Exemplo de saída com **&quot;** selecionado: `male,"",TestLastName`. Nesse caso, o Experience Platform substitui o valor nulo por aspas duplas em torno de uma string vazia.
-* Exemplo de saída com **[!UICONTROL Cadeia de caracteres vazia]** selecionada: `male,,TestLastName`. Nesse caso, o Experience Platform substitui o valor nulo por uma string vazia (sem aspas duplas).
+* Exemplo de saída com **[!UICONTROL Empty string]** selecionado: `male,,TestLastName`. Nesse caso, o Experience Platform substitui o valor nulo por uma string vazia (sem aspas duplas).
 
 ### Formato de compactação {#compression-format}
 
@@ -177,14 +177,14 @@ O padrão é omitir todos os valores que contenham um caractere de aspas.
 *Não mostrado na captura de tela da interface do usuário*. Um sinalizador que indica se os espaços em branco à esquerda dos valores que estão sendo exportados deve ser ignorado.
 
 Exemplo de saída com **[!UICONTROL True]** selecionado: `"male","John","TestLastName"`
-Exemplo de saída com **[!UICONTROL Falso]** selecionado: `" male","John","TestLastName"`
+Exemplo de saída com **[!UICONTROL False]** selecionado: `" male","John","TestLastName"`
 
 ### Ignorar espaço em branco à direita
 
 Não mostrado na captura de tela da interface do usuário. Um sinalizador que indica se espaços em branco à direita de valores que estão sendo exportados deve ser ignorado.
 
 Exemplo de saída com **[!UICONTROL True]** selecionado: `"male","John","TestLastName"`
-Exemplo de saída com **[!UICONTROL Falso]** selecionado: `"male ","John","TestLastName"`
+Exemplo de saída com **[!UICONTROL False]** selecionado: `"male ","John","TestLastName"`
 
 ### Próximas etapas {#next-steps}
 

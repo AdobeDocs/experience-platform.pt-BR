@@ -138,8 +138,8 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 >[!NOTE]
 >
 >O hash automático de dados de namespaces sem hash é criado por [!DNL Experience Platform] após a ativação.
->&#x200B;> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
->&#x200B;> A opção **[!UICONTROL Apply transformation]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
+> Os dados de origem do atributo não são automaticamente transformados em hash. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação.
+> A opção **[!UICONTROL Apply transformation]** é exibida somente quando você seleciona atributos como campos de origem. Ela não é exibida ao escolher namespaces.
 
 ![Aplicar controle de transformação realçado na etapa de mapeamento.](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
@@ -157,7 +157,7 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL Facebook] e ativar públicos-alvo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475118/?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -283,7 +283,7 @@ Para [!DNL Facebook], uma ativação bem-sucedida significa que um público-alvo
 >
 >A integração entre o Adobe Experience Platform e o [!DNL Facebook] oferece suporte a preenchimentos retroativos de público-alvo histórico. Todas as qualificações históricas de público são enviadas para [!DNL Facebook] quando você ativa os públicos para o destino.
 
-## Resolução de problemas {#troubleshooting}
+## Solução de problemas {#troubleshooting}
 
 ### 400 Mensagem de erro de solicitação incorreta {#bad-request}
 

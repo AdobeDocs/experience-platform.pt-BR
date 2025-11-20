@@ -4,8 +4,8 @@ description: Saiba como visualizar e gerenciar ordens de trabalho do ciclo de vi
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '843'
-ht-degree: 27%
+source-wordcount: '812'
+ht-degree: 26%
 
 ---
 
@@ -23,15 +23,15 @@ Este guia aborda como exibir e gerenciar ordens de serviço existentes na interf
 
 ## Listar e filtrar ordens de serviço existentes
 
-Ao acessar pela primeira vez o espaço de trabalho **[!UICONTROL Ciclo de Vida de Dados]** na interface do usuário, uma lista de ordens de trabalho existentes é mostrada com seus detalhes básicos.
+Quando você acessa pela primeira vez o espaço de trabalho **[!UICONTROL Data Lifecycle]** na interface do usuário, uma lista de ordens de serviço existentes é mostrada com seus detalhes básicos.
 
-![Imagem mostrando o espaço de trabalho [!UICONTROL Ciclo de Vida de Dados] na interface do usuário do Experience Platform](../images/ui/browse/work-order-list.png)
+![Imagem mostrando o espaço de trabalho [!UICONTROL Data Lifecycle] na interface do usuário do Experience Platform](../images/ui/browse/work-order-list.png)
 
-A lista mostra somente ordens de serviço para uma categoria de cada vez. Selecione **[!UICONTROL Consumidor]** para exibir uma lista de tarefas de exclusão de registros, e **[!UICONTROL Conjunto de Dados]** para exibir uma lista de expirações de conjuntos de dados agendados.
+A lista mostra somente ordens de serviço para uma categoria de cada vez. Selecione **[!UICONTROL Consumer]** para exibir uma lista de tarefas de exclusão de registro e **[!UICONTROL Dataset]** para exibir uma lista de expirações agendadas de conjunto de dados.
 
-![Imagem mostrando a guia [!UICONTROL Conjunto de Dados]](../images/ui/browse/dataset-tab.png)
+![Imagem mostrando a guia [!UICONTROL Dataset]](../images/ui/browse/dataset-tab.png)
 
-Selecione o ícone de funil (![Imagem do ícone de funil](/help/images/icons/filter.png)) para exibir uma lista de filtros para as ordens de trabalho exibidas.
+Selecione o ícone funnel (![Imagem do ícone funnel](/help/images/icons/filter.png)) para exibir uma lista de filtros para as ordens de trabalho exibidas.
 
 ![Imagem dos filtros de ordem de trabalho exibidos](../images/ui/browse/filters.png)
 
@@ -43,9 +43,9 @@ Os filtros a seguir se aplicam às solicitações de exclusão de registro:
 
 | Filtro | Descrição |
 | --- | --- |
-| [!UICONTROL Status] | Filtrar com base no status atual da ordem de serviço:<ul><li>**[!UICONTROL Concluído]**: o trabalho foi concluído.</li><li>**[!UICONTROL Falha]**: o trabalho encontrou um erro e não pôde ser concluído.</li><li>**[!UICONTROL Processando]**: a solicitação foi iniciada e está sendo processada.</li></ul> |
-| [!UICONTROL Data de criação] | Filtrar com base em quando a ordem de serviço foi feita. |
-| [!UICONTROL Data de atualização] | Filtrar com base em quando a ordem de serviço foi atualizada pela última vez. As criações são contadas como atualizações. |
+| [!UICONTROL Status] | Filtrar com base no status atual da ordem de serviço:<ul><li>**[!UICONTROL Completed]**: O trabalho foi concluído.</li><li>**[!UICONTROL Failed]**: O trabalho encontrou um erro e não pôde ser concluído.</li><li>**[!UICONTROL Processing]**: a solicitação foi iniciada e está sendo processada.</li></ul> |
+| [!UICONTROL Date created] | Filtrar com base em quando a ordem de serviço foi feita. |
+| [!UICONTROL Date updated] | Filtrar com base em quando a ordem de serviço foi atualizada pela última vez. As criações são contadas como atualizações. |
 
 ### Filtros para expirações de conjunto de dados
 
@@ -53,10 +53,10 @@ Os filtros a seguir se aplicam às solicitações de expiração do conjunto de 
 
 | Filtro | Descrição |
 | --- | --- |
-| [!UICONTROL Status] | Filtrar com base no status atual da ordem de serviço:<ul><li>**[!UICONTROL Concluído]**: o trabalho foi concluído.</li><li>**[!UICONTROL Pendente]**: o trabalho foi criado, mas ainda não foi executado. Uma [solicitação de expiração do conjunto de dados](./dataset-expiration.md) presume esse status antes da data de exclusão agendada. Quando a data de exclusão chegar, o status será atualizado para [!UICONTROL Executando], a menos que o trabalho seja cancelado antecipadamente.</li><li>**[!UICONTROL Executando]**: a solicitação de expiração do conjunto de dados foi iniciada e está sendo processada no momento.</li><li>**[!UICONTROL Cancelado]**: o trabalho foi cancelado como parte de uma solicitação de usuário manual.</li></ul> |
-| [!UICONTROL Data de criação] | Filtrar com base em quando a ordem de serviço foi feita. |
-| [!UICONTROL Data de vencimento] | Filtre solicitações de expiração do conjunto de dados com base na data de exclusão agendada para o conjunto de dados em questão. |
-| [!UICONTROL Data de atualização] | Filtrar com base em quando a ordem de serviço foi atualizada pela última vez. Criações e expirações são contadas como atualizações. |
+| [!UICONTROL Status] | Filtrar com base no status atual da ordem de serviço:<ul><li>**[!UICONTROL Completed]**: O trabalho foi concluído.</li><li>**[!UICONTROL Pending]**: o trabalho foi criado, mas ainda não foi executado. Uma [solicitação de expiração do conjunto de dados](./dataset-expiration.md) presume esse status antes da data de exclusão agendada. Quando a data de exclusão chegar, o status será atualizado para [!UICONTROL Executing], a menos que o trabalho seja cancelado antecipadamente.</li><li>**[!UICONTROL Executing]**: a solicitação de expiração do conjunto de dados foi iniciada e está sendo processada.</li><li>**[!UICONTROL Cancelled]**: O trabalho foi cancelado como parte de uma solicitação de usuário manual.</li></ul> |
+| [!UICONTROL Date created] | Filtrar com base em quando a ordem de serviço foi feita. |
+| [!UICONTROL Expiration date] | Filtre solicitações de expiração do conjunto de dados com base na data de exclusão agendada para o conjunto de dados em questão. |
+| [!UICONTROL Date updated] | Filtrar com base em quando a ordem de serviço foi atualizada pela última vez. Criações e expirações são contadas como atualizações. |
 
 {style="table-layout:auto"}
 
@@ -75,7 +75,7 @@ Os filtros a seguir se aplicam às solicitações de expiração do conjunto de 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_responsemessages"
 >title="Registrar resposta de exclusão"
->abstract="Quando um processo de exclusão de registro recebe uma resposta do sistema, essas mensagens são exibidas na seção **[!UICONTROL Resultado]**. Se ocorrer um problema enquanto uma ordem de trabalho está sendo processada, qualquer mensagem de erro relevante será exibida nessa seção para ajudar você a solucionar o problema. Para saber mais, consulte o guia da interface do ciclo de vida dos dados."
+>abstract="Quando um processo de exclusão de registro recebe uma resposta do sistema, essas mensagens são exibidas na seção **[!UICONTROL Result]**. Se ocorrer um problema enquanto uma ordem de trabalho está sendo processada, qualquer mensagem de erro relevante será exibida nessa seção para ajudar você a solucionar o problema. Para saber mais, consulte o guia da interface do ciclo de vida dos dados."
 
 Selecione a ID de uma ordem de serviço listada para exibir seus detalhes.
 
@@ -85,7 +85,7 @@ Dependendo do tipo de ordem de serviço selecionada, informações e controles d
 
 ### Detalhes de exclusão de registro {#record-delete}
 
-Os detalhes de uma solicitação de exclusão de registro incluem o status atual e o tempo decorrido desde a solicitação. Cada solicitação também inclui uma seção **[!UICONTROL Status por serviço]** que fornece detalhes de status individuais sobre cada serviço downstream envolvido na exclusão. No painel direito, você pode usar controles para atualizar o nome e a descrição da ordem de serviço.
+Os detalhes de uma solicitação de exclusão de registro incluem o status atual e o tempo decorrido desde a solicitação. Cada solicitação também inclui uma seção **[!UICONTROL Status by service]** que fornece detalhes de status individuais sobre cada serviço downstream envolvido na exclusão. No painel direito, você pode usar controles para atualizar o nome e a descrição da ordem de serviço.
 
 ![Imagem mostrando a página de detalhes de uma ordem de trabalho de exclusão de registro](../images/ui/browse/record-delete-details.png)
 

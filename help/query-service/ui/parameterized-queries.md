@@ -4,7 +4,7 @@ description: Saiba como usar consultas com parâmetros na interface do usuário 
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '681'
 ht-degree: 11%
 
 ---
@@ -47,7 +47,7 @@ SELECT
 
 Para criar sua consulta parametrizada na interface do usuário do, navegue até o Editor de consultas. Consulte a seção sobre [acesso ao Editor de Consultas](./user-guide.md#accessing-query-editor) para obter mais instruções.
 
-Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de texto. Em seguida, selecione a guia **[!UICONTROL Parâmetros de consulta]** ao lado do [!UICONTROL Console] e adicione o valor ausente para a chave. A consulta não pode ser executada se você não adicionar um valor a qualquer uma das chaves necessárias. Um ícone de alerta (![Um ícone de alerta.](/help/images/icons/alert.png)) aparece na seção Parâmetros de Consulta ao lado de qualquer campo de entrada [!UICONTROL Valor] vazio.
+Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de texto. Em seguida, selecione a guia **[!UICONTROL Query parameters]** ao lado de [!UICONTROL Console] e adicione o valor ausente para a chave. A consulta não pode ser executada se você não adicionar um valor a qualquer uma das chaves necessárias. Um ícone de alerta (![Um ícone de alerta.](/help/images/icons/alert.png)) aparece na seção Parâmetros de Consulta ao lado de qualquer campo de entrada [!UICONTROL Value] vazio.
 
 >[!NOTE]
 >
@@ -57,11 +57,11 @@ Use o prefácio `'$'` para inserir um parâmetro na sua consulta no editor de te
 
 >[!TIP]
 >
->Altere as guias de [!UICONTROL Parâmetros de consulta] para [!UICONTROL Console] para exibir a saída do console da consulta.
+>Altere as guias de [!UICONTROL Query parameters] para [!UICONTROL Console] para exibir a saída do console da consulta.
 
 ## Usar detalhes de logs de consulta para verificar valores de parâmetros {#check-parameter-values}
 
-Não é possível salvar parâmetros nos modelos, pois os valores usados não são persistentes. No entanto, você pode verificar a página [!UICONTROL Detalhes do log de consulta] para localizar os valores de parâmetro usados em uma execução de consulta. Nesse caso, os logs não indicam que a consulta era uma consulta com parâmetros. Consulte a [documentação dos logs de consulta](./query-logs.md) para obter instruções sobre como localizar os valores usados.
+Não é possível salvar parâmetros nos modelos, pois os valores usados não são persistentes. No entanto, você pode verificar a página [!UICONTROL Query log details] para localizar os valores de parâmetro usados em uma execução de consulta. Nesse caso, os logs não indicam que a consulta era uma consulta com parâmetros. Consulte a [documentação dos logs de consulta](./query-logs.md) para obter instruções sobre como localizar os valores usados.
 
 ![A exibição dos logs de consulta com o SQL de uma consulta com parâmetros realçada na seção de detalhes.](../images/ui/parameterized-queries/parameterized-query-logs.png)
 

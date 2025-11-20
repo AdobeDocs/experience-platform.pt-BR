@@ -7,7 +7,7 @@ exl-id: 6a496509-a4e9-4e76-829b-32d67ccfcce6
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '827'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -19,7 +19,7 @@ As sandboxes dividem uma única instância do Experience Platform em ambientes v
 
 ## O que é uma sandbox?
 
-As sandboxes são partições virtuais em uma única instância do Experience Platform. Cada sandbox mantém sua própria biblioteca independente de recursos do Experience Platform (incluindo esquemas, conjuntos de dados, perfis e assim por diante). Todo o conteúdo e as ações realizadas em uma sandbox estão confinados somente a essa sandbox e não afetam outras sandboxes. Consulte a [visão geral das sandboxes](home.md) para obter mais informações.
+Sandboxes são partições virtuais em uma única instância da Experience Platform. Cada sandbox mantém sua própria biblioteca independente de recursos do Experience Platform (incluindo esquemas, conjuntos de dados, perfis e assim por diante). Todo o conteúdo e as ações realizadas em uma sandbox estão confinados somente a essa sandbox e não afetam outras sandboxes. Consulte a [visão geral das sandboxes](home.md) para obter mais informações.
 
 ## Quais tipos de sandboxes estão disponíveis e quais são suas diferenças? {#sandbox-types}
 

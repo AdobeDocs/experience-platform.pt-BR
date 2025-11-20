@@ -6,14 +6,14 @@ role: User, Developer
 exl-id: b06d8186-c41f-4150-bac4-69c616151ef9
 source-git-commit: 54b3d2ef22f7afb47fa8c9430c5c1645c94c837d
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 81%
+source-wordcount: '769'
+ht-degree: 71%
 
 ---
 
 # Criar, compartilhar e reutilizar instâncias do manual de estratégia
 
-Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estratégia de caso de uso] > [!UICONTROL Manuais de estratégia]**. Explore e use as várias opções de pesquisa e filtragem na página para selecionar e começar a usar um manual de estratégia específico.
+Para usar um manual, navegue até **[!UICONTROL Use Case Playbooks]>[!UICONTROL Playbooks]**. Explore e use as várias opções de pesquisa e filtragem na página para selecionar e começar a usar um manual de estratégia específico.
 
 ## Criar uma instância do manual de estratégia {#create-playbook-instance}
 
@@ -22,17 +22,17 @@ Para usar um manual de estratégia, navegue até **[!UICONTROL Manuais de estrat
 >title="Criar instância"
 >abstract="Gere uma lista de ativos como jornadas, públicos-alvo, esquemas ou destinos para usar em cenários de jornada ou ativação."
 
-Antes de criar uma instância de manual, explore os manuais disponíveis para [escolher o manual correto](/help/use-case-playbooks/playbooks/choose.md). Quando estiver pronto para criar uma instância, selecione **[!UICONTROL Criar instância]** para continuar com o manual de estratégia e gerar ativos técnicos.
+Antes de criar uma instância de manual, explore os manuais disponíveis para [escolher o manual correto](/help/use-case-playbooks/playbooks/choose.md). Quando estiver pronto para continuar com um manual e criar uma instância, selecione **[!UICONTROL Create Instance]** para continuar com o manual e gerar ativos técnicos.
 
 ![Criar uma instância de um manual de estratégia.](/help/use-case-playbooks/assets/playbooks/ui-guide/create-playbook-instance.png)
 
 Essa ação gera vários ativos para serem usados a fim de obter o caso de uso descrito no manual de estratégia.
 
-![Visualização do manual de estratégia de ativos gerados após a ativação.](/help/use-case-playbooks/assets/playbooks/ui-guide/play-view.png)
+![Visualização do manual de estratégia de habilitos gerados após a habilitação.](/help/use-case-playbooks/assets/playbooks/ui-guide/play-view.png)
 
 ### Use os controles de configuração para editar nomes e descrições de instâncias {#edit-instance-metadata}
 
-Depois de criar uma instância com base em um manual de estratégia, é possível personalizá-la para diferenciá-la de outras instâncias criadas a partir do mesmo manual de estratégia. Selecione o controle de configuração conforme mostrado abaixo. Edite o nome, a descrição e as notas e clique em **[!UICONTROL Salvar]** quando terminar.
+Depois de criar uma instância com base em um manual de estratégia, é possível personalizá-la para diferenciá-la de outras instâncias criadas a partir do mesmo manual de estratégia. Selecione o controle de configuração conforme mostrado abaixo. Edite o nome, a descrição e as anotações e selecione **[!UICONTROL Save]** quando terminar.
 
 ![Editar o nome e a descrição de uma instância.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-settings.gif)
 
@@ -45,9 +45,9 @@ Depois de criar uma instância com base em um manual de estratégia, é possíve
 É importante entender que os ativos gerados diferem com base no caso de uso sendo habilitado:
 
 * Ativos diferentes são gerados para diferentes tipos de manuais de estratégia. Esses ativos são criados especificamente para o caso de uso atingido através do manual de estratégia. Por exemplo, um manual gera um esquema, um público-alvo, uma jornada e mensagens. Outro manual gera um esquema, um público-alvo e um destino para ativar os dados.
-* Os ativos em si diferem entre os manuais de estratégia. Por exemplo, para o manual de estratégia **[!UICONTROL Enviar uma mensagem de aniversário aos convidados]**, o público-alvo que será criado terá a regra `birthday=today AND year=any`.
+* Os ativos em si diferem entre os manuais de estratégia. Por exemplo, para o manual **[!UICONTROL Send A Birthday Message To Guests]**, o público-alvo criado tem a regra `birthday=today AND year=any`.
 
-Para ilustrar um exemplo, para o manual de estratégia **[!UICONTROL Carrinho abandonado: mercadorias]**, você pode ver que uma jornada específica será criada e incluirá as mensagens criadas para esse caso de uso.
+Para ilustrar um exemplo, para o manual **[!UICONTROL Abandoned Cart: Merchandise]**, você pode ver que uma jornada específica é criada e inclui as mensagens criadas para este caso de uso.
 
 ![Jornada criada a partir do manual de estratégia de caso de uso.](/help/use-case-playbooks/assets/playbooks/ui-guide/journey-preview.png)
 

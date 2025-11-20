@@ -5,8 +5,8 @@ description: Saiba como exportar conjuntos de dados do Adobe Experience Platform
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
 source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
 workflow-type: tm+mt
-source-wordcount: '2721'
-ht-degree: 7%
+source-wordcount: '2656'
+ht-degree: 8%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 >[!AVAILABILITY]
 >
->Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime ou Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Entre em contato com seu representante da Adobe para obter mais informações.
+>Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime ou Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Entre em contato com o representante da Adobe para obter mais informações.
 
 >[!IMPORTANT]
 >
@@ -50,16 +50,16 @@ Use a tabela abaixo para entender quais tipos de conjunto de dados você pode ex
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, Web SDK, Mobile SDK, Conector de dados do Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=pt-BR#profile-attribute-datasets">Conjunto de dados de Instantâneo de Perfil gerado pelo sistema</a>.</li></td>
+    <td><ul><li>Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, Web SDK, Mobile SDK, Conector de dados do Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Conjunto de dados de Instantâneo de Perfil gerado pelo sistema</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Consulte a documentação do <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=pt-BR#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulte a documentação do <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Consulte a documentação do <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=pt-BR#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulte a documentação do <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Use a tabela abaixo para entender quais tipos de conjunto de dados você pode ex
 
 Assista ao vídeo abaixo para obter uma explicação completa do fluxo de trabalho descrito nesta página, os benefícios de usar a funcionalidade de conjunto de dados de exportação e alguns casos de uso sugeridos.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448823?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinos compatíveis {#supported-destinations}
 
@@ -111,35 +111,35 @@ Observe os seguintes pré-requisitos para exportar conjuntos de dados:
 
 ### Permissões necessárias {#permissions}
 
-Para exportar conjuntos de dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Exibir Conjuntos de Dados]** e **[!UICONTROL Gerenciar e Ativar Destinos de Conjuntos de Dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+Para exportar conjuntos de dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL View Datasets]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para garantir que você tenha as permissões necessárias para exportar conjuntos de dados e que o destino seja compatível com a exportação de conjuntos de dados, navegue pelo catálogo de destinos. Se um destino tiver um controle **[!UICONTROL Ativar]** ou **[!UICONTROL Exportar conjuntos de dados]**, você terá as permissões apropriadas.
+Para garantir que você tenha as permissões necessárias para exportar conjuntos de dados e que o destino seja compatível com a exportação de conjuntos de dados, navegue pelo catálogo de destinos. Se um destino tiver um controle **[!UICONTROL Activate]** ou **[!UICONTROL Export datasets]**, você terá as permissões apropriadas.
 
 ## Selecione seu destino {#select-destination}
 
 Siga as instruções para selecionar um destino em que você possa exportar seus conjuntos de dados:
 
-1. Vá para **[!UICONTROL Conexões > Destinos]** e selecione a guia **[!UICONTROL Catálogo]**.
+1. Vá para **[!UICONTROL Connections > Destinations]** e selecione a guia **[!UICONTROL Catalog]**.
 
    ![Guia de catálogo de destino com controle de catálogo realçado.](/help/destinations/assets/ui/export-datasets/catalog-tab.png)
 
-1. Selecione **[!UICONTROL Ativar]** ou **[!UICONTROL Exportar conjuntos de dados]** no cartão correspondente ao destino para o qual você deseja exportar conjuntos de dados.
+1. Selecione **[!UICONTROL Activate]** ou **[!UICONTROL Export datasets]** no cartão correspondente ao destino para o qual você deseja exportar conjuntos de dados.
 
    ![Guia de catálogo de destino com controle Ativar realçado.](/help/destinations/assets/ui/export-datasets/activate-button.png)
 
-1. Selecione **[!UICONTROL Conjuntos de dados]**, selecione a conexão de destino para a qual você deseja exportar conjuntos de dados e selecione **[!UICONTROL Avançar]**.
+1. Selecione **[!UICONTROL Data type Datasets]**, selecione a conexão de destino para a qual você deseja exportar conjuntos de dados e selecione **[!UICONTROL Next]**.
 
 >[!TIP]
 > 
->Se quiser configurar um novo destino para exportar conjuntos de dados, selecione **[!UICONTROL Configurar novo destino]** para acionar o fluxo de trabalho [Conectar ao destino](/help/destinations/ui/connect-destination.md).
+>Se quiser configurar um novo destino para exportar conjuntos de dados, selecione **[!UICONTROL Configure new destination]** para acionar o fluxo de trabalho [Conectar ao destino](/help/destinations/ui/connect-destination.md).
 
 ![Fluxo de trabalho de ativação de destino com controle de Conjuntos de Dados realçado.](/help/destinations/assets/ui/export-datasets/select-datatype-datasets.png)
 
-1. A exibição **[!UICONTROL Selecionar conjuntos de dados]** é exibida. Prossiga para a próxima seção para [selecionar seus conjuntos de dados](#select-datasets) para exportação.
+1. A exibição **[!UICONTROL Select datasets]** aparece. Prossiga para a próxima seção para [selecionar seus conjuntos de dados](#select-datasets) para exportação.
 
 ## Selecione seus conjuntos de dados {#select-datasets}
 
-Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para selecionar os conjuntos de dados que você deseja exportar para o destino e selecione **[!UICONTROL Avançar]**.
+Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para selecionar os conjuntos de dados que você deseja exportar para o destino e selecione **[!UICONTROL Next]**.
 
 ![Fluxo de trabalho de exportação do conjunto de dados mostrando a etapa Selecionar conjuntos de dados, na qual você pode selecionar quais conjuntos de dados serão exportados.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
@@ -160,17 +160,17 @@ Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para sel
 >title="Atualizar a data final deste corpo de fluxo de dados"
 >abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data final. A Adobe definiu uma data final padrão para 1º de setembro de 2025. Atualize para a data final desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
 
-Use a etapa **[!UICONTROL Agendamento]** para:
+Use a etapa **[!UICONTROL Scheduling]** para:
 
 * Defina uma data de início e uma data de término, bem como uma cadência de exportação para suas exportações do conjunto de dados.
 * Configure se os arquivos do conjunto de dados exportados devem exportar a associação completa do conjunto de dados ou apenas alterações incrementais na associação em cada ocorrência de exportação.
 * Personalize o caminho da pasta no local de armazenamento para onde os conjuntos de dados devem ser exportados. Leia mais sobre como [editar o caminho da pasta de exportação](#edit-folder-path).
 
-Use o controle **[!UICONTROL Editar agenda]** na página para editar a cadência de exportação das exportações, bem como para selecionar se deseja exportar arquivos completos ou incrementais.
+Use o controle **[!UICONTROL Edit schedule]** na página para editar a cadência de exportação das exportações, bem como para selecionar se deseja exportar arquivos completos ou incrementais.
 
 ![Controle de edição de agendamento realçado na etapa Agendamento.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
-A opção **[!UICONTROL Exportar arquivos incrementais]** está selecionada por padrão. Isso aciona uma exportação de um ou vários arquivos que representam um instantâneo completo do conjunto de dados. Os arquivos subsequentes são adições incrementais ao conjunto de dados desde a exportação anterior. Você também pode selecionar **[!UICONTROL Exportar arquivos completos]**. Nesse caso, selecione a frequência **[!UICONTROL Uma vez]** para uma exportação única e completa do conjunto de dados.
+A opção **[!UICONTROL Export incremental files]** é selecionada por padrão. Isso aciona uma exportação de um ou vários arquivos que representam um instantâneo completo do conjunto de dados. Os arquivos subsequentes são adições incrementais ao conjunto de dados desde a exportação anterior. Você também pode selecionar **[!UICONTROL Export full files]**. Nesse caso, selecione a frequência **[!UICONTROL Once]** para uma exportação completa única do conjunto de dados.
 
 >[!IMPORTANT]
 >
@@ -178,16 +178,16 @@ A opção **[!UICONTROL Exportar arquivos incrementais]** está selecionada por 
 
 ![Fluxo de trabalho de exportação do conjunto de dados mostrando a etapa de agendamento.](/help/destinations/assets/ui/export-datasets/export-incremental-datasets.png)
 
-1. Use o seletor de **[!UICONTROL Frequência]** para selecionar a frequência de exportação:
+1. Use o seletor **[!UICONTROL Frequency]** para selecionar a frequência de exportação:
 
-   * **[!UICONTROL Diariamente]**: agendar exportações de arquivos incrementais uma vez por dia, todos os dias, no horário especificado.
-   * **[!UICONTROL Por hora]**: agende exportações de arquivos incrementais a cada 3, 6, 8 ou 12 horas.
+   * **[!UICONTROL Daily]**: agende exportações de arquivos incrementais uma vez por dia, todos os dias, no horário especificado.
+   * **[!UICONTROL Hourly]**: agendar exportações de arquivo incrementais a cada 3, 6, 8 ou 12 horas.
 
-2. Use o seletor **[!UICONTROL Hora]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
+2. Use o seletor **[!UICONTROL Time]** para escolher a hora do dia, no formato [!DNL UTC], em que a exportação deve ocorrer.
 
-3. Use o seletor **[!UICONTROL Data]** para escolher o intervalo em que a exportação deve ocorrer.
+3. Use o seletor **[!UICONTROL Date]** para escolher o intervalo em que a exportação deve ocorrer.
 
-4. Selecione **[!UICONTROL Salvar]** para salvar o agendamento e prosseguir para a etapa **[!UICONTROL Revisão]**.
+4. Selecione **[!UICONTROL Save]** para salvar o cronograma e prosseguir para a etapa **[!UICONTROL Review]**.
 
 >[!NOTE]
 > 
@@ -205,7 +205,7 @@ A opção **[!UICONTROL Exportar arquivos incrementais]** está selecionada por 
 >title="Visualização do caminho da pasta do conjunto de dados"
 >abstract="Obtenha uma visualização da estrutura de pastas criada no local de armazenamento com base nas macros adicionadas nesta janela."
 
-Selecione **[!UICONTROL Editar caminho da pasta]** para personalizar a estrutura de pastas no local de armazenamento onde os conjuntos de dados exportados são depositados.
+Selecione **[!UICONTROL Edit folder path]** para personalizar a estrutura de pastas no local de armazenamento onde os conjuntos de dados exportados estão depositados.
 
 ![Controle de caminho de pasta de edição realçado na etapa de agendamento.](/help/destinations/assets/ui/export-datasets/edit-folder-path.png)
 
@@ -213,13 +213,13 @@ Você pode usar várias macros disponíveis para personalizar um nome de pasta d
 
 ![Seleção de macros realçada na janela modal de pasta personalizada.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-Depois de selecionar as macros desejadas, você pode visualizar a estrutura de pastas que será criada no local de armazenamento. O primeiro nível na estrutura de pastas representa o **[!UICONTROL Caminho da pasta]** indicado quando você [se conectou ao destino](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) para exportar conjuntos de dados.
+Depois de selecionar as macros desejadas, você pode visualizar a estrutura de pastas que será criada no local de armazenamento. O primeiro nível na estrutura de pastas representa o **[!UICONTROL Folder path]** indicado quando você [se conectou ao destino](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) para exportar conjuntos de dados.
 
 ![Visualização do caminho de pasta realçado na janela modal de pasta personalizada.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
 
 ## Revisar {#review}
 
-Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar sua seleção e começar a exportar conjuntos de dados para o destino.
+Na página **[!UICONTROL Review]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancel]** para interromper o fluxo, **[!UICONTROL Back]** para modificar suas configurações ou **[!UICONTROL Finish]** para confirmar sua seleção e começar a exportar conjuntos de dados para o destino.
 
 ![Fluxo de trabalho de exportação do conjunto de dados mostrando a etapa de revisão.](/help/destinations/assets/ui/export-datasets/review.png)
 
@@ -231,7 +231,7 @@ O Experience Platform cria uma estrutura de pastas no local de armazenamento esp
 
 >[!TIP]
 > 
->O primeiro nível nesta estrutura de pastas - `folder-name-you-provided` - representa o **[!UICONTROL caminho da Pasta]** indicado quando você [se conectou ao destino](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) para exportar conjuntos de dados.
+>O primeiro nível nesta estrutura de pasta - `folder-name-you-provided` - representa o **[!UICONTROL Folder path]** que você indicou quando [conectou-se ao destino](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) para exportar conjuntos de dados.
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -258,7 +258,7 @@ Há suporte para exportações para arquivos JSON *somente no modo compactado*. 
 
 Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas abaixo:
 
-1. Faça logon na [Interface do usuário do Experience Platform](https://experience.adobe.com/platform/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecione **[!UICONTROL Procurar]** no cabeçalho superior para exibir seus fluxos de dados de destino existentes.
+1. Faça logon na [Interface do usuário do Experience Platform](https://experience.adobe.com/platform/) e selecione **[!UICONTROL Destinations]** na barra de navegação esquerda. Selecione **[!UICONTROL Browse]** no cabeçalho superior para exibir seus fluxos de dados de destino existentes.
 
    ![Exibição de navegação de destino com uma conexão de destino mostrada e o restante borrado.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -266,21 +266,21 @@ Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas a
    > 
    >Selecione o ícone de filtro ![Ícone de filtro](/help/images/icons/filter.png) na parte superior esquerda para iniciar o painel de classificação. O painel de classificação fornece uma lista de todos os seus destinos. Você pode selecionar mais de um destino na lista para ver uma seleção filtrada de fluxos de dados associados ao destino selecionado.
 
-2. Na coluna **[!UICONTROL Dados de ativação]**, selecione o controle de conjuntos de dados para exibir todos os conjuntos de dados mapeados para esse fluxo de dados de exportação.
+2. Na coluna **[!UICONTROL Activation data]**, selecione o controle de conjuntos de dados para exibir todos os conjuntos de dados mapeados para esse fluxo de dados de exportação.
 
    ![A opção de navegação dos conjuntos de dados disponíveis foi realçada na coluna de dados de Ativação.](../assets/ui/export-datasets/go-to-datasets-data.png)
 
-3. A página **[!UICONTROL Dados de ativação]** do destino é exibida. Use as caixas de seleção no lado esquerdo da lista de conjuntos de dados para selecionar os conjuntos de dados que você deseja remover e selecione **[!UICONTROL Remover conjuntos de dados]** no painel direito para acionar a caixa de diálogo de confirmação de remoção do conjunto de dados.
+3. A página **[!UICONTROL Activation data]** do destino é exibida. Use as caixas de seleção no lado esquerdo da lista de conjuntos de dados para selecionar os conjuntos de dados que você deseja remover e selecione **[!UICONTROL Remove datasets]** no painel direito para acionar a caixa de diálogo de confirmação de remoção do conjunto de dados.
 
    ![Caixa de diálogo Remover conjunto de dados mostrando o controle Remover conjunto de dados no painel direito.](../assets/ui/export-datasets/bulk-remove-datasets.png)
 
-4. Na caixa de diálogo de confirmação, selecione **[!UICONTROL Remover]** para remover imediatamente o conjunto de dados das exportações para o destino.
+4. Na caixa de diálogo de confirmação, selecione **[!UICONTROL Remove]** para remover imediatamente o conjunto de dados das exportações para o destino.
 
    ![Caixa de diálogo mostrando a opção de remoção Confirmar conjunto de dados do fluxo de dados.](../assets/ui/export-datasets/remove-dataset-confirm.png)
 
 ## Direitos de exportação do conjunto de dados {#licensing-entitlement}
 
-Consulte os documentos de descrição do produto para entender quantos dados você está autorizado a exportar para cada aplicativo do Experience Platform, por ano. Por exemplo, você pode exibir a Descrição do Produto Real-Time CDP [aqui](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Consulte os documentos de descrição do produto para entender quantos dados você está autorizado a exportar para cada aplicativo do Experience Platform, por ano. Por exemplo, você pode exibir a Descrição do Produto Real-Time CDP [aqui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 Observe que os direitos de exportação de dados para diferentes aplicativos não são aditivos. Por exemplo, isso significa que, se você comprar o Real-Time CDP Ultimate e o Adobe Journey Optimizer Ultimate, o direito de exportação de perfil será o maior dos dois direitos, de acordo com as descrições do produto. Os direitos de volume são calculados calculando o número total de perfis licenciados e multiplicando por 500 KB para o Real-Time CDP Prime ou 700 KB para o Real-Time CDP Ultimate para determinar o volume de dados ao qual você tem direito.
 

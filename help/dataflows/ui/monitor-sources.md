@@ -4,8 +4,8 @@ title: Monitorar assimilação do data lake
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
 source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1458'
-ht-degree: 9%
+source-wordcount: '1430'
+ht-degree: 10%
 
 ---
 
@@ -44,13 +44,13 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Ado
 >abstract="O processamento de fontes contém informações sobre o status da atividade de dados e métricas no serviço do data lake, incluindo registros assimilados e registros que falharam. Consulte o guia de definição de métricas para saber mais sobre métricas e gráficos."
 >text="Learn more in documentation"
 
-Selecione **[!UICONTROL Data lake]** no cabeçalho principal do painel de monitoramento para exibir sua taxa de assimilação de data lake.
+Selecione **[!UICONTROL Data lake]** no cabeçalho principal do painel de monitoramento para exibir sua taxa de assimilação do data lake.
 
 ![O painel de monitoramento com o cartão de origens selecionado.](../assets/ui/monitor-sources/data-lake.png)
 
-O gráfico [!UICONTROL Taxa de assimilação] exibe a taxa de assimilação de dados com base no intervalo de tempo configurado. Por padrão, o painel de monitoramento exibe taxas de assimilação das últimas 24 horas. Para obter etapas sobre como configurar seu intervalo de tempo, leia o guia em [configurando o intervalo de tempo de monitoramento](monitor.md#configure-monitoring-time-frame).
+O gráfico [!UICONTROL Ingestion rate] exibe a taxa de assimilação de dados com base no intervalo de tempo configurado. Por padrão, o painel de monitoramento exibe taxas de assimilação das últimas 24 horas. Para obter etapas sobre como configurar seu intervalo de tempo, leia o guia em [configurando o intervalo de tempo de monitoramento](monitor.md#configure-monitoring-time-frame).
 
-O gráfico é ativado para exibir por padrão. Para ocultar o gráfico, selecione **[!UICONTROL Métricas e gráficos]** para desabilitar a alternância e ocultar o gráfico.
+O gráfico é ativado para exibir por padrão. Para ocultar o gráfico, selecione **[!UICONTROL Metrics and graphs]** para desabilitar a alternância e ocultar o gráfico.
 
 ![O gráfico de métricas da taxa de assimilação.](../assets/ui/monitor-sources/metrics-graph.png)
 
@@ -75,10 +75,10 @@ Você pode filtrar ainda mais seus dados usando as opções fornecidas acima da 
 | Opções de filtro | Descrição |
 | --- | --- |
 | Pesquisa | Use a barra de pesquisa para filtrar sua exibição para um único tipo de origem. |
-| Origens | Selecione **[!UICONTROL Fontes]** para filtrar sua exibição e exibir dados de métrica por tipo de fonte. Essa é a exibição padrão que o painel de monitoramento usa. |
-| Fluxos de dados | Selecione **[!UICONTROL Fluxos de dados]** para filtrar sua exibição e exibir dados de métrica por fluxo de dados. |
-| Mostrar somente falhas | Selecione **[!UICONTROL Mostrar somente falhas]** para filtrar sua visualização e exibir somente fluxos de dados que relataram falhas de assimilação. |
-| Minhas fontes | Você pode filtrar ainda mais sua exibição usando o menu suspenso [!UICONTROL Minhas fontes]. Use o menu suspenso para filtrar sua visualização por categoria. Como alternativa, você pode selecionar **[!UICONTROL Todas as fontes]** para exibir métricas em todas as fontes ou fontes, ou selecionar **[!UICONTROL Minhas fontes]** para exibir somente as fontes com as quais você tem uma conta correspondente. |
+| Origens | Selecione **[!UICONTROL Sources]** para filtrar sua exibição e exibir dados de métrica por tipo de origem. Essa é a exibição padrão que o painel de monitoramento usa. |
+| Fluxos de dados | Selecione **[!UICONTROL Dataflows]** para filtrar sua visualização e exibir dados de métrica por fluxo de dados. |
+| Mostrar somente falhas | Selecione **[!UICONTROL Show failures only]** para filtrar sua visualização e exibir apenas os fluxos de dados que relataram falhas de assimilação. |
+| Minhas fontes | Você pode filtrar ainda mais sua exibição usando o menu suspenso [!UICONTROL My sources]. Use o menu suspenso para filtrar sua visualização por categoria. Como alternativa, você pode selecionar **[!UICONTROL All sources]** para exibir métricas em todas as fontes ou selecionar **[!UICONTROL My sources]** para exibir somente as fontes com as quais você tem uma conta correspondente. |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Para personalizar a exibição da coluna, selecione o ícone de configurações 
 
 ![O painel de monitoramento com o ícone de configurações de coluna selecionado.](../assets/ui/monitor-sources/edit-columns.png)
 
-Em seguida, use a janela *[!UICONTROL Personalizar tabela]* para selecionar as colunas que deseja que o painel exiba. Quando terminar, selecione **[!UICONTROL Aplicar]**.
+Em seguida, use a janela *[!UICONTROL Customize table]* para selecionar as colunas que deseja que o painel exiba. Quando terminar, selecione **[!UICONTROL Apply]**.
 
 ![A janela pop-up personalizar coluna no painel de monitoramento.](../assets/ui/monitor-sources/customize-table.png)
 
@@ -106,7 +106,7 @@ Para inspecionar ainda mais um fluxo de dados, selecione o ícone de filtro ![fi
 
 Em seguida, você é direcionado a uma interface que lista todas as iterações de execução do fluxo de dados selecionado.
 
-As execuções de fluxo de dados representam uma instância da execução do fluxo de dados. Por exemplo, se um fluxo de dados estiver programado para ser executado por hora às 9h, 10h e 11h, você terá três instâncias de um fluxo em execução. As execuções de fluxo são específicas para sua organização específica.
+As execuções de fluxo de dados representam uma instância da execução do fluxo de dados. Por exemplo, se um fluxo de dados estiver agendado para ser executado por hora às 9h00, 10h10 e 11h20, você terá três instâncias de um fluxo em execução. :00:00:00 As execuções de fluxo são específicas para sua organização específica.
 
 Para inspecionar métricas de uma iteração de execução de fluxo de dados específica, selecione o ícone de filtro ![filtro](/help/images/icons/filter-add.png) ao lado do fluxo de dados.
 
@@ -122,22 +122,22 @@ Use a página de detalhes da execução do fluxo de dados para exibir métricas 
 | Registros com falha | O número total de registros que não foram assimilados devido a erros na execução do fluxo de dados. |
 | Total de arquivos | O número total de arquivos na execução do fluxo de dados. |
 | Tamanho dos dados | O tamanho total dos dados contidos na execução do fluxo de dados. |
-|  execução do fluxo de dados | A ID da iteração de execução do fluxo de dados. |
+| ID de execução do fluxo de dados | A ID da iteração de execução do fluxo de dados. |
 | ID da organização | A ID da organização na qual a execução do fluxo de dados foi criada. |
 | Status | O status da execução do fluxo de dados. |
 | Início da execução do fluxo de dados | Um carimbo de data e hora que indica quando a execução do fluxo de dados foi iniciada. |
 | Término da execução do fluxo de dados | Um carimbo de data e hora que indica quando a execução do fluxo de dados terminou. |
 | Conjunto de dados | O conjunto de dados usado para criar o fluxo de dados. |
 | Tipo de dados | O tipo de dados que estava no fluxo de dados. |
-| Assimilação parcial | A assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos na Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos. Você pode ativar a assimilação parcial durante o processo de criação do fluxo de dados. |
+| Ingestão parcial | A assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos na Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos. Você pode ativar a assimilação parcial durante o processo de criação do fluxo de dados. |
 | Diagnóstico de erro | O diagnóstico de erro instrui a origem a produzir diagnósticos de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados. Você pode habilitar diagnósticos de erro durante o processo de criação do fluxo de dados. |
 | Resumo do erro | Dada uma execução de fluxo de dados com falha, o resumo do erro exibe um código e uma descrição do erro para resumir por que a iteração de execução falhou. |
 
 {style="table-layout:auto"}
 
-Se o fluxo de dados executar erros, você pode rolar para baixo até a parte inferior da página usar a interface [!UICONTROL Erros de execução do fluxo de dados].
+Se o fluxo de dados executar erros, você pode rolar para baixo até a parte inferior da página usar a interface [!UICONTROL Dataflow run errors].
 
-Use a seção [!UICONTROL Registros com falha] para exibir métricas em registros que não foram assimilados devido a erros. Para exibir um relatório de erros abrangente, selecione **[!UICONTROL Visualizar diagnóstico de erro]**. Para baixar uma cópia do diagnóstico de erros e do manifesto de arquivo, selecione **[!UICONTROL Baixar]** e copie a chamada de API de exemplo a ser usada com a API [!DNL Data Access].
+Use a seção [!UICONTROL Records failed] para exibir métricas em registros que não foram assimilados devido a erros. Para exibir um relatório de erros abrangente, selecione **[!UICONTROL Preview error diagnostics]**. Para baixar uma cópia do diagnóstico de erros e do manifesto de arquivo, selecione **[!UICONTROL Download]** e copie a chamada de API de exemplo a ser usada com a API [!DNL Data Access].
 
 >[!NOTE]
 >
@@ -145,7 +145,7 @@ Use a seção [!UICONTROL Registros com falha] para exibir métricas em registro
 
 ## Próximas etapas {#next-steps}
 
-Seguindo este tutorial, você aprendeu a monitorar a taxa de assimilação do data lake usando o painel **[!UICONTROL Monitoramento]**. Você também aprendeu a identificar erros que causam falhas de fluxo de dados durante a assimilação. Consulte os seguintes documentos para obter mais detalhes:
+Seguindo este tutorial, você aprendeu a monitorar a taxa de assimilação do data lake usando o painel **[!UICONTROL Monitoring]**. Você também aprendeu a identificar erros que causam falhas de fluxo de dados durante a assimilação. Consulte os seguintes documentos para obter mais detalhes:
 
 * [Monitorando dados de identidade](./monitor-identities.md).
 * [Monitorando dados do perfil](./monitor-profiles.md).

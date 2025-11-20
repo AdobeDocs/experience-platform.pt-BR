@@ -1,12 +1,12 @@
 ---
 title: Públicos da conta
 description: Saiba como criar e usar públicos-alvo da conta para direcionar perfis de conta em destinos downstream.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
 source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1498'
 ht-degree: 21%
 
 ---
@@ -35,11 +35,11 @@ Antes de começar a usar públicos-alvo de conta, analise as diferenças entre o
 
 ## Acesso {#access}
 
-Para acessar os públicos da conta, selecione **[!UICONTROL Públicos]** na seção **[!UICONTROL Contas]**.
+Para acessar públicos-alvo da conta, selecione **[!UICONTROL Audiences]** na seção **[!UICONTROL Accounts]**.
 
 ![O botão Públicos-alvo é realçado na seção Contas.](../images/types/account/select.png)
 
-A página [!UICONTROL Procurar] é exibida, mostrando uma lista de todos os públicos-alvo da conta da organização.
+A página [!UICONTROL Browse] é exibida, mostrando uma lista de todos os públicos-alvo da conta da organização.
 
 ![Os públicos-alvo da conta pertencentes à organização são exibidos.](../images/types/account/browse.png)
 
@@ -53,19 +53,19 @@ Você também pode usar a funcionalidade de pesquisa e filtragem para pesquisar 
 >
 >Os públicos-alvo da conta são avaliados usando a segmentação **batch** e serão avaliados a cada 24 horas.
 
-Para criar um público-alvo para uma conta, selecione **[!UICONTROL Criar público-alvo]** na página [!UICONTROL Procurar].
+Para criar um público-alvo para a conta, selecione **[!UICONTROL Create audience]** na página [!UICONTROL Browse].
 
-![O botão [!UICONTROL Criar público-alvo] está realçado na página de navegação do público-alvo da conta.](../images/types/account/select-create-audience.png)
+![O botão [!UICONTROL Create audience] está realçado na página de navegação do público-alvo da conta.](../images/types/account/select-create-audience.png)
 
-O Construtor de segmentos é exibido. Os atributos e os públicos-alvo da conta são exibidos na barra de navegação esquerda. Na guia [!UICONTROL Atributos], é possível adicionar atributos criados e personalizados pela Experience Platform.
+O Construtor de segmentos é exibido. Os atributos e os públicos-alvo da conta são exibidos na barra de navegação esquerda. Na guia [!UICONTROL Attributes], é possível adicionar atributos criados e personalizados pela Experience Platform.
 
 ![O Construtor de segmentos é exibido. Observe que somente os atributos e os públicos-alvo são exibidos.](../images/types/account/segment-builder.png)
 
-Ao criar públicos da conta, observe que os eventos estão listados em **[!UICONTROL Pessoas]**, em vez de serem sua própria guia, já que esses atributos estão associados a pessoas.
+Ao criar públicos-alvo de conta, observe que os eventos estão listados em **[!UICONTROL People]**, em vez de serem sua própria guia, já que esses atributos estão associados a pessoas.
 
-![O local para localizar eventos, que está dentro da pasta [!UICONTROL Pessoas], está realçado.](../images/types/account/attributes.png)
+![O local para localizar eventos, que está dentro da pasta [!UICONTROL People], está realçado.](../images/types/account/attributes.png)
 
-Na guia [!UICONTROL Públicos-alvo], você pode adicionar públicos-alvo com base em pessoas criados anteriormente para criar novos públicos-alvo ao criar seu próprio público-alvo da conta.
+Na guia [!UICONTROL Audiences], é possível adicionar públicos-alvo com base em pessoas criados anteriormente para serem construídos ao criar o público-alvo da sua própria conta.
 
 ![A guia Públicos-alvo no Construtor de segmentos está realçada.](../images/types/account/audiences.png)
 
@@ -79,11 +79,11 @@ Para usar tipos de relações alternativas, selecione ![o ícone de configuraç�
 
 ![O ícone de configurações está realçado na seção Campos.](../images/types/account/select-settings.png)
 
-Na guia [!UICONTROL Configurações], selecione **[!UICONTROL Mostrar seletores de relacionamento]** na seção **[!UICONTROL Relacionamento de campos]**.
+Na guia [!UICONTROL Settings], selecione **[!UICONTROL Show relationship selectors]** na seção **[!UICONTROL Relationship of fields]**.
 
 ![A opção Mostrar seletores de relação está selecionada na seção Relação de campos da guia Configurações.](../images/types/account/show-relation-selectors.png)
 
-Selecione ![o ícone de configurações](../../images/icons/settings.png) novamente para retornar à guia [!UICONTROL Campos]. Agora você pode ver a seção **[!UICONTROL Estabelecer relações]**, que permite estabelecer como a conta está conectada à pessoa e como a pessoa está conectada à oportunidade.
+Selecione ![o ícone de configurações](../../images/icons/settings.png) novamente para retornar à guia [!UICONTROL Fields]. Agora você pode ver a seção **[!UICONTROL Establish relationships]**, que permite estabelecer como a conta está conectada à pessoa e como a pessoa está conectada à oportunidade.
 
 ![A seção Estabelecer relações é destacada, exibindo as opções de como conectar uma conta a uma pessoa e como conectar uma pessoa a uma oportunidade.](../images/types/account/establish-relationships.png)
 
@@ -112,11 +112,11 @@ Depois de estabelecer o relacionamento desejado, é possível adicionar os públ
 
 Depois de criar o público-alvo da sua conta, você pode ativá-lo para outros serviços downstream.
 
-Selecione o público que você deseja ativar, seguido por **[!UICONTROL Ativar para destino]**.
+Selecione o público-alvo que você deseja ativar, seguido de **[!UICONTROL Activate to destination]**.
 
-![O botão [!UICONTROL Ativar para destino] está realçado no menu de ações rápidas para o público-alvo selecionado.](../images/types/account/activate.png)
+![O botão [!UICONTROL Activate to destination] está realçado no menu de ações rápidas para o público-alvo selecionado.](../images/types/account/activate.png)
 
-A página [!UICONTROL Ativar destino] é exibida. Para obter mais informações sobre o processo de ativação, incluindo destinos com suporte e detalhes sobre mapeamentos de campos, leia o tutorial [ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md).
+A página [!UICONTROL Activate destination] é exibida. Para obter mais informações sobre o processo de ativação, incluindo destinos com suporte e detalhes sobre mapeamentos de campos, leia o tutorial [ativar públicos-alvo da conta](/help/destinations/ui/activate-account-audiences.md).
 
 ## Próximas etapas {#next-steps}
 

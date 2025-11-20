@@ -84,7 +84,7 @@ Caso veja algo fora de ordem, é provável que você tenha problemas com tempo p
 
 ## Carregamento do código incorporado nas tags de forma assíncrona
 
-As tags oferecem um botão para ativar o carregamento assíncrono ao ser criado um código incorporado quando você configura um [ambiente](../publishing/environments.md). Você também pode configurar o carregamento assíncrono sozinho:
+As tags oferecem um botão de alternância para ativar o carregamento assíncrono ao ser criado um código incorporado quando você configura um [ambiente](../publishing/environments.md). Você também pode configurar o carregamento assíncrono sozinho:
 
 1. Adicione um atributo assíncrono à tag `<script>` para carregar o script de maneira assíncrona.
 

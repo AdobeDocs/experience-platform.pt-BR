@@ -6,7 +6,7 @@ description: O Adobe Experience Platform Data Governance permite gerenciar dados
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1619'
 ht-degree: 9%
 
 ---
@@ -90,8 +90,8 @@ Um exemplo de ação de marketing pode ser o desejo de exportar um conjunto de d
 
 Há dois tipos de políticas disponíveis:
 
-* **[!UICONTROL Política de governança de dados]**: Restrinja a ativação de dados com base na ação de marketing que está sendo executada e nos rótulos de uso de dados transportados pelos dados em questão.
-* **[!UICONTROL Política de consentimento]**: filtre os perfis que podem ser ativados para [destinos](../destinations/home.md) com base no consentimento ou nas preferências dos clientes.
+* **[!UICONTROL Data governance policy]**: Restrinja a ativação de dados com base na ação de marketing que está sendo executada e nos rótulos de uso de dados transportados pelos dados em questão.
+* **[!UICONTROL Consent policy]**: filtre os perfis que podem ser ativados para [destinos](../destinations/home.md) com base no consentimento ou nas preferências dos clientes.
 
 Depois que os rótulos de uso de dados forem aplicados, os administradores de dados poderão criar políticas usando a API de serviço de política ou a interface do usuário do Experience Platform. Para obter mais informações sobre políticas de uso de dados e ações de marketing, consulte a [visão geral das políticas](./policies/overview.md).
 
@@ -132,8 +132,8 @@ A tabela a seguir descreve os termos principais relacionados à Governança de d
 
 O vídeo a seguir é destinado a apoiar a sua compreensão da estrutura de governança de dados.
 
->[!VIDEO](https://video.tv.adobe.com/v/32683?quality=12&enable10seconds=on&speedcontrol=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 O vídeo a seguir fornece orientação sobre como aplicar rótulos de uso de dados aos seus esquemas ou à totalidade de um conjunto de dados na Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422793/?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

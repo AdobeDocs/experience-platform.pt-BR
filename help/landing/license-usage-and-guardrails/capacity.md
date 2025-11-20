@@ -56,9 +56,9 @@ Nesses serviços, as seguintes medidas de proteção são rastreadas:
 
 - O número máximo de públicos-alvo de transmissão é 500
    - Desses 500 públicos-alvo de transmissão, o número máximo de públicos-alvo de borda é 150
-- A taxa de transferência inicial combinada para assimilação por transmissão é de 1500 registros por segundo (rps)
+- The initial combined throughput for streaming ingestion is 1500 records per second (rps)
    - Essa taxa de transferência de transmissão combinada mede o pico combinado de eventos de entrada por segundo para a assimilação de transmissão no Perfil do cliente em tempo real em suas sandboxes de produção e desenvolvimento.
-   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 A capacidade de público-alvo está no nível de **sandbox**. Isso significa que, para cada sandbox que você tem em sua organização, você pode ter 500 públicos-alvo de transmissão, dos quais 150 podem ser públicos-alvo de borda.
 
@@ -123,9 +123,9 @@ Você pode selecionar a sandbox individual para ver uma visualização mais deta
 
 ![Uma sandbox está realçada na seção de taxa de transferência de streaming.](/help/landing/images/capacity/select-sandbox.png)
 
-A página de detalhes da Taxa de transferência de transmissão é exibida. Você pode ver um gráfico que exibe a taxa de transferência da solicitação comparada ao limite de capacidade, uma lista das sandboxes e suas taxas de transferência, bem como um botão para alocar as capacidades de sua organização.
+The Streaming throughput details page is displayed. Você pode ver um gráfico que exibe a taxa de transferência da solicitação comparada ao limite de capacidade, uma lista das sandboxes e suas taxas de transferência, bem como um botão para alocar as capacidades de sua organização.
 
-![A página de taxa de transferência de streaming é exibida, mostrando informações detalhadas sobre a taxa de transferência de streaming da sandbox selecionada.](/help/landing/images/capacity/streaming-capacity-allocation.png)
+![The streaming throughput page is displayed, showing detailed information about the streaming throughput for the selected sandbox.](/help/landing/images/capacity/streaming-capacity-allocation.png)
 
 Para atualizar as capacidades de taxa de transferência de streaming da organização, selecione **[!UICONTROL Allocate capacities]**.
 
@@ -137,11 +137,11 @@ A página de alocação é exibida. Nesta página, você pode definir suas capac
 
 >[!NOTE]
 >
->Você só pode definir a nova capacidade nas ordens de **100**. Por exemplo, você pode definir o valor da nova capacidade da sandbox como 300 ou 500, mas **não pode** definir esse valor como 450.
+>You can only set the new capacity in orders of **100**. Por exemplo, você pode definir o valor da nova capacidade da sandbox como 300 ou 500, mas **não pode** definir esse valor como 450.
 >
 >Se o valor não for da ordem de 100, ele será arredondado para cima ou para baixo de acordo.
 
-Depois de atualizar as alocações de capacidade, selecione **[!UICONTROL Save]** para concluir as atualizações. Observe que pode levar até 10 minutos para que as alterações sejam refletidas em sua organização.
+After updating the capacity allocations, select **[!UICONTROL Save]** to finish the updates. Observe que pode levar até 10 minutos para que as alterações sejam refletidas em sua organização.
 
 #### Contagem de público-alvo {#audience-count}
 
@@ -158,7 +158,7 @@ As seções **[!UICONTROL Streaming audience count]** e **[!UICONTROL Edge audie
 
 ## Práticas recomendadas de taxa de transferência de transmissão {#suggestions}
 
-Você pode resolver as violações da taxa de transferência de transmissão adotando uma das seguintes recomendações:
+You can resolve your streaming throughput violations by adopting one of the following recommendations:
 
 1. Aumente a capacidade alocada para a sandbox.
 2. Identifique fluxos de dados de alta taxa de transferência no [painel de monitoramento](/help/dataflows/ui/monitor-streaming-profile.md) e aplique limitação ou filtragem a esses fluxos de dados, se necessário.
@@ -175,7 +175,7 @@ Além disso, você pode examinar seus fluxos de dados e ver se pode otimizar sua
 
 O vídeo a seguir fornece uma visão geral da Capacidade.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475278/?captions=por_br&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Perguntas frequentes {#faq}
 

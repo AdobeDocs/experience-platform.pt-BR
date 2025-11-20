@@ -6,7 +6,7 @@ description: Este documento fornece orientação geral sobre como configurar a e
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
 source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1264'
+source-wordcount: '1260'
 ht-degree: 7%
 
 ---
@@ -49,15 +49,15 @@ Um perfil é considerado para expiração de dados pseudônimos se atender às s
 >
 >Mais informações sobre permissões no Experience Platform podem ser encontradas na [visão geral do controle de acesso](../access-control/home.md#permissions).
 
-Para adicionar a expiração de dados de perfil pseudônimo à sua organização, vá para o painel Perfil e selecione **[!UICONTROL Configurações]**.
+Para adicionar a expiração de dados de perfil pseudônimo à sua organização, vá para o painel Perfil e selecione **[!UICONTROL Settings]**.
 
 ![O botão Configurações no painel Perfil está realçado.](./images/pseudonymous-profiles/profile-settings.png)
 
-O popover [!UICONTROL Configurações de perfil] é exibido. Nesse pop-over, é possível definir o número de dias para a expiração dos dados do perfil pseudônimo, bem como o namespace de identidade usado para a expiração dos dados.
+O popover [!UICONTROL Profile settings] é exibido. Nesse pop-over, é possível definir o número de dias para a expiração dos dados do perfil pseudônimo, bem como o namespace de identidade usado para a expiração dos dados.
 
 Para sandboxes de produção, a expiração padrão dos dados do perfil pseudônimo é de 14 dias, com um mínimo de 1 dia e um máximo de 365 dias. Para sandboxes de desenvolvimento, a expiração padrão dos dados do perfil pseudônimo é de 3 dias, com o mínimo de 1 dia e o máximo de 365 dias.
 
-Selecione **[!UICONTROL Aplicar]** para salvar as configurações de expiração de dados.
+Selecione **[!UICONTROL Apply]** para salvar as configurações de expiração de dados.
 
 ![O popover para adicionar a expiração de dados de perfil pseudônimo aos perfis da sua organização. O botão Aplicar está realçado.](./images/pseudonymous-profiles/profile-settings-data-expiry.png){width="800" zoomable="yes"}
 
@@ -131,7 +131,7 @@ Em um caso de uso típico, você pode definir a expiração de dados do evento d
 
 +++ Resposta
 
-- O sistema de exclusão &quot;primeiro a entrar, primeiro a sair&quot;[&#128279;](../identity-service/guardrails.md) do Serviço de Identidade  poderia excluir ECIDs do gráfico de identidade, que estão armazenados no Serviço de Identidade.
+- O sistema de exclusão &quot;primeiro a entrar, primeiro a sair&quot;[ do Serviço de Identidade ](../identity-service/guardrails.md) poderia excluir ECIDs do gráfico de identidade, que estão armazenados no Serviço de Identidade.
 - Se esse comportamento de exclusão resultar no armazenamento de um perfil somente ECID no Perfil do cliente em tempo real (armazenamento de perfil), a expiração dos dados do perfil pseudônimo excluirá esse perfil do armazenamento de perfil.
 
 +++

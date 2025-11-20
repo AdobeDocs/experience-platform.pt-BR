@@ -51,7 +51,7 @@ Os rótulos “I” de identidade são usados para categorizar dados que podem i
 | **I1** | Dados diretamente identificáveis que podem identificar ou entrar em contato com uma pessoa específica, em vez de com um dispositivo. |
 | **I2** | Dados indiretamente identificáveis que podem ser utilizados em ção com quaisquer outros dados para identificar ou contactar uma pessoa específica. |
 
-## Rótulos de dados sensíveis {#sensitive}
+## Rótulos de sensibilidade {#sensitive}
 
 Os rótulos de sensibilidade (S) são usados para categorizar dados que você e sua organização consideram sensíveis.
 
@@ -74,7 +74,7 @@ Este rótulo é usado para controlar o uso de dados de prospecto.
 | --- | --- |
 | **Terceiros** | Dados de terceiros são dados fornecidos a você por um fornecedor de dados de terceiros. Um fornecedor de dados de terceiros é uma entidade que celebrou um contrato com sua organização autorizando você a acessar, usar, exibir e transmitir os dados de terceiros em conjunto com a Experience Platform. |
 | **Enriquecimento de Terceiros** | Dados coletados por uma organização de terceiros que não esteja diretamente relacionada ao titular dos dados. O rótulo deve ser aplicado aos dados de terceiros usados para enriquecer perfis primários. |
-| **Prospecção de Terceiros** | Dados coletados por uma organização de terceiros que não esteja diretamente relacionada ao titular dos dados. A etiqueta deve ser aplicada aos dados de terceiros usados para parte superior da prospecção em funil para novos clientes líquidos. |
+| **Prospecção de Terceiros** | Dados coletados por uma organização de terceiros que não esteja diretamente relacionada ao titular dos dados. A etiqueta deve ser aplicada aos dados de terceiros usados além da prospecção da funnel para novos clientes em rede. |
 
 ## Apêndice
 

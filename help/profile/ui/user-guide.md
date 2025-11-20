@@ -5,7 +5,7 @@ description: O Perfil do cliente em tempo real cria uma visualização integral 
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '1921'
 ht-degree: 4%
 
 ---
@@ -22,13 +22,13 @@ Este guia de interface do usuário requer uma compreensão dos vários serviços
 * [[!DNL Identity Service]](../../identity-service/home.md): Habilita [!DNL Real-Time Customer Profile] unindo identidades de fontes de dados diferentes conforme elas são assimiladas em [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
 
-## [!UICONTROL Visão geral]
+## [!UICONTROL Overview]
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Perfis]** na navegação à esquerda para abrir a guia **[!UICONTROL Visão geral]** exibindo o painel de perfil.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Profiles]** na navegação à esquerda para abrir a guia **[!UICONTROL Overview]** que exibe o painel de perfil.
 
 >[!NOTE]
 >
->Se sua organização for nova no Experience Platform e ainda não tiver conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel [!UICONTROL Perfis] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudar você a começar a usar o Perfil do cliente em tempo real.
+>Se sua organização for nova no Experience Platform e ainda não tiver conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel [!UICONTROL Profiles] não estará visível. Em vez disso, a guia [!UICONTROL Overview] exibe links e documentação para ajudar você a começar a usar o Perfil do cliente em tempo real.
 
 ### Painel do perfil {#profile-dashboard}
 
@@ -38,9 +38,9 @@ Para saber mais, visite o [guia do painel do perfil](../../dashboards/guides/pro
 
 ![O painel Perfil é exibido.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## Guia [!UICONTROL Procurar]
+## [!UICONTROL Browse]Guia
 
-Na guia **[!UICONTROL Procurar]**, você pode exibir seus perfis em um modo de exibição de **cartão** ou em um modo de exibição de **gráfico** selecionando o botão de alternância.
+Na guia **[!UICONTROL Browse]**, você pode exibir seus perfis em uma exibição de **cartão** ou em uma exibição de **gráfico** selecionando a opção.
 
 ![A opção de exibição de cartão e gráfico está realçada.](../images/user-guide/card-graph-view.png)
 
@@ -48,45 +48,45 @@ Além disso, você pode navegar pelos perfis usando uma política de mesclagem o
 
 ![Os perfis que pertencem à organização são exibidos.](../images/user-guide/profile-browse.png)
 
-### Procurar por [!UICONTROL Política de mesclagem]
+### Procurar por [!UICONTROL Merge policy]
 
-Por padrão, a guia **[!UICONTROL Procurar]** está definida como a política de mesclagem padrão para sua organização. Para escolher uma política de mesclagem diferente, selecione `X` ao lado do nome da política de mesclagem e use o seletor para abrir a caixa de diálogo **[!UICONTROL Selecionar política de mesclagem]**.
+Por padrão, a guia **[!UICONTROL Browse]** é definida como a política de mesclagem padrão para sua organização. Para escolher uma política de mesclagem diferente, selecione `X` ao lado do nome da política de mesclagem e use o seletor para abrir a caixa de diálogo **[!UICONTROL Select merge policy]**.
 
 >[!NOTE]
 >
->Se não houver política de mesclagem selecionada, use o botão seletor ao lado do campo **[!UICONTROL Política de mesclagem]** para abrir a caixa de diálogo de seleção.
+>Se não houver política de mesclagem selecionada, use o botão seletor ao lado do campo **[!UICONTROL Merge policy]** para abrir a caixa de diálogo de seleção.
 
 ![O seletor de política de mesclagem está realçado.](../images/user-guide/browse-by-merge-policy.png)
 
-Para escolher uma política de mesclagem na caixa de diálogo **[!UICONTROL Selecionar política de mesclagem]**, selecione o botão de opção ao lado do nome da política e use **[!UICONTROL Selecionar]** para retornar à guia [!UICONTROL Procurar]. Você pode selecionar **[!UICONTROL Exibir]** para atualizar os perfis de exemplo e ver uma amostragem de perfis com a nova política de mesclagem aplicada.
+Para escolher uma política de mesclagem na caixa de diálogo **[!UICONTROL Select merge policy]**, selecione o botão de opção ao lado do nome da política e use **[!UICONTROL Select]** para retornar à guia [!UICONTROL Browse]. Você pode selecionar **[!UICONTROL View]** para atualizar os perfis de amostra e ver uma amostragem de perfis com a nova política de mesclagem aplicada.
 
 ![Uma caixa de diálogo na qual você pode selecionar a política de mesclagem para filtrar é exibida.](../images/user-guide/select-merge-policy.png)
 
 Os perfis exibidos representam uma amostra de até 20 perfis do armazenamento de perfis da sua organização, depois que a política de mesclagem selecionada é aplicada. Os perfis de exemplo para a política de mesclagem selecionada são atualizados quando novos dados são adicionados ao armazenamento de perfis da sua organização.
 
-Para exibir os detalhes de um dos perfis de exemplo, selecione a **[!UICONTROL ID do Perfil]**. Para obter mais informações, consulte a seção mais adiante neste guia em [exibindo detalhes do perfil](#profile-detail).
+Para exibir os detalhes de um dos perfis de exemplo, selecione o **[!UICONTROL Profile ID]**. Para obter mais informações, consulte a seção mais adiante neste guia em [exibindo detalhes do perfil](#profile-detail).
 
 ![Perfis de exemplo que correspondem à política de mesclagem são exibidos.](../images/user-guide/profile-browse-table.png)
 
 Para saber mais sobre as políticas de mesclagem e sua função na Experience Platform, consulte a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
-### Procurar por [!UICONTROL Identidade] {#browse-identity}
+### Procurar por [!UICONTROL Identity] {#browse-identity}
 
-Na guia **[!UICONTROL Procurar]**, você pode usar um namespace de identidade para procurar um perfil específico por um valor de identidade. A navegação por uma identidade exige que você forneça uma política de mesclagem, um namespace de identidade e um valor de identidade.
+Na guia **[!UICONTROL Browse]**, você pode usar um namespace de identidade para procurar um perfil específico por um valor de identidade. A navegação por uma identidade exige que você forneça uma política de mesclagem, um namespace de identidade e um valor de identidade.
 
 ![O seletor de política de mesclagem está realçado.](../images/user-guide/browse-by-merge-policy.png)
 
-Se necessário, use o seletor de **[!UICONTROL Política de mesclagem]** para abrir a caixa de diálogo **[!UICONTROL Selecionar política de mesclagem]** e escolher a política de mesclagem que deseja usar.
+Se necessário, use o seletor **[!UICONTROL Merge policy]** para abrir a caixa de diálogo **[!UICONTROL Select merge policy]** e escolha a política de mesclagem que deseja usar.
 
 ![Uma caixa de diálogo na qual você pode selecionar a política de mesclagem para filtrar é exibida.](../images/user-guide/select-merge-policy.png)
 
-Em seguida, use o seletor de **[!UICONTROL Namespace de identidade]** para abrir a caixa de diálogo **[!UICONTROL Selecionar namespace de identidade]** e escolha o namespace pelo qual deseja pesquisar. Se sua organização tiver muitos namespaces, você poderá usar a barra de pesquisa na caixa de diálogo para começar a digitar o nome de um namespace.
+Em seguida, use o seletor **[!UICONTROL Identity namespace]** para abrir a caixa de diálogo **[!UICONTROL Select identity namespace]** e escolher o namespace pelo qual deseja pesquisar. Se sua organização tiver muitos namespaces, você poderá usar a barra de pesquisa na caixa de diálogo para começar a digitar o nome de um namespace.
 
-Você pode selecionar um namespace para exibir detalhes adicionais ou selecionar o botão de opção para escolher um namespace. Você pode usar **[!UICONTROL Selecionar]** para continuar.
+Você pode selecionar um namespace para exibir detalhes adicionais ou selecionar o botão de opção para escolher um namespace. Você pode usar **[!UICONTROL Select]** para continuar.
 
 ![É exibida uma caixa de diálogo na qual você pode selecionar o namespace de identidade pelo qual filtrar.](../images/user-guide/select-identity-namespace.png)
 
-Depois de selecionar um [!UICONTROL namespace de identidade] e retornar à guia [!UICONTROL Procurar], você pode inserir um **[!UICONTROL valor de identidade]** relacionado ao namespace selecionado.
+Após selecionar um [!UICONTROL Identity namespace] e retornar à guia [!UICONTROL Browse], você pode inserir um **[!UICONTROL Identity value]** relacionado ao namespace selecionado.
 
 >[!NOTE]
 >
@@ -94,7 +94,7 @@ Depois de selecionar um [!UICONTROL namespace de identidade] e retornar à guia 
 
 ![O valor de identidade pelo qual você deseja filtrar está realçado.](../images/user-guide/browse-identity.png)
 
-Depois que um valor for inserido, selecione **[!UICONTROL Exibir]** e um único perfil correspondente ao valor será retornado. Selecione a **[!UICONTROL ID do Perfil]** para exibir um perfil.
+Depois que um valor for inserido, selecione **[!UICONTROL View]** e um único perfil correspondente ao valor será retornado. Selecione o **[!UICONTROL Profile ID]** para ver um perfil.
 
 ![O perfil que corresponde ao valor de identidade está realçado.](../images/user-guide/filtered-identity-value.png)
 
@@ -105,13 +105,13 @@ Depois que um valor for inserido, selecione **[!UICONTROL Exibir]** e um único 
 >title="Entidade não encontrada"
 >abstract="Isso significa que a Experience Platform não encontrou a entidade solicitada. Para resolver esse erro, tente uma das seguintes soluções:<ul><li>Verifique se a ID do perfil correta está listada no URL da entidade que você está tentando acessar.</li><li>Verifique se você tem a combinação correta de Organização e sandbox para a entidade que está tentando acessar.</li></ul>"
 
-Depois de selecionar uma **[!UICONTROL ID de perfil]**, a guia **[!UICONTROL Detalhes]** é aberta. As informações do perfil exibidas na guia **[!UICONTROL Detalhes]** foram mescladas de vários fragmentos de perfil para formar uma única visualização do cliente individual. Isso inclui detalhes do cliente, como atributos básicos, identidades vinculadas e preferências de canal.
+Após selecionar um **[!UICONTROL Profile ID]**, a guia **[!UICONTROL Detail]** é aberta. As informações do perfil exibidas na guia **[!UICONTROL Detail]** foram mescladas de vários fragmentos de perfil para formar uma única visualização do cliente individual. Isso inclui detalhes do cliente, como atributos básicos, identidades vinculadas e preferências de canal.
 
 Além disso, você pode exibir outros detalhes sobre perfis, como seus [atributos](#attributes), [eventos](#events) e [associação de público](#audience-membership).
 
 ### Guia Detalhes {#profile-detail}
 
-A guia **[!UICONTROL Detalhes]** fornece informações mais detalhadas sobre o perfil selecionado e é separada em quatro seções: Insights do perfil do cliente, widgets do AI insight, widgets personalizáveis e widgets classificados automaticamente.
+A guia **[!UICONTROL Details]** fornece informações mais detalhadas sobre o perfil selecionado e é separada em quatro seções: Insights do perfil do cliente, widgets do AI insight, widgets personalizáveis e widgets classificados automaticamente.
 
 ![A página de detalhes do perfil é exibida.](../images/user-guide/profile-details.png)
 
@@ -121,7 +121,7 @@ Além disso, você pode alternar se os insights gerados pela IA são exibidos, m
 
 #### Insights do perfil do cliente {#customer-profile-insights}
 
-A seção **[!UICONTROL Insights do perfil do cliente]** exibe uma breve introdução aos atributos do perfil. Isso inclui a ID do perfil, o email, o número de telefone, o gênero, a data de nascimento, bem como as identidades e as associações de público-alvo do perfil.
+A seção **[!UICONTROL Customer profile insights]** exibe uma breve introdução aos atributos do perfil. Isso inclui a ID do perfil, o email, o número de telefone, o gênero, a data de nascimento, bem como as identidades e as associações de público-alvo do perfil.
 
 ![A seção de insights do perfil do cliente é exibida.](../images/user-guide/customer-profile-insights.png)
 
@@ -129,19 +129,19 @@ A seção **[!UICONTROL Insights do perfil do cliente]** exibe uma breve introdu
 
 [!BADGE Alpha]{type=Informative} Este recurso atualmente está no Alpha.
 
-A seção **[!UICONTROL widgets do insight de IA]** exibe widgets gerados pela IA. Esses widgets fornecem insights rápidos sobre o perfil, com base nos dados do perfil, incluindo dados demográficos (como idade, gênero ou local), comportamentos do usuário (como histórico de compras, atividade do site ou engajamento nas redes sociais), bem como psicográficos (como interesses, preferência ou opções de estilo de vida). Todos os widgets de IA usam dados que **já** existem no perfil.
+A seção **[!UICONTROL AI insight widgets]** exibe widgets gerados pela IA. Esses widgets fornecem insights rápidos sobre o perfil, com base nos dados do perfil, incluindo dados demográficos (como idade, gênero ou local), comportamentos do usuário (como histórico de compras, atividade do site ou engajamento nas redes sociais), bem como psicográficos (como interesses, preferência ou opções de estilo de vida). Todos os widgets de IA usam dados que **já** existem no perfil.
 
 ![A seção widgets do insight de IA é exibida.](../images/user-guide/ai-insight-widgets.png)
 
 #### Widgets personalizáveis {#customizable-widgets}
 
-A seção **[!UICONTROL Widgets personalizáveis]** exibe widgets que você pode personalizar de acordo com suas necessidades comerciais. Você pode agrupar atributos em widgets separados, remover widgets indesejados ou ajustar o layout dos widgets.
+A seção **[!UICONTROL Customizable widgets]** exibe widgets que você pode personalizar de acordo com suas necessidades comerciais. Você pode agrupar atributos em widgets separados, remover widgets indesejados ou ajustar o layout dos widgets.
 
 Os campos padrão mostrados também podem ser alterados em um nível organizacional para exibir atributos de perfil preferenciais. Para saber mais sobre como personalizar esses campos, incluindo instruções passo a passo para adicionar e remover atributos e redimensionar painéis de painel, leia o [guia de personalização de detalhes do perfil](profile-customization.md).
 
 ![A seção widgets personalizáveis é exibida.](../images/user-guide/customizable-widgets.png)
 
-Você também pode optar por alternar entre visualizar os nomes de atributo como seus nomes de exibição e os nomes de caminho do campo. Para alternar entre essas duas exibições, selecione a opção **[!UICONTROL Mostrar nomes para exibição]**.
+Você também pode optar por alternar entre visualizar os nomes de atributo como seus nomes de exibição e os nomes de caminho do campo. Para alternar entre essas duas exibições, selecione o botão de alternância **[!UICONTROL Show display names]**.
 
 ![A opção Mostrar nomes para exibição está realçada.](../images/user-guide/show-display-names.png)
 
@@ -149,7 +149,7 @@ Você também pode optar por alternar entre visualizar os nomes de atributo como
 
 [!BADGE Alpha]{type=Informative} Este recurso atualmente está no Alpha.
 
-A seção **[!UICONTROL Widgets classificados automaticamente]** exibe widgets que usam o esquema de união para determinar os grupos de campos de origem aos quais um atributo pertence, fornecendo um contexto mais claro sobre a origem dos dados. Você pode usar a barra de pesquisa para procurar mais facilmente por palavras-chave em seus widgets.
+A seção **[!UICONTROL Auto-classified widgets]** exibe widgets que usam o esquema de união para determinar os grupos de campos de origem aos quais um atributo pertence, fornecendo um contexto mais claro sobre a origem dos dados. Você pode usar a barra de pesquisa para procurar mais facilmente por palavras-chave em seus widgets.
 
 Esses widgets combinam dados de evento (com o widget Eventos de experiência) e dados de atributo, permitindo que você tenha uma visualização unificada do seu perfil. Você pode usar esses widgets para explorar a estrutura dos dados do seu perfil e estruturar melhor seus [widgets personalizáveis](#customizable-widgets).
 
@@ -161,9 +161,9 @@ Esses widgets combinam dados de evento (com o widget Eventos de experiência) e 
 
 ### Guia Atributos {#attributes}
 
-A guia **[!UICONTROL Atributos]** fornece uma exibição de lista resumindo todos os atributos relacionados a um único perfil, após a política de mesclagem especificada ser aplicada.
+A guia **[!UICONTROL Attributes]** fornece uma exibição de lista resumindo todos os atributos relacionados a um único perfil, após a política de mesclagem especificada ser aplicada.
 
-Esses atributos também podem ser exibidos como um objeto JSON ao selecionar **[!UICONTROL Exibir JSON]**. Isso é útil para qualquer usuário que deseje entender melhor como os atributos de perfil são assimilados na Experience Platform.
+Esses atributos também podem ser exibidos como um objeto JSON selecionando **[!UICONTROL View JSON]**. Isso é útil para qualquer usuário que deseje entender melhor como os atributos de perfil são assimilados na Experience Platform.
 
 ![A guia Atributos está realçada. Os atributos do perfil são exibidos.](../images/user-guide/attributes.png)
 
@@ -175,15 +175,15 @@ Para obter mais informações sobre perfis de borda, leia a [documentação sobr
 
 ### Guia Eventos {#events}
 
-A guia **[!UICONTROL Eventos]** contém dados dos 100 Eventos de Experiência mais recentes associados ao cliente. Esses dados podem incluir aberturas de email, atividades de carrinho e exibições de página. Selecionar **[!UICONTROL Exibir todos]** para qualquer evento individual fornece campos e valores adicionais para capturas como parte do evento.
+A guia **[!UICONTROL Events]** contém dados dos 100 ExperienceEvents mais recentes associados ao cliente. Esses dados podem incluir aberturas de email, atividades de carrinho e exibições de página. Selecionar **[!UICONTROL View all]** para qualquer evento individual fornece campos adicionais e capturas de valores como parte do evento.
 
-Os eventos também podem ser exibidos como um objeto JSON ao selecionar **[!UICONTROL Exibir JSON]**. Isso é útil para entender como os eventos são capturados no Experience Platform.
+Eventos também podem ser exibidos como um objeto JSON selecionando **[!UICONTROL View JSON]**. Isso é útil para entender como os eventos são capturados no Experience Platform.
 
 ![A guia Eventos está realçada. Os eventos de perfil são exibidos.](../images/user-guide/events.png)
 
 ### Guia Associação de público {#audience-membership}
 
-A guia **[!UICONTROL Associação de público-alvo]** exibe uma lista com o nome e a descrição dos públicos-alvo aos quais o perfil de cliente individual pertence atualmente. Essa lista é atualizada automaticamente conforme o perfil se qualifica ou expira dos públicos-alvo. A contagem total de públicos para os quais o perfil está qualificado no momento é mostrada no lado direito da guia.
+A guia **[!UICONTROL Audience membership]** exibe uma lista com o nome e a descrição dos públicos aos quais o perfil de cliente individual pertence atualmente. Essa lista é atualizada automaticamente conforme o perfil se qualifica ou expira dos públicos-alvo. A contagem total de públicos para os quais o perfil está qualificado no momento é mostrada no lado direito da guia.
 
 Para obter mais informações sobre segmentação no Experience Platform, consulte a [documentação do Serviço de segmentação do Experience Platform](../../segmentation/home.md).
 
@@ -195,7 +195,7 @@ Para exibir a associação de público-alvo dos perfis disponíveis na Edge, sel
 
 ## Mesclar políticas
 
-No menu principal **[!UICONTROL Perfis]**, selecione a guia **[!UICONTROL Políticas de mesclagem]** para exibir uma lista de políticas de mesclagem que pertencem à sua organização. Cada política listada exibe seu nome, seja ela a política de mesclagem padrão e a classe de esquema à qual se aplica.
+No menu principal **[!UICONTROL Profiles]**, selecione a guia **[!UICONTROL Merge Policies]** para exibir uma lista de políticas de mesclagem que pertencem à sua organização. Cada política listada exibe seu nome, seja ela a política de mesclagem padrão e a classe de esquema à qual se aplica.
 
 Para obter mais informações sobre políticas de mesclagem, consulte a [visão geral das políticas de mesclagem](../merge-policies/overview.md).
 
@@ -203,7 +203,7 @@ Para obter mais informações sobre políticas de mesclagem, consulte a [visão 
 
 ## Esquema de união {#union-schema}
 
-No menu principal **[!UICONTROL Perfis]**, selecione a guia **[!UICONTROL Esquema de união]** para exibir os esquemas de união disponíveis para seus dados assimilados. Um esquema de união é uma combinação de todos os campos [!DNL Experience Data Model] (XDM) na mesma classe, cujos esquemas foram habilitados para uso em [!DNL Real-Time Customer Profile].
+No menu principal **[!UICONTROL Profiles]**, selecione a guia **[!UICONTROL Union Schema]** para exibir os esquemas de união disponíveis para seus dados assimilados. Um esquema de união é uma combinação de todos os campos [!DNL Experience Data Model] (XDM) na mesma classe, cujos esquemas foram habilitados para uso em [!DNL Real-Time Customer Profile].
 
 Para obter mais informações sobre esquemas de união, visite o [guia da interface do esquema de união](union-schema.md).
 
@@ -211,7 +211,7 @@ Para obter mais informações sobre esquemas de união, visite o [guia da interf
 
 ## Atributos computados {#computed-attributes}
 
-No menu principal **[!UICONTROL Perfis]**, selecione a guia **[!UICONTROL Atributos computados]** para exibir uma lista de atributos computados que pertencem à sua organização.
+No menu principal **[!UICONTROL Profiles]**, selecione a guia **[!UICONTROL Computed attributes]** para exibir uma lista de atributos computados que pertencem à sua organização.
 
 ![A guia Atributos computados está realçada.](../images/user-guide/computed-attributes.png)
 

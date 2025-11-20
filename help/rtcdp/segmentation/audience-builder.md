@@ -2,12 +2,12 @@
 title: Construtor de público-alvo no Real-Time Customer Data Platform
 description: Saiba como usar o Construtor de público-alvo no Real-Time Customer Data Platform para criar públicos-alvo.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
 source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '983'
-ht-degree: 8%
+source-wordcount: '957'
+ht-degree: 9%
 
 ---
 
@@ -42,19 +42,19 @@ Você pode selecionar o ![ícone de configurações](../../images/icons/settings
 
 >[!NOTE]
 >
->A seção **[!UICONTROL Opções de campo]** está atualmente na versão beta e está disponível somente para clientes selecionados. Entre em contato com o Atendimento ao cliente da Adobe para obter mais informações.
+>A seção **[!UICONTROL Field options]** está atualmente na versão beta e está disponível somente para clientes selecionados. Entre em contato com o atendimento ao cliente da Adobe para mais informações.
 
-A seção [!UICONTROL Configurações] é exibida. Nesta seção, você pode atualizar quais campos são exibidos, bem como a relação dos campos.
+A seção [!UICONTROL Settings] é exibida. Nesta seção, você pode atualizar quais campos são exibidos, bem como a relação dos campos.
 
-Para as **[!UICONTROL Opções de campo]**, é possível mostrar apenas os campos que contêm dados ou o esquema XDM completo.
+Para **[!UICONTROL Field options]**, você pode mostrar apenas os campos que contêm dados ou o esquema XDM completo.
 
-Para o **[!UICONTROL Relacionamento de campos]**, você pode usar as relações padrão para sua organização ou mostrar os seletores de relação.
+Para o **[!UICONTROL Relationship of fields]**, você pode usar as relações padrão para sua organização ou mostrar os seletores de relação.
 
 ![O módulo de configurações é exibido.](../assets/segmentation/audience-builder/settings.png){width="300"}
 
 ### Atributos {#attributes}
 
-A guia [!UICONTROL Atributos] permite procurar atributos de Conta pertencentes à classe Conta Comercial XDM, bem como atributos baseados em oportunidades e pessoas. Cada pasta pode ser expandida para revelar atributos adicionais, onde cada atributo é um bloco que pode ser arrastado para a [tela do construtor de regras](#rule-builder-canvas) no centro do espaço de trabalho.
+A guia [!UICONTROL Attributes] permite procurar atributos de Conta pertencentes à classe Conta Comercial XDM, bem como atributos baseados em oportunidades e pessoas. Cada pasta pode ser expandida para revelar atributos adicionais, onde cada atributo é um bloco que pode ser arrastado para a [tela do construtor de regras](#rule-builder-canvas) no centro do espaço de trabalho.
 
 ![A guia Atributos é exibida no Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
@@ -76,7 +76,7 @@ Para obter um guia mais detalhado sobre o Audience Builder, leia o [guia do usu�
 
 ### Públicos-alvo {#audiences}
 
-A guia **[!UICONTROL Públicos-alvo]** lista todos os públicos-alvo com base em pessoas e em contas disponíveis no Experience Platform.
+A guia **[!UICONTROL Audiences]** lista todos os públicos com base em pessoas e em contas disponíveis no Experience Platform.
 
 Você pode passar o mouse sobre o ![ícone de informações](../../images/icons/info.png) ao lado de um público-alvo para ver informações sobre ele, incluindo sua ID, descrição e a hierarquia de pastas para localizá-lo.
 
@@ -86,7 +86,7 @@ Você pode passar o mouse sobre o ![ícone de informações](../../images/icons/
 
 Um público-alvo criado no Audience Builder é uma coleção de regras usadas para descrever as principais características ou comportamentos de um público-alvo. Essas regras são criadas usando a tela do construtor de regras, localizada no centro do Audience Builder.
 
-Para adicionar uma nova regra à definição de segmento, arraste um bloco da guia **[!UICONTROL Campos]** e solte-o na tela do construtor de regras.
+Para adicionar uma nova regra à definição de segmento, arraste um bloco da guia **[!UICONTROL Fields]** e solte-o na tela do construtor de regras.
 
 ![A tela do construtor de regras com um campo adicionado.](../assets/segmentation/audience-builder/added-field.png){zoomable="yes"}
 
@@ -100,25 +100,25 @@ Para obter mais informações sobre contêineres, leia a [documentação sobre o
 
 ## Propriedades de público-alvo {#properties}
 
-A seção **[!UICONTROL Propriedades do público-alvo]** exibe informações sobre o público-alvo, incluindo o tamanho estimado dele. Você também pode especificar detalhes sobre o público-alvo, incluindo nome, descrição e tags.
+A seção **[!UICONTROL Audience properties]** exibe informações sobre o público incluindo o tamanho estimado do público. Você também pode especificar detalhes sobre o público-alvo, incluindo nome, descrição e tags.
 
 ![A seção de propriedades do público-alvo é exibida para o público-alvo no Audience Builder.](../assets/segmentation/audience-builder/audience-properties.png){width="300"}
 
-As **[!UICONTROL Contas qualificadas]** indicam o número real de contas que correspondem às regras do público-alvo. Esse número é atualizado a cada 24 horas, após a execução do trabalho de segmentação.
+O **[!UICONTROL Qualified accounts]** indica o número real de contas que correspondem às regras do público-alvo. Esse número é atualizado a cada 24 horas, após a execução do trabalho de segmentação.
 
-As **[!UICONTROL Contas estimadas]** indicam o número aproximado de contas com base no trabalho de exemplo. Você pode atualizar este valor depois de adicionar novas regras ou condições e selecionar **[!UICONTROL Atualizar estimativa]**.
+O **[!UICONTROL Estimated accounts]** indica o número aproximado de contas com base no trabalho de amostra. Você pode atualizar este valor depois de adicionar novas regras ou condições e selecionar **[!UICONTROL Refresh estimate]**.
 
 ![A seção de estimativas na seção de propriedades do público-alvo é exibida.](../assets/segmentation/audience-builder/account-estimates.png){width="300"}
 
-Você pode selecionar **[!UICONTROL Exibir contas]** para ver uma amostra das contas que se qualificariam para o público-alvo com as regras atuais.
+Você pode selecionar **[!UICONTROL View accounts]** para ver uma amostra das contas que se qualificariam para o público-alvo com as regras atuais.
 
 ![O botão Exibir contas está realçado.](../assets/segmentation/audience-builder/view-accounts.png){width="300"}
 
-A **[!UICONTROL exibição de código]** fornece uma descrição baseada em texto das regras do público-alvo.
+O **[!UICONTROL Code view]** fornece uma descrição baseada em texto das regras do público-alvo.
 
 ![A versão de exibição de código do público-alvo da conta.](../assets/segmentation/audience-builder/code-view.png)
 
-Você pode selecionar **[!UICONTROL Aplicar rótulos de acesso]** para aplicar os rótulos de acesso relevantes para o público-alvo. Mais informações sobre rótulos de acesso podem ser encontradas no [guia de gerenciamento de rótulos](../../access-control/abac/ui/labels.md){target="_blank"}.
+Você pode selecionar **[!UICONTROL Apply access labels]** para aplicar os rótulos de acesso relevantes ao público. Mais informações sobre rótulos de acesso podem ser encontradas no [guia de gerenciamento de rótulos](../../access-control/abac/ui/labels.md){target="_blank"}.
 
 ![O popover Aplicar rótulos de acesso e governança de dados é exibido.](../assets/segmentation/audience-builder/apply-access-labels.png)
 

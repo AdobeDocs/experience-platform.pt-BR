@@ -4,7 +4,7 @@ description: Saiba mais sobre namespaces de identidade no Serviço de identidade
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1860'
+source-wordcount: '1848'
 ht-degree: 17%
 
 ---
@@ -99,12 +99,12 @@ Os seguintes namespaces padrão são fornecidos para uso por todas as organizaç
 | Nome de exibição | Descrição |
 | ------------ | ----------- |
 | AdCloud | Um namespace que representa o Adobe AdCloud. |
-| Adobe Analytics (ID legada) | Um namespace que representa o Adobe Analytics. Consulte o seguinte documento em [namespaces do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=pt-BR#namespaces) para obter mais informações. |
+| Adobe Analytics (ID legada) | Um namespace que representa o Adobe Analytics. Consulte o seguinte documento em [namespaces do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) para obter mais informações. |
 | Apple IDFA (ID para anunciantes) | Um namespace que representa a Apple ID para anunciantes. Consulte o seguinte documento em [anúncios baseados em interesses](https://support.apple.com/en-us/HT202074) para obter mais informações. |
 | Serviço de notificação por push da Apple | Um namespace que representa identidades coletadas usando o serviço de notificação por push da Apple. Consulte o seguinte documento no [Serviço de notificação por push do Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) para obter mais informações. |
 | ECID | Um namespace que representa a ECID. Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento no [ECID](./ecid.md) para obter mais informações. |
 | Email | Um namespace que representa um endereço de email. Esse tipo de namespace é frequentemente associado a uma única pessoa e, portanto, pode ser usado para identificá-la em diferentes canais. |
-| Emails (SHA256, em letras minúsculas) | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. Consulte o seguinte documento sobre [suporte a hash SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=pt-BR#hashing-support) para obter mais informações. |
+| Emails (SHA256, em letras minúsculas) | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. Consulte o seguinte documento sobre [suporte a hash SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) para obter mais informações. |
 | Firebase Cloud Messaging | Um namespace que representa identidades coletadas usando o Google Firebase Cloud Messaging para notificações por push. Consulte o seguinte documento em [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) para obter mais informações. |
 | ID de anúncio do Google (GAID) | Um namespace que representa uma Google Advertising ID. Consulte o seguinte documento no [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obter mais informações. |
 | Telefone | Um namespace que representa um número de telefone. Esse tipo de namespace é frequentemente associado a uma única pessoa e, portanto, pode ser usado para identificá-la em diferentes canais. |
@@ -121,7 +121,7 @@ Os seguintes namespaces padrão são fornecidos para uso por todas as organizaç
 >title="Exibir identidades de integração"
 >abstract="Identidades de integração são namespaces usados para se conectar com outros sistemas e não são usados na resolução de identidade ou para unir identidades. <br> Essas identidades estão ocultas por padrão. Use o botão de alternância para exibir namespaces de integração."
 
-Para exibir namespaces de identidade na interface, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione **[!UICONTROL Procurar]**.
+Para exibir namespaces de identidade na interface do usuário, selecione **[!UICONTROL Identities]** na navegação à esquerda e **[!UICONTROL Browse]**.
 
 Um diretório de namespaces na organização é exibido, exibindo informações sobre nomes, símbolos de identidade, datas da última atualização, tipos de identidade correspondentes e descrição.
 
@@ -131,19 +131,19 @@ Um diretório de namespaces na organização é exibido, exibindo informações 
 
 Dependendo dos dados organizacionais e casos de uso, talvez você precise de namespaces personalizados. Os namespaces personalizados podem ser criados usando a API [[!DNL Identity Service]](../api/create-custom-namespace.md) ou por meio da interface do usuário.
 
-Para criar um namespace personalizado, selecione **[!UICONTROL Criar namespace de identidade]**.
+Para criar um namespace personalizado, selecione **[!UICONTROL Create identity namespace]**.
 
 >[!TIP]
 >
->As identidades de integração são namespaces usados para se conectar a outros sistemas. Não são usados na resolução de identidades, nem são usados para compilar identidades. Selecione **[!UICONTROL Exibir identidades de integração]** para atualizar a lista e incluir identidades de integração. No entanto, as identidades de integração estão ocultas por padrão, pois são somente visualização e não é necessário configurá-las.
+>As identidades de integração são namespaces usados para se conectar a outros sistemas. Não são usados na resolução de identidades, nem são usados para compilar identidades. Selecione **[!UICONTROL View integration identities]** para atualizar a lista e incluir identidades de integração. No entanto, as identidades de integração estão ocultas por padrão, pois são somente visualização e não é necessário configurá-las.
 
 ![O botão criar namespace de identidade no espaço de trabalho de identidades.](../images/namespace/create-identity-namespace.png)
 
-A janela [!UICONTROL Criar namespace de identidade] é exibida. Primeiro, você deve fornecer um nome de exibição e um símbolo de identidade para o namespace personalizado que deseja criar. Opcionalmente, também é possível fornecer uma descrição para adicionar mais contexto ao namespace personalizado que você está criando.
+A janela [!UICONTROL Create identity namespace] é exibida. Primeiro, você deve fornecer um nome de exibição e um símbolo de identidade para o namespace personalizado que deseja criar. Opcionalmente, também é possível fornecer uma descrição para adicionar mais contexto ao namespace personalizado que você está criando.
 
 ![Uma janela pop-up na qual você pode inserir informações relacionadas ao seu namespace de identidade personalizado.](../images/namespace/name-and-symbol.png)
 
-Em seguida, selecione o tipo de identidade que deseja atribuir ao namespace personalizado. Quando terminar, selecione **[!UICONTROL Criar]**.
+Em seguida, selecione o tipo de identidade que deseja atribuir ao namespace personalizado. Quando terminar, selecione **[!UICONTROL Create]**.
 
 ![Uma seleção de tipos de identidade que você pode escolher e atribuir ao seu namespace de identidade personalizado.](../images/namespace/select-identity-type.png)
 

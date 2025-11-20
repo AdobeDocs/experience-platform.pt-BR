@@ -22,7 +22,7 @@ Os Serviços inteligentes capacitam analistas e profissionais de marketing a apr
 
 O vídeo a seguir foi criado para corroborar sua compreensão dos Serviços inteligentes. Usando casos de uso de negócios de exemplo, este vídeo explica um fluxo de trabalho de alto nível e descreve os recursos da IA de atribuição e da IA do cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/36604?learn=on&quality=12&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
 
 ## Benefícios dos serviços inteligentes
 
@@ -54,7 +54,7 @@ O analista de marketing configura as previsões desejadas especificando regras d
 
 Depois que os modelos terminarem o treinamento e a pontuação, as pontuações serão gravadas de volta no Experience Platform.
 
-### Realizar ação
+### Executar ação
 
 Por fim, você pode decidir quais ações executar com as previsões, como consumir insights, ativar aplicativos no [!DNL Adobe Experience Cloud] e criar painéis personalizados.
 

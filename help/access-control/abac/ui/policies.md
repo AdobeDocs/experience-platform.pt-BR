@@ -5,7 +5,7 @@ description: Este documento fornece informações sobre como gerenciar política
 exl-id: 66820711-2db0-4621-908d-01187771de14
 source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '684'
+source-wordcount: '648'
 ht-degree: 11%
 
 ---
@@ -120,29 +120,29 @@ You are returned to the **[!UICONTROL policies]** tab and a confirmation of dele
 
 >[!IMPORTANT]
 >
->Por padrão, o recurso [!UICONTROL Inclusão automática] está ativado para todos os clientes, o que significa que todas as sandboxes são adicionadas à política.
+>Por padrão, o recurso [!UICONTROL Auto-include] é ativado para todos os clientes, o que significa que todas as sandboxes são adicionadas à política.
 
 >[!NOTE]
 >
 >A política **[!UICONTROL Default-Label-Based-Access-Control-Policy]** é a única disponível para configuração no momento.
 
-Para exibir sandboxes associadas a uma política, selecione a política na guia **[!UICONTROL Políticas]**.
+Para exibir sandboxes associadas a uma política, selecione a política na guia **[!UICONTROL Policies]**.
 
 ![A página de políticas mostrando uma lista de políticas existentes disponíveis.](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
-Em seguida, selecione a política e, em seguida, a guia **[!UICONTROL Sandboxes]**. Uma lista de sandboxes associadas à política é exibida.
+Em seguida, selecione a política e depois a guia **[!UICONTROL Sandboxes]**. Uma lista de sandboxes associadas à política é exibida.
 
 ![A página de políticas mostrando uma lista de políticas existentes disponíveis.](../../images/flac-ui/abac-policies-sandboxes-tab.png)
 
 ### Adicionar política a todas as sandboxes
 
-Use a opção **[!UICONTROL Incluir automaticamente]** na guia **[!UICONTROL Sandboxes]** para ativar a política para todas as sandboxes.
+Use o botão **[!UICONTROL Auto-include]** na guia **[!UICONTROL Sandboxes]** para ativar a política para todas as sandboxes.
 
-![A guia [!UICONTROL Sandboxes] mostrando a opção [!UICONTROL Incluir automaticamente].](../../images/flac-ui/abac-policies-auto-include.png)
+![A guia [!UICONTROL Sandboxes] mostrando a alternância [!UICONTROL Auto-include].](../../images/flac-ui/abac-policies-auto-include.png)
 
-A caixa de diálogo **[!UICONTROL Habilitar Inclusão Automática]** é exibida solicitando que você confirme sua seleção. Selecione **[!UICONTROL Habilitar]** para concluir a definição de configuração.
+A caixa de diálogo **[!UICONTROL Enable Auto-include]** é exibida solicitando que você confirme sua seleção. Selecione **[!UICONTROL Enable]** para concluir a definição de configuração.
 
-![A caixa de diálogo [!UICONTROL Habilitar Inclusão Automática] destacando [!UICONTROL Habilitar].](../../images/flac-ui/abac-policies-auto-include-enable.png)
+![O diálogo [!UICONTROL Enable Auto-include] destacando [!UICONTROL Enable].](../../images/flac-ui/abac-policies-auto-include-enable.png)
 
 >[!SUCCESS]
 >
@@ -152,19 +152,19 @@ A caixa de diálogo **[!UICONTROL Habilitar Inclusão Automática]** é exibida 
 
 >[!IMPORTANT]
 >
->Sandboxes futuras não serão incluídas na política por padrão se a opção [!UICONTROL Incluir automaticamente] estiver desativada. Será necessário gerenciar e adicionar sandboxes manualmente à política.
+>Sandboxes futuras não serão incluídas na política por padrão se o botão [!UICONTROL Auto-include] estiver desativado. Será necessário gerenciar e adicionar sandboxes manualmente à política.
 
-Use a opção **[!UICONTROL Incluir automaticamente]** na guia **[!UICONTROL Sandboxes]** para desabilitar a política para todas as sandboxes.
+Use o botão **[!UICONTROL Auto-include]** na guia **[!UICONTROL Sandboxes]** para desabilitar a política para todas as sandboxes.
 
-![A guia [!UICONTROL Sandboxes] mostrando a opção [!UICONTROL Incluir automaticamente].](../../images/flac-ui/abac-policies-auto-include.png)
+![A guia [!UICONTROL Sandboxes] mostrando a alternância [!UICONTROL Auto-include].](../../images/flac-ui/abac-policies-auto-include.png)
 
-Na guia **[!UICONTROL Sandboxes]**, selecione **[!UICONTROL Adicionar Sandboxes]** para selecionar sandboxes às quais esta política será aplicada.
+Na guia **[!UICONTROL Sandboxes]**, selecione **[!UICONTROL Add Sandboxes]** para selecionar sandboxes às quais esta política será aplicada.
 
 ![A guia [!UICONTROL Sandboxes] mostrando uma lista de sandboxes adicionadas à política.](../../images/flac-ui/abac-policies-sandboxes-tab-add.png)
 
-Uma lista de sandboxes é exibida. Selecione a sandbox que deseja adicionar na lista. Como alternativa, use a barra de pesquisa para pesquisar a sandbox. Selecione **[!UICONTROL Salvar]**.
+Uma lista de sandboxes é exibida. Selecione a sandbox que deseja adicionar na lista. Como alternativa, use a barra de pesquisa para pesquisar a sandbox. Selecione **[!UICONTROL Save]**.
 
-![A página [!UICONTROL Adicionar Sandboxes] mostrando uma lista de sandboxes existentes disponíveis para serem adicionadas à política.](../../images/flac-ui/abac-policies-sandboxes-list.png)
+![A página [!UICONTROL Add Sandboxes] mostrando uma lista de sandboxes existentes disponíveis para serem adicionadas à política.](../../images/flac-ui/abac-policies-sandboxes-list.png)
 
 >[!SUCCESS]
 >
@@ -176,9 +176,9 @@ Para remover uma sandbox, selecione o ícone **X** ao lado do nome da sandbox.
 
 ![A guia [!UICONTROL Sandboxes] mostrando uma lista de sandboxes, destacando o [!UICONTROL X] a ser excluído.](../../images/flac-ui/abac-policies-remove-sandbox-x.png)
 
-A caixa de diálogo **[!UICONTROL Remover]** é exibida solicitando que você confirme sua seleção. Selecione **[!UICONTROL Confirmar]** para concluir a remoção.
+A caixa de diálogo **[!UICONTROL Remove]** é exibida solicitando que você confirme sua seleção. Selecione **[!UICONTROL Confirm]** para concluir a remoção.
 
-![A caixa de diálogo [!UICONTROL Remover] destacando [!UICONTROL Confirmar].](../../images/flac-ui/abac-policies-remove-sandbox.png)
+![O diálogo [!UICONTROL Remove] destacando [!UICONTROL Confirm].](../../images/flac-ui/abac-policies-remove-sandbox.png)
 
 >[!SUCCESS]
 >
@@ -192,7 +192,7 @@ A caixa de diálogo **[!UICONTROL Remover]** é exibida solicitando que você co
 >abstract="Políticas são declarações que reúnem atributos para estabelecer ações permitidas e não permitidas. Cada organização possui uma política padrão que você deve ativar para começar a controlar o acesso a objetos específicos com base em rótulos. Os rótulos aplicados aos recursos negam o acesso, a menos que os usuários sejam atribuídos a uma função com um rótulo correspondente. As políticas padrão não podem ser editadas ou excluídas, mas é possível ativá-las ou desativá-las."
 >additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/permissions-ui/labels" text="Gerenciar rótulos"
 
-Para ativar uma política existente, selecione a política na guia **[!UICONTROL Políticas]**.
+Para ativar uma política existente, selecione a política na guia **[!UICONTROL Policies]**.
 
 ![flac-policy-select](../../images/abac-end-to-end-user-guide/abac-policies-page.png)
 
@@ -200,12 +200,12 @@ Em seguida, selecione as reticências (`…`) ao lado de um nome de política, e
 
 ![flac-policy-ativate](../../images/abac-end-to-end-user-guide/abac-policies-activate.png)
 
-A caixa de diálogo **[!UICONTROL Ativar política]** é exibida, solicitando que você confirme a ativação.
+A caixa de diálogo **[!UICONTROL Activate policy]** é exibida, solicitando que você confirme a ativação.
 
 ![flac-policy-ativate-confirm](../../images/abac-end-to-end-user-guide/abac-activate-policies-dialog.png)
 
 
-Você retornará à guia **[!UICONTROL políticas]** e uma confirmação do pop-over de ativação será exibida. O status da política é exibido como ativo.
+Você retornará à guia **[!UICONTROL policies]** e uma confirmação do pop-over de ativação será exibida. O status da política é exibido como ativo.
 
 ![flac-policy-enabled](../../images/abac-end-to-end-user-guide/abac-policies-confirm-activate.png)
 

@@ -6,8 +6,8 @@ description: Este guia aborda etapas para trabalhar com rótulos de uso de dados
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1552'
-ht-degree: 17%
+source-wordcount: '1495'
+ht-degree: 18%
 
 ---
 
@@ -22,9 +22,9 @@ Este guia do usuário aborda etapas para trabalhar com rótulos de uso de dados 
 
 ## Gerenciar rótulos {#manage-labels}
 
-Para aplicar rótulos aos seus dados, você precisa da permissão **[!UICONTROL Gerenciar rótulos de uso]** para usar na sandbox de produção padrão chamada &quot;prod&quot;. Para criar um rótulo personalizado, você também deve ter direitos administrativos no perfil do produto. Cada organização tem apenas uma lista de rótulos aplicáveis. Você **não pode** excluir rótulos. Em vez disso, você pode removê-los dos conjuntos de dados ou campos aos quais são aplicados.
+Para aplicar rótulos aos seus dados, você precisa da permissão **[!UICONTROL Manage Usage Labels]** para usar na sandbox de produção padrão chamada &quot;prod&quot;. Para criar um rótulo personalizado, você também deve ter direitos administrativos no perfil do produto. Cada organização tem apenas uma lista de rótulos aplicáveis. Você **não pode** excluir rótulos. Em vez disso, você pode removê-los dos conjuntos de dados ou campos aos quais são aplicados.
 
-Consulte o manual sobre como [configurar permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=pt-BR) ou a [visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre como atribuir uma permissão. Se você não tiver acesso à Admin Console para sua organização, entre em contato com o administrador da organização.
+Consulte o manual sobre como [configurar permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou a [visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre como atribuir uma permissão. Se você não tiver acesso à Admin Console para sua organização, entre em contato com o administrador da organização.
 
 ## Gerenciar rótulos no nível do esquema
 
@@ -38,7 +38,7 @@ Você pode adicionar rótulos diretamente a um esquema ou campos dentro desse es
 >
 >Consulte a [documentação de violação da política de uso de dados](../enforcement/auto-enforcement.md#data-usage-violation) para obter mais informações sobre violações de política.
 
-Para gerenciar rótulos de uso de dados no nível do esquema, você deve selecionar um esquema existente ou criar um novo. Depois de fazer logon no Adobe Experience Platform, selecione **[!UICONTROL Esquemas]** na navegação à esquerda para abrir o espaço de trabalho **[!UICONTROL Esquemas]**. Essa página lista todos os esquemas criados que pertencem à sua organização, juntamente com detalhes úteis relacionados a cada esquema.
+Para gerenciar rótulos de uso de dados no nível do esquema, você deve selecionar um esquema existente ou criar um novo. Depois de fazer logon no Adobe Experience Platform, selecione **[!UICONTROL Schemas]** na navegação à esquerda para abrir o espaço de trabalho **[!UICONTROL Schemas]**. Essa página lista todos os esquemas criados que pertencem à sua organização, juntamente com detalhes úteis relacionados a cada esquema.
 
 ![A interface do usuário do Adobe Experience Platform com a guia Esquema realçada.](../images/labels/schema-tab.png)
 
@@ -46,11 +46,11 @@ A próxima seção fornece etapas para criar um novo esquema ao qual aplicar ró
 
 ### Criar um novo esquema
 
-Para criar um novo esquema, selecione **[!UICONTROL Criar esquema]** no canto superior direito do espaço de trabalho **[!UICONTROL Esquemas]**. Consulte o guia sobre [como criar um esquema usando o Editor de Esquemas](../../xdm/tutorials/create-schema-ui.md#create) para obter instruções completas. Como alternativa, você pode [criar um esquema usando a API de Registro de Esquema](../../xdm/tutorials/create-schema-api.md), se necessário.
+Para criar um novo esquema, selecione **[!UICONTROL Create schema]** no canto superior direito do espaço de trabalho **[!UICONTROL Schemas]**. Consulte o guia sobre [como criar um esquema usando o Editor de Esquemas](../../xdm/tutorials/create-schema-ui.md#create) para obter instruções completas. Como alternativa, você pode [criar um esquema usando a API de Registro de Esquema](../../xdm/tutorials/create-schema-api.md), se necessário.
 
 ### Adicionar rótulos de uso de dados a um esquema {#add-labels-to-schema}
 
-Depois de criar um novo esquema ou selecionar um esquema existente da lista na guia [!UICONTROL Procurar] do espaço de trabalho [!UICONTROL Esquemas], selecione um campo do esquema no Editor de Esquemas. Na barra lateral [!UICONTROL Propriedades do campo], selecione **[!UICONTROL Aplicar rótulos de acesso e governança de dados]**.
+Depois de criar um novo esquema ou selecionar um esquema existente da lista na guia [!UICONTROL Browse] do espaço de trabalho [!UICONTROL Schemas], selecione um campo do esquema no Editor de Esquemas. Na barra lateral [!UICONTROL Field properties], selecione **[!UICONTROL Apply Access and Data Governance Labels]**.
 
 ![A guia Estrutura do espaço de trabalho de Esquemas exibindo a visualização do esquema com os rótulos Aplicar Acesso e Governança de Dados realçados.](../images/labels/schema-label-governance.png)
 
@@ -67,21 +67,21 @@ Depois de criar um novo esquema ou selecionar um esquema existente da lista na g
 >
 >Os rótulos não podem mais ser aplicados a campos no nível do conjunto de dados. Esse workflow foi substituído em favor da aplicação de rótulos no nível do schema. Quaisquer rótulos aplicados anteriormente no nível do objeto do conjunto de dados ainda serão compatíveis por meio da interface do usuário do Experience Platform até 31 de maio de 2024. Para garantir que seus rótulos sejam consistentes em todos os esquemas, todos os rótulos anteriormente anexados a campos no nível do conjunto de dados devem ser migrados para o nível do esquema por você no ano seguinte. Consulte a documentação para obter instruções sobre [como migrar rótulos aplicados anteriormente do conjunto de dados para o nível de esquema](../e2e.md#migrate-labels).
 
-Os rótulos podem ser aplicados a todo o conjunto de dados da guia **[!UICONTROL Governança de dados]** do espaço de trabalho **[!UICONTROL Conjuntos de dados]**. O espaço de trabalho permite gerenciar rótulos de uso de dados no nível do conjunto de dados.
+Os rótulos podem ser aplicados a todo o conjunto de dados da guia **[!UICONTROL Data Governance]** do espaço de trabalho **[!UICONTROL Datasets]**. O espaço de trabalho permite gerenciar rótulos de uso de dados no nível do conjunto de dados.
 
-![A guia [!UICONTROL Governança de Dados] do espaço de trabalho [!UICONTROL Conjuntos de Dados] com Governança de Dados realçada.](../images/labels/dataset-governance.png)
+![A guia [!UICONTROL Data Governance] do espaço de trabalho [!UICONTROL Datasets] com Governança de Dados realçada.](../images/labels/dataset-governance.png)
 
 Para editar rótulos de uso de dados no nível do conjunto de dados, comece selecionando o ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)) na linha do nome do conjunto de dados.
 
-![A guia [!UICONTROL Governança de Dados] do espaço de trabalho [!UICONTROL Conjuntos de Dados] com o ícone de lápis de edição realçado.](../images/labels/dataset-level-edit.png)
+![A guia [!UICONTROL Data Governance] do espaço de trabalho [!UICONTROL Datasets] com o ícone de lápis de edição realçado.](../images/labels/dataset-level-edit.png)
 
-A caixa de diálogo **[!UICONTROL Editar rótulos de governança]** é aberta. Na caixa de diálogo, marque as caixas ao lado dos rótulos que deseja aplicar ao conjunto de dados. Lembre-se de que esses rótulos serão herdados por todos os campos no conjunto de dados. O cabeçalho **[!UICONTROL Rótulos Aplicados]** é atualizado à medida que você marca cada caixa, mostrando os rótulos que você escolheu. Depois de selecionar os rótulos desejados, selecione **[!UICONTROL Salvar alterações]**.
+A caixa de diálogo **[!UICONTROL Edit Governance Labels]** é aberta. Na caixa de diálogo, marque as caixas ao lado dos rótulos que deseja aplicar ao conjunto de dados. Lembre-se de que esses rótulos serão herdados por todos os campos no conjunto de dados. O cabeçalho **[!UICONTROL Applied Labels]** é atualizado à medida que você marca cada caixa, mostrando os rótulos escolhidos. Depois de selecionar os rótulos desejados, selecione **[!UICONTROL Save Changes]**.
 
 ![A caixa de diálogo Editar Rótulos de Governança com caixas de seleção de rótulo e Salvar alterações foi realçada.](../images/labels/apply-labels-dataset.png)
 
-O espaço de trabalho **[!UICONTROL Governança de dados]** será exibido novamente, mostrando os rótulos que você aplicou no nível do conjunto de dados na linha inicial da tabela. Você também pode ver os rótulos, indicados por cartões individuais, que são herdados para cada um dos campos no conjunto de dados.
+O espaço de trabalho **[!UICONTROL Data Governance]** será exibido novamente, mostrando os rótulos que você aplicou no nível de conjunto de dados na linha inicial da tabela. Você também pode ver os rótulos, indicados por cartões individuais, que são herdados para cada um dos campos no conjunto de dados.
 
-![A guia [!UICONTROL Governança de Dados] do espaço de trabalho [!UICONTROL Conjuntos de Dados] com rótulos de nível de conjunto de dados aplicados e rótulos de campo de conjunto de dados herdados realçados.](../images/labels/applied-dataset-labels.png)
+![A guia [!UICONTROL Data Governance] do espaço de trabalho [!UICONTROL Datasets] com rótulos de nível de conjunto de dados aplicados e rótulos de campo de conjunto de dados herdados realçados.](../images/labels/applied-dataset-labels.png)
 
 ### Remover rótulos de um conjunto de dados {#remove-labels-from-a-dataset}
 
@@ -101,7 +101,7 @@ The inherited labels beside each field do not have an "x" next to them and appea
 
 <!--Beleive can cut above here  -->
 
-A opção **[!UICONTROL Mostrar rótulos herdados]** está ativada por padrão, o que permite que você veja quaisquer rótulos herdados do esquema para seus campos. A desativação da alternância oculta todos os rótulos herdados no conjunto de dados.
+A opção **[!UICONTROL Show Inherited Labels]** está ativada por padrão, o que permite que você veja os rótulos herdados do esquema para seus campos. A desativação da alternância oculta todos os rótulos herdados no conjunto de dados.
 
 ![A guia Governança de Dados do espaço de trabalho Conjuntos de Dados com a opção Mostrar rótulos herdados realçada.](../images/labels/inherited-labels.png)
 
@@ -112,8 +112,8 @@ A opção **[!UICONTROL Mostrar rótulos herdados]** está ativada por padrão, 
 >[!NOTE]
 >
 >Os rótulos aplicados antes da desativação do recurso de rotulagem do conjunto de dados podem ser removidos do conjunto de dados localizando o conjunto de dados relevante e selecionando o ícone de cancelamento no rótulo.
->&#x200B;>![A guia Governança de Dados do espaço de trabalho Conjuntos de Dados com um rótulo excluível destacado.](../images/labels/remove-governance-labels.png)
->&#x200B;>Consulte a documentação para obter instruções sobre [como migrar rótulos aplicados anteriormente do conjunto de dados para o nível de esquema](../e2e.md#migrate-labels).
+>![A guia Governança de Dados do espaço de trabalho Conjuntos de Dados com um rótulo excluível destacado.](../images/labels/remove-governance-labels.png)
+>Consulte a documentação para obter instruções sobre [como migrar rótulos aplicados anteriormente do conjunto de dados para o nível de esquema](../e2e.md#migrate-labels).
 
 ## Gerenciar rótulos personalizados {#manage-custom-labels}
 
@@ -122,25 +122,25 @@ A opção **[!UICONTROL Mostrar rótulos herdados]** está ativada por padrão, 
 >title="Criar rótulos"
 >abstract="Os rótulos permitem categorizar conjuntos de dados e campos de acordo com as políticas de uso que se aplicam a esses dados. A Experience Platform fornece um conjunto padrão de rótulos para você usar, mas também é possível criar rótulos personalizados específicos para a sua organização."
 
-Você pode criar seus próprios rótulos de uso personalizados dentro do espaço de trabalho **[!UICONTROL Políticas]** na interface do usuário do [!DNL Experience Platform]. Selecione **[!UICONTROL Políticas]** no menu de navegação esquerdo e, em seguida, **[!UICONTROL Rótulos]** para exibir uma lista de rótulos existentes. Aqui, selecione **[!UICONTROL Criar rótulo]**.
+Você pode criar seus próprios rótulos de uso personalizados dentro do espaço de trabalho **[!UICONTROL Policies]** na interface do usuário do [!DNL Experience Platform]. Selecione **[!UICONTROL Policies]** no menu de navegação esquerdo e, em seguida, **[!UICONTROL Labels]** para exibir uma lista de rótulos existentes. Aqui, selecione **[!UICONTROL Create label]**.
 
 ![O espaço de trabalho de Políticas com a política de criação foi realçado.](../images/labels/create-label-btn.png)
 
-A caixa de diálogo **[!UICONTROL Criar rótulo]** é exibida. Aqui, forneça as seguintes informações para o novo rótulo:
+A caixa de diálogo **[!UICONTROL Create label]** é exibida. Aqui, forneça as seguintes informações para o novo rótulo:
 
-* **[!UICONTROL Nome]**: um identificador exclusivo para o rótulo. Esse valor é usado para fins de pesquisa e, portanto, deve ser curto e conciso.
-* **[!UICONTROL Nome amigável]**: Um nome de exibição amigável para o rótulo.
-* **[!UICONTROL Descrição]**: (opcional) uma descrição para o rótulo para fornecer mais contexto.
+* **[!UICONTROL Name]**: um identificador exclusivo para o rótulo. Esse valor é usado para fins de pesquisa e, portanto, deve ser curto e conciso.
+* **[!UICONTROL Friendly name]**: um nome de exibição amigável para o rótulo.
+* **[!UICONTROL Description]**: (Opcional) Uma descrição para o rótulo para fornecer mais contexto.
 
-Quando terminar, selecione **[!UICONTROL Criar]**.
+Quando terminar, selecione **[!UICONTROL Create]**.
 
 ![A caixa de diálogo Criar rótulo do espaço de trabalho de Políticas com Create foi realçada.](../images/labels/create-label-dialog.png)
 
-A caixa de diálogo é fechada e o rótulo personalizado recém-criado aparece na lista na guia **[!UICONTROL Rótulos]**.
+A caixa de diálogo é fechada e o rótulo personalizado recém-criado aparece na lista na guia **[!UICONTROL Labels]**.
 
 ![A guia Rótulos do espaço de trabalho Políticas com o novo rótulo personalizado realçado.](../images/labels/label-created.png)
 
-O rótulo agora pode ser selecionado em **[!UICONTROL Rótulos personalizados]** ao editar rótulos de uso para conjuntos de dados e campos ou ao criar políticas de uso de dados.
+O rótulo agora pode ser selecionado em **[!UICONTROL Custom Labels]** ao editar rótulos de uso para conjuntos de dados e campos ou ao criar políticas de uso de dados.
 
 ![A caixa de diálogo Aplicar Rótulos de Acesso e Governança de Dados com os rótulos personalizados destacados.](../images/labels/add-custom-label.png)
 
@@ -156,4 +156,4 @@ Agora também é possível definir políticas de uso de dados com base nos rótu
 
 The following video is intended to support your understanding of Data Governance, and outlines how to apply labels to a dataset and individual fields.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422793?quality=12&enable10seconds=on&speedcontrol=on&captions=por_br) -->
+>[!VIDEO](https://video.tv.adobe.com/v/29709?quality=12&enable10seconds=on&speedcontrol=on) -->

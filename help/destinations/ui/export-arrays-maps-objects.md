@@ -5,7 +5,7 @@ description: Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
 source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1062'
 ht-degree: 13%
 
 ---
@@ -71,11 +71,11 @@ Além de matrizes, você também pode exportar mapas e objetos do Experience Pla
 
 ## Pré-requisitos {#prerequisites}
 
-[Conecte](/help/destinations/ui/connect-destination.md) a um destino de armazenamento na nuvem desejado. Prossiga pelas [etapas de ativação para destinos de armazenamento na nuvem](/help/destinations/ui/activate-batch-profile-destinations.md) e vá para a etapa [mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Ao se conectar ao destino de nuvem desejado, você deve selecionar a opção **[!UICONTROL Exportar matrizes, mapas, objetos]** ativada. Obtenha mais informações na seção abaixo.
+[Conecte](/help/destinations/ui/connect-destination.md) a um destino de armazenamento na nuvem desejado. Prossiga pelas [etapas de ativação para destinos de armazenamento na nuvem](/help/destinations/ui/activate-batch-profile-destinations.md) e vá para a etapa [mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping). Ao se conectar ao destino de nuvem desejado, você deve selecionar a opção **[!UICONTROL Export arrays, maps, objects]** ativada. Obtenha mais informações na seção abaixo.
 
 >[!NOTE]
 >
->Para destinos de personalização corporativa e de borda, o suporte à exportação para campos do tipo mapa está disponível sem a necessidade de selecionar um botão **[!UICONTROL Exportar matrizes, mapas, objetos]** ativado. Esse botão não está disponível ou não é necessário ao se conectar a esses tipos de destinos.
+>Para destinos de personalização corporativa e de borda, o suporte à exportação para campos do tipo mapa está disponível sem a necessidade de selecionar uma opção de **[!UICONTROL Export arrays, maps, objects]** ativada. Esse botão não está disponível ou não é necessário ao se conectar a esses tipos de destinos.
 
 ## Botão de alternância Exportar matrizes, mapas e objetos {#export-arrays-maps-objects-toggle}
 
@@ -84,7 +84,7 @@ Além de matrizes, você também pode exportar mapas e objetos do Experience Pla
 >title="Exportar matrizes, mapas e objetos"
 >abstract="<p> <b>Ative</b> esta configuração para habilitar a exportação de matrizes, mapas e objetos para arquivos JSON ou Parquet. É possível selecionar esses tipos de objetos na exibição do campo de origem da etapa de mapeamento. Com o botão de alternância ativado, não é possível usar a opção de campos calculados na etapa de mapeamento.</p><p>Com o botão de alternância <b>desativado</b>, é possível usar a opção de campos calculados e aplicar várias funções de transformação de dados ao ativar públicos-alvo. No entanto, você <i>não</i> pode exportar matrizes, mapas e objetos para arquivos JSON ou Parquet e deve configurar um outro destino para essa finalidade.</p>"
 
-Ao se conectar a um destino de armazenamento na nuvem baseado em arquivo, você pode ativar ou desativar a **[!UICONTROL Exportar matrizes, mapas, objetos]**.
+Ao se conectar a um destino de armazenamento na nuvem baseado em arquivo, você pode ativar ou desativar o **[!UICONTROL Export arrays, maps, objects]**.
 
 ![Exportar matrizes, mapas, objetos alternados exibidos com uma configuração ativada ou desativada, bem como realçar o popover.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
@@ -98,7 +98,7 @@ Com essa configuração ativada, você pode exportar objetos inteiros (por exemp
 
 ![Selecionar objetos por meio do seletor de campo de origem na etapa de mapeamento do fluxo de trabalho de ativação.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
-Com essa opção selecionada, a interface impede que os usuários usem campos calculados, e o controle **[!UICONTROL Adicionar campos calculados]** está desabilitado, conforme mostrado abaixo. Para usar campos calculados para transformações de dados, configure uma conexão de destino com o botão de alternância desativado.
+Com essa opção selecionada, a interface impede que os usuários usem campos calculados, e o controle **[!UICONTROL Add calculated fields]** é desabilitado, conforme mostrado abaixo. Para usar campos calculados para transformações de dados, configure uma conexão de destino com o botão de alternância desativado.
 
 ![Controle de campos calculados desabilitado.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 

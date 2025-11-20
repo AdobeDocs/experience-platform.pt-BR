@@ -4,8 +4,8 @@ description: Saiba como configurar segredos na interface do usuário para autent
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
 source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2577'
-ht-degree: 2%
+source-wordcount: '2363'
+ht-degree: 3%
 
 ---
 
@@ -22,12 +22,12 @@ Os seguintes tipos secretos são suportados no momento:
 | [!UICONTROL HTTP] | Contém dois atributos de string para um nome de usuário e senha, respectivamente. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | O sistema solicita as informações necessárias e, em seguida, lida com a renovação desses tokens em um intervalo especificado. |
 | [!UICONTROL OAuth 2] | Contém vários atributos para dar suporte ao [tipo de concessão de credenciais do cliente](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4) para a especificação de autenticação do [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749). O sistema solicita as informações necessárias e, em seguida, lida com a renovação desses tokens em um intervalo especificado. |
-| [!UICONTROL JWT do OAuth 2] | Contém vários atributos para oferecer suporte ao Perfil JSON Web Token (JWT) para [autorizações OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1). O sistema solicita as informações necessárias e, em seguida, lida com a renovação desses tokens em um intervalo especificado. |
+| [!UICONTROL OAuth 2 JWT] | Contém vários atributos para oferecer suporte ao Perfil JSON Web Token (JWT) para [autorizações OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc7523#section-2.1). O sistema solicita as informações necessárias e, em seguida, lida com a renovação desses tokens em um intervalo especificado. |
 | [!UICONTROL Token] | Uma única cadeia de caracteres que representa um valor de token de autenticação conhecido e compreendido por ambos os sistemas. |
 
 {style="table-layout:auto"}
 
-Este guia fornece uma visão geral de alto nível sobre como configurar segredos para uma propriedade de encaminhamento de eventos ([!UICONTROL Edge]) na interface do usuário do Experience Platform ou na interface da Coleção de Dados.
+Este guia fornece uma visão geral de alto nível sobre como configurar segredos para uma propriedade de encaminhamento de eventos ([!UICONTROL Edge]) na interface do usuário do Experience Platform ou na interface da Coleção de dados.
 
 >[!NOTE]
 >
@@ -47,7 +47,7 @@ Você também deve ter uma compreensão funcional do fluxo de publicação de ta
 >abstract="Para que um segredo possa ser usado pelo encaminhamento de eventos, ele deve ser atribuído a um ambiente existente. Se você não tiver nenhum ambiente criado para sua propriedade de encaminhamento de eventos, será necessário configurá-los antes de continuar."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=pt-BR" text="Visão geral dos ambientes"
 
-Para criar um segredo, selecione **[!UICONTROL Encaminhamento de Eventos]** na navegação à esquerda e abra a propriedade de encaminhamento de eventos em que deseja adicionar o segredo. Em seguida, selecione **[!UICONTROL Segredos]** na navegação à esquerda, seguido por **[!UICONTROL Criar novo segredo]**.
+Para criar um segredo, selecione **[!UICONTROL Event Forwarding]** na navegação à esquerda e abra a propriedade de encaminhamento de eventos em que deseja adicionar o segredo. Em seguida, selecione **[!UICONTROL Secrets]** na navegação à esquerda, seguido por **[!UICONTROL Create New Secret]**.
 
 ![Criar novo segredo](../../images/ui/event-forwarding/secrets/create-new-secret.png)
 
@@ -55,19 +55,19 @@ A próxima tela permite configurar os detalhes do segredo. Para que um segredo p
 
 >[!NOTE]
 >
->Se você ainda quiser criar e salvar o segredo antes de adicioná-lo a um ambiente, desative a opção **[!UICONTROL Anexar segredo a ambientes]** antes de preencher o restante das informações. Observe que será necessário atribuí-lo a um ambiente posteriormente se desejar usar o segredo.
+>Se você ainda quiser criar e salvar o segredo antes de adicioná-lo a um ambiente, desabilite o botão **[!UICONTROL Attach Secret to Environments]** antes de preencher o restante das informações. Observe que será necessário atribuí-lo a um ambiente posteriormente se desejar usar o segredo.
 >
 >![Desabilitar ambiente](../../images/ui/event-forwarding/secrets/env-disabled.png)
 
-Em **[!UICONTROL Ambiente de destino]**, use o menu suspenso para selecionar o ambiente ao qual deseja atribuir o segredo. Em **[!UICONTROL Nome do Segredo]**, forneça um nome para o segredo no contexto do ambiente. Esse nome deve ser exclusivo em todos os segredos na propriedade de encaminhamento de eventos.
+Em **[!UICONTROL Target Environment]**, use o menu suspenso para selecionar o ambiente ao qual deseja atribuir o segredo. Em **[!UICONTROL Secret Name]**, forneça um nome para o segredo no contexto do ambiente. Esse nome deve ser exclusivo em todos os segredos na propriedade de encaminhamento de eventos.
 
 ![Ambiente e nome](../../images/ui/event-forwarding/secrets/env-and-name.png)
 
-Um segredo só pode ser atribuído a um ambiente por vez, mas você pode atribuir as mesmas credenciais a vários segredos em ambientes diferentes, se desejar. Selecione **[!UICONTROL Adicionar Ambiente]** para adicionar outra linha à lista.
+Um segredo só pode ser atribuído a um ambiente por vez, mas você pode atribuir as mesmas credenciais a vários segredos em ambientes diferentes, se desejar. Selecione **[!UICONTROL Add Environment]** para adicionar outra linha à lista.
 
 ![Adicionar ambiente](../../images/ui/event-forwarding/secrets/add-env.png)
 
-Para cada ambiente adicionado, é necessário fornecer outro nome exclusivo para o segredo associado. Se você esgotar todos os ambientes disponíveis, o botão **[!UICONTROL Adicionar ambiente]** não estará disponível.
+Para cada ambiente adicionado, é necessário fornecer outro nome exclusivo para o segredo associado. Se você esgotar todos os ambientes disponíveis, o botão **[!UICONTROL Add Environment]** não estará disponível.
 
 ![Adicionar ambiente indisponível](../../images/ui/event-forwarding/secrets/add-env-greyed.png)
 
@@ -76,20 +76,20 @@ Aqui, as etapas para criar o segredo diferem dependendo do tipo de segredo que e
 * [[!UICONTROL Token]](#token)
 * [[!UICONTROL HTTP]](#http)
 * [[!UICONTROL OAuth 2]](#oauth2)
-* [[!UICONTROL JWT do OAuth 2]](#oauth2jwt)
+* [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 * [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
 * [[!UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
-Para criar um segredo de token, selecione **[!UICONTROL Token]** na lista suspensa **[!UICONTROL Tipo]**. No campo **[!UICONTROL Token]** exibido, forneça a cadeia de caracteres de credencial reconhecida pelo sistema no qual você está autenticando. Selecione **[!UICONTROL Criar Segredo]** para salvar o segredo.
+Para criar um segredo de token, selecione **[!UICONTROL Token]** na lista suspensa **[!UICONTROL Type]**. No campo **[!UICONTROL Token]** exibido, forneça a cadeia de caracteres de credencial reconhecida pelo sistema no qual você está autenticando. Selecione **[!UICONTROL Create Secret]** para salvar o segredo.
 
 ![Segredo do token](../../images/ui/event-forwarding/secrets/token-secret.png)
 
 ### [!UICONTROL HTTP] {#http}
 
-Para criar um segredo HTTP, selecione **[!UICONTROL HTTP Simples]** na lista suspensa **[!UICONTROL Tipo]**. Nos campos que aparecem abaixo, forneça um nome de usuário e senha para a credencial antes de selecionar **[!UICONTROL Criar segredo]** para salvar o segredo.
+Para criar um segredo HTTP, selecione **[!UICONTROL Simple HTTP]** na lista suspensa **[!UICONTROL Type]**. Nos campos que aparecem abaixo, forneça um nome de usuário e senha para a credencial antes de selecionar **[!UICONTROL Create Secret]** para salvar o segredo.
 
 >[!NOTE]
 >
@@ -99,15 +99,15 @@ Para criar um segredo HTTP, selecione **[!UICONTROL HTTP Simples]** na lista sus
 
 ### [!UICONTROL OAuth 2] {#oauth2}
 
-Para criar um segredo do OAuth 2, selecione **[!UICONTROL OAuth 2]** na lista suspensa **[!UICONTROL Tipo]**. Nos campos que aparecem abaixo, forneça sua [[!UICONTROL ID do Cliente] e o [!UICONTROL Segredo do Cliente]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), bem como sua [[!UICONTROL URL do Token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para a integração com o OAuth. O campo [!UICONTROL URL do token] na interface é uma concatenação entre o host do servidor de autorização e o caminho do token.
+Para criar um segredo do OAuth 2, selecione **[!UICONTROL OAuth 2]** na lista suspensa **[!UICONTROL Type]**. Nos campos que aparecem abaixo, forneça seu [[!UICONTROL Client ID] e [!UICONTROL Client Secret]](https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/), bem como seu [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para sua integração com o OAuth. O campo [!UICONTROL Token URL] na interface é uma concatenação entre o host do servidor de autorização e o caminho do token.
 
 ![Segredo do OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-1.png)
 
-Em **[!UICONTROL Opções de Credencial]**, você pode fornecer outras opções de credencial, como `scope` e `audience`, na forma de pares de valores chave. Para adicionar mais pares de valor-chave, selecione **[!UICONTROL Adicionar outro]**.
+Em **[!UICONTROL Credential Options]**, você pode fornecer outras opções de credencial, como `scope` e `audience`, na forma de pares de valores chave. Para adicionar mais pares de valor-chave, selecione **[!UICONTROL Add another]**.
 
 ![Opções de credencial](../../images/ui/event-forwarding/secrets/oauth-secret-2.png)
 
-Finalmente, você pode configurar o valor **[!UICONTROL Atualizar Deslocamento]** para o segredo. Representa o número de segundos antes da expiração do token em que o sistema executará uma atualização automática. O tempo equivalente em horas e minutos é exibido à direita do campo e é atualizado automaticamente à medida que você digita.
+Finalmente, você pode configurar o valor **[!UICONTROL Refresh Offset]** do segredo. Representa o número de segundos antes da expiração do token em que o sistema executará uma atualização automática. O tempo equivalente em horas e minutos é exibido à direita do campo e é atualizado automaticamente à medida que você digita.
 
 ![Atualizar Deslocamento](../../images/ui/event-forwarding/secrets/oauth-secret-3.png)
 
@@ -119,31 +119,31 @@ Por exemplo, se o deslocamento de atualização estiver definido com o valor pad
 >
 >Por exemplo, se o deslocamento estiver definido como `28800` (oito horas) e o token de acesso tiver um `expires_in` de `36000` (dez horas), a troca falhará devido à diferença resultante ser inferior a quatro horas.
 
-Quando terminar, selecione **[!UICONTROL Criar Segredo]** para salvar o segredo.
+Quando terminar, selecione **[!UICONTROL Create Secret]** para salvar o segredo.
 
 ![Salvar deslocamento do OAuth 2](../../images/ui/event-forwarding/secrets/oauth-secret-4.png)
 
-### [!UICONTROL JWT do OAuth 2] {#oauth2jwt}
+### [!UICONTROL OAuth 2 JWT] {#oauth2jwt}
 
-Para criar um segredo JWT do OAuth 2, selecione **[!UICONTROL JWT do OAuth 2]** na lista suspensa **[!UICONTROL Tipo]**.
+Para criar um segredo JWT do OAuth 2, selecione **[!UICONTROL OAuth 2 JWT]** na lista suspensa **[!UICONTROL Type]**.
 
-![A guia [!UICONTROL Criar Segredo] com o segredo JWT do OAuth 2 destacado na lista suspensa [!UICONTROL Tipo].](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
+![A guia [!UICONTROL Create Secret] com o segredo JWT do OAuth 2 realçado na lista suspensa [!UICONTROL Type].](../../images/ui/event-forwarding/secrets/oauth-jwt-secret.png)
 
 >[!NOTE]
 >
->O único [!UICONTROL algoritmo] atualmente aceito para assinar o JWT é RS256.
+>O único [!UICONTROL Algorithm] atualmente com suporte para assinatura no JWT é RS256.
 
-Nos campos que aparecem abaixo, forneça seu [!UICONTROL Emissor], [!UICONTROL Assunto], [!UICONTROL Público-alvo], [!UICONTROL Declarações personalizadas], [!UICONTROL TTL] e selecione o [!UICONTROL Algoritmo] na lista suspensa. Em seguida, insira a [!UICONTROL ID da Chave privada], bem como a [[!UICONTROL URL do token]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para a integração com o OAuth. O campo [!UICONTROL URL do token] não é um campo obrigatório. Se um valor for fornecido, o JWT será trocado com um token de acesso. O segredo será atualizado de acordo com o atributo `expires_in` da resposta e o valor [!UICONTROL Deslocamento de Atualização]. Se um valor não for fornecido, o segredo enviado para a borda será o JWT. O JWT será atualizado de acordo com os valores [!UICONTROL TTL] e [!UICONTROL Atualizar Deslocamento].
+Nos campos que aparecem abaixo, forneça seu [!UICONTROL Issuer], [!UICONTROL Subject], [!UICONTROL Audience], [!UICONTROL Custom Claims], [!UICONTROL TTL] e selecione o [!UICONTROL Algorithm] na lista suspensa. Em seguida, insira o [!UICONTROL Private Key Id], bem como o [[!UICONTROL Token URL]](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) para a integração OAuth. O campo [!UICONTROL Token URL] não é obrigatório. Se um valor for fornecido, o JWT será trocado com um token de acesso. O segredo será atualizado de acordo com o atributo `expires_in` da resposta e o valor [!UICONTROL Refresh Offset]. Se um valor não for fornecido, o segredo enviado para a borda será o JWT. O JWT será atualizado de acordo com os valores [!UICONTROL TTL] e [!UICONTROL Refresh Offset].
 
-![A guia [!UICONTROL Criar Segredo] com uma seleção de campos de entrada destacados.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
+![A guia [!UICONTROL Create Secret] com uma seleção de campos de entrada realçados.](../../images/ui/event-forwarding/secrets/oauth-jwt-information.png)
 
-Em **[!UICONTROL Opções de Credencial]**, você pode fornecer outras opções de credencial, como `jwt_param`, na forma de pares de valores chave. Para adicionar mais pares de valor-chave, selecione **[!UICONTROL Adicionar outro]**.
+Em **[!UICONTROL Credential Options]**, você pode fornecer outras opções de credencial, como `jwt_param`, na forma de pares de valores chave. Para adicionar mais pares de valor-chave, selecione **[!UICONTROL Add another]**.
 
-![A guia [!UICONTROL Criar Segredo] destacando os campos [!UICONTROL Opções de Credencial].](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
+![A guia [!UICONTROL Create Secret] destacando os campos [!UICONTROL Credential Options].](../../images/ui/event-forwarding/secrets/oauth-jwt-credential-options.png)
 
-Finalmente, você pode configurar o valor **[!UICONTROL Atualizar Deslocamento]** para o segredo. Representa o número de segundos antes da expiração do token em que o sistema executará uma atualização automática. O tempo equivalente em horas e minutos é exibido à direita do campo e é atualizado automaticamente à medida que você digita.
+Finalmente, você pode configurar o valor **[!UICONTROL Refresh Offset]** do segredo. Representa o número de segundos antes da expiração do token em que o sistema executará uma atualização automática. O tempo equivalente em horas e minutos é exibido à direita do campo e é atualizado automaticamente à medida que você digita.
 
-![A guia [!UICONTROL Criar Segredo] destacando o campo [!UICONTROL Atualizar Deslocamento].](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
+![A guia [!UICONTROL Create Secret] destacando o campo [!UICONTROL Refresh Offset].](../../images/ui/event-forwarding/secrets/oauth-jwt-refresh-offset.png)
 
 Por exemplo, se o deslocamento de atualização estiver definido com o valor padrão de `1800` (30 minutos) e o token de acesso tiver um valor de `expires_in` de `3600` (uma hora), o sistema atualizará automaticamente o segredo em uma hora.
 
@@ -153,22 +153,22 @@ Por exemplo, se o deslocamento de atualização estiver definido com o valor pad
 >
 >Por exemplo, se o deslocamento estiver definido como `1800` (30 minutos) e o token de acesso tiver um `expires_in` de `2700` (45 minutos), a troca falhará devido à diferença resultante ser inferior a 30 minutos.
 
-Quando terminar, selecione **[!UICONTROL Criar Segredo]** para salvar o segredo.
+Quando terminar, selecione **[!UICONTROL Create Secret]** para salvar o segredo.
 
-![A guia [!UICONTROL Criar Segredo] destacando [!UICONTROL Criar Segredo]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
+![A guia [!UICONTROL Create Secret] realçando [!UICONTROL Create Secret]](../../images/ui/event-forwarding/secrets/oauth-jwt-create-secret.png)
 
 ### [!UICONTROL Google OAuth 2] {#google-oauth2}
 
-Para criar um segredo do Google OAuth 2, selecione **[!UICONTROL Google OAuth 2]** na lista suspensa **[!UICONTROL Tipo]**. Em **[!UICONTROL Escopos]**, selecione as APIs do Google às quais você deseja usar este segredo para conceder acesso. Os seguintes produtos são suportados no momento:
+Para criar um segredo OAuth 2 do Google, selecione **[!UICONTROL Google OAuth 2]** na lista suspensa **[!UICONTROL Type]**. Em **[!UICONTROL Scopes]**, selecione as APIs do Google às quais você deseja usar este segredo para conceder acesso. Os seguintes produtos são suportados no momento:
 
 * [API do Google Ads](https://developers.google.com/google-ads/api/docs/oauth/overview)
 * [Pub/Sub API](https://cloud.google.com/pubsub/docs/reference/service_apis_overview)
 
-Quando terminar, selecione **[!UICONTROL Criar Segredo]**.
+Quando terminar, selecione **[!UICONTROL Create Secret]**.
 
 ![Segredo do Google OAuth 2](../../images/ui/event-forwarding/secrets/google-oauth.png)
 
-Um popover é exibido informando que o segredo precisa ser autorizado manualmente por meio do Google. Selecione **[!UICONTROL Criar e autorizar]** para continuar.
+Um popover é exibido informando que o segredo precisa ser autorizado manualmente por meio do Google. Selecione **[!UICONTROL Create & Authorize]** para continuar.
 
 ![popover de autorização do Google](../../images/ui/event-forwarding/secrets/google-authorization.png)
 
@@ -182,55 +182,55 @@ Uma caixa de diálogo é exibida, permitindo inserir as credenciais da conta da 
 
 ### [!UICONTROL [!DNL LinkedIn] OAuth 2] {#linkedin-oauth2}
 
-Para criar um segredo do OAuth 2 [!DNL LinkedIn], selecione **[!UICONTROL [!DNL LinkedIn]OAuth 2]** na lista suspensa **[!UICONTROL Tipo]**. Em seguida, selecione **[!UICONTROL Criar Segredo]**.
+Para criar um segredo OAuth 2 [!DNL LinkedIn], selecione **[!UICONTROL [!DNL LinkedIn] OAuth 2]** na lista suspensa **[!UICONTROL Type]**. Em seguida, selecione **[!UICONTROL Create Secret]**.
 
-![A guia [!UICONTROL Criar Segredo] com o campo [!UICONTROL Tipo] realçado.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
+![A guia [!UICONTROL Create Secret] com o campo [!UICONTROL Type] realçado.](../../images/ui/event-forwarding/secrets/linkedin-oauth.png)
 
-Um popover é exibido informando que o segredo precisa ser autorizado manualmente por meio do [!DNL LinkedIn]. Selecione **[!UICONTROL Criar e autorizar segredo com[!DNL LinkedIn]]** para continuar.
+Um popover é exibido informando que o segredo precisa ser autorizado manualmente por meio do [!DNL LinkedIn]. Selecione **[!UICONTROL Create & Authorize secret with [!DNL LinkedIn]]** para continuar.
 
 ![Popover de autorização do LinkedIn destacando o botão &quot;Criar e autorizar segredo com o LinkedIn&quot;.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 Uma caixa de diálogo é exibida solicitando que você insira suas credenciais do [!DNL LinkedIn]. Siga as instruções para conceder acesso ao encaminhamento de eventos para seus dados.
 
-Quando o processo de autorização for concluído, você retornará à guia **[!UICONTROL Segredos]**, na qual poderá ver o segredo recém-criado. Aqui você pode ver o status do segredo e a data de expiração.
+Quando o processo de autorização for concluído, você retornará à guia **[!UICONTROL Secrets]**, onde poderá ver o segredo recém-criado. Aqui você pode ver o status do segredo e a data de expiração.
 
-![A guia [!UICONTROL Segredo] destacando o segredo recém-criado.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
+![A guia [!UICONTROL Secret] destacando o segredo recém-criado.](../../images/ui/event-forwarding/secrets/linkedin-new-secret.png)
 
-#### Reautorizar um segredo [!UICONTROL [!DNL LinkedIn] do OAuth 2]
+#### Reautorizar um segredo de [!UICONTROL [!DNL LinkedIn] OAuth 2]
 
 >IMPORTANTE
 >
 >Você precisa reautorizar usando suas credenciais do [!DNL LinkedIn] a cada 365 dias. Se você não reautorizar em tempo hábil, seu segredo não será atualizado e as solicitações de conversão do [!DNL LinkedIn] falharão.
 
-Três meses antes do segredo que requer reautorização, um pop-up começará a ser exibido quando você estiver navegando em qualquer página da propriedade. Selecione **[!UICONTROL Clique aqui para acessar seus segredos]**.
+Três meses antes do segredo que requer reautorização, um pop-up começará a ser exibido quando você estiver navegando em qualquer página da propriedade. Selecione **[!UICONTROL Click here to go to your secrets]**.
 
-![A guia [!UICONTROL Visão Geral da Propriedade] destacando o pop-up secreto de reautorização.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
+![A guia [!UICONTROL Property Overview] destacando o pop-up secreto de reautorização.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization-popup.png)
 
-Você será redirecionado para a guia [!UICONTROL Segredos]. Os segredos listados nesta página são filtrados para mostrar apenas os segredos que precisam ser reautorizados. Selecione **[!UICONTROL Autenticação Necessária]** para o segredo que você precisa reautorizar.
+Você será redirecionado para a guia [!UICONTROL Secrets]. Os segredos listados nesta página são filtrados para mostrar apenas os segredos que precisam ser reautorizados. Selecione **[!UICONTROL Auth Needed]** para o segredo que você precisa reautorizar.
 
-![A guia [!UICONTROL Segredo] destacando a [!UICONTROL Autenticação Necessária]para o segredo [!DNL LinkedIn].](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
+![A guia [!UICONTROL Secret] destacando [!UICONTROL Auth Needed]o segredo [!DNL LinkedIn].](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 Uma caixa de diálogo é exibida solicitando que você insira suas credenciais do [!DNL LinkedIn]. Siga as instruções para reautorizar o segredo.
 
 ### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
 
-Para criar um segredo OAuth 2 [!DNL Amazon], selecione **[!UICONTROL [!DNL Amazon]OAuth 2]** na lista suspensa **[!UICONTROL Tipo]**. Em seguida, selecione **[!UICONTROL Criar Segredo]**.
+Para criar um segredo OAuth 2 [!DNL Amazon], selecione **[!UICONTROL [!DNL Amazon] OAuth 2]** na lista suspensa **[!UICONTROL Type]**. Em seguida, selecione **[!UICONTROL Create Secret]**.
 
-![A guia [!UICONTROL Criar Segredo] com o campo [!UICONTROL Tipo] realçado.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+![A guia [!UICONTROL Create Secret] com o campo [!UICONTROL Type] realçado.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
 
-Um popover é exibido informando que o segredo precisa ser autorizado manualmente por meio do [!DNL Amazon]. Selecione **[!UICONTROL Criar e autorizar segredo com[!DNL Amazon]]** para continuar.
+Um popover é exibido informando que o segredo precisa ser autorizado manualmente por meio do [!DNL Amazon]. Selecione **[!UICONTROL Create & Authorize secret with [!DNL Amazon]]** para continuar.
 
 ![Popover de autorização do Amazon destacando o botão &quot;Criar e autorizar segredo com o Amazon&quot;.](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
 
 Uma caixa de diálogo é exibida solicitando que você insira suas credenciais do [!DNL Amazon]. Siga as instruções para conceder acesso ao encaminhamento de eventos para seus dados.
 
-Quando o processo de autorização for concluído, você retornará à guia **[!UICONTROL Segredos]**, na qual poderá ver o segredo recém-criado. Aqui você pode ver o status do segredo e a data de expiração.
+Quando o processo de autorização for concluído, você retornará à guia **[!UICONTROL Secrets]**, onde poderá ver o segredo recém-criado. Aqui você pode ver o status do segredo e a data de expiração.
 
-![A guia [!UICONTROL Segredo] destacando o segredo recém-criado.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
+![A guia [!UICONTROL Secret] destacando o segredo recém-criado.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## Editar um segredo
 
-Após criar segredos para uma propriedade, você pode encontrá-los listados no espaço de trabalho **[!UICONTROL Segredos]**. Para editar os detalhes de um segredo existente, selecione o nome na lista.
+Após criar segredos para uma propriedade, você pode encontrá-los listados no espaço de trabalho **[!UICONTROL Secrets]**. Para editar os detalhes de um segredo existente, selecione o nome na lista.
 
 ![Selecionar segredo para editar](../../images/ui/event-forwarding/secrets/edit-secret.png)
 
@@ -248,13 +248,13 @@ Você pode tentar novamente ou atualizar uma troca de segredo na tela de ediçã
 
 | Tipo secreto | Tentar protocolo novamente |
 | --- | --- |
-| [!UICONTROL Token] | Selecione **[!UICONTROL Segredo do Exchange]** para repetir a troca secreta. Esse controle só está disponível quando há um ambiente anexado ao segredo. |
-| [!UICONTROL HTTP] | Se não houver um ambiente anexado ao segredo, selecione **[!UICONTROL Segredo do Exchange]** para trocar a credencial para base64. Se um ambiente estiver anexado, selecione **[!UICONTROL Exchange e Implantar Segredo]** para o exchange em base64 e implante o segredo. |
-| [!UICONTROL OAuth 2] | Selecione **[!UICONTROL Gerar token]** para trocar as credenciais e retornar um token de acesso do provedor de autenticação. |
+| [!UICONTROL Token] | Selecione **[!UICONTROL Exchange Secret]** para repetir a troca secreta. Esse controle só está disponível quando há um ambiente anexado ao segredo. |
+| [!UICONTROL HTTP] | Se não houver ambiente anexado ao segredo, selecione **[!UICONTROL Exchange Secret]** para trocar a credencial para base64. Se um ambiente estiver anexado, selecione **[!UICONTROL Exchange and Deploy Secret]** para trocar para base64 e implantar o segredo. |
+| [!UICONTROL OAuth 2] | Selecione **[!UICONTROL Generate Token]** para trocar as credenciais e retornar um token de acesso do provedor de autenticação. |
 
 ## Excluir um segredo
 
-Para excluir um segredo existente no espaço de trabalho **[!UICONTROL Segredos]**, marque a caixa de seleção ao lado do respectivo nome antes de marcar **[!UICONTROL Excluir]**.
+Para excluir um segredo existente no espaço de trabalho **[!UICONTROL Secrets]**, marque a caixa de seleção ao lado de seu nome antes de selecionar **[!UICONTROL Delete]**.
 
 ![Excluir segredo](../../images/ui/event-forwarding/secrets/delete.png)
 
@@ -262,7 +262,7 @@ Para excluir um segredo existente no espaço de trabalho **[!UICONTROL Segredos]
 
 Para usar um segredo no encaminhamento de eventos, primeiro você deve criar um [elemento de dados](../managing-resources/data-elements.md) que faça referência ao próprio segredo. Depois de salvar o elemento de dados, você pode incluí-lo no encaminhamento de eventos [regras](../managing-resources/rules.md) e adicionar essas regras a uma [biblioteca](../publishing/libraries.md), que, por sua vez, pode ser implantada nos servidores da Adobe como uma [compilação](../publishing/builds.md).
 
-Ao criar o elemento de dados, selecione a extensão **[!UICONTROL Core]** e **[!UICONTROL Secret]** para o tipo de elemento de dados. O painel direito atualiza e fornece controles suspensos para atribuir até três segredos ao elemento de dados: um para [!UICONTROL Desenvolvimento], [!UICONTROL Preparo] e [!UICONTROL Produção], respectivamente.
+Ao criar o elemento de dados, selecione a extensão **[!UICONTROL Core]** e **[!UICONTROL Secret]** para o tipo de elemento de dados. O painel direito atualiza e fornece controles suspensos para atribuir até três segredos ao elemento de dados: um para [!UICONTROL Development], [!UICONTROL Staging] e [!UICONTROL Production], respectivamente.
 
 ![Elemento de dados](../../images/ui/event-forwarding/secrets/data-element.png)
 

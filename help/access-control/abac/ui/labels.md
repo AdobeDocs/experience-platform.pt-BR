@@ -5,8 +5,8 @@ description: Este documento fornece informações sobre como gerenciar rótulos 
 exl-id: c790f09c-fda6-48bf-95db-3f5053cd882e
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 24%
+source-wordcount: '238'
+ht-degree: 26%
 
 ---
 
@@ -33,14 +33,14 @@ Rótulos permitem categorizar conjuntos de dados e campos de acordo com as polí
 
 >[!NOTE]
 >
->Há uma única lista de rótulos para toda a organização. Para criar um rótulo personalizado, você precisará de **[!UICONTROL permissões Gerenciar rótulos de uso]** na sandbox de produção. No momento, não há suporte para exclusão de rótulo.
+>Há uma única lista de rótulos para toda a organização. Para criar um rótulo personalizado, você precisará de **[!UICONTROL Manage Usage Labels]** permissões na sandbox de produção. No momento, não há suporte para exclusão de rótulo.
 
-Para criar um novo rótulo, selecione a guia **[!UICONTROL Rótulos]** na barra lateral e selecione **[!UICONTROL Criar rótulo]**.
+Para criar um novo rótulo, selecione a guia **[!UICONTROL Labels]** na barra lateral e selecione **[!UICONTROL Create Label]**.
 
 ![flac-new-label](../../images/flac-ui/create-label.png)
 
-A caixa de diálogo **[!UICONTROL Criar um novo rótulo]** é exibida, solicitando que você insira um nome, um nome amigável opcional e uma descrição opcional.
+A caixa de diálogo **[!UICONTROL Create a new label]** é exibida, solicitando que você insira um nome, um nome amigável opcional e uma descrição opcional.
 
 ![informações-novo-rótulo](../../images/flac-ui/new-label-info.png)
 
-Quando terminar, selecione **[!UICONTROL Confirmar]**.
+Quando terminar, selecione **[!UICONTROL Confirm]**.

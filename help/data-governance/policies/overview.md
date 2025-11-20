@@ -6,8 +6,8 @@ description: As políticas de uso de dados são regras que descrevem os tipos de
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1213'
-ht-degree: 17%
+source-wordcount: '1207'
+ht-degree: 18%
 
 ---
 
@@ -18,16 +18,16 @@ ht-degree: 17%
 >title="Restringir uso de dados"
 >abstract="O tipo de política de uso de dados avalia ações de marketing específicas aplicadas a rótulos de governança de dados para restringir o uso de dados para atividades de marketing."
 
-Para que os rótulos de uso de dados estejam de acordo com a conformidade de dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados no [!DNL Experience Platform].
+Para que os rótulos de uso de dados sigam efetivamente a conformidade de dados, as políticas de uso de dados devem ser implementadas. As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados no [!DNL Experience Platform].
 
 Há dois tipos de políticas disponíveis:
 
-* **[!UICONTROL Política de governança de dados]**: Restrinja a ativação de dados com base na ação de marketing que está sendo executada e nos rótulos de uso de dados transportados pelos dados em questão.
-* **[!UICONTROL Política de consentimento]**: filtre os perfis que podem ser ativados para [destinos](../../destinations/home.md) com base no consentimento ou nas preferências dos clientes
+* **[!UICONTROL Data governance policy]**: Restrinja a ativação de dados com base na ação de marketing que está sendo executada e nos rótulos de uso de dados transportados pelos dados em questão.
+* **[!UICONTROL Consent policy]**: filtre os perfis que podem ser ativados para [destinos](../../destinations/home.md) com base no consentimento ou nas preferências dos clientes
 
 >[!NOTE]
 >
->As políticas de uso de dados não devem ser confundidas com as [políticas de controle de acesso](../../access-control/abac/end-to-end-guide.md#policy), que determinam se determinados usuários do Experience Platform em sua organização podem acessar determinados campos de dados, e são configuradas por meio da guia [!UICONTROL Permissões].
+>As políticas de uso de dados não devem ser confundidas com as [políticas de controle de acesso](../../access-control/abac/end-to-end-guide.md#policy), que determinam se determinados usuários do Experience Platform em sua organização podem acessar determinados campos de dados, e são configuradas por meio da guia [!UICONTROL Permissions].
 
 Este documento fornece uma visão geral de alto nível das políticas de uso de dados e fornece links para documentação adicional para trabalhar com políticas na interface ou na API.
 
@@ -57,7 +57,7 @@ Consulte o apêndice deste documento para obter uma lista de [ações de marketi
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=pt-BR).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Gerenciamento de políticas de uso de dados {#manage}

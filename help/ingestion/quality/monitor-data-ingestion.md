@@ -6,12 +6,12 @@ description: Este guia do usuário fornece etapas sobre como monitorar os dados 
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
 source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '641'
 ht-degree: 4%
 
 ---
 
-# Monitoramento da assimilação de dados
+# Monitoramento da ingestão de dados
 
 A assimilação de dados permite assimilar seus dados na Adobe Experience Platform. Você pode usar a assimilação em lote, que permite inserir seus dados usando vários tipos de arquivos (como CSVs), ou a assimilação por streaming, que permite assimilar seus dados no [!DNL Experience Platform] usando pontos de extremidade de streaming em tempo real.
 
@@ -30,9 +30,9 @@ Este guia do usuário fornece etapas sobre como monitorar seus dados na interfac
 >
 >Para calcular o total de eventos em uma data específica, use a expressão de: `total events / day = ingestion rate * 60 * 60 * 24`.
 
-Na [Interface do usuário do Experience Platform](https://platform.adobe.com), selecione **[!UICONTROL Monitoramento]** no menu de navegação esquerdo, seguido de **[!UICONTROL Streaming de ponta a ponta]**.
+Na [Interface do usuário do Experience Platform](https://platform.adobe.com), selecione **[!UICONTROL Monitoring]** no menu de navegação esquerdo, seguido por **[!UICONTROL Streaming end-to-end]**.
 
-A página de monitoramento **[!UICONTROL Streaming de ponta a ponta]** é exibida. Este espaço de trabalho fornece um gráfico que mostra a taxa de eventos transmitidos que estão sendo recebidos por [!DNL Experience Platform], um gráfico que mostra a taxa de eventos transmitidos que foram processados com êxito por [[!DNL Real-Time Customer Profile]](../../profile/home.md), bem como uma lista detalhada de dados recebidos.
+A página de monitoramento **[!UICONTROL Streaming end-to-end]** é exibida. Este espaço de trabalho fornece um gráfico que mostra a taxa de eventos transmitidos que estão sendo recebidos por [!DNL Experience Platform], um gráfico que mostra a taxa de eventos transmitidos que foram processados com êxito por [[!DNL Real-Time Customer Profile]](../../profile/home.md), bem como uma lista detalhada de dados recebidos.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -72,9 +72,9 @@ Além disso, os registros com falha fornecem detalhes sobre os erros ocorridos d
 
 ## Monitorar a assimilação completa de dados em lote
 
-No [[!DNL Experience Platform UI]](https://platform.adobe.com), selecione **[!UICONTROL Monitoramento]** no menu de navegação esquerdo.
+No [[!DNL Experience Platform UI]](https://platform.adobe.com), selecione **[!UICONTROL Monitoring]** no menu de navegação esquerdo.
 
-A página de monitoramento **[!UICONTROL Lote de ponta a ponta]** é exibida, exibindo uma lista dos lotes assimilados anteriormente. Você pode selecionar qualquer um dos lotes para obter informações mais detalhadas sobre esse registro.
+A página de monitoramento **[!UICONTROL Batch end-to-end]** é exibida, exibindo uma lista dos lotes assimilados anteriormente. Você pode selecionar qualquer um dos lotes para obter informações mais detalhadas sobre esse registro.
 
 ![](../images/quality/monitor-data-flows/batch-monitoring.png)
 

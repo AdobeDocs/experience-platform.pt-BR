@@ -5,7 +5,7 @@ role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
 source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1124'
 ht-degree: 5%
 
 ---
@@ -45,7 +45,7 @@ Ao executar a avaliação flexível do público-alvo, lembre-se das seguintes co
 
 Para usar a avaliação flexível do público-alvo, você deve ter a seguinte permissão:
 
-- **[!UICONTROL Avaliar Segmento para um Público-alvo]** na seção **[!DNL Profile Management]**.
+- **[!UICONTROL Evaluate Segment to an Audience]** na seção **[!DNL Profile Management]**.
 
 Para obter mais informações sobre o controle de acesso baseado em função, leia a [visão geral do controle de acesso](../../access-control/home.md).
 
@@ -65,7 +65,7 @@ Para executar uma avaliação flexível do público-alvo nas APIs do Experience 
 
 Você pode criar um novo trabalho de segmento fazendo uma solicitação POST para o ponto de extremidade `/segment/jobs` e incluindo as IDs das definições de segmento no corpo da solicitação.
 
-+++Uma solicitação de amostra para criar um novo trabalho de segmento
++++Um exemplo de solicitação para criar um novo trabalho de segmento
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -300,15 +300,15 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 
 >[!TAB INTERFACE DO USUÁRIO DO Experience Platform]
 
-Para executar a avaliação de público-alvo flexível na interface do Experience Platform, selecione **[!UICONTROL Públicos-alvo]** na seção **[!UICONTROL Clientes]**.
+Para executar a avaliação de público-alvo flexível na interface do Experience Platform, selecione **[!UICONTROL Audiences]** na seção **[!UICONTROL Customers]**.
 
 ![O botão Públicos-alvo na seção Clientes é destacado. O Portal de Público-Alvo para perfis de clientes é exibido.](../images/methods/fae/audience-portal.png)
 
-O Portal de público-alvo é exibido, mostrando uma lista de todos os públicos-alvo de pessoas da organização. No Portal de público-alvo, você pode escolher os públicos que deseja avaliar e selecionar **[!UICONTROL Avaliar público-alvo]**.
+O Portal de público-alvo é exibido, mostrando uma lista de todos os públicos-alvo de pessoas da organização. No Portal de público-alvo, você pode escolher os públicos que deseja avaliar e selecionar **[!UICONTROL Evaluate audience]**.
 
 ![Os públicos-alvo nos quais você deseja usar a avaliação de público-alvo flexível estão selecionados.](../images/methods/fae/evaluate-audiences.png)
 
-O popover **[!UICONTROL Avaliar públicos-alvo sob demanda]** é exibido, exibindo a lista de públicos-alvo que serão avaliados com o trabalho por segmento sob demanda. Se um público-alvo não for elegível para avaliação sob demanda, ele será removido automaticamente do trabalho de avaliação. Confirme se os públicos-alvo listados são aqueles que você deseja avaliar.
+O popover **[!UICONTROL Evaluate audiences on demand]** é exibido, exibindo a lista de públicos-alvo que serão avaliados com o trabalho do segmento sob demanda. Se um público-alvo não for elegível para avaliação sob demanda, ele será removido automaticamente do trabalho de avaliação. Confirme se os públicos-alvo listados são aqueles que você deseja avaliar.
 
 ![Os públicos-alvo que podem ser avaliados usando a avaliação de público-alvo flexível são exibidos.](../images/methods/fae/evaluate-audiences-modal.png)
 
@@ -318,7 +318,7 @@ Depois de confirmar que os públicos-alvo corretos estão listados, você pode c
 >
 >O status do trabalho do segmento pode ser relatado como no estado &quot;Em fila&quot; no painel de monitoramento. Você pode visualizar o status mais atualizado do trabalho do segmento fazendo uma solicitação GET para o ponto de extremidade `/segment/jobs`, fornecendo a ID do trabalho do segmento no caminho da solicitação. Mais informações sobre como usar esse endpoint podem ser encontradas na guia API.
 >
->Se você executar a avaliação de público-alvo flexível e quiser que a avaliação ative o público-alvo para um destino, será necessário garantir que a frequência esteja definida como **[!UICONTROL Após a avaliação do segmento]**. Executar a avaliação flexível do público-alvo em públicos que já estão definidos para serem ativados [após a avaliação do segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), ativará os públicos-alvo assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores.
+>Se você executar a avaliação de público-alvo flexível e quiser que a avaliação ative o público-alvo para um destino, será necessário garantir que a frequência esteja definida como **[!UICONTROL After segment evaluation]**. Executar a avaliação flexível do público-alvo em públicos que já estão definidos para serem ativados [após a avaliação do segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), ativará os públicos-alvo assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores.
 
 >[!ENDTABS]
 
@@ -326,7 +326,7 @@ Depois de confirmar que os públicos-alvo corretos estão listados, você pode c
 
 O vídeo a seguir demonstra como acessar e usar a avaliação de público-alvo flexível no Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453645?&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Perguntas frequentes {#faq}
 

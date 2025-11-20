@@ -5,8 +5,8 @@ hide: true
 hidefromtoc: true
 source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
 workflow-type: tm+mt
-source-wordcount: '372'
-ht-degree: 5%
+source-wordcount: '368'
+ht-degree: 6%
 
 ---
 
@@ -54,8 +54,8 @@ A tabela a seguir fornece informações mais detalhadas sobre as métricas usada
 
 ## Usar o painel de monitoramento para públicos-alvo de transmissão {#monitoring-dashboard}
 
-Para acessar o painel de monitoramento de públicos-alvo de streaming, vá para a interface do usuário do Experience Platform, selecione **[!UICONTROL Monitoramento]** no menu de navegação esquerdo e selecione **[!UICONTROL Streaming de ponta a ponta]**.
+Para acessar o painel de monitoramento de públicos-alvo de streaming, vá para a interface do usuário do Experience Platform, selecione **[!UICONTROL Monitoring]** na navegação à esquerda e selecione **[!UICONTROL Streaming end-to-end]**.
 
 IMAGEM
 
-Na parte superior do painel está o cartão de métrica **[!UICONTROL Públicos-alvo]**. Isso exibe informações sobre a **Taxa de avaliação** para os públicos-alvo.
+Na parte superior do painel está o cartão de métrica **[!UICONTROL Audiences]**. Isso exibe informações sobre a **Taxa de avaliação** para os públicos-alvo.

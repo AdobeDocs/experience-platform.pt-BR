@@ -6,8 +6,8 @@ description: Saiba como criar e editar grupos de campos de esquema na interface 
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1001'
-ht-degree: 8%
+source-wordcount: '966'
+ht-degree: 9%
 
 ---
 
@@ -34,11 +34,11 @@ Embora não seja necessário para este guia, é recomendável que você também 
 
 Para criar um novo grupo de campos, primeiro selecione um esquema ao qual o grupo de campos será adicionado. Você pode [criar um novo esquema](./schemas.md#create) ou [selecionar um esquema existente para editar](./schemas.md#edit).
 
-Depois que o esquema for aberto no [!DNL Schema Editor], selecione **[!UICONTROL Adicionar]** ao lado da seção [!UICONTROL Grupos de campos] no painel esquerdo.
+Depois que o esquema for aberto no [!DNL Schema Editor], selecione **[!UICONTROL Add]** ao lado da seção [!UICONTROL Field groups] no painel esquerdo.
 
 ![](../../images/ui/resources/field-groups/add-field-group.png)
 
-Na caixa de diálogo exibida, selecione **[!UICONTROL Criar novo grupo de campos]**. Aqui você pode fornecer um **[!UICONTROL Nome de exibição]** e uma **[!UICONTROL Descrição]** para o grupo de campos. Quando terminar, selecione **[!UICONTROL Adicionar grupos de campos]**.
+Na caixa de diálogo exibida, selecione **[!UICONTROL Create new field group]**. Aqui você pode fornecer um **[!UICONTROL Display name]** e **[!UICONTROL Description]** para o grupo de campos. Quando terminar, selecione **[!UICONTROL Add field groups]**.
 
 ![](../../images/ui/resources/field-groups/create-field-group.png)
 
@@ -48,9 +48,9 @@ O [!DNL Schema Editor] reaparece, com o novo grupo de campos listado no painel e
 
 ## Filtrar grupos de campos {#filter}
 
-A lista de grupos de campos disponíveis é pré-filtrada com base em como foram criados. A configuração padrão exibe os grupos de campos definidos pelo Adobe. No entanto, também é possível filtrar a lista para mostrar os criados por sua organização. Selecione o botão de opção para escolher entre as opções [!UICONTROL Padrão] e [!UICONTROL Personalizado]. A opção [!UICONTROL Padrão] mostra entidades criadas pelo Adobe e a opção [!UICONTROL Personalizado] exibe entidades criadas em sua organização.
+A lista de grupos de campos disponíveis é pré-filtrada com base em como foram criados. A configuração padrão exibe os grupos de campos definidos pelo Adobe. No entanto, também é possível filtrar a lista para mostrar os criados por sua organização. Selecione o botão de opção para escolher entre as opções [!UICONTROL Standard] e [!UICONTROL Custom]. A opção [!UICONTROL Standard] mostra entidades criadas pelo Adobe e a opção [!UICONTROL Custom] exibe entidades criadas na organização.
 
-![A guia [!UICONTROL Grupos de campos] do espaço de trabalho [!UICONTROL Esquemas] com [!UICONTROL Padrão] e [!UICONTROL Personalizado] destacados.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
+![A guia [!UICONTROL Field groups] do espaço de trabalho [!UICONTROL Schemas] com [!UICONTROL Standard] e [!UICONTROL Custom] realçados.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
 ## Editar um grupo de campos existente {#edit}
 
@@ -74,17 +74,17 @@ Para adicionar campos a um grupo de campos personalizado, comece selecionando o 
 
 ![](../../images/ui/resources/field-groups/add-field.png)
 
-Um espaço reservado para **[!UICONTROL Campo sem título]** aparece na tela e o painel direito atualiza para mostrar controles que configuram as propriedades do campo. Consulte o manual sobre [definição de campos na interface](../fields/overview.md#define) para obter etapas específicas sobre como configurar tipos de campos diferentes.
+Um espaço reservado **[!UICONTROL Untitled Field]** aparece no na tela e o painel direito é atualizado para mostrar controles para configurar as propriedades do campo. Consulte o manual sobre [definição de campos na interface](../fields/overview.md#define) para obter etapas específicas sobre como configurar tipos de campos diferentes.
 
-Em **[!UICONTROL Atribuir a]**, selecione a opção **[!UICONTROL Grupo de campos]** e use a lista suspensa para selecionar o grupo de campos desejado na lista. Você pode começar a digitar o nome do grupo de campos para restringir os resultados.
-
-![](../../images/ui/resources/field-groups/select-field-group.png)
-
-Em **[!UICONTROL Atribuir a]**, selecione a opção **[!UICONTROL Grupo de campos]** e use a lista suspensa para selecionar o grupo de campos desejado na lista. Você pode começar a digitar o nome do grupo de campos para restringir os resultados.
+Em **[!UICONTROL Assign to]**, selecione a opção **[!UICONTROL Field Group]** e use a lista suspensa para selecionar o grupo de campos desejado na lista. Você pode começar a digitar o nome do grupo de campos para restringir os resultados.
 
 ![](../../images/ui/resources/field-groups/select-field-group.png)
 
-Depois que o campo é adicionado ao esquema, ele é atribuído ao grupo de campos selecionado. Continue a adicionar quantos campos forem necessários ao grupo de campos. Quando terminar, selecione **[!UICONTROL Salvar]** para salvar o esquema e o grupo de campos.
+Em **[!UICONTROL Assign to]**, selecione a opção **[!UICONTROL Field Group]** e use a lista suspensa para selecionar o grupo de campos desejado na lista. Você pode começar a digitar o nome do grupo de campos para restringir os resultados.
+
+![](../../images/ui/resources/field-groups/select-field-group.png)
+
+Depois que o campo é adicionado ao esquema, ele é atribuído ao grupo de campos selecionado. Continue a adicionar quantos campos forem necessários ao grupo de campos. Quando terminar, selecione **[!UICONTROL Save]** para salvar o esquema e o grupo de campos.
 
 ![](../../images/ui/resources/field-groups/complete-field-group.png)
 
@@ -92,6 +92,6 @@ Se o mesmo grupo de campos já estiver empregado em outros esquemas, os campos r
 
 ## Próximas etapas {#next-steps}
 
-Este guia abordou como criar e editar grupos de campos usando a interface do usuário do Experience Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Esquemas], consulte a [[!UICONTROL visão geral do espaço de trabalho de &#x200B;]](../overview.md).
+Este guia abordou como criar e editar grupos de campos usando a interface do usuário do Experience Platform. Para obter mais informações sobre os recursos do espaço de trabalho [!UICONTROL Schemas], consulte a [[!UICONTROL Schemas] visão geral do espaço de trabalho](../overview.md).
 
 Para saber como gerenciar grupos de campos usando a API [!DNL Schema Registry], consulte o [manual de ponto de extremidade de grupos de campos](../../api/field-groups.md).

@@ -39,7 +39,7 @@ Selecione **[!UICONTROL Extensions]** na navegação à esquerda. Na guia **[!UI
 
 Na próxima tela, digite o [!UICONTROL Advertiser ID] e, opcionalmente, um [!UICONTROL Merchant ID]. Você pode colar as IDs diretamente nessas entradas ou pode usar um elemento de dados. Eles servirão como valores padrão usados ao fazer uma chamada de evento para a API de conversões em tempo real [!DNL The Trade Desk]. Selecione **[!UICONTROL Save]** quando terminar.
 
-Para saber como criar elementos de dados e disponibilizá-los para extensões na propriedade da tag, siga o tutorial [Criar elementos de dados](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements).
+Para saber como criar elementos de dados e disponibilizá-los para extensões na propriedade da tag, siga o tutorial [Criar elementos de dados](https://experienceleague.adobe.com/pt-br/docs/platform-learn/data-collection/tags/create-data-elements).
 
 ![A página de configuração de extensão [!DNL The Trade Desk] com os campos [!UICONTROL Advertiser ID] e [!UICONTROL Merchant ID] realçados.](../../../images/extensions/server/tradedesk/configure-extension.png)
 

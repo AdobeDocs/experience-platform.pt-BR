@@ -110,7 +110,7 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL LinkedIn Matched Audiences] e ativar públicos-alvo.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/3475118/?quality=12&learn=on&captions=por_br)
 
 >[!NOTE]
 >

@@ -182,4 +182,4 @@ Para descobrir as métricas e visualizações pré-configuradas disponíveis par
 
 Para reforçar sua compreensão dos painéis no Experience Platform, assista ao seguinte vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417878?captions=por_br&quality=12&learn=on)

@@ -57,7 +57,7 @@ Consulte as seções sobre [gerenciamento de permissões para uma função](#man
 
 O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova função e o gerenciamento de usuários para essa função.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475978/?captions=por_br&learn=on)
 
 ## Duplicar uma função
 

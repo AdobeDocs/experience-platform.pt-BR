@@ -409,11 +409,11 @@ O esquema &quot;Membros de fidelidade&quot; também está disponível para ser v
 
 O vídeo a seguir mostra como criar um esquema simples na interface do usuário do [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430218?captions=por_br&quality=12&learn=on)
 
 O vídeo a seguir tem como objetivo reforçar sua compreensão de trabalhar com grupos de campo e classes.
 
->[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3413605?captions=por_br&quality=12&learn=on)
 
 ## Apêndice
 

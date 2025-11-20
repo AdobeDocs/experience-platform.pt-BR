@@ -22,7 +22,7 @@ Os Serviços inteligentes capacitam analistas e profissionais de marketing a apr
 
 O vídeo a seguir foi criado para corroborar sua compreensão dos Serviços inteligentes. Usando casos de uso de negócios de exemplo, este vídeo explica um fluxo de trabalho de alto nível e descreve os recursos da IA de atribuição e da IA do cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36604?captions=por_br&learn=on&quality=12)
 
 ## Benefícios dos serviços inteligentes
 

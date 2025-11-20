@@ -132,8 +132,8 @@ A tabela a seguir descreve os termos principais relacionados à Governança de d
 
 O vídeo a seguir é destinado a apoiar a sua compreensão da estrutura de governança de dados.
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32683?captions=por_br&quality=12&enable10seconds=on&speedcontrol=on)
 
 O vídeo a seguir fornece orientação sobre como aplicar rótulos de uso de dados aos seus esquemas ou à totalidade de um conjunto de dados na Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422793/?captions=por_br&learn=on)

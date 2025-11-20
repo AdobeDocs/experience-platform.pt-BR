@@ -177,4 +177,4 @@ Este guia abordou como gerenciar logs de auditoria no Experience Platform. Para 
 
 Para reforçar sua compreensão de logs de auditoria no Experience Platform, assista ao seguinte vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/344653?captions=por_br&quality=12&learn=on)

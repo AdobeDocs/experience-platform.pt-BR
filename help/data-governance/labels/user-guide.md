@@ -24,7 +24,7 @@ Este guia do usuário aborda etapas para trabalhar com rótulos de uso de dados 
 
 Para aplicar rótulos aos seus dados, você precisa da permissão **[!UICONTROL Manage Usage Labels]** para usar na sandbox de produção padrão chamada &quot;prod&quot;. Para criar um rótulo personalizado, você também deve ter direitos administrativos no perfil do produto. Cada organização tem apenas uma lista de rótulos aplicáveis. Você **não pode** excluir rótulos. Em vez disso, você pode removê-los dos conjuntos de dados ou campos aos quais são aplicados.
 
-Consulte o manual sobre como [configurar permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html) ou a [visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre como atribuir uma permissão. Se você não tiver acesso à Admin Console para sua organização, entre em contato com o administrador da organização.
+Consulte o manual sobre como [configurar permissões](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=pt-BR) ou a [visão geral do controle de acesso](../../access-control/home.md) para obter mais informações sobre como atribuir uma permissão. Se você não tiver acesso à Admin Console para sua organização, entre em contato com o administrador da organização.
 
 ## Gerenciar rótulos no nível do esquema
 

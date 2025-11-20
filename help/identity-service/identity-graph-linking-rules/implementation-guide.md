@@ -94,7 +94,7 @@ Durante o processo de pré-implementação, certifique-se de que os eventos aute
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/br/",
           "name": "Adobe Business"
       }
   }
@@ -133,7 +133,7 @@ Você deve **não** enviar uma carga como a seguir:
   "timestamp": "2024-09-24T15:02:32+00:00",
   "web": {
       "webPageDetails": {
-          "URL": "https://business.adobe.com/",
+          "URL": "https://business.adobe.com/br/",
           "name": "Adobe Business"
       }
   }
@@ -169,7 +169,7 @@ Neste exemplo, você pode supor que o evento a seguir foi enviado para o Experie
     "timestamp": "2024-09-24T15:02:32+00:00",
     "web": {
         "webPageDetails": {
-            "URL": "https://business.adobe.com/",
+            "URL": "https://business.adobe.com/br/",
             "name": "Adobe Business"
         }
     }

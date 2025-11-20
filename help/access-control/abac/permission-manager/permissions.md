@@ -23,7 +23,7 @@ Use consultas simples no [!UICONTROL Permission Manager] para criar relatórios 
 >id="platform_permission_manager"
 >title="Gerenciador de permissões"
 >abstract="Use os seletores suspensos na página para obter relatórios de nível de acesso de diferentes níveis de granularidade para usuários e funções."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=pt-BR" text="Permission manager" -->
 
 Usando a lista suspensa, selecione o atributo **[!UICONTROL Users]**.
 

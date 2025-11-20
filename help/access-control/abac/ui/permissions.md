@@ -16,7 +16,7 @@ ht-degree: 17%
 >id="platform_permissions_roles_about"
 >title="O que são funções?"
 >abstract="As funções definem o acesso que um(a) admin, especialista ou usuário final tem aos recursos em sua organização. Elas categorizam os usuários que interagem com a instância da Experience Platform e são elementos essenciais das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Gerenciar funções"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR" text="Gerenciar funções"
 
 >[!IMPORTANT]
 >

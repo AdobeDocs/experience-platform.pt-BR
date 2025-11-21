@@ -5,9 +5,9 @@ title: Atualizar fluxos de dados de destino usando a API de serviço de fluxo
 type: Tutorial
 description: Este tutorial aborda as etapas para atualizar um fluxo de dados de destino. Saiba como habilitar ou desabilitar o fluxo de dados, atualizar suas informações básicas ou adicionar e remover públicos-alvo e atributos usando a API do Serviço de fluxo.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
 workflow-type: tm+mt
-source-wordcount: '2410'
+source-wordcount: '2471'
 ht-degree: 4%
 
 ---
@@ -35,7 +35,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
 
-### Coletar valores para cabeçalhos necessários {#gather-values-for-required-headers}
+### Coletar valores para cabeçalhos obrigatórios {#gather-values-for-required-headers}
 
 Para fazer chamadas para APIs do Experience Platform, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores de cada um dos cabeçalhos necessários em todas as chamadas de API do Experience Platform, conforme mostrado abaixo:
 
@@ -749,6 +749,14 @@ Os arquivos exportados contêm o nome de destino, a ID de público-alvo do Exper
 ## Adicionar um atributo de perfil a um fluxo de dados {#add-profile-attribute}
 
 Para adicionar um atributo de perfil ao fluxo de dados de destino, execute uma solicitação PATCH para a API [!DNL Flow Service] enquanto fornece a ID do fluxo, a versão e o atributo de perfil que você deseja adicionar.
+
+>[!IMPORTANT]
+>
+>**Requisitos de mapeamento específicos do destino**
+>
+>O método `profileSelectors` descrito nesta seção funciona para a maioria dos destinos de streaming. No entanto, alguns destinos de streaming, incluindo **Adobe Target**, exigem o fluxo de trabalho do conjunto de mapeamento Preparo de Dados.
+>
+>**Se os atributos de perfil não aparecerem na interface do usuário do Experience Platform após uma resposta de API bem-sucedida (202)**, você deverá usar o método de conjunto de mapeamento documentado em [Ativar públicos para destinos em lote](../api/activate-segments-file-based-destinations.md#attribute-and-identity-mapping).
 
 **Formato da API**
 

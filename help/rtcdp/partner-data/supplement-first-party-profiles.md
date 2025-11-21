@@ -47,7 +47,7 @@ Ao considerar suplementar seus perfis próprios com atributos de parceiros de da
 
 Assista ao tutorial em vídeo abaixo para obter uma apresentação de como complementar públicos-alvo primários com atributos fornecidos pelo parceiro:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452458/?captions=por_br&learn=on)
 
 ## Como atingir o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 

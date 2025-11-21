@@ -64,7 +64,7 @@ Para implementar com sucesso esse caso de uso, você deve usar várias áreas da
 
 Assista ao tutorial em vídeo abaixo para obter uma apresentação de como personalizar experiências no site para visitantes desconhecidos:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449257/?captions=por_br&learn=on)
 
 ## Como atingir o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 

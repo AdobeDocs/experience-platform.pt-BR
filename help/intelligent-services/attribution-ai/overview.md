@@ -29,7 +29,7 @@ A IA de atribuição aceita duas categorias de pontuações: algorítmica e base
 
 O vídeo a seguir foi criado para auxiliar sua compreensão da IA de atribuição.
 
->[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36595?captions=por_br&learn=on&quality=12)
 
 ## Exemplos de casos de uso de negócios
 

@@ -50,7 +50,7 @@ ht-degree: 35%
    * [Adicionar dados ao Perfil do cliente em tempo real](tutorials/add-profile-data.md)
    * [Configurar um conjunto de dados para o Perfil](tutorials/dataset-configuration.md)
    * [Gerar o relatório de sobreposição do conjunto de dados](tutorials/dataset-overlap-report.md)
-   * [Mais tutoriais](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+   * [Mais tutoriais](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=pt-BR)
 * [Processamento de solicitação de privacidade](privacy.md)
 * [Guia de solução de problemas do [!DNL Profile]](troubleshooting.md)
 * [Referência da API de perfil](https://www.adobe.com/go/profile-apis-en)

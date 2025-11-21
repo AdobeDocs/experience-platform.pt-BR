@@ -14,7 +14,7 @@ ht-degree: 72%
 
 >[!AVAILABILITY]
 >
->* Essa funcionalidade está disponível para clientes que licenciaram o Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
+>* Essa funcionalidade está disponível para clientes que licenciaram o Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
 
 Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
 
@@ -41,7 +41,7 @@ Ao considerar suplementar seus perfis próprios com atributos de parceiros de da
 
 >[!WARNING]
 >
->Os atributos adicionais fornecidos pelo parceiro assimilados na Real-Time CDP afetam seu *volume de dados total*. Leia a [Descrição do Produto Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) para obter mais informações sobre o volume de dados total.
+>Os atributos adicionais fornecidos pelo parceiro assimilados na Real-Time CDP afetam seu *volume de dados total*. Leia a [Descrição do Produto Real-Time Customer Data Platform](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) para obter mais informações sobre o volume de dados total.
 
 ## Apresentação em vídeo {#video-walkthrough}
 

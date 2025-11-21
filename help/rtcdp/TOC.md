@@ -47,12 +47,12 @@ ht-degree: 60%
    * [Destinos na Real-Time CDP B2B Edition](destinations/b2b.md)
 * Medidas de proteção {#guardrails}
    * [Visão geral das medidas de proteção do Real-Time CDP](guardrails/overview.md)
-   * [Medidas de proteção para assimilação de dados](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [Medidas de proteção para assimilação de dados](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=pt-BR){target="_blank"}
    * [Medidas de proteção para [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Medidas de proteção para [!DNL Real-Time Customer Profile] dados e segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=pt-BR){target="_blank"}
-   * [Medidas de proteção para [!DNL Identity Service] dados](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [Medidas de proteção para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
-   * [Medidas de proteção para ativação de dados por meio de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+   * [Medidas de proteção para [!DNL Identity Service] dados](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=pt-BR){target="_blank"}
+   * [Medidas de proteção para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=pt-BR){target="_blank"}
+   * [Medidas de proteção para ativação de dados por meio de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=pt-BR){target="_blank"}
 * Identidades {#identity}
    * [Identidades e namespaces de identidade](profile/identities-overview.md)
 * Mesclar políticas {#merge-policies}

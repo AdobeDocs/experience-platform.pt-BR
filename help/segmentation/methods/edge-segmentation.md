@@ -2,9 +2,9 @@
 title: Guia de segmentação do Edge
 description: Saiba como usar a segmentação de borda para avaliar públicos no Experience Platform instantaneamente na borda, permitindo casos de uso de personalização da mesma página e da próxima página.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
+source-git-commit: d93bf7a3b7447a71fa3ead96e5c35ec9cd2dd99a
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1191'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,9 @@ A segmentação do Edge é a capacidade de avaliar definições de segmento no A
 >
 > Os dados de borda serão armazenados em um local de servidor de borda mais próximo de onde foram coletados. Esses dados também podem ser armazenados em um local diferente daquele designado como data center principal da Adobe Experience Platform.
 >
-> Além disso, o mecanismo de segmentação de borda só respeitará solicitações na borda em que há **uma** identidade principal marcada, que é consistente com identidades principais não baseadas em borda.
+> O mecanismo de segmentação de borda só respeitará solicitações na borda em que há **uma** identidade principal marcada, que é consistente com identidades principais não baseadas em borda.
+>
+> Além disso, como a segmentação de borda é projetada para processar solicitações em escala, os servidores de borda carregam dinamicamente os metadados necessários. Como resultado, as primeiras chamadas podem experimentar latência de &quot;início frio&quot; independentemente do tipo de sandbox. Durante essa janela, as primeiras chamadas de avaliação podem resultar em um tempo limite. Uma breve intermitência de pré-aquecimento ou uma carga realista ajudam a eliminar falhas de teste falso-positivo.
 
 ## Tipos de consulta de segmentação do Edge {#query-types}
 
@@ -151,15 +153,15 @@ Mais informações sobre como usar este ponto de extremidade podem ser encontrad
 
 >[!TAB Portal de público-alvo]
 
-No Portal de Público, selecione **[!UICONTROL Criar público-alvo]**.
+No Audience Portal, selecione **[!UICONTROL Create audience]**.
 
 ![O botão Criar público-alvo está realçado no Portal de Público-Alvo.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
-Um popover é exibido. Selecione **[!UICONTROL Regras de compilação]** para entrar no Construtor de segmentos.
+Um popover é exibido. Selecione **[!UICONTROL Build rules]** para entrar no Construtor de segmentos.
 
 ![O botão Criar regras está realçado no popover Criar público-alvo.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
-No Construtor de segmentos, crie uma definição de segmento que corresponda a um dos [tipos de consulta qualificados](#eligible-query-types). Se a definição de segmento se qualificar para segmentação de borda, você poderá selecionar **[!UICONTROL Edge]** como o **[!UICONTROL método de avaliação]**.
+No Construtor de segmentos, crie uma definição de segmento que corresponda a um dos [tipos de consulta qualificados](#eligible-query-types). Se a definição de segmento se qualificar para segmentação de borda, você poderá selecionar **[!UICONTROL Edge]** como **[!UICONTROL Evaluation method]**.
 
 ![A definição de segmento é exibida. O tipo de avaliação está realçado, mostrando que a definição de segmento pode ser avaliada usando a segmentação de borda.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
@@ -315,11 +317,11 @@ Depois de selecionar um público no Audience Portal, a página de detalhes do p�
 
 ![A página de detalhes do público-alvo é exibida para um público-alvo avaliado por meio da segmentação de borda.](../images/methods/edge/audience-details.png)
 
-Para públicos habilitados para borda, o cartão **[!UICONTROL Perfis ao longo do tempo]** é exibido, mostrando o total de métricas qualificadas e o novo público atualizado.
+Para públicos habilitados para borda, o cartão **[!UICONTROL Profiles over time]** é exibido, mostrando o total de métricas qualificadas e o novo público atualizado.
 
-A métrica **[!UICONTROL Total qualificado]** representa o número total de públicos qualificados, com base nas avaliações de borda desse público.
+A métrica **[!UICONTROL Total qualified]** representa o número total de públicos qualificados, com base nas avaliações de borda para esse público.
 
-A métrica **[!UICONTROL Novo público atualizado]** é representada por um gráfico de linhas que mostra a alteração no tamanho do público-alvo por meio da segmentação de borda. Você pode ajustar a lista suspensa para mostrar as últimas 24 horas, a última semana ou os últimos 30 dias.
+A métrica **[!UICONTROL New audience updated]** é representada por um gráfico de linhas que mostra a alteração no tamanho do público-alvo por meio da segmentação de borda. Você pode ajustar a lista suspensa para mostrar as últimas 24 horas, a última semana ou os últimos 30 dias.
 
 ![Os perfis no cartão de ponto estão realçados.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 

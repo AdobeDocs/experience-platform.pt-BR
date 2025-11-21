@@ -3,9 +3,9 @@ keywords: publicidade; a trade desk; advertising trade desk
 title: A conexão com a Trade Desk
 description: A Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais de redirecionamento e direcionadas por público-alvo em origens de inventário de exibição, vídeo e dispositivos móveis.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 940128bf73f856d8459bee23905213651b44916e
+source-git-commit: 4472548fc5b5181cdf8ef8b1666d6e1fafbce588
 workflow-type: tm+mt
-source-wordcount: '1093'
+source-wordcount: '1084'
 ht-degree: 2%
 
 ---
@@ -50,10 +50,10 @@ Todas as identidades na tabela abaixo são mapeamentos obrigatórios.
 
 | Identidade do público alvo | Descrição | Considerações |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Selecione a identidade de destino GAID quando a identidade de origem for um namespace GAID. |
-| IDFA | Apple ID para anunciantes | Selecione a identidade de destino do IDFA quando a identidade de origem for um namespace do IDFA. |
-| ECID | Experience Cloud ID | Essa identidade é obrigatória para que a integração funcione corretamente, mas não é usada para ativação de público-alvo. |
-| A ID da Trade Desk | ID do anunciante na plataforma [!DNL The Trade Desk] | Use essa identidade ao ativar públicos com base na ID proprietária da Trade Desk. |
+| [!DNL GAID] | GOOGLE ADVERTISING ID | Selecione a identidade de destino GAID quando a identidade de origem for um namespace GAID. |
+| [!DNL IDFA] | Apple ID para anunciantes | Selecione a identidade de destino do IDFA quando a identidade de origem for um namespace do IDFA. |
+| [!DNL ECID] | Experience Cloud ID | Essa identidade é obrigatória para que a integração funcione corretamente, mas não é usada para ativação de público-alvo. |
+| [!DNL Tradedesk] | [!DNL TDID] na plataforma [!DNL The Trade Desk] | Use essa identidade ao ativar públicos com base na ID proprietária da Trade Desk. |
 
 {style="table-layout:auto"}
 
@@ -83,7 +83,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/pt-br/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
 
 ## Conectar ao destino {#connect}
 

@@ -3,10 +3,10 @@ keywords: personalização personalizada, destino, destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de público-alvo do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do público-alvo do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44a4d5c592e13cdd1d4d75787dee5e1763fae9a4
 workflow-type: tm+mt
-source-wordcount: '923'
-ht-degree: 10%
+source-wordcount: '992'
+ht-degree: 9%
 
 ---
 
@@ -40,6 +40,12 @@ Esse destino requer o uso de um dos seguintes métodos de coleta de dados, depen
 * Use o [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) se desejar coletar dados do seu site.
 * Use o [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) se desejar coletar dados do seu aplicativo móvel.
 * Use a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/) se não estiver usando o [Web SDK](/help/web-sdk/home.md) ou o [Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), ou se quiser personalizar a experiência do usuário com base nos atributos do perfil.
+
+>[!IMPORTANT]
+>
+>**Requisitos de personalização baseados em atributos:** Se você quiser personalizar com base em atributos de perfil (não apenas na associação de público-alvo), **deverá** usar a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/) com integração autenticada no lado do servidor, independentemente de você também estar usando o Web SDK ou o Mobile SDK para coleta de dados.
+>
+>O Web SDK e o Mobile SDK somente oferecem suporte à personalização com base na associação ao público. A API do Edge Network é **necessária** para recuperar com segurança os atributos de perfil para personalização.
 
 >[!IMPORTANT]
 >

@@ -63,4 +63,4 @@ ht-degree: 44%
    * [Power BI](integrations/power-bi.md)
 * [Consultar conjuntos de dados do painel](query.md)
 * [Exibir insight SQL](view-sql.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

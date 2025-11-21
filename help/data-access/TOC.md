@@ -19,4 +19,4 @@ ht-degree: 75%
 - [API de acesso a dados](api.md)
 - Tutoriais {#tutorials}
    - [Exibir dados do conjunto de dados](tutorials/dataset-data.md)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

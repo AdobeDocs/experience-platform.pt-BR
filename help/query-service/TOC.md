@@ -143,6 +143,6 @@ ht-degree: 25%
    - [Comandos de metadados](sql/metadata.md)
    - [Demonstrativos preparados](sql/prepared-statements.md)
 - [Perguntas frequentes](troubleshooting-guide.md)
-- [INCLUIR NA LISTA DE PERMISSÕES endereço IP](ip-address-allowlist.md)
+- [INCLUO NA LISTA DE PERMISSÕES de endereços IP](ip-address-allowlist.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

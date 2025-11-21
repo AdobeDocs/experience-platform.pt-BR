@@ -4,8 +4,8 @@ description: A API do Reactor permite que os desenvolvedores gerenciem de forma 
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1080'
-ht-degree: 92%
+source-wordcount: '1079'
+ht-degree: 93%
 
 ---
 
@@ -19,7 +19,7 @@ Para exibir todos os endpoints e operações CRUD disponíveis, acesse a página
 
 ## Empresas
 
-Uma empresa representa a organização de um usuário de tags, geralmente um negócio. Essas empresas correspondem inteiramente às IDs de organização. Os usuários da API só terão visibilidade das empresas às quais tiverem acesso.
+Uma empresa representa a organização de um usuário de tags, geralmente um negócio. Estas empresas correspondem a :1 com IDs de organização. Os usuários da API só terão visibilidade das empresas às quais tiverem acesso.
 
 Consulte o [manual de endpoint de empresas](./endpoints/companies.md) para saber como visualizar as empresas disponíveis na API.
 

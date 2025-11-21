@@ -44,11 +44,11 @@ O cliente não foi criado para:
 
 O vídeo a seguir foi projetado para oferecer suporte à sua compreensão da IA do cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/36529?learn=on&quality=12&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Como funciona
 
-A IA do cliente funciona analisando os dados existentes do Evento de experiência do consumidor para prever pontuações de churn ou propensão de conversão. O Adobe percebe que a definição de churn e conversão não é uniforme em todos os casos de uso e, por esse motivo, você tem a capacidade de definir metas de público-alvo personalizadas como um conjunto de condições. Você pode configurar a meta prevista enquanto o evento de interesse estiver presente nos dados de entrada do Evento de experiência do consumidor.
+A IA do cliente funciona analisando os dados existentes do Evento de experiência do consumidor para prever pontuações de churn ou propensão de conversão. A Adobe sabe que a definição de churn e conversão não é uniforme em todos os casos de uso e, por esse motivo, você pode definir metas de público-alvo personalizadas como um conjunto de condições. Você pode configurar a meta prevista enquanto o evento de interesse estiver presente nos dados de entrada do Evento de experiência do consumidor.
 
 ## Próximas etapas
 

@@ -27,4 +27,4 @@ ht-degree: 67%
 - [Conjuntos de mapeamento](mapping-set.md)
 - [Substituições de fluxo](upserts.md)
 - [Manual de solução de problemas](troubleshooting-guide.md)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

@@ -38,4 +38,4 @@ ht-degree: 71%
    * [Centro de excelência](use-cases/center-of-excellence.md)
 * [Manual de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

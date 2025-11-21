@@ -17,7 +17,7 @@ ht-degree: 43%
 
 - [Visão geral do serviço de segmentação](home.md)
 - [Tipos de dados de segmentação](data-types.md)
-- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=pt-BR#segmentation-guardrails)
+- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - API de segmentação {#api}
    - [Visão geral](api/overview.md)
    - [Introdução](api/getting-started.md)
@@ -42,7 +42,7 @@ ht-degree: 43%
    - [Refatoração de restrições de tempo](ui/segment-refactoring.md)
    - Correspondência de segmentos {#segment-match}
       - [Visão geral da correspondência de segmentos](ui/segment-match/overview.md)
-      - [Resolução de problemas](ui/segment-match/troubleshooting.md)
+      - [Solução de problemas](ui/segment-match/troubleshooting.md)
 - Métodos de segmentação {#methods}
    - [Visão geral](methods/overview.md)
    - [Segmentação em lote](methods/batch-segmentation.md)
@@ -72,7 +72,7 @@ ht-degree: 43%
    - [Funções de comparação](pql/comparison-functions.md)
    - [Funções de matriz, lista e definição](pql/array-functions.md)
    - [Funções do mapa](pql/map-functions.md)
-   - [Funções de string](pql/string-functions.md)
+   - [Funções de strings](pql/string-functions.md)
    - [Funções do objeto](pql/object-functions.md)
    - [Funções aritméticas](pql/arithmetic-functions.md)
    - [Funções de agregação](pql/aggregation-functions.md)

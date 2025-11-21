@@ -5,8 +5,8 @@ feature: Use Cases, Profile Enrichment
 exl-id: ee21b988-88f9-4c8e-bd82-7fc55c37ec24
 source-git-commit: 7ee472294e8f255d9de3c15982a6f5d2d3654755
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 77%
+source-wordcount: '1249'
+ht-degree: 72%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 77%
 
 >[!AVAILABILITY]
 >
->* Essa funcionalidade está disponível para clientes que licenciaram o Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
+>* Essa funcionalidade está disponível para clientes que licenciaram o Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
 
 Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.
 
@@ -26,7 +26,7 @@ A maioria das marcas, mesmo aquelas ricas com dados primários, pode se benefici
 
 A Adobe Real-time Customer Data Platform pode ajudar as marcas a complementar com responsabilidade seus dados primários com insights, identificadores e atributos valiosos de um ou mais parceiros confiáveis.
 
-A Adobe entende que não há uma abordagem única para todos os casos e permite uma interoperabilidade perfeita com parceiros de dados e identidade para promover um engajamento individualizado e criterioso em todos os estágios do ciclo de vida do cliente. Esses recursos são sustentados por uma estrutura confiável de governança de dados, permitindo um controle aprimorado sobre onde e como os dados do parceiro são usados. Por exemplo, você pode querer usar os insights fornecidos pelo parceiro para segmentação, mas não para personalização.
+A Adobe entende que não há uma abordagem única para todos e permite uma interoperabilidade perfeita com parceiros de dados e identidade para promover um engajamento individualizado e criterioso em todos os estágios do ciclo de vida do cliente. Esses recursos são sustentados por uma estrutura confiável de governança de dados, permitindo um controle aprimorado sobre onde e como os dados do parceiro são usados. Por exemplo, você pode querer usar os insights fornecidos pelo parceiro para segmentação, mas não para personalização.
 
 Por exemplo, siga as etapas descritas neste caso de uso quando precisar enriquecer os registros do cliente com sinais demográficos e de intenção.
 
@@ -41,13 +41,13 @@ Ao considerar suplementar seus perfis próprios com atributos de parceiros de da
 
 >[!WARNING]
 >
->Os atributos adicionais fornecidos pelo parceiro assimilados na Real-Time CDP afetam seu *volume de dados total*. Leia a [Descrição do Produto Real-time Customer Data Platform](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) para obter mais informações sobre o volume de dados total.
+>Os atributos adicionais fornecidos pelo parceiro assimilados na Real-Time CDP afetam seu *volume de dados total*. Leia a [Descrição do Produto Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) para obter mais informações sobre o volume de dados total.
 
 ## Apresentação em vídeo {#video-walkthrough}
 
 Assista ao tutorial em vídeo abaixo para obter uma apresentação de como complementar públicos-alvo primários com atributos fornecidos pelo parceiro:
 
->[!VIDEO](https://video.tv.adobe.com/v/3452458/?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
 
 ## Como atingir o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 
@@ -71,14 +71,14 @@ Esta etapa é abordada nos [pré-requisitos](#prerequisites-and-planning) e a Ad
 
 Neste ponto, você está estendendo sua estrutura de gerenciamento de dados na Real-Time CDP para acomodar os atributos fornecidos por parceiros.
 
-Há a opção de criar um novo esquema da classe **[!UICONTROL Perfil individual XDM]** ou estender um esquema já existente do mesmo tipo para incluir atributos fornecidos por parceiros. A Adobe recomenda criar um novo esquema com um novo conjunto de grupos de campos que melhor representem os atributos adicionais do fornecedor de dados. Isso garante que seus esquemas de dados estejam limpos e possam evoluir independentemente uns dos outros.
+Você tem a opção de criar um novo esquema da classe **[!UICONTROL XDM Individual Profile]** ou estender um esquema existente do mesmo tipo para incluir atributos fornecidos pelo parceiro. A Adobe recomenda criar um novo esquema com um novo conjunto de grupos de campos que melhor representem os atributos adicionais do fornecedor de dados. Isso garante que seus esquemas de dados estejam limpos e possam evoluir independentemente uns dos outros.
 
 Para incluir atributos fornecidos por parceiros a um esquema, é possível criar um novo grupo de campos com os atributos esperados ou usar um dos grupos de campos pré-configurados fornecidos pela Adobe.
 
 Leia as páginas da documentação abaixo para obter mais informações:
 
 * [Noções básicas da composição de esquemas](/help/xdm/schema/composition.md)
-* [Visão geral da classe [!UICONTROL Perfil individual XDM] &#x200B;](/help/xdm/classes/individual-profile.md)
+* [Visão geral da classe [!UICONTROL XDM Individual Profile]](/help/xdm/classes/individual-profile.md)
 * [Criar e editar esquemas na interface](/help/xdm/ui/resources/schemas.md)
 * [Criar e editar grupos de campos de esquema na interface](/help/xdm/ui/resources/field-groups.md)
 
@@ -99,7 +99,7 @@ Além disso, nesta etapa, pense em como seu modelo de governança de dados mudar
 
 >[!TIP]
 >
->Se optar por suplementar os perfis de clientes com um identificador com base em pessoas do fornecedor de dados, será possível criar um novo tipo de identidade: **[[!UICONTROL ID do Parceiro]](/help/identity-service/features/namespaces.md)**.
+>Se você optar por complementar seus perfis de clientes com um identificador baseado em pessoas do fornecedor de dados, será possível criar um novo tipo de identidade do tipo **[[!UICONTROL Partner ID]](/help/identity-service/features/namespaces.md)**.
 >
 >Leia mais sobre a ID do parceiro na [seção de tipos de identidade](/help/identity-service/features/namespaces.md).
 >Leia sobre [como definir campos de identidade](/help/xdm/ui/fields/identity.md) na interface da Experience Platform.
@@ -136,6 +136,6 @@ Observe as seguintes limitações ao explorar o caso de uso descrito nesta pági
 
 Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
 
-* Use o suporte a dados de terceiros da Real-Time CDP para [expandir sua base de perfis com prospectos de parceiros de dados e interaja com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
+* Use o suporte a dados de terceiros da Real-Time CDP para [expandir sua base de perfis com perfis de clientes potenciais de parceiros de dados e interaja com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
 * [Personalize experiências no site para visitantes desconhecidos usando o reconhecimento de visitante auxiliado por parceiro](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário se autentique ou tenha um histórico anterior com sua marca.
 * [Ativação ampliada de perfis de prospecto e públicos-alvo de prospecto](/help/destinations/ui/activate-prospect-audiences.md) para selecionar destinos.

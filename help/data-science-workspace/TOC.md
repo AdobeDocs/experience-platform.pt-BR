@@ -36,17 +36,17 @@ ht-degree: 33%
    * [MLServices](api/mlservices.md)
    * [Insights](api/insights.md)
    * [Apêndice](api/appendix.md)
-* Receitas pré-compiladas {#pre-built-recipes}
+* Receitas pré-construídas {#pre-built-recipes}
    * [Receita de recomendação do produto](pre-built-recipes/product-recommendations.md)
    * [Previsão de compra do produto](pre-built-recipes/product-purchase-prediction.md)
    * [Receita de venda de varejo](pre-built-recipes/retail-sales.md)
-* Criação de Modelo {#authoring}
+* Criação de modelo {#authoring}
    * [SDK de criação de modelo](authoring/sdk.md)
    * [Criar um pipeline de recurso](authoring/feature-pipeline.md)
    * [Criação de modelos usando o Experience Platform SDK (Python)](authoring/platform-sdk.md)
    * [Acesso a dados Python](authoring/python.md)
    * [Spark data access](authoring/spark.md)
-* Tutoriais de modelos e receitas {#models-recipes}
+* Tutoriais de modelo e receita {#models-recipes}
    * [Criar e publicar um modelo de aprendizado de máquina](models-recipes/create-publish-model.md)
    * [Crie os esquemas e conjuntos de dados da demonstração do Luma](models-recipes/create-luma-data.md)
    * [Criar o esquema e o conjunto de dados de Vendas de Varejo](models-recipes/create-retails-sales-dataset.md)
@@ -65,4 +65,4 @@ ht-degree: 33%
    * [Programar treinamento automatizado e pontuação em um serviço (UI)](models-recipes/schedule-models-ui.md)
 * [Manual de solução de problemas](troubleshooting-guide.md)
 * [Referência da API](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

@@ -6,8 +6,8 @@ feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '804'
-ht-degree: 3%
+source-wordcount: '799'
+ht-degree: 12%
 
 ---
 
@@ -17,13 +17,13 @@ ht-degree: 3%
 >
 >Como os alertas são compatíveis com sandboxes de produção e desenvolvimento, você pode assiná-los em qualquer sandbox. Quando uma sandbox é redefinida, todos os alertas de assinatura também são redefinidos e, quando uma sandbox é excluída, todos os alertas de assinatura são excluídos.
 
-O Adobe Experience Platform permite assinar alertas baseados em eventos relacionados a atividades do Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar a [[!DNL Observability Insights] API](../api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreram erros.
+A Adobe Experience Platform permite que você se inscreva para receber alertas baseados em eventos relacionados às atividades da Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de pesquisar a [[!DNL Observability Insights] API](../api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreu algum erro.
 
 Quando um determinado conjunto de condições em suas operações do Experience Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), o Experience Platform pode enviar mensagens de alerta para qualquer usuário em sua organização que se inscreveu neles. Essas mensagens podem se repetir em um intervalo predefinido até que o alerta seja resolvido.
 
 Este documento fornece uma visão geral dos alertas no Adobe Experience Platform, incluindo a estrutura de como as regras de alerta são definidas.
 
-## Alertas únicos vs. alertas repetitivos
+## Alertas únicos vs. alertas repetidos
 
 Os alertas do Experience Platform podem ser enviados uma vez ou repetidos em um intervalo predefinido até serem resolvidos. Os casos de uso de cada uma dessas opções devem diferir das seguintes maneiras:
 
@@ -58,7 +58,7 @@ Os alertas podem ser recebidos e gerenciados por meio de dois canais:
 
 ### Eventos de E/S {#events}
 
-Os alertas podem ser enviados para um webhook configurado para facilitar a automação eficiente do monitoramento de atividades. Para receber alertas via webhook, você deve registrar o webhook para alertas do Experience Platform no Adobe Developer Console. Consulte o manual sobre [assinatura de notificações de eventos do Adobe I/O](./subscribe.md) para obter as etapas específicas.
+Os alertas podem ser enviados a um webhook configurado para facilitar a automação eficiente do monitoramento de atividades. Para receber alertas via webhook, você deve registrar o webhook para alertas do Experience Platform no Adobe Developer Console. Consulte o manual sobre [assinatura de notificações de eventos do Adobe I/O](./subscribe.md) para obter as etapas específicas.
 
 ### Interface do usuário do Experience Platform {#ui}
 
@@ -71,13 +71,13 @@ Para trabalhar com alertas na interface do usuário do Experience Platform, voc�
 | Permissão | Descrição |
 | --- | --- |
 | Exibir alertas | Permite exibir as mensagens de alerta recebidas. |
-| Exibir histórico de alertas* | Permite exibir um histórico de alertas recebidos através da guia [!UICONTROL Alertas]. |
-| Gerenciar alertas* | Permite habilitar e desabilitar regras de alerta através da guia [!UICONTROL Alertas]. |
-| Resolver alertas* | Permite resolver alertas acionados por meio da guia [!UICONTROL Alertas]. |
+| Exibir histórico de alertas* | Permite exibir um histórico de alertas recebidos por meio da guia [!UICONTROL Alerts]. |
+| Gerenciar alertas* | Permite ativar e desativar as regras de alerta por meio da guia [!UICONTROL Alerts]. |
+| Resolver alertas* | Permite resolver alertas acionados por meio da guia [!UICONTROL Alerts]. |
 
 {style="table-layout:auto"}
 
-**Para acessar a guia [!UICONTROL Alertas], você também deve receber a permissão Exibir Alertas em combinação com uma das outras permissões.*
+**Para acessar a guia [!UICONTROL Alerts], você também deve receber a permissão Exibir Alertas em combinação com uma das outras permissões.*
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Com a permissão Exibir Alertas, você pode exibir alertas recebidos selecionand
 >
 > Selecione um alerta para navegar para um painel relacionado e obter informações mais detalhadas sobre por que o alerta foi acionado.
 
-Além disso, a guia [!UICONTROL Alertas] na interface do usuário permite que usuários individuais assinem tipos de alertas específicos e que os administradores habilitem ou desabilitem regras de alertas completamente. Consulte o [guia da interface](./ui.md) para obter mais informações sobre como gerenciar alertas.
+Além disso, a guia [!UICONTROL Alerts] na interface do usuário permite que usuários individuais assinem tipos de alertas específicos e que administradores habilitem ou desabilitem regras de alertas completamente. Consulte o [guia da interface](./ui.md) para obter mais informações sobre como gerenciar alertas.
 
 ## Próximas etapas
 

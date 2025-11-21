@@ -6,7 +6,7 @@ feature: Get Started, Use Cases
 exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2321'
 ht-degree: 1%
 
 ---
@@ -156,7 +156,7 @@ Por exemplo, para assimilar os dados do CRM da Luma, filtre o catálogo pelo *CR
 
    <!--    ![image](assets/luma-source-import.png) -->
 
-   Por exemplo, selecione **[!UICONTROL Contatos]**. Uma visualização dos dados de contatos é carregada automaticamente para que você possa verificar se tudo está conforme esperado.
+   Por exemplo, selecione **[!UICONTROL Contacts]**. Uma visualização dos dados de contatos é carregada automaticamente para que você possa verificar se tudo está conforme esperado.
 
    A Real-Time CDP tira muito do trabalho manual desse processo, mapeando automaticamente campos padrão para o esquema de perfil [!DNL Experience Data Model] (XDM).
 
@@ -235,7 +235,7 @@ Como Sarah adicionou um item de presente aparente no carrinho e o abandonou, Lum
 
 Ao adicionar o público-alvo &quot;Abandonadores do carrinho de presente&quot;, você pode ver aproximadamente quantas pessoas fazem parte desse público-alvo. É possível executar ações nele e disponibilizá-lo para personalização em canais.
 
-Selecione **[!UICONTROL Enviar para destinos]**.
+Selecione **[!UICONTROL Send to destinations]**.
 
 No Real-Time CDP, o Luma pode atuar de forma contínua em seus públicos para personalização.\
 Aqui vemos todos os destinos disponíveis para a Luma enviar esse destino para o, soluções da Adobe e não-Adobe:
@@ -260,7 +260,7 @@ Você também pode agendar a exportação de público-alvo para iniciar ou encer
 >
 >Opcionalmente, se você selecionar o campo de data, ele agendará automaticamente 90 dias para sair.
 
-Selecione **[!UICONTROL Salvar]** para ir para a próxima página.
+Selecione **[!UICONTROL Save]** para ir para a próxima página.
 
 Quando um cliente neste público-alvo faz uma compra, sua associação a este público-alvo é suprimida em tempo real. Eles não se qualificam mais porque seu status mudou.
 

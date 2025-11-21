@@ -19,14 +19,14 @@ ht-degree: 21%
 - Assimilação por transmissão {#streaming}
    - [Visão geral](streaming-ingestion/overview.md)
    - [Conector Kafka](streaming-ingestion/kafka.md)
-   - [Resolução de problemas](streaming-ingestion/troubleshooting.md)
+   - [Solução de problemas](streaming-ingestion/troubleshooting.md)
    - [Endereço IP ➡ Incluir na lista de permissões](streaming-ingestion/allowlisting.md)
 - Assimilação em lote{#batch}
    - [Introdução às APIs de assimilação em lote](batch-ingestion/getting-started.md)
    - [Visão geral da API](batch-ingestion/overview.md)
    - [Guia do desenvolvedor de API](batch-ingestion/api-overview.md)
    - [Assimilação parcial de lote](batch-ingestion/partial.md)
-   - [Resolução de problemas](batch-ingestion/troubleshooting.md)
+   - [Solução de problemas](batch-ingestion/troubleshooting.md)
 - Tutoriais {#tutorials}
    - Mapear um arquivo CSV para XDM {#map-csv}
       - [Visão geral](./tutorials/map-csv/overview.md)

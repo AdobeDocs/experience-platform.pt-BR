@@ -5,7 +5,7 @@ feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1190'
+source-wordcount: '1181'
 ht-degree: 9%
 
 ---
@@ -30,7 +30,7 @@ Este documento fornece uma visão geral de alto nível do encaminhamento de even
 >
 >Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados da Experience Platform, consulte a [visão geral da coleta de dados](../../../collection/home.md).
 
-O encaminhamento de eventos, combinado com a [Web SDK](/help/web-sdk/home.md) e a [SDK Móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=pt-BR) da Adobe Experience Platform, oferece os seguintes benefícios:
+O encaminhamento de eventos, combinado com a [Web SDK](/help/web-sdk/home.md) e a [SDK Móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) da Adobe Experience Platform, oferece os seguintes benefícios:
 
 **Desempenho**:
 
@@ -53,7 +53,7 @@ Embora as tags coletem dados do evento diretamente do seu site ou aplicativo mó
 
 ### Propriedades {#properties}
 
-O encaminhamento de eventos mantém seu próprio armazenamento de propriedades separado das marcas, que podem ser visualizadas na interface do usuário do Experience Platform ou na interface da Coleção de dados selecionando **[!UICONTROL Encaminhamento de eventos]** na navegação à esquerda.
+O encaminhamento de eventos mantém seu próprio armazenamento de propriedades separado das marcas, que podem ser visualizadas na interface do usuário do Experience Platform ou na interface da Coleção de dados selecionando **[!UICONTROL Event Forwarding]** na navegação à esquerda.
 
 >[!TIP]
 >
@@ -61,11 +61,11 @@ O encaminhamento de eventos mantém seu próprio armazenamento de propriedades s
 
 ![Propriedades de encaminhamento de eventos na Interface da Coleção de Dados.](../../images/ui/event-forwarding/overview/properties.png)
 
-Todas as propriedades do encaminhamento de eventos listam **[!UICONTROL Edge]** como sua plataforma. Eles não fazem distinção entre Web ou dispositivos móveis porque processam apenas dados recebidos do Experience Platform Edge Network, que pode receber dados de evento de plataformas da Web e móveis.
+Todas as propriedades de encaminhamento de eventos listam **[!UICONTROL Edge]** como sua plataforma. Eles não fazem distinção entre Web ou dispositivos móveis porque processam apenas dados recebidos do Experience Platform Edge Network, que pode receber dados de evento de plataformas da Web e móveis.
 
 ### Extensões {#extensions}
 
-O encaminhamento de eventos tem seu próprio catálogo de extensões compatíveis, como a extensão [Core](../../extensions/server/core/overview.md) e a extensão [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Você pode exibir as extensões disponíveis para propriedades de encaminhamento de eventos na interface selecionando **[!UICONTROL Extensões]** na navegação à esquerda, seguido por **[!UICONTROL Catálogo]**.
+O encaminhamento de eventos tem seu próprio catálogo de extensões compatíveis, como a extensão [Core](../../extensions/server/core/overview.md) e a extensão [Adobe Cloud Connector](../../extensions/server/cloud-connector/overview.md). Você pode exibir as extensões disponíveis para propriedades de encaminhamento de eventos na interface selecionando **[!UICONTROL Extensions]** na navegação à esquerda, seguido de **[!UICONTROL Catalog]**.
 
 Você pode ver recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
 

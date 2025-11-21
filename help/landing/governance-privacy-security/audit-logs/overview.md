@@ -1,5 +1,5 @@
 ---
-title: Audit Logs Overview
+title: Visão geral dos logs de auditoria
 description: Saiba como os logs de auditoria permitem ver quem realizou quais ações na Adobe Experience Platform.
 role: Admin,Developer
 feature: Audits
@@ -51,10 +51,10 @@ A tabela a seguir descreve quais ações em quais recursos são registrados por 
 | [Instância da IA de atribuição](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Habilitar</li><li>Desabilitar</li></ul> |
 | [Logs de auditoria](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exportar</li></ul> |
 | [Classe](../../../xdm/schema/composition.md#class) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
-| Computed attribute | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
+| Atributo calculado | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Instância da IA do cliente](../../../intelligent-services/customer-ai/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Habilitar</li><li>Desabilitar</li></ul> |
-| [Conjunto de dados](../../../catalog/datasets/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Enable for [Real-Time Customer Profile](../../../profile/home.md)</li><li>Desativar para perfil</li><li>Adicionar dados</li><li>Excluir lote</li></ul> |
-| [Datastream](../../../datastreams/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Habilitar</li><li>Desabilitar</li><li>[Edit Mapping](../../../datastreams/data-prep.md)</li></ul> |
+| [Conjunto de dados](../../../catalog/datasets/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Habilitar para [Perfil de Cliente em Tempo Real](../../../profile/home.md)</li><li>Desativar para perfil</li><li>Adicionar dados</li><li>Excluir lote</li></ul> |
+| [Sequência de dados](../../../datastreams/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Habilitar</li><li>Desabilitar</li><li>[Editar mapeamento](../../../datastreams/data-prep.md)</li></ul> |
 | [Tipos de dados](../../../xdm/schema/composition.md#data-type) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Destino](../../../destinations/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Habilitar</li><li>Desabilitar</li><li>Ativar conjunto de dados</li><li>Remover conjunto de dados</li><li>Ativar perfil</li><li>Remover perfil</li></ul> |
 | [Grupo de campos](../../../xdm/schema/composition.md#field-group) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
@@ -114,20 +114,20 @@ Os seguintes filtros estão disponíveis para eventos de auditoria na interface 
 | [!UICONTROL Category] | Use o menu suspenso para filtrar os resultados exibidos por [categoria](#category). |
 | [!UICONTROL Action] | Filtrar por ação. As ações disponíveis para cada serviço podem ser vistas na tabela de recursos acima. |
 | [!UICONTROL User] | Insira a ID de usuário completa (por exemplo, `johndoe@acme.com`) para filtrar por usuário. |
-| [!UICONTROL Status] | Filtrar eventos de auditoria por resultado: êxito, falha, permissão ou negação devido à falta de [permissões de controle de acesso](../../../access-control/home.md). Para uma ação executada, os eventos principais mostram [!UICONTROL Allow] ou [!UICONTROL Deny]. When the core event is [!UICONTROL Allow], it may have attached one or more enhanced events showing **[!UICONTROL Success]** or **[!UICONTROL Failure]**. For example, a successful action shows [!UICONTROL Allow] on the core event and [!UICONTROL Success] on the attached enhanced event. |
-| [!UICONTROL Date] | Selecione uma data inicial e/ou final para definir um intervalo de datas para filtrar os resultados. Data can be exported with a 90-day lookback period (for example, 2021-12-15 to 2022-03-15). This can differ by event type. |
+| [!UICONTROL Status] | Filtrar eventos de auditoria por resultado: êxito, falha, permissão ou negação devido à falta de [permissões de controle de acesso](../../../access-control/home.md). Para uma ação executada, os eventos principais mostram [!UICONTROL Allow] ou [!UICONTROL Deny]. Quando o evento principal é [!UICONTROL Allow], ele pode ter anexado um ou mais eventos aprimorados mostrando **[!UICONTROL Success]** ou **[!UICONTROL Failure]**. Por exemplo, uma ação bem-sucedida mostra [!UICONTROL Allow] no evento principal e [!UICONTROL Success] no evento aprimorado anexado. |
+| [!UICONTROL Date] | Selecione uma data inicial e/ou final para definir um intervalo de datas para filtrar os resultados. Os dados podem ser exportados com um período de lookback de 90 dias (por exemplo, 2021-12-15 para 2022-03-15). Isso pode diferir por tipo de evento. |
 
 Para remover um filtro, selecione o &quot;X&quot; no ícone de preenchimento do filtro em questão ou selecione **[!UICONTROL Clear all]** para remover todos os filtros.
 
-![The Audits dashboard with clear filter highlighted.](../../images/audit-logs/clear-filters.png)
+![Painel de Auditorias com filtro limpo realçado.](../../images/audit-logs/clear-filters.png)
 
 Os dados do log de auditoria retornados contêm as seguintes informações em todas as consultas que atendem aos critérios de filtro escolhidos.
 
 | Nome da coluna | Descrição |
 |---|---|
-| [!UICONTROL Timestamp] | The exact date and time of the action performed in a `month/day/year hour:minute AM/PM` format. |
-| [!UICONTROL Asset Name] | The value for the [!UICONTROL Asset Name] field depends on the category chosen as a filter. |
-| [!UICONTROL Category] | This field matches the category selected in the filter dropdown. |
+| [!UICONTROL Timestamp] | A data e hora exatas da ação executada em um formato `month/day/year hour:minute AM/PM`. |
+| [!UICONTROL Asset Name] | O valor do campo [!UICONTROL Asset Name] depende da categoria escolhida como filtro. |
+| [!UICONTROL Category] | Este campo corresponde à categoria selecionada na lista suspensa de filtros. |
 | [!UICONTROL Action] | As ações disponíveis dependem da categoria escolhida como filtro. |
 | [!UICONTROL User] | Esse campo fornece a ID do usuário que executou a consulta. |
 
@@ -139,23 +139,23 @@ Para exportar a lista atual de logs de auditoria, selecione **[!UICONTROL Downlo
 
 >[!NOTE]
 >
->Os registros podem ser solicitados em intervalos de 90 dias até 365 dias retroativamente. However, the maximum amount of logs that can be returned during a single export is 10,000 audit events (either core or enhanced).
+>Os registros podem ser solicitados em intervalos de 90 dias até 365 dias retroativamente. No entanto, a quantidade máxima de logs que podem ser retornados durante uma única exportação é de 10.000 eventos de auditoria (principais ou aprimorados).
 
 ![O painel de Auditorias com o [!UICONTROL Download log] realçado.](../../images/audit-logs/download.png)
 
-In the dialog that appears, select your preferred format (either **[!UICONTROL CSV]** or **[!UICONTROL JSON]**), then select **[!UICONTROL Download]**. The browser downloads the generated file and saves it to your machine.
+Na caixa de diálogo exibida, selecione seu formato preferido (**[!UICONTROL CSV]** ou **[!UICONTROL JSON]**) e, em seguida, selecione **[!UICONTROL Download]**. O navegador baixa o arquivo gerado e o salva em seu computador.
 
-![The file format selection dialog with [!UICONTROL Download] highlighted.](../../images/audit-logs/select-download-format.png)
+![A caixa de diálogo de seleção de formato de arquivo com [!UICONTROL Download] realçada.](../../images/audit-logs/select-download-format.png)
 
 ## Ativar alertas {#enable-alerts}
 
-You can enable audit alerts to receive notifications for the following rules:
+Você pode ativar alertas de auditoria para receber notificações das seguintes regras:
 
 * Criação de público
 * Atualização de público
-* Audience delete
-* Dataset create
-* Dataset update
+* Exclusão de público
+* Criação do conjunto de dados
+* Atualização do conjunto de dados
 * Exclusão do conjunto de dados
 * Criação de esquema
 * Atualização de esquema
@@ -169,7 +169,7 @@ Todas as ações que você pode executar na interface do usuário também podem 
 
 ## Gerenciamento de logs de auditoria para o Adobe Admin Console
 
-Para saber como gerenciar logs de auditoria para atividades no Adobe Admin Console, consulte o seguinte [documento](https://helpx.adobe.com/br/enterprise/using/audit-logs.html).
+Para saber como gerenciar logs de auditoria para atividades no Adobe Admin Console, consulte o seguinte [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Próximas etapas e recursos adicionais
 
@@ -177,4 +177,4 @@ Este guia abordou como gerenciar logs de auditoria no Experience Platform. Para 
 
 Para reforçar sua compreensão de logs de auditoria no Experience Platform, assista ao seguinte vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/344653?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

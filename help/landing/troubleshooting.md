@@ -213,7 +213,7 @@ Essa mensagem de erro é exibida em qualquer um dos casos abaixo:
 
 Veja a seguir uma lista de guias de solução de problemas e a documentação de referência da API para as APIs [!DNL Experience Platform]. Cada guia de solução de problemas fornece respostas a perguntas frequentes e soluções para problemas específicos de serviços individuais do [!DNL Experience Platform]. Os documentos de referência da API fornecem um guia abrangente para todos os endpoints disponíveis para cada serviço e mostram exemplos de corpos de solicitação, respostas e códigos de erro que você pode receber.
 
-| Serviço | Referência da API | Resolução de problemas |
+| Serviço | Referência da API | Solução de problemas |
 | --- | --- | --- |
 | Controle de acesso | [API de controle de acesso](https://www.adobe.io/experience-platform-apis/references/access-control/) | [Guia de solução de problemas de controle de acesso](../access-control/troubleshooting-guide.md) |
 | Assimilação de dados Adobe Experience Platform | [[!DNL Batch Ingestion API]](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/) | [Guia de solução de problemas de assimilação em lote](../ingestion/batch-ingestion/troubleshooting.md) |

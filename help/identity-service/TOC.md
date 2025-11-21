@@ -47,4 +47,4 @@ ht-degree: 36%
 - [Definir campos de identidade na interface](label-identities.md)
 - [Processamento de solicitação de privacidade](privacy.md)
 - [Manual de solução de problemas](troubleshooting-guide.md)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

@@ -25,4 +25,4 @@ ht-degree: 68%
    * [Guia da interface do usuário](./alerts/ui.md)
    * [Assinar notificações de eventos de E/S](./alerts/subscribe.md)
 * [Referência da API](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

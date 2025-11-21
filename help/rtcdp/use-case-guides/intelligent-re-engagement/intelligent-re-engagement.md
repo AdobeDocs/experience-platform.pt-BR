@@ -36,18 +36,18 @@ Você construirá esquemas, conjuntos de dados e públicos à medida que trabalh
 
 Ao concluir as etapas para implementar o caso de uso, você usará a seguinte funcionalidade do Real-Time CDP e do Adobe Journey Optimizer (listada na ordem em que será usada). Verifique se tem as [permissões de controle de acesso baseado em atributo](/help/access-control/home.md) necessárias para todas essas áreas, ou solicite ao(à) administrador(a) que as conceda a você.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=pt-BR) - Integra dados em fontes de dados para alimentar a campanha. Esses dados são usados para criar os públicos-alvo da campanha e exibir elementos de dados personalizados usados no email e nos blocos promocionais da Web (por exemplo, nome ou informações relacionadas à conta). A CDP também é usada para ativar públicos-alvo no email e na Web (via [!DNL Adobe Target]).
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - Integra dados em fontes de dados para alimentar a campanha. Esses dados são usados para criar os públicos-alvo da campanha e exibir elementos de dados personalizados usados no email e nos blocos promocionais da Web (por exemplo, nome ou informações relacionadas à conta). A CDP também é usada para ativar públicos-alvo no email e na Web (via [!DNL Adobe Target]).
    * [Esquemas](/help/xdm/home.md)
    * [Perfis](/help/profile/home.md)
    * [Conjuntos de dados](/help/catalog/datasets/overview.md)
    * [Públicos-alvo](/help/segmentation/home.md)
-   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
    * [Destinos](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=pt-BR) - Ajuda você a fornecer experiências conectadas, contextuais e personalizadas aos seus clientes.
-   * [Acionador de evento ou público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=pt-BR)
+   * [Acionador de evento ou público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Públicos-alvo/Eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=pt-BR)
-   * [Ações de Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR)
+   * [Ações de Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Como obter o caso de uso {#achieve-use-case-instruction}
 
@@ -141,7 +141,7 @@ O grupo de campos [Consentimentos e Preferências](/help/xdm/field-groups//profi
 
 +++Detalhes do teste de perfil (grupo de campos)
 
-Este grupo de campos permite testar sua jornada antes de ela ser publicada, usando perfis de teste. Para obter mais informações sobre como criar perfis de teste, leia o [tutorial Criar perfis de teste](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=pt-BR) e o [tutorial Testar o jornada](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=pt-BR).
+Este grupo de campos permite testar sua jornada antes de ela ser publicada, usando perfis de teste. Para obter mais informações sobre como criar perfis de teste, leia o [tutorial Criar perfis de teste](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) e o [tutorial Testar o jornada](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
 
 +++
 
@@ -314,11 +314,11 @@ Para obter mais informações sobre como criar um [conjunto de dados](/help/cata
 
 >[!IMPORTANT]
 >
->Oferecer aos clientes a capacidade de cancelar a inscrição para receber comunicações de uma marca, bem como garantir que essa escolha seja respeitada, é um requisito legal. Saiba mais sobre a legislação aplicável na [Visão geral das regras de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=pt-BR).
+>Oferecer aos clientes a capacidade de cancelar a inscrição para receber comunicações de uma marca, bem como garantir que essa escolha seja respeitada, é um requisito legal. Saiba mais sobre a legislação aplicável na [Visão geral das regras de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
 #### Políticas de consentimento
 
-Ao criar um caminho de reengajamento, considere adicionar as [políticas de consentimento](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=pt-BR) a seguir:
+Ao criar um caminho de reengajamento, considere adicionar as [políticas de consentimento](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) a seguir:
 
 * Se `consents.marketing.email.val = "Y"` então pode enviar um email
 * Se `consents.marketing.sms.val = "Y"` então pode SMS
@@ -346,7 +346,7 @@ Não há [políticas de uso de dados](/help/data-governance/policies/overview.md
 
 Os cenários de reengajamento usam públicos para definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da sua loja de perfis para distinguir um grupo comercializável de pessoas da sua base de clientes. Os públicos podem ser criados de várias maneiras no [!DNL Adobe Experience Platform].
 
-Para obter mais informações sobre como criar um público, leia o [guia da interface do usuário do serviço de público-alvo](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=pt-BR#create-audience).
+Para obter mais informações sobre como criar um público, leia o [guia da interface do usuário do serviço de público-alvo](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 
 Para obter mais informações sobre como compor diretamente [Públicos-alvo](/help/segmentation/home.md), leia o [Guia da Interface do Usuário de Composição de Público](/help/segmentation/ui/audience-composition.md).
 
@@ -436,7 +436,7 @@ Esta jornada não requer a criação de públicos-alvo.
 >
 >[!DNL Adobe Journey Optimizer] não abrange tudo o que é mostrado nos diagramas. Todos os [anúncios de mídia pagos](/help/destinations/catalog/social/overview.md) são criados em [!UICONTROL Destinations].
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR) ajuda você a fornecer experiências conectadas, contextuais e personalizadas aos seus clientes. A jornada do cliente envolve todo o processo de interação do cliente com a marca. Cada jornada de caso de uso requer informações específicas. Veja abaixo os dados precisos necessários para cada jornada.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) ajuda você a fornecer experiências conectadas, contextuais e personalizadas aos seus clientes. A jornada do cliente envolve todo o processo de interação do cliente com a marca. Cada jornada de caso de uso requer informações específicas. Veja abaixo os dados precisos necessários para cada jornada.
 
 >[!BEGINTABS]
 
@@ -446,7 +446,7 @@ O cenário de navegação de produto abandonado segmenta a navegação de produt
 
 +++Eventos
 
-Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=pt-BR).
+Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 1: visualizações do produto
    * Esquema: Transações digitais do cliente
@@ -571,7 +571,7 @@ O cenário de carrinho abandonado segmenta os produtos que foram colocados no ca
 
 +++Eventos
 
-Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=pt-BR).
+Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 2: Adicionar ao carrinho
    * Esquema: Transações digitais do cliente
@@ -704,7 +704,7 @@ O cenário de confirmação de pedido se concentra nas compras de produtos feita
 
 +++Eventos
 
-Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=pt-BR).
+Os eventos permitem acionar as jornadas de forma unitária para enviar mensagens em tempo real à pessoa que flui para a jornada. Para obter mais informações sobre eventos, leia o [guia de eventos gerais](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
 
 * Evento 4: compras online
    * Esquema: Transações digitais do cliente
@@ -755,7 +755,7 @@ A lógica da chave da tela de jornada exige que você identifique eventos espec�
 
 >[!ENDTABS]
 
-Para obter mais informações sobre como criar jornadas no [!DNL Adobe Journey Optimizer], leia o [Guia de Introdução ao jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR).
+Para obter mais informações sobre como criar jornadas no [!DNL Adobe Journey Optimizer], leia o [Guia de Introdução ao jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Configuração de anúncios de mídia paga em destinos {#paid-media-ads}
 

@@ -137,7 +137,7 @@ ht-degree: 92%
 ## Versão 1.3.0 - 28 de janeiro de 2022
 
 * Adição do link Sobre para mostrar a versão atual e as notas da versão.
-* Adição de um botão para exibir ocorrências pós-processadas de solicitações do Analytics. O botão de alternância está disponível na seção Analytics.
+* Adição de um botão de alternância para exibir ocorrências pós-processadas de solicitações do Analytics. O botão de alternância está disponível na seção Analytics.
 * Correção de um problema que ocorria ao fechar a sessão de depuração remota fora do Debugger.
 * Correção de uma notificação de erro visível na guia Transações do Edge do SDK da Web.
 * Correção de tags da Adobe que apareceiam no aviso de descontinuação da página quando o Debugger acessava o objeto _satellite.

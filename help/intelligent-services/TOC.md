@@ -56,4 +56,4 @@ ht-degree: 46%
       - [Chaves gerenciadas pelo cliente](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Governança de dados](customer-ai/cai-data-governance/data-governance.md)
       - [Políticas de governança](customer-ai/cai-data-governance/governance-policies.md)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest?lang=pt-BR)
+- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

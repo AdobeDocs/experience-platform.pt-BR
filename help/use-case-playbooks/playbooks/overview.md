@@ -6,7 +6,7 @@ role: Developer, User, Admin, Leader
 exl-id: 9c5c4f61-ea99-4f54-9b77-d486be29813c
 source-git-commit: 152d7d29494d586016260ed6ed3d3f60e6bf766b
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '523'
 ht-degree: 30%
 
 ---
@@ -29,7 +29,7 @@ O que há neste guia de documentação:
 
 ## Visão geral {#overview}
 
-Os [!UICONTROL manuais de casos de uso] podem ajudar a resolver o problema ao começar a usar o Real-Time CDP ou o Adobe Journey Optimizer, quando talvez você não saiba exatamente com o que começar ou como criar os ativos certos para atender aos casos de uso desejados.
+O [!UICONTROL Use Case Playbooks] pode ajudá-lo a resolver o problema ao começar a usar o Real-Time CDP ou o Adobe Journey Optimizer, quando você talvez não saiba exatamente o que começar ou como criar os ativos certos para atender aos casos de uso desejados.
 
 Os manuais de casos de uso podem ajudar você aqui ao:
 
@@ -42,7 +42,7 @@ Cada manual de estratégia inclui informações sobre o caso de uso específico 
 
 Por exemplo, se você selecionar um manual do Real-Time CDP, seu objetivo poderá ser gerar públicos-alvo que você possa mapear para um destino para executar uma campanha de marketing. Se selecionar um manual de estratégia do Adobe Journey Optimizer, seu objetivo poderá ser criar uma jornada do cliente em seu produto e enviar mensagens relevantes para seus clientes.
 
-Crie uma instância de um manual para gerar ativos específicos, como esquemas, públicos ou jornadas, que são adaptados ao seu caso de uso e são reutilizáveis no Experience Platform. O objetivo desses objetos é ajudar você a entender todos os recursos necessários para implementar seu caso de uso específico. Eles não contêm dados e são criados em sandboxes de desenvolvimento. Comece a usar esses ativos ou faça edições neles antes de usá-los e compartilhá-los com sua equipe no Real-Time CDP ou no Journey Optimizer. Promova os ativos desejados da sandbox inspiradora para uma sandbox de desenvolvimento e, em seguida, para uma sandbox de produção.
+Crie uma instância de um manual para gerar ativos específicos, como esquemas, públicos ou jornadas, que são personalizados para o caso de uso e são reutilizáveis no Experience Platform. O objetivo desses objetos é ajudar você a entender todos os recursos necessários para implementar seu caso de uso específico. Eles não contêm dados e são criados em sandboxes de desenvolvimento. Comece a usar esses ativos ou faça edições neles antes de usá-los e compartilhá-los com sua equipe no Real-Time CDP ou no Journey Optimizer. Promova os ativos desejados da sandbox inspiradora para uma sandbox de desenvolvimento e, em seguida, para uma sandbox de produção.
 
 ### Visão geral do vídeo
 
@@ -52,7 +52,7 @@ Assista a este vídeo para saber como descobrir, criar, publicar e solucionar pr
 
 ## Disponibilidade {#availability}
 
-Alguns [!UICONTROL manuais de casos de uso] foram adaptados aos casos de uso do Real-Time CDP, enquanto outros são mais adequados para clientes que usam o Journey Optimizer. Navegue pelo catálogo para encontrar os manuais mais adequados para seu produto e caso de uso. Saiba mais sobre o Real-Time CDP e o Journey Optimizer na [descrição dos produtos Adobe](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR).
+Alguns [!UICONTROL Use Case Playbooks] são adaptados aos casos de uso do Real-Time CDP, enquanto outros são mais adequados para clientes que usam o Journey Optimizer. Navegue pelo catálogo para encontrar os manuais mais adequados para seu produto e caso de uso. Saiba mais sobre o Real-Time CDP e o Journey Optimizer nas [descrições de produto do Adobe](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR).
 
 ## Guias de interface {#ui-guides}
 

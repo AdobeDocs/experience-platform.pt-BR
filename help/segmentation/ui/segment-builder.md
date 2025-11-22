@@ -391,16 +391,16 @@ Para selecionar uma política de mesclagem para a definição de segmento, selec
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
 >title="Perfis qualificados"
->abstract="Perfis qualificados indicam o número real de perfis que correspondem às regras do público-alvo. Esse número atualiza a cada 24 horas, após a execução do trabalho de avaliação do segmento."
+>abstract="Perfis qualificados indicam o número real de perfis que correspondem às regras do público-alvo. Esse número atualiza a cada 24 horas, após a execução do processo de avaliação do segmento."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_estimatedprofiles"
 >title="Perfis estimados"
->abstract="Perfis estimados indicam um número aproximado de perfis, com base na amostra de tarefa, que se qualificariam para as regras do público-alvo."
+>abstract="Perfis estimados indicam um número aproximado de perfis, com base no processo de amostra, que se qualificariam para as regras do público-alvo."
 
 Ao criar uma definição de segmento, a seção **[!UICONTROL Audience properties]** no lado direito do espaço de trabalho exibe uma estimativa do tamanho da definição de segmento resultante, permitindo ajustar a definição do segmento conforme necessário antes de criar o público-alvo em si.
 
-**[!UICONTROL Qualified Profiles]** indica o número **real** de perfis que correspondem às regras da definição de segmento. Esse número atualiza a cada 24 horas, após a execução do trabalho de avaliação do segmento.
+**[!UICONTROL Qualified Profiles]** indica o número **real** de perfis que correspondem às regras da definição de segmento. Esse número atualiza a cada 24 horas, após a execução do processo de avaliação do segmento.
 
 O carimbo de data/hora para perfis qualificados indica o trabalho de avaliação de segmento mais recente do **lote** e é **não** exibido para definições de segmento avaliadas usando a segmentação de borda ou de streaming. Se você editar a definição do segmento, o número de perfis qualificados permanecerá o mesmo até que o próximo trabalho de avaliação de segmento seja executado.
 

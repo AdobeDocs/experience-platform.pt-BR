@@ -25,7 +25,7 @@ A avaliação flexível do público-alvo permite executar um trabalho de segment
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_browse_flexibleaudienceevaluation"
 >title="Limites de avaliação de público-alvo flexível"
->abstract="Você pode avaliar até 20 públicos-alvo em uma única execução de avaliação de público-alvo flexível.<br/><br/>Além disso, embora o trabalho de avaliação seja executado o mais rápido possível, pode haver atrasos no sistema, pois as avaliações sob demanda <b>não podem</b> ser executadas simultaneamente com outra avaliação sob demanda ou em lote."
+>abstract="Você pode avaliar até 20 públicos-alvo em uma única execução de avaliação de público-alvo flexível.<br/><br/>Além disso, embora o processo de avaliação seja executado o mais rápido possível, pode haver atrasos no sistema, pois as avaliações sob demanda <b>não podem</b> ser executadas simultaneamente com outra avaliação sob demanda ou em lote."
 
 Ao executar a avaliação flexível do público-alvo, lembre-se das seguintes condições:
 
@@ -326,7 +326,7 @@ Depois de confirmar que os públicos-alvo corretos estão listados, você pode c
 
 O vídeo a seguir demonstra como acessar e usar a avaliação de público-alvo flexível no Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453645?captions=por_br&)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Perguntas frequentes {#faq}
 

@@ -1,13 +1,13 @@
 ---
 title: Conexão Demandbase
 description: Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas do target por meio do Demand Side Platform B2B (DSP) da DemandBase. As contas do Target também podem ser enriquecidas com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas.
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
-badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc05ca282cdfd012366e3deccddcae92a29fef1c
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '785'
 ht-degree: 4%
 
 ---
@@ -110,5 +110,7 @@ Esses mapeamentos são necessários para que o destino funcione corretamente e d
 
 ## Observações adicionais e chamadas de retorno importantes {#additional-notes}
 
-* Se um público-alvo da conta com o mesmo nome tiver sido ativado anteriormente no Demandbase, não será possível ativá-lo novamente por meio de um fluxo de dados diferente para o destino do Demandbase.
-* Se você tiver exportado públicos para o Demandbase e as exportações forem bem-sucedidas no Experience Platform, mas nem todos os dados chegarem ao Demandbase, você pode ter encontrado a limitação de API no Demandbase. Entre em contato com eles para obter esclarecimentos.
+* **Nomeação do público-alvo**: se um público da conta com o mesmo nome tiver sido ativado anteriormente no Demandbase, você não poderá ativá-lo novamente por meio de um fluxo de dados diferente para o destino do Demandbase.
+* **Medidas de proteção da API do Demandbase**: se você tiver exportado públicos para o Demandbase e as exportações forem bem-sucedidas no Experience Platform, mas nem todos os dados atingirem o Demandbase, você poderá ter encontrado uma limitação de API no Demandbase. Entre em contato com eles para obter esclarecimentos.
+* **Exclusão de lista**: as listas de contas são exclusivas; portanto, não é possível recriar uma nova lista com um nome já em uso. Quando você remover contas de uma lista, elas não estarão mais disponíveis, mas não serão excluídas.
+* **Tempo de ativação**: o carregamento de dados no Demandbase está sujeito a processamento noturno.

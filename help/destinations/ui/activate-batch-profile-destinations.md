@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: ba41de0085b578ddb43fb61210a23dbbcc84a2f1
 workflow-type: tm+mt
-source-wordcount: '4506'
+source-wordcount: '4555'
 ht-degree: 10%
 
 ---
@@ -170,9 +170,9 @@ Use a opção **[!UICONTROL Scheduled]** para que o trabalho de ativação seja 
 
    ![Imagem destacando a opção Agendado no fluxo de ativação para destinos em lote e mostrando o seletor de tempo.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
-   >[!IMPORTANT]
-   >
-   >Ao mapear um público criado nas últimas 24 horas e avaliado por meio de [segmentação em lote](../../segmentation/methods/batch-segmentation.md), defina o agendamento de exportação diário para iniciar o dia seguinte com a maior brevidade. Isso garante que o trabalho de avaliação diária em lote seja executado primeiro e que você esteja exportando os dados completos do público-alvo.
+   Ao mapear um público criado nas últimas 24 horas e avaliado por meio de [segmentação em lote](../../segmentation/methods/batch-segmentation.md), defina o agendamento de exportação diário para iniciar o dia seguinte com a maior brevidade. Isso garante que o trabalho de avaliação diária em lote seja executado primeiro e que você esteja exportando os dados completos do público-alvo.
+
+   Ao configurar agendamentos de exportação, defina a hora de início em pelo menos **1 hora** após concluir o fluxo de ativação. As ativações de público podem levar até 1 hora para se propagarem pelo sistema. Se você agendar uma exportação para ser executada antes de 1 hora após a ativação, a exportação agendada poderá ser perdida.
 
 3. Use o seletor **[!UICONTROL Date]** para escolher o dia ou intervalo em que a exportação deve ocorrer. Para exportações diárias, a prática recomendada é definir a data de início e término para alinhar-se à duração das campanhas em suas plataformas downstream.
 
@@ -466,7 +466,7 @@ A Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 
 ### Comportamento de desduplicação para perfis com o mesmo carimbo de data e hora {#deduplication-same-timestamp}
 
-Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Principais considerações
 
@@ -541,7 +541,7 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 
 >[!IMPORTANT]
 > 
->Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa &#x200B;](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
+>Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa ](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
 >
 >Esta etapa **[!UICONTROL Select attributes]** ainda é exibida para os destinos de marketing por email do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 

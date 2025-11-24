@@ -3,10 +3,10 @@ title: Exportar conjuntos de dados para destinos de armazenamento na nuvem
 type: Tutorial
 description: Saiba como exportar conjuntos de dados do Adobe Experience Platform para o local de armazenamento em nuvem de sua preferência.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
+source-git-commit: de161bcb29a0d4fc9b0c419506537b18255c79a4
 workflow-type: tm+mt
-source-wordcount: '2656'
-ht-degree: 8%
+source-wordcount: '3005'
+ht-degree: 7%
 
 ---
 
@@ -50,16 +50,16 @@ Use a tabela abaixo para entender quais tipos de conjunto de dados você pode ex
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, Web SDK, Mobile SDK, Conector de dados do Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=pt-BR#profile-attribute-datasets">Conjunto de dados de Instantâneo de Perfil gerado pelo sistema</a>.</li></td>
+    <td><ul><li>Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, Web SDK, Mobile SDK, Conector de dados do Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Conjunto de dados de Instantâneo de Perfil gerado pelo sistema</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Consulte a documentação do <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=pt-BR#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulte a documentação do <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Consulte a documentação do <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=pt-BR#datasets"> Adobe Journey Optimizer</a>.</td>
+    <td>Consulte a documentação do <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> Adobe Journey Optimizer</a>.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Use a tabela abaixo para entender quais tipos de conjunto de dados você pode ex
 
 Assista ao vídeo abaixo para obter uma explicação completa do fluxo de trabalho descrito nesta página, os benefícios de usar a funcionalidade de conjunto de dados de exportação e alguns casos de uso sugeridos.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448823?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Destinos compatíveis {#supported-destinations}
 
@@ -143,6 +143,10 @@ Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para sel
 
 ![Fluxo de trabalho de exportação do conjunto de dados mostrando a etapa Selecionar conjuntos de dados, na qual você pode selecionar quais conjuntos de dados serão exportados.](/help/destinations/assets/ui/export-datasets/select-datasets.png)
 
+>[!NOTE]
+>
+>Todos os conjuntos de dados selecionados aqui compartilharão a mesma programação de exportação. Se você precisar de programações de exportação diferentes (por exemplo, exportações incrementais para alguns conjuntos de dados e exportações completas únicas para outros), crie fluxos de dados separados para cada tipo de programação.
+
 ## Programar exportação do conjunto de dados {#scheduling}
 
 >[!CONTEXTUALHELP]
@@ -160,6 +164,16 @@ Use as caixas de seleção à esquerda dos nomes dos conjuntos de dados para sel
 >title="Atualizar a data final deste corpo de fluxo de dados"
 >abstract="Devido a atualizações recentes nesse destino, o fluxo de dados agora requer uma data final. A Adobe definiu uma data final padrão para 1º de setembro de 2025. Atualize para a data final desejada, caso contrário, as exportações de dados serão interrompidas na data padrão."
 
+>[!IMPORTANT]
+>
+>**O agendamento se aplica a todos os conjuntos de dados no fluxo de dados**
+>
+>Ao configurar ou modificar o agendamento de exportação, ele se aplica a **todos os conjuntos de dados** que estão sendo exportados no momento por meio do fluxo de dados que você está configurando. Não é possível definir programações diferentes para conjuntos de dados individuais no mesmo fluxo de dados.
+>
+>Se você precisar de programações de exportação diferentes para conjuntos de dados diferentes, deverá criar fluxos de dados separados (conexões de destino separadas) para cada tipo de programação.
+>
+>**Exemplo:** se você tiver o Conjunto de dados A exportando incrementalmente e adicionar o Conjunto de dados B com um agendamento de exportação completo único, o Conjunto de dados A também será atualizado para o agendamento de exportação completo único.
+
 Use a etapa **[!UICONTROL Scheduling]** para:
 
 * Defina uma data de início e uma data de término, bem como uma cadência de exportação para suas exportações do conjunto de dados.
@@ -167,6 +181,10 @@ Use a etapa **[!UICONTROL Scheduling]** para:
 * Personalize o caminho da pasta no local de armazenamento para onde os conjuntos de dados devem ser exportados. Leia mais sobre como [editar o caminho da pasta de exportação](#edit-folder-path).
 
 Use o controle **[!UICONTROL Edit schedule]** na página para editar a cadência de exportação das exportações, bem como para selecionar se deseja exportar arquivos completos ou incrementais.
+
+>[!WARNING]
+>
+>Modificar o agendamento aqui atualizará o comportamento de exportação para todos os conjuntos de dados neste fluxo de dados. Se esse fluxo de dados contiver vários conjuntos de dados, todos eles serão afetados por essa alteração.
 
 ![Controle de edição de agendamento realçado na etapa Agendamento.](/help/destinations/assets/ui/export-datasets/edit-schedule-control-highlight.png)
 
@@ -213,9 +231,18 @@ Você pode usar várias macros disponíveis para personalizar um nome de pasta d
 
 ![Seleção de macros realçada na janela modal de pasta personalizada.](/help/destinations/assets/ui/export-datasets/custom-folder-path-macros.png)
 
-Depois de selecionar as macros desejadas, você pode visualizar a estrutura de pastas que será criada no local de armazenamento. O primeiro nível na estrutura de pastas representa o **[!UICONTROL Folder path]** indicado quando você [se conectou ao destino](/help/destinations/ui/connect-destination.md##set-up-connection-parameters) para exportar conjuntos de dados.
+Depois de selecionar as macros desejadas, você pode visualizar a estrutura de pastas que será criada no local de armazenamento. O primeiro nível na estrutura de pastas representa o **[!UICONTROL Folder path]** indicado quando você [se conectou ao destino](/help/destinations/ui/connect-destination.md#set-up-connection-parameters) para exportar conjuntos de dados.
 
 ![Visualização do caminho de pasta realçado na janela modal de pasta personalizada.](/help/destinations/assets/ui/export-datasets/custom-folder-path-preview.png)
+
+### Práticas recomendadas para gerenciar vários conjuntos de dados {#best-practices-multiple-datasets}
+
+Ao exportar vários conjuntos de dados, considere as seguintes práticas recomendadas:
+
+* **Mesmos requisitos de agendamento**: agrupe conjuntos de dados que precisam do mesmo agendamento de exportação (frequência, tipo) em um único fluxo de dados para facilitar o gerenciamento.
+* **Diferentes requisitos de agendamento**: crie fluxos de dados separados para conjuntos de dados que exigem diferentes agendamentos de exportação ou tipos de exportação (incremental vs. completo). Isso garante que cada conjunto de dados seja exportado de acordo com suas necessidades específicas.
+* **Revisar antes de modificar**: antes de alterar o agendamento em um fluxo de dados existente, revise quais conjuntos de dados já estão sendo exportados por meio desse fluxo de dados para evitar alterações não intencionais em seu comportamento de exportação.
+* **Documentar sua configuração**: acompanhe quais conjuntos de dados estão em quais fluxos de dados, especialmente ao gerenciar vários agendamentos de exportação em diferentes destinos.
 
 ## Revisar {#review}
 
@@ -280,7 +307,7 @@ Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas a
 
 ## Direitos de exportação do conjunto de dados {#licensing-entitlement}
 
-Consulte os documentos de descrição do produto para entender quantos dados você está autorizado a exportar para cada aplicativo do Experience Platform, por ano. Por exemplo, você pode exibir a Descrição do Produto Real-Time CDP [aqui](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Consulte os documentos de descrição do produto para entender quantos dados você está autorizado a exportar para cada aplicativo do Experience Platform, por ano. Por exemplo, você pode exibir a Descrição do Produto Real-Time CDP [aqui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 Observe que os direitos de exportação de dados para diferentes aplicativos não são aditivos. Por exemplo, isso significa que, se você comprar o Real-Time CDP Ultimate e o Adobe Journey Optimizer Ultimate, o direito de exportação de perfil será o maior dos dois direitos, de acordo com as descrições do produto. Os direitos de volume são calculados calculando o número total de perfis licenciados e multiplicando por 500 KB para o Real-Time CDP Prime ou 700 KB para o Real-Time CDP Ultimate para determinar o volume de dados ao qual você tem direito.
 
@@ -352,4 +379,10 @@ Não, não é possível.
 
 +++Resposta
 As tentativas são implementadas automaticamente para a maioria dos tipos de erros do sistema.
++++
+
+**Posso definir diferentes agendamentos de exportação para diferentes conjuntos de dados no mesmo fluxo de dados?**
+
++++Resposta
+Não, todos os conjuntos de dados em um único fluxo de dados compartilham a mesma programação de exportação. Se você precisar de programações de exportação diferentes para conjuntos de dados diferentes, deverá criar fluxos de dados separados (conexões de destino) para cada tipo de programação. Por exemplo, se você quiser que o Conjunto de dados A seja exportado de forma incremental todos os dias e o Conjunto de dados B seja exportado como uma exportação completa única, será necessário criar dois fluxos de dados separados.
 +++

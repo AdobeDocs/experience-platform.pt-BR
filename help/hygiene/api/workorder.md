@@ -3,9 +3,9 @@ title: Registrar Ordens de Serviço de Exclusão
 description: Saiba como usar o ponto de extremidade /workorder na API de higiene de dados para gerenciar ordens de trabalho de exclusão de registro no Adobe Experience Platform. Este guia aborda cotas, linhas do tempo de processamento e uso da API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 4f4b668c2b29228499dc28b2c6c54656e98aaeab
+source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
 workflow-type: tm+mt
-source-wordcount: '2104'
+source-wordcount: '2440'
 ht-degree: 2%
 
 ---
@@ -300,6 +300,110 @@ A tabela a seguir descreve as propriedades na resposta.
 >[!NOTE]
 >
 >A propriedade de ação para ordens de trabalho de exclusão de registro está atualmente `identity-delete` nas respostas da API. Se a API mudar para usar um valor diferente (como `delete_identity`), esta documentação será atualizada adequadamente.
+
+## Converter listas de ID em JSON para solicitações de exclusão de registro
+
+Para criar uma ordem de trabalho de exclusão de registro a partir de arquivos CSV, TSV ou TXT contendo identificadores, você pode usar scripts de conversão para produzir as cargas JSON necessárias para o ponto de extremidade `/workorder`. Essa abordagem é especialmente útil ao trabalhar com arquivos de dados existentes. Para scripts prontos para uso e instruções abrangentes, visite o [repositório GitHub de csv para higiene de dados](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+### Gerar cargas JSON
+
+Os exemplos de script bash a seguir demonstram como executar os scripts de conversão no Python ou Ruby:
+
+>[!BEGINTABS]
+
+>[!TAB Exemplo para executar o script Python]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.py sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!TAB Exemplo para executar o script Ruby]
+
+```bash
+#!/usr/bin/env bash
+
+rm -rf ./output && mkdir output
+for NAME in UTF8 CSV TSV TXT XYZ big; do
+  ./csv-to-DI-payload.rb sample/sample-$NAME.* \
+      --verbose \
+      --column 2 \
+      --namespace email \
+      --dataset-id 66f4161cc19b0f2aef3edf10 \
+      --description 'a simple sample' \
+      --output-dir output
+  echo Checking output/sample-$NAME-*.json against expect/sample-$NAME-*.json
+  diff <(cat output/sample-$NAME-*.json) <(cat expect/sample-$NAME-*.json) || echo Unexpected output in sample-$NAME-*.*
+done
+```
+
+>[!ENDTABS]
+
+A tabela abaixo descreve os parâmetros nos scripts bash.
+
+| Parâmetro | Descrição |
+| ---           | ---     |
+| `verbose` | Ativar saída detalhada. |
+| `column` | O índice (com base em 1) ou o nome do cabeçalho da coluna que contém os valores de identidade a serem excluídos. O padrão é a primeira coluna, se não especificada. |
+| `namespace` | Um objeto com uma propriedade `code` especificando o namespace de identidade (por exemplo, &quot;email&quot;). |
+| `dataset-id` | O identificador exclusivo do conjunto de dados associado à ordem de serviço. Se a solicitação se aplicar a todos os conjuntos de dados, este campo será definido como `ALL`. |
+| `description` | Uma descrição da ordem de serviço de exclusão do registro. |
+| `output-dir` | O diretório no qual gravar a carga JSON de saída. |
+
+{style="table-layout:auto"}
+
+O exemplo abaixo mostra uma carga JSON bem-sucedida convertida de um arquivo CSV, TSV ou TXT. Ele contém registros associados ao namespace especificado e é usado para excluir registros identificados por endereços de email.
+
+```json
+{
+  "action": "delete_identity",
+  "datasetId": "66f4161cc19b0f2aef3edf10",
+  "displayName": "output/sample-big-001.json",
+  "description": "a simple sample",
+  "identities": [
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "1"
+    },
+    {
+      "namespace": {
+        "code": "email"
+      },
+      "id": "2"
+    }
+  ]
+}
+```
+
+A tabela a seguir descreve as propriedades na carga JSON.
+
+| Propriedade | Descrição |
+| ---          | ---     |
+| `action` | A ação solicitada para a ordem de trabalho de exclusão do registro. Automaticamente definido como `delete_identity` pelo script de conversão. |
+| `datasetId` | O identificador exclusivo do conjunto de dados. |
+| `displayName` | Um rótulo legível por humanos para esta ordem de serviço de exclusão de registro. |
+| `description` | Uma descrição da ordem de serviço de exclusão do registro. |
+| `identities` | Uma matriz de objetos, cada um contendo:<br><ul><li> `namespace`: um objeto com uma propriedade `code` especificando o namespace de identidade (por exemplo, &quot;email&quot;).</li><li> `id`: O valor de identidade a ser excluído para este namespace.</li></ul> |
+
+{style="table-layout:auto"}
+
+### Enviar os dados JSON gerados para o ponto de extremidade `/workorder`
+
+Para enviar uma solicitação, siga as instruções na seção [criar uma ordem de serviço de exclusão de registro](#create). Use a carga JSON convertida como o corpo da solicitação (`-d`) ao enviar sua solicitação POST `curl` para o ponto de extremidade de API `/workorder`.
 
 ## Recuperar detalhes de uma ordem de trabalho de exclusão de registro específica {#lookup}
 

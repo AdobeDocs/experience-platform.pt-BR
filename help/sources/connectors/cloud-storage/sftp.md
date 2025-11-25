@@ -2,7 +2,7 @@
 title: Visão geral do conector SFTP Source
 description: Saiba como conectar um servidor SFTP ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 06b2108715ce368ff4ecf5c6c7dd3a327d9f61b1
+source-git-commit: 06db0d3023ebf26aa604880fb6b614e331b1b2ea
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 2%
@@ -93,7 +93,7 @@ The key's randomart image is:
 Em seguida, execute o seguinte comando ao fornecer o caminho de arquivo da chave privada, para codificar sua chave privada em [!DNL Base64]:
 
 ```shell
-C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
+C:\Users\lucy> [convert]::ToBase64String((Get-Content "C:\Users\lucy\.ssh\id_rsa" -AsByteStream)) > "C:\Users\lucy\.ssh\id_rsa_base64"
 ```
 
 O comando acima salva a chave privada codificada em [!DNL Base64] no caminho de arquivo designado. Em seguida, você pode usar essa chave privada para se autenticar no [!DNL SFTP] e se conectar ao Experience Platform.

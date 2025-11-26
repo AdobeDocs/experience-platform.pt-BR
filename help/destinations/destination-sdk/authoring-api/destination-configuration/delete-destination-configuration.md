@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para excluir uma configuração de destino existente por meio do Adobe Experience Platform Destination SDK.
 title: Excluir uma configuração de destino
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fda542e62c448788099d63951277278a146fdfc8
 workflow-type: tm+mt
-source-wordcount: '280'
+source-wordcount: '279'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ Esta página exemplifica a solicitação de API e a carga que você pode usar pa
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de configuração de destino {#get-started}
 
@@ -23,7 +23,7 @@ Antes de continuar, consulte o [guia de introdução](../../getting-started.md) 
 
 ## Excluir uma configuração de destino {#delete}
 
-Você pode excluir uma configuração de servidor de destino [existente](create-destination-configuration.md) fazendo uma solicitação `DELETE` para o ponto de extremidade `/authoring/destinations` com o `{INSTANCE_ID}`da configuração de destino que deseja excluir.
+Você pode excluir uma configuração de destino [existente](create-destination-configuration.md) fazendo uma solicitação `DELETE` para o ponto de extremidade `/authoring/destinations` com o `{INSTANCE_ID}`da configuração de destino que deseja excluir.
 
 >[!TIP]
 >

@@ -2,9 +2,9 @@
 description: Esta página descreve os vários fluxos de autorização OAuth 2 compatíveis com o Destination SDK e fornece instruções para configurar a autorização OAuth 2 para o seu destino.
 title: Autorização OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '2182'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Esta página descreve os vários fluxos de autorização OAuth 2 compatíveis co
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -82,7 +82,7 @@ A saída em todos os casos inclui um token de acesso, que é usado pelo Experien
 O sistema que a Adobe projetou para autorização OAuth 2:
 
 * Suporta todas as três concessões OAuth 2 enquanto contabiliza quaisquer variações entre elas, como campos de dados adicionais, chamadas de API não padrão e muito mais.
-* Suporta tokens de acesso com valores de tempo de vida variáveis, seja 90 dias, 30 minutos ou qualquer outro valor de tempo de vida especificado.
+* Suporta tokens de acesso com valores de tempo de vida variáveis. A Adobe recomenda que você defina o valor do tempo de vida do token para um mínimo de 24 horas.
 * Oferece suporte a fluxos de autorização OAuth 2 com ou sem tokens de atualização.
 
 ## OAuth 2 com código de autorização {#authorization-code}

@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Restrições de tipo de campo XDM
 description: Uma referência para restrições de tipo de campo no Experience Data Model (XDM), incluindo os outros formatos de serialização aos quais eles podem ser mapeados e como definir seus próprios tipos de campo na API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8ddedb5ff8c12b05cdf39fa8dc2b59258389e522
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 2%
+source-wordcount: '635'
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
   </thead>
   <tbody>
     <tr>
-      <td>[!UICONTROL Cadeia de Caracteres]</td>
+      <td>[!UICONTROL String]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "string"}</pre>
@@ -49,7 +49,7 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td><code>"Platinum"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Número]</td>
+      <td>[!UICONTROL Number]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "number"}</pre>
@@ -60,23 +60,23 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "integer",
   "maximum": 9007199254740991,
   "mínimo": -9007199254740991
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Inteiro]</td>
+      <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "integer",
   "máximo": 2147483648,
   "minimum": -2147483648
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -84,11 +84,11 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "integer",
-  "maximum": 32768,
+  "maximum": 32767,
   "minimum": -32768
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,22 +96,22 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "integer",
   "maximum": 128,
   "minimum": -128
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Data]*</td>
+      <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "string",
   "format": "date"
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,15 +119,15 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "type": "string",
   "format": "date-time"
-&rbrace;</pre>
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
     <tr>
-      <td>[!UICONTROL Booleano]</td>
+      <td>[!UICONTROL Boolean]</td>
       <td>
         <pre class="JSON language-JSON hljs">
 {"type": "boolean"}</pre>
@@ -149,7 +149,7 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 
 >[!NOTE]
 >
->Entre os tipos XDM padrão listados nas tabelas abaixo, o tipo [!UICONTROL Map] também está incluído. Os mapas são usados em esquemas padrão quando os dados são representados como chaves que mapeiam para determinados valores ou quando as chaves não podem ser incluídas razoavelmente em um esquema estático e devem ser tratadas como valores de dados.
+>Entre os tipos XDM padrão listados nas tabelas abaixo, o tipo [!UICONTROL Map] também é incluído. Os mapas são usados em esquemas padrão quando os dados são representados como chaves que mapeiam para determinados valores ou quando as chaves não podem ser incluídas razoavelmente em um esquema estático e devem ser tratadas como valores de dados.
 >
 >Muitos componentes XDM padrão usam tipos de mapa, e você também pode [definir campos de mapa personalizados](../tutorials/custom-fields-api.md#custom-maps), se desejar. A inclusão do tipo de mapa nas tabelas abaixo tem como objetivo ajudar você a determinar como mapear os dados existentes para o XDM se eles estiverem armazenados em qualquer um dos formatos listados abaixo.
 
@@ -158,15 +158,15 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 | Tipo XDM | Parquet | Spark SQL | Java |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | Tipo: `BYTE_ARRAY`<br>Anotação: `UTF8` | `StringType` | `java.lang.String` |
-| [!UICONTROL Número] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
-| [!UICONTROL Longo] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
-| [!UICONTROL Inteiro] | Tipo: `INT32`<br>Anotação: `INT_32` | `IntegerType` | `java.lang.Integer` |
-| [!UICONTROL Curto] | Tipo: `INT32`<br>Anotação: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Number] | Tipo: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Long] | Tipo: `INT64` | `LongType` | `java.lang.Long` |
+| [!UICONTROL Integer] | Tipo: `INT32`<br>Anotação: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Short] | Tipo: `INT32`<br>Anotação: `INT_16` | `ShortType` | `java.lang.Short` |
 | [!UICONTROL Byte] | Tipo: `INT32`<br>Anotação: `INT_8` | `ByteType` | `java.lang.Short` |
-| [!UICONTROL Data] | Tipo: `INT32`<br>Anotação: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL Date] | Tipo: `INT32`<br>Anotação: `DATE` | `DateType` | `java.util.Date` |
 | [!UICONTROL DateTime] | Tipo: `INT64`<br>Anotação: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
-| [!UICONTROL Booleano] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
-| [!UICONTROL Mapa] | Grupo `MAP` anotado<br><br>(`<key-type>` deve ser `STRING`) | `MapType`<br><br>(`keyType` deve ser `StringType`) | `java.util.Map` |
+| [!UICONTROL Boolean] | Tipo: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+| [!UICONTROL Map] | Grupo `MAP` anotado<br><br>(`<key-type>` deve ser `STRING`) | `MapType`<br><br>(`keyType` deve ser `StringType`) | `java.util.Map` |
 
 {style="table-layout:auto"}
 
@@ -175,15 +175,15 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 | Tipo XDM | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `String` | `System.String` | `String` |
-| [!UICONTROL Número] | `Double` | `System.Double` | `Number` |
-| [!UICONTROL Longo] | `Long` | `System.Int64` | `Number` |
-| [!UICONTROL Inteiro] | `Int` | `System.Int32` | `Number` |
-| [!UICONTROL Curto] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Number] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
+| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
 | [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
-| [!UICONTROL Data] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
 | [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
-| [!UICONTROL Booleano] | `Boolean` | `System.Boolean` | `Boolean` |
-| [!UICONTROL Mapa] | `Map` | (N/D) | `object` |
+| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
+| [!UICONTROL Map] | `Map` | (N/D) | `object` |
 
 {style="table-layout:auto"}
 
@@ -192,15 +192,15 @@ As seções abaixo descrevem como cada tipo de XDM é mapeado para outros format
 | Tipo XDM | MongoDB | Aerospike | Protobuf 2 |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `string` | `String` | `string` |
-| [!UICONTROL Número] | `double` | `Double` | `double` |
-| [!UICONTROL Longo] | `long` | `Integer` | `int64` |
-| [!UICONTROL Inteiro] | `int` | `Integer` | `int32` |
-| [!UICONTROL Curto] | `int` | `Integer` | `int32` |
+| [!UICONTROL Number] | `double` | `Double` | `double` |
+| [!UICONTROL Long] | `long` | `Integer` | `int64` |
+| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
+| [!UICONTROL Short] | `int` | `Integer` | `int32` |
 | [!UICONTROL Byte] | `int` | `Integer` | `int32` |
-| [!UICONTROL Data] | `date` | `Integer`<br>(Unix milissegundos) | `int64`<br>(Unix milissegundos) |
+| [!UICONTROL Date] | `date` | `Integer`<br>(Unix milissegundos) | `int64`<br>(Unix milissegundos) |
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix milissegundos) | `int64`<br>(Unix milissegundos) |
-| [!UICONTROL Booleano] | `bool` | `Integer`<br>(0/1 binário) | `bool` |
-| [!UICONTROL Mapa] | `object` | `map` | `map<key_type, value_type>` |
+| [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binário) | `bool` |
+| [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
 {style="table-layout:auto"}
 

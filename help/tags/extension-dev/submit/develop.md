@@ -2,10 +2,10 @@
 title: Desenvolver uma extensão
 description: Este documento fornece uma visão geral do processo de desenvolvimento da extensão de tag, com links para documentações adicionais com processos mais detalhados.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: 36870fa5359b5382cb9f1e9a5220ce8311f0c45c
+source-git-commit: 3f5e432ef381c10d8197724783135637d01a120e
 workflow-type: tm+mt
-source-wordcount: '443'
-ht-degree: 96%
+source-wordcount: '436'
+ht-degree: 92%
 
 ---
 
@@ -42,11 +42,7 @@ Há também várias ferramentas npm para ajudar no desenvolvimento do pacote de 
 
 ## Extensões de exemplo
 
-Há extensões de exemplo no GitHub que você pode examinar ou usar como projetos iniciais:
-
-* [Extensão de exemplo do Hello World](https://github.com/adobe/reactor-helloworld-extension)
-* [Extensão de exemplo do Typekit](https://github.com/jeffchasin/extension-typekit)
-* [Extensão de exemplo do Pinterest](https://github.com/jeffchasin/extension-pinterest)
+Você pode revisar ou usar extensões de exemplo do GitHub, como a [extensão de exemplo Hello World](https://github.com/adobe/reactor-helloworld-extension), como projetos iniciais.
 
 ## Espaço de trabalho do Slack
 

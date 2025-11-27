@@ -60,11 +60,11 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   "maximum": 9007199254740991,
   "mínimo": -9007199254740991
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -72,11 +72,11 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   "máximo": 2147483648,
   "minimum": -2147483648
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -84,11 +84,11 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   "maximum": 32767,
   "minimum": -32768
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -96,11 +96,11 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "integer",
   "maximum": 128,
   "minimum": -128
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -108,10 +108,10 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL Date]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "string",
   "format": "date"
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -119,10 +119,10 @@ A tabela a seguir descreve como cada tipo de XDM é representado no Esquema JSON
       <td>[!UICONTROL DateTime]*</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "type": "string",
   "format": "date-time"
-}</pre>
+&rbrace;</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>

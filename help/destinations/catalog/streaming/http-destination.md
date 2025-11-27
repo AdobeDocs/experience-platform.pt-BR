@@ -4,10 +4,10 @@ title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil para um endpoint HTTP de terceiros para executar sua própria análise ou executar outras operações necessárias nos dados de perfil exportados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 6d1b73c1557124f283558e1daeb3ddeaaec8e8a4
+source-git-commit: aacc3cbbc2bc8c02e50f375f78733a851138e1c7
 workflow-type: tm+mt
-source-wordcount: '3079'
-ht-degree: 6%
+source-wordcount: '2908'
+ht-degree: 7%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 O destino da API HTTP é um destino de streaming [!DNL Adobe Experience Platform] que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
 
@@ -59,7 +59,7 @@ Para usar o destino da API HTTP para exportar dados do Experience Platform, voc�
 * Seu endpoint HTTP deve ser compatível com o esquema de perfil do Experience Platform. Nenhuma transformação em um esquema de carga de terceiros é compatível com o destino da API HTTP. Consulte a seção [dados exportados](#exported-data) para obter um exemplo do esquema de saída do Experience Platform.
 * Seu ponto de extremidade HTTP deve oferecer suporte a cabeçalhos.
 * Seu endpoint HTTP deve responder em 2 segundos para garantir o processamento de dados adequado e evitar erros de tempo limite.
-* Se você planeja usar mTLS: o endpoint de recebimento de dados deve ter o TLS desativado e somente o mTLS ativado. Se também usar a autenticação OAuth 2, você deverá manter um endpoint HTTPS padrão separado para a recuperação do token. Consulte a seção [Considerações sobre mTLS](#mtls-considerations) para obter detalhes.
+* Se você planeja usar mTLS: o endpoint de recebimento de dados deve ter o TLS desativado e somente o mTLS ativado. O mTLS não será suportado se o seu ponto de extremidade exigir a autenticação Senha do OAuth 2 ou Credenciais de Cliente.
 
 >[!TIP]
 >
@@ -75,17 +75,7 @@ Você pode usar [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) para garant
 
 O suporte mTLS para destinos da API HTTP se aplica **somente ao ponto de extremidade de recebimento de dados** para o qual são enviadas exportações de perfil (o campo **[!UICONTROL HTTP Endpoint]** em [detalhes do destino](#destination-details)).
 
-Não há suporte para **mTLS para os pontos de extremidade de autenticação do OAuth 2:**
-
-* O **[!UICONTROL Access Token URL]** usado nas Credenciais de Cliente OAuth 2 ou na autenticação de Senha OAuth 2 não dá suporte a mTLS
-* As solicitações de recuperação e atualização de token são enviadas por HTTPS padrão sem autenticação de certificado de cliente
-
-**Arquitetura Necessária:** Se você precisar de mTLS para o ponto de extremidade de recebimento de dados e usar a autenticação OAuth 2, será necessário manter dois pontos de extremidade separados:
-
-* **Ponto de extremidade de autenticação:** HTTPS padrão (sem mTLS) para gerenciamento de token
-* **Ponto de extremidade de recebimento de dados:** HTTPS com mTLS somente habilitado para exportações de perfil
-
-Essa arquitetura é uma limitação atual da plataforma. O suporte para mTLS em endpoints de autenticação está sendo avaliado para versões futuras.
+Não há suporte para mTLS **se o seu ponto de extremidade exigir a autenticação Senha do OAuth 2 ou Credenciais de Cliente.**
 
 ### Configuração de mTLS para exportação de dados {#configuring-mtls}
 
@@ -167,9 +157,9 @@ Se você selecionar o tipo de autenticação **[!UICONTROL OAuth 2 Password]** p
 
 >[!NOTE]
 >
->**Limitação de mTLS:** [!UICONTROL Access Token URL] não dá suporte a mTLS. Se você planeja usar mTLS para seu endpoint de recebimento de dados, seu endpoint de autenticação deve usar HTTPS padrão. Consulte a seção [Considerações sobre mTLS](#mtls-considerations) para obter mais detalhes sobre a arquitetura necessária.
+>**Limitação de mTLS:** não há suporte para mTLS com a autenticação de Senha do OAuth 2. Consulte a seção [Considerações sobre mTLS](#mtls-considerations) para obter detalhes.
 
-* **[!UICONTROL Access Token URL]**: A URL no seu lado que emite tokens de acesso e, opcionalmente, atualiza tokens. Esse endpoint deve usar HTTPS padrão e não oferece suporte a mTLS.
+* **[!UICONTROL Access Token URL]**: A URL no seu lado que emite tokens de acesso e, opcionalmente, atualiza tokens.
 * **[!UICONTROL Client ID]**: o [!DNL client ID] que seu sistema atribui à Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: o [!DNL client secret] que seu sistema atribui à Adobe Experience Platform.
 * **[!UICONTROL Username]**: O nome de usuário para acessar seu ponto de extremidade HTTP.
@@ -187,9 +177,9 @@ Se você selecionar o tipo de autenticação **[!UICONTROL OAuth 2 Client Creden
 
 >[!NOTE]
 >
->**Limitação de mTLS:** [!UICONTROL Access Token URL] não dá suporte a mTLS. Se você planeja usar mTLS para seu endpoint de recebimento de dados, seu endpoint de autenticação deve usar HTTPS padrão. Consulte a seção [Considerações sobre mTLS](#mtls-considerations) para obter mais detalhes sobre a arquitetura necessária.
+>**Limitação de mTLS:** não há suporte para mTLS com a autenticação de Credenciais de Cliente OAuth 2. Consulte a seção [Considerações sobre mTLS](#mtls-considerations) para obter detalhes.
 
-* **[!UICONTROL Access Token URL]**: A URL no seu lado que emite tokens de acesso e, opcionalmente, atualiza tokens. Esse endpoint deve usar HTTPS padrão e não oferece suporte a mTLS.
+* **[!UICONTROL Access Token URL]**: A URL no seu lado que emite tokens de acesso e, opcionalmente, atualiza tokens.
 * **[!UICONTROL Client ID]**: o [!DNL client ID] que seu sistema atribui à Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: o [!DNL client secret] que seu sistema atribui à Adobe Experience Platform.
 * **[!UICONTROL Client Credentials Type]**: Selecione o tipo de concessão de Credenciais de Cliente OAuth2 suportada pelo seu ponto de extremidade:
@@ -206,7 +196,7 @@ Se você selecionar o tipo de autenticação **[!UICONTROL OAuth 2 Client Creden
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="Ponto de acesso HTTP"
->abstract="A URL do endpoint HTTP para o qual você deseja enviar os dados do perfil. Este é o terminal de recebimento de dados e oferece suporte a mTLS, se configurado. Isso é separado do URL do token de acesso OAuth 2, que não oferece suporte a mTLS."
+>abstract="A URL do endpoint HTTP para o qual você deseja enviar os dados do perfil. Este é o seu endpoint de recebimento de dados e oferece suporte a mTLS, se configurado (não disponível com a Senha do OAuth 2 ou autenticação de Credenciais do cliente)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"
@@ -230,7 +220,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Name]**: Digite um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Description]**: insira uma descrição que ajudará você a identificar este destino no futuro.
 * **[!UICONTROL Headers]**: Insira todos os cabeçalhos personalizados que você deseja incluir nas chamadas de destino, seguindo este formato: `header1:value1,header2:value2,...headerN:valueN`.
-* **[!UICONTROL HTTP Endpoint]**: A URL do ponto de extremidade HTTP para o qual você deseja enviar os dados do perfil. Este é o terminal de recebimento de dados. Se estiver usando mTLS, esse endpoint deve ter o TLS desativado e somente o mTLS ativado. Observe que isso é diferente do URL do token de acesso OAuth 2 configurado durante a autenticação.
+* **[!UICONTROL HTTP Endpoint]**: A URL do ponto de extremidade HTTP para o qual você deseja enviar os dados do perfil. Este é o terminal de recebimento de dados. Se você estiver usando mTLS, esse endpoint deve ter o TLS desativado e somente o mTLS ativado.
 * **[!UICONTROL Query parameters]**: Opcionalmente, você pode adicionar parâmetros de consulta à URL do ponto de extremidade HTTP. Formate os parâmetros de consulta usados desta forma: `parameter1=value&parameter2=value`.
 * **[!UICONTROL Include Segment Names]**: alterne se quiser que a exportação de dados inclua os nomes dos públicos que você está exportando. **Observação**: os nomes de segmentos são incluídos apenas em segmentos mapeados para o destino. Os segmentos não mapeados que aparecem na exportação não incluirão o campo `name`. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.
 * **[!UICONTROL Include Segment Timestamps]**: alterne se desejar que a exportação de dados inclua o carimbo de data e hora UNIX quando os públicos-alvo foram criados e atualizados, bem como o carimbo de data e hora UNIX quando os públicos-alvo foram mapeados para o destino para ativação. Para obter um exemplo de exportação de dados com essa opção selecionada, consulte a seção [Dados exportados](#exported-data), mais abaixo.

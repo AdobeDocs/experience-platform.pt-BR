@@ -3,10 +3,10 @@ title: Visão geral do Snowflake Source Connector
 description: Saiba como conectar o Snowflake ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 687363ab664e43cc854b535760dfbfc55acefd2c
 workflow-type: tm+mt
-source-wordcount: '1502'
-ht-degree: 3%
+source-wordcount: '1570'
+ht-degree: 1%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 3%
 >* Por padrão, a origem [!DNL Snowflake] interpreta `null` como uma cadeia de caracteres vazia. Entre em contato com o representante da Adobe para garantir que os valores de `null` sejam gravados corretamente como `null` no Adobe Experience Platform.
 >* Para que o Experience Platform assimile dados, os fusos horários de todas as fontes de lote baseadas em tabela devem ser configurados como UTC. O único carimbo de data/hora com suporte para a origem [!DNL Snowflake] é TIMESTAMP_NTZ com a hora UTC.
 
-A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+[!DNL Snowflake] é uma plataforma de data warehouse baseada em nuvem projetada para permitir que as organizações armazenem, processem e analisem grandes volumes de dados com eficiência. Criado para aproveitar a escalabilidade e a flexibilidade da nuvem, o [!DNL Snowflake] oferece suporte à integração de dados, à análise avançada e ao compartilhamento contínuo entre equipes. Como um serviço totalmente gerenciado, o [!DNL Snowflake] elimina as complexidades de manutenção comuns aos bancos de dados tradicionais, permitindo que você se concentre em obter insights e valor de seus dados.
 
-O Experience Platform oferece suporte para assimilação de dados de um banco de dados de terceiros. O Experience Platform pode se conectar a diferentes tipos de bancos de dados, como bancos de dados relacionais, NoSQL ou data warehouses. O suporte para provedores de banco de dados inclui [!DNL Snowflake].
+Você pode usar a origem [!DNL Snowflake] para se conectar e trazer seus dados do [!DNL Snowflake] para a Adobe Experience Platform. Leia a documentação abaixo para saber como configurar sua origem do [!DNL Snowflake] e se conectar ao Experience Platform.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -42,7 +42,7 @@ Forneça valores para as credenciais a seguir para conectar [!DNL Snowflake] ao 
 
 | Credencial | Descrição |
 | ---------- | ----------- |
-| `account` | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `orgname-account_name`. Leia a seção sobre [recuperação do [!DNL Snowflake] identificador de conta](#retrieve-your-account-identifier) para obter orientações adicionais. Para obter mais informações, consulte a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `myorg-myaccount.snowflakecomputing.com`. Leia a seção sobre [recuperação do [!DNL Snowflake] identificador de conta](#retrieve-your-account-identifier) para obter orientações adicionais. Para obter mais informações, consulte a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `warehouse` | O warehouse [!DNL Snowflake] gerencia o processo de execução da consulta para o aplicativo. Cada warehouse [!DNL Snowflake] é independente um do outro e deve ser acessado individualmente ao trazer dados para a Experience Platform. |
 | `database` | O banco de dados [!DNL Snowflake] contém os dados que você deseja trazer para a Experience Platform. |
 | `username` | O nome de usuário da conta [!DNL Snowflake]. |
@@ -56,7 +56,7 @@ Para usar a autenticação de par de chaves, gere primeiro um par de chaves RSA 
 
 | Credencial | Descrição |
 | --- | --- |
-| `account` | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `orgname-account_name`. Leia a seção sobre [recuperação do [!DNL Snowflake] identificador de conta](#retrieve-your-account-identifier) para obter orientações adicionais. Para obter mais informações, consulte a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `myorg-myaccount.snowflakecomputing.com`. Leia a seção sobre [recuperação do [!DNL Snowflake] identificador de conta](#retrieve-your-account-identifier) para obter orientações adicionais. Para obter mais informações, consulte a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | O nome de usuário da sua conta [!DNL Snowflake]. |
 | `privateKey` | A chave privada [!DNL Base64-]codificada da sua conta [!DNL Snowflake]. Você pode gerar chaves privadas criptografadas ou não. Se você estiver usando uma chave privada criptografada, também deverá fornecer uma senha de chave privada ao autenticar no Experience Platform. Leia a seção sobre [recuperando sua chave privada](#retrieve-your-private-key) para obter mais informações. |
 | `privateKeyPassphrase` | A senha da chave privada é uma camada adicional de segurança que deve ser usada ao autenticar com uma chave privada criptografada. Não é necessário fornecer a senha se você estiver usando uma chave privada não criptografada. |
@@ -90,7 +90,7 @@ Para usar a autenticação de par de chaves, gere primeiro um par de chaves RSA 
 
 | Credencial | Descrição |
 | --- | --- |
-| `account` | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `orgname-account_name`. Leia o guia em [recuperando seu [!DNL Snowflake] identificador de conta](#etrieve-your-account-identifier) para obter orientação adicional. Para obter mais informações, consulte a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `account` | Um nome de conta identifica exclusivamente uma conta na organização. Nesse caso, você deve identificar exclusivamente uma conta em diferentes organizações do [!DNL Snowflake]. Para fazer isso, você deve anexar o nome da organização ao nome da conta. Por exemplo: `http://myorg-myaccount.snowflakecomputing.com/`. Leia o guia em [recuperando seu [!DNL Snowflake] identificador de conta](#etrieve-your-account-identifier) para obter orientação adicional. Para obter mais informações, consulte a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | O nome de usuário da sua conta [!DNL Snowflake]. |
 | `privateKey` | A chave privada do usuário [!DNL Snowflake], codificada em base64 como uma linha única sem cabeçalhos ou quebras de linha. Para prepará-lo, copie o conteúdo do arquivo PEM, remova as linhas `BEGIN`/`END` e todas as quebras de linha e, em seguida, codifique o resultado em base64. Leia a seção sobre [recuperando sua chave privada](#retrieve-your-private-key) para obter mais informações. **Observação:** chaves privadas criptografadas não têm suporte no momento para uma conexão AWS. |
 | `port` | O número da porta usada por [!DNL Snowflake] ao se conectar a um servidor pela Internet. |
@@ -103,66 +103,69 @@ Para obter mais informações sobre esses valores, consulte o [[!DNL Snowflake] 
 
 ### Recupere o identificador da sua conta {#retrieve-your-account-identifier}
 
-Você deve recuperar o identificador de conta do painel da interface do usuário do [!DNL Snowflake] porque você usará o identificador de conta para autenticar sua instância do [!DNL Snowflake] no Experience Platform.
+Você deve recuperar o identificador da conta no painel da interface do usuário do [!DNL Snowflake], pois você o usará para autenticar sua instância do [!DNL Snowflake] no Experience Platform.
 
 Para recuperar o identificador da conta:
 
-* Navegue até sua conta no [[!DNL Snowflake] painel da interface do usuário do aplicativo](https://app.snowflake.com/).
-* Na navegação à esquerda, selecione **[!DNL Accounts]**, seguido por **[!DNL Active Accounts]** no cabeçalho.
+* Use o [[!DNL Snowflake] painel da interface do usuário do aplicativo](https://app.snowflake.com/) para acessar sua conta.
+* Na navegação à esquerda, selecione **[!DNL Accounts]** e, em seguida, selecione **[!DNL Active Accounts]** no cabeçalho.
 * Em seguida, selecione o ícone de informações e selecione e copie o nome de domínio do URL atual.
 
 ![O painel da interface do usuário do Snowflake com o nome de domínio selecionado.](../../images/tutorials/create/snowflake/snowflake-dashboard.png)
 
-### Recuperar sua chave privada {#retrieve-your-private-key}
+### Gerar seu par de chaves RSA
 
-Se você estiver usando a autenticação de par de chaves para a conexão do [!DNL Snowflake], também deverá gerar sua chave privada antes de se conectar ao Experience Platform.
+Use o OpenSSL na interface de linha de comando para gerar um par de chaves RSA de 2048 bits no formato PKCS#8. É uma prática recomendada criar uma chave privada criptografada para segurança, o que exigirá uma senha.
 
 >[!BEGINTABS]
 
->[!TAB Criar uma chave privada criptografada]
+>[!TAB Gerar uma chave privada criptografada]
 
 Para gerar sua chave privada [!DNL Snowflake] criptografada, execute o seguinte comando no terminal:
 
-```shell
-openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8
+```bash
+openssl genrsa 2048 | openssl pkcs8 -topk8 -v2 des3 -inform PEM -out rsa_key.p8# You will be prompted to enter a passphrase. Store this securely!
 ```
 
-Se tiver êxito, você deverá receber sua chave privada no formato PEM.
-
-```shell
-|-----BEGIN ENCRYPTED PRIVATE KEY-----
-MIIE6T...
-|-----END ENCRYPTED PRIVATE KEY-----
-```
-
->[!TAB Criar uma chave privada não criptografada]
+>[!TAB Gerar uma chave privada não criptografada]
 
 Para gerar sua chave privada [!DNL Snowflake] não criptografada, execute o seguinte comando no terminal:
 
-```shell
+```bash
 openssl genrsa 2048 | openssl pkcs8 -topk8 -inform PEM -out rsa_key.p8 -nocrypt
-```
-
-Se tiver êxito, você deverá receber sua chave privada no formato PEM.
-
-```shell
-|-----BEGIN PRIVATE KEY-----
-MIIE6T...
-|-----END PRIVATE KEY-----
 ```
 
 >[!ENDTABS]
 
-Em seguida, pegue sua chave privada e codifique-a em [!DNL Base64]. Certifique-se de não fazer transformações ou conversões de formato na chave privada do [!DNL Snowflake]. Além disso, você deve garantir que não haja caracteres de nova linha no final da chave privada, antes de codificá-la em [!DNL Base64].
+### Gerar uma chave pública a partir de sua chave privada
+
+Em seguida, execute o seguinte comando na interface da linha de comando para criar uma chave pública com base na sua chave privada.
+
+```bash
+openssl rsa -in rsa_key.p8 -pubout -out rsa_key.pub# You will be prompted to enter the passphrase if the private key is encrypted.
+```
+
+### Atribuir a chave pública ao usuário [!DNL Snowflake]
+
+Você precisa usar uma função de administrador [!DNL Snowflake] (como **SECURITYADMIN**) para associar a chave pública gerada ao usuário de serviço [!DNL Snowflake] que a Experience Platform usará. Para recuperar o conteúdo da chave pública, abra o arquivo `rsa_key.pub` e copie o conteúdo inteiro, excluindo as linhas `-----BEGIN PUBLIC KEY----- and -----END PUBLIC KEY-----`. Em seguida, execute o seguinte SQL em [!DNL Snowflake]:
+
+```sql
+ALTER USER {YOUR_SNOWFLAKE_USERNAME}>SET RSA_PUBLIC_KEY='{PUBLIC_KEY_CONTENT}';
+```
+
+### Codificar a chave privada em [!DNL Base64]
+
+O Experience Platform exige que a chave privada seja codificada em [!DNL Base64] e fornecida como uma cadeia de caracteres durante a configuração da conexão. Use uma ferramenta ou um script adequado para codificar o conteúdo do arquivo `rsa_key.p8` em uma única cadeia de caracteres [!DNL Base64].
+
+>[!TIP]
+>
+>Verifique se não há espaços extras ou quebras de linha, incluindo as linhas de cabeçalho/rodapé `(-----BEGIN ENCRYPTED PRIVATE KEY----- and -----END ENCRYPTED PRIVATE KEY-----)`, antes ou depois do processo de codificação, pois isso pode causar erros de autenticação.
 
 ### Verificar configurações
 
-Antes de criar uma conexão de origem para seus dados do [!DNL Snowflake], você também deve garantir que as seguintes configurações sejam atendidas:
+Antes de criar a conexão de origem [!DNL Snowflake] no Experience Platform, verifique se o **[!DNL Default Role]** e o **[!DNL Default Warehouse]** do usuário correspondem aos valores fornecidos no Experience Platform. Você pode verificar essas configurações na interface do usuário [!DNL Snowflake] usando o comando SQL `DESCRIBE USER {USERNAME}`.
 
-* O depósito padrão atribuído a um determinado usuário deve ser igual ao depósito inserido ao autenticar no Experience Platform.
-* A função padrão atribuída a um determinado usuário deve ter acesso ao mesmo banco de dados inserido ao autenticar no Experience Platform.
-
-Para verificar sua função e depósito:
+Como alternativa, siga as etapas abaixo para verificar suas configurações:
 
 * Selecione **[!DNL Admin]** na navegação à esquerda e **[!DNL Users & Roles]**.
 * Selecione o usuário apropriado e, em seguida, selecione as reticências (`...`) no canto superior direito.
@@ -171,17 +174,17 @@ Para verificar sua função e depósito:
 
 ![A interface do usuário do Snowflake na qual você pode verificar sua função e seu depósito.](../../images/tutorials/create/snowflake/snowflake-configs.png)
 
-Depois de codificada com êxito, você pode usar essa chave privada codificada em [!DNL Base64] no Experience Platform para autenticar sua conta do [!DNL Snowflake].
+## Próximas etapas
 
-A documentação abaixo fornece informações sobre como conectar o [!DNL Snowflake] ao Experience Platform usando APIs ou a interface do usuário:
+Com a configuração concluída, você pode prosseguir para conectar a conta do [!DNL Snowflake] à Experience Platform. Leia a documentação a seguir para obter mais informações:
 
-## Conectar o [!DNL Snowflake] ao Experience Platform usando APIs
+### Conectar o [!DNL Snowflake] ao Experience Platform usando APIs
 
-* [Criar uma conexão básica do Snowflake usando a API do serviço de fluxo](../../tutorials/api/create/databases/snowflake.md)
+* [Conectar  [!DNL Snowflake]  ao Experience Platform usando a API](../../tutorials/api/create/databases/snowflake.md)
 * [Explorar tabelas de dados usando a API de Serviço de Fluxo](../../tutorials/api/explore/tabular.md)
 * [Criar um fluxo de dados para uma fonte de banco de dados usando a API do Serviço de fluxo](../../tutorials/api/collect/database-nosql.md)
 
-## Conectar o [!DNL Snowflake] ao Experience Platform usando a interface
+### Conectar o [!DNL Snowflake] ao Experience Platform usando a interface
 
-* [Criar uma conexão de origem do Snowflake na interface](../../tutorials/ui/create/databases/snowflake.md)
+* [Conectar [!DNL Snowflake] ao Experience Platform usando a interface](../../tutorials/ui/create/databases/snowflake.md)
 * [Criar um fluxo de dados para uma conexão de origem de banco de dados na interface](../../tutorials/ui/dataflow/databases.md)

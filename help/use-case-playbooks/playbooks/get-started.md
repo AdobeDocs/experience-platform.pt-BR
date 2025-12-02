@@ -26,7 +26,7 @@ Para acessar uma galeria avançada de manuais de casos de uso na interface do us
 
 Assista a este vídeo para saber mais sobre as etapas necessárias para criar sua sandbox, configurar permissões e configurar superfícies do canal para notificações por email, push e SMS no Journey Optimizer.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449831?captions=por_br&learn=on)
 
 ## Criar uma sandbox de desenvolvimento {#create-development-sandbox}
 

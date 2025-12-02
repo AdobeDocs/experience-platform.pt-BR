@@ -2,10 +2,10 @@
 title: Referência a extensões de tag
 description: Encontre a documentação de extensões de tag na Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: 3c3863aa61a7bbdb2df585b842e55f2d7291c727
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '472'
-ht-degree: 8%
+ht-degree: 12%
 
 ---
 
@@ -13,26 +13,26 @@ ht-degree: 8%
 
 >[!NOTE]
 >
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
+>O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Esta é uma lista de documentação para extensões de tag do lado do cliente. Para obter uma lista de extensões do lado do servidor disponíveis, consulte a [referência de extensões do encaminhamento de eventos](../server/overview.md).
 
 >[!NOTE]
 >
->Qualquer nome de extensão seguido por um asterisco (*) está vinculado à lista de extensões no Adobe Exchange, que contém instruções de instalação e uso. Todos os outros links apontam para a documentação da extensão no Adobe Experience League.
+>Qualquer nome de extensão seguido por um asterisco (*) está vinculado à lista de extensões no Adobe Exchange, que contém instruções de instalação e uso. Todos os outros links apontam para a documentação da extensão na Adobe Experience League.
 
 * [Métricas de velocidade de site acessíveis](https://exchange.adobe.com/apps/ec/103053)*
-* [Personalizador de Activity Map](https://exchange.adobe.com/apps/ec/101531)*
+* [Personalizador do Activity Map](https://exchange.adobe.com/apps/ec/101531)*
 * [Atualização de Página de Ação](https://exchange.adobe.com/apps/ec/102848)*
 * [Acompanhamento De Site Do Adform](https://exchange.adobe.com/apps/ec/103195)*
 * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)*
 * [Adobe Analytics](./analytics/overview.md)
 * [Adobe Analytics E Adobe Target](https://exchange.adobe.com/apps/ec/105363/*6sense-for-analytics-and-target)*
-* [Adobe Analytics e Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
-* [Adobe Analytics e Salesforce](https://exchange.adobe.com/apps/ec/101530)*
+* [Adobe Analytics E Microsoft Dynamics](https://exchange.adobe.com/apps/ec/102966)*
+* [Adobe Analytics E Salesforce](https://exchange.adobe.com/apps/ec/101530)*
 * [String de produto do Adobe Analytics](./product-string/overview.md)
 * [Construtor de cadeia de caracteres do produto Adobe Analytics](https://exchange.adobe.com/apps/ec/101461)*
-* [Adobe Analytics via SDK da Web da Adobe Experience Platform](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
+* [Adobe Analytics via Adobe Experience Platform Web SDK](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)*
 * [Adobe Audience Manager](./audience-manager/overview.md)
 * [Camada de dados de clientes Adobe](./client-data-layer/overview.md)
 * [Adobe ContextHub](./contexthub/overview.md)
@@ -42,15 +42,15 @@ Esta é uma lista de documentação para extensões de tag do lado do cliente. P
 * [SDK da Web da Adobe Experience Platform](./web-sdk/overview.md)
 * [Adobe Experience Manager Asset Insights](./asset-insights/overview.md)
 * [Adobe Fonts](https://exchange.adobe.com/apps/ec/101538)*
-* [Adobe Medium Analytics para áudio e vídeo](./media-analytics/overview.md)
-* [Adobe Medium Analytics (SDK 3.x)](./media-analytics-3x/overview.md)
-* [Privacidade Adobe](./privacy/overview.md)
-* [Seletor do Conjunto de Relatórios de Adobe](https://exchange.adobe.com/apps/ec/100640)*
+* [Adobe Media Analytics para áudio e vídeo](./media-analytics/overview.md)
+* [Adobe Media Analytics (3.x SDK)](./media-analytics-3x/overview.md)
+* [Privacidade do Adobe](./privacy/overview.md)
+* [Seletor do Conjunto de Relatórios do Adobe](https://exchange.adobe.com/apps/ec/100640)*
 * [Adobe Target](./target/overview.md)
 * [Adobe Target v2](./target-v2/overview.md)
 * [Kit de ferramentas do Adobe Target](https://exchange.adobe.com/apps/ec/100640)*
 * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)*
-* [Insights de ativos do AEM](https://exchange.adobe.com/apps/ec/103406)*
+* [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)*
 * [Notificador JS de freio aéreo](https://exchange.adobe.com/apps/ec/103342)*
 * [Amplitude](https://exchange.adobe.com/apps/ec/108010)*
 * [Apollo QAX](https://exchange.adobe.com/apps/ec/105068)*
@@ -65,7 +65,7 @@ Esta é uma lista de documentação para extensões de tag do lado do cliente. P
 * [Experiências do Cheetah](https://exchange.adobe.com/apps/ec/102759)*
 * [Clicktale](https://exchange.adobe.com/apps/ec/100082)*
 * [Plug-ins comuns do Analytics](./plugins/overview.md)
-* [Plug-ins comuns do SDK da Web](./web-sdk/web-sdk-plugins.md)
+* [Plug-ins comuns do Web SDK](web-sdk-plugins/web-sdk-plugins.md)
 * [Concatenar](https://exchange.adobe.com/apps/ec/104690)*
 * [ContentSquare](https://exchange.adobe.com/apps/ec/100364)*
 * [Gerenciamento de consentimento de cookie por Usercentrics CMP v2](https://exchange.adobe.com/apps/ec/*107037)*
@@ -94,7 +94,7 @@ Esta é uma lista de documentação para extensões de tag do lado do cliente. P
 * [[!DNL Marketo Munchkin]](./marketo/overview.md)
 * [Gerenciador de Propriedades Mestre](https://exchange.adobe.com/apps/ec/102992)*
 * [Monita](https://exchange.adobe.com/apps/ec/106544)*
-* [SDK digital da Nielsen](https://exchange.adobe.com/apps/ec/101361)*
+* [SDK Digital Nielsen](https://exchange.adobe.com/apps/ec/101361)*
 * [Gerenciamento de Consentimento do OneTrust para Cookies](https://exchange.adobe.com/apps/ec/100340)*
 * [Pepperjam](https://exchange.adobe.com/apps/ec/103587)*
 * [Conexão Persistente](https://exchange.adobe.com/apps/ec/103745)*

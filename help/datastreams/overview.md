@@ -1,21 +1,21 @@
 ---
 title: Visão geral das sequências de dados
-description: Saiba como os fluxos de dados ajudam a conectar sua integração do SDK do Experience Platform do lado do cliente com produtos Adobe e destinos de terceiros.
+description: Saiba como as sequências de dados ajudam a conectar sua integração do Experience Platform SDK no lado do cliente com produtos da Adobe e destinos de terceiros.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: e3768a3f695abeedc9a3ce2fef591c6ecae9a897
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 70%
+source-wordcount: '709'
+ht-degree: 60%
 
 ---
 
 # Visão geral das sequências de dados
 
-Uma sequência de dados representa a configuração do lado do servidor para os SDKs da Web e móveis da Adobe Experience Platform. Embora o comando [`configure`](/help/web-sdk/commands/configure/overview.md) no SDK trate as configurações do lado do cliente (como `edgeDomain`), os fluxos de dados gerenciam todas as outras configurações.
+Uma sequência de dados representa a configuração do lado do servidor para os SDKs da Web e móveis da Adobe Experience Platform. Enquanto o comando [`configure`](/help/collection/js/commands/configure/overview.md) no SDK lida com configurações do lado do cliente (como `edgeDomain`), os fluxos de dados gerenciam todas as outras configurações.
 
-Quando você envia uma solicitação para o Edge Network, o `datastreamId` faz referência à sequência de dados para a qual os dados são enviados. Isso permite atualizar a configuração do lado do servidor sem alterar o código do site.
+Quando você envia uma solicitação para a Edge Network, o `datastreamId` faz referência à sequência de dados para a qual os dados são enviados. Isso permite atualizar a configuração do lado do servidor sem alterar o código do site.
 
-Você pode criar e gerenciar sequências de dados selecionando **[!UICONTROL Sequências de dados]** na navegação à esquerda da interface da Adobe Experience Platform ou da Coleção de dados.
+Você pode criar e gerenciar fluxos de dados selecionando **[!UICONTROL Datastreams]** na navegação à esquerda na interface do usuário do Adobe Experience Platform ou na interface da Coleção de dados.
 
 ![Guia Sequências de dados na interface](assets/overview/datastreams-tab.png)
 
@@ -33,7 +33,7 @@ As sequências de dados fornecem três métodos para ajudá-lo a lidar com os da
 
 * [Criptografia aprimorada](#encryption)
 * [Governança de dados](#governance)
-* [Logs de auditoria](#audit-logs)
+* [Logs de auditorisa](#audit-logs)
 
 ### Criptografia aprimorada {#encryption}
 
@@ -45,13 +45,13 @@ As sequências de dados usam os recursos integrados de governança de dados do E
 
 O vídeo a seguir fornece uma breve visão geral de como as restrições de uso de dados são configuradas e aplicadas às sequências de dados na interface:
 
->[!VIDEO](https://video.tv.adobe.com/v/3415829/?quality=12&learn=on&speedcontrol=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
 Na Experience Platform, é possível aplicar [rótulos de uso de dados confidenciais](../data-governance/labels/reference.md#sensitive) a esquemas e campos que contêm dados que sua organização considera confidenciais. Por exemplo, o rótulo `RHD` é utilizado para identificar dados protegidos de saúde (PHI), e o rótulo `S1` representa dados de geolocalização.
 
 >[!NOTE]
 >
->Para obter detalhes sobre como aplicar rótulos de uso de dados na guia [!UICONTROL Esquemas] da interface da Experience Platform ou da Coleção de dados, consulte o [tutorial de rotulagem de esquemas](../xdm/tutorials/labels.md).
+>Para obter detalhes sobre como aplicar rótulos de uso de dados na guia [!UICONTROL Schemas] da interface do usuário do Experience Platform ou da Coleção de Dados, consulte o [tutorial de rotulagem de esquemas](../xdm/tutorials/labels.md).
 
 Ao criar um fluxo de dados, se o esquema selecionado contiver rótulos de uso de dados confidenciais, você só poderá configurar o fluxo de dados para enviar esses dados para destinos prontos para HIPAA. Atualmente, o único destino pronto para HIPAA compatível com sequências de dados é a Adobe Experience Platform. Outros serviços de destino, como Adobe Target, Adobe Analytics, Adobe Audience Manager, encaminhamento de eventos e os destinos de borda, são desabilitados para sequências de dados que contêm rótulos de uso de dados confidenciais.
 
@@ -61,7 +61,7 @@ Se um esquema estiver sendo usado em uma sequência de dados existente com servi
 
 Na Experience Platform, as atividades da sequência de dados podem ser monitoradas na forma de logs de auditoria. Os logs de auditoria indicam **quem** executou a ação **o que** e **quando**, juntamente com outros dados contextuais que podem ajudá-lo a solucionar problemas relacionados às sequências de dados para ajudar sua empresa a cumprir as políticas corporativas de gerenciamento de dados e os requisitos regulatórios.
 
-Sempre que um usuário cria, atualiza ou exclui uma sequência de dados, um log de auditoria é criado para registrar a ação. O mesmo ocorre sempre que um usuário cria, atualiza ou exclui um mapeamento por meio do [preparo de dados para a coleção de dados](./data-prep.md). Independentemente do recurso atualizado ter sido uma sequência de dados ou um mapeamento, o log de auditoria resultante é categorizado no tipo de recurso [!UICONTROL Sequências de dados].
+Sempre que um usuário cria, atualiza ou exclui uma sequência de dados, um log de auditoria é criado para registrar a ação. O mesmo ocorre sempre que um usuário cria, atualiza ou exclui um mapeamento por meio do [preparo de dados para a coleção de dados](./data-prep.md). Independentemente de ter sido uma sequência de dados ou um mapeamento atualizado, o log de auditoria resultante é categorizado sob o tipo de recurso [!UICONTROL Datastreams].
 
 Consulte a documentação sobre [logs de auditoria](../landing/governance-privacy-security/audit-logs/overview.md) para obter mais informações sobre como interpretar logs de sequências de dados e outros serviços compatíveis.
 

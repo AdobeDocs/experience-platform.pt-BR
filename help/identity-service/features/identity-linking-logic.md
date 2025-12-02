@@ -2,7 +2,7 @@
 title: Lógica de vinculação do serviço de identidade
 description: Saiba mais sobre como o Serviço de identidade vincula identidades diferentes para criar uma visualização abrangente de um cliente.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: bbfc1d749fbe0e74489a48e0c962d9f51d19ccde
+source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 2%
@@ -102,7 +102,7 @@ Você também implementou o SDK da Web e assimilou um conjunto de dados do SDK d
 | `t=3` | ECID:44675 | Exibir página inicial |
 | `t=4` | ECID:44675, CRMID: 31260XYZ | Exibir histórico de compras |
 
-A identidade primária para cada evento será determinada com base em [como você configura os tipos de elementos de dados](../../tags/extensions/client/web-sdk/data-element-types.md).
+A identidade primária para cada evento será determinada com base em [como você configura os tipos de elementos de dados](/help/tags/extensions/client/web-sdk/data-element-types.md).
 
 >[!NOTE]
 >

@@ -4,14 +4,14 @@ solution: Experience Platform
 title: Visão geral da assimilação de fluxo
 description: A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
+source-git-commit: ea693cb4bb732c829d9a477cbd3dcb209da524f3
 workflow-type: tm+mt
 source-wordcount: '419'
 ht-degree: 3%
 
 ---
 
-# Visão geral da assimilação por transmissão
+# Visão geral da ingestão de streaming
 
 A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o [!DNL Experience Platform] em tempo real.
 
@@ -21,7 +21,7 @@ O Adobe Experience Platform permite gerar experiências coordenadas, consistente
 
 O vídeo a seguir foi projetado para ajudar a entender a assimilação de streaming e descreve os conceitos acima.
 
->[!VIDEO](https://video.tv.adobe.com/v/31683?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Registros de perfil de fluxo e [!DNL ExperienceEvents]
 
@@ -33,13 +33,13 @@ Leia o [guia de criação de conexão de streaming](../tutorials/create-streamin
 
 Depois de ter certeza de que seus dados estão limpos, você poderá habilitar seus conjuntos de dados para [!DNL Real-Time Customer Profile] e [!DNL Identity Service].
 
-Para obter mais informações sobre como habilitar um conjunto de dados para [!DNL Profile] e [!DNL Identity Service], leia o [guia de configuração de um conjunto de dados](../../profile/tutorials/dataset-configuration.md).
+Para obter mais informações sobre como habilitar um conjunto de dados para [!DNL Profile] e [!DNL Identity Service], leia o [guia de configuração de um conjunto de dados](/help/profile/tutorials/dataset-configuration.md).
 
 ## Qual é a latência esperada para a assimilação por transmissão no Experience Platform?
 
 >[!IMPORTANT]
 >
->As garantias para assimilação por transmissão estão vinculadas ao direito de uso total de licença que corresponde a toda a organização. Além disso, o uso de dados em sandboxes de desenvolvimento é limitado a 10% do total de perfis. Para obter mais informações sobre direitos de uso de licença, leia o [guia de práticas recomendadas de gerenciamento de dados](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Para saber como definir limites para sua taxa de transferência de streaming, leia a [Visão geral da capacidade](../../landing/license-usage-and-guardrails/capacity.md).
+>As garantias para assimilação por transmissão estão vinculadas ao direito de uso total de licença que corresponde a toda a organização. Além disso, o uso de dados em sandboxes de desenvolvimento é limitado a 10% do total de perfis. Para obter mais informações sobre direitos de uso de licença, leia o [guia de práticas recomendadas de gerenciamento de dados](/help/landing/license-usage-and-guardrails/data-management-best-practices.md). Para saber como definir limites para sua taxa de transferência de streaming, leia a [Visão geral da capacidade](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Destino | Latência esperada |
 | --------- | ---------------- |
@@ -61,4 +61,4 @@ A tabela abaixo exibe orientações sobre os limites de solicitação por segund
 
 ## Extensão da Adobe Experience Platform
 
-Você pode usar a extensão Adobe Experience Platform para criar uma nova conexão de transmissão. A extensão [!DNL Experience Platform] fornece ações para enviar sinais formatados em [!DNL Experience Data Model] (XDM) para assimilação em tempo real para [!DNL Experience Platform]. Visite a documentação da [Extensão do Experience Platform](../../tags/extensions/client/web-sdk/overview.md) para obter mais informações.
+Você pode usar a extensão Adobe Experience Platform para criar uma nova conexão de transmissão. A extensão [!DNL Experience Platform] fornece ações para enviar sinais formatados em [!DNL Experience Data Model] (XDM) para assimilação em tempo real para [!DNL Experience Platform]. Visite a documentação da [Extensão do Experience Platform](/help/tags/extensions/client/web-sdk/overview.md) para obter mais informações.

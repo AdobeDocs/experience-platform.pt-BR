@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: ba41de0085b578ddb43fb61210a23dbbcc84a2f1
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
-source-wordcount: '4555'
+source-wordcount: '4552'
 ht-degree: 10%
 
 ---
@@ -100,7 +100,7 @@ O Experience Platform define automaticamente um agendamento padrão para cada ex
 
 ![Controle de edição de agendamento realçado na etapa Agendamento.](../assets/ui/activate-batch-profile-destinations/edit-default-schedule.png)
 
-Para editar vários agendamentos ao mesmo tempo, marque os públicos-alvo usando as caixas de seleção no lado esquerdo da tela e selecione **[!UICONTROL Edit schedule]**. O agendamento configurado será aplicado a todos os arquivos exportados para os públicos selecionados.
+Para editar vários agendamentos ao mesmo tempo, marque os públicos usando as caixas de seleção no lado esquerdo da tela e selecione **[!UICONTROL Edit schedule]**. O agendamento configurado será aplicado a todos os arquivos exportados para os públicos selecionados.
 
 ![Imagem da interface do usuário do Experience Platform mostrando a opção de edição de agendamento para vários públicos selecionados.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
@@ -248,7 +248,7 @@ O nome de destino e a ID de público-alvo não podem ser removidos dos nomes de 
 
 {style="table-layout:auto"}
 
-Para editar vários nomes de arquivo ao mesmo tempo, marque os públicos-alvo usando as caixas de seleção no lado esquerdo da tela e selecione **[!UICONTROL Edit file name]**. As opções de nome de arquivo configuradas serão aplicadas a todos os arquivos exportados para os públicos selecionados.
+Para editar vários nomes de arquivo ao mesmo tempo, marque os públicos usando as caixas de seleção no lado esquerdo da tela e selecione **[!UICONTROL Edit file name]**. As opções de nome de arquivo configuradas serão aplicadas a todos os arquivos exportados para os públicos selecionados.
 
 ![Imagem da interface do usuário do Experience Platform mostrando a opção de edição de nome de arquivo para vários públicos selecionados.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
@@ -466,7 +466,7 @@ A Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 
 ### Comportamento de desduplicação para perfis com o mesmo carimbo de data e hora {#deduplication-same-timestamp}
 
-Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Principais considerações
 
@@ -541,7 +541,7 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 
 >[!IMPORTANT]
 > 
->Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa &#x200B;](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
+>Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa ](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
 >
 >Esta etapa **[!UICONTROL Select attributes]** ainda é exibida para os destinos de marketing por email do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 

@@ -6,9 +6,9 @@ description: Saiba como processar sinais de consentimento do cliente no Adobe Ex
 role: Developer
 feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -30,8 +30,8 @@ Este guia requer uma compreensão funcional dos vários serviços da Experience 
 * [Experience Data Model (XDM)](/help/xdm/home.md): a estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente.
 * [Adobe Experience Platform Identity Service](/help/identity-service/home.md): resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir as identidades de vários dispositivos e sistemas.
 * [Perfil de cliente em tempo real](/help/profile/home.md): usa os recursos do [!DNL Identity Service] para criar perfis de cliente detalhados a partir dos seus conjuntos de dados em tempo real. O Perfil do cliente em tempo real extrai dados do Data Lake e mantém os perfis do cliente em seu próprio armazenamento de dados separado.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): uma biblioteca JavaScript do lado do cliente que permite integrar vários serviços Experience Platform ao seu site voltado para o cliente.
-   * [Comandos de consentimento do SDK](../../../../web-sdk/commands/setconsent.md): uma visão geral dos casos de uso dos comandos do SDK relacionados ao consentimento mostrados neste guia.
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md): uma biblioteca JavaScript do lado do cliente que permite integrar vários serviços Experience Platform ao seu site voltado para o cliente.
+   * [Comandos de consentimento do SDK](/help/collection/js/commands/setconsent.md): uma visão geral dos casos de uso dos comandos do SDK relacionados ao consentimento mostrados neste guia.
 * [Serviço de segmentação da Adobe Experience Platform](/help/segmentation/home.md): permite dividir os dados do Perfil do cliente em tempo real em grupos de indivíduos que compartilham características semelhantes e responderão de forma semelhante às estratégias de marketing.
 
 ## Resumo do fluxo de processamento de consentimento {#summary}
@@ -51,7 +51,7 @@ Na versão atual do suporte ao processamento de consentimento no Experience Plat
 
 >[!NOTE]
 >
->Para obter mais informações sobre a estrutura dos campos de consentimento XDM mencionados acima, consulte o manual no [[!UICONTROL tipo de dados Consentimentos e Preferências]](/help/xdm/data-types/consents.md).
+>Para obter mais informações sobre a estrutura dos campos de consentimento XDM mencionados acima, consulte o manual no [[!UICONTROL Consents and Preferences] tipo de dados](/help/xdm/data-types/consents.md).
 
 Depois que o sistema é configurado, o Experience Platform Web SDK interpreta o valor de consentimento da coleta de dados para o usuário atual a fim de determinar se os dados devem ser enviados para o Adobe Experience Platform Edge Network, descartados do cliente ou mantidos até que a permissão de coleta de dados seja definida como sim ou não.
 
@@ -77,7 +77,7 @@ Depois de criar um conjunto de dados habilitado para [!DNL Profile] para process
 >
 >Se não tiver conjuntos de dados conflitantes, defina a precedência do carimbo de data e hora para sua política de mesclagem. Isso ajuda a garantir que o consentimento mais recente especificado por um cliente seja a configuração de consentimento usada.
 
-Para obter mais informações sobre como trabalhar com políticas de mesclagem, comece lendo a [visão geral das políticas de mesclagem](../../../../profile/merge-policies/overview.md). Ao configurar suas políticas de mesclagem, você deve garantir que seus perfis incluam todos os atributos de consentimento necessários fornecidos pelo grupo de campos de esquema [!UICONTROL Consentimentos e Preferências], conforme descrito no guia em [preparação do conjunto de dados](./dataset.md).
+Para obter mais informações sobre como trabalhar com políticas de mesclagem, comece lendo a [visão geral das políticas de mesclagem](../../../../profile/merge-policies/overview.md). Ao configurar suas políticas de mesclagem, você deve garantir que seus perfis incluam todos os atributos de consentimento necessários fornecidos pelo grupo de campos de esquema [!UICONTROL Consents and Preferences], conforme descrito no guia em [preparação do conjunto de dados](./dataset.md).
 
 ## Enviar dados de consentimento para o Experience Platform
 
@@ -101,7 +101,7 @@ Consulte a documentação do Mobile SDK para [configurar a extensão para dispos
 
 Você pode assimilar dados de consentimento compatíveis com XDM de um arquivo CSV usando a assimilação em lote. Isso pode ser útil se você tiver um backlog de dados de consentimento coletados anteriormente que ainda não foram integrados aos perfis do cliente.
 
-Siga o tutorial em [mapeamento de um arquivo CSV para XDM](../../../../ingestion/tutorials/map-csv/overview.md) para saber como converter seus campos de dados para XDM e assimilá-los no Experience Platform. Ao selecionar o [!UICONTROL Destino] para o mapeamento, certifique-se de selecionar a opção **[!UICONTROL Usar conjunto de dados existente]** e escolher o conjunto de dados de consentimento habilitado para [!DNL Profile] que você criou anteriormente.
+Siga o tutorial em [mapeamento de um arquivo CSV para XDM](../../../../ingestion/tutorials/map-csv/overview.md) para saber como converter seus campos de dados para XDM e assimilá-los no Experience Platform. Ao selecionar o [!UICONTROL Destination] para o mapeamento, certifique-se de selecionar a opção **[!UICONTROL Use existing dataset]** e escolher o conjunto de dados de consentimento habilitado para [!DNL Profile] que você criou anteriormente.
 
 ## Testar sua implementação {#test-implementation}
 
@@ -115,7 +115,7 @@ Depois de assimilar os dados de consentimento do cliente no conjunto de dados ha
 
 Consulte a seção sobre [perfis de navegação por identidade](../../../../profile/ui/user-guide.md#browse) no guia da interface do usuário [!DNL Profile] para obter etapas específicas sobre como pesquisar os detalhes de um perfil.
 
-Por padrão, os novos atributos de consentimento não aparecerão no painel de um perfil. Portanto, você deve navegar até a guia **[!UICONTROL Atributos]** na página de detalhes de um perfil para confirmar que eles foram assimilados conforme esperado. Consulte o guia no [painel de perfil](../../../../profile/ui/profile-dashboard.md) para saber como personalizar o painel de acordo com suas necessidades.
+Por padrão, os novos atributos de consentimento não aparecerão no painel de um perfil. Portanto, você deve navegar até a guia **[!UICONTROL Attributes]** na página de detalhes de um perfil para confirmar que eles foram assimilados conforme esperado. Consulte o guia no [painel de perfil](../../../../profile/ui/profile-dashboard.md) para saber como personalizar o painel de acordo com suas necessidades.
 
 <!-- (To be included once CJM is GA)
 ## Handling consent in Customer Journey Management

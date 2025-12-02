@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de personalização de borda
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de personalização de borda para casos de uso de personalização de mesma página e próxima página.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
 workflow-type: tm+mt
-source-wordcount: '1885'
+source-wordcount: '1883'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ Para obter uma breve visão geral sobre como configurar a conexão do Adobe Targ
 >
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte as etapas de configuração descritas nas seções abaixo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449798/?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 Para obter uma breve visão geral de como compartilhar públicos-alvo e atributos de perfil com a Adobe Target e destinos de personalização personalizados, assista ao vídeo abaixo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447360/?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Casos de uso {#use-cases}
 

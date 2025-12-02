@@ -4,9 +4,9 @@ type: Tutorial
 description: Saiba como ativar os dados de público-alvo no Adobe Experience Platform enviando públicos-alvo para destinos com base em perfil de transmissão.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '717'
 ht-degree: 1%
 
 ---
@@ -16,8 +16,8 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 > 
-> * Para ativar os dados e habilitar a [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
-> * Para ativar dados sem passar pela [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Segmento sem Mapeamento]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+> * Para ativar os dados e habilitar a [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+> * Para ativar dados sem passar pela [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 > 
 > Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
@@ -37,15 +37,15 @@ Para ativar dados para destinos, você deve [se conectar com êxito a um destino
 
 ## Selecione seu destino {#select-destination}
 
-1. Vá para **[!UICONTROL Conexões > Destinos]** e selecione a guia **[!UICONTROL Catálogo]**.
+1. Vá para **[!UICONTROL Connections > Destinations]** e selecione a guia **[!UICONTROL Catalog]**.
 
    ![Imagem mostrando a guia do catálogo de destino.](../assets/ui/activate-streaming-profile-destinations/catalog-tab.png)
 
-1. Selecione **[!UICONTROL Ativar públicos-alvo]** no cartão correspondente ao destino em que você deseja ativar os públicos-alvo, conforme mostrado na imagem abaixo.
+1. Selecione **[!UICONTROL Activate audiences]** no cartão correspondente ao destino em que você deseja ativar os públicos-alvo, conforme mostrado na imagem abaixo.
 
    ![Imagem destacando o controle ativar públicos-alvo na guia do catálogo de destinos.](../assets/ui/activate-streaming-profile-destinations/activate-audiences-button.png)
 
-1. Selecione a conexão de destino que você deseja usar para ativar seus públicos e selecione **[!UICONTROL Avançar]**.
+1. Selecione a conexão de destino que você deseja usar para ativar seus públicos e selecione **[!UICONTROL Next]**.
 
    ![Imagem que mostra uma seleção de dois destinos aos quais você pode se conectar.](../assets/ui/activate-streaming-profile-destinations/select-destination.png)
 
@@ -53,12 +53,12 @@ Para ativar dados para destinos, você deve [se conectar com êxito a um destino
 
 ## Selecione seus públicos-alvo {#select-audiences}
 
-Para selecionar os públicos que você deseja ativar para o destino, use as caixas de seleção à esquerda dos nomes de público e selecione **[!UICONTROL Avançar]**.
+Para selecionar os públicos que você deseja ativar para o destino, use as caixas de seleção à esquerda dos nomes de público e selecione **[!UICONTROL Next]**.
 
 Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
-* **[!UICONTROL Serviço de segmentação]**: públicos-alvo gerados no Experience Platform pelo serviço de segmentação. Consulte a [documentação do Portal de público-alvo](../../segmentation/ui/audience-portal.md) para obter mais detalhes.
-* **[!UICONTROL Upload personalizado]**: públicos-alvo gerados fora do Experience Platform e carregados no Experience Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Segmentation Service]**: Públicos-alvo gerados no Experience Platform pelo Serviço de segmentação. Consulte a [documentação do Portal de público-alvo](../../segmentation/ui/audience-portal.md) para obter mais detalhes.
+* **[!UICONTROL Custom upload]**: públicos-alvo gerados fora do Experience Platform e carregados na Experience Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
 * Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
 
 ![Imagem destacando a seleção das caixas de seleção na etapa Selecionar públicos do fluxo de trabalho de ativação.](../assets/ui/activate-streaming-profile-destinations/select-audiences.png)
@@ -67,23 +67,23 @@ Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua o
 
 Na etapa **[!UICONTROL Mapping]**, selecione os atributos de perfil que deseja enviar ao destino.
 
-1. Na página **[!UICONTROL Selecionar atributos]**, selecione **[!UICONTROL Adicionar novo campo]**.
+1. Na página **[!UICONTROL Select attributes]**, selecione **[!UICONTROL Add new field]**.
 
    ![Imagem destacando o controle Adicionar novo campo na etapa de mapeamento.](../assets/ui/activate-streaming-profile-destinations/add-new-field.png)
 
-1. Selecione a seta à direita da entrada **[!UICONTROL Campo de esquema]**.
+1. Selecione a seta à direita da entrada **[!UICONTROL Schema field]**.
 
    ![Imagem destacando como selecionar um campo de origem na etapa de mapeamento.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. Na página **[!UICONTROL Selecionar campo]**, selecione os atributos XDM que deseja enviar ao destino e escolha **[!UICONTROL Selecionar]**.
+1. Na página **[!UICONTROL Select field]**, selecione os atributos XDM que deseja enviar ao destino e escolha **[!UICONTROL Select]**.
 
    ![Imagem mostrando uma seleção de campos XDM que você pode selecionar como campos de origem.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
-1. Para adicionar mais campos, repita as etapas de 1 a 3 e selecione **[!UICONTROL Avançar]**.
+1. Para adicionar mais campos, repita as etapas de 1 a 3 e selecione **[!UICONTROL Next]**.
 
 ## Revisar {#review}
 
-Na página **[!UICONTROL Revisão]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancelar]** para interromper o fluxo, **[!UICONTROL Voltar]** para modificar suas configurações ou **[!UICONTROL Concluir]** para confirmar sua seleção e começar a enviar dados ao destino.
+Na página **[!UICONTROL Review]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancel]** para interromper o fluxo, **[!UICONTROL Back]** para modificar suas configurações ou **[!UICONTROL Finish]** para confirmar sua seleção e começar a enviar dados para o destino.
 
 ![Resumo da seleção na etapa de revisão.](../assets/ui/activate-streaming-profile-destinations/review.png)
 
@@ -101,7 +101,7 @@ If your organization purchased **Adobe Healthcare Shield** or **Adobe Privacy & 
 
 ### Verificações de política de uso de dados {#data-usage-policy-checks}
 
-Na etapa **[!UICONTROL Revisão]**, a Experience Platform também verifica se há violações de política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
+Na etapa **[!UICONTROL Review]**, a Experience Platform também verifica se há violações da política de uso de dados. Veja abaixo um exemplo de violação de uma política. Não é possível concluir o fluxo de trabalho de ativação de público-alvo até que a violação seja resolvida. Para obter informações sobre como resolver violações de política, leia sobre [violações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) na seção de documentação sobre governança de dados.
 
 ![violação da política de dados](../assets/common/data-policy-violation.png)
 
@@ -111,7 +111,7 @@ Também nesta etapa é possível usar os filtros disponíveis na página para ex
 
 ![Gravação de tela mostrando os filtros de público-alvo disponíveis na etapa de revisão.](../assets/ui/activate-streaming-profile-destinations/filter-audiences-review-step.gif)
 
-Se você estiver satisfeito com sua seleção e nenhuma violação de política for detectada, selecione **[!UICONTROL Concluir]** para confirmar sua seleção e começar a enviar dados para o destino.
+Se estiver satisfeito com a sua seleção e nenhuma violação de política tiver sido detectada, selecione **[!UICONTROL Finish]** para confirmar a seleção e começar a enviar dados para o destino.
 
 ## Verificar ativação de público {#verify}
 

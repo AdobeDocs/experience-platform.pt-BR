@@ -3,7 +3,7 @@ title: Personalizar experiências no site para visitantes desconhecidos usando o
 description: Saiba como usar o reconhecimento de visitante com auxílio de parceiros para fornecer experiências de site personalizadas para visitantes.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
 source-wordcount: '2568'
 ht-degree: 72%
@@ -14,7 +14,7 @@ ht-degree: 72%
 
 >[!AVAILABILITY]
 >
->Essa funcionalidade está disponível para clientes que licenciaram o Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
+>Essa funcionalidade está disponível para clientes que licenciaram o Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
 
 Saiba como usar o reconhecimento com auxílio de parceiros para fornecer experiências personalizadas a visitantes de sua propriedade na Web. Use este tutorial para entender o processo de implementação de vários elementos na Experience Platform e outras soluções da Experience Cloud, a fim de criar uma experiência personalizada para visitantes autenticados e não autenticados.
 
@@ -47,7 +47,7 @@ Ao planejar usar atributos fornecidos pelo parceiro para oferecer experiências 
 Para implementar com sucesso esse caso de uso, você deve usar várias áreas da Real-time Customer Data Platform e outras soluções da Experience Cloud. Verifique se tem as [permissões de controle de acesso baseado em atributo](/help/access-control/abac/overview.md) necessárias para todas essas áreas, ou solicite ao(à) administrador(a) que as conceda a você.
 
 * Coleção de dados
-   * [SDK da Web da Adobe Experience Platform](/help/web-sdk/home.md)
+   * [SDK da Web da Adobe Experience Platform](/help/collection/js/js-overview.md)
    * [Tags](/help/tags/home.md)
    * [Sequências de dados](/help/datastreams/overview.md)
 * Gerenciamento de dados na Real-Time CDP
@@ -64,7 +64,7 @@ Para implementar com sucesso esse caso de uso, você deve usar várias áreas da
 
 Assista ao tutorial em vídeo abaixo para obter uma apresentação de como personalizar experiências no site para visitantes desconhecidos:
 
->[!VIDEO](https://video.tv.adobe.com/v/3449257/?captions=por_br&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)
 
 ## Como atingir o caso de uso: visão geral de alto nível {#achieve-the-use-case-high-level}
 

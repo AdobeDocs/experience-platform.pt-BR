@@ -2,7 +2,7 @@
 title: Prioridade de namespace
 description: Saiba mais sobre a prioridade de namespace no Serviço de identidade.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7df0d0c7eb97760190ac8b20d1b74472b87e8b6a
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 2%
@@ -65,7 +65,7 @@ A prioridade de namespace pode ser definida usando a [interface do usuário de c
 
 ## Uso da prioridade de namespace
 
-Atualmente, a prioridade do namespace influencia o comportamento do sistema do Perfil do cliente em tempo real. O diagrama abaixo ilustra esse conceito. Para obter mais informações, leia o guia em [diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/pt-br/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Atualmente, a prioridade do namespace influencia o comportamento do sistema do Perfil do cliente em tempo real. O diagrama abaixo ilustra esse conceito. Para obter mais informações, leia o guia em [diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![Um diagrama do escopo de aplicativo de prioridade de namespace.](../images/namespace-priority/application-scope.png "Um diagrama do escopo de aplicativo de prioridade de namespace."){zoomable="yes"}
 
@@ -82,7 +82,7 @@ Para estruturas de gráficos relativamente complexas, a prioridade de namespace 
    * Quaisquer campos marcados como identidade primária em um esquema de Classe de evento de experiência XDM.
    * Configurações de identidade primária padrão no conector de origem do Adobe Analytics (ECID ou AAID).
 * Por outro lado, a **prioridade de namespace não determina a identidade principal dos registros de perfil**.
-   * Para registros de perfil, você deve continuar a definir seus campos de identidade no esquema, incluindo a identidade principal. Leia o manual sobre [definição de campos de identidade na interface](../../xdm/ui/fields/identity.md) para obter mais informações.
+   * Para registros de perfil, você deve continuar a definir seus campos de identidade no esquema, incluindo a identidade principal. Leia o manual sobre [definição de campos de identidade na interface](/help/xdm/ui/fields/identity.md) para obter mais informações.
 
 >[!TIP]
 >
@@ -148,23 +148,23 @@ A exclusão de registros da higiene de dados solicita funções da seguinte mane
 * Perfil do cliente em tempo real: exclui qualquer fragmento de perfil com a identidade especificada como identidade principal. **A identidade principal no Perfil agora será determinada com base na prioridade do namespace.**
 * Data lake: exclui qualquer registro com a identidade especificada como identidade principal. Ao contrário do Perfil do cliente em tempo real, a identidade principal no data lake é baseada na identidade principal especificada no WebSDK (`primary=true`) ou em um campo marcado como identidade principal
 
-Para obter mais informações, leia a [visão geral avançada do gerenciamento do ciclo de vida](../../hygiene/home.md).
+Para obter mais informações, leia a [visão geral avançada do gerenciamento do ciclo de vida](/help/hygiene/home.md).
 
 ### Atributos computados
 
-Se as configurações de identidade estiverem habilitadas, os atributos computados usarão a prioridade de namespace para armazenar o valor do atributo computado. Para um determinado evento, a identidade com a maior prioridade de namespace terá o valor do atributo calculado gravado nele. Para obter mais informações, leia o [guia da interface do usuário de atributos computados](../../profile/computed-attributes/ui.md).
+Se as configurações de identidade estiverem habilitadas, os atributos computados usarão a prioridade de namespace para armazenar o valor do atributo computado. Para um determinado evento, a identidade com a maior prioridade de namespace terá o valor do atributo calculado gravado nele. Para obter mais informações, leia o [guia da interface do usuário de atributos computados](/help/profile/computed-attributes/ui.md).
 
 ### Data lake
 
-A assimilação de dados no data lake continuará respeitando as configurações de identidade primárias definidas no [Web SDK](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) e nos esquemas.
+A assimilação de dados no data lake continuará respeitando as configurações de identidade primárias definidas no [Web SDK](/help/tags/extensions/client/web-sdk/data-element-types.md#identity-map) e nos esquemas.
 
 O data lake não determinará a identidade principal com base na prioridade do namespace. Por exemplo, o Adobe Customer Journey Analytics continuará a usar valores no mapa de identidade mesmo após a prioridade do namespace ser ativada (como adicionar um conjunto de dados a uma nova conexão), porque o Customer Journey Analytics consome seus dados do data lake.
 
 ### Esquemas do Experience Data Model (XDM)
 
-Qualquer esquema que não seja um Evento de experiência XDM, como Perfis individuais XDM, continuará respeitando qualquer [campo que você marcar como uma identidade](../../xdm/ui/fields/identity.md).
+Qualquer esquema que não seja um Evento de experiência XDM, como Perfis individuais XDM, continuará respeitando qualquer [campo que você marcar como uma identidade](/help/xdm/ui/fields/identity.md).
 
-Para obter mais informações sobre esquemas XDM, leia a [visão geral dos esquemas](../../xdm/home.md).
+Para obter mais informações sobre esquemas XDM, leia a [visão geral dos esquemas](/help/xdm/home.md).
 
 ### Serviços inteligentes
 
@@ -175,7 +175,7 @@ Ao selecionar seus dados, você precisará especificar um namespace, que será u
 
 Esta configuração resulta no cálculo de pontuações somente usando eventos autenticados.
 
-Para obter mais informações, leia os documentos sobre a [IA de atribuição](../../intelligent-services/attribution-ai/overview.md) e a [IA do cliente](../../intelligent-services/customer-ai/overview.md).
+Para obter mais informações, leia os documentos sobre a [IA de atribuição](/help/intelligent-services/attribution-ai/overview.md) e a [IA do cliente](/help/intelligent-services/customer-ai/overview.md).
 
 ### Destinos criados por parceiros
 
@@ -184,7 +184,7 @@ Os resultados atualizados de desqualificação de público-alvo para perfis asso
 * A qualificação de público-alvo é baseada apenas em atividades anônimas.
 * Os logons em vários perfis ocorrem em um curto período de tempo.
 
-Para obter mais informações sobre destinos criados por parceiros, leia a [visão geral sobre destinos](../../destinations/home.md#adobe-built-and-partner-built-destinations).
+Para obter mais informações sobre destinos criados por parceiros, leia a [visão geral sobre destinos](/help/destinations/home.md#adobe-built-and-partner-built-destinations).
 
 ### Privacy Service
 
@@ -193,7 +193,7 @@ Para obter mais informações sobre destinos criados por parceiros, leia a [vis�
 * Perfil do cliente em tempo real: exclui qualquer fragmento de perfil com valor de identidade especificado como identidade principal. **A identidade principal no Perfil agora será determinada com base na prioridade do namespace.**
 * Data lake: exclui qualquer registro com a identidade especificada como identidade primária ou secundária.
 
-Para obter mais informações, leia a [Visão geral do Privacy Service](../../privacy-service/home.md).
+Para obter mais informações, leia a [Visão geral do Privacy Service](/help/privacy-service/home.md).
 
 ### Aplicativos de segmentação do Edge e Edge Network
 
@@ -204,17 +204,17 @@ No contexto de [!DNL Identity Graph Linking Rules], há duas alterações compor
 
 #### Segmentação de borda
 
-Em um determinado evento, verifique se todos os namespaces que representam uma entidade de pessoa estão incluídos em `identityMap` porque [identidades enviadas como campos XDM](../../xdm/ui/fields/identity.md) são ignoradas e não são usadas para o armazenamento de metadados de associação de segmento.
+Em um determinado evento, verifique se todos os namespaces que representam uma entidade de pessoa estão incluídos em `identityMap` porque [identidades enviadas como campos XDM](/help/xdm/ui/fields/identity.md) são ignoradas e não são usadas para o armazenamento de metadados de associação de segmento.
 
-* **Aplicabilidade de evento**: esse comportamento se aplica somente a eventos enviados diretamente para a Edge Network (como WebSDK e Mobile SDK). Os eventos assimilados do [hub do Experience Platform](../../landing/edge-and-hub-comparison.md), como aqueles assimilados com a fonte da API HTTP, outras fontes de transmissão e fontes em lote, não estão sujeitos a essa limitação.
-* **Especificidade da segmentação do Edge**: esse comportamento é específico da segmentação de borda. A segmentação em lote e por transmissão são serviços separados avaliados no hub e não seguem o mesmo processo. Leia o [guia de segmentação de borda](../../segmentation/methods/edge-segmentation.md) para obter mais informações.
-* Leia as [páginas de diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/pt-br/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) e [comparação de Edge Network e hub](../../landing/edge-and-hub-comparison.md) para obter mais informações.
+* **Aplicabilidade de evento**: esse comportamento se aplica somente a eventos enviados diretamente para a Edge Network (como WebSDK e Mobile SDK). Os eventos assimilados do [hub do Experience Platform](/help/landing/edge-and-hub-comparison.md), como aqueles assimilados com a fonte da API HTTP, outras fontes de transmissão e fontes em lote, não estão sujeitos a essa limitação.
+* **Especificidade da segmentação do Edge**: esse comportamento é específico da segmentação de borda. A segmentação em lote e por transmissão são serviços separados avaliados no hub e não seguem o mesmo processo. Leia o [guia de segmentação de borda](/help/segmentation/methods/edge-segmentation.md) para obter mais informações.
+* Leia as [páginas de diagramas de arquitetura de Adobe Experience Platform e aplicativos](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) e [comparação de Edge Network e hub](/help/landing/edge-and-hub-comparison.md) para obter mais informações.
 
 #### aplicativos Edge Network
 
 Para garantir que os aplicativos na Edge Network tenham acesso ao Perfil do Edge sem demora, verifique se os eventos incluem `primary=true` no CRMID. Isso garante disponibilidade imediata sem esperar por atualizações do gráfico de identidade do hub.
 
 * Aplicativos no Edge Network, como Adobe Target, Offer Decisioning e Destinos personalizados do Personalization continuarão a depender da identidade principal nos eventos para acessar perfis do Perfil do Edge.
-* Leia o [diagrama de arquitetura do Experience Platform Web SDK &amp; Edge Network](https://experienceleague.adobe.com/pt-br/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obter mais informações sobre o comportamento do Edge Network.
-* Leia a documentação sobre [Tipos de elementos de dados](../../tags/extensions/client/web-sdk/data-element-types.md) e [Dados de identidade no Web SDK](../../web-sdk/identity/overview.md) para obter mais informações sobre como configurar a identidade principal no Web SDK.
+* Leia o [diagrama de arquitetura do Experience Platform Web SDK &amp; Edge Network](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) para obter mais informações sobre o comportamento do Edge Network.
+* Leia a documentação sobre [Tipos de elementos de dados](/help/tags/extensions/client/web-sdk/data-element-types.md) e [Dados de identidade no Web SDK](/help/collection/use-cases/identity/id-overview.md) para obter mais informações sobre como configurar a identidade principal no Web SDK.
 * Verifique se a ECID está incluída no evento de experiência. Se a ECID estiver ausente, ela será adicionada à carga do evento com `primary=true`, o que pode levar a resultados inesperados.

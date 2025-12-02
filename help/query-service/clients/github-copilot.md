@@ -2,9 +2,9 @@
 title: Conectar o GitHub Copilot e o Visual Studio Code ao Serviço de consulta
 description: Saiba como conectar o GitHub Copilot e o Visual Studio Code ao Serviço de consulta do Adobe Experience Platform.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1370'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Antes de usar essa ferramenta integrada, você deve entender quais dados são compartilhados com o GitHub. Os dados compartilhados incluem informações contextuais sobre o código e os arquivos que estão sendo editados (&quot;prompts&quot;) e detalhes sobre as ações do usuário (&quot;dados de envolvimento do usuário&quot;).  Revise a declaração de privacidade de [[!DNL GitHub Copilot]](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) para saber mais sobre os dados coletados. Você também deve considerar as implicações de segurança do envolvimento de serviços de terceiros, pois é responsável por garantir a conformidade com as políticas de governança de dados de sua organização. A Adobe não se responsabiliza por quaisquer preocupações ou problemas relacionados a dados que possam surgir com o uso dessa ferramenta. Consulte a documentação do GitHub para obter mais informações.
 
-O [!DNL GitHub Copilot], desenvolvido pelo OpenAI Codex, é uma ferramenta orientada por IA que melhora a sua experiência de codificação, sugerindo trechos de código e funções inteiras diretamente no seu editor. Integrado ao [!DNL Visual Studio Code] ([!DNL VS Code]), o [!DNL Copilot] pode acelerar muito seu fluxo de trabalho, principalmente ao trabalhar com consultas complexas. Siga este guia para saber como conectar o [!DNL GitHub Copilot] e o [!DNL VS Code] ao Serviço de Consulta para gravar e gerenciar suas consultas com mais eficiência. Para obter mais informações sobre [!DNL Copilot], visite a [página do produto Copilot do GitHub](https://github.com/pricing) e a [documentação oficial [!DNL Copilot] 5&rbrace;.](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
+O [!DNL GitHub Copilot], desenvolvido pelo OpenAI Codex, é uma ferramenta orientada por IA que melhora a sua experiência de codificação, sugerindo trechos de código e funções inteiras diretamente no seu editor. Integrado ao [!DNL Visual Studio Code] ([!DNL VS Code]), o [!DNL Copilot] pode acelerar muito seu fluxo de trabalho, principalmente ao trabalhar com consultas complexas. Siga este guia para saber como conectar o [!DNL GitHub Copilot] e o [!DNL VS Code] ao Serviço de Consulta para gravar e gerenciar suas consultas com mais eficiência. Para obter mais informações sobre [!DNL Copilot], visite a [página do produto Copilot do GitHub](https://github.com/pricing) e a [documentação oficial [!DNL Copilot] 5}.](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
 
 Este documento aborda as etapas necessárias para conectar o [!DNL GitHub Copilot] e o [!DNL VS Code] ao Serviço de Consulta do Adobe Experience Platform.
 
@@ -23,7 +23,7 @@ Este documento aborda as etapas necessárias para conectar o [!DNL GitHub Copilo
 
 Este guia requer que você já tenha acesso a uma conta GitHub e tenha se inscrito em [!DNL GitHub Copilot]. Você pode [se inscrever pelo site do GitHub](https://github.com/github-copilot/signup). Você também precisa de [!DNL VS Code]. Você pode [baixar [!DNL VS Code] de seu site oficial](https://code.visualstudio.com/download).
 
-Depois de instalar o [!DNL VS Code] e ativar a assinatura do [!DNL Copilot], adquira suas credenciais de conexão para o Experience Platform. Essas credenciais estão localizadas na guia [!UICONTROL Credenciais] do espaço de trabalho [!UICONTROL Consultas] na interface de usuário do Experience Platform. Leia o guia de credenciais para [saber como localizar esses valores na interface do usuário do Experience Platform](../ui/credentials.md). Entre em contato com o administrador da organização se você não tiver acesso ao espaço de trabalho [!UICONTROL Consultas].
+Depois de instalar o [!DNL VS Code] e ativar a assinatura do [!DNL Copilot], adquira suas credenciais de conexão para o Experience Platform. Essas credenciais estão localizadas na guia [!UICONTROL Credentials] do espaço de trabalho [!UICONTROL Queries] na interface do usuário do Experience Platform. Leia o guia de credenciais para [saber como localizar esses valores na interface do usuário do Experience Platform](../ui/credentials.md). Entre em contato com o administrador da organização se você não tiver acesso ao espaço de trabalho [!UICONTROL Queries].
 
 ### Extensões [!DNL Visual Studio Code] necessárias {#required-extensions}
 
@@ -57,9 +57,9 @@ A exibição [!DNL Connection Settings] aparece. Insira suas credenciais de cone
 | [!DNL Connect using] | Use a opção **[!DNL Server and Port]** para especificar o endereço do servidor (nome do host) e o número da porta para estabelecer uma conexão direta com o Experience Platform |
 | [!DNL Server address] | Insira o valor **[!UICONTROL Host]** fornecido em suas credenciais do Experience Platform Postgres, como `acmeprod.platform-query.adobe.io`. |
 | [!DNL Port] | Normalmente, esse valor é `80` para serviços da Experience Platform. |
-| [!DNL Database] | Insira o valor do **[!UICONTROL Banco de Dados]** fornecido em suas credenciais do Experience Platform Postgres, como `prod:all`. |
+| [!DNL Database] | Insira o valor **[!UICONTROL Database]** fornecido em suas credenciais do Experience Platform Postgres, como `prod:all`. |
 | [!DNL Username] | Essa propriedade se refere à ID da organização. Insira o valor **[!UICONTROL Username]** fornecido em suas credenciais do Experience Platform Postgres. |
-| [!DNL Password] | Essa propriedade é o token de acesso. Digite o valor **[!UICONTROL Senha]** fornecido em suas credenciais do Experience Platform Postgres. |
+| [!DNL Password] | Essa propriedade é o token de acesso. Insira o valor **[!UICONTROL Password]** fornecido em suas credenciais do Experience Platform Postgres. |
 
 ![O espaço de trabalho do Assistente de Conexão com várias configurações realçadas.](../images/clients/github-copilot/connection-settings.png)
 
@@ -95,11 +95,11 @@ Depois de conectado à sua instância do Experience Platform, você pode usar o 
 
 ## Introdução ao [!DNL GitHub Copilot] {#get-started-with-copilot}
 
-Primeiro, verifique se você tem a versão mais recente do [!DNL VS Code] instalada. Uma versão desatualizada do [!DNL VS Code] pode impedir que os recursos da chave [!DNL Copilot] funcionem conforme o esperado. Em seguida, verifique se a configuração [!DNL Enable Auto Completions] está habilitada. Se [!DNL Copilot] estiver sendo executado corretamente, o ícone **(![O ícone Copilot](../images/clients/github-copilot/copilot-icon.png)) aparecerá na barra de status (se houver um problema, o ícone de erro [!DNL Copilot] será exibido).**&#x200B;[!DNL Copilot] Selecione o ícone **[!DNL Copilot]** para abrir o [!DNL [!DNL GitHub Copilot] Menu]. No **[!DNL [!DNL GitHub Copilot] Menu]**, selecione **[!DNL Edit Settings]**
+Primeiro, verifique se você tem a versão mais recente do [!DNL VS Code] instalada. Uma versão desatualizada do [!DNL VS Code] pode impedir que os recursos da chave [!DNL Copilot] funcionem conforme o esperado. Em seguida, verifique se a configuração [!DNL Enable Auto Completions] está habilitada. Se [!DNL Copilot] estiver sendo executado corretamente, o ícone **[!DNL Copilot](** O ícone Copilot![) aparecerá na barra de status (se houver um problema, o ícone de erro ](../images/clients/github-copilot/copilot-icon.png) será exibido). [!DNL Copilot] Selecione o ícone **[!DNL Copilot]** para abrir o [!DNL [!DNL GitHub Copilot] Menu]. No **[!DNL [!DNL GitHub Copilot] Menu]**, selecione **[!DNL Edit Settings]**
 
 ![O editor [!DNL VS Code] com o [!DNL GitHub Copilot Menu] exibido e o ícone [!DNL Copilot] e as Configurações de Edição realçados.](../images/clients/github-copilot/github-copilot-menu.png)
 
-Role para baixo nas opções e verifique se a caixa de seleção está habilitada para a configuração [!DNL Enable Auto Completions].
+Percorra as opções e verifique se a caixa de seleção está habilitada para a configuração [!DNL Enable Auto Completions].
 
 ![O painel de configurações de [!DNL GitHub Copilot] com a caixa de seleção Habilitar Conclusões Automáticas marcada e realçada.](../images/clients/github-copilot/enable-auto-completions.png)
 

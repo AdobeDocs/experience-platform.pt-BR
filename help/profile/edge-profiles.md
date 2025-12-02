@@ -2,9 +2,9 @@
 title: Perfis do Edge
 description: Saiba mais sobre perfis de borda, bem como terminologia relacionada, regiões disponíveis para perfis de borda, bem como serviços disponíveis para perfis de borda.
 exl-id: dcae267f-1d5a-4e90-b634-afd42b0d4edc
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 No Adobe Experience Platform, o Perfil do cliente em tempo real é a única fonte da verdade para dados de entidade. Esses dados do perfil ficam em um hub central e atendem a casos de uso que dependem da abrangência e da integridade de seus dados. No entanto, em casos de uso mais em tempo real, onde a sensibilidade ao tempo é mais importante, os perfis de borda são a opção preferida. Os perfis do Edge são perfis leves que se baseiam em bordas e ajudam nos casos de uso de personalização em tempo real.
 
-Por exemplo, aplicativos Adobe como Adobe Target, Custom Personalization Destination e Adobe Campaign usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção que define a borda para a qual os dados serão enviados.
+Por exemplo, aplicativos da Adobe como o Adobe Target, Custom Personalization Destination e Adobe Campaign usam bordas para fornecer experiências personalizadas ao cliente em tempo real. Os dados são roteados para uma borda por uma projeção, com um destino de projeção que define a borda para a qual os dados serão enviados.
 
 ## Terminologia {#terminology}
 
@@ -55,7 +55,7 @@ O Serviço de perfil expresso (XPS) recupera os perfis em bordas diferentes. Ess
 
 ## Próximas etapas
 
-Depois de ler este manual, você deve ter uma compreensão básica dos perfis de borda, incluindo informações sobre as regiões e serviços disponíveis para perfis de borda. Para obter mais informações sobre o Adobe Experience Edge, leia a [visão geral sobre o Edge Network](../web-sdk/home.md#edge-network).
+Depois de ler este manual, você deve ter uma compreensão básica dos perfis de borda, incluindo informações sobre as regiões e serviços disponíveis para perfis de borda. Para obter mais informações sobre o Adobe Experience Edge, consulte [Visão geral da coleção de dados](/help/collection/home.md).
 
 ## Apêndice
 

@@ -2,10 +2,10 @@
 title: Preparo de dados para a coleção de dados
 description: Saiba como mapear seus dados para um esquema de evento do Experience Data Model (XDM) ao configurar uma sequência de dados para os SDKs da web e móvel da Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1203'
-ht-degree: 53%
+source-wordcount: '1166'
+ht-degree: 43%
 
 ---
 
@@ -30,9 +30,9 @@ Há dois casos de uso em que o Preparo de dados para a coleção de dados é út
 
 ## Enviar uma camada de dados existente para a Edge Network por meio do SDK da Web {#send-datalayer-via-websdk}
 
-A camada de dados existente deve ser enviada usando o objeto [`data`](/help/web-sdk/commands/sendevent/data.md) dentro do comando `sendEvent`.
+A camada de dados existente deve ser enviada usando o objeto [`data`](/help/collection/js/commands/sendevent/data.md) dentro do comando `sendEvent`.
 
-Se você estiver usando Marcas, deverá usar o campo **[!UICONTROL Dados]** do tipo de ação **[!UICONTROL Enviar Evento]**, conforme descrito na [documentação da extensão de marcas do Web SDK](/help/tags/extensions/client/web-sdk/action-types.md).
+Se você estiver usando Marcas, deverá usar o campo **[!UICONTROL Data]** do tipo de ação [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
 
 O restante deste guia enfocará como mapear a camada de dados para padrões XDM após ter sido enviada pelo WebSDK.
 
@@ -48,15 +48,15 @@ Este guia aborda como mapear seus dados na interface. Para acompanhar as etapas,
 
 Para obter uma demonstração rápida do processo de preparo de dados para a coleção de dados, assista ao vídeo a seguir:
 
->[!VIDEO](https://video.tv.adobe.com/v/345568?quality=12&enable10seconds=on&speedcontrol=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-## [!UICONTROL Selecionar dados] {#select-data}
+## [!UICONTROL Select data] {#select-data}
 
-Selecione **[!UICONTROL Salvar e adicionar mapeamento]** após concluir a configuração básica de uma sequência de dados e a etapa **[!UICONTROL Selecionar dados]** será exibida. Aqui, você deve fornecer um objeto JSON de amostra que represente a estrutura dos dados que planeja enviar para o Experience Platform.
+Selecione **[!UICONTROL Save and Add Mapping]** depois de concluir a configuração básica para uma sequência de dados, e a etapa **[!UICONTROL Select data]** é exibida. Aqui, você deve fornecer um objeto JSON de amostra que represente a estrutura dos dados que planeja enviar para o Experience Platform.
 
 Para capturar propriedades diretamente da camada de dados, o objeto JSON deve ter uma única propriedade raiz `data`. As subpropriedades do objeto `data` devem ser construídas de uma forma que mapeie para as propriedades da camada de dados que você deseja capturar. Selecione a seção abaixo para ver um exemplo de objeto JSON formatado corretamente com um objeto `data` raiz.
 
-+++Arquivo JSON de amostra com objeto `data` raiz
++++Arquivo JSON de exemplo com a raiz `data`
 
 ```json
 {
@@ -121,7 +121,7 @@ Para capturar propriedades diretamente da camada de dados, o objeto JSON deve te
 
 Para capturar propriedades de um elemento de dados de objeto XDM, as mesmas regras se aplicam ao objeto JSON, mas a propriedade raiz deve ser identificada como `xdm`. Selecione a seção abaixo para ver um exemplo de objeto JSON formatado corretamente com um objeto `xdm` raiz.
 
-+++Arquivo JSON de amostra com objeto `xdm` raiz
++++Arquivo JSON de exemplo com a raiz `xdm`
 
 ```json
 {
@@ -152,7 +152,7 @@ Para capturar propriedades de um elemento de dados de objeto XDM, as mesmas regr
 
 +++
 
-Você pode selecionar a opção para fazer upload do objeto como um arquivo ou colar o objeto bruto na caixa de texto fornecida. Se o JSON for válido, um esquema de visualização será exibido no painel direito. Clique em **[!UICONTROL Avançar]** para continuar.
+Você pode selecionar a opção para fazer upload do objeto como um arquivo ou colar o objeto bruto na caixa de texto fornecida. Se o JSON for válido, um esquema de visualização será exibido no painel direito. Selecione **[!UICONTROL Next]** para continuar.
 
 ![Amostra JSON dos dados de entrada esperados.](assets/data-prep/select-data.png)
 
@@ -160,9 +160,9 @@ Você pode selecionar a opção para fazer upload do objeto como um arquivo ou c
 >
 > Use um objeto JSON de amostra que represente cada elemento de camada de dados que pode ser usado em qualquer página. Por exemplo, nem todas as páginas usam elementos de camada de dados do carrinho de compras. No entanto, os elementos da camada de dados do carrinho de compras devem ser incluídos nesta amostra de objeto JSON.
 
-## [!UICONTROL Mapeamento]
+## [!UICONTROL Mapping]
 
-A etapa **[!UICONTROL Mapeamento]** é exibida, permitindo mapear os campos nos dados de origem para aquele do esquema de evento de destino no Experience Platform. Aqui, é possível configurar o mapeamento de duas maneiras:
+A etapa **[!UICONTROL Mapping]** é exibida, permitindo mapear os campos nos dados de origem para o esquema de evento de destino no Experience Platform. Aqui, é possível configurar o mapeamento de duas maneiras:
 
 * [Crie regras de mapeamento](#create-mapping) para esta sequência de dados por meio de um processo manual.
 * [Importar regras de mapeamento](#import-mapping) de uma sequência de dados existente.
@@ -173,19 +173,19 @@ A etapa **[!UICONTROL Mapeamento]** é exibida, permitindo mapear os campos nos 
 
 ### Criar regras de mapeamento {#create-mapping}
 
-Para criar uma regra de mapeamento, selecione **[!UICONTROL Adicionar novo mapeamento]**.
+Para criar uma regra de mapeamento, selecione **[!UICONTROL Add new mapping]**.
 
 ![Adicionando um novo mapeamento.](assets/data-prep/add-new-mapping.png)
 
-Selecione o ícone de origem (![Ícone de origem](/help/images/icons/source.png)) e, na caixa de diálogo exibida, selecione o campo de origem que deseja mapear na tela fornecida. Depois de escolher um campo, use o botão **[!UICONTROL Selecionar]** para continuar.
+Selecione o ícone de origem (![Ícone de origem](/help/images/icons/source.png)) e, na caixa de diálogo exibida, selecione o campo de origem que deseja mapear na tela fornecida. Depois de escolher um campo, use o botão **[!UICONTROL Select]** para continuar.
 
 ![Selecionando o campo a ser mapeado no esquema de origem.](assets/data-prep/source-mapping.png)
 
-Em seguida, selecione o ícone de esquema (![Ícone de esquema](/help/images/icons/schema.png)) para abrir uma caixa de diálogo semelhante para o esquema de evento de destino. Escolha o campo para o qual deseja mapear os dados antes de confirmar com **[!UICONTROL Selecionar]**.
+Em seguida, selecione o ícone de esquema (![Ícone de esquema](/help/images/icons/schema.png)) para abrir uma caixa de diálogo semelhante para o esquema de evento de destino. Escolha o campo para o qual você deseja mapear os dados antes de confirmar com **[!UICONTROL Select]**.
 
 ![Selecionando o campo a ser mapeado no esquema de destino.](assets/data-prep/target-mapping.png)
 
-A página de mapeamento é exibida novamente com o mapeamento do campo concluído. A seção **[!UICONTROL Progresso do mapeamento]** é atualizada para refletir o número total de campos que foram mapeados com sucesso.
+A página de mapeamento é exibida novamente com o mapeamento do campo concluído. A seção **[!UICONTROL Mapping progress]** é atualizada para refletir o número total de campos que foram mapeados com êxito.
 
 ![Campo mapeado com êxito com progresso refletido.](assets/data-prep/field-mapped.png)
 
@@ -203,11 +203,11 @@ Se você tiver criado um fluxo de dados anteriormente, poderá reutilizar suas r
 >
 >A importação de regras de mapeamento de outro fluxo de dados substitui todos os mapeamentos de campo que você tenha adicionado antes da importação.
 
-Para começar, selecione **[!UICONTROL Importar mapeamento]**.
+Para começar, selecione **[!UICONTROL Import Mapping]**.
 
 ![Botão Importar Mapeamento sendo selecionado.](assets/data-prep/import-mapping-button.png)
 
-Na caixa de diálogo exibida, selecione a sequência de dados cujas regras de mapeamento você deseja importar. Depois que a sequência de dados for escolhida, selecione **[!UICONTROL Visualizar]**.
+Na caixa de diálogo exibida, selecione a sequência de dados cujas regras de mapeamento você deseja importar. Depois que a sequência de dados for escolhida, selecione **[!UICONTROL Preview]**.
 
 ![Selecionando uma sequência de dados existente.](assets/data-prep/select-mapping-rules.png)
 
@@ -215,7 +215,7 @@ Na caixa de diálogo exibida, selecione a sequência de dados cujas regras de ma
 >
 >As sequências de dados só podem ser importadas dentro da mesma [sandbox](../sandboxes/home.md). Em outras palavras, não é possível importar uma sequência de dados de uma sandbox para outra.
 
-A próxima tela mostra uma visualização das regras de mapeamento salvas para a sequência de dados selecionada. Verifique se os mapeamentos exibidos são os esperados e selecione **[!UICONTROL Importar]** para confirmar e adicionar os mapeamentos à nova sequência de dados.
+A próxima tela mostra uma visualização das regras de mapeamento salvas para a sequência de dados selecionada. Verifique se os mapeamentos exibidos são o que você espera e selecione **[!UICONTROL Import]** para confirmar e adicionar os mapeamentos ao novo fluxo de dados.
 
 ![Regras de mapeamento a serem importadas.](assets/data-prep/import-mapping-rules.png)
 
@@ -225,9 +225,9 @@ A próxima tela mostra uma visualização das regras de mapeamento salvas para a
 
 ### Concluir o mapeamento
 
-Para continuar, siga as etapas acima para mapear o restante dos campos para o esquema de destino. Embora não seja necessário mapear todos os campos de origem disponíveis, todos os campos no esquema de destino definidos como obrigatório devem ser mapeados para concluir esta etapa. O contador **[!UICONTROL Campos obrigatórios]** indica quantos campos obrigatórios ainda não estão mapeados na configuração atual.
+Para continuar, siga as etapas acima para mapear o restante dos campos para o esquema de destino. Embora não seja necessário mapear todos os campos de origem disponíveis, todos os campos no esquema de destino definidos como obrigatório devem ser mapeados para concluir esta etapa. O contador **[!UICONTROL Required fields]** indica quantos campos obrigatórios ainda não estão mapeados na configuração atual.
 
-Quando a contagem de campos necessária atingir zero e você estiver satisfeito com o mapeamento, selecione **[!UICONTROL Salvar]** para finalizar as alterações.
+Quando a contagem de campos necessária atingir zero e você estiver satisfeito com o mapeamento, selecione **[!UICONTROL Save]** para finalizar as alterações.
 
 ![Mapeamento concluído](assets/data-prep/mapping-complete.png)
 

@@ -2,9 +2,9 @@
 description: Saiba como configurar as identidades de destino compatíveis para destinos criados com o Destination SDK.
 title: Configuração do namespace de identidade
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '918'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Este artigo descreve todas as opções de configuração de namespaces de identi
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -62,8 +62,8 @@ Ao definir as identidades de público-alvo compatíveis com seu destino, você p
 | `acceptsAttributes` | Booleano | Opcional | Indica se os clientes podem mapear atributos de perfil padrão para a identidade que você está configurando. |
 | `acceptsCustomNamespaces` | Booleano | Opcional | Indica se os clientes podem mapear namespaces de identidade personalizados para o namespace de identidade que você está configurando. |
 | `acceptedGlobalNamespaces` | - | Opcional | Indica quais [namespaces de identidade padrão](../../../../identity-service/features/namespaces.md#standard) (por exemplo, [!UICONTROL IDFA]) clientes podem mapear para a identidade que você está configurando. |
-| `transformation` | String | Opcional | Exibe a caixa de seleção [[!UICONTROL Aplicar transformação]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) na interface do usuário do Experience Platform, quando o campo de origem é um atributo XDM ou um namespace de identidade personalizado. Use essa opção para conceder aos usuários a capacidade de aplicar hash aos atributos de origem na exportação. Para habilitar esta opção, defina o valor como `sha256(lower($))`. |
-| `requiredTransformation` | String | Opcional | Quando os clientes selecionam este namespace de identidade de origem, a caixa de seleção [[!UICONTROL Aplicar transformação]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) é aplicada automaticamente ao mapeamento e os clientes não podem desabilitá-lo. Para habilitar esta opção, defina o valor como `sha256(lower($))`. |
+| `transformation` | String | Opcional | Exibe a caixa de seleção [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) na interface do usuário do Experience Platform, quando o campo de origem é um atributo XDM ou um namespace de identidade personalizado. Use essa opção para conceder aos usuários a capacidade de aplicar hash aos atributos de origem na exportação. Para habilitar esta opção, defina o valor como `sha256(lower($))`. |
+| `requiredTransformation` | String | Opcional | Quando os clientes selecionam este namespace de identidade de origem, a caixa de seleção [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) é aplicada automaticamente ao mapeamento e os clientes não podem desabilitá-lo. Para habilitar esta opção, defina o valor como `sha256(lower($))`. |
 
 {style="table-layout:auto"}
 

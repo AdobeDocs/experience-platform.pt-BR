@@ -2,10 +2,10 @@
 title: Propriedades
 description: Saiba como suas extensões, ambientes e bibliotecas são organizados e agrupados para sua organização no Adobe Experience Platform.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '1178'
-ht-degree: 94%
+source-wordcount: '1153'
+ht-degree: 90%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 94%
 
 ## Propriedades da Web
 
-Uma propriedade da Web é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Cada propriedade da Web tem seu próprio conjunto de códigos integrados e pode ser implantada em qualquer número de sites distintos (domínios diferentes).
+Uma propriedade da Web é uma coleção de regras, elementos de dados, extensões configuradas, ambientes e bibliotecas. Cada propriedade da Web tem seu próprio conjunto de códigos incorporados e pode ser implantada em qualquer número de sites distintos (domínios diferentes).
 
 ## Propriedades para dispositivo móvel
 
@@ -65,7 +65,7 @@ Por exemplo, se estiver implantando o [!DNL Adobe Analytics], o [!DNL Target] e 
 
 ### Pessoas
 
-Os indivíduos, as equipes e as organizações que trabalham na Adobe Experience Platform precisarão acessar todos os sites e aplicativos, alguns deles ou apenas um?
+As pessoas, as equipes e as organizações que trabalham na Adobe Experience Platform precisarão acessar todos os sites e aplicativos, alguns deles ou apenas um?
 
 Os recursos do Gerenciamento de usuários permitem que você atribua funções diferentes a pessoas diferentes para todas as propriedades da ou de acordo com cada uma. Se alguém tiver as permissões necessárias, essa pessoa poderá executar ações administrativas em todas as propriedades dessa organização da Experience Platform. Todas as demais funções podem ser atribuídas de acordo com propriedades. Você pode ocultar uma propriedade de determinados usuários (que não sejam administradores) não atribuindo a eles nenhuma função na propriedade.
 
@@ -75,7 +75,7 @@ Uma propriedade é uma coleção de regras, elementos de dados, extensões confi
 
 Uma propriedade pode ser qualquer agrupamento de um ou mais domínios e subdomínios. É possível gerenciar e rastrear esses ativos da mesma maneira. Por exemplo, suponhamos que você tenha vários sites baseados em um só modelo e queira rastrear os mesmos recursos em todos. É possível aplicar uma propriedade a vários domínios.
 
-O lado esquerdo da tela mostra as empresas em sua organização. Isso é particularmente útil se você gerenciar várias contas. Selecione uma empresa para ver as propriedades e registros de auditoria dessa empresa.
+O lado esquerdo da tela mostra as empresas em sua organização. Isso é particularmente útil se você gerenciar várias contas. Selecione uma empresa para ver as propriedades e logs de auditoria dessa empresa.
 
 Cada propriedade é mostrada na lista Propriedades.
 
@@ -97,7 +97,7 @@ Esta seção fornece orientação sobre como criar ou configurar uma propriedade
 
 Antes de começar, leia atentamente as [Práticas recomendadas para planejar propriedades](companies-and-properties.md#best-practices-for-planning-properties) dedicada às propriedades.
 
-Navegue até a página da empresa e selecione **[!UICONTROL Adicionar propriedade]** ou selecione uma propriedade existente da lista e clique em **[!UICONTROL Configurar]**.
+Navegue até a página da empresa e selecione **[!UICONTROL Add Property]** ou selecione uma propriedade existente na lista e **[!UICONTROL Configure]**.
 
 ![](../../images/property-settings.png)
 
@@ -111,10 +111,10 @@ Siga as instruções para criar uma propriedade da Web.
 
    **Domínios:** o URL básico de qualquer site no qual você planeja implantar essa propriedade
 
-1. ( Avançado) **[!UICONTROL Execute os componentes da regra em sequência]** Marque essa caixa de seleção para fazer com que as condições e ações esperem pela conclusão da anterior antes de serem executadas
-1. (Avançado) **[!UICONTROL Retorna uma string vazia para elementos de dados ausentes:]** se você fizer referência a um elemento de dados que não existe em uma biblioteca, isso normalmente retornará `undefined`. Marque essa caixa de seleção se quiser que esse cenário retorne uma string vazia.
-1. (Avançado) **[!UICONTROL Configurar para desenvolvimento de extensão:]** marque essa caixa de seleção se você planejar instalar extensões de desenvolvimento que estão sendo ativamente desenvolvidas pela sua empresa
-1. Selecione **[!UICONTROL Salvar]**.
+1. (Avançado) **[!UICONTROL Run rule components in sequence]**: marque essa caixa de seleção para fazer com que as condições e ações aguardem a conclusão das anteriores antes de serem executadas
+1. (Avançado) **[!UICONTROL Return an empty string for missing data elements:]** Se você fizer referência a um elemento de dados que não existe em uma biblioteca, isso normalmente retornará `undefined`. Marque essa caixa de seleção se desejar que esse cenário retorne uma string vazia.
+1. (Avançado) **[!UICONTROL Configure for extension development:]** Ative essa caixa de seleção se você planeja instalar extensões de desenvolvimento que estão sendo desenvolvidas ativamente pela sua empresa
+1. Selecione **[!UICONTROL Save]**.
 
 ### Para dispositivos móveis
 
@@ -131,7 +131,7 @@ Siga as instruções para criar uma propriedade móvel.
 
    * **Usar HTTPS:** escolha essa opção se todas as comunicações de dados devem ser enviadas via HTTP ou HTTPS.
 
-1. Selecione **[!UICONTROL Salvar]**.
+1. Selecione **[!UICONTROL Save]**.
 
 Após a criação da propriedade, o Experience Platform adiciona automaticamente um host padrão, um conjunto de ambientes (desenvolvimento, armazenamento temporário e produção) e as extensões padrão.
 
@@ -147,4 +147,4 @@ Siga as etapas abaixo para excluir uma propriedade de tag.
 
    É possível selecionar várias propriedades para excluir.
 
-1. Selecione **[!UICONTROL Excluir]** e confirme a remoção da propriedade.
+1. Selecione **[!UICONTROL Delete]** e confirme a remoção da propriedade.

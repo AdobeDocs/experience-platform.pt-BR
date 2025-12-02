@@ -6,9 +6,9 @@ description: Saiba como configurar suas operações de dados e esquemas para tra
 role: Developer
 feature: Consent
 exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '2524'
+source-wordcount: '2509'
 ht-degree: 0%
 
 ---
@@ -42,8 +42,8 @@ Este guia também requer uma compreensão funcional dos seguintes serviços da E
 * [Experience Data Model (XDM)](/help/xdm/home.md): a estrutura padronizada pela qual a Experience Platform organiza os dados de experiência do cliente.
 * [Adobe Experience Platform Identity Service](/help/identity-service/home.md): resolve o desafio fundamental colocado pela fragmentação dos dados de experiência do cliente ao unir as identidades de vários dispositivos e sistemas.
 * [Perfil de cliente em tempo real](/help/profile/home.md): usa o [!DNL Identity Service] para criar perfis de cliente detalhados a partir dos seus conjuntos de dados em tempo real. [!DNL Real-Time Customer Profile] extrai dados do Data Lake e mantém perfis de clientes em seu próprio armazenamento de dados separado.
-* [Adobe Experience Platform Web SDK](/help/web-sdk/home.md): uma biblioteca JavaScript do lado do cliente que permite integrar vários serviços Experience Platform ao seu site voltado para o cliente.
-   * [Comandos de consentimento do SDK](../../../../web-sdk/commands/setconsent.md): uma visão geral dos casos de uso dos comandos do SDK relacionados ao consentimento mostrados neste guia.
+* [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md): uma biblioteca JavaScript do lado do cliente que permite integrar vários serviços Experience Platform ao seu site voltado para o cliente.
+   * [Comandos de consentimento do SDK](/help/collection/js/commands/setconsent.md): uma visão geral dos casos de uso dos comandos do SDK relacionados ao consentimento mostrados neste guia.
 * [Serviço de Segmentação do Adobe Experience Platform](/help/segmentation/home.md): permite dividir os dados do [!DNL Real-Time Customer Profile] em grupos de indivíduos que compartilham características semelhantes e respondem de forma semelhante às estratégias de marketing.
 
 Além dos serviços Experience Platform listados acima, você também deve se familiarizar com os [destinos](/help/data-governance/home.md) e sua função no ecossistema do Experience Platform.
@@ -127,13 +127,13 @@ Depois de fornecer um nome exclusivo para a sequência de dados, selecione o bot
 | Campo de sequência de dados | Valor |
 | --- | --- |
 | [!UICONTROL Sandbox] | O nome da [sandbox](/help/sandboxes/home.md) da Experience Platform que contém a conexão de transmissão e os conjuntos de dados necessários para configurar a sequência de dados. |
-| [!UICONTROL Entrada de streaming] | Uma conexão de transmissão válida para o Experience Platform. Consulte o tutorial em [criando uma conexão de streaming](/help/ingestion/tutorials/create-streaming-connection-ui.md) se você não tiver uma entrada de streaming existente. |
-| [!UICONTROL Conjunto de dados do evento] | Selecione o conjunto de dados [!DNL XDM ExperienceEvent] criado na [etapa anterior](#datasets). Se você incluiu o [[!UICONTROL Grupo de campos Consentimento] da TCF do IAB](/help/xdm/field-groups/event/iab.md) neste esquema do conjunto de dados, será possível rastrear eventos de alteração de consentimento ao longo do tempo usando o comando [`sendEvent`](#sendEvent), armazenando esses dados nesse conjunto de dados. Lembre-se de que os valores de consentimento armazenados neste conjunto de dados são **não** usados em fluxos de trabalho de imposição automática. |
-| [!UICONTROL Conjunto de dados do perfil] | Selecione o conjunto de dados [!DNL XDM Individual Profile] criado na [etapa anterior](#datasets). Ao responder aos ganchos de alteração de consentimento CMP usando o comando [`setConsent`](#setConsent), os dados coletados são armazenados nesse conjunto de dados. Como esse conjunto de dados é habilitado para perfil, os valores de consentimento armazenados nesse conjunto de dados são honrados durante os workflows de imposição automática. |
+| [!UICONTROL Streaming Inlet] | Uma conexão de transmissão válida para o Experience Platform. Consulte o tutorial em [criando uma conexão de streaming](/help/ingestion/tutorials/create-streaming-connection-ui.md) se você não tiver uma entrada de streaming existente. |
+| [!UICONTROL Event Dataset] | Selecione o conjunto de dados [!DNL XDM ExperienceEvent] criado na [etapa anterior](#datasets). Se você incluiu o grupo de campos [[!UICONTROL IAB TCF 2.0 Consent] ](/help/xdm/field-groups/event/iab.md) no esquema deste conjunto de dados, é possível rastrear eventos de alteração de consentimento ao longo do tempo usando o comando [`sendEvent`](#sendEvent), armazenando esses dados nesse conjunto de dados. Lembre-se de que os valores de consentimento armazenados neste conjunto de dados são **não** usados em fluxos de trabalho de imposição automática. |
+| [!UICONTROL Profile Dataset] | Selecione o conjunto de dados [!DNL XDM Individual Profile] criado na [etapa anterior](#datasets). Ao responder aos ganchos de alteração de consentimento CMP usando o comando [`setConsent`](#setConsent), os dados coletados são armazenados nesse conjunto de dados. Como esse conjunto de dados é habilitado para perfil, os valores de consentimento armazenados nesse conjunto de dados são honrados durante os workflows de imposição automática. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
-Quando terminar, selecione **[!UICONTROL Salvar]** na parte inferior da tela e continue seguindo os avisos adicionais para concluir a configuração.
+Quando terminar, selecione **[!UICONTROL Save]** na parte inferior da tela e continue seguindo os prompts adicionais para concluir a configuração.
 
 ### Execução de comandos de alteração de consentimento
 
@@ -141,7 +141,7 @@ Depois de criar o fluxo de dados descrito na seção anterior, você pode começ
 
 #### Uso de ganchos de alteração de consentimento CMP {#setConsent}
 
-Muitos CMPs fornecem ganchos prontos para uso que ouvem eventos de alteração de consentimento. Quando esses eventos ocorrerem, você poderá usar o comando [`setConsent`](/help/web-sdk/commands/setconsent.md) para atualizar os dados de consentimento desse cliente.
+Muitos CMPs fornecem ganchos prontos para uso que ouvem eventos de alteração de consentimento. Quando esses eventos ocorrerem, você poderá usar o comando [`setConsent`](/help/collection/js/commands/setconsent.md) para atualizar os dados de consentimento desse cliente.
 
 O comando `setConsent` espera dois argumentos:
 
@@ -197,7 +197,7 @@ Você também pode coletar dados de consentimento TCF 2.0 em cada evento acionad
 
 >[!NOTE]
 >
->Para usar este método, você deve ter adicionado o grupo de campos Privacidade de eventos de experiência ao esquema [!DNL XDM ExperienceEvent] habilitado para [!DNL Profile]. Consulte a seção sobre [atualização do esquema ExperienceEvent](./dataset.md#event-schema) no guia de preparação do conjunto de dados para obter etapas sobre como configurar isso.
+>Para usar este método, você deve ter adicionado o grupo de campos Privacidade de eventos de experiência ao esquema [!DNL Profile] habilitado para [!DNL XDM ExperienceEvent]. Consulte a seção sobre [atualização do esquema ExperienceEvent](./dataset.md#event-schema) no guia de preparação do conjunto de dados para obter etapas sobre como configurar isso.
 
 O comando `sendEvent` deve ser usado como um retorno de chamada em ouvintes de eventos apropriados em seu site. O comando espera dois argumentos: (1) uma cadeia de caracteres que indica o tipo de comando (neste caso, `sendEvent`) e (2) uma carga contendo um objeto `xdm` que fornece os campos de consentimento necessários como JSON:
 
@@ -224,7 +224,7 @@ alloy("sendEvent", {
 
 ### Tratamento de respostas do SDK
 
-Muitos comandos do Web SDK retornam promessas que indicam se a chamada foi bem-sucedida ou falhou. Em seguida, você pode usar essas respostas para obter lógica adicional, como exibir mensagens de confirmação ao cliente. Consulte [Respostas de comando](/help/web-sdk/commands/command-responses.md) para obter mais informações.
+Muitos comandos do Web SDK retornam promessas que indicam se a chamada foi bem-sucedida ou falhou. Em seguida, você pode usar essas respostas para obter lógica adicional, como exibir mensagens de confirmação ao cliente. Consulte [Respostas de comando](/help/collection/js/commands/command-responses.md) para obter mais informações.
 
 ## Exportar segmentos {#export}
 

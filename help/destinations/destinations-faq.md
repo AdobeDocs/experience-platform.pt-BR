@@ -3,10 +3,10 @@ keywords: destinos, perguntas, perguntas frequentes, faq, perguntas frequentes s
 title: Perguntas frequentes
 description: Respostas às perguntas mais frequentes sobre destinos do Adobe Experience Platform
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1673'
-ht-degree: 0%
+source-wordcount: '1670'
+ht-degree: 1%
 
 ---
 
@@ -92,7 +92,7 @@ See the table below for a feature comparison between the Experience Cloud Audien
 +++Resposta
 Antes de enviar seus públicos-alvo para o [!DNL Facebook], verifique se você atende aos seguintes requisitos:
 
-* A permissão **[!DNL Manage campaigns]** da conta de usuário [!DNL Facebook] deve estar habilitada para a conta de Anúncio que você pretende usar.
+* A permissão [!DNL Facebook] da conta de usuário **[!DNL Manage campaigns]** deve estar habilitada para a conta de Anúncio que você pretende usar.
 * A conta comercial **Adobe Experience Cloud** deve ser adicionada como um parceiro de publicidade em seu [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
 
   >[!IMPORTANT]
@@ -115,7 +115,7 @@ A partir de março de 2021, o [!DNL Facebook Custom Audiences] precisa de até u
 
 ### Posso usar o [!DNL Facebook Custom Audiences] para direcionamento de público em outros aplicativos do [!DNL Facebook], como o [!DNL Instagram]?
 
-+++Atendimento
++++Amswer
 Você pode usar o destino [!DNL Facebook Custom Audiences] para direcionamento de público-alvo na família de aplicativos do Facebook com suporte no [!DNL Facebook Custom Audiences], incluindo [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] e [!DNL Messenger]. A seleção do aplicativo no qual os anunciantes desejam executar campanhas é indicada no nível de posicionamento em [!DNL Facebook Ads Manager].
 +++
 
@@ -150,7 +150,7 @@ O [!DNL Facebook Custom Audiences] oferece suporte à ativação das seguintes i
 ### Posso criar vários destinos do Facebook na interface do usuário do Experience Platform para contas do Facebook separadas?
 
 +++Resposta
-Sim. Um destino do Facebook no Experience Platform é de 1:1 para uma conta publicitária no Facebook. É possível criar um destino do Facebook separado para cada conta de anúncio do Facebook em sua empresa. Siga o [tutorial de conexão de destino](/help/destinations/ui/connect-destination.md) e conecte-se a uma conta separada do Facebook para cada novo destino do Facebook na interface do usuário do Experience Platform. Não há limite para o número de contas de anúncios do Facebook às quais você pode se conectar.
+Sim. Um destino do Facebook no Experience Platform é 1:1 para uma conta publicitária no Facebook. É possível criar um destino do Facebook separado para cada conta de anúncio do Facebook em sua empresa. Siga o [tutorial de conexão de destino](/help/destinations/ui/connect-destination.md) e conecte-se a uma conta separada do Facebook para cada novo destino do Facebook na interface do usuário do Experience Platform. Não há limite para o número de contas de anúncios do Facebook às quais você pode se conectar.
 +++
 
 ## Google Customer Match {#google-customer-match}
@@ -172,7 +172,7 @@ Não. Como essa não é uma integração baseada em pixels, não há necessidade
 ### O que preciso fazer antes de ativar públicos no [!DNL LinkedIn Matched Audiences]?
 
 +++Resposta
-Antes de poder usar o destino [!UICONTROL Público-alvo correspondente do LinkedIn], verifique se a sua conta [!DNL LinkedIn Campaign Manager] tem o nível de permissão [!DNL Creative Manager] ou superior.
+Antes de usar o destino [!UICONTROL LinkedIn Matched Audience], verifique se a sua conta [!DNL LinkedIn Campaign Manager] tem o nível de permissão [!DNL Creative Manager] ou superior.
 
 Para saber como editar suas permissões de usuário do [!DNL LinkedIn Campaign Manager], consulte [Adicionar, Editar, e Remover Permissões de Usuário em Contas do Advertising](https://www.linkedin.com/help/lms/answer/5753) na documentação do LinkedIn.
 +++
@@ -197,11 +197,11 @@ O [!DNL LinkedIn Matched Audiences] oferece suporte à ativação das seguintes 
 ### Preciso usar o Experience Platform Web SDK para enviar públicos-alvo e atributos para a Adobe Target?
 
 +++Resposta
-Não, o [Web SDK](../web-sdk/home.md) não é necessário para ativar públicos para o [Adobe Target](catalog/personalization/adobe-target-connection.md).
+Não, o Web SDK não é necessário para ativar públicos para o [Adobe Target](catalog/personalization/adobe-target-connection.md).
 
-No entanto, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=pt-BR) for usado em vez do Web SDK, somente a personalização da próxima sessão será suportada.
+No entanto, se [[!DNL at.js]](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) for usado em vez do Web SDK, somente a personalização da próxima sessão será suportada.
 
-Para casos de uso de [personalização de mesma página e próxima página](ui/activate-edge-personalization-destinations.md), você deve usar o [Web SDK](../web-sdk/home.md) ou a [API Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Consulte a documentação sobre [ativação de públicos-alvo para destinos de borda](ui/activate-edge-personalization-destinations.md) para obter mais detalhes de implementação.
+Para casos de uso de [personalização de mesma página e próxima página](ui/activate-edge-personalization-destinations.md), você deve usar o Web SDK ou a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). Consulte a documentação sobre [ativação de públicos-alvo para destinos de borda](ui/activate-edge-personalization-destinations.md) para obter mais detalhes de implementação.
 +++
 
 ### Há um limite no número de atributos que posso enviar da Plataforma de dados do cliente em tempo real para a Adobe Target ou um destino de Personalization personalizado?
@@ -223,13 +223,13 @@ Yes, you can activate a maximum of 150 edge audiences per sandbox.  For more inf
 ### Depois de criar um público-alvo no Experience Platform, quanto tempo levará para que esse público-alvo fique disponível para casos de uso de segmentação de borda?
 
 +++Resposta
-As definições de público-alvo são propagadas para o [Edge Network](../web-sdk/home.md) em até uma hora. No entanto, se um público-alvo for ativado dentro dessa primeira hora, alguns visitantes que se qualificariam para o público-alvo poderão ser perdidos.
+As definições de público-alvo são propagadas para a Edge Network em até uma hora. No entanto, se um público-alvo for ativado dentro dessa primeira hora, alguns visitantes que se qualificariam para o público-alvo poderão ser perdidos.
 +++
 
 ### Onde posso ver os atributos ativados no Adobe Target?
 
 +++Resposta
-Os atributos estarão disponíveis para uso no Target nas ofertas [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=pt-BR) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=pt-BR).
+Os atributos estarão disponíveis para uso no Target nas ofertas [JSON](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) e [HTML](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html).
 +++
 
 ### Posso criar um destino sem um fluxo de dados e, em seguida, adicionar um fluxo de dados ao mesmo destino em um ponto posterior?
@@ -265,7 +265,7 @@ Sim. As [Políticas de Consentimento e Governança de Dados](../data-governance/
 ### Os destinos [!DNL Adobe Target] e [!DNL Custom Personalization] [!DNL HIPAA] são compatíveis?
 
 +++Resposta
-[!DNL Adobe Target] não é compatível com [!DNL HIPPA] com [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/br/solutions/industries/healthcare.html). Os clientes devem consultar suas próprias equipes jurídicas em relação à preparação de [!DNL HIPPA] para canais de otimização personalizados antes de usar a personalização de borda por meio de [!DNL Adobe Target] ou dos destinos [!DNL Custom Personalization].
+[!DNL Adobe Target] não é compatível com [!DNL HIPPA] com [[!DNL Adobe Healthcare Shield]](https://business.adobe.com/solutions/industries/healthcare.html). Os clientes devem consultar suas próprias equipes jurídicas em relação à preparação de [!DNL HIPPA] para canais de otimização personalizados antes de usar a personalização de borda por meio de [!DNL Adobe Target] ou dos destinos [!DNL Custom Personalization].
 
 Para casos de uso em que o gerenciamento da política de consentimento precisa ser aplicado em escala, os clientes devem comprar o [!DNL Adobe Privacy & Security Shield]. Os recursos do [!DNL Adobe Privacy & Security Shield] são vendidos como um conjunto avançado de funcionalidades e não podem ser comprados separadamente.
 

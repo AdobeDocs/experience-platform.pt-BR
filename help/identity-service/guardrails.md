@@ -3,9 +3,9 @@ keywords: Experience Platform;identidade;serviço de identidade;solução de pro
 title: Medidas de proteção do serviço de identidade
 description: Este documento fornece informações sobre limites de uso e taxa para dados do Serviço de identidade para ajudar você a otimizar o uso do gráfico de identidade.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '1586'
+source-wordcount: '1576'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Este documento fornece informações sobre limites de uso e taxa para dados do [
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 ## Introdução
 
@@ -109,7 +109,7 @@ A exclusão acontece somente com os dados no Serviço de identidade, não com o 
 Se você quiser preservar os eventos autenticados no CRMID, é recomendável alterar as IDs primárias de ECID para CRMID. Leia os seguintes documentos para obter as etapas sobre como implementar essa alteração:
 
 * [Configurar mapa de identidade para marcas Experience Platform](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Dados de identidade no Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
+* [Dados de identidade no Experience Platform Web SDK](/help/collection/use-cases/identity/id-overview.md)
 
 ### Exemplos de cenários
 
@@ -137,7 +137,7 @@ Neste exemplo, antes que o gráfico à esquerda possa ser atualizado com uma nov
 * O diagrama a seguir presume que em `timestamp=50`, existem 50 identidades no gráfico de identidade.
 * `(...)` significa as outras identidades que já estão vinculadas dentro do gráfico.
 
-Neste exemplo, ECID:32110 é assimilado e vinculado a um gráfico grande em `timestamp=51`, excedendo assim o limite de 50 identidades.
+Neste exemplo, ECID:32110 é assimilada e vinculada a um gráfico grande em `timestamp=51`, excedendo o limite de 50 identidades.
 
 ![](./images/guardrails/before-split.png)
 
@@ -149,7 +149,7 @@ Como resultado, o Serviço de identidade exclui a identidade mais antiga com bas
 
 >[!TAB Saída de gráfico]
 
-Como resultado da exclusão de ECID:35577, as bordas que vincularam CRMID:60013 e CRMID:25212 com o agora excluído ECID:35577 também são excluídas. Esse processo de exclusão faz com que o gráfico seja dividido em dois gráficos menores.
+Como resultado da exclusão da ECID:35577, as bordas que vincularam a CRMID:60013 e a CRMID:25212 à ECID excluída agora:35577 também são excluídas. Esse processo de exclusão faz com que o gráfico seja dividido em dois gráficos menores.
 
 ![](./images/guardrails/after-split.png)
 
@@ -168,15 +168,15 @@ Como resultado da exclusão de ECID:35577, as bordas que vincularam CRMID:60013 
 
 Devido à lógica de exclusão, algumas identidades de &quot;hub&quot; também podem ser excluídas. Essas identidades de hub se referem a nós vinculados a várias identidades individuais que, de outra forma, seriam desvinculadas.
 
-No exemplo abaixo, ECID:21011 é assimilado e vinculado ao gráfico em `timestamp=51`, excedendo assim o limite de 50 identidades.
+No exemplo abaixo, ECID:21011 é assimilada e vinculada ao gráfico em `timestamp=51`, excedendo assim o limite de 50 identidades.
 
 ![](./images/guardrails/hub-and-spoke-start.png)
 
 >[!TAB Processo de exclusão]
 
-Como resultado, o Serviço de identidade exclui a identidade mais antiga somente do gráfico de identidade, que neste caso é ECID:35577. A supressão da referência ECID:35577 também resulta na supressão do seguinte:
+Como resultado, o Serviço de Identidade exclui a identidade mais antiga somente do gráfico de identidade, que neste caso é ECID:35577. A exclusão de ECID:35577 também resulta na exclusão do seguinte:
 
-* O vínculo entre o CRMID: 60013 e o agora excluído ECID:35577, resultando em um cenário de divisão de gráfico.
+* O vínculo entre CRMID: 60013 e a ECID :35577 excluída, resultando em um cenário de divisão de gráfico.
 * IDFA: 32110, IDFA: 02383 e as identidades restantes representadas por `(...)`. Essas identidades são excluídas porque, individualmente, não estão vinculadas a outras identidades e, portanto, não podem ser representadas em um gráfico.
 
 ![](./images/guardrails/hub-and-spoke-process.png)
@@ -199,7 +199,7 @@ Consulte a documentação a seguir para obter mais informações sobre [!DNL Ide
 Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=pt-BR#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -3,9 +3,9 @@ title: Evoluir valor único do cliente para valor vitalício
 description: Saiba como criar campanhas personalizadas para oferecer os melhores produtos ou serviços complementares com base nos atributos, comportamento e compras anteriores de um cliente específico.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '3181'
+source-wordcount: '3156'
 ht-degree: 2%
 
 ---
@@ -39,16 +39,16 @@ Para isso, a tecnologia necessária consiste nos dois aplicativos Experience Pla
 >
 >Verifique se tem as [permissões de controle de acesso baseado em atributo](/help/access-control/abac/end-to-end-guide.md) necessárias para todas essas áreas, ou solicite ao(à) administrador(a) que as conceda a você.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=pt-BR): integre dados entre fontes de dados para alimentar a campanha. Esses dados são usados para criar os públicos-alvo da campanha e exibir elementos de dados personalizados usados no email e nos blocos promocionais da Web (por exemplo, nome ou informações relacionadas à conta). Por fim, o Real-Time CDP também é usado para ativar públicos para destinos de mídia paga.
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html): integre dados entre fontes de dados para alimentar a campanha. Esses dados são usados para criar os públicos-alvo da campanha e exibir elementos de dados personalizados usados no email e nos blocos promocionais da Web (por exemplo, nome ou informações relacionadas à conta). Por fim, o Real-Time CDP também é usado para ativar públicos para destinos de mídia paga.
    * [Esquemas](/help/xdm/home.md)
    * [Perfis](/help/profile/home.md)
    * [Conjuntos de dados](/help/catalog/datasets/overview.md)
    * [Públicos-alvo](/help/segmentation/home.md)
    * [Destinos](/help/destinations/home.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR): crie jornadas, configure acionadores e crie as mensagens certas para endereçar seus visitantes.
-   * [Acionador de evento ou público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=pt-BR)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): crie jornadas, configure acionadores e crie as mensagens certas para endereçar seus visitantes.
+   * [Acionador de evento ou público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [Públicos-alvo e eventos](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=pt-BR)
-   * [Jornadas](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR)
+   * [Jornadas](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
 
 ## Arquitetura do Real-Time CDP e do Journey Optimizer
 
@@ -72,7 +72,7 @@ Você começa enviando uma mensagem para o seu público-alvo de clientes altamen
 
 ![Evolua passo a passo do valor único para o valor vitalício da visão geral de alto nível.](../evolve-one-time-value-lifetime-value/images/step-by-step.png){zoomable="yes"}
 
-1. Crie esquemas e conjuntos de dados e marque-os como [!UICONTROL Perfil].
+1. Crie esquemas e conjuntos de dados e marque-os para [!UICONTROL Profile].
 2. Os dados são coletados e integrados ao Experience Platform via Web SDK, Mobile Edge SDK ou API. O Conector de dados do Analytics também pode ser usado, mas pode resultar em latência de jornada.
 3. Você carrega perfis no Real-Time CDP e cria políticas de governança para garantir um uso responsável.
 4. Você constrói públicos-alvo focados a partir da lista de perfis para verificar clientes de alto valor e baixa frequência.
@@ -91,7 +91,7 @@ Ao concluir as etapas para implementar o caso de uso, você usará a Real-Time C
 
 ### Criar um design de esquema e especificar grupos de campos {#schema-design}
 
-Os recursos do Experience Data Model (XDM) são gerenciados no espaço de trabalho [!UICONTROL Esquemas] em [!DNL Adobe Experience Platform]. Você pode visualizar e explorar os recursos principais fornecidos por [!DNL Adobe] (por exemplo, [!UICONTROL grupos de campos]) e criar recursos e esquemas personalizados para sua organização.
+Os recursos do Experience Data Model (XDM) são gerenciados no espaço de trabalho [!UICONTROL Schemas] em [!DNL Adobe Experience Platform]. Você pode visualizar e explorar os recursos principais fornecidos pelo [!DNL Adobe] (por exemplo, [!UICONTROL field groups]) e criar recursos e esquemas personalizados para sua organização.
 
 Para obter mais informações sobre como criar [esquemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=pt-BR), leia o [tutorial sobre como criar um esquema.](/help/xdm/tutorials/create-schema-ui.md)
 
@@ -109,7 +109,7 @@ Use esse esquema para estruturar e fazer referência aos dados do perfil que com
 
 ![Esquema de atributos do cliente com grupos de campos destacados](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-attributes-schema.png)
 
-O esquema de atributos do cliente é representado por uma classe [!UICONTROL Perfil individual XDM], que inclui os seguintes grupos de campos:
+O esquema de atributos do cliente é representado por uma classe [!UICONTROL XDM Individual Profile], que inclui os seguintes grupos de campos:
 
 +++Detalhes demográficos (Grupo de campos)
 
@@ -137,13 +137,13 @@ O esquema de atributos do cliente é representado por uma classe [!UICONTROL Per
 
 #### Esquema de transações digitais do cliente {#customer-digital-transactions-schema}
 
-Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no seu site ou em outras plataformas digitais associadas. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] por meio do [Web SDK](/help/web-sdk/home.md) e são necessários para fazer referência aos vários eventos de navegação e conversão usados para acionar jornadas, análise online detalhada do cliente e recursos de segmentação aprimorados.
+Esse esquema é usado para estruturar e fazer referência aos dados do evento que compõem a atividade do cliente que ocorre no seu site ou em outras plataformas digitais associadas. Normalmente, esses dados são assimilados no [!DNL Adobe Experience Platform] por meio do [Web SDK](/help/collection/js/js-overview.md) e são necessários para fazer referência aos vários eventos de navegação e conversão usados para acionar jornadas, análise online detalhada do cliente e recursos de segmentação aprimorados.
 
 ![Esquema de transações digitais do cliente com grupos de campos destacados](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
 O esquema de transações digitais do cliente é representado por uma classe [!UICONTROL XDM ExperienceEvent], que inclui os seguintes grupos de campos:
 
-+++Adobe Experience Platform Web SDK ExperienceEvent (Grupo de campos)
++++ExperienceEvent do Adobe Experience Platform Web SDK (Grupo de campos)
 
 | Campos | Requisito |
 | --- | --- |
@@ -216,7 +216,7 @@ Esse esquema é usado para estruturar e fazer referência aos dados do evento qu
 
 O esquema de transações offline do cliente é representado por uma classe [!UICONTROL XDM ExperienceEvent], que inclui os seguintes grupos de campos:
 
-+++Detalhes do Commerce (Grupo de campos)
++++Detalhes do Commerce (Grupo de Campos)
 
 [Detalhes do Commerce](/help/xdm/field-groups/event/commerce-details.md) é um grupo de campos de esquema padrão para a classe [!DNL XDM ExperienceEvent], usado para descrever dados de comércio, como informações do produto (SKU, nome, quantidade) e operações padrão do carrinho (pedido, check-out, abandono).
 
@@ -224,11 +224,11 @@ O esquema de transações offline do cliente é representado por uma classe [!UI
 
 +++Detalhes de contato pessoal (grupo de campos)
 
-[[!UICONTROL Detalhes de Contato Pessoal]](/help/xdm/field-groups/profile/personal-contact-details.md) é um grupo de campos de esquema padrão para a classe [!DNL XDM Individual Profile], que descreve as informações de contato de uma pessoa individual.
+[[!UICONTROL Personal Contact Details]](/help/xdm/field-groups/profile/personal-contact-details.md) é um grupo de campos de esquema padrão para a classe [!DNL XDM Individual Profile], que descreve as informações de contato de uma pessoa individual.
 
 +++
 
-+++Detalhes de auditoria externa do sistema Source (grupo de campos)
++++Detalhes de auditoria externa do sistema Source (grupo de campos) 
 
 Atributos de auditoria de sistema do Source externo é um tipo de dados padrão do Experience Data Model (XDM) que captura os detalhes de auditoria sobre um sistema de origem externa.
 
@@ -248,7 +248,7 @@ O esquema do conector da Web [!DNL Adobe] é representado por uma classe [!UICON
 
 +++Modelo de evento de experiência do Adobe Analytics (grupo de campos)
 
-A [[!UICONTROL Extensão completa do Adobe Analytics ExperienceEvent]](/help/xdm/field-groups/event/analytics-full-extension.md) é um grupo de campos de esquema padrão, que captura métricas comuns coletadas pelo Adobe Analytics.
+[[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]](/help/xdm/field-groups/event/analytics-full-extension.md) é um grupo de campos de esquema padrão, que captura métricas comuns coletadas pelo Adobe Analytics.
 
 +++
 
@@ -268,9 +268,9 @@ Para obter mais informações sobre como criar um [conjunto de dados](/help/cata
 
 >[!IMPORTANT]
 >
->Oferecer aos clientes a capacidade de cancelar a inscrição para receber comunicações de uma marca, bem como garantir que essa escolha seja respeitada, é um requisito legal. Saiba mais sobre a legislação aplicável na [Visão geral das regras de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=pt-BR).
+>Oferecer aos clientes a capacidade de cancelar a inscrição para receber comunicações de uma marca, bem como garantir que essa escolha seja respeitada, é um requisito legal. Saiba mais sobre a legislação aplicável na [Visão geral das regras de privacidade](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
 
-Considere implementar as [políticas de consentimento](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=pt-BR) a seguir e peça o consentimento dos visitantes antes de contatá-los:
+Considere implementar as [políticas de consentimento](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html) a seguir e peça o consentimento dos visitantes antes de contatá-los:
 
 * Se `consents.marketing.email.val = "Y"` então pode enviar um email
 * Se `consents.marketing.sms.val = "Y"` então pode SMS
@@ -298,7 +298,7 @@ Não são necessárias [políticas de marketing](/help/data-governance/policies/
 
 Esse caso de uso exige a criação de dois públicos-alvo para definir atributos ou comportamentos específicos compartilhados por um subconjunto de perfis da loja de perfis para distinguir um grupo comercializável de pessoas. Os públicos-alvo podem ser criados de várias maneiras no Adobe Experience Platform:
 
-* Para obter informações sobre como criar um público-alvo, leia o [Guia da interface do usuário do serviço de público-alvo](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=pt-BR#create-audience).
+* Para obter informações sobre como criar um público-alvo, leia o [Guia da interface do usuário do serviço de público-alvo](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * Para obter informações sobre como compor [públicos-alvo](/help/segmentation/home.md), leia o [Guia da interface do usuário de composição de público-alvo](/help/segmentation/ui/audience-composition.md).
 * Para obter informações sobre como criar públicos-alvo por meio de definições de segmento derivadas da Experience Platform, leia o [Guia da Interface do usuário do Audience Builder](/help/segmentation/ui/segment-builder.md).
 
@@ -342,9 +342,9 @@ Esse público-alvo é criado para incluir perfis que gastaram mais de US$ 250 no
 
 >[!NOTE]
 >
->[!DNL Adobe Journey Optimizer] não abrange tudo o que é mostrado nos diagramas. Todos os [anúncios de mídia pagos](/help/destinations/catalog/social/overview.md) são criados no [!UICONTROL espaço de trabalho] [destinos](/help/destinations/ui/destinations-workspace.md).
+>[!DNL Adobe Journey Optimizer] não abrange tudo o que é mostrado nos diagramas. Todos os [anúncios de mídia pagos](/help/destinations/catalog/social/overview.md) são criados no [!UICONTROL destinations] [espaço de trabalho](/help/destinations/ui/destinations-workspace.md).
 
-[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR) ajuda você a fornecer experiências conectadas, contextuais e personalizadas aos seus clientes. A jornada do cliente envolve todo o processo de interação do cliente com a marca. Cada jornada de caso de uso requer informações específicas.
+[[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) ajuda você a fornecer experiências conectadas, contextuais e personalizadas aos seus clientes. A jornada do cliente envolve todo o processo de interação do cliente com a marca. Cada jornada de caso de uso requer informações específicas.
 
 Para realizar esse caso de uso, você deve criar duas jornadas separadas:
 
@@ -367,15 +367,15 @@ A jornada vitalícia aborda o público-alvo de clientes de alto valor e baixa fr
 
 A jornada mostrada acima segue a lógica a seguir.
 
-1. Ler público: Use uma [atividade de leitura de público](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=pt-BR) para o primeiro público criado na seção de públicos acima.
+1. Ler público: Use uma [atividade de leitura de público](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=en) para o primeiro público criado na seção de públicos acima.
 
-2. Condição - Canal preferencial: use uma [atividade de condição](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html?lang=pt-BR) para determinar como entrar em contato com os clientes, seja por email, SMS ou notificações por push. Use três atividades de ação para criar as três ramificações.
+2. Condição - Canal preferencial: use uma [atividade de condição](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/condition-activity.html) para determinar como entrar em contato com os clientes, seja por email, SMS ou notificações por push. Use três atividades de ação para criar as três ramificações.
 
-3. Aguardar: use uma [atividade de espera](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html?lang=pt-BR) para aguardar até ouvir compras.
+3. Aguardar: use uma [atividade de espera](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/read-audience.html) para aguardar até ouvir compras.
 
 4. Condição - Assinatura adquirida nos últimos 7 dias?: use uma atividade de condição para acompanhar as compras de produtos nos últimos sete dias.
 
-5. JourneyStepEventTracker - Assinatura não adquirida: use uma [ação personalizada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html?lang=pt-BR) para os visitantes que ainda não compraram sua assinatura, apesar de terem recebido sua mensagem. Como parte da condição personalizada no final da jornada, crie um evento `journey.feedback` e adicione-o a um conjunto de dados com base no esquema [!UICONTROL Evento de etapa de Jornada]. Você usará esse evento para segmentar o público-alvo que não comprou a assinatura e que pode direcionar por meio de anúncios de mídia paga.
+5. JourneyStepEventTracker - Assinatura não adquirida: use uma [ação personalizada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions.html) para os visitantes que ainda não compraram sua assinatura, apesar de terem recebido sua mensagem. Como parte da condição personalizada no final da jornada, crie um evento `journey.feedback` e adicione-o a um conjunto de dados com base no esquema [!UICONTROL Journey Step Event]. Você usará esse evento para segmentar o público-alvo que não comprou a assinatura e que pode direcionar por meio de anúncios de mídia paga.
 
 +++
 
@@ -385,7 +385,7 @@ A jornada de confirmação de pedido foca se uma compra foi feita pelo site ou a
 
 ![Visão geral visual de alto nível da jornada de confirmação de pedido do cliente.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/order-confirmation-journey.png "Visão geral visual de alto nível da jornada de confirmação de pedido do cliente."){zoomable="yes"}
 
-+++lógica de Jornada
++++Lógica de jornada
 
 Use os eventos, campos e ações sugeridos abaixo em sua jornada de confirmação:
 
@@ -417,7 +417,7 @@ Use os eventos, campos e ações sugeridos abaixo em sua jornada de confirmaçã
 
 +++
 
-+++Lógica de Jornada de tecla
++++Lógica de Jornada principal
 
 * Jornada Lógica de Entrada
    * Evento de pedido
@@ -436,7 +436,7 @@ Use os eventos, campos e ações sugeridos abaixo em sua jornada de confirmaçã
 
 >[!ENDTABS]
 
-Para obter mais informações sobre como criar jornadas no [!DNL Adobe Journey Optimizer], leia o guia de [introdução ao jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=pt-BR).
+Para obter mais informações sobre como criar jornadas no [!DNL Adobe Journey Optimizer], leia o guia de [introdução ao jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
 
 ### Configurar um destino para exibir anúncios de mídia paga {#paid-media-ads}
 

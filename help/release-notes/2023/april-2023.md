@@ -2,10 +2,10 @@
 title: Notas de versão de abril de 2023 da Adobe Experience Platform
 description: As notas de versão de abril de 2023 da Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
+source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
 workflow-type: tm+mt
-source-wordcount: '2010'
-ht-degree: 96%
+source-wordcount: '1983'
+ht-degree: 94%
 
 ---
 
@@ -66,8 +66,8 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Recurso | Descrição |
 | --- | --- |
-| Ofuscação de endereço IP para sequências de dados | Agora é possível definir opções de ofuscação parcial ou completa de IP no nível da sequência de dados por meio da [interface de configuração de sequência de dados](../../datastreams/configure.md). <br><br>A configuração de ofuscação de IP no nível da sequência de dados tem precedência sobre qualquer ofuscação de IP configurada no Adobe Target e no Audience Manager. <br><br>Os dados enviados para o Adobe Analytics não são afetados pela configuração de [!UICONTROL Ofuscação de IP] definida no nível da sequência de dados. Atualmente, o Adobe Analytics recebe endereços IP não ofuscados. Para que o Analytics receba endereços IP ofuscados, você deve configurar a ofuscação de IP separadamente no Adobe Analytics. Esse comportamento será atualizado em versões futuras.<br><br> Para obter mais detalhes sobre a ofuscação de IP e instruções sobre como configurá-la, consulte a [documentação de configuração da sequência de dados](../../datastreams/configure.md#advanced-options). |
-| [Substituições de configuração da sequência de dados](../../datastreams/overrides.md) | Agora é possível definir opções de configuração adicionais para sequências de dados, o que pode ser usado para substituir configurações específicas, como conjuntos de dados de eventos, tokens de propriedade do Target, containers de sincronização de ID e conjuntos de relatórios do Analytics. <br><br>Substituir as configurações da sequência de dados é um processo de duas etapas: <ol><li>Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](../../datastreams/configure.md).</li><li>Em seguida, você deve enviar as substituições para a rede de borda por meio de um comando do SDK da Web ou usando a [extensão de tag](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) do SDK da Web.</li></ol> |
+| Ofuscação de endereço IP para sequências de dados | Agora é possível definir opções de ofuscação parcial ou completa de IP no nível da sequência de dados por meio da [interface de configuração de sequência de dados](../../datastreams/configure.md). <br><br>A configuração de ofuscação de IP no nível da sequência de dados tem precedência sobre qualquer ofuscação de IP configurada no Adobe Target e no Audience Manager. <br><br>Os dados enviados para a Adobe Analytics não são afetados pela configuração [!UICONTROL IP Obfuscation] no nível de sequência de dados. Atualmente, o Adobe Analytics recebe endereços IP não ofuscados. Para que o Analytics receba endereços IP ofuscados, você deve configurar a ofuscação de IP separadamente no Adobe Analytics. Esse comportamento será atualizado em versões futuras.<br><br> Para obter mais detalhes sobre a ofuscação de IP e instruções sobre como configurá-la, consulte a [documentação de configuração da sequência de dados](../../datastreams/configure.md#advanced-options). |
+| [Substituições de configuração da sequência de dados](../../datastreams/overrides.md) | Agora é possível definir opções de configuração adicionais para sequências de dados, o que pode ser usado para substituir configurações específicas, como conjuntos de dados de eventos, tokens de propriedade do Target, containers de sincronização de ID e conjuntos de relatórios do Analytics. <br><br>Substituir as configurações da sequência de dados é um processo de duas etapas: <ol><li>Primeiro, você deve definir as substituições de configuração da sequência na [página de configuração da sequência de dados](../../datastreams/configure.md).</li><li>Em seguida, você deve enviar as substituições para a rede de borda por meio de um comando do SDK da Web ou usando a [extensão de tag](/help/tags/extensions/client/web-sdk/configure/configuration-overrides.md) do SDK da Web.</li></ol> |
 | Segredo JWT do OAuth  | O [Segredo JWT do OAuth](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=pt-br) permite aos clientes usar tokens de serviço da Adobe e do Google para oferecer compatibilidade com interações de servidor para servidor no encaminhamento de eventos. |
 | Extensão do [!DNL Pinterest Conversions API] | A extensão de encaminhamento de eventos da [[!DNL Pinterest Conversions API]](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=pt-BR) permite aproveitar os dados capturados na rede de borda da Adobe Experience Platform e enviá-los para o [!DNL Pinterest] na forma de eventos do lado do servidor usando a [!DNL Pinterest Conversions API]. |
 
@@ -81,7 +81,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Destino | Descrição |
 | ----------- | ----------- |
-| Conexão do [[!DNL Salesforce Marketing Cloud Account Engagement] &#x200B;](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Use o destino Salesforce Marketing Cloud Account Engagement (anteriormente conhecido como Pardot) para capturar, rastrear, pontuar e classificar leads. Use esse destino para casos de uso de B2B que envolvam vários departamentos e tomadores de decisão que exigem ciclos de vendas e decisões mais longos. |
+| Conexão do [[!DNL Salesforce Marketing Cloud Account Engagement] ](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Use o destino Salesforce Marketing Cloud Account Engagement (anteriormente conhecido como Pardot) para capturar, rastrear, pontuar e classificar leads. Use esse destino para casos de uso de B2B que envolvam vários departamentos e tomadores de decisão que exigem ciclos de vendas e decisões mais longos. |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
 | Monitoramento de fluxo de dados para destinos do [!DNL Custom Personalization] e [!DNL Adobe Commerce] | <p> Agora você pode ver as métricas de ativação das conexões do [Adobe Commerce](/help/destinations/catalog/personalization/adobe-commerce.md), [Personalização individual](../../destinations/catalog/personalization/custom-personalization.md) e [Personalização individual com atributos](../../destinations/catalog/personalization/custom-personalization.md). </p> <p>![Imagem do Adobe Commerce](/help/destinations/assets/common/adobe-commerce-metrics.png "Métricas do Adobe Commerce"){width="100" zoomable="yes"}</p>  Consulte [Monitorar fluxos de dados no espaço de trabalho de destinos](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) para obter mais detalhes. |
-| Novo campo **[!UICONTROL Anexar ID do segmento ao nome do segmento]** para destinos do [!DNL Google Ad Manager] e [!DNL Google Ad Manager 360] | <p>Agora é possível fazer o nome do segmento no [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) e [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) incluir a ID de segmento da Experience Platform, desta forma: `Segment Name (Segment ID)`.</p><p>![Anexar imagem da ID do segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Novo campo Anexar ID de segmento ao nome do segmento "){width="100" zoomable="yes"}</p> |
+| Novo campo **[!UICONTROL Append segment ID to segment name]** para os destinos [!DNL Google Ad Manager] e [!DNL Google Ad Manager 360] | <p>Agora é possível fazer o nome do segmento no [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) e [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) incluir a ID de segmento da Experience Platform, desta forma: `Segment Name (Segment ID)`.</p><p>![Anexar imagem da ID do segmento](/help/destinations/assets/common/append-segment-id-to-segment-name.png "Novo campo Anexar ID de segmento ao nome do segmento "){width="100" zoomable="yes"}</p> |
 | Preenchimentos retroativos de público-alvo programados | <p>Para o destino [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics), a ativação de preenchimentos retroativos de público-alvo para o destino é agendada para ocorrer de 24 a 48 horas depois que um segmento é mapeado pela primeira vez para uma conexão de destino. Esta atualização é uma resposta à política da Google de aguardar 24 horas até assimilar dados e melhorará as taxas de correspondência entre o Real-Time CDP e o [!DNL Google Display & Video 360].</p> <p>Observe que essa é uma configuração de back-end aplicável somente a esse destino e não está relacionada a nenhuma opção de agendamento configurável pelo cliente na interface.</p> |
 
 {style="table-layout:auto"}
@@ -115,7 +115,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Recurso | Descrição |
 | --- | --- |
-| Botão de alternância de nomes de exibição | O Editor de esquemas agora fornece um botão para alternar entre os nomes de campo originais e os nomes de exibição mais legíveis.<br>![O Editor de esquemas com o botão de alternância de nome de exibição realçado.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Botão de alternância do nome de exibição do Editor de esquemas"){width="100" zoomable="yes"}<br>Essa flexibilidade permite uma descoberta de campo aprimorada e a edição de seus esquemas. Os nomes de exibição para grupos de campos padrão são gerados pelo sistema, mas também podem ser personalizados por meio da interface, se necessário. Leia a [documentação do botão de alternância do nome de exibição](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=pt-BR#display-name-toggle) para saber mais. |
+| Botão de alternância de nomes de exibição | O Editor de esquemas agora fornece um botão de alternância para alternar entre os nomes de campo originais e os nomes de exibição mais legíveis.<br>![O Editor de esquemas com o botão de alternância de nome de exibição realçado.](../../xdm/images/ui/resources/schemas/display-name-toggle.png "Botão de alternância do nome de exibição do Editor de esquemas"){width="100" zoomable="yes"}<br>Essa flexibilidade permite uma descoberta de campo aprimorada e a edição de seus esquemas. Os nomes de exibição para grupos de campos padrão são gerados pelo sistema, mas também podem ser personalizados por meio da interface, se necessário. Leia a [documentação do botão de alternância do nome de exibição](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=pt-BR#display-name-toggle) para saber mais. |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
-| Esquema | [[!UICONTROL Campos de classificação do Adobe Target]](https://github.com/adobe/xdm/pull/1719/files) | Um novo esquema de XDM para conjuntos de dados de Classificação do Target, contendo um conjunto de campos de metadados para classificar atividades e experiências do Target. |
+| Esquema | [[!UICONTROL Adobe Target Classification Fields]](https://github.com/adobe/xdm/pull/1719/files) | Um novo esquema de XDM para conjuntos de dados de Classificação do Target, contendo um conjunto de campos de metadados para classificar atividades e experiências do Target. |
 
 {style="table-layout:auto"}
 
@@ -131,11 +131,11 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
-| Grupo de campos | [[!UICONTROL Extensão de união de conta do Serviço de perfil unificado da Adobe]](https://github.com/adobe/xdm/pull/1696/files) | Um grupo de campos de extensão de conta para o Perfil do cliente em tempo real foi adicionado. Ele permite aos usuários a adição de segmentos de associação na união de contas. |
-| Esquema | [[!UICONTROL Esquema do Sistema de Atributos Calculados]](https://github.com/adobe/xdm/pull/1696/files) | O grupo de campos Atributos calculados usado pelo Perfil do cliente em tempo real foi atualizado para um esquema global de somente leitura do sistema. |
-| Grupo de campos | Múltiplo | Foram adicionados vários eventos como campos para o [[!UICONTROL Esquema de série temporal]](https://github.com/adobe/xdm/pull/1718/files). |
+| Grupo de campos | [[!UICONTROL Adobe Unified Profile Service Account Union Extension]](https://github.com/adobe/xdm/pull/1696/files) | Um grupo de campos de extensão de conta para o Perfil do cliente em tempo real foi adicionado. Ele permite aos usuários a adição de segmentos de associação na união de contas. |
+| Esquema | [[!UICONTROL Computed Attributes System Schema]](https://github.com/adobe/xdm/pull/1696/files) | O grupo de campos Atributos calculados usado pelo Perfil do cliente em tempo real foi atualizado para um esquema global de somente leitura do sistema. |
+| Grupo de campos | Múltiplo | Adição de vários eventos como campos para [[!UICONTROL Time-series Schema]](https://github.com/adobe/xdm/pull/1718/files). |
 | Grupo de campos | Detalhes de fidelidade do perfil | [Corrigido o título](https://github.com/adobe/xdm/pull/1717/files) para `xdm:upgradeDate` de “Nome do programa” para “Data de atualização”. |
-| Grupo de campos | Múltiplo | Vários campos de [[!UICONTROL Item de decisão]](https://github.com/adobe/xdm/pull/1714/files) foram atualizados para remover a hierarquia aninhada dupla. |
+| Grupo de campos | Múltiplo | Vários campos de [[!UICONTROL Decision Item]](https://github.com/adobe/xdm/pull/1714/files) foram atualizados para remover a hierarquia aninhada dupla. |
 
 {style="table-layout:auto"}
 
@@ -174,7 +174,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Mapa de segmentos de associação | Seguindo o anúncio anterior em fevereiro, em 15 de maio de 2023, o status `Existing` será descontinuado do mapa de segmentos de associação para remover a redundância no ciclo de vida da associação a um segmento. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized`, e os perfis desqualificados continuarão a ser representados como `Exited`.<br/><br/> Essa alteração pode impactar quem se estiver usando os [destinos corporativos](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Hubs de Eventos do Azure, API HTTP) e que tenha processos de downstream automatizados em vigor com base no status `Existing`. Se esse for o seu caso, revise suas integrações downstream. Caso se interesse em identificar perfis recém-qualificados além de um determinado período, considere usar uma combinação dos status `Realized` e `lastQualificationTime` no mapa de segmentos de associação. Para obter mais informações, entre em contato com o representante da Adobe. |
+| Mapa de segmentos de associação | Seguindo o anúncio anterior em fevereiro, em 15 de maio de 2023, o status `Existing` será descontinuado do mapa de segmentos de associação para remover a redundância no ciclo de vida da associação a um segmento. Após essa alteração, os perfis qualificados em um segmento serão representados como `Realized`, e os perfis desqualificados continuarão a ser representados como `Exited`.<br/><br/> Essa alteração pode impactar quem se estiver usando os [destinos corporativos](../../destinations/destination-types.md#advanced-enterprise-destinations) (Amazon Kinesis, Hubs de Eventos do Azure, API HTTP) e que tenha processos de downstream automatizados em vigor com base no status `Existing`. Se esse for o seu caso, revise suas integrações downstream. Caso se interesse em identificar perfis recém-qualificados além de um determinado período, considere usar uma combinação dos status `Realized` e `lastQualificationTime` no mapa de associação a segmentos. Para obter mais informações, entre em contato com o representante da Adobe. |
 
 {style="table-layout:auto"}
 

@@ -2,10 +2,10 @@
 title: Visão geral da extensão do Adobe Analytics
 description: Saiba mais sobre a extensão de tags do Adobe Analytics na Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 764a9a29df0be6064d36f952d2e8a61acfa9bd33
+source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
 workflow-type: tm+mt
-source-wordcount: '2331'
-ht-degree: 83%
+source-wordcount: '2308'
+ht-degree: 82%
 
 ---
 
@@ -21,9 +21,9 @@ Use essa referência para obter informações sobre como configurar a extensão 
 
 Esta seção fornece uma referência para as opções disponíveis ao configurar a extensão do Adobe Analytics.
 
-Se a extensão do Adobe Analytics ainda não estiver instalada, abra a propriedade e selecione **[!UICONTROL Extensões > Catálogo]**, passe o mouse sobre a extensão do Adobe Analytics e selecione **[!UICONTROL Instalar]**.
+Se a extensão do Adobe Analytics ainda não tiver sido instalada, abra a propriedade e selecione **[!UICONTROL Extensions > Catalog]**, passe o mouse sobre a extensão do Adobe Analytics e selecione **[!UICONTROL Install]**.
 
-Para configurar a extensão, abra a guia Extensões, passe o mouse sobre a extensão e selecione **[!UICONTROL Configurar]**.
+Para configurar a extensão, abra a guia Extensões, passe o mouse sobre a extensão e selecione **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-analytics-config.png)
 
@@ -107,11 +107,11 @@ Especifique o objeto do rastreador a ser usado globalmente.
 
 Selecione uma opção na seção Geral da página de configuração. As opções de configuração disponíveis são as seguintes:
 
-### Ativar a conformidade UE para o Adobe Analytics
+### Habilitar a conformidade UE para o Adobe Analytics
 
 Habilita ou desabilita o rastreamento com base no cookie de privacidade UE.
 
-Quando você marca a caixa de seleção Conformidade com a UE, o campo [!UICONTROL Nome do cookie de rastreamento] é exibido. O cookie de rastreamento substitui o nome do cookie de rastreamento padrão. Você pode personalizar o nome que as tags usam a fim de rastrear o status de recusa para o recebimento de outros cookies.
+Ao habilitar a caixa de seleção Conformidade com a UE, o campo [!UICONTROL Tracking Cookie Name] é exibido. O cookie de rastreamento substitui o nome do cookie de rastreamento padrão. Você pode personalizar o nome que as tags usam a fim de rastrear o status de recusa para o recebimento de outros cookies.
 
 Quando uma página é carregada, o sistema verifica se um cookie chamado sat\_track está definido (ou o nome do cookie personalizado especificado na página Editar propriedade). Considere as seguintes informações:
 
@@ -171,7 +171,7 @@ Se o aplicativo da Web normalmente envia um beacon por página, esta seção pod
 
 Selecione uma opção na seção Rastreamento de link da página de configuração. As opções de configuração disponíveis são as seguintes:
 
-### Ativar o ClickMap
+### Habilitar o ClickMap
 
 O [ClickMap](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html?lang=pt-BR) é um plug-in para Internet Explorer e Firefox e um módulo do Reports &amp; Analytics.
 
@@ -183,7 +183,7 @@ Consulte [s.trackDownLoadLinks](https://experienceleague.adobe.com/docs/analytic
 
 ### Baixar de extensões
 
-Se a opção Rastrear os links de download estiver ativada, é possível selecionar as extensões dos links de arquivo incluídos no Relatório de downloads se o site contiver links para arquivos com qualquer uma das extensões listadas, os URLs desses links aparecerão nos relatórios.
+Se a opção Rastrear os links de download estiver habilitada, é possível selecionar as extensões dos links de arquivo incluídos no Relatório de downloads se o site contiver links para arquivos com qualquer uma das extensões listadas, os URLs desses links aparecerão nos relatórios.
 
 Consulte [s.linkDownloadFileTypes](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkdownloadfiletypes.html?lang=pt-BR).
 
@@ -263,7 +263,7 @@ Use o editor para personalizar o código de página.
 
 Use esta seção da configuração de extensão para especificar o Audience Manager funciona com o Analytics.
 
-Ative a opção **Automatically share Analytics data with Audience Manager**.
+Habilite a opção **Automatically share Analytics data with Audience Manager**.
 
 As seguintes opções aparecem:
 
@@ -311,7 +311,7 @@ Defina uma ou mais [eVars](https://experienceleague.adobe.com/docs/analytics/imp
 1. Especifique se deseja definir o eVar como o valor (Definir como) ou copia (Duplicar de) outro eVar.
 1. Forneça um valor Definir como ou selecione o eVar que deseja duplicar.
 1. (Opcional) Selecione Adicionar eVar para definir mais eVars.
-1. Selecione **[!UICONTROL Manter alterações]**.
+1. Selecione **[!UICONTROL Keep Changes]**.
 
 #### Props
 
@@ -320,8 +320,8 @@ Defina uma ou mais [props](https://experienceleague.adobe.com/docs/analytics/imp
 1. Selecione uma prop na lista suspensa.
 1. Especifique se deseja definir o prop como o valor (Definir como) ou copiar (Duplicar de) outro eVar.
 1. Forneça um valor Definir como ou selecione o eVar do qual deseja duplicar a prop.
-1. (Opcional) Selecione **[!UICONTROL Adicionar prop]** para definir mais props.
-1. Selecione **[!UICONTROL Manter alterações]**.
+1. (Opcional) Clique em **[!UICONTROL Add prop]** para definir mais props.
+1. Selecione **[!UICONTROL Keep Changes]**.
 
 #### Eventos
 
@@ -329,8 +329,8 @@ Defina um ou mais [eventos](https://experienceleague.adobe.com/docs/analytics/im
 
 1. Selecione um evento na lista suspensa.
 1. (Opcional) Selecione ou especifique um elemento de dados usado para a [serialização de eventos](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=pt-BR).
-1. (Opcional) Selecione **[!UICONTROL Adicionar evento]** para definir mais eventos.
-1. Selecione **[!UICONTROL Manter alterações]**.
+1. (Opcional) Clique em **[!UICONTROL Add event]** para definir mais eventos.
+1. Selecione **[!UICONTROL Keep Changes]**.
 
 >[!TAB Exibição JSON]
 
@@ -361,7 +361,7 @@ Se desejar, configure hierarquias adicionais.
 
 #### Nome da página
 
-Este valor se refere ao nome de uma determinada página e corresponde à [`pageName` variável](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=pt-BR) no Analytics.
+Este valor se refere ao nome de uma determinada página e corresponde à [`pageName` variável](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) no Analytics.
 
 >[!IMPORTANT]
 >
@@ -398,9 +398,9 @@ Use o editor para especificar o código de página personalizado.
 
 **Configurações**
 
-1. Selecione **[!UICONTROL Abrir editor]**.
+1. Selecione **[!UICONTROL Open Editor]**.
 1. Digite o código personalizado.
-1. Selecione **[!UICONTROL Salvar]**.
+1. Selecione **[!UICONTROL Save]**.
 
 ### Enviar sinal {#send-beacon}
 
@@ -426,7 +426,7 @@ Selecione se você não deseja incrementar uma visualização de página.
    * Link personalizado: especifique o nome do link.
    * Link de download: especifique um nome de arquivo.
    * Link de saída: especifique o URL de destino.
-1. Selecione **[!UICONTROL Manter alterações]**.
+1. Selecione **[!UICONTROL Keep Changes]**.
 
 ### Limpar variáveis {#clear-variables}
 

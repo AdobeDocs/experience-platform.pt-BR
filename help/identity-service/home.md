@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do serviço de identidade
 description: O Serviço de identidade da Adobe Experience Platform ajuda você a obter uma melhor visualização do cliente e do comportamento dele, unindo as identidades em dispositivos e sistemas, permitindo que você forneça experiências digitais pessoais e impactantes em tempo real.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 8dc4393232f5e256f375d2104d4fe0eaffc1d716
+source-git-commit: d252fc30d93fa4440c6ef47146830d0423e1839a
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1580'
 ht-degree: 2%
 
 ---
@@ -105,15 +105,15 @@ Um gráfico de identidade é um mapa de relacionamentos entre diferentes namespa
 
 O vídeo a seguir tem como objetivo fornecer suporte à sua compreensão de identidades e gráficos de identidade.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422776?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Noções básicas sobre a função do serviço de identidade na infraestrutura da Experience Platform
 
 O Serviço de identidade desempenha um papel vital na Experience Platform. Algumas dessas integrações principais incluem o seguinte:
 
 * [Esquemas](../xdm/home.md): em um determinado esquema, os campos de esquema marcados como identidade permitem a criação de gráficos de identidade.
-* [Conjuntos de dados](../catalog/datasets/overview.md): quando um conjunto de dados é habilitado para assimilação no Perfil do cliente em tempo real, os gráficos de identidade são gerados a partir do conjunto de dados, já que o conjunto de dados tem pelo menos dois campos marcados como identidade.
-* [Web SDK](../web-sdk/home.md): o Web SDK envia eventos de experiência para o Adobe Experience Platform e o Serviço de Identidade gera um gráfico quando existem duas ou mais identidades no evento.
+* [Conjuntos de dados](../catalog/datasets/overview.md): quando um conjunto de dados é habilitado para assimilação no Perfil do cliente em tempo real, os gráficos de identidade são gerados a partir do conjunto de dados, visto que o conjunto de dados tem pelo menos dois campos marcados como identidade.
+* [Coleção de dados](/help/collection/home.md): as bibliotecas de coleção de dados (como o Web SDK) enviam eventos de experiência para a Adobe Experience Platform. O Serviço de identidade gera um gráfico quando duas ou mais identidades existem no evento.
 * [Perfil de cliente em tempo real](../profile/home.md): antes que os atributos e eventos de um determinado perfil sejam mesclados, o Perfil de cliente em tempo real pode fazer referência ao gráfico de identidade. Para obter mais informações, leia o manual sobre [noções básicas sobre a relação entre o Serviço de Identidade e o Perfil de Cliente em Tempo Real](./identity-and-profile.md).
 * [Destinos](../destinations/home.md): os destinos podem enviar informações de perfil para outros sistemas com base em um namespace de identidade, como email com hash.
 * [Correspondência de segmentos](../segmentation/ui/segment-match/overview.md): a Correspondência de segmentos corresponde a dois perfis em duas sandboxes diferentes que têm o mesmo namespace de identidade e valor de identidade.

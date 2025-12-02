@@ -3,7 +3,7 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Experience Platform Edge Network para realizar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
 workflow-type: tm+mt
 source-wordcount: '1181'
 ht-degree: 9%
@@ -24,13 +24,13 @@ O encaminhamento de eventos no Adobe Experience Platform permite enviar dados de
 
 Este documento fornece uma visão geral de alto nível do encaminhamento de eventos no Experience Platform.
 
-![Encaminhamento de eventos no ecossistema da coleção de dados.](../../../collection/images/home/event-forwarding.png)
+![Encaminhamento de eventos no ecossistema da coleção de dados.](/help/collection/assets/event-forwarding.png)
 
 >[!NOTE]
 >
->Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados da Experience Platform, consulte a [visão geral da coleta de dados](../../../collection/home.md).
+>Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados da Experience Platform, consulte a [visão geral da coleta de dados](/help/collection/home.md).
 
-O encaminhamento de eventos, combinado com a [Web SDK](/help/web-sdk/home.md) e a [SDK Móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=pt-BR) da Adobe Experience Platform, oferece os seguintes benefícios:
+O encaminhamento de eventos, combinado com a [Web SDK](/help/collection/js/js-overview.md) e a [SDK Móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) da Adobe Experience Platform, oferece os seguintes benefícios:
 
 **Desempenho**:
 
@@ -89,7 +89,7 @@ Você pode ver recursos adicionais disponíveis para saber mais sobre este recur
 
 ### Regras {#rules}
 
-A criação de regras nas propriedades do encaminhamento de eventos funciona de maneira semelhante às tags, com a principal diferença sendo que não é possível selecionar eventos como componentes de regra. Em vez disso, uma regra de encaminhamento de eventos processa todos os eventos que recebe da [sequência de dados](../../../datastreams/overview.md) e encaminha esses eventos para destinos se determinadas condições forem atendidas.
+A criação de regras nas propriedades do encaminhamento de eventos funciona de maneira semelhante às tags, com a principal diferença sendo que não é possível selecionar eventos como componentes de regra. Em vez disso, uma regra de encaminhamento de eventos processa todos os eventos que recebe da [sequência de dados](/help/datastreams/overview.md) e encaminha esses eventos para destinos se determinadas condições forem atendidas.
 
 Além disso, há um tempo limite de 30 segundos que se aplica a um único evento, pois ele é processado em todas as regras (e, portanto, todas as ações) em uma propriedade de encaminhamento de eventos. Isso significa que todas as regras e ações para um único evento devem ser concluídas nesse período.
 

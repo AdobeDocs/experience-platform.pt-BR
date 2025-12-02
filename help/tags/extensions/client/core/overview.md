@@ -2,9 +2,9 @@
 title: Visão geral da extensão principal
 description: Saiba mais sobre a extensão de tag principal na Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c76b64e76229db8f9da544a79aed903a134f7351
 workflow-type: tm+mt
-source-wordcount: '5447'
+source-wordcount: '5425'
 ht-degree: 82%
 
 ---
@@ -27,25 +27,25 @@ Este tópico descreve os tipos de evento disponíveis na extensão principal. Pa
 
 #### Tab Blur
 
-O evento de desfoque de guia dispara a ação quando uma guia perde o foco. Não há configurações para esse tipo de evento.
+O evento de desfoque de guia aciona a ação quando uma guia perde o foco. Não há configurações para esse tipo de evento.
 
 #### Tab Focus
 
-O evento de foco na guia dispara a ação quando uma guia obtém o foco. Não há configurações para esse tipo de evento.
+O evento de foco na guia aciona a ação quando uma guia obtém o foco. Não há configurações para esse tipo de evento.
 
 ### Formulário
 
 #### Blur
 
-O evento de desfoque dispara a ação quando um formulário perde o foco. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
+O evento de desfoque aciona a ação quando um formulário perde o foco. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 #### Focus
 
-O evento de foco dispara a ação quando um formulário obtém o foco. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
+O evento de foco aciona a ação quando um formulário obtém o foco. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 #### Submit
 
-O evento de envio dispara a ação quando um formulário é enviado. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
+O evento de envio aciona a ação quando um formulário é enviado. Consulte a seção [Opções](#options) para obter mais informações sobre configurações de eventos personalizáveis.
 
 ### Eventos controlados por teclado
 
@@ -106,7 +106,7 @@ Se o elemento for uma tag de âncora (`<a>`) para um conteúdo vinculado, você 
 >
 >Essa opção deve ser usada com extrema cautela devido às possíveis consequências negativas que ela acarreta à experiência do usuário se usada incorretamente.
 
-Quando você usa o atraso de link, o Experience Platform na verdade impede que o navegador saia da página. Em seguida, ele executa um redirecionamento do JavaScript para o destino original após o tempo limite especificado. Isso é especialmente perigoso quando sua marcação de página tem tags `<a>` em que a funcionalidade desejada não leva o usuário para fora da página. Se não for possível resolver seu problema de outra forma, você deverá ser extremamente preciso na definição do seletor, para que esse evento seja disparado exatamente onde é necessário e em nenhum outro lugar.
+Quando você usa o atraso de link, o Experience Platform na verdade impede que o navegador saia da página. Em seguida, ele executa um redirecionamento do JavaScript para o destino original após o tempo limite especificado. Isso é especialmente perigoso quando sua marcação de página tem tags `<a>` em que a funcionalidade desejada não leva o usuário para fora da página. Se não for possível resolver seu problema de outra forma, você deverá ser extremamente preciso na definição do seletor, para que esse evento seja acionado exatamente onde é necessário e em nenhum outro lugar.
 
 O valor padrão de atraso do link é de 100 milissegundos. Observe que as tags sempre aguardarão o tempo especificado, e isso não está conectado de forma alguma à execução das ações da regra. É possível que o atraso obrigue o usuário a aguardar mais tempo do que o necessário e também que o atraso não seja suficientemente longo para que todas as ações da regra sejam concluídas com êxito. Atrasos maiores fornecem mais tempo para a execução da regra, mas também prejudicam a experiência do usuário.
 
@@ -178,8 +178,8 @@ Cada tipo de evento de formulário usa as seguintes configurações:
 
 #### Specific Elements \| Any Element
 
-* Se você escolher **[!UICONTROL Elementos específicos]**, as opções para selecionar os elementos e valores de propriedade serão exibidas.
-* Se você escolher **[!UICONTROL Qualquer elemento]**, não serão necessárias outras opções para refinar os elementos.
+* Se você escolher **[!UICONTROL Specific Elements]**, as opções para selecionar os elementos e os valores da propriedade serão exibidas.
+* Se você escolher **[!UICONTROL Any Element]**, não há mais opções necessárias para restringir os elementos.
 
 #### Elements matching the CSS selector
 
@@ -195,7 +195,7 @@ Se você selecionar essa opção, serão disponibilizados os seguintes parâmetr
 
 * Regex
 
-  Ative se a `property=value` for uma expressão regular.
+  Habilite se a `property=value` for uma expressão regular.
 
 * Add
 
@@ -219,7 +219,7 @@ Especifique o nome e o valor do cookie que deve existir para um evento acionar u
 
 1. Especifique um nome de cookie.
 1. Digite o valor que deve existir no cookie se o evento for para acionar uma ação.
-1. (Opcional) Ative o Regex se esta for uma expressão regular.
+1. (Opcional) Habilite o Regex se esta for uma expressão regular.
 
 #### Custom Code
 
@@ -231,9 +231,9 @@ Especifique qualquer código personalizado que deve existir como uma condição 
 
 Use o editor de código incorporado para inserir o código personalizado:
 
-1. Selecione **[!UICONTROL Abrir editor]**.
+1. Selecione **[!UICONTROL Open Editor]**.
 1. Digite o código personalizado.
-1. Selecione **[!UICONTROL Salvar]**.
+1. Selecione **[!UICONTROL Save]**.
 
 Uma variável nomeada `event` estará disponível automaticamente, a qual poderá fazer referência no seu código personalizado. O `event` objeto conterá informações úteis sobre o evento que acionou a regra. A maneira mais fácil de determinar quais dados de evento estão disponíveis é fazer logon `event` no console usando o código personalizado:
 
@@ -277,7 +277,7 @@ Se você tiver uma regra com várias condições, é possível que essa condiç�
 
 Os seguintes operadores de comparação de valores estão disponíveis:
 
-**Equal:** a condição retornará true se os dois valores forem iguais usando uma comparação não estrita (em JavaScript, é o sinal ==). Os valores podem ser de qualquer tipo. Ao digitar uma palavra como _true_, _false_, _null_ ou _undefined_ em um campo de valor, a palavra é comparada como uma string de caracteres e não é convertida em seu equivalente JavaScript.
+**Equal:** a condição retornará true se os dois valores forem iguais usando uma comparação não estrita (em JavaScript, é o operador ==). Os valores podem ser de qualquer tipo. Ao digitar uma palavra como _true_, _false_, _null_ ou _undefined_ em um campo de valor, a palavra é comparada como uma string de caracteres e não é convertida em seu equivalente JavaScript.
 
 **Does Not Equal:** a condição retornará true se os dois valores não forem iguais usando uma comparação não estrita (em JavaScript, o sinal !== operador). Os valores podem ser de qualquer tipo. Ao digitar uma palavra como _true_, _false_, _null_ ou _undefined_ em um campo de valor, a palavra é comparada como uma string de caracteres e não é convertida em seu equivalente JavaScript.
 
@@ -319,16 +319,16 @@ Especifique o nome e o valor da variável do JavaScript que deve existir para um
 
 1. Especifique o nome da variável JavaScript.
 1. Especifique o valor da variável que deve existir como uma condição para o evento.
-1. (Opcional) Ative o Regex se esta for uma expressão regular.
+1. (Opcional) Habilite o Regex se esta for uma expressão regular.
 
-### Envolvimento
+### Engajamento
 
 #### Página de destino
 
 Especifique a página que o usuário deve ser direcionado para acionar o evento.
 
 1. Especifique a página de destino.
-1. (Opcional) Ative o Regex se esta for uma expressão regular.
+1. (Opcional) Habilite o Regex se esta for uma expressão regular.
 
 #### New/Returning Visitor
 
@@ -372,7 +372,7 @@ Acione a ação se o número de sessões do usuário atender aos critérios espe
 Especifique a fonte do tráfego do visitante que deve ser &quot;true&quot; para que a ação seja acionada.
 
 1. Especifique a fonte de tráfego.
-1. (Opcional) Ative o Regex se esta for uma expressão regular.
+1. (Opcional) Habilite o Regex se esta for uma expressão regular.
 
 ### Tecnologia
 
@@ -457,7 +457,7 @@ Especifique um ou mais padrões de hash que devem existir no URL.
 >Vários padrões de hash são unidos por um OR.
 
 1. Especifique o padrão de hash.
-1. (Opcional) Ative o Regex se esta for uma expressão regular.
+1. (Opcional) Habilite o Regex se esta for uma expressão regular.
 1. Adicione outros padrões de hash.
 
 #### Caminho E Sequência De Consulta
@@ -469,7 +469,7 @@ Especifique um ou mais caminhos que devem existir no URL. Inclui o caminho e a s
 >Vários caminhos são unidos por um OR.
 
 1. Especifique o caminho.
-1. (Opcional) Ative o Regex se esta for uma expressão regular.
+1. (Opcional) Habilite o Regex se esta for uma expressão regular.
 1. Adicione outros caminhos.
 
 #### Path Without Query String
@@ -481,7 +481,7 @@ Especifique um ou mais caminhos que devem existir no URL. Inclui o caminho, mas 
 >Vários caminhos são unidos por um OR.
 
 1. Especifique o caminho.
-1. (Opcional) Ative o Regex se esta for uma expressão regular.
+1. (Opcional) Habilite o Regex se esta for uma expressão regular.
 1. Adicione outros caminhos.
 
 #### Protocolo
@@ -499,7 +499,7 @@ Especifique o parâmetro de URL usado no URL.
 
 1. Especifique um nome de parâmetro de URL.
 1. Especifique o valor usado para o parâmetro de URL.
-1. (Opcional) Ative o Regex se esta for uma expressão regular.
+1. (Opcional) Habilite o Regex se esta for uma expressão regular.
 
 #### Subdomain
 
@@ -510,7 +510,7 @@ Especifique um ou mais subdomínios que devem existir no URL.
 >Vários subdomínios são unidos por um OR.
 
 1. Especifique o subdomínio.
-1. (Opcional) Ative o Regex se esta for uma expressão regular.
+1. (Opcional) Habilite o Regex se esta for uma expressão regular.
 1. Adicione quaisquer outros subdomínios.
 
 ### Outras
@@ -519,7 +519,7 @@ Especifique um ou mais subdomínios que devem existir no URL.
 
 Especifique um intervalo de datas. Escolha a data e a hora em que o evento ocorre depois, a data em que ocorre antes e o fuso horário.
 
-#### Max Frequency
+#### Frequência máx.
 
 Especifique o número máximo de vezes que a condição retorna true. Você pode selecionar entre as opções a seguir:
 
@@ -534,7 +534,7 @@ Especifique o número máximo de vezes que a condição retorna true. Você pode
 
 Para a condição de frequência máxima 1 por sessão, esses dois itens `localStorage` são comparados. Se o `visitorTracking.sessionCount` for maior que a contagem de `maxFrequency.session`, a condição de amostragem será verdadeira. Se forem iguais, a condição será falsa.
 
-`sessionCount` é um item `visitorTracking`, portanto, a API do visitante deve estar ativada para que a condição de amostragem funcione.
+`sessionCount` é um item `visitorTracking`, portanto, a API do visitante deve estar habilitada para que a condição de amostragem funcione.
 
 #### Sampling
 
@@ -557,8 +557,8 @@ Forneça o código que é executado depois que o evento é acionado e as condiç
    * JavaScript
    * HTML
 1. Selecione se o código de ação deve ser executado globalmente.
-1. Selecione **[!UICONTROL Abrir editor]**.
-1. Edite o código e selecione **[!UICONTROL Salvar]**.
+1. Selecione **[!UICONTROL Open Editor]**.
+1. Edite o código e selecione **[!UICONTROL Save]**.
 
 Quando o JavaScript é selecionada como a linguagem, uma variável nomeada `event` estará disponível automaticamente, a qual poderá fazer referência no seu código personalizado. O `event` objeto conterá informações úteis sobre o evento que acionou a regra. A maneira mais fácil de determinar quais dados de evento estão disponíveis é fazer logon `event` no console usando o código personalizado:
 
@@ -636,7 +636,7 @@ Esta ação aciona todas as regras que usam um [evento de chamada direta](#direc
 
 ![Captura de tela de uma ação de Acionar Chamada Direta na Interface da Coleção de Dados](../../../images/extensions/client/core/direct-call-action.png)
 
-A ação mapeia diretamente para o método [`track` &#x200B;](../../../ui/client-side/satellite-object.md#track) no objeto `satellite`, que pode ser acessado pelo código do lado do cliente.
+Esta ação mapeia diretamente para [`_satellite.track()`](/help/collection/tags/track.md).
 
 ## Tipos de elementos de dados da extensão principal
 

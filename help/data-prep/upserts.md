@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;preparação de
 title: Enviar Atualizações Parciais De Linha Ao Perfil Do Cliente Em Tempo Real Usando O Preparo De Dados
 description: Saiba como enviar atualizações de linhas parciais para o Perfil do cliente em tempo real usando o Preparo de dados.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1363'
 ht-degree: 0%
 
 ---
@@ -271,7 +271,7 @@ A seguir, uma lista de limitações conhecidas a serem consideradas ao transmiti
 
 * O método de streaming upserts deve ser usado somente ao enviar atualizações de linhas parciais para [!DNL Real-Time Customer Profile]. As atualizações de linha parciais são **não** consumidas pelo data lake.
 * O método de upserts de transmissão não oferece suporte à atualização, substituição e remoção de identidades. Novas identidades serão criadas se não existirem. Portanto, a operação `identity` sempre deve ser definida como criar. Se uma identidade já existir, a operação será no-op.
-* Atualmente, o método de upserts por transmissão não oferece suporte ao [Adobe Experience Platform Web SDK](/help/web-sdk/home.md) e ao [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
+* Atualmente, o método de upserts de streaming não oferece suporte ao [Adobe Experience Platform Web SDK](/help/collection/js/js-overview.md) ou ao [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Próximas etapas
 

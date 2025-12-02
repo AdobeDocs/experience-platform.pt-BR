@@ -21,7 +21,7 @@ O Adobe Experience Platform permite gerar experiências coordenadas, consistente
 
 O vídeo a seguir foi projetado para ajudar a entender a assimilação de streaming e descreve os conceitos acima.
 
->[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/31683?captions=por_br&quality=12&learn=on)
 
 ### Registros de perfil de fluxo e [!DNL ExperienceEvents]
 

@@ -45,7 +45,7 @@ As sequências de dados usam os recursos integrados de governança de dados do E
 
 O vídeo a seguir fornece uma breve visão geral de como as restrições de uso de dados são configuradas e aplicadas às sequências de dados na interface:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3415829/?captions=por_br&quality=12&learn=on&speedcontrol=on)
 
 Na Experience Platform, é possível aplicar [rótulos de uso de dados confidenciais](../data-governance/labels/reference.md#sensitive) a esquemas e campos que contêm dados que sua organização considera confidenciais. Por exemplo, o rótulo `RHD` é utilizado para identificar dados protegidos de saúde (PHI), e o rótulo `S1` representa dados de geolocalização.
 

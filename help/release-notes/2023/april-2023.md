@@ -81,7 +81,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 | Destino | Descrição |
 | ----------- | ----------- |
-| Conexão do [[!DNL Salesforce Marketing Cloud Account Engagement] ](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Use o destino Salesforce Marketing Cloud Account Engagement (anteriormente conhecido como Pardot) para capturar, rastrear, pontuar e classificar leads. Use esse destino para casos de uso de B2B que envolvam vários departamentos e tomadores de decisão que exigem ciclos de vendas e decisões mais longos. |
+| Conexão do [[!DNL Salesforce Marketing Cloud Account Engagement] &#x200B;](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) | Use o destino Salesforce Marketing Cloud Account Engagement (anteriormente conhecido como Pardot) para capturar, rastrear, pontuar e classificar leads. Use esse destino para casos de uso de B2B que envolvam vários departamentos e tomadores de decisão que exigem ciclos de vendas e decisões mais longos. |
 
 {style="table-layout:auto"}
 

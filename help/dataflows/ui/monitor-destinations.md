@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: a4db84f5918e99b3c6dd63ff5a25063b89be2ba7
+source-git-commit: d537284b804214fa8a37febab5f78335a590e9f5
 workflow-type: tm+mt
-source-wordcount: '3484'
+source-wordcount: '3541'
 ht-degree: 10%
 
 ---
@@ -81,6 +81,10 @@ Uma lista de execuções individuais e suas métricas específicas é exibida, j
 - **[!UICONTROL Identities activated]**: o número total de identidades de perfil ativadas com êxito para o destino selecionado. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados.
 - **[!UICONTROL Identities excluded]**: O número total de identidades de perfil que são ignoradas para ativação com base em atributos ausentes e violação de consentimento.
 - **[!UICONTROL Identities failed]**: O número total de identidades de perfil que não estão ativadas para o destino devido a erros.
+
+>[!NOTE]
+>
+>Os totais das identidades ativadas, excluídas e com falha representam uma soma de todas as contagens de execução de fluxo de dados individuais. Como as execuções de fluxo de dados têm um TTL (time-to-live) de 90 dias, esses totais normalmente cobrem aproximadamente os últimos 3 meses. À medida que as execuções de fluxo de dados mais antigas expiram e são removidas do sistema, você pode observar uma redução nas contagens totais exibidas.
 
 ![O fluxo de dados executa detalhes para destinos de streaming.](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
@@ -305,7 +309,7 @@ Por exemplo, você está ativando um público-alvo chamado &quot;Membros de fide
 >
 >- A exibição no nível do público-alvo está disponível atualmente para os destinos listados abaixo. A implantação está planejada para outros destinos de streaming.
 >
->   - Conexão com o [[!DNL (API) Oracle Eloqua] &#x200B;](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - Conexão com o [[!DNL (API) Oracle Eloqua] ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
 >   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
 >   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
 >   - [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md)

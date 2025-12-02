@@ -14,7 +14,7 @@ ht-degree: 72%
 
 >[!AVAILABILITY]
 >
->Essa funcionalidade está disponível para clientes que licenciaram o Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
+>Essa funcionalidade está disponível para clientes que licenciaram o Real-Time CDP (Serviço de aplicativo), Adobe Experience Platform Ativation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Leia mais sobre esses pacotes nas [descrições do produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) e entre em contato com a pessoa representante da Adobe para obter mais informações.
 
 Saiba como usar o reconhecimento com auxílio de parceiros para fornecer experiências personalizadas a visitantes de sua propriedade na Web. Use este tutorial para entender o processo de implementação de vários elementos na Experience Platform e outras soluções da Experience Cloud, a fim de criar uma experiência personalizada para visitantes autenticados e não autenticados.
 

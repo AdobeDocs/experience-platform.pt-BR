@@ -30,7 +30,7 @@ Este documento fornece uma visão geral de alto nível do encaminhamento de even
 >
 >Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados da Experience Platform, consulte a [visão geral da coleta de dados](/help/collection/home.md).
 
-O encaminhamento de eventos, combinado com a [Web SDK](/help/collection/js/js-overview.md) e a [SDK Móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) da Adobe Experience Platform, oferece os seguintes benefícios:
+O encaminhamento de eventos, combinado com a [Web SDK](/help/collection/js/js-overview.md) e a [SDK Móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=pt-BR) da Adobe Experience Platform, oferece os seguintes benefícios:
 
 **Desempenho**:
 

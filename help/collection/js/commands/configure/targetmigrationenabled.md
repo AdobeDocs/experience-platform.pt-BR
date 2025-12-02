@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # `targetMigrationEnabled`
 
-A propriedade `targetMigrationEnabled` é um booleano que permite que o Web SDK leia e grave os [`mbox` e `mboxEdgeCluster` cookies](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) que as bibliotecas Adobe Target 1.x e 2.x usam. Essa opção permite preservar o perfil do visitante entre páginas que usam implementações anteriores do Adobe Target e páginas que usam o Web SDK.
+A propriedade `targetMigrationEnabled` é um booleano que permite que o Web SDK leia e grave os [`mbox` e `mboxEdgeCluster` cookies](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/data-collection/cookies/web-sdk) que as bibliotecas Adobe Target 1.x e 2.x usam. Essa opção permite preservar o perfil do visitante entre páginas que usam implementações anteriores do Adobe Target e páginas que usam o Web SDK.
 
 Defina o booleano `targetMigrationEnabled` ao executar o comando `configure`. Se você omitir essa propriedade ao configurar o Web SDK, o padrão será `false`. Defina esse valor como `true` se você tiver algumas páginas que ainda usam as bibliotecas do Adobe Target 1.x ou 2.x.
 

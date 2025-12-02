@@ -25,8 +25,8 @@ Para obter detalhes sobre como configurar contas técnicas e atribuir as permiss
 
 Para obter orientação adicional sobre como criar e configurar uma conta técnica, consulte:
 
-- [Configuração do Developer Console](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): instruções passo a passo para configurar o Adobe Developer Console e obter credenciais do OAuth.
-- [Configuração completa de conta técnica](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): uma apresentação detalhada para criar e configurar uma conta técnica no Adobe Experience Platform.
+- [Configuração do Developer Console](https://experienceleague.adobe.com/pt-br/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): instruções passo a passo para configurar o Adobe Developer Console e obter credenciais do OAuth.
+- [Configuração completa de conta técnica](https://experienceleague.adobe.com/pt-br/docs/platform-learn/tutorial-comprehensive-technical/setup): uma apresentação detalhada para criar e configurar uma conta técnica no Adobe Experience Platform.
 
 Se você usar apenas a interface do Serviço de consulta, verifique se tem as permissões necessárias ou coordene com um administrador que gerencia contas técnicas. Quaisquer consultas agendadas são adicionadas à lista na guia [!UICONTROL Scheduled queries], onde você pode monitorar o status, os detalhes do agendamento e as mensagens de erro de todos os trabalhos de consultas agendadas, bem como assinar alertas. Para obter mais informações sobre o monitoramento e o gerenciamento de consultas, consulte o [documento de consultas agendadas do monitor](./monitor-queries.md).
 

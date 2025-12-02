@@ -17,7 +17,7 @@ Conforme sua organização evolui para usar a Adobe Real-Time CDP, analise estas
 
 ## &#x200B;1. Considere a arquitetura de dados do Audience Manager
 
-Ao planejar a evolução do Audience Manager para a Real-Time CDP, é importante analisar seus [segmentos do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html) e determinar quais são os [sinais](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html), [traços](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html) e [regras](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html#segment-builder-section) que compõem esses segmentos.
+Ao planejar a evolução do Audience Manager para a Real-Time CDP, é importante analisar seus [segmentos do Audience Manager](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segments-purpose.html?lang=pt-BR) e determinar quais são os [sinais](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-explorer/data-explorer-understanding-signals.html?lang=pt-BR), [traços](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-details-page.html?lang=pt-BR) e [regras](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/segments/segment-builder.html?lang=pt-BR#segment-builder-section) que compõem esses segmentos.
 
 Além disso, pense nas fontes de dados que você usa atualmente no Audience Manager.
 

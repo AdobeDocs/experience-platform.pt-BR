@@ -53,7 +53,7 @@ O parâmetro da cadeia de caracteres de consulta inclui:
 
 O compartilhamento da ID móvel para Web usa o parâmetro `adobe_mc`. Quando o parâmetro `adobe_mc` está presente e é válido, o `ECID` da cadeia de caracteres de consulta é automaticamente adicionado ao mapa de identidade na primeira solicitação feita à Edge Network. Todas as interações subsequentes do Edge Network usarão esse `ECID`.
 
-Para obter mais informações sobre como transmitir IDs de visitante de um aplicativo móvel para um WebView, consulte a documentação sobre [manipulação de WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html#implementation).
+Para obter mais informações sobre como transmitir IDs de visitante de um aplicativo móvel para um WebView, consulte a documentação sobre [manipulação de WebViews](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/app-implementation/web-views.html?lang=pt-BR#implementation).
 
 ## Implementar compartilhamento de ID entre domínios {#cross-domain-sharing}
 

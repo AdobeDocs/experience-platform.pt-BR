@@ -51,7 +51,7 @@ No Adobe Target, cada escopo de decisão é mapeado para uma mbox ou atividade. 
 
 ## `personalization.surfaces`
 
-A propriedade `surfaces` é uma matriz de cadeias de caracteres de [URI de superfície](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/code-based-experience/configure-code-based-channel/code-based-surface#surface-uri) que definem manualmente o canal, dispositivo ou contexto para o qual a personalização é solicitada. Eles permitem distinguir entre diferentes experiências digitais, como domínios, aplicativos ou plataformas de dispositivos em seu ecossistema entre canais. Por padrão, a biblioteca infere a superfície padrão da página atual. Você pode usar essa propriedade para substituir a superfície inferida automaticamente para a página atual.
+A propriedade `surfaces` é uma matriz de cadeias de caracteres de [URI de superfície](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/channels/code-based-experience/configure-code-based-channel/code-based-surface#surface-uri) que definem manualmente o canal, dispositivo ou contexto para o qual a personalização é solicitada. Eles permitem distinguir entre diferentes experiências digitais, como domínios, aplicativos ou plataformas de dispositivos em seu ecossistema entre canais. Por padrão, a biblioteca infere a superfície padrão da página atual. Você pode usar essa propriedade para substituir a superfície inferida automaticamente para a página atual.
 
 Essa propriedade é importante quando você deseja usar a personalização entre canais e deve distinguir como a personalização funciona entre canais separados. Ele permite criar ofertas distintas para sites diferentes na mesma organização da Adobe Experience Platform.
 

@@ -119,11 +119,11 @@ Se você não ativar dicas de cliente de alta entropia em seu ambiente, os relat
 
 ### Relatórios do Adobe Analytics que dependem de dicas de cliente de alta entropia {#analytics}
 
-A dimensão [Sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) inclui a versão do sistema operacional que é armazenada como uma dica de cliente de alta entropia. Se as dicas de clientes de alta entropia não estiverem ativadas, a versão do sistema operacional pode ser imprecisa para ocorrências coletadas dos navegadores Chromium.
+A dimensão [Sistema operacional](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=pt-BR) inclui a versão do sistema operacional que é armazenada como uma dica de cliente de alta entropia. Se as dicas de clientes de alta entropia não estiverem ativadas, a versão do sistema operacional pode ser imprecisa para ocorrências coletadas dos navegadores Chromium.
 
 ### Características do Audience Manager que dependem de dicas de cliente de alta entropia {#aam}
 
-[!DNL Google] atualizou a funcionalidade do navegador [!DNL Chrome] para minimizar as informações coletadas pelo cabeçalho `User-Agent`. Como resultado, os clientes do Audience Manager que usam o [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=pt-BR) não receberão mais informações confiáveis de características com base nas [chaves de nível de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
+[!DNL Google] atualizou a funcionalidade do navegador [!DNL Chrome] para minimizar as informações coletadas pelo cabeçalho `User-Agent`. Como resultado, os clientes do Audience Manager que usam o [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=pt-BR) não receberão mais informações confiáveis de características com base nas [chaves de nível de plataforma](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=pt-BR).
 
 Os clientes do Audience Manager que usam chaves de nível de plataforma para direcionamento devem alternar para [Coleção de Dados do Adobe Experience Platform](/help/collection/home.md) em vez de [DIL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=pt-BR) e habilitar as [Dicas de Cliente de Alta Entropia](#enabling-high-entropy-client-hints) para continuar recebendo dados de características confiáveis.
 

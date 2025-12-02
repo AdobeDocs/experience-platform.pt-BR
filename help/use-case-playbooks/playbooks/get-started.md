@@ -89,13 +89,13 @@ Depois que você [criar uma nova função](/help/access-control/abac/ui/permissi
 
 ## Configurar sandbox e superfícies de canal no Journey Optimizer {#configure-channel-surfaces}
 
-Se sua organização tiver uma licença do [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/ajo-home) e você quiser usar os manuais criados para o Journey Optimizer, configure as superfícies de canal em sua sandbox. As superfícies do canal definem todos os parâmetros técnicos necessários para suas mensagens, como tipo de email, email e nome do remetente, aplicativos móveis, configuração de SMS e muito mais. [Saiba como configurar superfícies de canal no Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/channel-surfaces).
+Se sua organização tiver uma licença do [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/ajo-home) e você quiser usar os manuais criados para o Journey Optimizer, configure as superfícies de canal em sua sandbox. As superfícies do canal definem todos os parâmetros técnicos necessários para suas mensagens, como tipo de email, email e nome do remetente, aplicativos móveis, configuração de SMS e muito mais. [Saiba como configurar superfícies de canal no Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/configuration/channel-surfaces).
 
 Para criar instâncias de manuais no Journey Optimizer, é necessário configurar superfícies de canal para notificações por email, push e SMS.
 
 ### Superfície de canal de email
 
-Vá para `Channels` na interface do Journey Optimizer. Configure subdomínios e pools de IP separados para emails de marketing e mensagens transacionais, se ainda não estiver configurado. Essas são as práticas recomendadas para garantir que mensagens transacionais, como emails de confirmação de pedidos, sejam enviadas aos clientes. Insira nomes, endereços de email e configurações adicionais. Selecione **Enviar** no canto superior direito da página para criar a superfície de canal de marketing. Leia a documentação sobre [como configurar superfícies de canal de email](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html).
+Vá para `Channels` na interface do Journey Optimizer. Configure subdomínios e pools de IP separados para emails de marketing e mensagens transacionais, se ainda não estiver configurado. Essas são as práticas recomendadas para garantir que mensagens transacionais, como emails de confirmação de pedidos, sejam enviadas aos clientes. Insira nomes, endereços de email e configurações adicionais. Selecione **Enviar** no canto superior direito da página para criar a superfície de canal de marketing. Leia a documentação sobre [como configurar superfícies de canal de email](https://experienceleague.adobe.com/docs/journey-optimizer/using/email/configure-email/email-settings.html?lang=pt-BR).
 
 ### Superfície de canal de SMS
 
@@ -111,7 +111,7 @@ Confirme se as configurações de canal são definidas na interface do Experienc
 
 Em seguida, selecione o canal, as plataformas e os aplicativos que você visualizou nas configurações de canal. Selecione **Enviar** para criar a superfície de canal de push.
 
-Leia a documentação sobre [como configurar superfícies de canal de push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html).
+Leia a documentação sobre [como configurar superfícies de canal de push](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=pt-BR).
 
 ## Próximas etapas {#next-steps}
 

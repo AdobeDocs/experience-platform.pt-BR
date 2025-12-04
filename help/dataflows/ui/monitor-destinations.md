@@ -310,7 +310,7 @@ Por exemplo, você está ativando um público-alvo chamado &quot;Membros de fide
 >
 >- A exibição no nível do público-alvo está disponível atualmente para os destinos listados abaixo. A implantação está planejada para outros destinos de streaming.
 >
->   - Conexão com o [[!DNL (API) Oracle Eloqua] ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - Conexão com o [[!DNL (API) Oracle Eloqua] &#x200B;](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
 >   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
 >   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
 >   - [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md)

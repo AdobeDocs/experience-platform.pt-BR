@@ -59,7 +59,7 @@ Antes de usar a Conexão rápida, verifique se o aplicativo tem as versões e a 
 
 **Implementação:**
 
-Seu aplicativo deve implementar a API [`startSession` ](https://developer.adobe.com/client-sdks/home/base/assurance/api-reference/#startsession-quick-connect) para acionar a conexão do Assurance. Normalmente, essa chamada de API é incluída em um conjunto de ações ou acionada no aplicativo.
+Seu aplicativo deve implementar a API [`startSession` &#x200B;](https://developer.adobe.com/client-sdks/home/base/assurance/api-reference/#startsession-quick-connect) para acionar a conexão do Assurance. Normalmente, essa chamada de API é incluída em um conjunto de ações ou acionada no aplicativo.
 
 #### Criando uma sessão de conexão rápida
 

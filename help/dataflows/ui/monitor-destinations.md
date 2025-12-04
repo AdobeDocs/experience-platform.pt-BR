@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: d537284b804214fa8a37febab5f78335a590e9f5
+source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
 workflow-type: tm+mt
-source-wordcount: '3541'
+source-wordcount: '3550'
 ht-degree: 10%
 
 ---
@@ -91,7 +91,8 @@ Uma lista de execuções individuais e suas métricas específicas é exibida, j
 Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 
 - **[!UICONTROL Dataflow run start]**: A hora em que a execução do fluxo de dados começou. Para execuções de fluxo de dados de transmissão, o Experience Platform captura as métricas com base no início da execução do fluxo de dados, na forma de métricas por hora. Isso significa que, para execuções de fluxo de dados de transmissão, se uma execução de fluxo de dados tiver começado, por exemplo, em 10:30PM, a métrica mostrará a hora de início como 10:00 PM na interface do usuário.
-- **[!UICONTROL Processing time]**: o tempo necessário para a execução do fluxo de dados ser processada.
+- **[!UICONTROL Audience]**: O número de públicos associados a cada execução de fluxo de dados.
+- **[!UICONTROL Processing duration]**: o tempo necessário para a execução do fluxo de dados ser processada.
    - Para **[!UICONTROL completed]** execuções, a métrica de tempo de processamento sempre mostra uma hora.
    - Para execuções de fluxo de dados que ainda estão em um estado **[!UICONTROL processing]**, a janela para capturar todas as métricas permanece aberta por mais de uma hora, para processar todas as métricas que correspondem à execução do fluxo de dados. Por exemplo, uma execução de fluxo de dados iniciada às 9h00 pode permanecer em um estado de processamento por uma hora e trinta minutos para capturar e processar todas as métricas. :30 A duração do tempo de processamento é diretamente afetada pelas tentativas feitas como resultado da falha de resposta do destino. Em seguida, quando a janela de processamento fechar e o status da execução do fluxo de dados atualizar para **concluído**, o tempo de processamento exibido será alterado para uma hora.
 - **[!UICONTROL Profiles received]**: O número total de perfis recebidos no fluxo de dados.
@@ -169,7 +170,7 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 
 - **[!UICONTROL Dataflow run start]**: A hora em que a execução do fluxo de dados começou.
 - **[!UICONTROL Audience]**: O nome do público associado a cada execução de fluxo de dados.
-- **[!UICONTROL Processing time]**: O tempo necessário para a execução do fluxo de dados ser processada.
+- **[!UICONTROL Processing duration]**: O tempo necessário para a execução do fluxo de dados ser processada.
 - **[!UICONTROL Profiles received]**: O número total de perfis recebidos no fluxo de dados. Esse valor é atualizado a cada 60 minutos.
 - **[!UICONTROL Identities activated]**: O número total de identidades de perfil ativadas com êxito para o destino selecionado como parte da execução do fluxo de dados. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados.
 - **[!UICONTROL Identities excluded]**: O número total de identidades de perfil que são excluídas da ativação com base em atributos ausentes e violação de consentimento.
@@ -309,7 +310,7 @@ Por exemplo, você está ativando um público-alvo chamado &quot;Membros de fide
 >
 >- A exibição no nível do público-alvo está disponível atualmente para os destinos listados abaixo. A implantação está planejada para outros destinos de streaming.
 >
->   - Conexão com o [[!DNL (API) Oracle Eloqua] &#x200B;](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - Conexão com o [[!DNL (API) Oracle Eloqua] ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
 >   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
 >   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
 >   - [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md)

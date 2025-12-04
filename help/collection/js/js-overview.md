@@ -37,7 +37,7 @@ No lado do servidor, um gateway de borda unificado e uma estrutura de serviço d
 
 Um sistema de borda consolidado permite gerenciar campanhas de publicidade, marketing e personalização em todos os canais. Ele reduz o custo total de propriedade e aceita vários tipos de dados, permitindo mapear seu modelo de dados para uso com vários produtos da Experience Cloud.
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37265?captions=por_br&quality=12&learn=on)
 
 ## Bibliotecas substituídas pelo Web SDK {#sdks}
 

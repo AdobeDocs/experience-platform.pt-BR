@@ -4,7 +4,7 @@ title: Ative públicos para destinos baseados em arquivo usando a API do Serviç
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 290c20d3deb70372fb2fc691c6e6d04d34a72853
+source-git-commit: ba2de112ba9f1fce35f847e9eb9396e65f2a9232
 workflow-type: tm+mt
 source-wordcount: '4976'
 ht-degree: 4%

@@ -2,14 +2,16 @@
 title: Referência a objeto satélite
 description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele nas tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: a36e5af39f904370c1e97a9ee1badad7a2eac32e
+source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 1%
+source-wordcount: '208'
+ht-degree: 0%
 
 ---
 
 # `_satellite` referência do objeto
+
+_Essas páginas descrevem como usar o objeto `_satellite`, que permite gerenciar e personalizar a lógica da tag usando o JavaScript. Consulte a [extensão de tag do Adobe Experience Platform Web SDK](/help/tags/extensions/client/web-sdk/overview.md) para obter detalhes sobre como configurar sua implementação na interface da Coleção de dados._
 
 O objeto `_satellite` expõe vários pontos de entrada com suporte que ajudam você a interagir com a biblioteca de tags publicada no site. Todas as implantações de tag expõem `_satellite` se a tag do carregador for implementada corretamente. Existem vários casos de uso principais para esse objeto:
 
@@ -26,16 +28,18 @@ O objeto `_satellite` expõe vários pontos de entrada com suporte que ajudam vo
 ## Exemplos de uso comum
 
 ```js
-// Read and write a temporary data element value
-const region = _satellite.getVar('user_region');
-_satellite.setVar('promo_code', code);
+// Read and write a temporary data element value (guarded)
+if(window._satellite?.getVar && window._satellite?.setVar) {
+  const region = _satellite.getVar('user_region');
+  _satellite.setVar('promo_code', code);
+}
 
-// Local debugging
-_satellite.setDebug(true);
-_satellite.logger.log('Rule evaluated');
-
-// Manually trigger a rule configured in your tag property
+// Manually trigger a rule configured in your tag property (guarded)
 if (window._satellite?.track) {
   _satellite.track('cart_add', { sku: '123', qty: 2 });
 }
+
+// Local console debugging (guarding not needed)
+_satellite.setDebug(true);
+_satellite.logger.log('Rule evaluated');
 ```

@@ -2,7 +2,7 @@
 title: Perguntas frequentes sobre o Adobe Experience Platform Web SDK
 description: Obtenha respostas para perguntas frequentes sobre o Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
 source-wordcount: '1999'
 ht-degree: 2%
@@ -67,9 +67,9 @@ O Adobe Experience Platform Web SDK também pode enviar dados diretamente para o
 
 **Tempo de implantação:** o Adobe trabalhou duro (e continuará) para facilitar ao máximo a implantação da Web SDK através de marcas e mapear dados do lado do cliente para XDM. Depois que esse trabalho for concluído, todas as outras soluções da Adobe e os serviços da Adobe Experience Platform poderão ser ativados ou desativados no lado do servidor. Por exemplo, se estiver usando isso para o Adobe Analytics e quiser ativar o Target ou o Experience Platform, basta girar um botão na configuração do Fluxo de dados e ativar esses casos de uso.
 
-## O que é o [!DNL alloy.js]?
+## O que é o `alloy.js`?
 
-[!DNL alloy.js] é o nome da biblioteca JavaScript do Web SDK. Ele é referenciado no código-fonte e no nome do arquivo do SDK.
+`alloy.js` é o nome da biblioteca JavaScript do Web SDK. Ele é referenciado no código-fonte e no nome do arquivo do SDK.
 
 ## Os clientes precisam comprar o Adobe Experience Platform para usar o [!DNL Web SDK]?
 
@@ -78,7 +78,7 @@ Não. Qualquer cliente da Adobe Digital Experience pode usar o Adobe Experience 
 * Os clientes que *não* têm acesso ao Experience Platform ou à Real-time CDP e desejam usar o [!DNL Web SDK] precisarão configurar as permissões corretas para criar esquemas e fluxos de dados na interface da Coleção de dados ou na interface do Experience Platform.
 * Os clientes que têm acesso ao Experience Platform ou à Real-time CDP e desejam usar o [!DNL Web SDK] precisarão configurar as permissões certas para criar esquemas, conjuntos de dados, namespaces de identidade e fluxos de dados na interface da Coleção de dados ou na interface da Experience Platform.
 
-Para obter mais informações sobre como configurar essas permissões, consulte nossa documentação em [gerenciamento de permissões de coleta de dados](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=pt-BR).
+Para obter mais informações sobre como configurar essas permissões, consulte nossa documentação em [gerenciamento de permissões de coleta de dados](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
 
 ## Quem deve usar o Web SDK?
 

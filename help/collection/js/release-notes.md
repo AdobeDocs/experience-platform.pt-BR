@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: dc333f30f9a2cb7cd485d1cb13272c078da0bd76
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '2585'
+source-wordcount: '2584'
 ht-degree: 5%
 
 ---
@@ -152,7 +152,7 @@ Para obter as notas de versão mais recentes da extensão de tag do Web SDK, con
 **Novos recursos**
 
 - Adição de suporte para rastreamento automático de interação de apresentação.
-- Adição de um script de construção personalizado que fornece um arquivo alloy.js.
+- Adição de um script de compilação personalizado que fornece um arquivo `alloy.js`.
 - Melhoria na coleção de cliques com o suporte ao ActivityMap e ao agrupamento de eventos.
 
 ## Versão 2.20.0 - quarta-feira, 21 de maio de 2024

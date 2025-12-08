@@ -1,15 +1,15 @@
 ---
-title: Referência a objeto satélite
+title: Visão geral do JavaScript no lado do cliente das tags (_satellite)
 description: Saiba mais sobre o objeto _satellite do lado do cliente e as várias funções que você pode executar com ele nas tags.
 exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
-source-git-commit: 05bf3a8c92aa221af153b4ce9949f0fdfc3c86ab
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-# `_satellite` referência do objeto
+# Visão geral do JavaScript do lado do cliente de marcas (`_satellite`)
 
 _Essas páginas descrevem como usar o objeto `_satellite`, que permite gerenciar e personalizar a lógica da tag usando o JavaScript. Consulte a [extensão de tag do Adobe Experience Platform Web SDK](/help/tags/extensions/client/web-sdk/overview.md) para obter detalhes sobre como configurar sua implementação na interface da Coleção de dados._
 

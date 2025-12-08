@@ -1,17 +1,17 @@
 ---
-title: Instale o Web SDK usando a biblioteca JavaScript
+title: Instalar a biblioteca JavaScript do Web SDK
 description: Faça referência à biblioteca do Web SDK usando um arquivo CDN independente.
 exl-id: bacfe938-4326-48f6-a321-bd16970e77eb
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
 
-# Instale o Web SDK usando a biblioteca JavaScript
+# Instalar a biblioteca JavaScript do Web SDK
 
-Uma alternativa para instalar o Web SDK sem [usar a extensão de tag](/help/tags/extensions/client/web-sdk/overview.md) é fazer referência à biblioteca de JavaScript hospedada em um CDN. Você pode fazer referência à biblioteca diretamente ou baixá-la e hospedá-la em sua própria infraestrutura. Ele está disponível em formatos minificados e completos.
+Uma alternativa para instalar o Web SDK sem [usar a extensão de tag](/help/tags/extensions/client/web-sdk/overview.md) é fazer referência à biblioteca de JavaScript do Web SDK hospedada em um CDN. Você pode fazer referência à biblioteca diretamente ou baixá-la e hospedá-la em sua própria infraestrutura. Ele está disponível em formatos minificados e completos.
 
 A biblioteca do Web SDK está disponível usando a seguinte estrutura de URL:
 

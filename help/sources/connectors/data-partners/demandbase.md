@@ -2,12 +2,12 @@
 title: Intenção do Demandbase
 description: Saiba mais sobre a fonte de intenção do Demandbase no Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
-badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
+source-git-commit: e223ea754a250956e65c3f526119a3ebd7bb067c
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1504'
 ht-degree: 1%
 
 ---
@@ -24,13 +24,13 @@ Leia este documento para obter as informações de pré-requisito sobre a origem
 
 Leia as seções a seguir para obter as etapas de pré-requisito antes de conectar [!DNL Demandbase] ao Experience Platform.
 
-### INCLUIR NA LISTA DE PERMISSÕES endereço IP
+### INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Uma lista de endereços IP deve ser adicionada a uma inclui na lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região ao seu incluo na lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Consulte a página [inclui na lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Uma lista de endereços IP deve ser adicionada a um incluo na lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região ao incluo na lista de permissões pode levar a erros ou não desempenho ao usar origens. Consulte a página [incluo na lista de permissões de endereços IP](../../ip-address-allow-list.md) para obter mais informações.
 
 ### Configurar permissões no Experience Platform
 
-Você deve ter as permissões **[!UICONTROL Exibir Fontes]** e **[!UICONTROL Gerenciar Fontes]** habilitadas para sua conta a fim de conectar sua conta do [!DNL Demandbase] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../access-control/abac/ui/permissions.md).
+Você deve ter as permissões **[!UICONTROL View Sources]** e **[!UICONTROL Manage Sources]** habilitadas para sua conta para conectar sua conta do [!DNL Demandbase] à Experience Platform. Entre em contato com o administrador do produto para obter as permissões necessárias. Para obter mais informações, leia o [guia da interface do usuário de controle de acesso](../../../access-control/abac/ui/permissions.md).
 
 ### Restrições de nomenclatura para arquivos e diretórios
 
@@ -57,6 +57,10 @@ As restrições listadas abaixo devem ser consideradas ao nomear o arquivo ou di
 Para obter mais informações sobre essas credenciais, leia o [[!DNL Google Cloud Storage] guia de chaves HMAC](https://cloud.google.com/storage/docs/authentication/hmackeys#overview). Para obter etapas sobre como gerar sua própria chave de acesso, leia o [guia de pré-requisito na [!DNL Google Cloud Storage] visão geral da origem](../cloud-storage/google-cloud-storage.md#prerequisite-setup-for-connecting-your-google-cloud-storage-account).
 
 ## Esquema [!DNL Demandbase]
+
+>[!IMPORTANT]
+>
+>Ao criar um esquema de Intenção de conta B2B do Demandbase na interface do usuário do Experience Platform, ative a Assimilação de perfil para o esquema. Para obter mais informações, leia o manual sobre [criação e edição de esquemas na interface](../../../xdm/ui/resources/schemas.md).
 
 Leia esta seção para obter informações sobre o esquema [!DNL Demandbase] e a estrutura de dados.
 

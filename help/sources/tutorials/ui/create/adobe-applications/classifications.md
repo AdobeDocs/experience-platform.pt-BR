@@ -63,4 +63,4 @@ Seguindo este tutorial, você criou um conector sata de classificações do Anal
 
 * [Visão geral do conector de origem do Adobe Analytics](../../../../connectors/adobe-applications/analytics.md)
 * [Criar uma conexão de origem do Analytics para dados do conjunto de relatórios na interface](./analytics.md)
-* [Sobre as classificações](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)
+* [Sobre as classificações](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html?lang=pt-BR)

@@ -2,7 +2,7 @@
 description: Saiba como configurar uma política de agregação para determinar como as solicitações HTTP para o seu destino devem ser agrupadas e armazenadas em lote.
 title: Política de agregação
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
 workflow-type: tm+mt
 source-wordcount: '1007'
 ht-degree: 2%
@@ -30,7 +30,7 @@ Depois de ler este documento, consulte a documentação sobre [uso do modelo](..
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -109,7 +109,7 @@ O exemplo de configuração abaixo mostra uma configuração de agregação conf
 |---------|----------|------|
 | `aggregationType` | String | Indica o tipo de política de agregação que seu destino deve usar. Tipos de agregação compatíveis: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino precisar ser dividida pela identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada para um determinado namespace de identidade. |
-| `configurableAggregation.maxBatchAgeInSecs` | Número inteiro | Usado em conjunto com `maxNumEventsInBatch`, esse parâmetro determina por quanto tempo o Experience Platform deve esperar até enviar uma chamada de API para o seu ponto de extremidade. <ul><li>Valor mínimo (segundos): 1.800</li><li>Valor máximo (segundos): 3.600</li></ul> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3.600 segundos OU até que haja 10.000 perfis qualificados antes de fazer a chamada de API, o que acontecer primeiro. |
+| `configurableAggregation.maxBatchAgeInSecs` | Número inteiro | Usado em conjunto com `maxNumEventsInBatch`, esse parâmetro determina por quanto tempo o Experience Platform deve esperar até enviar uma chamada de API para o seu ponto de extremidade. <ul><li>Valor mínimo (segundos): 301</li><li>Valor máximo (segundos): 3.600</li></ul> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3.600 segundos OU até que haja 10.000 perfis qualificados antes de fazer a chamada de API, o que acontecer primeiro. |
 | `configurableAggregation.maxNumEventsInBatch` | Número inteiro | Usado em conjunto com `maxBatchAgeInSecs`, este parâmetro determina quantos perfis qualificados devem ser agregados em uma chamada de API. <ul><li>Valor mínimo: 1.000</li><li>Valor máximo: 10.000</li></ul> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3.600 segundos OU até que haja 10.000 perfis qualificados antes de fazer a chamada de API, o que acontecer primeiro. |
 | `configurableAggregation.aggregationKey` | - | Permite agregar os perfis exportados mapeados para o destino com base nos parâmetros descritos abaixo. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Defina esse parâmetro como `true` se desejar agrupar os perfis exportados para o seu destino pela ID de público-alvo. |

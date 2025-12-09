@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de esquemas
 description: O ponto de extremidade /schemas na API do registro de esquema permite gerenciar de forma programática esquemas XDM no aplicativo de experiência.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2122'
+source-wordcount: '2091'
 ht-degree: 4%
 
 ---
@@ -286,10 +286,6 @@ Para adicionar campos extras a um esquema, você pode executar uma [operação d
 >[!AVAILABILITY]
 >
 >O Data Mirror e esquemas relacionais estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
-
->[!NOTE]
->
->Os esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação da API do Adobe Experience Platform. A funcionalidade permanece a mesma. Somente a terminologia foi alterada para maior clareza.
 
 Crie um esquema relacional fazendo uma solicitação POST para o ponto de extremidade `/schemas`. Esquemas relacionais armazenam dados estruturados de estilo relacional **sem** classes ou grupos de campos. Defina os campos diretamente no esquema e identifique o esquema como relacional usando uma tag de comportamento lógico.
 

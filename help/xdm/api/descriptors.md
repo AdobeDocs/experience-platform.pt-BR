@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Endpoint da API de descritores
 description: O ponto de extremidade /descriptors na API do registro de esquema permite gerenciar programaticamente os descritores XDM no aplicativo de experiência.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2916'
+source-wordcount: '2882'
 ht-degree: 1%
 
 ---
@@ -35,10 +35,6 @@ O ponto de extremidade `/descriptors` na API [!DNL Schema Registry] permite gere
 O ponto de extremidade usado neste guia faz parte da [[!DNL Schema Registry] API](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Antes de continuar, consulte o [guia de introdução](./getting-started.md) para obter links para a documentação relacionada, um guia para ler as chamadas de API de exemplo neste documento e informações importantes sobre os cabeçalhos necessários para fazer chamadas com êxito para qualquer API do Experience Platform.
 
 Além dos descritores padrão, o [!DNL Schema Registry] dá suporte a tipos de descritores para esquemas relacionais, como **chave primária**, **versão** e **carimbo de data/hora**. Eles impõem exclusividade, controlam versão e definem campos de série temporal no nível do esquema. Se você não estiver familiarizado com esquemas relacionais, revise a [visão geral do Data Mirror](../data-mirror/overview.md) e a [referência técnica de esquemas relacionais](../schema/relational.md) antes de continuar.
-
->[!NOTE]
->
->Os esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação do Adobe Experience Platform. A funcionalidade do descritor e os endpoints da API permanecem inalterados. Somente a terminologia foi atualizada para maior clareza.
 
 >[!IMPORTANT]
 >

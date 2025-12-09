@@ -2,9 +2,9 @@
 title: Solicitações de exclusão de registro (fluxo de trabalho da interface)
 description: Saiba como excluir registros na interface do Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 83aed6a79d47ee4043a8303ec8f8c8c20482e12a
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2358'
 ht-degree: 6%
 
 ---
@@ -208,10 +208,6 @@ Após o envio da solicitação, uma ordem de serviço é criada e aparece na gui
 ## Exclusão de registros de conjuntos de dados com base em esquemas relacionais {#relational-record-delete}
 
 Se o conjunto de dados do qual você está excluindo for baseado em um esquema relacional, analise as seguintes considerações para garantir que os registros sejam removidos corretamente e não sejam assimilados novamente devido a incompatibilidades entre o Experience Platform e o sistema de origem.
-
->[!NOTE]
->
->Esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação do Adobe Experience Platform. A funcionalidade e o comportamento de exclusão permanecem inalterados.
 
 ### Comportamento de exclusão de registro
 

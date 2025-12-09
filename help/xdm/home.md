@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do sistema XDM
 description: A padronização e a interoperabilidade são os principais conceitos por trás da Adobe Experience Platform. O Experience Data Model (XDM), orientado pela Adobe, é um esforço para padronizar os dados de experiência do cliente e definir esquemas para o gerenciamento da experiência do cliente.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2411'
 ht-degree: 3%
 
 ---
@@ -111,10 +111,6 @@ Consulte a [Visão geral do Serviço de Catálogo](../catalog/home.md) para obte
 >
 >O Data Mirror e esquemas relacionais estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
 
->[!NOTE]
->
->Esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação do Adobe Experience Platform. A funcionalidade permanece a mesma. Somente a terminologia foi alterada para maior clareza.
-
 O Data Mirror é um recurso do Adobe Experience Platform que permite a sincronização avançada do banco de dados usando esquemas relacionais. Para obter uma visão geral completa dos recursos e casos de uso do Data Mirror, consulte a [visão geral do Data Mirror](./data-mirror/overview.md).
 
 O Data Mirror opera por meio de esquemas relacionais, que são projetados para padrões de dados estruturados e de estilo relacional. Eles impõem chaves primárias, aceitam identificadores de versão e definem relações esquema a esquema usando chaves primárias e estrangeiras. Diferentemente dos esquemas XDM padrão, eles não exigem classes ou grupos de campos e são otimizados para alterar os fluxos de trabalho de assimilação de captura de dados.
@@ -143,7 +139,7 @@ Para obter as etapas detalhadas e as orientações para o caso de uso, consulte:
 * [Documentação do descritor (identificador)](./api/descriptors.md#relationship-descriptor)
 * [Habilitar captura de dados de alteração](../sources/tutorials/api/change-data-capture.md)
 
-### Query Service {#query-service}
+### Serviço de consultas {#query-service}
 
 Você pode usar o SQL padrão para consultar dados do Experience Platform e oferecer suporte a vários casos de uso diferentes com o Serviço de consulta da Adobe Experience Platform.
 
@@ -185,4 +181,4 @@ Para saber mais sobre os princípios de design e as práticas recomendadas para 
 
 Para reforçar sua compreensão do [!DNL XDM System] no Experience Platform, assista ao vídeo a seguir:
 
->[!VIDEO](https://video.tv.adobe.com/v/38512?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)

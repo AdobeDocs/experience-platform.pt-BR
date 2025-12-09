@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar e editar esquemas na interface
 description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: dc5ac5427e1eeef47434c3974235a1900d29b085
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '4652'
-ht-degree: 1%
+source-wordcount: '4635'
+ht-degree: 2%
 
 ---
 
@@ -36,10 +36,6 @@ No espaço de trabalho [!UICONTROL Schemas], selecione **[!UICONTROL Create sche
 >[!AVAILABILITY]
 >
 >O Data Mirror e esquemas relacionais estão disponíveis para os **titulares de licença de campanhas orquestradas** da Adobe Journey Optimizer. Eles também estão disponíveis como uma **versão limitada** para usuários do Customer Journey Analytics, dependendo da sua licença e da ativação de recursos. Entre em contato com o representante da Adobe para obter acesso.
-
->[!NOTE]
->
->Esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação do Adobe Experience Platform.
 
 Selecione **[!UICONTROL Relational]** para definir esquemas estruturados de estilo relacional com controle refinado sobre registros. Os esquemas relacionais oferecem suporte à aplicação da chave primária, ao controle de versão em nível de registro e aos relacionamentos em nível de esquema por meio de chaves primárias e estrangeiras. Eles também são otimizados para assimilação incremental usando captura de dados de alteração e oferecem suporte a vários modelos de dados usados em implementações do Campaign Orchestration, Data Distiller e B2B.
 
@@ -83,7 +79,7 @@ Em seguida, prossiga para [definir chaves primárias](../fields/identity.md#defi
 
 >[!NOTE]
 >
->Depois de salvo, o campo [!UICONTROL Type] na barra lateral [!UICONTROL &#x200B; Schema properties] indica que este é um esquema [!UICONTROL Relational]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
+>Depois de salvo, o campo [!UICONTROL Type] na barra lateral [!UICONTROL  Schema properties] indica que este é um esquema [!UICONTROL Relational]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
 >![A tela Editor de Esquemas mostrando uma estrutura de esquema relacional vazia com o tipo relacional realçado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Fazer upload de um arquivo DDL {#upload-ddl-file}

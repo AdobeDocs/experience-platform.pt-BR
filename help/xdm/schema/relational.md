@@ -2,12 +2,12 @@
 keywords: Experience Platform;página inicial;tópicos populares;esquema relacional;esquemas relacionais;esquema;Esquema;xdm;modelo de dados de experiência;
 solution: Experience Platform
 title: Esquemas relacionais
-description: Saiba mais sobre esquemas relacionais (conhecidos anteriormente como esquemas baseados em modelo) no Adobe Experience Platform, incluindo recursos, campos obrigatórios, relacionamentos e limitações.
+description: Saiba mais sobre esquemas relacionais no Adobe Experience Platform, incluindo recursos, campos obrigatórios, relacionamentos e limitações.
 badge: Disponibilidade limitada
 exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
-source-git-commit: 605c169c9de7a978e6d2f0bdc809371c82cd3280
+source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
 workflow-type: tm+mt
-source-wordcount: '1303'
+source-wordcount: '1280'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,6 @@ Os esquemas relacionais fornecem um padrão de modelagem flexível e controlado 
 >
 >As considerações de exclusão de dados se aplicam a todas as implementações de esquema relacional. Os aplicativos que usam esses esquemas devem entender como as exclusões afetam os conjuntos de dados relacionados, os requisitos de conformidade e os processos de downstream. Planeje cenários de exclusão e revise as [orientações sobre higiene de dados](../../hygiene/ui/record-delete.md#relational-record-delete) antes da implementação.
 
->[!NOTE]
->
->Os esquemas relacionais eram anteriormente chamados de esquemas baseados em modelo em versões anteriores da documentação do Adobe Experience Platform.
-
 Usar esquemas relacionais para:
 
 * Garanta a integridade dos dados com chaves primárias de campo único ou compostas.
@@ -38,7 +34,7 @@ Usar esquemas relacionais para:
 
 ## Como os esquemas relacionais diferem dos esquemas XDM padrão
 
-Os esquemas XDM padrão no Experience Platform seguem um dos três comportamentos de dados: Registro, Série temporal ou Ad-hoc. Para obter definições e detalhes, consulte [Comportamentos de dados XDM](https://experienceleague.adobe.com/pt-br/docs/experience-platform/xdm/home#data-behaviors).
+Os esquemas XDM padrão no Experience Platform seguem um dos três comportamentos de dados: Registro, Série temporal ou Ad-hoc. Para obter definições e detalhes, consulte [Comportamentos de dados XDM](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
 No modelo tradicional, os esquemas de registro e série temporal participam de [esquemas de união](../api/unions.md) (consulte também o [guia da interface do usuário do esquema de união](../../profile/ui/union-schema.md)). Esses esquemas evoluem automaticamente à medida que [grupos de campos](./composition.md#field-group) compartilhados são atualizados e os campos personalizados devem ser aninhados em um namespace de locatário. Embora eficiente, esse modelo pode retardar a integração, produzir esquemas muito complexos com campos não utilizados e exigir mapeamento ou transformação de dados adicionais. Esses fatores aumentam a curva de aprendizado e o esforço contínuo de manutenção.
 

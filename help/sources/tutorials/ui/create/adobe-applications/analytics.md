@@ -2,9 +2,9 @@
 title: Conectar O Adobe Analytics Ao Experience Platform
 description: Saiba como trazer seus dados do conjunto de relatórios do Adobe Analytics para o Experience Platform
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
+source-git-commit: dfc8a1d51e6dd25210a0b6f24dad4d0f00052414
 workflow-type: tm+mt
-source-wordcount: '2745'
+source-wordcount: '2754'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 É importante entender os seguintes termos principais usados neste documento:
 
 * **Atributo padrão**: atributos padrão são atributos predefinidos pela Adobe. Eles contêm o mesmo significado para todos os clientes e estão disponíveis nos grupos de campos de dados de origem do Analytics e esquema do Analytics.
-* **Atributo personalizado**: os atributos personalizados são qualquer atributo na hierarquia de variáveis personalizadas no Analytics. Os atributos personalizados são usados em uma implementação do Adobe Analytics para capturar informações específicas em um conjunto de relatórios e podem diferir no uso de cada conjunto de relatórios. Os atributos personalizados incluem eVars, propriedades e listas. Consulte a seguinte [documentação do Analytics sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=pt-BR) para obter mais informações sobre eVars.
+* **Atributo personalizado**: os atributos personalizados são qualquer atributo na hierarquia de variáveis personalizadas no Analytics. Os atributos personalizados são usados em uma implementação do Adobe Analytics para capturar informações específicas em um conjunto de relatórios e podem diferir no uso de cada conjunto de relatórios. Os atributos personalizados incluem eVars, propriedades e listas. Consulte a seguinte [documentação do Analytics sobre variáveis de conversão](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) para obter mais informações sobre eVars.
 * **Qualquer atributo em grupos de campos personalizados**: atributos originários de grupos de campos criados por clientes são todos definidos pelo usuário e não são considerados atributos padrão nem personalizados.
 
 ## Navegar pelo catálogo de origens
@@ -55,7 +55,7 @@ Você pode assimilar conjuntos de relatórios de qualquer região (Estados Unido
 
 Várias conexões de entrada podem ser feitas para trazer vários conjuntos de relatórios para a mesma sandbox. Se os conjuntos de relatórios tiverem esquemas diferentes para variáveis (como eVars ou eventos), eles deverão ser mapeados para campos específicos nos grupos de campos personalizados e evitar conflitos de dados usando o [Preparo de dados](../../../../../data-prep/ui/mapping.md). Os conjuntos de relatórios podem ser adicionados somente a uma única sandbox.
 
-Selecione **[!UICONTROL Report suite]** e use a interface *[!UICONTROL Analytics source add data]* para navegar pela lista e identificar o conjunto de relatórios do Analytics que você deseja assimilar na Experience Platform. Selecione **[!UICONTROL Next]** para continuar.
+Selecione **[!UICONTROL Report suite]** e use a interface *[!UICONTROL Analytics source add data]* para navegar pela lista e identificar o conjunto de relatórios do Analytics que você deseja assimilar na Experience Platform. Como alternativa, você pode pesquisar por um conjunto de relatórios específico. Selecione **[!UICONTROL Next]** para continuar.
 
 ![Um conjunto de relatórios do Analytics está selecionado para assimilação e o botão &quot;Avançar&quot; está realçado](../../../../images/tutorials/create/analytics/add-data.png)
 
@@ -117,7 +117,7 @@ O Experience Platform detecta automaticamente o mapeamento para qualquer conflit
 >id="platform_analytics_import_mapping"
 >title="Baixar modelo"
 >abstract="Baixe o modelo csv para executar o mapeamento offline."
->additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Importar mapeamento"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/ui/mapping#import-mapping" text="Importar mapeamento"
 
 Você pode usar as funções de Preparo de dados para adicionar novos mapeamentos personalizados ou campos calculados para atributos personalizados. Para adicionar mapeamento personalizado, selecione **[!UICONTROL Custom]**.
 
@@ -325,5 +325,5 @@ O vídeo a seguir é destinado a ajudá-lo a entender a assimilação de dados u
 >
 > A interface do usuário [!DNL Experience Platform] mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430257?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 

@@ -136,8 +136,8 @@ O vídeo a seguir é destinado a apoiar a sua compreensão da estrutura de gover
 >
 >O vídeo faz referência à aplicação de rótulos a campos de conjunto de dados individuais. Esse fluxo de trabalho foi descontinuado. [Os rótulos agora devem ser aplicados no nível de campo de esquema](./e2e.md#labels). Os conceitos no vídeo permanecem precisos, mas o fluxo de trabalho de rotulagem mudou.
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32683?captions=por_br&quality=12&enable10seconds=on&speedcontrol=on)
 
 O vídeo a seguir fornece orientação sobre como aplicar rótulos de uso de dados aos seus esquemas ou à totalidade de um conjunto de dados na Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3422793/?captions=por_br&learn=on)

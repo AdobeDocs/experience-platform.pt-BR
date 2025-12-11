@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Visão geral da governança de dados
 description: O Adobe Experience Platform Data Governance permite gerenciar dados de clientes e garantir conformidade com regulamentos, restrições e políticas aplicáveis ao uso de dados. Ela desempenha uma função essencial na Experience Platform em vários níveis, incluindo catalogação, linhagem de dados, rotulagem de uso de dados, políticas de uso de dados e controle do uso de dados para ações de marketing.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9b1630a4876c0bcd7331f8da264e4f19ce00b59a
 workflow-type: tm+mt
-source-wordcount: '1619'
-ht-degree: 9%
+source-wordcount: '1656'
+ht-degree: 8%
 
 ---
 
@@ -132,8 +132,12 @@ A tabela a seguir descreve os termos principais relacionados à Governança de d
 
 O vídeo a seguir é destinado a apoiar a sua compreensão da estrutura de governança de dados.
 
->[!VIDEO](https://video.tv.adobe.com/v/32683?captions=por_br&quality=12&enable10seconds=on&speedcontrol=on)
+>[!IMPORTANT]
+>
+>O vídeo faz referência à aplicação de rótulos a campos de conjunto de dados individuais. Esse fluxo de trabalho foi descontinuado. [Os rótulos agora devem ser aplicados no nível de campo de esquema](./e2e.md#labels). Os conceitos no vídeo permanecem precisos, mas o fluxo de trabalho de rotulagem mudou.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
 O vídeo a seguir fornece orientação sobre como aplicar rótulos de uso de dados aos seus esquemas ou à totalidade de um conjunto de dados na Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3422793/?captions=por_br&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

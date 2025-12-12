@@ -3,14 +3,20 @@ solution: Experience Platform
 title: Guia da interface do usuário de públicos
 description: A Composição de público-alvo na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite interagir com elementos de dados do perfil. O espaço de trabalho fornece controles intuitivos para criação e edição de públicos-alvo para sua organização.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
+source-git-commit: 66084e9847cca7ce6afd6a5b8c67689c9deef580
 workflow-type: tm+mt
-source-wordcount: '2258'
+source-wordcount: '2293'
 ht-degree: 16%
 
 ---
 
 # Guia da interface do usuário da Composição de público-alvo
+
+>[!BEGINSHADEBOX]
+
+Se você for um cliente do Adobe Journey Optimizer, leia o [guia de composição de público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) na documentação do Adobe Journey Optimizer para obter mais informações sobre como trabalhar com a composição de público-alvo nesse contexto.
+
+>[!ENDSHADEBOX]
 
 >[!AVAILABILITY]
 >

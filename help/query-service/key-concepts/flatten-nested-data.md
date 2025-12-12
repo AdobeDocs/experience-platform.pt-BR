@@ -3,10 +3,10 @@ keywords: Experience Platform;serviço de consulta;serviço de consulta;estrutur
 title: Nivelar Estruturas de Dados Aninhadas para Uso com Ferramentas de BI
 description: Este documento explica como nivelar esquemas XDM para todas as tabelas e exibições durante uma sessão ao usar ferramentas de BI de terceiros com o Serviço de consulta.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fc98b111aa15cdeb64eacdc05cac33a00ee98d80
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 0%
+source-wordcount: '854'
+ht-degree: 1%
 
 ---
 
@@ -42,19 +42,19 @@ Ao conectar-se ao Serviço de consulta com o cliente de terceiros escolhido, ane
 
 A entrada deve ter o seguinte formato:
 
-```terminal
+```bash
 {sandbox_name}:{all/ID/database_name}?FLATTEN
 ```
 
 Um exemplo de cadeia de conexão pode ter a seguinte aparência:
 
-```terminal
+```bash
 prod:all?FLATTEN
 ```
 
 ## Exemplo {#example}
 
-O esquema de exemplo usado neste guia emprega o grupo de campos padrão [!UICONTROL Detalhes do Commerce], que utiliza a estrutura de objeto `commerce` e a matriz `productListItems`. Consulte a documentação do XDM para [mais informações sobre o [!UICONTROL grupo de campos Detalhes do Commerce]](../../xdm/field-groups/event/commerce-details.md). Uma representação da estrutura do schema pode ser vista na imagem abaixo.
+O esquema de exemplo usado neste guia emprega o grupo de campos padrão [!UICONTROL Commerce Details], que utiliza a estrutura de objeto `commerce` e a matriz `productListItems`. Consulte a documentação do XDM para [mais informações sobre o [!UICONTROL Commerce Details] grupo de campos](../../xdm/field-groups/event/commerce-details.md). Uma representação da estrutura do schema pode ser vista na imagem abaixo.
 
 ![Um diagrama de esquema do grupo de campos Detalhes do Commerce, incluindo as estruturas `commerce` e `productListItems`.](../images/key-concepts/commerce-details.png)
 
@@ -62,13 +62,13 @@ Se sua ferramenta de BI não suportar estruturas de dados aninhadas, pode ser di
 
 Os seguintes valores representam `commerce.order.priceTotal` (3018.0), `commerce.order.purchaseID` (c9b5aff9-25de-450b-98f4-4484a2170180) e `commerce.purchases.value`(1.0) em campos aninhados mal formatados.
 
-```terminal
+```bash
 ("(3018.0,c9b5aff9-25de-450b-98f4-4484a2170180)","(1.0)")
 ```
 
 Usando a configuração `FLATTEN`, você pode acessar campos separados em seu esquema ou seções inteiras da estrutura de dados aninhada usando a notação de pontos e seu nome de caminho original. Um exemplo desse formato usando o grupo de campos `commerce` é fornecido abaixo.
 
-```terminal
+```bash
 commerce.order.priceTotal
 commerce.order.purchaseID
 commerce.purchases.value

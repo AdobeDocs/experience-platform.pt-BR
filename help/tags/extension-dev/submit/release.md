@@ -2,18 +2,14 @@
 title: Lançar uma extensão
 description: Saiba como lançar de forma privada ou pública uma extensão de tag na Adobe Experience Platform.
 exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 64%
+source-wordcount: '433'
+ht-degree: 60%
 
 ---
 
 # Lançar uma extensão
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Quando os testes e a documentação estiverem concluídos, a extensão estará pronta para ser lançada. Atualmente, existem dois tipos de lançamentos que podem ser executados:
 
@@ -38,8 +34,8 @@ npx @adobe/reactor-releaser
 
 >[!NOTE]
 > Por padrão, o lançador espera as credenciais do Adobe I/O para um fluxo Oauth de servidor para servidor. As credenciais `jwt-auth` herdadas
-> &#x200B;> O pode ser usado executando o `npx @adobe/reactor-releaser@v3.1.3` até a desativação em 1º de janeiro de 2025. Os parâmetros necessários
-> &#x200B;> para executar a versão `jwt-auth` pode ser encontrado [aqui](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
+> O pode ser usado executando o `npx @adobe/reactor-releaser@v3.1.3` até a desativação em 1º de janeiro de 2025. Os parâmetros necessários
+> para executar a versão `jwt-auth` pode ser encontrado [aqui](https://github.com/adobe/reactor-releaser/tree/9ea66aa2c683fe7da0cca50ff5c9b9372f183bb5).
 
 O lançador requer que você insira apenas algumas informações. Os `clientId` e `clientSecret` podem ser recuperados do console do Adobe I/O. Navegue até a [página Integrações](https://console.adobe.io/integrations) no console do I/O. Selecione a organização correta na lista suspensa, localize a integração apropriada e selecione **[!UICONTROL View]**.
 

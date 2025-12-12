@@ -2,18 +2,14 @@
 title: Visão geral da extensão do Adobe Target
 description: Saiba mais sobre a extensão de tag para o Adobe Target na Adobe Experience Platform.
 exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1179'
+source-wordcount: '1126'
 ht-degree: 93%
 
 ---
 
 # Visão geral da extensão do Adobe Target
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use essa referência para obter informações sobre as opções disponíveis ao usar esta extensão para criar uma regra.
 
@@ -23,15 +19,15 @@ Use essa referência para obter informações sobre as opções disponíveis ao 
 >
 > A extensão do Adobe Target requer at.js. Não é compatível com mbox.js.
 
-Se a extensão do Adobe Target ainda não estiver instalada, abra a propriedade, selecione **[!UICONTROL Extensões > Catálogo]**, passe o mouse sobre a extensão do Target e selecione **[!UICONTROL Instalar]**.
+Se a extensão do Adobe Target ainda não estiver instalada, abra a propriedade, selecione **[!UICONTROL Extensions > Catalog]**, passe o mouse sobre a extensão do Target e selecione **[!UICONTROL Install]**.
 
-Para configurar a extensão, abra a guia [!UICONTROL Extensões], passe o mouse sobre a extensão e selecione **[!UICONTROL Configurar]**.
+Para configurar a extensão, abra a guia [!UICONTROL Extensions], passe o mouse sobre a extensão e selecione **[!UICONTROL Configure]**.
 
 ![](../../../images/ext-target-config.png)
 
 ### Configurações do at.js
 
-Todas as suas configurações do at.js, com exceção do Tempo limite, são automaticamente recuperadas da configuração do at.js na interface do usuário do Target. A extensão recupera apenas as configurações da interface do usuário do Target quando adicionada pela primeira vez para que todas as configurações sejam gerenciadas na interface do usuário se forem necessárias atualizações adicionais.
+Todas as suas configurações do at.js, com exceção do Tempo-limite, são automaticamente recuperadas da configuração do at.js na interface do usuário do Target. A extensão recupera apenas as configurações da interface do usuário do Target quando adicionada pela primeira vez para que todas as configurações sejam gerenciadas na interface do usuário se forem necessárias atualizações adicionais.
 
 As opções de configuração disponíveis são as seguintes:
 
@@ -62,17 +58,17 @@ O domínio para onde as solicitações do Target são enviadas. Isso deve ser qu
 Determina onde o Target define cookies nos navegadores.
 
 * **Desabilitado:** define os cookies somente no domínio próprio. Essa é a configuração usual.
-* **Ativado:** define cookies tanto no domínio primário como no domínio do Target de terceiros (o &quot;Domínio de servidor&quot;).
+* **Habilitado:** define cookies tanto no domínio primário como no domínio do Target de terceiros (o &quot;Domínio de servidor&quot;).
 
-#### Tempo limite (ms)
+#### Tempo-limite (ms)
 
-Se a resposta do Target não for recebida dentro do período definido, a solicitação expirará e o conteúdo padrão será exibido. Ainda há tentativas de solicitações adicionais durante a sessão do visitante. O padrão é 3000 ms, que pode ser diferente do tempo limite configurado na interface do usuário do Target.
+Se a resposta do Target não for recebida dentro do período definido, a solicitação expirará e o conteúdo padrão será exibido. Ainda há tentativas de solicitações adicionais durante a sessão do visitante. O padrão é 3000 ms, que pode ser diferente do tempo-limite configurado na interface do usuário do Target.
 
-Para obter mais informações sobre como funciona a configuração de Tempo limite, consulte a [ajuda do Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=pt_BR).
+Para obter mais informações sobre como funciona a configuração de Tempo-limite, consulte a [ajuda do Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=pt_BR).
 
 #### Outras configurações do at.js disponíveis na interface do usuário do Target
 
-Várias configurações disponíveis na página [!UICONTROL Editar configurações da at.js] da interface do Target não fazem parte da extensão do Target. Aqui estão soluções alternativas:
+Várias configurações disponíveis na página [!UICONTROL Edit at.js settings] da interface do usuário do Target não fazem parte da extensão do Target. Aqui estão soluções alternativas:
 
 * Criar mBox global automaticamente - Esta configuração é substituída pela ação Acionar mBox global na extensão do Target.
 * Cabeçalho da biblioteca - Essa configuração não faz parte da extensão do Target. Coloque o código que precisa ser carregado antes do at.js em uma ação Extensão principal > Código personalizado antes de usar a ação Carregar Target.
@@ -108,11 +104,11 @@ Adicione parâmetros somente às solicitações globais de mbox. A ação Carreg
 
 Acione o mbox global na sua página. A ação Carregar Target deve ser usada anteriormente.
 
-Especifique se deseja ativar a ocultação de corpo para evitar oscilação e o estilo usado ao ocultar seu elemento de corpo.
+Especifique se deseja habilitar a ocultação de corpo para evitar oscilação e o estilo usado ao ocultar seu elemento de corpo.
 
 As opções disponíveis são as seguintes:
 
-* **Ocultação de corpo:** você pode habilitar ou desabilitar essa configuração. O valor padrão é Ativado, o que significa que o HTML BODY está oculto.
+* **Ocultação de corpo:** você pode habilitar ou desabilitar essa configuração. O valor padrão é Habilitado, o que significa que o HTML BODY está oculto.
 * **Estilo oculto de corpo:** o valor padrão é `body{opacity:0}`. Esse valor pode ser alterado para algo diferente, como `body{display:none}`.
 
 Para obter mais informações, consulte a [documentação de ajuda online do Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=pt_BR).
@@ -135,7 +131,7 @@ Nas implantações assíncronas, a página pode concluir a renderização do con
 
 Estas são algumas coisas que devem ser lembradas ao usar o trecho pré-ocultação:
 
-* O trecho deve ser adicionado antes do carregamento do código integrado do cabeçalho da tag.
+* O trecho deve ser adicionado antes do carregamento do código incorporado do cabeçalho da tag.
 * Esse código não pode ser gerenciado por tags. Portanto, deve ser adicionado diretamente à página.
 * A página será exibida quando o primeiro dos seguintes eventos ocorrer:
    * Quando a resposta do mbox global for recebida

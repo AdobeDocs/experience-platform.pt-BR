@@ -2,18 +2,14 @@
 title: Regras
 description: Saiba como as extensões funcionam na Adobe Experience Platform.
 exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
-source-git-commit: 77190e4acf7aad448bbfdebd8ada4dbe9a55f8e0
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2028'
-ht-degree: 73%
+source-wordcount: '1962'
+ht-degree: 74%
 
 ---
 
 # Regras
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As tags na Adobe Experience Platform seguem um sistema baseado em regras. Elas buscam a interação do usuário e dados associados. Quando os critérios definidos nas regras são cumpridos, a regra aciona a extensão, o script ou o código do lado do cliente identificado.
 
@@ -55,12 +51,12 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
 >
 >Você pode ver recursos adicionais disponíveis para saber mais sobre este recurso selecionando ![sobre](../../images/ui/event-forwarding/overview/about.png) no painel direito.
 
-1. Abra a guia [!UICONTROL Regras] e selecione **[!UICONTROL Criar nova regra]**.
+1. Abra a guia [!UICONTROL Rules] e selecione **[!UICONTROL Create New Rule]**.
 
    ![Guia Regras destacando o campo de nome.](../../images/launch-rule-builder.png)
 
 1. Atribua um nome à regra.
-1. Selecione o ícone de eventos **[!UICONTROL Adicionar]**.
+1. Clique no ícone Eventos **[!UICONTROL Add]**.
 1. Selecione sua extensão e um dos tipos de evento disponíveis para essa extensão e defina as configurações do evento.
 
    ![Página de configuração do evento de regras.](../../images/rule-event-config.png)
@@ -81,7 +77,7 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
    >
    >Se esse caminho for especificado incorretamente, os dados não serão coletados.
 
-1. Defina o parâmetro Pedido e selecione **[!UICONTROL Manter alterações]**.
+1. Defina o parâmetro Ordem e selecione **[!UICONTROL Keep Changes]**.
 
    A ordem padrão para todos os componentes da regra é 50. Se quiser que um componente seja executado antes, dê a ele um número menor que 50.
 
@@ -91,7 +87,7 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
 
      Se quiser que um componente seja executado depois, dê a ele um número maior que 50. Para obter mais informações sobre a ordenação, consulte [Ordenação de regra](rules.md#rule-ordering).
 
-1. Selecione o ícone Condições **[!UICONTROL Adicionar]**, selecione um tipo lógico, uma extensão, um tipo de condição e defina as configurações para a sua condição. Em seguida, selecione **[!UICONTROL Manter alterações]**.
+1. Selecione o ícone Condições **[!UICONTROL Add]**, selecione um tipo lógico, uma extensão, um tipo de condição e defina as configurações para a sua condição. Em seguida, selecione **[!UICONTROL Keep Changes]**.
 
    ![Página de configuração da condição de regras.](../../images/condition-settings.png)
 
@@ -102,22 +98,22 @@ Crie uma regra especificando quais ações ocorrem se uma condição for atendid
    * O tipo lógico regular permite que ações sejam executadas se a condição for atendida
    * O tipo lógico de exceção impede que ações sejam executadas, se a condição for atendida
 
-   (Avançado) Tempo limite: essa opção está disponível quando a sequência de componentes da regra está ativada em sua propriedade. Esse atributo define a quantidade máxima de tempo permitida para a condição ser executada. Se o tempo limite for atingido, a condição falhará e o restante das condições e ações da regra serão removidas da fila de processamento. O padrão é 2000 ms.
+   (Avançado) Tempo-limite: essa opção está disponível quando a sequência de componentes da regra está habilitada em sua propriedade. Esse atributo define a quantidade máxima de tempo permitida para a condição ser executada. Se o tempo-limite for atingido, a condição falhará e o restante das condições e ações da regra serão removidas da fila de processamento. O padrão é 2000 ms.
 
    Você pode adicionar quantas condições desejar. Várias condições dentro da mesma regra são unidas por AND.
 
-1. Selecione o ícone Ações **[!UICONTROL Adicionar]**, selecione sua extensão e um dos tipos de ação disponíveis para essa extensão, defina as configurações para a ação e selecione **[!UICONTROL Manter alterações]**.
+1. Selecione o ícone Ações **[!UICONTROL Add]**, selecione sua extensão e um dos tipos de ação disponíveis para essa extensão, defina as configurações para a ação e selecione **[!UICONTROL Keep Changes]**.
 
    ![Página de configuração da ação de regras.](../../images/action-settings.png)
 
    Os tipos de ação disponíveis dependem da extensão selecionada. As configurações de ação serão diferentes de acordo com o tipo de ação.
 
-   (Avançado) Aguarde para executar a próxima ação: essa opção está disponível quando a sequência de componentes da regra está ativada em sua propriedade. Quando marcadas, as tags não chamam a próxima ação até que a ação atual seja concluída. Quando desmarcada, a próxima ação começa a ser executada imediatamente. O padrão é **[!UICONTROL Marcado]**.
+   (Avançado) Aguarde para executar a próxima ação: essa opção está disponível quando a sequência de componentes da regra está habilitada em sua propriedade. Quando marcadas, as tags não chamam a próxima ação até que a ação atual seja concluída. Quando desmarcada, a próxima ação começa a ser executada imediatamente. O padrão é **[!UICONTROL Checked]**.
 
-   (Avançado) Tempo limite: essa opção está disponível quando a sequência de componentes da regra está ativada em sua propriedade. Define o tempo máximo permitido para a ação ser concluída. Se o tempo limite for atingido, a ação falhará e qualquer ação subsequente para essa regra será removida da fila de processamento. O padrão é 2000 ms.
+   (Avançado) Tempo-limite: essa opção está disponível quando a sequência de componentes da regra está habilitada em sua propriedade. Define o tempo máximo permitido para a ação ser concluída. Se o tempo-limite for atingido, a ação falhará e qualquer ação subsequente para essa regra será removida da fila de processamento. O padrão é 2000 ms.
 
 
-1. Examine a regra e selecione **[!UICONTROL Salvar regra]**.
+1. Examine a regra e selecione **[!UICONTROL Save Rule]**.
 
    Posteriormente, ao [publicar](../publishing/overview.md), você adicionará essa regra a uma biblioteca e a implantará.
 
@@ -167,7 +163,7 @@ A Adobe não pode garantir que qualquer outra regra será acionada e que o códi
 
 ## Sequência de componentes da regra {#sequencing}
 
-O comportamento do ambiente de tempo de execução depende de a opção **[!UICONTROL Executar os componentes da regra na sequência]** estar ativada ou desativada na propriedade. Essa configuração determina se os componentes de uma regra podem ser avaliados em paralelo (de forma assíncrona) ou se devem ser avaliados em sequência.
+O comportamento do ambiente de tempo de execução depende se **[!UICONTROL Run rule components in sequence]** está ativado ou desativado para a propriedade. Essa configuração determina se os componentes de uma regra podem ser avaliados em paralelo (de forma assíncrona) ou se devem ser avaliados em sequência.
 
 >[!IMPORTANT]
 >
@@ -175,11 +171,11 @@ O comportamento do ambiente de tempo de execução depende de a opção **[!UICO
 >
 >Nas propriedades de [encaminhamento de eventos](../event-forwarding/overview.md), as ações de regra são sempre executadas sequencialmente e essa configuração não está disponível. Verifique se a ordem está correta ao criar a regra.
 
-### Ativado
+### Habilitado
 
 Se a configuração estiver ativada quando um evento for acionado no tempo de execução, as condições e ações da regra serão adicionadas a uma fila de processamento (com base na ordem definida) e processadas uma de cada vez de acordo com a metodologia FIFO (first in, first out). A regra aguarda a conclusão do componente antes de passar para o próximo.
 
-Se uma condição for avaliada como falsa ou atingir o tempo limite definido, as condições e ações subsequentes da regra serão removidas da fila.
+Se uma condição for avaliada como falsa ou atingir o tempo-limite definido, as condições e ações subsequentes da regra serão removidas da fila.
 
 Se uma ação falhar ou atingir o tempo limite definido, as ações subsequentes dessa regra serão removidas da fila.
 

@@ -2,18 +2,14 @@
 title: Bibliotecas de auto-hospedagem
 description: Saiba como implementar a auto-hospedagem para seus builds de biblioteca de tags na Adobe Experience Platform.
 exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 90%
+source-wordcount: '446'
+ht-degree: 89%
 
 ---
 
 # Bibliotecas de auto-hospedagem
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As tags na Adobe Experience Platform permitem a produção de um conjunto de arquivos chamado [build](../builds.md). Esse conjunto de arquivos controla o comportamento do aplicativo no tempo de execução.
 

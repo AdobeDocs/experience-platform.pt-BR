@@ -2,18 +2,14 @@
 title: Hosts SFTP
 description: Saiba como configurar tags na Adobe Experience Platform para fornecer builds de biblioteca a um servidor SFTP seguro e auto-hospedado.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '815'
-ht-degree: 37%
+source-wordcount: '751'
+ht-degree: 31%
 
 ---
 
 # Hosts SFTP
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O Experience Platform permite que você forneça builds de bibliotecas de tags para um servidor SFTP seguro que você hospeda, fornecendo maior controle sobre como seus builds são armazenados e gerenciados. Este guia aborda como configurar um host SFTP para uma propriedade de tag na interface do usuário do Experience Platform ou na interface da coleção de dados.
 
@@ -51,11 +47,11 @@ Para obter informações mais detalhadas, consulte o artigo a seguir do Medium s
 
 ## Criar um host SFTP {#create}
 
-Selecione **[!UICONTROL Hosts]** na navegação à esquerda, seguido por **[!UICONTROL Adicionar Host]**.
+Selecione **[!UICONTROL Hosts]** na navegação à esquerda, seguido por **[!UICONTROL Add Host]**.
 
 ![Imagem mostrando o botão Adicionar Host sendo selecionado na interface](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
-A caixa de diálogo de criação de host é exibida. Forneça um nome para o host e, em **[!UICONTROL Tipo]**, selecione **[!UICONTROL SFTP]**.
+A caixa de diálogo de criação de host é exibida. Forneça um nome para o host e, em **[!UICONTROL Type]**, selecione **[!UICONTROL SFTP]**.
 
 ![Imagem mostrando a opção de hospedagem do SFTP selecionada](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
 
@@ -67,18 +63,18 @@ A caixa de diálogo é expandida para incluir opções de configuração adicion
 
 | Campo de configuração | Descrição |
 | --- | --- |
-| [!UICONTROL Não Usar Symlinks] | Por padrão, todos os hosts SFTP usam links simbólicos (symlinks) para fazer referência às [builds](../builds.md) da biblioteca que são salvas no servidor. No entanto, nem todos os servidores suportam o uso de symlinks. Quando essa opção é selecionada, o host usa uma operação de cópia para atualizar os ativos de build diretamente, em vez de usar symlinks. |
-| [!UICONTROL URL do Servidor SFTP] | O caminho base de URL do servidor. |
-| [!UICONTROL Caminho] | O caminho a ser anexado ao URL do servidor base para este host. |
+| [!UICONTROL Don't Use Symlinks] | Por padrão, todos os hosts SFTP usam links simbólicos (symlinks) para fazer referência às [builds](../builds.md) da biblioteca que são salvas no servidor. No entanto, nem todos os servidores suportam o uso de symlinks. Quando essa opção é selecionada, o host usa uma operação de cópia para atualizar os ativos de build diretamente, em vez de usar symlinks. |
+| [!UICONTROL SFTP Server URL] | O caminho base de URL do servidor. |
+| [!UICONTROL Path] | O caminho a ser anexado ao URL do servidor base para este host. |
 | [!UICONTROL Port] | A porta deve ser uma das seguintes:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Como prática recomendada de segurança, a Adobe limita o número de portas que podem ser usadas para tráfego de saída. As portas selecionadas geralmente são permitidas por meio de firewalls corporativos e incluem alguns intervalos para oferecer flexibilidade. |
-| [!UICONTROL Nome de usuário] | O nome de usuário a ser usado ao acessar o servidor. |
-| [!UICONTROL Chave privada criptografada] | A chave privada criptografada criada em uma [etapa anterior](#access-key). |
+| [!UICONTROL Username] | O nome de usuário a ser usado ao acessar o servidor. |
+| [!UICONTROL Encrypted Private Key] | A chave privada criptografada criada em uma [etapa anterior](#access-key). |
 
-Selecione **[!UICONTROL Salvar]** para criar o host com a configuração selecionada.
+Selecione **[!UICONTROL Save]** para criar o host com a configuração selecionada.
 
 ![Imagem mostrando o host SFTP sendo salvo](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-Quando você seleciona **[!UICONTROL Salvar]**, a conexão e a capacidade de entregar os arquivos ao servidor SFTP são testadas. O Experience Platform cria uma pasta, grava um arquivo nessa pasta, verifica se o arquivo está lá e depois faz a limpeza. Se a conta de usuário no servidor SFTP (aquele anexado ao certificado seguro fornecido para o Experience Platform) não tiver as permissões necessárias para executar essa ação, o host entrará em um status &quot;Falha&quot;.
+Quando você seleciona **[!UICONTROL Save]**, a conexão e a capacidade de entregar os arquivos ao servidor SFTP são testadas. O Experience Platform cria uma pasta, grava um arquivo nessa pasta, verifica se o arquivo está lá e depois faz a limpeza. Se a conta de usuário no servidor SFTP (aquele anexado ao certificado seguro fornecido para o Experience Platform) não tiver as permissões necessárias para executar essa ação, o host entrará em um status &quot;Falha&quot;.
 
 ## Próximas etapas
 

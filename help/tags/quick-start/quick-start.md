@@ -2,18 +2,14 @@
 title: Manual de início rápido
 description: Saiba como começar a usar as tags na Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1473'
 ht-degree: 88%
 
 ---
 
 # Manual de início rápido
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As tags são a próxima geração da tecnologia de gerenciamento de tags da Adobe Experience Platform. Elas foram criadas do zero para dar suporte a um ecossistema aberto e sustentável, em que qualquer pessoa pode criar suas próprias integrações, que os clientes da Adobe poderão implantar em seus sites. É um aplicativo de API First, portanto, tudo o que pode ser feito por meio da interface do usuário também pode ser feito por meio de uma API.
 
@@ -27,7 +23,7 @@ O fluxo de trabalho básico das tags é:
 6. Testar em seu ambiente de desenvolvimento.
 7. Promover para produção.
 
-## 1. Configurar grupos e usuários
+## &#x200B;1. Configurar grupos e usuários
 
 As tags são totalmente integradas a seu Adobe ID. As permissões do usuário são gerenciadas por meio do Admin Console com outros produtos e soluções da Adobe presentes na [!DNL Creative Cloud], [!DNL Document Cloud] e na Experience Cloud.
 
@@ -35,21 +31,21 @@ As tags têm um sistema de gerenciamento de usuários baseado em direitos. Isso 
 
 Para obter instruções detalhadas sobre como criar grupos e adicionar usuários para tags, consulte o [guia de permissões de coleta de dados](../../collection/permissions.md).
 
-## 2. Fazer logon
+## &#x200B;2. Fazer logon
 
-Após adicionar os direitos de tag à Adobe ID, é necessário fazer logon na interface do usuário da Experience Platform ou na interface da Coleção de dados. Você pode fazer isso navegando diretamente para a [tela de logon do Experience Cloud](https://experience.adobe.com/) e selecionando a **[!UICONTROL Coleção de dados]** ou a **[!UICONTROL Experience Platform]**.
+Após adicionar os direitos de tag à Adobe ID, é necessário fazer logon na interface do usuário da Experience Platform ou na interface da Coleção de dados. Você pode fazer isso navegando diretamente para a [tela de logon do Experience Cloud](https://experience.adobe.com/) e selecionando **[!UICONTROL Data Collection]** ou **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
 >Se você tiver uma única conta com direitos para várias organizações, para alterar a organização, selecione o nome dela na barra de controle na parte superior da tela e escolha outra organização na lista suspensa.
 
-## 3. Criar uma propriedade
+## &#x200B;3. Criar uma propriedade
 
 Depois de fazer logon na interface do usuário, a primeira ação a ser executada é criar uma propriedade. Basicamente, uma propriedade é basicamente um container que você preenche com extensões, regras, elementos de dados e bibliotecas à medida que implanta tags no site. Muitas pessoas criam uma propriedade para cada site (ou grupo de sites intimamente relacionados) em que desejam implantar o mesmo conjunto de tags.
 
 Para obter mais informações sobre a criação de propriedades, consulte [Criar uma propriedade](../ui/administration/companies-and-properties.md).
 
-## 4. Instalar extensões
+## &#x200B;4. Instalar extensões
 
 Uma extensão é uma integração criada pela Adobe ou por um parceiro da Adobe que adiciona opções novas e infinitas às tags que podem ser implantadas em seus sites. Comparando a tag a um sistema operacional, as extensões são os aplicativos que você instala para executar ações específicas necessárias.
 
@@ -57,7 +53,7 @@ Todas as novas propriedades são fornecidas com a [Extensão principal](../exten
 
 O que torna as tags na Experience Platform realmente únicas é que essas extensões podem ser criadas por qualquer pessoa. Você precisa soltar um pixel de remarketing do Facebook em seu site? Confira a extensão que o Facebook criou. Deseja o mesmo para Twitter ou Linked In? Use essas extensões. Você precisa executar uma pesquisa? Veja o Question Pro ou Foresee. Você precisa gerenciar a privacidade e o consentimento dos usuários finais para ajudar no [!DNL GDPR]? Dê uma boa olhada no Evidon e no Trust Arc. Deseja obter uma visão detalhada do comportamento de usuários individuais no site? Talvez você deva dar uma olhada no Clicktale. Para obter mais informações, consulte a seção sobre [adição de uma nova extensão](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
-## 5. Criar elementos de dados e regras
+## &#x200B;5. Criar elementos de dados e regras
 
 Os **elementos de dados** são indicadores para as informações que você deseja coletar e enviar para diferentes locais na sua página:
 
@@ -71,7 +67,7 @@ Depois que o elemento de dados é definido, você pode usá-lo em qualquer lugar
 
 As **regras** representam a essência lógica da implementação e controlam o que, quando, onde e como de todas as tags do site. Defina um evento, ajuste as condições e exceções, então defina as ações e a ordem. Por último, publique suas alterações para ver os resultados. Para obter mais informações, consulte [Regras](../ui/managing-resources/rules.md).
 
-## 6. Testar em seu ambiente de desenvolvimento
+## &#x200B;6. Testar em seu ambiente de desenvolvimento
 
 ### Bibliotecas e criações
 
@@ -83,11 +79,11 @@ As tags criadas não são publicadas automaticamente. Cada conjunto de alteraç�
 
    Cada ambiente tem uma relação com um host, o qual fornece um endpoint para indicar onde o build deve ser entregue. O host pode pertencer a apenas uma propriedade, embora ela possa ter muitos hosts.
 
-2. Um código integrado é fornecido na tag `<script>` do formulário que vai para as seções `<head>` do HTML do site.
+2. Um código incorporado é fornecido na tag `<script>` do formulário que vai para as seções `<head>` do HTML do site.
 
-   Quando você cria um ambiente e anexa um host, o ambiente gera automaticamente um código integrado exclusivo que permite integrar o build atribuído ao site. O código `<script>` é usado para implantar o build da biblioteca no tempo de execução.
+   Quando você cria um ambiente e anexa um host, o ambiente gera automaticamente um código incorporado exclusivo que permite integrar o build atribuído ao site. O código `<script>` é usado para implantar o build da biblioteca no tempo de execução.
 
-3. Quando um usuário navega em seu site, a tag `<script>` do código integrado recupera o build do servidor de host e executa as ações definidas pelo navegador.
+3. Quando um usuário navega em seu site, a tag `<script>` do código incorporado recupera o build do servidor de host e executa as ações definidas pelo navegador.
 
 ### Hosts
 
@@ -104,7 +100,7 @@ Cada biblioteca é criada dentro de um ambiente. Um ambiente define a aparência
 * **Host:** cada ambiente precisa de um host que determine o endpoint para o qual os builds criados nesse ambiente serão enviados.
 * **Arquivar:** na configuração padrão, o build é implantado como um arquivo .js minimizado. Se estiver usando código personalizado, você poderá ter vários arquivos que fazem referência uns aos outros. Eles podem ser combinados em um único arquivo compactado e criptografado.
 
-Após salvar o ambiente, ele gera o código de inserção que você pode copiar e colar no site. Observe que o código integrado não funcionará até que você tenha criado uma biblioteca e produzido um build. Para obter mais informações, consulte [Ambientes](../ui/publishing/environments.md).
+Após salvar o ambiente, ele gera o código incorporado que você pode copiar e colar no site. Observe que o código incorporado não funcionará até que você tenha criado uma biblioteca e produzido um build. Para obter mais informações, consulte [Ambientes](../ui/publishing/environments.md).
 
 ### Publicar uma criação no Desenvolvimento
 
@@ -112,11 +108,11 @@ O processo de publicação está descrito nas etapas abaixo.
 
 1. Criar um host.
 1. Criar um ambiente de desenvolvimento usando o host que você criou.
-1. Implantar o código de inserção do ambiente de desenvolvimento no site de teste de desenvolvimento.
+1. Implantar o código incorporado do ambiente de desenvolvimento no site de teste de desenvolvimento.
 1. Criar uma biblioteca e atribui-la ao ambiente de desenvolvimento que você criou.
 1. Criar sua biblioteca.
 
-## 7. Promover para produção
+## &#x200B;7. Promover para produção
 
 Depois de testar o build no ambiente de desenvolvimento, crie os ambientes de preparo e de produção e coloque os códigos integrados nos locais necessários. Você pode reutilizar hosts existentes para essa finalidade.
 
@@ -134,6 +130,6 @@ Para obter mais informações sobre os diferentes estados e opções disponívei
 
 Para saber mais sobre tags, consulte estes recursos:
 
-* **[Comunidade da Coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=pt)**: faça e responda perguntas, envie ideias e vote nas ideias de outras pessoas. Faça logon com seu Adobe ID.
+* **[Comunidade da Coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: faça e responda perguntas, envie ideias e vote nas ideias de outras pessoas. Faça logon com seu Adobe ID.
 * **[Documentos do desenvolvedor](../api/overview.md)**: envolva-se com a comunidade do desenvolvedor de tags para criar extensões ou usar as APIs de tags
 * **[Visão geral dos tutoriais](https://experienceleague.adobe.com/docs/launch-learn/tutorials/overview.html?lang=pt-BR)**: esses documentos apresentam conceitos de tags, incluindo encaminhamento de eventos e SDK móvel em aplicativos Android.

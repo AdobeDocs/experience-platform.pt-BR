@@ -2,18 +2,14 @@
 title: Guia de solução de problemas de tags
 description: Obtenha respostas a perguntas frequentes sobre tags na Adobe Experience Platform.
 exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
-source-git-commit: 9701a14dc2915e0d6dcc6051c15d5113f305487f
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1032'
-ht-degree: 78%
+source-wordcount: '987'
+ht-degree: 79%
 
 ---
 
 # Guia de solução de problemas de tags
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](./term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Este documento fornece respostas a perguntas frequentes sobre tags na Adobe Experience Platform.
 
@@ -93,4 +89,4 @@ Consulte o manual sobre [gerenciamento de permissões](../collection/permissions
 
 ## E se eu tiver outras dúvidas?
 
-Se você tiver outras dúvidas, poderá fazer perguntas na [página da comunidade da Coleção de dados da Adobe Experience Platform](https://adobe.com/go/launchme) no Experience League ou ingressar no [espaço de trabalho do Slack da comunidade](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) para desenvolvedores e tópicos de implementação técnica.
+Se você tiver outras dúvidas, poderá fazer perguntas na [página da comunidade da Coleção de dados da Adobe Experience Platform](https://adobe.com/go/launchme) no Experience League ou ingressar no [espaço de trabalho da comunidade do Slack](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform) para obter tópicos de implementação técnica e de desenvolvedores.

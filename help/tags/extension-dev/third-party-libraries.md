@@ -2,18 +2,14 @@
 title: Implementação de bibliotecas de terceiros
 description: Saiba mais sobre os diferentes métodos de hospedagem de bibliotecas de terceiros em suas extensões de tag da Adobe Experience Platform.
 exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1315'
-ht-degree: 98%
+source-wordcount: '1270'
+ht-degree: 100%
 
 ---
 
 # Implementação de bibliotecas de terceiros
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Uma das principais finalidades das extensões de tag na Adobe Experience Platform é permitir a fácil implementação das tecnologias de marketing existentes (bibliotecas) em seu site. Usando extensões, você pode implementar bibliotecas fornecidas por redes de entrega de conteúdo (CDNs) de terceiros sem precisar editar manualmente o HTML do seu site.
 
@@ -98,7 +94,7 @@ Os métodos seguintes são abrangidos:
    - [Processo de carregamento do código base](#base-code-loading-process)
       - [Exemplo de código base](#base-code-example)
    - [Opções de implementação de tags](#tags-implementation-options)
-      - [Carregar no tempo de execução do host do fornecedor {#vendor-host}](#load-at-runtime-from-the-vendor-host-vendor-host)
+      - [Carregar no tempo de execução do host do fornecedor](#load-at-runtime-from-the-vendor-host-vendor-host)
       - [Carregar no tempo de execução do host da biblioteca de tags](#load-at-runtime-from-the-tag-library-host)
       - [Incorporar a biblioteca diretamente](#embed-the-library-directly)
    - [Próximas etapas](#next-steps)

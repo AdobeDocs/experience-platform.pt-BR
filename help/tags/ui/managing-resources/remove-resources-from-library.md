@@ -2,18 +2,14 @@
 title: Remover recursos de uma biblioteca
 description: Saiba como remover recursos de uma biblioteca de tags.
 exl-id: ad1dd093-962c-4f6d-85eb-c5ed1b644927
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 94%
+source-wordcount: '268'
+ht-degree: 100%
 
 ---
 
 # Remover recursos de uma biblioteca
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Caso não deseje mais que um recurso tenha um efeito em uma build, remova-o da biblioteca que contém esse recurso e crie uma nova build.
 
@@ -47,7 +43,7 @@ Em vez disso, você deve desabilitar o recurso. Desabilitar é uma alteração q
 
 1. Desabilite o recurso.
    1. Selecione o recurso na exibição em lista.
-   1. Selecione **[!UICONTROL Desabilitar]**.
+   1. Selecione **[!UICONTROL Disable]**.
 1. Crie uma nova biblioteca de desenvolvimento.
 1. Adicione `latest` a versão do recurso desabilitado.
 1. Salve e crie.

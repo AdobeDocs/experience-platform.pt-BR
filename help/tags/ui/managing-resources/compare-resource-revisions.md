@@ -2,28 +2,24 @@
 title: Comparar revisões de recursos
 description: Saiba como exibir o histórico de revisões de um recurso de tag na Adobe Experience Platform.
 exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '912'
-ht-degree: 98%
+source-wordcount: '859'
+ht-degree: 100%
 
 ---
 
 # Comparar revisões de recursos
 
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
-
-Compare as revisões de recursos para ver o histórico de um recurso individual. Você pode comparar o estado atual do recurso com versões anteriores ou comparar a versão publicada atualmente de um recurso no conjunto mais recente de alterações que foram salvas.
+Compare as revisões de recursos para ver o histórico de um recurso individual.  Você pode comparar o estado atual do recurso com versões anteriores ou comparar a versão publicada atualmente de um recurso no conjunto mais recente de alterações que foram salvas.
 
 ## Iniciar uma comparação
 
-Uma comparação é iniciada da mesma forma para todos os tipos de recursos. Abra a exibição Editar para um recurso individual e, em seguida, localize o ícone de três pontos ao lado do botão **[!UICONTROL Salvar]** para ver as ações disponíveis para esse recurso. Selecione **[!UICONTROL Comparar revisões]** na lista.
+Uma comparação é iniciada da mesma forma para todos os tipos de recursos. Abra a exibição Editar para um recurso individual e, em seguida, localize o ícone de três pontos ao lado do botão **[!UICONTROL Save]** para exibir as ações disponíveis para esse recurso.  Selecione **[!UICONTROL Compare Revisions]** na lista.
 
 ![Iniciar uma comparação para uma extensão](../../images/compare-initiate-extension.png)
 
-Para extensões, acesse a visualização de detalhes clicando no botão **[!UICONTROL Configurar]** ao visualizar a lista de extensões instaladas. Para elementos e regras de dados, selecione um na lista.
+Para extensões, acesse a visualização de detalhes selecionando o botão **[!UICONTROL Configure]** ao visualizar a lista de extensões instaladas.  Para elementos e regras de dados, selecione um na lista.
 
 ## Uso da Visualização de comparação
 
@@ -33,7 +29,7 @@ Quando você inicia uma comparação, a exibição padrão mostra a versão mais
 
 ![Comparação de versões da extensão do Analytics](../../images/compare-interpret-extension.png)
 
-Selecione **[!UICONTROL Usar essas alterações]** para copiar as configurações da revisão selecionada (esquerda) para a versão mais recente (direita). Isso copiará as configurações da revisão antiga para as alterações não salvas mais recentes. Se quiser que as alterações sejam mantidas, não deixe de **[!UICONTROL Salvar]** quando sair da Visualização de comparação.
+Selecione **[!UICONTROL Use These Changes]** para copiar as configurações da revisão selecionada (esquerda) para a versão mais recente (direita).  Isso copiará as configurações da revisão antiga para as alterações não salvas mais recentes.  Se desejar que essas alterações sejam mantidas, certifique-se de **[!UICONTROL Save]** depois de sair da Visualização de comparação.
 
 >[!TIP]
 >Os recursos individuais podem ter atributos e configurações. Essas configurações são armazenadas como um bloco JSON, que é uma maneira estruturada para armazenar dados, mas flexível o suficiente para que os desenvolvedores de extensão possam colocar o que precisarem para que suas extensões façam o que desejam.

@@ -2,18 +2,14 @@
 title: Referência a extensões de encaminhamento de eventos
 description: Encontre a documentação de extensões de encaminhamento de eventos no Adobe Experience Platform.
 exl-id: e7b42241-b41c-4d12-8551-4df14e3c9b74
-source-git-commit: 8896ffb78ae01bfe6d7974d781acea104a6356a9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 18%
+source-wordcount: '119'
+ht-degree: 4%
 
 ---
 
 # Referência a extensões de encaminhamento de eventos
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -26,12 +22,12 @@ Esta é uma lista de documentação das extensões de encaminhamento de eventos 
 
 >[!NOTE]
 >
->Qualquer nome de extensão seguido por um asterisco (*) está vinculado à lista de extensões no Adobe Exchange, que contém instruções de instalação e uso. Todos os outros links apontam para a documentação da extensão no Adobe Experience League.
+>Qualquer nome de extensão seguido por um asterisco (*) está vinculado à lista de extensões no Adobe Exchange, que contém instruções de instalação e uso. Todos os outros links apontam para a documentação da extensão na Adobe Experience League.
 
 * [Adobe Experience Platform Cloud Connector](./cloud-connector/overview.md)
 * [[!DNL AWS]](./aws/overview.md)
 * [[!DNL Braze]](./braze/overview.md)
-* [Conector de nuvem para Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
+* [Conector de nuvem do Google Analytics](https://exchange.adobe.com/apps/ec/106542)*
 <!-- * [Cloud Connector for Google Analytics 4](https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.109820.html)* -->
 * [Núcleo](./core/overview.md)
 * [API de Evento Epsilon](https://exchange.adobe.com/apps/ec/109127)*

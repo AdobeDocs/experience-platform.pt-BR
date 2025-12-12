@@ -2,18 +2,14 @@
 title: Visão geral da extensão de rastreamento de vídeo BrightCove
 description: Saiba mais sobre a extensão de tag de rastreamento de vídeo BrightCove na Adobe Experience Platform.
 exl-id: d27eff21-2abf-4495-8382-08cab32742e0
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '898'
-ht-degree: 95%
+source-wordcount: '853'
+ht-degree: 97%
 
 ---
 
 # Visão geral da extensão de rastreamento de vídeo BrightCove
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 ## Pré-requisitos
 
@@ -23,7 +19,7 @@ Cada propriedade de tag na Adobe Experience Platform precisa das seguintes exten
 * Serviço do Experience Cloud Visitor ID
 * Extensões principais instaladas
 
-Use o trecho de código &quot;Código embutido na página (avançado)&quot; no HTML de cada página da Web em que um player de vídeo deve ser renderizado. O trecho HTML &quot;Código incorporado na página (avançado)&quot; pode ser encontrado na [documentação do Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). O link a seguir fornece mais informações sobre [como gerar código incorporado para players de visualização e vídeo publicados](https://studio.support.brightcove.com/players/generating-player-embed-code.html).
+Use o trecho de código &quot;Código incorporado na página (avançado)&quot; no HTML de cada página da Web em que um player de vídeo deve ser renderizado. O trecho HTML &quot;Código incorporado na página (avançado)&quot; pode ser encontrado na [documentação do Brightcove](https://studio.support.brightcove.com/publish/choosing-correct-embed-code.html#inpage). O link a seguir fornece mais informações sobre [como gerar código incorporado para players de visualização e vídeo publicados](https://studio.support.brightcove.com/players/generating-player-embed-code.html).
 
 Esta extensão versão 1.1.0 é compatível com a incorporação de vários vídeos do BrightCove em uma única página da Web. Se houver várias propriedades `id` nas tags incorporadas avançadas, verifique se cada uma tem valores exclusivos. Por exemplo, `player1`, `player2`, e assim por diante.
 
@@ -51,11 +47,11 @@ Há sete elementos de dados disponíveis na extensão, e nenhum deles precisa se
 
 Há sete eventos disponíveis na extensão. Somente o rastreamento de ponto de sinalização personalizado requer configuração.
 
-* **Custom Cue Point Tracking:** esse evento dispara quando o vídeo atinge a porcentagem limite de vídeo especificada. Por exemplo, se um vídeo tiver 60 segundos e o ponto de sinalização especificado for de 50%, o evento será acionado na marca de 30 segundos.
+* **Custom Cue Point Tracking:** esse evento é acionado quando o vídeo atinge a porcentagem limite de vídeo especificada. Por exemplo, se um vídeo tiver 60 segundos e o ponto de sinalização especificado for de 50%, o evento será acionado na marca de 30 segundos.
 
 >[!NOTE]
 >
->Esse evento dispara toda vez que esse ponto de sinalização é atingido. Por exemplo, se o usuário atingir a marca de 50%, buscar o vídeo antes da marca de 50% e, em seguida, atingir a marca de 50% novamente, o gatilho será acionado novamente.
+>Esse evento é acionado toda vez que esse ponto de sinalização é atingido. Por exemplo, se o usuário atingir a marca de 50%, buscar o vídeo antes da marca de 50% e, em seguida, atingir a marca de 50% novamente, o gatilho será acionado novamente.
 
 * **Vídeo concluído:** esse evento é acionado quando um vídeo é totalmente concluído.
 * **Metadados carregados por vídeo:** esse evento é acionado quando o player recebe informações de duração e dimensão iniciais.

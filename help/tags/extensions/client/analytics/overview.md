@@ -2,18 +2,14 @@
 title: Visão geral da extensão do Adobe Analytics
 description: Saiba mais sobre a extensão de tags do Adobe Analytics na Adobe Experience Platform.
 exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2308'
+source-wordcount: '2263'
 ht-degree: 82%
 
 ---
 
 # Visão geral da extensão do Adobe Analytics
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use essa referência para obter informações sobre como configurar a extensão do Adobe Analytics e as opções disponíveis ao usar esta extensão para criar uma regra.
 
@@ -361,7 +357,7 @@ Se desejar, configure hierarquias adicionais.
 
 #### Nome da página
 
-Este valor se refere ao nome de uma determinada página e corresponde à [`pageName` variável](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=pt-BR) no Analytics.
+Este valor se refere ao nome de uma determinada página e corresponde à [`pageName` variável](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) no Analytics.
 
 >[!IMPORTANT]
 >

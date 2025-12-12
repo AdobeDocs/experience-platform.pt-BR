@@ -2,18 +2,14 @@
 title: Visão geral da extensão do Adobe Media Analytics para áudio e vídeo
 description: Saiba mais sobre o Adobe Media Analytics para extensão de tag de áudio e vídeo na Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 96%
+source-wordcount: '892'
+ht-degree: 95%
 
 ---
 
 # Visão geral da extensão do Adobe Media Analytics para áudio e vídeo
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use esta documentação para obter informações sobre como instalar, configurar e implementar a extensão Adobe Media Analytics for Audio and Video (extensão do Media Analytics). Estão incluídas as opções disponíveis ao usar esta extensão para criar uma regra, juntamente com exemplos e links para amostras.
 
@@ -33,9 +29,9 @@ Depois de incluir todas as três extensões mencionadas acima no projeto de tag,
 
 ## Instalação e configuração da extensão do MA
 
-* **Instalar -** para instalar a extensão do MA, abra a propriedade da extensão e selecione **[!UICONTROL Extensões > Catálogo]**, passe o mouse sobre a extensão **[!UICONTROL Adobe Media Analytics para áudio e vídeo]** e selecione **[!UICONTROL Instalar]**.
+* **Instalar -** Para instalar a extensão do MA, abra a propriedade da extensão, selecione **[!UICONTROL Extensions > Catalog]**, passe o mouse sobre a extensão **[!UICONTROL Adobe Media Analytics for Audio and Video]** e selecione **[!UICONTROL Install]**.
 
-* **Configurar -** para configurar a extensão do MA, abra a guia [!UICONTROL Extensões], passe o mouse sobre a extensão e selecione **[!UICONTROL Configurar]**:
+* **Configurar -** Para configurar a extensão do MA, abra a guia [!UICONTROL Extensions], passe o mouse sobre a extensão e selecione **[!UICONTROL Configure]**:
 
 ![Configuração de extensão do MA](../../../images/ext-va-config.jpg)
 
@@ -49,7 +45,7 @@ Depois de incluir todas as três extensões mencionadas acima no projeto de tag,
 | Canal | Propriedade do nome do canal |
 | Online Video Provider | Nome da plataforma de vídeo online pela qual o conteúdo é distribuído |
 | Debug Logging | Habilitar ou desabilitar registro |
-| Enable SSL | Ativar ou desativar o envio de pings em HTTPS |
+| Ativar SSL | Habilitar ou desabilitar o envio de pings em HTTPS |
 | Export APIs to Window Object | Habilitar ou desabilitar a exportação de APIs do Media Analytics para o escopo global |
 | Variable Name | Uma variável usada para exportar as APIs do Media Analytics sob o objeto `window` |
 
@@ -59,7 +55,7 @@ Depois de incluir todas as três extensões mencionadas acima no projeto de tag,
 
 ### Uso de uma página web/aplicativo JS
 
-A extensão do MA exporta as APIs do MediaHeartbeat no objeto da janela global ao ativar a configuração &quot;Exportar APIs para objeto da janela&quot; na página [!UICONTROL Configuração]. Exporta as APIs sob o nome da variável configurada. Por exemplo, se o nome da variável estiver configurado para ser `ADB`, o MediaHeartbeat pode ser acessado em `window.ADB.MediaHeartbeat`.
+A extensão do MA exporta as APIs do MediaHeartbeat no objeto da janela global ao habilitar a configuração “Export APIs to Window Object” na página [!UICONTROL Configuration]. Exporta as APIs sob o nome da variável configurada. Por exemplo, se o nome da variável estiver configurado para ser `ADB`, o MediaHeartbeat pode ser acessado em `window.ADB.MediaHeartbeat`.
 
 >[!IMPORTANT]
 >
@@ -174,7 +170,7 @@ A extensão do MA expõe os módulos `get-instance` e os módulos compartilhados
    ...
    ```
 
-1. Usando a instância Media Heartbeat, siga a [documentação da Media SDK JS](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=pt-BR) e a [documentação da API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) para implementar o rastreamento de mídia.
+1. Usando a instância Media Heartbeat, siga a [documentação da Media SDK JS](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) e a [documentação da API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) para implementar o rastreamento de mídia.
 
 >[!NOTE]
 >

@@ -2,18 +2,14 @@
 title: Elementos de dados
 description: Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
 exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1615'
-ht-degree: 89%
+source-wordcount: '1549'
+ht-degree: 88%
 
 ---
 
 # Elementos de dados
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Os elementos de dados são os blocos fundamentais do seu dicionário de dados (ou mapa de dados). Use elementos de dados para coletar, organizar e entregar dados em toda a tecnologia de marketing e anúncios.
 
@@ -56,7 +52,7 @@ Você pode usar elementos de dados em scripts personalizados usando a `_satellit
 
 Os elementos de dados são os blocos de construção das regras. Os elementos de dados permitem criar um dicionário de dados (ou mapa de dados) dos itens usados comumente em uma página, independentemente da sua origem (strings de consulta, URLs ou valores de cookie) para qualquer objeto contido no seu site.
 
-1. Em uma página Propriedade, abra a guia [!UICONTROL Elementos de dados] e selecione **[!UICONTROL Criar novo elemento de dados]**.
+1. Em uma página de Propriedade, abra a guia [!UICONTROL Data Elements] e selecione **[!UICONTROL Create New Data Element]**.
 1. Nomeie o elemento de dados.
 1. Selecione uma extensão e um tipo.
 
@@ -85,9 +81,9 @@ Os elementos de dados são os blocos de construção das regras. Os elementos de
    * Visitor
       * O valor é armazenado indefinidamente no armazenamento local do navegador.
 
-1. Selecione **[!UICONTROL Salvar]**.
+1. Selecione **[!UICONTROL Save]**.
 
-Ao criar ou editar elementos, você pode salvar e construir sua [biblioteca ativa](../publishing/libraries.md#active-library). Isso salva imediatamente sua alteração na biblioteca e executa uma build. O status da build será exibido. Também é possível criar uma nova biblioteca por meio do menu suspenso [!UICONTROL Biblioteca principal].
+Ao criar ou editar elementos, você pode salvar e construir sua [biblioteca ativa](../publishing/libraries.md#active-library). Isso salva imediatamente sua alteração na biblioteca e executa uma build. O status da build será exibido. Você também pode criar uma nova biblioteca na lista suspensa [!UICONTROL Active Library].
 
 ## Tipos de elementos de dados {#types-of-data-elements}
 
@@ -107,7 +103,7 @@ Qualquer cookie de domínio disponível pode ser referenciado no campo de nome d
 
 ### Custom code
 
-JavaScript personalizado pode ser inserido na interface selecionando [!UICONTROL Abrir editor] e inserindo o código na janela do editor.
+É possível inserir JavaScript personalizado na interface selecionando [!UICONTROL Open Editor] e inserindo o código na janela do editor.
 
 É preciso haver uma instrução de retorno na janela do editor indicando que o valor deve ser definido como aquele valor do elemento de dados. Se uma declaração de retorno não for incluída, o elemento de dados será resolvido como `undefined`. O fallback será acionado para procurar um valor armazenado e, em seguida, um valor padrão se nenhum valor armazenado estiver presente.
 
@@ -184,7 +180,7 @@ Se você utilizar um objeto coletor de dados como parte da camada de dados, util
 
 ### Armazenamento local
 
-Forneça o nome do item de armazenamento local no campo [!UICONTROL Nome do item de armazenamento local].
+Forneça o nome do item de armazenamento local no campo [!UICONTROL Local Storage Item Name].
 
 O armazenamento local fornece aos navegadores uma maneira de armazenar informações de página a página ([https://www.w3schools.com/html/html5_webstorage.asp](https://www.w3schools.com/html/html5_webstorage.asp)). O armazenamento local funciona de forma bem semelhante aos cookies, mas é muito maior e mais flexível.
 
@@ -203,11 +199,11 @@ Você pode selecionar um dos atributos de página a seguir para ser usado em seu
 * Referenciador
 * Title
 
-### Query string Parameter
+### Query string parameter
 
-Especifique um único parâmetro de URL no campo [!UICONTROL Parâmetro de URL].
+Especifique um único parâmetro de URL no campo [!UICONTROL URL Parameter].
 
-Somente a seção de nome é necessária e qualquer designador especial como “?” ou &quot;=&quot; deve ser omitido.
+Somente a seção de nome é necessária e qualquer designador especial como &quot;?&quot; ou &quot;=&quot; deve ser omitido.
 
 #### Exemplo:
 
@@ -232,7 +228,7 @@ Máximo: 1000000000
 
 ### Armazenamento de sessão
 
-Forneça o nome do item de armazenamento de sessão no campo [!UICONTROL Nome do item de armazenamento da sessão].
+Forneça o nome do item de armazenamento da sessão no campo [!UICONTROL Session Storage Item Name].
 
 O armazenamento de sessão é semelhante ao armazenamento local, a diferença é que os dados são descartados depois que a sessão é encerrada, enquanto o armazenamento local ou um cookie pode reter os dados.
 

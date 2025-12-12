@@ -2,18 +2,14 @@
 title: Notas de versão do Adobe Media Analytics (3.x SDK) para extensão de áudio e vídeo
 description: As notas de versão mais recentes do Adobe Media Analytics (3.x SDK) para extensão de tag de áudio e vídeo na Adobe Experience Platform.
 exl-id: 1ed0504d-d13c-4e7b-8eb1-78c54e62a523
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '175'
-ht-degree: 89%
+source-wordcount: '130'
+ht-degree: 100%
 
 ---
 
 # Notas de versão do Adobe Media Analytics (3.x SDK) for Audio and Video
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 ## 5 de abril de 2021
 

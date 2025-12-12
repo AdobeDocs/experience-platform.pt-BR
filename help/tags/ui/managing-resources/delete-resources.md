@@ -2,18 +2,14 @@
 title: Excluir recursos
 description: Saiba como excluir recursos de tags na Adobe Experience Platform.
 exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '558'
-ht-degree: 90%
+source-wordcount: '512'
+ht-degree: 93%
 
 ---
 
 # Excluir recursos
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A exclusão de um recurso é uma remoção permanente desse recurso da Adobe Experience Platform. Se você quiser remover um recurso de uma biblioteca de marcas específica, mas ainda quiser que esse recurso esteja disponível para uso em outras bibliotecas, consulte o manual em [removendo recursos de uma biblioteca](remove-resources-from-library.md).
 
@@ -78,4 +74,4 @@ Antes de excluir um recurso, você deve removê-lo de qualquer biblioteca que o 
 
 ## Excluir um recurso
 
-Na visualização de lista apropriada, selecione o recurso que deseja excluir e selecione **[!UICONTROL Excluir]**.
+Na visualização em lista apropriada, selecione o recurso que deseja excluir e selecione **[!UICONTROL Delete]**.

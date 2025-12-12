@@ -2,19 +2,15 @@
 title: Visão geral da extensão de encaminhamento de eventos da Algolia
 description: Saiba como configurar e usar a extensão de encaminhamento de eventos do Algolia no Adobe Experience Platform. Encaminhe os dados de comportamento do usuário por meio da API do Insights, configure regras, mapeie campos XDM e verifique a entrega do evento.
 last-substantial-update: 2025-05-09T00:00:00Z
-source-git-commit: d1b641ed0b48357a2f4b78d6829ccab52e4889ca
+exl-id: 397c8761-9bff-4b85-9f3f-4cbbd782c139
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 0%
+source-wordcount: '970'
+ht-degree: 1%
 
 ---
 
-
 # Visão geral da extensão de encaminhamento de eventos do [!DNL Algolia] {#overview}
-
->[!NOTE]
->
->O Adobe Experience Platform Launch agora faz parte das tecnologias de coleta de dados da Adobe Experience Platform. Como resultado, foram feitas atualizações de terminologia na documentação do produto. Para obter uma lista abrangente dessas alterações, consulte o [guia de atualizações de terminologia](../../../../tags/term-updates.md).
 
 Use o [!DNL Algolia] para fornecer experiências de pesquisa rápidas, relevantes e personalizadas. Com a otimização baseada em IA, você pode aprimorar os resultados da pesquisa e as recomendações para ajudar os usuários a encontrar rapidamente os produtos, o conteúdo ou as informações de que precisam.
 
@@ -27,31 +23,31 @@ Antes de instalar a extensão, verifique se você tem uma conta do [!DNL Algolia
 Verifique também se você entende como usar o [!DNL Algolia] [!DNL Insights API]. Para obter uma visão geral de como enviar eventos, consulte o [envio de eventos com a API de Insights](https://www.algolia.com/doc/guides/sending-events/getting-started/).
 
 Obtenha os seguintes valores do painel da conta do [!DNL Algolia]:
-- **[!UICONTROL ID do Aplicativo]**
-- **[!UICONTROL Chave de API de Pesquisa]**
-- **[!UICONTROL Nome do Índice]**
+- **[!UICONTROL Application ID]**
+- **[!UICONTROL Search API Key]**
+- **[!UICONTROL Index Name]**
 
 ## Instalar a extensão {#install}
 
 Para instalar a extensão [!DNL Algolia], siga estas etapas:
 
-Navegue até **[!UICONTROL Coleção de Dados]** em [!DNL Adobe Experience Platform]. Selecione a guia **[!UICONTROL Extensões]**.
+Navegue até **[!UICONTROL Data Collection]** em [!DNL Adobe Experience Platform]. Selecione a guia **[!UICONTROL Extensions]**.
 
-Abra o **[!UICONTROL Catálogo]**, localize a extensão **[!UICONTROL Encaminhamento de Eventos da Algolia]** e selecione **[!UICONTROL Instalar]**.
+Abra o **[!UICONTROL Catalog]**, localize a extensão **[!UICONTROL Algolia Event Forwarding]** e selecione **[!UICONTROL Install]**.
 
 ![O processo de instalação da extensão Algolia Event Forwarding no Adobe Experience Platform](../../../images/extensions/server/algolia/install-extension.png)
 
 ### Configurar a extensão {#configure-extension}
 
-Para configurar a extensão de encaminhamento de eventos do [!DNL Algolia], navegue até a guia **[!UICONTROL Extensões]**, selecione a extensão **[!UICONTROL Algólia]** e selecione **[!UICONTROL Configurar]**.
+Para configurar a extensão de encaminhamento de eventos do [!DNL Algolia], navegue até a guia **[!UICONTROL Extensions]**, selecione a extensão **[!UICONTROL Algolia]** e **[!UICONTROL Configure]**.
 
 ![Tela de configuração para a extensão de encaminhamento de eventos da Algólia no Adobe Experience Platform](../../../images/extensions/server/algolia/configure.png)
 
 | Propriedade | Descrição |
 |----------|-------------|
-| **[!UICONTROL Application ID]** | Insira a [!UICONTROL ID do Aplicativo] encontrada no Painel da Algólia na seção [Chaves da API](https://www.algolia.com/account/api-keys/all). |
-| **[!UICONTROL Chave de API de Pesquisa]** | Insira a [!UICONTROL Chave de API de Pesquisa] encontrada no Painel da Algólia na seção [Chaves de API](https://www.algolia.com/account/api-keys/all). |
-| **[!UICONTROL Nome do Índice]** | Digite o [!UICONTROL Nome do Índice] que contém seus produtos ou conteúdo. Esse índice é usado como valor padrão. |
+| **[!UICONTROL Application ID]** | Digite o [!UICONTROL Application ID] encontrado no Painel da Algólia na seção [Chaves de API](https://www.algolia.com/account/api-keys/all). |
+| **[!UICONTROL Search API Key]** | Digite o [!UICONTROL Search API Key] encontrado no Painel da Algólia na seção [Chaves de API](https://www.algolia.com/account/api-keys/all). |
+| **[!UICONTROL Index Name]** | Digite o [!UICONTROL Index Name] que contém seus produtos ou conteúdo. Esse índice é usado como valor padrão. |
 
 {style="table-layout:auto"}
 
@@ -61,9 +57,9 @@ A extensão de encaminhamento de eventos [!DNL Algolia] oferece um único tipo d
 
 ### Enviar evento {#send-event}
 
-Configure a ação **[!UICONTROL Enviar evento]** para encaminhar eventos para [!DNL Algolia]:
+Configure a ação **[!UICONTROL Send event]** para encaminhar eventos a [!DNL Algolia]:
 
-Selecione **[!UICONTROL Regras]** > **[!UICONTROL Adicionar regra]** ou selecione uma regra existente. Na parte **[!UICONTROL Then]** da regra, adicione uma ação e selecione **[!UICONTROL Extensão]**: [!DNL Algolia] Encaminhamento de Eventos > **[!UICONTROL Tipo de Ação]**: **[!UICONTROL Enviar Eventos]**.
+Selecione **[!UICONTROL Rules]** > **[!UICONTROL Add Rule]** ou selecione uma regra existente. Na parte **[!UICONTROL Then]** da regra, adicione uma ação e selecione **[!UICONTROL Extension]**: [!DNL Algolia] Encaminhamento de Eventos > **[!UICONTROL Action Type]**: **[!UICONTROL Send Events]**.
 
 ![Configuração da ação Enviar Evento na extensão de encaminhamento de eventos da Algólia.](../../../images/extensions/server/algolia/send-event.png)
 
@@ -77,15 +73,15 @@ Adicione o grupo de campos de eventos [!DNL Algolia] ao esquema antes de usar a 
 
 Para adicionar o grupo de campos de evento [!DNL Algolia]:
 
-Navegue até **[!UICONTROL Esquemas]** e selecione **[!UICONTROL Procurar]**.
+Navegue até **[!UICONTROL Schemas]** e selecione **[!UICONTROL Browse]**.
 
-Adicione um novo esquema ou atualize um esquema existente usado para enviar eventos da Web e passe o mouse sobre o ícone **[!UICONTROL Adicionar]**. Digite *[!DNL Algolia]* na caixa de pesquisa para restringir os resultados.
+Adicione um novo esquema ou atualize um esquema existente usado para enviar eventos da Web e passe o mouse sobre o ícone **[!UICONTROL Add]**. Digite *[!DNL Algolia]* na caixa de pesquisa para restringir os resultados.
 
-Selecione o **[!DNL Algolia]Detalhes do evento** grupo de campos > **[!UICONTROL Botão Adicionar grupo de campos]** > **[!UICONTROL Salvar]**.
+Selecione o campo **[!DNL Algolia]Detalhes do Evento** > grupo de campos **[!UICONTROL Add field group]** > **[!UICONTROL Save]**.
 
 ![Configuração do grupo de campos de perfil da Algólia no Experience Platform](../../../images/extensions/server/algolia/algolia-profile-field-group.png)
 
-### Mapear e enviar dados usando a marca [!UICONTROL Coleção de dados]
+### Mapear e enviar dados usando a marca [!UICONTROL Data Collection]
 
 A extensão de encaminhamento de eventos do [!DNL Algolia] pode ser usada com o **[!DNL Adobe Experience Platform Web SDK]** para enviar dados do seu site para o [!DNL Algolia]. Isso é feito criando uma propriedade de marca, mapeando dados para o objeto [!DNL XDM] e configurando regras para enviar eventos.
 
@@ -99,8 +95,8 @@ A extensão de encaminhamento de eventos do [!DNL Algolia] pode ser usada com o 
 
 #### Etapa 2: Criar um elemento de dados para mapeamento de [!DNL XDM]
 
-1. Criar um [!UICONTROL Elemento de Dados] usando o **[!DNL Adobe Experience Platform Web SDK]**.
-2. Selecione **[!UICONTROL objeto XDM]** como o tipo de elemento de dados.
+1. Crie um [!UICONTROL Data Element] usando o **[!DNL Adobe Experience Platform Web SDK]**.
+2. Selecione **[!UICONTROL XDM object]** como o tipo de elemento de dados.
 3. Mapeie seus dados para os campos [!DNL XDM] apropriados, garantindo que os campos específicos de [!DNL Algolia] sejam preenchidos.
 
 ![](../../../images/extensions/server/algolia/xdm-mapping.png)
@@ -110,7 +106,7 @@ A extensão de encaminhamento de eventos do [!DNL Algolia] pode ser usada com o 
 1. Crie uma nova regra na propriedade da tag.
 2. Adicione os acionadores de evento necessários, como carregamento de página ou eventos de clique.
 3. Adicionar uma ação usando **[!DNL Adobe Experience Platform Web SDK]**.
-4. Selecione **[!UICONTROL Enviar evento]** como o tipo de ação.
+4. Selecione **[!UICONTROL Send event]** como o tipo de ação.
 5. Configure a ação para usar seu elemento de dados [!DNL XDM].
 
 ![Exemplo de configuração de uma ação de regra na extensão de encaminhamento de eventos da Algolia](../../../images/extensions/server/algolia/rule-action.png)
@@ -126,7 +122,7 @@ A extensão de encaminhamento de eventos do [!DNL Algolia] pode ser usada com o 
 
 Após configurar a extensão de encaminhamento de eventos do [!DNL Algolia], verifique se os eventos estão sendo enviados e recebidos corretamente seguindo estas etapas:
 
-Navegue até o painel [!DNL Algolia] e vá até **[!UICONTROL Fontes de Dados > Eventos > Depurador]**.
+Navegue até o painel do [!DNL Algolia] e vá para **[!UICONTROL Data Sources > Events > Debugger]**.
 
 Selecione o evento que corresponde ao evento enviado da extensão de encaminhamento de eventos de [!DNL Algolia] e verifique se os dados esperados estão presentes no evento.
 
@@ -152,7 +148,7 @@ Se você encontrar problemas ao implementar a extensão de encaminhamento de eve
 
 Se os eventos não aparecerem em [!DNL Algolia], verifique o seguinte:
 
-- **Verificar Credenciais da API**: certifique-se de que a **[!UICONTROL ID do Aplicativo]** e a **[!UICONTROL Chave da API]** correspondam aos valores no painel [!DNL Algolia].
+- **Verificar Credenciais da API**: certifique-se de que **[!UICONTROL Application ID]** e **[!UICONTROL API Key]** correspondam aos valores no painel [!DNL Algolia].
 - **Verificar Depurador de Eventos**: Use o [!DNL Algolia] Depurador de Eventos para confirmar se os eventos estão sendo recebidos. Caso contrário, verifique a configuração da regra de encaminhamento de eventos.
 - **Inspecionar Mapeamento XDM**: certifique-se de que todos os campos obrigatórios no esquema [!DNL Algolia] estejam mapeados corretamente no objeto [!DNL XDM].
 
@@ -171,5 +167,5 @@ Para obter detalhes sobre como depurar sua implementação usando o Depurador da
 
 - [[!DNL Algolia] Documentação da API do Insights](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Documentação de eventos](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] Documentação de encaminhamento de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=pt-BR)
+- [[!DNL Adobe Experience Platform] Documentação de encaminhamento de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
 - [[!DNL Algolia] Visão geral dos recursos de IA](https://www.algolia.com/products/ai-search/)

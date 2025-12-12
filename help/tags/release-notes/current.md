@@ -2,10 +2,10 @@
 title: Notas de versão para tags e encaminhamento de eventos
 description: As notas de versão mais recentes para tags e encaminhamento de eventos na Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 88%
+source-wordcount: '770'
+ht-degree: 87%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 88%
 
 >[!IMPORTANT]
 >
->A partir de agora, as notas de versão para tags e encaminhamento de eventos não serão mais fornecidas nesta página. Consulte as mais recentes [notas de versão da Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/release-notes/latest.html?lang=pt-br#data-collection) para obter as atualizações detalhadas das tags e do encaminhamento de eventos.
+>A partir de agora, as notas de versão para tags e encaminhamento de eventos não serão mais fornecidas nesta página. Consulte as mais recentes [notas de versão da Adobe Experience Platform](/help/release-notes/latest/latest.md) para obter as atualizações detalhadas das tags e do encaminhamento de eventos.
 
 ## 26 de abril de 2023
 
@@ -45,7 +45,7 @@ Lançamento de novas extensões:
    1. Propriedades, regras e elementos de dados recentes
    1. Extensões populares
    1. Novas atualizações de extensão com recurso de instalação rápida
-* **Enviar dados para o [!DNL Google Ads] usando o encaminhamento de eventos**: agora é possível usar a extensão da API [[!DNL Google Ads Enhanced Conversions] &#x200B;](../extensions/server/google-ads-enhanced-conversions/overview.md) para encaminhamento de eventos juntamente com os [segredos do Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2) para enviar dados do lado do servidor para o [!DNL Google Ads] em tempo real e com segurança.
+* **Enviar dados para o [!DNL Google Ads] usando o encaminhamento de eventos**: agora é possível usar a extensão da API [[!DNL Google Ads Enhanced Conversions] ](../extensions/server/google-ads-enhanced-conversions/overview.md) para encaminhamento de eventos juntamente com os [segredos do Google Oauth 2](../ui/event-forwarding/secrets.md#google-oauth2) para enviar dados do lado do servidor para o [!DNL Google Ads] em tempo real e com segurança.
 
 ## 23 de novembro de 2022
 
@@ -63,12 +63,12 @@ Lançamento de novas extensões:
 
 * **Integração com a navegação à esquerda do Adobe Experience Platform**: todos os recursos que antes eram exclusivos da interface da Coleção de Dados (incluindo marcas e encaminhamento de eventos) agora também estão disponíveis através da navegação à esquerda na interface da Experience Platform, na categoria **[!UICONTROL Data Collection]**. Isso elimina a necessidade de alternar entre interfaces do usuário ao trabalhar com recursos de coleta de dados no Experience Platform.
 * **Atribuição de usuário em tags e encaminhamento de eventos**: ao listar propriedades disponíveis em tags e no encaminhamento de eventos, cada propriedade listada agora mostra quando foi atualizada pela última vez e por quem.
-* Extensão da **[[!DNL Snap Conversions API] &#x200B;](https://exchange.adobe.com/apps/ec/108550) para encaminhamento de eventos**: agora é possível enviar dados para a [!DNL Snapchat Conversions API] usando uma extensão de [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md). Para obter mais informações sobre como autenticar e usar a API, consulte a [[!DNL Snapchat Marketing API] documentação](https://marketingapi.snapchat.com/docs/conversion.html).
+* Extensão da **[[!DNL Snap Conversions API] ](https://exchange.adobe.com/apps/ec/108550) para encaminhamento de eventos**: agora é possível enviar dados para a [!DNL Snapchat Conversions API] usando uma extensão de [encaminhamento de eventos](../../tags/ui/event-forwarding/overview.md). Para obter mais informações sobre como autenticar e usar a API, consulte a [[!DNL Snapchat Marketing API] documentação](https://marketingapi.snapchat.com/docs/conversion.html).
 
 ## 27 de julho de 2022
 
 * O acesso aos recursos de tags e encaminhamento de eventos agora é gerenciado por meio do Adobe Admin Console no cartão da Coleção de dados da Adobe Experience Platform. Consulte o guia sobre [permissões da coleção de dados](../../collection/permissions.md) para obter mais informações.
-* O suporte para o Internet Explorer 10 e 11 foi [descontinuado](../ie-deprecation.md).
+* O suporte para o Internet Explorer 10 e 11 foi descontinuado.
 
 ## 22 de junho de 2022
 

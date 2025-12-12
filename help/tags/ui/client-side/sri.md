@@ -2,18 +2,14 @@
 title: Compatibilidade de Integridade de sub-recursos (SRI)
 description: Saiba como a integridade de sub-recursos (SRI) é compatível com o Adobe Experience Platform.
 exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 96%
+source-wordcount: '549'
+ht-degree: 100%
 
 ---
 
 # Compatibilidade de Integridade de sub-recursos (SRI)
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Este documento aborda como a SRI (Integridade de sub-recursos) é compatível com o Adobe Experience Platform.
 
@@ -36,19 +32,19 @@ O processo de validação da SRI pode ser resumido da seguinte forma:
 
 Como um sistema de gerenciamento de tags (TMS), as tags na Adobe Experience Platform fornecem um build de biblioteca JavaScript que você carrega em suas páginas com um único elemento `<script>` (código incorporado). A funcionalidade dinâmica oferecida pelo TMS é alcançada pela troca dinâmica do conteúdo desse script sem a necessidade de alterar mais nada.
 
-No entanto, quando o conteúdo do script é alterado, o mesmo acontece com o hash criptográfico desse conteúdo. Portanto, a única maneira de fazer a SRI funcionar com um TMS é atualizar seu código integrado ao mesmo tempo em que você publica uma nova build. Para muitos, isso elimina o objetivo principal de usar um TMS em primeiro lugar.
+No entanto, quando o conteúdo do script é alterado, o mesmo acontece com o hash criptográfico desse conteúdo. Portanto, a única maneira de fazer a SRI funcionar com um TMS é atualizar seu código incorporado ao mesmo tempo em que você publica uma nova build. Para muitos, isso elimina o objetivo principal de usar um TMS em primeiro lugar.
 
 A próxima melhor opção de segurança para tags é implementar uma Política de segurança de conteúdo. Para obter mais informações, consulte o manual sobre [CSPs e tags](./content-security-policy.md).
 
 ## Integração da SRI na implantação de build
 
-Se você ainda quiser usar a SRI para seus builds de biblioteca, é necessário usar a hospedagem própria. Se você estiver usando a hospedagem gerenciada pela Adobe, não há como usar a SRI sem ter algum tempo em que o novo conteúdo da build não corresponda ao atributo `integrity` do código integrado.
+Se você ainda quiser usar a SRI para seus builds de biblioteca, é necessário usar a hospedagem própria. Se você estiver usando a hospedagem gerenciada pela Adobe, não há como usar a SRI sem ter algum tempo em que o novo conteúdo da build não corresponda ao atributo `integrity` do código incorporado.
 
-A automatização do processo de atualização do código integrado varia em complexidade, dependendo da estrutura do site, mas as etapas gerais podem ser resumidas da seguinte maneira:
+A automatização do processo de atualização do código incorporado varia em complexidade, dependendo da estrutura do site, mas as etapas gerais podem ser resumidas da seguinte maneira:
 
 1. Recupere a build da biblioteca de produção, por meio da entrega SFTP ou baixe o arquivo da interface do usuário.
 1. Gere o hash criptográfico da build principal.
-1. Verifique se o atributo `integrity` do código integrado foi atualizado para o novo hash e se a build referenciada foi atualizada como parte da mesma implantação.
+1. Verifique se o atributo `integrity` do código incorporado foi atualizado para o novo hash e se a build referenciada foi atualizada como parte da mesma implantação.
 
 >[!IMPORTANT]
 >

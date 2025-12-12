@@ -2,18 +2,14 @@
 title: Padrão de compatibilidade com versões anteriores
 description: Saiba mais sobre o padrão de compatibilidade com versões anteriores na Adobe Experience Platform, que garante que as versões atualizadas das extensões de tags sejam compatíveis com as versões anteriores.
 exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 97%
+source-wordcount: '788'
+ht-degree: 100%
 
 ---
 
 # Padrão de compatibilidade com versões anteriores
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As atualizações de uma extensão de tag na Adobe Experience Platform devem ser compatíveis com versões anteriores da extensão. Isso significa que:
 

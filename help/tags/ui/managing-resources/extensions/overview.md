@@ -2,18 +2,14 @@
 title: Extensões
 description: Saiba como as extensões funcionam na Adobe Experience Platform.
 exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
-source-git-commit: 31811b7448a285ee5d25872641354a6981c64471
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '523'
-ht-degree: 88%
+source-wordcount: '471'
+ht-degree: 90%
 
 ---
 
 # Extensões
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Uma extensão é um conjunto de código empacotado que estende as funcionalidades fornecidas por tags ou pelo encaminhamento de eventos.
 
@@ -27,13 +23,13 @@ As extensões determinam os elementos que estão disponíveis ao construir propr
 
 Use os links na parte superior da lista de extensões para exibir as extensões instaladas, o catálogo de extensões ou as atualizações.
 
-Selecione uma extensão e depois selecione [!UICONTROL Configurar] para ver e alterar as configurações da extensão. Para obter mais informações, consulte a seção em [adicionando uma nova extensão](#add-a-new-extension) para obter informações sobre opções de extensão.
+Selecione uma extensão e, em seguida, selecione [!UICONTROL Configure] para visualizar e alterar as configurações da extensão. Para obter mais informações, consulte a seção em [adicionando uma nova extensão](#add-a-new-extension) para obter informações sobre opções de extensão.
 
 >[!IMPORTANT]
 >
 >As alterações não entrarão em vigor até serem [publicadas](../../publishing/overview.md).
 
-Por padrão, a Adobe fornece extensões que oferecem suporte a integrações comuns. As extensões podem ser modificadas com configurações personalizadas. Configurações são fornecidas por meio das extensões. Para criar uma configuração, selecione o cartão de extensão e, em seguida, selecione **[!UICONTROL Adicionar nova configuração]**.
+Por padrão, a Adobe fornece extensões que oferecem suporte a integrações comuns. As extensões podem ser modificadas com configurações personalizadas. Configurações são fornecidas por meio das extensões. Para criar uma configuração, selecione o cartão de extensão e **[!UICONTROL Add New Configuration]**.
 
 ## Catálogo de extensões
 
@@ -51,7 +47,7 @@ A página Extensões fornece três exibições:
 
   Mostra as atualizações de extensões instaladas.
 
-Selecione **[!UICONTROL Extensões]** para ver todas as extensões instaladas. Você também pode usar o catálogo para ver uma lista de todas as extensões disponíveis e quais extensões têm atualizações disponíveis.
+Selecione **[!UICONTROL Extensions]** para visualizar todas as extensões instaladas. Você também pode usar o catálogo para ver uma lista de todas as extensões disponíveis e quais extensões têm atualizações disponíveis.
 
 Consulte [Referência de extensões](../../../extensions/client/overview.md) para obter detalhes sobre as extensões de propriedade da Adobe.
 
@@ -63,7 +59,7 @@ As tags são altamente extensíveis. Extensões adicionam funcionalidade importa
 >
 >Use o na ajuda do produto, no painel direito, para saber mais sobre extensões e visualizar os recursos adicionais disponíveis.
 
-1. Na página de visão geral de uma propriedade, abra a guia **[!UICONTROL Extensões]**.
+1. Na página de visão geral de uma propriedade, abra a guia **[!UICONTROL Extensions]**.
 1. Selecione uma extensão.
 
    ![Guia Catálogo mostrando as principais extensões na guia Extensões.](../../../images/extensions.png)
@@ -84,7 +80,7 @@ Ao criar ou editar elementos, você pode salvar e construir sua [biblioteca ativ
 
 ## Configurar uma extensão
 
-Passe o mouse sobre uma extensão instalada e selecione **[!UICONTROL Configurar]**.
+Passe o mouse sobre uma extensão instalada e selecione **[!UICONTROL Configure]**.
 
 >[!NOTE]
 >

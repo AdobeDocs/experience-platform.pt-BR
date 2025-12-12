@@ -2,18 +2,14 @@
 title: Notas de versão da extensão de rastreamento de vídeo do YouTube
 description: As notas de versão mais recentes da extensão de tag de rastreamento de vídeo do YouTube na Adobe Experience Platform.
 exl-id: 5c680b1d-3970-42ed-9956-e78ead7b3662
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 86%
+source-wordcount: '93'
+ht-degree: 100%
 
 ---
 
 # Notas de versão da extensão de rastreamento de vídeo do YouTube
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 ## 4 de junho de 2021
 

@@ -2,18 +2,14 @@
 title: Visão geral da extensão de string do produto Adobe Analytics
 description: Saiba mais sobre a extensão de tag da string do produto do Adobe Analytics na Adobe Experience Platform.
 exl-id: a49feb4e-f166-41d2-9f85-639f6ff8bb8f
-source-git-commit: 36ca1e63c043baa776f27b627cdbe493b2ced674
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '516'
-ht-degree: 96%
+source-wordcount: '470'
+ht-degree: 100%
 
 ---
 
 # Visão geral da extensão de string do produto Adobe Analytics
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A variável dos produtos `products` acompanha a forma como usuários interagem com os produtos de seu site. Por exemplo, a variável `products` pode rastrear quantas vezes um produto é exibido, adicionado ao carrinho, passado pelo checkout e adquirido. Ela também pode rastrear a eficácia relativa de categorias de comercialização de seu site.
 
@@ -71,7 +67,7 @@ digitalData.transaction.item.productInfo.productName
 
 ### Tipo de preço
 
-O parâmetro `price` na string [!DNL Adobe Analytics] do produto deve refletir o preço total do número de unidades compradas, não o preço unitário, desse produto. Ao ativar o campo Preço na ação de extensão, você deve especificar se a camada de dados expõe o preço total ou o preço unitário. Ao usar o preço unitário, a extensão [!DNL Adobe Analytics Product String] multiplica automaticamente o preço unitário pela quantidade para obter o preço total e definir a string do produto corretamente.
+O parâmetro `price` na string [!DNL Adobe Analytics] do produto deve refletir o preço total do número de unidades compradas, não o preço unitário, desse produto. Ao habilitar o campo Preço na ação de extensão, você deve especificar se a camada de dados expõe o preço total ou o preço unitário. Ao usar o preço unitário, a extensão [!DNL Adobe Analytics Product String] multiplica automaticamente o preço unitário pela quantidade para obter o preço total e definir a string do produto corretamente.
 
 ![Tipo de preço](./images/screenshot-price-type.png)
 
@@ -81,7 +77,7 @@ O parâmetro `price` na string [!DNL Adobe Analytics] do produto deve refletir o
 
 Se sua implementação usar eventos personalizados ou eVars de comercialização, siga estas etapas:
 
-1. Clique no botão associado **[!UICONTROL Adicionar]**.
+1. Selecione o botão **[!UICONTROL Add]** associado.
 1. Escolha o evento ou eVar que precisa definir na lista suspensa.
 1. Insira o caminho para a variável de camada de dados apropriada usando a mesma sintaxe descrita acima.
 

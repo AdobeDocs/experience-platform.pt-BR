@@ -2,18 +2,14 @@
 title: Implantar tags do JavaScript para gerenciar o consentimento do cliente
 description: Saiba como gerenciar sinais de aceitação e recusa do cliente para várias soluções de Adobe no Adobe Experience Platform.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '565'
 ht-degree: 94%
 
 ---
 
 # Implantar tags do JavaScript para gerenciar o consentimento do cliente
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As regulamentações legais de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR), exigem que as empresas consigam gerenciar o consentimento de seus usuários. Os clientes da Adobe podem exigir a aceitação dos visitantes antes que as soluções da Adobe sejam executadas para qualquer visitante. Os visitantes devem ter a capacidade de gerenciar seu status de participação e não participação.
 

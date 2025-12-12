@@ -2,9 +2,9 @@
 title: Implantação assíncrona
 description: Saiba como implantar bibliotecas de tag da Adobe Experience Platform de forma assíncrona em seu site.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1001'
 ht-degree: 98%
 
 ---
@@ -15,10 +15,6 @@ ht-degree: 98%
 >id="platform_tags_asynchronous_deployment"
 >title="Implantação assíncrona"
 >abstract="Se essa opção estiver habilitada, quando esta tag de script for analisada, o navegador começará a carregar o arquivo JavaScript, mas em vez de esperar que a biblioteca seja carregada e executada, ele continuará a analisar e renderizar o restante do documento. Isso pode melhorar o desempenho da página da Web, mas tem implicações importantes sobre como determinadas regras são executadas. Consulte a documentação para obter mais detalhes."
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A implantação de desempenho e não de bloqueio das bibliotecas JavaScript necessárias a nossos produtos é cada vez mais importante para os usuários da Adobe Experience Cloud. Ferramentas como o [[!DNL Google PageSpeed]](https://developers.google.com/speed/pagespeed/insights/) recomendam que os usuários alterem a forma como implantam as bibliotecas da Adobe em seus sites. Este artigo explica como usar as bibliotecas JavaScript da Adobe de forma assíncrona.
 

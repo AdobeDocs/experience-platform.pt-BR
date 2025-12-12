@@ -3,10 +3,10 @@ title: Introdução ao encaminhamento de eventos
 description: Siga este tutorial passo a passo para começar a usar o encaminhamento de eventos na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '892'
-ht-degree: 71%
+source-wordcount: '809'
+ht-degree: 67%
 
 ---
 
@@ -15,10 +15,6 @@ ht-degree: 71%
 >[!NOTE]
 >
 >O encaminhamento de eventos é um recurso pago incluído como parte das ofertas de Conexões da Adobe Real-Time Customer Data Platform, Prime ou Ultimate.
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para usar a Adobe Experience Platform, os dados devem ser enviados à borda da rede da Adobe Experience Platform usando uma ou mais das três seguintes opções:
 
@@ -42,11 +38,11 @@ Depois de enviar dados para a rede de borda, você pode alternar entre as soluç
 
 Na Adobe Experience Platform, crie seu esquema.
 
-1. Crie um esquema selecionando **[!UICONTROL Esquemas]** > **[!UICONTROL Criar esquema]** e escolhendo a opção **[!UICONTROL XDM ExperienceEvent]**.
+1. Crie um novo esquema selecionando **[!UICONTROL Schemas]** > **[!UICONTROL Create Schema]** e a opção **[!UICONTROL XDM ExperienceEvent]**.
 
 1. Dê um nome e uma breve descrição ao esquema.
 
-1. Você pode adicionar o campo &quot;Detalhes da Web do ExperienceEvent&quot; selecionando **[!UICONTROL Adicionar]** ao lado de **[!UICONTROL Grupos do Campo]**.
+1. Você pode adicionar o campo &quot;Detalhes da Web do ExperienceEvent&quot; selecionando **[!UICONTROL Add]** ao lado de **[!UICONTROL Field Groups]**.
 
    >[!NOTE]
    >
@@ -58,18 +54,18 @@ Para obter mais informações sobre esquemas, consulte [Ajuda do sistema do Expe
 
 ## Criar uma propriedade de encaminhamento de evento
 
-No espaço de trabalho **[!UICONTROL Marcas]**, crie uma propriedade do tipo **[!UICONTROL Edge]**.
+No espaço de trabalho **[!UICONTROL Tags]**, crie uma propriedade do tipo **[!UICONTROL Edge]**.
 
-1. Selecione **[!UICONTROL Nova propriedade]**.
+1. Selecione **[!UICONTROL New Property]**.
 
 1. Nomeie a propriedade.
 
 1. Escolha o tipo de plataforma &quot;Edge&quot;.
 
-1. Selecione **[!UICONTROL Salvar]**.
+1. Selecione **[!UICONTROL Save]**.
 
-Depois de criar a propriedade, vá para a guia **[!UICONTROL Ambientes]** da nova propriedade e
-anote as IDs de ambiente. Se a Organização do Adobe usada na sequência de dados for diferente da Organização do Adobe usada no encaminhamento de eventos, será possível copiar a ID do ambiente da guia **[!UICONTROL Ambientes]** e colá-la ao criar uma sequência de dados. Caso contrário, você pode selecionar o ambiente em um menu suspenso.
+Depois de criar a propriedade, vá para a guia **[!UICONTROL Environments]** da nova propriedade e
+anote as IDs de ambiente. Se a Organização do Adobe usada no fluxo de dados for diferente da Organização do Adobe usada no encaminhamento de eventos, será possível copiar a ID do ambiente da guia **[!UICONTROL Environments]** e colá-la ao criar um fluxo de dados. Caso contrário, você pode selecionar o ambiente em um menu suspenso.
 
 ## Criar um fluxo de dados
 
@@ -80,9 +76,9 @@ Para criar o fluxo de dados na Adobe Experience Platform, use a ID de ambiente g
 1. Nomeie a configuração e forneça uma descrição opcional.
 A descrição ajuda a identificar configurações em uma lista de várias configurações.
 
-1. Selecione **[!UICONTROL Salvar]**.
+1. Selecione **[!UICONTROL Save]**.
 
-## Ativar o encaminhamento de eventos {#enable-event-forwarding}
+## Habilitar o encaminhamento de eventos {#enable-event-forwarding}
 
 Em seguida, configure o Edge Network para enviar dados ao encaminhamento de eventos e a outros produtos da Adobe.
 
@@ -90,7 +86,7 @@ Em seguida, configure o Edge Network para enviar dados ao encaminhamento de even
 
 1. Selecione Desenvolvimento, Produção ou Ambiente de preparo.
 
-   Ou, para enviar dados a um ambiente de encaminhamento de eventos fora da organização da Adobe, selecione **[!UICONTROL Alternar para o modo avançado]** e cole uma ID. A ID é fornecida quando você cria uma propriedade de encaminhamento de eventos.
+   Ou, para enviar dados a um ambiente de encaminhamento de eventos fora da organização da Adobe, selecione **[!UICONTROL Switch to Advanced Mode]** e cole em uma ID. A ID é fornecida quando você cria uma propriedade de encaminhamento de eventos.
 
 1. Ative as ferramentas necessárias e configure conforme necessário.
 
@@ -102,7 +98,7 @@ Depois de configurar, anote as IDs de ambiente para a nova propriedade.
 
 ## Configure a extensão Experience Platform Web SDK para enviar dados ao fluxo de dados criado anteriormente
 
-Crie a propriedade no espaço de trabalho **[!UICONTROL Tags]**, navegue até **[!UICONTROL Extensões]** e selecione a extensão Experience Platform Web SDK no catálogo para configurá-la e instalá-la.
+Crie sua propriedade no espaço de trabalho **[!UICONTROL Tags]**, navegue até **[!UICONTROL Extensions]** e selecione a extensão Experience Platform Web SDK no catálogo para configurá-la e instalá-la.
 
 Consulte a [documentação de extensão do Web SDK](../../extensions/client/web-sdk/overview.md) para obter detalhes sobre as opções de configuração.
 
@@ -112,17 +108,17 @@ Depois que tudo estiver configurado, crie definições de dados, regras e assim 
 
 Crie uma regra de carregamento de página usando a extensão do Experience Platform Web SDK e o tipo de ação &quot;Enviar evento&quot;:
 
-1. Abra a guia **[!UICONTROL Regras]** e selecione **[!UICONTROL Criar nova regra]**.
+1. Abra a guia **[!UICONTROL Rules]** e selecione **[!UICONTROL Create New Rule]**.
 
 1. Atribua um nome à regra.
 
-1. Selecione **[!UICONTROL Adicionar eventos]**.
+1. Selecione **[!UICONTROL Events Add]**.
 
-1. Adicione um evento escolhendo uma extensão e um dos tipos de eventos disponíveis para essa extensão e, em seguida, defina as configurações para o evento. Por exemplo, selecione **[!UICONTROL Principal - Janela carregada]**.
+1. Adicione um evento escolhendo uma extensão e um dos tipos de eventos disponíveis para essa extensão e, em seguida, defina as configurações para o evento. Por exemplo, selecione **[!UICONTROL Core - Window Loaded]**.
 
-1. Adicione uma ação usando a extensão Experience Platform Web SDK. Selecione **[!UICONTROL Enviar evento]** na lista **[!UICONTROL Tipo de ação]**, selecione a instância desejada (instância do Alloy configurada anteriormente) e, em seguida, selecione um elemento de dados para adicionar ao bloco de dados XDM dentro da ocorrência do Alloy.
+1. Adicione uma ação usando a extensão Experience Platform Web SDK. Selecione **[!UICONTROL Send Event]** na lista **[!UICONTROL Action Type]**, selecione a Instância desejada (instância Alloy configurada anteriormente) e, em seguida, selecione um elemento de dados para adicionar ao Bloco de dados do XDM no hit Alloy.
 
-1. Deixe o restante das configurações como padrão para este exemplo e selecione **[!UICONTROL Salvar]**.
+1. Deixe o restante das configurações como padrão para este exemplo e selecione **[!UICONTROL Save]**.
 
 Em outro exemplo, você pode criar uma regra que enviará a camada de dados para o Edge se o usuário passar o mouse sobre um botão especificado.
 

@@ -2,18 +2,14 @@
 title: Visão geral da extensão de demonstração da Adobe Experience Platform
 description: Saiba mais sobre a extensão de demonstração da Adobe Experience Platform no Adobe Experience Platform.
 exl-id: 4bafa132-0d21-4140-ab46-f09cc20bce6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 99%
+source-wordcount: '1009'
+ht-degree: 97%
 
 ---
 
 # Extensão demo do Adobe Experience Platform
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 >[!NOTE]
 >
@@ -37,21 +33,21 @@ Os recursos desta extensão estão sendo transmitidos para uma nova extensão. V
 
 Esta seção fornece uma referência para as opções disponíveis ao configurar a extensão da Adobe Experience Platform.
 
-Se a extensão da Adobe Experience Platform ainda não tiver sido instalada, abra a propriedade e selecione **[!UICONTROL Extensões > Catálogo]**, passe o mouse sobre a extensão da Adobe Experience Platform e selecione **[!UICONTROL Instalar]**.
+Se a extensão da Adobe Experience Platform ainda não tiver sido instalada, abra a propriedade e selecione **[!UICONTROL Extensions > Catalog]**, passe o mouse sobre a extensão da Adobe Experience Platform e selecione **[!UICONTROL Install]**.
 
-Para configurar a extensão, abra a guia [!UICONTROL Extensões], passe o mouse sobre a extensão e selecione **[!UICONTROL Configurar]**.
+Para configurar a extensão, abra a guia [!UICONTROL Extensions], passe o mouse sobre a extensão e selecione **[!UICONTROL Configure]**.
 
 ![](../../../images/adobe-experience-platform-extension-configuration.png)
 
 ### Conexão de transmissão
 
-Escolher uma conexão de transmissão é a primeira etapa para iniciar a transmissão de dados para a Adobe Experience Platform. Você pode selecionar uma opção na caixa de combinação com as conexões de transmissão. A conexão de transmissão é um campo obrigatório. Caso ainda não tenha uma conexão de streaming, você poderá criar uma selecionando o botão **[!UICONTROL Criar uma conexão de streaming]**.
+Escolher uma conexão de transmissão é a primeira etapa para iniciar a transmissão de dados para a Adobe Experience Platform. Você pode selecionar uma opção na caixa de combinação com as conexões de transmissão. A conexão de transmissão é um campo obrigatório. Caso ainda não tenha uma conexão de streaming criada, você poderá criar uma selecionando o botão **[!UICONTROL Create a streaming connection]**.
 
-Se você selecionar **[!UICONTROL Criar uma conexão de streaming]**, uma janela modal será exibida.
+Se você selecionar **[!UICONTROL Create a streaming connection]**, uma janela modal será exibida.
 
 ![](../../../images/adobe-experienc-platform-create-streaming-connection.png)
 
-A modal contém campos com valores pré-preenchidos que podem ser alterados para atender às suas necessidades. Se você planejar criar mais de uma conexão de streaming, esteja ciente de que o campo **[!UICONTROL Fonte de dados]** precisará ser exclusivo. Tentar criar outra conexão de streaming usando uma **[!UICONTROL Fonte de dados]** já em uso em outra conexão causará uma falha.
+A modal contém campos com valores pré-preenchidos que podem ser alterados para atender às suas necessidades. Se você planeja criar mais de uma conexão de streaming, esteja ciente de que o campo **[!UICONTROL Data Source]** precisa ser exclusivo. Tentar criar outra conexão de transmissão usando uma **[!UICONTROL Data Source]** já usada em outra conexão não dará certo.
 
 Depois de ter selecionado um endpoint de transmissão, você será o URL e a fonte do endpoint de transmissão.
 
@@ -95,7 +91,7 @@ Esquemas de registro de dados e esquemas de dados de séries temporais podem con
 
 Os campos de identidade podem ser definidos de duas formas dentro do esquema:
 
-1. Os esquemas Gravar e Série de tempo contêm um campo especial chamado `xdm:identityMap` que pode conter um mapa de identidades.
+1. Os esquemas Gravar e Série temporal contêm um campo especial chamado `xdm:identityMap` que pode conter um mapa de identidades.
 1. Os campos principais podem ser marcados como campos de &quot;identidade&quot; dentro do esquema.
 
 ### Campos de identidade dentro da extensão da Adobe Experience Platform

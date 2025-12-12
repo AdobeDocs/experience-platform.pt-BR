@@ -2,18 +2,14 @@
 title: Tipos de ação para extensões de borda
 description: Saiba como definir um módulo de biblioteca do tipo ação para uma extensão de tag em uma propriedade de borda.
 exl-id: c0b058aa-f0fe-4fd8-a873-018482c3e4db
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '332'
 ht-degree: 65%
 
 ---
 
 # Tipos de ação para extensões de borda
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Em uma regra de tag, uma ação é algo que é executado depois que as condições da regra passam na avaliação. Os tipos de ação são fornecidos por extensões e seus efeitos são totalmente definidos pelo autor da extensão.
 
@@ -29,7 +25,7 @@ Este documento aborda como definir tipos de ação para uma extensão de borda n
 
 Os tipos de ação geralmente consistem no seguinte:
 
-1. Uma visualização mostrada na interface do usuário do Experience Platform e na interface da Coleção de dados que permite aos usuários modificar as configurações da ação.
+1. Uma visualização mostrada na interface do usuário do Experience Platform e na interface da Coleção de dados que permite que os usuários modifiquem as configurações da ação.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tag para interpretar as configurações e executar uma ação.
 
 Por exemplo, um módulo para encaminhar alguns dados a um endpoint de terceiros pode ter esta aparência.

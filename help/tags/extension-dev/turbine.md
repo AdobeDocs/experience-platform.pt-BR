@@ -2,18 +2,14 @@
 title: Variável sem turbina
 description: Saiba mais sobre o objeto turbine, uma variável livre que fornece informações e utilitários específicos para o tempo de execução de tag da Adobe Experience Platform.
 exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
-source-git-commit: d81c4c8630598597ec4e253ef5be9f26c8987203
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 86%
+source-wordcount: '561'
+ht-degree: 88%
 
 ---
 
 # Variável sem turbina
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O objeto `turbine` é uma &quot;variável livre&quot; no escopo dos módulos de biblioteca da extensão. Ela fornece informações e utilitários específicos para o tempo de execução de tag da Adobe Experience Platform e está sempre disponível para módulos de biblioteca sem usar `require()`.
 
@@ -118,7 +114,7 @@ O utilitário de registro é usado para registrar mensagens no console. As mensa
 * `logger.info(message: string)`: registra uma mensagem informativa no console.
 * `logger.warn(message: string)`: registra uma mensagem de aviso no console.
 * `logger.error(message: string)`: registra uma mensagem de erro no console.
-* `logger.debug(message: string)`: registra uma mensagem de depuração no console. (Visível somente quando o registro `verbose` estiver ativado no console do navegador.)
+* `logger.debug(message: string)`: registra uma mensagem de depuração no console. (Visível somente quando o registro `verbose` estiver habilitado no console do navegador.)
 * `logger.deprecation(message: string)`: registra uma mensagem de aviso no console, independentemente de a depuração de tag estar ou não habilitada pelo usuário.
 
 ## `onDebugChanged`

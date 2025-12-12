@@ -2,24 +2,20 @@
 title: Visão geral da extensão do Marketo Munchkin
 description: Saiba mais sobre a extensão de tag Marketo Munchkin na Adobe Experience Platform.
 exl-id: 8efc5203-91fc-4e89-be8f-74bf1aeeee5f
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 89%
+source-wordcount: '162'
+ht-degree: 97%
 
 ---
 
 # Visão geral da extensão do Marketo Munchkin
 
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
-
 Use essa extensão para integrar o código de rastreamento JavaScript [!DNL Marketo Munchkin] com sua propriedade. O JavaScript [!DNL Marketo Munchkin] permite rastrear as visitas da página do usuário final e os cliques nas páginas de destino do Marketo e páginas da Web externas.
 
 ## Instalar a extensão do Marketo Munchkin
 
-Se a extensão [!DNL Marketo Munchkin] ainda não estiver instalada, abra a propriedade e selecione **[!UICONTROL Extensões > Catálogo]**, passe o mouse sobre a extensão [!DNL Marketo Munchkin] e selecione **[!UICONTROL Instalar]**.
+Se a extensão [!DNL Marketo Munchkin] ainda não tiver sido instalada, abra a propriedade e selecione **[!UICONTROL Extensions > Catalog]**, passe o mouse sobre a extensão [!DNL Marketo Munchkin] e selecione **[!UICONTROL Install]**.
 
 Esta extensão não tem a configuração necessária.
 

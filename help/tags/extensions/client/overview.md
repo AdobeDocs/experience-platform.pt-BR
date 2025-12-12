@@ -2,18 +2,14 @@
 title: Referência a extensões de tag
 description: Encontre a documentação de extensões de tag na Adobe Experience Platform.
 exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '472'
-ht-degree: 12%
+source-wordcount: '427'
+ht-degree: 2%
 
 ---
 
 # Referência a extensões de tag
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Esta é uma lista de documentação para extensões de tag do lado do cliente. Para obter uma lista de extensões do lado do servidor disponíveis, consulte a [referência de extensões do encaminhamento de eventos](../server/overview.md).
 

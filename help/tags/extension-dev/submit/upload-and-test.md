@@ -2,18 +2,14 @@
 title: Fazer upload e implementar testes completos para uma extensão
 description: Saiba como validar, carregar e testar a extensão na Adobe Experience Platform.
 exl-id: 6176a9e1-fa06-447e-a080-42a67826ed9e
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2344'
+source-wordcount: '2299'
 ht-degree: 84%
 
 ---
 
 # Fazer upload e implementar testes completos
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Para testar extensões de tags na Adobe Experience Platform, use a API de tags e/ou as ferramentas de linha de comando para fazer upload dos pacotes de extensão. Em seguida, use a interface do usuário do Experience Platform ou da Coleção de dados para instalar o pacote de extensão em uma propriedade e usar seus recursos em uma build e uma biblioteca de tags.
 
@@ -63,8 +59,8 @@ npx @adobe/reactor-uploader
 
 >[!NOTE]
 > Por padrão, o carregador espera credenciais do Adobe I/O para um fluxo Oauth de servidor para servidor. As credenciais `jwt-auth` herdadas
-> &#x200B;> O pode ser usado executando o `npx @adobe/reactor-uploader@v5.2.0` até a desativação em 1º de janeiro de 2025. Os parâmetros necessários
-> &#x200B;> para executar a versão `jwt-auth` pode ser encontrado [aqui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
+> O pode ser usado executando o `npx @adobe/reactor-uploader@v5.2.0` até a desativação em 1º de janeiro de 2025. Os parâmetros necessários
+> para executar a versão `jwt-auth` pode ser encontrado [aqui](https://github.com/adobe/reactor-uploader/tree/cdc27f4f0e9fa3136b8cd5ca8c7271428b842452).
 
 O carregador requer que você insira apenas algumas informações. Os `clientId` e `clientSecret` podem ser recuperados do console do Adobe I/O. Navegue até a [página Integrações](https://console.adobe.io/integrations) no console do I/O. Selecione a organização correta na lista suspensa, localize a integração apropriada e selecione **[!UICONTROL View]**.
 

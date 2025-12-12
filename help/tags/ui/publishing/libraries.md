@@ -2,18 +2,14 @@
 title: Bibliotecas
 description: Saiba mais sobre o conceito de bibliotecas de tags e como elas funcionam na Adobe Experience Platform.
 exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '711'
 ht-degree: 97%
 
 ---
 
 # Bibliotecas
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Uma biblioteca é um conjunto de instruções sobre como as extensões, os elementos de dados e as regras interagem entre si após a implantação. Ao criar uma biblioteca, especifique as alterações que você deseja fazer na biblioteca. No momento da criação, essas alterações são combinadas com tudo o que foi enviado, aprovado ou publicado nas bibliotecas anteriores.
 
@@ -29,18 +25,18 @@ As bibliotecas devem ser atribuídas a um ambiente antes de serem compiladas em 
 
 Para criar uma biblioteca, conclua as etapas a seguir.
 
-1. Abra a guia [!UICONTROL Publicação].
+1. Abra a guia [!UICONTROL Publishing].
 
-   A página [!UICONTROL Publicação] lista as bibliotecas de Desenvolvimento e fornece os meios de enviá-las para aprovação, movê-las para o armazenamento temporário ou publicá-las para produção.
+   A página [!UICONTROL Publishing] lista as bibliotecas de Desenvolvimento e fornece os meios para enviá-las para aprovação, movê-las para o armazenamento temporário ou publicá-las para produção.
 
-1. Selecione **[!UICONTROL Adicionar nova biblioteca]**.
+1. Selecione **[!UICONTROL Add New Library]**.
 
    ![](../../images/library-create.jpg)
 
 1. Dê um nome para a biblioteca.
 1. Atribua a biblioteca a um ambiente de Desenvolvimento.
 1. Adicione uma alteração à biblioteca.
-Para adicionar um item, selecione **[!UICONTROL Adicionar uma alteração]** e escolha os itens que deseja adicionar. Qualquer item editado ou excluído está disponível para ser adicionado à biblioteca escolhida.
+Para adicionar um item, selecione **[!UICONTROL Add a Change]** e escolha os itens que deseja adicionar. Qualquer item editado ou excluído está disponível para ser adicionado à biblioteca escolhida.
 
    ![](../../images/library-add-change.jpg)
 
@@ -50,8 +46,8 @@ Para adicionar um item, selecione **[!UICONTROL Adicionar uma alteração]** e e
    * Elementos de dados
    * Configurações de extensão
 
-1. Para adicionar recursos que foram alterados, selecione **[!UICONTROL Adicionar todos os recursos alterados]**.
-1. Selecione **[!UICONTROL Salvar]** ou **[!UICONTROL Salvar e criar para desenvolvimento]**.
+1. Para adicionar recursos que foram alterados, selecione **[!UICONTROL Add All Changed Resources]**.
+1. Selecione **[!UICONTROL Save]** ou **[!UICONTROL Save and Build for Development]**.
 
    A implantação compila uma criação e a implanta no ambiente atribuído.
 
@@ -73,8 +69,8 @@ Para adicionar a uma biblioteca, conclua as etapas a seguir.
 
 1. Instale as [extensões](../managing-resources/extensions/overview.md) que deseja adicionar.
 1. Crie os [elementos de dados](../managing-resources/data-elements.md) e as regras que deseja adicionar.
-1. Abra a guia **[!UICONTROL Publicação]**.
-1. Selecione a [biblioteca](libraries.md) que você deseja alterar e selecione **[!UICONTROL Editar]**.
+1. Abra a guia **[!UICONTROL Publishing]**.
+1. Selecione a [biblioteca](libraries.md) que deseja alterar e, em seguida, selecione **[!UICONTROL Edit]**.
 1. Use as regras, os elementos de dados e os botões de extensões para selecionar os itens que deseja adicionar à biblioteca.
 1. Salve as alterações.
 
@@ -90,7 +86,7 @@ Para remover um item de uma biblioteca, você deve desativá-lo e publicar o est
 
 1. Desabilite as extensões que deseja remover, juntamente com os elementos de dados e as regras que dependem dessas extensões.
 1. Desabilite os elementos de dados e as regras que deseja remover.
-1. Abra a guia **[!UICONTROL Publicação]**.
+1. Abra a guia **[!UICONTROL Publishing]**.
 1. Selecione a biblioteca que deseja alterar.
 1. Use as regras, os elementos de dados e os botões de extensões para selecionar os itens desabilitados que deseja remover da biblioteca.
 1. Salve as alterações.
@@ -99,7 +95,7 @@ Para remover um item de uma biblioteca, você deve desativá-lo e publicar o est
 
 Para editar as opções da biblioteca, conclua as etapas a seguir.
 
-1. Escolha uma biblioteca e selecione **[!UICONTROL Editar]** para ver as alterações da biblioteca. Todas as alterações são mostradas na lista [!UICONTROL Conteúdo da biblioteca].
+1. Escolha uma biblioteca e selecione **[!UICONTROL Edit]** para exibir as alterações nela. Todas as alterações são mostradas na lista [!UICONTROL Library Contents].
 
    ![](../../images/library-contents.jpg)
 
@@ -108,14 +104,14 @@ Para editar as opções da biblioteca, conclua as etapas a seguir.
    ![](../../images/library-contents-revision.jpg)
 
 1. Selecione se deseja mostrar **todos** os itens ou os itens **alterados**.
-1. Selecione a revisão e clique em **[!UICONTROL Selecionar revisão]**.
-1. Selecione **[!UICONTROL Adicionar uma alteração]** ou **[!UICONTROL Adicionar todos os recursos alterados]**.
+1. Selecione a revisão e, em seguida, **[!UICONTROL Select Revision]**.
+1. Selecione **[!UICONTROL Add a Change]** ou **[!UICONTROL Add All Changed Resources]**.
 
 ## Biblioteca ativa {#active-library}
 
 As bibliotecas encapsulam um conjunto de alterações que você gostaria de fazer no código implantado. A Biblioteca ativa facilita isso, permitindo que você repita rapidamente as alterações e veja o impacto.
 
-Extensões, regras e elementos de dados agora podem ser salvos diretamente na biblioteca em que você está trabalhando. Se necessário, também é possível criar um novo build ou até mesmo uma nova biblioteca na lista suspensa [!UICONTROL Biblioteca ativa].
+Extensões, regras e elementos de dados agora podem ser salvos diretamente na biblioteca em que você está trabalhando. Se necessário, também é possível criar uma nova build ou até mesmo uma nova biblioteca na lista suspensa [!UICONTROL Active Library].
 
 A lista a seguir fornece mais informações sobre o gerenciamento de uma biblioteca ativa.
 

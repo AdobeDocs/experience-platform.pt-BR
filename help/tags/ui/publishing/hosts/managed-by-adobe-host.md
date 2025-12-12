@@ -2,18 +2,14 @@
 title: Visão geral dos hosts gerenciados pela Adobe
 description: Saiba mais sobre a opção de hospedagem padrão para implantar builds de biblioteca de tags na Adobe Experience Platform.
 exl-id: 9042c313-b0d3-4f6e-963d-0051d760fd16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1129'
 ht-degree: 82%
 
 ---
 
 # Visão geral dos hosts gerenciados pela Adobe
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Hosts gerenciados pela Adobe são a configuração padrão do host para implantar builds de biblioteca de tags na Adobe Experience Platform. Quando você cria uma nova propriedade por meio da interface da coleção de dados, um host padrão gerenciado pela Adobe é criado para você.
 
@@ -84,7 +80,7 @@ O tempo de expiração da build de biblioteca em cache do navegador (determinado
 | Armazenamento temporário | `max-age=0, no-cache, no-store` |
 | Produção | `max-age=3600` |
 
-Como a tabela acima indica, o armazenamento em cache do navegador não é compatível com ambientes de preparo e desenvolvimento. Dessa forma, você não deve usar os códigos integrados de desenvolvimento ou armazenamento temporário em contextos de alto tráfego ou produção.
+Como a tabela acima indica, o armazenamento em cache do navegador não é compatível com ambientes de preparo e desenvolvimento. Dessa forma, você não deve usar os códigos incorporados de desenvolvimento ou armazenamento temporário em contextos de alto tráfego ou produção.
 
 Os cabeçalhos de controle de cache são aplicados apenas ao build da biblioteca principal. Todos os sub-recursos abaixo da biblioteca principal são sempre considerados novos e, portanto, não há necessidade de armazená-los em cache no navegador.
 
@@ -96,8 +92,8 @@ Ao criar uma propriedade na interface do usuário do Experience Platform ou na i
 >
 >Se o host padrão gerenciado pela Adobe não for desatribuído de todos os ambientes, o host poderá ser excluído. Se você quiser voltar para um host gerenciado pela Adobe depois de fazer isso, crie um novo host através das seguintes etapas:
 >
->1. Selecione a guia **[!UICONTROL Hosts]** na propriedade e selecione **[!UICONTROL Adicionar host]**.
->1. Forneça um nome para o host, selecione **[!UICONTROL Gerenciado pela Adobe]** como tipo de host e selecione **[!UICONTROL Salvar]**.
+>1. Selecione a guia **[!UICONTROL Hosts]** em sua propriedade e, em seguida, selecione **[!UICONTROL Add Host]**.
+>1. Forneça um nome para o host, selecione **[!UICONTROL Managed by Adobe]** como o tipo de host e selecione **[!UICONTROL Save]**.
 >
 >Em seguida, é possível atribuir novamente seus ambientes ao host gerenciado pela Adobe, conforme desejado.
 

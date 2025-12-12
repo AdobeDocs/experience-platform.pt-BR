@@ -2,18 +2,14 @@
 title: Republicar uma biblioteca
 description: Saiba como republicar uma biblioteca de tag anterior na Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '651'
-ht-degree: 81%
+source-wordcount: '604'
+ht-degree: 80%
 
 ---
 
 # Republicar uma biblioteca
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As cinco bibliotecas mais recentes que foram publicadas no seu ambiente de produção em uma propriedade da Web estão disponíveis para posterior recuperação. Esse recurso é útil quando você encontra um erro na biblioteca de produção e precisa revertê-la para um estado em boas condições imediatamente.
 
@@ -57,7 +53,7 @@ Na tela Publicação:
 
 1. Localize na coluna Publicado a biblioteca que você deseja republicar.
 1. Selecione as reticências (`...`) no canto superior direito do cartão Biblioteca.
-1. Selecione **[!UICONTROL Republicar]**.
+1. Selecione **[!UICONTROL Republish]**.
 
 ## Baixar
 

@@ -2,18 +2,14 @@
 title: Atualizações de extensão
 description: Saiba como as atualizações de extensão são empacotadas e representadas no catálogo de extensões.
 exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 97%
+source-wordcount: '620'
+ht-degree: 100%
 
 ---
 
 # Atualizações de extensão
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Os desenvolvedores de extensão adicionam continuamente novos recursos a suas extensões e corrigem erros com frequência. Essas atualizações são colocadas em novas versões de uma extensão e disponibilizadas no catálogo de extensões como atualizações.
 
@@ -25,7 +21,7 @@ Quando você instala uma extensão na sua propriedade, a versão disponível atu
 
 ## Notificações de atualização
 
-Quando tiver instalado uma extensão na sua propriedade e uma versão mais nova estiver disponível no catálogo, você verá um botão [!UICONTROL Atualizar] no cartão de extensão ao visualizar a página Extensões instaladas.
+Quando tiver instalado uma extensão na sua propriedade e uma versão mais nova estiver disponível no catálogo, você verá um botão [!UICONTROL Upgrade] no cartão de extensão ao exibir a página Extensões instaladas.
 
 Você também verá um aviso ao editar os recursos fornecidos por essa extensão.
 
@@ -41,11 +37,11 @@ No momento, não há nenhum recurso para baixar sua extensão para uma versão a
 
 Instalar uma atualização é o mesmo que instalar a extensão pela primeira vez.
 
-1. Selecione **[!UICONTROL Atualizar]** para ir para a tela [!UICONTROL Configuração de extensão].
+1. Selecione **[!UICONTROL Upgrade]** para acessar a tela [!UICONTROL Extension Configuration].
 1. Faça todas as alterações de configuração que desejar.
-1. Selecione **[!UICONTROL Salvar]**.
+1. Selecione **[!UICONTROL Save]**.
 
-A atualização não é realizada de fato até que você clique em **[!UICONTROL Salvar]**. A qualquer momento antes disso, você pode selecionar [!UICONTROL Cancelar] e permanecer com a versão instalada atualmente. Clicar em **[!UICONTROL Salvar]** é o ponto sem volta.
+A atualização não é efetivamente realizada até que você clique em **[!UICONTROL Save]**. A qualquer momento antes disso, você pode selecionar [!UICONTROL Cancel] e manter a versão instalada no momento. Selecionar **[!UICONTROL Save]** é o ponto sem volta.
 
 Não são permitidas atualizações de extensão se você tiver uma biblioteca no estado `Approved` ou `Submitted`. Isso ocorre porque o próximo build deve conter a nova versão de extensão. Para uma biblioteca que é `Approved` ou `Submitted`, o próximo build é o build de produção. Ocorreria uma falha nesse build, pois ele não contém a versão mais recente, portanto, o fluxo de trabalho é publicar ou rejeitar bibliotecas no estado `Approved` ou `Submitted`, _antes_ de atualizar a extensão.
 
@@ -55,10 +51,10 @@ Depois que a extensão atualizada estiver instalada em sua propriedade, você de
 
 Além disso, adicionar a extensão atualizada à biblioteca é o mesmo que [adicionar qualquer outra alteração](../../publishing/libraries.md) a uma biblioteca.
 
-Na tela [!UICONTROL Editar biblioteca], você pode usar o botão &quot;[!UICONTROL Adicionar todos os recursos alterados]&quot; ou usar o botão &quot;[!UICONTROL Adicionar um recurso]&quot; e selecionar a extensão atualizada individualmente.
+Na tela [!UICONTROL Edit Library], você pode usar o botão “[!UICONTROL Add All Changed Resources]” ou o botão “[!UICONTROL Add a Resource]” e selecionar a extensão atualizada individualmente.
 
 >[!TIP]
 >
->Os desenvolvedores de extensão podem adicionar novos itens de configuração a suas exibições de extensão para ativar novas funcionalidades. Se você vir falhas de build depois de ter atualizado para uma nova versão de extensão e tiver isolado para falhas de build dessa extensão, a primeira coisa a fazer é acessar a página Configuração de extensão e certificar-se de salvar (mesmo se não tiver alterado nada). Em seguida, adicione a nova alteração à biblioteca e tente fazer a build novamente.
+>Os desenvolvedores de extensão podem adicionar novos itens de configuração a suas exibições de extensão para habilitar novas funcionalidades. Se você vir falhas de build depois de ter atualizado para uma nova versão de extensão e tiver isolado para falhas de build dessa extensão, a primeira coisa a fazer é acessar a página Configuração de extensão e certificar-se de salvar (mesmo se não tiver alterado nada). Em seguida, adicione a nova alteração à biblioteca e tente fazer a build novamente.
 
 Depois de ter adicionado a atualização da extensão à biblioteca, siga as etapas descritas em [Fluxo de publicação](../../publishing/publishing-flow.md) para publicar sua biblioteca na produção.

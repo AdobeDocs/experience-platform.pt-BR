@@ -2,18 +2,14 @@
 title: Módulos compartilhados em extensões da Web
 description: Saiba como definir módulos de biblioteca compartilhados para extensões da Web na Adobe Experience Platform.
 exl-id: ec013a39-966c-43f3-bc36-31198990a17e
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 71%
+source-wordcount: '218'
+ht-degree: 73%
 
 ---
 
 # Módulos compartilhados em extensões da Web
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Um módulo compartilhado é um mecanismo pelo qual você pode se comunicar com outras extensões. Por exemplo, a Extensão A pode carregar dados de forma assíncrona e disponibilizá-los para a Extensão B por meio de uma [promessa](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 

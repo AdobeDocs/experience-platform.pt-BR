@@ -2,18 +2,14 @@
 title: Visão geral da extensão do Serviço de identidade da Adobe Experience Cloud
 description: Saiba mais sobre a extensão de tag do serviço de identidade da Adobe Experience Cloud na Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '739'
 ht-degree: 95%
 
 ---
 
 # Visão geral da extensão do Serviço de identidade da Adobe Experience Cloud 
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use essa referência para obter informações sobre como configurar a extensão da Adobe Experience Cloud ID e as opções disponíveis ao usar essa extensão para criar uma regra.
 
@@ -23,9 +19,9 @@ Use essa extensão para integrar o Serviço de identidade da Experience Cloud à
 
 Esta seção fornece uma referência para as opções disponíveis ao configurar a extensão do Experience Cloud ID.
 
-Se a extensão Experience Cloud ID ainda não estiver instalada, abra a propriedade e selecione **[!UICONTROL Extensões > Catálogo]**, passe o mouse sobre a extensão Experience Cloud ID e selecione **[!UICONTROL Instalar]**.
+Se a extensão da Experience Cloud ID ainda não estiver instalada, abra a propriedade, selecione **[!UICONTROL Extensions > Catalog]**, passe o mouse sobre a extensão da Experience Cloud ID e selecione **[!UICONTROL Install]**.
 
-Para configurar a extensão, abra a guia Extensões, passe o mouse sobre a extensão e selecione **[!UICONTROL Configurar]**.
+Para configurar a extensão, abra a guia Extensões, passe o mouse sobre a extensão e selecione **[!UICONTROL Configure]**.
 
 ![](../../../images/optin.jpg)
 
@@ -41,9 +37,9 @@ Sua ID é uma string de 24 caracteres alfanuméricos, seguidos por `@AdobeOrg`. 
 
 A Experience Cloud ID não carrega se o URL corresponder a nenhum dos caminhos especificados.
 
-(Opcional) Ative o Regex se esta for uma expressão regular.
+(Opcional) Habilite o Regex se esta for uma expressão regular.
 
-Selecione **[!UICONTROL Adicionar]** para excluir outro caminho.
+Selecione **[!UICONTROL Add]** para excluir outro caminho.
 
 ### Aceitar
 
@@ -61,19 +57,19 @@ Existem três opções:
 * **Sim:** aguarda por consentimento para rastrear o visitante.
 * **Determinado uso da função no tempo de execução:** determine de maneira programada se o valor é verdadeiro ou falso durante o tempo de execução. Se você selecionar essa opção, o campo Selecionar elemento de dados ficará disponível. Selecione um elemento de dados que pode determinar a espera por consentimento. Esse elemento de dados resolve um valor booliano. Por exemplo, você pode selecionar um elemento de dados que oferece consentimento a depender de onde país do visitante está localizado na UE.
 
-**A opção Aceitar armazenamento está ativada?**
+**A opção Aceitar armazenamento está habilitada?**
 
-Se ativada, o consentimento é armazenado em um cookie primário em seu domínio. Se não estiver ativado, as configurações de consentimento serão mantidas em seu CMP ou em um cookie que você gerencia.
+Se habilitada, o consentimento é armazenado em um cookie primário em seu domínio. Se não estiver habilitado, as configurações de consentimento serão mantidas em seu CMP ou em um cookie que você gerencia.
 
 **Aceitar Domínio de cookie?**
 
-Use essa configuração opcional para especificar o domínio onde o cookie da opção Aceitar é armazenado se o armazenamento estiver ativado. Você pode inserir um domínio ou selecionar um elemento de dados que contenha o domínio.
+Use essa configuração opcional para especificar o domínio onde o cookie da opção Aceitar é armazenado se o armazenamento estiver habilitado. Você pode inserir um domínio ou selecionar um elemento de dados que contenha o domínio.
 
 **Expiração de armazenamento da opção Aceitar?**
 
-Especifique quando o cookie da opção Aceitar expira (valor em segundos) se o armazenamento estiver ativado.
+Especifique quando o cookie da opção Aceitar expira (valor em segundos) se o armazenamento estiver habilitado.
 
-Digite um número e selecione uma unidade de tempo na lista suspensa. Por exemplo, digite 2 e selecione **[!UICONTROL Semanas]**. O padrão é 13 meses.
+Digite um número e selecione uma unidade de tempo na lista suspensa. Por exemplo, digite 2 e selecione **[!UICONTROL Weeks]**. O padrão é 13 meses.
 
 **Permissões?**
 
@@ -117,5 +113,5 @@ Defina uma ou mais IDs do cliente.
    * Autenticado
    * Logout realizado
 
-1. (Opcional) Selecione **[!UICONTROL Adicionar]** para definir mais IDs de cliente.
-1. Selecione **[!UICONTROL Manter alterações]**.
+1. (Opcional) Clique em **[!UICONTROL Add]** para definir mais IDs de cliente.
+1. Selecione **[!UICONTROL Keep Changes]**.

@@ -2,18 +2,14 @@
 title: Notas de versão da Extensão do Serviço de identidade da Adobe Experience Cloud
 description: As notas de versão mais recentes da extensão de tag do Serviço de identidade da Adobe Experience Cloud na Adobe Experience Platform.
 exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 75%
+source-wordcount: '643'
+ht-degree: 76%
 
 ---
 
 # Notas de versão da extensão do Serviço de identidade da Adobe Experience Cloud
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Este documento aborda as notas de versão da extensão de tag do Adobe Experience Cloud Identity Service. Para obter as notas de versão do Experience Cloud Identity Service, consulte a [documentação do Identity Service](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=pt-BR).
 
@@ -85,7 +81,7 @@ Detalhes desses valores de atributo estão em [web.dev](https://web.dev/samesite
 
 * Sinalizador ativado `loadSSL` por padrão. Todas as chamadas para o Serviço de identidade serão ativadas `https` por padrão. Os clientes podem defini-lo como falso se quiserem chamar os Serviços de identidade em http a partir de suas páginas não ssl.
 * Atualização da função usada para detectar a versão do Internet Explorer (IE), para corrigir um problema relatado pelo ESLint.
-* Correção de bug para um problema de desempenho no Internet Explorer (IE) 11 quando a ECID recebe a pré-aprovação do opt-in e é atualizada posteriormente.
+* Correção de erro para um problema de desempenho no Internet Explorer (IE) 11 quando a ECID recebe a pré-aprovação do opt-in e é atualizada posteriormente.
 
 ## 22 de janeiro de 2020
 
@@ -148,7 +144,7 @@ Detalhes desses valores de atributo estão em [web.dev](https://web.dev/samesite
 ### Extensão do Experience Cloud ID 4.0.0
 
 * Atualização do visitor.js para 4.0
-* Adicionadas opções de configuração para o novo objeto Aceitar incorporado. Configurações do aceitação podem ser usadas para suprimir chamadas de cookie e de sinais feitas pelas soluções da Adobe para melhor suportar regulamentos, como o GDPR
+* Adicionadas opções de configuração para o novo objeto Aceitar integrado. Configurações do aceitação podem ser usadas para suprimir chamadas de cookie e de sinais feitas pelas soluções da Adobe para melhor suportar regulamentos, como o RGPD
 
   ![](../../../images/ext-mcid-opt-in.png)
 

@@ -2,18 +2,14 @@
 title: Tipos de condição para extensões da Web
 description: Saiba como definir um módulo de biblioteca do tipo condição para uma extensão de tag em uma propriedade da Web.
 exl-id: db504455-858b-4ac8-aa42-de516b0f1d5a
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '502'
-ht-degree: 69%
+source-wordcount: '457'
+ht-degree: 70%
 
 ---
 
 # Tipos de condição para extensões da Web
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 No contexto de uma regra, uma condição é avaliada após a ocorrência de um evento. Todas as condições devem retornar verdadeiro para que a regra continue a ser processada. A exceção é quando os usuários colocam as condições explicitamente em um bucket de &quot;exceção&quot;, nesse caso, todas as condições no bucket devem retornar falso para que a regra continue o processamento.
 
@@ -29,7 +25,7 @@ Este documento aborda como definir tipos de condição para uma extensão da Web
 
 Os tipos de condição geralmente consistem no seguinte:
 
-1. Uma [visualização](./views.md) mostrada na interface do usuário do Experience Platform e na interface da Coleção de dados que permite aos usuários modificar as configurações para a condição.
+1. Uma [visualização](./views.md) mostrada na interface do usuário do Experience Platform e na interface da Coleção de dados que permite que os usuários modifiquem as configurações para a condição.
 2. Um módulo de biblioteca emitido na biblioteca de tempo de execução de tag para interpretar as configurações e avaliar uma condição.
 
 Um módulo de biblioteca do tipo condição tem uma meta: avaliar se algo é verdadeiro ou falso. O que ele avalia depende de você.

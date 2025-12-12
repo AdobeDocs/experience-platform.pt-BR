@@ -2,18 +2,14 @@
 title: Visão geral da extensão do Adobe Target v2
 description: Saiba mais sobre a extensão de tag do Adobe Target v2 na Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 88%
+source-wordcount: '1298'
+ht-degree: 87%
 
 ---
 
 # Visão geral da extensão do Adobe Target v2
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use essa referência para obter informações sobre as opções disponíveis ao usar esta extensão para criar uma regra.
 
@@ -23,15 +19,15 @@ Use essa referência para obter informações sobre as opções disponíveis ao 
 >
 >A extensão do Adobe Target exige at.js 2.x.
 
-Se a extensão do Adobe Target ainda não estiver instalada, abra a propriedade, selecione **[!UICONTROL Extensões > Catálogo]**, passe o mouse sobre a extensão do Target e selecione **[!UICONTROL Instalar]**.
+Se a extensão do Adobe Target ainda não estiver instalada, abra a propriedade, selecione **[!UICONTROL Extensions > Catalog]**, passe o mouse sobre a extensão do Target e selecione **[!UICONTROL Install]**.
 
-Para configurar a extensão, abra a guia Extensões, passe o mouse sobre a extensão e selecione **[!UICONTROL Configurar]**.
+Para configurar a extensão, abra a guia Extensões, passe o mouse sobre a extensão e selecione **[!UICONTROL Configure]**.
 
 ![](../../../images/targetv2config.png)
 
 ### configurações do at.js
 
-Todas as suas configurações de at.js, com exceção do tempo limite, são automaticamente recuperadas da configuração de at.js na interface do Target. A extensão recupera apenas as configurações da interface do Target quando adicionada pela primeira vez. Se forem necessárias atualizações adicionais, as configurações serão gerenciadas na interface do usuário.
+Todas as suas configurações de at.js, com exceção do tempo-limite, são automaticamente recuperadas da configuração de at.js na interface do Target. A extensão recupera apenas as configurações da interface do Target quando adicionada pela primeira vez. Se forem necessárias atualizações adicionais, as configurações serão gerenciadas na interface do usuário.
 
 As opções de configuração disponíveis são as seguintes:
 
@@ -47,15 +43,15 @@ Essa ID vincula sua implementação à sua conta da Adobe Experience Cloud. Isso
 
 O domínio do servidor se refere ao domínio para o qual as solicitações do Target são enviadas. Isso deve ser quase sempre deixado como o valor padrão.
 
-#### Aceitação do GDPR
+#### Aceitação do RGPD
 
-Quando ativado, o Adobe Target fornece a funcionalidade de “aceitar” para auxiliar na estratégia de gerenciamento de consentimento. A funcionalidade de aceitar permite que os clientes controlem como e quando a tag do Target é acionada. Para obter mais informações sobre a aceitação em produtos Adobe, consulte [Privacidade e Regulamento Geral sobre a Proteção de Dados (GDPR)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=pt-BR).
+Quando habilitado, o Adobe Target fornece a funcionalidade de “aceitar” para auxiliar na estratégia de gerenciamento de consentimento. A funcionalidade de aceitar permite que os clientes controlem como e quando a tag do Target é acionada. Para obter mais informações sobre a aceitação em produtos Adobe, consulte [Privacidade e Regulamento Geral sobre a Proteção de Dados (RGPD)](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html?lang=pt-BR).
 
-#### Tempo limite (ms)
+#### Tempo-limite (ms)
 
-Se a resposta do Target não for recebida dentro do período definido, a solicitação expirará e o conteúdo padrão será exibido. Ainda há tentativas de solicitações adicionais durante a sessão do visitante. O padrão é 3000 ms, que pode ser diferente do tempo limite configurado na interface do usuário do Target.
+Se a resposta do Target não for recebida dentro do período definido, a solicitação expirará e o conteúdo padrão será exibido. Ainda há tentativas de solicitações adicionais durante a sessão do visitante. O padrão é 3000 ms, que pode ser diferente do tempo-limite configurado na interface do usuário do Target.
 
-Para obter mais informações sobre como funciona a configuração de Tempo limite, consulte a [ajuda do Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=pt_BR).
+Para obter mais informações sobre como funciona a configuração de Tempo-limite, consulte a [ajuda do Adobe Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/deploy-at-js/implementing-target-without-a-tag-manager.html?lang=pt_BR).
 
 ## Tipos de ação da extensão do Target
 
@@ -71,7 +67,7 @@ Nenhuma configuração é necessária.
 
 ### Carregar o Target com decisão no dispositivo
 
-Adicione essa ação à regra de tag quando fizer sentido carregar o Target com a habilitação de [tomada de decisões no dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=pt-BR) no contexto da regra. Isso carrega a biblioteca da at.js com a decisão no dispositivo ativada na página. Na maioria das implementações, o Target deve ser carregado em todas as páginas do site. A Adobe recomenda usar a ação Carregar destino com decisão no dispositivo somente se for precedida por uma chamada do Target. Caso contrário, você poderá enfrentar problemas como atraso na chamada do Analytics.
+Adicione essa ação à regra de tag quando fizer sentido carregar o Target com a habilitação de [tomada de decisões no dispositivo](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html?lang=pt-BR) no contexto da regra. Isso carrega a biblioteca da at.js com a decisão no dispositivo habilitada na página. Na maioria das implementações, o Target deve ser carregado em todas as páginas do site. A Adobe recomenda usar a ação Carregar destino com decisão no dispositivo somente se for precedida por uma chamada do Target. Caso contrário, você poderá enfrentar problemas como atraso na chamada do Analytics.
 
 >[!IMPORTANT]
 >
@@ -95,10 +91,10 @@ Esse tipo de ação permite que parâmetros sejam adicionados especificamente à
 
 Esse tipo de ação permite que o Target acione uma solicitação quando a página é carregada. A ação Carregar Target deve ser usada anteriormente.
 
-Especifique se deseja ativar a ocultação de corpo para evitar oscilação e qual estilo deve ser usado ao ocultar o elemento de corpo. As opções disponíveis são as seguintes:
+Especifique se deseja habilitar a ocultação de corpo para evitar oscilação e qual estilo deve ser usado ao ocultar o elemento de corpo. As opções disponíveis são as seguintes:
 
-* **Ocultação de corpo:** você pode habilitar ou desabilitar essa configuração. O valor padrão é Ativado, o que significa que o HTML BODY está oculto.
-* **Estilo com corpo oculto:** o valor padrão é body{opacity: 0}. Esse valor pode ser alterado para algo diferente, como body{display:none}.
+* **Ocultação de corpo:** você pode habilitar ou desabilitar essa configuração. O valor padrão é Habilitado, o que significa que o HTML BODY está oculto.
+* **Estilo com corpo oculto:** o valor padrão é body{opacity:0}. Este valor pode ser alterado para algo diferente, como body{display:none}.
 
 Para obter mais informações, consulte a [documentação de ajuda online do Target](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/advanced-mboxjs-settings.html?lang=pt_BR).
 
@@ -129,7 +125,7 @@ Nas implantações assíncronas, é possível que a página conclua a renderiza�
 
 Estas são algumas coisas que devem ser lembradas ao usar o trecho pré-ocultação:
 
-* O trecho deve ser adicionado antes do carregamento do código integrado do cabeçalho da tag.
+* O trecho deve ser adicionado antes do carregamento do código incorporado do cabeçalho da tag.
 * Esse código não pode ser gerenciado por tags. Portanto, deve ser adicionado diretamente à página.
 * A página é exibida quando os seguintes eventos ocorrem:
    * Quando a resposta de carregamento da página for recebida

@@ -2,18 +2,14 @@
 title: Permissões de usuário para tags
 description: Saiba mais sobre os diferentes tipos de permissões disponíveis para tags e algumas estratégias básicas de implementação para diferentes casos de uso de negócios.
 exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1305'
-ht-degree: 18%
+source-wordcount: '1260'
+ht-degree: 17%
 
 ---
 
 # Permissões de usuário para tags
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 As permissões do usuário para tags na Adobe Experience Platform são atribuídas aos usuários por meio da Adobe Admin Console. Em vez de serem atribuídos a usuários individuais, diferentes conjuntos de permissões são configurados separadamente como perfis de produtos. Os usuários são atribuídos a esses perfis de produtos para que tenham as permissões para as quais foram configurados.
 
@@ -21,7 +17,7 @@ Este guia fornece uma visão geral dos diferentes tipos de permissões disponív
 
 >[!NOTE]
 >
->Para obter etapas sobre como configurar permissões para usuários usando o Admin Console, consulte o tutorial em [gerenciamento de permissões para coleta de dados](../../../collection/permissions.md).
+>Para obter etapas sobre como configurar permissões para usuários usando o Admin Console, consulte o tutorial sobre [gerenciamento de permissões para coleta de dados](../../../collection/permissions.md).
 
 ## Tipos de permissão
 
@@ -54,7 +50,7 @@ A tabela a seguir descreve os direitos de propriedade disponíveis e as funciona
 | --- | --- |
 | **Desenvolver** | Isso permite executar as seguintes ações:<ul><li>Criar regras e elementos de dados</li><li>Criar bibliotecas e criá-las em ambientes de desenvolvimento existentes</li><li>Enviar uma biblioteca para aprovação</li></ul>A maioria das tarefas diárias na interface do usuário exige esse direito. |
 | **Aprovar** | Isso permite que você leve um build e uma biblioteca enviada para o ambiente de preparo. Você também pode aprovar uma biblioteca para publicação depois que o teste for concluído. |
-| **Publish** | Isso permite publicar bibliotecas aprovadas no ambiente de produção. |
+| **Publicar** | Isso permite publicar bibliotecas aprovadas no ambiente de produção. |
 | **Gerenciar extensões** | Isso permite executar as seguintes ações: <ul><li>Instalar novas extensões em uma propriedade</li><li>Modificar a configuração de uma extensão já instalada</li><li>Excluir uma extensão</li></ul>Consulte a documentação de visão geral das extensões para obter [mais informações sobre extensões](../managing-resources/extensions/overview.md). Normalmente, essa função pertence aos setores de TI ou de Marketing, dependendo de como funciona a sua organização. |
 | **Gerenciar ambientes** | Isso permite criar e modificar ambientes. Consulte a [documentação de ambientes](../publishing/environments.md) para obter mais informações. Normalmente, essa função pertence ao grupo de TI. |
 
@@ -76,7 +72,7 @@ Os direitos da empresa se aplicam às permissões que abrangem várias proprieda
 
 O total de permissões de um usuário individual é determinado pelo total de associações a diferentes perfis de produto. Se um usuário pertencer a vários perfis de produto, as permissões de cada perfil serão adicionadas juntas, em vez de serem multiplicadas.
 
-Por exemplo, o Perfil de produto A concede a você o direito de desenvolvimento para a Propriedade 1. O Perfil do produto B concede a você o direito do Publish para a Propriedade 2. Nesse caso, você pode Desenvolver na Propriedade 1 e Publish na Propriedade 2, mas não pode publicar na Propriedade 1 nem Desenvolver na Propriedade 2, pois não recebeu direitos explícitos para isso.
+Por exemplo, o Perfil de produto A concede a você o direito de desenvolvimento para a Propriedade 1. O Perfil do produto B concede a você o direito de Publicar para a Propriedade 2. Nesse caso, você pode Desenvolver na Propriedade 1 e Publicar na Propriedade 2, mas não pode publicar na Propriedade 1 nem Desenvolver na Propriedade 2, pois não recebeu direitos explícitos para isso.
 
 ## Cenários de concedimento de direitos
 
@@ -100,9 +96,9 @@ Para fazer isso:
 
 ### Empresarial
 
-Uma empresa com assinatura Empresarial pode ter vários sites divididos geograficamente, com equipes diferentes responsáveis por cada local. Nessas equipes, indivíduos diferentes desenvolvem e publicam.
+Uma empresa com assinatura Empresarial pode ter vários sites divididos geograficamente, com equipes diferentes responsáveis por cada local. Nessas equipes, pessoas diferentes desenvolvem e publicam.
 
-Isso é semelhante à &quot;Separação de tarefas&quot; acima, mas organizado por áreas geográficas. Por exemplo, você pode criar um perfil &quot;Desenvolver&quot; e um perfil &quot;Publish&quot; para a América do Norte, além de criar grupos &quot;Desenvolver&quot; e &quot;Publish&quot; separados para a Europa.
+Isso é semelhante à &quot;Separação de tarefas&quot; acima, mas organizado por áreas geográficas. Por exemplo, você pode criar um perfil &quot;Desenvolver&quot; e um perfil &quot;Publicar&quot; para a América do Norte, além de criar grupos &quot;Desenvolver&quot; e &quot;Publicar&quot; separados para a Europa.
 
 ## Exemplo de funções
 
@@ -112,13 +108,13 @@ A tabela a seguir fornece alguns exemplos dos tipos de funções que você pode 
 | --- | --- | --- | --- | --- |
 | O gerente | Quer ver o que está acontecendo no sistema, mas não deve poder fazer alterações. | Incluir automaticamente | (Nenhum) | (Nenhum) |
 | O profissional de marketing | Pode instalar extensões e configurar novas tags para propriedades existentes, mas não pode publicar nos ambientes de preparo ou produção. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Gerenciar extensões</li></ul> | <ul><li>Gerenciar propriedades</li></ul> |
-| O desenvolvedor de aplicativos móveis | É responsável pela implementação do Adobe e de soluções de terceiros dentro de um aplicativo móvel nativo. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Gerenciar extensões</li></ul> | <li>Gerenciar propriedades</li><li>Gerenciar configurações do aplicativo</li> |
-| A equipe de TI | Na verdade, o não modifica tags, mas elas têm controle total sobre os ambientes de preparo e produção e o que está neles. | Incluir automaticamente | (Nenhum) | <ul><li>Aprovar</li><li>Publicar</li><li>Gerenciar ambientes</li></ul> |
+| O desenvolvedor de aplicativos móveis | É responsável pela implementação do Adobe e de soluções de terceiros em um aplicativo móvel nativo. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Gerenciar extensões</li></ul> | <li>Gerenciar propriedades</li><li>Gerenciar configurações do aplicativo</li> |
+| A equipe de TI | Na verdade, o não modifica tags, mas elas têm controle total sobre os ambientes de preparo e produção e o que está neles. | Incluir automaticamente | (Nenhum) | <ul><li>Aprovar</li><li>Publicação</li><li>Gerenciar ambientes</li></ul> |
 | O desenvolvedor de extensões | Desenvolve extensões e pode enviar para aprovação, mas não pode publicá-las ou adicioná-las a propriedades existentes. | Incluir automaticamente | <ul><li>Desenvolver</li></ul> | <ul><li>Gerenciar propriedades</li><li>Desenvolver extensões</li></ul> |
-| O superusuário | Faz tudo. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Aprovar</li><li>Publicar</li><li>Gerenciar extensões</li><li>Gerenciar ambientes</li></ul> | <ul><li>Gerenciar propriedades</li></ul> |
+| O superusuário | Faz tudo. | Incluir automaticamente | <ul><li>Desenvolver</li><li>Aprovar</li><li>Publicação</li><li>Gerenciar extensões</li><li>Gerenciar ambientes</li></ul> | <ul><li>Gerenciar propriedades</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Próximas etapas
 
-Este documento forneceu uma visão geral das permissões disponíveis para tags no Experience Platform. Para obter etapas sobre como configurar perfis de produtos para tags na Adobe Admin Console, consulte o manual sobre [gerenciamento de permissões de usuário para coleta de dados](../../../collection/permissions.md).
+Este documento forneceu uma visão geral das permissões disponíveis para tags na Experience Platform. Para obter etapas sobre como configurar perfis de produtos para tags na Adobe Admin Console, consulte o manual sobre [gerenciamento de permissões de usuário para coleta de dados](../../../collection/permissions.md).

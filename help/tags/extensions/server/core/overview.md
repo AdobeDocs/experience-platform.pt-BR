@@ -3,18 +3,14 @@ title: Visão geral da extensão de encaminhamento de eventos principais
 description: Saiba mais sobre a extensão de encaminhamento de eventos principais na Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: b5ee4ccf-6fa5-4472-be04-782930f07e20
-source-git-commit: 2ba02f94ff20281953d74b3213033e5f0a7fa111
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1662'
 ht-degree: 97%
 
 ---
 
 # Visão geral da extensão de encaminhamento de eventos principais
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 A extensão de encaminhamento de eventos principais fornece eventos, condições e tipos de dados padrão para o encaminhamento de eventos na Adobe Experience Platform.
 
@@ -26,11 +22,11 @@ Esta seção descreve os tipos de condição disponíveis na extensão principal
 
 ### Custom Code
 
-Especifique qualquer código personalizado que deve existir como uma condição do evento. Use o editor de código incorporado para inserir o código personalizado. O encaminhamento de eventos no Adobe Experience Platform é compatível com ES13.
+Especifique qualquer código personalizado que deve existir como uma condição do evento. Use o editor de código integrado para inserir o código personalizado. O encaminhamento de eventos no Adobe Experience Platform é compatível com ES13.
 
-1. Selecione **[!UICONTROL Abrir editor]**.
+1. Selecione **[!UICONTROL Open Editor]**.
 1. Digite o código personalizado.
-1. Selecione **[!UICONTROL Salvar]**.
+1. Selecione **[!UICONTROL Save]**.
 
 Para acessar o valor de um elemento de dados no código personalizado, use o método `getDataElementValue`. Por exemplo, para recuperar o valor de um elemento de dados chamado `productName`, escreva o seguinte: 
 
@@ -111,7 +107,7 @@ Se você tiver uma regra com várias condições, é possível que essa condiç�
 
 Os seguintes operadores de comparação de valores estão disponíveis:
 
-**Equal:** a condição retornará true se os dois valores forem iguais usando uma comparação não estrita (em JavaScript, é o sinal ==). Os valores podem ser de qualquer tipo. Ao digitar uma palavra como _true_, _false_, _null_ ou _undefined_ em um campo de valor, a palavra é comparada como uma string de caracteres e não é convertida em seu equivalente JavaScript.
+**Equal:** a condição retornará true se os dois valores forem iguais usando uma comparação não estrita (em JavaScript, é o operador ==). Os valores podem ser de qualquer tipo. Ao digitar uma palavra como _true_, _false_, _null_ ou _undefined_ em um campo de valor, a palavra é comparada como uma string de caracteres e não é convertida em seu equivalente JavaScript.
 
 **Does Not Equal:** a condição retornará true se os dois valores não forem iguais usando uma comparação não estrita (em JavaScript, o sinal !== operador). Os valores podem ser de qualquer tipo. Ao digitar uma palavra como _true_, _false_, _null_ ou _undefined_ em um campo de valor, a palavra é comparada como uma string de caracteres e não é convertida em seu equivalente JavaScript.
 
@@ -141,11 +137,11 @@ Os seguintes operadores de comparação de valores estão disponíveis:
 
 **Is True:** a condição retornará true se o valor for um booleano com o valor true. O valor fornecido não é convertido em um booleano se for qualquer outro tipo. Qualquer valor diferente de booleano com valor &quot;true&quot; resulta na condição retornar como &quot;false&quot;.
 
-**Is Truthy:** a condição retornará true se o valor for verdadeiro após ser convertido em um booleano. Consulte a [documentação do MDN sobre valores truthy](https://developer.mozilla.org/pt-BR/docs/Glossary/Truthy) para obter exemplos de valores truthy.
+**Is Truthy:** a condição retornará true se o valor for verdadeiro após ser convertido em um booleano. Consulte [a documentação do MDN sobre valores truthy](https://developer.mozilla.org/pt-BR/docs/Glossary/Truthy) para obter exemplos de valores truthy.
 
 **Is False:** a condição retornará true se o valor for um booleano com o valor false. O valor fornecido não é convertido em um booleano se for qualquer outro tipo. Qualquer valor diferente de booleano com o valor &quot;false&quot; resulta na condição retornar como &quot;false&quot;.
 
-**Is Falsy:** a condição retornará true se o valor for falso depois de ser convertido em um booleano. Consulte a [documentação do MDN sobre valores falsy](https://developer.mozilla.org/pt-BR/docs/Glossario/Falsy) para ver exemplos de valores falsy.
+**Is Falsy:** a condição retornará true se o valor for falso depois de ser convertido em um booleano. Consulte [a documentação do MDN sobre valores falsy](https://developer.mozilla.org/pt-BR/docs/Glossario/Falsy) para ver exemplos de valores falsy.
 
 
 
@@ -158,8 +154,8 @@ Esta seção descreve os tipos de ação disponíveis na extensão principal.
 Forneça o código que é executado depois que o evento é acionado e as condições são avaliadas. O encaminhamento de eventos no Adobe Experience Platform é compatível com ES13.
 
 1. Dê um nome ao código da ação.
-1. Selecione **[!UICONTROL Abrir editor]**.
-1. Edite o código e selecione **[!UICONTROL Salvar]**.
+1. Selecione **[!UICONTROL Open Editor]**.
+1. Edite o código e selecione **[!UICONTROL Save]**.
 
 Para acessar o valor de um elemento de dados no código personalizado, use o método `getDataElementValue`. Por exemplo, para recuperar o valor de um elemento de dados chamado `productName`, escreva o seguinte: 
 
@@ -183,9 +179,9 @@ As seções a seguir descrevem os tipos de elementos de dados disponíveis na ex
 
 ### Custom code
 
-JavaScript personalizado pode ser inserido na interface selecionando **[!UICONTROL Abrir editor]** e inserindo o código na janela do editor.
+O JavaScript personalizado pode ser inserido na interface selecionando **[!UICONTROL Open Editor]** e inserindo o código na janela do editor.
 
-É preciso haver uma instrução de retorno na janela do editor para indicar qual valor deve ser usado como o valor do elemento de dados. Se uma declaração de retorno não for incluída ou o valor `null` ou `undefined` for retornado, o valor padrão do elemento de dados refletirá `null` ou `undefined`.
+É preciso haver uma instrução de retorno na janela do editor para indicar qual valor deve ser usado como o valor do elemento de dados. Se uma instrução de retorno não for incluída ou o valor `null` ou `undefined` for retornado, o valor padrão do elemento de dados refletirá `null` ou `undefined`.
 
 Para acessar o valor de um elemento de dados no código personalizado, use o método `getDataElementValue`. Por exemplo, para recuperar o valor de um elemento de dados chamado `productName`, escreva o seguinte: 
 

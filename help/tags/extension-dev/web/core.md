@@ -2,18 +2,14 @@
 title: Módulos principais da biblioteca para extensões da Web
 description: Saiba mais sobre os módulos principais da biblioteca que você pode usar nas extensões da Web.
 exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '295'
-ht-degree: 93%
+source-wordcount: '250'
+ht-degree: 100%
 
 ---
 
 # Módulos principais da biblioteca para extensões da Web
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Esse documento fornece uma lista dos módulos principais da biblioteca que você pode usar em suas extensões da Web. Você pode acessar esses módulos usando `require('@adobe/{MODULE}')`, em que `{MODULE}` é o nome do módulo principal que deseja usar.
 

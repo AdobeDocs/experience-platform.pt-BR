@@ -2,18 +2,14 @@
 title: Suporte à Política de segurança de conteúdo (CSP)
 description: Saiba como lidar com restrições da Política de segurança de conteúdo (CSP) ao integrar seu site com tags à Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 97%
+source-wordcount: '1031'
+ht-degree: 96%
 
 ---
 
 # Suporte à Política de segurança de conteúdo (CSP)
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Uma Política de Segurança de Conteúdo (CSP) é um recurso de segurança que ajuda a impedir ataques de script entre sites (XSS). Isso acontece quando o navegador é induzido a executar conteúdo mal-intencionado que parece vir de uma fonte confiável, mas vem de outro lugar. As CSPs permitem que o navegador verifique (em nome do usuário) se o script realmente vem de uma fonte confiável.
 

@@ -2,18 +2,14 @@
 title: Navegadores compatíveis
 description: Uma lista de vários navegadores compatíveis com um tempo de execução de tag da Adobe Experience Platform.
 exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
-source-git-commit: 32aa453ca40c0500da0fec8957db978c319a3dbe
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 87%
+source-wordcount: '97'
+ht-degree: 100%
 
 ---
 
 # Navegadores compatíveis
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O tempo de execução da tag no Adobe Experience Platform (entregue aos sites dos clientes) é compatível com vários navegadores:
 

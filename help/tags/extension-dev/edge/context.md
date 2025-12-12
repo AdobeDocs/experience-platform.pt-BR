@@ -2,18 +2,14 @@
 title: Contexto em módulos de extensão de borda
 description: Saiba mais sobre o objeto de contexto e a função que ele desempenha ao interagir com módulos de biblioteca em extensões de tag de propriedades de borda.
 exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 97%
+source-wordcount: '681'
+ht-degree: 100%
 
 ---
 
 # Contexto em módulos de extensão de borda
-
->[!NOTE]
->
-> O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Todos os módulos de biblioteca em extensões de borda recebem um objeto `context` quando são executados. Este documento aborda as propriedades fornecidas pelo objeto `context` e a função que desempenham nos módulos de biblioteca.
 
@@ -42,7 +38,7 @@ Para não ser confundido com uma solicitação do dispositivo cliente, `request`
 logger.log(context.arc.request)
 ```
 
-O objeto `request` tem duas propriedades de nível superior: `body` e `head`. A propriedade `body` contém informações do modelo de dados de experiência (XDM) e pode ser inspecionado no Adobe Experience Platform Debugger quando você navega até o **[!UICONTROL Launch]** e seleciona a guia **[!UICONTROL Traço de borda]**.
+O objeto `request` tem duas propriedades de nível superior: `body` e `head`. A propriedade `body` contém informações do Experience Data Model (XDM) e pode ser inspecionada no Adobe Experience Platform Debugger quando você navega até **[!UICONTROL Launch]** e seleciona a guia **[!UICONTROL Edge Trace]**.
 
 ### [!DNL ruleStash] {#rulestash}
 
@@ -118,7 +114,7 @@ O agente de log tem os seguintes métodos, em que `message` é a mensagem que vo
 | `info(message)` | registra uma mensagem informativa no console. |
 | `warn(message)` | registra uma mensagem de aviso no console. |
 | `error(message)` | registra uma mensagem de erro no console. |
-| `debug(message)` | registra uma mensagem de depuração no console. Visível somente quando o registro `verbose` estiver ativado no console do navegador. |
+| `debug(message)` | registra uma mensagem de depuração no console. Visível somente quando o registro `verbose` estiver habilitado no console do navegador. |
 
 ### [!DNL fetch]
 

@@ -2,18 +2,14 @@
 title: Visualizações em extensões da Web
 description: 'Saiba como definir visualizações para módulos de biblioteca em extensões da Web do Adobe Experience Platform '
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '2148'
+source-wordcount: '2103'
 ht-degree: 91%
 
 ---
 
 # Visualizações em extensões da Web
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Cada tipo de evento, condição, ação ou elemento de dados pode fornecer uma visualização, o que permite ao usuário fornecer configurações. A extensão também pode ter uma [visualização de configuração de extensão](../configuration.md) de nível superior, o que permite aos usuários fornecer configurações globais para a extensão inteira. O processo de construção de uma visualização é idêntico em todos os tipos de visualizações.
 
@@ -76,7 +72,7 @@ O método `init` será chamado pelas tags assim que a visualização for carrega
 | `company` | Um objeto que contém o `orgId` (sua Adobe Experience Cloud ID de 24 caracteres), `id` (o identificador exclusivo de sua empresa na API do Reator) e `tenantId` (o identificador exclusivo de uma organização no Sistema Identity Management da Adobe). |
 | `schema` | Um objeto no formato de [esquema JSON](https://json-schema.org/). Este objeto será proveniente do [manifesto da extensão](../manifest.md) e pode ser útil para validar o formulário. |
 | `apiEndpoints` | Um objeto que contém `reactor` e uma referência ao endereço Web da API do Reator. |
-| `userConsentPermissions` | Um Objeto que contém sinalizadores de consentimento dos [Dados de Uso do Produto](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/features/account-preferences#product-usage-data) da Adobe. Use o sinalizador armazenado em `globalDataCollectionAndUsage` para entender se sua extensão tem permissão para coletar *quaisquer* dados de clientes. |
+| `userConsentPermissions` | Um Objeto que contém sinalizadores de consentimento dos [Dados de Uso do Produto](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) da Adobe. Use o sinalizador armazenado em `globalDataCollectionAndUsage` para entender se sua extensão tem permissão para coletar *quaisquer* dados de clientes. |
 | `preferredLanguages` | Uma matriz de cadeias de caracteres de idioma. |
 
 A visualização deve usar essas informações para renderizar e gerenciar o formulário. É provável que você só precise lidar com `info.settings`, mas as outras informações são fornecidas, caso sejam necessárias.
@@ -137,7 +133,7 @@ Chamar esse método mostrará um modal que permite ao usuário testar e modifica
 | Propriedade | Descrição |
 | --- | --- |
 | `pattern` | O padrão de expressão regular que deve ser usado como o valor inicial do campo de padrão no testador. Normalmente, isso é fornecido quando o usuário edita uma expressão regular existente. Se isso não for fornecido, o campo padrão estará inicialmente vazio. |
-| `flags` | Os sinalizadores de expressão regular que devem ser usados pelo testador. Por exemplo, `gi` indicaria o sinalizador de correspondência global e o sinalizador para ignorar maiúsculas e minúsculas. Esses sinalizadores não podem ser modificados pelo usuário no testador, mas são usados para demonstrar os sinalizadores específicos que a extensão usará ao executar a expressão regular. Se isso não for fornecido, nenhum sinalizador será usado no testador. Consulte a [Documentação de RegExp do MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) para obter mais informações sobre sinalizadores de expressão regular.<br><br>Um cenário comum é uma extensão que permite aos usuários ativar e desativar a detecção de maiúsculas e minúsculas de uma expressão regular. Para oferecer suporte a isso, normalmente a extensão fornece uma caixa de seleção na respectiva visualização que, quando marcada, ativa a opção de não detectar maiúsculas e minúsculas (representada pelo sinalizador `i`). O objeto de configurações salvo pela visualização precisaria representar se a caixa de seleção estava marcada para que o módulo da biblioteca que executa a expressão regular pudesse saber se o sinalizador `i` deve ser usado. Além disso, quando a visualização de extensão desejar abrir o testador de expressões regulares, será necessário passar o sinalizador `i` se a caixa de seleção para não detectar maiúsculas e minúsculas estiver marcada. Isso permite que o usuário teste corretamente a expressão regular com a opção de não detectar maiúsculas e minúsculas ativada. |
+| `flags` | Os sinalizadores de expressão regular que devem ser usados pelo testador. Por exemplo, `gi` indicaria o sinalizador de correspondência global e o sinalizador para ignorar maiúsculas e minúsculas. Esses sinalizadores não podem ser modificados pelo usuário no testador, mas são usados para demonstrar os sinalizadores específicos que a extensão usará ao executar a expressão regular. Se isso não for fornecido, nenhum sinalizador será usado no testador. Consulte a [Documentação de RegExp do MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp) para obter mais informações sobre sinalizadores de expressão regular.<br><br>Um cenário comum é uma extensão que permite aos usuários ativar e desativar a detecção de maiúsculas e minúsculas de uma expressão regular. Para oferecer suporte a isso, normalmente a extensão fornece uma caixa de seleção na respectiva visualização que, quando marcada, habilita a opção de não detectar maiúsculas e minúsculas (representada pelo sinalizador `i`). O objeto de configurações salvo pela visualização precisaria representar se a caixa de seleção estava marcada para que o módulo da biblioteca que executa a expressão regular pudesse saber se o sinalizador `i` deve ser usado. Além disso, quando a visualização de extensão desejar abrir o testador de expressões regulares, será necessário passar o sinalizador `i` se a caixa de seleção para não detectar maiúsculas e minúsculas estiver marcada. Isso permite que o usuário teste corretamente a expressão regular com a opção de não detectar maiúsculas e minúsculas ativada. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 

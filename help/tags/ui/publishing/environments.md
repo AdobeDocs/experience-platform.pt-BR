@@ -2,18 +2,14 @@
 title: Ambientes
 description: Saiba mais sobre o conceito de ambientes de tag e como eles funcionam na Adobe Experience Platform.
 exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1462'
-ht-degree: 96%
+source-wordcount: '1405'
+ht-degree: 97%
 
 ---
 
 # Ambientes
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Os ambientes de tag definem vários aspectos principais das criações da biblioteca que são implantadas em seu site ou aplicativo:
 
@@ -21,7 +17,7 @@ Os ambientes de tag definem vários aspectos principais das criações da biblio
 * O domínio e o caminho da build, dependendo do host atribuído pelo ambiente.
 * O formato de arquivo da build, dependendo da opção de arquivamento escolhida.
 
-Ao criar um build de biblioteca, você deve atribuí-lo a um ambiente. As extensões, regras e elementos de dados da build são compilados e colocados no ambiente atribuído. Cada ambiente fornece um código integrado exclusivo que permite integrar a build atribuída ao site.
+Ao criar um build de biblioteca, você deve atribuí-lo a um ambiente. As extensões, regras e elementos de dados da build são compilados e colocados no ambiente atribuído. Cada ambiente fornece um código incorporado exclusivo que permite integrar a build atribuída ao site.
 
 Diferentes artefatos do podem existir em cada ambiente. Esses artefatos permitem testar diferentes bibliotecas em ambientes diferentes, conforme você as envia por meio do fluxo de trabalho.
 
@@ -45,19 +41,19 @@ Diferentes artefatos do podem existir em cada ambiente. Dessa forma, você pode 
 
 ## Instalação {#installation}
 
-Cada ambiente tem um conjunto de instruções usadas para conectá-lo ao seu aplicativo. Para propriedades da Web, essas instruções fornecem códigos integrados. Para propriedades móveis, essas instruções fornecem o código necessário para instanciar as bibliotecas que você está usando e recuperar a configuração no tempo de execução.
+Cada ambiente tem um conjunto de instruções usadas para conectá-lo ao seu aplicativo. Para propriedades da Web, essas instruções fornecem códigos incorporados. Para propriedades móveis, essas instruções fornecem o código necessário para instanciar as bibliotecas que você está usando e recuperar a configuração no tempo de execução.
 
 >[!IMPORTANT]
 >
->Cada tipo de ambiente tem suas próprias instruções de instalação correspondentes. Dependendo do ambiente que estiver usando, você deve garantir que esteja utilizando os códigos integrados e/ou dependências correspondentes corretos.
+>Cada tipo de ambiente tem suas próprias instruções de instalação correspondentes. Dependendo do ambiente que estiver usando, você deve garantir que esteja utilizando os códigos incorporados e/ou dependências correspondentes corretos.
 >
->Por exemplo, o código de integração de produção para uma propriedade da Web oferece suporte ao armazenamento em cache do navegador, enquanto os códigos integrados de desenvolvimento e armazenamento temporário não. Dessa forma, você não deve usar códigos integrados de desenvolvimento ou armazenamento temporário em contextos de alto tráfego ou produção.
+>Por exemplo, o código incorporado de produção para uma propriedade da Web oferece suporte ao armazenamento em cache do navegador, enquanto os códigos incorporados de desenvolvimento e armazenamento temporário não. Dessa forma, você não deve usar códigos incorporados de desenvolvimento ou armazenamento temporário em contextos de alto tráfego ou produção.
 
-Para acessar as instruções de instalação de um ambiente, navegue até a guia **[!UICONTROL Ambientes]** da propriedade e clique no ícone **[!UICONTROL Instalar]** do ambiente.
+Para acessar as instruções de instalação de um ambiente, navegue até a guia **[!UICONTROL Environments]** referente à sua propriedade e selecione o ícone **[!UICONTROL Install]** desse ambiente.
 
 ![](./images/environments/install-buttons.png)
 
-Se estiver usando uma propriedade da Web, você receberá um código integrado para ser usado na tag `<head>` do seu documento. Você também tem a opção de implantar arquivos de biblioteca de forma síncrona ou assíncrona no tempo de execução. Dependendo da configuração escolhida, as instruções de instalação exibidas serão diferentes. Os códigos integrados são explicados com mais detalhes posteriormente neste documento.
+Se estiver usando uma propriedade da Web, você receberá um código incorporado para ser usado na tag `<head>` do seu documento. Você também tem a opção de implantar arquivos de biblioteca de forma síncrona ou assíncrona no tempo de execução. Dependendo da configuração escolhida, as instruções de instalação exibidas serão diferentes. Os códigos incorporados são explicados com mais detalhes posteriormente neste documento.
 
 ![](./images/environments/web-instructions.png)
 
@@ -79,15 +75,15 @@ As configurações do ambiente atribuído determinam o seguinte para propriedade
 
 * **Host**: o local do servidor em que você deseja que a build seja implantada.
 * **Configuração de arquivamento**: se o sistema deve produzir um conjunto implantável de arquivos ou compactá-los em um formato de arquivo.
-* **Código integrado**: o código do `<script>` que será incorporado no HTML das páginas do site, usado para implantar a build da biblioteca no tempo de execução.
+* **Código incorporado**: o código do `<script>` que será incorporado no HTML das páginas do site, usado para implantar a build da biblioteca no tempo de execução.
 
-Na guia [!UICONTROL Ambientes], selecione um ambiente listado para exibir seus controles de configuração.
+Na guia [!UICONTROL Environments], selecione um ambiente listado para exibir seus controles de configuração.
 
 ![](./images/environments/environment-config.png)
 
 ### Host {#host}
 
-Selecione **[!UICONTROL Host]** para escolher um host pré-configurado para o ambiente no menu suspenso
+Selecione **[!UICONTROL Host]** para escolher um host pré-configurado para o ambiente no menu suspenso.
 
 ![](./images/environments/select-host.png)
 
@@ -95,9 +91,9 @@ Quando um build é concluído, é enviado ao local especificado para o host atri
 
 ### Configuração de arquivamento {#archive}
 
-A maioria das builds consiste em vários arquivos. As builds de vários arquivos contêm um arquivo da biblioteca principal (vinculado ao código integrado) que contém referências internas aos outros arquivos que são chamados quando necessário.
+A maioria das builds consiste em vários arquivos. As builds de vários arquivos contêm um arquivo da biblioteca principal (vinculado ao código incorporado) que contém referências internas aos outros arquivos que são chamados quando necessário.
 
-O botão **[!UICONTROL Criar arquivo]** permite alternar a configuração de arquivamento do ambiente. Por padrão, a opção de arquivamento é desligada e a build é entregue em um formato que é executado como está (JavaScript para propriedades da Web e JSON para propriedades móveis).
+O botão **[!UICONTROL Create archive]** permite alternar a configuração de arquivamento do ambiente. Por padrão, a opção de arquivamento é desligada e a build é entregue em um formato que é executado como está (JavaScript para propriedades da Web e JSON para propriedades móveis).
 
 Se você optar por ativar a configuração de arquivamento, configurações adicionais aparecerão na interface do usuário, permitindo que você criptografe opcionalmente o arquivo de arquivamento e defina um caminho para a biblioteca se estiver usando a hospedagem própria.
 
@@ -111,9 +107,9 @@ Se você usar a opção de arquivamento, todos os arquivos de build serão entre
 1. É necessário executar a análise do código na build antes da implantação.
 1. Você só quiser ver o conteúdo da build para ver o que há nela.
 
-### Integrar código {#embed-code}
+### Código incorporado {#embed-code}
 
-Um código integrado é uma tag `<script>` que deve ser colocada nas seções `<head>` das páginas do site para carregar e executar o código que foi criado. Cada configuração de ambiente gera automaticamente seu próprio código integrado. Basta copiá-lo e colá-lo nas páginas do site nas quais você deseja executar as tags.
+Um código incorporado é uma tag `<script>` que deve ser colocada nas seções `<head>` das páginas do site para carregar e executar o código que foi criado. Cada configuração de ambiente gera automaticamente seu próprio código incorporado. Basta copiá-lo e colá-lo nas páginas do site nas quais você deseja executar as tags.
 
 Ao visualizar as instruções de instalação, é possível optar por fazer com que o script carregue os arquivos da biblioteca de forma síncrona ou assíncrona. Essa configuração não é persistente e não reflete a forma como as tags foram implementadas no site. Em vez disso, apenas mostra a maneira apropriada de instalar o ambiente.
 
@@ -123,7 +119,7 @@ Ao visualizar as instruções de instalação, é possível optar por fazer com 
 
 #### Implantação assíncrona
 
-A implantação assíncrona permite que o navegador continue carregando o restante da página enquanto a biblioteca está sendo recuperada. Há apenas um código integrado ao usar essa configuração, que deve ser colocado no documento `<head>`.
+A implantação assíncrona permite que o navegador continue carregando o restante da página enquanto a biblioteca está sendo recuperada. Há apenas um código incorporado ao usar essa configuração, que deve ser colocado no documento `<head>`.
 
 Para obter mais informações sobre essa configuração, consulte o guia sobre [implantação assíncrona](../client-side/asynchronous-deployment.md).
 
@@ -131,37 +127,37 @@ Para obter mais informações sobre essa configuração, consulte o guia sobre [
 
 Quando o navegador lê um código de integração usando implantação síncrona, ele recupera a biblioteca de tags e a executa antes de continuar carregando a página.
 
-Os códigos integrados síncronos consistem em duas tags `<script>` que devem ser colocadas dentro do HTML do seu site. Uma tag `<script>` deve ser colocada no documento `<head>`, enquanto a outra deve ser colocada antes da tag `</body>` de fechamento.
+Os códigos incorporados síncronos consistem em duas tags `<script>` que devem ser colocadas dentro do HTML do seu site. Uma tag `<script>` deve ser colocada no documento `<head>`, enquanto a outra deve ser colocada antes da tag `</body>` de fechamento.
 
-#### Integrar atualizações de código
+#### Atualizações do código incorporado
 
-Como os códigos integrados são gerados com base nas configurações do ambiente, algumas alterações de configuração atualizarão automaticamente o código integrado do ambiente em questão. Essas alterações incluem:
+Como os códigos incorporados são gerados com base nas configurações do ambiente, algumas alterações de configuração atualizarão automaticamente o código incorporado do ambiente em questão. Essas alterações incluem:
 
 * Mudar de um host gerenciado pela Adobe para um host SFTP ou vice-versa.
 * Alteração da configuração de arquivamento.
-* Atualizar o campo de caminho se a configuração de arquivamento estiver ativada.
+* Atualizar o campo de caminho se a configuração de arquivamento estiver habilitada.
 
 >[!WARNING]
 >
->Quando um código integrado de um ambiente de tags é alterado, é necessário atualizar manualmente os códigos integrados no HTML. Para evitar uma manutenção dispendiosa, atualize os códigos integrados quando for absolutamente necessário.
+>Quando um código incorporado de um ambiente de tags é alterado, é necessário atualizar manualmente os códigos incorporados no HTML. Para evitar uma manutenção dispendiosa, atualize os códigos incorporados quando for absolutamente necessário.
 
 ## Criar um ambiente
 
 Três ambientes são automaticamente atribuídos a uma propriedade quando ela é criada pela primeira vez: desenvolvimento, armazenamento temporário e produção. Isso é suficiente para executar o fluxo de trabalho de publicação. No entanto, você pode adicionar outros ambientes de desenvolvimento, se desejar, pois isso pode ser útil em equipes maiores onde vários desenvolvedores estão trabalhando em projetos diferentes ao mesmo tempo.
 
-Na guia [!UICONTROL Ambientes] da propriedade, selecione **[!UICONTROL Adicionar ambiente]**.
+Na guia [!UICONTROL Environments] da propriedade, selecione **[!UICONTROL Add Environment]**.
 
 ![](./images/environments/create-new.png)
 
-Na tela seguinte, selecione a opção **[!UICONTROL Desenvolvimento]**.
+Na tela seguinte, selecione a opção **[!UICONTROL Development]**.
 
 ![](./images/environments/create-development.png)
 
-A próxima tela permite nomear o novo ambiente, selecionar um host e escolher uma configuração de arquivamento. Quando terminar, clique em **[!UICONTROL Salvar]** para criar o ambiente.
+A próxima tela permite nomear o novo ambiente, selecionar um host e escolher uma configuração de arquivamento. Quando terminar, selecione **[!UICONTROL Save]** para criar o ambiente.
 
 ![](./images/environments/create-config.png)
 
-A guia [!UICONTROL Ambientes] será exibida novamente, com as instruções de instalação do novo ambiente exibidas.
+A guia [!UICONTROL Environments] será exibida novamente, com as instruções de instalação do novo ambiente exibidas.
 
 ![](./images/environments/create-install.png)
 

@@ -2,18 +2,14 @@
 title: Informações de Segurança da camada de transporte (TLS)
 description: Informações sobre quais versões e cifras TLS são usadas
 exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
-source-git-commit: 236c5a11f40490fc7ee536358fb146027fe64545
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 25%
+source-wordcount: '156'
+ht-degree: 13%
 
 ---
 
 # Informações de Segurança da camada de transporte (TLS)
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Para obter uma referência consolidada das alterações de terminologia, consulte o documento [atualizações de termos](../../term-updates.md).
 
 O TLS (Transport Layer Security) é um protocolo criptográfico que fornece segurança completa para dados enviados entre aplicativos pela Internet. Para obter informações mais detalhadas sobre TLS, leia a [documentação de noções básicas sobre TLS](https://www.internetsociety.org/deploy360/tls/basics/).
 

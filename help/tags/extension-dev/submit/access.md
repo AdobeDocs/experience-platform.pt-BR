@@ -2,18 +2,14 @@
 title: Conceder acesso ao usuário
 description: Configurar as contas de usuário de tag e as permissões de seus membros de equipe na Adobe Experience Platform.
 exl-id: c7235e50-13b3-4487-b171-873063875621
-source-git-commit: b0615a2fd2bd9d9dd729d506f71ce4a91c64a4fd
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '216'
-ht-degree: 27%
+source-wordcount: '171'
+ht-degree: 18%
 
 ---
 
 # Conceder acesso ao usuário
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleção de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Antes de começar a usar o `extension_package`, é necessário configurar os membros da equipe com contas de usuário e permissões.  Isso é realizado no [Adobe Admin Console](https://adminconsole.adobe.com/).
 
@@ -23,4 +19,4 @@ Para que um usuário acesse os recursos de tag, um administrador precisa adicion
 
 ## Confirmar provisionamento
 
-Depois que sua empresa for provisionada com acesso às tags e os usuários forem configurados conforme descrito acima, você deverá conseguir acessar a interface da Coleção de Dados e a interface do usuário Experience Platform no [painel do Adobe Experience Cloud](https://experience.adobe.com/). Se você ainda não conseguir acessar nenhuma interface após concluir as etapas acima, entre em contato com a equipe de conta do Adobe ou com o Atendimento ao cliente.
+Depois que sua empresa for provisionada com acesso às tags e os usuários forem configurados conforme descrito acima, você deverá conseguir acessar a interface da Coleção de Dados e a interface da Experience Platform no [painel do Adobe Experience Cloud](https://experience.adobe.com/). Se você ainda não conseguir acessar nenhuma interface após concluir as etapas acima, entre em contato com a equipe de conta da Adobe ou com o Atendimento ao cliente.

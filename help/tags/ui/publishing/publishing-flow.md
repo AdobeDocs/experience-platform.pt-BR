@@ -2,10 +2,10 @@
 title: Fluxo de publicação
 description: Saiba mais sobre o processo de criação de bibliotecas, o teste de builds e a aprovação deles para produção no Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 84%
+source-wordcount: '1362'
+ht-degree: 83%
 
 ---
 
@@ -15,10 +15,6 @@ ht-degree: 84%
 >id="platform_tags_publishing_flow"
 >title="Fluxo de publicação"
 >abstract="Entenda os níveis de permissões de usuário necessários para o fluxo de publicação, incluindo os direitos de Desenvolver, Aprovar e Publicar."
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 O fluxo de publicação de tags na Adobe Experience Platform se refere ao processo de criação de bibliotecas, ao teste de builds e à aprovação deles para produção.
 

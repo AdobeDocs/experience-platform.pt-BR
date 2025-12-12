@@ -3,10 +3,10 @@ title: Visão geral do encaminhamento de eventos
 description: Saiba mais sobre o encaminhamento de eventos da Adobe Experience Platform, que permite usar a Experience Platform Edge Network para realizar tarefas sem alterar a sua implementação de tag.
 feature: Event Forwarding
 exl-id: 18e76b9c-4fdd-4eff-a515-a681bc78d37b
-source-git-commit: 88995c933bf067fe3d077d1be8b92b076e461707
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 9%
+source-wordcount: '1144'
+ht-degree: 5%
 
 ---
 
@@ -16,11 +16,7 @@ ht-degree: 9%
 >
 >O encaminhamento de eventos é um recurso pago incluído como parte das ofertas de Conexões da Adobe Real-Time Customer Data Platform, Prime ou Ultimate.
 
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
-
-O encaminhamento de eventos no Adobe Experience Platform permite enviar dados de eventos coletados para um destino para processamento no lado do servidor. O encaminhamento de eventos diminui o peso da página da Web e do aplicativo usando o Adobe Experience Platform Edge Network para executar tarefas normalmente realizadas no cliente. Implementadas de maneira semelhante às tags, as regras de encaminhamento de eventos podem transformar e enviar dados para novos destinos, mas em vez de enviar esses dados de um aplicativo cliente como um navegador da Web, eles são enviados dos servidores da Adobe.
+O encaminhamento de eventos no Adobe Experience Platform (antes conhecido como lado do servidor do Adobe Experience Platform Launch) permite enviar dados de eventos coletados para um destino para processamento no lado do servidor. O encaminhamento de eventos diminui o peso da página da Web e do aplicativo usando o Adobe Experience Platform Edge Network para executar tarefas normalmente realizadas no cliente. Implementadas de maneira semelhante às tags, as regras de encaminhamento de eventos podem transformar e enviar dados para novos destinos, mas em vez de enviar esses dados de um aplicativo cliente como um navegador da Web, eles são enviados dos servidores da Adobe.
 
 Este documento fornece uma visão geral de alto nível do encaminhamento de eventos no Experience Platform.
 
@@ -30,7 +26,7 @@ Este documento fornece uma visão geral de alto nível do encaminhamento de even
 >
 >Para obter informações sobre como o encaminhamento de eventos se encaixa no ecossistema de coleta de dados da Experience Platform, consulte a [visão geral da coleta de dados](/help/collection/home.md).
 
-O encaminhamento de eventos, combinado com a [Web SDK](/help/collection/js/js-overview.md) e a [SDK Móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html?lang=pt-BR) da Adobe Experience Platform, oferece os seguintes benefícios:
+O encaminhamento de eventos, combinado com a [Web SDK](/help/collection/js/js-overview.md) e a [SDK Móvel](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html) da Adobe Experience Platform, oferece os seguintes benefícios:
 
 **Desempenho**:
 

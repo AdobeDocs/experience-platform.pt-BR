@@ -2,18 +2,14 @@
 title: Visão geral da extensão do Adobe Media Analytics (3.x SDK) para áudio e vídeo
 description: Saiba mais sobre o Adobe Media Analytics (3.x SDK) para a extensão de áudio e tag de vídeo na Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '648'
 ht-degree: 93%
 
 ---
 
 # Visão geral da extensão do Adobe Media Analytics (3.x SDK) para áudio e vídeo
-
->[!NOTE]
->
->O Adobe Experience Platform Launch foi reformulado como um conjunto de tecnologias de coleta de dados na Adobe Experience Platform. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](../../../term-updates.md) para obter uma referência consolidada das alterações de terminologia.
 
 Use esta documentação para obter informações sobre como instalar, configurar e implementar a extensão Adobe Media Analytics (3.x SDK) for Audio and Video (extensão do Media Analytics). Estão incluídas as opções disponíveis ao usar esta extensão para criar uma regra, juntamente com exemplos e links para amostras.
 
@@ -33,9 +29,9 @@ Depois de incluir todas as três extensões mencionadas acima em seu projeto com
 
 ## Instalação e configuração da extensão do MA
 
-* **Instalar:** para instalar a extensão do MA, abra sua propriedade de extensão, selecione **[!UICONTROL Extensões > Catálogo]**, passe o mouse sobre o **[!UICONTROL Adobe Media Analytics (3.x SDK) para Extensão de áudio e]** vídeo e selecione **[!UICONTROL Instalar]**.
+* **Instalação:** para instalar a extensão MA, abra a propriedade da extensão, selecione **[!UICONTROL Extensions > Catalog]**, passe o mouse sobre a extensão **[!UICONTROL Adobe Media Analytics (3.x SDK) for Audio and Video]** e selecione **[!UICONTROL Install]**.
 
-* **Configurar:** para configurar a extensão do MA, abra a guia [!UICONTROL Extensões], passe o mouse sobre a extensão e selecione **[!UICONTROL Configurar]**:
+* **Configuração:** para configurar a extensão MA, abra a guia [!UICONTROL Extensions], passe o mouse sobre a extensão e selecione **[!UICONTROL Configure]**:
 
 ![Configuração de extensão do MA](../../../images/ext-ma-config.png)
 
@@ -48,7 +44,7 @@ Depois de incluir todas as três extensões mencionadas acima em seu projeto com
 | Nome do reprodutor | Nome do reprodutor de vídeo em uso (por exemplo, &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) |
 | Canal | Propriedade do nome do canal |
 | Debug Logging | Habilitar ou desabilitar registro |
-| Enable SSL | Ativar ou desativar o envio de pings em HTTPS |
+| Ativar SSL | Habilitar ou desabilitar o envio de pings em HTTPS |
 | Export APIs to Window Object | Habilitar ou desabilitar a exportação de APIs do Media Analytics para o escopo global |
 | Variable Name | Uma variável usada para exportar as APIs do Media Analytics sob o objeto `window` |
 
@@ -58,7 +54,7 @@ Depois de incluir todas as três extensões mencionadas acima em seu projeto com
 
 ### Uso de uma página web/aplicativo JS
 
-A extensão do MA exporta as APIs de mídia no objeto de janela global, habilitando a configuração &quot;Exportar APIs para objeto de janela&quot; na página [!UICONTROL Configuração]. Exporta as APIs sob o nome da variável configurada. Por exemplo, se o nome da variável estiver configurado para ser `ADB`, as APIs de mídia podem ser acessadas em `window.ADB.Media`.
+A extensão do MA exporta as APIs de mídia no objeto da janela global ao habilitar a configuração “Export APIs to Window Object” na página [!UICONTROL Configuration]. Exporta as APIs sob o nome da variável configurada. Por exemplo, se o nome da variável estiver configurado para ser `ADB`, as APIs de mídia podem ser acessadas em `window.ADB.Media`.
 
 >[!IMPORTANT]
 >

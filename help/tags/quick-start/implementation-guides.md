@@ -13,8 +13,8 @@ ht-degree: 0%
 
 Veja a seguir uma lista completa de guias de implementação para tags e encaminhamento de eventos. Esses guias foram projetados para desenvolvedores front-end e profissionais de marketing técnico que desejam aprender como implementar os produtos da Adobe Experience Cloud em seus sites e aplicativos móveis.
 
-* [Implementar marcas para um site](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html)
-* [Implementar marcas para um aplicativo do Android](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-android-apps/overview.html)
-* [Implementar marcas para um aplicativo iOS Objetive-C](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-objective-c-apps/overview.html)
-* [Implementar marcas para um aplicativo iOS Swift](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-swift-apps/overview.html)
-* [Implementar o encaminhamento de eventos (antigo Adobe Experience Platform Launch Server Side)](https://experienceleague.adobe.com/docs/platform-learn/data-collection/event-forwarding/overview.html)
+* [Implementar marcas para um site](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html?lang=pt-BR)
+* [Implementar marcas para um aplicativo do Android](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-android-apps/overview.html?lang=pt-BR)
+* [Implementar marcas para um aplicativo iOS Objetive-C](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-objective-c-apps/overview.html?lang=pt-BR)
+* [Implementar marcas para um aplicativo iOS Swift](https://experienceleague.adobe.com/docs/platform-learn/implement-in-mobile-ios-swift-apps/overview.html?lang=pt-BR)
+* [Implementar o encaminhamento de eventos (antigo Adobe Experience Platform Launch Server Side)](https://experienceleague.adobe.com/docs/platform-learn/data-collection/event-forwarding/overview.html?lang=pt-BR)

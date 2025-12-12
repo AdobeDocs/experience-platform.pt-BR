@@ -130,6 +130,6 @@ Para obter mais informações sobre os diferentes estados e opções disponívei
 
 Para saber mais sobre tags, consulte estes recursos:
 
-* **[Comunidade da Coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: faça e responda perguntas, envie ideias e vote nas ideias de outras pessoas. Faça logon com seu Adobe ID.
+* **[Comunidade da Coleção de dados](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=pt)**: faça e responda perguntas, envie ideias e vote nas ideias de outras pessoas. Faça logon com seu Adobe ID.
 * **[Documentos do desenvolvedor](../api/overview.md)**: envolva-se com a comunidade do desenvolvedor de tags para criar extensões ou usar as APIs de tags
 * **[Visão geral dos tutoriais](https://experienceleague.adobe.com/docs/launch-learn/tutorials/overview.html?lang=pt-BR)**: esses documentos apresentam conceitos de tags, incluindo encaminhamento de eventos e SDK móvel em aplicativos Android.

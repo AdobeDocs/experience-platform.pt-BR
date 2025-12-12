@@ -170,7 +170,7 @@ A extensão do MA expõe os módulos `get-instance` e os módulos compartilhados
    ...
    ```
 
-1. Usando a instância Media Heartbeat, siga a [documentação da Media SDK JS](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) e a [documentação da API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) para implementar o rastreamento de mídia.
+1. Usando a instância Media Heartbeat, siga a [documentação da Media SDK JS](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html?lang=pt-BR) e a [documentação da API JS](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) para implementar o rastreamento de mídia.
 
 >[!NOTE]
 >

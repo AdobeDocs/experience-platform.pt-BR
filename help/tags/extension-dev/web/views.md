@@ -72,7 +72,7 @@ O método `init` será chamado pelas tags assim que a visualização for carrega
 | `company` | Um objeto que contém o `orgId` (sua Adobe Experience Cloud ID de 24 caracteres), `id` (o identificador exclusivo de sua empresa na API do Reator) e `tenantId` (o identificador exclusivo de uma organização no Sistema Identity Management da Adobe). |
 | `schema` | Um objeto no formato de [esquema JSON](https://json-schema.org/). Este objeto será proveniente do [manifesto da extensão](../manifest.md) e pode ser útil para validar o formulário. |
 | `apiEndpoints` | Um objeto que contém `reactor` e uma referência ao endereço Web da API do Reator. |
-| `userConsentPermissions` | Um Objeto que contém sinalizadores de consentimento dos [Dados de Uso do Produto](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) da Adobe. Use o sinalizador armazenado em `globalDataCollectionAndUsage` para entender se sua extensão tem permissão para coletar *quaisquer* dados de clientes. |
+| `userConsentPermissions` | Um Objeto que contém sinalizadores de consentimento dos [Dados de Uso do Produto](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/features/account-preferences#product-usage-data) da Adobe. Use o sinalizador armazenado em `globalDataCollectionAndUsage` para entender se sua extensão tem permissão para coletar *quaisquer* dados de clientes. |
 | `preferredLanguages` | Uma matriz de cadeias de caracteres de idioma. |
 
 A visualização deve usar essas informações para renderizar e gerenciar o formulário. É provável que você só precise lidar com `info.settings`, mas as outras informações são fornecidas, caso sejam necessárias.

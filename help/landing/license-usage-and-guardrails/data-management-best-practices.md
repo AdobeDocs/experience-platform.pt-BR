@@ -2,9 +2,9 @@
 title: Práticas recomendadas de direitos de licença de gerenciamento de dados
 description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 1f3cf3cc57342a23dae2d69c883b5768ec2bba57
+source-git-commit: 163ff97da651ac3a68b5e37e8745b10440519e6f
 workflow-type: tm+mt
-source-wordcount: '2957'
+source-wordcount: '3390'
 ht-degree: 1%
 
 ---
@@ -100,6 +100,38 @@ Os dados podem ser assimilados em um ou vários sistemas no Experience Platform,
 >[!NOTE]
 >
 >Seu acesso ao [!DNL data lake] pode depender do SKU do produto que você comprou. Para obter mais informações sobre SKUs de produtos, fale com o representante da Adobe.
+
+Você também deve decidir se ativa conjuntos de dados de pesquisa para o Perfil do cliente em tempo real, além de usá-los para fins de pesquisa geral. Siga as orientações abaixo para não exceder seus limites de licença.
+
+#### Ativação de perfil para conjuntos de dados de pesquisa {#profile-enablement-lookup-datasets}
+
+Um conjunto de dados de pesquisa é um conjunto de dados habilitado no Experience Platform para que os aplicativos possam referenciá-lo no tempo de execução. Use conjuntos de dados de pesquisa para armazenar informações chaves e relativamente estáticas, como detalhes do produto, metadados de armazenamento ou configurações de oferta, em vez de conjuntos de dados cujo objetivo principal é contribuir com atributos de perfil (por exemplo, nome, email ou nível de fidelidade) ou eventos de experiência (por exemplo, exibições de página ou compras).
+
+Aplicativos do Experience Platform, como o [!DNL Journey Optimizer] e outros aplicativos de decisão, usam esses conjuntos de dados para recuperar campos adicionais com base em uma chave (por exemplo, ID do produto ou ID da loja) e para enriquecer os fluxos de trabalho de personalização, decisão e orquestração. A ativação de conjuntos de dados de pesquisa para o Perfil do cliente em tempo real afeta o volume de dados do seu perfil, portanto, use as orientações a seguir para manter seus direitos de licenciamento.
+
+Ao configurar conjuntos de dados para fins de pesquisa, considere as duas funções que um conjunto de dados pode desempenhar no Experience Platform:
+
+* **Conjuntos de dados de pesquisa**: permitir que os aplicativos recuperem dados de referência para serviços como personalização e decisão em [!DNL Journey Optimizer].
+* **Conjuntos de dados habilitados para perfil**: Contribua com atributos e eventos para perfis de clientes unificados no Perfil do cliente em tempo real. Esses conjuntos de dados disponibilizam seus campos para casos de uso de segmentação e ativação.
+
+>[!IMPORTANT]
+>
+>Ative um conjunto de dados de pesquisa somente para o Perfil do cliente em tempo real quando precisar usar campos desse conjunto de dados no Perfil do cliente em tempo real (por exemplo, para definições de público-alvo, ativação ou segmentação de várias entidades). Ativar um conjunto de dados de pesquisa para o Perfil do cliente em tempo real aumenta seu volume de dados de perfil. Para obter mais informações, consulte o tutorial sobre [segmentação de várias entidades](../../segmentation/tutorials/multi-entity-segmentation.md).
+
+**Quando habilitar conjuntos de dados para o Perfil de Cliente em Tempo Real:**
+
+Ative um conjunto de dados para o Perfil do cliente em tempo real nos seguintes casos:
+
+* O conjunto de dados contém atributos do cliente que você precisa unificar em perfis do cliente (por exemplo, nível de fidelidade, preferências, informações da conta).
+* O conjunto de dados contém eventos de experiência que contribuem para a análise e a segmentação do comportamento do cliente.
+* O conjunto de dados contém atributos de referência ou enriquecimento (por exemplo, atributos de produto, loja ou conta) que você deve usar nas definições de público-alvo, incluindo segmentação de várias entidades ou ativação downstream.
+
+**Quando NÃO quiser habilitar conjuntos de dados para o Perfil de Cliente em Tempo Real:**
+
+Evite ativar um conjunto de dados para o Perfil do cliente em tempo real nos seguintes casos:
+
+* O conjunto de dados contém dados de referência, como catálogos de produtos, detalhes de SKU, locais de loja ou outros dados que não sejam do cliente, e você não precisa desses atributos no Perfil do cliente em tempo real para segmentação ou ativação, incluindo segmentação de várias entidades.
+* O conjunto de dados contém dados de enriquecimento que são usados apenas em pesquisas em tempo de execução e não são necessários como parte da identidade do cliente ou nas definições de público-alvo.
 
 ### Quais dados manter?
 

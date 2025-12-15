@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia de solução de problemas do sistema XDM
 description: Encontre respostas para perguntas frequentes sobre o Experience Data Model (XDM), incluindo etapas para resolver erros comuns de API.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
+source-git-commit: 8ba80a1cc4529f9d4693e3f7cbd7584193915410
 workflow-type: tm+mt
-source-wordcount: '2378'
+source-wordcount: '2368'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Este documento fornece respostas a perguntas frequentes sobre o [!DNL Experience Data Model] (XDM) e o Sistema XDM no Adobe Experience Platform, incluindo um guia de solução de problemas para erros comuns. Para perguntas e soluções de problemas relacionadas a outros serviços da Experience Platform, consulte o [guia de solução de problemas do Experience Platform](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model] (XDM)** é uma especificação de código aberto que define esquemas padronizados para o gerenciamento da experiência do cliente. A metodologia na qual [!DNL Experience Platform] é criado, **Sistema XDM**, operacionaliza [!DNL Experience Data Model] esquemas para uso pelos serviços [!DNL Experience Platform]. O **[!DNL Schema Registry]** fornece uma interface de usuário e uma API RESTful para acessar o **[!DNL Schema Library]** em [!DNL Experience Platform]. Consulte a [documentação do XDM](home.md) para obter mais informações.
+**[!DNL Experience Data Model](XDM)** é uma especificação de código aberto que define esquemas padronizados para o gerenciamento da experiência do cliente. A metodologia na qual [!DNL Experience Platform] é criado, **Sistema XDM**, operacionaliza [!DNL Experience Data Model] esquemas para uso pelos serviços [!DNL Experience Platform]. O **[!DNL Schema Registry]** fornece uma interface de usuário e uma API RESTful para acessar o **[!DNL Schema Library]** em [!DNL Experience Platform]. Consulte a [documentação do XDM](home.md) para obter mais informações.
 
 ## Perguntas frequentes
 
@@ -108,7 +108,7 @@ Para obter mais detalhes sobre como criar descritores de identidade na API, cons
 
 ### Definição de identidades na interface
 
-Com o esquema aberto no Editor de esquemas, selecione o campo na seção **[!UICONTROL Estrutura]** do editor que você deseja marcar como uma identidade. Em **[!UICONTROL Propriedades do campo]** no lado direito, marque a caixa de seleção **[!UICONTROL Identidade]**.
+Com o esquema aberto no Editor de esquemas, selecione o campo na seção **[!UICONTROL Structure]** do editor que você deseja marcar como uma identidade. Em **[!UICONTROL Field Properties]**, no lado direito, marque a caixa de seleção **[!UICONTROL Identity]**.
 
 Para obter mais detalhes sobre como gerenciar identidades na interface, consulte a seção sobre [definição de campos de identidade](./tutorials/create-schema-ui.md#identity-field) no tutorial do Editor de esquemas.
 
@@ -132,17 +132,17 @@ Para obter mais informações sobre como usar a API para habilitar um esquema pa
 
 ### Habilitando um esquema existente para [!DNL Profile] usando a interface
 
-Em [!DNL Experience Platform], selecione **[!UICONTROL Esquemas]** no menu de navegação esquerdo e selecione o nome do esquema que deseja habilitar na lista de esquemas. Em seguida, no lado direito do editor, em **[!UICONTROL Propriedades do esquema]**, selecione **[!UICONTROL Perfil]** para ativá-lo.
+Em [!DNL Experience Platform], selecione **[!UICONTROL Schemas]** no menu de navegação esquerdo e selecione o nome do esquema que deseja habilitar na lista de esquemas. Em seguida, no lado direito do editor, em **[!UICONTROL Schema Properties]**, selecione **[!UICONTROL Profile]** para ativá-lo.
 
-Para obter mais informações, consulte a seção sobre [usar em Perfil de cliente em tempo real](./tutorials/create-schema-ui.md#profile) no tutorial [!UICONTROL Editor de esquemas].
+Para obter mais informações, consulte a seção sobre [usar em Perfil de Cliente em Tempo Real](./tutorials/create-schema-ui.md#profile) no tutorial [!UICONTROL Schema Editor].
 
 ### Quando os dados do Adobe Analytics são importados como uma origem, o esquema criado automaticamente é ativado para o Perfil?
 
 O esquema não é ativado automaticamente para o Perfil de cliente em tempo real. Você precisa ativar explicitamente o conjunto de dados para o Perfil com base no esquema que está ativado para o Perfil. Consulte a documentação para saber as [etapas e os requisitos necessários para habilitar um conjunto de dados para uso no Perfil do Cliente em Tempo Real](../catalog/datasets/user-guide.md#enable-profile).
 
-### Posso excluir esquemas habilitados para perfil?
+### Posso excluir esquemas habilitados para perfil? {#delete-profile-enabled}
 
-Não é possível excluir um esquema depois que ele é ativado para o Perfil de cliente em tempo real. Depois que um esquema é ativado para o Perfil, ele não pode ser desativado ou excluído e os campos não podem ser removidos do esquema. Portanto, é crucial planejar e verificar cuidadosamente a configuração do esquema antes de habilitá-lo para o Perfil. No entanto, você pode excluir um conjunto de dados habilitado para perfil. Informações encontradas aqui: <https://experienceleague.adobe.com/pt-br/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+Não é possível excluir um esquema depois que ele é ativado para o Perfil de cliente em tempo real. Depois que um esquema é ativado para o Perfil, ele não pode ser desativado ou excluído e os campos não podem ser removidos do esquema. Portanto, é crucial planejar e verificar cuidadosamente a configuração do esquema antes de habilitá-lo para o Perfil. No entanto, você pode excluir um conjunto de dados habilitado para perfil. Informações encontradas aqui: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Se você não quiser mais que um esquema habilitado para perfil seja usado, é recomendável renomear o esquema para incluir **Não usar** ou **Inativo**.
 

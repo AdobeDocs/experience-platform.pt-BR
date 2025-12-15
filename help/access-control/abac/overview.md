@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular tópicos;controle de acesso;controle 
 title: Visão Geral do Controle de Acesso Baseado em Atributo
 description: Este documento fornece informações sobre o controle de acesso baseado em atributos no Adobe Experience Platform
 exl-id: 5495c55f-b808-40c1-8896-e03eace0ca4d
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 14028928362d8396c30babfc2279135011dd7c6f
 workflow-type: tm+mt
-source-wordcount: '1874'
-ht-degree: 13%
+source-wordcount: '1929'
+ht-degree: 12%
 
 ---
 
@@ -24,7 +24,7 @@ Por meio do controle de acesso baseado em atributos, os administradores da sua o
 
 O vídeo a seguir é destinado a ajudá-lo a entender o controle de acesso baseado em atributos e descreve como configurar funções, recursos e políticas.
 
->[!VIDEO](https://video.tv.adobe.com/v/3451835?learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
 
 ## Terminologia de controle de acesso baseado em atributo
 
@@ -122,7 +122,7 @@ Para obter mais informações sobre Perfil, consulte a [Visão geral do Perfil](
 
 ### Serviço de segmentação
 
-O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de séries temporais que representam interações de clientes com sua marca.
+O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de série temporal que representam interações de clientes com sua marca.
 
 Como administrador, você pode usar as funcionalidades de controle de acesso baseado em atributos para:
 
@@ -141,3 +141,9 @@ Com o controle de acesso baseado em atributos, você pode:
 * Configure o acesso do usuário a campos de esquema XDM específicos, dependendo dos conjuntos de permissões aplicados às funções atribuídas aos usuários.
 
 Para obter mais informações sobre o XDM, consulte a [visão geral do XDM](../../xdm/home.md).
+
+### Customer Journey Analytics (CJA)
+
+As permissões de acesso ao Customer Journey Analytics (CJA) são gerenciadas no nível do aplicativo no CJA. O CJA usa seus próprios controles de acesso baseados em atributos e não herda nem aplica os controles de acesso baseados em atributos definidos no Adobe Experience Platform.
+
+Para obter mais informações sobre o controle de acesso do CJA, consulte a documentação do [controle de acesso do CJA](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control).

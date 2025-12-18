@@ -2,9 +2,9 @@
 description: Saiba como configurar uma política de agregação para determinar como as solicitações HTTP para o seu destino devem ser agrupadas e armazenadas em lote.
 title: Política de agregação
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: d5d7841cc8799e7f7d4b607bfb8adea63a7eb1db
+source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1235'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Depois de ler este documento, consulte a documentação sobre [uso do modelo](..
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -52,7 +52,26 @@ O exemplo de configuração abaixo mostra uma configuração de agregação de m
    "aggregationType":"BEST_EFFORT",
    "bestEffortAggregation":{
       "maxUsersPerRequest":10,
-      "splitUserById":false
+      "splitUserById":false,
+      "aggregationKey":{
+         "includeSegmentId":true,
+         "includeSegmentStatus":true,
+         "includeIdentity":true,
+         "oneIdentityPerGroup":true,
+         "groups":[
+            {
+               "namespaces":[
+                  "IDFA",
+                  "GAID"
+               ]
+            },
+            {
+               "namespaces":[
+                  "EMAIL"
+               ]
+            }
+         ]
+      }
    }
 }
 ```
@@ -62,6 +81,12 @@ O exemplo de configuração abaixo mostra uma configuração de agregação de m
 | `aggregationType` | String | Indica o tipo de política de agregação que seu destino deve usar. Tipos de agregação compatíveis: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | Número inteiro | O Experience Platform pode agregar vários perfis exportados em uma única chamada HTTP. <br><br>Esse valor indica o número máximo de perfis que seu ponto de extremidade deve receber em uma única chamada HTTP. Observe que esta é uma agregação de melhor esforço. Por exemplo, se você especificar o valor 100, o Experience Platform pode enviar qualquer número de perfis menor que 100 em uma chamada. <br><br> Se o servidor não aceitar vários usuários por solicitação, defina esse valor como `1`. |
 | `bestEffortAggregation.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino precisar ser dividida pela identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada para um determinado namespace de identidade. |
+| `bestEffortAggregation.aggregationKey` | Objeto | *Opcional*. Permite agregar os perfis exportados mapeados para o destino com base nos parâmetros descritos abaixo. Esse parâmetro pode ser omitido ou definido como `null` se a agregação não for necessária. Quando fornecido, ele funciona de forma idêntica à chave de agregação na agregação configurável. |
+| `bestEffortAggregation.aggregationKey.includeSegmentId` | Booleano | Defina esse parâmetro como `true` se desejar agrupar os perfis exportados para o seu destino pela ID de público-alvo. |
+| `bestEffortAggregation.aggregationKey.includeSegmentStatus` | Booleano | Defina esse parâmetro e `includeSegmentId` como `true`, se desejar agrupar os perfis exportados para o seu destino pela ID do público-alvo e pelo status do público-alvo. |
+| `bestEffortAggregation.aggregationKey.includeIdentity` | Booleano | Defina esse parâmetro como `true` se desejar agrupar perfis exportados para seu destino pelo namespace de identidade. |
+| `bestEffortAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Defina esse parâmetro como `true` se desejar que os perfis exportados sejam agregados em grupos com base em uma única identidade (GAID, IDFA, números de telefone, email, etc.). Defina como `false` se você deseja usar o parâmetro `groups` para definir agrupamentos de namespace de identidade personalizados. |
+| `bestEffortAggregation.aggregationKey.groups` | Matriz | Use este parâmetro quando `oneIdentityPerGroup` estiver definido como `false`. Crie listas de grupos de identidade se quiser agrupar perfis exportados para o seu destino por grupos de namespaces de identidade. Por exemplo, você pode combinar perfis que contêm os identificadores móveis IDFA e GAID em uma chamada para o seu destino e enviar emails para outra usando a configuração mostrada no exemplo acima. |
 
 {style="table-layout:auto"}
 
@@ -115,8 +140,8 @@ O exemplo de configuração abaixo mostra uma configuração de agregação conf
 | `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Defina esse parâmetro como `true` se desejar agrupar os perfis exportados para o seu destino pela ID de público-alvo. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Defina esse parâmetro e `includeSegmentId` como `true`, se desejar agrupar os perfis exportados para o seu destino pela ID do público-alvo e pelo status do público-alvo. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Booleano | Defina esse parâmetro como `true` se desejar agrupar perfis exportados para seu destino pelo namespace de identidade. |
-| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Defina esse parâmetro como `true` se desejar que os perfis exportados sejam agregados em grupos com base em uma única identidade (GAID, IDFA, números de telefone, email, etc.). |
-| `configurableAggregation.aggregationKey.groups` | Matriz | Crie listas de grupos de identidade se quiser agrupar perfis exportados para o seu destino por grupos de namespaces de identidade. Por exemplo, você pode combinar perfis que contêm os identificadores móveis IDFA e GAID em uma chamada para o seu destino e enviar emails para outra usando a configuração mostrada no exemplo acima. |
+| `configurableAggregation.aggregationKey.oneIdentityPerGroup` | Booleano | Defina esse parâmetro como `true` se desejar que os perfis exportados sejam agregados em grupos com base em uma única identidade (GAID, IDFA, números de telefone, email, etc.). Defina como `false` se você deseja usar o parâmetro `groups` para definir agrupamentos de namespace de identidade personalizados. |
+| `configurableAggregation.aggregationKey.groups` | Matriz | Use este parâmetro quando `oneIdentityPerGroup` estiver definido como `false`. Crie listas de grupos de identidade se quiser agrupar perfis exportados para o seu destino por grupos de namespaces de identidade. Por exemplo, você pode combinar perfis que contêm os identificadores móveis IDFA e GAID em uma chamada para o seu destino e enviar emails para outra usando a configuração mostrada no exemplo acima. |
 
 {style="table-layout:auto"}
 

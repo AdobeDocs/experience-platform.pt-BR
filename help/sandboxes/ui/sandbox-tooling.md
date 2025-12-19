@@ -353,7 +353,7 @@ Depois de identificar os objetos de destino que você deseja atualizar, selecion
 
 O vídeo a seguir é destinado a ajudá-lo a entender as ferramentas de sandbox e descreve como criar um novo pacote, publicar um pacote e importar um pacote.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446089/?captions=por_br&learn=on)
 
 ## Próximas etapas
 

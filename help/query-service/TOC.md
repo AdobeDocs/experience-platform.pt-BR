@@ -1,7 +1,7 @@
 ---
 audience: user
-user-guide-title: Ajuda do serviço de consulta da Adobe Experience Platform
-breadcrumb-title: Guia do Serviço de consulta
+user-guide-title: Ajuda do Serviço de consultas da Adobe Experience Platform
+breadcrumb-title: Guia do Serviço de consultas
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer

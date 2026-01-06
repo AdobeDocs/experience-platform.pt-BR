@@ -17,11 +17,11 @@ Este documento fornece etapas sobre como usar a interface da Web do GitHub para 
 
 >[!TIP]
 >
->Os seguintes documentos do guia de contribuição da Adobe podem ser usados para apoiar ainda mais seu processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>Os seguintes documentos do guia de contribuição da Adobe podem ser usados para apoiar ainda mais seu processo de documentação: <ul><li>[Instalar as ferramentas de criação do Git e do Markdown](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=pt-BR)</li><li>[Configurar o repositório Git localmente para a documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=pt-BR)</li><li>[Fluxo de trabalho de contribuição do GitHub para grandes alterações](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=pt-BR)</li></ul>
 
 ## Configurar o ambiente do GitHub
 
-A primeira etapa na configuração do ambiente do GitHub é navegar até o [repositório do GitHub da Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.en).
+A primeira etapa na configuração do ambiente do GitHub é navegar até o [repositório do GitHub da Adobe Experience Platform](https://github.com/AdobeDocs/experience-platform.pt-BR).
 
 ![repositório-plataforma](../assets/platform-repo.png)
 
@@ -33,11 +33,11 @@ Quando a bifurcação estiver concluída, selecione **principal** e digite um no
 
 ![criar-ramificação](../assets/create-branch.png)
 
-Na estrutura de pastas GitHub do seu repositório bifurcado, navegue até [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/api/create) e selecione a categoria apropriada para a sua origem na lista. Por exemplo, se você estiver criando a documentação para uma nova origem do CRM, selecione **crm**.
+Na estrutura de pastas GitHub do seu repositório bifurcado, navegue até [`experience-platform.en/help/sources/tutorials/api/create/`](https://github.com/AdobeDocs/experience-platform.pt-BR/tree/main/help/sources/tutorials/api/create) e selecione a categoria apropriada para a sua origem na lista. Por exemplo, se você estiver criando a documentação para uma nova origem do CRM, selecione **crm**.
 
 >[!TIP]
 >
->Se você estiver criando a documentação para a interface, navegue até [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/tutorials/ui/create) e selecione a categoria apropriada para sua origem. Para adicionar suas imagens, navegue até [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.en/tree/main/help/sources/images/tutorials/create) e adicione suas capturas de tela à pasta `sdk`.
+>Se você estiver criando a documentação para a interface, navegue até [`experience-platform.en/help/sources/tutorials/ui/create/`](https://github.com/AdobeDocs/experience-platform.pt-BR/tree/main/help/sources/tutorials/ui/create) e selecione a categoria apropriada para sua origem. Para adicionar suas imagens, navegue até [`experience-platform.en/help/sources/images/tutorials/create/sdk`](https://github.com/AdobeDocs/experience-platform.pt-BR/tree/main/help/sources/images/tutorials/create) e adicione suas capturas de tela à pasta `sdk`.
 
 ![crm](../assets/crm.png)
 
@@ -77,6 +77,6 @@ Certifique-se de que as ramificações base e de comparação estejam corretas. 
 
 Nesse momento, é exibida uma notificação solicitando que você assine o Contrato de licença de colaborador (CLA) da Adobe. Essa é uma etapa obrigatória. Depois de assinar o CLA, atualize a página da PR e envie a solicitação de pull.
 
-É possível confirmar se a solicitação de pull foi enviada ao inspecionar a guia pull requests em https://github.com/AdobeDocs/experience-platform.en.
+É possível confirmar se a solicitação de pull foi enviada ao inspecionar a guia pull requests em https://github.com/AdobeDocs/experience-platform.pt-BR.
 
 ![confirm-pr](../assets/confirm-pr.png)

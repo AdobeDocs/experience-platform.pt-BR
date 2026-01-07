@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crie um fluxo de dados para uma fonte de Integração do OneTrust usando a API de Serviço de Fluxo
 description: Saiba como conectar o Adobe Experience Platform à Integração do OneTrust usando a API do Serviço de Fluxo.
 exl-id: e224efe0-4756-4b8a-b446-a3e1066f2050
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f9ca6b7683c64c36772d02c1a88c3ef18f961b92
 workflow-type: tm+mt
 source-wordcount: '1924'
 ht-degree: 2%
@@ -139,7 +139,7 @@ Uma resposta bem-sucedida retorna a estrutura do arquivo consultado.
 >
 >A carga de resposta JSON abaixo está oculta por brevidade. Selecione Click me para ver a carga da resposta.
 
-+++Clique
++++Clique em mim
 
 ```json
 {
@@ -757,8 +757,13 @@ curl -X POST \
               "sourceType": "ATTRIBUTE",
               "source": "content.Purposes",
               "destination": "_exchangesandboxbravo.Purposes"
+          },
+          {
+              "sourceType": "ATTRIBUTE",
+              "source": "content.LinkToken",
+              "destination": "_exchangesandboxbravo.LinkToken",
+              "description": "Link Token"
           }
-
       ]
   }'
 ```

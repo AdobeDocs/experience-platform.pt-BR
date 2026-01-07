@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributo;;home;popular topics;access control;attribute-based access control;ABAC
 title: Permissões da Função Gerenciar Controle de Acesso Baseado em Atributo
-description: Este documento fornece informações sobre como configurar permissões para uma função por meio da interface de Permissões no Adobe Experience Cloud
+description: Saiba como configurar funções por meio da interface de Permissões no Adobe Experience Cloud.
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 157fb27ae492971a48ad62c2d6b3eddd674167f4
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1603'
 ht-degree: 17%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 17%
 >id="platform_permissions_roles_about"
 >title="O que são funções?"
 >abstract="As funções definem o acesso que um(a) admin, especialista ou usuário final tem aos recursos em sua organização. Elas categorizam os usuários que interagem com a instância da Experience Platform e são elementos essenciais das políticas de controle de acesso. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR" text="Gerenciar funções"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Gerenciar funções"
 
 >[!IMPORTANT]
 >
@@ -116,7 +116,7 @@ Para remover um usuário de uma função, selecione o ícone **X** ao lado do no
 
 O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova função e o gerenciamento de usuários para essa função.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475978/?captions=por_br&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
 ## Gerenciar credenciais de API para uma função {#manage-api-credentials-for-role}
 

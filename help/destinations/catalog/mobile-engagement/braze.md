@@ -4,9 +4,9 @@ title: Conexão Braze
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: cc97efec5fba090378ceaf73441d0b4bd7fbf51f
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1078'
 ht-degree: 3%
 
 ---
@@ -87,7 +87,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 * **[!UICONTROL Name]**: digite um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Description]**: insira uma descrição que ajudará você a identificar este destino no futuro.
-* **[!UICONTROL Endpoint Instance]**: pergunte ao representante do [!DNL Braze] qual instância de ponto de extremidade você deve usar.
+* **[!UICONTROL Endpoint Instance]**: todos os [pontos de extremidade específicos da região](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) com suporte de [!DNL Braze] estão disponíveis para seleção. Pergunte ao representante do [!DNL Braze] qual instância de ponto de extremidade você deve usar.
 
 ### Ativar alertas {#enable-alerts}
 
@@ -168,7 +168,7 @@ O mapeamento correto seria semelhante a:
 
 Para verificar se os dados foram exportados com êxito para o destino [!DNL Braze], verifique sua conta [!DNL Braze]. [!DNL Adobe Experience Platform] públicos-alvo são exportados para [!DNL Braze] sob o atributo `AdobeExperiencePlatformSegments`.
 
-## Resolução de problemas {#troubleshooting}
+## Solução de problemas {#troubleshooting}
 
 **Recebi um erro de tempo limite ao ativar meus públicos para este destino. O que devo fazer?**
 

@@ -3,9 +3,9 @@ title: Registrar Ordens de Serviço de Exclusão
 description: Saiba como usar o ponto de extremidade /workorder na API de higiene de dados para gerenciar ordens de trabalho de exclusão de registro no Adobe Experience Platform. Este guia aborda cotas, linhas do tempo de processamento e uso da API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: f1f37439bd4d77faf1015741e604eee7188c58d7
+source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
 workflow-type: tm+mt
-source-wordcount: '2440'
+source-wordcount: '2541'
 ht-degree: 2%
 
 ---
@@ -202,6 +202,14 @@ POST /workorder
 >[!NOTE]
 >
 >Você só pode excluir registros de conjuntos de dados cujo esquema XDM associado defina uma identidade principal ou mapa de identidade.
+
+>[!IMPORTANT]
+>
+>As ordens de trabalho de exclusão de registro atuam exclusivamente no campo **identidade principal**. As seguintes limitações se aplicam:
+>
+>- **As identidades secundárias não foram verificadas.** Se um conjunto de dados contiver vários campos de identidade, somente a identidade principal será usada para correspondência. Os registros não podem ser direcionados ou excluídos com base em identidades não primárias.
+>- **Os registros sem uma identidade principal preenchida são ignorados.** Se um registro não tiver metadados de identidade primários preenchidos, ele não estará qualificado para exclusão.
+>- **Dados assimilados antes da configuração de identidade não são qualificados.** Se o campo de identidade principal foi adicionado a um esquema após a assimilação de dados, os registros assimilados anteriormente não poderão ser excluídos por meio de ordens de trabalho de exclusão de registro.
 
 >[!NOTE]
 >

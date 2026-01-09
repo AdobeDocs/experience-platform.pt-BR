@@ -3,20 +3,37 @@ keywords: Experience Platform;serviço de consulta;serviço de consulta;consulta
 title: Introdução ao Serviço de consulta do Adobe Experience Platform
 description: Um detalhamento das etapas necessárias para utilizar totalmente o Serviço de consulta do Adobe Experience Platform
 exl-id: 36ab9354-23f9-4cb8-bcd4-00fe076386ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa22a0ca0c79d5d62fd39de3a808f84a11a80c4d
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '363'
 ht-degree: 1%
 
 ---
 
 # Introdução ao Adobe Experience Platform [!DNL Query Service] {#getting-started}
 
-Depois que sua organização for provisionada para a Adobe Experience Platform, seu administrador poderá conceder a você acesso a [!DNL Query Service]. No entanto, para que você possa usar todos os recursos oferecidos pelo [!DNL Query Service], primeiro é necessário assimilar dados na Adobe Experience Platform.
+Use o Serviço de consulta da Adobe Experience Platform para executar consultas SQL em conjuntos de dados assimilados, unir dados de várias fontes e gerar conjuntos de dados derivados para análise, fluxos de trabalho de aprendizado de máquina ou Perfil do cliente em tempo real. Depois de assimilar dados, acesse o Serviço de consulta por meio da interface do usuário para análise e colaboração interativas ou por meio da API para execução de consulta automatizada e programática.
 
-Este [vídeo tutorial sobre a assimilação de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) fornece uma visão geral sobre como criar um conjunto de dados, mapear um conjunto de dados para um esquema, adicionar dados ao conjunto de dados e confirmar a assimilação. A [documentação de visão geral da assimilação](../../ingestion/home.md) complementa isso e fornece informações mais detalhadas e links para outros recursos de aprendizagem.
+## Pré-requisitos {#prerequisites}
 
-Após assimilar seus dados na Adobe Experience Platform, você pode começar a trabalhar com o [!DNL Query Service] usando a [[!DNL Query Editor] na interface do usuário do Experience Platform](../ui/user-guide.md) ou a [[!DNL Query Service] API](../api/getting-started.md). A documentação completa sobre como usar cada uma dessas ferramentas pode ser encontrada nas respectivas seções.
+Antes de começar a consultar dados, verifique se você tem:
+
+- **Permissões necessárias**: sua conta de usuário tem acesso ao Serviço de consulta na Experience Platform. Se o serviço não estiver disponível na interface, revise a [documentação de permissões](../../access-control/home.md#permissions) e contate o administrador do sistema.
+- **Assimilação de dados**: você tem dados assimilados na Experience Platform.
+
+Se você precisar assimilar dados, reveja o [vídeo tutorial sobre assimilação de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) para obter uma visão geral sobre a criação de conjuntos de dados, mapeamento de esquemas, assimilação e validação. Leia a [documentação de visão geral de assimilação](../../ingestion/home.md) para obter informações mais detalhadas e links para outros recursos de aprendizado.
+
+## Caminhos de início rápido
+
+Após assimilar seus dados na Experience Platform, você pode começar a trabalhar com o Serviço de consulta usando o [!DNL Query Editor] na Experience Platform ou na API do Serviço de consulta.
+
+### [!DNL Query Editor]
+
+Use o [!DNL Query Editor] para análise, exploração de dados e desenvolvimento de consulta colaborativa. Para obter uma visão geral da funcionalidade da interface, consulte a [documentação da interface do usuário do Serviço de Consulta](../ui/overview.md). Para saber mais sobre como gravar e executar consultas na interface do usuário, leia o [[!DNL Query Editor user guide]](../ui/user-guide.md).
+
+### API do serviço de consulta
+
+Use a API do Serviço de consulta para fluxos de trabalho automatizados, gerenciamento de modelos de consulta e integrações programáticas. Consulte o [Guia do desenvolvedor do Serviço de Consulta](../api/getting-started.md) para obter instruções detalhadas sobre como usar a API do Serviço de Consulta.
 
 ## Próximas etapas
 

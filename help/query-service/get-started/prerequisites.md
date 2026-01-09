@@ -21,7 +21,7 @@ Antes de começar a consultar dados, verifique se você tem:
 - **Permissões necessárias**: sua conta de usuário tem acesso ao Serviço de consulta na Experience Platform. Se o serviço não estiver disponível na interface, revise a [documentação de permissões](../../access-control/home.md#permissions) e contate o administrador do sistema.
 - **Assimilação de dados**: você tem dados assimilados na Experience Platform.
 
-Se você precisar assimilar dados, reveja o [vídeo tutorial sobre assimilação de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) para obter uma visão geral sobre a criação de conjuntos de dados, mapeamento de esquemas, assimilação e validação. Leia a [documentação de visão geral de assimilação](../../ingestion/home.md) para obter informações mais detalhadas e links para outros recursos de aprendizado.
+Se você precisar assimilar dados, reveja o [vídeo tutorial sobre assimilação de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) para obter uma visão geral sobre a criação de conjuntos de dados, mapeamento de esquemas, assimilação e validação. Leia a [documentação de visão geral de assimilação](../../ingestion/home.md) para obter informações mais detalhadas e links para outros recursos de aprendizado.
 
 ## Caminhos de início rápido
 

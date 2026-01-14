@@ -2,9 +2,9 @@
 title: Namespaces e esquemas B2B
 description: Este documento fornece uma visão geral dos namespaces personalizados necessários ao criar um conector de origem B2B.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 5eeb0397ddc96a224919a776f94058ae3a539b69
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1538'
 ht-degree: 6%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 6%
 
 >[!AVAILABILITY]
 >
->Você deve ter acesso ao [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) para que seus esquemas B2B sejam qualificados no [Perfil do Cliente em Tempo Real](../../../../profile/home.md).
+>- Você deve ter acesso ao [Adobe Real-Time Customer Data Platform B2B edition](../../../../rtcdp/b2b-overview.md) para que seus esquemas B2B sejam qualificados no [Perfil do Cliente em Tempo Real](../../../../profile/home.md).
+>
+>- A partir de janeiro de 2026, o Real-Time CDP B2B edition não oferecerá mais suporte a **relações não padrão** entre entidades B2B. Portanto, é recomendável atualizar suas entidades B2B para usar os relacionamentos padrão descritos no [guia de namespaces e esquemas B2B](../../../../rtcdp/schemas/b2b.md).
 
 >[!NOTE]
 >

@@ -1,12 +1,12 @@
 ---
 title: Públicos da conta
 description: Saiba como criar e usar públicos-alvo da conta para direcionar perfis de conta em destinos downstream.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 6cb5afb78502c34e0eba99af29d7a67119b7e05a
 workflow-type: tm+mt
-source-wordcount: '1498'
+source-wordcount: '1461'
 ht-degree: 21%
 
 ---
@@ -60,10 +60,6 @@ Para criar um público-alvo para a conta, selecione **[!UICONTROL Create audienc
 O Construtor de segmentos é exibido. Os atributos e os públicos-alvo da conta são exibidos na barra de navegação esquerda. Na guia [!UICONTROL Attributes], é possível adicionar atributos criados e personalizados pela Experience Platform.
 
 ![O Construtor de segmentos é exibido. Observe que somente os atributos e os públicos-alvo são exibidos.](../images/types/account/segment-builder.png)
-
-Ao criar públicos-alvo de conta, observe que os eventos estão listados em **[!UICONTROL People]**, em vez de serem sua própria guia, já que esses atributos estão associados a pessoas.
-
-![O local para localizar eventos, que está dentro da pasta [!UICONTROL People], está realçado.](../images/types/account/attributes.png)
 
 Na guia [!UICONTROL Audiences], é possível adicionar públicos-alvo com base em pessoas criados anteriormente para serem construídos ao criar o público-alvo da sua própria conta.
 
@@ -208,8 +204,8 @@ Ao usar públicos da conta, o público-alvo **deve** estar em conformidade com a
    - Uma entidade cruzada é quando você altera entre entidades diferentes no seu público-alvo. Por exemplo, ir de uma Conta para uma Pessoa e de lá para uma Lista de marketing.
 - O número máximo de valores que podem ser verificados para um único campo é **50**.
    - Por exemplo, se você tiver um campo de &quot;Nome da cidade&quot;, será possível verificar esse valor em relação a 50 nomes de cidade.
-- Públicos-alvo da conta **não podem** usar eventos sequenciais.
 - Públicos-alvo da conta **não podem** usar mapas.
+- Públicos-alvo da conta **não podem** usar eventos.
 - A profundidade máxima de matrizes aninhadas é **5**.
 - O número máximo de objetos aninhados é **10**.
 

@@ -3,9 +3,9 @@ keywords: publicidade; bing;
 title: Conexão com o Microsoft Bing
 description: Com o destino da conexão do Microsoft Bing, você pode executar campanhas digitais direcionadas por público e redirecionamento em toda a Microsoft Advertising Network, incluindo Publicidade de exibição, Pesquisa e Nativo.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '897'
 ht-degree: 5%
 
 ---
@@ -80,7 +80,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL Microsoft Bing] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=pt-BR) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL Microsoft Bing] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL Microsoft Bing] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL Microsoft Bing] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
 
 Ao configurar o destino, você deve fornecer as seguintes informações:
 
@@ -114,6 +114,11 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >id="platform_destinations_bing_mapping_id"
 >title="ID de mapeamento"
 >abstract="Insira a ID de público-alvo numérica do Bing para a qual deseja mapear o segmento selecionado. Se o [!UICONTROL Mapping ID] fornecido não corresponder a uma ID de público-alvo no destino do Bing, você não verá os dados do público-alvo esperados na sua conta do Bing."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_required_mappings_bing"
+>title="Conjuntos de mapeamento pré-configurados"
+>abstract="Pré-configuramos esses dois conjuntos de mapeamento para você. À medida que você ativa dados para o Microsoft Bing, os perfis qualificados para os públicos ativados devem ter pelo menos uma identidade ECID associada ao perfil para serem exportados com êxito para o destino."
 
 >[!IMPORTANT]
 > 

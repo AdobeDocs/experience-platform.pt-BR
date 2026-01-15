@@ -4,9 +4,9 @@ title: Visão geral de alertas
 description: Saiba mais sobre os alertas na Adobe Experience Platform, incluindo a estrutura de como as regras de alerta são definidas.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '791'
 ht-degree: 12%
 
 ---
@@ -31,7 +31,7 @@ Os alertas do Experience Platform podem ser enviados uma vez ou repetidos em um 
 | --- | --- |
 | Não indica necessariamente um problema. | Indica um estado potencialmente indesejável. |
 | Não se repete. | Pode se repetir se a condição anômala persistir. |
-| São exemplos:<ul><li>A assimilação de dados foi concluída com sucesso.</li><li>Uma execução de consulta foi concluída.</li><li>Os dados foram excluídos.</li></ul> | São exemplos:<ul><li>A duração da assimilação excede o contrato de nível de serviço (SLA).</li><li>A ingestão diária não ocorreu nas últimas 24 horas.</li><li>A taxa de erro do processador de fluxo está acima do limite configurado.</li><li>O número total de perfis excede os direitos.</li></ul> |
+| São exemplos:<ul><li>A assimilação de dados foi concluída com sucesso.</li><li>Uma execução de consulta foi concluída.</li><li>Os dados foram excluídos.</li></ul> | São exemplos:<ul><li>A duração da assimilação excede o contrato de nível de serviço (SLA).</li><li>A ingestão diária não ocorreu nas últimas 24 horas.</li><li>A taxa de erro do processador de fluxo está acima do limite configurado.</li></ul> |
 
 {style="table-layout:auto"}
 

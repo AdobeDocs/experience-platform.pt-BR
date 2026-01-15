@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Noções básicas da composição do esquema
 description: Saiba mais sobre esquemas do Experience Data Model (XDM) e os componentes, princípios e práticas recomendadas para a composição de esquemas no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
+source-git-commit: 5b59d491834854829a89a240ccd612367cf558d4
 workflow-type: tm+mt
-source-wordcount: '4308'
+source-wordcount: '4291'
 ht-degree: 8%
 
 ---
 
 # Noções básicas da composição do esquema
 
-Saiba mais sobre esquemas do Experience Data Model (XDM) e os componentes, princípios e práticas recomendadas para a composição de esquemas no Adobe Experience Platform. Para obter informações gerais sobre o XDM e como ele é usado no [!DNL Experience Platform], consulte a [visão geral do Sistema XDM](../home.md).
+Saiba mais sobre esquemas do Experience Data Model (XDM) e os componentes, princípios e práticas recomendadas para a composição de esquemas no Adobe Experience Platform. Para obter informações gerais sobre o XDM e como ele é usado no Experience Platform, consulte a [visão geral do sistema XDM](../home.md).
 
 ## Noções básicas sobre esquemas {#understanding-schemas}
 
@@ -44,7 +44,7 @@ Os dados destinados ao uso no Experience Platform são agrupados em dois tipos d
 * **Dados de registro**: fornece informações sobre os atributos de um assunto. Um assunto pode ser uma organização ou um indivíduo.
 * **Dados de série temporal**: Fornece um instantâneo do sistema no momento em que uma ação foi tomada direta ou indiretamente por um titular de registro.
 
-Todos os esquemas XDM descrevem dados que podem ser categorizados como registro ou série de tempo. O comportamento dos dados de um schema é definido pela classe do schema, que é atribuída a um schema quando ele é criado pela primeira vez. As classes XDM são descritas com mais detalhes posteriormente neste documento.
+Todos os esquemas XDM descrevem dados que podem ser categorizados como registro ou série de tempo. O comportamento dos dados de um schema é definido pela classe do schema, que é atribuída a um schema quando ele é criado pela primeira vez.
 
 Os esquemas de registro e série temporal contêm um mapa de identidades (`xdm:identityMap`). Este campo contém a representação de identidade de uma pessoa, desenhada a partir de campos marcados como &quot;Identidade&quot;, conforme descrito na próxima seção.
 
@@ -78,7 +78,7 @@ A principal desvantagem de usar o `identityMap` é que os valores de identidade 
 >
 >Um esquema que usa `identityMap` pode ser usado como um esquema de origem em uma relação, mas não pode ser usado como um esquema de referência. Isso ocorre porque todos os esquemas de referência devem ter uma identidade visível que possa ser mapeada em um campo de referência no esquema de origem. Consulte o guia de interface do usuário em [relações](../tutorials/relationship-ui.md) para obter mais informações sobre os requisitos de esquemas de origem e referência.
 
-No entanto, os mapas de identidade podem ser úteis se houver um número variável de identidades para um esquema ou se você estiver trazendo dados de fontes que armazenam identidades juntas (como [!DNL Airship] ou Adobe Audience Manager). Além disso, os mapas de identidade serão necessários se você estiver usando a [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/).
+No entanto, os mapas de identidade podem ser úteis se houver um número variável de identidades para um esquema ou se você estiver trazendo dados de fontes que armazenam identidades juntas (como [!DNL Airship] ou Adobe Audience Manager). Além disso, os mapas de identidade serão necessários se você estiver usando a [Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/).
 
 Um exemplo de um mapa de identidade simples seria semelhante ao seguinte:
 
@@ -113,7 +113,7 @@ Como mostra o exemplo acima, cada chave no objeto `identityMap` representa um na
 
 >[!NOTE]
 >
->Um valor booleano para determinar se o valor é uma identidade primária (`primary`) também pode ser fornecido para cada valor de identidade. Você só precisa definir identidades primárias para esquemas destinados a serem usados em [!DNL Real-Time Customer Profile]. Consulte a seção sobre [esquemas de união](#union) para obter mais informações.
+>Um valor booleano para determinar se o valor é uma identidade primária (`primary`) também pode ser fornecido para cada valor de identidade. Você só precisa definir identidades primárias para esquemas destinados a serem usados em [!DNL Real-Time Customer Profile].
 
 ### Princípios de evolução do esquema {#evolution}
 
@@ -123,7 +123,7 @@ Como manter a compatibilidade com versões anteriores é crucial para a evoluç�
 
 >[!NOTE]
 >
->Você só poderá introduzir uma mudança radical em um esquema se ele ainda não tiver sido usado para assimilar dados na Experience Platform e não tiver sido habilitado para uso no Perfil do cliente em tempo real. No entanto, uma vez que o esquema tenha sido usado em [!DNL Experience Platform], ele deve aderir à política de controle de versão aditivo.
+>Você só poderá introduzir uma mudança radical em um esquema se ele ainda não tiver sido usado para assimilar dados na Experience Platform e não tiver sido habilitado para uso no Perfil do cliente em tempo real. No entanto, uma vez que o schema tenha sido usado no Experience Platform, ele deve aderir à política de controle de versão aditivo.
 
 A tabela a seguir detalha quais alterações são suportadas ao editar esquemas, grupos de campos e tipos de dados:
 
@@ -148,22 +148,22 @@ Se um campo tiver sido usado para assimilar dados e não tiver sido originalment
 Ao definir um campo opcional anteriormente como obrigatório, lembre-se do seguinte:
 
 1. Se você consultar dados históricos e gravar os resultados em um novo conjunto de dados, haverá falha em algumas linhas porque elas contêm valores nulos para o campo obrigatório.
-1. Se o campo participar do [Perfil de cliente em tempo real](../../profile/home.md) e você exportar dados antes de configurá-los como necessário, ele poderá ser nulo para alguns perfis.
+1. Se o campo participar do Perfil de cliente em tempo real e você exportar dados antes de configurá-los como necessário, ele poderá ser nulo para alguns perfis.
 1. Você pode usar a API do registro de esquema para exibir um registro de alterações com carimbo de data e hora para todos os recursos XDM na Experience Platform, incluindo novos campos obrigatórios. Consulte o manual no [ponto de extremidade do log de auditoria](../api/audit-log.md) para obter mais informações.
 
 ### Esquemas e assimilação de dados
 
-Para assimilar dados na Experience Platform, um conjunto de dados deve ser criado primeiro. Os conjuntos de dados são os blocos de construção para transformação e rastreamento de dados para [[!DNL Catalog Service]](../../catalog/home.md) e geralmente representam tabelas ou arquivos que contêm dados assimilados. Todos os conjuntos de dados se baseiam em esquemas XDM existentes, que fornecem restrições sobre o que os dados assimilados devem conter e como devem ser estruturados. Consulte a visão geral em [Assimilação de dados Adobe Experience Platform](../../ingestion/home.md) para obter mais informações.
+Para assimilar dados na Experience Platform, um conjunto de dados deve ser criado primeiro. Os conjuntos de dados são os blocos de construção para transformação e rastreamento de dados para [[!DNL Catalog Service]](../../catalog/home.md) e geralmente representam tabelas ou arquivos que contêm dados assimilados. Todos os conjuntos de dados se baseiam em esquemas XDM existentes, que fornecem restrições sobre o que os dados assimilados devem conter e como devem ser estruturados. Consulte a visão geral em [Assimilação de dados Experience Platform](../../ingestion/home.md) para obter mais informações.
 
 ## Blocos de construção de um esquema {#schema-building-blocks}
 
-O Experience Platform usa uma abordagem de composição na qual os blocos de construção padrão são combinados para criar esquemas. Essa abordagem promove a reutilização dos componentes existentes e promove a padronização em todo o setor para dar suporte a esquemas e componentes de fornecedores no [!DNL Experience Platform].
+O Experience Platform usa uma abordagem de composição na qual os blocos de construção padrão são combinados para criar esquemas. Essa abordagem promove a reutilização dos componentes existentes e impulsiona a padronização em todo o setor para dar suporte a esquemas e componentes de fornecedores no Experience Platform.
 
 Os esquemas são compostos usando a seguinte fórmula:
 
-**Classe + Grupo de Campos de Esquema&ast; = Esquema XDM**
+**Classe + Grupo de Campos de Esquema&amp;ast; = Esquema XDM**
 
-&ast;Um esquema é composto por uma classe e zero ou mais grupos de campos de esquema. Isso significa que você pode compor um esquema de conjunto de dados sem usar grupos de campos.
+&amp;ast;Um esquema é composto por uma classe e zero ou mais grupos de campos de esquema. Isso significa que você pode compor um esquema de conjunto de dados sem usar grupos de campos.
 
 ### Classe {#class}
 
@@ -179,7 +179,7 @@ Os esquemas são compostos usando a seguinte fórmula:
 
 A composição de um esquema começa com a atribuição de uma classe. As classes definem os aspectos comportamentais dos dados que o esquema conterá (registro ou série temporal). Além disso, as classes descrevem o menor número de propriedades comuns que todos os esquemas baseados nessa classe precisariam incluir e fornecem uma maneira de vários conjuntos de dados compatíveis serem mesclados.
 
-A classe de um esquema determina quais grupos de campos estão qualificados para uso nesse esquema. Isso é discutido com mais detalhes na [próxima seção](#field-group).
+A classe de um esquema determina quais grupos de campos estão qualificados para uso nesse esquema.
 
 O Adobe fornece várias classes XDM padrão (&quot;núcleo&quot;). Duas dessas classes, [!DNL XDM Individual Profile] e [!DNL XDM ExperienceEvent], são necessárias para quase todos os processos downstream do Experience Platform. Além dessas classes principais, você também pode criar suas próprias classes personalizadas para descrever casos de uso mais específicos para sua organização. As classes personalizadas são definidas por uma organização quando não há classes principais definidas pela Adobe disponíveis para descrever um caso de uso exclusivo.
 
@@ -211,9 +211,9 @@ Por exemplo, para capturar detalhes como &quot;[!UICONTROL First Name]&quot; e &
 
 >[!NOTE]
 >
->É altamente recomendável usar grupos de campos padrão sempre que possível em seus esquemas, pois esses campos são implicitamente compreendidos pelos serviços da Experience Platform e fornecem maior consistência quando usados em [!DNL Experience Platform] componentes.
+>É altamente recomendável usar grupos de campos padrão sempre que possível em seus esquemas, já que esses campos são compreendidos implicitamente pelos serviços da Experience Platform e fornecem maior consistência quando usados em componentes do Experience Platform.
 >
->Os campos fornecidos pelos componentes padrão (como &quot;Nome&quot; e &quot;Endereço de email&quot;) contêm conotações adicionadas além dos tipos de campos escalares básicos. Eles informam a [!DNL Experience Platform] que todos os campos que compartilham o mesmo tipo de dados se comportarão da mesma maneira. Pode-se confiar que esse comportamento é consistente independentemente de onde os dados vêm ou em qual serviço do [!DNL Experience Platform] os dados estão sendo usados.
+>Os campos fornecidos pelos componentes padrão (como &quot;Nome&quot; e &quot;Endereço de email&quot;) contêm conotações adicionadas além dos tipos de campos escalares básicos. Eles informam à Experience Platform que todos os campos que compartilham o mesmo tipo de dados se comportarão da mesma maneira. Pode-se confiar que esse comportamento é consistente, independentemente de onde os dados vêm ou em qual serviço do Experience Platform os dados estão sendo usados.
 
 Lembre-se de que os esquemas são compostos de &quot;zero ou mais&quot; grupos de campos, portanto, isso significa que você pode compor um esquema válido sem usar nenhum grupo de campos.
 
@@ -245,11 +245,11 @@ Para obter a lista mais atualizada dos tipos de dados XDM padrão disponíveis, 
 
 >[!NOTE]
 >
-> Os tipos de dados XDM padrão estão sempre evoluindo e alguns tipos de dados foram descontinuados. Para obter a lista mais atualizada dos tipos de dados obsoletos, consulte a [seção de tipos de dados obsoletos](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) no repositório oficial do XDM.
+> Os tipos de dados XDM padrão estão sempre evoluindo e alguns tipos de dados foram descontinuados. Para obter a lista mais atualizada dos tipos de dados obsoletos, consulte a [seção de tipos de dados obsoletos](https://github.com/adobe/xdm/tree/master/components/datatypes/deprecated) no repositório XDM oficial.
 
 ### Campo {#field}
 
-Um campo é o bloco de construção mais básico de um esquema. Os campos fornecem restrições relacionadas ao tipo de dados que eles podem conter ao definir um tipo de dados específico. Esses tipos de dados básicos definem um único campo, enquanto os [tipos de dados](#data-type) mencionados anteriormente permitem definir vários subcampos e reutilizar a mesma estrutura de vários campos em vários esquemas. Portanto, além de definir o &quot;tipo de dados&quot; de um campo como um dos tipos de dados definidos no registro, o Experience Platform é compatível com tipos escalares básicos, como:
+Um campo é o bloco de construção mais básico de um esquema. Os campos fornecem restrições relacionadas ao tipo de dados que eles podem conter ao definir um tipo de dados específico. Esses tipos de dados básicos definem um único campo, enquanto os tipos de dados mencionados anteriormente permitem definir vários subcampos e reutilizar a mesma estrutura de vários campos em vários esquemas. Portanto, além de definir o &quot;tipo de dados&quot; de um campo como um dos tipos de dados definidos no registro, o Experience Platform é compatível com tipos escalares básicos, como:
 
 * String
 * Número inteiro
@@ -278,7 +278,7 @@ Os intervalos válidos desses tipos escalares podem ser ainda mais restritos a d
 
 ## Exemplo de composição {#composition-example}
 
-Os esquemas são criados usando um modelo de composição e representam o formato e a estrutura dos dados a serem assimilados em [!DNL Experience Platform]. Como mencionado anteriormente, esses esquemas são compostos de uma classe e zero ou mais grupos de campos compatíveis com essa classe.
+Os esquemas são criados usando um modelo de composição e representam o formato e a estrutura dos dados a serem assimilados na Experience Platform. Como mencionado anteriormente, esses esquemas são compostos de uma classe e zero ou mais grupos de campos compatíveis com essa classe.
 
 Por exemplo, um esquema que descreve compras feitas em uma loja de varejo pode ser chamado de &quot;[!UICONTROL Store Transactions]&quot;. O esquema implementa a classe [!DNL XDM ExperienceEvent] combinada com o grupo de campos [!UICONTROL Commerce] padrão e um grupo de campos [!UICONTROL Product Info] definido pelo usuário.
 
@@ -294,7 +294,7 @@ Embora o Experience Platform permita compor esquemas para casos de uso específi
 
 ![Um diagrama de fluxo de esquema de união que retrata os campos que os compõem.](../images/schema-composition/union.png)
 
-Ao habilitar um esquema para uso com [!DNL Real-Time Customer Profile], ele é incluído na união para esse tipo de classe. O [!DNL Profile] fornece perfis robustos e centralizados de atributos do cliente e uma conta com carimbo de data e hora de cada evento que o cliente teve em qualquer sistema integrado ao [!DNL Experience Platform]. [!DNL Profile] usa a exibição de união para representar esses dados e fornecer uma exibição holística de cada cliente individual.
+Ao habilitar um esquema para uso com [!DNL Real-Time Customer Profile], ele é incluído na união para esse tipo de classe. O [!DNL Profile] fornece perfis robustos e centralizados de atributos do cliente e uma conta com carimbo de data e hora de cada evento que o cliente teve em qualquer sistema integrado ao Experience Platform. [!DNL Profile] usa a exibição de união para representar esses dados e fornecer uma exibição holística de cada cliente individual.
 
 Para obter mais informações sobre como trabalhar com [!DNL Profile], consulte a [Visão geral do Perfil do Cliente em Tempo Real](../../profile/home.md).
 
@@ -318,7 +318,7 @@ Para revisar a estrutura das duas classes XDM principais e seus grupos de campos
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Adobe Experience Platform e fornece uma interface de usuário e uma API RESTful a partir das quais todos os recursos de biblioteca disponíveis podem ser acessados. O [!DNL Schema Library] contém Recursos do setor definidos pela Adobe, Recursos do fornecedor definidos pelos parceiros da Experience Platform e classes, grupos de campos, tipos de dados e esquemas que foram compostos por membros da organização.
+O [!DNL Schema Registry] é usado para acessar o [!DNL Schema Library] no Experience Platform e fornece uma interface de usuário e uma API RESTful a partir das quais todos os recursos de biblioteca disponíveis podem ser acessados. O [!DNL Schema Library] contém Recursos do setor definidos pela Adobe, Recursos do fornecedor definidos pelos parceiros da Experience Platform e classes, grupos de campos, tipos de dados e esquemas que foram compostos por membros da organização.
 
 Para começar a compor o esquema usando a interface do usuário, siga o [tutorial do Editor de esquemas](../tutorials/create-schema-ui.md) para criar o esquema &quot;Membros de fidelidade&quot; mencionado neste documento.
 
@@ -364,7 +364,7 @@ Os prós e contras do uso de objetos em campos de formato livre estão listados 
 **Contras**:
 
 * Os campos ficam mais aninhados.
-* Ao usar o [Serviço de Consulta do Adobe Experience Platform](../../query-service/home.md), cadeias de caracteres de referência mais longas devem ser fornecidas para campos de consulta aninhados em objetos.
+* Ao usar o [Serviço de Consulta do Experience Platform](../../query-service/home.md), cadeias de caracteres de referência mais longas devem ser fornecidas para campos de consulta aninhados em objetos.
 
 #### Campos de forma livre
 

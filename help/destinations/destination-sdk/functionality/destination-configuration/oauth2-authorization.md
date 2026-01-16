@@ -2,9 +2,9 @@
 description: Esta página descreve os vários fluxos de autorização OAuth 2 compatíveis com o Destination SDK e fornece instruções para configurar a autorização OAuth 2 para o seu destino.
 title: Autorização OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 0cde918c693d06d735397aad721fd3cd5c4e760e
+source-git-commit: 720f599810d119ac4997d24d400199d8efe087c2
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2273'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Esta página descreve os vários fluxos de autorização OAuth 2 compatíveis co
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -109,7 +109,10 @@ Para definir esse método de autorização para o seu destino, adicione as segui
       "refreshTokenUrl": "https://api.moviestar.com/OAuth/refresh_token",
       "clientId": "Experience-Platform-client-id",
       "clientSecret": "Experience-Platform-client-secret",
-      "scope": ["read", "write"]
+      "scope": ["read", "write"],
+      "options": {
+          "useBasicAuth": true 
+      }
     }
   ]
 //...
@@ -126,6 +129,7 @@ Para definir esse método de autorização para o seu destino, adicione as segui
 | `clientId` | String | A ID do cliente que seu sistema atribui à Adobe Experience Platform. |
 | `clientSecret` | String | O segredo do cliente que seu sistema atribui à Adobe Experience Platform. |
 | `scope` | Lista de strings | *Opcional*. Defina o escopo do que o token de acesso permite que o Experience Platform execute em seus recursos. Exemplo: &quot;ler, gravar&quot;. |
+| `options.useBasicAuth` | Booleano | *Opcional*. Um valor booleano que controla como as credenciais do cliente (ID do cliente e segredo do cliente) são enviadas para o endpoint do token do provedor OAuth ao trocar um código de autorização por um token de acesso. <ul><li>Se definidas como `false` ou indefinidas, as credenciais são enviadas como `client_id` e `client_secret` parâmetros no corpo da solicitação POST (comportamento padrão).</li><li>Se esse parâmetro estiver definido como `true`, as credenciais serão enviadas no cabeçalho HTTP `Authorization` usando o formato de Autenticação Básica: `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Defina `useBasicAuth` como `true` quando o provedor OAuth exigir que as credenciais do cliente sejam enviadas no cabeçalho `Authorization` em vez do corpo da solicitação. |
 
 {style="table-layout:auto"}
 

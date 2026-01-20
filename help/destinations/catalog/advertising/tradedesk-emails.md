@@ -3,9 +3,9 @@ title: A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: b9713d5155f89ee895d9fb623088eda77b931d89
+source-git-commit: 036d784014e7cdb101f39f63f9d6e8bac01fdc97
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1088'
 ht-degree: 5%
 
 ---
@@ -89,7 +89,7 @@ O Destino do CRM [!DNL The Trade Desk] é um carregamento diário de arquivo em 
 
 ### Preencher Detalhes do Destino {#fill-in-details}
 
-Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configurar](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR) este destino, você deve fornecer as seguintes informações:
+Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configurar](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) este destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Account Type]**: Escolha a opção **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
@@ -101,11 +101,6 @@ Antes de enviar ou ativar dados de público-alvo para um destino, você deve con
 Ao se conectar ao destino, definir uma política de governança de dados é totalmente opcional. Revise a [visão geral da governança de dados](/help/data-governance/policies/overview.md) da Experience Platform para obter mais detalhes.
 
 ## Ativar públicos-alvo para esse destino {#activate}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_required_mappings_ttdg"
->title="Conjuntos de mapeamento pré-configurados"
->abstract="Pré-configuramos esses quatro conjuntos de mapeamento para você. À medida que você ativa dados para a Trade Desk, os perfis qualificados para os públicos ativados não precisam necessariamente ter todas as quatro identidades presentes nos perfis, pois esse destino funcionará com qualquer uma das identidades de destino mostradas aqui."
 
 >[!IMPORTANT]
 > 

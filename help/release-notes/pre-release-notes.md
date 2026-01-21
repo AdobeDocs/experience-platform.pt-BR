@@ -2,10 +2,10 @@
 title: Notas de pré-lançamento do Experience Platform
 description: Uma visualização das notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: acb8303673c3271794dcda87b149b473328a7a21
+source-git-commit: d401707e263f09ccd8575f02a71d7e74899e02db
 workflow-type: tm+mt
-source-wordcount: '1150'
-ht-degree: 15%
+source-wordcount: '1395'
+ht-degree: 12%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 15%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: janeiro de 2026**
 
@@ -54,11 +54,24 @@ Para obter mais informações, consulte a [documentação do Agent Orchestrator]
 
 [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
+**Destinos novos ou atualizados**
+
+| Destino | Descrição |
+| --- | --- |
+| Conector de destino de Kevel agora disponível | [[!DNL Kevel]](https://www.kevel.com/) fornece a tecnologia habilitada para IA e orientação de especialistas que ajudam líderes comerciais inovadores a lançar, escalar e ter sucesso na mídia de varejo. A Retail Media Cloud do [!DNL Kevel] possibilita formatos de anúncios direcionados, atribuíveis e personalizáveis para publicidade no local e fora do local. |
+| Conector de destino do Index Exchange agora disponível | [!DNL Index] é uma plataforma global de fornecimento de publicidade que ajuda os proprietários de mídia a maximizar o valor de seu conteúdo em todas as telas. Com mais de 20 anos de liderança no setor, o [!DNL Index] conecta as maiores marcas do mundo com criadores de experiências premium para fornecer experiências de alta qualidade ao consumidor. |
+| Suporte a endpoints regionais para conexões de Brasil | Todos os [pontos de extremidade específicos da região](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) com suporte de [!DNL Braze] agora estão disponíveis para seleção durante o fluxo de configuração de destino. Pergunte ao representante do [!DNL Braze] qual instância de ponto de extremidade você deve usar. |
+| Suporte de agendamento semanal e mensal para o Liveramp Onboarding | Agora você pode configurar programações de exportação semanais e mensais para o destino de integração do Liveramp. |
+| Suporte à criptografia AES256 para destinos do Amazon S3 | Agora você pode configurar a criptografia AES256 para suas exportações do Amazon S3. |
+| Experiência de ativação aprimorada para destinos do Trade Desk e do Microsoft Bing | Os destinos Trade Desk e Microsoft Bing agora incluem mapeamentos obrigatórios predefinidos para uma experiência de ativação otimizada. |
+
 **Funcionalidade nova ou atualizada**
 
 | Recurso | Descrição |
 | --- | --- |
-| Limites de proteção atualizados para o destino do Adobe Target | O número máximo de públicos que podem ser mapeados para um único destino do Adobe Target aumentou de 50 para 250. Isso alinha o Adobe Target ao limite de público-alvo padrão para outros destinos, fornecendo maior flexibilidade para os fluxos de trabalho de ativação de público-alvo. Agora, os clientes podem ativar mais públicos para destinos do Adobe Target sem precisar criar vários fluxos de dados. |
+| Limites de proteção atualizados para o destino do Adobe Target | O número máximo de públicos que podem ser mapeados para um único destino do Adobe Target aumentou de 50 para 250. Isso alinha o Adobe Target ao limite de público-alvo padrão para outros destinos, fornecendo maior flexibilidade para os fluxos de trabalho de ativação de público-alvo. Agora você pode ativar mais públicos para destinos do Adobe Target sem precisar criar vários fluxos de dados. |
+| [Editar destinos](/help/destinations/ui/edit-destination.md) e [editar ações de marketing](/help/destinations/ui/edit-activation.md#edit-marketing-actions) disponibilidade geral | A opção para editar destinos e ações de marketing agora está disponível para todos os usuários. |
+| Alternar nomes de exibição de campo na etapa Mapeamento | Ao mapear campos de esquema para um destino, agora é possível alternar entre exibir o nome completo do campo XDM e mostrar apenas o nome de exibição. |
 
 {style="table-layout:auto"}
 
@@ -78,7 +91,7 @@ O Perfil do cliente em tempo real permite ter uma visão holística de cada clie
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
 ## Esquemas {#schemas}
 
@@ -90,7 +103,7 @@ A Experience Platform usa esquemas para descrever a estrutura dos dados de forma
 | ------- | ----------- |
 | Modernização do inventário de esquema com pesquisa, filtro, tags e pastas | A página de navegação do esquema foi modernizada para fornecer recursos organizacionais e de descoberta aprimorados. Os novos recursos incluem opções avançadas de pesquisa e filtragem, suporte para tags e pastas geradas pelo usuário para organizar esquemas e ações em linha para simplificar workflows. As principais melhorias incluem: colunas atualizadas (Nome, Classe, Conjuntos de dados, Identidades, Relacionamentos, Habilitar para Perfil, Comportamento, Tipo de esquema, Tags, Data de criação, Última modificação), filtros avançados (Mostrar perfis, Tipo de esquema, Classe, Tem qualquer tag, Criado por, Data de criação, Data de modificação, Tem identidade principal, Tem relacionamento, Namespace de identidade principal), ações em linha (Editar, Excluir, Aplicar rótulos, Criar conjunto de dados para esquemas não relacionais, Gerenciar tags, Mover para pasta, Adicionar ao pacote, Copiar estrutura JSON, Baixar arquivo de amostra) e a capacidade de organizar esquemas usando e pastas. Esses aprimoramentos fornecem visibilidade abrangente dos recursos do esquema e permitem um gerenciamento de esquema mais eficiente no nível da sandbox. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../xdm/home.md) do [!DNL Schemas] .
+Para obter mais informações, leia a visão geral](../xdm/home.md) do [[!DNL Schemas] .
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -103,7 +116,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | Monitoramento da segmentação de transmissão | O monitoramento em tempo real da segmentação por transmissão oferece transparência às métricas de taxa de avaliação, latência e qualidade de dados nos níveis de sandbox, conjunto de dados e público-alvo. Isso oferece suporte a alertas proativos e insights acionáveis para ajudar os engenheiros de dados a identificar violações de capacidade e problemas de assimilação. As métricas de monitoramento incluem taxa de avaliação, latência de assimilação P95, bem como registros recebidos, avaliados, com falha e ignorados. Os recursos visualizar por conjunto de dados e visualizar por público-alvo fornecem visibilidade abrangente sobre novos perfis qualificados e desqualificados. |
 | Atualização do TTL do público externo | Públicos externos (como uploads de CSV) agora oferecem suporte a um recurso de atualização forçada para configurações de Tempo de vida (TTL). Esse recurso permite que os usuários atualizem manualmente a expiração do TTL para públicos-alvo externos, fornecendo maior controle sobre o gerenciamento do ciclo de vida do público-alvo. Isso é particularmente útil para públicos que precisam persistir além do período TTL inicial ou exigir reativação sem recarregar os dados. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

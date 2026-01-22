@@ -4,9 +4,9 @@ description: Saiba como assimilar dados em lote do Talon.One no Adobe Experience
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: d8b8143da3a67bba690229b1f8e88eb86f3fe804
 workflow-type: tm+mt
-source-wordcount: '1409'
+source-wordcount: '1420'
 ht-degree: 1%
 
 ---
@@ -34,29 +34,29 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 
 ## Navegar pelo catálogo de origens
 
-Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Fontes]*. Selecione a categoria apropriada no painel *[!UICONTROL Categorias]*. Como alternativa, use a barra de pesquisa para navegar até a fonte específica que deseja usar.
+Na interface do Experience Platform, selecione **[!UICONTROL Sources]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Sources]*. Selecione a categoria apropriada no painel *[!UICONTROL Categories]*. Como alternativa, use a barra de pesquisa para navegar até a fonte específica que deseja usar.
 
-Para assimilar dados de [!DNL Talon.One], selecione o cartão de origem **[!UICONTROL Conector Source Talon.One Batch]** em *[!UICONTROL Fidelidade]* e selecione **[!UICONTROL Adicionar dados]**.
+Para assimilar dados de [!DNL Talon.One], selecione o cartão de origem **[!UICONTROL Talon.One Batch Source Connector]** em *[!UICONTROL Loyalty]* e selecione **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->As origens no catálogo de origens exibem a opção **[!UICONTROL Configurar]** quando uma determinada origem ainda não tem uma conta autenticada. Após a criação de uma conta autenticada, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
+>As origens no catálogo de origens exibem a opção **[!UICONTROL Set up]** quando uma determinada origem ainda não tem uma conta autenticada. Depois que uma conta autenticada é criada, esta opção muda para **[!UICONTROL Add data]**.
 
 ![O catálogo de origens com o cartão do conector de origem do lote Talon.One selecionado.](../../../../images/tutorials/create/talon-one-batch/catalog.png)
 
 ### Criar uma nova conta
 
-Para criar uma nova conta para sua origem [!DNL Talon.One], selecione **[!UICONTROL Nova conta]** e forneça um nome e uma descrição opcional para sua conta. Em seguida, forneça seu domínio [!DNL Talon.One] e sua [!UICONTROL Chave da API de Gerenciamento Talon.One]. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns momentos para estabelecer a conexão.
+Para criar uma nova conta para sua origem [!DNL Talon.One], selecione **[!UICONTROL New account]** e forneça um nome e uma descrição opcional para sua conta. Em seguida, forneça seu domínio [!DNL Talon.One] e seu [!UICONTROL Talon.One Management API Key]. Quando terminar, selecione **[!UICONTROL Connect to source]** e aguarde alguns instantes para estabelecer sua conexão.
 
 ![A etapa de criação de nova conta do fluxo de trabalho de origens.](../../../../images/tutorials/create/talon-one-batch/new.png)
 
 ### Usar uma conta existente
 
-Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e selecione a conta [!DNL Talon.One] que deseja usar na interface de contas.
+Para usar uma conta existente, selecione **[!UICONTROL Existing account]** e selecione a conta [!DNL Talon.One] que deseja usar na interface de contas.
 
 ## Selecionar dados
 
-Após a autenticação, forneça valores para o **applicationId** e o **sessionType**. Durante essa etapa, é possível usar as funcionalidades de visualização para inspecionar a estrutura dos dados. Quando terminar, selecione **[!UICONTROL Avançar]** para continuar.
+Após a autenticação, forneça valores para o **applicationId** e o **sessionType**. Durante essa etapa, é possível usar as funcionalidades de visualização para inspecionar a estrutura dos dados. Quando terminar, selecione **[!UICONTROL Next]** para continuar.
 
 ![As etapas de seleção de dados e visualização do fluxo de trabalho de fontes.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 
@@ -76,10 +76,10 @@ Durante essa etapa, é possível usar um conjunto de dados existente ou criar um
 
 +++Selecione para obter as etapas para ativar a Assimilação de perfil, Diagnóstico de erro e Assimilação parcial.
 
-Se o seu conjunto de dados estiver habilitado para o Perfil de cliente em tempo real, durante essa etapa você poderá alternar para **[!UICONTROL o conjunto de dados do perfil]** para habilitar seus dados para assimilação de perfil. Você também pode usar esta etapa para habilitar o **[!UICONTROL Diagnóstico de erro]** e a **[!UICONTROL Assimilação parcial]**.
+Se o conjunto de dados estiver habilitado para o Perfil de Cliente em Tempo Real, durante essa etapa você poderá alternar entre **[!UICONTROL Profile dataset]** e habilitar os dados para assimilação de Perfil. Você também pode usar esta etapa para habilitar **[!UICONTROL Error diagnostics]** e **[!UICONTROL Partial ingestion]**.
 
-* **[!UICONTROL Diagnóstico de erro]**: selecione **[!UICONTROL Diagnóstico de erro]** para instruir a origem a produzir o diagnóstico de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
-* **[!UICONTROL Assimilação parcial]**: a assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos na Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
+* **[!UICONTROL Error diagnostics]**: Selecione **[!UICONTROL Error diagnostics]** para instruir a origem a produzir diagnósticos de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
+* **[!UICONTROL Partial ingestion]**: Assimilação parcial em lote é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos na Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
 
 +++
 
@@ -109,7 +109,7 @@ Com o conjunto de dados e os detalhes do fluxo de dados configurados, agora é p
 
 ## Agendar a assimilação do fluxo de dados
 
-A etapa [!UICONTROL Agendando] é exibida. Use a interface para configurar uma programação de assimilação para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. Por padrão, o agendamento está configurado para `Once`. Para ajustar a frequência de assimilação, selecione **[!UICONTROL Frequência]** e escolha uma opção no menu suspenso.
+A etapa [!UICONTROL Scheduling] é exibida. Use a interface para configurar uma programação de assimilação para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. Por padrão, o agendamento está configurado para `Once`. Para ajustar a frequência de assimilação, selecione **[!UICONTROL Frequency]** e, em seguida, selecione uma opção no menu suspenso.
 
 >[!TIP]
 >
@@ -132,15 +132,19 @@ Consulte a tabela abaixo para obter mais informações sobre como programar conf
 
 ## Revisar
 
-A etapa *[!UICONTROL Revisar]* é exibida, permitindo que você revise os detalhes do fluxo de dados antes que ele seja criado. Os detalhes são agrupados nas seguintes categorias:
+A etapa *[!UICONTROL Review]* é exibida, permitindo que você revise os detalhes do fluxo de dados antes que ele seja criado. Os detalhes são agrupados nas seguintes categorias:
 
-* **[!UICONTROL Conexão]**: mostra o nome da conta, a plataforma de origem e o nome de origem.
-* **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: mostra o conjunto de dados de destino e o esquema ao qual o conjunto de dados pertence.
+* **[!UICONTROL Connection]**: mostra o nome da conta, a plataforma de origem e o nome de origem.
+* **[!UICONTROL Assign dataset and map fields]**: mostra o conjunto de dados de destino e o esquema ao qual o conjunto de dados pertence.
 
-Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Concluir]**.
+Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Finish]**.
 
 ![A etapa de revisão do fluxo de trabalho de fontes.](../../../../images/tutorials/create/talon-one-batch/review.png)
 
 ## Monitorar seu fluxo de dados
 
 Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre taxas de assimilação, sucesso e erros. Para obter mais informações sobre como monitorar o fluxo de dados, consulte o tutorial sobre [monitoramento de contas e fluxos de dados na interface](../../../../../dataflows/ui/monitor-sources.md).
+
+## Limitações conhecidas
+
+Ao mapear dados do esquema de [!DNL Talon.One] para o Adobe Experience Platform, não é possível capturar vários efeitos do mesmo tipo em uma única transação. Por exemplo, se uma transação incluir vários efeitos `setDiscount` (como descontos de campanhas diferentes), somente um desses efeitos será retido durante o mapeamento e os outros serão substituídos.

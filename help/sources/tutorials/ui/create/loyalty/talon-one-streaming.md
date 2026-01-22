@@ -4,9 +4,9 @@ description: Saiba como transmitir dados do Talon.One para o Adobe Experience Pl
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+source-git-commit: 554d86e2f07966ee08940a30fe06050570129e41
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '961'
 ht-degree: 2%
 
 ---
@@ -34,19 +34,19 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 
 ## Navegar pelo catálogo de origens
 
-Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Fontes]*. Selecione a categoria apropriada no painel *[!UICONTROL Categorias]*. Como alternativa, use a barra de pesquisa para navegar até a fonte específica que deseja usar.
+Na interface do Experience Platform, selecione **[!UICONTROL Sources]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Sources]*. Selecione a categoria apropriada no painel *[!UICONTROL Categories]*. Como alternativa, use a barra de pesquisa para navegar até a fonte específica que deseja usar.
 
-Para transmitir dados de [!DNL Talon.One], selecione o cartão de origem **[!UICONTROL Talon.One Streaming Events]** em *[!UICONTROL Fidelidade]* e selecione **[!UICONTROL Adicionar dados]**.
+Para transmitir dados de [!DNL Talon.One], selecione o cartão de origem **[!UICONTROL Talon.One Streaming Events]** em *[!UICONTROL Loyalty]* e selecione **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->As origens no catálogo de origens exibem a opção **[!UICONTROL Configurar]** quando uma determinada origem ainda não tem uma conta autenticada. Após a criação de uma conta autenticada, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
+>As origens no catálogo de origens exibem a opção **[!UICONTROL Set up]** quando uma determinada origem ainda não tem uma conta autenticada. Depois que uma conta autenticada é criada, esta opção muda para **[!UICONTROL Add data]**.
 
 ![O catálogo de fontes na interface do usuário com o cartão Eventos de Streaming Talon.One selecionado.](../../../../images/tutorials/create/talon-one-streaming/catalog.png)
 
 ## Selecionar dados
 
-Em seguida, use a interface *[!UICONTROL Selecionar dados]* para carregar um arquivo JSON de amostra para definir seu esquema de origem. Durante essa etapa, é possível usar a interface de pré-visualização para exibir a estrutura de arquivo do payload. Quando terminar, selecione **[!UICONTROL Próximo]**.
+Em seguida, use a interface *[!UICONTROL Select data]* para carregar um arquivo JSON de amostra para definir seu esquema de origem. Durante essa etapa, é possível usar a interface de pré-visualização para exibir a estrutura de arquivo do payload. Quando terminar, selecione **[!UICONTROL Next]**.
 
 ![A etapa de seleção de dados do fluxo de trabalho de fontes](../../../../images/tutorials/create/talon-one-streaming/select-data.png)
 
@@ -66,10 +66,10 @@ Durante essa etapa, é possível usar um conjunto de dados existente ou criar um
 
 +++Selecione para obter as etapas para ativar a Assimilação de perfil, Diagnóstico de erro e Assimilação parcial.
 
-Se o seu conjunto de dados estiver habilitado para o Perfil de cliente em tempo real, durante essa etapa você poderá alternar para **[!UICONTROL o conjunto de dados do perfil]** para habilitar seus dados para assimilação de perfil. Você também pode usar esta etapa para habilitar o **[!UICONTROL Diagnóstico de erro]** e a **[!UICONTROL Assimilação parcial]**.
+Se o conjunto de dados estiver habilitado para o Perfil de Cliente em Tempo Real, durante essa etapa você poderá alternar entre **[!UICONTROL Profile dataset]** e habilitar os dados para assimilação de Perfil. Você também pode usar esta etapa para habilitar **[!UICONTROL Error diagnostics]** e **[!UICONTROL Partial ingestion]**.
 
-* **[!UICONTROL Diagnóstico de erro]**: selecione **[!UICONTROL Diagnóstico de erro]** para instruir a origem a produzir o diagnóstico de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
-* **[!UICONTROL Assimilação parcial]**: a assimilação parcial de lotes é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos na Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
+* **[!UICONTROL Error diagnostics]**: Selecione **[!UICONTROL Error diagnostics]** para instruir a origem a produzir diagnósticos de erro que você poderá consultar posteriormente ao monitorar a atividade do conjunto de dados e o status do fluxo de dados.
+* **[!UICONTROL Partial ingestion]**: Assimilação parcial em lote é a capacidade de assimilar dados que contêm erros, até um determinado limite configurável. Esse recurso permite assimilar com sucesso todos os seus dados precisos na Experience Platform, enquanto todos os seus dados incorretos são armazenados em lote separadamente com informações sobre por que são inválidos.
 
 +++
 
@@ -101,12 +101,12 @@ Use a interface de mapeamento para mapear os dados de origem para os campos de e
 
 ## Revisar
 
-A etapa *[!UICONTROL Revisar]* é exibida, permitindo que você revise os detalhes do fluxo de dados antes que ele seja criado. Os detalhes são agrupados nas seguintes categorias:
+A etapa *[!UICONTROL Review]* é exibida, permitindo que você revise os detalhes do fluxo de dados antes que ele seja criado. Os detalhes são agrupados nas seguintes categorias:
 
-* **[!UICONTROL Conexão]**: mostra o nome da conta, a plataforma de origem e o nome de origem.
-* **[!UICONTROL Atribuir conjunto de dados e mapear campos]**: mostra o conjunto de dados de destino e o esquema ao qual o conjunto de dados pertence.
+* **[!UICONTROL Connection]**: mostra o nome da conta, a plataforma de origem e o nome de origem.
+* **[!UICONTROL Assign dataset and map fields]**: mostra o conjunto de dados de destino e o esquema ao qual o conjunto de dados pertence.
 
-Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Concluir]**.
+Depois de confirmar que os detalhes estão corretos, selecione **[!UICONTROL Finish]**.
 
 ![A etapa de revisão no fluxo de trabalho de fontes.](../../../../images/tutorials/create/talon-one-streaming/review.png)
 
@@ -118,4 +118,8 @@ Com a conexão criada, a página de detalhes das origens é exibida. Esta págin
 
 ## Monitorar seu fluxo de dados
 
-Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre taxas de assimilação, sucesso e erros. Para obter mais informações sobre como monitorar o fluxo de dados, consulte o tutorial em [monitoramento de contas e fluxos de dados na interface](../../monitor-streaming.md)
+Depois que o fluxo de dados for criado, você poderá monitorar os dados que estão sendo assimilados por meio dele para ver informações sobre taxas de assimilação, sucesso e erros. Para obter mais informações sobre como monitorar o fluxo de dados, consulte o tutorial sobre [monitoramento de contas e fluxos de dados na interface](../../monitor-streaming.md).
+
+## Limitações conhecidas
+
+Para garantir uma assimilação de dados precisa, você deve enviar ao conector os dados dos pontos de fidelidade alterados do [!DNL Talon.One], da atualização de camada e das notificações de downgrade de camada. Como a notificação de alteração dos pontos de fidelidade não inclui informações de camada, você deve enviar essas notificações para um conjunto de dados de perfil separado. Se você combinar dados alterados de pontos com notificações de atualização ou downgrade de camada no mesmo conjunto de dados, as informações de camada serão perdidas ou substituídas por valores nulos. As notificações de atualização e downgrade de nível podem usar o mesmo conjunto de dados, já que ambas incluem detalhes de nível. Após a assimilação, as regras de mesclagem de perfis atualizarão automaticamente o perfil mesclado para refletir os pontos e as informações de camada mais recentes.

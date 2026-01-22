@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 56bf7ae20c33b013a1710fba8c04d9edc23baf89
+source-git-commit: a55272e3124c3fceedcadc33883445132bfec6bd
 workflow-type: tm+mt
-source-wordcount: '4849'
+source-wordcount: '4853'
 ht-degree: 2%
 
 ---
@@ -170,7 +170,7 @@ Se um público avaliado usando a segmentação em lotes for republicado, isto é
 
 O método para colocar um público no estado de rascunho depende da origem do público.
 
-Para públicos-alvo criados com o Construtor de segmentos, é possível definir o público-alvo para o estado de rascunho ao selecionar &quot;[!UICONTROL Salvar como rascunho]&quot; no Construtor de segmentos.
+Para públicos-alvo criados com o Construtor de segmentos, é possível definir o público-alvo para o estado de rascunho ao selecionar &quot;[!UICONTROL Save as draft]&quot; no Construtor de segmentos.
 
 Para públicos-alvo criados na Composição de público-alvo, os públicos-alvo são salvos automaticamente como rascunho até serem publicados.
 
@@ -180,13 +180,13 @@ Quando um público-alvo está no estado publicado, você **não pode** alterar o
 
 ### Como colocar um público-alvo no estado publicado?
 
-Para públicos-alvo criados com o Construtor de segmentos ou a Composição de público-alvo, é possível definir o público-alvo para o estado publicado ao selecionar &quot;[!UICONTROL Publicar]&quot; nas respectivas interfaces do usuário.
+Para públicos-alvo criados usando o Construtor de segmentos ou a Composição de público-alvo, é possível definir o público-alvo para o estado publicado ao selecionar &quot;[!UICONTROL Publish]&quot; nas respectivas interfaces do usuário.
 
 Os públicos-alvo criados externamente são definidos como publicados automaticamente.
 
 ### Como colocar um público-alvo no estado inativo?
 
-Para colocar um público publicado no estado inativo, abra o menu de ações rápidas no Portal de público-alvo e selecione &quot;[!UICONTROL Desativar]&quot;.
+Para colocar um público publicado no estado inativo, abra o menu de ações rápidas no Portal de público-alvo e selecione &quot;[!UICONTROL Deactivate]&quot;.
 
 ### Como faço para republicar um público-alvo?
 
@@ -194,7 +194,7 @@ Para colocar um público publicado no estado inativo, abra o menu de ações rá
 >
 >O estado &quot;republicado&quot; é igual ao estado publicado para o comportamento do público-alvo.
 
-Você pode republicar um público selecionando um público que esteja no estado inativo, abrindo o menu de ações rápidas no Portal de público e selecionando [!UICONTROL Publicar].
+Você pode republicar um público selecionando um público que esteja no estado inativo, abrindo o menu de ações rápidas no Portal de público e selecionando [!UICONTROL Publish].
 
 ### Como colocar um público-alvo no estado excluído?
 
@@ -202,7 +202,7 @@ Você pode republicar um público selecionando um público que esteja no estado 
 >
 >Você só pode excluir públicos-alvo que **não** sejam usados em ativações downstream. Além disso, não é possível excluir um público referenciado em outro público. Se você não pode excluir seu público-alvo, certifique-se de que você **não** está usando-o em qualquer serviço downstream ou como um bloco de construção de outro público-alvo.
 
-Para colocar um público-alvo no estado de exclusão, abra o menu de ações rápidas no Portal de público-alvo e selecione [!UICONTROL Excluir].
+Para colocar um público no estado de exclusão, abra o menu de ações rápidas no Portal de público-alvo e selecione [!UICONTROL Delete].
 
 ### Existem limitações para as transições de estado do ciclo de vida?
 
@@ -304,11 +304,11 @@ Neste momento, você só pode ter **10** composições publicadas por sandbox. E
 
 O componente de composição &quot;colocação&quot; segue uma estrutura rígida, como se segue:
 
-1. Você **sempre** começa com o bloco [!UICONTROL Público-alvo] para selecionar sua atividade inicial. Você pode ter no máximo **um** [!UICONTROL público-alvo] bloco.
-2. Opcionalmente, é possível adicionar um bloco [!UICONTROL Excluir] que segue o bloco [!UICONTROL Público-alvo].
-3. Opcionalmente, é possível adicionar um bloco [!UICONTROL Enriquecer] após o bloco [!UICONTROL Excluir]. Você só pode usar **um** [!UICONTROL Enriquecer] bloco por composição.
-4. Opcionalmente, é possível adicionar um bloco [!UICONTROL Classificação] ou [!UICONTROL Divisão]. Você pode **ter somente** um desses blocos por composição.
-5. Você **sempre** termina com um bloco [!UICONTROL Salvar] para salvar seu público-alvo.
+1. Você **sempre** começa com o bloco [!UICONTROL Audience] para selecionar sua atividade inicial. Você pode ter no máximo **um** [!UICONTROL Audience] bloco.
+2. Opcionalmente, você pode adicionar um bloco [!UICONTROL Exclude] que segue o bloco [!UICONTROL Audience].
+3. Opcionalmente, você pode adicionar um bloco [!UICONTROL Enrich] que segue o bloco [!UICONTROL Exclude]. Você só pode usar **um** [!UICONTROL Enrich] bloco por composição.
+4. Opcionalmente, você pode adicionar um bloco [!UICONTROL Rank] ou [!UICONTROL Split]. Você pode **ter somente** um desses blocos por composição.
+5. Você **sempre** termina com um bloco [!UICONTROL Save] para salvar seu público-alvo.
 
 Além disso, as seguintes restrições se aplicam ao usar esses blocos:
 
@@ -360,7 +360,7 @@ A seção a seguir lista perguntas relacionadas à associação de público-alvo
 
 ### Como posso confirmar a associação de um perfil em um público-alvo?
 
-Para confirmar a associação de público-alvo de um perfil, visite a página de detalhes do perfil do perfil que deseja confirmar. Selecione **[!UICONTROL Atributos]**, seguido por **[!UICONTROL Exibir JSON]**, e você poderá confirmar se o objeto `segmentMembership` contém a ID do público-alvo.
+Para confirmar a associação de público-alvo de um perfil, visite a página de detalhes do perfil do perfil que deseja confirmar. Selecione **[!UICONTROL Attributes]**, seguido por **[!UICONTROL View JSON]**, e você pode confirmar que o objeto `segmentMembership` contém a ID do público-alvo.
 
 ### A associação de público pode variar entre a associação ideal e real?
 
@@ -408,7 +408,7 @@ A seção a seguir lista perguntas relacionadas à segmentação de transmissão
 
 ### A &quot;desqualificação&quot; da segmentação por transmissão também ocorre em tempo real?
 
-Para a maioria das instâncias, a desqualificação da segmentação por transmissão ocorre em tempo real. No entanto, os segmentos de transmissão que usam segmentos de segmentos **não** não se qualificam em tempo real, em vez disso, se desqualificam após 24 horas.
+A desqualificação da segmentação de streaming ocorre dependendo da composição do público-alvo. Para públicos-alvo baseados em eventos, a desqualificação ocorre em tempo real, à medida que a janela de pesquisa expira. Para públicos-alvo ou públicos-alvo baseados em perfil que usam atributos de perfil, a desqualificação ocorre quando os valores de atributo de perfil são alterados por meio de uma fonte de transmissão ou durante o trabalho diário de avaliação em lote.
 
 ### Em quais dados a segmentação por transmissão funciona?
 

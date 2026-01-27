@@ -2,10 +2,10 @@
 title: Uso e capacidade da licença
 description: Saiba mais sobre o uso de sua licença e os limites de capacidade no Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 5520e449b4cbe45eb9664ce3c913dd5d544e088c
+source-git-commit: 8cef502f60a42de9c89c29923811215b3a8086c6
 workflow-type: tm+mt
-source-wordcount: '1603'
-ht-degree: 6%
+source-wordcount: '1670'
+ht-degree: 5%
 
 ---
 
@@ -58,7 +58,7 @@ Nesses serviços, as seguintes medidas de proteção são rastreadas:
    - Desses 500 públicos-alvo de transmissão, o número máximo de públicos-alvo de borda é 150
 - A taxa de transferência inicial combinada para assimilação por transmissão é de 1500 registros por segundo (rps)
    - Essa taxa de transferência de transmissão combinada mede o pico combinado de eventos de entrada por segundo para a assimilação de transmissão no Perfil do cliente em tempo real em suas sandboxes de produção e desenvolvimento.
-   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 A capacidade de público-alvo está no nível de **sandbox**. Isso significa que, para cada sandbox que você tem em sua organização, você pode ter 500 públicos-alvo de transmissão, dos quais 150 podem ser públicos-alvo de borda.
 
@@ -68,7 +68,17 @@ O Experience Platform calcula a taxa de transferência da sandbox em intervalos 
 
 Se o uso atingir 80% e 90% da capacidade licenciada, a Experience Platform emitirá um alerta, notificando que você está atingindo o máximo da capacidade especificada. Você pode modificar as configurações para personalizar a porcentagem de capacidade para receber o alerta ou remover o alerta totalmente.
 
-Se o uso ultrapassar 100% da capacidade licenciada, você será considerado em violação da capacidade. Neste ponto, haverá latência de desempenho, e seus destinos de nível de serviço (SLTs) **não** serão garantidos.
+Se o uso ultrapassar 100% da capacidade licenciada, você será considerado em violação da capacidade. Se você violar sua capacidade, as seguintes limitações serão aplicadas:
+
+>[!NOTE]
+>
+>Se você tiver acesso ao Adobe Journey Optimizer, as seguintes limitações **não** serão aplicadas.
+
+- Os dados do evento **podem** ser removidos da personalização de streaming se a fila de processamento de eventos exceder 12 horas
+- Os dados removidos do evento **não** serão assimilados no Perfil
+   - Você poderá ver quando os eventos foram removidos
+   - Os eventos estarão disponíveis no data lake, de acordo com seus direitos
+   - Você *pode* usar o Serviço de consulta para assimilar os dados novamente diretamente, se necessário
 
 ## Acesso {#access}
 
@@ -175,7 +185,7 @@ Além disso, você pode examinar seus fluxos de dados e ver se pode otimizar sua
 
 O vídeo a seguir fornece uma visão geral da Capacidade.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475278/?captions=por_br&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Perguntas frequentes {#faq}
 

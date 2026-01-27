@@ -85,7 +85,7 @@ Você deve fornecer valores para as credenciais a seguir para conectar [!DNL Sal
 | Credencial | Descrição |
 | --- | --- |
 | ID de cliente | O identificador exposto publicamente usado por [!DNL Salesforce Marketing Cloud] para identificar sua conta ao autorizar a Experience Platform. A ID do cliente pode ser recuperada do painel Componentes da interface do usuário do [!DNL Salesforce Marketing Cloud]. |
-| Segredo do cliente | A chave confidencial conhecida apenas pelo aplicativo cliente e pelo servidor de autorização. Você pode gerar o segredo do cliente seguindo as etapas de configuração do aplicativo [ descritas acima](#set-up-application-for-authentication). |
+| Segredo do cliente | A chave confidencial conhecida apenas pelo aplicativo cliente e pelo servidor de autorização. Você pode gerar o segredo do cliente seguindo as etapas de configuração do aplicativo [&#x200B; descritas acima](#set-up-application-for-authentication). |
 | Endpoint base | O prefixo do URI da base de autenticação para [!DNL Salesforce Marketing Cloud]. |
 
 {style="table-layout:auto"}

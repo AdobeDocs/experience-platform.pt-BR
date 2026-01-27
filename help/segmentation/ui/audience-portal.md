@@ -2,9 +2,9 @@
 title: Visão geral do Audience Portal
 description: Saiba como usar o Audience Portal para exibir, gerenciar e criar públicos no Adobe Experience Platform.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 8fed1f034cd530bd84bf9d9b180d9db3c4ee0faf
 workflow-type: tm+mt
-source-wordcount: '4341'
+source-wordcount: '4434'
 ht-degree: 5%
 
 ---
@@ -102,7 +102,7 @@ Você pode adicionar outros campos ao Portal de público selecionando ![o ícone
 | ----- | ----------- |
 | [!UICONTROL Name] | O nome do público. |
 | [!UICONTROL Profile count] | O número total de perfis qualificados para o público-alvo. |
-| [!UICONTROL Origin] | A origem do público. Isso indica de onde o público-alvo vem. Os valores possíveis incluem [Serviço de segmentação](#segment-builder), [Carregamento personalizado](#import-audience), [Composição de público-alvo](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/pt-br/docs/audience-manager/user-guide/aam-home), [Público-alvo semelhante](../types/lookalike-audiences.md), [Composição de público federado](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | A origem do público. Isso indica de onde o público-alvo vem. Os valores possíveis incluem [Serviço de segmentação](#segment-builder), [Carregamento personalizado](#import-audience), [Composição de público-alvo](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Público-alvo semelhante](../types/lookalike-audiences.md), [Composição de público federado](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Lifecycle status] | O status do público. Os valores possíveis para este campo incluem `Draft`, `Inactive` e `Published`. Mais informações sobre os status do ciclo de vida, incluindo o que significam os diferentes estados e como mover públicos para diferentes estados do ciclo de vida, leia a [seção status do ciclo de vida das Perguntas frequentes sobre segmentação](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | Um valor que indica a frequência com que os dados do público-alvo são atualizados. Os valores possíveis para este campo incluem [!UICONTROL Batch], [!UICONTROL Streaming], [!UICONTROL Edge] e [!UICONTROL Not Scheduled]. |
 | [!UICONTROL Last updated by] | O nome da última pessoa que atualizou o público. |
@@ -138,7 +138,7 @@ Para usar [!DNL Unified Search], adicione o termo que você deseja pesquisar na 
 
 ![A barra de pesquisa está realçada.](../images/ui/audience-portal/browse-audience-search.png)
 
-Para obter mais informações sobre [!DNL Unified Search], incluindo os recursos com suporte, leia a [documentação de Pesquisa Unificada](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=pt-BR).
+Para obter mais informações sobre [!DNL Unified Search], incluindo os recursos com suporte, leia a [documentação de Pesquisa Unificada](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
 #### Tags {#tags}
 
@@ -203,7 +203,7 @@ A lista de filtros disponíveis é exibida.
 
 | Filtro | Descrição |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Permite filtrar com base na origem do público-alvo. Os valores possíveis incluem [Serviço de segmentação](#segment-builder), [Carregamento personalizado](#import-audience), [Composição de público-alvo](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/pt-br/docs/audience-manager/user-guide/aam-home), [Público-alvo semelhante](../types/lookalike-audiences.md), [Composição de público federado](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
+| [!UICONTROL Origin] | Permite filtrar com base na origem do público-alvo. Os valores possíveis incluem [Serviço de segmentação](#segment-builder), [Carregamento personalizado](#import-audience), [Composição de público-alvo](#audience-composition), [Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [Público-alvo semelhante](../types/lookalike-audiences.md), [Composição de público federado](#fac), [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [Data Distiller](#data-distiller), [AJO B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/guide-overview) e [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal). |
 | [!UICONTROL Has any tag] | Permite filtrar por tags. Você pode selecionar entre **[!UICONTROL Has any tag]** e **[!UICONTROL Has all tags]**. Quando **[!UICONTROL Has any tag]** for selecionado, os públicos filtrados incluirão **qualquer** das marcas adicionadas. Quando **[!UICONTROL Has all tags]** é selecionado, os públicos filtrados devem incluir **todos** das marcas adicionadas. |
 | [!UICONTROL Lifecycle status] | Permite filtrar com base no status do ciclo de vida do público-alvo. As opções disponíveis incluem [!UICONTROL Deleted], [!UICONTROL Draft], [!UICONTROL Inactive] e [!UICONTROL Published]. |
 | [!UICONTROL Update frequency] | Permite filtrar com base na frequência de atualização do público-alvo (método de avaliação). As opções disponíveis incluem [!UICONTROL Batch], [!UICONTROL Streaming] e [!UICONTROL Edge] |
@@ -264,6 +264,19 @@ Selecionar **[!UICONTROL Open composition]** permite que você visualize seu pú
 ![A página de detalhes do público-alvo é exibida, com o botão [!UICONTROL Update audience] realçado.](../images/ui/audience-portal/audience-details-update-audience.png)
 
 Selecionar **[!UICONTROL Update audience]** permite que você carregue novamente um público gerado externamente. Para obter mais informações sobre como importar um público gerado externamente, leia a seção sobre [como importar um público](#import-audience).
+
+Se o público-alvo estiver dentro de sete dias após a expiração, você poderá selecionar **[!UICONTROL Refresh data expiration]** para assimilar novamente o último lote bem-sucedido do público-alvo.
+
+![O botão [!UICONTROL Refresh data expiration] é realçado na página de detalhes do público-alvo.](../images/ui/audience-portal/refresh-data-expiration.png)
+
+Isso estende a expiração dos dados por 30 dias e usa os mesmos metadados de público-alvo. Após pressionar o botão, você não poderá selecioná-lo por mais 20 minutos.
+
+Este botão **não** poderá ser selecionado nas seguintes situações:
+
+- Não há lotes bem-sucedidos para o público-alvo
+- Falha na atualização inicial
+- A expiração dos dados é superior a sete dias
+- O público-alvo não tem dados
 
 >[!TAB Serviço de segmentação]
 

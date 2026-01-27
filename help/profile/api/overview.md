@@ -4,9 +4,9 @@ title: Guia da API do Perfil do cliente em tempo real
 description: A API de perfil do cliente em tempo real permite que os desenvolvedores explorem e trabalhem com dados de perfil, incluindo a visualização de perfis, a criação e a atualização de políticas de mesclagem, a exportação ou a amostragem de dados de perfil e a exclusão de dados de perfil que não são mais necessários ou que foram adicionados por engano. Siga este manual para saber como executar operações importantes usando a API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82a9b405a1d36155c84cd27a005c7ec469164ef3
 workflow-type: tm+mt
-source-wordcount: '862'
+source-wordcount: '874'
 ht-degree: 2%
 
 ---
@@ -30,6 +30,10 @@ Cada atributo calculado contém uma expressão, ou &quot;regra&quot;, que avalia
 Você pode criar, exibir, editar e excluir atributos computados usando o ponto de extremidade `ca/attributes/`. Para saber como usar atributos computados, consulte a [visão geral sobre atributos computados](../computed-attributes/overview.md). Para operações de API, visite o [manual de ponto de extremidade de API de atributos computados](../computed-attributes/api.md).
 
 ## Entidades (acesso [!DNL Profile]) {#entities}
+
+>[!NOTE]
+>
+>Você só poderá usar esses endpoints se tiver o Real-Time CDP Ultimate.
 
 Por meio do Adobe Experience Platform, você pode acessar dados do [!DNL Real-Time Customer Profile] usando APIs RESTful ou a interface do usuário. Para saber como acessar entidades, mais comumente conhecidas como &quot;perfis&quot;, usando a API, siga as etapas descritas no [manual de endpoint de entidades](entities.md). Para acessar perfis usando a interface do usuário [!DNL Experience Platform], consulte o [Guia do usuário do perfil](../ui/user-guide.md).
 

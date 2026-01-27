@@ -5,14 +5,22 @@ type: Documentation
 description: O Adobe Experience Platform permite acessar os dados do Perfil do cliente em tempo real usando as APIs RESTful ou a interface do usuário. Este guia descreve como acessar entidades, mais conhecidas como "perfis", usando a API de perfil.
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 2f32cae89d69f6dc2930c3908c87b79e1b724f4b
+source-git-commit: 17bd3494c2d9b2a05ca86903297ebec85c9350f2
 workflow-type: tm+mt
-source-wordcount: '2211'
+source-wordcount: '2290'
 ht-degree: 3%
 
 ---
 
 # Endpoint de entidades (Acesso ao perfil)
+
+>[!IMPORTANT]
+>
+>Você pode **usar somente** esses pontos de extremidade se tiver o Real-Time CDP Ultimate.
+>
+>Se você tiver o Real-Time CDP Prime, poderá continuar a assimilar e usar eventos de experiência para casos de uso de personalização, bem como visualizar eventos na interface do usuário do Experience Platform, mas **não** poderá pesquisar de forma programática eventos de experiência usando a API.
+>
+>Se você tiver o Real-Time CDP Ultimate e **não** procurar eventos programaticamente no momento, entre em contato com o Atendimento ao cliente da Adobe para habilitar esse recurso.
 
 O Adobe Experience Platform permite que você acesse dados do [!DNL Real-Time Customer Profile] usando APIs RESTful ou a interface do usuário. Este guia descreve como acessar entidades, mais conhecidas como &quot;perfis&quot;, usando a API. Para obter mais informações sobre como acessar perfis usando a interface do usuário do [!DNL Experience Platform], consulte o [Guia do usuário do perfil](../ui/user-guide.md).
 

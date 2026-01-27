@@ -3,9 +3,9 @@ keywords: publicidade; a trade desk; advertising trade desk
 title: A conexão com a Trade Desk
 description: A Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais de redirecionamento e direcionadas por público-alvo em origens de inventário de exibição, vídeo e dispositivos móveis.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 036d784014e7cdb101f39f63f9d6e8bac01fdc97
+source-git-commit: da9ac560f65c8e0fd6c84517a47cd7e4dd868117
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1146'
 ht-degree: 2%
 
 ---
@@ -83,7 +83,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/pt-br/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL The Trade Desk] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
 
 ## Conectar ao destino {#connect}
 
@@ -133,7 +133,7 @@ Ao mapear públicos-alvo, a Adobe recomenda usar o nome do público-alvo do Expe
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="Conjuntos de mapeamento pré-configurados"
->abstract="Pré-configuramos esses quatro conjuntos de mapeamento para você. À medida que você ativa dados para a Trade Desk, os perfis qualificados para os públicos ativados não precisam necessariamente ter todas as quatro identidades presentes nos perfis, pois esse destino funcionará com qualquer uma das identidades de destino mostradas aqui."
+>abstract="Pré-configuramos esses quatro conjuntos de mapeamento para você. Quando você ativa dados para a Trade Desk, os perfis qualificados para os públicos ativados não precisam necessariamente ter todas as quatro identidades presentes nos perfis, pois esse destino funcionará com qualquer uma das identidades de destino mostradas aqui. Leia mais sobre os &lt;a href=&quot;https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings&quot;>mapeamentos pré-configurados</a>"
 
 Todas as identidades de destino descritas na seção [identidades com suporte](#supported-identities) devem ser mapeadas na etapa de mapeamento do fluxo de trabalho de ativação de público. Isso inclui:
 

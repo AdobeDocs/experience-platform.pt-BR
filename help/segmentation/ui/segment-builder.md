@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 27071d79f52fa47e27da84b970729eb52fbbb7d3
+source-git-commit: 054b34875a0eb2676bcb4a8a8a555b4465410d66
 workflow-type: tm+mt
-source-wordcount: '5175'
+source-wordcount: '5355'
 ht-degree: 12%
 
 ---
@@ -21,31 +21,6 @@ ht-degree: 12%
 ![A interface do usuário do Construtor de segmentos é exibida.](../images/ui/segment-builder/segment-builder.png)
 
 ## Aspectos fundamentais da definição de segmentos {#building-blocks}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
->title="Complexidade lógica"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_chaincountcheck"
->title="Limite de sequência de eventos"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_rewritescheck"
->title="Alerta de eficiência da consulta"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_countaggregationcheck"
->title="Aviso de filtro de contagem"
->abstract=""
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_segmentbuilder_arraydepthcheck"
->title="Aviso de dados aninhados"
->abstract=""
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_fields"
@@ -213,6 +188,45 @@ Como alternativa, você pode adicionar manualmente valores separados por vírgul
 Observe que há um máximo de 250 valores permitidos. Se você exceder esse valor, será necessário remover alguns valores antes de adicionar mais.
 
 ![Um aviso que mostra que você atingiu o número máximo de valores é exibido.](../images/ui/segment-builder/maximum-values.png)
+
+### Validação de consulta {#query-validation}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
+>title="Complexidade lógica"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_chaincountcheck"
+>title="Limite de sequência de eventos"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_rewritescheck"
+>title="Alerta de eficiência da consulta"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_countaggregationcheck"
+>title="Aviso de filtro de contagem"
+>abstract=""
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_arraydepthcheck"
+>title="Aviso de dados aninhados"
+>abstract=""
+
+O Construtor de segmentos analisa e valida automaticamente suas consultas de público para garantir que você siga as práticas recomendadas de definição de público. Essas práticas recomendadas podem ser definidas em duas categorias: validação crítica e otimização de desempenho.
+
+Se uma definição de público-alvo violar uma prática recomendada de validação crítica, você **não** poderá salvar suas alterações para manter sua sandbox estável. Se uma definição de público-alvo violar uma prática recomendada de otimização de desempenho, você poderá salvar suas alterações, mas é *altamente recomendado* atualizar a definição de público-alvo para evitar problemas de desempenho.
+
+| Verificação de validação | Tipo | Limite |
+| ---------------- | ---- | --------- |
+| Complexidade lógica | Validação crítica | A definição do público é muito complicada. |
+| Eventos sequenciais | Validação crítica | Há mais de seis eventos sequenciais em uma definição de público-alvo. |
+| Contagem agregada | Otimização do desempenho | Há mais de três funções de agregação em uma definição de público-alvo. |
+| Dados aninhados | Otimização do desempenho | Há mais de dois níveis de profundidade de dados aninhados (tipos de dados de matriz ou mapa) em uma definição de público-alvo. |
+| Tamanho do público-alvo | Otimização do desempenho | O tamanho da qualificação de público é maior que 30% do número total de perfis na sandbox. |
 
 ### Adição de públicos-alvo
 

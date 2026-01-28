@@ -91,7 +91,7 @@ O Perfil do cliente em tempo real permite ter uma visão holística de cada clie
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral](../profile/home.md) do [[!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral[&#128279;](../profile/home.md) do [!DNL Real-Time Customer Profile] .
 
 ## Esquemas {#schemas}
 
@@ -103,7 +103,7 @@ A Experience Platform usa esquemas para descrever a estrutura dos dados de forma
 | ------- | ----------- |
 | Modernização do inventário de esquema com pesquisa, filtro, tags e pastas | A página de navegação do esquema foi modernizada para fornecer recursos organizacionais e de descoberta aprimorados. Os novos recursos incluem opções avançadas de pesquisa e filtragem, suporte para tags e pastas geradas pelo usuário para organizar esquemas e ações em linha para simplificar workflows. As principais melhorias incluem: colunas atualizadas (Nome, Classe, Conjuntos de dados, Identidades, Relacionamentos, Habilitar para Perfil, Comportamento, Tipo de esquema, Tags, Data de criação, Última modificação), filtros avançados (Mostrar perfis, Tipo de esquema, Classe, Tem qualquer tag, Criado por, Data de criação, Data de modificação, Tem identidade principal, Tem relacionamento, Namespace de identidade principal), ações em linha (Editar, Excluir, Aplicar rótulos, Criar conjunto de dados para esquemas não relacionais, Gerenciar tags, Mover para pasta, Adicionar ao pacote, Copiar estrutura JSON, Baixar arquivo de amostra) e a capacidade de organizar esquemas usando e pastas. Esses aprimoramentos fornecem visibilidade abrangente dos recursos do esquema e permitem um gerenciamento de esquema mais eficiente no nível da sandbox. |
 
-Para obter mais informações, leia a visão geral](../xdm/home.md) do [[!DNL Schemas] .
+Para obter mais informações, leia a visão geral[&#128279;](../xdm/home.md) do [!DNL Schemas] .
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -115,7 +115,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Atualização do TTL do público externo | Públicos externos (como uploads de CSV) agora oferecem suporte a um recurso de atualização forçada para configurações de Tempo de vida (TTL). Esse recurso permite que os usuários atualizem manualmente a expiração do TTL para públicos-alvo externos, fornecendo maior controle sobre o gerenciamento do ciclo de vida do público-alvo. Isso é particularmente útil para públicos que precisam persistir além do período TTL inicial ou exigir reativação sem recarregar os dados. |
 
-Para obter mais informações, leia a visão geral](../segmentation/home.md) do [[!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral[&#128279;](../segmentation/home.md) do [!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

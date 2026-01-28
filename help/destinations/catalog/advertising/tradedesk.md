@@ -133,7 +133,7 @@ Ao mapear públicos-alvo, a Adobe recomenda usar o nome do público-alvo do Expe
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_ttd"
 >title="Conjuntos de mapeamento pré-configurados"
->abstract="Pré-configuramos esses quatro conjuntos de mapeamento para você. Quando você ativa dados para a Trade Desk, os perfis qualificados para os públicos ativados não precisam necessariamente ter todas as quatro identidades presentes nos perfis, pois esse destino funcionará com qualquer uma das identidades de destino mostradas aqui.
+>abstract="Pré-configuramos esses quatro conjuntos de mapeamento para você. Quando você ativa dados para a Trade Desk, os perfis qualificados para os públicos ativados não precisam necessariamente ter todas as quatro identidades presentes nos perfis, pois esse destino funcionará com qualquer uma das identidades de destino mostradas aqui."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Leia mais sobre os mapeamentos pré-configurados"
 
 Todas as identidades de destino descritas na seção [identidades com suporte](#supported-identities) devem ser mapeadas na etapa de mapeamento do fluxo de trabalho de ativação de público. Isso inclui:

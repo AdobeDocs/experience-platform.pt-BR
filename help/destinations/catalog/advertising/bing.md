@@ -118,7 +118,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
 >title="Conjuntos de mapeamento pré-configurados"
->abstract="Pré-configuramos esses dois conjuntos de mapeamento para você. Quando você ativa dados no Microsoft Bing, os perfis qualificados para os públicos ativados devem ter pelo menos uma identidade ECID associada ao perfil para serem exportados com êxito para o destino.
+>abstract="Pré-configuramos esses dois conjuntos de mapeamento para você. Quando você ativa dados no Microsoft Bing, os perfis qualificados para os públicos ativados devem ter pelo menos uma identidade ECID associada ao perfil para serem exportados com êxito para o destino."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings" text="Leia mais sobre os mapeamentos pré-configurados"
 
 >[!IMPORTANT]

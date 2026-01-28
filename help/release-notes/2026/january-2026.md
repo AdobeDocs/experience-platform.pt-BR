@@ -1,10 +1,10 @@
 ---
 title: Notas da versão de janeiro de 2026 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2026 da Adobe Experience Platform.
-source-git-commit: 9a3fbe281195041cf7444c5b6ec185395ff5ad23
+source-git-commit: 54be4d5c309f60e6c3e2a96ab1fea700cc79a608
 workflow-type: tm+mt
-source-wordcount: '1118'
-ht-degree: 16%
+source-wordcount: '1231'
+ht-degree: 15%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 16%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 27 de janeiro de 2026**
 
@@ -45,7 +45,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
 
 ## Destinos {#destinations}
 
@@ -55,13 +55,12 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 
 | Destino | Descrição |
 | --- | --- |
-| Conector de destino de Kevel agora disponível | O destino de streaming [!DNL Kevel] para o Adobe Experience Platform permite que os clientes ativem os públicos do Adobe diretamente no UserDB e nas APIs de gerenciamento de segmento do [!DNL Kevel], para oferecer suporte ao direcionamento em tempo real no momento da decisão do anúncio. [[!DNL Kevel]](https://www.kevel.com/) fornece a tecnologia habilitada para IA e orientação de especialistas que ajudam líderes comerciais inovadores a lançar, escalar e ter sucesso na mídia de varejo. A Retail Media Cloud do [!DNL Kevel] possibilita formatos de anúncios direcionados, atribuíveis e personalizáveis para publicidade no local e fora do local. |
-| Conector de destino do Index Exchange agora disponível | Use este conector de destino para exportar segmentos de público do Adobe Experience Platform diretamente para a plataforma de publicidade programática do [!DNL Index Exchange]. [!DNL Index] é uma plataforma global de fornecimento de publicidade que ajuda os proprietários de mídia a maximizar o valor de seu conteúdo em todas as telas. Com mais de 20 anos de liderança no setor, o [!DNL Index] conecta as maiores marcas do mundo com criadores de experiências premium para fornecer experiências de alta qualidade ao consumidor. |
+| O conector de [destino de nível de teclado](/help/destinations/catalog/advertising/kevel.md) está disponível | O destino de streaming [!DNL Kevel] para o Adobe Experience Platform permite que os clientes ativem os públicos do Adobe diretamente no UserDB e nas APIs de gerenciamento de segmento do [!DNL Kevel], para oferecer suporte ao direcionamento em tempo real no momento da decisão do anúncio. [[!DNL Kevel]](https://www.kevel.com/) fornece a tecnologia habilitada para IA e orientação de especialistas que ajudam líderes comerciais inovadores a lançar, escalar e ter sucesso na mídia de varejo. A Retail Media Cloud do [!DNL Kevel] possibilita formatos de anúncios direcionados, atribuíveis e personalizáveis para publicidade no local e fora do local. |
+| Conector de destino do [Index Exchange](/help/destinations/catalog/advertising/index-exchange.md) agora disponível | Use este conector de destino para exportar segmentos de público do Adobe Experience Platform diretamente para a plataforma de publicidade programática do [!DNL Index Exchange]. [!DNL Index] é uma plataforma global de fornecimento de publicidade que ajuda os proprietários de mídia a maximizar o valor de seu conteúdo em todas as telas. Com mais de 20 anos de liderança no setor, o [!DNL Index] conecta as maiores marcas do mundo com criadores de experiências premium para fornecer experiências de alta qualidade ao consumidor. |
 | Suporte a endpoints regionais para conexões de Brasil | Todos os [pontos de extremidade específicos da região](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) com suporte de [!DNL Braze] agora estão disponíveis para seleção durante o fluxo de configuração de destino. Pergunte ao representante do [!DNL Braze] qual instância de ponto de extremidade você deve usar. |
 | Suporte de agendamento semanal e mensal para o [Liveramp Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | Agora você pode configurar programações de exportação semanais e mensais para o destino de integração do Liveramp. <br> Esta versão está sendo lançada gradualmente e será concluída em 30 de janeiro. |
 | Experiência de ativação aprimorada para [Destinos da Trade Desk](../../destinations/catalog/advertising/tradedesk.md) e [Microsoft Bing](../../destinations/catalog/advertising/bing.md) | Os destinos Trade Desk e Microsoft Bing agora incluem mapeamentos obrigatórios predefinidos para uma experiência de ativação otimizada.  <br> Esta versão está sendo lançada gradualmente e será concluída em 30 de janeiro. |
-
-<!-- |AES256 encryption support for [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) destinations | You can now configure AES256 encryption for your Amazon S3 exports. Two options are available: <br><br>**[!UICONTROL Default]**: If you don't have any custom policies applied on your buckets, data will be encrypted at rest when it lands in S3 with the AES256 algorithm. However, if you have custom policies applied, Experience Platform will respect those policies and Amazon S3 will continue to apply whichever custom encryption policies you have configured.<br><br>**[!UICONTROL SSE-S3/AES256]**: Experience Platform adds the `s3:x-amz-server-side-encryption": "AES256` header in the export and data will be encrypted at rest when it lands in S3 with the AES256 algorithm. | -->
+| Suporte à criptografia AES256 para destinos do [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Agora você pode configurar a criptografia AES256 para suas exportações do Amazon S3. Estão disponíveis duas opções: <ul><li>**[!UICONTROL Default]**: se você não tiver políticas personalizadas aplicadas aos seus buckets, os dados serão criptografados em repouso quando chegarem ao S3 com o algoritmo AES256. No entanto, se você tiver políticas personalizadas aplicadas, o Experience Platform as respeitará e o Amazon S3 continuará a aplicar qualquer política de criptografia personalizada que você tiver configurado.</li><li>**[!UICONTROL SSE-S3/AES256]**: o Experience Platform adiciona o cabeçalho `s3:x-amz-server-side-encryption": "AES256` na exportação e os dados serão criptografados em repouso quando chegarem ao S3 com o algoritmo AES256.</li></ul>  <br> Esta versão está sendo lançada gradualmente e será concluída em 30 de janeiro. |
 
 
 **Funcionalidade nova ou atualizada**
@@ -90,7 +89,7 @@ O Perfil do cliente em tempo real permite ter uma visão holística de cada clie
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -102,7 +101,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Atualização da expiração dos dados do público-alvo externo | Públicos externos (como uploads de CSV) agora oferecem suporte a um recurso de atualização forçada para configurações de expiração de dados. Esse recurso permite que os usuários atualizem manualmente a expiração dos dados para públicos-alvo externos, fornecendo maior controle sobre o gerenciamento do ciclo de vida do público-alvo. Isso é particularmente útil para públicos-alvo que precisam persistir além do período de expiração inicial dos dados ou exigir reativação sem recarregar os dados. Para obter mais informações sobre este recurso, leia a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md#audience-summary). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

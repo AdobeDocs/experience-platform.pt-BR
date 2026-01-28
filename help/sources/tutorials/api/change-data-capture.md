@@ -2,14 +2,18 @@
 title: Habilitar captura de dados de alteração para conexões de origem na API
 description: Saiba como habilitar a captura de dados de alteração para conexões de origem na API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: bd28d5be932823b8bf9c98280f97694ff221d76d
 workflow-type: tm+mt
-source-wordcount: '1234'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
 
 # Habilitar captura de dados de alteração para conexões de origem na API
+
+>[!AVAILABILITY]
+>
+>Agora você pode usar a captura de dados de alteração para as fontes [!DNL Amazon S3] e [!DNL Data Landing Zone] ao executar o Adobe Experience Platform no Amazon Web Services (AWS) enquanto estiver conectado a um data center VA6. O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../landing/multi-cloud.md).
 
 Use a captura de dados de alteração em origens do Adobe Experience Platform para manter seus sistemas de origem e destino sincronizados em tempo quase real.
 

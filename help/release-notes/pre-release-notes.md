@@ -2,10 +2,10 @@
 title: Notas de pré-lançamento do Experience Platform
 description: Uma visualização das notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 26dabf21959fde0b6ce7111524a20e3f342aec75
+source-git-commit: 6fa71c48151e937f2e18d8b9761aad94eca85ade
 workflow-type: tm+mt
-source-wordcount: '1389'
-ht-degree: 12%
+source-wordcount: '1316'
+ht-degree: 13%
 
 ---
 
@@ -21,9 +21,9 @@ ht-degree: 12%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: janeiro de 2026**
 
@@ -91,7 +91,7 @@ O Perfil do cliente em tempo real permite ter uma visão holística de cada clie
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
 ## Esquemas {#schemas}
 
@@ -103,7 +103,7 @@ A Experience Platform usa esquemas para descrever a estrutura dos dados de forma
 | ------- | ----------- |
 | Modernização do inventário de esquema com pesquisa, filtro, tags e pastas | A página de navegação do esquema foi modernizada para fornecer recursos organizacionais e de descoberta aprimorados. Os novos recursos incluem opções avançadas de pesquisa e filtragem, suporte para tags e pastas geradas pelo usuário para organizar esquemas e ações em linha para simplificar workflows. As principais melhorias incluem: colunas atualizadas (Nome, Classe, Conjuntos de dados, Identidades, Relacionamentos, Habilitar para Perfil, Comportamento, Tipo de esquema, Tags, Data de criação, Última modificação), filtros avançados (Mostrar perfis, Tipo de esquema, Classe, Tem qualquer tag, Criado por, Data de criação, Data de modificação, Tem identidade principal, Tem relacionamento, Namespace de identidade principal), ações em linha (Editar, Excluir, Aplicar rótulos, Criar conjunto de dados para esquemas não relacionais, Gerenciar tags, Mover para pasta, Adicionar ao pacote, Copiar estrutura JSON, Baixar arquivo de amostra) e a capacidade de organizar esquemas usando e pastas. Esses aprimoramentos fornecem visibilidade abrangente dos recursos do esquema e permitem um gerenciamento de esquema mais eficiente no nível da sandbox. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../xdm/home.md) do [!DNL Schemas] .
+Para obter mais informações, leia a visão geral](../xdm/home.md) do [[!DNL Schemas] .
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -113,10 +113,9 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Monitoramento da segmentação de transmissão | O monitoramento em tempo real da segmentação por transmissão oferece transparência às métricas de taxa de avaliação, latência e qualidade de dados nos níveis de sandbox, conjunto de dados e público-alvo. Isso oferece suporte a alertas proativos e insights acionáveis para ajudar os engenheiros de dados a identificar violações de capacidade e problemas de assimilação. As métricas de monitoramento incluem taxa de avaliação, latência de assimilação P95, bem como registros recebidos, avaliados, com falha e ignorados. Os recursos visualizar por conjunto de dados e visualizar por público-alvo fornecem visibilidade abrangente sobre novos perfis qualificados e desqualificados. |
 | Atualização do TTL do público externo | Públicos externos (como uploads de CSV) agora oferecem suporte a um recurso de atualização forçada para configurações de Tempo de vida (TTL). Esse recurso permite que os usuários atualizem manualmente a expiração do TTL para públicos-alvo externos, fornecendo maior controle sobre o gerenciamento do ciclo de vida do público-alvo. Isso é particularmente útil para públicos que precisam persistir além do período TTL inicial ou exigir reativação sem recarregar os dados. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

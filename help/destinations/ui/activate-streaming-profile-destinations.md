@@ -4,9 +4,9 @@ type: Tutorial
 description: Saiba como ativar os dados de público-alvo no Adobe Experience Platform enviando públicos-alvo para destinos com base em perfil de transmissão.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '762'
 ht-degree: 1%
 
 ---
@@ -75,9 +75,15 @@ Na etapa **[!UICONTROL Mapping]**, selecione os atributos de perfil que deseja e
 
    ![Imagem destacando como selecionar um campo de origem na etapa de mapeamento.](../assets/ui/activate-streaming-profile-destinations/select-schema-field.png)
 
-1. Na página **[!UICONTROL Select field]**, selecione os atributos XDM que deseja enviar ao destino e escolha **[!UICONTROL Select]**.
+1. Na página **[!UICONTROL Select source field]**, selecione os atributos XDM que deseja enviar ao destino e escolha **[!UICONTROL Save]**.
 
-   ![Imagem mostrando uma seleção de campos XDM que você pode selecionar como campos de origem.](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
+   ![Imagem mostrando uma seleção de campos XDM que você pode selecionar como campos de origem.](../assets/ui/activate-streaming-profile-destinations/select-source-field-modal.png)
+
+   Use a opção **[!UICONTROL Show only fields with data]** para exibir apenas campos de esquema preenchidos com valores. Por padrão, somente os campos de esquema preenchidos são exibidos.
+
+   Use o botão **[!UICONTROL Show display names for fields]** para exibir os nomes amigáveis para campos, em vez dos nomes de campo de esquema.
+
+   ![Selecionar página de campo de origem mostrando a alternância para nomes de exibição.](../assets/ui/activate-batch-profile-destinations/show-display-names.gif)
 
 1. Para adicionar mais campos, repita as etapas de 1 a 3 e selecione **[!UICONTROL Next]**.
 

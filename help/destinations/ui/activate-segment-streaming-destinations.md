@@ -3,9 +3,9 @@ title: Ativar dados do público-alvo para destinos de transmissão
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform mapeando-os para destinos de transmissão.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 2eb890f06097f1b9766408aad3b6ab11d5d12f9f
+source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1124'
 ht-degree: 3%
 
 ---
@@ -82,6 +82,10 @@ Alguns destinos de transmissão de público exigem que você selecione atributos
    Use a opção **[!UICONTROL Show only fields with data]** para exibir apenas campos de esquema preenchidos com valores. Por padrão, somente os campos de esquema preenchidos são exibidos.
 
    ![Selecionar página de campo de origem mostrando vários campos de origem disponíveis.](../assets/ui/activate-segment-streaming-destinations/select-source-field-modal.png)
+
+   Use o botão **[!UICONTROL Show display names for fields]** para exibir os nomes amigáveis para campos, em vez dos nomes de campo de esquema.
+
+   ![Selecionar página de campo de origem mostrando a alternância para nomes de exibição.](../assets/ui/activate-segment-streaming-destinations/show-display-names.gif)
 
 1. Selecione o botão à direita da entrada **[!UICONTROL Target field]**.
 

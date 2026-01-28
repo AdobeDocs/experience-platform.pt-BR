@@ -80,7 +80,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL Microsoft Bing] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=pt-BR) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL Microsoft Bing] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL Microsoft Bing] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do [!DNL Microsoft Bing] no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
 
 Ao configurar o destino, você deve fornecer as seguintes informações:
 
@@ -118,7 +118,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >[!CONTEXTUALHELP]
 >id="platform_destinations_required_mappings_bing"
 >title="Conjuntos de mapeamento pré-configurados"
->abstract="Pré-configuramos esses dois conjuntos de mapeamento para você. Quando você ativa dados no Microsoft Bing, os perfis qualificados para os públicos ativados devem ter pelo menos uma identidade ECID associada ao perfil para serem exportados com êxito para o destino. Leia mais sobre os &lt;a href=&quot;https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings&quot;>mapeamentos pré-configurados</a>"
+>abstract="Pré-configuramos esses dois conjuntos de mapeamento para você. Quando você ativa dados no Microsoft Bing, os perfis qualificados para os públicos ativados devem ter pelo menos uma identidade ECID associada ao perfil para serem exportados com êxito para o destino. Leia mais sobre os &lt;a href=&quot;https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/bing#preconfigured-mappings&quot;>mapeamentos pré-configurados</a>"
 
 >[!IMPORTANT]
 > 

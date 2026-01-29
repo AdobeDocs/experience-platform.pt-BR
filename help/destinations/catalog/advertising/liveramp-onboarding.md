@@ -3,9 +3,9 @@ title: LiveRamp - Conexão de integração
 description: Saiba como usar o conector do LiveRamp para integrar públicos do Adobe Real-Time Customer Data Platform ao LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: b8540eb20838e7f2228d71bfc002392d07daffe4
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1872'
 ht-degree: 4%
 
 ---
@@ -22,7 +22,7 @@ Como profissional de marketing, desejo enviar públicos-alvo do Adobe Experience
 
 ## Pré-requisitos {#prerequisites}
 
-A conexão [!DNL LiveRamp - Onboarding] exporta arquivos usando o armazenamento SFTP[&#x200B; do &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
+A conexão [!DNL LiveRamp - Onboarding] exporta arquivos usando o armazenamento SFTP[ do ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
 
 Antes de enviar dados do Experience Platform para o [!DNL LiveRamp - Onboarding], você precisa de suas credenciais do [!DNL LiveRamp]. Entre em contato com o representante do [!DNL LiveRamp] para obter suas credenciais, caso ainda não as tenha.
 
@@ -50,7 +50,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 |---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Audience export]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL LiveRamp - Onboarding]. |
-| Frequência de exportação | **[!UICONTROL Daily batch]** | Como os perfis são atualizados no Experience Platform com base na avaliação do público-alvo, os perfis (identidades) são atualizados uma vez por dia downstream para a plataforma de destino. Leia mais sobre [destinos com base em arquivo de lote](/help/destinations/destination-types.md#file-based). |
+| Frequência de exportação | **[!UICONTROL Batch]** | À medida que os perfis são atualizados no Experience Platform com base na avaliação do público-alvo, eles (identidades) são atualizados e podem ser entregues downstream à plataforma de destino em uma cadência diária, semanal ou mensal. Leia mais sobre [destinos com base em arquivo de lote](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -132,7 +132,7 @@ Leia [Ativar dados de público-alvo para destinos de exportação de perfil em l
 Na etapa [!UICONTROL Scheduling], crie um agendamento de exportação para cada público, com as configurações mostradas abaixo.
 
 * **[!UICONTROL File export options]**: [!UICONTROL Export full files]. [Exportações incrementais de arquivos](../../ui/activate-batch-profile-destinations.md#export-incremental-files) não têm suporte no momento para o destino [!DNL LiveRamp].
-* **[!UICONTROL Frequency]**: [!UICONTROL Daily]
+* **[!UICONTROL Frequency]**: [!UICONTROL Daily], [!UICONTROL Weekly], ou [!UICONTROL Monthly]
 * **[!UICONTROL Date]**: selecione as horas de início e término da exportação conforme desejar.
 
 ![Captura de tela da interface do usuário do Experience Platform mostrando a etapa de agendamento de público-alvo.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
@@ -255,6 +255,7 @@ Esta seção captura a funcionalidade e as atualizações de documentação sign
 
 | Mês de lançamento | Tipo de atualização | Descrição |
 |---|---|---|
+| Fevereiro de 2025 | Atualização de funcionalidade e documentação | <ul><li> Adição de suporte para cadências de delivery semanais e mensais. |
 | Março de 2024 | Atualização de funcionalidade e documentação | <ul><li>Adicionado suporte para entregas em instâncias [!DNL LiveRamp] [!DNL SFTP] da Europa e Austrália.</li><li>Atualização da documentação para descrever configurações específicas para regiões recém-compatíveis.</li><li>O tamanho máximo do arquivo foi aumentado para 10 milhões de linhas (de 5 milhões, anteriormente).</li><li>Atualização da documentação para refletir o aumento do tamanho dos arquivos.</li></ul> |
 | Julho de 2023 | Versão inicial | Versão inicial de destino e documentação publicada. |
 

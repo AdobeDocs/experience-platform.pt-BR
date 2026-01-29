@@ -1,9 +1,9 @@
 ---
 title: Notas da versão de janeiro de 2026 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2026 da Adobe Experience Platform.
-source-git-commit: 436e65f22b8866fb9922afcf51811f537c05fc9f
+source-git-commit: 8ce256234be0917242f117ee7e9b806abe90888c
 workflow-type: tm+mt
-source-wordcount: '1272'
+source-wordcount: '1287'
 ht-degree: 14%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 14%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 27 de janeiro de 2026**
 
@@ -45,7 +45,7 @@ Agent Orchestrator enables you to build and deploy AI-powered agents that can au
 
 {style="table-layout:auto"}
 
-For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
+For more information, see the [Agent Orchestrator documentation](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). -->
 
 ## Destinos {#destinations}
 
@@ -59,7 +59,7 @@ For more information, see the [Agent Orchestrator documentation](https://experie
 | O conector [Index Exchange destination](/help/destinations/catalog/advertising/index-exchange.md) agora está disponível | Use este conector de destino para exportar segmentos de público do Adobe Experience Platform diretamente para a plataforma de publicidade programática do [!DNL Index Exchange]. [!DNL Index] é uma plataforma global de fornecimento de publicidade que ajuda os proprietários de mídia a maximizar o valor de seu conteúdo em todas as telas. Com mais de 20 anos de liderança no setor, o [!DNL Index] conecta as maiores marcas do mundo com criadores de experiências premium para fornecer experiências de alta qualidade ao consumidor. |
 | Suporte a endpoints regionais para conexões de Brasil | Todos os [pontos de extremidade específicos da região](https://www.braze.com/docs/user_guide/administrative/access_braze/sdk_endpoints) com suporte de [!DNL Braze] agora estão disponíveis para seleção durante o fluxo de configuração de destino. Pergunte ao representante do [!DNL Braze] qual instância de ponto de extremidade você deve usar. |
 | Suporte de agendamento semanal e mensal para o [Liveramp Onboarding](../../destinations/catalog/advertising/liveramp-onboarding.md#scheduling) | Agora você pode configurar programações de exportação semanais e mensais para o destino de integração do Liveramp. <br> Esta versão está sendo lançada gradualmente e será concluída em 30 de janeiro. |
-| Experiência de ativação aprimorada para [Destinos da Trade Desk](../../destinations/catalog/advertising/tradedesk.md) e [Microsoft Bing](../../destinations/catalog/advertising/bing.md) | Os destinos Trade Desk e Microsoft Bing agora incluem mapeamentos obrigatórios predefinidos para uma experiência de ativação otimizada.  <br> Esta versão está sendo lançada gradualmente e será concluída em 30 de janeiro. |
+| Experiência de ativação aprimorada para [Destinos da Trade Desk](../../destinations/catalog/advertising/tradedesk.md) e [Microsoft Bing](../../destinations/catalog/advertising/bing.md) | Os destinos Trade Desk e Microsoft Bing agora incluem mapeamentos obrigatórios predefinidos para uma experiência de ativação otimizada.  <br> Esta versão está sendo lançada gradualmente e será concluída em 30 de janeiro. ![Imagem mostrando mapeamentos predefinidos para a Trade Desk](../2026/assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Imagem mostrando mapeamentos predefinidos do Microsoft Bing](../2026/assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
 | Suporte à criptografia AES256 para destinos do [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Agora você pode configurar a criptografia AES256 para suas exportações do Amazon S3. Estão disponíveis duas opções: <ul><li>**[!UICONTROL Default]**: Os dados serão criptografados em repouso com o algoritmo de criptografia padrão definido no seu bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: o Experience Platform adiciona o cabeçalho `s3:x-amz-server-side-encryption": "AES256` na exportação e os dados serão criptografados em repouso com o algoritmo AES256 quando ele chegar em S3. **Esta opção tem precedência sobre qualquer algoritmo de criptografia padrão configurado no seu bucket do S3**.</li></ul> Esta versão está sendo lançada gradualmente e será concluída em 30 de janeiro. |
 | Suporte para ativação de número de telefone para a conexão [Trade Desk - CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) | O destino Trade Desk - CRM agora oferece suporte à ativação de número de telefone, além de endereços de email. Você pode ativar números de telefone sem hash no formato E.164 e números de telefone com hash (formato SHA256_E.164) na sua conta da Trade Desk para direcionamento e supressão de público com base em dados de CRM. Os números de telefone devem ser normalizados para o formato E.164 antes da ativação. |
 
@@ -89,7 +89,7 @@ O Perfil do cliente em tempo real permite ter uma visão holística de cada clie
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -101,7 +101,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Atualização da expiração dos dados do público-alvo externo | Públicos externos (como uploads de CSV) agora oferecem suporte a um recurso de atualização forçada para configurações de expiração de dados. Esse recurso permite que os usuários atualizem manualmente a expiração dos dados para públicos-alvo externos, fornecendo maior controle sobre o gerenciamento do ciclo de vida do público-alvo. Isso é particularmente útil para públicos-alvo que precisam persistir além do período de expiração inicial dos dados ou exigir reativação sem recarregar os dados. Para obter mais informações sobre este recurso, leia a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md#audience-summary). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

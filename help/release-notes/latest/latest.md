@@ -17,9 +17,9 @@ ht-degree: 11%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 27 de janeiro de 2026**
 
@@ -40,7 +40,7 @@ O Agent Orchestrator permite criar e implantar agentes alimentados por IA que po
 
 | Recurso | Descrição |
 | --- | --- |
-| Avaliação vinculada ao uso dos Adobe Experience Platform Agents | **Os clientes selecionados agora têm acesso gratuito à avaliação dos Adobe Experience Platform Agents**. Você pode usar a versão de avaliação para explorar e interagir com agentes por meio da interface do Assistente de IA disponibilizada pelo Adobe Experience Platform Agent Orchestrator. A versão de avaliação oferece experiência prática com Agentes de IA que operam no contexto dos produtos e ambientes existentes do Experience Cloud dos clientes, permitindo que as equipes avaliem o valor antes de se comprometerem com uma compra completa. Os agentes da Adobe Experience Platform são orientados pela entrada e supervisão do usuário e respeitam os controles de acesso existentes no nível do produto, garantindo que os usuários só possam executar ações ou visualizar dados para os quais estejam autorizados nos aplicativos Experience Cloud subjacentes. Leia a [visão geral da avaliação associada ao uso dos Experience Platform Agents](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obter informações sobre como começar. |
+| Avaliação vinculada ao uso dos Adobe Experience Platform Agents | **Os clientes selecionados agora têm acesso gratuito à avaliação dos Adobe Experience Platform Agents**. Você pode usar a versão de avaliação para explorar e interagir com agentes por meio da interface do Assistente de IA disponibilizada pelo Adobe Experience Platform Agent Orchestrator. A versão de avaliação oferece experiência prática com Agentes de IA que operam no contexto dos produtos e ambientes existentes do Experience Cloud dos clientes, permitindo que as equipes avaliem o valor antes de se comprometerem com uma compra completa. Os agentes da Adobe Experience Platform são orientados pela entrada e supervisão do usuário e respeitam os controles de acesso existentes no nível do produto, garantindo que os usuários só possam executar ações ou visualizar dados para os quais estejam autorizados nos aplicativos Experience Cloud subjacentes. Leia a [visão geral da avaliação associada ao uso dos Experience Platform Agents](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obter informações sobre como começar. |
 
 {style="table-layout:auto"}
 

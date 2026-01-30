@@ -1,10 +1,10 @@
 ---
 title: Notas da versão de janeiro de 2026 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2026 da Adobe Experience Platform.
-source-git-commit: cbe9dd4babb31061405dee3ebe4bd40acad82e90
+source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
 workflow-type: tm+mt
-source-wordcount: '1454'
-ht-degree: 13%
+source-wordcount: '1529'
+ht-degree: 12%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 13%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 27 de janeiro de 2026**
 
@@ -40,7 +40,7 @@ O Agent Orchestrator permite criar e implantar agentes alimentados por IA que po
 
 | Recurso | Descrição |
 | --- | --- |
-| Avaliação vinculada ao uso dos Adobe Experience Platform Agents | **Os clientes selecionados agora têm acesso gratuito à avaliação dos Adobe Experience Platform Agents**. Você pode usar a versão de avaliação para explorar e interagir com agentes por meio da interface do Assistente de IA disponibilizada pelo Adobe Experience Platform Agent Orchestrator. A versão de avaliação oferece experiência prática com Agentes de IA que operam no contexto dos produtos e ambientes existentes do Experience Cloud dos clientes, permitindo que as equipes avaliem o valor antes de se comprometerem com uma compra completa. Os agentes da Adobe Experience Platform são orientados pela entrada e supervisão do usuário e respeitam os controles de acesso existentes no nível do produto, garantindo que os usuários só possam executar ações ou visualizar dados para os quais estejam autorizados nos aplicativos Experience Cloud subjacentes. Leia a [visão geral da avaliação associada ao uso dos Experience Platform Agents](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obter informações sobre como começar. |
+| Avaliação vinculada ao uso dos Adobe Experience Platform Agents | **Os clientes selecionados agora têm acesso gratuito à avaliação dos Adobe Experience Platform Agents**. Você pode usar a versão de avaliação para explorar e interagir com agentes por meio da interface do Assistente de IA disponibilizada pelo Adobe Experience Platform Agent Orchestrator. A versão de avaliação oferece experiência prática com Agentes de IA que operam no contexto dos produtos e ambientes existentes do Experience Cloud dos clientes, permitindo que as equipes avaliem o valor antes de se comprometerem com uma compra completa. Os agentes da Adobe Experience Platform são orientados pela entrada e supervisão do usuário e respeitam os controles de acesso existentes no nível do produto, garantindo que os usuários só possam executar ações ou visualizar dados para os quais estejam autorizados nos aplicativos Experience Cloud subjacentes. Leia a [visão geral da avaliação associada ao uso dos Experience Platform Agents](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obter informações sobre como começar. |
 
 {style="table-layout:auto"}
 
@@ -61,6 +61,7 @@ Para obter mais informações, consulte a [documentação do Agent Orchestrator]
 | Experiência de ativação aprimorada para [Destinos da Trade Desk](../../destinations/catalog/advertising/tradedesk.md) e [Microsoft Bing](../../destinations/catalog/advertising/bing.md) | Os destinos Trade Desk e Microsoft Bing agora incluem mapeamentos obrigatórios predefinidos para uma experiência de ativação otimizada.  <br> Esta versão está sendo lançada gradualmente e será concluída em 30 de janeiro. ![Imagem mostrando mapeamentos predefinidos para a Trade Desk](assets/january/mandatory-mappings-ttd.png) {width="150" align="center" zoomable="yes"} <br> ![Imagem mostrando mapeamentos predefinidos do Microsoft Bing](assets/january/mandatory-mappings-bing.png) {width="150" align="center" zoomable="yes"} |
 | Suporte à criptografia AES256 para destinos do [Amazon S3](../../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Agora você pode configurar a criptografia AES256 para suas exportações do Amazon S3. Estão disponíveis duas opções: <ul><li>**[!UICONTROL Default]**: Os dados serão criptografados em repouso com o algoritmo de criptografia padrão definido no seu bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: o Experience Platform adiciona o cabeçalho `s3:x-amz-server-side-encryption": "AES256` na exportação e os dados serão criptografados em repouso com o algoritmo AES256 quando ele chegar em S3. **Esta opção tem precedência sobre qualquer algoritmo de criptografia padrão configurado no seu bucket do S3**.</li></ul> Esta versão está sendo lançada gradualmente e será concluída em 30 de janeiro. |
 | Suporte para ativação de número de telefone para a conexão [Trade Desk - CRM](../../destinations/catalog/advertising/tradedesk-emails.md#phone-hashing) | O destino Trade Desk - CRM agora oferece suporte à ativação de número de telefone, além de endereços de email. Você pode ativar números de telefone sem hash no formato E.164 e números de telefone com hash (formato SHA256_E.164) na sua conta da Trade Desk para direcionamento e supressão de público com base em dados de CRM. Os números de telefone devem ser normalizados para o formato E.164 antes da ativação. |
+| [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) atualizações de destino | O destino em lote do Snowflake agora inclui o recurso de seleção de região durante a configuração do destino. Agora é possível selecionar a região específica do Snowflake onde sua instância é provisionada, garantindo a transferência de dados ideal e a conformidade com os requisitos regionais. Além disso, a restrição da política de mesclagem padrão foi removida, permitindo exportar públicos-alvo mapeados para qualquer política de mesclagem. <br> O [!DNL Snowflake] destino do lote está disponível no momento apenas para clientes do Real-Time CDP provisionados na região do Experience Platform VA7. |
 
 
 **Funcionalidade nova ou atualizada**
@@ -89,7 +90,7 @@ O Perfil do cliente em tempo real permite ter uma visão holística de cada clie
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -101,7 +102,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Atualização da expiração dos dados do público-alvo externo | Públicos externos (como uploads de CSV) agora oferecem suporte a um recurso de atualização forçada para configurações de expiração de dados. Esse recurso permite que os usuários atualizem manualmente a expiração dos dados para públicos-alvo externos, fornecendo maior controle sobre o gerenciamento do ciclo de vida do público-alvo. Isso é particularmente útil para públicos-alvo que precisam persistir além do período de expiração inicial dos dados ou exigir reativação sem recarregar os dados. Para obter mais informações sobre este recurso, leia a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md#audience-summary). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

@@ -4,9 +4,9 @@ description: Crie um compartilhamento de dados em tempo real do Snowflake para r
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
 workflow-type: tm+mt
-source-wordcount: '1659'
+source-wordcount: '1662'
 ht-degree: 4%
 
 ---
@@ -149,7 +149,8 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Snowflake Account ID]**: sua ID de conta da Snowflake. Use o seguinte formato de ID de conta, dependendo se sua conta está vinculada a uma organização:
    * Se sua conta estiver vinculada a uma organização:`OrganizationName.AccountName`.
    * Se sua conta não estiver vinculada a uma organização:`AccountName`.
-* **[!UICONTROL Account acknowledgment]**: Ative a confirmação da ID de conta da Snowflake para confirmar se a ID de conta está correta e se pertence a você.
+* **[!UICONTROL Select Snowflake Region]**: selecione a região onde a instância do Snowflake está provisionada. Consulte a [documentação](https://docs.snowflake.com/en/user-guide/intro-regions) do Snowflake para obter informações detalhadas sobre as regiões de nuvem com suporte.
+* **[!UICONTROL Account acknowledgment]**: Depois de inserir seu **[!UICONTROL Snowflake Account ID]**, selecione **[!UICONTROL Yes]** nesta lista suspensa para confirmar se seu **[!UICONTROL Snowflake Account ID]** está correto e pertence a você.
 
 >[!IMPORTANT]
 >
@@ -195,10 +196,6 @@ A tabela dinâmica contém as seguintes colunas:
 ![Captura de tela mostrando a interface do Snowflake com dados da tabela dinâmica](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
 
 ## Limitações conhecidas {#known-limitations}
-
-### Restrição de política de mesclagem padrão {#default-merge-policy-restriction}
-
-Atualmente, somente os públicos-alvo mapeados para a política de mesclagem padrão podem ser exportados.
 
 ### Disponibilidade regional {#regional-availability}
 

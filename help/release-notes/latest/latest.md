@@ -1,10 +1,10 @@
 ---
 title: Notas da versão de janeiro de 2026 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2026 da Adobe Experience Platform.
-source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
+source-git-commit: 76b2537b47c0f7bdf115afdec655a1de8460384c
 workflow-type: tm+mt
-source-wordcount: '1529'
-ht-degree: 12%
+source-wordcount: '1622'
+ht-degree: 11%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 12%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 27 de janeiro de 2026**
 
@@ -40,7 +40,7 @@ O Agent Orchestrator permite criar e implantar agentes alimentados por IA que po
 
 | Recurso | Descrição |
 | --- | --- |
-| Avaliação vinculada ao uso dos Adobe Experience Platform Agents | **Os clientes selecionados agora têm acesso gratuito à avaliação dos Adobe Experience Platform Agents**. Você pode usar a versão de avaliação para explorar e interagir com agentes por meio da interface do Assistente de IA disponibilizada pelo Adobe Experience Platform Agent Orchestrator. A versão de avaliação oferece experiência prática com Agentes de IA que operam no contexto dos produtos e ambientes existentes do Experience Cloud dos clientes, permitindo que as equipes avaliem o valor antes de se comprometerem com uma compra completa. Os agentes da Adobe Experience Platform são orientados pela entrada e supervisão do usuário e respeitam os controles de acesso existentes no nível do produto, garantindo que os usuários só possam executar ações ou visualizar dados para os quais estejam autorizados nos aplicativos Experience Cloud subjacentes. Leia a [visão geral da avaliação associada ao uso dos Experience Platform Agents](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obter informações sobre como começar. |
+| Avaliação vinculada ao uso dos Adobe Experience Platform Agents | **Os clientes selecionados agora têm acesso gratuito à avaliação dos Adobe Experience Platform Agents**. Você pode usar a versão de avaliação para explorar e interagir com agentes por meio da interface do Assistente de IA disponibilizada pelo Adobe Experience Platform Agent Orchestrator. A versão de avaliação oferece experiência prática com Agentes de IA que operam no contexto dos produtos e ambientes existentes do Experience Cloud dos clientes, permitindo que as equipes avaliem o valor antes de se comprometerem com uma compra completa. Os agentes da Adobe Experience Platform são orientados pela entrada e supervisão do usuário e respeitam os controles de acesso existentes no nível do produto, garantindo que os usuários só possam executar ações ou visualizar dados para os quais estejam autorizados nos aplicativos Experience Cloud subjacentes. Leia a [visão geral da avaliação associada ao uso dos Experience Platform Agents](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obter informações sobre como começar. |
 
 {style="table-layout:auto"}
 
@@ -85,11 +85,12 @@ O Perfil do cliente em tempo real permite ter uma visão holística de cada clie
 | --- | --- |
 | Imposição de [capacidade de streaming](/help/landing/license-usage-and-guardrails/capacity.md) | A Experience Platform agora reforça as capacidades de taxa de transferência de transmissão para o Perfil do cliente em tempo real e o Serviço de identidade. Quando os clientes excedem sua capacidade de transmissão contratada, os dados são enfileirados e processados da maneira primeiro a entrar, primeiro a sair. Isso garante um desempenho previsível do sistema e impede que violações de capacidade afetem a qualidade da assimilação de dados. Observações importantes: <ul><li>Upserts de transmissão não estarão disponíveis no data lake quando a capacidade for excedida</li><li>Essa imposição não se aplica a clientes com licenças do Adobe Journey Optimizer</li><li>Os dados em fila serão processados sequencialmente assim que a capacidade estiver disponível.</li></ul> Para obter mais informações, leia a [visão geral da capacidade](/help/landing/license-usage-and-guardrails/capacity.md). |
 | Descontinuação da pesquisa de entidade | O uso da API de pesquisa de entidade para eventos de experiência agora está obsoleto para todos os clientes do Real-Time CDP Prime. Essa descontinuação ajuda a alinhar o Real-Time CDP com a funcionalidade de licenciamento. Os clientes do Real-Time CDP Ultimate que pretendem usar essa funcionalidade podem entrar em contato com o Atendimento ao cliente da Adobe para reativar esse recurso.  Para obter mais informações, leia o [guia de API de entidades](/help/profile/api/entities.md). |
-| Monitorar status do trabalho de assimilação de perfil | Agora é possível monitorar a porcentagem de progresso no nível da tarefa para execuções de fluxo de dados de assimilação de perfil em lote. Esse recurso oferece visibilidade em tempo real do progresso atual dos trabalhos de assimilação em lote, incluindo pontos de verificação críticos que indicam se a assimilação está pronta para a segmentação do cliente e pesquisas do Adobe Journey Optimizer. Para assimilações grandes que podem levar várias horas para serem processadas, essa transparência de progresso ajuda você a entender se o trabalho está progredindo normalmente ou se está encontrando problemas, reduzindo as incertezas durante o processamento de dados.Para obter mais informações, leia o [guia para monitorar perfis](/help/dataflows/ui/monitor-profiles.md). |
+| Monitorar status do trabalho de assimilação de perfil | Agora é possível monitorar a porcentagem de progresso no nível da tarefa para execuções de fluxo de dados de assimilação de perfil em lote. Esse recurso oferece visibilidade em tempo real do progresso atual dos trabalhos de assimilação em lote, incluindo pontos de verificação críticos que indicam se a assimilação está pronta para a segmentação do cliente e pesquisas do Adobe Journey Optimizer. Para assimilações grandes que podem levar várias horas para serem processadas, essa transparência de progresso ajuda você a entender se o trabalho está progredindo normalmente ou encontrando problemas, reduzindo a incerteza durante o processamento de dados. Para obter mais informações, leia o [guia de perfis de monitor](/help/dataflows/ui/monitor-profiles.md). |
+| Melhorias do visualizador de perfil (GA) | As seguintes melhorias no visualizador de perfil estão disponíveis para o público geral. <ul><li>**Modo de exibição combinado**: atributo, eventos e insights foram combinados em um único modo de exibição.</li><li>**Insights gerados por IA**: a página de detalhes do perfil agora exibe insights gerados por IA, permitindo que você saiba detalhes gerados pelo seu perfil. Esses insights podem incluir informações como pontuações de propensão e análise de tendências.</li><li>**Atualização de estilo**: a página de detalhes do perfil foi atualizada visualmente.</li><li>**Navegar**: agora você pode explorar seus perfis em um carrossel interativo baseado em cartão com pesquisa e personalização.</li></ul> Para obter mais informações, leia o [guia do visualizador de perfis](/help/profile/ui/user-guide.md). |
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -101,7 +102,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Atualização da expiração dos dados do público-alvo externo | Públicos externos (como uploads de CSV) agora oferecem suporte a um recurso de atualização forçada para configurações de expiração de dados. Esse recurso permite que os usuários atualizem manualmente a expiração dos dados para públicos-alvo externos, fornecendo maior controle sobre o gerenciamento do ciclo de vida do público-alvo. Isso é particularmente útil para públicos-alvo que precisam persistir além do período de expiração inicial dos dados ou exigir reativação sem recarregar os dados. Para obter mais informações sobre este recurso, leia a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md#audience-summary). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

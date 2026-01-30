@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
+source-git-commit: 5db5d0763b1d1456ba184bd24e7ef4c3047e25d1
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1924'
 ht-degree: 4%
 
 ---
@@ -42,7 +42,7 @@ Para saber mais, visite o [guia do painel do perfil](../../dashboards/guides/pro
 
 Na guia **[!UICONTROL Browse]**, você pode exibir seus perfis em uma exibição de **cartão** ou em uma exibição de **gráfico** selecionando a opção.
 
-![A opção de exibição de cartão e gráfico está realçada.](../images/user-guide/card-graph-view.png)
+![A opção de exibição de cartão e gráfico está realçada.](../images/user-guide/change-browse-view.png)
 
 Além disso, você pode navegar pelos perfis usando uma política de mesclagem ou pesquisar perfis específicos usando um namespace de identidade e valor.
 
@@ -127,7 +127,9 @@ A seção **[!UICONTROL Customer profile insights]** exibe uma breve introduçã
 
 #### Widgets de insight de IA {#ai-insight-widgets}
 
-[!BADGE Alpha]{type=Informative} Este recurso atualmente está no Alpha.
+>[!IMPORTANT]
+>
+>Se você for um cliente do Healthcare Shield, **não** poderá usar widgets do AI insight.
 
 A seção **[!UICONTROL AI insight widgets]** exibe widgets gerados pela IA. Esses widgets fornecem insights rápidos sobre o perfil, com base nos dados do perfil, incluindo dados demográficos (como idade, gênero ou local), comportamentos do usuário (como histórico de compras, atividade do site ou engajamento nas redes sociais), bem como psicográficos (como interesses, preferência ou opções de estilo de vida). Todos os widgets de IA usam dados que **já** existem no perfil.
 
@@ -146,8 +148,6 @@ Você também pode optar por alternar entre visualizar os nomes de atributo como
 ![A opção Mostrar nomes para exibição está realçada.](../images/user-guide/show-display-names.png)
 
 #### Widgets classificados automaticamente {#auto-classified-widgets}
-
-[!BADGE Alpha]{type=Informative} Este recurso atualmente está no Alpha.
 
 A seção **[!UICONTROL Auto-classified widgets]** exibe widgets que usam o esquema de união para determinar os grupos de campos de origem aos quais um atributo pertence, fornecendo um contexto mais claro sobre a origem dos dados. Você pode usar a barra de pesquisa para procurar mais facilmente por palavras-chave em seus widgets.
 

@@ -90,7 +90,7 @@ O Perfil do cliente em tempo real permite ter uma visão holística de cada clie
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral](../profile/home.md) do [[!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral[&#128279;](../profile/home.md) do [!DNL Real-Time Customer Profile] .
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -102,7 +102,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | ------- | ----------- |
 | Atualização do TTL do público externo | Públicos externos (como uploads de CSV) agora oferecem suporte a um recurso de atualização forçada para configurações de Tempo de vida (TTL). Esse recurso permite que os usuários atualizem manualmente a expiração do TTL para públicos-alvo externos, fornecendo maior controle sobre o gerenciamento do ciclo de vida do público-alvo. Isso é particularmente útil para públicos que precisam persistir além do período TTL inicial ou exigir reativação sem recarregar os dados. |
 
-Para obter mais informações, leia a visão geral](../segmentation/home.md) do [[!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral[&#128279;](../segmentation/home.md) do [!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

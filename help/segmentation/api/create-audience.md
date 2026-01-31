@@ -4,9 +4,9 @@ description: Saiba como criar os metadados para um público externo usando a API
 hide: true
 hidefromtoc: true
 exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
-source-git-commit: a3b82eb1efaf257723208504c90210850a44b4a4
+source-git-commit: ea7fd13675a95941be7267f1cf75056b224efcd3
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '264'
 ht-degree: 7%
 
 ---
@@ -61,7 +61,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
  -H 'Accept: application/vnd.adobe.external.audiences+json; version=2'
  -d '{
     "name": "Sample audience name",
-    "description" "A sample description for the audience.",
+    "description": "A sample description for the audience.",
+    "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7",
     "namespace": "agora",
     "originName": "Agora_Collaboration"
  }'
@@ -71,6 +72,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/audiences?createAudienceMet
 | -------- | ---- | ----------- |
 | `name` | String | O nome do público. |
 | `description` | String | Uma descrição opcional para o público-alvo. |
+| `audienceId` | String | Uma ID gerada externamente para o público-alvo. |
 | `namespace` | String | O namespace do público. |
 | `originName` | String | O nome da origem do público-alvo. |
 
@@ -80,6 +82,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o p�
 
 ```json
 {
+    "id": "6bb1ee15-8f64-49fd-bce3-d5c2f22f1f14",
     "name": "Sample audience name",
     "audienceId": "4a815904-f2f9-4237-82fb-55605bcc2ad7"
 }
@@ -87,5 +90,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o p�
 
 | Propriedade | Tipo | Descrição |
 | -------- | ---- | ----------- |
+| `id` | String | A ID gerada pelo sistema para o público-alvo. |
 | `name` | String | O nome do público-alvo criado. |
-| `audienceId` | String | A ID do público-alvo criado. |
+| `audienceId` | String | A ID fornecida externamente do público-alvo criado. |

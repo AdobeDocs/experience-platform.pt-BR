@@ -1,11 +1,11 @@
 ---
 title: Atualizações de arquitetura para o Real-Time CDP B2B edition
 description: Leia este documento para saber mais sobre as atualizações abrangentes da arquitetura do Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
+source-git-commit: da288d1a917df85b3c003bc6592fda7a6f1eafe7
 workflow-type: tm+mt
-source-wordcount: '1074'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Com essa atualização, agora é possível:
 
 Leia a documentação em [públicos-alvo da conta](../segmentation/types/account-audiences.md) para obter mais informações.
 
-### Contagens de público-alvo para públicos-alvo que incluem entidades B2B
+### Contagem de público-alvo para públicos-alvo que incluem entidades B2B
 
 As estimativas de tamanho do público-alvo para públicos-alvo com entidades B2B agora são calculadas com precisão exata. Essas estimativas estão disponíveis durante a pré-visualização e fornecem insights mais precisos e confiáveis para públicos-alvo que envolvem relacionamentos B2B complexos.
 
@@ -123,6 +123,10 @@ As solicitações de exclusão das seguintes entidades B2B usando a API [!DNL Pr
 * Membros da lista de marketing
 
 Leia a [[!DNL Profile Access] API](../profile/api/entities.md) para obter mais informações.
+
+### Substituição da API de trabalho do segmento
+
+Na nova arquitetura, o endpoint &quot;criar um trabalho de segmento&quot; e a avaliação de público-alvo flexível *não são compatíveis.
 
 ### Pesquisas de conta e perfil de oportunidade
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 4faa15431fe069b5be964f0f8643a73633338a89
+source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
 workflow-type: tm+mt
-source-wordcount: '3550'
+source-wordcount: '3542'
 ht-degree: 10%
 
 ---
@@ -310,7 +310,7 @@ Por exemplo, você está ativando um público-alvo chamado &quot;Membros de fide
 >
 >- A exibição no nível do público-alvo está disponível atualmente para os destinos listados abaixo. A implantação está planejada para outros destinos de streaming.
 >
->   - Conexão com o [[!DNL (API) Oracle Eloqua] &#x200B;](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - Conexão com o [[!DNL (API) Oracle Eloqua] ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
 >   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
 >   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
 >   - [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md)
@@ -371,7 +371,7 @@ A página de detalhes da execução do fluxo de dados, além dos detalhes mostra
 - **[!UICONTROL IMS org ID]**: a organização à qual o fluxo de dados pertence.
 - **[!UICONTROL Last updated]**: A hora em que a execução do fluxo de dados foi atualizada pela última vez.
 
-A página de detalhes também tem um botão para alternar entre erros de execução de fluxo de dados e públicos-alvo. Esta opção só está disponível para execuções de fluxo de dados em destinos em lote e para o destino de streaming do [Google Customer Match DV 360](/help/destinations/catalog/advertising/google-customer-match-dv360.md).
+A página de detalhes também tem um botão para alternar entre erros de execução de fluxo de dados e públicos-alvo. Esta opção está disponível para os destinos listados na seção [exibição no nível de público-alvo](#segment-level-view).
 
 A exibição de erros de execução do fluxo de dados exibe uma lista de registros que falharam e registros que foram ignorados. As informações para os registros com falha e ignorados são exibidas, incluindo o código de erro, a contagem de identidades e a descrição. Por padrão, a lista exibe os registros com falha. Para mostrar registros ignorados, selecione o botão de alternância **[!UICONTROL Records skipped]**.
 

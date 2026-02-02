@@ -2,13 +2,13 @@
 keywords: rtcdp b2b;b2b;conta;perfil de conta;perfis de conta rtcdp;plataforma de dados do cliente em tempo real;
 title: Perfis de conta no Real-Time CDP B2B edition
 description: Saiba como a Adobe Real-time Customer Data Platform B2B Edition permite unificar informações de conta de várias fontes usando perfis de conta.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 769d83155ae70516a296b71baec37d797dd81f34
 workflow-type: tm+mt
-source-wordcount: '306'
-ht-degree: 7%
+source-wordcount: '339'
+ht-degree: 6%
 
 ---
 
@@ -25,6 +25,10 @@ Ao unir os dados da conta de diferentes fontes, você pode começar a ver uma im
 ## Visualizador de perfil da conta
 
 Com o Real-Time CDP, o B2B edition, é possível usar a interface do usuário do Experience Platform para exibir perfis de conta e pesquisar contas específicas usando uma ID de conta de uma origem corporativa conectada ou inserindo os detalhes da origem diretamente. Para obter mais informações sobre como visualizar perfis de conta na interface do usuário do Experience Platform, consulte o [guia da interface do usuário do perfil de conta](account-profile-ui-guide.md).
+
+>[!IMPORTANT]
+>
+>Os perfis de conta exigem a ativação da avaliação diária de segmentação em lotes para mostrar os dados. Verifique se a segmentação em lote está configurada e programada para manter informações precisas do perfil da conta. Consulte o [guia de segmentação em lote](../../segmentation/methods/batch-segmentation.md) para obter mais detalhes.
 
 ## Criar e ativar públicos-alvo da conta
 

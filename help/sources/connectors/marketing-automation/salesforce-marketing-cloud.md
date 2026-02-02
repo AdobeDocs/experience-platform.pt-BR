@@ -3,10 +3,10 @@ title: Visão geral do Salesforce Marketing Cloud Source
 description: Saiba como conectar o Salesforce Marketing Cloud ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-05-17T00:00:00Z
-source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
-source-wordcount: '664'
-ht-degree: 1%
+source-wordcount: '639'
+ht-degree: 2%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!WARNING]
 >
->A origem [!DNL Salesforce Marketing Cloud] será substituída em janeiro de 2026. Uma nova fonte será lançada ainda este ano como alternativa. Depois que a nova origem for lançada, você deverá planejar migrar para a nova origem criando novas conexões de conta e fluxos de dados antes do final de janeiro de 2026.
+>A origem [!DNL Oracle Salesforce Marketing Cloud] agora está obsoleta e não está mais disponível. Use a nova [[!DNL Salesforce Marketing Cloud] (V2) fonte](sfmc.md) como um novo conector para seus dados de [!DNL Salesforce Marketing Cloud].
 
 O [!DNL Salesforce Marketing Cloud] capacita você a gerenciar e automatizar a participação do cliente em e-mails, dispositivos móveis, redes sociais e anúncios, tudo em uma única plataforma. Com ferramentas como o Email Studio, o Jornada Builder e o Audience Builder, você pode criar campanhas personalizadas e jornadas do cliente personalizadas para seu público-alvo.
 
@@ -35,13 +35,13 @@ Para obter mais informações sobre escopos, incluindo uma lista de suas permiss
 >
 >No momento, a assimilação de objetos personalizados não tem suporte da integração de origem [!DNL Salesforce Marketing Cloud].
 
-### INCLUIR NA LISTA DE PERMISSÕES endereço IP
+### INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Você deve adicionar endereços IP específicos da sua região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform. Para obter mais informações, leia o guia sobre [como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform](../../ip-address-allow-list.md) para obter mais informações.
 
 >[!WARNING]
 >
->Incluir na lista de permissões Se você não adicionar os endereços IP necessários ao arquivo, a conta do [!DNL Salesforce Marketing Cloud] não será conectada ao Experience Platform.
+>Se você não adicionar os endereços IP necessários ao seu incluo na lista de permissões, a conta do [!DNL Salesforce Marketing Cloud] não se conectará ao Experience Platform.
 
 ### Autenticar para o Experience Platform no Azure {#azure}
 

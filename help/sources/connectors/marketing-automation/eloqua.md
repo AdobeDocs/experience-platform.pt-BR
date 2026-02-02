@@ -1,7 +1,8 @@
 ---
 title: Visão Geral Do Oracle Eloqua (V2) Source
 description: Saiba como conectar o Oracle Eloqua ao Adobe Experience Platform.
-source-git-commit: 180754969d4ae8dbd1308dfc85dae73baf64f759
+last-substantial-update: 2025-02-02T00:00:00Z
+source-git-commit: 4d47eae91711596677335b03568add9f6fbade74
 workflow-type: tm+mt
 source-wordcount: '1824'
 ht-degree: 1%

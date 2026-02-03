@@ -44,7 +44,7 @@ O cliente não foi criado para:
 
 O vídeo a seguir foi projetado para oferecer suporte à sua compreensão da IA do cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/36529?captions=por_br&learn=on&quality=12)
 
 ## Como funciona
 

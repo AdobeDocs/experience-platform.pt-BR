@@ -3,7 +3,7 @@ keywords: Experience Platform;visão geral;ia do cliente;tópicos populares;vis�
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Visão geral do Customer AI
-description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades empresariais em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 landing-page-description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala.
 short-description: o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
@@ -23,7 +23,7 @@ Com a ajuda de fatores influentes, a IA do cliente pode informar o que um client
 
 ## Noções básicas sobre a IA do cliente
 
-o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+o Customer AI é usado para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades empresariais em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 
 A IA do cliente foi criada para:
 
@@ -44,7 +44,7 @@ O cliente não foi criado para:
 
 O vídeo a seguir foi projetado para oferecer suporte à sua compreensão da IA do cliente.
 
->[!VIDEO](https://video.tv.adobe.com/v/36529?captions=por_br&learn=on&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&quality=12)
 
 ## Como funciona
 

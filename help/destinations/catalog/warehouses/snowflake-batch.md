@@ -4,7 +4,7 @@ description: Crie um compartilhamento de dados em tempo real do Snowflake para r
 last-substantial-update: 2025-10-23T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 905c8853fadc08bb7e357f43f358844b560b3097
+source-git-commit: 271700625e8cc1d2b5e737e89435c543caa86264
 workflow-type: tm+mt
 source-wordcount: '1662'
 ht-degree: 4%
@@ -136,7 +136,7 @@ Para autenticar no destino, selecione **[!UICONTROL Connect to destination]** e 
 ### Preencher detalhes do destino {#destination-details}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_snowflake_batch_accountID"
+>id="platform_destinations_snowflake_batch_accountid"
 >title="Insira sua ID da conta do Snowflake"
 >abstract="Se sua conta estiver vinculada a uma organização, use este formato: `OrganizationName.AccountName`<br><br> Se sua conta não estiver vinculada a uma organização, use este formato:`AccountName`"
 

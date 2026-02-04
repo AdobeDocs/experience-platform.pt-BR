@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de segmentação
 user-guide-description: Crie públicos-alvo a partir dos dados do perfil do cliente em tempo real usando definições de segmento geradas pela Adobe Experience Platform ou fontes externas.
 feature: Segments
 role: User
-source-git-commit: 60775eeeb0a07a95f3fac86dc4ecc8603328ed49
+source-git-commit: d70aa03400362bb5609623ca5eceefeadd6fe1ce
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 43%
+source-wordcount: '212'
+ht-degree: 42%
 
 ---
 
@@ -17,7 +17,8 @@ ht-degree: 43%
 
 - [Visão geral do serviço de segmentação](home.md)
 - [Tipos de dados de segmentação](data-types.md)
-- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=pt-BR#segmentation-guardrails)
+- [Medidas de proteção de segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [Validação de público](./validation.md)
 - API de segmentação {#api}
    - [Visão geral](api/overview.md)
    - [Introdução](api/getting-started.md)
@@ -52,7 +53,7 @@ ht-degree: 43%
 - Tipos de público {#types}
    - [Visão geral](types/overview.md)
    - [Públicos-alvo de pessoas](types/people-audiences.md)
-   - [Públicos-alvo em potencial](types/prospect-audiences.md)
+   - [Públicos-alvos de clientes potenciais](types/prospect-audiences.md)
    - [Públicos-alvo da conta](types/account-audiences.md)
    - [Públicos-alvo semelhantes](types/lookalike-audiences.md)
 - Tutoriais {#tutorials}

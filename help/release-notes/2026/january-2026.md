@@ -1,7 +1,7 @@
 ---
 title: Notas da versão de janeiro de 2026 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2026 da Adobe Experience Platform.
-source-git-commit: 1761acbcab12acf1596daf5461476d5b91bb0e9b
+source-git-commit: 49074f3ea2650254863a58a488c626f683ba7f06
 workflow-type: tm+mt
 source-wordcount: '1570'
 ht-degree: 12%
@@ -17,9 +17,9 @@ ht-degree: 12%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 27 de janeiro de 2026**
 
@@ -40,7 +40,7 @@ O Agent Orchestrator permite criar e implantar agentes alimentados por IA que po
 
 | Recurso | Descrição |
 | --- | --- |
-| Avaliação vinculada ao uso dos Adobe Experience Platform Agents | **Os clientes selecionados agora têm acesso gratuito à avaliação dos Adobe Experience Platform Agents**. Você pode usar a versão de avaliação para explorar e interagir com agentes por meio da interface do Assistente de IA disponibilizada pelo Adobe Experience Platform Agent Orchestrator. A versão de avaliação oferece experiência prática com Agentes de IA que operam no contexto dos produtos e ambientes existentes do Experience Cloud dos clientes, permitindo que as equipes avaliem o valor antes de se comprometerem com uma compra completa. Os agentes da Adobe Experience Platform são orientados pela entrada e supervisão do usuário e respeitam os controles de acesso existentes no nível do produto, garantindo que os usuários só possam executar ações ou visualizar dados para os quais estejam autorizados nos aplicativos Experience Cloud subjacentes. Leia a [visão geral da avaliação associada ao uso dos Experience Platform Agents](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obter informações sobre como começar. |
+| Avaliação vinculada ao uso dos Adobe Experience Platform Agents | **Os clientes selecionados agora têm acesso gratuito à avaliação dos Adobe Experience Platform Agents**. Você pode usar a versão de avaliação para explorar e interagir com agentes por meio da interface do Assistente de IA disponibilizada pelo Adobe Experience Platform Agent Orchestrator. A versão de avaliação oferece experiência prática com Agentes de IA que operam no contexto dos produtos e ambientes existentes do Experience Cloud dos clientes, permitindo que as equipes avaliem o valor antes de se comprometerem com uma compra completa. Os agentes da Adobe Experience Platform são orientados pela entrada e supervisão do usuário e respeitam os controles de acesso existentes no nível do produto, garantindo que os usuários só possam executar ações ou visualizar dados para os quais estejam autorizados nos aplicativos Experience Cloud subjacentes. Leia a [visão geral da avaliação associada ao uso dos Experience Platform Agents](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) para obter informações sobre como começar. |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ O Perfil do cliente em tempo real permite ter uma visão holística de cada clie
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -105,7 +105,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | Atualização da expiração dos dados do público-alvo externo | Públicos externos (como uploads de CSV) agora oferecem suporte a um recurso de atualização forçada para configurações de expiração de dados. Esse recurso permite que os usuários atualizem manualmente a expiração dos dados para públicos-alvo externos, fornecendo maior controle sobre o gerenciamento do ciclo de vida do público-alvo. Isso é particularmente útil para públicos-alvo que precisam persistir além do período de expiração inicial dos dados ou exigir reativação sem recarregar os dados. Para obter mais informações sobre este recurso, leia a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md#audience-summary). |
 | Validação de público | O Experience Platform agora fornece validações integradas para garantir que seus públicos-alvo sejam precisos, estáveis e escaláveis. Essas verificações são executadas automaticamente em tempo real enquanto você cria suas definições de público-alvo. Para obter mais informações, leia a [visão geral da validação de público-alvo](/help/segmentation/validation.md). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

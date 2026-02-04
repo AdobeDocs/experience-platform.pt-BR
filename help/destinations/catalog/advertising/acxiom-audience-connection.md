@@ -3,10 +3,10 @@ title: Acxiom Audience Connection
 description: Use o  [!DNL Acxiom Audience Connection] destino para aprimorar públicos-alvo com a  [!DNL Acxiom's Real ID] tecnologia e ativar públicos-alvo para várias plataformas, como  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 70a1cdcfd99ae006f02289ab5a20ced624b51ccc
+source-git-commit: 582b8b681163a0e40908cf36ba317954a32f73d0
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 7%
+source-wordcount: '872'
+ht-degree: 8%
 
 ---
 
@@ -32,7 +32,7 @@ Por exemplo, o departamento de Operações de marketing de uma marca global de s
 
 ## Pré-requisitos {#prerequisites}
 
-* **Confirmar Termos de Uso:** Antes de configurar um novo destino do [!DNL Acxiom Audience Connection], você deve ler e assinar o Contrato de Termos de Uso do [!DNL Acxiom's]. Você receberá o link para o contrato assim que a ordem de venda executada for concluída. Até que você assine o contrato, você não verá o cartão de destino [!DNL Acxiom Audience Connection] no catálogo de destino do Experience Platform. Depois que você aceitar e assinar o contrato, o [!DNL Adobe] concluirá o processo de integração e você verá o cartão de destino [!DNL Acxiom Audience Connection].
+* **Confirmar Termos de Uso:** Antes de configurar um novo destino do [!DNL Acxiom Audience Connection], você deve ler e assinar o Contrato de Termos de Uso do [!DNL Acxiom's]. Você receberá o link para o contrato assim que a ordem de venda executada for concluída.
 * **Conhece sua ID da organização da Adobe:** Sua ID da organização [!DNL Adobe] é necessária para concluir seus Termos de Contrato do Usuário. Consulte o tópico [!DNL Adobe's] *Organizações na Experience Cloud* para obter detalhes sobre como [exibir a ID da sua organização](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
 
 ## Destinos suportados {#supported-destinations}
@@ -67,8 +67,8 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 
 >[!IMPORTANT]
 > 
->* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
+>* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
 Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
@@ -92,14 +92,14 @@ Para que o destino [!DNL Acxiom Audience Connection] receba corretamente os dado
 | Linha de Endereço 2 | Endereço 2 campo de residência principal | Não | 6 | 255 |
 | Cidade | Cidade da residência principal | Sim | 7 | 255 |
 | Estado | Abreviatura do Estado de residência principal | Sim | 8 | 2 |
-| Código postal | Código postal completo da residência principal | Sim | 9 | 10 |
+| Código Postal | Código postal completo da residência principal | Sim | 9 | 10 |
 | Email | Email primário Por padrão, esse campo é usado como uma chave de desduplicação para tornar os registros exclusivos | Não | 10 | 255 |
 | Telefone | Número de telefone do indivíduo (código de área + número)<br> Por padrão, esse campo é usado como uma chave de desduplicação para tornar os registros exclusivos. | Não | 11 | 10 |
 
-Na coluna **[!UICONTROL Campo Source]**, digite o nome de cada um dos atributos de origem que você deseja mapear para o campo de destino correspondente ou selecione o ícone de seta para abrir a tela **[!UICONTROL Selecionar campo de origem]**.<br>
+Na coluna **[!UICONTROL Source Field]**, digite o nome de cada um dos atributos de origem que você deseja mapear para o campo de destino correspondente ou selecione o ícone de seta para abrir a tela **[!UICONTROL  Select source field]**.<br>
 ![Tela de mapeamento](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
-Depois de mapear todos os campos, selecione **[!UICONTROL Avançar]**.
+Depois de mapear todos os campos, selecione **[!UICONTROL Next]**.
 
 Se você não estiver usando o esquema padrão [!DNL Adobe's], consulte a documentação do [Guia da Interface do Usuário do Serviço de Consulta](../../../query-service/ui/overview.md) para obter informações sobre como usar o serviço de consulta para preencher o esquema padrão [!DNL Adobe] com seus nomes de campo.
 
@@ -107,7 +107,7 @@ Se você não estiver usando o esquema padrão [!DNL Adobe's], consulte a docume
 
 Depois de concluir todas as etapas acima, você terá a oportunidade de revisar o status da conexão de destino e os detalhes do público-alvo antes de ativá-lo (distribuí-lo). Os públicos selecionados aparecerão na parte inferior de uma lista. Cada público será uma chamada separada para a API [!DNL Acxiom Audience Connection].
 
-Se você estiver satisfeito com os resultados, selecione **[!UICONTROL Concluir]** para ativar seu destino.
+Se você estiver satisfeito com os resultados, selecione **[!UICONTROL Finish]** para ativar seu destino.
 
 ![Revise seu público-alvo](../../assets/catalog/advertising/acxiom-audience-distribution/review_audience.png)
 
@@ -128,4 +128,4 @@ Ao seguir este tutorial, você ativou com êxito um público-alvo para a platafo
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/data-governance/home).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).

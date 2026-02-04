@@ -5,9 +5,9 @@ title: Pontos de Extremidade da API de Avaliação de Política
 description: Depois que ações de marketing tiverem sido criadas e as políticas tiverem sido definidas, você poderá usar a API de serviço de política para avaliar se alguma política foi violada por determinadas ações. As restrições retornadas tomam a forma de um conjunto de políticas que seriam violadas ao tentar a ação de marketing nos dados especificados que contêm rótulos de uso de dados.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
 workflow-type: tm+mt
-source-wordcount: '1538'
+source-wordcount: '1560'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing para testar em relação a um conjunto de rótulos de uso de dados. GET Você pode recuperar uma lista de ações de marketing disponíveis fazendo uma [solicitação para o ponto de extremidade de ações de marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing para testar em relação a um conjunto de rótulos de uso de dados. Você pode recuperar uma lista de ações de marketing disponíveis fazendo uma [solicitação GET para o ponto de extremidade de ações de marketing](./marketing-actions.md#list). |
 | `{LABELS_LIST}` | Uma lista separada por vírgulas com nomes de rótulos de uso de dados para testar a ação de marketing. Por exemplo: `duleLabels=C1,C2,C3`<br><br>Observe que os nomes dos rótulos diferenciam maiúsculas de minúsculas. Verifique se você está usando as letras maiúsculas e minúsculas corretas ao listá-las no parâmetro `duleLabels`. |
 
 **Solicitação**
@@ -123,6 +123,10 @@ Uma resposta bem-sucedida inclui uma matriz `violatedPolicies`, que contém os d
 
 ## Avaliar violações de política usando conjuntos de dados {#datasets}
 
+>[!WARNING]
+>
+>O ponto de extremidade `/constraints` para avaliação baseada em conjunto de dados está obsoleto. Para avaliar a violação de política ou executar vários trabalhos de avaliação, use a [API de avaliação em massa (`/bulk-eval`)](#evaluate-policies-in-bulk).
+
 Você pode avaliar violações de política com base em um conjunto de um ou mais conjuntos de dados a partir dos quais os rótulos de uso de dados podem ser coletados. Isso é feito executando uma solicitação POST para o endpoint `/constraints` de uma ação de marketing específica e fornecendo uma lista de IDs de conjunto de dados no corpo da solicitação.
 
 **Formato da API**
@@ -134,7 +138,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing a ser testada em um ou mais conjuntos de dados. GET Você pode recuperar uma lista de ações de marketing disponíveis fazendo uma [solicitação para o ponto de extremidade de ações de marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing a ser testada em um ou mais conjuntos de dados. Você pode recuperar uma lista de ações de marketing disponíveis fazendo uma [solicitação GET para o ponto de extremidade de ações de marketing](./marketing-actions.md#list). |
 
 **Solicitação**
 
@@ -365,7 +369,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parâmetro | Descrição |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing a ser testada em relação a um subconjunto de campos de conjunto de dados. GET Você pode recuperar uma lista de ações de marketing disponíveis fazendo uma [solicitação para o ponto de extremidade de ações de marketing](./marketing-actions.md#list). |
+| `{MARKETING_ACTION_NAME}` | O nome da ação de marketing a ser testada em relação a um subconjunto de campos de conjunto de dados. Você pode recuperar uma lista de ações de marketing disponíveis fazendo uma [solicitação GET para o ponto de extremidade de ações de marketing](./marketing-actions.md#list). |
 
 **Solicitação**
 

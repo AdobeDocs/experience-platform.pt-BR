@@ -5,9 +5,9 @@ title: Impor políticas de uso de dados usando a API de serviço de política
 type: Tutorial
 description: Depois de criar rótulos de uso de dados para seus dados e políticas de uso para ações de marketing contra esses rótulos, você pode usar a API de serviço de política para avaliar se uma ação de marketing executada em um conjunto de dados ou um grupo arbitrário de rótulos constitui uma violação de política. Em seguida, você pode configurar seus próprios protocolos internos para lidar com violações de política com base na resposta da API.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c3e12c17967ad46bf2eb8bcbfd00a92317aec8a2
 workflow-type: tm+mt
-source-wordcount: '999'
+source-wordcount: '1021'
 ht-degree: 2%
 
 ---
@@ -131,6 +131,10 @@ Uma resposta bem-sucedida retorna o URL da ação de marketing, os rótulos de u
 | `violatedPolicies` | Uma matriz que lista quaisquer políticas que foram violadas ao testar a ação de marketing (especificada em `marketingActionRef`) em relação ao `duleLabels` fornecido. |
 
 ## Avaliar usando conjuntos de dados
+
+>[!WARNING]
+>
+>O ponto de extremidade `/constraints` para avaliação baseada em conjunto de dados está obsoleto. Para avaliar a violação de política ou executar vários trabalhos de avaliação, use a [API de avaliação em massa (`/bulk-eval`)](../api/evaluation.md#evaluate-policies-in-bulk).
 
 É possível avaliar uma política de uso de dados testando uma ação de marketing em relação a um ou mais conjuntos de dados dos quais os rótulos podem ser coletados. Isso é feito fazendo uma solicitação POST para `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` e fornecendo IDs do conjunto de dados no corpo da solicitação, como mostrado no exemplo abaixo.
 

@@ -4,9 +4,9 @@ title: Visualizar ponto de extremidade da API Status de amostra (Visualização 
 description: O ponto de extremidade de status da amostra de visualização da API do perfil do cliente em tempo real permite visualizar a amostra bem-sucedida mais recente dos dados do perfil, listar a distribuição do perfil por conjunto de dados e por identidade e gerar relatórios mostrando a sobreposição do conjunto de dados, a sobreposição de identidade e os perfis não compilados.
 role: Developer
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
-source-git-commit: bb2cfb479031f9e204006ba489281b389e6c6c04
+source-git-commit: 399b76f260732015f691fd199c977d6f7e772b01
 workflow-type: tm+mt
-source-wordcount: '2306'
+source-wordcount: '2119'
 ht-degree: 1%
 
 ---
@@ -434,110 +434,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre as e
 | `profileFragments` | O número total de fragmentos de perfil existentes no conjunto de dados. |
 | `records` | O número total de registros de perfil assimilados no conjunto de dados. |
 | `totalProfiles` | O número total de Perfis assimilados no conjunto de dados. |
-
-+++
-
-## Obter o tamanho do conjunto de dados {#character-count}
-
-Você pode usar esse endpoint para obter o tamanho do conjunto de dados em bytes semana a semana.
-
-**Formato da API**
-
-```http
-GET /previewsamplestatus/report/character_count
-```
-
-**Solicitação**
-
-+++Um exemplo de solicitação para gerar o relatório de contagem de caracteres.
-
-```shell
-curl -X GET https://platform.adobe.io/data/core/ups/previewsamplestatus/report/character_count \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-```
-
-+++
-
-**Resposta**
-
-Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre o tamanho do conjunto de dados durante as semanas.
-
-+++ Uma resposta de amostra que contém informações sobre o tamanho do conjunto de dados após as expirações de dados.
-
->[!NOTE]
->
->A resposta a seguir foi truncada para mostrar três conjuntos de dados.
-
-```json
-{
-    "data": [
-        {
-            "datasetIds": [
-                {
-                    "datasetId": "67aba91a453f7d298cd2a643",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 107773533894,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "67aa6c867c3110298b017f0e",
-                    "recordType": "timeseries",
-                    "weeks": [
-                        {
-                            "size": 242902062440,
-                            "week": "2025-10-26"
-                        },
-                        {
-                            "size": 837539413062,
-                            "week": "2025-10-19"
-                        },
-                        {
-                            "size": 479253986484,
-                            "week": "2025-10-12"
-                        },
-                        {
-                            "size": 358911988990,
-                            "week": "2025-10-05"
-                        },
-                        {
-                            "size": 349701073042,
-                            "week": "2025-09-28"
-                        }
-                    ]
-                },
-                {
-                    "datasetId": "680c043667c0d7298c9ea275",
-                    "recordType": "keyvalue",
-                    "weeks": [
-                        {
-                            "size": 18392459832,
-                            "week": "2025-10-26"
-                        }
-                    ]
-                }
-            ],
-            "modelName": "_xdm.context.profile",
-            "reportTimestamp": "2025-10-30T00:28:30.069Z"
-        }
-    ],
-    "reportTimestamp": "2025-10-30T00:28:30.069Z"
-}
-```
-
-| Propriedade | Descrição |
-| -------- | ----------- |
-| `datasetId` | A ID do conjunto de dados. |
-| `recordType` | O tipo de dados no conjunto de dados. O tipo de registro afeta o valor da variável `weeks`. Os valores suportados incluem `keyvalue` e `timeseries`. |
-| `weeks` | Uma matriz que contém as informações de tamanho sobre o conjunto de dados. Para conjuntos de dados do tipo de registro `keyvalue`, isso contém a semana mais recente, bem como o tamanho total do conjunto de dados em bytes. Para conjuntos de dados do tipo de registro `timeseries`, contém todas as semanas desde a assimilação do conjunto de dados até a semana mais recente e o tamanho total do conjunto de dados em bytes para cada uma dessas semanas. |
-| `modelName` | O nome do modelo do conjunto de dados. Os valores possíveis incluem `_xdm.context.profile` e `_xdm.context.experienceevent`. |
-| `reportTimestamp` | A data e a hora em que o relatório foi gerado. |
 
 +++
 

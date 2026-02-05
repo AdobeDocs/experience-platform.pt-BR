@@ -5,7 +5,7 @@ title: Pontos de Extremidade da API de Avaliação de Política
 description: Depois que ações de marketing tiverem sido criadas e as políticas tiverem sido definidas, você poderá usar a API de serviço de política para avaliar se alguma política foi violada por determinadas ações. As restrições retornadas tomam a forma de um conjunto de políticas que seriam violadas ao tentar a ação de marketing nos dados especificados que contêm rótulos de uso de dados.
 role: Developer
 exl-id: f9903939-268b-492c-aca7-63200bfe4179
-source-git-commit: 32e5b2ba04554ba8ed2a73009fae2ea3a3f5328a
+source-git-commit: f8995ff1e460038b0e254cb500a6d23badeaa991
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 2%
@@ -125,7 +125,7 @@ Uma resposta bem-sucedida inclui uma matriz `violatedPolicies`, que contém os d
 
 >[!WARNING]
 >
->O ponto de extremidade `/constraints` para avaliação baseada em conjunto de dados está obsoleto. Para avaliar a violação de política ou executar vários trabalhos de avaliação, use a [API de avaliação em massa (`/bulk-eval`)](#evaluate-policies-in-bulk).
+>O ponto de extremidade `/constraints` para avaliação baseada em conjunto de dados está obsoleto. Para avaliar a violação de política ou executar vários trabalhos de avaliação, use a [API de avaliação em massa (`/bulk-eval`)](#bulk).
 
 Você pode avaliar violações de política com base em um conjunto de um ou mais conjuntos de dados a partir dos quais os rótulos de uso de dados podem ser coletados. Isso é feito executando uma solicitação POST para o endpoint `/constraints` de uma ação de marketing específica e fornecendo uma lista de IDs de conjunto de dados no corpo da solicitação.
 

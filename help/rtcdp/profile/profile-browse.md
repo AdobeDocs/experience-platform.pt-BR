@@ -3,7 +3,7 @@ keywords: exibir perfis rtcdp;exibição de perfil rtcdp;perfis rtcdp
 title: Procurar perfis no Real-Time Customer Data Platform
 description: O Adobe Real-Time Customer Data Platform permite navegar pelos dados do Perfil do cliente em tempo real usando a interface do usuário do Adobe Experience Platform.
 feature: Get Started, Profiles
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions" newtab=true
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt

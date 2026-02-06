@@ -3,7 +3,7 @@ title: Gerenciar lead preditivo e pontuação da conta no Real-Time CDP B2B
 type: Documentation
 description: Este documento fornece informações sobre como gerenciar o recurso de pontuação preditiva de leads e contas no B2B da Experience Platform CDP.
 feature: Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions" newtab=true
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt

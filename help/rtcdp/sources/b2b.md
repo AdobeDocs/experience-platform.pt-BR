@@ -2,7 +2,7 @@
 title: Origens no Real-Time Customer Data Platform B2B edition
 description: Uma visão geral da função das fontes no Adobe Real-Time Customer Data Platform B2B edition.
 feature: Sources, Data Ingestion, Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions" newtab=true
 exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
 source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt

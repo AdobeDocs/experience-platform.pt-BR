@@ -1,18 +1,18 @@
 ---
 title: Gerenciar lead preditivo e pontuação da conta no Real-Time CDP B2B
 type: Documentation
-description: Este documento fornece informações sobre como gerenciar o lead preditivo e o recurso de pontuação da conta no Experience Platform CDP B2B.
+description: Este documento fornece informações sobre como gerenciar o recurso de pontuação preditiva de leads e contas no B2B da Experience Platform CDP.
 feature: Profiles, B2B
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: fe7eb94e-5cf1-46bf-80e5-affe5735c998
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1038'
+source-wordcount: '982'
 ht-degree: 3%
 
 ---
 
-# Gerenciar pontuação preditiva de leads e contas no Adobe Real-time Customer Data Platform, B2B Edition
+# Gerenciar pontuação preditiva de leads e contas no Adobe Real-Time Customer Data Platform, B2B edition
 
 >[!NOTE]
 >
@@ -22,27 +22,27 @@ Este tutorial percorre as etapas para gerenciar metas de pontuação do lead pre
 
 ## Criar uma nova pontuação
 
-Para criar uma nova pontuação, selecione os **[!UICONTROL Serviços]** na barra lateral e selecione **[!UICONTROL Criar pontuação]**.
+Para criar uma nova pontuação, selecione **[!UICONTROL Services]** na barra lateral e **[!UICONTROL Create score]**.
 
 ![plas-new-score](../assets/../b2b-ai-ml-services/assets/plas-create-score.png)
 
-A tela **[!UICONTROL Informações básicas]** é exibida, solicitando que você selecione um tipo de perfil, insira um nome e uma descrição opcional. Quando terminar, selecione **[!UICONTROL Próximo]**.
+A tela **[!UICONTROL Basic information]** é exibida, solicitando que você selecione um tipo de perfil, insira um nome e uma descrição opcional. Quando terminar, selecione **[!UICONTROL Next]**.
 
 ![informações-básicas-da-inserção-plano](../assets/../b2b-ai-ml-services/assets/plas-basic-information.png)
 
-A tela **[!UICONTROL Definir meta]** é exibida. Selecione a seta suspensa e, em seguida, selecione um tipo de meta na janela suspensa exibida.
+A tela **[!UICONTROL Define your goal]** é exibida. Selecione a seta suspensa e, em seguida, selecione um tipo de meta na janela suspensa exibida.
 
 ![plas-select-a-goal](../assets/../b2b-ai-ml-services/assets/plas-define-goal.png)
 
-A caixa de diálogo **[!UICONTROL Especificações da meta]** é aberta. Selecione a seta suspensa e selecione o nome do campo de meta na janela suspensa exibida.
+A caixa de diálogo **[!UICONTROL Goal specifics]** é aberta. Selecione a seta suspensa e selecione o nome do campo de meta na janela suspensa exibida.
 
 ![plas-select-a-goal-field-name](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-name.png)
 
-A seleção **[!UICONTROL Condições da meta]** é exibida. Selecione a seta suspensa e selecione condição na janela suspensa exibida.
+A seleção **[!UICONTROL Goal conditions]** é exibida. Selecione a seta suspensa e selecione condição na janela suspensa exibida.
 
 ![condição_específica-meta-plano](../assets/../b2b-ai-ml-services/assets/plas-goal-specidics-condition.png)
 
-O campo **[!UICONTROL Valor da meta]** é exibido. Em seguida, configure suas [!UICONTROL Especificações da meta]. Selecione o painel [!UICONTROL Inserir valor do campo] e insira o valor da meta.
+O campo **[!UICONTROL Goal value]** é exibido. Em seguida, configure o [!UICONTROL Goal specifics]. Selecione o painel [!UICONTROL Enter Field Value] e insira seu valor de meta.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ O campo **[!UICONTROL Valor da meta]** é exibido. Em seguida, configure suas [!
 
 ![valor-campo-específico-da-meta-plano](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-field-value.png)
 
-Para adicionar campos extras, selecione **[!UICONTROL Adicionar campo]**.
+Para adicionar outros campos, selecione **[!UICONTROL Add field]**.
 
 ![plas-goal-specis-add-event](../assets/../b2b-ai-ml-services/assets/plas-goal-specifics-add-event.png)
 
@@ -58,9 +58,9 @@ Para configurar o período de previsão, selecione a seta suspensa e selecione o
 
 ![período-previsão-plano](../assets/../b2b-ai-ml-services/assets/plas-prediction-timeframe.png)
 
-A política de mesclagem selecionada determina como os valores de campo de um perfil de pessoa são selecionados. Usando a seta suspensa, selecione a política de mesclagem de sua escolha e selecione **[!UICONTROL Concluir]**.
+A política de mesclagem selecionada determina como os valores de campo de um perfil de pessoa são selecionados. Usando a seta suspensa, selecione a política de mesclagem desejada e selecione **[!UICONTROL Finish]**.
 
-A caixa de diálogo **[!UICONTROL Configuração de pontuação concluída]** é exibida confirmando que a nova pontuação foi criada. Selecione **[!UICONTROL OK]**.
+A caixa de diálogo **[!UICONTROL Scoring setup is complete]** é exibida confirmando que a nova pontuação foi criada. Selecione **[!UICONTROL OK]**.
 
 ![pontuação-completa](../assets/../b2b-ai-ml-services/assets/plas-score-complete.png)
 
@@ -68,7 +68,7 @@ A caixa de diálogo **[!UICONTROL Configuração de pontuação concluída]** é
 >
 >Pode levar até 24 horas para que cada processo de pontuação seja concluído.
 
-Você retornará à guia **[!UICONTROL Serviços]**, na qual poderá ver a nova pontuação criada na lista de pontuações.
+Você retornará à guia **[!UICONTROL Services]**, na qual poderá ver a nova pontuação criada na lista de pontuações.
 
 ![pontuação planejada-criada](../assets/../b2b-ai-ml-services/assets/plas-score-created.png)
 
@@ -80,11 +80,11 @@ Para obter informações mais detalhadas sobre os códigos de erro que podem ser
 
 ## Editar uma pontuação
 
-Para editar uma pontuação, selecione uma pontuação na guia **[!UICONTROL Serviços]** e selecione **[!UICONTROL Editar]** no painel de detalhes adicionais no lado direito da tela.
+Para editar uma pontuação, selecione uma pontuação na guia **[!UICONTROL Services]** e selecione **[!UICONTROL Edit]** no painel de detalhes adicionais no lado direito da tela.
 
 ![plas-edit-score](../assets/../b2b-ai-ml-services/assets/plas-edit-score.png)
 
-A caixa de diálogo **[!UICONTROL Editar instância]** é exibida, onde você pode editar a descrição da pontuação. Faça as alterações e selecione **[!UICONTROL Salvar]**.
+A caixa de diálogo **[!UICONTROL Edit instance]** é exibida, onde você pode editar a descrição da pontuação. Faça as alterações e selecione **[!UICONTROL Save]**.
 
 ![plas-edit-save](../assets/../b2b-ai-ml-services/assets/plas-edit-save.png)
 
@@ -92,33 +92,33 @@ A caixa de diálogo **[!UICONTROL Editar instância]** é exibida, onde você po
 >
 >A configuração de pontuação não pode ser alterada, pois isso acionará o novo treinamento e a nova pontuação do modelo. É equivalente a excluir a pontuação e criar uma nova. Para editar a configuração da pontuação, você precisará clonar essa pontuação ou criar uma nova.
 
-Você retornará à guia **[!UICONTROL Serviços]**. Selecione a pontuação para exibir os detalhes da descrição atualizada no painel de detalhes adicionais no lado direito da tela.
+Você retornará à guia **[!UICONTROL Services]**. Selecione a pontuação para exibir os detalhes da descrição atualizada no painel de detalhes adicionais no lado direito da tela.
 
 ## Clonar uma pontuação
 
-Para clonar uma pontuação, selecione uma pontuação na guia **[!UICONTROL Serviços]** e selecione **[!UICONTROL Clonar]** no painel de detalhes adicionais no lado direito da tela.
+Para clonar uma pontuação, selecione uma pontuação na guia **[!UICONTROL Services]** e selecione **[!UICONTROL Clone]** no painel de detalhes adicionais no lado direito da tela.
 
 ![pontuação-clone-plas](../assets/../b2b-ai-ml-services/assets/plas-clone-score.png)
 
-A tela **[!UICONTROL Informações básicas]** é exibida. O tipo, o nome e a descrição do perfil são clonados da pontuação original. Corrija esses detalhes e selecione **[!UICONTROL Próximo]**.
+A tela **[!UICONTROL Basic information]** é exibida. O tipo, o nome e a descrição do perfil são clonados da pontuação original. Corrija esses detalhes e selecione **[!UICONTROL Next]**.
 
 ![plas-clone-basic-info](../assets/../b2b-ai-ml-services/assets/plas-clone-basic-info.png)
 
-A tela **[!UICONTROL Definir meta]** é exibida. Complete a seção de metas como faria ao criar uma nova pontuação e selecione **[!UICONTROL Concluir]**.
+A tela **[!UICONTROL Define your goal]** é exibida. Complete a seção de metas como faria ao criar uma nova pontuação e selecione **[!UICONTROL Finish]**.
 
-Você retornará à guia **[!UICONTROL Serviços]**, onde poderá ver a pontuação recém-clonada na lista.
+Você retornará à guia **[!UICONTROL Services]**, onde poderá ver a pontuação recém-clonada na lista.
 
 >[!NOTE]
 >
->A seção **[!UICONTROL Definir meta]** não é clonada da pontuação original.
+>A seção **[!UICONTROL Define your goal]** não é clonada da pontuação original.
 
 ## Excluir uma pontuação
 
-Para excluir uma pontuação, selecione-a na guia **[!UICONTROL Serviços]** e selecione **[!UICONTROL Excluir]** no painel de detalhes adicionais no lado direito da tela.
+Para excluir uma pontuação, selecione-a na guia **[!UICONTROL Services]** e selecione **[!UICONTROL Delete]** no painel de detalhes adicionais no lado direito da tela.
 
 ![pontuação de exclusão de planos](../assets/../b2b-ai-ml-services/assets/plas-delete-score.png)
 
-A caixa de diálogo de confirmação **[!UICONTROL Excluir documentação]** é exibida. Clique em **[!UICONTROL Excluir]**.
+A caixa de diálogo de confirmação **[!UICONTROL Delete documentation]** é exibida. Selecione **[!UICONTROL Delete]**.
 
 ![plas-delete-score-confirmation](../assets/../b2b-ai-ml-services/assets/plas-delete-score-confirmation.png)
 
@@ -126,7 +126,7 @@ A caixa de diálogo de confirmação **[!UICONTROL Excluir documentação]** é 
 >
 >A exclusão da definição de pontuação também excluiria todas as pontuações previstas no perfil de pessoa ou no perfil de conta, mas não no grupo de campos criado para a definição de pontuação. O grupo de campos será deixado &quot;órfão&quot; no modelo de dados.
 
-Você retornará à guia **[!UICONTROL Serviços]**, na qual não poderá mais ver a pontuação na lista.
+Você retornará à guia **[!UICONTROL Services]**, na qual não poderá mais ver a pontuação na lista.
 
 ## Códigos de erro de pipeline de IA de clientes potenciais
 

@@ -1,19 +1,18 @@
 ---
-title: Edição B2C do modelo de dados do Real-time Customer Data Platform Insights
-description: Saiba como usar consultas SQL com os Modelos de dados do Real-time Customer Data Platform Insights (B2C Edition) para personalizar seus próprios relatórios do Real-Time CDP para seus casos de uso de marketing e KPI.
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+title: B2C Edition do modelo de dados do Real-Time Customer Data Platform Insights
+description: Saiba como usar consultas SQL com o Real-Time Customer Data Platform Insights Data Models (B2C Edition) para personalizar seus próprios relatórios do Real-Time CDP para seus casos de uso de marketing e KPI.
+badgeB2C: null
 exl-id: 61bc7f23-9f79-4c75-a515-85dd9dda2d02
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '1155'
-ht-degree: 0%
+source-wordcount: '1051'
+ht-degree: 2%
 
 ---
 
-# Edição B2C do modelo de dados do Real-time Customer Data Platform Insights
+# B2C Edition do modelo de dados do Real-Time Customer Data Platform Insights
 
-O Modelo de Dados do Real-time Customer Data Platform Insights para o [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) expõe os modelos de dados e o SQL que potencializam os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação dos insights de relatório do repositório acelerado de consulta para saber [como criar um modelo de dados de insights de relatório por meio do Serviço de consulta para uso com dados de repositório acelerados e painéis definidos pelo usuário](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
+O Modelo de Dados do Real-Time Customer Data Platform Insights para o [B2C Edition](../../rtcdp/overview.md#rtcdp-b2c) expõe os modelos de dados e o SQL que potencializam os insights para vários widgets de perfil, destino e segmentação. Você pode personalizar esses modelos de consulta SQL para criar relatórios do Real-Time CDP para seus casos de uso de marketing e KPI (indicador chave de desempenho). Esses insights podem ser usados como widgets personalizados para seus painéis definidos pelo usuário. Consulte a documentação dos insights de relatório do repositório acelerado de consulta para saber [como criar um modelo de dados de insights de relatório por meio do Serviço de consulta para uso com dados de repositório acelerados e painéis definidos pelo usuário](../../query-service/data-distiller/sql-insights/reporting-insights-data-model.md).
 
 >[!NOTE]
 >
@@ -23,7 +22,7 @@ O Modelo de Dados do Real-time Customer Data Platform Insights para o [B2C Editi
 
 Este guia requer uma compreensão funcional do [recurso de painéis definido pelo usuário](../standard-dashboards.md). Leia a documentação antes de continuar com este guia.
 
-## Relatórios e casos de uso do Real-Time CDP Insights
+## Relatórios e casos de uso do Real-Time CDP insight
 
 Os relatórios do Real-Time CDP fornecem insights sobre os dados do perfil e sua relação com públicos e destinos. Vários modelos de esquema estrela foram desenvolvidos para responder a uma variedade de casos de uso comuns de marketing e cada modelo de dados pode suportar vários casos de uso.
 
@@ -45,9 +44,9 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### O caso de uso de contagem de perfis {#profile-count}
 
-A lógica usada para o widget [!UICONTROL Contagem de perfis] retorna o número total de perfis mesclados no armazenamento Perfil no momento em que o instantâneo foi tirado. Consulte a [[!UICONTROL documentação do widget Contagem de perfis]](../guides/profiles.md#profile-count) para obter mais informações.
+A lógica usada para o widget [!UICONTROL Profile count] retorna o número total de perfis mesclados no armazenamento Perfil no momento em que o instantâneo foi tirado. Consulte a [[!UICONTROL Profile count] documentação do widget](../guides/profiles.md#profile-count) para obter mais informações.
 
-O SQL que gera o widget [!UICONTROL Contagem de perfis] é visto na seção que pode ser recolhida abaixo.
+O SQL que gera o widget [!UICONTROL Profile count] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 
@@ -65,9 +64,9 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 #### O caso de uso de perfis de identidade únicos {#single-identity-profiles}
 
-A lógica usada pelo widget [!UICONTROL Perfis de identidade única] fornece uma contagem dos perfis da sua organização que têm apenas um tipo de ID que cria a identidade. Consulte a documentação do widget [[!UICONTROL Perfis de identidade únicos]](../guides/profiles.md#single-identity-profiles) para obter mais informações.
+A lógica usada para o widget [!UICONTROL Single identity profiles] fornece uma contagem dos perfis da sua organização que têm apenas um tipo de ID que cria sua identidade. Consulte a [[!UICONTROL Single identity profiles] documentação do widget](../guides/profiles.md#single-identity-profiles) para obter mais informações.
 
-O SQL que gera o widget [!UICONTROL Perfis de identidade única] é visto na seção que pode ser recolhida abaixo.
+O SQL que gera o widget [!UICONTROL Single identity profiles] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 
@@ -98,9 +97,9 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### Caso de uso de perfis por identidade {#profiles-by-identity}
 
-O widget [!UICONTROL Perfis por identidade] exibe o detalhamento de identidades em todos os perfis mesclados em seu repositório de perfis. Consulte a [[!UICONTROL documentação do widget Perfis por identidade]](../guides/profiles.md#profiles-by-identity) para obter mais informações.
+O widget [!UICONTROL Profiles by identity] exibe o detalhamento das identidades em todos os perfis mesclados no seu armazenamento de perfis. Consulte a [[!UICONTROL Profiles by identity] documentação do widget](../guides/profiles.md#profiles-by-identity) para obter mais informações.
 
-O SQL que gera o widget [!UICONTROL Perfis por identidade] é visto na seção que pode ser recolhida abaixo.
+O SQL que gera o widget [!UICONTROL Profiles by identity] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 
@@ -122,9 +121,9 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 #### Caso de uso de perfis de identidade únicos por identidade {#single-identity-profiles-by-identity}
 
-A lógica usada pelo widget [!UICONTROL Perfis de identidade únicos por identidade] ilustra o número total de perfis identificados com apenas um identificador exclusivo. Consulte a [Documentação de widget de identidade de perfis de identidade únicos por identidade](../guides/profiles.md#single-identity-profiles-by-identity) para obter mais informações.
+A lógica usada para o widget [!UICONTROL Single identity profiles by identity] ilustra o número total de perfis identificados com apenas um único identificador exclusivo. Consulte a [Documentação de widget de identidade de perfis de identidade únicos por identidade](../guides/profiles.md#single-identity-profiles-by-identity) para obter mais informações.
 
-O SQL que gera o widget [!UICONTROL Perfis de identidade únicos por identidade] é visto na seção recolhível abaixo.
+O SQL que gera o widget [!UICONTROL Single identity profiles by identity] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 
@@ -161,9 +160,9 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### Caso de uso de tamanho do público {#audience-size}
 
-A lógica usada para o widget [!UICONTROL Tamanho do público-alvo] retorna o número total de perfis mesclados no público-alvo selecionado no momento do instantâneo mais recente. Consulte a documentação do widget [[!UICONTROL Tamanho do público]](../guides/audiences.md#audience-size) para obter mais informações.
+A lógica usada para o widget [!UICONTROL Audience size] retorna o número total de perfis mesclados dentro do público-alvo selecionado no momento do instantâneo mais recente. Consulte a [[!UICONTROL Audience size] documentação do widget](../guides/audiences.md#audience-size) para obter mais informações.
 
-O SQL que gera o widget [!UICONTROL Tamanho do público-alvo] é visto na seção que pode ser recolhida abaixo.
+O SQL que gera o widget [!UICONTROL Audience size] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 
@@ -185,9 +184,9 @@ WHERE
 
 #### Caso de uso de tendência de alteração de tamanho do público {#audience-size-change-trend}
 
-A lógica usada para o widget [!UICONTROL Tendência de alteração de tamanho de público] fornece uma ilustração de gráfico de linha da diferença no número total de perfis qualificados para um determinado público-alvo entre os instantâneos diários mais recentes. Consulte a [[!UICONTROL Documentação do widget Tendência de alteração de tamanho do público]](../guides/audiences.md#audience-size-change-trend) para obter mais informações.
+A lógica usada para o widget [!UICONTROL Audience size change trend] fornece uma ilustração de gráfico de linhas da diferença no número total de perfis qualificados para um determinado público-alvo entre os instantâneos diários mais recentes. Consulte a [[!UICONTROL Audience size change trend] documentação do widget](../guides/audiences.md#audience-size-change-trend) para obter mais informações.
 
-O SQL que gera o widget [!UICONTROL Tendência de alteração de tamanho de público] é visto na seção que pode ser recolhida abaixo.
+O SQL que gera o widget [!UICONTROL Audience size change trend] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 
@@ -222,9 +221,9 @@ SELECT date_key,
 
 #### Caso de uso de destinos mais usados {#most-used-destinations}
 
-A lógica usada no widget [!UICONTROL Destinos mais usados] lista os destinos mais usados de sua organização de acordo com o número de públicos-alvo mapeados para eles. Essa classificação fornece insight sobre quais destinos estão sendo utilizados, além de mostrar os que podem estar subutilizados. Consulte a documentação no [[!UICONTROL Widget Destinos mais usados]](../guides/destinations.md#most-used-destinations) para obter mais informações.
+A lógica usada no widget [!UICONTROL Most used destinations] lista os destinos mais usados de sua organização de acordo com o número de públicos-alvo mapeados para eles. Essa classificação fornece ao insight em quais destinos estão sendo utilizados, além de mostrar potencialmente aqueles que podem estar subutilizados. Consulte a documentação no [[!UICONTROL Most used destinations] widget](../guides/destinations.md#most-used-destinations) para obter mais informações.
 
-O SQL que gera o widget [!UICONTROL Destinos mais usados] é visto na seção que pode ser recolhida abaixo.
+O SQL que gera o widget [!UICONTROL Most used destinations] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 
@@ -247,9 +246,9 @@ SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
 
 #### Caso de uso de públicos ativado recentemente {#recently-activated-audiences}
 
-A lógica do widget [!UICONTROL Públicos-alvo recentemente ativados] fornece uma lista dos públicos-alvo mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos públicos-alvo e destinos que estão ativamente em uso no sistema e pode ajudar a solucionar problemas de mapeamentos incorretos. Consulte a [[!UICONTROL Documentação do widget Públicos recentemente ativados]](../guides/destinations.md#recently-activated-audiences) para obter mais informações.
+A lógica do widget [!UICONTROL Recently activated audiences] fornece uma lista dos públicos mapeados mais recentemente para um destino. Esta lista fornece um instantâneo dos públicos-alvo e destinos que estão ativamente em uso no sistema e pode ajudar a solucionar problemas de mapeamentos incorretos. Consulte a [[!UICONTROL Recently activated audiences] documentação do widget](../guides/destinations.md#recently-activated-audiences) para obter mais informações.
 
-O SQL que gera o widget [!UICONTROL Públicos-alvo recentemente ativados] é visto na seção que pode ser recolhida abaixo.
+O SQL que gera o widget [!UICONTROL Recently activated audiences] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 
@@ -291,9 +290,9 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### Perfis por identidade para um caso de uso de público-alvo {#audience-profiles-by-identity}
 
-A lógica usada no widget [!UICONTROL Perfis por identidade] fornece um detalhamento de identidades em todos os perfis mesclados no repositório de perfis de um determinado público-alvo. Consulte a [[!UICONTROL documentação do widget Perfis por identidade]](../guides/audiences.md#profiles-by-identity) para obter mais informações.
+A lógica usada no widget [!UICONTROL Profiles by identity] fornece um detalhamento de identidades em todos os perfis mesclados no seu armazenamento de Perfis para um determinado público-alvo. Consulte a [[!UICONTROL Profiles by identity] documentação do widget](../guides/audiences.md#profiles-by-identity) para obter mais informações.
 
-O SQL que gera o widget [!UICONTROL Perfis por identidade] é visto na seção que pode ser recolhida abaixo.
+O SQL que gera o widget [!UICONTROL Profiles by identity] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 
@@ -327,9 +326,9 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### Caso de uso de sobreposição de identidade (perfis) {#profiles-identity-overlap}
 
-A lógica usada no widget [!UICONTROL Sobreposição de identidade] exibe a sobreposição de perfis no seu **Repositório de perfis** que contém as duas identidades selecionadas. Para obter mais informações, consulte a seção widget [[!UICONTROL Sobreposição de identidade] da documentação do painel [!UICONTROL Perfis]](../guides/profiles.md#identity-overlap).
+A lógica usada no widget [!UICONTROL Identity overlap] exibe a sobreposição de perfis no seu **Repositório de perfis** que contém as duas identidades selecionadas. Para obter mais informações, consulte a seção do widget [[!UICONTROL Identity overlap] da documentação do painel [!UICONTROL Profiles]](../guides/profiles.md#identity-overlap).
 
-O SQL que gera o widget [!UICONTROL Sobreposição de identidade] é visto na seção que pode ser recolhida abaixo.
+O SQL que gera o widget [!UICONTROL Identity overlap] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 
@@ -396,9 +395,9 @@ A imagem abaixo contém os campos de dados relevantes em cada conjunto de dados.
 
 #### Caso de uso de sobreposição de identidade (públicos-alvo) {#audiences-identity-overlap}
 
-A lógica usada no widget [!UICONTROL Públicos-alvo] do painel [!UICONTROL Sobreposição de identidade] ilustra a sobreposição de perfis que contém as duas identidades selecionadas para um público-alvo específico. Para obter mais informações, consulte a seção widget [[!UICONTROL Sobreposição de identidade] da documentação do painel [!UICONTROL Públicos-alvo]](../guides/audiences.md#identity-overlap).
+A lógica usada no widget [!UICONTROL Audiences] do painel [!UICONTROL Identity overlap] ilustra a sobreposição de perfis que contêm as duas identidades selecionadas para um público em particular. Para obter mais informações, consulte a seção do widget [[!UICONTROL Identity overlap] da documentação do painel [!UICONTROL Audiences]](../guides/audiences.md#identity-overlap).
 
-O SQL que gera o widget [!UICONTROL Sobreposição de identidade] é visto na seção que pode ser recolhida abaixo.
+O SQL que gera o widget [!UICONTROL Identity overlap] é visto na seção que pode ser recolhida abaixo.
 
 +++Consulta SQL
 

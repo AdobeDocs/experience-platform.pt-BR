@@ -2,12 +2,12 @@
 keywords: perfil rtcdp;perfis rtcdp;identidade rtcdp;políticas de mesclagem rtcdp;perfil do cliente em tempo real
 title: Guia da interface do usuário do perfil da conta
 description: Com o uso de perfis de conta, o Adobe Real-Time Customer Data Platform B2B edition permite unificar informações de conta de várias fontes. Este guia fornece detalhes para interagir com perfis de conta na interface do usuário do Adobe Experience Platform.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1608'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ Para saber mais sobre como os perfis de conta são criados como parte do fluxo d
 
 ## Visão geral dos perfis de conta {#account-profiles-overview}
 
-Selecione **[!UICONTROL Perfis]** em [!UICONTROL Contas] no menu de navegação esquerdo para exibir a visão geral dos perfis de conta. Na guia [!UICONTROL Visão geral], o painel mostra um gráfico que exibe widgets em um único ponto de entrada.
+Selecione **[!UICONTROL Profiles]** em [!UICONTROL Accounts] no menu de navegação esquerdo para exibir a visão geral dos perfis de conta. Na guia [!UICONTROL Overview], o painel mostra um gráfico que exibe widgets em um único ponto de entrada.
 
 ![A guia Visão Geral de Perfis de Conta com Perfis na navegação à esquerda e Visão Geral realçada.](images/b2b-account-profile-overview.png)
 
-Consulte a documentação no painel [[!UICONTROL Perfis de conta]](../../dashboards/guides/account-profiles.md) para saber mais. Consulte a documentação no [B2B edition do modelo de dados do Real-time Customer Data Platform Insights](../../dashboards/data-models/cdp-insights-data-model-b2b.md) para obter mais informações sobre como os modelos de dados do seu insights podem ser usados para criar gráficos personalizados para seus painéis.
+Consulte a documentação no painel [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) para saber mais. Consulte a documentação no [B2B edition do modelo de dados do Real-time Customer Data Platform Insights](../../dashboards/data-models/cdp-insights-data-model-b2b.md) para obter mais informações sobre como os modelos de dados do seu insights podem ser usados para criar gráficos personalizados para seus painéis.
 
 ## Configurar lead para correspondência de conta {#configure-lead-to-account-matching}
 
@@ -36,11 +36,11 @@ Consulte a documentação no painel [[!UICONTROL Perfis de conta]](../../dashboa
 >
 > Somente administradores de IA B2B podem habilitar, desabilitar e configurar o lead para o serviço de correspondência de contas. Ao desabilitar o serviço, os resultados correspondentes serão excluídos em 24 horas.
 
-Para configurar o cliente potencial para correspondência de contas, selecione **[!UICONTROL Perfis]** em [!UICONTROL Contas] na navegação à esquerda. Na guia **[!UICONTROL Visão geral]**, selecione **[!UICONTROL Configurações]** no canto superior direito.
+Para configurar o cliente potencial para correspondência de contas, selecione **[!UICONTROL Profiles]** em [!UICONTROL Accounts] na navegação à esquerda. Na guia **[!UICONTROL Overview]**, selecione **[!UICONTROL Settings]** no canto superior direito.
 
 ![A guia Visão Geral de Perfis de Conta com Configuração realçada.](images/b2b-configuring-accounts-profile.png)
 
-A caixa de diálogo **[!UICONTROL Configurações da conta]** é aberta. Aqui, selecione a opção **[!UICONTROL Habilitar correspondência entre lead e conta]** para habilitar o recurso. Use o menu suspenso para selecionar **[!UICONTROL Diariamente]** para a configuração **[!UICONTROL Cadência de correspondência]**. Finalmente, selecione as opções relevantes de **[!UICONTROL Critérios de correspondência]** seguidas por **[!UICONTROL Salvar]** para confirmar suas configurações e retornar à tela **[!UICONTROL Perfis de conta]**.
+A caixa de diálogo **[!UICONTROL Account settings]** é aberta. Aqui, selecione a opção **[!UICONTROL Enable lead-to-account-matching]** para habilitar o recurso. Use o menu suspenso para selecionar **[!UICONTROL Daily]** para a configuração **[!UICONTROL Matching cadence]**. Finalmente, selecione as opções **[!UICONTROL Matching criteria]** relevantes seguidas por **[!UICONTROL Save]** para confirmar suas configurações e retornar à tela **[!UICONTROL Account Profiles]**.
 
 >[!NOTE]
 >
@@ -52,19 +52,19 @@ Para saber mais sobre correspondência entre lead e conta, consulte a [Correspon
 
 ## Procurar perfis de conta {#browse-account-profiles}
 
-Para procurar perfis de conta, comece selecionando **[!UICONTROL Perfis]** em [!UICONTROL Contas] no menu de navegação esquerdo.
+Para procurar perfis de conta, comece selecionando **[!UICONTROL Profiles]** em [!UICONTROL Accounts] na navegação à esquerda.
 
-Na guia **[!UICONTROL Procurar]**, você pode explorar perfis de conta usando uma ID de conta de uma fonte corporativa conectada ou inserindo os detalhes da fonte diretamente.
+Na guia **[!UICONTROL Browse]**, é possível explorar perfis de conta usando uma ID de conta de uma fonte corporativa conectada ou inserindo os detalhes da fonte diretamente.
 
 ![Usar ID da conta para explorar perfis](images/b2b-account-browse-by.png)
 
-### Procurar por [!UICONTROL Fonte corporativa conectada] {#browse-by-connected-enterprise-source}
+### Procurar por [!UICONTROL Connected enterprise source] {#browse-by-connected-enterprise-source}
 
-Para procurar perfis de conta por uma origem corporativa conectada, selecione **[!UICONTROL Origem corporativa conectada]** na lista suspensa **[!UICONTROL Procurar por]** e escolha uma origem conectada usando o botão seletor ao lado do campo **[!UICONTROL Source]**.
+Para procurar perfis de conta por uma origem corporativa conectada, selecione **[!UICONTROL Connected enterprise source]** na lista suspensa **[!UICONTROL Browse by]** e escolha uma origem conectada usando o botão seletor ao lado do campo **[!UICONTROL Source]**.
 
 ![Procurar perfis de conta por fonte corporativa conectada](images/b2b-account-browse.png)
 
-Isso abre a caixa de diálogo **[!UICONTROL Selecionar origem]**, na qual você pode selecionar uma origem com base nas conexões que sua organização estabeleceu.
+Isso abre a caixa de diálogo **[!UICONTROL Select source]**, na qual você pode selecionar uma origem com base nas conexões que sua organização estabeleceu.
 
 >[!NOTE]
 >
@@ -72,11 +72,11 @@ Isso abre a caixa de diálogo **[!UICONTROL Selecionar origem]**, na qual você 
 
 Para saber mais sobre como conectar fontes da empresa, consulte a [visão geral das fontes](../sources/sources-overview.md).
 
-Você pode escolher uma origem selecionando o botão de opção ao lado do nome da conexão e, em seguida, usar **[!UICONTROL Selecionar]** para retornar à guia [!UICONTROL Procurar].
+Você pode escolher uma origem selecionando o botão de opção ao lado do nome da conexão e usar **[!UICONTROL Select]** para retornar à guia [!UICONTROL Browse].
 
 ![Selecionar fluxo de trabalho de origem](images/b2b-account-select-source.png)
 
-Com uma origem selecionada, agora você deve inserir uma **[!UICONTROL ID da conta]** relacionada à origem. Por exemplo, selecionar uma origem no Salesforce exigiria que você inserisse uma ID de conta na instância do Salesforce para exibir o perfil da conta vinculado a essa ID.
+Com uma origem selecionada, agora você deve inserir um **[!UICONTROL Account ID]** relacionado à origem. Por exemplo, selecionar uma origem no Salesforce exigiria que você inserisse uma ID de conta na instância do Salesforce para exibir o perfil da conta vinculado a essa ID.
 
 >[!NOTE]
 >
@@ -86,21 +86,21 @@ Com uma origem selecionada, agora você deve inserir uma **[!UICONTROL ID da con
 
 ![Seleção da ID da conta](images/b2b-account-browse-id.png)
 
-### Procurar por [!UICONTROL Outros] {#browse-by-others}
+### Procurar por [!UICONTROL Others] {#browse-by-others}
 
-Real-Time CDP, B2B edition dá suporte à capacidade de realizar uma pesquisa direta permitindo que você insira um **[!UICONTROL nome do Source]**, uma **[!UICONTROL instância do Source]** e uma **[!UICONTROL ID da Conta]** para uma conta que você deseje visualizar. Ao inserir o nome de origem e a instância diretamente, você fornece o contexto necessário para que o Experience Platform pesquise e exiba os dados corretos do perfil da conta.
+O Real-Time CDP, B2B edition, oferece suporte à capacidade de realizar uma pesquisa direta ao permitir que você insira um **[!UICONTROL Source name]**, **[!UICONTROL Source instance]** e **[!UICONTROL Account ID]** para uma conta que você gostaria de visualizar. Ao inserir o nome de origem e a instância diretamente, você fornece o contexto necessário para que o Experience Platform pesquise e exiba os dados corretos do perfil da conta.
 
 A capacidade de executar uma pesquisa direta é útil em circunstâncias em que não é possível fazer uma conexão de origem diretamente com os dados. Por exemplo, se sua organização tiver políticas de governança de dados em vigor que impeçam a conexão direta com um CRM, você poderá exportar esses dados para um sistema de armazenamento na nuvem e assimilá-los no Experience Platform.
 
 Outro exemplo pode ser que você esteja executando uma transformação nos dados entre o momento em que ele sai de um sistema e entra no Experience Platform. Você pode usar a funcionalidade de pesquisa direta para fornecer contexto para os dados (como especificar que são dados do Marketo, apesar de virem de um bucket do Amazon S3, por exemplo) para que o sistema saiba onde procurar os dados e como renderizá-los corretamente.
 
-Para iniciar uma pesquisa direta, selecione **[!UICONTROL Outros]** na lista suspensa **[!UICONTROL Procurar por]** e digite um **[!UICONTROL nome de Source]**, **[!UICONTROL instância de Source]** e **[!UICONTROL ID de Conta]** para a conta que deseja exibir.
+Para iniciar uma pesquisa direta, selecione **[!UICONTROL Others]** na lista suspensa **[!UICONTROL Browse by]** e digite **[!UICONTROL Source name]**, **[!UICONTROL Source instance]** e **[!UICONTROL Account ID]** para a conta que deseja exibir.
 
 ![Procurar por outros](images/b2b-account-browse-adhoc.png)
 
 ## Exibir detalhes do perfil da conta {#view-account-profile-details}
 
-Depois de usar a guia **[!UICONTROL Procurar]** para localizar um perfil de conta, selecionar a **[!UICONTROL ID do Perfil]** abrirá a guia **[!UICONTROL Detalhes]** para o perfil de conta. As informações do perfil exibidas na guia **[!UICONTROL Detalhes]** foram mescladas de vários fragmentos de perfil para formar uma única visualização da conta individual. Isso inclui detalhes da conta, como atributos básicos e dados de redes sociais.
+Depois de usar a guia **[!UICONTROL Browse]** para localizar um perfil de conta, selecionar **[!UICONTROL Profile ID]** abre a guia **[!UICONTROL Detail]** para o perfil de conta. As informações do perfil exibidas na guia **[!UICONTROL Detail]** foram mescladas de vários fragmentos de perfil para formar uma única visualização da conta individual. Isso inclui detalhes da conta, como atributos básicos e dados de redes sociais.
 
 Os campos padrão mostrados também podem ser alterados em um nível organizacional para exibir atributos de perfil da conta preferencial.
 
@@ -114,7 +114,7 @@ Os campos padrão mostrados também podem ser alterados em um nível organizacio
 
 ## Guia Atributos {#attributes-tab}
 
-A guia **[!UICONTROL Atributos]** lista todas as informações de registro relacionadas à conta. Isso inclui dados de atributos provenientes de várias fontes que foram mesclados para formar uma única visualização da conta.
+A guia **[!UICONTROL Attributes]** lista todas as informações de registro relacionadas à conta. Isso inclui dados de atributos provenientes de várias fontes que foram mesclados para formar uma única visualização da conta.
 
 Além de poder exibir os dados em uma lista, você pode usar a barra de pesquisa para procurar atributos específicos ou exibir os dados de registro como JSON.
 
@@ -122,23 +122,23 @@ Além de poder exibir os dados em uma lista, você pode usar a barra de pesquisa
 
 ## Guia Pessoas {#people-tab}
 
-A guia **[!UICONTROL Pessoas]** fornece uma lista de pessoas individuais associadas à conta. Essas pessoas podem ser contatos e clientes potenciais de diferentes sistemas corporativos gerenciados por equipes diferentes na organização. No Real-Time CDP, a B2B edition apresenta essas pessoas juntas como uma única lista, permitindo que você veja uma visão mais holística dos contatos da conta.
+A guia **[!UICONTROL People]** fornece uma lista de pessoas individuais associadas à conta. Essas pessoas podem ser contatos e clientes potenciais de diferentes sistemas corporativos gerenciados por equipes diferentes na organização. No Real-Time CDP, a B2B edition apresenta essas pessoas juntas como uma única lista, permitindo que você veja uma visão mais holística dos contatos da conta.
 
 >[!NOTE]
 >
->A guia [!UICONTROL Pessoas] exibe uma lista de até 25 pessoas associadas à conta. Para contas com mais de 25 pessoas associadas, o sistema mostra uma amostragem aleatória de 25 registros.
+>A guia [!UICONTROL People] exibe uma lista de até 25 pessoas associadas à conta. Para contas com mais de 25 pessoas associadas, o sistema mostra uma amostragem aleatória de 25 registros.
 
-Além de mostrar um instantâneo das informações do contato, cada pessoa listada também inclui uma **[!UICONTROL ID do Perfil]**, que é um link clicável que permite explorar o Perfil de Cliente em Tempo Real desse indivíduo. Para saber mais sobre como visualizar perfis de clientes individuais relacionados às suas contas, visite o guia para [navegar pelos perfis na Real-Time CDP, B2B edition](../profile/profile-browse.md).
+Além de mostrar um instantâneo das informações do contato, cada pessoa listada também inclui um **[!UICONTROL Profile ID]**, que é um link clicável que permite explorar o Perfil de Cliente em Tempo Real desse indivíduo. Para saber mais sobre como visualizar perfis de clientes individuais relacionados às suas contas, visite o guia para [navegar pelos perfis na Real-Time CDP, B2B edition](../profile/profile-browse.md).
 
 ![Guia Pessoas](images/b2b-account-people.png)
 
 ## Guia Oportunidades {#opportunities-tab}
 
-A guia **[!UICONTROL Oportunidades]** fornece informações sobre oportunidades abertas e fechadas relacionadas à conta. Essas oportunidades podem ser assimiladas na Experience Platform a partir de várias fontes. No entanto, a Real-Time CDP e a B2B edition facilitam que os profissionais de marketing vejam todas essas oportunidades juntas em um único local.
+A guia **[!UICONTROL Opportunities]** fornece informações sobre oportunidades abertas e fechadas relacionadas à conta. Essas oportunidades podem ser assimiladas na Experience Platform a partir de várias fontes. No entanto, a Real-Time CDP e a B2B edition facilitam que os profissionais de marketing vejam todas essas oportunidades juntas em um único local.
 
 >[!NOTE]
 >
->A guia [!UICONTROL Oportunidades] exibe uma lista de até 25 oportunidades associadas à conta. Para contas com mais de 25 oportunidades associadas, o sistema mostra uma amostragem aleatória de 25 registros.
+>A guia [!UICONTROL Opportunities] exibe uma lista de até 25 oportunidades associadas à conta. Para contas com mais de 25 oportunidades associadas, o sistema mostra uma amostragem aleatória de 25 registros.
 
 Cada oportunidade inclui informações como o nome da oportunidade, sua quantidade, estágio e se a oportunidade está em aberto, fechada, ganha ou perdida.
 
@@ -146,12 +146,12 @@ Cada oportunidade inclui informações como o nome da oportunidade, sua quantida
 
 ## Guia Contas relacionadas {#related-accounts-tab}
 
-A guia **[!UICONTROL Contas relacionadas]** fornece informações sobre outras contas que podem estar relacionadas à conta que você está navegando. Para obter informações detalhadas sobre a funcionalidade, leia a [visão geral das contas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
+A guia **[!UICONTROL Related accounts]** fornece informações sobre outras contas que podem estar relacionadas à conta que você está navegando. Para obter informações detalhadas sobre a funcionalidade, leia a [visão geral das contas relacionadas](/help/rtcdp/b2b-ai-ml-services/related-accounts.md).
 
 >[!NOTE]
 >
 >* Um grupo de contas relacionadas pode ter no máximo 30 perfis de conta. Se mais de 30 perfis de conta forem encontrados relacionados, eles serão arbitrariamente divididos em vários grupos, cada um com no máximo 30 membros. O grupo Contas relacionadas de um perfil de conta sempre inclui a si mesmo.
->* A guia [!UICONTROL Contas relacionadas] atualmente exibe uma lista de até 25 contas relacionadas associadas à conta que você está navegando. Essa é uma limitação que será abordada em uma atualização futura. Apesar dessa limitação da interface do usuário, quando você usa contas relacionadas nas definições de segmento, para grupos de 30 perfis de conta relacionados, todos os perfis são usados para direcionamento.
+>* A guia [!UICONTROL Related accounts] atualmente exibe uma lista de até 25 contas relacionadas associadas à conta que você está navegando. Essa é uma limitação que será abordada em uma atualização futura. Apesar dessa limitação da interface do usuário, quando você usa contas relacionadas nas definições de segmento, para grupos de 30 perfis de conta relacionados, todos os perfis são usados para direcionamento.
 
 Cada conta relacionada inclui informações como a ID e o nome do perfil da conta, sua chave de origem da conta e informações adicionais relacionadas à página inicial, endereço, conta pai, telefone, setor e receita anual.
 

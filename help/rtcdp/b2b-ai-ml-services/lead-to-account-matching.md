@@ -1,14 +1,14 @@
 ---
 title: Lead para correspondência de contas no Real-Time CDP B2B
 type: Documentation
-description: Uma visão geral e mais informações sobre o lead para o recurso de correspondência de contas no Experience Platform CDP B2B.
+description: Uma visão geral e mais informações sobre o lead para o recurso de correspondência de contas no B2B da Experience Platform CDP.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 2f853599-6bca-4ba6-bbba-131a49d8854e
-source-git-commit: 4ba609e777716b1b38f5b143587e5476d851e344
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '408'
-ht-degree: 3%
+source-wordcount: '402'
+ht-degree: 2%
 
 ---
 
@@ -62,11 +62,11 @@ O lead para o serviço de correspondência de contas é executado quando um novo
 
 Após a execução do trabalho, os resultados são salvos em um novo conjunto de dados do XDM da relação pessoal da conta existente.
 
-Para visualizar o conjunto de dados, selecione **[!UICONTROL Visualizar conjunto de dados]** na parte superior direita.
+Para visualizar o conjunto de dados, selecione **[!UICONTROL Preview dataset]** no canto superior direito.
 
 ![Novo conjunto de dados](/help/rtcdp/accounts/images/b2b-dataset-output.png)
 
-O conjunto de dados inclui as informações de conta correspondentes, bem como a pontuação de correspondência do conjunto de dados escolhido. O campo **[!UICONTROL Relationship Source]** indica se ele veio do processo de correspondência entre lead e conta.
+O conjunto de dados inclui as informações de conta correspondentes, bem como a pontuação de correspondência do conjunto de dados escolhido. O campo **[!UICONTROL Relationship Source]** indica se ele veio do processo de correspondência de lead para conta.
 
 ![Visualizar pontuações e saída de confiança do conjunto de dados](/help/rtcdp/accounts/images/b2b-dataset-preview.png)
 

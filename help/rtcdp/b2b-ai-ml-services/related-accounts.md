@@ -1,18 +1,18 @@
 ---
-title: Contas relacionadas no Real-Time CDP B2B Edition
+title: Contas relacionadas no Real-Time CDP B2B edition
 type: Documentation
 description: Uma visão geral e mais informações sobre o recurso contas relacionadas no Experience Platform Real-Time CDP B2B.
 feature: Get Started, Profiles, B2B
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 37fd2cdb-87c0-4e5e-9599-ad4f397f7c28
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '427'
 ht-degree: 5%
 
 ---
 
-# Contas relacionadas no Real-Time CDP B2B Edition
+# Contas relacionadas no Real-Time CDP B2B edition
 
 ## Visão geral {#overview}
 
@@ -32,15 +32,15 @@ Com contas relacionadas, o [!DNL Real-Time CDP B2B] agora mostra uma lista de co
 
 ![Tela mostrando contas relacionadas na interface do usuário do Experience Platform.](/help/rtcdp/b2b-ai-ml-services/assets/related-accounts-in-ui.png)
 
-Use esse recurso para exibir perfis de conta relacionados para um perfil de conta na interface do usuário do Experience Platform e, em seguida, incluir as contas relacionadas nas definições de segmento para ampliar seu alcance ou aplicar critérios mais amplos em seus públicos.
+Use esse recurso para exibir perfis de conta relacionados de um perfil de conta na interface do usuário do Experience Platform e, em seguida, incluir as contas relacionadas nas definições de segmento para ampliar seu alcance ou aplicar critérios mais amplos a seus públicos.
 
 ## Habilitar o serviço de contas relacionado {#enable}
 
-Para habilitar o serviço, selecione **[!UICONTROL Perfis]** na barra lateral seguido de **[!UICONTROL Configurações]**.
+Para habilitar o serviço, selecione **[!UICONTROL Profiles]** na barra lateral seguido de **[!UICONTROL Settings]**.
 
-![IU do Experience Platform destacando perfis e configurações.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
+![Interface do usuário do Experience Platform destacando perfis e configurações.](../assets/../b2b-ai-ml-services/assets/related-account-settings.png)
 
-Selecione a opção ao lado de [!UICONTROL Habilitar contas relacionadas] para habilitar o serviço e selecione **[!UICONTROL Salvar]**.
+Selecione o alternador ao lado de [!UICONTROL Enable related accounts] para habilitar o serviço e selecione **[!UICONTROL Save]**.
 
 ![Tela de configurações da conta destacando a alternância e salve.](../assets/../b2b-ai-ml-services/assets/related-account-toggle.png)
 
@@ -58,7 +58,7 @@ Consulte a documentação para obter mais informações sobre os [trabalhos de c
 
 ## Como visualizar contas relacionadas {#how-to-view}
 
-É possível visualizar as contas relacionadas de uma conta que você está navegando na interface do usuário do Experience Platform.
+É possível exibir contas relacionadas de uma conta que você está navegando na interface do usuário do Experience Platform.
 
 Consulte a documentação para obter mais informações sobre [como localizar contas relacionadas na interface](/help/rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab).
 

@@ -1,12 +1,11 @@
 ---
 title: Insights do perfil da conta
 description: Descubra o SQL que potencializa os insights do Perfil da conta e use essas consultas para gerar insights personalizados que exploram ainda mais seus clientes e as experiências do consumidor.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="Edição B2P" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: null
 exl-id: a953dd56-7dd8-4cd0-baa0-85f92d192789
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: a32064848809d1cad07f769f04d82c35df451e38
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -27,7 +26,7 @@ Perguntas respondidas por este insight:
 
 - Quantos perfis de conta foram adicionados em um determinado período?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 WITH accounts_by_mm_dd AS
@@ -53,7 +52,7 @@ Perguntas respondidas por este insight:
 
 - Quais são os cinco principais setores aos quais os perfis de conta pertencem?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 WITH rankedindustries AS
@@ -89,7 +88,7 @@ Perguntas respondidas por este insight:
 
 - Qual é a contagem de contas por seu tipo?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT t.account_type,
@@ -112,7 +111,7 @@ Perguntas respondidas por este insight:
 
 - Quantas oportunidades foram adicionadas em um determinado período?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT d.date_key,
@@ -135,7 +134,7 @@ Perguntas respondidas por este insight:
 
 - Qual é o tamanho relativo e a contagem das várias funções em uma oportunidade?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT p.person_role,
@@ -157,7 +156,7 @@ Perguntas respondidas por este insight:
 
 - Quais são as 20 principais oportunidades classificadas por sua receita (em dólares americanos)?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 WITH ranked_opportunities AS
@@ -195,10 +194,10 @@ ORDER BY total_expected_revenue DESC limit 5000;
 
 Perguntas respondidas por este insight:
 
-- Quais são as oportunidades abertas e em que estágio do funil de vendas ou marketing elas estão?
-- Quais oportunidades fechadas existem e em que estágio do funil de vendas ou marketing elas estão?
+- Quais são as oportunidades abertas e em que estágio da funnel de vendas ou marketing elas estão?
+- Quais oportunidades fechadas existem e em que estágio da funnel de vendas ou marketing elas estão?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 WITH opportunities_by_isclosed AS
@@ -230,7 +229,7 @@ Perguntas respondidas por este insight:
 
 - Qual é a contagem de oportunidades que foram fechadas ou finalizadas com sucesso?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 WITH opportunities_by_iswon AS
@@ -259,7 +258,7 @@ Perguntas respondidas por este insight:
 
 - Quantas oportunidades foram fechadas ou finalizadas com êxito (conquistadas) em um determinado período?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 WITH opportunities_won_counts AS
@@ -285,13 +284,13 @@ ORDER BY  d.date_key limit 5000;
 
 >[!NOTE]
 >
->O gráfico [!UICONTROL Visão Geral de Clientes por Conta] inclui três insights detalhados: [!UICONTROL Detalhes de Clientes por Conta], [!UICONTROL Visão Geral de Oportunidades por Conta] e [!UICONTROL Detalhes de Oportunidades por Conta]. Esses drill-throughs fornecem insights mais granulares, detalhando as contagens de clientes e oportunidades por categorias (como clientes diretos e indiretos) e intervalos (como faixas de contagem de clientes e oportunidades). Esses gráficos não são afetados por nenhum filtro de data global definido.
+>O gráfico [!UICONTROL Customers per Account Overview] inclui três insights de drill-through: [!UICONTROL Customers per Account Detail], [!UICONTROL Opportunities per Account Overview] e [!UICONTROL Opportunities per Account Detail]. Esses drill-throughs fornecem insights mais granulares, detalhando as contagens de clientes e oportunidades por categorias (como clientes diretos e indiretos) e intervalos (como faixas de contagem de clientes e oportunidades). Esses gráficos não são afetados por nenhum filtro de data global definido.
 
 Perguntas respondidas por este insight:
 
 - Qual é a distribuição de contas baseada em clientes diretos ou indiretos?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 WITH LatestDate AS (SELECT MAX(inserted_date) AS max_inserted_date FROM adwh_b2b_account_person_association),
@@ -329,13 +328,13 @@ ORDER BY ac.Account_Category;
 
 >[!NOTE]
 >
->Esse insight não é afetado pelos filtros de data globais.
+>Esta insight não é afetada pelos filtros de data globais.
 
 Perguntas respondidas por este insight:
 
 - Quantas contas têm intervalos diferentes de clientes diretos ou indiretos?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 WITH customer_ranges AS (
@@ -403,13 +402,13 @@ ORDER BY cr.customer_type,
 
 >[!NOTE]
 >
->Esse insight não é afetado pelos filtros de data globais.
+>Esta insight não é afetada pelos filtros de data globais.
 
 Perguntas respondidas por este insight:
 
 - Qual é a distribuição de contas baseada em se elas têm oportunidades associadas?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 WITH LatestDate AS (
@@ -453,13 +452,13 @@ ORDER BY ac.Opportunity_Category;
 
 >[!NOTE]
 >
->Esse insight não é afetado pelos filtros de data globais.
+>Esta insight não é afetada pelos filtros de data globais.
 
 Perguntas respondidas por este insight:
 
 - Quantas contas têm intervalos diferentes de oportunidades associadas?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 WITH opportunity_ranges AS (

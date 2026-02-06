@@ -1,12 +1,10 @@
 ---
 title: Conectar a intenção do Bombora ao Experience Platform usando a interface do usuário
 description: Saiba como conectar o Bombora Intent ao Experience Platform
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
-badgeB2P: label="Edição B2P" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions newtab=true"
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '933'
 ht-degree: 4%
 
 ---
@@ -29,13 +27,13 @@ Leia a [[!DNL Bombora Intent] visão geral](../../../../connectors/data-partners
 
 ## Navegar pelo catálogo de origens
 
-Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Fontes]*. Você pode selecionar a categoria apropriada no painel *[!UICONTROL Categorias]*. Como alternativa, você pode usar a barra de pesquisa para navegar até a fonte específica que deseja usar.
+Na interface do Experience Platform, selecione **[!UICONTROL Sources]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Sources]*. Você pode selecionar a categoria apropriada no painel *[!UICONTROL Categories]*. Como alternativa, você pode usar a barra de pesquisa para navegar até a fonte específica que deseja usar.
 
-Para usar o [!DNL Bombora], selecione o cartão de origem **[!UICONTROL Propósito Bombora]** em *[!UICONTROL Parceiros de Dados e Identidade]* e selecione **[!UICONTROL Adicionar dados]**.
+Para usar [!DNL Bombora], selecione o cartão de origem **[!UICONTROL Bombora Intent]** em *[!UICONTROL Data & Identity Partners]* e selecione **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->As origens no catálogo de origens exibem a opção **[!UICONTROL Configurar]** quando uma determinada origem ainda não tem uma conta autenticada. Quando uma conta autenticada existir, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
+>As origens no catálogo de origens exibem a opção **[!UICONTROL Set up]** quando uma determinada origem ainda não tem uma conta autenticada. Quando uma conta autenticada existir, esta opção mudará para **[!UICONTROL Add data]**.
 
 ![O catálogo de origens com o cartão &quot;Intenção de Bombora&quot; selecionado.](../../../../images/tutorials/create/bombora/catalog.png)
 
@@ -43,9 +41,9 @@ Para usar o [!DNL Bombora], selecione o cartão de origem **[!UICONTROL Propósi
 
 ### Usar uma conta existente {#existing}
 
-Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e, em seguida, selecione a conta que deseja usar na lista de contas na interface.
+Para usar uma conta existente, selecione **[!UICONTROL Existing account]** e, em seguida, selecione a conta que deseja usar na lista de contas na interface.
 
-Depois de selecionar sua conta, selecione **[!UICONTROL Avançar]** para prosseguir para a próxima etapa.
+Depois de selecionar sua conta, selecione **[!UICONTROL Next]** para prosseguir para a próxima etapa.
 
 ![A interface de conta existente no fluxo de trabalho de origens.](../../../../images/tutorials/create/bombora/existing.png)
 
@@ -53,7 +51,7 @@ Depois de selecionar sua conta, selecione **[!UICONTROL Avançar]** para prosseg
 
 Se você não tiver uma conta existente, deverá criar uma nova conta fornecendo as credenciais de autenticação necessárias que correspondam à sua origem.
 
-Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome de conta e, opcionalmente, uma descrição para os detalhes da sua conta. Em seguida, forneça os valores de autenticação apropriados para autenticar sua fonte no Experience Platform. Para conectar sua conta do [!DNL Bombora], você deve ter as seguintes credenciais:
+Para criar uma nova conta, selecione **[!UICONTROL New account]** e forneça um nome de conta e, opcionalmente, uma descrição para os detalhes da sua conta. Em seguida, forneça os valores de autenticação apropriados para autenticar sua fonte no Experience Platform. Para conectar sua conta do [!DNL Bombora], você deve ter as seguintes credenciais:
 
 * **ID da chave de acesso**: sua ID da chave de acesso [!DNL Bombora]. Esta é uma sequência de 61 caracteres alfanuméricos necessária para autenticar sua conta no Experience Platform.
 * **Chave de acesso secreta**: sua chave de acesso secreta [!DNL Bombora]. Esta é uma sequência de 40 caracteres codificada em base 64 necessária para autenticar sua conta no Experience Platform.
@@ -77,20 +75,20 @@ Em seguida, use a interface de agendamento para configurar um agendamento de ass
 
 * **Frequência**: configure a frequência para indicar a frequência de execução do fluxo de dados. Você pode agendar seu fluxo de dados do [!DNL Bombora] para assimilar dados semanalmente.
 * **Intervalo**: o intervalo representa o tempo entre cada ciclo de assimilação. O único intervalo com suporte para um fluxo de dados [!DNL Bombora] é 1. Isso significa que seu fluxo de dados assimilará dados uma vez por semana, toda semana.
-* **Hora de início**: a hora de início determina quando ocorrerá a primeira iteração de execução do fluxo de dados. [!DNL Bombora] envia dados para o Adobe uma vez por semana, às segundas-feiras, às 12h UTC. Portanto, você deve definir a hora de início da assimilação após as 12h UTC. Além disso, você deve confirmar o tempo de assimilação com [!DNL Bombora], pois eles podem alterar a programação ao soltar arquivos no Adobe.
+* **Hora de início**: a hora de início determina quando ocorrerá a primeira iteração de execução do fluxo de dados. [!DNL Bombora] descarta dados para o Adobe uma vez por semana, às segundas-feiras, às 12h:00, UTC. Portanto, você deve definir a hora de início da assimilação após 12:00 PM UTC. Além disso, você deve confirmar o tempo de assimilação com [!DNL Bombora], pois eles podem alterar a programação ao soltar arquivos no Adobe.
 
-Depois de configurar o agendamento de assimilação do fluxo de dados, selecione **[!UICONTROL Avançar]**.
+Depois de configurar o agendamento de assimilação do fluxo de dados, selecione **[!UICONTROL Next]**.
 
 ![A interface de agendamento do fluxo de trabalho de origens.](../../../../images/tutorials/create/bombora/scheduling.png)
 
 ## Revisar fluxo de dados {#review-dataflow}
 
-A etapa final no processo de criação do fluxo de dados é revisar o fluxo de dados antes de executá-lo. Use a etapa *[!UICONTROL Revisão]* para revisar os detalhes do novo fluxo de dados antes de ele ser executado. Os detalhes estão agrupados nas seguintes categorias:
+A etapa final no processo de criação do fluxo de dados é revisar o fluxo de dados antes de executá-lo. Use a etapa *[!UICONTROL Review]* para revisar os detalhes do novo fluxo de dados antes de ele ser executado. Os detalhes estão agrupados nas seguintes categorias:
 
 * **Conexão**: mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e o número de colunas nesse arquivo de origem.
 * **Agendamento**: mostra o período, a frequência e o intervalo ativos do agendamento de assimilação.
 
-Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]**.
+Depois de revisar seu fluxo de dados, selecione **[!UICONTROL Finish]**.
 
 ![A interface de revisão do fluxo de trabalho de fontes.](../../../../images/tutorials/create/bombora/review.png)
 
@@ -108,4 +106,4 @@ Para atualizar as configurações do agendamento de fluxos de dados, mapeamento 
 
 ### Excluir seu fluxo de dados
 
-Você pode excluir fluxos de dados que não são mais necessários ou que foram criados incorretamente usando a função **[!UICONTROL Excluir]** disponível no espaço de trabalho **[!UICONTROL Fluxos de Dados]**. Para obter mais informações sobre como excluir fluxos de dados, visite o tutorial em [excluindo fluxos de dados na interface](../../delete.md).
+Você pode excluir fluxos de dados que não são mais necessários ou que foram criados incorretamente usando a função **[!UICONTROL Delete]** disponível no espaço de trabalho **[!UICONTROL Dataflows]**. Para obter mais informações sobre como excluir fluxos de dados, visite o tutorial em [excluindo fluxos de dados na interface](../../delete.md).

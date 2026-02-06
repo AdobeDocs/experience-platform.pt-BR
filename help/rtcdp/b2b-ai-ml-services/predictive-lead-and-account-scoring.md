@@ -1,20 +1,20 @@
 ---
 title: Pontuação preditiva de leads e contas no Real-Time CDP B2B
 type: Documentation
-description: Uma visão geral e mais informações sobre o recurso preditivo de lead e pontuação de conta no Experience Platform CDP B2B.
+description: Uma visão geral e mais informações sobre o recurso preditivo de lead e pontuação de conta no B2B da Experience Platform CDP.
 feature: Profiles, B2B
-badgeB2B: label="Edição B2B" type="Informative" url="https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d3afbabb-005d-4537-831a-857c88043759
-source-git-commit: db57fa753a3980dca671d476521f9849147880f1
+source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
 workflow-type: tm+mt
-source-wordcount: '859'
-ht-degree: 2%
+source-wordcount: '853'
+ht-degree: 3%
 
 ---
 
 # Pontuação preditiva de leads e contas no Real-Time CDP B2B
 
-Os profissionais de marketing B2B enfrentam vários desafios no topo do funil de marketing. Para serem eficazes, os profissionais de marketing B2B precisam de uma maneira automatizada de qualificar o grande número de pessoas para que possam se concentrar nos alvos de alto valor. A qualificação deve estar alinhada ao resultado final das vendas, não apenas à conversão de marketing.
+Os profissionais de marketing B2B enfrentam vários desafios na parte superior do funnel de marketing. Para serem eficazes, os profissionais de marketing B2B precisam de uma maneira automatizada de qualificar o grande número de pessoas para que possam se concentrar nos alvos de alto valor. A qualificação deve estar alinhada ao resultado final das vendas, não apenas à conversão de marketing.
 
 As contas do são as entidades finais que compram produtos e serviços B2B. A fim de comercializar e vender de forma eficaz, os profissionais de marketing B2B são obrigados a conhecer não só a probabilidade de compra do indivíduo, mas também da conta.
 
@@ -52,7 +52,7 @@ O algoritmo considera os seguintes atributos e dados de entrada:
 
 >[!NOTE]
 > 
->O algoritmo inspeciona apenas o campo `sourceAccountKey.sourceKey` no grupo de campos Person:personComponents.
+>O algoritmo inspeciona apenas o campo `sourceAccountKey.sourceKey` no grupo de campos Pessoa:personComponents.
 
 * Perfil da conta
 
@@ -102,13 +102,13 @@ Após a execução do trabalho, os resultados são salvos em um novo conjunto de
 
 ### Exibir pontuações de perfil de cliente
 
-Para exibir as pontuações preditivas de um perfil de pessoa, selecione **[!UICONTROL Perfis]** na seção de cliente, no painel esquerdo, e insira o namespace de identidade e o valor de identidade. Depois de concluído, selecione **[!UICONTROL Exibir]**.
+Para exibir as pontuações preditivas de um perfil de pessoa, selecione **[!UICONTROL Profiles]** na seção de cliente, no painel esquerdo, e insira o namespace de identidade e o valor de identidade. Depois de concluído, selecione **[!UICONTROL View]**.
 
 Em seguida, selecione o perfil na lista.
 
 ![Perfil do cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile.png)
 
-A página **[!UICONTROL Detalhes]** agora inclui as pontuações preditivas. Clique no ícone do gráfico ao lado da pontuação preditiva.
+A página **[!UICONTROL Detail]** agora inclui as pontuações preditivas. Clique no ícone do gráfico ao lado da pontuação preditiva.
 
 ![Pontuação preditiva de perfil do cliente](/help/rtcdp/accounts/images/b2b-view-customer-profile-predictive-score.png)
 

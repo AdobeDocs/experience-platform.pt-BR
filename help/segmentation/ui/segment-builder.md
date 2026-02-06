@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 1b836a86a6b55a4e80a7fd3a52160f3974e4c9a4
+source-git-commit: 2341b02ecbd93965654bdbc38bbacadeae5be0ed
 workflow-type: tm+mt
-source-wordcount: '5354'
-ht-degree: 12%
+source-wordcount: '6311'
+ht-degree: 11%
 
 ---
 
@@ -61,6 +61,97 @@ Você pode ver esses blocos de construção na seção **[!UICONTROL Fields]** �
 A guia **[!UICONTROL Attributes]** permite procurar atributos [!DNL Profile] pertencentes à classe [!DNL XDM Individual Profile]. Cada pasta pode ser expandida para revelar atributos adicionais, em que cada atributo é um bloco que pode ser arrastado para a tela do construtor de regras no centro do espaço de trabalho. A [tela do construtor de regras](#rule-builder-canvas) será discutida com mais detalhes posteriormente neste guia.
 
 ![A seção de atributos dos campos do Construtor de segmentos está realçada.](../images/ui/segment-builder/attributes.png)
+
+Os atributos adicionados podem ser um dos seguintes tipos de dados:
+
+| Tipo de dados | Casos de uso comuns |
+| --------- | ---------------- |
+| String | Nomes, endereços de email, categorias de produtos |
+| Numérico | Idade, receita, quantidades de produtos, pontuações de fidelidade |
+| Booleano | Preferências, indicadores de status, sinalizadores de usuário |
+| Lista Discriminada | Listas predefinidas, como gênero ou status |
+| Data/Hora | Datas de compra, horários de visita, aniversário |
+
+Você pode usar os seguintes operadores para os respectivos tipos de dados:
+
++++ Operadores de string
+
+| Operador | Descrição | Exemplo |
+| -------- | ----------- | ------- |
+| Igual | Localizar uma correspondência exata com o valor especificado | Email **igual a** &quot;sample@example.com&quot; |
+| Não é igual | Exclui o valor especificado | O status **não é igual a** &quot;Cancelado&quot; |
+| Contains | O texto inclui o valor especificado | Nome do produto **contém** &quot;iPhone&quot; |
+| Não contém | O texto não inclui o valor especificado | Descrição **não contém** &quot;descontinuado&quot; |
+| Começa com | O texto começa com o valor especificado | A ID do cliente **começa com** &quot;PREM&quot; |
+| Termina com | O texto termina com o valor especificado | O email **termina com** &quot;@company.com&quot; |
+| Existe | O valor existe | Nome do meio **existe** |
+| Não existe | O valor não existe | O status de fidelidade **não existe** |
+
++++
+
++++ Operadores numéricos
+
+| Operador | Descrição | Exemplo |
+| -------- | ----------- | ------- |
+| Igual | Localizar uma correspondência exata com o valor especificado | Idade **igual a** 25 |
+| Não é igual | Exclui o valor especificado | A contagem de pedidos **não é igual a** 0 |
+| Maior que | O número é **maior** do que o valor especificado. Este valor é **exclusivo** do número especificado. | Receita anual **maior que** 50000 |
+| Maior que ou igual | O número é **maior** do que o valor especificado. Este valor é **inclusivo** do número especificado. | Idade **maior ou igual** 21 |
+| Menor que | O número é **menor** do que o valor especificado. Este valor é **exclusivo** do número especificado. | Dias desde a compra **menor que** 30 |
+| Menor que ou igual | O número é **menor** do que o valor especificado. Este valor é **inclusivo** do número especificado. | Valor do carrinho **menor ou igual** 100 |
+| Entre | O número está **entre** os valores especificados. Estes valores são **inclusivos** dos números especificados. | **idade entre** 25 e 45 |
+| Existe | O valor existe | Pontuação de crédito **existe** |
+| Não existe | O valor não existe | A pontuação de crédito **não existe** |
+
++++
+
++++ Operadores booleanos
+
+| Operador | Descrição | Exemplo |
+| -------- | ----------- | ------- |
+| Igual | O valor booleano é definido como o valor especificado (Verdadeiro ou Falso) | Aceitação de email **é igual a Verdadeiro** |
+| Não é igual | O valor booleano é **não** definido como o valor especificado (Verdadeiro ou Falso) | Aplicativo móvel instalado **não é igual a True** |
+
++++
+
++++ Operadores de enumeração
+
+| Operador | Descrição | Exemplo |
+| -------- | ----------- | ------- |
+| Igual | O valor é igual aos valores de enumeração especificados | Gênero **igual a** Feminino |
+| Não é igual | O valor não é igual ao valor de enumeração especificado | O status do pedido **não é igual a** Cancelado |
+| Existe | O valor de enumeração foi definido | O idioma preferencial **existe** |
+| Não existe | O valor de enumeração não foi definido | O idioma preferencial **não existe** |
+
++++
+
++++ Operadores de data/hora
+
+| Operador | Descrição | Exemplo |
+| -------- | ----------- | ------- |
+| Hoje | O valor ocorreu hoje. Você pode marcar a caixa de seleção **Ignorar ano** para que a comparação ignore o ano. | A data de nascimento **é** hoje |
+| Ontem | O valor ocorreu ontem. | Compra com carrinho **is** ontem |
+| Este mês | O valor ocorreu neste mês. | O mês de nascimento **é** este mês |
+| Este ano | O valor ocorreu neste ano civil. | A data de inscrição **é** este ano |
+| Data personalizada | O valor ocorreu na data especificada. | A data de compra **está em** Data personalizada |
+| No(s) último(s) | O valor ocorreu no último período escolhido. Aniversário **is** no mês passado |
+| De (para) | O valor ocorreu dentro das duas datas do calendário escolhidas. Este período é **inclusivo** das duas datas. | A data de criação da conta **é** de 20 de abril a 13 de julho |
+| Durante | O valor ocorreu no mês ou ano selecionado. | Venda **is** Durante março |
+| No prazo de (+/-) | O valor ocorreu em dias, semanas, meses ou anos a partir da data selecionada. Este período é **inclusivo** das duas datas. | O abandono do carrinho é **Dentro de** 3 dias |
+| Antes | O valor ocorreu antes da data selecionada. | A data de ingresso da associação é **antes** de 3 de janeiro de 2025 |
+| Depois | O valor ocorreu após a data selecionada. | A data de compra é **depois** de 14 de março de 2024 |
+| Intervalo contínuo | O valor ocorreu entre as duas datas relativas. | A última data de compra está no intervalo contínuo de sete dias atrás para três dias atrás. |
+| No próximo | O valor ocorreu no próximo período selecionado. | O abandono do carrinho será nos próximos 2 dias |
+
+Para obter informações mais detalhadas sobre as funções de hora e data, leia a [seção de restrições de tempo](#time-constraints).
+
++++
+
+#### Atributos computados {#computed-attributes}
+
+Atributos calculados são campos calculados de outros atributos usando agregações ou fórmulas. Você pode usar atributos calculados se precisar de dados agregados, como somas, contagens ou médias em vários eventos, ou se estiver criando públicos usados com frequência que exigem cálculos complexos.
+
+Para obter mais informações sobre atributos computados, incluindo como criá-los, quais funções você pode usar dentro deles e como gerenciá-los, leia a [visão geral sobre atributos computados](/help/profile/computed-attributes/overview.md).
 
 ### Eventos
 
@@ -356,7 +447,7 @@ A lista de restrições de tempo disponíveis para esta operação difere da lis
 
 ## Containers {#containers}
 
-As regras de segmento são avaliadas na ordem em que são listadas. Os containers permitem controlar a ordem de execução por meio do uso de consultas aninhadas.
+Os públicos são avaliados na ordem em que são listados. Os containers permitem controlar a ordem de execução por meio do uso de consultas aninhadas.
 
 Depois de adicionar pelo menos um bloco à tela do construtor de regras, você pode começar a adicionar contêineres. Para criar um novo contêiner, selecione as reticências (...) no canto superior direito do bloco e selecione **[!UICONTROL Add container]**.
 
@@ -375,6 +466,36 @@ Depois de selecionar **[!UICONTROL Unwrap container]**, o contêiner filho será
 >Ao desempacotar contêineres, tenha cuidado para que a lógica continue atendendo à definição de segmento desejada.
 
 ![O contêiner é mostrado após ser desencapsulado.](../images/ui/segment-builder/unwrapped-container.png)
+
+### Exemplos {#container-examples}
+
+Você pode usar os contêineres dentro do Construtor de segmentos de três maneiras diferentes: para agrupar as regras com a lógica booleana, para controlar se os perfis correspondentes aos critérios do contêiner devem ser incluídos ou excluídos e para definir sequências de eventos com restrições de tempo.
+
++++ Lógica booleana mista
+
+O exemplo a seguir mescla a lógica **both** AND e OR em uma única expressão. Sem usar contêineres, não é possível misturar AND com a lógica OR em um único nível.
+
+![Uma imagem que mostra como usar contêineres para misturar lógica booleana e usar lógica de inclusão/exclusão.](/help/segmentation/images/ui/segment-builder/mixed-boolean-container.png)
+
++++
+
++++ Sequência de eventos
+
+O exemplo a seguir usa contêineres para criar a sequência de eventos.
+
+![Uma imagem que mostra como sequenciar eventos usando contêineres.](/help/segmentation/images/ui/segment-builder/event-sequence-container.png)
+
++++
+
+### Práticas recomendadas {#container-best-practices}
+
+Ao adicionar contêineres ao público-alvo, lembre-se das seguintes diretrizes:
+
+- Crie os contêineres de forma incremental, testando a lógica com cada etapa adicionada
+   - Isso é especialmente importante se você usar a lógica &quot;Excluir&quot;, pois isso pode alterar significativamente seus resultados
+- Dê um nome claro aos seus contêineres para que eles entendam o que devem fazer
+- Evite ter muitos níveis aninhados de contêineres, pois isso reduz o desempenho
+- Certifique-se de que a ordem dos contêineres seja precisa, já que a ordem dos eventos afeta muito os contêineres sequenciais
 
 ## Mesclar políticas
 
@@ -461,7 +582,7 @@ Mais informações sobre os diferentes métodos de avaliação de definição de
 O Construtor de segmentos fornece um fluxo de trabalho avançado que permite isolar públicos comercializáveis dos dados de [!DNL Real-Time Customer Profile]. Depois de ler este guia, você deverá ser capaz de:
 
 - Crie definições de segmento usando uma combinação de atributos, eventos e públicos-alvo existentes como blocos de construção.
-- Use a tela e os contêineres do construtor de regras para controlar a ordem em que as regras de segmento são executadas.
+- Use a tela e os contêineres do construtor de regras para controlar a ordem em que as regras de público-alvo são executadas.
 - Visualize estimativas de seu público-alvo em potencial, permitindo ajustar as definições de segmento, conforme necessário.
 - Ative todas as definições de segmento para a segmentação programada.
 - Ative as definições de segmento especificadas para a segmentação por transmissão.

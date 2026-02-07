@@ -1,10 +1,11 @@
 ---
 title: Definir uma relação entre dois esquemas no Real-Time Customer Data Platform B2B edition
 description: Saiba como definir uma relação muitos para um entre dois esquemas no Adobe Real-Time Customer Data Platform B2B edition.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cb036262ff81d245fe436fc337b3911170c61425
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1729'
 ht-degree: 12%
 
 ---
@@ -22,23 +23,23 @@ No entanto, os esquemas de união só podem conter campos capturados por esquema
 
 O diagrama a seguir fornece um exemplo de como as diferentes classes B2B podem se relacionar entre si em uma implementação básica:
 
-![B2B class relationships](../images/tutorials/relationship-b2b/classes.png)
+![Relacionamentos de classe B2B](../images/tutorials/relationship-b2b/classes.png)
 
-This tutorial covers the steps to define a many-to-one relationship between two schemas in Real-Time CDP B2B Edition.
+Este tutorial aborda as etapas para definir uma relação muitos para um entre dois esquemas no Real-Time CDP B2B edition.
 
 >[!NOTE]
 >
->If you are not using Real-Time Customer Data Platform B2B Edition or want to create a one-to-one relationship, see the guide on [creating a one-to-one relationship](./relationship-ui.md) instead.
+>Se você não estiver usando o Real-Time Customer Data Platform B2B edition ou quiser criar uma relação um para um, consulte o manual sobre [criação de uma relação um para um](./relationship-ui.md).
 >
->This tutorial focuses on how to manually establish relationships between B2B schemas in the Experience Platform UI. If you are bringing in data from a B2B source connection, you can use an auto-generation utility to create the required schemas, identities, and relationships instead. See the sources documentation on B2B namespaces and schemas for more information on [using the auto-generation utility](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+>Este tutorial foca em como estabelecer manualmente relações entre esquemas B2B na interface do usuário do Experience Platform. Se você estiver trazendo dados de uma conexão de origem B2B, poderá usar um utilitário de geração automática para criar os esquemas, identidades e relacionamentos necessários. Consulte a documentação de origens em namespaces e esquemas B2B para obter mais informações sobre [uso do utilitário de geração automática](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
 ## Introdução
 
-This tutorial requires a working understanding of [!DNL XDM System] and the Schema Editor in the [!DNL Experience Platform] UI. Antes de iniciar este tutorial, reveja a seguinte documentação:
+Este tutorial requer entendimento prático do [!DNL XDM System] e do Editor de Esquemas na interface do usuário do [!DNL Experience Platform]. Antes de iniciar este tutorial, reveja a seguinte documentação:
 
-* [XDM System in Experience Platform](../home.md): An overview of XDM and its implementation in [!DNL Experience Platform].
-* [Basics of schema composition](../schema/composition.md): An introduction of the building blocks of XDM schemas.
-* [Create a schema using the [!DNL Schema Editor]](create-schema-ui.md): A tutorial covering the basics of how to build and edit schemas in the UI.
+* [Sistema XDM no Experience Platform](../home.md): uma visão geral do XDM e sua implementação em [!DNL Experience Platform].
+* [Noções básicas sobre a composição de esquema](../schema/composition.md): uma introdução aos blocos de construção de esquemas XDM.
+* [Criar um esquema usando o [!DNL Schema Editor]](create-schema-ui.md): um tutorial que aborda as noções básicas sobre como criar e editar esquemas na interface.
 
 ## Definir um esquema de origem e de referência
 
@@ -55,7 +56,7 @@ As relações de esquema são representadas por um campo dedicado dentro de um *
 
 Para estabelecer uma relação, o schema de referência deve ter uma identidade primária definida. Ao definir uma identidade principal para uma entidade B2B, lembre-se de que as IDs de entidade baseadas em sequência podem se sobrepor se você as estiver coletando em diferentes sistemas ou locais, o que pode levar a conflitos de dados no Experience Platform.
 
-Para levar em conta isso, todas as classes B2B padrão contêm campos &quot;key&quot; que estão em conformidade com o tipo de dados [[!UICONTROL B2B Source] &#x200B;](../data-types/b2b-source.md). Esse tipo de dados fornece campos para um identificador de sequência para a entidade B2B, juntamente com outras informações contextuais sobre a origem do identificador. Um desses campos, `sourceKey`, concatena os valores dos outros campos no tipo de dados para produzir um identificador totalmente exclusivo para a entidade. Este campo deve ser sempre usado como a identidade principal para esquemas de entidade B2B.
+Para levar em conta isso, todas as classes B2B padrão contêm campos &quot;key&quot; que estão em conformidade com o tipo de dados [[!UICONTROL B2B Source] ](../data-types/b2b-source.md). Esse tipo de dados fornece campos para um identificador de sequência para a entidade B2B, juntamente com outras informações contextuais sobre a origem do identificador. Um desses campos, `sourceKey`, concatena os valores dos outros campos no tipo de dados para produzir um identificador totalmente exclusivo para a entidade. Este campo deve ser sempre usado como a identidade principal para esquemas de entidade B2B.
 
 ![campo sourceKey](../images/tutorials/relationship-b2b/sourcekey.png)
 
@@ -105,7 +106,7 @@ A caixa de diálogo [!UICONTROL Add relationship] é exibida. Use esta caixa de 
 
 ![A caixa de diálogo Adicionar relação com relação de esquema Muitos para um foi realçada.](../images/tutorials/relationship-b2b/relationship-dialog.png)
 
-Em **[!UICONTROL Reference Schema]**, use a barra de pesquisa ou o menu suspenso para localizar o nome do esquema de referência. When you highlight the reference schema&#39;s name, the **[!UICONTROL Reference Identity Namespace]** field automatically updates to the namespace of the reference schema&#39;s primary identity.
+Em **[!UICONTROL Reference Schema]**, use a barra de pesquisa ou o menu suspenso para localizar o nome do esquema de referência. Quando você realça o nome do esquema de referência, o campo **[!UICONTROL Reference Identity Namespace]** é atualizado automaticamente para o namespace da identidade principal do esquema de referência.
 
 >[!NOTE]
 >
@@ -119,26 +120,26 @@ Em **[!UICONTROL Relationship Name From Current Schema]** e **[!UICONTROL Relati
 >
 >Os nomes dos relacionamentos devem ter 35 caracteres ou menos.
 
-![The Add relationship dialog with the Relationship Name fields highlighted.](../images/tutorials/relationship-b2b/relationship-name.png)
+![A caixa de diálogo Adicionar relacionamento com os campos Nome da Relação foi realçada.](../images/tutorials/relationship-b2b/relationship-name.png)
 
-The canvas reappears, with the relationship field now marked with the friendly name you provided earlier. The relationship name is also listed on the left rail for easy reference.
+A tela será exibida novamente, com o campo de relacionamento agora marcado com o nome amigável fornecido anteriormente. O nome do relacionamento também está listado no painel esquerdo para facilitar a referência.
 
-![The Schema Editor with the new relationship name applied.](../images/tutorials/relationship-b2b/relationship-applied.png)
+![O Editor de Esquemas com o novo nome de relação aplicado.](../images/tutorials/relationship-b2b/relationship-applied.png)
 
-If you view the structure of the reference schema, the relationship marker appears next to the schema&#39;s primary identity field and in the left rail.
+Se você visualizar a estrutura do esquema de referência, o marcador de relacionamento aparecerá ao lado do campo de identidade principal do esquema e no painel esquerdo.
 
-![The destination schema in the Schema Editor with the new relationship marker highlighted.](../images/tutorials/relationship-b2b/destination-relationship.png)
+![O esquema de destino no Editor de Esquemas com o novo marcador de relação realçado.](../images/tutorials/relationship-b2b/destination-relationship.png)
 
-## Edit a B2B schema relationship {#edit-schema-relationship}
+## Editar uma relação de esquema B2B {#edit-schema-relationship}
 
-Once a schema relationship is established, select the relationship field in the source schema followed by **[!UICONTROL Edit relationship]**.
+Depois que uma relação de esquema for estabelecida, selecione o campo de relação no esquema de origem seguido por **[!UICONTROL Edit relationship]**.
 
 >[!NOTE]
 >
->To view all associated relationships, select the primary identity field in the reference schema followed by [!UICONTROL View relationships].
->![The Schema Editor with a relationship field selected and View relationship highlighted.](../images/tutorials/relationship-b2b/view-relationships.png "The Schema Editor with a relationship field selected and View relationship highlighted."){width="100" zoomable="yes"}
+>Para exibir todas as relações associadas, selecione o campo de identidade principal no esquema de referência seguido por [!UICONTROL View relationships].
+>![O Editor de esquemas com um campo de relacionamento selecionado e Exibir relacionamento realçado.](../images/tutorials/relationship-b2b/view-relationships.png "O Editor de Esquemas com um campo de relação selecionado e Exibir relação realçada."){width="100" zoomable="yes"}
 
-![The Schema Editor with a relationship field and Edit relationship highlighted.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
+![O Editor de Esquemas com um campo de relação e Editar relação está realçado.](../images/tutorials/relationship-b2b/edit-b2b-relationship.png)
 
 A caixa de diálogo [!UICONTROL Edit relationship] é exibida. Nessa caixa de diálogo, é possível alterar o esquema de referência e os nomes dos relacionamentos ou excluir os relacionamentos. O tipo de relação muitos para um não pode ser alterado.
 

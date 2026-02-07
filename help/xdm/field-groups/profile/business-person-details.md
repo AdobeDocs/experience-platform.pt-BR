@@ -1,26 +1,31 @@
 ---
 title: Grupo de campos Esquema de detalhes de pessoa de negócios XDM
 description: Saiba mais sobre o grupo de campos de esquema Detalhes da pessoa de negócios XDM.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 5%
+source-wordcount: '572'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Detalhes de pessoa de negócios XDM] grupo de campos de esquema
+# Grupo de campos de esquema [!UICONTROL XDM Business Person Details]
 
-[!UICONTROL Detalhes de Pessoa Comercial XDM] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura informações sobre uma pessoa individual no contexto de uma empresa B2B (empresa a empresa).
+>[!AVAILABILITY]
+>
+>Este grupo de campos está disponível somente para organizações com acesso ao Real-Time CDP B2B edition.
+
+[!UICONTROL XDM Business Person Details] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura informações sobre uma pessoa individual no contexto de uma empresa B2B (empresa a empresa).
 
 ![](../../images/field-groups/business-person-details.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `b2b` | Objeto | Um objeto que captura os detalhes específicos do B2B sobre a pessoa. |
-| `b2b.accountKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Um identificador composto para a conta comercial relacionada à pessoa. |
-| `b2b.convertedContactKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Um identificador composto para o contato associado se o lead foi convertido. |
-| `b2b.personKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Um identificador composto para a pessoa ou fragmento de perfil. |
+| `b2b.accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Um identificador composto para a conta comercial relacionada à pessoa. |
+| `b2b.convertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Um identificador composto para o contato associado se o lead foi convertido. |
+| `b2b.personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Um identificador composto para a pessoa ou fragmento de perfil. |
 | `b2b.accountID` | String | Um identificador exclusivo para a conta comercial à qual essa pessoa está associada. |
 | `b2b.blockedCause` | String | Se a pessoa estiver bloqueada, essa propriedade fornecerá o motivo. |
 | `b2b.convertedContactID` | String | A ID do contato se o lead foi convertido com sucesso. |

@@ -1,17 +1,22 @@
 ---
 title: Grupo de campos Esquema de componentes de pessoa de negócios XDM
 description: Saiba mais sobre o grupo de campos de esquema Componentes de pessoas de negócios XDM.
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-# [!UICONTROL Componentes de pessoa de negócios XDM] grupo de campos de esquema
+# Grupo de campos de esquema [!UICONTROL XDM Business Person Components]
 
-[!UICONTROL Componentes de Pessoa de Negócios XDM] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura vários registros de origem para uma pessoa e outros atributos que são necessários para a segmentação de pessoas.
+>[!AVAILABILITY]
+>
+>Este grupo de campos está disponível somente para organizações com acesso ao Real-Time CDP B2B edition.
+
+[!UICONTROL XDM Business Person Components] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura vários registros de origem para uma pessoa e outros atributos necessários para a segmentação de pessoas.
 
 Quando um perfil é criado para uma pessoa por meio do [Perfil de cliente em tempo real](../../../profile/home.md) na B2B edition do Real-Time CDP, as informações usadas para criar esse perfil podem vir de muitos registros de origem. Por exemplo, se uma pessoa trabalha para duas empresas diferentes, muitos sistemas de CRM criariam uma cópia intencionalmente duplicada dessa pessoa para que uma cópia seja vinculada à Empresa A, enquanto a outra é vinculada à Empresa B. Ao trazer esses dados para a Adobe Experience Platform, esse grupo de campos é usado para mesclar esses diferentes registros de origem em uma única representação.
 
@@ -30,11 +35,11 @@ O grupo de campos fornece um campo `personComponents` de nível raiz, que é uma
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `sourceAccountKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Um identificador composto para a conta associada à pessoa. |
-| `sourceConvertedContactKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Um identificador composto para o contato relacionado se este cliente em potencial tiver sido convertido. |
-| `sourceExternalKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Um identificador composto do sistema de origem de onde os dados da pessoa se originaram. |
-| `sourcePersonKey` | [[!UICONTROL Source B2B]](../../data-types/b2b-source.md) | Um identificador composto para a pessoa. |
-| `workEmail` | [[!UICONTROL Endereço de email]](../../data-types/b2b-source.md) | A ID do email comercial da pessoa. |
+| `sourceAccountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Um identificador composto para a conta associada à pessoa. |
+| `sourceConvertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Um identificador composto para o contato relacionado se este cliente em potencial tiver sido convertido. |
+| `sourceExternalKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Um identificador composto do sistema de origem de onde os dados da pessoa se originaram. |
+| `sourcePersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | Um identificador composto para a pessoa. |
+| `workEmail` | [[!UICONTROL Email address]](../../data-types/b2b-source.md) | A ID do email comercial da pessoa. |
 | `personGroupID` | String | Um identificador de grupo da pessoa. |
 | `personScore` | String | Uma pontuação gerada para a pessoa por um sistema CRM. |
 | `personSource` | String | Um identificador exclusivo baseado em sequência para o sistema de origem de onde os dados da pessoa se originaram. |

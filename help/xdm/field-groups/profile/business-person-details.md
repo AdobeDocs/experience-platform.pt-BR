@@ -1,7 +1,7 @@
 ---
 title: Grupo de campos Esquema de detalhes de pessoa de negócios XDM
 description: Saiba mais sobre o grupo de campos de esquema Detalhes da pessoa de negócios XDM.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions" newtab=true
 exl-id: e9da5c1c-5a30-4cbc-beb2-cc5efe57cab0
 source-git-commit: 3fafccef44823b80938db96a7751edbff5a2fd02
 workflow-type: tm+mt

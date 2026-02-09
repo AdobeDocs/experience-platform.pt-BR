@@ -2,9 +2,9 @@
 title: Endpoint da API de públicos externos
 description: Saiba como usar a API de públicos-alvo externos para criar, atualizar, ativar e excluir seus públicos-alvo externos do Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 0a37ef2f5fc08eb515c7c5056936fd904ea6d360
+source-git-commit: ff58324446f28cbdca369ecbb58d8261614ae684
 workflow-type: tm+mt
-source-wordcount: '2253'
+source-wordcount: '2340'
 ht-degree: 5%
 
 ---
@@ -12,6 +12,16 @@ ht-degree: 5%
 # Endpoint de públicos externos
 
 Públicos externos permitem carregar dados de perfil de suas fontes externas para o Adobe Experience Platform. Você pode usar o ponto de extremidade `/external-audience` na API do Serviço de segmentação para assimilar um público externo na Experience Platform, exibir detalhes e atualizar públicos externos, bem como excluir públicos externos.
+
+## Medidas de proteção
+
+A partir da versão de março, as seguintes medidas de proteção serão aplicadas ao usar o endpoint de públicos externos:
+
+| Grade de Proteção | Limite | Tipo de limite | Descrição |
+| --------- | ----- | ---------- | ----------- |
+| Número de execuções de assimilação de público por dia | 100 | Proteção imposta pelo sistema | O número máximo de execuções de assimilação de público-alvo permitidas por dia. Esse limite está em um nível por **sandbox**. |
+| Número de assimilações por público | 10 | Proteção imposta pelo sistema | O número de assimilações que podem ser executadas em um público-alvo especificado. |
+| Tamanho do público externo | 10 GB | Proteção de desempenho | O tamanho total recomendado do público externo é 10 GB. |
 
 ## Introdução
 

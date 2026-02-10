@@ -65,7 +65,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral](../observability/home.md) do [[!DNL Observability Insights] .
+Para obter mais informações, leia a visão geral[&#128279;](../observability/home.md) do [!DNL Observability Insights] .
 
 ## Coleção de dados {#data-collection}
 

@@ -1,11 +1,11 @@
 ---
 title: Notas de pré-lançamento do Experience Platform
 description: Uma visualização das notas de versão mais recentes do Adobe Experience Platform.
-exl-id: a1b52e9f-1c4d-4a2b-9d3e-5f6a7b8c9d0e
-source-git-commit: 3a45b3aadb08af98d6d379ecfc858474ea1e55db
+exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
+source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 20%
+source-wordcount: '1050'
+ht-degree: 21%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 20%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: fevereiro de 2026**
 
@@ -65,7 +65,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../observability/home.md) do [!DNL Observability Insights] .
+Para obter mais informações, leia a visão geral](../observability/home.md) do [[!DNL Observability Insights] .
 
 ## Coleção de dados {#data-collection}
 
@@ -79,7 +79,7 @@ A Coleta de dados do Adobe Experience Platform fornece um conjunto de tecnologia
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a [documentação sobre Coleção de dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/collection/home).
+Para obter mais informações, leia a [documentação sobre Coleção de dados](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinos {#destinations}
 
@@ -107,7 +107,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | ------- | ----------- |
 | Organização e Pesquisa do Inventário do Esquema | A página Navegar por esquemas agora inclui pesquisa e filtragem aprimoradas, ações em linha e suporte para tags e pastas definidas pelo usuário. Essas atualizações facilitam a localização, organização e gerenciamento de esquemas em sandboxes, reduzindo a navegação manual e o esforço de manutenção. |
 
-Para obter mais informações, leia a [[!DNL Schemas] visão geral] (../xdm/home.md).
+Para obter mais informações, leia a visão geral](../xdm/home.md) do [[!DNL XDM] .
 
 ## Serviço de consultas {#query-service}
 

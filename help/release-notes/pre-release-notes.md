@@ -65,7 +65,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral](../observability/home.md) do [[!DNL Observability Insights] .
+Para obter mais informações, leia a visão geral[&#128279;](../observability/home.md) do [!DNL Observability Insights] .
 
 ## Coleção de dados {#data-collection}
 
@@ -106,7 +106,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | ------- | ----------- |
 | Organização e Pesquisa do Inventário do Esquema | A página Navegar por esquemas agora inclui pesquisa e filtragem aprimoradas, ações em linha e suporte para tags e pastas definidas pelo usuário. Essas atualizações facilitam a localização, organização e gerenciamento de esquemas em sandboxes, reduzindo a navegação manual e o esforço de manutenção. |
 
-Para obter mais informações, leia a visão geral](../xdm/home.md) do [[!DNL XDM] .
+Para obter mais informações, leia a visão geral[&#128279;](../xdm/home.md) do [!DNL XDM] .
 
 ## Serviço de consultas {#query-service}
 

@@ -2,9 +2,9 @@
 title: contexto
 description: Colete automaticamente dados de dispositivo, ambiente ou local.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: c2564f1b9ff036a49c9fa4b9e9ffbdbc598a07a8
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '998'
 ht-degree: 5%
 
 ---
@@ -95,17 +95,28 @@ Se você usar pesquisas de dispositivo ao [configurar sua sequência de dados](/
 
 Consulte [User agent client hints](/help/collection/use-cases/client-hints.md) para obter mais informações.
 
-Defina a matriz de cadeias de caracteres `context` ao executar o comando `configure`. Se você omitir essa propriedade ao configurar o SDK, todas as informações de contexto, exceto `"highEntropyUserAgentHints"`, serão coletadas por padrão. Defina essa propriedade se quiser coletar dicas de cliente de alta entropia ou se quiser omitir outras informações de contexto da coleta de dados. As cadeias de caracteres podem ser incluídas em qualquer ordem.
+### Referenciador único do Analytics {#one-time-analytics-referrer}
 
->[!NOTE]
+A palavra-chave `"oneTimeAnalyticsReferrer"` envia um valor de referenciador para a Adobe Analytics somente na primeira chamada `sendEvent` sem decisão de uma página. O principal caso de uso para esta palavra-chave de contexto é impedir que a dimensão [Referenciador](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) no Adobe Analytics seja inflada por ocorrências usadas principalmente em integrações do Analytics e do Target.
+
+Se determinado comando `sendEvent` usar um tipo de evento de decisão (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), ele será ignorado ao calcular o primeiro `sendEvent` em uma página. Se o valor do referenciador for alterado na página e outro `sendEvent` for acionado, o novo valor do referenciador será incluído na carga. Essa condição permite que o recurso seja usado com aplicativos de página única.
+
+Quando um valor de referenciador duplicado é detectado, a biblioteca define `data.__adobe.analytics.referrer` como uma cadeia de caracteres vazia (`""`).
+Definir esse campo de objeto de dados como uma string vazia efetivamente limpa o valor quando uma ocorrência chega ao Adobe Analytics, já que o objeto de dados substitui qualquer campo equivalente do objeto XDM. Isso não afeta o objeto XDM, permitindo que os dados continuem a ser enviados para um conjunto de dados da Experience Platform se você incluir vários serviços em um fluxo de dados.
+
+## Implementação
+
+Defina a matriz de cadeias de caracteres `context` ao executar o comando `configure`. Se você omitir essa propriedade ao configurar o SDK, todas as informações de contexto, exceto `"highEntropyUserAgentHints"` e `"oneTimeAnalyticsReferrer"`, serão coletadas por padrão. Defina essa propriedade se quiser coletar dicas de cliente de alta entropia ou se quiser omitir outras informações de contexto da coleta de dados. As cadeias de caracteres podem ser incluídas em qualquer ordem.
+
+>[!TIP]
 >
->Para coletar todas as informações de contexto, incluindo dicas de cliente de alta entropia, você deve incluir cada valor na cadeia de caracteres da matriz `context`. O valor padrão `context` omite `highEntropyUserAgentHints` e, se você definir a propriedade `context`, quaisquer valores omitidos não coletarão dados.
+>Para coletar todas as informações de contexto, incluindo dicas de cliente de alta entropia, você deve incluir cada valor na cadeia de caracteres da matriz `context`. O valor padrão `context` omite `"highEntropyUserAgentHints"` e `"oneTimeAnalyticsReferrer"`; se você definir a propriedade `context`, quaisquer valores omitidos não coletarão dados.
 
 ```js
 alloy("configure", {
   datastreamId: "ebebf826-a01f-4458-8cec-ef61de241c93",
   orgId: "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints"]
+  context: ["web", "device", "environment", "placeContext", "highEntropyUserAgentHints", "oneTimeAnalyticsReferrer"]
 });
 ```
 

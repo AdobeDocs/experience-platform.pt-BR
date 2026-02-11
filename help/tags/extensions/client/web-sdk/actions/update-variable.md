@@ -1,7 +1,8 @@
 ---
 title: Atualizar variável
 description: Modifica o conteúdo de um elemento de dados variável.
-source-git-commit: f87e6a0e969aa0924656cdb2ea56aa79d2d7c841
+exl-id: 6c558d1e-85b4-45f9-ba4d-5fed1ec6e308
+source-git-commit: 50881ef9498196f2de5519f050800334019a2586
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 0%

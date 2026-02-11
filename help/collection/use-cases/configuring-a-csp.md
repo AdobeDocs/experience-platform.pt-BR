@@ -5,9 +5,9 @@ description: Saiba como configurar uma CSP para o Experience Platform Web SDK
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: configurando;configuração;SDK;borda;Web SDK;configurar;contexto;web;dispositivo;ambiente;configurações do sdk da web;política de segurança de conteúdo;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 010192e91185c11d5454d4153913c06b90fe2122
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '341'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ No exemplo acima, `EDGE-DOMAIN` deve ser substituído pelo domínio próprio. O 
 default-src 'nonce-SERVER-GENERATED-NONCE'
 ```
 
-Além disso, o nonce CSP precisa ser adicionado como um atributo à marca de script [!DNL Experience Platform Web SDK] [código base](../js/install/library.md). [!DNL Experience Platform Web SDK] usará esse nonce ao adicionar marcas de estilo ou script embutido à página:
+Além disso, o nonce CSP precisa ser adicionado como um atributo ao [código base](../js/install/base-code.md) do Web SDK. O Web SDK usa esse nonce ao adicionar scripts integrados ou tags de estilo à página:
 
 ```html
 <script nonce="SERVER-GENERATED-NONCE">

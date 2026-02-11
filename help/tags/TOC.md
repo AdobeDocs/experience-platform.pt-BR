@@ -6,9 +6,9 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 321cb9b2b9add2460cbde2dfe571ad41a9be163b
+source-git-commit: b1666521d135ac953dbde5b4ff64138a187e4b9e
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '827'
 ht-degree: 43%
 
 ---
@@ -110,13 +110,14 @@ ht-degree: 43%
             * [Visão geral](extensions/client/web-sdk/configure/config-overview.md)
             * [Componentes de build personalizados](extensions/client/web-sdk/configure/custom-build-components.md)
             * [Instância do SDK](extensions/client/web-sdk/configure/general.md)
-            * [Sequência de dados](extensions/client/web-sdk/configure/datastreams.md)
+            * [Datastreams](extensions/client/web-sdk/configure/datastreams.md)
             * [Consentimento](extensions/client/web-sdk/configure/consent.md)
             * [Identidade](extensions/client/web-sdk/configure/identity.md)
             * [Personalização](extensions/client/web-sdk/configure/personalization.md)
             * [Coleção de dados](extensions/client/web-sdk/configure/data-collection.md)
             * [Mídia de transmissão](extensions/client/web-sdk/configure/streaming-media.md)
             * [Notificações por push](extensions/client/web-sdk/configure/push-notifications.md)
+            * [Brand Concierge](extensions/client/web-sdk/configure/brand-concierge.md)
             * [Advertising](extensions/client/web-sdk/configure/advertising.md)
             * [Substituições de configuração](extensions/client/web-sdk/configure/configuration-overrides.md)
             * [Configurações avançadas](extensions/client/web-sdk/configure/advanced-settings.md)

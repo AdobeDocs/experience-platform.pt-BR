@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f932e9868e84cf8abdaa6cf0b2da5bac837234d
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '2584'
+source-wordcount: '2673'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,22 @@ ht-degree: 5%
 
 Este documento aborda as notas de versão do Adobe Experience Platform Web SDK.
 Para obter as notas de versão mais recentes da extensão de tag do Web SDK, consulte as [notas de versão da extensão de tag do Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versão 2.31.0 - 9 de fevereiro de 2026
+
+**Novos recursos**
+
+- Adicionada a disponibilidade de `"oneTimeAnalyticsReferrer"` à matriz de cadeias de caracteres [`context`](commands/configure/context.md).
+- Adição do componente Brand Concierge.
+- Adicionado `meta.queueTimeMillis` à solicitação de rede para registrar o tempo entre a criação do evento e o envio.
+- Capacidade de manter o mapa de identidade para que ele possa ser preenchido com chamadas subsequentes.
+
+**Correções e melhorias**
+
+- Os atributos `aria-label` e `name` agora são considerados na [coleção de links automática](commands/configure/clickcollectionenabled.md).
+- Correção de uma possível condição de corrida com integrações do mapa de identidade.
+- Correção de um problema em que o carimbo de data/hora não era incluído em `streamingMedia`.
+- Correção de um problema em que as ações de código personalizado eram executadas apenas uma vez.
 
 ## Versão 2.30.0 - 24 de setembro de 2025
 

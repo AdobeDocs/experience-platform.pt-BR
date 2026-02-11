@@ -1,9 +1,10 @@
 ---
 title: Componentes de build personalizados
 description: Crie uma build personalizada do Web SDK que desative os recursos para diminuir o tamanho da build.
-source-git-commit: d6aea91d6989775ff5b6038b216ed2518f4a7d98
+exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
+source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '262'
 ht-degree: 0%
 
 ---
@@ -31,6 +32,7 @@ O Adobe oferece a capacidade de desativar os seguintes componentes de build do W
 | **[!UICONTROL Activity collector]** | Permite a coleta automática de links e o rastreamento Activity Map. | |
 | **[!UICONTROL Advertising]** | Permite a integração do Adobe Advertising com o Customer Journey Analytics. | |
 | **[!UICONTROL Audiences]** | Oferece suporte à integração com o Adobe Audience Manager, como sincronizações de ID. | |
+| **[!UICONTROL Brand concierge]** | Permite a integração com o Brand concierge. |
 | **[!UICONTROL Consent]** | Permite usar os recursos de consentimento. | [[!UICONTROL Set consent]](../actions/set-consent.md) ação |
 | **[!UICONTROL Event merge]** | Obsoleto. | [[!UICONTROL Event merge ID]](../data-element-types.md) elemento de dados (desaprovado) <br>[[!UICONTROL Reset event merge ID]](../actions/reset-event-merge-id.md) ação (desaprovado) |
 | **[!UICONTROL Media Analytics bridge]** | Oferece suporte à integração com o Media Analytics herdado. | [[!UICONTROL Get media analytics tracker]](../actions/get-media-analytics-tracker.md) ação |

@@ -1,9 +1,10 @@
 ---
 title: Definições de configuração da coleta de dados
 description: Defina as configurações da coleção de dados na extensão de tag do Web SDK.
-source-git-commit: 46c8748e9ab972705b8283c174c285e571acb2ed
+exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
@@ -119,3 +120,4 @@ Colete automaticamente as informações do visitante, que preenchem campos XDM e
 * **[!UICONTROL Environment]**: coleta informações sobre o navegador do usuário.
 * **[!UICONTROL Place context]**: Coleta informações sobre a localização do usuário.
 * **[!UICONTROL High entropy user-agent hints]**: coleta informações mais detalhadas sobre o dispositivo do usuário.
+* **[!UICONTROL Send referrer to Adobe Analytics only once per page view]**: Impedir que dados duplicados do referenciador sejam enviados ao Adobe Analytics.

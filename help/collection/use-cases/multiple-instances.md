@@ -3,38 +3,44 @@ title: Usar várias instâncias do Web SDK
 description: Saiba como interagir com várias propriedades do Experience Platform Web SDK.
 keywords: várias propriedades
 exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
-source-git-commit: 2c60ebdebd706ed7b5beb2438ae83665b6b6e47a
+source-git-commit: 192739967e6b050bb04893ee7bab5119dd7f870c
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
 # Usar várias instâncias do Web SDK
 
-Há casos em que você pode querer interagir com duas propriedades diferentes na mesma página. Esses casos incluem:
+Há casos em que você pode querer interagir com duas propriedades diferentes na mesma página. Os cenários possíveis incluem:
 
 * Empresas que foram adquiridas e estão trabalhando na integração de seus sites
 * Relacionamentos de compartilhamento de dados entre várias empresas
 * Clientes que estão testando novas soluções da Adobe e não desejam interromper sua implementação existente
 
-O SDK permite criar uma ocorrência separada para cada propriedade adicionando outro nome à matriz no código base. O exemplo a seguir fornece dois nomes, `titanium` e `copper`.
+O SDK permite criar uma instância separada para cada propriedade adicionando outro nome à matriz no [código base](../js/install/base-code.md). O exemplo a seguir fornece dois nomes, `titanium` e `copper`.
 
 ```html
+<!-- Base code -->
 <script>
   !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
   []).push(o),n[o]=function(){var u=arguments;return new Promise(
-  function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
+  function(i,l){n.setTimeout(function(){n[o].q.push([i,l,u])})})},n[o].q=[])})}
   (window,["titanium", "copper"]);
 </script>
-<script src="alloy.js" async></script>
+
+<!-- Load the Web SDK (JavaScript library loader or Tags embed code) -->
+<!-- <script src=".../alloy.min.js" async></script> -->
+<!-- <script src=".../launch-<ENV>.min.js" async></script> -->
 ```
 
-Como resultado, o script cria duas instâncias da SDK. A função global para interagir com a primeira instância é nomeada `titanium` e a função global para interagir com a segunda instância é nomeada `copper`.
+Como resultado, o script cria duas funções globais (`titanium` e `copper` no exemplo acima) que se tornam duas instâncias do SDK quando a biblioteca é inicializada. Cada instância mantém sua própria configuração e estado; qualquer comando que use `titanium` é mantido isolado de `copper`.
 
-Ao criar duas instâncias separadas, cada uma pode ser configurada para uma propriedade diferente. Qualquer comunicação ou persistência de dados que ocorra devido à interação com `titanium` é mantida isolada de `copper`.
+>[!TIP]
+>
+>Se estiver usando o código base com marcas, verifique se todos os nomes de instância definidos correspondem a todos os [nomes de instância do SDK](/help/tags/extensions/client/web-sdk/configure/general.md) ao configurar a extensão de marca.
 
-Seguindo o exemplo acima, você pode executar comandos usando cada instância:
+Seguindo o exemplo do padrão de nomenclatura de `titanium` e `copper` como instâncias do Web SDK, você pode executar comandos independentemente:
 
 ```javascript
 titanium("configure", {
@@ -60,7 +66,7 @@ copper("sendEvent", {
 });
 ```
 
-Certifique-se de executar o comando `configure` para cada instância antes de executar outros comandos na mesma instância.
+Certifique-se de executar o comando [`configure`](../js/commands/configure/overview.md) para cada instância antes de executar outros comandos na mesma instância.
 
 >[!IMPORTANT]
 >

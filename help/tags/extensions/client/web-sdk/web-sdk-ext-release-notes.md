@@ -2,10 +2,10 @@
 title: Notas de versão da extensão para Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 0b3f4ec51cac182b637c79b9fcb883e5f8f78d02
+source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
 workflow-type: tm+mt
-source-wordcount: '2949'
-ht-degree: 26%
+source-wordcount: '3118'
+ht-degree: 25%
 
 ---
 
@@ -13,6 +13,29 @@ ht-degree: 26%
 # Notas de versão da extensão do Web SDK
 
 Este documento aborda as notas de versão da extensão de tag do Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes do próprio SDK, consulte as [notas de versão do Experience Platform Web SDK](/help/collection/js/release-notes.md).
+
+## Versão 2.34.0 - 9 de fevereiro de 2026
+
+**Novos recursos**
+
+- Contém a [versão 2.31.0](/help/collection/js/release-notes.md#2-31-0) do Adobe Experience Platform Web SDK.
+- Adicionado [Suporte ao código base](/help/collection/js/install/base-code.md) para a extensão de tag.
+- Adicionado o **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [contexto](configure/data-collection.md#context-settings) às configurações de extensão.
+- Adição do componente Brand Concierge.
+- Adição de uma opção para permitir o uso de uma instância de liga auto-hospedada com Tags.
+
+**Correções e melhorias**
+
+- Atualização do [domínio de borda padrão](configure/general.md#edge-domain) para incluir a ID da empresa como um subdomínio.
+- Adicionada a opção **[!UICONTROL No overrides]** a [substituições da configuração da sequência de dados](configure/configuration-overrides.md).
+- Adição do botão Atualizar para preencher novamente os itens em alguns campos de entrada.
+- Nomes de instância exclusivos agora são gerados automaticamente sempre que uma instância é criada.
+- Correção de um erro em que `combinedValidator` gerava um erro quando o valor era `undefined` ou `null`.
+- Correção de um erro que ocorria quando uma instância era excluída.
+- Correção de um problema em que um erro ao buscar esquemas fazia com que o elemento de dados do objeto XDM não fosse utilizável.
+- Correção das configurações de gravação na ação [Enviar evento de mídia](actions/send-media-event.md).
+- Correção de um problema em que os campos de mídia de transmissão na visualização de configuração não eram restaurados corretamente.
+- Correção de alertas de preenchimento automático incorretos no editor de objetos XDM para valores aninhados.
 
 ## Versão 2.33.0 - 24 de setembro de 2025
 

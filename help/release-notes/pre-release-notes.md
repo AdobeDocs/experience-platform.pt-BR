@@ -2,9 +2,9 @@
 title: Notas de pré-lançamento do Experience Platform
 description: Uma visualização das notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 695b8486211c2fee03bc29243d65d5bbf6d561db
+source-git-commit: b8c257ad9ab4e7ee085687f6c03cf55d7fb83ef0
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1022'
 ht-degree: 21%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 21%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: fevereiro de 2026**
 
@@ -65,7 +65,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../observability/home.md) do [!DNL Observability Insights] .
+Para obter mais informações, leia a visão geral](../observability/home.md) do [[!DNL Observability Insights] .
 
 ## Coleção de dados {#data-collection}
 
@@ -79,7 +79,7 @@ A Coleta de dados do Adobe Experience Platform fornece um conjunto de tecnologia
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a [documentação sobre Coleção de dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/collection/home).
+Para obter mais informações, leia a [documentação sobre Coleção de dados](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
 
 ## Destinos {#destinations}
 
@@ -89,7 +89,6 @@ Para obter mais informações, leia a [documentação sobre Coleção de dados](
 
 | Destino | Descrição |
 | --- | --- |
-| Destino da conta [!DNL ZoomInfo] | Os usuários da CDP B2B agora podem ativar dados no nível da conta para [!DNL ZoomInfo] por meio do novo conector de destino da conta [!DNL ZoomInfo]. Configure o conector para começar a enviar os públicos da sua conta para o [!DNL ZoomInfo]. |
 | [!DNL Snowflake] Lote geralmente disponível | O destino do lote [!DNL Snowflake] foi movido para disponibilidade geral. Agora você pode visualizar a coluna ID da política de mesclagem nos dados exportados junto com as colunas existentes, como carimbo de data e hora, atributos de mapeamento e associação de público-alvo. |
 | Suporte à criptografia AES256 para destinos do [Amazon S3](../destinations/catalog/cloud-storage/amazon-s3.md#destination-details) | Agora você pode configurar a criptografia AES256 para suas exportações do Amazon S3. Escolha entre duas opções: <ul><li>**[!UICONTROL Default]**: o Experience Platform criptografa dados em repouso com o algoritmo de criptografia padrão definido no seu bucket.</li><li>**[!UICONTROL SSE-S3/AES256]**: o Experience Platform adiciona o cabeçalho `s3:x-amz-server-side-encryption": "AES256` à exportação e criptografa dados em repouso com o algoritmo AES256 quando chega ao S3. **Esta opção tem prioridade sobre qualquer algoritmo de criptografia padrão que você configurar no seu bucket do S3**.</li></ul> |
 
@@ -107,7 +106,7 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 | ------- | ----------- |
 | Organização e Pesquisa do Inventário do Esquema | A página Navegar por esquemas agora inclui pesquisa e filtragem aprimoradas, ações em linha e suporte para tags e pastas definidas pelo usuário. Essas atualizações facilitam a localização, organização e gerenciamento de esquemas em sandboxes, reduzindo a navegação manual e o esforço de manutenção. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../xdm/home.md) do [!DNL XDM] .
+Para obter mais informações, leia a visão geral](../xdm/home.md) do [[!DNL XDM] .
 
 ## Serviço de consultas {#query-service}
 

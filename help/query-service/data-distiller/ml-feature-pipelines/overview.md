@@ -2,9 +2,9 @@
 title: Pipelines de recursos de IA/AM
 description: Saiba como usar o Data Distiller para enriquecer seus pipelines de aprendizado de máquina com recursos derivados de dados do Adobe Experience Platform. Transforme dados brutos em recursos e forneça os dados de recursos para treinar ou pontuar um modelo que ofereça suporte aos seus casos de uso de marketing.
 exl-id: 3b452181-e254-4155-8bf5-0990533f202d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eceafa1852fc7c17660263d6ef7878a3e7bd0841
 workflow-type: tm+mt
-source-wordcount: '473'
+source-wordcount: '465'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ O Data Distiller permite que os cientistas e engenheiros de dados enriqueçam se
 
 >[!IMPORTANT]
 >
->Esse fluxo de trabalho requer o Data Distiller e uma licença do Adobe Experience Platform Intelligence. Se você não tiver nenhum desses produtos, fale com o representante de serviços da Adobe.
+>Este fluxo de trabalho requer uma licença do Data Distiller. Se você não tiver esse produto, fale com o representante de serviços da Adobe.
 
 ![Um infográfico detalhando o pipeline de recursos do AI-ML.](../../images/data-distiller/ai-ml-feature-pipeline.png)
 

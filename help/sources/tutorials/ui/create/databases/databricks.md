@@ -4,9 +4,9 @@ description: Saiba como conectar Databricks ao Experience Platform usando a inte
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '461'
 ht-degree: 4%
 
 ---
@@ -39,38 +39,39 @@ Forneça valores para as credenciais a seguir para conectar [!DNL Databricks] ao
 | Token de acesso | O token de acesso que autentica a conta do [!DNL Databricks]. Você pode gerar seu token de acesso usando o espaço de trabalho [!DNL Databricks]. |
 | Banco de dados | O nome do banco de dados no lago delta. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../../../connectors/databases/databricks.md) do [!DNL Databricks] .
+Para obter mais informações, leia a visão geral](../../../../connectors/databases/databricks.md) do [[!DNL Databricks] .
 
 ## Navegar pelo catálogo de origens
 
-Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Fontes]*. Escolha uma categoria ou use a barra de pesquisa para localizar sua fonte.
+Na interface do Experience Platform, selecione **[!UICONTROL Sources]** na navegação à esquerda para acessar o espaço de trabalho *[!UICONTROL Sources]*. Escolha uma categoria ou use a barra de pesquisa para localizar sua fonte.
 
-Para se conectar a [!DNL Databricks], vá para a categoria *[!UICONTROL Bancos de dados]*, selecione o cartão de origem **[!UICONTROL Blocos de dados do Azure]** e selecione **[!UICONTROL Configurar]**.
+Para se conectar a [!DNL Databricks], vá para a categoria *[!UICONTROL Databases]*, selecione o cartão de origem **[!UICONTROL Azure Databricks]** e selecione **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
->As origens no catálogo de origens exibem a opção **[!UICONTROL Configurar]** quando uma determinada origem ainda não tem uma conta autenticada. Após a criação de uma conta autenticada, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
+>As origens no catálogo de origens exibem a opção **[!UICONTROL Set up]** quando uma determinada origem ainda não tem uma conta autenticada. Depois que uma conta autenticada é criada, esta opção muda para **[!UICONTROL Add data]**.
 
-![O catálogo de origens com o cartão de origem do Azure Databricks selecionado.](../../../../images/tutorials/create/databricks/catalog.png)
+![O catálogo de origens com o cartão de origem Azure Databricks selecionado.](../../../../images/tutorials/create/databricks/catalog.png)
 
 ### Usar uma conta existente
 
-Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e depois selecione a conta [!DNL Azure Databricks] que deseja usar.
+Para usar uma conta existente, selecione **[!UICONTROL Existing account]** e depois selecione a conta [!DNL Azure Databricks] que deseja usar.
 
 ![A interface de contas existentes no fluxo de trabalho de origem com a opção &quot;Conta existente&quot; selecionada.](../../../../images/tutorials/create/databricks/existing.png)
 
 ### Criar uma nova conta
 
-Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e, opcionalmente, adicione uma descrição para sua conta. Em seguida, forneça valores para as seguintes credenciais de autenticação:
+Para criar uma nova conta, selecione **[!UICONTROL New account]**, forneça um nome e, opcionalmente, adicione uma descrição para sua conta. Em seguida, forneça valores para as seguintes credenciais de autenticação:
 
 * Domínio
 * ID do cluster
 * Token de acesso
 * Banco de dados
+* Catálogo
 
 ![A nova interface de conta no fluxo de trabalho de origem com um nome de conta e uma descrição opcional fornecidos.](../../../../images/tutorials/create/databricks/new.png)
 
-Além disso, copie e cole suas credenciais do [!UICONTROL URI SAS de Preparo] no ambiente [!DNL Azure Databricks]. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde alguns momentos para estabelecer a conexão.
+Além disso, você deve copiar e colar suas credenciais do [!UICONTROL Staging SAS URI] no ambiente do [!DNL Azure Databricks]. Quando terminar, selecione **[!UICONTROL Connect to source]** e aguarde alguns momentos para a conexão ser estabelecida.
 
 ![As credenciais de preparo do URI SAS.](../../../../images/tutorials/create/databricks/sas-uri.png)
 

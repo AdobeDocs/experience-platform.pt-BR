@@ -4,9 +4,9 @@ description: Saiba como conectar Databricks ao Experience Platform usando APIs.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
 workflow-type: tm+mt
-source-wordcount: '532'
+source-wordcount: '553'
 ht-degree: 3%
 
 ---
@@ -46,9 +46,10 @@ Forneça valores para as credenciais a seguir para conectar [!DNL Databricks] ao
 | `clusterId` | A ID do cluster em [!DNL Databricks]. Este cluster já deve ser um cluster existente e deve ser um cluster interativo. |
 | `accessToken` | O token de acesso que autentica a conta do [!DNL Databricks]. Você pode gerar seu token de acesso usando o espaço de trabalho [!DNL Databricks]. |
 | `database` | O nome do banco de dados no lago delta. |
+| `catalog` | O nome do catálogo no lago delta. Não é necessário especificar um valor para um catálogo padrão. |
 | `connectionSpec.Id` | A ID de especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID de especificação da conexão para [!DNL Databricks] é `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../../../connectors/databases/databricks.md) do [!DNL Databricks] .
+Para obter mais informações, leia a visão geral](../../../../connectors/databases/databricks.md) do [[!DNL Databricks] .
 
 ## Criar uma conexão básica
 
@@ -124,5 +125,5 @@ Uma resposta bem-sucedida retorna a conexão recém-criada, incluindo a ID de co
 
 Ao seguir este tutorial, você criou com êxito uma conexão entre sua conta do [!DNL Databricks] e a Experience Platform. Você pode usar sua ID de conexão base recém-gerada nos seguintes tutoriais:
 
-* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
-* [Crie um fluxo de dados para trazer dados do banco de dados para a Experience Platform usando a API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] ](../../explore/tabular.md)
+* [Crie um fluxo de dados para trazer dados do banco de dados para a Experience Platform usando a API  [!DNL Flow Service] ](../../collect/database-nosql.md)

@@ -22,8 +22,8 @@ ht-degree: 20%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: fevereiro de 2026**
 
@@ -79,7 +79,7 @@ A Coleta de dados do Adobe Experience Platform fornece um conjunto de tecnologia
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a [documentação sobre Coleção de dados](https://experienceleague.adobe.com/en/docs/experience-platform/collection/home).
+Para obter mais informações, leia a [documentação sobre Coleção de dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/collection/home).
 
 ## Destinos {#destinations}
 

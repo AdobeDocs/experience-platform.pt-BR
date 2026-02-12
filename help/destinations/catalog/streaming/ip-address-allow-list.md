@@ -1,18 +1,18 @@
 ---
-keywords: Endereço IP, intervalo de IP, destinos de lista de permissões, incluir na lista de permissões, incluir na lista de permissões destinos de transmissão
-title: INCLUI NA LISTA DE PERMISSÕES de endereço IP para destinos de transmissão
+keywords: Endereço IP, intervalo IP, destinos de lista de permissões, incluo na lista de permissões, incluir na lista de permissões destinos de streaming
+title: INCLUO NA LISTA DE PERMISSÕES de endereços IP para destinos de streaming
 type: Documentation
-description: Esta página fornece intervalos IP que você pode adicionar à lista de permissões para exportar com segurança dados do Experience Platform para o terminal da API REST HTTP, Amazon Kinesis ou instância do Azure Event Hubs.
+description: Esta página fornece intervalos IP que você pode adicionar à lista de permissões para exportar com segurança dados do Experience Platform para o terminal da API REST HTTP ou a instância Amazon Kinesis.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
+source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
 
-# INCLUI NA LISTA DE PERMISSÕES de endereço IP para destinos com base em API de transmissão {#ip-address-allowlist}
+# INCLUO NA LISTA DE PERMISSÕES de endereços IP para destinos baseados em API de streaming {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
@@ -22,22 +22,27 @@ ht-degree: 0%
 
 Os intervalos IP documentados nesta página se aplicam aos seguintes destinos:
 
-* [Destinos avançados da empresa](../../destination-types.md#advanced-enterprise-destinations): [Destino da API HTTP](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [Destinos avançados da empresa](../../destination-types.md#advanced-enterprise-destinations): [Destino da API HTTP](./http-destination.md) e [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
 * [Destinos de exportação de públicos para streaming](../../destination-types.md#streaming-destinations), como [Público-alvo em tempo real do Pega CDH](/help/destinations/catalog/personalization/pega-v2.md), integrações baseadas em API com o [Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) e o [Oracle Eloqua](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
 * Destinos públicos ou privados compilados através de [Destination SDK](../../destination-sdk/getting-started.md)
 
+>[!IMPORTANT]
+>
+>Os intervalos IP documentados nesta página *não* têm suporte para [!DNL Azure Event Hubs] destinos e destinos baseados em API de streaming hospedados no Microsoft Azure.
+
+
 O tráfego de saída do Experience Platform para esses destinos sempre passa pelos IPs listados nesta página.
 
-Esta página fornece intervalos IP que podem ser adicionados à inclui na lista de permissões para exportar dados com segurança do Experience Platform para os destinos listados acima. Incluir na lista de permissões Essa funcionalidade é especialmente útil se o seu ponto de extremidade HTTP estiver localizado atrás de um firewall corporativo ou se os padrões de segurança e conformidade da sua empresa exigirem uma lista de intervalos IP a serem.
+Esta página fornece intervalos IP que podem ser adicionados ao incluo na lista de permissões para exportar dados com segurança do Experience Platform para os destinos listados acima. Incluir na lista de permissões Essa funcionalidade é especialmente útil se o seu ponto de extremidade HTTP estiver localizado atrás de um firewall corporativo ou se os padrões de segurança e conformidade da sua empresa exigirem uma lista de intervalos IP a serem.
 
 Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP apropriado, você pode permitir o tráfego para o serviço de transferência de dados.
 
-## Incluir na lista de permissões Quando modificar os IPs nesta página {#when-to-allowlist}
+## Quando incluir na lista de permissões os IPs nesta página {#when-to-allowlist}
 
-Se sua política organizacional exigir que você inclua na lista de permissões IPs para tráfego de entrada, será necessário adicionar os intervalos de IP das seguintes categorias à inclui na lista de permissões antes de trabalhar com os destinos mencionados acima nesta página:
+Se sua política organizacional exigir que você inclua na lista de permissões IPs para o tráfego de entrada, será necessário adicionar os intervalos IP das seguintes categorias ao seu incluo na lista de permissões antes de trabalhar com os destinos mencionados acima nesta página:
 
 1. Todos os [endereços IP globais](#global)
-2. Além dos endereços IP globais, adicione os endereços IP correspondentes à região em que você está provisionado, a partir da lista mais abaixo da página. Se você não adicionar um intervalo IP específico da região ao seu incluo na lista de permissões, poderá causar erros ou problemas de desempenho ao usar esses destinos de transmissão.
+2. Além dos endereços IP globais, adicione os endereços IP correspondentes à região em que você está provisionado, a partir da lista mais abaixo da página. Falha ao adicionar o intervalo IP específico da região ao incluo na lista de permissões pode levar a erros ou ao não desempenho ao usar esses destinos de streaming.
 
 ## Endereços IP globais {#global}
 
@@ -48,7 +53,7 @@ Se sua política organizacional exigir que você inclua na lista de permissões 
 * `66.117.18.134`
 * `66.117.18.135`
 
-Além dos endereços IP globais, você deve incluir na lista de permissões os endereços IP da região em que sua organização é provisionada na lista abaixo.
+Além desses endereços IP globais, você deve incluir na lista de permissões os endereços IP da região onde sua organização é provisionada da lista abaixo.
 
 ## VA7: clientes dos EUA e das Américas {#us-americas}
 

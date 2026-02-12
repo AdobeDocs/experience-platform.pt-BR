@@ -39,7 +39,7 @@ Forneça valores para as credenciais a seguir para conectar [!DNL Databricks] ao
 | Token de acesso | O token de acesso que autentica a conta do [!DNL Databricks]. Você pode gerar seu token de acesso usando o espaço de trabalho [!DNL Databricks]. |
 | Banco de dados | O nome do banco de dados no lago delta. |
 
-Para obter mais informações, leia a visão geral](../../../../connectors/databases/databricks.md) do [[!DNL Databricks] .
+Para obter mais informações, leia a visão geral[&#128279;](../../../../connectors/databases/databricks.md) do [!DNL Databricks] .
 
 ## Navegar pelo catálogo de origens
 

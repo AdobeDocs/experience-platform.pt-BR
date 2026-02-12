@@ -49,7 +49,7 @@ Forneça valores para as credenciais a seguir para conectar [!DNL Databricks] ao
 | `catalog` | O nome do catálogo no lago delta. Não é necessário especificar um valor para um catálogo padrão. |
 | `connectionSpec.Id` | A ID de especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID de especificação da conexão para [!DNL Databricks] é `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
 
-Para obter mais informações, leia a visão geral](../../../../connectors/databases/databricks.md) do [[!DNL Databricks] .
+Para obter mais informações, leia a visão geral[&#128279;](../../../../connectors/databases/databricks.md) do [!DNL Databricks] .
 
 ## Criar uma conexão básica
 
@@ -125,5 +125,5 @@ Uma resposta bem-sucedida retorna a conexão recém-criada, incluindo a ID de co
 
 Ao seguir este tutorial, você criou com êxito uma conexão entre sua conta do [!DNL Databricks] e a Experience Platform. Você pode usar sua ID de conexão base recém-gerada nos seguintes tutoriais:
 
-* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] ](../../explore/tabular.md)
-* [Crie um fluxo de dados para trazer dados do banco de dados para a Experience Platform usando a API  [!DNL Flow Service] ](../../collect/database-nosql.md)
+* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
+* [Crie um fluxo de dados para trazer dados do banco de dados para a Experience Platform usando a API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)

@@ -2,9 +2,9 @@
 title: applyPropositions
 description: Renderize novamente as apresentações que já foram renderizadas com sendEvent.
 exl-id: 6b79f334-4ea6-4ba4-8640-d35b7f90df98
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '287'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ Esse comando oferece suporte aos seguintes campos:
    * Escopo
    * Seletor
    * Tipo de ação
+
+>[!NOTE]
+>
+>O comando `applyPropositions` não envia eventos de exibição automaticamente. Se desejar exibições de gravação, use o comando `sendEvent` conforme descrito em [Gerenciar eventos de exibição](/help/collection/use-cases/personalization/display-events.md).
 
 Execute o comando `applyPropositions` ao chamar a instância configurada do Web SDK. O objeto que contém opções de configuração é compatível com os seguintes campos:
 

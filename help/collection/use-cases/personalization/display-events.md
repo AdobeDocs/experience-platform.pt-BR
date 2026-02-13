@@ -2,53 +2,150 @@
 title: Gerenciar eventos de exibição no Web SDK
 description: Explica o que são eventos de exibição e como usá-los no Web SDK.
 exl-id: 7150ad6e-7693-4f4d-917e-8d08a39a0b41
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+keywords: personalização;exibir eventos;sendEvent;renderDecisions;applyPropositions;propositions;
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
 
 # Gerenciar eventos de exibição no Web SDK
 
-Os eventos de exibição são usados pelo Web SDK para informar seu serviço de personalização ou análise quando um conteúdo de personalização específico é exibido em uma página. O envio de eventos de exibição melhora a precisão das métricas de personalização e fornece uma visão geral precisa do que os usuários veem na sua página.
-
->[!NOTE]
->
->Eventos de exibição não são enviados automaticamente ao chamar a função `applyPropositions`.
+Os eventos de exibição informam aos serviços de personalização ou análise que um conteúdo personalizado específico foi exibido para o usuário. O envio de eventos de exibição melhora a precisão dos relatórios, ajudando os sistemas downstream a distinguir entre o conteúdo que foi *solicitado* e o conteúdo que foi *realmente exibido*.
 
 ## Enviar eventos de exibição automaticamente
 
-O envio de eventos de exibição fornece automaticamente métricas de análise mais precisas, já que o evento é enviado imediatamente após o carregamento da personalização. Essa implementação também tem um método de implementação mais simplificado.
+Os eventos de exibição automática geralmente são a opção mais simples. Eles são enviados imediatamente depois que o Web SDK terminar de renderizar o conteúdo qualificado da resposta `sendEvent`, o que pode melhorar a precisão dos relatórios.
 
-Para enviar eventos de exibição automaticamente depois que o conteúdo personalizado for renderizado na página, você deve configurar os seguintes parâmetros:
+Para enviar eventos de exibição automaticamente, use uma chamada `sendEvent` que defina `renderDecisions` como `true` e defina `personalization.sendDisplayEvent` como `true` (ou omita, já que `true` é o padrão):
 
-* `renderDecisions: true`
-* `personalization.sendDisplayEvent: true` ou não especificado
+```js
+alloy("sendEvent", {
+  renderDecisions: true,
+  personalization: { }, // sendDisplayEvent defaults to true
+  xdm: {
+    web: {
+      webPageDetails: {
+        name: "home"
+      }
+    }
+  }
+});
+```
 
-O Web SDK envia os eventos de exibição imediatamente após qualquer personalização ser renderizada como resultado de uma chamada `sendEvent`.
-
-## Enviar eventos de exibição em chamadas sendEvent subsequentes
-
-Comparado ao envio automático de eventos de exibição, ao incluí-los nas chamadas subsequentes do `sendEvent`, você também tem a oportunidade de incluir mais informações sobre o carregamento da página na chamada. Pode se tratar de informações adicionais, que não estavam disponíveis ao solicitar o conteúdo personalizado.
-
-Além disso, o envio de eventos de exibição em chamadas `sendEvent` minimiza erros de taxa de devolução ao usar o Adobe Analytics.
-
->[!IMPORTANT]
+>[!NOTE]
 >
->Ao usar apresentações renderizadas manualmente, os eventos de exibição só têm suporte por meio de chamadas `sendEvent`. Nesse caso, não é possível enviar eventos de exibição automaticamente.
+>Os eventos de exibição automática dependem da renderização gerenciada pela SDK. Se você renderizar o conteúdo manualmente (inclusive usando `applyPropositions`), deverá enviar eventos de exibição explicitamente usando `sendEvent`.
 
-### Enviar eventos de exibição para apresentações renderizadas automaticamente
+## Enviar eventos de exibição em `sendEvent` chamadas subsequentes
 
-Para enviar eventos de exibição para apresentações renderizadas automaticamente, você deve configurar os seguintes parâmetros na chamada `sendEvent`:
+A inclusão de eventos de exibição em uma chamada `sendEvent` posterior é útil quando você deseja anexar dados adicionais de carregamento de página que não estão disponíveis ao solicitar personalização. Geralmente é usado ao implementar [Eventos de página superior e inferior](/help/collection/use-cases/personalization/top-bottom-page-events.md). A implementação correta dos eventos de exibição dessa maneira ajuda a evitar problemas com [Taxa de rejeição](https://experienceleague.adobe.com/en/docs/analytics/components/metrics/bounce-rate) no Adobe Analytics.
 
-* `renderDecisions: true`
-* `personalization.sendDisplayEvent: false` para o início da ocorrência da página
+1. Na chamada inicial de `sendEvent` (geralmente na parte superior da página), solicite e renderize o conteúdo, mas suprima os eventos de exibição automáticos definindo `renderDecisions` como `true` e `personalization.sendDisplayEvent` como `false`:
 
-Para enviar os eventos de exibição, chame `sendEvent` com `personalization.includeRenderedPropositions: true`
+   ```js
+   alloy("sendEvent", {
+     renderDecisions: true,
+     personalization: { sendDisplayEvent: false },
+     xdm: {
+       web: {
+         webPageDetails: {
+            name: "home"
+         }
+       }
+     }
+   });
+   ```
 
-### Enviar eventos de exibição para apresentações renderizadas manualmente
+1. Mais tarde (geralmente na parte inferior da página), chame `sendEvent` com uma carga XDM que inclui eventos de exibição para propostas que foram renderizadas desde a solicitação anterior, definindo [`personalization.includeRenderedPropositions`](/help/collection/js/commands/sendevent/personalization.md) como `true`:
 
-Para enviar eventos de exibição para propostas renderizadas manualmente, você deve incluí-los no campo XDM `_experience.decisioning.propositions`, incluindo os campos `id`, `scope` e `scopeDetails` das propostas.
+   ```js
+   alloy("sendEvent", {
+     personalization: { includeRenderedPropositions: true },
+     xdm: {
+       // Add any additional page load telemetry you want to send here
+       web: {
+         webPageDetails: {
+           name: "home"
+         }
+       }
+     }
+   });
+   ```
 
-Além disso, defina o campo `include _experience.decisioning.propositionEventType.display` como `1`.
+>[!NOTE]
+>
+>Somente propostas renderizadas automaticamente que tiveram exibição suprimida são incluídas ao usar `includeRenderedPropositions`.
+
+## Enviar eventos de exibição para apresentações renderizadas manualmente
+
+Se você mesmo renderizar o conteúdo (renderização totalmente manual ou usando `applyPropositions`), deverá enviar eventos de exibição explicitamente usando o comando `sendEvent`. Chame `sendEvent` com uma carga XDM que inclua as seguintes propriedades:
+
+* `_experience.decisioning.propositions` contendo as propostas renderizadas&#39; `id`, `scope`, e `scopeDetails`
+* `_experience.decisioning.propositionEventType.display` definido como `1`
+
+Os dois exemplos a seguir usam essa função auxiliar para criar a carga XDM do evento de exibição:
+
+```js
+function buildDisplayEventXdm(renderedPropositions) {
+  return {
+    eventType: "decisioning.propositionDisplay",
+    _experience: {
+      decisioning: {
+        propositions: renderedPropositions.map(({ id, scope, scopeDetails }) => ({
+          id,
+          scope,
+          scopeDetails
+        })),
+        propositionEventType: { display: 1 }
+      }
+    }
+  };
+}
+```
+
+O exemplo a seguir usa renderização manual com eventos de exibição:
+
+```js
+function renderExample(propositions) {
+  // Your custom logic here. Return ONLY the propositions that were actually rendered.
+  // For example: return [propositions[0]];
+  return [];
+}
+
+alloy("sendEvent", {
+  personalization: { decisionScopes: ["discount"] },
+  xdm: { }
+}).then(({ propositions = [] }) => {
+  const renderedPropositions = renderExample(propositions);
+  if (!renderedPropositions.length) { return; }
+  return alloy("sendEvent", { xdm: buildDisplayEventXdm(renderedPropositions) });
+});
+```
+
+O exemplo a seguir usa o comando `applyPropositions` com eventos de exibição. Ele acorrenta `sendEvent`, `applyPropositions`, e depois outro `sendEvent`:
+
+```js
+alloy("sendEvent", {
+  personalization: { decisionScopes: ["discount", "salutation"] },
+  xdm: { }
+}).then(({ propositions = [] }) => {
+  return alloy("applyPropositions", {
+    propositions,
+    metadata: {
+      salutation: { selector: "#salutation", actionType: "setHtml" },
+      discount: { selector: "#daily-special", actionType: "replaceHtml" }
+    }
+  });
+}).then(({ propositions: renderedPropositions = [] }) => {
+  if (!renderedPropositions.length) { return; }
+  return alloy("sendEvent", { xdm: buildDisplayEventXdm(renderedPropositions) });
+});
+```
+
+## Erros comuns a serem evitados
+
+* **Enviar eventos de exibição antes da conclusão da renderização**: enviar eventos de exibição após a conclusão da renderização automática, após a resolução de `applyPropositions` ou após a conclusão manual da lógica de renderização.
+* **Enviar eventos de exibição para apresentações que você não renderizou**: incluir somente apresentações que foram exibidas ao usuário.
+* **Descartando`scopeDetails`**: incluir `scopeDetails` do objeto de proposta ao enviar eventos de exibição.

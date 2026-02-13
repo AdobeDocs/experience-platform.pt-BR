@@ -2,9 +2,9 @@
 title: Configurar os eventos de início e fim da página no Web SDK
 description: Este artigo explica como usar os eventos principais e inferiores da página no Web SDK.
 exl-id: 43c6d53a-6bf9-45f8-b001-d148adaff829
-source-git-commit: db7e6df1b1a0eb19518d9c6ccd6e6bb9131d5a3e
+source-git-commit: e150fa51953edbb0e21de962e066deedaf8bd2d7
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -117,7 +117,7 @@ alloy("sendEvent", {
 
 | Parâmetro | Obrigatório/Opcional | Descrição |
 |---|---|---|
-| `xdm._experience.decisioning.propositions` | Obrigatório | Esta seção define as apresentações renderizadas manualmente. Você deve incluir a proposta `ID`, `scope` e `scopeDetails`. Consulte a documentação sobre como [renderizar manualmente a personalização](../personalization/rendering-personalization-content.md#manually) para obter mais informações sobre como registrar eventos de exibição para conteúdo renderizado manualmente. A personalização renderizada manualmente deve ser incluída na parte inferior da ocorrência da página. |
+| `xdm._experience.decisioning.propositions` | Obrigatório | Esta seção define as apresentações renderizadas manualmente. Você deve incluir a proposta `ID`, `scope` e `scopeDetails`. Consulte [Gerenciar eventos de exibição](display-events.md) para obter mais informações. A personalização renderizada manualmente deve ser incluída na parte inferior da ocorrência da página. |
 | `xdm._experience.decisioning.propositionEventType` | Obrigatório | Defina este parâmetro como `display: 1`. |
 | `xdm` | Opcional | Use esta seção para incluir todos os dados necessários para o evento de fim de página. |
 

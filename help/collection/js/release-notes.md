@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
 workflow-type: tm+mt
-source-wordcount: '2725'
+source-wordcount: '2718'
 ht-degree: 5%
 
 ---
@@ -293,7 +293,7 @@ Para obter as notas de versão mais recentes da extensão de tag do Web SDK, con
 **Novos recursos**
 
 - Agora é possível fornecer experiências personalizadas com mais precisão, compartilhando IDs de visitante entre aplicativos móveis e conteúdo da Web móvel, e entre domínios. Consulte a [documentação dedicada](../use-cases/identity/id-sharing.md) para saber mais.
-- Agora é possível renderizar ou executar uma matriz de propostas de [!DNL Adobe Target] em aplicativos de página única, sem incrementar as métricas de análise. Isso reduz os erros de relatório e aumenta a precisão da análise. Consulte a [documentação dedicada](../use-cases/personalization/rendering-personalization-content.md) para saber mais.
+- Agora é possível renderizar ou executar uma matriz de propostas de [!DNL Adobe Target] em aplicativos de página única, sem incrementar as métricas de análise. Isso reduz os erros de relatório e aumenta a precisão da análise.
 - Adição de mais informações ao comando `getLibraryInfo`, incluindo os comandos disponíveis e a configuração final da instância.
 
 **Correções e melhorias**

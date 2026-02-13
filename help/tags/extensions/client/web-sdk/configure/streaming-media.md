@@ -1,14 +1,20 @@
 ---
 title: Definições de configuração de mídia de streaming
 description: Personalize como a extensão de tag do Web SDK coleta dados de streaming de mídia.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 4%
+source-wordcount: '310'
+ht-degree: 3%
 
 ---
 
-# Definições de configuração de mídia de streaming
+# Definições de configuração de mídia de streaming {#streaming-media}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_streamingmedia"
+>title="Mídia de transmissão"
+>abstract="Determina como os dados de mídia de transmissão são coletados durante as sessões de reprodução de mídia."
 
 O recurso de coleção de mídia ajuda a coletar dados relacionados a sessões de mídia, como reprodução de mídia, pausas, conclusões e outros eventos relacionados. Depois de coletados, é possível enviar esses dados para o Adobe Experience Platform ou Adobe Analytics para gerar relatórios. Esse recurso fornece uma solução abrangente para rastrear e entender o comportamento de consumo de mídia no site.
 

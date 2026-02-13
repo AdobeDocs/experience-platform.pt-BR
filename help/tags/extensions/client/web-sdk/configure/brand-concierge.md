@@ -1,18 +1,24 @@
 ---
 title: Definições de configuração do Brand Concierge
 description: Configure a persistência de sessão e os tempos limite de transmissão para o bate-papo do Brand Concierge.
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 4%
+source-wordcount: '152'
+ht-degree: 5%
 
 ---
 
-# Definições de configuração do Brand Concierge
+# Definições de configuração do Brand Concierge {#brand-concierge}
 
 >[!AVAILABILITY]
 >
 >O Brand Concierge para o Web SDK está atualmente em **beta**. A funcionalidade e a documentação estão sujeitas a alterações.
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_brandconcierge"
+>title="Brand Concierge"
+>abstract="Configurações ao usar o Brand Concierge na sua propriedade."
 
 A seção **[!UICONTROL Brand Concierge]** permite controlar como as sessões de chat do Brand Concierge se comportam na extensão de tag da Web SDK.
 

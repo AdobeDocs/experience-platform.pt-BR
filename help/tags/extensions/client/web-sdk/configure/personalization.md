@@ -1,14 +1,20 @@
 ---
 title: Definições de configuração do Personalization
 description: Defina as configurações de personalização na extensão de tag do Web SDK.
-source-git-commit: 9a617b6e97aec22a6726266f2628bd2c2a05da19
+exl-id: 24009a40-92ad-49d6-b768-49d64dccf4e0
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '454'
+source-wordcount: '463'
 ht-degree: 1%
 
 ---
 
-# Definições de configuração do Personalization
+# Definições de configuração do Personalization {#personalization}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_personalization"
+>title="Personalização"
+>abstract="Determina como a extensão de tag trata o conteúdo personalizado."
 
 Esta seção de configuração permite determinar como você deseja ocultar determinadas partes da página enquanto o conteúdo personalizado é carregado. Quando configuradas corretamente, essas configurações garantem que seus visitantes vejam o conteúdo personalizado correto.
 
@@ -26,7 +32,7 @@ As opções disponíveis são as seguintes:
 
 Use esta opção para permitir que o Web SDK leia e grave os cookies herdados `mbox` e `mboxEdgeCluster` usados pelas bibliotecas `at.js` 1.x ou 2.x. Essa configuração ajuda a manter intactos os perfis de visitantes ao mover-se entre páginas usando o Web SDK ou o `at.js` no mesmo site. Se você não tiver o `at.js` implementado em nenhum lugar do seu site, não precisará habilitar essa caixa de seleção. O equivalente a esta caixa de seleção na biblioteca de JavaScript é [`targetMigrationEnabled`](/help/collection/js/commands/configure/targetmigrationenabled.md).
 
-Ao habilitar esta opção, certifique-se de habilitar também o [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/pt-br/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) no `targetGlobalSettings()`.
+Ao habilitar esta opção, certifique-se de habilitar também o [`overrideMboxEdgeServer`](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/targetglobalsettings#overridemboxedgeserver) no `targetGlobalSettings()`.
 
 ## [!UICONTROL Prehiding style] {#prehiding-style}
 

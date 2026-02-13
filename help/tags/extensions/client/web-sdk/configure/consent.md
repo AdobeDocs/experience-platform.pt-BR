@@ -1,14 +1,20 @@
 ---
 title: Configurações de consentimento
 description: Defina as configurações padrão de consentimento e privacidade para a extensão de tag.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
 
-# Configurações de consentimento
+# Configurações de consentimento {#consent}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_consent"
+>title="Consentimento"
+>abstract="Seleciona o nível padrão de consentimento que é presumido se nenhuma outra preferência de consentimento explícito for fornecida."
 
 A seção **[!UICONTROL Consent]** permite selecionar o nível padrão de consentimento que será presumido se nenhuma outra preferência de consentimento explícito for fornecida. O nível de consentimento padrão não é salvo em perfis de usuário.
 

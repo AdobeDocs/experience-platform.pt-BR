@@ -1,15 +1,20 @@
 ---
-title: Componentes de build personalizados
+title: Opções de build
 description: Crie uma build personalizada do Web SDK que desative os recursos para diminuir o tamanho da build.
 exl-id: 853e0a6c-0953-4e08-9a7d-334aab022583
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
 
-# Componentes de build personalizados
+# Opções de build {#build-options}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_buildoptions"
+>title="Opções de build"
+>abstract="Inclua ou exclua seletivamente módulos da biblioteca do JavaScript, reduzindo o tamanho da biblioteca e melhorando o desempenho."
 
 A biblioteca do Web SDK inclui vários módulos para vários recursos, como personalização, identidade, rastreamento de links e muito mais. Dependendo dos casos de uso, talvez você só precise de recursos específicos em vez da biblioteca inteira. A desativação dos componentes de build permite usar apenas os módulos necessários, reduzindo o tamanho da biblioteca e melhorando o desempenho.
 

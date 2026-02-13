@@ -2,14 +2,19 @@
 title: Configurações da instância do SDK
 description: Defina as configurações gerais para a instância do Web SDK.
 exl-id: cc22b8b3-88c6-4030-91b4-60e14a3b0f42
-source-git-commit: 50881ef9498196f2de5519f050800334019a2586
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '278'
 ht-degree: 2%
 
 ---
 
-# Configurações da instância do SDK
+# Configurações da instância do SDK {#sdk-instance}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_sdkinstance"
+>title="Instâncias do SDK"
+>abstract="Define o nome da instância do SDK, a organização IMS à qual ela pertence e o domínio de borda."
 
 Essa seção de configuração controla o nome da instância do Web SDK, a organização IMS à qual ela se aplica e o local para o qual você deseja enviar dados. Por padrão, uma instância é nomeada `alloy`.
 
@@ -35,4 +40,4 @@ A ID da organização para a qual você deseja que os dados da Adobe sejam envia
 
 O domínio do qual a extensão envia e recebe dados. Por padrão, o campo contém `<COMPANYID>.data.adobedc.net`. Implementações mais antigas podem conter um valor padrão de `edge.adobedc.net`, que também é válido.
 
-A Adobe recomenda usar um domínio próprio na maioria dos casos. Consulte o [programa de certificados gerenciados pela Adobe](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/data-collection/adobe-managed-cert) para obter instruções sobre como configurar um domínio próprio adequado para a coleta de dados. Consulte também [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) na documentação da biblioteca de JavaScript para obter orientação sobre como configurar esse valor.
+A Adobe recomenda usar um domínio próprio na maioria dos casos. Consulte o [programa de certificados gerenciados pela Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) para obter instruções sobre como configurar um domínio próprio adequado para a coleta de dados. Consulte também [`edgeDomain`](/help/collection/js/commands/configure/edgedomain.md) na documentação da biblioteca de JavaScript para obter orientação sobre como configurar esse valor.

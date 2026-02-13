@@ -6,9 +6,9 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: b1666521d135ac953dbde5b4ff64138a187e4b9e
+source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
 workflow-type: tm+mt
-source-wordcount: '827'
+source-wordcount: '826'
 ht-degree: 43%
 
 ---
@@ -108,7 +108,7 @@ ht-degree: 43%
          * [Introdução](extensions/client/web-sdk/getting-started.md)
          * Configurar  {#configure}
             * [Visão geral](extensions/client/web-sdk/configure/config-overview.md)
-            * [Componentes de build personalizados](extensions/client/web-sdk/configure/custom-build-components.md)
+            * [Opções de build](extensions/client/web-sdk/configure/custom-build-components.md)
             * [Instância do SDK](extensions/client/web-sdk/configure/general.md)
             * [Datastreams](extensions/client/web-sdk/configure/datastreams.md)
             * [Consentimento](extensions/client/web-sdk/configure/consent.md)

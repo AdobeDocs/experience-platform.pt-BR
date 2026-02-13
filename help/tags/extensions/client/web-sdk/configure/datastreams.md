@@ -1,14 +1,20 @@
 ---
 title: Definições de configuração da sequência de dados
 description: Configure o fluxo de dados para enviar dados usando a extensão de tag do Web SDK.
-source-git-commit: 46e5d007b27eaa67c9ee49e35a711424de383d68
+exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 0%
+source-wordcount: '251'
+ht-degree: 1%
 
 ---
 
-# Definições de configuração da sequência de dados
+# Definições de configuração da sequência de dados {#datastreams}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_datastreams"
+>title="Datastreams"
+>abstract="Obrigatório. Define o fluxo de dados na Edge Network para o qual você deseja enviar dados."
 
 Esta seção de configuração permite determinar para qual [sequência de dados](/help/datastreams/overview.md) você deseja enviar dados. **Uma ID de sequência de dados é necessária para todos os dados enviados para a Edge Network.**
 

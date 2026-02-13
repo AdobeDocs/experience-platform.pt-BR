@@ -2,10 +2,10 @@
 title: Notas de versão da extensão para Adobe Experience Platform Web SDK
 description: Extensão de tag do Adobe Experience Platform Web SDK
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 9693f53cc1a31622d63fb93c0d51e1f5896c6524
+source-git-commit: 7dac63a5c2ca3897795b8849677ae606c8ea8c4b
 workflow-type: tm+mt
-source-wordcount: '3118'
-ht-degree: 25%
+source-wordcount: '3165'
+ht-degree: 24%
 
 ---
 
@@ -14,11 +14,17 @@ ht-degree: 25%
 
 Este documento aborda as notas de versão da extensão de tag do Adobe Experience Platform Web SDK. Para obter as notas de versão mais recentes do próprio SDK, consulte as [notas de versão do Experience Platform Web SDK](/help/collection/js/release-notes.md).
 
+## Versão 2.34.1 - 11 de fevereiro de 2026
+
+- Contém a [versão 2.31.1](/help/collection/js/release-notes.md) do Adobe Experience Platform Web SDK.
+- Correção de um problema em que as [configurações do Adobe Advertising](configure/advertising.md) não puderam ser editadas nas ações [Enviar Evento](actions/send-event.md).
+- Adicionado um fallback para `edge.adobedc.net` para a definição de configuração de [domínio Edge](configure/general.md) quando um `tenant-id` não estiver disponível.
+
 ## Versão 2.34.0 - 9 de fevereiro de 2026
 
 **Novos recursos**
 
-- Contém a [versão 2.31.0](/help/collection/js/release-notes.md#2-31-0) do Adobe Experience Platform Web SDK.
+- Contém a [versão 2.31.0](/help/collection/js/release-notes.md) do Adobe Experience Platform Web SDK.
 - Adicionado [Suporte ao código base](/help/collection/js/install/base-code.md) para a extensão de tag.
 - Adicionado o **[!UICONTROL Send referrer to Adobe Analytics only once per page view]** [contexto](configure/data-collection.md#context-settings) às configurações de extensão.
 - Adição do componente Brand Concierge.

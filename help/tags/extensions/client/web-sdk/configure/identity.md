@@ -1,14 +1,20 @@
 ---
 title: Definições de configuração de identidade
 description: Defina como a extensão de tag identifica visitantes.
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+exl-id: 12e707f4-c37b-4c02-bfec-5ef7b98c2d3b
+source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '298'
 ht-degree: 2%
 
 ---
 
-# Definições de configuração de identidade
+# Definições de configuração de identidade {#identity}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_websdk_identity"
+>title="Identidade"
+>abstract="Defina como a extensão de tag identifica visitantes."
 
 Esta seção de configuração permite definir o comportamento do Web SDK quando se trata de lidar com a identificação do usuário.
 

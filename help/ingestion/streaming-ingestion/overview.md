@@ -2,38 +2,38 @@
 keywords: Experience Platform;página inicial;tópicos populares;assimilação de dados;dados assimilados;streaming;visão geral;assimilação de streaming;latência;latência de streaming;
 solution: Experience Platform
 title: Visão geral da assimilação de fluxo
-description: A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
+description: Saiba mais sobre a assimilação por transmissão no Adobe Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: a77be4ef97540b929192fa6f367830f4a29e5af7
+source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '431'
 ht-degree: 3%
 
 ---
 
 # Visão geral da ingestão de streaming
 
-A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o [!DNL Experience Platform] em tempo real.
+A assimilação de streaming para o Adobe Experience Platform fornece aos usuários um método para enviar dados de dispositivos cliente e do lado do servidor para o Experience Platform em tempo real.
 
 ## O que você pode fazer com a assimilação por transmissão?
 
-O Adobe Experience Platform permite gerar experiências coordenadas, consistentes e relevantes, gerando um [!DNL Real-Time Customer Profile] para cada cliente individual. A assimilação de streaming desempenha uma função importante na criação desses perfis, permitindo que você entregue dados do [!DNL Profile] no [!DNL Data Lake] com a menor latência possível.
+O Adobe Experience Platform permite gerar experiências coordenadas, consistentes e relevantes, gerando um Perfil do cliente em tempo real para cada um de seus clientes individuais. A assimilação de streaming desempenha um papel fundamental na criação desses perfis, permitindo que você entregue os dados de perfil no data lake com a menor latência possível.
 
 O vídeo a seguir foi projetado para ajudar a entender a assimilação de streaming e descreve os conceitos acima.
 
->[!VIDEO](https://video.tv.adobe.com/v/31683?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Registros de perfil de fluxo e [!DNL ExperienceEvents]
 
-Com a assimilação por transmissão, os usuários podem transmitir registros de perfil e [!DNL ExperienceEvents] para [!DNL Experience Platform] em segundos para ajudar a impulsionar a personalização em tempo real. Todos os dados enviados para as APIs de assimilação de streaming são automaticamente mantidos no [!DNL Data Lake].
+Com a assimilação por transmissão, os usuários podem transmitir registros de perfil e [!DNL ExperienceEvents] para o Experience Platform em segundos para ajudar a impulsionar a personalização em tempo real. Todos os dados enviados para as APIs de assimilação de streaming são automaticamente mantidos no data lake.
 
 Leia o [guia de criação de conexão de streaming](../tutorials/create-streaming-connection.md) para obter mais informações.
 
 ### Transmitir para conjuntos de dados
 
-Depois de ter certeza de que seus dados estão limpos, você poderá habilitar seus conjuntos de dados para [!DNL Real-Time Customer Profile] e [!DNL Identity Service].
+Depois de ter certeza de que seus dados estão limpos, você poderá habilitar seus conjuntos de dados para o Perfil de Cliente em Tempo Real e [!DNL Identity Service].
 
-Para obter mais informações sobre como habilitar um conjunto de dados para [!DNL Profile] e [!DNL Identity Service], leia o [guia de configuração de um conjunto de dados](/help/profile/tutorials/dataset-configuration.md).
+Para obter mais informações sobre como habilitar um conjunto de dados para o Perfil e [!DNL Identity Service], leia o [guia de configuração de um conjunto de dados](/help/profile/tutorials/dataset-configuration.md).
 
 ## Qual é a latência esperada para a assimilação por transmissão no Experience Platform?
 

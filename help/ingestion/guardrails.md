@@ -3,7 +3,7 @@ keywords: Experience Platform;solução de problemas;medidas de proteção;diret
 title: Medidas de proteção para a assimilação de dados
 description: Saiba mais sobre as medidas de proteção para a assimilação de dados no Adobe Experience Platform.
 exl-id: f07751cb-f9d3-49ab-bda6-8e6fec59c337
-source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
+source-git-commit: b5b975308d28ae82ea4d811652681215bc2cfbdb
 workflow-type: tm+mt
 source-wordcount: '827'
 ht-degree: 0%
@@ -20,7 +20,7 @@ As garantias são limites que fornecem orientação para o uso de dados e do sis
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Este documento fornece orientação sobre medidas de proteção para a assimilação de dados no Adobe Experience Platform.
 
@@ -49,7 +49,7 @@ A tabela a seguir descreve as medidas de proteção a serem consideradas ao usar
 
 | Tipo de assimilação | Diretrizes | Notas |
 | --- | --- | --- |
-| Fontes de transmissão | <ul><li>O tamanho máximo do registro é de 1 MB, com o tamanho recomendado de 10 KB.</li><li>As fontes de transmissão oferecem suporte a entre 4.000 e 5.000 solicitações por segundo ao assimilar no data lake. Isso se aplica a conexões de origem recém-criadas além de conexões de origem existentes. **Observação**: pode levar até 30 minutos para que a transmissão de dados seja completamente processada para o data lake.</li><li>As fontes de transmissão oferecem suporte a no máximo 1500 solicitações por segundo ao assimilar dados para o perfil ou a segmentação por transmissão.</li></ul> | Fontes de transmissão como [!DNL Kafka], [!DNL Azure Event Hubs] e [!DNL Amazon Kinesis] não usam a rota [!DNL Data Collection Core Service] (DCCS) e podem ter limites de taxa de transferência diferentes. Consulte a [visão geral das fontes](../sources/home.md) para obter um catálogo de fontes que podem ser usadas para assimilação de dados. |
+| Fontes de transmissão | <ul><li>O tamanho máximo do registro é de 1 MB, com o tamanho recomendado de 10 KB.</li><li>As fontes de transmissão oferecem suporte a entre 4.000 e 5.000 solicitações por segundo ao assimilar no data lake. Isso se aplica a conexões de origem recém-criadas além de conexões de origem existentes. **Observação**: pode levar até 60 minutos para que a transmissão de dados seja completamente processada para o data lake.</li><li>As fontes de transmissão oferecem suporte a no máximo 1500 solicitações por segundo ao assimilar dados para o perfil ou a segmentação por transmissão.</li></ul> | Fontes de transmissão como [!DNL Kafka], [!DNL Azure Event Hubs] e [!DNL Amazon Kinesis] não usam a rota [!DNL Data Collection Core Service] (DCCS) e podem ter limites de taxa de transferência diferentes. Consulte a [visão geral das fontes](../sources/home.md) para obter um catálogo de fontes que podem ser usadas para assimilação de dados. |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ A tabela a seguir descreve as medidas de proteção a serem consideradas ao usar
 Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=pt-BR#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

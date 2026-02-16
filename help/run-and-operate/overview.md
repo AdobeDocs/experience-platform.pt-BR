@@ -2,8 +2,7 @@
 title: Visão geral de Executar e operar
 description: Inspecione, solucione problemas e otimize suas implementações do Adobe Experience Platform com as ferramentas Executar e Operar. Obtenha visibilidade sobre ativações programadas em lote, identifique problemas de configuração e melhore a confiabilidade do sistema.
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 1%
@@ -50,13 +49,13 @@ Para acessar as ferramentas Executar e Operar na interface do usuário do Experi
    >
    >Atualmente, o único recurso disponível é [Agendamentos de trabalho](job-schedules.md).
 
-![Interface do usuário do Experience Platform mostrando a navegação à esquerda de Executar e operar.](assets/overview/run-and-operate.png)
+![Interface do usuário do Experience Platform mostrando a navegação à esquerda de Executar e Operar](assets/overview/run-and-operate.png)
 
 ## Ferramentas disponíveis {#available-tools}
 
 As ferramentas a seguir ajudam a inspecionar e otimizar as operações de dados.
 
-### Programações de Job {#job-schedules}
+### Cronogramas do trabalho {#job-schedules}
 
 >[!IMPORTANT]
 >

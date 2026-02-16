@@ -4,10 +4,9 @@ solution: Experience Platform
 title: Exibir Detalhes da Programação de Job
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
-source-wordcount: '1758'
+source-wordcount: '1783'
 ht-degree: 1%
 
 ---
@@ -67,6 +66,8 @@ A exibição da linha do tempo usa um layout horizontal e vertical para ajudá-l
 Esse layout permite identificar rapidamente as relações de tempo entre os trabalhos de pipeline de dados e o processamento downstream. Idealmente, as tarefas de upstream (como assimilação de data lake e perfil) devem ser concluídas à esquerda desses marcadores verticais, garantindo que os dados estejam prontos antes da segmentação e ativação começarem. Os processos que se estendem além desses marcadores indicam possíveis problemas de tempo em que os processos de downstream podem começar antes que os dados sejam totalmente preparados.
 
 ### Qual exibição devo usar? {#which-view}
+
+Use a tabela abaixo para escolher a exibição correta para sua tarefa. Combine o que é necessário fazer com a exibição recomendada para navegar com eficiência.
 
 | Eu preciso... | Usar esta exibição |
 |--------------|---------------|

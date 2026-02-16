@@ -4,11 +4,10 @@ solution: Experience Platform
 title: Inspecionar Calendários de Trabalho
 type: Tutorial
 hide: true
-hidefromtoc: true
-source-git-commit: 3696ebffc4bd1e588a04e5789ff0c7971e636b56
+source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
 workflow-type: tm+mt
 source-wordcount: '828'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -45,7 +44,7 @@ Antes de usar o [!UICONTROL Job Schedules], você deve se familiarizar com os se
 
 A compreensão desses componentes ajuda a interpretar padrões de execução de trabalhos e diagnosticar problemas quando eles ocorrem.
 
-## Noções básicas sobre a interface de Agendamentos de Jobs {#understanding-interface}
+## Noções básicas sobre a interface de agendamentos de trabalhos {#understanding-interface}
 
 Para acessar [!UICONTROL Job Schedules]:
 
@@ -79,7 +78,7 @@ Use os seletores de período de tempo para escolher até que ponto pesquisar os 
 * **Ontem**: exibir trabalhos executados ontem.
 * **Últimos 7 dias**: exibir trabalhos da semana passada.
 
-### Detalhes das programações de trabalhos em lote {#job-schedules-details}
+### Detalhes de agendamentos de trabalho em lote {#job-schedules-details}
 
 A exibição principal mostra quando seus trabalhos em lote estão programados para serem executados durante o dia. É possível:
 

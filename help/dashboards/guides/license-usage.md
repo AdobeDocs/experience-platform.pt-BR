@@ -4,10 +4,10 @@ title: Painel de uso de licenças
 description: A Adobe Experience Platform fornece um painel por meio do qual você pode visualizar informações importantes sobre o uso de licença da sua organização.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 62f5ecf82df46284365e64d633c8242ac45567bc
+source-git-commit: a4381d034463571d2f69e9a2b04b7fbec1828cb9
 workflow-type: tm+mt
-source-wordcount: '3275'
-ht-degree: 40%
+source-wordcount: '3421'
+ht-degree: 39%
 
 ---
 
@@ -132,9 +132,9 @@ ht-degree: 40%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html?lang=pt-BR" text="Expirações do evento de experiência"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html?lang=pt-BR" text="Expiração de dados de perfis pseudônimos"
 
-Você pode exibir informações importantes sobre o uso de licenças da sua organização no painel do Adobe Experience Platform [!UICONTROL License usage]. As informações exibidas aqui são capturadas durante um instantâneo diário da sua instância do Experience Platform.
+Você pode exibir informações importantes sobre o uso de licenças da sua organização no painel do **[!UICONTROL License usage]**. O painel está disponível para organizações qualificadas da Experience Cloud, incluindo aquelas que licenciam o Adobe Experience Platform e aquelas que não o fazem. As informações exibidas são capturadas durante um instantâneo diário do ambiente de sua organização e não são atualizadas em tempo real.
 
-Os relatórios de uso de licença fornecem um alto grau de granularidade. A maioria das métricas é compartilhada entre vários produtos e reflete o uso agregado em todos os produtos que as usam, não nos totais por produto. O painel fornece o uso consolidado dessas métricas em todas as sandboxes de produção ou desenvolvimento, e a métrica de uso de uma sandbox específica. Os seguintes aplicativos da Experience Platform podem ser rastreados com métricas de uso: Real-Time Customer Data Platform, Adobe Journey Optimizer e Customer Journey Analytics.
+Os relatórios de uso de licença fornecem um alto grau de granularidade. A maioria das métricas é compartilhada entre vários produtos e reflete o uso agregado em todos os produtos que as usam, não nos totais por produto.
 
 Este guia descreve como acessar e trabalhar com o painel de uso de licença na interface do usuário e fornece mais informações sobre as visualizações exibidas no painel.
 
@@ -146,6 +146,8 @@ O painel [!UICONTROL License usage] exibe uma lista de todos os produtos Experie
 
 Os dados nesse painel são exibidos exatamente como eram exibidos no momento específico em que o instantâneo foi tirado. Não é uma aproximação ou amostra, mas o painel não é atualizado em tempo real.
 
+Para organizações sem um aplicativo do Adobe Experience Platform (como Real-time Customer Data Platform, Adobe Journey Optimizer, Customer Journey Analytics e assim por diante), o painel de controle exibe somente as métricas de uso de crédito de IA.
+
 >[!NOTE]
 >
 >A maioria das métricas no painel é atualizada diariamente, com base em um instantâneo da sua instância do Experience Platform. [!UICONTROL CJA Rows Available] é uma exceção e é atualizado mensalmente. Métricas rotuladas com &quot;pacotes&quot;, como [!UICONTROL Adhoc Query Service Users Packs], [!UICONTROL Profile Richness No of Packs] e [!UICONTROL Streaming Segmentation No of Packs], refletem os direitos de licença para ofertas complementares e não controlam o uso contínuo. As alterações feitas após o instantâneo não estarão visíveis até que o próximo instantâneo seja tirado.
@@ -156,7 +158,11 @@ Para navegar até o painel de uso de licença na interface do usuário do Experi
 
 >[!NOTE]
 >
->O painel de uso de licença não está habilitado por padrão. Os usuários devem receber a permissão &quot;Exibir painel de uso da licença&quot; para visualizar o painel. Para obter etapas sobre como conceder permissões de acesso, consulte o [guia de permissões do painel](../permissions.md).
+>O painel de uso de licença não está habilitado por padrão. Você deve receber a permissão **&quot;[!UICONTROL View License Usage Dashboard]&quot;** para acessá-lo.
+>
+>Se sua organização licenciar aplicativos do Adobe Experience Platform, conceda essa permissão no perfil de produto e na sandbox aplicáveis.
+>
+>Para organizações sem um aplicativo do Adobe Experience Platform (por exemplo, organizações somente AEM ou somente Workflow), essa permissão está disponível no Adobe Admin Console sob o cartão de produto do Adobe Experience Platform (se provisionado para sua organização). Um administrador deve adicionar a permissão a um perfil de produto para que os usuários possam exibir o painel.
 
 ## [!UICONTROL Metrics]Guia {#metrics-tab}
 
@@ -289,13 +295,14 @@ O recurso de uso previsto é compatível com as seguintes métricas:
 >
 >A partir de 20 de agosto, os clientes com direitos para &#39;[!UICONTROL Average Profile Richness]&#39; e &#39;[!UICONTROL Total Storage]&#39; viram &#39;[!UICONTROL Total Data Volume]&#39; no Painel de Uso de Licenças. Não houve alteração nos direitos do cliente, apenas uma simplificação das métricas de rastreamento. [!UICONTROL Total Data Volume] representa os dados disponíveis no Perfil de cliente em tempo real para fluxos de trabalho de envolvimento e personalização. Essa métrica simplificada melhorou o gerenciamento e a medição do uso do Perfil do cliente em tempo real. Os clientes foram incentivados a entrar em contato com o representante da Adobe para obter mais esclarecimentos sobre essa alteração.
 
-O painel de uso da licença relata várias métricas exclusivas que são aplicáveis a vários produtos na organização. As métricas disponíveis são:
+As métricas exibidas no painel dependem dos produtos e dos direitos associados à sua organização. Se sua organização participar da [avaliação associada ao uso dos Adobe Experience Platform Agents](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) ou das licenças dos Adobe Experience Platform Agents, o painel incluirá a métrica [!UICONTROL AI credits]. Se sua organização não licenciar o Adobe Experience Platform, o uso do crédito de IA será exibido como a métrica principal.
 
 | Métrica | Descrição |
 |---|---|
+| [!UICONTROL AI credits] | O número de créditos de IA consumidos pela organização ao usar os agentes da Adobe Experience Platform. Os créditos de IA são usados durante a avaliação vinculada ao uso dos agentes da Adobe Experience Platform e quando licenciados para uso de agente pago. Essa métrica permite monitorar o consumo de crédito de IA em relação aos direitos disponíveis. |
 | [!UICONTROL Audience Activation Size] | O tamanho total dos perfis ativados para qualquer destino baseado em arquivo no período de um ano. Observação: não inclui perfis enviados por meio de destinos de transmissão. |
 | [!UICONTROL Addressable Audience] | O conjunto de perfis de pessoas no Perfil do cliente em tempo real que sua organização tem direito a envolver, incluindo Perfis diretamente identificáveis e de pseudônimo. Esses perfis podem conter atributos, comportamentos e dados de associação de segmento. Os volumes de perfil são calculados usando o Gráfico de identidade determinístico padrão do Adobe Experience Platform e são considerados um recurso compartilhado. |
-| [!UICONTROL Adhoc Query Service Users Packs] | Um complemento para aumentar o seu direito de usuários simultâneos autorizados do serviço de consulta em cinco usuários simultâneos adicionais e uma consulta ad hoc adicional com execução simultânea por pacote. É possível licenciar vários pacotes adicionais de usuários de consulta ad hoc. |
+| [!UICONTROL Adhoc Query Service Users Packs] | Um complemento para aumentar o seu direito de usuários simultâneos autorizados do serviço de consultas em cinco usuários simultâneos adicionais e uma consulta ad hoc adicional com execução simultânea por pacote. É possível licenciar vários pacotes adicionais de usuários de consulta ad hoc. |
 | [!UICONTROL Average profile richness] | **Obsoleto** - A soma de todos os dados de produção armazenados no Serviço de Perfil de Hub em qualquer momento, dividida por cinco vezes o número de perfis empresariais autorizados. [!UICONTROL Average profile richness] é um recurso compartilhado. |
 | [!UICONTROL CJA Rows Available] | A média diária de linhas de dados disponíveis para análise no Customer Journey Analytics. |
 | [!UICONTROL Computed Attributes] | Dados comportamentais agregados do perfil com base em eventos de experiência que são convertidos em um atributo de Perfil e podem ser incluídos em um Perfil de pessoa. |
@@ -323,11 +330,11 @@ A disponibilidade dessas métricas e a definição específica de cada uma delas
 
 | Licença | Descrição do produto |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD PESADO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/br/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Serviços de Aplicativos e Serviços Inteligentes](https://helpx.adobe.com/br/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT :OD PRFL PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT :OD PRFL PARA 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) |
-| <ul><li>ATIVAÇÃO DO AEP:OD</li><li>PRFL DE ATIVAÇÃO DO AEP:OD PARA 10M</li><li>AEP:OD ATIVATION PRFL ATÉ 50 MILHÕES</li></ul> | [Ativação do Adobe Experience Platform](https://helpx.adobe.com/br/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>INTELIGÊNCIA DO AEP:OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/br/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD PESADO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Serviços de Aplicativos e Serviços Inteligentes](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT :OD PRFL PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT :OD PRFL PARA 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) |
+| <ul><li>ATIVAÇÃO DO AEP:OD</li><li>PRFL DE ATIVAÇÃO DO AEP:OD PARA 10M</li><li>AEP:OD ATIVATION PRFL ATÉ 50 MILHÕES</li></ul> | [Ativação do Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>INTELIGÊNCIA DO AEP:OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>DESFAZER ORQUESTRAÇÃO DE PERFIL DO Real-Time CDP:OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/br/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]

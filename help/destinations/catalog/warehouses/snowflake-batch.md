@@ -1,21 +1,17 @@
 ---
 title: Conexão em lote do Snowflake
 description: Crie um compartilhamento de dados em tempo real do Snowflake para receber atualizações diárias de públicos diretamente como tabelas compartilhadas na sua conta.
-last-substantial-update: 2025-10-23T00:00:00Z
+last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 271700625e8cc1d2b5e737e89435c543caa86264
+source-git-commit: 89968d4e4c552b7c6b339a39f7a7224133446116
 workflow-type: tm+mt
-source-wordcount: '1662'
-ht-degree: 4%
+source-wordcount: '1708'
+ht-degree: 3%
 
 ---
 
 # Conexão em lote do Snowflake {#snowflake-destination}
-
->[!AVAILABILITY]
->
->Este conector de destino está em disponibilidade limitada e só está disponível para clientes do Real-Time CDP Ultimate provisionados na [região VA7](/help/landing/multi-cloud.md#azure-regions).
 
 ## Visão geral {#overview}
 
@@ -51,7 +47,7 @@ Quando um fluxo de dados é executado para um público-alvo pela primeira vez, e
 
 A Experience Platform fornece dois tipos de destinos do Snowflake: [Streaming do Snowflake](snowflake.md) e [Lote do Snowflake](snowflake-batch.md).
 
-Embora ambos os destinos forneçam acesso aos seus dados no Snowflake de maneira zero, há algumas práticas recomendadas em termos de casos de uso para cada conector.
+Embora ambos os destinos forneçam acesso aos seus dados no Snowflake sem copiá-los fisicamente em sua conta, há algumas práticas recomendadas em termos de casos de uso para cada conector.
 
 A tabela abaixo ajudará você a decidir qual conector usar, descrevendo os cenários em que cada método de compartilhamento de dados é mais apropriado.
 
@@ -83,8 +79,13 @@ Antes de configurar a conexão do Snowflake, verifique se os seguintes pré-requ
 
 * Você tem acesso a uma conta [!DNL Snowflake].
 * Sua conta do Snowflake tem inscrições em listas privadas. Você ou alguém em sua empresa que tenha privilégios de administrador de conta no Snowflake pode configurar isso.
+* Você conhece a região e o provedor de nuvem da sua conta do Snowflake. Você precisará inserir ambos ao se conectar ao destino.
 
 Leia a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) para obter mais informações sobre as permissões necessárias.
+
+>[!IMPORTANT]
+>
+>Este destino não dá suporte a contas do Snowflake que estejam atrás de um firewall ou que usem o [[!DNL Azure Private Link]](https://docs.snowflake.com/en/user-guide/privatelink-azure).
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
@@ -137,7 +138,7 @@ Para autenticar no destino, selecione **[!UICONTROL Connect to destination]** e 
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_batch_accountid"
->title="Insira sua ID da conta do Snowflake"
+>title="Digite o identificador da conta de compartilhamento de dados da Snowflake"
 >abstract="Se sua conta estiver vinculada a uma organização, use este formato: `OrganizationName.AccountName`<br><br> Se sua conta não estiver vinculada a uma organização, use este formato:`AccountName`"
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
@@ -146,10 +147,10 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 * **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Description]**: uma descrição que ajudará você a identificar este destino no futuro.
-* **[!UICONTROL Snowflake Account ID]**: sua ID de conta da Snowflake. Use o seguinte formato de ID de conta, dependendo se sua conta está vinculada a uma organização:
-   * Se sua conta estiver vinculada a uma organização:`OrganizationName.AccountName`.
-   * Se sua conta não estiver vinculada a uma organização:`AccountName`.
-* **[!UICONTROL Select Snowflake Region]**: selecione a região onde a instância do Snowflake está provisionada. Consulte a [documentação](https://docs.snowflake.com/en/user-guide/intro-regions) do Snowflake para obter informações detalhadas sobre as regiões de nuvem com suporte.
+* **[!UICONTROL Snowflake Account ID]**: Seu [Identificador Da Conta De Compartilhamento De Dados Do Snowflake](https://docs.snowflake.com/en/user-guide/admin-account-identifier#label-account-name-data-sharing). Use o seguinte formato, dependendo se sua conta está vinculada a uma organização:
+   * Se sua conta estiver vinculada a uma organização: digite o nome da organização e o nome da conta separados por um **período** (`.`). Por exemplo, se o nome da sua organização for ACME e o nome da sua conta for AsiaRegion, digite `ACME.AsiaRegion`.
+   * Se sua conta não estiver vinculada a uma organização: `AccountName`.
+* **[!UICONTROL Snowflake Region]**: selecione a região onde a instância do Snowflake está provisionada. Consulte a [documentação](https://docs.snowflake.com/en/user-guide/intro-regions) do Snowflake para obter informações detalhadas sobre as regiões de nuvem com suporte.
 * **[!UICONTROL Account acknowledgment]**: Depois de inserir seu **[!UICONTROL Snowflake Account ID]**, selecione **[!UICONTROL Yes]** nesta lista suspensa para confirmar se seu **[!UICONTROL Snowflake Account ID]** está correto e pertence a você.
 
 >[!IMPORTANT]
@@ -189,17 +190,12 @@ Os dados são transferidos para sua conta do Snowflake por meio de uma tabela di
 
 A tabela dinâmica contém as seguintes colunas:
 
-* **TS**: uma coluna de carimbo de data/hora que representa quando cada linha foi atualizada pela última vez
+* **TS**: uma coluna de carimbo de data/hora que indica quando cada linha da tabela compartilhada foi atualizada pela última vez
+* **ID da política de mesclagem**: a ID da [política de mesclagem](../../../profile/merge-policies/overview.md) à qual o público-alvo que está sendo ativado pertence
 * **Atributos de mapeamento**: todos os atributos de mapeamento selecionados durante o fluxo de trabalho de ativação são representados como um cabeçalho de coluna no Snowflake
 * **Associação de público-alvo**: a associação a qualquer público mapeado para o fluxo de dados é indicada por meio de uma entrada `active` na célula correspondente
 
-![Captura de tela mostrando a interface do Snowflake com dados da tabela dinâmica](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
-
-## Limitações conhecidas {#known-limitations}
-
-### Disponibilidade regional {#regional-availability}
-
-O destino em lote [!DNL Snowflake] está disponível no momento apenas para clientes do Real-Time CDP provisionados na região do Experience Platform VA7.
+![Captura de tela mostrando a interface do Snowflake com dados da tabela dinâmica](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
 
 ## Uso e governança de dados {#data-usage-governance}
 

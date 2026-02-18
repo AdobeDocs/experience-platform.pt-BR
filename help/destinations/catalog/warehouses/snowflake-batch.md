@@ -4,9 +4,9 @@ description: Crie um compartilhamento de dados em tempo real do Snowflake para r
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 89968d4e4c552b7c6b339a39f7a7224133446116
+source-git-commit: 2ad61b1b7e728429e047c4801b9a79e479a3aa18
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1735'
 ht-degree: 3%
 
 ---
@@ -152,6 +152,10 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
    * Se sua conta não estiver vinculada a uma organização: `AccountName`.
 * **[!UICONTROL Snowflake Region]**: selecione a região onde a instância do Snowflake está provisionada. Consulte a [documentação](https://docs.snowflake.com/en/user-guide/intro-regions) do Snowflake para obter informações detalhadas sobre as regiões de nuvem com suporte.
 * **[!UICONTROL Account acknowledgment]**: Depois de inserir seu **[!UICONTROL Snowflake Account ID]**, selecione **[!UICONTROL Yes]** nesta lista suspensa para confirmar se seu **[!UICONTROL Snowflake Account ID]** está correto e pertence a você.
+
+>[!NOTE]
+>
+> O fluxo de trabalho **[!UICONTROL Snowflake Account ID]** e **[!UICONTROL Snowflake Region]** não podem ser editados por meio do [destino de edição](../../ui/edit-destination.md) depois que você cria o destino. Para usar valores de conta ou região diferentes, [crie uma nova conexão de destino](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
 >

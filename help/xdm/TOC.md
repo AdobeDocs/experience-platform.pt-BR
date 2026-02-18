@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Explore uma visão geral do sistema do Experience Data Model (XDM) na Experience Platform e saiba como usar classes e grupos de campos de esquema para padronizar os dados de experiência.
 feature: Schemas
 role: Developer
-source-git-commit: 57981d2e4306b2245ce0c1cdd9f696065c508a1d
+source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
 workflow-type: tm+mt
-source-wordcount: '707'
-ht-degree: 20%
+source-wordcount: '711'
+ht-degree: 21%
 
 ---
 
@@ -19,6 +19,7 @@ ht-degree: 20%
 * Esquemas {#schema}
    * [Noções básicas da composição do esquema](schema/composition.md)
    * [Práticas recomendadas de modelagem de dados](schema/best-practices.md)
+   * [Planejamento para ativação de perfil](./schema/profile-enablement-planning.md)
    * [Dados sensíveis e pessoais](./schema/sensitive-and-personal-data.md)
    * [Restrições de tipo de campo XDM](schema/field-constraints.md)
    * [Esquema relacional](./schema/relational.md)
@@ -81,10 +82,10 @@ ht-degree: 20%
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Medicação](./classes/medication.md)
    * [Pagador](./classes/payer.md)
-   * [Plano](./classes/plan.md)
+   * [Planejar ](./classes/plan.md)
    * [Política](./classes/policy.md)
    * [Produto](./classes/product.md)
-   * [Potencial](./classes/prospect.md)
+   * [Cliente potencial](./classes/prospect.md)
    * [Provedor](./classes/provider.md)
    * [Definição do segmento](./classes/segment-definition.md)
    * Classes B2B {#b2b}
@@ -146,7 +147,7 @@ ht-degree: 20%
       * [Detalhes dos membros da campanha de negócios XDM](./field-groups/b2b-campaign-members/details.md)
    * Medicação {#medication}
       * [Medicação para tratamento de saúde](./field-groups/medication/healthcare-medication.md)
-   * Plano {#plan}
+   * Planejar  {#plan}
       * [Detalhes do plano de saúde](./field-groups/plan/healthcare-plan-details.md)
    * Produto {#product}
       * [Catálogo de produtos](./field-groups/product/product-catalog.md)
@@ -194,7 +195,7 @@ ht-degree: 20%
    * [Coordenadas geográficas](./data-types/geo-coordinates.md)
    * [Forma geográfica](./data-types/geo-shape.md)
    * [Detalhes de Interação Geográfica](./data-types/geo-interaction-details.md)
-   * [Geo](./data-types/geo.md)
+   * [Geografia](./data-types/geo.md)
    * [Identidade](./data-types/identity.md)
    * [Detalhes da implementação](./data-types/implementation-details.md)
    * [Impressões](./data-types/impressions.md)
@@ -228,13 +229,13 @@ ht-degree: 20%
    * [Coleção de Detalhes da Sessão](./data-types/session-details-collection.md)
    * [Relatório de detalhes da sessão](./data-types/session-details-reporting.md)
    * [Envio](./data-types/shipping.md)
-   * [Inscrição](./data-types/subscription.md)
+   * [Assinatura](./data-types/subscription.md)
    * [Assinatura de serviço de telecomunicação](./data-types/telecom-subscription.md)
    * [Transação](./data-types/transaction.md)
    * [Informações da Web](./data-types/web-information.md)
    * [Interação na Web](./data-types/web-interaction.md)
    * [Detalhes da página da Web](./data-types/webpage-details.md)
-* IU [!UICONTROL Schemas] {#ui}
+* Interface do [!UICONTROL Schemas] {#ui}
    * [Visão geral](./ui/overview.md)
    * [Explorar recursos do XDM](./ui/explore.md)
    * Criar e editar recursos {#resources}

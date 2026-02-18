@@ -71,7 +71,7 @@ Os pré-requisitos dependem dos tipos de identidade que você planeja usar para 
 
 **Para o direcionamento baseado em cookies em[!DNL The Trade Desk]**, verifique se foi estabelecido um mapeamento entre a ECID e [!DNL Trade Desk ID]. Conclua as etapas abaixo para fazer isso:
 
-1. **Habilitar a funcionalidade de sincronização de ID**: se esta for a primeira vez que você configura a ativação do [!DNL The Trade Desk ID] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), contate a Adobe Consulting ou o Atendimento ao Cliente para habilitar as sincronizações de ID.
+1. **Habilitar a funcionalidade de sincronização de ID**: se esta for a primeira vez que você configura a ativação do [!DNL The Trade Desk ID] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/pt-br/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), contate a Adobe Consulting ou o Atendimento ao Cliente para habilitar as sincronizações de ID.
    * Se você tiver configurado previamente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID existentes serão automaticamente transferidas para o Experience Platform.
 
 2. **Instrumentar suas páginas da Web**: implemente o código em suas páginas da Web para criar mapeamentos entre o [!DNL The Trade Desk ID] e a Adobe ECID. Isso permite que o Experience Platform associe IDs da Trade Desk aos perfis do cliente.
@@ -125,7 +125,7 @@ Ao mapear públicos-alvo, a Adobe recomenda usar o nome do público-alvo do Expe
 >id="platform_destinations_required_mappings_ttd"
 >title="Conjuntos de mapeamento pré-configurados"
 >abstract="Pré-configuramos esses quatro conjuntos de mapeamento para você. Quando você ativa dados para a Trade Desk, os perfis qualificados para os públicos ativados não precisam necessariamente ter todas as quatro identidades presentes nos perfis, pois esse destino funcionará com qualquer uma das identidades de destino mostradas aqui. <br> Para direcionamento baseado em cookies e baseado na Trade Desk ID, é necessário ter a ECID presente no perfil e um mapeamento de sincronização de ID entre a Trade Desk ID e a ECID."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Leia mais sobre os mapeamentos pré-configurados"
+>additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Leia mais sobre os mapeamentos pré-configurados"
 
 Os seguintes mapeamentos de identidade são **pré-configurados e preenchidos automaticamente** para você no fluxo de trabalho de ativação de público-alvo:
 

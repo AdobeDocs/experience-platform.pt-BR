@@ -1,8 +1,8 @@
 ---
-title: Notas da versão de janeiro de 2026 da Adobe Experience Platform
-description: As notas da versão de janeiro de 2026 da Adobe Experience Platform.
+title: Notas da versão de fevereiro de 2026 da Adobe Experience Platform
+description: Notas da versão de fevereiro de 2026 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fda9bb00dd77115c8085492cbf5883c0533588d8
+source-git-commit: 7cb35f5b35878b655dc668c0b26e22a41d675161
 workflow-type: tm+mt
 source-wordcount: '460'
 ht-degree: 30%
@@ -18,8 +18,8 @@ ht-degree: 30%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 17 de fevereiro de 2026**
 
@@ -41,7 +41,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../observability/home.md) do [!DNL Observability Insights] .
+Para obter mais informações, leia a visão geral](../../observability/home.md) do [[!DNL Observability Insights] .
 
 ## Destinos {#destinations}
 

@@ -30,7 +30,7 @@ Ao [definir um novo campo](./overview.md#define) na interface do usuário do Ado
 
 Este documento aborda como definir enumerações e valores sugeridos no espaço de trabalho da interface do usuário [!UICONTROL Schemas]. Para obter uma visão geral rápida sobre enumerações e valores sugeridos, incluindo como configurá-los na interface do usuário e seus efeitos downstream, assista ao seguinte vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/3409501/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3417877/?captions=por_br&quality=12&learn=on)
 
 ## Definir um enum {#enum}
 

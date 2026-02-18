@@ -285,4 +285,4 @@ Este documento forneceu uma visão geral de como gerenciar as políticas de uso 
 
 O vídeo a seguir fornece uma demonstração de como trabalhar com políticas de uso na interface do usuário do [!DNL Experience Platform]:
 
->[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/37143?captions=por_br&quality=12&learn=on)

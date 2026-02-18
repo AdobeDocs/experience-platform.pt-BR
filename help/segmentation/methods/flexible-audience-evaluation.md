@@ -326,7 +326,7 @@ Depois de confirmar que os públicos-alvo corretos estão listados, você pode c
 
 O vídeo a seguir demonstra como acessar e usar a avaliação de público-alvo flexível no Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453640?)
+>[!VIDEO](https://video.tv.adobe.com/v/3453645?captions=por_br&)
 
 ## Perguntas frequentes {#faq}
 

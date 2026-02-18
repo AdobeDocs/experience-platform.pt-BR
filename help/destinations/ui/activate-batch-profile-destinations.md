@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
+source-git-commit: 8019f7426f6e6dd3faef131ada8e307c1d075556
 workflow-type: tm+mt
-source-wordcount: '4578'
+source-wordcount: '4783'
 ht-degree: 10%
 
 ---
@@ -182,6 +182,29 @@ Use a opção **[!UICONTROL Scheduled]** para que o trabalho de ativação seja 
 
 4. Selecione **[!UICONTROL Create]** para salvar o cronograma.
 
+### Noções básicas sobre o comportamento de exportação programado {#export-behavior}
+
+As exportações programadas incluem dados de instantâneo do público-alvo, além de quaisquer alterações incrementais de perfil ou identidade que ocorram entre a criação do instantâneo e o momento da exportação. Isso é diferente de [exportações sob demanda](export-file-now.md), que usam apenas dados de instantâneo.
+
+A tabela a seguir destaca como as exportações programadas diferem das exportações sob demanda, particularmente em termos de atualização de dados e uso pretendido:
+
+|  | Exportações programadas | Exportar arquivo agora |
+|--------|-------------------|-----------------|
+| **Fonte de dados** | Instantâneo + alterações incrementais | Somente instantâneo |
+| **Atributos do perfil** | Valores atuais no momento da exportação | Valores no momento do instantâneo |
+
+Se os perfis forem atualizados após a avaliação do público-alvo, as exportações agendadas incluirão os valores de atributo atualizados, mesmo que a associação do público-alvo tenha sido determinada no momento da avaliação.
+
+**Exemplo**: um público-alvo para &quot;perfis em que retailID é nulo&quot; poderá exportar perfis com retailID preenchido se esse campo tiver sido atualizado *após* a avaliação, mas *antes* da exportação agendada.
+
+**Recomendações**
+
+* Configurar uma [chave de desduplicação](#deduplication-keys) para impedir registros duplicados
+* Usar exportações sob demanda para dados exatos baseados em instantâneos
+* Alinhar a assimilação em lote com programações de avaliação para minimizar discrepâncias
+
+Para exportações sob demanda, consulte a documentação em [exportando arquivos sob demanda](/help/destinations/ui/export-file-now.md#scheduled-vs-ondemand).
+
 ### Exportar arquivos incrementais
 
 >[!CONTEXTUALHELP]
@@ -338,7 +361,11 @@ Recomenda-se que um dos atributos seja um [identificador exclusivo](../../destin
 >title="Sobre chaves de desduplicação"
 >abstract="Elimine vários registros do mesmo perfil nos arquivos de exportação selecionando uma chave de desduplicação. Selecione um namespace único ou até dois atributos de esquema XDM como chave de desduplicação. Não selecionar uma chave de desduplicação pode gerar entradas de perfil duplicadas nos arquivos de exportação."
 
-Uma chave de desduplicação é uma chave primária definida pelo usuário que determina a identidade pela qual os usuários desejam que seus perfis sejam desduplicados.&#x200B;
+>[!IMPORTANT]
+>
+>Sempre configure uma chave de desduplicação para exportações agendadas. Sem a desduplicação, você pode ver linhas duplicadas ou associação de segmento conflitante para o mesmo perfil, pois as exportações programadas processam dados instantâneos e incrementais.
+
+Uma chave de desduplicação é uma chave primária definida pelo usuário que determina como os perfis são desduplicados. Quando existem vários registros para o mesmo indivíduo, a desduplicação garante que somente o registro mais recente seja exportado.
 
 As chaves de desduplicação eliminam a possibilidade de ter vários registros do mesmo perfil em um arquivo de exportação.
 
@@ -469,7 +496,7 @@ A Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 
 ### Comportamento de desduplicação para perfis com o mesmo carimbo de data e hora {#deduplication-same-timestamp}
 
-Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Principais considerações
 
@@ -544,7 +571,7 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 
 >[!IMPORTANT]
 > 
->Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa &#x200B;](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
+>Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa ](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
 >
 >Esta etapa **[!UICONTROL Select attributes]** ainda é exibida para os destinos de marketing por email do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 

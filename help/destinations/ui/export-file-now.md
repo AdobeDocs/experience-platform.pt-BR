@@ -3,10 +3,10 @@ title: Exportar arquivos sob demanda para destinos em lote usando a interface do
 type: Tutorial
 description: Saiba como exportar arquivos por demanda para destinos em lote usando a interface do usuário do Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 111f6d5093a0b66a683745b1da8d8909eb17f7eb
+source-git-commit: c7e6de2db416592ca9340fefadd53709fe71b058
 workflow-type: tm+mt
-source-wordcount: '684'
-ht-degree: 8%
+source-wordcount: '805'
+ht-degree: 5%
 
 ---
 
@@ -26,9 +26,26 @@ ht-degree: 8%
 
 Este artigo explica como usar a interface do Experience Platform para exportar arquivos sob demanda para destinos em lote, como destinos de [armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md) e [marketing por email](/help/destinations/catalog/email-marketing/overview.md).
 
-O controle **[!UICONTROL Export file now]** permite exportar um arquivo completo sem interromper o agendamento de exportação atual de um público agendado anteriormente. Essa exportação ocorre além das exportações previamente agendadas e não altera a frequência de exportação do público-alvo. A exportação de arquivos é acionada imediatamente e obtém os resultados mais recentes das execuções de segmentação da Experience Platform.
+O controle **[!UICONTROL Export file now]** permite exportar um arquivo completo sem interromper o agendamento de exportação atual de um público agendado anteriormente. Essa exportação ocorre além das exportações previamente agendadas e não altera a frequência de exportação do público-alvo.
+
+A exportação de arquivo é acionada imediatamente e usa apenas os dados do instantâneo de avaliação de público mais recente. Não inclui alterações de perfil ou identidade que ocorram após a criação do instantâneo. Por outro lado, as exportações agendadas incluem dados de instantâneo e alterações incrementais que ocorrem entre a criação do instantâneo e o momento da exportação.
 
 Também é possível usar as APIs do Experience Platform para essa finalidade. Leia como [ativar públicos-alvo sob demanda para destinos em lote por meio da API de ativação ad-hoc](/help/destinations/api/ad-hoc-activation-api.md).
+
+## Exportações agendadas versus exportações sob demanda {#scheduled-vs-ondemand}
+
+As exportações sob demanda e as exportações programadas usam fontes de dados diferentes, o que pode resultar em diferenças nos dados exportados. Consulte a tabela abaixo para entender o que é exportado em cada caso.
+
+|  | Exportar arquivo agora | Exportações programadas |
+|--------|-----------------|-------------------|
+| **Fonte de dados** | Somente instantâneo | Instantâneo + alterações incrementais |
+| **Atributos do perfil** | Valores no momento do instantâneo | Valores atuais no momento da exportação |
+
+>[!NOTE]
+>
+>As exportações agendadas podem mostrar contagens de perfil ou valores de atributo diferentes das exportações sob demanda, pois incluem atualizações de perfil que ocorrem após a avaliação do público-alvo.
+
+Para obter mais informações, consulte [Noções básicas sobre o comportamento de exportação agendado](/help/destinations/ui/activate-batch-profile-destinations.md#export-behavior).
 
 ## Pré-requisitos {#prerequisites}
 

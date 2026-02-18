@@ -2,9 +2,9 @@
 description: Esta página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
 title: Formato da mensagem
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: b5d8a1c31705ffe72dadc4fff8626acb7081444a
 workflow-type: tm+mt
-source-wordcount: '2489'
+source-wordcount: '2488'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Para entender o formato da mensagem e o processo de configuração e transforma�
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -37,7 +37,7 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 Esta página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
 
-O Adobe Experience Platform exporta dados para um número significativo de destinos, em vários formatos de dados. Alguns exemplos de tipos de destino são plataformas de publicidade (Google), redes sociais (Facebook) e locais de armazenamento na nuvem (Amazon S3, Hubs de Eventos do Azure).
+O Adobe Experience Platform exporta dados para um número significativo de destinos, em vários formatos de dados. Alguns exemplos de tipos de destino são plataformas de publicidade (Google), redes sociais (Facebook) e locais de armazenamento na nuvem (Amazon S3, Hubs de eventos da Azure).
 
 O Experience Platform pode ajustar o formato da mensagem de perfis exportados para corresponder ao formato esperado no seu lado. Para entender essa personalização, os seguintes conceitos são importantes:
 
@@ -1032,7 +1032,6 @@ Se você usar a [agregação configurável](../../functionality/destination-conf
 Os valores possíveis são:
 
 * realizado
-* existente
 * encerrado
 
 Adicione a linha abaixo ao modelo para adicionar ou remover perfis de segmentos, com base nos valores acima:

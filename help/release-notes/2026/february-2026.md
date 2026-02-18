@@ -1,10 +1,11 @@
 ---
 title: Notas da versão de fevereiro de 2026 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2026 da Adobe Experience Platform.
-source-git-commit: afb1e0266b4c5485ba574f95aab3a56485d176b3
+exl-id: a677026f-e07e-4e69-bd6c-5ddcb13e8e38
+source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
 workflow-type: tm+mt
-source-wordcount: '460'
-ht-degree: 30%
+source-wordcount: '606'
+ht-degree: 32%
 
 ---
 
@@ -17,8 +18,8 @@ ht-degree: 30%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 17 de fevereiro de 2026**
 
@@ -27,6 +28,7 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 - [Alertas](#alerts)
 - [Destinos](#destinations)
 - [Fontes](#sources)
+- [Experience Data Model (XDM)](#xdm)
 
 ## Alertas {#alerts}
 
@@ -40,7 +42,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../observability/home.md) do [!DNL Observability Insights] .
+Para obter mais informações, leia a visão geral](../../observability/home.md) do [[!DNL Observability Insights] .
 
 ## Destinos {#destinations}
 
@@ -78,3 +80,14 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 {style="table-layout:auto"}
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).
+
+
+## Experience Data Model (XDM) {#xdm}
+
+O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Experience Platform. Ao aderir aos padrões do XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de maneira mais rápida e integrada. Você pode obter insights valiosos sobre ações de clientes, definir públicos-alvo por meio de segmentos e usar atributos de clientes para fins de personalização.
+
+| Recurso | Descrição |
+| --- | --- |
+| Edição restrita para esquemas com conjuntos de dados | A edição de operações que resultam em alterações de quebra agora é restrita assim que um conjunto de dados existe para um esquema. Quando um conjunto de dados é associado, não é mais possível renomear ou excluir campos, alterar tipos ou formatos de dados de campo, modificar descritores de identidade, gerenciar campos relacionados para remover campos existentes ou alterar a classe atribuída; alterações aditivas e reprovação de campo permanecem compatíveis. |
+
+Para obter mais informações, leia a [visão geral do XDM](../../xdm/home.md).

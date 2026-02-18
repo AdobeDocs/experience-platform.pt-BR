@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral do serviço de consulta
 description: Saiba mais sobre a função do Serviço de consulta no Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 161de7f9692cdd219d73a1a301f891cf9636a2e9
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 0%
 
 O Adobe Experience Platform assimila dados de várias fontes. Um grande desafio para os profissionais de marketing é utilizar esses dados para obter insights sobre seus clientes. Para consultar dados no Experience Platform, você pode usar o SQL padrão e o Serviço de consulta do Adobe Experience Platform. Você pode usar o Serviço de Consulta para ingressar em qualquer conjunto de dados no data lake e capturar os resultados da consulta como um novo conjunto de dados para usar em relatórios, aprendizado de máquina ou para assimilação no [!DNL Real-Time Customer Profile]. Este documento fornece uma visão geral da função do Serviço de consulta no Experience Platform.
 
-Você pode usar o Serviço de consulta para conectar a jornada de cliente online a offline e entender a atribuição omnicanal para sua marca. O vídeo a seguir mostra como uma empresa baseada em experiências pode usar o Serviço de consulta para tratar dos principais casos de uso e como esse Serviço funciona.
+Você pode usar o Serviço de consulta para conectar a jornada de cliente online a offline e entender a atribuição omnicanal para sua marca. O vídeo a seguir mostra como uma empresa baseada em experiência pode usar o Serviço de consulta para tratar dos principais casos de uso e explica como o Serviço de consulta funciona.
 
->[!VIDEO](https://video.tv.adobe.com/v/33187?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
 
 ## Uso do Serviço de consulta {#usage}
 
 Para analisar seus dados, crie e execute consultas SQL com a interface do usuário do Serviço de consulta ou com a API RESTful.
-Com a interface do serviço de consulta, é possível gravar, executar e agendar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização. Você também pode testar suas consultas antes de executá-las em seu conjunto de dados mais amplo com o Editor de consultas. Consulte o [Guia da Interface do Usuário do Serviço de Consulta](ui/overview.md) para obter uma visão geral da funcionalidade da interface do usuário.
+Com a interface do serviço de consulta, é possível gravar, executar e agendar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização. Você também pode testar suas consultas antes de executá-las em seu conjunto de dados mais amplo com o Editor de consultas. Consulte o [Guia da Interface do Usuário do Serviço de Consulta] (ui/overview.md) para obter uma visão geral da funcionalidade da interface do usuário.
 
 A API RESTful fornece uma experiência semelhante. Você pode usar a API do Serviço de consulta para gravar e executar consultas de forma programática, criar e salvar modelos para consultas que você deseja adaptar ou agendar consultas para execução automatizada. Consulte o [Guia do desenvolvedor do Serviço de Consulta](api/getting-started.md) para obter mais informações sobre o uso da API do Serviço de Consulta.
 
@@ -34,11 +34,11 @@ Para começar rapidamente a usar os recursos do Serviço de consulta, é recomen
 
 ## Serviços de query e serviços do Experience Platform {#experience-platform-services}
 
-O Serviço de consulta interage e pode ser usado com vários serviços da Experience Platform. Para aproveitar ao máximo os recursos do Serviço de consulta, você deve se familiarizar com esses serviços e como eles interagem com o Serviço de consulta. A [página de aterrissagem da documentação do Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html?lang=pt-BR) fornece resumos e links para os recursos da plataforma.
+O Serviço de consulta interage e pode ser usado com vários serviços da Experience Platform. Para aproveitar ao máximo os recursos do Serviço de consulta, você deve se familiarizar com esses serviços e como eles interagem com o Serviço de consulta. A [página de aterrissagem da documentação do Experience Platform] (https://experienceleague.adobe.com/docs/experience-platform.html) fornece resumos e links para os recursos da plataforma.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-O Adobe Experience Platform [!DNL Data Science Workspace] usa aprendizado de máquina e inteligência artificial para obter insights dos dados armazenados no Experience Platform. Os cientistas de dados podem usar o [!DNL Data Science Workspace] para criar receitas com base em dados de registro e série temporal sobre clientes e suas atividades. Essas receitas facilitam previsões, como propensão de compra e ofertas recomendadas que o indivíduo provavelmente apreciará e usará. Você pode usar o SQL dentro de [!DNL Data Science Workspace] integrando o Serviço de Consulta ao [!DNL JupyterLab] para explorar, transformar e analisar dados do Adobe Analytics. Leia a [[!DNL Data Science Workspace] visão geral](../data-science-workspace/home.md) e o [guia de conexão do Jupyter Notebook](./clients/jupyter-notebook.md) para obter mais informações sobre como o [!DNL Data Science Workspace] interage com o Serviço de Consulta.
+O Adobe Experience Platform [!DNL Data Science Workspace] usa aprendizado de máquina e inteligência artificial para obter insights dos dados armazenados no Experience Platform. Os cientistas de dados podem usar o [IDNL Data Science Workspace] para criar receitas com base em dados de registro e série temporal sobre clientes e suas atividades. Essas receitas facilitam previsões, como propensão de compra e ofertas recomendadas que o indivíduo provavelmente apreciará e usará. Você pode usar o SQL dentro de [!DNL Data Science Workspace] integrando o Serviço de Consulta ao [!DNL JupyterLab] para explorar, transformar e analisar dados do Adobe Analytics. Leia a [[!DNL Data Science Workspace] visão geral](../data-science-workspace/home.md) e o [guia de conexão do Jupyter Notebook](./clients/jupyter-notebook.md) para obter mais informações sobre como o [!DNL Data Science Workspace] interage com o Serviço de Consulta.
 
 ### [!DNL Segmentation Service] {#segmentation}
 
@@ -54,7 +54,7 @@ Este exemplo de abandono de navegação [se concentra no uso dos dados do Adobe 
 
 ## Gerar insights com painéis personalizados {#custom-dashboards}
 
-Com o Adobe Experience Platform, você pode assimilar, armazenar, estruturar e obter todos os conjuntos de dados armazenados, incluindo dados comportamentais, de CRM e de ponto de venda. Com o [!DNL Experience Platform's Query Service], você pode consultar esses conjuntos de dados, responder a perguntas específicas sobre os negócios e começar a gerar insights de impacto. Saiba como criar e gerenciar painéis personalizados, nos quais você pode criar, adicionar e editar widgets de forma personalizada para visualizar as métricas principais com [painéis definidos pelo usuário](../dashboards/standard-dashboards.md). Você pode até [personalizar seus próprios relatórios do Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) para casos de uso de marketing e KPI usando consultas SQL com os Modelos de Dados do Real-Time Customer Data Platform Insights.
+Com o Adobe Experience Platform, você pode assimilar, armazenar, estruturar e obter todos os conjuntos de dados armazenados, incluindo dados comportamentais, de CRM e de ponto de venda. Com o Serviço de consulta, você pode consultar esses conjuntos de dados e responder a perguntas comerciais específicas, gerando insights de impacto. Saiba como criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets de forma personalizada para visualizar as métricas principais com [painéis definidos pelo usuário](../dashboards/standard-dashboards.md). Você também pode [personalizar seus próprios relatórios do Real-Time CDP](../dashboards/data-models/cdp-insights-data-model-b2c.md) para seus casos de uso de marketing e KPI usando consultas SQL com os Modelos de Dados do Real-Time Customer Data Platform Insights.
 
 ## Próximas etapas e recursos adicionais
 
@@ -66,4 +66,4 @@ Ao ler este documento, você foi introduzido ao Serviço de consulta e a como el
 
 Para preparar-se melhor para executar consultas, assista ao vídeo a seguir. Este vídeo compartilha dicas e práticas recomendadas para executar consultas na interface do editor de consultas, clientes PSQL, soluções de business intelligence (BI) e a API HTTP.
 
->[!VIDEO](https://video.tv.adobe.com/v/33186?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/29811?quality=12&learn=on)

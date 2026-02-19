@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 11ef8fe8b64a7c2bb698c62093aafe3fb11d3789
+source-git-commit: 67dec10b0d1343fffd522ee3e615ac2823894a67
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1755'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Esta página fornece limites de uso e taxa padrão em relação ao comportamento de ativação. Ao revisar as medidas de proteção a seguir, presume-se que você [esteja conectado corretamente aos destinos](/help/destinations/ui/connect-destination.md).
 
@@ -50,7 +50,7 @@ As medidas de proteção abaixo geralmente se aplicam à ativação por meio de 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
 | Número máximo de públicos-alvo para um único destino | 250 | Proteção de desempenho | A recomendação é mapear um máximo de 250 públicos-alvo para um único destino em um fluxo de dados. <br><br> Se precisar ativar mais de 250 públicos-alvo para um destino, você pode: <ul><li> Desmapeie os públicos-alvo que você não deseja mais ativar ou</li><li>Crie um novo fluxo de dados para o destino desejado e mapeie os públicos para esse novo fluxo de dados.</li></ul> <br> Observe que, no caso de alguns destinos, você pode estar limitado a menos de 250 públicos-alvo mapeados para o destino. Esses destinos são chamados mais abaixo na página, em suas respectivas seções. |
-| Número máximo de atributos mapeados para um destino | 50  | Proteção de desempenho | No caso de vários destinos e tipos de destino, é possível selecionar atributos de perfil e identidades para mapear para exportação. Para um desempenho ideal, no máximo 50 atributos devem ser mapeados em um fluxo de dados para um destino. |
+| Número máximo de atributos mapeados para um destino | 50 | Proteção de desempenho | No caso de vários destinos e tipos de destino, é possível selecionar atributos de perfil e identidades para mapear para exportação. Para um desempenho ideal, no máximo 50 atributos devem ser mapeados em um fluxo de dados para um destino. |
 | Número máximo de destinos | 100 | Proteção imposta pelo sistema | É possível criar um máximo de 100 destinos aos quais você pode conectar e ativar dados, *por sandbox*. [Os destinos de personalização do Edge (Personalização personalizada)](#edge-destinations-activation) podem representar, no máximo, 10 dos 100 destinos recomendados. |
 | Tipo de dados ativados para destinos | Dados de perfil, incluindo identidades e mapa de identidade | Proteção imposta pelo sistema | Atualmente, só é possível exportar *atributos de registro de perfil* para destinos. No momento, não há suporte para atributos XDM que descrevem dados de evento para exportação. |
 | Tipo de dados ativados para destinos — suporte a atributos de array e mapa | Parcialmente disponível | Proteção imposta pelo sistema | Você pode exportar atributos de matriz para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based). [Leia mais](/help/destinations/ui/export-arrays-maps-objects.md) sobre a funcionalidade. |
@@ -76,7 +76,7 @@ As medidas de proteção abaixo se aplicam à ativação por meio de [destinos e
 | Frequência de ativação | Uma exportação completa diária ou exportações incrementais mais frequentes a cada 3, 6, 8 ou 12 horas. | Proteção imposta pelo sistema | Leia as seções de documentação de [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) para obter mais informações sobre os incrementos de frequência para exportações em lote. |
 | Número máximo de públicos que podem ser exportados em uma determinada hora | 100 | Proteção de desempenho | A recomendação é adicionar no máximo 100 públicos-alvo aos fluxos de dados de destino em lote. |
 | Número máximo de linhas (registros) por arquivo a serem ativados | 5 milhões | Proteção imposta pelo sistema | O Adobe Experience Platform divide automaticamente os arquivos exportados em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil. Nomes de arquivos divididos são anexados com um número que indica que o arquivo é parte de uma exportação maior, como: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Para obter mais informações, leia a [seção de agendamento](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) do tutorial ativar destinos em lote. |
-| Número máximo de públicos-alvo de upload personalizados para ativar em um fluxo de dados | 10 | Proteção imposta pelo sistema | Ao ativar [públicos-alvo personalizados](/help/segmentation/ui/audience-portal.md#import-audience) para destinos baseados em arquivo em lote, há um limite de 10 desses públicos-alvo que você pode ativar em um fluxo de dados. Leia mais sobre o fluxo de trabalho para [ativar públicos-alvo de carregamento personalizado para destinos baseados em arquivo em lote](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Número máximo de públicos-alvo externos (por exemplo, FAC, upload personalizado, Composição de público-alvo) que podem ser ativados em um fluxo de dados | 10 | Proteção imposta pelo sistema | Ao ativar públicos externos (por exemplo, [Composição de Público Federado](/help/segmentation/ui/audience-portal.md#fac), [carregamento personalizado](/help/segmentation/ui/audience-portal.md#import-audience), [Composição de Público](/help/segmentation/ui/audience-portal.md#audience-composition)) para destinos baseados em arquivo em lote, há um limite de 10 desses públicos que você pode ativar em um fluxo de dados. Consulte [Tipos de público-alvo e personalização](/help/segmentation/ui/audience-portal.md#customize) para obter mais informações sobre esses tipos de público-alvo. Leia mais sobre o fluxo de trabalho para [ativar públicos externos para destinos baseados em arquivo em lote](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -196,7 +196,7 @@ Detalhes sobre limites ou limitações de limitação para determinados destinos
 Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=pt-BR#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

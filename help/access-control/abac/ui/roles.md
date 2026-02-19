@@ -1,18 +1,22 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;controle de acesso;controle de acesso baseado em atributo;;home;popular topics;access control;attribute-based access control;ABAC
 title: Controle de acesso baseado em atributos Criar uma função
-description: Este documento fornece informações sobre como gerenciar funções por meio da interface de Permissões no Adobe Experience Cloud
+description: Gerencie funções por meio da interface de Permissões na Adobe Experience Cloud.
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: b665d0edce713f1b252e07125aabab79d52a9cba
 workflow-type: tm+mt
-source-wordcount: '594'
-ht-degree: 24%
+source-wordcount: '737'
+ht-degree: 13%
 
 ---
 
 # Gerenciar funções
 
-As funções definem o acesso que um(a) admin, especialista ou usuário final tem aos recursos em sua organização. Em um ambiente de controle de acesso baseado em funções, o provisionamento de acesso do usuário é agrupado por meio de responsabilidades e necessidades comuns. Uma função tem um determinado conjunto de permissões, e os membros da organização podem ter uma ou mais funções atribuídas, dependendo do escopo do acesso de visualização ou gravação necessário.
+<!-- UPDATE ROLES WITH A MORE COMPREHENSIVE EXPLANATION -->
+
+Para começar a gerenciar funções, navegue até **[!UICONTROL Permissions]** no [Adobe Experience Cloud](https://experience.adobe.com/){target="_blank"} e selecione **[!UICONTROL Roles]** no painel esquerdo.
+
+![O espaço de trabalho de Funções dentro das Permissões.](../../images/ui/roles/roles-overview.png)
 
 ## Criar uma nova função {#create-new-role}
 
@@ -20,80 +24,84 @@ As funções definem o acesso que um(a) admin, especialista ou usuário final te
 >id="platform_permissions_roles_about_create"
 >title="Criar nova função"
 >abstract="Crie novas funções para categorizar melhor os usuários que interagem com sua instância da Experience Platform. Por exemplo, é possível criar uma função para uma equipe interna de marketing e aplicar o rótulo de dados de saúde regulamentados (RHD) a essa função, permitindo que sua equipe de marketing interna acesse informações de saúde protegidas (PHI). Como alternativa, também é possível criar uma função para uma agência externa e negar o acesso dela aos dados de PHI por não aplicar o rótulo RHD a essa função."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR" text="Gerenciar uma função"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Gerenciar uma função"
 >additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Aplicar rótulos a uma função"
 
-Para criar uma nova função, selecione a guia **[!UICONTROL Roles]** na barra lateral e selecione **[!UICONTROL Create Role]**.
+Para criar uma nova função, selecione **[!UICONTROL Create role]**.
 
-![flac-new-role](../../images/flac-ui/flac-new-role.png)
+>[!TIP]
+>
+>As funções somente leitura estão disponíveis prontas para uso. Uma função somente leitura é aquela que concede ao usuário a capacidade de exibir dados, configuração e recursos da interface do usuário sem nenhuma capacidade de alterar o estado do sistema. Os administradores não podem editar essas funções, mas podem associar usuários às funções.
 
-A caixa de diálogo **[!UICONTROL Create a new role]** é exibida, solicitando que você insira um nome e uma descrição opcional.
+![O espaço de trabalho da Função com a opção Criar função foi realçada.](../../images/ui/roles/roles-create-role.png)
 
-Quando terminar, selecione **[!UICONTROL Confirm]**.
+A caixa de diálogo **[!UICONTROL Create new role]** é exibida. Insira um **[!UICONTROL Name]** para a função e, opcionalmente, um **[!UICONTROL Description]** e selecione **[!UICONTROL Confirm]**.
 
-![flac-create-new-role](../../images/flac-ui/flac-create-new-role.png)
+![A caixa de diálogo Criar novas funções com o Nome e a Descrição preenchidos e a opção Confirmar realçada.](../../images/ui/roles/roles-create-new-role.png)
 
-Em seguida, selecione as permissões de recurso que deseja incluir na função usando o menu suspenso.
+O espaço de trabalho **[!UICONTROL Resources]** é exibido. Localize o recurso necessário rolando a tela ou inserindo o nome do recurso na barra de pesquisa no painel esquerdo. Adicione recursos selecionando o ![ícone de adição](/help/images/icons/plus.png) ao lado do nome do recurso.
 
-![flac-add-role-permission](../../images/flac-ui/flac-add-role-permission.png)
+![O espaço de trabalho Recursos com a opção Adicionar de um recurso individual foi realçado.](../../images/ui/roles/roles-resources.png)
 
-Para adicionar recursos extras, selecione **[!UICONTROL Adobe Experience Platform]** no painel de navegação esquerdo, que exibe uma lista de recursos. Como alternativa, insira o nome do recurso na barra de pesquisa no painel de navegação esquerdo.
+<!-- ADD IN NOTE ABOUT THE DEFAULT SANDBOX - THIS SHOULD BE MENTIONED IN THE HIGHER LEVEL DOCS, WE MAY BE ABLE TO LINK TO IT -->
 
-![flac-add-additional-resources](../../images/flac-ui/flac-add-additional-resources.png)
+O recurso é adicionado ao espaço de trabalho principal. Selecione a lista suspensa ao lado do nome do recurso e selecione as permissões que deseja adicionar à função. Você pode escolhê-las individualmente, selecionar **[!UICONTROL Add all]** ou localizar permissões específicas digitando o nome da permissão na barra de pesquisa.
 
-Clique e arraste o recurso relevante e solte no painel principal.
+![O espaço de trabalho Recursos com um menu suspenso de recurso individual foi expandido e realçado.](../../images/ui/roles/roles-resources-permissions.png)
 
-![flac-additional-resources-Added](../../images/flac-ui/flac-additional-resources-added.png)
+Continue selecionando todos os recursos e permissões que deseja adicionar à função. Quando terminar, selecione **[!UICONTROL Save]**.
 
-Selecione as permissões de recurso que deseja incluir na função usando o menu suspenso. Repita isso para todos os recursos que você deseja incluir na função. Quando terminar, selecione **[!UICONTROL Save and exit]**.
+![O espaço de trabalho Recursos com a opção Salvar foi realçado.](../../images/ui/roles/roles-resources-permissions-save.png)
 
-![flac-save-resources](../../images/flac-ui/flac-save-resources.png)
+Você receberá um alerta mostrando que a função foi salva com sucesso. Selecione **[!UICONTROL Close]** para retornar ao espaço de trabalho **[!UICONTROL Roles]**.
+
+![O espaço de trabalho Recursos com o alerta de êxito e a opção Fechar realçada.](../../images/ui/roles/roles-resources-permissions-close.png)
 
 A nova função foi criada com êxito, e você será redirecionado para a página **[!UICONTROL Roles]**, onde verá que a função recém-criada aparece na lista.
 
-![flac-role-saved](../../images/flac-ui/flac-role-saved.png)
+<!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
 
-Consulte as seções sobre [gerenciamento de permissões para uma função](#manage-permissions-for-a-role) para obter mais detalhes sobre como gerenciar permissões de função após sua criação.
-
-O vídeo a seguir tem como objetivo ajudá-lo a entender a criação de uma nova função e o gerenciamento de usuários para essa função.
-
->[!VIDEO](https://video.tv.adobe.com/v/3475978/?captions=por_br&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
 
 ## Duplicar uma função
 
-Para duplicar uma função existente, selecione a função na guia **[!UICONTROL Roles]**. Como alternativa, use a opção de filtro para filtrar os resultados e encontrar a função que deseja duplicar.
+Duplicar uma função copiará os detalhes, as permissões, os rótulos e as sandboxes. Usuários, grupos de usuários e credenciais de API **não** copiados e precisarão ser adicionados manualmente à função.
 
-![flac-duplicate-role](../../images/flac-ui/flac-duplicate-role.png)
+Para duplicar uma função existente, encontre a função que deseja duplicar na guia **[!UICONTROL Roles]**. Selecione o ![ícone Mais](/help/images/icons/more.png) ao lado do nome da função e selecione **[!UICONTROL Duplicate]** no menu suspenso.
 
-Em seguida, selecione **[!UICONTROL Duplicate]** na parte superior direita da tela.
+![O espaço de trabalho Funções com um menu suspenso de funções foi expandido e a opção Duplicar foi realçada.](../../images/ui/roles/role-duplicate.png)
 
-![flac-duplicate](../../images/flac-ui/flac-duplicate.png)
+A caixa de diálogo de confirmação de duplicação será exibida. Selecione **[!UICONTROL Confirm]** para concluir a duplicação da função. A nova função será salva com o mesmo nome com `_Copy` adicionado como sufixo.
 
-A caixa de diálogo **[!UICONTROL Duplicate role]** é exibida, solicitando que você confirme a duplicação.
+![Caixa de diálogo de confirmação duplicada com a opção Confirmar realçada.](../../images/ui/roles/role-duplicate-confirm.png)
 
-![flac-duplicate-confirm](../../images/flac-ui/flac-duplicate-confirm.png)
+Como alternativa, você pode duplicar uma função no espaço de trabalho de uma função individual. Selecione a função que deseja duplicar no espaço de trabalho **[!UICONTROL Roles]** e selecione **[!UICONTROL Duplicate]**.
 
-Em seguida, você será levado à página de detalhes da função, na qual poderá alterar o nome e as permissões da função. Os detalhes, rótulos e sandboxes são duplicados da função anterior. Os usuários precisarão ser adicionados por meio da guia Users. Você pode exibir o documento [gerenciar permissões para uma função](permissions.md) para saber mais sobre como adicionar Detalhes, Rótulos, Sandboxes e Usuários a uma função.
+![Um espaço de trabalho de função individual com a opção Duplicar realçada.](../../images/ui/roles/role-duplicate-alt.png)
 
-Clique na seta à esquerda para retornar à guia **[!UICONTROL Roles]**.
+A caixa de diálogo de confirmação de duplicação será exibida. Selecione **[!UICONTROL Confirm]** para concluir a duplicação da função. Você será redirecionado para a nova função.
 
-![flac-return-to-roles](../../images/flac-ui/flac-return-to-roles.png)
-
-A nova função aparecerá na lista na página **[!UICONTROL Roles]**.
-
-![flac-role-duplicate-saved](../../images/flac-ui/flac-role-duplicate-saved.png)
+![Caixa de diálogo de confirmação duplicada com a opção Confirmar realçada.](../../images/ui/roles/role-duplicate-alt-confirm.png)
 
 ## Excluir uma função
 
-Selecione as reticências (`…`) ao lado do nome de uma função, e uma lista suspensa exibe controles para editar, excluir ou duplicar a função. Selecione Excluir na lista suspensa.
+Para excluir uma função, encontre a função que deseja excluir na guia **[!UICONTROL Roles]**. Selecione o ![ícone Mais](/help/images/icons/more.png) ao lado do nome da função e selecione **[!UICONTROL Delete]** no menu suspenso.
 
-![flac-role-delete](../../images/flac-ui/flac-role-delete.png)
+![O espaço de trabalho Funções com um menu suspenso de funções foi expandido e a opção Duplicar foi realçada.](../../images/ui/roles/role-delete.png)
 
-A caixa de diálogo **[!UICONTROL Delete user role]** é exibida, solicitando que você confirme a exclusão.
+A caixa de diálogo de confirmação de exclusão será exibida. Selecione **[!UICONTROL Confirm]** para concluir a exclusão da função.
 
-![flac-confirm-role-delete](../../images/flac-ui/flac-confirm-role-delete.png)
+![Caixa de diálogo de confirmação duplicada com a opção Confirmar realçada.](../../images/ui/roles/role-duplicate-confirm.png)
 
-Você retornará à guia **[!UICONTROL Roles]**.
+Como alternativa, você pode deletar uma atribuição de dentro do espaço de trabalho de uma atribuição individual. Selecione a função que deseja excluir do espaço de trabalho **[!UICONTROL Roles]** e selecione **[!UICONTROL Delete]**.
+
+![Um espaço de trabalho de função individual com a opção Excluir realçada.](../../images/ui/roles/role-delete-alt.png)
+
+A caixa de diálogo de confirmação de exclusão será exibida. Selecione **[!UICONTROL Confirm]** para concluir a exclusão da função.
+
+![Caixa de diálogo de confirmação de exclusão com a opção Confirmar realçada.](../../images/ui/roles/role-delete-alt-confirm.png)
+
+<!-- ADD PERMISSIONS TO THIS PAGE -->
 
 ## Próximas etapas
 

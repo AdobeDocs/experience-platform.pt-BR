@@ -61,7 +61,7 @@ A nova função foi criada com êxito, e você será redirecionado para a págin
 
 <!-- The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) -->
+>[!VIDEO](https://video.tv.adobe.com/v/3475978/?captions=por_br&learn=on) -->
 
 ## Duplicar uma função
 

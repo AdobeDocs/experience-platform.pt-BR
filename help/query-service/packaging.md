@@ -2,10 +2,10 @@
 title: Empacotamento do serviço de consulta
 description: O documento a seguir descreve o pacote de recursos e produtos disponíveis para o Serviço de consulta e destaca as diferenças entre consultas ad hoc e em lote.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
 workflow-type: tm+mt
-source-wordcount: '987'
-ht-degree: 2%
+source-wordcount: '990'
+ht-degree: 3%
 
 ---
 
@@ -33,7 +33,7 @@ A tabela a seguir descreve os principais direitos do Serviço de consulta com ba
 | Caso de uso suportado | <ul><li>Exploração&#x200B;</li><li>Descoberta de dados&#x200B;</li><li>Validação de dados</li><li>Experimentação</li></ul> | <ul><li>Limpando</li><li>Modelagem</li><li>Manipular</li><li>Enriquecimento</li></ul> |
 | Semântica Compatível | <ul><li>Consultas SELECT</li></ul> | <ul><li>Queries CTAS e ITAS</li></ul> |
 | Tempo Máximo de Execução | 10 minutos | 24 horas |
-| Licenciar métrica | **Simultaneidade de Usuário da Consulta**: <ul><li>1 usuário simultâneo (Real-Time CDP, Adobe Journey Optimizer)&#x200B;</li><li>5 usuários simultâneos (Customer Journey Analytics)&#x200B;</li></ul> **Simultaneidade da Consulta**: <ul><li>1 consulta em execução simultânea (todas as aplicações)&#x200B;</li></ul> **Um complemento de pacote de usuários da consulta ad hoc adicional** pode ser adquirido para aumentar seu direito à consulta ad hoc autorizada. <ul><li>+5 usuários simultâneos adicionais por pacote</li><li>+1 consulta de execução simultânea adicional por pacote</li></ul> | **Horas de Computação**: <ul><li>Variável (escopo com base nos direitos do aplicativo)</li></ul> **Horas de Computação** é uma medida do tempo gasto pelo mecanismo do Serviço de Consulta para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada. <br>Com o Data Distiller SKU, você também obtém um usuário adicional e simultaneidade de consulta, que podem ser usados para a execução de consultas ad hoc.  A SKU do Data Distiller inclui:<br><ul><li>+5 usuários simultâneos adicionais</li><li>+1 consulta em execução simultânea adicional</li></ul> |
+| Licenciar métrica | **Simultaneidade de Usuário da Consulta**: <ul><li>1 usuário simultâneo (Real-Time CDP, Adobe Journey Optimizer)&#x200B;</li><li>5 usuários simultâneos (Customer Journey Analytics, Adobe Mix Modeler)&#x200B;</li></ul> **Simultaneidade da Consulta**: <ul><li>1 consulta em execução simultânea (todas as aplicações)&#x200B;</li></ul> **Um complemento de pacote de usuários da consulta ad hoc adicional** pode ser adquirido para aumentar seu direito à consulta ad hoc autorizada. <ul><li>+5 usuários simultâneos adicionais por pacote</li><li>+1 consulta de execução simultânea adicional por pacote</li></ul> | **Horas de Computação**: <ul><li>Variável (escopo com base nos direitos do aplicativo)</li></ul> **Horas de Computação** é uma medida do tempo gasto pelo mecanismo do Serviço de Consulta para ler, processar e gravar dados de volta no data lake quando uma consulta em lote é executada. <br>Com o Data Distiller SKU, você também obtém um usuário adicional e simultaneidade de consulta, que podem ser usados para a execução de consultas ad hoc.  A SKU do Data Distiller inclui:<br><ul><li>+5 usuários simultâneos adicionais</li><li>+1 consulta em execução simultânea adicional</li></ul> |
 | Uso acelerado de consultas e relatórios | Não | Sim - Consultas aceleradas simultâneas permitem ler dados do armazenamento acelerado e exibi-los em seus painéis. Também é fornecido um direito dedicado para armazenar modelos de relatórios e conjuntos de dados no armazenamento acelerado. |
 | Capacidade de armazenamento do data lake | Seu direito total de armazenamento depende das licenças dos aplicativos baseados em plataforma. Por exemplo, Real-Time CDP, AJO, CJA e assim por diante. | Sim — um direito de armazenamento adicional é fornecido para manter seus conjuntos de dados brutos e derivados para casos de uso do Data Distiller além de uma data de expiração de dados de sete dias.<br>A capacidade de armazenamento do data lake é medida em terabytes (TB) e depende da quantidade de horas de Computação que você comprou. Consulte a descrição do produto para obter mais detalhes. |
 | Bonificação de exportação de dados | Seu direito total de exportação depende das licenças dos aplicativos baseados na plataforma. Por exemplo, Real-Time CDP, AJO, CJA e assim por diante. | Sim - um direito de exportação adicional é fornecido para permitir a exportação de conjuntos de dados derivados criados usando o Data Distiller.<br>A sua permissão anual para exportação de dados é medida em terabytes (TB) e depende da quantidade de horas de Computação que você adquiriu. Verifique a descrição do produto para obter mais detalhes. |
@@ -80,7 +80,7 @@ Para criar o Data Distiller [SQL Insights](./data-distiller/sql-insights/overvie
 
 ## Suporte à sandbox {#sandbox-support}
 
-As sandboxes são partições virtuais em uma única instância do Experience Platform. Cada instância do Experience Platform é compatível com várias sandboxes de produção e não produção, cada uma mantendo sua própria biblioteca de recursos do Experience Platform. As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar suas sandboxes de produção. Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../sandboxes/home.md). Todos os direitos do Serviço de consulta são compartilhados em todas as sandboxes.
+Sandboxes são partições virtuais em uma única instância da Experience Platform. Cada instância do Experience Platform é compatível com várias sandboxes de produção e não produção, cada uma mantendo sua própria biblioteca de recursos do Experience Platform. As sandboxes de não produção permitem testar recursos, executar experimentos e fazer configurações personalizadas sem afetar suas sandboxes de produção. Para obter mais informações sobre sandboxes, consulte a [visão geral das sandboxes](../sandboxes/home.md). Todos os direitos do Serviço de consulta são compartilhados em todas as sandboxes.
 
 ## Próximas etapas
 

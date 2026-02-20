@@ -170,5 +170,5 @@ Agora você sabe como exibir os detalhes e as funções de um usuário, grupo de
 <!--
 The following video is intended to support your understanding of developer and API credentials.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446403/?captions=por_br&learn=on)
 -->

@@ -2,10 +2,10 @@
 title: Notas da versão de fevereiro de 2026 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2026 da Adobe Experience Platform.
 exl-id: a677026f-e07e-4e69-bd6c-5ddcb13e8e38
-source-git-commit: a11c00c218ffbbd5618616f401613a604c35859a
+source-git-commit: da84f77bbe328747ad7befd92d0bc4a12d8477fb
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 32%
+source-wordcount: '731'
+ht-degree: 31%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 32%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 17 de fevereiro de 2026**
 
@@ -27,6 +27,7 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 
 - [Alertas](#alerts)
 - [Destinos](#destinations)
+- [Serviço de segmentação](#segmentation-service)
 - [Fontes](#sources)
 - [Experience Data Model (XDM)](#xdm)
 
@@ -42,7 +43,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../observability/home.md) do [!DNL Observability Insights] .
+Para obter mais informações, leia a visão geral](../../observability/home.md) do [[!DNL Observability Insights] .
 
 ## Destinos {#destinations}
 
@@ -66,6 +67,19 @@ Para obter mais informações, leia a visão geral[&#128279;](../../observabilit
 {style="table-layout:auto"}
 
 Para obter mais informações, leia a [Visão geral dos Destinos](../../destinations/home.md).
+
+## Serviço de segmentação {#segmentation-service}
+
+O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os públicos podem ser baseados em dados de registro (como informações demográficas) ou eventos de séries temporais que representam interações do cliente com sua marca.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Públicos editáveis da API | Agora é possível editar públicos-alvo criados usando a API do serviço de segmentação ou a Audience Agent no Construtor de segmentos. **Observação:** públicos-alvo que contêm dados de série temporal **não podem** ser editados usando o Construtor de Segmentos neste momento. |
+| Atualização da expiração dos dados do público-alvo externo | Você pode usar a API do serviço de segmentação para estender a expiração dos dados de públicos-alvo externos. Para obter mais informações, leia o [guia da API de públicos externos](/help/segmentation/api/external-audiences.md#extend-data-expiration). |
+
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

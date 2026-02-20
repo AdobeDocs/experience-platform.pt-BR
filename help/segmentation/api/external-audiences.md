@@ -2,10 +2,10 @@
 title: Endpoint da API de públicos externos
 description: Saiba como usar a API de públicos-alvo externos para criar, atualizar, ativar e excluir seus públicos-alvo externos do Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: ff58324446f28cbdca369ecbb58d8261614ae684
+source-git-commit: de18b8292f07c143d63d26a45ca541e50b2ed2f3
 workflow-type: tm+mt
-source-wordcount: '2340'
-ht-degree: 5%
+source-wordcount: '2528'
+ht-degree: 4%
 
 ---
 
@@ -107,14 +107,14 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | String | O nome do público-alvo externo. |
 | `description` | String | Uma descrição opcional para o público-alvo externo. |
 | `customAudienceId` | String | Um identificador opcional para seu público-alvo externo. |
-| `fields` | Matriz de objetos | A lista de campos e seus tipos de dados. Ao criar a lista de campos, você pode adicionar os seguintes itens: <ul><li>`name`: **Obrigatório** O nome do campo que faz parte da especificação de público-alvo externo.</li><li>`type`: **Obrigatório** O tipo de dados que entra no campo. Os valores com suporte incluem `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) e `boolean`.</li><li>`identityNs`: **Obrigatório para o campo de identidade** O namespace usado pelo campo de identidade. Os valores suportados incluem todos os namespaces válidos, como `ECID` ou `email`.</li><li>`labels`: *Opcional* Uma matriz de rótulos de controle de acesso para o campo. Mais informações sobre os rótulos de controle de acesso disponíveis podem ser encontradas no [glossário de rótulos de uso de dados](/help/data-governance/labels/reference.md). </li></ul> |
+| `fields` | Matriz de objetos | A lista de campos e seus tipos de dados. Você deve ter no mínimo 1 campo e no máximo 41 campos em sua matriz. Um dos campos **deve** ser um campo de identidade e incluir o `identityNs`. Ao criar a lista de campos, você pode adicionar os seguintes itens: <ul><li>`name`: **Obrigatório** O nome do campo que faz parte da especificação de público-alvo externo.</li><li>`type`: **Obrigatório** O tipo de dados que entra no campo. Os valores com suporte incluem `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) e `boolean`.</li><li>`identityNs`: **Obrigatório para o campo de identidade** O namespace usado pelo campo de identidade. Os valores suportados incluem todos os namespaces válidos, como `ECID` ou `email`.</li><li>`labels`: *Opcional* Uma matriz de rótulos de controle de acesso para o campo. Mais informações sobre os rótulos de controle de acesso disponíveis podem ser encontradas no [glossário de rótulos de uso de dados](/help/data-governance/labels/reference.md). </li></ul> |
 | `sourceSpec` | Objeto | Um objeto que contém as informações onde o público-alvo externo está localizado. Ao usar este objeto, você **deve** incluir as seguintes informações: <ul><li>`path`: **Obrigatório**: o local do público-alvo externo ou a pasta que contém o público-alvo externo na origem. O caminho de arquivo **não pode** conter espaços. Por exemplo, se o caminho for `activation/sample-source/Example CSV File.csv`, defina o caminho como `activation/sample-source/ExampleCSVFile.csv`. Você pode encontrar o caminho para sua origem na coluna de **dados do Source** da seção de fluxos de dados.</li><li>`type`: **Obrigatório** O tipo do objeto que você está recuperando da origem. Este valor pode ser `file` ou `folder`.</li><li>`sourceType`: *Opcional* O tipo de origem da qual você está recuperando. No momento, o único valor com suporte é `Cloud Storage`.</li><li>`cloudType`: **Obrigatório** O tipo de armazenamento em nuvem, com base no tipo de origem. Os valores suportados incluem `S3`, `DLZ`, `GCS`, `Azure` e `SFTP`.</li><li>`baseConnectionId`: a ID da conexão base, e é fornecida pelo seu provedor de origem. Este valor é **necessário** se estiver usando um valor `cloudType` de `S3`, `GCS` ou `SFTP`. Caso contrário, você **não** precisará incluir este parâmetro. Para obter mais informações, leia a [visão geral dos conectores de origem](../../sources/home.md).</li></ul> |
 | `ttlInDays` | Número inteiro | A expiração dos dados para o público externo, em dias. Esse valor pode ser definido de 1 a 90. Por padrão, a expiração dos dados está definida como 30 dias. |
 | `audienceType` | String | O tipo de público-alvo para o público externo. Atualmente, somente `people` é suportado. |
 | `originName` | String | **Obrigatório** A origem do público-alvo. Isso indica de onde o público-alvo vem. Para públicos externos, você deve usar `CUSTOM_UPLOAD`. |
 | `namespace` | String | O namespace do público. Por padrão, esse valor está definido como `CustomerAudienceUpload`. |
 | `labels` | Matriz de cadeias de caracteres | Os rótulos de controle de acesso que se aplicam ao público-alvo externo. Mais informações sobre os rótulos de controle de acesso disponíveis podem ser encontradas no [glossário de rótulos de uso de dados](/help/data-governance/labels/reference.md). |
-| `tags` | Matriz de cadeias de caracteres | As tags que você deseja aplicar ao público-alvo externo. Mais informações sobre tags podem ser encontradas no [guia de gerenciamento de tags](/help/administrative-tags/ui/managing-tags.md). |
+| `tags` | Matriz de cadeias de caracteres | As tags que você deseja aplicar ao público-alvo externo. Ao adicionar a matriz de marcas, você **deve** usar o `tagId`. Mais informações sobre tags podem ser encontradas no [guia de gerenciamento de tags](/help/administrative-tags/ui/managing-tags.md). |
 
 +++
 
@@ -624,6 +624,53 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de execuções
 | Propriedade | Tipo | Descrição |
 | -------- | ---- | ----------- |
 | `runs` | Objeto | Um objeto que contém a lista de execuções de assimilação que pertence ao público-alvo. Mais informações sobre este objeto podem ser encontradas na [seção recuperar status de assimilação](#retrieve-ingestion-status). |
+
++++
+
+## Estender a expiração dos dados para um público-alvo externo {#extend-data-expiration}
+
+>[!NOTE]
+>
+>Para usar o ponto de extremidade a seguir, é necessário ter o `audienceId` do público-alvo externo. Você pode obter seu `audienceId` de uma chamada bem-sucedida para o ponto de extremidade `GET /external-audiences/operations/{OPERATION_ID}`.
+
+É possível estender a expiração dos dados de um público-alvo externo fazendo uma solicitação POST para o endpoint a seguir ao fornecer a ID de público-alvo.
+
+A expiração dos dados é estendida pela duração original definida durante a assimilação. Se nenhuma duração for especificada, uma extensão padrão de 30 dias será aplicada. Ao estender a expiração dos dados, o público-alvo será assimilado novamente com os dados da última assimilação bem-sucedida.
+
+**Formato da API**
+
+```http
+/ais/external-audience/extend-ttl/{AUDIENCE_ID}
+```
+
+**Solicitação**
+
+A solicitação a seguir estende a expiração dos dados do público-alvo externo especificado.
+
++++ Um exemplo de solicitação para estender a expiração dos dados de um público-alvo externo.
+
+```shell
+curl -x POST https://platform.adobe.io/data/core/ais/external-audience/extend-ttl/60ccea95-1435-4180-97a5-58af4aa285ab \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
++++
+
+**Resposta**
+
+Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do público-alvo.
+
++++ Uma resposta de amostra ao estender a expiração dos dados.
+
+```json
+{
+    "audienceId": "60ccea95-1435-4180-97a5-58af4aa285ab",
+    "name": "Sample external audience"
+}
+```
 
 +++
 

@@ -43,7 +43,7 @@ O Experience Platform permite assinar alertas baseados em eventos para várias a
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral](../../observability/home.md) do [[!DNL Observability Insights] .
+Para obter mais informações, leia a visão geral[&#128279;](../../observability/home.md) do [!DNL Observability Insights] .
 
 ## Destinos {#destinations}
 
@@ -79,7 +79,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | Públicos editáveis da API | Agora é possível editar públicos-alvo criados usando a API do serviço de segmentação ou a Audience Agent no Construtor de segmentos. **Observação:** públicos-alvo que contêm dados de série temporal **não podem** ser editados usando o Construtor de Segmentos neste momento. |
 | Atualização da expiração dos dados do público-alvo externo | Você pode usar a API do serviço de segmentação para estender a expiração dos dados de públicos-alvo externos. Para obter mais informações, leia o [guia da API de públicos externos](/help/segmentation/api/external-audiences.md#extend-data-expiration). |
 
-Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

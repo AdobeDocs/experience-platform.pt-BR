@@ -1,11 +1,11 @@
 ---
 title: Atualizações de arquitetura para o Real-Time CDP B2B edition
 description: Leia este documento para saber mais sobre as atualizações abrangentes da arquitetura do Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: a48196d369cec9e9927d9320475e06457e575691
+source-git-commit: 056a7ff98e335b238fc03ab84b11c9a97221ddaa
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1155'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,13 @@ Use a arquitetura aprimorada para obter os seguintes benefícios:
 
 * **Escalabilidade da assimilação de dados**: melhoria do suporte para relações B2B de alta cardinalidade, como contas conectadas a milhares de pessoas.
 * **Avaliação de público-alvo confiável e eficiente**: segmentação mais rápida e resiliente para públicos-alvo B2B complexos.
-* **resolução da entidade**: resolução de identidade aprimorada para entidades B2B, qualidade de dados aprimorada e duplicação reduzida para permitir segmentação e agregação mais precisas.
+* **Resolução de entidade**: resolução de identidade aprimorada para entidades B2B, qualidade de dados aprimorada e duplicação reduzida para permitir segmentação e agregação mais precisas.
+
+>[!TIP]
+>
+>Dependendo do tamanho e da complexidade do público-alvo, você pode enfrentar pequenas alterações no tempo necessário para a avaliação do público-alvo e a ativação do público-alvo.
+>
+>É recomendável monitorar os tempos de execução da segmentação, principalmente se os processos de negócios dependerem da conclusão oportuna da segmentação e da ativação. Isso ajuda a garantir que os workflows continuem sendo executados sem problemas e permite que você solucione proativamente quaisquer alterações inesperadas.
 
 ## Novos recursos
 

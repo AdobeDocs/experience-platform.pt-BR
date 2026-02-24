@@ -121,7 +121,7 @@ Para que o destino [!DNL Acxiom Audience Connection] receba corretamente os dado
 | Email | Email primário Por padrão, esse campo é usado como uma chave de desduplicação para tornar os registros exclusivos | Não | 10 | 255 |
 | Telefone | Número de telefone do indivíduo (código de área + número)<br> Por padrão, esse campo é usado como uma chave de desduplicação para tornar os registros exclusivos. | Não | 11 | 10 |
 
-Na coluna **[!UICONTROL Source Field]**, digite o nome de cada um dos atributos de origem que você deseja mapear para o campo de destino correspondente ou selecione o ícone de seta para abrir a tela **[!UICONTROL  Select source field]**.<br>
+Na coluna **[!UICONTROL Source Field]**, digite o nome de cada um dos atributos de origem que você deseja mapear para o campo de destino correspondente ou selecione o ícone de seta para abrir a tela **[!UICONTROL &#x200B; Select source field]**.<br>
 ![Tela de mapeamento](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 Depois de mapear todos os campos, selecione **[!UICONTROL Next]**.

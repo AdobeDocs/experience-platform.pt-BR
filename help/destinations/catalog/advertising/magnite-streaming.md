@@ -3,9 +3,9 @@ title: Magnite Conexão de destino em tempo real
 description: Use esse destino para fornecer públicos-alvo da CDP do Adobe para a plataforma de transmissão Magnite em tempo real.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: da05db9376893bdbe8f0aa291f19a507e4a73d4f
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1410'
 ht-degree: 2%
 
 ---
@@ -58,10 +58,24 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 | Origem do público | Suportado | Descrição |
 |-----------------------------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos gerados por meio do [Serviço de segmentação](../../../segmentation/home.md) do Experience Platform. |
-| Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Públicos-alvo compatíveis por tipo de dados de público-alvo:
+
+| Tipo de dados de público | Suportado | Descrição | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
+| [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
+| [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -69,8 +83,8 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 |------------------|---------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Tipo de exportação | **[!UICONTROL Exportação de segmentos]** | Você está exportando todos os membros de um segmento (público) com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL Magnite: Real-Time]. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil é atualizado em Experience Platform com base na avaliação do segmento, o conector envia a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Tipo de exportação | **[!UICONTROL Segment export]** | Você está exportando todos os membros de um segmento (público) com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL Magnite: Real-Time]. |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do segmento, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -78,26 +92,26 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Para se conectar ao destino, você precisa da **[!UICONTROL Exibir destinos]** e **[!UICONTROL Gerenciar destinos]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa da **[!UICONTROL View destinations]** e da **[!UICONTROL Manage destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 
-Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
+Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Connect to destination]**.
 
 ![campos de autenticação da configuração de destino não preenchidos](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-unfilled.png)
 
-* **[!UICONTROL Nome de usuário]**: o nome de usuário fornecido a você por [!DNL Magnite].
-* **[!UICONTROL Senha]**: a senha fornecida por [!DNL Magnite].
+* **[!UICONTROL Username]**: O nome de usuário fornecido a você por [!DNL Magnite].
+* **[!UICONTROL Password]**: a senha fornecida por [!DNL Magnite].
 
 ### Preencher detalhes do destino {#destination-details}
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-* **[!UICONTROL Nome]**: um nome pelo qual você reconhecerá este destino no futuro.
-* **[!UICONTROL Descrição]**: uma descrição que ajudará você a identificar este destino no futuro.
-* **[!UICONTROL Nome da sua empresa]**: o nome do seu cliente/empresa. Somente os clientes [!DNL Magnite Streaming] com suporte estão disponíveis para seleção.
+* **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
+* **[!UICONTROL Description]**: uma descrição que ajudará você a identificar este destino no futuro.
+* **[!UICONTROL Your company name]**: Seu nome de cliente/empresa. Somente os clientes [!DNL Magnite Streaming] com suporte estão disponíveis para seleção.
 
 >[!NOTE]
 >
@@ -105,7 +119,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 ![campos de autenticação da configuração de destino preenchidos](../../assets/catalog/advertising/magnite/destination-realtime-config-auth-filled.png)
 
-Depois de concluído, selecione o botão **[!UICONTROL Criar]**.
+Depois de concluído, selecione o botão **[!UICONTROL Create]**.
 
 ![Política de governança opcional e ações de imposição](../../assets/catalog/advertising/magnite/destination-realtime-config-grouping-policy.png)
 
@@ -113,14 +127,14 @@ Depois de concluído, selecione o botão **[!UICONTROL Criar]**.
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
 ## Ativar segmentos para este destino {#activate}
 
 >[!IMPORTANT]
 >
->* Para ativar dados, você precisa de **[!UICONTROL Exibir destinos]**, **[!UICONTROL Ativar destinos]**, **[!UICONTROL Exibir perfis]** e **[!UICONTROL Exibir segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
+>* Para ativar dados, você precisa das **[!UICONTROL View destinations]**, **[!UICONTROL Activate destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
 Leia [Ativar perfis e segmentos para destinos de exportação de segmento de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público para este destino.
 
@@ -130,9 +144,9 @@ Depois de criar a conexão de destino, você pode prosseguir para o fluxo de ati
 
 A próxima etapa é mapear identificadores de origem para o identificador device_id Magnite.
 
-* Você pode adicionar quantos mapeamentos forem necessários selecionando **[!UICONTROL Adicionar novo mapeamento]**.
+* Você pode adicionar quantos mapeamentos forem necessários selecionando **[!UICONTROL Add new mapping]**.
 
-Este exemplo usando o destino em Tempo real mostra uma linha que contém um identificador de origem deviceId genérico mapeado para o campo de destino Magnite device_id. Quando estiver usando os mapeamentos, selecione [!UICONTROL Avançar].
+Este exemplo usando o destino em Tempo real mostra uma linha que contém um identificador de origem deviceId genérico mapeado para o campo de destino Magnite device_id. Quando estiver usando os mapeamentos, selecione [!UICONTROL Next].
 
 ![Mapear os campos de dados desejados para o campo device_ID](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-field-mapping.png)
 
@@ -144,11 +158,11 @@ Agora você deve configurar uma Data inicial (obrigatória), uma Data final (opc
 
 **ID de Mapeamento**
 
-* Use o campo **[!UICONTROL ID de Mapeamento]** quando um público tiver uma ID de Segmento pré-existente conhecida anteriormente pela Magnite.
+* Use o campo **[!UICONTROL Mapping ID]** quando um público-alvo tiver uma ID de segmento pré-existente conhecida anteriormente pela Magnite.
 
-* Para adicionar uma **[!UICONTROL ID de Mapeamento]** a um público-alvo, selecione cada linha de público-alvo individualmente e insira os dados na coluna à direita (veja a imagem acima). Se não quiser adicionar uma ID de mapeamento, digite NONE no campo ID de mapeamento.
+* Para adicionar **[!UICONTROL Mapping ID]** a um público-alvo, selecione cada linha de público-alvo individualmente e insira os dados na coluna à direita (veja a imagem acima). Se não quiser adicionar uma ID de mapeamento, digite NONE no campo ID de mapeamento.
 
-Selecione **[!UICONTROL Avançar]** e finalize o fluxo de ativação.
+Selecione **[!UICONTROL Next]** e finalize o fluxo de ativação.
 
 ![Selecione Avançar e finalize o fluxo de ativação.](../../assets/catalog/advertising/magnite/destination-realtime-active-audience-review.png)
 

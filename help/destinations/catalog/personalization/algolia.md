@@ -1,13 +1,13 @@
 ---
 title: Algólia
 description: Use esse conector para ativar públicos na Algolia para personalização e uso em pesquisas e recomendações. Em seguida, você pode usar o conector de origem do Perfil de usuário da Algolia para importar os perfis para o Real-Time CDP e criar públicos-alvo avançados.
-source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
+exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1052'
-ht-degree: 3%
+source-wordcount: '1140'
+ht-degree: 4%
 
 ---
-
 
 # [!DNL Algolia] conexão
 
@@ -43,8 +43,8 @@ Em seguida, use o conector de origem [[!DNL Algolia User Profiles]](/help/source
 
 >[!IMPORTANT]
 >
->* Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar *identidades*, você precisa da **[!UICONTROL permissão Exibir Gráfico de Identidade]** [controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
+>* Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
 ## Identidades suportadas {#supported-identities}
 
@@ -62,10 +62,24 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 | Origem do público | Suportado | Descrição |
 |---------|---------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Públicos-alvo compatíveis por tipo de dados de público-alvo:
+
+| Tipo de dados de público | Suportado | Descrição | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
+| [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
+| [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -82,16 +96,16 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 >[!IMPORTANT]
 >
->Para se conectar ao destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar e Ativar Destinos de Conjuntos de Dados]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 
-Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Conectar ao destino]**.
+Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Connect to destination]**.
 
-* **[!UICONTROL ID do Aplicativo]**: a ID do aplicativo [!DNL Algolia] é um identificador exclusivo atribuído à sua conta do [!DNL Algolia].
-* **[!UICONTROL Chave de API]**: a Chave de API [!DNL Algolia] é uma credencial usada para autenticar e autorizar solicitações de API para os serviços de pesquisa e indexação de [!DNL Algolia].
+* **[!UICONTROL Application ID]**: a ID do aplicativo [!DNL Algolia] é um identificador exclusivo atribuído à sua conta [!DNL Algolia].
+* **[!UICONTROL API Key]**: A Chave de API [!DNL Algolia] é uma credencial usada para autenticar e autorizar solicitações de API para os serviços de pesquisa e indexação de [!DNL Algolia].
 
 Para obter mais informações sobre essas credenciais, consulte a [!DNL Algolia] [documentação de autenticação](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
@@ -101,9 +115,9 @@ Para obter mais informações sobre essas credenciais, consulte a [!DNL Algolia]
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-* **[!UICONTROL Nome]**: preencha o nome preferencial para este destino.
-* **[!UICONTROL Descrição]**: breve explicação da finalidade do destino.
-* **[!UICONTROL Região]**: as opções são **US** ou **EU**. Selecione a região onde os dados do cliente estão armazenados.
+* **[!UICONTROL Name]**: Preencha o nome preferencial para este destino.
+* **[!UICONTROL Description]**: Breve explicação da finalidade do destino.
+* **[!UICONTROL Region]**: As opções são **US** ou **EU**. Selecione a região onde os dados do cliente estão armazenados.
 
 
 ![Detalhes da conta](../../assets/catalog/personalization/algolia/account.png)
@@ -112,26 +126,26 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
-Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Avançar]**.
+Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 > 
->* Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar identidades, você precisa da [permissão de controle de acesso](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home#permissions) para Exibir Gráfico de Identidade.
+>* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
+>* Para exportar identidades, você precisa da [permissão de controle de acesso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) para Exibir Gráfico de Identidade.
 
-Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obter instruções sobre como ativar públicos-alvo para este destino.
+Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ### Mapear atributos e identidades {#mapping-attributes-identities}
 
-Durante a [!UICONTROL etapa de Mapeamento], você deve mapear a identidade de origem AlgoliaUserToken para a identidade de destino userId.
+Durante a [!UICONTROL Mapping step], você deve mapear a identidade de origem AlgoliaUserToken para a identidade de destino userId.
 
 ![Mapeamento concluído](../../assets/catalog/personalization/algolia/mapping-complete.png)
 
 ## Validar exportação de dados {#exported-data}
 
-Para verificar se os públicos-alvo foram exportados com êxito para os perfis de usuário, verifique o painel do [!DNL Algolia], navegue até o **[!UICONTROL Advanced Personalization]** e clique em **[!UICONTROL Inspetor de Usuário]**. Encontre um perfil de usuário associado ao público-alvo exportado do Adobe Experience Platform e procure-o no Inspetor de usuários. Você verá a ID de público-alvo na seção de segmentos.
+Para verificar se os públicos-alvo foram exportados com êxito para os perfis de usuário, verifique o painel [!DNL Algolia], navegue até **[!UICONTROL Advanced Personalization]** e clique em **[!UICONTROL User Inspector]**. Encontre um perfil de usuário associado ao público-alvo exportado do Adobe Experience Platform e procure-o no Inspetor de usuários. Você verá a ID de público-alvo na seção de segmentos.
 
 ![Inspetor de Usuário da Algólia](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png)
 

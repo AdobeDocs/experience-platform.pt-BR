@@ -3,9 +3,9 @@ title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar públicos e exportar conjuntos de dados.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '1976'
+source-wordcount: '2110'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 O Experience Platform impõe um TTL (time-to-live) rigoroso de sete dias em todos os arquivos carregados em um contêiner [!DNL Data Landing Zone]. Todos os arquivos são excluídos após sete dias.
 
-O conector de destino [!DNL Data Landing Zone] está disponível para clientes que usam o suporte na nuvem do Azure ou do Amazon Web Service. O mecanismo de autenticação é diferente com base na nuvem em que o destino é provisionado, tudo sobre o destino e seus casos de uso são os mesmos. Leia mais sobre os dois mecanismos de autenticação diferentes nas seções [Autenticar na Zona de Aterrissagem de Dados provisionada no Blob do Azure](#authenticate-dlz-azure) e [Autenticar na Zona de Aterrissagem de Dados provisionada pela AWS](#authenticate-dlz-aws).
+O conector de destino [!DNL Data Landing Zone] está disponível para clientes que usam o suporte na nuvem do Azure ou do Amazon Web Service. O mecanismo de autenticação é diferente com base na nuvem em que o destino é provisionado, tudo sobre o destino e seus casos de uso são os mesmos. Leia mais sobre os dois mecanismos de autenticação diferentes nas seções [Autenticar na Zona de Aterrissagem de Dados provisionada no Blob de Azure](#authenticate-dlz-azure) e [Autenticar na Zona de Aterrissagem de Dados provisionada pela AWS](#authenticate-dlz-aws).
 
 ![Diagrama que mostra como a implementação do destino da Zona de Aterrissagem de Dados é diferente com base no suporte da nuvem.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png "Implementação de destino da Zona de Aterrissagem de Dados pelo suporte à nuvem"){zoomable="yes"}
 
@@ -38,10 +38,24 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Públicos-alvo compatíveis por tipo de dados de público-alvo:
+
+| Tipo de dados de público | Suportado | Descrição | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
+| [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Sim | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
+| [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Sim | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Sim | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -67,11 +81,11 @@ Ao exportar *dados de público-alvo*, o Experience Platform cria um arquivo `.cs
 
 Ao exportar *conjuntos de dados*, o Experience Platform cria um arquivo `.parquet` ou `.json` no local de armazenamento fornecido. Para obter mais informações sobre os arquivos, consulte a seção [verificar exportação bem-sucedida do conjunto de dados](../../ui/export-datasets.md#verify) no tutorial exportar conjuntos de dados.
 
-## Autenticar para a Zona de aterrissagem de dados provisionada no Blob do Azure {#authenticate-dlz-azure}
+## Autenticar na Landing Zone de dados provisionada no Azure Blob {#authenticate-dlz-azure}
 
 >[!AVAILABILITY]
 >
->Esta seção se aplica às implementações do Experience Platform em execução no Microsoft Azure. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/multi-cloud).
+>Esta seção se aplica às implementações do Experience Platform executadas no Microsoft Azure. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Você pode ler e gravar arquivos no seu contêiner por meio do [!DNL Azure Storage Explorer] ou da interface de linha de comando.
 
@@ -85,11 +99,11 @@ Você pode usar o [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en
 
 Na interface do usuário do [!DNL Azure Storage Explorer], selecione o ícone de conexão na barra de navegação esquerda. A janela **Selecionar Recurso** é exibida, fornecendo opções para conexão. Selecione **[!DNL Blob container]** para se conectar ao seu armazenamento [!DNL Data Landing Zone].
 
-![Selecione o recurso realçado na interface do Azure.](/help/sources/images/tutorials/create/dlz/select-resource.png)
+![Selecione o recurso realçado na interface do usuário do Azure.](/help/sources/images/tutorials/create/dlz/select-resource.png)
 
 Em seguida, selecione **SAS (URL de assinatura de acesso compartilhado)** como seu método de conexão e selecione **Avançar**.
 
-![Selecione o método de conexão realçado na interface do Azure.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
+![Selecione o método de conexão realçado na interface do usuário do Azure.](/help/sources/images/tutorials/create/dlz/select-connection-method.png)
 
 Após selecionar o método de conexão, você deve fornecer um **nome para exibição** e a URL SAS do contêiner **[!DNL Blob]** que corresponda ao contêiner [!DNL Data Landing Zone].
 
@@ -194,11 +208,11 @@ A resposta a seguir retorna valores atualizados para o(a) `SASToken` e `SASUri`.
 
 Forneça seu nome para exibição (`containerName`) e a URL SAS [!DNL Data Landing Zone], conforme retornado na chamada de API descrita acima, e selecione **Avançar**.
 
-![Insira as informações de conexão destacadas na interface do Azure.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
+![Insira as informações de conexão realçadas na interface do usuário do Azure.](/help/sources/images/tutorials/create/dlz/enter-connection-info.png)
 
 A janela **Resumo** é exibida, fornecendo uma visão geral das configurações, incluindo informações sobre o ponto de extremidade e as permissões do [!DNL Blob]. Quando estiver pronto, selecione **Conectar**.
 
-![Resumo das configurações mostradas na interface do Azure.](/help/sources/images/tutorials/create/dlz/summary.png)
+![Resumo das configurações mostradas na interface do usuário do Azure.](/help/sources/images/tutorials/create/dlz/summary.png)
 
 Uma conexão bem-sucedida atualiza a interface do usuário [!DNL Azure Storage Explorer] com o contêiner [!DNL Data Landing Zone].
 
@@ -210,7 +224,7 @@ Com o contêiner [!DNL Data Landing Zone] conectado ao [!DNL Azure Storage Explo
 
 >[!AVAILABILITY]
 >
->Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/multi-cloud).
+>Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Execute as operações abaixo para obter credenciais para sua instância do [!DNL Data Landing Zone] provisionada no AWS. Em seguida, use um cliente de sua escolha para se conectar à sua instância do [!DNL Data Landing Zone].
 
@@ -282,7 +296,7 @@ A resposta a seguir retorna as informações de credencial da sua zona de aterri
 > 
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 

@@ -1,12 +1,12 @@
 ---
-keywords: destino do hub de eventos do Azure;hub de eventos do Azure;eventub do Azure
+keywords: destino do hub de eventos do Azure;hub de eventos do azure;eventub do azure
 title: Conexão do Azure Event Hubs
 description: Crie uma conexão de saída em tempo real com o armazenamento do  [!DNL Azure Event Hubs]  para transmitir dados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2156'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 [!DNL Azure Event Hubs] é uma plataforma de transmissão de big data e um serviço de assimilação de eventos. Ele pode receber e processar milhões de eventos por segundo. Os dados enviados para um hub de eventos podem ser transformados e armazenados usando qualquer provedor de análise em tempo real ou adaptadores de armazenamento/agrupamento.
 
@@ -41,10 +41,24 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Uploads personalizados | ✓ | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
+
+
+
+Públicos-alvo compatíveis por tipo de dados de público-alvo:
+
+| Tipo de dados de público | Suportado | Descrição | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
+| [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
+| [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+
+{style="table-layout:auto"}
+
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -73,7 +87,7 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 #### Autenticação padrão {#standard-authentication}
 
-![Imagem da tela da interface do usuário mostrando campos concluídos para os detalhes de autenticação padrão dos Hubs de Eventos do Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
+![Imagem da tela da interface do usuário mostrando campos preenchidos para os detalhes de autenticação padrão do Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-standard-authentication.png)
 
 Se você selecionar o tipo **[!UICONTROL Standard authentication]** para se conectar ao seu ponto de extremidade HTTP, insira os campos abaixo e selecione **[!UICONTROL Connect to destination]**:
 
@@ -83,7 +97,7 @@ Se você selecionar o tipo **[!UICONTROL Standard authentication]** para se cone
 
 #### Autenticação SAS (Assinatura de Acesso Compartilhado) {#sas-authentication}
 
-![Imagem da tela da interface do usuário mostrando campos concluídos para os detalhes de autenticação padrão dos Hubs de Eventos do Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
+![Imagem da tela da interface do usuário mostrando campos preenchidos para os detalhes de autenticação padrão do Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-sas-authentication.png)
 
 Se você selecionar o tipo **[!UICONTROL Standard authentication]** para se conectar ao seu ponto de extremidade HTTP, insira os campos abaixo e selecione **[!UICONTROL Connect to destination]**:
 
@@ -106,7 +120,7 @@ Se você selecionar o tipo **[!UICONTROL Standard authentication]** para se cone
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-![Imagem da tela da interface do usuário mostrando campos concluídos para os detalhes de destino do Azure Event Hubs](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
+![Imagem da tela da interface do usuário mostrando campos preenchidos para os detalhes de destino dos Hubs de Eventos da Azure](../../assets/catalog/cloud-storage/event-hubs/event-hubs-destination-details.png)
 
 * **[!UICONTROL Name]**: Preencha um nome para a conexão com [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: forneça uma descrição da conexão.  Exemplos: &quot;Clientes de nível Premium&quot;, &quot;Clientes interessados em kitesurfing&quot;.
@@ -125,7 +139,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >[!IMPORTANT]
 > 
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* [A avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) não tem suporte atualmente em exportações para o destino dos Hubs de Eventos do Azure. [Leia mais](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
+>* [A avaliação de política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) não tem suporte atualmente em exportações para o destino do Azure Event Hubs. [Leia mais](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
 Consulte [Ativar dados de público-alvo para destinos de exportação de perfil de streaming](../../ui/activate-streaming-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
@@ -273,6 +287,6 @@ No caso de solicitações com falha para o destino da API HTTP, o Experience Pla
 
 >[!MORELIKETHIS]
 >
->* [Conecte-se aos Hubs de Eventos do Azure e ative os dados usando a API de Serviço de Fluxo](../../api/streaming-destinations.md)
+>* [Conecte-se aos Hubs de Eventos da Azure e ative os dados usando a API de Serviço de Fluxo](../../api/streaming-destinations.md)
 >* [Destino do AWS Kinesis](./amazon-kinesis.md)
 >* [Tipos e categorias de destino](../../destination-types.md)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Glossário do Adobe Experience Platform
 description: Um glossário de termos importantes na Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: 0ff9adc8869528f9e13ee384b866b8dcc3d781bd
+source-git-commit: bdd0039249366ceabebe52694046ec01906ced3c
 workflow-type: tm+mt
-source-wordcount: '8169'
+source-wordcount: '8224'
 ht-degree: 0%
 
 ---
@@ -177,7 +177,7 @@ Rótulo de contrato **C2**: um rótulo de uso de dados de contrato `C2` especifi
 
 **Rótulos de uso de dados**: os rótulos de uso de dados permitem que você categorize dados que refletem considerações relacionadas à privacidade e às condições contratuais para estar em conformidade com os regulamentos e as políticas corporativas. Os rótulos de uso de dados adicionados a um conjunto de dados são herdados ou aplicados a todos os campos nesse conjunto de dados. Os rótulos de uso de dados também podem ser aplicados diretamente aos campos.
 
-**Fluxo de dados**: um fluxo de dados é um pipeline virtual de dados que flui para o Experience Platform a partir de uma origem e para destinos.
+**Fluxo de dados**: um fluxo de dados é um pipeline virtual de dados que flui para o Experience Platform a partir de uma origem e para destinos. No contexto de destinos, um fluxo de dados é sinônimo de uma [instância de destino](#destination-instance). {#dataflow}
 
 **Execução de fluxo de dados**: uma execução de fluxo de dados é um fluxo de dados que chega ao Experience Platform com base em um agendamento especificado pelo usuário.
 
@@ -200,6 +200,8 @@ Rótulo de contrato **C2**: um rótulo de uso de dados de contrato `C2` especifi
 **Categoria de destino**: uma categoria de destino é um agrupamento de destinos que têm características semelhantes.
 
 **Catálogo de destino**: um catálogo de destino é uma lista de destinos disponíveis no Experience Platform.
+
+**Instância de destino**: uma instância de destino é uma conexão individual configurada com um destino específico no Experience Platform, criada por meio da interface ou da API. Ele representa um único pipeline de ativação do Experience Platform para um endpoint de destino. Também conhecido como [fluxo de dados](#dataflow). {#destination-instance}
 
 **Regras de chamada direta**: no contexto de marcas, uma regra de chamada direta é uma regra que é executada quando é chamada diretamente da página, ignorando a detecção de eventos e os sistemas de pesquisa.
 

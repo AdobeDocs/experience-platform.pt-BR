@@ -2,9 +2,9 @@
 title: Guia de perguntas do Assistente de IA
 description: Leia este documento para conhecer exemplos de perguntas que você pode usar ao consultar o Assistente de IA.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 7268895d0b1924f9d3e7cee24e549c79245ef099
+source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2063'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ As seguintes perguntas de exemplo são agrupadas por objetivos que você pode re
 | Solução de problemas | Use o Assistente de IA para saber como depurar erros básicos que você pode encontrar no fluxo de trabalho. | <ul><li>O que este erro {ERROR_MESSAGE} significa?</li><li>Por que não consigo excluir o público-alvo chamado &quot;Luma: Público-alvo de email&quot;?</li></ul> |
 | Higiene da sandbox | Use o Assistente de IA para identificar objetos duplicados ou não utilizados, para que você possa manter sua sandbox com eficiência. | <ul><li>Você pode me mostrar públicos semelhantes?</li><li>Há esquemas que não tenham um conjunto de dados associado?</li></ul> |
 | Análise de valor | Use o Assistente de IA para identificar os objetos de dados mais usados e avaliar os indicadores de desempenho ou encontrar os objetos de dados mais valiosos. | <ul><li>Quantos perfis estão em nossa definição de segmento &quot;Luma: Público-alvo de email&quot;?</li><li>Quando os públicos-alvo foram ativados para o destino do Experience Cloud Audiences?</li></ul> |
-| Pesquisa | Use o AI Assistant para encontrar objetos de Experience Platform compatíveis, como públicos-alvo, conjuntos de dados, destinos, esquemas e fontes. | <ul><li>Liste os públicos-alvo que contêm &quot;Luma&quot; no nome que foram criados no último trimestre.</li><li>Quais atributos estão no esquema XDM &quot;Luma: Ações personalizadas&quot;?</li></ul> |
+| Pesquisa | Use o Assistente de IA para encontrar objetos do Experience Platform compatíveis, como públicos-alvo, conjuntos de dados, destinos, esquemas e fontes. | <ul><li>Liste os públicos-alvo que contêm &quot;Luma&quot; no nome que foram criados no último trimestre.</li><li>Quais atributos estão no esquema XDM &quot;Luma: Ações personalizadas&quot;?</li></ul> |
 | Análise de impacto | Use o Assistente do AI para identificar objetos de dados que foram usados em determinados workflows para que você possa avaliar o impacto de quaisquer alterações. | <ul><li>Quais públicos-alvo usam `homeAddress.city` no esquema &quot;Luma: PersonProfiles&quot;?</li><li>Em quais conjuntos de dados o atributo de perfil `consents.marketing.push.val` está armazenado?</li></ul> |
 
 {style="table-layout:auto"}
@@ -81,7 +81,7 @@ As perguntas a seguir são agrupadas por objetos de dados e são classificadas c
    * Quando devo usar um tipo de dados vs um grupo de campos?
    * Qual é a diferença entre uma identidade e uma chave primária ou estrangeira?
 * **Solução de problemas - Conhecimento do produto (Real-Time CDP e Journey Optimizer)**
-   * Em que o assistente de IA pode ajudar?
+   * Em que o Assistente de IA pode ajudar?
    * Posso excluir um esquema ativado por perfil depois que os dados forem assimilados?
    * Por que não posso excluir um público-alvo?
    * Quanto tempo leva para que os públicos-alvo sejam avaliados e os resultados sejam disponibilizados para direcionamento?
@@ -127,7 +127,7 @@ O AI Assistant agora pode responder a perguntas sobre métricas específicas do 
 
 Além disso, você pode transmitir uma intenção semelhante por meio de várias variações para as quatro perguntas acima.
 
-+++Selecione para exibir variações aceitas de perguntas de observabilidade do conjunto de dados
++++Selecionar para exibir variações aceitas de perguntas de observabilidade do conjunto de dados
 
 * Quais são os cinco principais conjuntos de dados por tamanho?
 * Qual conjunto de dados tem o maior número de linhas?
@@ -154,7 +154,7 @@ Você também pode refinar suas perguntas de observabilidade de dados com um qua
 * Conjuntos de dados com mais dados assimilados nos últimos (x) dias
 * Contagem de registros de um conjunto de dados específico nos últimos (x) dias
 
-+++Selecione para exibir variações aceitas de perguntas de observabilidade do conjunto de dados
++++Selecionar para exibir variações aceitas de perguntas de observabilidade do conjunto de dados
 
 * Quantos conjuntos de dados receberam lotes nos últimos (x) dias?
 * Quais conjuntos de dados receberam lotes nos últimos (x) dias?
@@ -197,15 +197,13 @@ Veja a seguir uma lista de exemplos de perguntas que não são suportadas no mom
 * Quais são os segmentos deste perfil {PROFILE_INFO/ATTRIBUTE_VALUE}?
 * Quantos perfis no conjunto de dados têm um email?
 * Qual conjunto de dados constitui o número máximo de perfis nesta sandbox?
-* Qual conjunto de dados tem o número mais alto de registros?
 * Quantos segmentos foram excluídos em {RELATIVE_DATE}?
-* Qual dos meus conjuntos de dados tem o maior tamanho?
 * Dê-me um perfil no {AUDIENCE_NAME}.
-* Qual é o número total de perfis em minha sandbox
+* Qual é o número total de perfis na minha sandbox?
 * Quantos namespaces de identidade estão associados ao público-alvo {AUDIENCE_NAME}?
 * Mostrar um relatório de todos os segmentos de público avaliados hoje
 * Quantos segmentos têm perfis sobrepostos?
-* Quantos lotes estão sendo carregados em {DATASET_NAME}
+* Quantos lotes estão sendo carregados no {DATASET_NAME}
 * Quantas ofertas ativas eu tenho?
 * Quantas campanhas ativas eu tenho?
 * De onde vêm minhas fontes de dados?

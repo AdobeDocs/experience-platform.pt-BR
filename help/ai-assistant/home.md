@@ -2,10 +2,10 @@
 title: Visão geral do Assistente de IA no Adobe Experience Platform
 description: Saiba mais sobre o Assistente de IA, suas nuances e casos de uso e como você pode usá-lo para acelerar seu fluxo de trabalho com a Adobe Experience Platform e a Real-time Customer Data Platform.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
+source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
 workflow-type: tm+mt
 source-wordcount: '927'
-ht-degree: 8%
+ht-degree: 9%
 
 ---
 
@@ -23,7 +23,7 @@ O Assistente de IA no Adobe Experience Platform é uma experiência de conversa�
 
 >[!IMPORTANT]
 >
->Você deve concordar com um [contrato de usuário](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html) antes de usar o Assistente de IA. O contrato de usuário também contém o contrato público beta. Para que você possa usar os recursos adicionais do Assistente de IA à medida que eles forem implantados na capacidade beta.
+>Você deve concordar com um [contrato de usuário](https://www.adobe.com/legal/licenses-terms/adobe-dx-gen-ai-user-guidelines.html?lang=pt-BR) antes de usar o Assistente de IA. O contrato de usuário também contém o contrato público beta. Para que você possa usar os recursos adicionais do Assistente de IA à medida que eles forem implantados na capacidade beta.
 
 +++Selecione para exibir a interface do contrato do usuário
 
@@ -61,7 +61,7 @@ O conhecimento do produto refere-se a conceitos e tópicos fundamentados na docu
 
 Assista ao vídeo a seguir para obter informações adicionais sobre o conhecimento do produto do Assistente de IA:
 
->[!VIDEO](https://video.tv.adobe.com/v/3475935/?captions=por_br&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Insights operacionais {#operational-insights}
 
@@ -76,13 +76,13 @@ Você pode fazer perguntas ao Assistente de IA sobre seus insights operacionais 
 | Domínio | Metadados compatíveis | Metadados incompatíveis |
 | --- | --- | --- |
 | Atributos | <ul><li>Pesquisa de nome de atributo</li><li>Atributo - relacionamento de esquema</li><li>Relação atributo-conjunto de dados</li><li>Atributo - relacionamento de público</li><li>Relação atributo-destino</li></ul> | <ul><li>Classe de atributo</li><li>Auditoria</li><li>Status de desativação</li><li>Rótulos</li><li>Valor armazenado em atributos</li></ul> |
-| Públicos-alvo | <ul><li>Contagem de público-alvo</li><li>Tipo de público-alvo (streaming ou lote)</li><li>Datas de criação/modificação</li><li>Status de ativação</li><li>Contagem de perfis</li><li>Duplicar públicos</li><li>Pesquisa de definição de público</li><li>Público-alvo - relacionamento com o público-alvo</li><li>Público-alvo - relação de atributo</li><li>Público-alvo - relação do conjunto de dados</li><li>Público-alvo - relacionamento de destino</li><li>Pesquisa de nome</li><li>Pesquisa de nome e ID | <ul><li>Sobreposições de público</li><li>Ativação de público-alvo</li><li>Público-alvo - relacionamentos de campanha</li><li>Auditoria</li><li>Criar/modificar</li><li>Rótulos</li><li>Tendências de qualificação de perfil</li></ul> |
+| Públicos-alvo | <ul><li>Contagem de público-alvo</li><li>Tipo de público-alvo (streaming ou lote)</li><li>Datas de criação/modificação</li><li>Status de ativação</li><li>Contagem de perfis</li><li>Duplicar públicos</li><li>Pesquisa de definição de público</li><li>Público-alvo - relacionamento com o público-alvo</li><li>Público-alvo - relação de atributo</li><li>Público-alvo - relação do conjunto de dados</li><li>Público-alvo - relacionamento de destino</li><li>Pesquisa de nome</li><li>Pesquisa de nome e ID | <ul><li>Sobreposições de públicos-alvo</li><li>Ativação de público-alvo</li><li>Público-alvo - relacionamentos de campanha</li><li>Auditoria</li><li>Criar/modificar</li><li>Rótulos</li><li>Tendências de qualificação de perfil</li></ul> |
 | Fluxos de dados | <ul><li>Contagens de fluxo de dados</li><li>Status do fluxo de dados</li><li>Fluxo de dados - relação do conjunto de dados</li><li>Fluxo de dados - relacionamento de origem</li></ul> | <ul><li>Criação/modificação</li><li>Relações fluxo-lote de dados</li><li>Contagem de perfis de assimilação</li></ul> |
-| Conjuntos de dados | <ul><li>Contagem do conjunto de dados</li><li>Status de habilitação do perfil</li><li>Data de criação/modificação</li><li>Relação entre conjunto de dados e esquema</li><li>Conjunto de dados - relacionamento de público-alvo</li><li>Conjunto de dados - relação de atributo</li><li>Relação entre conjunto de dados e fluxo de dados</li><li>Pesquisa de nome </li><li>Pesquisa de nome e ID</li></ul> | <ul><li>Auditoria</li><li>Criado por</li><li>Relação entre conjunto de dados e lote</li><li>Criação/modificação do conjunto de dados</li><li>Tamanho do conjunto de dados</li><li>Número de perfis</li><li>Número de linhas</li><li>Pesquisa de valor</li></ul> |
+| Conjuntos de dados | <ul><li>Contagem do conjunto de dados</li><li>Status de habilitação do perfil</li><li>Data de criação/modificação</li><li>Relação entre conjunto de dados e esquema</li><li>Conjunto de dados - relacionamento de público-alvo</li><li>Conjunto de dados - relação de atributo</li><li>Relação entre conjunto de dados e fluxo de dados</li><li>Tamanho do conjunto de dados</li><li>Número de linhas</li><li>Pesquisa de nome </li><li>Pesquisa de nome e ID</li></ul> | <ul><li>Auditoria</li><li>Criado por</li><li>Relação entre conjunto de dados e lote</li><li>Criação/modificação do conjunto de dados</li><li>Número de perfis</li><li>Pesquisa de valor</li></ul> |
 | Destinos | <ul><li>Contagens de destino configuradas</li><li>Relação destino - público</li><li>Relação de atributo de destino</li></ul> | <ul><li>Configuração de conta</li><li>Informações de credencial da conta</li><li>Perfis únicos ativados</li></ul> |
 | Jornadas | <ul><li>Contagens</li><li>Pesquisa de nome</li><li>Pesquisa de nome e ID</li><li>Status da jornada</li><li>Status acionado (público-alvo vs. eventos)</li><li>Datas de criação/modificação</li><li>Frequência recorrente</li></ul> | <ul><li>Atributos - Relacionamentos de jornada</li><li>Auditoria</li><li>Criação/modificação</li><li>Criado por</li><li>Eventos</li><li>Jornada - conjunto de dados</li><li>Jornada - esquema</li><li>Ofertas</li><li>Tendências de qualificação de perfil</li><li>Eventos de etapa</li></ul> |
 | Esquemas | <ul><li>Contagens de esquema</li><li>Data de criação/modificação</li><li>Esquema - Relação de atributo</li><li>Relação esquema - conjunto de dados</li><li>Esquema - relacionamento de público</li><li>Status de habilitação do perfil</li><li>Pesquisa de nome</li><li>Pesquisa de nome e ID</li></ul> | <ul><li>Auditoria</li><li>Criação/modificação</li><li>Criado por</li><li>Grupos de campos</li><li>Identidades</li><li>Namespaces de identidade</li><li>Rótulos</li><li>Número de perfis</li></ul> |
-| Origens | <ul><li>Contagens de conta</li><li>Status da conta</li><li>Fluxos de dados ativos/inativos para cada conta</li><li>Source connector - relação de fluxo de dados</li><li>Relação conta Source - fluxo de dados</li></ul> | <ul><li>Informações de credenciais da conta</li><li>Configuração de conta</li><li>Métricas de assimilação de dados</li><li>Número de perfis</li><li>Source - relacionamentos em lote</li></ul> |
+| Fontes | <ul><li>Contagens de conta</li><li>Status da conta</li><li>Fluxos de dados ativos/inativos para cada conta</li><li>Source connector - relação de fluxo de dados</li><li>Relação conta Source - fluxo de dados</li></ul> | <ul><li>Informações de credenciais da conta</li><li>Configuração de conta</li><li>Métricas de assimilação de dados</li><li>Número de perfis</li><li>Source - relacionamentos em lote</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -90,7 +90,7 @@ Para perguntas sobre insights operacionais, as respostas podem não refletir o e
 
 Assista ao vídeo a seguir para obter mais informações sobre os insights operacionais do Assistente de IA:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444037?learn=on&enablevpops&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Escopo do recurso {#feature-scope}
 

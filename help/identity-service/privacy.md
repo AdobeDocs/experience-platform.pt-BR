@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares
 title: Processamento de solicitação de privacidade no serviço de identidade
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Serviço de identidade.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1005'
+source-wordcount: '1006'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL
 
 ### Uso da API
 
-Ao criar solicitações de trabalho na API, qualquer ID fornecida em `userIDs` deve usar um `namespace` e `type` específicos. Um [namespace de identidade](#namespaces) válido e reconhecido por [!DNL Identity Service] deve ser fornecido para o valor `namespace`, enquanto `type` deve ser `standard` ou `unregistered` (para namespaces padrão e personalizados, respectivamente).
+Ao criar solicitações de trabalho na API, as IDs fornecidas nas IDs de usuário devem usar um namespace e tipo específicos. Um namespace de identidade válido reconhecido pelo Serviço de Identidade deve ser fornecido para o valor do namespace. Use `standard` para namespaces padrão e `custom` para namespaces personalizados.
 
 Além disso, a matriz `include` da carga da solicitação deve incluir os valores de produto para os diferentes armazenamentos de dados para os quais a solicitação está sendo feita. Ao fazer solicitações para [!DNL Identity], a matriz deve incluir o valor `Identity`.
 
@@ -98,7 +98,7 @@ curl -X POST \
 >
 >Você deve especificar o símbolo de identidade como namespace, em vez do nome de exibição, ao excluir identidades usando a exclusão do GDPR.
 
-Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL Identidade]** em **[!UICONTROL Produtos]** para processar trabalhos para dados armazenados em [!DNL Identity Service].
+Ao criar solicitações de trabalho na interface do usuário, certifique-se de selecionar **[!UICONTROL Identity]** em **[!UICONTROL Products]** para processar trabalhos para dados armazenados em [!DNL Identity Service].
 
 ![identity-gdpr](./images/identity-gdpr.png)
 

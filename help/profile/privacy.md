@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda os conceitos essenciais relacionados ao processamento de solicitações de privacidade para o Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: 6eaa384feb1b84e6081f03cb4de9687ad26f437d
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1757'
+source-wordcount: '1746'
 ht-degree: 1%
 
 ---
@@ -57,7 +57,7 @@ As seções abaixo descrevem como fazer solicitações de privacidade para [!DNL
 
 ### Uso da API
 
-Ao criar solicitações de trabalho na API, qualquer ID fornecida em `userIDs` deve usar um `namespace` e `type` específicos. Um [namespace de identidade](#namespaces) válido e reconhecido por [!DNL Identity Service] deve ser fornecido para o valor `namespace`, enquanto `type` deve ser `standard` ou `unregistered` (para namespaces padrão e personalizados, respectivamente).
+Ao criar solicitações de trabalho na API, qualquer ID fornecida em `userIDs` deve usar um `namespace` e `type` específicos. Um [namespace de identidade](#namespaces) válido e reconhecido pelo Serviço de Identidade deve ser fornecido para o valor do namespace. Use `standard` para namespaces padrão e `custom` para namespaces personalizados.
 
 >[!NOTE]
 >
@@ -168,7 +168,7 @@ Para o Serviço de perfil, após a conclusão do trabalho de privacidade, uma re
 
 ### Uso da interface
 
-Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Perfil]** em **[!UICONTROL Produtos]** para processar trabalhos para dados armazenados no data lake ou [!DNL Real-Time Customer Profile], respectivamente.
+Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** e/ou **[!UICONTROL Profile]** em **[!UICONTROL Products]** para processar trabalhos para dados armazenados no data lake ou [!DNL Real-Time Customer Profile], respectivamente.
 
 ![Uma solicitação de trabalho de acesso está sendo criada na interface do usuário, com a opção de Perfil selecionada em Produtos](./images/privacy/product-value.png)
 
@@ -217,7 +217,7 @@ Para remover o perfil e todas as associações de identidade de um determinado c
 
 ### Limitações da política de mesclagem {#merge-policy-limitations}
 
-O Privacy Service só pode processar dados do [!DNL Profile] usando uma política de mesclagem que não execute a identificação. Se você estiver usando a interface para confirmar se as solicitações de privacidade estão sendo processadas, verifique se está usando uma política com **[!DNL None]** como seu tipo [!UICONTROL identificação]. Em outras palavras, você não pode usar uma política de mesclagem em que a [!UICONTROL Compilação de ID] esteja definida como [!UICONTROL Gráfico privado].
+O Privacy Service só pode processar dados do [!DNL Profile] usando uma política de mesclagem que não execute a identificação. Se você estiver usando a interface do usuário para confirmar se as solicitações de privacidade estão sendo processadas, verifique se está usando uma política com **[!DNL None]** como seu tipo [!UICONTROL ID stitching]. Em outras palavras, você não pode usar uma política de mesclagem em que [!UICONTROL ID stitching] esteja definido como [!UICONTROL Private graph].
 
 >![A identificação da política de mesclagem está definida como Nenhum](./images/privacy/no-id-stitch.png)
 

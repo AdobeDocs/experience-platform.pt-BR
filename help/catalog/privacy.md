@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Processamento de solicitação de privacidade no Data Lake
 description: A Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações legais e organizacionais de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade para dados do cliente armazenados no data lake.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
 workflow-type: tm+mt
-source-wordcount: '1430'
-ht-degree: 0%
+source-wordcount: '1446'
+ht-degree: 1%
 
 ---
 
@@ -61,7 +61,7 @@ Há dois métodos de adicionar um descritor de identidade a um esquema de conjun
 
 ### Uso da interface {#identity-ui}
 
-Na [!DNL Experience Platform]interface de usuário, o espaço de trabalho **[!UICONTROL Esquemas]** permite editar seus esquemas XDM existentes. Para adicionar um descritor de identidade a um esquema, selecione o esquema na lista e siga as etapas para [definir um campo de esquema como um campo de identidade](../xdm/tutorials/create-schema-ui.md#identity-field) no tutorial [!DNL Schema Editor].
+Na interface de usuário do [!DNL Experience Platform], o espaço de trabalho **[!UICONTROL Schemas]** permite editar os esquemas XDM existentes. Para adicionar um descritor de identidade a um esquema, selecione o esquema na lista e siga as etapas para [definir um campo de esquema como um campo de identidade](../xdm/tutorials/create-schema-ui.md#identity-field) no tutorial [!DNL Schema Editor].
 
 Depois de definir os campos apropriados no esquema como campos de identidade, você pode prosseguir para a próxima seção em [enviando solicitações de privacidade](#submit).
 
@@ -112,7 +112,7 @@ curl -X POST \
 | `xdm:sourceVersion` | A versão do esquema XDM especificada em `xdm:sourceSchema`. |
 | `xdm:sourceProperty` | O caminho para o campo de esquema ao qual o descritor está sendo aplicado. |
 | `xdm:namespace` | Um dos [namespaces de identidade padrão](../privacy-service/api/appendix.md#standard-namespaces) reconhecidos por [!DNL Privacy Service], ou um namespace personalizado definido por sua organização. |
-| `xdm:property` | &quot;xdm:id&quot; ou &quot;xdm:code&quot;, dependendo do namespace em uso em `xdm:namespace`. |
+| `xdm:property` | &quot;xdm:id&quot; ou &quot;xdm:code&quot;, dependendo do namespace sendo usado em `xdm:namespace`. |
 | `xdm:isPrimary` | Um valor booleano opcional. Quando verdadeiro, indica que o campo é uma identidade primária. Os esquemas podem conter apenas uma identidade principal. O padrão é false, caso não esteja incluído. |
 
 **Resposta**
@@ -147,13 +147,15 @@ A seção a seguir descreve como fazer solicitações de privacidade para o data
 
 ### Uso da interface
 
-Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** em **[!UICONTROL Produtos]** para processar trabalhos para dados armazenados no data lake.
+Ao criar solicitações de trabalho na interface do usuário, selecione **[!UICONTROL AEP Data Lake]** em **[!UICONTROL Products]** para processar trabalhos para dados armazenados no data lake.
 
 ![Imagem mostrando o produto data lake selecionado na caixa de diálogo de criação de solicitação de privacidade](./images/privacy/product-value.png)
 
 ### Uso da API
 
-Ao criar solicitações de trabalho na API, qualquer `userIDs` fornecido deve usar um `namespace` e `type` específicos, dependendo do armazenamento de dados ao qual se aplicam. As IDs do data lake devem usar `unregistered` para seu valor `type` e um valor `namespace` que corresponda a um dos [rótulos de privacidade](#privacy-labels) que foram adicionados aos conjuntos de dados aplicáveis.
+Ao criar solicitações de trabalho na API, qualquer `userIDs` fornecido deve usar um `namespace` e `type` específicos, dependendo do armazenamento de dados ao qual se aplicam. Um namespace de identidade válido reconhecido pelo Serviço de Identidade deve ser fornecido para o valor do namespace. Use `standard` para namespaces padrão e `custom` para namespaces personalizados.
+
+As IDs do data lake devem usar `unregistered` para seu valor `type` e um valor `namespace` que corresponda a um dos [rótulos de privacidade](#privacy-labels) que foram adicionados aos conjuntos de dados aplicáveis.
 
 Além disso, a matriz `include` da carga da solicitação deve incluir os valores de produto para os diferentes armazenamentos de dados para os quais a solicitação está sendo feita. Ao fazer solicitações ao data lake, a matriz deve incluir o valor `aepDataLake`.
 
@@ -181,12 +183,12 @@ curl -X POST \
           {
             "namespace": "email_label",
             "value": "ajones@acme.com",
-            "type": "unregistered"
+            "type": "custom"
           },
           {
             "namespace": "email_label",
             "value": "jdoe@example.com",
-            "type": "unregistered"
+            "type": "custom"
           }
         ]
       }

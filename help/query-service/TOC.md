@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Serviço de consultas
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
+source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '411'
 ht-degree: 25%
 
 ---
@@ -109,6 +109,7 @@ ht-degree: 25%
    - [Agendamentos de consulta](ui/query-schedules.md)
    - [Logs de consulta](ui/query-logs.md)
    - [Monitorar consultas programadas](ui/monitor-queries.md)
+   - [Gerenciar sessões](ui/session-management.md)
    - [Guia de credenciais](ui/credentials.md)
    - [Migrar JWT para credenciais do OAuth](ui/migrate-jwt-to-oauth.md)
    - [Gerar conjuntos de dados de saída a partir dos resultados da consulta](ui/create-datasets.md)

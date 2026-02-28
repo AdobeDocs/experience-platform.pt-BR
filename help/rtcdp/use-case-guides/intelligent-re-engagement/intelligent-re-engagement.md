@@ -97,7 +97,7 @@ Para concluir cada uma das etapas das visões gerais de alto nível acima, leia 
 
 Os recursos do Experience Data Model (XDM) são gerenciados no espaço de trabalho [!UICONTROL Schemas] em [!DNL Adobe Experience Platform]. Você pode visualizar e explorar os recursos principais fornecidos por [!DNL Adobe] (por exemplo, grupos de campos) e criar recursos e esquemas personalizados para sua organização.
 
-Para obter mais informações sobre como criar [esquemas](/help/xdm/home.md), consulte o tutorial [criar esquema.](/help/xdm/tutorials/create-schema-ui.md) e [Modelar seus dados de experiência do cliente com XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html).
+Para obter mais informações sobre como criar [esquemas](/help/xdm/home.md), consulte o tutorial [criar esquema.](/help/xdm/tutorials/create-schema-ui.md) e [Modelar seus dados de experiência do cliente com XDM](https://experienceleague.adobe.com/docs/courses/using/experienceplatform-d-1-2021-1-xdm.html?lang=pt-BR).
 
 Há quatro designs de esquema que são usados para o caso de uso de reengajamento. Cada esquema requer a configuração de campos específicos. Você precisa ativar o esquema para ser incluído no Perfil de cliente em tempo real. Para obter mais informações sobre como habilitar o esquema para uso no Perfil de Cliente em Tempo Real, leia [habilitar um esquema para o Perfil de Cliente em Tempo Real](/help/xdm/ui/resources/schemas.md#enable-a-schema-for-real-time-customer-profile).
 

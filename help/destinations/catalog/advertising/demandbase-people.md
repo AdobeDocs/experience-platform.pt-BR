@@ -2,9 +2,9 @@
 title: Conexão de pessoas do Demandbase
 description: Use esse destino para ativar seus públicos-alvo e enriquecê-los com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas.
 exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 1ceafcccf3f95e401fdce8e00b1755fafe004343
 workflow-type: tm+mt
-source-wordcount: '1024'
+source-wordcount: '1018'
 ht-degree: 4%
 
 ---
@@ -116,19 +116,19 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Mapeamentos obrigatórios {#mandatory-mappings}
 
-Ao ativar públicos para o destino [!DNL Demandbase People], você deve configurar o seguinte mapeamento de campo obrigatório na etapa de mapeamento:
+Ao ativar públicos para o destino [!DNL Demandbase People], você deve configurar os seguintes mapeamentos de campo obrigatórios na etapa de mapeamento:
 
 | Campo de origem | Campo de destino | Descrição |
 |--------------|--------------|-------------|
 | `xdm: workEmail.address` | `Identity: email` | O email comercial da pessoa |
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | O identificador exclusivo da pessoa |
 
 ### Mapeamentos recomendados {#recommended-mappings}
 
-Para obter a precisão de correspondência ideal, inclua os seguintes mapeamentos opcionais no fluxo de ativação, além do [mapeamento obrigatório](#mandatory-mappings) acima.
+Para obter a precisão de correspondência ideal, inclua os seguintes mapeamentos opcionais no fluxo de ativação, além dos [mapeamentos obrigatórios](#mandatory-mappings) acima.
 
 | Campo de origem | Campo de destino | Descrição |
 |--------------|--------------|-------------|
-| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | O identificador exclusivo da pessoa |
 | `xdm: person.name.lastName` | `xdm: lastName` | O sobrenome da pessoa |
 | `xdm: person.name.firstName` | `xdm: firstName` | O nome da pessoa |
 
@@ -136,9 +136,9 @@ Para obter a precisão de correspondência ideal, inclua os seguintes mapeamento
 
 Ao mapear campos para [!DNL Demandbase People], considere o seguinte comportamento correspondente:
 
-* **Correspondência primária**: se `externalPersonId` estiver presente, o Demandbase o usará como o identificador principal para a correspondência de pessoas.
+* **Correspondência primária**: o Demandbase usa `externalPersonId` como o identificador principal da correspondência de pessoas.
 * **Correspondência de fallback**: se `externalPersonId` não estiver disponível, o Demandbase usará o campo `email` para identificação.
-* **Obrigatório vs. recomendado**: embora apenas `email` seja exigido pelo Demandbase, a Adobe recomenda mapear todos os campos disponíveis da tabela de mapeamentos recomendada acima, para melhorar a precisão da correspondência e o desempenho da campanha.
+* **Campos recomendados**: embora apenas `email` e `externalPersonId` sejam obrigatórios, a Adobe recomenda mapear todos os campos disponíveis da tabela de mapeamentos recomendada acima, para melhorar a precisão da correspondência e o desempenho da campanha.
 
 ![Mapeamentos de pessoas do Demandbase](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
 

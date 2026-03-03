@@ -5,10 +5,10 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
+source-git-commit: ba61d129e7686dd7239b5225b9ae28281d90ce4e
 workflow-type: tm+mt
-source-wordcount: '1329'
-ht-degree: 6%
+source-wordcount: '1334'
+ht-degree: 5%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 6%
    * [Excluir contas de destino](./api/delete-destination-account.md)
    * [Excluir fluxos de dados de destino](./api/delete-destination-dataflow.md)
    * [Exportar conjuntos de dados](/help/destinations/api/export-datasets.md)
-   * [Classificar e filtrar respostas da API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=pt-BR#use-cases)
+   * [Classificar e filtrar respostas da API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guias de interface {#ui}
    * [Espaço de trabalho Destinos](./ui/destinations-workspace.md)
    * [Criar uma nova conexão de destino](./ui/connect-destination.md)
@@ -71,7 +71,7 @@ ht-degree: 6%
       * [Conexão do Marketo Engage (herdada) (V2)](./catalog/adobe/marketo-engage.md)
       * [(Beta) Conexão de sincronização de pessoas do Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Conexão com o Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Compartilhamento de público do Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=pt-BR)
+      * [Compartilhamento de público do Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
       * [Conexão de Composição de Público Federado](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos do Advertising{#advertising}
       * [(Beta) Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
@@ -106,6 +106,7 @@ ht-degree: 6%
       * [LiveRamp - Conexão de distribuição](./catalog/advertising/liveramp-distribution.md)
       * [Lote Magnite](/help/destinations/catalog/advertising/magnite-batch.md)
       * [Magnite Streaming Conexão em tempo real](/help/destinations/catalog/advertising/magnite-streaming.md)
+      * [Conexão de correspondência do cliente do Microsoft Ads](./catalog/advertising/microsoft-ads-customer-match.md)
       * [Conexão com o Microsoft Bing](./catalog/advertising/bing.md)
       * [Extensão de rastreamento de conversão do Pinterest](./catalog/advertising/pinterest-extension.md)
       * [Conexão com a Lista de clientes do Pinterest](./catalog/advertising/pinterest.md)

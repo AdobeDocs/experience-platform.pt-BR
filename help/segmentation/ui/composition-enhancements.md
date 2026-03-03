@@ -3,13 +3,13 @@ title: Melhorias na composição do público-alvo
 description: Saiba mais sobre os aprimoramentos feitos na Composição de público-alvo com enriquecimento de público e ativação mais rápida.
 hide: true
 hidefromtoc: true
-source-git-commit: 42e639b403edbaf666d8bc21eb35b2b75530d6b0
+exl-id: 068a178e-ef50-45f1-bcce-c207ebcd5ef1
+source-git-commit: 2d16cc990ea15c1596aae92d8768cddc77a30efd
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
-
 
 # Melhorias na composição do público-alvo
 
@@ -26,15 +26,15 @@ Para adicionar enriquecimentos de público-alvo à sua composição, selecione o
 
 ![O bloco Público-alvo está realçado, assim como o botão Criar regra.](/help/segmentation/images/ui/composition-enhancements/select-build-rule.png)
 
-A tela do construtor de regras é exibida. Agora você pode criar um critério de filtro para o enriquecimento do público-alvo. Este critério de filtro **deve** incluir um atributo que esteja dentro de uma matriz. O atributo que é uma matriz depende da estrutura do esquema da sua organização. Depois de criar seus critérios de filtro, selecione **[!UICONTROL Delivery]** no painel direito.
+A tela do construtor de regras é exibida. Agora você pode criar um critério de filtro para o enriquecimento do público-alvo. Este critério de filtro **deve** incluir um atributo que esteja dentro de uma matriz. O atributo que é uma matriz depende da estrutura do esquema da sua organização. Depois de criar seus critérios de filtro, selecione **[!UICONTROL View enrichment]** no painel direito.
 
-![A tela do construtor de regras mostra um exemplo de público-alvo que pode ter enriquecimentos. O botão Delivery também é destacado.](/help/segmentation/images/ui/composition-enhancements/view-delivery.png)
+![A tela do construtor de regras mostra um exemplo de público-alvo que pode ter enriquecimentos. O botão Delivery também é destacado.](/help/segmentation/images/ui/composition-enhancements/view-enrichment.png)
 
-Escolha a matriz de objetos que deseja usar para enriquecimento na lista do painel esquerdo. Se houver apenas uma matriz no perfil, a matriz será selecionada automaticamente para você. Selecione **[!UICONTROL Save]** para retornar à composição do público-alvo.
+Escolha a matriz de objetos, bem como os campos que deseja usar no enriquecimento na lista do painel esquerdo. Se houver apenas uma matriz no perfil, a matriz será selecionada automaticamente para você. Selecione **[!UICONTROL Save]** para retornar à composição do público-alvo.
 
 <!-- , as well as the fields you want to be used in the enrichment. -->
 
-![A árvore de esquema da árvore de enriquecimento é exibida.](/help/segmentation/images/ui/composition-enhancements/view-schema-tree.png)
+![A árvore de esquema da árvore de enriquecimento é exibida.](/help/segmentation/images/ui/composition-enhancements/enrichment-tree.png)
 
 Na composição de público-alvo, o bloco [!UICONTROL Audience] agora é do tipo &quot;[!UICONTROL Rule builder with enhancement]&quot;. Selecione **[!UICONTROL Publish]** para ativar seu público-alvo com o próximo lote diário.
 

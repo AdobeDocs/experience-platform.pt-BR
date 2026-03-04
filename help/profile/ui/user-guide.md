@@ -3,9 +3,9 @@ keywords: Experience Platform;perfil;perfil do cliente em tempo real;solução d
 title: Guia da interface do usuário do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real cria uma visualização integral de cada cliente individual, combinando dados de vários canais, inclusive dados online, offline, de CRM e de terceiros. Este documento serve como um guia para interagir com o Perfil do cliente em tempo real na interface do usuário do Adobe Experience Platform.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 5db5d0763b1d1456ba184bd24e7ef4c3047e25d1
+source-git-commit: cf975ec6747438a034fcedb51a4b25b0acd46d2f
 workflow-type: tm+mt
-source-wordcount: '1924'
+source-wordcount: '2123'
 ht-degree: 4%
 
 ---
@@ -40,9 +40,9 @@ Para saber mais, visite o [guia do painel do perfil](../../dashboards/guides/pro
 
 ## [!UICONTROL Browse]Guia
 
-Na guia **[!UICONTROL Browse]**, você pode exibir seus perfis em uma exibição de **cartão** ou em uma exibição de **gráfico** selecionando a opção.
+Na guia **[!UICONTROL Browse]**, você pode exibir seus perfis em uma exibição de **cartão** ou em uma exibição de **tabela** selecionando a opção.
 
-![A opção de exibição de cartão e gráfico está realçada.](../images/user-guide/change-browse-view.png)
+![A opção de exibição de cartão e tabela está realçada.](../images/user-guide/change-browse-view.png)
 
 Além disso, você pode navegar pelos perfis usando uma política de mesclagem ou pesquisar perfis específicos usando um namespace de identidade e valor.
 
@@ -111,11 +111,11 @@ Além disso, você pode exibir outros detalhes sobre perfis, como seus [atributo
 
 ### Guia Detalhes {#profile-detail}
 
-A guia **[!UICONTROL Details]** fornece informações mais detalhadas sobre o perfil selecionado e é separada em quatro seções: Insights do perfil do cliente, widgets do AI insight, widgets personalizáveis e widgets classificados automaticamente.
+A guia **[!UICONTROL Details]** fornece informações mais detalhadas sobre o perfil selecionado. A guia Detalhes é separada em várias seções, dependendo se você estiver na exibição de cartão ou gráfico. Para a exibição de cartão, os insights do perfil do cliente, os widgets do AI insight, os widgets personalizáveis e os widgets classificados automaticamente são exibidos, enquanto para a exibição de gráfico, as seções de atributos de perfil e eventos de experiência são exibidas.
 
 ![A página de detalhes do perfil é exibida.](../images/user-guide/profile-details.png)
 
-Além disso, você pode alternar se os insights gerados pela IA são exibidos, mostrar os detalhes do hub em comparação com a borda, bem como visualizar os detalhes na exibição de gráfico.
+Além disso, você pode alternar se os insights gerados pela IA são exibidos, mostrar os detalhes do hub em comparação com a borda, bem como escolher entre as visualizações de cartão ou gráfico.
 
 ![Os alternadores listados acima (insights gerados por IA, dados de Hub ou Edge e exibição de Cartão ou Gráfico) estão destacados.](../images/user-guide/profile-toggles.png)
 
@@ -158,6 +158,24 @@ Esses widgets combinam dados de evento (com o widget Eventos de experiência) e 
 >Se houver vários grupos de campos de origem, os widgets usarão somente **um** das opções disponíveis.
 
 ![A seção widgets classificados automaticamente é exibida.](../images/user-guide/auto-classified-widgets.png)
+
+#### Atributos do perfil {#profile-attributes}
+
+A seção **[!UICONTROL Profile attributes]** exibe uma representação gráfica hierárquica dos dados do perfil. Nesta visualização, o nó central representa o próprio perfil, os nós secundários representam os grupos de campos e os nós restantes representam as propriedades em cada grupo de campos.
+
+Na exibição de gráfico, você pode arrastar e soltar os nós para reorganizar a ordem dos nós, recolher e expandir os nós para ver mais detalhes sobre os atributos, pesquisar e filtrar por atributo, bem como ampliar e reduzir para melhor visualizar os detalhes do atributo.
+
+![O modo de exibição de gráfico do perfil é exibido, mostrando os vários nós que compõem o perfil.](/help/profile/images/user-guide/profile-attribute-graph.png)
+
+#### Eventos de experiência {#experience-events}
+
+A seção **[!UICONTROL Experience events]** exibe uma linha do tempo de eventos de experiência que contêm o perfil.
+
+![A seção Eventos de experiência é exibida, mostrando uma linha do tempo de eventos de experiência que contêm o perfil.](/help/profile/images/user-guide/experience-event-graph.png)
+
+Se você selecionar **[!UICONTROL View event]**, poderá ver os atributos de evento vinculados ao evento selecionado. Esses detalhes incluem o caminho, o atributo, o nome de exibição e o valor.
+
+![O popover Atributos do evento é exibido, mostrando mais detalhes relacionados ao evento.](/help/profile/images/user-guide/event-attributes-graph.png)
 
 ### Guia Atributos {#attributes}
 

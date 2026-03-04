@@ -3,12 +3,13 @@ title: Conexão Demandbase
 description: Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Anuncie para personas e funções relevantes em suas contas do target por meio do Demand Side Platform B2B (DSP) da DemandBase. As contas do Target também podem ser enriquecidas com dados de terceiros do Demandbase para outros casos de uso downstream em marketing e vendas.
 last-substantial-update: 2024-09-30T00:00:00Z
 exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 5a03902df358d804cbafb401ffcef54eab240dfd
 workflow-type: tm+mt
 source-wordcount: '914'
 ht-degree: 4%
 
 ---
+
 
 # Conexão Demandbase {#demandbase}
 
@@ -37,8 +38,6 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 {style="table-layout:auto"}
 
-
-
 Públicos-alvo compatíveis por tipo de dados de público-alvo:
 
 | Tipo de dados de público | Suportado | Descrição | Casos de uso |
@@ -49,7 +48,6 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
-
 
 ## Tipo e frequência de exportação {#export-type-and-frequency}
 

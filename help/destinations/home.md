@@ -2,9 +2,9 @@
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1308'
 ht-degree: 3%
 
 ---
@@ -63,8 +63,8 @@ A tabela a seguir descreve as permissões e as combinações de permissões nece
 | ---- | ---- |
 | **[!UICONTROL View Destinations]** | Para acessar a guia de destinos na interface do Experience Platform, você precisa da **[!UICONTROL View Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Para se conectar a destinos, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** | Para ativar públicos para destinos e habilitar a [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
-| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** | Para adicionar ou remover públicos de fluxos de dados existentes sem ter acesso à [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, e **[!UICONTROL View Segments]** | Para ativar públicos para destinos e habilitar a [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
+| **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, e **[!UICONTROL View Segments]** | Para adicionar ou remover públicos de fluxos de dados existentes sem ter acesso à [etapa de mapeamento](ui/activate-batch-profile-destinations.md#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Manage and Activate Dataset Destinations]** | Para exportar conjuntos de dados para destinos, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). |
 | **[!UICONTROL View Identity Graph]** | Para exportar *identidades* para destinos, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"} |
 
@@ -114,6 +114,8 @@ Para obter mais informações sobre como selecionar ações de marketing no flux
 * [Destinos do Advertising - Google Ad Manager](./catalog/advertising/google-ad-manager.md)
 * [Destinos do Advertising - Google Ads](./catalog/advertising/google-ads-destination.md)
 * [Destinos do Advertising - Google Display &amp; Video 360](./catalog/advertising/google-dv360.md)
+* [Destinos da conta do Advertising - Conexão de público-alvo Bombora ABM](./catalog/advertising/bombora.md)
+* [Destinos da conta do Advertising - Conexão do Demandbase](./catalog/advertising/demandbase.md)
 * [Destinos de armazenamento na nuvem](./catalog/cloud-storage/overview.md)
 * [Destinos de marketing por email](./catalog/email-marketing/overview.md)
 * [Destinos sociais](./catalog/social/overview.md)

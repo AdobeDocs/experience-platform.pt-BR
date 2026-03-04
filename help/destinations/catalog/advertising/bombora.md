@@ -1,19 +1,19 @@
 ---
-title: Conexão Bombora
+title: Conexão Bombora ABM Audiences
 description: Ative perfis para suas campanhas do Bombora para direcionamento de público, personalização e supressão, com base nos públicos da conta.
 exl-id: a2f8e399-e192-4104-876a-fe60f8403143
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '969'
-ht-degree: 4%
+source-wordcount: '1170'
+ht-degree: 3%
 
 ---
 
-# Conexão Bombora {#bombora}
+# Conexão Bombora ABM Audiences {#bombora}
 
 >[!AVAILABILITY]
 >
->A funcionalidade para ativar públicos-alvo para o destino Bombora está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-Time Customer Data Platform.
+>A funcionalidade para ativar públicos-alvo da conta para o destino Bombora ABM Audiences está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-Time Customer Data Platform.
 
 Ative perfis para suas campanhas do Bombora para direcionamento de público, personalização e supressão, com base em [públicos-alvo de conta](/help/segmentation/types/account-audiences.md).
 
@@ -52,8 +52,6 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 
 {style="table-layout:auto"}
 
-
-
 Públicos-alvo compatíveis por tipo de dados de público-alvo:
 
 | Tipo de dados de público | Suportado | Descrição | Casos de uso |
@@ -91,8 +89,9 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Para exportar públicos-alvo de conta para Bombora, você precisa das informações a seguir.
 
-1. Uma conta do Bombora.
+1. Uma conta do Bombora. Se você não tiver uma, poderá solicitar uma conta do Bombora usando o [formulário de solicitação de ativação de público-alvo do Bombora](https://customers.bombora.com/artcdp/audience-activation-request).
 2. Um Bombora **[!UICONTROL client ID]** e **[!UICONTROL client secret]**.
+3. Os dados enviados para o Bombora devem ser de conjuntos de dados **habilitados para perfil**, portanto, o conjunto de dados deve ser incluído no Perfil. Verifique se os seus conjuntos de dados estão [habilitados para o Perfil](/help/catalog/datasets/enable-for-profile.md) antes de ativar os públicos para esse destino.
 
 ## Conectar ao destino {#connect}
 
@@ -135,8 +134,6 @@ Leia [Ativar públicos-alvo da conta](/help/destinations/ui/activate-account-aud
 
 O destino do Bombora requer que você configure os seguintes mapeamentos para uma ativação de dados bem-sucedida.
 
-
-
 | Campo de origem | Campo de destino | Descrição |
 |---------|----------|---------|
 | Qualquer valor | `Identity: primaryId` | Esse mapeamento é obrigatório para a Experience Platform estabelecer uma conexão com Bombora. Esse valor não é exportado para Bombora, mas é necessário para a configuração de destino. Você pode selecionar qualquer atributo para o campo de origem. |
@@ -144,6 +141,17 @@ O destino do Bombora requer que você configure os seguintes mapeamentos para um
 
 ![Adicionar mapeamentos obrigatórios](../..//assets/catalog/advertising/bombora/mappings.png)
 
+## Comportamento de sincronização de público {#sync-behavior}
+
+Após a ativação inicial do público, as atualizações subsequentes do público no Experience Platform são sincronizadas de forma incremental com o Bombora. Os seguintes comportamentos se aplicam:
+
+* **Conta adicionada ao público-alvo**: quando uma conta é adicionada ao público-alvo no Experience Platform, ela é automaticamente adicionada ao público-alvo correspondente no Bombora.
+* **Conta removida ou não se qualifica mais**: quando uma conta não se qualifica mais para o público-alvo ou é removida do público-alvo no Experience Platform, ela é removida do público-alvo correspondente no Bombora.
+* **Conta ou perfil excluído**: quando uma conta ou perfil é excluído da Experience Platform e essa conta não se qualifica mais para o público-alvo, ele é removido do público correspondente em Bombora.
+
+### Comportamento de exclusão e desconexão de público-alvo {#deletion-disconnect}
+
+Excluir um público no Experience Platform ou remover um público de um fluxo de dados de ativação do Bombora remove o público da sua conta do Bombora.
 
 ## Observações adicionais e chamadas de retorno importantes {#additional-notes}
 

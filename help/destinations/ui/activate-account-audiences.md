@@ -3,9 +3,9 @@ title: Ativar públicos-alvo da conta para destinos
 type: Tutorial
 description: Saiba como ativar públicos-alvo da conta para destinos
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 044306709747c32c4ce265d03d3908bbae169edc
+source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Este artigo explica o fluxo de trabalho necessário para exportar [públicos-alv
 
 ## Destinos compatíveis {#supported-destinations}
 
-Vá para **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e selecione a guia **[!UICONTROL Catalog]**. Use o filtro **[!UICONTROL Data types]** e selecione **[!UICONTROL Accounts]** para ver os destinos que oferecem suporte à ativação de públicos-alvo de contas. Atualmente, a exportação de públicos-alvo de conta está disponível somente para determinados destinos de armazenamento em nuvem ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Armazenamento Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md), [Zona de Aterrissagem de Dados](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e o [Demandbase](/help/destinations/catalog/advertising/demandbase.md) e [(Empresas) LinkedIn Corresponderam públicos-alvo](/help/destinations/catalog/social/linkedin-b2b.md) de streaming.
+Vá para **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e selecione a guia **[!UICONTROL Catalog]**. Use o filtro **[!UICONTROL Data types]** e selecione **[!UICONTROL Accounts]** para ver os destinos que oferecem suporte à ativação de públicos-alvo de contas. Atualmente, a exportação de públicos-alvo de conta está disponível somente para determinados destinos de armazenamento em nuvem ([Amazon S3](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ADLS Gen 2](/help/destinations/catalog/cloud-storage/adls-gen2.md), [Azure Blob Storage](/help/destinations/catalog/cloud-storage/azure-blob.md), [Data Landing Zone](/help/destinations/catalog/cloud-storage/data-landing-zone.md) e [SFTP](/help/destinations/catalog/cloud-storage/sftp.md)) e os destinos de streaming [Bombora](/help/destinations/catalog/advertising/bombora.md), [Demandbase](/help/destinations/catalog/advertising/demandbase.md) e [(Empresas) LinkedIn Matched Audiences](/help/destinations/catalog/social/linkedin-b2b.md).
 
 ![Destinos que oferecem suporte a públicos-alvo da conta.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 

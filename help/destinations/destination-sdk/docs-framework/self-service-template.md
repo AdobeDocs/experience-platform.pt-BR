@@ -2,9 +2,9 @@
 title: Modelo de autoatendimento de documentação // Substituir pelo nome do destino
 description: Use este template para criar uma documentação pública para seu destino no catálogo do Adobe Experience Platform. // Substituir pelo parágrafo na seção Visão geral
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 38178723dc142ba3e79d6c170affaf86ec496086
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1739'
 ht-degree: 2%
 
 ---
@@ -74,14 +74,25 @@ Para ajudá-lo a entender melhor como e quando você deve usar o destino *YourDe
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
-*Adicione informações nesta seção sobre os públicos-alvo com suporte do seu destino. Preenchemos previamente a tabela com alguns valores padrão. Use os caracteres `✓` e `X` para marcar se o tipo de público-alvo é suportado por este destino.*
+*Adicione informações nesta seção sobre os públicos-alvo com suporte do seu destino. Preenchemos previamente as tabelas com alguns valores padrão. Use `Yes` e `No` para marcar se o tipo de público-alvo é suportado por este destino.*
 
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Uploads personalizados | X | Públicos [importados](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV. |
+| [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+
+{style="table-layout:auto"}
+
+Públicos-alvo compatíveis por tipo de dados de público-alvo:
+
+| Tipo de dados de público | Suportado | Descrição | Casos de uso |
+|--------------------|-----------|-------------|-----------|
+| [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
+| [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Sim | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
+| [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Sim | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Sim | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 

@@ -4,10 +4,10 @@ title: Visão geral de alertas
 description: Saiba mais sobre os alertas na Adobe Experience Platform, incluindo a estrutura de como as regras de alerta são definidas.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: f33bcf982216d25e514992d5ebf978b5535abd77
+source-git-commit: bdddcdb19fe248af8f83d42bf885f07b9749a399
 workflow-type: tm+mt
-source-wordcount: '791'
-ht-degree: 12%
+source-wordcount: '865'
+ht-degree: 11%
 
 ---
 
@@ -92,6 +92,14 @@ Com a permissão Exibir Alertas, você pode exibir alertas recebidos selecionand
 > Selecione um alerta para navegar para um painel relacionado e obter informações mais detalhadas sobre por que o alerta foi acionado.
 
 Além disso, a guia [!UICONTROL Alerts] na interface do usuário permite que usuários individuais assinem tipos de alertas específicos e que administradores habilitem ou desabilitem regras de alertas completamente. Consulte o [guia da interface](./ui.md) para obter mais informações sobre como gerenciar alertas.
+
+### Integração do Slack {#slack-integration}
+
+Você pode usar um proxy de webhook no [Adobe App Builder](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app) para receber o [Adobe I/O Events](https://developer.adobe.com/events/docs/guides/) do Experience Platform para o [!DNL Slack]. O proxy lida com o handshake de verificação do Adobe e transforma cargas de evento em [!DNL Slack] mensagens, para que você possa receber alertas voltados para o cliente diretamente no seu espaço de trabalho.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3480183?learn=on)
+
+Para obter mais informações sobre como receber notificações do Experience Platform em [!DNL Slack] ao integrar com um proxy de webhook do Adobe App Builder, consulte [monitorar eventos do Experience Platform em [!DNL Slack]](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/monitoring/monitor-events-in-slack).
 
 ## Próximas etapas
 

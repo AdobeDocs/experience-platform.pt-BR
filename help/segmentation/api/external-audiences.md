@@ -2,9 +2,9 @@
 title: Endpoint da API de públicos externos
 description: Saiba como usar a API de públicos-alvo externos para criar, atualizar, ativar e excluir seus públicos-alvo externos do Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: de18b8292f07c143d63d26a45ca541e50b2ed2f3
+source-git-commit: b024571a33c8c9313e0814c090e496a8ffa98009
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2622'
 ht-degree: 4%
 
 ---
@@ -92,7 +92,11 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": "40",
@@ -108,7 +112,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | String | Uma descrição opcional para o público-alvo externo. |
 | `customAudienceId` | String | Um identificador opcional para seu público-alvo externo. |
 | `fields` | Matriz de objetos | A lista de campos e seus tipos de dados. Você deve ter no mínimo 1 campo e no máximo 41 campos em sua matriz. Um dos campos **deve** ser um campo de identidade e incluir o `identityNs`. Ao criar a lista de campos, você pode adicionar os seguintes itens: <ul><li>`name`: **Obrigatório** O nome do campo que faz parte da especificação de público-alvo externo.</li><li>`type`: **Obrigatório** O tipo de dados que entra no campo. Os valores com suporte incluem `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) e `boolean`.</li><li>`identityNs`: **Obrigatório para o campo de identidade** O namespace usado pelo campo de identidade. Os valores suportados incluem todos os namespaces válidos, como `ECID` ou `email`.</li><li>`labels`: *Opcional* Uma matriz de rótulos de controle de acesso para o campo. Mais informações sobre os rótulos de controle de acesso disponíveis podem ser encontradas no [glossário de rótulos de uso de dados](/help/data-governance/labels/reference.md). </li></ul> |
-| `sourceSpec` | Objeto | Um objeto que contém as informações onde o público-alvo externo está localizado. Ao usar este objeto, você **deve** incluir as seguintes informações: <ul><li>`path`: **Obrigatório**: o local do público-alvo externo ou a pasta que contém o público-alvo externo na origem. O caminho de arquivo **não pode** conter espaços. Por exemplo, se o caminho for `activation/sample-source/Example CSV File.csv`, defina o caminho como `activation/sample-source/ExampleCSVFile.csv`. Você pode encontrar o caminho para sua origem na coluna de **dados do Source** da seção de fluxos de dados.</li><li>`type`: **Obrigatório** O tipo do objeto que você está recuperando da origem. Este valor pode ser `file` ou `folder`.</li><li>`sourceType`: *Opcional* O tipo de origem da qual você está recuperando. No momento, o único valor com suporte é `Cloud Storage`.</li><li>`cloudType`: **Obrigatório** O tipo de armazenamento em nuvem, com base no tipo de origem. Os valores suportados incluem `S3`, `DLZ`, `GCS`, `Azure` e `SFTP`.</li><li>`baseConnectionId`: a ID da conexão base, e é fornecida pelo seu provedor de origem. Este valor é **necessário** se estiver usando um valor `cloudType` de `S3`, `GCS` ou `SFTP`. Caso contrário, você **não** precisará incluir este parâmetro. Para obter mais informações, leia a [visão geral dos conectores de origem](../../sources/home.md).</li></ul> |
+| `sourceSpec` | Objeto | Um objeto que contém as informações onde o público-alvo externo está localizado. Ao usar este objeto, você **deve** incluir as seguintes informações: <ul><li>`path`: **Obrigatório**: o local do público-alvo externo ou a pasta que contém o público-alvo externo na origem. O caminho de arquivo **não pode** conter espaços. Por exemplo, se o caminho for `activation/sample-source/Example CSV File.csv`, defina o caminho como `activation/sample-source/ExampleCSVFile.csv`. Você pode encontrar o caminho para sua origem na coluna de **dados do Source** da seção de fluxos de dados.</li><li>`type`: **Obrigatório** O tipo do objeto que você está recuperando da origem. Este valor pode ser `file` ou `folder`.</li><li>`sourceType`: *Opcional* O tipo de origem da qual você está recuperando. No momento, o único valor com suporte é `Cloud Storage`.</li><li>`cloudType`: **Obrigatório** O tipo de armazenamento em nuvem, com base no tipo de origem. Os valores suportados incluem `S3`, `DLZ`, `GCS`, `Azure` e `SFTP`.</li><li>`baseConnectionId`: a ID da conexão base, e é fornecida pelo seu provedor de origem. Este valor é **necessário** se estiver usando um valor `cloudType` de `S3`, `GCS` ou `SFTP`. Caso contrário, você **não** precisará incluir este parâmetro. Para obter mais informações, leia a [visão geral dos conectores de origem](../../sources/home.md).</li><li>`encryption`: *Opcional* Um objeto que contém a chave de criptografia necessária para assimilação assíncrona de dados criptografados.</li><ul><li>`publicKeyId`: **Obrigatório**: a ID de chave pública retornada quando você gerou o par de chaves de criptografia. Para obter mais informações, leia o [guia de criptografia de dados](/help/sources/tutorials/api/encrypt-data.md#create-encryption-key-pair). </li><li>`signVerificationKeyId`: *Opcional*: a ID de chave pública retornada quando você compartilhou sua chave gerenciada pelo cliente com a Experience Platform. **Observação:** este campo está rotulado como `publicKeyId` na resposta à solicitação de API. Para obter mais informações, leia o [guia de criptografia de dados](/help/sources/tutorials/api/encrypt-data.md##share-your-public-key-to-experience-platform).</li></ul></ul> |
 | `ttlInDays` | Número inteiro | A expiração dos dados para o público externo, em dias. Esse valor pode ser definido de 1 a 90. Por padrão, a expiração dos dados está definida como 30 dias. |
 | `audienceType` | String | O tipo de público-alvo para o público externo. Atualmente, somente `people` é suportado. |
 | `originName` | String | **Obrigatório** A origem do público-alvo. Isso indica de onde o público-alvo vem. Para públicos externos, você deve usar `CUSTOM_UPLOAD`. |
@@ -155,7 +159,11 @@ Uma resposta bem-sucedida retorna o status HTTP 202 com detalhes do público-alv
                 "path": "activation/sample-source/example.csv",
                 "type": "file",
                 "sourceType": "Cloud Storage",
-                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b",
+                "encryption": {
+                    "publicKeyId": "e31ae895-7896-469a-8e06-eb9207ddf1c2",
+                    "signVerificationId": "ZTMxYWU4OTUtNzg5Ni00NjlhLThlMDYtZWI5MjA3ZGRmMWMy"
+                }
             }
         },
         "ttlInDays": 40,
@@ -390,6 +398,8 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do público-alv
 >[!NOTE]
 >
 >Para usar o ponto de extremidade a seguir, é necessário ter o `audienceId` do público-alvo externo. Você pode obter seu `audienceId` de uma chamada bem-sucedida para o ponto de extremidade `GET /external-audiences/operations/{OPERATION_ID}`.
+>
+>Além disso, esse endpoint pode ser usado para atualizar os dados do público-alvo se tiverem sido assimilados anteriormente.
 
 Você pode iniciar uma assimilação de público-alvo fazendo uma solicitação POST para o endpoint a seguir ao fornecer a ID do público-alvo.
 

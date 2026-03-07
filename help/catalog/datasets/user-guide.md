@@ -7,7 +7,7 @@ exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 source-git-commit: 9bfad453b74afce848ca3b00cd66a2336edf8479
 workflow-type: tm+mt
 source-wordcount: '4294'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
@@ -57,14 +57,14 @@ Este guia do usuário requer uma compreensão funcional dos seguintes componente
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Campanhas orquestradas"
->abstract="Ative essa opção para permitir que o conjunto de dados selecionado seja usado em campanhas do Adobe Journey Optimizer Orchestrated. O conjunto de dados deve usar um esquema relacional e somente um conjunto de dados pode ser criado por esquema."
->additional-url="https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Habilitar conjunto de dados para campanhas orquestradas"
+>abstract="Habilite esse botão de alternância para permitir que o conjunto de dados selecionado seja usado nas campanhas orquestradas do Adobe Journey Optimizer. O conjunto de dados deve usar um esquema relacional e somente um conjunto de dados pode ser criado por esquema."
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/orchestrated-campaigns/data-configuration/schemas-datasets/manual-schema#enable" text="Habilitar conjunto de dados para campanhas orquestradas"
 
 >[!CONTEXTUALHELP]
 >id="platform_datasets_enableforlookup_toggle"
 >title="Habilitar para pesquisa"
->abstract="Habilite esse conjunto de dados para que a pesquisa use seus dados no Journey Optimizer para personalização, decisão e orquestração de jornadas."
->additional-url="https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Usar dados do Adobe Experience Platform no Journey Optimizer"
+>abstract="Habilite esse conjunto de dados para que a pesquisa use seus dados no Journey Optimizer para personalização, tomada de decisão e orquestração de jornada."
+>additional-url="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/data-management/lookup-aep-data" text="Usar os dados da Adobe Experience Platform no Journey Optimizer"
 
 Na interface do usuário do [!DNL Experience Platform], selecione **[!UICONTROL Datasets]** no painel de navegação esquerdo para abrir o painel **[!UICONTROL Datasets]**. O painel lista todos os conjuntos de dados disponíveis para sua organização. Os detalhes são exibidos para cada conjunto de dados listado, incluindo o nome, o esquema ao qual o conjunto de dados pertence e o status da execução de assimilação mais recente.
 

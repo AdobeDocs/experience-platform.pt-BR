@@ -3,13 +3,13 @@ title: Monitorar públicos-alvo de transmissão
 description: Saiba como usar o painel de monitoramento para monitorar públicos avaliados usando a segmentação por transmissão
 hide: true
 hidefromtoc: true
-source-git-commit: 6fe0a36a8f2ac2cb954935ee8fe64432442b6e84
+exl-id: b47325fb-7768-4bc0-92d2-5541729e636d
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '368'
-ht-degree: 6%
+ht-degree: 16%
 
 ---
-
 
 # Monitorar públicos-alvo de transmissão
 
@@ -23,7 +23,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Experie
 * [Serviço de segmentação](../../segmentation/home.md):
 * [Capacidades](../../landing/license-usage-and-guardrails/capacity.md): no Experience Platform, as capacidades informam se sua organização excedeu alguma das medidas de proteção e fornecem informações sobre como corrigir esses problemas.
 
-## Monitoramento de métricas para públicos-alvo de transmissão {#streaming-audience-metrics}
+## Métricas de monitoramento para públicos-alvo de transmissão {#streaming-audience-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_evaluation_rate"
@@ -34,7 +34,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Experie
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_audience_p95_latency"
 >title="Latência de assimilação P95"
->abstract="Essa métrica mede a latência do 95º percentil de um evento que chega ao Adobe Experience Platform para avaliação bem-sucedida no público-alvo."
+>abstract="Essa métrica avalia a latência do 95º percentil de um evento que chega à Adobe Experience Platform para uma avaliação bem-sucedida no público-alvo."
 >text="Learn more in documentation"
 
 A tabela a seguir fornece informações mais detalhadas sobre as métricas usadas para públicos-alvo de transmissão.

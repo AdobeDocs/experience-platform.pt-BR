@@ -295,7 +295,7 @@ O recurso de uso previsto é compatível com as seguintes métricas:
 >
 >A partir de 20 de agosto, os clientes com direitos para &#39;[!UICONTROL Average Profile Richness]&#39; e &#39;[!UICONTROL Total Storage]&#39; viram &#39;[!UICONTROL Total Data Volume]&#39; no Painel de Uso de Licenças. Não houve alteração nos direitos do cliente, apenas uma simplificação das métricas de rastreamento. [!UICONTROL Total Data Volume] representa os dados disponíveis no Perfil de cliente em tempo real para fluxos de trabalho de envolvimento e personalização. Essa métrica simplificada melhorou o gerenciamento e a medição do uso do Perfil do cliente em tempo real. Os clientes foram incentivados a entrar em contato com o representante da Adobe para obter mais esclarecimentos sobre essa alteração.
 
-As métricas exibidas no painel dependem dos produtos e dos direitos associados à sua organização. Se sua organização participar da [avaliação associada ao uso dos Adobe Experience Platform Agents](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) ou das licenças dos Adobe Experience Platform Agents, o painel incluirá a métrica [!UICONTROL AI credits]. Se sua organização não licenciar o Adobe Experience Platform, o uso do crédito de IA será exibido como a métrica principal.
+As métricas exibidas no painel dependem dos produtos e dos direitos associados à sua organização. Se sua organização participar da [avaliação associada ao uso dos Adobe Experience Platform Agents](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/trial) ou das licenças dos Adobe Experience Platform Agents, o painel incluirá a métrica [!UICONTROL AI credits]. Se sua organização não licenciar o Adobe Experience Platform, o uso do crédito de IA será exibido como a métrica principal.
 
 | Métrica | Descrição |
 |---|---|
@@ -330,11 +330,11 @@ A disponibilidade dessas métricas e a definição específica de cada uma delas
 
 | Licença | Descrição do produto |
 | --- | --- |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD PESADO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/br/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Serviços de Aplicativos e Serviços Inteligentes](https://helpx.adobe.com/br/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT :OD PRFL PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT :OD PRFL PARA 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) |
-| <ul><li>ATIVAÇÃO DO AEP:OD</li><li>PRFL DE ATIVAÇÃO DO AEP:OD PARA 10M</li><li>AEP:OD ATIVATION PRFL ATÉ 50 MILHÕES</li></ul> | [Ativação do Adobe Experience Platform](https://helpx.adobe.com/br/legal/product-descriptions/adobe-experience-platform0.html) |
-| <ul><li>INTELIGÊNCIA DO AEP:OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/br/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD PESADO</li></ul> | [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [Experience Platform, Serviços de Aplicativos e Serviços Inteligentes](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>PLATAFORMA DE DADOS DO CLIENTE DE RT:OD</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT :OD PRFL PARA 10M</li><li>PLATAFORMA DE DADOS DO CLIENTE DE RT :OD PRFL PARA 50M</li></ul> | [Adobe Real-Time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR) |
+| <ul><li>ATIVAÇÃO DO AEP:OD</li><li>PRFL DE ATIVAÇÃO DO AEP:OD PARA 10M</li><li>AEP:OD ATIVATION PRFL ATÉ 50 MILHÕES</li></ul> | [Ativação do Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>INTELIGÊNCIA DO AEP:OD</li></ul> | [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>DESFAZER ORQUESTRAÇÃO DE PERFIL DO Real-Time CDP:OD</li></ul> | [Adobe Journey Optimizer](https://helpx.adobe.com/br/legal/product-descriptions/adobe-journey-optimizer.html) |
 
 >[!WARNING]

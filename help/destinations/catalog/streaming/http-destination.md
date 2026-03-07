@@ -7,7 +7,7 @@ exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
 workflow-type: tm+mt
 source-wordcount: '3042'
-ht-degree: 7%
+ht-degree: 8%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 7%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 O destino da API HTTP é um destino de streaming [!DNL Adobe Experience Platform] que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
 
@@ -210,7 +210,7 @@ Se você selecionar o tipo de autenticação **[!UICONTROL OAuth 2 Client Creden
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_endpoint"
 >title="Ponto de acesso HTTP"
->abstract="A URL do endpoint HTTP para o qual você deseja enviar os dados do perfil. Este é o seu endpoint de recebimento de dados e oferece suporte a mTLS, se configurado (não disponível com a Senha do OAuth 2 ou autenticação de Credenciais do cliente)."
+>abstract="O URL do ponto de acesso HTTP para o qual você deseja enviar os dados do perfil. Esse é o ponto de acesso de recebimento de dados e é compatível com mTLS, se configurado (não disponível com autenticação por senha OAuth 2 ou credenciais do cliente)."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_http_includesegmentnames"

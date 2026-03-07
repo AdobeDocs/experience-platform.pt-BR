@@ -5,7 +5,7 @@ exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
 source-git-commit: 56ae47f511a7392286c4f85173dba30e93fc07d0
 workflow-type: tm+mt
 source-wordcount: '2520'
-ht-degree: 4%
+ht-degree: 5%
 
 ---
 
@@ -81,7 +81,7 @@ Cada conjunto de dados na Experience Platform oferece suporte a apenas um tipo d
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_primaryidentity"
 >title="Namespace de identidade principal"
->abstract="O namespace de identidade principal é o atributo que vincula exclusivamente um registro ao perfil de um consumidor no Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nesta coluna, você deve fornecer o namespace de identidade principal (como `email` para endereços de email ou `ecid` para Experience Cloud IDs) que corresponde ao esquema do conjunto de dados. Para saber mais, consulte o guia da interface do ciclo de vida dos dados."
+>abstract="O namespace de identidade principal é o atributo que vincula um registro exclusivamente ao perfil de consumidor na Experience Platform. O campo de identidade principal de um conjunto de dados é definido pelo esquema em que o conjunto de dados se baseia. Nessa coluna, é necessário fornecer o namespace de identidade principal (como `email` para endereços de email ou `ecid` para IDs da Experience Cloud) que corresponde ao esquema do conjunto de dados. Para saber mais, consulte o guia da interface do ciclo de vida dos dados."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_identityvalue"

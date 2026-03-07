@@ -5,7 +5,7 @@ exl-id: da7bb08d-2684-45a1-b666-7580f2383748
 source-git-commit: 450a59b406684b456a67df43fbf954edbae49ff7
 workflow-type: tm+mt
 source-wordcount: '1835'
-ht-degree: 18%
+ht-degree: 19%
 
 ---
 
@@ -26,14 +26,14 @@ Este guia requer uma compreensão funcional dos seguintes componentes do Experie
 
 >[!NOTE]
 >
->A capacidade de taxa de transferência de transmissão suporta até 1500 eventos de entrada por segundo. Você pode comprar Segmentação de streaming adicional para oferecer suporte a até um máximo adicional de 13.500 eventos de entrada por segundo&#x200B;. Para obter mais informações, consulte as [descrições de produto do Real-Time CDP B2C Edition - Prime e Ultimate Packages](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+>A capacidade de taxa de transferência de transmissão suporta até 1500 eventos de entrada por segundo. Você pode comprar Segmentação de streaming adicional para oferecer suporte a até um máximo adicional de 13.500 eventos de entrada por segundo&#x200B;. Para obter mais informações, consulte as [descrições de produto do Real-Time CDP B2C Edition - Prime e Ultimate Packages](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 ## Métricas de monitoramento para a assimilação de perfil de transmissão {#streaming-profile-metrics}
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_streaming_profile"
 >title="Monitorar assimilação de perfil de transmissão"
->abstract="O painel de monitoramento para perfis de transmissão exibe informações sobre taxas de transferência e assimilação. Use esse painel para visualizar, entender e analisar as métricas de processamento de dados. dos perfis de transmissão na Experience Platform."
+>abstract="O painel de monitoramento para perfis de transmissão exibe informações sobre taxas de transferência e ingestão. Use esse painel para visualizar, entender e analisar as métricas de processamento de dados. dos perfis de transmissão na Experience Platform."
 >text="Learn more in documentation"
 
 >[!CONTEXTUALHELP]

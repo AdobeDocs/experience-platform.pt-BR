@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;página inicial;tópicos populares;mapear csv;mapear arquivo csv;mapear arquivo csv para xdm;mapear csv para xdm;guia de interface do usuário;mapeador;mapeamento;preparação de dados;preparação de dados;
-title: Guia da interface de preparação de dados
+title: Guia da interface da preparação de dados
 description: Saiba como usar as funções de preparação de dados na interface do usuário do Experience Platform para mapear arquivos CSV para um esquema XDM.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
 source-git-commit: 789d00912edd0ce8e2871b7e22445a043868ccf5
 workflow-type: tm+mt
 source-wordcount: '1416'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
-# Guia da interface de preparação de dados {#data-prep-ui-guide}
+# Guia da interface da preparação de dados {#data-prep-ui-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_data_prep_import_mapping"

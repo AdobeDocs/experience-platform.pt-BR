@@ -1,13 +1,13 @@
 ---
 title: Validação de público-alvo
 description: Saiba como o Experience Platform valida seus públicos para garantir que eles tenham bom desempenho downstream.
-source-git-commit: 52439e55d3c48631488b17b6b04256bcbbe37bcb
+exl-id: 55877ad5-757f-4928-853c-3b211ece0a45
+source-git-commit: 2d7ba15f918c314fe219212df82aec6d7ac1fc77
 workflow-type: tm+mt
 source-wordcount: '1630'
-ht-degree: 1%
+ht-degree: 13%
 
 ---
-
 
 # Validação de público
 
@@ -40,12 +40,12 @@ Atualmente, as seguintes validações são aceitas:
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_rewritescheck"
 >title="Alerta de eficiência da consulta"
->abstract="Seu público-alvo contém muitas consultas, o que resulta em complexidade lógica desnecessária. Simplifique a definição de público-alvo antes de continuar."
+>abstract="O público-alvo contém muitas consultas, o que resulta em complexidade lógica desnecessária. Simplifique a definição de público-alvo antes de continuar."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_cnfcomplexitycheck"
 >title="Complexidade lógica"
->abstract="Seu público-alvo contém muitas consultas, o que resulta em complexidade lógica desnecessária. Simplifique a definição de público-alvo antes de continuar."
+>abstract="O público-alvo contém muitas consultas, o que resulta em complexidade lógica desnecessária. Simplifique a definição de público-alvo antes de continuar."
 
 A validação da complexidade lógica analisa a estrutura das declarações lógicas (AND, OR, NOT) dentro da definição do público-alvo. Especificamente, ela busca definições de público-alvo que forçarão o sistema a executar um número excessivo de comparações por perfil.
 
@@ -110,7 +110,7 @@ plan.equals("trial") AND region.equals("canada")
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_chaincountcheck"
 >title="Limite de sequência de eventos"
->abstract="Seu público-alvo contém muitos eventos sequenciais. Você pode ter no máximo 6 eventos sequenciais na definição do público-alvo. Remova alguns eventos sequenciais da definição de público-alvo antes de continuar."
+>abstract="O público-alvo contém muitos eventos sequenciais. Você pode ter no máximo seis eventos sequenciais na definição do público-alvo. Remova alguns eventos sequenciais da definição de público-alvo antes de continuar."
 
 A validação da complexidade do evento sequencial limita o número de eventos sequenciais em uma sequência a 6 eventos.
 
@@ -145,7 +145,7 @@ chain(xEvent, timestamp, [ A: WHAT(eventType = "productView"), B: WHAT(eventType
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_countaggregationcheck"
 >title="Aviso de filtro de contagem"
->abstract="Seu público-alvo tem muitos eventos de agregação. Você deve usar no máximo 3 eventos de agregação no público-alvo. Para evitar problemas de desempenho, remova alguns eventos de agregação da definição de público-alvo."
+>abstract="O público-alvo tem muitos eventos de agregação. Você deve usar no máximo três eventos de agregação no público-alvo. Para evitar problemas de desempenho, remova alguns eventos de agregação da definição do público-alvo."
 
 A verificação de contagem agregada limita o número de eventos de agregação usados em seu público-alvo a três condições.
 
@@ -153,12 +153,12 @@ Um evento padrão só precisa encontrar um único evento correspondente para qua
 
 Para evitar o acionamento dessa validação, use contagens específicas apenas quando for estritamente necessário para a definição do público-alvo. Por exemplo, se você precisar saber apenas se um usuário se engajou uma vez, é possível usar a lógica padrão &quot;Existe&quot;, em vez de usar um evento &quot;Contagem > 0&quot;.
 
-### [!BADGE Complexidade de dados aninhados]{type=Caution} para otimização de desempenho {#nested-data-complexity}
+### [!BADGE Otimização de desempenho]{type=Caution} Complexidade de dados aninhados {#nested-data-complexity}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_arraydepthcheck"
 >title="Aviso de dados aninhados"
->abstract="Seu público-alvo tem muitas camadas de dados aninhadas. Você deve usar no máximo 2 camadas de dados no público-alvo. Para evitar problemas de desempenho, você deve nivelar a definição de público-alvo."
+>abstract="O público-alvo tem muitas camadas de dados aninhadas. Você deve usar no máximo duas camadas de dados no público-alvo. Para evitar problemas de desempenho, você deve nivelar a definição do público-alvo."
 
 A validação da complexidade de dados aninhados limita o número de dados aninhados em uma definição de público-alvo a duas camadas.
 
@@ -166,12 +166,12 @@ Embora o Experience Platform seja compatível com o uso de objetos de matriz e d
 
 Se você costuma realizar a segmentação em um atributo profundamente aninhado, talvez seja necessário entrar em contato com a equipe de engenharia de dados para copiar o atributo para um nível superior no esquema do perfil para facilitar o acesso.
 
-### [!BADGE Otimização de desempenho]{type=Caution} Tamanho do público {#audience-size}
+### [!BADGE Otimização de desempenho]{type=Caution} Tamanho do público-alvo {#audience-size}
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_segmentbuilder_profilestorecheck"
->title="Aviso de tamanho do público"
->abstract="Seu público-alvo é escrito de forma muito ampla. Você deve evitar escrever uma definição de público-alvo que qualifique mais de 30% do total de perfis em sua sandbox. Para evitar problemas de desempenho, você deve restringir a definição de público-alvo."
+>title="Aviso de tamanho do público-alvo"
+>abstract="O público-alvo está escrito de forma muito ampla. Evite escrever uma definição de público-alvo que qualifique mais de 30% do total de perfis em sua sandbox. Para evitar problemas de desempenho, você deve restringir a definição do público-alvo."
 
 A validação do tamanho do público verifica se a definição de público-alvo é tão ampla que mais de 30% do total de perfis em sua sandbox se qualificam para o público-alvo.
 

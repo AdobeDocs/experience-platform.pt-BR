@@ -98,7 +98,7 @@ Depois que um valor for inserido, selecione **[!UICONTROL View]** e um único pe
 
 ![O perfil que corresponde ao valor de identidade está realçado.](../images/user-guide/filtered-identity-value.png)
 
-## Exibir perfil {#view-profile}
+## Visualizar perfil {#view-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"

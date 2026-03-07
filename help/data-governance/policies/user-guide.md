@@ -7,7 +7,7 @@ exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: 364a92bde1a1629d2811e7ff16bd6a4fb5287249
 workflow-type: tm+mt
 source-wordcount: '2380'
-ht-degree: 11%
+ht-degree: 13%
 
 ---
 
@@ -145,7 +145,7 @@ Se você selecionar mais de uma condição, poderá usar o ícone que aparece en
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_consentthen"
 >title="Condição “Então”"
->abstract="Depois que a condição “Se” for definida, use a seção “Então” para selecionar pelo menos um atributo de consentimento do esquema de união. Você deve navegar pelos campos de contêiner (Objeto, Mapa, Matriz) para chegar aos campos primitivos (Sequência, Número, Booleano, etc.) para a criação de regras. Esse campo primitivo é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por essa política."
+>abstract="Depois que a condição “Se” for definida, use a seção “Então” para selecionar pelo menos um atributo de consentimento do esquema de união. Você deve navegar pelos campos de contêiner (Objeto, Mapa, Matriz) para chegar aos campos primitivos (Sequência, Número, Booleano, etc.) para a criação de regras. Esse campo primitivo é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por esta política."
 
 Na seção **[!UICONTROL Then]**, selecione pelo menos um atributo de consentimento do esquema de união. Esse é o atributo que deve estar presente para que os perfis sejam incluídos na ação regida por essa política. Você pode escolher uma das opções sugeridas ou selecionar **[!UICONTROL View all]** para escolher o atributo diretamente do esquema de união.
 
@@ -285,4 +285,4 @@ Este documento forneceu uma visão geral de como gerenciar as políticas de uso 
 
 O vídeo a seguir fornece uma demonstração de como trabalhar com políticas de uso na interface do usuário do [!DNL Experience Platform]:
 
->[!VIDEO](https://video.tv.adobe.com/v/37143?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

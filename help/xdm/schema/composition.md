@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Noções básicas da composição do esquema
 description: Saiba mais sobre esquemas do Experience Data Model (XDM) e os componentes, princípios e práticas recomendadas para a composição de esquemas no Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: 33b3534a2c3f9b5da54fa4f3897d1e107f7c1976
+source-git-commit: e4a30f7e483b90d5420ddcc1caffcee2089eda3f
 workflow-type: tm+mt
-source-wordcount: '4331'
+source-wordcount: '4371'
 ht-degree: 8%
 
 ---
@@ -117,6 +117,11 @@ Como mostra o exemplo acima, cada chave no objeto `identityMap` representa um na
 
 ### Princípios de evolução do esquema {#evolution}
 
+>[!CONTEXTUALHELP]
+>id="platform_schemas_schema_editing_breaking_change_warning"
+>title="Edição de um schema em uso"
+>abstract="Este esquema já é usado por conjuntos de dados ou fluxos de trabalho de assimilação. Alterações em campos ou identidades existentes podem causar falhas de assimilação se os fluxos de dados estiverem em execução ou programados. Depois que a assimilação começar, somente as alterações de esquema aditivas serão suportadas."
+
 À medida que a natureza das experiências digitais continua a evoluir, o mesmo deve acontecer com os esquemas utilizados para representá-las. Um esquema bem projetado é, portanto, capaz de se adaptar e evoluir conforme necessário, sem causar alterações destrutivas nas versões anteriores do esquema.
 
 Como manter a compatibilidade com versões anteriores é crucial para a evolução do esquema, o Experience Platform impõe um princípio de controle de versão puramente aditivo. Esse princípio garante que qualquer revisão do esquema resulte apenas em atualizações e alterações não destrutivas. Em outras palavras, não há suporte para **alterações de quebra.**
@@ -161,9 +166,9 @@ O Experience Platform usa uma abordagem de composição na qual os blocos de con
 
 Os esquemas são compostos usando a seguinte fórmula:
 
-**Classe + Grupo de Campos de Esquema&ast; = Esquema XDM**
+**Classe + Grupo de Campos de Esquema&amp;ast; = Esquema XDM**
 
-&ast;Um esquema é composto por uma classe e zero ou mais grupos de campos de esquema. Isso significa que você pode compor um esquema de conjunto de dados sem usar grupos de campos.
+&amp;ast;Um esquema é composto por uma classe e zero ou mais grupos de campos de esquema. Isso significa que você pode compor um esquema de conjunto de dados sem usar grupos de campos.
 
 ### Classe {#class}
 

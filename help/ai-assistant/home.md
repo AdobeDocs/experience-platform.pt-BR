@@ -75,7 +75,7 @@ O conhecimento do produto refere-se a conceitos e tópicos fundamentados na docu
 
 Assista ao vídeo a seguir para obter informações adicionais sobre o conhecimento do produto Assistente de IA (herdado):
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3475935/?captions=por_br&learn=on)
 
 ### Insights operacionais {#operational-insights}
 
@@ -104,7 +104,7 @@ Para perguntas sobre insights operacionais, as respostas podem não refletir o e
 
 Assista ao vídeo a seguir para obter mais informações sobre os insights operacionais do Assistente de IA (herdado):
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444037?captions=por_br&learn=on&enablevpops)
 
 ### Escopo do recurso {#feature-scope}
 

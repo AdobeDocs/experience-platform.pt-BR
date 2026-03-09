@@ -1,32 +1,32 @@
 ---
-title: Guia de perguntas do Assistente de IA
-description: Leia este documento para conhecer exemplos de perguntas que você pode usar ao consultar o Assistente de IA.
+title: Guia de perguntas para o Assistente de IA (herdado)
+description: Leia este documento para conhecer exemplos de perguntas que você pode usar ao consultar o Assistente de IA (herdado).
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: ae4bc8b86e63bf950bc1d05a9c9e76ee4e541f9a
+source-git-commit: 077c42f2190316a00168bbeca685c08677c2b13a
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2086'
 ht-degree: 0%
 
 ---
 
-# Guia de perguntas do Assistente de IA
+# Guia de perguntas para o Assistente de IA (herdado)
 
-Leia este documento no para obter um conjunto de exemplos de perguntas que você pode usar ao consultar o Assistente de IA.
+Leia este documento no para obter um conjunto de exemplos de perguntas que você pode usar ao consultar o Assistente de IA (herdado).
 
-Você também pode usar este documento para obter dicas sobre [como formular suas perguntas](#phrasing-your-questions) para obter respostas ideais do Assistente de IA.
+Você também pode usar este documento para obter dicas sobre [como formular suas perguntas](#phrasing-your-questions) para obter respostas ideais do Assistente de IA (Herdado).
 
 ## Perguntas baseadas em objetivos {#objectives-questions}
 
-As seguintes perguntas de exemplo são agrupadas por objetivos que você pode realizar ao usar o Assistente de IA:
+As seguintes perguntas de exemplo são agrupadas por objetivos que você pode realizar ao usar o Assistente de IA (herdado):
 
 | Objetivo | Descrição | Exemplo |
 | --- | --- | --- |
-| Conceitos de aprendizado e fluxos de trabalho contínuos | <ul><li>Como usuário iniciante, você pode usar o AI Assistant para aprender conceitos do Real-Time CDP e do Adobe Journey Optimizer e integrar-se a produtos e recursos com os quais não está familiarizado.</li><li>Como um usuário experiente, você pode usar o AI Assistant para resolver um caso de borda que pode estar bloqueando seu fluxo de trabalho. | <ul><li>Como configurar um painel no Jornada Analytics?</li><li>Conte-me alguns casos de uso para o Real-Time CDP.</li></ul> |
-| Solução de problemas | Use o Assistente de IA para saber como depurar erros básicos que você pode encontrar no fluxo de trabalho. | <ul><li>O que este erro {ERROR_MESSAGE} significa?</li><li>Por que não consigo excluir o público-alvo chamado &quot;Luma: Público-alvo de email&quot;?</li></ul> |
-| Higiene da sandbox | Use o Assistente de IA para identificar objetos duplicados ou não utilizados, para que você possa manter sua sandbox com eficiência. | <ul><li>Você pode me mostrar públicos semelhantes?</li><li>Há esquemas que não tenham um conjunto de dados associado?</li></ul> |
-| Análise de valor | Use o Assistente de IA para identificar os objetos de dados mais usados e avaliar os indicadores de desempenho ou encontrar os objetos de dados mais valiosos. | <ul><li>Quantos perfis estão em nossa definição de segmento &quot;Luma: Público-alvo de email&quot;?</li><li>Quando os públicos-alvo foram ativados para o destino do Experience Cloud Audiences?</li></ul> |
-| Pesquisa | Use o Assistente de IA para encontrar objetos do Experience Platform compatíveis, como públicos-alvo, conjuntos de dados, destinos, esquemas e fontes. | <ul><li>Liste os públicos-alvo que contêm &quot;Luma&quot; no nome que foram criados no último trimestre.</li><li>Quais atributos estão no esquema XDM &quot;Luma: Ações personalizadas&quot;?</li></ul> |
-| Análise de impacto | Use o Assistente do AI para identificar objetos de dados que foram usados em determinados workflows para que você possa avaliar o impacto de quaisquer alterações. | <ul><li>Quais públicos-alvo usam `homeAddress.city` no esquema &quot;Luma: PersonProfiles&quot;?</li><li>Em quais conjuntos de dados o atributo de perfil `consents.marketing.push.val` está armazenado?</li></ul> |
+| Conceitos de aprendizado e fluxos de trabalho contínuos | <ul><li>Como usuário iniciante, você pode usar o Assistente de IA (herdado) para conhecer os conceitos do Real-Time CDP e do Adobe Journey Optimizer e integrar-se a produtos e recursos com os quais não está familiarizado.</li><li>Como um usuário experiente, você pode usar o Assistente de IA (herdado) para resolver um caso de borda que pode estar bloqueando seu fluxo de trabalho. | <ul><li>Como configurar um painel no Jornada Analytics?</li><li>Conte-me alguns casos de uso para o Real-Time CDP.</li></ul> |
+| Solução de problemas | Use o Assistente de IA (herdado) para saber como depurar erros básicos que você pode encontrar no fluxo de trabalho. | <ul><li>O que este erro {ERROR_MESSAGE} significa?</li><li>Por que não consigo excluir o público-alvo chamado &quot;Luma: Público-alvo de email&quot;?</li></ul> |
+| Higiene da sandbox | Use o Assistente de IA (herdado) para identificar objetos duplicados ou não usados, para que você possa manter sua sandbox com eficiência. | <ul><li>Você pode me mostrar públicos semelhantes?</li><li>Há esquemas que não tenham um conjunto de dados associado?</li></ul> |
+| Análise de valor | Use o Assistente de IA (herdado) para identificar seus objetos de dados mais usados e avaliar indicadores de desempenho ou encontrar os objetos de dados mais valiosos. | <ul><li>Quantos perfis estão em nossa definição de segmento &quot;Luma: Público-alvo de email&quot;?</li><li>Quando os públicos-alvo foram ativados para o destino do Experience Cloud Audiences?</li></ul> |
+| Pesquisa | Use o Assistente de IA (herdado) para encontrar objetos do Experience Platform compatíveis, como públicos-alvo, conjuntos de dados, destinos, esquemas e fontes. | <ul><li>Liste os públicos-alvo que contêm &quot;Luma&quot; no nome que foram criados no último trimestre.</li><li>Quais atributos estão no esquema XDM &quot;Luma: Ações personalizadas&quot;?</li></ul> |
+| Análise de impacto | Use o Assistente de IA (herdado) para identificar objetos de dados que foram usados em determinados workflows, para que você possa avaliar o impacto de quaisquer alterações. | <ul><li>Quais públicos-alvo usam `homeAddress.city` no esquema &quot;Luma: PersonProfiles&quot;?</li><li>Em quais conjuntos de dados o atributo de perfil `consents.marketing.push.val` está armazenado?</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -81,26 +81,26 @@ As perguntas a seguir são agrupadas por objetos de dados e são classificadas c
    * Quando devo usar um tipo de dados vs um grupo de campos?
    * Qual é a diferença entre uma identidade e uma chave primária ou estrangeira?
 * **Solução de problemas - Conhecimento do produto (Real-Time CDP e Journey Optimizer)**
-   * Em que o Assistente de IA pode ajudar?
+   * Com o que o Assistente de IA (herdado) pode ajudar?
    * Posso excluir um esquema ativado por perfil depois que os dados forem assimilados?
    * Por que não posso excluir um público-alvo?
    * Quanto tempo leva para que os públicos-alvo sejam avaliados e os resultados sejam disponibilizados para direcionamento?
 
 ## Formular suas perguntas {#phrasing-your-questions}
 
-Você deve enviar suas perguntas ao Assistente de IA com clareza e contexto para obter uma resposta o mais precisa possível. Consulte a seguinte lista de dicas para obter orientação sobre como fazer uma pergunta clara com contexto:
+Você deve enviar suas perguntas ao Assistente de IA (herdado) com clareza e contexto para obter uma resposta o mais precisa possível. Consulte a seguinte lista de dicas para obter orientação sobre como fazer uma pergunta clara com contexto:
 
 * Apresente sua tarefa e/ou pergunta de maneira concisa.
 * Evite linguagem ambígua ou sintaxe excessivamente complexa para facilitar a compreensão.
-* Forneça contexto relevante em relação à sua tarefa e/ou pergunta, pois o contexto pode ajudar o Assistente de IA a gerar respostas mais relevantes.
+* Forneça contexto relevante em relação à sua tarefa e/ou pergunta, pois o contexto pode ajudar o Assistente de IA (herdado) a gerar respostas mais relevantes.
 
-Leia as tabelas abaixo para obter mais orientações sobre as práticas recomendadas a serem seguidas ao fazer perguntas ao Assistente de IA.
+Leia as tabelas abaixo para obter mais orientações sobre as práticas recomendadas a serem seguidas ao fazer perguntas ao Assistente de IA (herdado).
 
-As tabelas a seguir descrevem as práticas recomendadas que você pode seguir ao usar o Assistente de IA:
+As tabelas a seguir descrevem as práticas recomendadas que você pode seguir ao usar o Assistente de IA (herdado):
 
 | Fazer | Exemplo |
 | --- | --- |
-| <ul><li>Seja específico sobre o objeto ou as informações que deseja recuperar ou analisar.</li><li>Tente colocar os nomes dos objetos de dados entre aspas. Se você souber apenas uma parte do nome do objeto, também poderá especificá-lo na pergunta.</li><li>Use o [preenchimento automático do objeto](./ui-guide.md#use-auto-complete) para ajudar o Assistente de IA a entender melhor o contexto da sua consulta.</li></ul> | <ul><li>Quais conjuntos de dados usam o esquema &quot;Luma - Fidelidade&quot;?</li><li>Mostre-me os segmentos ativados que têm &quot;Luma&quot; em seus nomes. Classificá-los por contagem de perfis.</li></ul> |
+| <ul><li>Seja específico sobre o objeto ou as informações que deseja recuperar ou analisar.</li><li>Tente colocar os nomes dos objetos de dados entre aspas. Se você souber apenas uma parte do nome do objeto, também poderá especificá-lo na pergunta.</li><li>Use o [preenchimento automático de objeto](./ui-guide.md#use-auto-complete) para ajudar o Assistente de IA (Herdado) a entender melhor o contexto da sua consulta.</li></ul> | <ul><li>Quais conjuntos de dados usam o esquema &quot;Luma - Fidelidade&quot;?</li><li>Mostre-me os segmentos ativados que têm &quot;Luma&quot; em seus nomes. Classificá-los por contagem de perfis.</li></ul> |
 | <ul><li>Evite ambiguidades e use linguagem clara</li><li>Use terminologia precisa para garantir mais clareza em seu query.</li><li>Ao fazer perguntas sobre o Adobe Experience Platform, tente usar a terminologia específica do Experience Platform para melhorar a relevância das respostas.</li></ul> | <ul><li>Quantos perfis eu tenho em &quot;ACME Audience&quot;.</li><li>Mostre-me os 5 principais atributos XDM usados em públicos ativados.</li></ul> |
 | <ul><li>Forneça contexto ou especifique um critério para filtrar os resultados.</li><li>Use um critério de filtro nas perguntas para limitar o volume de dados na resposta.</li></ul> | <ul><li>Mostre-me públicos que não foram ativados e foram criados há mais de 6 meses e que nunca foram modificados.</li><li>Mostre-me públicos ativados para &quot;ACME Destination&quot; e têm mais de 10000 perfis.</li></ul> |
 
@@ -118,7 +118,7 @@ As tabelas a seguir descrevem as práticas recomendadas que você pode seguir ao
 
 ## Observabilidade do conjunto de dados {#dataset-observability}
 
-O AI Assistant agora pode responder a perguntas sobre métricas específicas do conjunto de dados, como tamanho do armazenamento e contagem de linhas.
+O AI Assistant (herdado) agora pode responder a perguntas sobre métricas específicas do conjunto de dados, como tamanho do armazenamento e contagem de linhas.
 
 * Quais são meus maiores conjuntos de dados por tamanho?
 * Quais são meus maiores conjuntos de dados por linhas?
@@ -187,7 +187,7 @@ Você também pode refinar suas perguntas de observabilidade de dados com um qua
 
 ## Exemplos de perguntas não suportadas {#unsupported-questions}
 
-Veja a seguir uma lista de exemplos de perguntas que não são suportadas no momento pelo Assistente de IA.
+Veja a seguir uma lista de exemplos de perguntas que não são suportadas no momento pelo Assistente de IA (Herdado).
 
 +++Selecione para exibir exemplos de perguntas não suportadas
 
@@ -230,4 +230,4 @@ Veja a seguir uma lista de exemplos de perguntas que não são suportadas no mom
 
 ## Próximas etapas
 
-Após a leitura deste documento, você compreenderá como otimizar suas perguntas para o Assistente de IA. Para obter informações sobre como usar o recurso durante os fluxos de trabalho, leia o [guia da interface do assistente do AI](ui-guide.md).
+Após a leitura deste documento, você compreenderá como otimizar suas perguntas para o Assistente de IA (herdado). Para obter informações sobre como usar o recurso durante os fluxos de trabalho, leia o [guia da interface do usuário do Assistente de IA (Herdado)](ui-guide.md).

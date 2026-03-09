@@ -2,28 +2,42 @@
 title: Assistente de IA no Adobe Experience Platform
 description: Saiba como usar o Assistente de IA para navegar e entender os conceitos do Experience Platform e do Real-Time Customer Data Platform, além de informações de uso sobre seus objetos.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
+source-git-commit: 8b0632efe10e280149d68facea44ea1f62267e3e
 workflow-type: tm+mt
-source-wordcount: '1734'
+source-wordcount: '1946'
 ht-degree: 0%
 
 ---
 
-# Guia da interface do assistente de IA
+# Guia da interface do assistente do AI (herdado)
+
+>[!IMPORTANT]
+>
+>Este documento se aplica ao Assistente de IA (herdado). Para obter informações sobre o Assistente de IA (Próxima Geração), leia o [Guia da Interface do Usuário do Assistente de IA](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/ai-assistant/ai-assistant-ui) na documentação do [AI no Experience Cloud](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
+
+Consulte a tabela a seguir para obter uma comparação do Assistente de IA (Herdado) e do Assistente de IA (Próxima geração):
+
+| Área de recurso | Assistente de IA (herdado) | Assistente de IA (Next-Gen) |
+| --- | --- | --- |
+| Experiência do usuário | O Assistente de IA (herdado) está disponível somente no painel direito. | O AI Assistant (Next-Gen) está disponível no painel direito e na experiência de tela cheia imersiva. |
+| Escopo dos recursos | Você pode usar o Assistente de IA (Herdado) para obter conhecimento sobre o produto e insights operacionais. | Você pode usar o Assistente de IA (Next-Gen) para obter conhecimento sobre produtos, insights operacionais, habilidades agênicas avançadas e execução de tarefas em várias etapas. |
+| Arquitetura da plataforma | O Assistente de IA (herdado) não foi criado na pilha do Agent Orchestrator. | O AI Assistant (Next-Gen) é disponibilizado pelo [Adobe Experience Platform Agent Orchestrator](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator), permitindo extensibilidade e coordenação avançada entre recursos. |
+| Cobertura do aplicativo | O Assistente de IA (herdado) é uma implementação específica do aplicativo. | Você pode usar o Assistente de IA (Next-Gen) para obter uma experiência unificada de assistente de IA em todos os aplicativos da Adobe Experience Cloud. |
+| Modelo de acesso e permissão | Modelo de acesso com escopo de aplicativo alinhado aos limites individuais do produto. | Todos os usuários obtêm acesso ao AI Assistant (Next-Gen) e aos agentes associados da Experience Platform. **Nota**: <ul><li>**Adobe Experience Manager**: o administrador deve conceder a você permissão para acessar o Assistente de IA (Próxima Geração) por meio da [Adobe Admin Console](https://helpx.adobe.com/br/enterprise/using/admin-console.html).</li><li>**Customer Journey Analytics**: o administrador deve conceder a você permissão para acessar o Assistente de IA por meio do [Controle de Acesso do Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/technotes/access-control?lang=en). Isso permite fazer perguntas sobre conhecimento do produto e insights de dados. |
 
 Leia este guia para saber como usar o Assistente de IA na interface do usuário do Adobe Experience Platform.
 
 ## Acessar o assistente de IA na interface do usuário do Experience Platform
 
-Para iniciar o Assistente de IA, selecione o **[!UICONTROL ícone do Assistente de IA]** no cabeçalho superior da interface do Experience Platform.
+Para iniciar o Assistente de IA, selecione o **[!UICONTROL AI Assistant icon]** no cabeçalho superior da interface do Experience Platform.
 
 ![A página inicial do Experience Platform, com o ícone do Assistente de IA selecionado e a interface do Assistente de IA aberta.](./images/ai-assistant-full-icon.png)
 
-A interface do Assistente de IA é exibida, fornecendo imediatamente informações para começar. Você pode usar as opções fornecidas em [!UICONTROL Ideias para começar] para responder perguntas e comandos como:
+A interface do Assistente de IA é exibida, fornecendo imediatamente informações para começar. Você pode usar as opções fornecidas em [!UICONTROL Ideas to get started] para responder a perguntas e comandos como:
 
-* [!UICONTROL Quais dos meus públicos-alvo estão ativados?]
-* [!UICONTROL O que é um esquema?]
-* [!UICONTROL Conte-me alguns casos de uso comuns para o Real-Time CDP]
+* [!UICONTROL Which of my audiences are activated?]
+* [!UICONTROL What is a schema?]
+* [!UICONTROL Tell me some common use cases for Real-Time CDP]
 
 ## Guia da interface do assistente de IA
 
@@ -49,7 +63,7 @@ Esta seção descreve os diferentes recursos do Assistente de IA que você pode 
 
 ### Exibir objetos de dados operacionais {#view-operational-data-objects}
 
-Dependendo da sua consulta, o Assistente de IA fornece informações adicionais relacionadas aos dados da sandbox. Para exibir como a resposta à sua consulta se aplica à sua sandbox específica, selecione **[!UICONTROL Na sua sandbox].**
+Dependendo da sua consulta, o Assistente de IA fornece informações adicionais relacionadas aos dados da sandbox. Para exibir como a resposta à sua consulta se aplica à sua sandbox específica, selecione **[!UICONTROL In your sandbox].**
 
 Ao visualizar dados pertencentes à sua sandbox, o Assistente de IA pode fornecer links diretos para páginas específicas da interface do usuário que exibem seus dados consultados.
 
@@ -65,9 +79,9 @@ Neste exemplo, o Assistente de IA retorna informações adicionais sobre os esqu
 
 Você pode verificar as respostas retornadas pelo Assistente de IA revisando as citações disponíveis com cada resposta de conhecimento do produto.
 
-+++Selecione para exibir um exemplo de como exibir fontes
++++Selecione para ver um exemplo de como exibir fontes
 
-Para exibir citações e validar a resposta do Assistente de IA, selecione **[!UICONTROL Mostrar fontes]**.
+Para exibir citações e validar a resposta do Assistente de IA, selecione **[!UICONTROL Show sources]**.
 
 ![A resposta do Assistente de IA com &quot;Mostrar fontes&quot; selecionada.](./images/show-sources.png)
 
@@ -109,7 +123,7 @@ Você pode verificar cada resposta relacionada às perguntas dos insights operac
 
 +++Selecione para exibir um exemplo de verificação das respostas dos insights operacionais
 
-Depois de receber uma resposta para uma pergunta de insights operacionais, selecione **[!UICONTROL Mostrar fontes]** e selecione **[!UICONTROL Exibir consulta de origem]**.
+Depois de receber uma resposta para uma pergunta de insights operacionais, selecione **[!UICONTROL Show sources]** e, em seguida, **[!UICONTROL View source query]**.
 
 ![exibir consulta de origem](./images/view-source-query.png)
 
@@ -135,7 +149,7 @@ Você pode usar o preenchimento automático incluindo o símbolo de mais (**`+`*
 
 Você pode usar os recursos de várias rodadas do Assistente de IA para ter uma conversa mais natural durante sua experiência. O Assistente de IA pode responder perguntas de acompanhamento, fornecidas. contexto pode ser deduzido de uma interação anterior.
 
-+++Selecione para exibir um exemplo de curva múltipla
++++Selecione para exibir um exemplo de turno múltiplo
 
 No exemplo abaixo, o Assistente de IA é solicitado primeiro a fornecer o número total de fluxos de dados e, em seguida, é solicitado a listar os 10 fluxos de dados mais recentes.
 
@@ -149,7 +163,7 @@ Você pode alterar tópicos com o Assistente de IA redefinindo e iniciando uma n
 
 +++Selecione para exibir um exemplo de redefinição da conversa
 
-Para redefinir, selecione as reticências (**`...`**) na interface do Assistente de IA e selecione **[!UICONTROL Iniciar nova conversa]**. Isso informa ao Assistente de IA que você pretende alterar tópicos e pode ser particularmente útil ao solucionar problemas de consultas que estão falhando ou fazendo referência a informações incorretas.
+Para redefinir, selecione as reticências (**`...`**) na interface do Assistente de IA e selecione **[!UICONTROL Start new conversation]**. Isso informa ao Assistente de IA que você pretende alterar tópicos e pode ser particularmente útil ao solucionar problemas de consultas que estão falhando ou fazendo referência a informações incorretas.
 
 ![As reticências selecionadas e a opção Iniciar nova conversa selecionada.](./images/reset.png)
 
@@ -187,7 +201,7 @@ Talvez seja necessário atualizar espaços reservados em algumas instâncias em 
 
 Os espaços reservados são realçados em azul. Selecione o espaço reservado para começar a atualizar seu valor. Para obter melhores resultados em espaços reservados numéricos, certifique-se de usar dígitos em vez de texto. Você também pode usar o recurso de preenchimento automático de entidade para atualizar os valores de espaço reservado. Não é possível enviar uma pergunta que tenha espaços reservados não preenchidos.
 
-**OBSERVAÇÃO**: as sugestões estão habilitadas por padrão. Selecione o botão **[!UICONTROL Sugerir ideias]** para desabilitar o recurso.
+**OBSERVAÇÃO**: as sugestões estão habilitadas por padrão. Selecione o botão **[!UICONTROL Suggest ideas]** para desabilitar o recurso.
 
 ![Uma sugestão do Assistente de IA com espaços reservados atualizados.](./images/updated_placeholder.png)
 
@@ -217,7 +231,7 @@ Para fornecer feedback, selecione polegares para cima, polegares para baixo ou u
 
 ![A opção de feedback no Assistente de IA.](./images/provide-feedback.png)
 
-+++Selecione para exibir mais exemplos
++++Selecione para ver mais exemplos
 
 >[!BEGINTABS]
 

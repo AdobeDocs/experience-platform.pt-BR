@@ -3,9 +3,9 @@ keywords: atributos do dirigível;destino do dirigível
 title: Conexão com os atributos do dirigível
 description: Transmita facilmente os dados de público-alvo da Adobe para o Airship como atributos de público-alvo para direcionamento no Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 7b22c4b058b0068b96c26d0c4c7743d489451620
 workflow-type: tm+mt
-source-wordcount: '1136'
+source-wordcount: '1137'
 ht-degree: 3%
 
 ---
@@ -149,7 +149,7 @@ Para identificadores que devem ser mapeados para um canal, ou seja, um dispositi
 
 >[!NOTE]
 >
->Use o nome amigável que aparece no painel do [!DNL Airship] ao selecionar o campo de destino para o mapeamento de atributos.
+>Use o `attribute_id` que corresponde ao atributo no painel [!DNL Airship] ao selecionar o campo de destino para o mapeamento de atributos.
 
 **Mapear identidade**
 

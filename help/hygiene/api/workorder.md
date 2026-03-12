@@ -3,10 +3,10 @@ title: Registrar Ordens de Serviço de Exclusão
 description: Saiba como usar o ponto de extremidade /workorder na API de higiene de dados para gerenciar ordens de trabalho de exclusão de registro no Adobe Experience Platform. Este guia aborda cotas, linhas do tempo de processamento e uso da API.
 role: Developer
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: 1d923e6c4a344959176abb30a8757095c711a601
+source-git-commit: 5ca3e4feae3096e41689610ac3afac7e93047149
 workflow-type: tm+mt
-source-wordcount: '2541'
-ht-degree: 2%
+source-wordcount: '3316'
+ht-degree: 1%
 
 ---
 
@@ -32,27 +32,20 @@ As ordens de serviço de exclusão de registro estão sujeitas a limites diário
 
 ### Direito de envio mensal por produto {#quota-limits}
 
-A tabela a seguir mostra os limites de envio de identificador por produto e nível de direito. Para cada produto, o limite mensal é o menor de dois valores: um limite de identificador fixo ou um limite baseado em porcentagem vinculado ao volume de dados licenciado.
+A tabela a seguir mostra os limites de envio de identificador por produto e nível de direito. Para cada produto, o limite mensal é o menor de dois valores: um limite de identificador fixo ou um limite baseado em porcentagem vinculado ao volume de dados licenciado. Na prática, a maioria das organizações tem limites mensais mais baixos com base em seu público-alvo endereçável real ou direitos de linha do Adobe Customer Journey Analytics.
 
 | Produto | Descrição do Direito | Limite mensal (o que for menor) |
 |----------|-------------------------|---------------------------------|
 | Real-Time CDP ou Adobe Journey Optimizer | Sem o Privacy and Security Shield ou o complemento Healthcare Shield | 2.000.000 identificadores ou 5% do público endereçável |
 | Real-Time CDP ou Adobe Journey Optimizer | Com o Privacy and Security Shield ou o complemento Healthcare Shield | 15.000.000 identificadores ou 10% do público endereçável |
-| Customer Journey Analytics | Sem o Privacy and Security Shield ou o complemento Healthcare Shield | 2.000.000 identificadores ou 100 identificadores por milhão de linhas de direito do CJA |
-| Customer Journey Analytics | Com o Privacy and Security Shield ou o complemento Healthcare Shield | 15.000.000 identificadores ou 200 identificadores por milhão de linhas de direito do CJA |
+| Customer Journey Analytics | Sem o Privacy and Security Shield ou o complemento Healthcare Shield | 2.000.000 identificadores ou 100 identificadores por milhão de linhas de direito do Customer Journey Analytics |
+| Customer Journey Analytics | Com o Privacy and Security Shield ou o complemento Healthcare Shield | 15.000.000 identificadores ou 200 identificadores por milhão de linhas de direito do Customer Journey Analytics |
 
 >[!NOTE]
 >
->A maioria das organizações terá limites mensais mais baixos com base no público-alvo endereçável real ou nos direitos de linha do CJA.
-
->[!NOTE]
->
->As cotas são redefinidas no primeiro dia de cada mês. Cota não utilizada **não** é transferida.
-
->[!NOTE]
->
->O uso da cota é baseado no direito mensal licenciado de sua organização para **identificadores enviados**. As cotas não são aplicadas por medidas de proteção do sistema, mas podem ser monitoradas e revisadas.\
->A capacidade da ordem de trabalho de exclusão do registro é um **serviço compartilhado**. Seu limite mensal reflete os direitos mais altos no Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics e em qualquer complemento do Shield aplicável.
+>- As cotas são redefinidas no primeiro dia de cada mês. Cota não utilizada **não** é transferida.
+>- O uso da cota é baseado no direito mensal licenciado de sua organização para **identificadores enviados**. As cotas não são aplicadas por medidas de proteção do sistema, mas podem ser monitoradas e revisadas.
+>- A capacidade da ordem de trabalho de exclusão do registro é um **serviço compartilhado**. Seu limite mensal reflete os direitos mais altos no Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics e em qualquer complemento do Shield aplicável.
 
 ### Processamento de cronogramas para envios de identificadores {#sla-processing-timelines}
 
@@ -131,7 +124,8 @@ Uma resposta bem-sucedida retorna uma lista paginada de ordens de serviço de de
       "targetServices": [
         "profile",
         "datalake",
-        "identity"
+        "identity",
+        "ajo"
       ],
       "status": "received",
       "createdBy": "a.stark@acme.com <a.stark@acme.com> BD8C3D631F41@acme.com",
@@ -168,10 +162,10 @@ A tabela a seguir descreve as propriedades na resposta.
 | `createdAt` | O carimbo de data e hora quando a ordem de trabalho foi criada. |
 | `updatedAt` | O carimbo de data e hora quando a ordem de trabalho foi atualizada pela última vez. |
 | `operationCount` | O número de operações incluídas na ordem de serviço. |
-| `targetServices` | Lista de serviços de destino da ordem de serviço. |
+| `targetServices` | O conjunto de serviços de público alvo que processaram a exclusão. O valor padrão depende dos direitos da organização. Para organizações com Real-Time CDP ou Adobe Journey Optimizer, o padrão é o conjunto completo de serviços com suporte (`["datalake", "identity", "profile", "ajo"]`). Para organizações exclusivas da Customer Journey Analytics (sem um direito ao Perfil de Cliente em Tempo Real), o único valor válido é [&quot;datalake&quot;]. |
 | `status` | Status atual da ordem de serviço. Os valores possíveis são: `received`,`validated`, `submitted`, `ingested`, `completed` e `failed`. |
 | `createdBy` | O email e o identificador do usuário que criou a ordem de trabalho. |
-| `datasetId` | O identificador exclusivo do conjunto de dados associado à ordem de serviço. Se a solicitação se aplicar a todos os conjuntos de dados, esse campo será definido como TODOS. |
+| `datasetId` | Os conjuntos de dados direcionados pela ordem de trabalho: uma única ID de conjunto de dados, uma lista separada por vírgulas de IDs de conjunto de dados (conjunto de dados múltiplo) ou o literal `ALL`. Quando a solicitação usou o modo somente de perfil, esse valor é `ALL`. |
 | `datasetName` | O nome do conjunto de dados associado à ordem de serviço. |
 | `displayName` | Um rótulo legível para a ordem de serviço. |
 | `description` | Uma descrição da finalidade da ordem de serviço. |
@@ -185,9 +179,9 @@ A tabela a seguir descreve as propriedades na resposta.
 
 ## Criar uma ordem de serviço de exclusão de registro {#create}
 
-Para excluir registros associados a uma ou mais identidades de um único conjunto de dados ou de todos os conjuntos de dados, faça uma solicitação POST para o ponto de extremidade `/workorder`.
+Para excluir registros associados a uma ou mais identidades de um único conjunto de dados, vários conjuntos de dados ou todos os conjuntos de dados, faça uma solicitação POST para o ponto de extremidade `/workorder`.
 
-As ordens de serviço são processadas de forma assíncrona e são exibidas na lista de ordens de serviço após o envio.
+As ordens de serviço são processadas de forma assíncrona e são exibidas na lista de ordens de serviço após o envio. As opções de vários conjuntos de dados e somente de perfil (serviços direcionados) estão disponíveis para todos os clientes a partir da versão de março de 2026 do Experience Platform.
 
 >[!TIP]
 >
@@ -199,25 +193,36 @@ As ordens de serviço são processadas de forma assíncrona e são exibidas na l
 POST /workorder
 ```
 
->[!NOTE]
->
->Você só pode excluir registros de conjuntos de dados cujo esquema XDM associado defina uma identidade principal ou mapa de identidade.
-
 >[!IMPORTANT]
 >
 >As ordens de trabalho de exclusão de registro atuam exclusivamente no campo **identidade principal**. As seguintes limitações se aplicam:
 >
+>- **O esquema do conjunto de dados deve definir uma identidade primária ou um mapa de identidade.** Só é possível excluir registros de conjuntos de dados cujo esquema XDM associado define uma identidade primária ou mapa de identidade.
 >- **As identidades secundárias não foram verificadas.** Se um conjunto de dados contiver vários campos de identidade, somente a identidade principal será usada para correspondência. Os registros não podem ser direcionados ou excluídos com base em identidades não primárias.
 >- **Os registros sem uma identidade principal preenchida são ignorados.** Se um registro não tiver metadados de identidade primários preenchidos, ele não estará qualificado para exclusão.
 >- **Dados assimilados antes da configuração de identidade não são qualificados.** Se o campo de identidade principal foi adicionado a um esquema após a assimilação de dados, os registros assimilados anteriormente não poderão ser excluídos por meio de ordens de trabalho de exclusão de registro.
 
 >[!NOTE]
 >
->Se você tentar criar uma ordem de serviço de exclusão de registro para um conjunto de dados que já tem uma expiração ativa, a solicitação retornará HTTP 400 (Solicitação inválida). Uma expiração ativa é qualquer exclusão programada que ainda não foi concluída.
+>Se você tentar criar uma ordem de serviço de exclusão de registro para um conjunto de dados que já tem uma expiração ativa, a solicitação retornará HTTP 400 (Solicitação inválida). Uma expiração ativa é qualquer exclusão agendada que ainda não foi concluída.
+
+### Formatos de carga de identidade (`namespacesIdentities` ou `identities`)
+
+O corpo da solicitação deve incluir **exatamente um** dos itens a seguir.
+
+| Formato | Propriedade | Forma | Quando usar |
+|--------|----------|-------|-------------|
+| **Recomendado** | `namespacesIdentities` | Matriz de objetos com `namespace` (por exemplo, `{ "code": "email" }`) e `ids` (matriz de sequências de identidade). | Use para todas as cargas, sejam elas construídas manualmente ou geradas por código. Isso é especialmente eficiente para reduzir o tamanho da carga quando muitas identidades compartilham o mesmo namespace. |
+| **Também aceito** | `identities` | Matriz de objetos com `namespace` (por exemplo, `{ "code": "email" }`) e um único `id` (string). | Aceito para compatibilidade com versões anteriores. Este é o formato produzido pelos [scripts de conversão de csv em higiene de dados](#convert-id-lists-to-json-for-record-delete-requests). O serviço normaliza esse formato internamente, de modo que o comportamento resultante é idêntico. |
+
+Se você enviar **ambas as propriedades**, **nenhuma propriedade** ou fornecer **uma matriz vazia** para a propriedade incluída, a API retornará **HTTP 400 (Solicitação inválida)** com uma destas mensagens:
+
+- **Ambas as propriedades fornecidas:** `"Identities and NamespacesIdentities are not allowed at the same time"`
+- **Lista não fornecida ou vazia:** `"Identities are Empty for Delete Identity request."`
 
 **Solicitação**
 
-A solicitação a seguir exclui todos os registros associados a endereços de email especificados de um conjunto de dados específico.
+A solicitação a seguir exclui todos os registros associados a endereços de email especificados de um conjunto de dados específico. Ele usa o formato `namespacesIdentities` recomendado.
 
 ```shell
 curl -X POST \
@@ -237,7 +242,7 @@ curl -X POST \
             "namespace": {
               "code": "email"
             },
-            "IDs": [
+            "ids": [
               "alice.smith@acmecorp.com",
               "bob.jones@acmecorp.com",
               "charlie.brown@acmecorp.com"
@@ -254,8 +259,10 @@ A tabela a seguir descreve as propriedades para criar uma ordem de serviço de d
 | `displayName` | Um rótulo legível por humanos para esta ordem de serviço de exclusão de registro. |
 | `description` | Uma descrição da ordem de serviço de exclusão do registro. |
 | `action` | A ação solicitada para a ordem de trabalho de exclusão do registro. Para excluir registros associados a uma determinada identidade, use `delete_identity`. |
-| `datasetId` | O identificador exclusivo do conjunto de dados. Use a ID do conjunto de dados para um conjunto de dados específico, ou `ALL` para direcionar todos os conjuntos de dados. Os conjuntos de dados devem ter uma identidade primária ou mapa de identidade. Se existir um mapa de identidade, ele estará presente como um campo de nível superior chamado `identityMap`.<br>Observe que uma linha de conjunto de dados pode ter muitas identidades em seu mapa de identidade, mas apenas uma pode ser marcada como primária. `"primary": true` deve ser incluído para forçar `id` a corresponder a uma identidade principal. |
-| `namespacesIdentities` | Uma matriz de objetos, cada um contendo:<br><ul><li> `namespace`: um objeto com uma propriedade `code` especificando o namespace de identidade (por exemplo, &quot;email&quot;).</li><li> `IDs`: Uma matriz de valores de identidade a serem excluídos para este namespace.</li></ul>Os namespaces de identidade fornecem contexto para dados de identidade. Você pode usar os namespaces padrão fornecidos pelo Experience Platform ou criar os seus próprios. Para saber mais, consulte a [documentação de namespace de identidade](../../identity-service/features/namespaces.md) e a [especificação da API do Serviço de Identidade](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
+| `datasetId` | O identificador exclusivo dos conjuntos de dados. O valor deve ser exatamente um destes: o literal `ALL`, uma única ID de conjunto de dados ou uma lista separada por vírgulas de duas ou mais IDs de conjunto de dados (por exemplo, `"id1,id2,id3"`). Você não pode combinar `ALL` com IDs específicas. As solicitações de um único conjunto de dados se comportam como antes, as solicitações de vários conjuntos de dados excluem as identidades de cada conjunto de dados listado e `ALL` direciona cada conjunto de dados. Os conjuntos de dados devem ter uma identidade primária ou mapa de identidade. Se existir um mapa de identidade, ele estará presente como um campo de nível superior chamado `identityMap`.<br>**Observação**: uma linha de conjunto de dados pode ter muitas identidades em seu mapa de identidades, mas apenas uma pode ser marcada como primária. `"primary": true` deve ser incluído para forçar `id` a corresponder a uma identidade principal.<br>Ao usar `targetServices` para exclusão somente de perfil, `datasetId` deve ser `ALL`. |
+| `targetServices` | Opcional. Especifica quais serviços devem processar a exclusão. O valor padrão depende dos direitos da organização. Organizações com Real-Time CDP ou Adobe Journey Optimizer recebem o conjunto completo de serviços suportados (`["datalake", "identity", "profile", "ajo"]`) por padrão. Organizações com Customer Journey Analytics, mas sem um direito de Perfil de Cliente em Tempo Real, só podem usar [&quot;datalake&quot;]. Para limitar a exclusão somente a dados relacionados ao perfil e deixar o data lake intacto, defina como `["identity", "profile", "ajo"]` (em qualquer ordem). Este modo somente de perfil requer um direito de Real-Time CDP ou Adobe Journey Optimizer e `datasetId` deve ser `ALL`. |
+| `identities` | **Use exatamente um de `identities` ou `namespacesIdentities`.** Matriz de objetos, cada uma com `namespace` (objeto com `code`, por exemplo, `"email"`) e `id` (cadeia de caracteres de identidade única). Aceito para compatibilidade com versões anteriores e produzido pelos scripts de conversão. O serviço normaliza esse formato internamente; o comportamento é idêntico. Consulte [Formato de carga da identidade](#identity-payload-format-identities-or-namespacesidentities) acima. |
+| `namespacesIdentities` | **Use exatamente um de `identities` ou `namespacesIdentities`.** Matriz de objetos, cada uma com `namespace` (objeto com `code`, por exemplo, `"email"`) e `ids` (matriz de cadeias de caracteres de identidade). Recomendado para todas as cargas. A propriedade `namespacesIdentities` é mais compacta quando muitas identidades compartilham um namespace. Consulte [Formato de carga da identidade](#identity-payload-format-identities-or-namespacesidentities) acima. Namespaces de identidade: [documentação de namespace de identidade](../../identity-service/features/namespaces.md), [API do Serviço de Identidade](https://developer.adobe.com/experience-platform-apis/references/identity-service/#operation/getIdNamespaces). |
 
 **Resposta**
 
@@ -273,7 +280,8 @@ Uma resposta bem-sucedida retorna os detalhes da nova ordem de serviço de exclu
   "targetServices": [
     "profile",
     "datalake",
-    "identity"
+    "identity",
+    "ajo"
   ],
   "status": "received",
   "createdBy": "c.lannister@acme.com <c.lannister@acme.com> 7EAB61F3E5C34810A49A1AB3@acme.com",
@@ -298,20 +306,77 @@ A tabela a seguir descreve as propriedades na resposta.
 | `targetServices` | Uma lista de serviços de destino para a ordem de serviço de exclusão de registro. |
 | `status` | Status atual da ordem de serviço de exclusão do registro. |
 | `createdBy` | O email e o identificador do usuário que criou a ordem de trabalho de exclusão de registro. |
-| `datasetId` | O identificador exclusivo do conjunto de dados. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. |
+| `datasetId` | O identificador exclusivo dos conjuntos de dados. Se a solicitação for para todos os conjuntos de dados, o valor será definido como `ALL`. Para solicitações de vários conjuntos de dados, o valor reflete a lista separada por vírgulas ou a ID única enviada. |
 | `datasetName` | O nome do conjunto de dados para esta ordem de serviço de exclusão de registro. |
 | `displayName` | Um rótulo legível para a ordem de serviço de exclusão do registro. |
 | `description` | Uma descrição da ordem de serviço de exclusão do registro. |
 
 {style="table-layout:auto"}
 
+O valor de resposta `targetServices` ecoa sua solicitação ou mostra o conjunto padrão completo quando omitido (consulte a tabela de resposta acima).
+
+### Conjunto de dados múltiplos e somente perfil (API) {#multi-dataset-profile-only}
+
+As seguintes opções estão disponíveis somente por meio da API e não são compatíveis com a interface da higiene de dados. Eles controlam quais conjuntos de dados e quais serviços processam a exclusão, permitindo envios de vários conjuntos de dados e solicitações de serviço direcionadas somente por perfil.
+
+A tabela a seguir resume como o corpo da solicitação e o comportamento mudam para cada opção.
+
+| Opção | Solicitar alteração de corpo | Comportamento |
+|--------|---------------------|----------|
+| **Conjunto de dados múltiplos** | Use uma lista separada por vírgulas em `datasetId` (ex.: `"id1,id2,id3"`). ID única ou `ALL` inalterada. | As identidades são excluídas dos conjuntos de dados listados (ou de um conjunto de dados, ou de todos os conjuntos de dados quando `ALL`). |
+| **Somente perfil (serviços direcionados)** | Adicionar `targetServices` com exatamente `["identity", "profile", "ajo"]` (qualquer pedido). Exige `datasetId`: `"ALL"`. | Somente Identidade, Perfil e Adobe Journey Optimizer processam a exclusão; o data lake não é modificado. |
+
+#### Solicitações de vários conjuntos de dados
+
+O campo `datasetId` é dividido em vírgulas: use uma única ID (o mesmo comportamento de antes), uma lista de IDs separada por vírgulas ou o literal `ALL`. Para excluir identidades de vários conjuntos de dados específicos em uma ordem de trabalho, forneça uma lista separada por vírgulas:
+
+```json
+"datasetId": "6707eb36eef4d42ab86d9fbe,6643f00c16ddf51767fcf780"
+```
+
+As identidades são excluídas de cada um dos conjuntos de dados listados. As solicitações de um único conjunto de dados funcionam como sempre funcionam; use `ALL` para direcionar cada conjunto de dados. O valor deve ser exatamente um de: `ALL`, uma única ID de conjunto de dados ou duas ou mais IDs de conjunto de dados separadas por vírgulas (sem combinar `ALL` com IDs específicas).
+
+#### Somente perfil (serviços direcionados)
+
+Para remover apenas dados de identidade e relacionados ao perfil sem alterar o data lake, inclua `targetServices` com exatamente estes três valores em qualquer ordem: `identity`, `profile` e `ajo`. Identidade, Perfil e AJO são explicitamente incluídos; o data lake é excluído. Neste modo, `datasetId` deve ser `ALL` (o caso de uso é a exclusão completa do perfil, não fragmentos por conjunto de dados).
+
+O exemplo a seguir cria uma ordem de serviço de deleção de registro somente de perfil:
+
+```shell
+curl -X POST \
+  "https://platform.adobe.io/data/core/hygiene/workorder" \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -d '{
+    "action": "delete_identity",
+    "datasetId": "ALL",
+    "displayName": "Profile-only delete for specified identity",
+    "description": "Delete identity, profile, and AJO data only; datalake unchanged.",
+    "targetServices": ["identity", "profile", "ajo"],
+    "namespacesIdentities": [
+      {
+        "namespace": { "code": "email" },
+        "ids": ["user@example.com"]
+      }
+    ]
+  }'
+```
+
+As respostas bem-sucedidas para solicitações de vários conjuntos de dados ou somente de perfil seguem a mesma forma que outras respostas de ordem de trabalho. Os `datasetId` e `targetServices` retornados refletem os valores na solicitação (ou na lista padrão completa quando `targetServices` é omitido), para que você possa confirmar o que foi enviado.
+
 >[!NOTE]
 >
 >A propriedade de ação para ordens de trabalho de exclusão de registro está atualmente `identity-delete` nas respostas da API. Se a API mudar para usar um valor diferente (como `delete_identity`), esta documentação será atualizada adequadamente.
 
-## Converter listas de ID em JSON para solicitações de exclusão de registro
+## Converter listas de ID em JSON para solicitações de exclusão de registro (#convert-id-lists-to-json-for-record-delete-requests)
 
-Para criar uma ordem de trabalho de exclusão de registro a partir de arquivos CSV, TSV ou TXT contendo identificadores, você pode usar scripts de conversão para produzir as cargas JSON necessárias para o ponto de extremidade `/workorder`. Essa abordagem é especialmente útil ao trabalhar com arquivos de dados existentes. Para scripts prontos para uso e instruções abrangentes, visite o [repositório GitHub de csv para higiene de dados](https://github.com/perlmonger42/csv-to-data-hygiene).
+Use scripts de conversão para produzir as cargas JSON necessárias para o terminal `/workorder` quando seus identificadores estiverem em arquivos CSV, TSV ou TXT. Essa abordagem é especialmente útil ao trabalhar com arquivos de dados existentes. Para obter scripts e instruções prontos para uso, consulte o [repositório GitHub de csv para higiene de dados](https://github.com/perlmonger42/csv-to-data-hygiene).
+
+Os scripts geram o formato **`identities`** — um `id` por objeto com um `namespace`. A API aceita esse formato como está; você pode enviar o JSON gerado diretamente no corpo da POSTAGEM para `/workorder` sem conversão. O formato recomendado é **`namespacesIdentities`**; consulte [Criar uma ordem de trabalho de exclusão de registro](#create) e [Formato de carga de identidade](#identity-payload-format-identities-or-namespacesidentities).
 
 ### Gerar cargas JSON
 
@@ -365,8 +430,8 @@ A tabela abaixo descreve os parâmetros nos scripts bash.
 | ---           | ---     |
 | `verbose` | Ativar saída detalhada. |
 | `column` | O índice (com base em 1) ou o nome do cabeçalho da coluna que contém os valores de identidade a serem excluídos. O padrão é a primeira coluna, se não especificada. |
-| `namespace` | Um objeto com uma propriedade `code` especificando o namespace de identidade (por exemplo, &quot;email&quot;). |
-| `dataset-id` | O identificador exclusivo do conjunto de dados associado à ordem de serviço. Se a solicitação se aplicar a todos os conjuntos de dados, este campo será definido como `ALL`. |
+| `namespace` | O código do namespace de identidade passado para o script (por exemplo, `email`). O JSON gerado usa isso na propriedade `namespace.code` de cada objeto. |
+| `dataset-id` | O identificador exclusivo do(s) conjunto(s) de dados: uma única ID, IDs separadas por vírgulas para vários conjuntos de dados ou `ALL` para todos os conjuntos de dados. |
 | `description` | Uma descrição da ordem de serviço de exclusão do registro. |
 | `output-dir` | O diretório no qual gravar a carga JSON de saída. |
 
@@ -402,7 +467,7 @@ A tabela a seguir descreve as propriedades na carga JSON.
 | Propriedade | Descrição |
 | ---          | ---     |
 | `action` | A ação solicitada para a ordem de trabalho de exclusão do registro. Automaticamente definido como `delete_identity` pelo script de conversão. |
-| `datasetId` | O identificador exclusivo do conjunto de dados. |
+| `datasetId` | O identificador exclusivo do(s) conjunto(s) de dados: uma única ID, IDs separadas por vírgula ou `ALL`. |
 | `displayName` | Um rótulo legível por humanos para esta ordem de serviço de exclusão de registro. |
 | `description` | Uma descrição da ordem de serviço de exclusão do registro. |
 | `identities` | Uma matriz de objetos, cada um contendo:<br><ul><li> `namespace`: um objeto com uma propriedade `code` especificando o namespace de identidade (por exemplo, &quot;email&quot;).</li><li> `id`: O valor de identidade a ser excluído para este namespace.</li></ul> |
@@ -411,7 +476,7 @@ A tabela a seguir descreve as propriedades na carga JSON.
 
 ### Enviar os dados JSON gerados para o ponto de extremidade `/workorder`
 
-Para enviar uma solicitação, siga as instruções na seção [criar uma ordem de serviço de exclusão de registro](#create). Use a carga JSON convertida como o corpo da solicitação (`-d`) ao enviar sua solicitação POST `curl` para o ponto de extremidade de API `/workorder`.
+A saída do script usa o formato `identities`, que a API aceita como está. Use a carga JSON convertida como o corpo da solicitação (`-d`) ao enviar sua solicitação POST `curl` para o ponto de extremidade `/workorder`. Para obter opções completas de solicitação e regras de validação, consulte [Criar uma ordem de trabalho de exclusão de registro](#create).
 
 ## Recuperar detalhes de uma ordem de trabalho de exclusão de registro específica {#lookup}
 
@@ -482,12 +547,12 @@ A tabela a seguir descreve as propriedades na resposta.
 | `targetServices` | Uma lista de serviços de destino afetados por essa ordem de serviço de exclusão de registro. |
 | `status` | O status atual da ordem de serviço de exclusão do registro. |
 | `createdBy` | O email e o identificador do usuário que criou a ordem de trabalho de exclusão de registro. |
-| `datasetId` | O identificador exclusivo do conjunto de dados associado à ordem de serviço. |
+| `datasetId` | O identificador exclusivo do(s) conjunto(s) de dados associado(s) à ordem de trabalho (ID única, IDs separadas por vírgula ou `ALL`). |
 | `datasetName` | O nome do conjunto de dados associado à ordem de serviço. |
 | `displayName` | Um rótulo legível para a ordem de serviço de exclusão do registro. |
 | `description` | Uma descrição da ordem de serviço de exclusão do registro. |
 
-## Atualizar uma ordem de serviço de exclusão de registro
+## Atualizar uma ordem de serviço de exclusão de registro {#update}
 
 Atualize o `name` e o `description` de uma ordem de serviço de exclusão de registro fazendo uma solicitação PUT para o ponto de extremidade `/workorder/{WORKORDER_ID}`.
 
@@ -590,7 +655,7 @@ Uma resposta bem-sucedida retorna a solicitação de ordem de serviço atualizad
 | `targetServices` | Uma lista de serviços de destino afetados por essa ordem de serviço de exclusão de registro. |
 | `status` | O status atual da ordem de serviço de exclusão do registro. Os valores possíveis são: `received`,`validated`, `submitted`, `ingested`, `completed` e `failed`. |
 | `createdBy` | O email e o identificador do usuário que criou a ordem de trabalho de exclusão de registro. |
-| `datasetId` | O identificador exclusivo do conjunto de dados associado à ordem de serviço de exclusão do registro. |
+| `datasetId` | O identificador exclusivo do(s) conjunto(s) de dados associado(s) à ordem de trabalho de exclusão de registro (ID única, IDs separadas por vírgula ou `ALL`). |
 | `datasetName` | O nome do conjunto de dados associado à ordem de serviço de exclusão do registro. |
 | `displayName` | Um rótulo legível para a ordem de serviço de exclusão do registro. |
 | `description` | Uma descrição da ordem de serviço de exclusão do registro. |

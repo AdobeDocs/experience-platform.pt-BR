@@ -328,7 +328,7 @@ Depois de confirmar que os públicos-alvo corretos estão listados, você pode c
 
 The following video demonstrates how to access and use flexible audience evaluation in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453640?)
+>[!VIDEO](https://video.tv.adobe.com/v/3453645?captions=por_br&)
 
 ## Perguntas frequentes {#faq}
 

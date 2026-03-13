@@ -1,10 +1,10 @@
 ---
-description: Esta página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
+description: Essa página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
 title: Formato da mensagem
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: b5d8a1c31705ffe72dadc4fff8626acb7081444a
+source-git-commit: 270facfd580b2dde09906bee1728e1be198680cf
 workflow-type: tm+mt
-source-wordcount: '2488'
+source-wordcount: '2512'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Para entender o formato da mensagem e o processo de configuração e transforma�
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -170,17 +170,17 @@ Veja abaixo dois exemplos de perfis no Experience Platform:
 }
 ```
 
-## Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de público {#using-templating}
+## Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de público-alvo {#using-templating}
 
 O Adobe usa [modelos Pebble](https://pebbletemplates.io/), uma linguagem de modelo semelhante a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), para transformar os campos do esquema XDM do Experience Platform em um formato compatível com seu destino.
 
 Esta seção fornece vários exemplos de como essas transformações são feitas, desde o esquema XDM de entrada, passando pelo modelo, até a saída nos formatos de carga útil aceitos pelo seu destino. Os exemplos abaixo são apresentados por complexidade crescente, como se segue:
 
-1. Exemplos simples de transformação. Saiba como o modelo funciona com transformações simples para os [atributos de perfil](#attributes), a [associação de público-alvo](#segment-membership) e os campos [Identidade](#identities).
+1. Exemplos simples de transformação. Saiba como o modelo funciona com transformações simples para os [atributos de perfil](#attributes), a [associação de público-alvo](#audience-membership) e os campos [Identidade](#identities).
 2. Exemplos de complexidade maior de modelos que combinam os campos acima: [Crie um modelo que envie públicos-alvo e identidades](./message-format.md#segments-and-identities) e [Crie um modelo que envie segmentos, identidades e atributos de perfil](#segments-identities-attributes).
-3. Modelos que incluem a chave de agregação. Quando você usa a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, o Experience Platform agrupa os perfis exportados para o seu destino com base em critérios como ID de público-alvo, status de público-alvo ou namespaces de identidade.
+3. Modelos que incluem a chave de agregação. Quando você usa a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, o Experience Platform agrupa os perfis exportados em seu destino com base em critérios como ID de audiência, namespace de audiência, status de audiência ou namespaces de identidade.
 
-### Atributos do perfil {#attributes}
+### Atributos de perfil {#attributes}
 
 Para transformar os atributos de perfil exportados para o seu destino, consulte o JSON e as amostras de código abaixo.
 
@@ -794,7 +794,8 @@ Perfil 2:
                 {% endfor %}
                 ]
             }
-        }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
     ]
 }
 ```
@@ -838,7 +839,7 @@ O `json` abaixo representa os dados exportados do Adobe Experience Platform.
         {
             "attributes": {
                 "firstName": "Harry",
-                "birthDate": "1980/07/21"
+                "birthDate": "1980/07/31"
             },
             "identities": [
                 {
@@ -859,21 +860,21 @@ O `json` abaixo representa os dados exportados do Adobe Experience Platform.
 
 ### Inclua a chave de agregação no modelo para acessar perfis exportados agrupados por vários critérios {#template-aggregation-key}
 
-Ao usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, você pode agrupar os perfis exportados para o seu destino com base em critérios como ID de público-alvo, alias de público-alvo, associação de público-alvo ou namespaces de identidade.
+Ao usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, você pode agrupar os perfis exportados para o seu destino com base em critérios como ID de público-alvo, namespace de público-alvo, alias de público-alvo, associação de público-alvo ou namespaces de identidade.
 
-No template de transformação de mensagem, você pode acessar as chaves de agregação mencionadas acima, conforme mostrado nos exemplos das seções a seguir. Use chaves de agregação para estruturar a mensagem HTTP exportada do Experience Platform para corresponder ao formato e aos limites de taxa esperados pelo seu destino.
+No template de transformação de mensagem, você pode acessar as chaves de agregação mencionadas acima, conforme mostrado nos exemplos das seções a seguir. Use chaves de agregação para estruturar a mensagem HTTP exportada de Experience Platform para corresponder ao formato e aos limites de taxa esperados pelo seu destino.
 
-#### Usar chave de agregação de ID de público-alvo no modelo {#aggregation-key-segment-id}
+#### Usar chave de agregação de ID de público no modelo {#aggregation-key-segment-id}
 
-Se você usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e definir `includeSegmentId` como verdadeiro, os perfis nas mensagens HTTP exportadas para o seu destino serão agrupados por ID de público-alvo. Veja abaixo como acessar a ID de público-alvo no modelo.
+Se você usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e definir `includeSegmentId` como verdadeiro, os perfis nas mensagens HTTP exportadas para seu destino serão agrupados por ID de público. Veja abaixo como acessar a ID de público e o namespace de público no modelo.
 
 **Entrada**
 
 Considere os quatro perfis abaixo, em que:
 
-* os dois primeiros fazem parte do público-alvo com a ID de público-alvo `788d8874-8007-4253-92b7-ee6b6c20c6f3`
-* o terceiro perfil faz parte do público com a ID de público-alvo `8f812592-3f06-416b-bd50-e7831848a31a`
-* o quarto perfil faz parte dos dois públicos-alvo acima.
+* os dois primeiros fazem parte do público com a ID de público-alvo `788d8874-8007-4253-92b7-ee6b6c20c6f3` no namespace `ups`
+* o terceiro perfil faz parte do público com a ID de público-alvo `8f812592-3f06-416b-bd50-e7831848a31a` no namespace `CustomerAudienceUpload`
+* o quarto perfil faz parte dos dois públicos-alvo acima, cada um no respectivo namespace.
 
 Perfil 1:
 
@@ -925,7 +926,7 @@ Perfil 3:
       }
    },
    "segmentMembership":{
-      "ups":{
+      "CustomerAudienceUpload":{
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
@@ -946,12 +947,14 @@ Perfil 4:
    },
    "segmentMembership":{
       "ups":{
-         "8f812592-3f06-416b-bd50-e7831848a31a":{
-            "lastQualificationTime":"2021-02-20T12:00:00Z",
-            "status":"realized"
-         },
          "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
             "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"realized"
+         }
+      },
+      "CustomerAudienceUpload":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"realized"
          }
       }
@@ -965,11 +968,12 @@ Perfil 4:
 >
 >Para todos os modelos que você usa, você deve omitir os caracteres ilegais, como aspas duplas `""` antes de inserir o [modelo](../../functionality/destination-server/templating-specs.md) na [configuração do servidor de destino](../../authoring-api/destination-server/create-destination-server.md). Para obter mais informações sobre como evitar aspas duplas, consulte o Capítulo 9 no [padrão JSON](https://www.ecma-international.org/publications-and-standards/standards/ecma-404/).
 
-Observe abaixo como `audienceId` é usado no modelo para acessar as IDs de público-alvo. Este exemplo pressupõe que você use `audienceId` para associação de público-alvo na sua taxonomia de destino. Você pode usar qualquer outro nome de campo, dependendo da sua própria taxonomia.
+Observe abaixo como `audienceId` e `audienceNamespace` são usados no modelo para acessar a ID de público-alvo e o namespace. Este exemplo pressupõe que você use `audienceId` para associação de público-alvo na sua taxonomia de destino. Você pode usar qualquer outro nome de campo, dependendo da sua própria taxonomia.
 
 ```python
 {
     "audienceId": "{{ input.aggregationKey.segmentId }}",
+    "audienceNamespace": "{{ input.aggregationKey.segmentNamespace }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
@@ -982,11 +986,12 @@ Observe abaixo como `audienceId` é usado no modelo para acessar as IDs de públ
 
 **Resultado**
 
-Quando exportados para seu destino, os perfis são divididos em dois grupos, com base na ID do público-alvo.
+Quando exportados para seu destino, os perfis são divididos em dois grupos, com base na ID de público e no namespace.
 
 ```json
 {
    "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "audienceNamespace":"ups",
    "profiles":[
       {
          "firstName":"Hermione"
@@ -1004,6 +1009,7 @@ Quando exportados para seu destino, os perfis são divididos em dois grupos, com
 ```json
 {
    "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "audienceNamespace":"CustomerAudienceUpload",
    "profiles":[
       {
          "firstName":"Tom"
@@ -1015,17 +1021,17 @@ Quando exportados para seu destino, os perfis são divididos em dois grupos, com
 }
 ```
 
-#### Usar chave de agregação de alias de público-alvo no modelo {#aggregation-key-segment-alias}
+#### Usar chave de agregação de alias de audiência no modelo {#aggregation-key-segment-alias}
 
-Se você usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e definir `includeSegmentId` como verdadeiro, também poderá acessar o alias de público-alvo no modelo.
+Se você usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e definir `includeSegmentId` como verdadeiro, também poderá acessar o alias de audiência no modelo.
 
-Adicione a linha abaixo ao template para acessar os perfis exportados agrupados pelo alias do público-alvo.
+Adicione a linha abaixo ao modelo para acessar os perfis exportados agrupados por alias de público-alvo.
 
 ```python
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### Usar chave de agregação de status de público-alvo no modelo {#aggregation-key-segment-status}
+#### Usar chave de agregação de status de audiência no modelo {#aggregation-key-segment-status}
 
 Se você usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e definir `includeSegmentId` e `includeSegmentStatus` como verdadeiro, poderá acessar o status do público-alvo no modelo. Dessa forma, você pode agrupar perfis nas mensagens HTTP exportadas para o seu destino com base no fato de os perfis deverem ser adicionados ou removidos dos segmentos.
 
@@ -1211,8 +1217,8 @@ A tabela abaixo fornece descrições para as funções dos exemplos acima.
 | `destination.namespaceSegmentTimestamps` | Retorna a hora em que um público-alvo foi criado, atualizado ou ativado no formato de carimbo de data e hora UNIX. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: retorna a hora em que o segmento com a ID `seg-id-1`, do namespace `ups`, foi criado, no formato de carimbo de data/hora UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: retorna a hora em que o público-alvo com a ID `seg-id-1`, do namespace `ups`, foi atualizado, no formato de carimbo de data e hora UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: retorna a hora em que o público-alvo com a ID `seg-id-1`, do namespace `ups`, foi ativado para o destino, no formato de carimbo de data e hora UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: retorna a hora em que a ativação de público-alvo foi atualizada no destino, no formato de carimbo de data e hora UNIX.</li></ul> |
 | `addedSegments(mapOfNamespacedSegmentIds)` | Retorna apenas os públicos-alvo com status `realized`, em todos os namespaces. | `addedSegments(input.profile.segmentMembership)` |
 | `removedSegments(mapOfNamespacedSegmentIds)` | Retorna apenas os públicos-alvo com status `exited`, em todos os namespaces. | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **Obsoleto. Substituído por`destination.namespaceSegmentAliases`** <br><br>. Mapeie as IDs de público-alvo no namespace do Adobe Experience Platform para aliases de público-alvo no sistema do parceiro. | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **Obsoleto. Substituído por`destination.namespaceSegmentNames`** <br><br> Mapear de nomes de público-alvo no namespace do Adobe Experience Platform para nomes de público-alvo no sistema do parceiro. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentAliases` | **Obsoleto. Substituído por`destination.namespaceSegmentAliases`** <br><br> Mapear de IDs de público no namespace do Adobe Experience Platform para aliases de público no sistema do parceiro. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Obsoleto. Substituído por`destination.namespaceSegmentNames`** <br><br> Mapear de nomes de público no namespace do Adobe Experience Platform para nomes de público no sistema do parceiro. | `destination.segmentNames["seg-name-1"]` |
 | `destination.segmentTimestamps` | **Obsoleto. Substituído por`destination.namespaceSegmentTimestamps`** <br><br> Retorna a hora em que um público-alvo foi criado, atualizado ou ativado no formato de carimbo de data e hora UNIX. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: retorna a hora em que o público-alvo com a ID `seg-id-1` foi criado, no formato de carimbo de data e hora UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: retorna a hora em que o público-alvo com a ID `seg-id-1` foi atualizado, no formato de carimbo de data e hora UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: retorna a hora em que o público-alvo com a ID `seg-id-1` foi ativado para o destino, no formato de carimbo de data e hora UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: retorna a hora em que a ativação de público-alvo foi atualizada no destino, no formato de carimbo de data e hora UNIX.</li></ul> |
 
 {style="table-layout:auto"}

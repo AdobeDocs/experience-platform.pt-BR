@@ -3,22 +3,24 @@ title: Gerenciar sessões do serviço de consulta no Adobe Experience Platform
 description: Saiba como os administradores podem visualizar, monitorar e encerrar sessões ativas do Serviço de consulta para liberar capacidade ociosa e manter fluxos de trabalho confiáveis do Data Distiller.
 keywords: Experience Platform;Serviço de consulta;sessões;gerenciamento de sessão;Data Distiller;admin
 solution: Experience Platform
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+badgeLimitedAvailability: label="Disponibilidade limitada" type="Informative"
+exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
+source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '730'
 ht-degree: 1%
 
 ---
 
 # Gerenciar sessões do Serviço de consulta
 
+>[!AVAILABILITY]
+>
+>O gerenciamento de sessões para o Serviço de consulta está atualmente com disponibilidade limitada e só está disponível para organizações com direitos de **Data Distiller**. Para solicitar acesso, entre em contato com a equipe de conta da Adobe.
+
 Use este guia para gerenciar sessões ativas do Serviço de consulta na interface do usuário do Adobe Experience Platform. O gerenciamento de sessões ajuda os administradores a monitorar sessões simultâneas do Editor de consultas em sandboxes e capacidade livre quando os usuários deixam as sessões abertas.
 
 ## Permissões necessárias para o gerenciamento de sessão {#permissions}
-
->[!AVAILABILITY]
->
->O gerenciamento de sessões está disponível somente para organizações com direitos ao Data Distiller.
 
 >[!IMPORTANT]
 >
@@ -93,4 +95,3 @@ Considere os seguintes recursos para estender o uso do Serviço de consulta e do
 
 * [Saiba como os usuários criam e executam consultas no guia do usuário do Editor de consultas](user-guide.md)
 * [Monitore cargas de trabalho agendadas usando a documentação de monitoramento de consultas agendadas](monitor-queries.md)
-

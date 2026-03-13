@@ -3,9 +3,9 @@ title: Guia flexível de avaliação de público-alvo
 description: Saiba como usar a avaliação flexível de público para executar trabalhos de segmentação em lote sob demanda.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
+source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
 workflow-type: tm+mt
-source-wordcount: '1124'
+source-wordcount: '1206'
 ht-degree: 5%
 
 ---
@@ -27,13 +27,15 @@ A avaliação flexível do público-alvo permite executar um trabalho de segment
 >title="Limites de avaliação de público-alvo flexível"
 >abstract="Você pode avaliar até 20 públicos-alvo em uma única execução de avaliação de público-alvo flexível.<br/><br/>Além disso, embora o processo de avaliação seja executado o mais rápido possível, pode haver atrasos no sistema, pois as avaliações sob demanda <b>não podem</b> ser executadas simultaneamente com outra avaliação sob demanda ou em lote."
 
-Ao executar a avaliação flexível do público-alvo, lembre-se das seguintes condições:
+When you run flexible audience evaluation, please keep the following conditions in mind:
 
-- Você só pode usar a avaliação de público flexível **duas vezes** por dia por sandbox. Esse limite é redefinido à meia-noite (UTC).
-- Você tem um **máximo** de 50 execuções de avaliação de público flexível por ano por sandbox de **produção**.
+- You can only use flexible audience evaluation **twice** per day per sandbox. This limit resets at midnight (UTC).
+- You have a **maximum** of 50 flexible audience evaluation runs per year per **production** sandbox.
+   - Um ano é definido como um ano a partir da data do contrato do Experience Platform para avaliação flexível do público-alvo. Por exemplo, se o contrato começou em 18 de maio, o número de execuções flexíveis de avaliação de público-alvo será redefinido a cada 18 de maio.
 - Você tem um **máximo** de 100 execuções de avaliação de público flexível por ano por sandbox de **desenvolvimento**.
+   - Um ano é definido como um ano a partir da data do contrato do Experience Platform para avaliação flexível do público-alvo. Por exemplo, se o contrato começou em 18 de maio, o número de execuções flexíveis de avaliação de público-alvo será redefinido a cada 18 de maio.
 - Todos os públicos-alvo **devem** ter uma origem de &quot;Serviço de segmentação&quot;.
-- Todos os públicos-alvo **devem** ser avaliados usando a segmentação em lote.
+- All the audiences **must** be evaluated using batch segmentation.
 - Todos os públicos-alvo **devem** ser baseados em pessoas.
 - Você pode selecionar no máximo 20 públicos-alvo por execução de avaliação de público-alvo flexível.
 
@@ -63,9 +65,9 @@ Para executar uma avaliação flexível do público-alvo nas APIs do Experience 
 >
 >Você só pode adicionar um **máximo** de 20 IDs de definição de segmento por chamada de API de trabalho de segmento.
 
-Você pode criar um novo trabalho de segmento fazendo uma solicitação POST para o ponto de extremidade `/segment/jobs` e incluindo as IDs das definições de segmento no corpo da solicitação.
+You can create a new segment job by making a POST request to the `/segment/jobs` endpoint and including the IDs of the segment definitions in the request body.
 
-+++Um exemplo de solicitação para criar um novo trabalho de segmento
++++A sample request for creating a new segment job
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
@@ -86,7 +88,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `segmentId` | A ID da definição de segmento que você deseja avaliar. Essas definições de segmento podem pertencer a diferentes políticas de mesclagem. |
+| `segmentId` | The ID of the segment definition that you want to evaluate. Essas definições de segmento podem pertencer a diferentes políticas de mesclagem. |
 
 +++
 
@@ -306,27 +308,27 @@ Para executar a avaliação de público-alvo flexível na interface do Experienc
 
 O Portal de público-alvo é exibido, mostrando uma lista de todos os públicos-alvo de pessoas da organização. No Portal de público-alvo, você pode escolher os públicos que deseja avaliar e selecionar **[!UICONTROL Evaluate audience]**.
 
-![Os públicos-alvo nos quais você deseja usar a avaliação de público-alvo flexível estão selecionados.](../images/methods/fae/evaluate-audiences.png)
+![The audiences that you want to use flexible audience evaluation on are selected.](../images/methods/fae/evaluate-audiences.png)
 
-O popover **[!UICONTROL Evaluate audiences on demand]** é exibido, exibindo a lista de públicos-alvo que serão avaliados com o trabalho do segmento sob demanda. Se um público-alvo não for elegível para avaliação sob demanda, ele será removido automaticamente do trabalho de avaliação. Confirme se os públicos-alvo listados são aqueles que você deseja avaliar.
+O popover **[!UICONTROL Evaluate audiences on demand]** é exibido, exibindo a lista de públicos-alvo que serão avaliados com o trabalho do segmento sob demanda. If an audience is ineligible to be evaluated on demand, it will automatically be removed from the evaluation job. Confirme se os públicos-alvo listados são aqueles que você deseja avaliar.
 
-![Os públicos-alvo que podem ser avaliados usando a avaliação de público-alvo flexível são exibidos.](../images/methods/fae/evaluate-audiences-modal.png)
+![The audiences that can be evaluated using flexible audience evaluation are displayed.](../images/methods/fae/evaluate-audiences-modal.png)
 
-Depois de confirmar que os públicos-alvo corretos estão listados, você pode continuar com a solicitação e a avaliação do público-alvo flexível será iniciada. Você pode exibir o status desta avaliação de público na [exibição do monitoramento do trabalho de avaliação](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
+Depois de confirmar que os públicos-alvo corretos estão listados, você pode continuar com a solicitação e a avaliação do público-alvo flexível será iniciada. You can view the status of this audience evaluation in the [evaluation job monitoring view](../../dataflows/ui/monitor-audiences.md#evaluation-job-details).
 
 >[!NOTE]
 >
 >O status do trabalho do segmento pode ser relatado como no estado &quot;Em fila&quot; no painel de monitoramento. Você pode visualizar o status mais atualizado do trabalho do segmento fazendo uma solicitação GET para o ponto de extremidade `/segment/jobs`, fornecendo a ID do trabalho do segmento no caminho da solicitação. Mais informações sobre como usar esse endpoint podem ser encontradas na guia API.
 >
->Se você executar a avaliação de público-alvo flexível e quiser que a avaliação ative o público-alvo para um destino, será necessário garantir que a frequência esteja definida como **[!UICONTROL After segment evaluation]**. Executar a avaliação flexível do público-alvo em públicos que já estão definidos para serem ativados [após a avaliação do segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), ativará os públicos-alvo assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores.
+>If you run flexible audience evaluation and want the evaluation to activate the audience to a destination, you need to ensure the frequency is set to **[!UICONTROL After segment evaluation]**. Executar a avaliação flexível do público-alvo em públicos que já estão definidos para serem ativados [após a avaliação do segmento](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files), ativará os públicos-alvo assim que o trabalho de avaliação flexível do público-alvo for concluído, independentemente de quaisquer trabalhos de ativação diários anteriores.
 
 >[!ENDTABS]
 
 ## Vídeo {#video}
 
-O vídeo a seguir demonstra como acessar e usar a avaliação de público-alvo flexível no Experience Platform.
+The following video demonstrates how to access and use flexible audience evaluation in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453645?captions=por_br&)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Perguntas frequentes {#faq}
 
@@ -356,11 +358,11 @@ Não, o agendamento não está disponível para uso com a avaliação flexível 
 
 +++
 
-### Preciso executar um trabalho de exportação adicional ao usar a avaliação de público flexível?
+### Do I need to run an additional export job when using flexible audience evaluation?
 
 +++ Resposta
 
-Não, o trabalho de exportação é executado automaticamente após a conclusão do trabalho do segmento correspondente.
+No, the export job is automatically run after the corresponding segment job is completed.
 
 +++
 
@@ -376,11 +378,11 @@ Você pode usar públicos-alvo em todos os serviços downstream, incluindo desti
 
 +++ Resposta
 
-O limite diário é redefinido à meia-noite (UTC). O limite anual é redefinido na data de aniversário do contrato.
+The daily limit is reset at midnight (UTC). O limite anual é redefinido na data de aniversário do contrato.
 
 +++
 
-### Quais tipos de público-alvo são compatíveis com a avaliação flexível do público-alvo?
+### Which types of audiences are supported with flexible audience evaluation?
 
 +++ Resposta
 

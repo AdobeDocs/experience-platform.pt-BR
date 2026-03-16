@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: fe5faaeb026fa10d185f43408b122104ecd42196
+source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1089'
 ht-degree: 34%
 
 ---
@@ -49,7 +49,7 @@ ht-degree: 34%
       - [Conector Apache HDFS](connectors/cloud-storage/hdfs.md)
       - [Conector Gen2 do Azure Data Lake Storage](connectors/cloud-storage/adls-gen2.md)
       - [Conector de blob do Azure](connectors/cloud-storage/blob.md)
-      - [Conector de Hubs de Eventos do Azure](connectors/cloud-storage/eventhub.md)
+      - [Conector de Hubs de Eventos da Azure](connectors/cloud-storage/eventhub.md)
       - [Conector de armazenamento de arquivos do Azure](connectors/cloud-storage/azure-file-storage.md)
       - [Data Landing Zone](connectors/cloud-storage/data-landing-zone.md)
       - [Conector FTP](connectors/cloud-storage/ftp.md)
@@ -57,7 +57,7 @@ ht-degree: 34%
       - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
       - [Armazenamento de objetos da Oracle](connectors/cloud-storage/oracle-object-storage.md)
       - [Conector SFTP](connectors/cloud-storage/sftp.md)
-      - [Conector de blob do Amazon S3 e Azure](connectors/cloud-storage/blob-s3.md)
+      - [Conector Amazon S3 e Azure Blob](connectors/cloud-storage/blob-s3.md)
    - Consentimento e preferências {#consent}
       - [Didomi](connectors/consent-and-preferences/didomi.md)
       - [Integração com o OneTrust](connectors/consent-and-preferences/onetrust.md)
@@ -73,7 +73,7 @@ ht-degree: 34%
    - Bancos de dados {#databases}
       - [Conector Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive no conector do Azure HDInsights](connectors/databases/hive.md)
-      - [Apache Spark no conector HDInsights do Azure](connectors/databases/spark.md)
+      - [Apache Spark no conector do Azure HDInsights](connectors/databases/spark.md)
       - [Conector do Azure Databricks](connectors/databases/databricks.md)
       - [Conector do Azure Data Explorer](connectors/databases/data-explorer.md)
       - [Conector do Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
@@ -97,6 +97,8 @@ ht-degree: 34%
       - [Intenção de Bombora](connectors/data-partners/bombora.md)
       - [Intenção do Demandbase](connectors/data-partners/demandbase.md)
       - [Resolução de identidade empresarial Merkury](connectors/data-partners/merkury.md)
+   - Compartilhamento de dados {#data-sharing}
+      - [Deltashare](connectors/data-sharing/deltashare.md)
    - comércio eletrônico {#ecommerce}
       - [SAP COMMERCE](connectors/ecommerce/sap-commerce.md)
       - [Shopify](connectors/ecommerce/shopify.md)
@@ -138,7 +140,7 @@ ht-degree: 34%
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
-         - [Azure Blob](tutorials/api/create/cloud-storage/blob.md)
+         - [Blob do Azure](tutorials/api/create/cloud-storage/blob.md)
          - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
          - [Hubs de eventos do Azure](tutorials/api/create/cloud-storage/eventhub.md)
          - [Armazenamento de arquivos do Azure](tutorials/api/create/cloud-storage/azure-file-storage.md)
@@ -157,7 +159,7 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [&#x200B; Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [ Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
@@ -260,7 +262,7 @@ ht-degree: 34%
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
          - [Azure Data Lake Storage Gen2](tutorials/ui/create/cloud-storage/adls-gen2.md)
-         - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
+         - [Blob do Azure](tutorials/ui/create/cloud-storage/blob.md)
          - [Hubs de eventos do Azure](tutorials/ui/create/cloud-storage/eventhub.md)
          - [Armazenamento de arquivos do Azure](tutorials/ui/create/cloud-storage/azure-file-storage.md)
          - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
@@ -280,7 +282,7 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [&#x200B; Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [ Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
@@ -310,6 +312,8 @@ ht-degree: 34%
          - [Intenção de Bombora](tutorials/ui/create/data-partners/bombora.md)
          - [Intenção do Demandbase](tutorials/ui/create/data-partners/demandbase.md)
          - [Resolução de identidade empresarial Merkury](tutorials/ui/create/data-partners/merkury.md)
+      - Compartilhamento de dados {#data-sharing}
+         - [Deltashare](tutorials/ui/create/data-sharing/deltashare.md)
       - comércio eletrônico {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
          - [Shopify](tutorials/ui/create/ecommerce/shopify.md)

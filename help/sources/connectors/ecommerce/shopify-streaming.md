@@ -4,9 +4,9 @@ description: Saiba como criar uma conexão de origem e um fluxo de dados para as
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: 4c7b23592a1784a5f2daa5518b512fa458a2c3ad
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '677'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ https://www.acme.com/?code=k6j2palgrbljja228ou8c20fmn7w41gz&hmac=68c9163f772eecb
 
 ### Recupere o token de acesso
 
-Agora que você tem a ID do cliente, o segredo do cliente e o código de autorização, é possível recuperar o token de acesso. Para recuperar o token de acesso, faça uma solicitação POST à URL `myshopify.com` do domínio ao anexar essa URL ao ponto de extremidade de API [!DNL Shopify's]: `/admin/oauth/access_token`.
+Agora que você tem a ID do cliente, o segredo do cliente e o código de autorização, é possível recuperar o token de acesso. Para recuperar seu token de acesso, faça uma solicitação POST para a URL `myshopify.com` do domínio ao anexar essa URL ao ponto de extremidade de API [!DNL Shopify's]: `/admin/oauth/access_token`.
 
 **Formato da API**
 
@@ -104,7 +104,7 @@ Uma resposta bem-sucedida retorna o token de acesso e os escopos de permissão.
 
 ## Criar um webhook para transmissão de dados [!DNL Shopify] {#webhook}
 
-Os webhooks permitem que os aplicativos permaneçam sincronizados com os dados do [!DNL Shopify] ou executem uma ação depois que um evento específico ocorrer em uma loja. Para transmitir dados do [!DNL Shopify] para o Experience Platform, é possível usar webhooks para definir o ponto de extremidade http e os tópicos para assinatura.
+Os webhooks permitem que os aplicativos permaneçam sincronizados com os dados do [!DNL Shopify] ou executem uma ação depois que um evento específico ocorrer em uma loja. Para a transmissão de dados do [!DNL Shopify] para o Experience Platform, é possível usar webhooks para definir o ponto de extremidade http e os tópicos para assinatura.
 
 **Solicitação**
 
@@ -117,7 +117,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \; request_method=POST' \
   -d '{
   "webhook": {
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "format": "json"
   }
@@ -126,7 +126,7 @@ curl -X POST \
 
 | Parâmetro | Descrição |
 | --- | --- | 
-| `webhook.address` | O endpoint http para onde as mensagens de transmissão são enviadas. |
+| `webhook.address` | O endpoint http para onde as mensagens de transmissão são enviadas. O modelo para o webhook é: `https://dcs.adobedc.net/collection/%7BINLET_ID%7D?{x-adobe-flow-id}={FLOW_ID}.` |
 | `webhook.topic` | O tópico da sua assinatura de webhook. Para obter mais informações, leia o [[!DNL Shopify] guia de tópicos do evento do webhook](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | O formato dos dados. |
 
@@ -138,7 +138,7 @@ Uma resposta bem-sucedida retorna informações no webhook, incluindo `id`, ende
 {
   "webhook": {
     "id": 1091138715786,
-    "address": "https://dcs.adobedc.net/collection/9d411a24aa3c0a3eded92bac6c64d0da986ee7a8212f87168c5fb42d9ddc3227",
+    "address": "https://dcs.adobedc.net/collection/114ae3c01f3ac77c704465f83d7d79be150fc39a5a794a214cd4ab65a5901340?x-adobe-flow-id=d9eb4a58-6a6b-4f11-9dba-6d1e0ed43bad",
     "topic": "orders/create",
     "created_at": "2022-07-20T07:15:23-04:00",
     "updated_at": "2022-07-20T07:15:23-04:00",
@@ -161,7 +161,7 @@ Esta é uma lista de limitações conhecidas que você pode encontrar ao usar we
 
 ## Próximas etapas
 
-Os tutoriais a seguir fornecem etapas sobre como conectar a origem do [!DNL Shopify Streaming] ao Experience Platform usando a API e a interface do usuário:
+Os tutoriais a seguir fornecem etapas sobre como conectar sua origem do [!DNL Shopify Streaming] ao Experience Platform usando a API e a interface do usuário:
 
 * [Crie uma conexão de origem de transmissão do Shopify e um fluxo de dados usando a API do Serviço de Fluxo](../../tutorials/api/create/ecommerce/shopify-streaming.md)
 * [Criar uma conexão de origem e um fluxo de dados de transmissão do Shopify na interface](../../tutorials/ui/create/ecommerce/shopify-streaming.md)

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral dos Source Connectors
 description: A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 73244fe6f7413fc66773789da2b5491a1ed49f15
+source-git-commit: 6142801c9008c10a3d1a0a11976a2c99fb6cee86
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1721'
 ht-degree: 11%
 
 ---
@@ -37,6 +37,10 @@ Para conectores criados e mantidos pelo parceiro, isso significa que os problema
 >[!ENDSHADEBOX]
 
 ## Catálogo de origens
+
+>[!NOTE]
+>
+>Os fluxos de dados de assimilação do Source que falham continuamente por 30 dias serão desativados automaticamente. Use o [Painel de Monitoramento](/help/dataflows/ui/monitor-sources.md) para revisar seu fluxo de dados, identificar por que ele falhou (por exemplo, credenciais, permissões ou alterações de esquema ou mapeamento), aplicar as atualizações necessárias e reabilitar o fluxo de dados depois de resolvido.
 
 Leia as seções a seguir para obter uma lista de todas as fontes disponíveis no catálogo de fontes.
 

@@ -3,7 +3,8 @@ title: Usar o Conector Deltashare Source na interface do usuário
 description: Saiba como usar o conector de origem do Deltashare na interface do usuário do Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: cb50e7b4175a34acd1cbf1ebe04fdfd1ab4694aa
+exl-id: 4e889401-08c1-4c81-85e7-49fe1328c65d
+source-git-commit: 1533e35032d6a0508588652b0e1ca4c6717d4acb
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 1%
@@ -22,4 +23,3 @@ Leia este guia para saber como usar o conector de origem [!DNL Deltashare] na in
 **Observação:** depois de selecionar **Avançar**, você não poderá alterar a estrutura do esquema selecionado.
 
 Se você já tiver selecionado **Próximo** e movido para além da etapa de seleção de esquema, não poderá mais atualizar o esquema selecionado se retornar a uma etapa anterior. Para modificar seu esquema, você deve reiniciar o processo de configuração do fluxo de dados e começar a partir da etapa inicial.
-

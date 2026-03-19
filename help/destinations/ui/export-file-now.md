@@ -3,7 +3,7 @@ title: Exportar arquivos sob demanda para destinos em lote usando a interface do
 type: Tutorial
 description: Saiba como exportar arquivos por demanda para destinos em lote usando a interface do usuário do Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: c7e6de2db416592ca9340fefadd53709fe71b058
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '805'
 ht-degree: 5%
@@ -14,10 +14,10 @@ ht-degree: 5%
 # Exportar arquivos sob demanda para destinos em lote usando a interface do usuário do Experience Platform
 
 >[!IMPORTANT]
-> 
+>
 >Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-## Visão geral do **[!UICONTROL Export file now]** {#overview}
+## Visão geral do [!UICONTROL Export file now] {#overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"

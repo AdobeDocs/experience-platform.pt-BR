@@ -2,10 +2,10 @@
 title: Notas de pré-lançamento do Experience Platform
 description: Uma visualização das notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: efa50881315d986940f7cb3afcbfcc30ef67c3a7
+source-git-commit: 5cbf63cc0a149d54de63e3e1797cae4098498fe8
 workflow-type: tm+mt
-source-wordcount: '1411'
-ht-degree: 14%
+source-wordcount: '1322'
+ht-degree: 15%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 14%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: março de 2026**
 
@@ -74,12 +74,10 @@ Para obter mais informações, consulte a [documentação do Agent Orchestrator]
 
 | Destino | Descrição |
 | --- | --- |
-| Suporte a várias regiões para [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) | O conector de transmissão Snowflake agora está disponível para clientes fora da região US VA7. Use o seletor suspenso de região para selecionar em qual região do Snowflake sua conta está. A documentação foi atualizada com a estrutura de dados esperada para as tabelas de transmissão do Snowflake. |
-| Seletor de região [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) e [Snowflake Batch](../destinations/catalog/warehouses/snowflake-batch.md) | Agora é possível encontrar sua região mais facilmente com a nova lista suspensa pesquisável, que combina pesquisa e lista suspensa em um controle. |
+| Seletor de região [Lote Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) | Agora é possível encontrar sua região mais facilmente com a nova lista suspensa pesquisável, que combina pesquisa e lista suspensa em um controle. |
 | Exportar metadados de público-alvo para [Destinos do Lote Snowflake](../destinations/catalog/warehouses/snowflake-batch.md) | Os arquivos exportados para esse destino agora incluem metadados de público-alvo. A nova estrutura da tabela se aplica a todas as novas conexões de destino configuradas dali em diante. A estrutura da tabela antiga será mantida por mais três meses antes de ser descontinuada. |
 | [!DNL Adobe Advertising Cloud DSP] conexão | A nova conexão do Adobe Advertising DSP oferece a mesma funcionalidade da conexão herdada, além de suporte para identidades adicionais. |
 | Suporte a público-alvo externo para [o CRM da Trade Desk](../destinations/catalog/advertising/tradedesk-emails.md), [Critério](../destinations/catalog/advertising/criteo.md) e [Pinterest](../destinations/catalog/advertising/pinterest.md) | Agora é possível ativar públicos-alvo além dos segmentos do Serviço de segmentação para o Trade Desk CRM, Critério e Pinterest, incluindo públicos-alvo de upload personalizados (importados do CSV), públicos-alvo semelhantes, públicos-alvo federados e públicos-alvo criados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer. Consulte a seção [públicos-alvo suportados](../destinations/catalog/advertising/criteo.md#supported-audiences) na página do catálogo de cada destino para obter detalhes. |
-| Filtragem de público-alvo no fluxo de trabalho de ativação | Agora é possível encontrar e filtrar públicos-alvo na etapa **[!UICONTROL Select audiences]** com a mesma experiência da página Públicos-alvo; por exemplo, você pode filtrar por origem de público-alvo para encontrar facilmente o público-alvo que está procurando. |
 | Aumento do limite de públicos-alvo de upload personalizado | Agora você pode ativar até 20 públicos-alvo de upload personalizados por instância de destino. Anteriormente, esse limite era de 10. |
 | [Exportar arquivo agora](../destinations/ui/export-file-now.md) e [suporte à API de ativação ad hoc](../destinations/api/ad-hoc-activation-api.md) para públicos externos | Agora você pode usar o Export file now (UI) e a API de ativação ad-hoc com públicos externos (como upload personalizado, semelhante, federado e públicos de outros aplicativos da Experience Platform) ao ativar para destinos baseados em arquivo em lote. |
 | Destinos da API HTTP com OAuth 2 e mTLS | Agora é possível criar e autenticar destinos da API HTTP que usam o OAuth 2 quando o endpoint de autenticação requer TLS mútuo (mTLS). A recuperação de token durante a configuração do destino agora oferece suporte a mTLS. |
@@ -181,5 +179,8 @@ Para obter mais informações, leia a [visão geral de fontes](../sources/home.m
 <!--
 
 | Data Engineering Agent | The following new and updated skills are available in the Data Engineering Agent:<br><br><ul><li><strong>Data onboarding:</strong> Follow step-by-step workflows and example prompts to connect sources, check data quality, enrich data semantically, and ingest data for B2C and B2B flows, with expected outputs and troubleshooting guidance in the docs.</li><li><strong>Data quality and validation:</strong> Validate data fields and datasets using two new skills (DataField and DataSet).</li><li><strong>Data collection:</strong> Get in-context guidance for complex Data Collection configurations and use conversational insights to explore lineage, dependencies, and relationships across your data collection objects.</li></ul> |
+
+| [Snowflake Streaming](../destinations/catalog/warehouses/snowflake.md) multiregion support | The Snowflake Streaming connector is now available to customers beyond the US VA7 region. Use the region dropdown selector to select which Snowflake region your account is in. The documentation has been updated with the expected data structure for Snowflake streaming tables. |
+| Audience filtering in activation workflow | You can now find and filter audiences in the **[!UICONTROL Select audiences]** step with the same experience as the Audiences page; for example, you can filter on audience origin to easily find the audience you are looking for. |
 
 -->

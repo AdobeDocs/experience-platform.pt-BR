@@ -2,13 +2,13 @@
 title: Visão geral de Executar e operar
 description: Inspecione, solucione problemas e otimize suas implementações do Experience Platform com as ferramentas Executar e Operar. Obtenha visibilidade sobre ativações programadas em lote, identifique problemas de configuração e melhore a confiabilidade do sistema.
 hide: true
-source-git-commit: 4733fae23c5029f4bc2c405376b1a52212dc0440
+exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
+source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
 workflow-type: tm+mt
-source-wordcount: '543'
+source-wordcount: '676'
 ht-degree: 1%
 
 ---
-
 
 # Visão geral de Executar e operar
 
@@ -47,7 +47,7 @@ Para acessar as ferramentas Executar e Operar na interface do usuário do Experi
 
    >[!NOTE]
    >
-   >Atualmente, o único recurso disponível é [Agendamentos de trabalho](job-schedules.md).
+   >Atualmente, os recursos disponíveis são [Cronogramas de trabalho](job-schedules.md) e [Verificações de integridade](health-checks.md).
 
 ![Interface do usuário do Experience Platform mostrando a navegação à esquerda de Executar e Operar](assets/overview/run-and-operate.png)
 
@@ -55,7 +55,7 @@ Para acessar as ferramentas Executar e Operar na interface do usuário do Experi
 
 As ferramentas a seguir ajudam a inspecionar e otimizar as operações de dados.
 
-### Cronogramas do trabalho {#job-schedules}
+### Cronogramas do processo {#job-schedules}
 
 >[!IMPORTANT]
 >
@@ -78,12 +78,28 @@ As Programações de Trabalho fornecem três níveis de investigação:
 
 Você também pode entender as dependências entre os estágios de processamento de dados, ajudando a garantir um fluxo de dados confiável em todos os workflows do Experience Platform.
 
+### Verificações de integridade {#health-checks}
+
+>[!IMPORTANT]
+>
+>[!UICONTROL Health checks] estão disponíveis atualmente como uma versão limitada.
+
+Com as [Verificações de integridade](health-checks.md), você pode detectar proativamente problemas de configuração de esquema e identidade antes que eles afetem as operações comerciais. No momento, as verificações de integridade executam verificações estáticas diárias nos esquemas e namespaces de identidade, identificando práticas recomendadas, configurações incorretas e padrões que levam a falhas downstream.
+
+Atualmente, as verificações de integridade avaliam cinco áreas fundamentais:
+
+* **[Validação do campo de identidade](health-checks.md#identity-field-validation)**: verifique se os campos de identidade têm restrições de comprimento e padrão adequadas.
+* **[Regras de vinculação de gráfico de identidade](health-checks.md#identity-graph-linking-rules)**: confirme se as regras de vinculação estão configuradas para impedir o recolhimento do perfil.
+* **[Configuração de identidade de pessoas e não pessoas](health-checks.md#people-non-people-identity)**: valide o uso do tipo de identidade correto em classes de esquema.
+* **[Descrições do namespace de identidade personalizado](health-checks.md#namespace-missing-description)**: verifique se os metadados do namespace estão completos.
+* **[Namespaces de identidade obsoletos](health-checks.md#deprecated-namespace)**: detectar namespaces obsoletos para limpeza.
+
 ## Próximas etapas {#next-steps}
 
 Agora que você entende a finalidade e os recursos das ferramentas do [!UICONTROL Run and Operate], explore os seguintes recursos para aprofundar seu conhecimento:
 
-* Saiba mais sobre a [assimilação em lote](../ingestion/batch-ingestion/overview.md) para entender como os dados são assimilados na Experience Platform
+* Saiba como usar as [verificações de integridade](health-checks.md) para detectar problemas de configuração de esquema e identidade
 * Saiba como [inspecionar agendas de trabalho](job-schedules.md) para sua assimilação e ativações em lote
+* Saiba mais sobre a [assimilação em lote](../ingestion/batch-ingestion/overview.md) para entender como os dados são assimilados na Experience Platform
 * Entenda como [configurar ativações agendadas](../destinations/ui/activate-batch-profile-destinations.md) para destinos em lote
 * Explorar [monitoramento de fluxo de dados](../dataflows/ui/monitor-destinations.md) para destinos
-

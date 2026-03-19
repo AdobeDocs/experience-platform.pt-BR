@@ -172,7 +172,7 @@ Ao selecionar o cartão **[!UICONTROL Deprecated Identity Namespace]**, um paine
 
 ![Painel de detalhes do Namespace de Identidade obsoleto mostrando a descrição, o impacto e a lista de namespaces afetados](assets/health-checks/deprecated-namespace-detail.png)
 
-Para obter mais informações, consulte o [artigo da base de dados de conhecimento da Experience Cloud sobre namespaces obsoletos](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Para obter mais informações, consulte o [artigo da base de dados de conhecimento da Experience Cloud sobre namespaces obsoletos](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Próximas etapas {#next-steps}
 

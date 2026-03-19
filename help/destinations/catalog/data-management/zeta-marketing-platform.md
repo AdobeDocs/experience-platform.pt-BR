@@ -4,9 +4,9 @@ description: A Zeta Marketing Platform (ZMP) é um sistema baseado em nuvem que 
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1454'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ Com o conector Zeta Marketing Platform disponível no Adobe Experience Platform,
 
 >[!IMPORTANT]
 >
->O conector de destino e a página de documentação são criados e mantidos pela equipe *Zeta Global*. Para qualquer consulta ou solicitação de atualização, entre em contato com a equipe em [Fale conosco](https://zetaglobal.com/about/contact-us/).
+>O conector de destino e a página de documentação são criados e mantidos pela equipe *Zeta Global*. Para qualquer consulta ou solicitação de atualização, contate a equipe em [Contate-nos](https://zetaglobal.com/about/contact-us/).
 
 ## Casos de uso {#use-cases}
 
@@ -35,7 +35,7 @@ Um anunciante tem como objetivo direcionar os usuários dentro de públicos-alvo
 
 ## Pré-requisitos {#prerequisites}
 
-### Pré-requisitos da Zeta Marketing Platform
+### Pré-requisitos da Zeta Marketing Platform {#zmp-prerequisites}
 
 * Antes de configurar uma nova conexão com o destino Zeta Marketing Platform, você deve criar uma lista de clientes vazia em sua conta Zeta Marketing Platform. Você deve escolher uma dessas listas de clientes como público-alvo designado para receber o público-alvo da Adobe Experience Platform que planeja enviar. Você pode criar uma lista de clientes vazia no ZMP seguindo as instruções [aqui](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
 * Embora o Adobe Experience Platform permita a ativação de vários públicos-alvo para uma instância de destino ZMP específica, é obrigatório que cada instância de destino ZMP receba apenas um público-alvo do Experience Platform. Para lidar com vários públicos-alvo da Experience Platform, crie instâncias de destino ZMP adicionais para cada público-alvo e selecione uma lista de clientes diferente na lista suspensa. Essa abordagem garante que os públicos-alvo do ZMP não sejam substituídos. Consulte [Preencher detalhes do destino](#destination-details) para obter mais detalhes.
@@ -48,6 +48,7 @@ Um anunciante tem como objetivo direcionar os usuários dentro de públicos-alvo
 O [!DNL Zeta Marketing Platform] dá suporte à ativação das IDs de usuário personalizadas descritas na tabela abaixo. Para obter mais detalhes, consulte [identidades](/help/identity-service/features/namespaces.md).
 
 >[!IMPORTANT]
+>
 > O destino Zeta Marketing Platform exige que você mapeie um namespace de identidade de origem para a identidade de destino ZMP `uid`. Isso ajuda a Zeta Marketing Platform a diferenciar cada perfil de forma exclusiva.
 
 | Identidade de destino | Descrição | Considerações | Notas |
@@ -69,6 +70,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 {style="table-layout:auto"}
 
 >[!NOTE]
+>
 > À medida que membros individuais são adicionados ou removidos do público-alvo do Experience Platform, as atualizações serão enviadas ao ZMP para garantir que a lista de clientes de destino seja sincronizada adequadamente.
 
 ## Tipo e frequência de exportação {#export-type-frequency}
@@ -98,7 +100,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa da **[!UICONTROL Manage Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -127,14 +129,14 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL Manage Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-Leia [Ativar perfis e segmentos para destinos de exportação de segmento de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público para este destino.
+Leia [Ativar públicos-alvo para destinos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ### Mapear atributos e identidades {#map}
 

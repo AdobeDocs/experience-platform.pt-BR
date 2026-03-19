@@ -3,16 +3,16 @@ keywords: etiquetas do dirigível;destino do dirigível
 title: Conexão com as Tags do Aeróstato
 description: Transmita continuamente os dados do público-alvo da Adobe para o Airship como tags de público-alvo para direcionamento no Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1070'
 ht-degree: 3%
 
 ---
 
 # [!DNL Airship Tags] conexão {#airship-tags-destination}
 
-## Visão geral
+## Visão geral {#overview}
 
 O [!DNL Airship] é a principal plataforma de engajamento do cliente, ajudando você a fornecer mensagens omnicanais relevantes e personalizadas aos seus usuários em cada estágio do ciclo de vida do cliente.
 
@@ -25,7 +25,7 @@ Para saber mais sobre [!DNL Airship], consulte os [Documentação de dirigível]
 >
 >Esse conector de destino e a página de documentação são criados e mantidos pela equipe [!DNL Airship]. Para quaisquer consultas ou solicitações de atualização, entre em contato diretamente em [support.airship.com](https://support.airship.com/).
 
-## Pré-requisitos
+## Pré-requisitos {#prerequisites}
 
 Antes de enviar os públicos-alvo da Adobe Experience Platform para o [!DNL Airship], você deve:
 
@@ -33,7 +33,7 @@ Antes de enviar os públicos-alvo da Adobe Experience Platform para o [!DNL Airs
 * Gerar um token de portador para autenticação.
 
 >[!TIP]
-> 
+>
 >Crie uma conta do [!DNL Airship] via [este link de inscrição](https://go.airship.eu/accounts/register/plan/starter/) se ainda não tiver feito isso.
 
 ## Públicos-alvo compatíveis {#supported-audiences}
@@ -72,7 +72,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 {style="table-layout:auto"}
 
-## Grupos de tags
+## Grupos de tags {#tag-groups}
 
 O conceito de públicos-alvo na Adobe Experience Platform é semelhante a [Tags](https://docs.airship.com/guides/audience/tags/) em Aeróstato, com pequenas diferenças na implementação. Esta integração mapeia o status da [associação de um usuário em um segmento do Experience Platform](../../../xdm/field-groups/profile/segmentation.md) para a presença ou não de uma marca [!DNL Airship]. Por exemplo, em um público-alvo da Experience Platform em que `xdm:status` muda para `realized`, a marca é adicionada ao canal [!DNL Airship] ou usuário nomeado para o qual esse perfil está mapeado. Se o `xdm:status` for alterado para `exited`, a marca será removida.
 
@@ -84,25 +84,25 @@ Para habilitar esta integração, crie um *grupo de marcas* em [!DNL Airship] ch
 
 Consulte [Gerenciar grupos de marcas](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) para obter instruções sobre como criar o grupo de marcas.
 
-## Gerar token de portador
+## Gerar token de portador {#generate-bearer-token}
 
 Vá para **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** no [Painel de dirigível](https://go.airship.com) e selecione **[!UICONTROL Tokens]** no menu à esquerda.
 
 Clique em **[!UICONTROL Create Token]**.
 
-Forneça um nome amigável para o token, por exemplo, &quot;Destino de tags da Adobe&quot; e selecione &quot;Acesso integral&quot; para a função.
+Forneça um nome amigável para o token, por exemplo &quot;Destino de tags da Adobe&quot;, e selecione &quot;Acesso integral&quot; para a função.
 
 Clique em **[!UICONTROL Create Token]** e salve os detalhes como confidenciais.
 
-## Casos de uso
+## Casos de uso {#use-cases}
 
 Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Airship Tags], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
 
-### Caso de uso #1
+### Caso de uso #1 {#use-case-1}
 
 Varejistas ou plataformas de entretenimento podem criar perfis de usuário em seus clientes de fidelidade e transmitir esses públicos para o [!DNL Airship] para direcionamento de mensagens em campanhas móveis.
 
-### Caso de uso #2
+### Caso de uso #2 {#use-case-2}
 
 Acione mensagens individuais em tempo real quando os usuários entrarem ou saírem de públicos específicos no Adobe Experience Platform.
 
@@ -111,7 +111,7 @@ Por exemplo, uma retailer configura um público-alvo específico de uma marca je
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -139,14 +139,14 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Consulte [Ativar dados de público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ## Considerações de mapeamento {#mapping-considerations}
 
-[!DNL Airship] marcas podem ser definidas em um canal, que representa a instância do dispositivo, por exemplo, iPhone, ou em um usuário nomeado, que mapeia todos os dispositivos de um usuário para um identificador comum, como uma ID de cliente. Se você tiver endereços de email de texto sem formatação (sem hash) como identidade principal no esquema, selecione o campo de email em seu **[!UICONTROL Source Attributes]** e mapeie para o [!DNL Airship] usuário nomeado na coluna direita em **[!UICONTROL Target Identities]**, como mostrado abaixo.
+[!DNL Airship] marcas podem ser definidas em um canal, que representa a instância do dispositivo, por exemplo iPhone, ou em um usuário nomeado, que mapeia todos os dispositivos de um usuário para um identificador comum, como uma ID de cliente. Se você tiver endereços de email de texto sem formatação (sem hash) como identidade principal no esquema, selecione o campo de email em seu **[!UICONTROL Source Attributes]** e mapeie para o [!DNL Airship] usuário nomeado na coluna direita em **[!UICONTROL Target Identities]**, como mostrado abaixo.
 
 ![Mapeamento de Usuário Nomeado](../../assets/catalog/mobile-engagement/airship-tags/mapping-option-2.png)
 

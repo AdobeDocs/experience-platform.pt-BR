@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para criar um servidor de destino por meio do Adobe Experience Platform Destination SDK.
 title: Criar uma configuração do servidor de destino
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: e1dd6ae9bf28014e8e84de85bdf67707744ea0ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2040'
+source-wordcount: '2038'
 ht-degree: 6%
 
 ---
@@ -24,7 +24,7 @@ Para obter uma descrição detalhada dos recursos que você pode configurar por 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API do servidor de destino {#get-started}
 
@@ -447,7 +447,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da configuraç�
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Criar um [!DNL Azure Blob Storage] servidor de destino**
 

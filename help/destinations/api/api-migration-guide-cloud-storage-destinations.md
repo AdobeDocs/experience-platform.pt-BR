@@ -4,10 +4,10 @@ title: Guia de migração de API para destinos de armazenamento em nuvem
 description: Saiba mais sobre as alterações no fluxo de trabalho para ativar destinos de armazenamento em nuvem como parte da migração para os novos cartões de destino de armazenamento em nuvem com funcionalidade adicional.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 4b9e7c22282a5531f2f25f3d225249e4eb0e178e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1334'
-ht-degree: 0%
+source-wordcount: '1333'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* A funcionalidade descrita nesta página está disponível para clientes que compraram os pacotes do Real-Time CDP Prime e Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
+>* A funcionalidade descrita nesta página está disponível para clientes que compraram os pacotes do Real-Time CDP Prime e do Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
 
 ## Contexto de migração {#migration-context}
 
@@ -42,11 +42,11 @@ Commenting out the three net new cloud storage destinations
 
 -->
 
-Observe que, atualmente na interface do usuário do Experience Platform, você pode ver dois cartões de destino lado a lado dos três destinos. Abaixo estão os destinos novos e herdados do [!DNL Amazon S3]. Em todos os casos, os cartões marcados com **Beta** são os novos cartões de destino.
+Observe que, atualmente, na interface do usuário do Experience Platform, você pode ver dois cartões de destino lado a lado dos três destinos. Abaixo estão os destinos novos e herdados do [!DNL Amazon S3]. Em todos os casos, os cartões marcados com **Beta** são os novos cartões de destino.
 
 ![Imagem dos dois cartões de destino do Amazon S3 em um modo de exibição lado a lado.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-Embora esses destinos com funcionalidade aprimorada tenham sido oferecidos inicialmente como um beta, o *Adobe está movendo todos os clientes do Real-Time CDP para os novos destinos de armazenamento na nuvem*. Para clientes que já estavam usando o [!DNL Amazon S3], [!DNL Azure Blob] ou SFTP, isso significa que os fluxos de dados existentes serão migrados para os novos cartões. Leia para obter mais informações sobre as alterações específicas como parte da migração.
+Embora esses destinos com funcionalidade aprimorada tenham sido oferecidos inicialmente como um beta, o *Adobe está agora movendo todos os clientes do Real-Time CDP para os novos destinos de armazenamento na nuvem*. Para clientes que já estavam usando o [!DNL Amazon S3], [!DNL Azure Blob] ou SFTP, isso significa que os fluxos de dados existentes serão migrados para os novos cartões. Leia para obter mais informações sobre as alterações específicas como parte da migração.
 
 ## A quem esta página se aplica {#who-this-applies-to}
 
@@ -80,7 +80,7 @@ Com a migração para os novos destinos, todos os fluxos de dados existentes par
 
 As alterações incompatíveis com versões anteriores para os usuários da API são um `connection spec ID` e `flow spec ID` atualizados, conforme mostrado na tabela abaixo:
 
-| [!DNL Amazon S3] | Herdados | Novo |
+| [!DNL Amazon S3] | Legado | Novo |
 |---------|----------|---------|
 | Especificação de fluxo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 1a0514a6-33d4-4c7f-aff8-594799c47549 |
 | Especificação da conexão | 4890fc95-5a1f-4983-94bb-e060c08e3f81 | 4fce964d-3f37-408f-9778-e597338a21ee |
@@ -93,7 +93,7 @@ Da mesma forma, não há alterações incompatíveis com versões anteriores nos
 
 >[!TAB Conexão base herdada e conexão de destino]
 
-+++Exibir [!DNL base connection] herdado para [!DNL Amazon S3]
++++Visualizar [!DNL base connection] herdado para [!DNL Amazon S3]
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -126,7 +126,7 @@ Da mesma forma, não há alterações incompatíveis com versões anteriores nos
 
 +++
 
-+++Exibir [!DNL target connection] herdado para [!DNL Amazon S3]
++++Visualizar [!DNL target connection] herdado para [!DNL Amazon S3]
 
 ```json {line-numbers="true" start-line="1" highlight="12"}
 {
@@ -252,7 +252,7 @@ Da mesma forma, não há alterações incompatíveis com versões anteriores nos
 
 As alterações incompatíveis com versões anteriores para os usuários da API são um `connection spec ID` e `flow spec ID` atualizados, conforme mostrado na tabela abaixo:
 
-| [!DNL Azure Blob] | Herdados | Novo |
+| [!DNL Azure Blob] | Legado | Novo |
 |---------|----------|---------|
 | Especificação de fluxo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | 752d422f-b16f-4f0d-b1c6-26e448e3b388 |
 | Especificação da conexão | e258278b-a4cf-43ac-b158-4fa0ca0d948b | 6d6b59bf-fb58-4107-9064-4d246c0e5bb2 |
@@ -265,7 +265,7 @@ Da mesma forma, não há alterações incompatíveis com versões anteriores nos
 
 >[!TAB Conexão base herdada e conexão de destino]
 
-+++Exibir [!DNL base connection] herdado para [!DNL Azure Blob]
++++Visualizar [!DNL base connection] herdado para [!DNL Azure Blob]
 
 ```json {line-numbers="true" start-line="1" highlight="5"}
 {
@@ -297,7 +297,7 @@ Da mesma forma, não há alterações incompatíveis com versões anteriores nos
 
 +++
 
-+++Exibir [!DNL target connection] herdado para [!DNL Azure Blob]
++++Visualizar [!DNL target connection] herdado para [!DNL Azure Blob]
 
 ```json {line-numbers="true" start-line="1" highlight="13"}
 {
@@ -424,7 +424,7 @@ Da mesma forma, não há alterações incompatíveis com versões anteriores nos
 
 As alterações incompatíveis com versões anteriores para os usuários da API são um `connection spec ID` e `flow spec ID` atualizados, conforme mostrado na tabela abaixo:
 
-| SFTP | Herdados | Novo |
+| SFTP | Legado | Novo |
 |---------|----------|---------|
 | Especificação de fluxo | 71471eba-b620-49e4-90fd-23f1fa0174d8 | fd36aaa4-bf2b-43fb-9387-43785eeeb799 |
 | Especificação da conexão | 64ef4b8b-a6e0-41b5-9677-3805d1ee5dd0 | 36965a81-b1c6-401b-99f8-22508f1e6a26 |
@@ -473,7 +473,7 @@ Veja os exemplos completos de conexões base e de destino herdados e novos para 
 
 +++
 
-+++Exibir [!DNL base connection] herdado para autenticação [!DNL SFTP - SSH key]
++++Visualizar [!DNL base connection] herdado para autenticação [!DNL SFTP - SSH key]
 
 ```json {line-numbers="true" start-line="1" highlight="5,15"}
 {
@@ -508,7 +508,7 @@ Veja os exemplos completos de conexões base e de destino herdados e novos para 
 
 +++
 
-+++Exibir [!DNL target connection] herdado para SFTP
++++Visualizar [!DNL target connection] herdado para SFTP
 
 ```json {line-numbers="true" start-line="1" highlight="13"}
 {
@@ -583,7 +583,7 @@ Veja os exemplos completos de conexões base e de destino herdados e novos para 
 
 +++
 
-+++Exibir novo [!DNL base connection] para autenticação [!DNL SFTP - SSH key]
++++Exibir novo(a) [!DNL base connection] para autenticação [!DNL SFTP - SSH key]
 
 ```json {line-numbers="true" start-line="1" highlight="5,12"}
 {
@@ -784,16 +784,16 @@ Observe no exemplo de configuração abaixo como `profileSelectors` campos foram
 
 A migração de fluxos de dados herdados para os novos cartões de destino do [!DNL Amazon S3], [!DNL Azure Blob] e destinos SFTP ocorrerá assim que sua organização estiver pronta para migração e, o mais tardar, em **26 de julho de 2023**.
 
-Você receberá emails de lembrete do Adobe à medida que a data da migração se aproximar. Em preparação, leia a seção Itens de ação abaixo para se preparar para a migração.
+Você receberá emails de lembrete do Adobe à medida que a data de migração se aproximar. Em preparação, leia a seção Itens de ação abaixo para se preparar para a migração.
 
 ### Itens de ação {#action-items}
 
 Como preparo para a migração dos destinos de armazenamento na nuvem do [!DNL Amazon S3], [!DNL Azure Blob] e SFTP para os novos cartões, prepare-se para atualizar seus scripts e chamadas de API automatizadas, conforme sugerido abaixo.
 
 1. Atualize todos os scripts ou chamadas de API automatizadas para qualquer destino de armazenamento na nuvem existente do [!DNL Amazon S3], [!DNL Azure Blob] ou SFTP até 26 de julho de 2023. Quaisquer chamadas ou scripts de API automatizados que utilizam as especificações de conexão ou as especificações de fluxo herdadas precisam ser atualizados para as novas especificações de conexão ou especificações de fluxo.
-2. Entre em contato com o representante de conta Adobe quando seus scripts forem atualizados antes de 26 de julho.
+2. Entre em contato com o representante de conta da Adobe quando seus scripts forem atualizados antes de 26 de julho.
 3. Por exemplo, o `targetConnectionSpecId` pode ser usado como um sinalizador para determinar se o fluxo de dados foi migrado para o novo cartão de destino. Você poderia atualizar seus scripts com uma condição `if` para verificar as especificações de conexão de destino herdadas e atualizadas em `flow.inheritedAttributes.targetConnections[0].connectionSpec.id` e determinar se seu fluxo de dados foi migrado. Você pode ver as IDs de especificação de conexão novas e herdadas nas seções específicas desta página para cada destino.
-4. Sua equipe de conta do Adobe entrará em contato com mais informações sobre quando seus fluxos de dados serão migrados.
+4. Sua equipe de conta da Adobe entrará em contato com mais informações sobre quando seus fluxos de dados serão migrados.
 5. Após 26 de julho, todos os fluxos de dados serão migrados. Todos os fluxos de dados existentes agora terão novas entidades de fluxo (especificações de conexão, especificações de fluxo, conexões de base e conexões de destino). Qualquer script ou chamada de API do seu lado que use as entidades de fluxo herdadas deixará de funcionar.
 
 ## Outras considerações de migração {#other-considerations}
@@ -802,4 +802,4 @@ Observe que não há impacto na programação existente para exportações duran
 
 ## Próximas etapas {#next-steps}
 
-Ao ler esta página, agora você sabe se precisa realizar alguma ação de preparação para a migração dos destinos de armazenamento na nuvem. Você também sabe quais páginas de documentação devem ser referenciadas à medida que configura fluxos de trabalho baseados em API para exportar arquivos do Experience Platform para seus destinos de armazenamento em nuvem preferidos. Em seguida, você pode exibir o tutorial da API para [exportar dados para destinos de armazenamento na nuvem](/help/destinations/api/activate-segments-file-based-destinations.md).
+Ao ler esta página, agora você sabe se precisa realizar alguma ação de preparação para a migração dos destinos de armazenamento na nuvem. Você também sabe quais páginas de documentação consultar ao configurar fluxos de trabalho baseados em API para exportar arquivos do Experience Platform para seus destinos de armazenamento em nuvem preferidos. Em seguida, você pode exibir o tutorial da API para [exportar dados para destinos de armazenamento na nuvem](/help/destinations/api/activate-segments-file-based-destinations.md).

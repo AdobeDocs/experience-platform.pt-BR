@@ -3,7 +3,7 @@ title: Acxiom Audience Connection
 description: Use o  [!DNL Acxiom Audience Connection] destino para aprimorar públicos-alvo com a  [!DNL Acxiom's Real ID] tecnologia e ativar públicos-alvo para várias plataformas, como  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1043'
 ht-degree: 7%
@@ -91,7 +91,7 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -121,7 +121,7 @@ Para que o destino [!DNL Acxiom Audience Connection] receba corretamente os dado
 | Email | Email primário Por padrão, esse campo é usado como uma chave de desduplicação para tornar os registros exclusivos | Não | 10 | 255 |
 | Telefone | Número de telefone do indivíduo (código de área + número)<br> Por padrão, esse campo é usado como uma chave de desduplicação para tornar os registros exclusivos. | Não | 11 | 10 |
 
-Na coluna **[!UICONTROL Source Field]**, digite o nome de cada um dos atributos de origem que você deseja mapear para o campo de destino correspondente ou selecione o ícone de seta para abrir a tela **[!UICONTROL &#x200B; Select source field]**.<br>
+Na coluna **[!UICONTROL Source Field]**, digite o nome de cada um dos atributos de origem que você deseja mapear para o campo de destino correspondente ou selecione o ícone de seta para abrir a tela **[!UICONTROL  Select source field]**.<br>
 ![Tela de mapeamento](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 Depois de mapear todos os campos, selecione **[!UICONTROL Next]**.
@@ -153,4 +153,4 @@ Ao seguir este tutorial, você ativou com êxito um público-alvo para a platafo
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/data-governance/home).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).

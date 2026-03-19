@@ -3,10 +3,10 @@ title: Perfis dos participantes do RainFocus
 description: Saiba como usar o conector de destino Perfis de participantes RainFocus para sincronizar perfis de público-alvo com o Perfil de participante global RainFocus.
 last-substantial-update: 2024-12-17T00:00:00Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1101'
-ht-degree: 3%
+source-wordcount: '1091'
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,7 @@ Use o destino [!DNL RainFocus Attendee Profiles] para transmitir perfis de clien
 
 >[!IMPORTANT]
 >
->O conector de destino e a página de documentação são criados e mantidos pela equipe [!DNL RainFocus]. Para fazer consultas ou solicitações de atualização, contate-os diretamente em `clientcare@rainfocus.com` ou visite a [Central de ajuda](https://help.rainfocus.com/hc/en-us) da RainFocus.
+>O conector de destino e a página de documentação são criados e mantidos pela equipe [!DNL RainFocus]. Para qualquer consulta ou solicitação de atualização, contate-os diretamente em `clientcare@rainfocus.com` ou visite a [Central de ajuda](https://help.rainfocus.com/hc/en-us) da RainFocus.
 
 ## Casos de uso {#use-cases}
 
@@ -91,7 +91,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa da **[!UICONTROL View Destinations]** e da **[!UICONTROL Manage Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -123,13 +123,13 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Leia [Ativar perfis e segmentos para destinos de exportação de segmento de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público para este destino.
+Leia [Ativar públicos-alvo para destinos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ### Mapear atributos e identidades {#map}
 
@@ -172,4 +172,4 @@ Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as p
 
 ## Recursos adicionais {#additional-resources}
 
-* [Conector de Source de Streaming RainFocus](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [Conector de Source de Streaming RainFocus](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

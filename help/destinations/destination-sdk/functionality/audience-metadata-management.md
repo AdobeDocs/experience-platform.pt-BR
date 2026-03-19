@@ -2,7 +2,7 @@
 description: Use modelos de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo no destino de forma programática. O Adobe fornece um modelo de metadados de público-alvo extensível, que pode ser configurado com base nas especificações da API de marketing. Depois de definir, testar e enviar o modelo, ele será usado pelo Adobe para estruturar as chamadas de API para o seu destino.
 title: Gerenciamento de metadados de público
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1309'
 ht-degree: 0%
@@ -25,19 +25,19 @@ Dependendo da configuração da API, pode ser ou não necessário usar o endpoin
 
 Com o suporte aos metadados de público no Destination SDK, ao configurar o destino do Experience Platform, você pode fornecer aos usuários do Experience Platform uma das várias opções ao mapearem e ativarem públicos para o seu destino. Você pode controlar as opções disponíveis para o usuário por meio dos parâmetros na seção [Configuração de metadados de público-alvo](../functionality/destination-configuration/audience-metadata-configuration.md) da configuração de destino.
 
-### Caso de uso 1 - Você tem uma API de terceiros e os usuários não precisam inserir IDs de mapeamento
+### Caso de uso 1 - Você tem uma API de terceiros e os usuários não precisam inserir IDs de mapeamento {#use-case-1}
 
 Se você tiver um endpoint de API para criar/atualizar/excluir públicos ou públicos, poderá usar modelos de metadados de público para configurar o Destination SDK de forma que corresponda às especificações do endpoint de criação/atualização/exclusão de público. O Experience Platform pode criar/atualizar/excluir públicos de maneira programática e sincronizar metadados com o Experience Platform.
 
 Ao ativar públicos-alvo para o seu destino na interface do usuário (UI) do Experience Platform, os usuários não precisam preencher manualmente um campo de ID de mapeamento de público-alvo no fluxo de trabalho de ativação.
 
-### Caso de uso 2 - Os usuários precisam criar um público-alvo em seu destino primeiro e são solicitados a inserir manualmente a ID do mapeamento
+### Caso de uso 2 - Os usuários precisam criar um público-alvo em seu destino primeiro e são solicitados a inserir manualmente a ID do mapeamento {#use-case-2}
 
 Se os públicos-alvo e outros metadados precisarem ser criados manualmente por parceiros ou usuários no destino, os usuários deverão preencher manualmente o campo de ID de mapeamento de público no fluxo de trabalho de ativação para sincronizar os metadados do público-alvo entre o destino e a Experience Platform.
 
 ![ID do mapeamento de entrada](../assets/functionality/input-mapping-id.png)
 
-### Caso de uso 3: seu destino aceita a ID de público-alvo da Experience Platform, os usuários não precisam inserir a ID de mapeamento manualmente
+### Caso de uso 3: seu destino aceita a ID de público-alvo da Experience Platform, os usuários não precisam inserir a ID de mapeamento manualmente {#use-case-3}
 
 Se o sistema de destino aceitar a ID de público-alvo da Experience Platform, você poderá configurá-la no modelo de metadados de público-alvo. Os usuários não precisam preencher uma ID de mapeamento de público-alvo ao ativar um segmento.
 
@@ -79,7 +79,7 @@ Observe como o URL, os cabeçalhos e os corpos de solicitação diferem entre as
 
 Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` ou `{{segment.name}}` são usados na URL e em outros exemplos eles são usados nos cabeçalhos ou no corpo da solicitação. O uso depende das especificações da API de marketing.
 
-+++Exemplo de transmissão 1
++++Exemplo 1 de streaming
 
 ```json
 {
@@ -190,7 +190,7 @@ Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` 
 
 +++
 
-+++Exemplo de transmissão 2
++++Exemplo 2 de streaming
 
 ```json
 {
@@ -286,7 +286,7 @@ Observe que em alguns exemplos, campos de macro como `{{authData.accessToken}}` 
 
 +++
 
-+++Exemplo de transmissão 3
++++Exemplo 3 de streaming
 
 ```json
 {

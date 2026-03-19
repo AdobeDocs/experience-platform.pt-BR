@@ -3,9 +3,9 @@ title: (API) Conexão Oracle Eloqua
 description: O destino (API) do Oracle Eloqua permite exportar os dados da conta e ativá-los no Oracle Eloqua para atender às suas necessidades comerciais.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2138'
+source-wordcount: '2136'
 ht-degree: 4%
 
 ---
@@ -27,7 +27,7 @@ O departamento de marketing de uma plataforma online deseja transmitir uma campa
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL Oracle Eloqua], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL Oracle Eloqua], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criados em [!DNL Experience Platform].
 
 Consulte a documentação do Experience Platform para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
@@ -47,6 +47,8 @@ Anote os itens abaixo antes de autenticar no destino [!DNL Oracle Eloqua]:
 | `Username` | O nome de usuário da sua conta [!DNL Oracle Eloqua]. |
 | `Password` | A senha da sua conta [!DNL Oracle Eloqua]. |
 | `Pod` | O [!DNL Oracle Eloqua] oferece suporte a vários data centers, cada um com um nome de domínio exclusivo. [!DNL Oracle Eloqua] refere-se a eles como &quot;pods&quot;, existem atualmente sete no total - p01, p02, p03, p04, p06, p07 e p08. Para obter o POD em que você está, faça logon no [!DNL Oracle Eloqua] e anote a URL no navegador depois de fazer logon com êxito. Por exemplo, se a URL do navegador for `secure.p01.eloqua.com`, `pod` será `p01`. Consulte a página [determinando seu POD](https://community.oracle.com/topliners/discussion/4470225/determining-your-pod-number-for-oracle-eloqua) para obter orientação adicional. |
+
+{style="table-layout:auto"}
 
 Consulte [Entrando em [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/Administration/Tasks/SigningInToEloqua.htm#Signing) para obter orientação.
 
@@ -70,6 +72,8 @@ Consulte [Entrando em [!DNL Oracle Eloqua]](https://docs.oracle.com/en/cloud/saa
 | Identidade de destino | Descrição | Obrigatório |
 |---|---|---|
 | `EloquaId` | Identificador exclusivo do contato. | Sim |
+
+{style="table-layout:auto"}
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
@@ -156,7 +160,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -251,7 +255,7 @@ Para obter detalhes adicionais, consulte a documentação do [!DNL Oracle Eloqua
 * [Automação de Marketing do Oracle Eloqua](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
 * [API REST para o Oracle Eloqua Marketing Cloud Service](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
-### Changelog
+### Changelog {#changelog}
 
 Esta seção captura a funcionalidade e as atualizações de documentação significativas feitas neste conector de destino.
 

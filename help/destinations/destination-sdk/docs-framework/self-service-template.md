@@ -2,9 +2,9 @@
 title: Modelo de autoatendimento de documentação // Substituir pelo nome do destino
 description: Use este template para criar uma documentação pública para seu destino no catálogo do Adobe Experience Platform. // Substituir pelo parágrafo na seção Visão geral
 exl-id: 99700474-8bf6-4176-acc1-38814e17c995
-source-git-commit: 38178723dc142ba3e79d6c170affaf86ec496086
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1737'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,7 @@ Para ajudá-lo a entender melhor como e quando você deve usar o destino *YourDe
 
 *Adicione nesta seção informações sobre qualquer item que os clientes precisem saber antes de começar a configurar o destino na interface do Adobe Experience Platform. Isso pode ser sobre:*
 
-* *que precisa ser adicionado a uma lista de permissões*
+* *que precisa ser adicionado a um incluo na lista de permissões*
 * *requisitos para hash de email*
 * *qualquer especificação de conta da sua parte*
 * *como obter uma chave de API para se conectar à sua plataforma*
@@ -115,7 +115,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -151,7 +151,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

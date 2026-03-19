@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para excluir um modelo de público-alvo existente por meio do Adobe Experience Platform Destination SDK.
 title: Excluir um modelo de público-alvo
 exl-id: 6eb07e3c-3269-4368-9b11-04bd993cc4ab
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '287'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ Para obter uma descrição detalhada dos recursos que você pode configurar por 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API do modelo de público-alvo {#get-started}
 
@@ -42,6 +42,8 @@ DELETE /authoring/audience-templates/{INSTANCE_ID}
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{INSTANCE_ID}` | O `ID` do modelo de público-alvo que você deseja excluir. |
+
+{style="table-layout:auto"}
 
 +++Solicitação
 

@@ -2,9 +2,9 @@
 title: (V1) Conexão de público-alvo em tempo real do Pega CDH
 description: Use o destino do Público-alvo em tempo real do Pega Customer Decision Hub no Adobe Experience Platform para enviar atributos de perfil e dados de associação de público-alvo para o Pega Customer Decision Hub para a próxima melhor ação de decisão.
 exl-id: 0546da5d-d50d-43ec-bbc2-9468a7db4d90
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1213'
 ht-degree: 3%
 
 ---
@@ -23,17 +23,17 @@ A associação de público-alvo de perfil do Adobe Experience Platform, quando c
 
 >[!IMPORTANT]
 >
->Esse conector de destino e a página de documentação são criados e mantidos pela Pegasystems. Para quaisquer consultas ou pedidos de atualização, contate Pega diretamente [aqui](mailto:support@pega.com).
+>Esse conector de destino e a página de documentação são criados e mantidos pela Pegasystems. Para qualquer consulta ou solicitação de atualização, contate Pega diretamente [aqui](mailto:support@pega.com).
 
-## Casos de uso
+## Casos de uso {#use-cases}
 
 Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Customer Decision Hub], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
 
-### Telecomunicações
+### Telecomunicações {#telecommunications}
 
 Um profissional de marketing deseja aproveitar os insights da próxima melhor ação baseada em modelo de ciência de dados conforme fornecidos por [!DNL Pega Customer Decision Hub] para o envolvimento do cliente. [!DNL Pega Customer Decision Hub] é altamente dependente da intenção do cliente, por exemplo &quot;Interested_In_5G&quot;, &quot;Interested_in_Unlimited_Dataplan&quot; ou &quot;Interest_in_iPhone_Accessations&quot;.
 
-### Serviços financeiros
+### Serviços financeiros {#financial-services}
 
 Um profissional de marketing deseja otimizar as ofertas para clientes que assinaram ou cancelaram a assinatura dos boletins informativos de Plano de aposentadoria ou Plano de aposentadoria. As empresas de serviços financeiros podem assimilar várias CustomerIDs de seus próprios CRMs na Adobe Experience Platform, criar públicos-alvo a partir de seus próprios dados offline e enviar perfis que estão entrando e saindo dos públicos-alvo para [!DNL Pega Customer Decision Hub] para que a decisão da próxima melhor ação (NBA) seja tomada nos canais de saída.
 
@@ -122,7 +122,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e sele
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

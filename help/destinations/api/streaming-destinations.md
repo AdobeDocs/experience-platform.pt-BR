@@ -5,9 +5,9 @@ title: Conecte-se aos destinos de transmissão e ative os dados usando a API de 
 description: Este documento aborda a criação de destinos de transmissão usando a API do Adobe Experience Platform
 type: Tutorial
 exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2203'
 ht-degree: 3%
 
 ---
@@ -15,14 +15,14 @@ ht-degree: 3%
 # Conectar-se a destinos de streaming e ativar dados usando a API de Serviço de Fluxo
 
 >[!IMPORTANT]
-> 
->Para se conectar a um destino, você precisa de **[!UICONTROL Exibir Destinos]** e **[!UICONTROL Gerenciar Destinos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 >
->Para ativar dados, você precisa de **[!UICONTROL Exibir Destinos]**, **[!UICONTROL Ativar Destinos]**, **[!UICONTROL Exibir Perfis]** e **[!UICONTROL Exibir Segmentos]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+>Para se conectar a um destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+>
+>Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 >
 >Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Este tutorial demonstra como usar chamadas de API para se conectar aos dados do Adobe Experience Platform, criar uma conexão com um destino de armazenamento da nuvem de streaming ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) ou [Hubs de Eventos do Azure](../catalog/cloud-storage/azure-event-hubs.md)), criar um fluxo de dados para o novo destino criado e ativar dados para o novo destino criado.
+Este tutorial demonstra como usar chamadas de API para se conectar aos dados do Adobe Experience Platform, criar uma conexão com um destino de armazenamento da nuvem de streaming ([Amazon Kinesis](../catalog/cloud-storage/amazon-kinesis.md) ou [Hubs de Eventos Azure](../catalog/cloud-storage/azure-event-hubs.md)), criar um fluxo de dados para o novo destino criado e ativar dados para o novo destino criado.
 
 Este tutorial usa o destino [!DNL Amazon Kinesis] em todos os exemplos, mas as etapas são idênticas para [!DNL Azure Event Hubs].
 
@@ -30,7 +30,7 @@ Este tutorial usa o destino [!DNL Amazon Kinesis] em todos os exemplos, mas as e
 
 Se preferir usar a interface no Experience Platform para se conectar a um destino e ativar dados, consulte os tutoriais [Conectar um destino](../ui/connect-destination.md) e [Ativar dados do público-alvo para exportar destinos por transmissão](../ui/activate-segment-streaming-destinations.md).
 
-## Introdução
+## Introdução {#get-started}
 
 Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
 
@@ -40,7 +40,7 @@ Este manual necessita de uma compreensão funcional dos seguintes componentes da
 
 As seções a seguir fornecem informações adicionais que você precisará saber para ativar dados para destinos de transmissão no Experience Platform.
 
-### Coletar credenciais necessárias
+### Coletar credenciais necessárias {#gather-credentials}
 
 Para concluir as etapas deste tutorial, você deve ter as credenciais a seguir prontas, dependendo do tipo de destinos aos quais você está se conectando e ativando públicos.
 
@@ -129,7 +129,7 @@ Em seguida, você deve se conectar aos dados do Experience Platform para poder e
 2. Em seguida, usando a ID de conexão básica, você fará outra chamada na qual criará uma conexão de origem, que estabelece a conexão com os dados do Experience Platform.
 
 
-### Autorizar o acesso aos seus dados no Experience Platform
+### Autorizar o acesso aos seus dados no Experience Platform {#authorize-access-experience-platform}
 
 **Formato da API**
 
@@ -224,7 +224,7 @@ Nesta etapa, você está configurando uma conexão com o destino de transmissão
 1. Primeiro, você deve executar uma chamada para autorizar o acesso ao destino de streaming, configurando uma conexão base.
 2. Em seguida, usando a ID de conexão básica, você fará outra chamada na qual criará uma conexão de destino, que especifica o local na conta de armazenamento onde os dados exportados serão entregues, bem como o formato dos dados que serão exportados.
 
-### Autorizar acesso ao destino de streaming
+### Autorizar acesso ao destino de streaming {#authorize-access-streaming-destination}
 
 **Formato da API**
 
@@ -287,7 +287,7 @@ Uma resposta bem-sucedida contém o identificador exclusivo da conexão base (`i
 }
 ```
 
-### Especificar local de armazenamento e formato de dados
+### Especificar local de armazenamento e formato de dados {#specify-storage-location-data-format}
 
 **Formato da API**
 
@@ -344,7 +344,7 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
 }
 ```
 
-## Criar um fluxo de dados
+## Criar um fluxo de dados {#create-data-flow}
 
 ![Etapa 4](../assets/api/streaming-destination/step4.png) da visão geral das etapas de destino
 
@@ -482,11 +482,13 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 | `id` | Especifique a ID do público-alvo que você está adicionando ao fluxo de dados de destino. |
 | `name` | *Opcional*. Especifique o nome do público-alvo que você está adicionando ao fluxo de dados de destino. Observe que esse campo não é obrigatório e que você pode adicionar um público-alvo ao fluxo de dados de destino com êxito sem fornecer seu nome. |
 
+{style="table-layout:auto"}
+
 **Resposta**
 
 Procure uma resposta 202 OK. Nenhum corpo de resposta é retornado. Para validar se a solicitação estava correta, consulte a próxima etapa, Validar o fluxo de dados.
 
-## Validar o fluxo de dados
+## Validar o fluxo de dados {#validate-data-flow}
 
 ![Etapa de visão geral das etapas de destino 6](../assets/api/streaming-destination/step6.png)
 
@@ -563,7 +565,7 @@ A resposta retornada deve incluir no parâmetro `transformations` os públicos-a
 
 >[!IMPORTANT]
 >
-> Além dos atributos de perfil e dos públicos-alvo na etapa [Ativar dados para o novo destino](#activate-data), os dados exportados no [!DNL AWS Kinesis] e no [!DNL Azure Event Hubs] também incluirão informações sobre o mapa de identidade. Representa as identidades dos perfis exportados (por exemplo, [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=pt-BR), ID de celular, Google ID, endereço de email, etc.). Veja um exemplo abaixo.
+> Além dos atributos de perfil e dos públicos-alvo na etapa [Ativar dados para o novo destino](#activate-data), os dados exportados no [!DNL AWS Kinesis] e no [!DNL Azure Event Hubs] também incluirão informações sobre o mapa de identidade. Representa as identidades dos perfis exportados (por exemplo, [ECID](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), ID de celular, Google ID, endereço de email, etc.). Veja um exemplo abaixo.
 
 ```json
 {

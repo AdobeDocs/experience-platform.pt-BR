@@ -5,7 +5,7 @@ badgeLimitedAvailability: label="Disponibilidade limitada" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
 hide: true
 hidefromtoc: true
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '892'
 ht-degree: 4%
@@ -14,13 +14,13 @@ ht-degree: 4%
 
 # Destino da Análise de público-alvo
 
-O destino [!UICONTROL Audience Analysis] permite enriquecer os dados de público-alvo do Adobe Experience Platform no [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-overview/cja-b2c-overview/cja-overview). Você pode selecionar quais públicos-alvo deseja incluir nos dados enriquecidos resultantes. As qualificações de público-alvo estão disponíveis como dimensões nos relatórios do [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=pt-BR).
+O destino [!UICONTROL Audience Analysis] permite enriquecer os dados de público-alvo do Adobe Experience Platform no [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-overview/cja-b2c-overview/cja-overview). Você pode selecionar quais públicos-alvo deseja incluir nos dados enriquecidos resultantes. As qualificações de público-alvo estão disponíveis como dimensões nos relatórios do [Analysis Workspace](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html).
 
 >[!AVAILABILITY]
 >
 >Esse destino está em uma fase de teste limitada. Se estiver interessado em usar esse destino, entre em contato com a equipe de conta da Adobe.
 
-## Pré-requisitos
+## Pré-requisitos {#prerequisites}
 
 São necessários os seguintes itens antes de usar este destino:
 
@@ -28,7 +28,7 @@ São necessários os seguintes itens antes de usar este destino:
 * Você deve ser provisionado para usar o Customer Journey Analytics.
 * Você deve ter pelo menos um público-alvo criado no Adobe Experience Platform.
 
-## Identidades suportadas
+## Identidades suportadas {#supported-identities}
 
 A Análise de público-alvo é compatível com a ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md). A Experience Cloud ID (ECID) geralmente é usada.
 
@@ -43,7 +43,7 @@ A Análise de público-alvo é compatível com a ativação das identidades desc
 
 {style="table-layout:auto"}
 
-## Públicos-alvo compatíveis
+## Públicos-alvo compatíveis {#supported-audiences}
 
 Os seguintes tipos de público-alvo são compatíveis ao usar esse destino:
 
@@ -68,7 +68,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 {style="table-layout:auto"}
 
 
-## Tipo e frequência de exportação
+## Tipo e frequência de exportação {#export-type-frequency}
 
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
@@ -79,15 +79,15 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 {style="table-layout:auto"}
 
-## Configurar novo destino
+## Configurar novo destino {#configure-destination}
 
 >[!IMPORTANT]
-> 
+>
 >Para criar um destino, você precisa da **[!UICONTROL View Destinations]** e da **[!UICONTROL Manage Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para criar esse destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-### Detalhes do destino
+### Detalhes do destino {#destination-details}
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
@@ -96,7 +96,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Datastream ID]**: a ID da sequência de dados que você deseja enriquecer com públicos qualificados. Você pode obter essa ID no [gerenciador de fluxos de dados](/help/datastreams/overview.md).
 * **[!UICONTROL Integration alias]**: o alias de integração.
 
-### Alertas
+### Alertas {#alerts}
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados para o seu destino. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 
@@ -104,7 +104,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
-### Política de governação e medidas de aplicação
+### Política de governação e medidas de aplicação {#governance-policy}
 
 Esta seção opcional permite definir suas políticas de governança de dados e garantir que os dados usados estejam em conformidade quando os públicos-alvo forem enviados e estiverem ativos.
 
@@ -113,7 +113,7 @@ Quando terminar de selecionar as ações de marketing desejadas para o destino, 
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Depois que o destino for criado, você poderá ativar os públicos-alvo desejados para o destino.

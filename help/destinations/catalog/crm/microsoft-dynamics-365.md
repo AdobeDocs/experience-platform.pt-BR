@@ -4,9 +4,9 @@ title: Conexão com o Microsoft Dynamics 365
 description: O destino do Microsoft Dynamics 365 permite exportar os dados da conta e ativá-los no Microsoft Dynamics 365 para atender às suas necessidades comerciais.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2100'
+source-wordcount: '2098'
 ht-degree: 2%
 
 ---
@@ -29,13 +29,13 @@ Como profissional de marketing, você pode fornecer experiências personalizadas
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL Dynamics 365], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL Dynamics 365], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) criados em [!DNL Experience Platform].
 
 Consulte a documentação da Adobe para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
 ### [!DNL Microsoft Dynamics 365] pré-requisitos {#prerequisites-destination}
 
-Observe os seguintes pré-requisitos em [!DNL Dynamics 365] para exportar dados do Experience Platform para sua conta do [!DNL Dynamics 365]:
+Observe os seguintes pré-requisitos em [!DNL Dynamics 365], para exportar dados do Experience Platform para sua conta do [!DNL Dynamics 365]:
 
 #### Você precisa ter uma conta [!DNL Microsoft Dynamics 365] {#prerequisites-account}
 
@@ -170,7 +170,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -269,7 +269,7 @@ Informações adicionais úteis da [[!DNL Dynamics 365] documentação](https://
 * [Método IOrganizationService.Update(Entity)](https://docs.microsoft.com/en-us/dotnet/api/microsoft.xrm.sdk.iorganizationservice.update?view=dataverse-sdk-latest)
 * [Atualizar e excluir linhas da tabela usando a API da Web](https://docs.microsoft.com/en-us/power-apps/developer/data-platform/webapi/update-delete-entities-using-web-api#basic-update)
 
-### Changelog
+### Changelog {#changelog}
 
 Esta seção captura a funcionalidade e as atualizações de documentação significativas feitas neste conector de destino.
 

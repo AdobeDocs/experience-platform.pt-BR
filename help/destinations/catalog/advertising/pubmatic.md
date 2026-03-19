@@ -3,9 +3,9 @@ title: PubMatic Connect
 description: O PubMatic maximiza o valor para o cliente fornecendo o supply chain de marketing digital programático do futuro. O PubMatic Connect combina tecnologia de plataforma e serviço dedicado para aprimorar o modo como o inventário e os dados são empacotados e transacionados.
 last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1146'
 ht-degree: 3%
 
 ---
@@ -131,7 +131,7 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 >
@@ -139,7 +139,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >
 > - Para exportar _identidades_, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](../../assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-Leia [Ativar perfis e segmentos para destinos de exportação de segmento de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público para este destino.
+Leia [Ativar públicos-alvo para destinos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ### Mapear atributos e identidades {#map}
 
@@ -154,7 +154,7 @@ Selecionar campos de destino:
 
 ![Mapear atributos e identidades](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
 
-### Agendamento de público
+### Agendamento de público {#audience-scheduling}
 
 Se você estiver usando o destino PubMatic Connect (Mapeamento de ID de público-alvo personalizado), é necessário fornecer uma ID de mapeamento para cada público-alvo que corresponda à &quot;ID de público-alvo do Source&quot; na plataforma PubMatic.
 

@@ -2,7 +2,7 @@
 description: Saiba como configurar seu destino para as configurações de mapeamento de identidade e atributo compatíveis.
 title: Configurações de mapeamento compatíveis
 exl-id: a477a3f2-a229-4b22-8588-ee58bd5436c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '670'
 ht-degree: 3%
@@ -23,7 +23,7 @@ Ao criar seu destino, configure seu esquema e namespace de identidade de acordo 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Mapeamentos compatíveis para destinos de streaming {#streaming-mappings}
 
@@ -33,6 +33,8 @@ Os destinos em tempo real (transmissão) criados com o Destination SDK são comp
 | --- | --- |
 | Atributo XDM | Atributo personalizado |
 | Namespace de identidade | Namespace de identidade |
+
+{style="table-layout:auto"}
 
 O exemplo de configuração abaixo permite que os clientes usem ambos os mapeamentos na tabela acima.
 
@@ -87,6 +89,8 @@ Os destinos baseados em arquivo criados com o Destination SDK são compatíveis 
 | Atributo XDM | Atributo / Atributo personalizado |
 | Namespace de identidade | Atributo / Atributo personalizado |
 | Namespace de identidade | Namespace de identidade |
+
+{style="table-layout:auto"}
 
 O exemplo de configuração abaixo permite que os clientes usem todos os mapeamentos da tabela acima.
 

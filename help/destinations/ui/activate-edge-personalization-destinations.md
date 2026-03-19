@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de personalização de borda
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de personalização de borda para casos de uso de personalização de mesma página e próxima página.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 5d08a6d90e53aa2f5b1fb72c36e19156e3ac5299
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1883'
+source-wordcount: '1881'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Exemplos de destinos de borda são as conexões [Adobe Target](../../destination
 >Ao [configurar a conexão do Adobe Target](../catalog/personalization/adobe-target-connection.md) *sem* usando uma ID de sequência de dados, não há suporte para os casos de uso descritos neste artigo. Somente casos de uso de personalização da próxima sessão são compatíveis na ausência de um fluxo de dados.
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar os dados e habilitar a [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 >* Para ativar dados sem passar pela [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
@@ -39,11 +39,11 @@ Para obter uma breve visão geral sobre como configurar a conexão do Adobe Targ
 >
 >A interface do usuário do Experience Platform é atualizada com frequência e pode ter sido alterada desde a gravação deste vídeo. Para obter as informações mais atualizadas, consulte as etapas de configuração descritas nas seções abaixo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449798/?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 Para obter uma breve visão geral de como compartilhar públicos-alvo e atributos de perfil com a Adobe Target e destinos de personalização personalizados, assista ao vídeo abaixo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3447360/?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
 
 ## Casos de uso {#use-cases}
 
@@ -53,7 +53,7 @@ Os casos de uso descritos abaixo incluem personalização do site e publicidade 
 
 Para habilitar esses casos de uso, os clientes precisam de uma forma rápida e simplificada de recuperar informações de atributos de perfil e público-alvo do Experience Platform e de enviar essas informações para as conexões do [Adobe Target](../catalog/personalization/adobe-target-connection.md) ou do [Personalization personalizado](../catalog/personalization/custom-personalization.md) na interface do usuário do Experience Platform.
 
-### Personalização de mesma página {#same-page}
+### Personalização da mesma página {#same-page}
 
 Um usuário visita uma página do site. Você pode usar as informações de visita da página atual (por exemplo, URL de referência, idioma do navegador, informações de produto inseridas) para selecionar a próxima ação ou decisão (por exemplo, personalização), usando a conexão [Personalização personalizada](../catalog/personalization/custom-personalization.md) para plataformas que não sejam da Adobe (por exemplo, [!DNL Pega], [!DNL Optimizely] ou outras.).
 

@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para criar um modelo de público-alvo por meio do Adobe Experience Platform Destination SDK.
 title: Criar um modelo de público-alvo
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '621'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ Para obter uma descrição detalhada dos recursos que você pode configurar por 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API do modelo de público-alvo {#get-started}
 
@@ -279,10 +279,10 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes do modelo de p�
 
 +++
 
-## Manipulação de erros de API
+## Manipulação de erros de API {#error-handling}
 
 Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Depois de ler este documento, agora você sabe quando usar modelos de público-alvo e como configurar um modelo de público-alvo usando o ponto de extremidade da API `/authoring/audience-templates`. Leia [como usar o Destination SDK para configurar seu destino](../guides/configure-destination-instructions.md) para entender onde essa etapa se encaixa no processo de configuração do seu destino.

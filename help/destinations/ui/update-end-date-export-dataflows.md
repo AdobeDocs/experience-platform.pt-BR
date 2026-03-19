@@ -4,13 +4,13 @@ type: Tutorial
 hide: true
 hidefromtoc: true
 description: Saiba como atualizar a data de término dos fluxos de dados de exportação do conjunto de dados com uma data de término atual em 1º de maio de 2025.
-source-git-commit: aeabbb56002f8640b79ff3a7e3dc532d01ebbadf
+exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
 
 ---
-
 
 # Atualizar a data de término dos fluxos de dados de exportação do conjunto de dados (Ação necessária para 1 de maio de 2025)
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Os itens de ação nessa página se aplicam se sua organização configurar fluxos de dados de exportação do conjunto de dados antes da versão de setembro de 2024 do Experience Platform.
 
-## O que está acontecendo?
+## O que está acontecendo? {#what-is-happening}
 
 A versão de [setembro de 2024 do Experience Platform](/help/release-notes/latest/latest.md#destinations) introduziu a opção de definir uma data `endTime` para fluxos de dados do conjunto de dados de exportação. A Adobe também introduziu uma data de término padrão em 1 de maio de 2025 para todos os fluxos de dados de exportação do conjunto de dados criados *antes da versão de setembro de 2024*. No momento, esses fluxos de dados exibem uma mensagem semelhante à mostrada abaixo.
 
@@ -26,21 +26,21 @@ A versão de [setembro de 2024 do Experience Platform](/help/release-notes/lates
 
 **Item de ação**: para qualquer um desses fluxos de dados, você deve atualizar manualmente a data final antes que ela expire; caso contrário, suas exportações serão interrompidas. Use a interface do Experience Platform para identificar quais fluxos de dados estão definidos para serem interrompidos em 1º de maio de 2025.
 
-## Por que estou sendo notificado?
+## Por que estou sendo notificado? {#why-notified}
 
 Sua organização foi identificada como tendo fluxos de dados de exportação do conjunto de dados ativos com uma data de término em 1º de maio de 2025.
 
-## Usar a interface do para atualizar a data de término
+## Usar a interface do para atualizar a data de término {#use-ui}
 
 Use a interface do usuário do Experience Platform para identificar fluxos de dados com uma data de término em 1º de maio de 2025 e atualizá-los para uma data futura.
 
-### Encontre os fluxos de dados que precisam de atualização
+### Encontre os fluxos de dados que precisam de atualização {#find-dataflows}
 
 Navegue até **Destinos > Procurar** e procure o tipo de dados **Conjuntos de Dados** na coluna **Tipo de Dados**, conforme mostrado abaixo. Selecione os fluxos de dados desejados para inspecioná-los.
 
 ![Fluxos de dados de exportação do conjunto de dados destacados na guia Procurar.](/help/destinations/assets/ui/export-datasets/view-dataset-dataflows.png)
 
-### Atualizar a data final dos fluxos de dados
+### Atualizar a data final dos fluxos de dados {#update-end-date}
 
 Para atualizar a data final dos fluxos de dados:
 
@@ -54,8 +54,8 @@ Para atualizar a data final dos fluxos de dados:
 
 Para obter informações abrangentes sobre a etapa de agendamento, leia o [tutorial sobre a interface do usuário de conjuntos de dados de exportação](/help/destinations/api/export-datasets.md#scheduling).
 
-## Usar a API para atualizar a data de término
+## Usar a API para atualizar a data de término {#use-api}
 
-### Encontre os fluxos de dados que precisam de atualização
+### Encontre os fluxos de dados que precisam de atualização {#find-dataflows-api}
 
-### Atualizar a data final dos fluxos de dados
+### Atualizar a data final dos fluxos de dados {#update-end-date-api}

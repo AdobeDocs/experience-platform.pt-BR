@@ -2,7 +2,7 @@
 description: Saiba como configurar o esquema de parceiro para destinos criados com o Destination SDK.
 title: Configuração de esquema de parceiro
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1912'
 ht-degree: 3%
@@ -32,7 +32,7 @@ Este artigo descreve todas as opções de configuração de esquema compatíveis
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 

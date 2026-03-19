@@ -1,10 +1,10 @@
 ---
-description: Saiba como configurar opções de formatação de arquivo para destinos baseados em arquivo criados com o Adobe Experience Platform Destination SDK, por meio do endpoint &grave;/destination-servers&grave;.
+description: Saiba como configurar opções de formatação de arquivo para destinos baseados em arquivo criados com o Adobe Experience Platform Destination SDK, por meio do endpoint `/destination-servers`.
 title: Configuração da formatação de arquivo
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1092'
 ht-degree: 2%
 
 ---
@@ -35,7 +35,7 @@ Esta página descreve todas as configurações de formatação de arquivo com su
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -48,7 +48,7 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 ## Parâmetros compatíveis {#supported-parameters}
 
-Você pode modificar várias propriedades dos arquivos exportados para corresponder aos requisitos do sistema de recebimento de arquivos do destino, a fim de ler e interpretar de maneira ideal os arquivos recebidos do Experience Platform.
+Você pode modificar várias propriedades dos arquivos exportados para corresponder aos requisitos do sistema de recebimento de arquivos do destino, para ler e interpretar de maneira ideal os arquivos recebidos do Experience Platform.
 
 >[!NOTE]
 >

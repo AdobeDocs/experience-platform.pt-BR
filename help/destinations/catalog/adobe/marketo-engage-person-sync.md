@@ -4,9 +4,9 @@ description: Use o conector de sincronização de pessoas do Marketo Engage para
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1223'
 ht-degree: 4%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 4%
 Use o conector de sincronização de pessoas do Marketo Engage para transmitir atualizações dos públicos-alvo de pessoas para os registros correspondentes na sua instância do Marketo Engage.
 
 >[!IMPORTANT]
-> 
+>
 >O [Conector de sincronização de público-alvo do Marketo V2](/help/destinations/catalog/adobe/marketo-engage.md) não deve ser usado no modo de criação juntamente com o Conector de sincronização de atualização de perfil
 
 ## Identidades e atributos compatíveis {#support-identities-and-attributes}
@@ -91,7 +91,7 @@ Se sua empresa tiver acesso a várias organizações, certifique-se de usar a me
 
 >[!IMPORTANT]
 >
->O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
+>O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
 
 ![Conectar ao Destino](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,10 +102,10 @@ Se sua empresa tiver acesso a várias organizações, certifique-se de usar a me
 * **[!UICONTROL First searchable field]**: Campo para desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. O padrão é email
 * **[!UICONTROL First searchable field]**: um campo secundário para desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. Opcional
 
-Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
+Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
 
 >[!IMPORTANT]
-> 
+>
 >Depois que um público-alvo é ativado para o destino do Marketo pela primeira vez, o preenchimento retroativo de perfis que já existiam no público-alvo antes da ativação do destino do Marketo pode levar *até 24 horas*. A partir de agora, sempre que perfis forem adicionados ao público, eles serão adicionados ao Marketo imediatamente.
 
 ### Campos de desduplicação {#deduplication-fields}
@@ -123,10 +123,10 @@ Se nenhum registro de cliente potencial correspondente for encontrado, um novo r
 ## Ativar públicos-alvo {#activate-audiences}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Leia [Ativar perfis e segmentos para destinos de exportação de segmento de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público para este destino.
+Leia [Ativar públicos-alvo para destinos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 Na etapa Ativar públicos-alvo, você poderá selecionar entre qualquer público-alvo de pessoa que esteja visível para você.
 

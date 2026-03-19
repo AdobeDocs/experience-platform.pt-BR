@@ -5,9 +5,9 @@ title: Ativar públicos para destinos em lote por meio da API de ativação ad-h
 description: Este artigo ilustra o fluxo de trabalho completo para ativar públicos-alvo por meio da API de ativação ad-hoc, incluindo os trabalhos de segmentação que ocorrem antes da ativação.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: e5a757fcd73fc743b570c6456a66907e4720e8b6
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -32,15 +32,15 @@ O diagrama abaixo ilustra o fluxo de trabalho completo para ativar públicos-alv
 
 ## Casos de uso {#use-cases}
 
-### Vendas ou promoções rápidas
+### Vendas ou promoções rápidas {#flash-sales}
 
 Uma retailer online está preparando uma venda rápida limitada e deseja notificar os clientes em curto prazo. Por meio da API de ativação ad-hoc do Experience Platform, a equipe de marketing pode exportar públicos-alvo sob demanda e enviar rapidamente emails promocionais para a base de clientes.
 
-### Eventos atuais ou últimas notícias
+### Eventos atuais ou últimas notícias {#current-events}
 
 Um hotel espera intempéries nos dias seguintes, e a equipe quer informar os hóspedes que chegam rapidamente, para que possam planejar de acordo. A equipe de marketing pode usar a API de ativação ad-hoc do Experience Platform para exportar públicos-alvo sob demanda e notificar os convidados.
 
-### Teste de integração
+### Teste de integração {#integration-testing}
 
 Os gerentes de TI podem usar a API de ativação ad-hoc do Experience Platform para exportar públicos-alvo sob demanda, para que possam testar a integração personalizada com o Adobe Experience Platform e garantir que tudo esteja funcionando corretamente.
 

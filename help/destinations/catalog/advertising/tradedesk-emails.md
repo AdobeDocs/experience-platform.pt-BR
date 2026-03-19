@@ -3,9 +3,9 @@ title: A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1812'
 ht-degree: 2%
 
 ---
@@ -106,7 +106,6 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
       * O período (`.`) (código ASCII 46). Por exemplo, normalize &quot;jane.doe@gmail.com&quot; para &quot;janedoe@gmail.com&quot;.
      * O caractere de sinal de mais (`+`) (código ASCII 43) e todos os caracteres subsequentes. Por exemplo, normalize `janedoe+home@gmail.com` para `janedoe@gmail.com`.
   
-
 ## Requisitos de normalização e hash do número de telefone {#phone-hashing}
 
 Veja o que você precisa saber sobre o upload de números de telefone:
@@ -166,7 +165,7 @@ O Destino do CRM [!DNL The Trade Desk] é um carregamento diário de arquivo em 
 
 ### Preencher Detalhes do Destino {#fill-in-details}
 
-Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configurar](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR) este destino, você deve fornecer as seguintes informações:
+Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configurar](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) este destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Account Type]**: Escolha a opção **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
@@ -180,7 +179,7 @@ Ao se conectar ao destino, definir uma política de governança de dados é tota
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -222,13 +221,14 @@ Selecionar campos de origem e destino:
 | netID | net_id |
 | FirstID | first_id |
 
+{style="table-layout:auto"}
 
 ## Validar exportação de dados {#validate}
 
 Para validar se os dados foram exportados corretamente do Experience Platform para o [!DNL The Trade Desk], localize os públicos-alvo na guia 1PD do Adobe na biblioteca &quot;Dados e identidade do anunciante&quot; do [!DNL The Trade Desk]. Estas são as etapas para encontrar a ID correspondente na interface do usuário do [!DNL Trade Desk]:
 
 1. Primeiro, selecione a guia **[!UICONTROL Libraries]** e revise a seção **[!UICONTROL Advertiser data and identity]**.
-2. Clique no **[!UICONTROL Adobe 1PD]** e ele listará todos os públicos ativados para [!DNL The Trade Desk].
+2. Selecione o **[!UICONTROL Adobe 1PD]** e ele listará todos os públicos ativados para [!DNL The Trade Desk].
 3. O Nome do segmento ou a ID do segmento da Experience Platform serão exibidos como o Nome do segmento na interface do usuário do [!DNL Trade Desk].
 
 ## Uso e governança de dados {#data-usage-governance}

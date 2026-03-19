@@ -3,9 +3,9 @@ title: Conexão SAP Commerce
 description: Use o conector de destino do SAP Commerce para atualizar os registros do cliente em sua conta SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2306'
 ht-degree: 4%
 
 ---
@@ -30,7 +30,7 @@ Consulte as seções abaixo para quaisquer pré-requisitos que você deve config
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL SAP Commerce], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL SAP Commerce], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) criados em [!DNL Experience Platform].
 
 Consulte a documentação do Experience Platform para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
@@ -81,7 +81,7 @@ Para exportar dados do Experience Platform para sua conta [!DNL SAP Commerce], v
 
 Para atualizar o status do público-alvo do Experience Platform em [!DNL SAP Subscription Billing], você precisa de um campo de referência personalizado para cada público-alvo selecionado no Experience Platform.
 
-Para criar as referências personalizadas, faça logon na sua conta do [!DNL SAP Subscription Billing] e navegue até a página **[Dados e Configuração Principais]** > **[Referências Personalizadas]**. Em seguida, selecione **[!UICONTROL Create]** para adicionar uma nova referência para cada público selecionado no Experience Platform. Você precisará desses nomes de campos de referência na próxima etapa [Agendar exportação de público-alvo e exemplo](#schedule-segment-export-example).
+Para criar as referências personalizadas, faça logon na sua conta do [!DNL SAP Subscription Billing] e navegue até a página **[Dados e Configuração Mestres]** > **[Referências Personalizadas]**. Em seguida, selecione **[!UICONTROL Create]** para adicionar uma nova referência para cada público selecionado no Experience Platform. Você precisará desses nomes de campos de referência na próxima etapa [Agendar exportação de público-alvo e exemplo](#schedule-segment-export-example).
 
 Um exemplo de como criar um **[!UICONTROL Reference Type]** personalizado em [!DNL SAP Subscription Billing] é mostrado abaixo:
 ![Imagem que mostra onde criar uma referência personalizada no Faturamento de Assinaturas SAP.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
@@ -195,7 +195,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -205,7 +205,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL SAP Commerce], passe pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino. Para mapear corretamente os campos XDM para os campos de destino [!DNL SAP Commerce], siga as etapas abaixo:
 
-#### Mapear a identidade `customerNumberSAP`
+#### Mapear a identidade `customerNumberSAP` {#map-customer-number-sap}
 
 A identidade `customerNumberSAP` é um mapeamento obrigatório para este destino. Siga as etapas abaixo para mapeá-la:
 
@@ -223,7 +223,7 @@ A identidade `customerNumberSAP` é um mapeamento obrigatório para este destino
 Um exemplo com o mapeamento de identidade é mostrado abaixo:
 ![Imagem da interface do Experience Platform mostrando um exemplo de mapeamento de identidade customerNumber.](../../assets/catalog/ecommerce/sap-commerce/mapping-identities.png)
 
-#### Mapeamento de atributos
+#### Mapeamento de atributos {#mapping-attributes}
 
 Para adicionar outros atributos que você deseja atualizar entre o esquema de perfil XDM e a conta [!DNL SAP Subscription Billing], repita as etapas abaixo:
 
@@ -238,7 +238,7 @@ Para adicionar outros atributos que você deseja atualizar entre o esquema de pe
 >
 > Os nomes de campo de destino diferenciam maiúsculas de minúsculas e devem corresponder aos nomes de atributo [!DNL SAP Subscription Billing]. A única exceção para isso é `country`, onde você deve usar `countryCode`. [!DNL SAP Subscription Billing] oferece suporte a códigos de país alfa-2 (ISO 3166). O valor diferencia maiúsculas de minúsculas e deve ter entre 0 e 3 caracteres, portanto, certifique-se de fornecer exatamente como definido caso encontre erros: `The country code {} does not exist` ou `size must be between 0 and 3`.
 
-#### Mapear `mandatory` atributos para o tipo de cliente selecionado
+#### Mapear `mandatory` atributos para o tipo de cliente selecionado {#map-mandatory-attributes}
 
 Os mapeamentos de atributos obrigatórios dependem do **[!UICONTROL Type of Customer]** que você selecionou. Para mapear os atributos obrigatórios, selecione uma das opções abaixo:
 
@@ -251,6 +251,8 @@ Os mapeamentos de atributos obrigatórios dependem do **[!UICONTROL Type of Cust
 | `xdm: person.lastName` | `Attribute: lastName` | Sim |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Sim |
 
+{style="table-layout:auto"}
+
 >[!TAB Cliente corporativo]
 
 | Campo de origem | Campo de público alvo | Obrigatório |
@@ -258,9 +260,11 @@ Os mapeamentos de atributos obrigatórios dependem do **[!UICONTROL Type of Cust
 | `xdm: b2b.companyName` | `Attribute: company` | Sim |
 | `xdm: workAddress.countryCode` | `Attribute: countryCode` | Sim |
 
+{style="table-layout:auto"}
+
 >[!ENDTABS]
 
-#### Mapeamento de atributos adicionais
+#### Mapeamento de atributos adicionais {#mapping-additional-attributes}
 
 Em seguida, você pode adicionar mapeamentos adicionais entre o esquema de perfil XDM e os atributos de [!DNL SAP Subscription Billing] [esquema](https://api.sap.com/api/BusinessPartner_APIs/schema) para um cliente, conforme mostrado abaixo:
 
@@ -274,6 +278,8 @@ Em seguida, você pode adicionar mapeamentos adicionais entre o esquema de perfi
 | `xdm: workAddress.street1` | `Attribute: street` | Não |
 | `xdm: workAddress.city` | `Attribute: city` | Não |
 
+{style="table-layout:auto"}
+
 Um exemplo com mapeamentos de atributos obrigatórios e opcionais, em que o cliente é um indivíduo, é mostrado abaixo:
 ![Imagem da interface do Experience Platform mostrando um exemplo com mapeamentos de atributos obrigatórios e opcionais, em que o cliente é um indivíduo.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-individual.png)
 
@@ -283,6 +289,8 @@ Um exemplo com mapeamentos de atributos obrigatórios e opcionais, em que o clie
 | --- | --- | --- |
 | `xdm: workAddress.street1` | `Attribute: street` | Não |
 | `xdm: workAddress.city` | `Attribute: city` | Não |
+
+{style="table-layout:auto"}
 
 Um exemplo com mapeamentos de atributos obrigatórios e opcionais em que o cliente é uma empresa é mostrado abaixo:
 ![Imagem da interface do usuário do Experience Platform mostrando um exemplo com mapeamentos de atributos obrigatórios e opcionais, em que o cliente é uma empresa.](../../assets/catalog/ecommerce/sap-commerce/mapping-attributes-corporate.png)
@@ -345,7 +353,7 @@ Informações adicionais úteis da documentação do [!DNL SAP] estão abaixo:
 
 * [Cobrança de Assinatura SAP Integrada](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/e4b8badf7d124026991e4ab6b57d2a33.html)
 
-### Changelog
+### Changelog {#changelog}
 
 Esta seção captura a funcionalidade e as atualizações de documentação significativas feitas neste conector de destino.
 

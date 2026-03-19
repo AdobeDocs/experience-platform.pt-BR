@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para excluir uma configuração de destino existente por meio do Adobe Experience Platform Destination SDK.
 title: Excluir uma configuração de destino
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: fda542e62c448788099d63951277278a146fdfc8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '279'
+source-wordcount: '277'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ Esta página exemplifica a solicitação de API e a carga que você pode usar pa
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de configuração de destino {#get-started}
 
@@ -41,6 +41,8 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 | --------- | ----------- |
 | `{INSTANCE_ID}` | O `ID` da configuração de destino que você deseja excluir. |
 
+{style="table-layout:auto"}
+
 +++Solicitação
 
 ```shell
@@ -60,7 +62,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 juntamente com uma resposta 
 
 Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Depois de ler este documento, agora você sabe como excluir uma configuração de destino existente por meio do ponto de extremidade da API `/authoring/destinations` do Destination SDK.
 

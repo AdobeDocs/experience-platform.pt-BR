@@ -2,9 +2,9 @@
 description: Esta página explica como usar o endpoint da API /testing/destinationInstance para testar se o destino baseado em arquivo está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
 title: Teste seu destino baseado em arquivo com perfis de amostra
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '831'
+source-wordcount: '829'
 ht-degree: 2%
 
 ---
@@ -240,7 +240,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 junto com a carga de respost
 
 Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Depois de ler este documento, agora você sabe como testar a configuração de destino baseada em arquivo.
 

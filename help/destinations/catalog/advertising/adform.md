@@ -3,9 +3,9 @@ title: Adform
 description: A Adform é líder no fornecimento de soluções de compra e venda de mídia programática. Conectando o Adform à Adobe Experience Platform, você pode ativar seus públicos-alvo primários por meio do Adform com base na Experience Cloud ID (ECID).
 last-substantial-update: 2025-10-23T00:00:00Z
 exl-id: b87fe57f-10e3-4c10-9156-f102244fbbe7
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1103'
 ht-degree: 4%
 
 ---
@@ -28,16 +28,16 @@ Para ajudá-lo a entender melhor como e quando você deve usar o destino Adform,
 
 Use esse destino para enviar públicos-alvo da Adobe Real-Time CDP para o Adform para ativação com base na Experience Cloud ID (ECID) e na Adobe ID Fusion. O ID Fusion da Adobe é o serviço de resolução de ID da Adobe que permite ativar os públicos-alvo primários com base na Experience Cloud ID (ECID).
 
-Um caso comum é o redirecionamento dos visitantes do site para o site ou aplicativo com base na Experience Cloud ID (ECID). Basta enviar a Experience Cloud ID (ECID) para a Adform por meio das [extensões de Adform](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) ou [do lado do cliente](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/catalog/analytics/adform) prontamente disponíveis. Depois disso, você poderá compartilhar públicos com o Adobe Platform por meio do destino do Adobe para ativação, com base exclusivamente na Experience Cloud ID (ECID).
+Um caso comum é o redirecionamento dos visitantes do site para o site ou aplicativo com base na Experience Cloud ID (ECID). Basta enviar a Experience Cloud ID (ECID) para a Adform por meio das [extensões de Adform](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) ou [do lado do cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) prontamente disponíveis. Depois disso, você poderá compartilhar públicos com o Adobe Platform por meio do destino do Adobe para ativação, com base exclusivamente na Experience Cloud ID (ECID).
 
 ## Pré-requisitos {#prerequisites}
 
 * Você precisa ser um cliente existente do Adobe Form para usar esse destino.
 * Você precisa ter suas credenciais da Conexão de dados do Adobe Audience Base.
    * Se você não tiver credenciais da Conexão de dados da base de público-alvo da Adobe, entre em contato com seu representante da Adobe.
-* Para uma sincronização adequada, você precisa ter uma conexão de [Streaming de Eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) ou [lado do cliente](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/catalog/analytics/adform) de suas entidades para o Rastreamento de Site da Adobe.
+* Para uma sincronização adequada, você precisa ter uma conexão de [Streaming de Eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) ou [lado do cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform) de suas entidades para o Rastreamento de Site da Adobe.
    * Se você não tiver uma conexão de transmissão de eventos ou do lado do cliente de suas entidades para o Rastreamento de site da Adobe, entre em contato com o representante da Adobe.
-   * A Adform fornece extensões do Adobe Experience Cloud para [Streaming de Eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) e [lado do cliente](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/catalog/analytics/adform).
+   * A Adform fornece extensões do Adobe Experience Cloud para [Streaming de Eventos](https://exchange.adobe.com/apps/ec/600102/adform-s2s-site-tracking) e [lado do cliente](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/analytics/adform).
 
 
 ## Identidades suportadas {#supported-identities}
@@ -89,7 +89,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa da **[!UICONTROL View Destinations]** e da **[!UICONTROL Manage Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -123,7 +123,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

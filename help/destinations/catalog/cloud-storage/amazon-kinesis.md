@@ -4,9 +4,9 @@ title: Conexão Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Kinesis para transmitir dados do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2078'
+source-wordcount: '2077'
 ht-degree: 5%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 O serviço [!DNL Kinesis Data Streams] de [!DNL Amazon Web Services] permite coletar e processar grandes fluxos de registros de dados em tempo real.
 
@@ -73,7 +73,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 ## INCLUO NA LISTA DE PERMISSÕES de endereços IP {#ip-address-allowlist}
 
-Para atender aos requisitos de segurança e conformidade dos clientes, a Experience Platform fornece uma lista de IPs estáticos que você pode incluir na lista de permissões para o destino [!DNL Amazon Kinesis]. Consulte [lista de permissões de endereço IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
+Para atender aos requisitos de segurança e conformidade dos clientes, a Experience Platform fornece uma lista de IPs estáticos que você pode incluir na lista de permissões para o destino [!DNL Amazon Kinesis]. Consulte [incluo na lista de permissões de endereços IP para destinos de streaming](/help/destinations/catalog/streaming/ip-address-allow-list.md) para obter a lista completa de IPs a serem incluídos na lista de permissões.
 
 ## [!DNL Amazon Kinesis] permissões necessárias {#required-kinesis-permission}
 
@@ -119,7 +119,7 @@ Para obter mais informações sobre como controlar o acesso a [!DNL Kinesis] flu
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). Ao se conectar a esse destino, você deve fornecer as seguintes informações:
@@ -172,7 +172,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* [A avaliação de política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) não tem suporte atualmente em exportações para o destino do Amazon Kinesis. [Leia mais](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 

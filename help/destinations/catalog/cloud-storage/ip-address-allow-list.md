@@ -1,16 +1,16 @@
 ---
-title: LISTA DE PERMISSÕES de endereço IP para destinos de armazenamento na nuvem baseados em arquivo
+title: INCLUO NA LISTA DE PERMISSÕES de endereços IP para destinos de armazenamento na nuvem baseado em arquivo
 type: Documentation
-description: Esta página fornece intervalos IP que podem ser adicionados à lista de permissões para exportar dados com segurança do Experience Platform para destinos de armazenamento na nuvem.
+description: Esta página fornece intervalos IP que podem ser adicionados ao incluo na lista de permissões para exportar dados com segurança do Experience Platform para destinos de armazenamento na nuvem.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 1%
+source-wordcount: '288'
+ht-degree: 0%
 
 ---
 
-# Endereço IP do arquivo de inclui na lista de permissões para destinos de armazenamento na nuvem baseado em arquivo {#ip-address-allow-list-cloud-storage}
+# INCLUO NA LISTA DE PERMISSÕES de endereços IP para destinos de armazenamento na nuvem baseado em arquivo {#ip-address-allow-list-cloud-storage}
 
 >[!IMPORTANT]
 >
@@ -22,7 +22,7 @@ ht-degree: 1%
 As informações de intervalo IP nesta página se aplicam aos seguintes conectores de armazenamento na nuvem baseados em arquivo no catálogo de destinos:
 
 * [[!UICONTROL Amazon S3]](./amazon-s3.md)
-* [[!UICONTROL Armazenamento na nuvem do Google]](google-cloud-storage.md)
+* [[!UICONTROL Google Cloud Storage]](google-cloud-storage.md)
 * [SFTP](./sftp.md)
 
 >[!IMPORTANT]
@@ -31,11 +31,11 @@ As informações de intervalo IP nesta página se aplicam aos seguintes conector
 
 ## Visão geral {#overview}
 
-Incluir na lista de permissões Esta página fornece intervalos IP que você pode adicionar ao arquivo para exportar dados com segurança do Experience Platform para vários destinos de armazenamento na nuvem.
+Esta página fornece intervalos IP que podem ser adicionados ao incluo na lista de permissões para exportar dados com segurança do Experience Platform para vários destinos de armazenamento na nuvem.
 
 Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP apropriado, você pode permitir o tráfego para o serviço de transferência de dados.
 
-A Adobe recomenda que você adicione os seguintes intervalos IP a uma inclui na lista de permissões antes de trabalhar com conexões de destino de armazenamento na nuvem. Falha ao adicionar o intervalo IP específico da região à sua inclui na lista de permissões pode levar a erros ou ao não desempenho ao usar as conexões de destino do armazenamento em nuvem.
+A Adobe recomenda adicionar os seguintes intervalos IP a um incluo na lista de permissões antes de trabalhar com conexões de destino de armazenamento na nuvem. Falha ao adicionar o intervalo IP específico da região ao incluo na lista de permissões pode levar a erros ou ao não desempenho ao usar as conexões de destino do armazenamento em nuvem.
 
 ## Obrigatório para todos os clientes {#all-customers}
 

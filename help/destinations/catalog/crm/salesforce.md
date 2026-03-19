@@ -3,9 +3,9 @@ keywords: destino do crm;CRM;destinos do crm;crm do salesforce;destino do salesf
 title: Conexão do Salesforce CRM
 description: O destino do Salesforce CRM permite exportar os dados da conta e ativá-los no Salesforce CRM para atender às suas necessidades comerciais.
 exl-id: bd9cb656-d742-4a18-97a2-546d4056d093
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2905'
+source-wordcount: '2903'
 ht-degree: 1%
 
 ---
@@ -33,11 +33,11 @@ Como profissional de marketing, você pode fornecer experiências personalizadas
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino do Salesforce CRM, você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino do Salesforce CRM, você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criados em [!DNL Experience Platform].
 
 ### Pré-requisitos em [!DNL Salesforce CRM] {#prerequisites-destination}
 
-Observe os seguintes pré-requisitos em [!DNL Salesforce CRM] para exportar dados do Experience Platform para sua conta do Salesforce:
+Observe os seguintes pré-requisitos em [!DNL Salesforce CRM], para exportar dados do Experience Platform para sua conta do Salesforce:
 
 #### Você precisa ter uma conta [!DNL Salesforce] {#prerequisites-account}
 
@@ -213,7 +213,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

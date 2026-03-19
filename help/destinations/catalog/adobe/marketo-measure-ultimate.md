@@ -3,7 +3,7 @@ title: Destino do Marketo Measure Ultimate
 description: Saiba como conectar e ativar dados ao destino do Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 3%
@@ -73,7 +73,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados na seção abaixo.
@@ -96,14 +96,14 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Exportar conjuntos de dados para este destino {#export-datasets}
 
 >[!IMPORTANT]
-> 
+>
 >Para ativar dados, você precisa de **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Leia o [Tutorial de exportação de conjuntos de dados](/help/destinations/ui/export-datasets.md) para obter instruções detalhadas sobre como exportar conjuntos de dados para este destino.
 
 ## Validar exportação de dados {#exported-data}
 
-Para validar uma exportação bem-sucedida do conjunto de dados, você pode verificar se o conjunto de dados foi enviado com êxito para o seu [data warehouse do Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=pt-BR).
+Para validar uma exportação bem-sucedida do conjunto de dados, você pode verificar se o conjunto de dados foi enviado com êxito para o seu [data warehouse do Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Uso e governança de dados {#data-usage-governance}
 

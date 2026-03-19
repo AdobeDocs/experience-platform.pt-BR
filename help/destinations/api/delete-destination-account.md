@@ -5,10 +5,10 @@ title: Excluir uma conta de destino usando a API de Serviço de Fluxo
 type: Tutorial
 description: Saiba como excluir uma conta de destino usando a API de serviço de fluxo.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 21%
+source-wordcount: '758'
+ht-degree: 20%
 
 ---
 
@@ -39,7 +39,7 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Coletar valores para cabeçalhos obrigatórios {#gather-values-for-required-headers}
 
-Para fazer chamadas para APIs da [!DNL Experience Platform], você deve concluir primeiro o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -87,6 +87,8 @@ GET /connections/{CONNECTION_ID}
 | Parameter | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -147,7 +149,7 @@ A successful response returns the current details of your connection including i
 >[!IMPORTANT]
 >
 >Antes de excluir a conta de destino, você deve excluir todos os fluxos de dados existentes para a conta de destino.
->&#x200B;>Para excluir fluxos de dados existentes, consulte as páginas abaixo:
+>Para excluir fluxos de dados existentes, consulte as páginas abaixo:
 >
 >* [Usar a interface do usuário do Experience Platform](../ui/delete-destinations.md) para excluir fluxos de dados existentes;
 >* [Use a API de Serviço de Fluxo](delete-destination-dataflow.md) para excluir fluxos de dados existentes.
@@ -183,6 +185,6 @@ Uma resposta bem-sucedida retorna o status HTTP 204 (Sem conteúdo) e um corpo e
 
 Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Ao seguir este tutorial, você usou com êxito a API [!DNL Flow Service] para excluir contas de destino existentes. Para obter mais informações sobre o uso de destinos, consulte a [visão geral sobre destinos](/help/destinations/home.md).

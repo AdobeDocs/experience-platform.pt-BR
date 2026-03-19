@@ -4,9 +4,9 @@ title: Conexão LINE
 description: O destino LINE permite adicionar perfis ao público-alvo do Experience Platform e fornecer experiências personalizadas aos usuários conectados.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1318'
+source-wordcount: '1316'
 ht-degree: 3%
 
 ---
@@ -29,7 +29,7 @@ Como profissional de marketing, você pode direcionar usuários em um destino de
 
 ### [!DNL LINE] pré-requisitos {#prerequisites-destination}
 
-Observe os seguintes pré-requisitos em [!DNL LINE] para exportar dados do Experience Platform para sua conta do [!DNL LINE]:
+Observe os seguintes pré-requisitos em [!DNL LINE], para exportar dados do Experience Platform para sua conta do [!DNL LINE]:
 
 #### Você precisa ter uma conta [!DNL LINE] {#prerequisites-account}
 
@@ -136,7 +136,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -152,6 +152,8 @@ Dependendo da sua identidade de origem, os seguintes namespaces de identidade de
 | --- | --- | --- |
 | ID para anunciantes (IFAs) | `IDFA` ou `GAID` | `LineId` |
 | IDs de usuário LINE | `UserID` | `LineId` |
+
+{style="table-layout:auto"}
 
 Se suas identidades de destino forem *IDs de usuário do LINE*, você precisará das seguintes informações:
 ![Exemplo de captura de tela da interface do usuário do Experience Platform mostrando o mapeamento do Target ao usar IDs de usuário LINE para identidades de destino.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)

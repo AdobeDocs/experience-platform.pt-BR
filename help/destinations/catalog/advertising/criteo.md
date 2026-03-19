@@ -3,9 +3,9 @@ keywords: publicidade, critério,
 title: Conexão de critério
 description: O Criteo capacita a publicidade confiável e impactante para trazer experiências mais ricas para cada consumidor através da internet aberta. Com o maior conjunto de dados de comércio do mundo e a melhor IA do setor, o Criteo garante que cada ponto de contato na jornada de compras seja personalizado para alcançar os clientes com o anúncio certo, na hora certa.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1168'
 ht-degree: 3%
 
 ---
@@ -35,7 +35,7 @@ O Criteo capacita a publicidade confiável e impactante para trazer experiência
 
 ## Identidades suportadas {#supported-identities}
 
-O critério é compatível com a ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR#getting-started).
+O critério é compatível com a ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identidade de destino | Descrição | Considerações |
 | --- | --- | --- |
@@ -80,23 +80,23 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Para ajudá-lo a entender melhor como usar o destino [!DNL Criteo], veja a seguir algumas metas que os clientes da Adobe Experience Platform podem alcançar com o [!DNL Criteo]:
 
-### Caso de uso 1: obter tráfego
+### Caso de uso 1: obter tráfego {#use-case-1}
 
 Mostre sua empresa com ofertas de produtos relevantes e criações flexíveis. Com recomendações de produtos inteligentes, seus anúncios apresentarão automaticamente os produtos com maior probabilidade de acionar visitas e engajamento. O direcionamento flexível permite criar públicos-alvo a partir do conjunto de dados de comércio da Criteo ou de suas próprias listas de clientes potenciais e segmentos da Adobe CDP.
 
-### Caso de uso 2: aumentar as conversões de site
+### Caso de uso 2: aumentar as conversões de site {#use-case-2}
 
 Quando os visitantes saírem do site, lembre-os do que estão perdendo com anúncios de redirecionamento que aumentam as conversões ao mostrar ofertas especiais e ofertas hiper-relevantes, onde quer que estejam. Conecte seu público-alvo da Adobe CDP para reengajar clientes existentes ou direcionar consumidores semelhantes aos seus compradores mais fiéis.
 
 ## Conectar-se ao critério {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-### Autenticar para o critério
+### Autenticar para o critério {#authenticate}
 
 As etapas para se conectar são as seguintes:
 
@@ -135,7 +135,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate-segments}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -205,7 +205,7 @@ O corpo da solicitação de remoção do perfil de usuário recebido pela conex�
 
 Todos os destinos do Adobe Experience Platform estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como a Adobe Experience Platform fiscaliza a governança de dados, leia a [visão geral da Governança de dados](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=pt-BR).
 
-## Recursos adicionais
+## Recursos adicionais {#additional-resources}
 
 * [Central de ajuda do Criteo](https://help.criteo.com/kb/en)
 * [Portal do Desenvolvedor de Critérios](https://developers.criteo.com)

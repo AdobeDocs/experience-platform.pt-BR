@@ -4,7 +4,7 @@ title: Conexão Braze
 description: O Brasil é uma plataforma abrangente de engajamento do cliente que promove experiências relevantes e memoráveis entre os clientes e as marcas que eles adoram.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 3%
@@ -84,7 +84,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -112,7 +112,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -126,7 +126,7 @@ O mapeamento consiste na criação de um vínculo entre os campos do esquema [!D
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL Braze], siga estas etapas:
 
-Na etapa [!UICONTROL Mapping], clique em **[!UICONTROL Add new mapping]**.
+Na etapa [!UICONTROL Mapping], selecione **[!UICONTROL Add new mapping]**.
 
 ![Adicionar mapeamento de destino](../../assets/catalog/mobile-engagement/braze/mapping.png)
 
@@ -144,7 +144,7 @@ Na janela [!UICONTROL Select source field], você pode escolher entre duas categ
 
 ![Namespace Source de Mapeamento de Destino](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png)
 
-Escolha seu campo de origem e clique em **[!UICONTROL Select]**.
+Escolha seu campo de origem e selecione **[!UICONTROL Select]**.
 
 Na seção [!UICONTROL Target Field], clique no ícone de mapeamento à direita do campo.
 
@@ -157,7 +157,7 @@ Na janela [!UICONTROL Select target field], você pode escolher entre duas categ
 
 ![Descobrir Campos De Mapeamento De Destino](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
-Escolha seu campo de destino e clique em **[!UICONTROL Select]**.
+Escolha seu campo de destino e selecione **[!UICONTROL Select]**.
 
 Agora você deve ver o mapeamento de campos na lista.
 

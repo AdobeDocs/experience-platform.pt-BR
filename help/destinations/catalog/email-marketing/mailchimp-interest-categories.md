@@ -3,9 +3,9 @@ title: Categorias de interesse do Mailchimp
 description: O Mailchimp (também conhecido como Intuit Mailchimp) é uma plataforma de automação de marketing popular e um serviço de marketing por email usado pelas empresas para gerenciar e conversar com contatos (clientes, clientes ou outras partes interessadas) usando listas de endereçamento e campanhas de marketing por email. Use esse conector para classificar seus contatos com base em seus interesses e preferências.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2409'
+source-wordcount: '2407'
 ht-degree: 3%
 
 ---
@@ -36,7 +36,7 @@ Consulte as seções abaixo para quaisquer pré-requisitos que você precise con
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL Mailchimp Interest Categories], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL Mailchimp Interest Categories], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criados em [!DNL Experience Platform].
 
 ### Pré-requisitos para o destino [!DNL Mailchimp Interest Categories] {#prerequisites-destination}
 
@@ -173,7 +173,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -252,7 +252,7 @@ Para corrigir esse erro e prosseguir para a próxima etapa, você deve fornecer 
 
 Ao criar o destino, você poderá receber as seguintes mensagens de erro: *`Cannot have more than 60 interests per list (Across all categories)`* ou *`400 BAD_REQUEST`*. Isso acontece quando você excede os 60 nomes de grupo (ou categorias de interesse) em um único grupo ou em vários grupos dentro do mesmo limite de público, conforme descrito na seção [medidas de proteção](#guardrails). Para corrigir esse erro, verifique se você não está excedendo o limite de nomes de grupo em [!DNL Mailchimp].
 
-### [!DNL Mailchimp] Códigos de status e erro
+### [!DNL Mailchimp] Códigos de status e erro {#mailchimp-status-error-codes}
 
 Consulte a [[!DNL Mailchimp] página de erros](https://mailchimp.com/developer/marketing/docs/errors/) para obter uma lista abrangente do status e dos códigos de erro com explicações.
 

@@ -3,9 +3,9 @@ title: Conexão HubSpot
 description: O destino HubSpot permite gerenciar registros de contato na sua conta HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1638'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Consulte as seções abaixo para quaisquer pré-requisitos que você precise con
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL HubSpot], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL HubSpot], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) criados em [!DNL Experience Platform].
 
 Consulte a documentação do Experience Platform para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
@@ -159,7 +159,7 @@ Para enviar corretamente seus dados de público-alvo do Adobe Experience Platfor
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL HubSpot], siga as etapas abaixo:
 
-#### Mapeando a identidade `Email`
+#### Mapeando a identidade `Email` {#map-email-identity}
 
 A identidade `Email` é um mapeamento obrigatório para este destino. Siga as etapas abaixo para mapeá-la:
 
@@ -177,7 +177,7 @@ A identidade `Email` é um mapeamento obrigatório para este destino. Siga as et
 Um exemplo com o mapeamento de identidade é mostrado abaixo:
 ![Exemplo de captura de tela da interface do Experience Platform com mapeamento de identidade de email.](../../assets/catalog/crm/hubspot/mapping-identities.png)
 
-#### Mapeando atributos **opcionais**
+#### Mapeando atributos **opcionais** {#mapping-optional-attributes}
 
 Para adicionar outros atributos que você deseja atualizar entre o esquema de perfil XDM e a conta [!DNL HubSpot], repita as etapas abaixo:
 
@@ -224,7 +224,7 @@ Informações adicionais úteis da documentação do [!DNL HubSpot] estão abaix
 * [Métodos de autenticação no HubSpot](https://developers.hubspot.com/docs/api/intro-to-auth)
 * Referências de API [!DNL HubSpot] para as APIs [Contatos](https://developers.hubspot.com/docs/api/crm/contacts) e [Propriedades](https://developers.hubspot.com/docs/api/crm/properties).
 
-### Changelog
+### Changelog {#changelog}
 
 Esta seção captura a funcionalidade e as atualizações de documentação significativas feitas neste conector de destino.
 

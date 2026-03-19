@@ -3,9 +3,9 @@ title: Ativar públicos-alvo potenciais para destinos
 type: Tutorial
 description: Saiba como ativar públicos-alvo potenciais para destinos
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '593'
 ht-degree: 14%
 
 ---
@@ -63,11 +63,15 @@ Siga as instruções para selecionar um destino em que você possa exportar seus
 
 ## Selecione os públicos-alvo de clientes potenciais {#select-prospect-audiences}
 
-Use as caixas de seleção à esquerda dos nomes dos públicos-alvo de clientes potenciais para selecionar os públicos que deseja exportar para o destino e selecione **[!UICONTROL Next]**. Observe que somente os públicos-alvo potenciais são mostrados nessa visualização e nenhum outro público-alvo é exibido.
+Use as caixas de seleção à esquerda dos nomes dos públicos-alvo de clientes potenciais para selecionar os públicos que deseja exportar para o destino e selecione **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>Somente os públicos-alvo potenciais são mostrados nesta exibição, e nenhum outro público-alvo é exibido.
 
 ![Fluxo de trabalho de exportação do conjunto de dados mostrando a etapa Selecionar públicos-alvo, na qual você pode selecionar quais públicos-alvo potenciais serão exportados.](/help/destinations/assets/ui/activate-prospect-audiences/select-prospect-audiences.png)
 
-## Programação e próximas etapas
+## Programação e próximas etapas {#scheduling-and-next-steps}
 
 No restante do fluxo de trabalho de ativação para exportar públicos-alvo de prospecto, leia o tutorial sobre a ativação de dados para destinos baseados em arquivo. Continue na [etapa de exportação de público-alvo de agendamento](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).
 

@@ -3,9 +3,9 @@ title: Destino da Data Landing Zone
 description: Saiba como se conectar à Data Landing Zone para ativar públicos e exportar conjuntos de dados.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2110'
+source-wordcount: '2109'
 ht-degree: 2%
 
 ---
@@ -85,15 +85,15 @@ Ao exportar *conjuntos de dados*, o Experience Platform cria um arquivo `.parque
 
 >[!AVAILABILITY]
 >
->Esta seção se aplica às implementações do Experience Platform executadas no Microsoft Azure. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/multi-cloud).
+>Esta seção se aplica às implementações do Experience Platform executadas no Microsoft Azure. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Você pode ler e gravar arquivos no seu contêiner por meio do [!DNL Azure Storage Explorer] ou da interface de linha de comando.
 
 O [!DNL Data Landing Zone] oferece suporte à autenticação baseada em SAS e seus dados estão protegidos com mecanismos de segurança de armazenamento [!DNL Azure Blob] padrão em repouso e em trânsito. SAS significa [assinatura de acesso compartilhado](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
-Para proteger seus dados em uma conexão pública com a Internet, use a autenticação baseada em SAS para acessar com segurança o contêiner [!DNL Data Landing Zone]. Não há alterações de rede necessárias para você acessar o contêiner [!DNL Data Landing Zone], o que significa que você não precisa definir nenhuma configuração de lista de permissões ou entre regiões para sua rede.
+Para proteger seus dados em uma conexão pública com a Internet, use a autenticação baseada em SAS para acessar com segurança o contêiner [!DNL Data Landing Zone]. Não há alterações de rede necessárias para que você acesse o contêiner [!DNL Data Landing Zone], o que significa que você não precisa definir nenhum incluo na lista de permissões ou configurações entre regiões para sua rede.
 
-### Conectar seu contêiner do [!DNL Data Landing Zone] a [!DNL Azure Storage Explorer]
+### Conectar seu contêiner do [!DNL Data Landing Zone] a [!DNL Azure Storage Explorer] {#connect-container-to-storage-explorer}
 
 Você pode usar o [[!DNL Azure Storage Explorer]](https://azure.microsoft.com/en-us/products/storage/storage-explorer/) para gerenciar o conteúdo do seu contêiner [!DNL Data Landing Zone]. Para começar a usar o [!DNL Data Landing Zone], primeiro você deve recuperar suas credenciais, inseri-las no [!DNL Azure Storage Explorer] e conectar seu contêiner do [!DNL Data Landing Zone] ao [!DNL Azure Storage Explorer].
 
@@ -224,7 +224,7 @@ Com o contêiner [!DNL Data Landing Zone] conectado ao [!DNL Azure Storage Explo
 
 >[!AVAILABILITY]
 >
->Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/multi-cloud).
+>Esta seção se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Execute as operações abaixo para obter credenciais para sua instância do [!DNL Data Landing Zone] provisionada no AWS. Em seguida, use um cliente de sua escolha para se conectar à sua instância do [!DNL Data Landing Zone].
 
@@ -293,10 +293,10 @@ A resposta a seguir retorna as informações de credencial da sua zona de aterri
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
+Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 ### Autenticar para o destino {#authenticate}
 
@@ -329,13 +329,13 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
 Consulte [Ativar dados do público-alvo para destinos de exportação de perfil em lote](../../ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-### Agendamento
+### Agendamento {#scheduling}
 
 Na etapa **[!UICONTROL Scheduling]**, você pode [configurar o agendamento de exportação](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) para o seu destino [!DNL Data Landing Zone] e também [configurar o nome dos seus arquivos exportados](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 

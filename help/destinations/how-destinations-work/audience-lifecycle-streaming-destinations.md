@@ -1,13 +1,13 @@
 ---
 title: Ciclo de vida do público-alvo no Experience Platform e destinos de transmissão
 description: Saiba como os nomes e mapeamentos de público-alvo do Experience Platform são refletidos nas plataformas de destino de transmissão.
-source-git-commit: 6b4dfa714e078fb5b97900811aade081ffef0d78
+exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
 
 ---
-
 
 # Ciclo de vida do público-alvo em destinos de transmissão
 
@@ -86,6 +86,6 @@ Os seguintes destinos de transmissão oferecem suporte à remoção automática 
 * [Públicos-alvo personalizados do Twitter](../catalog/social/twitter.md)
 * [Yahoo DataX](../catalog/advertising/datax.md)
 
-### Destinos que não oferecem suporte à remoção de públicos
+### Destinos que não oferecem suporte à remoção de públicos {#no-removal-support}
 
 Para destinos não listados acima, ao desmapear um público-alvo do destino, o Experience Platform remove apenas o mapeamento. O público-alvo na plataforma de destino permanece ativo até que você o exclua manualmente na plataforma do parceiro.

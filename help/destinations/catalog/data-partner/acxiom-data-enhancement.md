@@ -2,11 +2,11 @@
 title: Aprimoramento de dados da Acxiom
 description: Use esse conector para ativar perfis Adobe primários no Real-Time CDP para Acxiom, para enriquecimento de dados, e use em canais de marketing. Em seguida, você pode usar a origem Acxiom para importar os perfis com dados aprimorados e trabalhar com eles no Real-Time CDP.
 last-substantial-update: 2024-03-14T00:00:00Z
-badge: Beta
+badge: label="Beta" type="Informative"
 exl-id: 59edc43d-ae8e-4c3d-820c-b5be1c4483f9
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1439'
+source-wordcount: '1436'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->O destino [!DNL Acxiom Data Enhancement] está na versão beta.  Esse conector de destino e a página de documentação são criados e mantidos pela equipe da Acxiom. Para quaisquer consultas ou solicitações de atualização, entre em contato diretamente em acxiom-adobe-help@acxiom.com.
+>O destino [!DNL Acxiom Data Enhancement] está na versão beta.  Esse conector de destino e a página de documentação são criados e mantidos pela equipe da Acxiom. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em acxiom-adobe-help@acxiom.com.
 
 ## Visão geral {#overview}
 
@@ -107,13 +107,13 @@ Para acessar seu bucket no Experience Platform, você precisa fornecer valores v
 | Chave secreta S3 | A ID da chave secreta para o seu bucket. Você pode recuperar esse valor da equipe [!DNL Acxiom]. |
 | Nome do bucket | Esse é o seu bucket onde os arquivos serão compartilhados. Você pode recuperar esse valor da equipe [!DNL Acxiom]. |
 
-### Nova conta
+### Nova conta {#new-account}
 
 Para definir um novo local do Acxiom Managed S3:
 
 ![Nova Conta](../../assets/catalog/data-partner/acxiom/image-destination-new-account.png)
 
-### Conta existente
+### Conta existente {#existing-account}
 
 As contas já definidas usando o destino [!DNL Acxiom Data Enhancement] aparecem em um pop-up de lista. Quando selecionada, você poderá ver os detalhes da conta no painel direito. Veja o exemplo na interface do usuário ao navegar para **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**;
 
@@ -152,7 +152,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
-### Sugestões de mapeamento
+### Sugestões de mapeamento {#mapping-suggestions}
 
 O processamento correto de arquivos no lado da Acxiom requer elementos de nome e endereço. Embora nem todos os elementos sejam necessários, fornecer o máximo possível ajudará na correspondência bem-sucedida.
 
@@ -177,7 +177,7 @@ As sugestões de mapeamento são fornecidas na tabela abaixo, listando os atribu
 
 Para verificar se os dados foram exportados com êxito, verifique o bucket [!DNL Amazon S3 Storage] e se os arquivos exportados contêm as populações de perfis esperadas.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Ao seguir este tutorial, você criou com êxito um fluxo de dados para exportar dados de perfil do Experience Platform para o seu local do S3 gerenciado pelo [!DNL Acxiom]. Em seguida, entre em contato com o representante da Acxiom com o nome da conta, os nomes dos arquivos e o caminho do bucket para que o processamento possa ser configurado.
 

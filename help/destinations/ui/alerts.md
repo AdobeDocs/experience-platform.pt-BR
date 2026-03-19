@@ -3,22 +3,22 @@ keywords: Experience Platform;página inicial;tópicos populares; alertas;destin
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 title: Assinar alertas de destino em contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 13%
+source-wordcount: '931'
+ht-degree: 10%
 
 ---
 
 # Assinar alertas de destino em contexto
 
-A Adobe Experience Platform permite que você se inscreva para receber alertas baseados em eventos relacionados às atividades da Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de pesquisar a [[!DNL Observability Insights] API](../../observability/api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreu algum erro.
+A Adobe Experience Platform permite que você se inscreva para receber alertas baseados em eventos relacionados às atividades da Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar a [[!DNL Observability Insights] API](../../observability/api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreram erros.
 
 Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 
 Este documento fornece etapas sobre como assinar mensagens de alertas de recebimento para seus fluxos de dados de destino.
 
-## Introdução
+## Introdução {#getting-started}
 
 Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
 
@@ -36,7 +36,7 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ad
 
 >[!IMPORTANT]
 >
->Você deve ativar notificações instantâneas de emails para sua conta do Experience Platform a fim de receber notificações de alerta baseadas em email para seus fluxos de dados.
+>Você deve ativar notificações instantâneas de emails para que sua conta da Experience Platform receba notificações de alerta baseadas em email para seus fluxos de dados.
 
 Você pode habilitar alertas para seus fluxos de dados durante a etapa [!UICONTROL Configure new destination] do fluxo de trabalho [conexão de destino](connect-destination.md).
 
@@ -56,6 +56,8 @@ Os alertas disponíveis para fluxos de dados de destino são descritos na tabela
 | Êxito na execução do fluxo de destino | Este alerta notifica quando um público-alvo é ativado com êxito para um destino. |
 | Início da execução do fluxo de destino | Esse alerta notifica quando uma execução de fluxo de destino começa a ativar um público-alvo. |
 | Taxa de Ativação Ignorada Excedida | Este alerta notifica quando a taxa de ativação ignorada excede 1% do total de ativações. As identidades são ignoradas durante a ativação quando têm atributos ausentes ou violação de consentimento. |
+
+{style="table-layout:auto"}
 
 ## Recebimento de alertas {#receiving-alerts}
 

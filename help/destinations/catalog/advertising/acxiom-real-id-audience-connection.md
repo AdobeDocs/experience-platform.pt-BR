@@ -3,7 +3,7 @@ title: Acxiom Real ID Audience Connection
 description: Use o  [!DNL Acxiom Real ID Audience Connection] destino para aprimorar públicos-alvo com a  [!DNL Acxiom's Real ID] tecnologia e ativar públicos-alvo para várias plataformas, como  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
 badge: label="Beta" type="Informative"
 exl-id: 5f1f0f7f-ac46-42bd-8002-be50fab5a76b
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 4%
@@ -35,7 +35,7 @@ Por exemplo, o departamento de Operações de marketing de uma marca global de s
 
 * **Confirmar Termos de Uso:** Antes de configurar um novo destino do [!DNL Acxiom Real ID Audience Connection], você deve ler e assinar o Contrato de Termos de Uso do [!DNL Acxiom's]. Você receberá o link para o contrato assim que a ordem de venda executada for concluída.
 * **Conhece sua ID da organização da Adobe:** Sua ID da organização [!DNL Adobe] é necessária para concluir seus Termos de Contrato do Usuário. Consulte o tópico [!DNL Adobe's] *Organizações na Experience Cloud* para obter detalhes sobre como [exibir a ID da sua organização](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/administration/organizations#concept_EA8AEE5B02CF46ACBDAD6A8508646255).
-* **Obter licença para o produto [!DNL Acxiom's Real ID]:** depois que a licença for obtida, disponibilize a Real ID da Acxiom no Real-Time CDP. Consulte [Acxiom Data Enhancement](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) para obter mais informações.
+* **Obter licença para o produto [!DNL Acxiom's Real ID]:** depois que a licença for obtida, disponibilize a Real ID da Acxiom no Real-Time CDP. Consulte [Acxiom Data Enhancement](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/data-partner/acxiom-data-enhancement) para obter mais informações.
 
 
 ## Identidades suportadas {#supported-identities}
@@ -107,7 +107,7 @@ Para configurar detalhes para o destino, preencha os campos abaixo.
 
 
 
-Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obter instruções sobre como ativar públicos-alvo para esse destino.
+Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations) para obter instruções sobre como ativar públicos-alvo para esse destino.
 
 >[!NOTE]
 >
@@ -121,12 +121,12 @@ Para que o destino [!DNL Acxiom Real ID Audience Connection] receba corretamente
 [!DNL Acxiom Real ID Audience Connection] permite mapeamento somente para o seguinte campo de destino.
 
 | Nome do campo | Descrição | Obrigatório |
-|--------------------|------------|--------| 
+|--------------------|------------|--------|
 | ID real | Uma ID real é um identificador alfanumérico (ID) exclusivo de 36 bytes do gráfico de resolução de identidade proprietário da Acxiom, semelhante a uma chave primária para um banco de dados relacional. É um identificador que representa uma pessoa, residência ou endereço. | Sim |
 
+{style="table-layout:auto"}
 
-
-Na coluna **[!UICONTROL Source Field]**, digite o nome do atributo de origem que você deseja mapear para o campo de destino correspondente ou selecione o ícone de seta para abrir a tela **[!UICONTROL &#x200B; Select source field]**. Em seguida, selecione **[!UICONTROL Next]**.
+Na coluna **[!UICONTROL Source Field]**, digite o nome do atributo de origem que você deseja mapear para o campo de destino correspondente ou selecione o ícone de seta para abrir a tela **[!UICONTROL  Select source field]**. Em seguida, selecione **[!UICONTROL Next]**.
 ![Tela de mapeamento](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
@@ -144,7 +144,7 @@ Se você estiver satisfeito com os resultados, selecione **[!UICONTROL Finish]**
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/data-governance/home).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).
 
 ## Solução de problemas {#troubleshooting}
 

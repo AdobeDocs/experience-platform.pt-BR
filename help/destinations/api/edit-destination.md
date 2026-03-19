@@ -4,10 +4,10 @@ title: Editar conexões de destino usando a API do Serviço de fluxo
 type: Tutorial
 description: Saiba como editar vários componentes de uma conexão de destino usando a API de serviço de fluxo.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1610'
+ht-degree: 5%
 
 ---
 
@@ -38,7 +38,7 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas do Experience Platform.
 
-### Coletar valores para cabeçalhos necessários {#gather-values-for-required-headers}
+### Coletar valores para cabeçalhos obrigatórios {#gather-values-for-required-headers}
 
 Para fazer chamadas para APIs do Experience Platform, primeiro conclua o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores de cada um dos cabeçalhos necessários em todas as chamadas de API do Experience Platform, conforme mostrado abaixo:
 
@@ -64,7 +64,7 @@ A primeira etapa na edição da conexão de destino é recuperar os detalhes do 
 
 >[!TIP]
 >
->Você pode usar a interface do usuário do Experience Platform para obter a ID de fluxo de dados desejada de um destino. Vá para **[!UICONTROL Destinos]** > **[!UICONTROL Procurar]**, selecione o fluxo de dados de destino desejado e localize a ID de destino no painel direito. A ID de destino é o valor que você usará como ID de fluxo na próxima etapa.
+>Você pode usar a interface do usuário do Experience Platform para obter a ID de fluxo de dados desejada de um destino. Vá para **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, selecione o fluxo de dados de destino desejado e localize a ID de destino no painel direito. A ID de destino é o valor que você usará como ID de fluxo na próxima etapa.
 >
 > ![Obter ID de destino usando a interface do usuário do Experience Platform](/help/destinations/assets/api/edit-destination/get-destination-id.png)
 
@@ -79,6 +79,8 @@ GET /flows/{FLOW_ID}
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{FLOW_ID}` | O valor `id` exclusivo para o fluxo de dados de destino que você deseja recuperar. |
+
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -233,6 +235,8 @@ curl -X PATCH \
 | `path` | Define a parte do fluxo que deve ser atualizada. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
+{style="table-layout:auto"}
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna a ID de conexão de destino e uma Etag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID da conexão de destino.
@@ -248,7 +252,7 @@ Uma resposta bem-sucedida retorna a ID de conexão de destino e uma Etag atualiz
 
 **Solicitação**
 
-A solicitação a seguir atualiza os parâmetros de uma conexão [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) ou [[!DNL Google Ad Manager 360] de destino](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) para adicionar o novo campo [**[!UICONTROL Anexar ID de público-alvo ao nome de público-alvo]**](/help/release-notes/2023/april-2023.md#destinations).
+A solicitação a seguir atualiza os parâmetros de uma conexão [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md) ou [[!DNL Google Ad Manager 360] de destino](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) para adicionar o novo campo [**[!UICONTROL Append audience ID to audience name]**](/help/release-notes/2023/april-2023.md#destinations).
 
 ```shell
 curl -X PATCH \
@@ -272,6 +276,8 @@ curl -X PATCH \
 | `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace` e `remove`. |
 | `path` | Define a parte do fluxo que deve ser atualizada. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
+
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -314,6 +320,8 @@ curl -X PATCH \
 | `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace` e `remove`. |
 | `path` | Define a parte do fluxo que deve ser atualizada. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
+
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -392,6 +400,8 @@ curl -X PATCH \
 | `path` | Define a parte do fluxo que deve ser atualizada. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
+{style="table-layout:auto"}
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna a ID de conexão básica e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo sua ID de conexão básica.
@@ -407,7 +417,7 @@ Uma resposta bem-sucedida retorna a ID de conexão básica e uma tag atualizada.
 
 **Solicitação**
 
-A solicitação a seguir atualiza os parâmetros de uma conexão [[!DNL Azure Blob] de destino](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) para atualizar a cadeia de conexão necessária para se conectar a uma instância de Blob do Azure.
+A solicitação a seguir atualiza os parâmetros de uma conexão [[!DNL Azure Blob] de destino](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) para atualizar a cadeia de conexão necessária para se conectar a uma instância do Azure Blob.
 
 ```shell
 curl -X PATCH \
@@ -433,6 +443,8 @@ curl -X PATCH \
 | `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace` e `remove`. |
 | `path` | Define a parte do fluxo que deve ser atualizada. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
+
+{style="table-layout:auto"}
 
 **Resposta**
 

@@ -2,7 +2,7 @@
 description: Saiba como usar a API de teste de destino para testar seu modelo de transformação de mensagem de destino de transmissão antes de publicar o destino.
 title: Criar e testar um modelo de transformação de mensagem
 exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 ## Visão geral {#overview}
 
-Como parte do Destination SDK, o Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como criar e testar um modelo de transformação de mensagem. Para obter informações sobre como testar o destino, leia [Testar a configuração de destino](streaming-destination-testing-overview.md).
+Como parte do Destination SDK, a Adobe fornece ferramentas de desenvolvedor para ajudá-lo a configurar e testar seu destino. Esta página descreve como criar e testar um modelo de transformação de mensagem. Para obter informações sobre como testar o destino, leia [Testar a configuração de destino](streaming-destination-testing-overview.md).
 
 Para **criar e testar um modelo de transformação de mensagem** entre o esquema de destino no Adobe Experience Platform e o formato de mensagem aceito pelo seu destino, use a *Ferramenta de criação de modelo*, descrita mais abaixo.  Leia mais sobre a transformação de dados entre o esquema de origem e de destino no [documento de formato de mensagem](../../functionality/destination-server/message-format.md#using-templating).
 
-Veja abaixo como criar e testar um modelo de transformação de mensagem que se encaixa no [fluxo de trabalho de configuração de destino](../../guides/configure-destination-instructions.md) em Destination SDK:
+Veja abaixo como criar e testar um modelo de transformação de mensagem que se encaixa no [fluxo de trabalho de configuração de destino](../../guides/configure-destination-instructions.md) no Destination SDK:
 
 ![Gráfico de onde a etapa de criação de modelo se encaixa no fluxo de trabalho de configuração de destino](../../assets/testing-api/create-template-step.png)
 
 ## Por que você precisa criar e testar um template de transformação de mensagem {#why-create-message-transformation-template}
 
-Uma das primeiras etapas na criação do seu destino no Destination SDK é pensar em como o formato de dados para associação de público-alvo, identidades e atributos de perfil é transformado quando exportado do Adobe Experience Platform para o seu destino. Encontre informações sobre a transformação entre o esquema XDM do Adobe e o esquema de destino no [documento sobre o formato da mensagem](../../functionality/destination-server/message-format.md#using-templating).
+Uma das primeiras etapas na criação do seu destino no Destination SDK é pensar em como o formato dos dados para associação de público-alvo, identidades e atributos de perfil é transformado quando exportado do Adobe Experience Platform para o seu destino. Encontre informações sobre a transformação entre o esquema XDM do Adobe e o esquema de destino no [documento de formato da mensagem](../../functionality/destination-server/message-format.md#using-templating).
 
 Para que a transformação tenha êxito, você deve fornecer um modelo de transformação, semelhante a este exemplo: [Crie um modelo que envie segmentos, identidades e atributos de perfil](../../functionality/destination-server/message-format.md#segments-identities-attributes).
 
@@ -167,6 +167,6 @@ Consulte a referência da API para obter exemplos de chamadas que você pode faz
 
 Edite o modelo e faça chamadas para o endpoint da API do modelo de renderização até que os perfis exportados correspondam ao formato de dados esperado do destino.
 
-## Adicionar seu modelo com caractere de escape à configuração do servidor de destino
+## Adicionar seu modelo com caractere de escape à configuração do servidor de destino {#add-template-to-server-config}
 
 Quando estiver satisfeito com o seu modelo de transformação de mensagem, adicione-o à sua [configuração do servidor de destino](../../authoring-api/destination-server/create-destination-server.md), em `httpTemplate.requestBody.value`.

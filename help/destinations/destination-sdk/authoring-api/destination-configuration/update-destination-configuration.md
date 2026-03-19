@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para atualizar uma configuração de destino existente por meio do Adobe Experience Platform Destination SDK.
 title: Atualizar uma configuração de destino
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '369'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Para obter uma descrição detalhada dos recursos de uma configuração de desti
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de configuração de destino {#get-started}
 
@@ -59,6 +59,8 @@ PUT /authoring/destinations/{INSTANCE_ID}
 | Parâmetro | Descrição |
 | -------- | ----------- |
 | `{INSTANCE_ID}` | A ID da configuração de destino que você deseja atualizar. Para obter uma configuração de destino existente e seu `{INSTANCE_ID}` correspondente, consulte [Recuperar uma configuração de destino](retrieve-destination-configuration.md). |
+
+{style="table-layout:auto"}
 
 +++Solicitação
 
@@ -209,7 +211,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com os detalhes da configura
 
 Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Depois de ler este documento, agora você sabe como atualizar uma configuração de destino por meio do ponto de extremidade da API `/authoring/destinations` do Destination SDK.
 

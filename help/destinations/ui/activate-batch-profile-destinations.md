@@ -3,7 +3,7 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8019f7426f6e6dd3faef131ada8e307c1d075556
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '4783'
 ht-degree: 10%
@@ -14,11 +14,11 @@ ht-degree: 10%
 # Ativar públicos para destinos de exportação de perfil em lote
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar públicos e habilitar a [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 >* Para ativar os públicos-alvo sem passar pela [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
-> 
+>
 > Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 ## Visão geral {#overview}
@@ -205,7 +205,7 @@ Se os perfis forem atualizados após a avaliação do público-alvo, as exporta�
 
 Para exportações sob demanda, consulte a documentação em [exportando arquivos sob demanda](/help/destinations/ui/export-file-now.md#scheduled-vs-ondemand).
 
-### Exportar arquivos incrementais
+### Exportar arquivos incrementais {#export-incremental-files}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_something"
@@ -278,7 +278,7 @@ Para editar vários nomes de arquivo ao mesmo tempo, marque os públicos usando 
 Selecione **[!UICONTROL Apply changes]** para confirmar sua seleção.
 
 >[!IMPORTANT]
-> 
+>
 >Se você não selecionar o componente **[!UICONTROL Date and Time]**, os nomes dos arquivos serão estáticos e o novo arquivo exportado substituirá o arquivo anterior no local de armazenamento a cada exportação. Ao executar um trabalho de importação recorrente de um local de armazenamento em uma plataforma de marketing por email, essa é a opção recomendada.
 
 Após concluir a configuração de todos os públicos-alvo, selecione **[!UICONTROL Next]** para continuar.
@@ -298,7 +298,7 @@ Nesta etapa, você deve selecionar os atributos de perfil que deseja adicionar a
 1. Na página **[!UICONTROL Select source field]**, selecione os atributos de perfil e as identidades que deseja incluir nos arquivos exportados para o destino e escolha **[!UICONTROL Select]**.
 
    >[!TIP]
-   > 
+   >
    >Você pode usar o campo de pesquisa para restringir sua seleção, como mostrado na imagem abaixo.
 
    Use a opção **[!UICONTROL Show only fields with data]** para exibir apenas campos de esquema preenchidos com valores. Por padrão, somente os campos de esquema preenchidos são exibidos.
@@ -496,9 +496,9 @@ A Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 
 ### Comportamento de desduplicação para perfis com o mesmo carimbo de data e hora {#deduplication-same-timestamp}
 
-Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
-#### Principais considerações
+#### Principais considerações {#key-considerations}
 
 * **Seleção determinística**: quando vários perfis têm chaves de desduplicação idênticas e o mesmo carimbo de data/hora de referência, a lógica de desduplicação determina qual perfil deve ser exportado ao classificar os valores de outras colunas selecionadas (excluindo tipos complexos, como matrizes, mapas ou objetos). Os valores classificados são avaliados em ordem lexicográfica e o primeiro perfil é selecionado.
 
@@ -535,7 +535,7 @@ Você pode usar o controle [Campos calculados](/help/destinations/ui/data-transf
 
 A nova página **[!UICONTROL Mapping]** tem as seguintes limitações conhecidas:
 
-#### O atributo de associação de público não pode ser selecionado por meio do fluxo de trabalho de mapeamento
+#### O atributo de associação de público não pode ser selecionado por meio do fluxo de trabalho de mapeamento {#audience-membership-attribute-mapping}
 
 Devido a uma limitação conhecida, no momento, você não pode usar a janela **[!UICONTROL Select field]** para adicionar `segmentMembership.seg_namespace.seg_id.status` às suas exportações de arquivo. Em vez disso, você precisa colar manualmente o valor `xdm: segmentMembership.seg_namespace.seg_id.status` no campo de esquema, como mostrado abaixo.
 
@@ -556,7 +556,7 @@ As exportações de arquivos variam das seguintes maneiras, dependendo se `segme
 
 Leia mais sobre [comportamento de exportação de perfil para destinos baseados em arquivo](/help/destinations/how-destinations-work/profile-export-behavior.md#file-based-destinations).
 
-#### Os namespaces de identidade não podem ser selecionados atualmente para exportações
+#### Os namespaces de identidade não podem ser selecionados atualmente para exportações {#identity-namespaces-export-limitation}
 
 No momento, não há suporte para a seleção de namespaces de identidade para exportação, como mostrado na imagem abaixo. Selecionar qualquer namespace de identidade para exportação resultará em um erro na etapa **[!UICONTROL Review]**.
 
@@ -570,8 +570,8 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 ## Selecionar atributos de perfil {#select-attributes}
 
 >[!IMPORTANT]
-> 
->Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa &#x200B;](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
+>
+>Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa ](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
 >
 >Esta etapa **[!UICONTROL Select attributes]** ainda é exibida para os destinos de marketing por email do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 
@@ -643,7 +643,7 @@ Selecione **[!UICONTROL Next]** para mover para a etapa [Revisão](#review).
 ## Revisar {#review}
 
 >[!NOTE]
-> 
+>
 >Se algum rótulo de uso de dados tiver sido aplicado a determinados campos em um conjunto de dados (em vez do conjunto de dados inteiro), a aplicação desses rótulos de nível de campo na ativação ocorrerá nas seguintes condições:
 >
 >* Os campos são usados na definição de público-alvo.

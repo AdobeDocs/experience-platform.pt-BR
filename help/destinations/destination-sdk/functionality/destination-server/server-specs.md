@@ -1,8 +1,8 @@
 ---
-description: Saiba como configurar especificações do servidor de destino no Adobe Experience Platform Destination SDK por meio do endpoint &grave;/authoring/destination-servers&grave;.
+description: Saiba como configurar especificações do servidor de destino no Adobe Experience Platform Destination SDK por meio do endpoint `/authoring/destination-servers`.
 title: Especificações do servidor para destinos criados com o Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: 455886806d46a227eddb5ba060c15e1a00e13edf
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2775'
 ht-degree: 2%
@@ -31,7 +31,7 @@ Esta página mostra todos os tipos de servidor de destino compatíveis com o Des
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -57,7 +57,7 @@ Os parâmetros do servidor de destino têm dois campos configuráveis. Essas op�
 
 {style="table-layout:auto"}
 
-### Quando usar campos embutidos em código ou com modelos
+### Quando usar campos embutidos em código ou com modelos {#when-to-use-hard-coded-vs-templatized}
 
 Os campos embutidos em código e em modelo têm seus próprios usos no Destination SDK, dependendo do tipo de integração que está sendo criada.
 
@@ -288,7 +288,7 @@ A amostra abaixo mostra um exemplo de uma configuração de servidor de destino 
 | `fileBasedAzureBlobDestination.path.templatingStrategy` | String | *Obrigatório*. Defina este valor de acordo com o tipo de valor usado no campo `path.value`.<ul><li>Se você quiser que seus usuários insiram seu próprio [!DNL Azure Blob] [URI da conta de armazenamento](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) na interface do Experience Platform, defina este valor como `PEBBLE_V1`. Nesse caso, você deve modelar o campo `path.value` para ler o valor dos [campos de dados do cliente](../destination-configuration/customer-data-fields.md) preenchidos pelo usuário. Esse caso de uso é mostrado no exemplo acima.</li><li>Se estiver usando um caminho embutido em código para sua integração, como `"path.value": "https://myaccount.blob.core.windows.net/"`, então defina esse valor como `NONE`. |
 | `fileBasedAzureBlobDestination.path.value` | String | O caminho para o armazenamento do [!DNL Azure Blob]. Pode ser um campo de modelo que lerá o valor dos [campos de dados do cliente](../destination-configuration/customer-data-fields.md) preenchidos pelo usuário (como mostrado no exemplo acima), ou um valor embutido em código, como `https://myaccount.blob.core.windows.net/`. |
 | `fileBasedAzureBlobDestination.container.templatingStrategy` | String | *Obrigatório*. Defina este valor de acordo com o tipo de valor usado no campo `container.value`.<ul><li>Se você quiser que seus usuários insiram seu próprio [!DNL Azure Blob] [nome do contêiner](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) na interface do Experience Platform, defina este valor como `PEBBLE_V1`. Nesse caso, você deve modelar o campo `container.value` para ler o valor dos [campos de dados do cliente](../destination-configuration/customer-data-fields.md) preenchidos pelo usuário. Esse caso de uso é mostrado no exemplo acima.</li><li>Se estiver usando um nome de contêiner embutido em código para sua integração, como `"path.value: myContainer"`, defina esse valor como `NONE`. |
-| `fileBasedAzureBlobDestination.container.value` | String | O nome do contêiner do Armazenamento Azure Blob a ser usado para esse destino. Pode ser um campo de modelo que lerá o valor dos [campos de dados do cliente](../destination-configuration/customer-data-fields.md) preenchidos pelo usuário (como mostrado no exemplo acima), ou um valor embutido em código, como `myContainer`. |
+| `fileBasedAzureBlobDestination.container.value` | String | O nome do container do Azure Blob Storage que será usado para esse destino. Pode ser um campo de modelo que lerá o valor dos [campos de dados do cliente](../destination-configuration/customer-data-fields.md) preenchidos pelo usuário (como mostrado no exemplo acima), ou um valor embutido em código, como `myContainer`. |
 
 {style="table-layout:auto"}
 

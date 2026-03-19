@@ -2,9 +2,9 @@
 description: Saiba como usar a API de teste de destino para gerar perfis de amostra para seu destino de transmissão, que você pode usar em testes de destino.
 title: Gerar perfis de amostra com base em um esquema de origem
 exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '976'
 ht-degree: 2%
 
 ---
@@ -47,8 +47,8 @@ Para obter a ID de uma instância de destino, primeiro crie uma conexão na inte
 
 >[!IMPORTANT]
 >
->* Para usar essa API, é necessário ter uma conexão existente com o destino na interface do usuário do Experience Platform. Leia [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR) e [ativar perfis e públicos a um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=pt-BR) para obter mais informações.
->* Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar em chamadas de API para este ponto de extremidade ao [navegar em uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=pt-BR).
+>* Para usar essa API, você deve ter uma conexão existente com seu destino na interface do usuário do Experience Platform. Leia [conectar ao destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) e [ativar perfis e públicos a um destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) para obter mais informações.
+>* Depois de estabelecer a conexão com seu destino, obtenha a ID da instância de destino que você deve usar em chamadas de API para este ponto de extremidade ao [navegar em uma conexão com seu destino](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
 >
 >![Imagem da interface do usuário sobre como obter a ID da instância de destino](../../assets/testing-api/get-destination-instance-id.png)
 
@@ -182,10 +182,10 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o número especificado d
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `segmentMembership` | Um objeto de mapa que descreve as associações de público-alvo do indivíduo. Para obter mais informações sobre `segmentMembership`, leia [Detalhes da Associação de Público-Alvo](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=pt-BR). |
+| `segmentMembership` | Um objeto de mapa que descreve as associações de público-alvo do indivíduo. Para obter mais informações sobre `segmentMembership`, leia [Detalhes da Associação de Público-Alvo](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
 | `lastQualificationTime` | Um carimbo de data e hora da última vez que esse perfil se qualificou para o segmento. |
 | `xdm:status` | Um campo de string que indica se a associação de público-alvo foi realizada como parte da solicitação atual. Os seguintes valores são aceitos: <ul><li>`realized`: O perfil faz parte do segmento.</li><li>`exited`: O perfil está saindo do público como parte da solicitação atual.</li></ul> |
-| `identityMap` | Um campo do tipo mapa que descreve os vários valores de identidade para um indivíduo, juntamente com seus namespaces associados. Para obter mais informações sobre `identityMap`, leia [Base da composição do esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=pt-BR#identityMap). |
+| `identityMap` | Um campo do tipo mapa que descreve os vários valores de identidade para um indivíduo, juntamente com seus namespaces associados. Para obter mais informações sobre `identityMap`, leia [Base da composição do esquema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
 
 {style="table-layout:auto"}
 
@@ -377,6 +377,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o número especificado d
 
 Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Depois de ler este documento, agora você sabe como gerar perfis de amostra a serem usados ao [testar um modelo de transformação de mensagem](create-template.md) ou ao [testar se o destino está configurado corretamente](streaming-destination-testing-overview.md).

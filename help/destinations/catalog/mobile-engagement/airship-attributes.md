@@ -3,9 +3,9 @@ keywords: atributos do dirigível;destino do dirigível
 title: Conexão com os atributos do dirigível
 description: Transmita facilmente os dados de público-alvo da Adobe para o Airship como atributos de público-alvo para direcionamento no Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 7b22c4b058b0068b96c26d0c4c7743d489451620
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1139'
 ht-degree: 3%
 
 ---
@@ -83,7 +83,7 @@ Vá para **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** no
 
 Clique em **[!UICONTROL Create Token]**.
 
-Forneça um nome amigável para o token, por exemplo, &quot;Destino de atributos do Adobe&quot;, e selecione &quot;Todo acesso&quot; para a função.
+Forneça um nome amigável para o token, por exemplo &quot;Destino dos atributos do Adobe&quot;, e selecione &quot;Acesso integral&quot; para a função.
 
 Clique em **[!UICONTROL Create Token]** e salve os detalhes como confidenciais.
 
@@ -91,18 +91,18 @@ Clique em **[!UICONTROL Create Token]** e salve os detalhes como confidenciais.
 
 Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Airship Attributes], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
 
-### Caso de uso #1
+### Caso de uso #1 {#use-case-1}
 
 Aproveite os dados de perfil coletados no Adobe Experience Platform para personalização da mensagem e conteúdo avançado em qualquer um dos canais de [!DNL Airship]. Por exemplo, use os dados de perfil do [!DNL Experience Platform] para definir atributos de localização dentro de [!DNL Airship]. Isso permitirá que uma marca de hotel exiba uma imagem para a localização do hotel mais próxima para cada usuário.
 
-### Caso de uso #2
+### Caso de uso #2 {#use-case-2}
 
 Aproveite os Atributos do Adobe Experience Platform para enriquecer ainda mais [!DNL Airship] perfis e combiná-los com SDK ou dados preditivos [!DNL Airship]. Por exemplo, uma retailer pode criar um público-alvo com status de fidelidade e dados de localização (atributos da Experience Platform) e [!DNL Airship] com previsão de churn de dados para enviar mensagens altamente direcionadas aos usuários no status de fidelidade gold que vivem em Las Vegas, Nova York e têm uma alta probabilidade de churn.
 
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -130,7 +130,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -138,7 +138,7 @@ Consulte [Ativar dados de público-alvo para streaming de destinos de exportaç�
 
 ## Considerações de mapeamento {#mapping-considerations}
 
-Os atributos [!DNL Airship] podem ser definidos em um canal, que representa a instância do dispositivo, por exemplo, iPhone, ou em um usuário nomeado, que mapeia todos os dispositivos de um usuário para um identificador comum, como uma ID de cliente. Se você tiver endereços de email de texto sem formatação (sem hash) como identidade principal no esquema, selecione o campo de email em seu **[!UICONTROL Source Attributes]** e mapeie para o [!DNL Airship] usuário nomeado na coluna direita em **[!UICONTROL Target Identities]**, como mostrado abaixo.
+Os atributos [!DNL Airship] podem ser definidos em um canal, que representa a instância do dispositivo, por exemplo iPhone, ou em um usuário nomeado, que mapeia todos os dispositivos de um usuário para um identificador comum, como uma ID de cliente. Se você tiver endereços de email de texto sem formatação (sem hash) como identidade principal no esquema, selecione o campo de email em seu **[!UICONTROL Source Attributes]** e mapeie para o [!DNL Airship] usuário nomeado na coluna direita em **[!UICONTROL Target Identities]**, como mostrado abaixo.
 
 ![Mapeamento de Usuário Nomeado](../../assets/catalog/mobile-engagement/airship/mapping.png)
 

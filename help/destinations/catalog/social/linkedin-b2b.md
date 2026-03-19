@@ -2,9 +2,9 @@
 title: (Empresas) LinkedIn connection
 description: Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '770'
 ht-degree: 5%
 
 ---
@@ -61,7 +61,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 ## Pré-requisitos {#prerequisites}
 
-Verifique os pré-requisitos abaixo para exportar públicos-alvo da conta para o LinkedIn:
+Verifique se você atende aos pré-requisitos abaixo para exportar públicos-alvo da conta para o LinkedIn:
 
 ### Pré-requisitos da conta do LinkedIn {#LinkedIn-account-prerequisites}
 
@@ -72,7 +72,7 @@ Para saber como editar suas permissões de usuário do [!DNL LinkedIn Campaign M
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa da **[!UICONTROL View Destinations]** e da **[!UICONTROL Manage Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -99,7 +99,7 @@ Agora você está pronto para ativar os públicos-alvo da conta para o LinkedIn.
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar os públicos-alvo da conta para os destinos.](/help/destinations/assets/ui/activate-account-audiences/identity-namespace-highlighted.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar os públicos-alvo da conta para destinos."){width="100" zoomable="yes"}
 

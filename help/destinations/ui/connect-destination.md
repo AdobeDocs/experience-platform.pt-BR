@@ -3,7 +3,7 @@ title: Criar uma nova conexão de destino
 type: Tutorial
 description: Saiba como se conectar a um destino no Adobe Experience Platform, ativar alertas e configurar ações de marketing para o destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1236'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 # Criar uma nova conexão de destino
 
 >[!IMPORTANT]
-> 
+>
 >* Para se conectar a um destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para se conectar a um destino compatível com exportações de conjunto de dados, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage and Activate Dataset Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 

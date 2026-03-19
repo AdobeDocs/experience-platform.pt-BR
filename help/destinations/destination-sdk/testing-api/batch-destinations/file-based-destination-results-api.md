@@ -2,9 +2,9 @@
 description: Esta página explica como usar o endpoint da API /testing/destinationInstance para exibir os detalhes completos dos resultados de seus testes. Esse ponto de extremidade de API retorna o mesmo resultado que você obteria ao usar a API de serviço de fluxo para monitorar os fluxos de dados.
 title: Exibir resultados detalhados da ativação
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '545'
 ht-degree: 2%
 
 ---
@@ -54,9 +54,13 @@ GET /authoring/testing/destinationInstance/{DESTINATION_INSTANCE_ID}/results?flo
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | A ID da instância de destino para a qual você está gerando perfis de amostra. Consulte a seção [pré-requisitos](#prerequisites) para obter detalhes sobre como obter essa ID. |
 
+{style="table-layout:auto"}
+
 | Parâmetros da string de consulta | Descrição |
 | -------- | ----------- |
 | `flowRunIds` | As IDs de execução do fluxo correspondentes aos públicos ativados. Você pode encontrar as IDs de execução de fluxo na propriedade `results` retornada na [resposta da chamada de teste de destino](file-based-destination-testing-api.md). |
+
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -215,7 +219,7 @@ A resposta contém os detalhes completos do fluxo de ativação. Você pode obte
 
 Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Depois de ler este documento, agora você sabe como testar a configuração de destino baseada em arquivo e ver os detalhes completos dos resultados da ativação.
 

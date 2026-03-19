@@ -2,10 +2,10 @@
 description: Esta página exemplifica a chamada de API usada para recuperar detalhes sobre uma solicitação de publicação de destino por meio do Adobe Experience Platform Destination SDK.
 title: Recuperar uma solicitação de publicação de destino
 exl-id: fceef12d-a52c-4259-a91e-7af88b132800
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '837'
-ht-degree: 2%
+source-wordcount: '835'
+ht-degree: 3%
 
 ---
 
@@ -28,7 +28,7 @@ Use o endpoint da API de destinos de publicação para enviar uma solicitação 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de publicação de destino {#get-started}
 
@@ -181,6 +181,6 @@ Se você passou um `DESTINATION_ID` na chamada da API, a resposta retorna o stat
 
 >[!ENDTABS]
 
-## Manipulação de erros de API
+## Manipulação de erros de API {#error-handling}
 
 Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.

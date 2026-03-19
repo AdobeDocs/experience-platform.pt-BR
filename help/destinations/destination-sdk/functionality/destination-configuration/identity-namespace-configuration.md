@@ -2,7 +2,7 @@
 description: Saiba como configurar as identidades de destino compatíveis para destinos criados com o Destination SDK.
 title: Configuração do namespace de identidade
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '918'
 ht-degree: 3%
@@ -42,7 +42,7 @@ Este artigo descreve todas as opções de configuração de namespaces de identi
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -92,11 +92,11 @@ Por exemplo, os clientes podem mapear um namespace [!DNL Experience Platform] [!
 
 Leia mais sobre identidades na [visão geral do namespace de identidade](../../../../identity-service/features/namespaces.md).
 
-## Considerações de mapeamento
+## Considerações de mapeamento {#mapping-considerations}
 
 Se os clientes selecionarem um namespace de identidade de origem e não selecionarem um target mapping, o Experience Platform preencherá automaticamente o target mapping com um atributo com o mesmo nome.
 
-## Configurar hash de campo de origem opcional
+## Configurar hash de campo de origem opcional {#configure-optional-hashing}
 
 Os clientes do Experience Platform podem optar por assimilar dados na Experience Platform em formato com hash ou em texto sem formatação. Se sua plataforma de destino aceitar dados com hash e sem hash, você poderá dar aos clientes a opção de escolher se o Experience Platform deve aplicar hash aos valores dos campos de origem quando eles forem exportados para seu destino.
 
@@ -122,7 +122,7 @@ Marque essa opção ao usar campos de origem sem hash, para que a Adobe Experien
 
 Ao mapear atributos de origem com hash não atribuídos para atributos de destino que o destino espera que tenham hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), marque a opção **Aplicar transformação** para que o Adobe Experience Platform coloque os atributos de origem em hash automaticamente na ativação.
 
-## Configurar hash de campo de origem obrigatório
+## Configurar hash de campo de origem obrigatório {#configure-mandatory-hashing}
 
 Se o destino aceitar apenas dados com hash, você poderá configurar os atributos exportados para serem automaticamente transformados em hash pelo Experience Platform. A configuração abaixo verifica automaticamente a opção **Aplicar transformação** quando as identidades `Email` e `Phone` são mapeadas.
 

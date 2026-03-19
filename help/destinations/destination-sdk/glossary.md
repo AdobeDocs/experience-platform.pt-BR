@@ -1,26 +1,26 @@
 ---
 solution: Experience Platform
-title: Adobe Experience Platform Destination SDK glossary
-description: Entenda a terminologia importante ao criar um destino usando Experience Platform Destination SDK.
+title: Glossário do Adobe Experience Platform Destination SDK
+description: Entenda a terminologia importante ao criar um destino usando o Experience Platform Destination SDK.
 exl-id: d65f390a-a980-49b8-9570-840f03534553
-source-git-commit: a11f469cb54421e0ca30c7c5878128e216470f7f
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '716'
 ht-degree: 2%
 
 ---
 
-# Adobe Experience Platform Destination SDK glossary
+# Glossário do Adobe Experience Platform Destination SDK
 
-Consulte este glossário para obter as definições dos termos usados no Destination SDK. Para outros termos do Adobe Experience Platform, consulte o [glossário de Experience Platform](/help/landing/glossary.md).
+Consulte este glossário para obter definições dos termos usados no Destination SDK. Para outros termos do Adobe Experience Platform, consulte o [glossário do Experience Platform](/help/landing/glossary.md).
 
-## A
+## A {#a}
 
 **Política de agregação**: ao configurar como os dados devem ser exportados para o destino de transmissão em tempo real, você pode definir como os dados do perfil são agregados antes de serem enviados para a plataforma de destino. Isso ajuda a otimizar a entrega de dados, agrupando registros de dados com base em critérios específicos, reduzindo a frequência de chamadas de API e melhorando a eficiência geral. Diferentes políticas podem ser configuradas para atender a vários requisitos de destino, garantindo que os dados sejam empacotados e entregues da maneira mais eficaz. [Leia mais](/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md).
 
 **Configuração de metadados de público-alvo**: uma configuração de metadados de público-alvo refere-se à configuração estruturada e aos parâmetros definidos no Adobe Experience Platform que permitem a criação, atualização e exclusão programáticas de segmentos de público-alvo em um destino especificado. Essa configuração utiliza modelos de metadados de público-alvo para se alinhar às especificações da API de marketing da plataforma de destino. Leia mais sobre a [configuração de metadados de público-alvo](/help/destinations/destination-sdk/functionality/audience-metadata-management.md) e as [macros disponíveis](/help/destinations/destination-sdk/functionality/audience-metadata-management.md#macros).
 
-## D
+## D {#d}
 
 **Ponto de extremidade de configuração de destino**: um ponto de extremidade de configuração de destino no Adobe Experience Platform, especificamente o ponto de extremidade da API `/authoring/destinations`, é usado para criar, recuperar, atualizar e excluir configurações para destinos. Essas configurações definem como os dados do Adobe Experience Platform são entregues a vários sistemas ou destinos externos, como plataformas de marketing, serviços de armazenamento em nuvem ou outros endpoints de processamento de dados. Leia mais sobre [opções de configuração disponíveis](/help/destinations/destination-sdk/functionality/configuration-options.md#destination-configuration) e exiba a [documentação de referência](/help/destinations/destination-sdk/authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -28,7 +28,7 @@ Consulte este glossário para obter as definições dos termos usados no Destina
 
 ![Imagem da interface do usuário sobre como obter a ID da instância de destino](/help/destinations/destination-sdk/assets/testing-api/get-destination-instance-id.png)
 
-## P
+## P {#p}
 
 **[!DNL Pebble]modelo**: um modelo [!DNL Pebble] é usado para transformar dados exportados do Adobe Experience Platform no formato exigido pela plataforma de destino. Ela emprega a linguagem de modelo [!DNL Pebble], que permite a transformação de dados dinâmicos por meio de funções como `filter`, `for`, `if` e `set`. O Adobe Experience Platform inclui funções personalizadas adicionais como `addedSegments` e `removedSegments`. Esses modelos ajudam a formatar elementos de dados, como carimbos de data e hora e associações de público-alvo, para atender às especificações do destino. Saiba mais [aqui](/help/destinations/destination-sdk/functionality/destination-server/message-format.md) e [aqui](/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md).
 
@@ -36,11 +36,11 @@ Consulte este glossário para obter as definições dos termos usados no Destina
 
 **Destino público**: uma integração disponível publicamente no catálogo do Adobe Experience Platform. Esses destinos são padronizados, de marca e simplificam a configuração do cliente, fornecendo parâmetros pré-configurados. Elas podem ser acessadas por todos os clientes que usam o Adobe Experience Platform. [Leia mais](/help/destinations/destination-sdk/overview.md#productized-custom-integrations).
 
-## S
+## S {#s}
 
 **Modelo de documentação de autoatendimento**: o modelo de documentação de autoatendimento fornece um formato estruturado que você pode usar para documentar seu destino. Ele inclui seções para obter uma visão geral, casos de uso, pré-requisitos, identidades, públicos-alvo, tipos de exportação e frequência compatíveis, bem como etapas para conectar ao destino, ativar públicos-alvo e mapear atributos. Use este modelo para garantir uma documentação abrangente e consistente, permitindo que os clientes comecem a usar seu destino rapidamente e entendam os casos de uso fornecidos. Leia mais sobre [como documentar seu destino](/help/destinations/destination-sdk/docs-framework/documentation-instructions.md), [baixar o modelo de documentação de autoatendimento mais recente](/help/destinations/destination-sdk/assets/docs-framework/yourdestination-template.zip) e [exibir como ele é renderizado](/help/destinations/destination-sdk/docs-framework/self-service-template.md).
 
-## T
+## T {#t}
 
 **Especificações e estratégias de modelo**: as especificações do modelo são configurações usadas para formatar solicitações HTTP enviadas do Adobe Experience Platform para um destino. Eles transformam campos de atributo de perfil do esquema XDM em um formato compatível com a plataforma de destino. Usando uma linguagem de modelo semelhante a [!DNL Jinja], essas especificações permitem transformações de dados dinâmicos com base em regras específicas e dados de entrada. [Saiba mais](/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md).
 

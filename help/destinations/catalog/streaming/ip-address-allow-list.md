@@ -2,11 +2,11 @@
 keywords: Endereço IP, intervalo IP, destinos de lista de permissões, incluo na lista de permissões, incluir na lista de permissões destinos de streaming
 title: INCLUO NA LISTA DE PERMISSÕES de endereços IP para destinos de streaming
 type: Documentation
-description: Esta página fornece intervalos IP que você pode adicionar à lista de permissões para exportar com segurança dados do Experience Platform para o terminal da API REST HTTP ou a instância Amazon Kinesis.
+description: Esta página fornece intervalos IP que podem ser adicionados ao incluo na lista de permissões para exportar com segurança os dados do Experience Platform para o endpoint da API REST HTTP ou a instância Amazon Kinesis.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 6d59d0555dda124acfd16483e11c2899ff5c846e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---

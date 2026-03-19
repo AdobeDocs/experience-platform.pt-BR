@@ -4,10 +4,10 @@ title: Excluir contas de destino
 type: Tutorial
 description: Este tutorial lista as etapas para excluir contas de destino na interface do usuário do Adobe Experience Platform
 exl-id: 9b39ba4b-19a4-48a8-a6f1-f860777cdb9e
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '305'
-ht-degree: 0%
+source-wordcount: '294'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Visão geral {#overview}
 
-A guia **[!UICONTROL Contas]** mostra detalhes sobre as conexões estabelecidas com vários destinos. Consulte a [Visão geral das contas](../ui/destinations-workspace.md#accounts) para obter todas as informações que você pode obter em cada conta de destino.
+A guia **[!UICONTROL Accounts]** mostra detalhes sobre as conexões estabelecidas com vários destinos. Consulte a [Visão geral das contas](../ui/destinations-workspace.md#accounts) para obter todas as informações que você pode obter em cada conta de destino.
 
 Este tutorial aborda as etapas para excluir contas de destino que não são mais necessárias usando a interface do usuário do Experience Platform.
 
@@ -29,7 +29,7 @@ Este tutorial aborda as etapas para excluir contas de destino que não são mais
 
 Siga as etapas abaixo para excluir contas de destino existentes.
 
-1. Faça logon na [interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecione **[!UICONTROL Contas]** no cabeçalho superior para exibir suas contas existentes.
+1. Faça logon na [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinations]** na barra de navegação esquerda. Selecione **[!UICONTROL Accounts]** no cabeçalho superior para exibir suas contas existentes.
 
    ![Guia Contas](../assets/ui/delete-accounts/accounts-tab.png)
 
@@ -37,15 +37,15 @@ Siga as etapas abaixo para excluir contas de destino existentes.
 
    ![Filtrar destinos](../assets/ui/delete-accounts/filter-accounts.png)
 
-3. Selecione as reticências (`...`) ao lado do nome da conta que você deseja excluir. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Ativar públicos-alvo]**, **[!UICONTROL Editar detalhes]** e **[!UICONTROL Excluir]** a conta. Selecione o botão ![Excluir](/help/images/icons/delete.png) **[!UICONTROL Excluir]** para excluir a conta desejada.
+3. Selecione as reticências (`...`) ao lado do nome da conta que você deseja excluir. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]** e **[!UICONTROL Delete]** a conta. Selecione o botão ![Excluir](/help/images/icons/delete.png) **[!UICONTROL Delete]** para excluir a conta desejada.
 
    ![Excluir conta de destino](../assets/ui/delete-accounts/delete-accounts.png)
 
-4. Uma caixa de diálogo de confirmação final é exibida, selecione **[!UICONTROL Excluir]** para concluir o processo.
+4. Uma caixa de diálogo de confirmação final é exibida, selecione **[!UICONTROL Delete]** para concluir o processo.
 
 ![Confirmar exclusão da conta](../assets/ui/delete-accounts/confirm-account-deletion.png)
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Ao seguir este tutorial, você usou com êxito o espaço de trabalho de destinos para excluir contas existentes.
 

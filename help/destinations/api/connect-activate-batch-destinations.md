@@ -5,9 +5,9 @@ title: Conectar-se a destinos em lote e ativar dados usando a API do Serviço de
 description: Instruções detalhadas sobre como usar a API do Serviço de fluxo para criar um armazenamento em nuvem em lote ou um destino de marketing por email no Experience Platform e ativar dados
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '3435'
+source-wordcount: '3431'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 # Conecte-se aos destinos de marketing por email baseado em arquivo e ative os dados usando a API do Serviço de fluxo
 
 >[!IMPORTANT]
-> 
+>
 >* Para se conectar a um destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 >
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
@@ -27,7 +27,7 @@ ht-degree: 4%
 Este tutorial demonstra como usar a API de Serviço de Fluxo para criar um [destino de marketing por email](../catalog/email-marketing/overview.md) baseado em arquivo, criar um fluxo de dados para o destino recém-criado e exportar dados para o destino recém-criado por meio de arquivos CSV.
 
 >[!TIP]
-> 
+>
 >Para saber como ativar dados para destinos de armazenamento na nuvem usando a API do Serviço de Fluxo, leia o [tutorial de API dedicado](/help/destinations/api/activate-segments-file-based-destinations.md).
 
 Este tutorial usa o destino [!DNL Adobe Campaign] em todos os exemplos, mas as etapas são idênticas para destinos de marketing por email baseados em arquivo.
@@ -65,7 +65,7 @@ Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar 
 
 ### Colete valores para cabeçalhos obrigatórios e opcionais {#gather-values-headers}
 
-Para fazer chamadas para APIs da [!DNL Experience Platform], você deve concluir primeiro o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 * Autorização: Portador `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -144,7 +144,7 @@ Em seguida, conecte-se aos dados do [!DNL Experience Platform] para poder export
 1. Primeiro, você deve executar uma chamada para autorizar o acesso aos seus dados no [!DNL Experience Platform], configurando uma conexão base.
 2. Em seguida, usando a ID de conexão básica, execute outra chamada na qual você cria uma *conexão de origem*, que estabelece a conexão com seus dados do [!DNL Experience Platform].
 
-### Autorizar acesso aos seus dados no [!DNL Experience Platform]
+### Autorizar acesso aos seus dados no [!DNL Experience Platform] {#authorize-access-experience-platform}
 
 **Formato da API**
 
@@ -551,7 +551,7 @@ Uma resposta bem-sucedida contém o identificador exclusivo da conexão base (`i
 O [!DNL Adobe Experience Platform] exporta dados para destinos de marketing por email em lote e de armazenamento na nuvem na forma de [!DNL CSV] arquivos. Nesta etapa, você pode determinar o caminho no local de armazenamento para onde os arquivos serão exportados.
 
 >[!IMPORTANT]
-> 
+>
 >O [!DNL Adobe Experience Platform] divide automaticamente os arquivos de exportação em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil.
 >
 >Nomes de arquivos divididos são anexados com um número que indica que o arquivo é parte de uma exportação maior, como: `filename.csv`, `filename_2.csv`, `filename_3.csv`.

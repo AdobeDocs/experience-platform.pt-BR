@@ -2,9 +2,9 @@
 title: Comportamento de exportação de perfil
 description: Saiba como o comportamento de exportação de perfil varia entre os diferentes padrões de integração compatíveis com destinos do Experience Platform.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: 7502810ff329a31f2fdaf6797bc7672118555e6a
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2935'
+source-wordcount: '2931'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Há vários tipos de destino no Experience Platform, conforme mostrado no diagra
 
 ![Diagrama de tipos de destinos](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
-## Agregação de mensagens em destinos de streaming
+## Agregação de mensagens em destinos de streaming {#message-aggregation}
 
 Antes de mergulhar em informações específicas por tipo de destino, é importante entender o conceito de agregação de mensagens para *destinos de streaming*.
 
@@ -47,9 +47,9 @@ A política de agregação é configurável e os desenvolvedores de destino pode
 
 >[!IMPORTANT]
 >
-> Os destinos corporativos estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Os destinos corporativos estão disponíveis somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
-Os [destinos corporativos](/help/destinations/destination-types.md#advanced-enterprise-destinations) no Experience Platform são Amazon Kinesis, Hubs de Eventos do Azure e API HTTP.
+Os [destinos empresariais](/help/destinations/destination-types.md#advanced-enterprise-destinations) no Experience Platform são Amazon Kinesis, Hubs de Eventos da Azure e API HTTP.
 
 O Experience Platform otimiza o comportamento de exportação de perfis para o destino da sua empresa, a fim de exportar dados somente para o endpoint da API quando atualizações relevantes para um perfil tiverem ocorrido após a qualificação de público-alvo ou outros eventos significativos. Os perfis são exportados para seu destino nas seguintes situações:
 
@@ -59,7 +59,9 @@ O Experience Platform otimiza o comportamento de exportação de perfis para o d
 
 Em todos os casos descritos acima, somente os perfis em que ocorreram atualizações relevantes são exportados para o seu destino. Por exemplo, se um público-alvo mapeado para o fluxo de destino tiver cem membros e cinco novos perfis se qualificarem para o segmento, a exportação para o destino será incremental e incluirá apenas os cinco novos perfis.
 
-Observe que todos os atributos mapeados são exportados para um perfil, independentemente de onde estejam as alterações. Portanto, no exemplo acima, todos os atributos mapeados para esses cinco novos perfis serão exportados mesmo se os atributos em si não tiverem sido alterados.
+>[!NOTE]
+>
+>Todos os atributos mapeados são exportados para um perfil, independentemente das alterações. Portanto, no exemplo acima, todos os atributos mapeados para esses cinco novos perfis serão exportados mesmo se os atributos em si não tiverem sido alterados.
 
 ### O que determina uma exportação de dados e o que está incluído na exportação {#enterprise-behavior}
 
@@ -89,7 +91,7 @@ Do ponto de vista dos atributos de perfil, qualquer alteração nos quatro atrib
 
 >[!TIP]
 >
-> Você pode ver exemplos de dados exportados para vários destinos da empresa nas páginas de documentação de destino do [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md#exported-data), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#exported-data) e [API HTTP](/help/destinations/catalog/streaming/http-destination.md#exported-data).
+> Você pode ver exemplos de dados exportados para vários destinos da empresa nas páginas de documentação de destino do [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md#exported-data), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md#exported-data) e [HTTP API](/help/destinations/catalog/streaming/http-destination.md#exported-data).
 
 ## Destinos baseados em API de streaming {#streaming-api-based-destinations}
 
@@ -106,7 +108,9 @@ O Experience Platform otimiza o comportamento de exportação de perfil para seu
 
 Em todos os casos descritos acima, somente os perfis em que ocorreram atualizações relevantes são exportados para o seu destino. Por exemplo, se um público-alvo mapeado para o fluxo de destino tiver cem membros e cinco novos perfis se qualificarem para o segmento, a exportação para o destino será incremental e incluirá apenas os cinco novos perfis.
 
-Observe que todos os atributos mapeados são exportados para um perfil, independentemente de onde estejam as alterações. Portanto, no exemplo acima, todos os atributos mapeados para esses cinco novos perfis serão exportados mesmo se os atributos em si não tiverem sido alterados.
+>[!NOTE]
+>
+>Todos os atributos mapeados são exportados para um perfil, independentemente das alterações. Portanto, no exemplo acima, todos os atributos mapeados para esses cinco novos perfis serão exportados mesmo se os atributos em si não tiverem sido alterados.
 
 ### O que determina uma exportação de dados e o que está incluído na exportação {#streaming-behavior}
 
@@ -171,7 +175,7 @@ Por exemplo, na configuração de exportação ilustrada abaixo, em que um públ
 
 >[!ENDSHADEBOX]
 
-### O que determina uma exportação de dados e o que está incluído na exportação
+### O que determina uma exportação de dados e o que está incluído na exportação {#file-based-export-details}
 
 Com base nas informações na seção acima, o comportamento de exportação do perfil para destinos baseados em arquivo pode ser resumido conforme descrito abaixo:
 

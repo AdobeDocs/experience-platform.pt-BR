@@ -3,7 +3,7 @@ keywords: conexão do facebook;conexão do facebook;destinos do facebook;instagr
 title: Conexão com o Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2770'
 ht-degree: 5%
@@ -20,15 +20,15 @@ Você pode usar este destino para direcionamento de público em toda a família 
 
 ![Destino do Facebook na interface do Adobe Experience Platform.](../../assets/catalog/social/facebook/catalog.png)
 
-## Casos de uso
+## Casos de uso {#use-cases}
 
 Para ajudá-lo a entender melhor como e quando usar o destino [!DNL Facebook], veja dois casos de uso de exemplo que os clientes da Adobe Experience Platform podem resolver usando esse recurso.
 
-### Caso de uso #1
+### Caso de uso #1 {#use-case-1}
 
 Uma retailer online deseja alcançar os clientes existentes por meio de plataformas sociais e mostrar ofertas personalizadas com base em seus pedidos anteriores. A retailer online pode assimilar endereços de email de seu próprio CRM para o Adobe Experience Platform, criar públicos a partir de seus próprios dados offline e enviar esses públicos para a plataforma social [!DNL Facebook], otimizando seus gastos com publicidade.
 
-### Caso de uso #2
+### Caso de uso #2 {#use-case-2}
 
 Uma companhia aérea tem diferentes níveis de clientes (Bronze, Prata e Ouro) e deseja fornecer ofertas personalizadas a cada um dos níveis por meio de plataformas sociais. No entanto, nem todos os clientes usam o aplicativo móvel da companhia aérea e alguns deles não fizeram logon no site da empresa. Os únicos identificadores que a empresa tem sobre esses clientes são IDs de associação e endereços de email.
 
@@ -164,14 +164,14 @@ Antes de usar o namespace `Extern_ID` para enviar dados para [!DNL Facebook], si
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL Facebook] e ativar públicos-alvo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475118/?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -205,7 +205,7 @@ Para evitar que a expiração do token cause interrupções em seus fluxos de da
    ![Janela modal com opção Reconectar OAuth](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Suas credenciais de autenticação são atualizadas e o tempo de expiração é redefinido para 60 dias.
 
 ### Preencher detalhes do destino {#destination-details}
@@ -250,7 +250,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >abstract="Os anunciantes coletaram dados diretamente de seus clientes e parceiros."
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

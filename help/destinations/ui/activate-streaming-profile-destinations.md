@@ -4,7 +4,7 @@ type: Tutorial
 description: Saiba como ativar os dados de público-alvo no Adobe Experience Platform enviando públicos-alvo para destinos com base em perfil de transmissão.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 # Ativar públicos para destinos de exportação de perfil de transmissão
 
 >[!IMPORTANT]
-> 
+>
 > * Para ativar os dados e habilitar a [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 > * Para ativar dados sem passar pela [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 > 
@@ -95,7 +95,7 @@ Na página **[!UICONTROL Review]**, você pode ver um resumo da sua seleção. S
 
 ### Avaliação da política de consentimento {#consent-policy-evaluation}
 
-[No momento, não há suporte para a avaliação da política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) em exportações para os três destinos da empresa - Amazon Kinesis, Hubs de Eventos do Azure e API HTTP.
+[A avaliação de política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) não tem suporte atualmente em exportações para os três destinos da empresa - Amazon Kinesis, Azure Event Hubs e HTTP API.
 
 Isso significa que os perfis que não consentiram em ser direcionados *são incluídos* nas exportações para esses três destinos.
 

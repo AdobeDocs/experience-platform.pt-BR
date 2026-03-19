@@ -3,16 +3,16 @@ title: Ativar públicos para destinos com curadoria com base em identificadores 
 type: Tutorial
 description: Saiba como ativar públicos do Adobe Experience Platform para destinos de TV e áudio conectados e outras integrações usando o LiveRamp Ramp ID.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '662'
+source-wordcount: '660'
 ht-degree: 0%
 
 ---
 
 # Ativar públicos para destinos com curadoria com base em identificadores do LiveRamp
 
-Use a integração do Adobe Real-Time CDP com o [!DNL LiveRamp] para ativar públicos-alvo para uma lista com curadoria de destinos que usam o [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) para ativação, incluindo destinos de áudio e TV conectados, como os listados abaixo.
+Use a integração do Adobe Real-Time CDP com o [!DNL LiveRamp] para ativar públicos-alvo para uma lista com curadoria de destinos que usam o [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) para ativação, incluindo destinos de áudio e TV conectados, como os listados abaixo.
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ Após exportar os públicos, ative-os usando o destino [[!DNL LiveRamp - Distrib
 
 Assista ao vídeo abaixo para obter uma explicação completa do fluxo de trabalho descrito nesta página.
 
->[!VIDEO](https://video.tv.adobe.com/v/3452662?captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
 ### Etapa 1: enviar seus públicos do Experience Platform para o LiveRamp, por meio do destino [!DNL LiveRamp - Onboarding] {#onboarding}
 

@@ -2,9 +2,9 @@
 title: Conexão com a Lista de clientes do Pinterest
 description: Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: b6673844a98e2c2bb07b44c6d658a902b08cbea0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '963'
 ht-degree: 4%
 
 ---
@@ -17,7 +17,7 @@ Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram s
 
 >[!IMPORTANT]
 >
->Esse destino foi criado pela equipe do Pinterest. Para quaisquer consultas ou solicitações de atualização, entre em contato diretamente em https://help.pinterest.com/en/contact.
+>Esse destino foi criado pela equipe do Pinterest. Para qualquer consulta ou solicitação de atualização, entre em contato diretamente em https://help.pinterest.com/en/contact.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -26,7 +26,7 @@ Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram s
 
 ## Identidades suportadas {#supported-identities}
 
-O destino [!DNL Pinterest Customer List] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR#getting-started).
+O destino [!DNL Pinterest Customer List] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 Na [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do fluxo de trabalho de ativação de destino, mapeie as identidades desejadas para o campo de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest.
 
@@ -76,14 +76,14 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Pinterest Customer List], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
 
-### Caso de uso #1
+### Caso de uso #1 {#use-case-1}
 
 Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
 
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
@@ -111,7 +111,7 @@ Quando o token expira, as exportações de dados para o destino param de funcion
    ![Janela modal com opção Reconectar OAuth](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Suas credenciais de autenticação são atualizadas e o tempo de expiração é redefinido para 30 dias.
 
 ### Ativar alertas {#enable-alerts}
@@ -123,7 +123,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -135,7 +135,7 @@ Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as p
 
 ## Recursos adicionais {#additional-resources}
 
-Consulte a [página da Central de ajuda da Pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obter informações adicionais.
+Consulte a [página da Central de Ajuda da Pinterest](https://help.pinterest.com/en/business/article/audience-targeting) para obter mais informações.
 
 +++ Exibir changelog
 

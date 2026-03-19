@@ -3,7 +3,7 @@ title: LiveRamp - Conexão de integração
 description: Saiba como usar o conector do LiveRamp para integrar públicos do Adobe Real-Time Customer Data Platform ao LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 4%
@@ -22,7 +22,7 @@ Como profissional de marketing, desejo enviar públicos-alvo do Adobe Experience
 
 ## Pré-requisitos {#prerequisites}
 
-A conexão [!DNL LiveRamp - Onboarding] exporta arquivos usando o armazenamento SFTP[&#x200B; do &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
+A conexão [!DNL LiveRamp - Onboarding] exporta arquivos usando o armazenamento SFTP[ do ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
 
 Antes de enviar dados do Experience Platform para o [!DNL LiveRamp - Onboarding], você precisa de suas credenciais do [!DNL LiveRamp]. Entre em contato com o representante do [!DNL LiveRamp] para obter suas credenciais, caso ainda não as tenha.
 
@@ -71,7 +71,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -136,7 +136,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](/help/destinations/ui/activate-batch-profile-destinations.md) para obter instruções sobre como ativar públicos-alvo para esse destino.

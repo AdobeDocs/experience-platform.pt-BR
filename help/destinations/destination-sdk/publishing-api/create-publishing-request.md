@@ -2,9 +2,9 @@
 description: Saiba como formatar uma chamada de API para enviar uma solicitação de publicação de destino por meio do Adobe Experience Platform Destination SDK.
 title: Criar uma solicitação de publicação de destino
 exl-id: 913be9de-a699-4756-885d-b3761ec729cb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '449'
+source-wordcount: '447'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Use o endpoint da API de destinos de publicação para enviar uma solicitação 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de publicação de destino {#get-started}
 
@@ -77,10 +77,10 @@ Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da solicitaçã
 
 +++
 
-## Manipulação de erros de API
+## Manipulação de erros de API {#error-handling}
 
 Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Depois de ler este documento, agora você sabe como enviar uma solicitação de publicação para o seu destino. A equipe do Adobe Experience Platform revisará sua solicitação de publicação e entrará em contato com você em cinco dias úteis.

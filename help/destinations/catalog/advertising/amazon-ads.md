@@ -3,9 +3,9 @@ title: Anúncios do Amazon
 description: O Amazon Ads oferece uma variedade de opções para ajudá-lo a atingir suas metas de publicidade para vendedores registrados, fornecedores, fornecedores de livros, autores de KDP (Kindle Direct Publishing), desenvolvedores de aplicativos e/ou agências. A integração do Amazon Ads com o Adobe Experience Platform fornece integração pronta para uso para produtos Amazon Ads, incluindo o Amazon DSP (ADSP). Usando o destino do Amazon Ads no Adobe Experience Platform, os usuários podem definir públicos-alvo do anunciante para direcionamento e ativação no Amazon DSP.
 last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2168'
+source-wordcount: '2164'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ A integração do [!DNL Amazon Ads] com o Adobe Experience Platform fornece inte
 
 Ao usar o destino [!DNL Amazon Ads] no Adobe Experience Platform, os usuários podem definir públicos-alvo de anunciante para direcionamento e ativação no Amazon DSP.  Além disso, os usuários podem carregar seus dados no [!DNL Amazon Marketing Cloud] para entender o desempenho por público-alvo, as dimensões fornecidas pelo anunciante, a associação a segmentos do Amazon ou outros sinais disponíveis na AMC. Depois de carregar os públicos-alvo do anunciante para a AMC, os usuários poderão usar o [!DNL Amazon Marketing Cloud] para modificar, aprimorar ou anexar membros do público-alvo usando sinais do Amazon no [!DNL Amazon Marketing Cloud].
 
-A AMC reúne sinais únicos de todas as propriedades próprias e operadas da Amazon, abrangendo mídia, incluindo exibição, vídeo, transmissão de TV, áudio e anúncios patrocinados. Os usuários podem enviar facilmente segmentos com curadoria do Adobe Experience Platform para a AMC a fim de aprimorar o aprendizado, como grupos dentro do mercado, coortes de estilo de vida e padrões de engajamento da marca. Segmentos aumentados podem ser usados para otimizar ativações de mídia no Amazon DSP.
+A AMC reúne sinais únicos de todas as propriedades próprias e operadas da Amazon, abrangendo mídia, incluindo exibição, vídeo, transmissão de TV, áudio e anúncios patrocinados. Os usuários podem enviar segmentos com curadoria do Adobe Experience Platform para a AMC a fim de aprimorar o aprendizado, como grupos dentro do mercado, coortes de estilo de vida e padrões de engajamento da marca. Segmentos aumentados podem ser usados para otimizar ativações de mídia no Amazon DSP.
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ Essa integração com o Amazon DSP permite que [!DNL Amazon Ads] anunciantes tra
 
 Essa integração com o [!DNL Amazon Marketing Cloud] (AMC) permite que [!DNL Amazon Ads] anunciantes passem segmentos da CDP do Adobe Experience Platform Form para a AMC. Os anunciantes podem então unir as entradas da CDP com sinais do [!DNL Amazon Ads] e realizar análises personalizadas em tópicos como impacto de mídia, segmentos de público-alvo e jornadas do cliente em formato compatível com a privacidade. Por exemplo, um anunciante pode fazer upload de uma lista de seus clientes existentes para entender o desempenho agregado da campanha de publicidade ou estatísticas agregadas de eventos de conversão no Amazon, como visualizar uma página de detalhes do produto, adicionar um produto a um carrinho de compras ou comprar um produto.
 
-### Otimização do Advertising
+### Otimização do Advertising {#advertising-optimization}
 
 Essa integração com o [!DNL Amazon Marketing Cloud] (AMC) permite que os anunciantes carreguem suas próprias listas de clientes e, usando o SQL [!DNL Amazon Marketing Cloud], executem análises de sobreposição, supressões, adições ou otimizações para públicos de forma recorrente antes de criar um público pronto para ativação no Amazon DSP para direcionamento.
 
@@ -103,7 +103,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -141,7 +141,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

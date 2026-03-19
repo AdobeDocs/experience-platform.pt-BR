@@ -3,7 +3,7 @@ title: Exportar arrays, mapas e objetos do Real-Time CDP
 type: Tutorial
 description: Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para destinos de armazenamento na nuvem.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1062'
 ht-degree: 13%
@@ -16,7 +16,7 @@ ht-degree: 13%
 >
 >A funcionalidade para exportar matrizes e outros objetos complexos para destinos de armazenamento na nuvem está geralmente disponível para os seguintes destinos: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md).
 >
->Além disso, você pode exportar campos do tipo mapa para os seguintes destinos: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Hubs de Eventos do Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
+>Além disso, você pode exportar campos do tipo mapa para os seguintes destinos: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Hubs de Eventos da Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
 Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md). Além disso, você pode exportar campos do tipo mapa para [destinos corporativos](/help/destinations/destination-types.md#advanced-enterprise-destinations) e [destinos de personalização de borda](/help/destinations/destination-types.md#edge-personalization-destinations) limitados. Leia este documento para entender o fluxo de trabalho de exportação, os casos de uso ativados por essa funcionalidade e as limitações conhecidas. Consulte a tabela abaixo para entender a funcionalidade disponível por tipo de destino.
@@ -26,7 +26,7 @@ Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para [destinos de
 | Destinos de armazenamento na nuvem criados pela Adobe (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google Cloud Storage, SFTP) | Sim, com a opção Enable export of arrays, maps, and objects ativada ao configurar uma conexão de destino. |
 | Destinos de marketing por email baseados em arquivo (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | Não |
 | Destinos de armazenamento na nuvem personalizados criados por parceiros existentes (destinos personalizados baseados em arquivo criados por meio do Destination SDK) | Não |
-| Destinos empresariais (Amazon Kinesis, Hubs de eventos do Azure, API HTTP) | Parcialmente. Você pode selecionar e exportar objetos do tipo mapa na etapa de mapeamento do fluxo de trabalho de ativação. |
+| Destinos empresariais (Amazon Kinesis, Hubs de eventos da Azure, API HTTP) | Parcialmente. Você pode selecionar e exportar objetos do tipo mapa na etapa de mapeamento do fluxo de trabalho de ativação. |
 | Destinos de transmissão (por exemplo: Facebook, Braze, Google Customer Match e muito mais) | Não |
 | Destinos de personalização do Edge | Não |
 
@@ -34,7 +34,7 @@ Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para [destinos de
 
 Considere essa página o local de entrada para tudo o que você deseja saber sobre a exportação de arrays, mapas e outros tipos de objetos do Experience Platform.
 
-## Vista de baixo à frente
+## Vista de baixo à frente {#bottom-line}
 
 Obtenha as informações mais importantes sobre a funcionalidade nesta seção e prossiga abaixo para as outras seções no documento para obter informações detalhadas.
 

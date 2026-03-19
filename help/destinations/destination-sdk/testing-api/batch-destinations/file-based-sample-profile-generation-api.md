@@ -2,9 +2,9 @@
 description: Esta página explica como usar o endpoint da API /sample-profiles no Destination SDK para gerar perfis de amostra com base em um esquema de origem. Você pode usar esses perfis de amostra para testar a configuração de destino baseada em arquivo.
 title: Gerar perfis de amostra com base em um esquema de origem
 exl-id: aea50d2e-e916-4ef0-8864-9333a4eafe80
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '652'
 ht-degree: 2%
 
 ---
@@ -116,7 +116,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com o número especificado d
 
 Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Depois de ler este documento, agora você sabe como gerar perfis de amostra com base no esquema de origem configurado no [fluxo de ativação](../../../ui/activate-batch-profile-destinations.md) de destino.
 

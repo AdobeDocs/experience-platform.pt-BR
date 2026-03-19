@@ -2,7 +2,7 @@
 title: LiveRamp - Conexão de distribuição
 description: Saiba como usar o LiveRamp - Conector de distribuição para orquestrar e ativar públicos integrados anteriormente no LiveRamp para destinos de publicidade downstream.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '2816'
 ht-degree: 37%
@@ -89,7 +89,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 >abstract="Selecione os identificadores compatíveis com seu destino. Consulte a documentação para obter a lista completa dos identificadores compatíveis com cada destino."
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -455,7 +455,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 A conexão [!DNL LiveRamp - Distribution] ativa públicos que já foram integrados à sua conta do LiveRamp por meio da conexão [LiveRamp - Integração](liveramp-onboarding.md).

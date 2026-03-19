@@ -3,9 +3,9 @@ title: Pesquisar atributos de perfil de borda em tempo real
 description: Saiba como pesquisar atributos de perfil de borda em tempo real, usando o destino do Personalization personalizado e a API do Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 60447ef6f881bf2a34f5502f2259328bf73d08c0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1838'
+source-wordcount: '1836'
 ht-degree: 1%
 
 ---
@@ -36,10 +36,12 @@ Ao configurar o caso de uso descrito nesta página, você usará os seguintes co
 
 Os casos de uso de pesquisa de perfil do Edge estão sujeitos às medidas de proteção de desempenho específicas descritas na tabela abaixo. Para obter mais detalhes sobre as medidas de proteção da API do Edge Network, consulte as medidas de proteção [página de documentação](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/).
 
-| Serviço Edge Network | Segmentação do Edge | Solicitações por segundo |
+| Serviço Edge Network | Segmentação de borda | Solicitações por segundo |
 |---------|----------|---------|
 | [Destino de personalização personalizado](../catalog/personalization/custom-personalization.md) via [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Sim | 1500 |
 | [Destino de personalização personalizado](../catalog/personalization/custom-personalization.md) via [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) | Não | 1500 |
+
+{style="table-layout:auto"}
 
 ## Etapa 1: Criar e configurar um fluxo de dados {#create-datastream}
 
@@ -88,7 +90,7 @@ Ao configurar o novo destino, selecione a sequência de dados criada na [etapa 1
 Depois de criar uma conexão **[!UICONTROL Custom Personalization With Attributes]**, você está pronto para enviar dados de perfil para a Edge Network.
 
 >[!IMPORTANT]
-> 
+>
 > * Para ativar os dados e habilitar a [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 > 
 > Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
@@ -204,6 +206,8 @@ curl -X POST "https://server.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Sim. | A ID da sequência de dados da sequência de dados criada em [etapa 1](#create-datastream). |
 
+{style="table-layout:auto"}
+
 ### Resposta {#response}
 
 Uma resposta bem-sucedida retorna o status HTTP `200 OK`, com um objeto `Handle` que inclui informações semelhantes aos exemplos nas guias abaixo, dependendo se o perfil é encontrado na borda ou não.
@@ -283,6 +287,8 @@ O objeto `handle` fornece as informações descritas na tabela abaixo.
 | `type` | `handle` objetos são agrupados por tipo. Para casos de uso de pesquisa de perfil de borda, o tipo do objeto `handle` é sempre `activation:pull`. |
 | `eventIndex` | O Edge Network recebe eventos do cliente na forma de arrays. A ordem dos eventos na matriz é preservada durante o processamento e refletida por esse índice. A indexação do evento começa com `0`. |
 
+{style="table-layout:auto"}
+
 >[!TAB O perfil não existe na borda]
 
 Se o perfil não existir na borda, você pode esperar uma resposta semelhante à abaixo.
@@ -307,6 +313,8 @@ O objeto `handle` fornece as informações descritas na tabela abaixo.
 | `payload` | Quando o perfil não está presente na borda, o objeto `payload` fica vazio. |
 | `type` | `payload` objetos são agrupados por tipo. Para casos de uso de pesquisa de perfil de borda, o tipo do objeto `payload` é sempre `activation:pull`. |
 | `eventIndex` | O Edge Network recebe eventos do cliente na forma de arrays. A ordem dos eventos na matriz é preservada durante o processamento e refletida por esse índice. A indexação do evento começa com `0`. |
+
+{style="table-layout:auto"}
 
 >[!ENDTABS]
 

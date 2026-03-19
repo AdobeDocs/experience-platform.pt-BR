@@ -2,9 +2,9 @@
 description: Saiba como estruturar uma chamada de API para criar uma configuração de destino por meio do Adobe Experience Platform Destination SDK.
 title: Criar uma configuração de destino
 exl-id: aae4aaa8-1dd0-4041-a86c-5c86f04d7d13
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1213'
+source-wordcount: '1210'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ Para obter uma descrição detalhada dos recursos que você pode configurar por 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de configuração de destino {#get-started}
 
@@ -203,8 +203,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `customerDataFields.enum` | String | Renderiza o campo personalizado como um menu suspenso e lista as opções disponíveis para o usuário. <br/><br/> Consulte [Campos de dados do cliente](../../functionality/destination-configuration/customer-data-fields.md) para obter informações detalhadas sobre essas configurações. |
 | `customerDataFields.default` | String | Define o valor padrão de uma lista `enum`. |
 | `customerDataFields.pattern` | String | Impõe um padrão para o campo personalizado, se necessário. Use expressões regulares para aplicar um padrão. Por exemplo, se as IDs do cliente não incluírem números ou sublinhados, digite `^[A-Za-z]+$` nesse campo. <br/><br/> Consulte [Campos de dados do cliente](../../functionality/destination-configuration/customer-data-fields.md) para obter informações detalhadas sobre essas configurações. |
-| `uiAttributes.documentationLink` | String | Refere-se à página de documentação no [Catálogo de Destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=pt-BR#catalog) para o seu destino. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, onde `YOURDESTINATION` é o nome do seu destino. Para um destino chamado Moviestar, você usaria `https://www.adobe.com/go/destinations-moviestar-en`. Observe que esse link funciona somente depois que o Adobe define seu destino como ativo e a documentação é publicada. <br/><br/> Consulte [atributos da interface](../../functionality/destination-configuration/ui-attributes.md) para obter informações detalhadas sobre essas configurações. ![Imagem da interface do Experience Platform mostrando o link da documentação.](../../assets/authoring-api/destination-configuration/documentation-url.png "URL da documentação"){width="100" zoomable="yes"} |
-| `uiAttributes.category` | String | Refere-se à categoria atribuída ao seu destino no Adobe Experience Platform. Para obter mais informações, leia [Categorias de Destino](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=pt-BR#destination-categories). Use um dos seguintes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Consulte [atributos da interface](../../functionality/destination-configuration/ui-attributes.md) para obter informações detalhadas sobre essas configurações. |
+| `uiAttributes.documentationLink` | String | Refere-se à página de documentação no [Catálogo de Destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html#catalog) para o seu destino. Use `https://www.adobe.com/go/destinations-YOURDESTINATION-en`, onde `YOURDESTINATION` é o nome do seu destino. Para um destino chamado Moviestar, você usaria `https://www.adobe.com/go/destinations-moviestar-en`. Observe que esse link funciona somente depois que o Adobe define seu destino como ativo e a documentação é publicada. <br/><br/> Consulte [atributos da interface](../../functionality/destination-configuration/ui-attributes.md) para obter informações detalhadas sobre essas configurações. ![Imagem da interface do Experience Platform mostrando o link da documentação.](../../assets/authoring-api/destination-configuration/documentation-url.png "URL da documentação"){width="100" zoomable="yes"} |
+| `uiAttributes.category` | String | Refere-se à categoria atribuída ao seu destino no Adobe Experience Platform. Para obter mais informações, leia [Categorias de Destino](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html#destination-categories). Use um dos seguintes valores: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. <br/><br/> Consulte [atributos da interface](../../functionality/destination-configuration/ui-attributes.md) para obter informações detalhadas sobre essas configurações. |
 | `uiAttributes.connectionType` | String | O tipo de conexão, dependendo do destino. Valores compatíveis: <ul><li>`Server-to-server`</li><li>`Cloud storage`</li><li>`Azure Blob`</li><li>`Azure Data Lake Storage`</li><li>`S3`</li><li>`SFTP`</li><li>`DLZ`</li></ul> |
 | `uiAttributes.frequency` | String | Refere-se ao tipo de exportação de dados compatível com o destino. Defina como `Streaming` para integrações baseadas em API ou `Batch` ao exportar arquivos para seus destinos. |
 | `identityNamespaces.externalId.acceptsAttributes` | Booleano | Indica se os clientes podem mapear atributos de perfil padrão para a identidade que você está configurando. |
@@ -221,7 +221,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 | `schemaConfig.profileFields` | Matriz | Ao adicionar `profileFields` predefinido conforme mostrado na configuração acima, os usuários terão a opção de mapear atributos do Experience Platform para os atributos predefinidos no seu destino. |
 | `schemaConfig.profileRequired` | Booleano | Use `true` se os usuários puderem mapear atributos de perfil do Experience Platform para atributos personalizados no lado do seu destino, conforme mostrado no exemplo de configuração acima. |
 | `schemaConfig.segmentRequired` | Booleano | Sempre usar `segmentRequired:true`. |
-| `schemaConfig.identityRequired` | Booleano | Use `true` se os usuários puderem mapear namespaces de identidade da Experience Platform para o esquema desejado. |
+| `schemaConfig.identityRequired` | Booleano | Use `true` se os usuários puderem mapear namespaces de identidade do Experience Platform para o esquema desejado. |
 
 {style="table-layout:auto"}
 
@@ -233,11 +233,11 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da configuraç�
 
 +++
 
-## Manipulação de erros de API
+## Manipulação de erros de API {#error-handling}
 
 Os endpoints da API do Destination SDK seguem os princípios gerais de mensagem de erro da API do Experience Platform. Consulte [códigos de status da API](../../../../landing/troubleshooting.md#api-status-codes) e [erros no cabeçalho da solicitação](../../../../landing/troubleshooting.md#request-header-errors) no guia de solução de problemas do Experience Platform.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Depois de ler este documento, agora você sabe como criar uma nova configuração de destino por meio do ponto de extremidade da API `/authoring/destinations` do Destination SDK.
 

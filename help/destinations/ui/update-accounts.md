@@ -4,9 +4,9 @@ title: Atualizar contas de destino
 type: Tutorial
 description: Este tutorial lista as etapas para atualizar contas de destino na interface do usuário do Adobe Experience Platform
 exl-id: afb41878-4205-4c64-af4d-e2740f852785
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Visão geral {#overview}
 
-A guia **[!UICONTROL Contas]** mostra detalhes sobre as conexões estabelecidas com vários destinos. Consulte a [Visão geral das contas](../ui/destinations-workspace.md#accounts) para obter todas as informações que você pode obter em cada conta de destino.
+A guia **[!UICONTROL Accounts]** mostra detalhes sobre as conexões estabelecidas com vários destinos. Consulte a [Visão geral das contas](../ui/destinations-workspace.md#accounts) para obter todas as informações que você pode obter em cada conta de destino.
 
 Este tutorial aborda as etapas para atualizar detalhes da conta de destino usando a interface do usuário do Experience Platform.
 
@@ -29,7 +29,7 @@ Para destinos em lote, é possível atualizar a chave de acesso ou secreta, se a
 
 Siga as etapas abaixo para atualizar os detalhes da conexão com os destinos existentes.
 
-1. Faça logon na [interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinos]** na barra de navegação esquerda. Selecione **[!UICONTROL Contas]** no cabeçalho superior para exibir suas contas existentes.
+1. Faça logon na [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinations]** na barra de navegação esquerda. Selecione **[!UICONTROL Accounts]** no cabeçalho superior para exibir suas contas existentes.
 
    ![Guia Contas](../assets/ui/update-accounts/accounts-tab.png)
 
@@ -37,13 +37,13 @@ Siga as etapas abaixo para atualizar os detalhes da conexão com os destinos exi
 
    ![Filtrar contas de destino](../assets/ui/update-accounts/filter-accounts.png)
 
-3. Selecione as reticências (`...`) ao lado do nome da conta que você deseja atualizar. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Ativar públicos-alvo]**, **[!UICONTROL Editar detalhes]** e **[!UICONTROL Excluir]** a conta. Selecione o botão ![Editar detalhes](/help/images/icons/edit.png) **[!UICONTROL Editar detalhes]** para editar as informações da conta.
+3. Selecione as reticências (`...`) ao lado do nome da conta que você deseja atualizar. Um painel pop-up é exibido, fornecendo opções para **[!UICONTROL Activate audiences]**, **[!UICONTROL Edit details]** e **[!UICONTROL Delete]** a conta. Selecione o botão ![Editar detalhes](/help/images/icons/edit.png) **[!UICONTROL Edit details]** para editar as informações da conta.
 
    ![Editar conta](../assets/ui/update-accounts/accounts-edit.png)
 
 4. Insira suas credenciais de conta atualizadas.
 
-   * Para contas que usam um tipo de conexão `OAuth1` ou `OAuth2`, selecione **[!UICONTROL Reconectar OAuth]** para renovar suas credenciais de conta. Você também pode atualizar o nome e a descrição da sua conta.
+   * Para contas que usam um tipo de conexão `OAuth1` ou `OAuth2`, selecione **[!UICONTROL Reconnect OAuth]** para renovar suas credenciais de conta. Você também pode atualizar o nome e a descrição da sua conta.
 
    ![Editar OAuth de detalhes](../assets/ui/update-accounts/edit-details-oauth.png)
 
@@ -59,10 +59,10 @@ Siga as etapas abaixo para atualizar os detalhes da conexão com os destinos exi
 
    ![Editar detalhes de servidor para servidor](../assets/ui/update-accounts/edit-details-s2s.png)
 
-5. Selecione **[!UICONTROL Salvar]** para concluir a atualização dos detalhes da conta.
+5. Selecione **[!UICONTROL Save]** para concluir a atualização de detalhes da conta.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você usou com êxito o espaço de trabalho **[!UICONTROL destinos]** para atualizar contas existentes.
+Ao seguir este tutorial, você usou com êxito o espaço de trabalho **[!UICONTROL destinations]** para atualizar contas existentes.
 
 Para obter mais informações sobre destinos, consulte a [visão geral sobre destinos](../catalog/overview.md).

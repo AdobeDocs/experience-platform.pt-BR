@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para criar uma Adobe Experience Platform Destination SDK de configuração de credencial.
 title: Criar uma configuração de credencial
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '584'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,7 @@ Ao usar um sistema de autenticação global, você deve definir `"authentication
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de credenciais {#get-started}
 
@@ -193,9 +193,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 | Parâmetro | Tipo | Descrição |
 | -------- | ----------- | ----------- |
 | `url` | String | URL do provedor de autorização |
-| `tenant` | String | Locatário do Armazenamento Azure Data Lake |
-| `servicePrincipalId` | String | ID da Entidade de Serviço do Azure para Armazenamento do Azure Data Lake |
-| `servicePrincipalKey` | String | Chave da Entidade de Serviço do Azure para Armazenamento do Azure Data Lake |
+| `tenant` | String | Locatário do Azure Data Lake Storage |
+| `servicePrincipalId` | String | ID principal de serviço da Azure para o Azure Data Lake Storage |
+| `servicePrincipalKey` | String | Chave principal de serviço do Azure para o Azure Data Lake Storage |
 
 {style="table-layout:auto"}
 
@@ -207,7 +207,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da configuraç�
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Criar uma [!DNL Azure Blob Storage] configuração de credencial**
 

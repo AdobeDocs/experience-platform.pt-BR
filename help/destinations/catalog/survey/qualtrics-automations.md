@@ -4,9 +4,9 @@ title: Automações do Qualtrics
 description: Sincronize a experiência e os dados operacionais do cliente para desbloquear a personalização em escala. Use a agregação de várias fontes de dados operacionais no Adobe Experience Platform como uma entrada no Qualtrics Experience ID para entender melhor seus clientes e permitir que o alcance direcionado feche a lacuna quando se trata de entender a intenção, a emoção e os impulsionadores de experiência.
 last-substantial-update: 2023-10-25T00:00:00Z
 exl-id: 3289ed4c-8542-4e22-a574-e49cc6527a24
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1283'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Use a agregação de várias fontes de dados operacionais no Adobe Experience Pl
 
 >[!IMPORTANT]
 >
->O conector de destino e a página de documentação são criados e mantidos pela equipe do Qualtrics. Para fazer consultas ou solicitações de atualização, entre em contato diretamente com o [Hub de Sucesso do Cliente](https://support-portal.qualtrics.com/).
+>O conector de destino e a página de documentação são criados e mantidos pela equipe do Qualtrics. Para qualquer consulta ou solicitação de atualização, contate-os diretamente fazendo logon no [Hub de Sucesso do Cliente](https://support-portal.qualtrics.com/).
 
 ## Casos de uso {#use-cases}
 
@@ -39,14 +39,14 @@ Para ajudá-lo a entender melhor como e quando você deve usar o destino *Automa
 
 **Resultado**: o feedback contínuo permite que a organização adapte e melhore o processo de integração, resultando em melhor engajamento e produtividade entre os novos funcionários.
 
-## Pré-requisitos
+## Pré-requisitos {#prerequisites}
 
 Antes de configurar o destino do Qualtrics no Adobe Experience Platform, verifique se os seguintes pré-requisitos foram atendidos:
 
 * Você tem uma conta do Qualtrics.
 * Você obteve o token de API necessário do Qualtrics.
 
-### Obtenção de um token de API
+### Obtenção de um token de API {#obtaining-api-token}
 
 Abaixo estão as etapas necessárias para obter um token de API do Qualtrics.
 
@@ -105,7 +105,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -135,18 +135,18 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
-Leia [Ativar perfis e segmentos para destinos de exportação de segmento de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público para este destino.
+Leia [Ativar públicos-alvo para destinos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ### Mapear atributos e identidades {#map}
 
 Esse destino tem um esquema aberto, portanto, você pode enviar quaisquer propriedades para o Qualtrics.
 
-#### Mapear atributos
+#### Mapear atributos {#map-attributes}
 
-Para adicionar um atributo ao mapeamento, basta selecionar **atributos personalizados** ao adicionar um novo mapeamento. Você pode inserir qualquer nome para o seu atributo. O Qualtrics incentiva a convenção de nomenclatura *camelCase* para nomes de atributos (veja abaixo a captura de tela para ver um exemplo).
+Para adicionar um atributo ao mapeamento, selecione **atributos personalizados** ao adicionar um novo mapeamento. Você pode inserir qualquer nome para o seu atributo. O Qualtrics incentiva a convenção de nomenclatura *camelCase* para nomes de atributos (veja abaixo a captura de tela para ver um exemplo).
 
 ![Atributo personalizado](/help/destinations/assets/catalog/survey/qualtrics/custom-attribute.png)
 
@@ -154,7 +154,7 @@ Consulte a captura de tela abaixo para obter um exemplo de possíveis mapeamento
 
 ![Mapeamentos de exemplo](/help/destinations/assets/catalog/survey/qualtrics/example-mappings.png)
 
-#### Mapear identidades
+#### Mapear identidades {#map-identities}
 
 É obrigatório selecionar um namespace de identidade para este destino. Os dois possíveis mapeamentos de campo de origem para campo de destino são:
 

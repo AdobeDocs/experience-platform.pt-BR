@@ -4,9 +4,9 @@ title: Ative públicos para destinos baseados em arquivo usando a API do Serviç
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: ba2de112ba9f1fce35f847e9eb9396e65f2a9232
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '4976'
+source-wordcount: '4973'
 ht-degree: 4%
 
 ---
@@ -102,7 +102,7 @@ Antes de iniciar o fluxo de trabalho para exportar perfis, identifique a especif
 | Destino | Especificação da conexão | Especificação de fluxo |
 |---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
-| Armazenamento Azure Blob | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
+| Armazenamento de Blobs do Azure | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
 | Azure Data Lake Gen 2(ADLS Gen2) | `be2c3209-53bc-47e7-ab25-145db8b873e1` | `17be2013-2549-41ce-96e7-a70363bec293` |
 | Zona de aterrissagem de dados (DLZ) | `10440537-2a7b-4583-ac39-ed38d4b848e8` | `cd2fc47e-e838-4f38-a581-8fff2f99b63a` |
 | Google Cloud Storage | `c5d93acb-ea8b-4b14-8f53-02138444ae99` | `585c15c4-6cbf-4126-8f87-e26bff78b657` |
@@ -148,7 +148,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Solicitação**
 
@@ -447,7 +447,7 @@ Observe a linha destacada com comentários embutidos no exemplo [!DNL connection
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostrando [!DNL auth spec]
 
@@ -791,7 +791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Solicitação**
 
@@ -799,7 +799,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obter informações sobre como obter as credenciais de autenticação necessárias, consulte a seção [autenticar no destino](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) da página de documentação de destino do Armazenamento de Blob do Azure.
+>Para obter informações sobre como obter as credenciais de autenticação necessárias, consulte a seção [autenticar no destino](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) da página de documentação de destino do Azure Blob Storage.
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -1094,7 +1094,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!ENDTABS]
 
-### Adicionar criptografia aos arquivos exportados
+### Adicionar criptografia aos arquivos exportados {#add-encryption}
 
 Como opção, você pode adicionar criptografia aos arquivos exportados. Para fazer isso, você precisa adicionar itens do objeto `encryption`. Consulte o exemplo de solicitação abaixo com os parâmetros obrigatórios destacados:
 
@@ -1417,7 +1417,7 @@ Observe as linhas destacadas com comentários embutidos no exemplo [!DNL connect
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostrando parâmetros de conexão de destino
 
@@ -2488,7 +2488,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Solicitação**
 
@@ -3017,7 +3017,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Solicitação**
 
@@ -3273,7 +3273,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 Observe a ID de fluxo de dados na resposta. Essa ID será necessária em etapas posteriores.
 
-### Adicionar públicos-alvo à exportação
+### Adicionar públicos-alvo à exportação {#add-audiences}
 
 Nesta etapa, também é possível selecionar quais públicos-alvo você deseja exportar para o destino. Para obter informações abrangentes sobre esta etapa e o formato da solicitação para adicionar um público-alvo ao fluxo de dados, veja os exemplos na seção [Atualizar um fluxo de dados de destino](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Dataflows/operation/patchFlowById) da documentação de referência da API.
 
@@ -3292,7 +3292,7 @@ Por exemplo, para obter o mapeamento a seguir mostrado na interface do usuário 
 
 ![Exemplo de etapa de mapeamento](/help/destinations/assets/api/file-based-segment-export/mapping-example.png)
 
-### Criar um esquema de entrada
+### Criar um esquema de entrada {#create-input-schema}
 
 Para criar um esquema de entrada, primeiro é necessário recuperar o [esquema de união](/help/profile/ui/union-schema.md) e as identidades que podem ser exportadas para o destino. Este é o esquema de atributos e identidades que você pode selecionar como mapeamento de origem.
 
@@ -3730,7 +3730,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 A ID na resposta representa o identificador exclusivo do esquema de entrada criado. Copie a ID da resposta, pois você reutilizará isso em uma etapa posterior.
 
-### Criar um esquema de saída
+### Criar um esquema de saída {#create-output-schema}
 
 Em seguida, você deve configurar o schema de saída para sua exportação. Primeiro, é necessário encontrar e inspecionar o esquema de parceiro existente.
 

@@ -3,9 +3,9 @@ title: Magnite Conexão de destino em tempo real
 description: Use esse destino para fornecer públicos-alvo da CDP do Adobe para a plataforma de transmissão Magnite em tempo real.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1410'
+source-wordcount: '1403'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,9 @@ Para ativar os públicos para [!DNL Magnite Streaming], você deve:
 * Ative os públicos no destino [!DNL Magnite: Real-Time], conforme mostrado nesta página.
 * Ative o mesmo público no destino Magnite: Batch. O destino [!DNL Magnite: Batch] é um componente obrigatório. Falha ao ativar o público no [!DNL Magnite Streaming] Destino do lote resultará em uma falha de integração e seus públicos-alvo não serão ativados.
 
-Observação: ao usar o destino em Tempo real, o [!DNL Magnite Streaming] receberá públicos em tempo real, mas o Magnite só poderá armazenar temporariamente públicos em tempo real em sua plataforma, e eles serão removidos do sistema em alguns dias. Por isso, se você quiser usar o destino Magnite: Tempo real, *também* precisará usar o destino Magnite: Batch - cada público ativado para o destino em Tempo real, você também precisará ativar para o destino Batch.
+>[!NOTE]
+>
+>Ao usar o destino em Tempo real, o [!DNL Magnite Streaming] receberá públicos em tempo real, mas o Magnite só poderá armazenar temporariamente públicos em tempo real em sua plataforma, e eles serão removidos do sistema em alguns dias. Por isso, se você quiser usar o destino Magnite: Tempo real, *também* precisará usar o destino Magnite: Batch - cada público ativado para o destino em Tempo real, você também precisará ativar para o destino Batch.
 
 >[!IMPORTANT]
 >
@@ -129,14 +131,14 @@ Você pode ativar os alertas para receber notificações sobre o status do fluxo
 
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
 >
 >* Para ativar dados, você precisa das **[!UICONTROL View destinations]**, **[!UICONTROL Activate destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-Leia [Ativar perfis e segmentos para destinos de exportação de segmento de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar segmentos de público para este destino.
+Leia [Ativar públicos-alvo para destinos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 Depois de criar a conexão de destino, você pode prosseguir para o fluxo de ativação de público. A seção a seguir mostra como ativar públicos-alvo usando o destino em tempo real.
 
@@ -178,7 +180,7 @@ Depois que os públicos-alvo forem carregados, você poderá validar se os públ
 
 * Após a assimilação, espera-se que os públicos-alvo apareçam em [!DNL Magnite Streaming] dentro de alguns minutos e possam ser aplicados a uma oferta. Você pode confirmar isso verificando a ID do segmento que foi compartilhada durante as etapas de ativação no Adobe Experience Platform.
 
-## Ativar os mesmos públicos-alvo por meio do destino [!DNL Magnite: Batch]
+## Ativar os mesmos públicos-alvo por meio do destino [!DNL Magnite: Batch] {#activate-magnite-batch}
 
 Os públicos-alvo compartilhados com [!DNL Magnite Streaming] usando o destino em Tempo real também precisarão ser compartilhados usando o destino Magnite: Batch. Quando configurados corretamente, os nomes de segmentos na interface do usuário do [!DNL Magnite Streaming] são atualizados para refletir aqueles usados na atualização pós-diária do Adobe Experience Platform.
 

@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para atualizar uma configuração de credencial existente por meio do Adobe Experience Platform Destination SDK.
 title: Atualizar uma configuração de credencial
 exl-id: ebff370c-9189-48df-871f-ed0e1cd535c8
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '608'
 ht-degree: 7%
 
 ---
@@ -31,7 +31,7 @@ Ao usar um sistema de autenticação global, você deve definir `"authentication
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de credenciais {#get-started}
 
@@ -199,7 +199,7 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/credentials
 | Parâmetro | Tipo | Descrição |
 | -------- | ----------- | ----------- |
 | `url` | String | URL do provedor de autorização |
-| `tenant` | String | Locatário do Armazenamento Azure Data Lake |
+| `tenant` | String | Locatário do Azure Data Lake Storage |
 | `servicePrincipalId` | String | [!DNL Azure Service Principal] ID para [!DNL Azure Data Lake Storage] |
 | `servicePrincipalKey` | String | [!DNL Azure Service Principal Key] para [!DNL Azure Data Lake Storage] |
 
@@ -213,7 +213,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com os detalhes da configura
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Atualizar uma configuração de credencial [!DNL Azure Blob]**
 

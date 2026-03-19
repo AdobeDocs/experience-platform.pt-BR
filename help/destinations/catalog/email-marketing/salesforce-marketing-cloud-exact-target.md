@@ -2,9 +2,9 @@
 title: (API) Conexão com o Salesforce Marketing Cloud
 description: O destino Salesforce Marketing Cloud (anteriormente conhecido como ExactTarget) permite exportar os dados da conta e ativá-los no Salesforce Marketing Cloud para atender às suas necessidades comerciais.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2956'
+source-wordcount: '2954'
 ht-degree: 2%
 
 ---
@@ -37,7 +37,7 @@ O departamento de vendas de uma plataforma de aluguel de residências quer trans
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL (API) Salesforce Marketing Cloud], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL (API) Salesforce Marketing Cloud], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criados em [!DNL Experience Platform].
 
 ### Pré-requisitos em [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
@@ -131,6 +131,8 @@ Anote os itens abaixo antes de autenticar no destino [!DNL (API) Salesforce Mark
 |---|---|---|
 | contactKey | [!DNL Salesforce Marketing Cloud] Chave do Contato. Consulte a [!DNL Salesforce Marketing Cloud] [documentação](https://help.salesforce.com/s/articleView?id=sf.mc_cab_contact_builder_best_practices.htm&type=5) se precisar de orientação adicional. | Obrigatório |
 
+{style="table-layout:auto"}
+
 ## Públicos-alvo compatíveis {#supported-audiences}
 
 Esta seção descreve quais tipos de públicos-alvo você pode exportar para esse destino.
@@ -187,6 +189,8 @@ Para autenticar no destino, preencha os campos obrigatórios abaixo e selecione 
 | **[!UICONTROL Client ID]** | Seu [!DNL Salesforce Marketing Cloud] `Client ID`. |
 | **[!UICONTROL Client Secret]** | Seu [!DNL Salesforce Marketing Cloud] `Client Secret`. |
 
+{style="table-layout:auto"}
+
 ![Captura de tela da interface do usuário do Experience Platform mostrando como autenticar no Salesforce Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
 Se os detalhes fornecidos forem válidos, a interface exibirá um status **[!UICONTROL Connected]** com uma marca de seleção verde e você poderá prosseguir para a próxima etapa.
@@ -208,7 +212,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 > * Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 > * Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -269,6 +273,8 @@ Um exemplo típico com base na imagem mostrada acima pode ser.
 | --- | --- | --- |
 | público-alvo do salesforce mc 1 | `salesforce_mc_segment_1` | `salesforce_mc_segment_1` |
 | salesforce mc audience 2 | `salesforce_mc_segment_2` | `salesforce_mc_segment_2` |
+
+{style="table-layout:auto"}
 
 ## Validar exportação de dados {#exported-data}
 

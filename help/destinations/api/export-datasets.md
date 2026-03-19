@@ -4,9 +4,9 @@ title: Exportar conjuntos de dados usando a API do Serviço de fluxo
 description: Saiba como usar a API do Serviço de fluxo para exportar conjuntos de dados para destinos selecionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '5208'
+source-wordcount: '5203'
 ht-degree: 4%
 
 ---
@@ -167,7 +167,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Solicitação**
 
@@ -572,7 +572,7 @@ Observe a linha destacada com comentários embutidos no exemplo [!DNL connection
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostrando [!DNL auth spec]
 
@@ -883,7 +883,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Solicitação**
 
@@ -891,7 +891,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obter informações sobre como obter as credenciais de autenticação necessárias, consulte a seção [autenticar no destino](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) da página de documentação de destino do Armazenamento de Blob do Azure.
+>Para obter informações sobre como obter as credenciais de autenticação necessárias, consulte a seção [autenticar no destino](/help/destinations/catalog/cloud-storage/azure-blob.md#authenticate) da página de documentação de destino do Azure Blob Storage.
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -1270,7 +1270,7 @@ Observe as linhas destacadas com comentários embutidos no exemplo [!DNL connect
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 +++[!DNL Azure Blob Storage] - [!DNL Connection spec] mostrando parâmetros de conexão de destino
 
@@ -1632,7 +1632,7 @@ Usando a especificação acima, você pode criar uma solicitação de conexão d
 >[!TIP]
 >
 >Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/amazon-s3.md#destination-details) da página de documentação do destino [!DNL Amazon S3].
->&#x200B;>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
+>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -1676,7 +1676,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Solicitação**
 
@@ -1685,7 +1685,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/azure-blob.md#destination-details) da página de documentação do destino [!DNL Azure Blob Storage].
->&#x200B;>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
+>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
 
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
@@ -1739,7 +1739,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) da página de documentação do Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
->&#x200B;>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
+>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -1791,7 +1791,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/data-landing-zone.md#destination-details) da página de documentação do destino [!DNL Data Landing Zone].
->&#x200B;>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
+>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -1843,7 +1843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) da página de documentação do destino [!DNL Google Cloud Storage].
->&#x200B;>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
+>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
 
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
@@ -1897,7 +1897,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >[!TIP]
 >
 >Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) da página de documentação do SFTP de destino.
->&#x200B;>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
+>Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -2021,7 +2021,7 @@ A tabela abaixo fornece descrições de todos os parâmetros na seção `schedul
 
 +++
 
->[!TAB Armazenamento Azure Blob]
+>[!TAB Armazenamento de Blob da Azure]
 
 **Solicitação**
 

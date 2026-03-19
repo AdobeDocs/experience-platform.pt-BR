@@ -3,10 +3,10 @@ title: Index Exchange
 description: Conecte-se ao Index Exchange (Index) e ative os dados para que os segmentos de público-alvo possam ser direcionados por ofertas criadas na interface do usuário de índice.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1217'
-ht-degree: 2%
+source-wordcount: '1215'
+ht-degree: 3%
 
 ---
 
@@ -44,7 +44,9 @@ Os segmentos de público-alvo devem ser registrados com [!DNL Index] por meio de
 
 [!DNL Index] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
-Observe que os destinos [!DNL Index Exchange] oferecem suporte a apenas um tipo de identidade por upload. Especifique o tipo de identificador apropriado ao configurar os detalhes de destino (consulte a seção [&quot;Preencher detalhes de destino&quot;](#destination-details) abaixo).
+>[!NOTE]
+>
+>[!DNL Index Exchange] destinos dão suporte a apenas um tipo de identidade por carregamento. Especifique o tipo de identificador apropriado ao configurar os detalhes de destino (consulte a seção [&quot;Preencher detalhes de destino&quot;](#destination-details) abaixo).
 
 Para carregar vários tipos de identidade, crie instâncias separadas do destino [!DNL Index Exchange] para cada tipo de identidade.
 
@@ -96,7 +98,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa da **[!UICONTROL View Destinations]** e da **[!UICONTROL Manage Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -112,7 +114,7 @@ Para configurar detalhes para o destino, preencha os campos abaixo. Um asterisco
 * [!UICONTROL Identifier Type]: Selecione o tipo de identificador fornecido pelo índice que corresponda ao identificador que você está enviando para [!DNL Index]. Consulte a tabela de tipos de identificadores compatíveis abaixo. Se não tiver certeza de qual tipo de identificador usar, contate o representante do [!DNL Index]. Para enviar vários tipos de identificadores, crie instâncias separadas desse destino.
 * [!UICONTROL Account ID]: Digite sua ID de conta do [!DNL Index]. Não é o mesmo que a ID do editor. Se não tiver certeza sobre qual ID usar, contate o representante do [!DNL Index].
 
-#### Tipos de identificador suportados
+#### Tipos de identificador suportados {#supported-identifier-types}
 
 | Tipo de identificador | Descrição |
 |------------------ | ------------- |
@@ -131,10 +133,10 @@ Para configurar detalhes para o destino, preencha os campos abaixo. Um asterisco
 Você pode habilitar alertas para receber notificações sobre o status do fluxo de dados para este destino. Selecione um ou mais alertas da lista para assinar notificações de status para seu fluxo de dados. Para obter mais informações, consulte o manual sobre [assinatura de alertas de destinos usando a interface](../../ui/alerts.md).
 Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICONTROL Next]**.
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

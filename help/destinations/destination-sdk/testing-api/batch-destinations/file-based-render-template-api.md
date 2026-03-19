@@ -2,9 +2,9 @@
 description: Esta página explica como usar o endpoint /authoring/testing/template/render para visualizar como seriam os campos de dados de clientes modelados definidos na configuração de destino.
 title: Validar campos de cliente modelados
 exl-id: 8ed93f0c-3439-4d11-bb2f-d417a1e0b6a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '386'
 ht-degree: 3%
 
 ---
@@ -79,6 +79,8 @@ curl -X POST 'https://platform.adobe.io/data/core/activation/authoring/testing/t
 | -------- | ----------- |
 | `destinationId` | A ID da [configuração de destino](../../authoring-api/destination-configuration/retrieve-destination-configuration.md) que você está testando. |
 | `templates` | Os nomes de campos com modelos definidos na sua [configuração do servidor de destino](../../authoring-api/destination-server/create-destination-server.md). |
+
+{style="table-layout:auto"}
 
 **Resposta**
 

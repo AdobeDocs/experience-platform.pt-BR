@@ -3,10 +3,10 @@ title: Conexão Kevel
 description: Use o destino de transmissão Kevel para ativar públicos diretamente nas APIs de UserDB e Gerenciamento de segmento do Kevel e oferecer suporte ao direcionamento em tempo real no momento da decisão.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 3%
+source-wordcount: '1168'
+ht-degree: 4%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 3%
 O destino de streaming [!DNL Kevel] para o Adobe Experience Platform permite que os clientes ativem os públicos do Adobe diretamente no UserDB e nas APIs de gerenciamento de segmento do [!DNL Kevel], para oferecer suporte ao direcionamento em tempo real no momento da decisão do anúncio.
 
 >[!IMPORTANT]
-> 
+>
 >Se você tiver dúvidas ou quiser solicitar uma atualização sobre o destino [!DNL Kevel] ou sua documentação, envie um email para a equipe [!DNL Kevel] em [support@kevel.com](mailto:support@kevel.com).
 
 ## Casos de uso {#use-cases}
@@ -50,7 +50,7 @@ O destino [!DNL Kevel] oferece suporte à ativação para qualquer identidade qu
 
 {style="table-layout:auto"}
 
-### Suporte para namespaces de identidade personalizados
+### Suporte para namespaces de identidade personalizados {#custom-identity-namespaces}
 
 O destino [!DNL Kevel] **também aceita namespaces personalizados**, conforme definido na implementação do Experience Platform.
 
@@ -60,7 +60,7 @@ Isso significa:
 - Esses namespaces podem ser atribuídos a `kevel_user_key1`, `kevel_user_key2` ou `kevel_user_key3` da mesma forma que os namespaces globais.
 - [!DNL Kevel] gerará **um registro UserDB por instância de cada identidade mapeada**, permitindo a correspondência em tempo real em tempo de decisão de anúncio para cada identificador enviado por seus sistemas.
 
-### Comportamento do mapeamento de identidade
+### Comportamento do mapeamento de identidade {#identity-mapping-behavior}
 
 - Você pode mapear **até três** namespaces de identidade da Experience Platform para os três slots de identidade de [!DNL Kevel].
 - Para cada perfil ativado, [!DNL Kevel] recebe **um registro UserDB por instância de cada identidade mapeada**.
@@ -105,7 +105,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 Siga o fluxo de trabalho padrão do Experience Platform [conectar um destino](../../ui/connect-destination.md).
 
 >[!IMPORTANT]
-> 
+>
 >Você deve ter **permissões para Exibir Destinos** e **Gerenciar Destinos**.
 
 ### Autenticar para o destino {#authenticate}
@@ -126,10 +126,9 @@ Após a autenticação, configure:
 
 ![Detalhes do destino do Kevel](/help/destinations/assets/catalog/advertising/kevel-destination-details.png)
 
-## Ativar segmentos para este destino {#activate}
+## Ativar públicos-alvo para esse destino {#activate}
 
-Para enviar públicos-alvo para [!DNL Kevel], siga o fluxo de trabalho em\
-[Ative perfis e segmentos para destinos de exportação de segmentos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md).
+Para enviar audiências para [!DNL Kevel], siga o fluxo de trabalho em [Ativar audiências para destinos de streaming](/help/destinations/ui/activate-segment-streaming-destinations.md).
 
 ### Desativação de públicos {#deactivate}
 
@@ -155,7 +154,7 @@ Durante a ativação, selecione os namespaces de identidade configurados para [!
 
 Quando um perfil é qualificado para ou sai de um público-alvo, o Experience Platform envia uma atualização de streaming para [!DNL Kevel].
 
-### Carga de exemplo recebida por [!DNL Kevel] UserDB
+### Carga de exemplo recebida por [!DNL Kevel] UserDB {#sample-payload}
 
 ```json
 PUT /udb/{networkId}/segments?userKey=ECID-12345
@@ -213,7 +212,7 @@ Veja abaixo um exemplo de um perfil exportado mostrando:
 }
 ```
 
-#### Como [!DNL Kevel] interpreta este perfil
+#### Como [!DNL Kevel] interpreta este perfil {#kevel-profile-interpretation}
 
 Com a configuração de destino [!DNL Kevel], cada identidade mapeada gera um registro UserDB distinto, o que significa que [!DNL Kevel] recebe:
 

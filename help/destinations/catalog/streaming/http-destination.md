@@ -4,9 +4,9 @@ title: Conexão da API HTTP
 description: Use o destino da API HTTP no Adobe Experience Platform para enviar dados de perfil para um endpoint HTTP de terceiros para executar sua própria análise ou executar outras operações necessárias nos dados de perfil exportados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3039'
 ht-degree: 8%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 8%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 O destino da API HTTP é um destino de streaming [!DNL Adobe Experience Platform] que ajuda a enviar dados de perfil para pontos de extremidade HTTP de terceiros.
 
@@ -135,7 +135,7 @@ curl --location --request POST 'https://some-api.com/token' \
 ## Conectar ao destino {#connect-destination}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). Ao se conectar a esse destino, você deve fornecer as seguintes informações:
@@ -186,7 +186,7 @@ Se você selecionar o tipo de autenticação **[!UICONTROL OAuth 2 Client Creden
 ![Imagem da tela da interface do usuário na qual você pode se conectar ao destino da API HTTP, usando o OAuth 2 com autenticação de Credenciais de Cliente.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
 >[!WARNING]
-> 
+>
 >Ao usar a autenticação [!UICONTROL OAuth 2 Client Credentials], o [!UICONTROL Access Token URL] pode ter no máximo um parâmetro de consulta. Adicionar um [!UICONTROL Access Token URL] com mais parâmetros de consulta pode levar a problemas ao conectar ao seu ponto de extremidade.
 
 >[!NOTE]
@@ -248,7 +248,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* [A avaliação de política de consentimento](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) não tem suporte atualmente em exportações para o destino da API HTTP. [Leia mais](/help/destinations/ui/activate-streaming-profile-destinations.md#consent-policy-evaluation).
 
@@ -268,7 +268,9 @@ O Experience Platform otimiza o comportamento de exportação de perfis para o d
 
 Em todos os casos descritos acima, somente os perfis em que ocorreram atualizações relevantes são exportados para o seu destino. Por exemplo, se um público-alvo mapeado para o fluxo de destino tiver cem membros e cinco novos perfis se qualificarem para o segmento, a exportação para o destino será incremental e incluirá apenas os cinco novos perfis.
 
-Observe que todos os atributos mapeados são exportados para um perfil, independentemente de onde estejam as alterações. Portanto, no exemplo acima, todos os atributos mapeados para esses cinco novos perfis serão exportados mesmo se os atributos em si não tiverem sido alterados.
+>[!NOTE]
+>
+>Todos os atributos mapeados são exportados para um perfil, independentemente das alterações. Portanto, no exemplo acima, todos os atributos mapeados para esses cinco novos perfis serão exportados mesmo se os atributos em si não tiverem sido alterados.
 
 ### O que determina uma exportação de dados e o que está incluído na exportação {#what-determines-export-what-is-included}
 
@@ -373,7 +375,9 @@ Abaixo estão mais exemplos de dados exportados, dependendo das configurações 
       }
 ```
 
-**Observação**: neste exemplo, o primeiro segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) é mapeado para o destino e inclui o campo `name`. O segundo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) não é mapeado para o destino e não inclui o campo `name`, mesmo que a opção **[!UICONTROL Include Segment Names]** esteja habilitada.
+>[!NOTE]
+>
+>Neste exemplo, o primeiro segmento (`5b998cb9-9488-4ec3-8d95-fa8338ced490`) é mapeado para o destino e inclui o campo `name`. O segundo segmento (`354e086f-2e11-49a2-9e39-e5d9a76be683`) não é mapeado para o destino e não inclui o campo `name`, mesmo que a opção **[!UICONTROL Include Segment Names]** esteja habilitada.
 
 +++
 

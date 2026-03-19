@@ -2,9 +2,9 @@
 description: Configurar opções de formatação de arquivo para destinos baseados em arquivo
 title: Saiba como usar o Destination SDK para configurar opções de formatação de arquivo para destinos baseados em arquivo.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: d47c82339afa602a9d6914c1dd36a4fc9528ea32
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '902'
 ht-degree: 1%
 
 ---
@@ -13,18 +13,18 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-O Destination SDK permite que você ajuste detalhadamente as opções de formatação e compactação dos arquivos exportados para atender a quaisquer requisitos downstream no local de armazenamento.
+O Destination SDK permite que você ajuste amplamente as opções de formatação e compactação dos arquivos exportados para corresponder a quaisquer requisitos downstream no local de armazenamento.
 
 Esta página descreve como usar o Destination SDK para configurar opções de formatação de arquivo para destinos baseados em arquivo.
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de seguir para as etapas descritas abaixo, leia a página [introdução](../../getting-started.md) do Destination SDK para obter informações sobre como obter as credenciais de autenticação de Adobe I/O e outros pré-requisitos necessários para trabalhar com APIs de Destination SDK.
+Antes de seguir para as etapas descritas abaixo, leia a página [Introdução ao Destination SDK](../../getting-started.md) para obter informações sobre como obter as credenciais de autenticação do Adobe I/O necessárias e outros pré-requisitos para trabalhar com as APIs do Destination SDK.
 
 A Adobe também recomenda que você leia e se familiarize com a seguinte documentação antes de continuar:
 
 * Cada opção de formatação de arquivo disponível está documentada detalhadamente na seção [configuração de formatação de arquivo](../../functionality/destination-server/file-formatting.md).
-* Conclua as etapas para [configurar um destino baseado em arquivo](../../guides/configure-file-based-destination-instructions.md) usando Destination SDK.
+* Conclua as etapas para [configurar um destino baseado em arquivo](../../guides/configure-file-based-destination-instructions.md) usando o Destination SDK.
 
 ## Criar uma configuração de servidor e arquivo {#create-server-file-configuration}
 
@@ -102,13 +102,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 >[!TIP]
 >
->**Verifique a interface do usuário do Experience Platform**. Ao configurar as opções de formatação de arquivo com as configurações demonstradas nas seções abaixo, você deve verificar a interface do usuário do Experience Platform para saber como essas opções são renderizadas.
+>**Verificar a interface do usuário do Experience Platform**. Ao definir as opções de formatação de arquivo com as configurações demonstradas nas seções abaixo, você deve verificar a interface do usuário do Experience Platform para saber como essas opções são renderizadas.
 
 Depois de adicionar as opções de formatação de arquivo desejadas ao servidor de destino e a configuração de formatação de arquivo na etapa anterior, você pode usar o endpoint da API `/destinations` para adicionar os campos desejados como campos de dados do cliente à configuração de destino.
 
 >[!IMPORTANT]
 >
->Essa etapa é opcional e determina apenas quais das opções de formatação de arquivo devem ser exibidas para os usuários na interface do usuário do Experience Platform. Se você não definir as opções de formatação de arquivo como campos de dados do cliente, as exportações de arquivo continuarão com os valores padrão configurados no [servidor e na configuração de arquivo](#create-server-file-configuration).
+>Essa etapa é opcional e determina apenas quais das opções de formatação de arquivo devem ser exibidas para os usuários na interface do Experience Platform. Se você não definir as opções de formatação de arquivo como campos de dados do cliente, as exportações de arquivo continuarão com os valores padrão configurados no [servidor e na configuração de arquivo](#create-server-file-configuration).
 
 Nesta etapa, você pode agrupar as opções exibidas em qualquer ordem, criar agrupamentos personalizados, campos suspensos e agrupamentos condicionais com base nos tipos de arquivo selecionados. Todas essas configurações são mostradas na gravação e nas seções mais abaixo.
 
@@ -116,7 +116,7 @@ Nesta etapa, você pode agrupar as opções exibidas em qualquer ordem, criar ag
 
 ### Ordenar as opções de formatação de arquivo {#ordering}
 
-A ordem em que você adiciona as opções de formatação do arquivo como campos de dados do cliente na configuração de destino é refletida na interface. Por exemplo, a configuração abaixo é refletida adequadamente na interface do usuário, com as opções exibidas na ordem **[!UICONTROL Delimitador]**, **[!UICONTROL Aspas]**, **[!UICONTROL Caracteres de Escape]**, **[!UICONTROL Valor Vazio]**, **[!UICONTROL Valor Nulo]**.
+A ordem em que você adiciona as opções de formatação do arquivo como campos de dados do cliente na configuração de destino é refletida na interface. Por exemplo, a configuração abaixo é refletida adequadamente na interface, com as opções exibidas na ordem **[!UICONTROL Delimiter]**, **[!UICONTROL Quote Character]**, **[!UICONTROL Escape Character]**, **[!UICONTROL Empty Value]**, **[!UICONTROL Null Value]**.
 
 ![Imagem mostrando a ordem das opções de formatação de arquivo na interface do usuário do Experience Platform.](../../assets/guides/batch/file-formatting-order.png)
 
@@ -241,7 +241,7 @@ A ordem em que você adiciona as opções de formatação do arquivo como campos
 
 Você pode agrupar várias opções de formatação de arquivo em uma seção. Ao configurar a conexão com o destino na interface do usuário do, o usuário pode ver e se beneficiar de um agrupamento visual de campos semelhantes.
 
-Para fazer isso, use o `"type": "object"` para criar o grupo e coletar as opções de formatação de arquivo desejadas em um parâmetro `properties`, como mostrado no exemplo abaixo, onde as **[!UICONTROL Opções de CSV]** do agrupamento estão destacadas.
+Para fazer isso, use o `"type": "object"` para criar o grupo e coletar as opções de formatação de arquivo desejadas em um parâmetro `properties`, como mostrado no exemplo abaixo, onde o agrupamento **[!UICONTROL CSV Options]** está realçado.
 
 ```json {line-numbers="true" start-number="100" highlight="106-128"}
 "customerDataFields":[
@@ -487,7 +487,7 @@ Abaixo, você pode ver a tela resultante da interface do usuário, com base na c
 
 ![Gravação de tela mostrando a opção de formatação de arquivo condicional para arquivos CSV.](../../assets/guides/batch/conditional-file-formatting.gif)
 
-### Solicitação de API completa que inclui todas as opções mostradas acima
+### Solicitação de API completa que inclui todas as opções mostradas acima {#complete-api-request}
 
 A solicitação de API abaixo combina em uma configuração todas as opções descritas nas seções acima.
 
@@ -716,7 +716,7 @@ Uma resposta bem-sucedida retorna a configuração de destino, incluindo o ident
 ## Limitações conhecidas {#known-limitations}
 
 Uma determinada combinação de opções de formatação de arquivo pode gerar resultados indesejados na exportação de arquivos.
-O Adobe recomenda não selecionar a seguinte combinação de opções de CSV:
+A Adobe recomenda não selecionar a seguinte combinação de opções de CSV:
 
 ```
 nullValue -> ""

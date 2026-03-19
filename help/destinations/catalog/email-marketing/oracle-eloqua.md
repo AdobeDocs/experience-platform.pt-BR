@@ -3,9 +3,9 @@ keywords: email;Email;e-mail;destinos de e-mail;oracle eloqua;oracle
 title: (Arquivos) Conexão Oracle Eloqua
 description: O Oracle Eloqua é uma plataforma de software as a service (SaaS) para automação de marketing oferecida pela Oracle, que tem como objetivo ajudar profissionais e organizações B2B a gerenciar campanhas de marketing e a geração de leads de vendas.
 exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '801'
 ht-degree: 3%
 
 ---
@@ -52,16 +52,16 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 {style="table-layout:auto"}
 
-## LISTA DE PERMISSÕES de endereço IP {#allow-list}
+## INCLUO NA LISTA DE PERMISSÕES de endereços IP {#allow-list}
 
-Ao configurar destinos de marketing por email com armazenamento SFTP, a Adobe recomenda adicionar determinados intervalos IP à lista de permissões.
+Ao configurar destinos de marketing por email com armazenamento SFTP, a Adobe recomenda adicionar determinados intervalos IP ao incluo na lista de permissões.
 
-Consulte a [lista de permissões de endereço IP para destinos SFTP](../cloud-storage/ip-address-allow-list.md) se precisar adicionar IPs da Adobe à sua lista de permissões.
+Consulte [incluo na lista de permissões de endereços IP para destinos SFTP](../cloud-storage/ip-address-allow-list.md) se precisar adicionar IPs da Adobe ao seu incluo na lista de permissões.
 
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa da **[!UICONTROL Manage Destinations]** [permissão de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
@@ -109,7 +109,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

@@ -3,7 +3,7 @@ title: Ativar dados do público-alvo para destinos de transmissão
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform mapeando-os para destinos de transmissão.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 99bac2ea71003b678a25b3afc10a68d36472bfbc
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1124'
 ht-degree: 3%
@@ -14,7 +14,7 @@ ht-degree: 3%
 # Ativar públicos para destinos de transmissão
 
 >[!IMPORTANT]
-> 
+>
 > * Para ativar públicos e habilitar a [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 > * Para ativar os públicos-alvo sem passar pela [etapa de mapeamento](#mapping) do fluxo de trabalho, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segment without Mapping]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 > * Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}

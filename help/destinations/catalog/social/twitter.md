@@ -2,9 +2,9 @@
 title: Conexão de públicos-alvo personalizados do Twitter
 description: Direcione seus seguidores e clientes existentes no Twitter e crie campanhas de re-marketing relevantes ativando seus públicos-alvo criados no Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: ef1b0b704d1299282995068a0de330d52884bb95
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '958'
 ht-degree: 6%
 
 ---
@@ -24,12 +24,12 @@ Antes de configurar o destino do [!DNL Twitter Custom Audiences], verifique os s
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Twitter Custom Audiences] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR#getting-started).
+[!DNL Twitter Custom Audiences] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
 | device_id | ID IDFA/AdID/Android | A Google Advertising ID (GAID) e a Apple ID para anunciantes (IDFA) são compatíveis com o Adobe Experience Platform. Mapeie esses namespaces e/ou atributos do esquema de origem de acordo na [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do fluxo de trabalho de ativação de destino. |
-| email | Endereço(s) de email do usuário | Mapeie seus endereços de email de texto sem formatação e seus endereços de email com hash SHA256 para este campo. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. Se você colocar seus endereços de email de clientes em hash antes de fazer upload para o Adobe Experience Platform, observe que essas identidades devem ser colocadas em hash usando SHA256, sem um salt. |
+| email | Endereço(s) de email do usuário | Mapeie seus endereços de email de texto sem formatação e seus endereços de email com hash SHA256 para este campo. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. Se você colocar seus endereços de email de clientes em hash antes de fazer upload para o Adobe Experience Platform, observe que essas identidades devem ser colocadas em hash usando SHA256, sem um sal. |
 
 {style="table-layout:auto"}
 
@@ -73,14 +73,14 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Twitter Custom Audiences], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
 
-### Caso de uso #1
+### Caso de uso #1 {#use-case-1}
 
 Direcione seus seguidores e clientes existentes no Twitter e crie campanhas de re-marketing relevantes ativando seus públicos-alvo criados no Adobe Experience Platform como [!DNL List Custom Audiences] no Twitter.
 
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -118,7 +118,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

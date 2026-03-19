@@ -3,7 +3,7 @@ title: Executar transformações nos dados exportados para destinos de armazenam
 type: Tutorial
 description: Entenda como usar a funcionalidade de campos calculados para executar transformações nos dados exportados para destinos de armazenamento na nuvem
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1604'
 ht-degree: 8%
@@ -31,7 +31,7 @@ Para executar várias transformações nos dados exportados para destinos de arm
 
 Para usar campos calculados para transformações de dados:
 
-1. [Conecte](/help/destinations/ui/connect-destination.md) a um destino de armazenamento na nuvem desejado. Ao conectar ao destino de nuvem desejado, desative a **[!UICONTROL Export arrays, maps, objects]** [opção](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
+1. [Conecte](/help/destinations/ui/connect-destination.md) a um destino de armazenamento na nuvem desejado. Ao conectar ao destino de nuvem desejado, desative a **[!UICONTROL Export arrays, maps, objects]** [opção](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 2. Percorra as [etapas de ativação para destinos de armazenamento na nuvem](/help/destinations/ui/activate-batch-profile-destinations.md) e vá para a etapa [mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 
 ## Como trabalhar com campos calculados {#how-to-export-calculated-fields}

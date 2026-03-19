@@ -5,9 +5,9 @@ badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: cd792eb0-9e90-49e4-8c50-c65126e355c2
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1913'
+source-wordcount: '1912'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ Este destino usa o [[!DNL Salesforce Import API v5]](https://developer.salesforc
 
 
 >[!IMPORTANT]
-> 
+>
 > Esta é a versão V2 do [Envolvimento da conta do Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) de destino. Esta versão substitui o destino anterior e está atualmente na versão do Alpha.
 > <br>
 > Se você estiver usando a versão anterior do destino [Envolvimento da conta do Salesforce Marketing Cloud](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md), migre para essa versão V2 antes de **janeiro de 2026**. Após janeiro de 2026, a Adobe desativará a versão anterior e ela não estará mais disponível.
@@ -163,7 +163,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

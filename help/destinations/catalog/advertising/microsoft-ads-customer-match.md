@@ -2,11 +2,11 @@
 keywords: publicidade, microsoft ads, correspondência com o cliente,
 title: Conexão de correspondência do cliente do Microsoft Ads
 description: Use o destino da Correspondência do cliente do Microsoft Ads para corresponder os clientes por endereço de email e reengajar com eles na Microsoft Advertising Network, incluindo anúncios de pesquisa e público-alvo.
-badge: Beta
+badge: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 82f412676c89d7d14116be9328ab7fa438e10fc0
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1347'
 ht-degree: 3%
@@ -27,11 +27,11 @@ Use o destino [!DNL Microsoft Ads Customer Match] para corresponder clientes por
 
 Para ajudá-lo a entender melhor como e quando usar o destino [!DNL Microsoft Ads Customer Match], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse recurso.
 
-### Caso de uso #1
+### Caso de uso #1 {#use-case-1}
 
 Uma marca de comércio eletrônico deseja alcançar clientes existentes por meio de [!DNL Microsoft Search] e [!DNL Microsoft Audience Network] para personalizar ofertas com base em suas compras anteriores e histórico de navegação. A marca pode assimilar endereços de email de seu próprio CRM na Experience Platform, criar públicos a partir de seus próprios dados offline e enviar esses públicos para [!DNL Microsoft Ads Customer Match] para serem usados em anúncios de pesquisa e público, otimizando seus gastos com publicidade.
 
-### Caso de uso #2
+### Caso de uso #2 {#use-case-2}
 
 Uma empresa de tecnologia lançou um novo produto. Para promover esse novo produto, eles buscam gerar conscientização entre os clientes que compraram produtos relacionados anteriormente. Eles carregam endereços de email do banco de dados do CRM na Experience Platform, usando os endereços de email como identificadores. Os públicos-alvo são criados com base nos clientes que possuem produtos relacionados. Esses públicos-alvo são enviados para [!DNL Microsoft Ads Customer Match], para que a empresa possa direcionar os clientes atuais e clientes semelhantes no [!DNL Microsoft Advertising Network].
 
@@ -96,7 +96,7 @@ Ao configurar o destino, você deve fornecer as seguintes informações:
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
@@ -146,7 +146,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades* para destinos, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

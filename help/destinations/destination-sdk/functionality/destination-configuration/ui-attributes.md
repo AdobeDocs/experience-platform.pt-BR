@@ -2,9 +2,9 @@
 description: Saiba como configurar os atributos da interface do usuário, como o link de documentação, a categoria do cartão de destino, o tipo de conexão e a frequência de destino, para destinos criados com o Destination SDK.
 title: Atributos da interface
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '802'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Este artigo descreve todos os atributos de interface do usuário compatíveis qu
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -47,6 +47,8 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 |---|---|
 | Integrações em tempo real (streaming) | Sim |
 | Integrações baseadas em arquivo (lote) | Sim |
+
+{style="table-layout:auto"}
 
 ## Parâmetros compatíveis {#supported-parameters}
 
@@ -66,7 +68,7 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 Use o seguinte formato: `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, onde `YOURDESTINATION` é o nome do seu destino. Para um destino chamado Moviestar, você usaria `http://www.adobe.com/go/destinations-moviestar-en`.
 
-Os usuários podem ver e visitar o link da documentação na página do catálogo de destinos na interface do. Eles precisam navegar até o cartão de destino e selecionar **[!UICONTROL Mais ações]** e **[!UICONTROL Exibir documentação]**, conforme mostrado na imagem abaixo.
+Os usuários podem ver e visitar o link da documentação na página do catálogo de destinos na interface do. Eles precisam navegar até o cartão de destino e, em seguida, selecionar **[!UICONTROL More actions]** e **[!UICONTROL View documentation]**, conforme mostrado na imagem abaixo.
 
 ![Imagem da interface do usuário mostrando o local do link da documentação.](../../assets/functionality/destination-configuration/ui-attributes-doc-link.png)
 
@@ -94,7 +96,7 @@ Os usuários podem ver o tipo de conexão de destino na guia [Procurar](../../..
 
 `frequency` é um parâmetro de cadeia de caracteres que se refere ao tipo de exportação de dados com suporte do seu destino. Defina como `Streaming` para integrações baseadas em API ou `Batch` ao exportar arquivos para seus destinos.
 
-Os usuários podem ver o tipo de frequência nas **[!UICONTROL execuções de fluxo de dados]** página de cada conexão de destino.
+Os usuários podem ver o tipo de frequência na página **[!UICONTROL Dataflow runs]** de cada conexão de destino.
 
 ![Imagem da interface do usuário mostrando o local do tipo de frequência na interface do usuário.](../../assets/functionality/destination-configuration/ui-attributes-frequency.png)
 

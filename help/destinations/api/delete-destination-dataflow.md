@@ -5,10 +5,10 @@ title: Excluir um fluxo de dados de destino usando a API do Serviço de fluxo
 type: Tutorial
 description: Saiba como excluir fluxos de dados para destinos em lote e de transmissão usando a API de serviço de fluxo.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '568'
-ht-degree: 14%
+source-wordcount: '563'
+ht-degree: 19%
 
 ---
 
@@ -31,9 +31,9 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Leitura de chamadas de API de amostra {#reading-sample-api-calls}
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas da [!DNL Experience Platform].
 
-### Coletar valores para cabeçalhos necessários {#gather-values-for-required-headers}
+### Coletar valores para cabeçalhos obrigatórios {#gather-values-for-required-headers}
 
 Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
@@ -66,6 +66,8 @@ DELETE /flows/{FLOW_ID}
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{FLOW_ID}` | O valor `id` exclusivo do fluxo de dados de destino que você deseja excluir. |
+
+{style="table-layout:auto"}
 
 **Solicitação**
 

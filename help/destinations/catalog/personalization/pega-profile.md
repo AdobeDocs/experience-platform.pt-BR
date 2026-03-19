@@ -3,9 +3,9 @@ title: Conector do perfil Pega
 description: Use o Conector de perfil Pega para Amazon S3 no Adobe Experience Platform para exportar dados de perfil completos ou incrementais, ou ambos, para o armazenamento em nuvem do Amazon S3. No Pega Customer Decision Hub, os trabalhos de dados podem ser agendados na Designer de perfil do cliente para importar dados de perfil periodicamente do armazenamento do Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1255'
 ht-degree: 4%
 
 ---
@@ -20,17 +20,17 @@ Este conector ajuda a configurar a exportação inicial de dados de perfil e tam
 
 >[!IMPORTANT]
 >
->Esse conector de destino e a página de documentação são criados e mantidos pela Pegasystems. Para quaisquer consultas ou pedidos de atualização, contate Pega diretamente [aqui](mailto:support@pega.com).
+>Esse conector de destino e a página de documentação são criados e mantidos pela Pegasystems. Para qualquer consulta ou solicitação de atualização, contate Pega diretamente [aqui](mailto:support@pega.com).
 
-## Casos de uso
+## Casos de uso {#use-cases}
 
 Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Pega Profile Connector], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
 
-### Caso de uso 1
+### Caso de uso 1 {#use-case-1}
 
 Um profissional de marketing deseja configurar inicialmente o [!DNL Pega Customer Decision Hub] com dados de perfil carregados do Adobe Experience Platform. Essa é uma carga total inicial seguida por cargas delta programadas.
 
-### Caso de uso 2
+### Caso de uso 2 {#use-case-2}
 
 Um profissional de marketing deseja dados de perfil atualizados do Adobe Experience Platform disponíveis no [!DNL Pega Customer Decision Hub], o que melhora continuamente os insights de Pega sobre perfis de clientes.
 
@@ -92,7 +92,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow da configuração de destino, preencha os campos listados nas duas seções abaixo.
@@ -130,7 +130,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

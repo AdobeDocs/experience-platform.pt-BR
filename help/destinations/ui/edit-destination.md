@@ -3,7 +3,7 @@ title: Editar destinos
 type: Tutorial
 description: Saiba como editar e atualizar contas de destinos existentes na interface do usuário do Adobe Experience Platform
 exl-id: f3298836-668b-43fb-b4f3-85a650766f05
-source-git-commit: f91551c460c7d6fd4f98111210f29cf16ec5b565
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Para editar vários componentes de uma conexão de destino existente:
 
 1. Navegue até **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Selecione o destino desejado que deseja editar.
-3. Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![Editar controle de destino &#x200B;](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;para editar conexões de destino existentes.
+3. Selecione as reticências (`...`) na coluna [!UICONTROL Name] e use o controle ![Editar controle de destino ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**para editar conexões de destino existentes.
 4. Na janela modal, edite as configurações desejadas. Selecione **[!UICONTROL Save]** quando terminar.
 
 Na janela de edição do destino, é possível atualizar quaisquer configurações definidas ao se conectar inicialmente ao destino. Essas configurações são diferentes com base na plataforma de destino que você está atualizando.
@@ -41,7 +41,7 @@ Abaixo estão alguns exemplos das configurações que você pode atualizar para 
 
 <div style="display: flex; gap: 12px; justify-content: flex-start; align-items: flex-start;">
   <img class="modal-image" src="../assets/ui/edit-destinations/edit-amazon-s3-connection.png" alt="Tela Editar destino do Amazon S3." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
-  <img class="modal-image" src="../assets/ui/edit-destinations/edit-eventhubs-connection.png" alt="Editar tela de destino para o destino do Azure EventHubs." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
+  <img class="modal-image" src="../assets/ui/edit-destinations/edit-eventhubs-connection.png" alt="Tela de destino de edição para o destino do Azure EventHubs." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
   <img class="modal-image" src="../assets/ui/edit-destinations/edit-google-ads-connection.png" alt="Tela Editar destino para o destino do Google Ads." style="max-width: 200px; height: auto; border: 1px solid #ccc;">
 </div>
 
@@ -49,7 +49,7 @@ Abaixo estão alguns exemplos das configurações que você pode atualizar para 
 >
 >As configurações de conexão de destino foram atualizadas.
 
-## Outras opções de edição
+## Outras opções de edição {#other-editing-options}
 
 Ao usar a interface do usuário do Experience Platform ou a API do Serviço de fluxo, é possível editar várias configurações de destino, conforme detalhado nos links abaixo:
 
@@ -59,7 +59,7 @@ Ao usar a interface do usuário do Experience Platform ou a API do Serviço de f
 | [Editar contas](/help/destinations/ui/update-accounts.md) | [Editar componentes de conexão base (parâmetros de autenticação e outros componentes)](/help/destinations/api/edit-destination.md#patch-base-connection) |
 | [Editar fluxos de dados de ativação](/help/destinations/ui/edit-activation.md) | [Atualizar fluxos de dados de destino](/help/destinations/api/update-destination-dataflows.md) |
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
 Ao seguir este tutorial, você usou com êxito o espaço de trabalho **[!UICONTROL destinations]** para atualizar as conexões de destino existentes.
 

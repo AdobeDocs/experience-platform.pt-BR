@@ -3,7 +3,7 @@ keywords: conexão linkedin;conexão linkedin;destinos linkedin;linkedin;
 title: Conexão de públicos correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1336'
 ht-degree: 4%
@@ -18,7 +18,7 @@ Ative perfis para suas campanhas do [!DNL LinkedIn] para direcionamento de públ
 
 ![Destino do LinkedIn na interface do Adobe Experience Platform](../../assets/catalog/social/linkedin/catalog.png)
 
-## Casos de uso
+## Casos de uso {#use-cases}
 
 Para ajudá-lo a entender melhor como e quando usar o destino [!DNL LinkedIn Matched Audiences], veja um caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse recurso.
 
@@ -30,7 +30,7 @@ Uma empresa de software organiza uma conferência e deseja manter contato com os
 
 >[!IMPORTANT]
 >
->A partir de setembro de 2025, não será mais possível mapear [!DNL IDFA] como identidade de destino, pois [!DNL IDFA] não é mais suportado pelo destino [!DNL LinkedIn Matched Audiences]. Consulte a [!DNL LinkedIn Matched Audiences]documentação[&#x200B; da integração de &#x200B;](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) para obter mais detalhes. Essa alteração se deve aos requisitos do LinkedIn e não está relacionada a nenhuma atualização de serviço de destino do Experience Platform.
+>A partir de setembro de 2025, não será mais possível mapear [!DNL IDFA] como identidade de destino, pois [!DNL IDFA] não é mais suportado pelo destino [!DNL LinkedIn Matched Audiences]. Consulte a [!DNL LinkedIn Matched Audiences]documentação[ da integração de ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) para obter mais detalhes. Essa alteração se deve aos requisitos do LinkedIn e não está relacionada a nenhuma atualização de serviço de destino do Experience Platform.
 
 
 | Identidade de destino | Descrição | Considerações |
@@ -117,14 +117,14 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md). No workflow de configuração de destino, preencha os campos listados nas duas seções abaixo.
 
 O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL LinkedIn Matched Audiences] e ativar públicos-alvo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475118/?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -152,7 +152,7 @@ Quando o token expira, as exportações de dados para o destino param de funcion
    ![Janela modal com opção Reconectar OAuth](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
-> 
+>
 >Suas credenciais de autenticação são atualizadas e o tempo de expiração é redefinido para 60 dias.
 
 ### Preencher detalhes do destino {#destination-details}
@@ -177,7 +177,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 

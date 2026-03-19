@@ -5,9 +5,9 @@ title: Atualizar fluxos de dados de destino usando a API de serviço de fluxo
 type: Tutorial
 description: Este tutorial aborda as etapas para atualizar um fluxo de dados de destino. Saiba como habilitar ou desabilitar o fluxo de dados, atualizar suas informações básicas ou adicionar e remover públicos-alvo e atributos usando a API do Serviço de fluxo.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: 7f8fbbec8927dffb3c8456b2a1d908d27d4b03c2
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
-source-wordcount: '2471'
+source-wordcount: '2467'
 ht-degree: 4%
 
 ---
@@ -68,6 +68,8 @@ GET /flows/{FLOW_ID}
 | Parâmetro | Descrição |
 | --------- | ----------- |
 | `{FLOW_ID}` | O valor `id` exclusivo para o fluxo de dados de destino que você deseja recuperar. |
+
+{style="table-layout:auto"}
 
 **Solicitação**
 
@@ -389,6 +391,8 @@ curl -X PATCH \
 | `path` | Define a parte do fluxo que deve ser atualizada. |
 | `value` | O novo valor com o qual você deseja atualizar seu parâmetro. |
 
+{style="table-layout:auto"}
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID do fluxo.
@@ -507,6 +511,8 @@ curl -X PATCH \
 | `endDate` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Não aplicável ao selecionar `"exportMode":"DAILY_FULL_EXPORT"` e `"frequency":"ONCE"`. <br> Define a data em que os membros do público-alvo param de ser exportados para o destino. |
 | `startTime` | Somente para *destinos em lote*. Esse campo é necessário somente ao adicionar um público-alvo a um fluxo de dados em destinos de exportação de arquivos em lote, como Amazon S3, SFTP ou Azure Blob. <br> Obrigatório. Selecione a hora em que os arquivos que contêm membros do público-alvo devem ser gerados e exportados para o seu destino. |
 
+{style="table-layout:auto"}
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID do fluxo.
@@ -567,6 +573,7 @@ curl -X PATCH \
 | `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace` e `remove`. Para remover um público de um fluxo de dados, use a operação `remove`. |
 | `path` | Especifica qual público-alvo existente deve ser removido do fluxo de dados de destino, com base no índice do seletor de público-alvo. Para recuperar a ordem dos públicos em um fluxo de dados, execute uma chamada GET para o ponto de extremidade `/flows` e inspecione a propriedade `transformations.segmentSelectors`. Para excluir o primeiro público no fluxo de dados, use `"path":"/transformations/0/params/segmentSelectors/selectors/0"`. |
 
+{style="table-layout:auto"}
 
 **Resposta**
 
@@ -796,6 +803,8 @@ curl -X PATCH \
 | `path` | Define a parte do fluxo que deve ser atualizada. Ao adicionar um atributo de perfil a um fluxo de dados, use o caminho especificado no exemplo. |
 | `value.path` | O valor do atributo de perfil que você está adicionando ao fluxo de dados. |
 
+{style="table-layout:auto"}
+
 **Resposta**
 
 Uma resposta bem-sucedida retorna a ID de fluxo e uma tag atualizada. Você pode verificar a atualização fazendo uma solicitação GET para a API [!DNL Flow Service] e, ao mesmo tempo, fornecendo a ID do fluxo.
@@ -849,6 +858,7 @@ curl -X PATCH \
 | `op` | A chamada de operação usada para definir a ação necessária para atualizar o fluxo de dados. As operações incluem: `add`, `replace` e `remove`. Para remover um público de um fluxo de dados, use a operação `remove`. |
 | `path` | Especifica qual atributo de perfil existente deve ser removido do fluxo de dados de destino, com base no índice do seletor de público-alvo. Para recuperar a ordem dos atributos de perfil em um fluxo de dados, execute uma chamada GET para o ponto de extremidade `/flows` e inspecione a propriedade `transformations.profileSelectors`. Para excluir o primeiro público no fluxo de dados, use `"path":"transformations/0/params/segmentSelectors/selectors/0/"`. |
 
+{style="table-layout:auto"}
 
 **Resposta**
 

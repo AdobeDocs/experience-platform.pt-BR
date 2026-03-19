@@ -3,7 +3,7 @@ keywords: publicidade; a trade desk; advertising trade desk
 title: A conexão com a Trade Desk
 description: A Trade Desk é uma plataforma de autoatendimento para compradores de anúncios para executar campanhas digitais de redirecionamento e direcionadas por público-alvo em origens de inventário de exibição, vídeo e dispositivos móveis.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 82ff222d22255b9c99de76111d25d4a3cf6f2d5c
+source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
 workflow-type: tm+mt
 source-wordcount: '1376'
 ht-degree: 4%
@@ -85,7 +85,7 @@ Os pré-requisitos dependem dos tipos de identidade que você planeja usar para 
 
 **Para o direcionamento baseado em cookies em[!DNL The Trade Desk]**, verifique se foi estabelecido um mapeamento entre a ECID e [!DNL Trade Desk ID]. Conclua as etapas abaixo para fazer isso:
 
-1. **Habilitar a funcionalidade de sincronização de ID**: se esta for a primeira vez que você configura a ativação do [!DNL The Trade Desk ID] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/pt-br/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), contate a Adobe Consulting ou o Atendimento ao Cliente para habilitar as sincronizações de ID.
+1. **Habilitar a funcionalidade de sincronização de ID**: se esta for a primeira vez que você configura a ativação do [!DNL The Trade Desk ID] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) no Serviço da Experience Cloud ID no passado (com o Adobe Audience Manager ou outros aplicativos), contate a Adobe Consulting ou o Atendimento ao Cliente para habilitar as sincronizações de ID.
    * Se você tiver configurado previamente as integrações do [!DNL The Trade Desk] no Audience Manager, as sincronizações de ID existentes serão automaticamente transferidas para o Experience Platform.
 
 2. **Instrumentar suas páginas da Web**: implemente o código em suas páginas da Web para criar mapeamentos entre o [!DNL The Trade Desk ID] e a Adobe ECID. Isso permite que o Experience Platform associe IDs da Trade Desk aos perfis do cliente.
@@ -93,7 +93,7 @@ Os pré-requisitos dependem dos tipos de identidade que você planeja usar para 
 ## Conectar ao destino {#connect}
 
 >[!IMPORTANT]
-> 
+>
 >Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
@@ -123,7 +123,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 ## Ativar públicos-alvo para esse destino {#activate}
 
 >[!IMPORTANT]
-> 
+>
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
@@ -139,7 +139,7 @@ Ao mapear públicos-alvo, a Adobe recomenda usar o nome do público-alvo do Expe
 >id="platform_destinations_required_mappings_ttd"
 >title="Conjuntos de mapeamento pré-configurados"
 >abstract="Pré-configuramos esses quatro conjuntos de mapeamento para você. Quando você ativa dados para a Trade Desk, os perfis qualificados para os públicos ativados não precisam necessariamente ter todas as quatro identidades presentes nos perfis, pois esse destino funcionará com qualquer uma das identidades de destino mostradas aqui. <br> Para direcionamento baseado em cookies e baseado na Trade Desk ID, é necessário ter a ECID presente no perfil e um mapeamento de sincronização de ID entre a Trade Desk ID e a ECID."
->additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Leia mais sobre os mapeamentos pré-configurados"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/tradedesk#preconfigured-mappings" text="Leia mais sobre os mapeamentos pré-configurados"
 
 Os seguintes mapeamentos de identidade são **pré-configurados e preenchidos automaticamente** para você no fluxo de trabalho de ativação de público-alvo:
 
@@ -154,7 +154,7 @@ Esses mapeamentos estão esmaecidos e são somente leitura. Não é necessário 
 
 O Experience Platform verifica automaticamente todos os perfis que pertencem a públicos mapeados no fluxo de trabalho de ativação para todos os tipos de identidade compatíveis e ativa o perfil usando as identidades presentes.
 
-### Requisitos de identidade por tipo de ativação
+### Requisitos de identidade por tipo de ativação {#identity-requirements-by-activation-type}
 
 **Ativação de ID de dispositivo móvel (GAID/IDFA):** Perfis com apenas GAID ou IDFA são suficientes para ativação. Nenhuma identidade ou pré-requisito adicional é necessário.
 
@@ -165,7 +165,7 @@ O Experience Platform verifica automaticamente todos os perfis que pertencem a p
 
 **Comportamento de várias IDs:** Se um perfil contiver várias identidades com suporte, cada identidade será ativada separadamente para [!DNL The Trade Desk]. Isso garante o máximo de alcance e flexibilidade na ativação do público-alvo.
 
-### Exemplos de ativação
+### Exemplos de ativação {#activation-examples}
 
 * **Perfis de Mobile ID:** Perfis com GAID e/ou IDFA são ativados usando suas respectivas IDs de publicidade. Se um perfil contiver GAID e IDFA, cada ID será ativada separadamente.
 * **Perfil baseado em cookies:** Um perfil com ECID e um mapeamento [!DNL Trade Desk ID] correspondente será ativado usando a Trade Desk ID para direcionamento baseado em cookies.

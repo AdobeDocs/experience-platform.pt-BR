@@ -4,10 +4,11 @@ description: Saiba mais sobre as fontes do Talon.One no Adobe Experience Platfor
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: 558a9d6ff3222acbf77edea0a82ef50725cd6203
+exl-id: 92ed180a-6175-45e2-a831-0f40fd8606b0
+source-git-commit: 5ceef18d479854aa4b633e7e5e393a6698a05b2e
 workflow-type: tm+mt
-source-wordcount: '286'
-ht-degree: 3%
+source-wordcount: '439'
+ht-degree: 2%
 
 ---
 
@@ -40,6 +41,28 @@ Forneça valores para as credenciais a seguir para autenticar e conectar o [!DNL
 ## Mapeamento {#mapping}
 
 Para ajudar a mapear cada objeto de efeito com base em seu valor `effectType` exclusivo, você pode usar a função de preparação de dados `array_to_map`. Isso permite converter facilmente uma matriz desordenada de efeitos em pares de valores chave que correspondam às suas necessidades. Consulte o exemplo abaixo para obter orientação.
+
+Você também pode usar os grupos de campos de fidelidade padronizados que o Adobe fornece para modelar os conceitos do programa de fidelidade de uma maneira consistente.
+
+>[!BEGINTABS]
+
+>[!TAB Detalhes de fidelidade]
+
+Este é um grupo de campos XDM padrão para o Perfil individual XDM, usado para descrever o status de associação de fidelidade de uma pessoa capturando seus atributos de registro, em vez dos dados do evento. Use este grupo de campos em seus esquemas de perfil para capturar:
+
+* **Quem** o membro está no programa (`loyaltyID`, `program`, `status`, `tier`)
+* Seus **saldos atuais e de vida útil** (`points`, `lifetimePoints`, `expiredPoints` etc.)
+* Chave **datas de associação** (`joinDate`, `upgradeDate`, `tierExpiryDate`)
+
+>[!TAB Detalhes do Evento de Fidelidade]
+
+O grupo de campos Detalhes do Evento de Fidelidade foi criado para capturar a atividade de fidelidade no nível do evento, como pontos ganhos ou resgatados em uma transação específica. Este grupo de campos inclui campos como `xdm:points`, `xdm:pointsRedeemed`, `xdm:pointsAsOfDate` e `xdm:program`. Use este grupo de campos no nível do evento em seus esquemas de evento de experiência para capturar:
+
+* **Movimentos por evento** em pontos (obtidos, resgatados, expirados)
+* **Descontos** que foram gerados por cupons de fidelidade ou indicações
+* **IDs de programa** e IDs de transação para reconciliação com o provedor de fidelidade.
+
+>[!ENDTABS]
 
 | Fonte | Destino |
 | ---- | --- |

@@ -4,9 +4,10 @@ description: Saiba como assimilar dados em lote do Talon.One no Adobe Experience
 badge: Beta
 hide: true
 hidefromtoc: true
-source-git-commit: d8b8143da3a67bba690229b1f8e88eb86f3fe804
+exl-id: 65a8ae42-0c0f-4bc5-b99e-52b02ab2130a
+source-git-commit: 9c4c4a3bce2329e65abf5e8cfcc2f20ec2799045
 workflow-type: tm+mt
-source-wordcount: '1420'
+source-wordcount: '1518'
 ht-degree: 1%
 
 ---
@@ -17,7 +18,9 @@ ht-degree: 1%
 >
 >A origem [!DNL Talon.One] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
 
-Leia este tutorial para saber como assimilar dados em lote da conta do [!DNL Talon.One] na Adobe Experience Platform usando o espaço de trabalho de fontes na interface do usuário.
+A origem [!DNL Talon.One] de dados em lote recebe eventos registrados para um aplicativo [!DNL Talon.One]. Um caso de uso comum é filtrar o `talon_session_closed` para receber transações concluídas, incluindo pontos de fidelidade ganhos ou resgatados, cupons resgatados, descontos concedidos etc. Leia a [[!DNL Talon.One] Referência da API de Gerenciamento](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount) para obter mais informações sobre a API.
+
+Siga este tutorial para saber como assimilar dados em lote da sua conta do [!DNL Talon.One] na Adobe Experience Platform usando o espaço de trabalho de fontes na interface do usuário.
 
 ## Introdução
 
@@ -46,6 +49,10 @@ Para assimilar dados de [!DNL Talon.One], selecione o cartão de origem **[!UICO
 
 ### Criar uma nova conta
 
+>[!TIP]
+>
+>Antes de criar uma nova conta, revise os [pré-requisitos](../../../../connectors/loyalty/talon-one.md#prerequisites) na visão geral do [!DNL Talon.One] para saber quais credenciais de autenticação são necessárias.
+
 Para criar uma nova conta para sua origem [!DNL Talon.One], selecione **[!UICONTROL New account]** e forneça um nome e uma descrição opcional para sua conta. Em seguida, forneça seu domínio [!DNL Talon.One] e seu [!UICONTROL Talon.One Management API Key]. Quando terminar, selecione **[!UICONTROL Connect to source]** e aguarde alguns instantes para estabelecer sua conexão.
 
 ![A etapa de criação de nova conta do fluxo de trabalho de origens.](../../../../images/tutorials/create/talon-one-batch/new.png)
@@ -57,6 +64,10 @@ Para usar uma conta existente, selecione **[!UICONTROL Existing account]** e sel
 ## Selecionar dados
 
 Após a autenticação, forneça valores para o **applicationId** e o **sessionType**. Durante essa etapa, é possível usar as funcionalidades de visualização para inspecionar a estrutura dos dados. Quando terminar, selecione **[!UICONTROL Next]** para continuar.
+
+>[!TIP]
+>
+>Para capturar transações concluídas, incluindo pontos de fidelidade ganhos ou resgatados, cupons resgatados e descontos concedidos, selecione o tipo de evento `talon_session_closed`. Para obter detalhes sobre a filtragem de eventos por tipo, consulte o parâmetro de consulta [&quot;type&quot; na  [!DNL Talon.One] documentação sobre API](https://docs.talon.one/management-api#tag/Customer-data/operation/getApplicationEventsWithoutTotalCount).
 
 ![As etapas de seleção de dados e visualização do fluxo de trabalho de fontes.](../../../../images/tutorials/create/talon-one-batch/select-data.png)
 

@@ -35,7 +35,7 @@ O Criteo capacita a publicidade confiável e impactante para trazer experiência
 
 ## Identidades suportadas {#supported-identities}
 
-O critério é compatível com a ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
+O critério é compatível com a ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR#getting-started).
 
 | Identidade de destino | Descrição | Considerações |
 | --- | --- | --- |

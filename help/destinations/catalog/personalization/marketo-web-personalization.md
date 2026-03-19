@@ -16,7 +16,7 @@ ht-degree: 3%
 
 Essa extensão implanta o script para aplicativos Web Personalization e ContentAI [!DNL Marketo's]. O Web Personalization [!DNL Marketo] identifica e personaliza exclusivamente o conteúdo para as características do visitante da Web, como firmografia para visitantes anônimos e uma ampla variedade de atributos comportamentais na Plataforma de Envolvimento [!DNL Marketo] para visitantes conhecidos. O ContentAI [!DNL Marketo] contém recursos para recomendações e personalização habilitadas por IA para campanhas da Web e de email que são exclusivas para clientes B2B.
 
-[!DNL Marketo Web Personalization] é uma extensão de personalização no Adobe Experience Platform. Para obter mais informações sobre personalização da Web e ContentAI no Marketo, leia [Visão geral do Web Personalization](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
+[!DNL Marketo Web Personalization] é uma extensão de personalização no Adobe Experience Platform. Para obter mais informações sobre personalização da Web e ContentAI no Marketo, leia [Visão geral do Web Personalization](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=pt-BR).
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 

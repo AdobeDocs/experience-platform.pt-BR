@@ -1,5 +1,5 @@
 ---
-description: Saiba como configurar especificações do servidor de destino no Adobe Experience Platform Destination SDK por meio do endpoint `/authoring/destination-servers`.
+description: Saiba como configurar especificações do servidor de destino no Adobe Experience Platform Destination SDK por meio do endpoint &grave;/authoring/destination-servers&grave;.
 title: Especificações do servidor para destinos criados com o Destination SDK
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
 source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
@@ -31,7 +31,7 @@ Esta página mostra todos os tipos de servidor de destino compatíveis com o Des
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 

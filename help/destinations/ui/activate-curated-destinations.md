@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Ativar públicos para destinos com curadoria com base em identificadores do LiveRamp
 
-Use a integração do Adobe Real-Time CDP com o [!DNL LiveRamp] para ativar públicos-alvo para uma lista com curadoria de destinos que usam o [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) para ativação, incluindo destinos de áudio e TV conectados, como os listados abaixo.
+Use a integração do Adobe Real-Time CDP com o [!DNL LiveRamp] para ativar públicos-alvo para uma lista com curadoria de destinos que usam o [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) para ativação, incluindo destinos de áudio e TV conectados, como os listados abaixo.
 
 >[!IMPORTANT]
 >

@@ -132,7 +132,7 @@ A tabela a seguir descreve as permissões disponíveis para o Experience Platfor
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Configurations] | Acesso somente leitura a configurações de modelos. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | A capacidade de exibir e modificar configurações de planos. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | Acesso somente leitura a configurações de planos. |
-| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Capacidade de fazer as perguntas de [!DNL [AI assistant]](../ai-assistant/access.md). |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Capacidade de fazer as perguntas de [[!DNL [AI assistant]]](../ai-assistant/access.md). |
 | [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Acesso para obter respostas a consultas de [insights operacionais](../ai-assistant/home.md##operational-insights). |
 | [!DNL AI Assistant] | [!UICONTROL Generate Content] | Habilitar usuários a gerar conteúdo usando o [!DNL AI Assistant]. |
 | [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | Habilitar usuários a criar diretrizes de marca usando o [!DNL AI Assistant]. |

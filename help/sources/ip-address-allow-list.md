@@ -1,23 +1,23 @@
 ---
-description: Saiba mais sobre os endereços IP que você precisa adicionar ao seu arquivo de inclui na lista de permissões do para usar com êxito as fontes da Adobe Experience Platform.
-title: INCLUI NA LISTA DE PERMISSÕES de endereço IP para origens
+description: Saiba mais sobre os endereços IP que você precisa adicionar ao seu incluo na lista de permissões para usar fontes da Adobe Experience Platform com êxito.
+title: INCLUO NA LISTA DE PERMISSÕES de Endereços IP para Origens
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
+source-git-commit: b3c06717aac922bbb8591afe283c6066a78bf033
 workflow-type: tm+mt
-source-wordcount: '243'
+source-wordcount: '249'
 ht-degree: 0%
 
 ---
 
-# INCLUIR NA LISTA DE PERMISSÕES endereço IP
+# INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP de origem apropriado, é possível permitir o fluxo de tráfego para o serviço de transferência de dados. Os seguintes endereços IP devem ser adicionados a um incluo na lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região ao seu incluo na lista de permissões pode levar a erros ou ao não desempenho ao usar origens.
+Você pode definir controles de acesso à rede por meio do firewall de rede. Ao especificar o intervalo IP de origem apropriado, é possível permitir o fluxo de tráfego para o serviço de transferência de dados. Os endereços IP a seguir devem ser adicionados a um incluo na lista de permissões antes de trabalhar com conectores de origem. Falha ao adicionar endereços IP específicos da região ao incluo na lista de permissões pode levar a erros ou não desempenho ao usar origens.
 
-## Endereços IP permitem a inclui na lista de permissões de origens conectadas ao Experience Platform em [!DNL Azure] {#azure}
+## Endereços IP incluídos na lista de permissões para fontes conectadas ao Experience Platform em [!DNL Azure] {#azure}
 
 ### Origens em lote no Experience Platform em [!DNL Azure] {#batch}
 
-Incluir na lista de permissões Você deve adicionar os seguintes endereços IP ao seu arquivo para permitir o fluxo de tráfego do serviço de transferência de dados para fontes em lote.
+Você deve adicionar os seguintes endereços IP ao incluo na lista de permissões para permitir o fluxo de tráfego do serviço de transferência de dados para fontes em lote.
 
 >[!BEGINTABS]
 
@@ -88,6 +88,21 @@ Incluir na lista de permissões Você deve adicionar os seguintes endereços IP 
 - `52.228.86.144/29`
 - `52.246.155.224/28`
 
+>[!TAB GBR9: Reino Unido]
+
+#### GBR9: Reino Unido
+
+- `20.90.129.128/25`
+- `20.90.130.0/24`
+- `20.117.193.184/29`
+- `51.104.9.32/28`
+- `51.104.24.128/25`
+- `51.104.25.0/26`
+- `51.104.29.216/29`
+- `51.105.67.240/28`
+- `51.105.75.240/28`
+- `85.210.193.192/27`
+
 >[!TAB IND2: Índia]
 
 #### IND2: Índia
@@ -106,7 +121,7 @@ Incluir na lista de permissões Você deve adicionar os seguintes endereços IP 
 
 ### Fontes de streaming no Experience Platform em [!DNL Azure] {#streaming}
 
-Incluir na lista de permissões Você deve adicionar os seguintes endereços IP ao seu arquivo para permitir o fluxo de tráfego do serviço de transferência de dados para fontes de transmissão, como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
+Você deve adicionar os seguintes endereços IP ao seu incluo na lista de permissões para permitir o fluxo de tráfego do serviço de transferência de dados para fontes de streaming, como [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) e [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md).
 
 >[!BEGINTABS]
 
@@ -288,9 +303,9 @@ Incluir na lista de permissões Você deve adicionar os seguintes endereços IP 
 
 >[!ENDTABS]
 
-## Endereços IP para incluir na lista de permissões a conexão de origens com o Experience Platform em [!DNL Amazon Web Services] (AWS) {#aws}
+## Endereços IP a serem incluídos na lista de permissões para conexão de origens com o Experience Platform em [!DNL Amazon Web Services] (AWS) {#aws}
 
-Incluir na lista de permissões Você deve adicionar o seguinte endereço IP ao seu arquivo para conectar sua origem à Experience no AWS:.
+Você deve adicionar o seguinte endereço IP ao incluo na lista de permissões para conectar sua origem à Experience no AWS:.
 
 ### VA6
 

@@ -4,7 +4,7 @@ description: Saiba como criar uma conexão de origem e um fluxo de dados para as
 badge: Beta
 last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: ae991913-68b5-4bbb-b8a5-e566d67a4c1a
-source-git-commit: 6ab7c5c2e1f800c82d8906fba78fb897f8639877
+source-git-commit: 66b5b54cdb39a7865092b7e2efcf39046aa791cc
 workflow-type: tm+mt
 source-wordcount: '677'
 ht-degree: 2%
@@ -126,7 +126,7 @@ curl -X POST \
 
 | Parâmetro | Descrição |
 | --- | --- | 
-| `webhook.address` | O endpoint http para onde as mensagens de transmissão são enviadas. O modelo para o webhook é: `https://dcs.adobedc.net/collection/{INLET_ID}?{X_ADOBE_FLOW_ID}={FLOW_ID}.` |
+| `webhook.address` | O endpoint http para onde as mensagens de transmissão são enviadas. O modelo para o webhook é: `https://dcs.adobedc.net/collection/{INLET_ID}?x-adobe-flow-id={FLOW_ID}.` |
 | `webhook.topic` | O tópico da sua assinatura de webhook. Para obter mais informações, leia o [[!DNL Shopify] guia de tópicos do evento do webhook](https://shopify.dev/docs/api/admin-rest/2023-04/resources/webhook#event-topics). |
 | `webhook.format` | O formato dos dados. |
 

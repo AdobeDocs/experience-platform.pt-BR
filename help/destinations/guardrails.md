@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: c550186c9cb3bc580a227633e0d7c0b574ecc2e8
 workflow-type: tm+mt
-source-wordcount: '1749'
+source-wordcount: '1744'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Esta página fornece limites de uso e taxa padrão em relação ao comportamento de ativação. Ao revisar as medidas de proteção a seguir, presume-se que você [esteja conectado corretamente aos destinos](/help/destinations/ui/connect-destination.md).
 
@@ -34,7 +34,7 @@ Há dois tipos de limites padrão neste documento:
 | Tipo de grade de proteção | Descrição |
 |----------|---------|
 | **Proteção de desempenho (limite flexível)** | As medidas de proteção de desempenho são limites de uso relacionados ao escopo dos seus casos de uso. Ao exceder as medidas de proteção de desempenho, você pode enfrentar degradação e latência do desempenho. A Adobe não é responsável por essa degradação de desempenho. Os clientes que excederem consistentemente uma garantia de desempenho podem optar por licenciar capacidade adicional para evitar a degradação do desempenho. |
-| **Medidas de proteção aplicadas pelo sistema (Limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface do usuário ou API do Real-Time CDP. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
+| **Medidas de proteção aplicadas pelo sistema (Limite rígido)** | As medidas de proteção aplicadas pelo sistema são aplicadas pela interface ou API [!DNL Real-Time CDP]. Esses são limites que você não pode exceder, pois a interface do usuário e a API o bloquearão de fazer isso ou retornarão um erro. |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ As medidas de proteção abaixo se aplicam à ativação por meio de [destinos e
 | Frequência de ativação | Uma exportação completa diária ou exportações incrementais mais frequentes a cada 3, 6, 8 ou 12 horas. | Proteção imposta pelo sistema | Leia as seções de documentação de [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) e [exportar arquivos incrementais](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) para obter mais informações sobre os incrementos de frequência para exportações em lote. |
 | Número máximo de públicos que podem ser exportados em uma determinada hora | 100 | Proteção de desempenho | A recomendação é adicionar no máximo 100 públicos-alvo às instâncias de destino em lote. |
 | Número máximo de linhas (registros) por arquivo a serem ativados | 5 milhões | Proteção imposta pelo sistema | O Adobe Experience Platform divide automaticamente os arquivos exportados em 5 milhões de registros (linhas) por arquivo. Cada linha representa um perfil. Nomes de arquivos divididos são anexados com um número que indica que o arquivo é parte de uma exportação maior, como: `filename.csv`, `filename_2.csv`, `filename_3.csv`. Para obter mais informações, leia a [seção de agendamento](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) do tutorial ativar destinos em lote. |
-| Número máximo de públicos-alvo externos (por exemplo, FAC, upload personalizado, Composição de público-alvo) que podem ser ativados em uma instância de destino | 10 | Proteção imposta pelo sistema | Ao ativar públicos externos (por exemplo, [Composição de Público Federado](/help/segmentation/ui/audience-portal.md#fac), [carregamento personalizado](/help/segmentation/ui/audience-portal.md#import-audience), [Composição de Público](/help/segmentation/ui/audience-portal.md#audience-composition)) para destinos baseados em arquivo em lote, há um limite de 10 desses públicos que você pode ativar em uma instância de destino. Consulte [Tipos de público-alvo e personalização](/help/segmentation/ui/audience-portal.md#customize) para obter mais informações sobre esses tipos de público-alvo. Leia mais sobre o fluxo de trabalho para [ativar públicos externos para destinos baseados em arquivo em lote](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
+| Número máximo de públicos-alvo externos (por exemplo: FAC, upload personalizado, Composição de público-alvo) que podem ser ativados em uma instância de destino | 20 | Proteção imposta pelo sistema | Ao ativar públicos externos (por exemplo, [Composição de Público Federado](/help/segmentation/ui/audience-portal.md#fac), [carregamento personalizado](/help/segmentation/ui/audience-portal.md#import-audience), [Composição de Público](/help/segmentation/ui/audience-portal.md#audience-composition)) para destinos baseados em arquivo em lote, há um limite de 20 desses públicos que você pode ativar em uma instância de destino. Consulte [Tipos de público-alvo e personalização](/help/segmentation/ui/audience-portal.md#customize) para obter mais informações sobre esses tipos de público-alvo. Leia mais sobre o fluxo de trabalho para [ativar públicos externos para destinos baseados em arquivo em lote](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 
@@ -159,8 +159,8 @@ The guardrails below are the same whether you are exporting parquet of JSON file
 
 |Dataset type | Backfill parameter provided | Guardrail | Guardrail type | Description |
 |---------|---------|-----------|-----------|------------|
-| Datasets based on the **XDM Experience Events schema** |  <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or  incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
-| Datasets based on the **XDM Individual Profile schema** |  - | Ten billion records across all files exported in a destination instance | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
+| Datasets based on the **XDM Experience Events schema** | <p><ul><li>Both start and end date provided in `backfill` parameter in API call</li><li>Incomplete `backfill` parameter provided in API call</li></ul></p> | <p><ul><li>Last 30 days</li><li>Last 365 days</li></ul></p> | Hard | <p><ul><li>The export fails if the `startDate - endDate` interval is over 30 days</li><li>Either the `startDate` or `endDate` are missing or incorrectly formatted in the API call. Expected format: `yyyy-MM-dd'T'HH:mm:ss.SSS'Z'`</li></ul></p> |
+| Datasets based on the **XDM Individual Profile schema** | - | Ten billion records across all files exported in a destination instance | Hard | The record count of the dataset must be less than ten billion for compressed JSON or parquet files and one million for uncompressed parquet files, otherwise the export fails. Reduce the size of the dataset that you are trying to export if it is larger than the allowed threshold. |
 
 {style="table-layout:auto"}
 
@@ -193,10 +193,10 @@ Detalhes sobre limites ou limitações de limitação para determinados destinos
 
 ## Próximas etapas {#next-steps}
 
-Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
+Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos de Descrição do Produto [!DNL Real-Time CDP]:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=pt-BR#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

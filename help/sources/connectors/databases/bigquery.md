@@ -3,9 +3,9 @@ title: Visão geral do Google BigQuery Source Connector
 description: Saiba como conectar o Google BigQuery ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
+source-git-commit: 2136ace3e3c1157ac7bbfe56071af3dc9bc66fd6
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ Leia este documento para obter as etapas de pré-requisito que você precisa con
 
 Leia as seções a seguir para obter a configuração de pré-requisitos que você deve concluir para poder conectar sua conta do [!DNL Google BigQuery] à Experience Platform.
 
-### INCLUIR NA LISTA DE PERMISSÕES endereço IP
+### INCLUO NA LISTA DE PERMISSÕES de endereços IP
 
-Você deve adicionar endereços IP específicos da sua região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform no Azure ou no Amazon Web Services (AWS). Para obter mais informações, leia o manual sobre [sobre como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform no Azure e no AWS](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform no Azure ou no Amazon Web Services (AWS). Para obter mais informações, leia o guia sobre [Experience Platform de endereços IP para se conectar ao incluir na lista de permissões no Azure e no AWS](../../ip-address-allow-list.md) para obter mais informações.
 
 ### Autenticar para o Experience Platform no Azure {#azure}
 
-Você deve fornecer as credenciais a seguir para conectar sua conta do [!DNL Google BigQuery] à Experience Platform no Azure.
+Você deve fornecer as credenciais a seguir para conectar sua conta do [!DNL Google BigQuery] ao Experience Platform no Azure.
 
 >[!BEGINTABS]
 
@@ -41,8 +41,18 @@ Para autenticar usando uma combinação do OAuth 2.0 e a autenticação básica,
 | `project` | O projeto é a entidade organizacional básica dos recursos do [!DNL Google Cloud], incluindo o [!DNL Google BigQuery]. |
 | `clientID` | A ID do cliente é metade das suas credenciais do OAuth 2.0 [!DNL Google BigQuery]. |
 | `clientSecret` | O segredo do cliente é a outra metade das credenciais do OAuth 2.0 do [!DNL Google BigQuery]. |
-| `refreshToken` | O token de atualização permite obter novos tokens de acesso para a API. Os tokens de acesso têm duração limitada e podem expirar durante o curso do projeto. Você pode usar o token de atualização para autenticar e solicitar tokens de acesso subsequentes para seu projeto quando necessário. |
-| `largeResultsDataSetId` | (Opcional) A ID do conjunto de dados [!DNL Google BigQuery] pré-criada que é necessária para habilitar o suporte para grandes conjuntos de resultados. |
+| `refreshToken` | O token de atualização permite obter novos tokens de acesso para a API. Os tokens de acesso têm duração limitada e podem expirar durante o curso do projeto. Você pode usar o token de atualização para autenticar e solicitar tokens de acesso subsequentes para seu projeto quando necessário. Certifique-se de que o token de atualização inclua os seguintes [!DNL Google] escopos OAuth: <ul><li>`https://www.googleapis.com/auth/bigquery`</li><li>`https://www.googleapis.com/auth/cloud-platform`</li></ul> Esses escopos permitem que o Experience Platform envie trabalhos do BigQuery e leia dados do seu projeto configurado. |
+| `largeResultsDataSetId` | (Opcional) A ID do conjunto de dados [!DNL Google BigQuery] pré-criada que é necessária para habilitar o suporte para grandes conjuntos de resultados.<ul><li>O `largeResultsDataSetId` deve se referir a um conjunto de dados [!DNL BigQuery] pré-criado usado para armazenar tabelas temporárias para conjuntos de resultados grandes.</li><li>O valor deve conter somente a ID do conjunto de dados (por exemplo, `marketing_temp_results`), não o nome qualificado do projeto (não use `my-project.marketing_temp_results`).</li><li>A localização (região) do conjunto de dados especificado em `largeResultsDataSetId` deve corresponder à localização das tabelas que estão sendo consultadas.</li><li>A conta usada pelo conector deve ter permissões para ler e gravar resultados temporários neste conjunto de dados. No mínimo, atribua a função [!DNL BigQuery Data Editor] no conjunto de dados especificado em `largeResultsDataSetId`.</li></ul> |
+
+#### Funções IAM necessárias para a identidade [!DNL Google]
+
+A identidade [!DNL Google] usada para gerar as credenciais OAuth (ID do cliente, segredo do cliente e refreshToken) deve ter as seguintes funções IAM no projeto de destino [!DNL Google Cloud]:
+
+- [!DNL BigQuery Job User]
+- [!DNL BigQuery Data Viewer]
+- [!DNL BigQuery Read Session User]
+
+Essas funções garantem que o Experience Platform possa criar e executar [!DNL BigQuery] trabalhos, ler dados das tabelas configuradas e usar sessões de leitura conforme exigido pelo conector. Verifique se essas funções são concedidas no mesmo projeto que contém os conjuntos de dados [!DNL BigQuery] que você planeja usar com a origem.
 
 Para obter instruções detalhadas sobre como gerar credenciais OAuth 2.0 para APIs [!DNL Google], consulte o [[!DNL Google] guia de autenticação do OAuth 2.0](https://developers.google.com/identity/protocols/oauth2) a seguir.
 
@@ -56,7 +66,7 @@ Para autenticar usando a autenticação de serviço, forneça os valores apropri
 | --- | --- |
 | `projectId` | A ID do [!DNL Google BigQuery] que você deseja consultar. |
 | `keyFileContent` | O arquivo de chave usado para autenticar a conta de serviço. Você pode recuperar este valor do [[!DNL Google Cloud service accounts] painel](https://console.cloud.google.com). O conteúdo principal do arquivo está no formato JSON. Você deve codificar isso em [!DNL Base64] ao autenticar no Experience Platform. |
-| `largeResultsDataSetId` | (Opcional) A ID do conjunto de dados [!DNL Google BigQuery] pré-criada que é necessária para habilitar o suporte para grandes conjuntos de resultados. |
+| `largeResultsDataSetId` | (Opcional) A ID do conjunto de dados [!DNL Google BigQuery] pré-criada que é necessária para habilitar o suporte para grandes conjuntos de resultados.<ul><li>O `largeResultsDataSetId` deve se referir a um conjunto de dados [!DNL BigQuery] pré-criado usado para armazenar tabelas temporárias para conjuntos de resultados grandes.</li><li>O valor deve conter somente a ID do conjunto de dados (por exemplo, `marketing_temp_results`), não o nome qualificado do projeto (não use `my-project.marketing_temp_results`).</li><li>A localização (região) do conjunto de dados especificado em `largeResultsDataSetId` deve corresponder à localização das tabelas que estão sendo consultadas.</li><li>A conta usada pelo conector deve ter permissões para ler e gravar resultados temporários neste conjunto de dados. No mínimo, atribua a função [!DNL BigQuery Data Editor] no conjunto de dados especificado em `largeResultsDataSetId`.</li></ul> |
 
 Para obter mais informações sobre o uso de contas de serviço no [!DNL Google BigQuery], leia o manual sobre [uso de contas de serviço no [!DNL Google BigQuery]](https://cloud.google.com/bigquery/docs/use-service-accounts).
 

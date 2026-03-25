@@ -1,20 +1,18 @@
 ---
 title: Visão geral de Executar e operar
 description: Inspecione, solucione problemas e otimize suas implementações do Experience Platform com as ferramentas Executar e Operar. Obtenha visibilidade sobre ativações programadas em lote, identifique problemas de configuração e melhore a confiabilidade do sistema.
-hide: true
+solution: Experience Platform
+type: Documentation
+role: Admin, User
 exl-id: 7f44cdf3-4db1-47f9-bcde-401f6dcfc551
-source-git-commit: a36f984e56f37e4769e54eab182a8c54e891e32f
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '676'
-ht-degree: 1%
+source-wordcount: '636'
+ht-degree: 2%
 
 ---
 
 # Visão geral de Executar e operar
-
->[!AVAILABILITY]
->
->Os recursos Executar e Operar estão disponíveis no momento como uma versão limitada.
 
 Quando os processos em lote falham ou fornecem dados incompletos, é necessário entender rapidamente o que causou o problema. A causa básica pode ser problemas de disponibilidade de dados, tempo incorreto, problemas de configuração ou restrições de capacidade do sistema. Sem uma visibilidade clara, você pode passar horas investigando vários sistemas antes de encontrar a resposta.
 
@@ -30,13 +28,11 @@ As ferramentas do [!UICONTROL Run and Operate] foram projetadas para atender a v
 
 * **Equipes de dados e TI**: administradores de sistema e engenheiros de dados que mantêm pipelines de dados confiáveis e solucionam problemas técnicos.
 * **Operações de marketing**: tecnólogos de marketing que inspecionam a entrega de dados em plataformas de marketing e resolvem problemas de ativação.
-* **Implementadores**: profissionais que validam a eficiência, a confiabilidade e solucionam problemas técnicos da implementação.
+* **Implementadores**: profissionais que validam a eficiência e a confiabilidade da implementação e que solucionam problemas técnicos.
 
 ## Pré-requisitos {#prerequisites}
 
-Para acessar as ferramentas Executar e Operar, você precisa das **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
-A página [!UICONTROL Job Schedules] fornece uma visão geral de todos os seus trabalhos de processamento em lote agendados.
-Entre em contato com o administrador do sistema para garantir que você tenha as permissões apropriadas.
+Para acessar as ferramentas Executar e Operar, você precisa das **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Entre em contato com o administrador do sistema para garantir que você tenha as permissões apropriadas.
 
 ## Introdução {#getting-started}
 
@@ -44,10 +40,6 @@ Para acessar as ferramentas Executar e Operar na interface do usuário do Experi
 
 1. Faça logon em sua conta do Experience Platform e selecione **[!UICONTROL Run and Operate]** na navegação à esquerda.
 2. Selecione a ferramenta que corresponde às suas necessidades de inspeção ou solução de problemas.
-
-   >[!NOTE]
-   >
-   >Atualmente, os recursos disponíveis são [Cronogramas de trabalho](job-schedules.md) e [Verificações de integridade](health-checks.md).
 
 ![Interface do usuário do Experience Platform mostrando a navegação à esquerda de Executar e Operar](assets/overview/run-and-operate.png)
 
@@ -64,7 +56,7 @@ As ferramentas a seguir ajudam a inspecionar e otimizar as operações de dados.
 > * Assimilação em lote de data lake
 > * Assimilação de perfil em lote
 > * Segmentação em lote
-> * Ativação do destino de lote.
+> * Ativação do destino de lote
 
 Com [Agendamentos de trabalho](job-schedules.md), você pode inspecionar todas as operações em lote agendadas em sua organização, por sandbox, incluindo assimilação de data lake, assimilação de perfil, segmentação e ativação de destino. Visualize o status de execução do job, as métricas de desempenho e o histórico de execução para identificar padrões e diagnosticar problemas de configuração que afetam a confiabilidade.
 
@@ -80,18 +72,14 @@ Você também pode entender as dependências entre os estágios de processamento
 
 ### Verificações de integridade {#health-checks}
 
->[!IMPORTANT]
->
->[!UICONTROL Health checks] estão disponíveis atualmente como uma versão limitada.
-
-Com as [Verificações de integridade](health-checks.md), você pode detectar proativamente problemas de configuração de esquema e identidade antes que eles afetem as operações comerciais. No momento, as verificações de integridade executam verificações estáticas diárias nos esquemas e namespaces de identidade, identificando práticas recomendadas, configurações incorretas e padrões que levam a falhas downstream.
+Com as [Verificações de integridade](health-checks.md), você pode detectar proativamente problemas de configuração de esquema e identidade antes que eles afetem as operações comerciais. Atualmente, as verificações de integridade executam verificações estáticas diárias nos esquemas e namespaces de identidade, identificando práticas recomendadas, configurações incorretas e padrões que levam a falhas downstream.
 
 Atualmente, as verificações de integridade avaliam cinco áreas fundamentais:
 
 * **[Validação do campo de identidade](health-checks.md#identity-field-validation)**: verifique se os campos de identidade têm restrições de comprimento e padrão adequadas.
 * **[Regras de vinculação de gráfico de identidade](health-checks.md#identity-graph-linking-rules)**: confirme se as regras de vinculação estão configuradas para impedir o recolhimento do perfil.
 * **[Configuração de identidade de pessoas e não pessoas](health-checks.md#people-non-people-identity)**: valide o uso do tipo de identidade correto em classes de esquema.
-* **[Descrições do namespace de identidade personalizado](health-checks.md#namespace-missing-description)**: verifique se os metadados do namespace estão completos.
+* **[Descrição do namespace de identidade personalizado](health-checks.md#namespace-missing-description)**: verifique se os metadados do namespace estão completos.
 * **[Namespaces de identidade obsoletos](health-checks.md#deprecated-namespace)**: detectar namespaces obsoletos para limpeza.
 
 ## Próximas etapas {#next-steps}

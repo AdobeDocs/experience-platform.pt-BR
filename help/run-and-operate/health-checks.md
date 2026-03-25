@@ -4,8 +4,8 @@ description: Saiba como usar verificações de integridade no Adobe Experience P
 solution: Experience Platform
 type: Documentation
 role: Admin, User
-hide: true
-source-git-commit: ab2420b898dc38d19187cee627b5c44e7fb44a6c
+exl-id: b35aef7c-54f4-4758-9b36-a981510ae21b
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
 source-wordcount: '1590'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # Verificações de integridade
 
-As verificações de integridade verificam seus esquemas e identidades usados na sandbox e fornecem um resumo dos problemas que você pode usar para explorar e solucionar problemas com o [!UICONTROL AI Assistant]. No futuro, mais objetos poderão ser examinados para obter um relatório mais abrangente.
+As verificações de integridade verificam seus esquemas e identidades usados na sandbox e fornecem um resumo dos problemas que você pode usar para explorar e solucionar problemas com o Assistente de IA. No futuro, mais objetos poderão ser examinados para obter um relatório mais abrangente.
 
 Configurações insatisfatórias de esquema e identidade levam a problemas significativos de downstream, incluindo criação incorreta de perfis, falha na qualificação de segmentos e ativação imprecisa. Esses problemas são difíceis de detectar e geralmente exigem conhecimento especializado para serem diagnosticados. As verificações de integridade mudam sua abordagem da solução de problemas reativa para a manutenção proativa e preventiva.
 
@@ -22,7 +22,7 @@ Com as verificações de integridade, é possível:
 
 * **Detectar problemas de configuração antecipadamente**: identifique práticas recomendadas, configurações incorretas e padrões que levam a ineficiências na personalização, ativação e muito mais.
 * **Receber correção guiada**: Obtenha orientações claras sobre o que é cada problema e o que fazer sobre ele.
-* **Monitorar continuamente**: neste momento, verificações de integridade executam verificações automáticas diárias para que você possa detectar problemas antes que eles se tornem falhas críticas. O cronograma pode mudar em versões futuras.
+* **Monitorar continuamente**: Atualmente, as verificações de integridade executam verificações automáticas diárias para que você possa detectar problemas antes que eles se tornem falhas críticas. O cronograma pode mudar em versões futuras.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -72,14 +72,14 @@ Verificações para garantir que os campos de identidade tenham restrições de 
 | Detalhe | Descrição |
 | --- | --- |
 | **Problema** | Os campos marcados como identidades não têm um comprimento mínimo/máximo ou validação de padrão. |
-| **Impacto** | Sem validação, os valores de lixo podem inserir [!UICONTROL Identity Service]. Valores como &quot;0&quot;, &quot;Guest&quot; ou maiúsculas/minúsculas incompatíveis (por exemplo, &quot;xyz123&quot; versus &quot;XYZ123&quot;) comprometem a integridade do perfil montado durante a segmentação e a ativação. |
+| **Impacto** | Sem validação, os valores de lixo podem inserir [!DNL Identity Service]. Valores como &quot;0&quot;, &quot;Guest&quot; ou maiúsculas/minúsculas incompatíveis (por exemplo, &quot;xyz123&quot; versus &quot;XYZ123&quot;) comprometem a integridade do perfil montado durante a segmentação e a ativação. |
 | **Correção** | Defina restrições de comprimento mínimo/máximo e padrão em campos personalizados marcados como identidades. Use expressões regulares para aplicar regras como somente dígitos, maiúsculas ou minúsculas ou combinações de caracteres específicas. |
 
 Ao selecionar o cartão **[!UICONTROL Identity Field Validation]**, um painel de detalhes é aberto à direita. O painel mostra:
 
 * **[!UICONTROL Description]**: verifica se os campos de identidade têm comprimentos mín/máx e regras de padrão regex para integridade de dados. Lista esquemas e campos afetados.
 * **[!UICONTROL Impact]**: se os campos de identidade nos esquemas não tiverem tamanhos mínimos/máximos e validações de padrão definidas, isso poderá levar a dados inconsistentes, o que pode comprometer a integridade e a qualidade dos dados.
-* **[!UICONTROL General areas of impact]**: identificadores de baixa qualidade em [!UICONTROL Identity Service]; compilação não confiável.
+* **[!UICONTROL General areas of impact]**: identificadores de baixa qualidade em [!DNL Identity Service]; compilação não confiável.
 * **[!UICONTROL Experience League Documentation]**: um link para as práticas recomendadas para modelagem de dados.
 * **[!UICONTROL Affected Schemas]**: uma lista de esquemas afetados, cada um com um expansor para exibir mais detalhes e um link para abrir o esquema.
 
@@ -122,7 +122,7 @@ Valida o uso correto de tipos de identidade de pessoas e não pessoas em classes
 Ao selecionar o cartão **[!UICONTROL People & Non-People Identity Config]**, um painel de detalhes é aberto à direita. O painel mostra:
 
 * **[!UICONTROL Description]**: valida o uso adequado de tipos de identidade em classes de esquema. Lista esquemas configurados incorretamente e destaca atribuições incorretas.
-* **[!UICONTROL Impact]**: Se uma entidade que não seja uma pessoa tiver uma identidade de pessoa, isso aumentará a contagem de perfis e tornará esses dados inelegíveis como uma pesquisa. Se uma entidade de pessoa tiver uma identidade que não seja de pessoa, os dados não estarão disponíveis para transmissão ou segmentação de borda.
+* **[!UICONTROL Impact]**: Se uma entidade que não seja de pessoas receber uma identidade de pessoa, isso aumentará a contagem de perfis e tornará esses dados inelegíveis como uma pesquisa. Se uma entidade de pessoa receber uma identidade que não seja de pessoas, os dados não estarão disponíveis para transmissão ou segmentação de borda.
 * **[!UICONTROL General areas of impact]**: Gráficos de identidade incompletos; contagens de perfis aumentadas; uso incorreto de pesquisa.
 * **[!UICONTROL Affected Schemas]**: uma lista de esquemas com problemas. Expanda uma linha de esquema para ver o caminho, o nome da identidade e o tipo de esquema para cada erro de configuração. Use o ícone de link para abrir o esquema.
 
@@ -172,7 +172,7 @@ Ao selecionar o cartão **[!UICONTROL Deprecated Identity Namespace]**, um paine
 
 ![Painel de detalhes do Namespace de Identidade obsoleto mostrando a descrição, o impacto e a lista de namespaces afetados](assets/health-checks/deprecated-namespace-detail.png)
 
-Para obter mais informações, consulte o [artigo da base de dados de conhecimento da Experience Cloud sobre namespaces obsoletos](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
+Para obter mais informações, consulte o [artigo da base de dados de conhecimento da Experience Cloud sobre namespaces obsoletos](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-18155){target="_blank"}.
 
 ## Próximas etapas {#next-steps}
 

@@ -3,25 +3,24 @@ description: Saiba como inspecionar e solucionar problemas de trabalhos de proce
 solution: Experience Platform
 title: Inspecionar Calendários de Trabalho
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: ce855b19-66ab-4d3d-924e-fb9928676aa2
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 0%
+source-wordcount: '824'
+ht-degree: 1%
 
 ---
 
-
 # Inspecionar agendas de trabalho
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] estão disponíveis no momento como uma versão limitada e somente para os seguintes trabalhos do Real-Time CDP:
+>[!UICONTROL Job schedules] estão disponíveis no momento apenas para os seguintes trabalhos do Real-Time CDP:
 >
 > * Assimilação em lote de data lake
 > * Assimilação de perfil em lote
 > * Segmentação em lote
-> * Ativação do destino de lote.
+> * Ativação do destino de lote
 
 O [!UICONTROL Job Schedules] fornece uma exibição unificada de todos os trabalhos agendados de processamento em lote em seu pipeline de dados, desde a assimilação até a ativação de destino. Inspecione o status da execução, identifique conflitos de agendamento e diagnostique problemas de configuração antes que eles afetem as operações de negócios.
 
@@ -107,7 +106,6 @@ Ao revisar as programações de jobs, você pode notar padrões que indicam prob
 Esses padrões podem levar a falhas de trabalho, processamento de dados incompleto e desempenho deficiente do sistema. Para saber como identificar e resolver esses problemas, consulte a documentação em [identificação de antipadrões de agendamento de trabalho](job-schedules-anti-patterns.md).
 
 Quando for necessário investigar conjuntos de dados específicos ou execuções de job, você poderá se aprofundar em exibições detalhadas para ver o histórico de execução, as mensagens de erro, as métricas de desempenho e as dependências. Para obter informações sobre como exibir esses dados detalhados, consulte a documentação em [exibindo detalhes do trabalho](job-schedules-details.md).
-
 
 ## Próximas etapas {#next-steps}
 

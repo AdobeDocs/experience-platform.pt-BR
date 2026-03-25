@@ -3,25 +3,24 @@ description: Saiba como exibir informações detalhadas sobre conjuntos de dados
 solution: Experience Platform
 title: Exibir Detalhes da Programação de Job
 type: Tutorial
-hide: true
-source-git-commit: 436ce6843e96b76dac0595ff5ab8a6067fb521ea
+exl-id: e568bfc3-f0e1-4305-94e7-070928459a87
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '1783'
+source-wordcount: '1778'
 ht-degree: 1%
 
 ---
 
-
 # Exibir detalhes da programação de trabalho
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] estão disponíveis no momento como uma versão limitada e somente para os seguintes trabalhos do Real-Time CDP:
+>[!UICONTROL Job schedules] estão disponíveis no momento apenas para os seguintes trabalhos do Real-Time CDP:
 >
 > * Assimilação em lote de data lake
 > * Assimilação de perfil em lote
 > * Segmentação em lote
-> * Ativação do destino de lote.
+> * Ativação do destino de lote
 
 Ao solucionar falhas de tarefa ou investigar problemas de desempenho, você precisa de informações detalhadas sobre conjuntos de dados específicos e suas execuções de tarefa. A interface [Calendários de Trabalho](job-schedules.md) permite que você faça drill-down da exibição da linha do tempo em conjuntos de dados e trabalhos individuais para entender o histórico de execução, o tempo e o status.
 
@@ -37,7 +36,7 @@ Use essa exibição detalhada para:
 
 Antes de exibir detalhes do trabalho, você deve:
 
-* Ter acesso a [!UICONTROL Job Schedules] com **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
+* Ter acesso a **[!UICONTROL Job Schedules]** com **[!UICONTROL View Job Schedules]** e **[!UICONTROL View Profile Management]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 * Familiarize-se com a [interface de Agendamentos de Trabalho](job-schedules.md#understanding-interface) e a exibição da linha do tempo.
 * Entenda os [tipos de trabalho](job-schedules.md#job-schedules-details) diferentes (assimilação de lake, assimilação de perfil, segmentação, ativação).
 

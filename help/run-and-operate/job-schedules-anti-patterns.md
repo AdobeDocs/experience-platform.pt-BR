@@ -3,25 +3,24 @@ description: Saiba como identificar e resolver antipadrões comuns de configura�
 solution: Experience Platform
 title: Identificar Antipadrões de Programação de Job
 type: Tutorial
-hide: true
-source-git-commit: 9d170fec9b80f0f2e17fc39e8f573cbad515f823
+exl-id: f94e3ef3-2252-46f5-8075-45b5483d9d83
+source-git-commit: 41abc542b11dcd9c295d29cdfad68720ad50129d
 workflow-type: tm+mt
-source-wordcount: '986'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
 
-
 # Identificar superescritos da programação de trabalho
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->[!UICONTROL Job schedules] estão disponíveis no momento como uma versão limitada e somente para os seguintes trabalhos do Real-Time CDP:
+>[!UICONTROL Job schedules] estão disponíveis no momento apenas para os seguintes trabalhos do Real-Time CDP:
 >
 > * Assimilação em lote de data lake
 > * Assimilação de perfil em lote
 > * Segmentação em lote
-> * Ativação do destino de lote.
+> * Ativação do destino de lote
 
 A exibição da linha do tempo [Cronogramas de trabalho](job-schedules.md) ajuda a identificar problemas comuns de configuração que podem afetar negativamente o desempenho e a confiabilidade do seu pipeline de dados. Esses antipadrões geralmente levam a falhas de trabalho, inconsistências de dados ou degradação do desempenho do sistema. Ao detectar esses padrões antecipadamente, você pode reconfigurar seus jobs para evitar problemas antes que eles afetem suas operações de negócios.
 
@@ -43,11 +42,11 @@ Antes de identificar antipadrões, você deve:
 
 ## Sobreposição de agendamento {#schedule-overlap-pattern}
 
-**Severidade do impacto**: Alta | **Problema principal**: contenção de recursos
+**Severidade do impacto**: Alta | **Problema principal**: Contenção de recursos
 
 **O que procurar**: vários trabalhos agendados para execução ao mesmo tempo ou em estreita sucessão, especialmente quando os trabalhos com muitos recursos se sobrepõem.
 
-Neste exemplo, você pode ver trabalhos de assimilação em lote em execução ao mesmo tempo que um trabalho de segmentação programado. Isso cria contenção de recursos porque ambas as operações exigem capacidade de processamento e memória significativas.
+Um exemplo comum são os trabalhos de assimilação em lote em execução ao mesmo tempo que um trabalho de segmentação programado. Isso cria contenção de recursos porque ambas as operações exigem capacidade de processamento e memória significativas.
 
 **Por que isso é problemático**:
 
@@ -64,11 +63,11 @@ Neste exemplo, você pode ver trabalhos de assimilação em lote em execução a
 
 ## Densidade do trabalho agendado {#scheduled-density}
 
-**Severidade do impacto**: Alta | **Problema principal**: gargalos de pipeline
+**Severidade do impacto**: Alta | **Problema principal**: Gargalos de pipeline
 
 **O que procurar**: muitos conjuntos de dados com vários lotes agendados na mesma hora, principalmente quando esses lotes são empilhados próximos e agendados próximo a janelas de processamento críticas, como horas de início de segmentação.
 
-Nesse padrão, você verá:
+Normalmente, esse padrão inclui:
 
 * Vários conjuntos de dados, cada um executando vários lotes por dia
 * Trabalhos ETL (assimilação de data lake e assimilação de perfil) clusterizados na mesma hora
@@ -80,22 +79,22 @@ Nesse padrão, você verá:
 * **Disponibilidade de perfil atrasada**: trabalhos de assimilação de perfil que são executados muito perto dos horários de início da segmentação podem não ser concluídos a tempo, resultando em avaliações de público-alvo incompletas ou obsoletas.
 * **Segmentação imprevisível**: se os trabalhos de assimilação de upstream ainda estiverem em execução quando a segmentação começar, você corre o risco de avaliar os públicos com relação a dados incompletos, resultando em associação incorreta de público.
 * **Falhas em cascata**: um único lote atrasado em um agendamento densamente empilhado pode causar um efeito dominó, atrasando todos os lotes subsequentes e processos downstream.
-* **Restrição de recursos**: o sistema pode ter dificuldades para alocar recursos suficientes ao processar muitos trabalhos de assimilação simultâneos, resultando em tempos de processamento mais lentos ou falhas.
+* **Esforço de recursos**: o sistema pode ter dificuldades para alocar recursos suficientes ao processar muitos trabalhos de assimilação simultâneos, resultando em tempos de processamento mais lentos ou falhas.
 
 **Como corrigir**:
 
 * **Consolidar lotes**: reduza a frequência do lote combinando vários lotes pequenos em lotes menores e maiores por conjunto de dados.
 * **Distribuir uniformemente**: espalhe os trabalhos de assimilação ao longo do dia, em vez de agrupá-los em horas específicas.
 * **Adicionar tempo de buffer**: garanta um buffer mínimo de 1 a 2 horas entre a conclusão da assimilação de perfil e o início da segmentação.
-* **Requisitos de revisão**: avalie se todos os conjuntos de dados realmente precisam de vários lotes diários. Muitos casos de uso funcionam com atualizações menos frequentes.
+* **Requisitos de revisão**: avalie se todos os conjuntos de dados realmente precisam de vários lotes diários. Muitos casos de uso funcionam com menos atualizações frequentes.
 
 ## Lotes excessivos por conjunto de dados {#excessive-batches-per-dataset}
 
-**Severidade do impacto**: Medium | **Problema principal**: processamento ineficiente
+**Severidade do impacto**: Medium | **Problema principal**: Processamento ineficiente
 
 **O que procurar**: um único conjunto de dados com um número excessivo de trabalhos em lotes individuais agendados ao longo do dia, criando uma longa pilha vertical de trabalhos na linha do tempo.
 
-Nesse padrão, você verá uma linha de conjunto de dados com muitos trabalhos individuais de assimilação em lotes agendados em intervalos frequentes, às vezes dezenas de lotes por dia para um único conjunto de dados.
+Esse padrão envolve um único conjunto de dados com muitos trabalhos individuais de assimilação em lotes agendados em intervalos frequentes, às vezes dezenas de lotes por dia.
 
 **Por que isso é problemático**:
 

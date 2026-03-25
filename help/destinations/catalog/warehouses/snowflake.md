@@ -1,13 +1,13 @@
 ---
 title: Conexão de transmissão do Snowflake
 description: Crie um compartilhamento de dados ao vivo do Snowflake para receber atualizações de público-alvo de transmissão diretamente como tabelas compartilhadas na sua conta.
-last-substantial-update: 2025-10-23T00:00:00Z
+last-substantial-update: 2026-03-24T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: f74680fa35490f0e8b2d371739ecf8ef3eed74c9
 workflow-type: tm+mt
-source-wordcount: '1557'
-ht-degree: 4%
+source-wordcount: '1637'
+ht-degree: 2%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->Este conector de destino está em disponibilidade limitada e só está disponível para clientes do Real-Time CDP Ultimate provisionados na [região VA7](/help/landing/multi-cloud.md#azure-regions).
+>Este conector de destino está em disponibilidade limitada e só está disponível para [!DNL Real-Time CDP] clientes do Ultimate provisionados na [região do VA7](/help/landing/multi-cloud.md#azure-regions).
 
 ## Visão geral {#overview}
 
@@ -29,7 +29,7 @@ Esse destino usa um compartilhamento de dados do [!DNL Snowflake], o que signifi
 
 Na primeira vez que compartilhar dados da instância Snowflake do Adobe com a sua, você será solicitado a aceitar a lista privada do Adobe.
 
-![Captura de tela mostrando a tela de aceitação da lista privada do Snowflake](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![Captura de tela mostrando a tela de aceitação da lista privada do Snowflake](../../assets/catalog/warehouses/snowflake/snowflake-accept-listing.png)
 
 ### Retenção de dados e TTL (Time-to-Live) {#ttl}
 
@@ -45,7 +45,7 @@ Quando um fluxo de dados é executado para um público-alvo pela primeira vez, e
 
 ## Compartilhamento de dados em lote versus transmissão {#batch-vs-streaming}
 
-A Experience Platform fornece dois tipos de destinos do Snowflake: [Streaming do Snowflake](snowflake.md) e [Lote do Snowflake](snowflake-batch.md).
+[!DNL Adobe Experience Platform] fornece dois tipos de destinos [!DNL Snowflake]: [Snowflake Streaming](snowflake.md) e [Snowflake Batch](snowflake-batch.md).
 
 A tabela abaixo ajudará você a decidir qual destino usar, descrevendo os cenários em que cada método de compartilhamento de dados é mais apropriado.
 
@@ -69,14 +69,15 @@ O compartilhamento de dados de transmissão é ideal para cenários em que você
 * **Eficiência e nuance**: permita maior eficiência e nuance nos esforços de marketing, permitindo uma resposta rápida às alterações de comportamento do usuário
 * **Otimização da jornada do cliente em tempo real**: atualize as experiências do cliente imediatamente quando a associação do segmento ou os atributos do perfil forem alterados
 
-O compartilhamento de dados de transmissão fornece atualizações contínuas com base em alterações de segmento, alterações no mapa de identidade ou alterações de atributo, tornando-o adequado para cenários em que a latência é crítica e são necessárias atualizações imediatas.
+O compartilhamento de dados de transmissão fornece atualizações contínuas com base em alterações de segmento, alterações no mapa de identidade ou alterações de atributo, tornando-o adequado quando a baixa latência é importante.
 
 ## Pré-requisitos {#prerequisites}
 
 Antes de configurar a conexão do Snowflake, verifique se os seguintes pré-requisitos estão sendo atendidos:
 
 * Você tem acesso a uma conta [!DNL Snowflake].
-* Sua conta do Snowflake tem inscrições em listas privadas. Você ou alguém em sua empresa que tenha privilégios de administrador de conta no Snowflake pode configurar isso.
+* Sua conta [!DNL Snowflake] está inscrita em listagens privadas. Você ou alguém na sua empresa que tenha privilégios de administrador de conta no [!DNL Snowflake] pode configurar isso.
+* Você conhece a região da sua conta [!DNL Snowflake], que você selecionará em uma lista suspensa ao conectar-se ao destino.
 
 Leia a [[!DNL Snowflake] documentação](https://docs.snowflake.com/en/collaboration/consumer-listings-access#access-a-private-listing) para obter mais informações sobre as permissões necessárias.
 
@@ -86,12 +87,10 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| [!DNL Segmentation Service] | Sim | Públicos gerados por meio do [!DNL Adobe Experience Platform] [Serviço de segmentação](../../../segmentation/home.md). |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para [!DNL Adobe Experience Platform] de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos [!DNL Adobe Experience Platform], como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
-
-
 
 Públicos-alvo compatíveis por tipo de dados de público-alvo:
 
@@ -100,10 +99,9 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
-
 
 ## Tipo e frequência de exportação {#export-type-frequency}
 
@@ -112,7 +110,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 | Item | Tipo | Notas |
 |---------|----------|---------|
 | Tipo de exportação | **[!UICONTROL Audience export]** | Você está exportando todos os membros de um público com os identificadores (nome, número de telefone ou outros) usados no destino [!DNL Snowflake]. |
-| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
+| Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado em [!DNL Adobe Experience Platform] com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -128,18 +126,18 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 Para autenticar no destino, selecione **[!UICONTROL Connect to destination]**.
 
-![Captura de tela de exemplo mostrando como autenticar no destino](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png)
+![Captura de tela de exemplo mostrando como autenticar no destino](../../assets/catalog/warehouses/snowflake/authenticate-destination.png)
 
 ### Preencher detalhes do destino {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_snowflake_accountID"
 >title="Insira sua ID da conta do Snowflake"
->abstract="Se sua conta estiver vinculada a uma organização, use este formato: `OrganizationName.AccountName`<br><br> Se sua conta não estiver vinculada a uma organização, use este formato:`AccountName`"
+>abstract="Se a sua conta estiver vinculada a uma organização, use este formato: `OrganizationName.AccountName`<br><br>Se a conta não estiver vinculada a uma organização, use este formato: `AccountName`"
 
 Para configurar detalhes para o destino, preencha os campos obrigatórios e opcionais abaixo. Um asterisco ao lado de um campo na interface do usuário indica que o campo é obrigatório.
 
-![Captura de tela de exemplo mostrando como preencher detalhes para o seu destino](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png)
+![Captura de tela de exemplo mostrando como preencher detalhes para o seu destino](../../assets/catalog/warehouses/snowflake/configure-destination-details.png)
 
 * **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Description]**: uma descrição que ajudará você a identificar este destino no futuro.
@@ -148,9 +146,13 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
    * Se sua conta não estiver vinculada a uma organização:`AccountName`.
 * **[!UICONTROL Account acknowledgment]**: Ative a confirmação da ID de conta da Snowflake para confirmar se a ID de conta está correta e se pertence a você.
 
+>[!NOTE]
+>
+> O **[!UICONTROL Snowflake Account ID]** não pode ser editado por meio do fluxo de trabalho [editar destino](../../ui/edit-destination.md) depois que você cria o destino. Para usar uma conta diferente, [crie uma nova conexão de destino](../../ui/connect-destination.md).
+
 >[!IMPORTANT]
 >
-> Caracteres especiais usados no nome de destino e no nome da sandbox do Experience Platform são convertidos automaticamente em sublinhados (`_`) no Snowflake. Para evitar confusão, não use caracteres especiais no destino e no nome da sandbox.
+> Caracteres especiais usados no nome de destino e no nome da sandbox [!DNL Adobe Experience Platform] são convertidos automaticamente em sublinhados (`_`) em [!DNL Snowflake]. Para evitar confusão, não use caracteres especiais no destino e no nome da sandbox.
 
 ### Ativar alertas {#enable-alerts}
 
@@ -171,23 +173,25 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 O destino do Snowflake oferece suporte ao mapeamento de atributos de perfil para atributos personalizados.
 
-![Imagem da interface do usuário do Experience Platform mostrando a tela de mapeamento para o destino do Snowflake.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![Imagem da interface do usuário do Experience Platform mostrando a tela de mapeamento para o destino do Snowflake.](../../assets/catalog/warehouses/snowflake/mapping.png)
 
 Os atributos de destino são criados automaticamente no Snowflake usando o nome do atributo fornecido no campo **[!UICONTROL Attribute name]**.
 
 ## Dados exportados / Validar exportação de dados {#exported-data}
 
-Verifique sua conta do Snowflake para verificar se os dados foram exportados corretamente.
+Os dados são compartilhados com sua conta da Snowflake por meio de uma tabela compartilhada. Verifique sua conta do Snowflake para verificar se os dados foram exportados corretamente.
 
-## Limitações conhecidas {#known-limitations}
+O exemplo a seguir mostra linhas de amostra de uma tabela compartilhada: algumas colunas armazenam identidades e associação de segmento como JSON; os atributos de perfil mapeados aparecem como colunas de cadeia de caracteres separadas.
 
-### Restrição de política de mesclagem padrão {#default-merge-policy-restriction}
+![Exemplo de linhas de planilha do Snowflake mostrando IDENTITYMAP, SEGMENT_MEMBERSHIP e colunas de atributo mapeadas](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
-Atualmente, somente os públicos-alvo mapeados para a política de mesclagem padrão podem ser exportados.
+### Estrutura de dados {#data-structure}
 
-### Disponibilidade regional {#regional-availability}
+A captura de tela acima mostra as seguintes colunas:
 
-O destino de transmissão [!DNL Snowflake] está disponível no momento apenas para clientes do Real-Time CDP provisionados na região do Experience Platform VA7.
+* **IDENTITYMAP**: objeto JSON para cada mapa de identidade de perfil.
+* **SEGMENT_MEMBERSHIP**: objeto JSON para cada público ativado no fluxo de dados. Os valores incluem `lastQualificationTime` e `status` (por exemplo, `realized` quando o perfil se qualifica para o segmento).
+* **Atributos de mapeamento**: cada atributo de mapeamento selecionado durante o fluxo de trabalho de ativação é representado como um cabeçalho de coluna em [!DNL Snowflake].
 
 ## Uso e governança de dados {#data-usage-governance}
 

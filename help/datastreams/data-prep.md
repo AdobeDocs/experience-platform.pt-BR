@@ -48,7 +48,7 @@ Este guia aborda como mapear seus dados na interface. Para acompanhar as etapas,
 
 Para obter uma demonstração rápida do processo de preparo de dados para a coleção de dados, assista ao vídeo a seguir:
 
->[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345568?captions=por_br&quality=12&enable10seconds=on&speedcontrol=on)
 
 ## [!UICONTROL Select data] {#select-data}
 

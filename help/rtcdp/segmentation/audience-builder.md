@@ -2,12 +2,12 @@
 title: Construtor de público-alvo no Real-Time Customer Data Platform
 description: Saiba como usar o Construtor de público-alvo no Real-Time Customer Data Platform para criar públicos-alvo.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 5998adf98aa7250864983d7e4e629921633e1a1c
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 9%
+source-wordcount: '1079'
+ht-degree: 7%
 
 ---
 
@@ -40,10 +40,6 @@ Você pode selecionar o ![ícone de configurações](../../images/icons/settings
 
 ![Os ícones de configurações estão realçados no Audience Builder.](../assets/segmentation/audience-builder/select-settings.png){zoomable="yes"}
 
->[!NOTE]
->
->A seção **[!UICONTROL Field options]** está atualmente na versão beta e está disponível somente para clientes selecionados. Entre em contato com o atendimento ao cliente da Adobe para mais informações.
-
 A seção [!UICONTROL Settings] é exibida. Nesta seção, você pode atualizar quais campos são exibidos, bem como a relação dos campos.
 
 Para **[!UICONTROL Field options]**, você pode mostrar apenas os campos que contêm dados ou o esquema XDM completo.
@@ -58,9 +54,17 @@ A guia [!UICONTROL Attributes] permite procurar atributos de Conta pertencentes 
 
 ![A guia Atributos é exibida no Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
-Ao selecionar um atributo, você pode ver dados de resumo selecionando o [ícone de informações](../../images/icons/info.png). Os dados de resumo incluem informações como valores principais, uma explicação do que é o campo, bem como a porcentagem de contas que contêm valores para esse atributo.
+Ao selecionar um atributo, você pode ver dados de resumo selecionando o [ícone de informações](../../images/icons/info.png). Os dados de resumo incluem informações como valores principais, uma explicação do que é o campo, a contagem de registro dos valores, bem como a porcentagem de contas que contêm valores para esse atributo.
+
+A seção **[!UICONTROL Populated]** mostra o número de registros em que o atributo é preenchido em comparação ao número total de registros disponíveis, bem como a porcentagem de contas que têm um valor para esse campo.
+
+A seção **[!UICONTROL Top values]** exibe os valores que ocorrem com mais frequência para o atributo e inclui detalhes como o valor, o número de registros que têm o valor, bem como a porcentagem do total de registros que o valor representa.
 
 ![Um popover que exibe uma versão totalmente preenchida dos dados de resumo de um atributo.](../assets/segmentation/audience-builder/full-summary-data.png){width="300"}
+
+Como alternativa, você pode ver a distribuição de seus dados com os valores mínimo, médio e máximo exibidos.
+
+![Um popover que exibe as estatísticas de um atributo, incluindo os valores mínimo, médio e máximo.](../assets/segmentation/audience-builder/statistics.png)
 
 Se um atributo for preenchido por menos de 25% das contas, o ![ícone de aviso de dados](../../images/icons/data-notice.png) será exibido. Os mesmos dados de resumo serão exibidos para o atributo, independentemente.
 
@@ -72,7 +76,11 @@ Se um atributo for preenchido por menos de 25% das contas, o ![ícone de aviso d
 >
 >Estes dados de resumo são atualizados **diariamente**.
 
-Para obter um guia mais detalhado sobre o Audience Builder, leia o [guia do usuário do Audience Builder](../../segmentation/ui/segment-builder.md){target="_blank"}.
+Além disso, o atributo tem um **[!UICONTROL Ingestion Type]**. O tipo de assimilação permite saber a origem dos dados e pode ser um dos seguintes valores: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
+
+![O tipo de assimilação do atributo é exibido.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+
+Para obter um guia mais detalhado sobre os atributos no Audience Builder, leia o [guia do usuário do Audience Builder](../../segmentation/ui/segment-builder.md){target="_blank"}.
 
 ### Públicos-alvo {#audiences}
 

@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 2341b02ecbd93965654bdbc38bbacadeae5be0ed
+source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
 workflow-type: tm+mt
-source-wordcount: '6311'
-ht-degree: 11%
+source-wordcount: '6574'
+ht-degree: 10%
 
 ---
 
@@ -55,6 +55,16 @@ Os blocos fundamentais das definições de segmento são atributos e eventos. Al
 Você pode ver esses blocos de construção na seção **[!UICONTROL Fields]** à esquerda do espaço de trabalho [!DNL Segment Builder]. **[!UICONTROL Fields]** contém uma guia para cada bloco de construção principal: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot; e &quot;[!UICONTROL Audiences]&quot;.
 
 ![A seção de campos do Construtor de segmentos está realçada.](../images/ui/segment-builder/segment-fields.png)
+
+Você pode selecionar o ![ícone de configurações](/help/images/icons/settings.png) para ajustar as configurações dos campos exibidos.
+
+Para **[!UICONTROL Available fields]**, você pode mostrar apenas os campos que contêm dados ou o esquema XDM completo.
+
+Para o **[!UICONTROL Data sources]**, você pode filtrar para mostrar atributos que vêm dos tipos de assimilação especificados. Os valores suportados incluem **[!UICONTROL Show batch data]**, **[!UICONTROL Show streaming/edge data]** e **[!UICONTROL Show fields with no ingested data]**.
+
+Para o **[!UICONTROL Merge policy]**, você pode escolher a política de mesclagem à qual os campos pertencem.
+
+![A área de configurações é exibida dentro do Construtor de segmentos.](../images/ui/segment-builder/settings.png)
 
 ### Atributos
 
@@ -146,6 +156,22 @@ Você pode usar os seguintes operadores para os respectivos tipos de dados:
 Para obter informações mais detalhadas sobre as funções de hora e data, leia a [seção de restrições de tempo](#time-constraints).
 
 +++
+
+Ao selecionar um atributo, você pode ver os dados de resumo selecionando o [ícone de informações](../../images/icons/info.png). Os dados de resumo incluem informações como uma explicação do que é o campo, a contagem de registro dos valores, bem como a porcentagem de contas que contêm valores para esse atributo.
+
+A seção **[!UICONTROL Top values]** exibe os valores que ocorrem com mais frequência para o atributo e inclui detalhes como o valor, o número de registros que têm o valor, bem como a porcentagem do total de registros que o valor representa.
+
+![Um popover que exibe os dados de resumo de um atributo](/help/segmentation/images/ui/segment-builder/summary-data.png)
+
+Se um atributo for preenchido por menos de 25% dos perfis, o ![ícone de aviso de dados](../../images/icons/data-notice.png) será exibido. Os mesmos dados de resumo serão exibidos para o atributo, independentemente.
+
+>[!NOTE]
+>
+>Os valores principais são exibidos somente se o campo **não** contiver muitos valores diferentes e se esses valores de campo forem repetidos com frequência. Além disso, esses dados de resumo são atualizados **diariamente**.
+
+Além disso, o atributo tem um **[!UICONTROL Ingestion Type]**. O tipo de assimilação permite saber a origem dos dados e pode ser um dos seguintes valores: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
+
+![O tipo de assimilação do atributo é exibido.](/help/segmentation/images/ui/segment-builder/ingestion-type.png)
 
 #### Atributos computados {#computed-attributes}
 

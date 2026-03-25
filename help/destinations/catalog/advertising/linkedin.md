@@ -3,9 +3,9 @@ keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight tag;Insight Ta
 title: Extensão de tag do LinkedIn Insight
 description: A extensão Insight Tag do LinkedIn é um destino de publicidade na Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '425'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Instale o [!DNL LinkedIn Insight Tag] para usar os recursos de rastreamento de conversão, redirecionamento e demografia de sites.
 
-[!DNL LinkedIn Insight Tag] é uma extensão de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte [Marca Insight do LinkedIn](https://business.linkedin.com/marketing-solutions/insight-tag).
+[!DNL LinkedIn Insight Tag] é uma extensão de publicidade em [!DNL Adobe Experience Platform]. Para obter mais informações sobre a funcionalidade de extensão, consulte [Marca Insight do LinkedIn](https://business.linkedin.com/marketing-solutions/insight-tag).
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar esta extensão, você precisa acessar as marcas em [!DNL Adobe Experience Platform]. As marcas são oferecidas a [!DNL Adobe Experience Cloud] clientes como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

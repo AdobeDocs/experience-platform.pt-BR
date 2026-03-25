@@ -3,9 +3,9 @@ keywords: extensão de decibel;decibel;destino de decibel
 title: Extensão Decibel
 description: A extensão Decibel é um destino de análise no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 0508f8f8-d512-48f1-b2ea-1429f59079db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '431'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 Implante o [!DNL Decibel] nas suas propriedades da Web de maneira rápida e simples. Configurações avançadas adicionais também podem ser implantadas com regras usando ações disponibilizadas por meio da extensão.
 
-[!DNL Decibel] é uma extensão do Analytics no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html).
+[!DNL Decibel] é uma extensão do Analytics em [!DNL Adobe Experience Platform]. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html).
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar esta extensão, você precisa acessar as marcas em [!DNL Adobe Experience Platform]. As marcas são oferecidas a [!DNL Adobe Experience Cloud] clientes como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

@@ -4,9 +4,9 @@ type: Tutorial
 description: Saiba como ativar os dados de público-alvo no Adobe Experience Platform enviando públicos-alvo para destinos com base em perfil de transmissão.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: bc0f781e-60de-44a5-93cb-06b4a3148591
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '759'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-Este artigo explica o fluxo de trabalho necessário para ativar dados de público-alvo no Adobe Experience Platform para destinos baseados em perfil de transmissão (também conhecidos como [destinos corporativos](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
+Este artigo explica o fluxo de trabalho necessário para ativar dados de público-alvo no [!DNL Adobe Experience Platform] para destinos baseados em perfil de streaming (também conhecidos como [destinos corporativos](/help/destinations/destination-types.md#advanced-enterprise-destinations)).
 
 Este artigo se aplica aos três destinos a seguir:
 

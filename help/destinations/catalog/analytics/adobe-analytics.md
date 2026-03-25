@@ -3,20 +3,20 @@ keywords: extensão do Analytics, extensão do Analytics, análise de destino
 title: Extensão do Adobe Analytics
 description: A extensão do Adobe Analytics é um destino de análise no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '455'
-ht-degree: 5%
+source-wordcount: '441'
+ht-degree: 4%
 
 ---
 
-# Extensão do Adobe Analytics
+# Extensão do [!DNL Adobe Analytics]
 
 ## Visão geral {#overview}
 
-O Adobe Analytics é uma solução líder do setor que faz você ser capaz de entender seus clientes como pessoas e de orientar seus negócios com informações de inteligência de clientes.
+O [!DNL Adobe Analytics] é uma solução líder do setor que faz você ser capaz de entender seus clientes como pessoas e de orientar seus negócios com informações de inteligência de clientes.
 
-O Adobe Analytics é uma extensão do Analytics no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a [visão geral da extensão do Adobe Analytics](/help/tags/extensions/client/analytics/overview.md) na documentação de Tags.
+[!DNL Adobe Analytics] é uma extensão do Analytics em [!DNL Adobe Experience Platform]. Para obter mais informações sobre a funcionalidade de extensão, consulte a [visão geral da extensão do Adobe Analytics](/help/tags/extensions/client/analytics/overview.md) na documentação de Tags.
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -26,11 +26,11 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Essa extensão está disponível no catálogo de Destinos para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar as tags na Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso à interface da Coleção de dados e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar essa extensão, você precisa acessar as tags na Experience Platform. As marcas são oferecidas a [!DNL Adobe Experience Cloud] clientes como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso à interface da Coleção de dados e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 
-Para instalar a extensão Adobe Analytics:
+Para instalar a extensão [!DNL Adobe Analytics]:
 
 Na [interface do Experience Platform](https://platform.adobe.com/), vá para **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
@@ -42,7 +42,7 @@ Selecione a propriedade da tag na qual você deseja instalar a extensão. Você 
 
 O fluxo de trabalho direciona você à interface da Coleção de dados para concluir a instalação.
 
-Para obter informações sobre as opções de configuração de extensão, consulte a [página de extensão do Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html?lang=pt-BR) na documentação das tags.
+Para obter informações sobre as opções de configuração de extensão, consulte a [página de extensão do Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) na documentação das tags.
 
 Você também pode instalar a extensão diretamente na [Interface da Coleção de Dados](https://experience.adobe.com/#/data-collection/). Consulte o guia em [adicionando uma nova extensão](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) para obter mais informações.
 

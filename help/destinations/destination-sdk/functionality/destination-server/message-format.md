@@ -1,28 +1,28 @@
 ---
-description: Essa página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
+description: Esta página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
 title: Formato da mensagem
 exl-id: ab05d34e-530f-456c-b78a-7f3389733d35
-source-git-commit: 270facfd580b2dde09906bee1728e1be198680cf
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2512'
+source-wordcount: '2470'
 ht-degree: 0%
 
 ---
 
 # Formato da mensagem
 
-## Pré-requisitos - Conceitos do Adobe Experience Platform {#prerequisites}
+## Pré-requisitos - [!DNL Adobe Experience Platform] conceitos {#prerequisites}
 
 Para entender o formato da mensagem e o processo de configuração e transformação de perfil no Adobe, familiarize-se com os seguintes conceitos do Experience Platform:
 
 * **Experience Data Model (XDM)**. [Visão geral do XDM](../../../../xdm/home.md) e [Como criar um esquema XDM no Adobe Experience Platform](../../../../xdm/tutorials/create-schema-ui.md).
 * **Classe**. [Criar e editar classes na interface](../../../../xdm/ui/resources/classes.md).
-* **IdentityMap**. O mapa de identidade representa um mapa de todas as identidades de usuários finais no Adobe Experience Platform. Consulte `xdm:identityMap` no [dicionário de campo XDM](../../../../xdm/schema/field-dictionary.md).
+* **IdentityMap**. O mapa de identidades representa um mapa de todas as identidades de usuário final em [!DNL Adobe Experience Platform]. Consulte `xdm:identityMap` no [dicionário de campo XDM](../../../../xdm/schema/field-dictionary.md).
 * **SegmentMembership**. O atributo XDM [segmentMembership](../../../../xdm/schema/field-dictionary.md) informa a quais públicos um perfil é membro. Para os três valores diferentes no campo `status`, leia a documentação no [grupo de campos de esquema Detalhes da Associação de Público-Alvo](../../../../xdm/field-groups/profile/segmentation.md).
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -35,13 +35,13 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 ## Visão geral {#overview}
 
-Esta página aborda o formato da mensagem e a transformação do perfil nos dados exportados do Adobe Experience Platform para destinos.
+Esta página aborda o formato da mensagem e a transformação do perfil nos dados exportados do [!DNL Adobe Experience Platform] para destinos.
 
-O Adobe Experience Platform exporta dados para um número significativo de destinos, em vários formatos de dados. Alguns exemplos de tipos de destino são plataformas de publicidade (Google), redes sociais (Facebook) e locais de armazenamento na nuvem (Amazon S3, Hubs de eventos da Azure).
+O [!DNL Adobe Experience Platform] exporta dados para um número significativo de destinos, em vários formatos de dados. Alguns exemplos de tipos de destino são plataformas de publicidade (Google), redes sociais (Facebook) e locais de armazenamento na nuvem (Amazon S3, Hubs de eventos da Azure).
 
 O Experience Platform pode ajustar o formato da mensagem de perfis exportados para corresponder ao formato esperado no seu lado. Para entender essa personalização, os seguintes conceitos são importantes:
 
-* O esquema XDM de origem (1) e de destino (2) no Adobe Experience Platform
+* O esquema XDM de origem (1) e destino (2) em [!DNL Adobe Experience Platform]
 * o formato de mensagem esperado no lado do parceiro (3), e
 * A camada de transformação entre o esquema XDM e o formato de mensagem esperado, que você pode definir criando um [modelo de transformação de mensagem](#using-templating).
 
@@ -67,11 +67,11 @@ Com base nas transformações de esquema descritas acima, veja como uma configur
 
 ## Introdução - transformação de três atributos básicos {#getting-started}
 
-Para demonstrar o processo de transformação de perfil, o exemplo abaixo usa três atributos de perfil comuns na Adobe Experience Platform: **nome**, **sobrenome** e **endereço de email**.
+Para demonstrar o processo de transformação de perfil, o exemplo abaixo usa três atributos de perfil comuns em [!DNL Adobe Experience Platform]: **nome**, **sobrenome** e **endereço de email**.
 
 >[!NOTE]
 >
->O cliente mapeia os atributos do esquema XDM de origem para o esquema XDM do parceiro na interface do usuário do Adobe Experience Platform, na etapa **Mapeamento** da etapa [ativar fluxo de trabalho de destino](../../../ui/activate-segment-streaming-destinations.md#mapping).
+>O cliente mapeia os atributos do esquema XDM de origem para o esquema XDM do parceiro na interface do usuário [!DNL Adobe Experience Platform], na etapa **Mapeamento** da etapa [ativar fluxo de trabalho de destino](../../../ui/activate-segment-streaming-destinations.md#mapping).
 
 Digamos que sua plataforma possa receber um formato de mensagem como:
 
@@ -170,7 +170,7 @@ Veja abaixo dois exemplos de perfis no Experience Platform:
 }
 ```
 
-## Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de público-alvo {#using-templating}
+## Uso de uma linguagem de modelo para as transformações de identidade, atributos e associação de público {#using-templating}
 
 O Adobe usa [modelos Pebble](https://pebbletemplates.io/), uma linguagem de modelo semelhante a [Jinja](https://jinja.palletsprojects.com/en/2.11.x/), para transformar os campos do esquema XDM do Experience Platform em um formato compatível com seu destino.
 
@@ -178,15 +178,15 @@ Esta seção fornece vários exemplos de como essas transformações são feitas
 
 1. Exemplos simples de transformação. Saiba como o modelo funciona com transformações simples para os [atributos de perfil](#attributes), a [associação de público-alvo](#audience-membership) e os campos [Identidade](#identities).
 2. Exemplos de complexidade maior de modelos que combinam os campos acima: [Crie um modelo que envie públicos-alvo e identidades](./message-format.md#segments-and-identities) e [Crie um modelo que envie segmentos, identidades e atributos de perfil](#segments-identities-attributes).
-3. Modelos que incluem a chave de agregação. Quando você usa a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, o Experience Platform agrupa os perfis exportados em seu destino com base em critérios como ID de audiência, namespace de audiência, status de audiência ou namespaces de identidade.
+3. Modelos que incluem a chave de agregação. Quando você usa a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, o Experience Platform agrupa os perfis exportados para o seu destino com base em critérios como ID de público-alvo, namespace de público-alvo, status do público-alvo ou namespaces de identidade.
 
-### Atributos de perfil {#attributes}
+### Atributos do perfil {#attributes}
 
 Para transformar os atributos de perfil exportados para o seu destino, consulte o JSON e as amostras de código abaixo.
 
 >[!IMPORTANT]
 >
->Para obter uma lista de todos os atributos de perfil disponíveis no Adobe Experience Platform, consulte o [dicionário de campos XDM](../../../../xdm/schema/field-dictionary.md).
+>Para obter uma lista de todos os atributos de perfil disponíveis em [!DNL Adobe Experience Platform], consulte o [dicionário de campos XDM](../../../../xdm/schema/field-dictionary.md).
 
 
 **Entrada**
@@ -609,7 +609,7 @@ Perfil 2:
 
 **Resultado**
 
-O `json` abaixo representa os dados exportados do Adobe Experience Platform.
+O `json` abaixo representa os dados exportados de [!DNL Adobe Experience Platform].
 
 ```json
 {
@@ -802,7 +802,7 @@ Perfil 2:
 
 **Resultado**
 
-O `json` abaixo representa os dados exportados do Adobe Experience Platform.
+O `json` abaixo representa os dados exportados de [!DNL Adobe Experience Platform].
 
 ```json
 {
@@ -862,11 +862,11 @@ O `json` abaixo representa os dados exportados do Adobe Experience Platform.
 
 Ao usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) na configuração de destino, você pode agrupar os perfis exportados para o seu destino com base em critérios como ID de público-alvo, namespace de público-alvo, alias de público-alvo, associação de público-alvo ou namespaces de identidade.
 
-No template de transformação de mensagem, você pode acessar as chaves de agregação mencionadas acima, conforme mostrado nos exemplos das seções a seguir. Use chaves de agregação para estruturar a mensagem HTTP exportada de Experience Platform para corresponder ao formato e aos limites de taxa esperados pelo seu destino.
+No template de transformação de mensagem, você pode acessar as chaves de agregação mencionadas acima, conforme mostrado nos exemplos das seções a seguir. Use chaves de agregação para estruturar a mensagem HTTP exportada do Experience Platform para corresponder ao formato e aos limites de taxa esperados pelo seu destino.
 
-#### Usar chave de agregação de ID de público no modelo {#aggregation-key-segment-id}
+#### Usar chave de agregação de ID de público-alvo no modelo {#aggregation-key-segment-id}
 
-Se você usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e definir `includeSegmentId` como verdadeiro, os perfis nas mensagens HTTP exportadas para seu destino serão agrupados por ID de público. Veja abaixo como acessar a ID de público e o namespace de público no modelo.
+Se você usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e definir `includeSegmentId` como verdadeiro, os perfis nas mensagens HTTP exportadas para o seu destino serão agrupados por ID de público-alvo. Veja abaixo como acessar a ID de público-alvo e o namespace de público-alvo no modelo.
 
 **Entrada**
 
@@ -986,7 +986,7 @@ Observe abaixo como `audienceId` e `audienceNamespace` são usados no modelo par
 
 **Resultado**
 
-Quando exportados para seu destino, os perfis são divididos em dois grupos, com base na ID de público e no namespace.
+Quando exportados para seu destino, os perfis são divididos em dois grupos, com base na ID de público-alvo e no namespace.
 
 ```json
 {
@@ -1021,17 +1021,17 @@ Quando exportados para seu destino, os perfis são divididos em dois grupos, com
 }
 ```
 
-#### Usar chave de agregação de alias de audiência no modelo {#aggregation-key-segment-alias}
+#### Usar chave de agregação de alias de público-alvo no modelo {#aggregation-key-segment-alias}
 
-Se você usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e definir `includeSegmentId` como verdadeiro, também poderá acessar o alias de audiência no modelo.
+Se você usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e definir `includeSegmentId` como verdadeiro, também poderá acessar o alias de público-alvo no modelo.
 
-Adicione a linha abaixo ao modelo para acessar os perfis exportados agrupados por alias de público-alvo.
+Adicione a linha abaixo ao template para acessar os perfis exportados agrupados pelo alias do público-alvo.
 
 ```python
 customerList={{input.aggregationKey.segmentAlias}}
 ```
 
-#### Usar chave de agregação de status de audiência no modelo {#aggregation-key-segment-status}
+#### Usar chave de agregação de status de público-alvo no modelo {#aggregation-key-segment-status}
 
 Se você usar a [agregação configurável](../../functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) e definir `includeSegmentId` e `includeSegmentStatus` como verdadeiro, poderá acessar o status do público-alvo no modelo. Dessa forma, você pode agrupar perfis nas mensagens HTTP exportadas para o seu destino com base no fato de os perfis deverem ser adicionados ou removidos dos segmentos.
 
@@ -1212,13 +1212,13 @@ A tabela abaixo fornece descrições para as funções dos exemplos acima.
 |---------|----------|----------|
 | `input.profile` | O perfil, representado como um [JsonNode](https://fasterxml.github.io/jackson-databind/javadoc/2.11/com/fasterxml/jackson/databind/node/JsonNodeType.html). Segue o esquema XDM do parceiro mencionado mais acima nesta página. |  |
 | `hasSegments` | Essa função pega um mapa de IDs de público-alvo de namespace como parâmetro. A função retornará `true` se houver pelo menos um público-alvo no mapa (independentemente do status), e `false` caso contrário. Você pode usar essa função para decidir se vai iterar em um mapa de públicos ou não. | `hasSegments(input.profile.segmentMembership)` |
-| `destination.namespaceSegmentAliases` | Mapear IDs de público-alvo em um namespace específico do Adobe Experience Platform para aliases de público-alvo no sistema do parceiro. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
-| `destination.namespaceSegmentNames` | Mapear de nomes de público-alvo em namespaces específicos do Adobe Experience Platform para nomes de público-alvo no sistema do parceiro. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
+| `destination.namespaceSegmentAliases` | Mapear de IDs de público-alvo em um namespace [!DNL Adobe Experience Platform] específico para aliases de público-alvo no sistema do parceiro. | `destination.namespaceSegmentAliases["ups"]["seg-id-1"]` |
+| `destination.namespaceSegmentNames` | Mapear de nomes de público-alvo em namespaces [!DNL Adobe Experience Platform] específicos para nomes de público-alvo no sistema do parceiro. | `destination.namespaceSegmentNames["ups"]["seg-name-1"]` |
 | `destination.namespaceSegmentTimestamps` | Retorna a hora em que um público-alvo foi criado, atualizado ou ativado no formato de carimbo de data e hora UNIX. | <ul><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].createdAt`: retorna a hora em que o segmento com a ID `seg-id-1`, do namespace `ups`, foi criado, no formato de carimbo de data/hora UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].updatedAt`: retorna a hora em que o público-alvo com a ID `seg-id-1`, do namespace `ups`, foi atualizado, no formato de carimbo de data e hora UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingCreatedAt`: retorna a hora em que o público-alvo com a ID `seg-id-1`, do namespace `ups`, foi ativado para o destino, no formato de carimbo de data e hora UNIX.</li><li>`destination.namespaceSegmentTimestamps["ups"]["seg-id-1"].mappingUpdatedAt`: retorna a hora em que a ativação de público-alvo foi atualizada no destino, no formato de carimbo de data e hora UNIX.</li></ul> |
 | `addedSegments(mapOfNamespacedSegmentIds)` | Retorna apenas os públicos-alvo com status `realized`, em todos os namespaces. | `addedSegments(input.profile.segmentMembership)` |
 | `removedSegments(mapOfNamespacedSegmentIds)` | Retorna apenas os públicos-alvo com status `exited`, em todos os namespaces. | `removedSegments(input.profile.segmentMembership)` |
-| `destination.segmentAliases` | **Obsoleto. Substituído por`destination.namespaceSegmentAliases`** <br><br> Mapear de IDs de público no namespace do Adobe Experience Platform para aliases de público no sistema do parceiro. | `destination.segmentAliases["seg-id-1"]` |
-| `destination.segmentNames` | **Obsoleto. Substituído por`destination.namespaceSegmentNames`** <br><br> Mapear de nomes de público no namespace do Adobe Experience Platform para nomes de público no sistema do parceiro. | `destination.segmentNames["seg-name-1"]` |
+| `destination.segmentAliases` | **Obsoleto. Substituído por`destination.namespaceSegmentAliases`** <br><br>. Mapeie as IDs de público-alvo no namespace [!DNL Adobe Experience Platform] para aliases de público-alvo no sistema do parceiro. | `destination.segmentAliases["seg-id-1"]` |
+| `destination.segmentNames` | **Obsoleto. Substituído por`destination.namespaceSegmentNames`** <br><br> Mapeie de nomes de público-alvo no namespace [!DNL Adobe Experience Platform] para nomes de público-alvo no sistema do parceiro. | `destination.segmentNames["seg-name-1"]` |
 | `destination.segmentTimestamps` | **Obsoleto. Substituído por`destination.namespaceSegmentTimestamps`** <br><br> Retorna a hora em que um público-alvo foi criado, atualizado ou ativado no formato de carimbo de data e hora UNIX. | <ul><li>`destination.segmentTimestamps["seg-id-1"].createdAt`: retorna a hora em que o público-alvo com a ID `seg-id-1` foi criado, no formato de carimbo de data e hora UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].updatedAt`: retorna a hora em que o público-alvo com a ID `seg-id-1` foi atualizado, no formato de carimbo de data e hora UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingCreatedAt`: retorna a hora em que o público-alvo com a ID `seg-id-1` foi ativado para o destino, no formato de carimbo de data e hora UNIX.</li><li>`destination.segmentTimestamps["seg-id-1"].mappingUpdatedAt`: retorna a hora em que a ativação de público-alvo foi atualizada no destino, no formato de carimbo de data e hora UNIX.</li></ul> |
 
 {style="table-layout:auto"}

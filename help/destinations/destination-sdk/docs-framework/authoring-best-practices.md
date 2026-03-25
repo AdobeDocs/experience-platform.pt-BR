@@ -2,9 +2,9 @@
 title: Práticas recomendadas de criação
 description: Saiba quais regras e dicas você deve seguir ao criar sua página de documentação de destino para garantir que ela atenda aos padrões de qualidade da documentação do Adobe Experience Platform.
 exl-id: b12059f1-6635-41cd-acc5-6ff471111164
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '489'
 ht-degree: 1%
 
 ---
@@ -13,37 +13,37 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-Esta página descreve as regras que você deve seguir ao [criar sua documentação de destino](./documentation-instructions.md) para garantir que ela atenda aos padrões de qualidade da documentação do Adobe Experience Platform.
+Esta página descreve as regras que você deve seguir ao [criar sua documentação de destino](./documentation-instructions.md) para garantir que ela atenda aos padrões de qualidade da documentação do [!DNL Adobe Experience Platform].
 
 ## Orientações gerais {#general-guidance}
 
-* Ao preencher o [modelo](./self-service-template.md) da documentação de destino, consulte o guia do colaborador do Adobe para obter informações sobre [vinculação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=pt-BR), [tabelas](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=pt-BR#tables), a [sintaxe de marcação com suporte](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=pt-BR), [orientação de escrita](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=pt-BR) e muito mais.
+* Ao preencher o [modelo](./self-service-template.md) da documentação de destino, consulte o guia do colaborador do Adobe para obter informações sobre [vinculação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html), [tabelas](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#tables), a [sintaxe de marcação com suporte](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html), [orientação de escrita](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) e muito mais.
 * Não inclua observações e estimativas na documentação do produto.
 * Na documentação do Experience Platform, os escritores do Adobe usam a **formatação em negrito** para se referir aos controles da interface do usuário, desta forma:
-   * Vá para **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e selecione a guia **[!UICONTROL Catalog]**. Veja um exemplo de como os controles da interface do usuário são documentados em um [tutorial de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=pt-BR#select-destination).
+   * Vá para **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** e selecione a guia **[!UICONTROL Catalog]**. Veja um exemplo de como os controles da interface do usuário são documentados em um [tutorial de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#select-destination).
 
 ## Estilo de escrita {#writing-style}
 
 >[!IMPORTANT]
 >
->Leia [Orientação de escrita para a documentação do Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=pt-BR) antes de começar a criar a página de documentação de destino.
+>Leia [Orientação de escrita para a documentação do Adobe](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) antes de começar a criar a página de documentação de destino.
 
 * Mantenha suas frases curtas e vá direto ao ponto. Se a sua frase contiver mais de 20 palavras ou usar várias vírgulas, considere dividi-la em frases separadas. Frases com mais de 20 palavras podem ser especialmente desafiadoras para os leitores.
 * Não seja excessivamente educado. Evite usar &quot;favor&quot; ou &quot;gentilmente faça ...&quot; na documentação técnica.
 
 ## Vinculação {#linking}
 
-Siga o modelo de documentação fornecido e não edite os links existentes no modelo. Ao incluir novos links, leia [usando links na documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=pt-BR) no guia do colaborador.
+Siga o modelo de documentação fornecido e não edite os links existentes no modelo. Ao incluir novos links, leia [usando links na documentação](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html) no guia do colaborador.
 
 ## Diretrizes de marca {#branding}
 
-* AEP não é um termo aprovado voltado para o público. Use o Adobe Experience Platform na primeira utilização, depois o Experience Platform e, em seguida, o Experience Platform.
+* AEP não é um termo aprovado voltado para o público. Use [!DNL Adobe Experience Platform] na primeira utilização, depois Experience Platform e depois Experience Platform.
    * **Não usar**: antes de exportar dados do AEP para o seu destino, leia e conclua esses pré-requisitos.
-   * **Uso**: antes de exportar dados do Adobe Experience Platform para o Seu Destino, leia e conclua esses pré-requisitos.
+   * **Uso**: antes de exportar dados de [!DNL Adobe Experience Platform] para Seu Destino, leia e conclua esses pré-requisitos.
 
 ## Imagens e capturas de tela {#images-and-screenshots}
 
-* Para obter informações sobre [como vincular a imagens](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=pt-BR#images), consulte o guia do colaborador.
+* Para obter informações sobre [como vincular a imagens](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#images), consulte o guia do colaborador.
 * Ao usar capturas de tela, certifique-se de que sua captura de tela capture toda a tela da interface do usuário do Experience Platform.
 * Ao marcar imagens para destacar um determinado controle ou rótulo na página, tente seguir o estilo de marcação usado pela equipe de documentação do Experience Platform. Observe como Baseado em perfil é realçado em [esta captura de tela](/help/destinations/catalog/cloud-storage/amazon-s3.md#export-type-frequency).
 * Use imagens no formato `png`.

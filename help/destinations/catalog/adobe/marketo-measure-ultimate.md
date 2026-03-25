@@ -3,9 +3,9 @@ title: Destino do Marketo Measure Ultimate
 description: Saiba como conectar e ativar dados ao destino do Marketo Measure Ultimate.
 last-substantial-update: 2023-03-07T00:00:00Z
 exl-id: b4220841-8908-41ff-b977-dbeebfa787c8
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '782'
 ht-degree: 3%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 3%
 
 A Marketo Measure (anteriormente Bizible) fornece aos profissionais de marketing da insight quais esforços de marketing são os mais eficientes na geração de receita e na maximização do retorno sobre o investimento para sua empresa. O Marketo Measure é uma solução de atribuição de marketing que rastreia e cria relatórios sobre o desempenho do canal automaticamente, fornecendo visibilidade de quais canais estão gerando mais engajamento do cliente e permitindo otimizar adequadamente seus gastos com marketing.
 
-O destino permite que os dados B2B (business-to-business) fluam do Adobe Experience Platform para o Marketo Measure. O cartão está disponível somente para clientes do Marketo Measure Ultimate.
+O destino habilita os fluxos de dados B2B (B2B) de [!DNL Adobe Experience Platform] para a Marketo Measure. O cartão está disponível somente para clientes do Marketo Measure Ultimate.
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino do Marketo Measure, veja a seguir exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino. Essa integração:
+Para ajudá-lo a entender melhor como e quando você deve usar o destino do Marketo Measure, veja a seguir exemplos de casos de uso que [!DNL Adobe Experience Platform] clientes podem resolver usando esse destino. Essa integração:
 
 * Satisfaz os complexos requisitos de emissão de relatórios de dados e desempenho de grandes empresas.
 * Permite relatórios de atribuição B2B com vários sistemas de CRM e automação de marketing.
@@ -41,7 +41,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -54,7 +54,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Não | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Sim | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Sim | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -103,7 +103,7 @@ Leia o [Tutorial de exportação de conjuntos de dados](/help/destinations/ui/ex
 
 ## Validar exportação de dados {#exported-data}
 
-Para validar uma exportação bem-sucedida do conjunto de dados, você pode verificar se o conjunto de dados foi enviado com êxito para o seu [data warehouse do Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html?lang=pt-BR).
+Para validar uma exportação bem-sucedida do conjunto de dados, você pode verificar se o conjunto de dados foi enviado com êxito para o seu [data warehouse do Snowflake](https://experienceleague.adobe.com/docs/marketo-measure/using/marketo-measure-data-warehouse/data-warehouse-access-reader-account.html).
 
 ## Uso e governança de dados {#data-usage-governance}
 

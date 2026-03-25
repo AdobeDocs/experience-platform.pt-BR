@@ -2,9 +2,9 @@
 title: Configurações de exportação configuráveis e comuns em destinos
 description: Saiba quais configurações de exportação em destinos são configuráveis em um nível de destino e quais são fixas e não podem ser editadas.
 exl-id: 3f4706cb-6d51-4567-81f6-5b2bf167b576
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '828'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Ao pensar no comportamento de exportação para destinos do Experience Platform, é necessário considerar três níveis separados nos quais as configurações agem.
 
-* Em um primeiro nível, algumas das configurações relacionadas ao comportamento de exportação do perfil e às configurações são comuns em todos os destinos que pertencem a um tipo de destino. Essas configurações se referem ao que aciona uma exportação de destino e ao que está incluído em uma exportação e não pode ser editado por desenvolvedores de destino ou usuários do Real-Time CDP.
+* Em um primeiro nível, algumas das configurações relacionadas ao comportamento de exportação do perfil e às configurações são comuns em todos os destinos que pertencem a um tipo de destino. Essas configurações se referem ao que aciona uma exportação de destino e que está incluído em uma exportação e não pode ser editado por desenvolvedores de destino ou usuários do [!DNL Real-Time CDP].
 * Em um segundo nível, algumas configurações podem ser personalizadas em um nível de destino pelo desenvolvedor de destino ao criar destinos usando o Destination SDK.
-* Em um terceiro nível, há definições de configuração que os usuários do Real-Time CDP podem definir nos workflows de ativação.
+* Em um terceiro nível, há definições de configuração que [!DNL Real-Time CDP] usuários podem definir nos fluxos de trabalho de ativação.
 
 ![Diagrama mostrando a interação entre configurações de exportação comuns e configuráveis para destinos](/help/destinations/assets/how-destinations-work/profile-export-behavior-diagram.png)
 
@@ -23,9 +23,9 @@ Esta página descreve ou cria links para todas as definições de exportação c
 
 ## Configurações comuns de exportação em tipos de destino {#common-settings-across-destination-types}
 
-O comportamento de exportação de destino é consistente entre destinos pertencentes a um tipo de destino no que diz respeito a *o que aciona uma exportação de destino* e *o que está incluído nas exportações de destino*. As exportações de destino são acionadas por notificações que o serviço de destinos recebe do [serviço upstream de Perfil do Cliente em Tempo Real](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=pt-BR#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
+O comportamento de exportação de destino é consistente entre destinos pertencentes a um tipo de destino no que diz respeito a *o que aciona uma exportação de destino* e *o que está incluído nas exportações de destino*. As exportações de destino são acionadas por notificações que o serviço de destinos recebe do [serviço upstream de Perfil do Cliente em Tempo Real](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html#adobe-experience-platform-%26-applications-detailed-architecture-diagram).
 
-O que está incluído nas exportações de destino varia ligeiramente entre os tipos de destino. Leia mais sobre os [padrões de comportamento de exportação comuns por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md). Essas configurações não podem ser editadas por desenvolvedores de destino ou usuários do Real-Time CDP.
+O que está incluído nas exportações de destino varia ligeiramente entre os tipos de destino. Leia mais sobre os [padrões de comportamento de exportação comuns por tipo de destino](/help/destinations/how-destinations-work/profile-export-behavior.md). Essas configurações não podem ser editadas por desenvolvedores de destino ou usuários [!DNL Real-Time CDP].
 
 ## Configurações de exportação personalizáveis por desenvolvedores de destino {#customizable-settings-by-destination-developers}
 
@@ -46,7 +46,7 @@ Por exemplo, para [destinos de streaming](/help/destinations/destination-types.m
 
 ![Gravação de tela da seleção de identidade para o campo de destino na etapa de mapeamento do fluxo de trabalho de ativação.](/help/destinations/assets/how-destinations-work/identity-mapping-example.gif)
 
-Da mesma forma, para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based), o desenvolvedor de destino pode determinar quais [opções de acréscimo de nome de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) ele deseja disponibilizar para seu destino ou quais [opções de formatação de arquivo](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) ele deseja disponibilizar, e o usuário poderá selecionar apenas dessas opções, conforme mostrado abaixo:
+Da mesma forma, para [destinos baseados em arquivo](/help/destinations/destination-types.md#file-based), o desenvolvedor de destino pode determinar quais [opções de acréscimo de nome de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) ele deseja disponibilizar para seu destino ou quais [opções de formatação de arquivo](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md) ele deseja disponibilizar, e o usuário poderá selecionar apenas dessas opções, conforme mostrado abaixo:
 
 ![Gravação de tela da opção de formatação de arquivo ao conectar-se a um destino baseado em arquivo.](/help/destinations/assets/how-destinations-work/file-formatting-options.gif)
 

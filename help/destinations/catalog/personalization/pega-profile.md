@@ -3,9 +3,9 @@ title: Conector do perfil Pega
 description: Use o Conector de perfil Pega para Amazon S3 no Adobe Experience Platform para exportar dados de perfil completos ou incrementais, ou ambos, para o armazenamento em nuvem do Amazon S3. No Pega Customer Decision Hub, os trabalhos de dados podem ser agendados na Designer de perfil do cliente para importar dados de perfil periodicamente do armazenamento do Amazon S3.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1225'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-Use o [!DNL Pega Profile Connector] no Adobe Experience Platform para criar uma conexão de saída ativa com seu armazenamento S3 do [!DNL Amazon Web Services] (AWS) para exportar periodicamente dados de perfil para arquivos CSV do Adobe Experience Platform em seus próprios buckets do S3. No [!DNL Pega Customer Decision Hub], você pode agendar processos para importar esses dados de perfil do armazenamento S3 para atualizar o perfil do [!DNL Pega Customer Decision Hub].
+Use o [!DNL Pega Profile Connector] no [!DNL Adobe Experience Platform] para criar uma conexão de saída ativa com seu armazenamento S3 do [!DNL Amazon Web Services] (AWS) para exportar periodicamente dados de perfil para arquivos CSV do [!DNL Adobe Experience Platform] em seus próprios buckets do S3. No [!DNL Pega Customer Decision Hub], você pode agendar processos para importar esses dados de perfil do armazenamento S3 para atualizar o perfil do [!DNL Pega Customer Decision Hub].
 
 Este conector ajuda a configurar a exportação inicial de dados de perfil e também ajuda a sincronizar novos perfis periodicamente no [!DNL Pega Customer Decision Hub].  Ter dados atualizados no Hub de decisão do cliente fornece uma visualização melhor e atualizada da base de clientes para a tomada de decisões de próxima ação.
 
@@ -24,19 +24,19 @@ Este conector ajuda a configurar a exportação inicial de dados de perfil e tam
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Pega Profile Connector], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Pega Profile Connector], veja a seguir exemplos de casos de uso que os clientes do [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 ### Caso de uso 1 {#use-case-1}
 
-Um profissional de marketing deseja configurar inicialmente o [!DNL Pega Customer Decision Hub] com dados de perfil carregados do Adobe Experience Platform. Essa é uma carga total inicial seguida por cargas delta programadas.
+Um profissional de marketing deseja configurar inicialmente o [!DNL Pega Customer Decision Hub] com dados de perfil carregados do [!DNL Adobe Experience Platform]. Essa é uma carga total inicial seguida por cargas delta programadas.
 
 ### Caso de uso 2 {#use-case-2}
 
-Um profissional de marketing deseja dados de perfil atualizados do Adobe Experience Platform disponíveis no [!DNL Pega Customer Decision Hub], o que melhora continuamente os insights de Pega sobre perfis de clientes.
+Um profissional de marketing deseja dados de perfil atualizados do [!DNL Adobe Experience Platform] disponíveis no [!DNL Pega Customer Decision Hub], o que melhora os insights de Pega sobre perfis de clientes de forma contínua.
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de usar este destino para exportar dados do Adobe Experience Platform e importar perfis para o [!DNL Pega Customer Decision Hub], verifique se você concluiu os seguintes pré-requisitos:
+Antes de usar este destino para exportar dados do [!DNL Adobe Experience Platform] e importar perfis para o [!DNL Pega Customer Decision Hub], verifique se você concluiu os seguintes pré-requisitos:
 
 * Configure o bucket [!DNL Amazon S3] e o caminho de pasta a ser usado para a exportação e importação de arquivos de dados.
 * Configure a chave de acesso [!DNL Amazon S3] e a chave secreta [!DNL Amazon S3]: em [!DNL Amazon S3], gere um par `access key - secret access key` para conceder ao Experience Platform acesso à sua conta [!DNL Amazon S3].
@@ -49,7 +49,7 @@ O [!DNL Pega Customer Decision Hub] dá suporte à ativação das IDs de usuári
 
 | Identidade de destino | Descrição |
 |---|---|
-| *IDdoCliente* | Identificador de Usuário Comum que identifica exclusivamente um perfil no [!DNL Pega Customer Decision Hub] e no Adobe Experience Platform |
+| *IDdoCliente* | Identificador de Usuário Comum que identifica exclusivamente um perfil em [!DNL Pega Customer Decision Hub] e [!DNL Adobe Experience Platform] |
 
 {style="table-layout:auto"}
 
@@ -60,7 +60,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 Para autenticar no destino, preencha os campos obrigatórios e selecione **[!UICONTROL Connect to destination]**.
 
-* **[!DNL Amazon S3]chave de acesso** e **[!DNL Amazon S3]chave secreta**: em [!DNL Amazon S3], gere um par de `access key - secret access key` para conceder ao Adobe Experience Platform acesso à sua conta do [!DNL Amazon S3]. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3]chave de acesso** e **[!DNL Amazon S3]chave secreta**: em [!DNL Amazon S3], gere um par `access key - secret access key` para conceder acesso [!DNL Adobe Experience Platform] à sua conta [!DNL Amazon S3]. Saiba mais na [documentação do Amazon Web Services](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 ### Preencher detalhes do destino {#destination-details}
 

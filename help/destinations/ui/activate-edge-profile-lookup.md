@@ -3,16 +3,16 @@ title: Pesquisar atributos de perfil de borda em tempo real
 description: Saiba como pesquisar atributos de perfil de borda em tempo real, usando o destino do Personalization personalizado e a API do Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1833'
 ht-degree: 1%
 
 ---
 
 # Pesquisar atributos de perfil na borda em tempo real
 
-A Adobe Experience Platform usa o [Perfil de cliente em tempo real](../../profile/home.md) como a única fonte da verdade para todos os dados de perfil. Para recuperação rápida de dados em tempo real, ele usa [perfis de borda](../../profile/edge-profiles.md), que são perfis leves distribuídos pela [Edge Network](../../collection/home.md#edge). Isso permite casos de uso de personalização rápidos e em tempo real.
+[!DNL Adobe Experience Platform] usa o [Perfil de Cliente em Tempo Real](../../profile/home.md) como a única fonte da verdade para todos os dados de perfil. Para recuperação rápida de dados em tempo real, ele usa [perfis de borda](../../profile/edge-profiles.md), que são perfis leves distribuídos pela [Edge Network](../../collection/home.md). Isso permite casos de uso de personalização rápidos e em tempo real.
 
 ## Casos de uso {#use-cases}
 
@@ -112,7 +112,7 @@ Depois de criar uma conexão **[!UICONTROL Custom Personalization With Attribute
    Você pode selecionar entre vários tipos de públicos-alvo, dependendo de sua origem:
 
    * **[!UICONTROL Segmentation Service]**: Públicos-alvo gerados no Experience Platform pelo Serviço de segmentação. Consulte a [documentação de segmentação](../../segmentation/ui/overview.md) para obter mais detalhes.
-   * **[!UICONTROL Custom upload]**: públicos-alvo gerados fora do Experience Platform e carregados na Experience Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/overview.md#import-audience).
+   * **[!UICONTROL Custom upload]**: públicos-alvo gerados fora do Experience Platform e carregados na Experience Platform como arquivos CSV. Para saber mais sobre públicos-alvo externos, consulte a documentação sobre [importação de um público-alvo](../../segmentation/ui/audience-portal.md#import-audience).
    * Outros tipos de públicos-alvo, originados de outras soluções da Adobe, como o [!DNL Audience Manager].
 
      ![Selecione a etapa de públicos do fluxo de trabalho de ativação com vários públicos realçados.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

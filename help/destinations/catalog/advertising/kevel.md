@@ -3,9 +3,9 @@ title: Conexão Kevel
 description: Use o destino de transmissão Kevel para ativar públicos diretamente nas APIs de UserDB e Gerenciamento de segmento do Kevel e oferecer suporte ao direcionamento em tempo real no momento da decisão.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 53ce2864-6a3b-4859-b14d-a03c2ce18884
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1168'
+source-wordcount: '1159'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 [[!DNL Kevel]](https://www.kevel.com/) fornece a tecnologia habilitada para IA e orientação de especialistas que ajudam líderes comerciais inovadores a lançar, escalar e ter sucesso na mídia de varejo. A Retail Media Cloud do [!DNL Kevel] possibilita formatos de anúncios direcionados, atribuíveis e personalizáveis para publicidade no local e fora do local.
 
-O destino de streaming [!DNL Kevel] para o Adobe Experience Platform permite que os clientes ativem os públicos do Adobe diretamente no UserDB e nas APIs de gerenciamento de segmento do [!DNL Kevel], para oferecer suporte ao direcionamento em tempo real no momento da decisão do anúncio.
+O destino de streaming [!DNL Kevel] para [!DNL Adobe Experience Platform] permite que os clientes ativem os públicos do Adobe diretamente para o UserDB e as APIs de gerenciamento de segmento do [!DNL Kevel], para oferecer suporte ao direcionamento em tempo real no momento da decisão do anúncio.
 
 >[!IMPORTANT]
 >
@@ -73,7 +73,7 @@ Isso significa:
 | Origem do público | Suportado | Descrição |
 |-----------------------|-----------|---------------------------------------------------------- |
 | Serviço de segmentação | Sim | Públicos do perfil do Adobe avaliados pelo mecanismo de segmentação. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 

@@ -3,9 +3,9 @@ title: Perfis dos participantes do RainFocus
 description: Saiba como usar o conector de destino Perfis de participantes RainFocus para sincronizar perfis de público-alvo com o Perfil de participante global RainFocus.
 last-substantial-update: 2024-12-17T00:00:00Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1073'
 ht-degree: 4%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-Use o destino [!DNL RainFocus Attendee Profiles] para transmitir perfis de clientes do Adobe Experience Platform para a plataforma [!DNL RainFocus] para criar e atualizar perfis de participantes.
+Use o destino [!DNL RainFocus Attendee Profiles] para transmitir perfis de clientes de [!DNL Adobe Experience Platform] para a plataforma [!DNL RainFocus] para criar e atualizar perfis de participantes.
 
 >[!IMPORTANT]
 >
@@ -22,7 +22,7 @@ Use o destino [!DNL RainFocus Attendee Profiles] para transmitir perfis de clien
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino RainFocus, veja a seguir exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino RainFocus, veja a seguir exemplos de casos de uso que [!DNL Adobe Experience Platform] clientes podem resolver usando esse destino.
 
 ### Caso de uso #1 {#use-case-1}
 
@@ -30,7 +30,7 @@ Uma grande empresa de tecnologia corporativa está prestes a abrir um registro p
 
 ### Caso de uso #2 {#use-case-2}
 
-Uma marca de serviços financeiros deve hospedar uma série de apresentações voltadas para clientes novos e existentes. Eles têm uma série de segmentos de público-alvo com clientes-alvo na Adobe Experience Platform. Usando o Conector de Destino do [!DNL RainFocus], é possível enviar facilmente esses perfis para o [!DNL RainFocus] para ativação.
+Uma marca de serviços financeiros deve hospedar uma série de apresentações voltadas para clientes novos e existentes. Eles têm uma série de segmentos de público-alvo com clientes-alvo no [!DNL Adobe Experience Platform]. Usando o Conector de Destino do [!DNL RainFocus], é possível enviar facilmente esses perfis para o [!DNL RainFocus] para ativação.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -48,7 +48,7 @@ Você também deve ter um identificador RainFocus **código de evento**, para o 
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
+| email_lc_sha256 | Endereços de email com hash com o algoritmo SHA256 | O [!DNL Adobe Experience Platform] oferece suporte para endereços de email com hash SHA256 e texto sem formatação. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
 
 {style="table-layout:auto"}
 
@@ -59,7 +59,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -72,7 +72,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -172,4 +172,4 @@ Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as p
 
 ## Recursos adicionais {#additional-resources}
 
-* [Conector de Source de Streaming RainFocus](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [Conector de Source de Streaming RainFocus](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

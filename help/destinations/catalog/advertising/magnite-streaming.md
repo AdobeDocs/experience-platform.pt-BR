@@ -3,9 +3,9 @@ title: Magnite Conexão de destino em tempo real
 description: Use esse destino para fornecer públicos-alvo da CDP do Adobe para a plataforma de transmissão Magnite em tempo real.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1379'
 ht-degree: 2%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-Os destinos [!DNL Magnite: Real-Time] e [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) no Adobe Experience Platform ajudam a mapear e exportar públicos para direcionamento e ativação na plataforma Magnite Streaming.
+Os destinos [!DNL Magnite: Real-Time] e [Magnite: Batch](/help/destinations/catalog/advertising/magnite-batch.md) no [!DNL Adobe Experience Platform] ajudam a mapear e exportar públicos para direcionamento e ativação na plataforma Magnite Streaming.
 
 A ativação de públicos para a plataforma [!DNL Magnite Streaming] é um processo de duas etapas que requer o uso dos destinos Magnite: Tempo real e Magnite: Lote.
 
@@ -33,15 +33,15 @@ Para ativar os públicos para [!DNL Magnite Streaming], você deve:
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Magnite: Real-Time], veja um exemplo de caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Magnite: Real-Time], veja um exemplo de caso de uso que os clientes [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 ### Ativação e direcionamento {#activation-and-targeting}
 
-Essa integração com a Magnite permite que os clientes transmitam seus públicos de CDP do Adobe Experience Platform para a Magnite para direcionamento de publicidade. Os públicos podem ser selecionados no Magnite para direcionamento positivo e negativo (supressão).
+Essa integração com a Magnite permite que os clientes transmitam seus públicos-alvo de CDP do [!DNL Adobe Experience Platform] para a Magnite para direcionamento de publicidade. Os públicos podem ser selecionados no Magnite para direcionamento positivo e negativo (supressão).
 
 ## Pré-requisitos {#prerequisites}
 
-Para usar os destinos [!DNL Magnite] no Adobe Experience Platform, primeiro você deve ter uma conta [!DNL Magnite Streaming]. Se você tiver uma conta [!DNL Magnite Streaming], entre em contato com seu gerente de conta [!DNL Magnite] para receber as credenciais para acessar os destinos [!DNL Magnite's].
+Para usar os destinos [!DNL Magnite] em [!DNL Adobe Experience Platform], primeiro você deve ter uma conta [!DNL Magnite Streaming]. Se você tiver uma conta [!DNL Magnite Streaming], entre em contato com seu gerente de conta [!DNL Magnite] para receber as credenciais para acessar os destinos [!DNL Magnite's].
 Se você não tiver uma conta [!DNL Magnite Streaming], entre em contato com adobe-tech@magnite.com
 
 ## Identidades suportadas {#supported-identities}
@@ -61,7 +61,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 | Origem do público | Suportado | Descrição |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -178,11 +178,11 @@ Depois que os públicos-alvo forem carregados, você poderá validar se os públ
 
 -->
 
-* Após a assimilação, espera-se que os públicos-alvo apareçam em [!DNL Magnite Streaming] dentro de alguns minutos e possam ser aplicados a uma oferta. Você pode confirmar isso verificando a ID do segmento que foi compartilhada durante as etapas de ativação no Adobe Experience Platform.
+* Após a assimilação, espera-se que os públicos-alvo apareçam em [!DNL Magnite Streaming] dentro de alguns minutos e possam ser aplicados a uma oferta. Você pode confirmar isso verificando a ID do segmento que foi compartilhada durante as etapas de ativação no [!DNL Adobe Experience Platform].
 
 ## Ativar os mesmos públicos-alvo por meio do destino [!DNL Magnite: Batch] {#activate-magnite-batch}
 
-Os públicos-alvo compartilhados com [!DNL Magnite Streaming] usando o destino em Tempo real também precisarão ser compartilhados usando o destino Magnite: Batch. Quando configurados corretamente, os nomes de segmentos na interface do usuário do [!DNL Magnite Streaming] são atualizados para refletir aqueles usados na atualização pós-diária do Adobe Experience Platform.
+Os públicos-alvo compartilhados com [!DNL Magnite Streaming] usando o destino em Tempo real também precisarão ser compartilhados usando o destino Magnite: Batch. Quando configurados corretamente, os nomes de segmentos na interface do usuário do [!DNL Magnite Streaming] são atualizados para refletir aqueles usados na atualização pós-diária do [!DNL Adobe Experience Platform].
 
 Por fim, se um destino de Lote não tiver sido configurado para a integração, configure-o agora por meio do documento Magnite: Batch destination.
 

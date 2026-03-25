@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '4783'
+source-wordcount: '4769'
 ht-degree: 10%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 10%
 
 ## Visão geral {#overview}
 
-Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo no Adobe Experience Platform para destinos baseados em arquivo de perfil em lote, como destinos de armazenamento em nuvem e marketing por email.
+Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo no [!DNL Adobe Experience Platform] para destinos baseados em arquivo de perfil em lote, como destinos de marketing por email e armazenamento em nuvem.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -496,7 +496,7 @@ A Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 
 ### Comportamento de desduplicação para perfis com o mesmo carimbo de data e hora {#deduplication-same-timestamp}
 
-Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Principais considerações {#key-considerations}
 
@@ -571,9 +571,9 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 
 >[!IMPORTANT]
 >
->Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa &#x200B;](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
+>Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa ](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
 >
->Esta etapa **[!UICONTROL Select attributes]** ainda é exibida para os destinos de marketing por email do Adobe Campaign, Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
+>Esta etapa **[!UICONTROL Select attributes]** ainda é exibida para os destinos de marketing por email do [!DNL Adobe Campaign], Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 
 Para destinos baseados em perfil, você deve selecionar os atributos de perfil que deseja enviar ao destino.
 
@@ -593,7 +593,7 @@ Para destinos baseados em perfil, você deve selecionar os atributos de perfil q
 
 >[!NOTE]
 >
-> O Adobe Experience Platform preenche sua seleção com quatro atributos recomendados usados com frequência do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
+> O [!DNL Adobe Experience Platform] preenche sua seleção com quatro atributos recomendados usados com frequência do esquema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.seg_namespace.seg_id.status`.
 
 ![Imagem mostrando atributos recomendados preenchidos previamente na etapa de mapeamento do fluxo de trabalho de ativação de público-alvo.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
@@ -649,7 +649,7 @@ Selecione **[!UICONTROL Next]** para mover para a etapa [Revisão](#review).
 >* Os campos são usados na definição de público-alvo.
 >* Os campos são configurados como atributos projetados para o destino.
 >
-> Por exemplo, se o campo `person.name.firstName` tiver determinados rótulos de uso de dados que estão em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados no Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Por exemplo, se o campo `person.name.firstName` tiver determinados rótulos de uso de dados que estão em conflito com a ação de marketing do destino, você verá uma violação da política de uso de dados na etapa de revisão. Para obter mais informações, consulte [Governança de dados em [!DNL Adobe Experience Platform]](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Na página **[!UICONTROL Review]**, você pode ver um resumo da sua seleção. Selecione **[!UICONTROL Cancel]** para interromper o fluxo, **[!UICONTROL Back]** para modificar suas configurações ou **[!UICONTROL Finish]** para confirmar sua seleção e começar a enviar dados para o destino.
 
@@ -680,7 +680,7 @@ Se estiver satisfeito com a sua seleção e nenhuma violação de política tive
 
 ## Verificar ativação de público {#verify}
 
-Ao exportar públicos para destinos de armazenamento na nuvem, o Adobe Experience Platform cria um arquivo `.csv`, `.json` ou `.parquet` no local de armazenamento fornecido. Espere que um novo arquivo seja criado no local de armazenamento de acordo com o agendamento definido no fluxo de trabalho. O formato de arquivo padrão é mostrado abaixo, mas você pode [editar os componentes do nome do arquivo](#configure-file-names):
+Ao exportar públicos para destinos de armazenamento na nuvem, o [!DNL Adobe Experience Platform] cria um arquivo `.csv`, `.json` ou `.parquet` no local de armazenamento fornecido. Espere que um novo arquivo seja criado no local de armazenamento de acordo com o agendamento definido no fluxo de trabalho. O formato de arquivo padrão é mostrado abaixo, mas você pode [editar os componentes do nome do arquivo](#configure-file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Por exemplo, se você selecionasse uma frequência de exportação diária, os arquivos que você receberia em três dias consecutivos seriam assim:

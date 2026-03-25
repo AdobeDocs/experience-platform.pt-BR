@@ -5,9 +5,9 @@ hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
 exl-id: 1f1d3e57-a8ef-4971-b3d1-43521bd158bb
-source-git-commit: 705e94b13af6830916e7d4bf500c48ae1be88874
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1534'
+source-wordcount: '1525'
 ht-degree: 8%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 8%
 
 [!DNL FreeWheel] é uma plataforma global de tecnologia de publicidade que possibilita compras e vendas programáticas em inventários de CTV (TV conectada), vídeo e exibição. A [!DNL FreeWheel] fornece um mercado orientado por dados que conecta anunciantes com proprietários de mídia premium no mundo inteiro.
 
-Use este destino para enviar públicos do Adobe Experience Platform para [!DNL FreeWheel]. Os públicos são entregues como arquivos de lote diários e disponibilizados para direcionamento em [!DNL FreeWheel] ofertas e campanhas.
+Use este destino para enviar públicos de [!DNL Adobe Experience Platform] para [!DNL FreeWheel]. Os públicos são entregues como arquivos de lote diários e disponibilizados para direcionamento em [!DNL FreeWheel] ofertas e campanhas.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -51,7 +51,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li>carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li>públicos-alvo semelhantes,</li><li>públicos federados,</li><li>públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer,</li><li>e muito mais.</li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li>carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li>públicos-alvo semelhantes,</li><li>públicos federados,</li><li>públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer],</li><li>e muito mais.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -62,7 +62,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Redirecionamento de CTV, supressão de alcance |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 

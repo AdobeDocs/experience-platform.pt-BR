@@ -4,9 +4,9 @@ description: O Pinterest está descontinuando a API do anunciante v4 usada atual
 hide: true
 hidefromtoc: true
 exl-id: c965235c-4208-4c28-9ac5-eb4c0061515d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## O que está acontecendo? {#what-is-happening}
 
-O Pinterest substituiu a API v4 do anunciante que foi usada pelo [destino do Pinterest](/help/destinations/catalog/advertising/pinterest.md) no Real-Time CDP. A Adobe atualizou o destino para usar a [v5 API do anunciante](https://developers.pinterest.com/docs/getting-started/migration/). Leia esta página para entender seus itens de ação e fazer a transição perfeita para a nova API sem interromper as campanhas do Pinterest.
+O Pinterest substituiu a API v4 do anunciante que foi usada pelo [destino do Pinterest](/help/destinations/catalog/advertising/pinterest.md) em [!DNL Real-Time CDP]. A Adobe atualizou o destino para usar a [v5 API do anunciante](https://developers.pinterest.com/docs/getting-started/migration/). Leia esta página para entender seus itens de ação e fazer a transição perfeita para a nova API sem interromper as campanhas do Pinterest.
 
 ## Por que estou sendo notificado? {#why-notified}
 
@@ -31,7 +31,7 @@ A Adobe lançou um novo cartão de destino do Pinterest que aproveita a API v5 d
 
 ## Preciso fazer algo para manter meus públicos ativados funcionando? {#action-required}
 
-Sim, antes de 18 de janeiro de 2024, é necessário autenticar no novo destino do Pinterest com sua conta de anunciante do Pinterest no Real-Time CDP. Consulte as instruções detalhadas abaixo.
+Sim, antes de 18 de janeiro de 2024, é necessário autenticar no novo destino do Pinterest com sua conta de anunciante do Pinterest no [!DNL Real-Time CDP]. Consulte as instruções detalhadas abaixo.
 
 ### Reautenticar no Pinterest {#reauthenticate}
 
@@ -87,7 +87,7 @@ Sim, veja abaixo:
 
 -->
 
-**Após 18 de janeiro de 2024**: <span class="preview">o Pinterest desativou o acesso à API do anunciante V4. Todos os clientes do Real-Time CDP que não atualizaram para o novo destino agora encontrarão falhas nos fluxos de dados para o destino do Pinterest. [Refaça a autenticação no Pinterest](#reauthenticate) e [habilite os fluxos de dados](#disable-old-enable-new-flows) para o destino atualizado para retomar suas campanhas no Pinterest.</span>
+**Após 18 de janeiro de 2024**: <span class="preview">o Pinterest desativou o acesso à API do anunciante V4. Qualquer cliente do [!DNL Real-Time CDP] que não tenha atualizado para o novo destino agora encontrará seus fluxos de dados no destino do Pinterest com falha. [Refaça a autenticação no Pinterest](#reauthenticate) e [habilite os fluxos de dados](#disable-old-enable-new-flows) para o destino atualizado para retomar suas campanhas no Pinterest.</span>
 
 <!--
 

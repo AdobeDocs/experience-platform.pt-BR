@@ -2,9 +2,9 @@
 title: Conexão com Medallia
 description: Ative perfis para pesquisas direcionadas do Medallia e coleta de feedback para entender melhor as necessidades e expectativas dos clientes.
 exl-id: 2c2766eb-7be1-418c-bf17-d119d244de92
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1256'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Ative perfis para pesquisas direcionadas do Medallia e coleta de feedback para e
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino Medallia, veja a seguir exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino Medallia, veja a seguir exemplos de casos de uso que [!DNL Adobe Experience Platform] clientes podem resolver usando esse destino.
 
 ### Caso de uso #1 {#use-case-1}
 
@@ -61,7 +61,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -158,7 +158,7 @@ Os seguintes namespaces de identidade de destino devem ser mapeados dependendo d
 
 ## Dados exportados {#exported-data}
 
-Depois de ativar seus segmentos para o destino, informe à equipe de entrega do Medallia, que poderá validar os dados exportados do Adobe Experience Platform para o Medallia. Observe que as pesquisas só podem ser ativadas no Medallia após a verificação bem-sucedida dos dados; antes disso, os dados serão exportados para o Medallia, mas não acionarão pesquisas para os clientes.
+Depois de ativar seu(s) segmento(s) para o destino, informe à equipe de entrega do Medallia, que poderá validar os dados exportados do [!DNL Adobe Experience Platform] para o Medallia. Observe que as pesquisas só podem ser ativadas no Medallia após a verificação bem-sucedida dos dados; antes disso, os dados serão exportados para o Medallia, mas não acionarão pesquisas para os clientes.
 
 Um exemplo de JSON dos dados exportados é fornecido abaixo, que usa o mapeamento de exemplo da captura de tela acima na seção **Mapear atributos e identidades**:
 

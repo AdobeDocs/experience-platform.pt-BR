@@ -3,14 +3,14 @@ title: Exportar arrays, mapas e objetos do Real-Time CDP
 type: Tutorial
 description: Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para destinos de armazenamento na nuvem.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1062'
+source-wordcount: '1056'
 ht-degree: 13%
 
 ---
 
-# Exportar arrays, mapas e objetos do Real-Time CDP {#export-arrays-cloud-storage}
+# Exportar matrizes, mapas e objetos de [!DNL Real-Time CDP] {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
@@ -19,12 +19,12 @@ ht-degree: 13%
 >Além disso, você pode exportar campos do tipo mapa para os seguintes destinos: [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [API HTTP](/help/destinations/catalog/streaming/http-destination.md), [Hubs de Eventos da Azure](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
-Saiba como exportar matrizes, mapas e objetos do Real-Time CDP para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md). Além disso, você pode exportar campos do tipo mapa para [destinos corporativos](/help/destinations/destination-types.md#advanced-enterprise-destinations) e [destinos de personalização de borda](/help/destinations/destination-types.md#edge-personalization-destinations) limitados. Leia este documento para entender o fluxo de trabalho de exportação, os casos de uso ativados por essa funcionalidade e as limitações conhecidas. Consulte a tabela abaixo para entender a funcionalidade disponível por tipo de destino.
+Saiba como exportar matrizes, mapas e objetos de [!DNL Real-Time CDP] para [destinos de armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md). Além disso, você pode exportar campos do tipo mapa para [destinos corporativos](/help/destinations/destination-types.md#advanced-enterprise-destinations) e [destinos de personalização de borda](/help/destinations/destination-types.md#edge-personalization-destinations) limitados. Leia este documento para entender o fluxo de trabalho de exportação, os casos de uso ativados por essa funcionalidade e as limitações conhecidas. Consulte a tabela abaixo para entender a funcionalidade disponível por tipo de destino.
 
 | Tipo de destino | Capacidade de exportar arrays, mapas e outros objetos personalizados |
 |---|---|
 | Destinos de armazenamento na nuvem criados pela Adobe (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google Cloud Storage, SFTP) | Sim, com a opção Enable export of arrays, maps, and objects ativada ao configurar uma conexão de destino. |
-| Destinos de marketing por email baseados em arquivo (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | Não |
+| Destinos de marketing por email baseados em arquivo ([!DNL Adobe Campaign], Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | Não |
 | Destinos de armazenamento na nuvem personalizados criados por parceiros existentes (destinos personalizados baseados em arquivo criados por meio do Destination SDK) | Não |
 | Destinos empresariais (Amazon Kinesis, Hubs de eventos da Azure, API HTTP) | Parcialmente. Você pode selecionar e exportar objetos do tipo mapa na etapa de mapeamento do fluxo de trabalho de ativação. |
 | Destinos de transmissão (por exemplo: Facebook, Braze, Google Customer Match e muito mais) | Não |
@@ -48,7 +48,7 @@ No Experience Platform, você pode usar [esquemas XDM](/help/xdm/home.md) para g
 
 Outros tipos de campo no Experience Platform incluem campos de matriz. Leia mais sobre [gerenciamento de campos de matriz na interface do Experience Platform](/help/xdm/ui/fields/array.md). Agora é possível exportar objetos de matriz, como o exemplo abaixo.
 
-```
+```js
 organizations = [{
   id: 123,
   orgName: "Acme Inc",

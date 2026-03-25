@@ -3,10 +3,10 @@ keywords: extensão livefyre;livefyre extension
 title: Extensão do Adobe Livefyre
 description: A extensão do Adobe Livefyre é um destino social no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 3%
+source-wordcount: '423'
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 3%
 
 O Adobe Livefyre permite descobrir, organizar e publicar um fluxo constante de conteúdo gerado pelo usuário em seu site para criar experiências autênticas e altamente personalizadas.
 
-O Adobe Livefyre é uma extensão social do Adobe Experience Platform. Para obter mais informações sobre o Adobe Livefyre, leia o [Guia de implementação do Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=pt-BR).
+O Adobe Livefyre é uma extensão social no [!DNL Adobe Experience Platform]. Para obter mais informações sobre o Adobe Livefyre, leia o [Guia de implementação do Livefyre](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar esta extensão, você precisa acessar as marcas em [!DNL Adobe Experience Platform]. As marcas são oferecidas a [!DNL Adobe Experience Cloud] clientes como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

@@ -3,9 +3,9 @@ title: Destino de lote Magnite
 description: Use esse destino para fornecer públicos-alvo da CDP do Adobe para a plataforma de transmissão Magnite em lote.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 8cc3890f-84f8-49d1-a329-322c13f9e5af
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1779'
+source-wordcount: '1756'
 ht-degree: 2%
 
 ---
@@ -16,16 +16,16 @@ ht-degree: 2%
 
 Este documento descreve o destino Magnite: Batch e fornece exemplos de casos de uso para ajudá-lo a entender melhor como ativar e exportar públicos para ele.
 
-Os públicos-alvo da Adobe Real-Time CDP podem ser entregues à plataforma de transmissão Magnite de duas maneiras: uma vez por dia ou em tempo real:
+Os públicos-alvo do Adobe [!DNL Real-Time CDP] podem ser entregues à plataforma Magnite Streaming de duas maneiras: uma por dia ou em tempo real:
 
 1. Se você quiser e/ou precisar fornecer públicos-alvo apenas uma vez por dia, poderá usar o destino Magnite: Batch, que fornece públicos-alvo para Magnite Streaming por meio de uma entrega diária de arquivo em lote S3. Esses públicos-alvo do Batch são armazenados indefinidamente na plataforma Magnite, ao contrário dos públicos-alvo em tempo real, que são armazenados apenas por alguns dias.
 
 2. No entanto, se você quiser ou precisar fornecer públicos-alvo com mais frequência, será necessário usar o destino [Tempo real magnito](/help/destinations/catalog/advertising/magnite-streaming.md). Ao usar o destino em tempo real, a Magnite Streaming receberá públicos em tempo real, mas a Magnite só poderá armazenar temporariamente públicos em tempo real em sua plataforma e eles serão removidos do sistema em alguns dias. Por isso, se você quiser usar o destino Magnite em tempo real, *também* precisará usar o destino Magnite: Batch - cada público-alvo ativado para o destino em tempo real, você também precisará ativar para o destino Batch.
 
-Para recapitular: se você quiser fornecer públicos-alvo da Adobe Real-Time CDP apenas uma vez por dia, use o destino Magnite: Batch e os públicos-alvo serão entregues uma vez por dia. Se você quiser entregar públicos do Adobe Real-Time CDP em tempo real, use *ambos* o destino Magnite: Batch e o destino Magnite em tempo real. Para obter mais informações, entre em contato com Magnite: Streaming.
+Para recapitular: se você quiser entregar somente os públicos-alvo do [!DNL Real-Time CDP] do Adobe uma vez por dia, você usará somente o destino Magnite: Batch, e os públicos-alvo serão entregues uma vez por dia. Se você deseja entregar os públicos-alvo [!DNL Real-Time CDP] do Adobe em tempo real, você usará *ambos* o destino Magnite: Batch e o destino Magnite em tempo real. Para obter mais informações, entre em contato com Magnite: Streaming.
 
 
-Continue lendo abaixo para obter mais informações sobre o destino Magnite: Batch, como se conectar a ele e como ativar os públicos do Adobe Real-Time CDP para ele.
+Continue lendo abaixo para obter mais informações sobre o destino Magnite: Batch, como se conectar a ele e como ativar os públicos-alvo do Adobe [!DNL Real-Time CDP] para ele.
 Para obter mais informações sobre o destino em Tempo real, consulte [esta página de documentação](magnite-streaming.md).
 
 >[!IMPORTANT]
@@ -34,7 +34,7 @@ Para obter mais informações sobre o destino em Tempo real, consulte [esta pág
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino Magnite: Batch, veja a seguir exemplos de casos de uso que os clientes do Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino Magnite: Batch, veja a seguir exemplos de casos de uso que [!DNL Adobe Experience Platform] clientes podem resolver usando esse destino.
 
 ### Caso de uso #1 {#use-case-1}
 
@@ -50,7 +50,7 @@ Qualquer público ativado por meio do Magnite: o destino do lote será entregue 
 
 ## Pré-requisitos {#prerequisites}
 
-Para usar os destinos [!DNL Magnite] no Adobe Experience Platform, primeiro você deve ter uma conta de transmissão Magnite. Se você tiver uma conta [!DNL Magnite Streaming], entre em contato com seu gerente de conta [!DNL Magnite] para receber as credenciais para acessar os destinos [!DNL Magnite's]. Se você não tiver uma conta [!DNL Magnite Streaming], entre em contato com adobe-tech@magnite.com
+Para usar os destinos [!DNL Magnite] em [!DNL Adobe Experience Platform], primeiro você deve ter uma conta de transmissão Magnite. Se você tiver uma conta [!DNL Magnite Streaming], entre em contato com seu gerente de conta [!DNL Magnite] para receber as credenciais para acessar os destinos [!DNL Magnite's]. Se você não tiver uma conta [!DNL Magnite Streaming], entre em contato com adobe-tech@magnite.com
 
 ## Identidades suportadas {#supported-identities}
 
@@ -73,7 +73,7 @@ O destino Magnite: Batch pode receber *qualquer* fontes de identidade da CDP do 
 | Origem do público | Suportado | Descrição |
 |-----------------------------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -86,7 +86,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -189,7 +189,7 @@ Na tela &quot;Configurar um nome de arquivo e uma programação de exportação 
 
 Depois que os públicos forem carregados, você poderá validar se os públicos foram criados e carregados corretamente.
 
-* O destino Magnite: Batch entrega arquivos S3 para Magnite Streaming diariamente. Após a entrega e a assimilação, espera-se que os públicos-alvo/segmentos apareçam na Magnite Streaming e possam ser aplicados a uma oferta. Você pode confirmar isso verificando a ID ou o nome do segmento que foi compartilhado durante as etapas de ativação no Adobe Experience Platform.
+* O destino Magnite: Batch entrega arquivos S3 para Magnite Streaming diariamente. Após a entrega e a assimilação, espera-se que os públicos-alvo/segmentos apareçam na Magnite Streaming e possam ser aplicados a uma oferta. Você pode confirmar isso verificando a ID ou o nome do segmento que foi compartilhado durante as etapas de ativação no [!DNL Adobe Experience Platform].
 
 >[!NOTE]
 >

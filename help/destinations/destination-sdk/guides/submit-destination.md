@@ -2,9 +2,9 @@
 description: Esta página fornece todas as informações necessárias para enviar um destino produzido para revisão quando criado usando o Destination SDK.
 title: Enviar um destino produzido para revisão
 exl-id: eef0d858-ebd9-426e-91a1-5c93903b0eb5
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1039'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Antes de publicar seu destino no [catálogo de destinos do Experience Platform](/help/destinations/catalog/overview.md), forneça à Adobe determinadas informações sobre o destino e os testes que você realizou, para garantir que os usuários desfrutem da melhor experiência possível ao ativar dados para sua plataforma.
 
-Esta página lista todas as informações que você precisa fornecer ao enviar ou atualizar um destino criado usando o Adobe Experience Platform Destination SDK. Para enviar um destino no Adobe Experience Platform com êxito, envie um email para <aepdestsdk@adobe.com> que inclua:
+Esta página lista todas as informações que você precisa fornecer ao enviar ou atualizar um destino criado usando o Destination SDK [!DNL Adobe Experience Platform]. Para enviar um destino com êxito no [!DNL Adobe Experience Platform], envie um email para <aepdestsdk@adobe.com> que inclua:
 
 * Uma descrição dos casos de uso que seu destino resolve. Isso só será necessário se você estiver enviando uma nova configuração de destino.
 * Uma descrição do motivo para o envio do seu destino. Isso só será necessário se você estiver atualizando uma configuração de destino existente.

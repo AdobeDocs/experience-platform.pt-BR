@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 description: Saiba como atualizar a data de término dos fluxos de dados de exportação do conjunto de dados com uma data de término atual em 1º de maio de 2025.
 exl-id: 3f8ff535-3c54-47ac-b297-32f8298881db
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
 source-wordcount: '385'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Para atualizar a data final dos fluxos de dados:
    ![Selecione o controle de data de término realçado na etapa de Agendamento.](/help/destinations/assets/ui/export-datasets/select-end-date.png)
 4. Passe para o final do workflow e salve as atualizações.
 
-Para obter informações abrangentes sobre a etapa de agendamento, leia o [tutorial sobre a interface do usuário de conjuntos de dados de exportação](/help/destinations/api/export-datasets.md#scheduling).
+Para obter informações abrangentes sobre a etapa de agendamento, leia o [tutorial sobre a interface do usuário de conjuntos de dados de exportação](/help/destinations/api/export-datasets.md#export-datasets-by-using-the).
 
 ## Usar a API para atualizar a data de término {#use-api}
 

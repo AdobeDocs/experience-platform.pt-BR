@@ -2,9 +2,9 @@
 description: Saiba como configurar o tipo de público-alvo para seus destinos criados com o Destination SDK.
 title: Configurar tipo de dados do público
 exl-id: c56fb0f9-adb2-4fb2-ab06-c0398d828600
-source-git-commit: 5d84ea1baa96c288d9d37606122e0a41880478b9
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '732'
 ht-degree: 2%
 
 ---
@@ -20,12 +20,12 @@ Revise os tipos de dados de público abaixo para saber mais sobre as diferenças
 | [Públicos-alvo](../../../../segmentation/types/people-audiences.md) | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](../../../../segmentation/types/account-audiences.md) | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](../../../../segmentation/types/prospect-audiences.md) | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](../../../../catalog/datasets/overview.md) | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](../../../../catalog/datasets/overview.md) | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 O tipo de dados de público-alvo compatível depende do tipo de destino que você cria.
 Consulte a tabela abaixo para entender quais tipos de destino suportam quais tipos de dados de público-alvo.
 
-| Tipo de destino | Públicos-alvo de pessoas | Públicos-alvo da conta | Públicos-alvo em potencial | Conjuntos de dados |
+| Tipo de destino | Públicos-alvo de pessoas | Públicos-alvo da conta | Públicos-alvos de clientes potenciais | Conjuntos de dados |
 |---------|----------|---------|---------|---------|
 | Transmissão | ✓ | ✓ | X | X |
 | Baseado em arquivo | ✓ | ✓ | ✓ | ✓ |

@@ -3,9 +3,9 @@ keywords: PebblePost;Pebblepost;Correspondência direta programática PebblePost
 title: Extensão PebblePost
 description: A extensão PebblePost é um destino de email no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '432'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 A solução [!DNL PebblePost's Programmatic Direct Mail] ajuda os profissionais de marketing digital a conectarem o interesse e a intenção online a uma mídia tangível offline que converta dados. Os profissionais de marketing podem aproveitar os públicos-alvo de dados personalizados criados no Adobe para agora direcionar os consumidores com uma impressão de mídia doméstica relevante e de maior duração. Analise o desempenho em tempo real com base na atividade do caminho de resposta e nas conversões no site.
 
-[!DNL PebblePost] é uma extensão de email no Adobe Experience Platform.
+[!DNL PebblePost] é uma extensão de email em [!DNL Adobe Experience Platform].
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar esta extensão, você precisa acessar as marcas em [!DNL Adobe Experience Platform]. As marcas são oferecidas a [!DNL Adobe Experience Cloud] clientes como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

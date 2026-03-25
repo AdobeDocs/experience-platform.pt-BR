@@ -3,9 +3,9 @@ keywords: Experience Platform;interface do usuário;UI;personalização;uso de l
 title: Painel de destinos
 description: A interface do usuário do Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os destinos ativos da sua organização.
 type: Documentation
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '65'
+source-wordcount: '62'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Painel [!UICONTROL Destinations] {#destinations-dashboard}
 
-A interface do usuário (UI) do Adobe Experience Platform fornece um painel por meio do qual você pode exibir informações importantes sobre os destinos ativos da sua organização, conforme capturados durante um instantâneo diário.
+A interface de usuário (UI) do [!DNL Adobe Experience Platform] fornece um painel por meio do qual você pode exibir informações importantes sobre os destinos ativos da sua organização, conforme capturados durante um instantâneo diário.
 
 <!--
 Broken links; this article is not in TOC

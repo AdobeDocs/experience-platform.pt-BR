@@ -3,9 +3,9 @@ keywords: Catálogo;catálogo
 title: Visão geral do catálogo de destinos
 description: O catálogo de Destinos fornece uma lista de destinos disponíveis que estão prontos para receber dados. Esses destinos incluem soluções da Adobe, plataformas de publicidade, plataformas de pesquisa, plataformas de marketing por email e muito mais.
 exl-id: c490f6f0-f673-4a56-b87a-22884f8be92d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Navegue pelo catálogo para determinar quais plataformas de destino são melhore
 
 ## Categorias de destino {#destination-categories}
 
-Você pode ativar seus dados para diferentes categorias de destino no Adobe Experience Platform. Os links abaixo fornecem mais informações sobre cada categoria de destino:
+Você pode ativar seus dados para diferentes categorias de destino no [!DNL Adobe Experience Platform]. Os links abaixo fornecem mais informações sobre cada categoria de destino:
 
 - [Visão geral do Adobe [!UICONTROL destinations]](adobe/overview.md)
 - [Visão geral de [!UICONTROL Advertising] [!UICONTROL destinations]](advertising/overview.md)

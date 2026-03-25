@@ -4,9 +4,9 @@ title: Visão geral de Activation
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform para vários tipos de destinos.
 exl-id: 987af401-2d93-45b4-a8f9-191e6058e4da
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '337'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 1%
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-O Adobe Experience Platform é compatível com uma grande variedade de destinos. O fluxo de trabalho de ativação de público varia entre os destinos, com base no tipo de dados de público suportados e na frequência da exportação de dados.
+O [!DNL Adobe Experience Platform] oferece suporte a uma grande variedade de destinos. O fluxo de trabalho de ativação de público varia entre os destinos, com base no tipo de dados de público suportados e na frequência da exportação de dados.
 
 ## Métodos de ativação {#activation-methods}
 

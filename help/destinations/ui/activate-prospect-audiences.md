@@ -3,10 +3,10 @@ title: Ativar públicos-alvo potenciais para destinos
 type: Tutorial
 description: Saiba como ativar públicos-alvo potenciais para destinos
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 14%
+source-wordcount: '583'
+ht-degree: 8%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 14%
 
 >[!AVAILABILITY]
 >
->Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
+>Essa funcionalidade está disponível para clientes que compraram o pacote do Prime e Ultimate [!DNL Real-Time CDP]. Entre em contato com o representante da Adobe para obter mais informações.
 
-Este artigo explica o fluxo de trabalho necessário para exportar [públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) do Adobe Experience Platform para o seu destino preferido.
+Este artigo explica o fluxo de trabalho necessário para exportar [públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) de [!DNL Adobe Experience Platform] para o seu destino preferido.
 
 ## Destinos compatíveis {#supported-destinations}
 
@@ -77,7 +77,7 @@ No restante do fluxo de trabalho de ativação para exportar públicos-alvo de p
 
 >[!NOTE]
 >
->Observe que na etapa de agendamento, o fluxo de trabalho para ativar públicos-alvo potenciais permite apenas [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Não há suporte para exportações de arquivos incrementais.
+>Observe que na etapa de agendamento, o fluxo de trabalho para ativar públicos-alvo de prospecto só permite [exportar arquivos completos](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files). Não há suporte para exportações de arquivos incrementais.
 
 <!--
 
@@ -87,8 +87,8 @@ Note that we will need to add links to other destination types here as more dest
 
 ## Outros casos de uso obtidos por meio da compatibilidade com dados de parceiros {#other-use-cases}
 
-Conheça outros casos de uso habilitados por meio da compatibilidade com dados de parceiros na Real-Time CDP:
+Veja mais casos de uso habilitados por meio do suporte a dados de parceiros no [!DNL Real-Time CDP]:
 
 * [Suplemente perfis próprios com atributos de parceiros de dados confiáveis para melhorar sua base de dados, obter novos insights sobre sua base de clientes e aprimorar a otimização do público-alvo.](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-* Use o suporte a dados de terceiros da Real-Time CDP para [expandir sua base de perfis com perfis de clientes potenciais de parceiros de dados e interaja com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
+* Use o suporte a dados de terceiros no [!DNL Real-Time CDP] para [expandir sua base de perfis com perfis de prospecto de parceiros de dados e envolver-se com eles para adquirir ou alcançar novos clientes](/help/rtcdp/partner-data/prospecting.md).
 * [Aproveite o reconhecimento auxiliado pelo parceiro para personalizar experiências no site](/help/rtcdp/partner-data/onsite-personalization.md) durante a visita sem que o usuário autentique ou tenha um histórico anterior com sua marca.

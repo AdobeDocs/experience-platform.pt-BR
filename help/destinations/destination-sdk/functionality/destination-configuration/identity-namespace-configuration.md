@@ -2,10 +2,10 @@
 description: Saiba como configurar as identidades de destino compatíveis para destinos criados com o Destination SDK.
 title: Configuração do namespace de identidade
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '918'
-ht-degree: 3%
+source-wordcount: '912'
+ht-degree: 1%
 
 ---
 
@@ -29,7 +29,7 @@ Ao configurar namespaces de identidade para seu destino, você pode ajustar o ma
 
 * Permitir que os usuários mapeiem atributos XDM para namespaces de identidade.
 * Permitindo que os usuários mapeiem [namespaces de identidade padrão](../../../../identity-service/features/namespaces.md#standard) para seus próprios namespaces de identidade.
-* Permitindo que os usuários mapeiem [namespaces de identidade personalizados](../../../../identity-service/features/namespaces.md#manage-namespaces) para seus próprios namespaces de identidade.
+* Permitindo que os usuários mapeiem [namespaces de identidade personalizados](../../../../identity-service/features/namespaces.md#create-namespaces) para seus próprios namespaces de identidade.
 
 Para entender onde esse componente se encaixa em uma integração criada com o Destination SDK, consulte o diagrama na documentação de [opções de configuração](../configuration-options.md) ou consulte o guia sobre como [usar o Destination SDK para configurar um destino baseado em arquivo](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration).
 
@@ -42,7 +42,7 @@ Este artigo descreve todas as opções de configuração de namespaces de identi
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -118,9 +118,9 @@ A configuração abaixo habilita a opção [Aplicar transformação](../../../ui
    }
 ```
 
-Marque essa opção ao usar campos de origem sem hash, para que a Adobe Experience Platform faça o hash automaticamente na ativação.
+Marque esta opção ao usar campos de origem sem hash, para que [!DNL Adobe Experience Platform] os coloque automaticamente com hash na ativação.
 
-Ao mapear atributos de origem com hash não atribuídos para atributos de destino que o destino espera que tenham hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), marque a opção **Aplicar transformação** para que o Adobe Experience Platform coloque os atributos de origem em hash automaticamente na ativação.
+Ao mapear atributos de origem com hash não atribuídos para atributos de destino que o destino espera que tenham hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), marque a opção **Aplicar transformação** para que [!DNL Adobe Experience Platform] coloque os atributos de origem em hash automaticamente na ativação.
 
 ## Configurar hash de campo de origem obrigatório {#configure-mandatory-hashing}
 

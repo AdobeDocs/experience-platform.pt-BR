@@ -3,26 +3,26 @@ title: LiveRamp - Conexão de integração
 description: Saiba como usar o conector do LiveRamp para integrar públicos do Adobe Real-Time Customer Data Platform ao LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: '1988'
 ht-degree: 4%
 
 ---
 
 # [!DNL LiveRamp - Onboarding] conexão {#liveramp-onboarding}
 
-Use a conexão [!DNL LiveRamp - Onboarding] para integrar públicos do Adobe Real-Time Customer Data Platform ao [!DNL LiveRamp Connect].
+Use a conexão [!DNL LiveRamp - Onboarding] para integrar públicos do Adobe [!DNL Real-Time Customer Data Platform] ao [!DNL LiveRamp Connect].
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL LiveRamp - Onboarding], veja um exemplo de caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL LiveRamp - Onboarding], veja um exemplo de caso de uso que os clientes [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
-Como profissional de marketing, desejo enviar públicos-alvo do Adobe Experience Platform para identidades integradas no [!DNL LiveRamp Connect] para que eu possa direcionar usuários em plataformas móveis, abertas da Web, sociais e [!DNL CTV], usando o identificador [!DNL Ramp ID].
+Como profissional de marketing, desejo enviar públicos-alvo do [!DNL Adobe Experience Platform] para identidades integradas no [!DNL LiveRamp Connect] para que eu possa direcionar usuários em plataformas móveis, abertas da Web, sociais e [!DNL CTV], usando o identificador [!DNL Ramp ID].
 
 ## Pré-requisitos {#prerequisites}
 
-A conexão [!DNL LiveRamp - Onboarding] exporta arquivos usando o armazenamento SFTP[&#x200B; do &#x200B;](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
+A conexão [!DNL LiveRamp - Onboarding] exporta arquivos usando o armazenamento SFTP[ do ](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)LiveRamp.
 
 Antes de enviar dados do Experience Platform para o [!DNL LiveRamp - Onboarding], você precisa de suas credenciais do [!DNL LiveRamp]. Entre em contato com o representante do [!DNL LiveRamp] para obter suas credenciais, caso ainda não as tenha.
 
@@ -39,7 +39,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -52,7 +52,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -123,7 +123,7 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
 * **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Description]**: uma descrição que ajudará você a identificar este destino no futuro.
 * **[!UICONTROL Region]**: região geográfica da sua instância do armazenamento SFTP do LiveRamp.
-* **[!UICONTROL Folder path]**: O caminho para a subpasta [!DNL LiveRamp] `uploads` que hospedará os arquivos exportados. O prefixo `uploads` é adicionado automaticamente ao caminho da pasta. A [!DNL LiveRamp] recomenda criar uma subpasta dedicada para entregas a partir do Adobe Real-Time CDP para manter os arquivos separados de quaisquer outros feeds existentes e garantir que toda a automação seja executada sem problemas.
+* **[!UICONTROL Folder path]**: O caminho para a subpasta [!DNL LiveRamp] `uploads` que hospedará os arquivos exportados. O prefixo `uploads` é adicionado automaticamente ao caminho da pasta. A [!DNL LiveRamp] recomenda criar uma subpasta dedicada para entregas a partir do Adobe [!DNL Real-Time CDP] para manter os arquivos separados de quaisquer outros feeds existentes e garantir que toda a automação seja executada sem problemas.
    * Por exemplo, se você deseja exportar seus arquivos para `uploads/my_export_folder`, digite `my_export_folder` no campo **[!UICONTROL Folder path]**.
 * **[!UICONTROL Compression format]**: Selecione o tipo de compactação que o Experience Platform deve usar para os arquivos exportados. As opções disponíveis são **[!UICONTROL GZIP]** ou **[!UICONTROL None]**.
 

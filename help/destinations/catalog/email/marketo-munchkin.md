@@ -3,9 +3,9 @@ keywords: Marketo Munchkin;marketo munchkin;extensão do Marketo Munchkin;extens
 title: Extensão do Marketo Munchkin
 description: A extensão do Marketo Munchkin é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 0639ff74-5450-456e-b030-8118814ed705
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '442'
 ht-degree: 5%
 
 ---
@@ -18,7 +18,7 @@ Do gerenciamento de clientes potenciais ao marketing baseado em conta, o [!DNL M
 
 O JavaScript [!DNL Marketo’s Munchkin] permite rastrear as visitas da página do usuário final e os cliques nas páginas de aterrissagem e páginas da Web externas do [!DNL Marketo].
 
-[!DNL Marketo Munchkin] é uma extensão de email no Adobe Experience Platform. Para obter mais informações sobre o Marketo Munchkin, leia [Rastreamento de clientes em potencial](https://developers.marketo.com/javascript-api/lead-tracking/) na documentação do Marketo.
+[!DNL Marketo Munchkin] é uma extensão de email em [!DNL Adobe Experience Platform]. Para obter mais informações sobre o Marketo Munchkin, leia [Rastreamento de clientes em potencial](https://developers.marketo.com/javascript-api/lead-tracking/) na documentação do Marketo.
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -28,7 +28,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar esta extensão, você precisa acessar as marcas em [!DNL Adobe Experience Platform]. As marcas são oferecidas a [!DNL Adobe Experience Cloud] clientes como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

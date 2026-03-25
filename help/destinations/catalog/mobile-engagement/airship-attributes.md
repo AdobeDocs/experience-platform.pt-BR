@@ -3,9 +3,9 @@ keywords: atributos do dirigível;destino do dirigível
 title: Conexão com os atributos do dirigível
 description: Transmita facilmente os dados de público-alvo da Adobe para o Airship como atributos de público-alvo para direcionamento no Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1121'
 ht-degree: 3%
 
 ---
@@ -42,7 +42,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 ## Ativar atributos {#enable-attributes}
 
-Os atributos de perfil do Adobe Experience Platform são semelhantes aos atributos do [!DNL Airship] e podem ser facilmente mapeados no Experience Platform usando a ferramenta de mapeamento demonstrada mais abaixo nesta página.
+Os atributos de perfil do [!DNL Adobe Experience Platform] são semelhantes aos atributos do [!DNL Airship] e podem ser facilmente mapeados no Experience Platform usando a ferramenta de mapeamento demonstrada mais abaixo nesta página.
 
 [!DNL Airship] projetos têm vários atributos predefinidos e padrão. Se você tiver um atributo personalizado, defina-o primeiro em [!DNL Airship]. Consulte [Configurar e gerenciar atributos](https://docs.airship.com/tutorials/audience/attributes/) para obter detalhes.
 
@@ -89,15 +89,15 @@ Clique em **[!UICONTROL Create Token]** e salve os detalhes como confidenciais.
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Airship Attributes], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Airship Attributes], veja a seguir exemplos de casos de uso que os clientes do [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 ### Caso de uso #1 {#use-case-1}
 
-Aproveite os dados de perfil coletados no Adobe Experience Platform para personalização da mensagem e conteúdo avançado em qualquer um dos canais de [!DNL Airship]. Por exemplo, use os dados de perfil do [!DNL Experience Platform] para definir atributos de localização dentro de [!DNL Airship]. Isso permitirá que uma marca de hotel exiba uma imagem para a localização do hotel mais próxima para cada usuário.
+Aproveite os dados de perfil coletados em [!DNL Adobe Experience Platform] para personalização da mensagem e conteúdo avançado em qualquer um dos canais de [!DNL Airship]. Por exemplo, use os dados de perfil do [!DNL Experience Platform] para definir atributos de localização dentro de [!DNL Airship]. Isso permitirá que uma marca de hotel exiba uma imagem para a localização do hotel mais próxima para cada usuário.
 
 ### Caso de uso #2 {#use-case-2}
 
-Aproveite os Atributos do Adobe Experience Platform para enriquecer ainda mais [!DNL Airship] perfis e combiná-los com SDK ou dados preditivos [!DNL Airship]. Por exemplo, uma retailer pode criar um público-alvo com status de fidelidade e dados de localização (atributos da Experience Platform) e [!DNL Airship] com previsão de churn de dados para enviar mensagens altamente direcionadas aos usuários no status de fidelidade gold que vivem em Las Vegas, Nova York e têm uma alta probabilidade de churn.
+Aproveite os Atributos de [!DNL Adobe Experience Platform] para enriquecer ainda mais [!DNL Airship] perfis e combiná-los com SDK ou dados preditivos [!DNL Airship]. Por exemplo, uma retailer pode criar um público-alvo com status de fidelidade e dados de localização (atributos da Experience Platform) e [!DNL Airship] com previsão de churn de dados para enviar mensagens altamente direcionadas aos usuários no status de fidelidade gold que vivem em Las Vegas, Nova York e têm uma alta probabilidade de churn.
 
 ## Conectar ao destino {#connect}
 

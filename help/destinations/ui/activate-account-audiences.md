@@ -3,9 +3,9 @@ title: Ativar públicos-alvo da conta para destinos
 type: Tutorial
 description: Saiba como ativar públicos-alvo da conta para destinos
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->A funcionalidade para ativar públicos da conta para destinos está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) do Real-Time Customer Data Platform.
+>A funcionalidade para ativar públicos da conta para destinos está disponível para empresas que compram as edições [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) e [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p) de [!DNL Real-Time Customer Data Platform].
 
-Este artigo explica o fluxo de trabalho necessário para exportar [públicos-alvo da conta](/help/segmentation/types/account-audiences.md) do Adobe Experience Platform para o seu destino preferido.
+Este artigo explica o fluxo de trabalho necessário para exportar [públicos-alvo da conta](/help/segmentation/types/account-audiences.md) de [!DNL Adobe Experience Platform] para o seu destino preferido.
 
 ## Destinos compatíveis {#supported-destinations}
 
@@ -108,4 +108,4 @@ O consentimento é aplicado no nível da pessoa ou do perfil para *públicos-alv
 
 ![Etapa de revisão do fluxo de trabalho ativar públicos-alvo de conta com o controle de imposição de consentimento esmaecido.](/help/destinations/assets/ui/activate-account-audiences/consent-checks-greyed-out.png)
 
-Há suporte para outros mecanismos de governança de dados no Real-Time CDP, como [verificações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) e [controle de acesso baseado em atributos](/help/destinations/home.md#attribute-based-access).
+Há suporte para outros mecanismos de governança de dados em [!DNL Real-Time CDP], como [verificações de política de uso de dados](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) e [controle de acesso baseado em atributos](/help/destinations/home.md#attribute-based-access).

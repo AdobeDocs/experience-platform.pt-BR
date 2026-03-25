@@ -2,10 +2,10 @@
 description: O Experience Platform Destination SDK usa modelos Pebble, permitindo transformar os dados exportados do Experience Platform no formato exigido pelo destino.
 title: Funções de transformação compatíveis com o Destination SDK
 exl-id: 36f761c7-9d76-41fe-b05f-d4cad655ddd2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 1%
+source-wordcount: '548'
+ht-degree: 2%
 
 ---
 
@@ -17,7 +17,7 @@ A implementação do Experience Platform [!DNL Pebble] tem algumas alterações,
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Onde usar {#where-to-use}
 
@@ -45,7 +45,7 @@ Na seção de tags [!DNL Pebble], o Destination SDK oferece suporte apenas a:
 >O uso de `for` é diferente ao iterar através de elementos *matriz* ou *mapa* em um modelo. Ao iterar por meio de uma matriz, você pode obter o elemento diretamente. Ao percorrer um mapa, você obtém cada entrada de mapa, que tem um par de valores chave.
 >
 > * Para obter um exemplo de um elemento de matriz, pense nas identidades em um namespace [identityMap](message-format.md#identities), em que você poderia iterar por meio de elementos como `identityMap.gaid`, `identityMap.email` ou semelhante.
-> * Para obter um exemplo de um elemento de mapa, pense em [segmentMembership](message-format.md#segment-membership).
+> * Para obter um exemplo de um elemento de mapa, pense em [segmentMembership](message-format.md#audience-membership).
 
 Na seção de filtro [!DNL Pebble], o Destination SDK dá suporte a todas as funções. Um exemplo mais abaixo mostra como a função `date` pode ser usada dentro do Destination SDK.
 
@@ -53,7 +53,7 @@ Na seção de funções [!DNL Pebble], a Adobe *não* oferece suporte à funçã
 
 ## Exemplo de como a função `date` é usada {#date-function}
 
-Para exemplificar como as funções [!DNL Pebble] são usadas no Destination SDK, veja abaixo como a função de data ([link na documentação do Pebble](https://pebbletemplates.io/wiki/filter/date/)) é usada para transformar o formato de um carimbo de data/hora.
+Para exemplificar como as funções [!DNL Pebble] são usadas no Destination SDK, veja abaixo como a função de data ([link na documentação do Pebble](https://pebbletemplates.io/wiki/filter/date/)) transforma o formato de um carimbo de data/hora.
 
 ### Caso de uso {#date-use-case}
 

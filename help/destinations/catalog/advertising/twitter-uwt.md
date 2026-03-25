@@ -3,9 +3,9 @@ keywords: twitter;Twitter;tag de site universal do twitter;tag de site universal
 title: Extensão de tag do site universal do Twitter
 description: A extensão Tag do site universal do Twitter é um destino de publicidade na Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '421'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 4%
 
 [!DNL Twitter Universal Website Tag] fornece ações para enviar beacons para a Marca UWT do Twitter.
 
-[!DNL Twitter Universal Website Tag] é uma extensão de publicidade no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte [Rastreamento de conversão](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) na documentação do Twitter.
+[!DNL Twitter Universal Website Tag] é uma extensão de publicidade em [!DNL Adobe Experience Platform]. Para obter mais informações sobre a funcionalidade de extensão, consulte [Rastreamento de conversão](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) na documentação do Twitter.
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar esta extensão, você precisa acessar as marcas em [!DNL Adobe Experience Platform]. As marcas são oferecidas a [!DNL Adobe Experience Cloud] clientes como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

@@ -1,9 +1,10 @@
 ---
 title: Notas da versão de março de 2026 da Adobe Experience Platform
 description: As notas da versão de março de 2026 da Adobe Experience Platform.
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+exl-id: 66b948fd-caa0-4e5e-83dd-3b15b77c09fa
+source-git-commit: 0bbbd46f8f82dcab1da69f46e6bc4d95efbff5c2
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1266'
 ht-degree: 20%
 
 ---
@@ -17,8 +18,8 @@ ht-degree: 20%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 24 de março de 2026**
 
@@ -28,6 +29,7 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 - [Agent Orchestrator](#agent-orchestrator)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
+- [Perfil do cliente em tempo real](#real-time-customer-profile)
 - [Serviço de segmentação](#segmentation-service)
 - [Fontes](#sources)
 
@@ -51,7 +53,7 @@ O Agent Orchestrator permite criar e implantar agentes alimentados por IA que po
 
 | Recurso | Descrição |
 | --- | --- |
-| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | O Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] é seu agente incorporado que traz a inteligência de marketing da Adobe diretamente para as ferramentas do dia a dia, como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e outros aplicativos do [!DNL Microsoft 365]. Você pode usar esse agente para obter insights de campanha confiáveis dos aplicativos da Adobe enquanto planeja campanhas, revisa públicos, colabora com colegas para responder às perguntas dos clientes e tomar decisões informadas por dados sem sair do fluxo de trabalho do [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | O Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] é seu agente incorporado que traz a inteligência de marketing da Adobe diretamente para as ferramentas do dia a dia, como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e outros aplicativos do [!DNL Microsoft 365]. Você pode usar esse agente para obter insights de campanha confiáveis dos aplicativos da Adobe enquanto planeja campanhas, revisa públicos, colabora com colegas para responder às perguntas dos clientes e tomar decisões informadas por dados sem sair do fluxo de trabalho do [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
@@ -93,6 +95,20 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 Para obter mais informações, leia a [visão geral do XDM](../../xdm/home.md).
 
+## Perfil do cliente em tempo real {#real-time-customer-profile}
+
+O Perfil do cliente em tempo real permite ter uma visão holística de cada cliente individual ao combinar dados de vários canais, incluindo dados online, offline, de CRM e de terceiros. O Perfil permite consolidar os dados do cliente em uma visualização unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
+
+**Recursos novos ou atualizados**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Eventos | Agora é possível definir o período de pesquisa de eventos ao navegar pelos perfis. Isso permite que você veja os eventos aos quais o perfil está associado pelo período especificado. Para obter mais informações, leia o [Guia da Interface do Usuário do Perfil](/help/profile/ui/user-guide.md#events). |
+
+{style="table-layout:auto"}
+
+Para obter mais informações, leia a visão geral](../../profile/home.md) do [[!DNL Real-Time Customer Profile] .
+
 <!-- 
 ## Run and Operate {#run-and-operate}
 
@@ -120,7 +136,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | Tipo de assimilação | Agora é possível visualizar o tipo de assimilação dos atributos. Isso permite que você saiba a origem dos seus dados, permitindo criar públicos-alvo melhores. Para obter mais informações sobre esse recurso, leia o [Guia do Construtor de segmentos](/help/segmentation/ui/segment-builder.md). |
 | Dados de resumo | Agora você pode exibir os dados de resumo dos seus atributos para públicos-alvo com base em conta e pessoas. Para obter mais informações sobre este recurso nos públicos-alvo da conta, leia o [guia do Construtor de público-alvo](/help/rtcdp/segmentation/audience-builder.md). Para obter mais informações sobre este recurso em públicos com base em pessoas, leia o [Guia do Construtor de segmentos](/help/segmentation/ui/segment-builder.md). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes
 

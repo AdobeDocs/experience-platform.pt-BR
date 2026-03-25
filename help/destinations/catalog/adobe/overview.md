@@ -3,9 +3,9 @@ keywords: destinos;soluções da experience cloud; target;destino do target; ad 
 title: Visão geral dos destinos do Adobe
 description: Gerencie a experiência do cliente conectando seus dados no Experience Platform a outras soluções da Adobe Experience Cloud para direcionamento de anúncios, personalização, automação de marketing e muito mais
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '224'
 ht-degree: 9%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 9%
 
 ## Visão geral {#overview}
 
-Gerencie a experiência do cliente conectando seus dados no Adobe Experience Platform a outras soluções da Adobe Experience Cloud para direcionamento de anúncios, personalização, automação de marketing e muito mais.
+Gerencie sua experiência com o cliente conectando seus dados no [!DNL Adobe Experience Platform] a outras soluções do [!DNL Adobe Experience Cloud] para direcionamento de anúncios, personalização, automação de marketing e muito mais.
 
 ## Destinos compatíveis do Adobe {#supported-destinations}
 
@@ -24,7 +24,7 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 
 ### Conexões {#connections}
 
-* [Conexão DSP da Adobe Advertising Cloud](/help/destinations/catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Conexão com o Adobe Advertising DSP](/help/destinations/catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Conexão com o Adobe Campaign](../email-marketing/adobe-campaign.md)
 * [Conexão com o Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md)
 * [(Beta) Públicos-alvo da Experience Cloud](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
@@ -49,4 +49,4 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 
 Use o recurso de compartilhamento de público da Experience Platform para compartilhar os públicos-alvo da Experience Platform com destinos adicionais da Adobe. Consulte a página abaixo para obter mais informações (abre no portal de documentação da Audience Manager):
 
-* [Compartilhamento de público da Experience Platform com a Adobe Audience Manager, a Adobe Advertising Cloud e a Adobe Target por meio da integração dos Serviços principais](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=pt-BR)
+* [Compartilhamento de público da Experience Platform com a Adobe Audience Manager, a Adobe Advertising Cloud e a Adobe Target por meio da integração dos Serviços principais](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

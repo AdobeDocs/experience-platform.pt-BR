@@ -2,9 +2,9 @@
 title: Ciclo de vida do público-alvo no Experience Platform e destinos de transmissão
 description: Saiba como os nomes e mapeamentos de público-alvo do Experience Platform são refletidos nas plataformas de destino de transmissão.
 exl-id: 8a9a9e2f-d52f-41c9-ae27-9d2cd797bb85
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 381d1f952067cece9f9a9618a00bbed304214906
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '466'
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Os seguintes destinos de transmissão oferecem suporte a atualizações automát
 
 * [Acxiom Audience Connection](../catalog/advertising/acxiom-audience-connection.md)
 * [Adobe Campaign Managed Cloud](../catalog/email-marketing/adobe-campaign-managed-services.md)
-* [Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Bombora](../catalog/advertising/bombora.md)
 * [Critério](../catalog/advertising/criteo.md)
 * [Demandbase](../catalog/advertising/demandbase.md)
@@ -67,7 +67,7 @@ Os seguintes destinos de transmissão oferecem suporte à remoção automática 
 * [(API) Oracle Eloqua](../catalog/email-marketing/oracle-eloqua-api.md)
 * [(Empresas) Público-alvo correspondente do LinkedIn](../catalog/social/linkedin-b2b.md)
 * [(Herdado) (V2) Marketo Engage](../catalog/adobe/marketo-engage.md)
-* [Adobe Advertising Cloud DSP](../catalog/advertising/adobe-advertising-cloud-connection.md)
+* [Adobe Advertising DSP](../catalog/advertising/adobe-advertising-dsp-connection.md)
 * [Públicos da conta Bombora](../catalog/advertising/bombora.md)
 * [Critério](../catalog/advertising/criteo.md)
 * [Públicos-alvo da Experience Cloud](../catalog/adobe/experience-cloud-audiences.md)

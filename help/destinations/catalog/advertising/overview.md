@@ -3,9 +3,9 @@ keywords: destinos de publicidade;destinos;destinos de plataformas;advertising d
 title: Visão geral dos destinos do Advertising
 description: Conecte o Adobe Experience Platform a uma plataforma de publicidade de terceiros (por exemplo, DSP, rede de publicidade, SSP) e compartilhe públicos com pseudônimos nessas plataformas.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
 workflow-type: tm+mt
-source-wordcount: '289'
+source-wordcount: '287'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-Conecte o Adobe Experience Platform a plataformas de publicidade, como plataformas do lado da demanda (DSP), plataformas do lado do suprimento (SSP) e redes de publicidade para compartilhar públicos conhecidos e com pseudônimos nessas plataformas.
+Conecte o [!DNL Adobe Experience Platform] a plataformas de publicidade, como plataformas do lado da demanda (DSP), plataformas do lado da oferta (SSP) e redes de publicidade, para compartilhar públicos conhecidos e com pseudônimos nessas plataformas.
 
 Ao se conectar a um destino de publicidade, os públicos-alvo são enviados como IDs para a plataforma de destino, onde são mapeados para uma ID conhecida pela plataforma de destino.
 
@@ -28,8 +28,8 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 
 * [(Beta) Distribuição de público-alvo da Acxiom](acxiom-audience-connection.md)
 * [(Beta) Conexão de público-alvo da Acxiom Real ID](acxiom-real-id-audience-connection.md)
-* [Conexão com a Adobe Advertising Cloud](adobe-advertising-cloud-connection.md)
-* [Conexão herdada da Adobe Advertising Cloud](adobe-advertising-cloud-connection-legacy.md)
+* [Conexão com o Adobe Advertising DSP](adobe-advertising-dsp-connection.md)
+* [Conexão herdada da Adobe Advertising Cloud DSP](adobe-advertising-cloud-dsp-connection-legacy.md)
 * [Conexão do Amazon Ads](amazon-ads.md)
 * [Conexão Bombora](bombora.md)
 * [Conexão de critério](criteo.md)

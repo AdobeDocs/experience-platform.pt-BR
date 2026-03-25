@@ -2,9 +2,9 @@
 title: Habilitar captura de dados de alteração para conexões de origem na API
 description: Saiba como habilitar a captura de dados de alteração para conexões de origem na API
 exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
-source-git-commit: bd28d5be932823b8bf9c98280f97694ff221d76d
+source-git-commit: 74743d7dc93e2ba291481ad11e923d28088c4903
 workflow-type: tm+mt
-source-wordcount: '1291'
+source-wordcount: '1294'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Agora você pode usar a captura de dados de alteração para as fontes [!DNL Amazon S3] e [!DNL Data Landing Zone] ao executar o Adobe Experience Platform no Amazon Web Services (AWS) enquanto estiver conectado a um data center VA6. O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../landing/multi-cloud.md).
+>* A captura de dados de alteração tem suporte para as seguintes fontes: [!DNL Amazon S3], [!DNL Data Landing Zone], [!DNL Marketo Engage], [!DNL Microsoft Dynamics] e [!DNL Salesforce].
+>
+>* Você também pode habilitar a captura de dados de alteração para fontes de [!DNL Amazon S3] e [!DNL Data Landing Zone] ao usar o Adobe Experience Platform no Amazon Web Services (AWS) em um data center VA6. Observe que o Experience Platform no AWS está disponível atualmente para um público limitado. Para obter mais detalhes sobre o suporte à infraestrutura, consulte a [visão geral de várias nuvens do Experience Platform](../../../landing/multi-cloud.md).
 
 Use a captura de dados de alteração em origens do Adobe Experience Platform para manter seus sistemas de origem e destino sincronizados em tempo quase real.
 
@@ -76,7 +78,7 @@ Para habilitar a captura de dados de alteração com um esquema relacional:
 
 >[!NOTE]
 >
->A coluna `_change_request_type` só é necessária para fontes baseadas em arquivo (Amazon S3, Azure Blob, Armazenamento da Google Cloud, SFTP) quando você deseja controlar explicitamente o comportamento de alteração no nível da linha. Para fontes de banco de dados com recursos nativos do CDC, as operações de alteração são tratadas automaticamente por meio de configurações de exportação do CDC. A assimilação baseada em arquivo presume operações de substituição por padrão. Você só precisará adicionar essa coluna se quiser especificar operações de exclusão nos uploads de arquivo.
+>A coluna `_change_request_type` só é necessária para fontes baseadas em arquivo (Amazon S3, Azure Blob, Google Cloud Storage, SFTP) quando você deseja controlar explicitamente o comportamento de alteração no nível da linha. Para fontes de banco de dados com recursos nativos do CDC, as operações de alteração são tratadas automaticamente por meio de configurações de exportação do CDC. A assimilação baseada em arquivo presume operações de substituição por padrão. Você só precisará adicionar essa coluna se quiser especificar operações de exclusão nos uploads de arquivo.
 
 >[!IMPORTANT]
 >

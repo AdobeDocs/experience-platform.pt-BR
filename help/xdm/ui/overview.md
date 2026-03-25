@@ -4,18 +4,18 @@ solution: Experience Platform
 title: Visão geral da interface do usuário de esquemas
 description: Esta visão geral aborda os principais recursos do espaço de trabalho Esquemas no Experience Platform.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '343'
 ht-degree: 9%
 
 ---
 
-# [!UICONTROL Esquemas] visão geral da interface
+# Visão geral da interface do [!UICONTROL Schemas]
 
-O espaço de trabalho [!UICONTROL Esquemas] da interface do usuário do Adobe Experience Platform permite gerenciar recursos do Experience Data Model (XDM), incluindo esquemas, classes, grupos de campos de esquema e tipos de dados. Você pode visualizar e explorar os recursos principais fornecidos pela Adobe e criar recursos e esquemas personalizados para sua organização.
+O espaço de trabalho [!UICONTROL Schemas] na interface do usuário do Adobe Experience Platform permite gerenciar recursos do Experience Data Model (XDM), incluindo esquemas, classes, grupos de campos de esquema e tipos de dados. Você pode visualizar e explorar os recursos principais fornecidos pela Adobe e criar recursos e esquemas personalizados para sua organização.
 
-Para acessar o espaço de trabalho na interface do usuário do Experience Platform, selecione **[!UICONTROL Esquemas]** no painel esquerdo.
+Para acessar o espaço de trabalho na interface do usuário do Experience Platform, selecione **[!UICONTROL Schemas]** no painel esquerdo.
 
 ![O espaço de trabalho Esquemas com Esquemas realçados na navegação à esquerda da interface de usuário do Experience Platform.](../images/ui/overview/schemas-tab.png)
 
@@ -27,7 +27,11 @@ Também é recomendável seguir o [tutorial de criação de esquema](../tutorial
 
 ## Criação e gerenciamento de recursos XDM
 
-O espaço de trabalho [!UICONTROL Esquemas] fornece ferramentas poderosas para criar e personalizar os recursos XDM da sua organização. Consulte a documentação a seguir para saber como criar e editar cada tipo de recurso na interface do usuário:
+>[!NOTE]
+>
+>As ações XDM estão disponíveis na tabela de estoque e na exibição de detalhes do recurso (**[!UICONTROL More]**). As ações completas se aplicam apenas aos recursos personalizados (definidos pelo locatário); os recursos padrão têm opções limitadas. Consulte [Gerenciar esquemas, classes, grupos de campos e tipos de dados: ações e exclusão](./explore.md#xdm-resource-actions).
+
+O espaço de trabalho [!UICONTROL Schemas] fornece ferramentas poderosas para criar e personalizar os recursos XDM da sua organização. Consulte a documentação a seguir para saber como criar e editar cada tipo de recurso na interface do usuário:
 
 * [Esquemas](./resources/schemas.md)
 * [Classes](./resources/classes.md)
@@ -40,4 +44,4 @@ Classes, grupos de campos e tipos de dados contribuem com campos para um esquema
 
 ## Próximas etapas
 
-Este documento forneceu uma introdução ao espaço de trabalho [!UICONTROL Esquemas] na interface do usuário do Experience Platform. Consulte a documentação vinculada a esta visão geral para saber mais sobre como gerenciar seus esquemas e outros recursos XDM.
+Este documento forneceu uma introdução ao espaço de trabalho [!UICONTROL Schemas] na interface de usuário do Experience Platform. Consulte a documentação vinculada a esta visão geral para saber mais sobre como gerenciar seus esquemas e outros recursos XDM.

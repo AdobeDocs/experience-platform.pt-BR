@@ -4,10 +4,10 @@ title: Exportar esquemas XDM na interface do
 description: Saiba como exportar um esquema existente para uma sandbox ou organização diferente na interface do usuário do Adobe Experience Platform.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 11%
+source-wordcount: '690'
+ht-degree: 10%
 
 ---
 
@@ -29,6 +29,10 @@ Para atender a essa necessidade, o espaço de trabalho [!UICONTROL Schemas] na i
 ## Pré-requisitos
 
 Embora a interface do Experience Platform permita exportar recursos XDM, você deve usar a API do registro de esquema para importar esses recursos para outras sandboxes ou organizações para concluir o fluxo de trabalho. Consulte o manual sobre [introdução à API do Registro de Esquema](../api/getting-started.md) para obter informações importantes sobre cabeçalhos de autenticação necessários antes de seguir este guia.
+
+>[!NOTE]
+>
+>Se você não puder encontrar ações como **Excluir** ou **Copiar estrutura JSON**, verifique se está trabalhando com um recurso personalizado (definido pelo locatário) e acessando-o do menu de linhas da tabela ou da exibição detalhada (**[!UICONTROL More]**). A disponibilidade da ação também depende de permissões e restrições de uso. Consulte [Gerenciar esquemas, classes, grupos de campos e tipos de dados: ações e exclusão](./explore.md#xdm-resource-actions).
 
 ## Gerar uma carga de exportação {#generate-export-payload}
 

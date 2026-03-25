@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Criar e editar esquemas na interface
 description: Saiba mais sobre as noções básicas sobre como criar e editar esquemas na interface do Experience Platform.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 491588dab1388755176b5e00f9d8ae3e49b7f856
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4635'
-ht-degree: 2%
+source-wordcount: '4680'
+ht-degree: 1%
 
 ---
 
@@ -79,7 +79,7 @@ Em seguida, prossiga para [definir chaves primárias](../fields/identity.md#defi
 
 >[!NOTE]
 >
->Depois de salvo, o campo [!UICONTROL Type] na barra lateral [!UICONTROL &#x200B; Schema properties] indica que este é um esquema [!UICONTROL Relational]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
+>Depois de salvo, o campo [!UICONTROL Type] na barra lateral [!UICONTROL  Schema properties] indica que este é um esquema [!UICONTROL Relational]. Isso também é indicado na barra lateral de detalhes na exibição de inventário de esquema.
 >![A tela Editor de Esquemas mostrando uma estrutura de esquema relacional vazia com o tipo relacional realçado.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Fazer upload de um arquivo DDL {#upload-ddl-file}
@@ -121,7 +121,7 @@ Se você selecionar &#39;Tipo de esquema padrão&#39; no menu suspenso &#39;Sele
 
 ![A caixa de diálogo Criar um esquema com as opções de fluxo de trabalho e selecione realçada.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### Beta [!BADGE Criação manual ou com ML]{type=Informative} do esquema {#manual-or-assisted}
+### [!BADGE Criação manual ou com ML]{type=Informative} do esquema {#manual-or-assisted}
 
 Para saber como usar um algoritmo de ML para recomendar uma estrutura de esquema com base em um arquivo csv, consulte o [guia de criação de esquema assistido por aprendizado de máquina](../ml-assisted-schema-creation.md). Este guia de interface do usuário se concentra no fluxo de trabalho de criação manual.
 
@@ -151,7 +151,7 @@ Selecione qualquer linha para escolher uma classe, em seguida, selecione **[!UIC
 
 ![O fluxo de trabalho [!UICONTROL Create schema] com uma classe selecionada na tabela de classes disponíveis e [!UICONTROL Next] realçado.](../../images/ui/resources/schemas/select-class.png)
 
-Após selecionar uma classe, a seção [!UICONTROL Name and review] é exibida. Nesta seção, você fornece um nome e uma descrição para identificar o esquema. &#x200B;A estrutura base do esquema (fornecida pela classe) é mostrada na tela para que você revise e verifique a classe selecionada e a estrutura do esquema.
+Após selecionar uma classe, a seção [!UICONTROL Name and review] é exibida. Nesta seção, forneça um nome e uma descrição para identificar o esquema. &#x200B;A estrutura base do esquema (fornecida pela classe) é mostrada na tela para que você revise e verifique a classe selecionada e a estrutura do esquema.
 
 Insira um [!UICONTROL Schema display name] amigável no campo de texto. Em seguida, insira uma descrição adequada para ajudar a identificar seu esquema. Quando tiver revisado sua estrutura de esquema e estiver satisfeito com suas configurações, selecione **[!UICONTROL Finish]** para criar seu esquema.
 
@@ -178,6 +178,12 @@ Para editar um esquema existente, selecione a guia **[!UICONTROL Browse]** e sel
 Depois de selecionar um esquema, o [!DNL Schema Editor] aparece com a estrutura do esquema mostrada na tela. Agora você pode [adicionar grupos de campos](#add-field-groups) ao esquema (ou [adicionar campos individuais](#add-individual-fields) a partir desses grupos), [editar nomes de exibição de campos](#display-names) ou [editar grupos de campos personalizados existentes](./field-groups.md#edit) se o esquema empregar algum.
 
 ## Mais ações {#more}
+
+>[!NOTE]
+>
+>As ações XDM estão disponíveis na tabela de estoque e na exibição de detalhes do recurso (**[!UICONTROL More]**). As ações completas se aplicam apenas aos recursos personalizados (definidos pelo locatário); os recursos padrão têm opções limitadas. Consulte [Gerenciar esquemas, classes, grupos de campos e tipos de dados: ações e exclusão](../explore.md#xdm-resource-actions).
+
+A tabela a seguir descreve as ações de cabeçalho do Editor de esquemas.
 
 No Editor de esquemas, você também pode realizar ações rápidas para copiar a estrutura JSON do esquema ou excluir o esquema se ele não tiver sido ativado para o Perfil do cliente em tempo real ou tiver conjuntos de dados associados. Selecione [!UICONTROL More] na parte superior da exibição para exibir um menu suspenso com ações rápidas.
 

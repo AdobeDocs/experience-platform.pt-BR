@@ -5,9 +5,9 @@ title: Criar e editar tipos de dados usando a interface
 type: Tutorial
 description: Saiba como criar e editar tipos de dados na interface do Experience Platform.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1371'
 ht-degree: 6%
 
 ---
@@ -46,6 +46,10 @@ Aqui, você tem as seguintes opções:
 - [Criar um novo tipo de dados](#create)
 - [Filtrar tipos de dados](#filter)
 - [Selecionar um tipo de dados existente para editar](#edit)
+
+>[!NOTE]
+>
+>As ações XDM estão disponíveis na tabela de estoque e na exibição de detalhes do recurso (**[!UICONTROL More]**). As ações completas se aplicam apenas aos recursos personalizados (definidos pelo locatário); os recursos padrão têm opções limitadas. Consulte [Gerenciar esquemas, classes, grupos de campos e tipos de dados: ações e exclusão](../explore.md#xdm-resource-actions).
 
 ### Criar um novo tipo de dados {#create}
 

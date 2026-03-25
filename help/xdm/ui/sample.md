@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Gerar dados de amostra para um esquema XDM na interface do
 description: Saiba como gerar dados JSON de amostra com base em um esquema existente na interface do usuário do Adobe Experience Platform.
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '395'
-ht-degree: 14%
+source-wordcount: '449'
+ht-degree: 13%
 
 ---
 
@@ -20,6 +20,10 @@ ht-degree: 14%
 Para assimilar dados na Adobe Experience Platform, o formato e a estrutura dos dados devem estar em conformidade com um esquema existente do Experience Data Model (XDM). Dependendo da complexidade do esquema para um conjunto de dados específico, pode ser difícil determinar a forma exata dos dados que o conjunto de dados espera após a assimilação.
 
 Para qualquer esquema definido na interface do usuário do Experience Platform, você pode gerar um objeto JSON de amostra que esteja em conformidade com a estrutura do esquema. Esse objeto pode servir como modelo para quaisquer dados assimilados em conjuntos de dados que utilizam o esquema em questão.
+
+>[!NOTE]
+>
+>Se você não puder encontrar ações como **Excluir** ou **Copiar estrutura JSON**, verifique se está trabalhando com um recurso personalizado (definido pelo locatário) e acessando-o do menu de linhas da tabela ou da exibição detalhada (**[!UICONTROL More]**). A disponibilidade da ação também depende de permissões e restrições de uso. Consulte [Gerenciar esquemas, classes, grupos de campos e tipos de dados: ações e exclusão](./explore.md#xdm-resource-actions).
 
 Na interface do usuário do Experience Platform, selecione **[!UICONTROL Schemas]** na navegação à esquerda. Na guia **[!UICONTROL Browse]**, localize o esquema para o qual você deseja gerar dados de amostra. Selecione-a na lista e o painel direito é atualizado para mostrar detalhes sobre o esquema. Aqui, selecione **[!UICONTROL Download sample file]**.
 

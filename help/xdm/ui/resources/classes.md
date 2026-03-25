@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar e editar classes na interface
 description: Saiba como criar e editar classes na interface do usuário do Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1600'
 ht-degree: 5%
 
 ---
@@ -23,6 +23,10 @@ Na Adobe Experience Platform, a classe de um esquema define os aspectos comporta
 O Adobe fornece várias classes padrão (&quot;núcleo&quot;) do Experience Data Model (XDM), incluindo o [Perfil Individual XDM](../../classes/individual-profile.md) e o [XDM ExperienceEvent](../../classes/experienceevent.md). Além dessas classes principais, você também pode criar suas próprias classes personalizadas para descrever casos de uso mais específicos para sua organização.
 
 Este documento fornece uma visão geral de como criar, editar e gerenciar classes personalizadas na interface do Experience Platform.
+
+>[!NOTE]
+>
+>As ações XDM estão disponíveis na tabela de estoque e na exibição de detalhes do recurso (**[!UICONTROL More]**). As ações completas se aplicam apenas aos recursos personalizados (definidos pelo locatário); os recursos padrão têm opções limitadas. Consulte [Gerenciar esquemas, classes, grupos de campos e tipos de dados: ações e exclusão](../explore.md#xdm-resource-actions).
 
 ## Pré-requisitos {#prerequisites}
 
@@ -90,7 +94,7 @@ A lista de classes é atualizada na seção [!UICONTROL Schema details], e sua c
 
 ![A seção [!UICONTROL Schema details] com a nova classe selecionada e [!UICONTROL Next] realçada.](../../images/ui/resources/classes/select-new-class.png)
 
-Após selecionar uma classe, a seção [!UICONTROL Name and review] é exibida. Nesta seção, você fornece um nome e uma descrição para identificar o esquema. &#x200B;A estrutura base do esquema (fornecida pela classe) é mostrada na tela para que você revise e verifique a classe selecionada e a estrutura do esquema.
+Após selecionar uma classe, a seção [!UICONTROL Name and review] é exibida. Nesta seção, forneça um nome e uma descrição para identificar o esquema. &#x200B;A estrutura base do esquema (fornecida pela classe) é mostrada na tela para que você revise e verifique a classe selecionada e a estrutura do esquema.
 
 Insira um [!UICONTROL Schema display name] amigável no campo de texto. Em seguida, insira uma descrição adequada para ajudar a identificar seu esquema. Quando tiver revisado sua estrutura de esquema e estiver satisfeito com suas configurações, selecione **[!UICONTROL Finish]** para criar seu esquema.
 

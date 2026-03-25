@@ -5,9 +5,9 @@ title: Criar um esquema usando o Editor de esquemas
 type: Tutorial
 description: Este tutorial aborda as etapas para a criação de um esquema usando o Editor de esquemas na Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 67ae12b0a410d50c25f4e044b8430b70249670eb
 workflow-type: tm+mt
-source-wordcount: '4670'
+source-wordcount: '4740'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ A caixa de diálogo [!UICONTROL Create a schema] é exibida. Nesta caixa de diá
 
 ![A caixa de diálogo Criar um esquema com as opções de fluxo de trabalho e selecione realçada.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### Beta [!BADGE Criação manual ou com ML]{type=Informative} do esquema {#manual-or-assisted}
+### [!BADGE Criação manual ou com ML]{type=Informative} do esquema {#manual-or-assisted}
 
 Para saber como usar um algoritmo de ML para recomendar uma estrutura de esquema com base em um arquivo carregado, consulte o [guia de criação de esquema assistido por aprendizado de máquina](../ui/ml-assisted-schema-creation.md). Este guia de interface do usuário se concentra no fluxo de trabalho de criação manual.
 
@@ -360,6 +360,10 @@ Selecione **[!UICONTROL Enable]** para confirmar sua escolha. Você pode selecio
 
 ## Mais ações {#more}
 
+>[!NOTE]
+>
+>Ao trabalhar com recursos XDM, as ações estão disponíveis na tabela de inventário (menu de linhas) e na exibição detalhada do recurso (**[!UICONTROL More]**). Para acessar o conjunto completo de ações, incluindo **Excluir**, **Copiar estrutura JSON** e **Adicionar ao pacote**, selecione um recurso personalizado (definido pelo locatário). Os recursos padrão (fornecidos pela Adobe) têm ações limitadas. Para obter uma visão geral completa das ações, restrições e permissões, consulte [Gerenciar esquemas, classes, grupos de campos e tipos de dados: ações e exclusão](../ui/explore.md#xdm-resource-actions).
+
 No Editor de esquemas, você também pode realizar ações rápidas para copiar a estrutura JSON do esquema ou excluir o esquema. Selecione [!UICONTROL More] na parte superior da exibição para exibir um menu suspenso com ações rápidas.
 
 ![O Editor de Esquemas com o botão Mais realçado e as opções suspensas exibidas.](../images/tutorials/create-schema/more-actions.png)
@@ -409,11 +413,11 @@ O esquema &quot;Membros de fidelidade&quot; também está disponível para ser v
 
 O vídeo a seguir mostra como criar um esquema simples na interface do usuário do [!DNL Experience Platform].
 
->[!VIDEO](https://video.tv.adobe.com/v/3430218?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 
 O vídeo a seguir tem como objetivo reforçar sua compreensão de trabalhar com grupos de campo e classes.
 
->[!VIDEO](https://video.tv.adobe.com/v/3413605?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27013?quality=12&learn=on)
 
 ## Apêndice
 

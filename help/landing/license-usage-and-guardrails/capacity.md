@@ -2,10 +2,10 @@
 title: Uso e capacidade da licença
 description: Saiba mais sobre o uso de sua licença e os limites de capacidade no Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 8cef502f60a42de9c89c29923811215b3a8086c6
+source-git-commit: 1a7a074a455542bb1438b2cbf199d79229142389
 workflow-type: tm+mt
-source-wordcount: '1670'
-ht-degree: 5%
+source-wordcount: '2072'
+ht-degree: 4%
 
 ---
 
@@ -35,7 +35,7 @@ Para obter mais informações sobre medidas de proteção no Experience Platform
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingthroughput"
 >title="Taxa de transferência de transmissão"
->abstract="O valor da taxa de transferência de transmissão mede o pico combinado de eventos de entrada por segundo para ingestão de transmissão no serviço de perfil, em suas sandboxes de produção e desenvolvimento."
+>abstract="O valor da taxa de transferência de transmissão mede o pico combinado de eventos de entrada por segundo para a assimilação de streaming no Perfil, em suas sandboxes de produção e desenvolvimento."
 
 >[!CONTEXTUALHELP]
 >id="platform_capacity_streamingaudiences"
@@ -51,14 +51,16 @@ Atualmente, o Capacity oferece suporte aos seguintes serviços:
 
 - Segmentação de transmissão
 - Assimilação por transmissão
+- Segmentação de borda
 
 Nesses serviços, as seguintes medidas de proteção são rastreadas:
 
 - O número máximo de públicos-alvo de transmissão é 500
-   - Desses 500 públicos-alvo de transmissão, o número máximo de públicos-alvo de borda é 150
+- O número máximo de públicos-alvo de borda é 150
 - A taxa de transferência inicial combinada para assimilação por transmissão é de 1500 registros por segundo (rps)
    - Essa taxa de transferência de transmissão combinada mede o pico combinado de eventos de entrada por segundo para a assimilação de transmissão no Perfil do cliente em tempo real em suas sandboxes de produção e desenvolvimento.
-   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+   - Você pode adquirir suporte adicional para segmentação por transmissão de até 13.500 registros por segundo. Mais informações sobre a compra de direitos adicionais podem ser encontradas na [descrição do produto Real-Time CDP](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+- A taxa de transferência combinada para a segmentação de borda é de 1500 registros por segundo (rps)
 
 A capacidade de público-alvo está no nível de **sandbox**. Isso significa que, para cada sandbox que você tem em sua organização, você pode ter 500 públicos-alvo de transmissão, dos quais 150 podem ser públicos-alvo de borda.
 
@@ -88,7 +90,7 @@ Para acessar a visão geral de Capacidade, selecione **[!UICONTROL License usage
 
 A página Visão geral da capacidade é exibida, mostrando informações, incluindo um histórico de alertas, bem como detalhes sobre as capacidades de sua organização.
 
-![A página Visão geral da capacidade é exibida na íntegra, mostrando o histórico de alertas e as seções de detalhes da capacidade.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
+![A página Visão geral da Capacidade é exibida, mostrando o histórico de alertas e as seções de detalhes da capacidade.](/help/landing/images/capacity/capacity-overview.png) {zoomable="yes" width="80%"}
 
 ### Histórico de alertas {#alert-history}
 
@@ -106,17 +108,15 @@ Para exibir um histórico completo dos alertas da sua organização, selecione o
 
 ![O histórico completo de alertas é exibido para uma organização.](/help/landing/images/capacity/full-alert-history.png)
 
-### Detalhes da capacidade {#capacity-details}
+### Capacidades de transmissão {#streaming-capacities}
 
-A seção Detalhes da capacidade descreve as informações sobre as capacidades da organização. Nesta seção, você pode filtrar por sandbox e alterar o período de pesquisa.
+A seção Capacidades de transmissão descreve as informações sobre as capacidades de transmissão da organização. Especificamente, esta seção exibe informações de capacidade sobre a taxa de transferência da transmissão e os públicos-alvo da transmissão. Você pode filtrar essas informações por sandbox e alterar o período de pesquisa.
 
 ![O seletor de sandbox e o seletor de datas para o período de pesquisa estão realçados.](/help/landing/images/capacity/filter-sandbox-and-date.png)
 
-Atualmente, exibe informações de capacidade sobre taxa de transferência de transmissão, públicos-alvo de transmissão e públicos-alvo de borda.
-
 #### Taxa de transferência de transmissão {#streaming-throughput}
 
-A seção taxa de transferência de transmissão exibe informações sobre a taxa de transferência de transmissão nas sandboxes da organização. O valor da taxa de transferência de transmissão mede o pico combinado de eventos de entrada por segundo para a assimilação de transmissão no serviço de perfil.
+A seção **[!UICONTROL Streaming throughput]** exibe informações sobre a taxa de transferência da transmissão nas sandboxes da organização. O valor da taxa de transferência de transmissão mede o pico combinado de eventos de entrada por segundo para a assimilação de streaming no Perfil.
 
 ![A seção de taxa de transferência de streaming na página de detalhes de capacidade é exibida.](/help/landing/images/capacity/streaming-throughput-section.png)
 
@@ -153,11 +153,52 @@ A página de alocação é exibida. Nesta página, você pode definir suas capac
 
 Depois de atualizar as alocações de capacidade, selecione **[!UICONTROL Save]** para concluir as atualizações. Observe que pode levar até 10 minutos para que as alterações sejam refletidas em sua organização.
 
-#### Contagem de público-alvo {#audience-count}
+#### Contagem de público-alvo de transmissão {#streaming-audience-count}
 
-As seções **[!UICONTROL Streaming audience count]** e **[!UICONTROL Edge audience count]** exibem o número de públicos de streaming e borda na sandbox, bem como o número máximo de públicos de streaming e borda permitidos na sandbox.
+A seção **[!UICONTROL Streaming audience count]** exibe o número de públicos de transmissão dentro da sandbox, bem como o número máximo de públicos de transmissão permitidos dentro da sandbox.
 
-![As seções de contagem de público-alvo são exibidas.](/help/landing/images/capacity/audience-count.png)
+![As seções de Contagem de público-alvo são exibidas.](/help/landing/images/capacity/audience-count.png)
+
+| Nome da coluna | Descrição |
+| ----------- | ----------- |
+| Sandbox | O nome da sandbox. |
+| Serviços | O serviço que está em uso para a sandbox. |
+| Uso | O número de públicos-alvo de transmissão que estão na sandbox. |
+| Capacidade | O número máximo de públicos-alvo de transmissão permitidos na sandbox. |
+
+### Capacidades do Edge {#edge-capacities}
+
+A seção **[!UICONTROL Edge capacities]** descreve as informações sobre as capacidades de borda da sua organização. Especificamente, esta seção exibe informações de capacidade sobre a taxa de transferência da segmentação de borda e os públicos-alvo de borda. Você pode alterar o período de lookback para as capacidades de borda da organização.
+
+![A seção Capacidades do Edge é exibida. Isso descreve informações, incluindo a taxa de transferência de segmentação de borda e o contagem de público-alvo de borda.](/help/landing/images/capacity/edge-capacities.png)
+
+#### Taxa de transferência de segmentação de borda {#edge-streaming-throughput}
+
+A seção **[!UICONTROL Edge segmentation throughput]** exibe informações sobre a taxa de transferência da segmentação de borda nas sandboxes da sua organização e da organização. O valor da taxa de transferência de segmentação de borda mede o pico combinado de eventos de entrada por segundo para a assimilação de borda no Perfil.
+
+![A seção Taxa de transferência da segmentação do Edge é exibida. Isso mostra informações sobre a taxa de transferência da segmentação de borda em sua organização e suas sandboxes.](/help/landing/images/capacity/edge-segmentation-throughput.png)
+
+| Nome da coluna | Descrição |
+| ----------- | ----------- |
+| Organização | O nome da organização. As sandboxes disponíveis para a organização estão listadas no nome da organização. |
+| Uso do RPS (Pico) | A taxa de transferência máxima de dados na sandbox dentro do período de pesquisa selecionado. |
+| RPS de capacidade | A taxa de transferência máxima da organização. |
+| Violação | Se uma violação tiver ocorrido, o tipo de violação para a taxa de transferência de segmentação de borda. |
+| Ações recomendadas | Uma coluna que descreve a ação recomendada para atenuar a violação. |
+
+É possível selecionar a organização para ver uma visualização mais detalhada da taxa de transferência da segmentação de borda da organização.
+
+![A organização está realçada.](/help/landing/images/capacity/select-organization.png)
+
+A página **[!UICONTROL Edge Segmentation Throughput]** é exibida. Você pode ver um gráfico que exibe a taxa de transferência da solicitação comparada ao limite de capacidade. Nessa página, é possível ajustar o período de lookback para o gráfico exibido.
+
+![A página Taxa de transferência da segmentação do Edge é exibida. Isso mostra um gráfico detalhando a taxa de transferência comparada ao limite de capacidade.](/help/landing/images/capacity/edge-segmentation-throughput-details.png)
+
+#### Contagem de públicos-alvo na borda {#edge-audience-count}
+
+A seção **[!UICONTROL Edge audience count]** exibe o número de públicos-alvo de borda em cada sandbox, bem como o número máximo de públicos-alvo de borda permitidos na sandbox.
+
+![A seção contagem de público-alvo do Edge é exibida. Isso mostra informações relacionadas ao contagem de público-alvo de borda.](/help/landing/images/capacity/edge-audience-count.png)
 
 | Nome da coluna | Descrição |
 | ----------- | ----------- |
@@ -166,9 +207,9 @@ As seções **[!UICONTROL Streaming audience count]** e **[!UICONTROL Edge audie
 | Uso | O número de públicos do tipo listado que estão na sandbox. |
 | Capacidade | O número máximo de públicos-alvo do tipo listado que são permitidos na sandbox. |
 
-## Práticas recomendadas de taxa de transferência de transmissão {#suggestions}
+## Práticas recomendadas de taxa de transferência de transmissão {#streaming-throughput-suggestions}
 
-Você pode resolver as violações da taxa de transferência de transmissão adotando uma das seguintes recomendações:
+Você pode resolver as violações de taxa de transferência adotando uma das seguintes recomendações:
 
 1. Aumente a capacidade alocada para a sandbox.
 2. Identifique fluxos de dados de alta taxa de transferência no [painel de monitoramento](/help/dataflows/ui/monitor-streaming-profile.md) e aplique limitação ou filtragem a esses fluxos de dados, se necessário.
@@ -181,11 +222,19 @@ Além disso, você pode examinar seus fluxos de dados e ver se pode otimizar sua
 | Conversão em lote para fluxo contínuo | As cargas de trabalho em lote convertidas em fluxo podem aumentar significativamente a taxa de transferência, afetando o desempenho e a alocação de recursos. Por exemplo, executar uma atualização de perfil em massa após um evento sem limites de taxa. | As estratégias de transmissão são desnecessárias para casos de uso em lote quando o processamento de baixa latência não é necessário. | Avaliar os requisitos de caso de uso. Para marketing de saída em lote, considere usar a [assimilação em lote](/help/ingestion/batch-ingestion/overview.md) em vez da transmissão para gerenciar a assimilação de dados com mais eficiência. |
 | Assimilação desnecessária de dados | A ingestão de dados não é necessária para personalização e aumenta a taxa de transferência sem adicionar valor, desperdiçando recursos. Por exemplo, assimilar todo o tráfego de análises em perfis, independentemente da relevância. | O excesso de dados não relevantes cria ruído, dificultando a identificação de pontos de dados impactantes. Também pode causar atrito ao definir e gerenciar públicos e perfis. | Assimile somente dados necessários para seus casos de uso. Filtre os dados desnecessários.<ul><li>**Adobe Analytics**: use a [filtragem em nível de linha](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) para otimizar a entrada de dados.</li><li>**Fontes**: Use a [[!DNL Flow Service] API para filtrar dados de nível de linha](/help/sources/tutorials/api/filter.md) de fontes com suporte, como [!DNL Snowflake] e [!DNL Google BigQuery].</li></li>**Sequência de dados do Edge**: configure [sequências de dados dinâmicas](/help/datastreams/configure-dynamic-datastream.md) para executar a filtragem em nível de linha do tráfego proveniente do SDK da Web.</li></ul> |
 
+## Práticas recomendadas de taxa de transferência de segmentação do Edge {#edge-best-practices}
+
+Você pode resolver as violações de taxa de transferência de segmentação de borda adotando uma das seguintes recomendações:
+
+1. Identifique sequências de dados de alta taxa de transferência no [painel de monitoramento](/help/dataflows/ui/monitor-edge.md) e aplique limitação ou filtragem a essas sequências de dados, se necessário.
+2. Otimize sua assimilação usando a assimilação em lote para casos de uso de latência mais baixa.
+3. Entre em contato com o representante do Atendimento ao cliente da Adobe se os problemas persistirem.
+
 ## Visão geral do vídeo {#video}
 
 O vídeo a seguir fornece uma visão geral da Capacidade.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475278/?captions=por_br&learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
 
 ## Perguntas frequentes {#faq}
 

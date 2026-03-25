@@ -2,9 +2,9 @@
 title: Construtor de público-alvo no Real-Time Customer Data Platform
 description: Saiba como usar o Construtor de público-alvo no Real-Time Customer Data Platform para criar públicos-alvo.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 809f80c721d6eedf5ee88dbb1cf4bf7e5a413614
 workflow-type: tm+mt
 source-wordcount: '1079'
 ht-degree: 7%
@@ -64,7 +64,7 @@ A seção **[!UICONTROL Top values]** exibe os valores que ocorrem com mais freq
 
 Como alternativa, você pode ver a distribuição de seus dados com os valores mínimo, médio e máximo exibidos.
 
-![Um popover que exibe as estatísticas de um atributo, incluindo os valores mínimo, médio e máximo.](../assets/segmentation/audience-builder/statistics.png)
+![Um popover que exibe as estatísticas de um atributo, incluindo os valores mínimo, médio e máximo.](../assets/segmentation/audience-builder/statistics.png){width="300"}
 
 Se um atributo for preenchido por menos de 25% das contas, o ![ícone de aviso de dados](../../images/icons/data-notice.png) será exibido. Os mesmos dados de resumo serão exibidos para o atributo, independentemente.
 
@@ -78,7 +78,7 @@ Se um atributo for preenchido por menos de 25% das contas, o ![ícone de aviso d
 
 Além disso, o atributo tem um **[!UICONTROL Ingestion Type]**. O tipo de assimilação permite saber a origem dos dados e pode ser um dos seguintes valores: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
 
-![O tipo de assimilação do atributo é exibido.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png)
+![O tipo de assimilação do atributo é exibido.](/help/rtcdp/assets/segmentation/audience-builder/ingestion-type.png){width="300"}
 
 Para obter um guia mais detalhado sobre os atributos no Audience Builder, leia o [guia do usuário do Audience Builder](../../segmentation/ui/segment-builder.md){target="_blank"}.
 

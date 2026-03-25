@@ -3,9 +3,9 @@ title: A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: b02e746ba0b8a75699510b37937cb57e7eaefcca
 workflow-type: tm+mt
-source-wordcount: '1812'
+source-wordcount: '1800'
 ht-degree: 2%
 
 ---
@@ -39,13 +39,13 @@ Este conector envia dados para [!DNL The Trade Desk] para ativação de Dados Pr
 
 ## Requisitos de correspondência de ID {#id-matching-requirements}
 
-Dependendo do tipo de IDs que você assimila no Adobe Experience Platform, é necessário seguir os requisitos correspondentes. Leia a [visão geral do Namespace de Identidade](/help/identity-service/features/namespaces.md) para obter mais informações.
+Dependendo do tipo de IDs que você assimila em [!DNL Adobe Experience Platform], você deve seguir seus requisitos correspondentes. Leia a [visão geral do Namespace de Identidade](/help/identity-service/features/namespaces.md) para obter mais informações.
 
 ## Identidades suportadas {#supported-identities}
 
 [!DNL The Trade Desk] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](/help/identity-service/features/namespaces.md).
 
-Os endereços de email e números de telefone com hash e sem hash são compatíveis com o Adobe Experience Platform. Siga as instruções na seção Requisitos de correspondência de ID e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente.
+O [!DNL Adobe Experience Platform] oferece suporte para endereços de email e números de telefone com hash e sem hash. Siga as instruções na seção Requisitos de correspondência de ID e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente.
 
 | Identidade de destino | Descrição |
 |---|---|
@@ -73,11 +73,9 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
-
-
 
 Públicos-alvo compatíveis por tipo de dados de público-alvo:
 
@@ -86,14 +84,14 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
 
 ## Requisitos de hash de email {#email-hashing}
 
-Você pode aplicar hash a endereços de email antes de assimilá-los no Adobe Experience Platform ou usar endereços de email brutos.
+Você pode hash de endereços de email antes de assimilá-los em [!DNL Adobe Experience Platform] ou usar endereços de email brutos.
 
 Para saber mais sobre como assimilar endereços de email no Experience Platform, leia a [visão geral de assimilação em lote](/help/ingestion/batch-ingestion/overview.md).
 
@@ -106,7 +104,6 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
       * O período (`.`) (código ASCII 46). Por exemplo, normalize &quot;jane.doe@gmail.com&quot; para &quot;janedoe@gmail.com&quot;.
      * O caractere de sinal de mais (`+`) (código ASCII 43) e todos os caracteres subsequentes. Por exemplo, normalize `janedoe+home@gmail.com` para `janedoe@gmail.com`.
   
-
 ## Requisitos de normalização e hash do número de telefone {#phone-hashing}
 
 Veja o que você precisa saber sobre o upload de números de telefone:
@@ -166,7 +163,7 @@ O Destino do CRM [!DNL The Trade Desk] é um carregamento diário de arquivo em 
 
 ### Preencher Detalhes do Destino {#fill-in-details}
 
-Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configurar](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR) este destino, você deve fornecer as seguintes informações:
+Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configurar](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) este destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Account Type]**: Escolha a opção **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.

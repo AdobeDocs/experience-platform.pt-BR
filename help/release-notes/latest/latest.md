@@ -2,10 +2,10 @@
 title: Notas da versão de março de 2026 da Adobe Experience Platform
 description: As notas da versão de março de 2026 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
+source-git-commit: 4f4761024a658d284f3eacdc2230e868c6ee53fb
 workflow-type: tm+mt
-source-wordcount: '1369'
-ht-degree: 18%
+source-wordcount: '1747'
+ht-degree: 12%
 
 ---
 
@@ -18,8 +18,8 @@ ht-degree: 18%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 24 de março de 2026**
 
@@ -36,7 +36,7 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 
 ## Gerenciamento avançado do ciclo de vida de dados {#advanced-data-lifecycle-management}
 
-O Experience Platform fornece um conjunto de recursos de higiene de dados que permitem gerenciar os dados armazenados por meio de exclusões programáticas de registros e conjuntos de dados do consumidor. Usando o espaço de trabalho Ciclo de vida dos dados na interface ou as chamadas para a API de higiene de dados, você pode gerenciar com eficiência seus armazenamentos de dados. Use esses recursos para garantir que as informações sejam usadas conforme esperado, sejam atualizadas quando dados incorretos precisarem de correção e sejam excluídas quando as políticas organizacionais considerarem necessário.
+O Experience Platform fornece um conjunto de recursos de higiene de dados para ajudar você a gerenciar os dados armazenados por meio de exclusões programáticas de registros e conjuntos de dados do consumidor. Usando o espaço de trabalho Ciclo de vida dos dados na interface ou as chamadas para a API de higiene de dados, você pode gerenciar com eficiência seus armazenamentos de dados. Use esses recursos para garantir que as informações sejam usadas conforme esperado, sejam atualizadas quando dados incorretos precisarem de correção e sejam excluídas quando as políticas organizacionais considerarem necessário.
 
 | Recurso | Descrição |
 | --- | --- |
@@ -48,13 +48,13 @@ Para obter mais informações, leia a [visão geral avançada do gerenciamento d
 
 ## Agent Orchestrator {#agent-orchestrator}
 
-O Agent Orchestrator permite criar e implantar agentes alimentados por IA que podem automatizar fluxos de trabalho e interagir com clientes em vários canais.
+Use o Agent Orchestrator para criar e implantar agentes alimentados por IA que automatizam fluxos de trabalho e interagem com clientes em vários canais.
 
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
 | --- | --- |
-| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | O Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] é seu agente incorporado que traz a inteligência de marketing da Adobe diretamente para as ferramentas do dia a dia, como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e outros aplicativos do [!DNL Microsoft 365]. Você pode usar esse agente para obter insights de campanha confiáveis dos aplicativos da Adobe enquanto planeja campanhas, revisa públicos, colabora com colegas para responder às perguntas dos clientes e tomar decisões informadas por dados sem sair do fluxo de trabalho do [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | O Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] é seu agente incorporado que traz a inteligência de marketing da Adobe diretamente para as ferramentas do dia a dia, como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e outros aplicativos do [!DNL Microsoft 365]. Você pode usar esse agente para obter insights de campanha confiáveis dos aplicativos da Adobe enquanto planeja campanhas, revisa públicos, colabora com colegas para responder às perguntas dos clientes e tomar decisões informadas por dados sem sair do fluxo de trabalho do [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
@@ -66,7 +66,7 @@ Uma sequência de dados representa a configuração do lado do servidor ao imple
 
 | Recurso | Descrição |
 | --- | --- |
-| Disponibilidade geral das configurações de fluxo de dados dinâmico | As configurações dinâmicas de sequência de dados agora estão disponíveis no geral. As configurações dinâmicas da sequência de dados permitem definir conjuntos de regras configuráveis pelo usuário para cada serviço ativado para a sequência de dados, que determinam qual solução da Experience Cloud deve receber cada tipo de dados. Consulte o [guia de configurações da sequência de dados dinâmica](../../datastreams/configure-dynamic-datastream.md) para obter mais informações. |
+| Disponibilidade geral das configurações de fluxo de dados dinâmico | As configurações dinâmicas de sequência de dados agora estão disponíveis no geral. Com as configurações dinâmicas da sequência de dados, é possível definir conjuntos de regras configuráveis pelo usuário para cada serviço ativado para a sequência de dados, que determinam qual solução da Experience Cloud deve receber cada tipo de dados. Consulte o [guia de configurações da sequência de dados dinâmica](../../datastreams/configure-dynamic-datastream.md) para obter mais informações. |
 
 {style="table-layout:auto"}
 
@@ -74,17 +74,20 @@ Para obter mais informações, leia a [visão geral dos fluxos de dados](../../d
 
 ## Destinos {#destinations}
 
-[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino. Use destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas por email, publicidade direcionada e muitos outros casos de uso.
 
 **Destinos novos ou atualizados**
 
 | Destino | Descrição |
 | --- | --- |
+| Seletor de região [Lote Snowflake](../../destinations/catalog/warehouses/snowflake-batch.md) | Agora é possível encontrar sua região mais facilmente com a nova lista suspensa pesquisável, que combina pesquisa e lista suspensa em um controle. Esta atualização está sendo lançada até o final de março. |
+| Nova estrutura de tabela para destinos [Lote Snowflake](../../destinations/catalog/warehouses/snowflake-batch.md) | As tabelas compartilhadas na sua conta do Snowflake agora têm uma nova estrutura que inclui colunas separadas de nome de público-alvo e origem de público-alvo. A nova estrutura da tabela se aplica a todas as novas conexões de destino configuradas dali em diante. Para quaisquer novas conexões configuradas, ambas as estruturas de tabela são criadas: a nova estrutura recebe o prefixo V2 e a estrutura antiga é mantida até o final de junho de 2026, depois disso, será descontinuada. Leia mais na seção [Dados exportados](../../destinations/catalog/warehouses/snowflake-batch.md#exported-data) da documentação em lote do Snowflake. Esta atualização está sendo lançada até o final de março. |
 | Conexão [Adobe Advertising DSP](../../destinations/catalog/advertising/adobe-advertising-cloud-connection.md) | A nova conexão do Adobe Advertising DSP oferece a mesma funcionalidade da conexão herdada, além de suporte para identidades adicionais. Com o novo conector, você também pode exportar identidades baseadas em cookies para o Adobe Advertising DSP. |
 | Conexão [FreeWheel](../../destinations/catalog/advertising/freewheel.md) | Envie [!DNL Real-Time CDP] públicos-alvo para o FreeWheel como arquivos em lotes diários, para que você possa direcioná-los em ofertas e campanhas do FreeWheel na CTV, vídeo e exibição. Entre em contato com a equipe de conta da Adobe para obter acesso. |
 | Suporte a público-alvo externo para [o Trade Desk CRM](../../destinations/catalog/advertising/tradedesk-emails.md) e [Pinterest](../../destinations/catalog/advertising/pinterest.md) | Agora é possível ativar públicos-alvo de origens além do Serviço de segmentação para o Trade Desk CRM, Critério e Pinterest, incluindo públicos-alvo de upload personalizados (importados do CSV), públicos-alvo semelhantes, públicos-alvo federados e públicos-alvo criados em outros aplicativos da Experience Platform, como o [!DNL Adobe Journey Optimizer]. Esta atualização está sendo lançada até o final de março. Consulte a seção [públicos-alvo suportados](../../destinations/catalog/advertising/criteo.md#supported-audiences) na página do catálogo de cada destino para obter detalhes. |
 | Limite aumentado para públicos-alvo de upload personalizados | Agora você pode ativar até 20 públicos-alvo de upload personalizados por instância de destino. Anteriormente, esse limite era de 10. Consulte as [medidas de proteção de destinos](../../destinations/guardrails.md#batch-file-based-activation) para obter detalhes. |
 | [Exportar arquivo agora](../../destinations/ui/export-file-now.md) e [suporte à API de ativação ad hoc](../../destinations/api/ad-hoc-activation-api.md) para públicos externos | Agora você pode usar o Export file now (UI) e a API de ativação ad-hoc com públicos externos (como upload personalizado, semelhante, federado e públicos de outros aplicativos da Experience Platform) ao ativar para destinos baseados em arquivo em lote. Esta atualização está sendo lançada até o final de março. |
+| Destinos da [API HTTP](../../destinations/catalog/streaming/http-destination.md) com OAuth 2 e mTLS | Agora é possível criar e autenticar destinos da API HTTP que usam o OAuth 2 quando o endpoint de autenticação requer TLS mútuo (mTLS). A recuperação de token durante a configuração do destino agora oferece suporte a mTLS. Esta atualização está sendo lançada até o final de março. |
 
 {style="table-layout:auto"}
 
@@ -93,6 +96,7 @@ Para obter mais informações, leia a [visão geral dos fluxos de dados](../../d
 | Correção | Descrição |
 | --- | --- |
 | hash do número de telefone do conector [TikTok](../../destinations/catalog/social/tiktok.md) | Correção de um problema em que uma configuração incorreta no cartão de destino significava que as identidades destacadas de números de telefone não eram ativadas para o TikTok. Para se beneficiar dessa correção, configure um novo fluxo de ativação ou remova o mapeamento do número de telefone do fluxo existente, salve-o e adicione-o novamente. |
+| Validação da ID da conta de [Streaming do Snowflake](../../destinations/catalog/warehouses/snowflake.md) e [Lote do Snowflake](../../destinations/catalog/warehouses/snowflake-batch.md) | Um validador de expressão regular foi adicionado à etapa ID da conta. Ao inserir sua ID, ela agora é validada para garantir que a ID da organização e a ID da conta estejam no formato correto (separadas por um ponto). Esta atualização está sendo lançada até o final de março. |
 
 {style="table-layout:auto"}
 
@@ -110,33 +114,32 @@ Para obter mais informações, leia a [visão geral do XDM](../../xdm/home.md).
 
 ## Perfil do cliente em tempo real {#real-time-customer-profile}
 
-O Perfil do cliente em tempo real permite ter uma visão holística de cada cliente individual ao combinar dados de vários canais, incluindo dados online, offline, de CRM e de terceiros. O Perfil permite consolidar os dados do cliente em uma visualização unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
+O Perfil do cliente em tempo real oferece uma visão completa de cada cliente individual ao combinar dados de vários canais, incluindo dados online, offline, de CRM e de terceiros. Use o Perfil para consolidar os dados do cliente em uma visualização unificada, oferecendo uma conta acionável com carimbo de data e hora de cada interação com o cliente.
 
 **Recursos novos ou atualizados**
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Eventos | Agora é possível definir o período de pesquisa de eventos ao navegar pelos perfis. Isso permite que você veja os eventos aos quais o perfil está associado pelo período especificado. Para obter mais informações, leia o [Guia da Interface do Usuário do Perfil](/help/profile/ui/user-guide.md#events). |
+| Eventos | Agora é possível definir o período de pesquisa de eventos ao navegar pelos perfis. Isso permite que você veja os eventos aos quais o perfil está associado pelo período especificado. Para obter mais informações, leia o [Guia da Interface do Usuário do Perfil](../../profile/ui/user-guide.md#events). |
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
-<!-- 
-## Run and Operate {#run-and-operate}
+## Executar e operar {#run-and-operate}
 
-Inspect, troubleshoot, and optimize your Experience Platform implementations with the Run and Operate tools. Gain visibility into scheduled batch activations, identify configuration issues, and improve system reliability.
+Inspecione, solucione problemas e otimize suas implementações do Experience Platform com as ferramentas Executar e Operar. Obtenha visibilidade sobre ativações programadas em lote, identifique problemas de configuração e melhore a confiabilidade do sistema.
 
-**New or updated features**
+**Recursos novos ou atualizados**
 
-| Feature | Description |
+| Recurso | Descrição |
 | --- | --- |
-| [Job Schedules](../../run-and-operate/job-schedules.md) general availability | [!DNL Job Schedules] provides a unified view of all scheduled batch processing jobs across your data pipeline, from ingestion through destination activation. Inspect execution status, identify scheduling conflicts, and diagnose configuration issues before they impact your business operations. |
-| [Health Checks](../../run-and-operate/health-checks.md) general availability | Poor schema and identity configurations lead to significant downstream issues, including incorrect profile creation, failed segment qualification, and inaccurate activation. <br>Health checks shift your approach from reactive troubleshooting to proactive, preventative maintenance. Health checks are always-on scans of your schemas and identities used in your sandbox and provide a summary of issues that you can use to explore and troubleshoot. |
+| [Calendários de Trabalho](../../run-and-operate/job-schedules.md) disponibilidade geral | O [!DNL Job Schedules] fornece uma exibição unificada de todos os trabalhos agendados de processamento em lote em seu pipeline de dados, desde a assimilação até a ativação de destino. Inspecione o status da execução, identifique conflitos de agendamento e diagnostique problemas de configuração antes que eles afetem as operações de negócios. |
+| [Verificações de integridade](../../run-and-operate/health-checks.md) disponibilidade geral | Configurações insatisfatórias de esquema e identidade levam a problemas significativos de downstream, incluindo criação incorreta de perfis, falha na qualificação de segmentos e ativação imprecisa. <br>As verificações de integridade alteram sua abordagem da solução de problemas reativa para a manutenção proativa e preventiva. As verificações de integridade são verificações sempre ativas de seus esquemas e identidades usados em sua sandbox e fornecem um resumo dos problemas que você pode usar para explorar e solucionar problemas. |
 
 {style="table-layout:auto"}
 
-For more information, read the [Run and Operate overview](../run-and-operate/overview.md), [Inspect job schedules](../run-and-operate/job-schedules.md), and the [Platform UI guide](../landing/ui-guide.md). -->
+Para obter mais informações, leia a [Visão geral de Execução e Operação](../../run-and-operate/overview.md), [Inspecionar agendas de trabalho](../../run-and-operate/job-schedules.md) e o [guia da Interface do Usuário da Plataforma](../../landing/ui-guide.md).
 
 ## Serviço de segmentação {#segmentation-service}
 
@@ -146,14 +149,14 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Tipo de assimilação | Agora é possível visualizar o tipo de assimilação dos atributos. Isso permite que você saiba a origem dos seus dados, permitindo criar públicos-alvo melhores. Para obter mais informações sobre esse recurso, leia o [Guia do Construtor de segmentos](/help/segmentation/ui/segment-builder.md). |
-| Dados de resumo | Agora você pode exibir os dados de resumo dos seus atributos para públicos-alvo com base em conta e pessoas. Para obter mais informações sobre este recurso nos públicos-alvo da conta, leia o [guia do Construtor de público-alvo](/help/rtcdp/segmentation/audience-builder.md). Para obter mais informações sobre este recurso em públicos com base em pessoas, leia o [Guia do Construtor de segmentos](/help/segmentation/ui/segment-builder.md). |
+| Tipo de assimilação | Agora é possível visualizar o tipo de assimilação dos atributos. Isso permite que você saiba a origem dos seus dados, permitindo criar públicos-alvo melhores. Para obter mais informações sobre esse recurso, leia o [Guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md). |
+| Dados de resumo | Agora você pode exibir os dados de resumo dos seus atributos para públicos-alvo com base em conta e pessoas. Para obter mais informações sobre este recurso nos públicos-alvo da conta, leia o [guia do Construtor de público-alvo](../../rtcdp/segmentation/audience-builder.md). Para obter mais informações sobre este recurso em públicos com base em pessoas, leia o [Guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
-## Fontes
+## Fontes {#sources}
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Use essas conexões de origem para autenticar e conectar-se a sistemas de armazenamento externos e serviços CRM, definir tempos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
 
 **Fontes novas ou atualizadas**
 
@@ -167,19 +170,3 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 {style="table-layout:auto"}
 
 Para obter mais informações, leia a [visão geral de fontes](../../sources/home.md).
-
-<!--
-
-NOTE FOR VLAD, CRITEO WAS REMOVED FROM EXTERNAL AUDIENCE SUPPORT
-
-| Destination | Description |
-| --- | --- |
-| [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) region selector | You can now find your region more easily with the new searchable dropdown, which combines search and dropdown into one control. |
-| New table structure for [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) destinations | Tables shared into your Snowflake account now have a new structure which includes separate audience name and audience origin columns. The new table structure applies to all new destination connections set up moving forward. For any new connections that you set up, an old format and new format table are created. The old table structure will be kept for another three months before being deprecated. Read more in the [Exported data](../../destinations/catalog/warehouses/snowflake-batch.md#exported-data) section of the Snowflake Batch documentation. |
-| [HTTP API](../../destinations/catalog/streaming/http-destination.md) destinations with OAuth 2 and mTLS | You can now create and authenticate HTTP API destinations that use OAuth 2 when the authentication endpoint requires mutual TLS (mTLS); token retrieval during destination setup now supports mTLS. |
-
-| Fix | Description |
-| --- | --- |
-| [Snowflake Streaming](../../destinations/catalog/warehouses/snowflake.md) and [Snowflake Batch](../../destinations/catalog/warehouses/snowflake-batch.md) account ID validation | A regular expression validator has been added to the Account ID step. When you enter your ID, it is now validated to ensure organization ID and account ID are in the correct format (separated by a dot). |
-
--->

@@ -3,10 +3,10 @@ title: Ativar dados do público-alvo para destinos de transmissão
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform mapeando-os para destinos de transmissão.
 exl-id: bb61a33e-38fc-4217-8999-9eb9bf899afa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 3%
+source-wordcount: '1115'
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 3%
 
 ## Visão geral {#overview}
 
-Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo em destinos de transmissão do Adobe Experience Platform.
+Este artigo explica o fluxo de trabalho necessário para ativar públicos-alvo em [!DNL Adobe Experience Platform] destinos de streaming.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -102,9 +102,9 @@ Alguns destinos de transmissão de público exigem que você selecione atributos
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Aplicar transformação"
->abstract="Marque essa opção ao usar campos de origem sem hash, para que a Adobe Experience Platform faça o hash automaticamente na ativação."
+>abstract="Marque esta opção ao usar campos de origem sem hash, para que [!DNL Adobe Experience Platform] os coloque automaticamente com hash na ativação."
 
-Ao mapear atributos de origem com hash não atribuídos para atributos de destino que o destino espera que tenham hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), marque a opção **Aplicar transformação** para que o Adobe Experience Platform coloque os atributos de origem em hash automaticamente na ativação.
+Ao mapear atributos de origem com hash não atribuídos para atributos de destino que o destino espera que tenham hash (por exemplo: `email_lc_sha256` ou `phone_sha256`), marque a opção **Aplicar transformação** para que [!DNL Adobe Experience Platform] coloque os atributos de origem em hash automaticamente na ativação.
 
 ![Aplicar controle de transformação realçado na etapa Mapeamento de identidade.](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
@@ -172,5 +172,5 @@ For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL 
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
+>The integration between [!DNL Adobe Experience Platform] and [!DNL Facebook] supports historical audience backfills. All historical audience qualifications are sent to [!DNL Facebook] when you activate the audiences to the destination.
 -->

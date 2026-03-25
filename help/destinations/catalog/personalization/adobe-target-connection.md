@@ -3,67 +3,67 @@ keywords: personalização do target, destino, destino do experience platform ta
 title: Conexão com o Adobe Target
 description: O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação em tempo real e alimentados por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1888'
-ht-degree: 9%
+source-wordcount: '1772'
+ht-degree: 7%
 
 ---
 
-# Conexão com o Adobe Target {#adobe-target-connection}
+# [!DNL Adobe Target] conexão {#adobe-target-connection}
 
 ## Log de alterações de destino {#changelog}
 
 | Mês de lançamento | Tipo de atualização | Descrição |
 |---|---|---|
 | Abril de 2024 | Atualização de funcionalidade e documentação | Ao se conectar ao destino do Target e usar uma sequência de dados, agora você *não precisa* habilitar necessariamente a sequência de dados para segmentação de borda. Isso significa que o destino funcionará com públicos-alvo em lote e de transmissão, embora os casos de uso que você pode fazer sejam diferentes. Exiba a tabela na seção [parâmetros de conexão](#parameters) para obter mais informações. |
-| Janeiro de 2024 | Atualização de funcionalidade e documentação | Agora é possível compartilhar públicos-alvo e atributos de perfil na conexão do Adobe Target para a sandbox de produção padrão e outras sandboxes não padrão. |
-| Junho de 2023 | Atualização de funcionalidade e documentação | A partir de junho de 2023, você poderá selecionar o espaço de trabalho do Adobe Target para o qual deseja compartilhar públicos ao configurar uma nova conexão de destino do Adobe Target. Consulte a seção [parâmetros de conexão](#parameters) para obter mais informações. Além disso, consulte o tutorial sobre a [configuração de espaços de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=pt-BR) no Adobe Target para obter mais informações sobre espaços de trabalho. |
+| Janeiro de 2024 | Atualização de funcionalidade e documentação | Agora é possível compartilhar públicos-alvo e atributos de perfil na conexão [!DNL Adobe Target] para a sandbox de produção padrão e outras sandboxes não padrão. |
+| Junho de 2023 | Atualização de funcionalidade e documentação | A partir de junho de 2023, você poderá selecionar o espaço de trabalho [!DNL Adobe Target] para o qual deseja compartilhar públicos ao configurar uma nova conexão de destino [!DNL Adobe Target]. Consulte a seção [parâmetros de conexão](#parameters) para obter mais informações. Além disso, consulte o tutorial sobre [configuração de espaços de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=pt-BR) em [!DNL Adobe Target] para obter mais informações sobre espaços de trabalho. |
 | Maio de 2023 | Atualização de funcionalidade e documentação | A partir de maio de 2023, a conexão **[!UICONTROL Adobe Target]** oferecerá suporte à [personalização baseada em atributos](../../ui/activate-edge-personalization-destinations.md#map-attributes) e estará disponível para todos os clientes. |
 
 {style="table-layout:auto"}
 
 ## Visão geral {#overview}
 
-O Adobe Target é um aplicativo que fornece recursos de personalização e experimentação em tempo real e alimentados por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais.
+O [!DNL Adobe Target] é um aplicativo que fornece recursos de experimentação e personalização em tempo real e alimentados por IA em todas as interações de entrada de clientes em sites, aplicativos móveis e muito mais.
 
-O Adobe Target é uma conexão de personalização no catálogo de destinos do Adobe Experience Platform.
+[!DNL Adobe Target] é uma conexão de personalização no catálogo de destinos [!DNL Adobe Experience Platform].
 
 ## Visão geral do vídeo {#video-overview}
 
-Para obter uma breve visão geral sobre como configurar a conexão do Adobe Target no Experience Platform, assista ao vídeo abaixo.
+Para obter uma breve visão geral sobre como configurar a conexão [!DNL Adobe Target] no Experience Platform, assista ao vídeo abaixo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3449798/?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
 
 ## Casos de uso compatíveis com base no tipo de implementação {#supported-use-cases}
 
-A tabela abaixo exibe os casos de uso com suporte para o destino do Adobe Target, com base no seu tipo de implementação, com ou sem o Web SDK e com ou sem a [segmentação de borda](/help/segmentation/home.md#edge) habilitada.
+A tabela abaixo exibe os casos de uso com suporte para o destino [!DNL Adobe Target], com base no seu tipo de implementação, com ou sem o Web SDK e com ou sem a [segmentação de borda](/help/segmentation/home.md#edge) habilitada.
 
-| Implementação do Adobe Target *sem* Web SDK | Implementação do Adobe Target *with* Web SDK | Implementação do Adobe Target *com* a segmentação de borda do Web SDK *e* desativada |
+| [!DNL Adobe Target] implementação *sem* Web SDK | [!DNL Adobe Target] implementação *com* Web SDK | [!DNL Adobe Target] implementação *com* Web SDK *e* segmentação de borda desativada |
 |---|---|---|
-| <ul><li>Uma sequência de dados não é necessária. O Adobe Target pode ser implantado por meio de [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=pt-BR), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=pt-BR#server-side-implementation) ou [híbrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=pt-BR#hybrid-implementation) métodos de implementação.</li><li>Não há suporte para a [segmentação do Edge](../../../segmentation/methods/edge-segmentation.md).</li><li>[Não há suporte para a personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md).</li><li>Você pode compartilhar públicos e atributos de perfil na conexão do Adobe Target para a *sandbox de produção padrão* e sandboxes não padrão.</li><li>Para configurar a personalização da próxima sessão sem usar uma sequência de dados, use a [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=pt-BR).</li></ul> | <ul><li>É necessário um fluxo de dados com o Adobe Target e o Experience Platform configurados como serviços.</li><li>A segmentação do Edge funciona conforme esperado.</li><li>[Personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md#use-cases) são suportadas.</li><li>O compartilhamento de públicos-alvo e atributos de perfil de outras sandboxes é compatível.</li></ul> | <ul><li>É necessário um fluxo de dados com o Adobe Target e o Experience Platform configurados como serviços.</li><li>Ao [configurar a sequência de dados](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), não marque a caixa de seleção **Segmentação do Edge**.</li><li>[Personalização de próxima sessão](../../ui/activate-edge-personalization-destinations.md#next-session) com suporte.</li><li>O compartilhamento de públicos-alvo e atributos de perfil de outras sandboxes é compatível.</li></ul> |
+| <ul><li>Uma sequência de dados não é necessária. [!DNL Adobe Target] pode ser implantado através de [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=pt-BR), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation) ou [híbrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) métodos de implementação.</li><li>Não há suporte para a [segmentação do Edge](../../../segmentation/methods/edge-segmentation.md).</li><li>[Não há suporte para a personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md).</li><li>Você pode compartilhar públicos e atributos de perfil na conexão [!DNL Adobe Target] para a *sandbox de produção padrão* e sandboxes não padrão.</li><li>Para configurar a personalização da próxima sessão sem usar uma sequência de dados, use a [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Uma sequência de dados com [!DNL Adobe Target] e Experience Platform configurada como serviços é necessária.</li><li>A segmentação do Edge funciona conforme esperado.</li><li>[Personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md#use-cases) são suportadas.</li><li>O compartilhamento de públicos-alvo e atributos de perfil de outras sandboxes é compatível.</li></ul> | <ul><li>Uma sequência de dados com [!DNL Adobe Target] e Experience Platform configurada como serviços é necessária.</li><li>Ao [configurar a sequência de dados](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), não marque a caixa de seleção **Segmentação do Edge**.</li><li>[Personalização de próxima sessão](../../ui/activate-edge-personalization-destinations.md#next-session) com suporte.</li><li>O compartilhamento de públicos-alvo e atributos de perfil de outras sandboxes é compatível.</li></ul> |
 
 
 ## Pré-requisitos {#prerequisites}
 
 ### Sequência de dados {#datastream}
 
-Ao configurar a conexão do Adobe Target para [usar uma sequência de dados](#parameters), você deve ter a [Coleção de Dados da Adobe Experience Platform](/help/collection/home.md) implementada.
+Ao configurar a conexão [!DNL Adobe Target] para [usar uma sequência de dados](#parameters), você deve ter a [Coleção de Dados da Adobe Experience Platform](/help/collection/home.md) implementada.
 
-Configurar a conexão do Adobe Target sem usar um fluxo de dados não requer a implementação do Web SDK.
+Configurar a conexão [!DNL Adobe Target] sem usar uma sequência de dados não requer a implementação do Web SDK.
 
 >[!IMPORTANT]
 >
->Antes de criar uma conexão [!DNL Adobe Target], leia o guia sobre como [configurar destinos de personalização para personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md). Este guia aborda as etapas de configuração necessárias para casos de uso de personalização de mesma página e próxima página em vários componentes do Experience Platform. Para obter casos de uso de personalização de mesma página e próxima página, você deve usar um fluxo de dados ao configurar a conexão do Adobe Target.
+>Antes de criar uma conexão [!DNL Adobe Target], leia o guia sobre como [configurar destinos de personalização para personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md). Este guia aborda as etapas de configuração necessárias para casos de uso de personalização de mesma página e próxima página em vários componentes do Experience Platform. Para obter casos de uso de personalização de mesma página e próxima página, você deve usar uma sequência de dados ao configurar a conexão [!DNL Adobe Target].
 
-### Pré-requisitos no Adobe Target {#prerequisites-in-adobe-target}
+### Pré-requisitos em [!DNL Adobe Target] {#prerequisites-in-adobe-target}
 
-No Adobe Target, verifique se o usuário tem:
+Em [!DNL Adobe Target], verifique se o usuário tem:
 
-* Acesso ao [espaço de trabalho padrão](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=pt-BR#default-workspace);
-* A **Função** de [Aprovador](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=pt-BR#roles-and-permissions).
+* Acesso ao [espaço de trabalho padrão](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#default-workspace);
+* A **Função** de [Aprovador](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html#roles-and-permissions).
 
-Leia mais sobre a concessão de permissões para [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=pt-BR#section_8C425E43E5DD4111BBFC734A2B7ABC80) e para [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=pt-BR#roles-permissions).
+Leia mais sobre a concessão de permissões para [Target Premium](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) e para [Target Standard](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions).
 
 ## Públicos-alvo compatíveis {#supported-audiences}
 
@@ -72,14 +72,14 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 >[!IMPORTANT]
 >
 >Ao ativar *públicos-alvo de borda para casos de uso de personalização de mesma página e próxima página*, os públicos-alvo *devem* usar uma [política de mesclagem ativa na borda](../../../segmentation/ui/segment-builder.md#merge-policies). A política de mesclagem do [!DNL active-on-edge] garante que os públicos-alvo sejam avaliados constantemente [na borda](../../../segmentation/methods/edge-segmentation.md) e estejam disponíveis para casos de uso de personalização em tempo real e de próxima página.  Leia sobre [todos os casos de uso disponíveis](#parameter), com base no tipo de implementação.
->Se você mapear públicos-alvo de borda que usam uma política de mesclagem diferente para destinos do Adobe Target, esses públicos-alvo não serão avaliados para casos de uso em tempo real e na próxima página.
+>Se você mapear públicos-alvo de borda que usam uma política de mesclagem diferente para [!DNL Adobe Target] destinos, esses públicos-alvo não serão avaliados para casos de uso em tempo real e de próxima página.
 >Siga as instruções em [criando uma política de mesclagem](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy) e habilite a opção **[!UICONTROL Active-On-Edge Merge Policy]**.
 
 
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -103,7 +103,7 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 | Item | Tipo | Notas |
 |---------|----------|---------|
-| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os públicos mapeados no destino do Adobe Target para um único perfil. |
+| Tipo de exportação | **[!DNL Profile request]** | Você está solicitando todos os públicos mapeados no destino [!DNL Adobe Target] para um único perfil. |
 | Frequência de exportação | **[!UICONTROL Streaming]** | Os destinos de transmissão são conexões baseadas em API &quot;sempre ativas&quot;. Assim que um perfil for atualizado no Experience Platform com base na avaliação do público-alvo, o conector enviará a atualização downstream para a plataforma de destino. Leia mais sobre [destinos de streaming](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -122,37 +122,37 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 Para se conectar a este destino, siga as etapas descritas no [tutorial de configuração de destino](../../ui/connect-destination.md).
 
-O Adobe Experience Platform se conecta automaticamente à instância Adobe Target da sua empresa. Não é necessária nenhuma autenticação.
+O [!DNL Adobe Experience Platform] se conecta automaticamente à instância [!DNL Adobe Target] da sua empresa. Não é necessária nenhuma autenticação.
 
 ### Parâmetros de conexão {#parameters}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
->title="Sobre o os Espaços de trabalho do Adobe Target"
->abstract="Selecione o espaço de trabalho do Adobe Target para o qual os públicos-alvo serão compartilhados. Você pode selecionar um único espaço de trabalho para cada conexão do Adobe Target. Após a ativação, os públicos-alvo são roteados para o espaço de trabalho selecionado, seguindo os rótulos de uso de dados aplicáveis da Experience Platform."
->additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=pt-BR" text="Saiba mais sobre os espaços de trabalho do Adobe Target"
+>title="Sobre [!DNL Adobe Target] Espaços de Trabalho"
+>abstract="Selecione o espaço de trabalho [!DNL Adobe Target] para o qual os públicos-alvo serão compartilhados. Você pode selecionar um único espaço de trabalho para cada conexão [!DNL Adobe Target]. Após a ativação, os públicos-alvo são roteados para o espaço de trabalho selecionado, seguindo os rótulos de uso de dados aplicáveis da Experience Platform."
+>additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=pt-BR" text="Saiba mais sobre  [!DNL Adobe Target] espaços de trabalho"
 
 Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornecer as seguintes informações:
 
 * **Nome**: preencha o nome preferencial para este destino.
 * **Descrição**: insira uma descrição para o seu destino. Por exemplo, você pode mencionar para qual campanha está usando esse destino. Este campo é opcional.
-* **Sequência de dados**: determina em qual sequência de dados de coleção os públicos-alvo serão incluídos. O menu suspenso mostra somente os fluxos de dados que têm os serviços Target e Adobe Experience Platform ativados. Consulte [configurando uma sequência de dados](../../../datastreams/configure.md#aep) para obter informações detalhadas sobre como configurar uma sequência de dados para o Adobe Experience Platform e o Adobe Target.
+* **Sequência de dados**: determina em qual sequência de dados de coleção os públicos-alvo serão incluídos. O menu suspenso mostra somente sequências de dados que têm os serviços Target e [!DNL Adobe Experience Platform] habilitados. Consulte [configurando uma sequência de dados](../../../datastreams/configure.md#aep) para obter informações detalhadas sobre como configurar uma sequência de dados para [!DNL Adobe Experience Platform] e [!DNL Adobe Target].
 
   >[!IMPORTANT]
   >
-  >**Exclusividade da sequência de dados na organização**: a combinação da ID da sequência de dados e do nome da sandbox deve ser exclusiva para conexões de destino do Adobe Target em uma Organização IMS. Isso significa:
+  >**Exclusividade da sequência de dados na organização**: a combinação da ID da sequência de dados e do nome da sandbox deve ser exclusiva para [!DNL Adobe Target] conexões de destino em uma Organização IMS. Isso significa:
   >
-  >* A mesma combinação de ID de fluxo de dados + nome da sandbox não pode ser usada para várias conexões de destino do Adobe Target em toda a organização
+  >* A mesma combinação de ID de fluxo de dados + nome da sandbox não pode ser usada para várias conexões de destino [!DNL Adobe Target] em toda a organização
   >* Você pode usar a mesma ID de fluxo de dados para conexões de destino diferentes, desde que as conexões estejam em sandboxes diferentes
   >* Esta regra se aplica a todas as seleções de sequência de dados, inclusive quando você seleciona **[!UICONTROL None]**
 
-   * **[!UICONTROL None]**: selecione essa opção se precisar configurar a personalização do Adobe Target, mas não puder implementar o Adobe Experience Platform Web SDK. Ao usar essa opção, os públicos-alvo exportados do Experience Platform para o Target só são compatíveis com a personalização da próxima sessão e a segmentação de borda é desativada. Consulte a tabela na seção [casos de uso suportados](#supported-use-cases) para obter uma comparação dos casos de uso disponíveis por tipo de implementação.
+   * **[!UICONTROL None]**: selecione esta opção se precisar configurar a personalização de [!DNL Adobe Target], mas não puder implementar o Web SDK [!DNL Adobe Experience Platform]. Ao usar essa opção, os públicos-alvo exportados do Experience Platform para o Target só são compatíveis com a personalização da próxima sessão e a segmentação de borda é desativada. Consulte a tabela na seção [casos de uso suportados](#supported-use-cases) para obter uma comparação dos casos de uso disponíveis por tipo de implementação.
 
-  | Implementação do Adobe Target *sem* Web SDK | Implementação do Adobe Target *with* Web SDK | Implementação do Adobe Target *com* a segmentação de borda do Web SDK *e* desativada |
+  | [!DNL Adobe Target] implementação *sem* Web SDK | [!DNL Adobe Target] implementação *com* Web SDK | [!DNL Adobe Target] implementação *com* Web SDK *e* segmentação de borda desativada |
   |---|---|---|
-  | <ul><li>Uma sequência de dados não é necessária. O Adobe Target pode ser implantado por meio de [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=pt-BR), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=pt-BR#server-side-implementation) ou [híbrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html?lang=pt-BR#hybrid-implementation) métodos de implementação.</li><li>Não há suporte para a [segmentação do Edge](../../../segmentation/methods/edge-segmentation.md).</li><li>[Não há suporte para a personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md).</li><li>Você pode compartilhar públicos e atributos de perfil na conexão do Adobe Target para a *sandbox de produção padrão* e sandboxes não padrão.</li><li>Para configurar a personalização da próxima sessão sem usar uma sequência de dados, use a [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html?lang=pt-BR).</li></ul> | <ul><li>É necessário um fluxo de dados com o Adobe Target e o Experience Platform configurados como serviços.</li><li>A segmentação do Edge funciona conforme esperado.</li><li>[Personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md#use-cases) são suportadas.</li><li>O compartilhamento de públicos-alvo e atributos de perfil de outras sandboxes é compatível.</li></ul> | <ul><li>É necessário um fluxo de dados com o Adobe Target e o Experience Platform configurados como serviços.</li><li>Ao [configurar a sequência de dados](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), não marque a caixa de seleção **Segmentação do Edge**.</li><li>[Personalização de próxima sessão](../../ui/activate-edge-personalization-destinations.md#next-session) com suporte.</li><li>O compartilhamento de públicos-alvo e atributos de perfil de outras sandboxes é compatível.</li></ul> |
+  | <ul><li>Uma sequência de dados não é necessária. [!DNL Adobe Target] pode ser implantado através de [at.js](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=pt-BR), [server-side](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation) ou [híbrido](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) métodos de implementação.</li><li>Não há suporte para a [segmentação do Edge](../../../segmentation/methods/edge-segmentation.md).</li><li>[Não há suporte para a personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md).</li><li>Você pode compartilhar públicos e atributos de perfil na conexão [!DNL Adobe Target] para a *sandbox de produção padrão* e sandboxes não padrão.</li><li>Para configurar a personalização da próxima sessão sem usar uma sequência de dados, use a [at.js](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Uma sequência de dados com [!DNL Adobe Target] e Experience Platform configurada como serviços é necessária.</li><li>A segmentação do Edge funciona conforme esperado.</li><li>[Personalização de mesma página e próxima página](../../ui/activate-edge-personalization-destinations.md#use-cases) são suportadas.</li><li>O compartilhamento de públicos-alvo e atributos de perfil de outras sandboxes é compatível.</li></ul> | <ul><li>Uma sequência de dados com [!DNL Adobe Target] e Experience Platform configurada como serviços é necessária.</li><li>Ao [configurar a sequência de dados](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), não marque a caixa de seleção **Segmentação do Edge**.</li><li>[Personalização de próxima sessão](../../ui/activate-edge-personalization-destinations.md#next-session) com suporte.</li><li>O compartilhamento de públicos-alvo e atributos de perfil de outras sandboxes é compatível.</li></ul> |
 
-* **Workspace**: selecione o [espaço de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=pt-BR) do Adobe Target para o qual os públicos-alvo serão compartilhados. Você pode selecionar um único espaço de trabalho para cada conexão do Adobe Target. Após a ativação, os públicos-alvo são roteados para o espaço de trabalho selecionado enquanto seguem os [rótulos de uso de dados do Experience Platform](../../../data-governance/labels/overview.md) aplicáveis.
+* **Workspace**: selecione o [!DNL Adobe Target] [espaço de trabalho](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html?lang=pt-BR) para o qual os públicos serão compartilhados. Você pode selecionar um único espaço de trabalho para cada conexão [!DNL Adobe Target]. Após a ativação, os públicos-alvo são roteados para o espaço de trabalho selecionado enquanto seguem os [rótulos de uso de dados do Experience Platform](../../../data-governance/labels/overview.md) aplicáveis.
 
 >[!NOTE]
 >
@@ -176,7 +176,7 @@ Leia [Ativar públicos-alvo para destinos de personalização de borda](../../ui
 
 ## Remover públicos-alvo de um destino do Target {#remove}
 
-São necessárias etapas adicionais para remover um público-alvo de uma conexão existente do Adobe Target quando esse público-alvo já estiver sendo usado em uma [atividade](https://experienceleague.adobe.com/pt-br/docs/target/using/activities/activities) do Adobe Target. Tentar remover um público-alvo de uma conexão do Adobe Target resultará em erro se o público-alvo for usado por uma atividade do Adobe Target.
+Há etapas extras necessárias para remover um público-alvo de uma conexão [!DNL Adobe Target] existente quando esse público-alvo já estiver sendo usado em uma [!DNL Adobe Target] [atividade](https://experienceleague.adobe.com/en/docs/target/using/activities/activities). Tentar remover um público-alvo de uma conexão [!DNL Adobe Target] resultará em erro se o público-alvo for usado por uma atividade [!DNL Adobe Target].
 
 ![Imagem da interface do Experience Platform mostrando um erro causado pela tentativa de remover um público usado por uma atividade do Target.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)
 
@@ -186,7 +186,7 @@ Se o público-alvo não estiver sendo usado em uma atividade, vá para **[!UICON
 
 ## Dados exportados {#exported-data}
 
-O Adobe Target *lê* dados de perfil do Adobe Experience Platform Edge Network, portanto, nenhum dado é exportado.
+[!DNL Adobe Target] *lê* dados de perfil da Edge Network [!DNL Adobe Experience Platform], portanto, nenhum dado é exportado.
 
 ## Uso e governança de dados {#data-usage-governance}
 

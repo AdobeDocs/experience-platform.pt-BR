@@ -3,9 +3,9 @@ title: Conexão com o Adobe Advertising DSP
 description: Saiba como compartilhar públicos primários autenticados e não autenticados com o Adobe Advertising Demand-Side Platform (DSP) usando vários tipos de identidade.
 feature: Destinations
 exl-id: 0ff80d38-993f-4609-bf2a-01a3e6cfe10b
-source-git-commit: 8d9cf177b306350d232ec8918376211a098f396f
+source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1469'
 ht-degree: 3%
 
 ---
@@ -56,11 +56,11 @@ Os anunciantes têm a opção de compartilhar segmentos com identificadores prim
 
       * Para cada IDFA, inclua o valor `IDFA` em uma coluna IdentityMap.
 
-* A ID da organização da Experience Cloud para a conta da Experience Platform. Você pode encontrar sua ID na página de perfil do usuário do Adobe Real-Time Customer Data Platform (Real-Time CDP).
+* A ID da organização da Experience Cloud para a conta da Experience Platform. Você pode encontrar sua ID em sua página de perfil de usuário do Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]).
 
-* Uma [fonte do Real-Time CDP no DSP](https://experienceleague.adobe.com/pt-br/docs/advertising/dsp/audiences/sources/source-manage) para receber públicos-alvo para ativação de campanha. Sua equipe de conta da Adobe criará a fonte usando sua ID de organização da Experience Cloud.
+* Uma [[!DNL Real-Time CDP] origem no DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) para receber públicos-alvo para ativação de campanha. Sua equipe de conta da Adobe criará a fonte usando sua ID de organização da Experience Cloud.
 
-* A chave de origem da conta ou anunciante [!DNL DSP], que é gerada quando uma origem do Real-Time CDP [é criada em  [!DNL DSP]](https://experienceleague.adobe.com/pt-br/docs/advertising/dsp/audiences/sources/source-manage). A equipe de conta do [!DNL DSP] compartilhará essa chave com você. Você a usará no Experience Platform para criar uma conexão de destino com o destino do Advertising DSP, conforme explicado abaixo.
+* A chave de origem da conta ou anunciante [!DNL DSP], que é gerada quando uma [[!DNL Real-Time CDP] origem é criada em  [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). A equipe de conta do [!DNL DSP] compartilhará essa chave com você. Você a usará no Experience Platform para criar uma conexão de destino com o destino do Advertising DSP, conforme explicado abaixo.
 
 ### Configurar sincronização de ID para compartilhar cookies {#cookie-sync}
 
@@ -72,7 +72,7 @@ Se você estiver usando o [!DNL Experience Platform Web SDK], habilite a sincron
 
 **Habilitar sincronização de ID de terceiros com o[!DNL Experience Cloud ID Service]**
 
-Se você estiver usando [!DNL Experience Platform] tags com o [!DNL Experience Cloud ID Service], configure a sincronização de ID de terceiros usando a [extensão do Serviço da Experience Cloud ID](/help/tags/extensions/client/id-service/overview.md). Isso permite que o cookie do Adobe Advertising correspondente para a ECID fornecida esteja disponível quando você ativar o público-alvo no Real-Time CDP.
+Se você estiver usando [!DNL Experience Platform] tags com o [!DNL Experience Cloud ID Service], configure a sincronização de ID de terceiros usando a [extensão do Serviço da Experience Cloud ID](/help/tags/extensions/client/id-service/overview.md). Isso permite que o cookie do Adobe Advertising correspondente para a ECID fornecida esteja disponível quando você ativar o público-alvo de [!DNL Real-Time CDP].
 
 ## Identidades suportadas {#supported-identities}
 
@@ -95,7 +95,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -106,7 +106,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -133,7 +133,7 @@ Para se conectar ao destino, siga as instruções para [criar uma conexão de de
 
 Para se conectar ao destino, forneça o seguinte parâmetro na seção [!UICONTROL Connection type] e selecione **[!UICONTROL Connect to destination]**:
 
-* **[!UICONTROL Account or Advertiser Key]**: Este [!UICONTROL Source Key] é gerado quando uma [origem do Real-Time CDP é criada na interface do usuário do DSP](https://experienceleague.adobe.com/pt-br/docs/advertising/dsp/audiences/sources/source-manage). A equipe de conta da Adobe compartilhará essa chave com você após criar a fonte.
+* **[!UICONTROL Account or Advertiser Key]**: Este [!UICONTROL Source Key] é gerado quando uma [[!DNL Real-Time CDP] origem é criada na interface do usuário do DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). A equipe de conta da Adobe compartilhará essa chave com você após criar a fonte.
 
 ![Captura de tela da seção Tipo de conexão mostrando o campo Conta ou Chave do Anunciante.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 
@@ -158,7 +158,7 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >id="platform_destinations_required_mappings_adcloud_dsp"
 >title="Conjuntos de mapeamento pré-configurados"
 >abstract="Pré-configuramos esses dois conjuntos de mapeamento para você: ECID e cookie [!DNL adcloud]. Quando você ativa dados para o Adobe Advertising DSP, os perfis qualificados para os públicos ativados devem ter pelo menos uma identidade ECID associada ao perfil para serem exportados com êxito para o destino."
->additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-cloud-connection#preconfigured-mappings" text="Leia mais sobre os mapeamentos pré-configurados"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/advertising/adobe-advertising-cloud-connection#preconfigured-mappings" text="Leia mais sobre os mapeamentos pré-configurados"
 
 >[!IMPORTANT]
 >
@@ -202,7 +202,7 @@ Para verificar se os dados do público-alvo foram compartilhados com o Adobe Adv
 
 * No DSP, o público-alvo está disponível quando você cria ou edita um público-alvo de **[!UICONTROL Audiences]** > **[!UICONTROL All Audiences]** ou na seção **[!UICONTROL Audience Targeting]** das configurações de posicionamento. O público deve estar visível na guia [!UICONTROL Adobe Segments], na pasta [!UICONTROL Real-Time CDP].
 
-![Captura de tela da interface do DSP Audiences mostrando uma pasta do Real-Time CDP com segmentos de público-alvo importados listados na guia Segmentos do Adobe.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
+![Captura de tela da interface do DSP Audiences mostrando uma pasta [!DNL Real-Time CDP] com segmentos de público-alvo importados listados na guia Segmentos do Adobe.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/segments-in-dsp.png)
 
 ## Uso e governança de dados {#data-usage-governance}
 

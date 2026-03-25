@@ -4,9 +4,9 @@ description: Crie um compartilhamento de dados em tempo real do Snowflake para r
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: f6565f7820d6d6394d26b88fdde3d42a90dedd63
 workflow-type: tm+mt
-source-wordcount: '1738'
+source-wordcount: '1804'
 ht-degree: 3%
 
 ---
@@ -94,7 +94,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -105,7 +105,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -194,12 +194,19 @@ Os dados são transferidos para sua conta do Snowflake por meio de uma tabela di
 
 A tabela dinâmica contém as seguintes colunas:
 
-* **TS**: uma coluna de carimbo de data/hora que indica quando cada linha da tabela compartilhada foi atualizada pela última vez
-* **ID da política de mesclagem**: a ID da [política de mesclagem](../../../profile/merge-policies/overview.md) à qual o público-alvo que está sendo ativado pertence
-* **Atributos de mapeamento**: todos os atributos de mapeamento selecionados durante o fluxo de trabalho de ativação são representados como um cabeçalho de coluna no Snowflake
-* **Associação de público-alvo**: a associação a qualquer público mapeado para o fluxo de dados é indicada por meio de uma entrada `active` na célula correspondente
+* **TS**: um carimbo de data/hora indicando quando cada linha foi atualizada pela última vez
+* **MERGE_POLICY_ID**: a ID da [política de mesclagem](../../../profile/merge-policies/overview.md) à qual o público-alvo ativado pertence
+* **AUDIENCE_ID**: a ID do público-alvo
+* **AUDIENCE_NAME**: o nome do público-alvo conforme configurado no Experience Platform
+* **AUDIENCE_ORIGIN**: a [origem](../../../segmentation/ui/audience-portal.md) do público-alvo (por exemplo, `Segmentation Service` ou `Custom upload`)
+* **AUDIENCE_STATUS**: o status de associação do perfil na audiência (por exemplo, `active` ou `realized`)
+* **Atributos de mapeamento**: cada atributo de mapeamento selecionado durante o fluxo de trabalho de ativação é representado como uma coluna
 
 ![Captura de tela mostrando a interface do Snowflake com dados da tabela dinâmica](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png) {align="center" zoomable="yes"}
+
+>[!NOTE]
+>
+>A estrutura da tabela descrita acima se aplica às conexões de destino criadas após a versão de março de 2026 do Experience Platform. Durante o período de transição, novos conectores usam ambas as estruturas de tabela, com a nova estrutura com o prefixo `V2` (por exemplo, `V2_<table-name>`). As conexões existentes continuam a usar a estrutura anterior, onde cada público-alvo é representado como uma coluna separada (por exemplo, `ups_<audience-id>` = `active`). A estrutura anterior será substituída no final de junho de 2026.
 
 ## Uso e governança de dados {#data-usage-governance}
 

@@ -1,22 +1,15 @@
 ---
 title: Criar configurações dinâmicas de sequência de dados
 description: Saiba como criar configurações de sequência de dados dinâmicas para rotear seus dados para vários serviços da Experience Cloud, com base em regras.
-hide: true
-hidefromtoc: true
-badge: label="Beta" type="Informative"
 exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
-source-git-commit: 8ce5b6718861d01731b9aab9f81645f2aeb2970f
+source-git-commit: 30b66420e9cee6b4d85cf41a31e9595d5a240fda
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1098'
 ht-degree: 3%
 
 ---
 
 # Criar configurações dinâmicas de sequência de dados
-
->[!AVAILABILITY]
->
->* A opção para definir configurações de sequência de dados dinâmicas está atualmente no Beta e disponível para um número limitado de clientes. Para receber acesso a essa funcionalidade, entre em contato com o representante da Adobe. A documentação e a funcionalidade estão sujeitas a alterações.
 
 Por padrão, o Experience Platform Edge Network envia todos os eventos que atingem uma sequência de dados para todos os [serviços](configure.md#add-services) do Experience Cloud que você habilitou para suas sequências de dados. Esse nem sempre pode ser o fluxo de trabalho ideal para você, dependendo dos seus casos de uso.
 
@@ -57,33 +50,33 @@ Se você habilitar as configurações dinâmicas de sequência de dados e as sub
 
 Depois de [criar uma sequência de dados](configure.md) e [adicionar um serviço](configure.md#add-services) a ela, siga as etapas abaixo para adicionar uma configuração dinâmica ao serviço.
 
-1. Vá para a página **[!UICONTROL Coleção de Dados]** > **[!UICONTROL Sequências de Dados]** e selecione a sequência de dados criada.
+1. Vá para a página **[!UICONTROL Data Collection]** > **[!UICONTROL Datastreams]** e selecione a sequência de dados que você criou.
 
    ![Imagem da interface de usuário de sequências de dados mostrando a lista de sequências de dados.](assets/configure-dynamic-datastream/select-datastream.png)
 
-1. Selecione a opção **[!UICONTROL Editar]** no serviço para o qual deseja definir uma configuração dinâmica.
+1. Selecione a opção **[!UICONTROL Edit]** no serviço para o qual deseja definir uma configuração dinâmica.
 
    ![Imagem da interface de fluxos de dados mostrando os serviços adicionados a um fluxo de dados.](assets/configure-dynamic-datastream/select-service.png)
 
-1. Na página **[!UICONTROL Configurar]**, selecione **[!UICONTROL Salvar e Editar Configuração Dinâmica]**.
+1. Na página **[!UICONTROL Configure]**, selecione **[!UICONTROL Save and Edit Dynamic Configuration]**.
 
    ![Imagem da interface de usuário de sequências de dados mostrando a página de configuração da sequência de dados.](assets/configure-dynamic-datastream/save-and-edit.png)
 
-1. Selecione **[!UICONTROL Adicionar Configuração Dinâmica]**.
+1. Selecione **[!UICONTROL Add Dynamic Configuration]**.
 
    ![Imagem da interface de usuário dos fluxos de dados mostrando a configuração dinâmica sem mensagem de regra adicionada.](assets/configure-dynamic-datastream/add-dynamic-config.png)
 
-1. No painel **[!UICONTROL Recursos]**, arraste e solte os itens com os quais deseja criar sua regra para o lado direito da janela. É possível combinar vários recursos para criar regras complexas.
+1. No painel **[!UICONTROL Resources]**, arraste e solte os itens com os quais deseja criar sua regra para o lado direito da janela. É possível combinar vários recursos para criar regras complexas.
 
-   Use as opções de cada recurso, como **[!UICONTROL é igual a]**, **[!UICONTROL não é igual a]**, **[!UICONTROL existe]** e muito mais, para ajustar as regras.
+   Use as opções de cada recurso, como **[!UICONTROL equals]**, **[!UICONTROL does not equal]**, **[!UICONTROL exists]** e muito mais, para ajustar as suas regras.
 
    ![Imagem da interface de usuário dos fluxos de dados mostrando a regra de configuração dinâmica.](assets/configure-dynamic-datastream/drag-resources.png)
 
-1. Na seção **[!UICONTROL Configuração]**, alterne os serviços que deseja habilitar ou desabilitar para cada regra, dependendo se deseja que os dados sejam enviados para cada serviço. Se você desativar a alternância, o roteamento do serviço será desabilitado e *nenhum dado* será enviado ao serviço upstream.
+1. Na seção **[!UICONTROL Configuration]**, alterne os serviços que deseja habilitar ou desabilitar para cada regra, dependendo se deseja que os dados sejam enviados para cada serviço. Se você desativar a alternância, o roteamento do serviço será desabilitado e *nenhum dado* será enviado ao serviço upstream.
 
    ![Imagem da interface de usuário dos fluxos de dados mostrando a regra de configuração dinâmica.](assets/configure-dynamic-datastream/enable-service.png)
 
-1. Quando terminar de configurar suas regras, selecione **[!UICONTROL Salvar]**.
+1. Quando terminar de configurar suas regras, selecione **[!UICONTROL Save]**.
 
 ## Considerações de prioridade da regra {#considerations}
 
@@ -107,7 +100,7 @@ As regras de configuração de sequência de dados dinâmicas funcionam com tipo
 |-----------|--------|-------|
 | String | Permitido | - |
 | Número (Inteiro, Longo, Curto, Byte) | Permitido | - |
-| Enumeração | Permitido | - |
+| Lista Discriminada | Permitido | - |
 | Booleano | Permitido | - |
 | Data | Permitido | - |
 | Matriz | Não permitido | As regras baseadas em arrays não são compatíveis, pois podem prejudicar o desempenho. |

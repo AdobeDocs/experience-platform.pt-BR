@@ -62,7 +62,7 @@ Após exportar os públicos, ative-os usando o destino [[!DNL LiveRamp - Distrib
 
 Assista ao vídeo abaixo para obter uma explicação completa do fluxo de trabalho descrito nesta página.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425367)
+>[!VIDEO](https://video.tv.adobe.com/v/3452662?captions=por_br)
 
 ### Etapa 1: enviar seus públicos do Experience Platform para o LiveRamp, por meio do destino [!DNL LiveRamp - Onboarding] {#onboarding}
 

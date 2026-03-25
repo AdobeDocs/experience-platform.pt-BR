@@ -2,16 +2,16 @@
 title: Configurar substituições de sequência de dados
 description: Saiba como configurar substituições de fluxo de dados na interface do usuário de fluxos de dados e ativá-las por meio do Web SDK ou do Mobile SDK.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 53%
+source-wordcount: '1043'
+ht-degree: 52%
 
 ---
 
 # Configurar substituições de sequência de dados
 
-As substituições de fluxos de dados permitem definir configurações adicionais para seus fluxos de dados, que são transmitidos para a Edge Network por meio da Web SDK ou da SDK móvel.
+Use substituições de sequência de dados para definir configurações adicionais para suas sequências de dados, que são transmitidas para a Edge Network por meio da Web SDK ou do Mobile SDK.
 
 Isso ajuda a acionar comportamentos de sequência de dados diferentes dos padrão, sem criar uma sequência de dados ou modificar as configurações existentes.
 
@@ -74,7 +74,7 @@ Agora as substituições de sequência de dados do Adobe Target devem estar conf
 
 Para configurar substituições para uma sequência de dados do Adobe Analytics, primeiro você deve criar uma sequência de dados do [Adobe Analytics](configure.md#analytics). Siga as instruções para [configurar uma sequência de dados](configure.md) com o serviço do [Adobe Analytics](configure.md#analytics).
 
-Depois de criar a sequência de dados, edite o serviço [Adobe Analytics](configure.md#target) que você adicionou e use a seção **[!UICONTROL Report Suite Overrides]** para adicionar as substituições da sequência de dados desejadas, conforme mostrado na imagem abaixo.
+Depois de criar a sequência de dados, edite o serviço [Adobe Analytics](configure.md#analytics) que você adicionou e use a seção **[!UICONTROL Report Suite Overrides]** para adicionar as substituições da sequência de dados desejadas, conforme mostrado na imagem abaixo.
 
 Selecione **[!UICONTROL Show Batch Mode]** para habilitar a edição em lote de substituições do conjunto de relatórios. É possível copiar e colar uma lista de substituições de conjunto de relatórios, inserindo um conjunto de relatórios por linha.
 

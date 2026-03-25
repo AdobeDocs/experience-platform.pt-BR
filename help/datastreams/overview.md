@@ -2,10 +2,10 @@
 title: Visão geral das sequências de dados
 description: Saiba como as sequências de dados ajudam a conectar sua integração do Experience Platform SDK no lado do cliente com produtos da Adobe e destinos de terceiros.
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 60%
+source-wordcount: '706'
+ht-degree: 56%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 60%
 
 Uma sequência de dados representa a configuração do lado do servidor para os SDKs da Web e móveis da Adobe Experience Platform. Enquanto o comando [`configure`](/help/collection/js/commands/configure/overview.md) no SDK lida com configurações do lado do cliente (como `edgeDomain`), os fluxos de dados gerenciam todas as outras configurações.
 
-Quando você envia uma solicitação para a Edge Network, o `datastreamId` faz referência à sequência de dados para a qual os dados são enviados. Isso permite atualizar a configuração do lado do servidor sem alterar o código do site.
+Quando você envia uma solicitação para a Edge Network, o `datastreamId` faz referência à sequência de dados para a qual os dados são enviados. Você pode atualizar a configuração do lado do servidor sem alterar o código do site.
 
 Você pode criar e gerenciar fluxos de dados selecionando **[!UICONTROL Datastreams]** na navegação à esquerda na interface do usuário do Adobe Experience Platform ou na interface da Coleção de dados.
 
@@ -27,7 +27,7 @@ Para obter mais informações sobre como configurar uma sequência de dados na i
 >
 >O conteúdo deste documento não é um aconselhamento jurídico e não se destina a substituir tal aconselhamento. Consulte o departamento jurídico da sua empresa para obter aconselhamento sobre o manuseio de dados confidenciais.
 
-As políticas de gerenciamento de dados corporativos e os requisitos normativos estão aumentando as restrições sobre como os dados confidenciais do cliente podem ser coletados, processados e usados. Isso inclui a coleta, o processamento e o uso de dados protegidos de saúde (PHI), que estão sujeitos a regulamentos como a Lei de Portabilidade e Responsabilidade de Seguro de Saúde (HIPAA).
+As políticas de gerenciamento de dados corporativos e os requisitos normativos estão aumentando as restrições sobre como os dados confidenciais do cliente podem ser coletados, processados e usados. Isso inclui a coleta, o processamento e o uso de PHI (Protected Health Data, dados protegidos de saúde), que estão sujeitos a regulamentos como a HIPAA (Health Insurance Portability and Accountability Act, lei de responsabilidade e mobilidade de seguros de saúde).
 
 As sequências de dados fornecem três métodos para ajudá-lo a lidar com os dados confidenciais com segurança:
 
@@ -45,7 +45,7 @@ As sequências de dados usam os recursos integrados de governança de dados do E
 
 O vídeo a seguir fornece uma breve visão geral de como as restrições de uso de dados são configuradas e aplicadas às sequências de dados na interface:
 
->[!VIDEO](https://video.tv.adobe.com/v/3415829/?captions=por_br&quality=12&learn=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409588/?quality=12&learn=on&speedcontrol=on)
 
 Na Experience Platform, é possível aplicar [rótulos de uso de dados confidenciais](../data-governance/labels/reference.md#sensitive) a esquemas e campos que contêm dados que sua organização considera confidenciais. Por exemplo, o rótulo `RHD` é utilizado para identificar dados protegidos de saúde (PHI), e o rótulo `S1` representa dados de geolocalização.
 

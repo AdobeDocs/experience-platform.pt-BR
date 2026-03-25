@@ -2,16 +2,16 @@
 title: Preparo de dados para a coleção de dados
 description: Saiba como mapear seus dados para um esquema de evento do Experience Data Model (XDM) ao configurar uma sequência de dados para os SDKs da web e móvel da Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1166'
-ht-degree: 43%
+source-wordcount: '1167'
+ht-degree: 41%
 
 ---
 
 # Preparo de dados para a coleção de dados
 
-O Preparo de dados é um serviço da Adobe Experience Platform que permite mapear, transformar e validar dados de e para o [Experience Data Model (XDM)](../xdm/home.md). Ao configurar uma [sequência de dados](./overview.md) habilitada para Experience Platform, você pode usar os recursos de Preparo de Dados para mapear os dados de origem no XDM ao enviá-los para o Experience Platform Edge Network.
+Preparo de dados é um serviço da Adobe Experience Platform que você pode usar para mapear, transformar e validar dados de e para o [Experience Data Model (XDM)](../xdm/home.md). Ao configurar uma [sequência de dados](./overview.md) habilitada para Experience Platform, você pode usar os recursos de Preparo de Dados para mapear os dados de origem no XDM ao enviá-los para o Experience Platform Edge Network.
 
 Todos os dados enviados de uma página da Web devem chegar ao Experience Platform como XDM. Há três maneiras de traduzir dados de uma camada de dados na página para o XDM aceito pelo Experience Platform:
 
@@ -48,7 +48,7 @@ Este guia aborda como mapear seus dados na interface. Para acompanhar as etapas,
 
 Para obter uma demonstração rápida do processo de preparo de dados para a coleção de dados, assista ao vídeo a seguir:
 
->[!VIDEO](https://video.tv.adobe.com/v/345568?captions=por_br&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
 ## [!UICONTROL Select data] {#select-data}
 
@@ -158,7 +158,7 @@ Você pode selecionar a opção para fazer upload do objeto como um arquivo ou c
 
 >[!NOTE]
 >
-> Use um objeto JSON de amostra que represente cada elemento de camada de dados que pode ser usado em qualquer página. Por exemplo, nem todas as páginas usam elementos de camada de dados do carrinho de compras. No entanto, os elementos da camada de dados do carrinho de compras devem ser incluídos nesta amostra de objeto JSON.
+>Use um objeto JSON de amostra que represente cada elemento de camada de dados que pode ser usado em qualquer página. Por exemplo, nem todas as páginas usam elementos de camada de dados do carrinho de compras. No entanto, os elementos da camada de dados do carrinho de compras devem ser incluídos nesta amostra de objeto JSON.
 
 ## [!UICONTROL Mapping]
 

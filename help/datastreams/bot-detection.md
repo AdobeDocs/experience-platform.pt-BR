@@ -2,9 +2,9 @@
 title: Configurar a detecção de bot para sequências de dados
 description: Saiba como configurar a detecção de bot para sequências de dados, para diferenciar o tráfego humano e não humano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: 5f599b8572c4cebcdfb9ab85027211da4d8a020c
+source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Essa pontuação de bot ajuda as soluções que recebem a solicitação a identi
 >
 >A detecção de bot não elimina nenhuma solicitação de bot. Ela atualiza somente o esquema XDM com a pontuação de bot e encaminha o evento para o [serviço de sequência de dados](configure.md) que você configurou.
 >
->As soluções da Adobe podem lidar com a pontuação de bots de maneiras diferentes. Por exemplo, o Adobe Analytics usa seu próprio [serviço de filtragem de bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=pt-BR) e não usa a pontuação definida pelo Edge Network. Os dois serviços usam a mesma [lista de bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), portanto, a pontuação do bot é idêntica.
+>As soluções da Adobe podem lidar com a pontuação de bots de maneiras diferentes. Por exemplo, o Adobe Analytics usa seu próprio [serviço de filtragem de bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e não usa a pontuação definida pelo Edge Network. Os dois serviços usam a mesma [lista de bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), portanto, a pontuação do bot é idêntica.
 
 ## Considerações técnicas {#technical-considerations}
 
@@ -65,7 +65,7 @@ A página **[!UICONTROL Bot Detection Rules]** é exibida.
 
 Na página Regras de detecção de bot, você pode configurar a detecção de bot usando as seguintes funcionalidades:
 
-* Usando o [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
+* Usando a [Lista Internacional de spiders e bots IAB/ABC](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/).
 * Criar suas próprias regras de detecção de bot.
 
 ### Usar a Lista Internacional de spiders e bots da IAB/ABC {#iab-list}
@@ -119,7 +119,7 @@ Para criar uma regra de detecção de bot, siga as etapas abaixo:
 
    >[!TIP]
    >
-   >As condições de IP são baseadas em uma operação `OR` lógica. Uma solicitação é marcada como originária de um bot se corresponder a qualquer uma das condições de IP definidas.
+   >As condições de IP são baseadas em uma operação `OR` lógica. Uma solicitação é marcada como originada de um bot se corresponder a qualquer uma das condições de IP definidas.
 
 4. Se quiser adicionar condições de cabeçalho à regra, selecione **[!UICONTROL Add header conditions group]** e, em seguida, selecione os cabeçalhos que deseja que a regra use.
 

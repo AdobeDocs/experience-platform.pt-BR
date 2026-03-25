@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para excluir uma configuração existente do servidor de destino por meio do Adobe Experience Platform Destination SDK.
 title: Excluir uma configuração do servidor de destino
 exl-id: 2322a2ce-220e-4590-a553-b15152412752
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '328'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ Para obter uma descrição detalhada dos recursos que você pode excluir por mei
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API do servidor de destino {#get-started}
 

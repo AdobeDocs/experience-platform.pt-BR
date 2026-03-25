@@ -2,9 +2,9 @@
 description: Saiba como usar o Destination SDK para configurar um destino baseado em arquivo para exportar públicos-alvo potenciais para um local de armazenamento.
 title: Configurar um destino baseado em arquivo para exportar públicos-alvo potenciais para um local de armazenamento
 exl-id: 052fd185-294a-4c1d-8d82-12b27b661e22
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '719'
 ht-degree: 1%
 
 ---
@@ -23,11 +23,11 @@ Você também pode configurar o STFP ou outros locais de armazenamento para expo
   ],
 ```
 
-Para obter descrições detalhadas dos parâmetros usados abaixo, consulte [opções de configuração no SDK de Destinos](../../functionality/configuration-options.md).
+Para obter descrições detalhadas dos parâmetros usados abaixo, consulte [opções de configuração na SDK de Destinos](../../functionality/configuration-options.md).
 
 ## Pré-requisitos {#prerequisites}
 
-Antes de seguir para as etapas descritas abaixo, leia a página [introdução](../../getting-started.md) do Destination SDK para obter informações sobre como obter as credenciais de autenticação necessárias e outros pré-requisitos para trabalhar com as APIs do Destination SDK.
+Antes de seguir para as etapas descritas abaixo, leia a página [Introdução ao Destination SDK](../../getting-started.md) para obter informações sobre como obter as credenciais de autenticação necessárias e outros pré-requisitos para trabalhar com as APIs do Destination SDK.
 
 ## Etapa 1: criar uma configuração de servidor e arquivo {#create-server-file-configuration}
 
@@ -42,7 +42,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
 **Solicitação**
 
 A solicitação a seguir cria uma nova configuração do servidor de destino, configurada pelos parâmetros fornecidos na carga.
-A carga abaixo inclui uma configuração genérica do Amazon S3, com parâmetros de configuração personalizados [formatação de arquivo CSV](../../functionality/destination-server/file-formatting.md) que os usuários podem definir na interface do Experience Platform.
+A carga abaixo inclui uma configuração genérica do Amazon S3, com parâmetros de configuração personalizados [formatação de arquivo CSV](../../functionality/destination-server/file-formatting.md) que os usuários podem definir na interface do usuário do Experience Platform.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destination-server \
@@ -415,7 +415,7 @@ Uma resposta bem-sucedida retorna a nova configuração de destino, incluindo o 
 
 ## Etapa 3: verificar a interface do usuário do Experience Platform {#verify-ui}
 
-Com base nas configurações acima, o catálogo de Experience Platform agora exibirá um novo cartão de destino privado para você usar.
+Com base nas configurações acima, o catálogo do Experience Platform agora exibirá um novo cartão de destino privado para você usar.
 
 ![Gravação de tela mostrando a página do catálogo de destinos com um cartão de destino selecionado.](../../assets/guides/batch/destination-card.gif)
 
@@ -437,13 +437,13 @@ Ao exibir as opções de configuração de nome de arquivo, observe como os camp
 
 Se quiser ajustar qualquer um dos campos mencionados acima, repita as [etapas um](#create-server-file-configuration) e [dois](#create-destination-configuration) para modificar as configurações de acordo com suas necessidades.
 
-## Etapa 4: (opcional) Publish seu destino {#publish-destination}
+## Etapa 4: (opcional) publicar seu destino {#publish-destination}
 
 >[!NOTE]
 >
 >Esta etapa não é necessária se você estiver criando um destino privado para uso próprio e não estiver procurando publicá-lo no catálogo de destinos para que outros clientes usem.
 
-Após configurar seu destino, use a [API de publicação de destino](../../publishing-api/create-publishing-request.md) para enviar sua configuração ao Adobe para revisão.
+Depois de configurar seu destino, use a [API de publicação de destino](../../publishing-api/create-publishing-request.md) para enviar sua configuração ao Adobe para revisão.
 
 ## Etapa 5: (opcional) documentar seu destino {#document-destination}
 
@@ -455,4 +455,4 @@ Se você for um ISV (Fornecedor Independente de Software) ou um SI (Integrador d
 
 ## Próximas etapas {#next-steps}
 
-Ao ler este artigo, agora você sabe como usar o Destination SDK para criar um destino [!DNL Amazon S3] personalizado para exportar públicos-alvo em potencial.
+Agora você sabe como usar o Destination SDK para criar um destino [!DNL Amazon S3] personalizado para exportar públicos-alvo em potencial.

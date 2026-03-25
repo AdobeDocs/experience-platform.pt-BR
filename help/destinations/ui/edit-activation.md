@@ -4,16 +4,16 @@ title: Editar fluxos de dados de ativação
 type: Tutorial
 description: Siga as etapas deste artigo para editar um fluxo de dados de ativação existente no Adobe Experience Platform.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 5fae3fe6a3647ba416a26f4cdb9e5b6ce308e990
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '915'
 ht-degree: 0%
 
 ---
 
 # Editar fluxos de dados de ativação {#edit-activation-flows}
 
-No Adobe Experience Platform, você pode configurar vários componentes de fluxos de dados de ativação existentes para destinos, como:
+No [!DNL Adobe Experience Platform], você pode configurar vários componentes de fluxos de dados de ativação existentes para destinos, como:
 
 * [Habilitar ou desabilitar](#enable-disable-dataflows) fluxos de dados de ativação
 * [Adicionar mais públicos-alvo](#add-audiences) aos fluxos de dados de ativação
@@ -28,7 +28,7 @@ No Adobe Experience Platform, você pode configurar vários componentes de fluxo
 
 Siga as etapas abaixo para procurar seus fluxos de dados de ativação existentes e identificar aquele que deseja editar.
 
-1. Faça logon na [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinations]** na barra de navegação esquerda. Selecione **[!UICONTROL Browse]** no cabeçalho superior para exibir seus fluxos de dados de destino existentes.
+1. Vá para a [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinations]** na barra de navegação esquerda. Selecione **[!UICONTROL Browse]** no cabeçalho superior para exibir seus fluxos de dados de destino existentes.
 
    ![Procurar destinos](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -68,7 +68,7 @@ Selecione **[!UICONTROL Activate audiences]** no painel direito. Essa ação lev
 
 ![Imagem da interface do usuário do Experience Platform mostrando a opção de execução do fluxo de dados Ativar públicos-alvo.](../assets/ui/edit-activation/activate-audiences.png)
 
-Selecione a etapa **[!UICONTROL Scheduling]** no fluxo de trabalho de ativação para editar o agendamento de ativação e a frequência de exportação para seu fluxo de dados. Essa etapa permite configurar com que frequência os dados são exportados para o destino.
+Selecione a etapa **[!UICONTROL Scheduling]** no fluxo de trabalho de ativação para editar o agendamento de ativação e a frequência de exportação para seu fluxo de dados. Use esta etapa para configurar a frequência com que os dados são exportados para o destino.
 
 Na etapa **[!UICONTROL Scheduling]** do fluxo de trabalho de ativação, é possível:
 
@@ -87,7 +87,7 @@ Selecione **[!UICONTROL Activate audiences]** no painel direito. Essa ação lev
 
 ![Imagem da interface do usuário do Experience Platform mostrando a opção de execução do fluxo de dados Ativar públicos-alvo.](../assets/ui/edit-activation/activate-audiences.png)
 
-Selecione a etapa **[!UICONTROL Mapping]** no fluxo de trabalho de ativação para editar os atributos e as identidades mapeadas para o fluxo de dados de ativação. Isso permite ajustar quais atributos de perfil e identidades devem ser exportados para o destino.
+Selecione a etapa **[!UICONTROL Mapping]** no fluxo de trabalho de ativação para editar os atributos e as identidades mapeadas para o fluxo de dados de ativação. Use esta etapa para ajustar quais atributos e identidades de perfil são exportados para o destino.
 
 Na etapa **[!UICONTROL Mapping]** do fluxo de trabalho de ativação, é possível:
 
@@ -142,6 +142,6 @@ Para editar o nome e a descrição do fluxo de dados de ativação, use os campo
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você usou com êxito o espaço de trabalho **[!UICONTROL destinations]** para atualizar fluxos de dados de destino existentes.
+Você atualizou com êxito os fluxos de dados de destino usando o espaço de trabalho **[!UICONTROL destinations]**.
 
 Para obter mais informações sobre destinos, consulte a [visão geral sobre destinos](../catalog/overview.md).

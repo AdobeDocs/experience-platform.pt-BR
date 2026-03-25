@@ -2,9 +2,9 @@
 description: Esta página descreve os vários fluxos de autorização OAuth 2 compatíveis com o Destination SDK e fornece instruções para configurar a autorização OAuth 2 para o seu destino.
 title: Autorização OAuth 2
 exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2273'
+source-wordcount: '2234'
 ht-degree: 2%
 
 ---
@@ -18,7 +18,7 @@ Esta página descreve os vários fluxos de autorização OAuth 2 compatíveis co
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -33,9 +33,9 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 
 ### Pré-requisitos em seu sistema {#prerequisites}
 
-Como primeira etapa, você deve criar um aplicativo no sistema para o Adobe Experience Platform ou registrar o Experience Platform no sistema. O objetivo é gerar uma ID do cliente e um segredo do cliente, que são necessários para autenticar o Experience Platform no seu destino.
+Como primeira etapa, você deve criar um aplicativo em seu sistema para [!DNL Adobe Experience Platform] ou registrar o Experience Platform em seu sistema. O objetivo é gerar uma ID do cliente e um segredo do cliente, que são necessários para autenticar o Experience Platform no seu destino.
 
-Como parte dessa configuração no seu sistema, você precisa dos URLs de redirecionamento/retorno de chamada OAuth 2 do Adobe Experience Platform, que podem ser obtidos na lista abaixo.
+Como parte dessa configuração em seu sistema, você precisa das [!DNL Adobe Experience Platform] URLs de redirecionamento/retorno de chamada do OAuth 2, que você pode obter na lista abaixo.
 
 * `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
 * `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
@@ -46,7 +46,7 @@ Como parte dessa configuração no seu sistema, você precisa dos URLs de redire
 
 >[!IMPORTANT]
 >
->A etapa para registrar uma URL de redirecionamento/retorno de chamada para o Adobe Experience Platform em seu sistema é necessária somente para o tipo de concessão [OAuth 2 com Código de Autorização](#authorization-code). Para os outros dois tipos de concessão suportados (senha e credenciais do cliente), você pode ignorar esta etapa.
+>A etapa para registrar uma URL de redirecionamento/retorno de chamada para [!DNL Adobe Experience Platform] em seu sistema é necessária somente para o tipo de concessão [OAuth 2 com Código de Autorização](#authorization-code). Para os outros dois tipos de concessão suportados (senha e credenciais do cliente), você pode ignorar esta etapa.
 
 No final desta etapa, você deve ter:
 
@@ -124,10 +124,10 @@ Para definir esse método de autorização para o seu destino, adicione as segui
 | `authType` | String | Use &quot;OAUTH2&quot;. |
 | `grant` | String | Use &quot;OAUTH2_AUTHORIZATION_CODE&quot;. |
 | `accessTokenUrl` | String | A URL ao seu lado, que emite tokens de acesso e, opcionalmente, atualiza tokens. |
-| `authorizationUrl` | String | O URL do servidor de autorização, para o qual você redireciona o usuário para fazer logon no aplicativo. |
+| `authorizationUrl` | String | O URL do servidor de autorização, para o qual você redireciona o usuário para ir para o aplicativo. |
 | `refreshTokenUrl` | String | *Opcional.* A URL no seu lado, que emite tokens de atualização. Frequentemente, `refreshTokenUrl` é o mesmo que `accessTokenUrl`. |
-| `clientId` | String | A ID do cliente que seu sistema atribui à Adobe Experience Platform. |
-| `clientSecret` | String | O segredo do cliente que seu sistema atribui à Adobe Experience Platform. |
+| `clientId` | String | A ID do cliente que seu sistema atribui a [!DNL Adobe Experience Platform]. |
+| `clientSecret` | String | O segredo do cliente que seu sistema atribui a [!DNL Adobe Experience Platform]. |
 | `scope` | Lista de strings | *Opcional*. Defina o escopo do que o token de acesso permite que o Experience Platform execute em seus recursos. Exemplo: &quot;ler, gravar&quot;. |
 | `options.useBasicAuth` | Booleano | *Opcional*. Um valor booleano que controla como as credenciais do cliente (ID do cliente e segredo do cliente) são enviadas para o endpoint do token do provedor OAuth ao trocar um código de autorização por um token de acesso. <ul><li>Se definidas como `false` ou indefinidas, as credenciais são enviadas como `client_id` e `client_secret` parâmetros no corpo da solicitação POST (comportamento padrão).</li><li>Se esse parâmetro estiver definido como `true`, as credenciais serão enviadas no cabeçalho HTTP `Authorization` usando o formato de Autenticação Básica: `Authorization: Basic base64(clientID:clientSecret)`.</li></ul> Defina `useBasicAuth` como `true` quando o provedor OAuth exigir que as credenciais do cliente sejam enviadas no cabeçalho `Authorization` em vez do corpo da solicitação. |
 
@@ -170,8 +170,8 @@ Para definir esse método de autorização para o seu destino, adicione as segui
 | `authType` | String | Use &quot;OAUTH2&quot;. |
 | `grant` | String | Use &quot;OAUTH2_PASSWORD&quot;. |
 | `accessTokenUrl` | String | A URL ao seu lado, que emite tokens de acesso e, opcionalmente, atualiza tokens. |
-| `clientId` | String | A ID do cliente que seu sistema atribui à Adobe Experience Platform. |
-| `clientSecret` | String | O segredo do cliente que seu sistema atribui à Adobe Experience Platform. |
+| `clientId` | String | A ID do cliente que seu sistema atribui a [!DNL Adobe Experience Platform]. |
+| `clientSecret` | String | O segredo do cliente que seu sistema atribui a [!DNL Adobe Experience Platform]. |
 | `scope` | Lista de strings | *Opcional*. Defina o escopo do que o token de acesso permite que o Experience Platform execute em seus recursos. Exemplo: &quot;ler, gravar&quot;. |
 
 {style="table-layout:auto"}
@@ -212,8 +212,8 @@ Para definir esse método de autorização para o seu destino, adicione as segui
 | `grant` | String | Use &quot;OAUTH2_CLIENT_CREDENTIALS&quot;. |
 | `accessTokenUrl` | String | O URL do servidor de autorização, que emite um token de acesso e um token de atualização opcional. |
 | `refreshTokenUrl` | String | *Opcional.* A URL no seu lado, que emite tokens de atualização. Frequentemente, `refreshTokenUrl` é o mesmo que `accessTokenUrl`. |
-| `clientId` | String | A ID do cliente que seu sistema atribui à Adobe Experience Platform. |
-| `clientSecret` | String | O segredo do cliente que seu sistema atribui à Adobe Experience Platform. |
+| `clientId` | String | A ID do cliente que seu sistema atribui a [!DNL Adobe Experience Platform]. |
+| `clientSecret` | String | O segredo do cliente que seu sistema atribui a [!DNL Adobe Experience Platform]. |
 | `scope` | Lista de strings | *Opcional*. Defina o escopo do que o token de acesso permite que o Experience Platform execute em seus recursos. Exemplo: &quot;ler, gravar&quot;. |
 
 {style="table-layout:auto"}
@@ -491,4 +491,4 @@ Dependendo da sua personalização de autorização, talvez seja necessário ace
 
 ## Próximas etapas {#next-steps}
 
-Ao ler este artigo, você agora entende os padrões de autorização OAuth 2 compatíveis com o Adobe Experience Platform e sabe como configurar seu destino com suporte à autorização OAuth 2. Em seguida, você pode configurar o destino compatível com OAuth 2 usando o Destination SDK. Leia [Usar o Destination SDK para configurar seu destino](../../guides/configure-destination-instructions.md) para as próximas etapas.
+Agora você conhece os padrões de autorização OAuth 2 com suporte do [!DNL Adobe Experience Platform] e sabe como configurar seu destino com suporte à autorização OAuth 2. Em seguida, você pode configurar o destino compatível com OAuth 2 usando o Destination SDK. Leia [Usar o Destination SDK para configurar seu destino](../../guides/configure-destination-instructions.md) para as próximas etapas.

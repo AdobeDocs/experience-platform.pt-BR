@@ -1,18 +1,18 @@
 ---
 title: Conexão HubSpot
-description: O destino HubSpot permite gerenciar registros de contato na sua conta HubSpot.
+description: Use o destino HubSpot para gerenciar registros de contato na sua conta HubSpot.
 last-substantial-update: 2023-09-28T00:00:00Z
 exl-id: e2114bde-b7c3-43da-9f3a-919322000ef4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1619'
 ht-degree: 3%
 
 ---
 
 # [!DNL HubSpot] conexão
 
-[[!DNL HubSpot]](https://www.hubspot.com) é uma plataforma de CRM com todos os softwares, integrações e recursos necessários para conectar marketing, vendas, gerenciamento de conteúdo e atendimento ao cliente. Ele permite conectar seus dados, equipes e clientes em uma plataforma de CRM.
+[[!DNL HubSpot]](https://www.hubspot.com) é uma plataforma de CRM com todos os softwares, integrações e recursos necessários para conectar marketing, vendas, gerenciamento de conteúdo e atendimento ao cliente. Use-o para conectar seus dados, equipes e clientes em uma plataforma de CRM.
 
 Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aproveita a [[!DNL HubSpot] API de Contatos](https://developers.hubspot.com/docs/api/crm/contacts) para atualizar os contatos em [!DNL HubSpot] de um público-alvo existente da Experience Platform após a ativação.
 
@@ -20,7 +20,7 @@ As instruções para autenticar na sua instância do [!DNL HubSpot] estão mais 
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL HubSpot], veja um exemplo de caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL HubSpot], veja um exemplo de caso de uso que os clientes [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 Os contatos do [!DNL HubSpot] armazenam informações sobre as pessoas físicas que interagem com sua empresa. Sua equipe usa os contatos existentes no [!DNL HubSpot] para criar os públicos-alvo da Experience Platform. Após enviar esses públicos-alvo para [!DNL HubSpot], suas informações são atualizadas e cada contato recebe uma propriedade com seu valor como o nome do público-alvo que indica a qual público-alvo o contato pertence.
 
@@ -30,7 +30,7 @@ Consulte as seções abaixo para quaisquer pré-requisitos que você precise con
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL HubSpot], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL HubSpot], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) criados em [!DNL Experience Platform].
 
 Consulte a documentação do Experience Platform para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
@@ -60,7 +60,7 @@ Se você não tiver um aplicativo privado, siga a documentação para [Criar um 
 
 ## Medidas de proteção {#guardrails}
 
-[!DNL HubSpot] aplicativos privados estão sujeitos a [Limites de Taxa](https://developers.hubspot.com/docs/api/usage-details). O número de chamadas que seu aplicativo privado pode fazer se baseia na sua assinatura de conta do [!DNL HubSpot] e se você adquiriu o complemento API. Consulte também [Outros limites](https://developers.hubspot.com/docs/api/usage-details#other-limits).
+[!DNL HubSpot] aplicativos privados estão sujeitos a [Limites de Taxa](https://developers.hubspot.com/docs/api/usage-details). O número de chamadas que seu aplicativo privado pode fazer se baseia na sua assinatura de conta do [!DNL HubSpot] e se você adquiriu o complemento API. Além disso, consulte [Outros limites](https://developers.hubspot.com/docs/api/usage-details#other-limits).
 
 ## Identidades suportadas {#supported-identities}
 
@@ -81,7 +81,7 @@ Esse destino também suporta a ativação dos públicos-alvo descritos na tabela
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -94,7 +94,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -155,7 +155,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Mapear atributos e identidades {#map}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL HubSpot], passe pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
+Para enviar corretamente os dados do público-alvo de [!DNL Adobe Experience Platform] para o destino [!DNL HubSpot], você deve seguir para a etapa de mapeamento do campo. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL HubSpot], siga as etapas abaixo:
 
@@ -207,7 +207,7 @@ Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecio
 
 Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
-1. Faça logon no site [!DNL HubSpot] e navegue até a página **[!UICONTROL Contacts]** para verificar o status do público-alvo. Esta lista pode ser configurada para exibir colunas para as propriedades personalizadas criadas com o nome do público-alvo, cujo valor são os status do público-alvo.
+1. Vá para o site [!DNL HubSpot] e navegue até a página **[!UICONTROL Contacts]** para verificar os status do público-alvo. Esta lista pode ser configurada para exibir colunas para as propriedades personalizadas criadas com o nome do público-alvo, cujo valor são os status do público-alvo.
    ![Captura de tela da interface do HubSpot mostrando a página Contatos com cabeçalhos de coluna mostrando o nome do público-alvo e os status das células do público-alvo](../../assets/catalog/crm/hubspot/contacts.png)
 
 1. Como alternativa, você pode detalhar uma página **[!UICONTROL Person]** individual e navegar até as propriedades que exibem o nome do público-alvo e os status do público-alvo.

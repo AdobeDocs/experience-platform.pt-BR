@@ -5,9 +5,9 @@ title: Ativar públicos para destinos em lote por meio da API de ativação ad-h
 description: Este artigo ilustra o fluxo de trabalho completo para ativar públicos-alvo por meio da API de ativação ad-hoc, incluindo os trabalhos de segmentação que ocorrem antes da ativação.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Um hotel espera intempéries nos dias seguintes, e a equipe quer informar os hó
 
 ### Teste de integração {#integration-testing}
 
-Os gerentes de TI podem usar a API de ativação ad-hoc do Experience Platform para exportar públicos-alvo sob demanda, para que possam testar a integração personalizada com o Adobe Experience Platform e garantir que tudo esteja funcionando corretamente.
+Os gerentes de TI podem usar a API de ativação ad-hoc do Experience Platform para exportar públicos-alvo sob demanda, para que possam testar a integração personalizada com o [!DNL Adobe Experience Platform] e garantir que tudo esteja funcionando corretamente.
 
 ## Medidas de proteção {#guardrails}
 
@@ -54,14 +54,14 @@ Lembre-se das seguintes medidas de proteção ao usar a API de ativação ad-hoc
 
 ## Considerações de segmentação {#segmentation-considerations}
 
-O Adobe Experience Platform executa tarefas de segmentação programadas uma vez a cada 24 horas. A API de ativação ad-hoc é executada com base nos resultados de segmentação mais recentes.
+[!DNL Adobe Experience Platform] executa trabalhos de segmentação agendados uma vez a cada 24 horas. A API de ativação ad-hoc é executada com base nos resultados de segmentação mais recentes.
 
 ## Etapa 1: Pré-requisitos {#prerequisites}
 
-Antes de fazer chamadas para as APIs do Adobe Experience Platform, verifique se os seguintes pré-requisitos são atendidos:
+Antes de fazer chamadas para as APIs do [!DNL Adobe Experience Platform], verifique se você atende aos seguintes pré-requisitos:
 
-* Você tem uma conta de organização com acesso ao Adobe Experience Platform.
-* Sua conta do Experience Platform tem as funções `developer` e `user` habilitadas para o perfil de produto API do Adobe Experience Platform. Contate o administrador do [Admin Console](../../access-control/home.md) para habilitar essas funções para sua conta.
+* Você tem uma conta de organização com acesso a [!DNL Adobe Experience Platform].
+* Sua conta do Experience Platform tem as funções `developer` e `user` habilitadas para o perfil de produto API [!DNL Adobe Experience Platform]. Contate o administrador do [Admin Console](../../access-control/home.md) para habilitar essas funções para sua conta.
 * Você tem uma Adobe ID. Se você não tiver uma Adobe ID, vá para a [Adobe Developer Console](https://developer.adobe.com/console) e crie uma nova conta.
 
 ## Etapa 2: Coletar credenciais {#credentials}
@@ -107,7 +107,7 @@ Siga as instruções descritas [aqui](../../segmentation/api/export-jobs.md#retr
 
 Na resposta, procure o primeiro registro que inclui a propriedade de schema abaixo.
 
-```
+```json
 "schema":{
    "name":"_xdm.context.profile"
 }
@@ -120,7 +120,7 @@ A ID do trabalho de exportação de público-alvo está na propriedade `id`, con
 
 ## Etapa 5: Executar o trabalho de ativação ad-hoc {#activation-job}
 
-O Adobe Experience Platform executa tarefas de segmentação programadas uma vez a cada 24 horas. A API de ativação ad-hoc é executada com base nos resultados de segmentação mais recentes.
+[!DNL Adobe Experience Platform] executa trabalhos de segmentação agendados uma vez a cada 24 horas. A API de ativação ad-hoc é executada com base nos resultados de segmentação mais recentes.
 
 >[!IMPORTANT]
 >

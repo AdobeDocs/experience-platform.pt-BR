@@ -5,17 +5,17 @@ solution: Experience Platform
 title: Monitorar fluxos de dados
 type: Tutorial
 exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 18%
+source-wordcount: '126'
+ht-degree: 19%
 
 ---
 
 # Monitorar fluxos de dados
 
-[!UICONTROL Destinos] permitem que você ative seus dados do Adobe Experience Platform para inúmeros parceiros externos.
+Use o [!UICONTROL Destinations] para ativar seus dados do [!DNL Adobe Experience Platform] para inúmeros parceiros externos.
 
 Os fluxos de dados são uma representação de trabalhos de dados que movem os dados através de [!DNL Experience Platform]. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para os conjuntos de dados de destino, em que são utilizados por [!DNL Identity Service] e [!DNL Real-Time Customer Profile] antes de serem ativados para os destinos.
 
-Para saber mais sobre o monitoramento de fluxos de dados para destinos, leia o [Tutorial de monitoramento de fluxos de dados para destinos na interface do usuário](../../dataflows/ui/monitor-destinations.md).
+Para saber mais sobre o monitoramento de fluxos de dados para destinos, leia o [Tutorial de monitoramento de fluxos de dados para destinos na interface ](../../dataflows/ui/monitor-destinations.md).

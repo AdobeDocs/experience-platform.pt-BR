@@ -2,16 +2,16 @@
 description: O serviço de destinos no Adobe Experience Platform usa endpoints de configuração para vários componentes que criam a funcionalidade de destinos. Saiba como esses componentes combinados permitem que o Experience Platform se conecte a parceiros de destino, envie mensagens personalizadas e ative dados de perfil em todo o ecossistema digital.
 title: Opções de configuração no Destination SDK
 exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '817'
 ht-degree: 0%
 
 ---
 
 # Opções de configuração no Destination SDK
 
-O serviço de destinos no Adobe Experience Platform usa endpoints de configuração para vários componentes que criam a funcionalidade de destinos.
+O serviço de destinos em [!DNL Adobe Experience Platform] usa pontos de extremidade de configuração para vários componentes que criam a funcionalidade de destinos.
 
 Combinados, esses componentes permitem que o Experience Platform se conecte às plataformas de destino, envie mensagens personalizadas, exporte arquivos personalizados e ative dados de perfil no ecossistema digital.
 
@@ -38,7 +38,7 @@ Para destinos baseados em arquivo, essa configuração também inclui a formata�
 
 ## Configuração de destino {#destination-configuration}
 
-Esse endpoint de configuração contém informações básicas e avançadas sobre o destino. Por exemplo, é aqui que você especifica os tipos de identidade que seu destino pode suportar, o formato desejado de arquivos exportados (para destinos baseados em arquivos) e vários atributos de interface do usuário para seu cartão de destino na interface do usuário do Adobe Experience Platform.
+Esse endpoint de configuração contém informações básicas e avançadas sobre o destino. Por exemplo, é aqui que você especifica os tipos de identidade que seu destino pode suportar, o formato desejado de arquivos exportados (para destinos baseados em arquivos) e vários atributos de interface do usuário para seu cartão de destino na interface do usuário do [!DNL Adobe Experience Platform].
 
 Consulte a documentação abaixo para obter detalhes sobre cada um dos componentes da configuração de destino. Você pode configurar as funcionalidades descritas abaixo por meio do [endpoint de destinos](../authoring-api/destination-configuration/create-destination-configuration.md).
 
@@ -56,8 +56,8 @@ Consulte a documentação abaixo para obter detalhes sobre cada um dos component
 
 ## Configuração de metadados de público {#audience-metadata-configuration}
 
-Esse componente permite configurar como os públicos-alvo são criados, atualizados ou excluídos de forma programática no destino. Para destinos baseados em arquivo, permite configurar uma notificação sempre que os arquivos forem entregues com êxito ao destino. Você pode configurar esta funcionalidade por meio do [endpoint de templates de público-alvo](../metadata-api/create-audience-template.md).
+Use este componente para configurar como os públicos-alvo são criados, atualizados ou excluídos de forma programática no seu destino. Para destinos baseados em arquivo, use-o para configurar uma notificação sempre que os arquivos forem entregues com êxito ao seu destino. Você pode configurar esta funcionalidade por meio do [endpoint de templates de público-alvo](../metadata-api/create-audience-template.md).
 
 ## Próximas etapas {#next-steps}
 
-Após a leitura deste artigo, você tem uma visão geral da funcionalidade fornecida pelo Destination SDK e quais páginas devem ser lidas para obter mais informações sobre configurações específicas. Em seguida, você pode ler os guias que incluem todas as etapas para [configurar um fluxo](../guides/configure-destination-instructions.md) ou um [destino baseado em arquivo](../guides/configure-file-based-destination-instructions.md) usando o Destination SDK.
+Agora você tem uma visão geral da funcionalidade fornecida pelo Destination SDK e quais páginas ler para obter mais informações sobre configurações específicas. Em seguida, você pode ler os guias que incluem todas as etapas para [configurar um fluxo](../guides/configure-destination-instructions.md) ou um [destino baseado em arquivo](../guides/configure-file-based-destination-instructions.md) usando o Destination SDK.

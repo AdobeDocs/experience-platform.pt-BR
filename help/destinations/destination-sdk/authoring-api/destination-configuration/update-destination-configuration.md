@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para atualizar uma configuração de destino existente por meio do Adobe Experience Platform Destination SDK.
 title: Atualizar uma configuração de destino
 exl-id: d7f18689-9806-4f73-a63a-fa112569819c
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '368'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ Para obter uma descrição detalhada dos recursos de uma configuração de desti
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de configuração de destino {#get-started}
 

@@ -1,11 +1,11 @@
 ---
 title: (API) Conexão Oracle Eloqua
-description: O destino (API) do Oracle Eloqua permite exportar os dados da conta e ativá-los no Oracle Eloqua para atender às suas necessidades comerciais.
+description: Use o destino (API) do Oracle Eloqua para exportar os dados de sua conta e ativá-los no Oracle Eloqua para atender às suas necessidades comerciais.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2118'
 ht-degree: 4%
 
 ---
@@ -15,21 +15,21 @@ ht-degree: 4%
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/cx/marketing/automation/) permite que os profissionais de marketing planejem e executem campanhas enquanto fornecem uma experiência personalizada para seus clientes potenciais. Com o gerenciamento integrado de leads e a fácil criação de campanhas, o modelo ajuda os profissionais de marketing a engajarem o público-alvo certo na hora certa da jornada do comprador e é dimensionado elegantemente para alcançar os públicos-alvo em todos os canais, incluindo email, pesquisa de exibição, vídeo e dispositivos móveis. As equipes de vendas podem fechar mais negócios em uma taxa mais rápida, aumentando o ROI do marketing por meio do insight em tempo real.
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aproveita a operação [Atualizar um contato](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) da API REST [!DNL Oracle Eloqua], que permite **atualizar identidades** de um público para [!DNL Oracle Eloqua].
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) aproveita a operação [Atualizar um contato](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/op-api-rest-1.0-data-contact-id-put.html) da API REST [!DNL Oracle Eloqua] para **atualizar identidades** de um público para [!DNL Oracle Eloqua].
 
 [!DNL Oracle Eloqua] usa [Autenticação Básica](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html) para se comunicar com a API REST [!DNL Oracle Eloqua]. As instruções para autenticar na sua instância do [!DNL Oracle Eloqua] estão mais abaixo, na seção [Autenticar no destino](#authenticate).
 
 ## Casos de uso {#use-cases}
 
-O departamento de marketing de uma plataforma online deseja transmitir uma campanha de marketing por email para um público-alvo com curadoria de clientes potenciais. A equipe de marketing da plataforma pode atualizar as informações de clientes potenciais existentes por meio do Adobe Experience Platform, criar públicos a partir de seus próprios dados offline e enviar esses públicos para [!DNL Oracle Eloqua], que pode ser usado para enviar o email da campanha de marketing.
+O departamento de marketing de uma plataforma online deseja transmitir uma campanha de marketing por email para um público-alvo com curadoria de clientes potenciais. A equipe de marketing da plataforma pode atualizar as informações de cliente potencial existentes por meio do [!DNL Adobe Experience Platform], criar públicos a partir de seus próprios dados offline e enviar esses públicos para o [!DNL Oracle Eloqua], que pode ser usado para enviar o email da campanha de marketing.
 
 ## Pré-requisitos {#prerequisites}
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL Oracle Eloqua], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL Oracle Eloqua], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criados em [!DNL Experience Platform].
 
-Consulte a documentação do Experience Platform para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
+Consulte a documentação do Experience Platform para [Grupo de campos de esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
 ### [!DNL Oracle Eloqua] pré-requisitos {#prerequisites-destination}
 
@@ -82,7 +82,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -93,7 +93,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -168,7 +168,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Oracle Eloqua], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
+Para enviar corretamente os dados de público-alvo de [!DNL Adobe Experience Platform] para o destino [!DNL Oracle Eloqua], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
 
 Para mapear seus campos XDM para os campos de destino [!DNL Oracle Eloqua], siga estas etapas:
 
@@ -233,7 +233,7 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 1. Monitore o resumo do público-alvo e verifique se a contagem de perfis corresponde à contagem no segmento.
    ![Exemplo de captura de tela da interface do Experience Platform mostrando o Segmento.](../../assets/catalog/email-marketing/oracle-eloqua-api/segment.png)
 
-1. Faça logon no site do [!DNL Oracle Eloqua] e navegue até a página **[!UICONTROL Contacts Overview]** para verificar se os perfis do público-alvo foram adicionados. Para ver o status do público-alvo, vá para uma página **[!UICONTROL Contact Detail]** e verifique se o campo de contato com o nome do público-alvo selecionado como seu prefixo foi criado.
+1. Vá para o site do [!DNL Oracle Eloqua] e navegue até a página **[!UICONTROL Contacts Overview]** para verificar se os perfis do público-alvo foram adicionados. Para ver o status do público-alvo, vá para uma página **[!UICONTROL Contact Detail]** e verifique se o campo de contato com o nome do público-alvo selecionado como seu prefixo foi criado.
 
 ![Captura de tela da interface do Oracle Eloqua mostrando a página Detalhes do Contato com o campo de contato personalizado criado com o nome do público-alvo.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 

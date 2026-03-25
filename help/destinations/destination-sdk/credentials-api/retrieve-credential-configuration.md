@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para recuperar uma configuração de credencial por meio do Adobe Experience Platform Destination SDK.
 title: Recuperar uma configuração de credencial
 exl-id: cec55073-6e2f-4412-a9dd-1aeb445279c0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '497'
+source-wordcount: '496'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Ao usar um sistema de autenticação global, você deve definir `"authentication
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de credenciais {#get-started}
 

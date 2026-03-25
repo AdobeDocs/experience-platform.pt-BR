@@ -5,9 +5,9 @@ title: Excluir um fluxo de dados de destino usando a API do Serviço de fluxo
 type: Tutorial
 description: Saiba como excluir fluxos de dados para destinos em lote e de transmissão usando a API de serviço de fluxo.
 exl-id: fa40cf97-46c6-4a10-b53c-30bed2dd1b2d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '552'
 ht-degree: 19%
 
 ---
@@ -22,9 +22,9 @@ Este tutorial aborda as etapas para excluir fluxos de dados para destinos em lot
 
 Este tutorial requer que você tenha uma ID de fluxo válida. Se você não tiver uma ID de fluxo válida, selecione seu destino escolhido no [catálogo de destinos](../catalog/overview.md) e siga as etapas descritas para [conectar-se ao destino](../ui/connect-destination.md) e [ativar dados](../ui/activation-overview.md) antes de tentar este tutorial.
 
-Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do [!DNL Adobe Experience Platform]:
 
-* [Destinos](../home.md): [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+* [Destinos](../home.md): [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua dos dados de [!DNL Adobe Experience Platform]. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para excluir com êxito um fluxo de dados usando a API [!DNL Flow Service].
@@ -90,7 +90,7 @@ Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de e
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você usou com êxito a API [!DNL Flow Service] para excluir um fluxo de dados existente para um destino.
+Você usou com êxito a API [!DNL Flow Service] para excluir um fluxo de dados existente para um destino.
 
 Para obter etapas sobre como executar essas operações usando a interface do usuário, consulte o tutorial em [exclusão de fluxos de dados na interface](../ui/delete-destinations.md).
 

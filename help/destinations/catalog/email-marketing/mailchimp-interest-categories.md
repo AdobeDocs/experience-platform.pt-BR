@@ -3,9 +3,9 @@ title: Categorias de interesse do Mailchimp
 description: O Mailchimp (também conhecido como Intuit Mailchimp) é uma plataforma de automação de marketing popular e um serviço de marketing por email usado pelas empresas para gerenciar e conversar com contatos (clientes, clientes ou outras partes interessadas) usando listas de endereçamento e campanhas de marketing por email. Use esse conector para classificar seus contatos com base em seus interesses e preferências.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: bdce8295-7305-4d54-81c1-7fa3e580ce70
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2407'
+source-wordcount: '2390'
 ht-degree: 3%
 
 ---
@@ -24,7 +24,7 @@ Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) usa 
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Mailchimp Interest Categories], veja um exemplo de caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Mailchimp Interest Categories], veja um exemplo de caso de uso que os clientes [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 ### Enviar emails para contatos de campanhas de marketing {#use-case-send-emails}
 
@@ -36,7 +36,7 @@ Consulte as seções abaixo para quaisquer pré-requisitos que você precise con
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL Mailchimp Interest Categories], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL Mailchimp Interest Categories], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criados em [!DNL Experience Platform].
 
 ### Pré-requisitos para o destino [!DNL Mailchimp Interest Categories] {#prerequisites-destination}
 
@@ -72,7 +72,7 @@ Se você precisar de mais orientação, consulte a [[!DNL Mailchimp] documentaç
 
 ### Medidas de proteção {#guardrails}
 
-Cada público-alvo do [!DNL Mailchimp] pode conter até 60 nomes de grupo (ou categorias de interesse) em um único grupo ou em vários grupos do mesmo público-alvo. Consulte [!DNL Mailchimp] [grupos](https://mailchimp.com/help/getting-started-with-groups/) para obter os esclarecimentos necessários. Ao atingir esse limite, você recebe uma mensagem `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` como resposta de erro da API [!DNL Mailchimp].
+Cada público-alvo do [!DNL Mailchimp] pode conter até 60 nomes de grupo (ou categorias de interesse) em um único grupo ou em vários grupos do mesmo público-alvo. Consulte [!DNL Mailchimp] [grupos](https://mailchimp.com/help/getting-started-with-groups/) para quaisquer esclarecimentos necessários. Ao atingir esse limite, você recebe uma mensagem `400 BAD_REQUEST Cannot have more than 60 interests per list (Across all categories)` como resposta de erro da API [!DNL Mailchimp].
 
 Além disso, consulte os [!DNL Mailchimp] [limites de taxa](https://mailchimp.com/developer/marketing/docs/fundamentals/#api-limits) para obter informações detalhadas sobre os limites impostos pela API [!DNL Mailchimp].
 
@@ -93,7 +93,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -181,7 +181,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Mailchimp Interest Categories], passe pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
+Para enviar corretamente os dados do público-alvo de [!DNL Adobe Experience Platform] para o destino [!DNL Mailchimp Interest Categories], você deve seguir para a etapa de mapeamento do campo. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL Mailchimp Interest Categories], siga as etapas abaixo:
 
@@ -222,7 +222,7 @@ Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecio
 
 Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
-* Faça logon em sua conta do [[!DNL Mailchimp]](https://login.mailchimp.com/). Navegue até a página **[!DNL Audience]**. Em seguida, expanda o menu **[!DNL Manage Contacts]** e selecione **[!DNL Groups]**.
+* Vá para sua conta do [[!DNL Mailchimp]](https://login.mailchimp.com/). Navegue até a página **[!DNL Audience]**. Em seguida, expanda o menu **[!DNL Manage Contacts]** e selecione **[!DNL Groups]**.
 
 ![Captura de tela da interface do usuário do Mailchimp mostrando a página Grupo de público-alvo.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 

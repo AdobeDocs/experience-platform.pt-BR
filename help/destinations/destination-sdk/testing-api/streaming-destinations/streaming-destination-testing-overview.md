@@ -2,9 +2,9 @@
 description: Saiba como usar a API de teste de destino para testar a configuração de destino de transmissão antes de publicá-la.
 title: Visão geral da API de teste de destino de streaming
 exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '512'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Com essa ferramenta, após configurar seu destino, é possível:
 
 Você pode fazer chamadas para o endpoint da API de teste de destino com ou sem adicionar perfis na solicitação.
 
-Se você não adicionar perfis na solicitação, o Adobe os gerará internamente e os adicionará à solicitação. Para gerar perfis a serem usados nesta solicitação, consulte a [Referência da API de geração de perfil de amostra](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Você precisa gerar perfis com base no esquema XDM de origem, conforme mostrado na [referência de API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Observe que o esquema de origem é o [esquema de união](../../../../profile/ui/union-schema.md) da sandbox que você está usando.
+Se você não adicionar perfis na solicitação, o Adobe os gerará internamente e os adicionará à solicitação. Se você deseja gerar perfis para usar nesta solicitação, consulte a [Referência da API de geração de perfil de amostra](../../testing-api/streaming-destinations/sample-profile-generation-api.md). Você precisa gerar perfis com base no esquema XDM de origem, conforme mostrado na [referência de API](../../testing-api/streaming-destinations/sample-profile-generation-api.md#generate-sample-profiles-source-schema). Observe que o esquema de origem é o [esquema de união](../../../../profile/ui/union-schema.md) da sandbox que você está usando.
 
 A resposta contém o resultado do processamento da solicitação de destino. A solicitação inclui três seções principais:
 

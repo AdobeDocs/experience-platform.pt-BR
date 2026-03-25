@@ -2,9 +2,9 @@
 title: Algólia
 description: Use esse conector para ativar públicos na Algolia para personalização e uso em pesquisas e recomendações. Em seguida, você pode usar o conector de origem do Perfil de usuário da Algolia para importar os perfis para o Real-Time CDP e criar públicos-alvo avançados.
 exl-id: 116a051a-1b47-4789-826e-c8f0fee60def
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1108'
 ht-degree: 4%
 
 ---
@@ -17,27 +17,27 @@ ht-degree: 4%
 >
 >O conector de destino [!DNL Algolia] e a página de documentação são criados e mantidos pela equipe do Algolia Integration Services. Para consultas ou solicitações de atualização, contate-os em [adobe-algolia-solutions@algolia.com](mailto:adobe-algolia-solutions@algolia.com).
 
-Use a conexão de destino [!DNL Algolia] para enviar públicos-alvo da Adobe Experience Platform para a Algólia para pesquisa e recomendações personalizadas. Antes de usar o conector de destino [!DNL Algolia], você deve primeiro configurar o conector de origem [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md). Durante o tutorial de configuração do conector de origem, você criará a identidade do token de usuário da Algolia. Essa identidade é necessária para mapeamento ao configurar o conector de destino.
+Use a conexão de destino [!DNL Algolia] para enviar [!DNL Adobe Experience Platform] públicos-alvo para a Algólia para pesquisa e recomendações personalizadas. Antes de usar o conector de destino [!DNL Algolia], você deve primeiro configurar o conector de origem [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md). Durante o tutorial de configuração do conector de origem, você criará a identidade do token de usuário da Algolia. Essa identidade é necessária para mapeamento ao configurar o conector de destino.
 
-Este tutorial fornece etapas para criar uma conexão de destino e um fluxo de dados do [!DNL Algolia] usando a interface do usuário do Adobe Experience Platform.
+Este tutorial fornece etapas para criar uma conexão de destino e um fluxo de dados do [!DNL Algolia] usando a interface do usuário do [!DNL Adobe Experience Platform].
 
 ![O catálogo de destino com o destino Algolia.](../../assets/catalog/personalization/algolia/catalog.png)
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Algolia], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Algolia], veja a seguir exemplos de casos de uso que os clientes do [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 ### Consistência do Personalization {#personalization-consistency}
 
 Use esse conector de destino para fornecer uma personalização consistente em todo o site, desde a home page até a pesquisa.
 
-Por exemplo, como profissional de marketing, você pode querer criar públicos-alvo avançados no Adobe Experience Platform a partir de várias fontes de dados de usuários, incluindo a Algolia. Você pode usar o conector de destino [!DNL Algolia] para compartilhar os públicos para estratégias de direcionamento, resultando em um aumento na personalização e conversão da campanha.
+Por exemplo, como profissional de marketing, você pode querer criar públicos-alvo avançados no [!DNL Adobe Experience Platform] a partir de fontes de dados de vários usuários, incluindo a Algólia. Você pode usar o conector de destino [!DNL Algolia] para compartilhar os públicos para estratégias de direcionamento, resultando em um aumento na personalização e conversão da campanha.
 
 Para implementar esse caso de uso, você deve usar os conectores de origem [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) e de destino [!DNL Algolia].
 
-Você começaria importando seus perfis de usuário existentes do [!DNL Algolia] para o Adobe Experience Platform Real-Time CDP e outras fontes para começar a criar públicos avançados com o conector de origem. Os profissionais de marketing criariam públicos-alvo usando os dados de perfil que podem ser enviados para a Algolia para personalização de pesquisa e recomendação.
+Você começaria importando seus perfis de usuário existentes do [!DNL Algolia] para o [!DNL Adobe Experience Platform] [!DNL Real-Time CDP] e outras fontes para começar a criar públicos avançados com o conector de origem. Os profissionais de marketing criariam públicos-alvo usando os dados de perfil que podem ser enviados para a Algolia para personalização de pesquisa e recomendação.
 
-Em seguida, use o conector de origem [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) correspondente para assimilar e aumentar os perfis do cliente de volta na Real-Time CDP.
+Em seguida, use o conector de origem [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) correspondente para assimilar e aumentar os perfis do cliente de volta para [!DNL Real-Time CDP].
 
 ## Pré-requisitos {#prerequisites}
 
@@ -63,7 +63,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 | Origem do público | Suportado | Descrição |
 |---------|---------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -133,9 +133,9 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 >[!IMPORTANT]
 >
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
->* Para exportar identidades, você precisa da [permissão de controle de acesso](https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/home#permissions) para Exibir Gráfico de Identidade.
+>* Para exportar identidades, você precisa da [permissão de controle de acesso](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) para Exibir Gráfico de Identidade.
 
-Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obter instruções sobre como ativar públicos-alvo para este destino.
+Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-alvo de streaming](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) para obter instruções sobre como ativar públicos-alvo para este destino.
 
 ### Mapear atributos e identidades {#mapping-attributes-identities}
 
@@ -145,7 +145,7 @@ Durante a [!UICONTROL Mapping step], você deve mapear a identidade de origem Al
 
 ## Validar exportação de dados {#exported-data}
 
-Para verificar se os públicos-alvo foram exportados com êxito para os perfis de usuário, verifique o painel [!DNL Algolia], navegue até **[!UICONTROL Advanced Personalization]** e clique em **[!UICONTROL User Inspector]**. Encontre um perfil de usuário associado ao público-alvo exportado do Adobe Experience Platform e procure-o no Inspetor de usuários. Você verá a ID de público-alvo na seção de segmentos.
+Para verificar se os públicos-alvo foram exportados com êxito para os perfis de usuário, verifique o painel [!DNL Algolia], navegue até **[!UICONTROL Advanced Personalization]** e clique em **[!UICONTROL User Inspector]**. Encontre um perfil de usuário associado ao público-alvo [!DNL Adobe Experience Platform] exportado e procure-o no Inspetor de usuários. Você verá a ID de público-alvo na seção de segmentos.
 
 ![Inspetor de Usuário da Algólia](../../assets/catalog/personalization/algolia/verify-segment-user-profile.png)
 
@@ -163,4 +163,4 @@ Consulte a documentação do [!DNL Algolia] a seguir para obter mais informaçõ
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você criou com êxito um fluxo de dados para exportar públicos do Experience Platform para o aplicativo [!DNL Algolia]. Para obter mais informações sobre a plataforma [!DNL Algolia], consulte a [documentação sobre a Algolia](https://www.algolia.com/doc/).
+Você criou com êxito um fluxo de dados para exportar públicos do Experience Platform para o aplicativo [!DNL Algolia]. Para obter mais informações sobre a plataforma [!DNL Algolia], consulte a [documentação sobre a Algolia](https://www.algolia.com/doc/).

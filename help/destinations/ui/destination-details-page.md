@@ -3,9 +3,9 @@ keywords: destinos;destino;página detalhes de destinos;página detalhes de dest
 title: Exibir detalhes do destino
 description: A página de detalhes de um destino individual fornece uma visão geral dos detalhes do destino. Os detalhes do destino incluem o nome do destino, a ID, os públicos mapeados para o destino e os controles para editar a ativação e habilitar e desabilitar o fluxo de dados.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1206'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 ## Visão geral {#overview}
 
-Na interface do usuário do Adobe Experience Platform, é possível visualizar e monitorar os atributos e as atividades dos destinos. Esses detalhes incluem o nome e a ID do destino, controles para ativar ou desativar os destinos e muito mais. Os detalhes também incluem métricas para registros de perfis ativados, identidades ativadas, com falha e excluídas, e um histórico de execuções de fluxo de dados.
+Na interface do usuário do [!DNL Adobe Experience Platform], é possível exibir e monitorar os atributos e as atividades dos seus destinos. Esses detalhes incluem o nome e a ID do destino, controles para ativar ou desativar os destinos e muito mais. Os detalhes também incluem métricas para registros de perfis ativados, identidades ativadas, com falha e excluídas, e um histórico de execuções de fluxo de dados.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Na interface do usuário do Adobe Experience Platform, é possível visualizar e
 
 Siga as etapas abaixo para exibir mais detalhes sobre um destino existente. Você pode descobrir a ID de destino de um destino, o usuário que criou o destino, quando ele foi criado e outras informações.
 
-1. Faça logon na [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinations]** na barra de navegação esquerda. Selecione **[!UICONTROL Browse]** no cabeçalho superior para exibir seus destinos existentes.
+1. Vá para a [Interface do usuário do Experience Platform](https://platform.adobe.com/) e selecione **[!UICONTROL Destinations]** na barra de navegação esquerda. Selecione **[!UICONTROL Browse]** no cabeçalho superior para exibir seus destinos existentes.
 
    ![Procurar destinos](../assets/ui/details-page/browse-destinations.png)
 
@@ -55,7 +55,7 @@ A tabela a seguir abrange os controles e os detalhes fornecidos pelo painel dire
 | Item do painel direito | Descrição |
 | --- | --- |
 | [!UICONTROL Activate audiences] | Selecione este controle para editar quais públicos-alvo estão mapeados para o destino, atualizar agendas de exportação ou adicionar e remover atributos e identidades mapeados. Consulte os guias em [ativando dados de público-alvo para destinos de transmissão de público-alvo](./activate-segment-streaming-destinations.md), [ativando dados de público-alvo para destinos baseados em perfil em lote](./activate-batch-profile-destinations.md) e [ativando dados de público para destinos baseados em perfil de transmissão](./activate-streaming-profile-destinations.md) para obter mais informações. |
-| [!UICONTROL Delete] | Permite excluir esse fluxo de dados e desmapeia os públicos-alvo que foram ativados anteriormente, se houver. |
+| [!UICONTROL Delete] | Exclui esse fluxo de dados e cancela o mapeamento de qualquer público ativado anteriormente. |
 | [!UICONTROL Destination name] | Este campo pode ser editado para atualizar o nome do destino. |
 | [!UICONTROL Description] | Este campo pode ser editado para atualizar ou adicionar uma descrição opcional ao destino. |
 | [!UICONTROL Destination] | Representa a plataforma de destino para a qual os públicos-alvo são enviados. Consulte o [catálogo de destinos](../catalog/overview.md) para obter mais informações. |
@@ -158,7 +158,7 @@ Para editar o agendamento de ativação existente de vários públicos-alvo ao m
 
 >[!NOTE]
 >
->Para obter detalhes sobre como explorar a página de detalhes de um público-alvo, consulte a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md#segment-details).
+>Para obter detalhes sobre a página de detalhes do público, consulte a [Visão geral do Portal de público-alvo](../../segmentation/ui/audience-portal.md#audience-details).
 
 ### Editar nomes de arquivos para vários públicos exportados para destinos em lote {#bulk-edit-file-names}
 

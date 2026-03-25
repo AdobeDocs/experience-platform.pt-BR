@@ -2,9 +2,9 @@
 description: Use modelos de metadados de público-alvo para criar, atualizar ou excluir públicos-alvo no destino de forma programática. O Adobe fornece um modelo de metadados de público-alvo extensível, que pode ser configurado com base nas especificações da API de marketing. Depois de definir, testar e enviar o modelo, ele será usado pelo Adobe para estruturar as chamadas de API para o seu destino.
 title: Gerenciamento de metadados de público
 exl-id: 795e8adb-c595-4ac5-8d1a-7940608d01cd
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1270'
 ht-degree: 0%
 
 ---
@@ -60,13 +60,13 @@ A tabela abaixo descreve os eventos compatíveis com modelos de metadados de pú
 
 | Seção Modelo | Descrição |
 |--- |--- |
-| `create` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para a API, criar segmentos/públicos-alvo de forma programática na plataforma e sincronizar as informações de volta para o Adobe Experience Platform. |
-| `update` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para a sua API, atualizar programaticamente segmentos/públicos-alvo na sua plataforma e sincronizar as informações de volta para o Adobe Experience Platform. |
+| `create` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API, criar segmentos/públicos-alvo programaticamente em sua plataforma e sincronizar as informações de volta para [!DNL Adobe Experience Platform]. |
+| `update` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API, atualizar programaticamente segmentos/públicos-alvo na sua plataforma e sincronizar as informações de volta para [!DNL Adobe Experience Platform]. |
 | `delete` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP na API e excluir segmentos/públicos de forma programática na plataforma. |
 | `validate` | Executa validações para qualquer campo na configuração do modelo antes de chamar a API do parceiro. Por exemplo, você pode validar se a ID da conta do usuário foi inserida corretamente. |
 | `notify` | Aplica-se somente a destinos baseados em arquivo. Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API e notificá-lo de exportações de arquivos bem-sucedidas. |
-| `createDestination` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API, criar programaticamente um fluxo de dados em sua plataforma e sincronizar as informações de volta para o Adobe Experience Platform. |
-| `updateDestination` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API, atualizar programaticamente um fluxo de dados em sua plataforma e sincronizar as informações de volta para o Adobe Experience Platform. |
+| `createDestination` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API, para criar programaticamente um fluxo de dados em sua plataforma e sincronizar as informações de volta para [!DNL Adobe Experience Platform]. |
+| `updateDestination` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API, atualizar programaticamente um fluxo de dados em sua plataforma e sincronizar as informações de volta para [!DNL Adobe Experience Platform]. |
 | `deleteDestination` | Inclui todos os componentes necessários (URL, método HTTP, cabeçalhos, corpo da solicitação e resposta) para fazer uma chamada HTTP para sua API e excluir programaticamente um fluxo de dados de sua plataforma. |
 
 {style="table-layout:auto"}
@@ -546,20 +546,20 @@ Para transmitir informações como IDs de público-alvo, tokens de acesso, mensa
 
 | Macro | Descrição |
 |--- |--- |
-| `{{segment.alias}}` | Permite acessar o alias do público-alvo no Experience Platform. |
-| `{{segment.name}}` | Permite acessar o nome do público no Experience Platform. |
-| `{{segment.id}}` | Permite acessar a ID de público-alvo no Experience Platform. |
-| `{{customerData.accountId}}` | Permite acessar o campo de ID da conta que você configurou na configuração de destino. |
-| `{{oauth2ServiceAccessToken}}` | Permite gerar dinamicamente um token de acesso com base na configuração do OAuth 2. |
-| `{{authData.accessToken}}` | Permite passar o token de acesso para o endpoint da API. Use `{{authData.accessToken}}` se a Experience Platform precisar usar tokens sem expiração para se conectar ao seu destino, caso contrário, use `{{oauth2ServiceAccessToken}}` para gerar um token de acesso. |
+| `{{segment.alias}}` | Acessa o alias do público-alvo no Experience Platform. |
+| `{{segment.name}}` | Acessa o nome do público-alvo no Experience Platform. |
+| `{{segment.id}}` | Acessa a ID de público-alvo no Experience Platform. |
+| `{{customerData.accountId}}` | Acessa o campo de ID da conta definido na configuração de destino. |
+| `{{oauth2ServiceAccessToken}}` | Gera dinamicamente um token de acesso com base na configuração do OAuth 2. |
+| `{{authData.accessToken}}` | Passa o token de acesso para o endpoint da API. Use `{{authData.accessToken}}` se a Experience Platform precisar usar tokens sem expiração para se conectar ao seu destino, caso contrário, use `{{oauth2ServiceAccessToken}}` para gerar um token de acesso. |
 | `{{body.segments[0].segment.id}}` | Retorna o identificador exclusivo do público criado, como o valor da chave `externalAudienceId`. |
 | `{{error.message}}` | Retorna uma mensagem de erro que será exibida aos usuários na interface do usuário do Experience Platform. |
-| `{{{segmentEnrichmentAttributes}}}` | Permite acessar todos os atributos de enriquecimento para um público-alvo específico.  Esta macro tem suporte nos eventos `create`, `update` e `delete`. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |
+| `{{{segmentEnrichmentAttributes}}}` | Acessa todos os atributos de enriquecimento para um público-alvo específico.  Esta macro tem suporte nos eventos `create`, `update` e `delete`. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |
 | `{{destination.name}}` | Retorna o nome do seu destino. |
 | `{{destination.sandboxName}}` | Retorna o nome da sandbox da Experience Platform em que o destino está configurado. |
 | `{{destination.id}}` | Retorna a ID da configuração de destino. |
 | `{{destination.imsOrgId}}` | Retorna a ID de organização IMS em que o destino está configurado. |
-| `{{destination.enrichmentAttributes}}` | Permite acessar todos os atributos de enriquecimento para todos os públicos mapeados para um destino. Esta macro tem suporte nos eventos `createDestination`, `updateDestination` e `deleteDestination`. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |
-| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Permite acessar atributos de enriquecimento para públicos externos específicos mapeados para um destino. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |
+| `{{destination.enrichmentAttributes}}` | Acessa todos os atributos de enriquecimento para todos os públicos mapeados para um destino. Esta macro tem suporte nos eventos `createDestination`, `updateDestination` e `deleteDestination`. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |
+| `{{destination.enrichmentAttributes.<namespace>.<segmentId>}}` | Acessa atributos de enriquecimento para públicos externos específicos mapeados para um destino. Os atributos de enriquecimento estão disponíveis somente para [públicos-alvo de carregamento personalizado](destination-configuration/schema-configuration.md#external-audiences). Consulte o [guia de ativação de público-alvo em lote](../../ui/activate-batch-profile-destinations.md#select-enrichment-attributes) para ver como funciona a seleção do atributo de enriquecimento. |
 
 {style="table-layout:auto"}

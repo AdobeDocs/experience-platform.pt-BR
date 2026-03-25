@@ -1,10 +1,10 @@
 ---
 title: (API) Conexão com o Salesforce Marketing Cloud
-description: O destino Salesforce Marketing Cloud (anteriormente conhecido como ExactTarget) permite exportar os dados da conta e ativá-los no Salesforce Marketing Cloud para atender às suas necessidades comerciais.
+description: Use o destino do Salesforce Marketing Cloud (anteriormente conhecido como ExactTarget) para exportar os dados de sua conta e ativá-los no Salesforce Marketing Cloud para suas necessidades comerciais.
 exl-id: 0cf068e6-8a0a-4292-a7ec-c40508846e27
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2954'
+source-wordcount: '2931'
 ht-degree: 2%
 
 ---
@@ -13,31 +13,31 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (antigo [!DNL ExactTarget]) é um conjunto de marketing digital que permite a você criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
+[[!DNL (API) Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/engagement/) (antigo [!DNL ExactTarget]) é um conjunto de marketing digital que você pode usar para criar e personalizar jornadas para visitantes e clientes para personalizar sua experiência.
 
 >[!IMPORTANT]
 >
-> Observe a diferença entre essa conexão e a outra [[!DNL Salesforce Marketing Cloud] conexão](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) que existe na seção Catálogo de marketing por email. A outra conexão do Salesforce Marketing Cloud permite exportar arquivos para um local de armazenamento especificado, enquanto essa é uma conexão de transmissão baseada em API.
+> Observe a diferença entre essa conexão e a outra [[!DNL Salesforce Marketing Cloud] conexão](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) que existe na seção Catálogo de marketing por email. A outra conexão do Salesforce Marketing Cloud exporta arquivos para um local de armazenamento especificado, enquanto essa é uma conexão de transmissão baseada em API.
 
 Comparado ao [!DNL Salesforce Marketing Cloud Account Engagement], que é mais orientado para marketing **B2B**, o destino [!DNL (API) Salesforce Marketing Cloud] é ideal para casos de uso do **B2C** com ciclos de tomada de decisão transacionais mais curtos. Você pode consolidar conjuntos de dados maiores, representando o comportamento do seu público-alvo, para ajustar e melhorar as campanhas de marketing, priorizando e segmentando contatos, especialmente de conjuntos de dados fora do [!DNL Salesforce]. *Observação: a Experience Platform também tem uma conexão para [[!DNL Salesforce Marketing Cloud Account Engagement]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md).*
 
-Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) usa a API de [!DNL Salesforce Marketing Cloud] [atualização de contatos](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html), que permite **adicionar contatos e atualizar dados de contato** para as suas necessidades comerciais depois de ativá-los em um novo segmento [!DNL Salesforce Marketing Cloud].
+Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) usa a API de [!DNL Salesforce Marketing Cloud] [atualização de contatos](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/updateContacts.html) para **adicionar contatos e atualizar dados de contato** para suas necessidades comerciais depois de ativá-los em um novo segmento [!DNL Salesforce Marketing Cloud].
 
 [!DNL Salesforce Marketing Cloud] usa OAuth 2 com Credenciais de Cliente como o mecanismo de autenticação para se comunicar com a API [!DNL Salesforce Marketing Cloud]. As instruções para autenticar na sua instância do [!DNL Salesforce Marketing Cloud] estão mais abaixo, na seção [Autenticar no destino](#authenticate).
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL (API) Salesforce Marketing Cloud], veja um exemplo de caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL (API) Salesforce Marketing Cloud], veja um exemplo de caso de uso que os clientes [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 ### Enviar emails para contatos de campanhas de marketing {#use-case-send-emails}
 
-O departamento de vendas de uma plataforma de aluguel de residências quer transmitir um email de marketing para um público-alvo de clientes direcionado. A equipe de marketing da plataforma pode adicionar novos contatos / atualizar os contatos existentes *(e seus endereços de email)* por meio do Adobe Experience Platform, criar públicos a partir de seus próprios dados offline e enviar esses públicos para [!DNL Salesforce Marketing Cloud], que pode ser usado para enviar o email da campanha de marketing.
+O departamento de vendas de uma plataforma de aluguel de residências quer transmitir um email de marketing para um público-alvo de clientes direcionado. A equipe de marketing da plataforma pode adicionar novos contatos / atualizar os contatos existentes *(e seus endereços de email)* a [!DNL Adobe Experience Platform], criar públicos a partir de seus próprios dados offline e enviar esses públicos para [!DNL Salesforce Marketing Cloud], que pode ser usado para enviar o email da campanha de marketing.
 
 ## Pré-requisitos {#prerequisites}
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL (API) Salesforce Marketing Cloud], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL (API) Salesforce Marketing Cloud], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criados em [!DNL Experience Platform].
 
 ### Pré-requisitos em [!DNL (API) Salesforce Marketing Cloud] {#prerequisites-destination}
 
@@ -140,7 +140,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -153,7 +153,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -220,7 +220,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL (API) Salesforce Marketing Cloud], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
+Para enviar corretamente os dados de público-alvo de [!DNL Adobe Experience Platform] para o destino [!DNL (API) Salesforce Marketing Cloud], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL (API) Salesforce Marketing Cloud], siga as etapas abaixo.
 
@@ -292,7 +292,7 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 1. Monitore o resumo do público-alvo e verifique se a contagem de perfis corresponde à contagem criada no segmento.
    ![Exemplo de captura de tela da interface do Experience Platform mostrando o Segmento.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/segment.png)
 
-1. Faça logon no site [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/). Navegue até a página **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** e verifique se os perfis do público-alvo foram adicionados.
+1. Vá para o site [[!DNL Salesforce Marketing Cloud]](https://mc.exacttarget.com/). Navegue até a página **[!DNL Audience Builder]** > **[!DNL Contact Builder]** > **[!DNL All contacts]** > **[!DNL Email]** e verifique se os perfis do público-alvo foram adicionados.
    ![Captura de tela da interface do usuário do Salesforce Marketing Cloud mostrando a página Contatos com perfis usados no segmento.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
 1. Para verificar se algum perfil foi atualizado, navegue até a página **[!UICONTROL Email]** e verifique se os valores de atributo do perfil do público-alvo foram atualizados. Se for bem-sucedido, você poderá ver que cada status de público-alvo em [!DNL Salesforce Marketing Cloud] foi atualizado com o status de público-alvo correspondente do Experience Platform, com base no valor **[!UICONTROL Mapping ID]** fornecido na etapa [agendamento de público-alvo](#schedule-segment-export-example).

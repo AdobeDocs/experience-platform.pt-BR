@@ -3,9 +3,9 @@ keywords: extensão do kickfire;Kickfire;extensão do Kickfire
 title: Extensão do KickFire
 description: A extensão KickFire é um destino de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '418'
 ht-degree: 4%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-A inteligência de endereços IP do [!DNL KickFire's] e os dados firmográficos B2B permitem que você traduza endereços IP para empresas, identifique visitantes anônimos da Web e integre dados de conta à sua pilha de tecnologia, tudo com base no endereço IP de uma empresa.
+Os dados firmográficos B2B e inteligência de endereços IP do [!DNL KickFire's] traduzem endereços IP para empresas, identificam visitantes anônimos da Web e integram dados de conta à sua pilha de tecnologia, tudo com base no endereço IP de uma empresa.
 
-[!DNL KickFire] é uma extensão de personalização no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte o [site do Kickfire](https://www.kickfire.com/).
+[!DNL KickFire] é uma extensão de personalização em [!DNL Adobe Experience Platform]. Para obter mais informações sobre a funcionalidade de extensão, consulte o [site do Kickfire](https://www.kickfire.com/).
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar esta extensão, você precisa acessar as marcas em [!DNL Adobe Experience Platform]. As marcas são oferecidas a [!DNL Adobe Experience Cloud] clientes como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

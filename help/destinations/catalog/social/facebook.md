@@ -3,9 +3,9 @@ keywords: conexão do facebook;conexão do facebook;destinos do facebook;instagr
 title: Conexão com o Facebook
 description: Ative perfis para suas campanhas do Facebook para direcionamento de público, personalização e supressão com base em emails com hash.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2770'
+source-wordcount: '2733'
 ht-degree: 5%
 
 ---
@@ -22,17 +22,17 @@ Você pode usar este destino para direcionamento de público em toda a família 
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando usar o destino [!DNL Facebook], veja dois casos de uso de exemplo que os clientes da Adobe Experience Platform podem resolver usando esse recurso.
+Para ajudá-lo a entender melhor como e quando usar o destino [!DNL Facebook], veja a seguir dois casos de uso de exemplo que clientes [!DNL Adobe Experience Platform] podem resolver usando esse recurso.
 
 ### Caso de uso #1 {#use-case-1}
 
-Uma retailer online deseja alcançar os clientes existentes por meio de plataformas sociais e mostrar ofertas personalizadas com base em seus pedidos anteriores. A retailer online pode assimilar endereços de email de seu próprio CRM para o Adobe Experience Platform, criar públicos a partir de seus próprios dados offline e enviar esses públicos para a plataforma social [!DNL Facebook], otimizando seus gastos com publicidade.
+Uma retailer online deseja alcançar os clientes existentes por meio de plataformas sociais e mostrar ofertas personalizadas com base em seus pedidos anteriores. A retailer online pode assimilar endereços de email de seu próprio CRM para o [!DNL Adobe Experience Platform], criar públicos a partir de seus próprios dados offline e enviar esses públicos para a plataforma social do [!DNL Facebook], otimizando seus gastos com publicidade.
 
 ### Caso de uso #2 {#use-case-2}
 
 Uma companhia aérea tem diferentes níveis de clientes (Bronze, Prata e Ouro) e deseja fornecer ofertas personalizadas a cada um dos níveis por meio de plataformas sociais. No entanto, nem todos os clientes usam o aplicativo móvel da companhia aérea e alguns deles não fizeram logon no site da empresa. Os únicos identificadores que a empresa tem sobre esses clientes são IDs de associação e endereços de email.
 
-Para direcioná-los nas redes sociais, eles podem integrar os dados do cliente do CRM no Adobe Experience Platform, usando os endereços de email como identificadores.
+Para direcioná-los nas redes sociais, eles podem integrar os dados do cliente do CRM no [!DNL Adobe Experience Platform], usando os endereços de email como identificadores.
 
 Em seguida, eles podem usar seus dados offline, incluindo IDs de associação associadas e camadas de clientes, para criar novos públicos que eles podem direcionar por meio do destino [!DNL Facebook].
 
@@ -44,8 +44,8 @@ Em seguida, eles podem usar seus dados offline, incluindo IDs de associação as
 |---|---|---|
 | `GAID` | GOOGLE ADVERTISING ID | Selecione a identidade de destino GAID quando a identidade de origem for um namespace GAID. |
 | `IDFA` | Apple ID para anunciantes | Selecione a identidade de destino do IDFA quando a identidade de origem for um namespace do IDFA. |
-| `phone_sha256` | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são compatíveis com o Adobe Experience Platform. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
-| `email_lc_sha256` | Endereços de email com hash com o algoritmo SHA256 | O Adobe Experience Platform oferece suporte tanto para texto simples quanto para endereços de email com hash SHA256. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
+| `phone_sha256` | Números de telefone com hash com o algoritmo SHA256 | Os números de telefone com hash SHA256 e texto sem formatação são suportados por [!DNL Adobe Experience Platform]. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e números de telefone com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
+| `email_lc_sha256` | Endereços de email com hash com o algoritmo SHA256 | O [!DNL Adobe Experience Platform] oferece suporte para endereços de email com hash SHA256 e texto sem formatação. Siga as instruções na seção [Requisitos de correspondência de ID](#id-matching-requirements-id-matching-requirements) e use os namespaces apropriados para texto sem formatação e endereços de email com hash, respectivamente. Quando o campo de origem contiver atributos sem hash, marque a opção **[!UICONTROL Apply transformation]** para que o [!DNL Experience Platform] coloque os dados em hash automaticamente durante a ativação. |
 | `extern_id` | IDs de usuário personalizadas | Selecione esta identidade de destino quando sua identidade de origem for um namespace personalizado. |
 | `gender` | Gênero | Valores aceitos: <ul><li>`m` para masculino</li><li>`f` para feminino</li></ul> O Experience Platform **coloca automaticamente hash** nesse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
 | `date_of_birth` | Data de nascimento | Formato aceito: `yyyy-MM-DD`. <br>O Experience Platform **aplica hash automaticamente** a esse valor antes de enviá-lo para o Facebook. Esse hash automático é necessário para atender aos requisitos de segurança e privacidade do Facebook. **não** forneça valores com hash para este campo, pois isso causará falha no processo correspondente. |
@@ -64,7 +64,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -99,11 +99,11 @@ Antes de enviar seus públicos-alvo para o [!DNL Facebook], verifique se você a
 
 * Sua conta de usuário do [!DNL Facebook] deve ter acesso total ao [!DNL Facebook Business Account], proprietário da conta de Anúncio que você está usando.
 * A permissão [!DNL Facebook] da conta de usuário **[!DNL Manage campaigns]** deve estar habilitada para a conta de Anúncio que você pretende usar.
-* A conta comercial **Adobe Experience Cloud** deve ser adicionada como um parceiro de publicidade em seu [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
+* A conta comercial **[!DNL Adobe Experience Cloud]** deve ser adicionada como um parceiro de publicidade em seu [!DNL Facebook Ad Account]. Usar `business ID=206617933627973`. Consulte [Adicionar parceiros ao seu gerente de negócios](https://www.facebook.com/business/help/1717412048538897) na documentação do Facebook para obter detalhes.
 
   >[!IMPORTANT]
   >
-  > Ao configurar as permissões para o Adobe Experience Cloud, você deve habilitar a permissão **Gerenciar campanhas**. A permissão é necessária para a integração [!DNL Adobe Experience Platform].
+  > Ao configurar as permissões para [!DNL Adobe Experience Cloud], você deve habilitar a permissão **Gerenciar campanhas**. A permissão é necessária para a integração [!DNL Adobe Experience Platform].
 
 * Leia e assine os Termos de Serviço do [!DNL Facebook Custom Audiences]. Para fazer isso, vá para `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973`, onde `accountID` é seu [!DNL Facebook Ad Account ID]. Verifique se a seção `business_id=206617933627973` está presente na URL quando você assinar os Termos de Serviço.
 
@@ -115,7 +115,7 @@ Antes de enviar seus públicos-alvo para o [!DNL Facebook], verifique se você a
 
 [!DNL Facebook] exige que nenhuma informação pessoal identificável (PII) seja enviada em branco. Portanto, os públicos ativados para [!DNL Facebook] podem ser digitados de *identificadores com hash*, como endereços de email ou números de telefone.
 
-Dependendo do tipo de IDs que você assimila no Adobe Experience Platform, é necessário seguir os requisitos correspondentes.
+Dependendo do tipo de IDs que você assimila em [!DNL Adobe Experience Platform], você deve seguir seus requisitos correspondentes.
 
 ## Maximizar as taxas de correspondência do público-alvo {#match-rates}
 
@@ -136,7 +136,7 @@ Há dois métodos para ativar números de telefone em [!DNL Facebook]:
 
 ## Requisitos de hash de email {#email-hashing-requirements}
 
-Você pode aplicar hash a endereços de email antes de assimilá-los no Adobe Experience Platform, ou usar endereços de email em limpar no Experience Platform, e aplicar hash a [!DNL Experience Platform] neles na ativação.
+Você pode hash de endereços de email antes de assimilá-los no [!DNL Adobe Experience Platform], ou usar endereços de email em limpar no Experience Platform, e ter [!DNL Experience Platform] hash deles na ativação.
 
 Para saber mais sobre a assimilação de endereços de email no Experience Platform, consulte a [visão geral da assimilação em lote](/help/ingestion/batch-ingestion/overview.md) e a [visão geral da assimilação de streaming](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -171,7 +171,7 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL Facebook] e ativar públicos-alvo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475118/?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >
@@ -295,7 +295,7 @@ Para [!DNL Facebook], uma ativação bem-sucedida significa que um público-alvo
 
 >[!TIP]
 >
->A integração entre o Adobe Experience Platform e o [!DNL Facebook] oferece suporte a preenchimentos retroativos de público-alvo histórico. Todas as qualificações históricas de público são enviadas para [!DNL Facebook] quando você ativa os públicos para o destino.
+>A integração entre [!DNL Adobe Experience Platform] e [!DNL Facebook] dá suporte a preenchimentos retroativos de público-alvo históricos. Todas as qualificações históricas de público são enviadas para [!DNL Facebook] quando você ativa os públicos para o destino.
 
 ## Solução de problemas {#troubleshooting}
 

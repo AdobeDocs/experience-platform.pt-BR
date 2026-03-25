@@ -2,10 +2,10 @@
 title: Conector de destino do Adobe Commerce
 description: Saiba como os comerciantes do Adobe Commerce e do Real-Time CDP podem personalizar a experiência de compra fornecendo promoções e conteúdo de site altamente relevantes, personalizados para públicos-alvo de clientes criados e gerenciados no Real-Time CDP.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '839'
-ht-degree: 4%
+source-wordcount: '818'
+ht-degree: 5%
 
 ---
 
@@ -13,23 +13,23 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-O conector de destino [!DNL Adobe Commerce] permite que você selecione um ou mais públicos-alvo da Real-Time CDP para ativar em sua conta [!DNL Adobe Commerce] a fim de fornecer uma experiência personalizada dinâmica para seus compradores. Dentro de [!DNL Adobe Commerce], você pode selecionar esses públicos da Real-Time CDP para personalizar ofertas exclusivas no carrinho, como &quot;comprar 2 e receber 1 grátis&quot;. Você também pode exibir banners ilustrativos e modificar os preços do produto por meio de ofertas promocionais, todas personalizadas para os públicos da Adobe Real-Time CDP.
+Use o conector de destino [!DNL Adobe Commerce] para selecionar um ou mais públicos do [!DNL Real-Time CDP] a serem ativados na sua conta do [!DNL Adobe Commerce] para fornecer uma experiência personalizada dinâmica aos seus compradores. Dentro de [!DNL Adobe Commerce], você pode selecionar esses [!DNL Real-Time CDP] públicos para personalizar ofertas exclusivas no carrinho, como &quot;comprar 2 e receber 1 grátis&quot;. Você também pode exibir banners ilustrativos e modificar os preços dos produtos por meio de ofertas promocionais, tudo personalizado para os públicos-alvo da Adobe [!DNL Real-Time CDP].
 
 ## Pré-requisitos {#prerequisites}
 
-Esse conector está disponível no catálogo de destinos para clientes que compraram o Real-Time CDP Prime ou o Ultimate e o Adobe Commerce.
+Esse conector está disponível no catálogo de destinos para clientes que compraram o [!DNL Real-Time CDP] Prime ou o Ultimate e o Adobe Commerce.
 
 Para usar essa conexão de destino, verifique se você tem acesso a:
 
 - [Adobe Experience Platform](https://experience.adobe.com/)
-- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Com acesso ao console do desenvolvedor, você pode exibir as informações de conta de serviço e de credencial necessárias para [concluir a configuração](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=pt-BR#configure-the-extension) da extensão no Adobe Commerce.
-- [Adobe Commerce versão 2.4.4 ou superior](https://business.adobe.com/br/products/commerce.html)
+- [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Com acesso ao console do desenvolvedor, você pode exibir as informações de conta de serviço e de credencial necessárias para [concluir a configuração](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) da extensão no Adobe Commerce.
+- [Adobe Commerce versão 2.4.4 ou superior](https://business.adobe.com/products/commerce.html)
 
 No Experience Platform, crie o seguinte:
 
-- [Esquema](../../../xdm/schema/composition.md). O esquema criado representa os dados que você planeja assimilar da Adobe Commerce. [Saiba mais](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=pt-BR) sobre como criar um esquema que contenha grupos de campos específicos do Commerce.
+- [Esquema](../../../xdm/schema/composition.md). O esquema criado representa os dados que você planeja assimilar da Adobe Commerce. [Saiba mais](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) sobre como criar um esquema que contenha grupos de campos específicos do Commerce.
 - [Conjunto de dados](../../../catalog/datasets/user-guide.md#create). Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados. Crie esse conjunto de dados a partir do esquema criado acima.
-- [Sequência de dados](../../../datastreams/overview.md#create). ID que permite que os dados fluam do Adobe Experience Platform para outros produtos Adobe DX. Essa ID deve ser associada a um site específico em sua instância específica do Adobe Commerce. Ao criar esse fluxo de dados, especifique o esquema XDM criado acima.
+- [Sequência de dados](../../../datastreams/configure.md#create). ID que permite que os dados fluam do [!DNL Adobe Experience Platform] para outros produtos Adobe DX. Essa ID deve ser associada a um site específico em sua instância específica do Adobe Commerce. Ao criar esse fluxo de dados, especifique o esquema XDM criado acima.
 
 Após concluir os pré-requisitos, conecte-se ao destino [!DNL Commerce].
 
@@ -40,7 +40,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -53,7 +53,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -96,11 +96,11 @@ Leia [Ativar perfis e públicos-alvo para destinos de solicitação de perfil](.
 
 ## Próximas etapas em [!DNL Adobe Commerce] {#next-steps-adobe-commerce}
 
-Agora que você configurou o destino [!DNL Commerce] no Experience Platform, é necessário instalar a extensão [!DNL Audience Activation] no [!DNL Commerce] e configurar o [!DNL Commerce Admin] para importar os públicos-alvo do Real-Time CDP que você criou. Consulte a [[!DNL Commerce] documentação](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=pt-BR) para saber mais.
+Agora que você configurou o destino [!DNL Commerce] no Experience Platform, é necessário instalar a extensão [!DNL Audience Activation] no [!DNL Commerce] e configurar o [!DNL Commerce Admin] para importar os públicos [!DNL Real-Time CDP] que você criou. Consulte a [[!DNL Commerce] documentação](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) para saber mais.
 
 ## Validar a ativação do público-alvo no Commerce {#exported-data}
 
-Após ativar os públicos da Real-Time CDP na sua conta [!DNL Adobe Commerce], você verá esses públicos disponíveis ao acessar a barra lateral _Admin_ e, em seguida, **[!UICONTROL Customers]** > **[!UICONTROL Real-Time CDP Audience]**.
+Após ativar os públicos-alvo do [!DNL Real-Time CDP] na sua conta do [!DNL Adobe Commerce], você verá esses públicos-alvo disponíveis ao acessar a barra lateral do _Admin_ e, em seguida, ao **[!UICONTROL Customers]** > **[!UICONTROL Real-Time CDP Audience]**.
 
 ![Painel de Públicos-Alvo do Real-Time CDP](../../assets/catalog/personalization/adobe-commerce/audience-library.png)
 

@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para criar um modelo de público-alvo por meio do Adobe Experience Platform Destination SDK.
 title: Criar um modelo de público-alvo
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '617'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ Para obter uma descrição detalhada dos recursos que você pode configurar por 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API do modelo de público-alvo {#get-started}
 
@@ -262,9 +262,9 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `headers.header` | String | Especifica os cabeçalhos HTTP que devem ser adicionados à chamada para a API. Por exemplo, `"Content-Type"` |
 | `headers.value` | String | Especifica o valor de cabeçalhos HTTP que devem ser adicionados à chamada para a API. Por exemplo, `"application/x-www-form-urlencoded"` |
 | `requestBody` | String | Especifica o conteúdo do corpo da mensagem que deve ser enviado para a API. Os parâmetros que devem ser adicionados ao objeto `requestBody` dependem dos campos aceitos pela API. Consulte a [documentação de macros com suporte](../functionality/audience-metadata-management.md#macros) para saber o que você pode incluir no corpo da mensagem. |
-| `responseFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para ver um exemplo, consulte os [exemplos de modelo](../functionality/audience-metadata-management.md#examples) no documento de funcionalidade de metadados de público-alvo. |
+| `responseFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para ver um exemplo, consulte os [exemplos de modelo](../functionality/audience-metadata-management.md#configuration-examples) no documento de funcionalidade de metadados de público-alvo. |
 | `responseFields.value` | String | Especifique o valor de quaisquer campos de resposta que sua API retorna quando chamada. |
-| `responseErrorFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para ver um exemplo, consulte os [exemplos de modelo](../functionality/audience-metadata-management.md#examples) no documento de funcionalidade de metadados de público-alvo. |
+| `responseErrorFields.name` | String | Especifique quaisquer campos de resposta que sua API retorne quando chamada. Para ver um exemplo, consulte os [exemplos de modelo](../functionality/audience-metadata-management.md#configuration-examples) no documento de funcionalidade de metadados de público-alvo. |
 | `responseErrorFields.value` | String | Analisa todas as mensagens de erro retornadas nas respostas de chamada da API do seu destino. Essas mensagens de erro serão exibidas para os usuários na interface do Experience Platform. |
 | `validations.field` | String | Indica se as validações devem ser executadas para qualquer campo antes que as chamadas de API sejam feitas ao destino. Por exemplo, você pode usar `{{validations.accountId}}` para validar a ID da conta do usuário. |
 | `validations.regex` | String | Indica como o campo deve ser estruturado para que a validação seja aprovada. |

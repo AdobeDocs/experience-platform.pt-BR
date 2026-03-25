@@ -2,9 +2,9 @@
 description: Saiba como usar a API de teste de destino para gerar um modelo de transformação de mensagem de teste para seu destino.
 title: Gerar um modelo de transformação de mensagem de amostra
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '373'
 ht-degree: 2%
 
 ---

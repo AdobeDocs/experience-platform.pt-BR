@@ -4,10 +4,10 @@ title: Exportar conjuntos de dados usando a API do Serviço de fluxo
 description: Saiba como usar a API do Serviço de fluxo para exportar conjuntos de dados para destinos selecionados.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '5203'
-ht-degree: 4%
+source-wordcount: '5137'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->* Essa funcionalidade está disponível para clientes que compraram o pacote Real-Time CDP Prime e Ultimate, Adobe Journey Optimizer ou Customer Journey Analytics. Entre em contato com o representante da Adobe para obter mais informações.
+>* Essa funcionalidade está disponível para clientes que compraram o pacote do [!DNL Real-Time CDP] para Prime e Ultimate, [!DNL Adobe Journey Optimizer] ou Customer Journey Analytics. Entre em contato com o representante da Adobe para obter mais informações.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ ht-degree: 4%
 
 -->
 
-Este artigo explica o fluxo de trabalho necessário para usar o [!DNL Flow Service API] para exportar [conjuntos de dados](/help/catalog/datasets/overview.md) do Adobe Experience Platform para o local de armazenamento na nuvem preferido, como [!DNL Amazon S3], locais SFTP ou [!DNL Google Cloud Storage].
+Este artigo explica o fluxo de trabalho necessário para usar o [!DNL Flow Service API] para exportar [conjuntos de dados](/help/catalog/datasets/overview.md) de [!DNL Adobe Experience Platform] para seu local de armazenamento na nuvem preferido, como [!DNL Amazon S3], locais SFTP ou [!DNL Google Cloud Storage].
 
 >[!TIP]
 >
@@ -40,7 +40,7 @@ Este artigo explica o fluxo de trabalho necessário para usar o [!DNL Flow Servi
 
 ## Conjuntos de dados disponíveis para exportação {#datasets-to-export}
 
-Os conjuntos de dados que você pode exportar dependem do aplicativo do Experience Platform (Real-Time CDP, Adobe Journey Optimizer), da camada (Prime ou Ultimate) e de qualquer complemento que você tenha adquirido (por exemplo: Data Distiller).
+Os conjuntos de dados que você pode exportar dependem do aplicativo do Experience Platform ([!DNL Real-Time CDP], [!DNL Adobe Journey Optimizer]), da camada (Prime ou Ultimate) e de qualquer complemento que você tenha adquirido (por exemplo: Data Distiller).
 
 Consulte a [tabela na página de tutorial da interface](/help/destinations/ui/export-datasets.md#datasets-to-export) para entender quais conjuntos de dados você pode exportar.
 
@@ -68,9 +68,9 @@ Observe os seguintes pré-requisitos para exportar conjuntos de dados:
 
 ![Visão geral - as etapas para criar um destino e exportar conjuntos de dados](../assets/api/export-datasets/export-datasets-api-workflow-get-started.png)
 
-Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do [!DNL Adobe Experience Platform]:
 
-* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): todos os dados assimilados com êxito na Adobe Experience Platform são mantidos no [!DNL Data Lake] como conjuntos de dados. Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os conjuntos de dados também contêm metadados que descrevem vários aspectos dos dados armazenados.
+* [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): Todos os dados assimilados com êxito em [!DNL Adobe Experience Platform] são mantidos em [!DNL Data Lake] como conjuntos de dados. Um conjunto de dados é uma construção de armazenamento e gerenciamento para uma coleção de dados, normalmente uma tabela, que contém um esquema (colunas) e campos (linhas). Os conjuntos de dados também contêm metadados que descrevem vários aspectos dos dados armazenados.
    * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você deve saber para exportar conjuntos de dados para destinos de armazenamento na nuvem no Experience Platform.
@@ -107,7 +107,7 @@ Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabe�
 
 ### Documentação de referência da API {#api-reference-documentation}
 
-Você pode encontrar a documentação de referência de acompanhamento para todas as operações de API neste tutorial. Consulte a [[!DNL Flow Service] - Documentação da API de Destinos no site da Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Recomendamos que você use este tutorial e a documentação de referência da API em paralelo.
+Você pode encontrar a documentação de referência de acompanhamento para todas as operações de API neste tutorial. Consulte a documentação da API de [[!DNL Flow Service] - Destinos no site da Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Recomendamos que você use este tutorial e a documentação de referência da API em paralelo.
 
 ### Glossário {#glossary}
 
@@ -129,7 +129,7 @@ Antes de iniciar o fluxo de trabalho para exportar um conjunto de dados, identif
 
 {style="table-layout:auto"}
 
-Você precisa dessas IDs para construir várias entidades [!DNL Flow Service]. Também é necessário consultar partes do próprio [!DNL Connection Spec] para configurar determinadas entidades de modo que você possa recuperar o [!DNL Connection Spec] de [!DNL Flow Service APIs]. Veja os exemplos abaixo de recuperação das especificações de conexão para todos os destinos na tabela:
+Você precisa dessas IDs para construir várias entidades [!DNL Flow Service]. Você também precisa fazer referência a partes do próprio [!DNL Connection Spec] para configurar determinadas entidades de modo que possa recuperar o [!DNL Connection Spec] de [!DNL Flow Service APIs]. Veja os exemplos abaixo de recuperação das especificações de conexão para todos os destinos na tabela:
 
 >[!BEGINTABS]
 
@@ -941,7 +941,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obter informações sobre como obter as credenciais de autenticação necessárias, consulte a seção [autenticar para destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) da página de documentação de destino do Azure Data Lake Gen 2(ADLS Gen2).
+>Para obter informações sobre como obter as credenciais de autenticação necessárias, consulte a seção [autenticar no destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) da página de documentação do Azure Data Lake Gen 2(ADLS Gen2).
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -1738,7 +1738,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) da página de documentação do Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
+>Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) da página de documentação de destino do Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
 >Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
@@ -1896,7 +1896,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) da página de documentação do SFTP de destino.
+>Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) da página de documentação do destino SFTP.
 >Para outros valores com suporte do `datasetFileType`, consulte a documentação de referência da API.
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
@@ -1994,7 +1994,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-A tabela abaixo fornece descrições de todos os parâmetros na seção `scheduleParams`, o que permite personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
+A tabela abaixo fornece descrições de todos os parâmetros da seção `scheduleParams` para personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
 
 | Parâmetro | Descrição |
 |---------|----------|
@@ -2063,7 +2063,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-A tabela abaixo fornece descrições de todos os parâmetros na seção `scheduleParams`, o que permite personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
+A tabela abaixo fornece descrições de todos os parâmetros da seção `scheduleParams` para personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
 
 | Parâmetro | Descrição |
 |---------|----------|
@@ -2133,7 +2133,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-A tabela abaixo fornece descrições de todos os parâmetros na seção `scheduleParams`, o que permite personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
+A tabela abaixo fornece descrições de todos os parâmetros da seção `scheduleParams` para personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
 
 | Parâmetro | Descrição |
 |---------|----------|
@@ -2203,7 +2203,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-A tabela abaixo fornece descrições de todos os parâmetros na seção `scheduleParams`, o que permite personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
+A tabela abaixo fornece descrições de todos os parâmetros da seção `scheduleParams` para personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
 
 | Parâmetro | Descrição |
 |---------|----------|
@@ -2272,7 +2272,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-A tabela abaixo fornece descrições de todos os parâmetros na seção `scheduleParams`, o que permite personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
+A tabela abaixo fornece descrições de todos os parâmetros da seção `scheduleParams` para personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
 
 | Parâmetro | Descrição |
 |---------|----------|
@@ -2342,7 +2342,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-A tabela abaixo fornece descrições de todos os parâmetros na seção `scheduleParams`, o que permite personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
+A tabela abaixo fornece descrições de todos os parâmetros da seção `scheduleParams` para personalizar os tempos de exportação, a frequência, o local e muito mais para suas exportações de conjunto de dados.
 
 | Parâmetro | Descrição |
 |---------|----------|
@@ -2489,7 +2489,7 @@ Exiba uma [lista de perguntas frequentes](/help/destinations/ui/export-datasets.
 
 ## Próximas etapas {#next-steps}
 
-Seguindo este tutorial, você conectou com êxito o Experience Platform a um dos destinos de armazenamento preferidos da nuvem do lote e configurou um fluxo de dados para o respectivo destino para exportar conjuntos de dados. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
+Você conectou com sucesso o Experience Platform a um dos destinos de armazenamento de nuvem em lote de sua preferência e configurou um fluxo de dados para o respectivo destino para exportar conjuntos de dados. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
 
 * [Visão geral dos destinos](../home.md)
 * [Visão geral do catálogo de destinos](../catalog/overview.md)

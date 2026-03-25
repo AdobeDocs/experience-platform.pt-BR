@@ -3,9 +3,9 @@ title: Exportar arquivos sob demanda para destinos em lote usando a interface do
 type: Tutorial
 description: Saiba como exportar arquivos por demanda para destinos em lote usando a interface do usuário do Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '804'
 ht-degree: 5%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 5%
 
 Este artigo explica como usar a interface do Experience Platform para exportar arquivos sob demanda para destinos em lote, como destinos de [armazenamento na nuvem](/help/destinations/catalog/cloud-storage/overview.md) e [marketing por email](/help/destinations/catalog/email-marketing/overview.md).
 
-O controle **[!UICONTROL Export file now]** permite exportar um arquivo completo sem interromper o agendamento de exportação atual de um público agendado anteriormente. Essa exportação ocorre além das exportações previamente agendadas e não altera a frequência de exportação do público-alvo.
+Use o controle **[!UICONTROL Export file now]** para exportar um arquivo completo sem interromper o agendamento de exportação atual de um público previamente agendado. Essa exportação ocorre além das exportações previamente agendadas e não altera a frequência de exportação do público-alvo.
 
 A exportação de arquivo é acionada imediatamente e usa apenas os dados do instantâneo de avaliação de público mais recente. Não inclui alterações de perfil ou identidade que ocorram após a criação do instantâneo. Por outro lado, as exportações agendadas incluem dados de instantâneo e alterações incrementais que ocorrem entre a criação do instantâneo e o momento da exportação.
 

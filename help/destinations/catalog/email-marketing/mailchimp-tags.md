@@ -1,11 +1,11 @@
 ---
 title: Tags do Mailchimp
-description: O destino de Tags do Mailchimp permite exportar os dados da sua conta e ativá-los no Mailchimp para interagir com os contatos.
+description: Use o destino de Tags do Mailchimp para exportar os dados de sua conta e ativá-los no Mailchimp para interagir com os contatos.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0f278ca8-4fcf-4c47-b538-9cffa45a3d90
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1714'
 ht-degree: 3%
 
 ---
@@ -22,7 +22,7 @@ Este [!DNL Adobe Experience Platform] [destino](/help/destinations/home.md) apro
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Mailchimp Tags], veja um exemplo de caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Mailchimp Tags], veja um exemplo de caso de uso que os clientes [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 ### Enviar emails para contatos de campanhas de marketing {#use-case-send-emails}
 
@@ -34,7 +34,7 @@ Consulte as seções abaixo para quaisquer pré-requisitos que você precise con
 
 ### Pré-requisitos no Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL Mailchimp Tags], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL Mailchimp Tags], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=en) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) criados em [!DNL Experience Platform].
 
 ### Pré-requisitos para o destino [!DNL Mailchimp Tags] {#prerequisites-destination}
 
@@ -48,7 +48,7 @@ Antes de criar um destino [!DNL Mailchimp Tags], primeiro verifique se você tem
 
 Você precisa da sua [!DNL Mailchimp] **chave de API** para autenticar o destino [!DNL Mailchimp Interest Categories] em relação à sua conta [!DNL Mailchimp]. A **chave de API** serve como **senha** quando você [autentica o destino](#authenticate).
 
-Se você não tiver a **chave de API**, entre na sua conta [!DNL Mailchimp] e consulte a documentação do [!DNL Mailchimp] sobre [como gerar a sua chave de API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
+Se você não tiver a **chave de API**, entre na sua conta [!DNL Mailchimp] e consulte a documentação do [!DNL Mailchimp] em [como gerar a sua chave de API](https://mailchimp.com/developer/marketing/guides/quick-start/#generate-your-api-key).
 
 Um exemplo de uma chave de API é `0123456789abcdef0123456789abcde-us14`.
 
@@ -89,7 +89,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -102,7 +102,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -175,7 +175,7 @@ Leia [Ativar públicos-alvo para destinos de streaming](/help/destinations/ui/ac
 
 ### Considerações e exemplo de mapeamento {#mapping-considerations-example}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL Mailchimp Tags], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
+Para enviar corretamente os dados de público-alvo de [!DNL Adobe Experience Platform] para o destino [!DNL Mailchimp Tags], é necessário passar pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino.
 
 Para mapear corretamente os campos XDM para os campos de destino [!DNL Mailchimp Tags], siga as etapas abaixo:
 
@@ -203,7 +203,7 @@ Quando terminar de fornecer os mapeamentos para sua conexão de destino, selecio
 
 Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
-1. Faça logon em sua conta do [[!DNL Mailchimp]](https://login.mailchimp.com/). Em seguida, navegue até a página **[!DNL Audience]** > **[!DNL All Contacts]** e verifique se os contatos do público foram adicionados e se os contatos do público foram atualizados com o nome do público.
+1. Vá para sua conta do [[!DNL Mailchimp]](https://login.mailchimp.com/). Em seguida, navegue até a página **[!DNL Audience]** > **[!DNL All Contacts]** e verifique se os contatos do público foram adicionados e se os contatos do público foram atualizados com o nome do público.
    ![Captura de tela da interface do usuário do Mailchimp mostrando a página Público-alvo.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## Uso e governança de dados {#data-usage-governance}

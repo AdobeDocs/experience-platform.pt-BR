@@ -2,9 +2,9 @@
 description: Esta página lista e descreve as etapas para configurar um destino de transmissão usando o Destination SDK.
 title: Usar o Destination SDK para configurar um destino de transmissão
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '879'
+source-wordcount: '874'
 ht-degree: 0%
 
 ---
@@ -279,12 +279,12 @@ Se você selecionou `"authenticationRule": "PLATFORM_AUTHENTICATION"`, deve cria
 
 ## Etapa 6: testar o destino {#test-destination}
 
-Depois de configurar seu destino usando os pontos de extremidade de configuração nas etapas anteriores, você pode usar a [ferramenta de teste de destino](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para testar a integração entre o Adobe Experience Platform e seu destino.
+Após configurar seu destino usando os pontos de extremidade de configuração das etapas anteriores, você poderá usar a [ferramenta de teste de destino](../testing-api/streaming-destinations/streaming-destination-testing-overview.md) para testar a integração entre o [!DNL Adobe Experience Platform] e seu destino.
 
 Como parte do processo para testar o destino, é necessário usar a interface do usuário do Experience Platform para criar segmentos, que você ativará para o destino. Consulte os dois recursos abaixo para obter instruções sobre como criar públicos-alvo no Experience Platform:
 
 * [Criar uma página de documentação de público-alvo](/help/segmentation/ui/audience-portal.md#create-audience)
-* [Criar uma apresentação de vídeo de público](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR)
+* [Criar uma apresentação de vídeo de público](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Etapa 7: publicar seu destino {#publish-destination}
 

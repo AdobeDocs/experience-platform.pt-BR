@@ -3,9 +3,9 @@ title: A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: b02e746ba0b8a75699510b37937cb57e7eaefcca
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1799'
 ht-degree: 2%
 
 ---
@@ -104,7 +104,6 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
       * O período (`.`) (código ASCII 46). Por exemplo, normalize &quot;jane.doe@gmail.com&quot; para &quot;janedoe@gmail.com&quot;.
      * O caractere de sinal de mais (`+`) (código ASCII 43) e todos os caracteres subsequentes. Por exemplo, normalize `janedoe+home@gmail.com` para `janedoe@gmail.com`.
   
-
 ## Requisitos de normalização e hash do número de telefone {#phone-hashing}
 
 Veja o que você precisa saber sobre o upload de números de telefone:
@@ -164,7 +163,7 @@ O Destino do CRM [!DNL The Trade Desk] é um carregamento diário de arquivo em 
 
 ### Preencher Detalhes do Destino {#fill-in-details}
 
-Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configurar](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR) este destino, você deve fornecer as seguintes informações:
+Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configurar](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) este destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Account Type]**: Escolha a opção **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.

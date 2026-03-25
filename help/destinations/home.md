@@ -2,10 +2,10 @@
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 049112b29b593daa69a11302e828dc968d7abae3
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 3%
+source-wordcount: '1298'
+ht-degree: 2%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 3%
 
 ![Banner da visão geral dos destinos.](./assets/overview/destinations-overview-banner.png)
 
-**[!DNL Destinations]** são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+**[!DNL Destinations]** são integrações pré-criadas com plataformas de destino que permitem a ativação contínua dos dados de [!DNL Adobe Experience Platform]. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -34,7 +34,7 @@ Uma das funcionalidades principais do Experience Platform é assimilar seus dado
 
 ## Controles {#controls}
 
-Os controles no [espaço de trabalho de destinos](./ui/destinations-workspace.md) permitem:
+Use os controles no [espaço de trabalho de destinos](./ui/destinations-workspace.md) para:
 
 * Navegue pelo catálogo de plataformas de destino onde você pode ativar seus dados;
 * Criar, editar, ativar e desativar fluxos de dados para os destinos no catálogo;
@@ -55,7 +55,7 @@ Para conectores criados e mantidos pelo parceiro, isso significa que os problema
 
 ## Destinos e controles de acesso {#access-controls}
 
-A funcionalidade de destinos no Experience Platform funciona com permissões de controle de acesso do Adobe Experience Platform. Dependendo do nível de permissão do seu usuário, você pode visualizar, gerenciar e ativar destinos. Para obter informações sobre as permissões individuais, vá para [controle de acesso no Adobe Experience Platform](../access-control/home.md) e role para baixo até a tabela na parte inferior da página.
+A funcionalidade de destinos no Experience Platform funciona com [!DNL Adobe Experience Platform] permissões de controle de acesso. Dependendo do nível de permissão do seu usuário, você pode visualizar, gerenciar e ativar destinos. Para obter informações sobre as permissões individuais, vá para [controle de acesso no Adobe Experience Platform](../access-control/home.md) e role para baixo até a tabela na parte inferior da página.
 
 A tabela a seguir descreve as permissões e as combinações de permissões necessárias para executar determinadas ações nos destinos.
 
@@ -78,7 +78,7 @@ Para obter mais informações sobre controles de acesso, consulte o [Guia do usu
 
 ### Controle de acesso baseado em atributos para destinos {#attribute-based-access}
 
-O controle de acesso baseado em atributos no Adobe Experience Platform permite que os administradores controlem o acesso a objetos e/ou recursos específicos com base em atributos.
+O controle de acesso baseado em atributos no [!DNL Adobe Experience Platform] permite que os administradores controlem o acesso a objetos e/ou recursos específicos com base em atributos.
 
 Com o controle de acesso baseado em atributos, é possível aplicar configurações de mapeamento a campos aos quais você tem permissões. Além disso, não é possível exportar dados para um destino se você não tiver acesso a todos os campos no conjunto de dados.
 

@@ -4,9 +4,9 @@ title: Guia de migração de API para destinos de armazenamento em nuvem
 description: Saiba mais sobre as alterações no fluxo de trabalho para ativar destinos de armazenamento em nuvem como parte da migração para os novos cartões de destino de armazenamento em nuvem com funcionalidade adicional.
 type: Tutorial
 exl-id: 4acaf718-794e-43a3-b8f0-9b19177a2bc0
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1333'
+source-wordcount: '1322'
 ht-degree: 1%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->* A funcionalidade descrita nesta página está disponível para clientes que compraram os pacotes do Real-Time CDP Prime e do Ultimate. Entre em contato com o representante da Adobe para obter mais informações.
+>* A funcionalidade descrita nesta página está disponível para clientes que compraram os pacotes Prime e Ultimate do [!DNL Real-Time CDP]. Entre em contato com o representante da Adobe para obter mais informações.
 
 ## Contexto de migração {#migration-context}
 
 A partir de [outubro de 2022](/help/release-notes/2022/october-2022.md#new-or-updated-destinations), você poderá usar os novos recursos de exportação de arquivos para acessar a funcionalidade de personalização aprimorada ao exportar arquivos do Experience Platform:
 
-* [Opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) adicionais.
+* [Opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) adicionais.
 * Capacidade de definir cabeçalhos de arquivos personalizados em seus arquivos exportados através da [nova etapa de mapeamento](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Capacidade de selecionar o [tipo de arquivo](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) do arquivo exportado.
 * Capacidade de [personalizar a formatação de arquivos de dados CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -46,7 +46,7 @@ Observe que, atualmente, na interface do usuário do Experience Platform, você 
 
 ![Imagem dos dois cartões de destino do Amazon S3 em um modo de exibição lado a lado.](../assets/catalog/cloud-storage/amazon-s3/two-amazons3-destination-cards.png)
 
-Embora esses destinos com funcionalidade aprimorada tenham sido oferecidos inicialmente como um beta, o *Adobe está agora movendo todos os clientes do Real-Time CDP para os novos destinos de armazenamento na nuvem*. Para clientes que já estavam usando o [!DNL Amazon S3], [!DNL Azure Blob] ou SFTP, isso significa que os fluxos de dados existentes serão migrados para os novos cartões. Leia para obter mais informações sobre as alterações específicas como parte da migração.
+Embora esses destinos com funcionalidade aprimorada tenham sido oferecidos inicialmente como um beta, a *Adobe está movendo todos os [!DNL Real-Time CDP] clientes para os novos destinos de armazenamento na nuvem*. Para clientes que já estavam usando o [!DNL Amazon S3], [!DNL Azure Blob] ou SFTP, isso significa que os fluxos de dados existentes serão migrados para os novos cartões. Leia para obter mais informações sobre as alterações específicas como parte da migração.
 
 ## A quem esta página se aplica {#who-this-applies-to}
 
@@ -60,13 +60,6 @@ Por exemplo, se você estava usando um script para filtrar fluxos de dados de de
 
 Esta seção inclui o tutorial de API relevante e a documentação de referência para a funcionalidade aprimorada de exportar dados para destinos de armazenamento na nuvem.
 
-<!--
-
-TBD if we keep this link but will likely remove it
-
-[Legacy API tutorial to export data to cloud storage destinations](/help/destinations/api/connect-activate-batch-destinations.md) (outdated, do not use anymore)
-
--->
 * [Tutorial de API para exportar públicos-alvo para destinos de armazenamento na nuvem](/help/destinations/api/activate-segments-file-based-destinations.md)
 * [Documentação de referência da API do Serviço de Fluxo de Destinos](https://developer.adobe.com/experience-platform-apis/references/destinations/)
 
@@ -668,7 +661,7 @@ Veja os exemplos completos de conexões base e de destino herdados e novos para 
 
 ### Alterações incompatíveis com versões anteriores comuns a [!DNL Amazon S3], [!DNL Azure Blob] e destinos SFTP {#changes-all-destinations}
 
-A etapa do seletor de perfil em todos os três destinos é substituída por uma etapa de mapeamento que permite renomear os cabeçalhos de coluna nos arquivos exportados, se desejado. Consulte a imagem lado a lado abaixo com a etapa do seletor de atributos antigo à esquerda e a nova etapa de mapeamento à direita.
+A etapa do seletor de perfil em todos os três destinos é substituída por uma etapa de mapeamento para renomear os cabeçalhos de coluna nos arquivos exportados, se desejado. Consulte a imagem lado a lado abaixo com a etapa do seletor de atributos antigo à esquerda e a nova etapa de mapeamento à direita.
 
 ![Imagem de visão geral do guia de migração](/help/destinations/assets/api/api-migration-guide/old-and-new-mapping-step.png)
 
@@ -802,4 +795,4 @@ Observe que não há impacto na programação existente para exportações duran
 
 ## Próximas etapas {#next-steps}
 
-Ao ler esta página, agora você sabe se precisa realizar alguma ação de preparação para a migração dos destinos de armazenamento na nuvem. Você também sabe quais páginas de documentação consultar ao configurar fluxos de trabalho baseados em API para exportar arquivos do Experience Platform para seus destinos de armazenamento em nuvem preferidos. Em seguida, você pode exibir o tutorial da API para [exportar dados para destinos de armazenamento na nuvem](/help/destinations/api/activate-segments-file-based-destinations.md).
+Agora você sabe se precisa realizar alguma ação como preparação para a migração dos destinos de armazenamento na nuvem. Você também sabe quais páginas de documentação consultar ao configurar fluxos de trabalho baseados em API para exportar arquivos do Experience Platform para seus destinos de armazenamento em nuvem preferidos. Em seguida, você pode exibir o tutorial da API para [exportar dados para destinos de armazenamento na nuvem](/help/destinations/api/activate-segments-file-based-destinations.md).

@@ -2,9 +2,9 @@
 description: Configurar opções de formatação de arquivo para destinos baseados em arquivo
 title: Saiba como usar o Destination SDK para configurar opções de formatação de arquivo para destinos baseados em arquivo.
 exl-id: e61c7989-1123-4b3b-9781-a6097cd0e2b4
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '896'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## Visão geral {#overview}
 
-O Destination SDK permite que você ajuste amplamente as opções de formatação e compactação dos arquivos exportados para corresponder a quaisquer requisitos downstream no local de armazenamento.
+Use o Destination SDK para ajustar amplamente as opções de formatação e compactação dos arquivos exportados, de forma a corresponder a quaisquer requisitos downstream no local de armazenamento.
 
 Esta página descreve como usar o Destination SDK para configurar opções de formatação de arquivo para destinos baseados em arquivo.
 
@@ -718,7 +718,7 @@ Uma resposta bem-sucedida retorna a configuração de destino, incluindo o ident
 Uma determinada combinação de opções de formatação de arquivo pode gerar resultados indesejados na exportação de arquivos.
 A Adobe recomenda não selecionar a seguinte combinação de opções de CSV:
 
-```
+```properties
 nullValue -> ""
 quote -> "
 emptyValue -> ""
@@ -742,4 +742,4 @@ James,Smith,"","\"\""
 
 ## Próximas etapas {#next-steps}
 
-Após a leitura deste artigo, agora você sabe como configurar opções de formatação de arquivo personalizadas para seus arquivos exportados usando o Destination SDK. Em seguida, sua equipe pode usar o [fluxo de trabalho de ativação para destinos baseados em arquivo](../../../ui/activate-batch-profile-destinations.md) para exportar dados para o destino.
+Agora você sabe como configurar opções de formatação de arquivo personalizadas para seus arquivos exportados usando o Destination SDK. Em seguida, sua equipe pode usar o [fluxo de trabalho de ativação para destinos baseados em arquivo](../../../ui/activate-batch-profile-destinations.md) para exportar dados para o destino.

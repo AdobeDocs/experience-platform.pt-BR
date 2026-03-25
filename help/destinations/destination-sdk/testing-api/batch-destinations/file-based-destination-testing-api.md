@@ -2,9 +2,9 @@
 description: Esta página explica como usar o endpoint da API /testing/destinationInstance para testar se o destino baseado em arquivo está configurado corretamente e verificar a integridade dos fluxos de dados para o destino configurado.
 title: Teste seu destino baseado em arquivo com perfis de amostra
 exl-id: 75f76aec-245b-4f07-8871-c64a710db9f6
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '828'
 ht-degree: 2%
 
 ---

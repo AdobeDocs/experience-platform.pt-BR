@@ -4,9 +4,9 @@ title: Ative públicos para destinos baseados em arquivo usando a API do Serviç
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '4973'
+source-wordcount: '4933'
 ht-degree: 4%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 4%
 
 Use os recursos aprimorados de exportação de arquivos para acessar a funcionalidade aprimorada de personalização ao exportar arquivos do Experience Platform:
 
-* [Opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#file-names) adicionais.
+* [Opções de nomenclatura de arquivo](/help/destinations/ui/activate-batch-profile-destinations.md#configure-file-names) adicionais.
 * Capacidade de definir cabeçalhos de arquivos personalizados em seus arquivos exportados por meio da [etapa de mapeamento aprimorado](/help/destinations/ui/activate-batch-profile-destinations.md#mapping).
 * Capacidade de selecionar o [tipo de arquivo](/help/destinations/ui/connect-destination.md#file-formatting-and-compression-options) do arquivo exportado.
 * [Capacidade de personalizar a formatação de arquivos de dados CSV exportados](/help/destinations/ui/batch-destinations-file-formatting-options.md).
@@ -29,7 +29,7 @@ Essa funcionalidade é compatível com os seis cartões de armazenamento em nuve
 * [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md#changelog)
 * [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md#changelog)
 
-Este artigo explica o fluxo de trabalho necessário para usar a [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/) para exportar perfis qualificados do Adobe Experience Platform para um dos locais de armazenamento na nuvem vinculados acima.
+Este artigo explica o fluxo de trabalho necessário para usar a [API de Serviço de Fluxo](https://developer.adobe.com/experience-platform-apis/references/destinations/) para exportar perfis qualificados do [!DNL Adobe Experience Platform] para um dos locais de armazenamento na nuvem vinculados acima.
 
 >[!TIP]
 >
@@ -47,10 +47,10 @@ If you were already using the Flow Service API to export profiles to the Amazon 
 
 ![Etapas para ativar públicos destacando a etapa atual em que o usuário está](/help/destinations/assets/api/file-based-segment-export/segment-export-overview.png)
 
-Este manual necessita de uma compreensão funcional dos seguintes componentes da Adobe Experience Platform:
+Este guia requer uma compreensão funcional dos seguintes componentes do [!DNL Adobe Experience Platform]:
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): a estrutura padronizada pela qual o [!DNL Experience Platform] organiza os dados de experiência do cliente.
-* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] permite que você compile públicos e gere públicos no [!DNL Adobe Experience Platform] a partir dos dados do [!DNL Real-Time Customer Profile].
+* [[!DNL Segmentation Service]](../../segmentation/api/overview.md): [!DNL Adobe Experience Platform Segmentation Service] cria públicos-alvo em [!DNL Adobe Experience Platform] a partir dos dados de [!DNL Real-Time Customer Profile].
 * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisa saber para ativar dados para destinos baseados em arquivo no Experience Platform.
@@ -87,7 +87,7 @@ Todas as solicitações que contêm uma carga (`POST`, `PUT`, `PATCH`) exigem um
 
 ### Documentação de referência da API {#api-reference-documentation}
 
-Você pode encontrar a documentação de referência de acompanhamento para todas as operações de API neste tutorial. Consulte a [Documentação da API de Destinos do Flow Service no site da Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Recomendamos que você use este tutorial e a documentação de referência da API em paralelo.
+Você pode encontrar a documentação de referência de acompanhamento para todas as operações de API neste tutorial. Consulte a documentação do [Serviço de Fluxo - API de Destinos no site da Adobe Developer](https://developer.adobe.com/experience-platform-apis/references/destinations/). Recomendamos que você use este tutorial e a documentação de referência da API em paralelo.
 
 ### Glossário {#glossary}
 
@@ -110,7 +110,7 @@ Antes de iniciar o fluxo de trabalho para exportar perfis, identifique a especif
 
 {style="table-layout:auto"}
 
-Você precisa dessas IDs para criar várias entidades do serviço de fluxo nas próximas etapas deste tutorial. Você também precisa consultar partes da especificação da conexão para configurar determinadas entidades para que possa recuperar a especificação da conexão das APIs do serviço de fluxo. Veja os exemplos abaixo de recuperação das especificações de conexão para todos os destinos na tabela:
+Você precisa dessas IDs para criar várias entidades do serviço de fluxo nas próximas etapas deste tutorial. Você também precisa fazer referência a partes da especificação de conexão para configurar determinadas entidades para que possa recuperar a especificação de conexão das APIs de serviço de fluxo. Veja os exemplos abaixo de recuperação das especificações de conexão para todos os destinos na tabela:
 
 >[!BEGINTABS]
 
@@ -849,7 +849,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obter informações sobre como obter as credenciais de autenticação necessárias, consulte a seção [autenticar para destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) da página de documentação de destino do Azure Data Lake Gen 2(ADLS Gen2).
+>Para obter informações sobre como obter as credenciais de autenticação necessárias, consulte a seção [autenticar no destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) da página de documentação do Azure Data Lake Gen 2(ADLS Gen2).
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -2590,7 +2590,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) da página de documentação do Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
+>Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/adls-gen2.md#destination-details) da página de documentação de destino do Azure [!DNL Data Lake Gen 2(ADLS Gen2)].
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -2870,7 +2870,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 >[!TIP]
 >
->Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) da página de documentação do SFTP de destino.
+>Para obter informações sobre como obter os parâmetros de destino necessários, consulte a seção [preencher detalhes do destino](/help/destinations/catalog/cloud-storage/google-cloud-storage.md#destination-details) da página de documentação do destino SFTP.
 
 Observe as linhas destacadas com comentários em linha no exemplo de solicitação, que fornecem informações adicionais. Remova os comentários em linha na solicitação ao copiar e colar a solicitação no terminal de sua escolha.
 
@@ -3489,7 +3489,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/idnamespace/i
 
 +++ Exibir identidades disponíveis para usar no esquema de entrada
 
-A resposta retorna as identidades que você pode usar ao criar o esquema de entrada. Observe que esta resposta retorna os namespaces de identidade [padrão](/help/identity-service/features/namespaces.md#standard) e [personalizados](/help/identity-service/features/namespaces.md#manage-namespaces) configurados no Experience Platform.
+A resposta retorna as identidades que você pode usar ao criar o esquema de entrada. Observe que esta resposta retorna os namespaces de identidade [padrão](/help/identity-service/features/namespaces.md#standard) e [personalizados](/help/identity-service/features/namespaces.md#create-namespaces) configurados no Experience Platform.
 
 ```json
 [
@@ -4879,7 +4879,7 @@ Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de e
 
 ## Próximas etapas {#next-steps}
 
-Seguindo este tutorial, você conectou com êxito o Experience Platform a um dos destinos de armazenamento na nuvem de sua preferência e configurou um fluxo de dados para o respectivo destino para exportar públicos. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
+Você conectou com sucesso o Experience Platform a um dos destinos de armazenamento na nuvem de sua preferência e configurou um fluxo de dados para o respectivo destino para exportar públicos. Consulte as seguintes páginas para obter mais detalhes, como editar fluxos de dados existentes usando a API do Serviço de fluxo:
 
 * [Visão geral dos destinos](../home.md)
 * [Visão geral do Catálogo de destinos](../catalog/overview.md)

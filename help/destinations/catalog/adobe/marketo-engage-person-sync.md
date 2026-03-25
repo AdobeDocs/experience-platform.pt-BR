@@ -4,9 +4,9 @@ description: Use o conector de sincronização de pessoas do Marketo Engage para
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1223'
+source-wordcount: '1196'
 ht-degree: 4%
 
 ---
@@ -41,7 +41,7 @@ Use o conector de sincronização de pessoas do Marketo Engage para transmitir a
 
 | Identidade de destino | Descrição |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Email | Um namespace que representa um endereço de email. Esse tipo de namespace é frequentemente associado a uma única pessoa e, portanto, pode ser usado para identificá-la em diferentes canais. |
+| Email | Um namespace que representa um endereço de email. Esse tipo de namespace é frequentemente associado a uma única pessoa e, portanto, identifica essa pessoa em diferentes canais. |
 
 {style="table-layout:auto"}
 
@@ -56,7 +56,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Serviço de segmentação | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](https://experienceleague.adobe.com/pt-br/docs/experience-platform/segmentation/home) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -67,7 +67,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -87,11 +87,11 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 >
 >* Para se conectar ao destino, você precisa das **[!UICONTROL View Destinations]** e **[!UICONTROL Manage Destinations]** [permissões de controle de acesso](/help/access-control/home.md#permissions).
 
-Se sua empresa tiver acesso a várias organizações, certifique-se de usar a mesma organização na Marketo Engage e no Real-Time CDP, onde você está configurando o conector de destino para o Marketo.  Se você já tiver configurado um destino, poderá selecionar uma conta existente do Marketo para usar com sua nova configuração.  Caso contrário, clique no prompt Conector para destino, que permitirá definir o nome, a descrição e a Marketo Munchkin ID do destino desejado.  A Munchkin ID da sua instância do Marketo pode ser encontrada no menu Admin->Munchkin.
+Se a sua empresa tiver acesso a várias organizações, certifique-se de usar a mesma organização no Marketo Engage e no [!DNL Real-Time CDP], onde você está configurando o conector de destino para o Marketo.  Se você já tiver configurado um destino, poderá selecionar uma conta existente do Marketo para usar com sua nova configuração.  Caso contrário, clique no prompt Conector para destino para definir o nome, a descrição e a Marketo Munchkin ID do destino desejado.  A Munchkin ID da sua instância do Marketo pode ser encontrada no menu Admin->Munchkin.
 
 >[!IMPORTANT]
 >
->O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
+>O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
 
 ![Conectar ao Destino](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,7 +102,7 @@ Se sua empresa tiver acesso a várias organizações, certifique-se de usar a me
 * **[!UICONTROL First searchable field]**: Campo para desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. O padrão é email
 * **[!UICONTROL First searchable field]**: um campo secundário para desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. Opcional
 
-Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
+Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
 
 >[!IMPORTANT]
 >
@@ -134,7 +134,7 @@ Na etapa Ativar públicos-alvo, você poderá selecionar entre qualquer público
 
 ## Mapeamento de campos {#field-mapping}
 
-Para que as alterações em um atributo de pessoa específico sejam enviadas para o Marketo Engage, o campo deve ser mapeado de um campo do Real-Time CDP para o campo do Marketo.
+Para que as alterações em um atributo de pessoa específico sejam enviadas para o Marketo Engage, o campo deve ser mapeado de um campo [!DNL Real-Time CDP] para o campo do Marketo.
 
 ![Mapeamento de campos](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
 
@@ -158,7 +158,7 @@ Os tipos de dados do Experience Platform e do Marketo podem ser mapeados das seg
 
 {style="table-layout:auto"}
 
-Em alguns casos, é desejável permitir integrações para definir o valor de um campo, se não houver nenhum, enquanto impede que integrações façam atualizações em campos que já têm um valor.  Se você precisar impedir que o conector de destino substitua valores existentes na instância do Marketo Engage, poderá configurar campos para bloquear atualizações na seção Admin->Gerenciamento de campo da instância do Marketo e alternar o tipo de origem do Adobe Experience Platform.
+Em alguns casos, é desejável permitir integrações para definir o valor de um campo, se não houver nenhum, enquanto impede que integrações façam atualizações em campos que já têm um valor.  Se você precisar impedir que o conector de destino substitua valores existentes na instância do Marketo Engage, poderá configurar campos para bloquear atualizações na seção Admin->Gerenciamento de campos da instância do Marketo e alternar o tipo de origem [!DNL Adobe Experience Platform].
 
 ![Bloquear Atualizações de Campo](../../assets/catalog/adobe/marketo-engage-person-sync/block-field-updates.png)
 
@@ -166,4 +166,4 @@ Em alguns casos, é desejável permitir integrações para definir o valor de um
 
 ## Uso e governança de dados {#data-usage-and-governance}
 
-Todos os destinos do Adobe Experience Platform estão em conformidade com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como a Adobe Experience Platform impõe a governança de dados, consulte a [visão geral da governança de dados](/help/data-governance/home.md).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] impõe a governança de dados, consulte a [visão geral da governança de dados](/help/data-governance/home.md).

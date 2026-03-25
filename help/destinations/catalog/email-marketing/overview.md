@@ -4,10 +4,10 @@ title: Visão geral dos destinos de marketing por email
 type: Tutorial
 description: Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. Saiba quais ESPs são compatíveis como destinos do Experience Platform.
 exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 5%
+source-wordcount: '370'
+ht-degree: 4%
 
 ---
 
@@ -15,11 +15,11 @@ ht-degree: 5%
 
 ## Visão geral {#overview}
 
-Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. O Adobe Experience Platform integra-se aos ESPs permitindo ativar públicos-alvo para destinos de marketing por email.
+Os Provedores de serviços de email (ESPs) permitem gerenciar atividades de marketing por email, como o envio de campanhas de email promocionais. O [!DNL Adobe Experience Platform] integra-se aos ESPs permitindo que você ative públicos para destinos de marketing por email.
 
 ## Destinos de marketing por email compatíveis {#supported-destinations}
 
-O Adobe Experience Platform é compatível com os seguintes destinos de marketing por email:
+O [!DNL Adobe Experience Platform] oferece suporte aos seguintes destinos de marketing por email:
 
 * [Adobe Campaign](adobe-campaign.md)
 * [Adobe Campaign Managed Cloud Services](adobe-campaign-managed-services.md)

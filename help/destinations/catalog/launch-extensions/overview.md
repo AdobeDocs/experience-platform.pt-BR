@@ -3,16 +3,16 @@ keywords: extensões de tag;extensão de tag;destinos de lançamento; extensões
 title: Extensões de tag no Adobe Experience Platform
 description: O Adobe Experience Platform oferece a próxima geração de recursos de gerenciamento de tags da Adobe. O Experience Platform oferece uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes.
 exl-id: 54fca635-0e37-460e-abb3-5da294d4e0cf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '477'
 ht-degree: 2%
 
 ---
 
-# Extensões de tag no Adobe Experience Platform
+# Marcar extensões em [!DNL Adobe Experience Platform]
 
-A Adobe Experience Platform oferece a próxima geração de recursos de gerenciamento de tags da Adobe. O Experience Platform oferece uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado.
+O [!DNL Adobe Experience Platform] fornece a próxima geração de recursos de gerenciamento de tags da Adobe. O Experience Platform oferece uma forma simples de implantar e gerenciar todas as tags de análise, de marketing e de anúncios necessárias para potencializar experiências de cliente relevantes. As marcas são oferecidas a [!DNL Adobe Experience Cloud] clientes como um recurso incluso com valor agregado.
 
 Para obter uma introdução às tags, consulte os recursos abaixo:
 
@@ -21,7 +21,7 @@ Para obter uma introdução às tags, consulte os recursos abaixo:
 
 ## Como encontrar extensões de tag na interface do Experience Platform {#how-to-find-extensions-in-interface}
 
-Para localizar as extensões na interface do Experience Platform, navegue até **[!UICONTROL Destinos]** > **[!UICONTROL Catálogo]** e selecione **[!UICONTROL Extensões]** no filtro **[!UICONTROL Tipos]**.
+Para localizar as extensões na interface do Experience Platform, navegue até **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** e selecione **[!UICONTROL Extensions]** no filtro **[!UICONTROL Types]**.
 
 ![Filtro de extensões na interface](../../assets/catalog/launch-extensions/filter.png)
 
@@ -45,7 +45,7 @@ Extensions forward raw event data to several types of destinations. Think of ext
 
 ## Benefícios do uso de extensões de tag {#extensions-benefits}
 
-Os recursos de tags da Experience Platform são gratuitos para clientes existentes da Experience Cloud. O sistema simplifica a implantação de tags no site por meio de extensões fáceis de usar que você pode instalar, configurar, atualizar e excluir. As tags ocupam pouco espaço no site e permitem que você mantenha suas páginas carregando rapidamente.
+Os recursos de tags da Experience Platform são gratuitos para clientes existentes da Experience Cloud. O sistema simplifica a implantação de tags no site por meio de extensões fáceis de usar que você pode instalar, configurar, atualizar e excluir. As tags ocupam pouco espaço no site e mantêm suas páginas carregando rapidamente.
 
 Embora não seja possível ativar públicos para extensões de tag, você pode configurar regras para encaminhar apenas dados do evento em determinadas situações. Essa poderosa funcionalidade permite encaminhar os dados do evento somente em determinadas situações, em vez de enviar dados do evento em cada interação. Para obter mais informações, leia sobre as regras na [documentação de tags](../../../tags/ui/managing-resources/rules.md).
 

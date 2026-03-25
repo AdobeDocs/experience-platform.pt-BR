@@ -3,27 +3,27 @@ keywords: Experience Platform;página inicial;tópicos populares; alertas;destin
 description: Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 title: Assinar alertas de destino em contexto
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '931'
-ht-degree: 10%
+source-wordcount: '906'
+ht-degree: 8%
 
 ---
 
 # Assinar alertas de destino em contexto
 
-A Adobe Experience Platform permite que você se inscreva para receber alertas baseados em eventos relacionados às atividades da Adobe Experience Platform. Os alertas reduzem ou eliminam a necessidade de sondar a [[!DNL Observability Insights] API](../../observability/api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreram erros.
+Use [!DNL Adobe Experience Platform] para assinar alertas baseados em eventos relacionados a [!DNL Adobe Experience Platform] atividades. Os alertas reduzem ou eliminam a necessidade de sondar a [[!DNL Observability Insights] API](../../observability/api/overview.md) para verificar se um trabalho foi concluído, se um determinado marco em um fluxo de trabalho foi atingido ou se ocorreram erros.
 
 Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo.
 
-Este documento fornece etapas sobre como assinar mensagens de alertas de recebimento para seus fluxos de dados de destino.
+Este documento fornece etapas para assinar mensagens de alerta para seus fluxos de dados de destino.
 
 ## Introdução {#getting-started}
 
-Este documento requer uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este documento requer uma compreensão funcional dos seguintes componentes do [!DNL Adobe Experience Platform]:
 
-* [Destinos](../home.md): integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
-* [Observabilidade](../../observability/home.md): [!DNL Observability Insights] permite monitorar as atividades do Experience Platform usando métricas estatísticas e notificações de eventos.
+* [Destinos](../home.md): integrações pré-criadas com plataformas de destino que permitem a ativação contínua dos dados de [!DNL Adobe Experience Platform]. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+* [Observabilidade](../../observability/home.md): use [!DNL Observability Insights] para monitorar as atividades do Experience Platform por meio de métricas estatísticas e notificações de eventos.
    * [Alertas](../../observability/alerts/overview.md): quando um determinado conjunto de condições em suas operações do Experience Platform é atingido (como um problema em potencial quando o sistema ultrapassa um limite), o Experience Platform pode enviar mensagens de alerta para qualquer usuário em sua organização que tenha assinado para eles.
 
 ## Assinar os alertas da interface {#subscribe-destination-alerts}
@@ -117,4 +117,4 @@ Uma janela pop-up é exibida, fornecendo uma lista de alertas de destino. Seleci
 
 ## Próximas etapas {#next-steps}
 
-Este documento forneceu um guia passo a passo sobre como assinar alertas em contexto para seus fluxos de dados de destino. Para obter mais informações, consulte o [guia da interface de alertas](../../observability/alerts/ui.md).
+Agora você pode assinar alertas de contexto para seus fluxos de dados de destino. Para obter mais informações, consulte o [guia da interface de alertas](../../observability/alerts/ui.md).

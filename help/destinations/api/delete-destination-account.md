@@ -5,16 +5,16 @@ title: Excluir uma conta de destino usando a API de Serviço de Fluxo
 type: Tutorial
 description: Saiba como excluir uma conta de destino usando a API de serviço de fluxo.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 20%
+source-wordcount: '743'
+ht-degree: 18%
 
 ---
 
 # Excluir uma conta de destino usando a API de Serviço de Fluxo
 
-[!DNL Destinations] são integrações pré-construídas com plataformas de destino que permitem a ativação perfeita de dados da Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+[!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua dos dados de [!DNL Adobe Experience Platform]. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 
 Antes de ativar os dados, você precisa se conectar ao destino configurando primeiro uma conta de destino. Este tutorial aborda as etapas para excluir contas de destino que não são mais necessárias usando a [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -26,9 +26,9 @@ Antes de ativar os dados, você precisa se conectar ao destino configurando prim
 
 Este tutorial requer que você tenha uma ID de conexão válida. A ID de conexão representa a conexão da conta com o destino. Se você não tiver uma ID de conexão válida, selecione seu destino escolhido no [catálogo de destinos](../catalog/overview.md) e siga as etapas descritas para [conectar-se ao destino](../ui/connect-destination.md) antes de tentar este tutorial.
 
-Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do Adobe Experience Platform:
+Este tutorial também requer que você tenha uma compreensão funcional dos seguintes componentes do [!DNL Adobe Experience Platform]:
 
-* [Destinos](../home.md): [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
+* [Destinos](../home.md): [!DNL Destinations] são integrações pré-criadas com plataformas de destino que permitem a ativação contínua dos dados de [!DNL Adobe Experience Platform]. É possível usar destinos para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] fornece sandboxes virtuais que particionam uma única instância do [!DNL Experience Platform] em ambientes virtuais separados para ajudar a desenvolver aplicativos de experiência digital.
 
 As seções a seguir fornecem informações adicionais que você precisará saber para excluir com êxito uma conta de destino usando a API [!DNL Flow Service].
@@ -187,4 +187,4 @@ Os endpoints de API neste tutorial seguem os princípios gerais de mensagem de e
 
 ## Próximas etapas {#next-steps}
 
-Ao seguir este tutorial, você usou com êxito a API [!DNL Flow Service] para excluir contas de destino existentes. Para obter mais informações sobre o uso de destinos, consulte a [visão geral sobre destinos](/help/destinations/home.md).
+Você usou com êxito a API [!DNL Flow Service] para excluir contas de destino existentes. Para obter mais informações sobre o uso de destinos, consulte a [visão geral sobre destinos](/help/destinations/home.md).

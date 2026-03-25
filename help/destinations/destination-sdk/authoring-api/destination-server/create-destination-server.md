@@ -2,9 +2,9 @@
 description: Esta página exemplifica a chamada à API usada para criar um servidor de destino por meio do Adobe Experience Platform Destination SDK.
 title: Criar uma configuração do servidor de destino
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2038'
+source-wordcount: '2029'
 ht-degree: 6%
 
 ---
@@ -24,7 +24,7 @@ Para obter uma descrição detalhada dos recursos que você pode configurar por 
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API do servidor de destino {#get-started}
 
@@ -782,7 +782,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da configuraç�
 
 ### Criar servidores de destino de esquema dinâmico {#dynamic-schema-servers}
 
-Os esquemas dinâmicos permitem recuperar dinamicamente os atributos de destino compatíveis e gerar esquemas com base em sua própria API. Você precisa configurar um servidor de destino para esquemas dinâmicos antes de poder configurar o esquema.
+Os esquemas dinâmicos recuperam dinamicamente os atributos de destino compatíveis e geram esquemas com base em sua própria API. Você precisa configurar um servidor de destino para esquemas dinâmicos antes de poder configurar o esquema.
 
 Veja na guia abaixo um exemplo de servidor de destino para destinos que usam [esquemas dinâmicos](../../functionality/destination-configuration/schema-configuration.md#dynamic-schema-configuration).
 

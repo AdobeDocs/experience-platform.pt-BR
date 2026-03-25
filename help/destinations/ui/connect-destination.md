@@ -3,9 +3,9 @@ title: Criar uma nova conexão de destino
 type: Tutorial
 description: Saiba como se conectar a um destino no Adobe Experience Platform, ativar alertas e configurar ações de marketing para o destino conectado.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1215'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 ## Visão geral {#overview}
 
-Antes de enviar dados do público-alvo para um destino, é necessário configurar uma conexão com a plataforma de destino. Este artigo mostra como configurar uma nova conexão de destino, para a qual você pode ativar públicos ou exportar conjuntos de dados usando a interface do usuário do Adobe Experience Platform.
+Antes de enviar dados do público-alvo para um destino, é necessário configurar uma conexão com a plataforma de destino. Este artigo mostra como configurar uma nova conexão de destino, para a qual você pode ativar públicos ou exportar conjuntos de dados usando a interface do usuário do [!DNL Adobe Experience Platform].
 
 ## Localize o destino desejado no catálogo {#setup}
 
@@ -33,7 +33,7 @@ Antes de enviar dados do público-alvo para um destino, é necessário configura
    * **[!UICONTROL Activate]**. Já foi configurada uma conexão com este destino. Esse destino oferece suporte à ativação de públicos-alvo e exportações de conjunto de dados.
    * **[!UICONTROL Activate audiences]**. Já foi configurada uma conexão com este destino. Este destino oferece suporte somente à ativação de público-alvo.
 
-   Para obter mais informações sobre a diferença entre esses controles, consulte também a seção [Catálogo](../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
+   Para obter mais informações sobre a diferença entre esses controles, consulte a seção [Catálogo](../ui/destinations-workspace.md#catalog) da documentação do espaço de trabalho de destino.
 
    Selecione **[!UICONTROL Set up]**, **[!UICONTROL Activate]** ou **[!UICONTROL Activate audiences]**, dependendo de qual controle está disponível para você.
 
@@ -109,7 +109,7 @@ Alguns destinos baseados em arquivo oferecem suporte à ativação de públicos-
 
 ### Ativar alertas de destino {#enable-alerts}
 
-1. (Opcional) Selecione os alertas de fluxo de dados de destino que você deseja assinar. Você pode assinar alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo. Os alertas disponíveis diferem com base no tipo de destino (baseado em arquivo ou transmissão) ao qual você está se conectando. Leia [Assinar alertas de destino em contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
+1. (Opcional) Selecione os alertas de fluxo de dados de destino que você deseja assinar. Assine alertas ao criar um fluxo de dados para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo. Os alertas disponíveis diferem com base no tipo de destino (baseado em arquivo ou transmissão) ao qual você está se conectando. Leia [Assinar alertas de destino em contexto](alerts.md) para obter informações detalhadas sobre alertas de fluxo de dados de destino.
 
    ![A caixa de diálogo Configurar novo destino com as opções de assinatura de alertas de destino em contexto foi realçada.](../assets/ui/connect-destinations/subscribe-to-alerts.png)
 
@@ -127,6 +127,6 @@ Alguns destinos baseados em arquivo oferecem suporte à ativação de públicos-
 
 ## Próximas etapas {#next-steps}
 
-Ao ler este documento, você aprendeu a usar a interface do usuário do Experience Platform para estabelecer uma conexão com um destino. Lembrando que os parâmetros de conexão disponíveis e necessários variam de destino para destino. Você também deve consultar a página de documentação de destino no [catálogo de destinos](/help/destinations/catalog/overview.md) para obter informações específicas sobre as entradas necessárias e as opções disponíveis por tipo de destino.
+Agora você sabe como usar a interface do usuário do Experience Platform para estabelecer uma conexão com um destino. Os parâmetros de conexão disponíveis e necessários variam de destino para destino. Consulte a página de documentação de destino no [catálogo de destinos](/help/destinations/catalog/overview.md) para obter informações específicas sobre as entradas necessárias e as opções disponíveis por tipo de destino.
 
-Em seguida, você pode prosseguir para [ativando públicos-alvo](/help/destinations/ui/activation-overview.md) ou [exportando conjuntos de dados](/help/destinations/ui/export-datasets.md) para o seu destino.
+Em seguida, prossiga para [ativando públicos-alvo](/help/destinations/ui/activation-overview.md) ou [exportando conjuntos de dados](/help/destinations/ui/export-datasets.md) para o seu destino.

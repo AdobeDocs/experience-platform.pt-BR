@@ -3,9 +3,9 @@ title: Executar transformações nos dados exportados para destinos de armazenam
 type: Tutorial
 description: Entenda como usar a funcionalidade de campos calculados para executar transformações nos dados exportados para destinos de armazenamento na nuvem
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1603'
 ht-degree: 8%
 
 ---
@@ -118,7 +118,7 @@ Por exemplo, você pode combinar os seguintes campos XDM abaixo, como mostrado n
 
 Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como os elementos da matriz são concatenados em uma única string usando o caractere `_`.
 
-```
+```csv
 First_Name,Last_Name,Personal_Email,Organization
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
@@ -133,7 +133,7 @@ Continuando com o objeto de matriz `organizations` acima, você pode gravar uma 
 
 Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como os dois elementos da matriz que atendem ao critério são concatenados em uma única string usando o caractere `_`.
 
-```
+```csv
 John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
 ```
 
@@ -147,7 +147,7 @@ Continuando com o objeto de matriz `organizations` acima, você pode gravar uma 
 
 Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como os três elementos da matriz são transformados e concatenados em uma única string usando o caractere `_`.
 
-```
+```csv
 John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
 ```
 
@@ -159,7 +159,7 @@ Use a função `iif` para exportar elementos de uma matriz sob determinadas cond
 
 Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Nesse caso, o primeiro elemento do array é Marketing, então a pessoa é um membro do departamento de marketing.
 
-```
+```csv
 `First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
 John,Doe, johndoe@acme.org, "isMarketing"
 ```
@@ -174,7 +174,7 @@ Continuando com o objeto de matriz `organizations` acima, você pode gravar uma 
 
 Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como os três elementos da matriz são concatenados em uma única string usando o caractere `_` e 2023 também é anexado ao final da string.
 
-```
+```csv
 `First_Name,Last_Name,Personal_Email,Organization_Member_2023
 John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
 ```
@@ -202,7 +202,7 @@ Por exemplo, você pode combinar os seguintes campos XDM abaixo, conforme mostra
 
 Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como o primeiro valor `true` não nulo na matriz é exportado no arquivo.
 
-```
+```csv
 First_Name,Last_Name,hasPromotion
 John,Doe,true
 ```
@@ -220,7 +220,7 @@ Por exemplo, você pode combinar os seguintes campos XDM abaixo, como mostrado n
 
 Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo. Observe como a segunda coluna indica o número de elementos na matriz, correspondente ao número de compras separadas feitas pelo cliente.
 
-```
+```csv
 `Personal_Email,Times_Purchased
 johndoe@acme.org,"5"
 ```
@@ -237,7 +237,7 @@ Você pode acessar um índice de uma matriz para exportar um único item da matr
 
 Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo, exportando a primeira vez que o cliente fez uma compra:
 
-```
+```csv
 `Personal_Email,First_Purchase
 johndoe@acme.org,"1538097126"
 ```
@@ -250,7 +250,7 @@ Use as funções `first` e `last` para exportar o primeiro ou o último elemento
 
 Nesse caso, o arquivo de saída é semelhante ao mostrado abaixo, exportando a primeira e a última vez que o cliente fez uma compra:
 
-```
+```csv
 `Personal_Email,First_Purchase, Last_Purchase
 johndoe@acme.org,"1538097126","1664327526"
 ```

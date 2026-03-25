@@ -3,9 +3,9 @@ title: Conexão SAP Commerce
 description: Use o conector de destino do SAP Commerce para atualizar os registros do cliente em sua conta SAP.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 3bd1a2a7-fb56-472d-b9bd-603b94a8937e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '2306'
+source-wordcount: '2289'
 ht-degree: 4%
 
 ---
@@ -20,7 +20,7 @@ As instruções para autenticar na sua instância do [!DNL SAP Commerce] estão 
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL SAP Commerce], veja um exemplo de caso de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL SAP Commerce], veja um exemplo de caso de uso que os clientes [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 [!DNL SAP Commerce] clientes armazenam informações sobre indivíduos ou entidades organizacionais que interagem com sua empresa. Sua equipe usa os clientes existentes no [!DNL SAP Commerce] para criar os públicos-alvo da Experience Platform. Depois de enviar esses públicos-alvo para [!DNL SAP Commerce], suas informações são atualizadas e cada cliente recebe uma propriedade com seu valor como o nome do público-alvo que indica a qual público-alvo o cliente pertence.
 
@@ -30,7 +30,7 @@ Consulte as seções abaixo para quaisquer pré-requisitos que você deve config
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL SAP Commerce], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL SAP Commerce], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [públicos-alvo](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) criados em [!DNL Experience Platform].
 
 Consulte a documentação do Experience Platform para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
@@ -44,7 +44,7 @@ Para exportar dados do Experience Platform para sua conta [!DNL SAP Commerce], v
 
 #### Gerar uma chave de serviço {#prerequisites-service-key}
 
-* A chave de serviço [!DNL SAP Commerce] permite acessar a API [!DNL SAP Subscription Billing] por meio do Experience Platform. Consulte [!DNL SAP Commerce] [criar uma Chave de Serviço com ID do Cliente e Segredo do Cliente](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) para criar uma chave de serviço. O [!DNL SAP Commerce] exige o seguinte:
+* A chave de serviço [!DNL SAP Commerce] fornece acesso à API [!DNL SAP Subscription Billing] por meio do Experience Platform. Consulte [!DNL SAP Commerce] [criar uma Chave de Serviço com ID do Cliente e Segredo do Cliente](https://help.sap.com/docs/CLOUD_TO_CASH_OD/1216e7b79c984675b0a6f0005e351c74/87c11a0f5dc3494eaf3baa355925c030.html#create-a-service-key-with-client-id-and-client-secret) para criar uma chave de serviço. O [!DNL SAP Commerce] exige o seguinte:
    * ID de cliente
    * Segredo do cliente
    * URL. O padrão de URL é: `https://subscriptionbilling.authentication.eu10.hana.ondemand.com`. Este valor será usado posteriormente para obter valores para `Region` e `Endpoint`.
@@ -86,7 +86,7 @@ Para criar as referências personalizadas, faça logon na sua conta do [!DNL SAP
 Um exemplo de como criar um **[!UICONTROL Reference Type]** personalizado em [!DNL SAP Subscription Billing] é mostrado abaixo:
 ![Imagem que mostra onde criar uma referência personalizada no Faturamento de Assinaturas SAP.](../../assets/catalog/ecommerce/sap-commerce/create-custom-reference.png)
 
-Para obter orientação adicional, consulte a documentação de [!DNL SAP Subscription Billing] [referências personalizadas](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27).
+Para obter orientações adicionais, consulte a documentação de [!DNL SAP Subscription Billing] [referências personalizadas](https://help.sap.com/docs/CLOUD_TO_CASH_OD/80d121f216af43648e79664efe5595f7/85696a63c8d8453a934e86c9413a25cf.html?version=2023-11-27).
 
 ### Coletar credenciais necessárias {#gather-credentials}
 
@@ -122,7 +122,7 @@ Esse destino também suporta a ativação dos públicos-alvo descritos na tabela
 | Tipo de público-alvo | Suportado | Descrição |
 | ------------- | --------- | ----------- |
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -135,7 +135,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -203,7 +203,7 @@ Leia [Ativar perfis e públicos-alvo para destinos de exportação de público-a
 
 ### Mapear atributos e identidades {#map}
 
-Para enviar corretamente seus dados de público-alvo do Adobe Experience Platform para o destino [!DNL SAP Commerce], passe pela etapa de mapeamento de campos. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino. Para mapear corretamente os campos XDM para os campos de destino [!DNL SAP Commerce], siga as etapas abaixo:
+Para enviar corretamente os dados do público-alvo de [!DNL Adobe Experience Platform] para o destino [!DNL SAP Commerce], você deve seguir para a etapa de mapeamento do campo. O mapeamento consiste na criação de um link entre os campos do esquema do Experience Data Model (XDM) na sua conta do Experience Platform e seus equivalentes correspondentes no destino. Para mapear corretamente os campos XDM para os campos de destino [!DNL SAP Commerce], siga as etapas abaixo:
 
 #### Mapear a identidade `customerNumberSAP` {#map-customer-number-sap}
 
@@ -336,7 +336,7 @@ Com base na imagem mostrada acima em que você selecionou dois públicos-alvo, o
 
 Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 
-Faça logon na conta [!DNL SAP Subscription Billing] e navegue até a página **[!UICONTROL Contacts]** para verificar o status do público-alvo. A lista pode ser configurada para exibir colunas para as referências personalizadas e exibir os status de público correspondentes.
+Vá para a conta [!DNL SAP Subscription Billing] e navegue até a página **[!UICONTROL Contacts]** para verificar os status do público-alvo. A lista pode ser configurada para exibir colunas para as referências personalizadas e exibir os status de público correspondentes.
 ![Imagem de Faturamento de Assinatura SAP mostrando a página de visão geral do cliente com cabeçalhos de coluna mostrando o nome do público e os status do público-alvo das células](../../assets/catalog/ecommerce/sap-commerce/customer-overview.png)
 
 ## Uso e governança de dados {#data-usage-governance}

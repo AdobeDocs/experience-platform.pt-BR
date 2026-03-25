@@ -4,9 +4,9 @@ description: Exporte seus públicos-alvo primários para o destino da Acxiom, pa
 last-substantial-update: 2024-03-14T00:00:00Z
 badge: label="Beta" type="Informative"
 exl-id: d82e8cd3-970c-44af-99b0-ea154eb3655e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1559'
+source-wordcount: '1531'
 ht-degree: 3%
 
 ---
@@ -19,19 +19,19 @@ ht-degree: 3%
 
 ## Visão geral {#overview}
 
-Use o [!DNL Acxiom Prospect-Suppression] para fornecer os públicos-alvo mais produtivos possíveis. Esse conector exporta com segurança os dados primários do Real-Time Customer Data Platform e os executa por meio de uma resolução premiada de higiene e identidade que produz um arquivo de dados para ser usado como uma lista de supressão. Isso será comparado com o banco de dados [!DNL Acxiom Global], que permite que as listas de clientes potenciais sejam personalizadas para importação. Em seguida, use o conector de origem [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) para obter listas de clientes potenciais da Acxiom de volta para a Real-Time CDP, com seus clientes conhecidos ou convertidos removidos.
+Use o [!DNL Acxiom Prospect-Suppression] para fornecer os públicos-alvo mais produtivos possíveis. Este conector exporta com segurança os dados primários de [!DNL Real-Time Customer Data Platform] e os executa por meio de uma resolução premiada de higiene e identidade que produz um arquivo de dados a ser usado como uma lista de supressão. Isso será comparado com o banco de dados [!DNL Acxiom Global], que permite que as listas de clientes potenciais sejam personalizadas para importação. Em seguida, use o conector de origem [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) para obter listas de clientes potenciais da Acxiom de volta para [!DNL Real-Time CDP], com seus clientes conhecidos ou convertidos removidos.
 
 ![Diagrama de marketing para exportar dados primários para a Acxiom e, em seguida, importar dados de clientes potenciais de volta para o Real-Time CDP](/help/destinations/assets/catalog/data-partner/acxiom/marketing-workflow.png)
 
 A Acxiom oferece os públicos-alvo de melhor desempenho do setor, com o maior catálogo de mais de 12.000 atributos de dados globais, concentrados especificamente no fornecimento de experiências personalizadas. Aproveite combinações ilimitadas de dados de alta qualidade para criar e distribuir públicos para atender às necessidades específicas da campanha.
 
-Este tutorial fornece etapas para criar uma conexão de destino e um fluxo de dados do [!DNL Acxiom Prospect-Suppression] usando a interface do usuário do Adobe Experience Platform. Esse conector é usado para fornecer dados ao serviço de prospecto da Acxiom usando o Amazon S3 como um ponto de partida. Entre em contato com o representante de conta da Acxiom depois de começar a exportar arquivos para o ponto de depósito do Amazon S3.
+Este tutorial fornece etapas para criar uma conexão de destino e um fluxo de dados do [!DNL Acxiom Prospect-Suppression] usando a interface do usuário do [!DNL Adobe Experience Platform]. Esse conector fornece dados para o serviço de prospecto da Acxiom usando o Amazon S3 como um ponto de depósito. Entre em contato com o representante de conta da Acxiom depois de começar a exportar arquivos para o ponto de depósito do Amazon S3.
 
 ![O catálogo de destino com o destino Acxiom selecionado.](../../assets/catalog/data-partner/acxiom/image-destination-catalog.png)
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Acxiom Prospect-Suppression], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Acxiom Prospect-Suppression], veja a seguir exemplos de casos de uso que os clientes do [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 ### Criar uma lista de supressão para conjuntos de dados de prospecção {#create-suppression-list}
 
@@ -43,7 +43,7 @@ O caso de uso é executado por meio de uma combinação de conectores de destino
 
 Inicialmente, você começaria exportando seus perfis de clientes existentes usando esse conector de destino para ser usado como um arquivo de supressão. Isso garante que nenhum registro de cliente existente seja incluído.
 
-O serviço da Acxiom pesquisaria o arquivo, recuperaria-o e o usaria junto com outros critérios de seleção e geraria um arquivo de prospecto. Em seguida, você usaria o conector de origem [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) correspondente para assimilar os perfis de cliente potencial na Adobe Real-Time CDP.
+O serviço da Acxiom pesquisaria o arquivo, recuperaria-o e o usaria junto com outros critérios de seleção e geraria um arquivo de prospecto. Em seguida, você usaria o conector de origem [[!DNL Acxiom Prospecting Data Import]](/help/sources/connectors/data-partners/acxiom-prospecting-data-import.md) correspondente para assimilar os perfis de cliente potencial no Adobe [!DNL Real-Time CDP].
 
 ## Pré-requisitos {#prerequisites}
 
@@ -59,7 +59,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -73,7 +73,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -187,7 +187,7 @@ Para verificar se os dados foram exportados com êxito, verifique o bucket [!DNL
 
 ## Próximas etapas {#next-steps}
 
-Seguindo este tutorial, você criou com êxito um fluxo de dados para exportar dados em lote do Experience Platform para o local do S3 gerenciado pelo [!DNL Acxiom]. Você precisaria entrar em contato com o representante da Acxiom com o nome da conta, nome do arquivo e caminho do bucket para que o processamento possa ser configurado.
+Você criou com êxito um fluxo de dados para exportar dados em lote do Experience Platform para o local do S3 gerenciado [!DNL Acxiom]. Você precisaria entrar em contato com o representante da Acxiom com o nome da conta, nome do arquivo e caminho do bucket para que o processamento possa ser configurado.
 
 ## Uso e governança de dados {#data-usage-governance}
 

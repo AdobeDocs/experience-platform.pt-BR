@@ -3,10 +3,10 @@ keywords: Medallia;medallia
 title: Extensão do Medallia
 description: A extensão Medallia é uma voz do destino do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no Adobe Exchange.
 exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 3%
+source-wordcount: '448'
+ht-degree: 4%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Visão geral {#overview}
 
-Implante o [!DNL Medallia] de forma rápida e contínua em suas propriedades da Web. A extensão também permite detectar eventos de pesquisa, capturar feedback do cliente em tempo real por meio de elementos de dados, usá-los em regras para personalizar a experiência do cliente e compartilhar dados com a Adobe Analytics.
+Implante o [!DNL Medallia] de forma rápida e contínua em suas propriedades da Web. A extensão também detecta eventos de pesquisa, captura comentários de clientes em tempo real por meio de elementos de dados, usa esses comentários em regras para personalizar a experiência do cliente e compartilha dados com o [!DNL Adobe Analytics].
 
-[!DNL Medallia] é uma voz da extensão do cliente no Adobe Experience Platform. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
+[!DNL Medallia] é uma voz da extensão do cliente em [!DNL Adobe Experience Platform]. Para obter mais informações sobre a funcionalidade de extensão, consulte a página de extensão no [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103279.medallia-for-adobe-launch.html).
 
 Esse destino é uma extensão de tag. Para obter mais informações sobre como as extensões funcionam na Experience Platform, consulte a [visão geral das extensões de tag](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ Esse destino é uma extensão de tag. Para obter mais informações sobre como a
 
 Esta extensão está disponível no catálogo [!DNL Destinations] para todos os clientes que compraram o Experience Platform.
 
-Para usar essa extensão, você precisa acessar as tags na Adobe Experience Platform. As tags são oferecidas aos clientes do Adobe Experience Cloud como um recurso incluso de valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
+Para usar esta extensão, você precisa acessar as marcas em [!DNL Adobe Experience Platform]. As marcas são oferecidas a [!DNL Adobe Experience Cloud] clientes como um recurso incluso com valor agregado. Entre em contato com o administrador da organização para obter acesso às tags e solicite que conceda a você a permissão **[!UICONTROL manage_properties]** para que você possa instalar extensões.
 
 ## Instalar extensão {#install-extension}
 

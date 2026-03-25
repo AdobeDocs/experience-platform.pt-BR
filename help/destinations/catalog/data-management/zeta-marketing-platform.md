@@ -4,9 +4,9 @@ description: A Zeta Marketing Platform (ZMP) é um sistema baseado em nuvem que 
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1434'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 A Zeta Marketing Platform (ZMP) é um sistema baseado em nuvem que ajuda a adquirir, expandir e reter clientes com mais eficiência, alimentado por inteligência (dados proprietários e IA). Para obter mais detalhes, consulte [Zeta Global](https://zetaglobal.com/).
 
-Com o conector Zeta Marketing Platform disponível no Adobe Experience Platform, você pode sincronizar facilmente seus públicos do Experience Platform para o ZMP.
+Com o conector Zeta Marketing Platform disponível no [!DNL Adobe Experience Platform], você pode sincronizar facilmente seus públicos do Experience Platform para o ZMP.
 
 >[!IMPORTANT]
 >
@@ -37,8 +37,8 @@ Um anunciante tem como objetivo direcionar os usuários dentro de públicos-alvo
 
 ### Pré-requisitos da Zeta Marketing Platform {#zmp-prerequisites}
 
-* Antes de configurar uma nova conexão com o destino Zeta Marketing Platform, você deve criar uma lista de clientes vazia em sua conta Zeta Marketing Platform. Você deve escolher uma dessas listas de clientes como público-alvo designado para receber o público-alvo da Adobe Experience Platform que planeja enviar. Você pode criar uma lista de clientes vazia no ZMP seguindo as instruções [aqui](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
-* Embora o Adobe Experience Platform permita a ativação de vários públicos-alvo para uma instância de destino ZMP específica, é obrigatório que cada instância de destino ZMP receba apenas um público-alvo do Experience Platform. Para lidar com vários públicos-alvo da Experience Platform, crie instâncias de destino ZMP adicionais para cada público-alvo e selecione uma lista de clientes diferente na lista suspensa. Essa abordagem garante que os públicos-alvo do ZMP não sejam substituídos. Consulte [Preencher detalhes do destino](#destination-details) para obter mais detalhes.
+* Antes de configurar uma nova conexão com o destino Zeta Marketing Platform, você deve criar uma lista de clientes vazia em sua conta Zeta Marketing Platform. Você deve escolher uma dessas listas de clientes como destino designado para receber o público-alvo [!DNL Adobe Experience Platform] que planeja enviar. Você pode criar uma lista de clientes vazia no ZMP seguindo as instruções [aqui](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList).
+* Embora o [!DNL Adobe Experience Platform] permita a ativação de vários públicos para uma instância de destino ZMP específica, é obrigatório que cada instância de destino ZMP receba apenas um público-alvo do Experience Platform. Para lidar com vários públicos-alvo da Experience Platform, crie instâncias de destino ZMP adicionais para cada público-alvo e selecione uma lista de clientes diferente na lista suspensa. Essa abordagem garante que os públicos-alvo do ZMP não sejam substituídos. Consulte [Preencher detalhes do destino](#destination-details) para obter mais detalhes.
 * Use as credenciais a seguir para configurar o destino:
    * Nome de usuário: **api**
    * Senha: sua chave de API REST ZMP. Você pode encontrar sua Chave de API REST fazendo logon em sua conta ZMP e navegando até a seção **Configurações** > **Integrações** > **Chaves e Aplicativos**. Consulte a [documentação do ZMP](https://knowledgebase.zetaglobal.com/kb/integrations) para obter mais detalhes.
@@ -65,7 +65,7 @@ Esta seção descreve que tipo de público-alvo você pode exportar para esse de
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> |
+| Todas as outras origens de público-alvo | Não | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -92,7 +92,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -144,7 +144,7 @@ Veja abaixo um exemplo de mapeamento de identidade correto ao exportar perfis pa
 
 Selecionar campos de origem:
 
-* Selecione um namespace de identidade de origem (personalizado ou padrão, como `Email`) que identifique exclusivamente um perfil no Adobe Experience Platform e [!DNL Zeta Marketing Platform].
+* Selecione um namespace de identidade de origem (personalizado ou padrão, como `Email`) que identifique exclusivamente um perfil em [!DNL Adobe Experience Platform] e [!DNL Zeta Marketing Platform].
 * Selecione quaisquer atributos de perfil de origem XDM que precisam ser exportados para e atualizados no [!DNL Zeta Marketing Platform].
 
 Selecionar campos de destino:

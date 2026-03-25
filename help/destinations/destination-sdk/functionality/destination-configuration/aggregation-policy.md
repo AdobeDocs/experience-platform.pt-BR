@@ -2,9 +2,9 @@
 description: Saiba como configurar uma política de agregação para determinar como as solicitações HTTP para o seu destino devem ser agrupadas e armazenadas em lote.
 title: Política de agregação
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 92d7abcbd642cea4e0fa041d2926ba8868f506e5
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1225'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Depois de ler este documento, consulte a documentação sobre [uso do modelo](..
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Tipos de integração compatíveis {#supported-integration-types}
 
@@ -81,7 +81,7 @@ O exemplo de configuração abaixo mostra uma configuração de agregação de m
 | `aggregationType` | String | Indica o tipo de política de agregação que seu destino deve usar. Tipos de agregação compatíveis: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `bestEffortAggregation.maxUsersPerRequest` | Número inteiro | O Experience Platform pode agregar vários perfis exportados em uma única chamada HTTP. <br><br>Esse valor indica o número máximo de perfis que seu ponto de extremidade deve receber em uma única chamada HTTP. Observe que esta é uma agregação de melhor esforço. Por exemplo, se você especificar o valor 100, o Experience Platform pode enviar qualquer número de perfis menor que 100 em uma chamada. <br><br> Se o servidor não aceitar vários usuários por solicitação, defina esse valor como `1`. |
 | `bestEffortAggregation.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino precisar ser dividida pela identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada para um determinado namespace de identidade. |
-| `bestEffortAggregation.aggregationKey` | Objeto | *Opcional*. Permite agregar os perfis exportados mapeados para o destino com base nos parâmetros descritos abaixo. Esse parâmetro pode ser omitido ou definido como `null` se a agregação não for necessária. Quando fornecido, ele funciona de forma idêntica à chave de agregação na agregação configurável. |
+| `bestEffortAggregation.aggregationKey` | Objeto | *Opcional*. Agrega os perfis exportados mapeados para o destino com base nos parâmetros descritos abaixo. Esse parâmetro pode ser omitido ou definido como `null` se a agregação não for necessária. Quando fornecido, ele funciona de forma idêntica à chave de agregação na agregação configurável. |
 | `bestEffortAggregation.aggregationKey.includeSegmentId` | Booleano | Defina esse parâmetro como `true` se desejar agrupar os perfis exportados para o seu destino pela ID de público-alvo. |
 | `bestEffortAggregation.aggregationKey.includeSegmentStatus` | Booleano | Defina esse parâmetro e `includeSegmentId` como `true`, se desejar agrupar os perfis exportados para o seu destino pela ID do público-alvo e pelo status do público-alvo. |
 | `bestEffortAggregation.aggregationKey.includeIdentity` | Booleano | Defina esse parâmetro como `true` se desejar agrupar perfis exportados para seu destino pelo namespace de identidade. |
@@ -96,7 +96,7 @@ O exemplo de configuração abaixo mostra uma configuração de agregação de m
 
 ## Agregação configurável {#configurable-aggregation}
 
-A agregação configurável funciona melhor se você preferir receber grandes lotes, com milhares de perfis na mesma chamada. Essa opção também permite agregar os perfis exportados com base em regras de agregação complexas.
+A agregação configurável funciona melhor se você preferir receber grandes lotes, com milhares de perfis na mesma chamada. Essa opção também suporta a agregação dos perfis exportados com base em regras de agregação complexas.
 
 O exemplo de configuração abaixo mostra uma configuração de agregação configurável. Para obter um exemplo de agregação de melhor esforço, consulte a seção [agregação de melhor esforço](#best-effort-aggregation). Os parâmetros aplicáveis à agregação configurável estão documentados na tabela abaixo.
 
@@ -136,7 +136,7 @@ O exemplo de configuração abaixo mostra uma configuração de agregação conf
 | `configurableAggregation.splitUserById` | Booleano | Use esse sinalizador se a chamada para o destino precisar ser dividida pela identidade. Defina esse sinalizador como `true` se o servidor aceitar apenas uma identidade por chamada para um determinado namespace de identidade. |
 | `configurableAggregation.maxBatchAgeInSecs` | Número inteiro | Usado em conjunto com `maxNumEventsInBatch`, esse parâmetro determina por quanto tempo o Experience Platform deve esperar até enviar uma chamada de API para o seu ponto de extremidade. <ul><li>Valor mínimo (segundos): 301</li><li>Valor máximo (segundos): 3.600</li></ul> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3.600 segundos OU até que haja 10.000 perfis qualificados antes de fazer a chamada de API, o que acontecer primeiro. |
 | `configurableAggregation.maxNumEventsInBatch` | Número inteiro | Usado em conjunto com `maxBatchAgeInSecs`, este parâmetro determina quantos perfis qualificados devem ser agregados em uma chamada de API. <ul><li>Valor mínimo: 1.000</li><li>Valor máximo: 10.000</li></ul> Por exemplo, se você usar o valor máximo para ambos os parâmetros, o Experience Platform aguardará 3.600 segundos OU até que haja 10.000 perfis qualificados antes de fazer a chamada de API, o que acontecer primeiro. |
-| `configurableAggregation.aggregationKey` | - | Permite agregar os perfis exportados mapeados para o destino com base nos parâmetros descritos abaixo. |
+| `configurableAggregation.aggregationKey` | - | Agrega os perfis exportados mapeados para o destino com base nos parâmetros descritos abaixo. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Booleano | Defina esse parâmetro como `true` se desejar agrupar os perfis exportados para o seu destino pela ID de público-alvo. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Booleano | Defina esse parâmetro e `includeSegmentId` como `true`, se desejar agrupar os perfis exportados para o seu destino pela ID do público-alvo e pelo status do público-alvo. |
 | `configurableAggregation.aggregationKey.includeIdentity` | Booleano | Defina esse parâmetro como `true` se desejar agrupar perfis exportados para seu destino pelo namespace de identidade. |

@@ -1,10 +1,10 @@
 ---
 title: Conexão Marketo Engage
-description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análises e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais de CRM e do envolvimento do cliente para o marketing baseado em conta e a atribuição de receita.
+description: O Marketo Engage é a única solução completa de gerenciamento de experiência do cliente (CXM) para marketing, publicidade, análises e comércio. Use-o para automatizar e gerenciar atividades do gerenciamento de clientes potenciais de CRM e do envolvimento do cliente para marketing baseado em conta e atribuição de receita.
 exl-id: e02b6c65-b59e-41ff-8d33-f8fecfd87773
-source-git-commit: 2dd4ae4146f7c1c5228e22d24ff2ba31010adedb
+source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
 workflow-type: tm+mt
-source-wordcount: '1875'
+source-wordcount: '1851'
 ht-degree: 2%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 2%
 
 ## Visão geral {#overview}
 
-O [!DNL Marketo Engage] é a única solução CXM (gerenciamento de experiência do cliente) completa para marketing, publicidade, análises e comércio. Ele permite automatizar e gerenciar atividades do gerenciamento de clientes potenciais de CRM e do envolvimento do cliente para o marketing baseado em conta e a atribuição de receita.
+O [!DNL Marketo Engage] é a única solução CXM (gerenciamento de experiência do cliente) completa para marketing, publicidade, análises e comércio. Use-o para automatizar e gerenciar atividades do gerenciamento de clientes potenciais de CRM e do envolvimento do cliente para marketing baseado em conta e atribuição de receita.
 
-Use esse destino para a sincronização em tempo real de dados de público-alvo e atributos de perfil entre o Adobe Experience Platform e o Marketo Engage.
+Use este destino para a sincronização em tempo real de dados de público-alvo e atributos de perfil entre o [!DNL Adobe Experience Platform] e a Marketo Engage.
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Marketo Engage], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse destino.
+Para ajudá-lo a entender melhor como e quando você deve usar o destino [!DNL Marketo Engage], veja a seguir exemplos de casos de uso que os clientes do [!DNL Adobe Experience Platform] podem resolver usando esse destino.
 
 ### Casos de uso de sincronização de público-alvo {#audience-sync-use-cases}
 
@@ -39,14 +39,14 @@ Eles podem ativar os públicos para o Marketo Engage e usar o tipo de sincroniza
 
 **Reengajar e expandir alcance com sincronização completa de perfil**
 
-A equipe de marketing deseja ativar um público-alvo de interesse do produto para uma nova campanha. Embora muitos dos perfis já existam no Marketo, alguns são novos e só estão presentes no Real-Time CDP. Para as pessoas existentes, eles querem ter certeza de que estão atualizando essas pessoas no Marketo, mas também criar novos perfis.
+A equipe de marketing deseja ativar um público-alvo de interesse do produto para uma nova campanha. Embora muitos dos perfis já existam no Marketo, alguns são novos e estão presentes somente no [!DNL Real-Time CDP]. Para as pessoas existentes, eles querem ter certeza de que estão atualizando essas pessoas no Marketo, mas também criar novos perfis.
 
-Eles podem ativar seus públicos no Marketo Engage e usar o tipo de sincronização **[!UICONTROL Audience and Profile]** combinado com a ação **[!UICONTROL Update existing and create new persons]** para garantir que eles segmentem clientes potenciais existentes do Marketo e criem novos para os novos públicos exportados do Real-Time CDP.
+Eles podem ativar seus públicos no Marketo Engage e usar o tipo de sincronização **[!UICONTROL Audience and Profile]** combinado com a ação **[!UICONTROL Update existing and create new persons]** para garantir que eles segmentem clientes potenciais existentes do Marketo e criem novos para os novos públicos exportados do [!DNL Real-Time CDP].
 
 ## Pré-requisitos {#prerequisites}
 
-* O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) em sua instância e partição do Marketo.
-* Somente instâncias do Marketo Engage na mesma organização da Adobe Real-Time CDP estarão disponíveis ao configurar esse destino.
+* O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) em sua instância e partição do Marketo.
+* Somente instâncias do Marketo Engage na mesma organização do Adobe [!DNL Real-Time CDP] estarão disponíveis ao configurar esse destino.
 * Somente as instâncias do Marketo Engage que têm seus usuários gerenciados no Adobe Admin Console podem utilizar esse destino.
 
 ## Identidades suportadas {#supported-identities}
@@ -66,7 +66,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 | Origem do público | Suportado | Descrição |
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
-| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos da Experience Platform, como o Adobe Journey Optimizer, </li><li> e muito mais. </li></ul> <br> |
+| Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> <br> |
 
 {style="table-layout:auto"}
 
@@ -77,7 +77,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 | [Públicos-alvo](/help/segmentation/types/people-audiences.md) | Sim | Com base nos perfis de clientes, permitindo direcionar grupos específicos de pessoas para campanhas de marketing. | Compradores frequentes, abandonadores de carrinho |
 | [Públicos-alvo da conta](/help/segmentation/types/account-audiences.md) | Não | Direcione indivíduos em organizações específicas para estratégias de marketing baseadas em conta. | Marketing B2B |
 | [Públicos-alvo potenciais](/help/segmentation/types/prospect-audiences.md) | Não | Direcione indivíduos que ainda não são clientes, mas compartilham características com seu público-alvo. | Prospecção com dados de terceiros |
-| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake do Adobe Experience Platform. | Relatórios, fluxos de trabalho de ciência de dados |
+| [Exportações do conjunto de dados](/help/catalog/datasets/overview.md) | Não | Coleções de dados estruturados armazenados no Data Lake [!DNL Adobe Experience Platform]. | Relatórios, fluxos de trabalho de ciência de dados |
 
 {style="table-layout:auto"}
 
@@ -145,8 +145,8 @@ Para configurar detalhes para o destino, preencha os campos obrigatórios e opci
    * **[!UICONTROL Audience and profile]**: selecione esta opção quando quiser adicionar membros de público-alvo a listas do Marketo e manter suas informações de perfil atualizadas.
    * **[!UICONTROL Profile only]**: selecione esta opção quando quiser manter os perfis de clientes potenciais do Marketo atualizados com as informações mais recentes do Experience Platform.
    * **[!UICONTROL Audience only]**: selecione esta opção quando quiser adicionar membros de público-alvo a listas do Marketo sem atualizar suas informações de perfil.
-* **[!UICONTROL Partition]**: *A seleção de partição está disponível somente ao escolher **[!UICONTROL Profile only]**&#x200B;ou **[!UICONTROL Audience and profile]**&#x200B;tipos de sincronização*. Selecione uma ID de partição do Marketo associada ao espaço de trabalho escolhido. Isso permite especificar qual partição de cliente potencial no Marketo receberá os dados exportados. Se você não escolher uma partição específica, seus dados serão enviados para a partição **[!UICONTROL Default]** no Marketo.
-* **[!UICONTROL Marketo deduplication field]**: selecione o campo de desduplicação do Marketo que deseja usar ao atualizar clientes potenciais existentes do Marketo. Este seletor mostra os campos marcados como campos de desduplicação no Marketo. Se quiser que um campo específico do Marketo seja exibido como um campo de desduplicação, você deve marcar o campo como um [campo pesquisável](https://experienceleague.adobe.com/pt-br/docs/marketo-developer/marketo/rest/lead-database/lead-database) no Marketo.
+* **[!UICONTROL Partition]**: *A seleção de partição está disponível somente ao escolher **[!UICONTROL Profile only]**ou **[!UICONTROL Audience and profile]**tipos de sincronização*. Selecione uma ID de partição do Marketo associada ao espaço de trabalho escolhido. Especifica qual partição de cliente potencial no Marketo receberá os dados exportados. Se você não escolher uma partição específica, seus dados serão enviados para a partição **[!UICONTROL Default]** no Marketo.
+* **[!UICONTROL Marketo deduplication field]**: selecione o campo de desduplicação do Marketo que deseja usar ao atualizar clientes potenciais existentes do Marketo. Este seletor mostra os campos marcados como campos de desduplicação no Marketo. Se quiser que um campo específico do Marketo seja exibido como um campo de desduplicação, você deve marcar o campo como um [campo pesquisável](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) no Marketo.
 
   >[!NOTE]
   >
@@ -193,7 +193,7 @@ Se você estiver usando um campo de desduplicação diferente, mapeie manualment
 
 Depois de exportar os públicos para o Marketo Engage, faça logon na conta do Marketo para verificar se os públicos-alvo foram ativados conforme esperado. Verifique as partições e os espaços de trabalho dos clientes potenciais relevantes no Marketo para confirmar se os dados do público-alvo aparecem corretamente e se as ações desejadas (como atualizar ou criar pessoas) foram executadas.
 
-Se não vir os dados esperados, revise as configurações de mapeamento e exportação no Adobe Experience Platform e tente exportar novamente.
+Se você não vir os dados esperados, revise suas configurações de mapeamento e exportação no [!DNL Adobe Experience Platform] e tente exportar novamente.
 
 ## Uso e governança de dados {#data-usage-governance}
 

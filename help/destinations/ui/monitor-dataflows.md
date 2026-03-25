@@ -18,4 +18,4 @@ Use o [!UICONTROL Destinations] para ativar seus dados do [!DNL Adobe Experience
 
 Os fluxos de dados são uma representação de trabalhos de dados que movem os dados através de [!DNL Experience Platform]. Esses fluxos de dados são configurados em diferentes serviços, ajudando a mover dados dos conectores de origem para os conjuntos de dados de destino, em que são utilizados por [!DNL Identity Service] e [!DNL Real-Time Customer Profile] antes de serem ativados para os destinos.
 
-Para saber mais sobre o monitoramento de fluxos de dados para destinos, leia o [Tutorial de monitoramento de fluxos de dados para destinos na interface ](../../dataflows/ui/monitor-destinations.md).
+Para saber mais sobre o monitoramento de fluxos de dados para destinos, leia o [Tutorial de monitoramento de fluxos de dados para destinos na interface &#x200B;](../../dataflows/ui/monitor-destinations.md).

@@ -50,16 +50,16 @@ Use a tabela abaixo para entender quais tipos de conjunto de dados você pode ex
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, Web SDK, Mobile SDK, Conector de dados do Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets">Conjunto de dados de Instantâneo de Perfil gerado pelo sistema</a>.</li></td>
+    <td><ul><li>Conjuntos de dados de Perfil e Evento de experiência criados na interface do Experience Platform após assimilar ou coletar dados por meio de Fontes, Web SDK, Mobile SDK, Conector de dados do Analytics e Audience Manager.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=pt-BR#profile-attribute-datasets">Conjunto de dados de Instantâneo de Perfil gerado pelo sistema</a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">[!DNL Adobe Journey Optimizer]</td>
     <td>Prime</td>
-    <td>Consulte a documentação de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a>.</td>
+    <td>Consulte a documentação de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=pt-BR#datasets"> [!DNL Adobe Journey Optimizer]</a>.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Consulte a documentação de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> [!DNL Adobe Journey Optimizer]</a>.</td>
+    <td>Consulte a documentação de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=pt-BR#datasets"> [!DNL Adobe Journey Optimizer]</a>.</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -307,7 +307,7 @@ Para remover conjuntos de dados de um fluxo de dados existente, siga as etapas a
 
 ## Direitos de exportação do conjunto de dados {#licensing-entitlement}
 
-Consulte os documentos de descrição do produto para entender quantos dados você está autorizado a exportar para cada aplicativo do Experience Platform, por ano. Por exemplo, você pode exibir a [!DNL Real-Time CDP] Descrição do Produto [aqui](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
+Consulte os documentos de descrição do produto para entender quantos dados você está autorizado a exportar para cada aplicativo do Experience Platform, por ano. Por exemplo, você pode exibir a [!DNL Real-Time CDP] Descrição do Produto [aqui](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html).
 
 Observe que os direitos de exportação de dados para diferentes aplicativos não são aditivos. Por exemplo, isso significa que, se você comprar o [!DNL Real-Time CDP] Ultimate e o [!DNL Adobe Journey Optimizer] Ultimate, o direito de exportação do perfil será o maior dos dois direitos, de acordo com as descrições do produto. Seus direitos de volume são calculados pegando seu número total de perfis licenciados e multiplicando por 500 KB para o Prime [!DNL Real-Time CDP] ou 700 KB para o Ultimate [!DNL Real-Time CDP] para determinar o volume de dados ao qual você tem direito.
 

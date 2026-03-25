@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5ef0b97d6908753be738d7ad2dfd423d02f87c8d
+source-git-commit: d6b2be2c7f7b5a3b002e565dce8cee8af85ffcc2
 workflow-type: tm+mt
-source-wordcount: '2718'
+source-wordcount: '2751'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,12 @@ ht-degree: 5%
 
 Este documento aborda as notas de versão do Adobe Experience Platform Web SDK.
 Para obter as notas de versão mais recentes da extensão de tag do Web SDK, consulte as [notas de versão da extensão de tag do Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versão 2.32.0 - 23 de março de 2026
+
+- Os utilitários principais compartilhados agora são publicados como um pacote npm independente ([@adobe/alloy-core](https://www.npmjs.com/package/@adobe/alloy-core)) para uso por extensões e integrações.
+- Agora inclui o fuso horário IANA no campo XDM `xdm.placeContext.ianaTimezone` quando `placeContext` é incluído na variável de configuração [`context`](/help/collection/js/commands/configure/context.md).
+- Brand concierge: correção de um problema de ID de sessão quando [`stickyConversationSession`](/help/collection/js/commands/configure/conversation.md) está desativado.
 
 ## Versão 2.31.1 - 11 de fevereiro de 2026
 
@@ -34,8 +40,6 @@ Para obter as notas de versão mais recentes da extensão de tag do Web SDK, con
 **Correções e melhorias**
 
 - Os atributos `aria-label` e `name` agora são considerados na [coleção de links automática](commands/configure/clickcollectionenabled.md).
-- Correção de uma possível condição de corrida com integrações do mapa de identidade.
-- Correção de um problema em que o carimbo de data/hora não era incluído em `streamingMedia`.
 - Correção de um problema em que as ações de código personalizado eram executadas apenas uma vez.
 
 ## Versão 2.30.0 - 24 de setembro de 2025

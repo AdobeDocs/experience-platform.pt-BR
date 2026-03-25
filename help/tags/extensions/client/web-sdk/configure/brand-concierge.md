@@ -2,10 +2,10 @@
 title: Definições de configuração do Brand Concierge
 description: Configure a persistência de sessão e os tempos limite de transmissão para o bate-papo do Brand Concierge.
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
-source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '152'
-ht-degree: 5%
+source-wordcount: '190'
+ht-degree: 13%
 
 ---
 
@@ -37,3 +37,7 @@ Uma caixa de seleção que mantém sessões do Brand Concierge em carregamentos 
 ## [!UICONTROL Stream timeout (seconds)]
 
 O tempo máximo, em segundos, para aguardar partes do fluxo de conversa antes de acionar um erro de tempo limite. O valor padrão é `10` segundos.
+
+## [!UICONTROL Collect sources]
+
+Uma caixa de seleção que coleta origens se um usuário navegou para a página de um link em uma conversa do Brand Concierge. Desmarcado por padrão. Se habilitada, a biblioteca verifica o parâmetro de cadeia de caracteres de consulta `adobe_brand_concierge_source` e preenche seu valor em `xdm.channel.referringSource`.

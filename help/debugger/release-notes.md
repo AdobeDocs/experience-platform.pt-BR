@@ -4,24 +4,24 @@ description: As notas de versão mais recentes do Adobe Experience Platform Debu
 keywords: debugger;extensão do experience platform debugger;chrome;extensão;notas de versão
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '864'
-ht-degree: 92%
+source-wordcount: '846'
+ht-degree: 90%
 
 ---
 
 # Notas de versão do Adobe Experience Platform Debugger
 
-## Versão 1.6.4 - quarta-feira, 6 de maio de 2025
+## Versão 1.6.5 - 24 de março de 2026
 
-### Correções e melhorias
+* Correção de um problema que impedia o envio de eventos do AppMeasurement em sessões ativas do Assurance.
+
+## Versão 1.6.4 - quarta-feira, 6 de maio de 2025
 
 * Correção de um problema em que o logon não estava disponível.
 
 ## Versão 1.6.3 - 30 de abril de 2025
-
-### Correções e melhorias
 
 * Correção de um problema em que o Depurador impedia que as funções do DTM e das Tags funcionassem.
 * Correção de um problema em que as ocorrências pós-processadas do Analytics não eram exibidas nos logs.
@@ -29,24 +29,15 @@ ht-degree: 92%
 
 ## Versão 1.6.2 - quarta-feira, 1 de outubro de 2024
 
-### Correções e melhorias
-
 * Correção de um problema em que o Depurador era muito sensível a todos os erros da CSP
 
 ## Versão 1.6.1 - 25 de julho de 2024
-
-### Correções e melhorias
 
 * Correção de um problema que impedia usuários de adicionarem novos códigos incorporados de tags em páginas sem tags.
 
 ## Versão 1.6.0 - 11 de julho de 2024
 
-### Novos recursos
-
 * Permitir que usuários aceitem ou recusem a coleta de dados técnicos e pessoais.
-
-### Correções e melhorias
-
 * Correção do link da política de privacidade e injeção de script do Firefox.
 * Captura de solicitações ausentes do Analytics.
 * Correção de falhas em páginas com várias mensagens de console complexas.
@@ -54,19 +45,12 @@ ht-degree: 92%
 
 ## Versão 1.5.4 - 19 de dezembro de 2023
 
-### Correções e melhorias
-
 * Correção de um problema em que as configurações não eram mantidas.
 * Correção de um problema que causava falha no Debugger ao visualizar ocorrências pós-processadas do Analytics.
 
 ## Versão 1.5.3 - 6 de dezembro de 2023
 
-### Novos recursos
-
 * Adição de uma configuração para “bloquear a guia ativa ao abrir o Debugger”.
-
-### Correções e melhorias
-
 * Correção de um problema em que as solicitações do Analytics estavam ausentes em domínios privados.
 * Correção de um problema com dados do Activity Map ausentes na tabela de solicitações do Analytics.
 * Correção de uma falha na exibição do Target Trace.
@@ -76,13 +60,9 @@ ht-degree: 92%
 
 (Somente Firefox)
 
-### Correções e melhorias
-
 * Atualização da organização dos arquivos.
 
 ## Versão 1.5.1 - 2 de novembro de 2023
-
-### Correções e melhorias
 
 * Correção de problemas em que os eventos do Analytics eram ignorados ou duplicados.
 * Correção de um problema em que o tamanho máximo do armazenamento de estado era excedido.
@@ -90,12 +70,7 @@ ht-degree: 92%
 
 ## Versão 1.5.0 - 19 de outubro de 2023
 
-### Novos recursos
-
 * Exibição de links para a propriedade, o ambiente e as regras no resumo e nos logs das tags.
-
-### Correções e melhorias
-
 * Correção de um problema em que os dados de resumo de tags não eram enviados.
 * Correção de um erro CORS nas sessões do Assurance
 * Correção de um problema que impedia a exibição do Target Trace.

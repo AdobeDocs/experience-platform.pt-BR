@@ -2,9 +2,9 @@
 title: contexto
 description: Colete automaticamente dados de dispositivo, ambiente ou local.
 exl-id: 911cabec-2afb-4216-b413-80533f826b0e
-source-git-commit: 0a45b688243b17766143b950994f0837dc0d0b48
+source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1017'
 ht-degree: 5%
 
 ---
@@ -58,6 +58,7 @@ A palavra-chave `"placeContext"` coleta informações sobre a localização do u
 | Província do estado | O código de província de estado do usuário final. | `xdm.placeContext.geo.stateProvince` | `CA` |
 | Latitude | A latitude da localização do usuário final. | `xdm.placeContext.geo._schema.latitude` | `37.3307447` |
 | Longitude | A longitude da localização do usuário final. | `xdm.placeContext.geo._schema.longitude` | `-121.8945965` |
+| Fuso horário de IANA | O fuso horário IANA do usuário final. Incluído nas versões de biblioteca 2.32.0 ou superior. | `xdm.placeContext.ianaTimezone` | `America/Denver` |
 
 ### Carimbo de data e hora
 
@@ -97,7 +98,7 @@ Consulte [User agent client hints](/help/collection/use-cases/client-hints.md) p
 
 ### Referenciador único do Analytics {#one-time-analytics-referrer}
 
-A palavra-chave `"oneTimeAnalyticsReferrer"` envia um valor de referenciador para a Adobe Analytics somente na primeira chamada `sendEvent` sem decisão de uma página. O principal caso de uso para esta palavra-chave de contexto é impedir que a dimensão [Referenciador](https://experienceleague.adobe.com/pt-br/docs/analytics/components/dimensions/referrer) no Adobe Analytics seja inflada por ocorrências usadas principalmente em integrações do Analytics e do Target.
+A palavra-chave `"oneTimeAnalyticsReferrer"` envia um valor de referenciador para a Adobe Analytics somente na primeira chamada `sendEvent` sem decisão de uma página. O principal caso de uso para esta palavra-chave de contexto é impedir que a dimensão [Referenciador](https://experienceleague.adobe.com/en/docs/analytics/components/dimensions/referrer) no Adobe Analytics seja inflada por ocorrências usadas principalmente em integrações do Analytics e do Target.
 
 Se determinado comando `sendEvent` usar um tipo de evento de decisão (`decisioning.propositionFetch`, `decisioning.propositionDisplay`, `decisioning.propositionInteract`), ele será ignorado ao calcular o primeiro `sendEvent` em uma página. Se o valor do referenciador for alterado na página e outro `sendEvent` for acionado, o novo valor do referenciador será incluído na carga. Essa condição permite que o recurso seja usado com aplicativos de página única.
 

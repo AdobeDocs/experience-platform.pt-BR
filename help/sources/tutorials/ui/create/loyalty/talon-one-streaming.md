@@ -2,8 +2,10 @@
 title: Transmitir Dados Do Talon.One Para O Experience Platform Usando A Interface Do
 description: Saiba como transmitir dados do Talon.One para o Adobe Experience Platform usando a interface do. Este guia aborda a configuração, a seleção de dados e a configuração do fluxo de dados.
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: a92e17dd-123c-4e83-a851-3cf2861751e5
-source-git-commit: 3d0c216a9f8eb46a25221660253a80ce8e7a7eb0
+source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
 workflow-type: tm+mt
 source-wordcount: '961'
 ht-degree: 2%

@@ -2,9 +2,9 @@
 title: Notas da versão de março de 2026 da Adobe Experience Platform
 description: As notas da versão de março de 2026 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 381d1f952067cece9f9a9618a00bbed304214906
+source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1713'
 ht-degree: 12%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 12%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 24 de março de 2026**
 
@@ -54,7 +54,7 @@ Use o Agent Orchestrator para criar e implantar agentes alimentados por IA que a
 
 | Recurso | Descrição |
 | --- | --- |
-| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | O Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] é seu agente incorporado que traz a inteligência de marketing da Adobe diretamente para as ferramentas do dia a dia, como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e outros aplicativos do [!DNL Microsoft 365]. Você pode usar esse agente para obter insights de campanha confiáveis dos aplicativos da Adobe enquanto planeja campanhas, revisa públicos, colabora com colegas para responder às perguntas dos clientes e tomar decisões informadas por dados sem sair do fluxo de trabalho do [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | O Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] é seu agente incorporado que traz a inteligência de marketing da Adobe diretamente para as ferramentas do dia a dia, como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e outros aplicativos do [!DNL Microsoft 365]. Você pode usar esse agente para obter insights de campanha confiáveis dos aplicativos da Adobe enquanto planeja campanhas, revisa públicos, colabora com colegas para responder às perguntas dos clientes e tomar decisões informadas por dados sem sair do fluxo de trabalho do [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
@@ -124,7 +124,7 @@ O Perfil do cliente em tempo real oferece uma visão completa de cada cliente in
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
 ## Executar e operar {#run-and-operate}
 
@@ -152,7 +152,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | Tipo de assimilação | Agora é possível visualizar o tipo de assimilação dos atributos. Isso permite que você saiba a origem dos seus dados, permitindo criar públicos-alvo melhores. Para obter mais informações sobre esse recurso, leia o [Guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md). |
 | Dados de resumo | Agora você pode exibir os dados de resumo dos seus atributos para públicos-alvo com base em conta e pessoas. Para obter mais informações sobre este recurso nos públicos-alvo da conta, leia o [guia do Construtor de público-alvo](../../rtcdp/segmentation/audience-builder.md). Para obter mais informações sobre este recurso em públicos com base em pessoas, leia o [Guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 
@@ -162,7 +162,6 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 
 | Fonte | Descrição |
 | --- | --- |
-| [!DNL Talon.One] | Agora você pode conectar o Experience Platform ao [!DNL Talon.One] usando as novas fontes de [!DNL Talon.One] [lote](../../sources/tutorials/ui/create/loyalty/talon-one-batch.md) e [streaming](../../sources/tutorials/ui/create/loyalty/talon-one-streaming.md). Use as novas fontes para assimilar dados do perfil de fidelidade, bem como eventos de transação e atividade de fidelidade para a Experience Platform. |
 | Novos endereços IP para incluir na lista de permissões | Novos endereços IP para GBR9: Reino Unido foram adicionados à lista de endereços que você deve incluir na lista de permissões para garantir conexões de origem em lote bem-sucedidas com o Experience Platform no Azure. Exiba a lista no [guia de incluo na lista de permissões de endereços IP](../../sources/ip-address-allow-list.md#gbr9-united-kingdom) para obter mais informações. |
 | Suporte aprimorado para a captura de dados do Change | Agora você pode usar o Change Data Capture com as fontes [!DNL Marketo Engage], [!DNL Microsoft Dynamics] e [!DNL Salesforce CRM]. |
 | Guia de autenticação aprimorado para [[!DNL Google BigQuery]](../../sources/connectors/databases/bigquery.md) | O guia de autenticação para a origem [!DNL Google BigQuery] foi expandido com as seguintes informações: <ul><li>Os escopos necessários para o token de atualização.</li><li>As funções IAM necessárias para a identidade [!DNL Google].</li><li>Orientação adicional sobre o uso de `largeResultsDataSetId`.</li></ul> |

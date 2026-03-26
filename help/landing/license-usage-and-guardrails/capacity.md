@@ -234,7 +234,7 @@ Você pode resolver as violações de taxa de transferência de segmentação de
 
 O vídeo a seguir fornece uma visão geral da Capacidade.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475278/?captions=por_br&learn=on&enablevpops)
 
 ## Perguntas frequentes {#faq}
 

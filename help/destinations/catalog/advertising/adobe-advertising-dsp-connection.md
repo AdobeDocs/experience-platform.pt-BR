@@ -58,9 +58,9 @@ Os anunciantes têm a opção de compartilhar segmentos com identificadores prim
 
 * A ID da organização da Experience Cloud para a conta da Experience Platform. Você pode encontrar sua ID em sua página de perfil de usuário do Adobe [!DNL Real-Time Customer Data Platform] ([!DNL Real-Time CDP]).
 
-* Uma [[!DNL Real-Time CDP] origem no DSP](https://experienceleague.adobe.com/pt-br/docs/advertising/dsp/audiences/sources/source-manage) para receber públicos-alvo para ativação de campanha. Sua equipe de conta da Adobe criará a fonte usando sua ID de organização da Experience Cloud.
+* Uma [[!DNL Real-Time CDP] origem no DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage) para receber públicos-alvo para ativação de campanha. Sua equipe de conta da Adobe criará a fonte usando sua ID de organização da Experience Cloud.
 
-* A chave de origem da conta ou anunciante [!DNL DSP], que é gerada quando uma [[!DNL Real-Time CDP] origem é criada em  [!DNL DSP]](https://experienceleague.adobe.com/pt-br/docs/advertising/dsp/audiences/sources/source-manage). A equipe de conta do [!DNL DSP] compartilhará essa chave com você. Você a usará no Experience Platform para criar uma conexão de destino com o destino do Advertising DSP, conforme explicado abaixo.
+* A chave de origem da conta ou anunciante [!DNL DSP], que é gerada quando uma [[!DNL Real-Time CDP] origem é criada em  [!DNL DSP]](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). A equipe de conta do [!DNL DSP] compartilhará essa chave com você. Você a usará no Experience Platform para criar uma conexão de destino com o destino do Advertising DSP, conforme explicado abaixo.
 
 ### Configurar sincronização de ID para compartilhar cookies {#cookie-sync}
 
@@ -133,7 +133,7 @@ Para se conectar ao destino, siga as instruções para [criar uma conexão de de
 
 Para se conectar ao destino, forneça o seguinte parâmetro na seção [!UICONTROL Connection type] e selecione **[!UICONTROL Connect to destination]**:
 
-* **[!UICONTROL Account or Advertiser Key]**: Este [!UICONTROL Source Key] é gerado quando uma [[!DNL Real-Time CDP] origem é criada na interface do usuário do DSP](https://experienceleague.adobe.com/pt-br/docs/advertising/dsp/audiences/sources/source-manage). A equipe de conta da Adobe compartilhará essa chave com você após criar a fonte.
+* **[!UICONTROL Account or Advertiser Key]**: Este [!UICONTROL Source Key] é gerado quando uma [[!DNL Real-Time CDP] origem é criada na interface do usuário do DSP](https://experienceleague.adobe.com/en/docs/advertising/dsp/audiences/sources/source-manage). A equipe de conta da Adobe compartilhará essa chave com você após criar a fonte.
 
 ![Captura de tela da seção Tipo de conexão mostrando o campo Conta ou Chave do Anunciante.](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 

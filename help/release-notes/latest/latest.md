@@ -2,9 +2,9 @@
 title: Notas da versão de março de 2026 da Adobe Experience Platform
 description: As notas da versão de março de 2026 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6b6a03fb8675ed01dd255f7206b23b05c809f2a6
+source-git-commit: fad4cd198eda42f530e731a22ea79096a3cf3807
 workflow-type: tm+mt
-source-wordcount: '1713'
+source-wordcount: '1797'
 ht-degree: 12%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 12%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 24 de março de 2026**
 
@@ -27,6 +27,7 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 
 - [Gerenciamento avançado do ciclo de vida de dados](#advanced-data-lifecycle-management)
 - [Agent Orchestrator](#agent-orchestrator)
+- [Capacidade](#capacity)
 - [Datastreams](#datastreams)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
@@ -54,11 +55,22 @@ Use o Agent Orchestrator para criar e implantar agentes alimentados por IA que a
 
 | Recurso | Descrição |
 | --- | --- |
-| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | O Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] é seu agente incorporado que traz a inteligência de marketing da Adobe diretamente para as ferramentas do dia a dia, como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e outros aplicativos do [!DNL Microsoft 365]. Você pode usar esse agente para obter insights de campanha confiáveis dos aplicativos da Adobe enquanto planeja campanhas, revisa públicos, colabora com colegas para responder às perguntas dos clientes e tomar decisões informadas por dados sem sair do fluxo de trabalho do [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | O Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] é seu agente incorporado que traz a inteligência de marketing da Adobe diretamente para as ferramentas do dia a dia, como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e outros aplicativos do [!DNL Microsoft 365]. Você pode usar esse agente para obter insights de campanha confiáveis dos aplicativos da Adobe enquanto planeja campanhas, revisa públicos, colabora com colegas para responder às perguntas dos clientes e tomar decisões informadas por dados sem sair do fluxo de trabalho do [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
 Para obter mais informações, leia a [documentação do Agent Orchestrator](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+
+## Capacidade {#capacity}
+
+O Capacity fornece uma visão abrangente das [medidas de proteção](../../rtcdp/guardrails/overview.md) da sua organização e fornece recomendações sobre como resolver possíveis violações de capacidade alocando suas capacidades em um nível de sandbox.
+
+**Novo recurso**
+
+| Recurso | Descrição |
+| ------- | ----------- |
+| Taxa de transferência de segmentação de borda | Agora é possível ver e gerenciar as medidas de proteção relacionadas à taxa de transferência da segmentação de borda. Para obter mais informações, leia a [Visão geral da capacidade](/help/landing/license-usage-and-guardrails/capacity.md#edge-segmentation-throughput). |
+| Suporte para monitoramento de sequências de dados de borda | A monitoração em tempo real para seus fluxos de dados de borda agora está disponível, fornecendo transparência à taxa de transferência e a outras métricas. Para obter mais informações, leia o [guia de borda de monitoramento](/help/dataflows/ui/monitor-edge.md). |
 
 ## Datastreams {#datastreams}
 
@@ -124,7 +136,7 @@ O Perfil do cliente em tempo real oferece uma visão completa de cada cliente in
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
 ## Executar e operar {#run-and-operate}
 
@@ -152,7 +164,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | Tipo de assimilação | Agora é possível visualizar o tipo de assimilação dos atributos. Isso permite que você saiba a origem dos seus dados, permitindo criar públicos-alvo melhores. Para obter mais informações sobre esse recurso, leia o [Guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md). |
 | Dados de resumo | Agora você pode exibir os dados de resumo dos seus atributos para públicos-alvo com base em conta e pessoas. Para obter mais informações sobre este recurso nos públicos-alvo da conta, leia o [guia do Construtor de público-alvo](../../rtcdp/segmentation/audience-builder.md). Para obter mais informações sobre este recurso em públicos com base em pessoas, leia o [Guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

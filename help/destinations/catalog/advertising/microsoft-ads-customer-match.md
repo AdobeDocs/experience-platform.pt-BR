@@ -6,10 +6,10 @@ badge: label="Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 40a9ea68fd855b2f0d92a4fa336f1b68142f0649
 workflow-type: tm+mt
-source-wordcount: '1335'
-ht-degree: 16%
+source-wordcount: '1511'
+ht-degree: 14%
 
 ---
 
@@ -25,15 +25,15 @@ Use o destino [!DNL Microsoft Ads Customer Match] para corresponder clientes por
 
 ## Casos de uso {#use-cases}
 
-Para ajudá-lo a entender melhor como e quando usar o destino [!DNL Microsoft Ads Customer Match], veja a seguir exemplos de casos de uso que os clientes do [!DNL Adobe Experience Platform] podem resolver usando este recurso.
+Para ajudá-lo a entender melhor como e quando usar o destino [!DNL Microsoft Ads Customer Match], veja a seguir exemplos de casos de uso que os clientes da Adobe Experience Platform podem resolver usando esse recurso.
 
-### Caso de uso #1 {#use-case-1}
+### Redirecionar clientes existentes com ofertas personalizadas {#use-case-1}
 
 Uma marca de comércio eletrônico deseja alcançar clientes existentes por meio de [!DNL Microsoft Search] e [!DNL Microsoft Audience Network] para personalizar ofertas com base em suas compras anteriores e histórico de navegação. A marca pode assimilar endereços de email de seu próprio CRM na Experience Platform, criar públicos a partir de seus próprios dados offline e enviar esses públicos para [!DNL Microsoft Ads Customer Match] para serem usados em anúncios de pesquisa e público, otimizando seus gastos com publicidade.
 
-### Caso de uso #2 {#use-case-2}
+### Promover novos produtos aos clientes existentes {#use-case-2}
 
-Uma empresa de tecnologia lançou um novo produto. Para promover esse novo produto, eles buscam gerar conscientização entre os clientes que compraram produtos relacionados anteriormente. Eles carregam endereços de email do banco de dados do CRM na Experience Platform, usando os endereços de email como identificadores. Os públicos-alvo são criados com base nos clientes que possuem produtos relacionados. Esses públicos-alvo são enviados para [!DNL Microsoft Ads Customer Match], para que a empresa possa direcionar os clientes atuais e clientes semelhantes no [!DNL Microsoft Advertising Network].
+Uma empresa de tecnologia lançou um novo produto e deseja gerar conscientização entre os clientes que compraram produtos relacionados anteriormente. Eles carregam endereços de email do banco de dados do CRM na Experience Platform, usando os endereços de email como identificadores. Os públicos-alvo são criados com base nos clientes que possuem produtos relacionados. Esses públicos-alvo são enviados para [!DNL Microsoft Ads Customer Match], para que a empresa possa direcionar os clientes atuais e clientes semelhantes no [!DNL Microsoft Advertising Network].
 
 ## Identidades suportadas {#supported-identities}
 
@@ -41,7 +41,7 @@ Uma empresa de tecnologia lançou um novo produto. Para promover esse novo produ
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|
-| `email` | Endereços de email de texto sem formatação | A conexão [!DNL Microsoft Ads Customer Match] dá suporte somente a endereços de email de texto sem formatação. O Experience Platform coloca automaticamente os endereços de email em hash na exportação para corresponder aos requisitos da Microsoft. |
+| `email` | Endereços de email de texto sem formatação | Somente endereços de email de texto sem formatação (sem hash) têm suporte como campos de **origem** na etapa de mapeamento. Não há suporte para campos de origem com hash prévio. O Experience Platform sempre coloca os endereços de email em hash antes de exportá-los para [!DNL Microsoft Ads]. |
 
 {style="table-layout:auto"}
 
@@ -85,6 +85,20 @@ Para enviar dados de público-alvo para [!DNL Microsoft Ads], você precisa ter 
 ### Aceitar os termos e condições de correspondência do cliente {#accept-customer-match-terms}
 
 Antes de ativar públicos por meio desse destino, primeiro crie manualmente uma lista de correspondências do cliente na sua conta [!DNL Microsoft Advertising]. Essa criação manual inicial é necessária para aceitar os termos e condições de correspondência do cliente, o que permite que os públicos-alvo enviados pelo Experience Platform sejam criados automaticamente. A falha na conclusão desta etapa pode resultar em erros ao ativar os públicos-alvo.
+
+### Aprovação do administrador de TI da conta de trabalho (MS Entra) {#work-account-admin-approval}
+
+Se você estiver autenticando com uma Conta de Trabalho da Microsoft (também conhecida como conta do Microsoft Entra), talvez o administrador de TI de sua organização precise conceder uma aprovação antes de você se conectar a [!DNL Microsoft Advertising].
+
+Ao tentar autenticar usando uma Conta Corporativa, você poderá ser redirecionado para uma página **Aprovação necessária**. Esta página solicita uma justificativa para vincular o aplicativo e lista as permissões necessárias, incluindo `ads.manage`. Envie a solicitação e seu administrador de TI receberá uma notificação para analisá-la. Você também receberá um email de confirmação de que sua solicitação foi enviada.
+
+Depois que o administrador de TI aprovar a solicitação no Azure Portal, você poderá retornar ao Experience Platform e se autenticar usando sua Conta comercial. Para obter orientação, consulte a documentação do Microsoft:
+
+* [Revisar e executar ações em solicitações de consentimento administrativo](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
+* [Configurar o fluxo de trabalho de consentimento administrativo](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
+* [Configurar como os usuários consentem com os aplicativos](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
+
+Se o administrador de TI ainda não tiver aprovado a solicitação, a autenticação falhará com o seguinte erro: `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
 
 ### Configuração da conta {#account-configuration}
 
@@ -135,7 +149,7 @@ Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornec
 * **[!UICONTROL Membership Duration]**: o número de dias que um usuário permanece na lista de correspondência do cliente. Os valores aceitos estão entre 1 e 390 dias.
 * **[!UICONTROL Customer Match List Availability]**: Selecione a disponibilidade da lista de correspondência do cliente. No [!DNL Microsoft Advertising], uma ID do cliente pode ter várias IDs de conta do cliente (contas de anunciante) sob ela. Selecione **[!UICONTROL Customer ID (all advertising accounts)]** para disponibilizar a lista em todas as contas de anunciante em sua ID de cliente, ou **[!UICONTROL Customer Account ID (single advertising account)]** para restringir a lista à ID de Conta de Cliente específica fornecida acima. Consulte a [documentação do Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/en/56727) para obter mais detalhes.
 
-![Imagem da interface do usuário da plataforma mostrando os campos de detalhes de destino para o destino da Correspondência do cliente do Microsoft Ads.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
+  ![Imagem da interface do usuário da plataforma mostrando os campos de detalhes de destino para o destino da Correspondência do cliente do Microsoft Ads.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 
 ### Ativar alertas {#enable-alerts}
 
@@ -161,7 +175,7 @@ Na etapa **[!UICONTROL Mapping]**, mapeie a identidade de email dos perfis de or
 
 >[!IMPORTANT]
 >
->Você deve usar campos de origem sem hash (texto simples). Não use identidades de origem com hash prévio, como `Emails (SHA256, lowercased)`. O Experience Platform coloca os endereços de email na exportação em hash automaticamente para corresponder aos requisitos do Microsoft.
+>Você deve mapear endereços de email de texto simples (sem hash) como campos de **origem**. Não há suporte para identidades de origem com hash prévio, como `Emails (SHA256, lowercased)`. O Experience Platform sempre coloca os endereços de email em hash antes de exportá-los para [!DNL Microsoft Ads].
 
 ![Imagem da interface do usuário mostrando a etapa de mapeamento com o email do IdentityMap mapeado ao email de identidade.](../../assets/catalog/advertising/microsoft-ads-customer-match/mapping.png)
 

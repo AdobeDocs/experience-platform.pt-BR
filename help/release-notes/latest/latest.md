@@ -2,9 +2,9 @@
 title: Notas da versão de março de 2026 da Adobe Experience Platform
 description: As notas da versão de março de 2026 da Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: fad4cd198eda42f530e731a22ea79096a3cf3807
+source-git-commit: cd09f9e510052f6bae89ff730ba83aa16e95f193
 workflow-type: tm+mt
-source-wordcount: '1797'
+source-wordcount: '1774'
 ht-degree: 12%
 
 ---
@@ -18,8 +18,8 @@ ht-degree: 12%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: quarta-feira, 24 de março de 2026**
 
@@ -41,7 +41,7 @@ O Experience Platform fornece um conjunto de recursos de higiene de dados para a
 
 | Recurso | Descrição |
 | --- | --- |
-| Exclusão de registro de vários conjuntos de dados e somente perfil (somente API) | Você pode enviar uma única ID de conjunto de dados, uma lista separada por vírgulas de IDs de conjunto de dados ou o literal `ALL` em `datasetId` para excluir identidades em um, em vários ou em todos os conjuntos de dados. Você também pode limitar a exclusão a serviços relacionados ao perfil definindo `targetServices` como `["identity","profile","ajo"]`, o que deixa o datalake inalterado; essa funcionalidade está disponível somente por meio da API da Higiene de Dados. Consulte o [Guia de exclusão de ordens de serviço de registro](../../hygiene/api/workorder.md) para obter mais detalhes. |
+| Exclusão de registro de conjunto de dados múltiplo (somente API) | Exclua identidades em um, vários ou todos os conjuntos de dados em uma única solicitação de API, simplificando os fluxos de trabalho de higiene de dados. Você também pode restringir a exclusão somente aos serviços de perfil, deixando os registros do data lake inalterados. Consulte o [Guia de exclusão de ordens de serviço de registro](../../hygiene/api/workorder.md) para obter mais detalhes. |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ Use o Agent Orchestrator para criar e implantar agentes alimentados por IA que a
 
 | Recurso | Descrição |
 | --- | --- |
-| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | O Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] é seu agente incorporado que traz a inteligência de marketing da Adobe diretamente para as ferramentas do dia a dia, como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e outros aplicativos do [!DNL Microsoft 365]. Você pode usar esse agente para obter insights de campanha confiáveis dos aplicativos da Adobe enquanto planeja campanhas, revisa públicos, colabora com colegas para responder às perguntas dos clientes e tomar decisões informadas por dados sem sair do fluxo de trabalho do [!DNL Microsoft 365]. |
+| [Adobe Marketing Agent para [!DNL Microsoft 365 Copilot]](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ama-ms) | O Adobe Marketing Agent para [!DNL Microsoft 365 Copilot] é seu agente incorporado que traz a inteligência de marketing da Adobe diretamente para as ferramentas do dia a dia, como [!DNL Teams], [!DNL Word], [!DNL PowerPoint] e outros aplicativos do [!DNL Microsoft 365]. Você pode usar esse agente para obter insights de campanha confiáveis dos aplicativos da Adobe enquanto planeja campanhas, revisa públicos, colabora com colegas para responder às perguntas dos clientes e tomar decisões informadas por dados sem sair do fluxo de trabalho do [!DNL Microsoft 365]. |
 
 {style="table-layout:auto"}
 
@@ -136,7 +136,7 @@ O Perfil do cliente em tempo real oferece uma visão completa de cada cliente in
 
 {style="table-layout:auto"}
 
-Para obter mais informações, leia a visão geral[&#128279;](../../profile/home.md) do [!DNL Real-Time Customer Profile] .
+Para obter mais informações, leia a visão geral](../../profile/home.md) do [[!DNL Real-Time Customer Profile] .
 
 ## Executar e operar {#run-and-operate}
 
@@ -164,7 +164,7 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 | Tipo de assimilação | Agora é possível visualizar o tipo de assimilação dos atributos. Isso permite que você saiba a origem dos seus dados, permitindo criar públicos-alvo melhores. Para obter mais informações sobre esse recurso, leia o [Guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md). |
 | Dados de resumo | Agora você pode exibir os dados de resumo dos seus atributos para públicos-alvo com base em conta e pessoas. Para obter mais informações sobre este recurso nos públicos-alvo da conta, leia o [guia do Construtor de público-alvo](../../rtcdp/segmentation/audience-builder.md). Para obter mais informações sobre este recurso em públicos com base em pessoas, leia o [Guia do Construtor de segmentos](../../segmentation/ui/segment-builder.md). |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../segmentation/home.md) do [!DNL Segmentation Service] .
+Para obter mais informações, leia a visão geral](../../segmentation/home.md) do [[!DNL Segmentation Service] .
 
 ## Fontes {#sources}
 

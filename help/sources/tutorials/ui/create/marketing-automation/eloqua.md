@@ -1,9 +1,10 @@
 ---
 title: Conexão do Oracle Eloqua (V2) ao Experience Platform na interface do
 description: Saiba como conectar sua conta do Oracle Eloqua ao Experience Platform na interface do usuário do.
-source-git-commit: 180754969d4ae8dbd1308dfc85dae73baf64f759
+exl-id: 87b6d2e2-fd0b-4ca7-860c-01957712ec2a
+source-git-commit: 2ffffbae2d267c4db05e386a41eb8707c9e5b736
 workflow-type: tm+mt
-source-wordcount: '1187'
+source-wordcount: '1185'
 ht-degree: 1%
 
 ---
@@ -124,7 +125,6 @@ Depois de terminar de atualizar os campos calculados, selecione **[!UICONTROL Ne
 >* **Contatos:** `C_DateModified`
 >* **Contas:** `M_DateModified`
 >* **Atividade:** `CreatedAt`
->* **Objetos Personalizados:** `UpdatedAt`
 >* **Campanha:** `updatedAt`
 
 Com o mapeamento concluído, agora é possível configurar um agendamento de assimilação para o fluxo de dados. Defina seu [!UICONTROL Frequency] como `Once` para configurar uma execução de assimilação única. Para assimilação incremental, você pode definir seu [!UICONTROL Frequency] como `Hour`, `Day` ou `Week`. Ao usar a assimilação incremental, você também deve configurar o [!UICONTROL Interval] para definir a quantidade de tempo que ocorre entre as execuções de assimilação. Por exemplo, uma frequência de assimilação definida como `Day` e um intervalo definido como `15` significa que o fluxo de dados está agendado para assimilar dados a cada 15 dias.

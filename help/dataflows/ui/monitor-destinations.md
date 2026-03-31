@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 5b36722e5c2ca0cc8a4fb8667ceb3dc4a3568b02
+source-git-commit: b61d6d49e3fcd9a75d2920048ce76d3707592edb
 workflow-type: tm+mt
-source-wordcount: '3542'
-ht-degree: 10%
+source-wordcount: '3580'
+ht-degree: 9%
 
 ---
 
@@ -70,7 +70,7 @@ Consulte a tabela a seguir para obter mais informações sobre status:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesfailed_streaming"
 >title="Falha de identidades"
->abstract="A contagem de identidades de perfil individuais que falharam no destino selecionado. Verifique o diagnóstico de erro para obter detalhes."
+>abstract="A contagem de identidades de perfil individuais que falharam para o destino selecionado. Verifique os diagnósticos de erro para obter detalhes."
 
 Para destinos de transmissão, a guia [!UICONTROL Dataflow runs] fornece uma atualização por hora para os dados de métrica em suas execuções de fluxo de dados. As estatísticas mais proeminentes rotuladas são para identidades.
 
@@ -98,7 +98,7 @@ Cada execução de fluxo de dados individual mostra os seguintes detalhes:
 - **[!UICONTROL Profiles received]**: O número total de perfis recebidos no fluxo de dados.
 - **[!UICONTROL Identities activated]**: O número total de identidades de perfil ativadas com êxito para o destino selecionado como parte da execução do fluxo de dados. Essa métrica inclui identidades que são criadas, atualizadas e removidas de públicos-alvo exportados.
 - **[!UICONTROL Identities excluded]**: O número total de identidades de perfil que são excluídas da ativação com base em atributos ausentes e violação de consentimento.
-- **[!UICONTROL Identities failed]** O número total de identidades de perfil que não estão ativadas para o destino devido a erros.
+- **[!UICONTROL Identities failed]**: O número total de identidades de perfil que não estão ativadas para o destino devido a erros.
 
   >[!IMPORTANT]
   >
@@ -147,7 +147,7 @@ O monitoramento no nível do público-alvo para destinos de streaming só está 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
 >title="Perfis recebidos"
->abstract="O número total de perfis recebidos no fluxo de dados. Esse valor é atualizado a cada 60 minutos."
+>abstract="O número total de perfis recebidos na execução do fluxo de dados. Para exportações agendadas, isso inclui perfis do instantâneo de público-alvo mais recente, além de quaisquer perfis cuja associação de público-alvo ou identidade foi alterada entre o momento de criação do instantâneo e o momento de exportação. Como resultado, essa contagem pode ser maior do que o número de perfis no público-alvo."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_dataflow_identitiesactivated_batch"
@@ -298,7 +298,7 @@ Use o botão **[!UICONTROL Show failures only]** para exibir apenas as execuçõ
 
 ![O fluxo de dados executa o modo de exibição com a opção Mostrar falhas apenas realçada](../assets/ui/monitor-destinations/dataflow-runs-show-failures-only.gif)
 
-### Exibição no nível do público {#segment-level-view}
+### Exibição no nível do público {#audience-level-view}
 
 Quando **[!UICONTROL Audiences]** é selecionado, você vê uma lista de públicos que foram ativados para o fluxo de dados selecionado, dentro do intervalo de tempo selecionado. Essa tela inclui informações no nível do público-alvo sobre os registros ativados e excluídos, bem como o status e a hora da última execução do fluxo de dados. Ao revisar as métricas de registros excluídos e ativados, é possível verificar se um público-alvo foi ativado com êxito ou não.
 
@@ -310,7 +310,7 @@ Por exemplo, você está ativando um público-alvo chamado &quot;Membros de fide
 >
 >- A exibição no nível do público-alvo está disponível atualmente para os destinos listados abaixo. A implantação está planejada para outros destinos de streaming.
 >
->   - Conexão com o [[!DNL (API) Oracle Eloqua] &#x200B;](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - Conexão com o [[!DNL (API) Oracle Eloqua] ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
 >   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
 >   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
 >   - [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md)
@@ -351,7 +351,7 @@ Use o botão de filtro ![filtro](/help/images/icons/filter-add.png) para detalha
 
 A página de execuções do fluxo de dados exibe informações sobre suas execuções de fluxo de dados, incluindo o tempo de início da execução do fluxo de dados, o tempo de processamento, os registros recebidos, os registros ativados, os registros excluídos, os registros com falha, a taxa de ativação e o status.
 
-Ao detalhar a página de execuções do fluxo de dados na [exibição no nível de público-alvo](#segment-level-view), você tem a opção de filtrar as execuções do fluxo de dados pelas seguintes opções:
+Ao detalhar a página de execuções do fluxo de dados na [exibição no nível de público-alvo](#audience-level-view), você tem a opção de filtrar as execuções do fluxo de dados pelas seguintes opções:
 
 - **[!UICONTROL Dataflow runs with failed records]**: Para o público-alvo selecionado, essa opção lista todas as execuções de fluxo de dados que falharam na ativação. Para inspecionar por que os registros em uma determinada execução de fluxo de dados falharam, consulte a [página de detalhes da execução do fluxo de dados](#dataflow-run-details-page) dessa execução de fluxo de dados.
 - **[!UICONTROL Dataflow runs with excluded records]**: Para o público selecionado, essa opção lista todas as execuções de fluxo de dados em que alguns dos registros não foram totalmente ativados e alguns perfis foram ignorados. Para inspecionar por que os registros em uma determinada execução de fluxo de dados foram ignorados, consulte a [página de detalhes da execução do fluxo de dados](#dataflow-run-details-page) dessa execução de fluxo de dados.
@@ -371,7 +371,7 @@ A página de detalhes da execução do fluxo de dados, além dos detalhes mostra
 - **[!UICONTROL IMS org ID]**: a organização à qual o fluxo de dados pertence.
 - **[!UICONTROL Last updated]**: A hora em que a execução do fluxo de dados foi atualizada pela última vez.
 
-A página de detalhes também tem um botão para alternar entre erros de execução de fluxo de dados e públicos-alvo. Esta opção está disponível para os destinos listados na seção [exibição no nível de público-alvo](#segment-level-view).
+A página de detalhes também tem um botão para alternar entre erros de execução de fluxo de dados e públicos-alvo. Esta opção está disponível para os destinos listados na seção [exibição no nível de público-alvo](#audience-level-view).
 
 A exibição de erros de execução do fluxo de dados exibe uma lista de registros que falharam e registros que foram ignorados. As informações para os registros com falha e ignorados são exibidas, incluindo o código de erro, a contagem de identidades e a descrição. Por padrão, a lista exibe os registros com falha. Para mostrar registros ignorados, selecione o botão de alternância **[!UICONTROL Records skipped]**.
 

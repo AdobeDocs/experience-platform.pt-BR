@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Monitorar fluxos de dados para destinos na interface do
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b61d6d49e3fcd9a75d2920048ce76d3707592edb
+source-git-commit: 6aacade76b31268b8f6a9db2b8c191d8c7702a1b
 workflow-type: tm+mt
-source-wordcount: '3580'
+source-wordcount: '3577'
 ht-degree: 9%
 
 ---
@@ -212,7 +212,7 @@ Você também pode optar por exibir informações avançadas sobre um determinad
 
 >[!NOTE]
 >
->Atualmente, a funcionalidade de monitoramento de destinos tem suporte para todos os destinos no Experience Platform *except* the [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) and [Custom Personalization](/help/destinations/catalog/personalization/custom-personalization.md) destinations.
+>Atualmente, a funcionalidade de monitoramento de destinos tem suporte para todos os destinos na Experience Platform *exceto* para o destino [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md).
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_activation"
@@ -310,7 +310,7 @@ Por exemplo, você está ativando um público-alvo chamado &quot;Membros de fide
 >
 >- A exibição no nível do público-alvo está disponível atualmente para os destinos listados abaixo. A implantação está planejada para outros destinos de streaming.
 >
->   - Conexão com o [[!DNL (API) Oracle Eloqua] &#x200B;](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - Conexão com o [[!DNL (API) Oracle Eloqua] ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
 >   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
 >   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
 >   - [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md)

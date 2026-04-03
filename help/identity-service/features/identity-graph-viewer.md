@@ -2,9 +2,9 @@
 title: Visualizador de gráfico de identidade
 description: Um gráfico de identidade é um mapa dos relacionamentos entre identidades diferentes para um cliente específico, fornecendo uma representação visual de como o cliente interage com a sua marca em diferentes canais.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1407'
+source-wordcount: '1379'
 ht-degree: 6%
 
 ---
@@ -38,11 +38,11 @@ Trabalhar com o visualizador de gráficos de identidade requer uma compreensão 
 
 ## Acessar o visualizador de gráficos de identidade {#access-identity-graph-viewer}
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Identidades]** na navegação à esquerda e selecione **[!UICONTROL Gráfico de identidade]** na lista de guias do cabeçalho.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Identities]** na navegação à esquerda e **[!UICONTROL Identity Graph]** na lista de guias do cabeçalho.
 
 ![O espaço de trabalho Identidades na interface do Experience Platform, com a guia Gráfico de Identidade selecionada.](../images/graph-viewer/identity-graph.png)
 
-Para exibir um gráfico de identidade, forneça um namespace de identidade e seu valor correspondente e selecione **[!UICONTROL Exibir]**.
+Para exibir um gráfico de identidade, forneça um namespace de identidade e seu valor correspondente e selecione **[!UICONTROL View]**.
 
 >[!TIP]
 >
@@ -56,7 +56,7 @@ A interface do visualizador de gráficos de identidade é composta por vários e
 
 ![A interface do visualizador de gráficos de identidade.](../images/graph-viewer/identity-graph-viewer-main.png)
 
-O gráfico de identidade exibe todas as identidades vinculadas à combinação de namespace e valor de identidade inserida. Cada nó consiste em um namespace de identidade e seu valor correspondente. Você pode selecionar, manter pressionado e arrastar qualquer nó para interagir com o gráfico. Como alternativa, você pode passar o mouse sobre um nó para ver informações sobre seu valor de identidade correspondente. Selecione **[!UICONTROL Exibir gráfico]** para ocultar ou exibir o gráfico.
+O gráfico de identidade exibe todas as identidades vinculadas à combinação de namespace e valor de identidade inserida. Cada nó consiste em um namespace de identidade e seu valor correspondente. Você pode selecionar, manter pressionado e arrastar qualquer nó para interagir com o gráfico. Como alternativa, você pode passar o mouse sobre um nó para ver informações sobre seu valor de identidade correspondente. Selecione **[!UICONTROL View graph]** para ocultar ou exibir o gráfico.
 
 >[!IMPORTANT]
 >
@@ -68,7 +68,7 @@ Selecione um link no gráfico para ver o conjunto de dados e a ID do lote que co
 
 ![O link de identidade entre os nós de email e GAID selecionados.](../images/graph-viewer/identity-link.png)
 
-A tabela [!UICONTROL Identidades] fornece uma exibição diferente dos dados de identidade, listando o namespace de identidade e a combinação do valor de identidade em formato tabular. Selecionar um nó no gráfico atualizará o item de linha realçado na tabela [!UICONTROL Identidades].
+A tabela [!UICONTROL Identities] fornece uma exibição diferente dos dados de identidade, listando o namespace de identidade e a combinação do valor de identidade em um formato tabular. Selecionar um nó no gráfico atualizará o item de linha realçado na tabela [!UICONTROL Identities].
 
 ![A tabela Identidades com a lista de identidades vinculadas no gráfico.](../images/graph-viewer/identities-table.png)
 
@@ -81,7 +81,7 @@ O painel direito exibe informações sobre uma identidade selecionada, incluindo
 A tabela a seguir fornece informações adicionais sobre as propriedades da fonte de dados exibidas no painel direito:
 
 | Fonte de dados | Descrição |
-| --- | --- | 
+| --- | --- |
 | ID do lote | O identificador gerado automaticamente que corresponde aos dados em lote. |
 | ID do conjunto de dados | O identificador gerado automaticamente que corresponde ao seu conjunto de dados. |
 | Nome do conjunto de dados | O nome do conjunto de dados que contém os dados em lote. |
@@ -89,19 +89,19 @@ A tabela a seguir fornece informações adicionais sobre as propriedades da font
 
 ![O painel direito, que exibe dados de identidade, bem como a fonte de dados de informações.](../images/graph-viewer/right-rail.png)
 
-Você também pode usar a *[!UICONTROL Fonte de dados]* para ver uma lista de fontes de dados que contribuem para suas identidades. Selecione [!UICONTROL Fonte de dados] para obter uma exibição em tabelas dos seus conjuntos de dados e IDs de lote.
+Você também pode usar o *[!UICONTROL Data source]* para ver uma lista de fontes de dados que contribuem para suas identidades. Selecione [!UICONTROL Data source] para obter uma exibição tabular dos seus conjuntos de dados e IDs de lote.
 
 ![A guia de fonte de dados selecionada.](../images/graph-viewer/data-source-table.png)
 
-Use o controle deslizante para filtrar os dados do gráfico pela hora em que as identidades foram estabelecidas pela primeira vez. Por padrão, o visualizador de gráficos de identidade exibe todas as identidades vinculadas no gráfico. Segure e arraste o controle deslizante para ajustar a hora até o último carimbo de data e hora em que uma nova identidade foi vinculada ao gráfico. No exemplo abaixo, o gráfico exibe que o link de identidade mais recente (GAID) foi estabelecido em **[!UICONTROL 08/19/2020, 16:29:29 PM]**.
+Use o controle deslizante para filtrar os dados do gráfico pela hora em que as identidades foram estabelecidas pela primeira vez. Por padrão, o visualizador de gráficos de identidade exibe todas as identidades vinculadas no gráfico. Segure e arraste o controle deslizante para ajustar a hora até o último carimbo de data e hora em que uma nova identidade foi vinculada ao gráfico. No exemplo abaixo, o gráfico mostra que o link de identidade mais recente (GAID) foi estabelecido em **[!UICONTROL 08/19/2020, 4:29:29 PM]**.
 
 ![O controle deslizante de carimbo de data/hora do visualizador de gráficos selecionado.](../images/graph-viewer/slider-one.png)
 
-Ajuste o controle deslizante para ver se outro link de identidade (Email) foi estabelecido em **[!UICONTROL 08/19/2020, 16h30]**.:25:
+Ajuste o controle deslizante para ver se outro link de identidade (Email) foi estabelecido em **[!UICONTROL 08/19/2020, 4:25:30 PM]**.
 
 ![O controle deslizante do carimbo de data/hora do visualizador de gráficos ajustado ao último novo link estabelecido.](../images/graph-viewer/slider-two.png)
 
-Também é possível ajustar o controle deslizante para ver a iteração mais antiga do gráfico. No exemplo abaixo, o visualizador de gráficos de identidade exibe que o gráfico foi criado pela primeira vez em **[!UICONTROL 08/19/2020, às 16h49]**, com seus primeiros links sendo ECID, Email e Telefone.:11:
+Também é possível ajustar o controle deslizante para ver a iteração mais antiga do gráfico. No exemplo abaixo, o visualizador de gráficos de identidade exibe que o gráfico foi criado pela primeira vez em **[!UICONTROL 08/19/2020, 4:11:49 PM]**, com seus primeiros links sendo ECID, Email e Telefone.
 
 ![O controle deslizante do carimbo de data/hora do visualizador de gráficos ajustado ao primeiro novo link estabelecido.](../images/graph-viewer/slider-three.png)
 
@@ -121,7 +121,7 @@ Podem ocorrer erros ao acessar o visualizador de gráficos de identidade. Esta �
 
 ### Acessar o visualizador de gráficos de identidade a partir de conjuntos de dados
 
-Também é possível acessar o visualizador de gráficos de identidade usando a interface de conjuntos de dados. Na página [!UICONTROL Procurar] dos conjuntos de dados, selecione o conjunto de dados com o qual deseja interagir e selecione **[!UICONTROL Visualizar conjunto de dados]**
+Também é possível acessar o visualizador de gráficos de identidade usando a interface de conjuntos de dados. Na página dos conjuntos de dados [!UICONTROL Browse], selecione um conjunto de dados com o qual você deseja interagir e selecione **[!UICONTROL Preview dataset]**
 
 ![conjunto de dados de visualização](../images/identity-graph-viewer/preview-dataset.png)
 

@@ -4,7 +4,7 @@ title: Conexão com os Hubs de Eventos da Azure
 description: Crie uma conexão de saída em tempo real com o armazenamento do  [!DNL Azure Event Hubs]  para transmitir dados do Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2142'
 ht-degree: 5%
@@ -17,7 +17,7 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 [!DNL Azure Event Hubs] é uma plataforma de transmissão de big data e um serviço de assimilação de eventos. Ele pode receber e processar milhões de eventos por segundo. Os dados enviados para um hub de eventos podem ser transformados e armazenados usando qualquer provedor de análise em tempo real ou adaptadores de armazenamento/agrupamento.
 

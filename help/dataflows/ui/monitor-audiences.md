@@ -3,7 +3,7 @@ description: Saiba como monitorar os fluxos de dados durante a segmentação usa
 title: Monitorar fluxos de dados para públicos na interface
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1710'
 ht-degree: 4%

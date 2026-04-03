@@ -3,7 +3,7 @@ title: Conectar o Capilar ao Experience Platform usando a API do Serviço de flu
 description: Saiba como conectar o Capilary ao Experience Platform usando APIs.
 badge: Beta
 exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1150'
 ht-degree: 2%
@@ -234,7 +234,8 @@ As transações capturam atividades comerciais. Veja a seguinte carga para um ex
 
 >[!ENDTABS]
 
-<!--### Supported Events
+<!--
+### Supported Events
 
 The [!DNL Capillary] source supports the following events:
 
@@ -251,7 +252,8 @@ The [!DNL Capillary] source supports the following events:
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`-->
+* `customerUpdated`
+-->
 
 ### Migração de dados históricos
 

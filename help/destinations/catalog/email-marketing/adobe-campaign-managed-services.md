@@ -2,7 +2,7 @@
 title: Conexão com o Adobe Campaign Managed Cloud Services
 description: O Adobe Campaign Managed Cloud Services fornece uma plataforma para projetar experiências de clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1721'
 ht-degree: 2%
@@ -13,11 +13,11 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Esta integração funciona com a [[!DNL Adobe Campaign] versão 8.4 ou superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=pt-BR#release-8-4-1).
+>Esta integração funciona com a [[!DNL Adobe Campaign] versão 8.4 ou superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
 
 ## Visão geral {#overview}
 
-O [!DNL Adobe Campaign Managed Cloud Services] fornece uma plataforma para projetar experiências de clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interações em tempo real e a execução entre canais. [Introdução ao Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=pt-BR)
+O [!DNL Adobe Campaign Managed Cloud Services] fornece uma plataforma para projetar experiências de clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interações em tempo real e a execução entre canais. [Introdução ao Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
 
 Use o Campaign para:
 
@@ -131,7 +131,7 @@ Formulário de detalhes de destino do ![[!DNL Adobe Campaign Managed Cloud Servi
 * **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Description]**: uma descrição que ajudará você a identificar este destino no futuro.
 * **[!UICONTROL Select instance]**: sua instância de marketing **[!DNL Campaign]**.
-* **[!UICONTROL Target mapping]**: Selecione o target mapping que você está usando em **[!DNL Adobe Campaign]** para enviar entregas. [Saiba mais](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=pt-BR).
+* **[!UICONTROL Target mapping]**: Selecione o target mapping que você está usando em **[!DNL Adobe Campaign]** para enviar entregas. [Saiba mais](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
 * **[!UICONTROL Select sync type]**
 
    * **[!UICONTROL Audience sync]**: Use esta opção para enviar [!DNL Adobe Experience Platform] públicos-alvo para [!DNL Adobe Campaign].
@@ -156,7 +156,7 @@ Para obter mais informações sobre ações de marketing, consulte a página [vi
 >* Para ativar dados, você precisa das **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]** e **[!UICONTROL View Segments]** [permissões de controle de acesso](/help/access-control/home.md#permissions). Leia a [visão geral do controle de acesso](/help/access-control/ui/overview.md) ou contate o administrador do produto para obter as permissões necessárias.
 >* Para exportar *identidades*, você precisa da **[!UICONTROL View Identity Graph]** [permissão de controle de acesso](/help/access-control/home.md#permissions). <br> ![Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos.](/help/destinations/assets/overview/export-identities-to-destination.png "Selecione o namespace de identidade realçado no fluxo de trabalho para ativar as audiências para os destinos."){width="100" zoomable="yes"}
 
-Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=pt-BR) para obter instruções sobre como ativar dados de público-alvo para esse destino.
+Leia [Ativar dados de público-alvo para destinos de exportação de perfil em lote](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) para obter instruções sobre como ativar dados de público-alvo para esse destino.
 
 ### Mapear atributos e identidades {#map}
 

@@ -2,7 +2,7 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2022
 description: As notas de versão de setembro de 2022 da Adobe Experience Platform.
 exl-id: a7a4dcf8-2cf3-4e39-879d-bdfcbacb737a
-source-git-commit: 217282135bcd750740f4d3f8c6e17a0b8f9578bd
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2723'
 ht-degree: 21%
@@ -11,13 +11,13 @@ ht-degree: 21%
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 28 de setembro de 2022**
+**Data de lançamento: quinta-feira, 28 de setembro de 2022**
 
 Novos recursos na Adobe Experience Platform:
 
 - [Controle de acesso baseado em atributos](#abac)
 
-Atualizações dos recursos já existentes na Adobe Experience Platform:
+Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [Logs de auditoria](#audit-logs)
@@ -26,8 +26,8 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Serviço de identidade](#identity-service)
-- [Query Service](#query-service)
-- [Origens](#sources)
+- [Serviço de consultas](#query-service)
+- [Fontes](#sources)
 
 ## Controle de acesso baseado em atributos {#abac}
 
@@ -134,7 +134,7 @@ Para obter mais informações sobre a coleta de dados no Experience Platform, co
 
 | Destino | Descrição |
 | ----------- | ----------- |
-| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | O Adobe Campaign Managed Cloud Services fornece uma plataforma para projetar experiências de clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. [Introdução ao Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=pt-BR). Observe que esta integração funciona com o [Adobe Campaign versão 8.4 ou superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=pt-BR#release-8-4-1). |
+| [[!DNL Adobe Campaign Managed Cloud Services]](../../destinations/catalog/email-marketing/adobe-campaign-managed-services.md) | O Adobe Campaign Managed Cloud Services fornece uma plataforma para projetar experiências de clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. [Introdução ao Campaign](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html). Observe que esta integração funciona com o [Adobe Campaign versão 8.4 ou superior](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1). |
 | [[!DNL Salesforce CRM]](../../destinations/catalog/crm/salesforce.md) | O destino [!DNL Salesforce CRM] foi atualizado para oferecer suporte a atualizações de contatos e clientes potenciais, bem como melhorias de desempenho para atualizações mais rápidas. |
 
 {style="table-layout:auto"}
@@ -206,9 +206,9 @@ O Serviço de identidade da Adobe Experience Platform ajuda você a ter uma melh
 
 Para saber mais sobre o Serviço de identidade, leia a [Visão geral do Serviço de identidade](../../identity-service/home.md).
 
-## Query Service {#query-service}
+## Serviço de consultas {#query-service}
 
-O Query Service permite usar SQL padrão para consultar dados no [!DNL Data Lake] da Adobe Experience Platform. Você pode ingressar em qualquer conjunto de dados do [!DNL Data Lake] e capturar os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
+O Serviço de consultas permite usar SQL padrão para consultar dados no [!DNL Data Lake] da Adobe Experience Platform. Você pode ingressar em qualquer conjunto de dados do [!DNL Data Lake] e capturar os resultados da consulta como um novo conjunto de dados para usar em relatórios, no Data Science Workspace ou para assimilação no Perfil do cliente em tempo real.
 
 **Recursos atualizados**
 
@@ -221,7 +221,7 @@ Para obter mais informações sobre [!DNL Query Service], consulte a [[!DNL Quer
 
 Consulte a [documentação de alertas de consulta](../../query-service/api/alert-subscriptions.md) para saber mais.
 
-## Origens {#sources}
+## Fontes {#sources}
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 

@@ -4,7 +4,7 @@ description: Saiba como os logs de auditoria permitem ver quem realizou quais a�
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: d6575e44339ea41740fa18af07ce5b893f331488
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1579'
 ht-degree: 28%
@@ -62,7 +62,7 @@ A tabela a seguir descreve quais ações em quais recursos são registrados por 
 | [Namespace de identidade](../../../identity-service/features/namespaces.md) | <ul><li>Criar</li><li>Atualização</li></ul> |
 | [Política de mesclagem](../../../profile/merge-policies/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Perfil do produto](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
-| [Query](../../../query-service/ui/overview.md) | <ul><li>Executar</li></ul> |
+| [Consulta](../../../query-service/ui/overview.md) | <ul><li>Executar</li></ul> |
 | [Modelo de consulta](../../../query-service/ui/overview.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li></ul> |
 | [Função (controle de acesso baseado no atributo)](../../../access-control/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Excluir</li><li>Adicionar usuário</li><li>Remover usuário</li></ul> |
 | [Sandbox](../../../sandboxes/home.md) | <ul><li>Criar</li><li>Atualização</li><li>Redefinir</li><li>Excluir</li></ul> |
@@ -169,7 +169,7 @@ Todas as ações que você pode executar na interface do usuário também podem 
 
 ## Gerenciamento de logs de auditoria para o Adobe Admin Console
 
-Para saber como gerenciar logs de auditoria para atividades no Adobe Admin Console, consulte o seguinte [documento](https://helpx.adobe.com/br/enterprise/using/audit-logs.html).
+Para saber como gerenciar logs de auditoria para atividades no Adobe Admin Console, consulte o seguinte [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
 
 ## Próximas etapas e recursos adicionais
 
@@ -177,4 +177,4 @@ Este guia abordou como gerenciar logs de auditoria no Experience Platform. Para 
 
 Para reforçar sua compreensão de logs de auditoria no Experience Platform, assista ao seguinte vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/344653?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

@@ -2,7 +2,7 @@
 title: Visão geral da extensão de tags do Algolia
 description: Saiba mais sobre a extensão Tags do Algolia no Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 6eee26df3841a7829625361fc726bf59a278f867
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1954'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # Visão geral da extensão de marcas [!DNL Algolia]
 
-A extensão de Tags do [!DNL Algolia] permite que os profissionais de marketing configurem facilmente regras que enviam dados de interação do usuário para o [!DNL Algolia], ajudando você a fornecer experiências de Pesquisa e Descoberta de IA mais personalizadas.
+A extensão de Tags do [!DNL Algolia] permite que os profissionais de marketing configurem facilmente regras que enviam dados de interação do usuário para o [!DNL Algolia], ajudando você a fornecer experiências de Pesquisa com IA e Descoberta mais personalizadas.
 
 Essa extensão é alimentada por um recurso principal:
 
@@ -237,7 +237,7 @@ Um exemplo de HTML que contém um conjunto de dados:
 </div>
 ```
 
-### Sequência de consulta {#query-string}
+### String de consulta {#query-string}
 
 O Elemento de Dados da Cadeia de Caracteres de Consulta extrai dados da cadeia de caracteres de consulta da URL a serem usados em [!DNL Algolia] ações.
 

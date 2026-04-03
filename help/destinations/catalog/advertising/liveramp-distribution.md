@@ -2,7 +2,7 @@
 title: LiveRamp - Conexão de distribuição
 description: Saiba como usar o LiveRamp - Conector de distribuição para orquestrar e ativar públicos integrados anteriormente no LiveRamp para destinos de publicidade downstream.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2807'
 ht-degree: 37%

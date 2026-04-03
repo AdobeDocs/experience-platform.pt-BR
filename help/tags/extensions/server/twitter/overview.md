@@ -4,7 +4,7 @@ title: Extensão de encaminhamento de eventos do Twitter
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite assimilar eventos no Twitter para atender às necessidades da sua empresa.
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 54c240e5-6160-4654-ac5b-6afa8d99a765
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '999'
 ht-degree: 2%

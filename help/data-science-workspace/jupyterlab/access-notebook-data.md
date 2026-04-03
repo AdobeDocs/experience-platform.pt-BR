@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Acesso aos dados nos notebooks Jupyterlab
 description: Este guia tem como foco o uso do Jupyter Notebooks, integrado ao Data Science Workspace para acessar seus dados.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3274'
 ht-degree: 3%

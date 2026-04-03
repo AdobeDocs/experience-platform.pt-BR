@@ -2,10 +2,10 @@
 title: Filtrar dados em nível de linha para uma Source usando a API do serviço de fluxo
 description: Este tutorial aborda as etapas sobre como filtrar dados no nível da origem usando a API do Serviço de fluxo
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: fe7025b7e48634232d823f8380610c6409b2d4b1
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1823'
-ht-degree: 5%
+source-wordcount: '1820'
+ht-degree: 4%
 
 ---
 
@@ -457,7 +457,7 @@ Primeiro, crie um [[!DNL Marketo] fluxo de dados](../ui/create/adobe-application
 
 Depois de ter um fluxo de dados em rascunho, você deve recuperar a ID correspondente.
 
-Na interface, navegue até o catálogo de fontes e selecione **[!UICONTROL Fluxos de Dados]** no cabeçalho superior. Use a coluna de status para identificar todos os fluxos de dados que foram salvos no modo de rascunho e, em seguida, selecione o nome do fluxo de dados. Em seguida, use o painel **[!UICONTROL Propriedades]** à direita para localizar sua ID de fluxo de dados.
+Na interface, navegue até o catálogo de fontes e selecione **[!UICONTROL Dataflows]** no cabeçalho superior. Use a coluna de status para identificar todos os fluxos de dados que foram salvos no modo de rascunho e, em seguida, selecione o nome do fluxo de dados. Em seguida, use o painel **[!UICONTROL Properties]** à direita para localizar sua ID de fluxo de dados.
 
 ### Recuperar detalhes do fluxo de dados
 
@@ -881,7 +881,7 @@ Uma resposta bem-sucedida retorna a ID e o `etag` correspondente do fluxo de dad
 
 +++
 
-Você pode usar a interface do usuário do Experience Platform para verificar se o fluxo de dados de rascunho foi publicado. Navegue até a página de fluxos de dados no catálogo de fontes e faça referência ao **[!UICONTROL Status]** do seu fluxo de dados. Se for bem-sucedido, o status agora deve ser definido como **Habilitado**.
+Você pode usar a interface do usuário do Experience Platform para verificar se o fluxo de dados de rascunho foi publicado. Navegue até a página de fluxos de dados no catálogo de fontes e faça referência à **[!UICONTROL Status]** do seu fluxo de dados. Se for bem-sucedido, o status agora deve ser definido como **Habilitado**.
 
 >[!TIP]
 >

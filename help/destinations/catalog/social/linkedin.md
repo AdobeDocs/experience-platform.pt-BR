@@ -3,7 +3,7 @@ keywords: conexão linkedin;conexão linkedin;destinos linkedin;linkedin;
 title: Conexão de públicos correspondentes do Linkedin
 description: Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 4%
@@ -30,7 +30,7 @@ Uma empresa de software organiza uma conferência e deseja manter contato com os
 
 >[!IMPORTANT]
 >
->A partir de setembro de 2025, não será mais possível mapear [!DNL IDFA] como identidade de destino, pois [!DNL IDFA] não é mais suportado pelo destino [!DNL LinkedIn Matched Audiences]. Consulte a [!DNL LinkedIn Matched Audiences]documentação[&#x200B; da integração de &#x200B;](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) para obter mais detalhes. Essa alteração se deve aos requisitos do LinkedIn e não está relacionada a nenhuma atualização de serviço de destino do Experience Platform.
+>A partir de setembro de 2025, não será mais possível mapear [!DNL IDFA] como identidade de destino, pois [!DNL IDFA] não é mais suportado pelo destino [!DNL LinkedIn Matched Audiences]. Consulte a [!DNL LinkedIn Matched Audiences]documentação[ da integração de ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) para obter mais detalhes. Essa alteração se deve aos requisitos do LinkedIn e não está relacionada a nenhuma atualização de serviço de destino do Experience Platform.
 
 
 | Identidade de destino | Descrição | Considerações |
@@ -124,7 +124,7 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 
 O vídeo abaixo também demonstra as etapas para configurar um destino do [!DNL LinkedIn Matched Audiences] e ativar públicos-alvo.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475118/?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 >[!NOTE]
 >

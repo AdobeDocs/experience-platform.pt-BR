@@ -5,7 +5,7 @@ title: Transmitir dados de registro usando APIs de assimilação de fluxo
 type: Tutorial
 description: Este tutorial ajudará você a começar a usar as APIs de assimilação de fluxo, parte das APIs de serviço de assimilação de dados da Adobe Experience Platform.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1036'
 ht-degree: 3%

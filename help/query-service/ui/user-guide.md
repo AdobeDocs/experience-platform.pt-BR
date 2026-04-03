@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da interface do Editor de consultas
 description: O Editor de consultas é uma ferramenta interativa fornecida pelo Serviço de consultas da Adobe Experience Platform, que permite gravar, validar e executar consultas para dados de experiência do cliente na interface do usuário do Experience Platform. O Editor de consultas é compatível com o desenvolvimento de consultas para análise e exploração de dados e permite executar consultas interativas para fins de desenvolvimento, bem como consultas não interativas para preencher conjuntos de dados no Experience Platform.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '3341'
 ht-degree: 0%
@@ -123,11 +123,13 @@ O recurso [!UICONTROL Format text] torna sua consulta mais legível ao adicionar
 
 ![O Editor de Consultas com [!UICONTROL Format text] e as instruções SQL realçadas.](../images/ui/query-editor/format-text.png)
 
-<!-- ### Undo text {#undo-text}
+<!-- 
+### Undo text {#undo-text}
 
 If you format your SQL in the Query Editor, you can undo the formatting applied by the [!UICONTROL Format text] feature. To return your SQL back to its original form, select **[!UICONTROL Undo text]**.
 
-![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) -->
+![The Query Editor with [!UICONTROL Undo text] and the SQL statements highlighted.](../images/ui/query-editor/undo-text.png) 
+-->
 
 ### Copiar SQL {#copy-sql}
 
@@ -312,7 +314,7 @@ O vídeo a seguir mostra como executar queries na interface do Adobe Experience 
 >
 >A interface do usuário descrita no vídeo está desatualizada, mas a lógica usada no fluxo de trabalho permanece a mesma.
 
->[!VIDEO](https://video.tv.adobe.com/v/33393?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 
 ## Monitorar e gerenciar sessões simultâneas {#monitor-manage-sessions}
 

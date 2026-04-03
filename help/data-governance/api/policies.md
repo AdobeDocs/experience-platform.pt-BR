@@ -5,7 +5,7 @@ title: Ponto de extremidade da API de políticas de governança de dados
 description: As políticas de governança de dados são regras adotadas pela sua organização que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro do Experience Platform. O ponto de extremidade /policies é usado para todas as chamadas de API relacionadas à exibição, criação, atualização ou exclusão de políticas de governança de dados.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1864'
 ht-degree: 3%

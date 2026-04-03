@@ -3,7 +3,7 @@ title: Perfis dos participantes do RainFocus
 description: Saiba como usar o conector de destino Perfis de participantes RainFocus para sincronizar perfis de público-alvo com o Perfil de participante global RainFocus.
 last-substantial-update: 2024-12-17T00:00:00Z
 exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 4%
@@ -172,4 +172,4 @@ Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as p
 
 ## Recursos adicionais {#additional-resources}
 
-* [Conector de Source de Streaming RainFocus](https://experienceleague.adobe.com/pt-br/docs/experience-platform/sources/connectors/analytics/rainfocus)
+* [Conector de Source de Streaming RainFocus](https://experienceleague.adobe.com/en/docs/experience-platform/sources/connectors/analytics/rainfocus)

@@ -2,7 +2,7 @@
 title: Visão geral do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing promovam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 1%
@@ -45,7 +45,7 @@ As entidades Dimensional e B2B estão vinculadas à entidade primária por meio 
 
 Embora o [!DNL Real-Time Customer Profile] processe dados assimilados e use o Adobe Experience Platform [!DNL Identity Service] para mesclar dados relacionados por meio do mapeamento de identidade, ele mantém seus próprios dados no armazenamento de dados [!DNL Profile]. O repositório [!DNL Profile] é separado dos dados de catálogo no data lake e dos dados [!DNL Identity Service] no gráfico de identidade.
 
-O armazenamento de Perfil usa uma infraestrutura de banco de dados do Microsoft Azure Cosmos e o Experience Platform Data Lake usa o armazenamento do Microsoft Azure Data Lake.
+O armazenamento de perfis usa uma infraestrutura Microsoft Azure Cosmos DB e o Experience Platform Data Lake usa o armazenamento Microsoft Azure Data Lake.
 
 ### Medidas de proteção de perfil
 
@@ -89,13 +89,15 @@ Um dos principais recursos do [!DNL Real-Time Customer Profile] é a capacidade 
 
 Para saber mais sobre esquemas de união, incluindo como acessar esquemas de união na interface, visite o [guia de interface do esquema de união](ui/union-schema.md).
 
-<!-- ### (Alpha) Computed attributes
+<!--
+### (Alpha) Computed attributes
 
 >[!IMPORTANT]
 >
 >Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). -->
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md). 
+-->
 
 ## Perfis e públicos-alvo
 

@@ -3,7 +3,7 @@ title: Pesquisar atributos de perfil de borda em tempo real
 description: Saiba como pesquisar atributos de perfil de borda em tempo real, usando o destino do Personalization personalizado e a API do Edge Network
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 1%
@@ -52,9 +52,11 @@ Siga as etapas na documentação da [configuração da sequência de dados](../.
 * **[!UICONTROL Edge Segmentation]**: Se você precisar de segmentação de borda, habilite essa opção. Se você estiver interessado apenas em pesquisar atributos de perfil na borda, mas não quiser executar nenhuma segmentação com base nos perfis de borda, deixe essa opção desativada.
 
 
-<!-- >[!IMPORTANT]
+<!-- 
+>[!IMPORTANT]
 >
->Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
+>Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. 
+-->
 
 ![Imagem da interface do Experience Platform mostrando a tela de configuração da sequência de dados.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 

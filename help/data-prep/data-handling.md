@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Manuseio de formatos de dados com o Preparo de dados
 description: Este documento fornece uma visão geral de como diferentes tipos de dados são tratados no Preparo de dados.
 exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
-source-git-commit: a49140853124f4f7beee87a739c8e670838947f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '624'
 ht-degree: 11%
 
 ---
@@ -103,7 +103,7 @@ A tabela a seguir mostra quais letras do padrão são definidas para cadeias de 
 | m | Minuto na hora | Número | 38 |
 | s | Segundo no minuto | Número | 44 |
 | S | Milissegundo | Número | 245 |
-| z | Fuso horário | Fuso horário geral | Horário Padrão do Pacífico; PST; GMT-08:00 |
+| z | Fuso horário | Fuso horário geral | Hora Padrão da Costa Oeste; PST; GMT-08:00 |
 | Z | Fuso horário | Fuso horário RFC 822 | -0800 |
 | X | Fuso horário | Fuso horário ISO 8601 | -08; -0800; -08:00 |
 | V | ID do fuso horário | Texto | América/Los_Angeles |

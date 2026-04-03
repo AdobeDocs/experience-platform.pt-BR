@@ -3,7 +3,7 @@ title: Criar um Fluxo de Dados para Origens de Banco de Dados Usando a API de Se
 type: Tutorial
 description: Saiba como usar a API do Serviço de fluxo para criar um fluxo de dados e assimilar dados do banco de dados na Experience Platform.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 3%
@@ -42,7 +42,7 @@ Para criar uma conexão de origem, você também deve definir um valor de enumer
 
 Use os seguintes valores de enumeração para conectores baseados em arquivo:
 
-| Formato dos dados | Valor de enumeração |
+| Formato dos dados | Valor da lista discriminada |
 | ----------- | ---------- |
 | Delimitado | `delimited` |
 | JSON | `json` |
@@ -657,15 +657,13 @@ curl -X POST \
     }'
 ```
 
-+++
-
 | Propriedade | Descrição |
 | -------- | ----------- |
 | `flowSpec.id` | A [ID de especificação de fluxo](#specs) recuperou na etapa anterior. |
 | `sourceConnectionIds` | A [ID da conexão de origem](#source) recuperou em uma etapa anterior. |
 | `targetConnectionIds` | A [ID da conexão de destino](#target-connection) recuperou em uma etapa anterior. |
 | `transformations.params.mappingId` | A [ID de mapeamento](#mapping) recuperou em uma etapa anterior. |
-| `transformations.params.deltaColum` | A coluna designada usada para diferenciar entre dados novos e existentes. Os dados incrementais serão assimilados com base no carimbo de data e hora da coluna selecionada. O formato de data com suporte para `deltaColumn` é `yyyy-MM-dd HH:mm:ss`. Se você estiver usando o Armazenamento de Tabelas do Azure, o formato com suporte para `deltaColumn` é `yyyy-MM-ddTHH:mm:ssZ`. |
+| `transformations.params.deltaColum` | A coluna designada usada para diferenciar entre dados novos e existentes. Os dados incrementais serão assimilados com base no carimbo de data e hora da coluna selecionada. O formato de data com suporte para `deltaColumn` é `yyyy-MM-dd HH:mm:ss`. Se você estiver usando o Azure Table Storage, o formato com suporte para `deltaColumn` é `yyyy-MM-ddTHH:mm:ssZ`. |
 | `transformations.params.mappingId` | A ID de mapeamento associada ao banco de dados. |
 | `scheduleParams.startTime` | A hora de início do fluxo de dados em época. |
 | `scheduleParams.frequency` | A frequência com que o fluxo de dados coletará dados. Os valores aceitáveis incluem: `once`, `minute`, `hour`, `day` ou `week`. |

@@ -6,9 +6,9 @@ title: Requisitos de dados na IA do cliente
 topic-legacy: Getting started
 description: Saiba mais sobre os eventos, entradas e saídas necessários utilizados pela IA do cliente.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2552'
+source-wordcount: '2539'
 ht-degree: 1%
 
 ---
@@ -49,8 +49,8 @@ A IA do cliente funciona analisando os seguintes conjuntos de dados para prever 
 
 - Dados do Adobe Analytics usando o [conector de origem do Analytics](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
 - Dados do Adobe Audience Manager usando o [conector de origem do Audience Manager](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Conjunto de dados de Evento de Experiência](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=pt-BR)
-- [Conjunto de dados do Evento de experiência do consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=pt-BR#cee-schema)
+- [Conjunto de dados de Evento de Experiência](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [Conjunto de dados do Evento de experiência do consumidor](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
 Você pode adicionar vários conjuntos de dados de diferentes fontes se cada um dos conjuntos de dados compartilhar o mesmo tipo de identidade (namespace), como uma ECID. Para obter mais informações sobre como adicionar vários conjuntos de dados, visite o [Guia do usuário da IA do cliente](../customer-ai/user-guide/configure.md).
 
@@ -91,29 +91,29 @@ Eventos de experiência são usados para determinar vários comportamentos do cl
 
 A IA do cliente usa os eventos nesses quatro grupos de campos padrão por padrão: Commerce, Web, Aplicativo e Pesquisa. Não é necessário ter dados para cada evento nos grupos de campos padrão listados abaixo, mas determinados eventos são necessários para determinados cenários. Se você tiver eventos nos grupos de campos padrão disponíveis, é recomendável incluí-los no esquema. Por exemplo, se você deseja criar um modelo de IA do cliente para prever eventos de compra, é útil ter dados do Commerce e grupos de campos de detalhes da página da Web.
 
-Para exibir um grupo de campos na interface do usuário do Experience Platform, selecione a guia **[!UICONTROL Esquemas]** no painel esquerdo, seguido pela seleção da guia **[!UICONTROL Grupos de campos]**.
+Para exibir um grupo de campos na interface do usuário do Experience Platform, selecione a guia **[!UICONTROL Schemas]** no painel esquerdo, seguido da guia **[!UICONTROL Field groups]**.
 
 | Grupo de campos | Tipo de evento | Caminho do campo XDM |
 | --- | --- | --- |
-| [!UICONTROL Detalhes do Commerce] | pedido | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
+| [!UICONTROL Commerce Details] | pedido | <li> `commerce.order.purchaseID` </li> <li> `productListItems.SKU` </li> |
 |  | productListViews | <li> `commerce.productListViews.value` </li> <li> `productListItems.SKU` </li> |
 |  | check-outs | <li> `commerce.checkouts.value` </li> <li> `productListItems.SKU` </li> |
 |  | compras | <li> `commerce.purchases.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListRemovals | <li> `commerce.productListRemovals.value` </li> <li> `productListItems.SKU` </li> |
 |  | productListOpens | <li> `commerce.productListOpens.value` </li> <li> `productListItems.SKU` </li> |
 |  | productViews | <li> `commerce.productViews.value` </li> <li> `productListItems.SKU` </li> |
-| [!UICONTROL Detalhes da Web] | webVisit | `web.webPageDetails.name` |
+| [!UICONTROL Web Details] | webVisit | `web.webPageDetails.name` |
 |  | webInteraction | `web.webInteraction.linkClicks.value` |
-| [!UICONTROL Detalhes do aplicativo] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
+| [!UICONTROL Application Details] | applicationCloses | <li> `application.applicationCloses.value` </li> <li> `application.name` </li> |
 |  | applicationCrashes | <li> `application.crashes.value` </li> <li> `application.name` </li> |
 |  | applicationFeatureUsages | <li> `application.featureUsages.value` </li> <li> `application.name` </li> |
 |  | applicationFirstLaunches | <li> `application.firstLaunches.value` </li> <li> `application.name` </li> |
 |  | applicationInstalls | <li> application.installs.value </li> <li> `application.name` </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> `application.name` </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> `application.name` </li> |
-| [!UICONTROL Detalhes da Pesquisa] | pesquisar | `search.keywords` |
+| [!UICONTROL Search Details] | pesquisar | `search.keywords` |
 
-Além disso, a IA do cliente pode usar dados de assinatura para criar modelos de churn melhores. Os dados de assinatura são necessários para cada perfil que usa o formato de tipo de dados [[!UICONTROL Assinatura]](../../xdm/data-types/subscription.md). A maioria dos campos é opcional. No entanto, para um modelo de churn ideal, é altamente recomendável fornecer dados para o máximo de campos possível, como `startDate`, `endDate` e quaisquer outros detalhes relevantes. Entre em contato com a equipe de conta para obter suporte adicional sobre este recurso.
+Além disso, a IA do cliente pode usar dados de assinatura para criar modelos de churn melhores. Os dados de assinatura são necessários para cada perfil usando o formato de tipo de dados [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md). A maioria dos campos é opcional. No entanto, para um modelo de churn ideal, é altamente recomendável fornecer dados para o máximo de campos possível, como `startDate`, `endDate` e quaisquer outros detalhes relevantes. Entre em contato com a equipe de conta para obter suporte adicional sobre este recurso.
 
 ### Adicionar eventos personalizados e atributos de perfil {#add-custom-events}
 
@@ -146,7 +146,7 @@ Veja a seguir uma seleção de exemplos de eventos personalizados específicos d
 | Varejo | Transação na loja<br>Inscreva-se no cartão do clube<br>Cupons de clipe para dispositivos móveis. |
 | Entretenimento | Participação na temporada de compras <br>. Faça streaming do vídeo. |
 | Hospitalidade | Fazer reserva no restaurante <br> Comprar pontos de fidelidade. |
-| Viagem | Adicionar informações conhecidas do viajante Comprar milhas. |
+| Viagens | Adicionar informações conhecidas do viajante Comprar milhas. |
 | Comunicações | Atualizar/fazer downgrade/cancelar plano. |
 
 Os eventos personalizados devem representar ações iniciadas pelo usuário para serem selecionados. Por exemplo, &quot;Envio de email&quot; é uma ação iniciada por um profissional de marketing e não pelo usuário, portanto, não deve ser usada como um evento personalizado.
@@ -219,7 +219,7 @@ A tabela abaixo descreve os vários atributos encontrados na saída da IA do cli
 
 | Atributo | Descrição |
 | ----- | ----------- |
-| [!UICONTROL Pontuação] | A probabilidade relativa de um cliente atingir a meta prevista dentro do período definido. Este valor não deve ser tratado como uma percentagem de probabilidade, mas sim como a probabilidade de um indivíduo em comparação com a população global. Essa pontuação varia de 0 a 100. |
+| [!UICONTROL Score] | A probabilidade relativa de um cliente atingir a meta prevista dentro do período definido. Este valor não deve ser tratado como uma percentagem de probabilidade, mas sim como a probabilidade de um indivíduo em comparação com a população global. Essa pontuação varia de 0 a 100. |
 | Probabilidade | Esse atributo é a verdadeira probabilidade de um perfil alcançar a meta prevista dentro do período definido. Ao comparar saídas entre metas diferentes, é recomendável considerar a probabilidade sobre o percentil ou a pontuação. A probabilidade deve ser sempre usada ao determinar a probabilidade média em toda a população elegível, já que a probabilidade tende a ser menor para eventos que não ocorrem com frequência. Valores para o intervalo de probabilidade entre 0 e 1. |
 | Percentil | Esse valor fornece informações sobre o desempenho de um perfil em relação a outros perfis com pontuação semelhante. Por exemplo, um perfil com classificação de percentil de 99 para churn indica que ele tem um risco maior de churn em comparação a 99% de todos os outros perfis que foram pontuados. Os percentuais variam de 1 a 100. |
 | Tipo de propensão | O tipo de propensão selecionado. |

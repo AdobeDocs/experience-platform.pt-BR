@@ -4,10 +4,10 @@ description: Saiba mais sobre as atualizações de critérios de qualificação 
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '586'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -45,7 +45,7 @@ Se for necessário avaliar uma definição de segmento usando a segmentação de
 
 Por exemplo, digamos que você tenha dois públicos-alvo, com um público-alvo hospedando dados do esquema de perfil e o outro hospedando dados do esquema de evento de experiência:
 
-| Público-alvo | Esquema | Tipo de Source | Definição de consulta | ID do público-alvo |
+| Público-alvo | Esquema | Tipo de Source | Definição da consulta | ID do público-alvo |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Residentes da Califórnia | Perfil | Origem do lote | O endereço residencial é no estado da Califórnia | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Check-outs recentes | Evento de experiência | Fonte de transmissão | Tem pelo menos um check-out nas últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -66,7 +66,7 @@ No entanto, se você quiser combinar dois públicos-alvo com dados de evento, **
 
 Por exemplo, digamos que você tenha dois públicos-alvo, com ambos os públicos-alvo abrigando dados do esquema do evento de experiência:
 
-| Público-alvo | Esquema | Tipo de Source | Definição de consulta | ID do público-alvo |
+| Público-alvo | Esquema | Tipo de Source | Definição da consulta | ID do público-alvo |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Desistências recentes | Evento de experiência | Origem do lote | Tem pelo menos um evento de abandono nas últimas 48 horas | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Check-outs recentes | Evento de experiência | Fonte de transmissão | Tem pelo menos um check-out nas últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |

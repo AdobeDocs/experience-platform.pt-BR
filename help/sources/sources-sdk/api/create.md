@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Criar uma nova especificação de conexão usando a API do Serviço de fluxo
 description: O documento a seguir fornece etapas sobre como criar uma especificação de conexão usando a API de Serviço de Fluxo e integrar uma nova origem por meio de Origens de Autoatendimento.
 exl-id: 0b0278f5-c64d-4802-a6b4-37557f714a97
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 2%
@@ -27,7 +27,7 @@ Para criar uma nova origem em lote usando Origens de Autoatendimento, primeiro v
 
 Depois de fornecido, você deve estruturar seu repositório Git privado da seguinte maneira:
 
-* Origens
+* Fontes
    * {your_source}
       * Artefatos
          * {your_source}-category.txt

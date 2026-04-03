@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de segmentação
 description: Saiba como criar e gerenciar públicos e definições de segmento na interface do usuário do Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1046'
-ht-degree: 2%
+source-wordcount: '1028'
+ht-degree: 1%
 
 ---
 
@@ -31,15 +31,15 @@ Você também deve compreender os termos principais a seguir que são usados nes
 
 ## Visão geral
 
-Na interface do Experience Platform, selecione **[!UICONTROL Públicos-alvo]** na navegação à esquerda para abrir a guia **[!UICONTROL Visão geral]** que exibe o painel [!UICONTROL Públicos-alvo].
+Na interface do Experience Platform, selecione **[!UICONTROL Audiences]** na navegação à esquerda para abrir a guia **[!UICONTROL Overview]** exibindo o painel [!UICONTROL Audiences].
 
 >[!NOTE]
 >
->Se sua organização for nova no Experience Platform e ainda não tiver conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel [!UICONTROL Públicos-alvo] não estará visível. Em vez disso, a guia [!UICONTROL Visão geral] exibe links e documentação para ajudar você a começar a usar os públicos-alvo.
+>Se sua organização for nova no Experience Platform e ainda não tiver conjuntos de dados de Perfil ativos ou políticas de mesclagem criadas, o painel [!UICONTROL Audiences] não estará visível. Em vez disso, a guia [!UICONTROL Overview] exibe links e a documentação para ajudar você a começar a usar os públicos-alvo.
 
-### Painel de [!UICONTROL Públicos-alvo] {#segments-dashboard}
+### Painel [!UICONTROL Audiences] {#segments-dashboard}
 
-O painel **[!UICONTROL Públicos-alvo]** descreve as métricas principais relacionadas aos dados de público-alvo de sua organização.
+O painel **[!UICONTROL Audiences]** descreve as principais métricas relacionadas aos dados de público-alvo de sua organização.
 
 Para saber mais, visite o [guia do painel de públicos-alvo](../../dashboards/guides/audiences.md).
 
@@ -47,7 +47,7 @@ Para saber mais, visite o [guia do painel de públicos-alvo](../../dashboards/gu
 
 ## Navegar {#browse}
 
-Selecione a guia **[!UICONTROL Procurar]** para ver o Portal de público-alvo. O Portal de público-alvo fornece uma lista de todos os públicos-alvo que pertencem à sua organização e sandbox, e inclui detalhes como contagem de perfis, origem, data de criação, data da última modificação, tags e detalhamento.
+Selecione a guia **[!UICONTROL Browse]** para ver o Portal de público-alvo. O Portal de público-alvo fornece uma lista de todos os públicos-alvo que pertencem à sua organização e sandbox, e inclui detalhes como contagem de perfis, origem, data de criação, data da última modificação, tags e detalhamento.
 
 Além disso, o Audience Portal permite criar novos públicos-alvo usando o Construtor de segmentos ou a Composição de público-alvo, bem como importar públicos gerados externamente para o Experience Platform.
 
@@ -55,7 +55,7 @@ Para obter mais informações sobre o Audience Portal, leia a [Visão geral do A
 
 ## Composições {#compositions}
 
-Selecione a guia **[!UICONTROL Composições]** para ver uma lista de todos os públicos-alvo gerados por meio da Composição de público-alvo para sua organização.
+Selecione a guia **[!UICONTROL Compositions]** para ver uma lista de todos os públicos-alvo gerados pela Composição de público-alvo para sua organização.
 
 ![Uma lista de públicos-alvo criados na Composição de Público-alvo para sua organização.](../images/ui/overview/compositions.png)
 
@@ -78,15 +78,15 @@ Um popover é exibido, listando todos os campos que podem ser exibidos dentro da
 ![Os atributos que podem ser exibidos para a seção Composição.](../images/ui/overview/compositions-customize-table.png)
 
 | Campo | Descrição |
-| ----- | ----------- | 
-| [!UICONTROL Nome] | O nome do público. |
+| ----- | ----------- |
+| [!UICONTROL Name] | O nome do público. |
 | [!UICONTROL Status] | O status do público. Os valores possíveis para este campo incluem `Draft`, `Inactive` e `Published`. |
-| [!UICONTROL Criado] | A hora e a data em que o público-alvo foi criado. |
-| [!UICONTROL Criado por] | O nome da pessoa que criou o público-alvo. |
-| [!UICONTROL Atualizado] | A hora e a data em que o público-alvo foi atualizado pela última vez. |
-| [!UICONTROL Atualizado por] | O nome da última pessoa que atualizou o público. |
+| [!UICONTROL Created] | A hora e a data em que o público-alvo foi criado. |
+| [!UICONTROL Created by] | O nome da pessoa que criou o público-alvo. |
+| [!UICONTROL Updated] | A hora e a data em que o público-alvo foi atualizado pela última vez. |
+| [!UICONTROL Updated by] | O nome da última pessoa que atualizou o público. |
 
-Para ver como o público-alvo é composto, selecione o nome de um público-alvo na guia [!UICONTROL Públicos-alvo].
+Para ver como o público-alvo é composto, selecione o nome de um público-alvo na guia [!UICONTROL Audiences].
 
 A página Composição de público-alvo é exibida com os blocos fundamentais que compõem seu público-alvo. Para obter mais detalhes sobre como usar a Composição de público-alvo, leia o [Guia da interface do usuário da Composição de público-alvo](./audience-composition.md).
 

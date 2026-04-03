@@ -5,7 +5,7 @@ role: Developer
 hide: true
 hidefromtoc: true
 exl-id: d80a4be3-e072-4bb4-a56d-b34a20f88c78
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '481'
 ht-degree: 6%
@@ -14,9 +14,11 @@ ht-degree: 6%
 
 # Excluir registros usando a API de higiene de dados
 
-<!-- >[!IMPORTANT]
+<!-- 
+>[!IMPORTANT]
 >
->This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. -->
+>This endpoint represents the beta functionality for record deletes. For the latest functionality, please use the [`/workorder` endpoint](./workorder.md) instead. 
+-->
 
 A API de higiene de dados permite corrigir ou excluir programaticamente os dados pessoais armazenados dos clientes no Adobe Experience Platform.
 
@@ -26,7 +28,7 @@ Você pode acessar a API pelo mesmo caminho raiz que a [API Privacy Service](../
 
 Esta seção fornece uma introdução aos conceitos principais que você precisa saber antes de tentar fazer chamadas para a API de higiene de dados.
 
-### Coletar valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos obrigatórios
 
 Para fazer chamadas para a API de higiene de dados, primeiro colete suas credenciais de autenticação. Essas são as mesmas credenciais usadas para acessar a API do Privacy Service. Consulte a [Visão geral da API](./overview.md#getting-started) para gerar valores para cada um dos cabeçalhos necessários para a API de Higiene de Dados, conforme mostrado abaixo:
 

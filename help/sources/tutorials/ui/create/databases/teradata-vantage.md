@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares;Teradata Vantag
 title: Criar uma conexão do Teradata Vantage Source na interface
 description: Saiba como criar uma conexão de origem do Teradata Vantage usando a interface do Adobe Experience Platform.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '418'
+source-wordcount: '399'
 ht-degree: 2%
 
 ---
@@ -33,27 +33,27 @@ Para obter mais informações sobre a introdução, consulte este [[!DNL Teradat
 
 ## Conectar sua conta do [!DNL Teradata Vantage]
 
-Na interface do Experience Platform, selecione **[!UICONTROL Fontes]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
+Na interface do Experience Platform, selecione **[!UICONTROL Sources]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Sources]. Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria [!UICONTROL Bancos de dados], selecione **[!UICONTROL Teradata Vantage]** e **[!UICONTROL Configurar]**.
+Na categoria [!UICONTROL Databases], selecione **[!UICONTROL Teradata Vantage]** e **[!UICONTROL Set up]**.
 
 >[!TIP]
 >
->As origens no catálogo de origens exibem a opção **[!UICONTROL Configurar]** quando uma determinada origem ainda não tem uma conta autenticada. Quando uma conta autenticada existir, esta opção será alterada para **[!UICONTROL Adicionar dados]**.
+>As origens no catálogo de origens exibem a opção **[!UICONTROL Set up]** quando uma determinada origem ainda não tem uma conta autenticada. Quando uma conta autenticada existir, esta opção mudará para **[!UICONTROL Add data]**.
 
 ![O catálogo de origens com a origem do Teradata Vantage selecionada.](../../../../images/tutorials/create/teradata/catalog.png)
 
-A página **[!UICONTROL Conectar-se ao Teradata Vantage]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Connect to Teradata Vantage]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente
 
-Para conectar uma conta existente, selecione a conta [!DNL Teradata Vantage] com a qual deseja se conectar e clique em **[!UICONTROL Avançar]** para continuar.
+Para conectar uma conta existente, selecione a conta [!DNL Teradata Vantage] com a qual deseja se conectar e selecione **[!UICONTROL Next]** para continuar.
 
 ![A página de contas existente no espaço de trabalho de origens.](../../../../images/tutorials/create/teradata/existing.png)
 
 ### Nova conta
 
-Se você estiver usando novas credenciais, selecione **[!UICONTROL Nova conta]**. No formulário de entrada que aparece, forneça um nome, uma descrição opcional e suas credenciais do [!DNL Teradata Vantage]. Quando terminar, selecione **[!UICONTROL Conectar]** e aguarde algum tempo para que a nova conexão seja estabelecida.
+Se você estiver usando novas credenciais, selecione **[!UICONTROL New account]**. No formulário de entrada que aparece, forneça um nome, uma descrição opcional e suas credenciais do [!DNL Teradata Vantage]. Quando terminar, selecione **[!UICONTROL Connect]** e aguarde algum tempo para a nova conexão ser estabelecida.
 
 ![A nova interface de criação de conta no espaço de trabalho de origens.](../../../../images/tutorials/create/teradata/new.png)
 

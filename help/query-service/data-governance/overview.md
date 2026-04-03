@@ -2,9 +2,9 @@
 title: Governança de dados no serviço de consulta
 description: Esta visão geral abrange os principais elementos da governança de dados no Serviço de query da Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '3142'
+source-wordcount: '3131'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Para executar consultas no Serviço de consulta, um usuário deve ter uma funç�
 
 | Permissão | Descrição |
 |---|---|
-| [!UICONTROL Gerenciar consultas] | Essa permissão permite que os usuários executem a exploração de dados e consultas em lote, que podem ler um conjunto de dados existente ou gravar dados em conjuntos de dados. Isso inclui as consultas `CREATE TABLE AS SELECT` (`CTAS`) e `INSERT INTO AS SELECT` (`ITAS`). |
+| [!UICONTROL Manage Queries] | Essa permissão permite que os usuários executem a exploração de dados e consultas em lote, que podem ler um conjunto de dados existente ou gravar dados em conjuntos de dados. Isso inclui as consultas `CREATE TABLE AS SELECT` (`CTAS`) e `INSERT INTO AS SELECT` (`ITAS`). |
 
 **Permissões do conjunto de dados**
 
@@ -63,8 +63,8 @@ Por meio da interface de Permissões, é possível definir o controle de acesso 
 
 | Permissão | Descrição |
 |---|---|
-| [!UICONTROL Gerenciar conjuntos de dados] | Esta permissão fornece acesso somente leitura a esquemas e permite acesso a conjuntos de dados de leitura, criação, edição e exclusão para uso com o Serviço de consulta. |
-| [!UICONTROL Exibir Conjuntos de Dados] | Essa permissão permite acesso somente leitura a conjuntos de dados e esquemas para uso com o Serviço de consulta. |
+| [!UICONTROL Manage Datasets] | Esta permissão fornece acesso somente leitura a esquemas e permite acesso a conjuntos de dados de leitura, criação, edição e exclusão para uso com o Serviço de consulta. |
+| [!UICONTROL View Datasets] | Essa permissão permite acesso somente leitura a conjuntos de dados e esquemas para uso com o Serviço de consulta. |
 
 #### Controle de acesso para colunas/campos
 
@@ -95,9 +95,9 @@ A palavra-chave `CREATE VIEW` define uma exibição de uma consulta, mas a exibi
 
 Com a [capacidade de controle de acesso baseada em atributos](../../access-control/abac/overview.md), você pode definir escopos organizacionais ou de uso de dados em conjuntos de dados de fatos e dimensões no [repositório acelerado](../data-distiller/sql-insights/send-accelerated-queries.md). Isso permite que os administradores gerenciem o acesso a segmentos específicos e gerenciem melhor o acesso fornecido a usuários ou grupos de usuários.
 
-Para criar restrições de acesso baseadas em campo em conjuntos de dados acelerados, você pode usar consultas CTAS do Serviço de consulta para criar conjuntos de dados acelerados e estruturar esses conjuntos de dados com base em esquemas XDM ou esquemas ad hoc existentes. Os administradores podem [adicionar e editar rótulos de uso de dados para o esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Você pode aplicar, criar e editar rótulos para seus esquemas do espaço de trabalho [!UICONTROL Rótulos] na interface de usuário de [!UICONTROL Esquemas].
+Para criar restrições de acesso baseadas em campo em conjuntos de dados acelerados, você pode usar consultas CTAS do Serviço de consulta para criar conjuntos de dados acelerados e estruturar esses conjuntos de dados com base em esquemas XDM ou esquemas ad hoc existentes. Os administradores podem [adicionar e editar rótulos de uso de dados para o esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Você pode aplicar, criar e editar rótulos para seus esquemas no espaço de trabalho [!UICONTROL Labels] na interface do usuário do [!UICONTROL Schemas].
 
-Os rótulos de uso de dados também podem ser [aplicados ou editados diretamente no conjunto de dados](../../data-governance/labels/user-guide.md#add-labels) por meio da interface do usuário de Conjuntos de Dados, ou criados no espaço de trabalho [!UICONTROL Rótulos] do Controle de Acesso. Consulte o manual sobre como [criar um novo rótulo](../../access-control/abac/ui/labels.md) para obter mais informações.
+Os rótulos de uso de dados também podem ser [aplicados ou editados diretamente no conjunto de dados](../../data-governance/labels/user-guide.md#add-labels) por meio da interface do usuário de Conjuntos de Dados, ou criados no espaço de trabalho do Controle de Acesso [!UICONTROL Labels]. Consulte o manual sobre como [criar um novo rótulo](../../access-control/abac/ui/labels.md) para obter mais informações.
 
 O acesso do usuário a colunas individuais pode ser controlado pelos rótulos de uso de dados anexados e pelos conjuntos de permissões aplicados às funções atribuídas aos usuários.
 
@@ -135,7 +135,7 @@ Consulte o manual sobre as [opções de SSL disponíveis para conexões de clien
 
 A criptografia é o uso de um processo algorítmico para transformar dados em texto codificado e ilegível, garantindo que as informações estejam protegidas e inacessíveis sem uma chave de descriptografia.
 
-A conformidade de dados do Serviço de consulta garante que os dados sejam sempre criptografados. Os dados em trânsito são sempre compatíveis com HTTPS e os dados em repouso são criptografados em um armazenamento Azure Data Lake usando chaves de nível de sistema. Consulte a documentação sobre [como os dados são criptografados no Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) para obter mais informações. Para obter detalhes sobre como os dados em repouso são criptografados no Armazenamento Azure Data Lake, consulte a [documentação oficial do Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
+A conformidade de dados do Serviço de consulta garante que os dados sejam sempre criptografados. Os dados em trânsito são sempre compatíveis com HTTPS e os dados em repouso são criptografados em um armazenamento Azure Data Lake usando chaves de nível de sistema. Consulte a documentação sobre [como os dados são criptografados no Adobe Experience Platform](../../landing/governance-privacy-security/encryption.md) para obter mais informações. Para obter detalhes sobre como os dados em repouso são criptografados no Azure Data Lake Storage, consulte a [documentação oficial do Azure](https://docs.microsoft.com/en-us/azure/data-lake-store/data-lake-store-encryption).
 
 Os dados em trânsito são sempre compatíveis com HTTPS e, da mesma forma, quando os dados estão em repouso no data lake, a criptografia é feita com a Chave de gerenciamento de clientes (CMK), que já é compatível com o Gerenciamento de Data Lake. A versão atualmente compatível é TLS1.2. Consulte a [documentação de CMKs (chaves gerenciadas pelo cliente)](../../landing/governance-privacy-security/customer-managed-keys/overview.md) para saber como configurar suas próprias chaves de criptografia para os dados armazenados no Adobe Experience Platform.
 
@@ -150,7 +150,7 @@ Qualquer categoria de log pode ser solicitada, conforme desejado por um usuário
 
 A interface dos logs de consulta permite monitorar e revisar os detalhes de execução de todas as consultas que foram executadas pelo Editor de consultas ou pela API do Serviço de consulta. Isso traz transparência para as atividades do Serviço de consulta, permitindo que você verifique os metadados de **todas** as consultas que foram executadas no Serviço de consulta. Inclui todos os tipos de queries, seja uma query exploratória, batch ou agendada.
 
-Os logs de consulta podem ser acessados por meio da interface do usuário do Experience Platform na guia [!UICONTROL Logs] do espaço de trabalho [!UICONTROL Consultas].
+Os logs de consulta podem ser acessados por meio da interface do usuário do Experience Platform na guia [!UICONTROL Logs] do espaço de trabalho [!UICONTROL Queries].
 
 ![A guia Log de consultas com o painel de detalhes realçado.](../images/data-governance/overview/queries-log.png)
 
@@ -170,7 +170,7 @@ A tabela a seguir indica as categorias de consulta capturadas pelos logs de audi
 
 Abaixo está uma lista de três logs do servidor estendido que contêm mais detalhes do que aqueles encontrados nos logs de consulta. Os logs estendidos são encontrados nas categorias de consulta de logs de auditoria:
 
-1. **Metadados de consulta**: quando uma consulta é executada, várias subconsultas de back-end associadas (como análise) são executadas. Esses tipos de queries são conhecidos como queries de &quot;metadados&quot;. Seus detalhes relevantes podem ser encontrados em logs de auditoria.
+1. **Logs de consulta do Meta**: quando uma consulta é executada, várias subconsultas de back-end associadas (como análise) são executadas. Esses tipos de queries são conhecidos como queries de &quot;metadados&quot;. Seus detalhes relevantes podem ser encontrados em logs de auditoria.
 1. **Logs de sessão**: o sistema cria um log de entrada de sessão para um usuário quando ele faz logon no Serviço de consulta, independentemente de executar uma consulta.
 1. **Logs de conexão de cliente de terceiros**: um log de auditoria de conectividade é gerado quando um usuário conecta com êxito o Serviço de Consulta a um cliente de terceiros.
 

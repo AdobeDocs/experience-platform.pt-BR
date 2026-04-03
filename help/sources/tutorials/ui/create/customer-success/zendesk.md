@@ -2,10 +2,10 @@
 title: Criar uma conexão do Zendesk Source na interface
 description: Saiba como criar uma conexão de origem do Zendesk usando a interface do Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 7%
+source-wordcount: '724'
+ht-degree: 8%
 
 ---
 
@@ -45,31 +45,31 @@ Para obter orientação adicional sobre o esquema [!DNL Zendesk] necessário par
 
 ## Conectar sua conta do [!DNL Zendesk]
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Fontes]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Fontes]. A tela [!UICONTROL Catálogo] exibe uma variedade de fontes com as quais você pode criar uma conta.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Sources]** na barra de navegação esquerda para acessar o espaço de trabalho [!UICONTROL Sources]. A tela [!UICONTROL Catalog] exibe uma variedade de fontes com as quais você pode criar uma conta.
 
 Você pode selecionar a categoria apropriada no catálogo no lado esquerdo da tela. Como alternativa, você pode encontrar a fonte específica com a qual deseja trabalhar usando a opção de pesquisa.
 
-Na categoria *Sucesso do cliente*, selecione **[!UICONTROL Zendesk]** e **[!UICONTROL Adicionar dados]**.
+Na categoria *Sucesso do cliente*, selecione **[!UICONTROL Zendesk]** e **[!UICONTROL Add data]**.
 
 ![catálogo](../../../../images/tutorials/create/zendesk/catalog.png)
 
-A página **[!UICONTROL Conectar conta do Zendesk]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Connect Zendesk account]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Conta existente
 
-Para usar uma conta existente, selecione a conta do *Zendesk* com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Avançar]** para continuar.
+Para usar uma conta existente, selecione a conta do *Zendesk* com a qual deseja criar um novo fluxo de dados e selecione **[!UICONTROL Next]** para continuar.
 
 ![existente](../../../../images/tutorials/create/zendesk/existing.png)
 
 ### Nova conta
 
-Se você estiver criando uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Conectar à origem]** e aguarde algum tempo para que a nova conexão seja estabelecida.
+Se você estiver criando uma nova conta, selecione **[!UICONTROL New account]** e forneça um nome, uma descrição opcional e suas credenciais. Quando terminar, selecione **[!UICONTROL Connect to source]** e aguarde algum tempo para a nova conexão ser estabelecida.
 
 ![novo](../../../../images/tutorials/create/zendesk/new.png)
 
 ### Selecionar dados
 
-Depois que a fonte é autenticada, a página é atualizada em uma árvore de esquema interativa que permite explorar e inspecionar a hierarquia dos dados. Selecione **[!UICONTROL Avançar]** para continuar.
+Depois que a fonte é autenticada, a página é atualizada em uma árvore de esquema interativa que permite explorar e inspecionar a hierarquia dos dados. Selecione **[!UICONTROL Next]** para continuar.
 
 ![selecionar-dados](../../../../images/tutorials/create/zendesk/select-data.png)
 
@@ -85,7 +85,7 @@ As seções abaixo fornecem recursos adicionais que você pode consultar ao usar
 
 As etapas a seguir descrevem as etapas que você pode seguir para validar se conectou com êxito a origem do [!DNL Zendesk] e se os perfis do [!DNL Zendesk] estão sendo assimilados para o Experience Platform.
 
-Na interface do Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Conjuntos de dados]. A tela [!UICONTROL Atividade do Conjunto de Dados] exibe os detalhes das execuções.
+Na interface do Experience Platform, selecione **[!UICONTROL Datasets]** na navegação à esquerda para acessar o espaço de trabalho [!UICONTROL Datasets]. A tela [!UICONTROL Dataset Activity] exibe os detalhes das execuções.
 
 ![Página de atividade](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -93,7 +93,7 @@ Em seguida, selecione a ID de execução do fluxo de dados que deseja exibir par
 
 ![Página de fluxo de dados](../../../../images/tutorials/create/zendesk/dataflow-monitoring.png)
 
-Finalmente, selecione **[!UICONTROL Visualizar conjunto de dados]** para exibir os dados que foram assimilados.
+Finalmente, selecione **[!UICONTROL Preview dataset]** para exibir os dados que foram assimilados.
 
 ![Conjunto de dados do Zendesk](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 

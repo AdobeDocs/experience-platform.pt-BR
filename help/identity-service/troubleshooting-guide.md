@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia de solução de problemas do serviço de identidade
 description: Este documento fornece respostas a perguntas frequentes sobre o Adobe Experience Platform Identity Service, bem como um guia de solução de problemas para erros comuns.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '2168'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Campos como CEPs e endereços IP não devem ser rotulados como identidades para 
 
 ## Por que os campos de identidade não estão vinculados da maneira esperada?
 
-Usando o ponto de extremidade [`/cluster/members` &#x200B;](./api/list-cluster-identites.md) na API do serviço de identidade, você pode exibir as identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, forneça as informações de identidade apropriadas em seus dados XDM. Consulte a seção sobre [fornecendo dados XDM ao Serviço de identidade](./home.md) na visão geral do Serviço de identidade para obter mais informações.
+Usando o ponto de extremidade [`/cluster/members` ](./api/list-cluster-identites.md) na API do serviço de identidade, você pode exibir as identidades associadas para um ou mais campos de identidade. Se a resposta não retornar as identidades vinculadas esperadas, forneça as informações de identidade apropriadas em seus dados XDM. Consulte a seção sobre [fornecendo dados XDM ao Serviço de identidade](./home.md) na visão geral do Serviço de identidade para obter mais informações.
 
 ## O que é um namespace de identidade?
 
@@ -96,7 +96,8 @@ O Serviço de identidade tem namespaces padrão para oferecer suporte à assimil
 Se estiver enviando valores de PII com hash para o Serviço de identidade, você deve usar o mesmo método de criptografia em seus conjuntos de dados. Isso garante que o mesmo valor de identidade nos conjuntos de dados gere os mesmos valores com hash e possa ser correspondido e vinculado corretamente no gráfico de identidade.
 
 <!-- Documentation does not show any methods of editing the identityMap directly, and this table never overtly recommends using identityMap anyway. This should probably be removed unless PM thinks otherwise. -->
-<!-- ## When should I use the Identity map rather than labeling individual XDM schema fields?
+<!-- 
+## When should I use the Identity map rather than labeling individual XDM schema fields?
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
@@ -111,7 +112,8 @@ Developer|Recommended|Supported
 ETL|Recommended|Avoid - While this is supported, data should be formatted naturally when using an ETL, favoring identity fields over `identityMap`.
 Internal solutions|Preferred|Common
 
---- -->
+--- 
+-->
 
 ## Por que não consigo acessar a página ou as APIs do gráfico de identidade?
 

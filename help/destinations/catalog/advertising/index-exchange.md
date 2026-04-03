@@ -3,7 +3,7 @@ title: Index Exchange
 description: Conecte-se ao Index Exchange (Index) e ative os dados para que os segmentos de público-alvo possam ser direcionados por ofertas criadas na interface do usuário de índice.
 last-substantial-update: 2026-01-27T00:00:00Z
 exl-id: 6d2a8553-5e8c-4eeb-ac25-5e4c2bdc5758
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1202'
 ht-degree: 3%
@@ -89,7 +89,7 @@ Públicos-alvo compatíveis por tipo de dados de público-alvo:
 Consulte a tabela abaixo para obter informações sobre o tipo e a frequência da exportação de destino.
 
 | Item | Tipo | Notas |
-| --------- | ---------- | --------- | 
+| --------- | ---------- | --------- |
 | Tipo de exportação | **[!UICONTROL Segment export]** | Exporta todos os membros de um segmento (público) com os identificadores (IDFA, GAID ou outros) usados no destino [!DNL Index Exchange]. |
 | Frequência de exportação | **[!UICONTROL Batch]** | Exporta arquivos para plataformas downstream em intervalos de 3, 6, 8, 12 ou 24 horas. Leia mais sobre [destinos com base em arquivo de lote](/help/destinations/destination-types.md#file-based). |
 

@@ -2,10 +2,10 @@
 title: Mensagens de Erro do Serviço de Fluxo
 description: Saiba mais sobre as mensagens de erro que você pode encontrar ao usar o Serviço de fluxo para fontes.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1668'
-ht-degree: 35%
+source-wordcount: '1666'
+ht-degree: 37%
 
 ---
 
@@ -23,10 +23,10 @@ A tabela a seguir descreve os erros relacionados à validação interna no Servi
 | --- | --- | --- |
 | `1100-400` | Solicitação inválida | A solicitação não pôde ser processada. Erro do provedor de fluxo: não tem direito a esta operação. |
 | `1101-404` | Recurso não encontrado | O recurso solicitado não foi encontrado. Erro do provedor de fluxo: o recurso com a ID fornecida não existe. |
-| `1102-500` | Erro interno | Erro interno. Tente novamente. Se o problema persistir, entre em contato com o suporte ao cliente. |
+| `1102-500` | Erro interno | Ocorreu um erro interno. Tente novamente e, se o problema persistir, entre em contato com o suporte ao cliente. |
 | `1103-503` | Serviço indisponível | O serviço está temporariamente indisponível. Tente novamente e se o problema persistir, entre em contato com o suporte ao cliente. |
-| `1104-504` | Tempo limite do gateway | O gateway atingiu o tempo limite. Tente novamente e se o problema persistir, entre em contato com o suporte ao cliente. |
-| `1400-500` | Erro interno | Erro interno. Tente novamente. Se o problema persistir, entre em contato com o suporte ao cliente. |
+| `1104-504` | Tempo-limite do gateway | O gateway atingiu o tempo-limite. Tente novamente e se o problema persistir, entre em contato com o suporte ao cliente. |
+| `1400-500` | Erro interno | Ocorreu um erro interno. Tente novamente e, se o problema persistir, entre em contato com o suporte ao cliente. |
 | `1401-400` | Solicitação inválida | Os parâmetros de limite e contagem não podem ser fornecidos juntos na mesma solicitação. Forneça apenas o parâmetro de limite ou de contagem e tente novamente. |
 | `1402-400` | Solicitação inválida | A ação &#39;finalize&#39; é suportada somente para solicitações de provedor. |
 | `1403-400` | O cabeçalho está ausente | O cabeçalho &quot;If-Match&quot; está ausente na solicitação. Forneça o cabeçalho e tente novamente. |
@@ -96,7 +96,7 @@ A tabela a seguir descreve os erros relacionados à verificação do token do us
 | Código de erro | Título | Mensagem detalhada |
 | --- | --- | --- |
 | `2000-401` | Token de autorização inválido | O token de autorização não tem acesso a esta organização ou a organização não existe. Certifique-se de que a organização existe ou entre em contato com seu administrador para obter acesso. |
-| `2001-401` | O cabeçalho está ausente ou vazio | O cabeçalho x-gw-ims-org-id está ausente ou vazio. Atualize o valor do cabeçalho e tente novamente. |
+| `2001-401` | O cabeçalho está ausente ou em branco | O cabeçalho x-gw-ims-org-id está ausente ou vazio. Atualize o valor do cabeçalho e tente novamente. |
 | `2002-401` | O cabeçalho está ausente | O cabeçalho x-gw-ims-org-id está ausente na solicitação. Atualize o valor do cabeçalho e tente novamente. |
 | `2100-404` | Sandbox não encontrada | Não foi possível encontrar a sandbox com o nome &#39;dev&#39;. Verifique se o nome da sandbox está correto e tente novamente. |
 | `2101-404` | Sandbox não encontrada | Não foi possível encontrar a sandbox com o nome &#39;dev&#39;. Erro da API de gerenciamento de sandbox: não há sandbox com o nome &quot;dev&quot;. Verifique se o recurso existe. |

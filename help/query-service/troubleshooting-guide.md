@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Perguntas frequentes sobre o Serviço de consulta e o Data Distiller
 description: Este documento contém perguntas e respostas comuns relacionadas ao Serviço de consulta e ao Data Distiller. Os tópicos incluem exportação de dados, ferramentas de terceiros e erros de PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f072f95823768d5b65169b56bb874ae9c3986c44
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '5441'
-ht-degree: 1%
+source-wordcount: '5423'
+ht-degree: 2%
 
 ---
 
@@ -65,7 +65,7 @@ Uma possível causa é o recurso de preenchimento automático. O recurso process
 ### Posso usar [!DNL Postman] para a API do Serviço de consulta?
 
 +++Resposta
-Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/31682?captions=por_br) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Há um limite para o número máximo de linhas retornadas de uma consulta por meio da interface do usuário?
@@ -115,12 +115,12 @@ Há certas palavras-chave reservadas que não podem ser usadas como nome de colu
 +++Resposta
 As etapas a seguir descrevem como exibir uma visualização tabular de um conjunto de dados por meio da interface do usuário, incluindo todos os campos e colunas aninhados em um formulário nivelado.
 
-- Depois de fazer logon no Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** na navegação à esquerda da interface para navegar até o painel [!UICONTROL Conjuntos de dados].
-- A guia [!UICONTROL Procurar] dos conjuntos de dados é aberta. Você pode usar a barra de pesquisa para refinar as opções disponíveis. Selecione um conjunto de dados na lista exibida.
+- Depois de fazer logon no Experience Platform, selecione **[!UICONTROL Datasets]** na navegação à esquerda da interface para navegar até o painel [!UICONTROL Datasets].
+- A guia de conjuntos de dados [!UICONTROL Browse] é aberta. Você pode usar a barra de pesquisa para refinar as opções disponíveis. Selecione um conjunto de dados na lista exibida.
 
 ![O painel de Conjuntos de Dados na interface do usuário do Experience Platform com a barra de pesquisa e um conjunto de dados realçado.](./images/troubleshooting/dataset-selection.png)
 
-- A tela [!UICONTROL Atividade de conjuntos de dados] é exibida. Selecione **[!UICONTROL Visualizar conjunto de dados]** para abrir uma caixa de diálogo do esquema XDM e a exibição em tabela dos dados nivelados do conjunto de dados selecionado. Mais detalhes podem ser encontrados na [pré-visualização da documentação de um conjunto de dados](../catalog/datasets/user-guide.md#preview-a-dataset)
+- A tela [!UICONTROL Datasets activity] é exibida. Selecione **[!UICONTROL Preview dataset]** para abrir uma caixa de diálogo do esquema XDM e a exibição em tabela dos dados nivelados do conjunto de dados selecionado. Mais detalhes podem ser encontrados na [pré-visualização da documentação de um conjunto de dados](../catalog/datasets/user-guide.md#preview-a-dataset)
 
 ![A guia de atividade do Conjunto de Dados do painel Conjuntos de Dados com o conjunto de dados de Visualização realçado.](./images/troubleshooting/dataset-preview.png)
 
@@ -151,16 +151,16 @@ Pode haver vários motivos para uma consulta ficar paralisada durante o processa
 [Uma lista completa dos números de telefone do suporte ao cliente da Adobe](https://helpx.adobe.com/ca/contact/phone.html) está disponível na página de ajuda do Adobe. Como alternativa, a ajuda pode ser encontrada online executando as seguintes etapas:
 
 - Navegue até [https://www.adobe.com/](https://www.adobe.com/) no navegador da Web.
-- No lado direito da barra de navegação superior, selecione **[!UICONTROL Entrar]**.
+- No lado direito da barra de navegação superior, selecione **[!UICONTROL Sign In]**.
 
 ![O site da Adobe com logon foi realçado.](./images/troubleshooting/adobe-sign-in.png)
 
 - Use a Adobe ID e a senha registradas com sua licença da Adobe.
-- Selecione **[!UICONTROL Ajuda e Suporte]** na barra de navegação superior.
+- Selecione **[!UICONTROL Help & Support]** na barra de navegação superior.
 
 ![O menu suspenso da barra de navegação superior com Ajuda e suporte, Suporte corporativo e Fale conosco realçado.](./images/troubleshooting/help-and-support.png)
 
-Um banner suspenso é exibido contendo uma seção de [!UICONTROL Ajuda e suporte]. Selecione **[!UICONTROL Contate-nos]** para abrir o Assistente Virtual de Atendimento ao Cliente Adobe ou selecione **[!UICONTROL Suporte corporativo]** para obter ajuda dedicada para organizações grandes.
+Um banner suspenso é exibido contendo uma seção [!UICONTROL Help and support]. Selecione **[!UICONTROL Contact us]** para abrir o Assistente Virtual de Atendimento ao Cliente do Adobe ou selecione **[!UICONTROL Enterprise support]** para obter ajuda dedicada para organizações grandes.
 +++
 
 ### Como implementar uma série sequencial de jobs sem executar jobs subsequentes se o job anterior não for concluído com sucesso?
@@ -372,7 +372,7 @@ LIMIT 100;
 
 ### Como alterar o fuso horário de e para um Carimbo de data e hora UTC?
 
-+++Resposta
++++ Resposta
 O Adobe Experience Platform mantém os dados no formato de carimbo de data e hora UTC (Tempo universal coordenado). Um exemplo do formato UTC é `2021-12-22T19:52:05Z`
 
 O Serviço de consulta oferece suporte a funções SQL integradas para converter um determinado carimbo de data/hora de e para o formato UTC. Os métodos `to_utc_timestamp()` e `from_utc_timestamp()` usam dois parâmetros: carimbo de data/hora e fuso horário.
@@ -381,6 +381,8 @@ O Serviço de consulta oferece suporte a funções SQL integradas para converter
 |-----------|---------------|
 | Carimbo de data e hora | O carimbo de data/hora pode ser gravado no formato UTC ou no formato simples `{year-month-day}`. Se nenhuma hora for fornecida, o valor padrão será a meia-noite da manhã de um determinado dia. |
 | Fuso Horário | O fuso horário é gravado no formato `{continent/city})`. Deve ser um dos códigos de fuso horário reconhecidos encontrados no [banco de dados TZ de domínio público](https://data.iana.org/time-zones/tz-link.html#tzdb). |
+
++++
 
 #### Converter para o carimbo de data e hora UTC
 
@@ -420,7 +422,7 @@ A consulta retorna um carimbo de data e hora no formato UTC do fuso horário pas
 
 ### Como devo filtrar meus dados de série temporal?
 
-+++Resposta
++++ Resposta
 Ao consultar com dados de série temporal, você deve usar o filtro de carimbo de data e hora sempre que possível para uma análise mais precisa.
 
 >[!NOTE]
@@ -847,7 +849,7 @@ A tabela a seguir fornece códigos de erro PSQL e suas possíveis causas.
 ### Por que recebi um código de erro 58000 ao usar o método history_meta() na tabela?
 
 +++Resposta
-O método `history_meta()` é usado para acessar um instantâneo de um conjunto de dados. Anteriormente, se você executasse uma consulta em um conjunto de dados vazio no Azure Data Lake Storage (ADLS), receberia um código de erro 58000 informando que o conjunto de dados não existe. Um exemplo do erro de sistema antigo é exibido abaixo.
+O método `history_meta()` é usado para acessar um instantâneo de um conjunto de dados. Anteriormente, se você executasse um query em um conjunto de dados vazio no Azure Data Lake Storage (ADLS), receberia um código de erro 58000 informando que o conjunto de dados não existe. Um exemplo do erro de sistema antigo é exibido abaixo.
 
 ```shell
 ErrorCode: 58000 Internal System Error [Invalid table your_table_name. historyMeta can be used on datalake tables only.]

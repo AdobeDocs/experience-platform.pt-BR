@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral da assimilação de fluxo
 description: Saiba mais sobre a assimilação por transmissão no Adobe Experience Platform.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 568208c9b2cb774bbbeed74ae2d456c87e99bca9
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 3%
@@ -21,7 +21,7 @@ O Adobe Experience Platform permite gerar experiências coordenadas, consistente
 
 O vídeo a seguir foi projetado para ajudar a entender a assimilação de streaming e descreve os conceitos acima.
 
->[!VIDEO](https://video.tv.adobe.com/v/31683?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 ### Registros de perfil de fluxo e [!DNL ExperienceEvents]
 

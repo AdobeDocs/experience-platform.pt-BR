@@ -4,7 +4,7 @@ description: Saiba como conectar o Didomi ao Adobe Experience Platform usando a 
 last-substantial-update: 2025-07-29T00:00:00Z
 badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '893'
 ht-degree: 1%
@@ -80,7 +80,7 @@ O [!DNL Webhooks] permite que você assine eventos acionados na plataforma [!DNL
 Para garantir a compatibilidade com o Experience Platform, seu webhook deve atender aos seguintes requisitos.
 
 | Campo | Descrição | Exemplo |
-| --- | --- | --- | 
+| --- | --- | --- |
 | Segredo do cliente | A chave secreta associada às credenciais da API do Adobe. | `d8f3b2e1-4c9a-4a7f-9b2e-8f1c3d2a1b6e` |
 | Chave de API | A chave de API pública usada para autenticar solicitações para serviços da Adobe. |  |
 | Tipo de concessão | O método pelo qual um aplicativo obtém um token de acesso do servidor de autorização. Defina este valor como `client_credentials`. | `client_credentials` |
@@ -94,7 +94,7 @@ Para garantir a compatibilidade com o Experience Platform, seu webhook deve aten
 Em seguida, configure as seguintes opções para o [!DNL webhook].
 
 | Campo | Descrição | Valor |
-| ---| --- | --- | 
+| ---| --- | --- |
 | Cabeçalhos de solicitação | Os cabeçalhos personalizados para [!DNL webhook]. Certifique-se de incluir o `x-adobe-flow-id`. Você pode recuperar esse valor após a criação do [fluxo de dados](../../tutorials/ui/create/consent-and-preferences/didomi.md#retrieve-the-streaming-endpoint-url). | `{"Content-Type": "application/json", "Cache-Control": "no-cache", "x-adobe-flow-id": "{DATAFLOW_ID}"}` |
 | Flatten | Esta propriedade deve ser verificada, pois garante que os dados de [!DNL webhook] sejam enviados como um objeto simples. | Habilitado |
 | Tipos de evento | Selecione o grupo específico de [!DNL Didomi] eventos (`event.*` ou `user.*`) que deve disparar o [!DNL webhook]. Use `event.*` para rastrear alterações de consentimento ou preferência e use `user.*` para rastrear atualizações de perfil de usuário. Essa seleção é necessária para garantir que somente eventos compatíveis sejam enviados para a Adobe. O Adobe suporta apenas um esquema por fluxo de dados, portanto, selecionar ambos os tipos de evento pode causar erros de assimilação. | A lista de tipos de eventos compatíveis é: <ul><li>`Event.created`</li><li>`Event.updated`</li><li>`Event.deleted`</li><li>`User.created`</li><li>`User.updated`</li><li>`User.deleted`</li></ul> |

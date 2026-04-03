@@ -3,7 +3,7 @@ keywords: personalização personalizada, destino, destino personalizado da expe
 title: Conexão de personalização personalizada
 description: Esse destino fornece personalização externa, sistemas de gerenciamento de conteúdo, servidores de anúncios e outros aplicativos que estão sendo executados no site uma maneira de recuperar informações de público-alvo do Adobe Experience Platform. Esse destino fornece personalização em tempo real com base na associação do público-alvo do perfil do usuário.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1111'
 ht-degree: 9%

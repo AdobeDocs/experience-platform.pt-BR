@@ -2,9 +2,9 @@
 title: Visão geral do painel de monitoramento
 description: Saiba como usar o painel de monitoramento na interface do usuário do Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: cca405c58551a52a044ac513921298637974e88e
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '988'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -38,11 +38,11 @@ Este documento requer uma compreensão funcional dos seguintes componentes do Ex
 
 ## Guia do painel de monitoramento
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Monitoramento]** em [!UICONTROL Gerenciamento de dados] na navegação à esquerda.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Monitoring]** em [!UICONTROL Data Management] na navegação à esquerda.
 
 ![O painel de monitoramento na interface do usuário do Experience Platform.](../assets/ui/monitor-overview/monitoring.png)
 
-Selecione **[!UICONTROL Tipo de Dados]** e use o menu suspenso para selecionar o tipo de dados que deseja exibir. Os tipos de dados são definidos pelas classes de esquema do Experience Data Model (XDM) para garantir que os dados sigam um formato padrão quando assimilados na Experience Platform. Para obter mais informações, consulte a seguinte documentação:
+Selecione **[!UICONTROL Data Type]** e use o menu suspenso para selecionar o tipo de dados que deseja exibir. Os tipos de dados são definidos pelas classes de esquema do Experience Data Model (XDM) para garantir que os dados sigam um formato padrão quando assimilados na Experience Platform. Para obter mais informações, consulte a seguinte documentação:
 
 * [Tipo de dados da conta B2B](../../rtcdp/b2b-tutorial.md)
 * [Tipo de dados de cliente potencial](../../rtcdp/partner-data/prospecting.md)
@@ -53,19 +53,19 @@ Você pode filtrar sua visualização com base nos seguintes tipos de dados:
 
 >[!TAB Tudo]
 
-Selecione **[!UICONTROL Todos]** para atualizar seu painel e exibir métricas em todos os dados que foram assimilados na Experience Platform durante um determinado período.
+Selecione **[!UICONTROL All]** para atualizar seu painel e exibir métricas em todos os dados que foram assimilados na Experience Platform durante um determinado período.
 
 ![O tipo de dados de monitoramento foi definido como &quot;Todos&quot;.](../assets/ui/monitor-overview/all.png)
 
 >[!TAB Cliente e conta]
 
-Selecione **[!UICONTROL Cliente e conta]** para atualizar seu painel e exibir métricas sobre dados do Cliente e conta que foram assimilados para a Experience Platform durante um determinado período.
+Selecione **[!UICONTROL Customer & Account]** para atualizar seu painel e exibir métricas nos dados do Cliente e da Conta que foram assimilados na Experience Platform durante um determinado período.
 
 ![O tipo de dados de monitoramento definido como &quot;Cliente e Conta&quot;.](../assets/ui/monitor-overview/customer-account.png)
 
 >[!TAB Enriquecimento do perfil da conta]
 
-Selecione **[!UICONTROL Enriquecimento do perfil da conta]** para atualizar seu painel e exibir as métricas nos dados de enriquecimento do perfil. **Observação**: você só poderá exibir métricas de enriquecimento do perfil da conta se tiver direito a [dados B2B](../../rtcdp/b2b-tutorial.md).
+Selecione **[!UICONTROL Account profile enrichment]** para atualizar seu painel e exibir métricas nos dados de enriquecimento do perfil. **Observação**: você só poderá exibir métricas de enriquecimento do perfil da conta se tiver direito a [dados B2B](../../rtcdp/b2b-tutorial.md).
 
 ![O tipo de dados de monitoramento definido como &quot;Enriquecimento do perfil da conta&quot;.](../assets/ui/monitor-overview/account-profile-enrichment.png)
 
@@ -77,31 +77,31 @@ Use o cabeçalho superior do painel para obter uma experiência de monitoramento
 
 >[!TAB Data lake]
 
-Selecione **[!UICONTROL Data lake]** para exibir métricas sobre sua taxa de assimilação de data lake. Leia o manual sobre [monitoramento da assimilação do data lake](monitor-sources.md) para obter mais informações.
+Selecione **[!UICONTROL Data lake]** para exibir as métricas em sua taxa de assimilação de data lake. Leia o manual sobre [monitoramento da assimilação do data lake](monitor-sources.md) para obter mais informações.
 
 ![O painel de monitoramento na interface do usuário com o cartão do data lake selecionado.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB Identidades]
 
-Selecione **[!UICONTROL Identidades]** para exibir a taxa de êxito do processamento de seus dados de identidade. Leia o guia em [dados de identidade de monitoramento](monitor-identities.md) para obter mais informações.
+Selecione **[!UICONTROL Identities]** para ver a taxa de sucesso do processamento de seus dados de identidade. Leia o guia em [dados de identidade de monitoramento](monitor-identities.md) para obter mais informações.
 
 ![O painel de monitoramento na interface do usuário com o cartão de identidades selecionado.](../assets/ui/monitor-overview/identities.png)
 
 >[!TAB Perfis]
 
-Selecione **[!UICONTROL Perfis]** para exibir a taxa de sucesso do processamento dos dados do seu perfil. Leia o guia em [dados do perfil de monitoramento](monitor-profiles.md) para obter mais informações.
+Selecione **[!UICONTROL Profiles]** para visualizar a taxa de sucesso do processamento dos dados do seu perfil. Leia o guia em [dados do perfil de monitoramento](monitor-profiles.md) para obter mais informações.
 
 ![O painel de monitoramento na interface do usuário com o cartão de perfis selecionado.](../assets/ui/monitor-overview/profiles.png)
 
 >[!TAB Públicos-alvo]
 
-Selecione **[!UICONTROL Públicos-alvo]** para exibir métricas sobre seus públicos-alvo e trabalhos de segmentação. Leia o manual sobre [monitoramento de dados de público-alvo](monitor-audiences.md) para obter mais informações.
+Selecione **[!UICONTROL Audiences]** para ver as métricas dos seus públicos-alvo e trabalhos de segmentação. Leia o manual sobre [monitoramento de dados de público-alvo](monitor-audiences.md) para obter mais informações.
 
 ![O painel de monitoramento na interface do usuário com o cartão de públicos selecionado.](../assets/ui/monitor-overview/audiences.png)
 
 >[!TAB Destinos]
 
-Selecione **[!UICONTROL Destinos]** para exibir métricas em sua [!UICONTROL Taxa de ativação de streaming] e [!UICONTROL Execuções de fluxo de dados com falha em lote]. Leia o manual sobre [dados de destinos de monitoramento](monitor-destinations.md) para obter mais informações.
+Selecione **[!UICONTROL Destinations]** para exibir as métricas dos seus [!UICONTROL Streaming activate rate] e [!UICONTROL Batch failed dataflow runs]. Leia o manual sobre [dados de destinos de monitoramento](monitor-destinations.md) para obter mais informações.
 
 ![O painel de monitoramento na interface do usuário com o cartão de destinos selecionado.](../assets/ui/monitor-overview/destinations.png)
 
@@ -109,17 +109,17 @@ Selecione **[!UICONTROL Destinos]** para exibir métricas em sua [!UICONTROL Tax
 
 ### Configurar intervalo de tempo de monitoramento {#configure-monitoring-time-frame}
 
-Por padrão, o painel de monitoramento exibe métricas sobre dados assimilados nas últimas 24 horas. Para atualizar o período, selecione **[!UICONTROL Últimas 24 horas]**.
+Por padrão, o painel de monitoramento exibe métricas sobre dados assimilados nas últimas 24 horas. Para atualizar o período, selecione **[!UICONTROL Last 24 hours]**.
 
 ![O painel de monitoramento na interface do usuário com a configuração de hora selecionada.](../assets/ui/monitor-overview/select-time.png)
 
 Você pode configurar um novo intervalo de tempo para a visualização de monitoramento de dados na caixa de diálogo exibida. Você tem a opção de criar um intervalo de tempo personalizado ou selecionar na lista de opções pré-configuradas:
 
-* [!UICONTROL Últimas 24 horas]
-* [!UICONTROL Últimos 7 dias]
-* [!UICONTROL Últimos 30 dias]
+* [!UICONTROL Last 24 hours]
+* [!UICONTROL Last 7 days]
+* [!UICONTROL Last 30 days]
 
-Quando terminar, selecione **[!UICONTROL Aplicar]**.
+Quando terminar, selecione **[!UICONTROL Apply]**.
 
 ![A janela pop-up de configuração de intervalo de tempo no painel de monitoramento.](../assets/ui/monitor-overview/update-time.png)
 
@@ -133,6 +133,8 @@ Agora, ao ler este documento, você pode navegar pelo painel de monitoramento na
 * [Monitorar dados de público-alvo](monitor-audiences.md).
 * [Monitorar dados de destinos](monitor-destinations.md).
 
-<!-- >[!TAB Prospect]
+<!-- 
+>[!TAB Prospect]
 
-Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). 
+-->

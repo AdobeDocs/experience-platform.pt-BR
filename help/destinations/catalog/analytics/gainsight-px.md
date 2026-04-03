@@ -3,7 +3,7 @@ title: Conexão Gainsight PX
 description: Use o destino do Gainsight PX para enviar informações de segmentação para a plataforma Gainsight PX.
 last-substantial-update: 2024-02-20T00:00:00Z
 exl-id: 0ca0d34f-f866-4f59-80f8-60198fbb86be
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 4%

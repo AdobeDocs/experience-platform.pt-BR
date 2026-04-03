@@ -1,9 +1,9 @@
 ---
 title: Atualizações de arquitetura para o Real-Time CDP B2B edition
 description: Leia este documento para saber mais sobre as atualizações abrangentes da arquitetura do Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: d958a947-e195-4dd4-a04c-63ad82829728
-source-git-commit: 056a7ff98e335b238fc03ab84b11c9a97221ddaa
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1155'
 ht-degree: 0%
@@ -138,7 +138,8 @@ Na nova arquitetura, o endpoint &quot;criar um trabalho de segmento&quot; e a av
 
 Agora você pode recuperar esquemas de conta e de oportunidade como entidades de dimensão de pesquisa somente após eles terem concluído o processo diário de resolução da entidade. Os registros assimilados recentemente não estarão disponíveis para enriquecimento de perfil ou definições de segmento até que o próximo ciclo de resolução da entidade seja concluído (normalmente a cada 24 horas).
 
-<!-- ### Deprecation of audience creation via API for B2B entities
+<!-- 
+### Deprecation of audience creation via API for B2B entities
 
 Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
@@ -151,7 +152,8 @@ Creation of audiences using B2B entities via API is being deprecated. The list o
 * Marketing List
 * Marketing List Member
 
-Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. 
+-->
 
 ### Alterações nas importações de público-alvo de várias entidades na ferramenta sandbox
 

@@ -2,7 +2,7 @@
 title: Práticas recomendadas de direitos de licença de gerenciamento de dados
 description: Saiba mais sobre as práticas recomendadas e as ferramentas que você pode usar para gerenciar melhor seus direitos de licença na Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: 163ff97da651ac3a68b5e37e8745b10440519e6f
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '3390'
 ht-degree: 1%
@@ -182,7 +182,9 @@ Há vários relatórios disponíveis para ajudá-lo a entender a composição do
 
 * **API do Relatório de sobreposição do conjunto de dados**: expõe os conjuntos de dados que mais contribuem para o Público-alvo endereçável. Você pode usar este relatório para identificar para quais [!DNL ExperienceEvent] conjuntos de dados uma expiração deve ser definida. Consulte o tutorial em [gerando o relatório de sobreposição do conjunto de dados](../../profile/tutorials/dataset-overlap-report.md) para obter mais informações.
 * **API do Relatório de Sobreposição de Identidade**: expõe os namespaces de identidade que mais contribuem para o Público-alvo endereçável. Consulte o tutorial em [gerando o relatório de sobreposição de identidade](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) para obter mais informações.
-<!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
+
+<!-- 
+* **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
 ### Expirações de dados do perfil de pseudônimo {#pseudonymous-profile-expirations}

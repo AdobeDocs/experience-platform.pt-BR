@@ -2,7 +2,7 @@
 title: Conexão de públicos-alvo personalizados do Twitter
 description: Direcione seus seguidores e clientes existentes no Twitter e crie campanhas de re-marketing relevantes ativando seus públicos-alvo criados no Adobe Experience Platform
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '937'
 ht-degree: 6%
@@ -24,7 +24,7 @@ Antes de configurar o destino do [!DNL Twitter Custom Audiences], verifique os s
 
 ## Identidades suportadas {#supported-identities}
 
-[!DNL Twitter Custom Audiences] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR#getting-started).
+[!DNL Twitter Custom Audiences] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Identidade de destino | Descrição | Considerações |
 |---|---|---|

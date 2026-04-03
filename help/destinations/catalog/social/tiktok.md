@@ -3,7 +3,7 @@ title: Conexão com o TikTok
 description: Crie públicos-alvo personalizados no TikTok com seus dados para direcionar com suas campanhas de publicidade. Esses públicos-alvo podem ser de pessoas que visitaram o site ou interagiram com o conteúdo. Transfira com rapidez e segurança o público-alvo desejado do Adobe Experience Platform para o TikTok usando a integração em tempo real da Adobe com o TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1211'
 ht-degree: 4%
@@ -55,7 +55,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
-| [!DNL Federated Audience Composition] | Sim | Públicos importados para o Experience Platform por meio da [Federated Audience Composition](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/start/audiences). |
+| [!DNL Federated Audience Composition] | Sim | Públicos importados para o Experience Platform por meio da [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 

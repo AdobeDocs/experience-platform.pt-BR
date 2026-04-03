@@ -3,7 +3,7 @@ keywords: destino do crm;CRM;crm destinos;Outreach;Destino do Outreach crm
 title: Conexão de alcance
 description: Use o destino do Outreach para exportar os dados da sua conta e ativá-los no Outreach para as suas necessidades comerciais.
 exl-id: 7433933d-7a4e-441d-8629-a09cb77d5220
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1784'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Como profissional de marketing, você pode fornecer experiências personalizadas
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL Outreach], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL Outreach], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criados em [!DNL Experience Platform].
 
 Consulte a documentação da Adobe para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 

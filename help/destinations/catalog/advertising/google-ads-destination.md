@@ -2,7 +2,7 @@
 title: Conexão do Google Ads
 description: O Google Ads, anteriormente conhecido como Google AdWords, é um serviço de publicidade on-line que permite que as empresas façam anúncios pagos por clique em pesquisas baseadas em texto, exibições gráficas, vídeos do YouTube e exibições móveis no aplicativo.
 exl-id: 7143f476-49a8-42aa-bfb4-b11fc2b8f5c3
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1054'
 ht-degree: 3%
@@ -24,7 +24,7 @@ Observe os seguintes detalhes que são específicos para destinos [!DNL Google A
 
 >[!IMPORTANT]
 >
->Se você deseja criar seu primeiro destino com o [!DNL Google Ads] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=pt-BR) no Serviço da Experience Cloud ID no passado (com o Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do Google no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
+>Se você deseja criar seu primeiro destino com o [!DNL Google Ads] e não habilitou a [funcionalidade de sincronização de ID](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) no Serviço da Experience Cloud ID no passado (com o Audience Manager ou outros aplicativos), entre em contato com a Adobe Consulting ou com o Atendimento ao cliente para habilitar as sincronizações de ID. Se você tiver configurado anteriormente as integrações do Google no Audience Manager, as sincronizações de ID configuradas serão transferidas para o Experience Platform.
 
 ## Identidades suportadas {#supported-identities}
 
@@ -34,7 +34,7 @@ Observe os seguintes detalhes que são específicos para destinos [!DNL Google A
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] | Selecione essa identidade de destino quando a identidade de origem for um namespace GAID. |
 | IDFA | [!DNL Apple ID for Advertisers] | Selecione essa identidade de destino quando sua identidade de origem for um namespace IDFA. |
-| UUID do AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=pt-BR), também conhecido como [!DNL Device ID]. Uma ID numérica de dispositivo de 38 dígitos que o Audience Manager associa a cada dispositivo com o qual interage. | O Google usa o [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=pt-BR) para direcionar usuários na Califórnia, e a Google Cookie ID para todos os outros usuários. |
+| UUID do AAM | [Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), também conhecido como [!DNL Device ID]. Uma ID numérica de dispositivo de 38 dígitos que o Audience Manager associa a cada dispositivo com o qual interage. | O Google usa o [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) para direcionar usuários na Califórnia, e a Google Cookie ID para todos os outros usuários. |
 | ID do cookie [!DNL Google] | ID do cookie [!DNL Google] | [!DNL Google] usa essa ID para direcionar usuários fora da Califórnia. |
 | RIDA | ID do Roku para Advertising. Essa ID identifica exclusivamente dispositivos Roku. |  |
 | EMPREGADA | Microsoft Advertising ID. Esta ID identifica exclusivamente os dispositivos que executam o Windows 10. |  |

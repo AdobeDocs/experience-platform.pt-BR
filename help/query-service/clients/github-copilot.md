@@ -2,7 +2,7 @@
 title: Conectar o GitHub Copilot e o Visual Studio Code ao Serviço de consulta
 description: Saiba como conectar o GitHub Copilot e o Visual Studio Code ao Serviço de consulta do Adobe Experience Platform.
 exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
-source-git-commit: 9f4ce2a3a8af72342683c859caa270662b161b7d
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1370'
 ht-degree: 1%
@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Antes de usar essa ferramenta integrada, você deve entender quais dados são compartilhados com o GitHub. Os dados compartilhados incluem informações contextuais sobre o código e os arquivos que estão sendo editados (&quot;prompts&quot;) e detalhes sobre as ações do usuário (&quot;dados de envolvimento do usuário&quot;).  Revise a declaração de privacidade de [[!DNL GitHub Copilot]](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) para saber mais sobre os dados coletados. Você também deve considerar as implicações de segurança do envolvimento de serviços de terceiros, pois é responsável por garantir a conformidade com as políticas de governança de dados de sua organização. A Adobe não se responsabiliza por quaisquer preocupações ou problemas relacionados a dados que possam surgir com o uso dessa ferramenta. Consulte a documentação do GitHub para obter mais informações.
 
-O [!DNL GitHub Copilot], desenvolvido pelo OpenAI Codex, é uma ferramenta orientada por IA que melhora a sua experiência de codificação, sugerindo trechos de código e funções inteiras diretamente no seu editor. Integrado ao [!DNL Visual Studio Code] ([!DNL VS Code]), o [!DNL Copilot] pode acelerar muito seu fluxo de trabalho, principalmente ao trabalhar com consultas complexas. Siga este guia para saber como conectar o [!DNL GitHub Copilot] e o [!DNL VS Code] ao Serviço de Consulta para gravar e gerenciar suas consultas com mais eficiência. Para obter mais informações sobre [!DNL Copilot], visite a [página do produto Copilot do GitHub](https://github.com/pricing) e a [documentação oficial [!DNL Copilot] 5&rbrace;.](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
+O [!DNL GitHub Copilot], desenvolvido pelo OpenAI Codex, é uma ferramenta orientada por IA que melhora a sua experiência de codificação, sugerindo trechos de código e funções inteiras diretamente no seu editor. Integrado ao [!DNL Visual Studio Code] ([!DNL VS Code]), o [!DNL Copilot] pode acelerar muito seu fluxo de trabalho, principalmente ao trabalhar com consultas complexas. Siga este guia para saber como conectar o [!DNL GitHub Copilot] e o [!DNL VS Code] ao Serviço de Consulta para gravar e gerenciar suas consultas com mais eficiência. Para obter mais informações sobre [!DNL Copilot], visite a [página do produto Copilot do GitHub](https://github.com/pricing) e a [documentação oficial [!DNL Copilot] 5}.](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
 
 Este documento aborda as etapas necessárias para conectar o [!DNL GitHub Copilot] e o [!DNL VS Code] ao Serviço de Consulta do Adobe Experience Platform.
 
@@ -95,7 +95,7 @@ Depois de conectado à sua instância do Experience Platform, você pode usar o 
 
 ## Introdução ao [!DNL GitHub Copilot] {#get-started-with-copilot}
 
-Primeiro, verifique se você tem a versão mais recente do [!DNL VS Code] instalada. Uma versão desatualizada do [!DNL VS Code] pode impedir que os recursos da chave [!DNL Copilot] funcionem conforme o esperado. Em seguida, verifique se a configuração [!DNL Enable Auto Completions] está habilitada. Se [!DNL Copilot] estiver sendo executado corretamente, o ícone **[!DNL Copilot] (** O ícone Copilot![) aparecerá na barra de status (se houver um problema, o ícone de erro &#x200B;](../images/clients/github-copilot/copilot-icon.png) será exibido). [!DNL Copilot] Selecione o ícone **[!DNL Copilot]** para abrir o [!DNL [!DNL GitHub Copilot] Menu]. No **[!DNL [!DNL GitHub Copilot] Menu]**, selecione **[!DNL Edit Settings]**
+Primeiro, verifique se você tem a versão mais recente do [!DNL VS Code] instalada. Uma versão desatualizada do [!DNL VS Code] pode impedir que os recursos da chave [!DNL Copilot] funcionem conforme o esperado. Em seguida, verifique se a configuração [!DNL Enable Auto Completions] está habilitada. Se [!DNL Copilot] estiver sendo executado corretamente, o ícone **[!DNL Copilot](** O ícone Copilot![) aparecerá na barra de status (se houver um problema, o ícone de erro ](../images/clients/github-copilot/copilot-icon.png) será exibido). [!DNL Copilot] Selecione o ícone **[!DNL Copilot]** para abrir o [!DNL [!DNL GitHub Copilot] Menu]. No **[!DNL [!DNL GitHub Copilot] Menu]**, selecione **[!DNL Edit Settings]**
 
 ![O editor [!DNL VS Code] com o [!DNL GitHub Copilot Menu] exibido e o ícone [!DNL Copilot] e as Configurações de Edição realçados.](../images/clients/github-copilot/github-copilot-menu.png)
 
@@ -136,10 +136,11 @@ Você também pode conversar com [!DNL Copilot] diretamente sobre o seu código.
 
 ![A janela de chat embutida com exibição de comparação](../images/clients/github-copilot/inline-chat.png)
 
-<!-- THis section is poss unnecessary:
+<!-- 
+THis section is poss unnecessary:
 There are inline features for chat including doc, expalin, fix and test
 ![fix, document, explain](../images/clients/github-copilot/fix-document-explain.png)
- -->
+-->
 
 ## Exibição de chat dedicada {#dedicated-chat}
 

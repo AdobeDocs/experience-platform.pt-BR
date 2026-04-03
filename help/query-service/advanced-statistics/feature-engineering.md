@@ -3,7 +3,7 @@ title: Extensão SQL de engenharia de recursos
 description: Saiba mais sobre a extensão SQL de engenharia de recursos do Data Distiller para pré-processar dados para modelagem estatística avançada. Ele aborda as técnicas disponíveis de extração, transformação e seleção de recursos.
 role: Developer
 exl-id: 622c8ef3-9651-46b3-ad22-021a93190149
-source-git-commit: e7bc30c153f67c59e9c04e8c8df60394f48871d0
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '735'
 ht-degree: 1%
@@ -70,7 +70,8 @@ Use esses transformadores para converter e codificar dados categóricos em forma
 
 Em seguida, concentre-se em selecionar um subconjunto dos recursos mais importantes do conjunto original. Esse processo ajuda a reduzir a dimensionalidade dos dados, facilitando o processamento dos modelos e melhorando o desempenho geral do modelo.
 
-<!-- Commented out as it 
+<!-- 
+Commented out as it 
 ## Supported machine learning algorithms {#supported-ml-algorithms}
 
 Once you have preprocessed your data, use the feature engineering SQL extension to prepare your data for the following machine learning algorithms:
@@ -86,7 +87,8 @@ Use logical regression to predict categorical outcomes and linear regression to 
 
 Use a clustering algorithm to group data points into distinct clusters based on their similarities.
 
-- **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. -->
+- **[`K-Means`](./feature-transformation.md#kmeans)**: Use `K-Means` for unsupervised learning tasks to partition data into a specified number of clusters, with each data point assigned to the cluster with the nearest mean. 
+-->
 
 ## Implementar a cláusula OPTIONS {#options-clause}
 

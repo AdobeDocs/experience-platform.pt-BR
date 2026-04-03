@@ -1,22 +1,23 @@
 ---
-title: Detalhes de auditoria sobre sistema de origem externo
+title: Detalhes de auditoria externa do sistema Source
 description: Saiba mais sobre o grupo de campos External Source System Audit Details Experience Data Model (XDM).
-source-git-commit: 656070cf69e3713c7889f53d51937e0e70085d96
+exl-id: 6aa154f3-620f-4a2e-9e33-a0757d0491c1
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 6%
+source-wordcount: '136'
+ht-degree: 4%
 
 ---
 
-# [!UICONTROL Detalhes de auditoria externa do sistema Source] grupo de campos
+# Grupo de campos [!UICONTROL External Source System Audit Details]
 
-[!UICONTROL Detalhes de auditoria do sistema Source externo] é um grupo de campos padrão do Experience Data Model (XDM) que estende o tipo de dados principal &#39;Atributos de auditoria do sistema Source externo&#39; referenciando suas propriedades e adicionando metadados contextuais. Isso permite o rastreamento detalhado de auditoria e a integração flexível de dados de fontes externas.
+[!UICONTROL External Source System Audit Details] é um grupo de campos padrão do Experience Data Model (XDM) que estende o tipo de dados principal &quot;Atributos de Auditoria de Sistema do Source Externo&quot; referenciando suas propriedades e adicionando metadados contextuais. Isso permite o rastreamento detalhado de auditoria e a integração flexível de dados de fontes externas.
 
 ![Um diagrama de esquema do grupo de campos Detalhes de Auditoria do Sistema Source Externo.](../../images/field-groups/shared/external-source-system-audit-details.png)
 
 | Nome de exibição | Propriedade | Tipo de dados | Descrição |
 | -------------------------------------------------| ---------------------------------------- | --------- | --- |
-| [!UICONTROL Detalhes de auditoria externa do sistema Source] | `external-source-system-audit-details` | [[!UICONTROL Atributos de Auditoria de Sistema Source Externos]](../../data-types/external-source-system-audit-attributes.md) | O grupo de campos &#39;[!UICONTROL Detalhes de Auditoria Externa do Source System]&#39; estende o tipo de dados principal &#39;Atributos de Auditoria Externa do Source System&#39; referenciando suas propriedades e adicionando metadados contextuais. Isso facilita o rastreamento detalhado de auditoria e a integração flexível de dados para fontes externas, acomodando a natureza assíncrona da assimilação de perfis. |
+| [!UICONTROL External Source System Audit Details] | `external-source-system-audit-details` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | O grupo de campos &#39;[!UICONTROL External Source System Audit Details]&#39; estende o tipo de dados principal &#39;Atributos de Auditoria de Sistema Source Externos&#39; referenciando suas propriedades e adicionando metadados contextuais. Isso facilita o rastreamento detalhado de auditoria e a integração flexível de dados para fontes externas, acomodando a natureza assíncrona da assimilação de perfis. |
 
 {style="table-layout:auto"}
 

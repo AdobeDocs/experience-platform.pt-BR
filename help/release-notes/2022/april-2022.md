@@ -2,10 +2,10 @@
 title: Notas de versão de abril de 2022 da Adobe Experience Platform
 description: As notas de versão de abril de 2022 da Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '2679'
-ht-degree: 18%
+source-wordcount: '2556'
+ht-degree: 19%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 18%
 
 **Data de lançamento: quinta-feira, 27 de abril de 2022**
 
-Atualizações dos recursos já existentes na Adobe Experience Platform:
+Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai/ml-services)
 - [[!DNL Dashboards]](#dashboards)
@@ -36,18 +36,18 @@ Os seguintes widgets estão disponíveis na Biblioteca de widgets nos respectivo
 
 | Widget | Painel | Descrição |
 | ------ | --------- | ----------- |
-| [!UICONTROL Tendência de perfis adicionados] | Perfis | Este widget usa um gráfico de linhas para ilustrar o número total de perfis mesclados que foram adicionados ao armazenamento Perfil diariamente nos últimos 30 dias, 90 dias ou 12 meses. |
-| [!UICONTROL Públicos mapeados para o status de destino] | Perfis | Este widget exibe o número total de públicos mapeados e não mapeados em uma única métrica e usa um gráfico de rosca para ilustrar a diferença proporcional entre seus totais. |
-| [!UICONTROL Tamanho do público] | Perfis | Esse widget fornece uma tabela de duas colunas que lista até 20 segmentos e o número total de públicos-alvo contidos em cada segmento. A lista depende da política de mesclagem aplicada e ordenada de cima para baixo de acordo com o número total de públicos-alvo. |
-| [!UICONTROL Tendência de contagem de perfis] | Perfis | Esse widget usa um gráfico de linhas para ilustrar a tendência do número total de perfis contidos no sistema ao longo do tempo. Os dados podem ser visualizados por períodos de 30 dias, 90 dias e 12 meses. |
-| [!UICONTROL Perfis de identidade únicos por identidade] | Perfis | Este widget usa um gráfico de barras para ilustrar o número total de perfis identificados com apenas um identificador exclusivo. O widget suporta até cinco das identidades mais comuns. |
-| [!UICONTROL Status do destino] | Destinos | Este widget exibe o número total de destinos ativados como uma única métrica e usa um gráfico de rosca para ilustrar a diferença proporcional entre destinos ativados e desativados. |
-| [!UICONTROL Destinos ativos por plataforma de destino] | Destinos | Este widget usa uma tabela de duas colunas para mostrar uma lista de plataformas de destino ativas e o número total de destinos ativos para cada plataforma de destino. |
-| [!UICONTROL Públicos ativados em todos os destinos] | Destinos | Este widget fornece o número total de públicos ativados em todos os destinos em uma única métrica. |
-| [!UICONTROL Ordem de ativação de público-alvo] | Segmentos | Esse widget fornece uma tabela de três colunas que lista o nome do destino, a plataforma e a data de ativação do público-alvo. |
-| [!UICONTROL Tendência de tamanho do público-alvo] | Segmentos | Este widget fornece uma ilustração de gráfico de linhas para o número total de perfis que atendem aos critérios de qualquer definição de segmento durante períodos de 30 dias, 90 dias e 12 meses. |
-| [!UICONTROL Tendência de alteração de tamanho do público-alvo] | Segmentos | Este widget fornece uma ilustração de gráfico de linhas da diferença no número total de perfis qualificados para um determinado segmento entre os instantâneos diários mais recentes. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
-| [!UICONTROL Tendência de tamanho de público por identidade] | Segmentos | Este widget ilustra a tendência do tamanho do público-alvo para um segmento específico com base em um tipo de identidade selecionado. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
+| [!UICONTROL Profiles added trend] | Perfis | Este widget usa um gráfico de linhas para ilustrar o número total de perfis mesclados que foram adicionados ao armazenamento Perfil diariamente nos últimos 30 dias, 90 dias ou 12 meses. |
+| [!UICONTROL Audiences mapped to destination status] | Perfis | Este widget exibe o número total de públicos mapeados e não mapeados em uma única métrica e usa um gráfico de rosca para ilustrar a diferença proporcional entre seus totais. |
+| [!UICONTROL Audiences size] | Perfis | Esse widget fornece uma tabela de duas colunas que lista até 20 segmentos e o número total de públicos-alvo contidos em cada segmento. A lista depende da política de mesclagem aplicada e ordenada de cima para baixo de acordo com o número total de públicos-alvo. |
+| [!UICONTROL Profile count trend] | Perfis | Esse widget usa um gráfico de linhas para ilustrar a tendência do número total de perfis contidos no sistema ao longo do tempo. Os dados podem ser visualizados por períodos de 30 dias, 90 dias e 12 meses. |
+| [!UICONTROL Single identity profiles by identity] | Perfis | Este widget usa um gráfico de barras para ilustrar o número total de perfis identificados com apenas um identificador exclusivo. O widget suporta até cinco das identidades mais comuns. |
+| [!UICONTROL Destination status] | Destinos | Este widget exibe o número total de destinos ativados como uma única métrica e usa um gráfico de rosca para ilustrar a diferença proporcional entre destinos ativados e desativados. |
+| [!UICONTROL Active destinations by destination platform] | Destinos | Este widget usa uma tabela de duas colunas para mostrar uma lista de plataformas de destino ativas e o número total de destinos ativos para cada plataforma de destino. |
+| [!UICONTROL Activated audiences across all destinations] | Destinos | Este widget fornece o número total de públicos ativados em todos os destinos em uma única métrica. |
+| [!UICONTROL Audience activation order] | Segmentos | Esse widget fornece uma tabela de três colunas que lista o nome do destino, a plataforma e a data de ativação do público-alvo. |
+| [!UICONTROL Audience size trend] | Segmentos | Este widget fornece uma ilustração de gráfico de linhas para o número total de perfis que atendem aos critérios de qualquer definição de segmento durante períodos de 30 dias, 90 dias e 12 meses. |
+| [!UICONTROL Audience size change trend] | Segmentos | Este widget fornece uma ilustração de gráfico de linhas da diferença no número total de perfis qualificados para um determinado segmento entre os instantâneos diários mais recentes. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
+| [!UICONTROL Audience size trend by identity] | Segmentos | Este widget ilustra a tendência do tamanho do público-alvo para um segmento específico com base em um tipo de identidade selecionado. O período da análise de tendência pode ser visualizado em períodos de 30 dias, 90 dias e 12 meses. |
 
 **Novos recursos** {#new-features}
 
@@ -94,12 +94,12 @@ Para obter mais informações sobre [!DNL Data Prep], consulte a [[!DNL Data Pre
 
 | Recurso | Descrição |
 | ----------- | ----------- |
-| Conectores de destino avançados empresariais | Agora, três conectores de destino de empresa estão disponíveis para o público geral: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) e [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> A disponibilidade geral dos conectores de destino corporativos inclui todos os recursos oferecidos anteriormente na fase do Beta e muito mais: <ul><li>Novos recursos de autenticação, incluindo [Assinatura de Acesso Compartilhado nos Hubs de Eventos do Azure](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) e mais [tipos de autenticação](../../destinations/catalog/streaming/http-destination.md#authentication-information) (tokens de portador, OAuth 2) no destino da API HTTP;</li><li>[Preenchendo retroativamente os dados do perfil histórico](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (enviando perfis históricos qualificados para o segmento quando ativados pela primeira vez);</li><li>As métricas de execuções de fluxo de dados agora são compatíveis com esses destinos;</li><li>[Metadados de segmento adicionais](../../destinations/catalog/streaming/http-destination.md#destination-details) incluídos na carga de dados, incluindo nomes de segmentos e carimbos de data/hora de segmentos;</li><li>Incluir na lista de permissões Suporte para [endereços IP estáticos](/help/destinations/catalog/streaming/ip-address-allow-list.md) para clientes que precisam pesquisar no Experience Platform.</li></ul> |
+| Conectores de destino avançados empresariais | Agora, três conectores de destino de empresa estão disponíveis para o público geral: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) e [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md). <br> A disponibilidade geral dos conectores de destino corporativos inclui todos os recursos oferecidos anteriormente na fase do Beta e muito mais: <ul><li>Novos recursos de autenticação, incluindo [Assinatura de Acesso Compartilhado nos Hubs de Eventos da Azure](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) e mais [tipos de autenticação](../../destinations/catalog/streaming/http-destination.md#authentication-information) (tokens de portador, OAuth 2) no destino da API HTTP;</li><li>[Preenchendo retroativamente os dados do perfil histórico](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (enviando perfis históricos qualificados para o segmento quando ativados pela primeira vez);</li><li>As métricas de execuções de fluxo de dados agora são compatíveis com esses destinos;</li><li>[Metadados de segmento adicionais](../../destinations/catalog/streaming/http-destination.md#destination-details) incluídos na carga de dados, incluindo nomes de segmentos e carimbos de data/hora de segmentos;</li><li>Suporte para [endereços IP estáticos](/help/destinations/catalog/streaming/ip-address-allow-list.md) para clientes que precisam incluir na lista de permissões do Experience Platform.</li></ul> |
 | Alertas em contexto para fluxos de dados de destino | Agora você pode [assinar alertas](../../destinations/ui/alerts.md) ao criar um fluxo de dados de destino, para receber mensagens de alerta sobre o status, o sucesso ou a falha da execução do fluxo de dados. Você pode optar por receber alertas na interface do usuário do Experience Platform ou por email. |
 
 ### Processo de liberação para conectores de destino corporativo avançados {#release-process-enterprise-destinations}
 
-Para os destinos do Amazon Kinesis, Azure Event Hubs e HTTP API, durante o processo de lançamento (a partir de 27 de abril), você verá o cartão de destino anterior do Beta, bem como o novo cartão de destino geralmente disponível (GA) no catálogo de destinos. Quaisquer fluxos de dados configurados por clientes que usam os destinos beta serão migrados nos próximos dias para a versão do GA do mesmo destino. Essa migração deve ser concluída até o final do dia sexta-feira, 29 de abril. Os destinos do Beta continuarão visíveis durante esse curto período de tempo e serão rotulados como **Obsoletos**.
+Para os destinos Amazon Kinesis, Azure Event Hubs e HTTP API, durante o processo de lançamento (a partir de 27 de abril), você verá o antigo cartão de destino do Beta, bem como o novo cartão de destino geralmente disponível (GA) no catálogo de destinos. Quaisquer fluxos de dados configurados por clientes que usam os destinos beta serão migrados nos próximos dias para a versão do GA do mesmo destino. Essa migração deve ser concluída até o final do dia sexta-feira, 29 de abril. Os destinos do Beta continuarão visíveis durante esse curto período de tempo e serão rotulados como **Obsoletos**.
 
 Se você estiver utilizando esses destinos na fase Beta, observe o seguinte:
 
@@ -132,24 +132,24 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
-| Esquema global | [[!UICONTROL Solicitação de operação de limpeza de dados]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Captura os detalhes de uma solicitação de limpeza de dados para excluir ou modificar registros em um conjunto de dados ou sandbox especificado. |
-| Descritor | [[!UICONTROL Descritor de Granularidade de Série Temporal]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Indica a granularidade da série temporal e dos dados de resumo. Quando aplicado a um esquema, o campo `timestamp` do esquema é o primeiro carimbo de data e hora em um período dessa granularidade. |
-| Classe | [[!UICONTROL Métricas de resumo XDM]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Fornece métricas pré-resumidas com dimensões de agrupamento, como os resultados de um SQL SELECT com um GROUP BY. |
-| Grupo de campos | [[!UICONTROL Mapa de resultados da avaliação de políticas de consentimento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Registra o resultado da avaliação da política de consentimento de um indivíduo. |
-| Grupo de campos | [[!UICONTROL Pesquisa de sites]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Captura informações relacionadas à pesquisa do site, como consulta de pesquisa, filtragem e ordenação. |
-| Grupo de campos | [[!UICONTROL Mesclar clientes em potencial]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Registra os detalhes de um evento em que dois ou mais leads são mesclados. |
-| Grupo de campos | [[!UICONTROL Email Enviado]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Registra os detalhes de um evento em que um email é enviado a um recipient. |
-| Grupo de campos | [[!UICONTROL Campos de Costura]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | Captura valores calculados por meio do processo de identificação de um evento. |
-| Grupo de campos | [[!UICONTROL Detalhes do Destinatário Secundário para Auditoria]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Um grupo de campos do Adobe Journey Optimizer que captura detalhes secundários de um recipient para uma auditoria. |
-| Grupo de campos | [[!UICONTROL Detalhes de relação pessoal da conta comercial XDM]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Registra detalhes relacionados a um relacionamento conta-pessoa. |
-| Grupo de campos | [[!UICONTROL Detalhes de Pessoa da Conta]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Registra detalhes relacionados a um relacionamento conta-pessoa. |
-| Tipo de dados | [[!UICONTROL Carrinho]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | Captura informações sobre um carrinho de compras de comércio eletrônico. |
-| Tipo de dados | [[!UICONTROL Envio]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Registra informações de remessa de um ou mais produtos. |
-| Tipo de dados | [[!UICONTROL Pesquisa de sites]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | Registra informações sobre a atividade de pesquisa no site. |
-| Extensão (Workfront) | [[!UICONTROL Atributos da Tarefa Operacional]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | Captura detalhes relacionados a uma tarefa operacional. |
-| Extensão (Workfront) | [[!UICONTROL Atributos da Portfolio de Trabalho]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | Captura detalhes relacionados a um portfólio de trabalho. |
-| Extensão (Workfront) | [[!UICONTROL Atributos do programa de trabalho]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Captura detalhes relacionados a um programa de trabalho. |
-| Extensão (Workfront) | [[!UICONTROL Atributos do Projeto de Trabalho]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Captura detalhes relacionados a um projeto de trabalho. |
+| Esquema global | [[!UICONTROL Data Hygiene Operation Request]](https://github.com/adobe/xdm/blob/master/schemas/hygiene/aep-hygiene-ops-record.schema.json) | Captura os detalhes de uma solicitação de limpeza de dados para excluir ou modificar registros em um conjunto de dados ou sandbox especificado. |
+| Descritor | [[!UICONTROL Time-series Granularity Descriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/time-series/descriptorTimeSeriesGranularity.schema.json) | Indica a granularidade da série temporal e dos dados de resumo. Quando aplicado a um esquema, o campo `timestamp` do esquema é o primeiro carimbo de data e hora em um período dessa granularidade. |
+| Classe | [[!UICONTROL XDM Summary Metrics]](https://github.com/adobe/xdm/blob/master/components/classes/summary_metrics.schema.json) | Fornece métricas pré-resumidas com dimensões de agrupamento, como os resultados de um SQL SELECT com um GROUP BY. |
+| Grupo de campos | [[!UICONTROL Consent policies evaluation results map]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-consentResults.schema.json) | Registra o resultado da avaliação da política de consentimento de um indivíduo. |
+| Grupo de campos | [[!UICONTROL Site Search]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-site-search.schema.json) | Captura informações relacionadas à pesquisa do site, como consulta de pesquisa, filtragem e ordenação. |
+| Grupo de campos | [[!UICONTROL Merge Leads]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/merge-leads.schema.json) | Registra os detalhes de um evento em que dois ou mais leads são mesclados. |
+| Grupo de campos | [[!UICONTROL Email Sent]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/events/emailsent.schema.json) | Registra os detalhes de um evento em que um email é enviado a um recipient. |
+| Grupo de campos | [[!UICONTROL Stitching Fields]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-stitching.schema.json) | Captura valores calculados por meio do processo de identificação de um evento. |
+| Grupo de campos | [[!UICONTROL Secondary Recipient Detail For Audit]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/secondary-recipient-detail.schema.json) | Um grupo de campos do Adobe Journey Optimizer que captura detalhes secundários de um recipient para uma auditoria. |
+| Grupo de campos | [[!UICONTROL XDM Business Account Person Relation Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Registra detalhes relacionados a um relacionamento conta-pessoa. |
+| Grupo de campos | [[!UICONTROL Account Person Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/account-person/account-person-details.schema.json) | Registra detalhes relacionados a um relacionamento conta-pessoa. |
+| Tipo de dados | [[!UICONTROL Cart]](https://github.com/adobe/xdm/blob/master/components/datatypes/cart.schema.json) | Captura informações sobre um carrinho de compras de comércio eletrônico. |
+| Tipo de dados | [[!UICONTROL Shipping]](https://github.com/adobe/xdm/blob/master/components/datatypes/shipping.schema.json) | Registra informações de remessa de um ou mais produtos. |
+| Tipo de dados | [[!UICONTROL Site Search]](https://github.com/adobe/xdm/blob/master/components/datatypes/sitesearch.schema.json) | Registra informações sobre a atividade de pesquisa no site. |
+| Extensão (Workfront) | [[!UICONTROL Operational Task Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/opTask.schema.json) | Captura detalhes relacionados a uma tarefa operacional. |
+| Extensão (Workfront) | [[!UICONTROL Work Portfolio Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/portfolio.schema.json) | Captura detalhes relacionados a um portfólio de trabalho. |
+| Extensão (Workfront) | [[!UICONTROL Work Program Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/program.schema.json) | Captura detalhes relacionados a um programa de trabalho. |
+| Extensão (Workfront) | [[!UICONTROL Work Project Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/project.schema.json) | Captura detalhes relacionados a um projeto de trabalho. |
 
 {style="table-layout:auto"}
 
@@ -157,15 +157,15 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Tipo de componente | Nome | Atualizar descrição |
 | --- | --- | --- |
-| Esquema global | [[!UICONTROL Destinos]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Novos valores de enumeração para `destinationCategory`. |
-| Descritor | [[!UICONTROL Descritor de nome amigável]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | Adição de suporte para remoção de valores sugeridos (`meta:enum`) que não são necessários de campos padrão. |
-| Grupo de campos | [[!UICONTROL Processo de Logon do Usuário]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` campo adicionado. |
-| Tipo de dados | [[!UICONTROL Comércio]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Vários campos relacionados ao carrinho foram adicionados. |
-| Tipo de dados | [[!UICONTROL Item da lista de produtos]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Novos campos adicionados para opções selecionadas e valor do desconto. |
-| Extensão (Serviços inteligentes) | [[!UICONTROL Otimização do Tempo de Envio de JourneyAI dos Serviços Inteligentes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | Otimizar formato de armazenamento para pontuações de tempo de envio. |
-| Extensão (Workfront) | [[!UICONTROL Evento de alteração do Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Vários campos substituídos por um campo `workfront:customData` para campos de formulário personalizados. |
-| Extensão (Workfront) | [[!UICONTROL Atributos da Tarefa de Trabalho]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Vários campos adicionados. |
-| Extensão (Workfront) | [[!UICONTROL Objeto de trabalho]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Novos campos para o tipo de objeto pai e campos de formulário personalizados. |
+| Esquema global | [[!UICONTROL Destinations]](https://github.com/adobe/xdm/blob/master/schemas/destinations/destination.schema.json) | Novos valores de enumeração para `destinationCategory`. |
+| Descritor | [[!UICONTROL Friendly Name Descriptor]](https://github.com/adobe/xdm/blob/master/schemas/descriptors/display/alternateDisplayInfo.schema.json) | Adição de suporte para remoção de valores sugeridos (`meta:enum`) que não são necessários de campos padrão. |
+| Grupo de campos | [[!UICONTROL User Login Process]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-user-login-details.schema.json) | `createProfile` campo adicionado. |
+| Tipo de dados | [[!UICONTROL Commerce]](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.schema.json) | Vários campos relacionados ao carrinho foram adicionados. |
+| Tipo de dados | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Novos campos adicionados para opções selecionadas e valor do desconto. |
+| Extensão (Serviços inteligentes) | [[!UICONTROL Intelligent Services JourneyAI Send Time Optimization]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/intelligentServices/profile-journeyai-sendtimeoptimization.schema.json) | Otimizar formato de armazenamento para pontuações de tempo de envio. |
+| Extensão (Workfront) | [[!UICONTROL Workfront Change Event]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/changeevent.schema.json) | Vários campos substituídos por um campo `workfront:customData` para campos de formulário personalizados. |
+| Extensão (Workfront) | [[!UICONTROL Work Task Attributes]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/task.schema.json) | Vários campos adicionados. |
+| Extensão (Workfront) | [[!UICONTROL Work Object]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobject.schema.json) | Novos campos para o tipo de objeto pai e campos de formulário personalizados. |
 
 {style="table-layout:auto"}
 
@@ -189,7 +189,7 @@ Para obter mais informações sobre [!DNL Intelligent Services], consulte a [[!D
 
 ### IA do cliente
 
-A IA do cliente, disponível no Real-Time Customer Data Platform, é usada para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades de negócios em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
+A IA do cliente, disponível no Real-Time Customer Data Platform, é usada para gerar pontuações de propensão personalizadas, como churn e conversão para perfis individuais em escala. Isso é feito sem precisar transformar as necessidades empresariais em um problema de aprendizado de máquina, escolher um algoritmo, treinar ou implantar.
 
 **Recursos atualizados**
 
@@ -212,11 +212,11 @@ Criada com base na Real-time Customer Data Platform (Real-Time CDP), a Real-Time
 
 Para saber mais sobre o Real-Time Customer Data Platform B2B edition, consulte a [Visão geral B2B](../../rtcdp/b2b-overview.md).
 
-## Origens {#sources}
+## Fontes {#sources}
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 **Recursos atualizados**
 

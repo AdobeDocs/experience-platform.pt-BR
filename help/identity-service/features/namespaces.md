@@ -2,10 +2,10 @@
 title: Visão geral do namespace de identidade
 description: Saiba mais sobre namespaces de identidade no Serviço de identidade.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 384a67ac62eb56c4a0f8ac38593399afcc8b742e
+source-git-commit: 482991f0a7efdf4eae5a600ba0bd2a49baca7c37
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 19%
+source-wordcount: '1925'
+ht-degree: 18%
 
 ---
 
@@ -99,12 +99,12 @@ Os seguintes namespaces padrão são fornecidos para uso por todas as organizaç
 | Nome de exibição | Símbolo de identidade (Código) | Tipo de identidade | Descrição |
 | ------------ | ---------------------- | ------------- | ----------- |
 | AdCloud | AdCloud | ID do cookie | Um namespace que representa o Adobe AdCloud. |
-| Adobe Analytics (ID legada) | AAID | ID do cookie | Um namespace que representa o Adobe Analytics. Consulte o seguinte documento em [namespaces do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=pt-BR#namespaces) para obter mais informações. |
+| Adobe Analytics (ID legada) | AAID | ID do cookie | Um namespace que representa o Adobe Analytics. Consulte o seguinte documento em [namespaces do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) para obter mais informações. |
 | Apple IDFA (ID para anunciantes) | IDFA | ID do dispositivo | Um namespace que representa a Apple ID para anunciantes. Consulte o seguinte documento em [anúncios baseados em interesses](https://support.apple.com/en-us/HT202074) para obter mais informações. |
 | Serviço de notificação por push da Apple | APNS | ID do dispositivo | Um namespace que representa identidades coletadas usando o serviço de notificação por push da Apple. Consulte o seguinte documento no [Serviço de notificação por push do Apple](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) para obter mais informações. |
 | ECID | ECID | ID do cookie | Um namespace que representa a ECID. Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte o seguinte documento no [ECID](./ecid.md) para obter mais informações. |
 | Email | Email | Email | Um namespace que representa um endereço de email. Esse tipo de namespace é frequentemente associado a uma única pessoa e, portanto, pode ser usado para identificá-la em diferentes canais. |
-| Emails (SHA256, em letras minúsculas) | Email_LC_SHA256 | Email | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. Consulte o seguinte documento sobre [suporte a hash SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=pt-BR#hashing-support) para obter mais informações. |
+| Emails (SHA256, em letras minúsculas) | Email_LC_SHA256 | Email | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. Consulte o seguinte documento sobre [suporte a hash SHA256](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) para obter mais informações. |
 | Firebase Cloud Messaging | FCM | ID do dispositivo | Um namespace que representa identidades coletadas usando o Google Firebase Cloud Messaging para notificações por push. Consulte o seguinte documento em [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) para obter mais informações. |
 | ID de anúncio do Google (GAID) | GAID | ID do dispositivo | Um namespace que representa uma Google Advertising ID. Consulte o seguinte documento no [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) para obter mais informações. |
 | Telefone | Telefone | Número de telefone | Um namespace que representa um número de telefone. Esse tipo de namespace é frequentemente associado a uma única pessoa e, portanto, pode ser usado para identificá-la em diferentes canais. |
@@ -159,7 +159,7 @@ Em seguida, selecione o tipo de identidade que deseja atribuir ao namespace pers
 
 ## Namespaces em dados de identidade
 
-O fornecimento do namespace para uma identidade depende do método usado para fornecer dados de identidade. Para obter detalhes sobre como fornecer dados de identidade, leia o [[!DNL Identity Service] guia de implementação](../implementation.md).
+O fornecimento do namespace para uma identidade depende do método usado para fornecer dados de identidade. Para obter detalhes sobre como fornecer dados de identidade, leia o [[!DNL Identity Service] guia de implementação](../implementation.md). Se você estiver enviando identidades por meio do Web SDK `identityMap`, consulte [Usando identityMap na Coleção de dados](/help/collection/identity/identity-map.md) para obter orientação sobre como preparar e formatar valores de identidade antes de enviá-los.
 
 ## Próximas etapas
 

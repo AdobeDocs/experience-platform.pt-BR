@@ -2,10 +2,10 @@
 title: setConsent
 description: Usado em cada página para rastrear as preferências de consentimento dos usuários.
 exl-id: d01a6ef1-4fa7-4a60-a3a1-19568b4e0d23
-source-git-commit: 66105ca19ff1c75f1185b08b70634b7d4a6fd639
+source-git-commit: bf0bb72777cacd822fd6e887ac3ef71764784214
 workflow-type: tm+mt
-source-wordcount: '1117'
-ht-degree: 2%
+source-wordcount: '1042'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ O Web SDK é compatível com os seguintes padrões:
    1. O esquema do Evento de experiência contém o [Grupo de campos de Consentimento da TCF 2.0 do IAB](/help/xdm/field-groups/event/iab.md).
    1. Você inclui as informações de consentimento do IAB no evento [objeto XDM](sendevent/xdm.md). O Web SDK não inclui automaticamente as informações de consentimento ao enviar dados do evento.
 
-Ao usar este comando, o Web SDK grava as preferências do usuário no cookie [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/data-collection/cookies/web-sdk). Esse cookie é definido independentemente das preferências de consentimento do visitante, pois ele armazena as preferências de consentimento desse visitante. Na próxima vez que o usuário carregar o site no navegador, o SDK recuperará essas preferências persistentes para determinar se os eventos podem ser enviados para o Adobe.
+Ao usar este comando, o Web SDK grava as preferências do usuário no cookie [`kndctr_<orgId>_consent`](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk). Esse cookie é definido independentemente das preferências de consentimento do visitante, pois ele armazena as preferências de consentimento desse visitante. Na próxima vez que o usuário carregar o site no navegador, o SDK recuperará essas preferências persistentes para determinar se os eventos podem ser enviados para o Adobe.
 
 A Adobe recomenda que você armazene todas as preferências da caixa de diálogo de consentimento separadamente do consentimento do Web SDK. O Web SDK não oferece uma maneira de recuperar o consentimento. Para garantir que as preferências do usuário permaneçam sincronizadas com o SDK, você pode chamar o comando `setConsent` em cada carregamento de página. O Web SDK só faz uma chamada de servidor quando o consentimento é alterado.
 
@@ -32,26 +32,7 @@ O comando `setConsent` usa somente `ECID` do mapa de identidade, pois o comando 
 
 ## Usando `defaultConsent` junto com `setConsent` {#using-consent}
 
-O Web SDK oferece dois comandos complementares de configuração de consentimento:
-
-* [`defaultConsent`](configure/defaultconsent.md): esse comando define automaticamente a preferência de consentimento padrão do visitante antes de chamar `setConsent`.
-* `setConsent` (página atual): este comando define explicitamente a preferência de consentimento do visitante.
-
-Quando usadas juntas, essas configurações podem levar a diferentes resultados de coleta de dados e configuração de cookie, dependendo de seus valores configurados:
-
-| `defaultConsent` | `setConsent` | Ocorre a coleta de dados | O Web SDK define cookies do navegador |
-| --- | --- | --- | --- |
-| `in` | `in` | Sim | Sim |
-| `in` | `out` | Não | Sim |
-| `in` | Não definido | Sim | Sim |
-| `pending` | `in` | Sim | Sim |
-| `pending` | `out` | Não | Sim |
-| `pending` | Não definido | Não | Não |
-| `out` | `in` | Sim | Sim |
-| `out` | `out` | Não | Sim |
-| `out` | Não definido | Não | Não |
-
-Consulte [Cookies do Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/data-collection/cookies/web-sdk) no guia dos Serviços principais para obter uma lista completa de cookies que podem ser definidos.
+Quando usados em conjunto, o `defaultConsent` e o `setConsent` produzem coleta de dados, configuração de cookie e resultados de identidade diferentes, dependendo de seus valores configurados. Consulte [Consentimento e identidade na Coleção de dados](/help/collection/identity/consent.md#how-consent-affects-identity) para obter uma tabela de interação completa.
 
 ## Usando o comando `setConsent`
 

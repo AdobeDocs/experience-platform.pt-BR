@@ -3,9 +3,9 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: d6b2be2c7f7b5a3b002e565dce8cee8af85ffcc2
+source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
 workflow-type: tm+mt
-source-wordcount: '2751'
+source-wordcount: '2752'
 ht-degree: 5%
 
 ---
@@ -76,7 +76,7 @@ Para obter as notas de versão mais recentes da extensão de tag do Web SDK, con
 **Correções e melhorias**
 
 - Correção de um erro no [rastreador do Media Analytics](commands/getmediaanalyticstracker.md) em que a propriedade `length` do objeto de mídia aceitava incorretamente tipos de dados inválidos.
-- Melhoria na manipulação de erros de [gerenciamento de identidade](../use-cases/identity/id-overview.md) para processar corretamente rejeições de promessas quando a pesquisa de identidade falha.
+- Melhoria na manipulação de erros de [gerenciamento de identidade](../identity/overview.md) para processar corretamente rejeições de promessas quando a pesquisa de identidade falha.
 - Solução de um problema em que o conteúdo de personalização com itens de conteúdo do HTML não era renderizado com um erro relacionado a um `renderStatusHandler` ausente.
 - Corrigido o Activity Map [coleção de URLs](commands/configure/clickcollectionenabled.md) para manipular corretamente URLs não HTTP.
 
@@ -147,7 +147,7 @@ Para obter as notas de versão mais recentes da extensão de tag do Web SDK, con
 
 **Novos recursos**
 
-- Adicionado suporte para a solicitação da [ID PRINCIPAL](/help/collection/use-cases/identity/id-overview.md) no comando [getIdentity](commands/getidentity.md).
+- Adicionado suporte para a solicitação da [ID PRINCIPAL](/help/collection/identity/overview.md#core-id-and-third-party-identity) no comando [getIdentity](commands/getidentity.md).
 
 **Correções e melhorias**
 
@@ -296,7 +296,7 @@ Para obter as notas de versão mais recentes da extensão de tag do Web SDK, con
 
 **Novos recursos**
 
-- Agora é possível fornecer experiências personalizadas com mais precisão, compartilhando IDs de visitante entre aplicativos móveis e conteúdo da Web móvel, e entre domínios. Consulte a [documentação dedicada](../use-cases/identity/id-sharing.md) para saber mais.
+- Agora é possível fornecer experiências personalizadas com mais precisão, compartilhando IDs de visitante entre aplicativos móveis e conteúdo da Web móvel, e entre domínios. Consulte [Identidade na coleção de dados](../identity/overview.md) para saber mais.
 - Agora é possível renderizar ou executar uma matriz de propostas de [!DNL Adobe Target] em aplicativos de página única, sem incrementar as métricas de análise. Isso reduz os erros de relatório e aumenta a precisão da análise.
 - Adição de mais informações ao comando `getLibraryInfo`, incluindo os comandos disponíveis e a configuração final da instância.
 

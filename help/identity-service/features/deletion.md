@@ -2,9 +2,9 @@
 title: Exclusões no serviço de identidade
 description: Este documento fornece uma visão geral dos vários mecanismos que você pode usar para excluir seus dados de identidade no Experience Platform e para esclarecer como os gráficos de identidade podem ser afetados.
 exl-id: 0619d845-71c1-4699-82aa-c6436815d5b3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1197'
 ht-degree: 1%
 
 ---
@@ -37,7 +37,7 @@ As seções abaixo descrevem os mecanismos que você pode usar para solicitaçõ
 
 ### Exclusão de identidade única no Privacy Service
 
-O Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR) e a Lei de Privacidade do Consumidor da Califórnia (CCPA). Com o Privacy Service, você pode enviar solicitações de trabalho usando a API ou a interface do usuário. Quando o Experience Platform recebe uma solicitação de exclusão do Privacy Service Experience Platform, ele envia uma confirmação para a Privacy Service de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. A exclusão da identidade individual baseia-se no namespace e/ou valor de ID fornecido. Além disso, a exclusão ocorre para todas as sandboxes associadas a uma determinada organização. Para obter mais informações, leia o manual sobre [processamento de solicitação de privacidade no Serviço de Identidade](../privacy.md).
+O Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido pelas regulamentações de privacidade, como o Regulamento Geral sobre a Proteção de Dados (GDPR) e a Lei de Privacidade do Consumidor da Califórnia (CCPA). Com o Privacy Service, você pode enviar solicitações de trabalho usando a API ou a interface do usuário. Quando o Experience Platform recebe uma solicitação de exclusão do Privacy Service, ele envia uma confirmação para a Privacy Service de que a solicitação foi recebida e de que os dados afetados foram marcados para exclusão. A exclusão da identidade individual baseia-se no namespace e/ou valor de ID fornecido. Além disso, a exclusão ocorre para todas as sandboxes associadas a uma determinada organização. Para obter mais informações, leia o manual sobre [processamento de solicitação de privacidade no Serviço de Identidade](../privacy.md).
 
 A tabela abaixo fornece um detalhamento da exclusão de identidade única no Privacy Service:
 
@@ -60,7 +60,7 @@ Você pode usar o Serviço de catálogo para enviar solicitações de exclusão 
 
 ### Expirações do conjunto de dados na higiene de dados
 
-O espaço de trabalho [[!UICONTROL Higiene de Dados]](../../hygiene/ui/overview.md) da interface do usuário do Adobe Experience Platform permite agendar expirações para conjuntos de dados. Quando um conjunto de dados atinge sua data de expiração, o data lake, o serviço de identidade e o perfil do cliente em tempo real iniciam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Para obter mais informações, leia o manual sobre [gerenciamento de expirações de conjunto de dados usando o [!UICONTROL espaço de trabalho de Higiene de Dados]](../../hygiene/ui/dataset-expiration.md).
+O espaço de trabalho [[!UICONTROL Data Hygiene]](../../hygiene/ui/overview.md) na interface do usuário do Adobe Experience Platform permite agendar expirações para conjuntos de dados. Quando um conjunto de dados atinge sua data de expiração, o data lake, o serviço de identidade e o perfil do cliente em tempo real iniciam processos separados para remover o conteúdo do conjunto de dados de seus respectivos serviços. Para obter mais informações, leia o manual sobre [gerenciamento de expirações de conjunto de dados usando o [!UICONTROL Data Hygiene] espaço de trabalho](../../hygiene/ui/dataset-expiration.md).
 
 A tabela abaixo fornece um detalhamento das diferenças entre a exclusão do conjunto de dados no Serviço de catálogo e na Higiene de dados:
 

@@ -4,7 +4,7 @@ title: Extensão de encaminhamento de eventos do Pinterest
 description: Essa extensão de encaminhamento de eventos do Adobe Experience Platform permite assimilar eventos no Pinterest para atender aos requisitos da empresa.
 last-substantial-update: 2023-04-27T00:00:00Z
 exl-id: 44f38a9b-0a28-4b51-bead-ee460eb8405e
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1427'
 ht-degree: 3%
@@ -33,7 +33,7 @@ Para obter mais informações sobre casos de uso específicos do [!DNL Pinterest
 
 Você deve ter uma [!DNL Pinterest] [conta comercial](https://help.pinterest.com/en/business/article/get-a-business-account) válida para usar esta extensão. Vá para a [[!DNL Pinterest] página de registro](https://www.pinterest.com/business/create/) para se registrar e criar uma conta, caso ainda não tenha uma.
 
-Você também precisará de uma conta de desenvolvedor [!DNL Pinterest], que precisará ser associada à sua conta comercial [!DNL Pinterest]. Para associar a conta de desenvolvedor à conta comercial, consulte a [[!DNL Pinterest &#x200B;] conta de desenvolvedor](https://developers.pinterest.com/account-setup/).
+Você também precisará de uma conta de desenvolvedor [!DNL Pinterest], que precisará ser associada à sua conta comercial [!DNL Pinterest]. Para associar a conta de desenvolvedor à conta comercial, consulte a [[!DNL Pinterest ] conta de desenvolvedor](https://developers.pinterest.com/account-setup/).
 
 ### Coletar detalhes de configuração necessários {#configuration-details}
 
@@ -81,9 +81,9 @@ Após a seleção, controles adicionais são exibidos para configurar ainda mais
 Os seguintes dados de evento serão necessários para criar a nova regra:
 
 | Nome do campo | Descrição | Exemplo |
-| --- | --- | --- | 
-| [!UICONTROL Event Name] | O tipo de evento do usuário. Isso pode ser qualquer tipo de evento. No entanto, para aproveitar [!DNL Pinterest Analytics], é recomendável usar [[!DNL Pinterest] códigos de evento](https://help.pinterest.com/en/business/article/add-event-codes) | &ast; check-out <br> &ast; add_to_cart <br> &ast; visita_página <br> &ast; inscrição <br> &ast; [Evento definido pelo usuário] |
-| [!UICONTROL Action Source] | A origem que indica onde o evento de conversão ocorreu. | &ast; app_android <br> &ast; app_ios <br> &ast; web <br> &ast; offline |
+| --- | --- | --- |
+| [!UICONTROL Event Name] | O tipo de evento do usuário. Isso pode ser qualquer tipo de evento. No entanto, para aproveitar [!DNL Pinterest Analytics], é recomendável usar [[!DNL Pinterest] códigos de evento](https://help.pinterest.com/en/business/article/add-event-codes) | &amp;ast; check-out <br> &amp;ast; add_to_cart <br> &amp;ast; visita_página <br> &amp;ast; inscrição <br> &amp;ast; [Evento definido pelo usuário] |
+| [!UICONTROL Action Source] | A origem que indica onde o evento de conversão ocorreu. | &amp;ast; app_android <br> &amp;ast; app_ios <br> &amp;ast; web <br> &amp;ast; offline |
 | [!UICONTROL Event Time] | Refere-se à hora do evento. O formato de hora padrão usado é UNIX, no formato `<seconds>.<miliseconds>`, dependendo do fuso horário local. Para obter mais informações, consulte a [[!DNL Pinterest] API](https://developers.pinterest.com/docs/api/v5/#operation/events/create). | 1433188255.500 indica 1433188255 segundos e 500 milissegundos após a época, ou segunda-feira, 1 de junho de 2015, às 19h55 GMT.:50: |
 | [!UICONTROL Event ID] | Uma sequência de ID exclusiva que identifica esse evento e pode ser usada para desduplicação entre eventos assimilados por meio da API de conversão e do rastreamento do Pinterest. Sem isso, os dados do evento provavelmente serão contados duas vezes e relatarão a inflação de métrica. | ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad |
 | [!UICONTROL Event Properties] | Um objeto JSON que contém propriedades personalizadas do evento. Escolha entre fornecer JSON bruto ou usar um conjunto simplificado de entradas de valores-chave. | { &quot;event_source_url&quot;: &quot;http://site.com&quot; } |
@@ -110,7 +110,7 @@ As seguintes propriedades de evento podem ser configuradas:
 Os seguintes dados do usuário podem ser inseridos por não são campos obrigatórios:
 
 | Nome do campo | Descrição | Exemplo |
-| --- | --- | --- | 
+| --- | --- | --- |
 | [!UICONTROL Email] | Endereço de email do usuário ou um hash SHA256 do email do endereço do usuário. | ebd543592.f2b7e1 |
 | [!UICONTROL Mobile Adverstising IDs] | Hashes Sha256 das &quot;IDs do Google Advertising&quot; (GAIDs) ou do &quot;Identificador da Apple para anunciantes&quot; (IDFAs) do usuário | ebd543592.f2b7e1 |
 | [!UICONTROL Client IP Address] | O endereço IP do usuário, que pode estar no formato IPv4 ou IPv6. Usado para correspondência. | 192.168.0.1 |
@@ -130,7 +130,7 @@ As propriedades de informações do cliente que podem ser configuradas são:
 | Nome | Nome do usuário. |
 | Cidade | Cidade de residência do usuário. Isso é usado principalmente para fins de faturamento. |
 | Estado | Estado do usuário, que é fornecido como um código de duas letras em minúsculas. |
-| Código postal | Código postal do usuário, usado principalmente para fins de faturamento. |
+| Código Postal | Código postal do usuário, usado principalmente para fins de faturamento. |
 | País | Código de país ISO-3166 de dois caracteres indicando o país do usuário. |
 | ID externa | Identificador exclusivo do anunciante que identifica um usuário em seu espaço. Por exemplo, id de usuário, id de fidelidade e assim por diante. |
 | ID do clique | O identificador exclusivo armazenado no cookie _epik no seu domínio ou no parâmetro de consulta &amp;epik= no URL. |

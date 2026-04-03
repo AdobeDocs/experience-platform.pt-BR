@@ -3,7 +3,7 @@ title: Ponto de Extremidade de Tags Unificadas
 description: Saiba como criar, atualizar, gerenciar e excluir categorias de tags e tags usando as APIs do Adobe Experience Platform.
 role: Developer
 exl-id: 6687d1da-a5e4-435a-9f99-1b0f9ac98088
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1860'
 ht-degree: 4%
@@ -45,7 +45,7 @@ GET /tagCategory?{QUERY_PARAMETERS}
 
 Os parâmetros de consulta opcionais a seguir podem ser usados ao recuperar categorias de tags.
 
-| Parâmetro de consulta | Descrição | Exemplo |
+| Parâmetros de consulta | Descrição | Exemplo |
 | --------------- | ----------- | ------- |
 | `start` | O local de onde a lista de resultados começa. Você pode usar isso para indicar o índice inicial para paginação de resultados. | `start=a` |
 | `limit` | O número máximo de categorias de tag que você deseja recuperar por página. | `limit=20` |
@@ -104,7 +104,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todas as ca
 >
 >Somente o administrador do sistema e o administrador do produto podem usar essa chamada de API.
 
-Você pode criar uma nova categoria de tag fazendo uma solicitação POST para o ponto de extremidade `/tagCategory`.
+Você pode criar uma nova categoria de marca fazendo uma solicitação POST para o ponto de extremidade `/tagCategory`.
 
 **Formato da API**
 
@@ -114,7 +114,7 @@ POST /tagCategory
 
 **Solicitação**
 
-+++Uma solicitação de amostra para criar uma nova categoria de tag.
++++Um exemplo de solicitação para criar uma nova categoria de tag.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
@@ -139,7 +139,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tagCategory
 
 Uma resposta de amostra retorna o status HTTP 200 com detalhes da categoria de tag recém-criada.
 
-+++Uma resposta de amostra que contém detalhes da categoria de tag recém-criada.
++++Um exemplo de resposta que contém detalhes da categoria de tag recém-criada.
 
 ```json
 {
@@ -224,7 +224,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da categoria de
 >
 >Somente o administrador do sistema e o administrador do produto podem usar essa chamada de API.
 
-Você pode atualizar os detalhes de uma categoria de tag específica que pertence à sua organização fazendo uma solicitação PATCH para o ponto de extremidade `/tagCategory` e especificando a ID da categoria de tag.
+Você pode atualizar os detalhes de uma categoria de marca específica que pertence à sua organização fazendo uma solicitação PATCH para o ponto de extremidade `/tagCategory` e especificando a ID da categoria da marca.
 
 **Formato da API**
 
@@ -238,7 +238,7 @@ PATCH /tagCategory/{TAG_CATEGORY_ID}
 
 **Solicitação**
 
-+++Uma solicitação de amostra para atualizar uma categoria de tag específica
++++Um exemplo de solicitação para atualizar uma categoria de tag específica
 
 ```shell
 curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
@@ -267,7 +267,7 @@ curl -X PATCH https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-
 
 Uma resposta HTTP status 200 bem-sucedida com informações sobre a categoria de tag recém-atualizada.
 
-+++Uma resposta de amostra que contém detalhes da categoria de tag recém-atualizada.
++++Um exemplo de resposta que contém detalhes da categoria de tag recém-atualizada.
 
 ```json
 {
@@ -291,7 +291,7 @@ Uma resposta HTTP status 200 bem-sucedida com informações sobre a categoria de
 >
 >Somente o administrador do sistema e o administrador do produto podem usar essa chamada de API.
 
-Você pode excluir uma categoria de tag específica que pertence à sua organização fazendo uma solicitação DELETE para o ponto de extremidade `/tagCategory` e especificando a ID da categoria de tag.
+Você pode excluir uma categoria de marca específica que pertença à sua organização fazendo uma solicitação DELETE para o ponto de extremidade `/tagCategory` e especificando a ID da categoria da marca.
 
 **Formato da API**
 
@@ -305,7 +305,7 @@ DELETE /tagCategory/{TAG_CATEGORY_ID}
 
 **Solicitação**
 
-+++Uma solicitação de amostra para excluir uma categoria de tag específica
++++Exemplo de solicitação para excluir uma categoria de tag específica
 
 ```shell
 curl -X DELETE https://experience.adobe.io/unifiedtags/tagCategory/e2b7c656-067b-4413-a366-adde0401df50 \
@@ -334,7 +334,7 @@ GET /tags?{QUERY_PARAMETERS}
 
 Os parâmetros de consulta opcionais a seguir podem ser usados ao recuperar tags.
 
-| Parâmetro de consulta | Descrição | Exemplo |
+| Parâmetros de consulta | Descrição | Exemplo |
 | --------------- | ----------- | ------- |
 | `start` | O local de onde a lista de resultados começa. Você pode usar isso para indicar o índice inicial para paginação de resultados. | `start=a` |
 | `limit` | O número máximo de tags que você deseja recuperar por página. | `limit=20` |
@@ -508,7 +508,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes das tags perten
 >
 >Se você estiver criando uma marca sem categoria, **não** precisará de permissões de administrador.
 
-Você pode criar uma nova tag fazendo uma solicitação POST para o ponto de extremidade `/tags`.
+Você pode criar uma nova marca fazendo uma solicitação POST para o ponto de extremidade `/tags`.
 
 **Formato da API**
 
@@ -518,7 +518,7 @@ POST /tags
 
 **Solicitação**
 
-+++Uma solicitação de amostra para criar uma nova tag.
++++Um exemplo de solicitação para criar uma nova tag.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedtags/tags
@@ -542,7 +542,7 @@ curl -X POST https://experience.adobe.io/unifiedtags/tags
 
 Uma resposta bem-sucedida retorna o status HTTP 201 com detalhes da tag recém-criada.
 
-+++Uma resposta de amostra que contém detalhes da tag recém-criada.
++++Um exemplo de resposta que contém detalhes da tag recém-criada.
 
 ```json
 {
@@ -605,7 +605,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da tag especificada.
 
-+++Uma resposta de amostra que contém detalhes da tag especificada.
++++Uma resposta de amostra que contém detalhes da tag especificada. 
 
 ```json
 {
@@ -705,7 +705,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações sobre quai
 
 ## Atualizar uma tag específica {#update-tag}
 
-Você pode atualizar uma tag especificada fazendo uma solicitação PATCH para o ponto de extremidade `/tags` e fornecendo a ID da tag que deseja atualizar.
+Você pode atualizar uma marca especificada fazendo uma solicitação PATCH para o ponto de extremidade `/tags` e fornecendo a ID da marca que você deseja atualizar.
 
 **Formato da API**
 
@@ -719,7 +719,7 @@ PATCH /tags/{TAG_ID}
 
 **Solicitação**
 
-+++Uma solicitação de amostra para atualizar uma tag específica
++++Um exemplo de solicitação para atualizar uma tag específica
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \
@@ -748,7 +748,7 @@ curl -X GET https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da tag recém-atualizada.
 
-+++Uma resposta de amostra que contém detalhes da tag atualizada.
++++Um exemplo de resposta que contém detalhes da tag atualizada.
 
 ```json
 {
@@ -775,7 +775,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da tag recém-a
 >
 >Além disso, a marca **não pode** ser associada a qualquer objeto comercial e **deve** ser arquivada antes que você possa excluir a marca. Você pode arquivar a marca usando o [ponto de extremidade da marca de atualização](#update-tag).
 
-Você pode excluir uma tag específica criando uma tag DELETE para o ponto de extremidade `/tags` e especificando a ID da tag que você deseja excluir.
+É possível excluir uma marca específica criando uma marca DELETE para o ponto de extremidade `/tags` e especificando a ID da marca que você deseja excluir.
 
 **Formato da API**
 
@@ -789,7 +789,7 @@ DELETE /tags/{TAG_ID}
 
 **Solicitação**
 
-+++Uma solicitação de amostra para excluir uma tag específica
++++Um exemplo de solicitação para excluir uma tag específica
 
 ```shell
 curl -X DELETE https://experience.adobe.io/unifiedtags/tags/2bd5ddd9-7284-4767-81d9-c75b122f2a6a \

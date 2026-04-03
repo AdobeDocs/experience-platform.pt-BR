@@ -3,7 +3,7 @@ title: Correspondência de cliente do Google + conexão de vídeo e exibição 3
 description: Com o conector de destino do Google Customer Match + Display & Video 360, você pode usar seus dados online e offline do Experience Platform para acessar e reengajar com seus clientes nas propriedades próprias e operadas da Google, como Search, Shopping, Gmail e YouTube.
 badge: label="Disponibilidade limitada" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '2442'
 ht-degree: 4%
@@ -134,7 +134,7 @@ As exportações de dados falharão se sua conta do Google não estiver vinculad
 
 **Para organizações com contas de gerente:**
 
-Se sua organização usar uma [conta de gerente [!DNL Google] 2&rbrace; para gerenciar várias contas de cliente, siga estes requisitos específicos de vinculação:](https://support.google.com/google-ads/answer/6139186)
+Se sua organização usar uma [conta de gerente [!DNL Google] 2} para gerenciar várias contas de cliente, siga estes requisitos específicos de vinculação:](https://support.google.com/google-ads/answer/6139186)
 
 * **Para exportar para uma conta de cliente específica:** Vincule essa conta de cliente individual (não a conta de gerente) à ID de conta da Google da Adobe: `4641108541`
 * **A vinculação de conta de gerente sozinha não é suficiente** e causará falhas de exportação de dados
@@ -177,20 +177,26 @@ Para saber mais sobre a assimilação de endereços de email no Experience Platf
 
 Se você optar por criar o hash dos endereços de email, certifique-se de cumprir os requisitos da Google, descritos nos links acima.
 
-<!-- ### Using custom namespaces {#custom-namespaces}
+<!-- 
+### Using custom namespaces {#custom-namespaces}
 
-Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. -->
+Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. Refer to the [Google official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information. 
+-->
 
-<!-- Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
+<!-- 
+Data from unhashed namespaces is automatically hashed by [!DNL Experience Platform] upon activation.
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Experience Platform] automatically hash the data on activation.
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) 
+-->
 
-<!-- ## Configure destination - video walkthrough {#video}
+<!-- 
+## Configure destination - video walkthrough {#video}
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate audiences. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475118/?quality=12&learn=on&captions=por_br) -->
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) 
+-->
 
 ## Conectar ao destino {#connect}
 
@@ -231,11 +237,13 @@ Quando terminar de fornecer detalhes da conexão de destino, selecione **[!UICON
 
 Consulte [Ativar dados de público-alvo para streaming de destinos de exportação de público](../../ui/activate-segment-streaming-destinations.md) para obter instruções sobre como ativar públicos-alvo para este destino.
 
-<!-- In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
+<!-- 
+In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] audiences to [!DNL Google Customer Match].
 
 ![Google Customer Match App ID field highlighted in the Segment schedule step of the activation workflow.](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
-For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. -->
+For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid) or ask your Google representative. 
+-->
 
 ### Exemplo de mapeamento: ativação de dados de público-alvo em [!DNL Google Customer Match + Display & Video 360] {#example-gcm}
 

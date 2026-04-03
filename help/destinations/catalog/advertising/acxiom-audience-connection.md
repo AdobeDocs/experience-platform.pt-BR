@@ -3,7 +3,7 @@ title: Acxiom Audience Connection
 description: Use o  [!DNL Acxiom Audience Connection] destino para aprimorar públicos-alvo com a  [!DNL Acxiom's Real ID] tecnologia e ativar públicos-alvo para várias plataformas, como  [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] e muito mais.
 badge: label="Beta" type="Informative"
 exl-id: bac0f337-bfab-4779-acc8-f70239552666
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1030'
 ht-degree: 8%
@@ -108,7 +108,7 @@ Para que o destino [!DNL Acxiom Audience Connection] receba corretamente os dado
 [!DNL Acxiom Audience Connection] permite o mapeamento somente para os seguintes campos de destino. Os campos de destino descritos na tabela abaixo devem ser mapeados na ordem mostrada abaixo.
 
 | Nome do campo | Descrição | Obrigatório | Ordem dos campos | Comprimento máximo |
-|---|---|---|---|---|          
+|---|---|---|---|---|
 | Nome | Nome do indivíduo | Não | 1 | 255 |
 | Meio | Nome do meio ou inicial do indivíduo | Não | 2 | 50 |
 | Sobrenome | Sobrenome do indivíduo | Sim | 3 | 255 |
@@ -153,4 +153,4 @@ Você ativou com êxito um público-alvo para a plataforma de destino selecionad
 
 ## Uso e governança de dados {#data-usage-governance}
 
-Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/data-governance/home).
+Todos os destinos do [!DNL Adobe Experience Platform] são compatíveis com as políticas de uso de dados ao manipular seus dados. Para obter informações detalhadas sobre como o [!DNL Adobe Experience Platform] fiscaliza a governança de dados, leia a [Visão geral da Governança de Dados](https://experienceleague.adobe.com/en/docs/experience-platform/data-governance/home).

@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;guia de api;Serviço de consulta;contas do serviço de consulta;contas;
+keywords: Experience Platform;página inicial;tópicos populares;serviço de consulta;guia da api;Serviço de consulta;contas do serviço de consulta;contas;
 solution: Experience Platform
 title: Endpoint da API de contas
 description: Você pode criar uma conta do Serviço de consulta para .
 role: Developer
 exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '498'
 ht-degree: 5%

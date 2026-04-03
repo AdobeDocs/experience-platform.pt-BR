@@ -3,7 +3,7 @@ title: Ponto de Extremidade de Pastas
 description: Saiba como criar, atualizar, gerenciar e excluir pastas usando as APIs do Adobe Experience Platform.
 role: Developer
 exl-id: ee43d699-725d-4ffd-a71b-049eeb3b4d7c
-source-git-commit: 78aa48701abaadea963b25e390aa96d7b31386f4
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 5%
@@ -58,7 +58,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/root/subf
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de todas as pastas de nível superior para o conjunto de dados na organização.
 
-+++Uma resposta de amostra que contém uma lista de todas as pastas de nível superior para o conjunto de dados na organização.
++++Um exemplo de resposta que contém uma lista de todas as pastas de nível superior para o conjunto de dados na sua organização.
 
 ```json
 {
@@ -127,7 +127,7 @@ POST /folders/{FOLDER_TYPE}
 
 **Solicitação**
 
-+++Uma solicitação de exemplo para criar uma nova pasta.
++++Um exemplo de solicitação para criar uma nova pasta.
 
 ```shell
 curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
@@ -153,7 +153,7 @@ curl -X POST https://experience.adobe.io/unifiedfolders/folders/dataset
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da pasta recém-criada.
 
-+++Uma resposta de amostra que contém detalhes da pasta recém-criada.
++++Um exemplo de resposta que contém detalhes da pasta recém-criada.
 
 ```json
 {
@@ -200,7 +200,7 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}
 
 **Solicitação**
 
-+++Uma solicitação de amostra para recuperar uma pasta específica
++++Um exemplo de solicitação para recuperar uma pasta específica
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
@@ -217,7 +217,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 Uma resposta bem-sucedida retorna o status HTTP 200 com detalhes da pasta solicitada.
 
-+++Uma resposta de amostra que contém detalhes da pasta solicitada.
++++Um exemplo de resposta que contém detalhes da pasta solicitada.
 
 ```json
 {
@@ -271,7 +271,7 @@ GET /folders/{FOLDER_TYPE}/{FOLDER_ID}/validate
 
 **Solicitação**
 
-+++Uma solicitação de exemplo para validar uma pasta específica
++++Um exemplo de solicitação para validar uma pasta específica
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e/validate
@@ -288,7 +288,7 @@ curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-
 
 Um status bem-sucedido retorna o status HTTP 200 com detalhes da pasta que você está validando.
 
-+++Uma resposta de amostra contém detalhes da pasta validada
++++Um exemplo de resposta contém detalhes da pasta validada
 
 ```json
 {
@@ -331,7 +331,7 @@ PATCH /folders/{FOLDER_TYPE}/{FOLDER_ID}
 
 **Solicitação**
 
-+++Uma solicitação de amostra para atualizar uma pasta específica
++++Um exemplo de solicitação para atualizar uma pasta específica
 
 ```shell
 curl -X GET https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e
@@ -393,7 +393,7 @@ DELETE /folders/{FOLDER_TYPE}/{FOLDER_ID}
 
 **Solicitação**
 
-+++Uma solicitação de amostra para excluir uma pasta específica
++++Um exemplo de solicitação para excluir uma pasta específica
 
 ```shell
 curl -X DELETE https://experience.adobe.io/unifiedfolders/folders/dataset/83f8287c-767b-4106-b271-257282fd170e

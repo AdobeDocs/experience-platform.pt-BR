@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;preparação de
 title: Enviar Atualizações Parciais De Linha Ao Perfil Do Cliente Em Tempo Real Usando O Preparo De Dados
 description: Saiba como enviar atualizações de linhas parciais para o Perfil do cliente em tempo real usando o Preparo de dados.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1363'
 ht-degree: 0%
@@ -133,7 +133,7 @@ A seguir é mostrado um exemplo de uma estrutura de payload de entrada que estab
 As seguintes operações são suportadas por [!DNL Real-Time Customer Profile]:
 
 | Operações | Descrição |
-| --- | --- | 
+| --- | --- |
 | `create` | A operação padrão. Isso gera um método de criação de entidade XDM para [!DNL Real-Time Customer Profile]. |
 | `merge` | Isso gera um método de atualização de entidade XDM para [!DNL Real-Time Customer Profile]. |
 | `delete` | Isso gera um método de exclusão de entidade XDM para [!DNL Real-Time Customer Profile] e remove permanentemente os dados de [!DNL Profile store]. |

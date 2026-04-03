@@ -2,9 +2,9 @@
 title: Recuperar Registros Semelhantes com Funções de Ordem Superior
 description: Saiba como identificar e recuperar registros semelhantes ou relacionados de um ou mais conjuntos de dados com base em uma métrica de similaridade e limite de similaridade. Esse fluxo de trabalho pode destacar relações significativas ou sobreposições entre conjuntos de dados diferentes.
 exl-id: 4810326a-a613-4e6a-9593-123a14927214
-source-git-commit: 27eab04e409099450453a2a218659e576b8f6ab4
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '4031'
+source-wordcount: '4030'
 ht-degree: 3%
 
 ---
@@ -176,7 +176,7 @@ Os resultados são mostrados na tabela abaixo:
 
 A instrução SQL e seus resultados no segundo vetor de recurso são vistos abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector2_distinct, replace(ProductName, ' ', '') AS featurevector2_nospaces FROM featurevector2
@@ -215,7 +215,7 @@ O resultado dessa instrução é:
 
 A instrução SQL e seus resultados no segundo vetor de recurso são vistos abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 ```SQL
 SELECT DISTINCT(ProductName) AS featurevector2_distinct, lower(replace(ProductName, ' ', '')) AS featurevector2_transform FROM featurevector2
@@ -247,7 +247,7 @@ FROM featurevector1;
 
 Os resultados são mostrados na tabela abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 |   | featurevetor1_distinct | featurevetor1_transform | tokens |
 |---|--------------------------|--------------|------------------------|
@@ -276,7 +276,7 @@ FROM featurevector1;
 
 Os resultados são mostrados na tabela abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 |   | featurevetor1_distinct | featurevetor1_transform | tokens |
 |---|--------------------------|--------------|------------------------|
@@ -310,7 +310,7 @@ FROM
 
 Os resultados são mostrados na tabela abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 |   | featurevetor1_distinct | tokens |
 |---|--------------------------|------------------------|
@@ -346,7 +346,7 @@ FROM
 
 Os resultados são mostrados na tabela abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 |   | featurevetor1_distinct | tokens |
 |---|--------------------------|------------------------|
@@ -471,7 +471,7 @@ SELECT lower(replace(ProductName, ' ', '')) FROM featurevector1;
 
 Os resultados são mostrados na tabela abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 |   | lower(replace(ProductName, &#39; &#39;, &#39;&#39;)) |
 |---|---------------------------------------|
@@ -511,7 +511,7 @@ SELECT * FROM featurevector1tokenized;
 
 Os resultados são mostrados na tabela abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 |   | featurevetor1_distinct | tokens |
 |---|--------------------------|------------------------|
@@ -548,7 +548,7 @@ SELECT * FROM featurevector2tokenized;
 
 Os resultados são mostrados na tabela abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 |   | featurevetor2_distinct | tokens |
 |---|--------------------------|------------------------|
@@ -582,7 +582,7 @@ Veja a seguir um resumo do SQl usado para criar a junção cruzada:
 
 Os resultados são mostrados na tabela abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 | * | SetA_ProductNames | SetB_ProductNames | SetA_tokens 1 | SetB_tokens 2 |
 |---|---------------------|-------------------|---|---|
@@ -639,14 +639,14 @@ Veja a seguir um resumo do SQL usado para calcular o coeficiente de similaridade
 
 Os resultados são mostrados na tabela abaixo:
 
-+++Selecione para expandir
++++Selecionar para expandir
 
 | * | SetA_ProductNames | SetB_ProductNames | SetA_tokens 1 | SetB_tokens 2 | token_intersect_count | token_intersect_count | Semelhança de Jaccard |
 |---|---------------------|-------------------|---------------------------------------|-------------------------------------------------|----|----|----|
 | 1 | ipadmini | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 7 | 0,43 |
 | 2 | ipadmini | macbookpro | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 16 | 0,0 |
 | 3 | ipadmini | iphone | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;,&quot;dm&quot;,&quot;mi&quot;,&quot;in&quot;,&quot;ni&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 1 | 11 | 0,09 |
-| 4 | ipad | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 3 | 1,0 |
+| 4 | ipad | ipad | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 3 | 3 | 1.0 |
 | 5 | ipad | macbookpro | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 12 | 0,0 |
 | 6 | ipad | iphone | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 1 | 7 | 0,14 |
 | 7 | iwatch | ipad | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 0 | 8 | 0,0 |
@@ -654,7 +654,7 @@ Os resultados são mostrados na tabela abaixo:
 | 9 | iwatch | iphone | {&quot;iw&quot;,&quot;wa&quot;,&quot;at&quot;,&quot;tc&quot;,&quot;ch&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 0 | 10 | 0,0 |
 | 10 | iphone | ipad | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;pa&quot;,&quot;ad&quot;} | 1 | 7 | 0,14 |
 | 11 | iphone | macbookpro | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ma&quot;,&quot;ac&quot;,&quot;cb&quot;,&quot;bo&quot;,&quot;oo&quot;,&quot;ok&quot;,&quot;kp&quot;,&quot;pr&quot;,&quot;ro&quot;} | 0 | 14 | 0,0 |
-| 12 | iphone | iphone | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 5 | 5 | 1,0 |
+| 12 | iphone | iphone | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | {&quot;ip&quot;,&quot;ph&quot;,&quot;ho&quot;,&quot;on&quot;,&quot;ne&quot;} | 5 | 5 | 1.0 |
 
 {style="table-layout:auto"}
 
@@ -697,7 +697,7 @@ WHERE jaccard_similarity>=0.4
 
 Os resultados desta consulta fornecem as colunas para a junção de similaridade, conforme visto abaixo:
 
-+++Selecione para expandir
++++ Selecionar para expandir
 
 |   | SetA_ProductNames | SetA_ProductNames |
 |---|--------------------------|------------------------|
@@ -707,7 +707,7 @@ Os resultados desta consulta fornecem as colunas para a junção de similaridade
 
 {style="table-layout:auto"}
 
-+++:
++++
 
 ### Próximas etapas {#next-steps}
 
@@ -717,4 +717,4 @@ Ao ler este documento, agora é possível usar essa lógica para realçar relaç
 - Limpeza de dados: para melhorar a qualidade dos dados.
 - Análise da cesta de compras: para fornecer informações sobre o comportamento do cliente, preferências e possíveis oportunidades de venda cruzada.
 
-Caso ainda não o tenha feito, é recomendável ler a [visão geral do pipeline de recursos de IA/ML](../data-distiller/ml-feature-pipelines/overview.md). Use essa visão geral para saber como o Data Distiller e seu aprendizado de máquina preferido podem criar modelos de dados personalizados que apoiam seus casos de uso de marketing com dados de Experience Platform.
+Caso ainda não o tenha feito, é recomendável ler a [visão geral do pipeline de recursos de IA/ML](../data-distiller/ml-feature-pipelines/overview.md). Use essa visão geral para saber como o Data Distiller e seu aprendizado de máquina preferido podem criar modelos de dados personalizados que oferecem suporte aos casos de uso de marketing com dados do Experience Platform.

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Sintaxe SQL no Serviço de consulta
 description: Este documento detalha e explica a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '4686'
 ht-degree: 1%
@@ -892,7 +892,7 @@ O comando `FILTER CONTEXT` calcula estatísticas em um subconjunto do conjunto d
 A saída do console é exibida conforme visto abaixo.
 
 ```console
-|     Statistics ID      | 
+|     Statistics ID      |
 | ---------------------- |
 | adc_geometric_stats_1  |
 (1 row)

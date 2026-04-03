@@ -5,7 +5,7 @@ title: Endpoint da API de gerenciamento de sandbox
 description: O ponto de extremidade /sandboxes na API de sandbox permite gerenciar de forma programática as sandboxes no Adobe Experience Platform.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1477'
 ht-degree: 4%

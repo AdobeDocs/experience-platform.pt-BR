@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 8c55aebcb65327394ffbdf59db1d2a203182ed18
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '6574'
 ht-degree: 10%
@@ -144,7 +144,7 @@ Você pode usar os seguintes operadores para os respectivos tipos de dados:
 | Este mês | O valor ocorreu neste mês. | O mês de nascimento **é** este mês |
 | Este ano | O valor ocorreu neste ano civil. | A data de inscrição **é** este ano |
 | Data personalizada | O valor ocorreu na data especificada. | A data de compra **está em** Data personalizada |
-| No(s) último(s) | O valor ocorreu no último período escolhido. Aniversário **is** no mês passado |
+| No(s) último(s) | O valor ocorreu no último período escolhido. Aniversário **is** no mês passado | |
 | De (para) | O valor ocorreu dentro das duas datas do calendário escolhidas. Este período é **inclusivo** das duas datas. | A data de criação da conta **é** de 20 de abril a 13 de julho |
 | Durante | O valor ocorreu no mês ou ano selecionado. | Venda **is** Durante março |
 | No prazo de (+/-) | O valor ocorreu em dias, semanas, meses ou anos a partir da data selecionada. Este período é **inclusivo** das duas datas. | O abandono do carrinho é **Dentro de** 3 dias |

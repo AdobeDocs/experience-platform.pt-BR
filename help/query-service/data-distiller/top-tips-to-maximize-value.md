@@ -2,9 +2,9 @@
 title: Principais dicas para maximizar o valor com o Adobe Experience Platform Data Distiller - OS656
 description: Saiba como maximizar o valor com o Adobe Experience Platform Data Distiller enriquecendo os dados de Perfil do cliente em tempo real e usando insights comportamentais para criar públicos-alvo direcionados. Esse recurso inclui um conjunto de dados de amostra e um estudo de caso que demonstra como aplicar o modelo de Recenticidade, Frequência, Monetário (RFM) para segmentação de clientes.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '3743'
+source-wordcount: '3664'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Através do estudo de caso Luma, você analisará os dados comportamentais do us
 
 ## Pré-requisito
 
-Para executar este caso de uso, sua instância do Adobe Experience Platform deve ser licenciada para o [Data Distiller](./overview.md). Entre em contato com seu representante da Adobe para obter mais informações.
+Para executar este caso de uso, sua instância do Adobe Experience Platform deve ser licenciada para o [Data Distiller](./overview.md). Entre em contato com o representante da Adobe para obter mais informações.
 
 Você também precisa saber a **ID de locatário da sua organização**, que é necessária para executar consultas. Sua ID de locatário é a primeira parte do URL ao fazer logon no Experience Platform, aparecendo imediatamente após o símbolo @.
 
@@ -65,22 +65,22 @@ Siga estas etapas para fazer upload de um arquivo CSV para o Adobe Experience Pl
 
 #### Criar um conjunto de dados de um arquivo CSV {#create-a-dataset}
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** no painel de navegação esquerdo, seguido de **[!UICONTROL Criar conjunto de dados]**. Em seguida, selecione **[!UICONTROL Criar conjunto de dados do arquivo CSV]** nas opções disponíveis.
+Na interface do usuário do Experience Platform, selecione **[!UICONTROL Datasets]** no painel de navegação esquerdo, seguido por **[!UICONTROL Create dataset]**. Em seguida, selecione **[!UICONTROL Create dataset from CSV file]** nas opções disponíveis.
 
-O painel [!UICONTROL Configurar Conjunto de Dados] é exibido. No campo **[!UICONTROL Nome]**, insira o nome do conjunto de dados como &quot;luma_web_data&quot; e selecione **[!UICONTROL Próximo]**.
+O painel [!UICONTROL Configure Dataset] é exibido. No campo **[!UICONTROL Name]**, insira o nome do conjunto de dados como &quot;luma_web_data&quot; e selecione **[!UICONTROL Next]**.
 
-O painel [!UICONTROL Adicionar dados] é exibido. Arraste e solte o arquivo CSV na caixa **[!UICONTROL Adicionar dados]** ou selecione **[!UICONTROL Escolher Arquivo]** para procurar e carregar o arquivo.
+O painel [!UICONTROL Add data] é exibido. Arraste e solte o arquivo CSV na caixa **[!UICONTROL Add data]** ou selecione **[!UICONTROL Choose File]** para procurar e carregar o arquivo.
 
 Para saber mais sobre este processo, consulte o [tutorial de assimilação em lote](../../ingestion/tutorials/ingest-batch-data.md) e o [fluxo de trabalho de criação do conjunto de dados](../../catalog/datasets/user-guide.md#create) no guia da interface do usuário do conjunto de dados.
 
 #### Revisar e concluir o upload {#review-and-complete-upload}
 
-Depois que o arquivo for carregado, uma pré-visualização de dados será exibida na parte inferior da interface. Selecione **[!UICONTROL Concluir]** para concluir o carregamento.
+Depois que o arquivo for carregado, uma pré-visualização de dados será exibida na parte inferior da interface. Selecione **[!UICONTROL Finish]** para concluir o carregamento.
 
 ![A seção &quot;Adicionar dados&quot; do fluxo de trabalho &quot;Criar conjunto de dados a partir de arquivo CSV&quot; com uma visualização de dados e &quot;Concluir&quot; realçado.](../images/data-distiller/top-tips-to-maximize-value/add-data-finish.png)
 
 A exibição das atividades do conjunto de dados para o conjunto de dados &quot;luma_web_data&quot; é exibida. O upload manual do arquivo CSV
-é assimilado como um lote e identificado por uma [!UICONTROL ID do lote]. Um painel no lado direito exibe o nome da tabela como `luma_web_data`.
+é assimilado como um lote e identificado por um [!UICONTROL Batch ID]. Um painel no lado direito exibe o nome da tabela como `luma_web_data`.
 
 >[!TIP]
 >
@@ -88,11 +88,12 @@ A exibição das atividades do conjunto de dados para o conjunto de dados &quot;
 
 ![A guia &quot;Atividade do conjunto de dados&quot; para o conjunto de dados &quot;luma_web_data&quot; recém-criado com o nome da tabela, a ID do lote e o &quot;Conjunto de dados de visualização&quot; destacados.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-dataset-details.png)
 
-<!-- ![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
+<!-- 
+![The "Dataset activity" tab for the newly created "luma_web_data" dataset with the table name, batch ID and "Preview dataset" highlighted.]() 
 My table name is; luma_web_data_20250312_235611_817 Should we explain the suffix? 
 -->
 
-Após concluir o processamento dos dados, selecione [!UICONTROL Visualizar conjunto de dados] no canto superior direito para visualizar o conjunto de dados. É assim que a pré-visualização do conjunto de dados aparece:
+Após concluir o processamento dos dados, selecione [!UICONTROL Preview dataset] no canto superior direito para visualizar o conjunto de dados. É assim que a pré-visualização do conjunto de dados aparece:
 
 ![A visualização do conjunto de dados &quot;luma_web_data&quot;.](../images/data-distiller/top-tips-to-maximize-value/luma_web_data-preview.png)
 
@@ -118,7 +119,7 @@ Use o Data Distiller para verificar a qualidade e a integridade do conjunto de d
 
 #### Executar uma consulta básica de exploração {#basic-exploration-queries}
 
-Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Consultas]** no painel de navegação esquerdo e, em seguida, **[!UICONTROL Criar consulta]**. O Editor de consultas é exibido.
+Na interface do usuário do Adobe Experience Platform, selecione **[!UICONTROL Queries]** no painel de navegação esquerdo e, em seguida, **[!UICONTROL Create Query]**. O Editor de consultas é exibido.
 
 Cole a seguinte consulta no editor e execute-a:
 
@@ -126,7 +127,7 @@ Cole a seguinte consulta no editor e execute-a:
 SELECT * FROM luma_web_data; 
 ```
 
-Os resultados da consulta são exibidos abaixo do Editor de consultas na guia **[!UICONTROL Resultados]**. Para expandir os resultados em um novo diálogo, selecione **[!UICONTROL Exibir resultados]**. Os resultados são semelhantes à imagem abaixo.
+Os resultados da consulta são exibidos abaixo do Editor de consultas na guia **[!UICONTROL Results]**. Para expandir os resultados em um novo diálogo, selecione **[!UICONTROL View results]**. Os resultados são semelhantes à imagem abaixo.
 
 ![A caixa de diálogo Resultados da consulta para os resultados básicos da exploração de consulta.](../images/data-distiller/top-tips-to-maximize-value/basic-query-exploration-results.png)
 
@@ -470,11 +471,11 @@ FROM rfm_model_segment;
 
 O resultado dessa consulta se assemelha às criações anteriores de conjuntos de dados neste manual, mas com uma ID diferente.
 
-Depois de criar o conjunto de dados, navegue até **[!UICONTROL Conjuntos de dados]** > **[!UICONTROL Procurar]** > `adls_rfm_profile` para verificar se o conjunto de dados está vazio.
+Depois de criar o conjunto de dados, navegue até **[!UICONTROL Datasets]** > **[!UICONTROL Browse]** > `adls_rfm_profile` para verificar se o conjunto de dados está vazio.
 
 ![O espaço de trabalho dos conjuntos de dados com os detalhes do conjunto de dados &#39;adls_rfm_profile&#39; exibido e a alternância habilitada para perfil realçada.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-Você também pode navegar até **[!UICONTROL Esquemas]** > **[!UICONTROL Procurar]** > `adls_rfm_profile` para exibir o diagrama de Esquema de Perfil Individual XDM do seu conjunto de dados recém-criado e seus grupos de campos personalizados.
+Você também pode navegar até **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` para exibir o diagrama do Esquema de Perfil Individual XDM do seu conjunto de dados recém-criado e seus grupos de campos personalizados.
 
 ![O espaço de trabalho XDM com o diagrama &#39;adls_rfm_profile&#39; exibido na tela de esquema.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -503,30 +504,30 @@ Agora que seu código SQL gera um conjunto de dados derivado e o habilita para o
 
 #### Agendar a execução da consulta
 
-Depois de salvar seu SQL, navegue até a guia **[!UICONTROL Modelos]** para exibir a consulta salva e iniciar o processo de agendamento. Há duas maneiras de agendar uma consulta:
+Depois de salvar seu SQL, navegue até a guia **[!UICONTROL Templates]** para exibir a consulta salva e iniciar o processo de agendamento. Há duas maneiras de agendar uma consulta:
 
-Selecione **[!UICONTROL Adicionar Calendário]** na barra lateral direita.
+Selecione **[!UICONTROL Add Schedule]** na barra lateral direita.
 
 ![A guia Editar do espaço de trabalho Consultas com Adicionar agendamento está realçada.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-1.png)
 
-Como alternativa, selecione a guia **[!UICONTROL Agendamentos]** abaixo do nome do modelo e selecione **[!UICONTROL Adicionar Agendamento]**.
+Como alternativa, selecione a guia **[!UICONTROL Schedules]** abaixo do nome do modelo e selecione **[!UICONTROL Add Schedule]**.
 
 ![A guia Agendamentos do espaço de trabalho de Consultas com Adicionar Agendamento está realçada.](../images/data-distiller/top-tips-to-maximize-value/add-schedule-2.png)
 
 Para obter mais detalhes sobre o agendamento de consultas, consulte a [documentação de Agendamentos de Consulta](../ui/query-schedules.md).
 
-A exibição [!UICONTROL Detalhes do agendamento] é exibida. Aqui, insira os seguintes detalhes para configurar o agendamento:
+A exibição [!UICONTROL Schedule details] aparece. Aqui, insira os seguintes detalhes para configurar o agendamento:
 
-- **[!UICONTROL Frequência de Execução]**: **Semanalmente**
-- **[!UICONTROL Dia de Execução]**: **Segunda-feira e terça-feira**
-- **[!UICONTROL Hora de Execução da Agenda]**: **10:10 UTC**
-- **[!UICONTROL Período de Agendamento]**: **17 de março - 30 de abril de 2025**
+- **[!UICONTROL Execution Frequency]**: **Semanalmente**
+- **[!UICONTROL Day of Execution]**: **Segunda e terça-feira**
+- **[!UICONTROL Schedule Execution Time]**: **10:10 AM UTC**
+- **[!UICONTROL Schedule Period]**: **17 de março - 30 de abril de 2025**
 
-Selecione **[!UICONTROL Salvar]** para confirmar o agendamento.
+Selecione **[!UICONTROL Save]** para confirmar o cronograma.
 
 ![Os detalhes do agendamento com as configurações definidas e Salvar realçado.](../images/data-distiller/top-tips-to-maximize-value/set-schedule.png)
 
-Depois de salvar o agendamento, você pode navegar até a guia **[!UICONTROL Consultas agendadas]** a qualquer momento para monitorar os trabalhos agendados do Data Distiller. Para obter mais detalhes sobre [exibição do status de execução da consulta, mensagens de erro e alertas](../ui/monitor-queries.md), consulte o documento monitorar consultas agendadas.
+Depois de salvar o agendamento, você pode navegar até a guia **[!UICONTROL Scheduled Queries]** a qualquer momento para monitorar os trabalhos agendados do Data Distiller. Para obter mais detalhes sobre [exibição do status de execução da consulta, mensagens de erro e alertas](../ui/monitor-queries.md), consulte o documento monitorar consultas agendadas.
 
 Uma vez configurado, o query SQL é executado automaticamente nos intervalos definidos, garantindo que os dados permaneçam atualizados sem a necessidade de intervenção manual.
 
@@ -543,7 +544,7 @@ Escolha a abordagem que melhor se adapta ao seu fluxo de trabalho.
 
 #### Solução 1: público-alvo de SQL por meio do Data Distiller {#data-distiller-sql-audience}
 
-Use o comando `CREATE AUDIENCE AS SELECT` para definir um novo público-alvo. O público-alvo criado é salvo em um conjunto de dados e registrado no espaço de trabalho **[!UICONTROL Públicos-alvo]** em **[!UICONTROL Data Distiller]**.
+Use o comando `CREATE AUDIENCE AS SELECT` para definir um novo público-alvo. A audiência criada é salva em um conjunto de dados e registrada no espaço de trabalho **[!UICONTROL Audiences]** em **[!UICONTROL Data Distiller]**.
 
 Os públicos-alvo criados com a extensão SQL são registrados automaticamente na origem [!UICONTROL Data Distiller] no espaço de trabalho [!UICONTROL Audiences]. No [Portal de público-alvo](../../segmentation/ui/audience-portal.md), você pode exibir, gerenciar e ativar seus públicos-alvo conforme necessário.
 
@@ -646,19 +647,19 @@ DROP AUDIENCE IF EXISTS adls_rfm_audience;
 
 Use atributos RFM para segmentar usuários com base em seu comportamento e características. Esta seção orienta você na interface do usuário do Adobe Experience Platform para definir um público-alvo usando pontuações RFM.
 
-Para verificar se os dados foram carregados no Perfil de cliente em tempo real, navegue até **[!UICONTROL Clientes] > [!UICONTROL Perfis] > [!UICONTROL Procurar]**. Selecione **[!UICONTROL Namespace de Identidade]** como `Email` e insira `user0076@example.com`. Verifique os detalhes do perfil para confirmar se ele contém os atributos RFM esperados.
+Para verificar se os dados foram carregados no Perfil de Cliente em Tempo Real, navegue até **[!UICONTROL Customers]> [!UICONTROL Profiles] >[!UICONTROL Browse]**. Selecione **[!UICONTROL Identity Namespace]** como `Email` e insira `user0076@example.com`. Verifique os detalhes do perfil para confirmar se ele contém os atributos RFM esperados.
 
 ![O espaço de trabalho Perfis mostra perfis disponíveis com uma identidade primária de email e um filtro de valor de email aplicados.](../images/data-distiller/top-tips-to-maximize-value/profiles-workspace.png)
 
 ![A exibição dos atributos Perfis exibindo os atributos de um perfil específico.](../images/data-distiller/top-tips-to-maximize-value/profiles-attributes.png)
 
-Para procurar públicos existentes, selecione **[!UICONTROL Públicos-alvo]** no painel de navegação esquerdo e verifique se a guia **[!UICONTROL Procurar]** está selecionada. A lista de públicos-alvo disponíveis na sandbox é exibida. Selecionar um público-alvo exibe sua descrição, as regras de qualificação e o número de perfis incluídos.
+Para procurar públicos existentes, selecione **[!UICONTROL Audiences]** no painel de navegação esquerdo e verifique se a guia **[!UICONTROL Browse]** está selecionada. A lista de públicos-alvo disponíveis na sandbox é exibida. Selecionar um público-alvo exibe sua descrição, as regras de qualificação e o número de perfis incluídos.
 
-Para criar um novo público, selecione **[!UICONTROL Criar público-alvo]** no canto superior direito. Uma caixa de diálogo é exibida com duas opções. Selecione **[!UICONTROL Regra de Compilação]** seguido por **[!UICONTROL Criar]**.
+Para criar um novo público, selecione **[!UICONTROL Create Audience]** no canto superior direito. Uma caixa de diálogo é exibida com duas opções. Selecione **[!UICONTROL Build Rule]** seguido por **[!UICONTROL Create]**.
 
 ![A caixa de diálogo Criar público-alvo com a regra de compilação selecionada e Criar realçada.](../images/data-distiller/top-tips-to-maximize-value/create-audience-dialog.png)
 
-A interface do usuário da Composição de público-alvo fornece acesso aos atributos do perfil. Navegue até **[!UICONTROL Atributos] > [!UICONTROL Perfil Individual XDM]** para exibir os atributos disponíveis.
+A interface do usuário da Composição de público-alvo fornece acesso aos atributos do perfil. Navegue até **[!UICONTROL Attributes]>[!UICONTROL XDM Individual Profile]** para exibir os atributos disponíveis.
 
 Para obter mais detalhes sobre como usar a Composição de público-alvo, consulte o [Guia da interface do usuário de Composição de público-alvo](../../segmentation/ui/audience-composition.md). Para obter mais detalhes sobre como usar o Construtor de segmentos, consulte o [Guia da interface do Construtor de segmentos](../../segmentation/ui/segment-builder.md).
 
@@ -672,6 +673,6 @@ Para criar um público-alvo usando atributos RFM, arraste e solte o atributo `Rf
 
 ![Criando um público-alvo na interface da Composição de Público-Alvo.](../images/data-distiller/top-tips-to-maximize-value/drag-and-drop.png)
 
-Para finalizar o público-alvo, selecione **[!UICONTROL Salvar e publicar]** no canto superior direito. Depois de salvar, o público-alvo recém-criado aparece no espaço de trabalho [!UICONTROL Públicos-alvo], onde você pode revisar seu resumo e critérios de qualificação.
+Para finalizar a audiência, selecione **[!UICONTROL Save and Publish]** no canto superior direito. Depois de salvar, o público-alvo recém-criado aparece no espaço de trabalho [!UICONTROL Audiences], onde você pode revisar seu resumo e critérios de qualificação.
 
 Use o Construtor de segmentos para acessar os atributos RFM derivados e criar públicos adicionais. Ative o público-alvo SQL recém-criado com base nas pontuações RFM e envie-o para qualquer destino preferencial, incluindo o Adobe Journey Optimizer.

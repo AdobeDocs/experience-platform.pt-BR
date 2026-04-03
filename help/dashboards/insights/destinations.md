@@ -2,7 +2,7 @@
 title: Insights de destinos
 description: Descubra o SQL que capacita seus insights de destino e use essas consultas para gerar insights personalizados e explorar ainda mais a ativação de dados do Adobe Experience Platform.
 exl-id: 762a9960-e7a5-4796-80c7-ef745157cc04
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1137'
 ht-degree: 3%
@@ -24,9 +24,9 @@ Os seguintes insights estão todos disponíveis para você usar como parte do [P
 Perguntas respondidas por este insight:
 
 - Qual é a contagem total de públicos ativados filtrados por um destino específico?
-- Qual é a contagem de público ativada por destino?
+- Qual é o contagem de público-alvo ativado por destino?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT
@@ -48,7 +48,7 @@ WHERE
 
 +++
 
-Consulte a [documentação do widget Públicos ativados](../guides/destinations.md#activated-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Públicos ativados](../guides/destinations.md#activated-audiences) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Públicos ativados em todos os destinos {#activated-audiences-across-all-destinations}
 
@@ -57,7 +57,7 @@ Perguntas respondidas por este insight:
 - Quantos públicos-alvo são ativados em todos os destinos?
 - Qual é a contagem total de públicos ativados?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT count(segment_id) AS Activated_Audiences_Count
@@ -71,7 +71,7 @@ WHERE
 
 +++
 
-Consulte a [documentação do widget Públicos ativados em todos os destinos](../guides/destinations.md#activated-audiences-across-all-destinations) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Públicos ativados em todos os destinos](../guides/destinations.md#activated-audiences-across-all-destinations) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Destinos ativos por plataforma de destino {#active-destinations-by-destination-platform}
 
@@ -81,7 +81,7 @@ Perguntas respondidas por este insight:
 - Qual é o detalhamento de destinos ativos por plataforma de destino?
 - Qual é a contagem de destinos ativos dividida por plataforma de destino?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT destination_platform_name AS Destination_Platform_Name,
@@ -96,9 +96,9 @@ SELECT destination_platform_name AS Destination_Platform_Name,
 
 +++
 
-Consulte a [documentação do widget Destinos ativos por plataforma de destino](../guides/destinations.md#active-destinations-by-destination-platform) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Destinos ativos por plataforma de destino](../guides/destinations.md#active-destinations-by-destination-platform) para obter informações sobre a aparência e a funcionalidade deste insight.
 
-## Tendência de tamanho do público {#audience-size-trend}
+## Tendência de tamanho do público-alvo {#audience-size-trend}
 
 Perguntas respondidas por este insight:
 
@@ -106,7 +106,7 @@ Perguntas respondidas por este insight:
 - Como descobrir a tendência geral no tamanho do público-alvo, por destino, durante os períodos especificados de 30 dias, 90 dias e 12 meses?
 - Quais são as principais características do público-alvo contribuindo para o tamanho, por exemplo, picos em relação a campanhas de marketing por email?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT d.destination_name,
@@ -142,9 +142,9 @@ SELECT d.destination_name,
 
 +++
 
-Consulte a [Documentação do widget Tendência de tamanho de público](../guides/destinations.md#audience-size-trend) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget Tendência de tamanho de público](../guides/destinations.md#audience-size-trend) para obter informações sobre a aparência e a funcionalidade deste insight.
 
-## Públicos comuns {#common-audiences}
+## Públicos-alvos comuns {#common-audiences}
 
 Perguntas respondidas por este insight:
 
@@ -152,7 +152,7 @@ Perguntas respondidas por este insight:
 - Quantos perfis cada um dos públicos-alvo comuns entre dois destinos diferentes tem?
 - Qual é o maior público-alvo para o qual dois destinos são mapeados?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT k.destination_name1,
@@ -214,7 +214,7 @@ SELECT k.destination_name1,
 
 +++
 
-Consulte a [documentação do widget Públicos-alvo comuns](../guides/destinations.md#common-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Públicos-alvo comuns](../guides/destinations.md#common-audiences) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Status do destino {#destination-status}
 
@@ -224,7 +224,7 @@ Perguntas respondidas por este insight:
 - Qual é o número total de destinos que estão desabilitados?
 - Qual é a divisão de porcentagem entre destinos habilitados e desabilitados?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT COUNT(CASE
@@ -247,7 +247,7 @@ Perguntas respondidas por este insight:
 - Quantos destinos estão configurados no momento?
 - Como a contagem total de destinos mudou ao longo do tempo?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT count(destination_id) AS total_number_of_destinations
@@ -258,7 +258,7 @@ SELECT count(destination_id) AS total_number_of_destinations
 
 Consulte a [documentação do widget Contagem de destinos](../guides/destinations.md#destinations-count) para obter informações sobre a aparência e a funcionalidade deste insight.
 
-## Integridade do público mapeado {#mapped-audience-health}
+## Integridade do público-alvo mapeado {#mapped-audience-health}
 
 Perguntas respondidas por este insight:
 
@@ -266,7 +266,7 @@ Perguntas respondidas por este insight:
 - Qual é o tamanho mais recente de um público-alvo mapeado e se ele mudou no último mês?
 - Como faço para listar todos os públicos mapeados para um destino com base na gravidade de suas alterações de tamanho no último mês?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT destination_name,
@@ -325,7 +325,7 @@ SELECT destination_name,
 
 +++
 
-Consulte a [documentação do widget de integridade do público-alvo mapeado](../guides/destinations.md#mapped-audience-health) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget de integridade do público-alvo mapeado](../guides/destinations.md#mapped-audience-health) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Públicos-alvo mapeados {#mapped-audiences}
 
@@ -335,7 +335,7 @@ Perguntas respondidas por este insight:
 - Como a contagem de públicos mapeados mudou ao longo do tempo?
 - Onde posso comparar dois destinos para ver a sobreposição de público mapeada para cada destino?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT COUNT(segment_id) AS mapped_audiences_count
@@ -345,9 +345,10 @@ WHERE destination_id = 1458738325;
 
 +++
 
-Consulte a [documentação do widget Públicos mapeados](../guides/destinations.md#mapped-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [documentação do widget Públicos mapeados](../guides/destinations.md#mapped-audiences) para obter informações sobre a aparência e a funcionalidade deste insight.
 
-<!-- Commented out until the Jan release as the SQL IS MISSING:
+<!-- 
+Commented out until the Jan release as the SQL IS MISSING:
 ## Mapped audiences by identity {#mapped-audiences-by-identity}
 
 Questions answered by this insight:
@@ -374,7 +375,7 @@ Perguntas respondidas por este insight:
 - Quantos públicos-alvo são mapeados para cada destino, classificados da maioria para a menor?
 - Como o mapeamento de públicos-alvo para destinos muda de um instantâneo para outro?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_destination.destination_name,
@@ -403,7 +404,7 @@ Perguntas respondidas por este insight:
 - Como faço para encontrar uma lista de todos os destinos classificados pela data da última atualização?
 - Como posso comparar dois destinos com base nas ativações mais recentes?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT
@@ -424,7 +425,7 @@ LIMIT
 
 +++
 
-Consulte a [Documentação do widget Públicos recentemente ativados](../guides/destinations.md#recently-activated-audiences) para obter informações sobre a aparência e a funcionalidade desse insight.
+Consulte a [Documentação do widget Públicos recentemente ativados](../guides/destinations.md#recently-activated-audiences) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Públicos-alvo ativados recentemente por destino {#recently-activated-audiences-by-destination}
 
@@ -434,7 +435,7 @@ Perguntas respondidas por este insight:
 - Como faço para encontrar uma lista de públicos ativada por um público específico da mais para a menos recente?
 - Como encontrar uma lista de públicos-alvo pela data em que foi ativada para um destino específico?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT c.destination_name,
@@ -455,7 +456,7 @@ SELECT c.destination_name,
 
 +++
 
-Consulte a [Documentação de widget Públicos recentemente ativados por destino](../guides/destinations.md#recently-activated-audiences-by-destination) para obter informações sobre a aparência e a funcionalidade deste insight.
+Consulte a [Documentação do widget Públicos recentemente ativados por destino](../guides/destinations.md#recently-activated-audiences-by-destination) para obter informações sobre a aparência e a funcionalidade deste insight.
 
 ## Destinos criados recentemente {#recently-created-destinations}
 
@@ -465,7 +466,7 @@ Perguntas respondidas por este insight:
 - Como faço para encontrar uma lista de destinos com a data em que foram criados?
 - Que novo destino foi criado recentemente?
 
-+++Selecione para revelar o SQL que gera esse insight
++++Selecione para revelar o SQL que gera esta insight
 
 ```sql
 SELECT DISTINCT
@@ -486,7 +487,8 @@ LIMIT
 
 Consulte a [Documentação do widget de destinos recém-criado](../guides/destinations.md#recently-created-destinations) para obter informações sobre a aparência e a funcionalidade deste insight.
 
-<!-- Commented out until the Jan release as SQL MISSING FROM WIKI:
+<!-- 
+Commented out until the Jan release as SQL MISSING FROM WIKI:
 
 ## Unmapped audiences by identity {#unmapped-audiences-by-identity}
 

@@ -2,31 +2,31 @@
 title: Grupo de Campos de Esquema de Detalhes de Membro de Assistência Médica
 description: Saiba mais sobre o grupo de campos de esquema Detalhes do membro do plano de saúde.
 exl-id: 43ba025e-2acf-4cb7-8487-e6c7c7240867
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '635'
+source-wordcount: '610'
 ht-degree: 3%
 
 ---
 
-# [!UICONTROL Detalhes do membro da área de saúde] grupo de campos de esquema
+# Grupo de campos de esquema [!UICONTROL Healthcare Member Details]
 
-[!UICONTROL Detalhes do Membro de Assistência Médica] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura detalhes de uma pessoa que tem ou receberá atendimento médico, como informações de contato, médico de assistência médica e informações do plano.
+[!UICONTROL Healthcare Member Details] é um grupo de campos de esquema padrão para a [[!DNL XDM Individual Profile] classe](../../classes/individual-profile.md) que captura detalhes de uma pessoa que tem ou receberá atendimento médico ou cuidados, como informações de contato, médico de assistência médica e informações do plano.
 
 ![Estrutura do grupo de campos](../../images/field-groups/healthcare-member-details/structure.png)
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `billingAddress` | [[!UICONTROL Endereço postal]](../../data-types/postal-address.md) | O endereço de cobrança da pessoa. |
-| `faxPhone` | [[!UICONTROL Número de telefone]](../../data-types/phone-number.md) | O número de fax da pessoa. |
-| `homeAddress` | [[!UICONTROL Endereço postal]](../../data-types/postal-address.md) | O endereço residencial da pessoa. |
-| `homePhone` | [[!UICONTROL Número de telefone]](../../data-types/phone-number.md) | O número de telefone residencial da pessoa. |
-| `mailingAddress` | [[!UICONTROL Endereço postal]](../../data-types/postal-address.md) | O endereço para correspondência da pessoa. |
+| `billingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | O endereço de cobrança da pessoa. |
+| `faxPhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | O número de fax da pessoa. |
+| `homeAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | O endereço residencial da pessoa. |
+| `homePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | O número de telefone residencial da pessoa. |
+| `mailingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | O endereço para correspondência da pessoa. |
 | `memberDetails` | Objeto | Um objeto que contém informações detalhadas sobre os atributos e relacionamentos da pessoa relacionados ao tratamento de saúde. Consulte a [subseção abaixo](#memberDetails) para obter mais informações sobre a estrutura do objeto. |
-| `mobilePhone` | [[!UICONTROL Número de telefone]](../../data-types/phone-number.md) | O número do celular da pessoa. |
-| `person` | [[!UICONTROL Pessoa]](../../data-types/person.md) | Um ator individual, contato ou proprietário relacionado à associação da pessoa ao plano de saúde. |
-| `personalEmail` | [[!UICONTROL Endereço de email]](../../data-types/email-address.md) | O endereço de email pessoal da pessoa. |
-| `shippingAddress` | [[!UICONTROL Endereço postal]](../../data-types/postal-address.md) | O endereço de entrega da pessoa. |
+| `mobilePhone` | [[!UICONTROL Phone number]](../../data-types/phone-number.md) | O número do celular da pessoa. |
+| `person` | [[!UICONTROL Person]](../../data-types/person.md) | Um ator individual, contato ou proprietário relacionado à associação da pessoa ao plano de saúde. |
+| `personalEmail` | [[!UICONTROL Email address]](../../data-types/email-address.md) | O endereço de email pessoal da pessoa. |
+| `shippingAddress` | [[!UICONTROL Postal address]](../../data-types/postal-address.md) | O endereço de entrega da pessoa. |
 
 {style="table-layout:auto"}
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `emergencyContact` | Objeto | Registra os seguintes detalhes de contato de emergência da pessoa: <ul><li>`fullName`: (Cadeia de caracteres) O nome completo do contato de emergência.</li><li>`phone`: (Cadeia de caracteres) O número de telefone do contato de emergência.</li><li>`relationshipToMember`: (Cadeia de caracteres) A relação do contato de emergência com a pessoa.</li></ul> |
-| `medications` | Matriz de objetos | Lista os detalhes dos medicamentos atuais e anteriores associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`refillLocation`: ([[!UICONTROL Endereço postal]](../../data-types/postal-address.md)) O local de reabastecimento para o medicamento.</li><li>`ID`: ID de medicação (cadeia de caracteres).</li><li>`isCurrent`: (Booleano) Indica se o medicamento é atual ou já passou.</li><li>`numberOfRefills`: (Inteiro) O número de refills prescritos pelo provedor deste medicamento.</li><li>`startDate`: (DateTime) A data em que a pessoa começou a tomar o medicamento.</li></ul> |
+| `medications` | Matriz de objetos | Lista os detalhes dos medicamentos atuais e anteriores associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`refillLocation`: ([[!UICONTROL Postal address]](../../data-types/postal-address.md)) O local de reabastecimento para o medicamento.</li><li>`ID`: ID de medicação (cadeia de caracteres).</li><li>`isCurrent`: (Booleano) Indica se o medicamento é atual ou já passou.</li><li>`numberOfRefills`: (Inteiro) O número de refills prescritos pelo provedor deste medicamento.</li><li>`startDate`: (DateTime) A data em que a pessoa começou a tomar o medicamento.</li></ul> |
 | `multipleBirth` | Objeto | Captura detalhes relacionados a múltiplos nascimentos: <ul><li>`isMultipleBirth`: (Booleano) Indica se a pessoa deu vários nascimentos.</li><li>`multipleBirthNumber`: (Número inteiro) O número de bebês nascidos se `isMultipleBirth` for verdadeiro.</li></ul> |
 | `plans` | Matriz de objetos | Lista os detalhes dos planos médicos atuais e anteriores associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`coverageEndDate`: (DateTime) A data em que a cobertura do plano termina.</li><li>`coverageStartDate`: (DateTime) A data em que a cobertura do plano começa.</li><li>`isActive`: (Booleano) Indica se o plano está ativo.</li><li>`planId`: (Cadeia de caracteres) A ID do plano.</li></ul> |
 | `primaryCarePhysicians` | Matriz de objetos | Lista os detalhes dos médicos de cuidados primários associados à pessoa. Cada item da matriz é um objeto que captura os seguintes detalhes: <ul><li>`endDate`: (DateTime) A data em que o médico de cuidados primários terminou o tratamento da pessoa.</li><li>`fullname`: (Cadeia de caracteres) O nome completo do médico.</li><li>`providerId`: (Cadeia de caracteres) Um identificador exclusivo do médico.</li><li>`startDate`: (DateTime) A data em que o médico de cuidados primários iniciou o cuidado da pessoa.</li></ul> |

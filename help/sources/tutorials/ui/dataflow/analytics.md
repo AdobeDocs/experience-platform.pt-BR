@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Criar um fluxo de dados usando uma Source do Analytics na interface
 description: Este tutorial fornece etapas sobre como criar um fluxo de dados para uma fonte de análise usando a interface do usuário do Experience Platform.
 exl-id: 108a69e5-d7d9-4ca1-a364-38ea54aa74ff
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1417'
 ht-degree: 1%
 
 ---
@@ -30,7 +30,8 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): Fornece um perfil de consumidor unificado em tempo real com base em dados agregados de várias fontes.
 * [[!DNL Data Prep]](../../../../data-prep/home.md): permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM).
 
-<!-- ## Add data
+<!-- 
+## Add data
 
 After creating your analytics source account, the **[!UICONTROL Add data]** step appears, providing an interface for you to explore your analytics account's table hierarchy.
 
@@ -43,31 +44,32 @@ After creating your analytics source account, the **[!UICONTROL Add data]** step
 
 Once you find the source data, select the table, then select **[!UICONTROL Next]**.
 
-![select-data](../../../images/tutorials/dataflow/table-based/select-data.png) -->
+![select-data](../../../images/tutorials/dataflow/table-based/select-data.png) 
+-->
 
 ## Fornecer detalhes do fluxo de dados
 
-A página [!UICONTROL Detalhes do fluxo de dados] permite selecionar se você deseja usar um conjunto de dados existente ou um novo conjunto de dados. Durante esse processo, você também pode definir as configurações para [!UICONTROL Conjunto de dados de perfil], [!UICONTROL Diagnóstico de erro], [!UICONTROL Assimilação parcial] e [!UICONTROL Alertas].
+A página [!UICONTROL Dataflow detail] permite selecionar se você deseja usar um conjunto de dados existente ou um novo conjunto de dados. Durante esse processo, você também pode definir as configurações para [!UICONTROL Profile dataset], [!UICONTROL Error diagnostics], [!UICONTROL Partial ingestion] e [!UICONTROL Alerts].
 
 ![detalhes do fluxo de dados](../../../images/tutorials/dataflow/table-based/dataflow-detail.png)
 
 ### Usar um conjunto de dados existente
 
-Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Conjunto de dados existente]**. Você pode recuperar um conjunto de dados existente usando a opção [!UICONTROL Pesquisa avançada] ou rolando pela lista de conjuntos de dados existentes no menu suspenso. Depois de selecionar um conjunto de dados, forneça um nome e uma descrição para o fluxo de dados.
+Para assimilar dados em um conjunto de dados existente, selecione **[!UICONTROL Existing dataset]**. Você pode recuperar um conjunto de dados existente usando a opção [!UICONTROL Advanced search] ou rolando pela lista de conjuntos de dados existentes no menu suspenso. Depois de selecionar um conjunto de dados, forneça um nome e uma descrição para o fluxo de dados.
 
 ![conjunto de dados existente](../../../images/tutorials/dataflow/table-based/existing-dataset.png)
 
 ### Usar um novo conjunto de dados
 
-Para assimilar em um novo conjunto de dados, selecione **[!UICONTROL Novo conjunto de dados]** e forneça um nome de conjunto de dados de saída e uma descrição opcional. Em seguida, selecione um esquema para mapear usando a opção [!UICONTROL Pesquisa avançada] ou rolando pela lista de esquemas existentes no menu suspenso. Depois de selecionar um esquema, forneça um nome e uma descrição para o fluxo de dados.
+Para assimilar em um novo conjunto de dados, selecione **[!UICONTROL New dataset]** e forneça um nome de conjunto de dados de saída e uma descrição opcional. Em seguida, selecione um esquema para mapear usando a opção [!UICONTROL Advanced search] ou rolando pela lista de esquemas existentes no menu suspenso. Depois de selecionar um esquema, forneça um nome e uma descrição para o fluxo de dados.
 
 ![novo-conjunto-de-dados](../../../images/tutorials/dataflow/table-based/new-dataset.png)
 
 ### Habilitar [!DNL Profile] e diagnóstico de erro
 
-Em seguida, selecione a opção **[!UICONTROL Conjunto de dados de perfil]** para habilitar seu conjunto de dados para [!DNL Profile]. Isso permite criar uma visualização integral dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados habilitados para [!DNL Profile] serão incluídos em [!DNL Profile] e as alterações serão aplicadas quando você salvar seu fluxo de dados.
+Em seguida, selecione a opção **[!UICONTROL Profile dataset]** para habilitar seu conjunto de dados para [!DNL Profile]. Isso permite criar uma visualização integral dos atributos e comportamentos de uma entidade. Os dados de todos os conjuntos de dados habilitados para [!DNL Profile] serão incluídos em [!DNL Profile] e as alterações serão aplicadas quando você salvar seu fluxo de dados.
 
-O [!UICONTROL Diagnóstico de erro] habilita a geração de mensagens de erro detalhadas para todos os registros incorretos que ocorrem no fluxo de dados, enquanto a [!UICONTROL Assimilação parcial] permite assimilar dados que contêm erros, até um determinado limite definido manualmente. Consulte a [visão geral da assimilação parcial de lotes](../../../../ingestion/batch-ingestion/partial.md) para obter mais informações.
+O [!UICONTROL Error diagnostics] habilita a geração de mensagens de erro detalhadas para qualquer registro incorreto que ocorra no fluxo de dados, enquanto o [!UICONTROL Partial ingestion] permite assimilar dados contendo erros, até um determinado limite definido manualmente. Consulte a [visão geral da assimilação parcial de lotes](../../../../ingestion/batch-ingestion/partial.md) para obter mais informações.
 
 ![perfil e erros](../../../images/tutorials/dataflow/table-based/profile-and-errors.png)
 
@@ -75,7 +77,7 @@ O [!UICONTROL Diagnóstico de erro] habilita a geração de mensagens de erro de
 
 Você pode ativar os alertas para receber notificações sobre o status do fluxo de dados. Selecione um alerta na lista para assinar e receber notificações sobre o status do seu fluxo de dados. Para obter mais informações sobre alertas, consulte o manual sobre [assinatura de alertas de fontes usando a interface](../alerts.md).
 
-Quando terminar de fornecer detalhes ao seu fluxo de dados, selecione **[!UICONTROL Avançar]**.
+Quando terminar de fornecer detalhes ao fluxo de dados, selecione **[!UICONTROL Next]**.
 
 ![alertas](../../../images/tutorials/dataflow/table-based/alerts.png)
 
@@ -85,17 +87,17 @@ Quando terminar de fornecer detalhes ao seu fluxo de dados, selecione **[!UICONT
 >
 >Você não pode mapear valores de par de chaves dinâmico como um objeto de [!DNL OneTrust] para Experience Platform e deve especificar essas chaves no esquema de destino para mapear seus dados durante a assimilação.
 
-A etapa [!UICONTROL Mapeamento] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
+A etapa [!UICONTROL Mapping] é exibida, fornecendo uma interface para mapear os campos de origem do esquema de origem para os campos XDM de destino apropriados no esquema de destino.
 
 O Experience Platform fornece recomendações inteligentes para campos mapeados automaticamente com base no esquema ou conjunto de dados de destino selecionado. Você pode ajustar manualmente as regras de mapeamento para atender aos seus casos de uso. Com base nas suas necessidades, você pode optar por mapear campos diretamente ou usar funções de preparação de dados para transformar dados de origem para derivar valores calculados ou calculados. Para obter etapas abrangentes sobre como usar a interface do mapeador e campos calculados, consulte o [Guia da Interface do Preparo de Dados](../../../../data-prep/ui/mapping.md).
 
-Depois que os dados de origem forem mapeados com êxito, selecione **[!UICONTROL Próximo]**.
+Após mapear os dados de origem com êxito, selecione **[!UICONTROL Next]**.
 
 ![mapeamento](../../../images/tutorials/dataflow/table-based/mapping.png)
 
 ## Programar execuções de assimilação
 
-A etapa [!UICONTROL Agendamento] é exibida, permitindo configurar um agendamento de assimilação para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. Por padrão, o agendamento está configurado para `Once`. Para ajustar a frequência de assimilação, selecione **[!UICONTROL Frequência]** e escolha uma opção no menu suspenso.
+A etapa [!UICONTROL Scheduling] é exibida, permitindo configurar um agendamento de assimilação para assimilar automaticamente os dados de origem selecionados usando os mapeamentos configurados. Por padrão, o agendamento está configurado para `Once`. Para ajustar a frequência de assimilação, selecione **[!UICONTROL Frequency]** e, em seguida, selecione uma opção no menu suspenso.
 
 >[!TIP]
 >
@@ -115,19 +117,19 @@ Consulte a tabela abaixo para obter mais informações sobre como programar conf
 | Intervalo | Depois de selecionar uma frequência, você pode definir o intervalo para estabelecer o intervalo de tempo entre cada assimilação. Por exemplo, se você definir a frequência como dia e configurar o intervalo como 15, o fluxo de dados será executado a cada 15 dias. Você não pode definir o intervalo como zero. O valor mínimo de intervalo aceito para cada frequência é o seguinte:<ul><li>**Uma vez**: n/d</li><li>**Minuto**: 15</li><li>**Hora**: 1</li><li>**Dia**: 1</li><li>**Semana**: 1</li></ul> |
 | Hora de início | O carimbo de data e hora da execução projetada, apresentado no fuso horário UTC. |
 | Preenchimento retroativo | O preenchimento retroativo determina quais dados são assimilados inicialmente. Se o preenchimento retroativo estiver ativado, todos os arquivos atuais no caminho especificado serão assimilados durante a primeira assimilação agendada. Se o preenchimento retroativo estiver desativado, somente os arquivos carregados entre a primeira execução da assimilação e a hora de início serão assimilados. Os arquivos carregados antes da hora de início não serão assimilados. |
-| Carregar dados incrementais por | Uma opção com um conjunto filtrado de campos de esquema de origem de tipo, data ou hora. O campo selecionado para **[!UICONTROL Carregar dados incrementais por]** deve ter seus valores de data e hora no fuso horário UTC para carregar corretamente os dados incrementais. Todas as origens de lote baseadas em tabela selecionam dados incrementais comparando um valor de carimbo de data/hora da coluna delta com a janela de execução de fluxo correspondente Horário UTC e, em seguida, copiando os dados da origem, se algum dado novo for encontrado na janela de tempo UTC. |
+| Carregar dados incrementais por | Uma opção com um conjunto filtrado de campos de esquema de origem de tipo, data ou hora. O campo selecionado para **[!UICONTROL Load incremental data by]** deve ter seus valores de data e hora no fuso horário UTC para carregar corretamente os dados incrementais. Todas as origens de lote baseadas em tabela selecionam dados incrementais comparando um valor de carimbo de data/hora da coluna delta com a janela de execução de fluxo correspondente Horário UTC e, em seguida, copiando os dados da origem, se algum dado novo for encontrado na janela de tempo UTC. |
 
 ![preenchimento retroativo](../../../images/tutorials/dataflow/table-based/backfill.png)
 
 ## Revisar seu fluxo de dados
 
-A etapa **[!UICONTROL Revisão]** é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
+A etapa **[!UICONTROL Review]** é exibida, permitindo que você revise seu novo fluxo de dados antes de ele ser criado. Os detalhes são agrupados nas seguintes categorias:
 
-* **[!UICONTROL Conexão]**: mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
-* **[!UICONTROL Atribuir campos de conjunto de dados e mapa]**: mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados pertence.
-* **[!UICONTROL Agendamento]**: mostra o período, a frequência e o intervalo ativos do agendamento de assimilação.
+* **[!UICONTROL Connection]**: Mostra o tipo de origem, o caminho relevante do arquivo de origem escolhido e a quantidade de colunas nesse arquivo de origem.
+* **[!UICONTROL Assign dataset & map fields]**: mostra em qual conjunto de dados os dados de origem estão sendo assimilados, incluindo o esquema ao qual o conjunto de dados adere.
+* **[!UICONTROL Scheduling]**: mostra o período, a frequência e o intervalo ativos do agendamento de assimilação.
 
-Depois de revisar o fluxo de dados, selecione **[!UICONTROL Concluir]** e aguarde algum tempo para que o fluxo de dados seja criado.
+Depois de revisar o fluxo de dados, selecione **[!UICONTROL Finish]** e aguarde algum tempo para que o fluxo de dados seja criado.
 
 ![avaliação](../../../images/tutorials/dataflow/table-based/review.png)
 
@@ -137,7 +139,7 @@ Depois que o fluxo de dados for criado, você poderá monitorar os dados que est
 
 ## Excluir seu fluxo de dados
 
-Você pode excluir fluxos de dados que não são mais necessários ou que foram criados incorretamente usando a função **[!UICONTROL Excluir]** disponível no espaço de trabalho **[!UICONTROL Fluxos de Dados]**. Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial sobre [exclusão de fluxos de dados na interface](../delete.md).
+Você pode excluir fluxos de dados que não são mais necessários ou que foram criados incorretamente usando a função **[!UICONTROL Delete]** disponível no espaço de trabalho **[!UICONTROL Dataflows]**. Para obter mais informações sobre como excluir fluxos de dados, consulte o tutorial sobre [exclusão de fluxos de dados na interface](../delete.md).
 
 ## Próximas etapas
 
@@ -151,4 +153,4 @@ Ao seguir este tutorial, você criou com sucesso um fluxo de dados para trazer d
 >
 > A interface do usuário do Experience Platform mostrada no vídeo a seguir está desatualizada. Consulte a documentação acima para obter as capturas de tela e a funcionalidade mais recentes da interface.
 >
->[!VIDEO](https://video.tv.adobe.com/v/32645?quality=12&learn=on&captions=por_br)
+>[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

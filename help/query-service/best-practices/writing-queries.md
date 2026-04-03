@@ -5,7 +5,7 @@ title: Diretrizes gerais para execução de consulta no serviço de consulta
 type: Tutorial
 description: Este documento descreve detalhes importantes a serem conhecidos ao gravar consultas no Serviço de consulta da Adobe Experience Platform.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 2%
@@ -24,7 +24,7 @@ O Adobe Experience Platform [!DNL Query Service] tem dois modelos de execução 
 
 ### Execução de consulta interativa
 
-As consultas podem ser executadas interativamente enviando-as por meio da interface do usuário [!DNL Query Service] ou [&#x200B; por meio de um cliente conectado](../clients/overview.md). Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até que a consulta enviada retorne ou expire.
+As consultas podem ser executadas interativamente enviando-as por meio da interface do usuário [!DNL Query Service] ou [ por meio de um cliente conectado](../clients/overview.md). Ao executar [!DNL Query Service] por meio de um cliente conectado, uma sessão ativa é executada entre o cliente e [!DNL Query Service] até que a consulta enviada retorne ou expire.
 
 A execução de consulta interativa tem as seguintes limitações:
 
@@ -238,21 +238,21 @@ O exemplo a seguir mostra as informações de esquema para a tabela `luma_midval
                          Table "public.luma_midvalues"
       Column       |             Type            | Collation | Nullable | Default 
 |-------------------+-----------------------------+-----------+----------+---------
- timestamp         | timestamp                   |           |          | 
- _id               | text                        |           |          | 
- productlistitems  | anyarray                    |           |          | 
- commerce          | luma_midvalues_commerce     |           |          | 
- receivedtimestamp | timestamp                   |           |          | 
- enduserids        | luma_midvalues_enduserids   |           |          | 
- datasource        | datasource                  |           |          | 
- web               | luma_midvalues_web          |           |          | 
- placecontext      | luma_midvalues_placecontext |           |          | 
- identitymap       | anymap                      |           |          | 
- marketing         | marketing                   |           |          | 
- environment       | luma_midvalues_environment  |           |          | 
- _experience       | luma_midvalues__experience  |           |          | 
- device            | device                      |           |          | 
- search            | search                      |           |          | 
+ timestamp         | timestamp                   |           |          |
+ _id               | text                        |           |          |
+ productlistitems  | anyarray                    |           |          |
+ commerce          | luma_midvalues_commerce     |           |          |
+ receivedtimestamp | timestamp                   |           |          |
+ enduserids        | luma_midvalues_enduserids   |           |          |
+ datasource        | datasource                  |           |          |
+ web               | luma_midvalues_web          |           |          |
+ placecontext      | luma_midvalues_placecontext |           |          |
+ identitymap       | anymap                      |           |          |
+ marketing         | marketing                   |           |          |
+ environment       | luma_midvalues_environment  |           |          |
+ _experience       | luma_midvalues__experience  |           |          |
+ device            | device                      |           |          |
+ search            | search                      |           |          |
 ```
 
 Além disso, você pode obter mais informações sobre uma coluna específica ao anexar o nome da coluna ao nome da tabela. Isso seria gravado no formato `\d {TABLE_NAME}_{COLUMN}`.
@@ -263,8 +263,8 @@ O exemplo a seguir mostra informações adicionais para a coluna `web`, e seria 
                  Composite type "public.luma_midvalues_web"
      Column     |               Type                | Collation | Nullable | Default 
 |----------------+-----------------------------------+-----------+----------+---------
- webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
- webreferrer    | web_webreferrer                   |           |          | 
+ webpagedetails | luma_midvalues_web_webpagedetails |           |          |
+ webreferrer    | web_webreferrer                   |           |          |
 ```
 
 ## Associar conjuntos de dados
@@ -273,7 +273,7 @@ O exemplo a seguir mostra informações adicionais para a coluna `web`, e seria 
 
 O exemplo a seguir associaria os dois conjuntos de dados a seguir (`your_analytics_table` e `custom_operating_system_lookup`) e criaria uma instrução `SELECT` para os 50 principais sistemas operacionais por número de exibições de página.
 
-**Query**
+**Consulta**
 
 ```sql
 SELECT 

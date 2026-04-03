@@ -2,7 +2,7 @@
 title: Conexão com a Lista de clientes do Pinterest
 description: Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram seu site ou pessoas que já interagiram com seu conteúdo no Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '951'
 ht-degree: 4%
@@ -26,7 +26,7 @@ Crie públicos-alvo com base em suas listas de clientes, pessoas que visitaram s
 
 ## Identidades suportadas {#supported-identities}
 
-O destino [!DNL Pinterest Customer List] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=pt-BR#getting-started).
+O destino [!DNL Pinterest Customer List] dá suporte à ativação das identidades descritas na tabela abaixo. Saiba mais sobre [identidades](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 Na [etapa de mapeamento](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) do fluxo de trabalho de ativação de destino, mapeie as identidades desejadas para o campo de destino *pinterest_audience*. As identidades são diferenciadas e resolvidas após a assimilação de dados na Pinterest.
 

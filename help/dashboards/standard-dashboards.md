@@ -2,7 +2,7 @@
 title: Painéis de controle padrão
 description: Saiba como criar e gerenciar painéis personalizados onde você pode criar, adicionar e editar widgets personalizados para visualizar as métricas principais.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 1%
@@ -14,11 +14,13 @@ ht-degree: 1%
 Use os Painéis do Adobe Experience Platform para acelerar insights e personalizar a visualização por meio do recurso Painéis. Use esse recurso para criar e gerenciar painéis personalizados, nos quais você pode criar, adicionar e editar widgets de bespoke para visualizar as métricas principais relevantes para sua organização.
 
 
-<!-- Getting started / permissions section commented out for Beta. This will be necessary after GA only
+<!-- 
+Getting started / permissions section commented out for Beta. This will be necessary after GA only
 
 ## Getting started
 
-To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. -->
+To view dashboards in Adobe Experience Platform you must have the appropriate permissions enabled. Please read the [dashboards permissions documentation](./permissions.md#available-permissions) to learn how to grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console. If you do not have administrator privileges for your organization, contact your product administrator to obtain the required permissions. 
+-->
 
 ## Criar um painel personalizado
 
@@ -28,10 +30,12 @@ Para criar um painel personalizado, primeiro, navegue até o inventário do pain
 
 Antes de adicionar um painel personalizado, o inventário de painéis está vazio e exibe &quot;Nenhum painel encontrado&quot;. mensagem. Depois de criado, todos os painéis são listados no inventário de painéis.
 
-<!-- >[!NOTE]
+<!-- 
+>[!NOTE]
 >
 >To edit an existing dashboard, select the dashboard name from the inventory list followed by the pencil icon (![A pencil icon.](/help/images/icons/edit.png))
->![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} -->
+>![A custom inventory listed in the dashboard inventory.](./images/standard-dashboards/dashbaord-inventory.png "A custom inventory listed in the dashboard inventory."){width="100" zoomable="yes"} 
+-->
 
 A caixa de diálogo [!UICONTROL Create dashboard] é exibida. Insira um nome descritivo amigável para a coleção de widgets que você deseja criar e selecione **[!UICONTROL Save]**.
 
@@ -130,7 +134,7 @@ Como alternativa, você pode criar um período personalizado para filtrar seus d
 
 ![A caixa de diálogo [!UICONTROL Filter: date_key] com caixas de seleção de dia individual foi marcada e desmarcada.](./images/standard-dashboards/select-dates.png)
 
-### Propriedades do dispositivo
+### Propriedades do widget
 
 Selecione o ícone de propriedades (![O ícone de propriedades.](/help/images/icons/properties.png)) no painel direito para abrir o painel de propriedades. No painel [!UICONTROL Properties], insira um nome para o widget no campo de texto [!UICONTROL Widget title].
 
@@ -182,4 +186,4 @@ Para descobrir as métricas e visualizações pré-configuradas disponíveis par
 
 Para reforçar sua compreensão dos painéis no Experience Platform, assista ao seguinte vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/3417878?captions=por_br&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3409637?quality=12&learn=on)

@@ -2,24 +2,24 @@
 title: Notas de versão da Adobe Experience Platform de setembro de 2021
 description: As notas de versão de setembro de 2021 da Adobe Experience Platform.
 exl-id: 96375409-803f-45af-805e-900207d972e4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '386'
-ht-degree: 27%
+ht-degree: 28%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 29 de setembro de 2021**
+**Data de lançamento: quinta-feira, 29 de setembro de 2021**
 
-Atualizações dos recursos já existentes na Adobe Experience Platform:
+Atualizações dos recursos existentes na Adobe Experience Platform:
 
-- [Assimilação de dados](#ingestion)
+- [Ingestão de dados](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
-- [Origens](#sources)
+- [Fontes](#sources)
 
-## Assimilação de dados {#ingestion}
+## Ingestão de dados {#ingestion}
 
 A assimilação de dados da Adobe Experience Platform representa os vários métodos pelos quais a Experience Platform assimila dados de várias fontes, bem como a forma como esses dados são mantidos no Data Lake para uso pelos serviços downstream da Experience Platform.
 
@@ -43,11 +43,11 @@ O [!DNL Data Prep] permite que os engenheiros de dados mapeiem, transformem e va
 
 Para saber mais sobre [!DNL Data Prep], consulte a [[!DNL Data Prep] visão geral](../../data-prep/home.md).
 
-## Origens {#sources}
+## Fontes {#sources}
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 | Recurso | Descrição |
 | --- | --- |

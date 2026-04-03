@@ -3,7 +3,7 @@ keywords: Experience Platform;página inicial;tópicos populares;fontes;conector
 title: Configurar especificações de origem para Origens de Autoatendimento (SDK em Lote)
 description: Este documento fornece uma visão geral das configurações que você precisa preparar para usar as Origens de Autoatendimento (SDK em Lote).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 2ff70ee6e4aa7fd723293e66000ccb161d61ab6a
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2107'
 ht-degree: 1%

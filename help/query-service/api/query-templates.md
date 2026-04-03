@@ -5,7 +5,7 @@ title: Endpoint da API de Modelos de Consulta
 description: Este guia detalha as várias chamadas de API do modelo de consulta que você pode fazer usando a API do Serviço de consulta.
 role: Developer
 exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '977'
 ht-degree: 3%
@@ -44,7 +44,7 @@ Veja a seguir uma lista de parâmetros de consulta disponíveis para listar mode
 | `orderby` | Especifica o campo pelo qual ordenar resultados. Os campos com suporte são `created` e `updated`. Por exemplo, `orderby=created` classificará os resultados por ordem crescente criada. Adicionar um `-` antes de criar (`orderby=-created`) classificará os itens por ordem decrescente. |
 | `limit` | Especifica o limite de tamanho de página para controlar o número de resultados incluídos em uma página. (*Valor padrão: 20*) |
 | `start` | Especifique um carimbo de data e hora no formato ISO para ordenar os resultados. Se nenhuma data de início for especificada, a chamada à API retornará primeiro os modelos criados mais antigos e, em seguida, continuará a listar os resultados mais recentes.Os carimbos de data e hora ISO <br> permitem diferentes níveis de granularidade na data e hora. Os carimbos de data e hora ISO básicos assumem o formato de: `2020-09-07` para expressar a data em 7 de setembro de 2020. Um exemplo mais complexo seria escrito como `2022-11-05T08:15:30-05:00` e corresponde a 5 de novembro de 2022, às 8:15:30 am, Hora Padrão do Leste dos EUA. Um fuso horário pode ser fornecido com um deslocamento UTC e é indicado pelo sufixo &quot;Z&quot; (`2020-01-01T01:01:01Z`). Se nenhum fuso horário for fornecido, o padrão será zero. |
-| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter HTML de escape. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos com suporte são `name` e `userId`. O único operador com suporte é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de consulta com o nome `my_template`. |
+| `property` | Filtrar resultados com base em campos. Os filtros **devem** ter HTML com escape. As vírgulas são usadas para combinar vários conjuntos de filtros. Os campos com suporte são `name` e `userId`. O único operador com suporte é `==` (igual a). Por exemplo, `name==my_template` retornará todos os modelos de consulta com o nome `my_template`. |
 
 **Solicitação**
 
@@ -140,7 +140,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/query-templates
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `sql` | A consulta SQL que você deseja criar. Você pode usar SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar uma `$` à chave de parâmetro. Por exemplo, `$key` e forneça os parâmetros usados no SQL como pares de valores da chave JSON no campo `queryParameters`. Os valores transmitidos aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deverá substituí-los na solicitação POST. |
+| `sql` | A consulta SQL que você deseja criar. Você pode usar SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar uma `$` à chave de parâmetro. Por exemplo, `$key` e forneça os parâmetros usados no SQL como pares de valores da chave JSON no campo `queryParameters`. Os valores transmitidos aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deve substituí-los na solicitação POST. |
 | `name` | O nome do modelo de consulta. |
 | `queryParameters` | Um par de valores chave para substituir quaisquer valores parametrizados na instrução SQL. Somente é necessário **se** você estiver usando substituições de parâmetros no SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores principais. |
 
@@ -189,7 +189,7 @@ GET /query-templates/{TEMPLATE_ID}
 ```
 
 | Propriedade | Descrição |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `{TEMPLATE_ID}` | O valor `id` do modelo de consulta que você deseja recuperar. |
 
 **Solicitação**
@@ -254,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->A solicitação PUT exige que os campos sql e name sejam preenchidos e **substituirá** o conteúdo atual desse modelo de consulta.
+>A solicitação PUT requer que os campos sql e name sejam preenchidos, e irá **substituir** o conteúdo atual desse modelo de consulta.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -273,7 +273,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094
 
 | Propriedade | Descrição |
 | -------- | ----------- |
-| `sql` | A consulta SQL que você deseja criar. Você pode usar SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar uma `$` à chave de parâmetro. Por exemplo, `$key` e forneça os parâmetros usados no SQL como pares de valores da chave JSON no campo `queryParameters`. Os valores transmitidos aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deverá substituí-los na solicitação POST. |
+| `sql` | A consulta SQL que você deseja criar. Você pode usar SQL padrão ou uma substituição de parâmetro. Para usar uma substituição de parâmetro no SQL, você deve anexar uma `$` à chave de parâmetro. Por exemplo, `$key` e forneça os parâmetros usados no SQL como pares de valores da chave JSON no campo `queryParameters`. Os valores transmitidos aqui serão os parâmetros padrão usados no modelo. Se quiser substituir esses parâmetros, você deve substituí-los na solicitação POST. |
 | `name` | O nome do modelo de consulta. |
 | `queryParameters` | Um par de valores chave para substituir quaisquer valores parametrizados na instrução SQL. Somente é necessário **se** você estiver usando substituições de parâmetros no SQL fornecido. Nenhuma verificação de tipo de valor será feita nesses pares de valores principais. |
 

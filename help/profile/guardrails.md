@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o desempenho e as medidas de proteção aplicadas pelo sistema para segmentação e dados de perfil para garantir o uso ideal da funcionalidade da Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 28009ec826e76a9ef07f0c36ff1a7230ced812eb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2744'
 ht-degree: 2%
@@ -18,7 +18,7 @@ O Adobe Experience Platform permite fornecer experiências personalizadas entre 
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 >
 >Como alternativa, você pode usar o [serviço de Capacidade](../landing/license-usage-and-guardrails/capacity.md) para monitorar e definir sua taxa de transferência de streaming e outras opções no Experience Platform.
 
@@ -95,8 +95,8 @@ As medidas de proteção a seguir se referem ao tamanho dos dados e fornecem lim
 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --------- | ----- | ---------- | ----------- |
-| Tamanho máximo do ExperienceEvent | 10 KB | Proteção imposta pelo sistema | **O tamanho máximo de um evento é 10KB.A assimilação de** continuará, entretanto, qualquer evento maior que 10 KB será descartado. |
-| Tamanho máximo do registro de perfil | 100 KB | Proteção imposta pelo sistema | **O tamanho máximo de um registro de perfil é 100KB.A assimilação de** continuará, entretanto, registros de perfil maiores que 100 KB serão descartados. |
+| Tamanho máximo do ExperienceEvent | 10KB | Proteção imposta pelo sistema | **O tamanho máximo de um evento é 10KB.A assimilação de** continuará, entretanto, qualquer evento maior que 10 KB será descartado. |
+| Tamanho máximo do registro de perfil | 100KB | Proteção imposta pelo sistema | **O tamanho máximo de um registro de perfil é 100KB.A assimilação de** continuará, entretanto, registros de perfil maiores que 100 KB serão descartados. |
 | Tamanho máximo do fragmento do perfil | 50 MB | Proteção imposta pelo sistema | **O tamanho máximo de um único fragmento de perfil é de 50 MB.A segmentação, as exportações e as pesquisas de** podem falhar para qualquer [fragmento de perfil](#profile-fragments) com mais de 50 MB. |
 | Tamanho máximo de armazenamento do perfil | 50 MB | Proteção de desempenho | **O tamanho máximo de um perfil armazenado é 50MB.** Adicionar novos [fragmentos de perfil](#profile-fragments) em um perfil com mais de 50 MB afetará o desempenho do sistema. Por exemplo, um perfil pode conter um único fragmento de 50 MB ou pode conter vários fragmentos em vários conjuntos de dados com um tamanho total combinado de 50 MB. Tentar armazenar um perfil com um único fragmento maior que 50 MB, ou com vários fragmentos que totalizam mais de 50 MB em tamanho combinado, afetará o desempenho do sistema. |
 | Número de lotes Profile ou ExperienceEvent assimilados por dia | 90 | Proteção de desempenho | **O número máximo de lotes de Profile ou ExperienceEvent assimilados por dia é 90.** Isso significa que o total combinado de lotes Profile e ExperienceEvent assimilados a cada dia não pode exceder 90. A ingestão de lotes adicionais afetará o desempenho do sistema. |
@@ -193,7 +193,7 @@ Vários conjuntos de relatórios podem ser ativados para o Perfil desde que todo
 Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos Descrição do produto da Real-Time CDP:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=pt-BR#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

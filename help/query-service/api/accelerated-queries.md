@@ -3,7 +3,7 @@ title: Endpoint de consultas aceleradas
 description: Saiba como acessar o armazenamento acelerado de consultas de maneira sem estado para retornar resultados rapidamente com base em dados agregados. Este documento fornece um exemplo de solicitação HTTP e resposta para o endpoint de consultas aceleradas do Serviço de consulta.
 role: Developer
 exl-id: 29ea4d25-9c46-4b29-a6d7-45ac33dcb0fb
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '560'
 ht-degree: 1%
@@ -24,7 +24,7 @@ As seções a seguir detalham as chamadas de API necessárias para acessar o arm
 
 ## Executar uma consulta acelerada {#run-accelerated-query}
 
-Faça uma solicitação POST ao ponto de extremidade `/accelerated-queries` para executar uma consulta acelerada. A consulta está contida diretamente na carga da solicitação ou é referenciada com uma ID de modelo.
+Faça uma solicitação POST para o ponto de extremidade `/accelerated-queries` para executar uma consulta acelerada. A consulta está contida diretamente na carga da solicitação ou é referenciada com uma ID de modelo.
 
 **Formato da API**
 
@@ -82,7 +82,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/accelerated-queries
 |---|---|
 | `dbName` | O nome do banco de dados para o qual você está fazendo uma consulta acelerada. O valor de `dbName` deve ter o formato de `{SANDBOX_NAME}:{ACCELERATED_STORE_DATABASE}.{ACCELERATED_STORE_SCHEMA}`. O banco de dados fornecido deve existir no repositório acelerado ou a solicitação resultará em um erro. Você também deve garantir que o cabeçalho `x-sandbox-name` e o nome da sandbox em `dbName` façam referência à mesma sandbox. |
 | `sql` | Uma string de instrução SQL. O tamanho máximo permitido é de 1000000 caracteres. |
-| `templateId` | O identificador exclusivo de uma consulta criada e salva como modelo quando uma solicitação POST é feita para o ponto de extremidade `/templates`. |
+| `templateId` | O identificador exclusivo de uma consulta criado e salvo como modelo quando uma solicitação POST é feita para o ponto de extremidade `/templates`. |
 | `name` | Um nome descritivo opcional amigável para o usuário para a consulta acelerada. |
 | `description` | Um comentário opcional sobre a intenção do query para ajudar outros usuários a entender sua finalidade. O tamanho máximo permitido é de 1000 bytes. |
 

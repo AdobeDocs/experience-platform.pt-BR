@@ -3,7 +3,7 @@ title: Magnite Conexão de destino em tempo real
 description: Use esse destino para fornecer públicos-alvo da CDP do Adobe para a plataforma de transmissão Magnite em tempo real.
 last-substantial-update: 2024-11-18T00:00:00Z
 exl-id: 4e08a14b-6800-41e1-95a5-826a6241144d
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 2%

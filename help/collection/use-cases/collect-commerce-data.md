@@ -2,9 +2,9 @@
 title: Coletar informações de comércio, produto e pedido usando o Adobe Experience Platform Web SDK
 description: Saiba como adicionar dados relacionados a produtos ou um carrinho de compras usando o Adobe Experience Platform Web SDK.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: 9b2ecedfafbafed042eba73a034cb9b9e95af579
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '786'
 ht-degree: 2%
 
 ---
@@ -51,7 +51,7 @@ Esta seção descreve os campos disponíveis no objeto `commerce`.
 
 Expanda a seção abaixo para ver um exemplo de um comando do Web SDK usando um campo do objeto `commerce`.
 
-+++`productViews`
++++ productViews
 
 Uma chamada `sendEvent` básica do Web SDK definindo o campo `productViews` como `1`:
 
@@ -91,7 +91,7 @@ Esta seção descreve todos os campos suportados pelo objeto `order`.
 
 Expanda a seção abaixo para ver um exemplo de um comando do Web SDK usando o objeto `commerce`.
 
-+++Exemplo de objeto `Order`
++++ Exemplo de objeto `Order`
 
 Uma chamada de Web SDK `sendEvent` definindo o objeto `order` que se aplica a vários produtos na matriz `productListItems`:
 
@@ -151,7 +151,7 @@ A lista de produtos indica quais produtos estão relacionados à ação correspo
 
 Expanda as seções abaixo para ver exemplos de comandos do Web SDK usando o objeto `productListItems`.
 
-+++Exemplo de `productListItems`
++++ Exemplo de `productListItems`
 
 Uma chamada `sendEvent` do Web SDK define o `productViews` para vários produtos na matriz `productListItems`:
 
@@ -179,7 +179,7 @@ alloy("sendEvent",{
 
 +++
 
-+++Exemplo de `productListAdds`
++++ Exemplo de `productListAdds`
 
 Uma chamada `sendEvent` do Web SDK que define o evento `productListAdds` para vários produtos na matriz `productListItems`:
 
@@ -213,7 +213,7 @@ alloy("sendEvent",{
 
 +++
 
-+++Exemplo de `checkouts`
++++ Exemplo de `checkouts`
 
 Uma chamada `sendEvent` do Web SDK que define o evento `checkouts` para vários produtos na matriz `productListItems`:
 

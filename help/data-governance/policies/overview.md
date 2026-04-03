@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Visão geral das políticas de uso de dados
 description: As políticas de uso de dados são regras que descrevem os tipos de ações de marketing que você tem permissão ou restrição para executar em dados dentro do Adobe Experience Platform.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1207'
 ht-degree: 18%
@@ -52,12 +52,13 @@ Quando o uso de dados ocorrer no serviço de sua organização, ações de marke
 
 Consulte o apêndice deste documento para obter uma lista de [ações de marketing definidas pela Adobe disponíveis](#core-actions). Você também pode definir suas próprias ações de marketing personalizadas usando a API [!DNL Policy Service] ou a interface do usuário [!DNL Experience Platform]. Mais informações sobre como trabalhar com ações e políticas de marketing são fornecidas na próxima seção.
 
-<!-- (Add after AAM DEC mapping doc is published)
+<!-- 
+(Add after AAM DEC mapping doc is published)
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=pt-BR).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Gerenciamento de políticas de uso de dados {#manage}

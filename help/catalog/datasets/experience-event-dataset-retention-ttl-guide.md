@@ -2,10 +2,10 @@
 title: Gerenciar a retenção do conjunto de dados do evento de experiência no Data Lake usando TTL
 description: Saiba como avaliar, definir e gerenciar a Retenção de conjunto de dados de evento de experiência no data lake usando configurações de Tempo de vida (TTL) com APIs do Adobe Experience Platform. Este guia explica como a expiração em nível de linha de TTL suporta políticas de retenção de dados, otimiza a eficiência do armazenamento e garante um gerenciamento eficaz do ciclo de vida dos dados. Ela também fornece casos de uso e práticas recomendadas para ajudar você a aplicar o TTL de maneira eficaz.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '2472'
-ht-degree: 0%
+source-wordcount: '2471'
+ht-degree: 1%
 
 ---
 
@@ -112,7 +112,7 @@ Use o ponto de extremidade `/ttl/{DATASET_ID}` da API de Higiene de Dados para a
 
 Consulte a documentação da [API de higiene de dados](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) do Adobe Developer para obter mais informações.
 
-Para [verificar o TTL aplicado atualmente a um conjunto de dados](#check-applied-ttl-values), faça uma solicitação GET para o ponto de extremidade [&#x200B; da &#x200B;](https://developer.adobe.com/experience-platform-apis/references/catalog/)API do Serviço de Catálogo`/dataSets/{DATASET_ID}`.
+Para [verificar o TTL aplicado atualmente a um conjunto de dados](#check-applied-ttl-values), faça uma solicitação GET para o ponto de extremidade [ da ](https://developer.adobe.com/experience-platform-apis/references/catalog/)API do Serviço de Catálogo`/dataSets/{DATASET_ID}`.
 
 >[!TIP]
 >
@@ -318,7 +318,8 @@ A expiração em nível de linha requer as seguintes condições técnicas:
 Os TTLs do conjunto de dados são avaliados e processados a cada 30 dias, excluindo todos os registros expirados. Um evento será considerado expirado se tiver sido assimilado na Experience Platform há mais de 30 dias (data de assimilação > 30 dias) e sua data de evento exceder o período de retenção definido (TTL).
 +++
 
-<!-- ### How soon will the Dataset Retention job delete data from Profile services?
+<!-- 
+### How soon will the Dataset Retention job delete data from Profile services?
 
 +++Answer
 Once a retention policy is set, existing events that already exceed the newly defined TTL are immediately deleted. Newer events remain until their timestamps surpass the retention period.
@@ -328,7 +329,8 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 - New events receive a 30-day expiration as they are ingested.
 - Existing events with a timestamp older than April 15th are immediately deleted.
 - Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp (for example, an event from April 18th would be deleted on May 18th).
-+++ -->
++++ 
+-->
 
 ### Posso definir políticas de retenção diferentes para data lake e serviços de perfil?
 
@@ -345,7 +347,7 @@ Sim, você pode definir políticas de retenção diferentes para os serviços de
 ### Como posso verificar o uso do meu conjunto de dados atual?
 
 +++Resposta
-Você pode verificar o tamanho de armazenamento do conjunto de dados mais recente para armazenamentos de data lake e Perfil como métricas separadas no espaço de trabalho de inventário [!UICONTROL Conjunto de dados]. Classifique as colunas para identificar os maiores conjuntos de dados e verificar se as políticas de retenção foram aplicadas.
+Você pode verificar o tamanho de armazenamento do conjunto de dados mais recente para armazenamentos de data lake e Perfil como métricas separadas no espaço de trabalho de inventário [!UICONTROL Dataset]. Classifique as colunas para identificar os maiores conjuntos de dados e verificar se as políticas de retenção foram aplicadas.
 
 Para uso em nível de sandbox, consulte o Painel de uso da licença. Consulte a [documentação de Uso da Licença](../../dashboards/guides/license-usage.md) para obter detalhes.
 +++

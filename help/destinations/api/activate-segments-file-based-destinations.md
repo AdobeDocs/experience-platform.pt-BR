@@ -4,7 +4,7 @@ title: Ative públicos para destinos baseados em arquivo usando a API do Serviç
 description: Saiba como usar a API do Serviço de fluxo para exportar arquivos com perfis qualificados para destinos de armazenamento na nuvem.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '4933'
 ht-degree: 4%
@@ -4066,7 +4066,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 **Resposta**
 
-+++Criar esquema de saída - Resposta
++++ Criar esquema de saída - Resposta
 
 ```json
 {
@@ -4372,6 +4372,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/conver
 
 A ID na resposta representa o identificador exclusivo do esquema de entrada criado. Copie a ID da resposta, pois você reutilizará isso em uma etapa posterior.
 
++++
+
 >[!ENDSHADEBOX]
 
 ### Criar conjunto de mapeamento {#create-mapping-set}
@@ -4382,7 +4384,7 @@ Em seguida, use a [API de preparação de dados](https://developer.adobe.com/exp
 
 **Solicitação**
 
-+++Criar conjunto de mapeamento - Solicitação
++++ Criar conjunto de mapeamento - Solicitação
 
 >[!IMPORTANT]
 >
@@ -4775,7 +4777,7 @@ Para adicionar a geração de manifesto de arquivo a um destino existente, é ne
 
 **Solicitação**
 
-+++Adicionar manifesto de arquivo à conexão de destino existente - Solicitação
++++ Adicionar manifesto de arquivo à conexão de destino existente - Solicitação
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
@@ -4795,6 +4797,8 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ]'
 ```
 
++++
+
 >[!ENDSHADEBOX]
 
 ## Validar fluxo de dados (obter as execuções do fluxo de dados) {#get-dataflow-runs}
@@ -4807,7 +4811,7 @@ Para verificar as execuções de um fluxo de dados, use a API de execuções de 
 
 **Solicitação**
 
-+++Obter execuções de fluxo de dados - Solicitação
++++ Obter execuções de fluxo de dados - Solicitação
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4823,7 +4827,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Resposta**
 
-+++Obter execuções de fluxo de dados - Resposta
++++ Obter execuções de fluxo de dados - Resposta
 
 ```json
 {

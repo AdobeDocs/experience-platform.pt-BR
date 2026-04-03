@@ -4,7 +4,7 @@ description: Saiba mais sobre detalhes do modelo no Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Leia o seguinte para obter um guia sobre as diferentes seções de um detalhe de
 
 A visão geral do modelo contém informações gerais sobre um modelo de IA. Use esta seção para fornecer informações como nome, finalidade e tipo do modelo de IA. Além disso, você pode usar esta seção para identificar os usuários desejados e detalhar como seu modelo se integra ao Experience Platform.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -47,7 +47,7 @@ A visão geral do modelo contém informações gerais sobre um modelo de IA. Use
 
 A seção de uso pretendido contém informações sobre os principais casos de uso do modelo de IA. Você pode usar esta seção para expandir os problemas que seu modelo pretende resolver, os setores e/ou domínios para os quais seu modelo é relevante e os casos de uso incorreto que devem ser evitados ao usar seu modelo de IA.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ A seção de uso pretendido contém informações sobre os principais casos de u
 
 A seção Entradas e saídas do modelo contém informações sobre os tipos de dados compatíveis que seu modelo assume como entrada e retorna como saída. Você pode usar esta seção para fornecer exemplos das entradas e saídas de dados relevantes para o modelo de IA.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -81,7 +81,7 @@ A seção Entradas e saídas do modelo contém informações sobre os tipos de d
 
 A seção Dados de treinamento contém informações sobre os conjuntos de dados usados para treinar um determinado modelo de IA. Você pode usar esta seção para detalhar o tamanho e a fonte dos dados de treinamento, as distorções identificadas no conjunto de dados e como os dados foram pré-processados.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -98,13 +98,13 @@ A seção Dados de treinamento contém informações sobre os conjuntos de dados
 
 A arquitetura do modelo e a seção de treinamento descrevem o blueprint do seu modelo de IA. Esta seção refere-se à estrutura e ao design do modelo de IA, incluindo detalhes sobre o tipo de algoritmo e os métodos de avaliação usados. Você também pode usar esta seção para fornecer informações sobre as estruturas de treinamento usadas, bem como os recursos de computação que foram usados no treinamento.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
 | Qual arquitetura é usada pelo modelo? | O tipo de rede neural, método de conjunto etc. | O modelo usa o Gradient Boosting Decision Trees (GBDT) usando o XGBoost, otimizado para dados estruturados. Ele é treinado em sequências históricas de eventos do cliente para identificar padrões comportamentais preditivos. |
 | Quais algoritmos foram aplicados? | As técnicas de aprendizado de máquina usadas. | O modelo é construído usando uma abordagem de aprendizado supervisionada, aproveitando o Gradient Boosting Decision Trees (GBDT) com o XGBoost como o algoritmo de aprendizado principal. Além disso, a regressão logística é incorporada como um modelo de linha de base para a avaliação de referência da precisão preditiva. |
-| Quais estruturas de treinamento foram usadas? | As bibliotecas ou plataformas usadas para treinamento. | O modelo foi desenvolvido usando TensorFlow, XGBoost e scikit-learn. O treinamento é executado na infraestrutura em nuvem da IA da Adobe usando GPUs NVIDIA V100, que oferecem suporte a conjuntos de dados em grande escala. |
+| Quais estruturas de treinamento foram usadas? | As bibliotecas ou plataformas usadas para treinamento. | O modelo foi desenvolvido usando TensorFlow, XGBoost e scikit-learn. O treinamento é executado na infraestrutura em nuvem da Adobe AI usando GPUs NVIDIA V100, que oferecem suporte a conjuntos de dados em grande escala. |
 | Quais recursos de computação foram usados para treinamento? | Os recursos de hardware e nuvem usados para treinamento. | GPUs NVIDIA V100, treinadas em infraestrutura em nuvem Google. |
 | Que métodos de avaliação foram utilizados? | As métricas e os procedimentos de teste usados para a avaliação. | AUC-ROC, recuperação de precisão e validação cruzada. |
 
@@ -116,7 +116,7 @@ A arquitetura do modelo e a seção de treinamento descrevem o blueprint do seu 
 
 A seção Desempenho e avaliação contém informações sobre as métricas e os métodos usados para avaliar o desempenho do modelo em suas tarefas desejadas. Você pode usar esta seção para fornecer informações sobre as métricas de avaliação usadas, bem como as deficiências ou casos de falha identificados.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -133,7 +133,7 @@ A seção Desempenho e avaliação contém informações sobre as métricas e os
 
 A seção Integridade e viés contém informações sobre o desempenho do modelo de IA em relação às métricas de integridade e viés. A equidade refere-se à capacidade do modelo de fornecer resultados equitativos em diferentes grupos demográficos e casos de uso, enquanto o viés se refere a erros sistemáticos que resultam em resultados injustos. Use esta seção para detalhar as verificações de integridade que foram executadas e discutir como o modelo reduz o viés.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -149,7 +149,7 @@ A seção Integridade e viés contém informações sobre o desempenho do modelo
 
 A seção Explicabilidade e interpretabilidade contém informações sobre a capacidade de um modelo de IA de fornecer explicações claras e compreensíveis e a facilidade com que um usuário humano pode entender como os recursos de entrada afetam previsões e respostas. Use esta seção para explicar como os usuários podem entender melhor por que seu modelo toma determinadas decisões e quais ferramentas ou técnicas estão disponíveis para interpretação.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -168,7 +168,7 @@ A seção Robustez e generalização contém informações sobre o desempenho do
 >
 >Em IA, &quot;dados invisíveis&quot; se referem a dados diferentes dos dados em que um determinado modelo foi treinado.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -183,7 +183,7 @@ A seção Robustez e generalização contém informações sobre o desempenho do
 
 A seção considerações de segurança e privacidade contém informações sobre as medidas e práticas implementadas para proteger dados confidenciais e garantir o uso seguro de seu modelo. Você pode usar esta seção para responder perguntas sobre como seu modelo lida com dados confidenciais.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -198,7 +198,7 @@ A seção considerações de segurança e privacidade contém informações sobr
 
 A seção de monitoramento e manutenção contém informações sobre como o desempenho do modelo é monitorado ao longo do tempo e com que frequência o modelo é retreinado. Você pode usar esta seção para fornecer informações sobre como métricas como precisão, precisão, recuperação e latência são rastreadas.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -213,7 +213,7 @@ A seção de monitoramento e manutenção contém informações sobre como o des
 
 A seção Considerações éticas e IA responsável contém informações sobre quaisquer preocupações éticas associadas ao Modelo de IA. Esta seção também contém como seu modelo se alinha aos princípios de IA responsável. Use esta seção para fornecer informações sobre os possíveis impactos éticos do uso do seu modelo, incluindo o reconhecimento de distorções, a garantia de equidade e a prevenção de danos a indivíduos ou grupos.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -228,7 +228,7 @@ A seção Considerações éticas e IA responsável contém informações sobre 
 
 A seção Limitações conhecidas contém informações sobre as limitações existentes identificadas para o modelo de IA. Use esta seção para sublinhar as condições nas quais seu modelo de IA pode ter um desempenho inadequado e destacar quaisquer limitações que os usuários devem conhecer.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |
@@ -243,7 +243,7 @@ A seção Limitações conhecidas contém informações sobre as limitações ex
 
 A seção de melhorias futuras contém informações sobre atualizações de recursos planejadas para seu modelo de IA. Use esta seção para detalhar seu roteiro de aprimoramento.
 
-+++Exibir perguntas e exemplos de respostas
++++Exibir perguntas e respostas de exemplo
 
 | Pergunta | Informações necessárias | Exemplo de resposta |
 | --- | --- | --- |

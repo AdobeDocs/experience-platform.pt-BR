@@ -2,13 +2,13 @@
 solution: Experience Platform
 title: Visão geral de várias nuvens do Adobe Experience Platform
 description: Saiba quais são as diferenças entre executar o Experience Platform no Microsoft Azure e no Amazon Web Services.
-source-git-commit: d3654573cec338f173d151fd5e62ef5c8b893c11
+exl-id: da552311-6e50-4b09-bcc8-696a25325796
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '560'
-ht-degree: 3%
+ht-degree: 4%
 
 ---
-
 
 # Visão geral de várias nuvens do Adobe Experience Platform
 
@@ -16,7 +16,7 @@ O Adobe Experience Platform é um produto de várias nuvens, que oferece a opç�
 
 >[!AVAILABILITY]
 >
->O Adobe Experience Platform em execução no Amazon Web Services (AWS) está disponível atualmente para um número limitado de clientes. Para saber mais sobre o Experience Platform no AWS, entre em contato com a equipe de conta do Adobe.
+>O Adobe Experience Platform em execução no Amazon Web Services (AWS) está disponível atualmente para um número limitado de clientes. Para saber mais sobre o Experience Platform no AWS, entre em contato com a equipe de conta da Adobe.
 
 Esta página fornece uma visão geral de alto nível das duas infraestruturas de nuvem disponíveis e inclui orientação sobre como escolher a mais adequada para sua empresa.
 
@@ -26,7 +26,7 @@ Escolher entre o Experience Platform no Azure ou no AWS depende de vários fator
 
 * **Necessidades técnicas e comerciais**: avalie as necessidades da sua organização e a estratégia de nuvem a longo prazo.
 * **Infraestrutura existente**: considere sua infraestrutura de nuvem atual e suas necessidades de integração.
-* **Dependência de tecnologia de nuvem**: se sua empresa depende muito das tecnologias da Microsoft, o Azure pode ser a melhor opção. Se você depender mais dos serviços da Amazon, o AWS pode ser a melhor opção.
+* **Dependência de tecnologia de nuvem**: se sua empresa depende muito das tecnologias da Microsoft, a Azure pode ser a melhor opção. Se você depender mais dos serviços da Amazon, o AWS pode ser a melhor opção.
 * **Considerações sobre residência de dados**: avalie os requisitos de residência de dados de sua organização e garanta que a plataforma de nuvem escolhida ofereça regiões que estejam em conformidade com esses regulamentos.
 
 Considerando os fatores acima, use esta árvore decisória simplificada para ajudar a decidir sobre a implementação de nuvem correta para suas necessidades comerciais.
@@ -39,11 +39,11 @@ Escolher a região de nuvem certa é fundamental para atender aos requisitos de 
 
 ![Imagem que mostra a distribuição geográfica de locais de hospedagem.](assets/multi-cloud/hosting-locations-map.png){align="center" zoomable="yes"}
 
-O Experience Platform está disponível em seis locais de hospedagem do Microsoft Azure, um local de hospedagem do Amazon Web Services (AWS) e roteia dados para serviços da Adobe por meio de sete [nós Edge Network](../collection/home.md#edge) distribuídos ao redor do mundo.
+O Experience Platform está disponível em seis locais de hospedagem do Microsoft Azure, um local de hospedagem do Amazon Web Services (AWS) e encaminha dados para os serviços da Adobe por meio de sete [nós do Edge Network](../collection/home.md#edge) distribuídos ao redor do mundo.
 
 ### Regiões do Microsoft Azure {#azure-regions}
 
-A tabela abaixo indica as regiões do Microsoft Azure em que o Experience Platform está hospedado.
+A tabela abaixo indica as regiões do Microsoft Azure onde o Experience Platform está hospedado.
 
 | País | Código da região | Localização |
 |---------|-------------|----------|
@@ -58,7 +58,7 @@ A tabela abaixo indica as regiões do Microsoft Azure em que o Experience Platfo
 
 ### Regiões do Amazon Web Services (AWS) {#aws-regions}
 
-A tabela abaixo indica as regiões da AWS onde o Experience Platform está hospedado. Volte regularmente para ver se locais adicionais foram adicionados.
+A tabela abaixo indica as regiões do AWS onde o Experience Platform está hospedado. Volte regularmente para ver se locais adicionais foram adicionados.
 
 | País | Código da região | Localização |
 |---------|-------------|----------|
@@ -68,11 +68,11 @@ A tabela abaixo indica as regiões da AWS onde o Experience Platform está hospe
 
 ## Paridade de recursos {#feature-parity}
 
-O Adobe tem o compromisso de oferecer paridade de recursos entre plataformas de nuvem para todos os aplicativos em execução no Experience Platform, como:
+A Adobe tem o compromisso de oferecer paridade de recursos entre plataformas de nuvem para todos os aplicativos em execução no Experience Platform, como:
 
 * [Real-Time Customer Data Platform](../rtcdp/home.md)
 * [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/ajo-home)
-* [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-landing)
+* [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing)
 
 No entanto, algumas funcionalidades podem diferir entre as implementações do Azure e do AWS. Essas diferenças são descritas na seção abaixo e em outras partes da documentação do produto, quando aplicável.
 
@@ -82,12 +82,13 @@ A tabela abaixo destaca as principais diferenças entre a execução do Experien
 
 | Recurso/funcionalidade | Microsoft Azure | Amazon Web Services |
 | --- | --- | --- |
-| [Conformidade com a HIPAA](https://www.adobe.com/trust/compliance/hipaa-ready.html) | Suportado | Não suportado |
+| [Conformidade com a HIPAA](https://www.adobe.com/trust/compliance/hipaa-ready.html) | Suportado | Incompatível |
 | [Catálogo de conectores de origem](/help/sources/home.md) | Todos os conectores no catálogo de fontes são compatíveis | Um número limitado de conectores de origem está disponível. Todos os conectores de origem disponíveis para implementações do AWS são chamados em uma nota no topo da página em suas respectivas páginas de documentação. |
 
 {style="table-layout:auto"}
 
-<!-- To be determined if we need to add this part about the AI Assistant 
+<!-- 
+To be determined if we need to add this part about the AI Assistant 
 
 | [Experience Platform AI Assistant](/help/ai-assistant/home.md) | Supported | Not supported |
 

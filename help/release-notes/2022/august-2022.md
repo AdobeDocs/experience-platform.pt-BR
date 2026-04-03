@@ -2,9 +2,9 @@
 title: Notas de versão de agosto de 2022 da Adobe Experience Platform
 description: As notas de versão de agosto de 2022 da Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2014'
+source-wordcount: '1967'
 ht-degree: 26%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 26%
 
 **Data de lançamento: quinta-feira, 24 de agosto de 2022**
 
-Atualizações dos recursos já existentes na Adobe Experience Platform:
+Atualizações dos recursos existentes na Adobe Experience Platform:
 
 - [[!DNL Artificial Intelligence and Machine Learning Services]](#ai-and-ml-services)
 - [[!DNL Dashboards]](#dashboards)
@@ -22,7 +22,7 @@ Atualizações dos recursos já existentes na Adobe Experience Platform:
 - [Experience Data Model (XDM)](#xdm)
 - [Perfil do cliente em tempo real](#profile)
 - [Serviço de segmentação](#segmentation)
-- [Origens](#sources)
+- [Fontes](#sources)
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai-and-ml-services}
 
@@ -68,7 +68,7 @@ O Adobe Experience Platform fornece vários [!DNL dashboards] através dos quais
 
 | Recurso | Descrição |
 | --- | --- |
-| Widget de ativações programadas | O widget [!UICONTROL Ativações agendadas] fornece um modo de exibição tabulado dos destinos ativados mais recentemente. Para cada segmento, inclui o nome, a plataforma de destino e as datas de início e término da ativação. Esse widget permite descobrir onde e quando o público-alvo está sendo ativado e torna mais transparentes as ativações duplicadas ou desnecessárias. Essas informações acumuladas também destacam onde as ativações foram deixadas de fora. |
+| Widget de ativações programadas | O widget [!UICONTROL Scheduled activations] fornece uma exibição tabulada dos destinos ativados mais recentemente. Para cada segmento, inclui o nome, a plataforma de destino e as datas de início e término da ativação. Esse widget permite descobrir onde e quando o público-alvo está sendo ativado e torna mais transparentes as ativações duplicadas ou desnecessárias. Essas informações acumuladas também destacam onde as ativações foram deixadas de fora. |
 
 Para obter mais informações sobre [!DNL Dashboards], consulte a [[!DNL Dashboards] visão geral](../../dashboards/home.md).
 
@@ -94,7 +94,7 @@ Para saber mais sobre [!DNL Data Prep], consulte a [[!DNL Data Prep] visão gera
 
 | Recurso | Descrição |
 | ----------- | ----------- |
-| (Beta) Suporte à personalização baseada em atributos para destinos de personalização | Com a versão beta da personalização baseada em atributos, você verá dois novos cartões no [catálogo de destino](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: este conector está atualmente na versão beta e só está disponível para um número selecionado de clientes. Além da funcionalidade fornecida pela placa Adobe Target V1, o conector Target V2 adiciona uma [etapa de mapeamento](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) ao fluxo de trabalho de ativação, que permite mapear atributos de perfil para o Adobe Target, permitindo a personalização de mesma página e próxima página baseada em atributos.</li><li>**[!UICONTROL Personalization Personalizado com Atributos]**: este conector está atualmente na versão beta e só está disponível para um número selecionado de clientes. Além da funcionalidade fornecida pelo **[!UICONTROL Personalization Personalizado]**, o conector do **[!UICONTROL Personalization Personalizado com Atributos]** adiciona uma [etapa de mapeamento](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) opcional ao fluxo de trabalho de ativação, que permite mapear atributos de perfil para o destino de personalização personalizado, habilitando a personalização de mesma página e próxima página baseada em atributos.</li></ul> <br> Os atributos de perfil podem conter dados confidenciais. Para proteger esses dados, o destino **[!UICONTROL Personalization Personalizado com Atributos]** requer que você use a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) para coleta de dados. Além disso, todas as chamadas de API do Edge Network devem ser feitas em um [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
+| (Beta) Suporte à personalização baseada em atributos para destinos de personalização | Com a versão beta da personalização baseada em atributos, você verá dois novos cartões no [catálogo de destino](../../destinations/catalog/overview.md): <ul><li>**[!UICONTROL Adobe Target V2]**: este conector está atualmente na versão beta e só está disponível para um número selecionado de clientes. Além da funcionalidade fornecida pela placa Adobe Target V1, o conector Target V2 adiciona uma [etapa de mapeamento](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) ao fluxo de trabalho de ativação, que permite mapear atributos de perfil para o Adobe Target, permitindo a personalização de mesma página e próxima página baseada em atributos.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: este conector está atualmente na versão beta e só está disponível para um número selecionado de clientes. Além da funcionalidade fornecida pelo **[!UICONTROL Custom Personalization]**, o conector **[!UICONTROL Custom Personalization With Attributes]** adiciona uma [etapa de mapeamento](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) opcional ao fluxo de trabalho de ativação, que permite mapear atributos de perfil para seu destino de personalização personalizado, habilitando a personalização de mesma página e próxima página baseada em atributos.</li></ul> <br> Os atributos de perfil podem conter dados confidenciais. Para proteger esses dados, o destino **[!UICONTROL Custom Personalization With Attributes]** exige que você use a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/getting-started/) para coleta de dados. Além disso, todas as chamadas de API do Edge Network devem ser feitas em um [contexto autenticado](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication). |
 
 {style="table-layout:auto"}
 
@@ -116,8 +116,8 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
-| Classe | [[!UICONTROL Classe de Entidade AJO]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Uma classe baseada em registros para criar esquemas de pesquisa para o Adobe Journey Optimizer. |
-| Grupo de campos | [[!UICONTROL Objetos de Trabalho do Workfront]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Um grupo de campos do invólucro que faz referência a todos os grupos de campos específicos de objetos de nível inferior do Adobe Workfront. |
+| Classe | [[!UICONTROL AJO Entity Class]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/customerJourneyManagement/ajo-entity-class.schema.json) | Uma classe baseada em registros para criar esquemas de pesquisa para o Adobe Journey Optimizer. |
+| Grupo de campos | [[!UICONTROL Workfront Work Objects]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/workfront/workobjects-all.schema.json) | Um grupo de campos do invólucro que faz referência a todos os grupos de campos específicos de objetos de nível inferior do Adobe Workfront. |
 
 {style="table-layout:auto"}
 
@@ -125,13 +125,13 @@ O XDM é uma especificação de código aberto que fornece estruturas e definiç
 
 | Tipo de componente | Nome | Descrição |
 | --- | --- | --- |
-| Grupo de campos | [[!UICONTROL Campos Comuns de Eventos de Etapa do Journey Orchestration]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Duas novas propriedades foram adicionadas: `origTimeStamp` e `experienceID`. |
-| Grupo de campos | [[!UICONTROL Detalhes da associação de segmento]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Além do [!UICONTROL Perfil Individual XDM], este grupo de campos agora também pode ser usado em esquemas baseados na classe Conta Comercial XDM. |
+| Grupo de campos | [[!UICONTROL Journey Orchestration Step Event Common Fields]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/journeyOrchestration/stepEvents/journeyStepEventCommonFieldsMixin.schema.json) | Duas novas propriedades foram adicionadas: `origTimeStamp` e `experienceID`. |
+| Grupo de campos | [[!UICONTROL Segment Membership Details]](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/segmentation.schema.json) | Além de [!UICONTROL XDM Individual Profile], esse grupo de campos agora também pode ser usado em esquemas baseados na classe Conta Comercial XDM. |
 | Grupo de campos | (Vários) | Vários grupos de campos relacionados às atividades B2B do Marketo foram atualizados para o status estável. Consulte a seguinte [solicitação de pull](https://github.com/adobe/xdm/pull/1593/files) para obter detalhes. |
 | Grupo de campos | (Vários) | Vários grupos de campos relacionados à meteorologia foram atualizados para corrigir erros que estavam ocorrendo para `uvIndex` e `sunsetTime`. Consulte a seguinte [solicitação de pull](https://github.com/adobe/xdm/pull/1602/files) para obter detalhes. |
-| Tipo de dados | [[!UICONTROL Item da lista de produtos]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Uma nova propriedade `productImageUrl` foi adicionada. |
-| Tipo de dados | [[!UICONTROL Informações detalhadas de dados de QoE]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Uma nova propriedade `framesPerSecond` foi adicionada. |
-| Tipo de dados | [[!UICONTROL Informações de detalhes da sessão]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | A `sdkVersion` foi renomeada como `appVersion`. Os campos `meta:enum` e `description` também foram atualizados. |
+| Tipo de dados | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.schema.json) | Uma nova propriedade `productImageUrl` foi adicionada. |
+| Tipo de dados | [[!UICONTROL Qoe Data details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/qoedatadetails.schema.json) | Uma nova propriedade `framesPerSecond` foi adicionada. |
+| Tipo de dados | [[!UICONTROL Session details information]](https://github.com/adobe/xdm/blob/master/components/datatypes/sessiondetails.schema.json) | A `sdkVersion` foi renomeada como `appVersion`. Os campos `meta:enum` e `description` também foram atualizados. |
 | Tipos de dados e grupos de campos | (Vários) | Vários tipos de dados de mídia e grupos de campos têm novos campos e descrições atualizadas. Consulte a seguinte [solicitação de pull](https://github.com/adobe/xdm/pull/1582/files) para obter detalhes. |
 | (Todos) | (Vários) | Todos os objetos de esquema que contêm um campo `enum` agora também contêm um campo `meta:enum` correspondente para indicar valores de exibição para cada restrição. Consulte a seguinte [solicitação de pull](https://github.com/adobe/xdm/pull/1601/files) para obter detalhes. |
 
@@ -154,7 +154,7 @@ Para saber mais sobre o Perfil de cliente em tempo real, incluindo tutoriais e p
 
 ## Serviço de segmentação {#segmentation}
 
-O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de séries temporais que representam interações de clientes com sua marca.
+O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de série temporal que representam interações de clientes com sua marca.
 
 **Novos recursos**
 
@@ -164,11 +164,11 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 
 Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [Visão geral de segmentação](../../segmentation/home.md).
 
-## Origens {#sources}
+## Fontes {#sources}
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, estruturar, rotular e aprimorar esses dados usando os serviços da Experience Platform. É possível assimilar dados de várias origens, como aplicativos da Adobe, do armazenamento na nuvem, um software de terceiros e do seu sistema de CRM.
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 **Novos recursos**
 

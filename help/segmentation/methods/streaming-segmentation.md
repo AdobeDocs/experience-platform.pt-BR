@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia de segmentação de streaming
 description: Saiba mais sobre a segmentação por transmissão, incluindo o que é, como criar um público avaliado usando a segmentação por transmissão e como visualizar seus públicos criados usando a segmentação por transmissão.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 518afcfaabb9867452dc6ee94bef103ec167da78
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2033'
 ht-degree: 3%
@@ -68,9 +68,9 @@ O público-alvo resultante *será avaliado* usando a segmentação por transmiss
 
 No entanto, se você quiser combinar dois públicos-alvo com dados de evento, **não poderá** apenas combinar os dois eventos. Você precisará criar ambos os públicos e, em seguida, criar outro público que use o `inSegment` para se referir a esses dois públicos.
 
-Por exemplo, digamos que você tenha dois públicos, com ambos os públicos alojando dados do esquema do evento de experiência:
+Por exemplo, digamos que você tenha dois públicos-alvo, com ambos os públicos-alvo abrigando dados do esquema do evento de experiência:
 
-| Público-alvo | Esquema | Tipo de origem | Definição da consulta | ID do público-alvo |
+| Público-alvo | Esquema | Tipo de Source | Definição da consulta | ID do público-alvo |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Desistências recentes | Evento de experiência | Lote | Tem pelo menos um evento de abandono nas últimas 24 horas | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Check-outs recentes | Evento de experiência | Transmissão | Tem pelo menos um check-out nas últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
@@ -85,22 +85,22 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 >
 >Todas as definições de segmento existentes que correspondem aos conjuntos de regras permanecerão avaliadas usando a segmentação de transmissão ou de borda até serem editadas.
 >
->Além disso, todas as definições de segmento existentes que atualmente atendem aos outros critérios de avaliação de streaming ou segmentação de borda permanecerão avaliadas com streaming ou segmentação de borda.
+>Além disso, todas as definições de segmento existentes que atualmente atendem aos outros critérios de avaliação de transmissão ou segmentação de borda permanecerão avaliadas com a transmissão ou segmentação de borda.
 
 ## Política de mesclagem {#merge-policy}
 
-Quaisquer definições de segmento **novas ou editadas** qualificadas para streaming ou segmentação de borda **devem** estar na política de mesclagem “Ativa na Borda”.
+Todas as definições de segmento **novas ou editadas** qualificadas para streaming ou segmentação de borda **devem** estar na política de mesclagem &quot;Ativo no Edge&quot;.
 
-Se não houver nenhuma política de mesclagem ativa definida, você precisará [configurar sua política de mesclagem](../../profile/merge-policies/ui-guide.md#configure) e defini-la para estar ativa na borda.
+Se não houver uma política de mesclagem ativa definida, você precisará [configurar sua política de mesclagem](../../profile/merge-policies/ui-guide.md#configure) e configurá-la para estar ativa na borda.
 
 
 +++
 
 >[!ENDSHADEBOX]
 
-Segmentação de streaming é a capacidade de avaliar audiências no Adobe Experience Platform quase em tempo real, enquanto se concentra na riqueza de dados.
+A segmentação de transmissão é a capacidade de avaliar públicos-alvo no Adobe Experience Platform em tempo quase real, concentrando-se na riqueza de dados.
 
-Com a segmentação de streaming, a qualificação do público agora acontece à medida que os dados de streaming chegam ao Experience Platform, diminuindo a necessidade de agendar e executar tarefas de segmentação. Isso permite avaliar os dados conforme eles são transmitidos para o Experience Platform, permitindo que a associação do público-alvo seja mantida atualizada automaticamente.
+Com a segmentação por transmissão, a qualificação de público-alvo agora acontece à medida que os dados de transmissão chegam ao Experience Platform, reduzindo a necessidade de agendar e executar trabalhos de segmentação. Isso permite avaliar os dados conforme eles são transmitidos para o Experience Platform, permitindo que a associação do público-alvo seja mantida atualizada automaticamente.
 
 ## Conjuntos de regras elegíveis {#rulesets}
 
@@ -127,7 +127,7 @@ Uma definição de segmento **não** estará qualificada para segmentação por 
 - A definição do segmento inclui várias entidades (consultas de várias entidades).
 - A definição de segmento inclui uma combinação de um único evento e um evento `inSegment`.
    - Por exemplo, encadear o seguinte em um único conjunto de regras: `inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and  CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false))  WHEN(<= 24 hours before now)])`.
-- A definição de segmento usa “Ignorar ano” como parte de suas restrições de tempo.
+- A definição do segmento usa &quot;Ignorar ano&quot; como parte de suas restrições de tempo.
 
 Observe as diretrizes a seguir que se aplicam às consultas de segmentação por transmissão:
 
@@ -138,24 +138,24 @@ Observe as diretrizes a seguir que se aplicam às consultas de segmentação por
 
 Se uma definição de segmento for modificada para não atender mais aos critérios de segmentação por transmissão, a definição de segmento mudará automaticamente de &quot;Transmissão&quot; para &quot;Lote&quot;.
 
-Além disso, a desqualificação de segmento, da mesma forma que a qualificação de segmento, acontece em tempo real. Como resultado, se um público não mais se qualificar para um segmento, ele será imediatamente desqualificado. Por exemplo, se a definição do segmento solicitar &quot;Todos os usuários que compraram sapatos vermelhos nas últimas três horas&quot;, após três horas, todos os perfis que se qualificaram inicialmente para a definição do segmento serão desqualificados.
+Além disso, a desqualificação de segmentos, semelhante à qualificação de segmentos, acontece em tempo real. Como resultado, se um público-alvo não se qualificar mais para um segmento, ele será imediatamente desqualificado. Por exemplo, se a definição do segmento solicitar &quot;Todos os usuários que compraram sapatos vermelhos nas últimas três horas&quot;, após três horas, todos os perfis que se qualificaram inicialmente para a definição do segmento serão desqualificados.
 
 ### Combinar públicos-alvo {#combine-audiences}
 
 Para combinar dados de fontes de lote e de transmissão, será necessário separar os componentes de lote e transmissão em públicos separados.
 
-### Atributo de perfil e Evento de experiência {#profile-and-event}
+### Atributo de perfil e evento de experiência {#profile-and-event}
 
-Por exemplo, vamos levar em consideração os dois públicos-alvo a seguir:
+Por exemplo, vamos considerar os dois seguintes públicos-alvo de amostra:
 
 | Público-alvo | Esquema | Tipo de Source | Definição da consulta | ID do público-alvo |
 | -------- | ------ | ----------- | ---------------- | ----------- |
 | Residentes da Califórnia | Perfil | Lote | O endereço residencial é no estado da Califórnia | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
 | Check-outs recentes | Evento de experiência | Transmissão | Tem pelo menos um check-out nas últimas 24 horas | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
-Se quiser usar o componente de lote no seu público de streaming, você precisará fazer uma referência ao público em lote usando o segmento de segmentos.
+Se você quiser usar o componente de lote no público-alvo de transmissão, será necessário fazer uma referência ao público-alvo em lote usando o segmento de segmentos.
 
-Portanto, um conjunto de regras de exemplo que combinasse os dois públicos-alvo teria a seguinte aparência:
+Assim, um conjunto de regras de exemplo que combinasse os dois públicos-alvo seria semelhante a:
 
 ```
 inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
@@ -163,7 +163,7 @@ CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)
 WHEN(<= 24 hours before now)])
 ```
 
-O público resultante *será* avaliado usando a segmentação de streaming, uma vez que aproveita a associação do público em lote referindo-se ao componente de público em lote.
+O público-alvo resultante *será avaliado* usando a segmentação por transmissão, pois ela aproveita a associação do público-alvo em lote referindo-se ao componente de público-alvo em lote.
 
 ### Vários eventos de experiência {#two-events}
 
@@ -441,17 +441,17 @@ Você pode recuperar todos os públicos-alvo que estão ativados para segmentaç
 
 Nos filtros disponíveis, vá para **[!UICONTROL Update frequency]** e selecione &quot;[!UICONTROL Streaming]&quot;. Usar esse filtro exibe todos os públicos-alvo em sua organização que são avaliados usando a segmentação por transmissão.
 
-![A frequência de atualização de streaming está selecionada, exibindo todas as audiências na organização que são avaliadas usando a segmentação de streaming.](../images/methods/streaming/filter-streaming.png)
+![A frequência de atualização de streaming está selecionada, exibindo todos os públicos-alvo na organização que são avaliados por meio da segmentação de streaming.](../images/methods/streaming/filter-streaming.png)
 
-Para saber mais sobre como exibir audiências no Experience Platform, leia o [Guia do Portal do Público](../ui/audience-portal.md).
+Para saber mais sobre como exibir públicos-alvo no Experience Platform, leia o [Guia do Portal de Público-Alvo](../ui/audience-portal.md).
 
 >[!ENDTABS]
 
 ## Detalhes do público-alvo {#audience-details}
 
-Você pode exibir detalhes de um público específico avaliado usando a segmentação de streaming selecionando-a no Portal do Público.
+Você pode exibir detalhes de um público-alvo específico avaliado usando a segmentação por transmissão ao selecioná-lo no Portal de público-alvo.
 
-Depois de selecionar um público no Portal do Público, a página de detalhes do público-alvo é exibida. Isso exibe informações sobre o público-alvo, incluindo um resumo dos detalhes do público-alvo, a quantidade de perfis qualificados ao longo do tempo, bem como os destinos para os quais o público-alvo foi ativado.
+Depois de selecionar um público no Audience Portal, a página de detalhes do público é exibida. Isso exibe informações sobre o público-alvo, incluindo um resumo dos detalhes do público-alvo, a quantidade de perfis qualificados ao longo do tempo, bem como os destinos para os quais o público-alvo foi ativado.
 
 ![A página de detalhes do público-alvo é exibida para um público avaliado por meio da segmentação por transmissão.](../images/methods/streaming/audience-details.png)
 

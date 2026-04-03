@@ -2,10 +2,10 @@
 title: Visão geral do Salesforce Source Connector
 description: Saiba como conectar o Salesforce ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1635'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -19,17 +19,17 @@ ht-degree: 1%
 >
 >A autenticação básica para a origem [!DNL Salesforce] será descontinuada em janeiro de 2026. Você deve mudar para a autenticação de Credencial do cliente OAuth 2 para continuar usando a origem e assimilando dados da conta do [!DNL Salesforce] para o Experience Platform.
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 
 A Experience Platform oferece suporte para assimilação de dados de um sistema CRM de terceiros. O suporte para provedores de CRM inclui [!DNL Salesforce].
 
-## Configure sua origem [!DNL Salesforce] para o Experience Platform no Azure {#azure}
+## Configure sua origem do [!DNL Salesforce] para o Experience Platform no Azure {#azure}
 
 Siga as etapas abaixo para saber como configurar sua conta do [!DNL Salesforce] para o Experience Platform no Azure.
 
-### INCLUI NA LISTA DE PERMISSÕES de endereço IP para conexão com o Azure
+### INCLUO NA LISTA DE PERMISSÕES de endereços IP para conexão com o Azure
 
-Você deve adicionar endereços IP específicos da sua região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform no Azure. Falha ao adicionar endereços IP específicos da região ao seu incluo na lista de permissões pode levar a erros ou ao não desempenho ao usar origens. Leia a [página inclui na lista de permissões de endereço IP](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform no Azure. Falha ao adicionar endereços IP específicos da região ao incluo na lista de permissões pode levar a erros ou não desempenho ao usar origens. Leia a página [incluo na lista de permissões de endereços IP](../../ip-address-allow-list.md) para obter mais informações.
 
 >[!BEGINTABS]
 
@@ -291,9 +291,9 @@ Para conectar sua conta do [!DNL Salesforce] à Experience Platform em uma regi�
 - Um [!DNL Salesforce Connected App] que você pode usar para habilitar o fluxo de OAuth JWT_BEARER.
 - As permissões necessárias em [!DNL Salesforce] para acessar dados.
 
-### INCLUI NA LISTA DE PERMISSÕES de endereço IP para conexão no AWS
+### INCLUO NA LISTA DE PERMISSÕES de endereços IP para conexão no AWS
 
-Você deve adicionar endereços IP específicos da sua região à inclui na lista de permissões antes de conectar suas fontes à Experience Platform no AWS. Para obter mais informações, leia o manual sobre [sobre como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform no AWS](../../ip-address-allow-list.md) para obter mais informações.
+Você deve adicionar endereços IP específicos da região ao incluo na lista de permissões antes de conectar suas fontes à Experience Platform no AWS. Para obter mais informações, leia o manual sobre [sobre como ler os endereços IP de incluir na lista de permissões para se conectar ao Experience Platform no AWS](../../ip-address-allow-list.md) para obter mais informações.
 
 ### Criar um [!DNL Salesforce Connected App]
 
@@ -435,7 +435,7 @@ public class Main {
 }
 ```
 
-| Propriedade | Configurações  |
+| Propriedade | Configurações |
 | --- | --- |
 | `claimArray[0]` | Atualize `claimArray[0]` com sua ID de cliente. |
 | `claimArray[1]` | Atualize `claimArray[1]` com o nome de usuário [!DNL Salesforce] autorizado no aplicativo. |

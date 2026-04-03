@@ -2,7 +2,7 @@
 title: Visão geral da extensão do Cloud Connector
 description: Saiba mais sobre a extensão de encaminhamento de eventos do Cloud Connector na Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 74%

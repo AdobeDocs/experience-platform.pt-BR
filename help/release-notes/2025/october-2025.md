@@ -1,7 +1,8 @@
 ---
 title: Notas de versão da Adobe Experience Platform de outubro de 2025
 description: As notas de versão de outubro de 2025 da Adobe Experience Platform.
-source-git-commit: 0191fc8419c696d8cd114a5eb575b8cc0a815a72
+exl-id: 93feff2b-d998-41f1-8d93-332238a1d88d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1159'
 ht-degree: 12%
@@ -16,9 +17,9 @@ ht-degree: 12%
 >
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/pre-release-notes)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/e-release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: 22 de outubro de 2025**
 
@@ -28,7 +29,7 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 - [Alertas](#alerts)
 - [Destinos](#destinations)
 - [Real-Time CDP B2B Edition](#b2b)
-- [Origens](#sources)
+- [Fontes](#sources)
 
 ## Agent Orchestrator {#agent-orchestrator}
 
@@ -38,9 +39,9 @@ O Adobe Experience Platform Agent Orchestrator é a nova camada de agente no Ado
 
 | Recurso | Descrição |
 | ------- | ----------- |
-| Audience Agent | O Audience Agent agora oferece suporte a públicos-alvo baseados em conta para a exploração de públicos-alvo conversacionais e a detecção de públicos-alvo duplicados. Para obter mais informações, leia a [documentação do Audience Agent](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+| Audience Agent | O Audience Agent agora oferece suporte a públicos-alvo baseados em conta para a exploração de públicos-alvo conversacionais e a detecção de públicos-alvo duplicados. Para obter mais informações, leia a [documentação do Audience Agent](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
-Para obter mais informações sobre agentes, leia a [documentação do Agent Orchestrator](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-ai/experience-cloud-ai/home).
+Para obter mais informações sobre agentes, leia a [documentação do Agent Orchestrator](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Alertas {#alerts}
 
@@ -96,7 +97,7 @@ O Real-Time CDP B2B edition fornece recursos abrangentes de gerenciamento de dad
 
 {style="table-layout:auto"}
 
-## Origens {#sources}
+## Fontes {#sources}
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
@@ -105,8 +106,8 @@ A Experience Platform fornece uma API RESTful e uma interface interativa que per
 | Recurso | Descrição |
 | --- | --- |
 | Alteração na criação do conjunto de dados para a origem do Adobe Analytics | Como parte do processo de criação de fluxo de dados entre o Adobe Analytics e o Experience Platform, um conjunto de dados é criado por meio do Serviço de catálogo. Esse conjunto de dados serve como um container para que os dados cheguem ao. Atualmente, esse processo envolve uma DataSource ID que é retirada do conjunto de relatórios do Analytics, enviada para o Serviço de catálogo e, em seguida, é associada ao conjunto de dados recém-criado. Após a alteração, a opção para fornecer a ID da fonte de dados não estará mais disponível durante a criação do conjunto de dados. Portanto, os novos conjuntos de dados criados pela fonte do Analytics não terão mais uma ID da fonte de dados associada a ele no Serviço de catálogo. Essa alteração se aplica somente aos metadados e não altera de forma alguma o armazenamento de dados no conjunto de dados. No entanto, é importante saber que a ID da fonte de dados fornecida pelo Serviço de catálogo não estará mais disponível nos conjuntos de dados recém-criados para o Adobe Analytics. Leia a [documentação de origem do Adobe Analytics](../../sources/connectors/adobe-applications/analytics.md) para obter mais informações sobre o conector de origem do Adobe Analytics. |
-| Disponibilidade Geral de [!DNL Google Ads] origem (somente API) | A versão da API [&#x200B; da origem  [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md) agora está em Disponibilidade Geral. A documentação da API foi atualizada para refletir que a versão mais recente agora é a `v21`, e o Experience Platform oferece suporte a todas as versões v19 e superiores. [A versão da interface do usuário](../../sources/tutorials/ui/create/advertising/ads.md) permanece na versão beta e dá suporte apenas à assimilação única. Para usar a assimilação de dados incremental, use a rota da API. |
-| Suporte a rede virtual [!DNL Azure Event Hubs] | O Adobe agora oferece suporte explícito a conexões de rede virtual com [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md), permitindo a transferência de dados em redes privadas, em vez de redes públicas. Os clientes podem incluir na lista de permissões a Rede Virtual do Experience Platform para rotear o tráfego dos Hubs de Eventos de forma privada por meio do backbone privado do Azure, fornecendo segurança e conformidade aprimoradas para fluxos de trabalho de assimilação de dados. |
+| Disponibilidade Geral de [!DNL Google Ads] origem (somente API) | A versão da API [ da origem  [!DNL Google Ads]](../../sources/tutorials/api/create/advertising/ads.md) agora está em Disponibilidade Geral. A documentação da API foi atualizada para refletir que a versão mais recente agora é a `v21`, e o Experience Platform oferece suporte a todas as versões v19 e superiores. [A versão da interface do usuário](../../sources/tutorials/ui/create/advertising/ads.md) permanece na versão beta e dá suporte apenas à assimilação única. Para usar a assimilação de dados incremental, use a rota da API. |
+| Suporte a rede virtual [!DNL Azure Event Hubs] | O Adobe agora oferece suporte explícito a conexões de rede virtual com [[!DNL Azure Event Hubs]](../../sources/connectors/cloud-storage/eventhub.md), permitindo a transferência de dados em redes privadas, em vez de redes públicas. Os clientes podem incluir na lista de permissões a Rede virtual do Experience Platform para rotear o tráfego dos Hubs de eventos de forma privada por meio do backbone privado da Azure, fornecendo segurança e conformidade aprimoradas para os fluxos de trabalho de assimilação de dados. |
 
 {style="table-layout:auto"}
 

@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Mapeamento de campos para o Marketo Engage Source
 description: As tabelas abaixo contêm os mapeamentos entre os campos nos conjuntos de dados do Marketo e os campos XDM correspondentes.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 83a249daddbee1ec264b6e505517325c76ac9b09
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1451'
 ht-degree: 5%

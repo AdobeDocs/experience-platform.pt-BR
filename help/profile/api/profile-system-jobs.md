@@ -5,9 +5,9 @@ type: Documentation
 description: O Adobe Experience Platform permite excluir um conjunto de dados ou lote do Armazenamento de perfis para remover os dados do Perfil do cliente em tempo real que não são mais necessários ou que foram adicionados por engano. Isso requer o uso da API de perfil para criar um trabalho de sistema de perfil ou excluir solicitação.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '2022'
+source-wordcount: '2021'
 ht-degree: 2%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->Os endpoints a seguir podem diferir entre as implementações do Adobe Experience Platform em execução no Microsoft Azure e no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/multi-cloud).
+>Os endpoints a seguir podem diferir entre as implementações do Adobe Experience Platform em execução no Microsoft Azure e no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 O Adobe Experience Platform permite assimilar dados de várias fontes e criar perfis robustos para clientes individuais. Os dados assimilados em [!DNL Experience Platform] são armazenados em [!DNL Data Lake] e, se os conjuntos de dados tiverem sido habilitados para Perfil, esses dados também serão armazenados no armazenamento de dados [!DNL Real-Time Customer Profile]. Ocasionalmente, pode ser necessário excluir dados de perfil associados a um conjunto de dados do armazenamento de Perfil para remover dados que não são mais necessários ou foram adicionados por engano. Isso requer o uso da API [!DNL Real-Time Customer Profile] para criar um trabalho do sistema [!DNL Profile], ou &quot;excluir solicitação&quot;.
 
@@ -38,7 +38,7 @@ Você também pode usar parâmetros de consulta opcionais para filtrar a lista d
 
 >[!AVAILABILITY]
 >
->Os seguintes parâmetros de consulta estão **somente** disponíveis ao usar o Experience Platform no Microsoft Azure.
+>Os seguintes parâmetros de consulta estão disponíveis **somente** ao usar o Experience Platform no Microsoft Azure.
 >
 >Ao usar esse endpoint no AWS, as primeiras 100 tarefas do sistema são retornadas em ordem decrescente, com base na data de criação.
 

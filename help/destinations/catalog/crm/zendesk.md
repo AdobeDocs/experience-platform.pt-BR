@@ -3,7 +3,7 @@ title: Conexão do Zendesk
 description: Use o destino do Zendesk para exportar seus dados de conta e ativá-los no Zendesk para suas necessidades comerciais.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: e7fcbbf4-5d6c-4abb-96cb-ea5b67a88711
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 3%
@@ -26,7 +26,7 @@ O departamento de atendimento ao cliente de uma plataforma B2C multicanal deseja
 
 ### Pré-requisitos do Experience Platform {#prerequisites-in-experience-platform}
 
-Antes de ativar dados para o destino [!DNL Zendesk], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=pt-BR) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=pt-BR) criados em [!DNL Experience Platform].
+Antes de ativar dados para o destino [!DNL Zendesk], você deve ter um [esquema](/help/xdm/schema/composition.md), um [conjunto de dados](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) e [segmentos](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) criados em [!DNL Experience Platform].
 
 Consulte a documentação do Experience Platform para [Grupo de campos do esquema de Detalhes da associação do público-alvo](/help/xdm/field-groups/profile/segmentation.md) se precisar de orientação sobre os status do público-alvo.
 
@@ -185,7 +185,7 @@ Para validar se você configurou o destino corretamente, siga as etapas abaixo:
 1. Monitore o resumo do público-alvo e verifique se a contagem de perfis corresponde à contagem no segmento.
    ![Exemplo de captura de tela da interface do Experience Platform mostrando o Segmento.](../../assets/catalog/crm/zendesk/segment.png)
 
-1. Vá para o site do [!DNL Zendesk] e navegue até a página **[!UICONTROL Contacts]** para verificar se os perfis do público-alvo foram adicionados. Esta lista pode ser configurada para exibir colunas para os campos adicionais criados com o público-alvo&#x200B;**[!UICONTROL Mapping ID]** e os status do público-alvo.
+1. Vá para o site do [!DNL Zendesk] e navegue até a página **[!UICONTROL Contacts]** para verificar se os perfis do público-alvo foram adicionados. Esta lista pode ser configurada para exibir colunas para os campos adicionais criados com o público-alvo**[!UICONTROL Mapping ID]** e os status do público-alvo.
    ![Captura de tela da interface do Zendesk mostrando a página Contatos com os campos adicionais criados com o nome do público-alvo.](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. Como alternativa, você pode detalhar uma página individual de **[!UICONTROL Person]** e verificar a seção **[!UICONTROL Additional fields]**, que exibe o nome do público-alvo e os status do público-alvo.

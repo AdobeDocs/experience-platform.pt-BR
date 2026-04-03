@@ -2,7 +2,7 @@
 title: Integração do log de auditoria do serviço de consulta
 description: Os logs de auditoria do serviço de consulta mantêm registros de várias ações do usuário para formar uma trilha de auditoria para solucionar problemas ou seguir as políticas corporativas de gerenciamento de dados e os requisitos normativos. Este tutorial fornece uma visão geral dos recursos de log de auditoria específicos do Serviço de consulta.
 exl-id: 5fdc649f-3aa1-4337-965f-3f733beafe9d
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
@@ -85,7 +85,7 @@ Os filtros disponíveis variam de acordo com a categoria selecionada na lista su
 |---|---|
 | Categoria | Consulte a seção [[!DNL Query Service] categorias de log de auditoria](#audit-log-categories) para obter uma lista completa das categorias disponíveis. |
 | Ação | Ao se referir a [!DNL Query Service] categorias de auditoria, a atualização é uma **modificação no formulário existente**, a exclusão é a **remoção do agendamento ou modelo**, a criação é **criação de um novo agendamento ou modelo** e a execução é **execução de uma consulta**. |
-| Usuário(a)  | Insira a ID de usuário completa (por exemplo, johndoe@acme.com) para filtrar por usuário. |
+| Usuário(a) | Insira a ID de usuário completa (por exemplo, johndoe@acme.com) para filtrar por usuário. |
 | Status | As opções [!UICONTROL Allow], [!UICONTROL Success] e [!UICONTROL Failure] filtram os logs com base no &quot;Status&quot; ou &quot;Status do Evento&quot;, enquanto a opção [!UICONTROL Deny] filtrará **todos** logs. |
 | Data | Selecione uma data inicial e/ou final para definir um intervalo de datas para filtrar os resultados. |
 

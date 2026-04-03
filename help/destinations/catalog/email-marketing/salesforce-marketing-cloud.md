@@ -2,7 +2,7 @@
 title: Conexão com o Salesforce Marketing Cloud
 description: O Salesforce Marketing Cloud é uma suíte de marketing digital conhecida anteriormente como ExactTarget que você pode usar para criar e personalizar jornadas para visitantes e clientes personalizarem suas experiências.
 exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 3%

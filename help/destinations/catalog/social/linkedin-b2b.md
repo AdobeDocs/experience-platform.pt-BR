@@ -2,7 +2,7 @@
 title: (Empresas) LinkedIn connection
 description: Use esse destino para ativar os públicos-alvo da conta para os casos de uso do Account-Based Marketing (ABM). Ative perfis para suas campanhas do LinkedIn para direcionamento de público, personalização e supressão, com base em emails com hash.
 exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
-source-git-commit: d946d3dbb09c1fe0163fba3a892b4c0f1b331f87
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 5%

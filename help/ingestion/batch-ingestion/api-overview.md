@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Guia da API de assimilação em lote
 description: Este documento fornece um guia abrangente para desenvolvedores que trabalham com APIs de assimilação em lote para o Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2435'
 ht-degree: 6%
@@ -801,7 +801,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 ```
 
 | Parâmetro | Descrição |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{DATASET_ID}` | A ID do conjunto de dados de referência. |
 
 **Resposta**

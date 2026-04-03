@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Crie um fluxo de dados para o Mailchimp Campaign usando a API do Serviço de Fluxo
 description: Saiba como conectar o Adobe Experience Platform à campanha do MailChimp usando a API do serviço de fluxo.
 exl-id: fd4821c7-6fe1-4cad-8e13-3549dbe0ce98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1934'
 ht-degree: 2%
@@ -258,7 +258,7 @@ Para criar uma conexão de origem, você também deve definir um valor de enumer
 
 Use os seguintes valores de enumeração para fontes baseadas em arquivo:
 
-| Formato dos dados | Valor de enumeração |
+| Formato dos dados | Valor da lista discriminada |
 | ----------- | ---------- |
 | Delimitado | `delimited` |
 | JSON | `json` |
@@ -467,7 +467,7 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
---->
+-->
 
 ## Criar um fluxo {#flow}
 

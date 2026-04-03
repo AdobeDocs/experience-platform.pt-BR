@@ -6,20 +6,20 @@ title: Solução de problemas de erro do Customer AI
 description: Encontre respostas para erros comuns na IA do cliente.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1745'
 ht-degree: 1%
 
 ---
 
 # Solução de problemas de erro do Customer AI
 
-A IA do cliente exibe erros quando o treinamento do modelo, a pontuação e a configuração falham. Na seção **[!UICONTROL Instâncias de serviço]**, uma coluna para **[!UICONTROL STATUS DA ÚLTIMA EXECUÇÃO]** exibe uma das seguintes mensagens: **[!UICONTROL Êxito]**, **[!UICONTROL Problema de treinamento]** e **[!UICONTROL Falha]**.
+A IA do cliente exibe erros quando o treinamento do modelo, a pontuação e a configuração falham. Na seção **[!UICONTROL Service instances]**, uma coluna para **[!UICONTROL LAST RUN STATUS]** exibe uma das seguintes mensagens: **[!UICONTROL Success]**, **[!UICONTROL Training issue]** e **[!UICONTROL Failed]**.
 
 ![Status da última execução mostrando êxito, problema de treinamento ou falha.](./images/errors/last-run-status.png)
 
-Caso **[!UICONTROL Falha]** ou **[!UICONTROL Problema de treinamento]** seja exibido, você pode selecionar o status de execução para abrir um painel lateral. O painel lateral contém o **[!UICONTROL status da última execução]** e os **[!UICONTROL detalhes da última execução]**. **[!UICONTROL Detalhes da última execução]** contém informações sobre o motivo da falha na execução. Caso a IA do cliente não possa fornecer detalhes sobre o erro, entre em contato com o suporte com o código de erro fornecido.
+Caso **[!UICONTROL Failed]** ou **[!UICONTROL Training issue]** seja exibido, você pode selecionar o status de execução para abrir um painel lateral. O painel lateral contém os **[!UICONTROL Last run status]** e **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** contém informações sobre o motivo da falha na execução. Caso a IA do cliente não possa fornecer detalhes sobre o erro, entre em contato com o suporte com o código de erro fornecido.
 
 ![](./images/errors/last-run-details.png){width=300}
 
@@ -37,7 +37,7 @@ Para contornar esse problema, é necessário adicionar experience.adobe.com como
 
 ## A qualidade do modelo é ruim
 
-Se você receber o erro &quot;[!UICONTROL A qualidade do modelo é ruim. Recomendamos criar um novo aplicativo com a configuração modificada &quot;]&quot;. Siga as etapas recomendadas abaixo para ajudar a solucionar problemas.
+Se você receber o erro &quot;[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration]&quot;. Siga as etapas recomendadas abaixo para ajudar a solucionar problemas.
 
 ![](./images/errors/model-quality.png){width=300}
 
@@ -73,4 +73,4 @@ Se a restrição da população de qualificação não funcionar ou não for pos
 | 411 | NENHUM DADO DE ENTRADA APÓS ETL | Não há comportamento de usuário ou dados de perfil disponíveis para o modelo usar entre `{{etl_start_date}}` e `{{etl_end_date}}`. Verifique se o conjunto de dados tem dados suficientes. (Código de erro: VALIDATION-411 NO_INPUT_DATA_AFTER_ETL) | Não há comportamento do usuário ou dados de perfil disponíveis para o modelo usar entre 04/2020 e 04/2021. Verifique se o conjunto de dados tem dados suficientes. (Código de erro: VALIDATION-411 NO_INPUT_DATA_AFTER_ETL) |
 | 412 | NENHUM EVENTO APÓS ETL | Não há dados de comportamento de usuário disponíveis para o modelo usar entre `{{etl_start_date}}` e `{{etl_end_date}}`. Verifique se o conjunto de dados tem dados suficientes. | Não há dados de comportamento do usuário disponíveis para o modelo usar entre 04/2020 e 04/2021. Verifique se o conjunto de dados tem dados suficientes. (Código de erro: VALIDATION-412 NO_EVENT_DATA_AFTER_ETL) |
 | 413 | VALOR ÚNICO NO OBJETIVO | A IA do cliente exige que o conjunto de dados tenha eventos qualificados e não qualificados para a definição da meta de previsão. O conjunto de dados de entrada contém apenas eventos qualificados entre `{{etl_window_start}}` e `{{etl_window_end}}`. <br><br>Soluções sugeridas: <br>1. Modifique a definição da meta de previsão <br>2. Verifique a integridade dos dados ou use um diferente que inclua exemplos de eventos não qualificados para a meta de previsão (Código de erro: VALIDATION-413 SINGLE_VALUE_IN_OBJETIVE) | A IA do cliente exige que o conjunto de dados tenha eventos qualificados e não qualificados para a definição da meta de previsão. O conjunto de dados de entrada contém apenas eventos qualificados entre 04/2020 e 04/2021.<br><br>Soluções sugeridas:<br>1. Modifique a definição da meta de previsão.<br>2. Verifique a integridade dos dados ou use um que inclua exemplos de eventos não qualificados para a meta de previsão. (Código de erro: VALIDATION-413 SINGLE_VALUE_IN_OBJETIVE) |
-| 414 | NENHUM FATOR INFLUENTE | O modelo de fator influente gerou uma saída inesperada. Recomendamos criar um novo aplicativo com uma configuração modificada. (Código de erro: VALIDATION-414 NO_INFLUENTIAL_FATORS) | O modelo de fator influente gerou uma saída inesperada. Recomendamos criar um novo aplicativo com uma configuração modificada. (Código de erro: VALIDATION-414 NO_INFLUENTIAL_FATORS) |
+| 414  | NENHUM FATOR INFLUENTE | O modelo de fator influente gerou uma saída inesperada. Recomendamos criar um novo aplicativo com uma configuração modificada. (Código de erro: VALIDATION-414 NO_INFLUENTIAL_FATORS) | O modelo de fator influente gerou uma saída inesperada. Recomendamos criar um novo aplicativo com uma configuração modificada. (Código de erro: VALIDATION-414 NO_INFLUENTIAL_FATORS) |

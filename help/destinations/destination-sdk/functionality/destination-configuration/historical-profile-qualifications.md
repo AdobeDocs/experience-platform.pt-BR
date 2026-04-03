@@ -2,7 +2,7 @@
 description: Saiba mais sobre as qualificações de perfil histórico compatíveis com destinos criados com o Destination SDK.
 title: Qualificações do perfil histórico
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 2%
@@ -35,7 +35,8 @@ Consulte a tabela abaixo para obter detalhes sobre quais tipos de integrações 
 |---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Experience Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Experience Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
-{style="table-layout:auto"} -->
+{style="table-layout:auto"} 
+-->
 
 
 ## Próximas etapas {#next-steps}

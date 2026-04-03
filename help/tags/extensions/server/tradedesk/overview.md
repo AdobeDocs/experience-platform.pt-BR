@@ -2,7 +2,7 @@
 title: Visão geral da extensão da API de conversões em tempo real do Trade Desk
 description: Saiba mais sobre a extensão da API de conversões em tempo real do Trade Desk para encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 1ff32e2b-9ff8-4395-ae44-cba75a2da515
-source-git-commit: 8cf838b6f6794b52f80cb899945c066014e211c2
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 1%
@@ -39,7 +39,7 @@ Selecione **[!UICONTROL Extensions]** na navegação à esquerda. Na guia **[!UI
 
 Na próxima tela, digite o [!UICONTROL Advertiser ID] e, opcionalmente, um [!UICONTROL Merchant ID]. Você pode colar as IDs diretamente nessas entradas ou pode usar um elemento de dados. Eles servirão como valores padrão usados ao fazer uma chamada de evento para a API de conversões em tempo real [!DNL The Trade Desk]. Selecione **[!UICONTROL Save]** quando terminar.
 
-Para saber como criar elementos de dados e disponibilizá-los para extensões na propriedade da tag, siga o tutorial [Criar elementos de dados](https://experienceleague.adobe.com/pt-br/docs/platform-learn/data-collection/tags/create-data-elements).
+Para saber como criar elementos de dados e disponibilizá-los para extensões na propriedade da tag, siga o tutorial [Criar elementos de dados](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements).
 
 ![A página de configuração de extensão [!DNL The Trade Desk] com os campos [!UICONTROL Advertiser ID] e [!UICONTROL Merchant ID] realçados.](../../../images/extensions/server/tradedesk/configure-extension.png)
 

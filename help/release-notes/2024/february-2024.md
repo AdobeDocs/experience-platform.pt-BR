@@ -2,7 +2,7 @@
 title: Notas da versão de fevereiro de 2024 da Adobe Experience Platform
 description: Notas da versão de fevereiro de 2024 da Adobe Experience Platform.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: bb90bbddf33bc4b0557026a0f34965ac37475c65
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1237'
 ht-degree: 22%
@@ -20,7 +20,7 @@ Atualizações dos recursos existentes no Experience Platform:
 - [Destinos](#destinations)
 - [Sandboxes](#sandboxes)
 - [Serviço de segmentação](#segmentation)
-- [Origens](#sources)
+- [Fontes](#sources)
 
 ## Alertas {#alerts}
 
@@ -50,7 +50,8 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 
 Para saber mais sobre coleções de dados, leia a [visão geral das coleções de dados](/help/tags/home.md).
 
-<!-- ## Data Prep {#data-prep}
+<!-- 
+## Data Prep {#data-prep}
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -62,7 +63,8 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 
 {style="table-layout:auto"}
 
-For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). -->
+For more information on Data Prep, read the [Data Prep overview](/help/data-prep/home.md). 
+-->
 
 ## Destinos {#destinations}
 
@@ -119,7 +121,7 @@ O [!DNL Segmentation Service] permite segmentar dados relacionados a pessoas (co
 
 {style="table-layout:auto"}
 
-## Origens {#sources}
+## Fontes {#sources}
 
 A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 

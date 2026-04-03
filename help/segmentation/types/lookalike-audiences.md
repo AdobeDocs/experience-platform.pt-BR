@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Públicos-alvo semelhantes
 description: Saiba como direcionar novos públicos-alvo de alto valor no Adobe Experience Platform usando públicos-alvo semelhantes.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: 03f8124f0fc750efa9b7bca0ff80de4c9263915d
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '2250'
 ht-degree: 9%
@@ -124,7 +124,7 @@ A seção Públicos-alvo semelhantes exibe uma lista de todos os públicos-alvo 
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Fatores influentes"
 >abstract="Fatores influentes são atributos, eventos e associações de público-alvo que são importantes para explicar a similaridade de um perfil aos membros do público-alvo básico. Políticas e rótulos de uso de dados podem ser usados para impedir que determinados dados sejam considerados como fatores influentes em modelos semelhantes."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=pt-BR#exclude" text="Excluir dados"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="Excluir dados"
 
 A seção Fatores influentes exibe os 100 principais fatores que influenciam o modelo semelhante para o público-alvo básico selecionado. Esses fatores influentes são os atributos do perfil, os eventos de experiência e as associações de público-alvo que são os mais importantes para explicar as semelhanças no público-alvo básico. Compreender os principais fatores influentes permite personalizar melhor seu conteúdo de marketing para esse público-alvo e qualquer público semelhante que você criar a partir dele. Observe que nem todos os fatores influentes que afetam o modelo semelhante serão exibidos.
 

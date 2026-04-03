@@ -2,7 +2,7 @@
 title: Guia de configurações de regras de vinculação do gráfico de identidade
 description: Saiba mais sobre os diferentes tipos de implementação que você pode configurar usando as Regras de vinculação do gráfico de identidade.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 7%
@@ -203,7 +203,7 @@ CRMID: Jane, ECID:456
 
 **Gráfico simulado**
 
-![A graph where two end-users sign up with the same credit card.](../images/configs/intermediate/graph-with-same-credit-card.png)
+![Um gráfico em que dois usuários finais se inscrevem com o mesmo cartão de crédito.](../images/configs/intermediate/graph-with-same-credit-card.png)
 
 >[!TAB Número de cartão de crédito inválido]
 
@@ -240,7 +240,7 @@ Você está assimilando um CRMID com hash (offline) e um CRMID com hash (online)
 Defina as seguintes configurações na interface de Simulação de gráfico antes de simular o gráfico.
 
 | Nome de exibição | Símbolo de identidade | Tipo de identidade | Único por gráfico | Prioridade de namespace |
-| --- | --- | --- | --- | --- | 
+| --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
 | CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
 | ECID | ECID | COOKIE | | 3 |
@@ -281,6 +281,7 @@ CRMID: Jane, CRMIDhash: aaaa
 ![Um gráfico de dispositivos compartilhados com um erro no processo de hash, resultando em um CRMID com hash não exclusivo.](../images/configs/intermediate/hashing-error.png)
 
 >[!ENDTABS]
+
 <!-- 
 ### Use case: You are using Real-Time CDP and Adobe Commerce
 
@@ -339,7 +340,8 @@ Email: jane@g, ECID: 111
 
 ![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
->[!ENDTABS] -->
+>[!ENDTABS] 
+-->
 
 ### Caso de uso: seus dados incluem três namespaces exclusivos
 

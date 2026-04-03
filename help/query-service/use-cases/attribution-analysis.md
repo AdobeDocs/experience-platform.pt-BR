@@ -2,7 +2,7 @@
 title: Análise de atribuição
 description: Este documento explica como você pode usar o Serviço de consulta para criar uma técnica de medição de eficácia de marketing com base no modelo de atribuição de marketing de primeiro e último contato.
 exl-id: d62cd349-06fc-4ce6-a5e8-978f11186927
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1418'
 ht-degree: 0%
@@ -19,8 +19,8 @@ Os exemplos de SQL neste documento são consultas comumente usadas com dados do 
 
 * [O conector de origem do Adobe Analytics para a visão geral dos dados do conjunto de relatórios](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [A documentação de mapeamentos de campo do Analytics](../../sources/connectors/adobe-applications/mapping/analytics.md) fornece mais informações sobre assimilação e mapeamento de dados de análise para uso com o Serviço de consulta.
-* [A visão geral do Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=pt-BR)
-* [Guia do painel Atribuição do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=pt-BR).
+* [A visão geral do Attribution IQ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
+* [Guia do painel Atribuição do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
 
 Uma explicação dos parâmetros dentro da função `OVER()` pode ser encontrada na [seção de funções da janela](../sql/adobe-defined-functions.md#window-functions). O [Glossário de Termos do Adobe Marketing e do Commerce](https://business.adobe.com/glossary/index.html) também pode ser útil.
 

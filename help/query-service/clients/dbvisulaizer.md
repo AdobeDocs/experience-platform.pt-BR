@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Conectar DbVisualizer ao Serviço de consulta
 description: Este documento aborda as etapas para conectar o DbVisualizer ao Adobe Experience Platform Query Service.
 exl-id: badb0d89-1713-438c-8a9c-d1404051ff5f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 1%
+source-wordcount: '876'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ Este documento aborda as etapas para conectar a ferramenta de banco de dados [!D
 
 Este guia requer que você já tenha acesso ao aplicativo de desktop [!DNL DbVisualizer] e esteja familiarizado com como navegar em sua interface. Para baixar o aplicativo de desktop [!DNL DbVisualizer] ou obter mais informações, consulte a [documentação [!DNL DbVisualizer] oficial](https://www.dbvis.com/download/).
 
-Para adquirir as credenciais necessárias para conectar [!DNL &#x200B; DbVisualizer] ao Experience Platform, você deve ter acesso ao espaço de trabalho Consultas na interface do usuário do Experience Platform. Entre em contato com o administrador da organização se não tiver acesso ao espaço de trabalho de Consultas.
+Para adquirir as credenciais necessárias para conectar [!DNL  DbVisualizer] ao Experience Platform, você deve ter acesso ao espaço de trabalho Consultas na interface do usuário do Experience Platform. Entre em contato com o administrador da organização se não tiver acesso ao espaço de trabalho de Consultas.
 
 ## Criar uma conexão de banco de dados {#connect-database}
 
@@ -39,10 +39,10 @@ Em seguida, insira as propriedades de driver descritas na tabela abaixo.
 
 | Propriedade | Descrição |
 | ------ | ------ |
-| `PGHOST` | O nome do host do servidor [!DNL PostgreSQL]. Este valor é a credencial do **[!UICONTROL Host] do Experience Platform**. |
+| `PGHOST` | O nome do host do servidor [!DNL PostgreSQL]. Este valor é a credencial **[!UICONTROL Host]do Experience Platform**. |
 | `ssl` | Defina o valor SSL `1` para habilitar o uso de SSL. |
 | `sslmode` | Isso controla o nível de proteção SSL. É recomendável usar o modo SSL `require` ao conectar clientes de terceiros ao Adobe Experience Platform. O modo `require` garante que a criptografia seja necessária em todas as comunicações e que a rede seja confiável para se conectar ao servidor correto. A validação do certificado SSL do servidor não é necessária. |
-| `user` | O nome de usuário conectado ao banco de dados é a ID da organização. É uma sequência alfanumérica terminando em `@Adobe.Org`. Este valor é a credencial **[!UICONTROL Username] do Experience Platform**. |
+| `user` | O nome de usuário conectado ao banco de dados é a ID da organização. É uma sequência alfanumérica terminando em `@Adobe.Org`. Este valor é a credencial **[!UICONTROL Username]do Experience Platform**. |
 
 Use a barra de pesquisa para encontrar cada propriedade e, em seguida, selecione a célula correspondente para o valor do parâmetro. A célula será destacada em azul. Insira sua credencial do Experience Platform no campo de valor e selecione **[!DNL Apply]** para adicionar a propriedade de driver.
 
@@ -54,7 +54,7 @@ A coluna [!DNL Edited] mostra uma marca de seleção para indicar que o valor do
 
 ### Credenciais do Serviço de consulta de entrada {#query-service-credentials}
 
-Para localizar as credenciais necessárias para conectar o BBVisualizer ao Serviço de Consulta, faça logon na interface do usuário do Experience Platform e selecione **[!UICONTROL Consultas]** na navegação à esquerda, seguido de **[!UICONTROL Credenciais]**. Para obter mais informações sobre como localizar suas credenciais de **host**, **porta**, **banco de dados**, **nome de usuário** e **senha**, leia o [guia de credenciais](../ui/credentials.md).
+Para encontrar as credenciais necessárias para conectar o BBVisualizer ao Serviço de Consulta, faça logon na interface do usuário do Experience Platform e selecione **[!UICONTROL Queries]** na navegação à esquerda, seguido de **[!UICONTROL Credentials]**. Para obter mais informações sobre como localizar suas credenciais de **host**, **porta**, **banco de dados**, **nome de usuário** e **senha**, leia o [guia de credenciais](../ui/credentials.md).
 
 ![A página Credenciais do espaço de trabalho Consultas do Experience Platform com as Credenciais e as Credenciais que Estão Expirando foi realçada.](../images/clients/dbvisualizer/query-service-credentials-page.png)
 
@@ -78,12 +78,12 @@ Você pode fazer uma conexão usando credenciais com ou sem expiração. Para fa
 
 | Parâmetro de conexão | Descrição |
 |---|---|
-| **[!UICONTROL Nome]** | Crie um nome para a conexão. É recomendável fornecer um nome amigável para reconhecer a conexão. |
-| **[!UICONTROL Servidor de Banco de Dados]** | Esta é a sua credencial do Experience Platform **[!UICONTROL Host]**. |
-| **[!UICONTROL Porta de Banco de Dados]** | A porta para [!DNL Query Service]. Você deve usar a porta **80** ou **5432** para se conectar com [!DNL Query Service]. |
-| **[!UICONTROL Banco de dados]** | Use seu valor de credencial do **[!UICONTROL Banco de Dados]** do Experience Platform: `prod:all`. |
-| **[!UICONTROL Id de Usuário do Banco de Dados]** | Esta é a ID da organização da Experience Platform. Use o valor da credencial **[!UICONTROL Username]** do Experience Platform. A ID estará no formato de `ORG_ID@AdobeOrg`. |
-| **[!UICONTROL Senha do Banco de Dados]** | Esta sequência alfanumérica é a credencial **[!UICONTROL Senha]** da Experience Platform. Se você quiser usar credenciais sem expiração, esse valor serão os argumentos concatenados de `technicalAccountID` e `credential` baixados no arquivo JSON de configuração. O valor da senha tem o formato: {technicalAccountId}:{credential}. O arquivo JSON de configuração para credenciais sem expiração é um download único durante a inicialização do qual a Adobe não mantém uma cópia. |
+| **[!UICONTROL Name]** | Crie um nome para a conexão. É recomendável fornecer um nome amigável para reconhecer a conexão. |
+| **[!UICONTROL Database Server]** | Esta é a sua credencial do Experience Platform **[!UICONTROL Host]**. |
+| **[!UICONTROL Database Port]** | A porta para [!DNL Query Service]. Você deve usar a porta **80** ou **5432** para se conectar com [!DNL Query Service]. |
+| **[!UICONTROL Database]** | Use o valor da credencial **[!UICONTROL Database]** do Experience Platform: `prod:all`. |
+| **[!UICONTROL Database Userid]** | Esta é a ID da organização da Experience Platform. Use o valor da credencial **[!UICONTROL Username]** do Experience Platform. A ID estará no formato de `ORG_ID@AdobeOrg`. |
+| **[!UICONTROL Database Password]** | Esta cadeia alfanumérica é sua credencial do Experience Platform **[!UICONTROL Password]**. Se você quiser usar credenciais sem expiração, esse valor serão os argumentos concatenados de `technicalAccountID` e `credential` baixados no arquivo JSON de configuração. O valor da senha tem o formato: {technicalAccountId}:{credential}. O arquivo JSON de configuração para credenciais sem expiração é um download único durante a inicialização do qual a Adobe não mantém uma cópia. |
 
 Depois de inserir todas as credenciais relevantes, selecione **[!DNL Connect]**.
 

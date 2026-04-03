@@ -3,10 +3,10 @@ solution: Experience Platform
 title: Funções de matriz, lista e definição do PQL
 description: O Profile Query Language (PQL) oferece funções para facilitar a interação com matrizes, listas e strings.
 exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
-source-git-commit: c4d034a102c33fda81ff27bee73a8167e9896e62
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '820'
-ht-degree: 4%
+ht-degree: 3%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 4%
 
 O [!DNL Profile Query Language] (PQL) oferece funções para facilitar a interação com matrizes, listas e cadeias de caracteres. Mais informações sobre outras funções do PQL podem ser encontradas na [[!DNL Profile Query Language] visão geral](./overview.md).
 
-## Em
+## Entrada
 
 A função `in` é usada para determinar se um item é membro de uma matriz ou lista como booleano.
 
@@ -54,7 +54,7 @@ O query do PQL a seguir define as pessoas com aniversários que não são em mar
 person.birthMonth notIn [3, 6, 9]
 ```
 
-## Intersecta
+## Interseta
 
 A função `intersects` é usada para determinar se duas matrizes ou listas têm pelo menos um membro comum como booleano.
 
@@ -261,7 +261,7 @@ A função `bottomN` é usada para retornar os últimos itens `N` em uma matriz,
 ```
 
 | Argumento | Descrição |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{ARRAY}` | A matriz ou lista que deve ser classificada. |
 | `{VALUE}` | A propriedade na qual classificar a matriz ou lista. |
 | `{AMOUNT}` | O número de itens a serem retornados. |

@@ -6,7 +6,7 @@ description: Saiba como processar sinais de consentimento do cliente no Adobe Ex
 role: Developer
 feature: Consent
 exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
-source-git-commit: f988d7665a40b589ca281d439b6fca508f23cd03
+source-git-commit: e4ee4accdb28dafda7e37625eb84062bb6e53644
 workflow-type: tm+mt
 source-wordcount: '1562'
 ht-degree: 0%
@@ -117,7 +117,8 @@ Consulte a seção sobre [perfis de navegação por identidade](../../../../prof
 
 Por padrão, os novos atributos de consentimento não aparecerão no painel de um perfil. Portanto, você deve navegar até a guia **[!UICONTROL Attributes]** na página de detalhes de um perfil para confirmar que eles foram assimilados conforme esperado. Consulte o guia no [painel de perfil](../../../../profile/ui/profile-dashboard.md) para saber como personalizar o painel de acordo com suas necessidades.
 
-<!-- (To be included once CJM is GA)
+<!-- 
+(To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
 
 If you are using Customer Journey Management, after confirming that your profiles and segments contain consent data, you can start honoring customer [marketing preferences](../../../../xdm/data-types/consents.md#marketing) when pulling segments from Experience Platform. Specifically, profiles who have opted out of the email marketing preference should not be included in segments that are targeted for email campaigns.

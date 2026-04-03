@@ -2,9 +2,9 @@
 title: Notas da versão de janeiro de 2024 da Adobe Experience Platform
 description: As notas da versão de janeiro de 2024 da Adobe Experience Platform.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1662'
+source-wordcount: '1649'
 ht-degree: 34%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 34%
 
 Novos recursos na Adobe Experience Platform:
 
-- [Manuais de casos de uso &#x200B;](#use-case-playbooks)
+- [Manuais de estratégia de casos de uso ](#use-case-playbooks)
 
 Atualizações dos recursos existentes no Experience Platform:
 
@@ -27,13 +27,13 @@ Atualizações dos recursos existentes no Experience Platform:
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Perfil do cliente em tempo real](#profile)
 - [Serviço de segmentação](#segmentation)
-- [Origens](#sources)
+- [Fontes](#sources)
 
-## Manuais de casos de uso  {#use-case-playbooks}
+## Manuais de estratégia de casos de uso  {#use-case-playbooks}
 
-A funcionalidade [!UICONTROL Guias de reprodução de casos de uso] agora está disponível para todos os clientes do Real-Time CDP e do Adobe Journey Optimizer. Os [!UICONTROL manuais de casos de uso] foram projetados para ajudar os usuários a superar desafios ao começar com o Real-Time Customer Data Platform ou o Adobe Journey Optimizer. Quando não tiver certeza de onde começar ou como criar os ativos certos para os casos de uso desejados, os manuais de casos de uso fornecem inspiração e criam ativos diferentes para que você teste e importe para ambientes de produção quando estiver pronto.
+A funcionalidade [!UICONTROL Use Case Playbooks] agora está disponível para todos os clientes do Real-Time CDP e do Adobe Journey Optimizer. Os [!UICONTROL Use Case Playbooks] foram projetados para ajudar os usuários a superar desafios ao começar com o Real-Time Customer Data Platform ou o Adobe Journey Optimizer. Quando não tiver certeza de onde começar ou como criar os ativos certos para os casos de uso desejados, os manuais de casos de uso fornecem inspiração e criam ativos diferentes para que você teste e importe para ambientes de produção quando estiver pronto.
 
-Para começar a usar os [!UICONTROL manuais de casos de uso], leia as seguintes páginas de documentação:
+Para começar a usar o [!UICONTROL Use Case Playbooks], leia as seguintes páginas de documentação:
 
 - Leia a [página de visão geral](/help/use-case-playbooks/playbooks/overview.md) para entender a finalidade, as informações de disponibilidade e obter uma demonstração completa de como os manuais funcionam, da descoberta à criação de instâncias, à importação de ativos gerados em outros ambientes de sandbox.
 - Obtenha uma lista de todos os [manuais disponíveis](/help/use-case-playbooks/playbooks/playbooks-list.md), agrupados por produto (Real-Time CDP ou Journey Optimizer)
@@ -97,7 +97,7 @@ Para obter mais informações sobre painéis, incluindo como conceder permissõe
 
 {style="table-layout:auto"}
 
-**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
 
 | Funcionalidade | Descrição |
 | ----------- | ----------- |
@@ -160,7 +160,7 @@ Para saber mais sobre o Perfil de cliente em tempo real, leia a [Visão geral do
 
 ## Serviço de segmentação {#segmentation}
 
-O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de séries temporais que representam interações de clientes com sua marca.
+O [!DNL Segmentation Service] define um subconjunto específico de perfis descrevendo os critérios que distinguem um grupo de pessoas na sua base de clientes que pode ser direcionado por campanhas de marketing. Os segmentos podem ser baseados em dados de registro (como informações demográficas) ou em eventos de série temporal que representam interações de clientes com sua marca.
 
 **Recursos novos ou atualizados**
 
@@ -173,9 +173,9 @@ O [!DNL Segmentation Service] define um subconjunto específico de perfis descre
 
 Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [Visão geral de segmentação](../../segmentation/home.md).
 
-## Origens {#sources}
+## Fontes {#sources}
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 **Recursos novos ou atualizados**
 

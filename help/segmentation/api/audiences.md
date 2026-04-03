@@ -3,7 +3,7 @@ title: Endpoint da API de públicos-alvo
 description: Use o endpoint de públicos-alvo na API do serviço de segmentação do Adobe Experience Platform para criar, gerenciar e atualizar programaticamente os públicos-alvo da sua organização.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 3%
@@ -33,7 +33,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 >[!NOTE]
 >
->Se você usar este ponto de extremidade sem nenhum parâmetro de consulta, os públicos-alvo inativos **não** serão retornados. No entanto, se você usar este ponto de extremidade em conjunto com o parâmetro de consulta `property=audienceId`, os públicos-alvo inativos **&#x200B;**&#x200B;serão retornados.
+>Se você usar este ponto de extremidade sem nenhum parâmetro de consulta, os públicos-alvo inativos **não** serão retornados. No entanto, se você usar este ponto de extremidade em conjunto com o parâmetro de consulta `property=audienceId`, os públicos-alvo inativos **** serão retornados.
 
 Os seguintes parâmetros de consulta podem ser usados ao recuperar uma lista de públicos-alvo:
 
@@ -183,7 +183,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
 ```
 
 | Propriedade | Tipo de público-alvo | Descrição |
-| -------- | ------------- | ----------- | 
+| -------- | ------------- | ----------- |
 | `id` | Ambos | Um identificador somente leitura gerado pelo sistema para o público-alvo. |
 | `audienceId` | Ambos | Se o público for gerado pela Platform, o valor será igual ao `id`. Se o público-alvo for gerado externamente, esse valor será fornecido pelo cliente. |
 | `schema` | Ambos | O esquema do Experience Data Model (XDM) do público-alvo. |
@@ -205,7 +205,7 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com uma lista de públicos-a
 
 +++
 
-## Criar um novo público {#create}
+## Criar um novo público-alvo {#create}
 
 Você pode criar um novo público fazendo uma solicitação POST para o ponto de extremidade `/audiences`.
 
@@ -246,7 +246,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 ```
 
 | Propriedade | Descrição |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `name` | O nome do público. |
 | `description` | Uma descrição do público. |
 | `type` | Um campo que mostra se o público-alvo é gerado pela Platform ou um público-alvo gerado externamente. Os valores possíveis incluem `SegmentDefinition` e `ExternalSegment`. Um `SegmentDefinition` refere-se a um público-alvo gerado na Platform, enquanto um `ExternalSegment` refere-se a um público-alvo que não foi gerado na Platform. |
@@ -339,7 +339,7 @@ GET /audiences/{AUDIENCE_ID}
 ```
 
 | Parâmetro | Descrição |
-| --------- | ----------- | 
+| --------- | ----------- |
 | `{AUDIENCE_ID}` | A ID do público-alvo que você está tentando recuperar. Observe que este é o campo `id`, e é **não** o campo `audienceId`. |
 
 **Solicitação**
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 ```
 
 | Propriedade | Descrição |
-| -------- | ----------- | 
+| -------- | ----------- |
 | `audienceId` | A ID da audiência. Para públicos gerados externamente, esse valor pode ser fornecido pelo usuário. |
 | `name` | O nome do público. |
 | `namespace` | O namespace do público. |

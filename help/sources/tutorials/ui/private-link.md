@@ -1,10 +1,10 @@
 ---
 title: Suporte a link privado para origens na interface do usuário
-description: Saiba como usar os Links privados do Azure para origens na interface do usuário do Experience Platform.
+description: Saiba como usar Links privados do Azure para fontes na interface do usuário do Experience Platform.
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -39,11 +39,11 @@ As métricas de direito de uso de licença para suporte a links privados nas ori
 
 ## Criar um ponto de extremidade privado
 
-Para começar a usar Links Privados, navegue até o catálogo *[!UICONTROL Fontes]* da interface do usuário do Experience Platform e selecione **[!UICONTROL Pontos de extremidade privados]** no menu de guias no espaço de trabalho de fontes.
+Para começar a usar Links Privados, navegue até o catálogo *[!UICONTROL Sources]* da interface do usuário do Experience Platform e selecione **[!UICONTROL Private endpoints]** no menu de guias no espaço de trabalho de fontes.
 
 ![O catálogo de fontes com &quot;Pontos de extremidade particulares&quot;.](../../images/tutorials/private-links/catalog.png)
 
-Use a interface para exibir informações sobre pontos de extremidade privados existentes, como ID, fonte associada e status atual. Para criar um novo ponto de extremidade privado, selecione **[!UICONTROL Criar ponto de extremidade privado]**.
+Use a interface para exibir informações sobre pontos de extremidade privados existentes, como ID, fonte associada e status atual. Para criar um novo ponto de extremidade privado, selecione **[!UICONTROL Create private endpoint]**.
 
 ![A interface de pontos de extremidade Privados com &quot;Criar ponto de extremidade privado&quot; foi selecionada.](../../images/tutorials/private-links/private-endpoints.png)
 
@@ -58,7 +58,7 @@ Em seguida, escolha a origem desejada e insira valores para as seguintes proprie
 
 {style="table-layout:auto"}
 
-Quando terminar, selecione **[!UICONTROL Enviar]**.
+Quando terminar, selecione **[!UICONTROL Submit]**.
 
 ![A janela de autenticação para criar um novo ponto de extremidade privado no espaço de trabalho da interface do usuário de fontes.](../../images/tutorials/private-links/create-private-endpoint.png)
 
@@ -72,21 +72,21 @@ Para aprovar uma solicitação de ponto de extremidade privado para as fontes [!
 
 ## Criar uma conta com um ponto de extremidade privado
 
-Navegue até o catálogo de origens e selecione uma origem que ofereça suporte a endpoints privados. Em seguida, crie uma nova conta com sua origem e, durante a autenticação da conta, selecione a opção **[!UICONTROL Ponto de extremidade privado]**. Forneça as credenciais de autenticação da origem e selecione **[!UICONTROL Conectar à origem]** Aguarde alguns minutos para que a conexão seja estabelecida.
+Navegue até o catálogo de origens e selecione uma origem que ofereça suporte a endpoints privados. Em seguida, crie uma nova conta com sua origem e, durante a autenticação da conta, selecione o botão de alternância **[!UICONTROL Private endpoint]**. Forneça as credenciais de autenticação da origem e selecione **[!UICONTROL Connect to source]** Aguarde alguns minutos para que a conexão seja estabelecida.
 
 >[!NOTE]
 >
->Se a opção [!UICONTROL Ponto de extremidade privado] estiver habilitada, o Experience Platform verificará se existe um ponto de extremidade privado aprovado para a origem selecionada. Se nenhum endpoint aprovado for encontrado, você não poderá estabelecer uma conexão.
+>Se a opção [!UICONTROL Private endpoint] estiver habilitada, o Experience Platform verificará se existe um ponto de extremidade privado aprovado para a origem selecionada. Se nenhum endpoint aprovado for encontrado, você não poderá estabelecer uma conexão.
 
 ![A nova etapa de autenticação de conta com pontos de extremidade privados habilitada.](../../images/tutorials/private-links/new-account.png)
 
-Em seguida, navegue até a interface [!UICONTROL Conta existente] da sua origem. Use essa interface para exibir uma lista das contas existentes e os status correspondentes. Você pode selecionar o ícone de filtro ![ícone de filtro](../../../images/icons/filter.png) para exibir apenas as contas que foram habilitadas para conexão com um ponto de extremidade privado.
+Em seguida, navegue até a interface [!UICONTROL Existing account] da origem. Use essa interface para exibir uma lista das contas existentes e os status correspondentes. Você pode selecionar o ícone de filtro ![ícone de filtro](../../../images/icons/filter.png) para exibir apenas as contas que foram habilitadas para conexão com um ponto de extremidade privado.
 
 ![A interface de conta existente no fluxo de trabalho de origem exibe somente as contas filtradas que estão habilitadas para conexões de ponto de extremidade privado.](../../images/tutorials/private-links/existing-private-endpoints.png)
 
-Selecione a conta que deseja usar e habilite a **[!UICONTROL Criação Interativa]**. Este botão de alternância ativa a [!UICONTROL Criação Interativa], um recurso [!DNL Azure] que permite testar conexões, procurar listas de pastas e visualizar dados. É necessário habilitar a [!UICONTROL Criação Interativa] para conexões de ponto de extremidade privado. Observe que não é possível desativar esse botão manualmente; ele é desativado automaticamente após 60 minutos.
+Selecione a conta que deseja usar e habilite **[!UICONTROL Interactive Authoring]**. Este botão ativa o [!UICONTROL Interactive Authoring], um recurso do [!DNL Azure] que permite testar conexões, procurar listas de pastas e visualizar dados. Habilitar [!UICONTROL Interactive Authoring] é necessário para conexões de ponto de extremidade privado. Observe que não é possível desativar esse botão manualmente; ele é desativado automaticamente após 60 minutos.
 
-A [!UICONTROL Criação interativa] leva alguns minutos para ser habilitada. Depois que a configuração estiver habilitada, selecione **[!UICONTROL Avançar]** para prosseguir para a próxima etapa e selecione os dados que deseja assimilar.
+O [!UICONTROL Interactive Authoring] leva alguns minutos para habilitar. Quando a configuração estiver habilitada, selecione **[!UICONTROL Next]** para prosseguir para a próxima etapa e selecione os dados que deseja assimilar.
 
 ![Uma conta existente foi selecionada e a criação interativa está habilitada.](../../images/tutorials/private-links/interactive-authoring.png)
 

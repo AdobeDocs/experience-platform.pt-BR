@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Receita de vendas de varejo
 description: A fórmula de Vendas de Varejo permite prever a previsão de vendas para todas as lojas pré-implantadas por um determinado período de tempo. Com um modelo de previsão preciso, a retailer seria capaz de encontrar a relação entre as políticas de demanda e de preços e tomar decisões de preços otimizadas para maximizar as vendas e a receita.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
-source-git-commit: 1b507e9846a74b7ac2d046c89fd7c27a818035ba
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 2%

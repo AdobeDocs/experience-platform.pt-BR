@@ -78,7 +78,7 @@ Não. Qualquer cliente da Adobe Digital Experience pode usar o Adobe Experience 
 * Os clientes que *não* têm acesso ao Experience Platform ou à Real-time CDP e desejam usar o [!DNL Web SDK] precisarão configurar as permissões corretas para criar esquemas e fluxos de dados na interface da Coleção de dados ou na interface do Experience Platform.
 * Os clientes que têm acesso ao Experience Platform ou à Real-time CDP e desejam usar o [!DNL Web SDK] precisarão configurar as permissões certas para criar esquemas, conjuntos de dados, namespaces de identidade e fluxos de dados na interface da Coleção de dados ou na interface da Experience Platform.
 
-Para obter mais informações sobre como configurar essas permissões, consulte nossa documentação em [gerenciamento de permissões de coleta de dados](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
+Para obter mais informações sobre como configurar essas permissões, consulte nossa documentação em [gerenciamento de permissões de coleta de dados](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=pt-BR).
 
 ## Quem deve usar o Web SDK?
 
@@ -144,11 +144,11 @@ Se você usa nossos SDKs e envia XDM para a Edge Network, esses novos recursos d
 
 ## O que é um CNAME ou domínio próprio e por que ele é importante?
 
-Consulte o [programa de certificado gerenciado pela Adobe](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/adobe-managed-cert) no guia dos Serviços principais.
+Consulte o [programa de certificado gerenciado pela Adobe](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/data-collection/adobe-managed-cert) no guia dos Serviços principais.
 
 ## O Adobe Experience Platform Web SDK usa cookies? Em caso afirmativo, quais cookies ele usa?
 
-Consulte [Cookies do Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/core-services/interface/data-collection/cookies/web-sdk) no guia dos Serviços principais.
+Consulte [Cookies do Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/pt-br/docs/core-services/interface/data-collection/cookies/web-sdk) no guia dos Serviços principais.
 
 ## Quais navegadores são compatíveis com o Adobe Experience Platform Web SDK?
 

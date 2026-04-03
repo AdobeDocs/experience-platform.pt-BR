@@ -47,7 +47,7 @@ Como diretriz, aguarde até que o tempo de vida máximo do cookie AMCV tenha dec
 
 ## Atualizações de características do Audience Manager
 
-Quando dados formatados em XDM são enviados para o Audience Manager durante a migração, esses dados devem ser convertidos em sinais. Suas características devem ser atualizadas para refletir as novas chaves fornecidas pelo XDM. Este processo é facilitado com a [ferramenta BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management).
+Quando dados formatados em XDM são enviados para o Audience Manager durante a migração, esses dados devem ser convertidos em sinais. Suas características devem ser atualizadas para refletir as novas chaves fornecidas pelo XDM. Este processo é facilitado com a [ferramenta BAAAM](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=pt-BR#getting-started-with-bulk-management).
 
 ## Migração de ID de terceiros {#third-party-id}
 

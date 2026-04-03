@@ -2,7 +2,7 @@
 title: Mensagens de erro de origens
 description: Saiba mais sobre as mensagens de erro que você pode encontrar ao usar o Serviço de fluxo para fontes.
 exl-id: cfba9780-4ab9-447b-8c60-c9f813107d11
-source-git-commit: 16cc811a545414021b8686ae303d6112bcf6cebb
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '3057'
 ht-degree: 48%
@@ -23,13 +23,13 @@ Este documento fornece um catálogo de mensagens de erro, descrições e resolu�
 | `1003-404` | Recurso não encontrado | O recurso solicitado não foi encontrado. Verifique a solicitação fornecida e tente novamente. |
 | `1004-415` | Tipo de mídia incompatível | O formato de conteúdo fornecido não é compatível. Verifique a solicitação fornecida e tente novamente. |
 | `1005-500` | Erro interno | Ocorreu um erro interno. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
-| `1006-408` | Tempo limite da solicitação | Erro ao processar a solicitação. A solicitação atingiu o tempo limite. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
+| `1006-408` | Tempo-limite da solicitação | Erro ao processar a solicitação. A solicitação expirou. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
 | `1007-400` | Parâmetro de cabeçalho inválido | Um parâmetro de cabeçalho inválido: `{headerName}` foi recebido. Verifique os parâmetros do cabeçalho e tente novamente. |
 | `1008-401` | Token de autorização inválido | O token de autorização não tem acesso a esta organização ou a organização não existe. Certifique-se de que a organização existe ou entre em contato com seu administrador para obter acesso. |
 | `1009-403` | A ID da organização IMS está ausente ou em branco | O cabeçalho de solicitação de ID da organização está ausente ou vazio. Atualize o valor do cabeçalho e tente novamente. |
 | `1010-500` | Mensagem detalhada inválida | O parâmetro na mensagem detalhada não foi fornecido corretamente. Verifique o parâmetro na mensagem detalhada e tente novamente. |
 | `1011-503` | Serviço indisponível | O serviço está temporariamente indisponível. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
-| `1012-504` | Tempo limite do gateway | O gateway atingiu o tempo limite. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
+| `1012-504` | Tempo-limite do gateway | O gateway atingiu o tempo-limite. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
 | `1013-412` | Falha da pré-condição | A condição definida pelos cabeçalhos If-Unmodified-Since ou If-None-Match não foi atendida. Verifique e tente novamente. |
 | `1014-400` | Argumento inválido da solicitação inválida | A solicitação não pôde ser processada. {detailedMessage} |
 
@@ -41,7 +41,7 @@ Este documento fornece um catálogo de mensagens de erro, descrições e resolu�
 | `1101-500` | Erro interno | Ocorreu um erro interno. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
 | `1102-404` | Recurso não encontrado | O recurso solicitado não foi encontrado. {detailedMessage} |
 | `1103-503` | Serviço indisponível | O serviço está temporariamente indisponível. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
-| `1104-504` | Tempo limite do gateway | O gateway atingiu o tempo limite. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
+| `1104-504` | Tempo-limite do gateway | O gateway atingiu o tempo-limite. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
 | `1105-401` | Não autorizado | Usuário não autorizado. {detailedMessage} |
 | `1106-403` | Proibido | A operação solicitada é proibida. {detailedMessage} |
 | `1107-412` | Falha da pré-condição | A condição definida pelos cabeçalhos If-Unmodified-Since ou If-None-Match não é atendida. `{detailedMessage}` |
@@ -114,7 +114,7 @@ Este documento fornece um catálogo de mensagens de erro, descrições e resolu�
 | `1350-400` | Solicitação inválida | Nenhum operador foi fornecido para o filtro na origem. Forneça uma solicitação de filtro válida com o operador apropriado e tente novamente. |
 | `1351-400` | Solicitação inválida | O operador fornecido {operator} não tem suporte para o filtro na origem deste conector. Forneça um operador válido e tente novamente. |
 | `1352-400` | Solicitação inválida | O operador fornecido {operator} não pode ser mapeado para nenhum operador nativo com suporte para {ql}. Forneça um operador válido e tente novamente. |
-| `1353-400` | Solicitação inválida | O filtro na origem ainda não tem suporte para o conector {connectorType}. Verifique os conectores compatíveis na documentação: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=pt-BR. |
+| `1353-400` | Solicitação inválida | O filtro na origem ainda não tem suporte para o conector {connectorType}. Verifique os conectores compatíveis na documentação: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
 | `1354-400` | Solicitação inválida | O idioma de consulta {ql} ainda não tem suporte para o filtro na origem. Forneça um idioma de consulta válido e tente novamente. |
 | `1355-400` | Solicitação inválida | O tipo de filtro fornecido é inválido. O tipo de filtro suportado é PQL. Forneça um tipo de filtro válido e tente novamente. |
 | `1356-400` | Solicitação inválida | O formato de filtro fornecido é inválido. O formato de filtro compatível é: pql/json. Forneça um formato de filtro válido e tente novamente. |
@@ -122,7 +122,7 @@ Este documento fornece um catálogo de mensagens de erro, descrições e resolu�
 | `1358-400` | Solicitação inválida | O parâmetro &#39;objectType&#39; fornecido é inválido. Forneça um objectType válido e tente novamente. |
 | `1359-400` | Solicitação inválida | O parâmetro {param} está ausente na solicitação. Forneça um {param} válido e tente novamente. |
 | `1360-400` | Solicitação inválida | A hora de início não pode ser definida no passado. Forneça uma hora de início válida e tente novamente. |
-| `1361-400` | Solicitação inválida | O intervalo não é permitido com assimilações únicas. Remova o intervalo ou altere a frequência e tente novamente. |
+| `1361-400` | Solicitação inválida | O intervalo não é permitido com ingestões únicas. Remova o intervalo ou altere a frequência e tente novamente. |
 | `1362-400` | Solicitação inválida | O intervalo não pode ser menor que {minInterval}. Forneça um valor de intervalo válido e tente novamente. |
 | `1363-400` | Solicitação inválida | O intervalo {interval} não é permitido com frequência: {frequency}. Forneça um valor de intervalo válido e tente novamente. |
 | `1364-400` | Solicitação inválida | O sinalizador de preenchimento retroativo não é permitido quando a frequência está definida como uma vez. Remova o sinalizador de preenchimento retroativo quando a frequência estiver definida como uma vez e tente novamente. |
@@ -131,7 +131,7 @@ Este documento fornece um catálogo de mensagens de erro, descrições e resolu�
 | `1367-400` | Solicitação inválida | A coluna delta é necessária na transformação de cópia ao criar um conector CRM. Forneça a coluna delta e tente novamente. |
 | `1368-400` | Solicitação inválida | O modo não é permitido na solicitação de fluxo. Verifique sua solicitação e tente novamente. |
 | `1369-400` | Solicitação inválida | A coluna delta na transformação de cópia não é permitida quando a frequência está definida como uma vez. Remova a coluna delta e tente novamente. |
-| `1370-400` | Solicitação inválida | Não foi possível buscar as colunas de origem para assimilação porque a transformação de mapeamento está ausente. Adicione a transformação de mapeamento e tente novamente. |
+| `1370-400` | Solicitação inválida | Não foi possível buscar as colunas de origem para ingestão porque a transformação de mapeamento está ausente. Adicione a transformação de mapeamento e tente novamente. |
 | `1371-400` | Solicitação inválida | A detecção de propriedades de arquivo não tem suporte para o conector {connectorType}. Forneça as propriedades do arquivo manualmente. |
 | `1372-400` | Solicitação inválida | A operação atual não é permitida. Explorar via especificação de conexão não é permitido para a especificação de conexão ID={connectionSpecId}. |
 | `1373-400` | Solicitação inválida | O flowSpecType está ausente na solicitação. Forneça um flowSpecType válido e tente novamente. |
@@ -175,7 +175,7 @@ Este documento fornece um catálogo de mensagens de erro, descrições e resolu�
 | `1601-500` | Erro interno | Ocorreu um erro interno. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
 | `1602-404` | Recurso não encontrado | O recurso solicitado não foi encontrado. {detailedMessage} |
 | `1603-503` | Serviço indisponível | O serviço está temporariamente indisponível. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
-| `1604-504` | Tempo limite do gateway | O gateway atingiu o tempo limite. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
+| `1604-504` | Tempo-limite do gateway | O gateway atingiu o tempo-limite. Tente novamente e entre em contato com o suporte ao cliente se o problema persistir. |
 | `1605-401` | Não autorizado | Usuário não autorizado. {detailedMessage} |
 | `1606-403` | Proibido | A operação solicitada é proibida. {detailedMessage} |
 | `1607-412` | Falha da pré-condição | A condição definida pelos cabeçalhos If-Unmodified-Since ou If-None-Match não é atendida. {detailedMessage} |

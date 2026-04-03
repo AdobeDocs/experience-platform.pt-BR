@@ -3,10 +3,10 @@ title: Criar uma conexão Google PubSub Source usando a API do serviço de fluxo
 description: Saiba como conectar o Adobe Experience Platform a uma conta Google PubSub usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '1181'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -90,7 +90,7 @@ POST /connections
 
 Para criar uma conexão base com autenticação baseada em projeto, faça uma solicitação POST para o ponto de extremidade `/connections` e forneça seus `projectId` e `credentials` no corpo da solicitação.
 
-+++Solicitação
++++ Solicitação
 
 ```shell
 curl -X POST \
@@ -123,9 +123,9 @@ curl -X POST \
 | `auth.params.credentials` | A credencial ou chave necessária para autenticar [!DNL PubSub]. |
 | `connectionSpec.id` | A ID de especificação de conexão [!DNL PubSub]: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-++++
++++
 
-+++Resposta
++++ Resposta
 
 Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID de conexão básica é necessária na próxima etapa para criar uma conexão de origem.
 
@@ -136,13 +136,13 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 }
 ```
 
-++++
++++
 
 >[!TAB Autenticação baseada em assinatura e tópico]
 
 Para criar uma conexão base com autenticação baseada em assinatura e tópico, faça uma solicitação POST para o ponto de extremidade `/connections` e forneça seus `credentials`, `topicName` e `subscriptionName` no corpo da solicitação.
 
-+++Solicitação
++++ Solicitação
 
 ```shell
 curl -X POST \
@@ -179,7 +179,7 @@ curl -X POST \
 
 +++
 
-+++Resposta
++++ Resposta
 
 Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo seu identificador exclusivo (`id`). Essa ID de conexão básica é necessária na próxima etapa para criar uma conexão de origem.
 
@@ -190,7 +190,7 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 }
 ```
 
-++++
++++
 
 >[!ENDTABS]
 

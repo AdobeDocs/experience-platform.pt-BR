@@ -2,16 +2,16 @@
 title: Notas de versão de agosto de 2024 da Adobe Experience Platform
 description: As notas de versão de agosto de 2024 da Adobe Experience Platform.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1565'
-ht-degree: 95%
+source-wordcount: '1556'
+ht-degree: 89%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 20 de agosto de 2024**
+**Data de lançamento: quarta-feira, 20 de agosto de 2024**
 
 >[!TIP]
 >
@@ -20,12 +20,12 @@ ht-degree: 95%
 Atualizações dos recursos existentes e da documentação na Experience Platform:
 
 - [Controle de acesso baseado em atributos](#abac)
-- [Assimilação de dados](#data-ingestion)
+- [Ingestão de dados](#data-ingestion)
 - [Destinos](#destinations)
 - [Experience Data Model (XDM)](#xdm)
 - [Serviço de identidade](#identity-service)
 - [Serviço de segmentação](#segmentation)
-- [Origens](#sources)
+- [Fontes](#sources)
 
 ## Controle de acesso baseado em atributos {#abac}
 
@@ -64,20 +64,20 @@ Leia mais sobre [ingestão em lote](/help/ingestion/batch-ingestion/overview.md)
 
 | Destino | Descrição |
 | ----------- | ----------- |
-| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | O [!UICONTROL Braze] gerencia várias instâncias diferentes de seus painéis e pontos de acesso REST. Clientes do [!UICONTROL Braze] devem usar o ponto de acesso REST correto com base na instância para a qual foram provisionados(as). Esta versão adiciona um novo ponto de acesso US-07 que é possível selecionar ao se conectar ao [!UICONTROL Braze]. |
+| [Braze](/help/destinations/catalog/mobile-engagement/braze.md) | [!UICONTROL Braze] gerencia várias instâncias diferentes para seus pontos de extremidade de painel e REST. [!UICONTROL Braze] clientes devem usar o Ponto de Extremidade REST correto com base na instância para a qual você está provisionado. Esta versão adiciona um novo ponto de extremidade US-07 que você pode selecionar ao se conectar a [!UICONTROL Braze]. |
 
 {style="table-layout:auto"}
 
-**Funcionalidades novas ou atualizadas** {#destinations-new-updated-functionality}
+**Funcionalidade nova ou atualizada** {#destinations-new-updated-functionality}
 
 | Recurso | Descrição |
 | ----------- | ----------- |
 | Disponibilidade geral da exportação de arquivos sob demanda para destinos em lote. | A opção de exportar arquivos sob demanda para destinos em lote agora está disponível para todos(as) os(as) clientes. Consulte a [documentação dedicada](../../destinations/ui/export-file-now.md) para obter mais detalhes. |
 | Edição dos agendamentos de exportação para vários públicos-alvo exportados na [etapa de agendamento](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | Agora a opção de editar os agendamentos de exportação para vários públicos-alvo exportados diretamente da etapa de agendamento do fluxo de trabalho de ativação de público-alvo está disponível para todos(as) os(as) clientes. ![Imagem da interface da Experience Platform com destaque para a opção Editar agendamento na etapa de agendamento.](assets/august/edit-schedule.png "Opção Editar agendamento na etapa de agendamento."){width="250" align="center" zoomable="yes"} |
 | Edição de nomes de arquivos para vários públicos-alvo exportados na [etapa de agendamento](../../destinations/ui/activate-batch-profile-destinations.md#scheduling). | Agora a opção de editar os nomes de vários arquivos exportados diretamente da etapa de agendamento do fluxo de trabalho de ativação de público-alvo está disponível para todos(as) os(as) clientes. ![Imagem da interface da Experience Platform com destaque para a opção Editar nome do arquivo na etapa de agendamento.](assets/august/edit-file-name.png "Opção Editar nome do arquivo na etapa de agendamento."){width="250" align="center" zoomable="yes"} |
-| Remoção de vários públicos-alvo de um fluxo de dados a partir da página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-remove). | Agora a opção de remover vários públicos-alvo de fluxos de dados existentes a partir da página **[!UICONTROL Detalhes do destino]** está disponível para todos(as) os(as) clientes. ![Imagem da interface da Experience Platform com destaque para a opção Remover públicos-alvo na página Detalhes do destino.](assets/august/bulk-remove-audiences.png "Opção Remover públicos-alvo na página Detalhes do destino."){width="250" align="center" zoomable="yes"} |
-| Exportação de vários arquivos sob demanda para destinos em lote a partir da página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-export). | Agora a opção de exportar vários arquivos sob demanda para destinos em lote a partir da página **[!UICONTROL Detalhes do destino]** está disponível para todos(as) os(as) clientes. ![Imagem da interface da Experience Platform com destaque para a opção Exportar arquivo agora na página Detalhes do destino.](assets/august/bulk-export-file-now.png "Opção Exportar arquivo agora na página Detalhes do destino."){width="250" align="center" zoomable="yes"} |
-| Edição de nomes de arquivos para vários públicos-alvo exportados na página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Agora é possível editar os nomes de vários arquivos exportados diretamente da página **[!UICONTROL Detalhes do destino]**. ![Imagem da interface da Experience Platform com destaque para a opção Editar nome do arquivo na página Detalhes do destino.](assets/august/edit-file-name-destination-details.png "Opção Editar nome do arquivo na página Detalhes do destino."){width="250" align="center" zoomable="yes"} |
+| Remoção de vários públicos-alvo de um fluxo de dados a partir da página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-remove). | A opção de remover vários públicos-alvo de fluxos de dados existentes da página **[!UICONTROL Destination Details]** agora está disponível para todos os clientes. ![Imagem da interface da Experience Platform com destaque para a opção Remover públicos-alvo na página Detalhes do destino.](assets/august/bulk-remove-audiences.png "Opção Remover públicos-alvo na página Detalhes do destino."){width="250" align="center" zoomable="yes"} |
+| Exportação de vários arquivos sob demanda para destinos em lote a partir da página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-export). | A opção de exportar vários arquivos por demanda para destinos em lote a partir da página **[!UICONTROL Destination Details]** agora está disponível para todos os clientes. ![Imagem da interface da Experience Platform com destaque para a opção Exportar arquivo agora na página Detalhes do destino.](assets/august/bulk-export-file-now.png "Opção Exportar arquivo agora na página Detalhes do destino."){width="250" align="center" zoomable="yes"} |
+| Edição de nomes de arquivos para vários públicos-alvo exportados na página [Detalhes do destino](../../destinations/ui/destination-details-page.md#bulk-edit-file-names). | Agora é possível editar os nomes de vários arquivos exportados diretamente da página **[!UICONTROL Destination Details]**. ![Imagem da interface da Experience Platform com destaque para a opção Editar nome do arquivo na página Detalhes do destino.](assets/august/edit-file-name-destination-details.png "Opção Editar nome do arquivo na página Detalhes do destino."){width="250" align="center" zoomable="yes"} |
 | Remoção de vários conjuntos de dados de um fluxo de dados a partir da página [Detalhes do destino](../../destinations/ui/export-datasets.md#remove-dataset). | Agora a opção para remover vários conjuntos de dados de um fluxo de dados está disponível para todos(as) os(as) clientes. ![Imagem da interface da Experience Platform com destaque para a opção Remover conjuntos de dados na página Detalhes do destino.](assets/august/bulk-remove-datasets.png "Opção Remover conjuntos de dados na página Detalhes do destino."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
@@ -114,7 +114,7 @@ Para obter mais informações sobre o Serviço de identidade, leia a [Visão ger
 
 ## Serviço de segmentação {#segmentation}
 
-O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos (como clientes, prospectos, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Experience Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
+O [!DNL Segmentation Service] permite segmentar dados relacionados a pessoas (como clientes, clientes potenciais, usuários ou organizações) que estão armazenados na [!DNL Experience Platform] em públicos-alvo. Você pode criar públicos-alvo por meio de definições de segmento ou outras fontes a partir dos dados do [!DNL Real-Time Customer Profile]. Esses públicos-alvo são configurados e mantidos de forma centralizada na [!DNL Experience Platform] e podem ser acessados a qualquer momento usando as soluções da Adobe.
 
 **Recursos atualizados**
 
@@ -126,9 +126,9 @@ O [!DNL Segmentation Service] permite segmentar dados relacionados a indivíduos
 
 Para obter mais informações sobre o [!DNL Segmentation Service], consulte a [Visão geral de segmentação](../../segmentation/home.md).
 
-## Origens
+## Fontes
 
-A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de assimilação e gerenciar a taxa de transferência de assimilação de dados.
+A Experience Platform fornece uma API RESTful e uma interface interativa que permite configurar conexões de origem para vários provedores de dados com facilidade. Essas conexões de origem permitem autenticar e conectar a sistemas de armazenamento externos e serviços de CRM, definir períodos para execuções de ingestão e gerenciar a taxa de transferência de ingestão de dados.
 
 Use fontes na Experience Platform para assimilar dados de um aplicativo da Adobe ou de uma fonte de dados de terceiros.
 

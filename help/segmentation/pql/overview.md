@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Visão geral do Profile Query Language (PQL)
 description: Este guia fornece uma visão geral do PQL, abordando diretrizes de formatação e fornecendo exemplos de expressões PQL.
 exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
-source-git-commit: dbb7e0987521c7a2f6512f05eaa19e0121aa34c6
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '706'
 ht-degree: 3%

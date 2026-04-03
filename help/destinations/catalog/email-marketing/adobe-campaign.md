@@ -3,7 +3,7 @@ keywords: email;Email;e-mail;destinos de e-mail;adobe campaign;campanha
 title: Conexão com o Adobe Campaign
 description: O Adobe Campaign é um conjunto de soluções que ajudam você a personalizar e entregar campanhas em todos os seus canais online e offline.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
 source-wordcount: '926'
 ht-degree: 5%
@@ -122,10 +122,10 @@ Para destinos [!DNL Adobe Campaign], o [!DNL Experience Platform] cria um arquiv
 >[!IMPORTANT]
 >
 >* Lembre-se dos limites de armazenamento do [!DNL SFTP], do armazenamento do banco de dados e do perfil ativo conforme o contrato do [!DNL Adobe Campaign] ao realizar essa integração.
->* Você precisa agendar, importar e mapear os segmentos exportados no [!DNL Adobe Campaign] usando [!DNL Campaign] fluxos de trabalho. Consulte [Configurando uma importação recorrente](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) na documentação [!DNL Adobe Campaign Classic] e [Sobre atividades de gerenciamento de dados](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html?lang=pt-BR) na documentação [!DNL Adobe Campaign Standard].
+>* Você precisa agendar, importar e mapear os segmentos exportados no [!DNL Adobe Campaign] usando [!DNL Campaign] fluxos de trabalho. Consulte [Configurando uma importação recorrente](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) na documentação [!DNL Adobe Campaign Classic] e [Sobre atividades de gerenciamento de dados](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) na documentação [!DNL Adobe Campaign Standard].
 >* O método preferido para enviar dados a [!DNL Adobe Campaign] é por meio de [!DNL Amazon S3] ou [!DNL Azure Blob].
 
 Depois de conectar [!DNL Experience Platform] ao armazenamento do [!DNL Amazon S3] ou do [!DNL Azure Blob], você deve configurar a importação de dados do local de armazenamento para o [!DNL Adobe Campaign]. Para saber como fazer isso, consulte as [!DNL Adobe Campaign] seguintes páginas de documentação:
 
-* [Introdução à importação e exportação de dados](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=pt-BR) e [ao carregamento de dados (arquivo)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html?lang=pt-BR) na documentação [!DNL Adobe Campaign Classic].
-* [Introdução a processos e gerenciamento de dados](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html?lang=pt-BR) e [Carregar arquivo](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html?lang=pt-BR) na documentação [!DNL Adobe Campaign Standard].
+* [Introdução à importação e exportação de dados](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html?lang=pt-BR) e [ao carregamento de dados (arquivo)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) na documentação [!DNL Adobe Campaign Classic].
+* [Introdução a processos e gerenciamento de dados](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) e [Carregar arquivo](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) na documentação [!DNL Adobe Campaign Standard].

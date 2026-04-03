@@ -2,7 +2,7 @@
 description: Esta página exemplifica a chamada à API usada para excluir uma configuração de destino existente por meio do Adobe Experience Platform Destination SDK.
 title: Excluir uma configuração de destino
 exl-id: c7309ab7-1b8d-46d4-8017-fd4aa5918cdd
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 2%
@@ -15,7 +15,7 @@ Esta página exemplifica a solicitação de API e a carga que você pode usar pa
 
 >[!IMPORTANT]
 >
->Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1&rbrace;.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
+>Todos os nomes e valores de parâmetros com suporte do Destination SDK diferenciam maiúsculas de minúsculas **1}.** Para evitar erros de diferenciação entre maiúsculas e minúsculas, use os nomes e valores dos parâmetros exatamente como mostrado na documentação.
 
 ## Introdução às operações de API de configuração de destino {#get-started}
 
@@ -43,7 +43,7 @@ DELETE /authoring/destinations/{INSTANCE_ID}
 
 {style="table-layout:auto"}
 
-+++Solicitação
++++ Solicitação
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/{INSTANCE_ID} \
@@ -53,7 +53,9 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinat
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
-+++Resposta
++++
+
++++ Resposta
 
 Uma resposta bem-sucedida retorna o status HTTP 200 juntamente com uma resposta HTTP vazia.
 
@@ -71,3 +73,5 @@ Para saber mais sobre o que você pode fazer com esse endpoint, consulte os segu
 * [Criar uma configuração de destino](create-destination-configuration.md)
 * [Recuperar uma configuração de destino](retrieve-destination-configuration.md)
 * [Atualizar uma configuração de destino](update-destination-configuration.md)
+
++++

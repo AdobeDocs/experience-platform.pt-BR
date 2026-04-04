@@ -169,7 +169,7 @@ Todas as ações que você pode executar na interface do usuário também podem 
 
 ## Gerenciamento de logs de auditoria para o Adobe Admin Console
 
-Para saber como gerenciar logs de auditoria para atividades no Adobe Admin Console, consulte o seguinte [documento](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+Para saber como gerenciar logs de auditoria para atividades no Adobe Admin Console, consulte o seguinte [documento](https://helpx.adobe.com/br/enterprise/using/audit-logs.html).
 
 ## Próximas etapas e recursos adicionais
 

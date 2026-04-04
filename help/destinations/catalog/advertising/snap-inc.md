@@ -67,7 +67,7 @@ Esta seção descreve quais tipos de públicos-alvo você pode exportar para ess
 |---------|----------|----------|
 | [!DNL Segmentation Service] | Sim | Públicos-alvo gerados pelo [Serviço de Segmentação](../../../segmentation/home.md) da Experience Platform. |
 | Todas as outras origens de público-alvo | Sim | Esta categoria inclui todas as origens de público-alvo fora dos públicos-alvo gerados pelo [!DNL Segmentation Service]. Leia sobre as [várias origens do público-alvo](/help/segmentation/ui/audience-portal.md#customize). Alguns exemplos incluem: <ul><li> carregar audiências personalizadas [importadas](../../../segmentation/ui/audience-portal.md#import-audience) para o Experience Platform de arquivos CSV,</li><li> públicos-alvo semelhantes, </li><li> públicos federados, </li><li> públicos-alvo gerados em outros aplicativos Experience Platform, como [!DNL Adobe Journey Optimizer], </li><li> e muito mais. </li></ul> |
-| [!DNL Federated Audience Composition] | Sim | Públicos importados para o Experience Platform por meio da [Federated Audience Composition](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+| [!DNL Federated Audience Composition] | Sim | Públicos importados para o Experience Platform por meio da [Federated Audience Composition](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 
@@ -154,7 +154,7 @@ Depois de ativar os públicos-alvo para o destino *Snap Inc*, você poderá ver 
 
 ![Públicos-alvo](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Observe que quando um público-alvo do Adobe é ativado pela primeira vez para a Snap Inc, você o verá inicialmente como um público-alvo vazio. Isso ocorre porque [!DNL Adobe Experience Platform] não exporta dados de membros para a Snap Inc até avaliar o público. Para obter mais informações sobre como os públicos-alvo são avaliados no Experience Platform, consulte a [visão geral do Serviço de segmentação](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Observe que quando um público-alvo do Adobe é ativado pela primeira vez para a Snap Inc, você o verá inicialmente como um público-alvo vazio. Isso ocorre porque [!DNL Adobe Experience Platform] não exporta dados de membros para a Snap Inc até avaliar o público. Para obter mais informações sobre como os públicos-alvo são avaliados no Experience Platform, consulte a [visão geral do Serviço de segmentação](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=pt-BR#evaluate-segments).
 
 ## Uso e governança de dados {#data-usage-governance}
 

@@ -65,7 +65,7 @@ Uma possível causa é o recurso de preenchimento automático. O recurso process
 ### Posso usar [!DNL Postman] para a API do Serviço de consulta?
 
 +++Resposta
-Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/28832) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Sim, você pode visualizar e interagir com todos os serviços de API da Adobe usando o [!DNL Postman] (um aplicativo gratuito de terceiros). Assista ao [[!DNL Postman] guia de instalação](https://video.tv.adobe.com/v/31682?captions=por_br) para obter instruções passo a passo sobre como configurar um projeto no Adobe Developer Console e adquirir todas as credenciais necessárias para usar com o [!DNL Postman]. Consulte a documentação oficial para obter [orientação sobre como iniciar, executar e compartilhar [!DNL Postman] coleções](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Há um limite para o número máximo de linhas retornadas de uma consulta por meio da interface do usuário?

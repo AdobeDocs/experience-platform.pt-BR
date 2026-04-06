@@ -2,9 +2,9 @@
 title: Perguntas frequentes do Audiences
 description: Descubra respostas para perguntas frequentes sobre públicos-alvo e outros conceitos relacionados à segmentação.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 7a9c017c2dc7901c7995e5c6fcd178a4fe8709e0
 workflow-type: tm+mt
-source-wordcount: '4853'
+source-wordcount: '4809'
 ht-degree: 2%
 
 ---
@@ -417,8 +417,6 @@ A segmentação de streaming funciona em todos os dados que foram assimilados us
 ### Como os segmentos são definidos como segmentação em lote ou por transmissão?
 
 Uma definição de segmento é definida como segmentação de lote, fluxo ou borda com base em uma combinação de tipo de consulta e duração do histórico de eventos. Uma lista de quais segmentos serão avaliados como uma definição de segmento de streaming pode ser encontrada na [seção de tipos de consulta de segmentação de streaming](#query-types).
-
-Observe que se uma definição de segmento contiver **ambos** uma expressão `inSegment` e uma cadeia direta de evento único, ela não poderá se qualificar para segmentação de transmissão. Se você quiser que essa definição de segmento se qualifique para a segmentação por transmissão, transforme a cadeia direta de evento único em seu próprio segmento.
 
 ### Por que o número de segmentos &quot;total qualificado&quot; continua aumentando, enquanto o número em &quot;Últimos X dias&quot; permanece em zero na seção de detalhes de definição do segmento?
 

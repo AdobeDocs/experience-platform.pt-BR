@@ -24,7 +24,7 @@ Para começar a gerenciar funções, navegue até **[!UICONTROL Permissions]** n
 >id="platform_permissions_roles_about_create"
 >title="Criar nova função"
 >abstract="Crie novas funções para categorizar melhor os usuários que interagem com sua instância da Experience Platform. Por exemplo, é possível criar uma função para uma equipe interna de marketing e aplicar o rótulo de dados de saúde regulamentados (RHD) a essa função, permitindo que sua equipe de marketing interna acesse informações de saúde protegidas (PHI). Como alternativa, também é possível criar uma função para uma agência externa e negar o acesso dela aos dados de PHI por não aplicar o rótulo RHD a essa função."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html?lang=pt-BR" text="Gerenciar uma função"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Gerenciar uma função"
 >additional-url="https://experienceleague.adobe.com/pt-br/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Aplicar rótulos a uma função"
 
 Para criar uma nova função, selecione **[!UICONTROL Create role]**.
@@ -62,7 +62,7 @@ A nova função foi criada com êxito, e você será redirecionado para a págin
 <!-- 
 The following video is intended to support your understanding of creating a new role and managing users for that role.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475978/?captions=por_br&learn=on) 
+>[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on) 
 -->
 
 ## Duplicar uma função

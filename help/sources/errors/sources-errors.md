@@ -114,7 +114,7 @@ Este documento fornece um catálogo de mensagens de erro, descrições e resolu�
 | `1350-400` | Solicitação inválida | Nenhum operador foi fornecido para o filtro na origem. Forneça uma solicitação de filtro válida com o operador apropriado e tente novamente. |
 | `1351-400` | Solicitação inválida | O operador fornecido {operator} não tem suporte para o filtro na origem deste conector. Forneça um operador válido e tente novamente. |
 | `1352-400` | Solicitação inválida | O operador fornecido {operator} não pode ser mapeado para nenhum operador nativo com suporte para {ql}. Forneça um operador válido e tente novamente. |
-| `1353-400` | Solicitação inválida | O filtro na origem ainda não tem suporte para o conector {connectorType}. Verifique os conectores compatíveis na documentação: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html?lang=pt-BR. |
+| `1353-400` | Solicitação inválida | O filtro na origem ainda não tem suporte para o conector {connectorType}. Verifique os conectores compatíveis na documentação: https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/filter.html. |
 | `1354-400` | Solicitação inválida | O idioma de consulta {ql} ainda não tem suporte para o filtro na origem. Forneça um idioma de consulta válido e tente novamente. |
 | `1355-400` | Solicitação inválida | O tipo de filtro fornecido é inválido. O tipo de filtro suportado é PQL. Forneça um tipo de filtro válido e tente novamente. |
 | `1356-400` | Solicitação inválida | O formato de filtro fornecido é inválido. O formato de filtro compatível é: pql/json. Forneça um formato de filtro válido e tente novamente. |

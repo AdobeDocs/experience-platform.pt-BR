@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 2c7cc6d29eae13cd8caa387063ae9ab80ca65e1e
+source-git-commit: d284a2a833bca1770d6680987888368fe22736e8
 workflow-type: tm+mt
-source-wordcount: '1089'
+source-wordcount: '1094'
 ht-degree: 34%
 
 ---
@@ -107,6 +107,7 @@ ht-degree: 34%
       - [Conector de carregamento de arquivo local](connectors/local-system/local-file-upload.md)
    - Fidelidade {#loyalty}
       - [Eventos de transmissão capilares](connectors/loyalty/capillary.md)
+      - [Kobie](connectors/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Automação de marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -159,7 +160,7 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [&#x200B; Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [ Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
@@ -282,7 +283,7 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [&#x200B; Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [ Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
@@ -322,6 +323,8 @@ ht-degree: 34%
          - [Carregamento de arquivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Fidelidade {#loyalty}
          - [Eventos de transmissão capilares](tutorials/ui/create/loyalty/capillary.md)
+         - [Kobie (Em Lote)](tutorials/ui/create/loyalty/kobie-batch.md)
+         - [Kobie (transmissão)](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Eventos de transmissão Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Conector Talon.One Batch Source](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Automação de marketing {#marketing-automation}

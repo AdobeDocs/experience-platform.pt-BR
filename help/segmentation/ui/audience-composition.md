@@ -14,7 +14,7 @@ ht-degree: 16%
 
 >[!BEGINSHADEBOX]
 
-Se você for um cliente do Adobe Journey Optimizer, leia o [guia de composição de público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html) na documentação do Adobe Journey Optimizer para obter mais informações sobre como trabalhar com a composição de público-alvo nesse contexto.
+Se você for um cliente do Adobe Journey Optimizer, leia o [guia de composição de público-alvo](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/audience-orchestration/get-started-audience-orchestration.html?lang=pt-BR) na documentação do Adobe Journey Optimizer para obter mais informações sobre como trabalhar com a composição de público-alvo nesse contexto.
 
 >[!ENDSHADEBOX]
 

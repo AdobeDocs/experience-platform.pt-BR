@@ -15,7 +15,7 @@ ht-degree: 34%
 
 Novos recursos na Adobe Experience Platform:
 
-- [Manuais de estratégia de casos de uso ](#use-case-playbooks)
+- [Manuais de estratégia de casos de uso &#x200B;](#use-case-playbooks)
 
 Atualizações dos recursos existentes no Experience Platform:
 

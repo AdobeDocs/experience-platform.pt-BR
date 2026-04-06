@@ -33,7 +33,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 >[!NOTE]
 >
->Se você usar este ponto de extremidade sem nenhum parâmetro de consulta, os públicos-alvo inativos **não** serão retornados. No entanto, se você usar este ponto de extremidade em conjunto com o parâmetro de consulta `property=audienceId`, os públicos-alvo inativos **** serão retornados.
+>Se você usar este ponto de extremidade sem nenhum parâmetro de consulta, os públicos-alvo inativos **não** serão retornados. No entanto, se você usar este ponto de extremidade em conjunto com o parâmetro de consulta `property=audienceId`, os públicos-alvo inativos **&#x200B;**&#x200B;serão retornados.
 
 Os seguintes parâmetros de consulta podem ser usados ao recuperar uma lista de públicos-alvo:
 

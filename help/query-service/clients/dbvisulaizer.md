@@ -19,7 +19,7 @@ Este documento aborda as etapas para conectar a ferramenta de banco de dados [!D
 
 Este guia requer que você já tenha acesso ao aplicativo de desktop [!DNL DbVisualizer] e esteja familiarizado com como navegar em sua interface. Para baixar o aplicativo de desktop [!DNL DbVisualizer] ou obter mais informações, consulte a [documentação [!DNL DbVisualizer] oficial](https://www.dbvis.com/download/).
 
-Para adquirir as credenciais necessárias para conectar [!DNL  DbVisualizer] ao Experience Platform, você deve ter acesso ao espaço de trabalho Consultas na interface do usuário do Experience Platform. Entre em contato com o administrador da organização se não tiver acesso ao espaço de trabalho de Consultas.
+Para adquirir as credenciais necessárias para conectar [!DNL &#x200B; DbVisualizer] ao Experience Platform, você deve ter acesso ao espaço de trabalho Consultas na interface do usuário do Experience Platform. Entre em contato com o administrador da organização se não tiver acesso ao espaço de trabalho de Consultas.
 
 ## Criar uma conexão de banco de dados {#connect-database}
 

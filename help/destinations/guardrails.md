@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Saiba mais sobre o uso padrão da ativação de dados e os limites de taxa.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 1f733dd25fafed153c8d1065555d2ca45bbb11f1
+source-git-commit: c6a8a516afe31c5c6eaef67712fc646c2944d31d
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1810'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/br/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
+>Verifique os direitos de licença em seu Pedido de Venda e a [Descrição do Produto](https://helpx.adobe.com/legal/product-descriptions.html?lang=pt-BR) correspondente sobre os limites de uso reais, além desta página de medidas de proteção.
 
 Esta página fornece limites de uso e taxa padrão em relação ao comportamento de ativação. Ao revisar as medidas de proteção a seguir, presume-se que você [esteja conectado corretamente aos destinos](/help/destinations/ui/connect-destination.md).
 
@@ -50,6 +50,7 @@ As medidas de proteção abaixo geralmente se aplicam à ativação por meio de 
 | Grade de Proteção | Limite | Tipo de limite | Descrição |
 | --- | --- | --- | --- |
 | Número máximo de públicos-alvo para um único destino | 250 | Proteção de desempenho | A recomendação é mapear no máximo 250 públicos-alvo para uma única instância de destino. <br><br> Se precisar ativar mais de 250 públicos-alvo para um destino, você pode: <ul><li> Desmapeie os públicos-alvo que você não deseja mais ativar ou</li><li>[Crie uma nova instância de destino](ui/connect-destination.md) e mapeie os públicos-alvo para ela.</li></ul> <br> Observe que, no caso de alguns destinos, você pode estar limitado a menos de 250 públicos-alvo mapeados para o destino. Esses destinos são chamados mais abaixo na página, em suas respectivas seções. |
+| Número máximo de públicos ativados simultaneamente para um destino | 50 | Proteção de desempenho | Não há suporte para a ativação em massa de mais de 50 públicos-alvo por vez por destino. Como prática recomendada, ative os públicos-alvo em lotes de 20, aguarde alguns minutos e repita. Ativar mais de 50 públicos-alvo simultaneamente pode fazer com que o processo fique paralisado ou que o destino receba menos públicos-alvo do que o esperado. |
 | Número máximo de atributos mapeados para um destino | 50 | Proteção de desempenho | No caso de vários destinos e tipos de destino, é possível selecionar atributos de perfil e identidades para mapear para exportação. Para um desempenho ideal, no máximo 50 atributos devem ser mapeados para uma instância de destino. |
 | Número máximo de destinos | 100 | Proteção imposta pelo sistema | É possível criar um máximo de 100 destinos aos quais você pode conectar e ativar dados, *por sandbox*. [Os destinos de personalização do Edge (Personalização personalizada)](#edge-destinations-activation) podem representar, no máximo, 10 dos 100 destinos recomendados. |
 | Tipo de dados ativados para destinos | Dados de perfil, incluindo identidades e mapa de identidade | Proteção imposta pelo sistema | Atualmente, só é possível exportar *atributos de registro de perfil* para destinos. No momento, não há suporte para atributos XDM que descrevem dados de evento para exportação. |
@@ -196,7 +197,7 @@ Detalhes sobre limites ou limitações de limitação para determinados destinos
 Consulte a documentação a seguir para obter mais informações sobre outras medidas de proteção dos serviços da Experience Platform, informações de latência de ponta a ponta e informações de licenciamento dos documentos de Descrição do Produto [!DNL Real-Time CDP]:
 
 * [Medidas de proteção do Real-Time CDP](/help/rtcdp/guardrails/overview.md)
-* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=pt-BR#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
-* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [Diagramas de latência de ponta a ponta](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) para vários serviços da Experience Platform.
+* [Real-Time Customer Data Platform (B2C Edition - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2P - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [Real-Time Customer Data Platform (B2B - Pacotes do Prime e Ultimate)](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

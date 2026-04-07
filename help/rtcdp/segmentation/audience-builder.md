@@ -2,11 +2,11 @@
 title: Construtor de público-alvo no Real-Time Customer Data Platform
 description: Saiba como usar o Construtor de público-alvo no Real-Time Customer Data Platform para criar públicos-alvo.
 feature: Get Started, Audiences
-badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=pt-BR#rtcdp-editions" newtab=true
+badgeB2B: label="B2B edition" type="Informative" url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html#rtcdp-editions" newtab=true
 exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
-source-git-commit: ec31766ade15eb04907803c8cfe450fd9bdc1406
+source-git-commit: fed1c2e2fea0b2de67c75b24cb636f68a1a3e035
 workflow-type: tm+mt
-source-wordcount: '1115'
+source-wordcount: '1146'
 ht-degree: 7%
 
 ---
@@ -54,13 +54,13 @@ A guia [!UICONTROL Attributes] permite procurar atributos de Conta pertencentes 
 
 ![A guia Atributos é exibida no Audience Builder](../assets/segmentation/audience-builder/attributes.png)
 
->[!NOTE]
+>[!AVAILABILITY]
 >
->Os dados de resumo estão em **Disponibilidade limitada**.
+>Os dados de resumo estão em **Disponibilidade limitada** e para uso no B2B edition e B2P Edition.
 
 Ao selecionar um atributo, você pode ver dados de resumo selecionando o [ícone de informações](../../images/icons/info.png). Os dados de resumo incluem informações como valores principais, uma explicação do que é o campo, a contagem de registro dos valores, bem como a porcentagem de contas que contêm valores para esse atributo.
 
-A seção **[!UICONTROL Populated]** mostra o número de registros em que o atributo é preenchido em comparação ao número total de registros disponíveis, bem como a porcentagem de contas que têm um valor para esse campo.
+A seção **[!UICONTROL Populated]** mostra a porcentagem de contas que têm um valor neste campo.
 
 A seção **[!UICONTROL Top values]** exibe os valores que ocorrem com mais frequência para o atributo e inclui detalhes como o valor, o número de registros que têm o valor, bem como a porcentagem do total de registros que o valor representa. O número de registros para cada campo é determinado pelo instantâneo do perfil, que fornece uma exibição consolidada dos registros após a mesclagem de todos os dados do conjunto de dados de contribuição.
 
@@ -74,11 +74,17 @@ Se um atributo for preenchido por menos de 25% das contas, o ![ícone de aviso d
 
 ![Um popover que exibe uma versão dos dados de resumo de um atributo quando ele é preenchido por menos de 25% das contas.](../assets/segmentation/audience-builder/empty-summary-data.png){width="300"}
 
+Ao adicionar um atributo com dados de resumo, você também pode ver os dados de resumo na tela de criação da regra.
+
+![O atributo com os dados de resumo é exibido.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary.png)
+
+Você pode usar a lista suspensa para selecionar entre os valores principais ou inserir seu valor, que pode resolver automaticamente para um dos valores principais.
+
+![A lista suspensa em que você pode adicionar o valor do atributo está realçada.](/help/rtcdp/assets/segmentation/audience-builder/attribute-summary-dialog.png)
+
 >[!NOTE]
 >
->Os dados de resumo só estarão disponíveis se o atributo pertencer ao esquema Conta, Pessoa ou Oportunidade. Além disso, os valores principais serão exibidos somente se o campo **não** contiver muitos valores diferentes e se esses valores forem repetidos com frequência.
->
->Estes dados de resumo são atualizados **diariamente**.
+>Os dados de resumo são atualizados **diariamente**. Além disso, os dados de resumo **não** são suportados para atributos cujos valores são matrizes ou pares de chave/valor.
 
 Além disso, o atributo tem um **[!UICONTROL Ingestion Type]**. O tipo de assimilação permite saber a origem dos dados e pode ser um dos seguintes valores: **[!UICONTROL Batch]**, **[!UICONTROL Streaming/Edge]** ou **[!UICONTROL No Data Ingested]**.
 

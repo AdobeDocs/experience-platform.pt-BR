@@ -2,13 +2,14 @@
 title: Editar público-alvo personalizado
 description: Os anúncios do Reddit conectam marcas a pessoas que estão ativamente explorando suas paixões e problemas em tempo real. Ao emparelhar conversas de alta intenção conduzidas pela comunidade com formatos de anúncio flexíveis e direcionamento robusto, os anúncios do Reddit ajudam os anunciantes a alcançar públicos engajados, impulsionar resultados de desempenho e aprender diretamente das comunidades que moldam a cultura online. Este guia é para anunciantes e equipes de mídia que usam o Adobe Experience Platform para enviar públicos-alvo para anúncios Reddit. Ele aborda o que é necessário para conectar suas contas, mapear identidades e ativar públicos.
 last-substantial-update: 2026-03-31T00:00:00Z
-source-git-commit: c7c74ba9b5c6a66f92dc6a5403d4f2c5614c0049
+exl-id: bcce02bd-d508-47a0-8f5c-bf162db1859d
+badgeBeta: label="Beta" type="Informative"
+source-git-commit: 28bbad7ccbec0b669082658b912d0b52e0374667
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1231'
 ht-degree: 3%
 
 ---
-
 
 # [!DNL Reddit Custom Audience] conexão {#reddit-custom-audience-connection}
 

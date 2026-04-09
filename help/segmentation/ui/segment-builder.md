@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Guia da interface do construtor de segmentos
 description: O Construtor de segmentos na interface do usuário do Adobe Experience Platform fornece um espaço de trabalho avançado que permite a interação com elementos de dados de perfil. O espaço de trabalho fornece controles intuitivos para criar e editar regras, como arrastar e soltar blocos usados para representar propriedades de dados.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: eaa256ff7574b1b6221869c290cae8b8e3606f2a
 workflow-type: tm+mt
-source-wordcount: '6574'
+source-wordcount: '6708'
 ht-degree: 10%
 
 ---
@@ -407,7 +407,7 @@ A lista de restrições de tempo disponíveis é a seguinte:
 
 | Restrição de tempo | Descrição | Pode permitir ignorar ano | Exemplo |
 | --------------- | ----------- | ------------------- | ------- |
-| Hoje | O atributo ou evento que está sendo comparado **deve** ocorrer hoje. | Sim | ![Um exemplo da restrição de tempo &quot;Hoje&quot; sendo usada.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
+| Hoje | O atributo ou evento que está sendo comparado **deve** ocorrer hoje. Esta é a restrição de tempo padrão selecionada. | Sim | ![Um exemplo da restrição de tempo &quot;Hoje&quot; sendo usada.](../images/ui/segment-builder/time-constraints/today.png){width="100" zoomable="yes"} |
 | Ontem | O atributo ou evento que está sendo comparado **deve** ocorreu ontem. | Sim | ![Um exemplo de restrição de tempo &quot;Ontem&quot; sendo usada.](../images/ui/segment-builder/time-constraints/yesterday.png){width="100" zoomable="yes"} |
 | Este mês | O atributo ou evento que está sendo comparado **deve** ocorrer neste mês do calendário. | Sim | ![Um exemplo de restrição de tempo &quot;Este mês&quot; sendo usada.](../images/ui/segment-builder/time-constraints/this-month.png){width="100" zoomable="yes"} |
 | Este ano | O atributo ou evento que está sendo comparado **deve** ocorrer neste ano. | Não | ![Um exemplo de restrição de tempo &quot;Este ano&quot; sendo usada.](../images/ui/segment-builder/time-constraints/this-year.png){width="100" zoomable="yes"} |
@@ -422,6 +422,16 @@ A lista de restrições de tempo disponíveis é a seguinte:
 | No próximo | O atributo ou evento que está sendo comparado deve ocorrer dentro do próximo período selecionado. Os períodos de tempo selecionados incluem minutos, horas, dias, semanas, meses e anos. | Não | ![Um exemplo da restrição de tempo &quot;Na próxima&quot; que está sendo usada.](../images/ui/segment-builder/time-constraints/in-next.png){width="100" zoomable="yes"} |
 | Existe | O atributo existe. | Não | ![Um exemplo de restrição de tempo &quot;Existe&quot; sendo usada.](../images/ui/segment-builder/time-constraints/exists.png){width="100" zoomable="yes"} |
 | Não existe | O atributo não existe. | Não | ![Um exemplo de restrição de tempo &quot;Não existe&quot; sendo usada.](../images/ui/segment-builder/time-constraints/does-not-exist.png){width="100" zoomable="yes"} |
+| Agora | O atributo ou evento que está sendo comparado **deve** ocorrer exatamente quando o público-alvo for avaliado. Essa restrição de tempo só pode ser usada como uma opção de nível secundário, dentro de restrições de tempo como &quot;Antes&quot; ou &quot;Depois&quot;. | Sim | ![Um exemplo da restrição de tempo &quot;Agora&quot; que está sendo usada.](../images/ui/segment-builder/time-constraints/now.png){width="100" zoomable="yes"} |
+
+>[!TIP]
+>
+>A diferença entre a restrição de tempo &quot;Hoje&quot; e &quot;Agora&quot; é sutil, mas significativa.
+>
+>- Use a restrição de tempo &quot;Hoje&quot; para verificar se o atributo ou evento sendo comparado está ocorrendo à **meia-noite** do dia atual.
+>- Use a restrição de tempo &quot;Agora&quot; para verificar se o atributo ou evento sendo comparado está acontecendo **neste momento**.
+>
+>No entanto, há uma exceção importante: se você estiver usando &quot;Hoje&quot; como uma restrição de tempo de nível superior, significa que você está verificando se o atributo ou evento ocorreu em **qualquer** ponto hoje.
 
 +++
 

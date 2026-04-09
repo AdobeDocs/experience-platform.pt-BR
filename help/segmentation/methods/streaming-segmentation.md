@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Guia de segmentação de streaming
 description: Saiba mais sobre a segmentação por transmissão, incluindo o que é, como criar um público avaliado usando a segmentação por transmissão e como visualizar seus públicos criados usando a segmentação por transmissão.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: ff25ba5c519e02000ac5725031a15627052e8eb2
+source-git-commit: 0be405c34f7fa9d01691059658429652318c13bb
 workflow-type: tm+mt
 source-wordcount: '2117'
 ht-degree: 3%
@@ -476,5 +476,3 @@ Todas as definições de segmento **novas ou editadas** qualificadas para stream
 Se não houver uma política de mesclagem ativa definida, você precisará [configurar sua política de mesclagem](../../profile/merge-policies/ui-guide.md#configure) e configurá-la para estar ativa na borda.
 
 +++
-
->[!ENDSHADEBOX]

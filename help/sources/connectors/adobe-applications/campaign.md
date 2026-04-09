@@ -3,20 +3,18 @@ keywords: Experience Platform;página inicial;tópicos populares;campanha;campan
 title: Adobe Campaign Managed Cloud Services
 description: Saiba como conectar o Campaign Managed Cloud Services ao Experience Platform usando a interface do usuário
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1d29cdd39075aad937d078aa116ec2f6e6ec6a56
 workflow-type: tm+mt
-source-wordcount: '747'
+source-wordcount: '1030'
 ht-degree: 1%
 
 ---
 
 # Adobe Campaign Managed Cloud Services
 
-O Adobe Experience Platform permite que os dados sejam assimilados de fontes externas e, ao mesmo tempo, fornece a capacidade de estruturar, rotular e aprimorar os dados recebidos usando os serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
+O Adobe Campaign Managed Cloud Services oferece uma plataforma gerenciada para projetar experiências de clientes entre canais, oferecer suporte à orquestração visual de campanhas, ao gerenciamento de interação em tempo real e à execução entre canais. Para obter mais detalhes, consulte a [documentação do Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=pt-BR).
 
-O Adobe Campaign Managed Cloud Services fornece uma plataforma Managed Services para criação de experiências para clientes entre canais, além de um ambiente para a orquestração visual de campanhas, o gerenciamento de interação em tempo real e a execução entre canais. Visite a [documentação do Adobe Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=pt-BR) para obter mais informações.
-
-A fonte do Adobe Campaign Managed Cloud Services permite trazer registros de entrega e dados de logs de rastreamento do Adobe Campaign v8 para a Adobe Experience Platform.
+O conector de origem do Adobe Campaign Managed Cloud Services permite assimilar dados de log de delivery e rastreamento do Adobe Campaign v8 na Adobe Experience Platform. Esse conector opera como uma origem em lote na Platform.
 
 ## Pré-requisitos
 
@@ -30,7 +28,7 @@ Antes de criar uma conexão de origem para trazer seu Campaign v8 para o Experie
 
 >[!IMPORTANT]
 >
->Você deve ter acesso ao Console do cliente do Adobe Campaign v8 para visualizar os dados de log no Campaign. Visite a [documentação do Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=pt-BR) para obter informações sobre como baixar e instalar o console do cliente.
+>Você deve ter acesso ao Console do cliente do Adobe Campaign v8 para visualizar os dados de log no Campaign. Visite a [documentação do Campaign v8](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) para obter informações sobre como baixar e instalar o console do cliente.
 
 Faça logon na instância do Campaign v8 por meio do Console do cliente. Na guia [!DNL Explorer], selecione [!DNL Administration] e [!DNL Configuration]. Em seguida, selecione [!DNL Data schemas] e aplique o filtro `broadLog` para nome ou rótulo. Na lista exibida, selecione o esquema de origem dos logs de entrega do destinatário com o nome `broadLogRcp`.
 
@@ -69,6 +67,20 @@ Para obter instruções detalhadas sobre como criar um esquema, leia o manual so
 ### Criar um conjunto de dados {#create-a-dataset}
 
 Por fim, você deve criar um conjunto de dados para seus esquemas. Para obter instruções detalhadas sobre como criar um conjunto de dados, leia o manual sobre [criação de um conjunto de dados na interface](../../../catalog/datasets/user-guide.md).
+
+## Latência esperada para a origem do Adobe Campaign Managed Cloud Services {#latency}
+
+A latência completa de um evento do Campaign para a disponibilidade de dados no Experience Platform normalmente é de 15 a 30 minutos em configurações padrão (incluindo replicação de 15 minutos, exportação de microlotes e um fluxo de dados agendado do Experience Platform), considerando volumes de dados normais e sem backlog. Esse é um processo quase em tempo real obtido por meio da sincronização programada de microlotes (geralmente na ordem de dezenas de minutos), mas não é um streaming contínuo.
+
+| Cenário | Detalhes | Latência esperada |
+| --- | --- | --- |
+| O evento de campanha é gerado em uma instância de mid-sourcing/centro de mensagens | Um evento de delivery ou rastreamento (envio, abertura, clique etc.) ocorre em um nó de execução do Campaign v8 (mid/centro de mensagens). | Tempo real no tempo de execução do Campaign (atualmente não visível no Experience Platform). |
+| Replicação do tempo de execução para o banco de dados de marketing do Campaign | Os dados do evento são replicados do centro intermediário/de mensagens para o banco de dados de marketing do Campaign ([!DNL Snowflake] ou [!DNL Postgres], dependendo do tamanho do cliente). Os padrões de integração padrão assumem um trabalho de replicação regular. | Aproximadamente 15 minutos, com base na cadência padrão de replicação de 15 minutos. |
+| Exportar do banco de dados de marketing do Campaign para a zona de destino (como [!DNL Data Landing Zone], [!DNL Amazon S3] ou [!DNL Azure Blob]) | Um fluxo de trabalho de exportação (Serviço de exportação) no Campaign é executado em um agendamento para extrair logs de delivery e rastreamento novos/alterados e gravá-los como microlotes em uma zona de aterrissagem baseada em arquivos. | Minutos, mais o intervalo de agendamento de exportação. |
+| O fluxo de dados de origem do Experience Platform coleta arquivos exportados | A origem do Adobe Campaign Managed Cloud Services está configurada como um fluxo de dados em lote no Experience Platform [!DNL Flow Service]. Ele verifica periodicamente a zona de aterrissagem, assimila novos arquivos e os grava nos conjuntos de dados ExperienceEvent configurados. O monitoramento expõe &quot;lotes bem-sucedidos&quot; e &quot;lotes com falha&quot;. | Minutos, mais o intervalo de agendamento do fluxo de dados. |
+| Dados disponíveis no data lake e no Perfil do cliente em tempo real | Depois que o lote é assimilado, os registros são obtidos no data lake e (se o conjunto de dados estiver habilitado para perfil) substituídos no Perfil do cliente em tempo real. Os SLAs padrão do Experience Platform para assimilação em lote e de perfil se aplicam. | Na mesma janela de execução do fluxo de dados, ou seja, logo após a conclusão da execução em lote. Os registros normalmente ficam disponíveis em minutos para serviços downstream. |
+
+{style="table-layout:auto"}
 
 ## Criar uma conexão de origem do Adobe Campaign Managed Cloud Services usando a interface do usuário do Experience Platform
 

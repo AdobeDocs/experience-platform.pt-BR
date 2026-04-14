@@ -1,12 +1,10 @@
 ---
 title: Conectar Databricks Ao Experience Platform Usando A API Do Serviço De Fluxo
 description: Saiba como conectar Databricks ao Experience Platform usando APIs.
-badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '530'
 ht-degree: 3%
 
 ---
@@ -15,9 +13,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* A origem [!DNL Databricks] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
->
->* A origem [!DNL Databricks] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
+>A origem [!DNL Databricks] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
 
 Leia este guia para saber como conectar sua conta do [!DNL Databricks] à Adobe Experience Platform usando a [[!DNL Flow Service] API](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -49,7 +45,7 @@ Forneça valores para as credenciais a seguir para conectar [!DNL Databricks] ao
 | `catalog` | O nome do catálogo no lago delta. Não é necessário especificar um valor para um catálogo padrão. |
 | `connectionSpec.Id` | A ID de especificação de conexão retorna as propriedades do conector de origem, incluindo especificações de autenticação relacionadas à criação das conexões de base e de origem. A ID de especificação da conexão para [!DNL Databricks] é `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b`. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../../../connectors/databases/databricks.md) do [!DNL Databricks] .
+Para obter mais informações, leia a visão geral](../../../../connectors/databases/databricks.md) do [[!DNL Databricks] .
 
 ## Criar uma conexão básica
 
@@ -125,5 +121,5 @@ Uma resposta bem-sucedida retorna a conexão recém-criada, incluindo a ID de co
 
 Ao seguir este tutorial, você criou com êxito uma conexão entre sua conta do [!DNL Databricks] e a Experience Platform. Você pode usar sua ID de conexão base recém-gerada nos seguintes tutoriais:
 
-* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
-* [Crie um fluxo de dados para trazer dados do banco de dados para a Experience Platform usando a API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] ](../../explore/tabular.md)
+* [Crie um fluxo de dados para trazer dados do banco de dados para a Experience Platform usando a API  [!DNL Flow Service] ](../../collect/database-nosql.md)

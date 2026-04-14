@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: d284a2a833bca1770d6680987888368fe22736e8
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '1094'
+source-wordcount: '1091'
 ht-degree: 34%
 
 ---
@@ -74,10 +74,10 @@ ht-degree: 34%
       - [Conector Amazon Redshift](connectors/databases/redshift.md)
       - [Apache Hive no conector do Azure HDInsights](connectors/databases/hive.md)
       - [Apache Spark no conector do Azure HDInsights](connectors/databases/spark.md)
-      - [Conector do Azure Databricks](connectors/databases/databricks.md)
       - [Conector do Azure Data Explorer](connectors/databases/data-explorer.md)
       - [Conector do Azure Synapse Analytics](connectors/databases/synapse-analytics.md)
       - [Conector de armazenamento de tabela do Azure](connectors/databases/ats.md)
+      - [Conector de databricks](connectors/databases/databricks.md)
       - [Conector do Google BigQuery](connectors/databases/bigquery.md)
       - [Conector GreenPlum](connectors/databases/greenplum.md)
       - [Conector HP Vertica](connectors/databases/hp-vertica.md)
@@ -160,17 +160,17 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/api/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [&#x200B; Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
+         - [ Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive no Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark no Azure HDInsights](tutorials/api/create/databases/spark.md)
-         - [Azure Databricks](tutorials/api/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Armazenamento de tabelas do Azure](tutorials/api/create/databases/ats.md)
+         - [Databricks](tutorials/api/create/databases/databricks.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
          - [Ameixa verde](tutorials/api/create/databases/greenplum.md)
          - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
@@ -283,17 +283,17 @@ ht-degree: 34%
          - [Eventos do SugarCRM](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
       - Sucesso do cliente {#customer-success}
-         - [&#x200B; Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+         - [ Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
       - Bancos de dados {#databases}
          - [Amazon Redshift](tutorials/ui/create/databases/redshift.md)
          - [Apache Hive no Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark no Azure HDInsights](tutorials/ui/create/databases/spark.md)
-         - [Azure Databricks](tutorials/ui/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Armazenamento de tabelas do Azure](tutorials/ui/create/databases/ats.md)
+         - [Databricks](tutorials/ui/create/databases/databricks.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
          - [Ameixa verde](tutorials/ui/create/databases/greenplum.md)
          - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)

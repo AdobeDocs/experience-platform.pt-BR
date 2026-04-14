@@ -2,12 +2,11 @@
 title: Databricks
 description: Saiba mais sobre as etapas de pré-requisito necessárias para conectar o Databricks ao Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-06-17T00:00:00Z
+last-substantial-update: 2026-03-14T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '606'
 ht-degree: 3%
 
 ---
@@ -16,9 +15,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* A origem [!DNL Databricks] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
->
->* A origem [!DNL Databricks] está na versão beta. Leia os [termos e condições](../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
+>A origem [!DNL Databricks] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
 
 [!DNL Databricks] é uma plataforma baseada em nuvem projetada para análise de dados, aprendizado de máquina e IA. Você pode usar o [!DNL Databricks] para integrar e fornecer um ambiente holístico para criar, implantar e gerenciar soluções de dados em escala.
 

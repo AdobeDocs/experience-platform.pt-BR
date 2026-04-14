@@ -1,12 +1,10 @@
 ---
 title: Conectar databricks ao Experience Platform usando a interface do
 description: Saiba como conectar Databricks ao Experience Platform usando a interface do usuário do.
-badgeUltimate: label="Ultimate" type="Positive"
-badgeBeta: label="Beta" type="Informative"
 exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
-source-git-commit: 6a30e1983a6dcf8e1340281a9385eb8e73b927f6
+source-git-commit: 23b8d5d49e217d587dfe3d68631e6056c61b2cb8
 workflow-type: tm+mt
-source-wordcount: '461'
+source-wordcount: '438'
 ht-degree: 4%
 
 ---
@@ -15,9 +13,7 @@ ht-degree: 4%
 
 >[!AVAILABILITY]
 >
->* A origem [!DNL Databricks] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
->
->* A origem [!DNL Databricks] está na versão beta. Leia os [termos e condições](../../../../home.md#terms-and-conditions) na visão geral das fontes para obter mais informações sobre como usar fontes com rótulo beta.
+>A origem [!DNL Databricks] está disponível no catálogo de origens para usuários que compraram o Real-Time CDP Ultimate.
 
 Leia este guia para saber como conectar sua conta do [!DNL Databricks] à Adobe Experience Platform usando o espaço de trabalho de fontes na interface do usuário.
 
@@ -39,7 +35,7 @@ Forneça valores para as credenciais a seguir para conectar [!DNL Databricks] ao
 | Token de acesso | O token de acesso que autentica a conta do [!DNL Databricks]. Você pode gerar seu token de acesso usando o espaço de trabalho [!DNL Databricks]. |
 | Banco de dados | O nome do banco de dados no lago delta. |
 
-Para obter mais informações, leia a visão geral[&#128279;](../../../../connectors/databases/databricks.md) do [!DNL Databricks] .
+Para obter mais informações, leia a visão geral](../../../../connectors/databases/databricks.md) do [[!DNL Databricks] .
 
 ## Navegar pelo catálogo de origens
 

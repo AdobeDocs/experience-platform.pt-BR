@@ -2,9 +2,9 @@
 title: Visão geral da extensão principal
 description: Saiba mais sobre a extensão de tag principal na Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 0750a684c7383bd3f7cb18749078989ad5571816
 workflow-type: tm+mt
-source-wordcount: '5380'
+source-wordcount: '5387'
 ht-degree: 82%
 
 ---
@@ -122,7 +122,7 @@ O evento será acionado se ocorrer um tipo de evento personalizado. As funções
 
 #### Data Element Changed
 
-O evento será acionado se um elemento de dados especificado for alterado. É preciso fornecer um nome para o elemento de dados. Você pode selecionar o elemento de dados digitando seu nome no campo de texto ou selecionando o ícone do elemento de dados no lado direito do campo de texto e escolhendo em uma lista fornecida na caixa de diálogo exibida.
+O evento será acionado se um elemento de dados especificado for alterado. As pesquisas de alterações ocorrem uma vez por segundo. É preciso fornecer um nome para o elemento de dados. Você pode selecionar o elemento de dados digitando seu nome no campo de texto ou selecionando o ícone do elemento de dados no lado direito do campo de texto e escolhendo em uma lista fornecida na caixa de diálogo exibida.
 
 #### Direct Call {#direct-call-event}
 
@@ -440,7 +440,7 @@ Selecione o tamanho de tela que os visitantes devem usar em seus dispositivos pa
 
 ### URL
 
-#### Domain
+#### Domínio
 
 Especifique o domínio do visitante.
 
@@ -497,7 +497,7 @@ Especifique o parâmetro de URL usado no URL.
 1. Especifique o valor usado para o parâmetro de URL.
 1. (Opcional) Habilite o Regex se esta for uma expressão regular.
 
-#### Subdomain
+#### Subdomínio
 
 Especifique um ou mais subdomínios que devem existir no URL.
 

@@ -2,9 +2,9 @@
 title: Visão geral dos atributos computados
 description: Os atributos computados são funções para agregar dados de nível de evento em atributos de nível de perfil. Essas funções são computadas automaticamente para que possam ser usadas na segmentação, ativação e personalização.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2eb87601d7090bf6bda8098458f9e01690a02b6c
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1179'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,9 @@ Os atributos computados ajudam a converter rapidamente os dados comportamentais 
 - Padronização de dados comportamentais agregados de perfis para uso em plataformas e aplicativos
 - Melhor gerenciamento de dados com a consolidação de dados antigos de eventos de perfil em insights comportamentais significativos
 
-Essas agregações são calculadas com base nos conjuntos de dados de Evento de experiência habilitados para perfil assimilados na Adobe Experience Platform. Cada atributo calculado é um atributo de perfil criado no esquema de união de perfil e é agrupado no grupo de campos &quot;SystemComputedAttribute&quot; no esquema de união.
+Essas agregações são calculadas com base nos conjuntos de dados de Evento de experiência habilitados para perfil criados pelo usuário assimilados na Adobe Experience Platform. Isso significa que os conjuntos de dados gerados pelo sistema que são criados por meio de tokens de serviço por meio da SDK, como os conjuntos de dados de sistema do Adobe Journey Optimizer **não podem** ser usados.
+
+Cada atributo calculado é um atributo de perfil criado no esquema de união de perfil e é agrupado no grupo de campos &quot;SystemComputedAttribute&quot; no esquema de união.
 
 Exemplos de casos de uso incluem:
 
@@ -46,7 +48,7 @@ Os atributos computados incluem a criação de uma expressão, ou &quot;regra&qu
 
 Os atributos computados permitem definir agregações de eventos de maneira automatizada aproveitando funções predefinidas. Os detalhes sobre essas funções podem ser encontrados abaixo:
 
-| Função | Descrição | Tipos de dados compatíveis | Uso de exemplos |
+| Função | Descrição | Tipos de dados compatíveis | Exemplo de uso |
 | -------- | ----------- | -------------------- | ------------- |
 | SUM | Uma função que **soma** o valor especificado para eventos qualificados. | Inteiros, Números, Longos | Soma de todas as compras nos últimos 7 dias |
 | CONTAGEM | Uma função que **conta** o número de eventos que ocorreram para a regra especificada. | N/D | Contagem de compras nos últimos 3 meses |

@@ -6,10 +6,10 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: d61deb73493200bc10ada4745f725bb656f3e802
+source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
 workflow-type: tm+mt
-source-wordcount: '826'
-ht-degree: 43%
+source-wordcount: '828'
+ht-degree: 44%
 
 ---
 
@@ -57,6 +57,7 @@ ht-degree: 43%
 * Encaminhamento de eventos {#event-forwarding}
    * [Visão geral](./ui/event-forwarding/overview.md)
    * [Introdução](./ui/event-forwarding/getting-started.md)
+   * [Configuração guiada](./ui/event-forwarding/guided-setup.md)
    * [Configuração de segredos](./ui/event-forwarding/secrets.md)
    * [Monitoramento (Beta)](./ui/event-forwarding/monitoring.md)
 * Administração {#admin}

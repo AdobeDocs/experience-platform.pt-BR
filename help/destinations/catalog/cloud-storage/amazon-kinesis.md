@@ -4,7 +4,7 @@ title: Conexão Amazon Kinesis
 description: Crie uma conexão de saída em tempo real com o armazenamento Amazon Kinesis para transmitir dados do Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ac1955cd617c1231a44146c2962d6a294a082f49
 workflow-type: tm+mt
 source-wordcount: '2061'
 ht-degree: 5%
@@ -15,9 +15,9 @@ ht-degree: 5%
 
 ## Visão geral {#overview}
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
-> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/br/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 O serviço [!DNL Kinesis Data Streams] da [!DNL Amazon Web Services] coleta e processa grandes fluxos de registros de dados em tempo real.
 

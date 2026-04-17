@@ -4,14 +4,18 @@ description: Crie um compartilhamento de dados em tempo real do Snowflake para r
 last-substantial-update: 2026-02-17T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 6959ccd0-ba30-4750-a7de-d0a709292ef7
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ac1955cd617c1231a44146c2962d6a294a082f49
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1818'
 ht-degree: 3%
 
 ---
 
 # Conexão em lote do Snowflake {#snowflake-destination}
+
+>[!AVAILABILITY]
+>
+> Este destino está disponível somente para clientes do [Adobe Real-Time Customer Data Platform Ultimate](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html?lang=pt-BR).
 
 ## Visão geral {#overview}
 

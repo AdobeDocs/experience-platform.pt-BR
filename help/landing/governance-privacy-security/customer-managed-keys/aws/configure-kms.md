@@ -2,9 +2,9 @@
 title: Configurar o AWS KMS para chaves gerenciadas pelo cliente
 description: Saiba como configurar o Serviço de Gerenciamento de Chaves (KMS) da Amazon Web Services para uso com Chaves gerenciadas pelo cliente no Adobe Experience Platform.
 exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5d59dffa00e041c91b3e1a8943fa3df9e9d7b4ef
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1532'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,11 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Este documento se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/landing/multi-cloud).
->
->As [Chaves gerenciadas pelo cliente](../overview.md) (CMK) do AWS são compatíveis com o Privacy and Security Shield, mas não estão disponíveis para o Healthcare Shield. O CMK no Azure é compatível com o Privacy Shield e o Security Shield, bem como com o Healthcare Shield.
+>Este documento se aplica às implementações do Experience Platform em execução no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Use este guia para proteger seus dados com o Serviço de Gerenciamento de Chaves (KMS) do Amazon Web Services (AWS) criando, gerenciando e controlando chaves de criptografia para o Adobe Experience Platform. Essa integração simplifica a conformidade, simplifica as operações por meio da automação e elimina a necessidade de manter sua própria infraestrutura de gerenciamento principal.
 
-Para obter instruções específicas do Customer Journey Analytics, consulte a [documentação do Customer Journey Analytics CMK](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/cja-privacy/cmk)
+Para obter instruções específicas do Customer Journey Analytics, consulte a [documentação do Customer Journey Analytics CMK](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -152,4 +150,4 @@ Selecione **[!DNL Confirm]** para concluir o processo. Você retorna ao espaço 
 
 ## Próximas etapas
 
-Depois que o AWS KMS for configurado, prossiga para configurar a integração usando a [!UICONTROL Configuração de Criptografia de Plataforma] ou a API do Adobe Experience Platform. Para continuar o processo único de configuração do recurso Chaves gerenciadas pelo cliente, continue com o [guia de configuração da interface](./ui-set-up.md).
+Depois que o AWS KMS for configurado, prossiga para configurar a integração usando a interface do usuário do [!UICONTROL Platform Encryption Configuration] ou a API do Adobe Experience Platform. Para continuar o processo único de configuração do recurso Chaves gerenciadas pelo cliente, continue com o [guia de configuração da interface](./ui-set-up.md).

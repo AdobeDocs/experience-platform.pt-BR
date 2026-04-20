@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de diversas fontes empresariais para criar perfis de clientes, criar públicos-alvo a partir desses perfis e ativar esses públicos-alvo para destinos de terceiros.
 role: Admin
-source-git-commit: 70dcebedd06c342e02ee2307042d4a5267b364d9
+source-git-commit: b4f6fac2bdd0365130aada34e7e0932303c6300a
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 58%
+source-wordcount: '323'
+ht-degree: 57%
 
 ---
 
@@ -27,6 +27,7 @@ ht-degree: 58%
       * [Tutorial completo](./b2b-tutorial.md)
       * [Medidas de proteção da Real-Time CDP B2B Edition](b2b-guardrails.md)
       * [Atualizações da arquitetura do Real-Time CDP B2B edition](b2b-architecture-upgrade.md)
+   * [REAL-TIME CDP MCP](rtcdp-mcp.md)
 * AUDIENCE MANAGER e REAL-TIME CDP {#evolution}
    * [Evolução do Audience Manager](aam-to-rtcdp.md)
 * Perfis de conta {#account}
@@ -47,12 +48,12 @@ ht-degree: 58%
    * [Destinos na Real-Time CDP B2B Edition](destinations/b2b.md)
 * Medidas de proteção {#guardrails}
    * [Visão geral das medidas de proteção do Real-Time CDP](guardrails/overview.md)
-   * [Medidas de proteção para assimilação de dados](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=pt-BR){target="_blank"}
+   * [Medidas de proteção para assimilação de dados](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Medidas de proteção para [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Medidas de proteção para [!DNL Real-Time Customer Profile] dados e segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=pt-BR){target="_blank"}
-   * [Medidas de proteção para [!DNL Identity Service] dados](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=pt-BR){target="_blank"}
-   * [Medidas de proteção para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=pt-BR){target="_blank"}
-   * [Medidas de proteção para ativação de dados por meio de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=pt-BR){target="_blank"}
+   * [Medidas de proteção para [!DNL Identity Service] dados](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Medidas de proteção para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Medidas de proteção para ativação de dados por meio de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identidades {#identity}
    * [Identidades e namespaces de identidade](profile/identities-overview.md)
 * Mesclar políticas {#merge-policies}

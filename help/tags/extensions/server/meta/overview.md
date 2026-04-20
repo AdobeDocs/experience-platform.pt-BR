@@ -2,9 +2,9 @@
 title: Visão geral da extensão da API de conversões do Meta
 description: Saiba mais sobre a extensão da API de conversões do Meta para encaminhamento de eventos no Adobe Experience Platform.
 exl-id: 6b5836d6-6674-4978-9165-0adc1d7087b7
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: ee615de825e6c415c356b7933a661f0da2121f08
 workflow-type: tm+mt
-source-wordcount: '2437'
+source-wordcount: '2220'
 ht-degree: 0%
 
 ---
@@ -140,40 +140,9 @@ O vídeo a seguir fornece uma introdução ao recurso de início rápido.
 
 >[!NOTE]
 >
->Esse recurso foi projetado para ajudar você a começar a implementar o encaminhamento de eventos. Ele não fornecerá uma implementação completa e totalmente funcional que acomode todos os casos de uso.
+>O recurso de configuração guiada ajuda a configurar com facilidade e eficiência. Essa ferramenta automatiza várias etapas executadas nas tags da Adobe e no encaminhamento de eventos. Ele não fornecerá uma implementação completa e totalmente funcional que acomode todos os casos de uso.
 
-Essa configuração instala automaticamente as extensões API de conversões do Meta e Meta Pixel. Essa implementação híbrida é recomendada pela Meta para coletar e encaminhar conversões de eventos no lado do servidor.
-O recurso de configuração rápida foi projetado para ajudar os clientes a começar a usar uma implementação de encaminhamento de eventos, e não tem como objetivo fornecer uma implementação completa e totalmente funcional que acomode todos os casos de uso.
-
-Para instalar o recurso, selecione **[!UICONTROL Get Started]** para **[!DNL Send Conversions Data to Meta]** na página Coleção de dados da Adobe Experience Platform **[!UICONTROL Home]**.
-
-![Página inicial da coleção de dados mostrando dados de conversões para meta](../../../images/extensions/server/meta/conversion-data-to-meta.png)
-
-Insira seu **[!UICONTROL Domain]** e selecione **[!UICONTROL Next]**. Esse domínio será usado como uma convenção de nomenclatura para suas propriedades geradas automaticamente de Tags e Encaminhamento de eventos, regras, elementos de dados, sequências de dados e assim por diante.
-
-![Tela de boas-vindas solicitando o nome de domínio](../../../images/extensions/server/meta/welcome.png)
-
-Na caixa de diálogo **[!UICONTROL Initial Setup]**, digite seus **[!UICONTROL Meta Pixel ID]**, **[!UICONTROL Meta Conversion API Access Token]** e **[!UICONTROL Data Layer Path]** e selecione **[!UICONTROL Next]**.
-
-![Caixa de diálogo de configuração inicial](../../../images/extensions/server/meta/initial-setup.png)
-
-Aguarde alguns minutos para que o processo de instalação inicial seja concluído e selecione **[!UICONTROL Next]**.
-
-![Tela de confirmação de conclusão da instalação inicial](../../../images/extensions/server/meta/setup-complete.png)
-
-Na caixa de diálogo **[!UICONTROL Add Code on Your Site]**, copie o código fornecido usando a função de cópia ![Copiar](/help/images/icons/copy.png) e cole-o no `<head>` do site de origem. Depois de implementado, selecione **[!UICONTROL Start Validation]**
-
-![Adicionar código na caixa de diálogo do site](../../../images/extensions/server/meta/add-code-on-your-site.png)
-
-A caixa de diálogo [!UICONTROL Validation Results] exibe os resultados de implementação da extensão do Meta. Selecione **[!UICONTROL Next]**. Você também pode ver resultados de validação adicionais selecionando o link **[!UICONTROL Assurance]**.
-
-![Caixa de diálogo de resultados de teste exibindo resultados da implementação](../../../images/extensions/server/meta/test-results.png)
-
-A exibição da tela **[!UICONTROL Next Steps]** confirma a conclusão da instalação. Aqui, você tem a opção de otimizar sua implementação adicionando novos eventos, que são mostrados na próxima seção.
-
-Se não quiser adicionar mais eventos, selecione **[!UICONTROL Close]**.
-
-![Caixa de diálogo Próximas etapas](../../../images/extensions/server/meta/next-steps.png)
+Para começar a usar a configuração guiada, siga as instruções na [configuração guiada do Encaminhamento de Eventos](../../../ui/event-forwarding/guided-setup.md).
 
 #### Adição de eventos adicionais
 

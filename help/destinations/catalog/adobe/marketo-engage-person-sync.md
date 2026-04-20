@@ -2,20 +2,15 @@
 title: Sincronização de pessoas do Marketo Engage
 description: Use o conector de sincronização de pessoas do Marketo Engage para transmitir atualizações do público-alvo de uma pessoa para os registros correspondentes no seu Marketo Engage.
 last-substantial-update: 2025-01-14T00:00:00Z
-badgeBeta: label="Beta" type="Informative"
 exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: bfff4cd5ffc57abda2f9672d5db487e9ebebee9d
 workflow-type: tm+mt
-source-wordcount: '1196'
+source-wordcount: '1176'
 ht-degree: 4%
 
 ---
 
 # Conexão de Sincronização da Pessoa do Marketo Engage {#marketo-engage-person-sync}
-
->[!IMPORTANT]
->
->Este conector de destino está na versão beta e só está disponível para clientes selecionados. Para solicitar acesso, entre em contato com o representante da Adobe.
 
 >[!IMPORTANT]
 >
@@ -91,7 +86,7 @@ Se a sua empresa tiver acesso a várias organizações, certifique-se de usar a 
 
 >[!IMPORTANT]
 >
->O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
+>O usuário que configura o destino deve ter a permissão [Editar Pessoa](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) na instância e partição do Marketo.
 
 ![Conectar ao Destino](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
@@ -102,7 +97,7 @@ Se a sua empresa tiver acesso a várias organizações, certifique-se de usar a 
 * **[!UICONTROL First searchable field]**: Campo para desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. O padrão é email
 * **[!UICONTROL First searchable field]**: um campo secundário para desduplicar. O campo deve estar presente em cada registro de cliente potencial da entrada. Opcional
 
-Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/pt-br/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
+Depois de selecionar a instância, também será necessário selecionar a Partição de lead à qual deseja que a configuração se integre. Uma [Partição de Cliente Potencial](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) é um conceito no Marketo Engage usado para separar registros de cliente potencial por preocupação comercial, como uma marca ou uma região de vendas. Se sua assinatura do Marketo não tiver o recurso Espaços de trabalho e partições ou se nenhuma partição adicional tiver sido criada em sua assinatura, somente a partição Padrão estará disponível. Uma única configuração só pode atualizar registros de cliente potencial que existam em sua partição configurada.
 
 >[!IMPORTANT]
 >

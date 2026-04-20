@@ -5,9 +5,9 @@ title: Ativar públicos para destinos em lote por meio da API de ativação ad-h
 description: Este artigo ilustra o fluxo de trabalho completo para ativar públicos-alvo por meio da API de ativação ad-hoc, incluindo os trabalhos de segmentação que ocorrem antes da ativação.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 944cb03ae8a432b09b54b148e94b2ee1e1bcbc5d
 workflow-type: tm+mt
-source-wordcount: '1670'
+source-wordcount: '1695'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,10 @@ Os recursos no Experience Platform podem ser isolados em sandboxes virtuais espe
 Todas as solicitações que contêm uma carga (POST, PUT, PATCH) exigem um cabeçalho de tipo de mídia adicional:
 
 * Tipo de conteúdo: `application/json`
+
+### Documentação de referência da API {#api-reference-documentation}
+
+Você pode encontrar a documentação de referência de acompanhamento para todas as operações de API neste tutorial. Consulte a [Referência da API de ativação ad hoc](https://developer.adobe.com/experience-platform-apis/references/ad-hoc-activation).
 
 ## Etapa 3: Criar fluxo de ativação na interface do usuário do Experience Platform {#activation-flow}
 

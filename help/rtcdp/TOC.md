@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Manual da Real-time Customer Data Platform
 user-guide-description: Reúna dados conhecidos e anônimos de diversas fontes empresariais para criar perfis de clientes, criar públicos-alvo a partir desses perfis e ativar esses públicos-alvo para destinos de terceiros.
 role: Admin
-source-git-commit: 74a73b568c850f8e749afea039afd2821858bd69
+source-git-commit: 70dcebedd06c342e02ee2307042d4a5267b364d9
 workflow-type: tm+mt
-source-wordcount: '311'
-ht-degree: 60%
+source-wordcount: '320'
+ht-degree: 58%
 
 ---
 
@@ -47,12 +47,12 @@ ht-degree: 60%
    * [Destinos na Real-Time CDP B2B Edition](destinations/b2b.md)
 * Medidas de proteção {#guardrails}
    * [Visão geral das medidas de proteção do Real-Time CDP](guardrails/overview.md)
-   * [Medidas de proteção para assimilação de dados](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=pt-BR){target="_blank"}
+   * [Medidas de proteção para assimilação de dados](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
    * [Medidas de proteção para [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
    * [Medidas de proteção para [!DNL Real-Time Customer Profile] dados e segmentação](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=pt-BR){target="_blank"}
-   * [Medidas de proteção para [!DNL Identity Service] dados](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=pt-BR){target="_blank"}
-   * [Medidas de proteção para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=pt-BR){target="_blank"}
-   * [Medidas de proteção para ativação de dados por meio de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=pt-BR){target="_blank"}
+   * [Medidas de proteção para [!DNL Identity Service] dados](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [Medidas de proteção para [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [Medidas de proteção para ativação de dados por meio de destinos](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identidades {#identity}
    * [Identidades e namespaces de identidade](profile/identities-overview.md)
 * Mesclar políticas {#merge-policies}
@@ -72,11 +72,12 @@ ht-degree: 60%
 * Esquemas {#schemas}
    * [Visão geral dos esquemas](schemas/overview.md)
    * [Esquemas no Real-Time CDP B2B Edition](schemas/b2b.md)
-* Origens {#sources}
+* Fontes {#sources}
    * [Visão geral das fontes](sources/sources-overview.md)
    * [Fontes na Real-Time CDP B2B Edition](sources/b2b.md)
 * Casos de uso {#use-cases}
    * [Visão geral de casos de uso de exemplo](/help/rtcdp/use-case-guides/overview.md)
+   * [Aproveite os casos de uso da experiência do cliente para impulsionar as metas de negócios](/help/rtcdp/use-case-guides/business-use-case-framework.md)
    * Aquisição de clientes {#customer-acquisition}
       * [Envolva e adquira novos clientes sem dependência de cookies de terceiros](/help/rtcdp/partner-data/prospecting.md)
       * [Personalizar experiências no site para visitantes desconhecidos usando o reconhecimento de visitantes auxiliados por parceiros](/help/rtcdp/partner-data/onsite-personalization.md)

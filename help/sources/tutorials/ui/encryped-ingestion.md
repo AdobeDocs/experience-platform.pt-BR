@@ -2,7 +2,7 @@
 title: Assimilar dados criptografados na interface do usuário de origens do Workspace
 description: Saiba como assimilar dados criptografados no espaço de trabalho da interface do usuário de origens.
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: c52a0e3910697b420f88425388431a4ad3d53072
 workflow-type: tm+mt
 source-wordcount: '1414'
 ht-degree: 6%
@@ -37,7 +37,7 @@ Antes de continuar com este tutorial, leia os seguintes documentos para entender
 ## Criar um par de chaves de criptografia {#create-an-encryption-key-pair}
 
 >[!CONTEXTUALHELP]
->id="platform_sources_encrypted_encryptionKeyId"
+>id="platform_sources_encrypted_encryptionkeyid"
 >title="ID da chave de criptografia"
 >abstract="Forneça a ID da chave de criptografia que corresponde à chave usada para criptografar os dados de origem."
 

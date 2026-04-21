@@ -5,7 +5,7 @@ hide: true
 hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: eb69e67847305c4b02d377e032aad3490b0b84e0
+source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%
@@ -49,4 +49,5 @@ Você não precisa começar com &quot;executar&quot; para agregar valor, concent
 
 ## Introdução
 
-Faça download do modelo da estrutura e dos recursos de suporte para executar um workshop estruturado e produzir um roteiro priorizado e mensurável pronto para ativação.
+Baixe [o modelo de estrutura e os recursos de suporte](../assets/S651-use-case-framework-template.pdf) para executar um workshop estruturado e produzir um roteiro priorizado e mensurável pronto para ativação.
+

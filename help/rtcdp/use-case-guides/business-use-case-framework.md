@@ -1,11 +1,9 @@
 ---
 title: Aproveite os casos de uso da experiência do cliente para impulsionar os objetivos de negócios
 description: Use uma estrutura prática e pronta para workshop para definir, priorizar e ativar casos de uso da experiência do cliente vinculados a resultados mensuráveis dos negócios. Aplique um modelo simples Por que → Quem/O/Onde → Como alinhar equipes, orientar a execução e gerar impacto.
-hide: true
-hidefromtoc: true
 recommendations: noDisplay, noCatalog
 exl-id: cf96b3d5-e995-48a7-8180-38adfd65a276
-source-git-commit: 2f8c13240e3a99c394d43a0252c78b34133761f7
+source-git-commit: 1c856af1e192ac26a530fb69b1a8629c8ee72e1f
 workflow-type: tm+mt
 source-wordcount: '367'
 ht-degree: 0%

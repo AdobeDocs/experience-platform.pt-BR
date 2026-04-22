@@ -2,10 +2,10 @@
 title: Notas de pré-lançamento do Experience Platform
 description: Uma visualização das notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d052230ec5ddc4a28495f4928ab32957bf9038ac
+source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
 workflow-type: tm+mt
-source-wordcount: '1136'
-ht-degree: 13%
+source-wordcount: '1344'
+ht-degree: 11%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 13%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: abril de 2026**
 
@@ -45,10 +45,13 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 
 | Destino | Descrição |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [Correspondência de Cliente de Anúncios da Microsoft](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Combinar clientes por endereço de email e reengajar com eles em todo o [!DNL Microsoft Advertising Network], incluindo anúncios de Pesquisa e Público-alvo. Vincule sua conta do [!DNL Microsoft Advertising] à Real-Time CDP para automatizar a criação e o gerenciamento de listas de correspondência de clientes diretamente da Experience Platform. |
+| [!BADGE Beta]{type=Informative} [Correspondência de Cliente de Anúncios da Microsoft](../destinations/catalog/advertising/microsoft-ads-customer-match.md) | Combinar clientes por endereço de email e reengajar com eles em todo o [!DNL Microsoft Advertising Network], incluindo anúncios de Pesquisa e Público-alvo. Vincule sua conta do [!DNL Microsoft Advertising] à Real-Time CDP para automatizar a criação e o gerenciamento de listas de correspondência de clientes diretamente da Experience Platform. Para obter acesso, entre em contato com seu gerente de conta da Adobe. |
 | [!BADGE Beta]{type=Informative} [Reddit Custom Audience](../destinations/catalog/advertising/reddit-custom-audience.md) | Enviar audiências do Experience Platform para [!DNL Reddit Ads]. Conecte sua conta do [!DNL Reddit], mapeie identidades e ative públicos para alcançar as pessoas que exploram ativamente seus interesses no [!DNL Reddit]. |
 | [Amazon Ads v2](../destinations/catalog/advertising/amazon-ads-v2.md) | [!DNL Amazon Ads v2] é o destino atual de todas as novas conexões de [!DNL Amazon Ads]. Se você tiver uma conexão [(Legacy) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md) existente, ela continuará a funcionar sem as alterações necessárias. O [!DNL Amazon Ads v2] se conecta ao [!DNL Ads Data Manager], que fornece suporte para tipos de identidade expandidos, campos relacionados a endereços e compartilhamento de dados entre produtos [!DNL Amazon Ads], melhorando o direcionamento e as taxas de correspondência de público-alvo em comparação ao [(Herdado) [!DNL Amazon Ads]](../destinations/catalog/advertising/amazon-ads.md). |
 | [!DNL Rokt] | Use o [!DNL Rokt] para conectar os públicos da Experience Platform à tomada de decisões em tempo real orientada por IA, melhorando o desempenho da campanha por meio de direcionamento, supressão e personalização mais precisos. |
+| Suporte a público externo para [Critério](../destinations/catalog/advertising/criteo.md) | Ative públicos-alvo de origens além do Serviço de Segmentação para [!DNL Criteo], incluindo públicos-alvo de carregamento personalizados (importados do CSV), públicos-alvo semelhantes, públicos-alvo federados e públicos-alvo criados em outros aplicativos da Experience Platform, como [!DNL Adobe Journey Optimizer]. Consulte a seção [públicos-alvo suportados](../destinations/catalog/advertising/criteo.md#supported-audiences) para obter detalhes. |
+| [Conexão de público-alvo da Acxiom](../destinations/catalog/advertising/acxiom-audience-connection.md) | O destino [!DNL Acxiom Audience Connection] agora está disponível. Use-o para aprimorar públicos-alvo com a tecnologia [!DNL Acxiom's Real ID] e ativá-los em plataformas adicionais, incluindo [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] e [!DNL Viant]. |
+| [Conexão de público-alvo da Acxiom Real ID](../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) | O destino [!DNL Acxiom Real ID Audience Connection] agora está disponível. Use-o para ativar públicos-alvo usando [!DNL Acxiom's Real ID] como chave de correspondência no mesmo conjunto de plataformas com suporte, incluindo [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], [!DNL Cox], [!DNL LG Ads], [!DNL Spectrum] e [!DNL Viant]. |
 
 {style="table-layout:auto"}
 
@@ -57,6 +60,10 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 | Correção | Descrição |
 | --- | --- |
 | Suporte personalizado de monitoramento do Personalization | O painel de monitoramento para destinos agora oferece suporte a [!DNL Custom Personalization] destinos. A observação de limitação que excluiu [!DNL Custom Personalization] do monitoramento foi removida. |
+| Contagens de perfis na revisão de ativação | A etapa de revisão de ativação agora mostra as contagens de perfil para públicos-alvo que já estão ativados. As contagens de perfil também são mostradas para destinos de transmissão, não apenas destinos em lote. |
+| Visibilidade de expiração de token [!DNL Pinterest] | O destino [!DNL Pinterest] agora exibe o tempo de expiração do token retornado diretamente de [!DNL Pinterest], para que você possa ver quando a reautenticação é necessária. |
+| Exportar arquivo agora desativado por agendamentos inválidos | A ação **[!UICONTROL Export file now]** agora é desabilitada quando o cronograma de público-alvo é inválido ou obsoleto. Uma dica de ferramenta explica por que a ação não está disponível. |
+| Correção da visibilidade da coluna no fluxo de trabalho de ativação | Correção de um problema em que a alteração de colunas visíveis em uma tabela afetava incorretamente outras tabelas no fluxo de trabalho de ativação. |
 
 {style="table-layout:auto"}
 

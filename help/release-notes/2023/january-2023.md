@@ -80,7 +80,7 @@ A Adobe Experience Platform fornece um conjunto de tecnologias que permitem cole
 | Recurso | Descrição |
 | --- | --- |
 | Nova página inicial | A página inicial da interface da Coleção de dados foi atualizada para incluir informações de integração úteis e links para simplificar a produtividade. Isso inclui:<ol><li>Documentação e fluxos de trabalho recomendados para começar</li><li>Propriedades, regras e elementos de dados recentes</li><li>Extensões populares</li><li>Novas atualizações de extensão com recurso de instalação rápida</li></ol> |
-| Enviar dados para o [!DNL Google Ads] usando o encaminhamento de eventos | Agora é possível usar o extensão da API](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) do [[!DNL Google Ads Enhanced Conversions]  para encaminhamento de eventos, combinado com [segredos do Google Oauth 2](../../tags/ui/event-forwarding/secrets.md#google-oauth2), para enviar com segurança os dados do lado do servidor para o [!DNL Google Ads] em tempo real. |
+| Enviar dados para o [!DNL Google Ads] usando o encaminhamento de eventos | Agora é possível usar o extensão da API[&#128279;](../../tags/extensions/server/google-ads-enhanced-conversions/overview.md) do [!DNL Google Ads Enhanced Conversions]  para encaminhamento de eventos, combinado com [segredos do Google Oauth 2](../../tags/ui/event-forwarding/secrets.md#google-oauth2), para enviar com segurança os dados do lado do servidor para o [!DNL Google Ads] em tempo real. |
 
 {style="table-layout:auto"}
 

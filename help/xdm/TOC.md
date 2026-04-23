@@ -5,9 +5,9 @@ breadcrumb-title: Guia do Experience Data Model (XDM)
 user-guide-description: Explore uma visão geral do sistema do Experience Data Model (XDM) na Experience Platform e saiba como usar classes e grupos de campos de esquema para padronizar os dados de experiência.
 feature: Schemas
 role: Developer
-source-git-commit: 511c93342d112056ead54c0d82184cc262a43383
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '710'
 ht-degree: 21%
 
 ---
@@ -82,7 +82,7 @@ ht-degree: 21%
    * [XDM ExperienceEvent](./classes/experienceevent.md)
    * [Medicação](./classes/medication.md)
    * [Pagador](./classes/payer.md)
-   * [Planejar &#x200B;](./classes/plan.md)
+   * [Planejar ](./classes/plan.md)
    * [Política](./classes/policy.md)
    * [Produto](./classes/product.md)
    * [Cliente potencial](./classes/prospect.md)
@@ -116,7 +116,7 @@ ht-degree: 21%
       * [Detalhes de Cliente Potencial do Parceiro (Exemplo)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Extensão completa do Adobe Analytics](./field-groups/event/analytics-full-extension.md)
-      * [Extensão completa da Adobe Advertising Cloud](./field-groups/event/advertising-full-extension.md)
+      * [Extensão completa do Adobe Advertising](./field-groups/event/advertising-full-extension.md)
       * [Detalhes do Advertising](./field-groups/event/advertising-details.md)
       * [Detalhes do aplicativo](./field-groups/event/application-details.md)
       * [Transferências de saldo](./field-groups/event/balance-transfers.md)

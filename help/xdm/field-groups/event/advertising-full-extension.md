@@ -1,23 +1,24 @@
 ---
-title: Grupo de campos de esquema de extensão completa do Adobe Advertising Cloud ExperienceEvent
-description: Saiba mais sobre o grupo de campos de esquema Extensão completa do Adobe Advertising Cloud ExperienceEvent.
+title: Grupo de campos de esquema de extensão completa do Adobe Advertising ExperienceEvent
+description: Saiba mais sobre o grupo de campos de esquema Extensão completa do Adobe Advertising ExperienceEvent.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: adfd0220b8bc53c44abc76a711b148a7e03edb7a
+exl-id: 4a9f6bff-6098-424a-b8f4-0f14ec52d906
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1581'
-ht-degree: 7%
+source-wordcount: '1558'
+ht-degree: 8%
 
 ---
 
-# [!UICONTROL Extensão completa do campo de esquema da Adobe Advertising Cloud ExperienceEvent]
+# Grupo de campos de esquema [!UICONTROL Adobe Advertising ExperienceEvent Full Extension]
 
 >[!AVAILABILITY]
 >
->O grupo de campos [!UICONTROL Extensão completa do Adobe Advertising Cloud ExperienceEvent] está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
+>O grupo de campos [!UICONTROL Adobe Advertising ExperienceEvent Full Extension] está atualmente na versão beta. A documentação e a funcionalidade estão sujeitas a alterações.
 
-A [!UICONTROL Extensão Completa de ExperienceEvent da Adobe Advertising Cloud] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), que captura métricas comuns coletadas pela Adobe Advertising (anteriormente chamadas de &quot;[!DNL Advertising Cloud]&quot;).
+[!UICONTROL Adobe Advertising ExperienceEvent Full Extension] é um grupo de campos de esquema padrão para a [[!DNL XDM ExperienceEvent] classe](../../classes/experienceevent.md), que captura métricas comuns coletadas pela Adobe Advertising (anteriormente chamadas de &quot;[!DNL Advertising Cloud]&quot;).
 
-Este documento descreve a estrutura e o caso de uso do grupo de campos de extensão [!DNL Advertising Cloud].
+Este documento descreve a estrutura e o caso de uso do grupo de campos de extensão [!DNL Advertising].
 
 >[!NOTE]
 >
@@ -27,7 +28,7 @@ Este documento descreve a estrutura e o caso de uso do grupo de campos de extens
 
 O grupo de campos fornece um único objeto `_experience` a um esquema, que contém um único objeto `adcloud`.
 
-![Campos de nível superior para o [!DNL Advertising Cloud] grupo de campos](../../images/field-groups/advertising-full-extension/full-schema.png "Campos de nível superior para o [!DNL Advertising Cloud] grupo de campos")
+![Campos de nível superior para o [!DNL Advertising] grupo de campos](../../images/field-groups/advertising-full-extension/full-schema.png "Campos de nível superior para o [!DNL Advertising] grupo de campos")
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
@@ -86,7 +87,7 @@ O objeto campaign define a hierarquia da campanha de publicidade, incluindo os i
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
 | `accountId` | String | O identificador da conta. |
-| `dspId` | String | O identificador da Demand Side Platform (DSP) na qual a campanha é definida. Normalmente, esse identificador é a ID da Adobe Advertising Cloud DSP. |
+| `dspId` | String | O identificador da Demand Side Platform (DSP) na qual a campanha é definida. Normalmente, esse identificador é a ID do Adobe Advertising DSP. |
 | `campaignId` | String | O identificador da campanha. |
 | `placementId` | String | O identificador do posicionamento. |
 | `packageId` | String | O identificador do pacote Advertising DSP. |
@@ -103,8 +104,8 @@ O objeto conversionDetails captura informações de rastreamento para conversõe
 
 | Propriedade | Tipo de dados | Descrição |
 | --- | --- | --- |
-| `trackingCode` | String | O código de rastreamento de conversão do evento. Para obter uma lista de formatos possíveis, consulte [Formatos de ID AMO](https://experienceleague.adobe.com/pt-br/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
-| `trackingIdentities` | String | A ID EF ou os detalhes de identidade de rastreamento de um evento. Para obter uma lista de formatos possíveis, consulte [Formatos de ID EF](https://experienceleague.adobe.com/pt-br/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
+| `trackingCode` | String | O código de rastreamento de conversão do evento. Para obter uma lista de formatos possíveis, consulte [Formatos de ID AMO](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats). |
+| `trackingIdentities` | String | A ID EF ou os detalhes de identidade de rastreamento de um evento. Para obter uma lista de formatos possíveis, consulte [Formatos de ID EF](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
 | `conversionProperties` | Objeto | Um mapa de propriedades de conversão, representado como uma matriz de cadeias de pares de valores chave (como `subscriptions=253`). |
 
 ## `fees` {#fees}
@@ -142,10 +143,10 @@ O objeto de inventário registra detalhes sobre a oportunidade de inventário de
 | --- | --- | --- |
 | `sessionId` | String | A ID da sessão associada a um evento de experiência, usada para vincular eventos independentes que ocorreram na mesma sessão. |
 | `feedID` | String | Uma ID composta do editor, troca de anúncios e outros recursos. |
-| `sspPartnerCode` | String | O parceiro (exchange) pelo qual a Adobe Advertising Cloud recebe a oportunidade de inventário. |
+| `sspPartnerCode` | String | O parceiro (exchange) pelo qual a Adobe Advertising recebe a oportunidade de inventário. |
 | `siteID` | String | O identificador do site onde a impressão do anúncio foi veiculada. |
 | `costCurrency` | String | O código de moeda ISO 4217 usado para pagar um parceiro por uma oportunidade de anúncio. O valor deve seguir o padrão de expressão regular ^[A-Z]{3}$ (três letras maiúsculas). Por exemplo: USD, EUR. |
-| `inventorySourceId` | String | A ID da fonte de inventário da Adobe Advertising Cloud na qual esta oportunidade foi entregue. |
+| `inventorySourceId` | String | A ID da fonte de estoque da Adobe Advertising na qual esta oportunidade foi entregue. |
 | `segment` | Objeto | Detalhes associados às regras de segmentação do usuário. Suas propriedades incluem:<ul><li>`attributablePartnerId` (Cadeia de caracteres): o identificador do provedor de segmento que possui o attributableSegmentId.</li><li>`attributableSegmentId` (Cadeia de caracteres): o segmento creditado pelo direcionamento de usuário na regra de direcionamento do posicionamento. Isso é usado para fins de rastreamento de custos e parceiros pagantes.</li><li>`segments` (Cadeia de caracteres): a interseção dos segmentos de usuário a\) aos quais o usuário pertencia e b\) que o anúncio estava direcionando. Esta não é a lista completa de segmentos aos quais o usuário pertencia no momento do leilão.</li></ul> |
 | `optimizationTag` | String | A tag relacionada à otimização. |
 | `attributableDeviceGraphId` | String | O identificador do gráfico de dispositivos atribuído a um evento de conversão. |
@@ -167,6 +168,6 @@ O objeto `productDetails` contém informações sobre produtos apresentados nos 
 
 ## Próximas etapas
 
-Este documento abordou a estrutura e o caso de uso para o grupo de campos de extensão [!DNL Advertising Cloud]. Para obter mais detalhes sobre o próprio grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json).
+Este documento abordou a estrutura e o caso de uso para o grupo de campos de extensão [!DNL Adobe Advertising]. Para obter mais detalhes sobre o próprio grupo de campos, consulte o [repositório XDM público](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/adcloud/experienceevent-all.schema.json).
 
 Se você estiver usando este grupo de campos para coletar dados do [!DNL Advertising] usando o Adobe Experience Platform Web SDK, consulte o manual em [configurando uma sequência de dados](../../../datastreams/overview.md) para saber como mapear dados para o XDM no lado do servidor.

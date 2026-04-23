@@ -3,21 +3,21 @@ title: Guia Auditor
 description: Saiba como usar a guia Auditor no Adobe Experience Platform Debugger para testar as implementações do Adobe Experience Cloud.
 keywords: depurador;extensão do experience platform debugger;chrome;extensão;auditor;dtm;target
 exl-id: 409094f8-a7d9-45f7-ba12-b5e6250abc0f
-source-git-commit: df1a67e4b6f3d2eaeaba2b8d3c9b1588ee0b1461
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '368'
-ht-degree: 32%
+source-wordcount: '361'
+ht-degree: 33%
 
 ---
 
 # Guia Auditor
 
-No Adobe Experience Platform Debugger, você pode usar a guia **[!UICONTROL Auditor]** para executar uma série de testes de auditoria na sua página.
+No Adobe Experience Platform Debugger, você pode usar a guia **[!UICONTROL Auditor]** para executar uma série de testes de auditoria na página.
 
 Para usar este recurso:
 
 1. Selecione **[!UICONTROL Auditor]** na navegação à esquerda.
-1. Selecione **[!UICONTROL Executar Testes do Auditor]**. Quando os testes estiverem concluídos, seus resultados aparecerão abaixo.
+1. Selecione **[!UICONTROL Run Auditor Tests]**. Quando os testes estiverem concluídos, seus resultados aparecerão abaixo.
 
 ![Captura de tela dos resultados de teste na guia Auditor](../images/auditor-results.png)
 
@@ -42,12 +42,12 @@ Todos os testes foram bem-sucedidos ou não. Eles testam a conformidade ou não 
 
 É **recomendável** que você corrija quaisquer resultados de nível 1 a 3.
 
-## Tecnologias de Adobe suportadas
+## Tecnologias Adobe compatíveis
 
-O recurso de auditor é capaz de classificar as seguintes tecnologias de Adobe:
+O recurso de auditor é capaz de classificar as seguintes tecnologias Adobe:
 
-* Adobe Advertising Cloud DSP
-* Adobe Advertising Cloud Search
+* Adobe Advertising DSP
+* Pesquisa no Adobe Advertising
 * Adobe Analytics
 * Serviço de identidade da Adobe Experience Cloud
 * Adobe Target

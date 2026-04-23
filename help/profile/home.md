@@ -2,7 +2,7 @@
 title: Visão geral do Perfil do cliente em tempo real
 description: O Perfil do cliente em tempo real mescla dados de várias fontes e fornece acesso a esses dados na forma de perfis de clientes individuais e eventos de séries de tempo relacionados. Esse recurso permite que os profissionais de marketing promovam experiências coordenadas, consistentes e relevantes com seus públicos-alvo em vários canais.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 82e41af32468febeda2dce6b471d72ef74359ea9
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '1826'
 ht-degree: 1%
@@ -113,7 +113,7 @@ O [!DNL Experience Platform] pode ser configurado para enviar dados de registro 
 
 >[!NOTE]
 >
->Dados coletados pelas soluções da Adobe, incluindo [!DNL Analytics Cloud], [!DNL Marketing Cloud] e [!DNL Advertising Cloud], fluem para [!DNL Experience Platform] e são assimilados em [!DNL Profile].
+>Dados coletados pelas soluções da Adobe, incluindo [!DNL Analytics Cloud], [!DNL Marketing Cloud] e [!DNL Adobe Advertising], fluem para [!DNL Experience Platform] e são assimilados em [!DNL Profile].
 
 ### Métricas de assimilação de perfil
 

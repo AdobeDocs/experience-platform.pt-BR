@@ -3,9 +3,9 @@ keywords: Experience Platform;página inicial;tópicos populares
 title: Processamento de solicitação de privacidade no serviço de identidade
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda conceitos essenciais relacionados ao processamento de solicitações de privacidade do Serviço de identidade.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1003'
 ht-degree: 1%
 
 ---
@@ -32,7 +32,7 @@ Este documento aborda conceitos essenciais relacionados ao processamento de soli
 
 ## Compreensão dos namespaces de identidade {#namespaces}
 
-O Adobe Experience Platform [!DNL Identity Service] une dados de identidade do cliente entre sistemas e dispositivos. [!DNL Identity Service] usa **namespaces de identidade** para fornecer contexto aos valores de identidade, relacionando-os ao seu sistema de origem. Um namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou Adobe Target ID (&quot;TNTID&quot;).
+O Adobe Experience Platform [!DNL Identity Service] une dados de identidade do cliente entre sistemas e dispositivos. [!DNL Identity Service] usa **namespaces de identidade** para fornecer contexto aos valores de identidade, relacionando-os ao seu sistema de origem. Um namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;), ou associar a identidade a um aplicativo específico, como uma Adobe Advertising ID ou Adobe Target ID.
 
 O Serviço de identidade mantém um armazenamento de namespaces de identidade definidos globalmente (padrão) e definidos pelo usuário (personalizado). Os namespaces padrão estão disponíveis para todas as organizações (por exemplo, &quot;Email&quot; e &quot;ECID&quot;), enquanto sua organização também pode criar namespaces personalizados para atender às suas necessidades específicas.
 

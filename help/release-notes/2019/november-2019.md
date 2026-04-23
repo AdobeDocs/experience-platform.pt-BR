@@ -5,16 +5,16 @@ doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
 exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1889'
-ht-degree: 7%
+source-wordcount: '1888'
+ht-degree: 8%
 
 ---
 
 # Notas de versão da Adobe Experience Platform
 
-**Data de lançamento: 18 de novembro de 2019**
+**Data de lançamento: terça-feira, 18 de novembro de 2019**
 
 Novos recursos na Adobe Experience Platform:
 
@@ -52,7 +52,7 @@ Para obter mais informações, consulte a [documentação do Real-Time Customer 
 |---|---|
 | Destinos | Integrações pré-criadas com plataformas de destino compatíveis com o [!DNL Real-Time Customer Data Platform] da Adobe que ativam dados para esses parceiros de forma contínua. Consulte [Destinos](#destinations) abaixo para obter mais informações. |
 | Painel de métricas da página inicial | A página inicial do Real-Time Customer Data Platform (Real-Time CDP) inclui um painel de métricas que mostra informações sobre perfis e segmentos. A página inicial também contém links para materiais de aprendizado. Consulte a seção sobre [métricas do Real-Time Customer Data Platform](#real-time-customer-data-platform-metrics) abaixo. |
-| Origens | Você pode assimilar dados de várias fontes, como Soluções da Adobe, armazenamento na nuvem, software de terceiros e seu CRM. Consulte a seção [Fontes](#sources) abaixo para saber mais. |
+| Fontes | Você pode assimilar dados de várias fontes, como Soluções da Adobe, armazenamento na nuvem, software de terceiros e seu CRM. Consulte a seção [Fontes](#sources) abaixo para saber mais. |
 
 **[!DNL Real-Time Customer Data Platform]métricas**
 
@@ -84,7 +84,7 @@ Consulte o [catálogo de destinos](../../destinations/catalog/overview.md) para 
 * No momento, não há validação em vigor para detalhes, caminho ou credenciais da conta ao se conectar ao destino ou à conta de armazenamento. Verifique se você está inserindo as credenciais corretas e se há erros de ortografia ou de digitação.
 * Nenhuma renovação de credencial está em vigor com a versão inicial. Depois que uma conta expirar ou precisar de atualização, você deverá criar uma nova conexão de destino e remapear os segmentos mapeados anteriormente.
 
-## Origens {#sources}
+## Fontes {#sources}
 
 O Adobe Experience Platform pode assimilar dados de fontes externas e, ao mesmo tempo, permitir que você estruture, rotule e aprimore esses dados usando os serviços do [!DNL Experience Platform]. Você pode assimilar dados de várias fontes, como Soluções da Adobe, armazenamento na nuvem, software de terceiros e seu sistema de CRM.
 
@@ -128,7 +128,7 @@ O XDM é uma especificação documentada publicamente projetada para melhorar o 
 | Recurso | Descrição |
 | ---------- | ------------ |
 | Esquema de notificação | Novo esquema que representa dados de notificação enviados durante o processo de assimilação de dados. |
-| Esquemas do Adobe AdCloud DSP | Cinco novos esquemas foram adicionados para representar metadados da plataforma de demanda (DSP) da Adobe Advertising Cloud: Posicionamento, Campanha, Pacote, Anunciante e Conta. |
+| Esquemas do Adobe AdCloud DSP | Cinco novos esquemas foram adicionados para representar metadados da plataforma de demanda (DSP) do Adobe Advertising: Posicionamento, Campanha, Pacote, Anunciante e Conta. |
 | Grupos de campos de esquema Detalhes da implementação do ExperienceEvent | Novos grupos de campos ExperienceEvent que adicionam um campo padrão para armazenar informações sobre o software usado para coletar o evento. |
 | [!DNL Profile Privacy] grupos de campos | Novos grupos de campos de perfil que adicionam campos para aceitar sinais gerais de recusa e de recusa de vendas/compartilhamento para [!DNL Real-Time Customer Profile]. |
 | Restrições de formato para `xdm:alternateDisplayInfo` | Os campos &quot;Título&quot; e &quot;Descrição&quot; de `xdm:alternateDisplayInfo` devem ser cadeias de caracteres para passar na validação. |

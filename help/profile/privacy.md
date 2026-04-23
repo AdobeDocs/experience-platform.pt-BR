@@ -5,9 +5,9 @@ title: Processamento de solicitação de privacidade no perfil do cliente em tem
 type: Documentation
 description: O Adobe Experience Platform Privacy Service processa solicitações de clientes para acessar, cancelar a venda ou excluir seus dados pessoais, conforme definido por várias regulamentações de privacidade. Este documento aborda os conceitos essenciais relacionados ao processamento de solicitações de privacidade para o Perfil do cliente em tempo real.
 exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
-source-git-commit: db781526fc7b9813b9982f45b8a5aa36175a1f34
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '1746'
+source-wordcount: '1743'
 ht-degree: 1%
 
 ---
@@ -38,7 +38,7 @@ Este guia requer uma compreensão funcional dos seguintes componentes do [!DNL E
 
 ## Compreensão dos namespaces de identidade {#namespaces}
 
-O Adobe Experience Platform [!DNL Identity Service] une dados de identidade do cliente entre sistemas e dispositivos. [!DNL Identity Service] usa **namespaces de identidade** para fornecer contexto aos valores de identidade, relacionando-os ao seu sistema de origem. Um namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;) ou associar a identidade a um aplicativo específico, como uma Adobe Advertising Cloud ID (&quot;AdCloud&quot;) ou Adobe Target ID (&quot;TNTID&quot;).
+O Adobe Experience Platform [!DNL Identity Service] une dados de identidade do cliente entre sistemas e dispositivos. [!DNL Identity Service] usa **namespaces de identidade** para fornecer contexto aos valores de identidade, relacionando-os ao seu sistema de origem. Um namespace pode representar um conceito genérico, como um endereço de email (&quot;Email&quot;), ou associar a identidade a um aplicativo específico, como uma Adobe Advertising ID ou Adobe Target ID.
 
 O Serviço de identidade mantém um armazenamento de namespaces de identidade definidos globalmente (padrão) e definidos pelo usuário (personalizado). Os namespaces padrão estão disponíveis para todas as organizações (por exemplo, &quot;Email&quot; e &quot;ECID&quot;), enquanto sua organização também pode criar namespaces personalizados para atender às suas necessidades específicas.
 

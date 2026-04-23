@@ -1,11 +1,11 @@
 ---
-keywords: destinos;soluções da experience cloud; target;destino do target; ad cloud; advertising cloud; audience manager; destino do adobe target; target; destino do audience manager;
+keywords: destinos;soluções da experience cloud; target; destino do target; ad cloud; publicidade; audience manager; destino do adobe target; target; destino do audience manager;
 title: Visão geral dos destinos do Adobe
 description: Gerencie a experiência do cliente conectando seus dados no Experience Platform a outras soluções da Adobe Experience Cloud para direcionamento de anúncios, personalização, automação de marketing e muito mais
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 2bbd36db21363b20575db6a5fc5ecce8b9a31224
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '224'
+source-wordcount: '221'
 ht-degree: 9%
 
 ---
@@ -34,7 +34,7 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 
 ### Extensões {#extensions}
 
-* [Extensão da Adobe Advertising Cloud](../advertising/adobe-advertising-cloud.md)
+* [Extensão do Adobe Advertising](../advertising/adobe-advertising-cloud.md)
 * [Extensão do Adobe Analytics](../analytics/adobe-analytics.md)
 * [Extensão Adobe Media Analytics for Audio and Video](../analytics/adobe-video-analytics.md)
 * [Extensão do Adobe Target](../personalization/adobe-target.md)
@@ -49,4 +49,4 @@ Para entender a diferença entre conexões e extensões, consulte [Conexões](..
 
 Use o recurso de compartilhamento de público da Experience Platform para compartilhar os públicos-alvo da Experience Platform com destinos adicionais da Adobe. Consulte a página abaixo para obter mais informações (abre no portal de documentação da Audience Manager):
 
-* [Compartilhamento de público da Experience Platform com a Adobe Audience Manager, a Adobe Advertising Cloud e a Adobe Target por meio da integração dos Serviços principais](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=pt-BR)
+* [Compartilhamento de público do Experience Platform com a Adobe Audience Manager, o Adobe Advertising e o Adobe Target por meio da integração dos Serviços principais](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)

@@ -6,10 +6,10 @@ user-guide-description: Saiba como implantar e gerenciar tags de análise, marke
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: cc4abd44dc7fc5facd3011fbc533a08a55ebe33f
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
-source-wordcount: '828'
-ht-degree: 44%
+source-wordcount: '827'
+ht-degree: 43%
 
 ---
 
@@ -72,7 +72,7 @@ ht-degree: 44%
       * [Personalizador do Activity Map](https://exchange.adobe.com/apps/ec/101531)
       * [Atualização de Página de Ação](https://exchange.adobe.com/apps/ec/102848)
       * [Acompanhamento de Sites de Adform](https://exchange.adobe.com/apps/ec/103195)
-      * [Adobe Advertising Cloud](https://exchange.adobe.com/apps/ec/100155)
+      * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100155)
       * Adobe Analytics {#analytics}
          * [Visão geral](./extensions/client/analytics/overview.md)
          * [Módulos compartilhados](./extensions/client/analytics/shared-modules.md)
@@ -157,7 +157,7 @@ ht-degree: 44%
          * [Visão geral](./extensions/client/target-v2/overview.md)
          * [Notas de versão](./extensions/client/target-v2/release-notes.md)
       * [Kit de ferramentas do Adobe Target](https://exchange.adobe.com/apps/ec/100640)
-      * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
+      * [Adobe Advertising](https://exchange.adobe.com/apps/ec/100640)
       * [AEM Asset Insights](https://exchange.adobe.com/apps/ec/103406)
       * [Notificador JS de freio de ar](https://exchange.adobe.com/apps/ec/103342)
       * [!DNL Algolia] Insights {#algolia-insights}

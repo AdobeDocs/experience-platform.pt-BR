@@ -2,7 +2,7 @@
 title: Implantar tags do JavaScript para gerenciar o consentimento do cliente
 description: Saiba como gerenciar sinais de aceitação e recusa do cliente para várias soluções de Adobe no Adobe Experience Platform.
 exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
-source-git-commit: 44e2b8241a8c348d155df3061d398c4fa43adcea
+source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
 workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 94%
@@ -19,9 +19,9 @@ Desenvolvedores de extensões da Adobe Experience Platform usam o criador de reg
 
 Este documento contém informações sobre como impedir que tags da Adobe sejam acionadas antes que o consentimento tenha sido adquirido.
 
-## Advertising Cloud
+## Adobe Advertising
 
-A Adobe Experience Platform não dispara o [!DNL Advertising Cloud] automaticamente. O [!DNL Advertising Cloud] somente será acionado se você indicar especificamente em uma ação de regra que ele deve ser acionado. Use as condições da regra para determinar quando e o que acionar. Por exemplo, para usar cookies para determinar o status de aceitação, defina um elemento de dados para ler esse cookie e use-o como uma condição na regra para determinar quando acionar a ação Conversão de rastreamento.
+A Adobe Experience Platform não dispara o [!DNL Adobe Advertising] automaticamente. O [!DNL Advertising] somente será acionado se você indicar especificamente em uma ação de regra que ele deve ser acionado. Use as condições da regra para determinar quando e o que acionar. Por exemplo, para usar cookies para determinar o status de aceitação, defina um elemento de dados para ler esse cookie e use-o como uma condição na regra para determinar quando acionar a ação Conversão de rastreamento.
 
 Integrações com gerentes de consentimento (como o OneTrust) podem definir e rastrear os cookies de consentimento dos clientes, que podem ser usados no criador de regras.
 

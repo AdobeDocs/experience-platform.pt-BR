@@ -43,7 +43,7 @@ alloy("sendEvent", {
 
 | Parâmetro | Obrigatório/Opcional | Descrição |
 | --- | --- | --- |
-| `type` | Obrigatório | Defina este parâmetro como `decisioning.propositionFetch`. Esse tipo de evento especial instrui o Adobe Analytics a eliminar esse evento. Ao usar o Customer Journey Analytics, você também pode configurar um filtro para soltar esses eventos. Consulte [Tipos de evento do Edge Network no Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/hit-types) para obter mais informações. |
+| `type` | Obrigatório | Defina este parâmetro como `decisioning.propositionFetch`. Esse tipo de evento especial instrui o Adobe Analytics a eliminar esse evento. Ao usar o Customer Journey Analytics, você também pode configurar um filtro para soltar esses eventos. Consulte [Tipos de evento do Edge Network no Adobe Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics/implementation/aep-edge/hit-types) para obter mais informações. |
 | `renderDecisions` | Obrigatório | Defina este parâmetro como `true`. Esse parâmetro informa ao Web SDK para renderizar as decisões retornadas pela Edge Network. |
 | `personalization.sendDisplayEvent` | Obrigatório | Defina este parâmetro como `false`. Esse parâmetro interrompe o envio de eventos de exibição. |
 

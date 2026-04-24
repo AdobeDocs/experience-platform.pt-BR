@@ -167,5 +167,5 @@ Para obter detalhes sobre como depurar sua implementação usando o Depurador da
 
 - [[!DNL Algolia] Documentação da API do Insights](https://www.algolia.com/doc/rest-api/insights/)
 - [[!DNL Algolia] Documentação de eventos](https://www.algolia.com/doc/guides/sending-events/getting-started/)
-- [[!DNL Adobe Experience Platform] Documentação de encaminhamento de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
+- [[!DNL Adobe Experience Platform] Documentação de encaminhamento de eventos](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=pt-BR)
 - [[!DNL Algolia] Visão geral dos recursos de IA](https://www.algolia.com/products/ai-search/)

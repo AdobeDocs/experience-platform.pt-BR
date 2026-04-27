@@ -2,9 +2,9 @@
 title: Configurar a detecção de bot para sequências de dados
 description: Saiba como configurar a detecção de bot para sequências de dados, para diferenciar o tráfego humano e não humano.
 exl-id: 6b221d97-0145-4d3e-a32d-746d72534add
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 0787876d80e308c1687304ace7538a51d9a754ff
 workflow-type: tm+mt
-source-wordcount: '1382'
+source-wordcount: '1485'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 O tráfego não humano de programas automatizados, raspadores da Web, aranhas e scanners com script pode dificultar a identificação de eventos de visitantes humanos. Esse tipo de tráfego pode afetar negativamente métricas comerciais importantes, resultando em relatórios de tráfego incorretos.
 
 A detecção de bot permite identificar eventos gerados pelo [Web SDK](/help/collection/js/js-overview.md), [SDK Móvel](https://developer.adobe.com/client-sdks/home/) e [[!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/api/) como sendo gerados pelos spiders e bots conhecidos.
+
+>[!NOTE]
+>
+>Use o [!DNL Bot Detection Service] para identificar e filtrar o tráfego não humano (bot) de seus dados. Isso reduz o ruído nos conjuntos de dados coletados e ajuda a garantir que sua análise e seus relatórios reflitam as interações genuínas do usuário.
 
 Ao configurar a detecção de bot para seus fluxos de dados, você pode identificar endereços IP específicos, intervalos IP e cabeçalhos de solicitação para classificar como eventos de bot. Isso ajuda a fornecer uma medida mais precisa da atividade do usuário no seu site ou aplicativo móvel.
 
@@ -33,7 +37,7 @@ Essa pontuação de bot ajuda as soluções que recebem a solicitação a identi
 >
 >A detecção de bot não elimina nenhuma solicitação de bot. Ela atualiza somente o esquema XDM com a pontuação de bot e encaminha o evento para o [serviço de sequência de dados](configure.md) que você configurou.
 >
->As soluções da Adobe podem lidar com a pontuação de bots de maneiras diferentes. Por exemplo, o Adobe Analytics usa seu próprio [serviço de filtragem de bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=pt-BR) e não usa a pontuação definida pelo Edge Network. Os dois serviços usam a mesma [lista de bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), portanto, a pontuação do bot é idêntica.
+>As soluções da Adobe podem lidar com a pontuação de bots de maneiras diferentes. Por exemplo, o Adobe Analytics usa seu próprio [serviço de filtragem de bot](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) e não usa a pontuação definida pelo Edge Network. Os dois serviços usam a mesma [lista de bot IAB](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), portanto, a pontuação do bot é idêntica.
 
 ## Considerações técnicas {#technical-considerations}
 
@@ -45,7 +49,7 @@ Antes de ativar a detecção de bot nos datastreams, lembre-se de alguns pontos 
 
 ## Pré-requisitos {#prerequisites}
 
-Para que a detecção de bot funcione na sequência de dados, é necessário adicionar o grupo de campos **[!UICONTROL Bot Detection Information]** ao esquema. Consulte a documentação do [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para saber como adicionar grupos de campos a um esquema.
+Para que a detecção de bot funcione na sequência de dados, é necessário adicionar o grupo de campos **[!UICONTROL [Bot Detection Information]](../xdm/field-groups/event/bot-detection-information.md)** ao esquema. Consulte a documentação do [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para saber como adicionar grupos de campos a um esquema.
 
 ## Configurar a detecção de bot para sequências de dados {#configure}
 

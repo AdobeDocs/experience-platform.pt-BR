@@ -2,9 +2,9 @@
 title: Governança de dados no serviço de consulta
 description: Esta visão geral abrange os principais elementos da governança de dados no Serviço de query da Experience Platform.
 exl-id: 37543d43-bd8c-4bf9-88e5-39de5efe3164
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: c98ae492b12fb5b9596f19a3d64785090439f7e1
 workflow-type: tm+mt
-source-wordcount: '3131'
+source-wordcount: '3182'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ A segurança no que diz respeito ao Serviço de consulta está dividida nas segu
 
 ### Controle de acesso {#access-control}
 
-O controle de acesso no Adobe Experience Platform permite que você use o [Adobe Admin Console](https://adminconsole.adobe.com/) para gerenciar o acesso aos recursos do Serviço de Consulta usando permissões com base em funções. Da mesma forma, você pode controlar o acesso a atributos de dados específicos por meio do gerenciamento de rótulos em esquemas e campos de dados.
+O controle de acesso no Adobe Experience Platform é gerenciado por permissões com base em funções que determinam quais usuários podem usar os recursos do Serviço de consulta. Da mesma forma, você pode controlar o acesso a atributos de dados específicos por meio do gerenciamento de rótulos em esquemas e campos de dados.
 
 Esta seção descreve as permissões de controle de acesso necessárias que um usuário deve ter para utilizar totalmente os recursos do Serviço de consulta. Consulte os documentos em [gerenciando permissões](../../access-control/ui/permissions.md) e [gerenciando usuários](../../access-control/ui/users.md) para obter instruções detalhadas sobre como atribuir acesso a um perfil de produto.
 
@@ -78,34 +78,34 @@ O controle de acesso para colunas pode ser aplicado no nível do schema para esq
 
 Depois que o nível apropriado de acesso for aplicado usando rótulos e funções, o seguinte comportamento do sistema ocorrerá quando um usuário tentar acessar os dados não acessíveis:
 
-1. Se um usuário tiver o acesso negado a uma das colunas em um esquema, ele também terá a permissão negada para ler ou gravar na coluna restrita. Isso se aplica aos seguintes cenários comuns:
+1. If a user has been denied access to one of the columns within a schema, the user is also denied permission to read or write on the restricted column. This applies to the following common scenarios:
 
-   * **Caso 1**: quando um usuário tenta executar uma consulta que afeta apenas uma coluna restrita, o sistema emite um erro de que a coluna não existe.
-   * **Caso 2**: quando um usuário tenta executar uma consulta com várias colunas, incluindo uma coluna restrita, o sistema retorna a saída somente para todas as colunas não restritas.
+   * **Case 1**: When a user tries to execute a query affecting only a restricted column, the system throws an error that the column doesn&#39;t exist.
+   * **Case 2**: When a user tries to execute a query with multiple columns including a restricted column, the system returns output for all non-restricted columns only.
 
-1. Se um usuário tentar acessar um campo calculado, será necessário ter acesso a todos os campos usados na composição ou o sistema também negará acesso ao campo calculado.
+1. If a user tries to access a calculated field, the user is required to have access to all the fields used in the composition or the system denies access to the calculated field as well.
 
-#### Controles de acesso para exibições
+#### Access controls for views
 
-O Serviço de Consulta fornece a capacidade de usar o SQL ANSI padrão para instruções [`CREATE VIEW`](../sql/syntax.md#create-view). Para workflows de dados altamente confidenciais, você deve aplicar controles apropriados ao criar exibições.
+Query Service provides the ability to use standard ANSI SQL for [`CREATE VIEW`](../sql/syntax.md#create-view) statements. For highly sensitive data workflows, you must enforce appropriate controls when creating views.
 
-A palavra-chave `CREATE VIEW` define uma exibição de uma consulta, mas a exibição não está materializada fisicamente. Em vez disso, a consulta é executada sempre que a exibição é referenciada em uma consulta. Quando um usuário cria uma exibição de um conjunto de dados, as regras de controle de acesso baseadas em função e atributo para o conjunto de dados pai são **não** aplicadas hierarquicamente. Como resultado, você deve definir explicitamente as permissões em cada uma das colunas ao criar uma visualização.
+The `CREATE VIEW` keyword defines a view of a query but the view is not physically materialized. Instead, the query is run every time the view is referenced in a query. When a user creates a view from a dataset, the role- and attribute-based access control rules for the parent dataset are **not** hierarchically applied. As a result, you must explicitly set permissions on each of the columns when a view is created.
 
-#### Criar restrições de acesso baseadas em campo em conjuntos de dados acelerados {#create-field-based-access-restrictions-on-accelerated-datasets}
+#### Create field-based access restrictions on accelerated datasets {#create-field-based-access-restrictions-on-accelerated-datasets}
 
-Com a [capacidade de controle de acesso baseada em atributos](../../access-control/abac/overview.md), você pode definir escopos organizacionais ou de uso de dados em conjuntos de dados de fatos e dimensões no [repositório acelerado](../data-distiller/sql-insights/send-accelerated-queries.md). Isso permite que os administradores gerenciem o acesso a segmentos específicos e gerenciem melhor o acesso fornecido a usuários ou grupos de usuários.
+With the [attribute-based access control capability](../../access-control/abac/overview.md) you can define organizational or data usage scopes on fact and dimension datasets in the [accelerated store](../data-distiller/sql-insights/send-accelerated-queries.md). This allows administrators to manage access to specific segments and better manage the access given to users or groups of users.
 
-Para criar restrições de acesso baseadas em campo em conjuntos de dados acelerados, você pode usar consultas CTAS do Serviço de consulta para criar conjuntos de dados acelerados e estruturar esses conjuntos de dados com base em esquemas XDM ou esquemas ad hoc existentes. Os administradores podem [adicionar e editar rótulos de uso de dados para o esquema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) ou [esquema ad hoc](./ad-hoc-schema-labels.md#edit-governance-labels). Você pode aplicar, criar e editar rótulos para seus esquemas no espaço de trabalho [!UICONTROL Labels] na interface do usuário do [!UICONTROL Schemas].
+To create field-based access restrictions on accelerated datasets, you can use Query Service CTAS queries to create accelerated datasets and structure these datasets based on existing XDM schemas or ad hoc schemas. Administrators can then [add and edit data usage labels for the schema](../../xdm/tutorials/labels.md#edit-the-labels-for-the-schema-or-field) or [ad hoc schema](./ad-hoc-schema-labels.md#edit-governance-labels). You can apply, create, and edit labels to your schemas from the [!UICONTROL Labels] workspace in the [!UICONTROL Schemas] UI.
 
-Os rótulos de uso de dados também podem ser [aplicados ou editados diretamente no conjunto de dados](../../data-governance/labels/user-guide.md#add-labels) por meio da interface do usuário de Conjuntos de Dados, ou criados no espaço de trabalho do Controle de Acesso [!UICONTROL Labels]. Consulte o manual sobre como [criar um novo rótulo](../../access-control/abac/ui/labels.md) para obter mais informações.
+Data usage labels can also be [applied or edited directly onto the dataset](../../data-governance/labels/user-guide.md#add-labels) through the Datasets UI, or created from the Access Control [!UICONTROL Labels] workspace. See the guide on how to [create a new label](../../access-control/abac/ui/labels.md) for more information.
 
-O acesso do usuário a colunas individuais pode ser controlado pelos rótulos de uso de dados anexados e pelos conjuntos de permissões aplicados às funções atribuídas aos usuários.
+User access to individual columns can then be controlled by the attached data usage labels and the permission sets applied to the roles that are assigned to users.
 
-### Conectividade {#connectivity}
+### Connectivity {#connectivity}
 
-O Serviço de consulta pode ser acessado por meio da interface do usuário do Experience Platform ou formando uma conexão com clientes compatíveis externos. O acesso a todas as frentes disponíveis é controlado por um conjunto de credenciais.
+Query Service is accessible through the Experience Platform UI or by forming a connection with external compatible clients. Access to all available fronts is controlled by a set of credentials.
 
-#### Conectividade por meio de clientes externos
+#### Connectivity through external clients
 
 O acesso ao Serviço de consulta usando um cliente de terceiros requer credenciais para autorização. Essas credenciais são obrigatórias para acessar o Serviço de consulta com qualquer um dos clientes externos compatíveis. Você pode se conectar a clientes externos usando [credenciais com vencimento](#expiring-credentials) ou [credenciais sem vencimento](#non-expiring-credentials).
 
@@ -192,24 +192,24 @@ Depois de acessar o esquema, você pode [aplicar rótulos a campos individuais](
 
 ## Privacidade {#privacy}
 
-O [Privacy Service](../../privacy-service/home.md) ajuda você a gerenciar solicitações de clientes para acessar e excluir seus dados de acordo com as regulamentações legais de privacidade. Ele faz isso pesquisando os dados de identificadores pré-existentes e acessa ou exclui esses dados, dependendo da tarefa de privacidade solicitada. Os dados devem ser rotulados corretamente para que o serviço determine quais campos acessar ou excluir durante trabalhos de privacidade. Os dados sujeitos a solicitações de privacidade devem conter informações de identidade do cliente para vincular os dados diferentes à pessoa individual à qual a solicitação de privacidade se aplica. O Serviço de consulta pode enriquecer os dados usados com um identificador exclusivo para atender a tarefas de privacidade.
+O [Privacy Service](../../privacy-service/home.md) ajuda você a gerenciar solicitações de clientes para acessar e excluir seus dados de acordo com as regulamentações legais de privacidade. Ele faz isso pesquisando os dados de identificadores pré-existentes e acessa ou exclui esses dados, dependendo da tarefa de privacidade solicitada. Os dados devem ser rotulados corretamente para que o serviço determine quais campos acessar ou excluir durante trabalhos de privacidade. Os dados sujeitos a solicitações de privacidade devem conter informações de identidade do cliente para vincular os dados diferentes à pessoa individual à qual a solicitação de privacidade se aplica. Query Service can enrich the data it uses with a unique identifier for the purpose of satisfying privacy jobs.
 
-As solicitações de privacidade podem ser enviadas para o data lake ou para o armazenamento de dados Perfil. Os registros excluídos do data lake não resultam na exclusão de perfis que foram feitos desses registros. Além disso, um trabalho de privacidade para excluir informações pessoais do data lake não exclui o perfil, portanto, qualquer informação (que contenha essa ID de perfil) assimilada após a conclusão do trabalho de privacidade atualiza esse perfil normalmente. Tal reafirma a necessidade de identificar adequadamente os dados utilizados em esquemas específicos.
+Privacy requests can be sent to the data lake or the Profile data store. Records deleted from the data lake do not result in the deletion of profiles that were made from those records. Also, a privacy job to delete personal information from the data lake does not delete their profile so any information (that contains that profile ID) ingested after the completion of the privacy job updates that profile as normal. This reaffirms the need to properly identify data used in hoc schemas.
 
-Consulte a documentação do Privacy Service para obter mais informações sobre [dados de identidade para solicitações de privacidade](../../privacy-service/identity-data.md) e como configurar suas operações de dados e aproveitar as tecnologias da Adobe para recuperar efetivamente as informações de identidade apropriadas para solicitações de privacidade do cliente.
+See the Privacy Service documentation for more information on [identity data for privacy requests](../../privacy-service/identity-data.md) and how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 
-Os recursos do Serviço de consulta para governança de dados simplificam e simplificam o processo de categorização de dados e a adesão aos regulamentos de uso de dados. Depois que os dados são identificados, o Serviço de consulta permite alocar a identidade principal em todos os conjuntos de dados de saída. Você **deve** adicionar identidades ao conjunto de dados para facilitar as solicitações de privacidade de dados e trabalhar para a conformidade de dados.
+Query Service features for data governance simplify and streamline the process of data categorization and adherence to data usage regulations. Once the data has been identified, Query Service enables you to allocate the primary identity on all output datasets. You **must** add identities into the dataset to facilitate data privacy requests and work towards data compliance.
 
-Campos de dados de esquema podem ser definidos como um campo de identidade por meio da interface do usuário do Experience Platform. O Serviço de Consulta também permite [marcar as identidades primárias usando o comando SQL &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Definir uma identidade usando o comando `ALTER TABLE` é especialmente útil quando conjuntos de dados são criados usando SQL em vez de diretamente de um esquema por meio da interface do usuário do Experience Platform. Consulte a documentação para obter instruções sobre como [definir campos de identidade na interface](../../xdm/ui/fields/identity.md) ao usar esquemas padrão.
+Schema data fields can be set as an identity field through the Experience Platform UI and Query Service also allows you to [mark the primary identities by using the SQL command &#39;ALTER TABLE&#39;](../sql/syntax.md#alter-table). Setting an identity using the `ALTER TABLE` command is especially useful when datasets are created using SQL rather than directly from a schema through the Experience Platform UI. See the documentation for instructions on how to [define identity fields in the UI](../../xdm/ui/fields/identity.md) when using standard schemas.
 
 ## Higiene de dados {#data-hygiene}
 
-&quot;Higiene de dados&quot; refere-se ao processo de reparação ou remoção de dados que podem estar desatualizados, imprecisos, formatados incorretamente, duplicados ou incompletos. Esses processos garantem que os conjuntos de dados sejam precisos e consistentes em todos os sistemas. É importante garantir a higiene de dados adequada ao longo de cada etapa da jornada dos dados e até mesmo a partir do local de armazenamento de dados inicial. No Serviço de query da Experience Platform, esse é o data lake ou o armazenamento acelerado.
+&quot;Data hygiene&quot; refers to the process of repairing or removing data that may be outdated, inaccurate, incorrectly formatted, duplicated, or incomplete. These processes make sure that datasets are accurate and consistent across all systems. It is important to ensure adequate data hygiene along every step of the data&#39;s journey and even from the initial data storage location. In Experience Platform Query Service, this is either the data lake or the accelerated store.
 
-Você pode atribuir uma identidade a um conjunto de dados derivado para permitir o gerenciamento de dados de acordo com os serviços centralizados de higiene de dados da Experience Platform.
+You can assign an identity to a derived dataset to allow their data management following Experience Platform&#39;s centralized data hygiene services.
 
-Por outro lado, ao criar um conjunto de dados agregado no armazenamento acelerado, os dados agregados não podem ser usados para derivar os dados originais. Como resultado dessa agregação de dados, a necessidade de aumentar as solicitações de higiene de dados é eliminada.
+Conversely, when you create an aggregated dataset on the accelerated store, the aggregated data cannot be used to derive the original data. As a result of this data aggregation, the need to raise data hygiene requests is eliminated.
 
-Uma exceção a esse cenário é o caso de exclusão. Se uma exclusão da higiene de dados for solicitada em um conjunto de dados e antes que a exclusão seja concluída, outra consulta do conjunto de dados derivado será executada, então o conjunto de dados derivado capturará as informações do conjunto de dados original. Nesse caso, lembre-se de que, se uma solicitação para excluir um conjunto de dados tiver sido enviada, você não deverá executar nenhuma consulta de conjunto de dados recém-derivada usando a mesma fonte de conjunto de dados.
+An exception to this scenario is the case of deletion. If a data hygiene deletion is requested on a dataset and before the deletion is completed, another derived dataset query is executed, then the derived dataset will capture information from the original dataset. In this case, you must be mindful that if a request to delete a dataset has been sent, you must not execute any newly derived dataset queries using the same dataset source.
 
-Consulte a [visão geral sobre higiene de dados](../../hygiene/home.md) para obter mais informações sobre higiene de dados na Adobe Experience Platform.
+See the [data hygiene overview](../../hygiene/home.md) for more information on data hygiene in Adobe Experience Platform.

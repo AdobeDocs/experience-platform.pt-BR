@@ -2,9 +2,9 @@
 title: Explorar, solucionar problemas e verificar a assimilação em lote com o SQL
 description: Saiba como entender e gerenciar o processo de assimilação de dados no Adobe Experience Platform. Este documento inclui como verificar lotes e consultar dados assimilados.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fac5ebd3f81e6f4b9f601ab1d9252402cad52b6
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -37,36 +37,36 @@ Em seguida, para exibir os campos de sistema do conjunto de dados, execute uma i
 
 ![A interface do usuário do DBVisualizer com a tabela movie_data e suas colunas de metadados exibidas e realçadas.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-Quando os dados são assimilados na Experience Platform, ela recebe uma partição lógica com base nos dados recebidos. Esta partição lógica é representada por `_acp_system_metadata.sourceBatchId`. Essa ID ajuda a agrupar e identificar os lotes de dados logicamente antes de serem processados e armazenados.
+Quando os dados são assimilados na Experience Platform, ela recebe uma partição lógica com base nos dados recebidos. This logical partition is represented by `_acp_system_metadata.acp_sourceBatchId`. This ID helps to group and identify the data batches logically before they are processed and stored.
 
-Depois que os dados forem processados e assimilados no data lake, ele receberá uma partição física representada por `_ACP_BATCHID`. Essa ID reflete a partição de armazenamento real no data lake onde os dados assimilados residem.
+After the data is processed and ingested into the data lake, it is assigned a physical partition represented by `_ACP_BATCHID`. This ID reflects the actual storage partition in the data lake where the ingested data resides.
 
-### Usar SQL para compreender partições lógicas e físicas {#understand-partitions}
+### Use SQL to understand logical and physical partitions {#understand-partitions}
 
-Para ajudar a entender como os dados são agrupados e distribuídos após a assimilação, use a consulta a seguir para contar o número de partições físicas distintas (`_ACP_BATCHID`) para cada partição lógica (`_acp_system_metadata.sourceBatchId`).
+To help understand how the data is grouped and distributed after ingestion, use the following query to count the number of distinct physical partitions (`_ACP_BATCHID`) for each logical partition (`_acp_system_metadata.acp_sourceBatchId`).
 
 ```SQL
 SELECT  _acp_system_metadata, COUNT(DISTINCT _ACP_BATCHID) FROM movie_data
 GROUP BY _acp_system_metadata
 ```
 
-Os resultados desse query são mostrados na imagem abaixo.
+The results of this query are shown in the image below.
 
-![Os resultados de uma consulta para mostrar o número de partições físicas distintas para cada partição lógica.](../images/use-cases/logical-and-physical-partition-count.png)
+![The results of a query to show the number of distinct physical partitions for each logical partition.](../images/use-cases/logical-and-physical-partition-count.png)
 
-Esses resultados demonstram que o número de lotes de entrada não corresponde necessariamente ao número de lotes de saída, pois o sistema determina a maneira mais eficiente de colocar em lote e armazenar os dados no data lake.
+These results demonstrate that the number of input batches does not necessarily match the number of output batches, as the system determines the most efficient way to batch and store the data in the data lake.
 
-Para o propósito deste exemplo, presume-se que você tenha assimilado um arquivo CSV na Experience Platform e criado um conjunto de dados chamado `drug_checkout_data`.
+For the purpose of this example, it is assumed that you have ingested a CSV file into Experience Platform and created a dataset called `drug_checkout_data`.
 
-O arquivo `drug_checkout_data` é um conjunto profundamente aninhado de 35.000 registros. Use a instrução SQL `SELECT * FROM drug_orders;` para visualizar o primeiro conjunto de registros no conjunto de dados `drug_orders` baseado em JSON.
+The `drug_checkout_data` file is a deeply nested set of 35,000 records. Use the SQL statement `SELECT * FROM drug_orders;` to preview of the first set of records in the JSON-based `drug_orders` dataset.
 
-A imagem abaixo mostra uma pré-visualização do arquivo e seus registros.
+The image below shows a preview of the file and its records.
 
-![Uma visualização do primeiro conjunto de registros no conjunto de dados Drug_orders baseado em JSON.](../images/use-cases/drug-orders-preview.png)
+![A preview of the first set of records in the JSON-based drug_orders dataset.](../images/use-cases/drug-orders-preview.png)
 
-### Usar o SQL para gerar insights sobre o processo de assimilação em lote {#sql-insights-on-batch-ingestion}
+### Use SQL to generate insights on batch ingestion process {#sql-insights-on-batch-ingestion}
 
-Use a instrução SQL abaixo para fornecer insights sobre como o processo de assimilação de dados agrupou e processou os registros de entrada em lotes.
+Use the SQL statement below to provide insights into how the data ingestion process has grouped and processed the input records into batches.
 
 ```sql
 SELECT _acp_system_metadata,
@@ -76,37 +76,37 @@ FROM   drug_orders
 GROUP  BY _acp_system_metadata 
 ```
 
-Os resultados do query são vistos na imagem abaixo.
+The query results are seen in the image below.
 
-![Uma tabela que mostra a distribuição de como os lotes de entrada foram dominados em um momento com contagens de registro.](../images/use-cases/distribution-of-input-batches.png)
+![A table showing the distribution of how input batches were mastered at a time with record counts.](../images/use-cases/distribution-of-input-batches.png)
 
-Os resultados demonstram a eficiência e o comportamento do processo de assimilação de dados. Embora três lotes de entrada tenham sido criados — cada um contendo 2000, 24000 e 9000 registros — quando os registros foram combinados e desduplicados, restou apenas um único lote.
+The results demonstrate the efficiency and behavior of the data ingestion process. Although three input batches were created -- each containing 2000, 24000, and 9000 records -- when the records were combined and deduplicated, only one unique batch remained.
 
 >[!NOTE]
 >
->Todos os registros visíveis em um conjunto de dados são aqueles que foram assimilados com êxito. Uma assimilação em lote bem-sucedida não significa que todos os registros enviados da entrada de origem estão presentes. Você deve verificar se há falhas de assimilação de dados para encontrar os lotes/registros que não entraram.
+>All the records that are visible within a dataset are the ones that were successfully ingested. A successful batch ingestion does not mean that all the records that were sent from the source input are present. You must check for data ingestion failures to find the batches/records that did not make it in.
 
-## Validar um lote com SQL {#validate-a-batch-with-SQL}
+## Validate a batch with SQL {#validate-a-batch-with-SQL}
 
-Em seguida, valide e verifique os registros que foram assimilados no conjunto de dados com o SQL.
+Next, validate and verify the records that have been ingested into the dataset with SQL.
 
 >[!TIP]
 >
->Para recuperar a ID do lote e os registros de consulta associados a essa ID do lote, primeiro você deve criar um lote no Experience Platform. Se quiser testar o processo sozinho, você pode assimilar dados CSV na Experience Platform. Leia o guia sobre como [mapear um arquivo CSV para um esquema XDM existente usando recomendações geradas por IA](../../ingestion/tutorials/map-csv/recommendations.md).
+>To retrieve the batch ID and query records associated with that batch ID, you must first  create a batch within Experience Platform. If you want to test the process yourself, you can ingest CSV data into Experience Platform. Read the guide on how to [map a CSV file to an existing XDM schema using AI-generated recommendations](../../ingestion/tutorials/map-csv/recommendations.md).
 
-Depois de assimilar um lote, você deve navegar até a [!UICONTROL guia de atividade de conjuntos de dados] para o conjunto de dados no qual assimilou dados.
+Once you have ingested a batch, you must navigate to the [!UICONTROL Datasets activity tab] for the dataset you ingested data into.
 
-Na interface do usuário do Experience Platform, selecione **[!UICONTROL Conjuntos de dados]** no menu de navegação esquerdo para abrir o painel [!UICONTROL Conjuntos de dados]. Em seguida, selecione o nome do conjunto de dados na guia [!UICONTROL Procurar] para acessar a tela [!UICONTROL Atividade do conjunto de dados].
+In the Experience Platform UI, select **[!UICONTROL Datasets]** in the left-navigation to open the [!UICONTROL Datasets] dashboard. Next, select the name of the dataset from the [!UICONTROL Browse] tab to access the [!UICONTROL Dataset activity] screen.
 
-![O painel de Conjuntos de Dados da Interface do Usuário do Experience Platform com Conjuntos de Dados é realçado na navegação à esquerda.](../images/use-cases/datasets-workspace.png)
+![The Experience Platform UI Datasets dashboard with Datasets highlighted in left navigation.](../images/use-cases/datasets-workspace.png)
 
-A exibição [!UICONTROL Atividade do conjunto de dados] aparece. Essa exibição contém detalhes do conjunto de dados selecionado. Inclui todos os lotes assimilados exibidos em formato de tabela.
+The [!UICONTROL Dataset activity] view appears. This view contains details of your selected dataset. It includes any ingested batches which are displayed in a table format.
 
-Selecione um lote na lista de lotes disponíveis e copie a [!UICONTROL ID do lote] no painel de detalhes à direita.
+Select a batch from the list of available batches and copy the [!UICONTROL Batch ID] from the details panel on the right.
 
-![A interface do usuário dos Conjuntos de Dados do Experience Platform mostrando os registros assimilados com uma ID em lote destacada.](../images/use-cases/batch-id.png)
+![The Experience Platform Datasets UI showing the ingested records with a batch ID highlighted.](../images/use-cases/batch-id.png)
 
-Em seguida, use a seguinte consulta para recuperar todos os registros incluídos no conjunto de dados como parte desse lote:
+Next, use the following query to retrieve all the records that were included in the dataset as part of that batch:
 
 ```sql
 SELECT * FROM movie_data
@@ -114,18 +114,18 @@ WHERE  _acp_batchid='01H00BKCTCADYRFACAAKJTVQ8P'
 LIMIT 1;
 ```
 
-A palavra-chave `_ACP_BATCHID` é usada para filtrar a [!UICONTROL ID do Lote].
+The `_ACP_BATCHID` keyword is used to filter the [!UICONTROL Batch ID].
 
 >[!TIP]
 >
->A cláusula `LIMIT` é útil se você quiser restringir o número de linhas exibidas, mas uma condição de filtro é mais desejável.
+>The `LIMIT` clause is helpful if you want to restrict the number of rows displayed, but a filter condition is more desirable.
 
-Ao executar essa consulta no Editor de consultas, os resultados são truncados para 100 linhas. O Editor de consultas foi projetado para visualizações e investigações rápidas. Para recuperar até 50.000 linhas, você pode usar uma ferramenta de terceiros, como DBVisualizer ou DBeaver.
+When you execute this query in the Query Editor, the results are truncated to 100 rows. The Query Editor is designed for quick previews and investigation. To retrieve up to 50,000 rows, you can use a third-party tool like DBVisualizer or DBeaver.
 
 ## Próximas etapas {#next-steps}
 
-Ao ler este documento, você aprendeu os conceitos básicos de verificação e validação de registros em lotes assimilados como parte do processo de assimilação de dados. Você também obteve insights sobre como acessar metadados em lote do conjunto de dados, entender partições lógicas e físicas e consultar lotes específicos usando comandos SQL. Esse conhecimento pode ajudá-lo a garantir a integridade dos dados e otimizar seu armazenamento de dados no Experience Platform.
+By reading this document, you learned the essentials of verifying and validating records in ingested batches as part of the data ingestion process. You also gained insights into accessing dataset batch metadata, understanding logical and physical partitions, and querying specific batches using SQL commands. This knowledge can help you ensure data integrity and optimize your data storage on Experience Platform.
 
-Em seguida, pratique a assimilação de dados para aplicar os conceitos aprendidos. Assimile um conjunto de dados de amostra na Experience Platform com os arquivos de amostra fornecidos ou seus próprios dados. Se ainda não tiver feito isso, leia o tutorial sobre como [assimilar dados no Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
+Next, you should practice data ingestion to apply the concepts learned. Ingest a sample dataset into Experience Platform with either the provided sample files or your own data. If you have not done so already, read the tutorial on how to [ingest data into Adobe Experience Platform](../../ingestion/tutorials/ingest-batch-data.md).
 
-Como alternativa, você pode aprender a [conectar e verificar o Serviço de Consulta com vários aplicativos de cliente de desktop](../clients/overview.md) para aprimorar seus recursos de análise de dados.
+Alternatively, you could learn how to [connect and verify Query Service with a variety of desktop client applications](../clients/overview.md) to enhance your data analysis capabilities.

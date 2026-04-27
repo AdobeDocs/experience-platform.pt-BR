@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;home;tópicos populares;serviço de consulta;Serviço de consulta;sintaxe sql;ctas;CTAS;Criar tabela como selecionar
+keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
-title: Sintaxe SQL no Serviço de consulta
-description: Este documento detalha e explica a sintaxe SQL suportada pelo Adobe Experience Platform Query Service.
+title: SQL Syntax in Query Service
+description: This document details and explains the SQL syntax supported by Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '4686'
+source-wordcount: '4737'
 ht-degree: 1%
 
 ---
 
-# Sintaxe SQL no Serviço de consulta
+# SQL syntax in Query Service
 
-Você pode usar o ANSI SQL padrão para instruções `SELECT` e outros comandos limitados no Serviço de consulta do Adobe Experience Platform. Este documento aborda a sintaxe SQL suportada por [!DNL Query Service].
+You can use standard ANSI SQL for `SELECT` statements and other limited commands in Adobe Experience Platform Query Service. This document covers the SQL syntax supported by [!DNL Query Service].
 
-## Consultas SELECT {#select-queries}
+## SELECT queries {#select-queries}
 
-A sintaxe a seguir define uma consulta `SELECT` com suporte de [!DNL Query Service]:
+The following syntax defines a `SELECT` query supported by [!DNL Query Service]:
 
 ```sql
 [ WITH with_query [, ...] ]
@@ -35,7 +35,7 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-A seção de guias abaixo fornece as opções disponíveis para as palavras-chave FROM, GROUP e WITH.
+The tabs section below provides the available options for the FROM, GROUP, and WITH keywords.
 
 >[!BEGINTABS]
 
@@ -91,11 +91,11 @@ GROUPING SETS ( grouping_element [, ...] )
 
 >[!ENDTABS]
 
-As subseções a seguir fornecem detalhes sobre as cláusulas adicionais que você pode usar em seus queries, desde que elas sigam o formato descrito acima.
+The following subsections provide details on additional clauses that you can use in your queries, provided they follow the format outlined above.
 
-### cláusula SNAPSHOT
+### SNAPSHOT clause
 
-Esta cláusula pode ser usada para ler incrementalmente os dados em uma tabela com base nas IDs do instantâneo. Uma ID de instantâneo é um marcador de ponto de verificação representado por um número tipo Long que é aplicado a uma tabela de data lake sempre que os dados são gravados nela. A cláusula `SNAPSHOT` anexa a si mesma à relação de tabela à qual é usada ao lado.
+This clause can be used to incrementally read data on a table based on snapshot IDs. A snapshot ID is a checkpoint marker represented by a Long-type number that is applied to a data lake table every time data is written to it. The `SNAPSHOT` clause attaches itself to the table relation that it is used next to.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -124,17 +124,17 @@ SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapsho
 
 >[!NOTE]
 >
->Ao usar `HEAD` ou `TAIL` em uma cláusula `SNAPSHOT`, você deve envolvê-los entre aspas simples (por exemplo, &#39;HEAD&#39;, &#39;TAIL&#39;). Usá-los sem aspas resulta em um erro de sintaxe.
+>When using `HEAD` or `TAIL` in a `SNAPSHOT` clause, you must wrap them in single quotes (for example, &#39;HEAD&#39;, &#39;TAIL&#39;). Using them without quotes results in a syntax error.
 
-A tabela abaixo explica o significado de cada opção de sintaxe na cláusula SNAPSHOT.
+The table below explains the meaning of each syntax option within the SNAPSHOT clause.
 
 | Sintaxe | Significado |
 |-------------------------------------------------------------------|------------------------------------------------------------------------------------------|
-| `SINCE start_snapshot_id` | Lê dados iniciando da ID de instantâneo especificada (exclusivo). |
-| `AS OF end_snapshot_id` | Lê os dados como estavam na ID de instantâneo especificada (inclusive). |
-| `BETWEEN start_snapshot_id AND end_snapshot_id` | Lê dados entre as IDs de instantâneo de início e término especificadas. É exclusivo de `start_snapshot_id` e inclui de `end_snapshot_id`. |
-| `BETWEEN HEAD AND start_snapshot_id` | Lê dados desde o início (antes do primeiro instantâneo) até a ID de instantâneo inicial especificada (inclusive). Observe que isso retorna somente linhas em `start_snapshot_id`. |
-| `BETWEEN end_snapshot_id AND TAIL` | Lê dados logo após o `end_snapshot_id` especificado até o final do conjunto de dados (excluindo a ID do instantâneo). Isso significa que se `end_snapshot_id` for o último instantâneo no conjunto de dados, a consulta retornará zero linhas porque não há instantâneos além do último instantâneo. |
+| `SINCE start_snapshot_id` | Reads data starting from the specified snapshot ID (exclusive). |
+| `AS OF end_snapshot_id` | Reads data as it was at the specified snapshot ID (inclusive). |
+| `BETWEEN start_snapshot_id AND end_snapshot_id` | Reads data between the specified start and end snapshot IDs. It is exclusive of the `start_snapshot_id` and inclusive of the `end_snapshot_id`. |
+| `BETWEEN HEAD AND start_snapshot_id` | Reads data from the beginning (before the first snapshot) to the specified start snapshot ID (inclusive). Note, this only returns rows in `start_snapshot_id`. |
+| `BETWEEN end_snapshot_id AND TAIL` | Reads data from just after the specified `end_snapshot_id` to the end of the dataset (exclusive of the snapshot ID). Isso significa que se `end_snapshot_id` for o último instantâneo no conjunto de dados, a consulta retornará zero linhas porque não há instantâneos além do último instantâneo. |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Lê dados iniciando a partir da ID de instantâneo especificada de `table_to_be_queried` e une-os com os dados de `table_to_be_joined` como estavam em `your_chosen_snapshot_id`. A associação é baseada em IDs correspondentes das colunas ID das duas tabelas que estão sendo unidas. |
 
 Uma cláusula `SNAPSHOT` funciona com um alias de tabela ou tabela, mas não sobre uma subconsulta ou exibição. Uma cláusula `SNAPSHOT` funciona em qualquer lugar que uma consulta `SELECT` em uma tabela possa ser aplicada.
@@ -525,7 +525,7 @@ $$BEGIN
 $$END
 
 exceptionHandler:
-      WHEN OTHER
+      WHEN OTHERS
       THEN statementList
 
 statementList:
@@ -543,7 +543,7 @@ $$BEGIN
      AS SELECT _id AS id FROM email_tracking_experience_event_dataset SNAPSHOT BETWEEN @v_snapshot_from AND @v_snapshot_to;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     DROP TABLE IF EXISTS tracking_email_id_incrementally;
     SELECT 'ERROR';
 $$END;
@@ -647,7 +647,7 @@ $$BEGIN
     ELSE    
        SELECT 'DEFAULT';
     END IF;  
-EXCEPTION WHEN OTHER THEN 
+EXCEPTION WHEN OTHERS THEN 
   SELECT 'THERE WAS AN ERROR';    
  END$$;
 ```
@@ -724,7 +724,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;
@@ -775,7 +775,7 @@ CREATE TABLE IF NOT EXISTS target_table_name AS
                      WHERE  @mytableexist = 'true' limit 20
               ) ;
 EXCEPTION
-WHEN other THEN SELECT 'ERROR';
+WHEN OTHERS THEN SELECT 'ERROR';
 
 END $$; 
 ```
@@ -1128,7 +1128,7 @@ SHOW ALL
 
 | Parâmetros | Descrição |
 | ------ | ------ |
-| `name` | O nome do parâmetro de tempo de execução sobre o qual você deseja obter informações. Os valores possíveis para o parâmetro de tempo de execução incluem os seguintes valores:<br>`SERVER_VERSION`: esse parâmetro mostra o número de versão do servidor.<br>`SERVER_ENCODING`: este parâmetro mostra a codificação do conjunto de caracteres do lado do servidor.<br>`LC_COLLATE`: Esse parâmetro mostra a configuração de localidade do banco de dados para agrupamento (ordenação de texto).<br>`LC_CTYPE`: Esse parâmetro mostra a configuração de localidade do banco de dados para classificação de caracteres.<br>`IS_SUPERUSER`: Este parâmetro mostra se a função atual tem privilégios de superusuário. |
+| `name` | O nome do parâmetro de tempo de execução sobre o qual você deseja obter informações. Os valores possíveis para o parâmetro de tempo de execução incluem os seguintes valores:<br>`SERVER_VERSION`: Esse parâmetro mostra o número de versão do servidor.<br>`SERVER_ENCODING`: Esse parâmetro mostra a codificação do conjunto de caracteres do lado do servidor.<br>`LC_COLLATE`: Esse parâmetro mostra a configuração de localidade do banco de dados para agrupamento (ordenação de texto).<br>`LC_CTYPE`: Esse parâmetro mostra a configuração de localidade do banco de dados para classificação de caracteres.<br>`IS_SUPERUSER`: Esse parâmetro mostra se a função atual tem privilégios de superusuário. |
 | `ALL` | Mostrar os valores de todos os parâmetros de configuração com descrições. |
 
 **Exemplo**
@@ -1258,7 +1258,7 @@ ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_t
 
 A tabela a seguir lista os tipos de dados aceitos para adicionar colunas a uma tabela com [!DNL Postgres SQL], XDM e o [!DNL Accelerated Database Recovery] (ADR) no Azure SQL.
 
-| — | Cliente PSQL | XDM | ADR | Descrição |
+| --- | Cliente PSQL | XDM | ADR | Descrição |
 |---|---|---|---|---|
 | 1 | `bigint` | `int8` | `bigint` | Um tipo de dados numéricos usado para armazenar números inteiros grandes variando de -9,223,372,036,854,775,807 a 9,223,372,036,854,775,807 em 8 bytes. |
 | 2 | `integer` | `int4` | `integer` | Um tipo de dados numéricos usado para armazenar números inteiros que variam de -2.147.483.648 a 2.147.483.647 em 4 bytes. |

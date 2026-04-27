@@ -1,30 +1,30 @@
 ---
-title: Recursos do engenheiro para aprendizado de máquina
-description: Saiba como transformar dados no Adobe Experience Platform em recursos ou variáveis que podem ser consumidos por um modelo de aprendizado de máquina. Use o Data Distiller para calcular recursos de aprendizado de máquina em escala e compartilhar esses recursos com seu ambiente de aprendizado de máquina.
+title: Engineer Features for Machine Learning
+description: Learn how to transform data in Adobe Experience Platform into features or variables that can be consumed by a machine learning model. Use Data Distiller to compute ML features at scale and share those features with your machine learning environment.
 exl-id: 7fe017c9-ec46-42af-ac8f-734c4c6e24b5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '1140'
-ht-degree: 12%
+source-wordcount: '1146'
+ht-degree: 18%
 
 ---
 
-# Recursos do engenheiro para aprendizado de máquina
+# Engineer features for machine learning
 
-Este documento demonstra como você pode transformar dados no Adobe Experience Platform em **recursos**, ou variáveis, que podem ser consumidos por um modelo de aprendizado de máquina. Esse processo é conhecido como **engenharia de recursos**. Use o Data Distiller para calcular recursos de aprendizado de máquina em escala e compartilhar esses recursos no seu ambiente de aprendizado de máquina. Isso envolve o seguinte:
+This document demonstrates how you can transform data in Adobe Experience Platform into **features**, or variables, that can be consumed by a machine learning model. This process is referred to as **feature engineering**. Use Data Distiller to compute ML features at scale and share those features to your machine learning environment. This involves the following:
 
-1. Crie um modelo de consulta para definir os rótulos de destino e os recursos que deseja calcular para o seu modelo
-2. Executar a consulta e armazenar os resultados em um conjunto de dados de treinamento
+1. Create a query template to define the target labels and features you want to compute for your model
+2. Execute the query and store the results in a training dataset
 
-## Definir os dados de treinamento {#define-training-data}
+## Define your training data {#define-training-data}
 
-O exemplo a seguir ilustra uma consulta para derivar dados de treinamento de um conjunto de dados de Eventos de experiência para um modelo prever a propensão de um usuário para assinar um boletim informativo. Os eventos de assinatura são representados pelo tipo de evento `web.formFilledOut`, e outros eventos comportamentais no conjunto de dados são usados para derivar recursos de nível de perfil para prever assinaturas.
+The following example illustrates a query to derive training data from an Experience Events dataset for a model to predict the propensity of a user to subscribe to a newsletter. Subscription events are represented by the event type `web.formFilledOut`, and other behavioral events in the dataset are used to derive profile-level features to predict subscriptions.
 
-### Consultar rótulos positivos e negativos {#query-positive-and-negative-labels}
+### Query positive and negative labels {#query-positive-and-negative-labels}
 
-Um conjunto de dados completo para treinar um modelo de aprendizado de máquina (supervisionado) inclui uma variável de público-alvo ou rótulo que representa o resultado a ser previsto, e um conjunto de recursos ou variáveis explicativas usadas para descrever os perfis de exemplo usados para treinar o modelo.
+A complete dataset for training a (supervised) machine learning model includes target variable or label that represents the outcome to be predicted, and a set of features or explanatory variables used to describe the example profiles used to train the model.
 
-Nesse caso, o rótulo é uma variável chamada `subscriptionOccurred` que é igual a 1 se o perfil do usuário tiver um evento com tipo `web.formFilledOut`, caso contrário é 0. A consulta a seguir retorna um conjunto de 50.000 usuários do conjunto de dados de eventos, incluindo todos os usuários com rótulos positivos (`subscriptionOccurred = 1`), além de um conjunto de usuários selecionados aleatoriamente com rótulos negativos para concluir o tamanho da amostra de 50.000 usuários. Isso garante que os dados de treinamento incluam exemplos positivos e negativos para o modelo aprender.
+In this case, the label is a variable called `subscriptionOccurred` which equals 1 if the user profile has an event with type `web.formFilledOut` , and 0 otherwise. The following query returns a set of 50,000 users from the events dataset, including all users with positive labels (`subscriptionOccurred = 1`) plus a set randomly selected user with negative labels to complete the 50,000 user sample size. This ensures that the training data includes both positive and negative examples for the model to learn from.
 
 ```python
 from aepp import queryservice
@@ -52,9 +52,9 @@ print(f"Number of classes: {len(df_labels)}")
 df_labels.head()
 ```
 
-**Exemplo de saída**
+**Sample output**
 
-Número de classes: 50000
+Number of classes: 50000
 
 |   | eventType | userId | subscriptionOccurred | random_row_number_for_user |
 | ---  |   ---  |   ---  |   ---  |   --- |
@@ -146,7 +146,7 @@ df_features.head()
 
 **Exemplo de saída**
 
-|   | userId | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismiss | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
+|   | userId | emailsReceived | emailsOpened | emailsClicked | productsViewed | propositionInteracts | propositionDismissed | webLinkClicks | minutes_since_emailSent | minutes_since_emailOpened | minutes_since_emailClick | minutes_since_productView | minutes_since_propositionInteract | minutes_since_propositionDismiss | minutes_since_linkClick |
 | --- |    --- |    ---   |  ---  |   ---  |   ---  |  ---  |  ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   --- |
 | 0 | 01102546977582484968046916668339306826 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN |
 | 1 | 01102546977582484968046916668339306826 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN |
@@ -156,9 +156,9 @@ df_features.head()
 
 {style="table-layout:auto"}
 
-#### Combinar consultas de rótulos e recursos {#combine-queries}
+#### Combine labels and features queries {#combine-queries}
 
-Finalmente, a consulta de rótulos e a consulta de recursos podem ser combinadas em uma única consulta que retorna um conjunto de dados de treinamento de rótulos e recursos:
+Finally, the labels query and the features query can be combined into a single query that returns a training dataset of labels and features:
 
 +++Selecione para exibir um exemplo de consulta
 
@@ -234,8 +234,8 @@ df_training_set.head()
 | 0 | 02554909162592418347780983091131567290 | directMarketing.emailSent | 2023-06-17 13:44:59.086 | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
 | 1 | 01130334080340815140184601481559659945 | directMarketing.emailOpened | 2023-06-19 06:01:55.366 | 0 | 1 | 3 | 0 | 1 | 0 | 0 | 0 | 1921,0 | 0,0 | NaN | 1703,0 | NaN | None | NaN | 1 |
 | 2 | 01708961660028351393477273586554010192 | web.formFilledOut | 2023-06-19 18:36:49.083 | 1 | 1 | 2 | 2 | 0 | 0 | 0 | 0 | 2365,0 | 26,0 | 1.0 | NaN | NaN | None | NaN | 7 |
-| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 21/06/2023 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
-| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 21/06/2023 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
+| 3 | 01809182902320674899156240602124740853 | directMarketing.emailSent | 2023-06-21 19:17:12.535 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
+| 4 | 03441761949943678951106193028739001197 | directMarketing.emailSent | 2023-06-21 21:58:29.482 | 0 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0,0 | NaN | NaN | NaN | NaN | None | NaN | 1 |
 
 {style="table-layout:auto"}
 
@@ -248,9 +248,9 @@ Isso requer algumas modificações no query do conjunto de treinamento:
 - Adicione lógica para criar um novo conjunto de dados de treinamento se ele não existir e insira os novos rótulos e recursos no conjunto de dados de treinamento existente caso contrário. Isso requer uma série de duas versões do query de conjunto de treinamento:
    - Primeiro, usando a instrução `CREATE TABLE IF NOT EXISTS {table_name} AS`
    - Em seguida, usando a instrução `INSERT INTO {table_name}` para o caso em que o conjunto de dados de treinamento já existe
-- Adicione uma instrução `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` para limitar a consulta a dados de evento que foram adicionados dentro de um intervalo especificado. O prefixo `$` nas IDs de instantâneo indica que elas são variáveis que serão passadas quando o modelo de consulta for executado.
+- Add a `SNAPSHOT BETWEEN $from_snapshot_id AND $to_snapshot_id` statement to limit the query to event data that was added within a specified interval. The `$` prefix on the snapshot IDs indicates that thy are variables that will be passed in when the query template is executed.
 
-A aplicação dessas alterações resulta na seguinte consulta:
+Applying those changes results in the following query:
 
 +++Selecione para exibir um exemplo de consulta
 
@@ -381,7 +381,7 @@ WHERE
 ORDER BY timestamp;
 
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 
 END $$;
@@ -390,7 +390,7 @@ END $$;
 
 +++
 
-Finalmente, o código a seguir salva o template de query no Data Distiller:
+Finally, the following code saves the query template in Data Distiller:
 
 ```python
 template_res = dd.createQueryTemplate({
@@ -407,7 +407,7 @@ print(f"Template for propensity training data created as ID {template_id}")
 
 `Template for propensity training data created as ID f3d1ec6b-40c2-4d13-93b6-734c1b3c7235`
 
-Com o modelo salvo, é possível executar a consulta a qualquer momento, fazendo referência à ID do modelo e especificando a faixa de IDs de instantâneo que devem ser incluídas na consulta. A consulta a seguir recupera os instantâneos do conjunto de dados original de Eventos de experiência:
+With the template saved, you can execute the query at any time by referencing the template ID and specify the range of snapshot IDs that should be included in the query. The following query retrieves the snapshots of the original Experience Events dataset:
 
 ```python
 query_snapshots = f"""
@@ -422,7 +422,7 @@ ORDER BY snapshot_generation ASC
 df_snapshots = dd_cursor.query(query_snapshots, output="dataframe")
 ```
 
-O código a seguir demonstra a execução do modelo de consulta, usando o primeiro e o último instantâneos para consultar todo o conjunto de dados:
+The following code demonstrates execution of the query template, using the first and last snapshots to query the entire dataset:
 
 ```python
 snapshot_start_id = str(df_snapshots["snapshot_id"].iloc[0])
@@ -445,7 +445,7 @@ print(f"Query started successfully and got assigned ID {query_final_id} - it wil
 
 `Query started successfully and got assigned ID c6ea5009-1315-4839-b072-089ae01e74fd - it will take some time to execute`
 
-Você pode definir a seguinte função para verificar periodicamente o status da query:
+You can define the following function to periodically check the status of the query:
 
 ```python
 def wait_for_query_completion(query_id):
@@ -482,6 +482,6 @@ Query is still in progress, sleeping…
 Query completed successfully in 473.8 seconds
 ```
 
-## Próximas etapas:
+## Next steps:
 
-Ao ler este documento, você aprendeu a transformar dados no Adobe Experience Platform em recursos, ou variáveis, que podem ser consumidos por um modelo de aprendizado de máquina. A próxima etapa na criação de pipelines de recursos do Experience Platform para alimentar modelos personalizados em seu ambiente de aprendizado de máquina é [exportar conjuntos de dados de recursos](./export-data.md).
+By reading this document you have learned how to transform data in Adobe Experience Platform into features, or variables, that can be consumed by a machine learning model. The next step in creating feature pipelines from Experience Platform to feed custom models in your machine learning environment is to [export feature datasets](./export-data.md).

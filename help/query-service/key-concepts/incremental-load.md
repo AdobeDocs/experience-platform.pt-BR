@@ -2,9 +2,9 @@
 title: Carga incremental no serviço de consulta
 description: O recurso de carga incremental usa recursos de instantâneos e blocos anônimos para fornecer uma solução quase em tempo real para mover dados do data lake para o data warehouse, ignorando, ao mesmo tempo, dados correspondentes.
 exl-id: 1418d041-29ce-4153-90bf-06bd8da8fb78
-source-git-commit: 65eeeb1df1d512c4cd6c67892905a63cc1cc4fc5
+source-git-commit: f2d81f05c8c19c6f28849fc4dbe9bfa26be64645
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ As etapas abaixo demonstram como criar e carregar dados de forma incremental usa
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END 
    $$;
@@ -116,7 +116,7 @@ As etapas abaixo demonstram como criar e carregar dados de forma incremental usa
          cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
    
    EXCEPTION
-     WHEN OTHER THEN
+     WHEN OTHERS THEN
        SELECT 'ERROR';
    END
    $$;
@@ -154,7 +154,7 @@ Insert Into
       cast( @to_snapshot_id AS string) last_snapshot_id,
       cast( @last_updated_timestamp AS TIMESTAMP) process_timestamp;
 EXCEPTION
-  WHEN OTHER THEN
+  WHEN OTHERS THEN
     SELECT 'ERROR';
 END
 $$;

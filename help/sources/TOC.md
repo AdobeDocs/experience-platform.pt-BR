@@ -5,9 +5,9 @@ breadcrumb-title: Guia dos conectores de origem
 user-guide-description: Assimilar dados de várias fontes. Saiba como estruturar, rotular e aprimorar os dados já assimilados.
 feature: Sources
 role: Developer
-source-git-commit: 79527635a61a43e2995f08d8c5981cd2030c5840
+source-git-commit: 1939a3914b796985a837aee00b6ad14299b976ec
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1115'
 ht-degree: 34%
 
 ---
@@ -107,7 +107,6 @@ ht-degree: 34%
       - [Conector de carregamento de arquivo local](connectors/local-system/local-file-upload.md)
    - Fidelidade {#loyalty}
       - [Eventos de transmissão capilares](connectors/loyalty/capillary.md)
-      - [Kobie](tutorials/ui/create/loyalty/kobie.md)
       - [Talon.One](connectors/loyalty/talon-one.md)
    - Automação de marketing {#marketing-automation}
       - [Braze Currents](connectors/marketing-automation/braze.md)
@@ -323,6 +322,7 @@ ht-degree: 34%
          - [Carregamento de arquivo local](tutorials/ui/create/local-system/local-file-upload.md)
       - Fidelidade {#loyalty}
          - [Eventos de transmissão capilares](tutorials/ui/create/loyalty/capillary.md)
+         - [Eventos de transmissão do Kobie](tutorials/ui/create/loyalty/kobie-streaming.md)
          - [Eventos de transmissão Talon.One](tutorials/ui/create/loyalty/talon-one-streaming.md)
          - [Conector Talon.One Batch Source](tutorials/ui/create/loyalty/talon-one-batch.md)
       - Automação de marketing {#marketing-automation}

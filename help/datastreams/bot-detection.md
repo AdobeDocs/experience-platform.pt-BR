@@ -49,7 +49,7 @@ Antes de ativar a detecção de bot nos datastreams, lembre-se de alguns pontos 
 
 ## Pré-requisitos {#prerequisites}
 
-Para que a detecção de bot funcione na sequência de dados, é necessário adicionar o grupo de campos **[!UICONTROL [Bot Detection Information]](../xdm/field-groups/event/bot-detection-information.md)** ao esquema. Consulte a documentação do [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para saber como adicionar grupos de campos a um esquema.
+Para que a detecção de bot funcione na sequência de dados, é necessário adicionar o grupo de campos **[[!UICONTROL [Bot Detection Information]]](../xdm/field-groups/event/bot-detection-information.md)** ao esquema. Consulte a documentação do [esquema XDM](../xdm/ui/resources/schemas.md#add-field-groups) para saber como adicionar grupos de campos a um esquema.
 
 ## Configurar a detecção de bot para sequências de dados {#configure}
 

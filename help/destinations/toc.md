@@ -5,10 +5,10 @@ user-guide-description: Ative seus dados conhecidos e desconhecidos para campanh
 description: Este documento lista o índice dos destinos do Adobe Experience Platform
 feature: Destinations
 role: Admin,User
-source-git-commit: 36871289743f384207bb149df6e5e1af14d4d371
+source-git-commit: 343f9e9fa01b06196106126235508059836e391c
 workflow-type: tm+mt
-source-wordcount: '1345'
-ht-degree: 5%
+source-wordcount: '1413'
+ht-degree: 6%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 5%
    * [Excluir contas de destino](./api/delete-destination-account.md)
    * [Excluir fluxos de dados de destino](./api/delete-destination-dataflow.md)
    * [Exportar conjuntos de dados](/help/destinations/api/export-datasets.md)
-   * [Classificar e filtrar respostas da API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=pt-BR#use-cases)
+   * [Classificar e filtrar respostas da API para destinos](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * Guias de interface {#ui}
    * [Espaço de trabalho Destinos](./ui/destinations-workspace.md)
    * [Criar uma nova conexão de destino](./ui/connect-destination.md)
@@ -71,8 +71,8 @@ ht-degree: 5%
       * [Conexão do Marketo Engage (herdada) (V2)](./catalog/adobe/marketo-engage.md)
       * [Conexão de Sincronização da Pessoa do Marketo Engage](./catalog/adobe/marketo-engage-person-sync.md)
       * [Conexão com o Marketo Measure Ultimate](./catalog/adobe/marketo-measure-ultimate.md)
-      * [Compartilhamento de público do Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=pt-BR)
-      * [Conexão de Composição de Público Federado](https://www.adobe.com/go/destinations-federated-audience-composition)
+      * [Compartilhamento de público do Experience Platform](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [Conexão da Composição de Público Federado](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Destinos do Advertising{#advertising}
       * [Acxiom Audience Connection](./catalog/advertising/acxiom-audience-connection.md)
       * [Acxiom RealID Audience Connection](./catalog/advertising/acxiom-real-id-audience-connection.md)
@@ -116,6 +116,7 @@ ht-degree: 5%
       * [Atualização da conexão do Pinterest](./catalog/advertising/pinterest-upgrade.md)
       * [Conexão PubMatic Connect](./catalog/advertising/pubmatic.md)
       * [(Beta) Reddit Conexão de público-alvo personalizado](./catalog/advertising/reddit-custom-audience.md)
+      * [Rokt connection](./catalog/advertising/rokt.md)
       * [Conexão com o Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [A conexão com a Trade Desk](./catalog/advertising/tradedesk.md)
       * [A conexão do CRM da Trade Desk](./catalog/advertising/tradedesk-emails.md)
@@ -287,7 +288,7 @@ ht-degree: 5%
          * [Configure um destino SFTP com opções predefinidas de formatação de arquivo e configuração de nome de arquivo personalizado](../destinations/destination-sdk/guides/batch/configure-sftp-destination-with-predefined-file-formatting.md)
          * [Configurar um destino baseado em arquivo para exportar públicos-alvo potenciais](/help/destinations/destination-sdk/guides/batch/configure-prospect-audience-destination.md)
    * Referência da API de criação de destino {#authoring-api}
-      * [Referência da API do Destination SDK (Autoria de Destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
+      * [Referência da API do Destination SDK (criação de destino)](https://www.adobe.io/experience-platform-apis/references/destination-authoring/)
       * Operações do servidor de destino {#server-operations}
          * [Criar uma configuração do servidor de destino](./destination-sdk/authoring-api/destination-server/create-destination-server.md)
          * [Recuperar uma configuração do servidor de destino](./destination-sdk/authoring-api/destination-server/retrieve-destination-server.md)
@@ -332,4 +333,4 @@ ht-degree: 5%
       * [Modelo de autoatendimento de documentação](./destination-sdk/docs-framework/self-service-template.md)
       * [Práticas recomendadas de criação](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Perguntas frequentes](./destinations-faq.md)
-* [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)
+* [Notas de versão do Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

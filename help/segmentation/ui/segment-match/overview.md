@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Visão geral da correspondência de segmentos
 description: A Correspondência de segmentos é um serviço de compartilhamento de segmentos no Adobe Experience Platform que permite que dois ou mais usuários do Experience Platform troquem dados de segmento de maneira segura, controlada e compatível com a privacidade.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: d4b6b83e37762f73f628b8922bf77f1739492eef
+source-git-commit: bf5a474d7ba6ef27d196bc88c10ff9f19151e111
 workflow-type: tm+mt
-source-wordcount: '2000'
+source-wordcount: '2123'
 ht-degree: 3%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 3%
 
 >[!IMPORTANT]
 >
->A Adobe lançou o [!DNL Segment Match] em 2021 para que os clientes colaborem e troquem públicos. No início de 2025, o Adobe apresentou o [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/home), que é a abordagem de longo prazo para atender a esse caso de uso.
+>A Adobe lançou o [!DNL Segment Match] em 2021 para que os clientes colaborem e troquem públicos. No início de 2025, o Adobe apresentou o [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home), que é a abordagem de longo prazo para atender a esse caso de uso.
 >
->* Para clientes nos Estados Unidos, Canadá, Austrália, Nova Zelândia e EMEA: a Adobe recomenda que os clientes do Real-Time CDP Prime e Ultimate façam a transição de casos de uso de colaboração de dados do [!DNL Segment Match] para o Real-Time CDP Collaboration. Exiba a [documentação](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/home) e o [guia de início rápido](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/quick-start-guide) da Real-Time CDP Collaboration e entre em contato com a equipe de conta da Adobe para saber mais.
+>* Para clientes nos Estados Unidos, Canadá, Austrália, Nova Zelândia e EMEA: a Adobe recomenda que os clientes do Real-Time CDP Prime e Ultimate façam a transição de casos de uso de colaboração de dados do [!DNL Segment Match] para o Real-Time CDP Collaboration. Exiba a [documentação](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home) e o [guia de início rápido](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide) da Real-Time CDP Collaboration e entre em contato com a equipe de conta da Adobe para saber mais.
 >* Para clientes em todas as outras regiões geográficas: [!DNL Segment Match] é a opção recomendada até que o Real-Time CDP Collaboration seja lançado nessas regiões geográficas em 2026.
 
 A Correspondência de segmentos do Adobe Experience Platform é um serviço de compartilhamento de segmentos que permite que dois ou mais usuários do Experience Platform troquem dados de segmento de maneira segura, controlada e compatível com a privacidade. O [!DNL Segment Match] usa os padrões de privacidade da Experience Platform e identificadores pessoais, como emails com hash, números de telefone com hash e identificadores de dispositivos, como IDFAs e GAIDs.
@@ -51,7 +51,7 @@ A lista de namespaces compatíveis é a seguinte:
 
 | Namespace | Descrição |
 | --------- | ----------- |
-| Emails (SHA256, em letras minúsculas) | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. A Experience Platform oferece dois métodos de hash de suporte na coleta de dados, por meio de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=pt-BR#hashing-support) e por meio de [preparação de dados](../../../data-prep/functions.md#hashing). |
+| Emails (SHA256, em letras minúsculas) | Um namespace para o endereço de email com hash prévio. Os valores fornecidos neste namespace são convertidos em minúsculas antes do hash com SHA256. Espaços à esquerda e à direita precisam ser cortados antes da normalização de um endereço de email. Esta configuração não pode ser alterada retroativamente. A Experience Platform oferece dois métodos de hash de suporte na coleta de dados, por meio de [`setCustomerIDs`](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) e por meio de [preparação de dados](../../../data-prep/functions.md#hashing). |
 | Telefone (SHA256_E.164) | Um namespace que representa números de telefone brutos que precisam ser transformados em hash, utilizando os formatos SHA256 e E.164. |
 | ECID | Um namespace que representa um valor de Experience Cloud ID (ECID). Esse namespace também pode ser referenciado pelos seguintes aliases: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Consulte a [visão geral da ECID](../../../identity-service/features/ecid.md) para obter mais informações. |
 | Apple IDFA (ID para anunciantes) | Um namespace que representa a Apple ID para anunciantes. Consulte o seguinte documento em [anúncios baseados em interesses](https://support.apple.com/en-us/HT202074) para obter mais informações. |
@@ -59,11 +59,11 @@ A lista de namespaces compatíveis é a seguinte:
 
 ### Definir configuração de consentimento
 
-Você deve fornecer uma configuração de consentimento e definir seu valor padrão como `opt-in` ou `opt-out` para uma verificação de consentimento.
+Você deve fornecer uma configuração de consentimento e definir seu valor padrão como aceitar ou recusar para uma verificação de consentimento.
 
-A verificação de consentimento de aceitação e recusa determina se você pode operar com o consentimento para compartilhar dados do usuário por padrão. Se o padrão de configuração de consentimento for definido como `opt-out`, os dados do usuário poderão ser compartilhados, a menos que um usuário recuse explicitamente. Se o padrão estiver definido como `opt-in`, os dados do usuário não poderão ser compartilhados, a menos que um usuário opte explicitamente por participar.
+A verificação de consentimento de aceitação e recusa determina se você pode operar com o consentimento para compartilhar dados do usuário por padrão. Se o padrão de configuração de consentimento for definido como aceitar, os dados do usuário poderão ser compartilhados, a menos que um usuário recuse explicitamente. Se o padrão for definido como recusar, os dados do usuário não poderão ser compartilhados, a menos que um usuário participe explicitamente do.
 
-A configuração de consentimento padrão para [!DNL Segment Match] está definida como `opt-out`. Para aplicar um modelo de aceitação para seus dados, envie uma solicitação por email para a equipe de conta da Adobe.
+A configuração de consentimento padrão para a Correspondência de segmentos está definida como recusa. Para aplicar um modelo de aceitação para seus dados, envie uma solicitação por email para a equipe de conta da Adobe.
 
 Para obter mais informações sobre o atributo `share` usado para definir o valor de consentimento de compartilhamento de dados, consulte a documentação a seguir no [grupo de campos de privacidade e consentimentos](../../../xdm/field-groups/profile/consents.md). Para obter informações sobre o grupo de campos específico usado para registrar o consentimento do consumidor para a coleta e uso de dados relacionados à privacidade, personalização e preferências de marketing, consulte o seguinte [Exemplo de consentimento para privacidade, Personalization e Preferências de marketing do GitHub](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 

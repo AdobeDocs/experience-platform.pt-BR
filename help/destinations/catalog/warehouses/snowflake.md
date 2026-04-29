@@ -1,12 +1,12 @@
 ---
 title: Conexão de transmissão do Snowflake
 description: Crie um compartilhamento de dados ao vivo do Snowflake para receber atualizações de público-alvo de transmissão diretamente como tabelas compartilhadas na sua conta.
-last-substantial-update: 2026-03-24T00:00:00Z
+last-substantial-update: 2026-04-28T00:00:00Z
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 0d5bb74473551c9eddd823439e8bbe18126242e9
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1681'
 ht-degree: 2%
 
 ---
@@ -183,12 +183,13 @@ Os dados são compartilhados com sua conta da Snowflake por meio de uma tabela c
 
 O exemplo a seguir mostra linhas de amostra de uma tabela compartilhada: algumas colunas armazenam identidades e associação de segmento como JSON; os atributos de perfil mapeados aparecem como colunas de cadeia de caracteres separadas.
 
-![Exemplo de linhas de planilha do Snowflake mostrando IDENTITYMAP, SEGMENT_MEMBERSHIP e colunas de atributo mapeadas](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
+![Exemplo de linhas de planilha do Snowflake mostrando TS, IDENTITYMAP, SEGMENT_MEMBERSHIP e colunas de atributo mapeadas.](../../assets/catalog/warehouses/snowflake/snowflake-streaming-exported-data.png) {align="center" zoomable="yes"}
 
 ### Estrutura de dados {#data-structure}
 
 A captura de tela acima mostra as seguintes colunas:
 
+* **TS**: um carimbo de data/hora indicando quando cada linha foi atualizada pela última vez.
 * **IDENTITYMAP**: objeto JSON para cada mapa de identidade de perfil.
 * **SEGMENT_MEMBERSHIP**: objeto JSON para cada público ativado no fluxo de dados. Os valores incluem `lastQualificationTime` e `status` (por exemplo, `realized` quando o perfil se qualifica para o segmento).
 * **Atributos de mapeamento**: cada atributo de mapeamento selecionado durante o fluxo de trabalho de ativação é representado como um cabeçalho de coluna em [!DNL Snowflake].

@@ -5,9 +5,9 @@ title: Explorar recursos do esquema na interface do
 description: Saiba como explorar esquemas, classes, grupos de campos de esquema e tipos de dados existentes na interface do usuário do Experience Platform.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: ca90fd3f8615e21fb4c44104c2de7679db1e1025
+source-git-commit: 80d5e90dba710fcf8f1e941668f4a506e92f5bcf
 workflow-type: tm+mt
-source-wordcount: '1965'
+source-wordcount: '2820'
 ht-degree: 0%
 
 ---
@@ -24,11 +24,11 @@ Na interface do usuário do Experience Platform, selecione **[!UICONTROL Schemas
 
 ![O espaço de trabalho Esquemas com várias guias realçadas.](../images/ui/explore/tabs.png)
 
-O ícone de filtro (![Imagem do ícone de filtro](/help/images/icons/filter.png)) revela controles no painel esquerdo para restringir os resultados listados. Os filtros de recursos estão disponíveis para esquemas e relações nas guias **[!UICONTROL Browse]** e **[!UICONTROL Relationships]**, respectivamente.
+O ícone de filtro (![Imagem do ícone de filtro](/help/images/icons/filter.png)) revela controles no painel esquerdo para restringir os resultados listados. Os filtros de recursos estão disponíveis para esquemas e relações nas guias **[!UICONTROL Browse]** e **[!UICONTROL Relationships]**, respectivamente. Na guia **[!UICONTROL Field groups]**, use os filtros descritos em [Filtragem e metadados do grupo de campos](#field-group-metadata-and-filtering) para restringir a lista por marcas de setor e classe compatíveis.
 
 Na guia [!UICONTROL Browse] do espaço de trabalho [!UICONTROL Schemas], você pode filtrar o inventário de esquemas. Use a opção **[!UICONTROL Included in Profile]** para mostrar apenas esquemas que foram habilitados para uso no [Perfil de Cliente em Tempo Real](../../profile/home.md). Use o botão **[!UICONTROL Show adhoc schemas]** para filtrar a lista de esquemas criados com campos com namespace para uso somente por um único conjunto de dados.
 
-![A guia [!UICONTROL Schemas] do espaço de trabalho [!UICONTROL Browse] com o painel de filtros realçado.](../images/ui/explore/filters.png)
+![A guia [!UICONTROL Browse] do espaço de trabalho [!UICONTROL Schemas] com o painel de filtros realçado.](../images/ui/explore/filters.png)
 
 Na guia [!UICONTROL Relationship] do espaço de trabalho [!UICONTROL Schemas], você pode filtrar a lista de relações com base em quatro critérios. Os filtros incluem [!UICONTROL Source schema], [!UICONTROL Destination schema], [!UICONTROL Source class] e [!UICONTROL Destination class]. A tabela abaixo fornece uma descrição dos filtros.
 
@@ -138,7 +138,7 @@ Todos os campos do tipo de objeto que contêm subpropriedades são recolhidos po
 
 ### Indicador padrão de classe e grupo de campos {#standard-class-and-field-group-indicator}
 
-No Editor de esquemas, classes e grupos de campos padrão (gerados pela Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
+No Editor de esquemas, classes e grupos de campos padrão (gerados por Adobe) são indicados com o ícone de cadeado (![Um ícone de cadeado.](/help/images/icons/lock-closed.png). O cadeado é exibido no painel à esquerda, ao lado do nome da classe ou do grupo de campos, e também ao lado de qualquer campo no diagrama de esquema que faça parte de um recurso gerado pelo sistema.
 
 ![O Editor de Esquemas com o ícone de cadeado realçado](../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -148,7 +148,7 @@ Consulte a documentação [Adicionar campos personalizados a grupos de campos pa
 
 Alguns nomes de campos recebem um sublinhado como prefixo, por exemplo, `_repo` e `_id`. Eles representam espaços reservados para campos que o sistema gerará e atribuirá automaticamente à medida que os dados forem assimilados.
 
-Dessa forma, a maioria desses campos deve ser excluída da estrutura dos dados ao assimilar na Experience Platform. A principal exceção para essa regra é o campo [`_{TENANT_ID}` &#x200B;](../api/getting-started.md#know-your-tenant_id), no qual todos os campos XDM criados em sua organização devem ter o namespace.
+Dessa forma, a maioria desses campos deve ser excluída da estrutura dos dados ao assimilar na Experience Platform. A principal exceção para essa regra é o campo [`_{TENANT_ID}` ](../api/getting-started.md#know-your-tenant_id), no qual todos os campos XDM criados em sua organização devem ter o namespace.
 
 ### Tipos de dados {#data-types}
 
@@ -164,7 +164,7 @@ Se um campo de matriz é baseado em um tipo de objeto, você pode selecionar seu
 
 ### [!UICONTROL Field properties] {#field-properties}
 
-Quando você seleciona o nome de qualquer campo na tela, o painel direito é atualizado para mostrar detalhes sobre esse campo em **[!UICONTROL Field properties]**. Isso pode incluir uma descrição do caso de uso pretendido do campo, valores padrão, padrões, formatos, se o campo é obrigatório ou não e muito mais.
+Quando você seleciona o nome de qualquer campo na tela, o painel direito é atualizado para mostrar detalhes sobre esse campo em **[!UICONTROL Field properties]**. Isso pode incluir uma descrição do caso de uso pretendido do campo, valores padrão, padrões, formatos, se o campo é obrigatório e muito mais. Quando você estiver explorando um grupo de campos, os detalhes relacionados ao rótulo do campo selecionado também podem aparecer aqui; consulte [Rótulos na exibição de estrutura](#field-group-labels-in-structure).
 
 ![Um campo selecionado do tipo de dados Commerce com as propriedades do campo realçadas.](../images/ui/explore/field-properties.png)
 
@@ -195,6 +195,92 @@ Para exibir o namespace de identidade da identidade primária do esquema de refe
 ![A caixa de diálogo Editar relação com os parâmetros de relação exibidos.](../images/ui/explore/edit-relationship-dialog.png)
 
 Consulte o tutorial sobre [criação de uma relação na interface](../tutorials/relationship-ui.md) para obter mais informações sobre o uso de relações em esquemas XDM.
+
+## Explorar grupos de campos: uso e metadados {#explore-field-groups}
+
+Navegue até **[!UICONTROL Schemas]** > **[!UICONTROL Field groups]** para explorar grupos de campos. Na guia **[!UICONTROL Field groups]**, recursos adicionais ajudam você a entender onde um grupo de campos é usado em esquemas e o que ele inclui, como compatibilidade, campos obrigatórios (que impõem requisitos de assimilação) e sinais de governança.
+
+Esses recursos ajudam você a avaliar o impacto antes de fazer alterações e identificar grupos de campos relevantes com mais eficiência durante o design do esquema.
+
+### Exibir uso de esquema para grupos de campos {#view-schema-usage-for-field-groups}
+
+Na tabela **[!UICONTROL Field groups]**, selecione um grupo de campos para abrir sua exibição detalhada. A tela é atualizada para exibir a estrutura do grupo de campos, e o painel de propriedades mostra informações adicionais sobre o recurso selecionado.
+
+#### Esquemas que usam este grupo de campos
+
+No painel de propriedades à direita, a seção **[!UICONTROL Schemas using this field group]** lista esquemas que atualmente incluem o grupo de campos.
+
+![O painel de propriedades do grupo de campos que mostra os Esquemas que estão usando esta seção do grupo de campos.](../images/ui/explore/field-group-properties.png)
+
+- Se o grupo de campos for usado por três ou menos esquemas, todos os nomes de esquema serão exibidos.
+- Se for usado por mais de três schemas, somente alguns nomes serão exibidos, juntamente com uma opção para exibir a lista completa.
+
+Selecione um nome de esquema para abrir sua visualização de detalhes em uma nova guia e inspecione como o grupo de campos é implementado dentro desse esquema.
+
+#### Exibir mais e lista completa de esquemas
+
+Se houver mais esquemas do que podem ser exibidos em linha, selecione **[!UICONTROL View more]** para abrir a caixa de diálogo completa.
+
+![A opção Exibir mais nos Esquemas usando esta seção de grupo de campos.](../images/ui/explore/view-more-schemas.png)
+
+A caixa de diálogo **[!UICONTROL Schemas using this field group]** é exibida, mostrando a lista completa de esquemas que usam o grupo de campos.
+
+![A caixa de diálogo Esquemas usando este grupo de campos mostra a lista de esquemas e as colunas.](../images/ui/explore/schemas-using-this-field-group-dialog.png)
+
+Na caixa de diálogo **[!UICONTROL Schemas using this field group]**, é possível:
+
+- Procurar todos os esquemas que usam o grupo de campos
+- Paginar por meio de conjuntos de resultados grandes
+- Selecione um esquema para abrir sua visualização de detalhes em uma nova guia
+
+Você pode exibir detalhes do esquema, como nome do esquema, classe e outros atributos.
+
+Este fluxo de trabalho destina-se somente a **análise e exploração de impacto**. Ela não modifica esquemas ou grupos de campos. Para alterar a estrutura do esquema, consulte [Criar e editar esquemas na interface](./resources/schemas.md).
+
+### Metadados e filtragem do grupo de campos {#field-group-metadata-and-filtering}
+
+A guia **[!UICONTROL Field groups]** fornece ferramentas de filtragem e metadados para ajudar você a localizar e avaliar grupos de campos antes de selecioná-los.
+
+#### Procurar tabela e filtros
+
+A tabela de inventário do grupo de campos inclui colunas adicionais que expõem metadados diretamente na exibição de lista, como **[!UICONTROL Compatible classes]**, que indica a quais classes um grupo de campos pode ser aplicado. Os grupos de campos só podem ser adicionados a esquemas que usam uma das classes compatíveis listadas, com base no comportamento dos dados que representam (por exemplo, dados com base em registros ou de séries temporais). A tabela pode exibir **[!UICONTROL All]** quando o grupo de campos for compatível com todas as classes. **[!UICONTROL Industry tags]** ajuda a categorizar grupos de campos para descoberta.
+
+Para refinar a lista, selecione o ícone de filtro (![Imagem do ícone de filtro](/help/images/icons/filter.png)) para abrir o painel de filtro no painel esquerdo. A imagem a seguir mostra o painel de filtro aberto no painel esquerdo.
+
+![A guia Grupos de campos mostrando classes compatíveis, marcas do setor e o painel de filtro.](../images/ui/explore/field-group-filters.png)
+
+No painel de filtros, é possível:
+
+- **[!UICONTROL Compatible classes]** — Use a lista suspensa para filtrar grupos de campos por compatibilidade de classe
+- **[!UICONTROL Industry tags]** — Use caixas de seleção para filtrar por uma ou mais categorias do setor
+
+Durante a navegação, selecione uma linha na tabela para atualizar o painel de informações. O painel de informações exibe metadados como classes compatíveis e tags do setor, para que você possa revisar os principais detalhes sem abrir o grupo de campos.
+
+#### Metadados de detalhes do grupo de campos
+
+Ao abrir um grupo de campos, o painel de propriedades exibe metadados adicionais associados ao recurso.
+
+O painel de propriedades pode exibir os seguintes metadados:
+
+- **[!UICONTROL Compatible classes]** — Classes que o grupo de campos pode estender
+- **[!UICONTROL Required attributes]** — Atributos que devem ter valores válidos quando exigidos pelo grupo de campos durante a assimilação de dados. Os requisitos dependem da estrutura de dados e os registros com valores obrigatórios ausentes ou inválidos falham na validação
+- **[!UICONTROL Labels]** — Os rótulos não são exibidos no nível do grupo de campos. Selecione um campo para exibir os detalhes do rótulo no painel **[!UICONTROL Field properties]**
+
+Essas informações ajudam a entender as restrições e os requisitos antes de usar ou modificar o grupo de campos.
+
+#### Rótulos na visualização de estrutura
+
+Quando um grupo de campos é aberto na tela, é possível exibir as informações do rótulo diretamente na estrutura. Selecione o ícone de configurações (![O ícone de configurações.](../../images/icons/settings.png)) na barra de ferramentas da tela de desenho e habilitar **[!UICONTROL Show labels on tree]** para exibir indicadores de rótulo em campos da tela de desenho.
+
+![A tela do grupo de campos mostrando a caixa de diálogo de opções de exibição em árvore com Mostrar rótulos na árvore realçada.](../images/ui/explore/show-labels-on-tree.png)
+
+Selecione um campo na tela para exibir os detalhes do rótulo no painel **[!UICONTROL Field properties]**, incluindo rótulos aplicados a esse campo.
+
+![A tela do grupo de campos mostrando rótulos nos campos e detalhes de rótulo no painel de propriedades do campo.](../images/ui/explore/field-group-labels.png)
+
+Os rótulos são agrupados por categoria (por exemplo, rótulos de identidade e confidenciais) e fornecem visibilidade sobre a governança ou as restrições relacionadas ao acesso aplicadas aos dados.
+
+Esses indicadores são somente para visibilidade e não alteram a estrutura do schema. Para obter mais informações, consulte [Gerenciar rótulos de uso de dados para um esquema](../tutorials/labels.md).
 
 ## Próximas etapas
 

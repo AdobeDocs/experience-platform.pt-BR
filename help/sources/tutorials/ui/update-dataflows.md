@@ -2,9 +2,9 @@
 description: Saiba como atualizar um fluxo de dados de fontes existente na interface do usuário do Experience Platform.
 title: Atualizar um fluxo de dados de conexão do Source na interface
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: 4c4f221a5060360fa0381c8532227e854ad40a77
+source-git-commit: 2139566a7c44de8736f7433ba826796dad44715f
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '893'
 ht-degree: 7%
 
 ---
@@ -25,7 +25,7 @@ Este tutorial requer uma compreensão funcional dos seguintes componentes do Exp
 >[!CONTEXTUALHELP]
 >id="platform_sources_dataflows_daysRemaining"
 >title="Expiração do conjunto de dados"
->abstract="Esta coluna indica o número de dias que o conjunto de dados de destino tem antes de expirar automaticamente.<br>Haverá falha em um fluxo de dados se o conjunto de dados de destino expirar. Para evitar falhas em um fluxo de dados, certifique-se de que um conjunto de dados de destino esteja definido para expirar na data correta. Consulte a documentação para saber como atualizar datas de expiração."
+>abstract="Essa coluna indica o número de dias que restam até que o conjunto de dados de destino expire automaticamente.<br>Haverá falha em um fluxo de dados se o conjunto de dados de destino expirar. Para evitar falhas em um fluxo de dados, certifique-se de que um conjunto de dados de destino esteja definido para expirar na data correta. Consulte a documentação para saber como atualizar datas de expiração."
 
 Na interface do usuário do Experience Platform, selecione **[!UICONTROL Sources]** na navegação à esquerda e selecione **[!UICONTROL Dataflows]** no cabeçalho superior.
 
@@ -47,7 +47,7 @@ Você é levado ao fluxo de trabalho de origens, onde pode prosseguir para atual
 
 >[!NOTE]
 >
->O recurso de mapeamento de edição não tem suporte atualmente para as seguintes fontes: Adobe Analytics, Adobe Audience Manager, API HTTP e [!DNL Marketo Engage].
+>No momento, o recurso de mapeamento de edição não é compatível com as seguintes fontes: Adobe Analytics, Adobe Audience Manager e API HTTP.
 
 Durante esse processo, também é possível atualizar os conjuntos de mapeamento associados ao fluxo de dados.  A interface de mapeamento exibe o mapeamento existente do fluxo de dados e não um novo conjunto de mapeamentos recomendado. As atualizações de mapeamento são aplicadas apenas a execuções de fluxo de dados agendadas no futuro. Um fluxo de dados agendado para assimilação única não pode ter seus conjuntos de mapeamento atualizados.
 

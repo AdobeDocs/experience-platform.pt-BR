@@ -3,9 +3,9 @@ title: Intenção do Demandbase
 description: Saiba mais sobre a fonte de intenção do Demandbase no Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 04af34d439ba76b0d0053ba9de45ca962458d3e8
+source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1675'
 ht-degree: 2%
 
 ---
@@ -197,5 +197,28 @@ A correspondência de domínios no Experience Platform é baseada em uma corresp
 +++Resposta
 
 Os dados de intenção podem ser utilizados em [Públicos-alvo da conta](../../../segmentation/types/account-audiences.md) para aprimorar o direcionamento, a segmentação e a personalização. Ao utilizar sinais de intenção, as empresas podem identificar e se envolver com contas que mostram grande interesse em tópicos específicos, otimizando o alcance de marketing e vendas
+
++++
+
+### O grupo de campos [!DNL Account Key] padrão é compatível com o esquema [!DNL Demandbase Account Intent]?
+
++++Resposta
+
+Não. Use o campo `accountID` para estabelecer relações com o esquema de Conta B2B. Isso evita a necessidade de introduzir todo o grupo de campos no schema de referência ou de origem.
++++
+
+### Como o esquema [!DNL Demandbase Account Intent] estabelece uma relação com o esquema Conta B2B?
+
++++Resposta
+
+O esquema [!DNL Demandbase Account Intent] usa o campo `accountID` para vincular ao registro de Conta B2B correspondente. Este campo é preenchido automaticamente durante a assimilação quando um domínio correspondente é encontrado em ambos os conjuntos de dados. Especificamente, o `accountID` no esquema [!DNL Demandbase] faz referência a `accountKey.sourceKey` no esquema padrão de Conta B2B.
+
++++
+
+### Por que o esquema [!DNL Demandbase Account Intent] usa `accountID` em vez da estrutura de grupo de campos [!DNL Account Key] típica?
+
++++Resposta
+
+[!DNL Demandbase Intent] esquemas enfocam a eficiência do armazenamento e do processamento. Em vez de usar um grupo de campos inteiro, o esquema usa um único campo simplificado (`accountID`) para estabelecer relações. Isso reduz a complexidade e se alinha aos padrões de processamento ideais para dados de intenção.
 
 +++

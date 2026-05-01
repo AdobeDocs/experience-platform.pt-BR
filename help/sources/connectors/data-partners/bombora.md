@@ -3,9 +3,9 @@ title: Intenção de Bombora
 description: Saiba mais sobre a fonte Bombora Intent no Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 627d939678a6bde0e7298e71f0dc142d46dc8e99
+source-git-commit: 6d86b6cfe966b210d105c9561428c001908007af
 workflow-type: tm+mt
-source-wordcount: '1591'
+source-wordcount: '1775'
 ht-degree: 1%
 
 ---
@@ -204,5 +204,28 @@ A correspondência de domínios no Experience Platform é baseada em uma corresp
 +++Resposta
 
 Os dados de intenção podem ser utilizados em [Públicos-alvo da conta](../../../segmentation/types/account-audiences.md) para aprimorar o direcionamento, a segmentação e a personalização. Ao utilizar sinais de intenção, as empresas podem identificar e se envolver com contas que mostram grande interesse em tópicos específicos, otimizando o alcance de marketing e vendas.
+
++++
+
+### O grupo de campos [!DNL Account Key] padrão é compatível com o esquema [!DNL Bombora Account Intent]?
+
++++Resposta
+
+Não. Use o campo `accountID` para estabelecer relações com o esquema de Conta B2B. Isso evita a necessidade de introduzir todo o grupo de campos no schema de referência ou de origem.
++++
+
+### Como o esquema [!DNL Bombora Account Intent] estabelece uma relação com o esquema Conta B2B?
+
++++Resposta
+
+O esquema [!DNL Bombora Account Intent] usa o campo `accountID` para vincular ao registro de Conta B2B correspondente. Este campo é preenchido automaticamente durante a assimilação quando um domínio correspondente é encontrado em ambos os conjuntos de dados. Especificamente, o `accountID` no esquema [!DNL Bombora] faz referência a `accountKey.sourceKey` no esquema padrão de Conta B2B.
+
++++
+
+### Por que o esquema [!DNL Bombora Account Intent] usa `accountID` em vez da estrutura de grupo de campos [!DNL Account Key] típica?
+
++++Resposta
+
+[!DNL Bombora Intent] esquemas enfocam a eficiência do armazenamento e do processamento. Em vez de usar um grupo de campos inteiro, o esquema usa um único campo simplificado (`accountID`) para estabelecer relações. Isso reduz a complexidade e se alinha aos padrões de processamento ideais para dados de intenção.
 
 +++

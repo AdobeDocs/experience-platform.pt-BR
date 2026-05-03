@@ -2,9 +2,9 @@
 title: Visão geral dos destinos
 description: Os destinos são integrações pré-criadas com plataformas de destino que permitem a ativação contínua de dados do Adobe Experience Platform. Você pode usar Destinos na Adobe Experience Platform para ativar seus dados conhecidos e desconhecidos para campanhas de marketing entre canais, campanhas de email, publicidade direcionada e muitos outros casos de uso.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 20427c4c8826905a77fac04d055d523b12a6f739
+source-git-commit: 7f69bbafa5ccd6759b5afcc2b99cbec32220ad3b
 workflow-type: tm+mt
-source-wordcount: '1298'
+source-wordcount: '1379'
 ht-degree: 2%
 
 ---
@@ -99,6 +99,12 @@ Depois de estabelecer uma conexão com um destino e concluir o fluxo de trabalho
 ![Exemplo da página de monitoramento de destinos.](./assets/overview/monitoring-page-example.png)
 
 Você também pode validar se os dados estão chegando com êxito ao seu destino. A maioria das páginas de documentação de destino no catálogo tem uma *seção Validar exportação de dados*, que indica como você pode verificar na plataforma de destino se os dados estão sendo trazidos com êxito do Experience Platform. Veja um exemplo desta seção para o [destino do Amazon Ads](/help/destinations/catalog/advertising/amazon-ads.md#exported-data).
+
+## Criptografia de dados {#encryption}
+
+Todos os dados em trânsito exportados de [!DNL Experience Platform] por destinos percorrem conexões seguras e criptografadas usando [HTTPS TLS 1.2](https://datatracker.ietf.org/doc/html/rfc5246) ou mais recente. O protocolo TLS usado por [!DNL Experience Platform] na comunicação de saída também dá suporte à [SNI (Indicação de Nome de Servidor)](https://www.rfc-editor.org/rfc/rfc6066#page-6).
+
+Para obter mais informações sobre como os dados são assimilados, criptografados e persistentes, consulte [criptografia de dados no Experience Platform](../landing/governance-privacy-security/encryption.md).
 
 ## Restrições de governança de dados na ativação de dados para destinos {#data-governance}
 

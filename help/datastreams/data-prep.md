@@ -48,7 +48,7 @@ Este guia aborda como mapear seus dados na interface. Para concluir as etapas, i
 
 Para obter uma demonstração rápida do processo de Preparação de dados para coleção de dados, assista ao vídeo a seguir:
 
->[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345568?captions=por_br&quality=12&enable10seconds=on&speedcontrol=on)
 
 ## Fornecer dados de amostra {#select-data}
 

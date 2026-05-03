@@ -1,15 +1,15 @@
 ---
-title: Definições de configuração do Adobe Advertising
+title: Configurações do Adobe Advertising
 description: Ativar ou desativar a funcionalidade da plataforma do lado da demanda.
 exl-id: 594fd75d-bb13-4146-9105-1398e24c4c16
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 1%
+source-wordcount: '219'
+ht-degree: 26%
 
 ---
 
-# Definições de configuração do Adobe Advertising {#advertising}
+# Configurações do Adobe Advertising {#advertising}
 
 >[!AVAILABILITY]
 >
@@ -18,7 +18,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_advertising"
 >title="Adobe Advertising"
->abstract="Defina as configurações para integrações do Adobe Advertising. Observe que nenhuma configuração de publicidade é necessária para ativar a medição de click-throughs. Os clientes Search, Social e Commerce não têm mais nenhuma ação necessária; no entanto, os usuários da Demand-side Platform (DSP) precisam configurar anunciantes nesta seção para medir as conversões de view-through."
+>abstract="Configurações para integrações do Adobe Advertising. Observe que não é necessária uma configuração de publicidade para ativar a taxa de cliques. Os clientes de pesquisa, redes sociais e comércio não têm mais nenhuma ação necessária. No entanto, os usuários da plataforma do lado da demanda (DSP) precisam configurar anunciantes nesta seção para medir as conversões por visualização."
 
 A seção **[!UICONTROL Adobe Advertising]** permite habilitar ou desabilitar a funcionalidade da Plataforma de Demanda (DSP), se usada na implementação. Você só precisará definir esse campo se sua implementação usar uma DSP.
 

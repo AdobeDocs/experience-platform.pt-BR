@@ -4,8 +4,8 @@ description: Defina as configurações avançadas para a extensão de tag do Web
 exl-id: d830a210-77ab-4823-b5fa-c1194a01bea3
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 2%
+source-wordcount: '153'
+ht-degree: 21%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 2%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_advanced"
 >title="Configurações avançadas"
->abstract="Configurações avançadas. A Adobe recomenda deixar essas opções como estão para a maioria das implementações."
+>abstract="Configurações avançadas. A Adobe recomenda manter as opções como estão para a maioria das implementações."
 
-Esta seção de configuração permite-lhe alterar as opções avançadas. A Adobe recomenda deixar essas opções como estão para a maioria das implementações.
+Esta seção de configuração permite-lhe alterar as opções avançadas. A Adobe recomenda manter as opções como estão para a maioria das implementações.
 
 1. Faça logon em [experience.adobe.com](https://experience.adobe.com) usando suas credenciais da Adobe ID.
 1. Navegue até **[!UICONTROL Data Collection]** > **[!UICONTROL Tags]**.

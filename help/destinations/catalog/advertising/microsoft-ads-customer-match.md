@@ -8,8 +8,8 @@ hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
 source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
 workflow-type: tm+mt
-source-wordcount: '1511'
-ht-degree: 14%
+source-wordcount: '1642'
+ht-degree: 18%
 
 ---
 
@@ -96,7 +96,7 @@ Depois que o administrador de TI aprovar a solicitação no Azure Portal, você 
 
 * [Revisar e executar ações em solicitações de consentimento administrativo](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/review-admin-consent-requests)
 * [Configurar o fluxo de trabalho de consentimento administrativo](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-admin-consent-workflow)
-* [Configurar como os usuários consentem com os aplicativos](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
+* [Configure como os usuários consentem com os aplicativos](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/configure-user-consent)
 
 Se o administrador de TI ainda não tiver aprovado a solicitação, a autenticação falhará com o seguinte erro: `AADSTS650052: The app needs access to a service ('https://ads.microsoft.com') that your organization has not subscribed to or enabled. Contact your IT Admin to review the configuration of your service subscriptions.`
 
@@ -104,8 +104,8 @@ Se o administrador de TI ainda não tiver aprovado a solicitação, a autentica�
 
 Ao configurar o destino, você deve fornecer as seguintes informações:
 
-* [!UICONTROL Customer ID]: sua ID de cliente (CID) do [!DNL Microsoft Ads], em formato inteiro. Consulte a [documentação do Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) para obter instruções sobre como encontrar a ID do cliente.
-* [!UICONTROL Customer Account ID]: sua ID de conta de cliente do [!DNL Microsoft Ads]. Consulte a [documentação do Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) para obter instruções sobre como encontrar a ID da conta do cliente.
+* [!UICONTROL Customer ID]: sua ID de cliente (CID) do [!DNL Microsoft Ads], em formato inteiro. Consulte a [documentação do Microsoft Advertising](https://learn.microsoft.com/pt-br/advertising/guides/get-started?view=bingads-13#get-ids) para obter instruções sobre como encontrar a ID do cliente.
+* [!UICONTROL Customer Account ID]: sua ID de conta de cliente do [!DNL Microsoft Ads]. Consulte a [documentação do Microsoft Advertising](https://learn.microsoft.com/pt-br/advertising/guides/get-started?view=bingads-13#get-ids) para obter instruções sobre como encontrar a ID da conta do cliente.
 
 ## Conectar ao destino {#connect}
 
@@ -120,34 +120,34 @@ Para se conectar a este destino, siga as etapas descritas no [tutorial de config
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_id"
 >title="Customer ID"
->abstract="Sua ID de cliente do Microsoft Advertising, também conhecida como ID da conta do gerente. Esse é o identificador de nível superior no Microsoft Advertising que pode ter várias contas de anunciante (IDs de conta do cliente) nele."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Encontrar a ID do cliente"
+>abstract="A ID de cliente do Microsoft Advertising, também conhecida como ID da conta do gerente. Esse é o identificador de nível superior no Microsoft Advertising que pode ter várias contas de anunciante (IDs de Conta do Cliente) nele."
+>additional-url="https://learn.microsoft.com/pt-br/advertising/guides/get-started?view=bingads-13#get-ids" text="Encontrar a ID do cliente"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_customer_account_id"
 >title="ID da conta do cliente"
->abstract="Sua ID de conta de cliente do Microsoft Advertising, também conhecida como ID de conta do anunciante. Isso identifica uma conta de anunciante específica na ID do cliente."
->additional-url="https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids" text="Encontrar a ID da conta do cliente"
+>abstract="A ID de conta do cliente do Microsoft Advertising, também conhecida como ID de conta do anunciante. Isso identifica uma conta de anunciante específica na ID do Cliente."
+>additional-url="https://learn.microsoft.com/pt-br/advertising/guides/get-started?view=bingads-13#get-ids" text="Encontrar a ID da conta do cliente"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_membership_duration"
->title="Duração da associação"
->abstract="O número de dias que um usuário permanece na lista de correspondência do cliente. Os valores aceitos estão entre 1 e 390 dias."
+>title="Duração da assinatura"
+>abstract="O número de dias que um usuário permanece na lista de correspondência do cliente. Os valores permitidos são entre 1 e 390 dias."
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_microsoft_ads_cm_list_availability"
->title="Disponibilidade da Lista de Correspondência do Cliente"
->abstract="Escolha se a lista de correspondência do cliente está disponível para uma única conta de anunciante ou para todas as contas na conta de gerente. Selecione Customer ID para disponibilizar a lista em todas as contas de anunciante na ID do cliente. Selecione ID da Conta do Cliente para restringir a lista à ID da Conta do Cliente específica."
->additional-url="https://help.ads.microsoft.com/apex/index/3/en/56727" text="Saiba mais sobre o compartilhamento da lista de públicos-alvo no Microsoft Advertising"
+>title="Disponibilidade da lista de correspondência do cliente"
+>abstract="Escolha se a lista de correspondência do cliente está disponível para uma única conta de anunciante ou para todas as contas dentro da conta de gerente. Selecione ID do cliente para disponibilizar a lista em todas as contas de anunciante dentro da ID do cliente. Selecione ID da conta do cliente para restringir a lista à ID da conta do cliente específica."
+>additional-url="https://help.ads.microsoft.com/apex/index/3/pt/56727" text="Saiba mais sobre o compartilhamento da lista de públicos-alvo no Microsoft Advertising"
 
 Ao [configurar](../../ui/connect-destination.md) este destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.
 * **[!UICONTROL Description]**: uma descrição que ajudará você a identificar este destino no futuro.
-* **[!UICONTROL Customer ID]**: Sua ID de cliente (CID) do [!DNL Microsoft Ads]. Consulte a [documentação do Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) para obter instruções sobre como encontrar a ID do cliente.
-* **[!UICONTROL Customer Account ID]**: Sua ID de Conta de Cliente do [!DNL Microsoft Ads]. Consulte a [documentação do Microsoft Advertising](https://learn.microsoft.com/en-us/advertising/guides/get-started?view=bingads-13#get-ids) para obter instruções sobre como encontrar a ID da conta do cliente.
-* **[!UICONTROL Membership Duration]**: o número de dias que um usuário permanece na lista de correspondência do cliente. Os valores aceitos estão entre 1 e 390 dias.
-* **[!UICONTROL Customer Match List Availability]**: Selecione a disponibilidade da lista de correspondência do cliente. No [!DNL Microsoft Advertising], uma ID do cliente pode ter várias IDs de conta do cliente (contas de anunciante) sob ela. Selecione **[!UICONTROL Customer ID (all advertising accounts)]** para disponibilizar a lista em todas as contas de anunciante em sua ID de cliente, ou **[!UICONTROL Customer Account ID (single advertising account)]** para restringir a lista à ID de Conta de Cliente específica fornecida acima. Consulte a [documentação do Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/en/56727) para obter mais detalhes.
+* **[!UICONTROL Customer ID]**: Sua ID de cliente (CID) do [!DNL Microsoft Ads]. Consulte a [documentação do Microsoft Advertising](https://learn.microsoft.com/pt-br/advertising/guides/get-started?view=bingads-13#get-ids) para obter instruções sobre como encontrar a ID do cliente.
+* **[!UICONTROL Customer Account ID]**: Sua ID de Conta de Cliente do [!DNL Microsoft Ads]. Consulte a [documentação do Microsoft Advertising](https://learn.microsoft.com/pt-br/advertising/guides/get-started?view=bingads-13#get-ids) para obter instruções sobre como encontrar a ID da conta do cliente.
+* **[!UICONTROL Membership Duration]**: o número de dias que um usuário permanece na lista de correspondência do cliente. Os valores permitidos são entre 1 e 390 dias.
+* **[!UICONTROL Customer Match List Availability]**: Selecione a disponibilidade da lista de correspondência do cliente. No [!DNL Microsoft Advertising], uma ID do cliente pode ter várias IDs de conta do cliente (contas de anunciante) sob ela. Selecione **[!UICONTROL Customer ID (all advertising accounts)]** para disponibilizar a lista em todas as contas de anunciante em sua ID de cliente, ou **[!UICONTROL Customer Account ID (single advertising account)]** para restringir a lista à ID de Conta de Cliente específica fornecida acima. Consulte a [documentação do Microsoft Advertising](https://help.ads.microsoft.com/apex/index/3/pt/56727) para obter mais detalhes.
 
   ![Imagem da interface do usuário da plataforma mostrando os campos de detalhes de destino para o destino da Correspondência do cliente do Microsoft Ads.](../../assets/catalog/advertising/microsoft-ads-customer-match/destination-details.png)
 

@@ -1,15 +1,15 @@
 ---
-title: Definições de configuração de mídia de streaming
+title: Definições de configuração de mídia de transmissão
 description: Personalize como a extensão de tag do Web SDK coleta dados de streaming de mídia.
 exl-id: f486d729-b7ad-4720-8399-71495cb9c57e
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '310'
-ht-degree: 3%
+source-wordcount: '313'
+ht-degree: 10%
 
 ---
 
-# Definições de configuração de mídia de streaming {#streaming-media}
+# Definições de configuração de mídia de transmissão {#streaming-media}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_streamingmedia"

@@ -4,8 +4,8 @@ description: Configure o fluxo de dados para enviar dados usando a extensão de 
 exl-id: 2d2504c6-b3f9-4e7b-aff4-a8d8d6c4e3dd
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 1%
+source-wordcount: '255'
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 1%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_datastreams"
 >title="Datastreams"
->abstract="Obrigatório. Define o fluxo de dados na Edge Network para o qual você deseja enviar dados."
+>abstract="Obrigatório. Define a sequência de dados na Edge Network para a qual deseja enviar os dados."
 
 Esta seção de configuração permite determinar para qual [sequência de dados](/help/datastreams/overview.md) você deseja enviar dados. **Uma ID de sequência de dados é necessária para todos os dados enviados para a Edge Network.**
 

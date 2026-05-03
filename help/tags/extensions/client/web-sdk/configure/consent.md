@@ -4,8 +4,8 @@ description: Defina as configurações padrão de consentimento e privacidade pa
 exl-id: 93913a8b-0351-409d-b26a-8dc2ac0296c5
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 0%
+source-wordcount: '209'
+ht-degree: 12%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_consent"
 >title="Consentimento"
->abstract="Seleciona o nível padrão de consentimento que é presumido se nenhuma outra preferência de consentimento explícito for fornecida."
+>abstract="Seleciona o nível padrão de consentimento que é assumido caso não seja fornecida nenhuma outra preferência explícita de consentimento."
 
 A seção **[!UICONTROL Consent]** permite selecionar o nível padrão de consentimento que será presumido se nenhuma outra preferência de consentimento explícito for fornecida. O nível de consentimento padrão não é salvo em perfis de usuário.
 

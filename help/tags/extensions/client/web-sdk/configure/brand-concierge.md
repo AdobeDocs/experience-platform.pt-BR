@@ -4,8 +4,8 @@ description: Configure a persistência de sessão e os tempos limite de transmis
 exl-id: d5c0bdf7-563d-4e0e-9b1b-71e2fa783e29
 source-git-commit: 9f7464b78da9615bf6966e34eb129150a481fb5f
 workflow-type: tm+mt
-source-wordcount: '190'
-ht-degree: 13%
+source-wordcount: '191'
+ht-degree: 16%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 13%
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_brandconcierge"
 >title="Brand Concierge"
->abstract="Configurações ao usar o Brand Concierge na sua propriedade."
+>abstract="Configurações ao usar o Brand Concierge na propriedade."
 
 A seção **[!UICONTROL Brand Concierge]** permite controlar como as sessões de chat do Brand Concierge se comportam na extensão de tag da Web SDK.
 
@@ -28,11 +28,11 @@ A seção **[!UICONTROL Brand Concierge]** permite controlar como as sessões de
 1. Navegue até **[!UICONTROL Extensions]** e selecione **[!UICONTROL Configure]** no cartão [!UICONTROL Adobe Experience Platform Web SDK].
 1. Role até a seção **[!UICONTROL Brand Concierge]**.
 
-As opções disponíveis são as seguintes:
+As seguintes opções estão disponíveis:
 
 ## [!UICONTROL Sticky conversation session]
 
-Uma caixa de seleção que mantém sessões do Brand Concierge em carregamentos de página usando um cookie de sessão. Essa opção está desativada por padrão. Consulte [`conversation`](/help/collection/js/commands/configure/conversation.md) na documentação da biblioteca do JavaScript para obter orientação sobre como configurar esse valor.
+Uma caixa de seleção que mantém sessões do Brand Concierge em carregamentos de página usando um cookie de sessão. Essa opção está desabilitada por padrão. Consulte [`conversation`](/help/collection/js/commands/configure/conversation.md) na documentação da biblioteca do JavaScript para obter orientação sobre como configurar esse valor.
 
 ## [!UICONTROL Stream timeout (seconds)]
 

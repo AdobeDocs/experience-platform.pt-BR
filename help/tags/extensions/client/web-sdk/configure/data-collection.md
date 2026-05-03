@@ -1,20 +1,20 @@
 ---
-title: Definições de configuração da coleta de dados
+title: Configuração da coleção de dados
 description: Defina as configurações da coleção de dados na extensão de tag do Web SDK.
 exl-id: 88c34545-9a58-4d49-a939-36edaa9a46be
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '719'
-ht-degree: 1%
+source-wordcount: '722'
+ht-degree: 4%
 
 ---
 
-# Definições de configuração da coleta de dados {#data-collection}
+# Configuração da coleção de dados {#data-collection}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_datacollection"
 >title="Coleção de dados"
->abstract="Determine quais dados coletar e como esses dados são coletados na extensão de tag."
+>abstract="Determine quais e como os dados são coletados na extensão de tag."
 
 Esta seção de configuração permite determinar como os dados são coletados na extensão.
 

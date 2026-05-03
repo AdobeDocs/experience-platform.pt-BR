@@ -1,20 +1,20 @@
 ---
-title: Configurações de substituição de configuração da sequência de dados
+title: Definições de substituição da configuração da sequência de dados
 description: Modifique as configurações quando determinadas condições forem atendidas.
 exl-id: 68227148-3d74-4807-836c-14acd8a9c1dc
 source-git-commit: 6c05d8abde0e4d6b07fe37d6e3eacd5d3dd67ec2
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 3%
+source-wordcount: '611'
+ht-degree: 10%
 
 ---
 
-# Configurações de substituição de configuração da sequência de dados {#config-overrides}
+# Definições de substituição da configuração da sequência de dados {#config-overrides}
 
 >[!CONTEXTUALHELP]
 >id="platform_tags_websdk_overrides"
 >title="Substituições de configuração da sequência de dados"
->abstract="Acione condicionalmente diferentes comportamentos de sequência de dados sem precisar de uma sequência de dados separada. Definir qualquer substituição de configuração da sequência de dados do lado do cliente para um ambiente nesta seção substitui qualquer configuração e regra de sequência de dados dinâmicas do lado do servidor para esse ambiente."
+>abstract="Acione comportamentos diferentes do fluxo de dados de forma condicional, sem a necessidade de uma sequência de dados separada. Definir substituições de configuração de sequência de dados no lado do cliente para um ambiente nesta seção substitui qualquer configuração dinâmica no lado do servidor e as regras desse ambiente."
 
 As substituições de fluxos de dados permitem definir configurações adicionais para seus fluxos de dados, que são transmitidos para a Edge Network por meio da Web SDK. Esse recurso ajuda você a acionar condicionalmente diferentes comportamentos de sequência de dados sem criar uma nova sequência de dados ou modificar as configurações existentes.
 

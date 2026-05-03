@@ -2,55 +2,55 @@
 title: Preparo de dados para a coleção de dados
 description: Saiba como mapear seus dados para um esquema de evento do Experience Data Model (XDM) ao configurar uma sequência de dados para os SDKs da web e móvel da Adobe Experience Platform.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: bdcea238740661b453032bbab3ec7e414efd63e3
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '1167'
-ht-degree: 41%
+source-wordcount: '1143'
+ht-degree: 29%
 
 ---
 
 # Preparo de dados para a coleção de dados
 
-Preparo de dados é um serviço da Adobe Experience Platform que você pode usar para mapear, transformar e validar dados de e para o [Experience Data Model (XDM)](../xdm/home.md). Ao configurar uma [sequência de dados](./overview.md) habilitada para Experience Platform, você pode usar os recursos de Preparo de Dados para mapear os dados de origem no XDM ao enviá-los para o Experience Platform Edge Network.
+Use o [!DNL Data Prep], um serviço do [!DNL Adobe Experience Platform], para mapear, transformar e validar dados de e para o [Experience Data Model (XDM)](/help/xdm/home.md). Ao configurar uma [sequência de dados](/help/datastreams/overview.md) habilitada para Experience Platform, você pode usar os recursos do [!DNL Data Prep] para mapear os dados de origem no XDM ao enviá-los para o [!DNL Adobe Experience Platform Edge Network].
 
 Todos os dados enviados de uma página da Web devem chegar ao Experience Platform como XDM. Há três maneiras de traduzir dados de uma camada de dados na página para o XDM aceito pelo Experience Platform:
 
 1. Reformate a camada de dados no XDM na própria página da Web.
-2. Use a funcionalidade de elementos de dados nativos das tags para reformatar o formato de camada de dados existente de uma página da Web no XDM.
-3. Reformate o formato da camada de dados existente de uma página da Web no XDM por meio do Edge Network, usando o Preparo de dados para coleção de dados.
+2. Use a funcionalidade de elementos de dados internos [!DNL Tags] para reformatar o formato de camada de dados existente de uma página da Web no XDM.
+3. Reformate o formato da camada de dados existente de uma página da Web no XDM por meio do [!DNL Edge Network], usando o Preparo de Dados para Coleta de Dados.
 
-Este guia foca na 3ª opção.
+Este guia aborda a terceira opção.
 
 ## Quando usar o Preparo de dados para a coleção de dados {#when-to-use-data-prep}
 
-Há dois casos de uso em que o Preparo de dados para a coleção de dados é útil:
+O Preparo de dados para a coleção de dados é útil em duas situações:
 
-1. O site tem uma camada de dados bem formada, controlada e mantida, e há uma preferência por enviá-la diretamente para o Edge Network em vez de usar a manipulação do JavaScript para convertê-la em XDM na página (por meio de elementos de dados de tags ou por manipulação manual do JavaScript).
-2. Um sistema de marcação diferente de Tags é implantado no site.
+1. O site tem uma camada de dados bem formada, controlada e mantida, e você prefere enviá-la diretamente para o [!DNL Edge Network] em vez de usar a manipulação do JavaScript para convertê-la em XDM na página (por meio de elementos de dados [!DNL Tags] ou por manipulação manual do JavaScript).
+2. Um sistema de marcação diferente de [!DNL Tags] está implantado no site.
 
-## Enviar uma camada de dados existente para a Edge Network por meio do SDK da Web {#send-datalayer-via-websdk}
+## Enviar uma camada de dados existente para a Edge Network via Web SDK {#send-datalayer-via-websdk}
 
 A camada de dados existente deve ser enviada usando o objeto [`data`](/help/collection/js/commands/sendevent/data.md) dentro do comando `sendEvent`.
 
-Se você estiver usando Marcas, deverá usar o campo **[!UICONTROL Data]** do tipo de ação [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
+Se você estiver usando [!DNL Tags], deverá usar o campo **[!UICONTROL Data]** do tipo de ação [**[!UICONTROL Send Event]**](/help/tags/extensions/client/web-sdk/actions/send-event.md).
 
-O restante deste guia enfocará como mapear a camada de dados para padrões XDM após ter sido enviada pelo WebSDK.
+O restante deste guia aborda como mapear a camada de dados para padrões XDM após ela ser enviada pelo Web SDK.
 
 >[!NOTE]
 >
->Para obter uma orientação abrangente sobre todos os recursos do Preparo de dados, incluindo funções de transformação para campos calculados, consulte a seguinte documentação:
+>Para obter orientação abrangente sobre todos os recursos do [!DNL Data Prep], incluindo funções de transformação para campos calculados, consulte a documentação a seguir:
 >
->* [Visão geral do Preparo de dados](../data-prep/home.md)
->* [Funções de mapeamento do Preparo de dados](../data-prep/functions.md)
->* [Manuseio de formatos de dados com o Preparo de dados](../data-prep/data-handling.md)
+>* [Visão geral do Preparo de dados](/help/data-prep/home.md)
+>* [Funções de mapeamento do Preparo de dados](/help/data-prep/functions.md)
+>* [Manuseio de formatos de dados com o Preparo de dados](/help/data-prep/data-handling.md)
 
-Este guia aborda como mapear seus dados na interface. Para acompanhar as etapas, inicie o processo de criação de uma sequência de dados até (e incluindo) a [etapa de configuração básica](./overview.md#create).
+Este guia aborda como mapear seus dados na interface. Para concluir as etapas, inicie o processo de criação de uma sequência de dados até (e incluindo) a [etapa de configuração básica](/help/datastreams/configure.md#create).
 
-Para obter uma demonstração rápida do processo de preparo de dados para a coleção de dados, assista ao vídeo a seguir:
+Para obter uma demonstração rápida do processo de Preparação de dados para coleção de dados, assista ao vídeo a seguir:
 
->[!VIDEO](https://video.tv.adobe.com/v/345568?captions=por_br&quality=12&enable10seconds=on&speedcontrol=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342120?quality=12&enable10seconds=on&speedcontrol=on)
 
-## [!UICONTROL Select data] {#select-data}
+## Fornecer dados de amostra {#select-data}
 
 Selecione **[!UICONTROL Save and Add Mapping]** depois de concluir a configuração básica para uma sequência de dados, e a etapa **[!UICONTROL Select data]** é exibida. Aqui, você deve fornecer um objeto JSON de amostra que represente a estrutura dos dados que planeja enviar para o Experience Platform.
 
@@ -158,9 +158,9 @@ Você pode selecionar a opção para fazer upload do objeto como um arquivo ou c
 
 >[!NOTE]
 >
->Use um objeto JSON de amostra que represente cada elemento de camada de dados que pode ser usado em qualquer página. Por exemplo, nem todas as páginas usam elementos de camada de dados do carrinho de compras. No entanto, os elementos da camada de dados do carrinho de compras devem ser incluídos nesta amostra de objeto JSON.
+>Use um objeto JSON de amostra que represente cada elemento de camada de dados que pode ser usado em qualquer página. Por exemplo, nem todas as páginas usam elementos de camada de dados do carrinho de compras. No entanto, inclua elementos da camada de dados do carrinho de compras neste objeto JSON de amostra.
 
-## [!UICONTROL Mapping]
+## Mapear seus dados {#mapping}
 
 A etapa **[!UICONTROL Mapping]** é exibida, permitindo mapear os campos nos dados de origem para o esquema de evento de destino no Experience Platform. Aqui, é possível configurar o mapeamento de duas maneiras:
 
@@ -169,7 +169,7 @@ A etapa **[!UICONTROL Mapping]** é exibida, permitindo mapear os campos nos dad
 
 >[!IMPORTANT]
 >
->O mapeamento do Preparo de dados substitui `identityMap` cargas XDM, o que pode afetar ainda mais a correspondência de perfis em relação aos públicos da Real-Time CDP.
+>O mapeamento [!DNL Data Prep] substitui `identityMap` cargas XDM, o que pode afetar ainda mais a correspondência de perfis em [!DNL Real-Time CDP] públicos-alvo.
 
 ### Criar regras de mapeamento {#create-mapping}
 
@@ -177,11 +177,11 @@ Para criar uma regra de mapeamento, selecione **[!UICONTROL Add new mapping]**.
 
 ![Adicionando um novo mapeamento.](assets/data-prep/add-new-mapping.png)
 
-Selecione o ícone de origem (![Ícone de origem](/help/images/icons/source.png)) e, na caixa de diálogo exibida, selecione o campo de origem que deseja mapear na tela fornecida. Depois de escolher um campo, use o botão **[!UICONTROL Select]** para continuar.
+Selecione o ícone de origem (![ícone do seletor de campos do Source](/help/images/icons/source.png)) e, na caixa de diálogo exibida, selecione o campo de origem que você deseja mapear na tela fornecida. Depois de escolher um campo, use o botão **[!UICONTROL Select]** para continuar.
 
 ![Selecionando o campo a ser mapeado no esquema de origem.](assets/data-prep/source-mapping.png)
 
-Em seguida, selecione o ícone de esquema (![Ícone de esquema](/help/images/icons/schema.png)) para abrir uma caixa de diálogo semelhante para o esquema de evento de destino. Escolha o campo para o qual você deseja mapear os dados antes de confirmar com **[!UICONTROL Select]**.
+Em seguida, selecione o ícone de esquema (![ícone do seletor de esquema de destino](/help/images/icons/schema.png)) para abrir uma caixa de diálogo semelhante para o esquema de evento de destino. Escolha o campo para o qual você deseja mapear os dados antes de confirmar com **[!UICONTROL Select]**.
 
 ![Selecionando o campo a ser mapeado no esquema de destino.](assets/data-prep/target-mapping.png)
 
@@ -213,7 +213,7 @@ Na caixa de diálogo exibida, selecione a sequência de dados cujas regras de ma
 
 >[!NOTE]
 >
->As sequências de dados só podem ser importadas dentro da mesma [sandbox](../sandboxes/home.md). Em outras palavras, não é possível importar uma sequência de dados de uma sandbox para outra.
+>As sequências de dados só podem ser importadas dentro da mesma [sandbox](/help/sandboxes/home.md). Não é possível importar um fluxo de dados de uma sandbox para outra.
 
 A próxima tela mostra uma visualização das regras de mapeamento salvas para a sequência de dados selecionada. Verifique se os mapeamentos exibidos são o que você espera e selecione **[!UICONTROL Import]** para confirmar e adicionar os mapeamentos ao novo fluxo de dados.
 
@@ -223,14 +223,14 @@ A próxima tela mostra uma visualização das regras de mapeamento salvas para a
 >
 >Se algum campo de origem das regras de mapeamento importadas não estiver incluído nos dados JSON de amostra que você [forneceu anteriormente](#select-data), esses mapeamentos de campo não serão incluídos na importação.
 
-### Concluir o mapeamento
+### Concluir o mapeamento {#complete-mapping}
 
-Para continuar, siga as etapas acima para mapear o restante dos campos para o esquema de destino. Embora não seja necessário mapear todos os campos de origem disponíveis, todos os campos no esquema de destino definidos como obrigatório devem ser mapeados para concluir esta etapa. O contador **[!UICONTROL Required fields]** indica quantos campos obrigatórios ainda não estão mapeados na configuração atual.
+Continue mapeando os campos restantes para o schema de destino. Embora não seja necessário mapear todos os campos de origem disponíveis, todos os campos no esquema de destino definidos como obrigatório devem ser mapeados para concluir esta etapa. O contador **[!UICONTROL Required fields]** indica quantos campos obrigatórios ainda não estão mapeados na configuração atual.
 
 Quando a contagem de campos necessária atingir zero e você estiver satisfeito com o mapeamento, selecione **[!UICONTROL Save]** para finalizar as alterações.
 
-![Mapeamento concluído](assets/data-prep/mapping-complete.png)
+![A interface de mapeamento que mostra todos os campos obrigatórios mapeados com êxito com uma contagem de campos obrigatórios zero.](assets/data-prep/mapping-complete.png)
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
-Este guia abordou como mapear seus dados para o XDM ao configurar uma sequência de dados na interface. Se você estava seguindo o tutorial geral para sequências de dados, agora pode retornar à etapa sobre [visualizar detalhes da sequência de dados](./overview.md).
+Este guia abordou como mapear seus dados para o XDM ao configurar uma sequência de dados na interface. Se você estava seguindo o tutorial geral de sequências de dados, agora pode retornar à etapa em [exibindo detalhes da sequência de dados](/help/datastreams/overview.md).

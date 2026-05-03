@@ -2,27 +2,27 @@
 title: Criar e configurar sequências de dados
 description: Saiba como conectar a integração do SDK da Web do lado do cliente a outros produtos da Adobe e destinos de terceiros.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 696e5098ebf556bfc0fa4fc22ff637cb0835eee0
+source-git-commit: 79d724eec4903b8a3eee6f717d94fcd70a4ffcb7
 workflow-type: tm+mt
-source-wordcount: '2856'
-ht-degree: 27%
+source-wordcount: '3026'
+ht-degree: 21%
 
 ---
 
 
 # Criar e configurar sequências de dados
 
-Este documento aborda as etapas para configurar uma [sequência de dados](./overview.md) na interface.
+Este guia aborda as etapas para configurar uma [sequência de dados](/help/datastreams/overview.md) na interface.
 
-## Acessar o espaço de trabalho [!UICONTROL Datastreams]
+## Acessar o espaço de trabalho [!UICONTROL Datastreams] {#workspace}
 
-Você pode criar e gerenciar sequências de dados na interface da Coleção de dados ou na interface do Experience Platform selecionando **[!UICONTROL Datastreams]** na navegação à esquerda.
+Você pode criar e gerenciar sequências de dados na Interface da Coleção de Dados ou na Interface do Usuário [!DNL Adobe Experience Platform] selecionando **[!UICONTROL Datastreams]** na navegação à esquerda.
 
 ![Guia Fluxos de dados na Interface da Coleção de Dados.](assets/configure/datastreams-tab.png)
 
 A guia **[!UICONTROL Datastreams]** exibe uma lista de fluxos de dados existentes, incluindo seu nome amigável, ID e data da última modificação. Para [exibir seus detalhes e configurar serviços](#view-details), selecione o nome de uma sequência de dados.
 
-Para revelar mais opções para uma sequência de dados específica, selecione o ícone &quot;mais&quot; (**...**). Para atualizar a [configuração básica](#configure) da sequência de dados, selecione **[!UICONTROL Edit]**. Para remover a sequência de dados, selecione **[!UICONTROL Delete]**.
+Para revelar mais opções para uma sequência de dados específica, selecione o ícone de mais (**...**). Para atualizar a [configuração básica](#configure) da sequência de dados, selecione **[!UICONTROL Edit]**. Para remover a sequência de dados, selecione **[!UICONTROL Delete]**.
 
 ![Opções para editar ou excluir uma sequência de dados existente.](assets/configure/edit-datastream.png)
 
@@ -34,7 +34,7 @@ Para criar uma sequência de dados, comece selecionando **[!UICONTROL New Datast
 
 O fluxo de trabalho de criação de sequência de dados é exibido, iniciando na etapa de configuração. Aqui, você deve fornecer um nome e uma descrição opcional para a sequência de dados.
 
-Se você configurar uma sequência de dados para uso no Experience Platform e também usar a Web SDK, também deverá selecionar um [esquema do Experience Data Model (XDM) baseado em eventos](../xdm/classes/experienceevent.md) para representar os dados que você planeja assimilar.
+Se você configurar uma sequência de dados para uso no Experience Platform e também usar a Web SDK, também deverá selecionar um [esquema do Experience Data Model (XDM) baseado em eventos](/help/xdm/classes/experienceevent.md) para representar os dados que você planeja assimilar.
 
 ![Configuração básica para uma sequência de dados.](assets/configure/configure.png)
 
@@ -51,7 +51,7 @@ Expanda a seção **[!UICONTROL Geolocation and network lookup]** para definir a
 | [!UICONTROL Geo Lookup] | Habilita pesquisas de geolocalização para as opções selecionadas com base no endereço IP do visitante. As opções disponíveis incluem: <ul><li>**País**: Popula `xdm.placeContext.geo.countryCode`</li><li>**Código Postal**: Preenche `xdm.placeContext.geo.postalCode`</li><li>**Estado/Província**: Popula `xdm.placeContext.geo.stateProvince`</li><li>**DMA**: preenche `xdm.placeContext.geo.dmaID`</li><li>**Cidade**: Popula `xdm.placeContext.geo.city`</li><li>**Latitude**: preenche `xdm.placeContext.geo._schema.latitude`</li><li>**Longitude**: Preenche `xdm.placeContext.geo._schema.longitude`</li></ul>Selecionar **[!UICONTROL City]**, **[!UICONTROL Latitude]** ou **[!UICONTROL Longitude]** fornece coordenadas com até dois pontos decimais, independentemente de quais outras opções estão selecionadas. Esta é considerada granularidade no nível da cidade.<br> <br>Se nenhuma opção for selecionada, as pesquisas de geolocalização serão desabilitadas. A geolocalização ocorre antes de [!UICONTROL IP Obfuscation], o que significa que ela não é afetada pela configuração [!UICONTROL IP Obfuscation]. |
 | [!UICONTROL Network Lookup] | Ativa pesquisas de rede para as opções selecionadas com base no endereço IP do visitante. As opções disponíveis incluem: <ul><li>**Operadora De Celular**: Preenche `xdm.environment.carrier`</li><li>**Domínio**: Popula `xdm.environment.domain`</li><li>**ISP**: preenche `xdm.environment.ISP`</li><li>**Tipo de Conexão**: Popula `xdm.environment.connectionType`</li></ul> |
 
-Se você habilitar qualquer um dos campos acima para coleta de dados, certifique-se de definir corretamente a propriedade de matriz [`context`](/help/collection/js/commands/configure/context.md) ao configurar o Web SDK.
+Se você habilitar qualquer um desses campos para a coleta de dados, defina corretamente a propriedade de matriz [`context`](/help/collection/js/commands/configure/context.md) ao configurar o Web SDK.
 
 Os campos de pesquisa de localização geográfica usam a cadeia de caracteres de matriz `context` `"placeContext"`, enquanto os campos de pesquisa de rede usam a cadeia de caracteres de matriz `context` `"environment"`.
 
@@ -75,17 +75,17 @@ Expanda a seção **[!UICONTROL Device Lookup]** para definir as configurações
 | **[!UICONTROL Use device lookup to collect the following information]** | Selecione esta opção se quiser coletar uma ou mais das seguintes informações específicas do dispositivo: <ul><li>Informações de **[!UICONTROL Device]**:<ul><li>**Fabricante do dispositivo**: preenche `xdm.device.manufacturer`</li><li>**Modelo do dispositivo**: preenche `xdm.device.modelNumber`</li><li>**Nome do marketing**: preenche `xdm.device.model`</li></ul></li><li>Informações de **[!UICONTROL Hardware]**: <ul><li>**Tipo de hardware**: preenche `xdm.device.type`</li><li>**Altura de exibição**: preenche `xdm.device.screenHeight`</li><li>**Largura de exibição**: preenche `xdm.device.screenWidth`</li><li>**Intensidade de cor de exibição**: preenche `xdm.device.colorDepth`</li></ul></li><li>Informações de **[!UICONTROL Browser]**: <ul><li>**Fornecedor do navegador**: preenche `xdm.environment.browserDetails.vendor`</li><li>**Nome do navegador**: preenche `xdm.environment.browserDetails.name`</li><li>**Versão do navegador**: preenche `xdm.environment.browserDetails.version`</li></ul></li><li>Informações de **[!UICONTROL Operating system]**: <ul><li>**Fornecedor do sistema operacional**: preenche `xdm.environment.operatingSystemVendor`</li><li>**Nome do sistema operacional**: preenche `xdm.environment.operatingSystem`</li><li>**Versão do sistema operacional**: preenche `xdm.environment.operatingSystemVersion`</li></ul></li></ul>As informações de pesquisa de dispositivo não podem ser coletadas junto com o agente do usuário e as dicas do cliente. Optar por coletar informações do dispositivo desativa a coleta de agentes do usuário e dicas do cliente, e vice-versa. |
 | **[!UICONTROL Do not collect any device information]** | Selecione esta opção se não quiser coletar informações de pesquisa de dispositivo. Nenhum dado de dispositivo, hardware, navegador, sistema operacional, agente do usuário ou dica do cliente é coletado. |
 
-Se você habilitar qualquer um dos campos acima para coleta de dados, certifique-se de definir corretamente a propriedade de matriz [`context`](/help/collection/js/commands/configure/context.md) ao configurar o Web SDK.
+Se você habilitar qualquer um desses campos para a coleta de dados, defina corretamente a propriedade de matriz [`context`](/help/collection/js/commands/configure/context.md) ao configurar o Web SDK.
 
-As informações de dispositivo e hardware usam a cadeia de caracteres de matriz `context`, enquanto as informações do navegador e do sistema operacional usam a cadeia de caracteres de matriz `"device"` `context`.`"environment"`
+As informações de dispositivo e hardware usam a cadeia de caracteres de matriz `"device"`, enquanto as informações do navegador e do sistema operacional usam a cadeia de caracteres de matriz `context` `"environment"`.`context`
 
 Além disso, verifique se cada campo XDM desejado existe no esquema. Caso contrário, você pode adicionar o grupo de campos `Environment Details` fornecido pela Adobe ao esquema.
 
 ### Configurar opções avançadas {#advanced-options}
 
-Para revelar as opções de configuração avançadas, selecione **[!UICONTROL Advanced Options]**. Aqui, você pode definir configurações adicionais de sequência de dados, como ofuscação de IP, cookies de ID primária e muito mais.
+Para acessar as opções de configuração avançadas, selecione **[!UICONTROL Advanced Options]**. Aqui, você pode definir configurações adicionais de sequência de dados, como ofuscação de IP, cookies de ID primária e muito mais.
 
-![Opções de configuração avançada](assets/configure/advanced-settings.png)
+![Painel de opções de configuração avançada de sequência de dados mostrando ofuscação de IP, Cookie de ID primário e outras configurações.](assets/configure/advanced-settings.png)
 
 >[!IMPORTANT]
 >
@@ -95,19 +95,19 @@ Para revelar as opções de configuração avançadas, selecione **[!UICONTROL A
 
 | Configuração | Descrição |
 | --- | --- |
-| [!UICONTROL IP Obfuscation] | Indica o tipo de ofuscação de IP a ser aplicada à sequência de dados. Qualquer processamento baseado no IP do cliente é afetado pela configuração de ofuscação de IP. Isso inclui todos os serviços da Experience Cloud que recebem dados do seu fluxo de dados. A ofuscação de IP ocorre antes que os eventos sejam enviados para qualquer serviço downstream, como o Preparo de dados. <p>Opções disponíveis:</p> <ul><li>**[!UICONTROL None]**: Desabilita ofuscação de IP. O endereço IP completo do usuário é enviado por meio do fluxo de dados.</li><li>**[!UICONTROL Partial]**: Para endereços IPv4, ofusca o último octeto do endereço IP do usuário. Para endereços IPv6, ofusca os últimos 80 bits do endereço. <p>Exemplos:</p> <ul><li>ipv4: `1.2.3.4` -> `1.2.3.0`</li><li>ipv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Full]**: Ofusca todo o endereço IP. <p>Exemplos:</p> <ul><li>ipv4: `1.2.3.4` -> `0.0.0.0`</li><li>ipv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> Impacto da ofuscação de IP em outros produtos da Adobe: <ul><li>**Adobe Target**: o nível de sequência de dados [!UICONTROL IP obfuscation] é aplicado antes de [!UICONTROL IP obfuscation] ser executado no Adobe Target, a todos os endereços IP presentes na solicitação. Por exemplo, se a opção de nível de sequência de dados [!UICONTROL IP obfuscation] estiver definida como **[!UICONTROL Full]** e a opção de ofuscação de IP do Adobe Target estiver definida como **[!UICONTROL Last octet obfuscation]**, o Adobe Target receberá um IP totalmente ofuscado. Se a opção de nível de sequência de dados [!UICONTROL IP obfuscation] estiver definida como **[!UICONTROL Partial]** e a opção de ofuscação de IP do Adobe Target estiver definida como **[!UICONTROL Full]**, o Adobe Target receberá um IP parcialmente ofuscado e aplicará a ofuscação completa a ele. A ofuscação de IP do Adobe Target é gerenciada independentemente da sequência de dados. Consulte a documentação do Adobe Target sobre [ofuscação de IP](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/privacy.html?lang=pt-BR) e [geolocalização](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=pt-BR) para obter mais detalhes.</li><li>**Audience Manager**: a configuração [!UICONTROL IP obfuscation] de nível de sequência de dados é aplicada antes de [!UICONTROL IP obfuscation] ser executada no Audience Manager, a todos os endereços IP presentes na solicitação. Qualquer pesquisa de localização geográfica feita pelo Audience Manager é afetada pela opção [!UICONTROL IP obfuscation] no nível de sequência de dados. Uma pesquisa de geolocalização no Audience Manager, com base em um IP totalmente ofuscado, resulta em uma região desconhecida e quaisquer segmentos baseados nos dados de geolocalização resultantes não são realizados. Consulte a documentação do Audience Manager sobre [ofuscação de IP](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html?lang=pt-BR) para obter mais detalhes.</li><li>**Adobe Analytics**: se a configuração de ofuscação de IP no nível de sequência de dados estiver definida como **[!UICONTROL Full]**, a Adobe Analytics tratará o endereço IP como em branco. Isso afeta qualquer processamento do Analytics que dependa do endereço IP, como pesquisas de geolocalização e filtragem de IP. Para que o Analytics receba endereços IP não ofuscados ou parcialmente ofuscados, defina a configuração de ofuscação de IP como **[!UICONTROL Partial]** ou **[!UICONTROL None]**. Endereços IP parcialmente ofuscados e não ofuscados podem ser ofuscados no Analytics. Consulte a [documentação](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html?lang=pt-BR) do Adobe Analytics para obter detalhes sobre como habilitar a ofuscação de IP no Analytics. Se o endereço IP estiver totalmente ofuscado e a ocorrência da página não tiver [!DNL ECID] nem [!DNL VisitorID], o Analytics descartará a ocorrência, em vez de gerar uma [ID de Fallback](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-ids.html?lang=pt-BR), que é parcialmente baseada no endereço IP.</li><li>**Adobe Advertising**: quando a ofuscação de IP no nível de sequência de dados é definida como [!UICONTROL Partial] ou [!UICONTROL Full], os relatórios geográficos e recursos (incluindo medição e redirecionamento) são desabilitados no Advertising DSP, exceto para anúncios de TV conectados.</li></ul> |
-| [!UICONTROL First Party ID Cookie] | Quando habilitada, essa configuração orienta a rede de borda a buscar um cookie específico ao procurar uma [ID de dispositivo primária](/help/collection/identity/fpid.md), em vez de pesquisar esse valor no mapa de identidade.<br><br>Ao habilitar esta configuração, você deve fornecer o nome do cookie que deve armazenar a ID. |
+| [!UICONTROL IP Obfuscation] | Indica o tipo de ofuscação de IP a ser aplicada à sequência de dados. Qualquer processamento baseado no IP do cliente é afetado pela configuração de ofuscação de IP. Isso inclui todos os serviços da Experience Cloud que recebem dados do seu fluxo de dados. A ofuscação de IP ocorre antes que os eventos sejam enviados para qualquer serviço downstream, como o Preparo de dados. <p>Opções disponíveis:</p> <ul><li>**[!UICONTROL None]**: Desabilita ofuscação de IP. O endereço IP completo do usuário é enviado por meio do fluxo de dados.</li><li>**[!UICONTROL Partial]**: Para endereços IPv4, ofusca o último octeto do endereço IP do usuário. Para endereços IPv6, ofusca os últimos 80 bits do endereço. <p>Exemplos:</p> <ul><li>ipv4: `1.2.3.4` -> `1.2.3.0`</li><li>ipv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `2001:0db8:1345:0000:0000:0000:0000:0000`</li></ul></li><li>**[!UICONTROL Full]**: Ofusca todo o endereço IP. <p>Exemplos:</p> <ul><li>ipv4: `1.2.3.4` -> `0.0.0.0`</li><li>ipv6: `2001:0db8:1345:fd27:0000:ff00:0042:8329` -> `0:0:0:0:0:0:0:0`</li></ul></li></ul> Impacto da ofuscação de IP em outros produtos da Adobe: <ul><li>**Adobe Target**: o nível de sequência de dados [!UICONTROL IP obfuscation] é aplicado antes de [!UICONTROL IP obfuscation] ser executado no Adobe Target, a todos os endereços IP presentes na solicitação. Por exemplo, se a opção de nível de sequência de dados [!UICONTROL IP obfuscation] estiver definida como **[!UICONTROL Full]** e a opção de ofuscação de IP do Adobe Target estiver definida como **[!UICONTROL Last octet obfuscation]**, o Adobe Target receberá um IP totalmente ofuscado. Se a opção de nível de sequência de dados [!UICONTROL IP obfuscation] estiver definida como **[!UICONTROL Partial]** e a opção de ofuscação de IP do Adobe Target estiver definida como **[!UICONTROL Full]**, o Adobe Target receberá um IP parcialmente ofuscado e aplicará a ofuscação completa a ele. A ofuscação de IP do Adobe Target é gerenciada independentemente da sequência de dados. Consulte a documentação do Adobe Target sobre [ofuscação de IP](https://experienceleague.adobe.com/docs/target-dev/developer/implementation/privacy/privacy.html) e [geolocalização](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html) para obter mais detalhes.</li><li>**Audience Manager**: a configuração [!UICONTROL IP obfuscation] de nível de sequência de dados é aplicada antes de [!UICONTROL IP obfuscation] ser executada no Audience Manager, a todos os endereços IP presentes na solicitação. Qualquer pesquisa de localização geográfica feita pelo Audience Manager é afetada pela opção [!UICONTROL IP obfuscation] no nível de sequência de dados. Uma pesquisa de geolocalização no Audience Manager, com base em um IP totalmente ofuscado, resulta em uma região desconhecida e quaisquer segmentos baseados nos dados de geolocalização resultantes não são realizados. Consulte a documentação do Audience Manager sobre [ofuscação de IP](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/ip-obfuscation.html) para obter mais detalhes.</li><li>**Adobe Analytics**: se a configuração de ofuscação de IP no nível de sequência de dados estiver definida como **[!UICONTROL Full]**, a Adobe Analytics tratará o endereço IP como em branco. Isso afeta qualquer processamento do Analytics que dependa do endereço IP, como pesquisas de geolocalização e filtragem de IP. Para que o Analytics receba endereços IP não ofuscados ou parcialmente ofuscados, defina a configuração de ofuscação de IP como **[!UICONTROL Partial]** ou **[!UICONTROL None]**. Endereços IP parcialmente ofuscados e não ofuscados podem ser ofuscados no Analytics. Consulte a [documentação](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/general-acct-settings-admin.html?lang=pt-BR) do Adobe Analytics para obter detalhes sobre como habilitar a ofuscação de IP no Analytics. Se o endereço IP estiver totalmente ofuscado e a ocorrência da página não tiver [!DNL ECID] nem [!DNL VisitorID], o Analytics descartará a ocorrência, em vez de gerar uma [ID de Fallback](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/analytics-ids.html?lang=en), que é parcialmente baseada no endereço IP.</li><li>**[!DNL Adobe Advertising]**: quando a ofuscação de IP no nível de sequência de dados é definida como [!UICONTROL Partial] ou [!UICONTROL Full], os relatórios e recursos geográficos (incluindo medição e remarketing) são desabilitados no Advertising DSP, exceto para anúncios de TV conectados.</li></ul> |
+| [!UICONTROL First Party ID Cookie] | Quando habilitada, esta configuração informa o Edge Network a fazer referência a um cookie especificado ao procurar uma [ID de dispositivo próprio](/help/collection/identity/fpid.md), em vez de procurar esse valor no Mapa de Identidade.<br><br>Ao habilitar esta configuração, você deve fornecer o nome do cookie que deve armazenar a ID. |
 | [!UICONTROL Third Party ID Sync] | As sincronizações de ID podem ser agrupadas em containers para permitir que diferentes sincronizações de ID sejam executadas em momentos diferentes. Quando habilitada, essa configuração permite especificar qual container de sincronizações de ID é executado para essa sequência de dados. |
-| [!UICONTROL Third Party ID Sync Container ID] | A ID numérica do container a ser usada para a sincronização de ID de terceiros.<br><br>**Observação:** a sequência de dados faz referência à ID de Contêiner padrão do Audience Manager, que é 0. Se você tiver várias IDs de contêiner de sincronização da Audience Manager ID, trabalhe com seu consultor da Audience Manager para identificar e resolver corretamente a configuração da sincronização de ID. |
+| [!UICONTROL Third Party ID Sync Container ID] | A ID numérica do contêiner a ser usada para sincronização de ID de terceiros.<br><br>**Observação:** A sequência de dados faz referência à ID de Contêiner padrão do Audience Manager, que é 0. Se você tiver várias IDs de contêiner de sincronização da Audience Manager ID, trabalhe com seu consultor da Audience Manager para identificar e resolver corretamente a configuração da sincronização de ID. |
 | [!UICONTROL Container ID Overrides] | Nesta seção, é possível definir IDs adicionais de contêiner de sincronização de ID de terceiros que você pode usar para substituir o padrão. |
 | [!UICONTROL Access Type] | Define o tipo de autenticação que a rede de borda aceita para a sequência de dados. <ul><li>**[!UICONTROL Mixed Authentication]**: Quando esta opção é selecionada, o Edge Network aceita solicitações autenticadas e não autenticadas. Selecione esta opção quando você planeja usar o Web SDK ou o [SDK móvel](https://developer.adobe.com/client-sdks/home/), juntamente com a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/). </li><li>**[!UICONTROL Authenticated Only]**: quando esta opção é selecionada, o Edge Network aceita somente solicitações autenticadas. Selecione essa opção quando planejar usar somente a API do Edge Network e quiser impedir que solicitações não autenticadas sejam processadas pela Edge Network.</li></ul> |
-| [!UICONTROL Media Analytics] | Habilita o processamento de dados de rastreamento de streaming para a integração do Edge Network via SDKs do Experience Platform ou [API do Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/). Saiba mais sobre o Media Analytics na [documentação](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=pt-BR). |
+| [!UICONTROL Media Analytics] | Habilita o processamento de dados de rastreamento de streaming para a integração do [!DNL Edge Network] por meio de SDKs do Experience Platform ou da [API do Media Edge](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/). Saiba mais sobre o Media Analytics na [documentação](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html?lang=pt-BR). |
 
-Daqui, se você estiver configurando sua sequência de dados para o Experience Platform, siga o tutorial em [Preparação de dados para coleção de dados](./data-prep.md) para mapear seus dados para um esquema de evento do Experience Platform antes de retornar a este guia. Caso contrário, selecione **[!UICONTROL Save]** e continue para a próxima seção.
+Daqui, se você estiver configurando sua sequência de dados para o Experience Platform, siga o tutorial em [Preparação de dados para coleção de dados](/help/datastreams/data-prep.md) para mapear seus dados para um esquema de evento do Experience Platform antes de retornar a este guia. Caso contrário, selecione **[!UICONTROL Save]** e continue para a próxima seção.
 
 >[!NOTE]
 >
->Depois de salvar as alterações em uma configuração de sequência de dados, aguarde até 35 minutos para que as alterações sejam propagadas na Edge Network. Durante essa janela de propagação, as solicitações ainda podem ser atendidas com a configuração anterior.
+>Depois de salvar as alterações em uma configuração de sequência de dados, aguarde até 35 minutos para que as alterações se propaguem pela [!DNL Edge Network]. Durante essa janela de propagação, as solicitações ainda podem ser atendidas com a configuração anterior.
 
 ## Exibir detalhes da sequência de dados {#view-details}
 
@@ -115,7 +115,7 @@ Depois de configurar uma nova sequência de dados ou selecionar uma existente pa
 
 ![Página de detalhes da sequência de dados.](assets/configure/view-details.png)
 
-Na tela de detalhes da sequência de dados, é possível [adicionar serviços](#add-services) para habilitar recursos dos produtos da Adobe Experience Cloud aos quais você tem acesso. Também é possível editar a [configuração básica](#create) da sequência de dados, atualizar as [regras de mapeamento](./data-prep.md), [copiar a sequência de dados](#copy) ou excluí-la completamente.
+Na tela de detalhes da sequência de dados, é possível [adicionar serviços](#add-services) para habilitar recursos dos produtos da Adobe Experience Cloud aos quais você tem acesso. Também é possível editar a [configuração básica](#create) da sequência de dados, atualizar as [regras de mapeamento](/help/datastreams/data-prep.md), [copiar a sequência de dados](#copy) ou excluí-la completamente.
 
 ## Adicionar serviços a uma sequência de dados {#add-services}
 
@@ -135,36 +135,36 @@ As subseções abaixo descrevem as opções de configuração para cada serviço
 
 >[!NOTE]
 >
->Cada configuração de serviço contém um botão de alternância **[!UICONTROL Enabled]** que é ativado automaticamente quando o serviço é selecionado. Para desabilitar o serviço selecionado para esta sequência de dados, selecione a opção **[!UICONTROL Enabled]** novamente.
+>Cada configuração de serviço contém uma opção **[!UICONTROL Enabled]** que é ativada automaticamente quando o serviço é selecionado. Para desabilitar o serviço selecionado para esta sequência de dados, selecione **[!UICONTROL Enabled]** novamente.
 
 ### Configurações do Adobe Advertising {#advertising}
 
-Esse serviço é necessário para a integração do Adobe Advertising com o Customer Journey Analytics.
+Este serviço é necessário para a integração de [!DNL Adobe Advertising] com [!DNL Customer Journey Analytics].
 
 ### Configurações do Adobe Analytics {#analytics}
 
-Este serviço controla se e como os dados são enviados para o Adobe Analytics.
+Use este serviço para enviar dados a [!DNL Adobe Analytics].
 
 ![Configurações de sequência de dados do Adobe Analytics.](assets/configure/analytics-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
-| [!UICONTROL Report Suite ID] | **(Obrigatório)** A ID do conjunto de relatórios do Analytics para o qual você deseja enviar dados. Esta ID pode ser encontrada na interface do usuário do Adobe Analytics em [!UICONTROL Admin] > [!UICONTROL ReportSuites]. Se vários conjuntos de relatórios forem especificados, os dados serão copiados para cada um deles. |
-| [!UICONTROL Visitor ID namespace] | (Opcional) O namespace que você deseja usar para a Adobe Analytics [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=pt-BR). Ao enviar um evento com um valor especificado para esse namespace, ele será usado automaticamente como o `visitorID` no Analytics. <br> Quando o campo é preenchido, a sequência de dados envia o valor `visitorID` para a Adobe Analytics. Independentemente de a ID do visitante estar incluída no `identityMap`, o `ECID` ainda será gerado e incluído com solicitações de saída. O Analytics permite a inclusão de várias IDs. As IDs são avaliadas na ordem descrita nesta página: [Ordem de operações de identificação do Adobe Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics/implementation/id/overview#adobe-analytics-identification-order-of-operations). |
+| [!UICONTROL Report Suite ID] | **(Obrigatório)** A ID do conjunto de relatórios [!DNL Analytics] para o qual você deseja enviar dados. Esta ID pode ser encontrada na interface do usuário do [!DNL Adobe Analytics] em [!UICONTROL Admin] > [!UICONTROL ReportSuites]. Se vários conjuntos de relatórios forem especificados, os dados serão copiados para cada um deles. |
+| [!UICONTROL Visitor ID namespace] | (Opcional) O namespace que você deseja usar para a [!DNL Adobe Analytics] [visitorID](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=pt-BR). Quando você envia um evento com um valor especificado para este namespace, ele é automaticamente usado como o `visitorID` em [!DNL Analytics]. <br> Quando o campo é preenchido, a sequência de dados envia o valor `visitorID` para [!DNL Adobe Analytics]. Independentemente de a ID do visitante estar incluída no `identityMap`, o `ECID` ainda será gerado e incluído com solicitações de saída. [!DNL Analytics] dá suporte à inclusão de várias IDs. As IDs são avaliadas na ordem descrita nesta página: [Ordem de operações de identificação do Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics/implementation/id/overview#adobe-analytics-identification-order-of-operations). |
 | [!UICONTROL Report Suite Overrides] | Nesta seção, você pode adicionar outras IDs de conjunto de relatórios que podem ser usadas para substituir a padrão. |
 
-Consulte [Implementar o Adobe Analytics com o Edge Network](https://experienceleague.adobe.com/pt-br/docs/analytics/implementation/aep-edge/overview) no guia de implementação do Analytics para obter mais informações.
+Consulte [Implementar o Adobe Analytics com o Edge Network](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/overview) no guia de implementação [!DNL Analytics] para obter mais informações.
 
 ### Configurações do Adobe Audience Manager {#audience-manager}
 
-Esse serviço controla se e como os dados são enviados para o Adobe Audience Manager. Tudo o que é necessário para enviar dados ao Audience Manager é habilitar esta seção. As outras configurações são opcionais, mas são incentivadas.
+Habilite este serviço para enviar dados para [!DNL Adobe Audience Manager]. As outras configurações são opcionais, mas são incentivadas.
 
 ![Configurações de sequência de dados do Adobe Audience Manager.](assets/configure/audience-manager-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
-| [!UICONTROL Cookie Destinations Enabled] | Permite que o SDK compartilhe informações de segmento por meio dos [destinos de cookies](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html?lang=pt-BR) do [!DNL Audience Manager]. |
-| [!UICONTROL URL Destinations Enabled] | Permite que o SDK compartilhe informações de segmento por meio dos [destinos de URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html?lang=pt-BR) do [!DNL Audience Manager]. |
+| [!UICONTROL Cookie Destinations Enabled] | Habilita a SDK a compartilhar informações de segmento via [destinos de cookies](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html?lang=pt-BR) de [!DNL Audience Manager]. |
+| [!UICONTROL URL Destinations Enabled] | Habilita a SDK a compartilhar informações de segmento via [destinos de URL](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html?lang=pt-BR) de [!DNL Audience Manager]. |
 
 ### Configurações da Adobe Experience Platform {#aep}
 
@@ -172,39 +172,39 @@ Esse serviço controla se e como os dados são enviados para o Adobe Audience Ma
 >
 >Ao ativar um fluxo de dados para o Experience Platform, anote a sandbox da Experience Platform que você está usando no momento, como exibida na faixa superior da interface do usuário.
 >
->![Sandbox selecionada](assets/configure/platform-sandbox.png)
+>![O nome da sandbox selecionada exibido na faixa superior da interface do usuário do Adobe Experience Platform.](assets/configure/platform-sandbox.png)
 >
->As sandboxes são partições virtuais na Adobe Experience Platform que permitem isolar os dados e as implementações de outras pessoas em sua organização. Depois que uma sequência de dados é criada, sua sandbox não pode ser alterada. Para obter mais detalhes sobre a função das sandboxes na Experience Platform, consulte a [documentação das sandboxes](../sandboxes/home.md).
+>As sandboxes são partições virtuais em [!DNL Adobe Experience Platform] que isolam seus dados e implementações de outras pessoas em sua organização. Depois que uma sequência de dados é criada, sua sandbox não pode ser alterada. Para obter mais detalhes sobre a função das sandboxes na Experience Platform, consulte a [documentação das sandboxes](/help/sandboxes/home.md).
 
-Esse serviço controla se e como os dados são enviados para a Adobe Experience Platform.
+Use este serviço para enviar dados a [!DNL Adobe Experience Platform].
 
 ![Configurações de sequência de dados do Adobe Experience Platform.](assets/configure/platform-config.png)
 
 | Configuração | Descrição |
 |---| --- |
-| [!UICONTROL Event Dataset] | **(Obrigatório)** Selecione o conjunto de dados do Experience Platform para o qual os dados do evento do cliente serão transmitidos. Este esquema deve usar a [classe XDM ExperienceEvent](../xdm/classes/experienceevent.md). Para adicionar outros conjuntos de dados, selecione **[!UICONTROL Add Event Dataset]**. |
-| [!UICONTROL Profile Dataset] | Selecione o conjunto de dados do Experience Platform que será usado para enviar **atributos do cliente de consentimento**, **tokens de push** e **região de atividade do usuário**. Este esquema deve usar a [classe de perfil individual XDM](../xdm/classes/individual-profile.md). |
-| [!UICONTROL Offer Decisioning] | Habilita o [Offer Decisioning](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html?lang=pt-BR) para implementações do Web SDK. |
-| [!UICONTROL Edge Segmentation] | Habilita a [segmentação de borda](../segmentation/methods/edge-segmentation.md) para esta sequência de dados. Quando o Web SDK ou a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) envia dados por meio de uma sequência de dados com a segmentação de borda habilitada, todas as associações de público-alvo atualizadas para o perfil em questão são enviadas de volta na resposta.<br><br>Você pode usar esta opção em combinação com **Destinos do Personalization** para casos de uso de personalização de mesma página e próxima página por meio de [destinos de borda](../destinations/ui/activate-edge-personalization-destinations.md), [Offer Decisioning](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/decisioning/offer-decisioning/get-started-decision/starting-offer-decisioning), [Adobe Target](https://experienceleague.adobe.com/pt-br/docs/target) ou [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/ajo-home) |
-| [!UICONTROL Personalization Destinations] | Habilita o [Personalization personalizado](../destinations/catalog/personalization/custom-personalization.md) para esta sequência de dados. Quando o Web SDK ou a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) envia dados por meio de uma sequência de dados com destinos de personalização habilitados, as associações de público-alvo e os atributos de perfil mapeados (somente para solicitações autenticadas da [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/)) para o perfil em questão são enviados de volta na resposta. |
-| [!UICONTROL Adobe Journey Optimizer] | Habilita [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/ajo-home) para esta sequência de dados.<br><br>Habilitar essa opção permite que a sequência de dados retorne conteúdo personalizado de campanhas de entrada baseadas na Web e em aplicativo no Adobe Journey Optimizer.<br><br>Esta opção requer que o conjunto de dados selecionado use um esquema que inclua o **[!UICONTROL Experience Event - Proposition Interactions]** [grupo de campos](../xdm/ui/resources/schemas.md#add-field-groups). Este grupo de campos é usado para registrar todas as interações do usuário com campanhas e experiências do Adobe Journey Optimizer. |
+| [!UICONTROL Event Dataset] | **(Obrigatório)** Selecione o conjunto de dados do Experience Platform para o qual os dados do evento do cliente serão transmitidos. Este esquema deve usar a [classe XDM ExperienceEvent](/help/xdm/classes/experienceevent.md). Para adicionar outros conjuntos de dados, selecione **[!UICONTROL Add Event Dataset]**. |
+| [!UICONTROL Profile Dataset] | Selecione o conjunto de dados do Experience Platform que será usado para enviar **atributos do cliente de consentimento**, **tokens de push** e **região de atividade do usuário**. Este esquema deve usar a [classe de perfil individual XDM](/help/xdm/classes/individual-profile.md). |
+| [!UICONTROL Offer Decisioning] | Habilita a Gestão de decisões (antigo Offer Decisioning) para implementações do Web SDK. Consulte a [documentação do Gerenciamento de decisões](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/decisioning/offer-decisioning/get-started-decision/starting-offer-decisioning) para obter detalhes sobre a implementação. |
+| [!UICONTROL Edge Segmentation] | Habilita a [segmentação de borda](/help/segmentation/methods/edge-segmentation.md) para esta sequência de dados. Quando o Web SDK ou a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) envia dados por meio de uma sequência de dados com a segmentação de borda habilitada, todas as associações de público-alvo atualizadas para o perfil em questão são enviadas de volta na resposta.<br><br>Você pode usar esta opção em combinação com **Destinos do Personalization** para casos de uso de personalização de mesma página e próxima página por meio de [destinos de borda](/help/destinations/ui/activate-edge-personalization-destinations.md), Gerenciamento de Decisões, [Adobe Target](https://experienceleague.adobe.com/en/docs/target) ou [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/ajo-home). |
+| [!UICONTROL Personalization Destinations] | Habilita o [Personalization personalizado](/help/destinations/catalog/personalization/custom-personalization.md) para esta sequência de dados. Quando o Web SDK ou a [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/) envia dados por meio de uma sequência de dados com destinos de personalização habilitados, as associações de público-alvo e os atributos de perfil mapeados (somente para solicitações autenticadas da [API do Edge Network](https://developer.adobe.com/data-collection-apis/docs/api/)) para o perfil em questão são enviados de volta na resposta. |
+| [!UICONTROL Adobe Journey Optimizer] | Habilita [!DNL Adobe Journey Optimizer] para esta sequência de dados.<br><br>Habilitar esta opção permite que a sequência de dados retorne conteúdo personalizado de campanhas de entrada baseadas na Web e no aplicativo em [!DNL Adobe Journey Optimizer].<br><br>Esta opção requer que o conjunto de dados selecionado use um esquema que inclua o **[!UICONTROL Experience Event - Proposition Interactions]** [grupo de campos](/help/xdm/ui/resources/schemas.md#add-field-groups). Este grupo de campos é usado para registrar todas as interações do usuário com [!DNL Adobe Journey Optimizer] campanhas e experiências. |
 
 ### Configurações do Adobe Target {#target}
 
-Esse serviço controla se e como os dados são enviados para o Adobe Target.
+Use este serviço para enviar dados a [!DNL Adobe Target].
 
 ![Configurações de sequência de dados do Adobe Target.](assets/configure/target-config.png)
 
 | Configuração | Descrição |
 | --- | --- |
-| [!UICONTROL Property Token] | [!DNL Target] permite que os clientes controlem permissões usando propriedades. Para obter mais informações sobre propriedades, consulte o guia de [configuração de permissões empresariais](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=pt-BR) na documentação do [!DNL Target].<br><br>O token de propriedade pode ser encontrado na interface do usuário do Adobe Target em [!UICONTROL Setup] > [!UICONTROL Properties]. |
-| [!UICONTROL Target Environment ID] | Os [ambientes do Adobe Target](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=pt-BR) ajudam você a gerenciar a implementação em todos os estágios de desenvolvimento. Essa configuração especifica qual ambiente você usará com essa sequência de dados.<br><br>A prática recomendada é definir isso de forma diferente para cada um dos ambientes de `dev`, `stage` e `prod` da sequência de dados, a fim de simplificar as coisas. No entanto, se você já tiver ambientes do Adobe Target definidos, poderá usá-los. |
-| [!UICONTROL Target Third Party ID namespace] | O namespace de identidade do `mbox3rdPartyId` que você deseja usar para esta sequência de dados. Se você usar uma integração do [!DNL Customer Attributes] com o Adobe Target ou usar o `thirdPartyId` para atualizar ou criar perfis por meio da [API de Perfis do Adobe Target](https://experienceleague.adobe.com/pt-br/docs/target-dev/developer/api/profile-apis/profiles-api), deverá fornecer um valor de namespace de sua escolha. Você deve usar esse namespace na seção `IdentityMap` do esquema XDM para enviar o `customerID` ou `thirdPartyId` usado em seus carregamentos de arquivo de Atributos do cliente ou em suas chamadas de API de Atualização de perfil. |
+| [!UICONTROL Property Token] | [!DNL Target] permite que os clientes controlem permissões usando propriedades. Para obter mais informações sobre propriedades, consulte o guia de [configuração de permissões empresariais](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=pt-BR) na documentação do [!DNL Target].<br><br>O token de propriedade pode ser encontrado na interface do usuário [!DNL Adobe Target] em [!UICONTROL Setup] > [!UICONTROL Properties]. |
+| [!UICONTROL Target Environment ID] | Os [ambientes do Adobe Target](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=pt-BR) ajudam você a gerenciar a implementação em todos os estágios de desenvolvimento. Essa configuração especifica qual ambiente você usará com essa sequência de dados.<br><br>A prática recomendada é definir isso de forma diferente para cada um dos ambientes de sequência de dados do `dev`, `stage` e `prod` para evitar erros de configuração. No entanto, se você já tiver [!DNL Adobe Target] ambientes definidos, poderá usá-los. |
+| [!UICONTROL Target Third Party ID namespace] | O namespace de identidade do `mbox3rdPartyId` que você deseja usar para esta sequência de dados. Se você usar uma integração do [!DNL Customer Attributes] com o [!DNL Adobe Target] ou usar o `thirdPartyId` para atualizar ou criar perfis por meio da [API de Perfis do Adobe Target](https://experienceleague.adobe.com/en/docs/target-dev/developer/api/profile-apis/profiles-api), deverá fornecer um valor de namespace de sua escolha. Você deve usar esse namespace na seção `IdentityMap` do esquema XDM para enviar o `customerID` ou `thirdPartyId` usado em seus carregamentos de arquivo de Atributos do cliente ou em suas chamadas de API de Atualização de perfil. |
 | [!UICONTROL Property Token Overrides] | Nesta seção, você pode definir tokens de propriedade adicionais que podem ser usados para substituir o padrão. |
 
-### Configurações de [!UICONTROL Event Forwarding]
+### Configurações de [!UICONTROL Event Forwarding] {#event-forwarding}
 
-Este serviço controla se e como os dados são enviados para o [encaminhamento de eventos](../tags/ui/event-forwarding/overview.md).
+Use este serviço para enviar dados para [encaminhamento de eventos](/help/tags/ui/event-forwarding/overview.md).
 
 ![Seção de encaminhamento de eventos da tela de configuração da sequência de dados.](assets/configure/event-forwarding-config.png)
 
@@ -223,9 +223,9 @@ Este serviço controla se e como os dados são enviados para o [encaminhamento d
 
 >[!NOTE]
 >
->As sequências de dados só podem ser copiadas na mesma [sandbox](../sandboxes/home.md). Em outras palavras, não é possível copiar uma sequência de dados de uma sandbox para outra.
+>As sequências de dados só podem ser copiadas na mesma [sandbox](/help/sandboxes/home.md). Não é possível copiar um fluxo de dados de uma sandbox para outra.
 
-Na página principal do espaço de trabalho [!UICONTROL Datastreams], selecione as reticências (**....**) para a sequência de dados em questão, selecione **[!UICONTROL Copy]**.
+Na página principal do espaço de trabalho [!UICONTROL Datastreams], selecione as reticências (**...**) para a sequência de dados em questão, selecione **[!UICONTROL Copy]**.
 
 ![Imagem mostrando a opção Copiar selecionada na exibição de lista da sequência de dados.](assets/configure/copy-datastream-list.png)
 
@@ -239,6 +239,6 @@ Uma caixa de diálogo de confirmação é exibida, solicitando que você forneç
 
 A página principal do espaço de trabalho [!UICONTROL Datastreams] reaparece com o novo fluxo de dados listado.
 
-## Próximas etapas
+## Próximas etapas {#next-steps}
 
-Este manual abordou como gerenciar sequências de dados na interface da coleção de dados. Para obter mais informações sobre como instalar e configurar o Web SDK após configurar uma sequência de dados, consulte [Introdução à extensão de tag da Web SDK](../tags/extensions/client/web-sdk/getting-started.md).
+Este manual abordou como gerenciar sequências de dados na interface da coleção de dados. Para obter mais informações sobre como instalar e configurar o Web SDK após configurar uma sequência de dados, consulte [Introdução à [!DNL Web SDK] extensão de tag](/help/tags/extensions/client/web-sdk/getting-started.md).

@@ -4,17 +4,17 @@ solution: Experience Platform
 title: Visão geral da preparação de dados
 description: Este documento apresenta o Preparo de dados na Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4df6f85701f2a509b3f9c7ceddb8d002dd81c6f0
 workflow-type: tm+mt
-source-wordcount: '790'
-ht-degree: 0%
+source-wordcount: '800'
+ht-degree: 3%
 
 ---
 
 
 # Visão geral do Preparo de dados
 
-O Preparo de dados permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM). O Preparo de dados é exibido como uma etapa de &quot;Mapa&quot; nos processos de Assimilação de dados, incluindo o fluxo de trabalho Assimilação de CSV. Os engenheiros de dados podem usar o Preparo de dados para executar a seguinte manipulação de dados durante a assimilação:
+A preparação de dados permite que os engenheiros de dados mapeiem, transformem e validem dados de e para o Experience Data Model (XDM). O Preparo de dados é exibido como uma etapa de &quot;Mapa&quot; nos processos de Assimilação de dados, incluindo o fluxo de trabalho Assimilação de CSV. Os engenheiros de dados podem usar o Preparo de dados para executar a seguinte manipulação de dados durante a assimilação:
 
 - Definir mapeamentos de passagem simples para atribuir atributos de entrada a atributos XDM
 - Criar campos calculados para realizar cálculos em linha que podem ser atribuídos a atributos XDM
@@ -42,7 +42,20 @@ Para saber mais sobre campos calculados, leia o [guia de campos calculados](./fu
 
 ### Evitar caracteres especiais {#escape-special-characters}
 
-Você pode escapar caracteres especiais em um campo usando `${...}`. No entanto, arquivos JSON que contêm campos com um ponto (`.`) não são suportados por esse mecanismo. Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deverá usar uma barra invertida (`\`) para usar escape em caracteres especiais. Por exemplo, `address` é um objeto que contém o atributo `street.name`, ele pode ser chamado de `address.street\.name` em vez de `address.street.name`.
+Você pode escapar caracteres especiais em um campo usando `${...}`. No entanto, arquivos JSON que contêm campos com um ponto (`.`) não são suportados por esse mecanismo.
+
+Ao interagir com hierarquias, se um atributo filho tiver um ponto (`.`), você deverá usar uma barra invertida (`\`) para usar escape em caracteres especiais. Por exemplo, o seguinte `address` é um objeto que contém o atributo `street.name`:
+
+```json
+{ 
+  "address": 
+      { 
+        "street.name": "myId" 
+      }
+}
+```
+
+Para referenciar este campo em um mapeamento, você deve usar `${address.street\.name}`.
 
 ## Conjunto de mapeamentos
 

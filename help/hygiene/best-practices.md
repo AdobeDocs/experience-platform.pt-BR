@@ -2,9 +2,9 @@
 title: Práticas recomendadas para gerenciamento avançado do ciclo de vida dos dados
 description: Saiba como gerenciar com eficiência as solicitações de higiene de dados no Adobe Experience Platform usando a interface do usuário do gerenciamento avançado do ciclo de vida dos dados e a API de higiene de dados. Este guia aborda as práticas recomendadas, como maximizar identidades por solicitação, especificar conjuntos de dados individuais e estar atento à limitação da API para evitar lentidão. O documento inclui diretrizes para a configuração da limpeza automática do conjunto de dados, como monitorar os status das ordens de serviço e métodos detalhados de recuperação de resposta. Siga estas práticas para simplificar o processamento de solicitações e otimizar os tempos de resposta.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '771'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Este guia requer uma compreensão funcional do espaço de trabalho do Ciclo de V
 
 ## Diretrizes de criação da ordem de serviço {#work-order-creation-guidelines}
 
-Você pode usar o ponto de extremidade `/workorder` na API da higiene de dados para gerenciar programaticamente solicitações de exclusão de registros no Experience Platform. Com esse endpoint, é possível criar uma solicitação de exclusão, verificar seu status ou atualizar uma solicitação existente. Consulte o [Documento de ponto de extremidade de ordem de trabalho](./api/workorder.md) para saber como executar essas ações usando a API.
+Você pode usar o ponto de extremidade `/workorder` na API da higiene de dados para gerenciar programaticamente solicitações de exclusão de registros no Experience Platform. Com esse endpoint, é possível criar uma solicitação de exclusão, verificar seu status ou atualizar uma solicitação existente. Consulte o [Documento de ponto de extremidade de ordem de trabalho](./api/workorder.md) para saber como executar essas ações usando a API. As solicitações de exclusão de registros são colocadas em lote antes do início do processamento e podem levar até 30 dias (SLA padrão) ou 15 dias (Privacy and Security Shield ou Healthcare Shield) para serem concluídas. Para obter um detalhamento completo do que acontece em cada estágio, consulte [Linhas do tempo de exclusão de registro](./home.md#record-delete-transparency).
 
 >[!TIP]
 >

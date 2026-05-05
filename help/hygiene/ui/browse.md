@@ -2,10 +2,10 @@
 title: Procurar Ordens de Serviço do Ciclo de Vida dos Dados
 description: Saiba como visualizar e gerenciar ordens de trabalho do ciclo de vida dos dados existentes na interface do usuário do Adobe Experience Platform.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 5f53720fe3d373573c24fd1847350a4ff27bf4ed
 workflow-type: tm+mt
-source-wordcount: '812'
-ht-degree: 26%
+source-wordcount: '846'
+ht-degree: 25%
 
 ---
 
@@ -86,6 +86,10 @@ Dependendo do tipo de ordem de serviço selecionada, informações e controles d
 ### Detalhes de exclusão de registro {#record-delete}
 
 Os detalhes de uma solicitação de exclusão de registro incluem o status atual e o tempo decorrido desde a solicitação. Cada solicitação também inclui uma seção **[!UICONTROL Status by service]** que fornece detalhes de status individuais sobre cada serviço downstream envolvido na exclusão. No painel direito, você pode usar controles para atualizar o nome e a descrição da ordem de serviço.
+
+>[!TIP]
+>
+>As solicitações de exclusão de registro são colocadas em lote antes do início do processamento e podem levar até 30 dias para serem concluídas no SLA padrão. Para obter um detalhamento do que acontece em cada estágio, consulte [Registrar linhas do tempo de exclusão](../home.md#record-delete-transparency).
 
 ![Imagem mostrando a página de detalhes de uma ordem de trabalho de exclusão de registro](../images/ui/browse/record-delete-details.png)
 

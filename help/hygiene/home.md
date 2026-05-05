@@ -2,9 +2,9 @@
 title: Visão geral do gerenciamento avançado do ciclo de vida dos dados
 description: O Gerenciamento avançado do ciclo de vida dos dados permite gerenciar o ciclo de vida dos dados atualizando ou removendo registros desatualizados ou imprecisos.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: fc71e61fd33fe216f8cd326b9df048958c07077a
+source-git-commit: adba9d3cd979f655f477d2d80ed3e55e96fbe486
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '877'
 ht-degree: 2%
 
 ---
@@ -35,8 +35,9 @@ A interface do usuário do [!UICONTROL Data Lifecycle] é criada com base na API
 
 >[!TIP]
 >
->Para monitorar seu uso atual em relação aos limites de cota, consulte o [Guia de referência de cota](./api/quota.md).\
->Para regras de direitos, limites mensais, linhas do tempo do SLA e políticas de tratamento de exceções, consulte a documentação [Exclusão de registros (UI)](./ui/record-delete.md#quotas) e [Ordem de trabalho (API)](./api/workorder.md#quotas).
+>Para obter mais informações de referência:
+>- Para monitorar seu uso atual em relação aos limites de cota, consulte o [Guia de referência de cota](./api/quota.md).
+>- Para regras de direito, limites mensais, linhas do tempo do SLA e políticas de tratamento de exceções, consulte o [Guia de cota de exclusão de registro (UI)](./ui/record-delete.md#quotas) e o [Guia de cota de ordem de trabalho (API)](./api/workorder.md#quotas).
 
 O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados](./ui/dataset-expiration.md) é criada:
 
@@ -46,11 +47,29 @@ O seguinte ocorre quando uma [solicitação de expiração do conjunto de dados]
 | O conjunto de dados é descartado do data lake | 1 hora | O conjunto de dados é descartado da [página de inventário do conjunto de dados](../catalog/datasets/user-guide.md) na interface. Os dados no data lake são excluídos apenas por software e permanecerão assim até o final do processo, após o qual serão excluídos com dificuldade. |
 | O conjunto de dados foi removido do serviço de perfil | 3 horas | A partir deste ponto, as operações que incluem segmentação em lote e por transmissão, pré-visualização ou estimativa, exportação e acesso à entidade não lerão mais os dados deste conjunto de dados. Os dados no serviço de perfil são excluídos por software e permanecerão assim até o final do processo, após o qual serão excluídos por hardware. |
 | Contagem de perfis e públicos atualizados | 48 horas | Depois que todos os perfis afetados forem atualizados, todos os [públicos-alvo](../segmentation/home.md) relacionados serão atualizados para refletir seu novo tamanho. Dependendo do conjunto de dados removido e dos atributos nos quais você está segmentando, o tamanho de cada público pode aumentar ou diminuir devido à exclusão. Neste ponto, qualquer alteração resultante na contagem geral de perfis é refletida nos [widgets de painel](../dashboards/guides/profiles.md#profile-count-trend) e outros relatórios. |
-| Jornadas e destinos atualizados | 50 horas | [Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=pt-BR), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=pt-BR) e [destinos](../destinations/home.md) são atualizados de acordo com as alterações nos segmentos relacionados. |
+| Jornadas e destinos atualizados | 50 horas | [Jornada](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campanhas](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html) e [destinos](../destinations/home.md) são atualizados de acordo com as alterações nos segmentos relacionados. |
 | Exclusão forçada concluída | 15 dias | Todos os dados relacionados ao conjunto de dados são excluídos permanentemente do data lake e do serviço de perfil. O [status do trabalho do ciclo de vida dos dados](./ui/browse.md#view-details) que excluiu o conjunto de dados foi atualizado para refletir isso. |
 
 {style="table-layout:auto"}
 
-## Próximas etapas
+### Registrar linhas do tempo de exclusão {#record-delete-transparency}
 
-Este documento forneceu uma visão geral dos recursos de ciclo de vida dos dados da Experience Platform. Para começar a fazer solicitações de higiene de dados na interface do usuário, consulte o [manual da interface](./ui/overview.md). Para saber como criar trabalhos do Ciclo de Vida de Dados de forma programática, consulte o [guia da API de Higiene de Dados](./api/overview.md)
+O seguinte ocorre após o envio de uma [solicitação de exclusão de registro](./ui/record-delete.md).
+
+>[!NOTE]
+>
+>Os horários são aproximados e variam de acordo com a carga do sistema, o agendamento em lote e o nível de direito. O SLA completo (padrão de 30 dias, 15 dias para o Privacy and Security Shield ou Healthcare Shield) é o compromisso operacional.
+
+| Preparo | Aproximadamente tempo | Descrição |
+| --- | --- | --- |
+| Solicitação enviada e em lote | Dias 1 a 15 | Uma ordem de serviço é criada e colocada em fila. As solicitações podem ser enfileiradas e colocadas em lote por até 14 dias antes do início do processamento. A exclusão em lote é o principal motivo pela qual a exclusão não é imediata. |
+| Sistemas downstream processam solicitação de exclusão | Dias 16 a 25 | Os serviços downstream recebem e executam a solicitação de exclusão de registro. |
+| Buffer — verificações de integridade e reenvios | Dias 25 a 30 | Uma janela de buffer permite a verificação de integridade e o reenvio de trabalhos com falha antes do fechamento da janela do SLA. O status da ordem de trabalho será atualizado para `completed` assim que todos os sistemas confirmarem a exclusão. |
+
+{style="table-layout:auto"}
+
+Para obter durações de fila baseadas em direitos e valores máximos de SLA, consulte [Processando linhas do tempo para envios de identificadores](./ui/record-delete.md#sla-processing-timelines).
+
+## Próximas etapas {#next-steps}
+
+Este documento fornece uma visão geral dos recursos de ciclo de vida dos dados da Experience Platform. Para começar a fazer solicitações de higiene de dados na interface, consulte o [guia da interface do usuário do ciclo de vida dos dados](./ui/overview.md). Para criar trabalhos do Ciclo de Vida de Dados de forma programática, consulte o [guia da API de Higiene de Dados](./api/overview.md).

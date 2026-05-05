@@ -1,12 +1,12 @@
 ---
 title: A conexão Trade Desk - CRM
 description: Ative perfis para sua conta da Trade Desk para direcionamento e supressão de público com base nos dados do CRM.
-last-substantial-update: 2025-01-16T00:00:00Z
+last-substantial-update: 2026-04-29T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: a052203dce4949bc795fe181821a8d890c341673
 workflow-type: tm+mt
-source-wordcount: '1799'
-ht-degree: 2%
+source-wordcount: '1861'
+ht-degree: 3%
 
 ---
 
@@ -101,10 +101,9 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
 * Converta todos os caracteres ASCII em minúsculas.
 * Em `gmail.com` endereços de email, remova os seguintes caracteres da parte do nome de usuário do endereço de email:
 
-      * O período (`.`) (código ASCII 46). Por exemplo, normalize &quot;jane.doe@gmail.com&quot; para &quot;janedoe@gmail.com&quot;.
-     * O caractere de sinal de mais (`+`) (código ASCII 43) e todos os caracteres subsequentes. Por exemplo, normalize `janedoe+home@gmail.com` para `janedoe@gmail.com`.
+      * O caractere de ponto (`.`) (código ASCII 46). Por exemplo, normalize `jane.doe@gmail.com` para `janedoe@gmail.com`.
+     * O caractere de sinal de adição (`+`) (código ASCII 43) e todos os caracteres subsequentes. Por exemplo, normalize `janedoe+home@gmail.com` para `janedoe@gmail.com`.
   
-
 ## Requisitos de normalização e hash do número de telefone {#phone-hashing}
 
 Veja o que você precisa saber sobre o upload de números de telefone:
@@ -126,8 +125,8 @@ Veja o que você precisa saber sobre os requisitos de normalização de números
 
       * EUA: 1 (234) 567-8901 é normalizado para +12345678901.
      * Cingapura: 65 1243 5678 é normalizado para +6512345678.
-     * Austrália: número de telefone celular 0491 570 006 é normalizado para adicionar o código do país e eliminar o zero à esquerda: +61491570006.
-     * Reino Unido: o número de telefone celular 07812 345678 foi normalizado para adicionar o código do país e eliminar o zero à esquerda: +447812345678.
+     * Austrália: número de telefone celular 0491 570 006 é normalizado para adicionar código do país e eliminar o zero à esquerda: +61491570006.
+     * Reino Unido: número de telefone celular 07812 345678 é normalizado para adicionar o código do país e eliminar o zero à esquerda: +447812345678.
   
 Verifique se o número de telefone normalizado é UTF-8, não outro sistema de codificação, como UTF-16.
 
@@ -156,6 +155,10 @@ Consulte a tabela abaixo para obter informações sobre o tipo e a frequência d
 
 {style="table-layout:auto"}
 
+>[!NOTE]
+>
+>O recurso **[Exportar arquivo agora](/help/destinations/ui/export-file-now.md)** não está disponível para o destino do CRM [!DNL The Trade Desk]. Para exportar públicos, use a [exportação diária agendada de lotes](#activate).
+
 ## Conectar ao destino {#connect}
 
 ### Autenticar no destino {#authenticate}
@@ -164,7 +167,7 @@ O Destino do CRM [!DNL The Trade Desk] é um carregamento diário de arquivo em 
 
 ### Preencher Detalhes do Destino {#fill-in-details}
 
-Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configurar](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=pt-BR) este destino, você deve fornecer as seguintes informações:
+Antes de enviar ou ativar dados de público-alvo para um destino, você deve configurar uma conexão com sua própria plataforma de destino. Ao [configurar](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) este destino, você deve fornecer as seguintes informações:
 
 * **[!UICONTROL Account Type]**: Escolha a opção **[!UICONTROL Existing Account]**.
 * **[!UICONTROL Name]**: Um nome pelo qual você reconhecerá este destino no futuro.

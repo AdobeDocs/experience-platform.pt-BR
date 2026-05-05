@@ -3,9 +3,9 @@ title: Ativar públicos para destinos de exportação de perfil em lote
 type: Tutorial
 description: Saiba como ativar os públicos-alvo no Adobe Experience Platform enviando-os para destinos com base em perfil de lote.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: ce9b0bd5cc733ed67909898b45f4ee42ae015608
 workflow-type: tm+mt
-source-wordcount: '4769'
+source-wordcount: '4961'
 ht-degree: 10%
 
 ---
@@ -496,7 +496,7 @@ A Adobe recomenda selecionar um namespace de identidade, como um [!DNL CRM ID] o
 
 ### Comportamento de desduplicação para perfis com o mesmo carimbo de data e hora {#deduplication-same-timestamp}
 
-Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/pt-br/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Ao exportar perfis para destinos baseados em arquivo, a desduplicação garante que apenas um perfil seja exportado quando vários perfis compartilharem a mesma chave de desduplicação e o mesmo carimbo de data e hora de referência. Esse carimbo de data e hora representa o momento em que a associação de público-alvo ou o gráfico de identidade de um perfil foi atualizado pela última vez. Para obter mais informações sobre como os perfis são atualizados e exportados, consulte o documento [comportamento de exportação do perfil](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Principais considerações {#key-considerations}
 
@@ -571,7 +571,7 @@ Como solução temporária, se você precisar adicionar namespaces de identidade
 
 >[!IMPORTANT]
 >
->Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa &#x200B;](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
+>Todos os destinos de armazenamento na nuvem no catálogo podem exibir uma [[!UICONTROL Mapping] etapa ](#mapping) aprimorada, que substitui a **[!UICONTROL Select attributes]** etapa descrita nesta seção.
 >
 >Esta etapa **[!UICONTROL Select attributes]** ainda é exibida para os destinos de marketing por email do [!DNL Adobe Campaign], Oracle Responsys, Oracle Eloqua e Salesforce Marketing Cloud.
 
@@ -614,6 +614,21 @@ As exportações de arquivos variam das seguintes maneiras, dependendo se `segme
 >id="platform_destinations_activate_exclude_enrichment_attributes"
 >title="Excluir atributos de enriquecimento"
 >abstract="Habilite essa opção para exportar os perfis dos públicos-alvo personalizados enviados que foram selecionados para o seu destino, enquanto exclui todos os atributos deles."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_info_alert"
+>title="Saída hierárquica ativada"
+>abstract="Este destino dá suporte a saída hierárquica porque a opção Enable export of arrays, maps, and objects está ativada. Você pode exportar matrizes de nível superior, elementos de matriz ou vários campos da mesma matriz em um mapeamento. Consulte a documentação para obter mais detalhes."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_source_field"
+>title="Campo de origem"
+>abstract="Selecione um atributo de enriquecimento para exportar. Para campos dentro de uma matriz, a origem é preenchida automaticamente com uma expressão de transformação. Para exportar vários campos em um mapeamento, adicione um campo primeiro e edite a expressão de origem. Consulte a documentação para obter mais detalhes."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_enrichment_attributes_target_field"
+>title="Campo de destino"
+>abstract="O campo de destino é preenchido automaticamente com o nome do campo de origem. Edite-o para usar um alias diferente se desejar que o campo tenha um nome diferente em seus arquivos exportados."
 
 >[!IMPORTANT]
 >

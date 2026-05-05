@@ -104,6 +104,7 @@ Se você optar por criar o hash dos endereços de email, não se esqueça de ate
       * O caractere de ponto (`.`) (código ASCII 46). Por exemplo, normalize `jane.doe@gmail.com` para `janedoe@gmail.com`.
      * O caractere de sinal de adição (`+`) (código ASCII 43) e todos os caracteres subsequentes. Por exemplo, normalize `janedoe+home@gmail.com` para `janedoe@gmail.com`.
   
+
 ## Requisitos de normalização e hash do número de telefone {#phone-hashing}
 
 Veja o que você precisa saber sobre o upload de números de telefone:

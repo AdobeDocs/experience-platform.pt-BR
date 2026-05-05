@@ -5,9 +5,9 @@ title: Enviar várias mensagens em uma única solicitação HTTP
 type: Tutorial
 description: Este documento fornece um tutorial para enviar várias mensagens para o Adobe Experience Platform em uma única solicitação HTTP usando a assimilação por transmissão.
 exl-id: 04045090-8a2c-42b6-aefa-09c043ee414f
-source-git-commit: be2ad7a02d4bdf5a26a0847c8ee7a9a93746c2ad
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1724'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Você deve primeiro criar uma conexão de streaming antes de iniciar a transmiss
 
 Depois de registrar uma conexão de transmissão, você, como produtor de dados, terá um URL exclusivo que pode ser usado para transmitir dados para o Experience Platform.
 
-## Transmitir para um conjunto de dados
+## Transmitir para um conjunto de dados {#stream-to-dataset}
 
 O exemplo a seguir mostra como enviar várias mensagens para um conjunto de dados específico em uma única solicitação HTTP. Insira a ID do conjunto de dados no cabeçalho da mensagem para que a mensagem seja assimilada diretamente nela.
 
@@ -519,6 +519,42 @@ As mensagens com falha são identificadas por um código de status de erro na ma
 As mensagens inválidas são coletadas e armazenadas em um lote de &quot;erros&quot; no conjunto de dados especificado por `{DATASET_ID}`.
 
 Leia o guia [recuperação de lotes com falha](../quality/retrieve-failed-batches.md) para obter mais informações sobre como recuperar mensagens em lote com falha.
+
+### Enviar várias entidades XDM para um fluxo de dados {#send-multiple-xdm-entities-to-a-dataflow}
+
+Para enviar várias entidades XDM para um fluxo de dados, é possível:
+
+- Envie uma ou mais entidades em uma matriz `messages` em uma solicitação HTTP para o ponto de extremidade de streaming.
+- Faça upload de um arquivo com várias entidades usando a assimilação em lote.
+
+Escolha o método que corresponde ao volume de dados e ao caso de uso.
+
+>[!BEGINTABS]
+
+>[!TAB Agrupar entidades em uma solicitação HTTP]
+
+É possível incluir várias entidades XDM em uma matriz `messages` em uma única solicitação HTTP para o ponto de extremidade de assimilação de streaming. Todas as mensagens podem direcionar o mesmo conjunto de dados e esquemas ou conjuntos de dados e esquemas diferentes, desde que todos pertençam à organização e à sandbox **same**.
+
+Use essa opção quando desejar:
+
+- Reduza solicitações enviando várias entidades XDM em uma chamada HTTP.
+- Transmita dados em tempo real através do endpoint de assimilação.
+
+Para obter mais informações e instruções detalhadas sobre como enviar a solicitação, leia a seção [streaming para um conjunto de dados](#stream-to-dataset).
+
+>[!TAB Carregar um arquivo em lotes]
+
+É possível fazer upload de um arquivo em lote contendo uma ou mais entidades XDM em um fluxo de dados. Todos os arquivos carregados no mesmo lote são processados juntos como uma única unidade de assimilação.
+
+Use esse método quando você:
+
+- Assimilar volumes de dados maiores (por exemplo, arquivos CSV, JSON ou Parquet).
+- Estão trabalhando com exportações baseadas em arquivos de sistemas upstream.
+- Prefira a assimilação programada ou em massa.
+
+Consulte o [Guia de assimilação em lote](../batch-ingestion/api-overview.md) para obter instruções passo a passo.
+
+>[!ENDTABS]
 
 ## Confirmar mensagens assimiladas
 

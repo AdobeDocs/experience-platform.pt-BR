@@ -5,10 +5,10 @@ title: Monitorar fluxos de dados usando a API do serviço de fluxo
 type: Tutorial
 description: Este tutorial aborda as etapas para monitorar a integridade, os erros e as métricas da execução do fluxo usando a API do serviço de fluxo.
 exl-id: c4b2db97-eba4-460d-8c00-c76c666ed70e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 293aa66115ae4579c598e23bf1655d835c8694ae
 workflow-type: tm+mt
-source-wordcount: '712'
-ht-degree: 8%
+source-wordcount: '770'
+ht-degree: 12%
 
 ---
 
@@ -34,11 +34,11 @@ As seções a seguir fornecem informações adicionais que você precisará sabe
 
 ### Leitura de chamadas de API de amostra
 
-Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas [!DNL Experience Platform].
+Este tutorial fornece exemplos de chamadas de API para demonstrar como formatar suas solicitações. Isso inclui caminhos, cabeçalhos necessários e conteúdos de solicitação formatados corretamente. Também fornece exemplos de JSON retornado nas respostas da API. Para obter informações sobre as convenções usadas na documentação para chamadas de API de exemplo, consulte a seção sobre [como ler chamadas de API de exemplo](../../landing/troubleshooting.md#how-do-i-format-an-api-request) no guia de solução de problemas da [!DNL Experience Platform].
 
-### Coletar valores para cabeçalhos necessários
+### Coletar valores para cabeçalhos obrigatórios
 
-Para fazer chamadas para APIs do [!DNL Experience Platform], primeiro complete o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
+Para fazer chamadas para APIs da [!DNL Experience Platform], você deve concluir primeiro o [tutorial de autenticação](https://www.adobe.com/go/platform-api-authentication-en). Concluir o tutorial de autenticação fornece os valores para cada um dos cabeçalhos necessários em todas as chamadas de API da [!DNL Experience Platform], conforme mostrado abaixo:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -201,3 +201,5 @@ Uma resposta bem-sucedida retorna detalhes sobre a execução do fluxo, incluind
 ## Próximas etapas
 
 Seguindo este tutorial, você recuperou métricas e informações de erro no fluxo de dados usando a API [!DNL Flow Service]. Agora é possível continuar a monitorar o fluxo de dados, dependendo da programação de assimilação, para rastrear o status e as taxas de assimilação. Para obter informações sobre como monitorar fluxos de dados de fontes, leia o [tutorial sobre monitoramento de fluxos de dados de fontes usando a interface do usuário](../ui/monitor-sources.md). Para obter mais informações sobre como monitorar fluxos de dados para destinos, leia o [tutorial sobre monitoramento de fluxos de dados para destinos usando a interface do usuário](../ui/monitor-destinations.md).
+
+Para enviar várias entidades XDM para um fluxo de dados, use uma matriz `messages` em sua solicitação HTTP ou carregue um arquivo (CSV, JSON ou Parquet) com vários registros. Para obter orientação detalhada e práticas recomendadas, leia [como enviar várias entidades XDM para um fluxo de dados](../../ingestion/tutorials/streaming-multiple-messages.md#send-multiple-xdm-entities-to-a-dataflow).

@@ -3,11 +3,10 @@ title: Gerenciar sessões do serviço de consulta no Adobe Experience Platform
 description: Saiba como os administradores podem visualizar, monitorar e encerrar sessões ativas do Serviço de consulta para liberar capacidade ociosa e manter fluxos de trabalho confiáveis do Data Distiller.
 keywords: Experience Platform;Serviço de consulta;sessões;gerenciamento de sessão;Data Distiller;admin
 solution: Experience Platform
-badgeLimitedAvailability: label="Disponibilidade limitada" type="Informative"
 exl-id: f986177a-9a46-4fc6-927e-98b6b7dc8cfe
-source-git-commit: 2117b7ad0f507b5a35595d702cb8a70e2e09f39d
+source-git-commit: f9b5e32da94625623926102fb236ba2d17bdecea
 workflow-type: tm+mt
-source-wordcount: '730'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -16,7 +15,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->O gerenciamento de sessões para o Serviço de consulta está atualmente com disponibilidade limitada e só está disponível para organizações com direitos de **Data Distiller**. Para solicitar acesso, entre em contato com a equipe de conta da Adobe.
+>O gerenciamento de sessões para o Serviço de consulta está disponível somente para organizações com direitos de **Data Distiller**. Para solicitar acesso, entre em contato com a equipe de conta da Adobe.
 
 Use este guia para gerenciar sessões ativas do Serviço de consulta na interface do usuário do Adobe Experience Platform. O gerenciamento de sessões ajuda os administradores a monitorar sessões simultâneas do Editor de consultas em sandboxes e capacidade livre quando os usuários deixam as sessões abertas.
 

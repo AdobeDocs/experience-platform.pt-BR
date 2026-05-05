@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Guia da interface do usuário do Serviço de consulta
 description: O Serviço de consulta da Adobe Experience Platform fornece uma interface que pode ser usada para gravar e executar consultas, exibir consultas executadas anteriormente e acessar consultas salvas por usuários em sua organização.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 1d2a8ef649c4454da7cf0949192b8b1eb3696e5a
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '2409'
+source-wordcount: '2471'
 ht-degree: 1%
 
 ---
@@ -42,17 +42,29 @@ A seção [!UICONTROL Data Distiller capabilities] fornece links de documentaç�
 
 ![O espaço de trabalho do Serviço de Consulta com a seção de recursos de Distiller de Dados foi realçada.](../images/ui/overview/data-distiller-capabilities.png)
 
+### Aceleradores {#accelerators}
+
+A guia **[!UICONTROL Accelerators]** no espaço de trabalho Consultas fornece um catálogo de modelos SQL parametrizados criados pela Adobe para casos de uso analíticos comuns. Cada acelerador aparece como uma linha em uma tabela com um nome, uma visualização SQL e metadados.
+
+Selecione um acelerador para abri-lo no Editor de consultas. Forneça valores de parâmetro e execute a consulta para gerar resultados. Os aceleradores são somente leitura e mantidos pela Adobe para garantir a consistência. Para modificar a lógica, crie uma cópia editável usando **[!UICONTROL Create custom template]**. Consulte o guia [Data Distiller Accelerators](./accelerators.md) para saber como descobrir, executar, agendar e personalizar aceleradores.
+
 ### Aceleradores recomendados do destilador de dados {#recommended-accelerators}
 
-Selecione um link rápido para navegar até os painéis relevantes do Data Distiller [!UICONTROL Templates]. Cada acelerador fornece ferramentas e visualizações avançadas para ajudar você a analisar dados de público-alvo, otimizar a segmentação e aprimorar as estratégias de direcionamento.
+A seção **[!UICONTROL Recommended Data Distiller accelerators]** da guia Visão geral fornece acesso rápido aos aceleradores usados com frequência. Eles são exibidos como cartões e oferecem suporte a dois workflows:
 
-- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: neste painel, você pode analisar as interseções de público-alvo entre vários segmentos de público-alvo para descobrir insights valiosos e otimizar as estratégias de segmentação. Você também pode exportar seus insights para fins de análise offline ou relatórios adicionais.
-- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: neste painel, você pode comparar e contrastar as principais métricas de público-alvo lado a lado para analisar dois grupos de público-alvo em detalhes. Esses insights ajudam a entender o tamanho do público, o crescimento e outros indicadores principais de desempenho, permitindo refinar a segmentação e otimizar as estratégias de direcionamento com decisões orientadas por dados.
-- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: use o painel [!UICONTROL Audience trends] para visualizar como seus públicos-alvo evoluem com o tempo por meio de métricas principais, como crescimento de público-alvo, contagens de identidade e perfis de identidade única. Rastreie tendências para descobrir insights valiosos sobre o comportamento do público-alvo, permitindo refinar a segmentação, aprimorar o engajamento e otimizar as estratégias de direcionamento para campanhas mais eficazes.
-Monitore as métricas de público-alvo ao longo do tempo para monitorar as alterações no tamanho do público-alvo, no crescimento da identidade e no engajamento geral.
-- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: Use o painel Sobreposições de Identidade de Público-Alvo para analisar sobreposições de identidade em públicos-alvo selecionados. As visualizações e os dados tabulados fornecem insights para otimizar a identificação, reduzir a redundância e melhorar a segmentação. Esses insights permitem direcionamento mais eficaz, personalização aprimorada e interações simplificadas com o cliente.
+- **Aceleradores vinculados ao painel** abertos no espaço de trabalho Painéis com visualizações pré-criadas. Eles não exigem entrada de parâmetros ou execução manual de consultas.
+- **Aceleradores baseados em consulta** abertos no Editor de consultas, onde você fornece valores de parâmetros, executa a consulta ou a agenda.
 
-![O espaço de trabalho do Serviço de Consulta com a seção Data Distiller accelerators realçada.](../images/ui/overview/data-distiller-accelerators.png)
+Selecione um cartão para abrir o acelerador. Use esta seção para obter acesso rápido a fluxos de trabalho comuns ou navegue até a guia **[!UICONTROL Accelerators]** para navegar pelo catálogo completo. Para obter a lista completa de aceleradores e instruções detalhadas, consulte a [guia Aceleradores](./accelerators.md#discovery-paths) ou o [guia de Aceleradores de Data Distiller](./accelerators.md).
+
+Os seguintes aceleradores vinculados a painéis estão disponíveis:
+
+- **[[!UICONTROL Advanced audience overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/overlaps.md)**: analise interseções entre segmentos de público para identificar padrões de sobreposição e refinar a segmentação.
+- **[[!UICONTROL Audience comparison]](../../dashboards/sql-insights-query-pro-mode/templates/comparison.md)**: Comparar métricas principais entre dois públicos-alvo, incluindo tamanho, composição e alterações ao longo do tempo.
+- **[[!UICONTROL Audience trends]](../../dashboards/sql-insights-query-pro-mode/templates/trends.md)**: Rastreie como as métricas de público-alvo mudam ao longo do tempo, incluindo o tamanho do público-alvo e as contagens de identidade.
+- **[[!UICONTROL Audience identity overlaps]](../../dashboards/sql-insights-query-pro-mode/templates/identity-overlaps.md)**: examine como os tipos de identidade se sobrepõem dentro dos públicos para suportar a identificação de identidade e a precisão da segmentação.
+
+![Visão Geral do Serviço de Consulta mostrando a seção Data Distiller accelerators com cartões aceleradores recomendados.](../images/ui/overview/data-distiller-accelerators.png)
 
 ### Exemplos do destilador de dados {#data-distiller-examples}
 
@@ -72,7 +84,7 @@ A seção Métricas principais exibe visualizações de dados importantes que aj
 
 #### Definir um filtro de datas {#set-date-filter}
 
-Para aplicar um filtro de data global a essas visualizações, selecione o ícone de filtro (![Um ícone de filtro.](../../images/icons/filter-icon-white.png)) e ajuste o intervalo de datas na caixa de diálogo **[!UICONTROL Filters]**. Aplique este filtro para ajustar as métricas exibidas para um intervalo de tempo específico e aprimorar a relevância da sua análise.
+Para aplicar um filtro de datas global a essas visualizações, selecione o ícone de filtro (![Um ícone de filtro.](../../images/icons/filter-icon-white.png)) e ajuste o intervalo de datas na caixa de diálogo **[!UICONTROL Filters]**. Aplique este filtro para ajustar as métricas exibidas para um intervalo de tempo específico e aprimorar a relevância da sua análise.
 
 ![A caixa de diálogo Filtros para os gráficos de métricas principais no Workspace do Serviço de Consulta.](../images/ui/overview/filters-dialog.png)
 
@@ -178,7 +190,7 @@ A guia **[!UICONTROL Log]** fornece uma lista de consultas que foram executadas 
 
 >[!NOTE]
 >
->Selecione o ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)) de qualquer linha do log de consultas para navegar até o Editor de Consultas. A consulta é pré-preenchida para edição conveniente.
+>Selecione o ícone de lápis (![Um ícone de lápis.](/help/images/icons/edit.png)) de qualquer linha do log de consulta para navegar até o Editor de consultas. A consulta é pré-preenchida para edição conveniente.
 
 Consulte a [documentação dos logs de consulta](./query-logs.md) para obter mais informações sobre os arquivos de log gerados automaticamente por um evento de consulta.
 

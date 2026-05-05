@@ -2,9 +2,9 @@
 title: Modelos de consulta
 description: Os modelos de consulta são consultas SQL salvas reutilizáveis que podem ser reutilizadas por outros usuários para economizar tempo e esforço. Eles podem ser criados usando o Editor de consultas ou a API de serviço de consultas e estão disponíveis para uso em todos os conjuntos de dados do Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 839d8ac398ca8523e9d726c6990c79b65334eb88
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Este documento fornece as informações necessárias para criar modelos de consu
 
 ## Pré-requisitos
 
-Você deve ter a permissão [!UICONTROL Gerenciar consultas] habilitada para acessar o Editor de consultas e exibir o painel de consultas na interface do Experience Platform. A permissão é habilitada por meio da Adobe [Admin Console](https://adminconsole.adobe.com/). Entre em contato com o administrador da organização se você não tiver privilégios de administrador para habilitar essa permissão. Consulte a documentação de controle de acesso para obter [instruções completas sobre como adicionar permissões por meio do Admin Console](../../access-control/home.md).
+Você deve ter a permissão [!UICONTROL Manage queries] habilitada para acessar o Editor de consultas e exibir o painel de consultas na interface do Experience Platform. A permissão é habilitada por meio da Adobe [Admin Console](https://adminconsole.adobe.com/). Entre em contato com o administrador da organização se você não tiver privilégios de administrador para habilitar essa permissão. Consulte a documentação de controle de acesso para obter [instruções completas sobre como adicionar permissões por meio do Admin Console](../../access-control/home.md).
 
 ## Criar um modelo de consulta
 
@@ -25,7 +25,15 @@ Você pode criar modelos de consulta por meio de dois métodos, fazendo uma soli
 
 ### Use o Editor de consultas para criar e salvar uma consulta como modelo
 
-Consulte a documentação para obter instruções sobre como usar o Editor de consultas para [gravar](./user-guide.md#query-authoring) e [salvar consultas](./user-guide.md#saving-queries). Depois de nomear e salvar sua consulta, ela estará disponível para ser reutilizada como um modelo de consulta na guia [!UICONTROL Modelos].
+Consulte a documentação para obter instruções sobre como usar o Editor de consultas para [gravar](./user-guide.md#query-authoring) e [salvar consultas](./user-guide.md#saving-queries). Depois de nomear e salvar sua consulta, ela estará disponível para ser reutilizada como um modelo de consulta na guia [!UICONTROL Templates].
+
+### Criar um modelo a partir de um acelerador do Data Distiller {#create-from-accelerator}
+
+Os aceleradores do Data Distiller são somente leitura. Para modificar um acelerador, crie um modelo editável no Editor de consultas.
+
+Abra um acelerador e selecione **[!UICONTROL Create custom template]** para clonar o SQL. Salve o modelo para adicioná-lo à guia **[!UICONTROL Templates]**. O modelo clonado é totalmente editável e pode ser executado, programado ou modificado conforme necessário.
+
+Consulte o guia [Data Distiller Accelerators](./accelerators.md#create-custom-template) para obter instruções detalhadas.
 
 >[!TIP]
 >
@@ -33,7 +41,7 @@ Consulte a documentação para obter instruções sobre como usar o Editor de co
 
 ## Procurar modelos de consulta {#browse}
 
-No espaço de trabalho Consultas da interface do Experience Platform, selecione **[!UICONTROL Modelos]** para exibir a lista de consultas salvas disponíveis.
+No espaço de trabalho Consultas da interface do Experience Platform, selecione **[!UICONTROL Templates]** para exibir a lista de consultas salvas disponíveis.
 
 ![O espaço de trabalho de consultas com a guia Modelos realçada.](../images/ui/query-templates/query-templates.png)
 
@@ -43,10 +51,10 @@ Para encontrar informações relevantes sobre o modelo, selecione qualquer model
 
 No painel de detalhes, é possível executar as seguintes ações:
 
-* Selecione **[!UICONTROL Executar como CTAS]** para criar uma nova tabela selecionando dados de uma ou mais tabelas existentes. Essa opção só estará disponível se você tiver uma consulta SELECT.
-* Selecione **[!UICONTROL Adicionar agendamento]** para começar a editar seu agendamento para seu modelo de consulta.
-* Selecione **[!UICONTROL Exibir agendamento]** para navegar até a guia [!UICONTROL Agendamentos] do Editor de Consulta. Essa exibição contém todas as informações de agendamento associadas à consulta.
-* Selecione **[!UICONTROL Excluir consulta]** para excluir o modelo.
+* Selecione **[!UICONTROL Run as CTAS]** para criar uma nova tabela selecionando dados de uma ou mais tabelas existentes. Essa opção só estará disponível se você tiver uma consulta SELECT.
+* Selecione **[!UICONTROL Add schedule]** para começar a editar seu agendamento para seu modelo de consulta.
+* Selecione **[!UICONTROL View schedule]** para navegar até a guia [!UICONTROL Schedules] do Editor de Consulta. Essa exibição contém todas as informações de agendamento associadas à consulta.
+* Selecione **[!UICONTROL Delete query]** para excluir o modelo.
 * Selecione o nome do modelo para navegar até o Editor de consultas onde o SQL está pré-preenchido para edição.
 
 ### Usar a API do Serviço de consulta para criar um modelo

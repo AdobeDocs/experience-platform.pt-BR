@@ -5,10 +5,10 @@ breadcrumb-title: Guia do Serviço de consultas
 user-guide-description: Use o SQL padrão para consultar dados no data lake na Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: d3b73124795cfdeb5f8f1890105bf9c174711b36
+source-git-commit: 71d8268a209036291c41da3fef84a331aec2172b
 workflow-type: tm+mt
-source-wordcount: '411'
-ht-degree: 25%
+source-wordcount: '439'
+ht-degree: 24%
 
 ---
 
@@ -105,6 +105,7 @@ ht-degree: 25%
    - [Visão geral da interface](ui/overview.md)
    - [Guia do usuário do Editor de consultas](ui/user-guide.md)
    - [Modelos de consulta](ui/query-templates.md)
+   - [Data Distiller Accelerators](ui/accelerators.md)
    - [Consultas parametrizadas](ui/parameterized-queries.md)
    - [Agendamentos de consulta](ui/query-schedules.md)
    - [Logs de consulta](ui/query-logs.md)
@@ -146,4 +147,4 @@ ht-degree: 25%
 - [Perguntas frequentes](troubleshooting-guide.md)
 - [INCLUO NA LISTA DE PERMISSÕES de endereços IP](ip-address-allowlist.md)
 - [Referência da API](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Notas de versão da Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)
+- [Notas de versão do Experience Platform](https://experienceleague.adobe.com/pt-br/docs/experience-platform/release-notes/latest)

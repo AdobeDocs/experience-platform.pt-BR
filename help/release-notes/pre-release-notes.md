@@ -2,10 +2,10 @@
 title: Notas de pré-lançamento do Experience Platform
 description: Uma visualização das notas de versão mais recentes do Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 8f898e618fbc2b414a3c899511ac410465f280d8
+source-git-commit: 9b191535ba96c8791a4528361a1945ae27c6456c
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 11%
+source-wordcount: '1428'
+ht-degree: 14%
 
 ---
 
@@ -22,8 +22,8 @@ ht-degree: 11%
 >- [Adobe Journey Optimizer](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer/using/whats-new/release-notes)
 >- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/pt-br/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/pt-br/docs/analytics-platform/using/releases/latest)
->- [Composição de público-alvo federado](https://experienceleague.adobe.com/pt-br/docs/federated-audience-composition/using/release-notes)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/pt-br/docs/real-time-cdp-collaboration/using/latest)
+>- [Composição de público-alvo federado](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/release-notes)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Data de lançamento: abril de 2026**
 
@@ -57,7 +57,7 @@ Novos recursos e atualizações dos recursos existentes no Adobe Experience Plat
 
 **Correções e melhorias**
 
-| Correção | Descrição |
+| Corrigir | Descrição |
 | --- | --- |
 | Suporte personalizado de monitoramento do Personalization | O painel de monitoramento para destinos agora oferece suporte a [!DNL Custom Personalization] destinos. A observação de limitação que excluiu [!DNL Custom Personalization] do monitoramento foi removida. |
 | Contagens de perfis na revisão de ativação | A etapa de revisão de ativação agora mostra as contagens de perfil para públicos-alvo que já estão ativados. As contagens de perfil também são mostradas para destinos de transmissão, não apenas destinos em lote. |
@@ -71,7 +71,7 @@ Para obter mais informações, leia a [Visão geral dos Destinos](../destination
 
 ## Experience Data Model (XDM) {#xdm}
 
-O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Experience Platform. Seguindo os padrões XDM, todos os dados de experiência do cliente podem ser incorporados a uma representação comum para fornecer insights de maneira mais rápida e integrada.
+O XDM é uma especificação de código aberto que fornece estruturas e definições comuns (esquemas) para dados trazidos para o Experience Platform. Ao aderir aos padrões do XDM, todos os dados de experiência do cliente podem ser incorporados em uma representação comum para fornecer insights de maneira mais rápida e integrada.
 
 **Recursos novos ou atualizados**
 
@@ -105,7 +105,7 @@ O [!DNL Real-Time CDP] fornece perfis de clientes unificados e acionáveis assim
 
 | Recurso | Descrição |
 | --- | --- |
-| Real-Time CDP MCP (Beta) | Use o MCP do Real-Time CDP para trazer o Real-Time CDP para agentes de IA e clientes compatíveis com MCP, permitindo que você interaja com as ferramentas do Real-Time CDP diretamente por meio de sua experiência LLM nativa. Conectando um cliente compatível com MCP (como Claude, ChatGPT, Claude Code, Codex, Cursor ou VS Code) ao `https://rtcdp-mcp.adobe.io/mcp`, você pode usar a linguagem natural para inspecionar públicos, configuração de destino e histórico de execução de ativação, sem gravar chamadas de API REST do Experience Platform ou navegar em vários fluxos de trabalho de interface do usuário. Depois de concluir um logon no Adobe com base em navegador, você terá acesso somente leitura a ferramentas que incluem: <ul><li>Pesquisar públicos existentes</li><li>Visualizar associação de público-alvo</li><li>Listar Tipos de Destino</li><li>Listar Contas Configuradas</li><li>Listar destinos configurados</li><li>Listar Conexões Do Source</li><li>Listar Conexões de Destino</li><li>Inspecionar execuções de ativação</li></ul>. Cada solicitação requer parâmetros `imsOrgId` e `sandboxName` para garantir que as ações tenham escopo para sua organização e sandbox. Observe que não há suporte para operações de gravação nesta versão do Beta. |
+| Real-Time CDP MCP (Beta) | Use o MCP do Real-Time CDP para trazer o Real-Time CDP para agentes de IA e clientes compatíveis com MCP, permitindo que você interaja com as ferramentas do Real-Time CDP diretamente por meio de sua experiência LLM nativa. Ao conectar um cliente compatível com MCP (como Claude, ChatGPT, Claude Code, Codex, Cursor ou VS Code) ao endpoint fornecido pelo representante da Adobe, é possível usar a linguagem natural para inspecionar públicos, configuração de destino e histórico de execução de ativação, sem gravar chamadas de API REST do Experience Platform ou navegar em vários workflows da interface do usuário. Depois de concluir um logon no Adobe com base em navegador, você terá acesso somente leitura a ferramentas que incluem: <ul><li>Pesquisar públicos existentes</li><li>Visualizar associação de público-alvo</li><li>Listar Tipos de Destino</li><li>Listar Contas Configuradas</li><li>Listar destinos configurados</li><li>Listar Conexões Do Source</li><li>Listar Conexões de Destino</li><li>Inspecionar execuções de ativação</li></ul>. Cada solicitação requer parâmetros `imsOrgId` e `sandboxName` para garantir que as ações tenham escopo para sua organização e sandbox. Observe que não há suporte para operações de gravação nesta versão do Beta. |
 
 {style="table-layout:auto"}
 

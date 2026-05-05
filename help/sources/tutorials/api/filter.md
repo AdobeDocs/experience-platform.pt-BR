@@ -2,9 +2,9 @@
 title: Filtrar dados em nível de linha para uma Source usando a API do serviço de fluxo
 description: Este tutorial aborda as etapas sobre como filtrar dados no nível da origem usando a API do Serviço de fluxo
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: cf5c460f1db4970217b881688c994787696d1ce1
 workflow-type: tm+mt
-source-wordcount: '1820'
+source-wordcount: '2086'
 ht-degree: 4%
 
 ---
@@ -401,6 +401,177 @@ Uma resposta bem-sucedida retorna o identificador exclusivo (`id`) da conexão d
     "id": "b7581b59-c603-4df1-a689-d23d7ac440f3",
     "etag": "\"ef05d265-0000-0200-0000-6019e0080000\""
 }
+```
+
++++
+
+## Filtrar [!DNL Salesforce] fluxos de dados
+
+O exemplo a seguir mostra de ponta a ponta como aplicar a filtragem em nível de linha a um fluxo de dados [!DNL Salesforce] existente usando a API [!DNL Flow Service].
+
+### Idioma do query e escape
+
+Ao usar credenciais de cliente OAuth 2.0 com [!DNL Salesforce] origens, a filtragem em nível de linha é executada usando SOQL ([!DNL Salesforce] Object Query Language).
+
+* Os nomes de coluna em filtros SOQL usam os nomes exatos de API de campo [!DNL Salesforce], sem acentos graves ou outros caracteres especiais.
+* Os valores da string devem ser colocados entre aspas simples, conforme exigido pela sintaxe SOQL.
+* Para valores boolianos, use as palavras-chave `true` ou `false` em vez de valores numéricos (`0` ou `1`).
+* Os valores date e dateTime nas cláusulas `WHERE` devem ser gravados como literais date ou dateTime de SOQL não citados, e não como cadeias de caracteres entre aspas, quando o filtro indicar que eles representam tipos de data/hora.
+
+Para filtragem em nível de linha com base em PQL, cada nó literal cujo valor seja `boolean` ou `dateTime` deve incluir um `literalType` para que os valores sejam interpretados e traduzidos corretamente.
+
+Exemplos de PQL:
+
+>[!BEGINTABS]
+
+>[!TAB PQL Exemplo 1]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "like",
+    "params": [
+      {
+        "nodeType": "fieldLookup",
+        "fieldName": "Name"
+      },
+      {
+        "nodeType": "literal",
+        "value": "ro%"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB PQL Exemplo 2]
+
+```json
+{
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": ">",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "CreatedDate" },
+      {
+        "nodeType": "literal",
+        "literalType": "DateTime",
+        "value": "2024-05-15T00:00:00Z"
+      }
+    ]
+  }
+}
+```
+
+>[!TAB PQL Exemplo 3]
+
+```json
+  "type": "PQL",
+  "format": "pql/json",
+  "value": {
+    "nodeType": "fnApply",
+    "fnName": "=",
+    "params": [
+      { "nodeType": "fieldLookup", "fieldName": "IsDeleted" },
+      {
+        "nodeType": "literal",
+        "literalType": "boolean",
+        "value": false
+      }
+    ]
+  }
+}
+```
+
+>[!ENDTABS]
+
+#### Recuperar especificações de conexão para [!DNL Salesforce]
+
+Para recuperar as informações de especificação de conexão para uma origem [!DNL Salesforce], faça uma solicitação GET para o ponto de extremidade `/connectionSpecs` da API [!DNL Flow Service] e forneça o nome de propriedade da sua origem como parte dos parâmetros de consulta.
+
+**Formato da API**
+
+```http
+GET /connectionSpecs/{QUERY_PARAMS}
+```
+
+| Parâmetro | Descrição |
+| --- | --- |
+| `{QUERY_PARAMS}` | Os parâmetros de consulta opcionais para filtrar os resultados. Você pode recuperar a especificação de conexão [!DNL Salesforce] aplicando a propriedade `name` e especificando `"salesforce"` em sua pesquisa. |
+
++++Solicitação
+
+A solicitação a seguir recupera as especificações de conexão para [!DNL Salesforce].
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="salesforce"' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}'
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-api-key: {API_KEY}'
+```
+
++++Resposta
+
+Uma resposta bem-sucedida retorna o código de status 200 e as especificações de conexão para [!DNL Salesforce], incluindo informações sobre o idioma de consulta e operadores lógicos com suporte.
+
+
+```json
+ "attributes": {
+    "filterAtSource": {
+      "enabled": true,
+      "queryLanguage": "SQL",
+      "logicalOperators": [
+        "and",
+        "or",
+        "not"
+      ],
+      "comparisonOperators": [
+        "=",
+        "!=",
+        "<",
+        "<=",
+        ">",
+        ">=",
+        "like",
+        "in",
+        "isNull",
+        "isNotNull"
+      ],
+      "columnNameEscapeChar": "`",
+      "valueEscapeChar": "'",
+      "v2": {
+        "oAuth2ClientCredential": {
+          "queryLanguage": "SOQL",
+          "logicalOperators": [
+            "and",
+            "or",
+            "not"
+          ],
+          "comparisonOperators": [
+            "=",
+            "!=",
+            "<",
+            "<=",
+            ">",
+            ">=",
+            "like",
+            "in",
+            "isNull",
+            "isNotNull"
+          ],
+          "columnNameEscapeChar": "",
+          "valueEscapeChar": "'"
+        }
+      }
+    }
+  }
 ```
 
 +++

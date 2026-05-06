@@ -3,10 +3,8 @@ keywords: publicidade, microsoft ads, correspondência com o cliente,
 title: Conexão de correspondência do cliente do Microsoft Ads
 description: Use o destino da Correspondência do cliente do Microsoft Ads para corresponder os clientes por endereço de email e reengajar com eles na Microsoft Advertising Network, incluindo anúncios de pesquisa e público-alvo.
 badge: label="Beta" type="Informative"
-hide: true
-hidefromtoc: true
 exl-id: 4d405ffb-f600-463b-a215-44e806b6d139
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 50bd5be385f62a290fefae60c6ed286d893e430a
 workflow-type: tm+mt
 source-wordcount: '1642'
 ht-degree: 18%

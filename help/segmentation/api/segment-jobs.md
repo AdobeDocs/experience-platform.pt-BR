@@ -4,9 +4,9 @@ title: Ponto de extremidade da API de trabalhos de segmento
 description: O endpoint de trabalhos de segmento na API do Serviço de segmentação do Adobe Experience Platform permite gerenciar de forma programática os trabalhos de segmento da sua organização.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 66ee03814585364826d8d9416530f0a976481b6e
 workflow-type: tm+mt
-source-wordcount: '1232'
+source-wordcount: '1240'
 ht-degree: 3%
 
 ---
@@ -451,8 +451,6 @@ Uma resposta bem-sucedida retorna o status HTTP 200 com informações detalhadas
 | `metrics` | Um objeto que contém informações de diagnóstico sobre o trabalho do segmento. |
 
 +++
-
->[!ENDTABS]
 
 ## Trabalhos de recuperação de segmentos em massa {#bulk-get}
 

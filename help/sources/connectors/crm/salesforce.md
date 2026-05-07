@@ -2,9 +2,9 @@
 title: Visão geral do Salesforce Source Connector
 description: Saiba como conectar o Salesforce ao Adobe Experience Platform usando APIs ou a interface do usuário.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: 501cb5e34e565b40160b39aed306a23cf77328ea
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1639'
 ht-degree: 2%
 
 ---
@@ -14,10 +14,6 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 >Agora você pode usar a origem [!DNL Salesforce] ao executar o Adobe Experience Platform no Amazon Web Services (AWS). O Experience Platform em execução no AWS está disponível atualmente para um número limitado de clientes. Para saber mais sobre a infraestrutura do Experience Platform compatível, consulte a [visão geral da nuvem múltipla do Experience Platform](../../../landing/multi-cloud.md).
-
->[!WARNING]
->
->A autenticação básica para a origem [!DNL Salesforce] será descontinuada em janeiro de 2026. Você deve mudar para a autenticação de Credencial do cliente OAuth 2 para continuar usando a origem e assimilando dados da conta do [!DNL Salesforce] para o Experience Platform.
 
 A Adobe Experience Platform permite a assimilação de dados de fontes externas, além de permitir estruturar, rotular e aprimorar os dados recebidos por meio dos serviços da Experience Platform. Você pode assimilar dados de várias fontes, como aplicativos da Adobe, armazenamento baseado em nuvem, bancos de dados e muitas outras.
 

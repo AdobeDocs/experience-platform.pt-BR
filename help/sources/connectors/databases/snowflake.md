@@ -3,9 +3,9 @@ title: Visão geral do Snowflake Source Connector
 description: Saiba como conectar o Snowflake ao Adobe Experience Platform usando APIs ou a interface do usuário.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 58f69a78fb3c622c8741d7a1618f15509c160a5b
+source-git-commit: fdc66601db3e8ae8fb55503b9e32d88ed48381cf
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1705'
 ht-degree: 2%
 
 ---
@@ -72,7 +72,11 @@ Forneça valores para as credenciais a seguir para conectar [!DNL Snowflake] ao 
 
 >[!WARNING]
 >
->A autenticação básica (ou autenticação de chave de conta) para a origem [!DNL Snowflake] será substituída em novembro de 2025. Você deve migrar para a autenticação baseada em par de chaves para continuar usando a origem e assimilando dados do banco de dados para o Experience Platform. Para obter mais informações sobre a descontinuação, leia o [[!DNL Snowflake] manual de práticas recomendadas sobre como mitigar os riscos de comprometimento de credenciais](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+>A autenticação básica (também chamada de autenticação de chave de conta) para a origem [!DNL Snowflake] é **totalmente descontinuada para conexões com a Experience Platform em regiões da Azure**—você deve usar a autenticação de par de chaves para todas as conexões novas e existentes baseadas no Azure.
+>
+>Para [!DNL Snowflake] fontes conectadas ao Experience Platform em **regiões do AWS**, a autenticação básica ainda é suportada por enquanto, mas está em processo de desativação e será removida no futuro. É altamente recomendável migrar para a autenticação de par de chaves o mais rápido possível para garantir a conectividade contínua.
+>
+>Para obter mais informações sobre substituição e orientação, consulte o [[!DNL Snowflake] guia de práticas recomendadas sobre como mitigar os riscos de comprometimento de credenciais](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 | Credencial | Descrição |
 | --- | --- |

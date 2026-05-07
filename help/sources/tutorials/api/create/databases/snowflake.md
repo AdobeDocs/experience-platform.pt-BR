@@ -3,9 +3,9 @@ title: Conectar o Snowflake ao Experience Platform usando a API do Serviço de f
 description: Saiba como conectar o Adobe Experience Platform ao Snowflake usando a API do Serviço de fluxo.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: 0476c42924bf0163380e650141fad8e50b98d4cf
+source-git-commit: 7ccb8f7c6cfe6e3d030e79bc03ea0136003e5dfa
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '776'
 ht-degree: 4%
 
 ---
@@ -35,13 +35,9 @@ A seção a seguir fornece informações adicionais que você precisará saber p
 
 Leia a [[!DNL Snowflake] visão geral](../../../../connectors/databases/snowflake.md#prerequisites) para obter informações sobre autenticação.
 
-## Conectar [!DNL Snowflake] ao Experience Platform no Azure {#azure}
+## Conectar o [!DNL Snowflake] ao Experience Platform no Azure {#azure}
 
->[!WARNING]
->
->A autenticação básica (ou autenticação de chave de conta) para a origem [!DNL Snowflake] será substituída em novembro de 2025. Você deve migrar para a autenticação baseada em par de chaves para continuar usando a origem e assimilando dados do banco de dados para o Experience Platform. Para obter mais informações sobre a descontinuação, leia o [[!DNL Snowflake] manual de práticas recomendadas sobre como mitigar os riscos de comprometimento de credenciais](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
-
-Leia as etapas abaixo para obter informações sobre como conectar sua origem do [!DNL Snowflake] à Experience Platform no Azure.
+Leia as etapas abaixo para obter informações sobre como conectar sua origem do [!DNL Snowflake] ao Experience Platform no Azure.
 
 >[!NOTE]
 >
@@ -60,57 +56,6 @@ POST /connections
 ```
 
 >[!BEGINTABS]
-
->[!TAB CadeiadaConexão]
-
-+++Solicitação
-
-A solicitação a seguir cria uma conexão base para [!DNL Snowflake]:
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "Snowflake base connection",
-      "description": "Snowflake base connection",
-      "auth": {
-          "specName": "ConnectionString",
-          "params": {
-              "connectionString": "jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}"
-          }
-      },
-      "connectionSpec": {
-          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
-          "version": "1.0"
-      }
-  }'
-```
-
-| Propriedade | Descrição |
-| -------- | ----------- |
-| `auth.params.connectionString` | A cadeia de conexão usada para se conectar à sua instância do [!DNL Snowflake]. O padrão da cadeia de conexão para [!DNL Snowflake] é `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
-| `connectionSpec.id` | A ID da especificação de conexão [!DNL Snowflake]: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
-
-+++
-
-+++Resposta
-
-Uma resposta bem-sucedida retorna a conexão recém-criada, incluindo seu identificador de conexão exclusivo (`id`). Essa ID é necessária para explorar seus dados no próximo tutorial.
-
-```json
-{
-    "id": "2fce94c1-9a93-4971-8e94-c19a93097129",
-    "etag": "\"d403848a-0000-0200-0000-5e978f7b0000\""
-}
-```
-
-+++
-
 
 >[!TAB Autenticação de par de chaves com chave privada criptografada]
 
@@ -368,5 +313,5 @@ Uma resposta bem-sucedida retorna detalhes da conexão recém-criada, incluindo 
 
 Seguindo este tutorial, você criou uma conexão de base [!DNL Snowflake] usando a API [!DNL Flow Service]. Você pode usar essa ID de conexão básica nos seguintes tutoriais:
 
-* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] &#x200B;](../../explore/tabular.md)
-* [Crie um fluxo de dados para trazer dados do banco de dados para a Experience Platform usando a API  [!DNL Flow Service] &#x200B;](../../collect/database-nosql.md)
+* [Explore a estrutura e o conteúdo das tabelas de dados usando a API  [!DNL Flow Service] ](../../explore/tabular.md)
+* [Crie um fluxo de dados para trazer dados do banco de dados para a Experience Platform usando a API  [!DNL Flow Service] ](../../collect/database-nosql.md)

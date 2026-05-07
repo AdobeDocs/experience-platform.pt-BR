@@ -2,10 +2,10 @@
 title: Conectar sua conta da Salesforce usando a interface do usuário da Experience Platform
 description: Saiba como conectar sua conta do Salesforce e trazer seus dados do CRM para o Experience Platform usando a interface do usuário.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
+source-git-commit: 11e9e1a25a45f4011f15b1e28753a98d4158012c
 workflow-type: tm+mt
-source-wordcount: '1003'
-ht-degree: 2%
+source-wordcount: '724'
+ht-degree: 3%
 
 ---
 
@@ -26,31 +26,7 @@ Se você já tiver uma conta autenticada do [!DNL Salesforce], ignore o restante
 
 ### Coletar credenciais necessárias {#gather-required-credentials}
 
->[!WARNING]
->
->A autenticação básica para a origem [!DNL Salesforce] será descontinuada em janeiro de 2026. Você deve mudar para a autenticação de Credencial do cliente OAuth 2 para continuar usando a origem e assimilando dados da conta do [!DNL Salesforce] para o Experience Platform.
-
-A origem [!DNL Salesforce] dá suporte à autenticação básica e à Credencial do Cliente OAuth2.
-
->[!BEGINTABS]
-
->[!TAB Autenticação básica]
-
-Você deve fornecer valores para as credenciais a seguir para conectar sua conta do [!DNL Salesforce] usando autenticação básica.
-
-| Credencial | Descrição |
-| --- | --- |
-| URL do ambiente | A URL da instância de origem [!DNL Salesforce]. O formato da URL do ambiente é `https://[domain].my.salesforce.com`. |
-| Nome de usuário | O nome de usuário da conta de usuário [!DNL Salesforce]. |
-| Senha | A senha da conta de usuário [!DNL Salesforce]. |
-| Token de segurança | O token de segurança para a conta de usuário [!DNL Salesforce]. |
-| Versão da API | (Opcional) A versão da API REST da instância [!DNL Salesforce] que você está usando. O valor da versão da API deve ser formatado com um decimal. Por exemplo, se você estiver usando a versão da API `52`, será necessário inserir o valor como `52.0`. Se esse campo ficar em branco, o Experience Platform usará automaticamente a versão mais recente disponível. |
-
-Para obter mais informações sobre autenticação, consulte [este [!DNL Salesforce] guia de autenticação](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/quickstart_oauth.htm).
-
->[!TAB Credencial do Cliente OAuth2]
-
-Você deve fornecer valores para as credenciais a seguir para conectar sua conta do [!DNL Salesforce] usando a Credencial do Cliente OAuth2.
+A origem [!DNL Salesforce] dá suporte à autenticação por meio da Credencial do Cliente OAuth2.
 
 | Credencial | Descrição |
 | --- | --- |
@@ -62,56 +38,31 @@ Você deve fornecer valores para as credenciais a seguir para conectar sua conta
 
 Para obter mais informações sobre como usar o OAuth para [!DNL Salesforce], leia o [[!DNL Salesforce] guia sobre Fluxos de Autorização do OAuth](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
->[!ENDTABS]
-
-Depois de obter as credenciais necessárias, você poderá seguir as etapas abaixo para conectar sua conta do [!DNL Salesforce] à Experience Platform.
-
 ## Conectar sua conta do [!DNL Salesforce]
 
-Na interface do Experience Platform, navegue até **[!UICONTROL Fontes]** no menu esquerdo para abrir o espaço de trabalho [!UICONTROL Fontes]. Use o catálogo à esquerda para procurar categorias ou use a barra de pesquisa para localizar rapidamente a origem que deseja conectar.
+Na interface do Experience Platform, navegue até **[!UICONTROL Sources]** no menu esquerdo para abrir o espaço de trabalho [!UICONTROL Sources]. Use o catálogo à esquerda para procurar categorias ou use a barra de pesquisa para localizar rapidamente a origem que deseja conectar.
 
-Selecione **[!DNL Salesforce]** na categoria *[!UICONTROL CRM]* e selecione **[!UICONTROL Adicionar dados]**.
+Selecione **[!DNL Salesforce]** na categoria *[!UICONTROL CRM]* e selecione **[!UICONTROL Add data]**.
 
 >[!TIP]
 >
->No catálogo de fontes, você verá **[!UICONTROL Configurar]** se nenhuma conta estiver conectada, ou **[!UICONTROL Adicionar dados]** se uma conta já estiver autenticada.
+>No catálogo de fontes, você verá **[!UICONTROL Set up]** se nenhuma conta estiver conectada ou **[!UICONTROL Add data]** se uma conta já estiver autenticada.
 
 ![O catálogo de origens na interface do usuário do Experience Platform com o cartão de origem do Salesforce selecionado.](../../../../images/tutorials/create/salesforce/catalog.png)
 
-A página **[!UICONTROL Conectar-se ao Salesforce]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
+A página **[!UICONTROL Connect to Salesforce]** é exibida. Nesta página, você pode usar credenciais novas ou existentes.
 
 ### Usar uma conta existente
 
-Para usar uma conta existente, selecione **[!UICONTROL Conta existente]** e, em seguida, selecione a conta que deseja usar na lista exibida. Quando terminar, selecione **[!UICONTROL Avançar]** para continuar.
+Para usar uma conta existente, selecione **[!UICONTROL Existing account]** e, em seguida, selecione a conta que deseja usar na lista exibida. Quando terminar, selecione **[!UICONTROL Next]** para continuar.
 
 ![Uma lista de contas autenticadas do Salesforce que já existem em sua organização.](../../../../images/tutorials/create/salesforce/existing.png)
 
 ### Criar uma nova conta
 
-Para criar uma nova conta, selecione **[!UICONTROL Nova conta]** e forneça um nome e uma descrição para sua nova conta [!DNL Salesforce].
+Para criar uma nova conta, selecione **[!UICONTROL New account]** e forneça um nome e uma descrição para sua nova conta [!DNL Salesforce].
 
-![A interface na qual você pode criar uma nova conta do Salesforce fornecendo as credenciais de autenticação apropriadas.](../../../../images/tutorials/create/salesforce/new.png)
-
-Em seguida, selecione o tipo de autenticação que deseja usar para a nova conta.
-
->[!BEGINTABS]
-
->[!TAB Autenticação básica]
-
-Para autenticação básica, selecione **[!UICONTROL Autenticação básica]** e forneça valores para as seguintes credenciais:
-
-* URL do ambiente
-* Nome de usuário
-* Senha
-* Versão da API (opcional)
-
-Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
-
-![A interface de autenticação básica para a criação de conta do Salesforce.](../../../../images/tutorials/create/salesforce/basic.png)
-
->[!TAB Credencial do Cliente OAuth2]
-
-Para a Credencial do cliente OAuth 2, selecione **[!UICONTROL Credencial do cliente OAuth2]** e forneça valores para as seguintes credenciais:
+Para a Credencial do cliente OAuth 2, selecione **[!UICONTROL OAuth2 Client Credential]** e forneça valores para as seguintes credenciais:
 
 * URL do ambiente
 * ID de cliente
@@ -119,15 +70,14 @@ Para a Credencial do cliente OAuth 2, selecione **[!UICONTROL Credencial do clie
 * Versão da API
 * Incluir objetos de exclusão
 
-Quando terminar, selecione **[!UICONTROL Conectar à origem]**.
+Quando terminar, selecione **[!UICONTROL Connect to source]**.
 
-![A interface OAuth para a criação de conta do Salesforce.](../../../../images/tutorials/create/salesforce/oauth.png)
 
->[!ENDTABS]
+![A interface na qual você pode criar uma nova conta do Salesforce fornecendo as credenciais de autenticação apropriadas.](../../../../images/tutorials/create/salesforce/new.png)
 
 ### Ignorar pré-visualização de dados de amostra {#skip-preview-of-sample-data}
 
-Durante a etapa de seleção de dados, você pode encontrar um tempo limite ao assimilar tabelas ou arquivos de dados grandes. Você pode ignorar a visualização de dados para contornar o tempo limite e ainda visualizar o esquema, embora sem dados de amostra. Para ignorar a visualização de dados, habilite a opção **[!UICONTROL Ignorar visualização de dados de amostra]**.
+Durante a etapa de seleção de dados, você pode encontrar um tempo limite ao assimilar tabelas ou arquivos de dados grandes. Você pode ignorar a visualização de dados para contornar o tempo limite e ainda visualizar o esquema, embora sem dados de amostra. Para ignorar a visualização de dados, habilite o botão **[!UICONTROL Skip previewing sample data]**.
 
 O restante do workflow permanecerá o mesmo. O único problema é que ignorar a pré-visualização de dados pode impedir que campos calculados e obrigatórios sejam validados automaticamente durante a etapa de mapeamento e, em seguida, será necessário validar manualmente esses campos durante o mapeamento.
 

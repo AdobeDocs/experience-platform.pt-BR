@@ -3,10 +3,10 @@ title: Notas de versão do SDK da Web da Adobe Experience Platform
 description: As notas de versão mais recentes do SDK da Web da Adobe Experience Platform.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;notas de versão;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: b292b9243816b1eed7fd3939096ddc30d6be0606
+source-git-commit: 93229faebaf7c381fc348d67d877d7d3e3a05ae6
 workflow-type: tm+mt
-source-wordcount: '2752'
-ht-degree: 5%
+source-wordcount: '2963'
+ht-degree: 6%
 
 ---
 
@@ -15,6 +15,16 @@ ht-degree: 5%
 
 Este documento aborda as notas de versão do Adobe Experience Platform Web SDK.
 Para obter as notas de versão mais recentes da extensão de tag do Web SDK, consulte as [notas de versão da extensão de tag do Web SDK](/help/tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versão 2.33.0 - 7 de maio de 2026
+
+- Correção de um problema em que os eventos de adBreak, capítulo e QoE do Bridging Media Analytics retornavam erros de API.
+- Adição do Adobe Advertising `stitchId` aos eventos de experiência de saída quando o Advertising está configurado.
+- Desempenho aprimorado dos comandos `sendEvent` ao remover um bloco no processamento de destino de ID.
+- Correção de um problema em que a resolução de identidade de publicidade carregava scripts e iframes de terceiros, mesmo quando a publicidade não estava configurada.
+- Adicionada a capacidade de ler o parâmetro de transferência de identidade `adobe_mc` do hash (anteriormente estava apenas nos parâmetros de consulta).
+- Correção de um problema em que `adobe_mc` não podia ser lido quando a URL era codificada várias vezes.
+- Inclua o XDM em todos os eventos de saída do Brand Concierge.
 
 ## Versão 2.32.0 - 23 de março de 2026
 
@@ -267,7 +277,7 @@ Para obter as notas de versão mais recentes da extensão de tag do Web SDK, con
 
 ## Versão 2.13.1 - sexta-feira, 13 de outubro de 2022
 
-- Correção de um problema em que a migração de visitantes não funcionava se window.Visitor fosse definido após a configuração. Esse problema ocorre principalmente ao executar com tags do Adobe.
+- Correção de um problema em que a migração de visitantes não funciona na janela.O Visitante é definido após a configuração. Esse problema ocorre principalmente ao executar com tags do Adobe.
 - Correção de um problema em que `device.screenWidth` e `device.screenHeight` eram preenchidos como cadeias de caracteres em alguns ambientes.
 
 ## Versão 2.13.0 - 28 de setembro de 2022
